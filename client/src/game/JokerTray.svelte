@@ -23,6 +23,8 @@
     hintsLeft = 3,
     readonly = false,
     armed = null,
+    away = null,
+    popping = null,
     onpress,
   }: {
     jokers?: Jokers | null;
@@ -32,6 +34,10 @@
     readonly?: boolean;
     /** The token lifted by a first tap, waiting for the second (09, "Arming"). */
     armed?: JokerName | null;
+    /** The token in flight (JK-5): its slot is empty meanwhile. */
+    away?: JokerName | null;
+    /** A fresh token pops back into this slot (JK-5). */
+    popping?: JokerName | null;
     onpress?: (name: JokerName) => void;
   } = $props();
 </script>
@@ -45,6 +51,9 @@
         class="token"
         class:off
         class:armed={armed === t.name}
+        class:away={away === t.name}
+        class:popping={popping === t.name}
+        data-joker={t.name}
         disabled={readonly || off}
         onclick={() => onpress?.(t.name)}
         aria-label="{t.label} ({t.key})"
@@ -127,6 +136,18 @@
     color: var(--sky);
     transform: translateX(calc(0.8 * var(--u))) scale(1.15);
     animation: shimmer 0.9s ease-in-out infinite;
+  }
+  .token.away {
+    opacity: 0;
+    transition: none;
+  }
+  .token.popping {
+    animation: pop-back 0.45s var(--spring);
+  }
+  @keyframes pop-back {
+    from {
+      transform: scale(0);
+    }
   }
   .token.off {
     opacity: 0.4;

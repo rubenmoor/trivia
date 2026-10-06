@@ -8,6 +8,7 @@
   import CategoryPicker from "./CategoryPicker.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
+  import JokerFlight from "./JokerFlight.svelte";
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
   import { music, sfx } from "./sound.svelte";
@@ -63,6 +64,9 @@
   let target = $state<number | null>(null);
   let hit = $state<number | null>(null);
   let jokerBusy = $state(false);
+  /** The token flying to the centre (JK-5), and the slot a fresh one pops back into. */
+  let flight = $state<{ name: JokerName; from: DOMRect; done: () => void } | null>(null);
+  let popping = $state<JokerName | null>(null);
   let picker = $state<ReturnType<typeof CategoryPicker>>();
 
   const media = $derived(question.media);
@@ -181,13 +185,22 @@
     armTimer = setTimeout(() => (armed = null), ARM_MS);
   }
 
+  /** The common play animation (JK-5): resolves once the token has burst in the centre. */
+  function fly(name: JokerName) {
+    const token = document.querySelector(`.token[data-joker="${name}"]`);
+    if (!token) return Promise.resolve();
+    return new Promise<void>((done) => (flight = { name, from: token.getBoundingClientRect(), done }));
+  }
+
   async function fire(body: JokerPlay) {
     disarm();
     mode = null;
-    jokerBusy = true;
-    // PLACEHOLDER(JK-5): no fly-out, burst and pop-back of the token yet.
+    jokerBusy = true; // input stays locked until the joker's effect is over
     sfx(`comodín: ${TOKENS.find((t) => t.name === body.joker)?.label}`);
-    const res = await play(body);
+    const [res] = await Promise.all([play(body), fly(body.joker)]);
+    flight = null;
+    popping = body.joker;
+    setTimeout(() => (popping = null), 500);
     if (!res) {
       jokerBusy = false;
       return;
@@ -310,8 +323,19 @@
   </div>
 
   <aside class="tray">
-    <JokerTray jokers={submitted ? null : jokers} hintsLeft={3 - question.hints.length} {armed} onpress={press} />
+    <JokerTray
+      jokers={submitted ? null : jokers}
+      hintsLeft={3 - question.hints.length}
+      {armed}
+      away={flight?.name ?? null}
+      {popping}
+      onpress={press}
+    />
   </aside>
+  {#if flight}
+    {@const f = flight}
+    <JokerFlight from={f.from} icon={TOKENS.find((t) => t.name === f.name)!.icon} ondone={f.done} />
+  {/if}
 
   {#if mode === "skip" && jokers}
     <div class="backdrop-dim">
