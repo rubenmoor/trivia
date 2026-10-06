@@ -63,7 +63,7 @@ No blocking questions left (D-30).
 - [x] JK-7 Client: card-flip swap, difficulty dial, subcategory picker — [`09`](09-jokers.md)
 - [x] JK-8 Client: Francotirador — [`09`](09-jokers.md)
 - [x] UI-15 Room for the joker tray and hint notes in the layouts — [`04`](04-ui-tv-display.md)
-- [ ] JK-10 `qgen.py report` per subcategory × difficulty — [`09`](09-jokers.md)
+- [x] JK-10 `qgen.py report` per subcategory × difficulty — [`09`](09-jokers.md)
 
 Depends on M1 (per-player burning). Joker sounds (JK-9) are in M4.
 
@@ -107,7 +107,7 @@ The game is called «¡Trivia!» (D-30).
 - [ ] QP-10 Gamemaster reviews the first 120 *(looks done: all are approved or rejected; tick it in 02)* — [`02`](02-question-pool.md)
 - [ ] QP-6 An image for every question — [`02`](02-question-pool.md), [`06`](06-images.md)
 - [~] QP-7 Validation script: image check once media is cached — [`02`](02-question-pool.md)
-- [ ] JK-10 Supply report per subcategory × difficulty (shared with M2) — [`09`](09-jokers.md)
+- [x] JK-10 Supply report per subcategory × difficulty (shared with M2): `qgen.py report --subcategories` — [`09`](09-jokers.md)
 
 No family-specific questions (D-30).
 

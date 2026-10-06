@@ -14,7 +14,7 @@ step skips what is already done, so a run can be resumed.
     python3 tools/qgen.py revise    --run pilot && python3 tools/qgen.py apply --run pilot
     python3 tools/qgen.py rate      --run pilot && python3 tools/qgen.py factcheck --run pilot
     python3 tools/qgen.py merge     --run pilot --min-score 0
-    python3 tools/qgen.py report    [--run pilot] [--player <name>]
+    python3 tools/qgen.py report    [--run pilot] [--player <name>] [--subcategories]
     python3 tools/qgen.py validate
 
 Revising questions that are already in the pool (07, QG-13):
@@ -632,6 +632,32 @@ def count(items, key):
     return dict(sorted(out.items(), key=lambda kv: (0, kv[0], "") if isinstance(kv[0], int) else (1, 0, str(kv[0]))))
 
 
+def report_subcategories(avail):
+    """Supply per subcategory × difficulty (JK-10): where «Bájale» (an easier question of the same
+    subcategory) and «Cambiazo» (a subcategory with a question in the level's range) run dry (09)."""
+    by_sub = {}
+    for q in avail:
+        by_sub.setdefault(q.get("subcategory"), []).append(q["difficulty"])
+    print("supply per subcategory × difficulty (JK-10; '.' = none):")
+    print(f"  {'':34}" + "".join(f"{d:>3}" for d in range(1, 11)) + "  total")
+    for c in categories.load():
+        print(f"  {c['name']}")
+        for sub in c["subcategories"]:
+            ds = by_sub.get(sub, [])
+            cells = "".join(f"{ds.count(d) or '.':>3}" for d in range(1, 11))
+            print(f"    {sub[:32]:32}{cells}  {len(ds):5}{'  EMPTY' if not ds else ''}")
+    empty = sum(1 for c in categories.load() for sub in c["subcategories"] if sub not in by_sub)
+    easier = sum(1 for q in avail if any(d < q["difficulty"] for d in by_sub[q.get("subcategory")]))
+    print(f"  empty subcategories: {empty}")
+    print(f"  «Bájale» possible on {easier} of {len(avail)} questions "
+          f"({easier * 100 // max(len(avail), 1)} %): an easier one exists in the same subcategory")
+    print("  «Cambiazo» choices per level (subcategories with a question in the level's range):")
+    for level in range(1, selection.LEVELS + 1):
+        n = sum(1 for ds in by_sub.values() if any(selection.in_range({"difficulty": d}, level) for d in ds))
+        lo, hi = selection.LEVEL_RANGES[level]
+        print(f"    level {level:2} (difficulty {lo}–{hi}): {n:3}")
+
+
 def cmd_report(args):
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
@@ -654,6 +680,8 @@ def cmd_report(args):
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""
         print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
+    if args.subcategories:
+        report_subcategories(avail)
     if args.run:
         d = run_dir(args)
         ratings, checks = collect(d)
@@ -737,6 +765,8 @@ def main():
     rp = add("report", cmd_report, run=False)
     rp.add_argument("--run")
     rp.add_argument("--player", help="supply for this player (D-28); default: a new player")
+    rp.add_argument("--subcategories", action="store_true",
+                    help="supply per subcategory × difficulty, for the jokers (JK-10)")
     add("validate", cmd_validate, run=False)
     args = ap.parse_args()
     args.fn(args)

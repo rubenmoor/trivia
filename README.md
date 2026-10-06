@@ -60,7 +60,7 @@ python3 tools/qgen.py factcheck --run <run>
 python3 tools/qgen.py dedupe    --run <run>
 python3 tools/qgen.py merge     --run <run>     # new questions enter the pool as drafts
 python3 tools/media.py fetch    --batch <run>   # media candidates for the review tool
-python3 tools/qgen.py report    [--run <run>] [--player <name>]
+python3 tools/qgen.py report    [--run <run>] [--player <name>] [--subcategories]
 python3 tools/qgen.py validate                  # check the pool; warns about uncached media
 ```
 
