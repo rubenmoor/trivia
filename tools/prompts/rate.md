@@ -13,6 +13,10 @@ Score each criterion 1–5 (5 = excellent, 3 = acceptable, 1 = broken):
 
 Score `unambiguous` ≤ 3 for "¿Cuál de estos es el más …?" questions where the answer is only the record among the four options rather than the real-world record holder.
 
+Score `unambiguous` ≤ 3 when the question's clue also fits something outside the four options (e.g. "el deporte con raqueta y pelotica amarilla" also fits pádel; "el ritmo que se baila con velas" fits more than cumbia). Ask yourself: "What else in the world fits this clue?" Name it in `notes`.
+
+Famous historical events and films are not a tone problem (house style, "Tone"); only questions about deaths or suffering are.
+
 For essential media: if a clear, recognisable Commons photo or sound of exactly that thing is unlikely, or the media must convey something abstract (e.g. a rhythm from a photo), say so in `notes`.
 
 Also check `media.query`: for decorative media it should show the question's topic or setting, not a metaphor from the wording, and must not reveal the answer. Mention problems in `notes`.

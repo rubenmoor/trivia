@@ -19,6 +19,9 @@ Two Colombian kids, aged 11 and 12, play as one team against the gamemaster. The
 ## Use the four options honestly
 - A superlative or comparison asks about the **real world**: "¿Cuál es el dinosaurio más largo que ha existido?", and the answer is the real record holder. Never "¿Cuál de estos es el más largo?", where the answer is only the biggest among the four options: the options are not a meaningful set, and the question teaches nothing.
 - The same goes for "¿Cuál de estas ciudades está a mayor altura?": ask "¿Cuál es la capital departamental más alta de Colombia?" instead.
+- The clue in the question must point to the answer **in the real world**, not just among the four options. Before writing, ask: "What else in the world fits this clue?" If anything does, use a clue that only the answer has.
+  - Bad: "¿Qué ritmo del Caribe colombiano se baila con velas en la mano?" Other dances use candles too.
+  - Bad: "¿En qué deporte se usa una raqueta y una pelotica amarilla?" Pádel and frontenis do too, and tennis doesn't depend on the ball's colour.
 
 ## No giveaways
 Nothing may give the answer away: not the description, not the question text, not hints 1 and 2, not decorative media. Don't name things in the question that make it trivial (naming EVE and Pixar in a WALL·E question; a carnival's own slogan in a question about its city; a first clue that already identifies the answer). Hint 3 may come close.
@@ -43,6 +46,16 @@ Calibration from the gamemaster, who knows these players (final level, with the 
 - 9: Greek gods: Poseidón from his trident, Atenea from her owl (guessed 5)
 - 9: which Colombian city lies highest → Tunja (guessed 3)
 
+Famous world facts that kids meet in cartoons, films and everyday talk are easier than they look:
+- 2: the planet famous for its huge rings → Saturno (guessed 4)
+- 2: plural of "lápiz" → lápices (guessed 5)
+- 2: who reached America in 1492 → Cristóbal Colón (guessed 3)
+- 5: who wrote "Don Quijote" → Cervantes (guessed 8)
+
+But don't overcorrect: names of prizes, years and school theory are still hard for these kids:
+- 7: which Colombian writer won the Nobel Prize in 1982 → García Márquez (lowered to 3 by mistake)
+- 7: how many notes the basic scale has (do, re, mi…) → 7 (lowered to 3 by mistake)
+
 ## Description
 Every question has a `description`: one full, humorous Spanish sentence shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "un nevado" when only two options are nevados). Examples from the pool:
 - Café: "Los papás no funcionan por la mañana hasta que les echas este combustible."
@@ -55,7 +68,10 @@ Every question has a `description`: one full, humorous Spanish sentence shown *b
 ## Media
 Every question has exactly one media item:
 - `type`: "image" (most questions), "audio" or "video".
-- `role`: "decorative" (atmosphere only; must NOT reveal the answer) or "essential" (the media is part of the question, e.g. "Escucha: ¿qué instrumento suena?").
+- `role`: "illustrative", "decorative" or "essential":
+  - "illustrative" (preferred): shows something that belongs to the question, shown sharp on the TV. Its subject, a place or object it mentions, the setting of a film. It must NOT show the answer or rule options in or out. Examples: "¿Quién escribió Don Quijote?" → "Consuegra windmills"; "¿Cuál es la capital de Australia?" → "kangaroo" (Australia, but no city that could be an option). Watch for text in pictures (dates on banners, names on signs).
+  - "decorative": mood only, shown blurred. Use it when every related image would give the answer away (e.g. "¿Qué planeta tiene anillos enormes?": any space picture might show Saturn).
+  - "essential": the media is part of the question, e.g. "Escucha: ¿qué instrumento suena?".
 - Use essential media only when Wikimedia Commons very likely has a **clear, recognisable** photo or sound of exactly that thing: a famous landmark, a common animal, a well-known object or instrument. Not for rare or regional objects (e.g. a gaita), and never when a photo must convey something abstract, like which rhythm musicians are playing.
 - `query`: an English search term for Wikimedia Commons, chosen so a decorative image does not show the answer. Short and concrete (2–4 words) works best on Commons.
 - A decorative image shows the **world of the question**: its topic, place or setting (a question about a Colombian fruit → "Colombian fruit market"; about a Greek god → "Greek temple ruins"). Never take the image from a metaphor or comparison in the wording (a fruit "like a paper lantern" must not get "paper lantern"), and never pick something that misleads (a tropical island for a question about Greenland).
@@ -67,7 +83,7 @@ Every question has exactly one media item:
 `fun_fact`: one short Spanish sentence shown after the answer is revealed. True, surprising, kid-friendly.
 
 ## Tone
-- Light and playful. No disasters, wars or tragedies with many victims as the topic of a question (historical events like independence are fine).
+- Light and playful. Famous historical events and films are fine, even when people died in them (independence, the end of the Second World War, the film "Titanic"). Ask about the event, the date or the film, never about deaths or suffering, and don't make jokes about them.
 - Nothing scary, gory or adult.
 
 ## Facts

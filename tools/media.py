@@ -124,7 +124,7 @@ def search(query, kind, limit=30):
 
 def acceptable(c, role):
     if c["type"] == "image":
-        min_w = MIN_DECORATIVE_WIDTH if role == "decorative" else MIN_ESSENTIAL_WIDTH
+        min_w = MIN_ESSENTIAL_WIDTH if role == "essential" else MIN_DECORATIVE_WIDTH
         landscape = role == "essential" or (c["width"] or 0) > (c["height"] or 0)
         return (c["width"] or 0) >= min_w and landscape
     if c["type"] == "audio":

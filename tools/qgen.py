@@ -132,7 +132,7 @@ FIT_SCHEMA = {"type": "object", "required": ["subcategories"], "properties": {"s
 
 MEDIA_SCHEMA = {"type": "object", "required": ["type", "role", "query", "note"], "properties": {
     "type": {"type": "string", "enum": ["image", "audio", "video"]},
-    "role": {"type": "string", "enum": ["decorative", "essential"]},
+    "role": {"type": "string", "enum": ["decorative", "illustrative", "essential"]},
     "query": STR, "note": STR}}
 
 QUESTION_SCHEMA = {"type": "object", "required": [
@@ -622,7 +622,7 @@ def cmd_validate(args):
             errors.append(f"{qid}: review does not match status")
         if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in data/categories.json (D-19)")
         m = q.get("media", {})
-        if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "essential"}:
+        if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
             errors.append(f"{qid}: bad media type/role")
         bg = q.get("background")
         if (bg is not None) != (m.get("type") == "audio"):
