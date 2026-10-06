@@ -285,9 +285,36 @@ function notes(c: AudioContext, out: AudioNode, t: number, midis: number[], step
   midis.forEach((m, i) => tone(c, out, t + i * step, { type, from: hz(m), len, level: 0.22 }));
 }
 
+/** A crowd clapping: hundreds of short, band-passed noise bursts at random moments, swelling in
+ * quickly and dying away, with a few louder claps near the front. */
+function applause(c: AudioContext, out: AudioNode, t: number, seconds: number) {
+  const claps = Math.round(seconds * 70);
+  for (let i = 0; i < claps; i++) {
+    const at = Math.random() ** 1.6 * seconds; // denser at the start
+    const swell = Math.min(1, at / 0.35) * Math.max(0, 1 - at / seconds);
+    const level = (0.08 + Math.random() * 0.12) * swell;
+    if (level < 0.01) continue;
+    const n = c.createBufferSource();
+    n.buffer = noiseBuffer;
+    const f = c.createBiquadFilter();
+    f.type = "bandpass";
+    f.frequency.value = 900 + Math.random() * 1800;
+    f.Q.value = 1.2;
+    const pan = c.createStereoPanner();
+    pan.pan.value = Math.random() * 1.6 - 0.8;
+    const g = c.createGain();
+    const len = 0.015 + Math.random() * 0.025;
+    g.gain.setValueAtTime(level, t + at);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + at + len);
+    n.connect(f).connect(g).connect(pan).connect(out);
+    n.start(t + at, Math.random() * 0.9, len + 0.01);
+  }
+}
+
 /** First match wins; patterns follow the effect names used in the game's code. */
 const RECIPES: [RegExp, Recipe][] = [
   [/silencio/, () => {}],
+  [/aplausos/, (c, o, t, n) => applause(c, o, t, n.includes("gran") ? 5 : 3)],
   [/whoosh|swoosh que sube/, (c, o, t, n) =>
     noise(c, o, t, { from: n.includes("sube") ? 400 : 2400, to: n.includes("sube") ? 3000 : 300, len: 0.45, q: 2, attack: 0.15 })],
   [/swoosh|escoba/, (c, o, t) => noise(c, o, t, { from: 3000, to: 500, len: 0.5, q: 1.5, attack: 0.1, level: 0.5 })],

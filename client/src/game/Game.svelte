@@ -217,9 +217,9 @@
   async function answered(next: Game | null) {
     if (!next) return;
     const apply = () => (game = next);
-    if (next.phase === "won") await go("victory", "boom", apply);
+    if (next.phase === "won") await go("victory", "gran aplausos", apply);
     else if (next.phase === "lost") await go("wrong", "boom", apply);
-    else await go("correct", "boom", apply);
+    else await go("correct", "aplausos", apply);
   }
 
   async function toStart() {
