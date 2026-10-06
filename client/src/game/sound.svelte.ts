@@ -1,8 +1,8 @@
 // The audio engine (plans/04-ui-tv-display.md, "Audio", UI-8, D-21/D-22): one AudioContext,
 // three channels (music, effects, question media) under a master gain, fades and crossfades.
-// There are no sound files yet (UI-10), so every sound has a synthesized fallback: the three
-// music loops are generated (same key and tempo family, rising intensity) and each effect name
-// maps to a small recipe below. When files arrive they can replace the recipes one by one.
+// Recorded sounds live in client/public/audio/ (free licences, CREDITS.md, UI-10) and replace the
+// synthesized ones they cover; everything else is synthesized: the music loops are generated
+// (same key and tempo family, rising intensity) and each effect name maps to a recipe below.
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
  * roll: the drum roll from «Respuesta final» until the reveal (04, "Music"). */
@@ -32,6 +32,28 @@ let ctx: AudioContext | null = null;
 let master: GainNode, musicBus: GainNode, fxBus: GainNode, duckGain: GainNode;
 let noiseBuffer: AudioBuffer;
 
+/** Recorded sounds (UI-10), decoded once after the unlock; a missing one falls back to synthesis. */
+const SAMPLES = { aplausos: "/audio/aplausos.m4a", "aplausos-gran": "/audio/aplausos-gran.m4a", redoble: "/audio/redoble.m4a" };
+type Sample = keyof typeof SAMPLES;
+const samples: Partial<Record<Sample, AudioBuffer>> = {};
+/** Effect names played from a recording, first match wins. */
+const SAMPLE_FOR: [RegExp, Sample][] = [
+  [/gran aplausos/, "aplausos-gran"],
+  [/aplausos/, "aplausos"],
+];
+
+async function loadSamples(c: AudioContext) {
+  await Promise.all(
+    (Object.entries(SAMPLES) as [Sample, string][]).map(async ([key, url]) => {
+      try {
+        samples[key] = await c.decodeAudioData(await (await fetch(url)).arrayBuffer());
+      } catch {
+        /* offline or not supported: the synthesized version plays instead */
+      }
+    }),
+  );
+}
+
 /** The first click or key press unlocks audio in the browser (04, "Start"). */
 export function unlock() {
   if (ctx) return void ctx.resume();
@@ -47,6 +69,7 @@ export function unlock() {
   const data = noiseBuffer.getChannelData(0);
   for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
   sound.unlocked = true;
+  loadSamples(ctx);
   applyVolumes();
   if (sound.music) startTrack(sound.music, 0.8);
 }
@@ -82,7 +105,7 @@ export function duck(on: boolean) {
 
 // Music ------------------------------------------------------------------------------------------
 
-type Loop = { gain: GainNode; timer: ReturnType<typeof setInterval>; stop: () => void };
+type Loop = { gain: GainNode; stop: () => void };
 let current: Loop | null = null;
 
 /** Switch the music loop; null = silence. Screen changes fade out and in (04, "Transitions");
@@ -145,6 +168,25 @@ function startTrack(track: Track, fadeIn: number) {
     swell.gain.setValueAtTime(0.3, c.currentTime);
     swell.gain.linearRampToValueAtTime(1, c.currentTime + ROLL_BUILD_S);
     swell.connect(gain);
+    if (samples.redoble) {
+      // The recorded roll (US Air Force Band, public domain), looped if the wait is longer.
+      const src = c.createBufferSource();
+      src.buffer = samples.redoble;
+      src.loop = true;
+      const level = c.createGain();
+      level.gain.value = 2.2; // the music bus is set for soft loops; the roll is the music here
+      src.connect(level).connect(swell);
+      src.start();
+      keep(src);
+      current = {
+        gain,
+        stop: () => {
+          voices.forEach((v) => v.stop());
+          gain.disconnect();
+        },
+      };
+      return;
+    }
     const rumble = c.createOscillator();
     rumble.frequency.value = hz(33);
     const rg = c.createGain();
@@ -161,7 +203,6 @@ function startTrack(track: Track, fadeIn: number) {
     }, 40);
     current = {
       gain,
-      timer,
       stop: () => {
         clearInterval(timer);
         voices.forEach((v) => v.stop());
@@ -192,7 +233,6 @@ function startTrack(track: Track, fadeIn: number) {
   }, 50);
   current = {
     gain,
-    timer,
     stop: () => {
       clearInterval(timer);
       voices.forEach((v) => v.stop());
@@ -302,6 +342,15 @@ function roll(c: AudioContext, out: AudioNode, t: number, len: number, keep: Kee
 /** Play a short effect by name; the names describe the sound (04, "Sound assets"). */
 export function sfx(name: string) {
   if (!ctx || ctx.state !== "running") return;
+  const key = SAMPLE_FOR.find(([pattern]) => pattern.test(name))?.[1];
+  const buffer = key && samples[key];
+  if (buffer) {
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+    src.connect(fxBus);
+    src.start();
+    return;
+  }
   const recipe = RECIPES.find(([pattern]) => pattern.test(name));
   recipe?.[1](ctx, fxBus, ctx.currentTime + 0.01, name);
 }
