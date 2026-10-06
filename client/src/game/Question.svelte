@@ -15,7 +15,17 @@
   import Shredder from "./Shredder.svelte";
   import { music, sfx } from "./sound.svelte";
   import { cardFlip, crossfade } from "./swap";
-  import { AFTER_REVEAL_MS, ARM_MS, PADLOCK_MS, REVEAL_WAIT_S, SNIPE_HIT_MS, SWEEP_MS, sleep } from "./timing";
+  import {
+    AFTER_REVEAL_MS,
+    ARM_MS,
+    PADLOCK_MS,
+    REVEAL_WAIT_S,
+    SHATTER_MS,
+    SNIPE_BEAT_MS,
+    SNIPE_HIT_MS,
+    SWEEP_MS,
+    sleep,
+  } from "./timing";
 
   export type JokerPlay = { joker: JokerName; purge?: boolean; subcategory?: string; index?: number };
 
@@ -76,6 +86,19 @@
   /** «Paso» (JK-6): the purged subcategory in the shredder, then the question swept off. */
   let shredding = $state<{ name: string; done: () => void } | null>(null);
   let sweeping = $state(false);
+  /** Francotirador (JK-8): the answer being shot at (the scope stays on it), and the one shattering. */
+  let shot = $state<number | null>(null);
+  let shattering = $state<number | null>(null);
+  let tiles = $state<HTMLButtonElement[]>([]);
+  /** The scope's hole, over the target answer. */
+  let hole = $state<{ x: number; y: number; w: number; h: number } | null>(null);
+  $effect(() => {
+    const i = shot ?? (mode === "snipe" ? target : null);
+    const el = i === null ? null : tiles[i];
+    if (!el) return void (hole = null);
+    const r = el.getBoundingClientRect();
+    hole = { x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width, h: r.height };
+  });
   let picker = $state<ReturnType<typeof CategoryPicker>>();
 
   const media = $derived(question.media);
@@ -206,21 +229,33 @@
     mode = null;
     jokerBusy = true; // input stays locked until the joker's effect is over
     sfx(`comodín: ${TOKENS.find((t) => t.name === body.joker)?.label}`);
+    if (body.joker === "snipe") shot = body.index ?? null;
     const [res] = await Promise.all([play(body), fly(body.joker)]);
     flight = null;
     popping = body.joker;
     setTimeout(() => (popping = null), 500);
     if (!res) {
       jokerBusy = false;
+      shot = null;
       return;
     }
-    if (res.event.joker === "snipe" && res.event.outcome === "hit") {
-      // PLACEHOLDER(JK-8): no scope, shot or rewind animation; the right answer glows, then Level.
-      hit = res.event.correct_index;
-      sfx("¡Ups!");
-      await wait(SNIPE_HIT_MS);
-    } else if (res.event.joker === "snipe") {
-      sfx("vidrio roto");
+    if (res.event.joker === "snipe") {
+      // The scope tightens on the target, a beat of silence, then the cork pops (09, "Francotirador").
+      sfx("silencio…");
+      await wait(SNIPE_BEAT_MS(level));
+      sfx("¡pop! disparo de corcho");
+      if (res.event.outcome === "hit") {
+        hit = res.event.correct_index;
+        shot = null;
+        sfx("¡Ups!");
+        await wait(SNIPE_HIT_MS);
+      } else {
+        shattering = res.event.index;
+        shot = null;
+        sfx("vidrio roto");
+        await sleep(SHATTER_MS);
+        shattering = null;
+      }
     } else if (res.event.joker === "skip") {
       const purged = res.event.purged;
       if (purged) await new Promise<void>((done) => (shredding = { name: purged, done }));
@@ -263,7 +298,7 @@
       else return;
     } else if (mode === "snipe") {
       if (cancel) mode = target = null;
-      else if (k.length === 1 && i >= 0) aim(i);
+      else if (k.length === 1 && i >= 0 && !question.struck.includes(i)) target = i; // keys only aim; Enter shoots
       else if (e.key.startsWith("Arrow")) moveTarget(e.key);
       else if ((e.key === "Enter" || e.key === " ") && target !== null) fire({ joker: "snipe", index: target });
       else return;
@@ -385,8 +420,20 @@
       oncancel={() => (mode = null)}
     />
   {/if}
+  {#if hole}
+    <div
+      class="scope"
+      class:tight={shot !== null}
+      style:left="{hole.x}px"
+      style:top="{hole.y}px"
+      style:width="{hole.w + 40}px"
+      style:height="{hole.h + 40}px"
+      aria-hidden="true"
+    >
+      <span class="reticle"><Icon name="crosshair" size="100%" /></span>
+    </div>
+  {/if}
   {#if mode === "snipe"}
-    <!-- PLACEHOLDER(JK-8): no scope vignette or shatter yet; the target gets a crosshair. -->
     <p class="aim-hint glass-strong">
       <Icon name="crosshair" /> Elijan la respuesta que creen que es <b>falsa</b> · <kbd>Enter</kbd> dispara ·
       <kbd>Esc</kbd> cancela
@@ -402,16 +449,25 @@
         <button
           class="answer glass {answerClass(i)}"
           onclick={() => tap(i)}
+          onmouseenter={() => mode === "snipe" && !question.struck.includes(i) && (target = i)}
           disabled={submitted || question.struck.includes(i) || hit !== null}
+          class:shatter={shattering === i}
+          bind:this={tiles[i]}
         >
+          {#if shattering === i}
+            <span class="shards" aria-hidden="true">
+              {#each Array.from({ length: 10 }, (_, s) => s) as s (s)}
+                <i style:--x="{(s % 5) * 20 + 10}%" style:--y="{s < 5 ? 25 : 75}%" style:--r="{(s * 67) % 360}deg" style:--d="{s * 0.02}s"></i>
+              {/each}
+            </span>
+          {/if}
           <span class="letter">{LETTERS[i]}</span>
           <span class="text">{answer}</span>
           {#if hit === i}
             <span class="badge"><Icon name="check" /></span>
           {:else if question.struck.includes(i)}
             <span class="badge"><Icon name="cross" /></span>
-          {:else if mode === "snipe" && target === i}
-            <span class="badge crosshair"><Icon name="crosshair" /></span>
+
           {:else if revealed && result && i === result.correct_index}
             <span class="badge"><Icon name="check" /></span>
           {:else if revealed && result && i === result.chosen}
@@ -628,6 +684,7 @@
   }
   .aim-hint {
     position: absolute;
+    z-index: 7;
     left: 50%;
     top: 45%;
     transform: translateX(-50%);
@@ -739,6 +796,78 @@
   }
   .answer.struck .badge {
     color: var(--coral);
+  }
+  .scope {
+    position: fixed;
+    z-index: 6;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 200vmax rgba(5, 8, 16, 0.62);
+    pointer-events: none;
+    transition:
+      left 0.25s var(--spring),
+      top 0.25s var(--spring),
+      width 0.25s,
+      height 0.25s,
+      box-shadow 0.4s;
+    animation: scope-in 0.35s ease-out;
+  }
+  .scope.tight {
+    width: calc(var(--u) * 26) !important;
+    box-shadow: 0 0 0 200vmax rgba(5, 8, 16, 0.85);
+  }
+  .reticle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(7 * var(--u));
+    height: calc(7 * var(--u));
+    transform: translate(-50%, -50%);
+    color: var(--coral);
+    filter: drop-shadow(0 0 calc(0.5 * var(--u)) rgba(255, 84, 112, 0.8));
+    animation: spin 3s linear infinite;
+  }
+  .tight .reticle {
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes scope-in {
+    from {
+      box-shadow: 0 0 0 200vmax rgba(5, 8, 16, 0);
+    }
+  }
+  .answer {
+    position: relative;
+  }
+  .answer.shatter {
+    z-index: 7;
+  }
+  .answer.shatter {
+    background: var(--coral);
+    animation: shake 0.3s ease-in-out 2;
+  }
+  .shards {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .shards i {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: calc(3.2 * var(--u));
+    height: calc(2.6 * var(--u));
+    background: linear-gradient(135deg, rgba(238, 241, 246, 0.85), rgba(255, 84, 112, 0.6));
+    clip-path: polygon(0 0, 100% 30%, 40% 100%);
+    animation: shard 0.8s var(--d) cubic-bezier(0.3, 0, 0.8, 0.6) forwards;
+  }
+  @keyframes shard {
+    from {
+      transform: translate(-50%, -50%) rotate(var(--r));
+    }
+    to {
+      transform: translate(calc(-50% + (var(--x) - 50%) * 3), 40vh) rotate(calc(var(--r) + 220deg));
+      opacity: 0;
+    }
   }
   .answer.target {
     border: calc(0.25 * var(--u)) solid var(--coral);

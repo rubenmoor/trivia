@@ -49,6 +49,8 @@
   let loading = $state(true);
   /** The black layer of the transition routine. */
   let black = $state(false);
+  /** The veil of the transition: black, or a VHS rewind for «rebobinar» (undo, Francotirador hit). */
+  let veil = $state<"black" | "rewind">("black");
   /** A transition or a server call is running: input is ignored. */
   let busy = $state(false);
   let overlayOpen = $state(false);
@@ -91,6 +93,7 @@
     busy = true;
     music(null);
     sfx(effect);
+    veil = effect === "rebobinar" ? "rewind" : "black";
     black = true;
     await sleep(FADE_MS);
     apply?.();
@@ -454,7 +457,9 @@
     <div class="error-box corner">{error}</div>
   {/if}
 
-  <div class="black" class:on={black} style:transition-duration="{FADE_MS}ms"></div>
+  <div class="black {veil}" class:on={black} style:transition-duration="{FADE_MS}ms">
+    {#if veil === "rewind"}<span class="rewind-mark">◀◀</span>{/if}
+  </div>
   <Captions />
 
   {#if overlayOpen}
@@ -818,6 +823,43 @@
   .black.on {
     opacity: 1;
     pointer-events: all;
+  }
+  /* VHS rewind (09, "Francotirador"): scanlines rushing up, a jittering ◀◀. */
+  .black.rewind {
+    display: grid;
+    place-items: center;
+    background:
+      repeating-linear-gradient(rgba(238, 241, 246, 0.07) 0 2px, transparent 2px 6px),
+      linear-gradient(rgba(76, 201, 240, 0.12), rgba(255, 84, 112, 0.12)),
+      var(--night-900);
+    background-size:
+      100% 6px,
+      100% 100%,
+      100% 100%;
+    animation: scan 0.25s linear infinite;
+  }
+  .rewind-mark {
+    font-family: var(--font-display);
+    font-size: calc(9 * var(--u));
+    font-weight: 800;
+    color: var(--paper);
+    text-shadow:
+      calc(0.4 * var(--u)) 0 rgba(255, 84, 112, 0.8),
+      calc(-0.4 * var(--u)) 0 rgba(76, 201, 240, 0.8);
+    animation: jitter 0.18s steps(2) infinite;
+  }
+  @keyframes scan {
+    to {
+      background-position:
+        0 -60px,
+        0 0,
+        0 0;
+    }
+  }
+  @keyframes jitter {
+    50% {
+      transform: translate(calc(0.3 * var(--u)), calc(-0.2 * var(--u))) skewX(-6deg);
+    }
   }
 
   @keyframes arrive {

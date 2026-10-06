@@ -61,7 +61,7 @@ No blocking questions left (D-30).
 - [x] JK-5 Client: common play animation and input lock — [`09`](09-jokers.md)
 - [x] JK-6 Client: Soplo notes, Paso dialog and purge — [`09`](09-jokers.md)
 - [x] JK-7 Client: card-flip swap, difficulty dial, subcategory picker — [`09`](09-jokers.md)
-- [~] JK-8 Client: Francotirador — [`09`](09-jokers.md)
+- [x] JK-8 Client: Francotirador — [`09`](09-jokers.md)
 - [x] UI-15 Room for the joker tray and hint notes in the layouts — [`04`](04-ui-tv-display.md)
 - [ ] JK-10 `qgen.py report` per subcategory × difficulty — [`09`](09-jokers.md)
 

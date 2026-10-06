@@ -24,6 +24,9 @@ export const DIAL_HOLD_MS = 1600;
 export const STAMP_MS = 1300;
 export const SHRED_MS = 1100;
 export const SWEEP_MS = 550;
+/** Francotirador (JK-8): the beat of silence before the shot lands grows with the level; the shatter of a miss. */
+export const SNIPE_BEAT_MS = (level: number) => 450 + level * 45;
+export const SHATTER_MS = 850;
 /** A Francotirador hit: the right answer glows this long before the level repeats (JK-8). */
 export const SNIPE_HIT_MS = 2500;
 /** How long the revealed answer stays on screen before the result screen. */
