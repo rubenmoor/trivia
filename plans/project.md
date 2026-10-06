@@ -11,15 +11,15 @@ The road from today to a finished game: milestones, every open task, every open 
 - **Pool:** 200 questions in `data/questions.json` (190 approved, 9 rejected, 1 draft), batches `first-120` and `pilot`. 24 categories / 140 subcategories (D-19).
 - **Pipeline:** `tools/qgen.py` (fit → draft → rate → factcheck → dedupe → merge, plus revise/apply, report, validate), `tools/media.py` (Commons fetch, cache sync).
 - **Review tool and stats pages:** done ([`08-review-tool.md`](08-review-tool.md)).
-- **Game:** a playable skeleton (D-25): server referee in `server/game.py`, screens in `client/src/game/`, unpolished parts marked `PLACEHOLDER(<task ID>)`. Players and per-player burning on the server (GF-6); the D-29 look is in place and confirmed (M3); no Player screen, no jokers, no sound yet.
+- **Game:** a playable skeleton (D-25): server referee in `server/game.py`, screens in `client/src/game/`, unpolished parts marked `PLACEHOLDER(<task ID>)`. Players and per-player burning on the server (GF-6); the D-29 look is in place and confirmed (M3); no jokers, no sound yet.
 
 ## Milestones
 
 | # | Milestone | Main plans | Status |
 |---|-----------|-----------|--------|
 | M0 | Foundations: pool, pipeline, review tool, media cache, playable skeleton | 02, 06, 07, 08 | done |
-| M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | next |
-| M2 | Jokers | 09 | todo |
+| M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | done (B-1 waits for a decision) |
+| M2 | Jokers | 09 | next |
 | M3 | Visual design and screen polish | 10, 04 | mostly done (UI-11 tear-open, UI-7 preload left) |
 | M4 | Sound, music and fireworks | 04, 09 | todo |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
@@ -38,7 +38,7 @@ Done. See the ticked tasks in [`02-question-pool.md`](02-question-pool.md), [`06
 
 - [x] GF-6 Players: `players` table, name on new games, burn per player plus global burn, supply and draw per player, undo per player — [`03`](03-game-flow.md)
 - [x] QP-14 `burned` table gets a player column; `qgen.py report --player` — [`02`](02-question-pool.md)
-- [ ] UI-16 Player screen: name list, new name, greeting; name on Start and Level — [`04`](04-ui-tv-display.md)
+- [x] UI-16 Player screen: name list, new name, greeting; name on Start and Level — [`04`](04-ui-tv-display.md)
 - [x] GF-1 Full rule set (no timer, D-30) — [`03`](03-game-flow.md)
 - [x] GM-1 Choose the control method (TV keyboard + `Esc` overlay, D-30) — [`05`](05-gamemaster-controls.md)
 - [x] GM-2 Define the action set (incl. skip and burn for everyone, D-28; confirmed D-30) — [`05`](05-gamemaster-controls.md)

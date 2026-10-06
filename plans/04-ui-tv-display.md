@@ -209,5 +209,5 @@ For now, everything works with a mouse and with the keyboard of the TV machine (
 - [x] UI-12 Lock-in mechanic: answer lock, padlock reveal of «Respuesta final», unlock (reverse animation), submit, level-dependent wait, reveal. *2026-10-06: the big padlock shakes, opens and swings away; unlocking swings it back.*
 - [~] UI-13 Admin overlay on `Esc`: pause/resume, volume, skip, undo, restart, fullscreen. *2026-10-06: all but volume (placeholder until UI-8), `client/src/game/Overlay.svelte`; «Saltar y quemar para todos» added (GM-4).*
 - [x] UI-14 Consolation and milestone copy (Spanish), several variants per level band. *2026-10-06: `client/src/game/copy.ts`.*
-- [ ] UI-16 Player screen: name list, new name entry, greeting; player name on Start («Continuar») and Level (D-28).
+- [x] UI-16 Player screen: name list, new name entry, greeting; player name on Start («Continuar») and Level (D-28). *2026-10-06: `client/src/game/Player.svelte`: up to 9 known names (keys `1`–`9`, with games and wins), typing any letter starts a new name, `Enter` plays; the supply report shows if the pool can't fill a game for that player; «¡Hola, …!» before Level. The idle animation is the shared stage (drifting «?»).*
 - [ ] UI-15 Make room for the joker tray and hint notes in the Question layout (UI-2) and the read-only tray on Level/Select; joker work itself is JK-4..JK-9 (09).

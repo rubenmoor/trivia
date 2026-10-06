@@ -1,4 +1,4 @@
-import type { Category, Game, Question, Review, Slot, Supply } from "./types";
+import type { Category, Game, Player, Question, Review, Slot, Supply } from "./types";
 
 async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -65,6 +65,11 @@ export class GameError extends Error {
   constructor(message: string, readonly supply: Supply | null) {
     super(message);
   }
+}
+
+/** Known players, the most recent first (D-28). */
+export async function fetchPlayers(): Promise<Player[]> {
+  return json(await call("/api/players"));
 }
 
 export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }> {

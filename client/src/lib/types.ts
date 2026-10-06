@@ -108,6 +108,14 @@ export interface Supply {
   levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
 }
 
+/** A known player (server/game.py `players`, D-28). */
+export interface Player {
+  name: string;
+  games: number;
+  won: number;
+  last_played: string | null;
+}
+
 /** The game as the server shows it to the TV (server/game.py `view`): no correct answer before the final answer. */
 export interface Game {
   id: number;

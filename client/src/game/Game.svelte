@@ -1,6 +1,6 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
-  // screens Start → Level → Select → Question → Correct / Wrong → … → Victory, with one
+  // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (server/game.py).
   import { onMount } from "svelte";
   import { fetchGame, gameAction, GameError, type GameActionBody } from "../lib/api";
@@ -11,17 +11,19 @@
   import Icon from "./Icon.svelte";
   import Overlay from "./Overlay.svelte";
   import Placeholder from "./Placeholder.svelte";
+  import Player from "./Player.svelte";
   import Question from "./Question.svelte";
   import { music, sfx, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import "./theme.css";
-  import { FADE_MS, PICK_MS, sleep } from "./timing";
+  import { FADE_MS, GREETING_MS, PICK_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
-  type Screen = "start" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
+  type Screen = "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
 
   const MUSIC: Record<Screen, Track | null> = {
     start: "normal",
+    player: "normal",
     level: "normal",
     select: "normal",
     question: "question",
@@ -47,6 +49,11 @@
   /** The first click unlocks audio and autoplay in the browser (04, "Start"). */
   let unlocked = false;
   let questionRef = $state<ReturnType<typeof Question>>();
+  let playerRef = $state<ReturnType<typeof Player>>();
+  /** The chosen name while «¡Hola, …!» plays (UI-16). */
+  let greeting = $state<string | null>(null);
+  /** The supply report when the pool can't fill a game for the chosen player. */
+  let refused = $state<Supply | null>(null);
   let overlayRef = $state<ReturnType<typeof Overlay>>();
   /** Media that was playing when the overlay opened; it resumes on close. */
   let pausedMedia: HTMLMediaElement[] = [];
@@ -112,8 +119,26 @@
 
   async function newGame() {
     unlocked = true;
-    // PLACEHOLDER(UI-16): no Player screen yet; every game is played as «Familia».
-    if (await act("new", { player: "Familia" })) await go("level", "whoosh");
+    greeting = null;
+    refused = null;
+    await go("player", "whoosh");
+  }
+
+  /** A name was picked or typed: start the game for that player, greet, then the Level screen. */
+  async function choosePlayer(name: string) {
+    if (busy) return;
+    refused = null;
+    const before = supply;
+    if (!(await act("new", { player: name }))) {
+      if (supply !== before && supply && !supply.ok) refused = supply; // act() stored this player's report
+      return;
+    }
+    greeting = game?.player ?? name;
+    sfx("¡hola!");
+    busy = true;
+    await sleep(GREETING_MS);
+    await go("level", "listo");
+    greeting = null;
   }
 
   async function pick(i: number) {
@@ -187,6 +212,7 @@
     if (busy) return;
     const next = e.key === "Enter" || e.key === " ";
     if (screen === "question") return questionRef?.key(e);
+    if (screen === "player") return playerRef?.key(e);
     if (screen === "start" && next) {
       e.preventDefault();
       if (running) resume();
@@ -247,6 +273,9 @@
         </div>
       {/if}
     </section>
+  {:else if screen === "player"}
+    <Stage />
+    <Player bind:this={playerRef} {busy} {greeting} {refused} onchoose={choosePlayer} />
   {:else if screen === "level" && game}
     <Stage />
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
