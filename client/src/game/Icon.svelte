@@ -1,7 +1,7 @@
 <script lang="ts" module>
   // The game's icons (plans/10-visual-design.md, VD-8): small inline SVGs in one rounded style,
   // drawn in currentColor. No emoji on the TV: they look different on every system.
-  export type IconName = "lock" | "unlock" | "replay" | "speaker" | "film" | "check" | "cross" | "crown" | "star";
+  export type IconName = "lock" | "unlock" | "replay" | "speaker" | "film" | "check" | "cross" | "crown" | "star" | "trash";
 </script>
 
 <script lang="ts">
@@ -45,6 +45,11 @@
   {:else if name === "crown"}
     <path d="M3.5 8l4.5 4 4-6.5 4 6.5 4.5-4-1.8 10.5H5.3z" fill="currentColor" fill-opacity="0.35" />
     <path d="M6 21h12" />
+  {:else if name === "trash"}
+    <path d="M4.5 7h15" />
+    <path d="M9.5 7V5a1.5 1.5 0 0 1 1.5-1.5h2A1.5 1.5 0 0 1 14.5 5v2" />
+    <path d="M6.5 7l1 12.5a1.5 1.5 0 0 0 1.5 1.4h6a1.5 1.5 0 0 0 1.5-1.4l1-12.5" fill="currentColor" fill-opacity="0.25" />
+    <path d="M10.5 11v6M13.5 11v6" />
   {:else if name === "star"}
     <path
       d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"

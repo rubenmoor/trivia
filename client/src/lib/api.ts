@@ -72,6 +72,17 @@ export async function fetchPlayers(): Promise<Player[]> {
   return json(await call("/api/players"));
 }
 
+/** Delete a player with all their games and burns (GF-7); returns the remaining players. */
+export async function deletePlayer(name: string): Promise<Player[]> {
+  return json(
+    await call("/api/players/delete", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name }),
+    }),
+  );
+}
+
 export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }> {
   return json(await call("/api/game"));
 }

@@ -205,6 +205,7 @@
   function onkeydown(e: KeyboardEvent) {
     if (e.repeat) return;
     if (overlayOpen) return overlayRef?.key(e);
+    if (screen === "player" && playerRef?.dialogOpen()) return playerRef.key(e);
     if (e.key === "Escape") {
       e.preventDefault();
       return openOverlay();
@@ -275,7 +276,7 @@
     </section>
   {:else if screen === "player"}
     <Stage />
-    <Player bind:this={playerRef} {busy} {greeting} {refused} onchoose={choosePlayer} />
+    <Player bind:this={playerRef} {busy} {greeting} {refused} onchoose={choosePlayer} ondeleted={refresh} />
   {:else if screen === "level" && game}
     <Stage />
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>

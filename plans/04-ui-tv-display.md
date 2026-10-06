@@ -67,6 +67,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 ### Player (D-28)
 - «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).
 - After a name is chosen, the server runs the supply check **for that player** (GF-5); if it fails, the screen says which levels lack questions, as the Start screen does today.
+- Each name can be deleted with all its games and progress (GF-7): a small trash button on hover or keyboard focus, then a confirmation.
 - A short greeting with the name («¡Hola, Sofía!») plays into the transition to Level. The name stays in a corner of the Level screen.
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 

@@ -1,16 +1,19 @@
 <script lang="ts">
   // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the
   // known names (most recent first, keys 1–9) and a field for a new name. The server keeps the
-  // players and burns questions per player (server/game.py).
-  import { onMount } from "svelte";
-  import { fetchPlayers } from "../lib/api";
+  // players and burns questions per player (server/game.py). Each name can be deleted with all its
+  // progress, after a confirmation (GF-7).
+  import { onMount, tick } from "svelte";
+  import { deletePlayer, fetchPlayers } from "../lib/api";
   import type { Player, Supply } from "../lib/types";
+  import Icon from "./Icon.svelte";
 
   let {
     busy,
     greeting,
     refused,
     onchoose,
+    ondeleted,
   }: {
     busy: boolean;
     /** The chosen name while «¡Hola, …!» plays into the transition, else null. */
@@ -18,6 +21,8 @@
     /** The supply report when the pool can't fill a game for the chosen player (GF-5). */
     refused: Supply | null;
     onchoose: (name: string) => void;
+    /** A player was deleted (their running game may be gone too). */
+    ondeleted: () => void;
   } = $props();
 
   const MAX_SHOWN = 9;
@@ -27,6 +32,10 @@
   let error = $state<string | null>(null);
   let name = $state("");
   let input = $state<HTMLInputElement>();
+  /** The player waiting for «¿Borrar…?» to be confirmed, or null. */
+  let doomed = $state<Player | null>(null);
+  let deleting = $state(false);
+  let cancelButton = $state<HTMLButtonElement>();
 
   onMount(async () => {
     try {
@@ -52,8 +61,41 @@
     return p.won ? `${n} · ${p.won === 1 ? "1 ganada" : `${p.won} ganadas`}` : n;
   }
 
+  async function askDelete(p: Player) {
+    doomed = p;
+    await tick();
+    cancelButton?.focus(); // a stray Enter must not delete anyone
+  }
+
+  async function confirmDelete() {
+    if (!doomed || deleting) return;
+    deleting = true;
+    try {
+      players = await deletePlayer(doomed.name);
+      error = null;
+      ondeleted();
+    } catch (e) {
+      error = e instanceof Error ? e.message : String(e);
+    } finally {
+      deleting = false;
+      doomed = null;
+    }
+  }
+
+  /** True while the delete confirmation is open: it gets every key, Esc included. */
+  export function dialogOpen() {
+    return doomed !== null;
+  }
+
   /** Keys from Game.svelte: 1–9 pick a name; any letter starts typing a new one. */
   export function key(e: KeyboardEvent) {
+    if (doomed) {
+      if (e.key === "Escape" || e.key === "Backspace") {
+        e.preventDefault();
+        doomed = null;
+      }
+      return; // Enter, Tab and arrows work on the dialog's buttons
+    }
     if (document.activeElement === input) {
       if (e.key === "Enter") submit(e);
       return;
@@ -77,11 +119,16 @@
     {#if shown.length}
       <div class="names">
         {#each shown as p, i (p.name)}
-          <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} style:--i={i}>
-            <kbd>{i + 1}</kbd>
-            <span class="who">{p.name}</span>
-            <span class="label">{games(p)}</span>
-          </button>
+          <div class="entry" style:--i={i}>
+            <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy}>
+              <kbd>{i + 1}</kbd>
+              <span class="who">{p.name}</span>
+              <span class="label">{games(p)}</span>
+            </button>
+            <button class="delete" onclick={() => askDelete(p)} disabled={busy} title="Borrar a {p.name}">
+              <Icon name="trash" />
+            </button>
+          </div>
         {/each}
       </div>
     {/if}
@@ -106,6 +153,22 @@
     {/if}
 
     {#if error}<p class="error">{error}</p>{/if}
+
+    {#if doomed}
+      <div class="backdrop">
+        <div class="dialog" role="alertdialog" aria-labelledby="delete-title">
+          <h2 id="delete-title">¿Borrar a <span class="doomed">{doomed.name}</span>?</h2>
+          <p>
+            Se borran {doomed.games === 1 ? "su partida" : doomed.games ? `sus ${doomed.games} partidas` : "sus datos"}
+            y todo su progreso: las preguntas que ya vio vuelven a salir. No se puede deshacer.
+          </p>
+          <div class="row">
+            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)}>Cancelar <kbd>Esc</kbd></button>
+            <button class="danger" onclick={confirmDelete} disabled={deleting}>Sí, borrar</button>
+          </div>
+        </div>
+      </div>
+    {/if}
     {#if refused && !refused.ok}
       <div class="supply glass">
         <p>No hay suficientes preguntas para una partida completa ({refused.available} disponibles):</p>
@@ -141,6 +204,85 @@
     gap: calc(1.2 * var(--u));
     max-width: calc(96 * var(--u));
   }
+  .entry {
+    position: relative;
+    animation: arrive 0.5s calc(0.15s + var(--i) * 0.06s) var(--spring) backwards;
+  }
+  .delete {
+    position: absolute;
+    top: calc(-0.7 * var(--u));
+    right: calc(-0.7 * var(--u));
+    display: grid;
+    place-items: center;
+    width: calc(2.4 * var(--u));
+    height: calc(2.4 * var(--u));
+    padding: 0;
+    border: 1px solid var(--slate-600);
+    border-radius: 50%;
+    background: var(--night-700);
+    color: var(--slate-400);
+    font-size: calc(1.2 * var(--u));
+    opacity: 0;
+    transition:
+      opacity 0.15s,
+      color 0.15s,
+      border-color 0.15s;
+  }
+  .entry:hover .delete,
+  .delete:focus-visible {
+    opacity: 1;
+  }
+  .delete:hover {
+    color: var(--coral);
+    border-color: var(--coral);
+  }
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    background: rgba(5, 8, 16, 0.72);
+  }
+  .dialog {
+    max-width: calc(48 * var(--u));
+    padding: calc(2.2 * var(--u)) calc(2.6 * var(--u));
+    border: 1px solid var(--slate-600);
+    border-radius: calc(1.6 * var(--u));
+    background: var(--night-700);
+    box-shadow: 0 calc(1.5 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(1.2 * var(--u));
+    animation: arrive 0.35s var(--spring) backwards;
+  }
+  .dialog h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: calc(2.4 * var(--u));
+    font-weight: 800;
+  }
+  .doomed {
+    color: var(--coral);
+  }
+  .dialog p {
+    margin: 0;
+    color: var(--slate-200);
+  }
+  .danger {
+    padding: calc(0.7 * var(--u)) calc(2 * var(--u));
+    border: none;
+    border-radius: calc(1 * var(--u));
+    background: var(--coral);
+    color: var(--night-900);
+    font-family: var(--font-display);
+    font-size: calc(1.6 * var(--u));
+    font-weight: 800;
+  }
+  .danger:focus-visible {
+    outline-color: var(--paper);
+  }
   .name-button {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -154,7 +296,6 @@
     transition:
       transform 0.2s var(--spring),
       border-color 0.2s;
-    animation: arrive 0.5s calc(0.15s + var(--i) * 0.06s) var(--spring) backwards;
   }
   .name-button:hover:not(:disabled),
   .name-button:focus-visible {

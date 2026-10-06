@@ -126,6 +126,18 @@ def with_defaults(state):
     return state
 
 
+def delete_player(name):
+    """Delete a player completely (GF-7): the player, all their games (a running one too) and
+    everything burned for them. Questions burned for everyone stay burned."""
+    with connect() as con:
+        pid = selection.player_id(con, clean_name(name))
+        if pid is None:
+            raise GameError(f"no hay ningún jugador «{name}»")
+        con.execute("DELETE FROM burned WHERE player_id = ?", (pid,))
+        con.execute("DELETE FROM games WHERE player_id = ?", (pid,))
+        con.execute("DELETE FROM players WHERE id = ?", (pid,))
+
+
 def latest(con):
     """(id, result, state, player_id) of the newest game, or None."""
     row = con.execute("SELECT id, result, state, player_id FROM games ORDER BY id DESC LIMIT 1").fetchone()

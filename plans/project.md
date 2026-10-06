@@ -38,6 +38,7 @@ Done. See the ticked tasks in [`02-question-pool.md`](02-question-pool.md), [`06
 
 - [x] GF-6 Players: `players` table, name on new games, burn per player plus global burn, supply and draw per player, undo per player — [`03`](03-game-flow.md)
 - [x] QP-14 `burned` table gets a player column; `qgen.py report --player` — [`02`](02-question-pool.md)
+- [x] GF-7 Delete a player with all their games and burns — [`03`](03-game-flow.md)
 - [x] UI-16 Player screen: name list, new name, greeting; name on Start and Level — [`04`](04-ui-tv-display.md)
 - [x] GF-1 Full rule set (no timer, D-30) — [`03`](03-game-flow.md)
 - [x] GM-1 Choose the control method (TV keyboard + `Esc` overlay, D-30) — [`05`](05-gamemaster-controls.md)

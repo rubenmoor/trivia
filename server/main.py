@@ -20,6 +20,8 @@ API:
     GET  /api/game[?player=<name>]                 {"game": the newest game or null, "supply": supply check
                                                    for that player (default: a new player, D-28)}
     GET  /api/players                              known players, most recent first (D-28)
+    POST /api/players/delete                       body {"name": name}: delete the player, their games and
+                                                   burns (GF-7); returns the remaining players
     POST /api/game/new                             body {"player": name}: start a new game for a known or new
                                                    player (409 with the supply report if it can't)
     POST /api/game/pick                            body {"index": 0-3}: pick a card
@@ -238,6 +240,14 @@ class Handler(BaseHTTPRequestHandler):
         if len(parts) == 3 and parts[:2] == ["api", "game"]:
             raw = self.rfile.read(int(self.headers.get("Content-Length", 0)))
             return self.game_action(parts[2], json.loads(raw or b"{}"))
+        if parts == ["api", "players", "delete"]:
+            body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
+            try:
+                with _lock:
+                    game.delete_player(body.get("name"))
+                return self.send_json(200, game.players())
+            except game.GameError as e:
+                return self.send_json(409, {"error": str(e)})
         if len(parts) < 4 or parts[:2] != ["api", "questions"]:
             return self.send_json(404, {"error": "not found"})
         qid, action = parts[2], "/".join(parts[3:])
