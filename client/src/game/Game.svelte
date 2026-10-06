@@ -6,6 +6,7 @@
   import { fetchGame, gameAction, GameError, playJoker, type GameActionBody } from "../lib/api";
   import type { Game, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
+  import Fireworks from "./Fireworks.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
   import JokerTray from "./JokerTray.svelte";
@@ -307,6 +308,9 @@
     }
   }
 
+  /** /?fuegos=<variant> or ?fuegos=finale plays fireworks over the Start screen (preview, UI-9). */
+  const preview = new URLSearchParams(location.search).get("fuegos");
+
   /** Each card's tilt, within ±3° (10, "Cards"); fixed per game and level, so a re-render keeps it. */
   function tilt(i: number) {
     const seed = ((game?.id ?? 0) * 31 + (game?.level ?? 0) * 7 + i * 13) % 13;
@@ -322,6 +326,7 @@
     <p class="center label">Cargando…</p>
   {:else if screen === "start"}
     <Stage />
+    {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
     <section class="start">
       <h1 class="wordmark"><span class="bang">¡</span>Trivia<span class="bang">!</span></h1>
       <p class="subtitle">12 preguntas seguidas para llegar a la cima</p>
@@ -414,8 +419,7 @@
   {:else if screen === "correct" && game?.last}
     <Stage mood="correct" />
     <section class="result">
-      <!-- PLACEHOLDER(UI-9): fireworks overlay. -->
-      <Placeholder task="UI-9" label="fuegos artificiales" chip />
+      <Fireworks />
       <h1 class="title good">¡Correcto!</h1>
       <div class="panel glass">
         <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
@@ -442,6 +446,7 @@
     </section>
   {:else if screen === "victory" && game}
     <Stage mood="victory" />
+    <Fireworks mode="finale" />
     <section class="result victory">
       <Tower filled={12} drop />
       <div class="stack">
@@ -453,8 +458,7 @@
             <p class="fun-fact">{game.last.fun_fact}</p>
           </div>
         {/if}
-        <!-- PLACEHOLDER(UI-9): the long fireworks finale. -->
-        <Placeholder task="UI-9" label="gran final de fuegos artificiales" chip />
+
         <button class="candy breathe" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
       </div>
     </section>

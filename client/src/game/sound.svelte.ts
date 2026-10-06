@@ -377,6 +377,26 @@ function applause(c: AudioContext, out: AudioNode, t: number, seconds: number) {
 /** First match wins; patterns follow the effect names used in the game's code. */
 const RECIPES: [RegExp, Recipe][] = [
   [/silencio/, () => {}],
+  // Fireworks (UI-9)
+  [/cohete/, (c, o, t) => {
+    tone(c, o, t, { from: 600, to: 2400, len: 0.9, level: 0.05, attack: 0.1 });
+    noise(c, o, t, { type: "highpass", from: 3000, len: 0.9, level: 0.08, attack: 0.1 });
+  }],
+  [/estallido/, (c, o, t) => {
+    tone(c, o, t, { from: 120, to: 40, len: 0.5, level: 0.5 });
+    noise(c, o, t, { type: "lowpass", from: 2500, to: 300, len: 0.6, level: 0.45 });
+    for (let i = 0; i < 10; i++) noise(c, o, t + 0.25 + Math.random() * 0.8, { type: "highpass", from: 4000, len: 0.025, level: 0.12 });
+  }],
+  [/cañón de confeti/, (c, o, t) => {
+    tone(c, o, t, { from: 300, to: 80, len: 0.15, level: 0.6 });
+    noise(c, o, t, { from: 1500, to: 400, len: 0.5, q: 0.8, level: 0.35 });
+  }],
+  [/bengalas/, (c, o, t) => {
+    for (let i = 0; i < 60; i++) noise(c, o, t + Math.random() * 2.4, { type: "highpass", from: 5000, len: 0.02, level: 0.06 });
+  }],
+  [/estrellas/, (c, o, t) => {
+    [88, 91, 95, 100, 96, 93].forEach((m, i) => tone(c, o, t + i * 0.28, { from: hz(m), len: 0.6, level: 0.06 }));
+  }],
   [/aplausos/, (c, o, t, n) => applause(c, o, t, n.includes("gran") ? 5 : 3)],
   [/whoosh|swoosh que sube/, (c, o, t, n) =>
     noise(c, o, t, { from: n.includes("sube") ? 400 : 2400, to: n.includes("sube") ? 3000 : 300, len: 0.45, q: 2, attack: 0.15 })],

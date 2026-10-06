@@ -94,7 +94,7 @@ The game is called «¡Trivia!» (D-30).
 
 - [x] UI-8 Audio engine: AudioContext, three channels, fades, gapless loops, synthesized fallbacks — [`04`](04-ui-tv-display.md)
 - [ ] UI-10 Source CC0/CC BY sound assets, `client/public/audio/CREDITS.md` — [`04`](04-ui-tv-display.md)
-- [ ] UI-9 Fireworks overlay, 4+ variants, finale mode — [`04`](04-ui-tv-display.md)
+- [x] UI-9 Fireworks overlay, 4+ variants, finale mode — [`04`](04-ui-tv-display.md)
 - [x] JK-9 Joker sounds — [`09`](09-jokers.md)
 - [x] UI-13 rest: volume sliders and mute in the admin overlay — [`04`](04-ui-tv-display.md)
 
