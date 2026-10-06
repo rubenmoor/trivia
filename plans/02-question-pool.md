@@ -19,7 +19,7 @@ The pool lives in `data/questions.json`: `{"version": 1, "questions": [...]}`. C
   "hints": ["vague", "medium", "strong"],  // exactly 3
   "media": {
     "type": "image",           // image | audio | video
-    "role": "decorative",      // decorative (must not give the answer away) | essential (part of the question)
+    "role": "decorative",      // decorative (mood, blurred; must not give the answer away) | illustrative (shows the question's subject, sharp; must not give the answer away, D-24) | essential (part of the question)
     "query": "Colombian Andes landscape",  // search term for sourcing (06-images.md)
     "note": null,              // what exactly to play/show, for audio and video
     "source_url": null, "file_url": null, "credit": null  // filled when the media is picked; file_url is the cache key (D-17)

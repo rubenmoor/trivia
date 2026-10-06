@@ -104,6 +104,13 @@ For the pilot, `merge --min-score 0` keeps everything except hard fails, so the 
 - **Media:** the suggestion (candidate 1) was accepted for 55 of 67 picks (82 %).
 - **Usage:** 78 Claude calls, about $7.70 at list price for 89 drafts, so roughly $0.10 per question.
 
+## First-120 review results (2026-10-06, D-23)
+- **120 reviewed after the QG-13 revision:** 117 approved, 3 rejected, no feedback. Both proposed drops were overruled.
+- **The tone rule was too strict:** the revise step proposed dropping Titanic (1997 film) and the end of WWII as "disasters with many victims"; the gamemaster approved both. → Famous historical events and films are fine; a question just mustn't be *about* deaths or suffering.
+- **All 3 rejects were clues that aren't unique in the real world:** "the Caribbean rhythm danced with candles" (other dances use candles), "the sport with a racket and a yellow ball" (pádel, frontenis…; tennis doesn't depend on the ball's colour), and "Escucha: ¿qué instrumento suena?" for maracas (Commons had no recording). The question only worked because the three wrong options didn't match. → New house-style rule: the clue must point to the answer in the real world, not just among the four options; the rater scores `unambiguous` ≤ 3 otherwise.
+- **Difficulty is much better:** 10 of 119 corrected (8 %, pilot 19 %); the revised level was exactly right for 109. Remaining misses: famous world facts that kids meet in cartoons and everyday talk were still too high (Saturn's rings 4 → 2, Cervantes 8 → 5, plural of "lápiz" 5 → 2), and two were lowered too far by the revise step (García Márquez's Nobel 3 → 7, the seven notes of the scale 3 → 7). → New calibration examples in both directions.
+- **Decorative images don't matter much:** all 113 picks were the first suggestion, including off-topic ones. A separate pass will look for related images (backlog B-4).
+
 ## Revising pool questions (QG-13)
 Existing questions (the first 120, or `needs_work` questions after a review) go through the same quality steps as new drafts, then get revised instead of written from scratch:
 
@@ -130,4 +137,5 @@ Existing questions (the first 120, or `needs_work` questions after a review) go 
 - [x] QG-10 Pilot: rating pass and fact-check. *2026-10-06, 89 rated, 74 fact-checked (68 confirmed, 5 wrong, 1 uncertain); 80 merged as `batch: "pilot"`, 9 dropped (`work/pilot/dropped.json`).*
 - [x] QG-11 Pilot: gamemaster reviews all pilot questions; set the quality threshold and decide on scaling. *2026-10-06: no score threshold, prompts tuned (D-16); scaling worth it, size open (OQ-17).*
 - [x] QG-13 Revise existing questions (generalised rework, see "Revising pool questions"): `import`, `revise`, `apply`. *2026-10-06: first 120 → batch `first-120`: 119 rated and fact-checked (118 confirmed), 60 revised, 2 proposed drops, 57 unchanged; ~$6 at list price for both revise attempts.*
+- [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
 - [ ] QG-12 Build a review page (approve/reject by keyboard, shows the question as on the TV); possibly the first piece of the Svelte client. *Planned in `08-review-tool.md`.*

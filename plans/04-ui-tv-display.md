@@ -7,7 +7,7 @@ The game as the family sees it on the TV: screen states, transitions, sound and 
 ## Requirements
 - Full-screen, 16:9, readable from several metres away (large type, high contrast).
 - A full-bleed background image for each question, with an overlay or scrim so the text stays legible.
-- Decorative images are blurred and slightly darkened, with a big question mark in the centre (D-15), so they read as mood, not as a clue. Essential media is shown sharp.
+- Decorative images are blurred and slightly darkened, with a big question mark in the centre (D-15), so they read as mood, not as a clue. Illustrative and essential media are shown sharp (D-24).
 - Progress is shown as a **tower of blocks** that grows by one block per correct answer and gets narrower towards the top (see Level screen).
 - Players choose each question by its humorous `description` (D-8). The category is never shown.
 - A subtle media credit line in a corner whenever media is shown (IMG-4, `06-images.md`).

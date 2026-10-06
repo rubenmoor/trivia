@@ -24,6 +24,7 @@ Don't hotlink at game time. Every chosen file is **downloaded once into `media/`
 - **Licence:** free (public domain, CC0, CC BY, CC BY-SA). The author and licence go into `credit`.
 - **Images:** landscape, at least 1920 px wide for decorative images (essential images may be smaller if nothing better exists); no visible text that gives the answer away.
 - **Decorative media** must not reveal the answer (no Eiffel Tower for "capital of France").
+- **Illustrative media** (D-24) shows something that belongs to the question (its subject, a place or object it mentions, the setting of a film), but never the answer and nothing that rules options in or out. Same size rules as decorative images.
 - **Essential media** must show exactly what the question asks about (`media.note` says what).
 - **Audio:** a short clip; the game plays it from the start.
 
@@ -73,4 +74,5 @@ The TV shows a subtle credit line in a corner while media is shown, e.g. "Foto: 
 - [x] IMG-8 `qgen.py validate`: `local_path` exists when set. *2026-10-06.*
 - [x] IMG-11 URL-keyed media cache (D-17): `file_url` replaces `local_path` in schema, `media.py`, `qgen.py`, server (`GET /media?url=`, download on miss) and review tool; migrate the existing files from `images/` and `media/` into the cache; `media/` in `.gitignore`. *2026-10-06; 112 slots migrated (111 files, two questions share one), `images/` removed.*
 - [x] IMG-12 `media.py sync [--prune]`: fill the cache for all picked media; remove unreferenced files. *2026-10-06.*
+- [x] IMG-14 New media role `illustrative` (D-24) in schema, `qgen.py`, `media.py`, review tool. Then go through the approved first-120: give every question a related image where one can't give the answer away, picked by Claude from the thumbnails (was B-4). *2026-10-06: 115 approved questions now `illustrative` (114 images, the Apollo 11 video). 68 got a new search term and pick, 47 kept a pick that already fit. Every pick checked on a thumbnail sheet; rejected candidates that showed the answer (Paris 2024 rings for the 5 rings, a drum kit, a Van Gogh painting, "STRAIT" on a hull). The blue whale and marathon videos became images. The audio questions' backgrounds stay decorative. Approved by the gamemaster.*
 - [x] IMG-13 `qgen.py validate`: warn (not fail) when an approved question's media isn't cached (or isn't picked). *2026-10-06.*

@@ -175,3 +175,20 @@ Template:
   - Three music loops: `normal` (Start, Level, Select), `question` (more intense, Question screen) and `submitted` (most intense, from the final answer until the reveal). The wait before the reveal grows with the level (3 s at level 1 to 12 s at level 12, to be tuned), and at the reveal, the music turns straight into the fanfare/jingle or the sad sting.
 - Consequences: The drum-roll is replaced by the `submitted` track and the level-dependent wait. A new game needs a supply check that all 12 levels can offer 4 questions (GF-5). The pool needs 48 unburned questions per game, spread over the ranges (OQ-17).
 - Supersedes / related: D-20, D-21; OQ-20..OQ-24; GF-2, GF-5, UI-3, UI-8, UI-12
+
+## D-23: Prompt changes after the first-120 review
+- Date: 2026-10-06
+- Context: The gamemaster reviewed the revised first 120 (QG-13): 117 approved, 3 rejected, both proposed drops overruled, 10 difficulty corrections (07, "First-120 review results").
+- Decision:
+  - The tone rule no longer bans famous historical events or films that involve deaths (Titanic, the end of WWII). Only questions *about* deaths, suffering or gore are out.
+  - A question's clue must identify the answer in the real world, not just among the four options ("baila con velas" → cumbia and "raqueta y pelotica amarilla" → tennis fail). The rater scores this under `unambiguous`.
+  - Seven new difficulty calibration examples, including two where the revise step lowered the level too far.
+- Consequences: `house-style.md`, `rate.md` and `revise.md` changed. Decorative image quality is handled separately (B-4).
+- Supersedes / related: D-16; QG-13, QG-14
+
+## D-24: Illustrative images
+- Date: 2026-10-06
+- Context: After the first-120 review, the gamemaster noted that decorative images don't matter (any mood picture passed), but a picture that actually relates to the question would be better, as long as it doesn't give the answer away.
+- Decision: A new media role `illustrative`: the image shows something that belongs to the question (its subject, a place or object it mentions, the setting) without showing the answer or ruling options in or out. Unlike decorative images (D-15), illustrative images are shown sharp, without the question-mark overlay. Decorative stays for questions where any related image would give the answer away. The house style prefers illustrative over decorative where it is safe.
+- Consequences: `role` gains `illustrative` in schema, `qgen.py`, `media.py` (same size filter as decorative) and the review tool. The approved first-120 questions get illustrative images where possible (IMG-14), picked by Claude from the thumbnails.
+- Supersedes / related: D-15; IMG-14, B-4
