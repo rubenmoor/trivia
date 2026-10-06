@@ -54,7 +54,7 @@ No blocking questions left (D-30).
 **Exit:** every joker can be played on the TV; availability and reasons are correct; replaced questions are burned for the player.
 
 - [x] JK-1 Confirm names, keys and animations (D-30) — [`09`](09-jokers.md)
-- [ ] JK-2 Server: `POST /api/game/joker`, availability, purge, burn, hints, history — [`09`](09-jokers.md)
+- [x] JK-2 Server: `POST /api/game/joker`, availability, purge, burn, hints, history — [`09`](09-jokers.md)
 - [ ] JK-3 Server: Snipe — [`09`](09-jokers.md)
 - [ ] JK-4 Client: joker tray — [`09`](09-jokers.md)
 - [ ] JK-5 Client: common play animation and input lock — [`09`](09-jokers.md)

@@ -132,7 +132,7 @@ Joker activate shimmer; token pop-back; hint ding + paper; sweep whoosh; stamp t
 
 ## Tasks
 - [x] JK-1 Confirm the joker rules with the gamemaster. *2026-10-06: unlimited uses, one hint per Soplo, no extra cost for a Snipe hit, "category" = subcategory, seen questions burned per player (D-27, D-28). Names and keys: D-30 (the gamemaster left the names to us); animations as planned below.*
-- [ ] JK-2 Server: `POST /api/game/joker`, availability per joker (matching-aware, with reasons), purge in `draw`, burn replaced questions for the player, send only the hints shown, history entries.
+- [x] JK-2 Server: `POST /api/game/joker`, availability per joker (matching-aware, with reasons), purge in `draw`, burn replaced questions for the player, send only the hints shown, history entries. *2026-10-06: `server/game.py`. Availability runs each joker on a copy of the state inside a SQLite savepoint and rolls it back, so it can't disagree with the real play; Cambiazo checks every subcategory against one shared matching (~20 ms for the whole view). The response to a joker adds `event` (what happened, for the animation). History entries of replaced questions carry `outcome` instead of `correct`. Also fixed: undo restored a shallow copy, so the restored history still held the undone answer.*
 - [ ] JK-3 Server: Snipe (strike out, hit path: burn, redraw 4 cards for the same level).
 - [ ] JK-4 Client: joker tray (states, arming, keys, hint pips) on Question, read-only tray on Level and Select.
 - [ ] JK-5 Client: common joker play animation (fly-out, burst, pop-back) and input lock.

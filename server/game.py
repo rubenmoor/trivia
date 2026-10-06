@@ -13,10 +13,18 @@ A game's state is a JSON document in `games.state`:
     history     [{"level", "question_id", "correct"}] — one entry per final answer
     last        the last final answer: {"question_id", "chosen", "correct", "correct_index"}
     undo        the state before the last final answer (one undo step), or null
+Jokers (plans/09-jokers.md, D-26, D-27, JK-2) add:
+    purged      subcategories excluded from later draws in this game («Paso» with purge)
+    hints_shown 0–3, the hints of the current question shown so far («Soplo»)
+    struck      answer indexes struck out on the current question («Francotirador» misses)
+    jokers      jokers played on the current question, in order
+    swapped_to  the subcategory the players chose with «Cambiazo» for the current question, or null
+History entries of answered questions have "correct"; questions replaced by a joker or skipped by
+the admin have "outcome" (skipped | easier | category | sniped | admin_skip | admin_burn) instead.
 The server shuffles the answers and checks the final answer; the client never sees the
 correct answer before it submits.
 """
-import contextlib, datetime, json, random, sqlite3, sys
+import contextlib, copy, datetime, json, random, sqlite3, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -109,10 +117,17 @@ def players():
     return [{"name": n, "games": g, "won": w, "last_played": last} for n, g, w, last, _ in rows]
 
 
+def with_defaults(state):
+    """Fill in the joker fields for games saved before JK-2."""
+    for key, value in [("purged", []), ("hints_shown", 0), ("struck", []), ("jokers", []), ("swapped_to", None)]:
+        state.setdefault(key, value)
+    return state
+
+
 def latest(con):
     """(id, result, state, player_id) of the newest game, or None."""
     row = con.execute("SELECT id, result, state, player_id FROM games ORDER BY id DESC LIMIT 1").fetchone()
-    return (row[0], row[1], json.loads(row[2]), row[3]) if row else None
+    return (row[0], row[1], with_defaults(json.loads(row[2])), row[3]) if row else None
 
 
 def save(con, gid, state, result=None):
@@ -142,10 +157,18 @@ def asked_categories(state, by_id, broad):
     return {cat(by_id[h["question_id"]]) for h in state["history"] if h["question_id"] in by_id}
 
 
+def available_now(con, pid, state, pool):
+    """Questions that can still come up in this game: approved, not burned for the player or for
+    everyone, not offered yet, not in a purged subcategory."""
+    purged = set(state["purged"])
+    return [q for q in selection.available(pool, selection.burned_for(con, pid), state["offered"])
+            if q.get("subcategory") not in purged]
+
+
 def draw(con, pid, state, pool, n=selection.PER_LEVEL, keep=()):
     """Draw n cards for the state's level from the questions still available to the player in this game."""
     broad = categories.broad_of()
-    avail = selection.available(pool, selection.burned_for(con, pid), state["offered"])
+    avail = available_now(con, pid, state, pool)
     drawn = selection.draw(state["level"], avail, n=n, keep=keep,
                            avoid_categories=asked_categories(state, questions_by_id(pool), broad),
                            category_of=category_of(broad))
@@ -186,8 +209,8 @@ def new_game(pool, player):
         pid = selection.player_id(con, player)
         if pid is None:
             pid = con.execute("INSERT INTO players (name, created_on) VALUES (?, ?)", (player, now())).lastrowid
-        state = {"level": 1, "phase": "select", "options": [], "offered": [], "current": None,
-                 "answers": [], "history": [], "last": None, "undo": None}
+        state = with_defaults({"level": 1, "phase": "select", "options": [], "offered": [], "current": None,
+                               "answers": [], "history": [], "last": None, "undo": None})
         state["options"] = draw(con, pid, state, pool)
         con.execute("INSERT INTO games (started_on, state, player_id) VALUES (?, ?, ?)",
                     (now(), json.dumps(state), pid))
@@ -215,13 +238,14 @@ def answer(pool, index):
         gid, state, pid = running(con)
         if state["phase"] != "question":
             raise GameError("no question to answer")
-        if not 0 <= index < len(state["answers"]):
+        if not 0 <= index < len(state["answers"]) or index in state["struck"]:
             raise GameError(f"no answer {index + 1}")
         q = questions_by_id(pool)[state["current"]]
-        before = {**state, "undo": None}
+        before = {**copy.deepcopy(state), "undo": None}
         correct = state["answers"][index] == q["answer"]
         burn(con, q["id"], pid, gid)
-        state["history"].append({"level": state["level"], "question_id": q["id"], "correct": correct})
+        state["history"].append({"level": state["level"], "question_id": q["id"], "correct": correct,
+                                 "jokers": state["jokers"]})
         state["last"] = {"question_id": q["id"], "chosen": index, "correct": correct,
                          "correct_index": state["answers"].index(q["answer"])}
         state["undo"] = before
@@ -231,27 +255,203 @@ def answer(pool, index):
         elif state["level"] == selection.LEVELS:
             state["phase"], result = "won", "won"
         else:
-            state.update(level=state["level"] + 1, phase="select", current=None, answers=[])
+            state.update(level=state["level"] + 1, phase="select")
+            leave_question(state)
             state["options"] = draw(con, pid, state, pool)
         save(con, gid, state, result)
     return state
 
 
+def leave_question(state):
+    """Reset what belongs to the question on screen."""
+    state.update(current=None, answers=[], hints_shown=0, struck=[], jokers=[], swapped_to=None)
+
+
+def drop_current(con, gid, pid, state, by_id, outcome, burn_for):
+    """Burn the question on screen (for `burn_for`: the player's ID, or None = everyone) and log it."""
+    burn(con, state["current"], burn_for, gid)
+    state["history"].append({"level": state["level"], "question_id": state["current"], "outcome": outcome,
+                             "jokers": state["jokers"]})
+
+
+def back_to_select(con, gid, pid, state, pool, outcome, burn_for, purge=False):
+    """Drop the question on screen and refill the table (admin skip, «Paso»). With `purge`, its
+    subcategory leaves the game, and other cards of it on the table are replaced too (not burned:
+    the players only saw their descriptions)."""
+    by_id = questions_by_id(pool)
+    sub = by_id[state["current"]].get("subcategory")
+    drop_current(con, gid, pid, state, by_id, outcome, burn_for)
+    removed = {state["current"]}
+    if purge:
+        state["purged"].append(sub)
+        removed |= {i for i in state["options"] if by_id[i].get("subcategory") == sub}
+    keep = [by_id[i] for i in state["options"] if i not in removed]
+    try:
+        new = draw(con, pid, state, pool, n=len(removed), keep=keep)
+    except GameError:
+        raise GameError("sin este tema no alcanzan las preguntas" if purge
+                        else "no hay otra pregunta para este nivel")
+    state["options"] = [new.pop(0) if i in removed else i for i in state["options"]]
+    state["phase"] = "select"
+    leave_question(state)
+
+
 def skip(pool, everyone=False):
-    """«Saltar pregunta»: the current question is burned for the player (for everyone with
-    «Saltar y quemar para todos», D-28) and a new card replaces it."""
+    """«Saltar pregunta» (admin): the current question is burned for the player (for everyone with
+    «Saltar y quemar para todos», D-28) and a new card replaces it. Not a joker."""
     with connect() as con:
         gid, state, pid = running(con)
         if state["phase"] != "question":
             raise GameError("only a question on screen can be skipped")
-        by_id = questions_by_id(pool)
-        rest = [i for i in state["options"] if i != state["current"]]
-        burn(con, state["current"], None if everyone else pid, gid)
-        new = draw(con, pid, state, pool, n=1, keep=[by_id[i] for i in rest])
-        state["options"] = [new[0] if i == state["current"] else i for i in state["options"]]
-        state.update(phase="select", current=None, answers=[])
+        back_to_select(con, gid, pid, state, pool, "admin_burn" if everyone else "admin_skip",
+                       None if everyone else pid)
         save(con, gid, state)
     return state
+
+
+# Jokers (plans/09-jokers.md, JK-2) ---------------------------------------------------------------
+
+def later_fill(avail, level):
+    """(question IDs the matching uses for the levels after `level`, whether they all fill)."""
+    assignment, missing = selection.assign(avail, range(level + 1, selection.LEVELS + 1))
+    return {i for ids in assignment.values() for i in ids}, not missing
+
+
+def replacement(avail, level, cands, order, fill=None):
+    """The best of `cands` by `order` (random among ties) whose removal still lets every later
+    level fill with 4 cards (GF-2), or None."""
+    used, ok = fill or later_fill(avail, level)
+    if not ok:
+        return None
+    later = range(level + 1, selection.LEVELS + 1)
+    cands = list(cands)
+    random.shuffle(cands)
+    cands.sort(key=order)
+    for q in cands:
+        if q["id"] not in used or not selection.assign([x for x in avail if x["id"] != q["id"]], later)[1]:
+            return q
+    return None
+
+
+def category_candidates(avail, level, sub):
+    return [q for q in avail if q.get("subcategory") == sub and selection.in_range(q, level)]
+
+
+def swap_in(con, gid, pid, state, pool, new, outcome):
+    """Replace the question on screen in place with `new` (Bájale, Cambiazo)."""
+    by_id = questions_by_id(pool)
+    old = state["current"]
+    drop_current(con, gid, pid, state, by_id, outcome, pid)
+    answers = [new["answer"], *new["wrong_answers"]]
+    random.shuffle(answers)
+    state["options"] = [new["id"] if i == old else i for i in state["options"]]
+    state["offered"].append(new["id"])
+    leave_question(state)
+    state.update(current=new["id"], answers=answers)
+
+
+def play_hint(con, gid, pid, state, pool):
+    """«Soplo»: show the next hint."""
+    if state["hints_shown"] >= len(questions_by_id(pool)[state["current"]]["hints"]):
+        raise GameError("no quedan pistas")
+    state["hints_shown"] += 1
+    state["jokers"].append("hint")
+    return {"hint": state["hints_shown"]}
+
+
+def play_skip(con, gid, pid, state, pool, purge=False):
+    """«Paso»: back to Select with a new card; optionally the subcategory leaves the game."""
+    state["jokers"].append("skip")
+    sub = questions_by_id(pool)[state["current"]].get("subcategory")
+    back_to_select(con, gid, pid, state, pool, "skipped", pid, purge=purge)
+    return {"purged": sub if purge else None}
+
+
+def play_easier(con, gid, pid, state, pool):
+    """«Bájale»: an easier question of the same subcategory, the hardest of those below (09)."""
+    cur = questions_by_id(pool)[state["current"]]
+    avail = available_now(con, pid, state, pool)
+    cands = [q for q in avail if q.get("subcategory") == cur.get("subcategory") and q["difficulty"] < cur["difficulty"]]
+    new = replacement(avail, state["level"], cands, lambda q: -q["difficulty"])
+    if not new:
+        raise GameError("no hay preguntas más fáciles de este tema")
+    state["jokers"].append("easier")
+    swap_in(con, gid, pid, state, pool, new, "easier")
+    return {"from": cur["difficulty"], "to": new["difficulty"]}
+
+
+def play_category(con, gid, pid, state, pool, subcategory=None):
+    """«Cambiazo»: a question of the level's range from the subcategory the players chose,
+    preferring the current difficulty, then ±1 (09)."""
+    cur = questions_by_id(pool)[state["current"]]
+    if subcategory not in categories.broad_of():
+        raise GameError("ese tema no existe")
+    if subcategory == cur.get("subcategory"):
+        raise GameError("ya están en ese tema")
+    avail = available_now(con, pid, state, pool)
+    new = replacement(avail, state["level"], category_candidates(avail, state["level"], subcategory),
+                      lambda q: abs(q["difficulty"] - cur["difficulty"]))
+    if not new:
+        raise GameError("no hay preguntas de ese tema para este nivel")
+    state["jokers"].append("category")
+    swap_in(con, gid, pid, state, pool, new, "category")
+    state["swapped_to"] = subcategory
+    return {"subcategory": subcategory}
+
+
+JOKERS = {"hint": play_hint, "skip": play_skip, "easier": play_easier, "category": play_category}
+
+
+def joker(pool, name, **args):
+    """Play a joker on the question on screen; returns what happened (for the client's animation)."""
+    if name not in JOKERS:
+        raise GameError(f"no joker {name!r}")
+    with connect() as con:
+        gid, state, pid = running(con)
+        if state["phase"] != "question":
+            raise GameError("los comodines solo se juegan en una pregunta")
+        event = JOKERS[name](con, gid, pid, state, pool, **args)
+        save(con, gid, state)
+    return {"joker": name, **event}
+
+
+def trial(con, fn, *args, **kwargs):
+    """Run `fn` without keeping anything: None if it works, else its GameError message."""
+    con.execute("SAVEPOINT trial")
+    try:
+        fn(con, *args, **kwargs)
+        return None
+    except GameError as e:
+        return str(e)
+    finally:
+        con.execute("ROLLBACK TO trial")
+        con.execute("RELEASE trial")
+
+
+def jokers_view(con, gid, pid, state, pool):
+    """Per joker: available, and the reason if not (09, "Availability"). «Cambiazo» also lists
+    the subcategories possible right now, grouped by broad category."""
+    def check(fn, **args):
+        reason = trial(con, lambda c: fn(c, gid, pid, copy.deepcopy(state), pool, **args))
+        return {"available": reason is None, "reason": reason}
+
+    cur = questions_by_id(pool)[state["current"]]
+    out = {"hint": check(play_hint), "skip": check(play_skip), "easier": check(play_easier)}
+    out["skip"]["purge"] = {**check(play_skip, purge=True), "subcategory": cur.get("subcategory")}
+
+    avail = available_now(con, pid, state, pool)
+    fill = later_fill(avail, state["level"])
+    groups = []
+    for c in categories.load():
+        subs = [{"name": s, "available": s != cur.get("subcategory") and replacement(
+                    avail, state["level"], category_candidates(avail, state["level"], s), lambda q: 0, fill) is not None}
+                for s in c["subcategories"]]
+        groups.append({"slug": c["slug"], "name": c["name"], "available": any(s["available"] for s in subs),
+                       "subcategories": subs})
+    possible = any(g["available"] for g in groups)
+    out["category"] = {"available": possible, "reason": None if possible else "no hay preguntas de otros temas para este nivel",
+                       "categories": groups}
+    return out
 
 
 def undo():
@@ -276,25 +476,28 @@ def abandon():
 
 def view(pool):
     """The newest game as the client sees it: no correct answer before the final answer."""
+    by_id = questions_by_id(pool)
     with connect() as con:
         game = latest(con)
         if not game:
             return None
         gid, result, state, pid = game
         row = con.execute("SELECT name FROM players WHERE id = ?", (pid,)).fetchone()
-    by_id = questions_by_id(pool)
+        playing = result is None and state["phase"] == "question" and state["current"] in by_id
+        jokers = jokers_view(con, gid, pid, state, pool) if playing else None
     out = {"id": gid, "player": row[0] if row else None, "result": result,
            "level": state["level"], "phase": state["phase"],
            "options": [{"description": by_id[i]["description"]} for i in state["options"] if i in by_id],
-           "history": [{"level": h["level"], "correct": h["correct"]} for h in state["history"]],
+           "history": [{"level": h["level"], "correct": h["correct"]} for h in state["history"] if "correct" in h],
            "can_undo": bool(state.get("undo")) and result != "abandoned",
-           "question": None, "last": None}
+           "purged": state["purged"], "jokers": jokers, "question": None, "last": None}
     if state["current"] in by_id:
         q = by_id[state["current"]]
-        # No hints: they are only shown through the «Pista» joker, one at a time (D-26, JK-2).
+        # Only the hints shown through «Soplo», one per use (D-26, D-27).
         # No description: it belongs to the Select screen only (04, "Question").
         out["question"] = {k: q[k] for k in ["id", "question", "media", "background"]}
-        out["question"]["answers"] = state["answers"]
+        out["question"].update(answers=state["answers"], hints=q["hints"][:state["hints_shown"]],
+                               struck=state["struck"], swapped_to=state["swapped_to"])
     if state["last"] and state["last"]["question_id"] in by_id:
         q = by_id[state["last"]["question_id"]]
         out["last"] = {**state["last"], "answer": q["answer"], "fun_fact": q["fun_fact"]}

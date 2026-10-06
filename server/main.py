@@ -27,7 +27,11 @@ API:
     POST /api/game/skip                            body {"everyone": bool}: skip and burn for the player
                                                    (or for everyone)
     POST /api/game/undo | abandon                  admin overlay actions
+    POST /api/game/joker                           body {"joker": "hint"|"skip"|"easier"|"category",
+                                                   "purge": bool, "subcategory": name}: play a joker
+                                                   (09-jokers.md); the response adds {"event": what happened}
 Game responses are {"game": ...} (server/game.py: never the correct answer before the final answer).
+While a question is on screen, the game has `jokers`: per joker {"available", "reason"} (D-27).
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched).
 """
@@ -211,14 +215,19 @@ class Handler(BaseHTTPRequestHandler):
                    "answer": lambda pool: game.answer(pool, int(body.get("index", -1))),
                    "skip": lambda pool: game.skip(pool, bool(body.get("everyone"))),
                    "undo": lambda pool: game.undo(),
-                   "abandon": lambda pool: game.abandon()}
+                   "abandon": lambda pool: game.abandon(),
+                   "joker": lambda pool: game.joker(pool, str(body.get("joker")), **{
+                       k: body[k] for k in ("purge", "subcategory") if k in body})}
         if action not in actions:
             return self.send_json(404, {"error": "not found"})
         try:
             with _lock:
                 pool = load_pool()["questions"]
-                actions[action](pool)
-                return self.send_json(200, {"game": game.view(pool)})
+                result = actions[action](pool)
+                out = {"game": game.view(pool)}
+                if action == "joker":
+                    out["event"] = result
+                return self.send_json(200, out)
         except game.GameError as e:
             return self.send_json(409, {"error": str(e), "supply": e.details})
         except Exception as e:  # noqa: BLE001 — the TV always gets an answer
