@@ -10,10 +10,10 @@ step skips what is already done, so a run can be resumed.
     python3 tools/qgen.py rate      --run pilot
     python3 tools/qgen.py factcheck --run pilot
     python3 tools/qgen.py dedupe    --run pilot
-    python3 tools/qgen.py merge     --run pilot --min-score 0
     # optional, before merge: repair hard fails, then judge the new versions
     python3 tools/qgen.py revise    --run pilot && python3 tools/qgen.py apply --run pilot
     python3 tools/qgen.py rate      --run pilot && python3 tools/qgen.py factcheck --run pilot
+    python3 tools/qgen.py merge     --run pilot --min-score 0
     python3 tools/qgen.py report    [--run pilot]
     python3 tools/qgen.py validate
 
