@@ -33,20 +33,33 @@ let master: GainNode, musicBus: GainNode, fxBus: GainNode, duckGain: GainNode;
 let noiseBuffer: AudioBuffer;
 
 /** Recorded sounds (UI-10), decoded once after the unlock; a missing one falls back to synthesis. */
-const SAMPLES = { aplausos: "/audio/aplausos.m4a", "aplausos-gran": "/audio/aplausos-gran.m4a", redoble: "/audio/redoble.m4a" };
-type Sample = keyof typeof SAMPLES;
+const SAMPLE_NAMES = [
+  "aplausos", "aplausos-gran", "redoble", "fanfarria", "trombon-triste", "candado-cierra", "candado-abre",
+  "papel", "vidrio", "sello", "golpe", "estallido",
+] as const;
+type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
-/** Effect names played from a recording, first match wins. */
-const SAMPLE_FOR: [RegExp, Sample][] = [
+/** Effect names played from a recording, first match wins; `rate` changes the pitch. */
+const SAMPLE_FOR: [RegExp, Sample, ((name: string) => number)?][] = [
   [/gran aplausos/, "aplausos-gran"],
   [/aplausos/, "aplausos"],
+  [/fanfarria/, "fanfarria"],
+  [/trombón|Ups/, "trombon-triste"],
+  [/candado: clunk|candado se cierra/, "candado-cierra"],
+  [/candado se abre/, "candado-abre"],
+  [/^papel$/, "papel"],
+  [/vidrio/, "vidrio"],
+  [/sello/, "sello"],
+  // The block landing: the higher the tower, the higher the thud (04, "Block arrival").
+  [/bloque (\d+)/, "golpe", (n) => 0.75 + Number(/bloque (\d+)/.exec(n)?.[1] ?? 1) * 0.06],
+  [/estallido/, "estallido", () => 0.85 + Math.random() * 0.3],
 ];
 
 async function loadSamples(c: AudioContext) {
   await Promise.all(
-    (Object.entries(SAMPLES) as [Sample, string][]).map(async ([key, url]) => {
+    SAMPLE_NAMES.map(async (key) => {
       try {
-        samples[key] = await c.decodeAudioData(await (await fetch(url)).arrayBuffer());
+        samples[key] = await c.decodeAudioData(await (await fetch(`/audio/${key}.m4a`)).arrayBuffer());
       } catch {
         /* offline or not supported: the synthesized version plays instead */
       }
@@ -342,11 +355,12 @@ function roll(c: AudioContext, out: AudioNode, t: number, len: number, keep: Kee
 /** Play a short effect by name; the names describe the sound (04, "Sound assets"). */
 export function sfx(name: string) {
   if (!ctx || ctx.state !== "running") return;
-  const key = SAMPLE_FOR.find(([pattern]) => pattern.test(name))?.[1];
+  const [, key, rate] = SAMPLE_FOR.find(([pattern]) => pattern.test(name)) ?? [];
   const buffer = key && samples[key];
   if (buffer) {
     const src = ctx.createBufferSource();
     src.buffer = buffer;
+    if (rate) src.playbackRate.value = rate(name);
     src.connect(fxBus);
     src.start();
     return;
