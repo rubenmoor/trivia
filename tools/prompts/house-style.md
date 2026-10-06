@@ -24,7 +24,7 @@ Two Colombian kids, aged 11 and 12, play as one team against the gamemaster. The
   - Bad: "¿En qué deporte se usa una raqueta y una pelotica amarilla?" Pádel and frontenis do too, and tennis doesn't depend on the ball's colour.
 
 ## No giveaways
-Nothing may give the answer away: not the description, not the question text, not hints 1 and 2, not decorative media. Don't name things in the question that make it trivial (naming EVE and Pixar in a WALL·E question; a carnival's own slogan in a question about its city; a first clue that already identifies the answer). Hint 3 may come close.
+Nothing may give the answer away: not the description, not the question text, not hints 1 and 2, not the media (an illustrative image is shown sharp, so it is the riskiest). Don't name things in the question that make it trivial (naming EVE and Pixar in a WALL·E question; a carnival's own slogan in a question about its city; a first clue that already identifies the answer). Hint 3 may come close.
 
 ## Difficulty: 1–10
 - 1 = a 6-year-old can answer it.
@@ -73,9 +73,9 @@ Every question has exactly one media item:
   - "decorative": mood only, shown blurred. Use it when every related image would give the answer away (e.g. "¿Qué planeta tiene anillos enormes?": any space picture might show Saturn).
   - "essential": the media is part of the question, e.g. "Escucha: ¿qué instrumento suena?".
 - Use essential media only when Wikimedia Commons very likely has a **clear, recognisable** photo or sound of exactly that thing: a famous landmark, a common animal, a well-known object or instrument. Not for rare or regional objects (e.g. a gaita), and never when a photo must convey something abstract, like which rhythm musicians are playing.
-- `query`: an English search term for Wikimedia Commons, chosen so a decorative image does not show the answer. Short and concrete (2–4 words) works best on Commons.
+- `query`: an English search term for Wikimedia Commons, chosen so an illustrative or decorative image does not show the answer and does not suggest one of the wrong options. Short and concrete (2–4 words) works best on Commons.
 - A decorative image shows the **world of the question**: its topic, place or setting (a question about a Colombian fruit → "Colombian fruit market"; about a Greek god → "Greek temple ruins"). Never take the image from a metaphor or comparison in the wording (a fruit "like a paper lantern" must not get "paper lantern"), and never pick something that misleads (a tropical island for a question about Greenland).
-- All media comes from **Wikimedia Commons only**. Audio only for things Commons has: animal sounds, single instruments, natural sounds. **No songs, no film or TV clips, no game footage.** Questions about songs, films or games get a decorative image. Video only for footage that is likely on Commons (NASA, nature, sport, landscapes).
+- All media comes from **Wikimedia Commons only**. Audio only for things Commons has: animal sounds, single instruments, natural sounds. **No songs, no film or TV clips, no game footage.** Questions about songs, films or games get an illustrative image (an instrument, a place from the film's world) or, if that would give the answer away, a decorative one. Video only for footage that is likely on Commons (NASA, nature, sport, landscapes).
 - `note`: for audio/video, or essential images: exactly what must be shown or played. Otherwise null.
 - `background_query`: only for audio questions: an English Commons search term for a generic, decorative background image shown while the sound plays (e.g. "misty forest" for a bird call). It must not show the answer. Empty string for all other questions.
 
