@@ -193,7 +193,64 @@ Template:
 - Consequences: `role` gains `illustrative` in schema, `qgen.py`, `media.py` (same size filter as decorative) and the review tool. The approved first-120 questions get illustrative images where possible (IMG-14), picked by Claude from the thumbnails.
 - Supersedes / related: D-15; IMG-14, B-4
 
-## D-25: Draft difficulties follow the level ranges
+## D-25: Playable skeleton with visible placeholders
+- Date: 2026-10-06
+- Context: The gamemaster wants a playable game soon, without the polish of `04-ui-tv-display.md` (sound, tower animation, fireworks, quirky cards). The missing pieces must be obvious, both on screen and in the code.
+- Decision:
+  - **Routes:** the game is the start page `/`; the review tool moves to `/review` (`/review?batch=pilot`); the stats pages stay at `/stats/…`.
+  - **State:** game state and burned questions live in `data/game.sqlite` (D-4). The file is gitignored: it is binary and changes every game. Backing it up is still B-2.
+  - **The server is the referee:** it draws the 4 options per level, shuffles the answers, checks the final answer and burns the question. The client never gets the correct answer before it submits. The server keeps one undo step (the state before the last final answer).
+  - **Selection** follows GF-2 in `03-game-flow.md`: an exact matching (not a greedy pass) checks that all remaining levels can still get 4 questions each.
+  - **«Saltar pregunta»** works on the Question screen: the skipped question goes back to the pool (not burned, but not offered again in this game), and the players return to Select, where a new card replaces it.
+  - **Placeholders:** every unpolished part shows a dashed box or caption on screen that reads `PLACEHOLDER · <task ID>`, and the code marks it with a `PLACEHOLDER(<task ID>)` comment, so `grep -rn PLACEHOLDER client/src` lists what is left. Sounds and music aren't played yet; a caption in the corner names the sound that would play.
+- Consequences: The `/?batch=…` links of the review tool become `/review?batch=…`. GF-2, GF-4, GF-5, QP-8 and UI-7 are implemented in a basic form. The polish tasks (UI-1..UI-4, UI-8..UI-14) replace placeholders one at a time.
+- Supersedes / related: D-4, D-20, D-21, D-22; GF-2, GF-4, GF-5, QP-8, UI-7, UI-13
+
+## D-26: Jokers
+- Date: 2026-10-06
+- Context: OQ-4 asked about jokers or lifelines. The gamemaster wants five jokers, each with UI, an animation for the action and its own transitions.
+- Decision:
+  - Five jokers, played on the Question screen until «Respuesta final»: **Pista** (reveal a hint), **Saltar** (skip back to Select, optionally purging the question's broad category for the rest of the game), **Más fácil** (swap for an easier question of the same broad category), **Otro tema** (swap for a question of similar difficulty from a broad category the players choose), **Francotirador** (target one answer: a wrong one is revealed as wrong; the right one means the level repeats with fresh cards, not a lost game).
+  - The server is the referee for jokers too (D-25): it decides availability, carries them out and never sends the correct answer or unrevealed hints. A joker is only available if the matching (GF-2) can still fill every later level with 4 cards afterwards.
+  - Hints are only shown through the Pista joker (answers the play side of OQ-15).
+- Consequences: Rules, state, API, UI and animations live in the new `09-jokers.md` (JK-1..JK-10). Jokers consume spare questions, so the pool needs more than 48 unburned per game (OQ-17). The game view stops sending all hints. Uses per game and hint charges are open (OQ-25, OQ-26).
+- Supersedes / related: OQ-4 (jokers part), OQ-15; D-8, D-20, D-22, D-25; GF-1, GM-2, UI-2
+
+## D-27: Joker details
+- Date: 2026-10-06
+- Context: D-26 left the joker counts open (OQ-25..OQ-27), and "category" was ambiguous.
+- Decision:
+  - Every joker can be used **any number of times** per game and per question. Only the question and the pool limit them (shown as disabled, with a reason).
+  - Each Pista reveals one hint of the current question, until all three are shown.
+  - A Francotirador hit on the correct answer costs nothing beyond repeating the level.
+  - "Category" in the jokers means the **subcategory** (D-19): Más fácil stays in the same subcategory, Saltar purges a subcategory, and Otro tema lets the players choose a subcategory (picked in two steps, broad category first).
+  - Questions skipped or swapped away by a joker are **burned** (for the player, D-28), not returned to the pool.
+- Consequences: The joker tray has no "used up" state. Jokers use up spare questions fast, so the pool and per-subcategory supply matter more (OQ-17, JK-10).
+- Supersedes / related: D-26; OQ-15, OQ-25, OQ-26, OQ-27; JK-1..JK-10
+
+## D-28: Players, and burning per player
+- Date: 2026-10-06
+- Context: With unlimited jokers, a game burns many more questions. The gamemaster wants every question the players have seen burned for good, but only for whoever played.
+- Decision:
+  - A new game starts by asking for the **player name** (pick a known one or type a new one). Players live in `data/game.sqlite`.
+  - A question is **burned for the player** as soon as it was shown: answered, skipped (joker or admin), swapped away, or lost to a Snipe hit. Descriptions on cards that weren't picked don't count. Other players can still get the question.
+  - The admin overlay gets «Saltar y quemar para todos»: skip the current question and burn it for every player.
+  - Selection, supply check and undo work per player.
+- Consequences: The `burned` table gets a player column (NULL = everyone). Replaces "skipped questions go back to the pool" in D-20 and D-25. New Player screen between Start and Level (UI-16). A new player starts with the whole pool. Tasks GF-6, QP-14.
+- Supersedes / related: D-20, D-25 (skip and burn rules); D-27; GF-6, QP-14, UI-16, GM-2
+
+## D-29: Visual design direction
+- Date: 2026-10-06
+- Context: The playable skeleton (D-25) uses huge type and opaque bands over the images. The gamemaster wants a real look that feels like a game.
+- Decision:
+  - Text on screen is **much smaller** than in the skeleton: one size unit that scales with the screen width, about 38 px for the question at 1080p instead of 65 px.
+  - **Every element over the image is semi-transparent** (frosted glass panels, no full-width bands), so the picture stays visible.
+  - Colour scheme: **night blue and slate gray**, with **amber** for stakes and commitment, **sky blue** for focus, **mint green** for right and **coral red** for wrong. Magenta stays reserved for placeholders.
+  - A playful, opinionated game-show style ("Noche de concurso"): rounded display font, chunky arcade buttons, tilted paper cards, bouncy motion. Details are a proposal in `10-visual-design.md`, for the gamemaster to confirm (VD-1).
+- Consequences: New plan `10-visual-design.md` (VD-1..VD-9) owns the look; `04-ui-tv-display.md` keeps screens and behaviour. Two font files ship with the client (OFL). The game's name is open (OQ-28).
+- Supersedes / related: D-15, D-21, D-25; UI-1, UI-2, UI-3, UI-6
+
+## D-31: Draft difficulties follow the level ranges
 - Date: 2026-10-06
 - Context: The difficulty target (15 % at 1–3, 70 % at 4–7, 15 % at 8–10) predates the level ranges of D-22. A game shows 4 questions per level, and the top three levels draw only from 7–10, 8–10 and 9–10. The pool had 10 non-rejected questions at 9–10, about two games' worth for level 12.
 - Decision: `draft` assigns target difficulties in the proportions a game shows them: each level's 4 questions spread evenly over its range (07, "Difficulty target"). That is about 19 % at 1–3, 51 % at 4–7 and 30 % at 8–10.

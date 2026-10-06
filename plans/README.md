@@ -4,7 +4,7 @@ This directory holds the plan for the family trivia party game. These files are 
 
 ## Project in one paragraph
 
-A trivia/Q&A party game that runs locally and offline; the code and question pool are public, media files are a local cache (D-17). It is shown on a living-room TV. The family plays as one team against the gamemaster (the author). They have to answer **12 questions to win**. Every question has a background image related to its content. A reusable question pool lets the game be played several times, and a question is marked **burned** once it has been asked.
+A trivia/Q&A party game that runs locally and offline; the code and question pool are public, media files are a local cache (D-17). It is shown on a living-room TV. The family plays as one team against the gamemaster (the author). They have to answer **12 questions to win**. Every question has a background image related to its content. A reusable question pool lets the game be played several times, and a question is marked **burned** for a player once that player has seen it (D-28).
 
 ## File hierarchy
 
@@ -19,11 +19,14 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`06-images.md`](06-images.md) | Media sourcing (Wikimedia Commons), caching, credits, picking in the review tool | draft |
 | [`07-question-generation.md`](07-question-generation.md) | Drafting, rating, reviewing and accepting new questions; batch generation strategy | draft |
 | [`08-review-tool.md`](08-review-tool.md) | Local web page to approve, reject or give feedback on questions | draft |
+| [`09-jokers.md`](09-jokers.md) | Jokers (hint, skip/purge, easier, other subcategory, snipe): rules, server, UI, animations | draft |
+| [`10-visual-design.md`](10-visual-design.md) | Look and feel: colours, type scale, glass panels over images, components, motion | draft |
+| [`project.md`](project.md) | Milestones to completion; all open tasks and questions grouped by milestone | living |
 | [`backlog.md`](backlog.md) | Additional tasks found along the way | living |
 | [`open-questions.md`](open-questions.md) | Unresolved questions and their answers | living |
 | [`decisions.md`](decisions.md) | Decision log (lightweight ADRs) | living |
 
-Order of work: **02 (question pool) first, together with 07 (question generation)**, then 03 → 01 → 06 → 04 → 05.
+Order of work: **02 (question pool) first, together with 07 (question generation)**, then 03 → 01 → 06 → 04 → 10 → 09 → 05.
 
 ## Conventions
 

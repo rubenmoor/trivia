@@ -8,3 +8,6 @@ media/
 __pycache__/
 .direnv/
 result
+
+# Game state and burned questions (D-25).
+data/game.sqlite

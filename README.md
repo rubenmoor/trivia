@@ -21,7 +21,7 @@ Then:
 ```sh
 cd client && npm install && npm run build && cd ..
 python3 tools/media.py sync        # download the media files (needs internet once)
-python3 server/main.py             # http://127.0.0.1:8000/
+python3 server/main.py             # http://127.0.0.1:8000/ — the game
 ```
 
 ## Commands
@@ -35,7 +35,7 @@ python3 server/main.py             # http://127.0.0.1:8000/
 | `cd client && npm run build` | Build the client into `client/dist/` (the server serves it) |
 | `cd client && npm run check` | Type-check the client |
 
-The review tool is the start page: `/?batch=pilot` shows one batch, `/?batch=first-120` the first 120 questions. Statistics: `/stats/categories` (questions per category) and `/stats/difficulty` (histogram), both filterable by status.
+The game is the start page `/` (`Esc` opens the admin menu: skip, undo, restart, fullscreen). Game state and burned questions live in `data/game.sqlite` (not in git; delete it to reset everything). The review tool is at `/review`: `/review?batch=pilot` shows one batch, `/review?batch=first-120` the first 120 questions. Statistics: `/stats/categories` (questions per category) and `/stats/difficulty` (histogram), both filterable by status.
 
 ### Media
 
@@ -60,7 +60,7 @@ python3 tools/qgen.py factcheck --run <run>
 python3 tools/qgen.py dedupe    --run <run>
 python3 tools/qgen.py merge     --run <run>     # new questions enter the pool as drafts
 python3 tools/media.py fetch    --batch <run>   # media candidates for the review tool
-python3 tools/qgen.py report    [--run <run>]
+python3 tools/qgen.py report    [--run <run>] [--player <name>]
 python3 tools/qgen.py validate                  # check the pool; warns about uncached media
 ```
 

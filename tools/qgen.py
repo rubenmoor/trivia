@@ -14,7 +14,7 @@ step skips what is already done, so a run can be resumed.
     python3 tools/qgen.py revise    --run pilot && python3 tools/qgen.py apply --run pilot
     python3 tools/qgen.py rate      --run pilot && python3 tools/qgen.py factcheck --run pilot
     python3 tools/qgen.py merge     --run pilot --min-score 0
-    python3 tools/qgen.py report    [--run pilot]
+    python3 tools/qgen.py report    [--run pilot] [--player <name>]
     python3 tools/qgen.py validate
 
 Revising questions that are already in the pool (07, QG-13):
@@ -30,6 +30,7 @@ from pathlib import Path
 
 import categories  # tools/categories.py: data/categories.json (D-19)
 import media  # tools/media.py: the media cache (D-17)
+import selection  # tools/selection.py: levels and the supply check (GF-5)
 
 ROOT = Path(__file__).resolve().parent.parent
 POOL = ROOT / "data" / "questions.json"
@@ -639,6 +640,20 @@ def cmd_report(args):
                        ("category", lambda q: broad[q["subcategory"]]["slug"] if q.get("subcategory") in broad else None), ("style", lambda q: q.get("style")),
                        ("media", lambda q: f"{q['media']['type']}/{q['media']['role']}")]:
         print(f"  by {title}: {count(pool, key)}")
+    try:
+        burned = selection.burned_ids(args.player)
+    except KeyError:
+        sys.exit(f"unknown player: {args.player}")
+    avail = selection.available(pool, burned)
+    who = f"player {args.player}" if args.player else "a new player (global burns only)"
+    print(f"unburned approved for {who}: {len(avail)} ({len(burned)} burned)")
+    print(f"  by category: {count(avail, lambda q: broad[q['subcategory']]['slug'] if q.get('subcategory') in broad else None)}")
+    print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
+    print("supply per level (a game needs 4 per level, D-22):")
+    for l in selection.supply(avail):
+        lo, hi = l["range"]
+        flag = f"  MISSING {l['missing']}" if l["missing"] else ""
+        print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
     if args.run:
         d = run_dir(args)
         ratings, checks = collect(d)
@@ -719,7 +734,9 @@ def main():
     imp.add_argument("--assign-unbatched", action="store_true", help="give questions without a batch this batch name first")
     add("revise", cmd_revise, "opus")
     add("apply", cmd_apply)
-    add("report", cmd_report, run=False).add_argument("--run")
+    rp = add("report", cmd_report, run=False)
+    rp.add_argument("--run")
+    rp.add_argument("--player", help="supply for this player (D-28); default: a new player")
     add("validate", cmd_validate, run=False)
     args = ap.parse_args()
     args.fn(args)

@@ -57,7 +57,7 @@
   <nav>
     <a href={href("categories")} class:current={page === "categories"}>Categories</a>
     <a href={href("difficulty")} class:current={page === "difficulty"}>Difficulty</a>
-    <a href="/" class="review">Review tool →</a>
+    <a href="/review" class="review">Review tool →</a>
   </nav>
 
   <div class="filters" role="group" aria-label="Filter by status">

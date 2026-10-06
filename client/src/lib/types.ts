@@ -100,3 +100,38 @@ export interface Question {
   media_candidates: MediaCandidate[] | null;
   background_candidates: MediaCandidate[] | null;
 }
+
+/** The supply check before a new game (GF-5, server/game.py). */
+export interface Supply {
+  ok: boolean;
+  available: number;
+  levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
+}
+
+/** The game as the server shows it to the TV (server/game.py `view`): no correct answer before the final answer. */
+export interface Game {
+  id: number;
+  /** null only for games from before players existed (D-28). */
+  player: string | null;
+  result: null | "won" | "lost" | "abandoned";
+  level: number;
+  phase: "select" | "question" | "won" | "lost";
+  options: { description: string }[];
+  history: { level: number; correct: boolean }[];
+  can_undo: boolean;
+  question: {
+    id: string;
+    question: string;
+    answers: string[];
+    media: Media;
+    background: Background | null;
+  } | null;
+  last: {
+    question_id: string;
+    chosen: number;
+    correct: boolean;
+    correct_index: number;
+    answer: string;
+    fun_fact: string;
+  } | null;
+}

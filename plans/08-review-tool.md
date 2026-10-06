@@ -63,7 +63,7 @@ While the feedback box is open, all other shortcuts are off so typing works norm
 ## What gets reviewed
 - By default: every question with `status: "draft"` from one batch, e.g. `?batch=pilot`. The pilot is identified by a new `batch` field (the `qgen.py` run name, set by `merge`).
 - Undecided questions come first, in pool order. Already-decided ones stay reachable with `←` so decisions can be changed.
-- The URL carries the current question (`?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
+- The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
 - When all are decided: a summary screen with the counts and the share kept (the keep rate for QG-11).
 
 ## Revised questions (QG-13)

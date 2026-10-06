@@ -1,4 +1,4 @@
-import type { Category, Question, Review, Slot } from "./types";
+import type { Category, Game, Question, Review, Slot, Supply } from "./types";
 
 async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -58,4 +58,37 @@ export async function searchMedia(id: string, query: string, slot: Slot = "media
 /** Set the difficulty (1–10); the server keeps the first original value. */
 export async function setDifficulty(id: string, difficulty: number): Promise<Question> {
   return post(`/api/questions/${encodeURIComponent(id)}/difficulty`, { difficulty });
+}
+
+/** A refused game action; `supply` is set when the pool can't fill a new game (GF-5). */
+export class GameError extends Error {
+  constructor(message: string, readonly supply: Supply | null) {
+    super(message);
+  }
+}
+
+export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }> {
+  return json(await call("/api/game"));
+}
+
+/** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28). */
+export interface GameActionBody {
+  index?: number;
+  player?: string;
+  everyone?: boolean;
+}
+
+/** POST /api/game/<action> (server/game.py); returns the game afterwards. */
+export async function gameAction(
+  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon",
+  body: GameActionBody = {},
+): Promise<Game | null> {
+  const res = await call(`/api/game/${action}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const out = await res.json().catch(() => ({}));
+  if (!res.ok) throw new GameError(out.error ?? `HTTP ${res.status}`, out.supply ?? null);
+  return out.game;
 }

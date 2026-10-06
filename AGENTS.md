@@ -5,8 +5,9 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 
 ## Where to start
 1. [`plans/README.md`](plans/README.md): index, conventions, task status markers.
-2. The plan file that owns the task you're working on.
-3. [`plans/open-questions.md`](plans/open-questions.md): don't implement anything that depends on an unanswered question.
+2. [`plans/project.md`](plans/project.md): milestones, open tasks and open questions at a glance.
+3. The plan file that owns the task you're working on.
+4. [`plans/open-questions.md`](plans/open-questions.md): don't implement anything that depends on an unanswered question.
 
 ## Working rules
 - Plans are the source of truth. Update the plan **before** you change direction in code.
@@ -30,6 +31,7 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 - Client install: `cd client && npm install`.
 - Client build: `cd client && npm run build` (output in `client/dist/`, served by the Python server).
 - Client type check: `cd client && npm run check`.
-- Run: `python3 server/main.py`, then open http://127.0.0.1:8000/ (review tool: `/?batch=pilot`; stats: `/stats/categories`, `/stats/difficulty`).
+- Run: `python3 server/main.py`, then open http://127.0.0.1:8000/ for the game (review tool: `/review?batch=pilot`; stats: `/stats/categories`, `/stats/difficulty`). Game state and burned questions: `data/game.sqlite` (gitignored, D-25).
+- Placeholders: unpolished game parts are marked `PLACEHOLDER(<task ID>)` in code and on screen (D-25); `grep -rn PLACEHOLDER client/src` lists them.
 - Categories: `data/categories.json` (broad categories → subcategories, D-19); questions store only `subcategory`.
 - Client dev with hot reload: run the server, then `cd client && npm run dev` (Vite forwards `/api` and `/media` to port 8000).

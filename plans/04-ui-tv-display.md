@@ -5,14 +5,15 @@
 The game as the family sees it on the TV: screen states, transitions, sound and animation. Rules come from `03-game-flow.md` (D-20). The visual and audio contract is decided in D-21. UI copy is Spanish (D-6). The examples below are suggestions, and the gamemaster has the final say.
 
 ## Requirements
-- Full-screen, 16:9, readable from several metres away (large type, high contrast).
-- A full-bleed background image for each question, with an overlay or scrim so the text stays legible.
+- Full-screen, 16:9, readable from the couch with a **compact** type scale and high contrast. The look (colours, type, glass panels, components) is owned by `10-visual-design.md` (D-29).
+- A full-bleed background image for each question. Everything over it is a separate, semi-transparent glass panel (no full-width scrims), so the picture stays visible (D-29).
 - Decorative images are blurred and slightly darkened, with a big question mark in the centre (D-15), so they read as mood, not as a clue. Illustrative and essential media are shown sharp (D-24).
 - Progress is shown as a **tower of blocks** that grows by one block per correct answer and gets narrower towards the top (see Level screen).
 - Players choose each question by its humorous `description` (D-8). The category is never shown.
 - A subtle media credit line in a corner whenever media is shown (IMG-4, `06-images.md`).
 - Every screen change is a **transition with its own sound effect** (see Transitions).
 - Suspenseful background music on a loop at low volume, in three intensities: normal, question selected and answer submitted (D-22).
+- A **joker tray** on the Question screen (read-only on Level and Select), with an animation for every joker (D-26, `09-jokers.md`).
 - Everything runs offline: sounds, music, fonts and animations ship with the client. No CDN, and no new npm dependencies (AGENTS.md).
 
 ## Screen states
@@ -20,11 +21,14 @@ The game as the family sees it on the TV: screen states, transitions, sound and 
 ```mermaid
 stateDiagram-v2
   [*] --> Start
-  Start --> Level: «¡Jugar!» (new game)
+  Start --> Player: «¡Jugar!» (new game)
+  Player --> Level: name chosen
   Level --> Select: continue
   Select --> Question: pick a description
   Question --> Correct: final answer right
   Question --> Wrong: final answer wrong
+  Question --> Select: joker «Saltar» (09)
+  Question --> Level: joker «Francotirador» hits the right answer, same level (09)
   Correct --> Level: level < 12 (a block is added)
   Correct --> Victory: level 12 answered
   Wrong --> Start: «Volver al inicio»
@@ -36,18 +40,21 @@ stateDiagram-v2
     Answering --> Locked: tap an answer
     Locked --> Answering: unlock (tap an answer or Backspace)
     Locked --> Submitted: «Respuesta final»
+    Answering --> Joker: play a joker (Locked unlocks first)
+    Joker --> Answering: hint shown, question swapped, answer struck out, or cancel
     Submitted --> [*]: reveal after a wait that grows with the level
   }
 ```
 
-The **admin overlay** is orthogonal to all of these: `Esc` opens it over any state and pauses that state (see Admin overlay).
+The joker sub-states (skip choice, category picker, snipe aiming) are detailed in `09-jokers.md`. The **admin overlay** is orthogonal to all of these: `Esc` opens it over any state and pauses that state (see Admin overlay).
 
 | State | Shows | Leaves via | Music |
 |---|---|---|---|
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
+| Player | «¿Quién juega?»: known names, new name | Click a name / type + `Enter` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
-| Question | Question, 4 answers, media, lock, final button | Final answer | Intense (off while question media plays); after submitting: most intense |
+| Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Saltar / Francotirador hit | Intense (off while question media plays); after submitting: most intense |
 | Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` | Fanfare replaces the music, then Normal |
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | Victory jingle |
@@ -55,7 +62,12 @@ The **admin overlay** is orthogonal to all of these: `Esc` opens it over any sta
 ### Start
 - Game title, a short subtitle, a big «¡Jugar!» button.
 - The first click is also the **audio unlock**. Browsers block sound and autoplaying video with sound until a user gesture, so nothing plays before it. After this click, autoplay works for the rest of the session.
-- If an unfinished game exists (server state, GF-4), show «Continuar» (resume at its level) next to «Nueva partida».
+- If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida».
+
+### Player (D-28)
+- «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).
+- After a name is chosen, the server runs the supply check **for that player** (GF-5); if it fails, the screen says which levels lack questions, as the Start screen does today.
+- A short greeting with the name («¡Hola, Sofía!») plays into the transition to Level. The name stays in a corner of the Level screen.
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 
 ### Level (between questions)
@@ -66,6 +78,8 @@ Players start at **level 1** (easiest question) and must answer **level 12** to 
 - Blocks look varied: a different colour or texture per level, or per broad category of the question answered (a reason to keep the history, B-1). Higher blocks get fancier (stone → brick → marble → gold). Level 12 gets a crown or flag slot at the top.
 - Text: «Nivel 3 de 12». Optional milestone lines at levels 4 and 8 («¡Ya vamos por la mitad!» at 6).
 - The camera follows: the view scrolls or scales so the top of the tower and the next empty slot stay in frame.
+- **Repeat (09):** after a Snipe hit, the Level screen comes in with a rewind effect instead of black, no block drops, and the text reads «Nivel N de 12 — otra vez».
+- The joker tray is shown small and read-only, as a reminder of the jokers (09).
 
 ### Question selection
 Four cards, each showing only a question's `description` (D-8). The players pick one.
@@ -73,12 +87,14 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - **Quirky design:** cards as sealed envelopes, mystery boxes or old library index cards. Each is tilted at a slightly different angle, with a hand-drawn number (1–4), a wax seal or postage stamp, and a gentle idle wobble. Hover or focus lifts a card and straightens it. A random doodle can sit in a corner (a coffee ring, a paper clip, a googly-eyed question mark).
 - Cards deal in one at a time with a paper "flick" sound (part of the transition into Select).
 - **Picking:** click or press `1`–`4`. An **immediate short sound** plays (a "pop", stamp or seal crack), the chosen card pulses or tears open, the other three slide off, then the transition to the Question screen starts. No confirmation step.
-- There are **always 4 cards** (D-22). They come from the level's difficulty range (GF-2, `03-game-flow.md`). The unchosen questions are not burned (D-20).
+- There are **always 4 cards** (D-22). They come from the level's difficulty range (GF-2, `03-game-flow.md`). The unchosen questions are not burned (D-20). A card that replaces a skipped or purged one deals in highlighted («¡Nueva!», 09).
 
 ### Question
-- Full-bleed media background (D-15 rules), question text in a top band, four answer buttons (A–D) in a 2×2 grid at the bottom. The credit line is in a corner.
+- Full-bleed media background (D-15 rules), the question in a floating glass card at the top, four answer tiles (A–D) in a 2×2 grid at the bottom, at most 70 % wide. The credit line is in a corner. Layout sketch and tile states: `10-visual-design.md`.
+- The `description` is **not** shown here: it belongs to the Select screen only (D-8). Once the question is on screen, only the question itself is shown.
 - **Media autoplays** once the screen has faded in: audio and video start from the start. The intense question music is faded out before the media starts and fades in when the media ends. A small replay button (`R`) restarts the media. Images need nothing.
-- **Hints:** reserved space only, until OQ-15 is answered.
+- **Hints:** only through the «Pista» joker (D-26). Space under the question band is reserved for the hint notes (09).
+- **Joker tray:** five tokens along the left edge (09). Jokers are playable until «Respuesta final»; their animations are in `09-jokers.md`.
 - **Locking in:** tapping an answer (click or `A`–`D` / `1`–`4`) locks it in:
   1. A heavy **lock "clunk"** sound plays, and the chosen answer gets a bright frame with a small padlock icon. The other answers dim.
   2. Below the answers sits a **big padlock** (or a vault door / chain) that has been covering the final-answer button. After a short suspense beat (~0.8 s), it unlocks with a click, swings or slides away (~0.6 s) with a metallic sound, and reveals the **«Respuesta final»** button.
@@ -117,6 +133,8 @@ Every change between the states above uses one transition routine with these ste
 5. **Fade in** (~400 ms).
 6. **Music fades back in** (~800 ms): the track that belongs to the new state (see Music), unless the state keeps it off (Question with media, Wrong, Victory).
 
+Jokers add transitions **inside** the Question state (card flip for swapped questions, sweep for a skip, rewind for a Snipe hit); they use the same input lock and audio fades (09).
+
 Input is ignored while a transition runs, so a double tap can't skip a state. All durations are constants in one file, so they can be tuned on the real TV (UI-6).
 
 ## Audio
@@ -149,7 +167,7 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 - Files live in `client/public/audio/` (`music/`, `sfx/`), go into `client/dist/` at build time and are served offline like the rest of the client.
 - Only free licences: CC0 preferred, CC BY with a credit on a credits screen. Sources: Wikimedia Commons (as for question media, D-13), freesound.org CC0, OpenGameArt. Unlike question media (D-17), all audio that is part of the UI (music and effects) gets committed to the repo, with a `CREDITS.md` next to it (D-22). Files should be compressed (Ogg Vorbis/Opus, or MP3) to keep the repo small.
 - A fallback for every effect that has no asset yet: a short synthesized sound (oscillator + envelope) generated in code, so the game is never silent during development.
-- Starter list: music `normal`, `question`, `submitted`; whoosh; paper flick; card pick pop; lock clunk; lock open; padlock close (unlock); submit hit; reveal boom; correct reveal ding; 3+ fanfares; firework launch and burst; block thud; sad trombone; victory jingle; menu open and close.
+- Starter list: music `normal`, `question`, `submitted`; whoosh; paper flick; card pick pop; lock clunk; lock open; padlock close (unlock); submit hit; reveal boom; correct reveal ding; 3+ fanfares; firework launch and burst; block thud; sad trombone; victory jingle; menu open and close; plus the joker sounds listed in `09-jokers.md`.
 
 ## Admin overlay
 `Esc` opens a semi-transparent menu over any screen. It pauses the current state: question media pauses and animations freeze. `Esc` again closes it and resumes. The family sees the overlay, so it never shows the correct answer. A separate GM view is GM-3 (05).
@@ -157,34 +175,39 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 Menu items (keyboard-navigable, large enough for the TV):
 - **Continuar** (close).
 - **Volumen:** music, effects and media sliders, plus mute all.
-- **Saltar pregunta:** replace the current question with a new one at the same level. For a broken image or an ambiguous question, the gamemaster decides. The skipped question is not burned.
+- **Saltar pregunta:** back to Select with a new card replacing the current question, without using a joker. The skipped question is burned for the player (D-28).
+- **Saltar y quemar para todos:** the same, but the question is burned for **every** player: for a wrong, broken or ambiguous question. Needs a confirmation.
 - **Deshacer:** take back the last final answer, if the gamemaster misjudged or someone pressed by accident (GM-2).
 - **Reiniciar partida / Volver al inicio,** with a confirmation.
 - **Pantalla completa** on/off.
+- **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `data/questions.json` and the review tool (`/review?id=…`).
 - **Demo de efectos** (later): play every transition and effect for testing on the TV (B-3).
 
 The detailed action set and any extra keys are owned by `05-gamemaster-controls.md` (GM-2). This plan only fixes that the overlay exists and opens with `Esc`.
 
 ## Input
-For now, everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer, `R` = replay media, `Esc` = admin overlay. A clicker or phone remote can map to these later.
+For now, everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer, `R` = replay media, `P` `S` `F` `C` `X` = jokers (09), `Backspace` = unlock or cancel, `Esc` = admin overlay. A clicker or phone remote can map to these later.
 
 ## Implementation notes
-- The game gets its own route (`/` or `/play`; the review tool moves to `/review`, ARC decision pending). It is a Svelte state machine (`game/`), and each state is a component. A `Transition` wrapper owns the black layer and the audio fades.
+- The game is the start page `/`; the review tool lives at `/review` (D-25). It is a Svelte state machine (`client/src/game/`), and each state is a component.
+- **Placeholders (D-25):** until a polish task is done, its part of the screen shows a dashed box or caption `PLACEHOLDER · <task ID>`, and the code carries a `PLACEHOLDER(<task ID>)` comment. Sounds show a caption instead of playing. `grep -rn PLACEHOLDER client/src` lists what's left. A `Transition` wrapper owns the black layer and the audio fades.
 - Game state lives on the server (SQLite, D-4) and is written on every final answer, so a page reload or crash resumes at the same level (GF-4).
 - Animations use CSS transitions or keyframes plus the canvas for fireworks. They respect a "reduced motion" admin toggle (no effect on sound).
 
 ## Tasks
-- [ ] UI-1 Define the visual style (fonts, colours, mood board), including the look of the tower blocks (D-22).
+- [~] UI-1 Define the visual style (fonts, colours, mood board), including the look of the tower blocks (D-22). *2026-10-06: draft in `10-visual-design.md` (D-29); confirmation is VD-1, implementation VD-2..VD-9.*
 - [ ] UI-2 Design the question screen layout with the image overlay, answers, padlock and final-answer button.
 - [ ] UI-3 Design the tower component: foundation, 12 tapering block slots, block variants, drop and settle animation.
 - [ ] UI-4 Design the reveal, Correct, Wrong and Victory animations.
 - [-] UI-5 ~~Optional: sound effects and music.~~ Sound is now required (D-21); split into UI-8 and UI-10.
 - [ ] UI-6 Test on the actual TV (overscan, resolution, viewing distance, volume levels, transition timings).
-- [ ] UI-7 Implement the screen state machine and the shared transition routine (fade, black, input lock).
+- [x] UI-7 Implement the screen state machine and the shared transition routine (fade, black, input lock). *2026-10-06: `client/src/game/Game.svelte` (D-25); no preloading yet (`PLACEHOLDER(UI-7)`).*
 - [ ] UI-8 Audio engine: AudioContext, three channels with gain, fades and crossfades, three gapless music loops, unlock on the first click, synthesized fallbacks.
 - [ ] UI-9 Fireworks overlay: canvas with at least 4 variants, random pick, finale mode.
 - [ ] UI-10 Source sound assets (CC0/CC BY), add `client/public/audio/CREDITS.md`.
-- [ ] UI-11 Question selection screen: 4 quirky cards, deal-in, pick sound, chosen-card animation.
-- [ ] UI-12 Lock-in mechanic: answer lock, padlock reveal of «Respuesta final», unlock (reverse animation), submit, level-dependent wait, reveal.
-- [ ] UI-13 Admin overlay on `Esc`: pause/resume, volume, skip, undo, restart, fullscreen.
+- [~] UI-11 Question selection screen: 4 quirky cards, deal-in, pick sound, chosen-card animation. *2026-10-06: plain cards with keys `1`–`4`; design and animation are placeholders.*
+- [~] UI-12 Lock-in mechanic: answer lock, padlock reveal of «Respuesta final», unlock (reverse animation), submit, level-dependent wait, reveal. *2026-10-06: the mechanic works (`client/src/game/Question.svelte`); the padlock animations are placeholders.*
+- [~] UI-13 Admin overlay on `Esc`: pause/resume, volume, skip, undo, restart, fullscreen. *2026-10-06: all but volume (placeholder until UI-8), `client/src/game/Overlay.svelte`.*
 - [ ] UI-14 Consolation and milestone copy (Spanish), several variants per level band.
+- [ ] UI-16 Player screen: name list, new name entry, greeting; player name on Start («Continuar») and Level (D-28).
+- [ ] UI-15 Make room for the joker tray and hint notes in the Question layout (UI-2) and the read-only tray on Level/Select; joker work itself is JK-4..JK-9 (09).

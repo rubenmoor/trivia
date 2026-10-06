@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Local server: serves the built client and the question API (plans/08-review-tool.md).
+"""Local server: serves the built client, the question API (plans/08-review-tool.md)
+and the game API (plans/03-game-flow.md, D-25).
 
     python3 server/main.py [--port 8000] [--host 127.0.0.1]
 
@@ -16,6 +17,17 @@ API:
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
     GET  /media?url=<file_url>                     a picked media file from the cache in media/; downloaded
                                                    first on a cache miss. Only URLs in the pool (D-17).
+    GET  /api/game[?player=<name>]                 {"game": the newest game or null, "supply": supply check
+                                                   for that player (default: a new player, D-28)}
+    GET  /api/players                              known players, most recent first (D-28)
+    POST /api/game/new                             body {"player": name}: start a new game for a known or new
+                                                   player (409 with the supply report if it can't)
+    POST /api/game/pick                            body {"index": 0-3}: pick a card
+    POST /api/game/answer                          body {"index": 0-3}: the final answer
+    POST /api/game/skip                            body {"everyone": bool}: skip and burn for the player
+                                                   (or for everyone)
+    POST /api/game/undo | abandon                  admin overlay actions
+Game responses are {"game": ...} (server/game.py: never the correct answer before the final answer).
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched).
 """
@@ -26,7 +38,9 @@ from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "server"))
 import categories  # noqa: E402  (tools/categories.py)
+import game  # noqa: E402  (server/game.py)
 import media  # noqa: E402  (tools/media.py)
 
 media.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
@@ -170,6 +184,15 @@ class Handler(BaseHTTPRequestHandler):
             if "status" in query:
                 qs = [q for q in qs if q["status"] == query["status"]]
             return self.send_json(200, [with_candidates(q) for q in qs])
+        if url.path == "/api/game":
+            pool = load_pool()["questions"]
+            player = parse_qs(url.query).get("player", [None])[0]
+            try:
+                return self.send_json(200, {"game": game.view(pool), "supply": game.supply(pool, player)})
+            except game.GameError as e:
+                return self.send_json(400, {"error": str(e)})
+        if url.path == "/api/players":
+            return self.send_json(200, game.players())
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())
         if url.path == "/media":
@@ -182,8 +205,30 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_file(path)
         return self.send_file(DIST / "index.html")  # single-page app
 
+    def game_action(self, action, body):
+        actions = {"new": lambda pool: game.new_game(pool, body.get("player")),
+                   "pick": lambda pool: game.pick(pool, int(body.get("index", -1))),
+                   "answer": lambda pool: game.answer(pool, int(body.get("index", -1))),
+                   "skip": lambda pool: game.skip(pool, bool(body.get("everyone"))),
+                   "undo": lambda pool: game.undo(),
+                   "abandon": lambda pool: game.abandon()}
+        if action not in actions:
+            return self.send_json(404, {"error": "not found"})
+        try:
+            with _lock:
+                pool = load_pool()["questions"]
+                actions[action](pool)
+                return self.send_json(200, {"game": game.view(pool)})
+        except game.GameError as e:
+            return self.send_json(409, {"error": str(e), "supply": e.details})
+        except Exception as e:  # noqa: BLE001 — the TV always gets an answer
+            return self.send_json(500, {"error": f"server error: {type(e).__name__}: {e}"})
+
     def do_POST(self):
         parts = urlparse(self.path).path.strip("/").split("/")
+        if len(parts) == 3 and parts[:2] == ["api", "game"]:
+            raw = self.rfile.read(int(self.headers.get("Content-Length", 0)))
+            return self.game_action(parts[2], json.loads(raw or b"{}"))
         if len(parts) < 4 or parts[:2] != ["api", "questions"]:
             return self.send_json(404, {"error": "not found"})
         qid, action = parts[2], "/".join(parts[3:])
@@ -221,7 +266,7 @@ def main():
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()
-    print(f"Serving on http://{args.host}:{args.port}/  (review: /?batch=pilot)")
+    print(f"Serving on http://{args.host}:{args.port}/  (game: /, review: /review?batch=pilot)")
     ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()
 
 

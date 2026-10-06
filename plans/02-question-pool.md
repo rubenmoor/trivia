@@ -3,7 +3,7 @@
 **Status:** draft — **first focus area**
 
 ## Purpose
-A curated, reusable set of questions. Each question has an answer, an image, and metadata. Questions are marked **burned** once they've been asked, so later sessions stay fresh.
+A curated, reusable set of questions. Each question has an answer, an image, and metadata. Questions are marked **burned** for a player once that player has seen them, so later sessions stay fresh (D-28).
 
 ## Schema (D-6, D-7, D-8)
 The pool lives in `data/questions.json`: `{"version": 1, "questions": [...]}`. Categories live in `data/categories.json` (D-19): `{"categories": [{"slug", "name", "subcategories": [...]}]}`, broad categories in display order; a question's broad category is the one that lists its `subcategory`. Field names are English; content is Spanish.
@@ -46,7 +46,7 @@ Review result, set by the review tool (`08-review-tool.md`, D-11); `null` until 
   "review": {"decision": "needs_work", "feedback": "demasiado difícil", "reviewed_on": "2026-10-07"}
 ```
 
-Burned state is not in this file; it lives in SQLite (D-4).
+Burned state is not in this file; it lives in SQLite (D-4), per player, plus a global burn set by the gamemaster (D-28, `03-game-flow.md`).
 
 ## Storage options
 - Questions are stored in a single JSON file, `data/questions.json` (D-4). Split later if it grows unwieldy.
@@ -65,4 +65,5 @@ Burned state is not in this file; it lives in SQLite (D-4).
 - [x] QP-11 Give the first-120 a `subcategory` from the subcategory list; `qgen.py validate` checks every subcategory against it. *2026-10-06: 59 of the 140 subcategories used.*
 - [x] QP-12 Group the subcategories into broad categories (`data/categories.json`, D-19) and migrate the pool and the pipeline. *2026-10-06: 24 categories; `category` and the old map removed from the pool, `categories.txt` removed; `fit` no longer maps; shared loader `tools/categories.py`.*
 - [x] QP-13 Stats pages in the web client: questions per broad category (sorted by count) and per difficulty (histogram), filterable by status. *2026-10-06: `/stats/categories`, `/stats/difficulty` (`client/src/stats/`), `GET /api/categories`.*
-- [ ] QP-8 Implement burn and un-burn, plus a "remaining per category/difficulty" report.
+- [x] QP-8 Implement burn and un-burn, plus a "remaining per category/difficulty" report. *2026-10-06: the final answer burns, the admin undo un-burns (`server/game.py`); `qgen.py report` shows unburned questions per category and difficulty, and the supply per level.*
+- [x] QP-14 Burn per player (D-28): the `burned` table gets a player (NULL = burned for everyone); undo un-burns for that player; `qgen.py report --player <name>` shows the supply for one player. *2026-10-06: done with GF-6; `tools/selection.py` `burned_ids(player)`; `report` without `--player` shows a new player's supply (global burns only).*

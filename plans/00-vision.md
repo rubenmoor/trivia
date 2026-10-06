@@ -9,8 +9,9 @@ A fun, good-looking trivia game for family evenings, played on the living-room T
 - Runs locally and offline in the living room. The source code and question pool are public on GitHub; media files are not committed (D-17).
 - Players: the family as **one team** against the **gamemaster** (the author).
 - Win condition: answer **12 questions** correctly (exact rules: see `03-game-flow.md`).
+- The players have **jokers** (hint, skip, easier, other category, snipe) to get past hard questions (D-26, `09-jokers.md`).
 - Every question has a related **background image**.
-- A reusable **question pool** supports many sessions. Asked questions are marked **burned**.
+- A reusable **question pool** supports many sessions. Each game is played under a **player name**; questions a player has seen are **burned** for that player (D-28).
 
 ## Constraints
 - Runs on a single machine connected to a TV (1080p / 4K, viewed from the couch).

@@ -12,6 +12,6 @@ The gamemaster runs the game: advance, reveal, mark right or wrong, and undo mis
 
 ## Tasks
 - [ ] GM-1 Choose the control method.
-- [ ] GM-2 Define the action set (next, reveal, correct, wrong, skip/replace question, undo).
+- [ ] GM-2 Define the action set (next, reveal, correct, wrong, skip/replace question (burned for the player), skip and burn for everyone (D-28), undo). The admin skip doesn't count as a joker.
 - [ ] GM-3 Decide whether there's a GM-only view with the answer and notes.
 - [ ] GM-4 Implement the controls.
