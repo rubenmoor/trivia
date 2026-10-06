@@ -2,6 +2,8 @@
 
 /** Fade to black and back, each way. */
 export const FADE_MS = 400;
+/** The picked card pulses and the others slide off before the transition (UI-11). */
+export const PICK_MS = 550;
 /** Suspense beat plus the padlock moving away before «Respuesta final» appears (UI-12). */
 export const PADLOCK_MS = 1400;
 /** Wait between the final answer and the reveal, by level (index 0 = level 1). */

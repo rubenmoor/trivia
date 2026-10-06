@@ -250,6 +250,21 @@ Template:
 - Consequences: New plan `10-visual-design.md` (VD-1..VD-9) owns the look; `04-ui-tv-display.md` keeps screens and behaviour. Two font files ship with the client (OFL). The game's name is open (OQ-28).
 - Supersedes / related: D-15, D-21, D-25; UI-1, UI-2, UI-3, UI-6
 
+## D-30: Gamemaster answers: no timer, one screen, joker names, game name, setup
+- Date: 2026-10-06
+- Context: The open questions blocking M1–M6 (OQ-4, OQ-8, OQ-11, OQ-12, OQ-13, OQ-28, GM-2, JK-1, VD-1).
+- Decision:
+  - **No timer** per question (OQ-4).
+  - **One screen:** no separate gamemaster device, no GM-only view (OQ-13, GM-3). The gamemaster controls the game with the keyboard and mouse of the TV machine; the admin actions live in the `Esc` overlay (GM-1).
+  - **Admin actions confirmed** (GM-2): «Saltar pregunta» (burns for the player), «Saltar y quemar para todos», «Deshacer» (the last final answer), «Abandonar partida».
+  - **Joker names** were left to us (JK-1): «Soplo» (hint, `S`), «Paso» (skip, `P`), «Bájale» (easier, `F`), «Cambiazo» (subcategory of choice, `T`), «Francotirador» (snipe, `X`). `A`–`D` stay reserved for the answers.
+  - **No family-specific questions** (OQ-8).
+  - The game is called **«¡Trivia!»** (OQ-28).
+  - **Setup:** a computer connected to the TV via HDMI (OQ-11); internet is available during play (OQ-12), though the game still runs from the local media cache (D-17).
+  - **Visual design:** the gamemaster confirms it from the implementation, not from a mock-up (VD-1).
+- Consequences: GF-1, GM-1, GM-2, GM-3 close; GM-4 is the admin overlay (UI-13). Joker names change in 03, 04, 09, 10. VD-2..VD-8 go ahead; VD-1 is the gamemaster's review of the result.
+- Supersedes / related: D-26 (joker names), D-29; OQ-4, OQ-8, OQ-11, OQ-12, OQ-13, OQ-28; GF-1, GM-1..GM-3, JK-1, VD-1
+
 ## D-31: Draft difficulties follow the level ranges
 - Date: 2026-10-06
 - Context: The difficulty target (15 % at 1–3, 70 % at 4–7, 15 % at 8–10) predates the level ranges of D-22. A game shows 4 questions per level, and the top three levels draw only from 7–10, 8–10 and 9–10. The pool had 10 non-rejected questions at 9–10, about two games' worth for level 12.

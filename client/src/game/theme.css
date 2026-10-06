@@ -1,0 +1,200 @@
+/* The game's look (plans/10-visual-design.md, D-29, VD-2): tokens, the size unit, fonts, glass.
+   Everything is scoped to `.game`, so the review tool and the stats pages keep their plain look.
+   Components use these tokens only, never raw colours; sizes are multiples of --u. */
+
+@font-face {
+  font-family: "Baloo 2";
+  src: url("/fonts/baloo-2.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: block;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/nunito.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-display: block;
+}
+
+.game {
+  /* Base: night blue and slate gray */
+  --night-900: #0b1120;
+  --night-800: #111a2e;
+  --night-700: #1a2540;
+  --slate-600: #2b3650;
+  --slate-400: #6b7894;
+  --slate-200: #c3cad8;
+  --paper: #eef1f6;
+
+  /* Glass: everything that covers the picture */
+  --glass: rgba(17, 26, 46, 0.62);
+  --glass-strong: rgba(17, 26, 46, 0.74);
+  --glass-light: rgba(17, 26, 46, 0.45);
+  --glass-line: rgba(195, 202, 216, 0.18);
+
+  /* Highlights: amber = this counts, sky = you are here, mint = right, coral = wrong */
+  --amber: #ffb81c;
+  --amber-deep: #b97a00;
+  --sky: #4cc9f0;
+  --mint: #2fe39a;
+  --coral: #ff5470;
+  --placeholder: #ff7ad9;
+
+  /* Paper (cards, hint notes): the only light surfaces */
+  --cream: #f4ecd8;
+  --ink: #2a2238;
+  --seal: #c23b2e;
+
+  /* Tower materials (VD-7) */
+  --stone: #5d6b86;
+  --brick: #c8643b;
+  --marble: #d9dce6;
+  --sapphire: #3a6df0;
+
+  /* One size unit: 16 px at 1920 × 1080; also bounded by the height for odd window shapes. */
+  --u: min(calc(100vw / 120), calc(100vh / 67.5));
+  --radius: calc(1.2 * var(--u));
+  --safe-x: 4vw;
+  --safe-y: 4vh;
+
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-text: "Nunito", system-ui, sans-serif;
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  font-family: var(--font-text);
+  font-size: calc(1.5 * var(--u));
+  line-height: 1.35;
+  color: var(--paper);
+  background: var(--night-900);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glass panels (VD-2) */
+.game .glass,
+.game .glass-strong,
+.game .glass-light {
+  border: 1px solid var(--glass-line);
+  border-radius: var(--radius);
+  text-shadow: var(--text-shadow);
+}
+.game .glass {
+  background: var(--glass);
+  backdrop-filter: blur(calc(0.6 * var(--u))) saturate(1.2);
+}
+.game .glass-strong {
+  background: var(--glass-strong);
+  backdrop-filter: blur(calc(0.6 * var(--u))) saturate(1.2);
+}
+.game .glass-light {
+  background: var(--glass-light);
+  backdrop-filter: blur(calc(0.4 * var(--u)));
+}
+
+/* Type roles (10, "Scale") */
+.game .title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: calc(4 * var(--u));
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+.game .label {
+  font-size: calc(1.1 * var(--u));
+  color: var(--slate-200);
+}
+
+.game kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 0.35em;
+  border: 1px solid currentColor;
+  border-bottom-width: 2px;
+  border-radius: 0.35em;
+  font-family: var(--font-display);
+  font-size: calc(0.9 * var(--u));
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+
+/* Buttons (VD-5): candy = primary, amber arcade button; secondary = glass */
+.game button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.game button:disabled {
+  cursor: default;
+}
+.game button:focus-visible {
+  outline: calc(0.2 * var(--u)) solid var(--sky);
+  outline-offset: calc(0.25 * var(--u));
+}
+.game .candy {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(0.8 * var(--u));
+  padding: calc(0.8 * var(--u)) calc(2.4 * var(--u));
+  border: none;
+  border-radius: calc(1 * var(--u));
+  background: linear-gradient(#ffc845, var(--amber));
+  color: var(--night-900);
+  font-family: var(--font-display);
+  font-size: calc(2 * var(--u));
+  font-weight: 800;
+  box-shadow:
+    0 calc(0.35 * var(--u)) 0 var(--amber-deep),
+    0 calc(0.6 * var(--u)) calc(1.2 * var(--u)) rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.08s,
+    box-shadow 0.08s;
+}
+.game .candy:active:not(:disabled) {
+  transform: translateY(calc(0.35 * var(--u)));
+  box-shadow: 0 0 0 var(--amber-deep);
+}
+.game .candy:disabled {
+  filter: grayscale(0.7) brightness(0.7);
+}
+.game .candy kbd {
+  opacity: 0.55;
+}
+.game .candy.breathe {
+  animation: breathe 2s ease-in-out infinite;
+}
+.game .secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(0.8 * var(--u));
+  padding: calc(0.7 * var(--u)) calc(2 * var(--u));
+  border: 1px solid var(--slate-400);
+  border-radius: calc(1 * var(--u));
+  background: var(--glass);
+  font-family: var(--font-display);
+  font-size: calc(1.6 * var(--u));
+  font-weight: 600;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.game .secondary:hover:not(:disabled) {
+  border-color: var(--sky);
+  transform: translateY(calc(-0.2 * var(--u)));
+}
+
+@keyframes breathe {
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* Reduced motion (04): no idle motion, shakes or bounces; fades stay. */
+@media (prefers-reduced-motion: reduce) {
+  .game *,
+  .game *::before,
+  .game *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

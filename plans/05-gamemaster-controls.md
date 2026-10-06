@@ -1,6 +1,6 @@
 # 05 — Gamemaster Controls
 
-**Status:** stub
+**Status:** decided (D-30)
 
 ## Purpose
 The gamemaster runs the game: advance, reveal, mark right or wrong, and undo mistakes. The family must not see the answer before it is revealed.
@@ -11,7 +11,7 @@ The gamemaster runs the game: advance, reveal, mark right or wrong, and undo mis
 - A presenter remote / clicker.
 
 ## Tasks
-- [ ] GM-1 Choose the control method.
-- [ ] GM-2 Define the action set (next, reveal, correct, wrong, skip/replace question (burned for the player), skip and burn for everyone (D-28), undo). The admin skip doesn't count as a joker.
-- [ ] GM-3 Decide whether there's a GM-only view with the answer and notes.
-- [ ] GM-4 Implement the controls.
+- [x] GM-1 Choose the control method. *2026-10-06: keyboard and mouse of the TV machine, admin overlay on `Esc` (D-30).*
+- [x] GM-2 Define the action set (next, reveal, correct, wrong, skip/replace question (burned for the player), skip and burn for everyone (D-28), undo). The admin skip doesn't count as a joker. *2026-10-06: confirmed (D-30): «Saltar pregunta», «Saltar y quemar para todos», «Deshacer», «Abandonar partida». The answer is judged automatically (D-7), so there is no "correct/wrong" button.*
+- [x] GM-3 Decide whether there's a GM-only view with the answer and notes. *2026-10-06: no (D-30).*
+- [x] GM-4 Implement the controls: add «Saltar y quemar para todos» to the admin overlay (the server has it, GF-6). *2026-10-06: in the `Esc` overlay, with «¿Seguro?».*

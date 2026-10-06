@@ -4,22 +4,11 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 
 ## Open
 
-### Game rules
-- **OQ-4** ~~Jokers or lifelines?~~ Five jokers (D-26). A timer per question?
-
-### Content
-- **OQ-8** Which categories? Are family-specific questions (e.g. "Where did we go on holiday in 2015?") wanted? *The first draft proposes 10 categories in `data/questions.json`.* **Answered 2026-10-06:** 24 broad categories with 140 subcategories in `data/categories.json` (D-19). Family-specific questions: still open.
-
 ### Added 2026-10-06
 - **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`). *Input from D-22: every level offers 4 questions from its difficulty range, so a game needs 48 unburned questions to show and burns 12 (`03-game-flow.md`). Unlimited jokers burn extra questions (D-27), but burning is per player (D-28).*
 
-### Tech & setup
-- **OQ-11** Which device drives the TV (laptop via HDMI, smart-TV browser, Raspberry Pi, Chromecast)?
-- **OQ-12** Is internet available during play? (Affects the image strategy.)
-- **OQ-13** Does the gamemaster want a separate device that shows the answers?
-
 ## Resolved
-- **OQ-28** What is the game called? The Start screen needs a wordmark (`10-visual-design.md`). *Suggestions, playing on the tower: «¡La Torre!», «Torre de Preguntas», «Doce Pisos».*
+- **OQ-4** No timer per question; **OQ-13** no separate gamemaster device and no GM-only view; **OQ-8** no family-specific questions; **OQ-11** a computer connected to the TV via HDMI; **OQ-12** internet is available during play; **OQ-28** the game is called «¡Trivia!» (D-30).
 - **OQ-15** Hints are shown only through the Pista joker, one hint per use, until the question's three are shown (D-26, D-27). **OQ-25** Jokers are unlimited; **OQ-26** one hint per Pista; **OQ-27** a Snipe hit costs nothing beyond repeating the level (D-27).
 - **OQ-20** UI audio (music and effects) is committed; **OQ-21** players can unlock a locked answer, and then nothing is locked; **OQ-22** the correct answer is shown after a wrong one; **OQ-23** level → difficulty ranges; **OQ-24** tower of blocks, narrower towards the top (D-22).
 - **OQ-1** 12 in a row; **OQ-2** a wrong answer ends the game; **OQ-3** difficulty rises from level 1 (easiest) to 12 (D-20).

@@ -1,6 +1,6 @@
 # 10 — Visual Design
 
-**Status:** draft
+**Status:** confirmed (VD-1)
 
 How the game looks: colours, type, panels over images, component styles, motion. `04-ui-tv-display.md` owns the screens and what happens on them; this file owns how they look (UI-1). The gamemaster set the direction (D-29): **much smaller text**, **every element over the image a bit transparent**, a **gray and dark-blue** colour scheme with a few contrasting highlights, green and red for right and wrong. The rest below is a proposal, and the gamemaster has the final say.
 
@@ -55,7 +55,7 @@ All colours are CSS custom properties in one theme file (VD-2). Components use t
 - Numbers use tabular figures, so «Nivel 10» doesn't jump.
 
 ### Scale: much smaller than the skeleton (D-29)
-One unit, `--u = 100vw / 120` (16 px at 1920 px wide; it scales with the screen, 4K included). Sizes are multiples of `--u`, never `vw` directly.
+One unit, `--u = 100vw / 120` (16 px at 1920 px wide; it scales with the screen, 4K included), capped at `100vh / 67.5` so a window that isn't 16:9 still fits. Sizes are multiples of `--u`, never `vw` directly.
 
 | Role | Size | px at 1080p | Skeleton had |
 |---|---|---|---|
@@ -87,10 +87,10 @@ The picture should fill the screen and stay visible; the interface floats over i
 ┌─────────────────────────────────────────────────────────────────┐
 │ [Nivel 5 · ▮▮▮▮▯▯▯▯▯▯▯▯]  [Ana]                                    │  HUD chips (glass-light)
 │        ┌───────────────────────────────────────────────┐        │
-│  (P)   │      ¿Qué instrumento se toca golpeándolo      │        │  question card (glass-strong)
-│  (S)   │            con las manos o con palos?          │        │
+│  (S)   │      ¿Qué instrumento se toca golpeándolo      │        │  question card (glass-strong)
+│  (P)   │            con las manos o con palos?          │        │
 │  (F)   └───────────────────────────────────────────────┘        │
-│  (O)                 [Pista 1: Tiene cuero]                      │  hint notes (09)
+│  (T)                 [Soplo 1: Tiene cuero]                      │  hint notes (09)
 │  (X)                                                             │
 │ joker            . . . . . the picture . . . . .                 │
 │ tray (09)                                                        │
@@ -129,7 +129,7 @@ The picture should fill the screen and stay visible; the interface floats over i
 
 ## Backgrounds (screens without media)
 
-- **Start:** the night stage: a radial gradient (`--night-800` → `--night-900`), a soft amber spotlight cone from the top, and faint «?» glyphs drifting slowly upwards (5 % opacity). The game's name as a wordmark in Baloo 2 (OQ-28).
+- **Start:** the night stage: a radial gradient (`--night-800` → `--night-900`), a soft amber spotlight cone from the top, and faint «?» glyphs drifting slowly upwards (5 % opacity). The game's name, «¡Trivia!», as a wordmark in Baloo 2 (D-30).
 - **Level and Select:** the same stage, with the spotlight on the tower or the table.
 - **Correct:** the stage brightens for a moment, with a mint rim light on the edges.
 - **Wrong:** colours drain to grayscale navy, and the spotlight dims (with UI-4).
@@ -148,12 +148,12 @@ The picture should fill the screen and stay visible; the interface floats over i
 - The `PLACEHOLDER` style (D-25) keeps its magenta dashed look until its task is done.
 
 ## Tasks
-- [ ] VD-1 Gamemaster confirms the palette, fonts and type scale from a mock-up of the Question screen.
-- [ ] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `client/src/game/`.
-- [ ] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `client/public/fonts/`.
-- [ ] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4).
-- [ ] VD-5 Candy buttons and answer tile states, with ✓/✗ badges.
-- [ ] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants.
-- [ ] VD-7 Tower materials by height (with UI-3).
-- [ ] VD-8 SVG icon set (padlock, replay, speaker, ✓, ✗; joker tokens with JK-4).
+- [x] VD-1 Gamemaster confirms the palette, fonts and type scale from the implementation (D-30). *2026-10-06: confirmed («visual design is great»).*
+- [x] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `client/src/game/`. *2026-10-06: `client/src/game/theme.css`, scoped to `.game`.*
+- [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`.*
+- [x] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4). *2026-10-06: `Question.svelte`, `Hud.svelte`.*
+- [x] VD-5 Candy buttons and answer tile states, with ✓/✗ badges. *2026-10-06: also the envelope cards on Select.*
+- [x] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants. *2026-10-06: `Stage.svelte`.*
+- [x] VD-7 Tower materials by height (with UI-3). *2026-10-06: `Tower.svelte`: materials, drop-and-settle, wobble, crown, crumble on Wrong.*
+- [x] VD-8 SVG icon set (padlock, replay, speaker, ✓, ✗; joker tokens with JK-4). *2026-10-06: `Icon.svelte` (also film, crown, star); joker tokens come with JK-4.*
 - [ ] VD-9 TV check: legibility of the smaller scale from the couch, glass contrast over bright images, `backdrop-filter` performance and the no-blur fallback (with UI-6).

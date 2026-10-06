@@ -13,6 +13,7 @@
     canRestart,
     onclose,
     onskip,
+    onskipall,
     onundo,
     onrestart,
   }: {
@@ -24,6 +25,8 @@
     canRestart: boolean;
     onclose: () => void;
     onskip: () => void;
+    /** «Saltar y quemar para todos»: a broken or wrong question, burned for every player (D-28). */
+    onskipall: () => void;
     onundo: () => void;
     onrestart: () => void;
   } = $props();
@@ -37,6 +40,7 @@
   const items = $derived<Item[]>([
     { label: "Continuar", enabled: true, run: onclose },
     { label: "Saltar pregunta", enabled: canSkip, run: onskip },
+    { label: "Saltar y quemar para todos", enabled: canSkip, run: onskipall, confirm: true },
     { label: "Deshacer última respuesta", enabled: canUndo, run: onundo },
     { label: "Pantalla completa", enabled: true, run: fullscreen },
     { label: "Volver al inicio (termina la partida)", enabled: canRestart, run: onrestart, confirm: true },
@@ -95,48 +99,49 @@
     z-index: 40;
     display: grid;
     place-items: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(5, 8, 16, 0.72);
   }
   .menu {
     display: flex;
     flex-direction: column;
-    gap: 1.2vh;
-    min-width: 34vw;
-    padding: 4vh 3vw;
-    border-radius: 1.5vw;
-    background: var(--panel);
+    gap: calc(0.7 * var(--u));
+    min-width: calc(40 * var(--u));
+    padding: calc(2.4 * var(--u)) calc(2.4 * var(--u));
+    border: 1px solid var(--slate-600);
+    border-radius: calc(1.6 * var(--u));
+    background: var(--night-700);
+    box-shadow: 0 calc(1.5 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, 0.6);
   }
   h2 {
-    margin: 0 0 1vh;
+    margin: 0 0 calc(0.6 * var(--u));
     text-align: center;
-    font-size: 2.6vw;
+    font-family: var(--font-display);
+    font-size: calc(2.6 * var(--u));
+    font-weight: 800;
   }
   button {
-    font: inherit;
-    font-size: 1.8vw;
-    padding: 1.4vh 2vw;
-    border: 0.25vw solid transparent;
-    border-radius: 0.8vw;
-    background: #2f3240;
-    color: var(--text);
-    cursor: pointer;
+    padding: calc(0.7 * var(--u)) calc(1.4 * var(--u));
+    border: calc(0.18 * var(--u)) solid transparent;
+    border-radius: calc(0.8 * var(--u));
+    background: var(--slate-600);
+    font-size: calc(1.5 * var(--u));
+    font-weight: 700;
     text-align: left;
   }
   .debug {
-    margin: 1vh 0 0;
+    margin: calc(0.6 * var(--u)) 0 0;
     text-align: center;
-    font-size: 1vw;
-    color: var(--muted);
+    font-size: calc(0.9 * var(--u));
+    color: var(--slate-400);
   }
   .debug code {
-    color: var(--text);
+    color: var(--slate-200);
     user-select: all;
   }
   button.selected {
-    border-color: var(--accent);
+    border-color: var(--amber);
   }
   button:disabled {
     opacity: 0.35;
-    cursor: default;
   }
 </style>

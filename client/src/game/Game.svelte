@@ -6,11 +6,16 @@
   import { fetchGame, gameAction, GameError, type GameActionBody } from "../lib/api";
   import type { Game, Supply } from "../lib/types";
   import Captions from "./Captions.svelte";
+  import { consolation, milestone } from "./copy";
+  import Hud from "./Hud.svelte";
+  import Icon from "./Icon.svelte";
   import Overlay from "./Overlay.svelte";
   import Placeholder from "./Placeholder.svelte";
   import Question from "./Question.svelte";
   import { music, sfx, type Track } from "./sound.svelte";
-  import { FADE_MS, sleep } from "./timing";
+  import Stage from "./Stage.svelte";
+  import "./theme.css";
+  import { FADE_MS, PICK_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
   type Screen = "start" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
@@ -26,6 +31,10 @@
   };
 
   let screen = $state<Screen>("start");
+  /** The screen before this one: the Level screen drops the new block only after Correct. */
+  let previous = $state<Screen | null>(null);
+  /** The card just picked on Select (it pulses, the others slide off). */
+  let picked = $state<number | null>(null);
   let game = $state<Game | null>(null);
   let supply = $state<Supply | null>(null);
   let error = $state<string | null>(null);
@@ -70,7 +79,9 @@
     black = true;
     await sleep(FADE_MS);
     music(MUSIC[next]);
+    previous = screen;
     screen = next;
+    picked = null;
     // PLACEHOLDER(UI-7): no preloading of the next screen's media before fading in.
     black = false;
     await sleep(FADE_MS);
@@ -108,7 +119,10 @@
   async function pick(i: number) {
     if (!game || i >= game.options.length) return;
     sfx("pop: carta elegida");
-    if (await act("pick", { index: i })) await go("question", "swoosh");
+    picked = i;
+    const [ok] = await Promise.all([act("pick", { index: i }), sleep(PICK_MS)]);
+    if (ok) await go("question", "swoosh");
+    else picked = null;
   }
 
   async function answered(next: Game | null) {
@@ -140,9 +154,9 @@
     pausedMedia = [];
   }
 
-  async function skip() {
+  async function skip(everyone: boolean) {
     overlayOpen = false;
-    if (await act("skip")) await go("select", "papel");
+    if (await act("skip", { everyone })) await go("select", "papel");
   }
 
   async function undo() {
@@ -179,7 +193,8 @@
       else newGame();
     } else if (screen === "start" && e.key.toLowerCase() === "n") newGame();
     else if (screen === "level" && next) go("select", "papel");
-    else if (screen === "select" && "1234".includes(e.key) && e.key.length === 1) pick(Number(e.key) - 1);
+    else if (screen === "select" && picked === null && "1234".includes(e.key) && e.key.length === 1)
+      pick(Number(e.key) - 1);
     else if (screen === "correct" && next) go("level", "whoosh");
     else if ((screen === "wrong" || screen === "victory") && next) toStart();
     else return;
@@ -193,11 +208,10 @@
     }
   }
 
-  // UI-14: final Spanish copy for milestones and consolation.
-  function milestone(level: number) {
-    if (level === 6) return "¡Ya vamos por la mitad!"; // PLACEHOLDER(UI-14)
-    if (level === 4 || level === 8) return "¡Cada vez más alto!"; // PLACEHOLDER(UI-14)
-    return null;
+  /** Each card's tilt, within ±3° (10, "Cards"); fixed per game and level, so a re-render keeps it. */
+  function tilt(i: number) {
+    const seed = ((game?.id ?? 0) * 31 + (game?.level ?? 0) * 7 + i * 13) % 13;
+    return (seed / 12) * 6 - 3;
   }
 </script>
 
@@ -205,22 +219,25 @@
 
 <main class="game">
   {#if loading}
-    <p class="center">Cargando…</p>
+    <Stage />
+    <p class="center label">Cargando…</p>
   {:else if screen === "start"}
+    <Stage />
     <section class="start">
-      <!-- PLACEHOLDER(UI-1): no visual style or idle animation yet. -->
-      <h1>Trivia</h1>
-      <p class="subtitle">12 preguntas seguidas para ganar</p>
+      <h1 class="wordmark"><span class="bang">¡</span>Trivia<span class="bang">!</span></h1>
+      <p class="subtitle">12 preguntas seguidas para llegar a la cima</p>
       <div class="buttons">
         {#if running}
-          <button class="primary" onclick={resume} disabled={busy}>Continuar (nivel {game?.level}) <kbd>Enter</kbd></button>
-          <button onclick={newGame} disabled={busy}>Nueva partida <kbd>N</kbd></button>
+          <button class="candy breathe" onclick={resume} disabled={busy}>
+            Continuar{game?.player ? `: ${game.player}` : ""}, nivel {game?.level} <kbd>Enter</kbd>
+          </button>
+          <button class="secondary" onclick={newGame} disabled={busy}>Nueva partida <kbd>N</kbd></button>
         {:else}
-          <button class="primary" onclick={newGame} disabled={busy}>¡Jugar! <kbd>Enter</kbd></button>
+          <button class="candy breathe" onclick={newGame} disabled={busy}>¡Jugar! <kbd>Enter</kbd></button>
         {/if}
       </div>
       {#if supply && !supply.ok}
-        <div class="supply">
+        <div class="supply glass">
           <p>No hay suficientes preguntas para una partida completa ({supply.available} disponibles):</p>
           <ul>
             {#each supply.levels.filter((l) => l.missing) as l (l.level)}
@@ -229,33 +246,45 @@
           </ul>
         </div>
       {/if}
-      <Placeholder task="UI-1" label="estilo visual, título y animación de espera" chip />
     </section>
   {:else if screen === "level" && game}
+    <Stage />
+    <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
     <section class="level">
-      <Tower filled={blocks} />
+      <Tower filled={blocks} drop={previous === "correct"} />
       <div class="level-text">
-        <h1>Nivel {game.level} de 12</h1>
-        {#if milestone(game.level)}<p class="milestone">{milestone(game.level)}</p>{/if}
-        <p class="hint"><kbd>Enter</kbd> para seguir</p>
+        <p class="kicker">Nivel</p>
+        <h1 class="title big">{game.level} <span class="of">de 12</span></h1>
+        {#if milestone(game.level, game.id)}<p class="milestone">{milestone(game.level, game.id)}</p>{/if}
+        <p class="hint label"><kbd>Enter</kbd> para seguir</p>
       </div>
     </section>
   {:else if screen === "select" && game}
+    <Stage />
+    <div class="corner-hud"><Hud level={game.level} player={game.player} /></div>
     <section class="select">
-      <h2>Nivel {game.level}: elijan una pregunta</h2>
+      <h2 class="title">Elijan una pregunta</h2>
       {#if game.options.length === 0}
         <p class="error-box">No quedan preguntas para este nivel. <kbd>Esc</kbd> → Volver al inicio.</p>
       {/if}
       <div class="cards">
         {#each game.options as option, i (i)}
-          <!-- PLACEHOLDER(UI-11): plain cards; no envelopes, tilt, deal-in or tear-open. -->
-          <button class="card" onclick={() => pick(i)} disabled={busy}>
-            <span class="number">{i + 1}</span>
-            <span>{option.description}</span>
+          <button
+            class="card"
+            class:chosen={picked === i}
+            class:gone={picked !== null && picked !== i}
+            style:--tilt="{tilt(i)}deg"
+            style:--deal-delay="{i * 0.12}s"
+            onclick={() => picked === null && pick(i)}
+            disabled={busy}
+          >
+            <span class="seal">{i + 1}</span>
+            <span class="description">{option.description}</span>
           </button>
         {/each}
       </div>
-      <Placeholder task="UI-11" label="cartas sencillas, sin diseño ni animación" chip />
+      <!-- PLACEHOLDER(UI-11): no tear-open of the chosen card; no «¡Nueva!» highlight for a replaced card (09). -->
+      <Placeholder task="UI-11" label="la carta elegida no se abre todavía" chip />
     </section>
   {:else if screen === "question" && game?.question}
     {#key game.question.id}
@@ -263,49 +292,60 @@
         bind:this={questionRef}
         question={game.question}
         level={game.level}
+        playerName={game.player}
         paused={overlayOpen}
         onanswered={answered}
       />
     {/key}
   {:else if screen === "correct" && game?.last}
+    <Stage mood="correct" />
     <section class="result">
       <!-- PLACEHOLDER(UI-9): fireworks overlay. -->
-      <Placeholder task="UI-9" label="🎆 fuegos artificiales" />
-      <h1 class="good">¡Correcto!</h1>
-      <p class="answer">{game.last.answer}</p>
-      <p class="fun-fact">{game.last.fun_fact}</p>
-      <p class="hint"><kbd>Enter</kbd> para seguir</p>
+      <Placeholder task="UI-9" label="fuegos artificiales" chip />
+      <h1 class="title good">¡Correcto!</h1>
+      <div class="panel glass">
+        <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
+        <p class="fun-fact">{game.last.fun_fact}</p>
+      </div>
+      <p class="hint label"><kbd>Enter</kbd> para seguir</p>
     </section>
   {:else if screen === "wrong" && game?.last}
+    <Stage mood="wrong" />
     <section class="result wrong">
-      <!-- PLACEHOLDER(UI-4): desaturate, vignette, crumbling tower. -->
-      <Placeholder task="UI-4" label="animación oscura: la torre se derrumba" />
       <div class="columns">
-        <Tower filled={blocks} small />
-        <div>
-          <h1 class="bad">¡Oh no!</h1>
-          <p>La respuesta correcta era</p>
-          <p class="answer">{game.last.answer}</p>
-          <p class="fun-fact">{game.last.fun_fact}</p>
-          <!-- PLACEHOLDER(UI-14): several consolation messages per level band. -->
-          <p class="consolation">¡Llegaron al nivel {game.level}!</p>
-          <Placeholder task="UI-14" label="mensaje de consuelo" chip />
+        <Tower filled={blocks} small crumble />
+        <div class="stack">
+          <h1 class="title bad">¡Oh no!</h1>
+          <div class="panel glass">
+            <p class="label">La respuesta correcta era</p>
+            <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
+            <p class="fun-fact">{game.last.fun_fact}</p>
+          </div>
+          <p class="consolation">{consolation(game.level, game.id)}</p>
         </div>
       </div>
-      <button class="primary" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
+      <button class="candy" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
     </section>
   {:else if screen === "victory" && game}
+    <Stage mood="victory" />
     <section class="result victory">
-      <Tower filled={12} />
+      <Tower filled={12} drop />
       <div class="stack">
-        <h1 class="good">¡Ganaron!</h1>
-        {#if game.last}<p class="fun-fact">{game.last.answer}: {game.last.fun_fact}</p>{/if}
-        <!-- PLACEHOLDER(UI-4, UI-9): crown, long fireworks finale, victory jingle. -->
-        <Placeholder task="UI-4 · UI-9" label="👑 corona y gran final de fuegos artificiales" />
-        <button class="primary" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
+        <h1 class="title big gold">¡Ganaron!</h1>
+        {#if game.player}<p class="milestone">¡{game.player} llegó a la cima!</p>{/if}
+        {#if game.last}
+          <div class="panel glass">
+            <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
+            <p class="fun-fact">{game.last.fun_fact}</p>
+          </div>
+        {/if}
+        <!-- PLACEHOLDER(UI-9): the long fireworks finale. -->
+        <Placeholder task="UI-9" label="gran final de fuegos artificiales" chip />
+        <button class="candy breathe" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else}
+    <Stage />
     <p class="center">Esta pantalla no tiene datos. <kbd>Esc</kbd> → Volver al inicio.</p>
   {/if}
 
@@ -325,7 +365,8 @@
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={running || screen !== "start"}
       onclose={closeOverlay}
-      onskip={skip}
+      onskip={() => skip(false)}
+      onskipall={() => skip(true)}
       onundo={undo}
       onrestart={restart}
     />
@@ -337,7 +378,6 @@
     position: fixed;
     inset: 0;
     overflow: hidden;
-    font-size: 1.6vw;
   }
   section {
     position: absolute;
@@ -346,134 +386,274 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vh;
-    padding: 4vh 5vw;
+    gap: calc(1.4 * var(--u));
+    padding: var(--safe-y) var(--safe-x);
     text-align: center;
   }
-  h1 {
+  p {
     margin: 0;
-    font-size: 5vw;
   }
-  h2 {
+
+  /* Start */
+  .wordmark {
     margin: 0;
-    font-size: 3vw;
+    font-family: var(--font-display);
+    font-size: calc(11 * var(--u));
+    font-weight: 800;
+    line-height: 1;
+    color: var(--paper);
+    text-shadow:
+      0 calc(0.4 * var(--u)) 0 var(--slate-600),
+      0 calc(0.8 * var(--u)) calc(2.5 * var(--u)) rgba(0, 0, 0, 0.5);
+    animation: arrive 0.9s var(--spring) backwards;
   }
-  kbd {
-    font-size: 0.6em;
-    opacity: 0.6;
+  .bang {
+    display: inline-block;
+    color: var(--amber);
+    animation: bob 3s ease-in-out infinite;
   }
-  button {
-    font: inherit;
-    color: var(--text);
-    cursor: pointer;
+  .bang:last-child {
+    animation-delay: -1.5s;
   }
-  button:disabled {
-    cursor: default;
+  .subtitle {
+    font-size: calc(1.6 * var(--u));
+    color: var(--slate-200);
   }
   .buttons {
     display: flex;
-    gap: 2vw;
-    margin: 3vh 0;
-  }
-  .buttons button,
-  .result button {
-    font-size: 2.2vw;
-    padding: 1.5vh 3vw;
-    border-radius: 1vw;
-    border: 0.25vw solid rgba(255, 255, 255, 0.2);
-    background: var(--panel);
-  }
-  button.primary {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #1a1a1a;
-    font-weight: 800;
-  }
-  .subtitle,
-  .hint {
-    color: var(--muted);
+    align-items: center;
+    gap: calc(1.6 * var(--u));
+    margin-top: calc(2 * var(--u));
   }
   .supply {
-    color: var(--warn);
-    font-size: 1.3vw;
+    padding: calc(1 * var(--u)) calc(1.6 * var(--u));
+    font-size: calc(1.1 * var(--u));
+    color: var(--amber);
     text-align: left;
+  }
+  .supply ul {
+    margin: calc(0.4 * var(--u)) 0 0;
+  }
+
+  /* Level */
+  .corner-hud {
+    position: absolute;
+    top: var(--safe-y);
+    left: var(--safe-x);
+    z-index: 1;
+  }
+  .chip {
+    display: inline-block;
+    padding: calc(0.35 * var(--u)) calc(1 * var(--u));
+    border-radius: calc(0.9 * var(--u));
+    font-family: var(--font-display);
+    font-size: calc(1.1 * var(--u));
+    font-weight: 700;
+    color: var(--slate-200);
   }
   .level {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .level-text h1 {
-    font-size: 6vw;
+  .level-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(0.8 * var(--u));
+    min-width: calc(34 * var(--u));
+  }
+  .kicker {
+    font-family: var(--font-display);
+    font-size: calc(1.8 * var(--u));
+    color: var(--slate-200);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .big {
+    font-size: calc(7 * var(--u));
+    color: var(--amber);
+    animation: arrive 0.7s 0.3s var(--spring) backwards;
+  }
+  .of {
+    font-size: 0.45em;
+    color: var(--slate-200);
   }
   .milestone {
-    font-size: 2.4vw;
-    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: calc(2 * var(--u));
+    font-weight: 700;
+    color: var(--sky);
+    animation: arrive 0.7s 0.9s var(--spring) backwards;
   }
+  .hint {
+    margin-top: calc(1.5 * var(--u));
+  }
+
+  /* Select: paper envelopes on the night table (VD-5, UI-11) */
   .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2vw;
+    gap: calc(2 * var(--u));
     width: 100%;
-    margin: 3vh 0;
+    max-width: calc(100 * var(--u));
+    margin: calc(2 * var(--u)) 0;
   }
   .card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
-    min-height: 38vh;
-    padding: 3vh 1.5vw;
-    border: 0.25vw solid rgba(255, 255, 255, 0.15);
-    border-radius: 1.2vw;
-    background: #f3ead6;
-    color: #2b2116;
-    font-size: 1.9vw;
-    text-align: center;
-    transition: transform 0.2s;
+    align-items: center;
+    justify-content: center;
+    gap: calc(1.2 * var(--u));
+    min-height: calc(26 * var(--u));
+    padding: calc(5 * var(--u)) calc(1.4 * var(--u)) calc(2 * var(--u));
+    border: none;
+    border-radius: calc(0.8 * var(--u));
+    background: var(--cream);
+    color: var(--ink);
+    font-size: calc(1.6 * var(--u));
+    font-weight: 700;
+    line-height: 1.3;
+    box-shadow:
+      0 calc(0.4 * var(--u)) 0 #d9cfb6,
+      0 calc(1.2 * var(--u)) calc(2.4 * var(--u)) rgba(0, 0, 0, 0.45);
+    transform: rotate(var(--tilt));
+    transition:
+      transform 0.3s var(--spring),
+      opacity 0.3s;
+    animation: deal 0.6s var(--deal-delay) var(--spring) backwards;
   }
-  .card:hover {
-    transform: translateY(-1.5vh);
+  /* The envelope flap */
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: calc(6 * var(--u));
+    background: linear-gradient(to bottom, #e8dcc0, #efe4cb);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    border-radius: calc(0.8 * var(--u)) calc(0.8 * var(--u)) 0 0;
   }
-  .number {
-    font-size: 3.5vw;
+  .seal {
+    position: absolute;
+    top: calc(3.6 * var(--u));
+    left: 50%;
+    translate: -50% 0;
+    display: grid;
+    place-items: center;
+    width: calc(4.4 * var(--u));
+    height: calc(4.4 * var(--u));
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #e0584a, var(--seal) 60%, #8e2a20);
+    color: var(--amber);
+    font-family: var(--font-display);
+    font-size: calc(2.2 * var(--u));
     font-weight: 800;
-    color: #b0452b;
+    box-shadow: 0 calc(0.2 * var(--u)) calc(0.4 * var(--u)) rgba(0, 0, 0, 0.35);
+  }
+  .description {
+    margin-top: calc(2.4 * var(--u));
+  }
+  .card:hover:not(:disabled),
+  .card:focus-visible {
+    transform: translateY(calc(-1.2 * var(--u))) rotate(0deg) scale(1.03);
+    outline: calc(0.25 * var(--u)) solid var(--sky);
+  }
+  .card.chosen {
+    animation: chosen 0.5s var(--spring) forwards;
+  }
+  .card.gone {
+    animation: gone 0.4s ease-in forwards;
+  }
+  @keyframes deal {
+    from {
+      opacity: 0;
+      transform: translateY(-60vh) rotate(calc(var(--tilt) * -6));
+    }
+  }
+  @keyframes chosen {
+    40% {
+      transform: rotate(0deg) scale(1.12);
+    }
+    to {
+      transform: rotate(0deg) scale(1.06);
+      box-shadow: 0 0 calc(3 * var(--u)) var(--amber);
+    }
+  }
+  @keyframes gone {
+    to {
+      opacity: 0;
+      transform: translateY(40vh) rotate(calc(var(--tilt) * 4));
+    }
+  }
+
+  /* Results */
+  .panel {
+    max-width: calc(64 * var(--u));
+    padding: calc(1.4 * var(--u)) calc(2.4 * var(--u));
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.6 * var(--u));
+    animation: arrive 0.6s 0.25s var(--spring) backwards;
   }
   .result .answer {
-    margin: 0;
-    font-size: 3.4vw;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(0.8 * var(--u));
+    font-family: var(--font-display);
+    font-size: calc(2.6 * var(--u));
     font-weight: 800;
   }
+  .good-badge {
+    display: grid;
+    place-items: center;
+    width: calc(2.6 * var(--u));
+    height: calc(2.6 * var(--u));
+    border-radius: 50%;
+    background: var(--mint);
+    color: var(--night-900);
+    font-size: calc(1.6 * var(--u));
+  }
   .fun-fact {
-    max-width: 60vw;
-    font-size: 1.9vw;
+    font-size: calc(1.5 * var(--u));
+    color: var(--slate-200);
+  }
+  .result .title {
+    animation: arrive 0.6s var(--spring) backwards;
   }
   .good {
-    color: var(--good);
+    color: var(--mint);
   }
   .bad {
-    color: var(--bad);
+    color: var(--coral);
   }
-  .wrong {
-    background: radial-gradient(circle, #1d2030, #07070b 80%);
+  .gold {
+    color: var(--amber);
   }
   .columns {
     display: flex;
     align-items: center;
-    gap: 5vw;
+    gap: calc(4 * var(--u));
   }
   .stack {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3vh;
+    gap: calc(1.4 * var(--u));
   }
   .victory {
     flex-direction: row;
     justify-content: space-evenly;
   }
   .consolation {
-    font-size: 2.2vw;
+    max-width: calc(56 * var(--u));
+    font-family: var(--font-display);
+    font-size: calc(2 * var(--u));
+    font-weight: 600;
+    color: var(--paper);
+    animation: arrive 0.6s 1.2s var(--spring) backwards;
   }
+
   .center {
     position: absolute;
     inset: 0;
@@ -481,18 +661,18 @@
     place-items: center;
   }
   .error-box {
-    color: var(--bad);
-    background: rgba(40, 10, 12, 0.9);
-    border: 0.12rem solid var(--bad);
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    color: var(--coral);
+    background: rgba(40, 10, 18, 0.9);
+    border: 1px solid var(--coral);
+    border-radius: calc(0.6 * var(--u));
+    padding: calc(0.5 * var(--u)) calc(1 * var(--u));
+    font-size: calc(1.1 * var(--u));
   }
   .corner {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: var(--safe-y);
+    right: var(--safe-x);
     max-width: 40vw;
-    font-size: 1rem;
     z-index: 35;
   }
   .black {
@@ -507,5 +687,17 @@
   .black.on {
     opacity: 1;
     pointer-events: all;
+  }
+
+  @keyframes arrive {
+    from {
+      opacity: 0;
+      transform: translateY(calc(2 * var(--u))) scale(0.94);
+    }
+  }
+  @keyframes bob {
+    50% {
+      transform: translateY(calc(-0.6 * var(--u))) rotate(-6deg);
+    }
   }
 </style>
