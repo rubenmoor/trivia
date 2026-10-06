@@ -21,7 +21,7 @@ The road from today to a finished game: milestones, every open task, every open 
 | M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | done (B-1 waits for a decision) |
 | M2 | Jokers | 09 | done (sounds: JK-9 in M4) |
 | M3 | Visual design and screen polish | 10, 04 | mostly done (UI-11 tear-open, UI-7 preload left) |
-| M4 | Sound, music and fireworks | 04, 09 | next |
+| M4 | Sound, music and fireworks | 04, 09 | done (rest of the sounds synthesized, fine for now) |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
 | M6 | Living-room ready (TV test, setup, backup) | 04, 10, backlog | todo |
 
@@ -80,7 +80,7 @@ Depends on M1 (per-player burning). Joker sounds (JK-9) are in M4.
 - [x] VD-7 / UI-3 Tower: materials, drop-and-settle, crown — [`10`](10-visual-design.md), [`04`](04-ui-tv-display.md)
 - [x] VD-8 SVG icon set — [`10`](10-visual-design.md)
 - [x] UI-1 Visual style (confirmed, VD-1) — [`04`](04-ui-tv-display.md)
-- [~] UI-4 Reveal, Correct, Wrong and Victory animations (fireworks left, UI-9) — [`04`](04-ui-tv-display.md)
+- [x] UI-4 Reveal, Correct, Wrong and Victory animations (fireworks: UI-9) — [`04`](04-ui-tv-display.md)
 - [~] UI-11 Quirky question cards with deal-in (tear-open left) — [`04`](04-ui-tv-display.md)
 - [x] UI-12 Padlock animations — [`04`](04-ui-tv-display.md)
 - [x] UI-14 Consolation and milestone copy in Spanish — [`04`](04-ui-tv-display.md)
