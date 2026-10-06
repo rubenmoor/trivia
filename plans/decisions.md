@@ -271,3 +271,13 @@ Template:
 - Decision: `draft` assigns target difficulties in the proportions a game shows them: each level's 4 questions spread evenly over its range (07, "Difficulty target"). That is about 19 % at 1–3, 51 % at 4–7 and 30 % at 8–10.
 - Consequences: `LEVEL_WEIGHTS` in `qgen.py` changes; runs drafted before this keep their difficulties. The calibration examples still apply, so high targets must be hard for these players, not obscure.
 - Supersedes / related: D-22; 07 "Difficulty target"; OQ-17
+
+## D-32: Batch-4 is reviewed by Claude, not the gamemaster
+- Date: 2026-10-06
+- Context: The gamemaster's review time is the bottleneck (07). The first-120 review approved 117 of 120 and every decorative pick was the first suggestion (D-23). The gamemaster asked for the next batch to be approved automatically.
+- Decision: For batch-4, Claude does the gamemaster's review (step 8) and picks the media. A question is **approved** unless one of these is true; then it becomes `needs_work` with the reason as feedback:
+  - The fact-check is uncertain, or the rater's notes name a defect that is still in the text (a wrong fact, a second defensible answer, a hint that points to a wrong option, a giveaway).
+  - Commons has no adequate media. *Essential* media must show the thing clearly and must not name the answer (Claude looks at the candidate). *Illustrative* or *decorative* media must fit the topic and must not give the answer away. Audio questions also need a usable background picture.
+  - Low soft scores (dry, weak distractors, difficulty off) are **not** a reason (D-16).
+- Consequences: The review record reads `{"decision": ..., "feedback": ..., "reviewed_on": ..., "reviewer": "claude"}`, so auto-reviews can be told apart. D-7 ("the gamemaster reviews every one") still holds for other batches. The gamemaster can still open `/review?batch=batch-4` and override.
+- Supersedes / related: D-7, D-16, D-23; QG-17

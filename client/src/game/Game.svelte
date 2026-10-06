@@ -31,7 +31,7 @@
     question: "question",
     correct: "normal", // the fanfare plays at the reveal, then this comes back
     wrong: null,
-    victory: null, // the victory jingle is an effect
+    victory: "victory", // «Pomp and Circumstance», over the cheers
   };
 
   let screen = $state<Screen>("start");

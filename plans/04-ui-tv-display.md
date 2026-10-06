@@ -57,7 +57,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso / Francotirador hit | Intense (off while question media plays); after submitting: most intense |
 | Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` | Fanfare replaces the music, then Normal |
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
-| Victory | Full 12-block tower, big finale | «Volver al inicio» | Victory jingle |
+| Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
 
 ### Start
 - Game title, a short subtitle, a big «¡Jugar!» button.
@@ -156,6 +156,7 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 | `question` | Question screen, from the fade-in while no answer is locked in | More intense: faster pulse, ticking, strings |
 | `submitted` | While an answer is locked in (gamemaster feedback, 2026-10-06) | Most intense: heartbeat or timpani rolls, rising pitch |
 | `roll` | From «Respuesta final» until the reveal | A snare drum roll that builds up to the reveal |
+| `victory` | Victory, once | Epic: the grand finale of Elgar's «Pomp and Circumstance» No. 1 (the «Land of Hope and Glory» tune in full force, then the coda), US Marine Band, public domain (gamemaster request, 2026-10-06) |
 
 - **Selecting a question** goes through the normal transition: `normal` fades out, then `question` fades in on the Question screen (after the question media, if any).
 - **Locking in** an answer cuts sharply (~80 ms) from `question` to `submitted`; unlocking cuts back. **Submitting** cuts to the drum roll `roll`, with a short "hit" effect on top.

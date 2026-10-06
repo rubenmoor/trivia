@@ -5,8 +5,9 @@
 // (same key and tempo family, rising intensity) and each effect name maps to a recipe below.
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
- * roll: the drum roll from «Respuesta final» until the reveal (04, "Music"). */
-export type Track = "normal" | "question" | "submitted" | "roll";
+ * roll: the drum roll from «Respuesta final» until the reveal; victory: «Pomp and Circumstance»
+ * on the Victory screen, once (04, "Music"). */
+export type Track = "normal" | "question" | "submitted" | "roll" | "victory";
 
 export type Volumes = { music: number; effects: number; media: number; muted: boolean };
 
@@ -35,7 +36,7 @@ let noiseBuffer: AudioBuffer;
 /** Recorded sounds (UI-10), decoded once after the unlock; a missing one falls back to synthesis. */
 const SAMPLE_NAMES = [
   "aplausos", "aplausos-gran", "redoble", "fanfarria", "trombon-triste", "candado-cierra", "candado-abre",
-  "papel", "vidrio", "sello", "golpe", "estallido",
+  "papel", "vidrio", "sello", "golpe", "estallido", "victoria",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
@@ -153,7 +154,7 @@ const CHORDS = [
   [55, 60, 64],
   [52, 56, 59],
 ];
-const TEMPO: Record<Track, number> = { normal: 76, question: 96, submitted: 120, roll: 120 };
+const TEMPO: Record<Track, number> = { normal: 76, question: 96, submitted: 120, roll: 120, victory: 120 };
 /** The drum roll: hits per second, and how long it takes to build to full strength. */
 const ROLL_HZ = 22;
 const ROLL_BUILD_S = 6;
@@ -175,6 +176,27 @@ function startTrack(track: Track, fadeIn: number) {
     n.onended = () => voices.delete(n);
   };
   // A lookahead scheduler: notes are placed slightly ahead of time, so the loop never stutters.
+  if (track === "victory") {
+    // Elgar's finale (US Marine Band, public domain), once and loud: it is the moment, not a
+    // background loop. Without the file the Victory screen keeps its cheers only.
+    if (samples.victoria) {
+      const src = c.createBufferSource();
+      src.buffer = samples.victoria;
+      const level = c.createGain();
+      level.gain.value = 3;
+      src.connect(level).connect(gain);
+      src.start(c.currentTime + 0.05);
+      keep(src);
+    }
+    current = {
+      gain,
+      stop: () => {
+        voices.forEach((v) => v.stop());
+        gain.disconnect();
+      },
+    };
+    return;
+  }
   if (track === "roll") {
     // Crescendo from soft to full over ROLL_BUILD_S, then keep rolling at full strength.
     const swell = c.createGain();
