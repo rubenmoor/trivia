@@ -5,9 +5,6 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 ## Open
 
 ### Game rules
-- **OQ-1** Must the family answer 12 in a row, or reach 12 correct answers before some limit (lives or wrong answers)?
-- **OQ-2** What happens on a wrong answer: game over, lose a life, or a point for the gamemaster?
-- **OQ-3** Does difficulty increase along the 12 steps (Millionaire-style ladder)?
 - **OQ-4** Jokers or lifelines? A timer per question?
 
 ### Content
@@ -17,12 +14,20 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-15** How are hints used in play? Free, limited per game, or do they cost something?
 - **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`).
 
+### UI & sound (added 2026-10-06, `04-ui-tv-display.md`)
+- **OQ-20** Are music and sound effects committed to the repo (small, CC0/CC BY, with `CREDITS.md`), unlike question media (D-17)? *Proposal: yes.*
+- **OQ-21** Can the players change a locked-in answer before they press «Respuesta final»? *Proposal: yes; tapping another answer re-locks.*
+- **OQ-22** After a wrong answer, is the correct answer (and `fun_fact`) shown before the consolation message? *Proposal: yes.*
+- **OQ-23** Level → difficulty mapping: is `round(1 + (level − 1) × 9 / 11)` right, or should the curve be gentler early on? (`03-game-flow.md`)
+- **OQ-24** Stack theme: tower of blocks, layer cake, pyramid, or something else? (UI-1)
+
 ### Tech & setup
 - **OQ-11** Which device drives the TV (laptop via HDMI, smart-TV browser, Raspberry Pi, Chromecast)?
 - **OQ-12** Is internet available during play? (Affects the image strategy.)
 - **OQ-13** Does the gamemaster want a separate device that shows the answers?
 
 ## Resolved
+- **OQ-1** 12 in a row; **OQ-2** a wrong answer ends the game; **OQ-3** difficulty rises from level 1 (easiest) to 12 (D-20).
 - **OQ-16** Media sources → Wikimedia Commons only; no songs or film clips (D-13).
 - **OQ-18** Feedback is its own decision: salvageable but needs changes → `needs_work` (D-11).
 - **OQ-19** Reject asks for no reason: it means unsalvageable (D-11).

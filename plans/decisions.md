@@ -147,3 +147,17 @@ Template:
 - Decision: `data/categories.json` is the only category list: 24 broad categories (`slug`, `name`), each with its subcategories, in display order. Every question stores only `subcategory`; its broad category is looked up from the file. The `categories` map in `questions.json`, the `category` field on questions and `categories.txt` are removed. `fit` no longer maps subcategories; it only scores styles.
 - Consequences: The old 10 categories (and "12 per category" balancing of the first 120) are gone. New subcategories are added to the file under a broad category before `fit` can use them. `qgen.py validate` checks every subcategory against the file. Stats (per broad category, per difficulty) are a page of the web client.
 - Supersedes / related: OQ-8, QP-4, QP-11, QP-12; QG-7
+
+## D-20: Core rules — 12 in a row, choose by description, wrong ends the game
+- Date: 2026-10-06
+- Context: OQ-1..OQ-3 were open. The gamemaster described the game as it should play on the TV.
+- Decision: The game has 12 levels, from easiest (1) to hardest (12), and all 12 must be answered in a row. Before each level, the players choose one of 4 questions by their `description`. A wrong final answer ends the game. Only the question actually asked is burned.
+- Consequences: Each level needs 4 candidates at a matching difficulty (GF-2), so the pool must hold more than 12 questions per difficulty band over several games. No lives or score. The undo in the admin overlay is the safety net for misclicks.
+- Supersedes / related: OQ-1, OQ-2, OQ-3; GF-1, GF-2, UI-*
+
+## D-21: Screen states, transitions and sound
+- Date: 2026-10-06
+- Context: The gamemaster wants a suspenseful show: music, a sound on every transition, a growing stack as progress, a lock-in mechanic and fireworks.
+- Decision: The screens are Start, Level (the stack), Select (4 cards), Question, Correct, Wrong and Victory, with an admin overlay on `Esc` over every screen. Every state change uses one transition routine: music fades out, a sound effect plays, the screen fades to black, then fades back in, and the music returns. Suspenseful music loops at low volume and is off while question media plays. Locking in an answer moves a big padlock away to reveal «Respuesta final». A correct answer gets a fanfare and one of several canvas fireworks overlays. A wrong answer gets a sad sound, a dark animation, a consolation message and «Volver al inicio». Sound is required, not optional. Audio uses the Web Audio API and fireworks use a plain canvas, with no new dependencies.
+- Consequences: The first click on Start unlocks audio and autoplay. Sound assets ship with the client (OQ-20). UI-5 is replaced by UI-7..UI-14.
+- Supersedes / related: D-8, D-15; GF-3, UI-*, GM-2

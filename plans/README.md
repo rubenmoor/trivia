@@ -13,8 +13,8 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`00-vision.md`](00-vision.md) | Goals, constraints, non-goals, success criteria | stub |
 | [`01-architecture.md`](01-architecture.md) | Tech stack, components, data flow | stub |
 | [`02-question-pool.md`](02-question-pool.md) | Question schema, pool storage, burned tracking | stub |
-| [`03-game-flow.md`](03-game-flow.md) | Rules, 12-question progression, win/lose states | stub |
-| [`04-ui-tv-display.md`](04-ui-tv-display.md) | Visual design for the TV screen | stub |
+| [`03-game-flow.md`](03-game-flow.md) | Rules, 12-question progression, win/lose states | draft |
+| [`04-ui-tv-display.md`](04-ui-tv-display.md) | Screen states, transitions, sound, animation for the TV | draft |
 | [`05-gamemaster-controls.md`](05-gamemaster-controls.md) | How the gamemaster drives the game | stub |
 | [`06-images.md`](06-images.md) | Media sourcing (Wikimedia Commons), caching, credits, picking in the review tool | draft |
 | [`07-question-generation.md`](07-question-generation.md) | Drafting, rating, reviewing and accepting new questions; batch generation strategy | draft |
