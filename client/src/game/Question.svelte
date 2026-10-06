@@ -13,7 +13,7 @@
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
   import Shredder from "./Shredder.svelte";
-  import { music, sfx } from "./sound.svelte";
+  import { duck, mediaVolume, music, sfx } from "./sound.svelte";
   import { cardFlip, crossfade } from "./swap";
   import {
     AFTER_REVEAL_MS,
@@ -123,6 +123,11 @@
     };
   });
 
+  // The question's own audio/video follows the media volume from the admin overlay (UI-13).
+  $effect(() => {
+    if (player) player.volume = mediaVolume();
+  });
+
   function mediaEnded() {
     if (!submitted) music("question");
   }
@@ -228,6 +233,7 @@
     disarm();
     mode = null;
     jokerBusy = true; // input stays locked until the joker's effect is over
+    duck(true);
     sfx(`comodín: ${TOKENS.find((t) => t.name === body.joker)?.label}`);
     if (body.joker === "snipe") shot = body.index ?? null;
     const [res] = await Promise.all([play(body), fly(body.joker)]);
@@ -237,6 +243,7 @@
     if (!res) {
       jokerBusy = false;
       shot = null;
+      duck(false);
       return;
     }
     if (res.event.joker === "snipe") {
@@ -266,6 +273,7 @@
     }
     jokerBusy = false;
     target = null;
+    duck(false);
     onplayed(res.game, res.event);
   }
 

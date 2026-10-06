@@ -1,9 +1,22 @@
 <script lang="ts">
   // Admin overlay on Esc (04-ui-tv-display.md, UI-13). The family sees it, so it never shows
-  // the correct answer. ↑/↓ choose, Enter runs, Esc closes.
-  import Placeholder from "./Placeholder.svelte";
+  // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume, Esc closes.
+  import { setVolumes, sound, type Volumes } from "./sound.svelte";
 
-  type Item = { label: string; enabled: boolean; run: () => void; confirm?: boolean };
+  type Item = { label: string; enabled: boolean; run: () => void; confirm?: boolean; volume?: Channel };
+  type Channel = "music" | "effects" | "media";
+
+  const CHANNELS: { key: Channel; label: string }[] = [
+    { key: "music", label: "Música" },
+    { key: "effects", label: "Efectos" },
+    { key: "media", label: "Audio y video de las preguntas" },
+  ];
+  const STEP = 0.1;
+
+  function change(key: Channel, by: number) {
+    const v = Math.round(Math.min(1, Math.max(0, sound.volumes[key] + by)) * 10) / 10;
+    setVolumes({ [key]: v } as Partial<Volumes>);
+  }
 
   let {
     questionId,
@@ -44,6 +57,12 @@
     { label: "Deshacer última respuesta", enabled: canUndo, run: onundo },
     { label: "Pantalla completa", enabled: true, run: fullscreen },
     { label: "Volver al inicio (termina la partida)", enabled: canRestart, run: onrestart, confirm: true },
+    ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key })),
+    {
+      label: sound.volumes.muted ? "Sonido: apagado" : "Sonido: encendido",
+      enabled: true,
+      run: () => setVolumes({ muted: !sound.volumes.muted }),
+    },
   ]);
 
   let selected = $state(0);
@@ -66,6 +85,8 @@
       do selected = (selected + step + items.length) % items.length;
       while (!items[selected].enabled);
       confirming = null;
+    } else if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && items[selected].volume) {
+      change(items[selected].volume!, e.key === "ArrowRight" ? STEP : -STEP);
     } else if (e.key === "Enter" || e.key === " ") activate(selected);
     else if (e.key === "Escape") onclose();
     else return;
@@ -76,18 +97,34 @@
 <div class="overlay">
   <div class="menu">
     <h2>Pausa</h2>
-    {#each items as item, i (item.label)}
-      <button
-        class:selected={i === selected}
-        disabled={!item.enabled}
-        onclick={() => activate(i)}
-        onmouseenter={() => item.enabled && (selected = i)}
-      >
-        {confirming === i ? "¿Seguro? Pulsa otra vez" : item.label}
-      </button>
+    {#each items as item, i (item.volume ?? item.label)}
+      {#if item.volume}
+        {@const key = item.volume}
+        <label class="volume" class:selected={i === selected} onmouseenter={() => (selected = i)}>
+          <span>{item.label}</span>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step={STEP}
+            value={sound.volumes[key]}
+            oninput={(e) => setVolumes({ [key]: Number(e.currentTarget.value) } as Partial<Volumes>)}
+            tabindex="-1"
+          />
+          <span class="pct">{Math.round(sound.volumes[key] * 100)} %</span>
+        </label>
+      {:else}
+        <button
+          class:selected={i === selected}
+          disabled={!item.enabled}
+          onclick={() => activate(i)}
+          onmouseenter={() => item.enabled && (selected = i)}
+        >
+          {confirming === i ? "¿Seguro? Pulsa otra vez" : item.label}
+        </button>
+      {/if}
     {/each}
-    <!-- PLACEHOLDER(UI-8): volume sliders and mute come with the audio engine. -->
-    <Placeholder task="UI-8" label="volumen: música, efectos, medios, silenciar" chip />
+    <p class="debug">Volumen: <kbd>←</kbd> <kbd>→</kbd></p>
     {#if questionId}<p class="debug">{questionLabel}: <code>{questionId}</code></p>{/if}
   </div>
 </div>
@@ -138,8 +175,33 @@
     color: var(--slate-200);
     user-select: all;
   }
-  button.selected {
+  button.selected,
+  .volume.selected {
     border-color: var(--amber);
+  }
+  .volume {
+    display: grid;
+    grid-template-columns: 1fr calc(14 * var(--u)) calc(4.5 * var(--u));
+    align-items: center;
+    gap: calc(1 * var(--u));
+    padding: calc(0.45 * var(--u)) calc(1.4 * var(--u));
+    border: calc(0.18 * var(--u)) solid transparent;
+    border-radius: calc(0.8 * var(--u));
+    background: rgba(43, 54, 80, 0.5);
+    font-size: calc(1.2 * var(--u));
+    font-weight: 700;
+  }
+  .volume:first-of-type {
+    margin-top: calc(0.8 * var(--u));
+  }
+  .volume input {
+    accent-color: var(--amber);
+    width: 100%;
+  }
+  .pct {
+    text-align: right;
+    color: var(--slate-200);
+    font-variant-numeric: tabular-nums;
   }
   button:disabled {
     opacity: 0.35;

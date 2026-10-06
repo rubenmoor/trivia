@@ -5,7 +5,6 @@
   import { onMount } from "svelte";
   import { fetchGame, gameAction, GameError, playJoker, type GameActionBody } from "../lib/api";
   import type { Game, JokerEvent, Supply } from "../lib/types";
-  import Captions from "./Captions.svelte";
   import { consolation, milestone } from "./copy";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
@@ -14,7 +13,7 @@
   import Placeholder from "./Placeholder.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
-  import { music, sfx, type Track } from "./sound.svelte";
+  import { music, sfx, unlock, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap";
   import "./theme.css";
@@ -29,7 +28,7 @@
     level: "normal",
     select: "normal",
     question: "question",
-    correct: "normal", // PLACEHOLDER(UI-8): the fanfare plays over it at the reveal
+    correct: "normal", // the fanfare plays at the reveal, then this comes back
     wrong: null,
     victory: null, // the victory jingle is an effect
   };
@@ -168,6 +167,14 @@
     } else game = next;
   }
 
+  /** After «¡Correcto!»: the Level screen, where the new block drops and lands with a thud. */
+  async function toLevel() {
+    const level = blocks;
+    const landed = sleep(FADE_MS * 2 + 750).then(() => sfx(`bloque ${level}`)); // the fall in Tower.svelte
+    await go("level", "whoosh");
+    await landed;
+  }
+
   /** Where a game continues: the Level screen before a choice, else its question. */
   function resume() {
     if (game?.phase === "question") return go("question", "swoosh");
@@ -265,6 +272,7 @@
 
   function onkeydown(e: KeyboardEvent) {
     if (e.repeat) return;
+    onclick();
     if (overlayOpen) return overlayRef?.key(e);
     if (screen === "player" && playerRef?.dialogOpen()) return playerRef.key(e);
     if (screen === "question" && !busy && questionRef?.dialogOpen()) return questionRef.key(e);
@@ -284,15 +292,17 @@
     else if (screen === "level" && next) go("select", "papel");
     else if (screen === "select" && picked === null && "1234".includes(e.key) && e.key.length === 1)
       pick(Number(e.key) - 1);
-    else if (screen === "correct" && next) go("level", "whoosh");
+    else if (screen === "correct" && next) toLevel();
     else if ((screen === "wrong" || screen === "victory") && next) toStart();
     else return;
     e.preventDefault();
   }
 
+  /** The first click or key press unlocks audio and autoplay (04, "Start"). */
   function onclick() {
     if (!unlocked) {
-      unlocked = true; // PLACEHOLDER(UI-8): this is where the AudioContext gets resumed
+      unlocked = true;
+      unlock();
       sfx("audio desbloqueado");
     }
   }
@@ -460,7 +470,6 @@
   <div class="black {veil}" class:on={black} style:transition-duration="{FADE_MS}ms">
     {#if veil === "rewind"}<span class="rewind-mark">◀◀</span>{/if}
   </div>
-  <Captions />
 
   {#if overlayOpen}
     <Overlay

@@ -19,9 +19,9 @@ The road from today to a finished game: milestones, every open task, every open 
 |---|-----------|-----------|--------|
 | M0 | Foundations: pool, pipeline, review tool, media cache, playable skeleton | 02, 06, 07, 08 | done |
 | M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | done (B-1 waits for a decision) |
-| M2 | Jokers | 09 | next |
+| M2 | Jokers | 09 | done (sounds: JK-9 in M4) |
 | M3 | Visual design and screen polish | 10, 04 | mostly done (UI-11 tear-open, UI-7 preload left) |
-| M4 | Sound, music and fireworks | 04, 09 | todo |
+| M4 | Sound, music and fireworks | 04, 09 | next |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
 | M6 | Living-room ready (TV test, setup, backup) | 04, 10, backlog | todo |
 
@@ -45,7 +45,7 @@ Done. See the ticked tasks in [`02-question-pool.md`](02-question-pool.md), [`06
 - [x] GM-2 Define the action set (incl. skip and burn for everyone, D-28; confirmed D-30) — [`05`](05-gamemaster-controls.md)
 - [x] GM-3 Decide on a GM-only view with answer and notes (no, D-30) — [`05`](05-gamemaster-controls.md)
 - [x] GM-4 Implement the controls («Saltar y quemar para todos» in the overlay) — [`05`](05-gamemaster-controls.md)
-- [~] UI-13 Admin overlay on `Esc` (volume waits for UI-8) — [`04`](04-ui-tv-display.md)
+- [x] UI-13 Admin overlay on `Esc` — [`04`](04-ui-tv-display.md)
 - [ ] B-1 Session log: questions asked, result, date — [`backlog`](backlog.md) *(not yet accepted)*
 
 No blocking questions left (D-30).
@@ -92,11 +92,11 @@ The game is called «¡Trivia!» (D-30).
 **Goal:** the audio contract from D-21/D-22: three music intensities, effects, unlock on first click; fireworks.
 **Exit:** no sound placeholders left; a full game sounds right at living-room volume.
 
-- [ ] UI-8 Audio engine: AudioContext, three channels, fades, gapless loops, synthesized fallbacks — [`04`](04-ui-tv-display.md)
+- [x] UI-8 Audio engine: AudioContext, three channels, fades, gapless loops, synthesized fallbacks — [`04`](04-ui-tv-display.md)
 - [ ] UI-10 Source CC0/CC BY sound assets, `client/public/audio/CREDITS.md` — [`04`](04-ui-tv-display.md)
 - [ ] UI-9 Fireworks overlay, 4+ variants, finale mode — [`04`](04-ui-tv-display.md)
-- [ ] JK-9 Joker sounds — [`09`](09-jokers.md)
-- [ ] UI-13 rest: volume sliders and mute in the admin overlay — [`04`](04-ui-tv-display.md)
+- [x] JK-9 Joker sounds — [`09`](09-jokers.md)
+- [x] UI-13 rest: volume sliders and mute in the admin overlay — [`04`](04-ui-tv-display.md)
 
 ### M5 — Enough content for game nights
 **Goal:** a pool large enough that each player gets several games, including joker use (D-27, D-28), with every approved question cached and illustrated.
