@@ -123,6 +123,16 @@ Existing questions (the first 120, or `needs_work` questions after a review) go 
 4. `qgen.py apply --run <run>`: writes the results into the pool. A revised question stays `draft` and gets a `revision` field: `{"action": "revise" | "drop", "reason": "...", "previous": {changed fields: old values}, "revised_on": date}`. Its quality scores and fact-check status are updated. If a media search term changed, the old candidates are discarded so `media.py fetch` finds new ones.
 5. `media.py fetch --batch <batch>`, then the gamemaster reviews in the review tool, which shows the changes (`08-review-tool.md`).
 
+New drafts can be repaired the same way before `merge` (QG-16): `revise` then `apply` on a drafting run moves each revised draft to `drafts/revised-*.json` and deletes its rating and fact-check. `rate` and `factcheck` then judge the new version, so `merge`'s hard checks still decide. One round only; what still fails is dropped.
+
+## Batch-3 results (2026-10-06, D-25)
+- 34 subcategories that had no questions yet, 127 slots: 124 drafted, 3 skipped.
+- First rating: 43 hard fails, 41 of them `no_giveaway` (descriptions and early hints that name the answer: "clavar los clavos" for the hammerhead, "rellena de queso" → quesadilla, the only option with "Flores" for the Feria de las Flores). 6 facts wrong.
+- One revise round (QG-16) fixed 44 of the 51 flagged drafts. **116 merged** as `batch: "batch-3"`; 8 dropped (7 giveaways, 1 duplicate inside the batch). Two fact-checks came back uncertain (`fact_checked: false`).
+- **Difficulty:** the drafter writes high targets easier than asked and says so (target 10 → mostly 7–9). The batch has 7 questions at 8 and 5 at 9, none at 10: 10 % at 8–10 instead of the 30 % aimed for. The top levels are still short (OQ-17); a small top-up run aimed only at 9–10 may be needed.
+- Usage: 150 Claude calls, about $15 at list price, so roughly $0.13 per merged question.
+- Media candidates not fetched yet (Commons isn't reachable from the cloud session): run `media.py fetch --batch batch-3`.
+
 ## Still open
 - Target total pool size (OQ-17). It decides how much to generate and how strict the filter is.
 - Accepted alternative answers aren't needed for multiple choice, but the wording of the options must stay unambiguous.
@@ -141,4 +151,6 @@ Existing questions (the first 120, or `needs_work` questions after a review) go 
 - [x] QG-11 Pilot: gamemaster reviews all pilot questions; set the quality threshold and decide on scaling. *2026-10-06: no score threshold, prompts tuned (D-16); scaling worth it, size open (OQ-17).*
 - [x] QG-13 Revise existing questions (generalised rework, see "Revising pool questions"): `import`, `revise`, `apply`. *2026-10-06: first 120 → batch `first-120`: 119 rated and fact-checked (118 confirmed), 60 revised, 2 proposed drops, 57 unchanged; ~$6 at list price for both revise attempts.*
 - [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
+- [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and gamemaster review still to do.*
+- [x] QG-16 `revise`/`apply` for new drafts before `merge`. *2026-10-06, `qgen.py` `apply_to_drafts`.*
 - [ ] QG-12 Build a review page (approve/reject by keyboard, shows the question as on the TV); possibly the first piece of the Svelte client. *Planned in `08-review-tool.md`.*

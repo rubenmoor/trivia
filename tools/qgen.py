@@ -11,6 +11,9 @@ step skips what is already done, so a run can be resumed.
     python3 tools/qgen.py factcheck --run pilot
     python3 tools/qgen.py dedupe    --run pilot
     python3 tools/qgen.py merge     --run pilot --min-score 0
+    # optional, before merge: repair hard fails, then judge the new versions
+    python3 tools/qgen.py revise    --run pilot && python3 tools/qgen.py apply --run pilot
+    python3 tools/qgen.py rate      --run pilot && python3 tools/qgen.py factcheck --run pilot
     python3 tools/qgen.py report    [--run pilot]
     python3 tools/qgen.py validate
 
@@ -507,13 +510,13 @@ def cmd_revise(args):
 def cmd_apply(args):
     d = run_dir(args)
     cfg = load_json(d / "run.json") or {}
-    if cfg.get("source") != "pool":
-        sys.exit("apply is for imported pool questions; use merge for new drafts.")
-    ratings, checks = collect(d)
     revisions = {}
     for f in (d / "revisions").glob("*.json"):
         revisions.update(load_json(f))
     applied = set(load_json(d / "applied.json", []))
+    if cfg.get("source") != "pool":
+        return apply_to_drafts(d, revisions, applied)
+    ratings, checks = collect(d)
     data = load_json(POOL)
     today = datetime.date.today().isoformat()
     counts = {"keep": 0, "revise": 0, "drop": 0, "unchanged": 0, "malformed": 0}
@@ -573,6 +576,52 @@ def cmd_apply(args):
     save_json(d / "applied.json", sorted(applied))
     print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
           + f". Next: python3 tools/media.py fetch --batch {cfg['batch']}")
+
+
+def apply_to_drafts(d, revisions, applied):
+    """New drafts (not yet merged): revised questions move to a new draft file and lose their
+    rating and fact-check, so `rate` and `factcheck` judge the new version before `merge`.
+    Kept and dropped ones stay as they are; merge's hard checks still decide."""
+    moved, counts = [], {"keep": 0, "revise": 0, "drop": 0, "malformed": 0}
+    for name, qs in list(drafts(d)):
+        rest = []
+        for q in qs:
+            rev = revisions.get(q["tmp_id"])
+            if q["tmp_id"] in applied or not rev or rev["action"] != "revise":
+                if rev and q["tmp_id"] not in applied:
+                    counts[rev["action"]] += 1
+                    applied.add(q["tmp_id"])
+                rest.append(q)
+                continue
+            new = rev["question"]
+            if check_question_shape(new):
+                print(f"  {q['tmp_id']}: revision malformed ({'; '.join(check_question_shape(new))}), kept old")
+                counts["malformed"] += 1
+                rest.append(q)
+                continue
+            keys = ["difficulty", "description", "question", "answer", "wrong_answers", "hints", "fun_fact",
+                    "needs_media", "background_query"]
+            moved.append({**q, **{k: new[k] for k in keys if k in new},
+                          "media": {**new["media"], "note": new["media"]["note"] or None},
+                          "needs_fact_check": True, "revision_reason": rev["reason"]})
+            counts["revise"] += 1
+            applied.add(q["tmp_id"])
+        if len(rest) != len(qs):
+            f = d / "drafts" / f"{name}.json"
+            save_json(f, {**load_json(f), "questions": rest})
+    gone = {q["tmp_id"] for q in moved}
+    for sub in ("ratings", "factchecks"):
+        for f in (d / sub).glob("*.json"):
+            data = load_json(f)
+            if gone & data.keys():
+                save_json(f, {k: v for k, v in data.items() if k not in gone})
+    if moved:
+        n = len(list((d / "drafts").glob("revised-*.json"))) + 1
+        for i in range(0, len(moved), 10):
+            save_json(d / "drafts" / f"revised-{n:02d}-{i // 10 + 1}.json", {"questions": moved[i:i + 10], "skipped": []})
+    save_json(d / "applied.json", sorted(applied))
+    print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
+          + ". Next: rate and factcheck (revised drafts only), then merge")
 
 
 def count(items, key):
