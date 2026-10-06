@@ -161,3 +161,17 @@ Template:
 - Decision: The screens are Start, Level (the stack), Select (4 cards), Question, Correct, Wrong and Victory, with an admin overlay on `Esc` over every screen. Every state change uses one transition routine: music fades out, a sound effect plays, the screen fades to black, then fades back in, and the music returns. Suspenseful music loops at low volume and is off while question media plays. Locking in an answer moves a big padlock away to reveal «Respuesta final». A correct answer gets a fanfare and one of several canvas fireworks overlays. A wrong answer gets a sad sound, a dark animation, a consolation message and «Volver al inicio». Sound is required, not optional. Audio uses the Web Audio API and fireworks use a plain canvas, with no new dependencies.
 - Consequences: The first click on Start unlocks audio and autoplay. Sound assets ship with the client (OQ-20). UI-5 is replaced by UI-7..UI-14.
 - Supersedes / related: D-8, D-15; GF-3, UI-*, GM-2
+
+## D-22: UI details — unlocking, three music intensities, difficulty ranges, the tower
+- Date: 2026-10-06
+- Context: The gamemaster answered OQ-20..OQ-24 from the first UI plan (D-21) and added the music intensities.
+- Decision:
+  - All audio that is part of the UI (music, effects) is committed to the repo, with `CREDITS.md`. Question media stays a gitignored cache (D-17).
+  - A locked-in answer can be unlocked before the final answer. This plays the lock-in animation in reverse (the padlock goes back in front of «Respuesta final»), and afterwards no answer is locked in.
+  - After a wrong final answer, the correct answer is revealed.
+  - Question difficulty (1–10) is a rating, not a level. Each of the 12 levels draws from a difficulty range: 1 · 2–3 · 3–5 · 4–6 · 4–6 · 4–6 · 5–7 · 6–8 · 6–9 · 7–10 · 8–10 · 9–10.
+  - Every level offers exactly 4 questions; there is no fallback to fewer.
+  - Progress is a tower of blocks that gets narrower towards the top.
+  - Three music loops: `normal` (Start, Level, Select), `question` (more intense, Question screen) and `submitted` (most intense, from the final answer until the reveal). The wait before the reveal grows with the level (3 s at level 1 to 12 s at level 12, to be tuned), and at the reveal, the music turns straight into the fanfare/jingle or the sad sting.
+- Consequences: The drum-roll is replaced by the `submitted` track and the level-dependent wait. A new game needs a supply check that all 12 levels can offer 4 questions (GF-5). The pool needs 48 unburned questions per game, spread over the ranges (OQ-17).
+- Supersedes / related: D-20, D-21; OQ-20..OQ-24; GF-2, GF-5, UI-3, UI-8, UI-12

@@ -12,14 +12,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 
 ### Added 2026-10-06
 - **OQ-15** How are hints used in play? Free, limited per game, or do they cost something?
-- **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`).
-
-### UI & sound (added 2026-10-06, `04-ui-tv-display.md`)
-- **OQ-20** Are music and sound effects committed to the repo (small, CC0/CC BY, with `CREDITS.md`), unlike question media (D-17)? *Proposal: yes.*
-- **OQ-21** Can the players change a locked-in answer before they press «Respuesta final»? *Proposal: yes; tapping another answer re-locks.*
-- **OQ-22** After a wrong answer, is the correct answer (and `fun_fact`) shown before the consolation message? *Proposal: yes.*
-- **OQ-23** Level → difficulty mapping: is `round(1 + (level − 1) × 9 / 11)` right, or should the curve be gentler early on? (`03-game-flow.md`)
-- **OQ-24** Stack theme: tower of blocks, layer cake, pyramid, or something else? (UI-1)
+- **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`). *Input from D-22: every level offers 4 questions from its difficulty range, so a game needs 48 unburned questions to show and burns 12 (`03-game-flow.md`).*
 
 ### Tech & setup
 - **OQ-11** Which device drives the TV (laptop via HDMI, smart-TV browser, Raspberry Pi, Chromecast)?
@@ -27,6 +20,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-13** Does the gamemaster want a separate device that shows the answers?
 
 ## Resolved
+- **OQ-20** UI audio (music and effects) is committed; **OQ-21** players can unlock a locked answer, and then nothing is locked; **OQ-22** the correct answer is shown after a wrong one; **OQ-23** level → difficulty ranges; **OQ-24** tower of blocks, narrower towards the top (D-22).
 - **OQ-1** 12 in a row; **OQ-2** a wrong answer ends the game; **OQ-3** difficulty rises from level 1 (easiest) to 12 (D-20).
 - **OQ-16** Media sources → Wikimedia Commons only; no songs or film clips (D-13).
 - **OQ-18** Feedback is its own decision: salvageable but needs changes → `needs_work` (D-11).
