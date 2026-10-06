@@ -5,9 +5,6 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 ## Open
 
 ### Game rules
-- **OQ-1** Must the family answer 12 in a row, or reach 12 correct answers before some limit (lives or wrong answers)?
-- **OQ-2** What happens on a wrong answer: game over, lose a life, or a point for the gamemaster?
-- **OQ-3** Does difficulty increase along the 12 steps (Millionaire-style ladder)?
 - **OQ-4** Jokers or lifelines? A timer per question?
 
 ### Content
@@ -15,7 +12,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 
 ### Added 2026-10-06
 - **OQ-15** How are hints used in play? Free, limited per game, or do they cost something?
-- **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`).
+- **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`). *Input from D-22: every level offers 4 questions from its difficulty range, so a game needs 48 unburned questions to show and burns 12 (`03-game-flow.md`).*
 
 ### Tech & setup
 - **OQ-11** Which device drives the TV (laptop via HDMI, smart-TV browser, Raspberry Pi, Chromecast)?
@@ -23,6 +20,8 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-13** Does the gamemaster want a separate device that shows the answers?
 
 ## Resolved
+- **OQ-20** UI audio (music and effects) is committed; **OQ-21** players can unlock a locked answer, and then nothing is locked; **OQ-22** the correct answer is shown after a wrong one; **OQ-23** level → difficulty ranges; **OQ-24** tower of blocks, narrower towards the top (D-22).
+- **OQ-1** 12 in a row; **OQ-2** a wrong answer ends the game; **OQ-3** difficulty rises from level 1 (easiest) to 12 (D-20).
 - **OQ-16** Media sources → Wikimedia Commons only; no songs or film clips (D-13).
 - **OQ-18** Feedback is its own decision: salvageable but needs changes → `needs_work` (D-11).
 - **OQ-19** Reject asks for no reason: it means unsalvageable (D-11).
