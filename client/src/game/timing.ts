@@ -15,6 +15,11 @@ export const ARM_MS = 4000;
 /** A played joker token flies to the centre, then bursts (JK-5); kept short, jokers are unlimited. */
 export const JOKER_FLY_MS = 450;
 export const JOKER_BURST_MS = 250;
+/** Each half of the card flip when Bájale or Cambiazo swaps the question (JK-7). */
+export const FLIP_MS = 320;
+/** Bájale's dial: one step per difficulty, then it stays a moment. */
+export const DIAL_STEP_MS = 280;
+export const DIAL_HOLD_MS = 1600;
 /** A Francotirador hit: the right answer glows this long before the level repeats (JK-8). */
 export const SNIPE_HIT_MS = 2500;
 /** How long the revealed answer stays on screen before the result screen. */

@@ -6,12 +6,14 @@
   import { gameAction } from "../lib/api";
   import type { Game, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
+  import DifficultyDial from "./DifficultyDial.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
   import JokerFlight from "./JokerFlight.svelte";
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
   import { music, sfx } from "./sound.svelte";
+  import { cardFlip, crossfade } from "./swap";
   import { AFTER_REVEAL_MS, ARM_MS, PADLOCK_MS, REVEAL_WAIT_S, SNIPE_HIT_MS, sleep } from "./timing";
 
   export type JokerPlay = { joker: JokerName; purge?: boolean; subcategory?: string; index?: number };
@@ -22,6 +24,7 @@
     playerName,
     paused,
     jokers,
+    swappedBy = null,
     play,
     onplayed,
     onanswered,
@@ -34,6 +37,8 @@
     paused: boolean;
     /** Joker availability from the server, or null. */
     jokers: Jokers | null;
+    /** The joker that just swapped this question in (Bájale, Cambiazo), for the dial and the label. */
+    swappedBy?: JokerEvent | null;
     /** Sends a joker to the server (Game.svelte shows errors); null if it was refused. */
     play: (body: JokerPlay) => Promise<{ game: Game; event: JokerEvent } | null>;
     /** The joker is done on screen: Game.svelte takes the new game (and changes screen if needed). */
@@ -280,7 +285,7 @@
 </script>
 
 <div class="question-screen" class:dark={submitted && !revealed}>
-  <div class="backdrop">
+  <div class="backdrop" in:crossfade|global out:crossfade|global>
     {#if media.type === "video" && media.file_url}
       <!-- svelte-ignore a11y_media_has_caption -->
       <video bind:this={player} src={src(media.file_url)} autoplay onended={mediaEnded} onerror={() => (mediaFailed = true)}></video>
@@ -297,8 +302,14 @@
     <Hud {level} player={playerName} />
   </div>
 
-  <header class="card glass-strong" class:long>
-    {#if question.swapped_to}<p class="topic label">Tema: {question.swapped_to}</p>{/if}
+  {#if swappedBy?.joker === "easier"}
+    <div class="dial-spot"><DifficultyDial from={swappedBy.from} to={swappedBy.to} /></div>
+  {/if}
+
+  <header class="card glass-strong" class:long in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
+    {#if question.swapped_to}
+      <p class="topic label" class:fresh={swappedBy?.joker === "category"}>Tema: {question.swapped_to}</p>
+    {/if}
     <h1>{question.question}</h1>
     {#if media.type !== "image"}
       <button class="replay" onclick={replay}>
@@ -307,7 +318,7 @@
     {/if}
   </header>
 
-  <div class="middle">
+  <div class="middle" out:crossfade|global>
     {#if question.hints.length}
       <div class="notes">
         {#each question.hints as hint, i (i)}
@@ -374,7 +385,7 @@
     <p class="aim-hint hit glass-strong">¡Le dieron a la correcta! Este nivel se repite.</p>
   {/if}
 
-  <footer>
+  <footer in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
     <div class="answers">
       {#each question.answers as answer, i (i)}
         <button
@@ -508,6 +519,21 @@
   .topic {
     margin: 0 0 calc(0.3 * var(--u));
     color: var(--sky);
+  }
+  .topic.fresh {
+    animation: topic-pop 0.7s 0.65s var(--spring) backwards;
+  }
+  @keyframes topic-pop {
+    from {
+      opacity: 0;
+      transform: scale(2.2);
+    }
+  }
+  .dial-spot {
+    position: absolute;
+    top: var(--safe-y);
+    right: var(--safe-x);
+    z-index: 2;
   }
   .notes {
     display: flex;

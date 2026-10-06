@@ -16,8 +16,9 @@
   import Question, { type JokerPlay } from "./Question.svelte";
   import { music, sfx, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
+  import { swap } from "./swap";
   import "./theme.css";
-  import { FADE_MS, GREETING_MS, PICK_MS, sleep } from "./timing";
+  import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
   type Screen = "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
@@ -38,6 +39,8 @@
   let previous = $state<Screen | null>(null);
   /** The card just picked on Select (it pulses, the others slide off). */
   let picked = $state<number | null>(null);
+  /** The joker that swapped the question on screen in place (Bájale, Cambiazo), for its flip and dial. */
+  let swappedBy = $state<JokerEvent | null>(null);
   let game = $state<Game | null>(null);
   let supply = $state<Supply | null>(null);
   let error = $state<string | null>(null);
@@ -90,6 +93,7 @@
     previous = screen;
     screen = next;
     picked = null;
+    swappedBy = null;
     // PLACEHOLDER(UI-7): no preloading of the next screen's media before fading in.
     black = false;
     await sleep(FADE_MS);
@@ -126,6 +130,13 @@
 
   /** The joker is done on the Question screen: Paso goes back to Select, a Francotirador hit to Level. */
   async function jokerPlayed(next: Game, event: JokerEvent) {
+    if (event.joker === "easier" || event.joker === "category") {
+      // The card flip (JK-7): the transitions in Question.svelte only run while this is set.
+      swap.active = true;
+      swappedBy = event;
+      sfx(event.joker === "easier" ? "silbato que baja" : "swoosh que sube");
+      setTimeout(() => (swap.active = false), FLIP_MS * 2 + 100);
+    }
     game = next;
     if (event.joker === "skip") await go("select", "papel");
     else if (event.joker === "snipe" && event.outcome === "hit") await go("level", "rebobinar");
@@ -352,6 +363,7 @@
         playerName={game.player}
         paused={overlayOpen}
         jokers={game.jokers}
+        {swappedBy}
         play={playJokerAction}
         onplayed={jokerPlayed}
         onanswered={answered}
