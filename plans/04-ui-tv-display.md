@@ -153,12 +153,13 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 | Track | Plays during | Character |
 |---|---|---|
 | `normal` | Start, Level, Select | Calm but suspenseful: low pads, a soft pulse |
-| `question` | Question screen, from the fade-in until submitting | More intense: faster pulse, ticking, strings |
-| `submitted` | From «Respuesta final» until the reveal | Most intense: heartbeat or timpani rolls, rising pitch, at its peak at the reveal |
+| `question` | Question screen, from the fade-in while no answer is locked in | More intense: faster pulse, ticking, strings |
+| `submitted` | While an answer is locked in (gamemaster feedback, 2026-10-06) | Most intense: heartbeat or timpani rolls, rising pitch |
+| `roll` | From «Respuesta final» until the reveal | A snare drum roll that builds up to the reveal |
 
 - **Selecting a question** goes through the normal transition: `normal` fades out, then `question` fades in on the Question screen (after the question media, if any).
-- **Submitting** is no screen change, so it is a quick crossfade (~300 ms) from `question` to `submitted`, with a short "hit" effect on top.
-- **The reveal** is where `submitted` turns into the result: a quick fade-out (~150 ms) of `submitted` overlapped with the start of the fanfare/jingle (right) or the sad sting (wrong), so the music turns into the result rather than stopping. The wait (table above) can stretch `submitted` past its loop length; it simply loops.
+- **Locking in** an answer cuts sharply (~80 ms) from `question` to `submitted`; unlocking cuts back. **Submitting** cuts to the drum roll `roll`, with a short "hit" effect on top.
+- **The reveal** is where the roll turns into the result: a quick fade-out (~150 ms) of `roll` overlapped with the start of the fanfare/jingle (right) or the sad sting (wrong), so the music turns into the result rather than stopping. The wait (table above) can stretch the roll; it keeps rolling at full strength.
 - **After Correct,** `normal` comes back with the transition to the Level screen.
 
 - One shared Web Audio `AudioContext` (no library). Each channel has a gain node, so fades are `linearRampToValueAtTime`. Effects are decoded once into `AudioBuffer`s at startup, so they play instantly. Each music track loops through `AudioBufferSourceNode.loop` for a gapless loop. The three tracks are decoded at startup too.

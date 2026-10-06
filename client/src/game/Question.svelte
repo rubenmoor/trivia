@@ -13,7 +13,7 @@
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
   import Shredder from "./Shredder.svelte";
-  import { duck, mediaVolume, music, sfx } from "./sound.svelte";
+  import { duck, mediaVolume, music, sfx, sound } from "./sound.svelte";
   import { cardFlip, crossfade } from "./swap";
   import {
     AFTER_REVEAL_MS,
@@ -129,7 +129,13 @@
   });
 
   function mediaEnded() {
-    if (!submitted) music("question");
+    if (!submitted) music(locked !== null ? "submitted" : "question");
+  }
+
+  /** The music follows the lock (gamemaster feedback): locked in = the intense loop, unlocked =
+   * back to the question loop. While the question's own media plays, the music stays off. */
+  function lockMusic() {
+    if (sound.music === "question" || sound.music === "submitted") music(locked !== null ? "submitted" : "question");
   }
 
   function tap(i: number) {
@@ -140,6 +146,7 @@
     if (locked !== null) return unlock();
     locked = i;
     sfx("candado: clunk");
+    lockMusic();
     // The big padlock shakes for a suspense beat, opens and slides away (UI-12, CSS below).
     padlockTimer = setTimeout(() => {
       ready = true;
@@ -153,6 +160,7 @@
     locked = null;
     ready = false;
     sfx("candado se cierra");
+    lockMusic();
   }
 
   /** Waits ms, but the clock stops while the overlay is open. */
@@ -168,7 +176,7 @@
     submitted = true;
     error = null;
     player?.pause();
-    music("submitted");
+    music("roll"); // the drum roll until the reveal (gamemaster feedback)
     sfx("golpe: respuesta final");
     try {
       const [game] = await Promise.all([gameAction("answer", { index: locked }), wait(REVEAL_WAIT_S[level - 1] * 1000)]);
@@ -180,7 +188,7 @@
       onanswered(game);
     } catch (e) {
       submitted = false;
-      music("question");
+      music(locked !== null ? "submitted" : "question");
       error = e instanceof Error ? e.message : String(e);
     }
   }

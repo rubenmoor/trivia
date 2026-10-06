@@ -4,7 +4,9 @@
 // music loops are generated (same key and tempo family, rising intensity) and each effect name
 // maps to a small recipe below. When files arrive they can replace the recipes one by one.
 
-export type Track = "normal" | "question" | "submitted";
+/** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
+ * roll: the drum roll from «Respuesta final» until the reveal (04, "Music"). */
+export type Track = "normal" | "question" | "submitted" | "roll";
 
 export type Volumes = { music: number; effects: number; media: number; muted: boolean };
 
@@ -84,15 +86,17 @@ type Loop = { gain: GainNode; timer: ReturnType<typeof setInterval>; stop: () =>
 let current: Loop | null = null;
 
 /** Switch the music loop; null = silence. Screen changes fade out and in (04, "Transitions");
- * question → submitted is a quick crossfade. */
+ * on the Question screen the changes are sharp cuts: locking in, unlocking, the drum roll, the
+ * reveal (gamemaster feedback: the music has to jump when an answer is clicked). */
 export function music(track: Track | null) {
   if (track === sound.music) return;
   const from = sound.music;
   sound.music = track;
   if (!ctx) return;
-  const quick = from === "question" && track === "submitted";
-  fadeOut(quick ? 0.3 : 0.6);
-  if (track) startTrack(track, quick ? 0.3 : 0.8);
+  const inQuestion = (t: Track | null) => t === "question" || t === "submitted" || t === "roll";
+  const sharp = inQuestion(from) && (inQuestion(track) || track === null);
+  fadeOut(sharp ? (from === "roll" ? 0.15 : 0.08) : 0.6);
+  if (track) startTrack(track, sharp ? 0.05 : 0.8);
 }
 
 function fadeOut(seconds: number) {
@@ -113,7 +117,10 @@ const CHORDS = [
   [55, 60, 64],
   [52, 56, 59],
 ];
-const TEMPO: Record<Track, number> = { normal: 76, question: 96, submitted: 120 };
+const TEMPO: Record<Track, number> = { normal: 76, question: 96, submitted: 120, roll: 120 };
+/** The drum roll: hits per second, and how long it takes to build to full strength. */
+const ROLL_HZ = 22;
+const ROLL_BUILD_S = 6;
 const hz = (midi: number) => 440 * 2 ** ((midi - 69) / 12);
 
 function startTrack(track: Track, fadeIn: number) {
@@ -132,6 +139,37 @@ function startTrack(track: Track, fadeIn: number) {
     n.onended = () => voices.delete(n);
   };
   // A lookahead scheduler: notes are placed slightly ahead of time, so the loop never stutters.
+  if (track === "roll") {
+    // Crescendo from soft to full over ROLL_BUILD_S, then keep rolling at full strength.
+    const swell = c.createGain();
+    swell.gain.setValueAtTime(0.3, c.currentTime);
+    swell.gain.linearRampToValueAtTime(1, c.currentTime + ROLL_BUILD_S);
+    swell.connect(gain);
+    const rumble = c.createOscillator();
+    rumble.frequency.value = hz(33);
+    const rg = c.createGain();
+    rg.gain.value = 0.12;
+    rumble.connect(rg).connect(swell);
+    rumble.start();
+    keep(rumble);
+    let i = 0;
+    const timer = setInterval(() => {
+      while (next < c.currentTime + 0.2) {
+        snare(c, swell, next, 0.5 + (i++ % 2) * 0.12 + Math.random() * 0.1, keep);
+        next += 1 / ROLL_HZ;
+      }
+    }, 40);
+    current = {
+      gain,
+      timer,
+      stop: () => {
+        clearInterval(timer);
+        voices.forEach((v) => v.stop());
+        gain.disconnect();
+      },
+    };
+    return;
+  }
   const timer = setInterval(() => {
     while (next < c.currentTime + 0.2) {
       const bar = Math.floor(step / 8) % 4;
@@ -215,6 +253,31 @@ function tick(c: AudioContext, out: AudioNode, t: number, level: number, keep: K
   n.connect(f).connect(g).connect(out);
   n.start(t, Math.random() * 0.5, 0.05);
   keep(n);
+}
+
+function snare(c: AudioContext, out: AudioNode, t: number, level: number, keep: Keep) {
+  const n = c.createBufferSource();
+  n.buffer = noiseBuffer;
+  const f = c.createBiquadFilter();
+  f.type = "bandpass";
+  f.frequency.value = 2400 + Math.random() * 600;
+  f.Q.value = 0.9;
+  const g = c.createGain();
+  g.gain.setValueAtTime(level * 0.35, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + 0.07);
+  n.connect(f).connect(g).connect(out);
+  n.start(t, Math.random() * 0.8, 0.08);
+  keep(n);
+  const body = c.createOscillator();
+  body.frequency.setValueAtTime(210, t);
+  body.frequency.exponentialRampToValueAtTime(150, t + 0.04);
+  const bg = c.createGain();
+  bg.gain.setValueAtTime(level * 0.12, t);
+  bg.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+  body.connect(bg).connect(out);
+  body.start(t);
+  body.stop(t + 0.06);
+  keep(body);
 }
 
 function thump(c: AudioContext, out: AudioNode, t: number, level: number, keep: Keep) {
