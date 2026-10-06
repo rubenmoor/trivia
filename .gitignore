@@ -1,0 +1,10 @@
+client/node_modules/
+client/dist/
+work/
+*.tmp
+
+# Media cache: files are downloaded from the URLs in data/questions.json (D-17).
+media/
+__pycache__/
+.direnv/
+result

@@ -1,0 +1,192 @@
+{
+  "categories": [
+    {"slug": "colombia", "name": "Colombia", "subcategories": [
+      "Regiones de Colombia",
+      "Ciudades de Colombia",
+      "Símbolos patrios de Colombia",
+      "Parques naturales de Colombia",
+      "Ríos de Colombia",
+      "Colombianos famosos"
+    ]},
+    {"slug": "fiestas-tradiciones", "name": "Fiestas y tradiciones", "subcategories": [
+      "Fiestas colombianas",
+      "Tradiciones colombianas",
+      "Carnaval de Barranquilla",
+      "Feria de las Flores",
+      "Navidad",
+      "Celebraciones del mundo"
+    ]},
+    {"slug": "comida-bebida", "name": "Comida y bebida", "subcategories": [
+      "Platos típicos colombianos",
+      "Dulces colombianos",
+      "Postres colombianos",
+      "Bebidas colombianas",
+      "Frutas exóticas de Colombia",
+      "Verduras",
+      "Comida italiana",
+      "Comida mexicana",
+      "Comida japonesa",
+      "Comida rápida"
+    ]},
+    {"slug": "geografia-mundo", "name": "Geografía del mundo", "subcategories": [
+      "Continentes",
+      "Países del mundo",
+      "Capitales del mundo",
+      "Banderas del mundo",
+      "Ríos del mundo",
+      "Montañas del mundo",
+      "Desiertos",
+      "Islas"
+    ]},
+    {"slug": "planeta-tierra", "name": "Planeta Tierra", "subcategories": [
+      "Planeta Tierra",
+      "Mar",
+      "Océanos",
+      "Clima",
+      "Fenómenos naturales",
+      "Volcanes",
+      "Terremotos",
+      "Récords de la naturaleza"
+    ]},
+    {"slug": "plantas-medio-ambiente", "name": "Plantas y medio ambiente", "subcategories": [
+      "Plantas",
+      "Árboles",
+      "Medio ambiente",
+      "Reciclaje"
+    ]},
+    {"slug": "amazonas", "name": "Amazonas", "subcategories": [
+      "Animales del Amazonas",
+      "Plantas del Amazonas",
+      "Pueblos indígenas del Amazonas"
+    ]},
+    {"slug": "animales", "name": "Animales", "subcategories": [
+      "Mamíferos",
+      "Aves",
+      "Reptiles",
+      "Anfibios",
+      "Peces",
+      "Insectos",
+      "Bichos raros",
+      "Animales de Colombia",
+      "Récords de animales"
+    ]},
+    {"slug": "mascotas-granja", "name": "Mascotas y granja", "subcategories": [
+      "Animales de la granja",
+      "Perros",
+      "Gatos",
+      "Mascotas raras"
+    ]},
+    {"slug": "ciencia-matematicas", "name": "Ciencia y matemáticas", "subcategories": [
+      "Ciencia",
+      "Matemáticas",
+      "Números",
+      "Formas"
+    ]},
+    {"slug": "cuerpo-humano", "name": "Cuerpo humano", "subcategories": [
+      "Cuerpo humano",
+      "Cosas raras del cuerpo humano"
+    ]},
+    {"slug": "espacio", "name": "Espacio", "subcategories": [
+      "Espacio"
+    ]},
+    {"slug": "inventos-tecnologia", "name": "Inventos y tecnología", "subcategories": [
+      "Inventos",
+      "Inventores famosos",
+      "Inventos por accidente",
+      "Tecnología",
+      "Robots",
+      "Inteligencia artificial",
+      "Internet",
+      "Redes sociales",
+      "YouTubers"
+    ]},
+    {"slug": "transporte", "name": "Transporte", "subcategories": [
+      "Carros",
+      "Aviones",
+      "Trenes",
+      "Barcos"
+    ]},
+    {"slug": "historia", "name": "Historia", "subcategories": [
+      "Historia",
+      "Prehistoria",
+      "Dinosaurios",
+      "Faraones",
+      "Pirámides",
+      "Momias",
+      "Caballeros",
+      "Castillos",
+      "Piratas"
+    ]},
+    {"slug": "mitos-leyendas", "name": "Mitos y leyendas", "subcategories": [
+      "Mitos colombianos",
+      "Leyendas colombianas",
+      "Dioses griegos",
+      "Héroes griegos",
+      "Mitología romana",
+      "Mitología nórdica"
+    ]},
+    {"slug": "musica", "name": "Música", "subcategories": [
+      "Instrumentos musicales",
+      "Ritmos colombianos",
+      "Cantantes colombianos",
+      "Música clásica",
+      "Música del mundo"
+    ]},
+    {"slug": "cine-series-superheroes", "name": "Cine, series y superhéroes", "subcategories": [
+      "Cine",
+      "Series",
+      "Películas de Disney",
+      "Películas de Pixar",
+      "Anime",
+      "Caricaturas",
+      "Superhéroes de Marvel",
+      "Superhéroes de DC",
+      "Villanos famosos"
+    ]},
+    {"slug": "videojuegos", "name": "Videojuegos", "subcategories": [
+      "Videojuegos",
+      "Videojuegos clásicos",
+      "Personajes de videojuegos"
+    ]},
+    {"slug": "futbol", "name": "Fútbol", "subcategories": [
+      "Fútbol",
+      "Selección Colombia",
+      "Clubes de fútbol colombianos",
+      "Mundiales de fútbol"
+    ]},
+    {"slug": "deportes", "name": "Deportes", "subcategories": [
+      "Baloncesto",
+      "Tenis",
+      "Natación",
+      "Atletismo",
+      "Ciclismo colombiano",
+      "Deportes extremos",
+      "Deportes tradicionales colombianos",
+      "Juegos Olímpicos de verano",
+      "Juegos Olímpicos de invierno",
+      "Medallistas olímpicos colombianos"
+    ]},
+    {"slug": "arte-literatura", "name": "Arte y literatura", "subcategories": [
+      "Arte",
+      "Museos",
+      "Colores",
+      "Literatura",
+      "Cuentos infantiles",
+      "Libros infantiles"
+    ]},
+    {"slug": "idiomas-palabras", "name": "Idiomas y palabras", "subcategories": [
+      "Idioma",
+      "Idiomas del mundo",
+      "Palabras colombianas",
+      "Dichos colombianos"
+    ]},
+    {"slug": "juegos-curiosidades", "name": "Juegos y curiosidades", "subcategories": [
+      "Juguetes",
+      "Juegos de mesa",
+      "Magia",
+      "Trucos",
+      "Ilusiones ópticas",
+      "Récords Guinness"
+    ]}
+  ]
+}

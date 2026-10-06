@@ -1,0 +1,59 @@
+/* Shared look of the stats charts (dataviz mark specs: thin marks, 4px rounded data end,
+   recessive grid, text in text colours, never in the bar colour). */
+.chart-panel {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1rem;
+}
+.chart-panel h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+}
+.chart-panel .sub {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.tooltip {
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
+  max-width: 22rem;
+  background: #0d0e13;
+  border: 1px solid #3a3d4a;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.4);
+}
+.tooltip strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.tooltip .muted {
+  color: var(--muted);
+}
+.table-view {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+}
+.table-view summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+.table-view table {
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.table-view th,
+.table-view td {
+  text-align: left;
+  padding: 0.25rem 0.75rem 0.25rem 0;
+  border-bottom: 1px solid #2f323d;
+}
+.table-view td.num,
+.table-view th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

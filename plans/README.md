@@ -1,0 +1,51 @@
+# Plans — Index
+
+This directory holds the plan for the family trivia party game. These files are the source of truth for **what** gets built and **why**. Code follows the plans. When the code and a plan disagree, update the plan first.
+
+## Project in one paragraph
+
+A trivia/Q&A party game that runs locally and offline; the code and question pool are public, media files are a local cache (D-17). It is shown on a living-room TV. The family plays as one team against the gamemaster (the author). They have to answer **12 questions to win**. Every question has a background image related to its content. A reusable question pool lets the game be played several times, and a question is marked **burned** once it has been asked.
+
+## File hierarchy
+
+| File | Purpose | Status |
+|------|---------|--------|
+| [`00-vision.md`](00-vision.md) | Goals, constraints, non-goals, success criteria | stub |
+| [`01-architecture.md`](01-architecture.md) | Tech stack, components, data flow | stub |
+| [`02-question-pool.md`](02-question-pool.md) | Question schema, pool storage, burned tracking | stub |
+| [`03-game-flow.md`](03-game-flow.md) | Rules, 12-question progression, win/lose states | stub |
+| [`04-ui-tv-display.md`](04-ui-tv-display.md) | Visual design for the TV screen | stub |
+| [`05-gamemaster-controls.md`](05-gamemaster-controls.md) | How the gamemaster drives the game | stub |
+| [`06-images.md`](06-images.md) | Media sourcing (Wikimedia Commons), caching, credits, picking in the review tool | draft |
+| [`07-question-generation.md`](07-question-generation.md) | Drafting, rating, reviewing and accepting new questions; batch generation strategy | draft |
+| [`08-review-tool.md`](08-review-tool.md) | Local web page to approve, reject or give feedback on questions | draft |
+| [`backlog.md`](backlog.md) | Additional tasks found along the way | living |
+| [`open-questions.md`](open-questions.md) | Unresolved questions and their answers | living |
+| [`decisions.md`](decisions.md) | Decision log (lightweight ADRs) | living |
+
+Order of work: **02 (question pool) first, together with 07 (question generation)**, then 03 → 01 → 06 → 04 → 05.
+
+## Conventions
+
+### Task status markers
+
+Every plan file ends with a `## Tasks` section that uses these markers:
+
+- `[ ]` — todo
+- `[~]` — in progress
+- `[x]` — **implemented** (add a short note: date, and file or commit reference)
+- `[-]` — dropped (give the reason)
+
+Task IDs are `<file-prefix>-<n>`, for example `QP-3` for question-pool task 3. IDs are never reused, so other files can cite them.
+
+### File status (header line in each file)
+
+`stub` → `draft` → `agreed` → `implemented`
+
+### Rules for LLM-assisted work
+
+1. Read [`../AGENTS.md`](../AGENTS.md) and this index before starting any task.
+2. Work one task ID at a time. Keep changes small and reviewable.
+3. When a new requirement comes up, add it to [`backlog.md`](backlog.md). Don't silently widen the scope.
+4. When something is ambiguous, log it in [`open-questions.md`](open-questions.md) and don't guess. Once it's answered, record the outcome in [`decisions.md`](decisions.md).
+5. After you implement something, tick the task and update the file status.

@@ -1,0 +1,102 @@
+// Mirrors the question schema in plans/02-question-pool.md.
+
+export type Status = "draft" | "approved" | "rejected" | "needs_work";
+export type Decision = Exclude<Status, "draft">;
+
+export interface Media {
+  type: "image" | "audio" | "video";
+  role: "decorative" | "essential";
+  query: string;
+  note: string | null;
+  source_url: string | null;
+  /** Exact URL of the picked file; the server caches it in media/ (D-17). */
+  file_url: string | null;
+  credit: string | null;
+}
+
+/** A Wikimedia Commons file found by tools/media.py (work/media/<id>.json). */
+export interface MediaCandidate {
+  type: Media["type"];
+  title: string;
+  page_url: string;
+  preview_url: string | null;
+  file_url: string;
+  width: number | null;
+  height: number | null;
+  duration: number | null;
+  mime: string;
+  author: string | null;
+  license: string | null;
+  license_url: string | null;
+}
+
+/** Background image for audio questions (D-14). */
+export interface Background {
+  query: string;
+  source_url: string | null;
+  /** Exact URL of the picked file; the server caches it in media/ (D-17). */
+  file_url: string | null;
+  credit: string | null;
+}
+
+/** A broad category from data/categories.json (D-19). */
+export interface Category {
+  slug: string;
+  name: string;
+  subcategories: string[];
+}
+
+export type Slot = "media" | "background";
+
+/** Set by `qgen.py apply` (plans/07-question-generation.md, QG-13). */
+export interface Revision {
+  action: "revise" | "drop";
+  reason: string;
+  /** Old values of the fields that changed. */
+  previous: Record<string, unknown>;
+  revised_on: string;
+}
+
+export interface Quality {
+  correct: number;
+  unambiguous: number;
+  distractors: number;
+  age_fit: number;
+  fun: number;
+  description: number;
+  difficulty_estimate: number;
+  notes: string;
+}
+
+export interface Review {
+  decision: Decision;
+  feedback: string | null;
+  reviewed_on: string;
+}
+
+export interface Question {
+  id: string;
+  status: Status;
+  difficulty: number;
+  description: string;
+  question: string;
+  answer: string;
+  wrong_answers: string[];
+  hints: string[];
+  media: Media;
+  fun_fact: string;
+  /** Its broad category is the one in data/categories.json that lists it (D-19). */
+  subcategory: string;
+  style: string | null;
+  quality: Quality | null;
+  fact_checked: boolean | null;
+  needs_media: boolean | null;
+  batch: string | null;
+  review: Review | null;
+  background: Background | null;
+  difficulty_original?: number | null;
+  revision?: Revision | null;
+  /** Added by the server: null when candidates were never fetched. */
+  media_candidates: MediaCandidate[] | null;
+  background_candidates: MediaCandidate[] | null;
+}
