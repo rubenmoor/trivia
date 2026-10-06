@@ -11,14 +11,13 @@
   import Icon from "./Icon.svelte";
   import JokerTray from "./JokerTray.svelte";
   import Overlay from "./Overlay.svelte";
-  import Placeholder from "./Placeholder.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
   import { music, sfx, unlock, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap";
   import "./theme.css";
-  import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, sleep } from "./timing";
+  import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, TEAR_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
   type Screen = "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
@@ -37,7 +36,7 @@
   let screen = $state<Screen>("start");
   /** The screen before this one: the Level screen drops the new block only after Correct. */
   let previous = $state<Screen | null>(null);
-  /** The card just picked on Select (it pulses, the others slide off). */
+  /** The card just picked on Select (it tears open, the others slide off). */
   let picked = $state<number | null>(null);
   /** The joker that swapped the question on screen in place (Bájale, Cambiazo), for its flip and dial. */
   let swappedBy = $state<JokerEvent | null>(null);
@@ -210,6 +209,7 @@
     if (!game || i >= game.options.length) return;
     sfx("pop: carta elegida");
     picked = i;
+    setTimeout(() => sfx("papel rasgado"), TEAR_MS);
     const [ok] = await Promise.all([act("pick", { index: i }), sleep(PICK_MS)]);
     if (ok) await go("question", "swoosh");
     else picked = null;
@@ -392,14 +392,17 @@
             onclick={() => picked === null && pick(i)}
             disabled={busy}
           >
+            <span class="flap"></span>
             <span class="seal">{i + 1}</span>
+            {#if picked === i}
+              <span class="tear"></span>
+              <span class="letter-slot"><span class="letter">?</span></span>
+            {/if}
             {#if fresh.has(i)}<span class="new-badge">¡Nueva!</span>{/if}
             <span class="description">{option.description}</span>
           </button>
         {/each}
       </div>
-      <!-- PLACEHOLDER(UI-11): no tear-open of the chosen card. -->
-      <Placeholder task="UI-11" label="la carta elegida no se abre todavía" chip />
     </section>
   {:else if screen === "question" && game?.question}
     {#key game.question.id}
@@ -628,6 +631,11 @@
     margin: calc(2 * var(--u)) 0;
   }
   .card {
+    /* The torn edge of the flap, shared by the flap and what it leaves behind */
+    --ragged: polygon(
+      0 0, 100% 0, 100% 88%, 94% 100%, 88% 86%, 81% 98%, 75% 84%, 68% 97%, 62% 87%, 55% 100%, 49% 85%,
+      43% 96%, 37% 84%, 30% 99%, 24% 86%, 18% 97%, 11% 85%, 5% 98%, 0 88%
+    );
     position: relative;
     display: flex;
     flex-direction: column;
@@ -652,18 +660,60 @@
       opacity 0.3s;
     animation: deal 0.6s var(--deal-delay) var(--spring) backwards;
   }
-  /* The envelope flap */
-  .card::before {
+  /* The envelope flap, on a strip of paper with a ragged lower edge that tears off when picked */
+  .flap {
+    position: absolute;
+    inset: 0 0 auto;
+    height: calc(6.6 * var(--u));
+    background: var(--cream);
+    border-radius: calc(0.8 * var(--u)) calc(0.8 * var(--u)) 0 0;
+    clip-path: var(--ragged);
+    z-index: 1;
+  }
+  .flap::before {
     content: "";
     position: absolute;
     inset: 0 0 auto;
     height: calc(6 * var(--u));
     background: linear-gradient(to bottom, #e8dcc0, #efe4cb);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
-    border-radius: calc(0.8 * var(--u)) calc(0.8 * var(--u)) 0 0;
+  }
+  /* What the torn flap leaves behind: the shadowed inside of the envelope, with the same ragged edge */
+  .tear {
+    position: absolute;
+    inset: 0 0 auto;
+    height: calc(6.6 * var(--u));
+    background: linear-gradient(to bottom, #6b5d45, #b9ab8a 70%, #d9cfb6);
+    clip-path: var(--ragged);
+    animation: tear-show 0.15s 0.3s backwards;
+  }
+  /* The letter slides up out of the open envelope; the slot hides it below the card's top edge. */
+  .letter-slot {
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    bottom: calc(100% - 3 * var(--u));
+    height: calc(11 * var(--u));
+    overflow: hidden;
+  }
+  .letter {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: calc(0.4 * var(--u)) calc(0.4 * var(--u)) 0 0;
+    background: repeating-linear-gradient(to bottom, #fffaf0 0 calc(1.6 * var(--u)), #e6dcc6 0 calc(1.7 * var(--u)));
+    color: var(--seal);
+    font-family: var(--font-display);
+    font-size: calc(5 * var(--u));
+    font-weight: 800;
+    box-shadow: 0 0 calc(1 * var(--u)) rgba(0, 0, 0, 0.3);
+    transform: translateY(100%);
+    animation: letter-up 0.4s 0.58s var(--spring) forwards;
   }
   .seal {
     position: absolute;
+    z-index: 2;
     top: calc(3.6 * var(--u));
     left: 50%;
     translate: -50% 0;
@@ -708,7 +758,16 @@
     outline: calc(0.25 * var(--u)) solid var(--sky);
   }
   .card.chosen {
+    z-index: 1;
     animation: chosen 0.5s var(--spring) forwards;
+  }
+  /* Tear-open (UI-11, TEAR_MS): the seal cracks off, then the flap rips away to the upper right. */
+  .card.chosen .seal {
+    animation: seal-crack 0.4s 0.1s ease-in forwards;
+  }
+  .card.chosen .flap {
+    transform-origin: 0 100%;
+    animation: flap-off 0.45s 0.3s ease-in forwards;
   }
   .card.gone {
     animation: gone 0.4s ease-in forwards;
@@ -726,6 +785,34 @@
     to {
       transform: rotate(0deg) scale(1.06);
       box-shadow: 0 0 calc(3 * var(--u)) var(--amber);
+    }
+  }
+  @keyframes seal-crack {
+    30% {
+      transform: scale(1.25) rotate(-12deg);
+    }
+    to {
+      opacity: 0;
+      transform: translate(calc(-6 * var(--u)), calc(-10 * var(--u))) scale(0.9) rotate(-70deg);
+    }
+  }
+  @keyframes flap-off {
+    20% {
+      transform: rotate(-4deg);
+    }
+    to {
+      opacity: 0;
+      transform: translate(calc(14 * var(--u)), calc(-16 * var(--u))) rotate(28deg);
+    }
+  }
+  @keyframes tear-show {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes letter-up {
+    to {
+      transform: translateY(30%);
     }
   }
   @keyframes gone {
