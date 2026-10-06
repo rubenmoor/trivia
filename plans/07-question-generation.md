@@ -57,10 +57,13 @@ Each criterion is scored 1–5:
 A question with **Correct** or **Unambiguous** below 4 is dropped regardless of its other scores.
 
 ### Difficulty target
-More questions in the medium range, levels 4–7 (about ages 10–13), which suits the players best:
-- about **70 %** at levels 4–7;
-- about **15 %** at levels 1–3;
-- about **15 %** at levels 8–10.
+New drafts follow what a game uses (D-25). Each of the 12 levels shows 4 questions from its difficulty range (D-22); spreading those 48 evenly over each range gives the share per difficulty:
+
+| Difficulty | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Per game | 4 | 2 | 3.3 | 5.3 | 6.7 | 7.7 | 4.7 | 4.7 | 5.3 | 4.3 |
+
+That is about **19 %** at 1–3, **51 %** at 4–7 and **30 %** at 8–10. (Before D-25 the target was 15 / 70 / 15, which left the top levels short.)
 
 AI difficulty estimates are guesses. The real calibration comes from game nights: the session log (B-1) records which questions were answered correctly, so levels can be corrected over time.
 

@@ -192,3 +192,10 @@ Template:
 - Decision: A new media role `illustrative`: the image shows something that belongs to the question (its subject, a place or object it mentions, the setting) without showing the answer or ruling options in or out. Unlike decorative images (D-15), illustrative images are shown sharp, without the question-mark overlay. Decorative stays for questions where any related image would give the answer away. The house style prefers illustrative over decorative where it is safe.
 - Consequences: `role` gains `illustrative` in schema, `qgen.py`, `media.py` (same size filter as decorative) and the review tool. The approved first-120 questions get illustrative images where possible (IMG-14), picked by Claude from the thumbnails.
 - Supersedes / related: D-15; IMG-14, B-4
+
+## D-25: Draft difficulties follow the level ranges
+- Date: 2026-10-06
+- Context: The difficulty target (15 % at 1–3, 70 % at 4–7, 15 % at 8–10) predates the level ranges of D-22. A game shows 4 questions per level, and the top three levels draw only from 7–10, 8–10 and 9–10. The pool had 10 non-rejected questions at 9–10, about two games' worth for level 12.
+- Decision: `draft` assigns target difficulties in the proportions a game shows them: each level's 4 questions spread evenly over its range (07, "Difficulty target"). That is about 19 % at 1–3, 51 % at 4–7 and 30 % at 8–10.
+- Consequences: `LEVEL_WEIGHTS` in `qgen.py` changes; runs drafted before this keep their difficulties. The calibration examples still apply, so high targets must be hard for these players, not obscure.
+- Supersedes / related: D-22; 07 "Difficulty target"; OQ-17
