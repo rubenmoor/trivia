@@ -5,7 +5,7 @@ export type Decision = Exclude<Status, "draft">;
 
 export interface Media {
   type: "image" | "audio" | "video";
-  role: "decorative" | "essential";
+  role: "decorative" | "illustrative" | "essential";
   query: string;
   note: string | null;
   source_url: string | null;

@@ -20,12 +20,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Cocora Valley wax palms",
+        "role": "illustrative",
+        "query": "Valle de Cocora",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APaisaje_Valle_del_Cocora.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Paisaje_Valle_del_Cocora.jpg/3840px-Paisaje_Valle_del_Cocora.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Estebanhphoto · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Colombia es uno de los mayores productores de café del mundo, y su café es famoso por ser suave.",
       "subcategory": "Bebidas colombianas",
@@ -60,7 +60,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "Colombian Andes landscape",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AChurch_Heart_of_the_Andes.jpg",
@@ -133,12 +133,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Colombian breakfast table",
+        "role": "illustrative",
+        "query": "arepas grill",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APentagon_Breakfast_meeting%2C_February_1%2C_2007.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Pentagon_Breakfast_meeting%2C_February_1%2C_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Robert D. Ward · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArepas_con_chorizo.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Arepas_con_chorizo.jpg/3840px-Arepas_con_chorizo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "William Neuheisel from DC, US · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "La arepa de huevo es típica de la Costa Caribe: ¡se fríe con un huevo adentro!",
       "subcategory": "Platos típicos colombianos",
@@ -183,12 +183,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Andes mountains clouds",
+        "role": "illustrative",
+        "query": "Colombian flag",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AClouds_surround_the_rugged_peaks_of_the_Andes_mountain_range_%28iss074e0791058%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Clouds_surround_the_rugged_peaks_of_the_Andes_mountain_range_%28iss074e0791058%29.jpg/3840px-Clouds_surround_the_rugged_peaks_of_the_Andes_mountain_range_%28iss074e0791058%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "NASA Johnson Space Center · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombian_flag%2C_Cartagena%2C_Colombia.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Colombian_flag%2C_Cartagena%2C_Colombia.jpg/3840px-Colombian_flag%2C_Cartagena%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Niek van Son · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Bogotá está a unos 2.640 metros sobre el nivel del mar: ¡más cerca de las estrellas!",
       "subcategory": "Ciudades de Colombia",
@@ -249,7 +249,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "páramo frailejones Colombia",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AFrailejones_Sumapaz_P%C3%A1ramo%2CColombia.jpg",
@@ -308,12 +308,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "river boat Colombia sunset",
+        "role": "illustrative",
+        "query": "Magdalena River Colombia",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADrawing%2C_Hudson_Valley%2C_New_York_at_Sunset%2C_1870%E2%80%9380_%28CH_18201819%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Drawing%2C_Hudson_Valley%2C_New_York_at_Sunset%2C_1870%E2%80%9380_%28CH_18201819%29.jpg/3840px-Drawing%2C_Hudson_Valley%2C_New_York_at_Sunset%2C_1870%E2%80%9380_%28CH_18201819%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Frederic Edwin Church · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABridge_over_the_Magdalena_River%2C_Colombia.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bridge_over_the_Magdalena_River%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Mide más de 1.500 kilómetros.",
       "subcategory": "Ríos de Colombia",
@@ -358,12 +358,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "old typewriter",
+        "role": "illustrative",
+        "query": "Nobel Prize medal",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHands_on_an_old_typewriter_closeup.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Hands_on_an_old_typewriter_closeup.jpg/3840px-Hands_on_an_old_typewriter_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANobel_prize_medal_for_medicine%2C_Sweden%2C_1945%2C_to_Sir_Alexander_Fleming_%281881-1955%29_who_discovered_Penicillin._On_display_at_the_National_Museum_of_Scotland.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Nobel_prize_medal_for_medicine%2C_Sweden%2C_1945%2C_to_Sir_Alexander_Fleming_%281881-1955%29_who_discovered_Penicillin._On_display_at_the_National_Museum_of_Scotland.jpg/3840px-Nobel_prize_medal_for_medicine%2C_Sweden%2C_1945%2C_to_Sir_Alexander_Fleming_%281881-1955%29_who_discovered_Penicillin._On_display_at_the_National_Museum_of_Scotland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Osama Shukir Muhammed Amin FRCP(Glasg) · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "A Gabo le encantaban las rosas amarillas: decía que le daban buena suerte.",
       "subcategory": "Colombianos famosos",
@@ -433,12 +433,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "cloud forest Colombia",
+        "role": "illustrative",
+        "query": "silleteros Medellín",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ATropical_Cloud_Forest_and_Mountain_Peak.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Tropical_Cloud_Forest_and_Mountain_Peak.jpg/3840px-Tropical_Cloud_Forest_and_Mountain_Peak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Peter Angritt · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADESFILE_DE_SILLETEROS_-_2014_-_Flickr_-_%5EIv%C3%A1n_Erre_Jota.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/DESFILE_DE_SILLETEROS_-_2014_-_Flickr_-_%5EIv%C3%A1n_Erre_Jota.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "*Iván Erre Jota* from Medellín, Colombia · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Colombia tiene más de 4.000 especies de orquídeas.",
       "subcategory": "Símbolos patrios de Colombia",
@@ -496,12 +496,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "La Candelaria Bogotá colonial street",
+        "role": "illustrative",
+        "query": "Casa del Florero",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABog_La_Candelaria.JPG",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Bog_La_Candelaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Felipe Restrepo Acosta · CC BY-SA 3.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACasa_Florero.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Casa_Florero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Baiji · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "La pelea por el 'florero de Llorente' fue la chispa que encendió la revuelta del 20 de julio.",
       "subcategory": "Historia",
@@ -546,12 +546,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Caño Cristales aerial footage",
-        "note": "Tomas del río de colores; que no aparezca el nombre del río.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACascada_los_Cuarzos_-_Ca%C3%B1o_Cristales_-_La_Macarena.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Cascada_los_Cuarzos_-_Ca%C3%B1o_Cristales_-_La_Macarena.jpg/3840px-Cascada_los_Cuarzos_-_Ca%C3%B1o_Cristales_-_La_Macarena.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Gicaman · CC BY-SA 4.0 · Wikimedia Commons"
+        "role": "illustrative",
+        "query": "Llanos Orientales Meta",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMacarena%2C_Colombia_%2836983758491%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Macarena%2C_Colombia_%2836983758491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Pedro Szekely from Los Angeles, USA · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "El rojo viene de una planta llamada Macarenia clavigera, que crece sobre sus rocas.",
       "subcategory": "Ríos de Colombia",
@@ -596,12 +596,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Andean valley farmland",
+        "role": "illustrative",
+        "query": "Simón Bolívar portrait",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAvon_Valley_Farmland_-_geograph.org.uk_-_5054571.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Avon_Valley_Farmland_-_geograph.org.uk_-_5054571.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "David P Howard · CC BY-SA 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASim%C3%B3n_Bol%C3%ADvar_by_Ricardo_Acevedo_Bernal.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Sim%C3%B3n_Bol%C3%ADvar_by_Ricardo_Acevedo_Bernal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ricardo Acevedo Bernal · Public domain · Wikimedia Commons"
       },
       "fun_fact": "Simón Bolívar dirigió al ejército patriota, que ganó la batalla en unas dos horas.",
       "subcategory": "Historia",
@@ -670,12 +670,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "relief map South America",
+        "role": "illustrative",
+        "query": "Colombia from space",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMap_of_South_America_.._%28NYPL_b15369994-1630436%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Map_of_South_America_.._%28NYPL_b15369994-1630436%29.jpg/3840px-Map_of_South_America_.._%28NYPL_b15369994-1630436%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Scan by NYPL · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGood_Morning_From_the_International_Space_Station.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Good_Morning_From_the_International_Space_Station.jpg/3840px-Good_Morning_From_the_International_Space_Station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Scott Kelly · Public domain · Wikimedia Commons"
       },
       "fun_fact": "El departamento más grande es Amazonas; el más pequeño, San Andrés y Providencia.",
       "subcategory": "Regiones de Colombia",
@@ -735,12 +735,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "lighthouse coast",
+        "role": "illustrative",
+        "query": "glass of water",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse%2C_S%C3%B8r-Tr%C3%B8ndelag%2C_Norway.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse%2C_S%C3%B8r-Tr%C3%B8ndelag%2C_Norway.jpg/3840px-2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse%2C_S%C3%B8r-Tr%C3%B8ndelag%2C_Norway.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Gordon Leggett · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFasting_4-Fasting-a-glass-of-water-on-an-empty-plate.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Fasting_4-Fasting-a-glass-of-water-on-an-empty-plate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Dr Jean Fortunet · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Si toda la sal del mar se secara y se esparciera sobre la tierra, formaría una capa de más de 100 metros de alto.",
       "subcategory": "Mar",
@@ -785,12 +785,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "globe",
+        "role": "illustrative",
+        "query": "Cartagena walled city",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeattle_%28WA%2C_USA%29%2C_P-I_Globe_--_2022_--_1708.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Seattle_%28WA%2C_USA%29%2C_P-I_Globe_--_2022_--_1708.jpg/3840px-Seattle_%28WA%2C_USA%29%2C_P-I_Globe_--_2022_--_1708.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASunset-cartagena-tower-dewired.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Sunset-cartagena-tower-dewired.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Igvir Ramirez · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Colombia es el único país de Suramérica con costas en el océano Pacífico y en el mar Caribe.",
       "subcategory": "Continentes",
@@ -835,7 +835,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "ocean waves aerial",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AOcean_waves_drone_view_of_Palm_Coast_beach.jpg",
@@ -885,12 +885,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "archaeological excavation tools",
+        "role": "illustrative",
+        "query": "Giza pyramids",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoghalmari_archaeological_excavation_site%2C_Dantan%2C_West_Bengal.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Moghalmari_archaeological_excavation_site%2C_Dantan%2C_West_Bengal.jpg/3840px-Moghalmari_archaeological_excavation_site%2C_Dantan%2C_West_Bengal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Paramanu Sarkar · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAll_Gizah_Pyramids.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/3840px-All_Gizah_Pyramids.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ricardo Liberato · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "La Gran Pirámide fue la construcción más alta del mundo durante casi 4.000 años.",
       "subcategory": "Pirámides",
@@ -952,12 +952,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "European café terrace street",
+        "role": "illustrative",
+        "query": "Mont Saint-Michel",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APlace_de_la_Synagogue_-_JeP_-_Terrasse_01.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Place_de_la_Synagogue_-_JeP_-_Terrasse_01.jpg/3840px-Place_de_la_Synagogue_-_JeP_-_Terrasse_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Credits to Mourad Ben Abdallah / Wikimedia Commons · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMont_St_Michel_at_sunrise.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Mont_St_Michel_at_sunrise.jpg/3840px-Mont_St_Michel_at_sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Lynx1211 · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "La Torre Eiffel iba a ser desmontada 20 años después de construida, pero se salvó porque servía de antena de radio.",
       "subcategory": "Capitales del mundo",
@@ -1002,12 +1002,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Amazon rainforest aerial",
+        "role": "illustrative",
+        "query": "Iguazu Falls",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmazon_rainforest_%28Satellite_picture%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Amazon_rainforest_%28Satellite_picture%29.jpg/3840px-Amazon_rainforest_%28Satellite_picture%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Alexander Gerst · CC BY-SA 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A00_1854_Iguaz%C3%BA-Wasserf%C3%A4lle_-_S%C3%BCdamerika.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/00_1854_Iguaz%C3%BA-Wasserf%C3%A4lle_-_S%C3%BCdamerika.jpg/3840px-00_1854_Iguaz%C3%BA-Wasserf%C3%A4lle_-_S%C3%BCdamerika.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "W. Bulach · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Brasil limita con casi todos los países de Suramérica, menos con Chile y Ecuador.",
       "subcategory": "Países del mundo",
@@ -1052,12 +1052,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "snowy mountain peaks",
+        "role": "illustrative",
+        "query": "mountaineers summit snow",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Vihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg/3840px-Vihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "kallerna · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChopicalqui.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Chopicalqui.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Adha65 · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Las montañas más altas de Colombia, los picos Cristóbal Colón y Simón Bolívar, miden unos 5.700 metros.",
       "subcategory": "Montañas del mundo",
@@ -1102,12 +1102,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "world rivers map",
+        "role": "illustrative",
+        "query": "wide river boat",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg/3840px-1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Thomas Kitchin · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWide_range_Matla.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Wide_range_Matla.jpg/3840px-Wide_range_Matla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dr Swapan Kr Dey · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Cerca de una quinta parte de toda el agua dulce que los ríos llevan al mar sale de este río.",
       "subcategory": "Ríos del mundo",
@@ -1175,7 +1175,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "container ship",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AContainer_Ship.jpg",
@@ -1235,12 +1235,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "European old town rooftops",
+        "role": "illustrative",
+        "query": "passport stamps",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AArchitectural_view_of_the_stairs_to_the_rooftop_of_the_Old_dispensary%2C_Stone_Town.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Architectural_view_of_the_stairs_to_the_rooftop_of_the_Old_dispensary%2C_Stone_Town.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Erasmus Kamugisha · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARussian_passport_with_stamps.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Russian_passport_with_stamps.jpg/3840px-Russian_passport_with_stamps.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ChelizTolyattida · CC0 · Wikimedia Commons"
       },
       "fun_fact": "Mide menos de medio kilómetro cuadrado: cabe varias veces en el Parque Simón Bolívar de Bogotá.",
       "subcategory": "Países del mundo",
@@ -1285,7 +1285,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "kangaroo",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AEastern_Grey_Kangaroo_Feeding_edited.jpg",
@@ -1344,12 +1344,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "sailing ship ocean",
+        "role": "illustrative",
+        "query": "ship strait",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdmiralty_Chart_No_5308_The_World_Sailing_Ship_Routes%2C_Published_1946.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Admiralty_Chart_No_5308_The_World_Sailing_Ship_Routes%2C_Published_1946.jpg/3840px-Admiralty_Chart_No_5308_The_World_Sailing_Ship_Routes%2C_Published_1946.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "United Kingdom Hydrographic Office · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMito_Strait_on_Sea_I.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Mito_Strait_on_Sea_I.jpg/3840px-Mito_Strait_on_Sea_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "HenSti · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "En su parte más angosta mide unos 82 km, y en invierno a veces se congela.",
       "subcategory": "Continentes",
@@ -1482,7 +1482,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "spider web dew",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ASpider_web_Luc_Viatour.jpg",
@@ -1531,13 +1531,13 @@
         "Su nombre tiene un color."
       ],
       "media": {
-        "type": "video",
-        "role": "decorative",
-        "query": "underwater ocean light rays",
-        "note": "Agua azul profunda con rayos de luz; sin ballenas a la vista.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AESOcast_150_Light.webm",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/28/ESOcast_150_Light.webm/ESOcast_150_Light.webm.1080p.vp9.webm",
-        "credit": "ESO · CC BY 4.0 · Wikimedia Commons"
+        "type": "image",
+        "role": "illustrative",
+        "query": "underwater sunlight",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmbiance_sous-marine_en_plong%C3%A9e_%28Ifremer_00729-84105_-_37518%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Ambiance_sous-marine_en_plong%C3%A9e_%28Ifremer_00729-84105_-_37518%29.jpg/3840px-Ambiance_sous-marine_en_plong%C3%A9e_%28Ifremer_00729-84105_-_37518%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Olivier Dugornay · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Su corazón es del tamaño de un carro pequeño.",
       "subcategory": "Récords de animales",
@@ -1582,7 +1582,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "misty mountain forest China",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AZhangjiajie_%28223137313%29.jpeg",
@@ -1632,12 +1632,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "pond lily pads",
+        "role": "illustrative",
+        "query": "tree frog",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoldfish_and_Lily_Pad_Pond_at_Parcivall_Hall_-_geograph.org.uk_-_6213230.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Goldfish_and_Lily_Pad_Pond_at_Parcivall_Hall_-_geograph.org.uk_-_6213230.jpg/3840px-Goldfish_and_Lily_Pad_Pond_at_Parcivall_Hall_-_geograph.org.uk_-_6213230.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Chris Heaton · CC BY-SA 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_eyed_tree_frog_edit2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Red_eyed_tree_frog_edit2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Careyjamesbalboa (Carey James Balboa) · Public domain · Wikimedia Commons"
       },
       "fun_fact": "Los renacuajos respiran con branquias, como los peces, hasta que se convierten en ranas.",
       "subcategory": "Anfibios",
@@ -1682,12 +1682,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "African savanna grass",
+        "role": "illustrative",
+        "query": "gazelle running",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_African_savanna_elephants_at_Saadani_National_Park_Tanzania.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/The_African_savanna_elephants_at_Saadani_National_Park_Tanzania.jpg/3840px-The_African_savanna_elephants_at_Saadani_National_Park_Tanzania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Rasheedhrasheed · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANgorongoro_Conservation_Area_13_-_Grant%27s_gazelle_%28Nanger_granti%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Ngorongoro_Conservation_Area_13_-_Grant%27s_gazelle_%28Nanger_granti%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Thomas Fuhrmann · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Puede correr a más de 100 km/h, pero solo durante unos segundos.",
       "subcategory": "Récords de animales",
@@ -1732,7 +1732,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "heliconia tropical flowers",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AHeliconia_%28222385345%29.jpg",
@@ -1782,12 +1782,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Llanos Orientales wetland",
+        "role": "illustrative",
+        "query": "house mouse",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APuebla_%28estado%29_1986_10.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Puebla_%28estado%29_1986_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "LBM1948 · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%94%D0%BE%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BC%D1%8B%D1%88%D1%8C_%28Mus_musculus%29%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/%D0%94%D0%BE%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BC%D1%8B%D1%88%D1%8C_%28Mus_musculus%29%2C_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Dion Art · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Puede pesar más de 60 kilos y es un gran nadador.",
       "subcategory": "Animales de Colombia",
@@ -1853,12 +1853,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "coral reef",
+        "role": "illustrative",
+        "query": "octopus",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoral_Outcrop_Flynn_Reef.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Coral_Outcrop_Flynn_Reef.jpg/3840px-Coral_Outcrop_Flynn_Reef.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Toby Hudson · CC BY-SA 3.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOctopus2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Octopus2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "albert kok · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Además, ¡su sangre es azul!",
       "subcategory": "Mar",
@@ -1917,12 +1917,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Chocó rainforest rain",
+        "role": "illustrative",
+        "query": "Chocó rainforest",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee_Public_Museum_October_2023_26_%28Rainforest--Tropical_Rain_Forest%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Milwaukee_Public_Museum_October_2023_26_%28Rainforest--Tropical_Rain_Forest%29.jpg/3840px-Milwaukee_Public_Museum_October_2023_26_%28Rainforest--Tropical_Rain_Forest%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Michael Barera · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALandscape_of_Nuqu%C3%AD%2C_Choc%C3%B3%2C_Colombia_-_22_Oct_2025_-_Diferoch_-_9.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Landscape_of_Nuqu%C3%AD%2C_Choc%C3%B3%2C_Colombia_-_22_Oct_2025_-_Diferoch_-_9.jpg/3840px-Landscape_of_Nuqu%C3%AD%2C_Choc%C3%B3%2C_Colombia_-_22_Oct_2025_-_Diferoch_-_9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Diferoch · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Una sola de estas ranas tiene veneno suficiente para unas 10 personas.",
       "subcategory": "Animales de Colombia",
@@ -1987,12 +1987,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Australian river",
+        "role": "illustrative",
+        "query": "mallard duck",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APerth_%28AU%29%2C_Elizabeth_Quay_Bridge_--_2019_--_0375-9.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Perth_%28AU%29%2C_Elizabeth_Quay_Bridge_--_2019_--_0375-9.jpg/3840px-Perth_%28AU%29%2C_Elizabeth_Quay_Bridge_--_2019_--_0375-9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMale_mallard_duck_2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Male_mallard_duck_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Acarpentier · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Los machos tienen un espolón venenoso en las patas traseras.",
       "subcategory": "Mamíferos",
@@ -2047,7 +2047,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "toucan on branch",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AToco_Toucan_%28Ramphastos_toco%29_-_48153967707.jpg",
@@ -2114,7 +2114,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "flower garden",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ADSC07729_Sommerblumenschau_Pavilion%2C_Flower_Gardens_Hirschstetten%2C_2025-07.jpg",
@@ -2164,7 +2164,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "seedling sprouting soil",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_seedling_of_tomato_emerging_from_soil_-_India.jpg",
@@ -2214,7 +2214,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "stethoscope",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3A2023_Stetoskop.jpg",
@@ -2264,12 +2264,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "kettle steam",
+        "role": "illustrative",
+        "query": "boiling water pot",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AKettle_Valley_Steam_Railway_%2830315182106%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Kettle_Valley_Steam_Railway_%2830315182106%29.jpg/3840px-Kettle_Valley_Steam_Railway_%2830315182106%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Mack Male from Edmonton, AB, Canada · CC BY-SA 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoiling_water.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Boiling_water.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "GRAN · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "En Bogotá, por la altura, el agua hierve a unos 91 °C.",
       "subcategory": "Ciencia",
@@ -2314,12 +2314,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "forest sunlight",
+        "role": "illustrative",
+        "query": "scuba diver",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeech_forest_M%C3%A1tra_in_winter.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Beech_forest_M%C3%A1tra_in_winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Susulyka · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScuba_diver_in_silhouette.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Scuba_diver_in_silhouette.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Clotho · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "El aire que respiras tiene solo un 21 % de oxígeno; la mayor parte es nitrógeno.",
       "subcategory": "Ciencia",
@@ -2384,12 +2384,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "anatomy skeleton museum",
+        "role": "illustrative",
+        "query": "human skeleton model",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASheep_skeleton_at_MAV-USP.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Sheep_skeleton_at_MAV-USP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Museum of Veterinary Anatomy FMVZ USP / Wagner Souza e Silva, edited by Rodrigo Tetsuo Argenton · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATwo_Skeletons_Playing_Chess.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Two_Skeletons_Playing_Chess.jpg/3840px-Two_Skeletons_Playing_Chess.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Killerlimpet · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Es también el hueso más fuerte del cuerpo.",
       "subcategory": "Cuerpo humano",
@@ -2434,7 +2434,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "water drop splash",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AWater_drop_001.jpg",
@@ -2499,12 +2499,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "chalkboard with math",
+        "role": "illustrative",
+        "query": "pocket watch",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Kirchspiel%2C_ehem._Sondermunitionslager_Visbeck%2C_%22What_if%22_--_2023_--_6727.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/D%C3%BClmen%2C_Kirchspiel%2C_ehem._Sondermunitionslager_Visbeck%2C_%22What_if%22_--_2023_--_6727.jpg/3840px-D%C3%BClmen%2C_Kirchspiel%2C_ehem._Sondermunitionslager_Visbeck%2C_%22What_if%22_--_2023_--_6727.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Einstein no recibió el Nobel por la relatividad, sino por explicar el efecto fotoeléctrico.",
       "subcategory": "Ciencia",
@@ -2565,12 +2565,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "X-ray hand",
+        "role": "illustrative",
+        "query": "hand X-ray",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AX-ray_and_Radio_go_%E2%80%98Hand_in_Hand%E2%80%99_in_New_Image_%28x-ray-and-radio-go-hand-in-hand-in-new-image_-%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/X-ray_and_Radio_go_%E2%80%98Hand_in_Hand%E2%80%99_in_New_Image_%28x-ray-and-radio-go-hand-in-hand-in-new-image_-%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "X-ray: NASA/CXC/Univ. of Hong Kong/S. Zhang et al.; Radio: ATNF/CSIRO/ATCA; H-alpha: UK STFC/Royal Observatory Edinburgh; Image Processing: NASA/CXC/SAO/N. Wolk · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHand_X-ray_one.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Hand_X-ray_one.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "SarahCartwright · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Más de la mitad de los huesos están en las manos y los pies.",
       "subcategory": "Cuerpo humano",
@@ -2635,12 +2635,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "microscope",
+        "role": "illustrative",
+        "query": "onion cells microscope",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASilicon_chip_from_a_computer_laser_mouse_under_a_microscope_50%D1%85.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Silicon_chip_from_a_computer_laser_mouse_under_a_microscope_50%D1%85.jpg/3840px-Silicon_chip_from_a_computer_laser_mouse_under_a_microscope_50%D1%85.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Original:  Alexander Klepnev\nDerivative work:  IamMM · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOnion_cells_light_microscope.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Onion_cells_light_microscope.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Bobjgalindo · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Si estiraras el ADN de una sola célula, mediría unos 2 metros.",
       "subcategory": "Ciencia",
@@ -2698,12 +2698,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "laboratory glassware",
+        "role": "illustrative",
+        "query": "chemistry laboratory",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGraduated_chemical_glassware_%28Alessandri_1895.1%29.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Graduated_chemical_glassware_%28Alessandri_1895.1%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "valeg96 · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaboratory_equipment_of_modern_chemistry_classroom.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Laboratory_equipment_of_modern_chemistry_classroom.jpg/3840px-Laboratory_equipment_of_modern_chemistry_classroom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Belikov Maxim · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Es muy tóxico; por eso ya casi no se usa en termómetros.",
       "subcategory": "Ciencia",
@@ -2758,7 +2758,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "laser beams",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ALaser_Towards_Milky_Ways_Centre.jpg",
@@ -2829,7 +2829,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "sunflower field",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ASunflower_field_-_panoramio_%2811%29.jpg",
@@ -2879,7 +2879,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "night sky stars",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AStars_01_%28MK%29.jpg",
@@ -2944,12 +2944,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "rocky desert landscape",
+        "role": "illustrative",
+        "query": "observatory telescope night",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A260_Boa_Vista.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/260_Boa_Vista.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Ingo Wölbern · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANight_sky_over_the_WIYN_0_9-meter_Telescope_on_Kitt_Peak_National_Observatory_%28noirlab-img-4505%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Night_sky_over_the_WIYN_0_9-meter_Telescope_on_Kitt_Peak_National_Observatory_%28noirlab-img-4505%29.jpg/3840px-Night_sky_over_the_WIYN_0_9-meter_Telescope_on_Kitt_Peak_National_Observatory_%28noirlab-img-4505%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "KPNO/NOIRLab/NSF/AURA/P. Marenfeld · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Es rojo porque su suelo tiene mucho óxido de hierro: ¡está oxidado!",
       "subcategory": "Espacio",
@@ -2994,7 +2994,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "telescope at night",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AVery_Large_Telescope_against_a_beautiful_twilight_on_Cerro_Paranal.jpg",
@@ -3045,7 +3045,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "galaxy nebula",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AM31-Andromede-16-09-2023-Hamois.jpg",
@@ -3096,12 +3096,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "tree through four seasons",
+        "role": "illustrative",
+        "query": "Earth from space",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Samuel_Wilson_Co.%27s_seed_catalogue_-_plant%2C_tree_and_live_stock_annual_%281899%29_%2820546378262%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/The_Samuel_Wilson_Co.%27s_seed_catalogue_-_plant%2C_tree_and_live_stock_annual_%281899%29_%2820546378262%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "John W. Cauchey\n\nInternet Archive Book Images · No restrictions · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASTS-135_final_flyaround_of_ISS_1.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/STS-135_final_flyaround_of_ISS_1.jpg/3840px-STS-135_final_flyaround_of_ISS_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "NASA · Public domain · Wikimedia Commons"
       },
       "fun_fact": "Cada 4 años sumamos un día extra, el 29 de febrero, porque la vuelta dura unos 365 días y 6 horas.",
       "subcategory": "Espacio",
@@ -3162,7 +3162,7 @@
       ],
       "media": {
         "type": "video",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "Apollo 11 moon landing footage",
         "note": "Imágenes del alunizaje; evitar planos que muestren el nombre del astronauta.",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AHistoric_Apollo_11_Moon_Landing_Footage.webm",
@@ -3212,7 +3212,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "volcanic lava",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3A001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg",
@@ -3271,12 +3271,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "starry night mountain",
+        "role": "illustrative",
+        "query": "Milky Way night sky",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVan_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/3840px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Vincent van Gogh · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIn_the_photo_there_is_one_Perseid%2C_Milky_Way_and_Andromega_galaxy_and_light_pollution_on_the_horizon_-_Luhasoo_bog_in_Estonia.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/In_the_photo_there_is_one_Perseid%2C_Milky_Way_and_Andromega_galaxy_and_light_pollution_on_the_horizon_-_Luhasoo_bog_in_Estonia.jpg/3840px-In_the_photo_there_is_one_Perseid%2C_Milky_Way_and_Andromega_galaxy_and_light_pollution_on_the_horizon_-_Luhasoo_bog_in_Estonia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Martin Mark · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Tiene entre 100.000 y 400.000 millones de estrellas.",
       "subcategory": "Espacio",
@@ -3337,7 +3337,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "canyon rock layers",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AGrand_Canyon_layers.jpg",
@@ -3397,7 +3397,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "sunrise above clouds",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AKarst_peaks_with_sea_of_clouds_at_sunrise%2C_South_view_from_the_top_of_Mount_Nam_Xay%2C_Vang_Vieng%2C_Laos.jpg",
@@ -3467,7 +3467,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "deep space telescope image",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg",
@@ -3527,12 +3527,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "concert stage lights",
+        "role": "illustrative",
+        "query": "music festival crowd",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASunset_over_Paljassaare_Outdoor_Concert_Stage_Tallinn_Cruise_Terminal_Tallinn_27_August_2022.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Sunset_over_Paljassaare_Outdoor_Concert_Stage_Tallinn_Cruise_Terminal_Tallinn_27_August_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Pjotr Mahhonin · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd%2C_Austin_City_Limits_Music_Festival_2015-3424_%2829723737325%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Crowd%2C_Austin_City_Limits_Music_Festival_2015-3424_%2829723737325%29.jpg/3840px-Crowd%2C_Austin_City_Limits_Music_Festival_2015-3424_%2829723737325%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Anna Hanks from Austin, Texas, USA · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "En la costa colombiana hay tambores famosos como el tambor alegre y el llamador.",
       "subcategory": "Instrumentos musicales",
@@ -3633,12 +3633,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "football stadium crowd",
+        "role": "illustrative",
+        "query": "Soccer City stadium",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/FNB_Stadium_and_mooifontein_Arrial_View_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "fading · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "'Waka Waka' es uno de los videos musicales más vistos de la historia en YouTube.",
       "subcategory": "Cantantes colombianos",
@@ -3765,7 +3765,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "musician silhouette on stage",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_5590_Live_band_lights_up_the_night_in_Pattaya_-_singers_and_musicians_perform_on_stage_at_a_packed_venue_in_Nong_Pla_Lai_Chon_Buri.jpg",
@@ -3815,7 +3815,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "concert crowd lights",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ALive_band_performance_at_an_outdoor_concert_with_lights_and_energetic_crowd_during_nighttime.jpg",
@@ -3878,12 +3878,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Colombian countryside river",
+        "role": "illustrative",
+        "query": "accordion player",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADrawing%2C_Rainbow_over_a_Hilly_Landscape%2C_ca._1867_%28CH_18193699%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Drawing%2C_Rainbow_over_a_Hilly_Landscape%2C_ca._1867_%28CH_18193699%29.jpg/3840px-Drawing%2C_Rainbow_over_a_Hilly_Landscape%2C_ca._1867_%28CH_18193699%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Frederic Edwin Church · Public domain · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlind_accordion_player.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Blind_accordion_player.jpg/3840px-Blind_accordion_player.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Tomascastelazo · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "El vallenato es Patrimonio Cultural Inmaterial de la Humanidad desde 2015.",
       "subcategory": "Ritmos colombianos",
@@ -3957,7 +3957,7 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "sheet music",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AChopin_polonaise_Op._53.jpg",
@@ -4010,7 +4010,7 @@
     },
     {
       "id": "q-0069",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una ciudad donde hasta los semáforos bailan.",
       "question": "¿Qué ciudad colombiana es conocida como la 'Capital Mundial de la Salsa'?",
@@ -4027,12 +4027,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "dance shoes salsa",
+        "role": "illustrative",
+        "query": "salsa dancers",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACUBA_Havana_-_salsa_Anthony_and_Steph_ii.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/CUBA_Havana_-_salsa_Anthony_and_Steph_ii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Anthonydpadgett · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Los bailarines de salsa caleña son famosos por mover los pies rapidísimo.",
       "subcategory": "Ritmos colombianos",
@@ -4051,12 +4051,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0070",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un genio que no oía nada y aun así nunca desafinó.",
       "question": "¿Qué famoso compositor siguió componiendo música aunque se quedó sordo?",
@@ -4073,12 +4077,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "grand piano concert hall",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerlin-_Grand_piano_at_the_main_hall_in_the_Konzerthaus_-_4205.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Berlin-_Grand_piano_at_the_main_hall_in_the_Konzerthaus_-_4205.jpg/3840px-Berlin-_Grand_piano_at_the_main_hall_in_the_Konzerthaus_-_4205.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Compuso su famosa Novena Sinfonía cuando ya estaba completamente sordo.",
       "subcategory": "Música clásica",
@@ -4097,12 +4101,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0071",
-      "status": "draft",
+      "status": "rejected",
       "difficulty": 6,
       "description": "Una pregunta para bailar con cuidado de no quemar a nadie.",
       "question": "¿Qué ritmo de la costa Caribe colombiana se baila con velas encendidas en la mano?",
@@ -4143,7 +4151,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "rejected",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 9,
       "revision": {
@@ -4158,7 +4170,7 @@
     },
     {
       "id": "q-0072",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Cuatro señores de Inglaterra con el mismo corte de pelo.",
       "question": "¿Qué banda británica cantaba 'Hey Jude' y 'Yellow Submarine'?",
@@ -4175,12 +4187,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "vintage vinyl records",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Vinyl%2C_Evanston%2C_IL.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Vintage_Vinyl%2C_Evanston%2C_IL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Nick Number · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Son la banda que más discos ha vendido en la historia.",
       "subcategory": "Música del mundo",
@@ -4199,7 +4211,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 10,
       "revision": {
@@ -4214,7 +4230,7 @@
     },
     {
       "id": "q-0073",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Un ratón con más fama que todos los gatos del mundo.",
       "question": "¿Cuál es el ratón de dibujos animados más famoso del mundo?",
@@ -4231,12 +4247,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "fireworks at night",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFireworks_over_Ponte_Vecchio.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fireworks_over_Ponte_Vecchio.JPG/3840px-Fireworks_over_Ponte_Vecchio.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Martin Falbisoner · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Mickey apareció por primera vez en 1928.",
       "subcategory": "Caricaturas",
@@ -4255,7 +4271,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -4269,7 +4289,7 @@
     },
     {
       "id": "q-0074",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una familia con una casa que se mueve, baila y opina.",
       "question": "En la película 'Encanto', ¿cómo se llama la familia protagonista?",
@@ -4286,12 +4306,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "colorful Colombian colonial town",
+        "role": "illustrative",
+        "query": "Salento Quindío",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalle_5%2C_Salento_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Calle_5%2C_Salento_01.jpg/3840px-Calle_5%2C_Salento_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "'Encanto' está inspirada en Colombia y ganó el Óscar a la mejor película animada.",
       "subcategory": "Películas de Disney",
@@ -4310,12 +4330,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0075",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un juguete con sombrero que no deja que nadie le quite el puesto.",
       "question": "En 'Toy Story', ¿cómo se llama el vaquero?",
@@ -4332,12 +4356,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "toys on a shelf",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AToys_and_a_laptop_are_placed_on_a_white_shelf_in_a_childs_room.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Toys_and_a_laptop_are_placed_on_a_white_shelf_in_a_childs_room.jpg/3840px-Toys_and_a_laptop_are_placed_on_a_white_shelf_in_a_childs_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "'Toy Story' (1995) fue la primera película hecha totalmente por computador.",
       "subcategory": "Películas de Pixar",
@@ -4356,12 +4380,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0076",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Aquí puedes construir un castillo entero sin pedirle permiso a nadie.",
       "question": "¿En qué videojuego hay unos monstruos verdes que hacen 'sssss' y explotan cuando se te acercan?",
@@ -4378,12 +4406,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "pickaxe and stones",
+        "role": "illustrative",
+        "query": "video game controller",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHands_holding_video_game_controller_%2850811892858%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Hands_holding_video_game_controller_%2850811892858%29.jpg/3840px-Hands_holding_video_game_controller_%2850811892858%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vu Hoang · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Es el videojuego más vendido de la historia.",
       "subcategory": "Videojuegos",
@@ -4402,7 +4430,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 3,
       "revision": {
@@ -4433,7 +4465,7 @@
     },
     {
       "id": "q-0077",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una familia donde cada quien tiene un regalo, y ninguno viene envuelto.",
       "question": "En 'Encanto', ¿cuál es el don de Luisa?",
@@ -4450,12 +4482,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "colorful colonial doors",
+        "role": "illustrative",
+        "query": "Barichara",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreet_in_Barichara_02.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Street_in_Barichara_02.jpg/3840px-Street_in_Barichara_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Cada miembro de la familia Madrigal tiene una puerta mágica con su don.",
       "subcategory": "Películas de Disney",
@@ -4474,7 +4506,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 4,
       "revision": {
@@ -4495,7 +4531,7 @@
     },
     {
       "id": "q-0078",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una pregunta helada: ponte una chaqueta antes de contestar.",
       "question": "En 'Frozen', ¿cómo se llama el reino de Elsa y Anna?",
@@ -4512,12 +4548,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "snowy fjord",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIluileq_Fjord_-_Greenland.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Iluileq_Fjord_-_Greenland.jpg/3840px-Iluileq_Fjord_-_Greenland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "APK · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Elsa canta 'Libre soy' cuando construye su palacio de hielo.",
       "subcategory": "Películas de Disney",
@@ -4536,12 +4572,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0079",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un sombrero que habla te va a ayudar con esta pregunta. Bueno, no realmente.",
       "question": "En Harry Potter, ¿a qué casa de Hogwarts pertenece Harry?",
@@ -4558,12 +4598,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "old castle at night",
+        "role": "illustrative",
+        "query": "Alnwick Castle",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlnwick_Castle_2011.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Alnwick_Castle_2011.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Dr.Haus · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "El Sombrero Seleccionador pensó en ponerlo en Slytherin.",
       "subcategory": "Cine",
@@ -4582,12 +4622,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0080",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Un rey con tanta melena que nunca necesitó corona.",
       "question": "En 'El rey león', ¿cómo se llama el papá de Simba?",
@@ -4604,12 +4648,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "acacia tree sunset",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASunset_behind_acacia_tree%2C_Maasai_Mara%2C_Kenya.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Sunset_behind_acacia_tree%2C_Maasai_Mara%2C_Kenya.jpg/3840px-Sunset_behind_acacia_tree%2C_Maasai_Mara%2C_Kenya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Daniel Case · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "'Hakuna matata' significa 'no hay problema' en suajili.",
       "subcategory": "Películas de Disney",
@@ -4628,7 +4672,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 6,
       "revision": {
@@ -4644,7 +4692,7 @@
     },
     {
       "id": "q-0081",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un señor morado con un guante muy, muy caro.",
       "question": "En las películas de Marvel, ¿cuántas Gemas del Infinito busca Thanos?",
@@ -4661,12 +4709,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "glowing gemstones",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGemstone_Collection_-_Labradorite_%2817278919981%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Gemstone_Collection_-_Labradorite_%2817278919981%29.jpg/3840px-Gemstone_Collection_-_Labradorite_%2817278919981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Marco Hazard from Hong Kong, Hong Kong · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Las gemas son: Espacio, Mente, Realidad, Poder, Tiempo y Alma.",
       "subcategory": "Superhéroes de Marvel",
@@ -4685,12 +4733,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0082",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una empresa vio a un plomero de bigote y pensó: 'este va a ser famoso'.",
       "question": "¿Qué empresa japonesa creó a Mario Bros?",
@@ -4707,12 +4759,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "retro arcade",
+        "role": "illustrative",
+        "query": "Kyoto street",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYasaka-dori_early_morning_with_street_lanterns_and_the_Tower_of_Yasaka_%28Hokan-ji_Temple%29%2C_Kyoto%2C_Japan.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Yasaka-dori_early_morning_with_street_lanterns_and_the_Tower_of_Yasaka_%28Hokan-ji_Temple%29%2C_Kyoto%2C_Japan.jpg/3840px-Yasaka-dori_early_morning_with_street_lanterns_and_the_Tower_of_Yasaka_%28Hokan-ji_Temple%29%2C_Kyoto%2C_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "En su primer juego, Donkey Kong (1981), Mario se llamaba 'Jumpman'.",
       "subcategory": "Videojuegos clásicos",
@@ -4731,7 +4783,11 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 8,
       "revision": {
@@ -4751,7 +4807,7 @@
     },
     {
       "id": "q-0083",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un viaje en barco que no salió como estaba planeado.",
       "question": "¿Qué película de 1997 sobre un barco que se hunde ganó 11 premios Óscar?",
@@ -4768,12 +4824,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "vintage ocean liner",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeparture_of_the_passenger_liner_SS_ORAMA_%288262503245%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Departure_of_the_passenger_liner_SS_ORAMA_%288262503245%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Australian National Maritime Museum on The Commons · No restrictions · Wikimedia Commons"
       },
       "fun_fact": "Sus 11 Óscar son un récord que comparte con 'Ben-Hur' y 'El retorno del rey'.",
       "subcategory": "Cine",
@@ -4792,7 +4848,11 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "drop",
@@ -4803,7 +4863,7 @@
     },
     {
       "id": "q-0084",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un señor que llevó dinosaurios y extraterrestres al cine, y no le dio miedo.",
       "question": "¿Quién dirigió las películas 'E.T.' y 'Jurassic Park'?",
@@ -4820,12 +4880,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "film projector",
+        "role": "illustrative",
+        "query": "clapperboard",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClapperboard_01_by_shakko.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Clapperboard_01_by_shakko.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "shakko · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "El tiburón mecánico de 'Tiburón' se dañaba tanto que casi no sale en la película, y el equipo le puso de apodo 'Bruce'.",
       "subcategory": "Cine",
@@ -4844,7 +4904,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 10,
       "revision": {
@@ -4865,7 +4929,7 @@
     },
     {
       "id": "q-0085",
-      "status": "draft",
+      "status": "rejected",
       "difficulty": 2,
       "description": "Una pelotica amarilla pasa toda su vida yendo y viniendo.",
       "question": "¿En qué deporte se usa una raqueta y una pelotica amarilla?",
@@ -4906,7 +4970,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "rejected",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 1,
       "revision": {
@@ -4935,7 +5003,7 @@
     },
     {
       "id": "q-0086",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "La única persona del fútbol a la que no regañan por usar las manos.",
       "question": "En el fútbol, ¿qué jugador puede tocar el balón con las manos?",
@@ -4952,12 +5020,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "soccer ball on grass",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg/3840px-Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Peter Glaser baraida · CC0 · Wikimedia Commons"
       },
       "fun_fact": "René Higuita, arquero colombiano, se hizo famoso por su atajada de 'escorpión'.",
       "subcategory": "Fútbol",
@@ -4976,12 +5044,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0087",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Cuenta a los jugadores, sin contar al que siempre se tira al piso.",
       "question": "En un partido de fútbol, ¿cuántos jugadores de cada equipo hay en la cancha?",
@@ -4998,12 +5070,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "football pitch from above",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeunovo_football_pitch_-_panoramio.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Leunovo_football_pitch_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Tim Tregenza · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "El microfútbol, muy popular en Colombia, se juega con 5 por equipo.",
       "subcategory": "Fútbol",
@@ -5022,12 +5094,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0088",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "El tiempo que hay que esperar para volver a gritar gol con toda la familia.",
       "question": "¿Cada cuántos años se juega el Mundial de fútbol?",
@@ -5044,12 +5120,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "golden trophy",
+        "role": "illustrative",
+        "query": "FIFA World Cup trophy",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFIFA_World_Cup_Trophy_%28Ank_Kumar%2C_Infosys_Limited%29_01.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FIFA_World_Cup_Trophy_%28Ank_Kumar%2C_Infosys_Limited%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Ank Kumar · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "El Mundial de 2026 se juega en Estados Unidos, México y Canadá, con 48 selecciones.",
       "subcategory": "Mundiales de fútbol",
@@ -5068,12 +5144,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0089",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un colombiano tan famoso que en Europa tuvieron que aprender a pronunciar 'Zipaquirá'.",
       "question": "¿Qué deporte practica el colombiano Egan Bernal?",
@@ -5090,12 +5170,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Colombian flag crowd",
+        "role": "illustrative",
+        "query": "sports medals",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20190301_FIS_NWSC_Seefeld_Medal_Ceremony_850_6085.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/20190301_FIS_NWSC_Seefeld_Medal_Ceremony_850_6085.jpg/3840px-20190301_FIS_NWSC_Seefeld_Medal_Ceremony_850_6085.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Granada · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Fue el primer latinoamericano en ganar el Tour de Francia.",
       "subcategory": "Ciclismo colombiano",
@@ -5114,7 +5194,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -5142,7 +5226,7 @@
     },
     {
       "id": "q-0090",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un deporte en el que los abuelos boyacenses son campeones mundiales sin entrenar.",
       "question": "¿Cuál es el deporte nacional de Colombia según una ley del Congreso?",
@@ -5159,12 +5243,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "Boyacá countryside",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APueblo_del_Municipio_de_La_Victoria.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Pueblo_del_Municipio_de_La_Victoria.jpg/3840px-Pueblo_del_Municipio_de_La_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Andresandres17 · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Es deporte nacional por ley desde el año 2000.",
       "subcategory": "Deportes tradicionales colombianos",
@@ -5183,7 +5267,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -5203,7 +5291,7 @@
     },
     {
       "id": "q-0091",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un 10 que hizo gritar a todo un país en 2014.",
       "question": "¿Qué jugador colombiano fue el goleador del Mundial de 2014?",
@@ -5220,12 +5308,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "football fans in yellow",
+        "role": "illustrative",
+        "query": "Maracanã stadium",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaracan%C3%A3_stadium.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Maracan%C3%A3_stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Leandro Neumann Ciuffo · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Su gol contra Uruguay ganó el Premio Puskás al mejor gol del año.",
       "subcategory": "Selección Colombia",
@@ -5244,12 +5332,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0092",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Unos anillos que nadie se pone en el dedo.",
       "question": "¿Cuántos anillos tiene la bandera olímpica?",
@@ -5266,12 +5358,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "olympic torch flame",
+        "role": "illustrative",
+        "query": "Olympic torch",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlympic_Flame_at_Utsunomiya%2C_Tokyo_2020.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Olympic_Flame_at_Utsunomiya%2C_Tokyo_2020.jpg/3840px-Olympic_Flame_at_Utsunomiya%2C_Tokyo_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Miyuki Meinaka · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Con los colores de los anillos y el fondo blanco se puede formar la bandera de casi cualquier país.",
       "subcategory": "Juegos Olímpicos de verano",
@@ -5290,7 +5382,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 6,
       "revision": {
@@ -5305,7 +5401,7 @@
     },
     {
       "id": "q-0093",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una reina que en vez de corona lleva casco.",
       "question": "¿En qué deporte ganó Mariana Pajón dos medallas de oro olímpicas?",
@@ -5322,12 +5418,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "Medellin city skyline",
+        "role": "illustrative",
+        "query": "Medellín skyline",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AValley_of_Medell%C3%ADn-_skyline.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Valley_of_Medell%C3%ADn-_skyline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "User: (WT-shared) CONOCER at  wts wikivoyage · Public domain · Wikimedia Commons"
       },
       "fun_fact": "La llaman 'la Reina del BMX': ganó oro en Londres 2012 y en Río 2016.",
       "subcategory": "Medallistas olímpicos colombianos",
@@ -5346,7 +5442,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -5379,7 +5479,7 @@
     },
     {
       "id": "q-0094",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un país inventó el fútbol y luego se pasó siglos tratando de ganarlo.",
       "question": "¿En qué país se escribieron las reglas del fútbol moderno?",
@@ -5396,12 +5496,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "old leather football",
+        "role": "illustrative",
+        "query": "vintage soccer ball",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJakarta_old_football.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Jakarta_old_football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Jonathan McIntosh · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Las reglas se escribieron en Londres en 1863.",
       "subcategory": "Fútbol",
@@ -5420,12 +5520,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0095",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Esta pregunta es larga, muy, muy, muy larga.",
       "question": "¿Cuánto mide una maratón?",
@@ -5441,13 +5545,13 @@
         "Mide un poquito más de 42 km."
       ],
       "media": {
-        "type": "video",
-        "role": "decorative",
-        "query": "marathon runners city street",
-        "note": "Corredores en una calle; sin carteles que muestren la distancia.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "type": "image",
+        "role": "illustrative",
+        "query": "marathon runners",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARunners_exiting_a_road_tunnel_during_the_2024_Sofia_Marathon.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Runners_exiting_a_road_tunnel_during_the_2024_Sofia_Marathon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "SPARKY358 · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Cuenta la leyenda que un mensajero corrió desde Maratón hasta Atenas para anunciar una victoria.",
       "subcategory": "Atletismo",
@@ -5466,7 +5570,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 9,
       "revision": {
@@ -5486,7 +5594,7 @@
     },
     {
       "id": "q-0096",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una ciudad tan vieja que sus ruinas tienen ruinas.",
       "question": "¿En qué ciudad fueron los primeros Juegos Olímpicos modernos, en 1896?",
@@ -5503,12 +5611,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "olympic gold medal",
+        "role": "illustrative",
+        "query": "olympic medals",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEvan%27s_gold_medal_from_Vancouver_%287073380741%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Evan%27s_gold_medal_from_Vancouver_%287073380741%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "US Embassy Sweden · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Los Juegos antiguos se hacían en Olimpia, Grecia, hace más de 2.700 años.",
       "subcategory": "Juegos Olímpicos de verano",
@@ -5527,7 +5635,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 10,
       "revision": {
@@ -5551,7 +5663,7 @@
     },
     {
       "id": "q-0097",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Unos animales que no cabrían en tu cuarto, ni en tu casa, ni en tu barrio.",
       "question": "¿Qué animales gigantes vivieron hace millones de años y desaparecieron?",
@@ -5568,12 +5680,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "prehistoric volcano landscape",
+        "role": "illustrative",
+        "query": "tree ferns",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlsophila_sp._tree_ferns_-_Misamis_Oriental%2C_Philippines_02.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Alsophila_sp._tree_ferns_-_Misamis_Oriental%2C_Philippines_02.jpg/3840px-Alsophila_sp._tree_ferns_-_Misamis_Oriental%2C_Philippines_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Obsidian Soul · CC0 · Wikimedia Commons"
       },
       "fun_fact": "Las aves de hoy son descendientes de los dinosaurios.",
       "subcategory": "Dinosaurios",
@@ -5592,13 +5704,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0098",
-      "status": "draft",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 1,
       "description": "Una idea tan buena que hasta tiene forma de idea.",
       "question": "¿Qué invento usamos para iluminar la casa de noche?",
       "answer": "El bombillo",
@@ -5614,12 +5730,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "city lights at night",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrice_Building_illuminated_at_night_in_Quebec_City.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Price_Building_illuminated_at_night_in_Quebec_City.jpg/3840px-Price_Building_illuminated_at_night_in_Quebec_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons"
       },
       "fun_fact": "Hoy se usan bombillos LED, que gastan mucha menos energía.",
       "subcategory": "Inventos",
@@ -5638,13 +5754,18 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
-      "background": null
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
+      "background": null,
+      "difficulty_original": 2
     },
     {
       "id": "q-0099",
-      "status": "draft",
-      "difficulty": 3,
+      "status": "approved",
+      "difficulty": 2,
       "description": "Un señor se perdió buscando la India y encontró otra cosa.",
       "question": "¿Quién llegó a América en 1492 con tres barcos?",
       "answer": "Cristóbal Colón",
@@ -5660,12 +5781,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "old sailing ship at sea",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%28Study_of_a_Large_Sailing_Ship_at_Sea%29_by_Edward_Hopper.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/%28Study_of_a_Large_Sailing_Ship_at_Sea%29_by_Edward_Hopper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Edward Hopper · Public domain · Wikimedia Commons"
       },
       "fun_fact": "Colón creía que había llegado a la India; por eso llamó 'indios' a los habitantes.",
       "subcategory": "Historia",
@@ -5684,12 +5805,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
-      "background": null
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
+      "background": null,
+      "difficulty_original": 3
     },
     {
       "id": "q-0100",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un señor con tantas estatuas que ya no sabe cuál es la suya.",
       "question": "¿A quién llamamos 'el Libertador'?",
@@ -5706,12 +5832,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "equestrian statue",
+        "role": "illustrative",
+        "query": "Puente de Boyacá",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuente_de_Boyac%C3%A1%2C_vista_lateral..JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Puente_de_Boyac%C3%A1%2C_vista_lateral..JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Kamilokardona · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Bolivia lleva su nombre.",
       "subcategory": "Historia",
@@ -5730,13 +5856,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0101",
-      "status": "draft",
-      "difficulty": 5,
+      "status": "approved",
+      "difficulty": 3,
       "description": "Tres barcos, un océano y nadie con GPS.",
       "question": "¿Cómo se llamaban los tres barcos de Colón?",
       "answer": "La Niña, la Pinta y la Santa María",
@@ -5752,12 +5882,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "caravel replica",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANotorious_from_bow.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Notorious_from_bow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Martyvis · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "La Santa María encalló en la isla La Española y nunca volvió a Europa.",
       "subcategory": "Barcos",
@@ -5776,7 +5906,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -5790,11 +5924,12 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "difficulty_original": 5
     },
     {
       "id": "q-0102",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Unos constructores subieron piedras gigantes a la montaña sin una sola grúa.",
       "question": "¿Qué civilización construyó Machu Picchu?",
@@ -5811,12 +5946,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "Andean terraces mist",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeru_-_Machu_Picchu_125_-_morning_shrouding_mist_%288297861906%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Peru_-_Machu_Picchu_125_-_morning_shrouding_mist_%288297861906%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "McKay Savage from London, UK · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Machu Picchu se dio a conocer al mundo en 1911.",
       "subcategory": "Historia",
@@ -5835,12 +5970,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0103",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un señor cubierto de oro se tiró a una laguna, y no, no se oxidó.",
       "question": "¿Qué pueblo indígena de Colombia inspiró la leyenda de El Dorado, en la laguna de Guatavita?",
@@ -5857,12 +5996,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "mountain lagoon",
+        "role": "illustrative",
+        "query": "Laguna de Guatavita",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaguna_Guatavita_06.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Laguna_Guatavita_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Burkhard Mücke · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "La Balsa Muisca, encontrada en 1969, muestra al cacique cubierto de oro en una balsa.",
       "subcategory": "Leyendas colombianas",
@@ -5881,12 +6020,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0104",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un señor se cansó de copiar libros a mano y se inventó algo mejor.",
       "question": "¿Quién inventó la imprenta de tipos móviles en Europa, hacia 1450?",
@@ -5903,12 +6046,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "old books library",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACloseup_of_old_books_in_the_library.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Closeup_of_old_books_in_the_library.jpg/3840px-Closeup_of_old_books_in_the_library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Antes de la imprenta, los libros se copiaban a mano, letra por letra.",
       "subcategory": "Inventores famosos",
@@ -5927,12 +6070,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0105",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una pregunta seria sobre una fecha muy importante.",
       "question": "¿En qué año terminó la Segunda Guerra Mundial?",
@@ -5949,12 +6096,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "black and white old city",
+        "role": "illustrative",
+        "query": "vintage radio",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_vintage_radio_-_Offenburg.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Old_vintage_radio_-_Offenburg.jpg/3840px-Old_vintage_radio_-_Offenburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "th_norge · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "1918 es el fin de la Primera Guerra Mundial, y 1939 el comienzo de la Segunda.",
       "subcategory": "Historia",
@@ -5973,7 +6120,11 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "drop",
@@ -5984,7 +6135,7 @@
     },
     {
       "id": "q-0106",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un muro tan poco querido que, cuando lo tumbaron, la gente hizo fiesta encima.",
       "question": "¿Qué famoso muro fue derribado en 1989?",
@@ -6001,12 +6152,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "old stone wall",
+        "role": "illustrative",
+        "query": "sledgehammer",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVarious_sledge_hammers_and_an_axe_in_hardware_store_in_Germany.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Various_sledge_hammers_and_an_axe_in_hardware_store_in_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Pittigrilli · CC0 · Wikimedia Commons"
       },
       "fun_fact": "Un tramo del muro que sigue en pie está cubierto de grafitis y hoy es una galería de arte al aire libre.",
       "subcategory": "Historia",
@@ -6025,7 +6176,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -6054,7 +6209,7 @@
     },
     {
       "id": "q-0107",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una parte de Colombia hizo sus maletas y se fue a vivir sola.",
       "question": "¿Qué país se separó de Colombia en 1903?",
@@ -6071,12 +6226,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "tropical coast boats",
+        "role": "illustrative",
+        "query": "Darién jungle",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJungle_path_in_the_Dari%C3%A9n_Gap.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Jungle_path_in_the_Dari%C3%A9n_Gap.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Päivi & Santeri · Public domain · Wikimedia Commons"
       },
       "fun_fact": "Panamá fue parte de Colombia durante casi todo el siglo XIX.",
       "subcategory": "Historia",
@@ -6095,7 +6250,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 9,
       "revision": {
@@ -6116,7 +6275,7 @@
     },
     {
       "id": "q-0108",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un día la gente se cansó de los reyes y armó un problemón.",
       "question": "¿Qué revolución comenzó en 1789 con la toma de la Bastilla?",
@@ -6133,12 +6292,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "18th century crowd painting",
+        "role": "illustrative",
+        "query": "storming of the Bastille",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrise_de_la_Bastille_clean.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Prise_de_la_Bastille_clean.jpg/3840px-Prise_de_la_Bastille_clean.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jean-Pierre Houël · Public domain · Wikimedia Commons"
       },
       "fun_fact": "En Bogotá, Antonio Nariño tradujo e imprimió los Derechos del Hombre que nacieron de esta revolución.",
       "subcategory": "Historia",
@@ -6157,7 +6316,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 10,
       "revision": {
@@ -6173,7 +6336,7 @@
     },
     {
       "id": "q-0109",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Una pregunta para pintar con los dedos y ensuciar el sofá.",
       "question": "¿Qué colores se mezclan para hacer el verde?",
@@ -6190,12 +6353,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "paint palette",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArt_tools_and_paint_palette_set_up_for_a_creative_session.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Art_tools_and_paint_palette_set_up_for_a_creative_session.jpg/3840px-Art_tools_and_paint_palette_set_up_for_a_creative_session.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Rojo y azul hacen morado; rojo y amarillo, naranja.",
       "subcategory": "Colores",
@@ -6214,12 +6377,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0110",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una letra que los turistas gringos buscan y buscan en su teclado y nunca encuentran.",
       "question": "¿Qué letra tiene el español que no existe en el alfabeto inglés?",
@@ -6236,12 +6403,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "alphabet blocks",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlocks%2C_alphabet_%28AM_1990.255-2%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Blocks%2C_alphabet_%28AM_1990.255-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "La rayita de la ñ se llama virgulilla.",
       "subcategory": "Idioma",
@@ -6260,7 +6427,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "revision": {
         "action": "revise",
@@ -6279,7 +6450,7 @@
     },
     {
       "id": "q-0111",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un renacuajo con sombrero y muy pocas ganas de quedarse en casa.",
       "question": "¿Quién escribió el cuento en verso 'El renacuajo paseador'?",
@@ -6296,12 +6467,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "children's picture books",
+        "role": "illustrative",
+        "query": "storybook illustration",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADulcibella-the-enchanted-bubbles-crop.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Dulcibella-the-enchanted-bubbles-crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Hilda T. Miller · Public domain · Wikimedia Commons"
       },
       "fun_fact": "El renacuajo del cuento se llama Rin Rin.",
       "subcategory": "Cuentos infantiles",
@@ -6320,12 +6491,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0112",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un artista que nunca dibujó a nadie a dieta.",
       "question": "¿Qué artista colombiano es famoso por pintar y esculpir figuras muy voluminosas, 'gorditas'?",
@@ -6342,12 +6517,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "sculpture park",
+        "role": "illustrative",
+        "query": "Medellín Metrocable",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AL%C3%ADnea_K_%28Medell%C3%ADn_Metrocable%29_03.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/L%C3%ADnea_K_%28Medell%C3%ADn_Metrocable%29_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Botero decía que no pintaba gordos: pintaba 'volumen'.",
       "subcategory": "Arte",
@@ -6366,13 +6541,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0113",
-      "status": "draft",
-      "difficulty": 5,
+      "status": "approved",
+      "difficulty": 2,
       "description": "Una pregunta de ortografía, así que saca el borrador.",
       "question": "¿Cuál es el plural de 'lápiz'?",
       "answer": "Lápices",
@@ -6388,12 +6567,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "colored pencils",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColored_pencils_chevre.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Colored_pencils_chevre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Chevre · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Casi todas las palabras que terminan en z hacen el plural con '-ces': pez, peces; voz, voces.",
       "subcategory": "Idioma",
@@ -6412,12 +6591,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
-      "background": null
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
+      "background": null,
+      "difficulty_original": 5
     },
     {
       "id": "q-0114",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una señora lleva 500 años sonriendo sin que le duelan los cachetes.",
       "question": "¿Quién pintó la Mona Lisa?",
@@ -6434,12 +6618,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "museum gallery",
+        "role": "illustrative",
+        "query": "Louvre pyramid",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALouvre_Museum_Wikimedia_Commons.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/3840px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Botero pintó su propia versión: 'Mona Lisa a los doce años'.",
       "subcategory": "Arte",
@@ -6458,7 +6642,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 6,
       "revision": {
@@ -6473,7 +6661,7 @@
     },
     {
       "id": "q-0115",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Responde rápidamente, y ahí ya tienes una pista.",
       "question": "¿Qué tipo de palabra es 'rápidamente'?",
@@ -6490,12 +6678,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "school notebook",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANotebooks-rainbow.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Notebooks-rainbow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "utroja0 · CC0 · Wikimedia Commons"
       },
       "fun_fact": "'Rápido' es un adjetivo; si le agregas '-mente', se vuelve adverbio.",
       "subcategory": "Idioma",
@@ -6514,13 +6702,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0116",
-      "status": "draft",
-      "difficulty": 8,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Un caballero peleó contra unos molinos de viento y perdió.",
       "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
       "answer": "Miguel de Cervantes",
@@ -6536,12 +6728,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "windmills Spain",
+        "role": "illustrative",
+        "query": "Consuegra windmills",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoulins_La_Mancha.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Moulins_La_Mancha.jpg/3840px-Moulins_La_Mancha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jebulon · Public domain · Wikimedia Commons"
       },
       "fun_fact": "El Día del Idioma, el 23 de abril, recuerda la muerte de Cervantes.",
       "subcategory": "Literatura",
@@ -6560,12 +6752,17 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
-      "background": null
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
+      "background": null,
+      "difficulty_original": 8
     },
     {
       "id": "q-0117",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un pueblo donde llovió tanto que ni las sombrillas aguantaron.",
       "question": "¿En qué pueblo imaginario transcurre 'Cien años de soledad'?",
@@ -6582,12 +6779,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "rainy tropical village",
+        "role": "illustrative",
+        "query": "yellow butterflies",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose_wing_Mud_puddle_of_Delias_agostina_%28Hewitson%2C_1852%29_%E2%80%93_Yellow_Jezebel_%28Male%29_WLB_IMG_2640.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Close_wing_Mud_puddle_of_Delias_agostina_%28Hewitson%2C_1852%29_%E2%80%93_Yellow_Jezebel_%28Male%29_WLB_IMG_2640.jpg/3840px-Close_wing_Mud_puddle_of_Delias_agostina_%28Hewitson%2C_1852%29_%E2%80%93_Yellow_Jezebel_%28Male%29_WLB_IMG_2640.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Sandipoutsider · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "En el libro llueve en Macondo durante cuatro años, once meses y dos días.",
       "subcategory": "Literatura",
@@ -6606,12 +6803,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0118",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un cielo tan revuelto que parece una licuadora de estrellas.",
       "question": "¿Qué pintor pintó 'La noche estrellada'?",
@@ -6628,12 +6829,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "art museum",
+        "role": "illustrative",
+        "query": "Saint-Rémy-de-Provence",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASt-remy-de-provence_vue.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/St-remy-de-provence_vue.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Eponimm · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "En vida vendió muy pocos cuadros; hoy valen millones.",
       "subcategory": "Arte",
@@ -6652,7 +6853,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 9,
       "revision": {
@@ -6682,7 +6887,7 @@
     },
     {
       "id": "q-0119",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una novela tan triste que se recomienda leer con un paquete de pañuelos.",
       "question": "¿Cómo se llama la famosa novela romántica del colombiano Jorge Isaacs (1867)?",
@@ -6699,12 +6904,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "hacienda valley",
+        "role": "illustrative",
+        "query": "Hacienda El Paraíso",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHacienda_el_Paraiso.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Hacienda_el_Paraiso.jpg/3840px-Hacienda_el_Paraiso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jimena Espinoza Muñoz · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "'La vorágine' es de José Eustasio Rivera y trata sobre la selva.",
       "subcategory": "Literatura",
@@ -6723,12 +6928,16 @@
       "fact_checked": true,
       "needs_media": null,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0120",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Esta es la mejor pregunta de la historia del universo, sin exagerar.",
       "question": "¿Cómo se llama la figura literaria que exagera, como en 'te lo he dicho un millón de veces'?",
@@ -6745,12 +6954,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
+        "role": "illustrative",
         "query": "stack of books",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABooks_in_stack_with_lamps_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Books_in_stack_with_lamps_%28Unsplash%29.jpg/3840px-Books_in_stack_with_lamps_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "chuttersnap chuttersnap · CC0 · Wikimedia Commons"
       },
       "fun_fact": "La onomatopeya imita sonidos: ¡pum!, ¡miau!, ¡tic-tac!",
       "subcategory": "Literatura",
@@ -6769,7 +6978,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "first-120",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null,
       "difficulty_original": 10,
       "revision": {
