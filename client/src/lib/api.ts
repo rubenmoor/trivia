@@ -1,4 +1,4 @@
-import type { Category, Game, JokerEvent, JokerName, Player, Question, Review, Slot, Supply } from "./types";
+import type { Category, Game, JokerEvent, JokerName, Player, Question, Review, Slot, Status, Supply } from "./types";
 
 async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -18,8 +18,11 @@ async function call(url: string, init?: RequestInit): Promise<Response> {
 }
 
 /** batch: a qgen.py run name, "none" for questions without a batch, or null for all. */
-export async function fetchQuestions(batch: string | null): Promise<Question[]> {
-  const query = batch ? `?batch=${encodeURIComponent(batch)}` : "";
+export async function fetchQuestions(batch: string | null, status?: Status): Promise<Question[]> {
+  const params = new URLSearchParams();
+  if (batch) params.set("batch", batch);
+  if (status) params.set("status", status);
+  const query = params.size ? `?${params}` : "";
   return json(await call(`/api/questions${query}`));
 }
 
