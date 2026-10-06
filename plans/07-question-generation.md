@@ -57,13 +57,13 @@ Each criterion is scored 1–5:
 A question with **Correct** or **Unambiguous** below 4 is dropped regardless of its other scores.
 
 ### Difficulty target
-New drafts follow what a game uses (D-25). Each of the 12 levels shows 4 questions from its difficulty range (D-22); spreading those 48 evenly over each range gives the share per difficulty:
+New drafts follow what a game uses (D-31). Each of the 12 levels shows 4 questions from its difficulty range (D-22); spreading those 48 evenly over each range gives the share per difficulty:
 
 | Difficulty | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Per game | 4 | 2 | 3.3 | 5.3 | 6.7 | 7.7 | 4.7 | 4.7 | 5.3 | 4.3 |
 
-That is about **19 %** at 1–3, **51 %** at 4–7 and **30 %** at 8–10. (Before D-25 the target was 15 / 70 / 15, which left the top levels short.)
+That is about **19 %** at 1–3, **51 %** at 4–7 and **30 %** at 8–10. (Before D-31 the target was 15 / 70 / 15, which left the top levels short.)
 
 AI difficulty estimates are guesses. The real calibration comes from game nights: the session log (B-1) records which questions were answered correctly, so levels can be corrected over time.
 
@@ -125,7 +125,7 @@ Existing questions (the first 120, or `needs_work` questions after a review) go 
 
 New drafts can be repaired the same way before `merge` (QG-16): `revise` then `apply` on a drafting run moves each revised draft to `drafts/revised-*.json` and deletes its rating and fact-check. `rate` and `factcheck` then judge the new version, so `merge`'s hard checks still decide. One round only; what still fails is dropped.
 
-## Batch-3 results (2026-10-06, D-25)
+## Batch-3 results (2026-10-06, D-31)
 - 34 subcategories that had no questions yet, 127 slots: 124 drafted, 3 skipped.
 - First rating: 43 hard fails, 41 of them `no_giveaway` (descriptions and early hints that name the answer: "clavar los clavos" for the hammerhead, "rellena de queso" → quesadilla, the only option with "Flores" for the Feria de las Flores). 6 facts wrong.
 - One revise round (QG-16) fixed 44 of the 51 flagged drafts. **116 merged** as `batch: "batch-3"`; 8 dropped (7 giveaways, 1 duplicate inside the batch). Two fact-checks came back uncertain (`fact_checked: false`).

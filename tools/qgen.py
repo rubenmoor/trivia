@@ -38,7 +38,7 @@ PROMPTS = ROOT / "tools" / "prompts"
 WORK = ROOT / "work"
 STYLES_FILE = ROOT / "question-styles.txt"
 
-# Target share per difficulty level (07, "Difficulty target", D-25): what the 12 levels'
+# Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
 # ranges (D-22) show per game, times 3.
 LEVEL_WEIGHTS = {1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13}
 RUBRIC = ["correct", "unambiguous", "no_giveaway", "distractors", "age_fit", "fun", "description"]
