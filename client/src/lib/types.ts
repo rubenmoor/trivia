@@ -116,6 +116,33 @@ export interface Player {
   last_played: string | null;
 }
 
+export type JokerName = "hint" | "skip" | "easier" | "category" | "snipe";
+
+export interface JokerState {
+  available: boolean;
+  /** Why it can't be played right now (Spanish, shown on the TV). */
+  reason: string | null;
+}
+
+export interface Jokers {
+  hint: JokerState;
+  skip: JokerState & { purge: JokerState & { subcategory: string } };
+  easier: JokerState;
+  category: JokerState & {
+    categories: { slug: string; name: string; available: boolean; subcategories: { name: string; available: boolean }[] }[];
+  };
+  snipe: JokerState;
+}
+
+/** What a played joker did (POST /api/game/joker → `event`), for the animation. */
+export type JokerEvent =
+  | { joker: "hint"; hint: number }
+  | { joker: "skip"; purged: string | null }
+  | { joker: "easier"; from: number; to: number }
+  | { joker: "category"; subcategory: string }
+  | { joker: "snipe"; outcome: "miss"; index: number }
+  | { joker: "snipe"; outcome: "hit"; index: number; correct_index: number };
+
 /** The game as the server shows it to the TV (server/game.py `view`): no correct answer before the final answer. */
 export interface Game {
   id: number;
@@ -127,12 +154,24 @@ export interface Game {
   options: { description: string }[];
   history: { level: number; correct: boolean }[];
   can_undo: boolean;
+  /** Subcategories purged with «Paso» in this game. */
+  purged: string[];
+  /** The level repeats after a «Francotirador» hit (until a card is picked). */
+  repeat: boolean;
+  /** Joker availability while a question is on screen, else null (09-jokers.md). */
+  jokers: Jokers | null;
   question: {
     id: string;
     question: string;
     answers: string[];
     media: Media;
     background: Background | null;
+    /** The hints shown so far through «Soplo» (D-27). */
+    hints: string[];
+    /** Answer indexes struck out by «Francotirador» misses. */
+    struck: number[];
+    /** The subcategory chosen with «Cambiazo» for this question, or null. */
+    swapped_to: string | null;
   } | null;
   last: {
     question_id: string;

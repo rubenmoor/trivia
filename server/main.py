@@ -27,8 +27,8 @@ API:
     POST /api/game/skip                            body {"everyone": bool}: skip and burn for the player
                                                    (or for everyone)
     POST /api/game/undo | abandon                  admin overlay actions
-    POST /api/game/joker                           body {"joker": "hint"|"skip"|"easier"|"category",
-                                                   "purge": bool, "subcategory": name}: play a joker
+    POST /api/game/joker                           body {"joker": "hint"|"skip"|"easier"|"category"|"snipe",
+                                                   "purge": bool, "subcategory": name, "index": 0-3}: play a joker
                                                    (09-jokers.md); the response adds {"event": what happened}
 Game responses are {"game": ...} (server/game.py: never the correct answer before the final answer).
 While a question is on screen, the game has `jokers`: per joker {"available", "reason"} (D-27).
@@ -217,7 +217,7 @@ class Handler(BaseHTTPRequestHandler):
                    "undo": lambda pool: game.undo(),
                    "abandon": lambda pool: game.abandon(),
                    "joker": lambda pool: game.joker(pool, str(body.get("joker")), **{
-                       k: body[k] for k in ("purge", "subcategory") if k in body})}
+                       k: body[k] for k in ("purge", "subcategory", "index") if k in body})}
         if action not in actions:
             return self.send_json(404, {"error": "not found"})
         try:

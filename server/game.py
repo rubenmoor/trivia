@@ -19,6 +19,7 @@ Jokers (plans/09-jokers.md, D-26, D-27, JK-2) add:
     struck      answer indexes struck out on the current question («Francotirador» misses)
     jokers      jokers played on the current question, in order
     swapped_to  the subcategory the players chose with «Cambiazo» for the current question, or null
+    repeat      true from a «Francotirador» hit until a card is picked: the level repeats (JK-3)
 History entries of answered questions have "correct"; questions replaced by a joker or skipped by
 the admin have "outcome" (skipped | easier | category | sniped | admin_skip | admin_burn) instead.
 The server shuffles the answers and checks the final answer; the client never sees the
@@ -119,7 +120,8 @@ def players():
 
 def with_defaults(state):
     """Fill in the joker fields for games saved before JK-2."""
-    for key, value in [("purged", []), ("hints_shown", 0), ("struck", []), ("jokers", []), ("swapped_to", None)]:
+    for key, value in [("purged", []), ("hints_shown", 0), ("struck", []), ("jokers", []), ("swapped_to", None),
+                       ("repeat", False)]:
         state.setdefault(key, value)
     return state
 
@@ -227,7 +229,7 @@ def pick(pool, index):
         q = questions_by_id(pool)[state["options"][index]]
         answers = [q["answer"], *q["wrong_answers"]]
         random.shuffle(answers)
-        state.update(phase="question", current=q["id"], answers=answers)
+        state.update(phase="question", current=q["id"], answers=answers, repeat=False)
         save(con, gid, state)
     return state
 
@@ -399,7 +401,32 @@ def play_category(con, gid, pid, state, pool, subcategory=None):
     return {"subcategory": subcategory}
 
 
-JOKERS = {"hint": play_hint, "skip": play_skip, "easier": play_easier, "category": play_category}
+def play_snipe(con, gid, pid, state, pool, index=None):
+    """«Francotirador» (JK-3): shoot an answer. A wrong one is struck out; hitting the right one
+    burns the question and repeats the level with 4 fresh cards (D-27)."""
+    left = len(state["answers"]) - len(state["struck"])
+    if left <= 1:
+        raise GameError("solo queda una respuesta")
+    if not isinstance(index, int) or not 0 <= index < len(state["answers"]) or index in state["struck"]:
+        raise GameError("no se puede apuntar a esa respuesta")
+    q = questions_by_id(pool)[state["current"]]
+    state["jokers"].append("snipe")
+    correct_index = state["answers"].index(q["answer"])
+    if index != correct_index:
+        state["struck"].append(index)
+        return {"outcome": "miss", "index": index}
+    drop_current(con, gid, pid, state, questions_by_id(pool), "sniped", pid)
+    try:
+        state["options"] = draw(con, pid, state, pool)
+    except GameError:
+        raise GameError("si le dan a la correcta, no quedan preguntas para repetir el nivel")
+    state.update(phase="select", repeat=True)
+    leave_question(state)
+    return {"outcome": "hit", "index": index, "correct_index": correct_index}
+
+
+JOKERS = {"hint": play_hint, "skip": play_skip, "easier": play_easier, "category": play_category,
+          "snipe": play_snipe}
 
 
 def joker(pool, name, **args):
@@ -436,7 +463,9 @@ def jokers_view(con, gid, pid, state, pool):
         return {"available": reason is None, "reason": reason}
 
     cur = questions_by_id(pool)[state["current"]]
-    out = {"hint": check(play_hint), "skip": check(play_skip), "easier": check(play_easier)}
+    out = {"hint": check(play_hint), "skip": check(play_skip), "easier": check(play_easier),
+           # Availability tries the worst case, a hit; the client only learns yes or no.
+           "snipe": check(play_snipe, index=state["answers"].index(cur["answer"]))}
     out["skip"]["purge"] = {**check(play_skip, purge=True), "subcategory": cur.get("subcategory")}
 
     avail = available_now(con, pid, state, pool)
@@ -490,7 +519,7 @@ def view(pool):
            "options": [{"description": by_id[i]["description"]} for i in state["options"] if i in by_id],
            "history": [{"level": h["level"], "correct": h["correct"]} for h in state["history"] if "correct" in h],
            "can_undo": bool(state.get("undo")) and result != "abandoned",
-           "purged": state["purged"], "jokers": jokers, "question": None, "last": None}
+           "purged": state["purged"], "repeat": state["repeat"], "jokers": jokers, "question": None, "last": None}
     if state["current"] in by_id:
         q = by_id[state["current"]]
         # Only the hints shown through «Soplo», one per use (D-26, D-27).
