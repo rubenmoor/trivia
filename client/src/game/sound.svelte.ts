@@ -486,6 +486,10 @@ const RECIPES: [RegExp, Recipe][] = [
   [/whoosh|swoosh que sube/, (c, o, t, n) =>
     noise(c, o, t, { from: n.includes("sube") ? 400 : 2400, to: n.includes("sube") ? 3000 : 300, len: 0.45, q: 2, attack: 0.15 })],
   [/swoosh|escoba/, (c, o, t) => noise(c, o, t, { from: 3000, to: 500, len: 0.5, q: 1.5, attack: 0.1, level: 0.5 })],
+  // The chosen envelope tearing open (UI-11): a short run of crackles, rising.
+  [/rasgado/, (c, o, t) => {
+    for (let i = 0; i < 5; i++) noise(c, o, t + i * 0.035, { from: 2200 + i * 600, len: 0.06, q: 2, level: 0.32 });
+  }],
   [/papel/, (c, o, t) => {
     noise(c, o, t, { from: 5000, len: 0.08, q: 3, level: 0.3 });
     noise(c, o, t + 0.07, { from: 3500, len: 0.12, q: 3, level: 0.25 });
