@@ -1,4 +1,4 @@
-import type { Category, Game, Player, Question, Review, Slot, Supply } from "./types";
+import type { Category, Game, JokerEvent, JokerName, Player, Question, Review, Slot, Supply } from "./types";
 
 async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -92,6 +92,23 @@ export interface GameActionBody {
   index?: number;
   player?: string;
   everyone?: boolean;
+}
+
+/** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */
+export async function playJoker(body: {
+  joker: JokerName;
+  purge?: boolean;
+  subcategory?: string;
+  index?: number;
+}): Promise<{ game: Game; event: JokerEvent }> {
+  const res = await call("/api/game/joker", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const out = await res.json().catch(() => ({}));
+  if (!res.ok) throw new GameError(out.error ?? `HTTP ${res.status}`, null);
+  return out;
 }
 
 /** POST /api/game/<action> (server/game.py); returns the game afterwards. */

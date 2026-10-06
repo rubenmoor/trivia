@@ -10,6 +10,10 @@ export const PICK_MS = 550;
 export const PADLOCK_MS = 1400;
 /** Wait between the final answer and the reveal, by level (index 0 = level 1). */
 export const REVEAL_WAIT_S = [3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 10, 12];
+/** An armed joker token drops back after this long (09, "Arming"). */
+export const ARM_MS = 4000;
+/** A Francotirador hit: the right answer glows this long before the level repeats (JK-8). */
+export const SNIPE_HIT_MS = 2500;
 /** How long the revealed answer stays on screen before the result screen. */
 export const AFTER_REVEAL_MS = 2500;
 

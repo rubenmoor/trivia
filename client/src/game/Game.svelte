@@ -3,16 +3,17 @@
   // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (server/game.py).
   import { onMount } from "svelte";
-  import { fetchGame, gameAction, GameError, type GameActionBody } from "../lib/api";
-  import type { Game, Supply } from "../lib/types";
+  import { fetchGame, gameAction, GameError, playJoker, type GameActionBody } from "../lib/api";
+  import type { Game, JokerEvent, Supply } from "../lib/types";
   import Captions from "./Captions.svelte";
   import { consolation, milestone } from "./copy";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
+  import JokerTray from "./JokerTray.svelte";
   import Overlay from "./Overlay.svelte";
   import Placeholder from "./Placeholder.svelte";
   import Player from "./Player.svelte";
-  import Question from "./Question.svelte";
+  import Question, { type JokerPlay } from "./Question.svelte";
   import { music, sfx, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import "./theme.css";
@@ -111,6 +112,25 @@
     }
   }
 
+  /** A joker goes to the server; errors show in the corner (09-jokers.md). */
+  async function playJokerAction(body: JokerPlay) {
+    try {
+      const res = await playJoker(body);
+      error = null;
+      return res;
+    } catch (e) {
+      error = e instanceof Error ? e.message : String(e);
+      return null;
+    }
+  }
+
+  /** The joker is done on the Question screen: Paso goes back to Select, a Francotirador hit to Level. */
+  async function jokerPlayed(next: Game, event: JokerEvent) {
+    game = next;
+    if (event.joker === "skip") await go("select", "papel");
+    else if (event.joker === "snipe" && event.outcome === "hit") await go("level", "rebobinar");
+  }
+
   /** Where a game continues: the Level screen before a choice, else its question. */
   function resume() {
     if (game?.phase === "question") return go("question", "swoosh");
@@ -206,6 +226,7 @@
     if (e.repeat) return;
     if (overlayOpen) return overlayRef?.key(e);
     if (screen === "player" && playerRef?.dialogOpen()) return playerRef.key(e);
+    if (screen === "question" && !busy && questionRef?.dialogOpen()) return questionRef.key(e);
     if (e.key === "Escape") {
       e.preventDefault();
       return openOverlay();
@@ -280,18 +301,24 @@
   {:else if screen === "level" && game}
     <Stage />
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
+    <aside class="side-tray"><JokerTray readonly /></aside>
     <section class="level">
       <Tower filled={blocks} drop={previous === "correct"} />
       <div class="level-text">
         <p class="kicker">Nivel</p>
         <h1 class="title big">{game.level} <span class="of">de 12</span></h1>
-        {#if milestone(game.level, game.id)}<p class="milestone">{milestone(game.level, game.id)}</p>{/if}
+        {#if game.repeat}
+          <p class="milestone again">¡Otra vez! Le dieron a la correcta.</p>
+        {:else if milestone(game.level, game.id)}
+          <p class="milestone">{milestone(game.level, game.id)}</p>
+        {/if}
         <p class="hint label"><kbd>Enter</kbd> para seguir</p>
       </div>
     </section>
   {:else if screen === "select" && game}
     <Stage />
     <div class="corner-hud"><Hud level={game.level} player={game.player} /></div>
+    <aside class="side-tray"><JokerTray readonly /></aside>
     <section class="select">
       <h2 class="title">Elijan una pregunta</h2>
       {#if game.options.length === 0}
@@ -324,6 +351,9 @@
         level={game.level}
         playerName={game.player}
         paused={overlayOpen}
+        jokers={game.jokers}
+        play={playJokerAction}
+        onplayed={jokerPlayed}
         onanswered={answered}
       />
     {/key}
@@ -471,6 +501,16 @@
     top: var(--safe-y);
     left: var(--safe-x);
     z-index: 1;
+  }
+  .side-tray {
+    position: absolute;
+    left: var(--safe-x);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .milestone.again {
+    color: var(--coral);
   }
   .chip {
     display: inline-block;

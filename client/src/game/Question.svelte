@@ -1,20 +1,28 @@
 <script lang="ts">
   // The Question screen (04-ui-tv-display.md): media, question, 4 answers, the lock-in
-  // mechanic, the final answer, the level-dependent wait and the reveal.
+  // mechanic, the final answer, the level-dependent wait and the reveal. Jokers (09-jokers.md):
+  // the tray, arming, Paso's choice, Cambiazo's picker, Francotirador's aiming, Soplo's notes.
   import { onMount } from "svelte";
   import { gameAction } from "../lib/api";
-  import type { Game } from "../lib/types";
+  import type { Game, JokerEvent, JokerName, Jokers } from "../lib/types";
+  import CategoryPicker from "./CategoryPicker.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
+  import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
   import { music, sfx } from "./sound.svelte";
-  import { AFTER_REVEAL_MS, PADLOCK_MS, REVEAL_WAIT_S, sleep } from "./timing";
+  import { AFTER_REVEAL_MS, ARM_MS, PADLOCK_MS, REVEAL_WAIT_S, SNIPE_HIT_MS, sleep } from "./timing";
+
+  export type JokerPlay = { joker: JokerName; purge?: boolean; subcategory?: string; index?: number };
 
   let {
     question,
     level,
     playerName,
     paused,
+    jokers,
+    play,
+    onplayed,
     onanswered,
   }: {
     question: NonNullable<Game["question"]>;
@@ -23,6 +31,12 @@
     playerName: string | null;
     /** The admin overlay is open: the wait before the reveal stops. */
     paused: boolean;
+    /** Joker availability from the server, or null. */
+    jokers: Jokers | null;
+    /** Sends a joker to the server (Game.svelte shows errors); null if it was refused. */
+    play: (body: JokerPlay) => Promise<{ game: Game; event: JokerEvent } | null>;
+    /** The joker is done on screen: Game.svelte takes the new game (and changes screen if needed). */
+    onplayed: (game: Game, event: JokerEvent) => void;
     onanswered: (game: Game | null) => void;
   } = $props();
 
@@ -40,6 +54,17 @@
   let player = $state<HTMLMediaElement>();
   let padlockTimer: ReturnType<typeof setTimeout> | undefined;
 
+  /** The joker token lifted by a first tap (Soplo, Bájale), waiting for the second. */
+  let armed = $state<JokerName | null>(null);
+  let armTimer: ReturnType<typeof setTimeout> | undefined;
+  /** The joker dialog or mode on screen. */
+  let mode = $state<null | "skip" | "category" | "snipe">(null);
+  /** Francotirador's target, and the shot that hit the correct answer. */
+  let target = $state<number | null>(null);
+  let hit = $state<number | null>(null);
+  let jokerBusy = $state(false);
+  let picker = $state<ReturnType<typeof CategoryPicker>>();
+
   const media = $derived(question.media);
   const src = (url: string | null) => (url ? `/media?url=${encodeURIComponent(url)}` : null);
   /** The full-bleed picture: the image itself, or an audio question's background (D-14). */
@@ -56,7 +81,10 @@
 
   onMount(() => {
     if (media.type !== "image" && media.file_url) music(null); // the music is off while question media plays
-    return () => clearTimeout(padlockTimer);
+    return () => {
+      clearTimeout(padlockTimer);
+      clearTimeout(armTimer);
+    };
   });
 
   function mediaEnded() {
@@ -64,7 +92,10 @@
   }
 
   function tap(i: number) {
-    if (submitted) return;
+    if (submitted || jokerBusy || question.struck.includes(i)) return;
+    if (mode === "snipe") return aim(i);
+    if (mode) return;
+    disarm();
     if (locked !== null) return unlock();
     locked = i;
     sfx("candado: clunk");
@@ -120,10 +151,97 @@
     player.play().catch(() => {});
   }
 
+  // Jokers (09-jokers.md) ------------------------------------------------------------------------
+
+  /** True while a joker dialog, mode or armed token waits: it gets every key, Esc included. */
+  export function dialogOpen() {
+    return mode !== null || armed !== null;
+  }
+
+  function disarm() {
+    clearTimeout(armTimer);
+    armed = null;
+  }
+
+  /** A tap on a token (or its key): Soplo and Bájale arm first; the others open their dialog. */
+  function press(name: JokerName) {
+    if (submitted || jokerBusy || mode || !jokers?.[name].available) return;
+    if (locked !== null) unlock(); // a joker unlocks a locked answer first (09, "Common")
+    if (name === "skip" || name === "category" || name === "snipe") {
+      disarm();
+      mode = name;
+      target = name === "snipe" ? question.answers.findIndex((_, i) => !question.struck.includes(i)) : null;
+      sfx(name === "snipe" ? "mira: latido" : "comodín: abrir");
+      return;
+    }
+    if (armed === name) return fire({ joker: name });
+    disarm();
+    armed = name;
+    sfx("comodín: preparado");
+    armTimer = setTimeout(() => (armed = null), ARM_MS);
+  }
+
+  async function fire(body: JokerPlay) {
+    disarm();
+    mode = null;
+    jokerBusy = true;
+    // PLACEHOLDER(JK-5): no fly-out, burst and pop-back of the token yet.
+    sfx(`comodín: ${TOKENS.find((t) => t.name === body.joker)?.label}`);
+    const res = await play(body);
+    if (!res) {
+      jokerBusy = false;
+      return;
+    }
+    if (res.event.joker === "snipe" && res.event.outcome === "hit") {
+      // PLACEHOLDER(JK-8): no scope, shot or rewind animation; the right answer glows, then Level.
+      hit = res.event.correct_index;
+      sfx("¡Ups!");
+      await wait(SNIPE_HIT_MS);
+    } else if (res.event.joker === "snipe") {
+      sfx("vidrio roto");
+    }
+    jokerBusy = false;
+    target = null;
+    onplayed(res.game, res.event);
+  }
+
+  function aim(i: number) {
+    if (question.struck.includes(i)) return;
+    if (target === i) return fire({ joker: "snipe", index: i });
+    target = i;
+    sfx("mira: tic");
+  }
+
+  /** Arrow keys move the crosshair over the answers that are left (2×2 grid). */
+  function moveTarget(key: string) {
+    const step = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: 2, ArrowUp: -2 }[key] ?? 0;
+    for (let i = (target ?? 0) + step; i >= 0 && i < question.answers.length; i += step) {
+      if (!question.struck.includes(i)) return void (target = i);
+    }
+  }
+
+  const JOKER_KEYS: Record<string, JokerName> = Object.fromEntries(TOKENS.map((t) => [t.key.toLowerCase(), t.name]));
+
   export function key(e: KeyboardEvent) {
     const k = e.key.toLowerCase();
     const i = "abcd".indexOf(k) >= 0 ? "abcd".indexOf(k) : "1234".indexOf(k);
-    if (k.length === 1 && i >= 0) tap(i);
+    const cancel = e.key === "Escape" || e.key === "Backspace";
+    if (mode === "category") return picker?.key(e);
+    if (mode === "skip") {
+      if (cancel) mode = null;
+      else if (e.key === "1") fire({ joker: "skip" });
+      else if (e.key === "2" && jokers?.skip.purge.available) fire({ joker: "skip", purge: true });
+      else return;
+    } else if (mode === "snipe") {
+      if (cancel) mode = target = null;
+      else if (k.length === 1 && i >= 0) aim(i);
+      else if (e.key.startsWith("Arrow")) moveTarget(e.key);
+      else if ((e.key === "Enter" || e.key === " ") && target !== null) fire({ joker: "snipe", index: target });
+      else return;
+    } else if (armed && cancel) disarm();
+    else if (armed && (e.key === "Enter" || e.key === " ")) fire({ joker: armed });
+    else if (k in JOKER_KEYS) press(JOKER_KEYS[k]);
+    else if (k.length === 1 && i >= 0) tap(i);
     else if (e.key === "Backspace") unlock();
     else if (e.key === "Enter" || e.key === " ") submit();
     else if (k === "r") replay();
@@ -135,6 +253,9 @@
   const long = $derived(question.question.length > 110);
 
   function answerClass(i: number) {
+    if (hit !== null) return i === hit ? "right" : "dim";
+    if (question.struck.includes(i)) return "struck";
+    if (mode === "snipe") return i === target ? "target" : "";
     if (revealed && result) {
       if (i === result.correct_index) return "right";
       if (i === result.chosen) return "wrong";
@@ -164,6 +285,7 @@
   </div>
 
   <header class="card glass-strong" class:long>
+    {#if question.swapped_to}<p class="topic label">Tema: {question.swapped_to}</p>{/if}
     <h1>{question.question}</h1>
     {#if media.type !== "image"}
       <button class="replay" onclick={replay}>
@@ -173,23 +295,78 @@
   </header>
 
   <div class="middle">
+    {#if question.hints.length}
+      <div class="notes">
+        {#each question.hints as hint, i (i)}
+          <p class="note" style:--tilt="{[-2.5, 1.8, -1.2][i]}deg" class:strong={i === 2}>
+            <span class="note-label">Soplo {i + 1}</span>{hint}
+          </p>
+        {/each}
+      </div>
+    {/if}
     {#if mediaFailed || (!media.file_url && media.type !== "audio")}
       <Placeholder task="IMG" label="medio no disponible (¿falta `python3 tools/media.py sync`?)" chip />
     {/if}
   </div>
 
   <aside class="tray">
-    <!-- PLACEHOLDER(JK-4, JK-6): the joker tray runs down this strip; «Soplo» notes go under the question (D-26). -->
-    <Placeholder task="JK-4 · JK-6" label="comodines" chip />
+    <JokerTray jokers={submitted ? null : jokers} hintsLeft={3 - question.hints.length} {armed} onpress={press} />
   </aside>
+
+  {#if mode === "skip" && jokers}
+    <div class="backdrop-dim">
+      <div class="dialog glass-strong">
+        <h2>Paso</h2>
+        <button class="candy" onclick={() => fire({ joker: "skip" })}>Paso <kbd>1</kbd></button>
+        <button
+          class="secondary purge"
+          onclick={() => fire({ joker: "skip", purge: true })}
+          disabled={!jokers.skip.purge.available}
+        >
+          Paso, y fuera el tema «{jokers.skip.purge.subcategory}» <kbd>2</kbd>
+          {#if jokers.skip.purge.reason}<span class="reason">{jokers.skip.purge.reason}</span>{/if}
+        </button>
+        <button class="secondary" onclick={() => (mode = null)}>Cancelar <kbd>Esc</kbd></button>
+        <!-- PLACEHOLDER(JK-6): no sweep, «ELIMINADO» stamp or shredder yet. -->
+      </div>
+    </div>
+  {/if}
+  {#if mode === "category" && jokers}
+    <CategoryPicker
+      bind:this={picker}
+      categories={jokers.category.categories}
+      onpick={(subcategory) => fire({ joker: "category", subcategory })}
+      oncancel={() => (mode = null)}
+    />
+  {/if}
+  {#if mode === "snipe"}
+    <!-- PLACEHOLDER(JK-8): no scope vignette or shatter yet; the target gets a crosshair. -->
+    <p class="aim-hint glass-strong">
+      <Icon name="crosshair" /> Elijan la respuesta que creen que es <b>falsa</b> · <kbd>Enter</kbd> dispara ·
+      <kbd>Esc</kbd> cancela
+    </p>
+  {/if}
+  {#if hit !== null}
+    <p class="aim-hint hit glass-strong">¡Le dieron a la correcta! Este nivel se repite.</p>
+  {/if}
 
   <footer>
     <div class="answers">
       {#each question.answers as answer, i (i)}
-        <button class="answer glass {answerClass(i)}" onclick={() => tap(i)} disabled={submitted}>
+        <button
+          class="answer glass {answerClass(i)}"
+          onclick={() => tap(i)}
+          disabled={submitted || question.struck.includes(i) || hit !== null}
+        >
           <span class="letter">{LETTERS[i]}</span>
           <span class="text">{answer}</span>
-          {#if revealed && result && i === result.correct_index}
+          {#if hit === i}
+            <span class="badge"><Icon name="check" /></span>
+          {:else if question.struck.includes(i)}
+            <span class="badge"><Icon name="cross" /></span>
+          {:else if mode === "snipe" && target === i}
+            <span class="badge crosshair"><Icon name="crosshair" /></span>
+          {:else if revealed && result && i === result.correct_index}
             <span class="badge"><Icon name="check" /></span>
           {:else if revealed && result && i === result.chosen}
             <span class="badge"><Icon name="cross" /></span>
@@ -299,8 +476,97 @@
   }
   .middle {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(0.8 * var(--u));
+  }
+  .topic {
+    margin: 0 0 calc(0.3 * var(--u));
+    color: var(--sky);
+  }
+  .notes {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    gap: calc(1 * var(--u));
+    max-width: 70vw;
+  }
+  .note {
+    margin: 0;
+    max-width: calc(26 * var(--u));
+    padding: calc(0.7 * var(--u)) calc(1 * var(--u));
+    border-radius: calc(0.4 * var(--u));
+    background: var(--cream);
+    color: var(--ink);
+    font-size: calc(1.3 * var(--u));
+    font-weight: 700;
+    line-height: 1.25;
+    box-shadow: 0 calc(0.5 * var(--u)) calc(1 * var(--u)) rgba(0, 0, 0, 0.4);
+    transform: rotate(var(--tilt));
+    animation: note-in 0.5s var(--spring) backwards;
+  }
+  .note.strong {
+    background: #ffe7a8;
+  }
+  .note-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: calc(0.9 * var(--u));
+    color: var(--amber-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .backdrop-dim {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    background: rgba(5, 8, 16, 0.55);
+  }
+  .dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: calc(0.9 * var(--u));
+    min-width: calc(36 * var(--u));
+    padding: calc(1.8 * var(--u)) calc(2.2 * var(--u));
+    text-align: center;
+    animation: arrive 0.35s var(--spring) backwards;
+  }
+  .dialog h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: calc(2.6 * var(--u));
+  }
+  .dialog .candy,
+  .dialog .secondary {
+    justify-content: center;
+  }
+  .purge {
+    flex-direction: column;
+  }
+  .reason {
+    font-family: var(--font-text);
+    font-size: calc(1.1 * var(--u));
+    color: var(--slate-200);
+  }
+  .aim-hint {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: calc(0.6 * var(--u)) calc(1.4 * var(--u));
+    font-family: var(--font-display);
+    font-size: calc(1.4 * var(--u));
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .aim-hint.hit {
+    color: var(--mint);
+    font-size: calc(2 * var(--u));
   }
   .tray {
     position: absolute;
@@ -389,6 +655,35 @@
   .answer.dim {
     opacity: 0.45;
     filter: saturate(0.4);
+  }
+  .answer.struck {
+    opacity: 0.35;
+    filter: grayscale(1);
+    text-decoration: line-through;
+    text-decoration-color: var(--coral);
+    text-decoration-thickness: calc(0.2 * var(--u));
+  }
+  .answer.struck .badge {
+    color: var(--coral);
+  }
+  .answer.target {
+    border: calc(0.25 * var(--u)) solid var(--coral);
+    box-shadow: 0 0 calc(1.6 * var(--u)) rgba(255, 84, 112, 0.45);
+  }
+  .crosshair {
+    color: var(--coral);
+    animation: spin 2.5s linear infinite;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes note-in {
+    from {
+      opacity: 0;
+      transform: translateY(calc(-2 * var(--u))) rotate(-10deg) scale(0.7);
+    }
   }
   .answer.right {
     border-color: var(--mint);
