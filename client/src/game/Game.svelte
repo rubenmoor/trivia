@@ -41,6 +41,8 @@
   let picked = $state<number | null>(null);
   /** The joker that swapped the question on screen in place (Bájale, Cambiazo), for its flip and dial. */
   let swappedBy = $state<JokerEvent | null>(null);
+  /** Cards on the table that replaced a skipped or purged one: they deal in with «¡Nueva!» (JK-6). */
+  let fresh = $state<Set<number>>(new Set());
   let game = $state<Game | null>(null);
   let supply = $state<Supply | null>(null);
   let error = $state<string | null>(null);
@@ -83,17 +85,21 @@
   }
 
   /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music. */
-  async function go(next: Screen, effect: string) {
+  /** `apply` runs behind the black: a new game state that the old screen can't show (no question
+   * any more, a different `last`) must not land before the screen switches. */
+  async function go(next: Screen, effect: string, apply?: () => void) {
     busy = true;
     music(null);
     sfx(effect);
     black = true;
     await sleep(FADE_MS);
+    apply?.();
     music(MUSIC[next]);
     previous = screen;
     screen = next;
     picked = null;
     swappedBy = null;
+    if (next !== "select") fresh = new Set();
     // PLACEHOLDER(UI-7): no preloading of the next screen's media before fading in.
     black = false;
     await sleep(FADE_MS);
@@ -102,18 +108,32 @@
 
   /** Run a server action; errors show in the corner and leave the screen as it is. */
   async function act(action: Parameters<typeof gameAction>[0], body?: GameActionBody): Promise<boolean> {
+    const next = await request(action, body);
+    if (next === undefined) return false;
+    game = next;
+    return true;
+  }
+
+  /** A server action without taking its game yet (see `go`); undefined if it failed. */
+  async function request(action: Parameters<typeof gameAction>[0], body?: GameActionBody) {
     busy = true;
     try {
-      game = await gameAction(action, body);
+      const next = await gameAction(action, body);
       error = null;
-      return true;
+      return next;
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
       if (e instanceof GameError && e.supply) supply = e.supply;
-      return false;
+      return undefined;
     } finally {
       busy = false;
     }
+  }
+
+  /** Cards on the new table that weren't on the old one (JK-6). */
+  function newCards(next: Game | null) {
+    const before = game?.options.map((o) => o.description) ?? [];
+    return new Set(next?.options.flatMap((o, i) => (before.includes(o.description) ? [] : [i])) ?? []);
   }
 
   /** A joker goes to the server; errors show in the corner (09-jokers.md). */
@@ -137,9 +157,12 @@
       sfx(event.joker === "easier" ? "silbato que baja" : "swoosh que sube");
       setTimeout(() => (swap.active = false), FLIP_MS * 2 + 100);
     }
-    game = next;
-    if (event.joker === "skip") await go("select", "papel");
-    else if (event.joker === "snipe" && event.outcome === "hit") await go("level", "rebobinar");
+    if (event.joker === "skip") {
+      const cards = newCards(next);
+      await go("select", "papel", () => ((game = next), (fresh = cards)));
+    } else if (event.joker === "snipe" && event.outcome === "hit") {
+      await go("level", "rebobinar", () => (game = next));
+    } else game = next;
   }
 
   /** Where a game continues: the Level screen before a choice, else its question. */
@@ -182,11 +205,11 @@
   }
 
   async function answered(next: Game | null) {
-    game = next;
-    if (!game) return;
-    if (game.phase === "won") await go("victory", "boom");
-    else if (game.phase === "lost") await go("wrong", "boom");
-    else await go("correct", "boom");
+    if (!next) return;
+    const apply = () => (game = next);
+    if (next.phase === "won") await go("victory", "boom", apply);
+    else if (next.phase === "lost") await go("wrong", "boom", apply);
+    else await go("correct", "boom", apply);
   }
 
   async function toStart() {
@@ -212,13 +235,17 @@
 
   async function skip(everyone: boolean) {
     overlayOpen = false;
-    if (await act("skip", { everyone })) await go("select", "papel");
+    const next = await request("skip", { everyone });
+    if (next === undefined) return;
+    const cards = newCards(next);
+    await go("select", "papel", () => ((game = next), (fresh = cards)));
   }
 
   async function undo() {
     overlayOpen = false;
     pausedMedia = [];
-    if (await act("undo")) await go("question", "rebobinar");
+    const next = await request("undo");
+    if (next !== undefined) await go("question", "rebobinar", () => (game = next));
   }
 
   async function restart() {
@@ -341,17 +368,19 @@
             class="card"
             class:chosen={picked === i}
             class:gone={picked !== null && picked !== i}
+            class:fresh={fresh.has(i)}
             style:--tilt="{tilt(i)}deg"
             style:--deal-delay="{i * 0.12}s"
             onclick={() => picked === null && pick(i)}
             disabled={busy}
           >
             <span class="seal">{i + 1}</span>
+            {#if fresh.has(i)}<span class="new-badge">¡Nueva!</span>{/if}
             <span class="description">{option.description}</span>
           </button>
         {/each}
       </div>
-      <!-- PLACEHOLDER(UI-11): no tear-open of the chosen card; no «¡Nueva!» highlight for a replaced card (09). -->
+      <!-- PLACEHOLDER(UI-11): no tear-open of the chosen card. -->
       <Placeholder task="UI-11" label="la carta elegida no se abre todavía" chip />
     </section>
   {:else if screen === "question" && game?.question}
@@ -634,6 +663,26 @@
   }
   .description {
     margin-top: calc(2.4 * var(--u));
+  }
+  .card.fresh {
+    box-shadow:
+      0 calc(0.4 * var(--u)) 0 #d9cfb6,
+      0 0 calc(2.4 * var(--u)) rgba(76, 201, 240, 0.7);
+    animation-delay: calc(var(--deal-delay) + 0.5s);
+  }
+  .new-badge {
+    position: absolute;
+    top: calc(-1 * var(--u));
+    right: calc(-1 * var(--u));
+    padding: calc(0.2 * var(--u)) calc(0.8 * var(--u));
+    border-radius: calc(0.8 * var(--u));
+    background: var(--sky);
+    color: var(--night-900);
+    font-family: var(--font-display);
+    font-size: calc(1.3 * var(--u));
+    font-weight: 800;
+    transform: rotate(8deg);
+    box-shadow: 0 calc(0.2 * var(--u)) calc(0.6 * var(--u)) rgba(0, 0, 0, 0.4);
   }
   .card:hover:not(:disabled),
   .card:focus-visible {

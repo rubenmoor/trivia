@@ -12,9 +12,10 @@
   import JokerFlight from "./JokerFlight.svelte";
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
+  import Shredder from "./Shredder.svelte";
   import { music, sfx } from "./sound.svelte";
   import { cardFlip, crossfade } from "./swap";
-  import { AFTER_REVEAL_MS, ARM_MS, PADLOCK_MS, REVEAL_WAIT_S, SNIPE_HIT_MS, sleep } from "./timing";
+  import { AFTER_REVEAL_MS, ARM_MS, PADLOCK_MS, REVEAL_WAIT_S, SNIPE_HIT_MS, SWEEP_MS, sleep } from "./timing";
 
   export type JokerPlay = { joker: JokerName; purge?: boolean; subcategory?: string; index?: number };
 
@@ -72,6 +73,9 @@
   /** The token flying to the centre (JK-5), and the slot a fresh one pops back into. */
   let flight = $state<{ name: JokerName; from: DOMRect; done: () => void } | null>(null);
   let popping = $state<JokerName | null>(null);
+  /** «Paso» (JK-6): the purged subcategory in the shredder, then the question swept off. */
+  let shredding = $state<{ name: string; done: () => void } | null>(null);
+  let sweeping = $state(false);
   let picker = $state<ReturnType<typeof CategoryPicker>>();
 
   const media = $derived(question.media);
@@ -217,6 +221,13 @@
       await wait(SNIPE_HIT_MS);
     } else if (res.event.joker === "snipe") {
       sfx("vidrio roto");
+    } else if (res.event.joker === "skip") {
+      const purged = res.event.purged;
+      if (purged) await new Promise<void>((done) => (shredding = { name: purged, done }));
+      shredding = null;
+      sweeping = true;
+      sfx("escoba: fuuush");
+      await sleep(SWEEP_MS);
     }
     jokerBusy = false;
     target = null;
@@ -284,7 +295,7 @@
   }
 </script>
 
-<div class="question-screen" class:dark={submitted && !revealed}>
+<div class="question-screen" class:dark={submitted && !revealed} class:sweeping>
   <div class="backdrop" in:crossfade|global out:crossfade|global>
     {#if media.type === "video" && media.file_url}
       <!-- svelte-ignore a11y_media_has_caption -->
@@ -362,10 +373,10 @@
           {#if jokers.skip.purge.reason}<span class="reason">{jokers.skip.purge.reason}</span>{/if}
         </button>
         <button class="secondary" onclick={() => (mode = null)}>Cancelar <kbd>Esc</kbd></button>
-        <!-- PLACEHOLDER(JK-6): no sweep, «ELIMINADO» stamp or shredder yet. -->
       </div>
     </div>
   {/if}
+  {#if shredding}<Shredder name={shredding.name} ondone={shredding.done} />{/if}
   {#if mode === "category" && jokers}
     <CategoryPicker
       bind:this={picker}
@@ -508,6 +519,19 @@
     background: none;
     font-size: calc(1.1 * var(--u));
     color: var(--slate-200);
+  }
+  /* «Paso»: everything on the question is swept off to the side (JK-6). */
+  .sweeping .card,
+  .sweeping .middle,
+  .sweeping footer {
+    transition:
+      transform var(--sweep, 0.55s) cubic-bezier(0.6, 0, 0.9, 0.5),
+      opacity var(--sweep, 0.55s);
+    transform: translateX(-120vw) rotate(-8deg);
+    opacity: 0;
+  }
+  .sweeping footer {
+    transition-delay: 0.08s;
   }
   .middle {
     display: flex;

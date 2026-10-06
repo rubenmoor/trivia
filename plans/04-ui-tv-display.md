@@ -202,7 +202,7 @@ For now, everything works with a mouse and with the keyboard of the TV machine (
 - [~] UI-4 Design the reveal, Correct, Wrong and Victory animations. *2026-10-06: reveal pop/shake, Wrong desaturates with a vignette and the tower crumbles, Victory with crown and gold stage; the fireworks are UI-9.*
 - [-] UI-5 ~~Optional: sound effects and music.~~ Sound is now required (D-21); split into UI-8 and UI-10.
 - [ ] UI-6 Test on the actual TV (overscan, resolution, viewing distance, volume levels, transition timings).
-- [x] UI-7 Implement the screen state machine and the shared transition routine (fade, black, input lock). *2026-10-06: `client/src/game/Game.svelte` (D-25); no preloading yet (`PLACEHOLDER(UI-7)`).*
+- [x] UI-7 Implement the screen state machine and the shared transition routine (fade, black, input lock). *2026-10-06: `client/src/game/Game.svelte` (D-25); no preloading yet (`PLACEHOLDER(UI-7)`). Fixed: a new game state that the old screen can't show (after an answer, undo, skip, Paso, a Snipe hit) is now applied behind the black (`go(…, apply)`); before, «Esta pantalla no tiene datos» flashed during the fade.*
 - [ ] UI-8 Audio engine: AudioContext, three channels with gain, fades and crossfades, three gapless music loops, unlock on the first click, synthesized fallbacks.
 - [ ] UI-9 Fireworks overlay: canvas with at least 4 variants, random pick, finale mode.
 - [ ] UI-10 Source sound assets (CC0/CC BY), add `client/public/audio/CREDITS.md`.
