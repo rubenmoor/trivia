@@ -10943,7 +10943,7 @@
     },
     {
       "id": "q-0201",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un pescado tan grande que, en vez de caber en la sartén, la sartén cabe en él.",
       "question": "Mira la foto: ¿cómo se llama este pez gigante de los ríos del Amazonas?",
@@ -10984,12 +10984,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0202",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "El despertador de la selva no tiene botón para apagarlo.",
       "question": "Escucha: ¿qué animal de la selva amazónica hace este sonido?",
@@ -11030,7 +11034,11 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": {
         "query": "misty rainforest river",
         "source_url": null,
@@ -11040,7 +11048,7 @@
     },
     {
       "id": "q-0203",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Juntarlas todas es más difícil que llenar el álbum del Mundial.",
       "question": "En 'Dragon Ball', ¿cuántas esferas del dragón hay que reunir para llamar al dragón Shenlong y pedirle un deseo?",
@@ -11081,12 +11089,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0204",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Libros con dibujos que se leen al revés y nadie se queja.",
       "question": "¿Cómo se llaman las historietas japonesas en las que se basan muchos animes?",
@@ -11127,12 +11139,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0205",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una pregunta para la que vas a necesitar torcer mucho el cuello.",
       "question": "¿Qué tipo de árbol es el más alto del mundo?",
@@ -11173,12 +11189,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0206",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Las plantas tienen paneles solares desde mucho antes de que estuvieran de moda.",
       "question": "¿Cómo se llama el proceso con el que las hojas usan la luz del sol, el agua y el aire para fabricar su propio alimento?",
@@ -11219,12 +11239,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0207",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Parece una armadura de escamas, pero no tiene a nadie adentro.",
       "question": "Mira este acercamiento: ¿qué es?",
@@ -11265,12 +11289,16 @@
       "fact_checked": false,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0208",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Dos hermanos que, en vez de pelear por el control remoto, se pusieron a inventar cosas que vuelan.",
       "question": "¿Cómo se llamaban los hermanos que hicieron el primer vuelo en un avión con motor, en 1903?",
@@ -11311,12 +11339,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0209",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un avión tan grande que si fuera un bus, no cabría en ninguna calle de tu barrio.",
       "question": "¿Cuál es el avión de pasajeros más grande del mundo?",
@@ -11357,12 +11389,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0210",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "El chismoso más confiable del avión: lo graba todo y nunca se le olvida nada.",
       "question": "¿Cómo se llama el aparato de un avión que graba las conversaciones de los pilotos y los datos del vuelo, para saber qué pasó si algo sale mal?",
@@ -11403,12 +11439,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0211",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "El reloj del baloncesto es tan tacaño que lo paran a cada rato para no regalar ni un segundo.",
       "question": "En la NBA, el partido se divide en cuatro cuartos. ¿Cuántos minutos dura cada cuarto?",
@@ -11449,12 +11489,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0212",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una jugada que deja al aro temblando y a los rivales mirando para arriba.",
       "question": "En baloncesto, ¿cómo se llama la jugada en la que el jugador salta y mete el balón por el aro desde arriba, con fuerza, con una o dos manos?",
@@ -11495,12 +11539,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0213",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Un caballo que nunca ha comido pasto, pero corre a más de 300 km por hora.",
       "question": "Mira este escudo en un carro: ¿de qué marca es?",
@@ -11541,12 +11589,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0214",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un carro tan bajito que para subirte casi tienes que acostarte.",
       "question": "¿De qué país es la marca de carros deportivos Lamborghini?",
@@ -11587,12 +11639,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0215",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "El abuelo de todos los carros que hoy pitan en tu cuadra.",
       "question": "¿Qué marca fabricó el famoso Modelo T, uno de los primeros carros hechos en serie en una fábrica?",
@@ -11633,12 +11689,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0216",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un castillo tan de cuento que parece que lo dibujaron antes de construirlo.",
       "question": "Mira la foto: ¿cómo se llama este famoso castillo?",
@@ -11679,12 +11739,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0217",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "Los castillos también tenían sonrisa, pero con unos dientes bastante peleones.",
       "question": "¿Cómo se llaman los bloques de piedra en forma de diente que hay en lo alto de las murallas de un castillo, detrás de los cuales se protegían los arqueros?",
@@ -11725,12 +11789,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0218",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "En este castillo hay unos guardias con plumas que no se pueden ir ni de vacaciones.",
       "question": "Según una vieja leyenda, si cierto tipo de ave abandona la Torre de Londres, caerá el reino. ¿Qué aves viven por eso siempre en la Torre?",
@@ -11771,12 +11839,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0219",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un castillo con fama de vampiro, aunque nadie ha encontrado los colmillos.",
       "question": "El castillo de Bran, famoso porque lo relacionan con la leyenda de Drácula, está en la región de Transilvania. ¿En qué país queda?",
@@ -11817,12 +11889,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0220",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Parece papel negro, cruje como papel, pero no se te ocurra escribir en él.",
       "question": "La hoja negra que envuelve muchos rollitos de sushi se llama nori. ¿De qué está hecha?",
@@ -11863,12 +11939,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0221",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un plato tan japonés que, sorpresa, llegó en barco desde Europa.",
       "question": "El tempura (verduras y camarones fritos en una capa crujiente) llegó a Japón hace unos 450 años gracias a navegantes y misioneros de un país europeo. ¿De cuál?",
@@ -11909,12 +11989,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0222",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Te lo comes tranquilo y de repente sientes que se te sale el humo por la nariz.",
       "question": "¿Cómo se llama la pastica verde y muy picante que se sirve con el sushi?",
@@ -11955,12 +12039,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0223",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un trompo que no se baila con cuerda, sino que da vueltas para que te dé hambre.",
       "question": "Mira la foto: en México, esta carne de cerdo adobada en rojo, que gira en un trompo vertical con una piña encima, se usa para unos tacos famosísimos. ¿Cómo se llaman?",
@@ -12001,12 +12089,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0224",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Cada vez que masticas chicle, estás hablando un poquito un idioma de hace 500 años.",
       "question": "Las palabras 'tomate', 'aguacate' y 'chicle' vienen del náhuatl, la lengua de un pueblo antiguo de México. ¿De qué pueblo?",
@@ -12047,12 +12139,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0225",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Todos tenemos diez sellos personales, y los llevamos pegados al cuerpo desde antes de nacer.",
       "question": "¿Qué tenemos en la punta de los dedos que es diferente en cada persona del mundo, incluso en los gemelos idénticos?",
@@ -12093,12 +12189,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0226",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Si te exprimieran como una naranja, ¿cuánto jugo rojo saldría? Mejor no lo intentes.",
       "question": "Más o menos, ¿cuánta sangre tiene el cuerpo de una persona adulta?",
@@ -12139,12 +12239,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0227",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Viajar al espacio tiene efectos secundarios más raros que el mareo en bus.",
       "question": "¿Qué le pasa a la estatura de un astronauta después de pasar varios meses en la Estación Espacial Internacional?",
@@ -12185,12 +12289,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0228",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un arenero tan grande que ni todos los gatos del mundo lo llenarían.",
       "question": "¿Cuál es el desierto cálido más grande del mundo?",
@@ -12231,12 +12339,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0229",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un sitio donde la arena llega a la playa sin pagar el bus.",
       "question": "Las dunas de Taroa, donde la arena del desierto cae directamente al mar Caribe, ¿en qué departamento de Colombia están?",
@@ -12277,12 +12389,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0230",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "El único animal que lleva la lonchera pegada a la espalda.",
       "question": "¿Qué le pasa a la joroba de un camello cuando pasa muchos días sin comer?",
@@ -12323,12 +12439,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0231",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Dos galletas tan delgaditas que necesitan un pegante dulce para no salir volando.",
       "question": "Mira la foto: ¿cómo se llama este dulce colombiano que venden en la calle?",
@@ -12369,12 +12489,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0232",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Viene envuelto en una hoja como si fuera un regalo, y adentro hay una fruta disfrazada de ladrillito.",
       "question": "¿De qué fruta se hace el bocadillo veleño?",
@@ -12415,12 +12539,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0233",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un dulce tan pegajoso que la cuchara se queda parada sola, como esperando turno.",
       "question": "¿De qué departamento de Colombia es típico el famoso manjar blanco que se sirve en mate (totuma)?",
@@ -12461,12 +12589,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0234",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Argentina y Colombia pelean en el fútbol, pero este dulce lo comparten con otro nombre.",
       "question": "¿Cómo se llama en Colombia el dulce que en Argentina llaman 'dulce de leche'?",
@@ -12507,12 +12639,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0235",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Este muchacho se puso la máscara más cara de la historia, y no era para Halloween.",
       "question": "Mira esta famosa máscara de oro: ¿de qué faraón es?",
@@ -12553,12 +12689,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0236",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Los faraones querían seguir guapos durante miles de años, y no existía la crema antiarrugas.",
       "question": "¿Qué hacían los antiguos egipcios con el cuerpo de un faraón al morir, para conservarlo durante miles de años?",
@@ -12599,12 +12739,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0237",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un faraón que quería una tumba grande, y se le fue un poquito la mano.",
       "question": "¿Cuál es la pirámide más grande de Egipto?",
@@ -12645,12 +12789,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0238",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Parece que el Sol se puso un aro gigante para salir a rumbear.",
       "question": "Mira la foto: ¿cómo se llama este anillo de luz que a veces aparece alrededor del Sol?",
@@ -12691,12 +12839,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0239",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una fiesta donde terminar lleno de talco y pintura es señal de que te fue muy bien.",
       "question": "¿En qué ciudad colombiana se celebra el Carnaval de Negros y Blancos?",
@@ -12737,12 +12889,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0240",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "La única figura que puede obligar a un bus entero a quedarse quieto.",
       "question": "Mira esta señal de tránsito: ¿qué forma geométrica tiene?",
@@ -12783,12 +12939,16 @@
       "fact_checked": false,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0241",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "El lado más largo de la familia, y el que más se cree por eso.",
       "question": "En un triángulo rectángulo, ¿cómo se llama el lado más largo, el que queda frente al ángulo recto?",
@@ -12829,12 +12989,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0242",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una pregunta con muchas esquinas y bordes, como el ladrillo que te cayó en el pie.",
       "question": "Un cubo, como un dado, tiene 6 caras. ¿Cuántas aristas (los bordes donde se juntan dos caras) tiene?",
@@ -12875,12 +13039,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0243",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Las abejas son ingenieras y ni siquiera fueron a la universidad.",
       "question": "Las celdas de un panal de abejas, la mayoría de las tuercas y el corte de muchos lápices: ¿qué forma tienen en común?",
@@ -12921,12 +13089,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0244",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un gato que salió de la casa y se le olvidó ponerse el abrigo.",
       "question": "Mira la foto: ¿de qué raza es este gato?",
@@ -12967,12 +13139,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0245",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "El gato no los usa para verse elegante, aunque igual se ve elegante.",
       "question": "¿Para qué le sirven los bigotes a un gato?",
@@ -13013,12 +13189,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0246",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un juego en el que sembrar semillas no tiene nada que ver con el jardín.",
       "question": "Mira la foto: ¿cómo se llama este antiguo juego de mesa?",
@@ -13059,12 +13239,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0247",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Hay una pieza que no sabe caminar derecho y además se salta a todo el mundo.",
       "question": "En el ajedrez, ¿qué pieza se mueve en forma de 'L' y puede saltar por encima de las demás?",
@@ -13105,12 +13289,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0248",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Un muñeco de madera con un detector de mentiras incorporado en la cara.",
       "question": "En el cuento de Pinocho, ¿qué le pasa cada vez que dice una mentira?",
@@ -13151,12 +13339,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0249",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un cubito que decide tu suerte en el parqués y que nadie ha contado nunca completo.",
       "question": "Si sumas todos los puntos de todas las caras de un dado normal, ¿cuántos puntos hay en total?",
@@ -13197,12 +13389,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0250",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una serie de números tan famosa que aparece hasta en los girasoles.",
       "question": "¿Qué número sigue en esta serie: 1, 1, 2, 3, 5, 8...?",
@@ -13243,12 +13439,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0251",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "Los vikingos no tenían GPS, así que conectaron todo el universo con jardinería.",
       "question": "En la mitología nórdica, ¿cómo se llama el árbol gigante que une los nueve mundos?",
@@ -13289,12 +13489,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0252",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Si en tu familia alguien siempre hace trampa en el parqués, ya sabes a quién se parece.",
       "question": "En las películas de Marvel, ¿qué personaje es el hermano adoptivo de Thor, un tramposo que puede cambiar de forma y usa un casco con cuernos largos?",
@@ -13335,12 +13539,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0253",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "En este continente vives tú, así que no hay excusa para no saberlo.",
       "question": "¿Cuál es la montaña más alta de todo el continente americano?",
@@ -13381,12 +13589,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0254",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Esta planta se viste de rojo en diciembre, como si fuera a una fiesta de fin de año.",
       "question": "Mira la foto: ¿cómo se llama esta planta que adorna tantas casas en diciembre?",
@@ -13427,12 +13639,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0255",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Meter un árbol a la sala y llenarlo de bolas brillantes: a alguien se le ocurrió primero.",
       "question": "¿De qué país viene la costumbre de decorar un árbol en la casa para Navidad?",
@@ -13473,12 +13689,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0256",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 5,
       "description": "La parte de la novena que todo el mundo canta a todo pulmón, con pandereta o sin ella.",
       "question": "Completa el coro de los gozos de la novena: 'Dulce Jesús mío, mi niño adorado, ¡ven a nuestras almas! ¡Ven, no tardes…!'",
@@ -13519,12 +13739,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Hint 3 (\"¡te quiero ___!\") fits the wrong answer \"mucho\" as well as \"tanto\", so it misleads. Hint 2 says \"tanto\" rhymes with \"adorado\"; it only shares the \"a-o\" vowels. Rewrite both hints.",
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0257",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un reptil que en Colombia no vive en el monte, sino en las oficinas y en los salones de clase.",
       "question": "En Colombia, cuando alguien dice que una persona es muy «lagarta», ¿qué quiere decir?",
@@ -13565,12 +13789,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0258",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Lo más bonito de ir a la tienda: cuando el señor te regala algo sin cobrarte.",
       "question": "¿Cómo se le dice en Colombia al poquito de más que el vendedor te regala cuando le compras algo?",
@@ -13611,12 +13839,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0259",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "La única comida que explota antes de que te la comas.",
       "question": "Mira la foto: ¿cómo se llama esto en Colombia?",
@@ -13657,12 +13889,16 @@
       "fact_checked": false,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0260",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Los peces no salen a respirar, pero tampoco aguantan la respiración: aquí está el truco.",
       "question": "¿Con qué órganos respiran los peces debajo del agua?",
@@ -13703,12 +13939,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0261",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un perro que nació con la piel dos tallas más grande.",
       "question": "Mira la foto: ¿de qué raza es este perro lleno de arrugas?",
@@ -13749,12 +13989,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0262",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un concierto nocturno que nadie pidió, pero que todo el bosque escucha.",
       "question": "Escucha: ¿qué animal hace este sonido?",
@@ -13795,7 +14039,11 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": {
         "query": "snowy forest night",
         "source_url": null,
@@ -13805,7 +14053,7 @@
     },
     {
       "id": "q-0263",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "La receta secreta de la prehistoria: tome un metal, échele otro, y bautice una época entera.",
       "question": "La Edad del Bronce se llama así por el bronce, que se hace mezclando cobre con otro metal. ¿Con cuál?",
@@ -13846,12 +14094,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0264",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Los primeros grafiteros de la historia, y nadie los regañó por rayar la pared.",
       "question": "¿Cómo se llaman las pinturas que hacían los primeros humanos en las paredes de roca de las cuevas?",
@@ -13892,12 +14144,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0265",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Botar la basura también tiene su código de vestimenta, y aquí te toca adivinar el color del uniforme.",
       "question": "Desde 2021, Colombia tiene un código de colores para las canecas de basura. ¿De qué color es la caneca para los residuos aprovechables, como plástico, papel, cartón y vidrio limpios y secos?",
@@ -13938,12 +14194,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0266",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Las cáscaras de banano también sueñan con tener una segunda vida en el jardín.",
       "question": "¿Cómo se llama el abono que se hace dejando que las cáscaras, las hojas secas y los restos de comida se descompongan?",
@@ -13984,12 +14244,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0267",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Si este árbol fuera un edificio, necesitarías ascensor para llegar a sus hojas.",
       "question": "¿Cuánto mide, más o menos, el árbol más alto del mundo, una secuoya roja de California?",
@@ -14030,12 +14294,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0268",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un arenero tan grande que ni el gato más ambicioso lo podría usar entero.",
       "question": "¿En qué continente está el Sahara, el desierto cálido más grande del mundo?",
@@ -14076,12 +14344,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0269",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una culebra que no necesita gimnasio para ser la más pesada del barrio.",
       "question": "¿Cuál es la serpiente más pesada del mundo, que vive en los ríos y pantanos del Amazonas?",
@@ -14122,12 +14394,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0270",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un niño que nunca se cansa de estirarse antes de hacer ejercicio, porque él mismo es el estiramiento.",
       "question": "¿Qué personaje de anime es? Comió una fruta extraña y desde entonces tiene el cuerpo elástico, como de caucho.",
@@ -14168,12 +14444,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0271",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Japón nos mandó carros, videojuegos y también palabras que se pegan como chicle.",
       "question": "¿Qué significa la palabra japonesa 'kawaii'?",
@@ -14214,12 +14494,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0272",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Es tan alta y flaca que parece que se le olvidó dejar de crecer.",
       "question": "Mira la foto: ¿cómo se llama esta palma?",
@@ -14260,12 +14544,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0273",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un avión con un estilo tan raro que en los aeropuertos normales lo miran feo.",
       "question": "Mira la foto: ¿cómo se llama este tipo de avión?",
@@ -14306,12 +14594,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0274",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Antes de las canastas modernas, al baloncesto le tocó rebuscarse con lo que había a mano en la bodega.",
       "question": "Cuando se inventó el baloncesto en 1891, ¿qué se colgó en las paredes del gimnasio para encestar el balón?",
@@ -14352,12 +14644,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0275",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un profesor necesitaba un juego para que sus alumnos no se aburrieran en invierno, y le salió un deporte mundial.",
       "question": "¿En qué país se inventó el baloncesto, en 1891?",
@@ -14398,12 +14694,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0276",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Un sonido que grita '¡muévase!' sin decir una sola palabra.",
       "question": "Escucha: ¿qué está sonando?",
@@ -14444,7 +14744,11 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": {
         "query": "city street traffic",
         "source_url": null,
@@ -14454,7 +14758,7 @@
     },
     {
       "id": "q-0277",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Tres vecinos que se pelean cada domingo pero comparten el mismo trancón.",
       "question": "Millonarios, Independiente Santa Fe y el estadio El Campín: ¿qué tienen en común?",
@@ -14495,12 +14799,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0278",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un equipo tan verde que si se queda quieto en la cancha lo confunden con el pasto.",
       "question": "¿Qué club de fútbol colombiano juega con camiseta verde y blanca y es local en el estadio Atanasio Girardot?",
@@ -14541,12 +14849,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0279",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Hoy viajamos a Japón sin pasaporte, sin maleta y sin aprender ni una palabra de japonés.",
       "question": "Mira la foto: ¿cómo se llama este plato japonés?",
@@ -14587,12 +14899,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0280",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una salsa tan elegante que tiene más ingredientes que tu lista de mercado del mes.",
       "question": "El mole poblano, una salsa espesa y oscura de México, lleva chiles, especias y un ingrediente que sorprende a muchos. ¿Cuál es?",
@@ -14633,12 +14949,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0281",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Un ruidito que aparece sin invitación y no se va ni rogándole.",
       "question": "¿Cómo se llama eso que le da al cuerpo sin querer, una y otra vez, y que según la gente se quita con un susto o tomando agua?",
@@ -14679,12 +14999,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0282",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un desierto que se coló en Colombia sin pedirle permiso a nadie.",
       "question": "Mira la foto: ¿cómo se llama este desierto colombiano de tierra rojiza y cañones secos?",
@@ -14725,12 +15049,16 @@
       "fact_checked": false,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0283",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Antes de los emojis, los egipcios ya mandaban mensajes con caritas, pájaros y ojitos.",
       "question": "¿Cómo se llama el sistema de escritura de los antiguos egipcios?",
@@ -14771,12 +15099,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0284",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Un ruido tan fuerte que hasta el perro se mete debajo de la cama a esperar que pase.",
       "question": "Escucha: ¿qué fenómeno natural produce este sonido?",
@@ -14817,7 +15149,11 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": {
         "query": "rain on window",
         "source_url": null,
@@ -14827,7 +15163,7 @@
     },
     {
       "id": "q-0285",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Este pedazo de suelo tiene más mal genio que tu hermano cuando lo despiertan temprano.",
       "question": "Mira el video: este hueco en el suelo burbujea y echa vapor. ¿Qué pasa después?",
@@ -14868,12 +15204,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0286",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un gato que se va del cuarto pero deja la sonrisa olvidada.",
       "question": "En 'Alicia en el país de las maravillas', ¿cómo se llama el gato rayado que sonríe de oreja a oreja y desaparece poco a poco hasta que solo queda su sonrisa?",
@@ -14914,12 +15254,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0287",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un deporte tan tranquilo que lo podría jugar tu abuelo en pantuflas, y aun así reparten medallas olímpicas.",
       "question": "Mira la foto: ¿qué deporte olímpico de invierno están jugando?",
@@ -14960,12 +15304,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0288",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Para cuando tu profe de educación física y el del club de tiro se ponen de acuerdo.",
       "question": "¿Cómo se llama el deporte olímpico de invierno que combina el esquí de fondo con disparar a unos blancos con un rifle?",
@@ -15006,12 +15354,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0289",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Esta cosa lleva una vida muy dura y ni siquiera se puede quejar.",
       "question": "Mira esta imagen muy de cerca: ¿qué objeto es?",
@@ -15052,12 +15404,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0290",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Como montarse en un tobogán con cuatro amigos, pero a más de 100 kilómetros por hora.",
       "question": "¿En qué deporte olímpico de invierno bajan dos o cuatro atletas dentro de un trineo con forma de bala por una pista de hielo llena de curvas?",
@@ -15098,12 +15454,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0291",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "El único habitante de un planeta tan pequeño que se puede barrer en una mañana.",
       "question": "¿Qué personaje es? Vive solo en un asteroide diminuto y viaja por otros planetas, donde conoce a un rey, a un vanidoso y a un borracho.",
@@ -15144,12 +15504,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0292",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Unas direcciones peores que las que da tu tío cuando vas a una finca.",
       "question": "En la película de Disney de 1953, alguien explica cómo llegar al País de Nunca Jamás: 'Segunda estrella a la derecha y todo recto hasta el amanecer'. ¿Quién lo dice?",
@@ -15190,12 +15554,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0293",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una pregunta para saber si te alcanza para el algo o si toca pedirle plata prestada a tu hermano.",
       "question": "En la tienda compras 3 empanadas de 2.500 pesos cada una y una gaseosa de 3.000 pesos. Pagas con un billete de 20.000 pesos. ¿Cuánto te devuelven?",
@@ -15236,12 +15604,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0294",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una montaña tan puntuda que parece dibujada por un niño de primaria.",
       "question": "Mira la foto: ¿cómo se llama esta famosa montaña?",
@@ -15282,12 +15654,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0295",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un club tan exclusivo que para entrar hay que tener la cabeza más arriba que las nubes.",
       "question": "¿Cuántas montañas hay en el mundo que superan los 8.000 metros de altura?",
@@ -15328,12 +15704,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0296",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una montaña tan alta que en la cima hay que llevar chaqueta aunque abajo haga un calorón.",
       "question": "¿En qué continente está el monte Kilimanjaro?",
@@ -15374,12 +15754,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0297",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una fiesta tan buena que no cabe en una sola noche y hay que repetirla con natilla y buñuelos.",
       "question": "¿Qué día empieza la Novena de Aguinaldos?",
@@ -15420,12 +15804,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0298",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Ponte la careta de buceo: hoy toca reconocer a un vecino del arrecife.",
       "question": "Mira la foto: ¿cómo se llama este pez?",
@@ -15466,12 +15854,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0299",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un pez tan grande que no cabría ni en la piscina del colegio.",
       "question": "¿Cuál es el pez más grande del mundo?",
@@ -15512,12 +15904,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0300",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un animal con una cabeza tan rara que parece dibujada por un niño de kínder con mucha imaginación.",
       "question": "Mira esta silueta: ¿qué animal es?",
@@ -15558,12 +15954,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0301",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un perro diminuto que aun así se cree el jefe de la casa.",
       "question": "¿Cuál es la raza de perro más pequeña del mundo?",
@@ -15604,12 +16004,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0302",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Cuando un perro solo no es suficiente para armar el desorden.",
       "question": "¿Cómo se llama un grupo de perros que andan o cazan juntos?",
@@ -15650,12 +16054,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0303",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 1,
       "description": "Este señor del museo ya no tiene ni un gramo de carne, pero sigue posando para las fotos.",
       "question": "Mira este esqueleto de museo: ¿de qué animal prehistórico es?",
@@ -15696,12 +16104,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0304",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un pez con una sonrisa que ningún dentista se atrevería a revisar.",
       "question": "¿Cuál es el tiburón más grande que ha existido en la historia de la Tierra?",
@@ -15742,12 +16154,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0305",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Tu camiseta favorita puede tener un pasado secreto del que no le gusta hablar.",
       "question": "Muchas camisetas de fútbol modernas se fabrican con hilo hecho a partir de basura reciclada. ¿Qué basura se recicla para hacer esa tela?",
@@ -15788,12 +16204,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0306",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una ducha tan alta que el agua se vuelve neblina antes de llegar al piso.",
       "question": "Mira la foto: ¿cómo se llama esta cascada, la más alta del mundo?",
@@ -15834,12 +16254,16 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0307",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Ni capa ni rayos láser: el arma favorita de esta heroína es una cuerda que brilla.",
       "question": "¿Qué le pasa a quien queda atrapado en el lazo dorado de la Mujer Maravilla?",
@@ -15880,12 +16304,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0308",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Uno corre, otro nada y el otro es medio robot: el grupo de WhatsApp más raro del universo.",
       "question": "Flash, Aquaman y Cyborg: ¿qué tienen en común?",
@@ -15926,12 +16354,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0309",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Cierra los ojos y abre bien las orejas: este ruido viene con mucho drama.",
       "question": "Escucha: ¿qué está haciendo este ruido?",
@@ -15972,7 +16404,11 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": {
         "query": "countryside railway landscape",
         "source_url": null,
@@ -15982,7 +16418,7 @@
     },
     {
       "id": "q-0310",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un tren tan rápido que llega antes de que termines de decir 'ya casi llegamos'.",
       "question": "¿En qué país empezó a funcionar el primer tren bala del mundo, en 1964?",
@@ -16023,12 +16459,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0311",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un animal que avisa cuando viene llegando: muy útil si eres el que huye.",
       "question": "En 'Peter Pan', el cocodrilo que persigue al Capitán Garfio hace 'tic-tac' cuando se acerca. ¿Por qué?",
@@ -16069,12 +16509,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0312",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Tiene más plata que un banco y aun así prefiere salir de noche a perseguir ladrones.",
       "question": "Es millonario, no tiene ningún superpoder, sale de noche a vigilar su ciudad y tiene su guarida secreta en una cueva. ¿Qué superhéroe es?",
@@ -16115,12 +16559,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0313",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un extraterrestre que trabaja en un periódico y nadie lo reconoce porque se pone gafas.",
       "question": "¿De qué planeta viene Superman?",
@@ -16161,12 +16609,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0314",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una ciudad que se cansó del tráfico y decidió meterse bajo tierra.",
       "question": "¿En qué ciudad se inauguró el primer metro subterráneo del mundo?",
@@ -16207,12 +16659,16 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0315",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "La peor manera posible de enterarse de quién es tu familia.",
       "question": "¿Qué villano le dice a Luke Skywalker la famosa frase: 'Yo soy tu padre'?",
@@ -16253,12 +16709,16 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     },
     {
       "id": "q-0316",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Firmar un contrato sin leer la letra pequeña nunca había salido tan caro.",
       "question": "Es una bruja del mar, mitad pulpo, que le cambia la voz a una sirena por un par de piernas. ¿Quién es?",
@@ -16299,7 +16759,11 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-06"
+      },
       "background": null
     }
   ]
