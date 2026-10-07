@@ -13,7 +13,7 @@ Sub-plan of [15](15-i18n.md). Translates the question pool into the launch langu
 - **Media:** images are language-neutral, except ones with visible text (signs, book covers). The review flags those per locale. Essential audio (D-14) is usually language-neutral.
 
 ## Pipeline
-A new step in `tools/qgen.py`, reusing the existing steps:
+A new step in `authoring/tools/qgen.py`, reusing the existing steps:
 
 `translate --to en` → `rate --locale en` → `factcheck --locale en` → review (LLM review per D-32/D-33, plus a human spot check by a native speaker, sampled, e.g. 10 %) → merge.
 
@@ -21,7 +21,7 @@ A new step in `tools/qgen.py`, reusing the existing steps:
 - `costs.log` gives the cost per translated question; budget it before a full run (CT-3).
 
 ## Storage (decide in QT-1)
-- **A: one file per locale** (`data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. The Spanish file stays the source. Small diffs, easy to review.
+- **A: one file per locale** (`authoring/data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. The Spanish file stays the source. Small diffs, easy to review.
 - **B: a `translations` map inside each question.** One file, but `questions.json` grows with every language and gets harder to diff.
 - Draft preference: **A**. The export (PORT-6) builds one playable pool per locale either way.
 
@@ -30,7 +30,7 @@ A new step in `tools/qgen.py`, reusing the existing steps:
 
 ## Tasks
 - [ ] QT-1 Storage layout (A or B) and schema; `validate` covers translations and `stale`.
-- [ ] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `tools/prompts/`.
+- [ ] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `authoring/tools/prompts/`.
 - [ ] QT-3 `rate` and `factcheck` per locale.
 - [ ] QT-4 Review tool: side-by-side locale view.
 - [ ] QT-5 Pilot: translate 50 questions to English, review them, and measure the reject rate and cost before the full run.

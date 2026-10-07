@@ -6,7 +6,7 @@ Part of the Steam plan ([11](11-steam.md)). The keyboard keys shown on the butto
 
 ## 1. Everything clickable (now)
 Every action that has a key must also have a visible control that works with a mouse click or a touch tap. The key chip on a button doesn't change; it is a hint, not the only way.
-- Audit: every `keydown` branch in `client/src/game/Game.svelte` (Start `N`, Select `1`–`4`, `Enter`/`Space` to continue, `Esc` overlay) and the dialogs (Paso, Cambiazo picker, Francotirador aiming, `Backspace` = back/cancel, the arming timeout).
+- Audit: every `keydown` branch in `app/client/src/game/Game.svelte` (Start `N`, Select `1`–`4`, `Enter`/`Space` to continue, `Esc` overlay) and the dialogs (Paso, Cambiazo picker, Francotirador aiming, `Backspace` = back/cancel, the arming timeout).
 - Missing today: likely «continue» on Level/Correct screens (it is `Enter`/`Space`), `Esc` for the overlay (needs a small, unobtrusive menu button in a corner), and `Backspace` in dialogs (needs a visible «Atrás»/«Cancelar»).
 - Rule for new UI from now on: no action without a clickable control (add to `04-ui-tv-display.md`).
 

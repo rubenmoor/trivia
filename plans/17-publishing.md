@@ -18,7 +18,7 @@ The approved questions use about 290 Commons files. The tally of their credits (
 
 - **Non-copyright restrictions:** Commons marks some files with *personality rights* (identifiable people) or *trademark* warnings. Those don't stop editorial use in a quiz, but check each flagged file.
 - **Credits in the game:** each question already shows its `credit` (06). The release also needs a **credits screen** listing every file with author, license and source link, generated from the pool at build time, plus `CREDITS.md` in the shipped files.
-- **Audio:** `client/public/audio/CREDITS.md` (UI-10): CC0 / CC BY. Elgar's «Pomp and Circumstance» by the US Marine Band: a US government work, public domain in the US and generally treated as free elsewhere. Note it in the credits.
+- **Audio:** `app/client/public/audio/CREDITS.md` (UI-10): CC0 / CC BY. Elgar's «Pomp and Circumstance» by the US Marine Band: a US government work, public domain in the US and generally treated as free elsewhere. Note it in the credits.
 - **Fonts:** Baloo 2 and Nunito are OFL. Ship the license texts with them.
 - **Controller glyphs** (IN-5): use a CC0 set or draw them. Console makers' button art can't be used freely.
 

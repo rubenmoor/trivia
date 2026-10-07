@@ -45,7 +45,7 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 - A **mode/settings screen** sits between Player and Level (UI-16) in the default mode; in the gamemaster mode it is hidden behind the overlay.
 
 ## Tasks
-- [ ] MD-1 Joker budget in the game state: `settings.jokers`, `null` = unlimited; existing and new family games default to unlimited. Engine: on the TS engine ([12](12-client-engine.md)) if it has landed, otherwise in `server/game.py`.
+- [ ] MD-1 Joker budget in the game state: `settings.jokers`, `null` = unlimited; existing and new family games default to unlimited. Engine: on the TS engine ([12](12-client-engine.md)) if it has landed, otherwise in `app/server/game.py`.
 - [ ] MD-2 Availability: a spent joker is disabled with a reason; budget counted per game (Snipe misses count as uses).
 - [ ] MD-3 Joker tray: a count badge on limited jokers; none when unlimited.
 - [ ] MD-4 Gamemaster overlay: set the budget for the running game (unlimited / «Como las cartas» / custom).

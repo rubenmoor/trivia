@@ -16,7 +16,7 @@ All question media (D-7): images (most questions), plus audio and video. Each qu
 Don't hotlink at game time. Every chosen file is **downloaded once into `media/`**, so the game works offline and never shows a broken link. `media/` is gitignored: the repo is public and only stores URLs.
 - The question stores `file_url`, the exact URL downloaded. The cached file is `media/<sha1(file_url)[:16]><ext>`, so the name follows from the URL; no table is needed.
 - The server serves `GET /media?url=<file_url>` for any URL that appears in the pool. On a cache miss it downloads the file first (review tool and game alike). Downloads go to a temp file and are renamed into place, so an interrupted download never looks cached.
-- `python3 tools/media.py sync` downloads every missing file ahead of time (run it before game night); `--prune` deletes files no question references.
+- `trivia-media sync` downloads every missing file ahead of time (run it before game night); `--prune` deletes files no question references.
 - Images larger than 2560 px are downloaded as a Commons thumbnail at 2560 px width (for 4K TVs); `file_url` is then the thumbnail URL. Smaller originals are downloaded as they are.
 - Every request sends a descriptive User-Agent, as Wikimedia's policy requires.
 
@@ -39,7 +39,7 @@ flowchart LR
   Review -->|key m| Retry[new search term → fetch again]
 ```
 
-1. **Fetch candidates** (`tools/media.py fetch`, Python standard library, no Claude). For every slot without `file_url`: search Commons with `media.query`, filtered by type, licence, orientation and size. Save up to 6 candidates (preview URL, file URL, size, author, licence, page URL) to `work/media/<question id>.json`. The review tool loads previews straight from Commons (review needs internet anyway; only the picked file is downloaded).
+1. **Fetch candidates** (`authoring/tools/media.py fetch`, Python standard library, no Claude). For every slot without `file_url`: search Commons with `media.query`, filtered by type, licence, orientation and size. Save up to 6 candidates (preview URL, file URL, size, author, licence, page URL) to `work/media/<question id>.json`. The review tool loads previews straight from Commons (review needs internet anyway; only the picked file is downloaded).
    - Commons requires every search word to match, so long queries are retried shorter: filler words ("footage", "aerial", "classic"…) removed, then one word dropped at a time, never below two words. Looser queries stop once 3 candidates are found.
    - At most 2 candidates per author, so one prolific uploader doesn't fill all six slots.
    - Videos use Commons' WebM versions (720p/1080p), not the large originals.
@@ -63,12 +63,12 @@ The TV shows a subtle credit line in a corner while media is shown, e.g. "Foto: 
 
 ## Tasks
 - [x] IMG-1 Decide between hotlinking and a local cache. *2026-10-06, local cache (D-13).*
-- [x] IMG-2 `tools/media.py fetch`: Commons search → candidates and preview thumbnails in `work/media/`. *2026-10-06, `tools/media.py`.*
+- [x] IMG-2 `authoring/tools/media.py fetch`: Commons search → candidates and preview thumbnails in `work/media/`. *2026-10-06, `authoring/tools/media.py`.*
 - [x] IMG-3 Define media requirements. *2026-10-06, see "Requirements".*
 - [x] IMG-4 Decide whether to show credits on screen (subtle) or only in the data. *2026-10-06, subtle credit line on screen.*
-- [x] IMG-5 Server: `POST /api/questions/<id>/media` (pick a candidate → download, fill credit) and `POST /api/questions/<id>/media/search` (new query → fetch again). *2026-10-06, `server/main.py`.*
-- [x] IMG-6 Review tool: show candidates (images, audio and video players), keys `1`–`6` to pick, `m` for a new search term; show the chosen media. *2026-10-06, `client/src/review/MediaPanel.svelte`.*
-- [x] IMG-7 Apply D-13 to the existing pool (q-0072 to an image) and to the generator (`house-style.md`, `question-styles.txt`: no song or film clip questions). *2026-10-06, q-0072 now uses a decorative image.*
+- [x] IMG-5 Server: `POST /api/questions/<id>/media` (pick a candidate → download, fill credit) and `POST /api/questions/<id>/media/search` (new query → fetch again). *2026-10-06, then `server/main.py`, now `authoring/server/main.py` (D-35).*
+- [x] IMG-6 Review tool: show candidates (images, audio and video players), keys `1`–`6` to pick, `m` for a new search term; show the chosen media. *2026-10-06, `authoring/ui/src/review/MediaPanel.svelte`.*
+- [x] IMG-7 Apply D-13 to the existing pool (q-0072 to an image) and to the generator (`house-style.md`, `authoring/data/question-styles.txt`: no song or film clip questions). *2026-10-06, q-0072 now uses a decorative image.*
 - [x] IMG-9 Background slot for audio questions (D-14): schema, `background_query` in the generator, background queries for the 6 existing audio questions. *2026-10-06.*
 - [x] IMG-10 Background in `media.py fetch`, the server (pick/search per slot) and the review tool (`b`, auto-pick on approve). *2026-10-06.*
 - [x] IMG-8 `qgen.py validate`: `local_path` exists when set. *2026-10-06.*

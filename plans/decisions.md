@@ -295,3 +295,17 @@ Template:
 - Decision: A Steam release is planned as its own track: master plan `11-steam.md`, sub-plans 12–18. The family game stays the priority. Changes that don't change how the family plays (the TypeScript engine, mouse support, string extraction, the joker budget with "unlimited" as the default, the license audit) can start now. Everything else waits for its open question (OQ-29..OQ-37). The current way of playing stays as the gamemaster mode.
 - Consequences: D-2's "no publishing concerns" and the non-goals in `00-vision.md` no longer hold for the Steam track. New task prefixes: ST, PORT, MD, IN, I18N, LUI, QT, RG, CT, PUB, SW. The shell, the default mode and the content target are not decided yet.
 - Supersedes / related: D-2 (scope, in part); D-3, D-4, D-25 (revisited by `12-client-engine.md`); OQ-29..OQ-37
+
+## D-35: The repo separates what ships from the tooling; the flake packages both
+- Date: 2026-10-07
+- Context: Game, review tool, pipeline and data lived side by side: `server/main.py` served the game and the authoring API, the game imported `tools/`, the client mixed game and review pages, and the game read the source pool with its review notes. The Steam track (D-34) needs a clean shipped part, and the gamemaster wants the pipeline's tools (including Claude and ImageMagick) packaged.
+- Decision: Two top-level trees. `app/` is what ships: game server, game client, `categories.json` and `pool.json` (an export of approved questions with play fields only). `authoring/` never ships: pipeline, prompts, review/stats/print pages and their server, the source pool. `authoring/` may import from `app/`, never the reverse. The flake provides `packages.app`, `packages.authoring` (with `claude-code`, the one allowed unfree package, and ImageMagick) and a dev shell with everything. Game state and the media cache are gitignored at `state/` and `media/`.
+- Consequences: Paths change everywhere (`19-repo-layout.md`). The game runs on port 8000, the authoring server on 8001. `qgen.py export` (PORT-6, pulled forward) must run after pool changes; `validate` fails when the export is stale. Supersedes the file layout in `01-architecture.md`.
+- Supersedes / related: D-3, D-4, D-5, D-17, D-18, D-25 (layout only); D-34; PORT-6
+
+## D-36: An LLM makes a batch with one command, `qgen batch`
+- Date: 2026-10-07
+- Context: Batch-4's Claude review (D-32) worked, but it was done by hand in an interactive session: choosing subcategories, running steps, building contact sheets, judging images and writing review records were all improvised. The gamemaster wants the process unambiguous, with no room for variation by the LLM.
+- Decision: `qgen batch` runs the whole pipeline in a fixed order with fixed rules (run name, subcategory choice, all steps, review, media pick, export, validate, sync, report). The review is a pipeline step: one `claude -p` call per question with `prompts/review.md` and the contact sheet of its media candidates, answering by JSON schema. An LLM operating the pipeline follows `authoring/RUNBOOK.md` only: run `qgen batch`, rerun it after a usage limit, commit the listed paths. It doesn't edit the pool, pick media or change prompts by hand.
+- Consequences: The interactive procedure of batch-4 is retired. Prompt changes are code changes reviewed by the gamemaster. D-32's criteria live in `prompts/review.md`.
+- Supersedes / related: D-10, D-16, D-32, D-33; QG-17

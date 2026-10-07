@@ -13,8 +13,8 @@ How new questions get into the pool: drafting, rating, fact-checking, reviewing,
 
 ## Inputs for batch generation
 Throw-away working files in the repo root, edited by the gamemaster:
-- `data/categories.json`: 140 subcategories grouped into 24 broad categories (D-19).
-- `question-styles.txt`: ~30 question styles, sorted from best to worst fit for a multiple-choice family trivia game. Styles near the top use the TV's picture and sound (name the thing in the picture, what makes this sound, which song is this), followed by quick, concrete styles (plain fact, biggest/smallest, "name the concept").
+- `app/data/categories.json`: 140 subcategories grouped into 24 broad categories (D-19).
+- `authoring/data/question-styles.txt`: ~30 question styles, sorted from best to worst fit for a multiple-choice family trivia game. Styles near the top use the TV's picture and sound (name the thing in the picture, what makes this sound, which song is this), followed by quick, concrete styles (plain fact, biggest/smallest, "name the concept").
 
 The full grid (subcategories × styles ≈ 4,300 combinations) is far too many to write and review. The strategy below keeps quality high and the gamemaster's review time low.
 
@@ -76,11 +76,11 @@ Before generating hundreds of questions:
 5. Measure the keep rate, which styles work, and where to set the threshold. Then decide whether to scale up and how far.
 
 ### Tooling (D-10)
-`tools/qgen.py`, Python standard library only. Writing steps call `claude -p --json-schema` with a prompt from `tools/prompts/`; each call is a fresh session. Work files go to `work/<run>/`; every step skips work that is already done, so a run can be resumed after an interruption or a usage limit.
+`authoring/tools/qgen.py`, Python standard library only. Writing steps call `claude -p --json-schema` with a prompt from `authoring/tools/prompts/`; each call is a fresh session. Work files go to `work/<run>/`; every step skips work that is already done, so a run can be resumed after an interruption or a usage limit.
 
 | Command | Kind | What it does |
 |---|---|---|
-| `fit` | Claude | For each subcategory (must be in `data/categories.json`): score every style 1–5, keep the best 3–4. |
+| `fit` | Claude | For each subcategory (must be in `app/data/categories.json`): score every style 1–5, keep the best 3–4. |
 | `draft` | Claude | One call per subcategory: one question per chosen style, at target difficulties assigned by code from the distribution above. May skip forced combinations. Gets the pool's existing answers to avoid repeats. |
 | `rate` | Claude | Fresh calls, batches of questions, scored with the rubric; also gives its own difficulty estimate. |
 | `factcheck` | Claude + web search | Only for questions flagged as having numbers, dates, records or superlatives. Verdict: confirmed, wrong, uncertain. |
@@ -93,7 +93,7 @@ For the pilot, `merge --min-score 0` keeps everything except hard fails, so the 
 
 ### Schema additions (agreed, QG-7)
 - `style`: the question style used.
-- `subcategory`: from `data/categories.json`; the file maps it to its broad category (D-19), so the pool can be balanced.
+- `subcategory`: from `app/data/categories.json`; the file maps it to its broad category (D-19), so the pool can be balanced.
 - `quality`: the rubric scores from the rating pass.
 - `fact_checked`: true once verified (step 4).
 - `needs_media`: true when the style requires a specific picture, sound or video.
@@ -150,7 +150,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-2 Define the draft format and where drafts are stored. *2026-10-06, drafts live in the pool with `status: "draft"` (D-7).*
 - [x] QG-3 Define the quality checklist. *2026-10-06, quality rubric in this file.*
 - [x] QG-4 Define duplicate detection against the pool. *2026-10-06, `qgen.py dedupe`: same non-numeric answer and (question similarity > 0.6, or both need the same kind of essential media). Changed after the pilot: wording alone flagged shared templates like "Escucha: ¿qué … suena?".*
-- [x] QG-5 Build the drafting tool (depends on QG-1). *2026-10-06, `tools/qgen.py` + `tools/prompts/` (D-10); smoke-tested end to end on one subcategory.*
+- [x] QG-5 Build the drafting tool (depends on QG-1). *2026-10-06, `authoring/tools/qgen.py` + `authoring/tools/prompts/` (D-10); smoke-tested end to end on one subcategory.*
 - [ ] QG-6 Build the review and accept step that writes to the question JSON.
 - [x] QG-7 Agree the schema additions (`style`, `subcategory`, `quality`, `fact_checked`, `needs_media`) and the subcategory → category mapping. *2026-10-06; mapping is produced by `fit`.*
 - [x] QG-8 Build the fit table (subcategory × style) for the pilot subcategories. *Pilot size: ~100 questions (~25 subcategories × 4 styles). 2026-10-06: run `pilot` started with the 25 subcategories listed in `work/pilot/run.json`.* *2026-10-06, `work/pilot/fit.json`.*
@@ -158,7 +158,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-10 Pilot: rating pass and fact-check. *2026-10-06, 89 rated, 74 fact-checked (68 confirmed, 5 wrong, 1 uncertain); 80 merged as `batch: "pilot"`, 9 dropped (`work/pilot/dropped.json`).*
 - [x] QG-11 Pilot: gamemaster reviews all pilot questions; set the quality threshold and decide on scaling. *2026-10-06: no score threshold, prompts tuned (D-16); scaling worth it, size open (OQ-17).*
 - [x] QG-13 Revise existing questions (generalised rework, see "Revising pool questions"): `import`, `revise`, `apply`. *2026-10-06: first 120 → batch `first-120`: 119 rated and fact-checked (118 confirmed), 60 revised, 2 proposed drops, 57 unchanged; ~$6 at list price for both revise attempts.*
-- [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
+- [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `authoring/tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
 - [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and gamemaster review still to do.*
 - [x] QG-16 `revise`/`apply` for new drafts before `merge`. *2026-10-06, `qgen.py` `apply_to_drafts`.*
 - [x] QG-17 Batch-4: the 34 subcategories still without a usable question, reviewed and approved by Claude including media (D-32). *2026-10-07, 112 merged (q-0317…q-0428), 107 approved with media, 5 `needs_work`; see "Batch-4 results".*

@@ -11,7 +11,7 @@ Part of the Steam plan ([11](11-steam.md)). Turns the built client into an insta
 | Tauri | Small installs, Rust core. | WebView2 on Windows, WebKitGTK on Linux/Deck: two engines to test; WebKitGTK is weaker at media and effects; the Steam overlay is unreliable over a system webview. |
 | Browser + local server (PyInstaller) | Closest to today. | Not a "real" game window, no overlay, two runtimes, antivirus false positives on PyInstaller builds. |
 
-The shell's own code stays tiny: create a fullscreen window, load `client/dist/`, expose `loadSave`/`writeSave` and the Steam calls to the page through a preload bridge (no Node in the page itself).
+The shell's own code stays tiny: create a fullscreen window, load `app/client/dist/`, expose `loadSave`/`writeSave` and the Steam calls to the page through a preload bridge (no Node in the page itself).
 
 ## Steam features
 - **Steam Cloud:** the save (12) is one JSON file in the user data folder. Steam Auto-Cloud syncs it with no code; only the file path is configured in Steamworks.
@@ -40,7 +40,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 
 ## Tasks
 - [ ] SW-1 Decide the shell (OQ-29); record it in `decisions.md`.
-- [ ] SW-2 Shell skeleton: window, fullscreen toggle, loads `client/dist/`, preload bridge.
+- [ ] SW-2 Shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge.
 - [ ] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry).
 - [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes.
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine.

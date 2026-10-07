@@ -18,7 +18,7 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 
 | # | Sub-plan | What it covers | Changes the family game? | Can start |
 |---|----------|----------------|--------------------------|-----------|
-| 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`server/game.py`, `tools/selection.py`) to TypeScript; storage adapters; pool export | No (same rules, same saves) | **now** |
+| 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export | No (same rules, same saves) | **now** |
 | 13 | [Game modes](13-game-modes.md) | Gamemaster mode with joker counts you can set, a default mode with difficulty presets, a competitive mode for 8+ players (stub), small rule changes | Only if the family opts in | **now** (joker budget); later the rest |
 | 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | **now** (mouse) |
 | 15 | [Internationalization](15-i18n.md) | Locale model; sub-plans [15a UI](15a-ui-translation.md), [15b questions](15b-question-translation.md), [15c regional](15c-regional-questions.md) | No | **now** (15a string extraction) |
@@ -44,7 +44,7 @@ flowchart LR
 
 | Phase | Content | Tasks (start with) | Exit |
 |-------|---------|--------------------|------|
-| **S1 — Groundwork** (no impact on the family) | TS engine, all buttons clickable, UI strings in a catalog, joker budget with the default "unlimited", license audit | PORT-1..PORT-8, IN-1, LUI-1..LUI-3, MD-1..MD-4, PUB-1..PUB-3 | The family game runs on the TS engine. `python3 server/main.py` is only a static server plus the authoring API. |
+| **S1 — Groundwork** (no impact on the family) | TS engine, all buttons clickable, UI strings in a catalog, joker budget with the default "unlimited", license audit | PORT-1..PORT-8, IN-1, LUI-1..LUI-3, MD-1..MD-4, PUB-1..PUB-3 | The family game runs on the TS engine. `trivia` is only a static server plus the authoring API. |
 | **S2 — Product definition** | Answer the open questions below. Define the default mode and the launch languages. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 resolved in `decisions.md` |
 | **S3 — Playable desktop build** | Electron shell, file saves, controller support, Deck layout, credits screen | SW-1..SW-6, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
 | **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-*, CT-* | `qgen.py report --simulate` meets the target for every launch language |

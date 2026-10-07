@@ -8,10 +8,10 @@ The road from today to a finished game: milestones, every open task, every open 
 
 ## Where we stand (2026-10-06)
 
-- **Pool:** 200 questions in `data/questions.json` (190 approved, 9 rejected, 1 draft), batches `first-120` and `pilot`. 24 categories / 140 subcategories (D-19).
-- **Pipeline:** `tools/qgen.py` (fit → draft → rate → factcheck → dedupe → merge, plus revise/apply, report, validate), `tools/media.py` (Commons fetch, cache sync).
+- **Pool:** 200 questions in `authoring/data/questions.json` (190 approved, 9 rejected, 1 draft), batches `first-120` and `pilot`. 24 categories / 140 subcategories (D-19).
+- **Pipeline:** `authoring/tools/qgen.py` (fit → draft → rate → factcheck → dedupe → merge, plus revise/apply, report, validate), `authoring/tools/media.py` (Commons fetch, cache sync).
 - **Review tool and stats pages:** done ([`08-review-tool.md`](08-review-tool.md)).
-- **Game:** a playable skeleton (D-25): server referee in `server/game.py`, screens in `client/src/game/`, unpolished parts marked `PLACEHOLDER(<task ID>)`. Players and per-player burning on the server (GF-6); the D-29 look is in place and confirmed (M3); no jokers, no sound yet.
+- **Game:** a playable skeleton (D-25): server referee in `app/server/game.py`, screens in `app/client/src/game/`, unpolished parts marked `PLACEHOLDER(<task ID>)`. Players and per-player burning on the server (GF-6); the D-29 look is in place and confirmed (M3); no jokers, no sound yet.
 
 ## Milestones
 
@@ -70,7 +70,7 @@ Depends on M1 (per-player burning). Joker sounds (JK-9) are in M4.
 
 ### M3 — Visual design and screen polish
 **Goal:** the D-29 look (smaller text, glass panels, gray/dark blue) on every screen; the placeholders for visuals and animation are gone.
-**Exit:** `grep -rn PLACEHOLDER client/src` lists only sound-related items (M4).
+**Exit:** `grep -rn PLACEHOLDER app/client/src` lists only sound-related items (M4).
 
 - [x] VD-1 Gamemaster confirms palette, fonts, type scale from the implementation (D-30) — [`10`](10-visual-design.md)
 - [x] VD-2 Theme file: tokens, `--u`, glass classes — [`10`](10-visual-design.md)
@@ -94,7 +94,7 @@ The game is called «¡Trivia!» (D-30).
 **Exit:** no sound placeholders left; a full game sounds right at living-room volume.
 
 - [x] UI-8 Audio engine: AudioContext, three channels, fades, gapless loops, synthesized fallbacks — [`04`](04-ui-tv-display.md)
-- [~] UI-10 Source CC0/CC BY sound assets, `client/public/audio/CREDITS.md` — [`04`](04-ui-tv-display.md)
+- [~] UI-10 Source CC0/CC BY sound assets, `app/client/public/audio/CREDITS.md` — [`04`](04-ui-tv-display.md)
 - [x] UI-9 Fireworks overlay, 4+ variants, finale mode — [`04`](04-ui-tv-display.md)
 - [x] JK-9 Joker sounds — [`09`](09-jokers.md)
 - [x] UI-13 rest: volume sliders and mute in the admin overlay — [`04`](04-ui-tv-display.md)
@@ -118,7 +118,7 @@ No family-specific questions (D-30).
 
 - [ ] UI-6 Test on the actual TV: overscan, resolution, distance, volume, timings — [`04`](04-ui-tv-display.md)
 - [ ] VD-9 TV check: legibility, glass contrast, `backdrop-filter` performance — [`10`](10-visual-design.md)
-- [ ] B-2 Backup of pool and `data/game.sqlite` — [`backlog`](backlog.md) *(not yet accepted)*
+- [ ] B-2 Backup of pool and `state/game.sqlite` — [`backlog`](backlog.md) *(not yet accepted)*
 - [ ] B-3 Practice/preview mode to check questions and images on the TV — [`backlog`](backlog.md) *(not yet accepted)*
 - [ ] Run `media.py sync` and `qgen.py validate` before game night (checklist item, no task ID yet)
 - [ ] VIS-1 Confirm the vision with the gamemaster — [`00`](00-vision.md)
@@ -138,6 +138,9 @@ The release on Steam has its own phases S1–S6, owned by [`11-steam.md`](11-ste
 - [ ] PUB-1..PUB-3 Media license audit and replacements — [`17`](17-publishing.md)
 
 Phase **S2** answers OQ-29..OQ-37 (below).
+
+### Repo layout and the LLM batch (D-35, D-36)
+- [ ] LP-1..LP-7 `app/` and `authoring/`, flake packages, `qgen batch`, RUNBOOK, smoke test — [`19`](19-repo-layout.md)
 
 ---
 

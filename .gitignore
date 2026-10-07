@@ -1,13 +1,14 @@
-client/node_modules/
-client/dist/
+node_modules/
+dist/
 work/
 *.tmp
 
-# Media cache: files are downloaded from the URLs in data/questions.json (D-17).
+# Media cache: files are downloaded from the URLs in the pool (D-17).
 media/
 __pycache__/
 .direnv/
 result
+result-*
 
-# Game state and burned questions (D-25).
-data/game.sqlite
+# Game state and burned questions (D-25); a packaged build uses TRIVIA_STATE instead.
+state/

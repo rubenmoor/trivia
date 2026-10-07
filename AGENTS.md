@@ -17,21 +17,26 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 - Keep dependencies minimal. This is a hobby project that has to run offline in a living room.
 - Never commit secrets. The game needs no accounts and no telemetry.
 
+## Making questions
+If you are asked to make, generate, add, review or approve questions, follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly and nothing else (D-36). It is one command, `qgen batch`. Don't run pipeline steps by hand, don't edit the pools, and don't pick media yourself.
+
+## Repo layout (D-35)
+- `app/` is what ships: the game server (`app/server/`), the game UI (`app/client/`) and its data (`app/data/categories.json`, `app/data/pool.json`).
+- `authoring/` never ships: the source pool (`authoring/data/questions.json`), the pipeline (`authoring/tools/`), the review/stats/print pages (`authoring/server/`, `authoring/ui/`).
+- `authoring/` may import from `app/`; `app/` never imports from `authoring/` and never reads `authoring/data/`. Put new code on the side it belongs to: if a player's install needs it, it's `app/`.
+- Details: [`plans/19-repo-layout.md`](plans/19-repo-layout.md).
+
 ## Tech stack
 - Server: Python, standard library only (`http.server`, `sqlite3`) (D-3, D-4).
-- State: SQLite. Questions: a JSON file (D-4). Categories: `data/categories.json` (D-19).
-- Client: Svelte 5 + Vite + TypeScript, built to static files (D-5).
+- State: SQLite in `state/` (gitignored). Questions: `authoring/data/questions.json`, exported for the game to `app/data/pool.json` (D-4, D-35). Categories: `app/data/categories.json` (D-19).
+- Client: Svelte 5 + Vite + TypeScript, built to static files (D-5). npm workspaces: `app/client` (game), `authoring/ui` (authoring pages).
 
 ## Commands
-- Question pipeline: `python3 tools/qgen.py --help` (steps: fit, draft, rate, factcheck, dedupe, merge, report, validate; see `plans/07-question-generation.md`).
-- Validate the pool: `python3 tools/qgen.py validate`.
-- Fetch media candidates from Wikimedia Commons: `python3 tools/media.py fetch --batch <run>` (`--batch first-120` for the first 120).
-- Fill the media cache (`media/`, gitignored) before game night: `python3 tools/media.py sync` (`--prune` deletes unreferenced files).
-- Dev environment (Nix flake, D-18): `direnv allow` once (or `nix develop`) gives Node 22 and Python 3. All commands for humans: `README.md`.
-- Client install: `cd client && npm install`.
-- Client build: `cd client && npm run build` (output in `client/dist/`, served by the Python server).
-- Client type check: `cd client && npm run check`.
-- Run: `python3 server/main.py`, then open http://127.0.0.1:8000/ for the game (review tool: `/review?batch=pilot`; stats: `/stats/categories`, `/stats/difficulty`). Game state and burned questions: `data/game.sqlite` (gitignored, D-25).
-- Placeholders: unpolished game parts are marked `PLACEHOLDER(<task ID>)` in code and on screen (D-25); `grep -rn PLACEHOLDER client/src` lists them.
-- Categories: `data/categories.json` (broad categories → subcategories, D-19); questions store only `subcategory`.
-- Client dev with hot reload: run the server, then `cd client && npm run dev` (Vite forwards `/api` and `/media` to port 8000).
+All tools come from the flake (D-18, D-35): `direnv allow` once (or `nix develop`) gives Node 22, Python 3, ImageMagick, Claude Code and the commands below. Commands for humans: `README.md`.
+- Game: `trivia` (http://127.0.0.1:8000/). Authoring: `trivia-authoring` (http://127.0.0.1:8001/review?batch=…, `/review/<id>`, `/stats/categories`, `/stats/difficulty`, `/comodines`).
+- Clients: `npm install`, `npm run build` (both), `npm run check` (type-check both), `npm run dev -w app/client` or `-w authoring/ui` (hot reload; run the matching server too).
+- Pool: `qgen validate` (also fails when `app/data/pool.json` is stale), `qgen export`, `qgen report`.
+- Media: `trivia-media sync --status approved` before game night (`--prune` deletes unreferenced files).
+- Packaged game: `nix build .#app`, then `result/bin/trivia`.
+- Placeholders: unpolished game parts are marked `PLACEHOLDER(<task ID>)` in code and on screen (D-25); `grep -rn PLACEHOLDER app/client/src` lists them.
+- Categories: `app/data/categories.json` (broad categories → subcategories, D-19); questions store only `subcategory`.

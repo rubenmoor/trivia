@@ -1,0 +1,25 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noEmit": true,
+    "types": [
+      "svelte",
+      "vite/client"
+    ],
+    "paths": {
+      "$app/*": [
+        "../../app/client/src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.svelte",
+    "../../app/client/src/**/*.ts",
+    "../../app/client/src/**/*.svelte"
+  ]
+}

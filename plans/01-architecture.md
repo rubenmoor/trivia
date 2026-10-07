@@ -22,5 +22,5 @@ flowchart LR
 
 ## Tasks
 - [ ] ARC-1 Choose the tech stack and record it in `decisions.md` and `AGENTS.md`.
-- [x] ARC-2 Define the project folder layout. *2026-10-06, `server/`, `client/`, `data/`, `tools/` (see `08-review-tool.md`).*
+- [x] ARC-2 Define the project folder layout. *2026-10-06, `server/`, `client/`, `data/`, `tools/`; replaced 2026-10-07 by `app/` and `authoring/` (D-35, `19-repo-layout.md`).*
 - [x] ARC-3 Scaffold the project with run/test commands. *2026-10-06, see `AGENTS.md`.*

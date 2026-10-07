@@ -51,7 +51,7 @@ All colours are CSS custom properties in one theme file (VD-2). Components use t
 ### Fonts
 - **Display: Baloo 2** (rounded, chunky, playful): titles, numbers, buttons, letter badges, the tower.
 - **Text: Nunito** (rounded, very legible): question, answers, card descriptions, fun facts.
-- Both are under the SIL Open Font License and cover Spanish (¿ ¡ ñ á é í ó ú ü). They ship as `woff2` in `client/public/fonts/` with their licence; no CDN (04, AGENTS.md). Fallback: `system-ui`.
+- Both are under the SIL Open Font License and cover Spanish (¿ ¡ ñ á é í ó ú ü). They ship as `woff2` in `app/client/public/fonts/` with their licence; no CDN (04, AGENTS.md). Fallback: `system-ui`.
 - Numbers use tabular figures, so «Nivel 10» doesn't jump.
 
 ### Scale: much smaller than the skeleton (D-29)
@@ -143,14 +143,14 @@ The picture should fill the screen and stay visible; the interface floats over i
 
 ## Implementation notes
 
-- `client/src/game/theme.css`: tokens, `--u`, `@font-face`, the glass classes. It is scoped to the game (`.game`), so the review tool and the stats pages keep their own plain tool look.
+- `app/client/src/game/theme.css`: tokens, `--u`, `@font-face`, the glass classes. It is scoped to the game (`.game`), so the review tool and the stats pages keep their own plain tool look.
 - Sizes as `calc(<n> * var(--u))`. Don't set the `html` font size, so the review tool isn't affected.
 - The `PLACEHOLDER` style (D-25) keeps its magenta dashed look until its task is done.
 
 ## Tasks
 - [x] VD-1 Gamemaster confirms the palette, fonts and type scale from the implementation (D-30). *2026-10-06: confirmed («visual design is great»).*
-- [x] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `client/src/game/`. *2026-10-06: `client/src/game/theme.css`, scoped to `.game`.*
-- [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`.*
+- [x] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `app/client/src/game/`. *2026-10-06: `app/client/src/game/theme.css`, scoped to `.game`.*
+- [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `app/client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`.*
 - [x] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4). *2026-10-06: `Question.svelte`, `Hud.svelte`.*
 - [x] VD-5 Candy buttons and answer tile states, with ✓/✗ badges. *2026-10-06: also the envelope cards on Select.*
 - [x] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants. *2026-10-06: `Stage.svelte`.*

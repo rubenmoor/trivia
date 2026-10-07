@@ -10,15 +10,14 @@ A local web page where the gamemaster reviews generated questions one at a time 
 - **Client:** Svelte 5 + Vite + TypeScript. In development, Vite's dev server forwards `/api` to the Python server. For normal use, `vite build` produces static files that the Python server serves.
 - **No SQLite yet.** Review results are question content, not game state (see "Where results are stored").
 
-## Proposed folder layout (ARC-2)
+## Folder layout (D-35, `19-repo-layout.md`)
+The review tool is an authoring tool and never ships:
 ```
-server/            Python server (API + static files)
-client/            Svelte app (review tool now, game later)
-  src/review/      review screen
-  src/lib/         shared types (Question) and components
-data/questions.json
-tools/             question pipeline (qgen.py)
+authoring/server/main.py   authoring server on port 8001: question API + static files
+authoring/ui/src/review/   review screen (Svelte); src/lib/ adds the authoring types and API
+authoring/data/questions.json
 ```
+After every change the server re-exports `app/data/pool.json`, which the game reads.
 
 ## Screen
 One question per screen, everything visible at once. Unlike the game, nothing is hidden:
@@ -56,21 +55,21 @@ If no media has been picked yet, the first Commons candidate is shown as the **s
 
 Every failed API call (decisions, difficulty, media picks and searches, background downloads) appears in an error panel in the top-right corner, saying what failed, for which question and why. Errors stay until dismissed. A Commons rate limit is reported immediately ("try again in about N s") instead of the server waiting silently; only the batch command `media.py fetch` waits rate limits out.
 
-Browser extensions that grab single keys (e.g. Vimium uses digits as count prefixes, `f` for link hints) must be switched off for `http://127.0.0.1:8000/*`. Opening the tool with `&debug=keys` shows what the browser reports for each key press.
+Browser extensions that grab single keys (e.g. Vimium uses digits as count prefixes, `f` for link hints) must be switched off for `http://127.0.0.1:8001/*`. Opening the tool with `&debug=keys` shows what the browser reports for each key press.
 
 While the feedback box is open, all other shortcuts are off so typing works normally. Each action shows a short confirmation ("✓ approved"), so a mistaken key press is noticed. Buttons with the same actions are on screen too, labelled with their key.
 
 ## What gets reviewed
 - By default: every question from one batch that no human has reviewed yet, e.g. `?batch=pilot`: drafts and LLM-reviewed questions (D-33). An LLM-reviewed question shows the LLM's decision and feedback; a human decision replaces it and keeps it in `review.previous`. The pilot is identified by a new `batch` field (the `qgen.py` run name, set by `merge`).
 - Undecided questions come first, in pool order. Already-decided ones stay reachable with `←` so decisions can be changed.
-- The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. `/review/q-0123` reviews just that one question, whatever its status (linked from the admin overlay, 04): after a decision it stays on the question. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
+- The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. `/review/q-0123` reviews just that one question, whatever its status (linked from the admin overlay, 04): after a decision it stays on the question. Decisions are saved in `authoring/data/questions.json` immediately, so nothing is lost when the server restarts.
 - When all are decided: a summary screen with the counts and the share kept (the keep rate for QG-11).
 
 ## Revised questions (QG-13)
 A question with a `revision` field shows a panel above the question: the reason, and for each changed field the old value next to the new one. A revision with `action: "drop"` shows as **proposed reject**: `r` confirms it, `a` or `f` overrules it.
 
 ## Where results are stored
-In `data/questions.json`, on the question itself. Review results describe the question content and must be readable by the pipeline (e.g. to rework questions or tune prompts), so they belong with the questions, not in the game's SQLite state (D-4).
+In `authoring/data/questions.json`, on the question itself. Review results describe the question content and must be readable by the pipeline (e.g. to rework questions or tune prompts), so they belong with the questions, not in the game's SQLite state (D-4).
 
 Proposed schema changes (in `02-question-pool.md` once agreed):
 - `status` gains the value `"needs_work"`: the question has feedback and should be reworked.
@@ -90,7 +89,7 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 ## API
 - `GET /api/questions?batch=pilot&status=draft&reviewer=llm`: the matching questions (`reviewer`: human, llm or none).
 - `POST /api/questions/<id>/review` with `{decision, feedback}`: updates one question and returns it.
-- Every write re-reads `data/questions.json`, changes the one question, and writes atomically (temp file + rename). That way nothing is lost if `qgen.py` touched the file in the meantime. Don't run `qgen.py merge` while reviewing.
+- Every write re-reads `authoring/data/questions.json`, changes the one question, and writes atomically (temp file + rename). That way nothing is lost if `qgen.py` touched the file in the meantime. Don't run `qgen.py merge` while reviewing.
 
 ## What happens to feedback afterwards (later, not part of this tool)
 - A `qgen.py rework` step sends each `needs_work` question with its feedback to Claude for a revised version. The revision goes back to `draft` for another review.
@@ -104,12 +103,12 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 ## Tasks
 - [x] RV-1 Agree the schema changes (`needs_work`, `review`, `batch`) and record them in `02-question-pool.md`. *2026-10-06.*
 - [x] RV-2 Scaffold `server/` and `client/` (ARC-2, ARC-3) with run commands in `AGENTS.md`. *2026-10-06, `server/`, `client/`, `shell.nix` (D-12).*
-- [x] RV-3 Server: static files + `GET /api/questions` + `POST /api/questions/<id>/review` with atomic writes. *2026-10-06, `server/main.py`; media paths restricted to `images/` and `media/`.*
-- [x] RV-4 Client: review screen showing every part of a question. *2026-10-06, `client/src/review/Review.svelte`.*
+- [x] RV-3 Server: static files + `GET /api/questions` + `POST /api/questions/<id>/review` with atomic writes. *2026-10-06, then `server/main.py`, now `authoring/server/main.py` (D-35); media paths restricted to `images/` and `media/`.*
+- [x] RV-4 Client: review screen showing every part of a question. *2026-10-06, `authoring/ui/src/review/Review.svelte`.*
 - [x] RV-5 Client: keyboard shortcuts, feedback box, undo, confirmation messages. *2026-10-06.*
 - [x] RV-6 Client: summary screen at the end of a batch. *2026-10-06.*
 - [x] RV-7 `qgen.py merge` sets `batch`; `validate` knows the new fields and status. *2026-10-06.*
 - [x] RV-8 Try it on the 120 existing questions before the pilot runs (`/?batch=none`). *2026-10-06, approved by the gamemaster; "level" renamed to "difficulty n/10".*
-- [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `client/src/review/RevisionPanel.svelte`.*
+- [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `authoring/ui/src/review/RevisionPanel.svelte`.*
 - [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
 - [x] RV-11 Human review of LLM-reviewed questions (D-33): they count as open, show the LLM's verdict, and the summary counts them. *2026-10-07, QP-15.*

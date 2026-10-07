@@ -1,0 +1,27 @@
+:root {
+  --bg: #12131a;
+  --panel: #23252f;
+  --text: #f2f2f5;
+  --muted: #9a9cab;
+  --accent: #ffc94a;
+  --good: #3ecf8e;
+  --good-bg: #1d3a2f;
+  --bad: #ff6b6b;
+  --warn: #ffa94d;
+  --bar: #3987e5; /* chart bars; validated against --panel (dataviz) */
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.45;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
