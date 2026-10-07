@@ -133,6 +133,13 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - Usage: 150 Claude calls, about $15 at list price, so roughly $0.13 per merged question.
 - Media candidates not fetched yet (Commons isn't reachable from the cloud session): run `media.py fetch --batch batch-3`.
 
+## Batch-4 results (2026-10-07, D-32)
+- The 34 subcategories still without a usable question: 114 drafted. One revise round (QG-16) for 40 flagged drafts; all revised versions were confirmed. **112 merged** (q-0317…q-0428); 2 dropped for giveaways (Perry the platypus, unboxing).
+- **Claude reviewed text and media** (D-32, `reviewer: "llm"`, D-33): **107 approved, 5 `needs_work`**. Text: q-0369 duplicates q-0341 (Rubik → Hungría; `dedupe` misses it because the wording differs), q-0420 overlaps q-0328 (silleteros/silleta), q-0388's fun fact misstates the Montreal Protocol. Essential media Commons doesn't have: q-0338 (router with antennas), q-0384 (diamond-kite silhouette).
+- **Media:** every candidate was looked at on contact sheets, not picked by title. The first suggestion was usable far less often than in the first-120 (D-23): wrong subject (a slice of pizza for lasagna, flies for butterfly stroke, embalming jars for a mummy), giveaways (a "gran yelmo" caption, an "Arroz con leche" cup, a "Valley of the Kings" sign, clear-cut forest for "deforestación") or name labels on a painting. 7 questions needed a new search term.
+- Rate limits: `rate` saved a partial answer from a usage-limit crash as done and never retried it; it now refuses incomplete answers. Commons rate-limits file downloads (429 with a 600 s wait), so picks were recorded first and the cache is filled with `media.py sync`.
+- Usage: 143 Claude calls, about $16.50 at list price, so roughly $0.15 per merged question.
+
 ## Still open
 - Target total pool size (OQ-17). It decides how much to generate and how strict the filter is.
 - Accepted alternative answers aren't needed for multiple choice, but the wording of the options must stay unambiguous.
@@ -153,5 +160,5 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
 - [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and gamemaster review still to do.*
 - [x] QG-16 `revise`/`apply` for new drafts before `merge`. *2026-10-06, `qgen.py` `apply_to_drafts`.*
-- [ ] QG-17 Batch-4: the 34 subcategories still without a usable question, reviewed and approved by Claude including media (D-32).
+- [x] QG-17 Batch-4: the 34 subcategories still without a usable question, reviewed and approved by Claude including media (D-32). *2026-10-07, 112 merged (q-0317…q-0428), 107 approved with media, 5 `needs_work`; see "Batch-4 results".*
 - [ ] QG-12 Build a review page (approve/reject by keyboard, shows the question as on the TV); possibly the first piece of the Svelte client. *Planned in `08-review-tool.md`.*

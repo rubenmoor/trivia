@@ -294,6 +294,9 @@ def cmd_rate(args):
         name, qs = item
         user = "## Questions\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False, indent=2)
         out = claude(system, user, RATE_SCHEMA, args.model, d)
+        missing = {q["tmp_id"] for q in qs} - {r["id"] for r in out["ratings"]}
+        if missing:  # a partial file would count as done and never be retried
+            raise RuntimeError(f"no rating for {', '.join(sorted(missing))}")
         save_json(d / "ratings" / f"{name}.json", {r["id"]: r for r in out["ratings"]})
         print(f"  rate: {name}")
 
