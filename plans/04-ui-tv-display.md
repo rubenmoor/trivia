@@ -183,7 +183,7 @@ Menu items (keyboard-navigable, large enough for the TV):
 - **Deshacer:** take back the last final answer, if the gamemaster misjudged or someone pressed by accident (GM-2).
 - **Reiniciar partida / Volver al inicio,** with a confirmation.
 - **Pantalla completa** on/off.
-- **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `data/questions.json` and the review tool (`/review?id=…`).
+- **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `data/questions.json` and the review tool. The ID links to `/review/<id>` (new tab), next to links to the stats pages (`/stats/categories`, `/stats/difficulty`).
 - **Demo de efectos** (later): play every transition and effect for testing on the TV (B-3).
 
 The detailed action set and any extra keys are owned by `05-gamemaster-controls.md` (GM-2). This plan only fixes that the overlay exists and opens with `Esc`.

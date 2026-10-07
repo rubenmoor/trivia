@@ -125,7 +125,17 @@
       {/if}
     {/each}
     <p class="debug">Volumen: <kbd>←</kbd> <kbd>→</kbd></p>
-    {#if questionId}<p class="debug">{questionLabel}: <code>{questionId}</code></p>{/if}
+    {#if questionId}
+      <p class="debug">
+        {questionLabel}:
+        <a href="/review/{encodeURIComponent(questionId)}" target="_blank" tabindex="-1"><code>{questionId}</code></a>
+      </p>
+    {/if}
+    <p class="debug">
+      Estadísticas:
+      <a href="/stats/categories" target="_blank" tabindex="-1">categorías</a> ·
+      <a href="/stats/difficulty" target="_blank" tabindex="-1">dificultad</a>
+    </p>
   </div>
 </div>
 
@@ -174,6 +184,9 @@
   .debug code {
     color: var(--slate-200);
     user-select: all;
+  }
+  .debug a {
+    color: var(--slate-200);
   }
   button.selected,
   .volume.selected {

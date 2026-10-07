@@ -10,7 +10,9 @@
   // (or a bookmark) comes back to it. Decisions themselves live in data/questions.json.
   const params = new URLSearchParams(location.search);
   const batch = params.get("batch");
-  const startId = params.get("id");
+  // /review/q-0123: just that one question (linked from the game's admin overlay).
+  const singleId = decodeURIComponent(location.pathname.match(/^\/review\/([^/]+)/)?.[1] ?? "") || null;
+  const startId = singleId ?? params.get("id");
   // ?debug=keys shows what the browser reports for each key press (for layout problems).
   const debugKeys = params.get("debug") === "keys";
   let lastKey = $state("");
@@ -65,9 +67,10 @@
   onMount(async () => {
     try {
       questions = await fetchQuestions(batch);
+      if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
       const firstOpen = questions.findIndex((q) => q.status === "draft");
-      finished = questions.length > 0 && fromUrl === -1 && firstOpen === -1;
+      finished = !singleId && questions.length > 0 && fromUrl === -1 && firstOpen === -1;
       index = fromUrl !== -1 ? fromUrl : Math.max(firstOpen, 0);
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
@@ -85,6 +88,7 @@
   });
 
   $effect(() => {
+    if (singleId) return;
     const id = !loading && !finished ? questions[index]?.id : null;
     const url = new URL(location.href);
     if (id) url.searchParams.set("id", id);
@@ -157,7 +161,7 @@
       await store(i, { decision, feedback });
       flash(LABELS[decision]);
       if (suggestions.length) pickSuggestionsInBackground(questions[i].id, suggestions);
-      const next = nextOpen(i);
+      const next = singleId ? i : nextOpen(i);
       openSlot = null;
       if (next === -1) finished = true;
       else index = next;
@@ -345,7 +349,9 @@
   {:else if error}
     <p class="center error">{error}</p>
   {:else if questions.length === 0}
-    <p class="center">No questions{batch ? ` in batch “${batch}”` : ""}.</p>
+    <p class="center">
+      {singleId ? `No question “${singleId}”` : `No questions${batch ? ` in batch “${batch}”` : ""}`}.
+    </p>
   {:else if finished}
     <section class="summary">
       <h1>Batch done{batch ? `: ${batch}` : ""}</h1>
@@ -362,11 +368,17 @@
     </section>
   {:else if current}
     <header>
-      <span class="progress">{index + 1} / {questions.length}</span>
+      {#if singleId}
+        <span class="progress">Single question</span>
+      {:else}
+        <span class="progress">{index + 1} / {questions.length}</span>
+      {/if}
       {#if downloads}<span class="downloads">⬇ downloading media… ({downloads})</span>{/if}
-      <span class="counts">
-        ✓ {counts.approved} · ✎ {counts.needs_work} · ✗ {counts.rejected} · open {counts.draft}
-      </span>
+      {#if !singleId}
+        <span class="counts">
+          ✓ {counts.approved} · ✎ {counts.needs_work} · ✗ {counts.rejected} · open {counts.draft}
+        </span>
+      {/if}
       <span class="meta">
         {current.id} · {current.subcategory} ·
         <span class:pending={difficultyPending}>difficulty {current.difficulty}/10</span>
@@ -375,6 +387,7 @@
         {/if}
         {#if current.style}· {current.style.split(":")[0]}{/if}
       </span>
+      <a class="stats" href="/stats/categories">Stats →</a>
     </header>
 
     {#if current.review}
@@ -551,6 +564,9 @@
   }
   .meta {
     margin-left: auto;
+  }
+  .stats {
+    color: var(--muted);
   }
   .previous {
     margin-top: 1rem;

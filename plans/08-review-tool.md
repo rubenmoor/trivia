@@ -63,7 +63,7 @@ While the feedback box is open, all other shortcuts are off so typing works norm
 ## What gets reviewed
 - By default: every question with `status: "draft"` from one batch, e.g. `?batch=pilot`. The pilot is identified by a new `batch` field (the `qgen.py` run name, set by `merge`).
 - Undecided questions come first, in pool order. Already-decided ones stay reachable with `←` so decisions can be changed.
-- The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
+- The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. `/review/q-0123` reviews just that one question, whatever its status (linked from the admin overlay, 04): after a decision it stays on the question. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
 - When all are decided: a summary screen with the counts and the share kept (the keep rate for QG-11).
 
 ## Revised questions (QG-13)
@@ -110,3 +110,4 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - [x] RV-7 `qgen.py merge` sets `batch`; `validate` knows the new fields and status. *2026-10-06.*
 - [x] RV-8 Try it on the 120 existing questions before the pilot runs (`/?batch=none`). *2026-10-06, approved by the gamemaster; "level" renamed to "difficulty n/10".*
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `client/src/review/RevisionPanel.svelte`.*
+- [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
