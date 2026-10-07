@@ -288,3 +288,10 @@ Template:
 - Decision: The `review` record gets `reviewer: "human" | "llm"`, plus `model` for an LLM review. `status` stays the one field that decides play: `approved` is playable whoever approved it. A human review of an LLM-reviewed question replaces it and keeps the LLM's review in `review.previous`. The review tool treats a question as open until a human has reviewed it, so LLM-reviewed questions can be checked later at any pace.
 - Consequences: Existing reviews are migrated: pilot and first-120 get `reviewer: "human"`; batch-3 (116) gets `reviewer: "llm"`, `model: "claude-opus-5-5"`, because a Claude session approved it, not the gamemaster (commit 0eaa35e). Batch-4 is written as LLM reviews (D-32). `validate` checks the new fields. `GET /api/questions` filters by `reviewer` (`human`, `llm`, `none`). Selection (`tools/selection.py`) doesn't change.
 - Supersedes / related: D-7 (the gamemaster no longer has to review every question before play), D-11, D-32; QP-15
+
+## D-34: Plan a Steam release alongside the family game
+- Date: 2026-10-07
+- Context: The gamemaster wants the game packaged, installable and sold or given away on Steam, not only run natively on Windows. D-2 and `00-vision.md` list publishing and monetisation as non-goals.
+- Decision: A Steam release is planned as its own track: master plan `11-steam.md`, sub-plans 12–18. The family game stays the priority. Changes that don't change how the family plays (the TypeScript engine, mouse support, string extraction, the joker budget with "unlimited" as the default, the license audit) can start now. Everything else waits for its open question (OQ-29..OQ-37). The current way of playing stays as the gamemaster mode.
+- Consequences: D-2's "no publishing concerns" and the non-goals in `00-vision.md` no longer hold for the Steam track. New task prefixes: ST, PORT, MD, IN, I18N, LUI, QT, RG, CT, PUB, SW. The shell, the default mode and the content target are not decided yet.
+- Supersedes / related: D-2 (scope, in part); D-3, D-4, D-25 (revisited by `12-client-engine.md`); OQ-29..OQ-37

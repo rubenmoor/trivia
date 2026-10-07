@@ -7,6 +7,17 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 ### Added 2026-10-06
 - **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`). *Input from D-22: every level offers 4 questions from its difficulty range, so a game needs 48 unburned questions to show and burns 12 (`03-game-flow.md`). Unlimited jokers burn extra questions (D-27), but burning is per player (D-28).*
 
+### Added 2026-10-07 (Steam release, [`11-steam.md`](11-steam.md))
+- **OQ-29** Desktop shell: Electron + steamworks.js (recommended), Tauri, or a browser + local server? See `18-steam-integration.md`.
+- **OQ-30** Default mode: joker counts per difficulty preset (draft table in `13-game-modes.md`), checkpoints, which admin actions remain?
+- **OQ-31** Launch languages (Spanish only? plus English? more?) and the Spanish variety: Colombian as today, or neutral Spanish with Colombian variants?
+- **OQ-32** Content target for release: how many games per new player, per language (draft: ≥ 30, primary language ≥ 50; `16-content-target.md`)?
+- **OQ-33** Price model (paid, free, free + paid packs), and who holds the Steamworks account (a person or a company; tax)?
+- **OQ-34** Store name: keep «¡Trivia!» (generic, hard to find in search), or a distinct name with «¡Trivia!» as a subtitle?
+- **OQ-35** Code and content license (the repo has no `LICENSE` today); does new release content stay public on GitHub?
+- **OQ-36** Audience: kids and families only (the D-6 age scale), or an adult track too?
+- **OQ-37** Competitive mode and couch co-op: format (relay ladder, parallel ladders, buzzer), and input (hot-seat, one controller per player, phones as buzzers)?
+
 ## Resolved
 - **OQ-4** No timer per question; **OQ-13** no separate gamemaster device and no GM-only view; **OQ-8** no family-specific questions; **OQ-11** a computer connected to the TV via HDMI; **OQ-12** internet is available during play; **OQ-28** the game is called «¡Trivia!» (D-30).
 - **OQ-15** Hints are shown only through the Pista joker, one hint per use, until the question's three are shown (D-26, D-27). **OQ-25** Jokers are unlimited; **OQ-26** one hint per Pista; **OQ-27** a Snipe hit costs nothing beyond repeating the level (D-27).

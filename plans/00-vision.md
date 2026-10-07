@@ -22,6 +22,8 @@ A fun, good-looking trivia game for family evenings, played on the living-room T
 - Online multiplayer, accounts, publishing, monetisation.
 - Mobile app stores.
 
+*2026-10-07: a Steam release is now planned as a separate track (D-34, [`11-steam.md`](11-steam.md)). These non-goals still describe the family game; the Steam track has its own goals.*
+
 ## Success criteria
 - [ ] A full game of 12 questions runs from start to finish without touching code.
 - [ ] The text is readable from the couch, and the images look good.

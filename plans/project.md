@@ -127,6 +127,20 @@ Setup: a computer on the TV via HDMI, internet available (D-30).
 
 ---
 
+### Steam track (separate, D-34)
+The release on Steam has its own phases S1–S6, owned by [`11-steam.md`](11-steam.md). Phase **S1** doesn't change the family game and can run alongside M5/M6:
+
+- [ ] PORT-1..PORT-8 Game referee in TypeScript, storage adapters, pool export — [`12`](12-client-engine.md)
+- [ ] IN-1 Every keyboard action also clickable — [`14`](14-input.md)
+- [ ] LUI-1..LUI-3 UI strings in catalogs, pseudo-locale, English draft — [`15a`](15a-ui-translation.md)
+- [ ] MD-1..MD-4 Joker budget (default unlimited), count badges, overlay setting — [`13`](13-game-modes.md)
+- [ ] RG-1, RG-2 `region` tags; tag the existing pool — [`15c`](15c-regional-questions.md)
+- [ ] PUB-1..PUB-3 Media license audit and replacements — [`17`](17-publishing.md)
+
+Phase **S2** answers OQ-29..OQ-37 (below).
+
+---
+
 ## Open questions
 
 From [`open-questions.md`](open-questions.md), with the milestone each one blocks:
@@ -134,6 +148,15 @@ From [`open-questions.md`](open-questions.md), with the milestone each one block
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (QP-9) |
+| OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
+| OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
+| OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
+| OQ-32 | Content target for release | Steam S4 (16) |
+| OQ-33 | Price model; Steamworks account holder | Steam S5 (17) |
+| OQ-34 | Store name | Steam S5 (17) |
+| OQ-35 | Code and content license | Steam S2 (17) |
+| OQ-36 | Audience: families only or an adult track | Steam S2 (13, 16) |
+| OQ-37 | Competitive mode and couch co-op format and input | Steam later (13, 14) |
 
 ## Plan housekeeping
 
