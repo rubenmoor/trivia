@@ -10,19 +10,19 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 
 | File | Purpose | Status |
 |------|---------|--------|
-| [`00-vision.md`](00-vision.md) | Goals, constraints, non-goals, success criteria | stub |
-| [`01-architecture.md`](01-architecture.md) | Tech stack, components, data flow | stub |
+| [`00-vision.md`](00-vision.md) | Goals, constraints, non-goals, success criteria | implemented |
+| [`01-architecture.md`](01-architecture.md) | Tech stack, components, data flow | implemented |
 | [`02-question-pool.md`](02-question-pool.md) | Question schema, pool storage, burned tracking | stub |
 | [`03-game-flow.md`](03-game-flow.md) | Rules, 12-question progression, win/lose states | draft |
 | [`04-ui-tv-display.md`](04-ui-tv-display.md) | Screen states, transitions, sound, animation for the TV | draft |
-| [`05-gamemaster-controls.md`](05-gamemaster-controls.md) | How the gamemaster drives the game | stub |
+| [`05-gamemaster-controls.md`](05-gamemaster-controls.md) | How the gamemaster drives the game | decided |
 | [`06-images.md`](06-images.md) | Media sourcing (Wikimedia Commons), caching, credits, picking in the review tool | draft |
 | [`07-question-generation.md`](07-question-generation.md) | Drafting, rating, reviewing and accepting new questions; batch generation strategy | draft |
 | [`08-review-tool.md`](08-review-tool.md) | Local web page to approve, reject or give feedback on questions | draft |
 | [`09-jokers.md`](09-jokers.md) | Jokers (hint, skip/purge, easier, other subcategory, snipe): rules, server, UI, animations | draft |
 | [`10-visual-design.md`](10-visual-design.md) | Look and feel: colours, type scale, glass panels over images, components, motion | draft |
 | [`11-steam.md`](11-steam.md) | **Steam release master plan:** principles, tracks, phases, blocking questions (D-34) | draft |
-| [`12-client-engine.md`](12-client-engine.md) | Steam: move the game referee from Python to TypeScript; storage adapters; pool export | draft |
+| [`12-client-engine.md`](12-client-engine.md) | Move the game referee from Python to TypeScript; storage adapters; pool export (M7) | draft |
 | [`13-game-modes.md`](13-game-modes.md) | Steam: gamemaster mode with joker budget, default mode with presets, competitive mode | stub |
 | [`14-input.md`](14-input.md) | Steam: every button clickable, controller support, couch co-op input | draft |
 | [`15-i18n.md`](15-i18n.md) | Steam: locale and region model; sub-plans 15a (UI), 15b (questions), 15c (regional) | stub |
@@ -33,14 +33,14 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`17-publishing.md`](17-publishing.md) | Steam: media and code licenses, credits, AI disclosure, store page, Steamworks account | stub |
 | [`18-steam-integration.md`](18-steam-integration.md) | Steam: desktop shell, Steamworks features, builds and depots, Steam Deck | stub |
 | [`19-repo-layout.md`](19-repo-layout.md) | Repo layout (`app/` ships, `authoring/` doesn't), flake packages, the one-command LLM batch (D-35, D-36) | active |
-| [`project.md`](project.md) | Milestones to completion; all open tasks and questions grouped by milestone | living |
+| [`project.md`](project.md) | Milestones; all open tasks and questions grouped by milestone | living |
 | [`backlog.md`](backlog.md) | Additional tasks found along the way | living |
 | [`open-questions.md`](open-questions.md) | Unresolved questions and their answers | living |
 | [`decisions.md`](decisions.md) | Decision log (lightweight ADRs) | living |
 
 Order of work: **02 (question pool) first, together with 07 (question generation)**, then 03 → 01 → 06 → 04 → 10 → 09 → 05.
 
-The Steam release (11–18) is a separate track with its own phases (S1–S6) in [`11-steam.md`](11-steam.md). Its phase S1 doesn't change the family game and can run alongside M5/M6.
+The family game is done and living-room ready (2026-10-07). Open work is grouped in [`project.md`](project.md): content (M5) and groundwork that doesn't change how the family plays (M7–M10, from plans 12, 13, 14, 15a, 15c, 17). The Steam release (11–18) is a separate track with its own phases (S2–S6) in [`11-steam.md`](11-steam.md).
 
 ## Conventions
 

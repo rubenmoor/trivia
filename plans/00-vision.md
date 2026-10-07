@@ -1,6 +1,6 @@
 # 00 — Vision
 
-**Status:** stub
+**Status:** implemented
 
 ## Goal
 A fun, good-looking trivia game for family evenings, played on the living-room TV.
@@ -25,9 +25,10 @@ A fun, good-looking trivia game for family evenings, played on the living-room T
 *2026-10-07: a Steam release is now planned as a separate track (D-34, [`11-steam.md`](11-steam.md)). These non-goals still describe the family game; the Steam track has its own goals.*
 
 ## Success criteria
-- [ ] A full game of 12 questions runs from start to finish without touching code.
-- [ ] The text is readable from the couch, and the images look good.
-- [ ] The pool holds enough unburned questions for several sessions.
+*2026-10-07: met. The gamemaster declared the game living-room ready.*
+- [x] A full game of 12 questions runs from start to finish without touching code.
+- [x] The text is readable from the couch, and the images look good.
+- [x] The pool holds enough unburned questions for several sessions.
 
 ## Tasks
-- [ ] VIS-1 Confirm the vision with the gamemaster after the open questions are resolved.
+- [x] VIS-1 Confirm the vision with the gamemaster after the open questions are resolved. *2026-10-07: the family game is done as described here.*

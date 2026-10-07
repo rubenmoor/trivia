@@ -156,4 +156,4 @@ The picture should fill the screen and stay visible; the interface floats over i
 - [x] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants. *2026-10-06: `Stage.svelte`.*
 - [x] VD-7 Tower materials by height (with UI-3). *2026-10-06: `Tower.svelte`: materials, drop-and-settle, wobble, crown, crumble on Wrong.*
 - [x] VD-8 SVG icon set (padlock, replay, speaker, ✓, ✗; joker tokens with JK-4). *2026-10-06: `Icon.svelte` (also film, crown, star); joker tokens come with JK-4.*
-- [ ] VD-9 TV check: legibility of the smaller scale from the couch, glass contrast over bright images, `backdrop-filter` performance and the no-blur fallback (with UI-6).
+- [x] VD-9 TV check: legibility of the smaller scale from the couch, glass contrast over bright images, `backdrop-filter` performance and the no-blur fallback (with UI-6). *2026-10-07: living-room ready (gamemaster).*

@@ -4,6 +4,8 @@
 
 Turns «¡Trivia!» from a private living-room game (D-2) into a game anyone can buy and install from Steam (D-34). This file is only the map: the goal, the guiding principles, the tracks, their order and the questions that block them. Each track has its own sub-plan, which owns the details and the tasks.
 
+*2026-10-07: the groundwork that can be done now and isn't Steam-specific (the TypeScript engine, mouse support, the joker budget, UI string extraction, region tags, the media license audit) has moved to [`project.md`](project.md) as milestones M7–M10. This plan keeps only what a public release needs on top of that.*
+
 ## Goal
 A family can install the game from Steam on Windows, Linux or the Steam Deck. They can play it offline in a language they speak, without a gamemaster who knows the code, with a mouse, keyboard or controller, and with enough questions for many evenings. The family version at home keeps working the whole way through.
 
@@ -16,15 +18,15 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 
 ## Tracks
 
-| # | Sub-plan | What it covers | Changes the family game? | Can start |
-|---|----------|----------------|--------------------------|-----------|
-| 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export | No (same rules, same saves) | **now** |
-| 13 | [Game modes](13-game-modes.md) | Gamemaster mode with joker counts you can set, a default mode with difficulty presets, a competitive mode for 8+ players (stub), small rule changes | Only if the family opts in | **now** (joker budget); later the rest |
-| 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | **now** (mouse) |
-| 15 | [Internationalization](15-i18n.md) | Locale model; sub-plans [15a UI](15a-ui-translation.md), [15b questions](15b-question-translation.md), [15c regional](15c-regional-questions.md) | No | **now** (15a string extraction) |
-| 16 | [Content target](16-content-target.md) | How many questions a release needs, how that is measured, the quality bar | No (more questions help the family too) | after OQ-32 |
-| 17 | [Publishing](17-publishing.md) | Media and code licenses, credits, AI disclosure, store page, Steamworks account, rating | Credits screen only | **now** (audit) |
-| 18 | [Steam integration](18-steam-integration.md) | Desktop shell, Steamworks (overlay, Cloud, achievements), builds, depots, Steam Deck | No | after 12 |
+| # | Sub-plan | What it covers | Changes the family game? | Groundwork in `project.md` | Steam part starts |
+|---|----------|----------------|--------------------------|----------------------------|-------------------|
+| 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export | No (same rules, same saves) | all of it (M7) | — |
+| 13 | [Game modes](13-game-modes.md) | Gamemaster mode with joker counts you can set, a default mode with difficulty presets, a competitive mode for 8+ players (stub), small rule changes | Only if the family opts in | joker budget MD-1..MD-4 (M8) | after OQ-30, OQ-36 |
+| 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller) |
+| 15 | [Internationalization](15-i18n.md) | Locale model; sub-plans [15a UI](15a-ui-translation.md), [15b questions](15b-question-translation.md), [15c regional](15c-regional-questions.md) | No | LUI-1..LUI-3, RG-1, RG-2 (M9) | after OQ-31 |
+| 16 | [Content target](16-content-target.md) | How many questions a release needs, how that is measured, the quality bar | No (more questions help the family too) | — | after OQ-32 |
+| 17 | [Publishing](17-publishing.md) | Media and code licenses, credits, AI disclosure, store page, Steamworks account, rating | Credits screen only | audit PUB-1..PUB-3 (M10) | S2 (license), S5 (store) |
+| 18 | [Steam integration](18-steam-integration.md) | Desktop shell, Steamworks (overlay, Cloud, achievements), builds, depots, Steam Deck | No | — | after M7 and OQ-29 |
 
 ```mermaid
 flowchart LR
@@ -44,15 +46,15 @@ flowchart LR
 
 | Phase | Content | Tasks (start with) | Exit |
 |-------|---------|--------------------|------|
-| **S1 — Groundwork** (no impact on the family) | TS engine, all buttons clickable, UI strings in a catalog, joker budget with the default "unlimited", license audit | PORT-1..PORT-8, IN-1, LUI-1..LUI-3, MD-1..MD-4, PUB-1..PUB-3 | The family game runs on the TS engine. `trivia` is only a static server plus the authoring API. |
+| **S1 — Groundwork** | Moved to [`project.md`](project.md): M7 (TS engine), M8 (mouse, joker budget), M9 (UI strings, region tags), M10 (license audit) | — | M7–M10 done |
 | **S2 — Product definition** | Answer the open questions below. Define the default mode and the launch languages. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 resolved in `decisions.md` |
 | **S3 — Playable desktop build** | Electron shell, file saves, controller support, Deck layout, credits screen | SW-1..SW-6, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
-| **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-*, CT-* | `qgen.py report --simulate` meets the target for every launch language |
+| **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-3..RG-5, LUI-4..LUI-6, CT-* | `qgen.py report --simulate` meets the target for every launch language |
 | **S5 — Steam** | Steamworks app, Cloud, achievements, depots, beta branch, store page, disclosures | SW-7..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
 | **S6 — Release** | Coming-soon page, wishlists, release, patches | ST-3..ST-5 | Released; content updates go out as patches |
 | **Later** | Competitive mode (8+ players), couch co-op, more regions and languages | MD-8+, IN-6+ | — |
 
-Phases S1 and S2 can run in parallel. S1 is pure engineering, S2 is decisions.
+S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python).
 
 ## Open questions (blocking)
 All are logged in [`open-questions.md`](open-questions.md):

@@ -151,7 +151,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-3 Define the quality checklist. *2026-10-06, quality rubric in this file.*
 - [x] QG-4 Define duplicate detection against the pool. *2026-10-06, `qgen.py dedupe`: same non-numeric answer and (question similarity > 0.6, or both need the same kind of essential media). Changed after the pilot: wording alone flagged shared templates like "Escucha: ¿qué … suena?".*
 - [x] QG-5 Build the drafting tool (depends on QG-1). *2026-10-06, `authoring/tools/qgen.py` + `authoring/tools/prompts/` (D-10); smoke-tested end to end on one subcategory.*
-- [ ] QG-6 Build the review and accept step that writes to the question JSON.
+- [x] QG-6 Build the review and accept step that writes to the question JSON. *2026-10-06: the review tool (RV-1..RV-9, `08-review-tool.md`).*
 - [x] QG-7 Agree the schema additions (`style`, `subcategory`, `quality`, `fact_checked`, `needs_media`) and the subcategory → category mapping. *2026-10-06; mapping is produced by `fit`.*
 - [x] QG-8 Build the fit table (subcategory × style) for the pilot subcategories. *Pilot size: ~100 questions (~25 subcategories × 4 styles). 2026-10-06: run `pilot` started with the 25 subcategories listed in `work/pilot/run.json`.* *2026-10-06, `work/pilot/fit.json`.*
 - [x] QG-9 Pilot: draft ~60–80 questions, weighted to levels 4–7. *2026-10-06, 89 drafted, 1 slot skipped.*
@@ -162,4 +162,4 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and gamemaster review still to do.*
 - [x] QG-16 `revise`/`apply` for new drafts before `merge`. *2026-10-06, `qgen.py` `apply_to_drafts`.*
 - [x] QG-17 Batch-4: the 34 subcategories still without a usable question, reviewed and approved by Claude including media (D-32). *2026-10-07, 112 merged (q-0317…q-0428), 107 approved with media, 5 `needs_work`; see "Batch-4 results".*
-- [ ] QG-12 Build a review page (approve/reject by keyboard, shows the question as on the TV); possibly the first piece of the Svelte client. *Planned in `08-review-tool.md`.*
+- [x] QG-12 Build a review page (approve/reject by keyboard, shows the question as on the TV); possibly the first piece of the Svelte client. *2026-10-06: `/review` (RV-4, RV-5, `08-review-tool.md`).*

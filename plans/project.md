@@ -1,156 +1,120 @@
-# Project — Milestones to Completion
+# Project — Milestones
 
 **Status:** living
 
-The road from today to a finished game: milestones, every open task, every open question. The plan files stay the source of truth for each task's details and status; this file only groups and orders them. When you tick a task in its plan file, tick it here too.
+The road from today onward: milestones, every open task, every open question. The plan files stay the source of truth for each task's details and status; this file only groups and orders them. When you tick a task in its plan file, tick it here too.
 
-**Done means:** a full game night on the living-room TV, with sound, jokers and the final look, played by player name from start to victory or defeat without touching code, and enough questions for several games per player (success criteria in [`00-vision.md`](00-vision.md)).
+**The family game is done (2026-10-07).** It is living-room ready: a full game night on the TV with sound, jokers and the final look, played by player name without touching code (success criteria in [`00-vision.md`](00-vision.md)). From here on there are three kinds of work:
+1. **Content** (M5): more and better questions, media for every question.
+2. **Groundwork** (M7–M10): changes that are useful on their own and don't change how the family plays. The Steam release needs them too, but none of them is Steam-specific.
+3. **Steam** (separate track, [`11-steam.md`](11-steam.md), D-34): everything that only matters for a public release.
 
-## Where we stand (2026-10-06)
+## Where we stand (2026-10-07)
 
-- **Pool:** 200 questions in `authoring/data/questions.json` (190 approved, 9 rejected, 1 draft), batches `first-120` and `pilot`. 24 categories / 140 subcategories (D-19).
-- **Pipeline:** `authoring/tools/qgen.py` (fit → draft → rate → factcheck → dedupe → merge, plus revise/apply, report, validate), `authoring/tools/media.py` (Commons fetch, cache sync).
-- **Review tool and stats pages:** done ([`08-review-tool.md`](08-review-tool.md)).
-- **Game:** a playable skeleton (D-25): server referee in `app/server/game.py`, screens in `app/client/src/game/`, unpolished parts marked `PLACEHOLDER(<task ID>)`. Players and per-player burning on the server (GF-6); the D-29 look is in place and confirmed (M3); no jokers, no sound yet.
+- **Pool:** 428 questions in `authoring/data/questions.json`: 412 approved (190 reviewed by the gamemaster, 222 by Claude, D-33), 6 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`. 24 categories / 140 subcategories (D-19). Exported for the game to `app/data/pool.json` (D-35).
+- **Difficulty supply (approved):** 1: 25 · 2: 37 · 3: 56 · 4: 55 · 5: 65 · 6: 79 · 7: 47 · 8: 24 · 9: 22 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
+- **Media:** 290 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
+- **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)).
+- **Game:** complete. Server referee in `app/server/game.py`; screens in `app/client/src/game/`. One placeholder left: `PLACEHOLDER(UI-7)` (preloading).
 
 ## Milestones
 
 | # | Milestone | Main plans | Status |
 |---|-----------|-----------|--------|
 | M0 | Foundations: pool, pipeline, review tool, media cache, playable skeleton | 02, 06, 07, 08 | done |
-| M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | done (B-1 waits for a decision) |
-| M2 | Jokers | 09 | done (sounds: JK-9 in M4) |
-| M3 | Visual design and screen polish | 10, 04 | mostly done (UI-7 preload left) |
-| M4 | Sound, music and fireworks | 04, 09 | done (rest of the sounds synthesized, fine for now) |
+| M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | done |
+| M2 | Jokers | 09 | done |
+| M3 | Visual design and screen polish | 10, 04 | done (UI-7 preload left) |
+| M4 | Sound, music and fireworks | 04, 09 | done (remaining sounds synthesized, fine for now) |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
-| M6 | Living-room ready (TV test, setup, backup) | 04, 10, backlog | todo |
+| M7 | Game engine in TypeScript | 12 | todo |
+| M8 | Mouse everywhere and a joker budget | 14, 13 | todo |
+| M9 | UI strings in a catalog; region tags | 15a, 15c | todo |
+| M10 | Media license audit | 17 | todo |
 
-Suggested order: M1 → M2 → M3 → M4 → M6, with M5 running alongside (content can be generated and reviewed at any time). M2 before M3 because the joker tray needs room in the Question layout. M3 and M4 can swap or interleave.
+(M6, living-room ready, is done and closed. Milestone numbers aren't reused.)
+
+Suggested order: M5 keeps running alongside everything. M8 and M10 are small and independent, so they can go first. M7 is the biggest; MD-1 and RG-1 work on either engine, so M8 and M9 don't have to wait for it. A family test night closes M7 (PORT-7).
 
 ---
 
-### M0 — Foundations ✅
-Done. See the ticked tasks in [`02-question-pool.md`](02-question-pool.md), [`06-images.md`](06-images.md), [`07-question-generation.md`](07-question-generation.md), [`08-review-tool.md`](08-review-tool.md), and GF-2, GF-4, GF-5, UI-7 (D-25).
+### Done: M0–M4
+Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-game-flow.md), [`04`](04-ui-tv-display.md), [`05`](05-gamemaster-controls.md), [`06`](06-images.md), [`07`](07-question-generation.md), [`08`](08-review-tool.md), [`09`](09-jokers.md), [`10`](10-visual-design.md), [`19`](19-repo-layout.md). Leftovers:
 
-### M1 — Complete rules
-**Goal:** the rules from D-20, D-28 are fully in place; the gamemaster can run a game, including corrections, from the admin overlay.
-**Exit:** a player picks or enters a name, plays to the end, and their seen questions are burned for them only; the gamemaster can skip, skip-and-burn-for-everyone and undo.
-
-- [x] GF-6 Players: `players` table, name on new games, burn per player plus global burn, supply and draw per player, undo per player — [`03`](03-game-flow.md)
-- [x] QP-14 `burned` table gets a player column; `qgen.py report --player` — [`02`](02-question-pool.md)
-- [x] GF-7 Delete a player with all their games and burns — [`03`](03-game-flow.md)
-- [x] UI-16 Player screen: name list, new name, greeting; name on Start and Level — [`04`](04-ui-tv-display.md)
-- [x] GF-1 Full rule set (no timer, D-30) — [`03`](03-game-flow.md)
-- [x] GM-1 Choose the control method (TV keyboard + `Esc` overlay, D-30) — [`05`](05-gamemaster-controls.md)
-- [x] GM-2 Define the action set (incl. skip and burn for everyone, D-28; confirmed D-30) — [`05`](05-gamemaster-controls.md)
-- [x] GM-3 Decide on a GM-only view with answer and notes (no, D-30) — [`05`](05-gamemaster-controls.md)
-- [x] GM-4 Implement the controls («Saltar y quemar para todos» in the overlay) — [`05`](05-gamemaster-controls.md)
-- [x] UI-13 Admin overlay on `Esc` — [`04`](04-ui-tv-display.md)
-- [ ] B-1 Session log: questions asked, result, date — [`backlog`](backlog.md) *(not yet accepted)*
-
-No blocking questions left (D-30).
-
-### M2 — Jokers
-**Goal:** all five jokers (Soplo, Paso, Bájale, Cambiazo, Francotirador) work, server and client, with their animations (D-26, D-27).
-**Exit:** every joker can be played on the TV; availability and reasons are correct; replaced questions are burned for the player.
-
-- [x] JK-1 Confirm names, keys and animations (D-30) — [`09`](09-jokers.md)
-- [x] JK-2 Server: `POST /api/game/joker`, availability, purge, burn, hints, history — [`09`](09-jokers.md)
-- [x] JK-3 Server: Snipe — [`09`](09-jokers.md)
-- [x] JK-4 Client: joker tray — [`09`](09-jokers.md)
-- [x] JK-5 Client: common play animation and input lock — [`09`](09-jokers.md)
-- [x] JK-6 Client: Soplo notes, Paso dialog and purge — [`09`](09-jokers.md)
-- [x] JK-7 Client: card-flip swap, difficulty dial, subcategory picker — [`09`](09-jokers.md)
-- [x] JK-8 Client: Francotirador — [`09`](09-jokers.md)
-- [x] JK-11 Printable joker cards `/comodines` (4 × Soplo, 2 × each other) — [`09`](09-jokers.md)
-- [x] UI-15 Room for the joker tray and hint notes in the layouts — [`04`](04-ui-tv-display.md)
-- [x] JK-10 `qgen.py report` per subcategory × difficulty — [`09`](09-jokers.md)
-
-Depends on M1 (per-player burning). Joker sounds (JK-9) are in M4.
-
-### M3 — Visual design and screen polish
-**Goal:** the D-29 look (smaller text, glass panels, gray/dark blue) on every screen; the placeholders for visuals and animation are gone.
-**Exit:** `grep -rn PLACEHOLDER app/client/src` lists only sound-related items (M4).
-
-- [x] VD-1 Gamemaster confirms palette, fonts, type scale from the implementation (D-30) — [`10`](10-visual-design.md)
-- [x] VD-2 Theme file: tokens, `--u`, glass classes — [`10`](10-visual-design.md)
-- [x] VD-3 Ship Baloo 2 and Nunito — [`10`](10-visual-design.md)
-- [x] VD-4 / UI-2 Question screen layout — [`10`](10-visual-design.md), [`04`](04-ui-tv-display.md)
-- [x] VD-5 Candy buttons and answer tile states — [`10`](10-visual-design.md)
-- [x] VD-6 Stage backgrounds — [`10`](10-visual-design.md)
-- [x] VD-7 / UI-3 Tower: materials, drop-and-settle, crown — [`10`](10-visual-design.md), [`04`](04-ui-tv-display.md)
-- [x] VD-8 SVG icon set — [`10`](10-visual-design.md)
-- [x] UI-1 Visual style (confirmed, VD-1) — [`04`](04-ui-tv-display.md)
-- [x] UI-4 Reveal, Correct, Wrong and Victory animations (fireworks: UI-9) — [`04`](04-ui-tv-display.md)
-- [x] UI-11 Quirky question cards with deal-in and tear-open — [`04`](04-ui-tv-display.md)
-- [x] UI-12 Padlock animations — [`04`](04-ui-tv-display.md)
-- [x] UI-14 Consolation and milestone copy in Spanish — [`04`](04-ui-tv-display.md)
 - [ ] UI-7 follow-up: preload the next screen's media before fading in (`PLACEHOLDER(UI-7)`) — [`04`](04-ui-tv-display.md)
-
-The game is called «¡Trivia!» (D-30).
-
-### M4 — Sound, music and fireworks
-**Goal:** the audio contract from D-21/D-22: three music intensities, effects, unlock on first click; fireworks.
-**Exit:** no sound placeholders left; a full game sounds right at living-room volume.
-
-- [x] UI-8 Audio engine: AudioContext, three channels, fades, gapless loops, synthesized fallbacks — [`04`](04-ui-tv-display.md)
-- [~] UI-10 Source CC0/CC BY sound assets, `app/client/public/audio/CREDITS.md` — [`04`](04-ui-tv-display.md)
-- [x] UI-9 Fireworks overlay, 4+ variants, finale mode — [`04`](04-ui-tv-display.md)
-- [x] JK-9 Joker sounds — [`09`](09-jokers.md)
-- [x] UI-13 rest: volume sliders and mute in the admin overlay — [`04`](04-ui-tv-display.md)
+- [~] UI-10 Sound assets: the music loops, whooshes, pops and joker sounds are still synthesized (fine for now, gamemaster 2026-10-06); Kenney.nl CC0 packs are the next source to try — [`04`](04-ui-tv-display.md)
 
 ### M5 — Enough content for game nights
 **Goal:** a pool large enough that each player gets several games, including joker use (D-27, D-28), with every approved question cached and illustrated.
-**Exit:** `qgen.py report --player <name>` shows enough supply at every level for the target number of games; `qgen.py validate` is clean; `media.py sync` has filled the cache.
+**Exit:** `qgen report --player <name>` shows enough supply at every level for the target number of games; `qgen validate` is clean; `trivia-media sync` has filled the cache.
 
-- [ ] OQ-17 Decide the target pool size (first, it sets the scale of QP-9)
-- [~] QP-9 Second batch of questions, step by step with the gamemaster — [`02`](02-question-pool.md)
-- [ ] QP-10 Gamemaster reviews the first 120 *(looks done: all are approved or rejected; tick it in 02)* — [`02`](02-question-pool.md)
-- [ ] QP-6 An image for every question — [`02`](02-question-pool.md), [`06`](06-images.md)
+- [ ] OQ-17 Decide the target pool size (it sets how many more batches to run)
+- [~] QP-9 More batches: `qgen batch`, one per run (D-36) — [`02`](02-question-pool.md), [RUNBOOK](../authoring/RUNBOOK.md)
+- [ ] QP-6 An image for every question: 122 approved questions have no picked media (115 in `batch-3`, 7 in `pilot`) — [`02`](02-question-pool.md), [`06`](06-images.md)
 - [~] QP-7 Validation script: image check once media is cached — [`02`](02-question-pool.md)
-- [x] JK-10 Supply report per subcategory × difficulty (shared with M2): `qgen.py report --subcategories` — [`09`](09-jokers.md)
+- [ ] Gamemaster decides the 6 `needs_work` questions (q-0256, q-0338, q-0369, q-0384, q-0388, q-0420) and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them)
+- [ ] Top up difficulties 9–10 (only 24 approved, 2 at 10) — [`backlog`](backlog.md) B-6
 
 No family-specific questions (D-30).
 
-### M6 — Living-room ready
-**Goal:** the game runs on the real TV setup, offline, with state that can't get lost.
-**Exit:** a dress rehearsal on the TV, then the first real game night; success criteria in `00-vision.md` ticked.
+### M7 — Game engine in TypeScript
+**Goal:** the game referee moves from Python to `app/client/src/engine/` with the same rules and the family's saves kept. The game then runs without Python, which also lets it run in a desktop shell later.
+**Exit:** the family plays a test night on the TS engine; `app/server/game.py` and the game routes are gone; `trivia` serves static files plus `/api/save`.
 
-- [ ] UI-6 Test on the actual TV: overscan, resolution, distance, volume, timings — [`04`](04-ui-tv-display.md)
-- [ ] VD-9 TV check: legibility, glass contrast, `backdrop-filter` performance — [`10`](10-visual-design.md)
-- [ ] B-2 Backup of pool and `state/game.sqlite` — [`backlog`](backlog.md) *(not yet accepted)*
-- [ ] B-3 Practice/preview mode to check questions and images on the TV — [`backlog`](backlog.md) *(not yet accepted)*
-- [ ] Run `media.py sync` and `qgen.py validate` before game night (checklist item, no task ID yet)
-- [ ] VIS-1 Confirm the vision with the gamemaster — [`00`](00-vision.md)
+- [ ] PORT-1 Scenario recorder for `app/server/game.py` + `selection.py`; commit the fixtures — [`12`](12-client-engine.md)
+- [ ] PORT-2 `engine/selection.ts`, fixture-tested — [`12`](12-client-engine.md)
+- [ ] PORT-3 `engine/game.ts`: state machine, players, burning, jokers, undo; decision: the client holds the answer (relaxes D-25) — [`12`](12-client-engine.md)
+- [ ] PORT-4 Store interface; `ServerStore` + `GET/PUT /api/save`; `MemoryStore` — [`12`](12-client-engine.md)
+- [ ] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the real save — [`12`](12-client-engine.md)
+- [x] PORT-6 Pool export `app/data/pool.json` (done as LP-3) — [`12`](12-client-engine.md)
+- [ ] PORT-7 Screens switch to the engine; family test night — [`12`](12-client-engine.md)
+- [ ] PORT-8 Delete `game.py` and the game routes; update `01-architecture.md` and AGENTS.md — [`12`](12-client-engine.md)
 
-Setup: a computer on the TV via HDMI, internet available (D-30).
+### M8 — Mouse everywhere and a joker budget
+**Goal:** every keyboard action also has a clickable control; the gamemaster can set a joker budget per game, so the printed cards become optional. The family's default stays unlimited, so nothing changes unless the gamemaster opts in.
+**Exit:** a whole game can be played with the mouse alone; «Como las cartas» works from the overlay.
+
+- [ ] IN-1 Every keyboard action clickable (menu button for `Esc`, «Continuar», «Atrás»/«Cancelar»); the rule goes into `04` — [`14`](14-input.md)
+- [ ] MD-1 Joker budget in the game state (`null` = unlimited, the default) — [`13`](13-game-modes.md)
+- [ ] MD-2 A spent joker is disabled with a reason — [`13`](13-game-modes.md)
+- [ ] MD-3 Count badges on limited jokers, none when unlimited — [`13`](13-game-modes.md)
+- [ ] MD-4 Overlay: set the budget (unlimited / «Como las cartas» / custom) — [`13`](13-game-modes.md)
+
+### M9 — UI strings in a catalog; region tags
+**Goal:** every on-screen string comes from a catalog, with no visible change; every question says whether it's universal or Colombian.
+**Exit:** no Spanish literals left in `app/client/src/game` outside the catalog; every question has `region`, checked by `validate`.
+
+- [ ] LUI-1 `t()` helper and the `es` catalog; move every string into it — [`15a`](15a-ui-translation.md)
+- [ ] LUI-2 Pseudo-locale for length and missing-string tests — [`15a`](15a-ui-translation.md)
+- [ ] LUI-3 Draft `en` catalog with English joker names — [`15a`](15a-ui-translation.md)
+- [ ] RG-1 `region` in the schema (`null` default) and `validate` — [`15c`](15c-regional-questions.md)
+- [ ] RG-2 Tag the pool: LLM proposals, gamemaster checks in the review tool — [`15c`](15c-regional-questions.md)
+
+### M10 — Media license audit
+**Goal:** the full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced.
+**Exit:** `validate` requires license data for approved questions; the audit's replacement list is empty.
+
+- [ ] PUB-1 `media.py licenses` report; list the files to replace — [`17`](17-publishing.md)
+- [ ] PUB-2 Full license data per media item in the pool; `validate` requires it — [`17`](17-publishing.md)
+- [ ] PUB-3 Replace the problem files in the review tool — [`17`](17-publishing.md)
 
 ---
 
 ### Steam track (separate, D-34)
-The release on Steam has its own phases S1–S6, owned by [`11-steam.md`](11-steam.md). Phase **S1** doesn't change the family game and can run alongside M5/M6:
+Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below).
 
-- [ ] PORT-1..PORT-8 Game referee in TypeScript, storage adapters, pool export — [`12`](12-client-engine.md)
-- [ ] IN-1 Every keyboard action also clickable — [`14`](14-input.md)
-- [ ] LUI-1..LUI-3 UI strings in catalogs, pseudo-locale, English draft — [`15a`](15a-ui-translation.md)
-- [ ] MD-1..MD-4 Joker budget (default unlimited), count badges, overlay setting — [`13`](13-game-modes.md)
-- [ ] RG-1, RG-2 `region` tags; tag the existing pool — [`15c`](15c-regional-questions.md)
-- [ ] PUB-1..PUB-3 Media license audit and replacements — [`17`](17-publishing.md)
-
-Phase **S2** answers OQ-29..OQ-37 (below).
-
-### Repo layout and the LLM batch (D-35, D-36)
-- [ ] LP-1..LP-7 `app/` and `authoring/`, flake packages, `qgen batch`, RUNBOOK, smoke test — [`19`](19-repo-layout.md)
+### Backlog
+Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of the save, B-3 practice/preview mode, B-5 reworded duplicates in `dedupe`, B-6 top-up for difficulties 9–10.
 
 ---
 
 ## Open questions
 
-From [`open-questions.md`](open-questions.md), with the milestone each one blocks:
+From [`open-questions.md`](open-questions.md), with what each one blocks:
 
 | ID | Question | Blocks |
 |----|----------|--------|
-| OQ-17 | Target total pool size? | M5 (QP-9) |
+| OQ-17 | Target total pool size? | M5 (how many batches) |
 | OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
@@ -160,12 +124,3 @@ From [`open-questions.md`](open-questions.md), with the milestone each one block
 | OQ-35 | Code and content license | Steam S2 (17) |
 | OQ-36 | Audience: families only or an adult track | Steam S2 (13, 16) |
 | OQ-37 | Competitive mode and couch co-op format and input | Steam later (13, 14) |
-
-## Plan housekeeping
-
-Found while gathering this list; fix them in the plan files:
-
-- **QP-10** is still open, yet all 120 first-batch questions are approved or rejected. Tick it.
-- **ARC-1** (choose the tech stack) is still open, although D-3, D-4, D-5 decided it. Tick it.
-- **QG-6** (review and accept step) and **QG-12** (review page) look covered by the review tool (RV-1..RV-9). Tick or drop them.
-- File statuses: `00-vision.md`, `01-architecture.md`, `05-gamemaster-controls.md` are still `stub`.

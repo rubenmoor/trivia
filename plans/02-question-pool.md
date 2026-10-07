@@ -63,7 +63,7 @@ Burned state is not in this file; it lives in SQLite (D-4), per player, plus a g
 - [x] QP-3 Define the target pool size (sessions × 12 + spares). *2026-10-06, ~120 (D-6).*
 - [x] QP-4 Choose categories, with family interests in mind. *2026-10-06: 24 broad categories with 140 subcategories in `app/data/categories.json` (D-19).*
 - [x] QP-5 Write or collect the first batch of questions. *2026-10-06: 120 questions in `authoring/data/questions.json` (12 per category, 12 per difficulty level), descriptions added (D-8). Kept by the gamemaster; all still `status: "draft"` pending review (QP-10).*
-- [ ] QP-10 Gamemaster reviews the first 120 questions and sets each to `approved` or `rejected`.
+- [x] QP-10 Gamemaster reviews the first 120 questions and sets each to `approved` or `rejected`. *2026-10-06: 117 approved, 3 rejected (D-23, `07-question-generation.md`).*
 - [~] QP-9 Write the second batch of questions, step by step with the gamemaster (starting from a throw-away category list).
 - [ ] QP-6 Attach an image to every question (see `06-images.md`).
 - [~] QP-7 Write a validation script (required fields, unique IDs, image exists). *`authoring/tools/qgen.py validate` (image check once media is cached).*
