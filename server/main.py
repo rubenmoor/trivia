@@ -6,10 +6,11 @@ and the game API (plans/03-game-flow.md, D-25).
 
 API:
     GET  /api/categories                           data/categories.json: broad categories with subcategories (D-19)
-    GET  /api/questions?batch=pilot&status=draft   matching questions (both filters optional;
-                                                   batch=none selects questions without a batch)
+    GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
+         &reviewer=human|llm|none                  batch=none selects questions without a batch)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
-                                                   sets review + status, returns the question
+                                                   sets review + status as a human review (D-33), returns
+                                                   the question; undo sends back a whole earlier review
     POST /api/questions/<id>/difficulty            body {"difficulty": 1-10}; the first change keeps the
                                                    old value in difficulty_original
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
@@ -54,6 +55,7 @@ media.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instea
 POOL = ROOT / "data" / "questions.json"
 DIST = ROOT / "client" / "dist"
 DECISIONS = {"approved", "rejected", "needs_work"}
+REVIEWERS = {"human", "llm"}
 
 _lock = threading.Lock()
 
@@ -139,16 +141,30 @@ def set_difficulty(qid, difficulty):
 
 
 def set_review(qid, review):
-    """Re-read the pool, change one question, write atomically (08, "API")."""
+    """Re-read the pool, change one question, write atomically (08, "API").
+    A new decision is a human review; it keeps the LLM review it replaces as `previous` (D-33).
+    A review that names its reviewer is an undo putting an earlier review back as it was."""
+    restore = review is not None and "reviewer" in review
     if review is not None:
         if review.get("decision") not in DECISIONS:
             raise ValueError("decision must be approved, rejected or needs_work")
         feedback = (review.get("feedback") or "").strip() or None
         if review["decision"] == "needs_work" and not feedback:
             raise ValueError("needs_work requires feedback")
+        if restore and review["reviewer"] not in REVIEWERS:
+            raise ValueError("reviewer must be human or llm")
         review = {"decision": review["decision"], "feedback": feedback,
-                  "reviewed_on": review.get("reviewed_on") or datetime.date.today().isoformat()}
-    return update_question(qid, lambda q: q.update(review=review, status=review["decision"] if review else "draft"))
+                  "reviewed_on": review.get("reviewed_on") or datetime.date.today().isoformat(),
+                  "reviewer": review.get("reviewer", "human"), "model": review.get("model"),
+                  "previous": review.get("previous")}
+
+    def change(q):
+        if review is not None and not restore:
+            old = q.get("review") or {}
+            review["previous"] = old if old.get("reviewer") == "llm" else old.get("previous")
+        q.update(review=review, status=review["decision"] if review else "draft")
+
+    return update_question(qid, change)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -189,6 +205,9 @@ class Handler(BaseHTTPRequestHandler):
                 qs = [q for q in qs if q.get("batch") == want]
             if "status" in query:
                 qs = [q for q in qs if q["status"] == query["status"]]
+            if "reviewer" in query:
+                want = None if query["reviewer"] == "none" else query["reviewer"]
+                qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
             return self.send_json(200, [with_candidates(q) for q in qs])
         if url.path == "/api/game":
             pool = load_pool()["questions"]

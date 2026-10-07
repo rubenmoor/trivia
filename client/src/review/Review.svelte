@@ -50,12 +50,16 @@
   }
   const undoStack: { id: string; previous: Review | null }[] = [];
 
+  /** Open until a human has reviewed it: drafts and LLM-reviewed questions (D-33). */
+  const isOpen = (q: Question) => q.review?.reviewer !== "human";
+
   const current = $derived(questions[index]);
   const counts = $derived({
     approved: questions.filter((q) => q.status === "approved").length,
     rejected: questions.filter((q) => q.status === "rejected").length,
     needs_work: questions.filter((q) => q.status === "needs_work").length,
-    draft: questions.filter((q) => q.status === "draft").length,
+    open: questions.filter(isOpen).length,
+    llm: questions.filter((q) => q.review?.reviewer === "llm").length,
   });
 
   const LABELS: Record<Decision, string> = {
@@ -69,7 +73,7 @@
       questions = await fetchQuestions(batch);
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
-      const firstOpen = questions.findIndex((q) => q.status === "draft");
+      const firstOpen = questions.findIndex(isOpen);
       finished = !singleId && questions.length > 0 && fromUrl === -1 && firstOpen === -1;
       index = fromUrl !== -1 ? fromUrl : Math.max(firstOpen, 0);
     } catch (e) {
@@ -106,7 +110,7 @@
   function nextOpen(from: number): number {
     for (let step = 1; step <= questions.length; step++) {
       const i = (from + step) % questions.length;
-      if (questions[i].status === "draft") return i;
+      if (isOpen(questions[i])) return i;
     }
     return -1;
   }
@@ -376,7 +380,8 @@
       {#if downloads}<span class="downloads">⬇ downloading media… ({downloads})</span>{/if}
       {#if !singleId}
         <span class="counts">
-          ✓ {counts.approved} · ✎ {counts.needs_work} · ✗ {counts.rejected} · open {counts.draft}
+          ✓ {counts.approved} · ✎ {counts.needs_work} · ✗ {counts.rejected} · open {counts.open}{#if counts.llm}
+            (LLM-reviewed {counts.llm}){/if}
         </span>
       {/if}
       <span class="meta">
@@ -392,8 +397,14 @@
 
     {#if current.review}
       <div class="previous {current.status}">
-        Already reviewed: <b>{current.status.replace("_", " ")}</b> ({current.review.reviewed_on})
+        {current.review.reviewer === "llm" ? `Reviewed by ${current.review.model}` : "Already reviewed"}:
+        <b>{current.status.replace("_", " ")}</b> ({current.review.reviewed_on})
         {#if current.review.feedback}: “{current.review.feedback}”{/if}
+        {#if current.review.previous}
+          <span class="muted">· before: {current.review.previous.model}
+            {current.review.previous.decision.replace("_", " ")}{#if current.review.previous.feedback}:
+              “{current.review.previous.feedback}”{/if}</span>
+        {/if}
       </div>
     {/if}
 

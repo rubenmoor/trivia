@@ -61,7 +61,7 @@ Browser extensions that grab single keys (e.g. Vimium uses digits as count prefi
 While the feedback box is open, all other shortcuts are off so typing works normally. Each action shows a short confirmation ("✓ approved"), so a mistaken key press is noticed. Buttons with the same actions are on screen too, labelled with their key.
 
 ## What gets reviewed
-- By default: every question with `status: "draft"` from one batch, e.g. `?batch=pilot`. The pilot is identified by a new `batch` field (the `qgen.py` run name, set by `merge`).
+- By default: every question from one batch that no human has reviewed yet, e.g. `?batch=pilot`: drafts and LLM-reviewed questions (D-33). An LLM-reviewed question shows the LLM's decision and feedback; a human decision replaces it and keeps it in `review.previous`. The pilot is identified by a new `batch` field (the `qgen.py` run name, set by `merge`).
 - Undecided questions come first, in pool order. Already-decided ones stay reachable with `←` so decisions can be changed.
 - The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. `/review/q-0123` reviews just that one question, whatever its status (linked from the admin overlay, 04): after a decision it stays on the question. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
 - When all are decided: a summary screen with the counts and the share kept (the keep rate for QG-11).
@@ -79,7 +79,8 @@ Proposed schema changes (in `02-question-pool.md` once agreed):
   "review": {
     "decision": "approved",            // approved | rejected | needs_work
     "feedback": "demasiado difícil",   // free text, null when there is none
-    "reviewed_on": "2026-10-07"
+    "reviewed_on": "2026-10-07",
+    "reviewer": "human"                // human | llm, plus "model" and "previous" (D-33, 02)
   }
   ```
 - New field `batch`: the pipeline run that produced the question (`null` for the first 120).
@@ -87,7 +88,7 @@ Proposed schema changes (in `02-question-pool.md` once agreed):
 The decision keys set `status` and `review` together. Feedback sets `status: "needs_work"`.
 
 ## API
-- `GET /api/questions?batch=pilot&status=draft`: the matching questions.
+- `GET /api/questions?batch=pilot&status=draft&reviewer=llm`: the matching questions (`reviewer`: human, llm or none).
 - `POST /api/questions/<id>/review` with `{decision, feedback}`: updates one question and returns it.
 - Every write re-reads `data/questions.json`, changes the one question, and writes atomically (temp file + rename). That way nothing is lost if `qgen.py` touched the file in the meantime. Don't run `qgen.py merge` while reviewing.
 
@@ -111,3 +112,4 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - [x] RV-8 Try it on the 120 existing questions before the pilot runs (`/?batch=none`). *2026-10-06, approved by the gamemaster; "level" renamed to "difficulty n/10".*
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `client/src/review/RevisionPanel.svelte`.*
 - [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
+- [x] RV-11 Human review of LLM-reviewed questions (D-33): they count as open, show the LLM's verdict, and the summary counts them. *2026-10-07, QP-15.*

@@ -279,5 +279,12 @@ Template:
   - The fact-check is uncertain, or the rater's notes name a defect that is still in the text (a wrong fact, a second defensible answer, a hint that points to a wrong option, a giveaway).
   - Commons has no adequate media. *Essential* media must show the thing clearly and must not name the answer (Claude looks at the candidate). *Illustrative* or *decorative* media must fit the topic and must not give the answer away. Audio questions also need a usable background picture.
   - Low soft scores (dry, weak distractors, difficulty off) are **not** a reason (D-16).
-- Consequences: The review record reads `{"decision": ..., "feedback": ..., "reviewed_on": ..., "reviewer": "claude"}`, so auto-reviews can be told apart. D-7 ("the gamemaster reviews every one") still holds for other batches. The gamemaster can still open `/review?batch=batch-4` and override.
-- Supersedes / related: D-7, D-16, D-23; QG-17
+- Consequences: The review record reads `{"decision": ..., "feedback": ..., "reviewed_on": ..., "reviewer": "llm", "model": ...}` (D-33), so auto-reviews can be told apart. D-7 ("the gamemaster reviews every one") still holds for other batches. The gamemaster can still open `/review?batch=batch-4` and override.
+- Supersedes / related: D-7, D-16, D-23, D-33; QG-17
+
+## D-33: Human and LLM reviews both make a question playable
+- Date: 2026-10-07
+- Context: D-32 lets Claude review batch-4. The pool had no way to say who reviewed a question, and the gamemaster may still want to look at LLM-approved questions later.
+- Decision: The `review` record gets `reviewer: "human" | "llm"`, plus `model` for an LLM review. `status` stays the one field that decides play: `approved` is playable whoever approved it. A human review of an LLM-reviewed question replaces it and keeps the LLM's review in `review.previous`. The review tool treats a question as open until a human has reviewed it, so LLM-reviewed questions can be checked later at any pace.
+- Consequences: Existing reviews are migrated: pilot and first-120 get `reviewer: "human"`; batch-3 (116) gets `reviewer: "llm"`, `model: "claude-opus-5-5"`, because a Claude session approved it, not the gamemaster (commit 0eaa35e). Batch-4 is written as LLM reviews (D-32). `validate` checks the new fields. `GET /api/questions` filters by `reviewer` (`human`, `llm`, `none`). Selection (`tools/selection.py`) doesn't change.
+- Supersedes / related: D-7 (the gamemaster no longer has to review every question before play), D-11, D-32; QP-15

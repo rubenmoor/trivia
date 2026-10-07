@@ -716,6 +716,12 @@ def cmd_validate(args):
         rv = q.get("review")
         if rv is not None and (rv.get("decision") != q.get("status") or "feedback" not in rv or "reviewed_on" not in rv):
             errors.append(f"{qid}: review does not match status")
+        if rv is not None:  # who reviewed (D-33)
+            if rv.get("reviewer") not in {"human", "llm"}: errors.append(f"{qid}: review.reviewer must be human or llm")
+            if (rv.get("reviewer") == "llm") != bool(rv.get("model")): errors.append(f"{qid}: review.model must be set exactly for an llm review")
+            prev = rv.get("previous")
+            if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
+                errors.append(f"{qid}: review.previous must be an llm review under a human one")
         if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in data/categories.json (D-19)")
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:

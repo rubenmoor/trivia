@@ -37,7 +37,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -87,7 +90,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 1,
@@ -160,7 +166,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -210,7 +219,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 2,
@@ -276,7 +288,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -335,7 +350,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -385,7 +403,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5,
@@ -460,7 +481,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -523,7 +547,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -573,7 +600,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -623,7 +653,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -697,7 +730,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -762,7 +798,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -812,7 +851,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -862,7 +904,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -912,7 +957,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -979,7 +1027,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1029,7 +1080,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1079,7 +1133,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1129,7 +1186,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -1202,7 +1262,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 7,
@@ -1262,7 +1325,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1312,7 +1378,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -1371,7 +1440,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -1439,7 +1511,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": {
         "query": "green farm field",
@@ -1509,7 +1584,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1559,7 +1637,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1609,7 +1690,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1659,7 +1743,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1709,7 +1796,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1759,7 +1849,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -1809,7 +1902,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 6,
@@ -1880,7 +1976,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -1944,7 +2043,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 8,
@@ -2014,7 +2116,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -2074,7 +2179,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -2141,7 +2249,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -2191,7 +2302,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -2241,7 +2355,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -2291,7 +2408,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -2341,7 +2461,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5,
@@ -2411,7 +2534,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -2461,7 +2587,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 7,
@@ -2526,7 +2655,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 7,
@@ -2592,7 +2724,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 8,
@@ -2662,7 +2797,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -2725,7 +2863,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -2785,7 +2926,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -2856,7 +3000,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -2906,7 +3053,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 2,
@@ -2971,7 +3121,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -3021,7 +3174,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4
@@ -3072,7 +3228,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -3123,7 +3282,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 6,
@@ -3189,7 +3351,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -3239,7 +3404,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -3298,7 +3466,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -3364,7 +3535,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -3424,7 +3598,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -3494,7 +3671,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -3554,7 +3734,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -3604,7 +3787,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": {
         "query": "concert hall stage",
@@ -3660,7 +3846,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -3723,7 +3912,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": {
         "query": "Caribbean beach sunset",
@@ -3792,7 +3984,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -3842,7 +4037,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -3905,7 +4103,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -3984,7 +4185,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 6,
@@ -4054,7 +4258,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4104,7 +4311,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4154,7 +4364,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -4214,7 +4427,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -4274,7 +4490,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -4333,7 +4552,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4383,7 +4605,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4433,7 +4658,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 3,
@@ -4509,7 +4737,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4,
@@ -4575,7 +4806,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4625,7 +4859,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4675,7 +4912,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 6,
@@ -4736,7 +4976,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -4786,7 +5029,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 8,
@@ -4851,7 +5097,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -4907,7 +5156,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -4973,7 +5225,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 1,
@@ -5047,7 +5302,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5097,7 +5355,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5147,7 +5408,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5197,7 +5461,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -5270,7 +5537,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -5335,7 +5605,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5385,7 +5658,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 6,
@@ -5445,7 +5721,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -5523,7 +5802,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5573,7 +5855,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -5638,7 +5923,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -5707,7 +5995,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5757,7 +6048,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 2
@@ -5808,7 +6102,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 3
@@ -5859,7 +6156,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -5909,7 +6209,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -5973,7 +6276,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6023,7 +6329,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6073,7 +6382,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6123,7 +6435,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -6179,7 +6494,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -6253,7 +6571,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -6319,7 +6640,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -6380,7 +6704,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6430,7 +6757,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "revision": {
@@ -6494,7 +6824,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6544,7 +6877,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6594,7 +6930,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -6645,7 +6984,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 6,
@@ -6705,7 +7047,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6755,7 +7100,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 8
@@ -6806,7 +7154,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6856,7 +7207,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 9,
@@ -6931,7 +7285,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -6981,7 +7338,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 10,
@@ -7045,7 +7405,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7094,7 +7457,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": {
         "query": "misty forest",
@@ -7148,7 +7514,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7197,7 +7566,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7246,7 +7618,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7295,7 +7670,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7344,7 +7722,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7393,7 +7774,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7442,7 +7826,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7491,7 +7878,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: difficulty is 6 or 7",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4
@@ -7541,7 +7931,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7590,7 +7983,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: difficulty: 9",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 3
@@ -7640,7 +8036,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7689,7 +8088,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7738,7 +8140,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7787,7 +8192,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7836,7 +8244,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: difficulty: 6",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 2
@@ -7886,7 +8297,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7935,7 +8349,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -7984,7 +8401,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8033,7 +8453,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: difficulty: 9",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -8083,7 +8506,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8132,7 +8558,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: difficulty: 9",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -8182,7 +8611,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8231,7 +8663,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8280,7 +8715,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8329,7 +8767,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8378,7 +8819,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8427,7 +8871,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: difficulty 3",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4
@@ -8477,7 +8924,10 @@
       "review": {
         "decision": "approved",
         "feedback": "difficulty corrected via feedback: diificulty: 2",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 7
@@ -8527,7 +8977,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8576,7 +9029,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8625,7 +9081,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8674,7 +9133,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8723,7 +9185,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8772,7 +9237,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4
@@ -8822,7 +9290,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8871,7 +9342,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": {
         "query": "concert stage lights",
@@ -8926,7 +9400,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -8975,7 +9452,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9024,7 +9504,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9073,7 +9556,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4
@@ -9123,7 +9609,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9172,7 +9661,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9221,7 +9713,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9270,7 +9765,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9319,7 +9817,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9368,7 +9869,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9417,7 +9921,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9466,7 +9973,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9515,7 +10025,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9564,7 +10077,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9613,7 +10129,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9662,7 +10181,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9711,7 +10233,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9760,7 +10285,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9809,7 +10337,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -9859,7 +10390,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -9908,7 +10442,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -9958,7 +10495,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 7
@@ -10008,7 +10548,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10057,7 +10600,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10106,7 +10652,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10155,7 +10704,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 5
@@ -10205,7 +10757,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10254,7 +10809,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null,
       "difficulty_original": 4
@@ -10304,7 +10862,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10353,7 +10914,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10402,7 +10966,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10451,7 +11018,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10500,7 +11070,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10549,7 +11122,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10598,7 +11174,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10647,7 +11226,10 @@
       "review": {
         "decision": "rejected",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10696,7 +11278,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10745,7 +11330,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10794,7 +11382,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10888,7 +11479,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10937,7 +11531,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "human",
+        "model": null,
+        "previous": null
       },
       "background": null
     },
@@ -10987,7 +11584,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11037,7 +11637,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": {
         "query": "misty rainforest river",
@@ -11092,7 +11695,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11142,7 +11748,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11192,7 +11801,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11242,7 +11854,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11292,7 +11907,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11342,7 +11960,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11392,7 +12013,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11442,7 +12066,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11492,7 +12119,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11542,7 +12172,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11592,7 +12225,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11642,7 +12278,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11692,7 +12331,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11742,7 +12384,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11792,7 +12437,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11842,7 +12490,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11892,7 +12543,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11942,7 +12596,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -11992,7 +12649,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12042,7 +12702,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12092,7 +12755,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12142,7 +12808,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12192,7 +12861,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12242,7 +12914,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12292,7 +12967,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12342,7 +13020,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12392,7 +13073,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12442,7 +13126,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12492,7 +13179,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12542,7 +13232,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12592,7 +13285,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12642,7 +13338,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12692,7 +13391,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12742,7 +13444,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12792,7 +13497,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12842,7 +13550,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12892,7 +13603,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12942,7 +13656,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -12992,7 +13709,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13042,7 +13762,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13092,7 +13815,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13142,7 +13868,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13192,7 +13921,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13242,7 +13974,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13292,7 +14027,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13342,7 +14080,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13392,7 +14133,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13442,7 +14186,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13492,7 +14239,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13542,7 +14292,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13592,7 +14345,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13642,7 +14398,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13692,7 +14451,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13742,7 +14504,10 @@
       "review": {
         "decision": "needs_work",
         "feedback": "Hint 3 (\"¡te quiero ___!\") fits the wrong answer \"mucho\" as well as \"tanto\", so it misleads. Hint 2 says \"tanto\" rhymes with \"adorado\"; it only shares the \"a-o\" vowels. Rewrite both hints.",
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13792,7 +14557,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13842,7 +14610,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13892,7 +14663,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13942,7 +14716,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -13992,7 +14769,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14042,7 +14822,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": {
         "query": "snowy forest night",
@@ -14097,7 +14880,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14147,7 +14933,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14197,7 +14986,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14247,7 +15039,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14297,7 +15092,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14347,7 +15145,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14397,7 +15198,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14447,7 +15251,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14497,7 +15304,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14547,7 +15357,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14597,7 +15410,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14647,7 +15463,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14697,7 +15516,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14747,7 +15569,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": {
         "query": "city street traffic",
@@ -14802,7 +15627,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14852,7 +15680,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14902,7 +15733,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -14952,7 +15786,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15002,7 +15839,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15052,7 +15892,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15102,7 +15945,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15152,7 +15998,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": {
         "query": "rain on window",
@@ -15207,7 +16056,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15257,7 +16109,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15307,7 +16162,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15357,7 +16215,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15407,7 +16268,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15457,7 +16321,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15507,7 +16374,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15557,7 +16427,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15607,7 +16480,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15657,7 +16533,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15707,7 +16586,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15757,7 +16639,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15807,7 +16692,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15857,7 +16745,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15907,7 +16798,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -15957,7 +16851,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16007,7 +16904,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16057,7 +16957,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16107,7 +17010,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16157,7 +17063,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16207,7 +17116,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16257,7 +17169,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16307,7 +17222,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16357,7 +17275,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16407,7 +17328,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": {
         "query": "countryside railway landscape",
@@ -16462,7 +17386,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16512,7 +17439,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16562,7 +17492,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16612,7 +17545,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16662,7 +17598,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16712,7 +17651,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },
@@ -16762,7 +17704,10 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-06"
+        "reviewed_on": "2026-10-06",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "background": null
     },

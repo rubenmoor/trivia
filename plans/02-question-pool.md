@@ -41,9 +41,14 @@ Fields added for generated questions (QG-7, D-10); `null` on the first 120 (exce
                                       // only for audio questions (D-14), else null
 ```
 
-Review result, set by the review tool (`08-review-tool.md`, D-11); `null` until reviewed:
+Review result, set by the review tool (`08-review-tool.md`, D-11) or an LLM review (D-32); `null` until reviewed. `status` always equals `review.decision`; an `approved` question is playable whoever approved it (D-33):
 ```jsonc
-  "review": {"decision": "needs_work", "feedback": "demasiado difícil", "reviewed_on": "2026-10-07"}
+  "review": {
+    "decision": "needs_work", "feedback": "demasiado difícil", "reviewed_on": "2026-10-07",
+    "reviewer": "human",        // human | llm (D-33)
+    "model": null,              // the model for an LLM review, e.g. "claude-opus-5-5"; null for a human
+    "previous": null            // only on a human review that replaced an LLM review: that LLM review
+  }
 ```
 
 Burned state is not in this file; it lives in SQLite (D-4), per player, plus a global burn set by the gamemaster (D-28, `03-game-flow.md`).
@@ -66,4 +71,5 @@ Burned state is not in this file; it lives in SQLite (D-4), per player, plus a g
 - [x] QP-12 Group the subcategories into broad categories (`data/categories.json`, D-19) and migrate the pool and the pipeline. *2026-10-06: 24 categories; `category` and the old map removed from the pool, `categories.txt` removed; `fit` no longer maps; shared loader `tools/categories.py`.*
 - [x] QP-13 Stats pages in the web client: questions per broad category (sorted by count) and per difficulty (histogram). *2026-10-06: `/stats/categories`, `/stats/difficulty` (`client/src/stats/`), `GET /api/categories`. Approved questions only, no status filter (gamemaster, 2026-10-06).*
 - [x] QP-8 Implement burn and un-burn, plus a "remaining per category/difficulty" report. *2026-10-06: the final answer burns, the admin undo un-burns (`server/game.py`); `qgen.py report` shows unburned questions per category and difficulty, and the supply per level.*
+- [x] QP-15 Record who reviewed a question (`review.reviewer`: human | llm, D-33); both make it playable, and the review tool keeps LLM-reviewed questions open for a later human check. *2026-10-07: existing reviews migrated to `human`; server, review tool and `validate` updated.*
 - [x] QP-14 Burn per player (D-28): the `burned` table gets a player (NULL = burned for everyone); undo un-burns for that player; `qgen.py report --player <name>` shows the supply for one player. *2026-10-06: done with GF-6; `tools/selection.py` `burned_ids(player)`; `report` without `--player` shows a new player's supply (global burns only).*

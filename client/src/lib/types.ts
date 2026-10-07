@@ -68,10 +68,18 @@ export interface Quality {
   notes: string;
 }
 
+/** Both make an approved question playable (D-33). */
+export type Reviewer = "human" | "llm";
+
 export interface Review {
   decision: Decision;
   feedback: string | null;
   reviewed_on: string;
+  reviewer: Reviewer;
+  /** The model behind an LLM review; null for a human. */
+  model: string | null;
+  /** The LLM review a human review replaced. */
+  previous: Review | null;
 }
 
 export interface Question {

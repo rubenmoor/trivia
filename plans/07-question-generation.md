@@ -132,6 +132,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - **Difficulty:** the drafter writes high targets easier than asked and says so (target 10 → mostly 7–9). The batch has 7 questions at 8 and 5 at 9, none at 10: 10 % at 8–10 instead of the 30 % aimed for. The top levels are still short (OQ-17); a small top-up run aimed only at 9–10 may be needed.
 - Usage: 150 Claude calls, about $15 at list price, so roughly $0.13 per merged question.
 - Media candidates not fetched yet (Commons isn't reachable from the cloud session): run `media.py fetch --batch batch-3`.
+- **Reviewed by Claude, not the gamemaster** (115 approved, 1 `needs_work`); the reviews are marked `reviewer: "llm"` (D-33). The gamemaster can still check them at `/review?batch=batch-3`.
 
 ## Batch-4 results (2026-10-07, D-32)
 - The 34 subcategories still without a usable question: 114 drafted. One revise round (QG-16) for 40 flagged drafts; all revised versions were confirmed. **112 merged** (q-0317…q-0428); 2 dropped for giveaways (Perry the platypus, unboxing).
