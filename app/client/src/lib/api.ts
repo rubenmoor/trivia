@@ -1,4 +1,4 @@
-import type { Category, Game, JokerEvent, JokerName, Player, Supply } from "./types";
+import type { Category, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
 
 export async function json<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -58,11 +58,13 @@ export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }
   return json(await call("/api/game"));
 }
 
-/** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28). */
+/** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
+ * `jokers` for the joker budget (MD-4). */
 export interface GameActionBody {
   index?: number;
   player?: string;
   everyone?: boolean;
+  jokers?: Partial<JokerBudget>;
 }
 
 /** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */
@@ -84,7 +86,7 @@ export async function playJoker(body: {
 
 /** POST /api/game/<action> (app/server/game.py); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon",
+  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const res = await call(`/api/game/${action}`, {

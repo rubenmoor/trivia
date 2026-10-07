@@ -4,7 +4,7 @@
   // the tray, arming, Paso's choice, Cambiazo's picker, Francotirador's aiming, Soplo's notes.
   import { onMount } from "svelte";
   import { gameAction } from "../lib/api";
-  import type { Game, JokerEvent, JokerName, Jokers } from "../lib/types";
+  import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
   import DifficultyDial from "./DifficultyDial.svelte";
   import Hud from "./Hud.svelte";
@@ -35,6 +35,7 @@
     playerName,
     paused,
     jokers,
+    jokersLeft = null,
     swappedBy = null,
     play,
     onplayed,
@@ -48,6 +49,8 @@
     paused: boolean;
     /** Joker availability from the server, or null. */
     jokers: Jokers | null;
+    /** Uses left per joker for the tray's badges, null = unlimited (MD-3). */
+    jokersLeft?: JokerBudget | null;
     /** The joker that just swapped this question in (Bájale, Cambiazo), for the dial and the label. */
     swappedBy?: JokerEvent | null;
     /** Sends a joker to the server (Game.svelte shows errors); null if it was refused. */
@@ -398,6 +401,7 @@
   <aside class="tray">
     <JokerTray
       jokers={submitted ? null : jokers}
+      left={jokersLeft}
       hintsLeft={3 - question.hints.length}
       {armed}
       away={flight?.name ?? null}
@@ -451,8 +455,8 @@
   {/if}
   {#if mode === "snipe"}
     <p class="aim-hint glass-strong">
-      <Icon name="crosshair" /> Elijan la respuesta que creen que es <b>falsa</b> · <kbd>Enter</kbd> dispara ·
-      <kbd>Esc</kbd> cancela
+      <Icon name="crosshair" /> Elijan la respuesta que creen que es <b>falsa</b> · <kbd>Enter</kbd> dispara
+      <button class="secondary cancel" onclick={() => (mode = target = null)}>Cancelar <kbd>Esc</kbd></button>
     </p>
   {/if}
   {#if hit !== null}
@@ -710,6 +714,11 @@
     font-size: calc(1.4 * var(--u));
     font-weight: 700;
     white-space: nowrap;
+  }
+  .aim-hint .cancel {
+    margin-left: calc(0.8 * var(--u));
+    padding: calc(0.3 * var(--u)) calc(1 * var(--u));
+    font-size: calc(1.2 * var(--u));
   }
   .aim-hint.hit {
     color: var(--mint);

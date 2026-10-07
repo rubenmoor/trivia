@@ -44,6 +44,9 @@ export interface Player {
 
 export type JokerName = "hint" | "skip" | "easier" | "category" | "snipe";
 
+/** A count per joker; null = unlimited (13-game-modes.md, MD-1). */
+export type JokerBudget = Record<JokerName, number | null>;
+
 export interface JokerState {
   available: boolean;
   /** Why it can't be played right now (Spanish, shown on the TV). */
@@ -86,6 +89,10 @@ export interface Game {
   repeat: boolean;
   /** Joker availability while a question is on screen, else null (09-jokers.md). */
   jokers: Jokers | null;
+  /** Game settings (13-game-modes.md, MD-1): the joker budget per game, null = unlimited. */
+  settings: { jokers: JokerBudget };
+  /** Uses left in this game per joker, null = unlimited (MD-1). */
+  jokers_left: JokerBudget;
   question: {
     id: string;
     question: string;

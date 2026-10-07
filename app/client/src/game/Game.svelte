@@ -4,7 +4,7 @@
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onMount } from "svelte";
   import { fetchGame, gameAction, GameError, playJoker, type GameActionBody } from "../lib/api";
-  import type { Game, JokerEvent, Supply } from "../lib/types";
+  import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
   import Hud from "./Hud.svelte";
@@ -259,6 +259,11 @@
     if (next !== undefined) await go("question", "rebobinar", () => (game = next));
   }
 
+  /** The joker budget of the running game, from the overlay (MD-4); the screen stays as it is. */
+  async function setBudget(budget: Partial<JokerBudget>) {
+    await act("jokers", { jokers: budget });
+  }
+
   async function restart() {
     overlayOpen = false;
     pausedMedia = [];
@@ -357,7 +362,7 @@
   {:else if screen === "level" && game}
     <Stage />
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
-    <aside class="side-tray"><JokerTray readonly /></aside>
+    <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
     <section class="level">
       <Tower filled={blocks} drop={previous === "correct"} />
       <div class="level-text">
@@ -368,13 +373,13 @@
         {:else if milestone(game.level, game.id)}
           <p class="milestone">{milestone(game.level, game.id)}</p>
         {/if}
-        <p class="hint label"><kbd>Enter</kbd> para seguir</p>
+        <button class="secondary hint" onclick={() => go("select", "papel")} disabled={busy}>Seguir <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else if screen === "select" && game}
     <Stage />
     <div class="corner-hud"><Hud level={game.level} player={game.player} /></div>
-    <aside class="side-tray"><JokerTray readonly /></aside>
+    <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
     <section class="select">
       <h2 class="title">Elijan una pregunta</h2>
       {#if game.options.length === 0}
@@ -413,6 +418,7 @@
         playerName={game.player}
         paused={overlayOpen}
         jokers={game.jokers}
+        jokersLeft={game.jokers_left}
         {swappedBy}
         play={playJokerAction}
         onplayed={jokerPlayed}
@@ -428,7 +434,7 @@
         <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
         <p class="fun-fact">{game.last.fun_fact}</p>
       </div>
-      <p class="hint label"><kbd>Enter</kbd> para seguir</p>
+      <button class="secondary hint" onclick={toLevel} disabled={busy}>Seguir <kbd>Enter</kbd></button>
     </section>
   {:else if screen === "wrong" && game?.last}
     <Stage mood="wrong" />
@@ -474,6 +480,20 @@
     <div class="error-box corner">{error}</div>
   {/if}
 
+  {#if !loading && !overlayOpen}
+    <!-- The overlay for the mouse (IN-1); no focus, so a later Enter can't open it. -->
+    <button
+      class="menu-button"
+      onclick={openOverlay}
+      onmousedown={(e) => e.preventDefault()}
+      tabindex="-1"
+      aria-label="Menú (Esc)"
+      title="Menú (Esc)"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  {/if}
+
   <div class="black {veil}" class:on={black} style:transition-duration="{FADE_MS}ms">
     {#if veil === "rewind"}<span class="rewind-mark">◀◀</span>{/if}
   </div>
@@ -491,6 +511,9 @@
       onskipall={() => skip(true)}
       onundo={undo}
       onrestart={restart}
+      budget={running ? (game?.settings.jokers ?? null) : null}
+      left={running ? (game?.jokers_left ?? null) : null}
+      onbudget={setBudget}
     />
   {/if}
 </main>
@@ -904,9 +927,39 @@
     padding: calc(0.5 * var(--u)) calc(1 * var(--u));
     font-size: calc(1.1 * var(--u));
   }
+  .menu-button {
+    position: fixed;
+    top: calc(var(--safe-y) * 0.5);
+    right: calc(var(--safe-x) * 0.5);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(0.35 * var(--u));
+    width: calc(3.2 * var(--u));
+    height: calc(3.2 * var(--u));
+    padding: 0 calc(0.8 * var(--u));
+    border: 1px solid transparent;
+    border-radius: calc(0.8 * var(--u));
+    background: transparent;
+    opacity: 0.35;
+    transition:
+      opacity 0.2s,
+      background 0.2s;
+  }
+  .menu-button:hover {
+    opacity: 1;
+    background: var(--glass-strong);
+    border-color: var(--slate-400);
+  }
+  .menu-button span {
+    height: calc(0.25 * var(--u));
+    border-radius: calc(0.15 * var(--u));
+    background: var(--paper);
+  }
   .corner {
     position: fixed;
-    top: var(--safe-y);
+    top: calc(var(--safe-y) + 3 * var(--u));
     right: var(--safe-x);
     max-width: 40vw;
     z-index: 35;

@@ -1,7 +1,8 @@
 <script lang="ts" module>
   // The joker tray (plans/09-jokers.md, "Joker tray", JK-4): five tokens down the left edge of the
-  // Question screen, read-only and smaller on Level and Select. Jokers never run out (D-27): a
-  // token is either playable or disabled right now, with the server's reason.
+  // Question screen, read-only and smaller on Level and Select. A token is either playable or
+  // disabled right now, with the server's reason. Jokers are unlimited by default (D-27); with a
+  // budget (13-game-modes.md, MD-3) a limited token carries a badge with the uses left.
   import type { IconName } from "./Icon.svelte";
   import type { JokerName } from "../lib/types";
 
@@ -15,11 +16,12 @@
 </script>
 
 <script lang="ts">
-  import type { Jokers } from "../lib/types";
+  import type { JokerBudget, Jokers } from "../lib/types";
   import Icon from "./Icon.svelte";
 
   let {
     jokers = null,
+    left = null,
     hintsLeft = 3,
     readonly = false,
     armed = null,
@@ -28,6 +30,8 @@
     onpress,
   }: {
     jokers?: Jokers | null;
+    /** Uses left in this game; null (or a null entry) = unlimited, no badge (MD-3). */
+    left?: JokerBudget | null;
     /** Soplo's pips: hints of the current question not shown yet. */
     hintsLeft?: number;
     /** Level and Select: a reminder only. */
@@ -61,6 +65,7 @@
         <span class="face"><Icon name={t.icon} size="100%" /></span>
         {#if !readonly}<span class="key">{t.key}</span>{/if}
         {#if off}<span class="lock"><Icon name="lock" size="100%" /></span>{/if}
+        {#if left?.[t.name] != null}<span class="count" class:empty={left[t.name] === 0}>{left[t.name]}</span>{/if}
         {#if t.name === "hint" && !readonly}
           <span class="pips">
             {#each [0, 1, 2] as p (p)}<span class="pip" class:full={p < hintsLeft}></span>{/each}
@@ -69,7 +74,7 @@
       </button>
       {#if !readonly}
         {#if armed === t.name}
-          <span class="bubble arm glass-strong">¿Usar {t.label}? <kbd>Enter</kbd></span>
+          <button class="bubble arm glass-strong" onclick={() => onpress?.(t.name)}>¿Usar {t.label}? <kbd>Enter</kbd></button>
         {:else}
           <span class="bubble name glass-strong">
             {t.label}{#if off && state?.reason}<span class="reason">{state.reason}</span>{/if}
@@ -221,8 +226,35 @@
     font-weight: 600;
     color: var(--slate-200);
   }
+  .count {
+    position: absolute;
+    top: calc(-0.3 * var(--u));
+    left: calc(-0.3 * var(--u));
+    display: grid;
+    place-items: center;
+    min-width: calc(1.6 * var(--u));
+    height: calc(1.6 * var(--u));
+    padding: 0 calc(0.3 * var(--u));
+    border-radius: calc(0.8 * var(--u));
+    background: var(--amber);
+    color: var(--night-900);
+    font-family: var(--font-display);
+    font-size: calc(1 * var(--u));
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  .readonly .count {
+    font-size: calc(0.9 * var(--u));
+  }
+  .count.empty {
+    background: var(--slate-600);
+    color: var(--slate-200);
+  }
   .bubble.arm {
     left: calc(var(--chip) + 2 * var(--u));
+    border: 1px solid var(--sky);
+    pointer-events: auto;
+    cursor: pointer;
     border-color: var(--sky);
     color: var(--sky);
   }

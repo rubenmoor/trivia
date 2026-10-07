@@ -27,7 +27,7 @@ Depends on the modes in [13](13-game-modes.md) (OQ-37).
 - **Remote Play Together:** Steam streams the game to remote friends and their input arrives as extra virtual controllers, so it works for free once local multi-controller input works.
 
 ## Tasks
-- [ ] IN-1 Audit and fix: every keyboard action has a clickable control (menu button for `Esc`, visible «Continuar», «Atrás»/«Cancelar» in dialogs). Add the rule to `04-ui-tv-display.md`.
+- [x] IN-1 Audit and fix: every keyboard action has a clickable control (menu button for `Esc`, visible «Continuar», «Atrás»/«Cancelar» in dialogs). Add the rule to `04-ui-tv-display.md`. *2026-10-07: missing were the overlay (now a faint ☰ button top right, never focused, so a stray `Enter` can't open it; the error box moved below it), continue on Level and Correct (now «Seguir» buttons), cancel while aiming the Francotirador («Cancelar» in the aiming hint) and confirming an armed joker (the «¿Usar …?» bubble is clickable). Already clickable: Start, Player (incl. delete), the cards, answers and unlock, «Respuesta final», replay, the Paso dialog and the Cambiazo picker. Rule added to 04 ("Input").*
 - [ ] IN-2 Action layer: keyboard and mouse produce actions; screens listen to actions only.
 - [ ] IN-3 Focus navigation model for every screen (spatial focus, focus ring, focus memory per screen).
 - [ ] IN-4 Gamepad input: polling, standard mapping, direct answer buttons and joker access (design first).

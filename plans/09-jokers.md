@@ -73,7 +73,7 @@ Extends the state in `app/server/game.py` (GF-4):
 
 ### Joker tray
 - Five **joker tokens** in a tray along one edge of the Question screen (draft: a vertical strip on the left, so the 2×2 answers and the question band keep their room). Tokens look like big poker chips or playing cards with an icon: light bulb (Soplo), door/arrow (Paso), down stairs (Bájale), compass/wheel (Cambiazo), crosshair (Francotirador). The key letter sits in a corner.
-- States: **available** (bright, gentle idle shimmer) and **disabled right now** (dim, a small lock, reason on focus). Jokers never run out, so there is no "used up" state. Soplo shows three pips for the hints still hidden on this question.
+- States: **available** (bright, gentle idle shimmer) and **disabled right now** (dim, a small lock, reason on focus). Jokers are unlimited by default (D-27); with a joker budget (MD-1..MD-3, `13-game-modes.md`) a token shows the uses left in a badge, and a spent one is disabled with «ya no les quedan …». Soplo shows three pips for the hints still hidden on this question.
 - The tray is also shown, small and read-only, on the Level and Select screens, as a reminder.
 - **Arming:** tapping a token (or its key) lifts it and shows «¿Usar Soplo?». A second tap or `Enter` plays it; `Backspace`, a tap elsewhere or a timeout of ~4 s puts it back. This guards against accidental taps from the couch, which matters because most jokers burn a question. Paso, Cambiazo and Francotirador go straight into their own dialog or mode instead, which has a cancel.
 

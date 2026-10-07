@@ -28,13 +28,13 @@ The road from today onward: milestones, every open task, every open question. Th
 | M4 | Sound, music and fireworks | 04, 09 | done (remaining sounds synthesized, fine for now) |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
 | M7 | Game engine in TypeScript | 12 | todo |
-| M8 | Mouse everywhere and a joker budget | 14, 13 | todo |
+| M8 | Mouse everywhere and a joker budget | 14, 13 | done (2026-10-07) |
 | M9 | UI strings in a catalog; region tags | 15a, 15c | todo |
 | M10 | Media license audit | 17 | todo |
 
 (M6, living-room ready, is done and closed. Milestone numbers aren't reused.)
 
-Suggested order: M5 keeps running alongside everything. M8 and M10 are small and independent, so they can go first. M7 is the biggest; MD-1 and RG-1 work on either engine, so M8 and M9 don't have to wait for it. A family test night closes M7 (PORT-7).
+Suggested order: M5 keeps running alongside everything. M10 is small and independent, so it can go next. M7 is the biggest; MD-1 and RG-1 work on either engine, so M8 and M9 don't have to wait for it. A family test night closes M7 (PORT-7).
 
 ---
 
@@ -74,11 +74,11 @@ No family-specific questions (D-30).
 **Goal:** every keyboard action also has a clickable control; the gamemaster can set a joker budget per game, so the printed cards become optional. The family's default stays unlimited, so nothing changes unless the gamemaster opts in.
 **Exit:** a whole game can be played with the mouse alone; «Como las cartas» works from the overlay.
 
-- [ ] IN-1 Every keyboard action clickable (menu button for `Esc`, «Continuar», «Atrás»/«Cancelar»); the rule goes into `04` — [`14`](14-input.md)
-- [ ] MD-1 Joker budget in the game state (`null` = unlimited, the default) — [`13`](13-game-modes.md)
-- [ ] MD-2 A spent joker is disabled with a reason — [`13`](13-game-modes.md)
-- [ ] MD-3 Count badges on limited jokers, none when unlimited — [`13`](13-game-modes.md)
-- [ ] MD-4 Overlay: set the budget (unlimited / «Como las cartas» / custom) — [`13`](13-game-modes.md)
+- [x] IN-1 Every keyboard action clickable (menu button for `Esc`, «Continuar», «Atrás»/«Cancelar»); the rule goes into `04` — [`14`](14-input.md)
+- [x] MD-1 Joker budget in the game state (`null` = unlimited, the default) — [`13`](13-game-modes.md)
+- [x] MD-2 A spent joker is disabled with a reason — [`13`](13-game-modes.md)
+- [x] MD-3 Count badges on limited jokers, none when unlimited — [`13`](13-game-modes.md)
+- [x] MD-4 Overlay: set the budget (unlimited / «Como las cartas» / custom) — [`13`](13-game-modes.md)
 
 ### M9 — UI strings in a catalog; region tags
 **Goal:** every on-screen string comes from a catalog, with no visible change; every question says whether it's universal or Colombian.

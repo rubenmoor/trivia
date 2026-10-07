@@ -26,8 +26,11 @@ API:
     POST /api/game/joker                           body {"joker": "hint"|"skip"|"easier"|"category"|"snipe",
                                                    "purge": bool, "subcategory": name, "index": 0-3}: play a joker
                                                    (09-jokers.md); the response adds {"event": what happened}
+    POST /api/game/jokers                          body {"jokers": {joker: count or null}}: the running game's
+                                                   joker budget (13-game-modes.md, MD-4); null = unlimited
 Game responses are {"game": ...} (app/server/game.py: never the correct answer before the final answer).
 While a question is on screen, the game has `jokers`: per joker {"available", "reason"} (D-27).
+Every game has `jokers_left`: per joker the uses left, or null = unlimited (MD-1).
 """
 import argparse, json, threading
 from http.server import ThreadingHTTPServer
@@ -70,6 +73,7 @@ class Handler(BaseHandler):
                    "skip": lambda pool: game.skip(pool, bool(body.get("everyone"))),
                    "undo": lambda pool: game.undo(),
                    "abandon": lambda pool: game.abandon(),
+                   "jokers": lambda pool: game.set_jokers(body.get("jokers")),
                    "joker": lambda pool: game.joker(pool, str(body.get("joker")), **{
                        k: body[k] for k in ("purge", "subcategory", "index") if k in body})}
         if action not in actions:

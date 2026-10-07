@@ -20,6 +20,10 @@ Jokers (plans/09-jokers.md, D-26, D-27, JK-2) add:
     jokers      jokers played on the current question, in order
     swapped_to  the subcategory the players chose with «Cambiazo» for the current question, or null
     repeat      true from a «Francotirador» hit until a card is picked: the level repeats (JK-3)
+Game settings (plans/13-game-modes.md, MD-1):
+    settings    {"jokers": {joker: uses per game, or null = unlimited}}; all null by default (D-27).
+                A joker's uses are counted over the whole game (history plus the question on
+                screen); a «Francotirador» miss counts as a use.
 History entries of answered questions have "correct"; questions replaced by a joker or skipped by
 the admin have "outcome" (skipped | easier | category | sniped | admin_skip | admin_burn) instead.
 The server shuffles the answers and checks the final answer; the client never sees the
@@ -119,8 +123,9 @@ def players():
 def with_defaults(state):
     """Fill in the joker fields for games saved before JK-2."""
     for key, value in [("purged", []), ("hints_shown", 0), ("struck", []), ("jokers", []), ("swapped_to", None),
-                       ("repeat", False)]:
+                       ("repeat", False), ("settings", {})]:
         state.setdefault(key, value)
+    state["settings"]["jokers"] = {**UNLIMITED, **state["settings"].get("jokers", {})}
     return state
 
 
@@ -439,6 +444,34 @@ JOKERS = {"hint": play_hint, "skip": play_skip, "easier": play_easier, "category
           "snipe": play_snipe}
 
 
+UNLIMITED = {name: None for name in JOKERS}
+# «Como las cartas»: the printed card set (JK-11), for the overlay's preset (MD-4).
+CARDS = {"hint": 4, "skip": 2, "easier": 2, "category": 2, "snipe": 2}
+SPENT = {"hint": "ya no les quedan Soplos", "skip": "ya no les quedan Pasos", "easier": "ya no les quedan Bájales",
+         "category": "ya no les quedan Cambiazos", "snipe": "ya no les quedan Francotiradores"}
+
+
+def jokers_left(state):
+    """Per joker: uses left in this game, or None = unlimited (MD-1)."""
+    used = [j for h in state["history"] for j in h.get("jokers", [])] + state["jokers"]
+    return {name: None if limit is None else max(0, limit - used.count(name))
+            for name, limit in state["settings"]["jokers"].items()}
+
+
+def set_jokers(budget):
+    """Set the running game's joker budget (MD-4): {joker: count or null}; missing jokers stay as they are."""
+    if not isinstance(budget, dict) or not set(budget) <= set(JOKERS):
+        raise GameError("unknown joker in the budget")
+    for v in budget.values():
+        if v is not None and (not isinstance(v, int) or isinstance(v, bool) or not 0 <= v <= 99):
+            raise GameError("a budget is a count from 0 to 99, or null for unlimited")
+    with connect() as con:
+        gid, state, _ = running(con)
+        state["settings"]["jokers"].update(budget)
+        save(con, gid, state)
+    return state
+
+
 def joker(pool, name, **args):
     """Play a joker on the question on screen; returns what happened (for the client's animation)."""
     if name not in JOKERS:
@@ -447,6 +480,8 @@ def joker(pool, name, **args):
         gid, state, pid = running(con)
         if state["phase"] != "question":
             raise GameError("los comodines solo se juegan en una pregunta")
+        if jokers_left(state)[name] == 0:
+            raise GameError(SPENT[name])
         event = JOKERS[name](con, gid, pid, state, pool, **args)
         save(con, gid, state)
     return {"joker": name, **event}
@@ -490,6 +525,9 @@ def jokers_view(con, gid, pid, state, pool):
     possible = any(g["available"] for g in groups)
     out["category"] = {"available": possible, "reason": None if possible else "no hay preguntas de otros temas para este nivel",
                        "categories": groups}
+    for name, left in jokers_left(state).items():
+        if left == 0:
+            out[name].update(available=False, reason=SPENT[name])
     return out
 
 
@@ -502,8 +540,9 @@ def undo():
         gid, _, state, pid = game
         con.execute("DELETE FROM burned WHERE question_id = ? AND player_id IS ? AND game_id = ?",
                     (state["last"]["question_id"], pid, gid))
-        save(con, gid, state["undo"])
-        return state["undo"]
+        restored = {**state["undo"], "settings": state["settings"]}
+        save(con, gid, restored)
+        return restored
 
 
 def abandon():
@@ -529,7 +568,8 @@ def view(pool):
            "options": [{"description": by_id[i]["description"]} for i in state["options"] if i in by_id],
            "history": [{"level": h["level"], "correct": h["correct"]} for h in state["history"] if "correct" in h],
            "can_undo": bool(state.get("undo")) and result != "abandoned",
-           "purged": state["purged"], "repeat": state["repeat"], "jokers": jokers, "question": None, "last": None}
+           "purged": state["purged"], "repeat": state["repeat"], "jokers": jokers,
+           "settings": state["settings"], "jokers_left": jokers_left(state), "question": None, "last": None}
     if state["current"] in by_id:
         q = by_id[state["current"]]
         # Only the hints shown through «Soplo», one per use (D-26, D-27).

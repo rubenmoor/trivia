@@ -45,10 +45,10 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 - A **mode/settings screen** sits between Player and Level (UI-16) in the default mode; in the gamemaster mode it is hidden behind the overlay.
 
 ## Tasks
-- [ ] MD-1 Joker budget in the game state: `settings.jokers`, `null` = unlimited; existing and new family games default to unlimited. Engine: on the TS engine ([12](12-client-engine.md)) if it has landed, otherwise in `app/server/game.py`.
-- [ ] MD-2 Availability: a spent joker is disabled with a reason; budget counted per game (Snipe misses count as uses).
-- [ ] MD-3 Joker tray: a count badge on limited jokers; none when unlimited.
-- [ ] MD-4 Gamemaster overlay: set the budget for the running game (unlimited / «Como las cartas» / custom).
+- [x] MD-1 Joker budget in the game state: `settings.jokers`, `null` = unlimited; existing and new family games default to unlimited. Engine: on the TS engine ([12](12-client-engine.md)) if it has landed, otherwise in `app/server/game.py`. *2026-10-07: `app/server/game.py` (`settings`, `jokers_left`: uses counted over the game's history plus the question on screen); the view sends `settings` and `jokers_left`; undo keeps the current budget.*
+- [x] MD-2 Availability: a spent joker is disabled with a reason; budget counted per game (Snipe misses count as uses). *2026-10-07: «ya no les quedan Soplos» etc.; `POST /api/game/joker` refuses a spent joker too.*
+- [x] MD-3 Joker tray: a count badge on limited jokers; none when unlimited. *2026-10-07: amber badge top left of the token (grey at 0), also on the read-only tray on Level and Select (`JokerTray.svelte`).*
+- [x] MD-4 Gamemaster overlay: set the budget for the running game (unlimited / «Como las cartas» / custom). *2026-10-07: `POST /api/game/jokers`; the overlay has a second column (sound, «Comodines de esta partida»): «Comodines: Sin límite / Como las cartas / A medida» toggles the preset, each joker 0–9 or ∞ with ←/→ or −/+, and shows the uses left. Each new game starts unlimited, as planned.*
 - [ ] MD-5 Define the default mode: presets, checkpoints, which admin actions remain (OQ-30, OQ-36).
 - [ ] MD-6 «Reportar pregunta»: local report list + burn for everyone on this machine + replacement.
 - [ ] MD-7 Mode and settings screen; the gamemaster mode reachable from it (or from a launch option).
