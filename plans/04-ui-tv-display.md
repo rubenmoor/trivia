@@ -191,6 +191,8 @@ The detailed action set and any extra keys are owned by `05-gamemaster-controls.
 ## Input
 For now, everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer, `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, `Esc` = admin overlay. A clicker or phone remote can map to these later.
 
+**Debugging keys:** the dev browser runs the Vimium extension, which grabs single-letter keys before the page sees them (`r` reloads the page, which lands on Start). When a key press doesn't work, first ask the gamemaster whether Vimium is disabled for the page before you look for a bug in the code.
+
 ## Implementation notes
 - The game is the start page `/`; the review tool lives at `/review` (D-25). It is a Svelte state machine (`client/src/game/`), and each state is a component.
 - **Placeholders (D-25):** until a polish task is done, its part of the screen shows a dashed box or caption `PLACEHOLDER · <task ID>`, and the code carries a `PLACEHOLDER(<task ID>)` comment. Sounds show a caption instead of playing. `grep -rn PLACEHOLDER client/src` lists what's left. A `Transition` wrapper owns the black layer and the audio fades.
