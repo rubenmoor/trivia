@@ -38,6 +38,7 @@ from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
 # ranges (D-22) show per game, times 3. These are the focus group's (young teens, window 1–10,
 # D-38); drafting stops if the focus group's window changes without new weights (AG-8).
+# Without a focus, every level of the scale weighs the same (D-40).
 LEVEL_WEIGHTS = {1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13}
 RUBRIC = ["correct", "unambiguous", "no_giveaway", "distractors", "age_fit", "fun", "description"]
 # Below 4 on any of these drops a question (07). The soft scores didn't predict the
@@ -75,9 +76,9 @@ def load_age_groups():
 
 
 def focus_group():
-    """The age group the pipeline writes for (D-38)."""
+    """The age group the pipeline writes for (D-38); None writes across the whole scale (D-40)."""
     ag = load_age_groups()
-    return next(g for g in ag["groups"] if g["id"] == ag["focus"])
+    return next((g for g in ag["groups"] if g["id"] == ag["focus"]), None) if ag["focus"] else None
 
 
 def ages_text(g):
@@ -95,14 +96,23 @@ def bundles_text():
 
 
 def prompt(*names):
-    """Prompt files joined; {age_groups} and {focus_group} are filled from app/data/age-groups.json."""
+    """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
-    lo, hi = focus["window"]
+    if focus:
+        lo, hi = focus["window"]
+        players = (f"**Focus group:** {focus['id'].replace('_', ' ')}, ages {ages_text(focus)}, who play "
+                   f"difficulties {lo}–{hi}. Write for these players: their knowledge, their world, their humour. "
+                   '"The players" below means them.')
+    else:
+        lo, hi = ag["scale"]
+        windows = ", ".join(f"{g['id'].replace('_', ' ')} {g['window'][0]}–{g['window'][1]}" for g in ag["groups"])
+        players = (f"**No focus group:** questions span the whole scale {lo}–{hi}. Each question is for the groups "
+                   f"whose window contains its difficulty ({windows}). Write for those players: their knowledge, "
+                   'their world, their humour. "The players" below means them, for the question at hand.')
     text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
-            .replace("{focus_group}", f"{focus['id'].replace('_', ' ')}, ages {ages_text(focus)}, "
-                                      f"who play difficulties {lo}–{hi}"))
+            .replace("{players}", players))
 
 def run_dir(args):
     d = WORK / args.run
@@ -437,10 +447,23 @@ def cmd_bundles(args):
     return errors
 
 
-def assign_difficulties(slots, seed):
-    """Spread target levels over all slots to match LEVEL_WEIGHTS."""
-    n, total = len(slots), sum(LEVEL_WEIGHTS.values())
-    exact = {lvl: n * w / total for lvl, w in LEVEL_WEIGHTS.items()}
+def target_weights():
+    """{difficulty: weight} for drafting: LEVEL_WEIGHTS for the focus group, even over the scale without one (D-40)."""
+    focus = focus_group()
+    if focus is None:
+        lo, hi = load_age_groups()["scale"]
+        return {lvl: 1 for lvl in range(lo, hi + 1)}
+    lo, hi = focus["window"]
+    if sorted(LEVEL_WEIGHTS) != list(range(lo, hi + 1)):  # AG-8: weights per group
+        sys.exit(f"LEVEL_WEIGHTS cover {min(LEVEL_WEIGHTS)}–{max(LEVEL_WEIGHTS)}, "
+                 f"but the focus group's window is {lo}–{hi} (app/data/age-groups.json)")
+    return LEVEL_WEIGHTS
+
+
+def assign_difficulties(slots, seed, weights):
+    """Spread target levels over all slots to match the weights."""
+    n, total = len(slots), sum(weights.values())
+    exact = {lvl: n * w / total for lvl, w in weights.items()}
     counts = {lvl: int(x) for lvl, x in exact.items()}
     for lvl in sorted(exact, key=lambda l: exact[l] - counts[l], reverse=True)[:n - sum(counts.values())]:
         counts[lvl] += 1
@@ -452,11 +475,7 @@ def assign_difficulties(slots, seed):
 def draw_slots(subs, pool_questions, axes_def, n, seed):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded."""
-    lo, hi = focus_group()["window"]
-    if sorted(LEVEL_WEIGHTS) != list(range(lo, hi + 1)):  # AG-8: weights per group
-        sys.exit(f"LEVEL_WEIGHTS cover {min(LEVEL_WEIGHTS)}–{max(LEVEL_WEIGHTS)}, "
-                 f"but the focus group's window is {lo}–{hi} (app/data/age-groups.json)")
-    targets = assign_difficulties([(s, i) for s in subs for i in range(n)], seed)
+    targets = assign_difficulties([(s, i) for s in subs for i in range(n)], seed, target_weights())
     plan = {}
     for s in subs:
         rng = random.Random(f"{seed}:{s}")

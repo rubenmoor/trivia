@@ -330,3 +330,10 @@ Template:
 - Decision: Bundles are listed in `app/data/bundles.json` (`base`, `colombia` for now). Every question has exactly one `bundle`, default `base`. Bundles add questions and don't own a topic: a sports question can be in `base`, and well-known facts about Colombia stay in `base`; only questions that need a real connection to Colombia go into `colombia`. `base` is always on. Membership is decided by each bundle's rule: the drafter picks it for new questions, an LLM pass proposes it for the existing pool, the gamemaster corrects it in the review tool.
 - Consequences: `bundle` is a play field (exported). The game plays every bundle until BN-6 adds the choice. 15c's `region` field (RG-1, RG-2) is replaced by bundles. `22-bundles.md` has the tasks.
 - Supersedes / related: 15c (region model); D-28, D-36, D-38
+
+## D-40: No focus group: the pipeline can write across the whole scale
+- Date: 2026-10-07
+- Context: D-38 has the pipeline write only for the focus group (young teens, 1–10), so nothing aims at 11–15. The gamemaster wants questions across the whole difficulty range now, before per-group batches (AG-8).
+- Decision: `"focus": null` in `app/data/age-groups.json` means no focus. `draft` then spreads target difficulties evenly over the whole scale 1–15, and the prompts say that each question is written for the groups whose window contains its difficulty. `focus` only steers the pipeline; the game plays young teens until AG-7. `qgen batch` still takes no arguments (D-36).
+- Consequences: Batches made without a focus add questions at 11–15 that the game doesn't play yet. Even targets are temporary; `21-age-groups.md` proposes a demand-based distribution for AG-7/AG-8.
+- Supersedes / related: D-31, D-36, D-38; AG-8, AG-10

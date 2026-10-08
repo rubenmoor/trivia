@@ -6,7 +6,7 @@ Score each criterion 1–5 (5 = excellent, 3 = acceptable, 1 = broken):
 - `correct`: the answer is true and every fact in question, hints and fun fact is true. If you have any doubt, score ≤ 3 and say why in `notes`.
 - `unambiguous`: exactly one option is right; no reasonable argument for another option. Also check the options don't overlap.
 - `distractors`: wrong answers are plausible for the players, same form as the answer, and the answer doesn't stand out (length, wording).
-- `age_fit`: fits its stated difficulty on the shared scale and suits the focus group; nothing adult-only.
+- `age_fit`: fits its stated difficulty on the shared scale and suits the players (house style, Audience); nothing adult-only.
 - `fun`: surprising, funny or satisfying to get right; not a dry school test.
 - `description`: the humorous intro is funny, a full sentence, related to the content, and doesn't give the answer away.
 - `no_giveaway`: nothing gives the answer away: description, question text, hints 1–2, illustrative or decorative media. 5 = nothing does; 3 = something makes it much easier; 1 = the answer is obvious without knowing anything.

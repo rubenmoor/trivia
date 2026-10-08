@@ -1,7 +1,7 @@
 {
-  "about": "Age groups (plans/21-age-groups.md, D-38). Difficulty is one shared scale 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. `focus`: the group the authoring pipeline writes for and the game plays today. Windows other than the focus group's are a draft until the game offers the choice (AG-7).",
+  "about": "Age groups (plans/21-age-groups.md, D-38). Difficulty is one shared scale 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. `focus`: the group the authoring pipeline writes for; null writes across the whole scale with even targets (D-40). The game plays young teens until AG-7. Windows other than the focus group's are a draft until the game offers the choice (AG-7).",
   "scale": [1, 15],
-  "focus": "young_teens",
+  "focus": null,
   "groups": [
     {"id": "kids", "name": "Niños", "ages": [6, 10], "window": [1, 7]},
     {"id": "young_teens", "name": "Adolescentes", "ages": [11, 14], "window": [1, 10]},
