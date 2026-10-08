@@ -82,6 +82,8 @@ export interface Question {
   /** Its broad category is the one in app/data/categories.json that lists it (D-19). */
   subcategory: string;
   style: string | null;
+  /** D-39: the one bundle the question is in. */
+  bundle: string;
   /** D-37: the concept from the subcategory's list, and the question axes. */
   concept?: string | null;
   axes?: Record<string, string> | null;
@@ -98,3 +100,12 @@ export interface Question {
   background_candidates: MediaCandidate[] | null;
 }
 
+/** A question bundle (app/data/bundles.json, D-39). */
+export type Bundle = {
+  id: string;
+  kind: "base" | "region" | "theme";
+  always_on: boolean;
+  name: string;
+  description: string;
+  rule: string;
+};

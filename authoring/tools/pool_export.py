@@ -3,7 +3,7 @@ import json
 
 import layout
 
-PLAY_FIELDS = ["id", "status", "difficulty", "subcategory", "description", "question", "answer",
+PLAY_FIELDS = ["id", "status", "difficulty", "subcategory", "bundle", "description", "question", "answer",
                "wrong_answers", "hints", "fun_fact"]
 MEDIA_PLAY_FIELDS = ["type", "role", "file_url", "source_url", "credit"]
 BACKGROUND_PLAY_FIELDS = ["file_url", "source_url", "credit"]

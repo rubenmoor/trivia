@@ -1,15 +1,16 @@
 <script lang="ts">
   // Review tool (plans/08-review-tool.md): one question per screen, single-key decisions.
   import { onMount, tick } from "svelte";
-  import { fetchQuestions, pickMedia, saveReview, searchMedia, setDifficulty } from "../lib/api";
-  import type { Decision, Question, Review, Slot } from "../lib/types";
+  import { fetchBundles, fetchQuestions, pickMedia, saveReview, searchMedia, setBundle, setDifficulty } from "../lib/api";
+  import type { Bundle, Decision, Question, Review, Slot } from "../lib/types";
   import MediaPanel from "./MediaPanel.svelte";
   import RevisionPanel from "./RevisionPanel.svelte";
 
-  // URL: ?batch=pilot&id=q-0123. The id follows the current question, so a reload
+  // URL: ?batch=pilot&bundle=colombia&id=q-0123. The id follows the current question, so a reload
   // (or a bookmark) comes back to it. Decisions themselves live in authoring/data/questions.json.
   const params = new URLSearchParams(location.search);
   const batch = params.get("batch");
+  const bundleFilter = params.get("bundle");
   // /review/q-0123: just that one question (linked from the game's admin overlay).
   const singleId = decodeURIComponent(location.pathname.match(/^\/review\/([^/]+)/)?.[1] ?? "") || null;
   const startId = singleId ?? params.get("id");
@@ -18,6 +19,7 @@
   let lastKey = $state("");
 
   let questions = $state<Question[]>([]);
+  let bundles = $state<Bundle[]>([]);
   let index = $state(0);
   let loading = $state(true);
   let error = $state<string | null>(null);
@@ -70,7 +72,7 @@
 
   onMount(async () => {
     try {
-      questions = await fetchQuestions(batch);
+      [questions, bundles] = await Promise.all([fetchQuestions(batch, undefined, bundleFilter), fetchBundles()]);
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
       const firstOpen = questions.findIndex(isOpen);
@@ -267,6 +269,21 @@
     }
   }
 
+  /** "n": move the question to the next bundle in app/data/bundles.json (D-39). */
+  async function nextBundle() {
+    if (!current || !bundles.length) return;
+    const i = index;
+    const at = bundles.findIndex((b) => b.id === questions[i].bundle);
+    const next = bundles[(at + 1) % bundles.length];
+    try {
+      const updated = await setBundle(questions[i].id, next.id);
+      questions[i] = { ...questions[i], bundle: updated.bundle };
+      flash(`bundle: ${next.name}`);
+    } catch (e) {
+      reportError(`moving ${questions[i]?.id} to bundle ${next.id}`, e);
+    }
+  }
+
   function move(delta: number) {
     if (!questions.length) return;
     finished = false;
@@ -328,6 +345,7 @@
         difficultyPending = true;
         flash("difficulty: press 0–9 (0 = 1, 9 = 10)");
       },
+      n: nextBundle,
       c: () => toggle("media"),
       b: () => toggle("background"),
       s: () => (showScores = !showScores),
@@ -354,7 +372,7 @@
     <p class="center error">{error}</p>
   {:else if questions.length === 0}
     <p class="center">
-      {singleId ? `No question “${singleId}”` : `No questions${batch ? ` in batch “${batch}”` : ""}`}.
+      {singleId ? `No question “${singleId}”` : `No questions${batch ? ` in batch “${batch}”` : ""}${bundleFilter ? ` in bundle “${bundleFilter}”` : ""}`}.
     </p>
   {:else if finished}
     <section class="summary">
@@ -391,6 +409,7 @@
           (was {current.difficulty_original})
         {/if}
         {#if current.style}· {current.style.split(":")[0]}{/if}
+        · <span class="bundle" class:other={current.bundle !== "base"}>{bundles.find((b) => b.id === current.bundle)?.name ?? current.bundle}</span>
       </span>
       <a class="stats" href="/stats/categories">Stats →</a>
     </header>
@@ -515,6 +534,7 @@
       <button class="feedback-btn" onclick={openFeedback}><kbd>f</kbd> feedback</button>
       <button class="reject" onclick={() => decide("rejected")}><kbd>r</kbd> reject</button>
       <button onclick={() => { difficultyPending = true; flash("difficulty: press 0–9 (0 = 1, 9 = 10)"); }}><kbd>d</kbd> difficulty</button>
+      <button onclick={nextBundle}><kbd>n</kbd> bundle</button>
       <button onclick={openSearch}><kbd>m</kbd> media search</button>
       <button onclick={() => toggle("media")}><kbd>c</kbd> {openSlot === "media" ? "hide" : "show"} alternatives</button>
       {#if current.background}
@@ -776,5 +796,9 @@
   }
   .error {
     color: var(--bad);
+  }
+  .bundle.other {
+    font-weight: 600;
+    color: var(--accent);
   }
 </style>

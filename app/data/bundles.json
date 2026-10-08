@@ -1,0 +1,21 @@
+{
+  "about": "Bundles (plans/22-bundles.md, D-39): sets of questions players switch on or off before a session. Every question is in exactly one bundle (`bundle`, default base). Bundles add questions and don't own a topic. `rule` (English) is how the pipeline decides membership; `name` and `description` are for the game.",
+  "bundles": [
+    {
+      "id": "base",
+      "kind": "base",
+      "always_on": true,
+      "name": "Básico",
+      "description": "Preguntas de todo un poco, para jugar en cualquier parte.",
+      "rule": "Everything that isn't in another bundle: answerable by players of the focus group anywhere in the Spanish-speaking world, including well-known facts about Colombia (its capital, its flag, coffee, García Márquez)."
+    },
+    {
+      "id": "colombia",
+      "kind": "region",
+      "always_on": false,
+      "name": "Colombia",
+      "description": "Para quien tiene relación con Colombia: lugares, comida, costumbres, gente, música y palabras de allá.",
+      "rule": "Answering needs a connection to Colombia: Colombian places, food, customs, festivals, people, music, sport, words, sayings or history that players of the focus group outside Colombia mostly wouldn't know."
+    }
+  ]
+}

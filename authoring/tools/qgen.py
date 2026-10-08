@@ -7,7 +7,8 @@ An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
 
 It runs these steps in a fixed order; they stay available one by one for debugging:
 
-    qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up]   # concept lists (D-37)
+    qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
+    qgen bundles                    # sort the pool into bundles (D-39)
     qgen draft --run <run> --subcategories "Volcanes,Piratas"
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | research | record | sync | batch-report --run <run>
@@ -84,6 +85,15 @@ def ages_text(g):
     return f"{lo}–{hi}" if hi else f"{lo}+"
 
 
+def load_bundles():
+    return load_json(layout.BUNDLES)["bundles"]
+
+
+def bundles_text():
+    """The bundles and their membership rules, for prompts (D-39)."""
+    return "\n".join(f"- `{b['id']}`: {b['rule']}" for b in load_bundles())
+
+
 def prompt(*names):
     """Prompt files joined; {age_groups} and {focus_group} are filled from app/data/age-groups.json."""
     ag, focus = load_age_groups(), focus_group()
@@ -110,8 +120,9 @@ def parallel(fn, items, jobs):
             except Exception as e:  # noqa: BLE001 — keep the batch going
                 errors.append(e)
                 it = futures[f]
-                label = (it[0] if isinstance(it, tuple)
-                         else ", ".join(x[0] for x in it) if isinstance(it, list) else it)  # list: grouped()
+                label = (it[0] if isinstance(it, tuple)  # list: grouped() files or a group of questions
+                         else ", ".join(x[0] if isinstance(x, tuple) else str(x.get("id")) for x in it)
+                         if isinstance(it, list) else it)
                 print(f"  FAILED {label}: {e}", file=sys.stderr)
     if errors:
         print(f"{len(errors)} item(s) failed; rerun the same command to retry them.", file=sys.stderr)
@@ -174,9 +185,9 @@ MEDIA_SCHEMA = {"type": "object", "required": ["type", "role", "query", "note"],
     "query": STR, "note": STR}}
 
 QUESTION_SCHEMA = {"type": "object", "required": [
-    "slot", "option", "difficulty", "description", "question", "answer", "wrong_answers", "hints",
+    "slot", "option", "bundle", "difficulty", "description", "question", "answer", "wrong_answers", "hints",
     "media", "fun_fact", "needs_media", "needs_fact_check", "background_query"], "properties": {
-    "slot": INT, "option": INT, "difficulty": INT, "description": STR, "question": STR, "answer": STR,
+    "slot": INT, "option": INT, "bundle": STR, "difficulty": INT, "description": STR, "question": STR, "answer": STR,
     "wrong_answers": STR_LIST, "hints": STR_LIST, "media": MEDIA_SCHEMA, "fun_fact": STR,
     "needs_media": {"type": "boolean"}, "needs_fact_check": {"type": "boolean"}, "background_query": STR}}
 
@@ -368,6 +379,64 @@ def finalize_concepts(d, order, axes_def):
         print(f"  tagged {tagged} pool question(s) with a concept and axes")
 
 
+BUNDLE_SCHEMA = {"type": "object", "required": ["questions"], "properties": {"questions": {
+    "type": "array", "items": {"type": "object", "required": ["id", "bundle", "reason"],
+                               "properties": {"id": STR, "bundle": STR, "reason": STR}}}}}
+BUNDLE_GROUP = 20  # questions per `qgen bundles` call
+
+
+def cmd_bundles(args):
+    """Sort the existing pool into bundles (BN-3, D-39). Questions without `bundle` get `base`;
+    then an LLM pass proposes a bundle for every question it hasn't seen yet, and the proposals
+    are written into the pool. Proposals stay in work/bundles/proposals.json, so a rerun only
+    sends new questions and never overwrites a bundle the gamemaster changed afterwards."""
+    d = WORK / "bundles"
+    d.mkdir(parents=True, exist_ok=True)
+    data = load_json(POOL)
+    missing = [q for q in data["questions"] if not q.get("bundle")]
+    for q in missing:
+        q["bundle"] = "base"
+    if missing:
+        save_json(POOL, data)
+        print(f"  {len(missing)} question(s) without a bundle set to base")
+    ids = {b["id"] for b in load_bundles()}
+    proposals = load_json(d / "proposals.json", {})
+    todo = [q for q in data["questions"] if q["id"] not in proposals and q["status"] != "rejected"]
+    system = prompt("house-style", "bundles")
+    lock = threading.Lock()
+
+    def work(group):
+        items = [{k: q[k] for k in ["id", "subcategory", "question", "answer", "wrong_answers", "hints"]} for q in group]
+        user = "## Bundles\n" + bundles_text() + "\n\n## Questions\n" + json.dumps(items, ensure_ascii=False)
+        out = claude(system, user, BUNDLE_SCHEMA, args.model, d)
+        got = {r["id"]: r for r in out["questions"] if r["bundle"] in ids}
+        missing = [q["id"] for q in group if q["id"] not in got]
+        with lock:
+            proposals.update({i: {"bundle": got[i]["bundle"], "reason": got[i]["reason"], "applied": False}
+                              for i in got if i in {q["id"] for q in group}})
+            save_json(d / "proposals.json", proposals)
+        print(f"  bundles: {group[0]['id']}…{group[-1]['id']}: "
+              + ", ".join(f"{b} {sum(1 for i in got if got[i]['bundle'] == b)}" for b in sorted(ids)), flush=True)
+        if missing:
+            raise RuntimeError(f"no bundle for {', '.join(missing)}")
+
+    errors = parallel(work, [todo[i:i + BUNDLE_GROUP] for i in range(0, len(todo), BUNDLE_GROUP)], args.jobs)
+    data = load_json(POOL)  # proposals go in once, in one write
+    moved = []
+    for q in data["questions"]:
+        p = proposals.get(q["id"])
+        if p and not p["applied"]:
+            if q["bundle"] != p["bundle"]:
+                moved.append(f"{q['id']} → {p['bundle']}: {q['question'][:70]} ({p['reason']})")
+            q["bundle"], p["applied"] = p["bundle"], True
+    save_json(POOL, data)
+    save_json(d / "proposals.json", proposals)
+    cmd_export(args)
+    print("\n".join(f"  {m}" for m in moved))
+    print(f"{len(moved)} question(s) moved out of base; check them at /review?bundle=<id> (trivia-authoring)")
+    return errors
+
+
 def assign_difficulties(slots, seed):
     """Spread target levels over all slots to match LEVEL_WEIGHTS."""
     n, total = len(slots), sum(LEVEL_WEIGHTS.values())
@@ -442,6 +511,7 @@ def cmd_draft(args):
         plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed)
         save_json(d / "slots.json", plan)
     system = prompt("house-style", "draft")
+    bundle_ids = {b["id"] for b in load_bundles()}
     todo = [s for s in subs if plan.get(s) and not (d / "drafts" / f"{slug(s)}.json").exists()]
 
     def work(sub):
@@ -450,7 +520,8 @@ def cmd_draft(args):
         avoid = "\n".join(f"- {a}" for a in existing_answers(pool, sub)) or "none yet"
         user = (subcategory_header(sub) + "\n\n## Question axes (the values in these options)\n"
                 + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
-                + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}")
+                + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}"
+                + "\n\n## Bundles (pick one per question)\n" + bundles_text())
         out = claude(system, user, DRAFT_SCHEMA, args.model, d)
         good = []
         for q in out["questions"]:
@@ -459,6 +530,8 @@ def cmd_draft(args):
                 problems.append(f"unknown slot {q['slot']}")
             elif not 1 <= q["option"] <= len(slots[q["slot"]]["options"]):
                 problems.append(f"unknown option {q['option']}")
+            if q["bundle"] not in bundle_ids:
+                problems.append(f"unknown bundle {q['bundle']}")
             if problems:
                 print(f"  {sub}: dropped malformed question ({'; '.join(problems)})", file=sys.stderr)
                 continue
@@ -657,7 +730,7 @@ def cmd_merge(args):
                 "concept": q.get("concept"), "axes": q.get("axes"),
                 "quality": {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]},
                 "fact_checked": bool(c and c["verdict"] == "confirmed"), "needs_media": q["needs_media"],
-                "batch": args.run, "review": None,
+                "batch": args.run, "review": None, "bundle": q.get("bundle", "base"),
                 "background": ({"query": q.get("background_query") or q["media"]["query"], "source_url": None,
                                 "file_url": None, "credit": None} if q["media"]["type"] == "audio" else None),
             }
@@ -697,7 +770,7 @@ def cmd_import(args):
     for q in qs:
         w = {k: q[k] for k in ["difficulty", "description", "question", "answer", "wrong_answers", "hints",
                                "fun_fact"]}
-        w.update(tmp_id=q["id"], style=q.get("style"), axes=q.get("axes"), concept=q.get("concept"),
+        w.update(tmp_id=q["id"], style=q.get("style"), axes=q.get("axes"), concept=q.get("concept"), bundle=q.get("bundle"),
                  subcategory=q.get("subcategory"),
                  media={k: q["media"][k] for k in ["type", "role", "query", "note"]},
                  needs_fact_check=True, needs_media=bool(q.get("needs_media")),
@@ -943,7 +1016,8 @@ def cmd_report(args):
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
                        ("category", lambda q: broad[q["subcategory"]]["slug"] if q.get("subcategory") in broad else None), ("style", lambda q: q.get("style")),
                        *[(f"axes.{a}", lambda q, a=a: (q.get("axes") or {}).get(a)) for a in concepts.AXES],
-                       ("media", lambda q: f"{q['media']['type']}/{q['media']['role']}")]:
+                       ("media", lambda q: f"{q['media']['type']}/{q['media']['role']}"),
+                       ("bundle", lambda q: q.get("bundle"))]:
         print(f"  by {title}: {count(pool, key)}")
     try:
         burned = selection.burned_ids(args.player)
@@ -954,6 +1028,7 @@ def cmd_report(args):
     print(f"unburned approved for {who}: {len(avail)} ({len(burned)} burned)")
     print(f"  by category: {count(avail, lambda q: broad[q['subcategory']]['slug'] if q.get('subcategory') in broad else None)}")
     print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
+    print(f"  by bundle: {count(avail, lambda q: q.get('bundle'))}")
     print("supply per level (a game needs 4 per level, D-22):")
     for l in selection.supply(avail):
         lo, hi = l["range"]
@@ -1356,6 +1431,7 @@ def validate_pool():
     subcategories = categories.broad_of()
     axes_def, lists = concepts.load_axes(), {}
     lo, hi = load_age_groups()["scale"]
+    bundle_ids = {b["id"] for b in load_bundles()}
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -1374,6 +1450,7 @@ def validate_pool():
             if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
                 errors.append(f"{qid}: review.previous must be an llm review under a human one")
         if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in app/data/categories.json (D-19)")
+        if q.get("bundle") not in bundle_ids: errors.append(f"{qid}: bundle must be one of app/data/bundles.json (D-39)")
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
             errors.append(f"{qid}: bad media type/role")
@@ -1442,6 +1519,8 @@ def main():
     cp.add_argument("--top-up", action="store_true", help=f"also add concepts to lists with fewer than {concepts.LOW_STOCK} unused")
     cp.add_argument("--fill", action="store_true", help=f"also top up lists with fewer than {concepts.TARGET_SIZE} concepts to that size")
     cp.set_defaults(run=None)
+    bp = add("bundles", cmd_bundles, "opus", run=False)
+    bp.set_defaults(run=None)
     dp = add("draft", cmd_draft, "opus")
     dp.add_argument("--subcategories", help="comma-separated, first call only")
     dp.add_argument("--seed", type=int, default=1)

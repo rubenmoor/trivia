@@ -42,7 +42,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0002",
@@ -118,7 +119,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0003",
@@ -171,7 +173,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0004",
@@ -240,7 +243,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0005",
@@ -302,7 +306,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0006",
@@ -355,7 +360,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0007",
@@ -433,7 +439,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0008",
@@ -499,7 +506,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0009",
@@ -552,7 +560,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0010",
@@ -605,7 +614,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0011",
@@ -682,7 +692,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0012",
@@ -750,7 +761,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0013",
@@ -803,7 +815,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0014",
@@ -856,7 +869,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0015",
@@ -909,7 +923,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0016",
@@ -979,7 +994,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0017",
@@ -1032,7 +1048,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0018",
@@ -1085,7 +1102,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0019",
@@ -1138,7 +1156,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0020",
@@ -1214,7 +1233,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0021",
@@ -1277,7 +1297,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0022",
@@ -1330,7 +1351,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0023",
@@ -1392,7 +1414,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0024",
@@ -1463,7 +1486,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0025",
@@ -1536,7 +1560,8 @@
           }
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0026",
@@ -1589,7 +1614,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0027",
@@ -1642,7 +1668,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0028",
@@ -1695,7 +1722,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0029",
@@ -1748,7 +1776,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0030",
@@ -1801,7 +1830,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0031",
@@ -1854,7 +1884,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0032",
@@ -1928,7 +1959,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0033",
@@ -1995,7 +2027,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0034",
@@ -2068,7 +2101,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0035",
@@ -2131,7 +2165,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0036",
@@ -2201,7 +2236,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0037",
@@ -2254,7 +2290,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0038",
@@ -2307,7 +2344,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0039",
@@ -2360,7 +2398,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0040",
@@ -2413,7 +2452,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0041",
@@ -2486,7 +2526,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0042",
@@ -2539,7 +2580,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0043",
@@ -2607,7 +2649,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0044",
@@ -2676,7 +2719,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0045",
@@ -2749,7 +2793,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0046",
@@ -2815,7 +2860,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0047",
@@ -2878,7 +2924,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0048",
@@ -2952,7 +2999,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0049",
@@ -3013,7 +3061,8 @@
         "clue": "direct",
         "answer_kind": "thing",
         "lens": "nature"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0050",
@@ -3089,7 +3138,8 @@
         "clue": "direct",
         "answer_kind": "thing",
         "lens": "nature"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0051",
@@ -3150,7 +3200,8 @@
         "clue": "direct",
         "answer_kind": "thing",
         "lens": "school"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0052",
@@ -3212,7 +3263,8 @@
         "clue": "direct",
         "answer_kind": "thing",
         "lens": "school"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0053",
@@ -3274,7 +3326,8 @@
         "clue": "direct",
         "answer_kind": "thing",
         "lens": "school"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0054",
@@ -3351,7 +3404,8 @@
         "clue": "direct",
         "answer_kind": "time",
         "lens": "school"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0055",
@@ -3412,7 +3466,8 @@
         "clue": "direct",
         "answer_kind": "person",
         "lens": "history"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0056",
@@ -3482,7 +3537,8 @@
         "clue": "direct",
         "answer_kind": "thing",
         "lens": "school"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0057",
@@ -3559,7 +3615,8 @@
         "clue": "direct",
         "answer_kind": "word",
         "lens": "school"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0058",
@@ -3622,7 +3679,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0059",
@@ -3703,7 +3761,8 @@
         "clue": "direct",
         "answer_kind": "number",
         "lens": "popular_science"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0060",
@@ -3774,7 +3833,8 @@
         "clue": "direct",
         "answer_kind": "word",
         "lens": "popular_science"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0061",
@@ -3827,7 +3887,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0062",
@@ -3886,7 +3947,8 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Metropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "credit": "Unknown or not provided\n\nRetouched by Mmxx · Public domain · Wikimedia Commons"
       },
-      "difficulty_original": 1
+      "difficulty_original": 1,
+      "bundle": "base"
     },
     {
       "id": "q-0063",
@@ -3952,7 +4014,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0064",
@@ -4024,7 +4087,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0065",
@@ -4077,7 +4141,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0066",
@@ -4143,7 +4208,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0067",
@@ -4225,7 +4291,8 @@
           }
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0068",
@@ -4298,7 +4365,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0069",
@@ -4351,7 +4419,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0070",
@@ -4404,7 +4473,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0071",
@@ -4467,7 +4537,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0072",
@@ -4530,7 +4601,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0073",
@@ -4592,7 +4664,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0074",
@@ -4645,7 +4718,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0075",
@@ -4698,7 +4772,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0076",
@@ -4777,7 +4852,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0077",
@@ -4846,7 +4922,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0078",
@@ -4899,7 +4976,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0079",
@@ -4952,7 +5030,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0080",
@@ -5016,7 +5095,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0081",
@@ -5069,7 +5149,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0082",
@@ -5137,7 +5218,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0083",
@@ -5196,7 +5278,8 @@
         "reason": "The film is about a real sinking in which more than 1.500 people died, which breaks the tone rule, and the question can't avoid it without becoming a different question.",
         "previous": {},
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0084",
@@ -5265,7 +5348,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0085",
@@ -5342,7 +5426,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0086",
@@ -5395,7 +5480,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0087",
@@ -5448,7 +5534,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0088",
@@ -5501,7 +5588,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0089",
@@ -5577,7 +5665,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0090",
@@ -5645,7 +5734,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0091",
@@ -5698,7 +5788,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0092",
@@ -5761,7 +5852,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0093",
@@ -5842,7 +5934,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0094",
@@ -5895,7 +5988,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0095",
@@ -5963,7 +6057,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0096",
@@ -6035,7 +6130,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0097",
@@ -6088,7 +6184,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0098",
@@ -6142,7 +6239,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 2
+      "difficulty_original": 2,
+      "bundle": "base"
     },
     {
       "id": "q-0099",
@@ -6196,7 +6294,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 3
+      "difficulty_original": 3,
+      "bundle": "base"
     },
     {
       "id": "q-0100",
@@ -6249,7 +6348,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0101",
@@ -6316,7 +6416,8 @@
         },
         "revised_on": "2026-10-06"
       },
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0102",
@@ -6369,7 +6470,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0103",
@@ -6422,7 +6524,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0104",
@@ -6475,7 +6578,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0105",
@@ -6534,7 +6638,8 @@
         "reason": "The topic is World War II, a war with huge numbers of victims, which breaks the tone rule. Replacing it would make it a different question.",
         "previous": {},
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0106",
@@ -6611,7 +6716,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0107",
@@ -6680,7 +6786,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "colombia"
     },
     {
       "id": "q-0108",
@@ -6744,7 +6851,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0109",
@@ -6797,7 +6905,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0110",
@@ -6864,7 +6973,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0111",
@@ -6917,7 +7027,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0112",
@@ -6970,7 +7081,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0113",
@@ -7024,7 +7136,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0114",
@@ -7087,7 +7200,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0115",
@@ -7140,7 +7254,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0116",
@@ -7194,7 +7309,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 8
+      "difficulty_original": 8,
+      "bundle": "base"
     },
     {
       "id": "q-0117",
@@ -7247,7 +7363,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0118",
@@ -7325,7 +7442,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0119",
@@ -7378,7 +7496,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0120",
@@ -7446,7 +7565,8 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0121",
@@ -7498,7 +7618,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0122",
@@ -7555,7 +7676,8 @@
         "source_url": null,
         "file_url": null,
         "credit": null
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0123",
@@ -7607,7 +7729,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0124",
@@ -7659,7 +7782,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0125",
@@ -7711,7 +7835,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0126",
@@ -7763,7 +7888,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0127",
@@ -7815,7 +7941,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0128",
@@ -7867,7 +7994,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0129",
@@ -7919,7 +8047,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0130",
@@ -7972,7 +8101,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 4
+      "difficulty_original": 4,
+      "bundle": "colombia"
     },
     {
       "id": "q-0131",
@@ -8024,7 +8154,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0132",
@@ -8077,7 +8208,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 3
+      "difficulty_original": 3,
+      "bundle": "colombia"
     },
     {
       "id": "q-0133",
@@ -8129,7 +8261,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0134",
@@ -8181,7 +8314,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0135",
@@ -8233,7 +8367,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0136",
@@ -8285,7 +8420,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0137",
@@ -8338,7 +8474,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 2
+      "difficulty_original": 2,
+      "bundle": "base"
     },
     {
       "id": "q-0138",
@@ -8390,7 +8527,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0139",
@@ -8442,7 +8580,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0140",
@@ -8494,7 +8633,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0141",
@@ -8547,7 +8687,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0142",
@@ -8599,7 +8740,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0143",
@@ -8652,7 +8794,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0144",
@@ -8704,7 +8847,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0145",
@@ -8756,7 +8900,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0146",
@@ -8808,7 +8953,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0147",
@@ -8860,7 +9006,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0148",
@@ -8912,7 +9059,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0149",
@@ -8965,7 +9113,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 4
+      "difficulty_original": 4,
+      "bundle": "base"
     },
     {
       "id": "q-0150",
@@ -9018,7 +9167,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 7
+      "difficulty_original": 7,
+      "bundle": "base"
     },
     {
       "id": "q-0151",
@@ -9070,7 +9220,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0152",
@@ -9122,7 +9273,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0153",
@@ -9174,7 +9326,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0154",
@@ -9226,7 +9379,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0155",
@@ -9278,7 +9432,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0156",
@@ -9331,7 +9486,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 4
+      "difficulty_original": 4,
+      "bundle": "base"
     },
     {
       "id": "q-0157",
@@ -9383,7 +9539,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0158",
@@ -9441,7 +9598,8 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Sunset_over_Paljassaare_Outdoor_Concert_Stage_Tallinn_Cruise_Terminal_Tallinn_27_August_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "credit": "Pjotr Mahhonin · CC BY-SA 4.0 · Wikimedia Commons"
       },
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0159",
@@ -9493,7 +9651,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0160",
@@ -9545,7 +9704,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0161",
@@ -9597,7 +9757,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0162",
@@ -9650,7 +9811,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 4
+      "difficulty_original": 4,
+      "bundle": "base"
     },
     {
       "id": "q-0163",
@@ -9702,7 +9864,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0164",
@@ -9754,7 +9917,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0165",
@@ -9806,7 +9970,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0166",
@@ -9858,7 +10023,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0167",
@@ -9910,7 +10076,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0168",
@@ -9962,7 +10129,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0169",
@@ -10014,7 +10182,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0170",
@@ -10066,7 +10235,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0171",
@@ -10118,7 +10288,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0172",
@@ -10170,7 +10341,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0173",
@@ -10222,7 +10394,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0174",
@@ -10274,7 +10447,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0175",
@@ -10326,7 +10500,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0176",
@@ -10378,7 +10553,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0177",
@@ -10431,7 +10607,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0178",
@@ -10483,7 +10660,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0179",
@@ -10536,7 +10714,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "base"
     },
     {
       "id": "q-0180",
@@ -10589,7 +10768,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 7
+      "difficulty_original": 7,
+      "bundle": "base"
     },
     {
       "id": "q-0181",
@@ -10641,7 +10821,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0182",
@@ -10693,7 +10874,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0183",
@@ -10745,7 +10927,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0184",
@@ -10798,7 +10981,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "bundle": "colombia"
     },
     {
       "id": "q-0185",
@@ -10850,7 +11034,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0186",
@@ -10903,7 +11088,8 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 4
+      "difficulty_original": 4,
+      "bundle": "base"
     },
     {
       "id": "q-0187",
@@ -10955,7 +11141,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0188",
@@ -11007,7 +11194,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0189",
@@ -11059,7 +11247,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0190",
@@ -11111,7 +11300,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0191",
@@ -11163,7 +11353,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0192",
@@ -11215,7 +11406,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0193",
@@ -11267,7 +11459,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0194",
@@ -11319,7 +11512,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0195",
@@ -11371,7 +11565,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0196",
@@ -11423,7 +11618,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0197",
@@ -11475,7 +11671,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0198",
@@ -11520,7 +11717,8 @@
       "needs_media": false,
       "batch": "pilot",
       "review": null,
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0199",
@@ -11572,7 +11770,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0200",
@@ -11624,7 +11823,8 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0201",
@@ -11677,7 +11877,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0202",
@@ -11735,7 +11936,8 @@
         "source_url": null,
         "file_url": null,
         "credit": null
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0203",
@@ -11788,7 +11990,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0204",
@@ -11841,7 +12044,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0205",
@@ -11894,7 +12098,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0206",
@@ -11947,7 +12152,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0207",
@@ -12000,7 +12206,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0208",
@@ -12053,7 +12260,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0209",
@@ -12106,7 +12314,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0210",
@@ -12159,7 +12368,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0211",
@@ -12212,7 +12422,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0212",
@@ -12265,7 +12476,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0213",
@@ -12318,7 +12530,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0214",
@@ -12371,7 +12584,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0215",
@@ -12424,7 +12638,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0216",
@@ -12477,7 +12692,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0217",
@@ -12530,7 +12746,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0218",
@@ -12583,7 +12800,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0219",
@@ -12636,7 +12854,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0220",
@@ -12689,7 +12908,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0221",
@@ -12742,7 +12962,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0222",
@@ -12795,7 +13016,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0223",
@@ -12848,7 +13070,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0224",
@@ -12901,7 +13124,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0225",
@@ -12954,7 +13178,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0226",
@@ -13007,7 +13232,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0227",
@@ -13060,7 +13286,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0228",
@@ -13113,7 +13340,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0229",
@@ -13166,7 +13394,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0230",
@@ -13219,7 +13448,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0231",
@@ -13272,7 +13502,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0232",
@@ -13325,7 +13556,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0233",
@@ -13378,7 +13610,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0234",
@@ -13431,7 +13664,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0235",
@@ -13484,7 +13718,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0236",
@@ -13537,7 +13772,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0237",
@@ -13590,7 +13826,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0238",
@@ -13643,7 +13880,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0239",
@@ -13696,7 +13934,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0240",
@@ -13749,7 +13988,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0241",
@@ -13802,7 +14042,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0242",
@@ -13855,7 +14096,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0243",
@@ -13908,7 +14150,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0244",
@@ -13961,7 +14204,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0245",
@@ -14014,7 +14258,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0246",
@@ -14067,7 +14312,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0247",
@@ -14120,7 +14366,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0248",
@@ -14173,7 +14420,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0249",
@@ -14226,7 +14474,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0250",
@@ -14279,7 +14528,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0251",
@@ -14332,7 +14582,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0252",
@@ -14385,7 +14636,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0253",
@@ -14438,7 +14690,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0254",
@@ -14491,7 +14744,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0255",
@@ -14544,7 +14798,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0256",
@@ -14597,7 +14852,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0257",
@@ -14650,7 +14906,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0258",
@@ -14703,7 +14960,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0259",
@@ -14756,7 +15014,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0260",
@@ -14809,7 +15068,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0261",
@@ -14862,7 +15122,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0262",
@@ -14920,7 +15181,8 @@
         "source_url": null,
         "file_url": null,
         "credit": null
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0263",
@@ -14973,7 +15235,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0264",
@@ -15026,7 +15289,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0265",
@@ -15079,7 +15343,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0266",
@@ -15132,7 +15397,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0267",
@@ -15185,7 +15451,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0268",
@@ -15238,7 +15505,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0269",
@@ -15291,7 +15559,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0270",
@@ -15344,7 +15613,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0271",
@@ -15397,7 +15667,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0272",
@@ -15450,7 +15721,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0273",
@@ -15503,7 +15775,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0274",
@@ -15556,7 +15829,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0275",
@@ -15609,7 +15883,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0276",
@@ -15667,7 +15942,8 @@
         "source_url": null,
         "file_url": null,
         "credit": null
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0277",
@@ -15720,7 +15996,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0278",
@@ -15773,7 +16050,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0279",
@@ -15826,7 +16104,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0280",
@@ -15879,7 +16158,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0281",
@@ -15932,7 +16212,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0282",
@@ -15985,7 +16266,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0283",
@@ -16038,7 +16320,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0284",
@@ -16096,7 +16379,8 @@
         "source_url": null,
         "file_url": null,
         "credit": null
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0285",
@@ -16149,7 +16433,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0286",
@@ -16202,7 +16487,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0287",
@@ -16255,7 +16541,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0288",
@@ -16308,7 +16595,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0289",
@@ -16361,7 +16649,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0290",
@@ -16414,7 +16703,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0291",
@@ -16467,7 +16757,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0292",
@@ -16520,7 +16811,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0293",
@@ -16573,7 +16865,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0294",
@@ -16626,7 +16919,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0295",
@@ -16679,7 +16973,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0296",
@@ -16732,7 +17027,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0297",
@@ -16785,7 +17081,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0298",
@@ -16838,7 +17135,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0299",
@@ -16891,7 +17189,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0300",
@@ -16944,7 +17243,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0301",
@@ -16997,7 +17297,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0302",
@@ -17050,7 +17351,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0303",
@@ -17103,7 +17405,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0304",
@@ -17156,7 +17459,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0305",
@@ -17209,7 +17513,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0306",
@@ -17262,7 +17567,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0307",
@@ -17315,7 +17621,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0308",
@@ -17368,7 +17675,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0309",
@@ -17426,7 +17734,8 @@
         "source_url": null,
         "file_url": null,
         "credit": null
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0310",
@@ -17479,7 +17788,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0311",
@@ -17532,7 +17842,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0312",
@@ -17585,7 +17896,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0313",
@@ -17638,7 +17950,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0314",
@@ -17691,7 +18004,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0315",
@@ -17744,7 +18058,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0316",
@@ -17797,7 +18112,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0317",
@@ -17850,7 +18166,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0318",
@@ -17903,7 +18220,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0319",
@@ -17956,7 +18274,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0320",
@@ -18009,7 +18328,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0321",
@@ -18062,7 +18382,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0322",
@@ -18115,7 +18436,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0323",
@@ -18168,7 +18490,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0324",
@@ -18221,7 +18544,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0325",
@@ -18274,7 +18598,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0326",
@@ -18327,7 +18652,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0327",
@@ -18380,7 +18706,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0328",
@@ -18433,7 +18760,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0329",
@@ -18486,7 +18814,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0330",
@@ -18539,7 +18868,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0331",
@@ -18592,7 +18922,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0332",
@@ -18645,7 +18976,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0333",
@@ -18698,7 +19030,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0334",
@@ -18751,7 +19084,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0335",
@@ -18804,7 +19138,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0336",
@@ -18857,7 +19192,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0337",
@@ -18910,7 +19246,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0338",
@@ -18963,7 +19300,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0339",
@@ -19016,7 +19354,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0340",
@@ -19069,7 +19408,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0341",
@@ -19122,7 +19462,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0342",
@@ -19175,7 +19516,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0343",
@@ -19228,7 +19570,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0344",
@@ -19281,7 +19624,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0345",
@@ -19334,7 +19678,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0346",
@@ -19387,7 +19732,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0347",
@@ -19440,7 +19786,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0348",
@@ -19493,7 +19840,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0349",
@@ -19546,7 +19894,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0350",
@@ -19599,7 +19948,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0351",
@@ -19652,7 +20002,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0352",
@@ -19705,7 +20056,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0353",
@@ -19758,7 +20110,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0354",
@@ -19811,7 +20164,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0355",
@@ -19864,7 +20218,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0356",
@@ -19917,7 +20272,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0357",
@@ -19970,7 +20326,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0358",
@@ -20023,7 +20380,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0359",
@@ -20076,7 +20434,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0360",
@@ -20129,7 +20488,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0361",
@@ -20182,7 +20542,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0362",
@@ -20235,7 +20596,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0363",
@@ -20288,7 +20650,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0364",
@@ -20341,7 +20704,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0365",
@@ -20394,7 +20758,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0366",
@@ -20447,7 +20812,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0367",
@@ -20500,7 +20866,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0368",
@@ -20553,7 +20920,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0369",
@@ -20606,7 +20974,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0370",
@@ -20659,7 +21028,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0371",
@@ -20712,7 +21082,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0372",
@@ -20765,7 +21136,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0373",
@@ -20818,7 +21190,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0374",
@@ -20871,7 +21244,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0375",
@@ -20924,7 +21298,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0376",
@@ -20977,7 +21352,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0377",
@@ -21030,7 +21406,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0378",
@@ -21083,7 +21460,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0379",
@@ -21136,7 +21514,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0380",
@@ -21189,7 +21568,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0381",
@@ -21242,7 +21622,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0382",
@@ -21295,7 +21676,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0383",
@@ -21348,7 +21730,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0384",
@@ -21401,7 +21784,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0385",
@@ -21454,7 +21838,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0386",
@@ -21507,7 +21892,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0387",
@@ -21560,7 +21946,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0388",
@@ -21613,7 +22000,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0389",
@@ -21666,7 +22054,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0390",
@@ -21719,7 +22108,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0391",
@@ -21772,7 +22162,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0392",
@@ -21825,7 +22216,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0393",
@@ -21878,7 +22270,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0394",
@@ -21931,7 +22324,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0395",
@@ -21984,7 +22378,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0396",
@@ -22037,7 +22432,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0397",
@@ -22090,7 +22486,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0398",
@@ -22143,7 +22540,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0399",
@@ -22196,7 +22594,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0400",
@@ -22249,7 +22648,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0401",
@@ -22302,7 +22702,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0402",
@@ -22355,7 +22756,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0403",
@@ -22408,7 +22810,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0404",
@@ -22461,7 +22864,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0405",
@@ -22514,7 +22918,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0406",
@@ -22567,7 +22972,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0407",
@@ -22620,7 +23026,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0408",
@@ -22673,7 +23080,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0409",
@@ -22726,7 +23134,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0410",
@@ -22779,7 +23188,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0411",
@@ -22832,7 +23242,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0412",
@@ -22885,7 +23296,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0413",
@@ -22938,7 +23350,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0414",
@@ -22991,7 +23404,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0415",
@@ -23044,7 +23458,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0416",
@@ -23097,7 +23512,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0417",
@@ -23150,7 +23566,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0418",
@@ -23203,7 +23620,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0419",
@@ -23256,7 +23674,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0420",
@@ -23309,7 +23728,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0421",
@@ -23362,7 +23782,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0422",
@@ -23415,7 +23836,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0423",
@@ -23468,7 +23890,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0424",
@@ -23521,7 +23944,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0425",
@@ -23574,7 +23998,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0426",
@@ -23627,7 +24052,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0427",
@@ -23680,7 +24106,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0428",
@@ -23733,7 +24160,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0429",
@@ -23791,7 +24219,8 @@
         "source_url": "https://commons.wikimedia.org/wiki/File%3AHolzzaun.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Holzzaun.jpg/3840px-Holzzaun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "RonPorter · CC0 · Wikimedia Commons"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0430",
@@ -23844,7 +24273,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0431",
@@ -23897,7 +24327,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0432",
@@ -23950,7 +24381,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0433",
@@ -24003,7 +24435,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0434",
@@ -24056,7 +24489,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0435",
@@ -24109,7 +24543,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0436",
@@ -24162,7 +24597,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0437",
@@ -24215,7 +24651,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0438",
@@ -24268,7 +24705,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0439",
@@ -24321,7 +24759,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0440",
@@ -24374,7 +24813,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0441",
@@ -24427,7 +24867,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0442",
@@ -24480,7 +24921,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0443",
@@ -24533,7 +24975,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0444",
@@ -24586,7 +25029,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0445",
@@ -24639,7 +25083,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0446",
@@ -24692,7 +25137,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0447",
@@ -24745,7 +25191,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0448",
@@ -24798,7 +25245,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0449",
@@ -24851,7 +25299,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0450",
@@ -24904,7 +25353,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0451",
@@ -24957,7 +25407,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0452",
@@ -25010,7 +25461,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0453",
@@ -25063,7 +25515,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0454",
@@ -25116,7 +25569,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0455",
@@ -25169,7 +25623,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0456",
@@ -25222,7 +25677,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0457",
@@ -25280,7 +25736,8 @@
         "source_url": "https://commons.wikimedia.org/wiki/File%3ALyublino_Park_and_Pond_at_night_10.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Lyublino_Park_and_Pond_at_night_10.jpg/3840px-Lyublino_Park_and_Pond_at_night_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "MBH · CC BY 4.0 · Wikimedia Commons"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0458",
@@ -25333,7 +25790,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0459",
@@ -25386,7 +25844,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0460",
@@ -25439,7 +25898,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0461",
@@ -25492,7 +25952,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0462",
@@ -25545,7 +26006,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0463",
@@ -25598,7 +26060,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0464",
@@ -25651,7 +26114,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0465",
@@ -25704,7 +26168,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0466",
@@ -25757,7 +26222,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0467",
@@ -25810,7 +26276,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0468",
@@ -25863,7 +26330,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0469",
@@ -25916,7 +26384,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0470",
@@ -25969,7 +26438,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0471",
@@ -26022,7 +26492,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0472",
@@ -26075,7 +26546,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0473",
@@ -26128,7 +26600,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0474",
@@ -26181,7 +26654,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0475",
@@ -26234,7 +26708,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0476",
@@ -26287,7 +26762,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0477",
@@ -26340,7 +26816,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0478",
@@ -26393,7 +26870,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0479",
@@ -26446,7 +26924,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0480",
@@ -26499,7 +26978,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0481",
@@ -26552,7 +27032,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0482",
@@ -26605,7 +27086,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0483",
@@ -26658,7 +27140,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0484",
@@ -26711,7 +27194,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0485",
@@ -26764,7 +27248,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0486",
@@ -26817,7 +27302,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0487",
@@ -26875,7 +27361,8 @@
         "source_url": "https://commons.wikimedia.org/wiki/File%3AA_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg/3840px-A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Michal Klajban · CC BY-SA 4.0 · Wikimedia Commons"
-      }
+      },
+      "bundle": "base"
     },
     {
       "id": "q-0488",
@@ -26928,7 +27415,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0489",
@@ -26981,7 +27469,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0490",
@@ -27034,7 +27523,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0491",
@@ -27087,7 +27577,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0492",
@@ -27140,7 +27631,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0493",
@@ -27193,7 +27685,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0494",
@@ -27246,7 +27739,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0495",
@@ -27299,7 +27793,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0496",
@@ -27352,7 +27847,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0497",
@@ -27405,7 +27901,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0498",
@@ -27458,7 +27955,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0499",
@@ -27511,7 +28009,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0500",
@@ -27564,7 +28063,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0501",
@@ -27617,7 +28117,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0502",
@@ -27670,7 +28171,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0503",
@@ -27723,7 +28225,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0504",
@@ -27776,7 +28279,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0505",
@@ -27829,7 +28333,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0506",
@@ -27882,7 +28387,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0507",
@@ -27935,7 +28441,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0508",
@@ -27988,7 +28495,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0509",
@@ -28041,7 +28549,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "colombia"
     },
     {
       "id": "q-0510",
@@ -28094,7 +28603,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0511",
@@ -28147,7 +28657,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0512",
@@ -28200,7 +28711,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     },
     {
       "id": "q-0513",
@@ -28253,7 +28765,8 @@
         "model": "claude-opus-5-5",
         "previous": null
       },
-      "background": null
+      "background": null,
+      "bundle": "base"
     }
   ]
 }

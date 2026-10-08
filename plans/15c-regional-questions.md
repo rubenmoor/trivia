@@ -1,6 +1,6 @@
 # 15c — Regional Questions
 
-**Status:** stub
+**Status:** superseded by [22](22-bundles.md) (D-39): regions are bundles (`colombia`), one bundle per question, no `region` field.
 
 Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6), so some questions are about Colombia (Valle de Cocora, Colombian food, history, music) and are easy for them but hard or unfair elsewhere. Regions make those questions an opt-in pack instead of a problem, and they open the door to more regional packs later.
 

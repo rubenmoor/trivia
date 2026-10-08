@@ -11,10 +11,12 @@ The road from today onward: milestones, every open task, every open question. Th
 
 ## Where we stand (2026-10-07)
 
-- **Pool:** 428 questions in `authoring/data/questions.json`: 412 approved (190 reviewed by the gamemaster, 222 by Claude, D-33), 6 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`. 24 categories / 140 subcategories (D-19). Exported for the game to `app/data/pool.json` (D-35).
-- **Difficulty supply (approved):** 1: 25 · 2: 37 · 3: 56 · 4: 55 · 5: 65 · 6: 79 · 7: 47 · 8: 24 · 9: 22 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
-- **Media:** 290 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
-- **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)).
+- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. 24 categories / 140 subcategories (D-19). Exported for the game to `app/data/pool.json` (D-35).
+- **Bundles (D-39):** every question is in one bundle. Approved: 404 in `base`, 79 in `colombia` (proposed by an LLM pass, not yet checked by the gamemaster).
+- **Difficulty supply (approved, shared scale D-38; young teens play 1–10):** 1: 27 · 2: 41 · 3: 67 · 4: 66 · 5: 79 · 6: 91 · 7: 55 · 8: 29 · 9: 26 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
+- **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
+- **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the drafter picks each question's bundle (D-39).
+- **Next batch:** the first with all of the above; it checks PE-6 and PE-13 at once ([`20`](20-pipeline-efficiency.md), "How to check").
 - **Game:** complete. Server referee in `app/server/game.py`; screens in `app/client/src/game/`. One placeholder left: `PLACEHOLDER(UI-7)` (preloading).
 
 ## Milestones
@@ -29,12 +31,13 @@ The road from today onward: milestones, every open task, every open question. Th
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
 | M7 | Game engine in TypeScript | 12 | todo |
 | M8 | Mouse everywhere and a joker budget | 14, 13 | done (2026-10-07) |
-| M9 | UI strings in a catalog; region tags | 15a, 15c | todo |
+| M9 | UI strings in a catalog; bundles | 15a, 22 | in progress (bundles done in the pipeline) |
 | M10 | Media license audit | 17 | todo |
+| M11 | Age groups and bundles in the game | 21, 22 | todo |
 
 (M6, living-room ready, is done and closed. Milestone numbers aren't reused.)
 
-Suggested order: M5 keeps running alongside everything. M10 is small and independent, so it can go next. M7 is the biggest; MD-1 and RG-1 work on either engine, so M8 and M9 don't have to wait for it. A family test night closes M7 (PORT-7).
+Suggested order: M5 keeps running alongside everything. M10 is small and independent, so it can go next. M7 is the biggest; M8 and M9 work on either engine, so they don't have to wait for it. M11 changes selection, so it is easier after M7. A family test night closes M7 (PORT-7).
 
 ---
 
@@ -52,14 +55,16 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [~] QP-9 More batches: `qgen batch`, one per run (D-36) — [`02`](02-question-pool.md), [RUNBOOK](../authoring/RUNBOOK.md)
 - [ ] QP-6 An image for every question: 122 approved questions have no picked media (115 in `batch-3`, 7 in `pilot`) — [`02`](02-question-pool.md), [`06`](06-images.md)
 - [~] QP-7 Validation script: image check once media is cached — [`02`](02-question-pool.md)
-- [ ] Gamemaster decides the 6 `needs_work` questions (q-0256, q-0338, q-0369, q-0384, q-0388, q-0420) and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them)
+- [ ] Gamemaster decides the 20 `needs_work` questions (6 older: q-0256, q-0338, q-0369, q-0384, q-0388, q-0420; 14 from `batch-5`) and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them)
 - [ ] Top up difficulties 9–10 (only 24 approved, 2 at 10) — [`backlog`](backlog.md) B-6
 - [x] PE-1..PE-5 Fewer Claude calls and tokens per batch (grouped rate and revise, kept fact-checks, per-subcategory avoid list, compact JSON) — [`20`](20-pipeline-efficiency.md)
 - [ ] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 — [`20`](20-pipeline-efficiency.md)
 - [x] PE-7..PE-12 Concept lists per subcategory and question styles as axes; `draft` draws concepts and axis combinations by code (D-37) — [`20`](20-pipeline-efficiency.md)
 - [ ] PE-13 Compare the first concept-based batch against the PE-6 batch — [`20`](20-pipeline-efficiency.md)
 - [x] AG-2..AG-6 Four age groups, shared scale 1–15, focus group young teens: data file, house style, prompts, `qgen`, Espacio list again (D-38) — [`21`](21-age-groups.md)
-- [ ] AG-7, AG-8 The game chooses an age group; batches for other groups — [`21`](21-age-groups.md)
+- [ ] AG-8 Batches for other age groups (`LEVEL_WEIGHTS` per group) — [`21`](21-age-groups.md)
+- [ ] AG-9 Review tool: set difficulties 11–15 — [`21`](21-age-groups.md)
+- [ ] BN-7 Batches aimed at one bundle (e.g. sports) — [`22`](22-bundles.md)
 
 No family-specific questions (D-30).
 
@@ -86,15 +91,15 @@ No family-specific questions (D-30).
 - [x] MD-3 Count badges on limited jokers, none when unlimited — [`13`](13-game-modes.md)
 - [x] MD-4 Overlay: set the budget (unlimited / «Como las cartas» / custom) — [`13`](13-game-modes.md)
 
-### M9 — UI strings in a catalog; region tags
-**Goal:** every on-screen string comes from a catalog, with no visible change; every question says whether it's universal or Colombian.
-**Exit:** no Spanish literals left in `app/client/src/game` outside the catalog; every question has `region`, checked by `validate`.
+### M9 — UI strings in a catalog; bundles
+**Goal:** every on-screen string comes from a catalog, with no visible change; every question is in one bundle (`base`, `colombia`, …).
+**Exit:** no Spanish literals left in `app/client/src/game` outside the catalog; every question has `bundle`, checked by `validate` (D-39).
 
 - [ ] LUI-1 `t()` helper and the `es` catalog; move every string into it — [`15a`](15a-ui-translation.md)
 - [ ] LUI-2 Pseudo-locale for length and missing-string tests — [`15a`](15a-ui-translation.md)
 - [ ] LUI-3 Draft `en` catalog with English joker names — [`15a`](15a-ui-translation.md)
-- [ ] RG-1 `region` in the schema (`null` default) and `validate` — [`15c`](15c-regional-questions.md)
-- [ ] RG-2 Tag the pool: LLM proposals, gamemaster checks in the review tool — [`15c`](15c-regional-questions.md)
+- [x] BN-2..BN-5 Bundles (replace RG-1, RG-2): `bundle` on every question, `colombia` proposed by an LLM pass (D-39) — [`22`](22-bundles.md)
+- [ ] Gamemaster checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
 
 ### M10 — Media license audit
 **Goal:** the full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced.
@@ -104,13 +109,20 @@ No family-specific questions (D-30).
 - [ ] PUB-2 Full license data per media item in the pool; `validate` requires it — [`17`](17-publishing.md)
 - [ ] PUB-3 Replace the problem files in the review tool — [`17`](17-publishing.md)
 
+### M11 — Age groups and bundles in the game
+**Goal:** before a session, players choose their age group and which bundles to play; selection uses the group's window on the shared scale and only the active bundles. The family's default stays young teens with every bundle on.
+**Exit:** a session for each age group and with `colombia` off can be played; the draft windows are tuned.
+
+- [ ] AG-7 Choose an age group; levels map to the group's window; tune the windows and per-group level weights — [`21`](21-age-groups.md)
+- [ ] BN-6 Choose bundles before a session (`base` always on); selection filters by them — [`22`](22-bundles.md)
+
 ---
 
 ### Steam track (separate, D-34)
-Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below).
+Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below; OQ-36 is answered by D-38).
 
 ### Backlog
-Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of the save, B-3 practice/preview mode, B-5 reworded duplicates in `dedupe`, B-6 top-up for difficulties 9–10.
+Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of the save, B-3 practice/preview mode, B-5 reworded duplicates in `dedupe`, B-6 top-up for difficulties 9–10, B-7 picture effects for essential images.
 
 ---
 

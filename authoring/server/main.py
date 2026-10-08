@@ -9,13 +9,15 @@ so the game (port 8000) sees reviews at once.
 
 API:
     GET  /api/categories                           app/data/categories.json: broad categories with subcategories (D-19)
+    GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
-         &reviewer=human|llm|none                  batch=none selects questions without a batch)
+         &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
-    POST /api/questions/<id>/difficulty            body {"difficulty": 1-10}; the first change keeps the
-                                                   old value in difficulty_original
+    POST /api/questions/<id>/difficulty            body {"difficulty": 1-15 (D-38)}; the first change keeps
+                                                   the old value in difficulty_original
+    POST /api/questions/<id>/bundle                body {"bundle": "<id>"}: move it to another bundle
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
@@ -115,9 +117,20 @@ def search_media(qid, query, slot):
     return q
 
 
+def load_bundles():
+    return json.loads(layout.BUNDLES.read_text(encoding="utf-8"))["bundles"]
+
+
+def set_bundle(qid, bundle):
+    if bundle not in {b["id"] for b in load_bundles()}:
+        raise ValueError(f"unknown bundle {bundle!r} (app/data/bundles.json)")
+    return update_question(qid, lambda q: q.update(bundle=bundle))
+
+
 def set_difficulty(qid, difficulty):
-    if not isinstance(difficulty, int) or not 1 <= difficulty <= 10:
-        raise ValueError("difficulty must be an integer from 1 to 10")
+    lo, hi = json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8"))["scale"]
+    if not isinstance(difficulty, int) or not lo <= difficulty <= hi:
+        raise ValueError(f"difficulty must be an integer from {lo} to {hi}")
 
     def change(q):
         if q.get("difficulty_original") is None and difficulty != q["difficulty"]:
@@ -169,12 +182,16 @@ class Handler(BaseHandler):
                 qs = [q for q in qs if q.get("batch") == want]
             if "status" in query:
                 qs = [q for q in qs if q["status"] == query["status"]]
+            if "bundle" in query:
+                qs = [q for q in qs if q.get("bundle") == query["bundle"]]
             if "reviewer" in query:
                 want = None if query["reviewer"] == "none" else query["reviewer"]
                 qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
             return self.send_json(200, [with_candidates(q) for q in qs])
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())
+        if url.path == "/api/bundles":
+            return self.send_json(200, load_bundles())
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
@@ -190,6 +207,8 @@ class Handler(BaseHandler):
                 q = set_review(qid, body.get("review"))
             elif action == "difficulty":
                 q = set_difficulty(qid, body.get("difficulty"))
+            elif action == "bundle":
+                q = set_bundle(qid, body.get("bundle"))
             elif action == "media":
                 q = pick_media(qid, int(body.get("index", -1)), slot_of(body))
             elif action == "media/search":

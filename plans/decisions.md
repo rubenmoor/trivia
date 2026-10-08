@@ -323,3 +323,10 @@ Template:
 - Decision: Four age groups in `app/data/age-groups.json`: kids (6–10), young teens (11–14), young adults (15–22), adults (23+). Difficulty stays one number per question on one shared scale, extended from 1–10 to 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. The focus group (`young_teens`, window 1–10) is set in the same file; the pipeline writes for it, and no prompt names a fixed age. Concepts carry `known_at` (1–15) instead of `familiarity` for 11–12-year-olds. Content stays family-friendly in every group.
 - Consequences: The existing pool keeps its difficulties (the old scale is the shared scale's 1–10). The game is unchanged until AG-7 adds the choice of group. The other groups' windows are a draft. `21-age-groups.md` has the tasks.
 - Supersedes / related: D-6 (audience and scale; Spanish and Colombian usage stay), D-31, D-37; OQ-36
+
+## D-39: Bundles: every question is in exactly one, switched on or off before a session
+- Date: 2026-10-07
+- Context: Plan 15c planned a `region` field so that Colombian questions become an opt-in pack. The gamemaster wants the general idea: packs of questions (regional like Colombia, thematic like sports) that players switch on or off before a session, with a base pack that is always on.
+- Decision: Bundles are listed in `app/data/bundles.json` (`base`, `colombia` for now). Every question has exactly one `bundle`, default `base`. Bundles add questions and don't own a topic: a sports question can be in `base`, and well-known facts about Colombia stay in `base`; only questions that need a real connection to Colombia go into `colombia`. `base` is always on. Membership is decided by each bundle's rule: the drafter picks it for new questions, an LLM pass proposes it for the existing pool, the gamemaster corrects it in the review tool.
+- Consequences: `bundle` is a play field (exported). The game plays every bundle until BN-6 adds the choice. 15c's `region` field (RG-1, RG-2) is replaced by bundles. `22-bundles.md` has the tasks.
+- Supersedes / related: 15c (region model); D-28, D-36, D-38
