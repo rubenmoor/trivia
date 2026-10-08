@@ -123,27 +123,40 @@ def run_dir(args):
 
 def parallel(fn, items, jobs, label="items", unit="items"):
     """Run fn over items with a progress bar; report failures without stopping the others.
-    Returns the errors."""
-    errors, items = [], list(items)
+    Claude's usage limit stops the whole step instead, reported once. Returns the errors."""
+    errors, items, limit = [], list(items), []
 
     def run(it):
         bar.started()
         return fn(it)
 
+    def name(x):
+        return str(x.get("id")) if isinstance(x, dict) else str(x)
+
     with progress.Bar(label, len(items), unit) as bar, concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
         futures = {ex.submit(run, it): it for it in items}
         for f in concurrent.futures.as_completed(futures):
+            if f.cancelled():
+                continue
             try:
                 f.result()
                 bar.finished()
+            except UsageLimit as e:
+                bar.finished(ok=False)
+                if not limit:  # the first one stops the rest; the others say the same thing
+                    limit.append(e)
+                    for other in futures:
+                        other.cancel()
             except Exception as e:  # noqa: BLE001 — keep the batch going
                 bar.finished(ok=False)
                 errors.append(e)
                 it = futures[f]
-                label = (it[0] if isinstance(it, tuple)  # list: grouped() files or a group of questions
-                         else ", ".join(x[0] if isinstance(x, tuple) else str(x.get("id")) for x in it)
-                         if isinstance(it, list) else it)
+                label = (name(it[0]) if isinstance(it, tuple)  # list: grouped() files or a group of questions
+                         else ", ".join(name(x[0] if isinstance(x, tuple) else x) for x in it)
+                         if isinstance(it, list) else name(it))
                 print(f"  FAILED {label}: {e}", file=sys.stderr)
+    if limit:  # the caller reports it (main, cmd_batch)
+        return errors + limit
     if errors:
         print(f"{len(errors)} item(s) failed; rerun the same command to retry them.", file=sys.stderr)
     return errors
@@ -1597,7 +1610,11 @@ def main():
     b.add_argument("--count", type=int, default=batches.SUBCATEGORIES, help=argparse.SUPPRESS)
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     args = ap.parse_args()
-    args.fn(args)
+    errors = args.fn(args)
+    limit = next((e for e in errors if isinstance(e, UsageLimit)), None) if isinstance(errors, list) else None
+    if limit:
+        print(f"\nStopped: Claude's usage limit ({limit}).\nWait for the reset, then rerun.", file=sys.stderr)
+        sys.exit(75)
 
 
 if __name__ == "__main__":
