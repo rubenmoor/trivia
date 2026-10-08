@@ -337,3 +337,10 @@ Template:
 - Decision: `"focus": null` in `app/data/age-groups.json` means no focus. `draft` then spreads target difficulties evenly over the whole scale 1–15, and the prompts say that each question is written for the groups whose window contains its difficulty. `focus` only steers the pipeline; the game plays young teens until AG-7. `qgen batch` still takes no arguments (D-36).
 - Consequences: Batches made without a focus add questions at 11–15 that the game doesn't play yet. Even targets are temporary; `21-age-groups.md` proposes a demand-based distribution for AG-7/AG-8.
 - Supersedes / related: D-31, D-36, D-38; AG-8, AG-10
+
+## D-41: A batch writes for one bundle, named by the command; bundles have their own taxonomy
+- Date: 2026-10-07
+- Context: Under D-39 the drafter picks each question's bundle, so a batch over the subcategories with the fewest approved questions mixes `base` and `colombia` questions without anyone asking for `colombia` (batch-6: 13 of its 30 subcategories are Colombian). The gamemaster wants bundles to be deliberate.
+- Decision: `qgen batch` writes `base` questions by default; questions for another bundle are made only with the bundle named on the command (`qgen batch --bundle <id>`). A separate command creates an empty bundle, which is set up with its own categories, subcategories and concept lists, and possibly its own question axes, independent of `base`'s.
+- Consequences: The drafter no longer picks a bundle (BN-4 is undone by BN-8). The RUNBOOK's "no arguments" (D-36) gets one exception, `--bundle`, used only when the user names a bundle. `22-bundles.md` has the design and tasks BN-8..BN-12; open points OQ-41..OQ-44. Not implemented yet: batch-6 still follows D-39.
+- Supersedes / related: D-39 (who picks the bundle), D-36, D-37, D-19

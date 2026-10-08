@@ -65,7 +65,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [x] AG-10 No focus: `"focus": null` writes across the whole scale 1–15, even targets (D-40) — [`21`](21-age-groups.md)
 - [ ] AG-8 Batches for other age groups (`LEVEL_WEIGHTS` per group) — [`21`](21-age-groups.md)
 - [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
-- [ ] BN-7 Batches aimed at one bundle (e.g. sports) — [`22`](22-bundles.md)
+- [ ] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes (D-41) — [`22`](22-bundles.md)
 
 No family-specific questions (D-30).
 
@@ -134,6 +134,7 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
+| OQ-41..OQ-44 | Bundle taxonomy: where it lives, what happens to `colombia`, base questions that need Colombia, per-bundle house style | BN-8..BN-12 (22) |
 | OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
