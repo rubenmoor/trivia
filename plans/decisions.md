@@ -372,3 +372,10 @@ Template:
 - Decision: No. Bundles are mixed in play: a session draws from every active bundle together, so all questions must read and play the same way. `prompts/house-style.md` applies to every bundle; a bundle's own axes (D-43) may change what is asked, not how it is written.
 - Consequences: No per-bundle prompt files. A bundle's `rule` only decides membership.
 - Supersedes / related: D-39, D-41, D-43; OQ-44
+
+## D-45: More media providers next to Commons, with a licence allowlist
+- Date: 2026-10-08
+- Context: Commons' rate limits are the bottleneck of `qgen batch`, and Commons has few good wide photos for decorative images and few sounds beyond animals and instruments. D-13 allowed Commons only.
+- Decision: The authoring tools also search free providers (Openverse, Pexels, Freesound, NASA; Pixabay later) in a fixed order per slot, and skip a rate-limited provider instead of waiting. A candidate is only used if its licence is on an allowlist that permits a commercial release with credit (CC0 and "No restrictions", public domain, CC BY and Commons' "Attribution", CC BY-SA, FAL, Pexels License, Pixabay Content License); NC, ND, GFDL, GPL, editorial-only and unknown licences are out, and so are providers that require hotlinking. Every picked file records its provider and licence, and is credited. D-13's other rules stand: no songs, film or TV clips, or game footage; media is found before review; the game plays from the local cache.
+- Consequences: `23-media-providers.md` has the design and tasks MP-1..MP-12. Pool media gets `provider`, `license`, `license_url`, `author` (shared with PUB-2). API keys go in the gitignored `.env.local`. Paid providers come later, only for gaps.
+- Supersedes / related: D-13 (Commons only), D-17, IMG-15, PUB-2

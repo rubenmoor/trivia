@@ -7,6 +7,9 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 ### Added 2026-10-06
 - **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`). *Input from D-22: every level offers 4 questions from its difficulty range, so a game needs 48 unburned questions to show and burns 12 (`03-game-flow.md`). Unlimited jokers burn extra questions (D-27), but burning is per player (D-28).*
 
+### Added 2026-10-08 (media providers, D-45, [`23`](23-media-providers.md))
+- **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
+
 ### Added 2026-10-07 (Steam release, [`11-steam.md`](11-steam.md))
 - **OQ-29** Desktop shell: Electron + steamworks.js (recommended), Tauri, or a browser + local server? See `18-steam-integration.md`.
 - **OQ-30** Default mode: joker counts per difficulty preset (draft table in `13-game-modes.md`), checkpoints, which admin actions remain?

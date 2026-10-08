@@ -36,6 +36,7 @@ import concepts  # authoring/tools/concepts.py: concept lists and question axes 
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # app/server/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
+import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
 from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
 
@@ -1155,7 +1156,7 @@ def sheet_path(d, qid, slot):
 
 
 def cmd_media(args):
-    """Fetch Commons candidates for every slot of the run's merged questions."""
+    """Fetch media candidates for every slot of the run's merged questions."""
     import media as media_tool  # authoring/tools/media.py
     errors = []
     todo = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)
@@ -1214,9 +1215,10 @@ def slot_input(d, q, slot):
     sheet = sheet_path(d, q["id"], slot)
     return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"), "query": spec["query"],
             "note": spec.get("note"), "sheet": sheet.relative_to(d).as_posix() if sheet.exists() else None,
-            "candidates": [{"number": i, "type": c["type"], "title": c["title"], "width": c["width"],
-                            "height": c["height"], "duration": c["duration"], "author": c["author"],
-                            "license": c["license"]} for i, c in enumerate(found["candidates"], 1)]}
+            "candidates": [{"number": i, "type": c["type"], "source": providers.name(c), "title": c["title"],
+                            "width": c["width"], "height": c["height"], "duration": c["duration"],
+                            "author": c["author"], "license": c["license"]}
+                           for i, c in enumerate(found["candidates"], 1)]}
 
 
 def cmd_review(args):
@@ -1261,7 +1263,7 @@ def cmd_review(args):
 
 
 def cmd_research(args):
-    """One new Commons search for questions whose round-1 review found no adequate media."""
+    """One new media search for questions whose round-1 review found no adequate media."""
     import media as media_tool
     d = run_dir(args)
     errors, todo = [], []
@@ -1318,8 +1320,8 @@ def cmd_record(args):
             n = r[key]
             if n is None or not 1 <= n <= len(found):
                 decision = "needs_work"
-                problems.append("Commons no tiene una imagen adecuada para esta pregunta." if slot == "media"
-                                else "Commons no tiene una imagen de fondo adecuada.")
+                problems.append("No se encontró una imagen adecuada para esta pregunta." if slot == "media"
+                                else "No se encontró una imagen de fondo adecuada.")
                 continue
             fields[slot] = media_tool.pick_fields(found[n - 1], slot)
         check = checks.get(tmp_of.get(q["id"]))

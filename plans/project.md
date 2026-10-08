@@ -67,6 +67,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [x] AG-10 No focus: `"focus": null` writes across the whole scale 1–15, even targets (D-40) — [`21`](21-age-groups.md)
 - [ ] AG-8 Batches for other age groups (`LEVEL_WEIGHTS` per group) — [`21`](21-age-groups.md)
 - [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
+- [~] MP-2..MP-12 Media providers next to Commons (done: MP-2..MP-4, MP-6, MP-7, MP-9, MP-10; open: MP-5 Pexels paused, MP-8 pool fields, MP-11, MP-12) (Openverse, Pexels, Freesound, NASA) with a licence allowlist; a rate-limited provider is skipped, not waited for (D-45) — [`23`](23-media-providers.md)
 - [x] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes; Colombian subcategories moved to `colombia` (D-41, D-43) — [`22`](22-bundles.md)
 
 - [~] RV-12..RV-17 Start page for the authoring tool at `/` (done 2026-10-09 except RV-17, the `validate` result): what waits for the gamemaster, batches, game readiness, all as links into review queues; order of work in 08 — [`08`](08-review-tool.md)
@@ -139,6 +140,7 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
+| OQ-45 | Freesound API for a commercial release | Steam S5 (23, 17) |
 | OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |

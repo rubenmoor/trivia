@@ -22,20 +22,22 @@ WAIT_ON_RATE_LIMIT = True
 
 
 class RateLimited(Exception):
-    """Wikimedia Commons answered HTTP 429."""
+    """A media host answered HTTP 429."""
 
-    def __init__(self, retry_after):
+    def __init__(self, retry_after, host="Wikimedia Commons"):
         self.retry_after = retry_after
-        super().__init__(f"rate-limited by Wikimedia Commons; try again in about {retry_after} s")
+        super().__init__(f"rate-limited by {host}; try again in about {retry_after} s")
 
 
-def http_get(url, params=None):
-    """GET with retries on rate limits. File downloads aren't throttled; API calls go through api()."""
+def http_get(url, params=None, headers=None, wait=None):
+    """GET with retries on rate limits. File downloads aren't throttled; the authoring tools'
+    providers throttle their API calls themselves and pass wait=False to skip a limited one."""
     if params:
         url += "?" + urllib.parse.urlencode(params)
-    headers = {"User-Agent": USER_AGENT}
+    headers = {"User-Agent": USER_AGENT, **(headers or {})}
     if TOKEN and url.startswith(API_URL):
         headers["Authorization"] = f"Bearer {TOKEN}"
+    wait = WAIT_ON_RATE_LIMIT if wait is None else wait
     req = urllib.request.Request(url, headers=headers)
     for attempt in range(5):
         try:
@@ -44,11 +46,12 @@ def http_get(url, params=None):
         except urllib.error.HTTPError as e:
             if e.code != 429:
                 raise
-            wait = int(e.headers.get("Retry-After") or 0) or 15 * (attempt + 1)
-            if not WAIT_ON_RATE_LIMIT or attempt == 4:
-                raise RateLimited(wait) from e
-            print(f"  rate limited by Commons, waiting {wait} s", file=sys.stderr)
-            time.sleep(wait)
+            seconds = int(e.headers.get("Retry-After") or 0) or 15 * (attempt + 1)
+            host = urllib.parse.urlparse(url).hostname
+            if not wait or attempt == 4:
+                raise RateLimited(seconds, host) from e
+            print(f"  rate limited by {host}, waiting {seconds} s", file=sys.stderr)
+            time.sleep(seconds)
 
 
 

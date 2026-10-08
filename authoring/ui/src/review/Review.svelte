@@ -290,7 +290,7 @@
     const slot = searchSlot;
     searchOpen = false;
     openSlot = slot;
-    mediaAction("🔍 new candidates", `searching Commons for “${query}”`, () => searchMedia(id, query, slot));
+    mediaAction("🔍 new candidates", `searching for “${query}”`, () => searchMedia(id, query, slot));
   }
 
   function startDifficulty() {
@@ -562,7 +562,7 @@
           <input
             bind:this={searchBox}
             bind:value={searchText}
-            placeholder="Search term for Wikimedia Commons (English works best)"
+            placeholder="Search term (English works best; Commons first, then the other sources)"
           />
           <p class="muted">Enter: search · Esc: cancel · 2–4 concrete words work best</p>
         </div>

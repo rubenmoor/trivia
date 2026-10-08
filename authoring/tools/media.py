@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Media from Wikimedia Commons (plans/06-images.md, D-13).
+"""Media candidates and picks (plans/06-images.md, D-13); the providers are in providers/ (D-45).
 
     trivia-media fetch [--batch pilot | --ids q-0001,q-0002] [--force]
     trivia-media sync [--status approved] [--prune]
@@ -12,80 +12,19 @@ questions (D-14). The review tool and `qgen review` choose among them; `download
 Picked files live in the media cache (app/server/media_cache.py, D-17). `sync` downloads
 every picked file that isn't cached yet, ahead of game night.
 """
-import argparse, html, json, re, sys, threading, time, urllib.parse
+import argparse, json, sys
 
 import layout  # noqa: F401  (also makes app/server importable)
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from media_cache import (MEDIA, RateLimited, USER_AGENT, cache_path, cached, http_get,  # noqa: F401
                          picked, pool_urls)
-import media_cache
+import categories  # app/server/categories.py (D-19, D-43)
+import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)
 
-API = media_cache.API_URL
 MAX_CANDIDATES = 6
-PREVIEW_WIDTH = 500           # Commons rounds thumbnail widths to standard sizes; 500 is one
-IMAGE_WIDTH = 2560            # for 4K TVs; smaller originals are downloaded as they are
 MIN_DECORATIVE_WIDTH = 1920
 MIN_ESSENTIAL_WIDTH = 800
 MAX_AUDIO_SECONDS = 60
-VIDEO_PREFERENCE = ["1080p.vp9.webm", "720p.vp9.webm", "1080p.webm", "720p.webm", "480p.vp9.webm", "480p.webm"]
-
-
-MIN_API_INTERVAL = 2.0  # seconds between search API requests; the API rate-limits bursts
-_last_api_request = 0.0
-_api_lock = threading.Lock()
-
-
-def api(**params):
-    global _last_api_request
-    with _api_lock:  # the server may call this from several threads
-        time.sleep(max(0.0, _last_api_request + MIN_API_INTERVAL - time.monotonic()))
-        _last_api_request = time.monotonic()
-    return json.loads(http_get(API, {"action": "query", "format": "json", **params}))
-
-
-def plain(text):
-    """Commons metadata is HTML; credits need plain text."""
-    return html.unescape(re.sub(r"<[^>]+>", "", text or "")).strip() or None
-
-
-def page_url(title):
-    return "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"))
-
-
-def search(query, kind, limit=30):
-    """Commons file search. kind: image | audio | video. Returns raw candidates, best first."""
-    filetype = {"image": "bitmap", "audio": "audio", "video": "video"}[kind]
-    info = "videoinfo" if kind == "video" else "imageinfo"
-    prefix = "vi" if kind == "video" else "ii"
-    params = {
-        "generator": "search", "gsrnamespace": 6, "gsrlimit": limit,
-        "gsrsearch": f"{query} filetype:{filetype}", "prop": info,
-        f"{prefix}prop": "url|size|mime|extmetadata" + ("|derivatives" if kind == "video" else ""),
-        f"{prefix}extmetadatafilter": "Artist|LicenseShortName|LicenseUrl",
-        f"{prefix}urlwidth": PREVIEW_WIDTH,
-    }
-    pages = api(**params).get("query", {}).get("pages", {})
-    out = []
-    for p in sorted(pages.values(), key=lambda p: p.get("index", 0)):
-        i = p[info][0]
-        meta = i.get("extmetadata", {})
-        c = {
-            "type": kind, "title": p["title"], "page_url": page_url(p["title"]),
-            "preview_url": i.get("thumburl") if kind != "audio" else i["url"],
-            "file_url": i["url"], "width": i.get("width"), "height": i.get("height"),
-            "duration": i.get("duration"), "mime": i.get("mime"),
-            "author": plain(meta.get("Artist", {}).get("value")),
-            "license": plain(meta.get("LicenseShortName", {}).get("value")),
-            "license_url": meta.get("LicenseUrl", {}).get("value"),
-        }
-        if kind == "video":
-            by_key = {d.get("transcodekey"): d["src"] for d in i.get("derivatives", []) if d.get("transcodekey")}
-            best = next((by_key[k] for k in VIDEO_PREFERENCE if k in by_key), None)
-            if not best and not c["mime"].startswith("video/webm"):
-                continue  # no browser-friendly version
-            c["file_url"] = best or c["file_url"]
-        out.append(c)
-    return out
 
 
 def acceptable(c, role):
@@ -104,7 +43,7 @@ ENOUGH = 3  # stop loosening the query once this many candidates are found
 
 
 def query_variants(query):
-    """Commons matches every word, so long queries often find nothing: try shorter ones too."""
+    """Searches match every word, so long queries often find nothing: try shorter ones too."""
     words = query.split()
     core = [w for w in words if w.lower() not in FILLER_WORDS] or words
     variants = [words, core]
@@ -119,33 +58,46 @@ def query_variants(query):
     return out
 
 
-def find_candidates(media):
-    """Up to MAX_CANDIDATES for a question's media. Videos fall back to images."""
+def find_candidates(media, category=None):
+    """Up to MAX_CANDIDATES for a question's media, from the providers in order (D-45): each one
+    with ever shorter queries until there are ENOUGH; the next provider is only asked while there
+    are fewer. Videos fall back to images. A rate-limited provider is skipped; if that leaves
+    nothing, RateLimited is raised so a rerun retries instead of storing an empty result.
+    `category` is the broad category's slug."""
     kinds = [media["type"]] + (["image"] if media["type"] == "video" else [])
-    found, titles, per_author = [], set(), {}
+    found, seen, per_author, limited = [], set(), {}, []
 
     def add(c):
         author = c["author"] or c["title"]
-        if c["title"] in titles or per_author.get(author, 0) >= MAX_PER_AUTHOR:
+        if (c["provider"], c["id"]) in seen or per_author.get(author, 0) >= MAX_PER_AUTHOR:
             return
-        titles.add(c["title"])
+        seen.add((c["provider"], c["id"]))
         per_author[author] = per_author.get(author, 0) + 1
         found.append(c)
 
     for kind in kinds:
-        for query in query_variants(media["query"]):
-            results = search(query, kind)
-            for c in results:
-                if acceptable(c, media["role"]):
-                    add(c)
-            if kind == "image" and len(found) < MAX_CANDIDATES:  # rather a smaller image than none
+        for i, provider in enumerate(providers.order(kind, category)):
+            if i and len(found) >= ENOUGH:
+                break  # the providers before gave enough; spare the others' limits
+            for query in query_variants(media["query"]):
+                try:
+                    results = providers.search(provider, query, kind)
+                except RateLimited as e:
+                    limited.append(e)
+                    break
                 for c in results:
-                    if (c["width"] or 0) >= MIN_ESSENTIAL_WIDTH:
+                    if acceptable(c, media["role"]):
                         add(c)
-            if len(found) >= MAX_CANDIDATES:
-                return found[:MAX_CANDIDATES]
-            if len(found) >= ENOUGH:
-                break  # good results from this variant; looser ones would add noise
+                if kind == "image" and len(found) < MAX_CANDIDATES:  # rather a smaller image than none
+                    for c in results:
+                        if (c["width"] or 0) >= MIN_ESSENTIAL_WIDTH:
+                            add(c)
+                if len(found) >= MAX_CANDIDATES:
+                    return found[:MAX_CANDIDATES]
+                if len(found) >= ENOUGH:
+                    break  # good results from this variant; looser ones would add noise
+    if not found and limited:
+        raise limited[0]
     return found
 
 
@@ -168,21 +120,18 @@ def load_candidates(qid, slot="media"):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
+def category_of(q):
+    c = categories.broad_of().get(q.get("subcategory"))
+    return c["slug"] if c else None
+
+
 def fetch_for(q, slot="media"):
     spec = slot_media(q, slot)
-    found = find_candidates(spec)
+    found = find_candidates(spec, category_of(q))
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     data = {"query": spec["query"], "type": spec["type"], "candidates": found}
     candidates_path(q["id"], slot).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return data
-
-
-def download_url(candidate):
-    """The URL to download for a candidate: large images as a thumbnail of IMAGE_WIDTH."""
-    if candidate["type"] == "image" and (candidate["width"] or 0) > IMAGE_WIDTH:
-        info = api(titles=candidate["title"], prop="imageinfo", iiprop="url", iiurlwidth=IMAGE_WIDTH)
-        return next(iter(info["query"]["pages"].values()))["imageinfo"][0]["thumburl"]
-    return candidate["file_url"]
 
 
 def short_author(author):
@@ -194,12 +143,12 @@ def short_author(author):
 
 
 def credit_of(candidate):
-    return " · ".join(x for x in [short_author(candidate["author"]), candidate["license"], "Wikimedia Commons"] if x)
+    return " · ".join(x for x in [short_author(candidate["author"]), candidate["license"], providers.name(candidate)] if x)
 
 
 def pick_fields(candidate, slot="media"):
     """The fields to store in the pool for a picked candidate, without downloading it."""
-    url = download_url(candidate)
+    url = providers.download_url(candidate)
     credit = credit_of(candidate)
     fields = {"source_url": candidate["page_url"], "file_url": url, "credit": credit}
     return {"type": candidate["type"], **fields} if slot == "media" else fields
@@ -262,7 +211,7 @@ def cmd_sync(args):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    f = sub.add_parser("fetch", help="store Commons candidates for questions without media")
+    f = sub.add_parser("fetch", help="store media candidates for questions without media")
     f.add_argument("--batch", help='qgen run name, or "none" for questions without a batch')
     f.add_argument("--ids", help="comma-separated question ids")
     f.add_argument("--force", action="store_true", help="fetch again even if candidates exist")

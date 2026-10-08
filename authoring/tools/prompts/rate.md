@@ -17,7 +17,7 @@ Score `unambiguous` ≤ 3 when the question's clue also fits something outside t
 
 Famous historical events and films are not a tone problem (house style, "Tone"); only questions about deaths or suffering are.
 
-For essential media: if a clear, recognisable Commons photo or sound of exactly that thing is unlikely, or the media must convey something abstract (e.g. a rhythm from a photo), say so in `notes`.
+For essential media: if a clear, recognisable photo or sound of exactly that thing is unlikely in the media sources, or the media must convey something abstract (e.g. a rhythm from a photo), say so in `notes`.
 
 Also check `media.query` and `media.role`. Illustrative media is shown sharp: score `no_giveaway` ≤ 3 if the search term would likely find a picture of the answer, of a wrong option, or with a name or date on it. Decorative media should show the question's topic or setting, not a metaphor from the wording. If an illustrative image is safe, decorative is the wrong choice; mention that in `notes`.
 

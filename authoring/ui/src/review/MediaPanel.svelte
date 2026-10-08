@@ -1,6 +1,6 @@
 <script lang="ts">
   // One media slot (the question's media, or the background of an audio question, D-14):
-  // what is picked or suggested, plus the Commons alternatives (plans/06-images.md).
+  // what is picked or suggested, plus the alternatives from the media providers (plans/06-images.md, D-45).
   import type { MediaCandidate } from "../lib/types";
 
   interface Slot {
@@ -39,6 +39,14 @@
 
   function chosen(c: MediaCandidate) {
     return c.page_url === slot.source_url;
+  }
+
+  const PROVIDERS: Record<string, string> = { commons: "Commons", openverse: "Openverse", nasa: "NASA", freesound: "Freesound" };
+
+  /** Where the candidate comes from (D-45): "Commons", "Flickr via Openverse", … */
+  function origin(c: MediaCandidate) {
+    const p = PROVIDERS[c.provider ?? "commons"] ?? c.provider;
+    return c.source ? `${c.source} via ${p}` : p;
   }
 
   function size(c: MediaCandidate) {
@@ -95,7 +103,7 @@
   </div>
 
   <div class="candidates">
-    <h2>Alternatives from Wikimedia Commons</h2>
+    <h2>Alternatives</h2>
     {#if !showCandidates}
       <p class="muted">
         {#if candidates === null}Not fetched yet. Press <kbd>{toggleKey}</kbd>, then <kbd>m</kbd> to search.
@@ -113,7 +121,7 @@
             <span class="key">{i + 1}{chosen(c) ? " ✓ picked" : ""}</span>
             {@render preview(c)}
             <a class="info" href={c.page_url} target="_blank" rel="noreferrer">
-              {c.type} · {size(c)} · {c.license ?? "?"}<br />{c.title.replace(/^File:/, "")}
+              {c.type} · {size(c)} · {c.license ?? "?"} · {origin(c)}<br />{c.title.replace(/^File:/, "")}
             </a>
           </li>
         {/each}

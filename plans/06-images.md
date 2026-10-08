@@ -6,6 +6,8 @@
 All question media (D-7): images (most questions), plus audio and video. Each question carries a `media.query` search term; picking fills `source_url` (the Commons page), `file_url` (the exact file downloaded) and `credit`.
 
 ## Sources (D-13)
+*D-45 adds more providers next to Commons: [`23-media-providers.md`](23-media-providers.md).*
+
 - **Wikimedia Commons only**, for images, audio and video. It's reliable and freely licensed, and its API returns the metadata needed for credits.
 - **No songs and no film clips.** They aren't on Commons, and sourcing them by hand is too much work. Questions must not depend on a song recording or a film clip. Song *knowledge* questions with a decorative image are fine.
 - Audio from Commons: animal sounds, instruments, natural sounds, public-domain recordings.

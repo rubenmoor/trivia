@@ -28,7 +28,7 @@ Pick exactly one candidate number for `pick`, or null if none is adequate:
 - **audio** (no picture on the sheet): judge by the title and duration. Pick one only if the title clearly names the right subject.
 Prefer a clear photo over a drawing or a scan, and landscape over portrait. Among equally good candidates, take the lower number.
 
-If no candidate is adequate, set `pick` to null and give `new_query`: a better Wikimedia Commons search term in English, 2–4 words, for the thing the slot needs (for example the Latin name of a plant, or "wooden spinning top"). Give `new_query` only when `can_search_again` is true; otherwise leave it null and decide `needs_work`.
+If no candidate is adequate, set `pick` to null and give `new_query`: a better search term in English, 2–4 words (it searches all media sources again, Commons first), for the thing the slot needs (for example the Latin name of a plant, or "wooden spinning top"). Give `new_query` only when `can_search_again` is true; otherwise leave it null and decide `needs_work`.
 
 For audio questions, also pick `background_pick` from the background candidates with the decorative rules (null if none is adequate; then decide `needs_work`).
 

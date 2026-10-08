@@ -16,4 +16,4 @@ For every value of the axes `move`, `stimulus` and `lens`, score how well it fit
 - 3 = possible for some concepts;
 - 1 = forced or impossible (e.g. `sound` for Matemáticas).
 
-A `stimulus` other than `none` fits only if Wikimedia Commons very likely has clear, recognisable media for many concepts of this subcategory (house style, "Media"). Score every value; don't skip any.
+A `stimulus` other than `none` fits only if the media sources very likely have clear, recognisable media for many concepts of this subcategory (house style, "Media"). Score every value; don't skip any.

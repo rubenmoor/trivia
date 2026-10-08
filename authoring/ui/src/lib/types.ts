@@ -11,9 +11,14 @@ export interface Media extends PlayMedia {
   note: string | null;
 }
 
-/** A Wikimedia Commons file found by authoring/tools/media.py (work/media/<id>.json). */
+/** A file found by authoring/tools/media.py (work/media/<id>.json) at one of the providers (D-45). */
 export interface MediaCandidate {
   type: Media["type"];
+  /** commons, openverse, nasa, freesound; missing on candidates from before MP-2 (= commons). */
+  provider?: string;
+  /** The original site behind an aggregator (Openverse): Flickr, The Met, … */
+  source?: string;
+  license_kind?: string;
   title: string;
   page_url: string;
   preview_url: string | null;

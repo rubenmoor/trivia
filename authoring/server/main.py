@@ -278,8 +278,8 @@ class Handler(BaseHandler):
             return self.send_json(400, {"error": str(e)})
         except media_cache.RateLimited as e:
             return self.send_json(429, {"error": str(e)})
-        except OSError as e:  # network problems talking to Commons
-            return self.send_json(502, {"error": f"Wikimedia Commons: {e}"})
+        except OSError as e:  # network problems talking to a media provider (D-45)
+            return self.send_json(502, {"error": f"media search: {e}"})
         except Exception as e:  # noqa: BLE001 — never leave the review tool without an answer
             return self.send_json(500, {"error": f"server error: {type(e).__name__}: {e}"})
 

@@ -89,7 +89,7 @@ Don't run the pipeline steps by hand; the batch command does it all and can be r
 
 `trivia-media fetch --batch <batch>` searches Commons for media candidates for questions that have none yet. The single pipeline steps (`qgen draft`, `rate`, `factcheck`, …, and `qgen import` for revising questions already in the pool) stay available for debugging; work files go to `work/<run>/`. See [`plans/07-question-generation.md`](plans/07-question-generation.md).
 
-Commons search runs anonymously, or with higher rate limits as your account: create an owner-only OAuth 2.0 consumer (basic rights) on Meta-Wiki and put `COMMONS_ACCESS_TOKEN=…` in `.env.local` (gitignored, loaded by direnv; IMG-15).
+Media comes from Wikimedia Commons first, then NASA (space only), Openverse and Freesound (D-45, [`plans/23-media-providers.md`](plans/23-media-providers.md)). Keys go in `.env.local` (gitignored, loaded by direnv): `COMMONS_ACCESS_TOKEN` (an owner-only OAuth 2.0 consumer with basic rights on Meta-Wiki; higher Commons limits, IMG-15), `FREESOUND_API_KEY` (Freesound is skipped without it), and optionally `OPENVERSE_CLIENT_ID`/`OPENVERSE_CLIENT_SECRET` (Openverse works anonymously with 200 requests a day).
 
 ### Check the question pool
 
