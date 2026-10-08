@@ -6,11 +6,11 @@ You write the concept list of one subcategory of the trivia game described above
 For every facet, list 15–25 **concepts**:
 - A concept is a bare Spanish name: a thing, animal, plant, person, character, place, event, object, custom or term ("Saturno", "Eclipse solar", "Neil Armstrong", "Telescopio"). **No facts, descriptions or question ideas.**
 - Concrete and specific: "Saturno", not "Planetas grandes".
-- Something a Colombian family with kids aged 6–16 could be asked about. Include both well-known and less-known concepts, but nothing only an expert knows.
+- Something players of some age group, from kids to adults, could be asked about in a family-friendly game. Cover the whole range: what every child knows, what teens and students know, and what well-read adults know. Nothing only a specialist knows.
 - No duplicates or near-duplicates in the list: no synonyms, nicknames, singular/plural pairs or a concept and a part of it under another name.
 - Each concept belongs to exactly one facet, spelled exactly as given.
 
-`familiarity` (1–5): how well kids aged 11–12 in a Colombian family know the concept. 5 = every kid knows it; 3 = kids have heard of it; 1 = only a keen 16-year-old knows it. Use the calibration in the house style: kids know more from everyday life, films and games, and less from school theory, than adults expect.
+`known_at` (1–15): the lowest point on the shared difficulty scale (house style) at which people know the concept: 1 = a 6-year-old knows it (Sol), 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults, 15 = trivia specialists. Use the calibration in the house style: people know more from everyday life, films and games, and less from school theory, than expected.
 
 ## 2. Existing questions
 For every existing question, give:

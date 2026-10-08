@@ -58,6 +58,8 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [ ] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 — [`20`](20-pipeline-efficiency.md)
 - [x] PE-7..PE-12 Concept lists per subcategory and question styles as axes; `draft` draws concepts and axis combinations by code (D-37) — [`20`](20-pipeline-efficiency.md)
 - [ ] PE-13 Compare the first concept-based batch against the PE-6 batch — [`20`](20-pipeline-efficiency.md)
+- [x] AG-2..AG-6 Four age groups, shared scale 1–15, focus group young teens: data file, house style, prompts, `qgen`, Espacio list again (D-38) — [`21`](21-age-groups.md)
+- [ ] AG-7, AG-8 The game chooses an age group; batches for other groups — [`21`](21-age-groups.md)
 
 No family-specific questions (D-30).
 
@@ -126,5 +128,4 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | OQ-33 | Price model; Steamworks account holder | Steam S5 (17) |
 | OQ-34 | Store name | Steam S5 (17) |
 | OQ-35 | Code and content license | Steam S2 (17) |
-| OQ-36 | Audience: families only or an adult track | Steam S2 (13, 16) |
 | OQ-37 | Competitive mode and couch co-op format and input | Steam later (13, 14) |

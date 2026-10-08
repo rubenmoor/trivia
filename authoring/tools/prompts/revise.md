@@ -3,7 +3,7 @@
 You get trivia questions that are already in the pool, each with the **issues** found by an independent rater, a web fact-check and possibly the gamemaster. Decide for each question on its own; the questions may come from several subcategories:
 
 - `"keep"`: the issues are minor or wrong; leave the question as it is.
-- `"revise"`: fix the issues while keeping the question's topic and its answer where possible. The result must follow the house style above completely: four honest options, no giveaways, a real-world superlative, kid-appropriate difficulty (use the calibration examples), a funny description, three hints from vague to strong, a true fun fact, media that fits the rules.
+- `"revise"`: fix the issues while keeping the question's topic and its answer where possible. The result must follow the house style above completely: four honest options, no giveaways, a real-world superlative, a difficulty on the shared scale (use the calibration examples), a funny description, three hints from vague to strong, a true fun fact, media that fits the rules.
 - `"drop"`: the question can't be saved without becoming a different question (e.g. an essential recording that doesn't exist on Wikimedia Commons). Say why. A famous historical event or film is not a reason to drop (house style, "Tone").
 
 Rules:

@@ -11,7 +11,7 @@ The pool lives in `authoring/data/questions.json`: `{"version": 1, "questions": 
 {
   "id": "q-0001",              // stable, never reused
   "status": "draft",           // draft | approved | rejected | needs_work (D-11)
-  "difficulty": 1,             // 1 = a 6-year-old can answer .. 10 = a 16-year-old can answer
+  "difficulty": 1,             // shared scale 1–15 (D-38): 1 = a 6-year-old can answer .. 10 = a 16-year-old .. 15 = specialists
   "description": "Esta pregunta ondea al viento y canta el himno con la mano en el pecho.",  // humorous intro, shown instead of the category (D-8)
   "question": "¿De qué colores es la bandera de Colombia?",
   "answer": "Amarillo, azul y rojo",

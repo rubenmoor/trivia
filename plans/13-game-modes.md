@@ -24,7 +24,7 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 
 - Other levers that could join the presets (to decide): the level → difficulty ranges (D-22) shifted down or up; a "checkpoint" at level 6 on Fácil, so a wrong answer drops you back there instead of ending the game.
 - **Admin actions in the default mode:** no undo (it would be a cheat button) and no «Saltar y quemar para todos». Instead **«Reportar pregunta»**: it burns the question for everyone on this machine, writes it to a local report list (shown on a page the player can copy from) and draws a replacement. «Abandonar partida» stays.
-- **Audience** (OQ-36): the D-6 scale (difficulty 1 = age 6, 10 = age 16) suits families. An adult track would need harder questions above 10 or a separate pool.
+- **Audience** (OQ-36, D-38): four age groups (kids, young teens, young adults, adults), each playing a window of the shared difficulty scale 1–15 ([21](21-age-groups.md)).
 
 ### Competitive mode (later, stub; OQ-37)
 - 2 to 8 or more players take turns, on one screen. Ideas to choose from:

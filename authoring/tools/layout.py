@@ -23,3 +23,4 @@ DIST = AUTHORING / "ui" / "dist"
 WORK = Path(os.environ.get("TRIVIA_WORK", REPO / "work"))  # gitignored pipeline work files
 CANDIDATES = WORK / "media"  # Commons candidates per question
 EXPORT = app_paths.POOL  # what the game reads: app/data/pool.json
+AGE_GROUPS = app_paths.AGE_GROUPS  # age groups and the focus group (D-38)

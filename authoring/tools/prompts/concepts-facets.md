@@ -5,7 +5,7 @@ You prepare one subcategory of the trivia game described above, so that question
 ## 1. Facets
 Split the subcategory into 8–12 **facets**: the different areas it covers. Each facet:
 - is a short Spanish name (2–5 words);
-- is broad enough to hold 15–25 concrete concepts that a Colombian family with kids aged 6–16 could be asked about;
+- is broad enough to hold 15–25 concrete concepts that players of some age group, from kids to adults, could be asked about;
 - doesn't overlap the other facets.
 
 Together, the facets cover the whole subcategory, not just its school-book core. Think of things, living beings, people and characters, places, events, tools, words, customs, and the subcategory in everyday life, in Colombia, in films and games, and in history, wherever these really belong to it.

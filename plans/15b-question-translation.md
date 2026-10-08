@@ -9,7 +9,7 @@ Sub-plan of [15](15-i18n.md). Translates the question pool into the launch langu
 - **Questions that don't travel:** wordplay, questions about the Spanish language itself ("¿Qué palabra…?"), and Colombian references whose answer only makes sense to Colombians. These are marked `region: "co"` (15c) or `translatable: false` and stay in Spanish only.
 - **Distractors:** wrong answers that are plausible in Spanish can be absurd in another language (or accidentally correct). The rate step checks them again.
 - **Hints:** a hint that plays on the Spanish word ("empieza por B") has to be rewritten.
-- **Difficulty:** re-rated per locale (15). The age scale (D-6) stays the same; the rating is "for kids in that language's main market".
+- **Difficulty:** re-rated per locale (15). The shared scale (D-38) stays the same; the rating is "for that language's main market".
 - **Media:** images are language-neutral, except ones with visible text (signs, book covers). The review flags those per locale. Essential audio (D-14) is usually language-neutral.
 
 ## Pipeline

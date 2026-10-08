@@ -1,7 +1,7 @@
 """Concept lists and question axes (plans/20-pipeline-efficiency.md part 2, D-37). Never ships (D-35).
 
 A subcategory's concept list lives in authoring/data/concepts/<slug>.json: its facets, its fit for
-the question axes, and its concepts (name, facet, familiarity, maybe `retired`). How often a concept
+the question axes, and its concepts (name, facet, known_at, maybe `retired`). How often a concept
 was used is counted from the pool, never stored. Drawing is plain code: concepts with fewer
 questions first, axis values that are rarely used first.
 """
@@ -14,6 +14,8 @@ AXES = ["move", "stimulus", "clue", "answer_kind", "lens"]
 FIT_AXES = ["move", "stimulus", "lens"]  # scored per subcategory (PE-9)
 DRAW_ORDER = ["stimulus", "move", "answer_kind", "clue", "lens"]  # media first: its rules are the tightest
 LOW_STOCK = 30  # a list with fewer unused concepts gets a top-up
+TARGET_SIZE = 250  # upper end of the list size (OQ-38); `qgen concepts --fill` tops up to it
+TOP_UP = 60  # concepts asked for in a top-up for low stock
 OPTIONS = 3  # axis combinations offered per slot
 OFFERED_FACTOR = 0.3  # weight of a value an earlier slot of the subcategory already offered
 
@@ -101,20 +103,15 @@ def unused(lst, used):
     return [c for c in lst["concepts"] if not c.get("retired") and not used.get(c["name"])]
 
 
-def familiarity_target(difficulty):
-    """Difficulty 1 → familiarity 5 (every kid knows it), difficulty 10 → 1."""
-    return 5 - (difficulty - 1) * 4 / 9
-
-
 def draw_concepts(lst, used, difficulties, rng):
     """One concept per target difficulty, all different. Fewer questions first (1 / (1 + uses)²),
-    familiarity close to the difficulty preferred; retired concepts never."""
+    `known_at` close to the difficulty preferred (D-38); retired concepts never."""
     picked, out = set(), []
     for d in difficulties:
         pool = [c for c in lst["concepts"] if not c.get("retired") and c["name"] not in picked]
         if not pool:
             break
-        weights = [1 / (1 + used.get(c["name"], 0)) ** 2 / (1 + abs(c["familiarity"] - familiarity_target(d)))
+        weights = [1 / (1 + used.get(c["name"], 0)) ** 2 / (1 + abs(c["known_at"] - d) / 2)
                    for c in pool]
         c = rng.choices(pool, weights)[0]
         picked.add(c["name"])

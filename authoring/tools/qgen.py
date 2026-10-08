@@ -35,7 +35,8 @@ import selection  # app/server/selection.py: levels and the supply check (GF-5)
 from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
-# ranges (D-22) show per game, times 3.
+# ranges (D-22) show per game, times 3. These are the focus group's (young teens, window 1–10,
+# D-38); drafting stops if the focus group's window changes without new weights (AG-8).
 LEVEL_WEIGHTS = {1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13}
 RUBRIC = ["correct", "unambiguous", "no_giveaway", "distractors", "age_fit", "fun", "description"]
 # Below 4 on any of these drops a question (07). The soft scores didn't predict the
@@ -68,8 +69,30 @@ def norm(text):
     words = [w for w in text.split() if w not in {"el", "la", "los", "las", "un", "una", "de", "del"}]
     return " ".join(words)
 
+def load_age_groups():
+    return load_json(layout.AGE_GROUPS)
+
+
+def focus_group():
+    """The age group the pipeline writes for (D-38)."""
+    ag = load_age_groups()
+    return next(g for g in ag["groups"] if g["id"] == ag["focus"])
+
+
+def ages_text(g):
+    lo, hi = g["ages"]
+    return f"{lo}–{hi}" if hi else f"{lo}+"
+
+
 def prompt(*names):
-    return "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
+    """Prompt files joined; {age_groups} and {focus_group} are filled from app/data/age-groups.json."""
+    ag, focus = load_age_groups(), focus_group()
+    groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
+    lo, hi = focus["window"]
+    text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
+    return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
+            .replace("{focus_group}", f"{focus['id'].replace('_', ' ')}, ages {ages_text(focus)}, "
+                                      f"who play difficulties {lo}–{hi}"))
 
 def run_dir(args):
     d = WORK / args.run
@@ -188,8 +211,8 @@ FACT_SCHEMA = {"type": "object", "required": ["checks"], "properties": {"checks"
 
 # --- steps -------------------------------------------------------------------
 
-CONCEPT_ITEM = {"type": "object", "required": ["name", "facet", "familiarity"],
-                "properties": {"name": STR, "facet": STR, "familiarity": INT}}
+CONCEPT_ITEM = {"type": "object", "required": ["name", "facet", "known_at"],
+                "properties": {"name": STR, "facet": STR, "known_at": INT}}
 TOPUP_SCHEMA = {"type": "object", "required": ["new_facets", "concepts"], "properties": {
     "new_facets": STR_LIST, "concepts": {"type": "array", "items": CONCEPT_ITEM}}}
 
@@ -236,8 +259,6 @@ def cmd_concepts(args):
         sys.exit(f"Not in app/data/categories.json: {', '.join(unknown)}")
     pool = load_json(POOL)["questions"]
     create = [s for s in subs if concepts.load(s) is None]
-    top = [s for s in subs if args.top_up and s not in create
-           and len(concepts.unused(concepts.load(s), concepts.uses(pool, s))) < concepts.LOW_STOCK]
 
     def make(sub):
         path = d / "raw" / f"{slug(sub)}.json"
@@ -260,18 +281,30 @@ def cmd_concepts(args):
             save_json(path, r)
         print(f"  concepts: {sub}: {len(r['facets'])} facets, {len(r['concepts'])} concepts", flush=True)
 
+    def wanted(sub):
+        """How many concepts a top-up asks for: up to TARGET_SIZE with --fill, else TOP_UP when low."""
+        lst = concepts.load(sub)
+        if getattr(args, "fill", False) and len(lst["concepts"]) < concepts.TARGET_SIZE:
+            return concepts.TARGET_SIZE - len(lst["concepts"])
+        if args.top_up and len(concepts.unused(lst, concepts.uses(pool, sub))) < concepts.LOW_STOCK:
+            return concepts.TOP_UP
+        return 0
+
     def top_up(sub):
         path = d / "topup" / f"{slug(sub)}.json"
         if path.exists():
             return
         lst = concepts.load(sub)
-        user = (subcategory_header(sub) + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in lst["facets"])
+        user = (subcategory_header(sub) + f"\n\n## How many\nAdd about {wanted(sub)} new concepts."
+                + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in lst["facets"])
                 + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"]))
         out = claude(prompt("house-style", "concepts-topup"), user, TOPUP_SCHEMA, args.model, d)
         save_json(path, out)
         print(f"  top-up: {sub}: {len(out['concepts'])} new concepts", flush=True)
 
-    errors = parallel(make, create, args.jobs) + parallel(top_up, top, args.jobs)
+    errors = parallel(make, create, args.jobs)
+    finalize_concepts(d, order, axes_def)
+    errors += parallel(top_up, [s for s in subs if concepts.load(s) and wanted(s)], args.jobs)
     finalize_concepts(d, order, axes_def)
     return errors
 
@@ -280,6 +313,7 @@ def finalize_concepts(d, order, axes_def):
     """Write finished raw results and top-ups into authoring/data/concepts/, one subcategory at a
     time in categories.json order, so no normalized name is in two lists (OQ-40), except where a
     question of the later subcategory already uses it. Tags existing questions in the pool."""
+    lo, hi = load_age_groups()["scale"]
     seen = {}
     for s in order:
         lst = concepts.load(s)
@@ -293,7 +327,8 @@ def finalize_concepts(d, order, axes_def):
         if lst is None and "concepts" in raw:
             lst = {"subcategory": s, "facets": raw["facets"], "axis_fit": raw["axis_fit"], "concepts": []}
             tags = raw["existing"]
-            items = raw["concepts"] + [{"name": e["concept"], "facet": "Otros", "familiarity": 3} for e in tags]
+            items = raw["concepts"] + [{"name": e["concept"], "facet": "Otros", "known_at": by_id[e["id"]]["difficulty"]}
+                                       for e in tags if e["id"] in by_id]  # a question's level stands in for the concept's
         elif lst is not None and topup.exists():
             extra = load_json(topup)
             lst["facets"] += [f for f in extra["new_facets"] if f not in lst["facets"]]
@@ -313,7 +348,7 @@ def finalize_concepts(d, order, axes_def):
             if c["facet"] not in lst["facets"]:
                 lst["facets"].append(c["facet"])
             lst["concepts"].append({"name": c["name"].strip(), "facet": c["facet"],
-                                    "familiarity": min(5, max(1, c["familiarity"]))})
+                                    "known_at": min(hi, max(lo, c["known_at"]))})
             own[k] = c["name"].strip()
             seen.setdefault(k, s)
         for e in tags:
@@ -348,6 +383,10 @@ def assign_difficulties(slots, seed):
 def draw_slots(subs, pool_questions, axes_def, n, seed):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded."""
+    lo, hi = focus_group()["window"]
+    if sorted(LEVEL_WEIGHTS) != list(range(lo, hi + 1)):  # AG-8: weights per group
+        sys.exit(f"LEVEL_WEIGHTS cover {min(LEVEL_WEIGHTS)}–{max(LEVEL_WEIGHTS)}, "
+                 f"but the focus group's window is {lo}–{hi} (app/data/age-groups.json)")
     targets = assign_difficulties([(s, i) for s in subs for i in range(n)], seed)
     plan = {}
     for s in subs:
@@ -456,7 +495,8 @@ def check_question_shape(q):
     problems = []
     if len(q["wrong_answers"]) != 3: problems.append("needs 3 wrong answers")
     if len(q["hints"]) != 3: problems.append("needs 3 hints")
-    if not 1 <= q["difficulty"] <= 10: problems.append("difficulty out of range")
+    lo, hi = load_age_groups()["scale"]
+    if not lo <= q["difficulty"] <= hi: problems.append("difficulty out of range")
     if len({norm(o) for o in [q["answer"], *q["wrong_answers"]]}) != 4: problems.append("duplicate options")
     return problems
 
@@ -1315,6 +1355,7 @@ def validate_pool():
     errors, warnings, ids = [], [], set()
     subcategories = categories.broad_of()
     axes_def, lists = concepts.load_axes(), {}
+    lo, hi = load_age_groups()["scale"]
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -1365,6 +1406,11 @@ def validate_pool():
         dup = sorted({k for k in keys if keys.count(k) > 1})
         if dup:
             errors.append(f"{concepts.path(sub).relative_to(ROOT)}: same concept twice: {', '.join(dup)}")
+        bad = [c["name"] for c in (lst or {}).get("concepts", [])
+               if not isinstance(c.get("known_at"), int) or not lo <= c["known_at"] <= hi]
+        if bad:
+            errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): "
+                          f"{', '.join(bad[:5])}{' …' if len(bad) > 5 else ''}")
     exported = layout.EXPORT.read_text(encoding="utf-8") if layout.EXPORT.exists() else None
     if exported != export_text(data):
         errors.append(f"{layout.EXPORT.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
@@ -1394,6 +1440,7 @@ def main():
     cp = add("concepts", cmd_concepts, "opus", run=False)
     cp.add_argument("--subcategories", help="comma-separated; default: every subcategory without a list")
     cp.add_argument("--top-up", action="store_true", help=f"also add concepts to lists with fewer than {concepts.LOW_STOCK} unused")
+    cp.add_argument("--fill", action="store_true", help=f"also top up lists with fewer than {concepts.TARGET_SIZE} concepts to that size")
     cp.set_defaults(run=None)
     dp = add("draft", cmd_draft, "opus")
     dp.add_argument("--subcategories", help="comma-separated, first call only")
