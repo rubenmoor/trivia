@@ -1,27 +1,10 @@
 {
   "categories": [
-    {"slug": "colombia", "name": "Colombia", "subcategories": [
-      "Regiones de Colombia",
-      "Ciudades de Colombia",
-      "Símbolos patrios de Colombia",
-      "Parques naturales de Colombia",
-      "Ríos de Colombia",
-      "Colombianos famosos"
-    ]},
     {"slug": "fiestas-tradiciones", "name": "Fiestas y tradiciones", "subcategories": [
-      "Fiestas colombianas",
-      "Tradiciones colombianas",
-      "Carnaval de Barranquilla",
-      "Feria de las Flores",
       "Navidad",
       "Celebraciones del mundo"
     ]},
     {"slug": "comida-bebida", "name": "Comida y bebida", "subcategories": [
-      "Platos típicos colombianos",
-      "Dulces colombianos",
-      "Postres colombianos",
-      "Bebidas colombianas",
-      "Frutas exóticas de Colombia",
       "Verduras",
       "Comida italiana",
       "Comida mexicana",
@@ -67,7 +50,6 @@
       "Peces",
       "Insectos",
       "Bichos raros",
-      "Animales de Colombia",
       "Récords de animales"
     ]},
     {"slug": "mascotas-granja", "name": "Mascotas y granja", "subcategories": [
@@ -118,8 +100,6 @@
       "Piratas"
     ]},
     {"slug": "mitos-leyendas", "name": "Mitos y leyendas", "subcategories": [
-      "Mitos colombianos",
-      "Leyendas colombianas",
       "Dioses griegos",
       "Héroes griegos",
       "Mitología romana",
@@ -127,8 +107,6 @@
     ]},
     {"slug": "musica", "name": "Música", "subcategories": [
       "Instrumentos musicales",
-      "Ritmos colombianos",
-      "Cantantes colombianos",
       "Música clásica",
       "Música del mundo"
     ]},
@@ -150,8 +128,6 @@
     ]},
     {"slug": "futbol", "name": "Fútbol", "subcategories": [
       "Fútbol",
-      "Selección Colombia",
-      "Clubes de fútbol colombianos",
       "Mundiales de fútbol"
     ]},
     {"slug": "deportes", "name": "Deportes", "subcategories": [
@@ -159,12 +135,9 @@
       "Tenis",
       "Natación",
       "Atletismo",
-      "Ciclismo colombiano",
       "Deportes extremos",
-      "Deportes tradicionales colombianos",
       "Juegos Olímpicos de verano",
-      "Juegos Olímpicos de invierno",
-      "Medallistas olímpicos colombianos"
+      "Juegos Olímpicos de invierno"
     ]},
     {"slug": "arte-literatura", "name": "Arte y literatura", "subcategories": [
       "Arte",
@@ -176,9 +149,7 @@
     ]},
     {"slug": "idiomas-palabras", "name": "Idiomas y palabras", "subcategories": [
       "Idioma",
-      "Idiomas del mundo",
-      "Palabras colombianas",
-      "Dichos colombianos"
+      "Idiomas del mundo"
     ]},
     {"slug": "juegos-curiosidades", "name": "Juegos y curiosidades", "subcategories": [
       "Juguetes",

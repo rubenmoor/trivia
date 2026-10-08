@@ -3,13 +3,15 @@
 
 An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
 
-    qgen batch
+    qgen batch                      # writes base questions (D-41)
+    qgen batch --bundle colombia    # only when the user names a bundle
 
 It runs these steps in a fixed order; they stay available one by one for debugging:
 
     qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundles                    # sort the pool into bundles (D-39)
-    qgen draft --run <run> --subcategories "Volcanes,Piratas"
+    qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle (D-41)
+    qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | research | record | sync | batch-report --run <run>
     qgen export                     # app/data/pool.json from authoring/data/questions.json
@@ -32,7 +34,7 @@ from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
 import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
-import categories  # app/server/categories.py: app/data/categories.json (D-19)
+import categories  # app/server/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
 from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
@@ -95,6 +97,26 @@ def load_bundles():
 def bundles_text():
     """The bundles and their membership rules, for prompts (D-39)."""
     return "\n".join(f"- `{b['id']}`: {b['rule']}" for b in load_bundles())
+
+
+def bundle_text(bundle):
+    """The one bundle a batch writes for, as a content limit for the drafter (D-41)."""
+    rule = next(b["rule"] for b in load_bundles() if b["id"] == bundle)
+    return f"Every question you write is in the `{bundle}` bundle: {rule}"
+
+
+def check_bundle(bundle):
+    """Exit unless the bundle is in app/data/bundles.json and has subcategories."""
+    if bundle not in {b["id"] for b in load_bundles()}:
+        sys.exit(f"Unknown bundle {bundle!r}: not in app/data/bundles.json")
+    if not categories.subcategories(bundle):
+        sys.exit(f"Bundle {bundle!r} has no subcategories yet: fill {categories.path(bundle).relative_to(ROOT)}")
+
+
+def not_in_bundle(subs, bundle=None):
+    """The subcategories that aren't in the bundle's categories (any bundle's when None)."""
+    known = set(categories.subcategories(bundle))
+    return [s for s in subs if s not in known]
 
 
 def prompt(*names):
@@ -218,9 +240,9 @@ MEDIA_SCHEMA = {"type": "object", "required": ["type", "role", "query", "note"],
     "query": STR, "note": STR}}
 
 QUESTION_SCHEMA = {"type": "object", "required": [
-    "slot", "option", "bundle", "difficulty", "description", "question", "answer", "wrong_answers", "hints",
+    "slot", "option", "difficulty", "description", "question", "answer", "wrong_answers", "hints",
     "media", "fun_fact", "needs_media", "needs_fact_check", "background_query"], "properties": {
-    "slot": INT, "option": INT, "bundle": STR, "difficulty": INT, "description": STR, "question": STR, "answer": STR,
+    "slot": INT, "option": INT, "difficulty": INT, "description": STR, "question": STR, "answer": STR,
     "wrong_answers": STR_LIST, "hints": STR_LIST, "media": MEDIA_SCHEMA, "fun_fact": STR,
     "needs_media": {"type": "boolean"}, "needs_fact_check": {"type": "boolean"}, "background_query": STR}}
 
@@ -290,23 +312,22 @@ def cmd_concepts(args):
     and save raw results in work/concepts/; `finalize_concepts` then writes the lists one by one."""
     d = WORK / "concepts"
     d.mkdir(parents=True, exist_ok=True)
-    axes_def = concepts.load_axes()
-    order = [s for c in categories.load() for s in c["subcategories"]]
     if args.subcategories:
         subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
     elif getattr(args, "run", None):
         subs = load_json(WORK / args.run / "run.json")["subcategories"]
     else:
-        subs = order
-    unknown = [s for s in subs if s not in order]
+        subs = categories.subcategories(getattr(args, "bundle", None))
+    unknown = not_in_bundle(subs)
     if unknown:
-        sys.exit(f"Not in app/data/categories.json: {', '.join(unknown)}")
+        sys.exit(f"Not in any bundle's categories: {', '.join(unknown)}")
     pool = load_json(POOL)["questions"]
     create = [s for s in subs if concepts.load(s) is None]
 
     def make(sub):
         path = d / "raw" / f"{slug(sub)}.json"
         r = load_json(path, {})
+        axes_def = concepts.load_axes(categories.bundle_of(sub))
         intro = subcategory_header(sub) + "\n\n## Question axes\n" + concepts.axes_text(axes_def)
         if "facets" not in r:
             r.update(claude(prompt("house-style", "concepts-facets"), intro, facets_schema(axes_def), args.model, d))
@@ -346,17 +367,22 @@ def cmd_concepts(args):
         save_json(path, out)
         print(f"  top-up: {sub}: {len(out['concepts'])} new concepts", flush=True)
 
+    bundles = sorted({categories.bundle_of(s) for s in subs}, key=categories.bundle_ids().index)
     errors = parallel(make, create, args.jobs, "concepts", "lists")
-    finalize_concepts(d, order, axes_def)
+    for b in bundles:
+        finalize_concepts(d, b)
     errors += parallel(top_up, [s for s in subs if concepts.load(s) and wanted(s)], args.jobs, "top-up", "lists")
-    finalize_concepts(d, order, axes_def)
+    for b in bundles:
+        finalize_concepts(d, b)
     return errors
 
 
-def finalize_concepts(d, order, axes_def):
-    """Write finished raw results and top-ups into authoring/data/concepts/, one subcategory at a
-    time in categories.json order, so no normalized name is in two lists (OQ-40), except where a
-    question of the later subcategory already uses it. Tags existing questions in the pool."""
+def finalize_concepts(d, bundle):
+    """Write the bundle's finished raw results and top-ups into its concept folder, one subcategory
+    at a time in its categories.json order, so no normalized name is in two of the bundle's lists
+    (OQ-40, D-43), except where a question of the later subcategory already uses it. Tags existing
+    questions in the pool."""
+    order, axes_def = categories.subcategories(bundle), concepts.load_axes(bundle)
     lo, hi = load_age_groups()["scale"]
     seen = {}
     for s in order:
@@ -538,23 +564,23 @@ def cmd_draft(args):
     if cfg is None:
         if not args.subcategories:
             sys.exit("First call for a run needs --subcategories.")
-        cfg = {"subcategories": [s.strip() for s in args.subcategories.split(",") if s.strip()]}
-        unknown = [s for s in cfg["subcategories"] if s not in categories.broad_of()]
+        check_bundle(args.bundle)
+        cfg = {"bundle": args.bundle, "subcategories": [s.strip() for s in args.subcategories.split(",") if s.strip()]}
+        unknown = not_in_bundle(cfg["subcategories"], args.bundle)
         if unknown:
-            sys.exit(f"Not in app/data/categories.json (add them there first): {', '.join(unknown)}")
+            sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)} (add them there first): {', '.join(unknown)}")
         save_json(d / "run.json", cfg)
-    subs = cfg["subcategories"]
+    subs, bundle = cfg["subcategories"], cfg.get("bundle", "base")  # runs before D-41 have no bundle
     missing = [s for s in subs if concepts.load(s) is None]
     if missing:
         sys.exit(f"No concept list for {', '.join(missing)}: run `qgen concepts --subcategories ...` first.")
     pool = load_json(POOL)
-    axes_def = concepts.load_axes()
+    axes_def = concepts.load_axes(bundle)
     plan = load_json(d / "slots.json")
     if plan is None:  # drawn once, so a rerun drafts the same slots
         plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed)
         save_json(d / "slots.json", plan)
     system = prompt("house-style", "draft")
-    bundle_ids = {b["id"] for b in load_bundles()}
     todo = [s for s in subs if plan.get(s) and not (d / "drafts" / f"{slug(s)}.json").exists()]
 
     def work(sub):
@@ -564,7 +590,7 @@ def cmd_draft(args):
         user = (subcategory_header(sub) + "\n\n## Question axes (the values in these options)\n"
                 + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
                 + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}"
-                + "\n\n## Bundles (pick one per question)\n" + bundles_text())
+                + "\n\n## Bundle\n" + bundle_text(bundle))
         out = claude(system, user, DRAFT_SCHEMA, args.model, d)
         good = []
         for q in out["questions"]:
@@ -573,14 +599,13 @@ def cmd_draft(args):
                 problems.append(f"unknown slot {q['slot']}")
             elif not 1 <= q["option"] <= len(slots[q["slot"]]["options"]):
                 problems.append(f"unknown option {q['option']}")
-            if q["bundle"] not in bundle_ids:
-                problems.append(f"unknown bundle {q['bundle']}")
             if problems:
                 print(f"  {sub}: dropped malformed question ({'; '.join(problems)})", file=sys.stderr)
                 continue
             sl = slots[q["slot"]]
             option = {k: v for k, v in sl["options"][q.pop("option") - 1].items() if k != "option"}
-            q.update(style=None, axes=option, concept=sl["concept"], tmp_id=f"{slug(sub)}-{q['slot']}", subcategory=sub)
+            q.update(style=None, axes=option, concept=sl["concept"], tmp_id=f"{slug(sub)}-{q['slot']}", subcategory=sub,
+                     bundle=bundle)
             q["media"]["note"] = q["media"]["note"] or None
             if (option["stimulus"] != "none") != (q["media"]["role"] == "essential"):
                 print(f"  {sub}: {q['tmp_id']}: stimulus {option['stimulus']} with {q['media']['role']} media "
@@ -1035,7 +1060,7 @@ def report_subcategories(avail):
     print("supply per subcategory × difficulty (JK-10; '.' = none):")
     print(f"  {'':34}" + "".join(f"{d:>3}" for d in range(1, 11)) + "  total")
     for c in categories.load():
-        print(f"  {c['name']}")
+        print(f"  {c['name']}" + (f" ({c['bundle']})" if c["bundle"] != "base" else ""))
         for sub in c["subcategories"]:
             ds = by_sub.get(sub, [])
             cells = "".join(f"{ds.count(d) or '.':>3}" for d in range(1, 11))
@@ -1352,6 +1377,7 @@ def cmd_batch_report(args):
     lines = [f"# {args.run}", "",
              f"Made by `qgen batch` on {datetime.date.today().isoformat()} (plans/19-repo-layout.md, D-36). "
              "Generated file: don't edit by hand.", "",
+             f"- Bundle: {cfg.get('bundle', 'base')}",
              f"- Subcategories ({len(cfg.get('subcategories', []))}): {', '.join(cfg.get('subcategories', []))}",
              f"- Merged: {len(qs)} ({qs[0]['id']}…{qs[-1]['id']})" if qs else "- Merged: 0",
              f"- Approved: {len(approved)}", f"- Needs work: {len(work)}",
@@ -1385,9 +1411,10 @@ def next_batch():
     return f"batch-{max(numbers, default=0) + 1}", False
 
 
-def batch_subcategories(count):
-    """The `count` subcategories with the fewest approved questions; ties in categories.json order."""
-    return batches.subcategories(load_json(POOL)["questions"], count)
+def batch_subcategories(count, bundle="base"):
+    """The bundle's `count` subcategories with the fewest approved questions of that bundle;
+    ties in its categories.json order (D-41)."""
+    return batches.subcategories(load_json(POOL)["questions"], count, bundle)
 
 
 def cmd_batch(args):
@@ -1397,18 +1424,24 @@ def cmd_batch(args):
     else:
         run, resuming = next_batch()
     d = WORK / run
-    if not resuming:
+    if resuming:
+        open_bundle = load_json(d / "run.json").get("bundle", "base")
+        if open_bundle != args.bundle:
+            sys.exit(f"{run} is unfinished and writes for bundle {open_bundle!r}, not {args.bundle!r}. "
+                     f"Finish it first: qgen batch" + (f" --bundle {open_bundle}" if open_bundle != "base" else ""))
+    else:
+        check_bundle(args.bundle)
         if args.subcategories:
             subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
-            unknown = [s for s in subs if s not in categories.broad_of()]
+            unknown = not_in_bundle(subs, args.bundle)
             if unknown:
-                sys.exit(f"Not in app/data/categories.json: {', '.join(unknown)}")
+                sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)}: {', '.join(unknown)}")
         else:
-            subs = batch_subcategories(args.count)
-        save_json(d / "run.json", {"mode": "batch", "subcategories": subs,
+            subs = batch_subcategories(args.count, args.bundle)
+        save_json(d / "run.json", {"mode": "batch", "bundle": args.bundle, "subcategories": subs,
                                    "started": datetime.date.today().isoformat()})
     subs = load_json(d / "run.json")["subcategories"]
-    print(f"{'Resuming' if resuming else 'Starting'} {run}: {len(subs)} subcategories. "
+    print(f"{'Resuming' if resuming else 'Starting'} {run} for bundle {args.bundle}: {len(subs)} subcategories. "
           "This takes from several minutes to an hour.", flush=True)
 
     def ns(**kw):
@@ -1416,7 +1449,7 @@ def cmd_batch(args):
 
     steps = [
         ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
-        ("draft", cmd_draft, ns(model="opus", seed=1, slots=4, subcategories=None)),
+        ("draft", cmd_draft, ns(model="opus", seed=1, slots=4, subcategories=None, bundle=args.bundle)),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
         ("revise", cmd_revise, ns(model="opus")),
@@ -1462,9 +1495,11 @@ def cmd_batch(args):
     n_ok = sum(q["status"] == "approved" for q in qs)
     print(f"\nDone: {run}: {len(qs)} merged, {n_ok} approved, {len(qs) - n_ok} needs work "
           f"(took {progress.duration(time.monotonic() - t0)}).")
+    concept_dir = concepts.concepts_dir(args.bundle).relative_to(ROOT).as_posix()
     print("Commit exactly this:\n"
-          f"  git add authoring/data/questions.json app/data/pool.json authoring/data/concepts/ authoring/reports/{run}.md\n"
-          f"  git commit -m \"{run}: {len(qs)} questions, {n_ok} approved (qgen batch)\"")
+          f"  git add authoring/data/questions.json app/data/pool.json {concept_dir}/ authoring/reports/{run}.md\n"
+          f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
+          f"{n_ok} approved (qgen batch)\"")
 
 
 # --- export (D-35) --------------------------------------------------------------
@@ -1481,9 +1516,11 @@ def validate_pool():
     data = load_json(POOL)
     errors, warnings, ids = [], [], set()
     subcategories = categories.broad_of()
-    axes_def, lists = concepts.load_axes(), {}
+    lists = {}
+    axes_of = {b: concepts.load_axes(b) for b in categories.bundle_ids()}
     lo, hi = load_age_groups()["scale"]
     bundle_ids = {b["id"] for b in load_bundles()}
+    errors += taxonomy_problems()
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -1501,7 +1538,7 @@ def validate_pool():
             prev = rv.get("previous")
             if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
                 errors.append(f"{qid}: review.previous must be an llm review under a human one")
-        if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in app/data/categories.json (D-19)")
+        if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in any bundle's categories (D-19, D-43)")
         if q.get("bundle") not in bundle_ids: errors.append(f"{qid}: bundle must be one of app/data/bundles.json (D-39)")
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
@@ -1520,7 +1557,7 @@ def validate_pool():
         if all(k in q for k in ["wrong_answers", "hints", "difficulty", "answer"]):
             errors += [f"{qid}: {p}" for p in check_question_shape(q)]
         if q.get("axes") is not None:  # D-37
-            e, w = concepts.axes_problems(q["axes"], axes_def)
+            e, w = concepts.axes_problems(q["axes"], axes_of[subcategories.get(q.get("subcategory"), {}).get("bundle", "base")])
             errors += [f"{qid}: {p}" for p in e]
             warnings += [f"{qid}: {p}" for p in w]
         if q.get("concept") is not None:
@@ -1544,6 +1581,43 @@ def validate_pool():
     if exported != export_text(data):
         errors.append(f"{layout.EXPORT.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
     return errors, warnings
+
+
+def taxonomy_problems():
+    """Every bundle's categories file belongs to a bundle; names and slugs are unique across bundles (D-43)."""
+    errors, ids = [], categories.bundle_ids()
+    if ids[:1] != ["base"]:
+        errors.append("app/data/bundles.json: base must come first")
+    for p in sorted(layout.app_paths.BUNDLE_DATA.glob("*/categories.json")):
+        if p.parent.name not in ids or p.parent.name == "base":
+            errors.append(f"{p.relative_to(ROOT)}: no bundle {p.parent.name!r} in app/data/bundles.json")
+    for what, items in [("subcategory", categories.subcategories()), ("category slug", [c["slug"] for c in categories.load()])]:
+        dup = sorted({x for x in items if items.count(x) > 1})
+        if dup:
+            errors.append(f"same {what} in two places (D-43): {', '.join(dup)}")
+    return errors
+
+
+def cmd_bundle_new(args):
+    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json and an empty categories.json
+    to fill by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
+    authoring/data/bundles/<id>/question-axes.json exists."""
+    if not re.fullmatch(r"[a-z0-9-]+", args.id):
+        sys.exit("A bundle id is lowercase letters, digits and dashes.")
+    data = load_json(layout.BUNDLES)
+    if any(b["id"] == args.id for b in data["bundles"]):
+        sys.exit(f"Bundle {args.id!r} already exists.")
+    data["bundles"].append({"id": args.id, "kind": args.kind, "always_on": False, "name": args.name,
+                            "description": args.description, "rule": args.rule})
+    save_json(layout.BUNDLES, data)
+    path = categories.path(args.id)
+    if not path.exists():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({"about": f"Categories of the {args.id} bundle (D-41, D-43). Subcategory names "
+                                             "and slugs must be unique across all bundles.", "categories": []},
+                                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Created bundle {args.id}. Next: fill {path.relative_to(ROOT)} with broad categories and "
+          f"subcategories, then `qgen batch --bundle {args.id}`.")
 
 
 def cmd_validate(args):
@@ -1570,13 +1644,23 @@ def main():
     cp.add_argument("--subcategories", help="comma-separated; default: every subcategory without a list")
     cp.add_argument("--top-up", action="store_true", help=f"also add concepts to lists with fewer than {concepts.LOW_STOCK} unused")
     cp.add_argument("--fill", action="store_true", help=f"also top up lists with fewer than {concepts.TARGET_SIZE} concepts to that size")
+    cp.add_argument("--bundle", help="without --subcategories: only this bundle's subcategories (default: every bundle)")
     cp.set_defaults(run=None)
     bp = add("bundles", cmd_bundles, "opus", run=False)
     bp.set_defaults(run=None)
+    bn = sub.add_parser("bundle", help="manage bundles (D-41)").add_subparsers(dest="action", required=True)
+    bnew = bn.add_parser("new", help="create an empty bundle")
+    bnew.set_defaults(fn=cmd_bundle_new)
+    bnew.add_argument("id")
+    bnew.add_argument("--name", required=True, help="Spanish name shown in the game")
+    bnew.add_argument("--description", required=True, help="Spanish description shown in the game")
+    bnew.add_argument("--kind", required=True, choices=["region", "theme"])
+    bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")
     dp = add("draft", cmd_draft, "opus")
     dp.add_argument("--subcategories", help="comma-separated, first call only")
     dp.add_argument("--seed", type=int, default=1)
     dp.add_argument("--slots", type=int, default=4, help="slots per subcategory")
+    dp.add_argument("--bundle", default="base", help="bundle of the run's questions, first call only (D-41)")
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
     add("dedupe", cmd_dedupe)
@@ -1605,6 +1689,7 @@ def main():
     add("batch-report", cmd_batch_report)
     b = sub.add_parser("batch", help="the whole pipeline for one new batch (authoring/RUNBOOK.md)")
     b.set_defaults(fn=cmd_batch)
+    b.add_argument("--bundle", default="base", help="write for this bundle (default base); only when the user names one")
     b.add_argument("--run", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--subcategories", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--count", type=int, default=batches.SUBCATEGORIES, help=argparse.SUPPRESS)

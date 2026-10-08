@@ -10,7 +10,7 @@ game (state/flags.json) into needs-work reviews (D-47) and prints the link to ev
 that isn't approved (/review?status=!approved, RV-22).
 
 API:
-    GET  /api/categories                           app/data/categories.json: broad categories with subcategories (D-19)
+    GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
     GET  /api/age-groups                           app/data/age-groups.json: the difficulty scale and age groups (D-38)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;

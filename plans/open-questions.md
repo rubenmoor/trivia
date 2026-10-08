@@ -17,14 +17,10 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-35** Code and content license (the repo has no `LICENSE` today); does new release content stay public on GitHub?
 - **OQ-37** Competitive mode and couch co-op: format (relay ladder, parallel ladders, buzzer), and input (hot-seat, one controller per player, phones as buzzers)?
 
-### Added 2026-10-07 (bundle batches, D-41, [`22`](22-bundles.md))
-- **OQ-41** Where does a bundle's own taxonomy live? It ships if the game shows a bundle's categories (e.g. `app/data/bundles/<id>/categories.json`, concepts under `authoring/data/concepts/<id>/`); and do question ids, `subcategory` and `concept` need the bundle to stay unique?
-- **OQ-42** The existing `colombia` bundle: does it get its own taxonomy, built from the Colombian subcategories now in `base`'s `categories.json` (Colombia, Fiestas colombianas, …), with those subcategories leaving `base`? And do its 79 current questions move with them?
-- **OQ-43** In a `base` batch, what happens to a question that turns out to need a connection to Colombia: drop it, mark it `needs_work`, or keep it out by prompt only?
-- **OQ-44** Does a bundle with its own axes also get its own house style (e.g. a sports bundle that allows more statistics)?
-
 ## Resolved
 - **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).
+- **OQ-44** No per-bundle house style: a session mixes questions from every active bundle, so they all follow one house style (D-44).
+- **OQ-41** A non-base bundle's categories are in `app/data/bundles/<id>/` (they ship), and its concepts and axes in `authoring/data/bundles/<id>/`. Subcategory names and category slugs are unique across bundles; question ids are global. **OQ-42** The Colombian subcategories leave `base` for `colombia`'s own list, and their questions keep their bundle. **OQ-43** Prompt only; the gamemaster moves the rest in the review tool (D-43).
 - **OQ-36** Four age groups, adults included: kids, young teens, young adults, adults, on one shared difficulty scale 1–15 (D-38).
 - **OQ-38** About 150–250 concepts per subcategory, with top-ups; **OQ-39** the axis values as drafted in plan 20, and existing questions get axes too; **OQ-40** concept names unique across subcategories by normalized name only, synonyms accepted (D-37).
 - **OQ-4** No timer per question; **OQ-13** no separate gamemaster device and no GM-only view; **OQ-8** no family-specific questions; **OQ-11** a computer connected to the TV via HDMI; **OQ-12** internet is available during play; **OQ-28** the game is called «¡Trivia!» (D-30).

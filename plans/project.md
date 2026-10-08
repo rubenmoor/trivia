@@ -11,11 +11,11 @@ The road from today onward: milestones, every open task, every open question. Th
 
 ## Where we stand (2026-10-07)
 
-- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. 24 categories / 140 subcategories (D-19). Exported for the game to `app/data/pool.json` (D-35).
-- **Bundles (D-39):** every question is in one bundle. Approved: 404 in `base`, 79 in `colombia` (proposed by an LLM pass, not yet checked by the gamemaster).
+- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. `base`: 23 categories / 113 subcategories; `colombia`: 6 / 27 (D-19, D-43). Exported for the game to `app/data/pool.json` (D-35).
+- **Bundles (D-39):** every question is in one bundle. Approved: 404 in `base`, 79 in `colombia` (proposed by an LLM pass, not yet checked by the gamemaster). Since 2026-10-08 a batch writes for one bundle named by the command, and `colombia` has its own 27 subcategories, which left `base` (D-41, D-43).
 - **Difficulty supply (approved, shared scale D-38; young teens play 1–10):** 1: 27 · 2: 41 · 3: 67 · 4: 66 · 5: 79 · 6: 91 · 7: 55 · 8: 29 · 9: 26 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
 - **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
-- **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the drafter picks each question's bundle (D-39).
+- **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the command names the batch's bundle, `base` by default (D-41).
 - **Next batch:** the first with all of the above; it checks PE-6 and PE-13 at once ([`20`](20-pipeline-efficiency.md), "How to check").
 - **Game:** complete. Server referee in `app/server/game.py`; screens in `app/client/src/game/`. One placeholder left: `PLACEHOLDER(UI-7)` (preloading).
 
@@ -67,7 +67,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [x] AG-10 No focus: `"focus": null` writes across the whole scale 1–15, even targets (D-40) — [`21`](21-age-groups.md)
 - [ ] AG-8 Batches for other age groups (`LEVEL_WEIGHTS` per group) — [`21`](21-age-groups.md)
 - [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
-- [ ] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes (D-41) — [`22`](22-bundles.md)
+- [x] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes; Colombian subcategories moved to `colombia` (D-41, D-43) — [`22`](22-bundles.md)
 
 - [~] RV-12..RV-17 Start page for the authoring tool at `/` (done 2026-10-09 except RV-17, the `validate` result): what waits for the gamemaster, batches, game readiness, all as links into review queues; order of work in 08 — [`08`](08-review-tool.md)
 - [x] RV-18..RV-21 Stats on approved questions (2026-10-09): difficulty 1–15, category and subcategory breakdown, sparse categories and subcategories; compact on the start page — [`08`](08-review-tool.md)
@@ -139,7 +139,6 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
-| OQ-41..OQ-44 | Bundle taxonomy: where it lives, what happens to `colombia`, base questions that need Colombia, per-bundle house style | BN-8..BN-12 (22) |
 | OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |

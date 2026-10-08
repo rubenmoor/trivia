@@ -11,7 +11,8 @@ REPO = APP.parent
 
 DATA = APP / "data"
 POOL = DATA / "pool.json"  # approved questions, exported by `qgen export`
-CATEGORIES = DATA / "categories.json"  # D-19
+CATEGORIES = DATA / "categories.json"  # D-19: base's categories
+BUNDLE_DATA = DATA / "bundles"  # D-43: another bundle's categories in bundles/<id>/categories.json
 AGE_GROUPS = DATA / "age-groups.json"  # D-38; the game reads it from AG-7 on
 BUNDLES = DATA / "bundles.json"  # D-39; the game reads it from BN-6 on
 DIST = Path(os.environ.get("TRIVIA_DIST", APP / "client" / "dist"))

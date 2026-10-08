@@ -20,10 +20,11 @@ export interface Background {
   credit: string | null;
 }
 
-/** A broad category from app/data/categories.json (D-19). */
+/** A broad category of one bundle's categories file (D-19, D-43). */
 export interface Category {
   slug: string;
   name: string;
+  bundle: string;
   subcategories: string[];
 }
 

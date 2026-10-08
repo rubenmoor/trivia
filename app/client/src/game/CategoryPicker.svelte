@@ -1,6 +1,6 @@
 <script lang="ts">
-  // «Cambiazo»'s two-step picker (plans/09-jokers.md, "Cambiazo", JK-7): the 24 broad categories,
-  // then the subcategories of the chosen one (D-19). Tiles without a fitting question are disabled
+  // «Cambiazo»'s two-step picker (plans/09-jokers.md, "Cambiazo", JK-7): every bundle's broad categories
+  // (D-43), then the subcategories of the chosen one (D-19). Tiles without a fitting question are disabled
   // (the server decides, 09 "Availability"). Click, or arrows + Enter; Backspace goes back.
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types";

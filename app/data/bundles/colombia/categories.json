@@ -1,0 +1,44 @@
+{
+  "about": "Categories of the colombia bundle (D-41, D-43): its own taxonomy for `qgen batch --bundle colombia`. Subcategory names and slugs are unique across all bundles.",
+  "categories": [
+    {"slug": "colombia-pais", "name": "Colombia", "subcategories": [
+      "Regiones de Colombia",
+      "Ciudades de Colombia",
+      "Ríos de Colombia",
+      "Parques naturales de Colombia",
+      "Símbolos patrios de Colombia",
+      "Animales de Colombia"
+    ]},
+    {"slug": "colombia-fiestas", "name": "Fiestas, mitos y tradiciones de Colombia", "subcategories": [
+      "Fiestas colombianas",
+      "Tradiciones colombianas",
+      "Carnaval de Barranquilla",
+      "Feria de las Flores",
+      "Mitos colombianos",
+      "Leyendas colombianas"
+    ]},
+    {"slug": "colombia-comida", "name": "Comida colombiana", "subcategories": [
+      "Platos típicos colombianos",
+      "Dulces colombianos",
+      "Postres colombianos",
+      "Bebidas colombianas",
+      "Frutas exóticas de Colombia"
+    ]},
+    {"slug": "colombia-musica-gente", "name": "Música y gente de Colombia", "subcategories": [
+      "Ritmos colombianos",
+      "Cantantes colombianos",
+      "Colombianos famosos"
+    ]},
+    {"slug": "colombia-deportes", "name": "Deporte colombiano", "subcategories": [
+      "Selección Colombia",
+      "Clubes de fútbol colombianos",
+      "Ciclismo colombiano",
+      "Medallistas olímpicos colombianos",
+      "Deportes tradicionales colombianos"
+    ]},
+    {"slug": "colombia-habla", "name": "Así hablamos en Colombia", "subcategories": [
+      "Palabras colombianas",
+      "Dichos colombianos"
+    ]}
+  ]
+}

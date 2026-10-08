@@ -9,7 +9,7 @@ The game has four age groups: {age_groups}. Every question has one difficulty on
 
 ## Language
 - All content is in Spanish, with Colombian usage: "bombillo", "carro", "celular", "gripa", "crispetas", "arquero", "tinto" (black coffee), "parcero" only in jokes.
-- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don't force them. A question that needs a connection to Colombia to answer belongs in the `colombia` bundle; well-known facts about Colombia stay in `base` (D-39).
+- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don't force them. Each batch writes for one bundle (D-41): a `base` question may use Colombian references anyone in the Spanish-speaking world knows, but never needs a connection to Colombia to answer; that is the `colombia` bundle's job.
 - Write numbers the Colombian way: "2.640 metros", "42,195 km".
 
 ## Format: multiple choice

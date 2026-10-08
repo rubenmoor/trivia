@@ -1,6 +1,7 @@
 """Concept lists and question axes (plans/20-pipeline-efficiency.md part 2, D-37). Never ships (D-35).
 
-A subcategory's concept list lives in authoring/data/concepts/<slug>.json: its facets, its fit for
+A subcategory's concept list lives in authoring/data/concepts/<slug>.json for base, and in
+authoring/data/bundles/<bundle>/concepts/<slug>.json for another bundle (D-43): its facets, its fit for
 the question axes, and its concepts (name, facet, known_at, maybe `retired`). How often a concept
 was used is counted from the pool, never stored. Drawing is plain code: concepts with fewer
 questions first, axis values that are rarely used first.
@@ -8,7 +9,8 @@ questions first, axis values that are rarely used first.
 import json, re, unicodedata
 from collections import Counter
 
-from layout import AXES_FILE, CONCEPTS
+import categories  # app/server/categories.py: which bundle a subcategory is in (D-43)
+from layout import AXES_FILE, BUNDLE_DATA, CONCEPTS
 
 AXES = ["move", "stimulus", "clue", "answer_kind", "lens"]
 FIT_AXES = ["move", "stimulus", "lens"]  # scored per subcategory (PE-9)
@@ -35,8 +37,14 @@ def key(name):
 
 # --- axes ---------------------------------------------------------------------
 
-def load_axes():
-    return json.loads(AXES_FILE.read_text(encoding="utf-8"))
+def axes_path(bundle="base"):
+    """A bundle's own question-axes.json if it has one, else base's (D-41)."""
+    own = BUNDLE_DATA / bundle / "question-axes.json"
+    return own if bundle != "base" and own.exists() else AXES_FILE
+
+
+def load_axes(bundle="base"):
+    return json.loads(axes_path(bundle).read_text(encoding="utf-8"))
 
 
 def values(axes_def, axis):
@@ -77,8 +85,13 @@ def axes_text(axes_def, only=None):
 
 # --- concept lists --------------------------------------------------------------
 
+def concepts_dir(bundle):
+    return CONCEPTS if bundle == "base" else BUNDLE_DATA / bundle / "concepts"
+
+
 def path(sub):
-    return CONCEPTS / f"{_slug(sub)}.json"
+    """Where the subcategory's list is: in the folder of the bundle whose categories list it."""
+    return concepts_dir(categories.bundle_of(sub) or "base") / f"{_slug(sub)}.json"
 
 
 def load(sub):

@@ -358,3 +358,17 @@ Template:
 - Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
 - Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store).
 - Supersedes / related: D-30, D-33, D-35; GM-5, RV-22
+
+## D-43: Where a bundle's taxonomy lives; Colombian subcategories leave `base`
+- Date: 2026-10-08
+- Context: Batch-6 wrote `base` questions with a Colombian flavour because 27 of `base`'s subcategories are about Colombia (OQ-42). D-41 gives each bundle its own taxonomy but left the layout open (OQ-41).
+- Decision: `base`'s categories stay in `app/data/categories.json`. Another bundle's categories are in `app/data/bundles/<id>/categories.json`. They ship because the game's «Cambiazo» picker shows every bundle's categories while the game plays every bundle (until BN-6). Its concept lists are in `authoring/data/bundles/<id>/concepts/`, and its optional question axes in `authoring/data/bundles/<id>/question-axes.json` (otherwise `base`'s). Subcategory names and broad-category slugs are unique across all bundles, and question ids stay global. Concept names are unique within a bundle. The taxonomy steers generation; the question's `bundle` steers play. A question may keep a subcategory from another bundle's list (a well-known fact about Colombia stays in `base`). The 27 Colombian subcategories move into `colombia`'s own list (6 broad categories), and their concept lists move with them. Existing questions keep their bundle. A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the gamemaster moves the rest with `n` in the review tool.
+- Consequences: `qgen batch` picks from `base`'s 113 subcategories; `qgen batch --bundle colombia` picks from the 27 Colombian ones. `qgen bundle new <id>` creates the entry and an empty `categories.json`. `validate` checks the uniqueness rules. The game's picker gets 6 more tiles (29 broad categories).
+- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12
+
+## D-44: One house style for every bundle
+- Date: 2026-10-08
+- Context: OQ-44 asked whether a bundle with its own question axes also gets its own house style (e.g. a sports bundle allowing more statistics).
+- Decision: No. Bundles are mixed in play: a session draws from every active bundle together, so all questions must read and play the same way. `prompts/house-style.md` applies to every bundle; a bundle's own axes (D-43) may change what is asked, not how it is written.
+- Consequences: No per-bundle prompt files. A bundle's `rule` only decides membership.
+- Supersedes / related: D-39, D-41, D-43; OQ-44

@@ -79,7 +79,7 @@ export interface Question {
   hints: string[];
   media: Media;
   fun_fact: string;
-  /** Its broad category is the one in app/data/categories.json that lists it (D-19). */
+  /** Its broad category is the one in a bundle's categories file that lists it (D-19, D-43). */
   subcategory: string;
   style: string | null;
   /** D-39: the one bundle the question is in. */

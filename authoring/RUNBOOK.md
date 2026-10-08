@@ -13,7 +13,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    qgen batch
    ```
 
-   Outside the dev shell, use `nix develop -c qgen batch`. Give it no arguments. It takes from several minutes to an hour; let it finish.
+   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle. Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. Use the same command, with the same `--bundle`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish.
 3. **Act on the exit code:**
 
    | Exit code | Meaning | What you do |
@@ -23,7 +23,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    | 1 | A step failed | Run step 2 again. If it fails at the **same step three times in a row**, stop and give the user the last 30 lines of output verbatim |
    | other | Unexpected | Stop and give the user the last 30 lines of output verbatim |
 
-   If the output says "More than one unfinished batch", stop and ask the user which one to finish.
+   If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so.
 4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks.
 5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`).
 
@@ -32,7 +32,8 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
 - Edit `authoring/data/questions.json`, `app/data/pool.json` or anything in `work/` by hand.
 - Pick, change or judge media yourself, or search Commons yourself.
 - Change prompts, `qgen.py`, `media.py` or the subcategory list to get past a failure.
-- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch`. They exist for the gamemaster's debugging.
+- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch` other than a `--bundle` the user named. They exist for the gamemaster's debugging.
+- Create bundles (`qgen bundle new`) or edit any bundle's categories. That is the gamemaster's call.
 - Approve, reject or revise questions that `qgen batch` marked `needs_work`. The gamemaster decides those in the review tool.
 
 ## What the batch does (for reference)
@@ -40,7 +41,8 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
 The fixed rules are in `authoring/tools/qgen.py` (`cmd_batch`):
 
 - **Name:** `batch-<n>`, one more than the highest so far. An unfinished batch is resumed instead.
-- **Subcategories:** the 30 with the fewest approved questions (ties in `app/data/categories.json` order).
+- **Bundle:** `base` unless `--bundle` names another one (D-41). Every question of the batch is in that bundle.
+- **Subcategories:** the bundle's 30 with the fewest approved questions in that bundle (ties in the order of the bundle's categories file: `app/data/categories.json` for `base`, `app/data/bundles/<id>/categories.json` for another bundle, D-43).
 - **Steps:** concepts → draft → rate → factcheck → revise → apply → rate → factcheck → merge → media → sheets → review → research → sheets → review → record → export → sync → batch-report → validate. Each skips work already done, so rerunning continues where it stopped.
 - **Review:** one Claude call per question (`prompts/review.md`). It sees the question, the rater's notes, the fact check, related pool questions, and a contact sheet of the media candidates, and answers with a decision and a pick.
 - **Fixed rules on top of the review:** no adequate media after one new search, or a fact check that isn't confirmed, makes a question `needs_work`. Reviews are recorded as `reviewer: "llm"` with the model's id (D-33).

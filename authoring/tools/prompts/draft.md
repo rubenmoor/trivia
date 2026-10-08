@@ -1,6 +1,6 @@
 # Task: draft questions
 
-Write questions for one subcategory of the trivia game described above. You get the subcategory, its broad category, the question axes, and a list of slots. Each slot has:
+Write questions for one subcategory of the trivia game described above. You get the subcategory, its broad category, the question axes, a list of slots, and the bundle every question is in. Each slot has:
 - a `concept` (and its facet): what the question is about;
 - a `target_difficulty`;
 - up to three numbered `options`: combinations of the question axes (move, stimulus, clue, answer_kind, lens);
@@ -20,5 +20,5 @@ Rules:
   - `"no"`: anything else (e.g. none of the three options fits the concept).
 - `stimulus` other than `none` means the media is part of the question: `media.role` is "essential", `needs_media` is true, and `media.note` says exactly what must be shown or played. `photo`, `detail`, `silhouette` and `map_outline` are images, `sound` is audio, `video` is video. With `stimulus` `none`, the media is illustrative or decorative and `needs_media` is false.
 - Set `needs_fact_check` to true if the question, answer, hints or fun fact contain a number, date, record, superlative ("el más grande") or any fact that could be wrong.
-- `bundle`: the one bundle whose rule fits the question (listed under "Bundles"). Judge by what a player needs to know to answer, not by the topic; when in doubt, `base`.
+- **Stay inside the bundle** (under "Bundle"): judge by what a player needs to know to answer, not by the topic. A question in `base` must be answerable without a connection to Colombia or any other bundle's world; if a slot can't give one, skip it (`retire` `"no"`).
 - `background_query`: only for audio questions: an English Commons search term for a generic, decorative background image shown while the sound plays (e.g. "misty forest" for a bird call). It must not show the answer. Empty string for all other questions.

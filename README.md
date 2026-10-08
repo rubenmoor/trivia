@@ -81,6 +81,8 @@ Also on the authoring server: stats at `/stats/categories`, `/stats/subcategorie
 ```sh
 claude                   # log in once (Claude Code is in the dev shell)
 qgen batch               # one new batch: concepts, drafts, rating, fact-check, revision, media
+qgen batch --bundle colombia   # the same for another bundle's subcategories
+qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle; then fill app/data/bundles/<id>/categories.json
 ```
 
 Don't run the pipeline steps by hand; the batch command does it all and can be resumed. Details: [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md). Afterwards, review the batch in the review tool.

@@ -11,12 +11,14 @@ app/                    ships: everything a player's install contains
   server/               main.py (static files, game API, /media), game.py, selection.py,
                         categories.py, media_cache.py
   client/               the game UI (Svelte); builds to app/client/dist/
-  data/                 categories.json, pool.json (exported, approved questions only)
+  data/                 categories.json (base's), bundles.json, bundles/<id>/categories.json (D-43),
+                        pool.json (exported, approved questions only)
 authoring/              never ships
   tools/                qgen.py, concepts.py (concept lists, axes), media.py (Commons search, sheets), prompts/
   server/               main.py: review tool, stats and print pages, authoring API
   ui/                   review, stats and print pages (Svelte); builds to authoring/ui/dist/
-  data/                 questions.json (the source pool), question-axes.json, concepts/ (D-37)
+  data/                 questions.json (the source pool), question-axes.json, concepts/ (D-37),
+                        bundles/<id>/concepts/ and optional question-axes.json (D-43)
   reports/              one generated report per batch
   RUNBOOK.md            the LLM batch procedure: the only instructions an LLM follows for questions
 state/  media/  work/   gitignored: game saves, media cache, pipeline work files

@@ -16,7 +16,8 @@ import paths as app_paths  # noqa: E402  (app/server/paths.py)
 
 SOURCE_POOL = AUTHORING / "data" / "questions.json"  # every question, with reviews and pipeline fields
 AXES_FILE = AUTHORING / "data" / "question-axes.json"  # question styles as axes (D-37)
-CONCEPTS = AUTHORING / "data" / "concepts"  # one concept list per subcategory (D-37)
+CONCEPTS = AUTHORING / "data" / "concepts"  # one concept list per subcategory of base (D-37)
+BUNDLE_DATA = AUTHORING / "data" / "bundles"  # another bundle's concepts/ and question-axes.json (D-43)
 PROMPTS = AUTHORING / "tools" / "prompts"
 REPORTS = AUTHORING / "reports"
 DIST = AUTHORING / "ui" / "dist"

@@ -3,12 +3,12 @@
 
     trivia [--port 8000] [--host 127.0.0.1]        (or: python3 app/server/main.py)
 
-It reads only app/data/ (pool.json, categories.json) and writes only the game state
+It reads only app/data/ (pool.json, the categories files) and writes only the game state
 (TRIVIA_STATE, default state/) and the media cache (TRIVIA_MEDIA, default media/), D-35.
 The review tool and stats pages are authoring tools with their own server (authoring/server).
 
 API:
-    GET  /api/categories                           app/data/categories.json: broad categories with subcategories (D-19)
+    GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
     GET  /media?url=<file_url>                     a picked media file from the cache; downloaded first on a
                                                    cache miss. Only URLs in the pool (D-17).
     GET  /api/game[?player=<name>]                 {"game": the newest game or null, "supply": supply check

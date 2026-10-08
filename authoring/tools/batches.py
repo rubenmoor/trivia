@@ -18,11 +18,12 @@ def unfinished_runs():
     return sorted(out)
 
 
-def subcategories(pool, count=SUBCATEGORIES):
-    """The `count` subcategories with the fewest approved questions in `pool`; ties in categories.json order."""
+def subcategories(pool, count=SUBCATEGORIES, bundle="base"):
+    """The bundle's `count` subcategories with the fewest approved questions of that bundle in `pool`;
+    ties in its categories.json order (D-41)."""
     approved = {}
     for q in pool:
-        if q["status"] == "approved":
+        if q["status"] == "approved" and q.get("bundle") == bundle:
             approved[q["subcategory"]] = approved.get(q["subcategory"], 0) + 1
-    order = [s for c in categories.load() for s in c["subcategories"]]
+    order = categories.subcategories(bundle)
     return sorted(order, key=lambda s: (approved.get(s, 0), order.index(s)))[:count]

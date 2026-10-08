@@ -19,7 +19,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 
 ## In the pipeline
 - **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The gamemaster checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
-- **New questions (until BN-8):** the drafter picks the bundle by the rules (D-36's batch stays one command). The rater doesn't judge it; the gamemaster can change it in the review tool. D-41 replaces this: see "Batches per bundle".
+- **New questions:** until BN-8 the drafter picked the bundle by the rules. Since BN-8 the batch's bundle is set by the command (see "Batches per bundle"); the gamemaster can still change it in the review tool.
 - **Checks and output:** `validate` (bundle must exist), `export` (the game needs `bundle`), `report` (questions and supply per bundle).
 - **House style:** base questions may use Colombian references that anyone in the Spanish-speaking world knows; anything more goes into `colombia`.
 
@@ -35,7 +35,20 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 - **Choosing subcategories:** a bundle batch picks the 30 subcategories with the fewest approved questions *in that bundle* (the same rule as today, applied to the bundle's own list).
 - **Taxonomy stays per bundle:** a bundle's subcategories, concepts and axes only feed its own batches. `base`'s lists don't change when a bundle is made.
 
-Open: OQ-41..OQ-44.
+### Layout (D-43)
+| What | `base` | Another bundle `<id>` |
+|---|---|---|
+| Categories (ship) | `app/data/categories.json` | `app/data/bundles/<id>/categories.json` |
+| Concept lists | `authoring/data/concepts/` | `authoring/data/bundles/<id>/concepts/` |
+| Question axes | `authoring/data/question-axes.json` | `authoring/data/bundles/<id>/question-axes.json`, if present; otherwise `base`'s |
+
+- Subcategory names and broad-category slugs are unique across all bundles (`validate`), so a subcategory names its bundle's taxonomy. Question ids are global; concept names are unique within a bundle.
+- The taxonomy steers generation; `bundle` steers play. A question may keep a subcategory from another bundle's list: base questions like "¿Cuál es la capital de Colombia?" stay in `base` even though their subcategory is now `colombia`'s.
+- `app/server/categories.py` reads every bundle's categories (each broad category carries its `bundle`), so the game's «Cambiazo» picker keeps showing all of them until BN-6.
+- `colombia`'s list: the 27 Colombian subcategories that were in `base` (Colombia, Fiestas colombianas, Platos típicos colombianos, Selección Colombia, Palabras colombianas, …) in 6 broad categories. Their concept lists moved with them.
+- A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the gamemaster moves the rest with `n`.
+
+- **One house style for every bundle** (D-44): a session mixes questions from all active bundles, so a bundle's own axes may change *what* is asked, never *how* it is written.
 
 ## Later
 - **The game** (BN-6): a choice of bundles before a session, `base` always on; selection filters by the active bundles. Until then the game plays every bundle, as now.
@@ -48,8 +61,8 @@ Open: OQ-41..OQ-44.
 - [x] BN-5 `report` per bundle; review tool shows the bundle, filters by it (`?bundle=`) and lets the gamemaster change it. *Key `n` moves a question to the next bundle. The server also accepts difficulty 1–15 now (D-38); the review tool's digit keys still set 1–10.*
 - [ ] BN-6 The game: choose bundles before a session; selection filters by them
 - [-] BN-7 `qgen batch` aimed at one bundle. *Replaced by BN-8..BN-12 (D-41).*
-- [ ] BN-8 `qgen batch` writes `base` by default: `draft` sets the batch's bundle instead of picking one; prompts drop the bundle choice and keep the base rule as a content limit (D-41)
-- [ ] BN-9 `qgen bundle new <id>`: creates an empty bundle (entry in `bundles.json` plus its own categories, concept and optional axes files); layout per OQ-41
-- [ ] BN-10 Per-bundle categories, concept lists and axes in `qgen` (`concepts`, `draft`, `validate`, `report`, `batch-report`), with fallback to `base`'s axes
-- [ ] BN-11 `qgen batch --bundle <id>`: subcategory choice inside the bundle; RUNBOOK allows exactly this argument when the user names a bundle (D-36 amended)
-- [ ] BN-12 What happens to `colombia` today: its questions, and the Colombian subcategories in `base`'s `categories.json` (OQ-42)
+- [x] BN-8 `qgen batch` writes `base` by default: `draft` sets the batch's bundle instead of picking one; prompts drop the bundle choice and keep the base rule as a content limit (D-41). *The bundle is stored in `run.json`; runs without one are `base`.*
+- [x] BN-9 `qgen bundle new <id>`: creates an empty bundle (entry in `bundles.json` plus its own categories, concept and optional axes files); layout per D-43. *`--name`, `--description`, `--kind`, `--rule`; writes an empty `categories.json` to fill by hand. Axes stay `base`'s until a `question-axes.json` is added.*
+- [x] BN-10 Per-bundle categories, concept lists and axes in `qgen` (`concepts`, `draft`, `validate`, `report`, `batch-report`), with fallback to `base`'s axes
+- [x] BN-11 `qgen batch --bundle <id>`: subcategory choice inside the bundle; RUNBOOK allows exactly this argument when the user names a bundle (D-36 amended). *Fewest approved questions of that bundle per subcategory.*
+- [x] BN-12 What happens to `colombia` today: its questions, and the Colombian subcategories in `base`'s `categories.json` (OQ-42). *2026-10-08 (D-43): 27 subcategories and their concept lists moved to `colombia`; questions keep their bundle. Batch-6 checked by the rule: q-0524 (asks the flower's Colombian name) moved to `colombia`.*

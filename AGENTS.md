@@ -21,7 +21,7 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 If you are asked to make, generate, add, review or approve questions, follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly and nothing else (D-36). It is one command, `qgen batch`. Don't run pipeline steps by hand, don't edit the pools, and don't pick media yourself.
 
 ## Repo layout (D-35)
-- `app/` is what ships: the game server (`app/server/`), the game UI (`app/client/`) and its data (`app/data/categories.json`, `app/data/pool.json`).
+- `app/` is what ships: the game server (`app/server/`), the game UI (`app/client/`) and its data (`app/data/categories.json`, `app/data/bundles/`, `app/data/pool.json`).
 - `authoring/` never ships: the source pool (`authoring/data/questions.json`), the pipeline (`authoring/tools/`), the review/stats/print pages (`authoring/server/`, `authoring/ui/`).
 - `authoring/` may import from `app/`; `app/` never imports from `authoring/` and never reads `authoring/data/`. Put new code on the side it belongs to: if a player's install needs it, it's `app/`.
 - Details: [`plans/19-repo-layout.md`](plans/19-repo-layout.md); every path explained: [`directory.md`](directory.md).
@@ -39,4 +39,4 @@ All tools come from the flake (D-18, D-35): `direnv allow` once (or `nix develop
 - Media: `trivia-media sync --status approved` before game night (`--prune` deletes unreferenced files).
 - Packaged game: `nix build .#app`, then `result/bin/trivia`.
 - Placeholders: unpolished game parts are marked `PLACEHOLDER(<task ID>)` in code and on screen (D-25); `grep -rn PLACEHOLDER app/client/src` lists them.
-- Categories: `app/data/categories.json` (broad categories → subcategories, D-19); questions store only `subcategory`.
+- Categories: `app/data/categories.json` for `base`, `app/data/bundles/<id>/categories.json` for another bundle (broad categories → subcategories, D-19, D-43); questions store only `subcategory` and `bundle`. A batch writes for one bundle: `qgen batch` is `base`, `qgen batch --bundle <id>` another (D-41).
