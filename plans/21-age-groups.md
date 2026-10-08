@@ -49,4 +49,4 @@ Why one scale and not a difficulty per group: one number per question is simple 
 - [x] AG-6 Espacio's concept list again, with `known_at`. *255 concepts (225 + a 30-concept fill), `known_at` 1–14; 146 in the young-teen window, 86 in the kids', 232 in each adult window.*
 - [ ] AG-7 The game: choose an age group; levels map to the group's window; tune the draft windows and per-group level weights
 - [ ] AG-8 Batches for other age groups: `LEVEL_WEIGHTS` per group, and how a batch picks its group
-- [ ] AG-9 Review tool: set difficulties 11–15 (the server accepts 1–15; the digit keys only reach 1–10)
+- [x] AG-9 Review tool: set difficulties 11–15 (the server accepts 1–15; the digit keys only reach 1–10). *`d`, then type the number and press Enter; Backspace corrects, Esc cancels. The header shows the difficulty without "/10".*

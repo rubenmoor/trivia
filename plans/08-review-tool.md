@@ -45,7 +45,7 @@ Single keys, no modifiers:
 | `→` / `←` | Next / previous question without deciding |
 | `s` | Show / hide rater scores |
 | `u` | Undo the last decision and go back to that question |
-| `d`, then a digit | Set the difficulty: `1`–`8` as they are, `0` → 1, `9` → 10. The first change keeps the generator's value in `difficulty_original` (for calibrating difficulty estimates). |
+| `d`, a number, Enter | Set the difficulty on the shared scale 1–15 (D-38): type the number, Enter saves, Backspace corrects, Esc cancels. The first change keeps the generator's value in `difficulty_original` (for calibrating difficulty estimates). |
 | `c` | Show / hide the alternative media candidates |
 | `b` | Show / hide the alternative background images (audio questions only, D-14) |
 | `1`–`6` | (only while alternatives are shown) pick media candidate n; downloads it (`06-images.md`) |

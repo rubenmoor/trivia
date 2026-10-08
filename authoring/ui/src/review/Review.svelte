@@ -36,8 +36,10 @@
   let downloads = $state(0);
   /** Which slot's alternatives are shown; digits and "m" act on it. */
   let openSlot = $state<Slot | null>(null);
-  /** After "d": the next digit sets the difficulty. */
-  let difficultyPending = $state(false);
+  /** After "d": the digits typed so far; Enter sets the difficulty, Esc cancels. null = not typing. */
+  let difficultyInput = $state<string | null>(null);
+  /** Top of the shared difficulty scale (app/data/age-groups.json, D-38); the server checks it too. */
+  const MAX_DIFFICULTY = 15;
   let toast = $state<string | null>(null);
   let busy = false;
   let toastTimer: ReturnType<typeof setTimeout> | undefined;
@@ -252,9 +254,31 @@
     mediaAction("🔍 new candidates", `searching Commons for “${query}”`, () => searchMedia(id, query, slot));
   }
 
-  /** 1–8 as they are; 0 → 1 and 9 → 10, so every level is one key. */
-  function digitToDifficulty(digit: number) {
-    return digit === 0 ? 1 : digit === 9 ? 10 : digit;
+  function startDifficulty() {
+    difficultyInput = "";
+    flash(`difficulty: type 1–${MAX_DIFFICULTY}, then Enter (Esc: cancel)`);
+  }
+
+  /** Keys while typing a difficulty: digits, Backspace, Enter, Esc. */
+  function difficultyKey(event: KeyboardEvent, digit: string | null) {
+    event.preventDefault();
+    const typed = difficultyInput ?? "";
+    if (digit !== null) {
+      difficultyInput = (typed + digit).slice(-2);
+    } else if (event.key === "Backspace") {
+      difficultyInput = typed.slice(0, -1);
+    } else if (event.key === "Enter") {
+      const value = Number(typed);
+      difficultyInput = null;
+      if (!typed) return flash("difficulty unchanged");
+      if (!Number.isInteger(value) || value < 1 || value > MAX_DIFFICULTY) {
+        return flash(`difficulty must be 1–${MAX_DIFFICULTY}; unchanged`);
+      }
+      changeDifficulty(value);
+    } else if (event.key === "Escape") {
+      difficultyInput = null;
+      flash("difficulty unchanged");
+    }
   }
 
   async function changeDifficulty(difficulty: number) {
@@ -263,7 +287,7 @@
     try {
       const updated = await setDifficulty(questions[i].id, difficulty);
       questions[i] = { ...questions[i], difficulty: updated.difficulty, difficulty_original: updated.difficulty_original };
-      flash(`difficulty ${difficulty}/10`);
+      flash(`difficulty ${difficulty}`);
     } catch (e) {
       reportError(`setting difficulty for ${questions[i]?.id}`, e);
     }
@@ -288,7 +312,7 @@
     if (!questions.length) return;
     finished = false;
     openSlot = null;
-    difficultyPending = false;
+    difficultyInput = null;
     index = (index + delta + questions.length) % questions.length;
   }
 
@@ -319,13 +343,7 @@
     // event.code is the physical key, so this works on every keyboard layout
     // (e.g. AZERTY, where the top row gives "&é\"'(-" without Shift).
     const anyDigit = /^(?:Digit|Numpad)([0-9])$/.exec(event.code)?.[1] ?? (/^[0-9]$/.test(event.key) ? event.key : null);
-    if (difficultyPending) {
-      event.preventDefault();
-      difficultyPending = false;
-      if (anyDigit !== null) changeDifficulty(digitToDifficulty(Number(anyDigit)));
-      else flash("difficulty unchanged");
-      return;
-    }
+    if (difficultyInput !== null) return difficultyKey(event, anyDigit);
     const digit = anyDigit !== null && /[1-6]/.test(anyDigit) ? anyDigit : null;
     if (digit) {
       event.preventDefault();
@@ -341,10 +359,7 @@
       r: () => decide("rejected"),
       f: openFeedback,
       m: openSearch,
-      d: () => {
-        difficultyPending = true;
-        flash("difficulty: press 0–9 (0 = 1, 9 = 10)");
-      },
+      d: startDifficulty,
       n: nextBundle,
       c: () => toggle("media"),
       b: () => toggle("background"),
@@ -404,7 +419,9 @@
       {/if}
       <span class="meta">
         {current.id} · {current.subcategory} ·
-        <span class:pending={difficultyPending}>difficulty {current.difficulty}/10</span>
+        <span class:pending={difficultyInput !== null}
+          >difficulty {difficultyInput !== null ? `${difficultyInput}▏ (Enter)` : current.difficulty}</span
+        >
         {#if current.difficulty_original != null && current.difficulty_original !== current.difficulty}
           (was {current.difficulty_original})
         {/if}
@@ -485,7 +502,7 @@
                 correct {current.quality.correct} · unambiguous {current.quality.unambiguous} ·
                 distractors {current.quality.distractors} · age {current.quality.age_fit} ·
                 fun {current.quality.fun} · description {current.quality.description} ·
-                estimated difficulty {current.quality.difficulty_estimate}/10
+                estimated difficulty {current.quality.difficulty_estimate}
               </p>
               <p class="muted">{current.quality.notes}</p>
             {/if}
@@ -533,7 +550,7 @@
       <button class="approve" onclick={() => decide("approved")}><kbd>a</kbd> approve</button>
       <button class="feedback-btn" onclick={openFeedback}><kbd>f</kbd> feedback</button>
       <button class="reject" onclick={() => decide("rejected")}><kbd>r</kbd> reject</button>
-      <button onclick={() => { difficultyPending = true; flash("difficulty: press 0–9 (0 = 1, 9 = 10)"); }}><kbd>d</kbd> difficulty</button>
+      <button onclick={startDifficulty}><kbd>d</kbd> difficulty</button>
       <button onclick={nextBundle}><kbd>n</kbd> bundle</button>
       <button onclick={openSearch}><kbd>m</kbd> media search</button>
       <button onclick={() => toggle("media")}><kbd>c</kbd> {openSlot === "media" ? "hide" : "show"} alternatives</button>

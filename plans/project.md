@@ -63,7 +63,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [ ] PE-13 Compare the first concept-based batch against the PE-6 batch — [`20`](20-pipeline-efficiency.md)
 - [x] AG-2..AG-6 Four age groups, shared scale 1–15, focus group young teens: data file, house style, prompts, `qgen`, Espacio list again (D-38) — [`21`](21-age-groups.md)
 - [ ] AG-8 Batches for other age groups (`LEVEL_WEIGHTS` per group) — [`21`](21-age-groups.md)
-- [ ] AG-9 Review tool: set difficulties 11–15 — [`21`](21-age-groups.md)
+- [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
 - [ ] BN-7 Batches aimed at one bundle (e.g. sports) — [`22`](22-bundles.md)
 
 No family-specific questions (D-30).
