@@ -1,5 +1,5 @@
 {
-  "about": "Question styles as independent axes (plans/20-pipeline-efficiency.md, PE-7, D-37). A question is one value on each axis. `draft` draws compatible combinations; `rules` say which values go together. Explanations go into the prompts. `weights`: base weight per value when drawing (default 1); it sets each value's expected share, and values used more than expected are drawn less.",
+  "about": "Question styles as independent axes (plans/20-pipeline-efficiency.md, PE-7, D-37). A question is one value on each axis. `draft` draws compatible combinations; `rules` say which values go together. Explanations go into the prompts. `weights`: base weight per value when drawing (default 1); it sets each value's expected share, and values used more than expected are drawn less. The axes say nothing about the players' age: who can answer a question is the difficulty's job.",
   "axes": {
     "move": {
       "label": "what the player has to do",
@@ -57,12 +57,16 @@
       }
     },
     "lens": {
-      "label": "where the question meets the players' world",
+      "label": "where the player has met the topic",
       "values": {
-        "school": "what kids learn at school",
-        "everyday": "home, the kitchen, the street, shopping, things kids use every day",
+        "school": "what is taught at primary and secondary school",
+        "university": "what is taught at college or university: the basics of a discipline, its classic theories, experiments and textbook examples",
+        "everyday": "home, the kitchen, the street, shopping, work, the things people use every day",
         "colombia": "Colombian places, food, customs, people or nature",
-        "pop_culture": "films, cartoons, games, books and characters kids know",
+        "pop_culture": "films, TV series and shows, games, comics, novels, music and their characters",
+        "popular_science": "popular science books and the famous ideas they made known: thought experiments, paradoxes, well-known experiments and the stories behind discoveries",
+        "science_news": "discoveries, missions and findings that made the news; only settled facts, never current records or anything still changing",
+        "educational_media": "documentaries, educational YouTube channels, science and history TV programmes, museums and planetariums",
         "nature": "animals, plants, weather and landscapes, outdoors",
         "history": "how things were long ago, and how they changed",
         "body_senses": "the human body, the senses, health, sport and movement",
@@ -71,280 +75,25 @@
     }
   },
   "weights": {
-    "stimulus": {
-      "none": 7,
-      "photo": 1.5,
-      "detail": 0.8,
-      "silhouette": 0.4,
-      "map_outline": 0.4,
-      "sound": 0.8,
-      "video": 0.3
-    }
+    "stimulus": {"none": 7, "photo": 1.5, "detail": 0.8, "silhouette": 0.4, "map_outline": 0.4, "sound": 0.8, "video": 0.3}
   },
   "rules": [
-    {
-      "if": {
-        "stimulus": [
-          "sound",
-          "silhouette",
-          "detail",
-          "map_outline"
-        ]
-      },
-      "then": {
-        "move": [
-          "identify"
-        ],
-        "clue": [
-          "direct"
-        ]
-      }
-    },
-    {
-      "if": {
-        "stimulus": [
-          "photo"
-        ]
-      },
-      "then": {
-        "move": [
-          "identify",
-          "origin",
-          "made_of",
-          "purpose",
-          "who",
-          "count"
-        ],
-        "clue": [
-          "direct"
-        ]
-      }
-    },
-    {
-      "if": {
-        "stimulus": [
-          "video"
-        ]
-      },
-      "then": {
-        "move": [
-          "identify",
-          "sequence",
-          "cause_effect"
-        ],
-        "clue": [
-          "direct"
-        ]
-      }
-    },
-    {
-      "if": {
-        "stimulus": [
-          "map_outline"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "place"
-        ]
-      }
-    },
-    {
-      "if": {
-        "stimulus": [
-          "sound"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "thing"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "count",
-          "estimate"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "number"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "when"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "time"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "who"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "person"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "origin"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "place",
-          "thing",
-          "person"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "name_concept",
-          "word_meaning",
-          "analogy"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "word",
-          "thing"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "connection"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "group",
-          "word"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "record",
-          "odd_one_out",
-          "identify"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "thing",
-          "person",
-          "place",
-          "group",
-          "word"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "made_of",
-          "purpose"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "thing",
-          "group",
-          "word"
-        ]
-      }
-    },
-    {
-      "if": {
-        "move": [
-          "count",
-          "estimate",
-          "when",
-          "analogy",
-          "connection",
-          "odd_one_out",
-          "sequence"
-        ]
-      },
-      "then": {
-        "clue": [
-          "direct",
-          "scenario"
-        ]
-      }
-    },
-    {
-      "if": {
-        "clue": [
-          "three_facts"
-        ]
-      },
-      "then": {
-        "answer_kind": [
-          "thing",
-          "place",
-          "group",
-          "word"
-        ]
-      }
-    },
-    {
-      "if": {
-        "clue": [
-          "completion"
-        ]
-      },
-      "then": {
-        "move": [
-          "identify",
-          "word_meaning"
-        ],
-        "answer_kind": [
-          "word"
-        ],
-        "lens": [
-          "language",
-          "pop_culture",
-          "colombia",
-          "everyday"
-        ]
-      }
-    },
-    {
-      "if": {
-        "answer_kind": [
-          "number",
-          "time"
-        ]
-      },
-      "then": {
-        "move": [
-          "count",
-          "estimate",
-          "when",
-          "record",
-          "sequence"
-        ]
-      }
-    }
+    {"if": {"stimulus": ["sound", "silhouette", "detail", "map_outline"]}, "then": {"move": ["identify"], "clue": ["direct"]}},
+    {"if": {"stimulus": ["photo"]}, "then": {"move": ["identify", "origin", "made_of", "purpose", "who", "count"], "clue": ["direct"]}},
+    {"if": {"stimulus": ["video"]}, "then": {"move": ["identify", "sequence", "cause_effect"], "clue": ["direct"]}},
+    {"if": {"stimulus": ["map_outline"]}, "then": {"answer_kind": ["place"]}},
+    {"if": {"stimulus": ["sound"]}, "then": {"answer_kind": ["thing"]}},
+    {"if": {"move": ["count", "estimate"]}, "then": {"answer_kind": ["number"]}},
+    {"if": {"move": ["when"]}, "then": {"answer_kind": ["time"]}},
+    {"if": {"move": ["who"]}, "then": {"answer_kind": ["person"]}},
+    {"if": {"move": ["origin"]}, "then": {"answer_kind": ["place", "thing", "person"]}},
+    {"if": {"move": ["name_concept", "word_meaning", "analogy"]}, "then": {"answer_kind": ["word", "thing"]}},
+    {"if": {"move": ["connection"]}, "then": {"answer_kind": ["group", "word"]}},
+    {"if": {"move": ["record", "odd_one_out", "identify"]}, "then": {"answer_kind": ["thing", "person", "place", "group", "word"]}},
+    {"if": {"move": ["made_of", "purpose"]}, "then": {"answer_kind": ["thing", "group", "word"]}},
+    {"if": {"move": ["count", "estimate", "when", "analogy", "connection", "odd_one_out", "sequence"]}, "then": {"clue": ["direct", "scenario"]}},
+    {"if": {"clue": ["three_facts"]}, "then": {"answer_kind": ["thing", "place", "group", "word"]}},
+    {"if": {"clue": ["completion"]}, "then": {"move": ["identify", "word_meaning"], "answer_kind": ["word"], "lens": ["language", "pop_culture", "colombia", "everyday", "popular_science"]}},
+    {"if": {"answer_kind": ["number", "time"]}, "then": {"move": ["count", "estimate", "when", "record", "sequence"]}}
   ]
 }
