@@ -4,13 +4,17 @@ Files are named after their URL: <TRIVIA_MEDIA or media/>/<sha1(file_url)[:16]><
 server serves only URLs that a question in the pool uses (`pool_urls`), and downloads a file on
 a cache miss. `trivia-media sync` (authoring) fills the cache ahead of game night.
 """
-import hashlib, json, re, sys, threading, time, urllib.error, urllib.parse, urllib.request
+import hashlib, json, os, re, sys, threading, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 from paths import MEDIA, POOL
 
-# Wikimedia requires an identifying User-Agent.
-USER_AGENT = "FamilyTrivia/0.1 (private family trivia game; local use only)"
+# Wikimedia requires an identifying User-Agent with contact information.
+USER_AGENT = "FamilyTrivia/0.2 (https://github.com/rubenmoor/trivia) python-urllib"
+# Owner-only OAuth 2.0 token (IMG-15): API calls with it get higher rate limits. Only the
+# authoring tools have it (.env.local via direnv); file downloads and the game never send it.
+API_URL = "https://commons.wikimedia.org/w/api.php"
+TOKEN = os.environ.get("COMMONS_ACCESS_TOKEN")
 
 # Batch runs (`fetch`) wait out rate limits. The server sets this to False, so the
 # review tool gets an immediate error instead of a request that hangs for minutes.
@@ -29,7 +33,10 @@ def http_get(url, params=None):
     """GET with retries on rate limits. File downloads aren't throttled; API calls go through api()."""
     if params:
         url += "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    headers = {"User-Agent": USER_AGENT}
+    if TOKEN and url.startswith(API_URL):
+        headers["Authorization"] = f"Bearer {TOKEN}"
+    req = urllib.request.Request(url, headers=headers)
     for attempt in range(5):
         try:
             with urllib.request.urlopen(req, timeout=60) as res:

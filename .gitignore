@@ -3,6 +3,9 @@ dist/
 work/
 *.tmp
 
+# secrets (Commons token for the authoring tools, IMG-15)
+.env.local
+
 # Media cache: files are downloaded from the URLs in the pool (D-17).
 media/
 __pycache__/

@@ -20,7 +20,7 @@ from media_cache import (MEDIA, RateLimited, USER_AGENT, cache_path, cached, htt
                          picked, pool_urls)
 import media_cache
 
-API = "https://commons.wikimedia.org/w/api.php"
+API = media_cache.API_URL
 MAX_CANDIDATES = 6
 PREVIEW_WIDTH = 500           # Commons rounds thumbnail widths to standard sizes; 500 is one
 IMAGE_WIDTH = 2560            # for 4K TVs; smaller originals are downloaded as they are

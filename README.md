@@ -89,6 +89,8 @@ Don't run the pipeline steps by hand; the batch command does it all and can be r
 
 `trivia-media fetch --batch <batch>` searches Commons for media candidates for questions that have none yet. The single pipeline steps (`qgen draft`, `rate`, `factcheck`, …, and `qgen import` for revising questions already in the pool) stay available for debugging; work files go to `work/<run>/`. See [`plans/07-question-generation.md`](plans/07-question-generation.md).
 
+Commons search runs anonymously, or with higher rate limits as your account: create an owner-only OAuth 2.0 consumer (basic rights) on Meta-Wiki and put `COMMONS_ACCESS_TOKEN=…` in `.env.local` (gitignored, loaded by direnv; IMG-15).
+
 ### Check the question pool
 
 ```sh
