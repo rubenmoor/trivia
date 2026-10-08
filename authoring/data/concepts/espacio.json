@@ -1,0 +1,1138 @@
+{
+  "subcategory": "Espacio",
+  "facets": [
+    "El Sol y las estrellas",
+    "Planetas del sistema solar",
+    "La Luna y otras lunas",
+    "Cometas, asteroides y meteoritos",
+    "Constelaciones y cielo nocturno",
+    "Galaxias y universo lejano",
+    "Astronautas y exploradores espaciales",
+    "Misiones, cohetes y naves",
+    "Telescopios y observatorios",
+    "Fenómenos: eclipses, fases y estaciones",
+    "Vida y cuerpo en el espacio",
+    "El espacio en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 5,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 5,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "everyday": 3,
+      "colombia": 2,
+      "pop_culture": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sol",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 5
+    },
+    {
+      "name": "Estrella",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 5
+    },
+    {
+      "name": "Enana blanca",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Gigante roja",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Supernova",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 3
+    },
+    {
+      "name": "Estrella de neutrones",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 1
+    },
+    {
+      "name": "Sirio",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Betelgeuse",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 1
+    },
+    {
+      "name": "Próxima Centauri",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Estrella Polar",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 3
+    },
+    {
+      "name": "Manchas solares",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Llamarada solar",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Viento solar",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Fusión nuclear",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Corona solar",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 2
+    },
+    {
+      "name": "Hidrógeno",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 3
+    },
+    {
+      "name": "Helio",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 3
+    },
+    {
+      "name": "Vega",
+      "facet": "El Sol y las estrellas",
+      "familiarity": 1
+    },
+    {
+      "name": "Mercurio",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Venus",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Tierra",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 5
+    },
+    {
+      "name": "Marte",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 5
+    },
+    {
+      "name": "Júpiter",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 5
+    },
+    {
+      "name": "Saturno",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 5
+    },
+    {
+      "name": "Urano",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Neptuno",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Plutón",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Planeta enano",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 3
+    },
+    {
+      "name": "Gran Mancha Roja",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 2
+    },
+    {
+      "name": "Anillos de Saturno",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Sistema solar",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 5
+    },
+    {
+      "name": "Órbita",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 3
+    },
+    {
+      "name": "Gravedad",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 4
+    },
+    {
+      "name": "Monte Olimpo de Marte",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 1
+    },
+    {
+      "name": "Exoplaneta",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 2
+    },
+    {
+      "name": "Gigante gaseoso",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 2
+    },
+    {
+      "name": "Planeta rocoso",
+      "facet": "Planetas del sistema solar",
+      "familiarity": 2
+    },
+    {
+      "name": "Luna",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 5
+    },
+    {
+      "name": "Cráteres lunares",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 4
+    },
+    {
+      "name": "Mar de la Tranquilidad",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Cara oculta de la Luna",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 3
+    },
+    {
+      "name": "Satélite natural",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 3
+    },
+    {
+      "name": "Ío",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Europa",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 2
+    },
+    {
+      "name": "Ganimedes",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 2
+    },
+    {
+      "name": "Calisto",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Titán",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 2
+    },
+    {
+      "name": "Encélado",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Fobos",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Deimos",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Tritón",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Caronte",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 1
+    },
+    {
+      "name": "Polvo lunar",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 2
+    },
+    {
+      "name": "Huellas en la Luna",
+      "facet": "La Luna y otras lunas",
+      "familiarity": 3
+    },
+    {
+      "name": "Cometa",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 4
+    },
+    {
+      "name": "Cometa Halley",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 3
+    },
+    {
+      "name": "Cola de un cometa",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 3
+    },
+    {
+      "name": "Asteroide",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 4
+    },
+    {
+      "name": "Cinturón de asteroides",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 3
+    },
+    {
+      "name": "Ceres",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Vesta",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Meteorito",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 4
+    },
+    {
+      "name": "Estrella fugaz",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 5
+    },
+    {
+      "name": "Perseidas",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 2
+    },
+    {
+      "name": "Asteroide de Chicxulub",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 3
+    },
+    {
+      "name": "Cinturón de Kuiper",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Nube de Oort",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Evento de Tunguska",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Cometa Shoemaker-Levy 9",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Cometa Hale-Bopp",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Meteorito de Hoba",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 1
+    },
+    {
+      "name": "Bólido",
+      "facet": "Cometas, asteroides y meteoritos",
+      "familiarity": 2
+    },
+    {
+      "name": "Constelación",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 4
+    },
+    {
+      "name": "Osa Mayor",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Osa Menor",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 2
+    },
+    {
+      "name": "Orión",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Cruz del Sur",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 2
+    },
+    {
+      "name": "Escorpio",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Casiopea",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 1
+    },
+    {
+      "name": "Zodiaco",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Leo",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Géminis",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Tauro",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Pléyades",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 1
+    },
+    {
+      "name": "Pegaso",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 2
+    },
+    {
+      "name": "Can Mayor",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 1
+    },
+    {
+      "name": "Lyra",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 1
+    },
+    {
+      "name": "Contaminación lumínica",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 2
+    },
+    {
+      "name": "Astrología",
+      "facet": "Constelaciones y cielo nocturno",
+      "familiarity": 3
+    },
+    {
+      "name": "Vía Láctea",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 4
+    },
+    {
+      "name": "Galaxia de Andrómeda",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 2
+    },
+    {
+      "name": "Agujero negro",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 4
+    },
+    {
+      "name": "Big Bang",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 3
+    },
+    {
+      "name": "Año luz",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 3
+    },
+    {
+      "name": "Velocidad de la luz",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 3
+    },
+    {
+      "name": "Nebulosa",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 2
+    },
+    {
+      "name": "Pilares de la Creación",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 1
+    },
+    {
+      "name": "Nubes de Magallanes",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 1
+    },
+    {
+      "name": "Galaxia espiral",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 2
+    },
+    {
+      "name": "Sagitario A*",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 1
+    },
+    {
+      "name": "Materia oscura",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 1
+    },
+    {
+      "name": "Cuásar",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 1
+    },
+    {
+      "name": "Expansión del universo",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 2
+    },
+    {
+      "name": "Unidad astronómica",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 1
+    },
+    {
+      "name": "Agujero de gusano",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 2
+    },
+    {
+      "name": "Universo",
+      "facet": "Galaxias y universo lejano",
+      "familiarity": 5
+    },
+    {
+      "name": "Neil Armstrong",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 4
+    },
+    {
+      "name": "Buzz Aldrin",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 2
+    },
+    {
+      "name": "Michael Collins",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Yuri Gagarin",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 2
+    },
+    {
+      "name": "Valentina Tereshkova",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Perrita Laika",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 3
+    },
+    {
+      "name": "Chimpancé Ham",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Alexéi Leónov",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "John Glenn",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Sally Ride",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Mae Jemison",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Franklin Chang-Díaz",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Arnaldo Tamayo Méndez",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Chris Hadfield",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Nicolás Copérnico",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 2
+    },
+    {
+      "name": "Johannes Kepler",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 1
+    },
+    {
+      "name": "Cosmonauta",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 2
+    },
+    {
+      "name": "Astronauta",
+      "facet": "Astronautas y exploradores espaciales",
+      "familiarity": 5
+    },
+    {
+      "name": "Apolo 11",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 3
+    },
+    {
+      "name": "Apolo 13",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Sputnik 1",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Estación Espacial Internacional",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 3
+    },
+    {
+      "name": "Transbordador espacial",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 3
+    },
+    {
+      "name": "Saturno V",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 1
+    },
+    {
+      "name": "Voyager 1",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Disco de Oro de las Voyager",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 1
+    },
+    {
+      "name": "Curiosity",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Perseverance",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Ingenuity",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 1
+    },
+    {
+      "name": "New Horizons",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 1
+    },
+    {
+      "name": "Programa Artemis",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Cohete",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 5
+    },
+    {
+      "name": "NASA",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 4
+    },
+    {
+      "name": "Cuenta regresiva",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 4
+    },
+    {
+      "name": "Satélite artificial",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 3
+    },
+    {
+      "name": "Cabo Cañaveral",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Libertad 1",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 1
+    },
+    {
+      "name": "Sonda espacial",
+      "facet": "Misiones, cohetes y naves",
+      "familiarity": 2
+    },
+    {
+      "name": "Telescopio",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 5
+    },
+    {
+      "name": "Galileo Galilei",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 3
+    },
+    {
+      "name": "Telescopio espacial Hubble",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 3
+    },
+    {
+      "name": "Telescopio James Webb",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 2
+    },
+    {
+      "name": "Observatorio Astronómico Nacional de Colombia",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 2
+    },
+    {
+      "name": "Planetario de Bogotá",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 3
+    },
+    {
+      "name": "Planetario de Medellín",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 2
+    },
+    {
+      "name": "Observatorio de la Tatacoa",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 2
+    },
+    {
+      "name": "Lente",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 4
+    },
+    {
+      "name": "Binoculares",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 4
+    },
+    {
+      "name": "Radiotelescopio",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 2
+    },
+    {
+      "name": "Desierto de Atacama",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 2
+    },
+    {
+      "name": "Radiotelescopio de Arecibo",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 1
+    },
+    {
+      "name": "Isaac Newton",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 3
+    },
+    {
+      "name": "Telescopio reflector",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 1
+    },
+    {
+      "name": "Astrónomo",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 3
+    },
+    {
+      "name": "Mauna Kea",
+      "facet": "Telescopios y observatorios",
+      "familiarity": 1
+    },
+    {
+      "name": "Eclipse solar",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 4
+    },
+    {
+      "name": "Eclipse lunar",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 3
+    },
+    {
+      "name": "Fases de la Luna",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 4
+    },
+    {
+      "name": "Luna llena",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 5
+    },
+    {
+      "name": "Luna nueva",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 3
+    },
+    {
+      "name": "Estaciones del año",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 4
+    },
+    {
+      "name": "Solsticio",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 2
+    },
+    {
+      "name": "Equinoccio",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 2
+    },
+    {
+      "name": "Traslación de la Tierra",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 4
+    },
+    {
+      "name": "Rotación de la Tierra",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 4
+    },
+    {
+      "name": "Eje inclinado de la Tierra",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 2
+    },
+    {
+      "name": "Aurora boreal",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 3
+    },
+    {
+      "name": "Superluna",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 3
+    },
+    {
+      "name": "Mareas",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 3
+    },
+    {
+      "name": "Año bisiesto",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 4
+    },
+    {
+      "name": "Husos horarios",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 3
+    },
+    {
+      "name": "Día sin sombra",
+      "facet": "Fenómenos: eclipses, fases y estaciones",
+      "familiarity": 1
+    },
+    {
+      "name": "Ingravidez",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 3
+    },
+    {
+      "name": "Traje espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 4
+    },
+    {
+      "name": "Comida espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 3
+    },
+    {
+      "name": "Inodoro espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Saco de dormir espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Caminata espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 3
+    },
+    {
+      "name": "Radiación espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Vacío",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 3
+    },
+    {
+      "name": "Oxígeno",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 5
+    },
+    {
+      "name": "Reciclaje de agua",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Pérdida de masa ósea",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 1
+    },
+    {
+      "name": "Mareo espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Estatura en el espacio",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Huerto espacial",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 1
+    },
+    {
+      "name": "Tardígrado",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 2
+    },
+    {
+      "name": "Vida extraterrestre",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 4
+    },
+    {
+      "name": "Ovni",
+      "facet": "Vida y cuerpo en el espacio",
+      "familiarity": 4
+    },
+    {
+      "name": "WALL·E",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 4
+    },
+    {
+      "name": "Buzz Lightyear",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 5
+    },
+    {
+      "name": "Marcianitos de Toy Story",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 4
+    },
+    {
+      "name": "Star Wars",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 4
+    },
+    {
+      "name": "Darth Vader",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 4
+    },
+    {
+      "name": "Yoda",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 4
+    },
+    {
+      "name": "Halcón Milenario",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 2
+    },
+    {
+      "name": "E.T., el extraterrestre",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 3
+    },
+    {
+      "name": "Stitch",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 5
+    },
+    {
+      "name": "Interestelar",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 2
+    },
+    {
+      "name": "Gravity",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 1
+    },
+    {
+      "name": "Misión rescate",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 1
+    },
+    {
+      "name": "Among Us",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 5
+    },
+    {
+      "name": "Super Mario Galaxy",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 3
+    },
+    {
+      "name": "Space Invaders",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 2
+    },
+    {
+      "name": "Star Trek",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 1
+    },
+    {
+      "name": "Guardianes de la Galaxia",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 3
+    },
+    {
+      "name": "Superman",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 4
+    },
+    {
+      "name": "Mi villano favorito",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 5
+    },
+    {
+      "name": "El planeta del tesoro",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 1
+    },
+    {
+      "name": "Los Supersónicos",
+      "facet": "El espacio en películas y juegos",
+      "familiarity": 1
+    }
+  ]
+}

@@ -56,7 +56,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [ ] Top up difficulties 9–10 (only 24 approved, 2 at 10) — [`backlog`](backlog.md) B-6
 - [x] PE-1..PE-5 Fewer Claude calls and tokens per batch (grouped rate and revise, kept fact-checks, per-subcategory avoid list, compact JSON) — [`20`](20-pipeline-efficiency.md)
 - [ ] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 — [`20`](20-pipeline-efficiency.md)
-- [ ] PE-7..PE-12 Concept lists per subcategory and question styles as axes; `draft` draws concepts and axis combinations by code, after PE-6 — [`20`](20-pipeline-efficiency.md)
+- [x] PE-7..PE-12 Concept lists per subcategory and question styles as axes; `draft` draws concepts and axis combinations by code (D-37) — [`20`](20-pipeline-efficiency.md)
 - [ ] PE-13 Compare the first concept-based batch against the PE-6 batch — [`20`](20-pipeline-efficiency.md)
 
 No family-specific questions (D-30).
@@ -128,6 +128,3 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | OQ-35 | Code and content license | Steam S2 (17) |
 | OQ-36 | Audience: families only or an adult track | Steam S2 (13, 16) |
 | OQ-37 | Competitive mode and couch co-op format and input | Steam later (13, 14) |
-| OQ-38 | Concept list size per subcategory | PE-8 (20) |
-| OQ-39 | Question axes: values; axes for existing questions | PE-7, PE-11 (20) |
-| OQ-40 | Concept overlap across subcategories: synonyms | PE-8 (20) |

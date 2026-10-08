@@ -1,6 +1,6 @@
 # 20 — Fewer Claude Calls, More Varied Questions in `qgen batch`
 
-**Status:** draft
+**Status:** active
 
 `qgen batch` (D-36, [19](19-repo-layout.md)) makes about 225 `claude -p` calls per batch of 30 subcategories. This plan has two parts:
 
@@ -91,13 +91,14 @@ One file per subcategory, `authoring/data/concepts/<slug>.json`, committed (plai
               {"name": "Eclipse solar", "facet": "Fenómenos", "familiarity": 4, "retired": "nada nuevo que preguntar"}]}
 ```
 
-- **Facets first, then concepts.** `qgen concepts` makes two calls per subcategory: (1) 8–12 facets that cover the subcategory broadly; (2) 15–25 concepts per facet, about 150–250 per subcategory (size: OQ-38). A flat list written in one go starts strong and then repeats itself or gets obscure; the facets are what bring breadth.
+- **Facets first, then concepts.** `qgen concepts` makes two calls per subcategory: (1) 8–12 facets that cover the subcategory broadly, plus the axis fit (PE-9); (2) 15–25 concepts per facet, about 150–250 per subcategory (OQ-38, D-37), plus the concept and axes of each existing question. A flat list written in one go starts strong and then repeats itself or gets obscure; the facets are what bring breadth.
 - **Bare names, no facts or hooks.** A concept is a name ("Saturno"), not a fact about it. Facts come later in the draft, where they get fact-checked.
 - **`familiarity` 1–5**: how well a Colombian family knows the concept, written in the same call. It lets code match concepts to target difficulty (below). The draft's difficulty estimate still decides.
-- **No overlap across subcategories.** When a list is saved, concepts whose normalized name is already in another subcategory's list are dropped (the first list keeps them), and `qgen concepts` reports them. Synonyms and nicknames aren't caught (OQ-40).
-- **Existing questions get a concept.** Call (2) also receives the subcategory's existing questions and returns a concept for each (adding one to the list if needed). Questions store it in a new `concept` field. Without this, "Saturno" would show up as unused.
+- **No overlap across subcategories.** The calls run in parallel and save raw results in `work/concepts/`; one sequential pass then writes the lists. A concept whose normalized name is already in another list (existing lists first, then `categories.json` order) is dropped and reported, unless a question of this subcategory uses it (then both keep it). Synonyms and nicknames aren't caught (OQ-40, D-37).
+- **Existing questions get a concept.** Call (2) also receives the subcategory's existing questions and returns a concept for each (adding one to the list if needed). Questions store it in a new `concept` field, and their axes in `axes` (OQ-39, D-37). Without this, "Saturno" would show up as unused. The sequential pass writes both into the pool in one go.
 - **Usage is counted from the pool, not stored in the list.** The number of questions per concept comes from `questions.json` (all statuses), so there is one source of truth. The list stores only `retired` (below).
-- **Top-up:** when fewer than about 30 concepts in a list are unused and not retired, `qgen concepts --top-up` adds a facet or concepts. That call gets the list's names to avoid.
+- **Top-up:** when fewer than 30 concepts in a list are unused and not retired, `qgen concepts --top-up` adds concepts (new facets allowed). That call gets the list's names to avoid.
+- **In the batch:** the `concepts` step replaces `fit`. It makes the lists that the batch's subcategories don't have yet and tops up those running low; `qgen concepts` without arguments makes all missing lists at once.
 
 Cost: about 2 × 140 = 280 calls once, roughly one batch. After that, `draft` gets a short concept section instead of a long avoid list.
 
@@ -107,7 +108,7 @@ The style list mixes things that are really separate: media ("showing a picture"
 | Axis | What it varies | Values (first draft) |
 |---|---|---|
 | **Move** | what the player has to do | identify, name the concept, word meaning, count, estimate, real-world record, origin, made of / parts, what it's for, cause and effect, sequence (before/after, what comes next), connection (what three have in common), analogy ("A es a B como C es a…"), odd one out ("¿cuál NO…?"), who made/said/discovered, when |
-| **Stimulus** | what the screen shows or plays as part of the question | none (illustrative/decorative image only), photo, zoomed-in detail, silhouette, blurred/pixelated, map outline, sound, video |
+| **Stimulus** | what the screen shows or plays as part of the question | none (illustrative/decorative image only), photo, zoomed-in detail, silhouette, map outline, sound, video. *Blurred/pixelated dropped: the game has no effect for it and Commons rarely has such pictures (B-7).* |
 | **Clue form** | how the clue is worded | direct question, riddle in first person ("Tengo… ¿qué soy?"), everyday scenario ("Estás en la cocina y…"), completion (saying, quote, lyric), three facts (not for people: D-16) |
 | **Answer kind** | what the four options are | thing or animal, person or character, place, number, year or era, word or term, group or category |
 | **Lens** | where the question meets the players' world | school knowledge, home and everyday life, Colombia, films/games/cartoons, nature outdoors, history, body and senses, words and language |
@@ -115,21 +116,22 @@ The style list mixes things that are really separate: media ("showing a picture"
 
 - The values above are a first draft for the gamemaster to edit (OQ-39). Every value has one line of explanation in the file, which goes into the prompts. All values follow the house style ("use the four options honestly", media only from Commons, no songs or film clips).
 - **Compatibility rules** are in the same file and applied by code: e.g. `sound` only with `identify`; `map outline` only with answer kind `place`; `when` only with `year or era`; `count`/`estimate` only with `number`.
-- **Axis fit is scored once per subcategory and stored** (PE-9): a 1–5 score for each value of move, stimulus and lens, in the subcategory's concept file (`"axis_fit": {...}`). That replaces the `fit` step in every batch. Clue form and answer kind are not scored per subcategory: the compatibility rules and the drafter handle them.
-- Existing questions keep their `style`; new questions store `axes: {move, stimulus, clue, answer_kind, lens}` instead. Whether old questions get axes too: OQ-39.
+- **Axis fit is scored once per subcategory and stored** (PE-9): a 1–5 score for each value of move, stimulus and lens, in the subcategory's concept file (`"axis_fit": {...}`), from call (1) of `qgen concepts`. That replaces the `fit` step in every batch; `fit`, `fit.md` and `question-styles.txt` are removed. Clue form and answer kind are not scored per subcategory: the compatibility rules and the drafter handle them.
+- Existing questions keep their `style` as history; every question gets `axes: {move, stimulus, clue, answer_kind, lens}` (new ones from the draft, old ones from `qgen concepts`; OQ-39, D-37).
+- `stimulus` other than `none` means essential media; `none` means illustrative or decorative.
 
 ### Drafting from concepts and axes (PE-10)
-For each subcategory in a batch, code (seeded, as `assign_difficulties` is today) builds the slots:
+For each subcategory in a batch, code (seeded, as `assign_difficulties` is today) builds 4 slots (`--slots`, as many as `fit` allowed styles before):
 
 1. **Draw concepts.** The weight drops with the number of questions the concept already has (e.g. `1 / (1 + uses)²`), so untouched concepts usually come first, but used ones come back and push past their obvious facts. Retired concepts are never drawn. `familiarity` is matched to the slot's target difficulty (familiar concepts for easy slots, less familiar ones for hard slots). This is a preference, not a filter.
-2. **Draw 3 axis combinations per slot**, each compatible. The weight is the subcategory's axis fit × how rarely the value has been used, in this subcategory and in the whole pool. So unused moves, stimuli and lenses keep getting drawn until they're covered: the same "keep adding" principle as for content.
+2. **Draw 3 axis combinations per slot**, each compatible. Code first lists every compatible combination whose values fit the subcategory (fit 3–5; 1–2 never), then draws axis by axis (stimulus, move, answer kind, clue, lens) among the values that can still be completed, so a media stimulus isn't outnumbered by the many text-only combinations. The weight of a value is its base weight (`weights` in the axes file; stimulus `none` 7, `photo` 1.5, … for about 35 % media) × its fit × `1 / (1 + used / expected)` for the subcategory and again for the whole pool, where `expected` is the value's share of the base weights; × 0.3 if an earlier slot of the same subcategory already offered it. So unused moves, stimuli and lenses keep getting drawn until they're covered: the same "keep adding" principle as for content.
 3. **Draft.** The drafter gets per slot: the concept, the target difficulty and the 3 combinations, and picks the one that makes the best question, or skips the slot. With the concept come **all questions already in the pool about that concept** (question and answer in full), as "already asked: ask something else". The per-subcategory list (PE-4) stays for overlap between concepts.
-4. **Retire.** A skip with reason "nada nuevo que preguntar" (the concept is used up) or "no da para una pregunta" (unaskable for this family) sets `retired` on the concept in its list. Other skips don't.
+4. **Retire.** Every skip says whether the concept is `used_up` (nothing new to ask) or `unaskable` (no good question for this family), or neither. The first two set `retired` on the concept in its list, with the reason.
 
-Code checks the drafter's chosen combination against the drawn ones and records it in `axes`. Quotas per batch stop one value from taking over, e.g. at most one `identify`/`none`/`direct question` per subcategory.
+The drafter answers with the number of the combination it chose; code records that combination in `axes`. The lower weight for values already offered keeps one value from taking over within a subcategory.
 
 ### How to check (PE-13)
-Run after PE-6, so its batch is the baseline and the two changes can be told apart. Compare the first concept-based batch against it:
+Part 2 was implemented right after part 1 (2026-10-07), so the next batch has both, and PE-6 and PE-13 are checked on the same batch against batch-4 and batch-5. PE-6's quality risk (grouped rating getting more lenient) can still be checked on its own: rate batch-5's drafts again in groups and compare with their per-file ratings (about 5 calls). For part 2, compare the first concept-based batch:
 - average `fun` score; spread of moves, stimuli and lenses (and of `style` before);
 - share of slots skipped, and of concepts retired;
 - a blind side-by-side for the gamemaster: 20 old and 20 new questions from the same subcategories, without labels.
@@ -141,10 +143,10 @@ Run after PE-6, so its batch is the baseline and the two changes can be told apa
 - [x] PE-4 "Already in the pool" for the draft's own subcategory only. *Batch-5's 30 draft prompts: about 1.1 KB on average (was about 38 KB).*
 - [x] PE-5 Compact JSON in prompt payloads. *draft, rate, factcheck, revise and review.*
 - [ ] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 (see "How to check"); record the result here
-- [ ] PE-7 `authoring/data/question-axes.json`: axes, values with one-line explanations, compatibility rules; replaces `question-styles.txt` for new questions (values: OQ-39)
-- [ ] PE-8 `qgen concepts`: facets, then concepts with `familiarity`, per subcategory in `authoring/data/concepts/<slug>.json`; no names shared across subcategories; tag existing questions with `concept`; `--top-up` (size: OQ-38)
-- [ ] PE-9 Axis fit (move, stimulus, lens) scored once per subcategory and stored in its concept file; `qgen batch` drops the `fit` step
-- [ ] PE-10 `draft` draws concepts (fewer uses first, familiarity matched to difficulty) and 3 compatible axis combinations per slot (fit × rarely used); shows all questions about the concept; retires used-up or unaskable concepts
-- [ ] PE-11 Schema and `qgen validate`: `concept` (must be in its subcategory's list) and `axes` (values from PE-7) on new questions
-- [ ] PE-12 Prompts: `fit.md` and `draft.md` rewritten for concepts and axes; no prompt asks for "surprising" or "little-known" angles
+- [x] PE-7 `authoring/data/question-axes.json`: axes, values with one-line explanations, compatibility rules; replaces `question-styles.txt` for new questions (values: OQ-39). *2026-10-07: 5 axes, 17 rules, base `weights` for stimulus; `blurred` dropped (B-7). `question-styles.txt` and `fit` removed.*
+- [x] PE-8 `qgen concepts`: facets, then concepts with `familiarity`, per subcategory in `authoring/data/concepts/<slug>.json`; no names shared across subcategories; tag existing questions with `concept`; `--top-up` (size: OQ-38). *Logic in `authoring/tools/concepts.py`. First real list: Espacio, 12 facets, 216 concepts, its 11 questions tagged (2 calls). The other 139 lists are made by the batches that need them, or all at once with `qgen concepts`.*
+- [x] PE-9 Axis fit (move, stimulus, lens) scored once per subcategory and stored in its concept file; `qgen batch` drops the `fit` step. *In call (1) of `qgen concepts`; the batch's first step is now `concepts` (creates and tops up its lists).*
+- [x] PE-10 `draft` draws concepts (fewer uses first, familiarity matched to difficulty) and 3 compatible axis combinations per slot (fit × rarely used); shows all questions about the concept; retires used-up or unaskable concepts. *Slots are drawn once per run into `slots.json`. Real smoke test on Espacio: 4 of 4 written (tardígrado, Franklin Chang-Díaz, Caronte, binoculares).*
+- [x] PE-11 Schema and `qgen validate`: `concept` (must be in its subcategory's list) and `axes` (values from PE-7) on new questions. *Unknown axis values and duplicate names in a list are errors; broken rules only warnings (older questions were tagged after the fact). `merge` and `import` carry both fields; `report` and `batch-report` count axes.*
+- [x] PE-12 Prompts: `fit.md` and `draft.md` rewritten for concepts and axes; no prompt asks for "surprising" or "little-known" angles. *`fit.md` replaced by `concepts-facets.md`, `concepts-list.md`, `concepts-topup.md`; `draft.md` rewritten. The house style still asks for a "surprising" `fun_fact` (not an angle; left as is).*
 - [ ] PE-13 Compare the first concept-based batch against the PE-6 batch (see "How to check" in part 2); record the result here

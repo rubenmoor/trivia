@@ -13,10 +13,10 @@ app/                    ships: everything a player's install contains
   client/               the game UI (Svelte); builds to app/client/dist/
   data/                 categories.json, pool.json (exported, approved questions only)
 authoring/              never ships
-  tools/                qgen.py, media.py (Commons search, sheets), prompts/
+  tools/                qgen.py, concepts.py (concept lists, axes), media.py (Commons search, sheets), prompts/
   server/               main.py: review tool, stats and print pages, authoring API
   ui/                   review, stats and print pages (Svelte); builds to authoring/ui/dist/
-  data/                 questions.json (the source pool), question-styles.txt
+  data/                 questions.json (the source pool), question-axes.json, concepts/ (D-37)
   reports/              one generated report per batch
   RUNBOOK.md            the LLM batch procedure: the only instructions an LLM follows for questions
 state/  media/  work/   gitignored: game saves, media cache, pipeline work files
@@ -52,7 +52,7 @@ qgen batch
 Fixed rules, so there is nothing left to decide:
 - **Run name:** `batch-<n>`, where n is one more than the highest `batch-<n>` in the pool. An unfinished run is resumed instead of starting a new one.
 - **Subcategories:** the 30 with the fewest approved questions, ties in `categories.json` order.
-- **Steps, in this order:** fit → draft → rate → factcheck → dedupe → revise → apply → rate → factcheck → dedupe → merge → media → sheets → review → research → sheets → review (researched only) → record → export → sync → batch-report → validate. Every step skips work that is already done, so rerunning `qgen batch` continues where it stopped.
+- **Steps, in this order:** concepts (D-37; was fit) → draft → rate → factcheck → dedupe → revise → apply → rate → factcheck → dedupe → merge → media → sheets → review → research → sheets → review (researched only) → record → export → sync → batch-report → validate. Every step skips work that is already done, so rerunning `qgen batch` continues where it stopped.
 - **Review (`review`, new):** one `claude -p` call per question with `prompts/review.md` (the D-32 criteria), the question, the rater's notes, the fact-check, the pool questions with the same answer, and the contact sheet of its media candidates (`sheets`, ImageMagick), which Claude opens with the Read tool. Output, by JSON schema: `decision` (approved | needs_work), `feedback` (required for needs_work), `pick` (candidate number, or null) and `new_query` (or null).
 - **Research:** a question whose review asks for `new_query` gets one new Commons search and one more review. If it still has no usable media, it becomes `needs_work`.
 - **Record:** writes the reviews as `{"reviewer": "llm", "model": <the model id the call reported>}` (D-33) and the picks (without downloading).

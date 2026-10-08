@@ -82,6 +82,9 @@ export interface Question {
   /** Its broad category is the one in app/data/categories.json that lists it (D-19). */
   subcategory: string;
   style: string | null;
+  /** D-37: the concept from the subcategory's list, and the question axes. */
+  concept?: string | null;
+  axes?: Record<string, string> | null;
   quality: Quality | null;
   fact_checked: boolean | null;
   needs_media: boolean | null;

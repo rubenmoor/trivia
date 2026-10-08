@@ -32,7 +32,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
 - Edit `authoring/data/questions.json`, `app/data/pool.json` or anything in `work/` by hand.
 - Pick, change or judge media yourself, or search Commons yourself.
 - Change prompts, `qgen.py`, `media.py` or the subcategory list to get past a failure.
-- Run single pipeline steps (`qgen fit`, `qgen review`, …) or pass arguments to `qgen batch`. They exist for the gamemaster's debugging.
+- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch`. They exist for the gamemaster's debugging.
 - Approve, reject or revise questions that `qgen batch` marked `needs_work`. The gamemaster decides those in the review tool.
 
 ## What the batch does (for reference)
@@ -41,6 +41,6 @@ The fixed rules are in `authoring/tools/qgen.py` (`cmd_batch`):
 
 - **Name:** `batch-<n>`, one more than the highest so far. An unfinished batch is resumed instead.
 - **Subcategories:** the 30 with the fewest approved questions (ties in `app/data/categories.json` order).
-- **Steps:** fit → draft → rate → factcheck → revise → apply → rate → factcheck → merge → media → sheets → review → research → sheets → review → record → export → sync → batch-report → validate. Each skips work already done, so rerunning continues where it stopped.
+- **Steps:** concepts → draft → rate → factcheck → revise → apply → rate → factcheck → merge → media → sheets → review → research → sheets → review → record → export → sync → batch-report → validate. Each skips work already done, so rerunning continues where it stopped.
 - **Review:** one Claude call per question (`prompts/review.md`). It sees the question, the rater's notes, the fact check, related pool questions, and a contact sheet of the media candidates, and answers with a decision and a pick.
 - **Fixed rules on top of the review:** no adequate media after one new search, or a fact check that isn't confirmed, makes a question `needs_work`. Reviews are recorded as `reviewer: "llm"` with the model's id (D-33).

@@ -3005,7 +3005,15 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "concept": "Sol",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0050",
@@ -3073,6 +3081,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
+      },
+      "concept": "Luna",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
       }
     },
     {
@@ -3126,7 +3142,15 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "concept": "Marte",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0052",
@@ -3180,7 +3204,15 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 4
+      "difficulty_original": 4,
+      "concept": "Saturno",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0053",
@@ -3234,7 +3266,15 @@
         "previous": null
       },
       "background": null,
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "concept": "Júpiter",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0054",
@@ -3303,6 +3343,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
+      },
+      "concept": "Traslación de la Tierra",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "time",
+        "lens": "school"
       }
     },
     {
@@ -3356,7 +3404,15 @@
         "model": null,
         "previous": null
       },
-      "background": null
+      "background": null,
+      "concept": "Neil Armstrong",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0056",
@@ -3418,6 +3474,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
+      },
+      "concept": "Venus",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
       }
     },
     {
@@ -3487,6 +3551,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
+      },
+      "concept": "Vía Láctea",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
       }
     },
     {
@@ -3623,6 +3695,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
+      },
+      "concept": "Velocidad de la luz",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "time",
+        "lens": "school"
       }
     },
     {
@@ -3686,6 +3766,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-06"
+      },
+      "concept": "Año luz",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
       }
     },
     {

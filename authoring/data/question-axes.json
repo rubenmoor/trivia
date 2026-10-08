@@ -1,0 +1,350 @@
+{
+  "about": "Question styles as independent axes (plans/20-pipeline-efficiency.md, PE-7, D-37). A question is one value on each axis. `draft` draws compatible combinations; `rules` say which values go together. Explanations go into the prompts. `weights`: base weight per value when drawing (default 1); it sets each value's expected share, and values used more than expected are drawn less.",
+  "axes": {
+    "move": {
+      "label": "what the player has to do",
+      "values": {
+        "identify": "name the thing, animal, place or character that is described, shown or played",
+        "name_concept": "describe a key term of the subcategory and ask for its name (\"¿cómo se llama cuando la gente se va del campo a la ciudad?\" → urbanización)",
+        "word_meaning": "give a word or expression and ask what it means",
+        "count": "an exact number the player can count or reason out (legs, players, strings, sides)",
+        "estimate": "a number the player can't know exactly but can estimate; the wrong options are far apart",
+        "record": "the real-world record holder: biggest, smallest, oldest, fastest… in the world, never just among the four options",
+        "origin": "where it comes from: the country, region or source of a food, invention, animal, word or custom",
+        "made_of": "what it is made of, or what its parts are",
+        "purpose": "what it is for, or what it is used for",
+        "cause_effect": "what happens if…, or why something happens",
+        "sequence": "what comes before or after, what it was called before, what it becomes, or what comes next in a series",
+        "connection": "what three given things have in common",
+        "analogy": "\"A es a B como C es a…\"",
+        "odd_one_out": "which of the four does NOT belong or is NOT true; the other three share a real-world property",
+        "who": "who made, invented, discovered, said or did it",
+        "when": "the year, century or era it happened"
+      }
+    },
+    "stimulus": {
+      "label": "what the screen shows or plays as part of the question (essential media; anything but none)",
+      "values": {
+        "none": "the question works from the text alone; the media is illustrative or decorative",
+        "photo": "a clear photo of the thing; the player names or judges what they see",
+        "detail": "a close-up photo that shows only part of the thing; the player recognises the whole from the part (the game applies no zoom)",
+        "silhouette": "a silhouette or shadow picture of the thing that exists as such on Commons (the game applies no effect)",
+        "map_outline": "the outline of a country, department or region on a map",
+        "sound": "a sound the player recognises: an animal, a single instrument, a natural sound (Commons only, never songs)",
+        "video": "a short clip that is on Wikimedia Commons (NASA, nature, sport, landscapes); never film, TV or game footage"
+      }
+    },
+    "clue": {
+      "label": "how the clue is worded",
+      "values": {
+        "direct": "a plain, direct question",
+        "riddle": "a riddle in the first person: \"Tengo…, vivo en…, ¿qué soy?\"",
+        "scenario": "an everyday situation the player can picture: \"Estás en la cocina y…\"",
+        "completion": "complete a saying, a famous line or a well-known phrase",
+        "three_facts": "three short facts that together point to exactly one answer"
+      }
+    },
+    "answer_kind": {
+      "label": "what the four options are",
+      "values": {
+        "thing": "things, animals, plants, foods or objects",
+        "person": "people or characters",
+        "place": "places: countries, cities, regions, landmarks, rivers",
+        "number": "numbers or quantities",
+        "time": "years, centuries or eras",
+        "word": "words, terms, names of concepts or short meanings",
+        "group": "groups, families, kinds or categories (\"mamíferos\", \"instrumentos de viento\")"
+      }
+    },
+    "lens": {
+      "label": "where the question meets the players' world",
+      "values": {
+        "school": "what kids learn at school",
+        "everyday": "home, the kitchen, the street, shopping, things kids use every day",
+        "colombia": "Colombian places, food, customs, people or nature",
+        "pop_culture": "films, cartoons, games, books and characters kids know",
+        "nature": "animals, plants, weather and landscapes, outdoors",
+        "history": "how things were long ago, and how they changed",
+        "body_senses": "the human body, the senses, health, sport and movement",
+        "language": "words, names, sayings and where they come from"
+      }
+    }
+  },
+  "weights": {
+    "stimulus": {
+      "none": 7,
+      "photo": 1.5,
+      "detail": 0.8,
+      "silhouette": 0.4,
+      "map_outline": 0.4,
+      "sound": 0.8,
+      "video": 0.3
+    }
+  },
+  "rules": [
+    {
+      "if": {
+        "stimulus": [
+          "sound",
+          "silhouette",
+          "detail",
+          "map_outline"
+        ]
+      },
+      "then": {
+        "move": [
+          "identify"
+        ],
+        "clue": [
+          "direct"
+        ]
+      }
+    },
+    {
+      "if": {
+        "stimulus": [
+          "photo"
+        ]
+      },
+      "then": {
+        "move": [
+          "identify",
+          "origin",
+          "made_of",
+          "purpose",
+          "who",
+          "count"
+        ],
+        "clue": [
+          "direct"
+        ]
+      }
+    },
+    {
+      "if": {
+        "stimulus": [
+          "video"
+        ]
+      },
+      "then": {
+        "move": [
+          "identify",
+          "sequence",
+          "cause_effect"
+        ],
+        "clue": [
+          "direct"
+        ]
+      }
+    },
+    {
+      "if": {
+        "stimulus": [
+          "map_outline"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "place"
+        ]
+      }
+    },
+    {
+      "if": {
+        "stimulus": [
+          "sound"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "thing"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "count",
+          "estimate"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "number"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "when"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "time"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "who"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "person"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "origin"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "place",
+          "thing",
+          "person"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "name_concept",
+          "word_meaning",
+          "analogy"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "word",
+          "thing"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "connection"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "group",
+          "word"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "record",
+          "odd_one_out",
+          "identify"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "thing",
+          "person",
+          "place",
+          "group",
+          "word"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "made_of",
+          "purpose"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "thing",
+          "group",
+          "word"
+        ]
+      }
+    },
+    {
+      "if": {
+        "move": [
+          "count",
+          "estimate",
+          "when",
+          "analogy",
+          "connection",
+          "odd_one_out",
+          "sequence"
+        ]
+      },
+      "then": {
+        "clue": [
+          "direct",
+          "scenario"
+        ]
+      }
+    },
+    {
+      "if": {
+        "clue": [
+          "three_facts"
+        ]
+      },
+      "then": {
+        "answer_kind": [
+          "thing",
+          "place",
+          "group",
+          "word"
+        ]
+      }
+    },
+    {
+      "if": {
+        "clue": [
+          "completion"
+        ]
+      },
+      "then": {
+        "move": [
+          "identify",
+          "word_meaning"
+        ],
+        "answer_kind": [
+          "word"
+        ],
+        "lens": [
+          "language",
+          "pop_culture",
+          "colombia",
+          "everyday"
+        ]
+      }
+    },
+    {
+      "if": {
+        "answer_kind": [
+          "number",
+          "time"
+        ]
+      },
+      "then": {
+        "move": [
+          "count",
+          "estimate",
+          "when",
+          "record",
+          "sequence"
+        ]
+      }
+    }
+  ]
+}

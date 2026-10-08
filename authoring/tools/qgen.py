@@ -7,7 +7,8 @@ An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
 
 It runs these steps in a fixed order; they stay available one by one for debugging:
 
-    qgen fit --run <run> --subcategories "Volcanes,Piratas"
+    qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up]   # concept lists (D-37)
+    qgen draft --run <run> --subcategories "Volcanes,Piratas"
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | research | record | sync | batch-report --run <run>
     qgen export                     # app/data/pool.json from authoring/data/questions.json
@@ -26,7 +27,8 @@ import argparse, concurrent.futures, datetime, difflib, json, random, re, subpro
 from pathlib import Path
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
-from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, STYLES_FILE, WORK
+from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
+import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import categories  # app/server/categories.py: app/data/categories.json (D-19)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
@@ -65,9 +67,6 @@ def norm(text):
     text = re.sub(r"[^a-z0-9 ]+", " ", text)
     words = [w for w in text.split() if w not in {"el", "la", "los", "las", "un", "una", "de", "del"}]
     return " ".join(words)
-
-def read_lines(path):
-    return [l.strip() for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 def prompt(*names):
     return "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
@@ -146,28 +145,23 @@ STR = {"type": "string"}
 INT = {"type": "integer"}
 STR_LIST = {"type": "array", "items": STR}
 
-FIT_SCHEMA = {"type": "object", "required": ["subcategories"], "properties": {"subcategories": {
-    "type": "array", "items": {"type": "object", "required": ["subcategory", "styles"], "properties": {
-        "subcategory": STR,
-        "styles": {"type": "array", "items": {"type": "object", "required": ["style", "score", "idea"],
-                   "properties": {"style": STR, "score": INT, "idea": STR}}}}}}}}
-
 MEDIA_SCHEMA = {"type": "object", "required": ["type", "role", "query", "note"], "properties": {
     "type": {"type": "string", "enum": ["image", "audio", "video"]},
     "role": {"type": "string", "enum": ["decorative", "illustrative", "essential"]},
     "query": STR, "note": STR}}
 
 QUESTION_SCHEMA = {"type": "object", "required": [
-    "slot", "style", "difficulty", "description", "question", "answer", "wrong_answers", "hints",
+    "slot", "option", "difficulty", "description", "question", "answer", "wrong_answers", "hints",
     "media", "fun_fact", "needs_media", "needs_fact_check", "background_query"], "properties": {
-    "slot": INT, "style": STR, "difficulty": INT, "description": STR, "question": STR, "answer": STR,
+    "slot": INT, "option": INT, "difficulty": INT, "description": STR, "question": STR, "answer": STR,
     "wrong_answers": STR_LIST, "hints": STR_LIST, "media": MEDIA_SCHEMA, "fun_fact": STR,
     "needs_media": {"type": "boolean"}, "needs_fact_check": {"type": "boolean"}, "background_query": STR}}
 
 DRAFT_SCHEMA = {"type": "object", "required": ["questions", "skipped"], "properties": {
     "questions": {"type": "array", "items": QUESTION_SCHEMA},
-    "skipped": {"type": "array", "items": {"type": "object", "required": ["slot", "reason"],
-                "properties": {"slot": INT, "reason": STR}}}}}
+    "skipped": {"type": "array", "items": {"type": "object", "required": ["slot", "reason", "retire"],
+                "properties": {"slot": INT, "reason": STR,
+                               "retire": {"type": "string", "enum": ["no", "used_up", "unaskable"]}}}}}}
 
 RATE_SCHEMA = {"type": "object", "required": ["ratings"], "properties": {"ratings": {
     "type": "array", "items": {"type": "object",
@@ -194,44 +188,153 @@ FACT_SCHEMA = {"type": "object", "required": ["checks"], "properties": {"checks"
 
 # --- steps -------------------------------------------------------------------
 
-def cmd_fit(args):
-    d = run_dir(args)
-    cfg = load_json(d / "run.json")
-    if cfg is None:
-        if not args.subcategories:
-            sys.exit("First call for a run needs --subcategories.")
-        cfg = {"subcategories": [s.strip() for s in args.subcategories.split(",") if s.strip()]}
-        unknown = [s for s in cfg["subcategories"] if s not in categories.broad_of()]
-        if unknown:
-            sys.exit(f"Not in app/data/categories.json (add them there first): {', '.join(unknown)}")
-        save_json(d / "run.json", cfg)
-    styles = read_lines(STYLES_FILE)
-    fit = load_json(d / "fit.json", {})
-    todo = [s for s in cfg["subcategories"] if s not in fit]
-    batches = [todo[i:i + 8] for i in range(0, len(todo), 8)]
-    system = prompt("house-style", "fit").replace("{max_styles}", str(args.max_styles))
+CONCEPT_ITEM = {"type": "object", "required": ["name", "facet", "familiarity"],
+                "properties": {"name": STR, "facet": STR, "familiarity": INT}}
+TOPUP_SCHEMA = {"type": "object", "required": ["new_facets", "concepts"], "properties": {
+    "new_facets": STR_LIST, "concepts": {"type": "array", "items": CONCEPT_ITEM}}}
 
-    def work(batch):
-        user = ("## Question styles (best first)\n" + "\n".join(f"- {s}" for s in styles)
-                + "\n\n## Subcategories\n" + "\n".join(f"- {s}" for s in batch))
-        out = claude(system, user, FIT_SCHEMA, args.model, d)
-        for row in out["subcategories"]:
-            if row["subcategory"] not in batch:
-                print(f"  ignoring bad fit row: {row['subcategory']}", file=sys.stderr)
-                continue
-            row["styles"] = [s for s in row["styles"] if s["style"] in styles and s["score"] >= 4][:args.max_styles]
-            fit[row["subcategory"]] = row
-        save_json(d / "fit.json", fit)
-        print(f"  fit: {', '.join(batch)}")
 
-    errors = parallel(work, batches, args.jobs)
-    print(f"fit.json: {len(fit)}/{len(cfg['subcategories'])} subcategories")
+def axes_schema(axes_def):
+    return {"type": "object", "required": concepts.AXES, "properties": {
+        a: {"type": "string", "enum": concepts.values(axes_def, a)} for a in concepts.AXES}}
+
+
+def facets_schema(axes_def):
+    fit = {a: {"type": "object", "required": concepts.values(axes_def, a),
+               "properties": {v: INT for v in concepts.values(axes_def, a)}} for a in concepts.FIT_AXES}
+    return {"type": "object", "required": ["facets", "axis_fit"], "properties": {
+        "facets": STR_LIST, "axis_fit": {"type": "object", "required": concepts.FIT_AXES, "properties": fit}}}
+
+
+def list_schema(axes_def):
+    return {"type": "object", "required": ["concepts", "existing"], "properties": {
+        "concepts": {"type": "array", "items": CONCEPT_ITEM},
+        "existing": {"type": "array", "items": {"type": "object", "required": ["id", "concept", "axes"],
+                     "properties": {"id": STR, "concept": STR, "axes": axes_schema(axes_def)}}}}}
+
+
+def subcategory_header(sub):
+    return f"## Subcategory\n{sub} (broad category: {categories.broad_of()[sub]['name']})"
+
+
+def cmd_concepts(args):
+    """Concept lists (PE-8, D-37): facets and axis fit, then concepts and the concept and axes of
+    every existing question; `--top-up` adds concepts to lists running low. Calls run in parallel
+    and save raw results in work/concepts/; `finalize_concepts` then writes the lists one by one."""
+    d = WORK / "concepts"
+    d.mkdir(parents=True, exist_ok=True)
+    axes_def = concepts.load_axes()
+    order = [s for c in categories.load() for s in c["subcategories"]]
+    if args.subcategories:
+        subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
+    elif getattr(args, "run", None):
+        subs = load_json(WORK / args.run / "run.json")["subcategories"]
+    else:
+        subs = order
+    unknown = [s for s in subs if s not in order]
+    if unknown:
+        sys.exit(f"Not in app/data/categories.json: {', '.join(unknown)}")
+    pool = load_json(POOL)["questions"]
+    create = [s for s in subs if concepts.load(s) is None]
+    top = [s for s in subs if args.top_up and s not in create
+           and len(concepts.unused(concepts.load(s), concepts.uses(pool, s))) < concepts.LOW_STOCK]
+
+    def make(sub):
+        path = d / "raw" / f"{slug(sub)}.json"
+        r = load_json(path, {})
+        intro = subcategory_header(sub) + "\n\n## Question axes\n" + concepts.axes_text(axes_def)
+        if "facets" not in r:
+            r.update(claude(prompt("house-style", "concepts-facets"), intro, facets_schema(axes_def), args.model, d))
+            save_json(path, r)
+        if "concepts" not in r:
+            existing = [{"id": q["id"], "question": q["question"], "answer": q["answer"],
+                         "media": f"{q['media']['type']}/{q['media']['role']}"}
+                        for q in pool if q.get("subcategory") == sub]
+            user = (intro + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in r["facets"])
+                    + "\n\n## Existing questions\n" + (json.dumps(existing, ensure_ascii=False) if existing else "none"))
+            out = claude(prompt("house-style", "concepts-list"), user, list_schema(axes_def), args.model, d)
+            missing = {q["id"] for q in existing} - {e["id"] for e in out["existing"]}
+            if missing:  # untagged questions would make their concepts look unused
+                raise RuntimeError(f"{sub}: no concept for {', '.join(sorted(missing))}")
+            r.update(out)
+            save_json(path, r)
+        print(f"  concepts: {sub}: {len(r['facets'])} facets, {len(r['concepts'])} concepts", flush=True)
+
+    def top_up(sub):
+        path = d / "topup" / f"{slug(sub)}.json"
+        if path.exists():
+            return
+        lst = concepts.load(sub)
+        user = (subcategory_header(sub) + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in lst["facets"])
+                + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"]))
+        out = claude(prompt("house-style", "concepts-topup"), user, TOPUP_SCHEMA, args.model, d)
+        save_json(path, out)
+        print(f"  top-up: {sub}: {len(out['concepts'])} new concepts", flush=True)
+
+    errors = parallel(make, create, args.jobs) + parallel(top_up, top, args.jobs)
+    finalize_concepts(d, order, axes_def)
     return errors
 
 
-def assign_difficulties(fit, seed):
+def finalize_concepts(d, order, axes_def):
+    """Write finished raw results and top-ups into authoring/data/concepts/, one subcategory at a
+    time in categories.json order, so no normalized name is in two lists (OQ-40), except where a
+    question of the later subcategory already uses it. Tags existing questions in the pool."""
+    seen = {}
+    for s in order:
+        lst = concepts.load(s)
+        for c in (lst or {}).get("concepts", []):
+            seen.setdefault(concepts.key(c["name"]), s)
+    data, tagged = load_json(POOL), 0
+    by_id = {q["id"]: q for q in data["questions"]}
+    for s in order:
+        raw, topup = load_json(d / "raw" / f"{slug(s)}.json", {}), d / "topup" / f"{slug(s)}.json"
+        lst = concepts.load(s)
+        if lst is None and "concepts" in raw:
+            lst = {"subcategory": s, "facets": raw["facets"], "axis_fit": raw["axis_fit"], "concepts": []}
+            tags = raw["existing"]
+            items = raw["concepts"] + [{"name": e["concept"], "facet": "Otros", "familiarity": 3} for e in tags]
+        elif lst is not None and topup.exists():
+            extra = load_json(topup)
+            lst["facets"] += [f for f in extra["new_facets"] if f not in lst["facets"]]
+            tags, items = [], extra["concepts"]
+        else:
+            continue
+        used = {concepts.key(e["concept"]) for e in tags}
+        own = {concepts.key(c["name"]): c["name"] for c in lst["concepts"]}
+        shared = []
+        for c in items:
+            k = concepts.key(c["name"])
+            if not k or k in own:
+                continue
+            if seen.get(k, s) != s and k not in used:
+                shared.append(c["name"])
+                continue
+            if c["facet"] not in lst["facets"]:
+                lst["facets"].append(c["facet"])
+            lst["concepts"].append({"name": c["name"].strip(), "facet": c["facet"],
+                                    "familiarity": min(5, max(1, c["familiarity"]))})
+            own[k] = c["name"].strip()
+            seen.setdefault(k, s)
+        for e in tags:
+            q = by_id.get(e["id"])
+            if q is None or q.get("subcategory") != s:
+                continue
+            q["concept"] = own[concepts.key(e["concept"])]
+            if not concepts.axes_problems(e["axes"], axes_def)[0]:
+                q["axes"] = e["axes"]
+            tagged += 1
+        concepts.save(s, lst)
+        topup.unlink(missing_ok=True)
+        print(f"  list: {s}: {len(lst['concepts'])} concepts"
+              + (f"; dropped {len(shared)} already in another list: {', '.join(shared)}" if shared else ""))
+    if tagged:
+        save_json(POOL, data)
+        print(f"  tagged {tagged} pool question(s) with a concept and axes")
+
+
+def assign_difficulties(slots, seed):
     """Spread target levels over all slots to match LEVEL_WEIGHTS."""
-    slots = [(sub, i) for sub in sorted(fit) for i in range(len(fit[sub]["styles"]))]
     n, total = len(slots), sum(LEVEL_WEIGHTS.values())
     exact = {lvl: n * w / total for lvl, w in LEVEL_WEIGHTS.items()}
     counts = {lvl: int(x) for lvl, x in exact.items()}
@@ -242,6 +345,36 @@ def assign_difficulties(fit, seed):
     return dict(zip(slots, levels))
 
 
+def draw_slots(subs, pool_questions, axes_def, n, seed):
+    """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
+    combinations and the questions already asked about the concept, per slot. Seeded."""
+    targets = assign_difficulties([(s, i) for s in subs for i in range(n)], seed)
+    plan = {}
+    for s in subs:
+        rng = random.Random(f"{seed}:{s}")
+        lst = concepts.load(s)
+        diffs = [targets[(s, i)] for i in range(n)]
+        picked = concepts.draw_concepts(lst, concepts.uses(pool_questions, s), diffs, rng)
+        usage = concepts.axis_usage(pool_questions, s)
+        offered = {a: set() for a in concepts.AXES}
+        possible = concepts.possible_combos(axes_def, lst.get("axis_fit", {}))
+        if not possible:
+            print(f"  {s}: no axis combination fits (see axis_fit in its concept list); no slots", file=sys.stderr)
+        slots = []
+        for c, target in zip(picked, diffs):
+            combos = concepts.draw_combos(axes_def, lst.get("axis_fit", {}), usage, offered, rng,
+                                          possible=possible)
+            if not combos:
+                continue
+            asked = [f"{q['question']} → {q['answer']}" for q in pool_questions
+                     if q.get("subcategory") == s and q.get("concept") == c["name"]]
+            slots.append({"slot": len(slots), "concept": c["name"], "facet": c["facet"], "target_difficulty": target,
+                          "options": [{"option": i, **combo} for i, combo in enumerate(combos, 1)],
+                          "already_asked": asked})
+        plan[s] = slots
+    return plan
+
+
 def existing_answers(pool, sub):
     """The subcategory's own pool questions, all statuses (PE-4); merge's `duplicates()` and the
     review's `related` list still check the whole pool."""
@@ -250,40 +383,73 @@ def existing_answers(pool, sub):
 
 def cmd_draft(args):
     d = run_dir(args)
-    fit = load_json(d / "fit.json") or sys.exit("Run `fit` first.")
+    cfg = load_json(d / "run.json")
+    if cfg is None:
+        if not args.subcategories:
+            sys.exit("First call for a run needs --subcategories.")
+        cfg = {"subcategories": [s.strip() for s in args.subcategories.split(",") if s.strip()]}
+        unknown = [s for s in cfg["subcategories"] if s not in categories.broad_of()]
+        if unknown:
+            sys.exit(f"Not in app/data/categories.json (add them there first): {', '.join(unknown)}")
+        save_json(d / "run.json", cfg)
+    subs = cfg["subcategories"]
+    missing = [s for s in subs if concepts.load(s) is None]
+    if missing:
+        sys.exit(f"No concept list for {', '.join(missing)}: run `qgen concepts --subcategories ...` first.")
     pool = load_json(POOL)
-    targets = assign_difficulties(fit, args.seed)
+    axes_def = concepts.load_axes()
+    plan = load_json(d / "slots.json")
+    if plan is None:  # drawn once, so a rerun drafts the same slots
+        plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed)
+        save_json(d / "slots.json", plan)
     system = prompt("house-style", "draft")
-    todo = [s for s in sorted(fit) if fit[s]["styles"] and not (d / "drafts" / f"{slug(s)}.json").exists()]
-    broad = categories.broad_of()
+    todo = [s for s in subs if plan.get(s) and not (d / "drafts" / f"{slug(s)}.json").exists()]
 
     def work(sub):
-        row = fit[sub]
-        slots = [{"slot": i, "style": s["style"], "target_difficulty": targets[(sub, i)], "idea": s["idea"]}
-                 for i, s in enumerate(row["styles"])]
+        slots = plan[sub]
+        shown = {a: {o[a] for sl in slots for o in sl["options"]} for a in concepts.AXES}
         avoid = "\n".join(f"- {a}" for a in existing_answers(pool, sub)) or "none yet"
-        user = (f"## Subcategory\n{sub} (broad category: {broad[sub]['name']})\n\n## Slots\n"
-                + json.dumps(slots, ensure_ascii=False)
-                + f"\n\n## Already in the pool (avoid these answers and topics)\n{avoid}")
+        user = (subcategory_header(sub) + "\n\n## Question axes (the values in these options)\n"
+                + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
+                + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}")
         out = claude(system, user, DRAFT_SCHEMA, args.model, d)
         good = []
         for q in out["questions"]:
             problems = check_question_shape(q)
+            if not 0 <= q["slot"] < len(slots):
+                problems.append(f"unknown slot {q['slot']}")
+            elif not 1 <= q["option"] <= len(slots[q["slot"]]["options"]):
+                problems.append(f"unknown option {q['option']}")
             if problems:
                 print(f"  {sub}: dropped malformed question ({'; '.join(problems)})", file=sys.stderr)
                 continue
-            if not 0 <= q["slot"] < len(slots):
-                print(f"  {sub}: dropped question with unknown slot {q['slot']}", file=sys.stderr)
-                continue
-            q["style"] = slots[q["slot"]]["style"]  # the model sometimes shortens style names
-            q["tmp_id"] = f"{slug(sub)}-{q['slot']}"
-            q["subcategory"] = sub
+            sl = slots[q["slot"]]
+            option = {k: v for k, v in sl["options"][q.pop("option") - 1].items() if k != "option"}
+            q.update(style=None, axes=option, concept=sl["concept"], tmp_id=f"{slug(sub)}-{q['slot']}", subcategory=sub)
             q["media"]["note"] = q["media"]["note"] or None
+            if (option["stimulus"] != "none") != (q["media"]["role"] == "essential"):
+                print(f"  {sub}: {q['tmp_id']}: stimulus {option['stimulus']} with {q['media']['role']} media "
+                      "(left for rate and review)", file=sys.stderr)
             good.append(q)
+        retire(sub, slots, out["skipped"])
         save_json(d / "drafts" / f"{slug(sub)}.json", {"questions": good, "skipped": out["skipped"]})
         print(f"  draft: {sub}: {len(good)} written, {len(out['skipped'])} skipped")
 
     return parallel(work, todo, args.jobs)
+
+
+def retire(sub, slots, skipped):
+    """Skips that say a concept is used up or unaskable retire it from its list (PE-10)."""
+    why = {slots[x["slot"]]["concept"]: f"{x['retire']}: {x['reason']}" for x in skipped
+           if x["retire"] != "no" and 0 <= x["slot"] < len(slots)}
+    if not why:
+        return
+    lst = concepts.load(sub)
+    for c in lst["concepts"]:
+        if c["name"] in why:
+            c["retired"] = why[c["name"]]
+    concepts.save(sub, lst)
+    print(f"  {sub}: retired {', '.join(why)}")
 
 
 def check_question_shape(q):
@@ -317,8 +483,9 @@ def grouped(files, size=GROUP_SIZE):
 
 
 def for_review(q):
-    keys = ["style", "difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact"]
-    return {"id": q["tmp_id"], **{k: q[k] for k in keys}}
+    keys = ["difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact"]
+    form = {"axes": q["axes"]} if q.get("axes") else {"style": q.get("style")}  # older drafts have a style
+    return {"id": q["tmp_id"], **form, **{k: q[k] for k in keys}}
 
 
 def cmd_rate(args):
@@ -446,7 +613,8 @@ def cmd_merge(args):
                 "difficulty": q["difficulty"], "description": q["description"], "question": q["question"],
                 "answer": q["answer"], "wrong_answers": q["wrong_answers"], "hints": q["hints"],
                 "media": {**q["media"], "source_url": None, "file_url": None, "credit": None},
-                "fun_fact": q["fun_fact"], "subcategory": q["subcategory"], "style": q["style"],
+                "fun_fact": q["fun_fact"], "subcategory": q["subcategory"], "style": q.get("style"),
+                "concept": q.get("concept"), "axes": q.get("axes"),
                 "quality": {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]},
                 "fact_checked": bool(c and c["verdict"] == "confirmed"), "needs_media": q["needs_media"],
                 "batch": args.run, "review": None,
@@ -489,7 +657,8 @@ def cmd_import(args):
     for q in qs:
         w = {k: q[k] for k in ["difficulty", "description", "question", "answer", "wrong_answers", "hints",
                                "fun_fact"]}
-        w.update(tmp_id=q["id"], style=q.get("style"), subcategory=q.get("subcategory"),
+        w.update(tmp_id=q["id"], style=q.get("style"), axes=q.get("axes"), concept=q.get("concept"),
+                 subcategory=q.get("subcategory"),
                  media={k: q["media"][k] for k in ["type", "role", "query", "note"]},
                  needs_fact_check=True, needs_media=bool(q.get("needs_media")),
                  background_query=(q.get("background") or {}).get("query", ""),
@@ -733,6 +902,7 @@ def cmd_report(args):
     print(f"pool: {len(pool)} questions")
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
                        ("category", lambda q: broad[q["subcategory"]]["slug"] if q.get("subcategory") in broad else None), ("style", lambda q: q.get("style")),
+                       *[(f"axes.{a}", lambda q, a=a: (q.get("axes") or {}).get(a)) for a in concepts.AXES],
                        ("media", lambda q: f"{q['media']['type']}/{q['media']['role']}")]:
         print(f"  by {title}: {count(pool, key)}")
     try:
@@ -764,7 +934,9 @@ def cmd_report(args):
                     print(f"  avg {k}: {sum(vals) / len(vals):.2f}")
         print(f"  fact-check verdicts: {count(checks.values(), lambda c: c['verdict'])}")
         print(f"  target difficulty: {count(qs, lambda q: q['difficulty'])}")
-        print(f"  by style: {count(qs, lambda q: q['style'])}")
+        print(f"  by style: {count(qs, lambda q: q.get('style'))}")
+        for a in concepts.AXES:
+            print(f"  by axes.{a}: {count(qs, lambda q, a=a: (q.get('axes') or {}).get(a))}")
 
 
 # --- the LLM batch (D-36, plans/19-repo-layout.md) ----------------------------------------------
@@ -1024,6 +1196,9 @@ def cmd_batch_report(args):
              f"- Picked files not cached yet: {len(not_cached)}" + (" (run `trivia-media sync --status approved`)" if not_cached else ""),
              "", "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}" for q in work] or ["None."]
+    lines += ["", "## Question axes", ""]
+    lines += [f"- {a}: " + ", ".join(f"{v} {n}" for v, n in count(qs, lambda q, a=a: (q.get('axes') or {}).get(a)).items())
+              for a in concepts.AXES]
     lines += ["", "## Dropped by the pipeline", ""]
     lines += [f"- {x['tmp_id']}: {x['reason']}: {x['question']} → {x['answer']}" for x in dropped] or ["None."]
     out = layout.REPORTS / f"{args.run}.md"
@@ -1079,8 +1254,8 @@ def cmd_batch(args):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
 
     steps = [
-        ("fit", cmd_fit, ns(model="opus", subcategories=None, max_styles=4)),
-        ("draft", cmd_draft, ns(model="opus", seed=1)),
+        ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
+        ("draft", cmd_draft, ns(model="opus", seed=1, slots=4, subcategories=None)),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
         ("revise", cmd_revise, ns(model="opus")),
@@ -1121,7 +1296,7 @@ def cmd_batch(args):
     n_ok = sum(q["status"] == "approved" for q in qs)
     print(f"\nDone: {run}: {len(qs)} merged, {n_ok} approved, {len(qs) - n_ok} needs work.")
     print("Commit exactly this:\n"
-          f"  git add authoring/data/questions.json app/data/pool.json authoring/reports/{run}.md\n"
+          f"  git add authoring/data/questions.json app/data/pool.json authoring/data/concepts/ authoring/reports/{run}.md\n"
           f"  git commit -m \"{run}: {len(qs)} questions, {n_ok} approved (qgen batch)\"")
 
 
@@ -1139,6 +1314,7 @@ def validate_pool():
     data = load_json(POOL)
     errors, warnings, ids = [], [], set()
     subcategories = categories.broad_of()
+    axes_def, lists = concepts.load_axes(), {}
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -1173,6 +1349,22 @@ def validate_pool():
                     warnings.append(f"{qid}: {label} not cached")
         if all(k in q for k in ["wrong_answers", "hints", "difficulty", "answer"]):
             errors += [f"{qid}: {p}" for p in check_question_shape(q)]
+        if q.get("axes") is not None:  # D-37
+            e, w = concepts.axes_problems(q["axes"], axes_def)
+            errors += [f"{qid}: {p}" for p in e]
+            warnings += [f"{qid}: {p}" for p in w]
+        if q.get("concept") is not None:
+            sub = q.get("subcategory")
+            if sub not in lists:
+                lists[sub] = {c["name"] for c in (concepts.load(sub) or {}).get("concepts", [])}
+            if q["concept"] not in lists[sub]:
+                errors.append(f"{qid}: concept {q['concept']!r} is not in {sub}'s concept list")
+    for sub in subcategories:
+        lst = concepts.load(sub)
+        keys = [concepts.key(c["name"]) for c in (lst or {}).get("concepts", [])]
+        dup = sorted({k for k in keys if keys.count(k) > 1})
+        if dup:
+            errors.append(f"{concepts.path(sub).relative_to(ROOT)}: same concept twice: {', '.join(dup)}")
     exported = layout.EXPORT.read_text(encoding="utf-8") if layout.EXPORT.exists() else None
     if exported != export_text(data):
         errors.append(f"{layout.EXPORT.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
@@ -1199,9 +1391,14 @@ def main():
             p.add_argument("--model", default=model)
             p.add_argument("--jobs", type=int, default=3, help="parallel claude calls")
         return p
-    add("fit", cmd_fit, "opus").add_argument("--subcategories", help="comma-separated, first call only")
-    sub.choices["fit"].add_argument("--max-styles", type=int, default=4)
-    add("draft", cmd_draft, "opus").add_argument("--seed", type=int, default=1)
+    cp = add("concepts", cmd_concepts, "opus", run=False)
+    cp.add_argument("--subcategories", help="comma-separated; default: every subcategory without a list")
+    cp.add_argument("--top-up", action="store_true", help=f"also add concepts to lists with fewer than {concepts.LOW_STOCK} unused")
+    cp.set_defaults(run=None)
+    dp = add("draft", cmd_draft, "opus")
+    dp.add_argument("--subcategories", help="comma-separated, first call only")
+    dp.add_argument("--seed", type=int, default=1)
+    dp.add_argument("--slots", type=int, default=4, help="slots per subcategory")
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
     add("dedupe", cmd_dedupe)

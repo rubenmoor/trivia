@@ -67,7 +67,7 @@ trivia                            # http://127.0.0.1:8000/ — the game
 | `trivia-media sync [--status approved] [--prune]` | Download picked media files that aren't cached yet. **Run before game night.** |
 | `trivia-media fetch --batch <batch>` | Search Commons for candidates for questions without media |
 
-The single pipeline steps (`qgen fit`, `draft`, `rate`, `factcheck`, `revise`, `apply`, `merge`, `media`, `sheets`, `review`, `research`, `record`, `sync`, `batch-report`, and `import` for revising questions already in the pool) stay available for debugging; details in [`plans/07-question-generation.md`](plans/07-question-generation.md). Writing steps call `claude -p`; work files go to `work/<run>/`, and every step skips what's done, so a run can be resumed.
+The single pipeline steps (`qgen concepts`, `draft`, `rate`, `factcheck`, `revise`, `apply`, `merge`, `media`, `sheets`, `review`, `research`, `record`, `sync`, `batch-report`, and `import` for revising questions already in the pool) stay available for debugging; details in [`plans/07-question-generation.md`](plans/07-question-generation.md). Writing steps call `claude -p`; work files go to `work/<run>/`, and every step skips what's done, so a run can be resumed.
 
 ## Media
 

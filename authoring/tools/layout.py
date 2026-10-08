@@ -15,7 +15,8 @@ if str(APP_SERVER) not in sys.path:
 import paths as app_paths  # noqa: E402  (app/server/paths.py)
 
 SOURCE_POOL = AUTHORING / "data" / "questions.json"  # every question, with reviews and pipeline fields
-STYLES_FILE = AUTHORING / "data" / "question-styles.txt"
+AXES_FILE = AUTHORING / "data" / "question-axes.json"  # question styles as axes (D-37)
+CONCEPTS = AUTHORING / "data" / "concepts"  # one concept list per subcategory (D-37)
 PROMPTS = AUTHORING / "tools" / "prompts"
 REPORTS = AUTHORING / "reports"
 DIST = AUTHORING / "ui" / "dist"

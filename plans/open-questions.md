@@ -18,12 +18,8 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-36** Audience: kids and families only (the D-6 age scale), or an adult track too?
 - **OQ-37** Competitive mode and couch co-op: format (relay ladder, parallel ladders, buzzer), and input (hot-seat, one controller per player, phones as buzzers)?
 
-### Added 2026-10-07 (concept lists and question axes, [`20-pipeline-efficiency.md`](20-pipeline-efficiency.md))
-- **OQ-38** Concept list size per subcategory: about 150–250 with top-ups (recommended), or about 1,000 up front? 1,000 lasts longer, but costs more to write and its tail gets obscure.
-- **OQ-39** Question axes: are the draft values in plan 20 right (add, merge, drop)? Do the 513 existing questions get `axes` too (one tagging call per subcategory), or keep only `style`?
-- **OQ-40** Overlap across subcategories: concept lists share no normalized names, but synonyms and nicknames slip through. Accept that, as for duplicates (PE-4), or check with an LLM pass over all lists?
-
 ## Resolved
+- **OQ-38** About 150–250 concepts per subcategory, with top-ups; **OQ-39** the axis values as drafted in plan 20, and existing questions get axes too; **OQ-40** concept names unique across subcategories by normalized name only, synonyms accepted (D-37).
 - **OQ-4** No timer per question; **OQ-13** no separate gamemaster device and no GM-only view; **OQ-8** no family-specific questions; **OQ-11** a computer connected to the TV via HDMI; **OQ-12** internet is available during play; **OQ-28** the game is called «¡Trivia!» (D-30).
 - **OQ-15** Hints are shown only through the Pista joker, one hint per use, until the question's three are shown (D-26, D-27). **OQ-25** Jokers are unlimited; **OQ-26** one hint per Pista; **OQ-27** a Snipe hit costs nothing beyond repeating the level (D-27).
 - **OQ-20** UI audio (music and effects) is committed; **OQ-21** players can unlock a locked answer, and then nothing is locked; **OQ-22** the correct answer is shown after a wrong one; **OQ-23** level → difficulty ranges; **OQ-24** tower of blocks, narrower towards the top (D-22).
