@@ -11572,6 +11572,2002 @@
         "credit": "Nafisathallah · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "background": null
+    },
+    {
+      "id": "q-0429",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Animales de la granja",
+      "description": "Este vecino de la finca canta a las cinco de la mañana y nadie le pidió serenata.",
+      "question": "Escucha: ¿qué animal de la granja hace este sonido?",
+      "answer": "El burro",
+      "wrong_answers": [
+        "El caballo",
+        "La vaca",
+        "El cerdo"
+      ],
+      "hints": [
+        "Es un animal de carga que se usa mucho en el campo.",
+        "Tiene las orejas muy largas.",
+        "Su sonido se llama rebuznar: 'i-aaa, i-aaa'."
+      ],
+      "fun_fact": "El rebuzno de un burro se puede oír a más de 3 kilómetros de distancia.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/157763_felix-blume_a-donkey-is-braying-in-his-enclosure-in-south-of-france.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A157763_felix-blume_a-donkey-is-braying-in-his-enclosure-in-south-of-france.wav",
+        "credit": "felix-blume · CC0 · Wikimedia Commons"
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Holzzaun.jpg/3840px-Holzzaun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHolzzaun.jpg",
+        "credit": "RonPorter · CC0 · Wikimedia Commons"
+      }
+    },
+    {
+      "id": "q-0431",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Barcos",
+      "description": "Un taxi muy elegante para una ciudad donde se les olvidó pavimentar las calles.",
+      "question": "Mira la foto: ¿cómo se llama este bote largo y delgado que un remero maneja de pie con un solo remo?",
+      "answer": "Góndola",
+      "wrong_answers": [
+        "Piragua",
+        "Trajinera",
+        "Balsa"
+      ],
+      "hints": [
+        "Es típica de una ciudad muy famosa de Europa.",
+        "En esa ciudad hay canales de agua en lugar de calles.",
+        "Es el bote más famoso de Venecia, en Italia."
+      ],
+      "fun_fact": "Las góndolas son torcidas a propósito: un lado es más ancho que el otro para que vayan derechas aunque el gondolero reme por un solo lado.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Venice_Gondola_Grand_Canal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVenice_Gondola_Grand_Canal.jpg",
+        "credit": "Saffron Blaze · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0433",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Barcos",
+      "description": "En el mar no hay radares de velocidad, pero igual alguien está midiendo.",
+      "question": "¿En qué unidad se mide normalmente la velocidad de los barcos?",
+      "answer": "Nudos",
+      "wrong_answers": [
+        "Leguas",
+        "Brazas",
+        "Varas"
+      ],
+      "hints": [
+        "Es una palabra que también usas en la vida diaria, pero para otra cosa.",
+        "Los marineros antiguos la medían lanzando al mar una cuerda y contando.",
+        "Es lo mismo que haces cuando te amarras los cordones de los zapatos."
+      ],
+      "fun_fact": "Se llama así porque los marineros soltaban al mar una cuerda con nudos cada cierta distancia y contaban cuántos nudos se iban en un tiempo fijo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Flickr_-_Official_U.S._Navy_Imagery_-_Sailors_aboard_a_rigid-hull_inflatable_boat_ride_in_the_wake_of_the_amphibious_assault_ship_USS_Kearsarge_%28LHD_3%29_during_a_man_overboard_drill..jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_Official_U.S._Navy_Imagery_-_Sailors_aboard_a_rigid-hull_inflatable_boat_ride_in_the_wake_of_the_amphibious_assault_ship_USS_Kearsarge_%28LHD_3%29_during_a_man_overboard_drill..jpg",
+        "credit": "Official Navy Page from United States of America · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0435",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Bichos raros",
+      "description": "Una piña de pino que un día decidió salir a caminar.",
+      "question": "Mira la foto: ¿cómo se llama este animal cubierto de escamas?",
+      "answer": "Pangolín",
+      "wrong_answers": [
+        "Armadillo",
+        "Oso hormiguero",
+        "Equidna"
+      ],
+      "hints": [
+        "Vive en África y en Asia, no en Colombia.",
+        "Sus escamas son de queratina, lo mismo que tus uñas, y cuando se asusta se enrolla como una bola.",
+        "Su nombre viene del idioma malayo y empieza por 'pan'."
+      ],
+      "fun_fact": "El pangolín no tiene dientes: se traga piedritas que le ayudan a moler las hormigas dentro del estómago.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Trenggiling_Sunda_Sunda_Pangolin_Manis_javanica.jpg/3840px-Trenggiling_Sunda_Sunda_Pangolin_Manis_javanica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrenggiling_Sunda_Sunda_Pangolin_Manis_javanica.jpg",
+        "credit": "Frendi Apen Irawan · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0436",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Bichos raros",
+      "description": "Un astronauta sin traje, sin casco y sin miedo.",
+      "question": "¿Qué animal diminuto, de menos de un milímetro, logró sobrevivir en 2007 al vacío del espacio exterior, fuera de la nave?",
+      "answer": "El tardígrado",
+      "wrong_answers": [
+        "El ácaro",
+        "La pulga",
+        "El piojo"
+      ],
+      "hints": [
+        "Vive en el musgo húmedo, quizás hasta en tu jardín.",
+        "Tiene ocho patitas gorditas con garras y puede secarse como una pasa durante años sin morir.",
+        "Le dicen 'oso de agua'."
+      ],
+      "fun_fact": "Cuando se seca, el tardígrado se encoge en una bolita llamada 'tun' y así puede aguantar años sin agua.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/A_trio_of_CubeSats_is_ejected_into_Earth_orbit_from_a_small_satellite_orbital_deployer_%28iss072e352045%29.jpg/3840px-A_trio_of_CubeSats_is_ejected_into_Earth_orbit_from_a_small_satellite_orbital_deployer_%28iss072e352045%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_trio_of_CubeSats_is_ejected_into_Earth_orbit_from_a_small_satellite_orbital_deployer_%28iss072e352045%29.jpg",
+        "credit": "NASA Johnson Space Center · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0437",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Caricaturas",
+      "description": "El marinero que convenció a medio mundo de comer verduras sin que nadie lo obligara.",
+      "question": "En las caricaturas, ¿qué come Popeye el marino para volverse superfuerte?",
+      "answer": "Espinacas",
+      "wrong_answers": [
+        "Zanahorias",
+        "Brócoli",
+        "Lentejas"
+      ],
+      "hints": [
+        "Es algo que muchos niños dejan a un lado del plato.",
+        "Es una verdura de hojas verdes.",
+        "Las come directo de una lata que abre de un apretón."
+      ],
+      "fun_fact": "Popeye apareció por primera vez en 1929 en una tira cómica de periódico, antes de llegar a los dibujos animados.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Ship_anchor_monument%2C_Southbank_precinct.jpg/3840px-Ship_anchor_monument%2C_Southbank_precinct.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShip_anchor_monument%2C_Southbank_precinct.jpg",
+        "credit": "Shkuru Afshar · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0438",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Ciclismo colombiano",
+      "description": "Tres semanas pedaleando por Francia y al final le regalan una camiseta amarilla: el negocio del siglo.",
+      "question": "¿Quién fue el primer colombiano en ganar el Tour de Francia?",
+      "answer": "Egan Bernal",
+      "wrong_answers": [
+        "Nairo Quintana",
+        "Rigoberto Urán",
+        "Lucho Herrera"
+      ],
+      "hints": [
+        "Lo ganó en 2019 y fue uno de los campeones más jóvenes de la historia.",
+        "Nació en Bogotá y se crio en Zipaquirá, la ciudad de la Catedral de Sal.",
+        "Su nombre empieza por E y su apellido rima con 'cristal'."
+      ],
+      "fun_fact": "Egan Bernal ganó el Tour de Francia con solo 22 años, y antes de correr en carretera era ciclista de montaña.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg/3840px-Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg",
+        "credit": "Wilfredor · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0439",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Ciclismo colombiano",
+      "description": "Una subida tan larga que arrancas en tierra caliente y llegas pidiendo ruana.",
+      "question": "¿Qué subida colombiana, de unos 80 km, es considerada por muchos ciclistas la subida pavimentada más larga del mundo?",
+      "answer": "El Alto de Letras",
+      "wrong_answers": [
+        "El Alto de La Línea",
+        "El Alto del Boquerón",
+        "El Alto de Minas"
+      ],
+      "hints": [
+        "Sube desde el Tolima hacia el departamento de Caldas.",
+        "Arranca en Mariquita, en tierra caliente, y llega a más de 3.600 metros de altura.",
+        "Su nombre suena a lo que tiene el abecedario."
+      ],
+      "fun_fact": "Subiendo el Alto de Letras se pasa del calor de tierra caliente al frío del páramo: ¡varios climas en un solo día de pedaleo!",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Nevado_del_Tolima_-_Enero_de_2015_-_Flickr_-_Alejandro_Bayer_%283%29.jpg/3840px-Nevado_del_Tolima_-_Enero_de_2015_-_Flickr_-_Alejandro_Bayer_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_Tolima_-_Enero_de_2015_-_Flickr_-_Alejandro_Bayer_%283%29.jpg",
+        "credit": "Alejandro  Bayer Tamayo from Armenia, Colombia · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0440",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Colores",
+      "description": "Hay colores que se llevan tan mal que se paran justo al frente, a mirarse feo.",
+      "question": "En el círculo de colores de los pintores, el rojo queda justo al frente del verde. Siguiendo esa misma relación, el azul queda justo al frente del…",
+      "answer": "Naranja",
+      "wrong_answers": [
+        "Morado",
+        "Rosado",
+        "Café"
+      ],
+      "hints": [
+        "Fíjate: el verde se hace mezclando los dos colores primarios que no son el rojo.",
+        "El color de enfrente de un primario se hace mezclando los otros dos primarios.",
+        "Mezcla rojo con amarillo y sale el color de una fruta que se llama igual."
+      ],
+      "fun_fact": "Los colores opuestos se llaman complementarios y, puestos uno al lado del otro, se ven más brillantes; por eso muchos afiches de películas usan azul y naranja.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Artist_paint_tubes_studio_trolley.jpg/3840px-Artist_paint_tubes_studio_trolley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtist_paint_tubes_studio_trolley.jpg",
+        "credit": "Vadim Cole · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0441",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Deportes tradicionales colombianos",
+      "description": "Un deporte con nombre de pueblo, como si el fútbol se llamara 'Fusagasugá'.",
+      "question": "Antes, al tejo también le decían 'turmequé', por el nombre de un pueblo. ¿En qué departamento está ese pueblo?",
+      "answer": "Boyacá",
+      "wrong_answers": [
+        "Antioquia",
+        "Valle del Cauca",
+        "Bolívar"
+      ],
+      "hints": [
+        "Es un departamento de montañas frías, en el altiplano donde vivían los muiscas.",
+        "Su capital es Tunja.",
+        "Allí se libró en 1819 la batalla que selló la independencia de Colombia."
+      ],
+      "fun_fact": "Los muiscas jugaban algo parecido al tejo hace siglos, y según se cuenta lanzaban discos de piedra o de oro.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Card_game_in_Quibd%C3%B3.jpg/3840px-Card_game_in_Quibd%C3%B3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACard_game_in_Quibd%C3%B3.jpg",
+        "credit": "Mussi Katz · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0442",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Inventores famosos",
+      "description": "Antes de este invento, para chismosear con la abuela tocaba ir hasta su casa.",
+      "question": "¿Quién patentó el teléfono en 1876?",
+      "answer": "Alexander Graham Bell",
+      "wrong_answers": [
+        "Thomas Edison",
+        "Guglielmo Marconi",
+        "Samuel Morse"
+      ],
+      "hints": [
+        "Nació en Escocia, pero hizo su invento en Estados Unidos.",
+        "También dedicó gran parte de su vida a enseñar a hablar a personas sordas.",
+        "Su apellido en inglés significa 'campana', como el timbre que suena cuando llaman."
+      ],
+      "fun_fact": "Las primeras palabras que Bell dijo por teléfono fueron para su ayudante: 'Señor Watson, venga aquí, quiero verlo'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/British-made_Antique_Rotary_Telephone.jpg/1920px-British-made_Antique_Rotary_Telephone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABritish-made_Antique_Rotary_Telephone.jpg",
+        "credit": "Amitbalani · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0444",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Inventos",
+      "description": "Un italiano con tanta energía que hasta le pusieron su apellido a una unidad de medida.",
+      "question": "¿Qué invento presentó el científico italiano Alessandro Volta en el año 1800?",
+      "answer": "La pila eléctrica",
+      "wrong_answers": [
+        "El telégrafo",
+        "El bombillo",
+        "El pararrayos"
+      ],
+      "hints": [
+        "Su apellido está escondido en una palabra que se usa para medir la electricidad.",
+        "Apiló discos de metal separados por cartón mojado en agua salada.",
+        "Hoy la metes en el control remoto cuando deja de funcionar."
+      ],
+      "fun_fact": "La unidad 'voltio', que ves escrita en los cargadores y las pilas, se llama así en honor a Volta.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Lago_de_Como%2C_Italia%2C_2016-06-25%2C_DD_02-06_PAN.jpg/3840px-Lago_de_Como%2C_Italia%2C_2016-06-25%2C_DD_02-06_PAN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALago_de_Como%2C_Italia%2C_2016-06-25%2C_DD_02-06_PAN.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0445",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Inventos",
+      "description": "Antes de los cuadernos, los egipcios ya tenían su propia papelería… a la orilla del agua.",
+      "question": "El papiro, la hoja en la que escribían los antiguos egipcios, se hacía con una planta que crecía a orillas de un río. ¿De qué río?",
+      "answer": "El Nilo",
+      "wrong_answers": [
+        "El Amazonas",
+        "El Danubio",
+        "El Misisipi"
+      ],
+      "hints": [
+        "Es un río de África.",
+        "Es uno de los ríos más largos del mundo.",
+        "Pasa muy cerca de las pirámides y desemboca en el mar Mediterráneo."
+      ],
+      "fun_fact": "La palabra 'papel' viene de 'papiro', aunque nuestro papel de hoy se hace con madera y no con esa planta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Ancient_Egypt_Papyrus_Scroll_of_the_Dead_%2828748821475%29.jpg/3840px-Ancient_Egypt_Papyrus_Scroll_of_the_Dead_%2828748821475%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_Egypt_Papyrus_Scroll_of_the_Dead_%2828748821475%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0447",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Mundiales de fútbol",
+      "description": "Una final tan tensa que media humanidad se comió las uñas y la otra media, las del vecino.",
+      "question": "¿Qué país ganó el Mundial de Catar 2022?",
+      "answer": "Argentina",
+      "wrong_answers": [
+        "Francia",
+        "Brasil",
+        "Croacia"
+      ],
+      "hints": [
+        "Es un país de Suramérica.",
+        "Ganó la final por penales después de un 3 a 3.",
+        "Su capitán era Lionel Messi."
+      ],
+      "fun_fact": "Muchos dicen que la final de Catar 2022, un 3 a 3 que se definió por penales, fue la mejor final de la historia de los Mundiales.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Aerial_view_of_Lusail_Stadium_during_the_daytime.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_Lusail_Stadium_during_the_daytime.png",
+        "credit": "Djawed_vlog · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0448",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Música del mundo",
+      "description": "Un palo larguísimo que hace un ruido como de abejorro gigante con gripa.",
+      "question": "Mira la foto: ¿cómo se llama este instrumento de los pueblos aborígenes de Australia?",
+      "answer": "Didgeridoo",
+      "wrong_answers": [
+        "Cuerno alpino",
+        "Zampoña",
+        "Quena"
+      ],
+      "hints": [
+        "Se fabrica con un tronco de eucalipto que las termitas dejaron hueco por dentro.",
+        "Se toca soplando con los labios vibrando, y produce un zumbido grave y continuo.",
+        "Su nombre suena casi como un trabalenguas: empieza por 'didge'."
+      ],
+      "fun_fact": "Los buenos músicos de didgeridoo toman aire por la nariz mientras siguen soplando por la boca, así que pueden tocar varios minutos sin parar.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Didgeridoo_street_player-2.jpg/3840px-Didgeridoo_street_player-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADidgeridoo_street_player-2.jpg",
+        "credit": "Didgeridoo_street_player.jpg: Noel Feans · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0449",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Música del mundo",
+      "description": "Un baile tan dramático que parece una telenovela, pero con mejores zapatos.",
+      "question": "¿De qué país viene el tango, el baile en pareja de pasos elegantes y miradas muy serias?",
+      "answer": "Argentina",
+      "wrong_answers": [
+        "España",
+        "Brasil",
+        "Cuba"
+      ],
+      "hints": [
+        "Es un país de Suramérica, pero allá no se habla portugués.",
+        "Su instrumento estrella es el bandoneón, parecido a un acordeón.",
+        "Es el país de Messi, y su capital es Buenos Aires."
+      ],
+      "fun_fact": "En 2009 la UNESCO declaró el tango Patrimonio Cultural Inmaterial de la Humanidad, gracias a una petición que hicieron juntos Argentina y Uruguay.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Musikinstrumenten-Museum_Berlin_-_Bandoneon_-_1108037.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMusikinstrumenten-Museum_Berlin_-_Bandoneon_-_1108037.jpg",
+        "credit": "Jürgen Liepe · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0450",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Pirámides",
+      "description": "Una pirámide con escaleras por los cuatro lados, por si al dios le daba pereza dar la vuelta.",
+      "question": "Mira la foto: ¿cómo se llama este famoso lugar con esta pirámide maya?",
+      "answer": "Chichén Itzá",
+      "wrong_answers": [
+        "Tikal",
+        "Palenque",
+        "Copán"
+      ],
+      "hints": [
+        "Es una de las siete nuevas maravillas del mundo.",
+        "Está en la península de Yucatán, en México.",
+        "Su nombre tiene dos palabras y la segunda empieza por 'I'."
+      ],
+      "fun_fact": "En los equinoccios, la sombra de las escaleras forma una serpiente de luz que parece bajar por la pirámide.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/3840px-Chichen_Itza_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChichen_Itza_3.jpg",
+        "credit": "Daniel Schwen · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0451",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Pirámides",
+      "description": "Los faraones no ahorraban en nada, ni siquiera en el último trasteo.",
+      "question": "¿Para qué construyeron los antiguos egipcios las pirámides de Guiza?",
+      "answer": "Como tumbas para los faraones",
+      "wrong_answers": [
+        "Como graneros para guardar trigo",
+        "Como palacios para vivir los faraones",
+        "Como fortalezas contra los invasores"
+      ],
+      "hints": [
+        "Adentro no vivía nadie… al menos nadie vivo.",
+        "Tiene que ver con lo que pasaba después de que un faraón moría.",
+        "Allí se guardaba la momia del faraón junto con sus tesoros."
+      ],
+      "fun_fact": "Durante siglos, en Europa mucha gente creyó que las pirámides eran graneros construidos para guardar trigo en tiempos de hambre.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Giza_Pyramids_Egypt_Camels_Desert_Landscape_Photo_by_Ludovic_Delot_Bravo.jpg/3840px-Giza_Pyramids_Egypt_Camels_Desert_Landscape_Photo_by_Ludovic_Delot_Bravo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGiza_Pyramids_Egypt_Camels_Desert_Landscape_Photo_by_Ludovic_Delot_Bravo.jpg",
+        "credit": "Ludovic Delot · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0452",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Planeta Tierra",
+      "description": "Al planeta le pusieron 'Tierra', pero viéndolo desde el espacio cualquiera diría que se equivocaron de nombre.",
+      "question": "Más o menos, ¿qué parte de la superficie de la Tierra está cubierta por agua?",
+      "answer": "Cerca del 70 %",
+      "wrong_answers": [
+        "Cerca del 30 %",
+        "Cerca del 50 %",
+        "Cerca del 90 %"
+      ],
+      "hints": [
+        "Piensa en un globo terráqueo: ¿qué color se ve más?",
+        "Hay más agua que tierra, pero los continentes tampoco son tan chiquitos.",
+        "Es más o menos tres cuartas partes del planeta."
+      ],
+      "fun_fact": "Casi toda esa agua es salada: solo un 2,5 % del agua de la Tierra es dulce, y la mayor parte de ella está congelada en glaciares y polos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Princetown_%28AU%29%2C_Port_Campbell_National_Park%2C_Twelve_Apostles_--_2019_--_0969.jpg/3840px-Princetown_%28AU%29%2C_Port_Campbell_National_Park%2C_Twelve_Apostles_--_2019_--_0969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrincetown_%28AU%29%2C_Port_Campbell_National_Park%2C_Twelve_Apostles_--_2019_--_0969.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0453",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Plantas",
+      "description": "Alguien en la naturaleza sí estudió matemáticas y lo dejó dibujado en espiral.",
+      "question": "Mira este acercamiento: ¿de qué flor es este centro lleno de semillas en espiral?",
+      "answer": "Girasol",
+      "wrong_answers": [
+        "Margarita",
+        "Dalia",
+        "Diente de león"
+      ],
+      "hints": [
+        "Es una flor que puede llegar a ser más alta que un adulto.",
+        "De sus semillas se saca un aceite de cocina muy común, y también se comen como pasabocas.",
+        "Cuando es joven, va girando durante el día para seguir al sol."
+      ],
+      "fun_fact": "Los girasoles jóvenes siguen al sol, pero cuando ya son adultos se quedan mirando casi siempre hacia el oriente, por donde sale.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pflanze-Sonnenblume1-Asio_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APflanze-Sonnenblume1-Asio_%28cropped%29.JPG",
+        "credit": "Chiswick Chap · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0454",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Regiones de Colombia",
+      "description": "Un pedazo de Colombia resaltado, como cuando subrayas lo importante para el examen.",
+      "question": "Mira el mapa: ¿qué departamento de Colombia está resaltado?",
+      "answer": "Amazonas",
+      "wrong_answers": [
+        "Vaupés",
+        "Guainía",
+        "Putumayo"
+      ],
+      "hints": [
+        "Está en el extremo sur de Colombia.",
+        "Tiene una puntica que llega hasta un río gigante, en la frontera con Brasil y Perú.",
+        "Su capital es Leticia."
+      ],
+      "fun_fact": "Amazonas es el departamento más grande de Colombia, pero uno de los que tienen menos habitantes.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Colombia-Amazonas-departamentos.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia-Amazonas-departamentos.png",
+        "credit": "Elkin Fricke · CC BY-SA 2.5 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0455",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Regiones de Colombia",
+      "description": "Un departamento tan indeciso que no pudo escoger un solo océano.",
+      "question": "¿Cuál es el único departamento de Colombia que tiene costa tanto en el mar Caribe como en el océano Pacífico?",
+      "answer": "Chocó",
+      "wrong_answers": [
+        "Antioquia",
+        "Valle del Cauca",
+        "Nariño"
+      ],
+      "hints": [
+        "Está en el occidente del país y casi todo es selva.",
+        "Es uno de los lugares más lluviosos del planeta.",
+        "Es el único departamento que limita con Panamá."
+      ],
+      "fun_fact": "En el Chocó llueve tanto que está entre los lugares más lluviosos de todo el mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/SUNSET_BEACH_NUQUI_CHOCO_COLOMBIA_1.jpg/3840px-SUNSET_BEACH_NUQUI_CHOCO_COLOMBIA_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASUNSET_BEACH_NUQUI_CHOCO_COLOMBIA_1.jpg",
+        "credit": "leonardo cadavid perdomo · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0456",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Anfibios",
+      "description": "Una ranita de los bosques colombianos tan chiquita que cabe en una tapa de gaseosa.",
+      "question": "Mira la foto: ¿cómo se llama esta ranita de los bosques húmedos de Colombia?",
+      "answer": "Rana de cristal",
+      "wrong_answers": [
+        "Rana flecha",
+        "Rana toro",
+        "Rana cornuda"
+      ],
+      "hints": [
+        "Su nombre tiene que ver con un material de la cocina.",
+        "Fíjate bien en su barriga: ¿qué alcanzas a ver a través de ella?",
+        "Su piel de la barriga es transparente, como el vidrio de una ventana."
+      ],
+      "fun_fact": "Colombia es uno de los países con más especies de ranas de cristal del mundo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Flickr_-_ggallice_-_Glass_frog_%282%29.jpg/3840px-Flickr_-_ggallice_-_Glass_frog_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_ggallice_-_Glass_frog_%282%29.jpg",
+        "credit": "Geoff Gallice from Gainesville, FL, USA · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0458",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Anfibios",
+      "description": "Los griegos tenían palabra para todo, hasta para los que viven metidos en un charco.",
+      "question": "La palabra 'anfibio' viene del griego. ¿Qué significa?",
+      "answer": "Doble vida",
+      "wrong_answers": [
+        "Vida corta",
+        "Vida nocturna",
+        "Vida saltarina"
+      ],
+      "hints": [
+        "Tiene que ver con los lugares donde viven estos animales.",
+        "'Bio' es la misma raíz de 'biología', el estudio de los seres vivos.",
+        "Primero viven en el agua y después también en la tierra: tienen dos vidas."
+      ],
+      "fun_fact": "Muchos anfibios, además de con pulmones, respiran a través de la piel, por eso necesitan mantenerla húmeda.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Frog_on_Lily_Pad_%283926795011%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrog_on_Lily_Pad_%283926795011%29.jpg",
+        "credit": "Gerwin Sturm from Vienna, Austria · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0459",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Animales de la granja",
+      "description": "Se puso un vestido de lunares para ir a la fiesta y se le olvidó peinarse.",
+      "question": "Mira la foto: ¿cómo se llama esta ave que muchos campesinos crían en las fincas?",
+      "answer": "Gallina de Guinea",
+      "wrong_answers": [
+        "Faisán dorado",
+        "Codorniz japonesa",
+        "Perdiz roja"
+      ],
+      "hints": [
+        "Le encanta comerse los bichos y las garrapatas del pasto.",
+        "Es gris oscura, llena de pintitas blancas, y tiene la cabeza pelada.",
+        "Su nombre lleva el de un país africano y el de un ave que pone huevos en el gallinero."
+      ],
+      "fun_fact": "En muchas fincas las tienen como 'alarma': gritan muy duro cuando llega un extraño o ven una culebra.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Gallina_de_Guinea_%28Numida_meleagris%29%2C_parque_nacional_del_lago_Nakuru%2C_Kenia%2C_2024-05-18%2C_DD_40.jpg/3840px-Gallina_de_Guinea_%28Numida_meleagris%29%2C_parque_nacional_del_lago_Nakuru%2C_Kenia%2C_2024-05-18%2C_DD_40.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGallina_de_Guinea_%28Numida_meleagris%29%2C_parque_nacional_del_lago_Nakuru%2C_Kenia%2C_2024-05-18%2C_DD_40.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0460",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Animales de la granja",
+      "description": "Este animal lleva toda la vida caminando en puntas, como una bailarina de ballet.",
+      "question": "¿Cuántos dedos tiene en cada pata un caballo?",
+      "answer": "1",
+      "wrong_answers": [
+        "2",
+        "3",
+        "5"
+      ],
+      "hints": [
+        "Son menos de los que tienes tú en una mano.",
+        "El casco del caballo está hecho del mismo material que tus uñas.",
+        "La vaca tiene la pezuña partida en dos, pero el casco del caballo es una sola pieza."
+      ],
+      "fun_fact": "Los antepasados del caballo, hace millones de años, eran del tamaño de un perro y tenían varios dedos en cada pata.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Horses_grazing_at_Trunkol_meadow%2C_Jammu_and_Kashmir%2C_India_%28crop%29.jpg/3840px-Horses_grazing_at_Trunkol_meadow%2C_Jammu_and_Kashmir%2C_India_%28crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHorses_grazing_at_Trunkol_meadow%2C_Jammu_and_Kashmir%2C_India_%28crop%29.jpg",
+        "credit": "UnpetitproleX · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0461",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Animales de la granja",
+      "description": "Tan esponjoso que dan ganas de usarlo de almohada, pero él prefiere que no.",
+      "question": "¿Cómo se llama la cría de la oveja?",
+      "answer": "Cordero",
+      "wrong_answers": [
+        "Ternero",
+        "Potro",
+        "Cabrito"
+      ],
+      "hints": [
+        "No es la cría de la vaca ni la del caballo.",
+        "De su mamá sale la lana para hacer ruanas.",
+        "En los pesebres de Navidad suele aparecer uno chiquito, blanco y lanudo junto a los pastores."
+      ],
+      "fun_fact": "Una oveja puede reconocer las caras de unas 50 ovejas y recordarlas durante años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Sheep_on_Pasture_in_Voigtland%2C_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASheep_on_Pasture_in_Voigtland%2C_Germany.jpg",
+        "credit": "Straktur · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0462",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Atletismo",
+      "description": "Una prueba para los que sueñan con volar pero nacieron sin alas.",
+      "question": "Mira la foto: ¿qué prueba de atletismo es esta?",
+      "answer": "Salto con garrocha",
+      "wrong_answers": [
+        "Salto alto",
+        "Salto largo",
+        "Triple salto"
+      ],
+      "hints": [
+        "El atleta no salta solo con sus piernas: lleva una ayuda.",
+        "Usa una vara larga y flexible para impulsarse muy arriba.",
+        "La vara se llama garr…"
+      ],
+      "fun_fact": "Las garrochas modernas son de fibra de vidrio o de carbono y se doblan tanto que lanzan al atleta como una catapulta.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Men_Decathlon_Pole_Vault_GUO_QI_Of_China_In_Action.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMen_Decathlon_Pole_Vault_GUO_QI_Of_China_In_Action.jpg",
+        "credit": "Athletics Federation of India · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0463",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Atletismo",
+      "description": "Un palito tan importante que si se cae, todo el equipo llora.",
+      "question": "En las carreras de relevos, ¿cómo se llama el tubito que cada corredor le pasa al siguiente?",
+      "answer": "El testigo",
+      "wrong_answers": [
+        "El cetro",
+        "El bolillo",
+        "La antorcha"
+      ],
+      "hints": [
+        "Si se cae al piso, el equipo puede quedar descalificado.",
+        "Es una palabra que también se oye mucho en los juicios y en los matrimonios.",
+        "Así se le dice a la persona que vio lo que pasó y después lo cuenta."
+      ],
+      "fun_fact": "El pase del testigo tiene que hacerse dentro de una zona marcada en la pista; si se entrega fuera, el equipo queda descalificado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/400_meters_relay_race.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A400_meters_relay_race.jpg",
+        "credit": "Arch-Angel Raphael the Artist · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0464",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Atletismo",
+      "description": "No es una bola de bolos, pero tampoco la quieres dejar caer en tu pie.",
+      "question": "En el lanzamiento de bala, ¿cuánto pesa, más o menos, la bala que lanzan los hombres?",
+      "answer": "Unos 7 kilos",
+      "wrong_answers": [
+        "Unos 2 kilos",
+        "Unos 15 kilos",
+        "Unos 25 kilos"
+      ],
+      "hints": [
+        "Se lanza con una sola mano, empujándola desde el cuello.",
+        "Pesa más o menos lo mismo que un bebé de seis meses bien comido.",
+        "Pesa más que 5 kilos, pero menos que 10."
+      ],
+      "fun_fact": "La bala masculina pesa exactamente 7,26 kilos, que son 16 libras, y la femenina pesa 4 kilos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/XX1088_-_Seoul_Paralympic_Games_Athletics_Shot_Put_Australian_Athlete_-_8_of_10_-_Scan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AXX1088_-_Seoul_Paralympic_Games_Athletics_Shot_Put_Australian_Athlete_-_8_of_10_-_Scan.jpg",
+        "credit": "Don Worley · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0465",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Bebidas colombianas",
+      "description": "Según las abuelas, cura la gripa, el frío, la tristeza y hasta las malas notas.",
+      "question": "La aguapanela se hace con panela. Pero, ¿de qué se hace la panela?",
+      "answer": "Del jugo de la caña de azúcar",
+      "wrong_answers": [
+        "De la miel de las abejas",
+        "De leche de vaca hervida",
+        "De maíz tostado y molido"
+      ],
+      "hints": [
+        "Viene de una planta, no de un animal.",
+        "Se prepara en el campo, hirviendo un jugo durante horas hasta que se pone espeso y dulce.",
+        "Es la misma planta de la que sale el azúcar blanco."
+      ],
+      "fun_fact": "Colombia es uno de los países que más panela producen y consumen en el mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/%282%29_Raw_sugar_jaggery_gud_Punjab_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%282%29_Raw_sugar_jaggery_gud_Punjab_India.jpg",
+        "credit": "Giridhar Appaji Nag Y · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0466",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Bichos raros",
+      "description": "Tejas de colores para un techo del tamaño de una uña.",
+      "question": "Mira esta imagen tomada muy, muy de cerca: ¿qué es?",
+      "answer": "Ala de mariposa",
+      "wrong_answers": [
+        "Piel de serpiente",
+        "Ala de libélula",
+        "Pluma de pavo real"
+      ],
+      "hints": [
+        "Esas tejitas son tan diminutas que, juntas, parecen polvo.",
+        "Su dueño vuela, pero no es un pájaro.",
+        "Si la tocas con los dedos, te quedas con un polvillo de colores."
+      ],
+      "fun_fact": "El 'polvito' que queda en los dedos al tocar una mariposa son miles de escamas diminutas de su ala.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Blue_Oakleaf_Kallima_horsfieldii_wing_scales_by_Dr._Raju_Kasambe_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlue_Oakleaf_Kallima_horsfieldii_wing_scales_by_Dr._Raju_Kasambe_%281%29.jpg",
+        "credit": "Dr. Raju Kasambe · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0467",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Caricaturas",
+      "description": "Un señor con un carro que funciona a pura pata, literalmente.",
+      "question": "¿Qué personaje de caricatura es? Vive en la Edad de Piedra, trabaja en una cantera manejando un dinosaurio como si fuera una grúa y es el papá de una bebé llamada Pebbles.",
+      "answer": "Pedro Picapiedra",
+      "wrong_answers": [
+        "Pablo Mármol",
+        "Homero Simpson",
+        "Popeye"
+      ],
+      "hints": [
+        "Es una caricatura muy vieja, de los años 60, que tus papás o tus abuelos seguro vieron.",
+        "Está casado con Vilma.",
+        "Cuando está feliz grita '¡Yabba dabba doo!'."
+      ],
+      "fun_fact": "'Los Picapiedra' fue la primera serie de dibujos animados que se emitió en horario estelar en la televisión de Estados Unidos, en 1960.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/The_Tanzoumaitak_cave_painting_in_Tassili_n%27ajjer.jpg/3840px-The_Tanzoumaitak_cave_painting_in_Tassili_n%27ajjer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Tanzoumaitak_cave_painting_in_Tassili_n%27ajjer.jpg",
+        "credit": "IssamBarhoumi · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0468",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Ciclismo colombiano",
+      "description": "Suben montañas en bicicleta más rápido que tu papá subiendo las escaleras después del almuerzo.",
+      "question": "¿Con qué apodo se conoce desde hace décadas a los ciclistas colombianos, famosos por lo bien que suben las montañas?",
+      "answer": "Escarabajos",
+      "wrong_answers": [
+        "Cóndores",
+        "Colibríes",
+        "Jaguares"
+      ],
+      "hints": [
+        "El apodo es el nombre de un animal.",
+        "Es un animal mucho más pequeño que una bicicleta.",
+        "Es un insecto de caparazón duro; algunos hacen bolitas de estiércol."
+      ],
+      "fun_fact": "Lucho Herrera, uno de los escarabajos más famosos, ganó en 1984 la etapa del Alpe d'Huez y fue el primer colombiano en ganar una etapa del Tour de Francia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/ObuduCyclist_going_past_farmers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AObuduCyclist_going_past_farmers.jpg",
+        "credit": "Inyang Effiong · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0469",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Colombianos famosos",
+      "description": "El único colombiano famoso que nunca suelta a su mula, ni siquiera para salir en la foto.",
+      "question": "¿Cómo se llama el famoso caficultor de bigote, sombrero y poncho que, junto con su mula, es el símbolo del café de Colombia?",
+      "answer": "Juan Valdez",
+      "wrong_answers": [
+        "Pedro Navarro",
+        "José Arcadio",
+        "Martín Salcedo"
+      ],
+      "hints": [
+        "Su imagen aparece en paquetes de café de Colombia desde hace más de 60 años.",
+        "Su apellido empieza con la letra V.",
+        "Hay una cadena de cafeterías con su nombre en muchos centros comerciales y aeropuertos."
+      ],
+      "fun_fact": "Juan Valdez no es una persona real: es un personaje que se inventó a finales de los años 50, y desde entonces varios hombres lo han interpretado, siempre con su mula Conchita.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Coffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg/3840px-Coffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0471",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Colores",
+      "description": "Son los papás de todos los colores, y nadie sabe quiénes son los papás de ellos.",
+      "question": "El rojo, el azul y el amarillo no se pueden obtener mezclando otras pinturas, pero con ellos se pueden hacer muchísimos colores. ¿Cómo se llaman?",
+      "answer": "Colores primarios",
+      "wrong_answers": [
+        "Colores secundarios",
+        "Colores cálidos",
+        "Colores neutros"
+      ],
+      "hints": [
+        "Casualmente, son los mismos tres colores de la bandera de Colombia.",
+        "Los colores que salen de mezclarlos se llaman 'secundarios'.",
+        "Se llaman casi igual que la escuela donde aprendiste a leer."
+      ],
+      "fun_fact": "En las pantallas del celular y del televisor los colores básicos de la luz son otros: rojo, verde y azul.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Jar_of_Paint_Brushes_%28Unsplash%29.jpg/3840px-Jar_of_Paint_Brushes_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJar_of_Paint_Brushes_%28Unsplash%29.jpg",
+        "credit": "Joshua Niedermayer allesistdesign · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0472",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Colores",
+      "description": "Tres nombres elegantes para algo que los demás llamamos con una sola palabra.",
+      "question": "El carmesí, el escarlata y el bermellón: ¿qué tienen en común?",
+      "answer": "Son tonos de rojo",
+      "wrong_answers": [
+        "Son tonos de azul",
+        "Son tonos de verde",
+        "Son tonos de amarillo"
+      ],
+      "hints": [
+        "Son nombres que usan los pintores para colores.",
+        "Su color es uno de los tres colores primarios de la pintura.",
+        "Es el color de la última franja de la bandera de Colombia."
+      ],
+      "fun_fact": "Hace siglos, el carmín, un rojo muy fino, se sacaba de unos insectos diminutos, la cochinilla, que viven en los cactus de América.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Old_Glass_Jars_full_of_paint_colors%2C_in_background_there_are_Paint_Brushes_%2827368479778%29.jpg/3840px-Old_Glass_Jars_full_of_paint_colors%2C_in_background_there_are_Paint_Brushes_%2827368479778%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Glass_Jars_full_of_paint_colors%2C_in_background_there_are_Paint_Brushes_%2827368479778%29.jpg",
+        "credit": "Cindy Shebley · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0474",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Cuentos infantiles",
+      "description": "La primera invitada que llega sin avisar, se come tu comida y además se duerme en tu cama.",
+      "question": "¿Qué personaje de cuento entra sin permiso a una casita del bosque, prueba tres platos de sopa, rompe la silla más pequeña y se queda dormida en una cama ajena?",
+      "answer": "Ricitos de Oro",
+      "wrong_answers": [
+        "Caperucita Roja",
+        "Gretel",
+        "Alicia"
+      ],
+      "hints": [
+        "Los dueños de la casita llegan después de un paseo y se llevan tremenda sorpresa.",
+        "Los dueños son una familia de tres: papá, mamá y bebé… muy peludos.",
+        "Su nombre habla de su pelo rubio y crespo."
+      ],
+      "fun_fact": "En una de las primeras versiones escritas del cuento, de 1837, quien entraba a la casa de los osos no era una niña sino una viejita gruñona.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cottage_in_the_Desierto_de_los_Leones_National_Park%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACottage_in_the_Desierto_de_los_Leones_National_Park%2C_Mexico.jpg",
+        "credit": "Ximesmp · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0476",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Cuentos infantiles",
+      "description": "La persona que más tiempo ha aplazado algo en la historia, y le salió bien.",
+      "question": "En un famoso libro de cuentos árabes, la joven Sherezade le cuenta un cuento al rey cada noche para salvarse. Según el título del libro, ¿durante cuántas noches le cuenta cuentos?",
+      "answer": "1.001",
+      "wrong_answers": [
+        "365",
+        "100",
+        "40"
+      ],
+      "hints": [
+        "Son muchas más que las noches de un año.",
+        "Son casi tres años de cuentos seguidos.",
+        "La respuesta está escondida en el nombre del libro."
+      ],
+      "fun_fact": "Los cuentos de Aladino y de Alí Babá no estaban en los manuscritos árabes antiguos: los agregó un traductor francés hace unos 300 años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Ibn_Bukhtishu_-_Manafi%27_al-Hayawan_-_Folio_II_Recto.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIbn_Bukhtishu_-_Manafi%27_al-Hayawan_-_Folio_II_Recto.png",
+        "credit": "Michel Bakni · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0477",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Deportes tradicionales colombianos",
+      "description": "Un juego de puntería tan de tienda que casi viene con gaseosa incluida.",
+      "question": "¿Cómo se llama el juego de tienda en el que se lanzan fichas de metal hacia los huecos de una mesa de madera?",
+      "answer": "La rana",
+      "wrong_answers": [
+        "El tejo",
+        "El bolo criollo",
+        "El cucunubá"
+      ],
+      "hints": [
+        "Se juega mucho en tiendas y canchas de pueblo, muchas veces al lado del tejo.",
+        "El hueco que más puntos da está en la boca de una figurita de metal.",
+        "La figurita es un animal verde que salta y dice 'croac'."
+      ],
+      "fun_fact": "En Perú se juega casi igual, pero allá le dicen 'el sapo'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Daisy_Mart_convenience_store%2C_Midland_2025.jpg/3840px-Daisy_Mart_convenience_store%2C_Midland_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADaisy_Mart_convenience_store%2C_Midland_2025.jpg",
+        "credit": "Chicken4War · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0479",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Fiestas colombianas",
+      "description": "En Cali la gente baila salsa tan rápido que los zapatos piden vacaciones.",
+      "question": "¿En qué mes se celebra la Feria de Cali, con su famoso desfile de bailarines de salsa?",
+      "answer": "Diciembre",
+      "wrong_answers": [
+        "Agosto",
+        "Febrero",
+        "Junio"
+      ],
+      "hints": [
+        "Es una época del año en la que muchos colombianos están de vacaciones.",
+        "Ese mes muchas casas se llenan de luces y pesebres.",
+        "Arranca el 25 y termina antes de que se acabe el año."
+      ],
+      "fun_fact": "La Feria de Cali empezó en 1957 y hoy abre con el Salsódromo, un desfile con cientos de bailarines de salsa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG/3840px-Sals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASals%C3%B3dromo%2C_Feria_de_Cali%2C_Colombia.JPG",
+        "credit": "Jyon · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0480",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Inventos",
+      "description": "Tus bisabuelos lo tenían en la sala y lo cuidaban con más cariño que al gato.",
+      "question": "Mira la foto: ¿cómo se llama este invento antiguo?",
+      "answer": "Gramófono",
+      "wrong_answers": [
+        "Telégrafo",
+        "Radio de tubos",
+        "Teléfono de manivela"
+      ],
+      "hints": [
+        "Se usaba en las casas hace más de 100 años para entretener a la familia.",
+        "Muchos funcionaban sin electricidad: había que darle cuerda con una manivela.",
+        "Ponías a girar un disco negro y la música salía por esa bocina grandota."
+      ],
+      "fun_fact": "Durante décadas, los discos de gramófono no eran de vinilo sino de goma laca, un material que viene de un insecto.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/EMG_Mark_Xb_handmade_gramophone%2C_c_1934._%289660572765%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEMG_Mark_Xb_handmade_gramophone%2C_c_1934._%289660572765%29.jpg",
+        "credit": "Science Museum London / Science and Society Picture Library · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0481",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "Inventos",
+      "description": "Una época oscura de la historia… pero literalmente oscura.",
+      "question": "Antes del bombillo eléctrico, ¿qué objeto de cera con una mecha usaba la gente para alumbrar su casa de noche?",
+      "answer": "Vela",
+      "wrong_answers": [
+        "Lámpara de aceite",
+        "Antorcha",
+        "Linterna"
+      ],
+      "hints": [
+        "Todavía se usa en las casas cuando se va la luz.",
+        "Se va derritiendo poquito a poquito mientras alumbra.",
+        "En tu torta de cumpleaños hay una por cada año que cumples."
+      ],
+      "fun_fact": "Thomas Edison hizo miles de pruebas con distintos materiales antes de lograr un bombillo que durara muchas horas prendido.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Colonial_Williamsburg_at_Night_%2825412267772%29.jpg/3840px-Colonial_Williamsburg_at_Night_%2825412267772%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColonial_Williamsburg_at_Night_%2825412267772%29.jpg",
+        "credit": "Mobilus In Mobili · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0483",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Leyendas colombianas",
+      "description": "Hay quien llora porque se le perdió el celular, y hay quien lleva siglos llorando sin encontrar lo suyo.",
+      "question": "Según la leyenda, ¿a quién busca la Llorona cuando anda de noche, llorando cerca de los ríos?",
+      "answer": "A sus hijos",
+      "wrong_answers": [
+        "A su esposo",
+        "A sus papás",
+        "A su hermana"
+      ],
+      "hints": [
+        "Es una leyenda que se cuenta en casi toda América Latina, de México a Colombia.",
+        "Lo que busca lo perdió cerca del agua de un río.",
+        "Son los niños que eran de ella."
+      ],
+      "fun_fact": "La Llorona es una de las leyendas más conocidas de América Latina: hay versiones en Colombia, México, Venezuela y muchos otros países.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Black_River_at_night.jpg/3840px-Black_River_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_River_at_night.jpg",
+        "credit": "Greenlindae · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0484",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Medallistas olímpicos colombianos",
+      "description": "Brincar en la cama no cuenta como entrenamiento olímpico, aunque lo intentes con todas tus fuerzas.",
+      "question": "¿En qué prueba de atletismo ganó Caterine Ibargüen la medalla de oro en los Juegos Olímpicos de Río 2016?",
+      "answer": "Salto triple",
+      "wrong_answers": [
+        "Salto largo",
+        "Salto alto",
+        "Salto con garrocha"
+      ],
+      "hints": [
+        "Es una prueba de saltos en la que se cae en un foso de arena.",
+        "Antes de caer en la arena se hacen varios brincos seguidos: pique, paso y salto.",
+        "El nombre de la prueba dice cuántos saltos se dan: tres."
+      ],
+      "fun_fact": "Cuatro años antes, en Londres 2012, Caterine ya había ganado la medalla de plata en la misma prueba.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Unique_Moment_with_the_Moon_and_Christ_the_Redeemer_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnique_Moment_with_the_Moon_and_Christ_the_Redeemer_3.jpg",
+        "credit": "Donatas Dabravolskas · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0485",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Medallistas olímpicos colombianos",
+      "description": "Antes de ella, Colombia guardaba las medallas de oro en el mismo lugar que los unicornios.",
+      "question": "¿Quién fue la primera mujer colombiana en ganar una medalla de oro en unos Juegos Olímpicos?",
+      "answer": "María Isabel Urrutia",
+      "wrong_answers": [
+        "Mariana Pajón",
+        "Ximena Restrepo",
+        "Jackeline Rentería"
+      ],
+      "hints": [
+        "Lo logró en los Juegos Olímpicos de Sídney, en el año 2000.",
+        "Su deporte consiste en levantar barras muy, muy pesadas.",
+        "Es una pesista vallecaucana que luego también fue congresista."
+      ],
+      "fun_fact": "Ese oro de Sídney 2000 fue además el primer oro olímpico de toda la historia de Colombia, contando hombres y mujeres.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sydney_Opera_House_-_Dec_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASydney_Opera_House_-_Dec_2008.jpg",
+        "credit": "Diliff · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0487",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Música del mundo",
+      "description": "Suena como si un gato cantara ópera con gripa, y aun así la gente se emociona.",
+      "question": "Escucha: ¿qué instrumento suena?",
+      "answer": "La gaita escocesa",
+      "wrong_answers": [
+        "El acordeón",
+        "La armónica",
+        "El oboe"
+      ],
+      "hints": [
+        "Tiene un sonido de fondo que no para nunca, como un zumbido largo.",
+        "El músico sopla dentro de una bolsa grande que aprieta con el brazo.",
+        "En su país de origen la tocan hombres vestidos con falda de cuadros."
+      ],
+      "fun_fact": "La bolsa de la gaita escocesa guarda aire como un pulmón extra, así que el músico puede respirar sin que el sonido se corte.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/A_Hundred_Pipers.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Hundred_Pipers.ogg",
+        "credit": "CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg/3840px-A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg",
+        "credit": "Michal Klajban · CC BY-SA 4.0 · Wikimedia Commons"
+      }
+    },
+    {
+      "id": "q-0488",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Pirámides",
+      "description": "En esta pregunta no gana la más alta del salón, sino la que más espacio ocupa en el bus.",
+      "question": "¿Cuál es la pirámide más grande del mundo si se mide por su volumen (todo lo que ocupa)?",
+      "answer": "La pirámide de Cholula",
+      "wrong_answers": [
+        "La pirámide de Keops",
+        "La pirámide del Sol",
+        "La pirámide de Kukulkán"
+      ],
+      "hints": [
+        "No es la más alta, pero sí la más 'gorda': su base es enorme.",
+        "No está en Egipto, sino en América.",
+        "Está en el estado de Puebla, México, y hoy parece un cerro con una iglesia encima."
+      ],
+      "fun_fact": "La pirámide de Cholula está cubierta de tierra y pasto, y encima le construyeron una iglesia: por siglos muchos pensaron que era un cerro normal.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/The_history_of_ancient_Mexico_-_from_the_foundation_of_that_empire_to_its_destruction_by_the_Spaniards_%281832%29_%2814596648348%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_history_of_ancient_Mexico_-_from_the_foundation_of_that_empire_to_its_destruction_by_the_Spaniards_%281832%29_%2814596648348%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0489",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Planeta Tierra",
+      "description": "Una fila de montañas tan larga que, si fuera la fila del banco, nadie llegaría nunca a la caja.",
+      "question": "¿Cuál es la cordillera más larga del mundo en tierra firme (sin contar las que están bajo el mar)?",
+      "answer": "Los Andes",
+      "wrong_answers": [
+        "El Himalaya",
+        "Las Montañas Rocosas",
+        "Los Alpes"
+      ],
+      "hints": [
+        "Recorre todo un lado de un continente, de norte a sur.",
+        "Allí vivieron los incas, y todavía hoy pastan llamas y alpacas.",
+        "En Colombia se divide en tres: la cordillera Occidental, la Central y la Oriental."
+      ],
+      "fun_fact": "Los Andes miden unos 7.000 km de largo, y siguen creciendo poquito a poquito porque dos placas de la Tierra se empujan debajo de ellos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Vihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg/3840px-Vihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVihren_%26_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg",
+        "credit": "kallerna · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0490",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Plantas",
+      "description": "Una planta que pidió domicilio y el almuerzo le llegó volando.",
+      "question": "Mira la foto: ¿cómo se llama esta planta carnívora?",
+      "answer": "Venus atrapamoscas",
+      "wrong_answers": [
+        "Planta jarra",
+        "Rocío de sol",
+        "Grasilla"
+      ],
+      "hints": [
+        "Crece de forma natural solo en unos pantanos de Estados Unidos.",
+        "Sus hojas parecen una boca con dientes y se cierran de golpe cuando un insecto las toca.",
+        "Su nombre lleva el de un planeta y dice lo que caza."
+      ],
+      "fun_fact": "Para no gastar energía en falsas alarmas, la trampa solo se cierra si el insecto toca sus pelitos sensores dos veces en pocos segundos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dionaea_muscipula_PT_20240516_063394.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADionaea_muscipula_PT_20240516_063394.jpg",
+        "credit": "Philiptdotcom · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0492",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Ríos de Colombia",
+      "description": "Un río que se tira de cabeza desde más de cien metros y ni siquiera grita.",
+      "question": "¿Qué río cae por el famoso Salto del Tequendama, en Cundinamarca?",
+      "answer": "El río Bogotá",
+      "wrong_answers": [
+        "El río Magdalena",
+        "El río Sumapaz",
+        "El río Cauca"
+      ],
+      "hints": [
+        "Nace en un páramo de Cundinamarca, en el municipio de Villapinzón.",
+        "Antes de llegar al salto, pasa junto a la ciudad más grande del país.",
+        "Lleva el mismo nombre que la capital de Colombia."
+      ],
+      "fun_fact": "El Salto del Tequendama mide unos 157 metros de alto, y la vieja casona que está al lado hoy es un museo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Hotel_y_Salto_del_Tequendama.JPG/3840px-Hotel_y_Salto_del_Tequendama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHotel_y_Salto_del_Tequendama.JPG",
+        "credit": "Felipe Restrepo Acosta · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0493",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Ríos del mundo",
+      "description": "Un puente que levanta los brazos como si alguien acabara de meter un gol.",
+      "question": "Mira la foto: ¿cómo se llama el río que pasa por debajo de este famoso puente?",
+      "answer": "El Támesis",
+      "wrong_answers": [
+        "El Sena",
+        "El Tíber",
+        "El Rin"
+      ],
+      "hints": [
+        "Este río termina en el mar del Norte.",
+        "Es el río de Londres, la capital de Inglaterra.",
+        "Su nombre empieza por 'Tá…'."
+      ],
+      "fun_fact": "El Tower Bridge se abre por la mitad para dejar pasar barcos altos, y todavía lo hace cientos de veces al año.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Tower_Bridge_London_Dusk_Feb_2006.jpg/3840px-Tower_Bridge_London_Dusk_Feb_2006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATower_Bridge_London_Dusk_Feb_2006.jpg",
+        "credit": "Diliff · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0494",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Selección Colombia",
+      "description": "Un año en que todo el país gritó tanto que los vecinos de Panamá pidieron silencio.",
+      "question": "¿En qué año ganó la Selección Colombia de mayores su primera Copa América, jugando en casa?",
+      "answer": "2001",
+      "wrong_answers": [
+        "1999",
+        "2004",
+        "2007"
+      ],
+      "hints": [
+        "Ese año Colombia fue la sede del torneo.",
+        "La final fue en Bogotá contra México, y Colombia ganó 1 a 0.",
+        "Fue el primer año del siglo XXI."
+      ],
+      "fun_fact": "En esa Copa América, Colombia ganó sus seis partidos y no recibió ni un solo gol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Estadio_El_Campin_vac%C3%ADo.jpg/3840px-Estadio_El_Campin_vac%C3%ADo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEstadio_El_Campin_vac%C3%ADo.jpg",
+        "credit": "Futbolero · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0495",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Selección Colombia",
+      "description": "Miles de personas gritando al tiempo: aquí hasta los oídos sudan la camiseta.",
+      "question": "Mira la foto: ¿cómo se llama este estadio, la casa habitual de la Selección Colombia en las eliminatorias al Mundial?",
+      "answer": "El Metropolitano",
+      "wrong_answers": [
+        "El Campín",
+        "El Atanasio Girardot",
+        "El Pascual Guerrero"
+      ],
+      "hints": [
+        "A los rivales no les gusta jugar allí por el calor y la humedad.",
+        "Está en la costa Caribe, cerca de donde el río Magdalena llega al mar.",
+        "Está en Barranquilla y lleva el nombre de un futbolista barranquillero, Roberto Meléndez."
+      ],
+      "fun_fact": "Muchos rivales se quejan del calor y la humedad de Barranquilla, y por eso la Selección prefiere jugar allí sus partidos más importantes.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Estadio_Metropolitano_de_Baranquilla_2011.jpg/3840px-Estadio_Metropolitano_de_Baranquilla_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEstadio_Metropolitano_de_Baranquilla_2011.jpg",
+        "credit": "Mkstillo · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0496",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Selección Colombia",
+      "description": "Ningún peluquero se atrevió jamás a tocar este peinado.",
+      "question": "¿Qué futbolista es? Era un volante colombiano con una enorme melena rubia y crespa, famoso por sus pases mágicos y por jugar casi sin correr.",
+      "answer": "Carlos Valderrama",
+      "wrong_answers": [
+        "René Higuita",
+        "Faustino Asprilla",
+        "Freddy Rincón"
+      ],
+      "hints": [
+        "Fue el gran ídolo de la Selección en los años 90.",
+        "Usaba la camiseta número 10 y jugó los Mundiales de 1990, 1994 y 1998.",
+        "Es de Santa Marta y todos lo conocen como 'el Pibe'."
+      ],
+      "fun_fact": "En Santa Marta, su ciudad natal, hay una estatua gigante de bronce del Pibe, con todo y su melena.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Bah%C3%ADa_de_Santa_Marta_vista_desde_chalupa.jpg/3840px-Bah%C3%ADa_de_Santa_Marta_vista_desde_chalupa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABah%C3%ADa_de_Santa_Marta_vista_desde_chalupa.jpg",
+        "credit": "StellaInfante · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0497",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Tradiciones colombianas",
+      "description": "Si hoy alguien te dice que se canceló el colegio para siempre, revisa primero el calendario.",
+      "question": "¿Qué día se celebra en Colombia el Día de los Inocentes, cuando la gente se hace bromas?",
+      "answer": "28 de diciembre",
+      "wrong_answers": [
+        "1 de abril",
+        "6 de enero",
+        "2 de noviembre"
+      ],
+      "hints": [
+        "No es el mismo día que el de las bromas en Estados Unidos.",
+        "Cae en plenas vacaciones de fin de año.",
+        "Es pocos días después de Navidad y antes de Año Nuevo."
+      ],
+      "fun_fact": "A las bromas de ese día se les dice 'inocentadas', y en algunos países hasta los periódicos publican noticias falsas de chiste.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Whoopee_cushion.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhoopee_cushion.jpg",
+        "credit": "Grombo · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0498",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Tradiciones colombianas",
+      "description": "Un cerdo que llegó a la fiesta lleno de sí mismo, literalmente.",
+      "question": "La lechona, un cerdo entero relleno de su propia carne con arveja y especias y horneado durante horas, es el plato más famoso de ¿qué departamento?",
+      "answer": "Tolima",
+      "wrong_answers": [
+        "Antioquia",
+        "Nariño",
+        "Boyacá"
+      ],
+      "hints": [
+        "Es un departamento del centro del país, sin salida al mar.",
+        "Por sus tierras planas y calientes pasa el río Magdalena, y en sus montañas hay un volcán con nieve.",
+        "Su capital es Ibagué, la 'Capital Musical de Colombia'."
+      ],
+      "fun_fact": "Una lechona grande puede alimentar a más de 50 personas, por eso es la reina de las fiestas familiares.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Lechona.JPG/3840px-Lechona.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALechona.JPG",
+        "credit": "Tamorlan · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0499",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Videojuegos clásicos",
+      "description": "El juego donde ordenar cosas es divertido, algo que tu mamá nunca ha logrado con tu cuarto.",
+      "question": "¿En qué país de hoy se inventó el Tetris, el juego de las fichas que caen y hay que encajar, en 1984?",
+      "answer": "Rusia",
+      "wrong_answers": [
+        "Japón",
+        "Estados Unidos",
+        "Alemania"
+      ],
+      "hints": [
+        "No lo inventaron en una empresa de videojuegos, sino en un centro de investigación de computadores.",
+        "El primer Tetris corría en un computador tan sencillo que no tenía gráficos: las fichas se dibujaban con letras y símbolos.",
+        "El inventor trabajaba en Moscú, en lo que entonces era la Unión Soviética."
+      ],
+      "fun_fact": "La famosa musiquita del Tetris en el Game Boy es una vieja canción popular rusa llamada 'Korobéiniki'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Tetromino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATetromino.jpg",
+        "credit": "Egoraptor · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0500",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Videojuegos",
+      "description": "Un chicle rosado con hambre infinita y cero modales en la mesa.",
+      "question": "¿Qué personaje de videojuegos es? Es una bolita rosada y redonda de Nintendo que aspira a sus enemigos, se los traga y copia sus poderes.",
+      "answer": "Kirby",
+      "wrong_answers": [
+        "Jigglypuff",
+        "Yoshi",
+        "Toad"
+      ],
+      "hints": [
+        "Su primer juego salió en 1992 para la Game Boy.",
+        "Además de tragarse enemigos, puede inflarse como un globo para volar.",
+        "Su nombre empieza por K."
+      ],
+      "fun_fact": "En la caja del primer juego de Kirby en Estados Unidos lo pintaron blanco, porque la Game Boy no mostraba colores.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Xbox-360-Wireless-Controller-White.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AXbox-360-Wireless-Controller-White.jpg",
+        "credit": "Evan-Amos · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0501",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Ríos de Colombia",
+      "description": "Hasta el río más grande de Colombia necesita un amigo que le ayude a cargar el agua.",
+      "question": "¿Cuál es el afluente más grande del río Magdalena, el que más agua le entrega?",
+      "answer": "El río Cauca",
+      "wrong_answers": [
+        "El río Atrato",
+        "El río Meta",
+        "El río Sinú"
+      ],
+      "hints": [
+        "Nace en el Macizo Colombiano, muy cerca de donde nace el propio Magdalena.",
+        "Recorre de sur a norte el valle donde está Cali.",
+        "Se llama igual que el departamento cuya capital es Popayán."
+      ],
+      "fun_fact": "El Cauca y el Magdalena corren casi en paralelo durante más de mil kilómetros, separados por la cordillera Central, y solo se juntan cerca de Mompox.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bridge_over_the_Magdalena_River%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABridge_over_the_Magdalena_River%2C_Colombia.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0502",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Ríos del mundo",
+      "description": "Un río tan largo que si lo recorres en canoa, llegas con barba aunque no tengas.",
+      "question": "¿Cuál es el río más largo de África?",
+      "answer": "El Nilo",
+      "wrong_answers": [
+        "El Congo",
+        "El Níger",
+        "El Zambeze"
+      ],
+      "hints": [
+        "Atraviesa un desierto enorme antes de llegar al mar Mediterráneo.",
+        "En sus orillas vivieron los antiguos egipcios.",
+        "Las pirámides y los faraones dependían de él para tener agua y cosechas."
+      ],
+      "fun_fact": "El Nilo recorre unos 6.650 km y pasa por 11 países; durante miles de años sus crecidas fertilizaban los campos de Egipto.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Chobe_River_Front%2C_Botswana_%282625496300%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChobe_River_Front%2C_Botswana_%282625496300%29.jpg",
+        "credit": "Joachim Huber from Switzerland · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0503",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Ríos del mundo",
+      "description": "Este río tiene más sellos en el pasaporte que un piloto de avión.",
+      "question": "¿Qué río de Europa atraviesa más países que cualquier otro río del mundo, en total diez?",
+      "answer": "El Danubio",
+      "wrong_answers": [
+        "El Rin",
+        "El Elba",
+        "El Ródano"
+      ],
+      "hints": [
+        "Nace en Alemania y desemboca en el mar Negro.",
+        "Pasa por Viena, la capital de Austria, y por Budapest, la de Hungría.",
+        "Hay un vals muy famoso que lleva su nombre y el adjetivo 'azul'."
+      ],
+      "fun_fact": "El Danubio pasa por cuatro capitales: Viena, Bratislava, Budapest y Belgrado, más que ningún otro río del mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Budapest_Parliament_4604.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABudapest_Parliament_4604.JPG",
+        "credit": "Dirk Beyer · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0504",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "Superhéroes de Marvel",
+      "description": "Este señor tiene un problema serio de mal genio, y además le sale carísimo en ropa.",
+      "question": "¿Qué personaje de Marvel es? Es un científico que, cuando se pone bravo, se vuelve un gigante verde y superfuerte.",
+      "answer": "Hulk",
+      "wrong_answers": [
+        "Thor",
+        "Iron Man",
+        "Capitán América"
+      ],
+      "hints": [
+        "Es uno de los Vengadores.",
+        "Cuando se transforma, la camisa se le rompe en pedazos, pero los pantalones casi siempre sobreviven.",
+        "Cuando está tranquilo se llama Bruce Banner."
+      ],
+      "fun_fact": "En su primer cómic, de 1962, Hulk era gris, pero lo cambiaron a verde porque a la imprenta le costaba imprimir bien ese color.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Equipment_and_glassware.jpg/3840px-Equipment_and_glassware.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEquipment_and_glassware.jpg",
+        "credit": "Belikov Maxim · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0506",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Superhéroes de Marvel",
+      "description": "Tres personas que nunca llegan a tiempo a almorzar porque siempre hay que salvar el mundo.",
+      "question": "Thor, Iron Man y la Viuda Negra: ¿qué tienen en común?",
+      "answer": "Son Vengadores",
+      "wrong_answers": [
+        "Son X-Men",
+        "Son de los Cuatro Fantásticos",
+        "Son de la Liga de la Justicia"
+      ],
+      "hints": [
+        "Los tres son de Marvel y trabajan en el mismo equipo.",
+        "En ese equipo también están Hulk y el Capitán América.",
+        "En inglés el equipo se llama 'The Avengers'."
+      ],
+      "fun_fact": "El Capitán América no estaba en el primer cómic de este equipo, de 1963: se unió apenas en el número 4.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fan_Expo_2014_-_Stacks_%289669608946%29.jpg/3840px-Fan_Expo_2014_-_Stacks_%289669608946%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFan_Expo_2014_-_Stacks_%289669608946%29.jpg",
+        "credit": "jareed from London, UK · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0507",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Superhéroes de Marvel",
+      "description": "Un país tan escondido que ni Google Maps sabe dónde queda.",
+      "question": "En las películas de Marvel, ¿cómo se llama el reino africano escondido y supermoderno de Pantera Negra?",
+      "answer": "Wakanda",
+      "wrong_answers": [
+        "Latveria",
+        "Zamunda",
+        "Sokovia"
+      ],
+      "hints": [
+        "Por fuera parece un país pobre de granjeros, pero por dentro es tecnología pura.",
+        "Su gente se despide cruzando los brazos sobre el pecho.",
+        "Su famoso grito es '¡___ por siempre!'."
+      ],
+      "fun_fact": "Este reino apareció por primera vez en 1966, en un cómic de los Cuatro Fantásticos, el mismo en el que debutó Pantera Negra.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Black_jaguar_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_jaguar_%281%29.jpg",
+        "credit": "Singer Ron%2C U.S. Fish and Wildlife Service · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0508",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Tradiciones colombianas",
+      "description": "Un bus que se fue de rumba y nunca volvió a ponerse serio.",
+      "question": "Mira la foto: ¿cómo se llama este vehículo de madera pintado de colores, típico de los pueblos de Colombia?",
+      "answer": "Chiva",
+      "wrong_answers": [
+        "Buseta",
+        "Colectivo",
+        "Trolebús"
+      ],
+      "hints": [
+        "Por fuera lleva escaleras para subir al techo, donde se cargan bultos.",
+        "En muchas ciudades se alquila para fiestas, con música y gente bailando adentro.",
+        "Su nombre es también el de un animal con cuernos y barbita que da leche."
+      ],
+      "fun_fact": "En los pueblos, la chiva lleva en el techo de todo: bultos de café, racimos de plátano y a veces hasta gallinas.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Bus_chiva_tradicional.jpg/3840px-Bus_chiva_tradicional.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABus_chiva_tradicional.jpg",
+        "credit": "https://www.flickr.com/people/pat_ossa/ · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0509",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Tradiciones colombianas",
+      "description": "El postre que tiembla de miedo cada diciembre porque sabe que se lo van a comer.",
+      "question": "¿Con qué se hace la natilla navideña colombiana?",
+      "answer": "Leche, panela y fécula de maíz",
+      "wrong_answers": [
+        "Arroz, leche y canela",
+        "Guayaba, azúcar y limón",
+        "Harina de trigo y huevo"
+      ],
+      "hints": [
+        "Casi siempre se come al lado de los buñuelos.",
+        "Se cocina en una olla revolviendo sin parar hasta que se pone espesa.",
+        "Lleva un dulce de caña café oscuro y un polvo blanco que sale de la mazorca."
+      ],
+      "fun_fact": "En muchas casas la natilla se revuelve durante largo rato en una paila grande, y no se puede dejar de mover para que no se pegue.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Pesebre_ASTIN_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APesebre_ASTIN_04.jpg",
+        "credit": "Akire gatuna · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0510",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Videojuegos clásicos",
+      "description": "Un robot que les hace la tarea a los villanos: les quita las armas y se queda con ellas.",
+      "question": "¿Qué personaje de videojuego es? Es un niño robot azul, creado por el bondadoso Dr. Light, que tiene un cañón en el brazo y copia el arma de cada jefe que derrota.",
+      "answer": "Mega Man",
+      "wrong_answers": [
+        "Bomberman",
+        "Samus Aran",
+        "Donkey Kong"
+      ],
+      "hints": [
+        "Su primer juego salió en 1987, para la consola NES de Nintendo.",
+        "Lo creó la empresa japonesa Capcom, y su gran enemigo es el malvado Dr. Wily.",
+        "Su nombre en inglés significa algo así como 'Mega Hombre'."
+      ],
+      "fun_fact": "En Japón se llama Rockman, y su hermana robot se llama Roll: juntos forman 'Rock and Roll'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Nintendo_Entertainment_System_video_game_console_%2853665518370%29.jpg/3840px-Nintendo_Entertainment_System_video_game_console_%2853665518370%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANintendo_Entertainment_System_video_game_console_%2853665518370%29.jpg",
+        "credit": "Chris Williams · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0511",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Videojuegos clásicos",
+      "description": "Cuando un ratón eléctrico decide que ya es hora de ir al gimnasio.",
+      "question": "En los videojuegos de Pokémon, ¿en qué Pokémon evoluciona Pikachu cuando le dan una piedra trueno?",
+      "answer": "Raichu",
+      "wrong_answers": [
+        "Pichu",
+        "Jolteon",
+        "Electabuzz"
+      ],
+      "hints": [
+        "Es más grande que Pikachu y de color naranja.",
+        "Pichu no puede ser: es la forma de antes de Pikachu, no la de después.",
+        "Su nombre empieza por 'Rai', que en japonés tiene que ver con el trueno."
+      ],
+      "fun_fact": "En la serie animada, el Pikachu de Ash se niega a usar la piedra trueno porque quiere seguir siendo Pikachu.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Lightning_cloud_to_cloud_%28aka%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALightning_cloud_to_cloud_%28aka%29.jpg",
+        "credit": "André Karwath aka Aka · CC BY-SA 2.5 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0512",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Videojuegos",
+      "description": "La princesa con el peor sistema de seguridad de todo el reino.",
+      "question": "En los juegos de Super Mario, ¿qué princesa secuestra Bowser una y otra vez para que Mario la rescate?",
+      "answer": "Peach",
+      "wrong_answers": [
+        "Daisy",
+        "Rosalina",
+        "Zelda"
+      ],
+      "hints": [
+        "Es la princesa del Reino Champiñón.",
+        "Usa un vestido rosado y una corona dorada.",
+        "Su nombre en inglés es una fruta: el durazno."
+      ],
+      "fun_fact": "En el juego 'Super Princess Peach' se invierten los papeles: ella es la heroína y tiene que rescatar a Mario.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Fly_Agaric_mushroom_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFly_Agaric_mushroom_04.jpg",
+        "credit": "Tony Wills · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0513",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Videojuegos",
+      "description": "Comer puntitos en un laberinto sería un trabajo muy tranquilo si no fuera por estos vecinos.",
+      "question": "En el Pac-Man original de 1980, ¿cuántos fantasmas persiguen a Pac-Man por el laberinto?",
+      "answer": "4",
+      "wrong_answers": [
+        "3",
+        "5",
+        "6"
+      ],
+      "hints": [
+        "Salen de una casita en el centro del laberinto.",
+        "Cada uno tiene un color diferente.",
+        "Son rojo, rosado, celeste y naranja."
+      ],
+      "fun_fact": "Los fantasmas se llaman Blinky, Pinky, Inky y Clyde, y cada uno tiene su propia manera de perseguirte: el rojo va directo hacia ti.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/DFC_0797_Close-up_of_a_row_of_retro_arcade_game_joysticks_glowing_with_neon_blue_and_pink_lights.jpg/3840px-DFC_0797_Close-up_of_a_row_of_retro_arcade_game_joysticks_glowing_with_neon_blue_and_pink_lights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_0797_Close-up_of_a_row_of_retro_arcade_game_joysticks_glowing_with_neon_blue_and_pink_lights.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
     }
   ]
 }
