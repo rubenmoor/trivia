@@ -87,7 +87,9 @@ def parallel(fn, items, jobs):
                 f.result()
             except Exception as e:  # noqa: BLE001 — keep the batch going
                 errors.append(e)
-                label = futures[f][0] if isinstance(futures[f], tuple) else futures[f]
+                it = futures[f]
+                label = (it[0] if isinstance(it, tuple)
+                         else ", ".join(x[0] for x in it) if isinstance(it, list) else it)  # list: grouped()
                 print(f"  FAILED {label}: {e}", file=sys.stderr)
     if errors:
         print(f"{len(errors)} item(s) failed; rerun the same command to retry them.", file=sys.stderr)
@@ -240,8 +242,10 @@ def assign_difficulties(fit, seed):
     return dict(zip(slots, levels))
 
 
-def existing_answers(pool):
-    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in pool["questions"]})
+def existing_answers(pool, sub):
+    """The subcategory's own pool questions, all statuses (PE-4); merge's `duplicates()` and the
+    review's `related` list still check the whole pool."""
+    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in pool["questions"] if q.get("subcategory") == sub})
 
 
 def cmd_draft(args):
@@ -249,7 +253,6 @@ def cmd_draft(args):
     fit = load_json(d / "fit.json") or sys.exit("Run `fit` first.")
     pool = load_json(POOL)
     targets = assign_difficulties(fit, args.seed)
-    avoid = "\n".join(f"- {a}" for a in existing_answers(pool))
     system = prompt("house-style", "draft")
     todo = [s for s in sorted(fit) if fit[s]["styles"] and not (d / "drafts" / f"{slug(s)}.json").exists()]
     broad = categories.broad_of()
@@ -258,8 +261,9 @@ def cmd_draft(args):
         row = fit[sub]
         slots = [{"slot": i, "style": s["style"], "target_difficulty": targets[(sub, i)], "idea": s["idea"]}
                  for i, s in enumerate(row["styles"])]
+        avoid = "\n".join(f"- {a}" for a in existing_answers(pool, sub)) or "none yet"
         user = (f"## Subcategory\n{sub} (broad category: {broad[sub]['name']})\n\n## Slots\n"
-                + json.dumps(slots, ensure_ascii=False, indent=2)
+                + json.dumps(slots, ensure_ascii=False)
                 + f"\n\n## Already in the pool (avoid these answers and topics)\n{avoid}")
         out = claude(system, user, DRAFT_SCHEMA, args.model, d)
         good = []
@@ -296,6 +300,22 @@ def drafts(d):
         yield f.stem, load_json(f)["questions"]
 
 
+GROUP_SIZE = 10  # questions per rate/revise call (PE-1, PE-2)
+
+
+def grouped(files, size=GROUP_SIZE):
+    """Pack (name, items) draft files into groups of about `size` items, one call each.
+    A file is never split (a draft file is one subcategory); a bigger file is a group of its own."""
+    groups, cur, n = [], [], 0
+    for name, items in files:
+        if cur and n + len(items) > size:
+            groups.append(cur)
+            cur, n = [], 0
+        cur.append((name, items))
+        n += len(items)
+    return groups + [cur] if cur else groups
+
+
 def for_review(q):
     keys = ["style", "difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact"]
     return {"id": q["tmp_id"], **{k: q[k] for k in keys}}
@@ -306,31 +326,42 @@ def cmd_rate(args):
     system = prompt("house-style", "rate")
     todo = [(name, qs) for name, qs in drafts(d) if qs and not (d / "ratings" / f"{name}.json").exists()]
 
-    def work(item):
-        name, qs = item
-        user = "## Questions\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False, indent=2)
+    def work(group):
+        qs = [q for _, qq in group for q in qq]
+        user = "## Questions\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
         out = claude(system, user, RATE_SCHEMA, args.model, d)
-        missing = {q["tmp_id"] for q in qs} - {r["id"] for r in out["ratings"]}
-        if missing:  # a partial file would count as done and never be retried
+        got = {r["id"]: r for r in out["ratings"]}
+        missing = []
+        for name, qq in group:
+            ids = [q["tmp_id"] for q in qq]
+            if all(i in got for i in ids):
+                save_json(d / "ratings" / f"{name}.json", {i: got[i] for i in ids})
+            else:  # a partial file would count as done and never be retried
+                missing += [i for i in ids if i not in got]
+        print(f"  rate: {', '.join(name for name, _ in group)} ({len(qs)} questions)")
+        if missing:
             raise RuntimeError(f"no rating for {', '.join(sorted(missing))}")
-        save_json(d / "ratings" / f"{name}.json", {r["id"]: r for r in out["ratings"]})
-        print(f"  rate: {name}")
 
-    return parallel(work, todo, args.jobs)
+    return parallel(work, grouped(todo), args.jobs)
+
+
+def needs_check(q):
+    return bool(q["needs_fact_check"] or re.search(r"\d", q["question"] + q["answer"] + q["fun_fact"]))
 
 
 def cmd_factcheck(args):
     d = run_dir(args)
     system = prompt("factcheck")
+    _, done = collect(d)  # includes verdicts kept through a revision (PE-3)
     todo = []
     for name, qs in drafts(d):
-        need = [q for q in qs if q["needs_fact_check"] or re.search(r"\d", q["question"] + q["answer"] + q["fun_fact"])]
+        need = [q for q in qs if needs_check(q) and q["tmp_id"] not in done]
         if need and not (d / "factchecks" / f"{name}.json").exists():
             todo.append((name, need))
 
     def work(item):
         name, qs = item
-        user = "## Questions (Spanish)\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False, indent=2)
+        user = "## Questions (Spanish)\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
         out = claude(system, user, FACT_SCHEMA, args.model, d, web=True)
         save_json(d / "factchecks" / f"{name}.json", {c["id"]: c for c in out["checks"]})
         print(f"  factcheck: {name}: " + ", ".join(c["verdict"] for c in out["checks"]))
@@ -396,10 +427,9 @@ def cmd_merge(args):
             tid = q["tmp_id"]
             if tid in merged: continue
             r, c = ratings.get(tid), checks.get(tid)
-            needs_check = q["needs_fact_check"] or bool(re.search(r"\d", q["question"] + q["answer"] + q["fun_fact"]))
             reason = None
             if r is None: reason = "not rated yet"
-            elif needs_check and c is None: reason = "not fact-checked yet"
+            elif needs_check(q) and c is None: reason = "not fact-checked yet"
             elif any(r.get(k, 5) < 4 for k in HARD_CRITERIA):
                 reason = "hard fail: " + ", ".join(f"{k} {r.get(k, '-')}" for k in HARD_CRITERIA)
             elif c and c["verdict"] == "wrong": reason = f"fact-check wrong: {c['problem']}"
@@ -513,20 +543,29 @@ def cmd_revise(args):
                 items.append({**for_review(q), "background_query": q.get("background_query", ""),
                               "needs_media": q.get("needs_media", False), "issues": found})
         todo.append((name, items))
+    for name, items in todo:
+        if not items:  # nothing to revise: saved empty, so the file counts as done
+            save_json(d / "revisions" / f"{name}.json", {})
 
-    def work(item):
-        name, items = item
-        results = {}
-        if items:
-            user = "## Questions with issues\n" + json.dumps(items, ensure_ascii=False, indent=2)
-            out = claude(system, user, REVISE_SCHEMA, args.model, d)
-            results = {r["id"]: r for r in out["results"]}
-        save_json(d / "revisions" / f"{name}.json", results)
-        actions = [r["action"] for r in results.values()]
-        print(f"  revise: {name}: {len(items)} with issues → "
+    def work(group):
+        items = [it for _, its in group for it in its]
+        user = "## Questions with issues\n" + json.dumps(items, ensure_ascii=False)
+        out = claude(system, user, REVISE_SCHEMA, args.model, d)
+        got = {r["id"]: r for r in out["results"]}
+        missing = []
+        for name, its in group:
+            ids = [it["id"] for it in its]
+            if all(i in got for i in ids):
+                save_json(d / "revisions" / f"{name}.json", {i: got[i] for i in ids})
+            else:  # a partial file would count as done and never be retried
+                missing += [i for i in ids if i not in got]
+        actions = [r["action"] for r in got.values()]
+        print(f"  revise: {', '.join(name for name, _ in group)}: {len(items)} with issues → "
               + ", ".join(f"{a} {actions.count(a)}" for a in ["keep", "revise", "drop"] if a in actions))
+        if missing:
+            raise RuntimeError(f"no revision result for {', '.join(sorted(missing))}")
 
-    return parallel(work, todo, args.jobs)
+    return parallel(work, grouped([(n, its) for n, its in todo if its]), args.jobs)
 
 
 def cmd_apply(args):
@@ -599,11 +638,16 @@ def cmd_apply(args):
           + f". Next: trivia-media fetch --batch {cfg['batch']}")
 
 
+FACT_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact"]
+
+
 def apply_to_drafts(d, revisions, applied):
     """New drafts (not yet merged): revised questions move to a new draft file and lose their
     rating and fact-check, so `rate` and `factcheck` judge the new version before `merge`.
-    Kept and dropped ones stay as they are; merge's hard checks still decide."""
-    moved, counts = [], {"keep": 0, "revise": 0, "drop": 0, "malformed": 0}
+    Kept and dropped ones stay as they are; merge's hard checks still decide.
+    A `confirmed` fact-check stays when the revision changed none of the facts (PE-3)."""
+    _, checks = collect(d)
+    moved, kept_checks, counts = [], set(), {"keep": 0, "revise": 0, "drop": 0, "malformed": 0}
     for name, qs in list(drafts(d)):
         rest = []
         for q in qs:
@@ -625,17 +669,22 @@ def apply_to_drafts(d, revisions, applied):
             moved.append({**q, **{k: new[k] for k in keys if k in new},
                           "media": {**new["media"], "note": new["media"]["note"] or None},
                           "needs_fact_check": True, "revision_reason": rev["reason"]})
+            c = checks.get(q["tmp_id"])
+            if c and c["verdict"] == "confirmed" and all(new[k] == q[k] for k in FACT_FIELDS):
+                kept_checks.add(q["tmp_id"])
             counts["revise"] += 1
             applied.add(q["tmp_id"])
         if len(rest) != len(qs):
             f = d / "drafts" / f"{name}.json"
             save_json(f, {**load_json(f), "questions": rest})
     gone = {q["tmp_id"] for q in moved}
-    for sub in ("ratings", "factchecks"):
+    for sub, drop in (("ratings", gone), ("factchecks", gone - kept_checks)):  # the rating is always redone
         for f in (d / sub).glob("*.json"):
             data = load_json(f)
-            if gone & data.keys():
-                save_json(f, {k: v for k, v in data.items() if k not in gone})
+            if drop & data.keys():
+                save_json(f, {k: v for k, v in data.items() if k not in drop})
+    if kept_checks:
+        print(f"  kept {len(kept_checks)} confirmed fact-check(s): the revision changed no facts")
     if moved:
         n = len(list((d / "drafts").glob("revised-*.json"))) + 1
         for i in range(0, len(moved), 10):
@@ -845,7 +894,7 @@ def cmd_review(args):
             "background": slot_input(d, q, "background") if q.get("background") else None,
             "can_search_again": args.round == 1,
         }
-        user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False, indent=2)
+        user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
         r[f"round{args.round}"] = {**out, "model": model}
         save_json(reviews / f"{q['id']}.json", r)

@@ -1,6 +1,6 @@
 # Task: rate questions
 
-You are a strict, independent reviewer. Someone else wrote the questions below for the trivia game described above. Rate each one; don't rewrite it.
+You are a strict, independent reviewer. Someone else wrote the questions below for the trivia game described above. Rate each one; don't rewrite it. The questions may come from several subcategories: rate every question on its own, never in comparison with the others.
 
 Score each criterion 1–5 (5 = excellent, 3 = acceptable, 1 = broken):
 - `correct`: the answer is true and every fact in question, hints and fun fact is true. If you have any doubt, score ≤ 3 and say why in `notes`.

@@ -33,6 +33,7 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`17-publishing.md`](17-publishing.md) | Steam: media and code licenses, credits, AI disclosure, store page, Steamworks account | stub |
 | [`18-steam-integration.md`](18-steam-integration.md) | Steam: desktop shell, Steamworks features, builds and depots, Steam Deck | stub |
 | [`19-repo-layout.md`](19-repo-layout.md) | Repo layout (`app/` ships, `authoring/` doesn't), flake packages, the one-command LLM batch (D-35, D-36) | active |
+| [`20-pipeline-efficiency.md`](20-pipeline-efficiency.md) | Fewer Claude calls and tokens in `qgen batch`; stored concept lists and multi-axis question styles for more varied questions | draft |
 | [`project.md`](project.md) | Milestones; all open tasks and questions grouped by milestone | living |
 | [`backlog.md`](backlog.md) | Additional tasks found along the way | living |
 | [`open-questions.md`](open-questions.md) | Unresolved questions and their answers | living |
