@@ -32,7 +32,7 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
   - its own **categories and subcategories** (its own `categories.json`);
   - its own **concept lists**, made by `qgen concepts` for its subcategories (the batch makes missing ones, as today);
   - possibly its own **question axes**, falling back to `base`'s `question-axes.json` when it has none.
-- **Choosing subcategories:** a bundle batch picks the 30 subcategories with the fewest approved questions *in that bundle* (the same rule as today, applied to the bundle's own list).
+- **Choosing subcategories:** a bundle batch picks half of the bundle's subcategories (D-46), those with the fewest approved questions *in that bundle* (the same rule as today, applied to the bundle's own list).
 - **Taxonomy stays per bundle:** a bundle's subcategories, concepts and axes only feed its own batches. `base`'s lists don't change when a bundle is made.
 
 ### Layout (D-43)

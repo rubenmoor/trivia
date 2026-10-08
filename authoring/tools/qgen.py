@@ -1125,6 +1125,7 @@ def cmd_report(args):
 
 # --- the LLM batch (D-36, plans/19-repo-layout.md) ----------------------------------------------
 
+BATCH_SLOTS = 18  # draft slots per subcategory (D-46); base: 57 × 18 slots, about 700 merged questions
 REVIEW_MODEL = "opus"
 
 REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "pick", "background_pick", "new_query", "reasons"],
@@ -1413,9 +1414,9 @@ def next_batch():
     return f"batch-{max(numbers, default=0) + 1}", False
 
 
-def batch_subcategories(count, bundle="base"):
-    """The bundle's `count` subcategories with the fewest approved questions of that bundle;
-    ties in its categories.json order (D-41)."""
+def batch_subcategories(count=None, bundle="base"):
+    """The bundle's `count` subcategories (default: batches.SHARE of them, D-46) with the fewest
+    approved questions of that bundle; ties in its categories.json order (D-41)."""
     return batches.subcategories(load_json(POOL)["questions"], count, bundle)
 
 
@@ -1451,7 +1452,7 @@ def cmd_batch(args):
 
     steps = [
         ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
-        ("draft", cmd_draft, ns(model="opus", seed=1, slots=4, subcategories=None, bundle=args.bundle)),
+        ("draft", cmd_draft, ns(model="opus", seed=1, slots=BATCH_SLOTS, subcategories=None, bundle=args.bundle)),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
         ("revise", cmd_revise, ns(model="opus")),
@@ -1694,7 +1695,7 @@ def main():
     b.add_argument("--bundle", default="base", help="write for this bundle (default base); only when the user names one")
     b.add_argument("--run", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--subcategories", help=argparse.SUPPRESS)  # tests and debugging only
-    b.add_argument("--count", type=int, default=batches.SUBCATEGORIES, help=argparse.SUPPRESS)
+    b.add_argument("--count", type=int, help=argparse.SUPPRESS)  # default: batches.SHARE of the bundle's subcategories
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     args = ap.parse_args()
     errors = args.fn(args)

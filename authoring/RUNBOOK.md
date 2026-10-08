@@ -42,7 +42,8 @@ The fixed rules are in `authoring/tools/qgen.py` (`cmd_batch`):
 
 - **Name:** `batch-<n>`, one more than the highest so far. An unfinished batch is resumed instead.
 - **Bundle:** `base` unless `--bundle` names another one (D-41). Every question of the batch is in that bundle.
-- **Subcategories:** the bundle's 30 with the fewest approved questions in that bundle (ties in the order of the bundle's categories file: `app/data/categories.json` for `base`, `app/data/bundles/<id>/categories.json` for another bundle, D-43).
+- **Size (D-46):** half of the bundle's subcategories (rounded up), 18 draft slots each; for `base` about 1000 drafts and 700 merged questions. Expect to hit Claude's usage limit and resume (step 3).
+- **Subcategories:** the half with the fewest approved questions in that bundle (ties in the order of the bundle's categories file: `app/data/categories.json` for `base`, `app/data/bundles/<id>/categories.json` for another bundle, D-43).
 - **Steps:** concepts → draft → rate → factcheck → revise → apply → rate → factcheck → merge → media → sheets → review → research → sheets → review → record → export → sync → batch-report → validate. Each skips work already done, so rerunning continues where it stopped.
 - **Review:** one Claude call per question (`prompts/review.md`). It sees the question, the rater's notes, the fact check, related pool questions, and a contact sheet of the media candidates, and answers with a decision and a pick.
 - **Fixed rules on top of the review:** no adequate media after one new search, or a fact check that isn't confirmed, makes a question `needs_work`. Reviews are recorded as `reviewer: "llm"` with the model's id (D-33).
