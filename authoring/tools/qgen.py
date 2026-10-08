@@ -24,12 +24,13 @@ Revising questions that are already in the pool (07, QG-13):
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, concurrent.futures, datetime, difflib, json, random, re, subprocess, sys, threading, unicodedata
+import argparse, concurrent.futures, datetime, difflib, json, random, re, subprocess, sys, threading, time, unicodedata
 from pathlib import Path
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
+import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # app/server/categories.py: app/data/categories.json (D-19)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
@@ -119,15 +120,23 @@ def run_dir(args):
     d.mkdir(parents=True, exist_ok=True)
     return d
 
-def parallel(fn, items, jobs):
-    """Run fn over items; report failures without stopping the others. Returns the errors."""
-    errors = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
-        futures = {ex.submit(fn, it): it for it in items}
+def parallel(fn, items, jobs, label="items", unit="items"):
+    """Run fn over items with a progress bar; report failures without stopping the others.
+    Returns the errors."""
+    errors, items = [], list(items)
+
+    def run(it):
+        bar.started()
+        return fn(it)
+
+    with progress.Bar(label, len(items), unit) as bar, concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
+        futures = {ex.submit(run, it): it for it in items}
         for f in concurrent.futures.as_completed(futures):
             try:
                 f.result()
+                bar.finished()
             except Exception as e:  # noqa: BLE001 — keep the batch going
+                bar.finished(ok=False)
                 errors.append(e)
                 it = futures[f]
                 label = (it[0] if isinstance(it, tuple)  # list: grouped() files or a group of questions
@@ -323,9 +332,9 @@ def cmd_concepts(args):
         save_json(path, out)
         print(f"  top-up: {sub}: {len(out['concepts'])} new concepts", flush=True)
 
-    errors = parallel(make, create, args.jobs)
+    errors = parallel(make, create, args.jobs, "concepts", "lists")
     finalize_concepts(d, order, axes_def)
-    errors += parallel(top_up, [s for s in subs if concepts.load(s) and wanted(s)], args.jobs)
+    errors += parallel(top_up, [s for s in subs if concepts.load(s) and wanted(s)], args.jobs, "top-up", "lists")
     finalize_concepts(d, order, axes_def)
     return errors
 
@@ -430,7 +439,8 @@ def cmd_bundles(args):
         if missing:
             raise RuntimeError(f"no bundle for {', '.join(missing)}")
 
-    errors = parallel(work, [todo[i:i + BUNDLE_GROUP] for i in range(0, len(todo), BUNDLE_GROUP)], args.jobs)
+    errors = parallel(work, [todo[i:i + BUNDLE_GROUP] for i in range(0, len(todo), BUNDLE_GROUP)],
+                      args.jobs, "bundles", "calls")
     data = load_json(POOL)  # proposals go in once, in one write
     moved = []
     for q in data["questions"]:
@@ -566,7 +576,7 @@ def cmd_draft(args):
         save_json(d / "drafts" / f"{slug(sub)}.json", {"questions": good, "skipped": out["skipped"]})
         print(f"  draft: {sub}: {len(good)} written, {len(out['skipped'])} skipped")
 
-    return parallel(work, todo, args.jobs)
+    return parallel(work, todo, args.jobs, "draft", "subcategories")
 
 
 def retire(sub, slots, skipped):
@@ -641,7 +651,7 @@ def cmd_rate(args):
         if missing:
             raise RuntimeError(f"no rating for {', '.join(sorted(missing))}")
 
-    return parallel(work, grouped(todo), args.jobs)
+    return parallel(work, grouped(todo), args.jobs, "rate", "calls")
 
 
 def needs_check(q):
@@ -665,7 +675,7 @@ def cmd_factcheck(args):
         save_json(d / "factchecks" / f"{name}.json", {c["id"]: c for c in out["checks"]})
         print(f"  factcheck: {name}: " + ", ".join(c["verdict"] for c in out["checks"]))
 
-    return parallel(work, todo, args.jobs)
+    return parallel(work, todo, args.jobs, "factcheck", "calls")
 
 
 def duplicates(q, pool_questions):
@@ -866,7 +876,7 @@ def cmd_revise(args):
         if missing:
             raise RuntimeError(f"no revision result for {', '.join(sorted(missing))}")
 
-    return parallel(work, grouped([(n, its) for n, its in todo if its]), args.jobs)
+    return parallel(work, grouped([(n, its) for n, its in todo if its]), args.jobs, "revise", "calls")
 
 
 def cmd_apply(args):
@@ -1110,16 +1120,18 @@ def cmd_media(args):
     """Fetch Commons candidates for every slot of the run's merged questions."""
     import media as media_tool  # authoring/tools/media.py
     errors = []
-    for q in batch_questions(args.run):
-        for slot in slots_of(q):
-            if media_tool.load_candidates(q["id"], slot) is not None:
-                continue
+    todo = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)
+            if media_tool.load_candidates(q["id"], slot) is None]
+    with progress.Bar("media", len(todo), "searches") as bar:
+        for q, slot in todo:
             try:
                 data = media_tool.fetch_for(q, slot)
                 print(f"  media: {q['id']} {slot}: {len(data['candidates'])} candidate(s)", flush=True)
+                bar.finished()
             except Exception as e:  # noqa: BLE001 — rerun retries the rest
                 errors.append(e)
                 print(f"  FAILED media {q['id']} {slot}: {e}", file=sys.stderr)
+                bar.finished(ok=False)
     return errors
 
 
@@ -1128,19 +1140,19 @@ def cmd_sheets(args):
     import media as media_tool
     d = run_dir(args)
     errors = []
-    for q in batch_questions(args.run):
-        for slot in slots_of(q):
-            out = sheet_path(d, q["id"], slot)
-            found = media_tool.load_candidates(q["id"], slot)
-            if out.exists() or not found:
-                continue
+    todo = [(sheet_path(d, q["id"], slot), found) for q in batch_questions(args.run) for slot in slots_of(q)
+            if not sheet_path(d, q["id"], slot).exists() and (found := media_tool.load_candidates(q["id"], slot))]
+    with progress.Bar("sheets", len(todo), "sheets") as bar:
+        for out, found in todo:
             try:
                 thumbs = d / "sheets" / "thumbs" / out.stem
                 shown = media_tool.make_sheet(found["candidates"], out, thumbs)
                 print(f"  sheets: {out.name}: {len(shown)} picture(s)", flush=True)
+                bar.finished()
             except Exception as e:  # noqa: BLE001
                 errors.append(e)
                 print(f"  FAILED sheet {out.name}: {e}", file=sys.stderr)
+                bar.finished(ok=False)
     return errors
 
 
@@ -1207,33 +1219,37 @@ def cmd_review(args):
         print(f"  review {args.round}: {q['id']}: {out['decision']}, pick {out['pick']}"
               + (f", new search “{out['new_query']}”" if out["new_query"] and args.round == 1 else ""), flush=True)
 
-    return parallel(work, todo, args.jobs)
+    return parallel(work, todo, args.jobs, f"review {args.round}", "questions")
 
 
 def cmd_research(args):
     """One new Commons search for questions whose round-1 review found no adequate media."""
     import media as media_tool
     d = run_dir(args)
-    errors = []
+    errors, todo = [], []
     for q in batch_questions(args.run):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         r1 = r.get("round1") or {}
-        if r1.get("pick") is not None or not r1.get("new_query") or r.get("researched"):
-            continue
-        query = r1["new_query"].strip()
-        try:
-            q["media"]["query"] = query
-            media_tool.fetch_for(q, "media")
-        except Exception as e:  # noqa: BLE001
-            errors.append(e)
-            print(f"  FAILED research {q['id']}: {e}", file=sys.stderr)
-            continue
-        update_pool({q["id"]: lambda x, s=query: x["media"].update(query=s)})
-        sheet_path(d, q["id"], "media").unlink(missing_ok=True)  # `sheets` builds the new one
-        r["researched"] = query
-        save_json(path, r)
-        print(f"  research: {q['id']}: “{query}”", flush=True)
+        if r1.get("pick") is None and r1.get("new_query") and not r.get("researched"):
+            todo.append((q, path, r))
+    with progress.Bar("research", len(todo), "searches") as bar:
+        for q, path, r in todo:
+            query = r["round1"]["new_query"].strip()
+            try:
+                q["media"]["query"] = query
+                media_tool.fetch_for(q, "media")
+            except Exception as e:  # noqa: BLE001
+                errors.append(e)
+                print(f"  FAILED research {q['id']}: {e}", file=sys.stderr)
+                bar.finished(ok=False)
+                continue
+            update_pool({q["id"]: lambda x, s=query: x["media"].update(query=s)})
+            sheet_path(d, q["id"], "media").unlink(missing_ok=True)  # `sheets` builds the new one
+            r["researched"] = query
+            save_json(path, r)
+            print(f"  research: {q['id']}: “{query}”", flush=True)
+            bar.finished()
     return errors
 
 
@@ -1293,15 +1309,17 @@ def cmd_record(args):
 def cmd_sync_run(args):
     """Download the run's picked files into the media cache. Rate limits don't fail the batch."""
     missing = []
-    for q in batch_questions(args.run, ("approved", "needs_work")):
-        for label, url in media.picked(q):
-            if media.cache_path(url).is_file():
-                continue
+    todo = [(label, url) for q in batch_questions(args.run, ("approved", "needs_work"))
+            for label, url in media.picked(q) if not media.cache_path(url).is_file()]
+    with progress.Bar("sync", len(todo), "files") as bar:
+        for label, url in todo:
             try:
                 media.cached(url)
+                bar.finished()
             except Exception as e:  # noqa: BLE001 — listed in the report; `trivia-media sync` retries
                 missing.append(label)
                 print(f"  not cached: {label}: {e}", file=sys.stderr)
+                bar.finished(ok=False)
     save_json(run_dir(args) / "not-cached.json", missing)
     return []
 
@@ -1382,7 +1400,9 @@ def cmd_batch(args):
             subs = batch_subcategories(args.count)
         save_json(d / "run.json", {"mode": "batch", "subcategories": subs,
                                    "started": datetime.date.today().isoformat()})
-    print(f"{'Resuming' if resuming else 'Starting'} {run}", flush=True)
+    subs = load_json(d / "run.json")["subcategories"]
+    print(f"{'Resuming' if resuming else 'Starting'} {run}: {len(subs)} subcategories. "
+          "This takes from several minutes to an hour.", flush=True)
 
     def ns(**kw):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
@@ -1408,9 +1428,13 @@ def cmd_batch(args):
         ("sync", cmd_sync_run, ns()),
         ("batch-report", cmd_batch_report, ns()),
     ]
-    for name, fn, a in steps:
-        print(f"== {name}", flush=True)
+    t0 = time.monotonic()
+    for i, (name, fn, a) in enumerate(steps, 1):
+        print(f"\n== [{i}/{len(steps) + 1}] {name}", flush=True)
+        t = time.monotonic()
         errors = fn(a) or []
+        print(f"   {name} took {progress.duration(time.monotonic() - t)} "
+              f"(batch: {progress.duration(time.monotonic() - t0)})", flush=True)
         if any(isinstance(e, UsageLimit) for e in errors):
             print(f"\nStopped at `{name}`: Claude's usage limit ({next(e for e in errors if isinstance(e, UsageLimit))}).\n"
                   "Wait for the reset, then run `qgen batch` again.", file=sys.stderr)
@@ -1419,6 +1443,7 @@ def cmd_batch(args):
             print(f"\nStopped at `{name}` with {len(errors)} error(s). Run `qgen batch` again; "
                   "if the same step fails three times in a row, stop and report the output.", file=sys.stderr)
             sys.exit(1)
+    print(f"\n== [{len(steps) + 1}/{len(steps) + 1}] validate", flush=True)
     errors, _ = validate_pool()
     if errors:
         print("\n".join(errors), file=sys.stderr)
@@ -1428,7 +1453,8 @@ def cmd_batch(args):
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == run]
     n_ok = sum(q["status"] == "approved" for q in qs)
-    print(f"\nDone: {run}: {len(qs)} merged, {n_ok} approved, {len(qs) - n_ok} needs work.")
+    print(f"\nDone: {run}: {len(qs)} merged, {n_ok} approved, {len(qs) - n_ok} needs work "
+          f"(took {progress.duration(time.monotonic() - t0)}).")
     print("Commit exactly this:\n"
           f"  git add authoring/data/questions.json app/data/pool.json authoring/data/concepts/ authoring/reports/{run}.md\n"
           f"  git commit -m \"{run}: {len(qs)} questions, {n_ok} approved (qgen batch)\"")
