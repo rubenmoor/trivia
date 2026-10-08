@@ -1,0 +1,897 @@
+{
+  "subcategory": "Leyendas colombianas",
+  "facets": [
+    "Espantos del monte y la selva",
+    "Seres de ríos y lagunas",
+    "Aparecidos de pueblo y camino",
+    "Mitos de los muiscas",
+    "El Dorado y Guatavita",
+    "Mitos indígenas de otras regiones",
+    "Leyendas según la región",
+    "Leyendas de música y fiestas",
+    "Lugares con leyenda",
+    "Duendes, brujas y diablos",
+    "Agüeros y supersticiones populares",
+    "Leyendas en series, películas y libros"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "La Madremonte",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 5
+    },
+    {
+      "name": "La Patasola",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 6
+    },
+    {
+      "name": "El Silbón",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 6
+    },
+    {
+      "name": "El Hojarasquín del Monte",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 10
+    },
+    {
+      "name": "La Tunda",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 10
+    },
+    {
+      "name": "El Curupira",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 11
+    },
+    {
+      "name": "La Candileja",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 9
+    },
+    {
+      "name": "La Bola de fuego",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 7
+    },
+    {
+      "name": "El Pollo maligno",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 10
+    },
+    {
+      "name": "La Muelona",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 11
+    },
+    {
+      "name": "La Mancarita",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 13
+    },
+    {
+      "name": "La Bracamonte",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 12
+    },
+    {
+      "name": "El Bambero",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 13
+    },
+    {
+      "name": "El Patetarro",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 12
+    },
+    {
+      "name": "El Gritón",
+      "facet": "Espantos del monte y la selva",
+      "known_at": 13
+    },
+    {
+      "name": "La Llorona",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 3
+    },
+    {
+      "name": "La Madre de agua",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 8
+    },
+    {
+      "name": "El Riviel",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 12
+    },
+    {
+      "name": "El Yacuruna",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 13
+    },
+    {
+      "name": "La Tulevieja",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 11
+    },
+    {
+      "name": "Monstruo del lago de Tota",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 13
+    },
+    {
+      "name": "Laguna sagrada",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 8
+    },
+    {
+      "name": "Caimán",
+      "facet": "Seres de ríos y lagunas",
+      "known_at": 3
+    },
+    {
+      "name": "El Sombrerón",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 8
+    },
+    {
+      "name": "La Mano peluda",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 7
+    },
+    {
+      "name": "El Jinete sin cabeza",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 5
+    },
+    {
+      "name": "El Ánima sola",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 11
+    },
+    {
+      "name": "El Guando",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 12
+    },
+    {
+      "name": "El Cura sin cabeza",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 10
+    },
+    {
+      "name": "La Viuda alegre",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 11
+    },
+    {
+      "name": "La Dama de blanco",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 6
+    },
+    {
+      "name": "La Mula de tres patas",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 10
+    },
+    {
+      "name": "El Perro negro",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 6
+    },
+    {
+      "name": "Fantasma",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 1
+    },
+    {
+      "name": "Casa embrujada",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 2
+    },
+    {
+      "name": "El Judío Errante",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 13
+    },
+    {
+      "name": "Espanto",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 4
+    },
+    {
+      "name": "Aparecido",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 7
+    },
+    {
+      "name": "Leyenda urbana",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 8
+    },
+    {
+      "name": "Entierro",
+      "facet": "Aparecidos de pueblo y camino",
+      "known_at": 9
+    },
+    {
+      "name": "Chiminigagua",
+      "facet": "Mitos de los muiscas",
+      "known_at": 13
+    },
+    {
+      "name": "Sué",
+      "facet": "Mitos de los muiscas",
+      "known_at": 10
+    },
+    {
+      "name": "Chía",
+      "facet": "Mitos de los muiscas",
+      "known_at": 10
+    },
+    {
+      "name": "Huitaca",
+      "facet": "Mitos de los muiscas",
+      "known_at": 12
+    },
+    {
+      "name": "Salto del Tequendama",
+      "facet": "Mitos de los muiscas",
+      "known_at": 9
+    },
+    {
+      "name": "Laguna de Iguaque",
+      "facet": "Mitos de los muiscas",
+      "known_at": 12
+    },
+    {
+      "name": "Chibchacum",
+      "facet": "Mitos de los muiscas",
+      "known_at": 13
+    },
+    {
+      "name": "Tunjo",
+      "facet": "Mitos de los muiscas",
+      "known_at": 11
+    },
+    {
+      "name": "Zipa",
+      "facet": "Mitos de los muiscas",
+      "known_at": 10
+    },
+    {
+      "name": "Zaque",
+      "facet": "Mitos de los muiscas",
+      "known_at": 11
+    },
+    {
+      "name": "Cuchavira",
+      "facet": "Mitos de los muiscas",
+      "known_at": 14
+    },
+    {
+      "name": "Nencatacoa",
+      "facet": "Mitos de los muiscas",
+      "known_at": 14
+    },
+    {
+      "name": "Templo del Sol de Sogamoso",
+      "facet": "Mitos de los muiscas",
+      "known_at": 12
+    },
+    {
+      "name": "Muiscas",
+      "facet": "Mitos de los muiscas",
+      "known_at": 7
+    },
+    {
+      "name": "Bacatá",
+      "facet": "Mitos de los muiscas",
+      "known_at": 11
+    },
+    {
+      "name": "Goranchacha",
+      "facet": "Mitos de los muiscas",
+      "known_at": 14
+    },
+    {
+      "name": "El Dorado",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 5
+    },
+    {
+      "name": "Laguna de Guatavita",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 8
+    },
+    {
+      "name": "Balsa muisca",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 9
+    },
+    {
+      "name": "Cacique de Guatavita",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 10
+    },
+    {
+      "name": "Polvo de oro",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 8
+    },
+    {
+      "name": "Conquistadores",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 6
+    },
+    {
+      "name": "Gonzalo Jiménez de Quesada",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastián de Belalcázar",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 12
+    },
+    {
+      "name": "Nikolaus Federmann",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 14
+    },
+    {
+      "name": "Esmeraldas",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 6
+    },
+    {
+      "name": "Ofrenda",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 8
+    },
+    {
+      "name": "Orfebrería",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 10
+    },
+    {
+      "name": "Tumbaga",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco de Orellana",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 13
+    },
+    {
+      "name": "Lope de Aguirre",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 14
+    },
+    {
+      "name": "Poporo quimbaya",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 12
+    },
+    {
+      "name": "Oro",
+      "facet": "El Dorado y Guatavita",
+      "known_at": 1
+    },
+    {
+      "name": "Yuruparí",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Pulowi",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Juyá",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Maleiwa",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Aluna",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 14
+    },
+    {
+      "name": "Mamos",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Tayrona",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 8
+    },
+    {
+      "name": "Arhuacos",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Wayuu",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 7
+    },
+    {
+      "name": "Caragabí",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 14
+    },
+    {
+      "name": "Kogui",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 9
+    },
+    {
+      "name": "Wale'kerü",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 14
+    },
+    {
+      "name": "Yoí e Ipi",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 14
+    },
+    {
+      "name": "Maloca",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 10
+    },
+    {
+      "name": "Chamán",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 8
+    },
+    {
+      "name": "Zenú",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 11
+    },
+    {
+      "name": "Pijaos",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 12
+    },
+    {
+      "name": "Corazón del mundo",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Hermanos mayores",
+      "facet": "Mitos indígenas de otras regiones",
+      "known_at": 13
+    },
+    {
+      "name": "Región Andina",
+      "facet": "Leyendas según la región",
+      "known_at": 6
+    },
+    {
+      "name": "Costa Pacífica",
+      "facet": "Leyendas según la región",
+      "known_at": 6
+    },
+    {
+      "name": "Tolima",
+      "facet": "Leyendas según la región",
+      "known_at": 7
+    },
+    {
+      "name": "Huila",
+      "facet": "Leyendas según la región",
+      "known_at": 8
+    },
+    {
+      "name": "Chocó",
+      "facet": "Leyendas según la región",
+      "known_at": 6
+    },
+    {
+      "name": "Mompox",
+      "facet": "Leyendas según la región",
+      "known_at": 10
+    },
+    {
+      "name": "Nariño",
+      "facet": "Leyendas según la región",
+      "known_at": 8
+    },
+    {
+      "name": "Cundinamarca",
+      "facet": "Leyendas según la región",
+      "known_at": 6
+    },
+    {
+      "name": "La Guajira",
+      "facet": "Leyendas según la región",
+      "known_at": 5
+    },
+    {
+      "name": "Duppy",
+      "facet": "Leyendas según la región",
+      "known_at": 14
+    },
+    {
+      "name": "Noche de las Velitas",
+      "facet": "Leyendas de música y fiestas",
+      "known_at": 3
+    },
+    {
+      "name": "Cuadrillas de San Martín",
+      "facet": "Leyendas de música y fiestas",
+      "known_at": 13
+    },
+    {
+      "name": "Coplas",
+      "facet": "Leyendas de música y fiestas",
+      "known_at": 8
+    },
+    {
+      "name": "Ciudad Perdida",
+      "facet": "Lugares con leyenda",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Arqueológico de San Agustín",
+      "facet": "Lugares con leyenda",
+      "known_at": 10
+    },
+    {
+      "name": "Tierradentro",
+      "facet": "Lugares con leyenda",
+      "known_at": 13
+    },
+    {
+      "name": "Piedra del Peñol",
+      "facet": "Lugares con leyenda",
+      "known_at": 5
+    },
+    {
+      "name": "Cerro de Monserrate",
+      "facet": "Lugares con leyenda",
+      "known_at": 4
+    },
+    {
+      "name": "Cerro de Guadalupe",
+      "facet": "Lugares con leyenda",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de la Cocha",
+      "facet": "Lugares con leyenda",
+      "known_at": 11
+    },
+    {
+      "name": "Lago de Tota",
+      "facet": "Lugares con leyenda",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Sal de Zipaquirá",
+      "facet": "Lugares con leyenda",
+      "known_at": 6
+    },
+    {
+      "name": "Cerro Tusa",
+      "facet": "Lugares con leyenda",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo de San Felipe",
+      "facet": "Lugares con leyenda",
+      "known_at": 8
+    },
+    {
+      "name": "Cerro de las Tres Cruces",
+      "facet": "Lugares con leyenda",
+      "known_at": 11
+    },
+    {
+      "name": "Cojines del Zaque",
+      "facet": "Lugares con leyenda",
+      "known_at": 13
+    },
+    {
+      "name": "Duende",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 2
+    },
+    {
+      "name": "Bruja",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 1
+    },
+    {
+      "name": "Diablo",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 2
+    },
+    {
+      "name": "Escoba voladora",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 2
+    },
+    {
+      "name": "Brujas de Burgama",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 13
+    },
+    {
+      "name": "Mandinga",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 11
+    },
+    {
+      "name": "Pacto con el diablo",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 9
+    },
+    {
+      "name": "Hechizo",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 3
+    },
+    {
+      "name": "Curandero",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 7
+    },
+    {
+      "name": "Mal de ojo",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 6
+    },
+    {
+      "name": "Azabache",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 9
+    },
+    {
+      "name": "Aquelarre",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 12
+    },
+    {
+      "name": "Poción",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 4
+    },
+    {
+      "name": "Caldero",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 3
+    },
+    {
+      "name": "Yerbatero",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 11
+    },
+    {
+      "name": "Escapulario",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 8
+    },
+    {
+      "name": "Agua bendita",
+      "facet": "Duendes, brujas y diablos",
+      "known_at": 6
+    },
+    {
+      "name": "Gato negro",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 2
+    },
+    {
+      "name": "Martes 13",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 6
+    },
+    {
+      "name": "Pasar debajo de una escalera",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 5
+    },
+    {
+      "name": "Espejo roto",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 5
+    },
+    {
+      "name": "Sal derramada",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 8
+    },
+    {
+      "name": "Maleta de Año Nuevo",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 5
+    },
+    {
+      "name": "Calzones amarillos",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 6
+    },
+    {
+      "name": "Mariposa negra",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 7
+    },
+    {
+      "name": "Sábila en la puerta",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 9
+    },
+    {
+      "name": "Herradura",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 6
+    },
+    {
+      "name": "Trébol de cuatro hojas",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 3
+    },
+    {
+      "name": "Tocar madera",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 6
+    },
+    {
+      "name": "Paraguas abierto dentro de la casa",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 7
+    },
+    {
+      "name": "Cruzar los dedos",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 3
+    },
+    {
+      "name": "Pata de conejo",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 6
+    },
+    {
+      "name": "Barrer los pies",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 9
+    },
+    {
+      "name": "Picazón en la mano",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 10
+    },
+    {
+      "name": "Ruda",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 10
+    },
+    {
+      "name": "Bolso en el piso",
+      "facet": "Agüeros y supersticiones populares",
+      "known_at": 10
+    },
+    {
+      "name": "Familia Madrigal",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 2
+    },
+    {
+      "name": "Bruno Madrigal",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 2
+    },
+    {
+      "name": "Mirabel",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 2
+    },
+    {
+      "name": "La Casita",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 3
+    },
+    {
+      "name": "Cien años de soledad",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 8
+    },
+    {
+      "name": "Macondo",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 9
+    },
+    {
+      "name": "Remedios la bella",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 12
+    },
+    {
+      "name": "Mariposas amarillas",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 10
+    },
+    {
+      "name": "Realismo mágico",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 11
+    },
+    {
+      "name": "Ciro Guerra",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 13
+    },
+    {
+      "name": "Frontera Verde",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 13
+    },
+    {
+      "name": "Siempre Bruja",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 12
+    },
+    {
+      "name": "La Vorágine",
+      "facet": "Leyendas en series, películas y libros",
+      "known_at": 11
+    }
+  ]
+}

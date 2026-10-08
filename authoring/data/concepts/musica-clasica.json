@@ -1,0 +1,1257 @@
+{
+  "subcategory": "Música clásica",
+  "facets": [
+    "Grandes compositores",
+    "Obras y piezas famosas",
+    "Instrumentos de la orquesta",
+    "Orquesta y director",
+    "Ópera y ballet",
+    "Épocas y estilos",
+    "Términos y lenguaje musical",
+    "Formas musicales",
+    "Intérpretes y niños prodigio",
+    "Clásica en cine, dibujos y publicidad",
+    "Salas, festivales y lugares",
+    "Música clásica en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 4,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wolfgang Amadeus Mozart",
+      "facet": "Grandes compositores",
+      "known_at": 4
+    },
+    {
+      "name": "Ludwig van Beethoven",
+      "facet": "Grandes compositores",
+      "known_at": 3
+    },
+    {
+      "name": "Johann Sebastian Bach",
+      "facet": "Grandes compositores",
+      "known_at": 7
+    },
+    {
+      "name": "Antonio Vivaldi",
+      "facet": "Grandes compositores",
+      "known_at": 8
+    },
+    {
+      "name": "Frédéric Chopin",
+      "facet": "Grandes compositores",
+      "known_at": 9
+    },
+    {
+      "name": "Piotr Ilich Chaikovski",
+      "facet": "Grandes compositores",
+      "known_at": 9
+    },
+    {
+      "name": "Georg Friedrich Händel",
+      "facet": "Grandes compositores",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph Haydn",
+      "facet": "Grandes compositores",
+      "known_at": 12
+    },
+    {
+      "name": "Franz Schubert",
+      "facet": "Grandes compositores",
+      "known_at": 11
+    },
+    {
+      "name": "Johannes Brahms",
+      "facet": "Grandes compositores",
+      "known_at": 11
+    },
+    {
+      "name": "Claude Debussy",
+      "facet": "Grandes compositores",
+      "known_at": 11
+    },
+    {
+      "name": "Giuseppe Verdi",
+      "facet": "Grandes compositores",
+      "known_at": 10
+    },
+    {
+      "name": "Richard Wagner",
+      "facet": "Grandes compositores",
+      "known_at": 11
+    },
+    {
+      "name": "Johann Strauss hijo",
+      "facet": "Grandes compositores",
+      "known_at": 11
+    },
+    {
+      "name": "Gioachino Rossini",
+      "facet": "Grandes compositores",
+      "known_at": 12
+    },
+    {
+      "name": "Ígor Stravinski",
+      "facet": "Grandes compositores",
+      "known_at": 13
+    },
+    {
+      "name": "Maurice Ravel",
+      "facet": "Grandes compositores",
+      "known_at": 12
+    },
+    {
+      "name": "Franz Liszt",
+      "facet": "Grandes compositores",
+      "known_at": 12
+    },
+    {
+      "name": "Edvard Grieg",
+      "facet": "Grandes compositores",
+      "known_at": 13
+    },
+    {
+      "name": "Gustav Mahler",
+      "facet": "Grandes compositores",
+      "known_at": 14
+    },
+    {
+      "name": "Antonín Dvořák",
+      "facet": "Grandes compositores",
+      "known_at": 13
+    },
+    {
+      "name": "Erik Satie",
+      "facet": "Grandes compositores",
+      "known_at": 14
+    },
+    {
+      "name": "Serguéi Rajmáninov",
+      "facet": "Grandes compositores",
+      "known_at": 13
+    },
+    {
+      "name": "Giacomo Puccini",
+      "facet": "Grandes compositores",
+      "known_at": 12
+    },
+    {
+      "name": "Felix Mendelssohn",
+      "facet": "Grandes compositores",
+      "known_at": 13
+    },
+    {
+      "name": "Para Elisa",
+      "facet": "Obras y piezas famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Quinta Sinfonía de Beethoven",
+      "facet": "Obras y piezas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Las cuatro estaciones",
+      "facet": "Obras y piezas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Pequeña serenata nocturna",
+      "facet": "Obras y piezas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Himno de la alegría",
+      "facet": "Obras y piezas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "El Danubio azul",
+      "facet": "Obras y piezas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Marcha nupcial",
+      "facet": "Obras y piezas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Bolero de Ravel",
+      "facet": "Obras y piezas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Canon de Pachelbel",
+      "facet": "Obras y piezas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Tocata y fuga en re menor",
+      "facet": "Obras y piezas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "El vuelo del moscardón",
+      "facet": "Obras y piezas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Sonata Claro de luna",
+      "facet": "Obras y piezas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Aleluya de El Mesías",
+      "facet": "Obras y piezas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Carmina Burana",
+      "facet": "Obras y piezas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Réquiem de Mozart",
+      "facet": "Obras y piezas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "En la gruta del rey de la montaña",
+      "facet": "Obras y piezas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Obertura 1812",
+      "facet": "Obras y piezas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Marcha Radetzky",
+      "facet": "Obras y piezas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro y el lobo",
+      "facet": "Obras y piezas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "El carnaval de los animales",
+      "facet": "Obras y piezas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Marcha turca",
+      "facet": "Obras y piezas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Violín",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 1
+    },
+    {
+      "name": "Piano",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 1
+    },
+    {
+      "name": "Violonchelo",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 5
+    },
+    {
+      "name": "Contrabajo",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 6
+    },
+    {
+      "name": "Arpa",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 3
+    },
+    {
+      "name": "Flauta traversa",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 4
+    },
+    {
+      "name": "Oboe",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 9
+    },
+    {
+      "name": "Fagot",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 10
+    },
+    {
+      "name": "Trombón",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 6
+    },
+    {
+      "name": "Tuba",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 5
+    },
+    {
+      "name": "Platillos",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 3
+    },
+    {
+      "name": "Triángulo",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 2
+    },
+    {
+      "name": "Viola",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 9
+    },
+    {
+      "name": "Celesta",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 13
+    },
+    {
+      "name": "Xilófono",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 2
+    },
+    {
+      "name": "Corno inglés",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 13
+    },
+    {
+      "name": "Flautín",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 9
+    },
+    {
+      "name": "Arco",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 4
+    },
+    {
+      "name": "Órgano",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 4
+    },
+    {
+      "name": "Clavecín",
+      "facet": "Instrumentos de la orquesta",
+      "known_at": 11
+    },
+    {
+      "name": "Director de orquesta",
+      "facet": "Orquesta y director",
+      "known_at": 3
+    },
+    {
+      "name": "Batuta",
+      "facet": "Orquesta y director",
+      "known_at": 6
+    },
+    {
+      "name": "Partitura",
+      "facet": "Orquesta y director",
+      "known_at": 5
+    },
+    {
+      "name": "Concertino",
+      "facet": "Orquesta y director",
+      "known_at": 12
+    },
+    {
+      "name": "Atril",
+      "facet": "Orquesta y director",
+      "known_at": 9
+    },
+    {
+      "name": "Sección de cuerdas",
+      "facet": "Orquesta y director",
+      "known_at": 7
+    },
+    {
+      "name": "Sección de metales",
+      "facet": "Orquesta y director",
+      "known_at": 9
+    },
+    {
+      "name": "Afinación de la orquesta",
+      "facet": "Orquesta y director",
+      "known_at": 11
+    },
+    {
+      "name": "Orquesta sinfónica",
+      "facet": "Orquesta y director",
+      "known_at": 6
+    },
+    {
+      "name": "Filarmónica",
+      "facet": "Orquesta y director",
+      "known_at": 10
+    },
+    {
+      "name": "Cuarteto de cuerda",
+      "facet": "Orquesta y director",
+      "known_at": 11
+    },
+    {
+      "name": "Herbert von Karajan",
+      "facet": "Orquesta y director",
+      "known_at": 14
+    },
+    {
+      "name": "Gustavo Dudamel",
+      "facet": "Orquesta y director",
+      "known_at": 11
+    },
+    {
+      "name": "Leonard Bernstein",
+      "facet": "Orquesta y director",
+      "known_at": 13
+    },
+    {
+      "name": "Foso de la orquesta",
+      "facet": "Orquesta y director",
+      "known_at": 12
+    },
+    {
+      "name": "Solista",
+      "facet": "Orquesta y director",
+      "known_at": 7
+    },
+    {
+      "name": "Ensayo general",
+      "facet": "Orquesta y director",
+      "known_at": 8
+    },
+    {
+      "name": "Metrónomo",
+      "facet": "Orquesta y director",
+      "known_at": 9
+    },
+    {
+      "name": "Coro",
+      "facet": "Orquesta y director",
+      "known_at": 3
+    },
+    {
+      "name": "Podio del director",
+      "facet": "Orquesta y director",
+      "known_at": 8
+    },
+    {
+      "name": "El lago de los cisnes",
+      "facet": "Ópera y ballet",
+      "known_at": 5
+    },
+    {
+      "name": "El cascanueces",
+      "facet": "Ópera y ballet",
+      "known_at": 4
+    },
+    {
+      "name": "La flauta mágica",
+      "facet": "Ópera y ballet",
+      "known_at": 10
+    },
+    {
+      "name": "Carmen",
+      "facet": "Ópera y ballet",
+      "known_at": 10
+    },
+    {
+      "name": "La Traviata",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "Aida",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "Madama Butterfly",
+      "facet": "Ópera y ballet",
+      "known_at": 13
+    },
+    {
+      "name": "Las bodas de Fígaro",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "El barbero de Sevilla",
+      "facet": "Ópera y ballet",
+      "known_at": 10
+    },
+    {
+      "name": "Soprano",
+      "facet": "Ópera y ballet",
+      "known_at": 8
+    },
+    {
+      "name": "Tenor",
+      "facet": "Ópera y ballet",
+      "known_at": 8
+    },
+    {
+      "name": "Barítono",
+      "facet": "Ópera y ballet",
+      "known_at": 11
+    },
+    {
+      "name": "Aria",
+      "facet": "Ópera y ballet",
+      "known_at": 11
+    },
+    {
+      "name": "Libreto",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "Bailarina de ballet",
+      "facet": "Ópera y ballet",
+      "known_at": 2
+    },
+    {
+      "name": "Zapatillas de punta",
+      "facet": "Ópera y ballet",
+      "known_at": 6
+    },
+    {
+      "name": "Tutú",
+      "facet": "Ópera y ballet",
+      "known_at": 4
+    },
+    {
+      "name": "La bella durmiente (ballet)",
+      "facet": "Ópera y ballet",
+      "known_at": 8
+    },
+    {
+      "name": "Luciano Pavarotti",
+      "facet": "Ópera y ballet",
+      "known_at": 9
+    },
+    {
+      "name": "Maria Callas",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "Los tres tenores",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "El anillo del nibelungo",
+      "facet": "Ópera y ballet",
+      "known_at": 14
+    },
+    {
+      "name": "La Bohème",
+      "facet": "Ópera y ballet",
+      "known_at": 13
+    },
+    {
+      "name": "Turandot",
+      "facet": "Ópera y ballet",
+      "known_at": 12
+    },
+    {
+      "name": "Barroco",
+      "facet": "Épocas y estilos",
+      "known_at": 9
+    },
+    {
+      "name": "Clasicismo",
+      "facet": "Épocas y estilos",
+      "known_at": 11
+    },
+    {
+      "name": "Romanticismo musical",
+      "facet": "Épocas y estilos",
+      "known_at": 11
+    },
+    {
+      "name": "Impresionismo musical",
+      "facet": "Épocas y estilos",
+      "known_at": 13
+    },
+    {
+      "name": "Música del Renacimiento",
+      "facet": "Épocas y estilos",
+      "known_at": 12
+    },
+    {
+      "name": "Canto gregoriano",
+      "facet": "Épocas y estilos",
+      "known_at": 11
+    },
+    {
+      "name": "Música medieval",
+      "facet": "Épocas y estilos",
+      "known_at": 9
+    },
+    {
+      "name": "Nacionalismo musical",
+      "facet": "Épocas y estilos",
+      "known_at": 14
+    },
+    {
+      "name": "Minimalismo",
+      "facet": "Épocas y estilos",
+      "known_at": 14
+    },
+    {
+      "name": "Dodecafonismo",
+      "facet": "Épocas y estilos",
+      "known_at": 15
+    },
+    {
+      "name": "Neoclasicismo musical",
+      "facet": "Épocas y estilos",
+      "known_at": 14
+    },
+    {
+      "name": "Música contemporánea",
+      "facet": "Épocas y estilos",
+      "known_at": 12
+    },
+    {
+      "name": "Trovadores",
+      "facet": "Épocas y estilos",
+      "known_at": 11
+    },
+    {
+      "name": "Polifonía",
+      "facet": "Épocas y estilos",
+      "known_at": 13
+    },
+    {
+      "name": "Bajo continuo",
+      "facet": "Épocas y estilos",
+      "known_at": 15
+    },
+    {
+      "name": "Música de cámara",
+      "facet": "Épocas y estilos",
+      "known_at": 11
+    },
+    {
+      "name": "Ópera bufa",
+      "facet": "Épocas y estilos",
+      "known_at": 14
+    },
+    {
+      "name": "Pentagrama",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 6
+    },
+    {
+      "name": "Clave de sol",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 5
+    },
+    {
+      "name": "Corchea",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 8
+    },
+    {
+      "name": "Negra",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 8
+    },
+    {
+      "name": "Redonda",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 9
+    },
+    {
+      "name": "Silencio musical",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 8
+    },
+    {
+      "name": "Tempo",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 9
+    },
+    {
+      "name": "Allegro",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 11
+    },
+    {
+      "name": "Adagio",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 11
+    },
+    {
+      "name": "Forte",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 10
+    },
+    {
+      "name": "Pianissimo",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 11
+    },
+    {
+      "name": "Crescendo",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 11
+    },
+    {
+      "name": "Staccato",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 12
+    },
+    {
+      "name": "Sostenido",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 10
+    },
+    {
+      "name": "Bemol",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 10
+    },
+    {
+      "name": "Acorde",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 8
+    },
+    {
+      "name": "Escala musical",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 5
+    },
+    {
+      "name": "Solfeo",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 7
+    },
+    {
+      "name": "Octava",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 9
+    },
+    {
+      "name": "Compás",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 8
+    },
+    {
+      "name": "Calderón",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 13
+    },
+    {
+      "name": "Armonía",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 9
+    },
+    {
+      "name": "Melodía",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 4
+    },
+    {
+      "name": "Bis",
+      "facet": "Términos y lenguaje musical",
+      "known_at": 10
+    },
+    {
+      "name": "Sinfonía",
+      "facet": "Formas musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Concierto",
+      "facet": "Formas musicales",
+      "known_at": 6
+    },
+    {
+      "name": "Sonata",
+      "facet": "Formas musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Suite",
+      "facet": "Formas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Fuga",
+      "facet": "Formas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Réquiem",
+      "facet": "Formas musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Obertura",
+      "facet": "Formas musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Nocturno",
+      "facet": "Formas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Vals",
+      "facet": "Formas musicales",
+      "known_at": 6
+    },
+    {
+      "name": "Minueto",
+      "facet": "Formas musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Rondó",
+      "facet": "Formas musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Tocata",
+      "facet": "Formas musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Oratorio",
+      "facet": "Formas musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Cantata",
+      "facet": "Formas musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Preludio",
+      "facet": "Formas musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Rapsodia",
+      "facet": "Formas musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Tema con variaciones",
+      "facet": "Formas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Poema sinfónico",
+      "facet": "Formas musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Marcha",
+      "facet": "Formas musicales",
+      "known_at": 4
+    },
+    {
+      "name": "Polca",
+      "facet": "Formas musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Mazurca",
+      "facet": "Formas musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Niño prodigio",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 6
+    },
+    {
+      "name": "Nannerl Mozart",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 13
+    },
+    {
+      "name": "Lang Lang",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 11
+    },
+    {
+      "name": "Yo-Yo Ma",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 12
+    },
+    {
+      "name": "Niccolò Paganini",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 12
+    },
+    {
+      "name": "Andrea Bocelli",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 8
+    },
+    {
+      "name": "Plácido Domingo",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 11
+    },
+    {
+      "name": "Itzhak Perlman",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Martha Argerich",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Glenn Gould",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Clara Schumann",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 13
+    },
+    {
+      "name": "Jascha Heifetz",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 15
+    },
+    {
+      "name": "Anne-Sophie Mutter",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Stradivarius",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 10
+    },
+    {
+      "name": "Yuja Wang",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Vanessa-Mae",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur Rubinstein",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Daniel Barenboim",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 14
+    },
+    {
+      "name": "Evgeny Kissin",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 15
+    },
+    {
+      "name": "Jacqueline du Pré",
+      "facet": "Intérpretes y niños prodigio",
+      "known_at": 15
+    },
+    {
+      "name": "Fantasía (Disney)",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 9
+    },
+    {
+      "name": "El aprendiz de brujo",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 9
+    },
+    {
+      "name": "Así habló Zaratustra",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 12
+    },
+    {
+      "name": "El conejo de Sevilla",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 11
+    },
+    {
+      "name": "Amadeus (película)",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 12
+    },
+    {
+      "name": "Obertura de Guillermo Tell",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 9
+    },
+    {
+      "name": "John Williams",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Zimmer",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 10
+    },
+    {
+      "name": "Ennio Morricone",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 13
+    },
+    {
+      "name": "Tono de Nokia",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 13
+    },
+    {
+      "name": "Baby Einstein",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 10
+    },
+    {
+      "name": "Pequeños Einsteins",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 8
+    },
+    {
+      "name": "Danza del Hada de Azúcar",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 9
+    },
+    {
+      "name": "Efecto Mozart",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 12
+    },
+    {
+      "name": "Tom y Jerry",
+      "facet": "Clásica en cine, dibujos y publicidad",
+      "known_at": 4
+    },
+    {
+      "name": "Teatro Colón de Buenos Aires",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 13
+    },
+    {
+      "name": "Teatro alla Scala",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 13
+    },
+    {
+      "name": "Ópera Garnier",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Salzburgo",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Carnegie Hall",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Albert Hall",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 14
+    },
+    {
+      "name": "Concierto de Año Nuevo de Viena",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Bayreuth",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 15
+    },
+    {
+      "name": "Musikverein",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 15
+    },
+    {
+      "name": "Metropolitan Opera",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 13
+    },
+    {
+      "name": "Elbphilharmonie",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 15
+    },
+    {
+      "name": "Gran Teatro del Liceo",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 14
+    },
+    {
+      "name": "Teatro Bolshói",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 13
+    },
+    {
+      "name": "The Proms",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 15
+    },
+    {
+      "name": "Palacio de Bellas Artes",
+      "facet": "Salas, festivales y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Teatro Colón de Bogotá",
+      "facet": "Música clásica en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro Mayor Julio Mario Santo Domingo",
+      "facet": "Música clásica en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Orquesta Filarmónica de Bogotá",
+      "facet": "Música clásica en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Orquesta Sinfónica Nacional de Colombia",
+      "facet": "Música clásica en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Fundación Nacional Batuta",
+      "facet": "Música clásica en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Teatro Municipal Jorge Isaacs",
+      "facet": "Música clásica en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Teatro Adolfo Mejía",
+      "facet": "Música clásica en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Guillermo Uribe Holguín",
+      "facet": "Música clásica en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Blas Emilio Atehortúa",
+      "facet": "Música clásica en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Luis A. Calvo",
+      "facet": "Música clásica en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Ópera de Colombia",
+      "facet": "Música clásica en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Auditorio León de Greiff",
+      "facet": "Música clásica en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Teatro Metropolitano de Medellín",
+      "facet": "Música clásica en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Conservatorio del Tolima",
+      "facet": "Música clásica en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Ibagué, capital musical",
+      "facet": "Música clásica en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Oreste Síndici",
+      "facet": "Música clásica en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Andrés Orozco-Estrada",
+      "facet": "Música clásica en Colombia",
+      "known_at": 14
+    }
+  ]
+}

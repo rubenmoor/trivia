@@ -1,0 +1,993 @@
+{
+  "subcategory": "Feria de las Flores",
+  "facets": [
+    "Silleteros y Santa Elena",
+    "Tipos y diseño de silletas",
+    "Flores y orquídeas antioqueñas",
+    "Desfiles y eventos de la feria",
+    "Historia y orígenes de la feria",
+    "Música y trova paisa",
+    "Comida y antojos paisas",
+    "Atuendo y tradición arriera",
+    "Medellín: lugares y símbolos",
+    "Hablado paisa y expresiones",
+    "Floricultura y exportación de flores",
+    "Fiestas de flores en el mundo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Silletero",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 4
+    },
+    {
+      "name": "Santa Elena",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 8
+    },
+    {
+      "name": "Silletera",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 6
+    },
+    {
+      "name": "Silleterito",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 7
+    },
+    {
+      "name": "Vereda",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 7
+    },
+    {
+      "name": "Vereda Mazo",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 15
+    },
+    {
+      "name": "Vereda El Placer",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 15
+    },
+    {
+      "name": "Vereda Barro Blanco",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 15
+    },
+    {
+      "name": "Parque Arví",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 9
+    },
+    {
+      "name": "Camino de la Cuesta",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 14
+    },
+    {
+      "name": "Carguero",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 11
+    },
+    {
+      "name": "Finca silletera",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 10
+    },
+    {
+      "name": "Corporación de Silleteros",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 14
+    },
+    {
+      "name": "Patrimonio Cultural de la Nación",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 11
+    },
+    {
+      "name": "Mercado campesino",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 6
+    },
+    {
+      "name": "Metrocable línea L",
+      "facet": "Silleteros y Santa Elena",
+      "known_at": 12
+    },
+    {
+      "name": "Silleta",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 4
+    },
+    {
+      "name": "Silleta tradicional",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 9
+    },
+    {
+      "name": "Silleta emblemática",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 12
+    },
+    {
+      "name": "Silleta monumental",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 11
+    },
+    {
+      "name": "Silleta comercial",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 12
+    },
+    {
+      "name": "Silleta infantil",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 8
+    },
+    {
+      "name": "Marco de madera",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 6
+    },
+    {
+      "name": "Musgo",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 7
+    },
+    {
+      "name": "Helecho",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 5
+    },
+    {
+      "name": "Correa de carga",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 8
+    },
+    {
+      "name": "Mensaje floral",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 10
+    },
+    {
+      "name": "Jurado de silletas",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 11
+    },
+    {
+      "name": "Peso de la silleta",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 9
+    },
+    {
+      "name": "Mosaico floral",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 9
+    },
+    {
+      "name": "Escudo de Colombia en flores",
+      "facet": "Tipos y diseño de silletas",
+      "known_at": 10
+    },
+    {
+      "name": "Orquídea",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 4
+    },
+    {
+      "name": "Cattleya trianae",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 10
+    },
+    {
+      "name": "Girasol",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 1
+    },
+    {
+      "name": "Clavel",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 4
+    },
+    {
+      "name": "Rosa",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 1
+    },
+    {
+      "name": "Crisantemo",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 8
+    },
+    {
+      "name": "Pompón",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 11
+    },
+    {
+      "name": "Astromelia",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 11
+    },
+    {
+      "name": "Hortensia",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 7
+    },
+    {
+      "name": "Gerbera",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 10
+    },
+    {
+      "name": "Margarita",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 2
+    },
+    {
+      "name": "Agapanto",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 12
+    },
+    {
+      "name": "Ave del paraíso",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 8
+    },
+    {
+      "name": "Heliconia",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 9
+    },
+    {
+      "name": "Anturio",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 10
+    },
+    {
+      "name": "Cartucho",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 9
+    },
+    {
+      "name": "Gladiolo",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 10
+    },
+    {
+      "name": "Lirio",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 6
+    },
+    {
+      "name": "Dalia",
+      "facet": "Flores y orquídeas antioqueñas",
+      "known_at": 10
+    },
+    {
+      "name": "Desfile de Silleteros",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 5
+    },
+    {
+      "name": "Desfile de Chivas y Flores",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 9
+    },
+    {
+      "name": "Chiva",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 5
+    },
+    {
+      "name": "Exposición Orquídeas, Pájaros y Flores",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 12
+    },
+    {
+      "name": "Feria Equina",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 11
+    },
+    {
+      "name": "Tablado",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 11
+    },
+    {
+      "name": "Fonda",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 8
+    },
+    {
+      "name": "Desfile de Mitos y Leyendas",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 11
+    },
+    {
+      "name": "Desfile de Silleteritos",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 9
+    },
+    {
+      "name": "Feria artesanal",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 8
+    },
+    {
+      "name": "Concierto de la feria",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 7
+    },
+    {
+      "name": "Juegos pirotécnicos",
+      "facet": "Desfiles y eventos de la feria",
+      "known_at": 5
+    },
+    {
+      "name": "Primera Feria de las Flores",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 12
+    },
+    {
+      "name": "Arturo Uribe Arango",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 15
+    },
+    {
+      "name": "Oficina de Fomento y Turismo",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 15
+    },
+    {
+      "name": "Agosto",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 5
+    },
+    {
+      "name": "Mayo",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 13
+    },
+    {
+      "name": "Independencia de Antioquia",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 13
+    },
+    {
+      "name": "Colonización antioqueña",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 11
+    },
+    {
+      "name": "Camino real",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza de mercado de Guayaquil",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 14
+    },
+    {
+      "name": "Fundación de Medellín",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 13
+    },
+    {
+      "name": "Silla de carga humana",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta de la Antioqueñidad",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 13
+    },
+    {
+      "name": "Antioquia",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 4
+    },
+    {
+      "name": "Departamento de Antioquia",
+      "facet": "Historia y orígenes de la feria",
+      "known_at": 5
+    },
+    {
+      "name": "Trova paisa",
+      "facet": "Música y trova paisa",
+      "known_at": 8
+    },
+    {
+      "name": "Trovador",
+      "facet": "Música y trova paisa",
+      "known_at": 8
+    },
+    {
+      "name": "Festival Nacional de la Trova Ciro Mendía",
+      "facet": "Música y trova paisa",
+      "known_at": 12
+    },
+    {
+      "name": "Ciro Mendía",
+      "facet": "Música y trova paisa",
+      "known_at": 14
+    },
+    {
+      "name": "Salvo Ruiz y Ñito",
+      "facet": "Música y trova paisa",
+      "known_at": 13
+    },
+    {
+      "name": "Música de carrilera",
+      "facet": "Música y trova paisa",
+      "known_at": 11
+    },
+    {
+      "name": "Música parrillera",
+      "facet": "Música y trova paisa",
+      "known_at": 11
+    },
+    {
+      "name": "Tiple",
+      "facet": "Música y trova paisa",
+      "known_at": 8
+    },
+    {
+      "name": "Antioqueñita",
+      "facet": "Música y trova paisa",
+      "known_at": 12,
+      "retired": "unaskable: Es una canción poco conocida y no tengo datos seguros sobre ella; además, las opciones (estimar un número, causa y efecto en la naturaleza) no encajan con una canción."
+    },
+    {
+      "name": "Pelón Santamarta",
+      "facet": "Música y trova paisa",
+      "known_at": 14
+    },
+    {
+      "name": "Darío Gómez",
+      "facet": "Música y trova paisa",
+      "known_at": 11
+    },
+    {
+      "name": "Despecho",
+      "facet": "Música y trova paisa",
+      "known_at": 8
+    },
+    {
+      "name": "Himno Antioqueño",
+      "facet": "Música y trova paisa",
+      "known_at": 12
+    },
+    {
+      "name": "Tango",
+      "facet": "Música y trova paisa",
+      "known_at": 9
+    },
+    {
+      "name": "Arepa paisa",
+      "facet": "Comida y antojos paisas",
+      "known_at": 3
+    },
+    {
+      "name": "Frijoles",
+      "facet": "Comida y antojos paisas",
+      "known_at": 2
+    },
+    {
+      "name": "Chicharrón",
+      "facet": "Comida y antojos paisas",
+      "known_at": 3
+    },
+    {
+      "name": "Parva",
+      "facet": "Comida y antojos paisas",
+      "known_at": 9
+    },
+    {
+      "name": "Aguapanela",
+      "facet": "Comida y antojos paisas",
+      "known_at": 3
+    },
+    {
+      "name": "Morcilla",
+      "facet": "Comida y antojos paisas",
+      "known_at": 6
+    },
+    {
+      "name": "Chorizo antioqueño",
+      "facet": "Comida y antojos paisas",
+      "known_at": 6
+    },
+    {
+      "name": "Hogao",
+      "facet": "Comida y antojos paisas",
+      "known_at": 8
+    },
+    {
+      "name": "Arepa de chócolo",
+      "facet": "Comida y antojos paisas",
+      "known_at": 5
+    },
+    {
+      "name": "Mondongo",
+      "facet": "Comida y antojos paisas",
+      "known_at": 7
+    },
+    {
+      "name": "Solterita",
+      "facet": "Comida y antojos paisas",
+      "known_at": 12
+    },
+    {
+      "name": "Oblea",
+      "facet": "Comida y antojos paisas",
+      "known_at": 4
+    },
+    {
+      "name": "Tinto",
+      "facet": "Comida y antojos paisas",
+      "known_at": 5
+    },
+    {
+      "name": "Buñuelo",
+      "facet": "Comida y antojos paisas",
+      "known_at": 3
+    },
+    {
+      "name": "Arriero",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 7
+    },
+    {
+      "name": "Mulera",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 13
+    },
+    {
+      "name": "Tapapinche",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 14
+    },
+    {
+      "name": "Machete",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 4
+    },
+    {
+      "name": "Mula",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 3
+    },
+    {
+      "name": "Recua",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 13
+    },
+    {
+      "name": "Camino de herradura",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 12
+    },
+    {
+      "name": "Chapolera",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 11
+    },
+    {
+      "name": "Pañoleta",
+      "facet": "Atuendo y tradición arriera",
+      "known_at": 7
+    },
+    {
+      "name": "Metro de Medellín",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Metrocable",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 6
+    },
+    {
+      "name": "Pueblito Paisa",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro Nutibara",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Cerro El Volador",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Jardín Botánico de Medellín",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Orquideorama",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Plaza Botero",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Explora",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Comuna 13",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Escaleras eléctricas de la Comuna 13",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Río Medellín",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Valle de Aburrá",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad de la Eterna Primavera",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Edificio Coltejer",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 11
+    },
+    {
+      "name": "Parque de los Pies Descalzos",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Atanasio Girardot",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Atlético Nacional",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Alumbrados navideños de Medellín",
+      "facet": "Medellín: lugares y símbolos",
+      "known_at": 6
+    },
+    {
+      "name": "Parcero",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 5
+    },
+    {
+      "name": "Pues",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 4
+    },
+    {
+      "name": "Ave María",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 6
+    },
+    {
+      "name": "Voseo",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Berraco",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 7
+    },
+    {
+      "name": "Mijo",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 5
+    },
+    {
+      "name": "Mecato",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 5
+    },
+    {
+      "name": "Amañarse",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "Camellar",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 8
+    },
+    {
+      "name": "Charro",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "Paisa",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 3
+    },
+    {
+      "name": "Montañero",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 9
+    },
+    {
+      "name": "Pecueca",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 6
+    },
+    {
+      "name": "Dar papaya",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 8
+    },
+    {
+      "name": "Embalado",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "Chichipato",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Hágale pues",
+      "facet": "Hablado paisa y expresiones",
+      "known_at": 6
+    },
+    {
+      "name": "Floricultura",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 10
+    },
+    {
+      "name": "Floricultor",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 8
+    },
+    {
+      "name": "Invernadero",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 6
+    },
+    {
+      "name": "Asocolflores",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 14
+    },
+    {
+      "name": "Día de San Valentín",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 4
+    },
+    {
+      "name": "Estados Unidos",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 3
+    },
+    {
+      "name": "Miami",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 6
+    },
+    {
+      "name": "Sabana de Bogotá",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 10
+    },
+    {
+      "name": "Oriente antioqueño",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 11
+    },
+    {
+      "name": "Rionegro",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto José María Córdova",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 10
+    },
+    {
+      "name": "Países Bajos",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 8
+    },
+    {
+      "name": "Subasta de flores de Aalsmeer",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 15
+    },
+    {
+      "name": "Cadena de frío",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 12
+    },
+    {
+      "name": "Flor cortada",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 10
+    },
+    {
+      "name": "Avión de carga",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 5
+    },
+    {
+      "name": "Ramo de flores",
+      "facet": "Floricultura y exportación de flores",
+      "known_at": 2
+    },
+    {
+      "name": "Desfile del Torneo de las Rosas",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Keukenhof",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Tulipán",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Hanami",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Flor de cerezo",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Batalla de Flores de Niza",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Corso de flores de Zundert",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Festival de las Flores de Chiang Mai",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Tapiz de flores de Bruselas",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Infiorata",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Floralia",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Flora",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Fiesta de la Flor de Madeira",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Festival de los Tulipanes de Ottawa",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de los Cerezos de Washington",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Fiesta de la Fruta y de las Flores de Ambato",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Flores de Valencia",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Collar hawaiano",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Chelsea Flower Show",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Día de Muertos",
+      "facet": "Fiestas de flores en el mundo",
+      "known_at": 5
+    }
+  ]
+}

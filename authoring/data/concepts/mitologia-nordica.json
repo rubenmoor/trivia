@@ -1,0 +1,1052 @@
+{
+  "subcategory": "Mitología nórdica",
+  "facets": [
+    "Dioses principales (Æsir)",
+    "Vanir, gigantes y otros seres",
+    "Criaturas y monstruos",
+    "Objetos mágicos y armas",
+    "Los nueve mundos y Yggdrasil",
+    "Ragnarök y el fin del mundo",
+    "Valhalla, valquirias y guerreros",
+    "Mitos y aventuras famosas",
+    "Huellas en el idioma (días, palabras)",
+    "Mitología nórdica en el cine y Marvel",
+    "Videojuegos, series y libros nórdicos",
+    "Vikingos, runas y fuentes antiguas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 1,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Odín",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 5
+    },
+    {
+      "name": "Loki",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 3
+    },
+    {
+      "name": "Frigg",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 12
+    },
+    {
+      "name": "Baldr",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 12
+    },
+    {
+      "name": "Tyr",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 12
+    },
+    {
+      "name": "Heimdall",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 9
+    },
+    {
+      "name": "Sif",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 11
+    },
+    {
+      "name": "Höðr",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 14
+    },
+    {
+      "name": "Bragi",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 14
+    },
+    {
+      "name": "Iðunn",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 13
+    },
+    {
+      "name": "Víðarr",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 14
+    },
+    {
+      "name": "Váli",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 15
+    },
+    {
+      "name": "Ullr",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 15
+    },
+    {
+      "name": "Forseti",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 15
+    },
+    {
+      "name": "Hermóðr",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 15
+    },
+    {
+      "name": "Nanna",
+      "facet": "Dioses principales (Æsir)",
+      "known_at": 15
+    },
+    {
+      "name": "Freyja",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 10
+    },
+    {
+      "name": "Freyr",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 12
+    },
+    {
+      "name": "Njörðr",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 14
+    },
+    {
+      "name": "Skaði",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 14
+    },
+    {
+      "name": "Ymir",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 12
+    },
+    {
+      "name": "Hel",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 9
+    },
+    {
+      "name": "Angrboða",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 14
+    },
+    {
+      "name": "Thrym",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 15
+    },
+    {
+      "name": "Útgarða-Loki",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 15
+    },
+    {
+      "name": "Mímir",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 11
+    },
+    {
+      "name": "Nornas",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 12
+    },
+    {
+      "name": "Elfos",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 3
+    },
+    {
+      "name": "Enanos",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 3
+    },
+    {
+      "name": "Gigantes de hielo",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 8
+    },
+    {
+      "name": "Kvasir",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 15
+    },
+    {
+      "name": "Ægir",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 14
+    },
+    {
+      "name": "Rán",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 15
+    },
+    {
+      "name": "Hrungnir",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 15
+    },
+    {
+      "name": "Thjazi",
+      "facet": "Vanir, gigantes y otros seres",
+      "known_at": 15
+    },
+    {
+      "name": "Fenrir",
+      "facet": "Criaturas y monstruos",
+      "known_at": 8
+    },
+    {
+      "name": "Sleipnir",
+      "facet": "Criaturas y monstruos",
+      "known_at": 10
+    },
+    {
+      "name": "Huginn y Muninn",
+      "facet": "Criaturas y monstruos",
+      "known_at": 11
+    },
+    {
+      "name": "Níðhöggr",
+      "facet": "Criaturas y monstruos",
+      "known_at": 13
+    },
+    {
+      "name": "Ratatoskr",
+      "facet": "Criaturas y monstruos",
+      "known_at": 12
+    },
+    {
+      "name": "Draugr",
+      "facet": "Criaturas y monstruos",
+      "known_at": 11
+    },
+    {
+      "name": "Trol",
+      "facet": "Criaturas y monstruos",
+      "known_at": 3
+    },
+    {
+      "name": "Fáfnir",
+      "facet": "Criaturas y monstruos",
+      "known_at": 13
+    },
+    {
+      "name": "Tanngrisnir y Tanngnjóstr",
+      "facet": "Criaturas y monstruos",
+      "known_at": 14
+    },
+    {
+      "name": "Gullinbursti",
+      "facet": "Criaturas y monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Auðumbla",
+      "facet": "Criaturas y monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Geri y Freki",
+      "facet": "Criaturas y monstruos",
+      "known_at": 14
+    },
+    {
+      "name": "Hræsvelgr",
+      "facet": "Criaturas y monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Svaðilfari",
+      "facet": "Criaturas y monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Mjölnir",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 5
+    },
+    {
+      "name": "Gungnir",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 11
+    },
+    {
+      "name": "Draupnir",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 14
+    },
+    {
+      "name": "Skíðblaðnir",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Brísingamen",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 14
+    },
+    {
+      "name": "Gjallarhorn",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 13
+    },
+    {
+      "name": "Gleipnir",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 13
+    },
+    {
+      "name": "Megingjörð",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 14
+    },
+    {
+      "name": "Járngreipr",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Hliðskjálf",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Manzanas de oro de Iðunn",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 13
+    },
+    {
+      "name": "Hofund",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 14
+    },
+    {
+      "name": "Gram",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Tyrfing",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Andvaranaut",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Lævateinn",
+      "facet": "Objetos mágicos y armas",
+      "known_at": 15
+    },
+    {
+      "name": "Yggdrasil",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 8
+    },
+    {
+      "name": "Asgard",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 6
+    },
+    {
+      "name": "Midgard",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 9
+    },
+    {
+      "name": "Jötunheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 11
+    },
+    {
+      "name": "Álfheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 12
+    },
+    {
+      "name": "Vanaheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 12
+    },
+    {
+      "name": "Svartálfheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 13
+    },
+    {
+      "name": "Muspelheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 12
+    },
+    {
+      "name": "Niflheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 12
+    },
+    {
+      "name": "Helheim",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 11
+    },
+    {
+      "name": "Bifröst",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 8
+    },
+    {
+      "name": "Ginnungagap",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 14
+    },
+    {
+      "name": "Pozo de Urd",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 15
+    },
+    {
+      "name": "Pozo de Mímir",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 13
+    },
+    {
+      "name": "Hvergelmir",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 15
+    },
+    {
+      "name": "Nueve mundos",
+      "facet": "Los nueve mundos y Yggdrasil",
+      "known_at": 8
+    },
+    {
+      "name": "Ragnarök",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Fimbulvetr",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Naglfar",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Vígríðr",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Líf y Lífþrasir",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Gimlé",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Gullinkambi",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Fjalar",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Völuspá",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Völva",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Surtr",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Hijos de Muspel",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Hoddmímis holt",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Sköll y Hati",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Garm",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Regreso de Baldr",
+      "facet": "Ragnarök y el fin del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Valhalla",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 7
+    },
+    {
+      "name": "Valquiria",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 7
+    },
+    {
+      "name": "Einherjar",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 13
+    },
+    {
+      "name": "Berserker",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 9
+    },
+    {
+      "name": "Úlfheðnar",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 15
+    },
+    {
+      "name": "Fólkvangr",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 14
+    },
+    {
+      "name": "Brunilda",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 12
+    },
+    {
+      "name": "Sæhrímnir",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 15
+    },
+    {
+      "name": "Heiðrún",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 15
+    },
+    {
+      "name": "Eikþyrnir",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 15
+    },
+    {
+      "name": "Hidromiel",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 9
+    },
+    {
+      "name": "La cabalgata de las valquirias",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 11
+    },
+    {
+      "name": "Funeral vikingo en barco",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 8
+    },
+    {
+      "name": "Escudera",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 11
+    },
+    {
+      "name": "Cuerno para beber",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 6
+    },
+    {
+      "name": "Andhrímnir",
+      "facet": "Valhalla, valquirias y guerreros",
+      "known_at": 15
+    },
+    {
+      "name": "Ojo de Odín",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Odín colgado de Yggdrasil",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Thor disfrazado de novia",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Pesca de Thor",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Viaje de Thor a Útgarðr",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Muralla de Asgard",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Rapto de Iðunn",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Muérdago",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Atadura de Fenrir",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Sigurd",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Cantar de los nibelungos",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra entre Æsir y Vanir",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Cabello dorado de Sif",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Apuesta de Loki con los enanos",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Castigo de Loki",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Saga de los Volsungos",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Beowulf",
+      "facet": "Mitos y aventuras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Thursday",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 9
+    },
+    {
+      "name": "Wednesday",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 11
+    },
+    {
+      "name": "Tuesday",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 12
+    },
+    {
+      "name": "Friday",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 11
+    },
+    {
+      "name": "Monday",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 12
+    },
+    {
+      "name": "Torio",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 13
+    },
+    {
+      "name": "Vanadio",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 14
+    },
+    {
+      "name": "Bluetooth",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 10
+    },
+    {
+      "name": "Window",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 14
+    },
+    {
+      "name": "Sky",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 14
+    },
+    {
+      "name": "Saga",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 10
+    },
+    {
+      "name": "Yule",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 13
+    },
+    {
+      "name": "Tórshavn",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 15
+    },
+    {
+      "name": "Odense",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 15
+    },
+    {
+      "name": "Husband",
+      "facet": "Huellas en el idioma (días, palabras)",
+      "known_at": 15
+    },
+    {
+      "name": "Chris Hemsworth",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 6
+    },
+    {
+      "name": "Tom Hiddleston",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 10
+    },
+    {
+      "name": "Cate Blanchett",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 12
+    },
+    {
+      "name": "Anthony Hopkins",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 11
+    },
+    {
+      "name": "Tessa Thompson",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 13
+    },
+    {
+      "name": "Thor: Ragnarok",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 7
+    },
+    {
+      "name": "Thor: Amor y trueno",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 8
+    },
+    {
+      "name": "Stormbreaker",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 8
+    },
+    {
+      "name": "Stan Lee",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 7
+    },
+    {
+      "name": "Jack Kirby",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 13
+    },
+    {
+      "name": "Korg",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 10
+    },
+    {
+      "name": "Malekith",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 12
+    },
+    {
+      "name": "Taika Waititi",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 13
+    },
+    {
+      "name": "Los Vengadores",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 3
+    },
+    {
+      "name": "Cómo entrenar a tu dragón",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 3
+    },
+    {
+      "name": "Hipo",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 4
+    },
+    {
+      "name": "Chimuelo",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 3
+    },
+    {
+      "name": "El hombre del norte",
+      "facet": "Mitología nórdica en el cine y Marvel",
+      "known_at": 14
+    },
+    {
+      "name": "God of War",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 8
+    },
+    {
+      "name": "Kratos",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 8
+    },
+    {
+      "name": "Atreus",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 10
+    },
+    {
+      "name": "Assassin's Creed Valhalla",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 10
+    },
+    {
+      "name": "Hellblade",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 14
+    },
+    {
+      "name": "Skyrim",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 10
+    },
+    {
+      "name": "Valheim",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 12
+    },
+    {
+      "name": "Vikingos (serie)",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 11
+    },
+    {
+      "name": "Lagertha",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 13
+    },
+    {
+      "name": "J. R. R. Tolkien",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 9
+    },
+    {
+      "name": "Gandalf",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 6
+    },
+    {
+      "name": "El hobbit",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 8
+    },
+    {
+      "name": "Mitología nórdica (Neil Gaiman)",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 13
+    },
+    {
+      "name": "Magnus Chase",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 10
+    },
+    {
+      "name": "Hilda (serie animada)",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 8
+    },
+    {
+      "name": "Vicky el vikingo",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 7
+    },
+    {
+      "name": "Olafo el amargado",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 12
+    },
+    {
+      "name": "Age of Mythology",
+      "facet": "Videojuegos, series y libros nórdicos",
+      "known_at": 12
+    },
+    {
+      "name": "Runas",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 7
+    },
+    {
+      "name": "Futhark",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 13
+    },
+    {
+      "name": "Piedra rúnica",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Edda poética",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Edda prosaica",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Snorri Sturluson",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Erik el Rojo",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Harald Diente Azul",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Ragnar Lodbrok",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Thing",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Lindisfarne",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Casco con cuernos",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 5
+    },
+    {
+      "name": "Vinlandia",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "L'Anse aux Meadows",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Piedras de Jelling",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Codex Regius",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Normandos",
+      "facet": "Vikingos, runas y fuentes antiguas",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,1237 @@
+{
+  "subcategory": "Continentes",
+  "facets": [
+    "Los continentes y sus nombres",
+    "Océanos y mares entre continentes",
+    "Récords y extremos continentales",
+    "Montañas, ríos y desiertos",
+    "Animales de cada continente",
+    "Países y capitales por continente",
+    "Monumentos y lugares famosos",
+    "Pueblos, idiomas y culturas",
+    "Exploradores y viajes históricos",
+    "Tectónica y formación de continentes",
+    "Antártida y regiones polares",
+    "Mapas, hemisferios y coordenadas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 5,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 5,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "América",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 1
+    },
+    {
+      "name": "Asia",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 2
+    },
+    {
+      "name": "África",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 1
+    },
+    {
+      "name": "Oceanía",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 4
+    },
+    {
+      "name": "Antártida",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 3
+    },
+    {
+      "name": "América del Sur",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 2
+    },
+    {
+      "name": "América del Norte",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 3
+    },
+    {
+      "name": "Centroamérica",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 4
+    },
+    {
+      "name": "Eurasia",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 8
+    },
+    {
+      "name": "Latinoamérica",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 5
+    },
+    {
+      "name": "Anillos olímpicos",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 6
+    },
+    {
+      "name": "Rapto de Europa",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Subcontinente indio",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 11
+    },
+    {
+      "name": "Península Arábiga",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 9
+    },
+    {
+      "name": "Escandinavia",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 9
+    },
+    {
+      "name": "Balcanes",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 11
+    },
+    {
+      "name": "Oriente Medio",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 9
+    },
+    {
+      "name": "Sudeste asiático",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 10
+    },
+    {
+      "name": "Magreb",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Australia",
+      "facet": "Los continentes y sus nombres",
+      "known_at": 3
+    },
+    {
+      "name": "Océano Pacífico",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 3
+    },
+    {
+      "name": "Océano Atlántico",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 3
+    },
+    {
+      "name": "Océano Índico",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 6
+    },
+    {
+      "name": "Océano Ártico",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 5
+    },
+    {
+      "name": "Océano Antártico",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 7
+    },
+    {
+      "name": "Mar Mediterráneo",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 6
+    },
+    {
+      "name": "Mar Rojo",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 7
+    },
+    {
+      "name": "Mar Negro",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 9
+    },
+    {
+      "name": "Estrecho de Bering",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 9
+    },
+    {
+      "name": "Estrecho de Gibraltar",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 9
+    },
+    {
+      "name": "Canal de Suez",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 9
+    },
+    {
+      "name": "Canal de Panamá",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 5
+    },
+    {
+      "name": "Bósforo",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 12
+    },
+    {
+      "name": "Cabo de Hornos",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 11
+    },
+    {
+      "name": "Cabo de Buena Esperanza",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 11
+    },
+    {
+      "name": "Paso de Drake",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 13
+    },
+    {
+      "name": "Golfo de México",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 6
+    },
+    {
+      "name": "Mar de Coral",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 13
+    },
+    {
+      "name": "Estrecho de Magallanes",
+      "facet": "Océanos y mares entre continentes",
+      "known_at": 10
+    },
+    {
+      "name": "Monte Everest",
+      "facet": "Récords y extremos continentales",
+      "known_at": 3
+    },
+    {
+      "name": "Fosa de las Marianas",
+      "facet": "Récords y extremos continentales",
+      "known_at": 9
+    },
+    {
+      "name": "Mar Muerto",
+      "facet": "Récords y extremos continentales",
+      "known_at": 8
+    },
+    {
+      "name": "Lago Baikal",
+      "facet": "Récords y extremos continentales",
+      "known_at": 13
+    },
+    {
+      "name": "Desierto de Atacama",
+      "facet": "Récords y extremos continentales",
+      "known_at": 10
+    },
+    {
+      "name": "Salto Ángel",
+      "facet": "Récords y extremos continentales",
+      "known_at": 9
+    },
+    {
+      "name": "Rusia",
+      "facet": "Récords y extremos continentales",
+      "known_at": 5
+    },
+    {
+      "name": "Ciudad del Vaticano",
+      "facet": "Récords y extremos continentales",
+      "known_at": 7
+    },
+    {
+      "name": "Groenlandia",
+      "facet": "Récords y extremos continentales",
+      "known_at": 7
+    },
+    {
+      "name": "Mar Caspio",
+      "facet": "Récords y extremos continentales",
+      "known_at": 12
+    },
+    {
+      "name": "Aconcagua",
+      "facet": "Récords y extremos continentales",
+      "known_at": 10
+    },
+    {
+      "name": "La Paz",
+      "facet": "Récords y extremos continentales",
+      "known_at": 8
+    },
+    {
+      "name": "Lago Titicaca",
+      "facet": "Récords y extremos continentales",
+      "known_at": 8
+    },
+    {
+      "name": "Río Nilo",
+      "facet": "Récords y extremos continentales",
+      "known_at": 5
+    },
+    {
+      "name": "Valle de la Muerte",
+      "facet": "Récords y extremos continentales",
+      "known_at": 11
+    },
+    {
+      "name": "Mauna Kea",
+      "facet": "Récords y extremos continentales",
+      "known_at": 13
+    },
+    {
+      "name": "Punta Gallinas",
+      "facet": "Récords y extremos continentales",
+      "known_at": 10
+    },
+    {
+      "name": "Río Amazonas",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 2
+    },
+    {
+      "name": "Desierto del Sahara",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 3
+    },
+    {
+      "name": "Cordillera de los Andes",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 4
+    },
+    {
+      "name": "Himalaya",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 7
+    },
+    {
+      "name": "Montañas Rocosas",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 10
+    },
+    {
+      "name": "Alpes",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 6
+    },
+    {
+      "name": "Kilimanjaro",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 9
+    },
+    {
+      "name": "Río Misisipi",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 9
+    },
+    {
+      "name": "Río Danubio",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 11
+    },
+    {
+      "name": "Río Yangtsé",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Desierto de Gobi",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 11
+    },
+    {
+      "name": "Río Congo",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Montes Urales",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Monte Fuji",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 7
+    },
+    {
+      "name": "Desierto de Kalahari",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Río Ganges",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 10
+    },
+    {
+      "name": "Pirineos",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Blanco",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Uluru",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Río Orinoco",
+      "facet": "Montañas, ríos y desiertos",
+      "known_at": 7
+    },
+    {
+      "name": "Canguro",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Koala",
+      "facet": "Animales de cada continente",
+      "known_at": 2
+    },
+    {
+      "name": "Panda gigante",
+      "facet": "Animales de cada continente",
+      "known_at": 2
+    },
+    {
+      "name": "León",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Jirafa",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Pingüino emperador",
+      "facet": "Animales de cada continente",
+      "known_at": 2
+    },
+    {
+      "name": "Oso polar",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Elefante",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Tigre de Bengala",
+      "facet": "Animales de cada continente",
+      "known_at": 4
+    },
+    {
+      "name": "Ornitorrinco",
+      "facet": "Animales de cada continente",
+      "known_at": 4
+    },
+    {
+      "name": "Lémur",
+      "facet": "Animales de cada continente",
+      "known_at": 3
+    },
+    {
+      "name": "Jaguar",
+      "facet": "Animales de cada continente",
+      "known_at": 3
+    },
+    {
+      "name": "Llama",
+      "facet": "Animales de cada continente",
+      "known_at": 2
+    },
+    {
+      "name": "Cóndor de los Andes",
+      "facet": "Animales de cada continente",
+      "known_at": 4
+    },
+    {
+      "name": "Bisonte americano",
+      "facet": "Animales de cada continente",
+      "known_at": 6
+    },
+    {
+      "name": "Dromedario",
+      "facet": "Animales de cada continente",
+      "known_at": 5
+    },
+    {
+      "name": "Ñu",
+      "facet": "Animales de cada continente",
+      "known_at": 4
+    },
+    {
+      "name": "Kiwi",
+      "facet": "Animales de cada continente",
+      "known_at": 8
+    },
+    {
+      "name": "Demonio de Tasmania",
+      "facet": "Animales de cada continente",
+      "known_at": 5
+    },
+    {
+      "name": "Orangután",
+      "facet": "Animales de cada continente",
+      "known_at": 5
+    },
+    {
+      "name": "Okapi",
+      "facet": "Animales de cada continente",
+      "known_at": 12
+    },
+    {
+      "name": "Emú",
+      "facet": "Animales de cada continente",
+      "known_at": 8
+    },
+    {
+      "name": "Hipopótamo",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Cebra",
+      "facet": "Animales de cada continente",
+      "known_at": 1
+    },
+    {
+      "name": "Brasil",
+      "facet": "Países y capitales por continente",
+      "known_at": 2
+    },
+    {
+      "name": "Egipto",
+      "facet": "Países y capitales por continente",
+      "known_at": 3
+    },
+    {
+      "name": "Japón",
+      "facet": "Países y capitales por continente",
+      "known_at": 2
+    },
+    {
+      "name": "Canadá",
+      "facet": "Países y capitales por continente",
+      "known_at": 4
+    },
+    {
+      "name": "India",
+      "facet": "Países y capitales por continente",
+      "known_at": 4
+    },
+    {
+      "name": "China",
+      "facet": "Países y capitales por continente",
+      "known_at": 2
+    },
+    {
+      "name": "Nueva Zelanda",
+      "facet": "Países y capitales por continente",
+      "known_at": 7
+    },
+    {
+      "name": "Sudáfrica",
+      "facet": "Países y capitales por continente",
+      "known_at": 7
+    },
+    {
+      "name": "México",
+      "facet": "Países y capitales por continente",
+      "known_at": 2
+    },
+    {
+      "name": "Turquía",
+      "facet": "Países y capitales por continente",
+      "known_at": 9
+    },
+    {
+      "name": "Madagascar",
+      "facet": "Países y capitales por continente",
+      "known_at": 4
+    },
+    {
+      "name": "Indonesia",
+      "facet": "Países y capitales por continente",
+      "known_at": 10
+    },
+    {
+      "name": "Canberra",
+      "facet": "Países y capitales por continente",
+      "known_at": 12
+    },
+    {
+      "name": "Washington D. C.",
+      "facet": "Países y capitales por continente",
+      "known_at": 6
+    },
+    {
+      "name": "París",
+      "facet": "Países y capitales por continente",
+      "known_at": 3
+    },
+    {
+      "name": "Tokio",
+      "facet": "Países y capitales por continente",
+      "known_at": 5
+    },
+    {
+      "name": "Pekín",
+      "facet": "Países y capitales por continente",
+      "known_at": 8
+    },
+    {
+      "name": "Brasilia",
+      "facet": "Países y capitales por continente",
+      "known_at": 9
+    },
+    {
+      "name": "Estambul",
+      "facet": "Países y capitales por continente",
+      "known_at": 10
+    },
+    {
+      "name": "Nairobi",
+      "facet": "Países y capitales por continente",
+      "known_at": 12
+    },
+    {
+      "name": "Ottawa",
+      "facet": "Países y capitales por continente",
+      "known_at": 11
+    },
+    {
+      "name": "Torre Eiffel",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 1
+    },
+    {
+      "name": "Pirámides de Guiza",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Gran Muralla China",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Machu Picchu",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Taj Mahal",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Coliseo de Roma",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Estatua de la Libertad",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Cristo Redentor",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Ópera de Sídney",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Chichén Itzá",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Petra",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Angkor Wat",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Big Ben",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Partenón",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Torre de Pisa",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Isla de Pascua",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Cataratas del Iguazú",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Cataratas del Niágara",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Ciudad Prohibida",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Barrera de Coral",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Burj Khalifa",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Sagrada Familia",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Mandarín",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 6
+    },
+    {
+      "name": "Suajili",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 9
+    },
+    {
+      "name": "Árabe",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 5
+    },
+    {
+      "name": "Portugués",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 4
+    },
+    {
+      "name": "Hindi",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 10
+    },
+    {
+      "name": "Maoríes",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 10
+    },
+    {
+      "name": "Haka",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 9
+    },
+    {
+      "name": "Aborígenes australianos",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 9
+    },
+    {
+      "name": "Inuit",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 5
+    },
+    {
+      "name": "Masái",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 11
+    },
+    {
+      "name": "Bereberes",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 13
+    },
+    {
+      "name": "Incas",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 5
+    },
+    {
+      "name": "Mayas",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 5
+    },
+    {
+      "name": "Vikingos",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 3
+    },
+    {
+      "name": "Samuráis",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 4
+    },
+    {
+      "name": "Zulúes",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 12
+    },
+    {
+      "name": "Sami",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 14
+    },
+    {
+      "name": "Tuaregs",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 13
+    },
+    {
+      "name": "Kimono",
+      "facet": "Pueblos, idiomas y culturas",
+      "known_at": 4
+    },
+    {
+      "name": "Cristóbal Colón",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 2
+    },
+    {
+      "name": "Fernando de Magallanes",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Sebastián Elcano",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Polo",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 7
+    },
+    {
+      "name": "Vasco da Gama",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Américo Vespucio",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 9
+    },
+    {
+      "name": "James Cook",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Roald Amundsen",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Falcon Scott",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Ernest Shackleton",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Abel Tasman",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Leif Erikson",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Ibn Battuta",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 15
+    },
+    {
+      "name": "Zheng He",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 15
+    },
+    {
+      "name": "Hernán Cortés",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco Pizarro",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Edmund Hillary",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Darwin",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Ruta de la Seda",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Bartolomeu Dias",
+      "facet": "Exploradores y viajes históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Pangea",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 7
+    },
+    {
+      "name": "Deriva continental",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 10
+    },
+    {
+      "name": "Alfred Wegener",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 12
+    },
+    {
+      "name": "Placas tectónicas",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 7
+    },
+    {
+      "name": "Gondwana",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 12
+    },
+    {
+      "name": "Laurasia",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 13
+    },
+    {
+      "name": "Zealandia",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 14
+    },
+    {
+      "name": "Cinturón de Fuego del Pacífico",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 10
+    },
+    {
+      "name": "Valle del Rift",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 13
+    },
+    {
+      "name": "Dorsal mesoatlántica",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 13
+    },
+    {
+      "name": "Terremoto",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 2
+    },
+    {
+      "name": "Volcán",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 1
+    },
+    {
+      "name": "Islandia",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 9
+    },
+    {
+      "name": "Subducción",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 12
+    },
+    {
+      "name": "Tsunami",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 4
+    },
+    {
+      "name": "Pantalasa",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 14
+    },
+    {
+      "name": "Islas Hawái",
+      "facet": "Tectónica y formación de continentes",
+      "known_at": 6
+    },
+    {
+      "name": "Polo Sur",
+      "facet": "Antártida y regiones polares",
+      "known_at": 3
+    },
+    {
+      "name": "Polo Norte",
+      "facet": "Antártida y regiones polares",
+      "known_at": 2
+    },
+    {
+      "name": "Círculo polar ártico",
+      "facet": "Antártida y regiones polares",
+      "known_at": 9
+    },
+    {
+      "name": "Tratado Antártico",
+      "facet": "Antártida y regiones polares",
+      "known_at": 13
+    },
+    {
+      "name": "Iceberg",
+      "facet": "Antártida y regiones polares",
+      "known_at": 2
+    },
+    {
+      "name": "Base Vostok",
+      "facet": "Antártida y regiones polares",
+      "known_at": 14
+    },
+    {
+      "name": "Sol de medianoche",
+      "facet": "Antártida y regiones polares",
+      "known_at": 9
+    },
+    {
+      "name": "Noche polar",
+      "facet": "Antártida y regiones polares",
+      "known_at": 9
+    },
+    {
+      "name": "Ártico",
+      "facet": "Antártida y regiones polares",
+      "known_at": 4
+    },
+    {
+      "name": "Barrera de hielo de Ross",
+      "facet": "Antártida y regiones polares",
+      "known_at": 14
+    },
+    {
+      "name": "Monte Erebus",
+      "facet": "Antártida y regiones polares",
+      "known_at": 14
+    },
+    {
+      "name": "Svalbard",
+      "facet": "Antártida y regiones polares",
+      "known_at": 13
+    },
+    {
+      "name": "Tundra",
+      "facet": "Antártida y regiones polares",
+      "known_at": 8
+    },
+    {
+      "name": "Casquete polar",
+      "facet": "Antártida y regiones polares",
+      "known_at": 8
+    },
+    {
+      "name": "Macizo Vinson",
+      "facet": "Antártida y regiones polares",
+      "known_at": 15
+    },
+    {
+      "name": "Iglú",
+      "facet": "Antártida y regiones polares",
+      "known_at": 2
+    },
+    {
+      "name": "Línea del ecuador",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 4
+    },
+    {
+      "name": "Meridiano de Greenwich",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 9
+    },
+    {
+      "name": "Hemisferio norte",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 6
+    },
+    {
+      "name": "Hemisferio sur",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 6
+    },
+    {
+      "name": "Latitud",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 9
+    },
+    {
+      "name": "Longitud",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 9
+    },
+    {
+      "name": "Trópico de Cáncer",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 9
+    },
+    {
+      "name": "Trópico de Capricornio",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 9
+    },
+    {
+      "name": "Rosa de los vientos",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 6
+    },
+    {
+      "name": "Proyección de Mercator",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 13
+    },
+    {
+      "name": "Globo terráqueo",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 2
+    },
+    {
+      "name": "Brújula",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 2
+    },
+    {
+      "name": "Atlas",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 5
+    },
+    {
+      "name": "Husos horarios",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 8
+    },
+    {
+      "name": "Línea internacional de cambio de fecha",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 12
+    },
+    {
+      "name": "Puntos cardinales",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 3
+    },
+    {
+      "name": "Escala de un mapa",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 7
+    },
+    {
+      "name": "GPS",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 5
+    },
+    {
+      "name": "Planisferio",
+      "facet": "Mapas, hemisferios y coordenadas",
+      "known_at": 7
+    }
+  ]
+}

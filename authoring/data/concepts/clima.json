@@ -1,0 +1,1067 @@
+{
+  "subcategory": "Clima",
+  "facets": [
+    "Fenómenos meteorológicos cotidianos",
+    "Nubes y precipitación",
+    "Tormentas y fenómenos extremos",
+    "Vientos y presión atmosférica",
+    "Instrumentos y pronóstico del tiempo",
+    "Zonas climáticas y biomas",
+    "Pisos térmicos de Colombia",
+    "Estaciones y temporadas de lluvia",
+    "Cambio climático y efecto invernadero",
+    "Ciclo del agua y atmósfera",
+    "Dichos y palabras del clima",
+    "Clima en historia y cultura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Arcoíris",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 1
+    },
+    {
+      "name": "Doble arcoíris",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 4
+    },
+    {
+      "name": "Niebla",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 3
+    },
+    {
+      "name": "Rocío",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 5
+    },
+    {
+      "name": "Escarcha",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 6
+    },
+    {
+      "name": "Helada",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 6
+    },
+    {
+      "name": "Bochorno",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 6
+    },
+    {
+      "name": "Ola de calor",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 5
+    },
+    {
+      "name": "Sereno",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 7
+    },
+    {
+      "name": "Cielo despejado",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 3
+    },
+    {
+      "name": "Temperatura",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 2
+    },
+    {
+      "name": "Humedad",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 5
+    },
+    {
+      "name": "Sensación térmica",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 8
+    },
+    {
+      "name": "Espejismo",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 8
+    },
+    {
+      "name": "Halo solar",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 10
+    },
+    {
+      "name": "Calima",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 11
+    },
+    {
+      "name": "Smog",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 9
+    },
+    {
+      "name": "Inversión térmica",
+      "facet": "Fenómenos meteorológicos cotidianos",
+      "known_at": 13
+    },
+    {
+      "name": "Nube",
+      "facet": "Nubes y precipitación",
+      "known_at": 1
+    },
+    {
+      "name": "Lluvia",
+      "facet": "Nubes y precipitación",
+      "known_at": 1
+    },
+    {
+      "name": "Nieve",
+      "facet": "Nubes y precipitación",
+      "known_at": 1
+    },
+    {
+      "name": "Granizo",
+      "facet": "Nubes y precipitación",
+      "known_at": 2
+    },
+    {
+      "name": "Gota de lluvia",
+      "facet": "Nubes y precipitación",
+      "known_at": 2
+    },
+    {
+      "name": "Llovizna",
+      "facet": "Nubes y precipitación",
+      "known_at": 3
+    },
+    {
+      "name": "Aguacero",
+      "facet": "Nubes y precipitación",
+      "known_at": 3
+    },
+    {
+      "name": "Aguanieve",
+      "facet": "Nubes y precipitación",
+      "known_at": 6
+    },
+    {
+      "name": "Copo de nieve",
+      "facet": "Nubes y precipitación",
+      "known_at": 2
+    },
+    {
+      "name": "Lluvia ácida",
+      "facet": "Nubes y precipitación",
+      "known_at": 8
+    },
+    {
+      "name": "Cúmulo",
+      "facet": "Nubes y precipitación",
+      "known_at": 8
+    },
+    {
+      "name": "Cirro",
+      "facet": "Nubes y precipitación",
+      "known_at": 9
+    },
+    {
+      "name": "Estrato",
+      "facet": "Nubes y precipitación",
+      "known_at": 9
+    },
+    {
+      "name": "Cumulonimbo",
+      "facet": "Nubes y precipitación",
+      "known_at": 10
+    },
+    {
+      "name": "Nimboestrato",
+      "facet": "Nubes y precipitación",
+      "known_at": 11
+    },
+    {
+      "name": "Altocúmulo",
+      "facet": "Nubes y precipitación",
+      "known_at": 12
+    },
+    {
+      "name": "Nube lenticular",
+      "facet": "Nubes y precipitación",
+      "known_at": 12
+    },
+    {
+      "name": "Siembra de nubes",
+      "facet": "Nubes y precipitación",
+      "known_at": 12
+    },
+    {
+      "name": "Mammatus",
+      "facet": "Nubes y precipitación",
+      "known_at": 14
+    },
+    {
+      "name": "Rayo",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 1
+    },
+    {
+      "name": "Trueno",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 1
+    },
+    {
+      "name": "Relámpago",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 2
+    },
+    {
+      "name": "Tornado",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 2
+    },
+    {
+      "name": "Tormenta eléctrica",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 3
+    },
+    {
+      "name": "Inundación",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 3
+    },
+    {
+      "name": "Sequía",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 4
+    },
+    {
+      "name": "Tormenta de arena",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 4
+    },
+    {
+      "name": "Avalancha",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 4
+    },
+    {
+      "name": "Ojo del huracán",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 5
+    },
+    {
+      "name": "Pararrayos",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 6
+    },
+    {
+      "name": "Ciclón",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Ventisca",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Relámpago del Catatumbo",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Tifón",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 8
+    },
+    {
+      "name": "Tromba marina",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 9
+    },
+    {
+      "name": "Huracán Iota",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 10
+    },
+    {
+      "name": "Escala Saffir-Simpson",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 12
+    },
+    {
+      "name": "Escala Fujita",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 13
+    },
+    {
+      "name": "Rayo globular",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 13
+    },
+    {
+      "name": "Fuego de San Telmo",
+      "facet": "Tormentas y fenómenos extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Viento",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 1
+    },
+    {
+      "name": "Brisa",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 4
+    },
+    {
+      "name": "Vendaval",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 6
+    },
+    {
+      "name": "Vientos de agosto",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 6
+    },
+    {
+      "name": "Presión atmosférica",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 8
+    },
+    {
+      "name": "Vientos alisios",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 10
+    },
+    {
+      "name": "Monzón",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 10
+    },
+    {
+      "name": "Borrasca",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 10
+    },
+    {
+      "name": "Anticiclón",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 11
+    },
+    {
+      "name": "Calma chicha",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 11
+    },
+    {
+      "name": "Evangelista Torricelli",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 12
+    },
+    {
+      "name": "Corriente en chorro",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 13
+    },
+    {
+      "name": "Zona de convergencia intertropical",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 13
+    },
+    {
+      "name": "Siroco",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 13
+    },
+    {
+      "name": "Viento Föhn",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 14
+    },
+    {
+      "name": "Mistral",
+      "facet": "Vientos y presión atmosférica",
+      "known_at": 14
+    },
+    {
+      "name": "Termómetro",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 2
+    },
+    {
+      "name": "Pronóstico del tiempo",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Veleta",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 5
+    },
+    {
+      "name": "Mapa del tiempo",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 5
+    },
+    {
+      "name": "Satélite meteorológico",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Meteorólogo",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Escala Celsius",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Manga de viento",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Estación meteorológica",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Barómetro",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Radar meteorológico",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Escala Fahrenheit",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Pluviómetro",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Anemómetro",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Globo sonda",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "IDEAM",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "Frente frío",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "Higrómetro",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Isobaras",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 12
+    },
+    {
+      "name": "Heliógrafo",
+      "facet": "Instrumentos y pronóstico del tiempo",
+      "known_at": 14
+    },
+    {
+      "name": "Desierto",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 1
+    },
+    {
+      "name": "Selva tropical",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 2
+    },
+    {
+      "name": "Amazonia",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 3
+    },
+    {
+      "name": "Sabana",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 5
+    },
+    {
+      "name": "Clima polar",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 5
+    },
+    {
+      "name": "Desierto de la Tatacoa",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 7
+    },
+    {
+      "name": "Zona intertropical",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 8
+    },
+    {
+      "name": "Estepa",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 9
+    },
+    {
+      "name": "Taiga",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 10
+    },
+    {
+      "name": "Clima mediterráneo",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 10
+    },
+    {
+      "name": "Bosque seco tropical",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 11
+    },
+    {
+      "name": "Permafrost",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 11
+    },
+    {
+      "name": "Clasificación de Köppen",
+      "facet": "Zonas climáticas y biomas",
+      "known_at": 14
+    },
+    {
+      "name": "Barranquilla",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 4
+    },
+    {
+      "name": "Frailejón",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Piso cálido",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Piso frío",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Páramo",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Medellín, ciudad de la eterna primavera",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Zona cafetera",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Sierra Nevada de Santa Marta",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Piso templado",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Nieves perpetuas",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Piso térmico",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Altitud",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Nevado del Ruiz",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Tunja",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Pico Cristóbal Colón",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Glaciares de Colombia",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Gradiente térmico",
+      "facet": "Pisos térmicos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Primavera",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 1
+    },
+    {
+      "name": "Verano",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 1
+    },
+    {
+      "name": "Otoño",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 1
+    },
+    {
+      "name": "Invierno",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 1
+    },
+    {
+      "name": "Temporada de lluvias",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 5
+    },
+    {
+      "name": "Temporada seca",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 5
+    },
+    {
+      "name": "Inclinación del eje terrestre",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 9
+    },
+    {
+      "name": "Veranillo de San Juan",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 11
+    },
+    {
+      "name": "Régimen bimodal de lluvias",
+      "facet": "Estaciones y temporadas de lluvia",
+      "known_at": 13
+    },
+    {
+      "name": "Panel solar",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 3
+    },
+    {
+      "name": "Deshielo de los polos",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 4
+    },
+    {
+      "name": "Efecto invernadero",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 6
+    },
+    {
+      "name": "Deforestación",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 6
+    },
+    {
+      "name": "Dióxido de carbono",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 7
+    },
+    {
+      "name": "Capa de ozono",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 7
+    },
+    {
+      "name": "Aumento del nivel del mar",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 7
+    },
+    {
+      "name": "Greta Thunberg",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 8
+    },
+    {
+      "name": "Combustibles fósiles",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 8
+    },
+    {
+      "name": "Huella de carbono",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 9
+    },
+    {
+      "name": "Metano",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 10
+    },
+    {
+      "name": "Acuerdo de París",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 11
+    },
+    {
+      "name": "Protocolo de Kioto",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 12
+    },
+    {
+      "name": "Clorofluorocarbonos",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 13
+    },
+    {
+      "name": "IPCC",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 13
+    },
+    {
+      "name": "Al Gore",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 13
+    },
+    {
+      "name": "Svante Arrhenius",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 15
+    },
+    {
+      "name": "Vapor de agua",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 5
+    },
+    {
+      "name": "Condensación",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 6
+    },
+    {
+      "name": "Precipitación",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 6
+    },
+    {
+      "name": "Infiltración",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 9
+    },
+    {
+      "name": "Troposfera",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 9
+    },
+    {
+      "name": "Estratosfera",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 9
+    },
+    {
+      "name": "Nitrógeno",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 9
+    },
+    {
+      "name": "Transpiración de las plantas",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 10
+    },
+    {
+      "name": "Sublimación",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 10
+    },
+    {
+      "name": "Mesosfera",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 11
+    },
+    {
+      "name": "Acuífero",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 11
+    },
+    {
+      "name": "Termosfera",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 12
+    },
+    {
+      "name": "Escorrentía",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 12
+    },
+    {
+      "name": "Punto de rocío",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 12
+    },
+    {
+      "name": "Exosfera",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 13
+    },
+    {
+      "name": "Ríos voladores",
+      "facet": "Ciclo del agua y atmósfera",
+      "known_at": 13
+    },
+    {
+      "name": "Al mal tiempo, buena cara",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 4
+    },
+    {
+      "name": "Después de la tormenta llega la calma",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 4
+    },
+    {
+      "name": "Estar en las nubes",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 4
+    },
+    {
+      "name": "Llover a cántaros",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 5
+    },
+    {
+      "name": "Lluvia de ideas",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 6
+    },
+    {
+      "name": "Romper el hielo",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 7
+    },
+    {
+      "name": "En abril, aguas mil",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 8
+    },
+    {
+      "name": "Una golondrina no hace verano",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 9
+    },
+    {
+      "name": "Contra viento y marea",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 9
+    },
+    {
+      "name": "Viento en popa",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 9
+    },
+    {
+      "name": "Tormenta en un vaso de agua",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 10
+    },
+    {
+      "name": "Llover sobre mojado",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 10
+    },
+    {
+      "name": "Meteorología",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 10
+    },
+    {
+      "name": "Sol de los venados",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 11
+    },
+    {
+      "name": "Capear el temporal",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 12
+    },
+    {
+      "name": "Huracán (palabra taína)",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 12
+    },
+    {
+      "name": "Cielo empedrado, suelo mojado",
+      "facet": "Dichos y palabras del clima",
+      "known_at": 13
+    },
+    {
+      "name": "Arca de Noé",
+      "facet": "Clima en historia y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "La Era del Hielo",
+      "facet": "Clima en historia y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Lluvia de hamburguesas",
+      "facet": "Clima en historia y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Thor",
+      "facet": "Clima en historia y cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Zeus",
+      "facet": "Clima en historia y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Tormenta (X-Men)",
+      "facet": "Clima en historia y cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Benjamin Franklin y la cometa",
+      "facet": "Clima en historia y cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Glaciación",
+      "facet": "Clima en historia y cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Tláloc",
+      "facet": "Clima en historia y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Eolo",
+      "facet": "Clima en historia y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Bochica",
+      "facet": "Clima en historia y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Invierno ruso y Napoleón",
+      "facet": "Clima en historia y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Cantando bajo la lluvia",
+      "facet": "Clima en historia y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "El día después de mañana",
+      "facet": "Clima en historia y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Twister",
+      "facet": "Clima en historia y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Pequeña Edad de Hielo",
+      "facet": "Clima en historia y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Chaac",
+      "facet": "Clima en historia y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Año sin verano",
+      "facet": "Clima en historia y cultura",
+      "known_at": 14
+    }
+  ]
+}

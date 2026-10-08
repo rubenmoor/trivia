@@ -1,0 +1,1257 @@
+{
+  "subcategory": "Colombianos famosos",
+  "facets": [
+    "Cantantes y músicos populares",
+    "Escritores y poetas",
+    "Pintores, escultores y artistas",
+    "Futbolistas y técnicos",
+    "Ciclistas y escarabajos",
+    "Medallistas olímpicos y otros deportistas",
+    "Próceres de la independencia",
+    "Presidentes y figuras políticas",
+    "Científicos, médicos e inventores",
+    "Actores, presentadores y humoristas",
+    "Periodistas y figuras de la cultura",
+    "Cocineros, diseñadores y emprendedores"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 1,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Shakira",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 1
+    },
+    {
+      "name": "Karol G",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 2
+    },
+    {
+      "name": "J Balvin",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 3
+    },
+    {
+      "name": "Maluma",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 3
+    },
+    {
+      "name": "Carlos Vives",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 4
+    },
+    {
+      "name": "Juanes",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 4
+    },
+    {
+      "name": "Feid",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 5
+    },
+    {
+      "name": "Sebastián Yatra",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 4
+    },
+    {
+      "name": "Camilo",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 4
+    },
+    {
+      "name": "Ryan Castro",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 6
+    },
+    {
+      "name": "Blessd",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 6
+    },
+    {
+      "name": "Silvestre Dangond",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 7
+    },
+    {
+      "name": "Fonseca",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 8
+    },
+    {
+      "name": "Andrés Cepeda",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 8
+    },
+    {
+      "name": "Jorge Celedón",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 8
+    },
+    {
+      "name": "Diomedes Díaz",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 8
+    },
+    {
+      "name": "Joe Arroyo",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 8
+    },
+    {
+      "name": "Grupo Niche",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 9
+    },
+    {
+      "name": "Bomba Estéreo",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 9
+    },
+    {
+      "name": "Totó la Momposina",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 10
+    },
+    {
+      "name": "Aterciopelados",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 10
+    },
+    {
+      "name": "Kali Uchis",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 10
+    },
+    {
+      "name": "Rafael Escalona",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 11
+    },
+    {
+      "name": "Lucho Bermúdez",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 12
+    },
+    {
+      "name": "Petrona Martínez",
+      "facet": "Cantantes y músicos populares",
+      "known_at": 13
+    },
+    {
+      "name": "Gabriel García Márquez",
+      "facet": "Escritores y poetas",
+      "known_at": 5
+    },
+    {
+      "name": "Rafael Pombo",
+      "facet": "Escritores y poetas",
+      "known_at": 5
+    },
+    {
+      "name": "Jairo Aníbal Niño",
+      "facet": "Escritores y poetas",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Isaacs",
+      "facet": "Escritores y poetas",
+      "known_at": 10
+    },
+    {
+      "name": "José Eustasio Rivera",
+      "facet": "Escritores y poetas",
+      "known_at": 11
+    },
+    {
+      "name": "José Asunción Silva",
+      "facet": "Escritores y poetas",
+      "known_at": 11
+    },
+    {
+      "name": "Mario Mendoza",
+      "facet": "Escritores y poetas",
+      "known_at": 11
+    },
+    {
+      "name": "Héctor Abad Faciolince",
+      "facet": "Escritores y poetas",
+      "known_at": 12
+    },
+    {
+      "name": "Álvaro Mutis",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Restrepo",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Vallejo",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Tomás Carrasquilla",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "León de Greiff",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Gabriel Vásquez",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Eduardo Caballero Calderón",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Zapata Olivella",
+      "facet": "Escritores y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Porfirio Barba Jacob",
+      "facet": "Escritores y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Candelario Obeso",
+      "facet": "Escritores y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Piedad Bonnett",
+      "facet": "Escritores y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Gonzalo Arango",
+      "facet": "Escritores y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Pilar Quintana",
+      "facet": "Escritores y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Mejía Vallejo",
+      "facet": "Escritores y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Botero",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 5
+    },
+    {
+      "name": "Débora Arango",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Omar Rayo",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro Obregón",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 12
+    },
+    {
+      "name": "Edgar Negret",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Doris Salcedo",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Enrique Grau",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Nel Gómez",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Beatriz González",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 13
+    },
+    {
+      "name": "Gregorio Vásquez de Arce y Ceballos",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Rómulo Rozo",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo Ramírez Villamizar",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés de Santa María",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Ana Mercedes Hoyos",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Rodrigo Arenas Betancourt",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Hernando Tejada",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "Feliza Bursztyn",
+      "facet": "Pintores, escultores y artistas",
+      "known_at": 14
+    },
+    {
+      "name": "James Rodríguez",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 3
+    },
+    {
+      "name": "Radamel Falcao",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 3
+    },
+    {
+      "name": "Luis Díaz",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 3
+    },
+    {
+      "name": "Carlos \"El Pibe\" Valderrama",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 4
+    },
+    {
+      "name": "Juan Guillermo Cuadrado",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 5
+    },
+    {
+      "name": "David Ospina",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 5
+    },
+    {
+      "name": "Yerry Mina",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 5
+    },
+    {
+      "name": "René Higuita",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 6
+    },
+    {
+      "name": "Linda Caicedo",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 6
+    },
+    {
+      "name": "Davinson Sánchez",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 6
+    },
+    {
+      "name": "Jhon Jáder Durán",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 7
+    },
+    {
+      "name": "Faustino Asprilla",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 8
+    },
+    {
+      "name": "Néstor Lorenzo",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 8
+    },
+    {
+      "name": "Freddy Rincón",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 9
+    },
+    {
+      "name": "Mario Yepes",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 9
+    },
+    {
+      "name": "Francisco Maturana",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 10
+    },
+    {
+      "name": "Andrés Escobar",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 10
+    },
+    {
+      "name": "Mayra Ramírez",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 10
+    },
+    {
+      "name": "Iván Ramiro Córdoba",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 10
+    },
+    {
+      "name": "Óscar Córdoba",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 11
+    },
+    {
+      "name": "Willington Ortiz",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "Leonel Álvarez",
+      "facet": "Futbolistas y técnicos",
+      "known_at": 12
+    },
+    {
+      "name": "Egan Bernal",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 5
+    },
+    {
+      "name": "Nairo Quintana",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 5
+    },
+    {
+      "name": "Rigoberto Urán",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 6
+    },
+    {
+      "name": "Escarabajos",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 8
+    },
+    {
+      "name": "Lucho Herrera",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 10
+    },
+    {
+      "name": "Esteban Chaves",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 10
+    },
+    {
+      "name": "Fernando Gaviria",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel Ángel López",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 11
+    },
+    {
+      "name": "Cochise Rodríguez",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Botero",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Felipe Martínez",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 12
+    },
+    {
+      "name": "Víctor Hugo Peña",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 12
+    },
+    {
+      "name": "Fabio Parra",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Sergio Henao",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Betancur",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Ramón Hoyos",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Efraín Forero",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Patrocinio Jiménez",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Oliverio Rincón",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Martín Emilio Rodríguez",
+      "facet": "Ciclistas y escarabajos",
+      "known_at": 15
+    },
+    {
+      "name": "Mariana Pajón",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 4
+    },
+    {
+      "name": "Caterine Ibargüen",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 6
+    },
+    {
+      "name": "Juan Pablo Montoya",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 7
+    },
+    {
+      "name": "María Isabel Urrutia",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 10
+    },
+    {
+      "name": "Kid Pambelé",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 10
+    },
+    {
+      "name": "Óscar Figueroa",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 11
+    },
+    {
+      "name": "Camilo Villegas",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 11
+    },
+    {
+      "name": "Yuberjen Martínez",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Jackeline Rentería",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Anthony Zambrano",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Sebastián Cabal",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 12
+    },
+    {
+      "name": "Ximena Restrepo",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Ramírez",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Ingrit Valencia",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Yuri Alvear",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Fabiola Zuluaga",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Tatiana Calderón",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel \"Happy\" Lora",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 13
+    },
+    {
+      "name": "Helmut Bellingrodt",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 14
+    },
+    {
+      "name": "Mabel Mosquera",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Javier Mosquera",
+      "facet": "Medallistas olímpicos y otros deportistas",
+      "known_at": 14
+    },
+    {
+      "name": "Simón Bolívar",
+      "facet": "Próceres de la independencia",
+      "known_at": 3
+    },
+    {
+      "name": "Francisco de Paula Santander",
+      "facet": "Próceres de la independencia",
+      "known_at": 6
+    },
+    {
+      "name": "Policarpa Salavarrieta",
+      "facet": "Próceres de la independencia",
+      "known_at": 6
+    },
+    {
+      "name": "Antonio Nariño",
+      "facet": "Próceres de la independencia",
+      "known_at": 8
+    },
+    {
+      "name": "Antonio José de Sucre",
+      "facet": "Próceres de la independencia",
+      "known_at": 9
+    },
+    {
+      "name": "José María Córdova",
+      "facet": "Próceres de la independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco José de Caldas",
+      "facet": "Próceres de la independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Antonia Santos",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Camilo Torres Tenorio",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Manuela Sáenz",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "José Antonio Galán",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Manuela Beltrán",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Atanasio Girardot",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Pascasio Martínez",
+      "facet": "Próceres de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "José Prudencio Padilla",
+      "facet": "Próceres de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Juan José Rondón",
+      "facet": "Próceres de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Ricaurte",
+      "facet": "Próceres de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "José Acevedo y Gómez",
+      "facet": "Próceres de la independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge Tadeo Lozano",
+      "facet": "Próceres de la independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Mercedes Ábrego",
+      "facet": "Próceres de la independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Juan del Corral",
+      "facet": "Próceres de la independencia",
+      "known_at": 14
+    },
+    {
+      "name": "Gustavo Petro",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 6
+    },
+    {
+      "name": "Álvaro Uribe Vélez",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 7
+    },
+    {
+      "name": "Juan Manuel Santos",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 7
+    },
+    {
+      "name": "Iván Duque",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 7
+    },
+    {
+      "name": "Francia Márquez",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 8
+    },
+    {
+      "name": "Jorge Eliécer Gaitán",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 9
+    },
+    {
+      "name": "Rafael Núñez",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Gustavo Rojas Pinilla",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Luis Carlos Galán",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Andrés Pastrana",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Ingrid Betancourt",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Tomás Cipriano de Mosquera",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 12
+    },
+    {
+      "name": "Belisario Betancur",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 12
+    },
+    {
+      "name": "César Gaviria",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 12
+    },
+    {
+      "name": "Ernesto Samper",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 12
+    },
+    {
+      "name": "Alfonso López Pumarejo",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Uribe Uribe",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Laureano Gómez",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Alberto Lleras Camargo",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Mariano Ospina Pérez",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Virgilio Barco",
+      "facet": "Presidentes y figuras políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Manuel Elkin Patarroyo",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 10
+    },
+    {
+      "name": "José Celestino Mutis",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 10
+    },
+    {
+      "name": "Diana Trujillo",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 10
+    },
+    {
+      "name": "Expedición Botánica",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 11
+    },
+    {
+      "name": "Rodolfo Llinás",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Reynolds Pombo",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 13
+    },
+    {
+      "name": "Salomón Hakim",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Garavito Armero",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Lopera",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 13
+    },
+    {
+      "name": "Nubia Muñoz",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Ángela Restrepo Moreno",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Raúl Cuero",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Emilio Yunis",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Adriana Ocampo",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Moisés Wasserman",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Enrique Pérez Arbeláez",
+      "facet": "Científicos, médicos e inventores",
+      "known_at": 14
+    },
+    {
+      "name": "Sofía Vergara",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 5
+    },
+    {
+      "name": "Ana María Orozco",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 8
+    },
+    {
+      "name": "Amparo Grisales",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 8
+    },
+    {
+      "name": "Alejandro Riaño",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 8
+    },
+    {
+      "name": "Andrés López",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Barón",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 9
+    },
+    {
+      "name": "John Leguizamo",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 10
+    },
+    {
+      "name": "Jaime Garzón",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 10
+    },
+    {
+      "name": "Margarita Rosa de Francisco",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Enrique Abello",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 10
+    },
+    {
+      "name": "Hassam",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Calero",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 11
+    },
+    {
+      "name": "Alejandra Azcárate",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Muñoz",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 12
+    },
+    {
+      "name": "Carolina Gómez",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 12
+    },
+    {
+      "name": "Catalina Sandino Moreno",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 13
+    },
+    {
+      "name": "Martín de Francisco",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 13
+    },
+    {
+      "name": "Diego Trujillo",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 13
+    },
+    {
+      "name": "Majida Issa",
+      "facet": "Actores, presentadores y humoristas",
+      "known_at": 13
+    },
+    {
+      "name": "Pirry",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Vicky Dávila",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Gloria Valencia de Castaño",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Gaitán",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Samper Ospina",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Yamid Amat",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Julio Sánchez Cristo",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Darío Arizmendi",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Guillermo Cano",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Daniel Samper Pizano",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Gossaín",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Germán Castro Caycedo",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Rogelio Salmona",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Fanny Mikey",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "María Jimena Duzán",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Caballero",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 14
+    },
+    {
+      "name": "Margarita Vidal",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 14
+    },
+    {
+      "name": "Klim",
+      "facet": "Periodistas y figuras de la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "Juan Valdez",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 3
+    },
+    {
+      "name": "Jorge Rausch",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 10
+    },
+    {
+      "name": "Harry Sasson",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 11
+    },
+    {
+      "name": "Christopher Carpentier",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 11
+    },
+    {
+      "name": "Mario Hernández",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 11
+    },
+    {
+      "name": "Leonor Espinosa",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 12
+    },
+    {
+      "name": "Hernán Zajar",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 12
+    },
+    {
+      "name": "Simón Borrero",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Ardila Lülle",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Carlos Sarmiento Angulo",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 12
+    },
+    {
+      "name": "Silvia Tcherassi",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 13
+    },
+    {
+      "name": "Johanna Ortiz",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 13
+    },
+    {
+      "name": "Julio Mario Santo Domingo",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Manuel Barrientos",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 13
+    },
+    {
+      "name": "Nicolás de Zubiría",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 13
+    },
+    {
+      "name": "Esteban Cortázar",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 14
+    },
+    {
+      "name": "Álvaro Clavijo",
+      "facet": "Cocineros, diseñadores y emprendedores",
+      "known_at": 14
+    }
+  ]
+}

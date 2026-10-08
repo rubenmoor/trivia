@@ -1,0 +1,1007 @@
+{
+  "subcategory": "Reptiles",
+  "facets": [
+    "Serpientes del mundo",
+    "Lagartos e iguanas",
+    "Tortugas marinas y terrestres",
+    "Cocodrilos, caimanes y babillas",
+    "Reptiles de Colombia",
+    "Anatomía y sentidos reptiles",
+    "Reproducción, huevos y crías",
+    "Defensa, veneno y camuflaje",
+    "Récords y reptiles extremos",
+    "Reptiles en películas y cultura",
+    "Reptiles prehistóricos y evolución",
+    "Mitos, palabras y dichos reptiles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cobra de anteojos",
+      "facet": "Serpientes del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Pitón birmana",
+      "facet": "Serpientes del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Pitón real",
+      "facet": "Serpientes del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Boa constrictora",
+      "facet": "Serpientes del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Serpiente de cascabel",
+      "facet": "Serpientes del mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Víbora cornuda",
+      "facet": "Serpientes del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Serpiente marina",
+      "facet": "Serpientes del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Serpiente rey",
+      "facet": "Serpientes del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Serpiente del maíz",
+      "facet": "Serpientes del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Víbora del Gabón",
+      "facet": "Serpientes del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Pitón arborícola verde",
+      "facet": "Serpientes del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Serpiente voladora",
+      "facet": "Serpientes del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Culebra de collar",
+      "facet": "Serpientes del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Serpiente ciega",
+      "facet": "Serpientes del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Víbora áspid",
+      "facet": "Serpientes del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Mamba verde",
+      "facet": "Serpientes del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Boomslang",
+      "facet": "Serpientes del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Bungaro",
+      "facet": "Serpientes del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Iguana verde",
+      "facet": "Lagartos e iguanas",
+      "known_at": 2
+    },
+    {
+      "name": "Camaleón",
+      "facet": "Lagartos e iguanas",
+      "known_at": 1
+    },
+    {
+      "name": "Gecko",
+      "facet": "Lagartos e iguanas",
+      "known_at": 4
+    },
+    {
+      "name": "Monstruo de Gila",
+      "facet": "Lagartos e iguanas",
+      "known_at": 11
+    },
+    {
+      "name": "Basilisco",
+      "facet": "Lagartos e iguanas",
+      "known_at": 7
+    },
+    {
+      "name": "Diablo espinoso",
+      "facet": "Lagartos e iguanas",
+      "known_at": 11
+    },
+    {
+      "name": "Dragón barbudo",
+      "facet": "Lagartos e iguanas",
+      "known_at": 8
+    },
+    {
+      "name": "Lagartija",
+      "facet": "Lagartos e iguanas",
+      "known_at": 1
+    },
+    {
+      "name": "Varano del Nilo",
+      "facet": "Lagartos e iguanas",
+      "known_at": 12
+    },
+    {
+      "name": "Anolis",
+      "facet": "Lagartos e iguanas",
+      "known_at": 12
+    },
+    {
+      "name": "Lución",
+      "facet": "Lagartos e iguanas",
+      "known_at": 13
+    },
+    {
+      "name": "Eslizón",
+      "facet": "Lagartos e iguanas",
+      "known_at": 12
+    },
+    {
+      "name": "Dragón de agua chino",
+      "facet": "Lagartos e iguanas",
+      "known_at": 12
+    },
+    {
+      "name": "Lagarto de collar",
+      "facet": "Lagartos e iguanas",
+      "known_at": 9
+    },
+    {
+      "name": "Iguana rinoceronte",
+      "facet": "Lagartos e iguanas",
+      "known_at": 12
+    },
+    {
+      "name": "Lagarto cornudo",
+      "facet": "Lagartos e iguanas",
+      "known_at": 11
+    },
+    {
+      "name": "Tortuga verde",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 5
+    },
+    {
+      "name": "Tortuga carey",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 7
+    },
+    {
+      "name": "Tortuga caguama",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 9
+    },
+    {
+      "name": "Tortuga golfina",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 11
+    },
+    {
+      "name": "Tortuga de Aldabra",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga mordedora",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 10
+    },
+    {
+      "name": "Tortuga caimán",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 10
+    },
+    {
+      "name": "Tortuga de orejas rojas",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 6
+    },
+    {
+      "name": "Tortuga estrellada",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 11
+    },
+    {
+      "name": "Matamata",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 12
+    },
+    {
+      "name": "Galápago",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 9
+    },
+    {
+      "name": "Tortuga del desierto",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 11
+    },
+    {
+      "name": "Tortuga lora",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 13
+    },
+    {
+      "name": "Tortuga de caja",
+      "facet": "Tortugas marinas y terrestres",
+      "known_at": 11
+    },
+    {
+      "name": "Cocodrilo del Nilo",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 4
+    },
+    {
+      "name": "Aligátor americano",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 5
+    },
+    {
+      "name": "Aligátor chino",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 12
+    },
+    {
+      "name": "Gavial",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 10
+    },
+    {
+      "name": "Babilla",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 5
+    },
+    {
+      "name": "Caimán negro",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 10
+    },
+    {
+      "name": "Cocodrilo americano",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 9
+    },
+    {
+      "name": "Falso gavial",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 13
+    },
+    {
+      "name": "Caimán enano",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 12
+    },
+    {
+      "name": "Cocodrilo de Cuba",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 12
+    },
+    {
+      "name": "Cocodrilo de Morelet",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 14
+    },
+    {
+      "name": "Pluvial egipcio",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 12
+    },
+    {
+      "name": "Rodada de la muerte",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 9
+    },
+    {
+      "name": "Gastrolitos",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 13
+    },
+    {
+      "name": "Cocodrilo australiano de agua dulce",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 12
+    },
+    {
+      "name": "Caimán overo",
+      "facet": "Cocodrilos, caimanes y babillas",
+      "known_at": 13
+    },
+    {
+      "name": "Anaconda verde",
+      "facet": "Reptiles de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Serpiente coral",
+      "facet": "Reptiles de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Talla X",
+      "facet": "Reptiles de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Cabeza de candado",
+      "facet": "Reptiles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Caimán del Orinoco",
+      "facet": "Reptiles de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Morrocoy",
+      "facet": "Reptiles de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Tortuga charapa",
+      "facet": "Reptiles de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Tortuga hicotea",
+      "facet": "Reptiles de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Lobo pollero",
+      "facet": "Reptiles de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Lagarto azul de Gorgona",
+      "facet": "Reptiles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga de río del Magdalena",
+      "facet": "Reptiles de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Estación Roberto Franco",
+      "facet": "Reptiles de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Bejuquilla",
+      "facet": "Reptiles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga carranchina",
+      "facet": "Reptiles de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Lengua bífida",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 4
+    },
+    {
+      "name": "Órgano de Jacobson",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 13
+    },
+    {
+      "name": "Fosetas termorreceptoras",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 12
+    },
+    {
+      "name": "Muda de piel",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 3
+    },
+    {
+      "name": "Escamas",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 2
+    },
+    {
+      "name": "Sangre fría",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 6
+    },
+    {
+      "name": "Membrana nictitante",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 13
+    },
+    {
+      "name": "Colmillos",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 3
+    },
+    {
+      "name": "Ojo parietal",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 14
+    },
+    {
+      "name": "Corazón de tres cámaras",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 11
+    },
+    {
+      "name": "Caparazón",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 2
+    },
+    {
+      "name": "Plastrón",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 12
+    },
+    {
+      "name": "Lamelas adhesivas",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 12
+    },
+    {
+      "name": "Mandíbula elástica",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 7
+    },
+    {
+      "name": "Ojos independientes",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 5
+    },
+    {
+      "name": "Asolearse",
+      "facet": "Anatomía y sentidos reptiles",
+      "known_at": 5
+    },
+    {
+      "name": "Huevo de cáscara blanda",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 8
+    },
+    {
+      "name": "Huevo amniótico",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 12
+    },
+    {
+      "name": "Nido en la arena",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 4
+    },
+    {
+      "name": "Diente de huevo",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 10
+    },
+    {
+      "name": "Ovoviviparismo",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 10
+    },
+    {
+      "name": "Viviparismo",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 8
+    },
+    {
+      "name": "Partenogénesis",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 13
+    },
+    {
+      "name": "Determinación sexual por temperatura",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 9
+    },
+    {
+      "name": "Arribada",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 12
+    },
+    {
+      "name": "Incubación",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 6
+    },
+    {
+      "name": "Eclosión",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 8
+    },
+    {
+      "name": "Carrera de las tortuguitas al mar",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 3
+    },
+    {
+      "name": "Madre cocodrilo con crías en la boca",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 7
+    },
+    {
+      "name": "Regreso a la playa natal",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 9
+    },
+    {
+      "name": "Cortejo",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 9
+    },
+    {
+      "name": "Puesta de huevos",
+      "facet": "Reproducción, huevos y crías",
+      "known_at": 3
+    },
+    {
+      "name": "Veneno",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 2
+    },
+    {
+      "name": "Suero antiofídico",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 10
+    },
+    {
+      "name": "Autotomía de la cola",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 5
+    },
+    {
+      "name": "Cobra escupidora",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 8
+    },
+    {
+      "name": "Capucha de la cobra",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 5
+    },
+    {
+      "name": "Cascabel",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 4
+    },
+    {
+      "name": "Coloración de advertencia",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 10
+    },
+    {
+      "name": "Mimetismo",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 11
+    },
+    {
+      "name": "Hacerse el muerto",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 7
+    },
+    {
+      "name": "Constricción",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 7
+    },
+    {
+      "name": "Neurotoxina",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 12
+    },
+    {
+      "name": "Hemotoxina",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 13
+    },
+    {
+      "name": "Bufido",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 6
+    },
+    {
+      "name": "Cambio de color",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 2
+    },
+    {
+      "name": "Escondite en el caparazón",
+      "facet": "Defensa, veneno y camuflaje",
+      "known_at": 1
+    },
+    {
+      "name": "Pitón reticulada",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 10
+    },
+    {
+      "name": "Cocodrilo marino",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 8
+    },
+    {
+      "name": "Taipán del interior",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga laúd",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 10
+    },
+    {
+      "name": "Cobra real",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 5
+    },
+    {
+      "name": "Mamba negra",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Brookesia nana",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 13
+    },
+    {
+      "name": "Jonathan (tortuga)",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 12
+    },
+    {
+      "name": "Serpiente de hilo de Barbados",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Gecko enano de Jaragua",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Iguana de cola espinosa",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Lolong",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 15
+    },
+    {
+      "name": "Cassius (cocodrilo)",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 15
+    },
+    {
+      "name": "Adwaita",
+      "facet": "Récords y reptiles extremos",
+      "known_at": 15
+    },
+    {
+      "name": "Godzilla",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Rango",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Kaa",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Nagini",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Basilisco de la Cámara Secreta",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Tic-Tac",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Pascal",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Crush",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Tortugas Ninja",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Bowser",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 2
+    },
+    {
+      "name": "Yoshi",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 2
+    },
+    {
+      "name": "Squirtle",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Maestro Oogway",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Sir Hiss",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Louis (La princesa y el sapo)",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Morla",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Randall Boggs",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Steve Irwin",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Cocodrilo de Lacoste",
+      "facet": "Reptiles en películas y cultura",
+      "known_at": 9
+    },
+    {
+      "name": "Titanoboa",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 10
+    },
+    {
+      "name": "Sarcosuchus",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 12
+    },
+    {
+      "name": "Purussaurus",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 14
+    },
+    {
+      "name": "Mosasaurio",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 6
+    },
+    {
+      "name": "Plesiosaurio",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 7
+    },
+    {
+      "name": "Ictiosaurio",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 10
+    },
+    {
+      "name": "Pterodáctilo",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 3
+    },
+    {
+      "name": "Archelon",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 13
+    },
+    {
+      "name": "Tuátara",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 13
+    },
+    {
+      "name": "Dimetrodon",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 11
+    },
+    {
+      "name": "Deinosuchus",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 13
+    },
+    {
+      "name": "Stupendemys",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 14
+    },
+    {
+      "name": "Kronosaurio de Villa de Leyva",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 11
+    },
+    {
+      "name": "Fósil",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 4
+    },
+    {
+      "name": "Mesozoico",
+      "facet": "Reptiles prehistóricos y evolución",
+      "known_at": 11
+    },
+    {
+      "name": "Lágrimas de cocodrilo",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 9
+    },
+    {
+      "name": "Serpiente del Edén",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 6
+    },
+    {
+      "name": "Quetzalcóatl",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 11
+    },
+    {
+      "name": "Uróboros",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 13
+    },
+    {
+      "name": "Vara de Asclepio",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 13
+    },
+    {
+      "name": "Encantador de serpientes",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 6
+    },
+    {
+      "name": "Hidra de Lerna",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 10
+    },
+    {
+      "name": "La liebre y la tortuga",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 2
+    },
+    {
+      "name": "Herpetología",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 13
+    },
+    {
+      "name": "Palabra reptil",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 10
+    },
+    {
+      "name": "Dragón chino",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 5
+    },
+    {
+      "name": "Año de la Serpiente",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 9
+    },
+    {
+      "name": "Caimanes en las alcantarillas",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 12
+    },
+    {
+      "name": "Lengua de víbora",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 8
+    },
+    {
+      "name": "San Patricio y las serpientes",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 13
+    },
+    {
+      "name": "Jörmungandr",
+      "facet": "Mitos, palabras y dichos reptiles",
+      "known_at": 12
+    }
+  ]
+}

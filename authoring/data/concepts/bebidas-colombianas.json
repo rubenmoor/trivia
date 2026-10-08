@@ -1,0 +1,1087 @@
+{
+  "subcategory": "Bebidas colombianas",
+  "facets": [
+    "Café y tinto",
+    "Chocolate y aguapanela",
+    "Jugos y frutas para beber",
+    "Bebidas de maíz y fermentadas",
+    "Gaseosas y marcas colombianas",
+    "Bebidas típicas por región",
+    "Aguardiente, ron y licores tradicionales",
+    "Bebidas calientes de tienda y abuela",
+    "Preparación y utensilios",
+    "Bebidas en fiestas y costumbres",
+    "Historia de las bebidas colombianas",
+    "Palabras y dichos de bebidas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Café",
+      "facet": "Café y tinto",
+      "known_at": 1
+    },
+    {
+      "name": "Mula Conchita",
+      "facet": "Café y tinto",
+      "known_at": 12
+    },
+    {
+      "name": "Eje Cafetero",
+      "facet": "Café y tinto",
+      "known_at": 6
+    },
+    {
+      "name": "Grano de café",
+      "facet": "Café y tinto",
+      "known_at": 2
+    },
+    {
+      "name": "Cafeto",
+      "facet": "Café y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Café arábica",
+      "facet": "Café y tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Café robusta",
+      "facet": "Café y tinto",
+      "known_at": 12
+    },
+    {
+      "name": "Café pergamino",
+      "facet": "Café y tinto",
+      "known_at": 13
+    },
+    {
+      "name": "Café descafeinado",
+      "facet": "Café y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Perico",
+      "facet": "Café y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Pintado",
+      "facet": "Café y tinto",
+      "known_at": 12
+    },
+    {
+      "name": "Cereza de café",
+      "facet": "Café y tinto",
+      "known_at": 11
+    },
+    {
+      "name": "Cafeína",
+      "facet": "Café y tinto",
+      "known_at": 6
+    },
+    {
+      "name": "Federación Nacional de Cafeteros",
+      "facet": "Café y tinto",
+      "known_at": 11
+    },
+    {
+      "name": "Recolector de café",
+      "facet": "Café y tinto",
+      "known_at": 7
+    },
+    {
+      "name": "Tostión",
+      "facet": "Café y tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Parque del Café",
+      "facet": "Café y tinto",
+      "known_at": 6
+    },
+    {
+      "name": "Broca del café",
+      "facet": "Café y tinto",
+      "known_at": 13
+    },
+    {
+      "name": "Roya del café",
+      "facet": "Café y tinto",
+      "known_at": 13
+    },
+    {
+      "name": "Café excelso",
+      "facet": "Café y tinto",
+      "known_at": 14
+    },
+    {
+      "name": "Chocolate caliente",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 1
+    },
+    {
+      "name": "Panela",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 3
+    },
+    {
+      "name": "Cacao",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 4
+    },
+    {
+      "name": "Chocolate santafereño",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 9
+    },
+    {
+      "name": "Queso en el chocolate",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 6
+    },
+    {
+      "name": "Aguapanela con limón",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate de mesa",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 8
+    },
+    {
+      "name": "Pastilla de chocolate",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 5
+    },
+    {
+      "name": "Almojábana",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 7
+    },
+    {
+      "name": "Trapiche",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 8
+    },
+    {
+      "name": "Caña de azúcar",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 3
+    },
+    {
+      "name": "Mazorca de cacao",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 7
+    },
+    {
+      "name": "Espuma del chocolate",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate con canela",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate amargo",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 7
+    },
+    {
+      "name": "Melao de panela",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 11
+    },
+    {
+      "name": "Chocolate con pan",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 5
+    },
+    {
+      "name": "Bizcocho de achira",
+      "facet": "Chocolate y aguapanela",
+      "known_at": 11
+    },
+    {
+      "name": "Jugo de lulo",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Maracuyá",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Guanábana",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Mora de Castilla",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 9
+    },
+    {
+      "name": "Tomate de árbol",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Curuba",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Guayaba",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 4
+    },
+    {
+      "name": "Mango",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 2
+    },
+    {
+      "name": "Zapote",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Borojó",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Corozo",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 12
+    },
+    {
+      "name": "Feijoa",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Níspero",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 13
+    },
+    {
+      "name": "Jugo de naranja",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Limonada de coco",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Limonada",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Sorbete",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Jugo en leche",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Granadilla",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Badea",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 12
+    },
+    {
+      "name": "Uchuva",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Salpicón",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Guarapo",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 8
+    },
+    {
+      "name": "Kumis",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 6
+    },
+    {
+      "name": "Fermentación",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 8
+    },
+    {
+      "name": "Levadura",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 7
+    },
+    {
+      "name": "Maíz",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 1
+    },
+    {
+      "name": "Chucula",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 13
+    },
+    {
+      "name": "Forcha",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 14
+    },
+    {
+      "name": "Yogur",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 2
+    },
+    {
+      "name": "Lactobacilos",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 12
+    },
+    {
+      "name": "Aloja",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 14
+    },
+    {
+      "name": "Kombucha",
+      "facet": "Bebidas de maíz y fermentadas",
+      "known_at": 10
+    },
+    {
+      "name": "Colombiana (gaseosa)",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Postobón",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Manzana Postobón",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Pony Malta",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 3
+    },
+    {
+      "name": "Kola Román",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Bretaña",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Uva Postobón",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Quatro",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Coca-Cola",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 1
+    },
+    {
+      "name": "Pepsi",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 2
+    },
+    {
+      "name": "Hit",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Bavaria",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Chocolate Corona",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Café Sello Rojo",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Colcafé",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Freskola",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Cola y Pola",
+      "facet": "Gaseosas y marcas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Lulada",
+      "facet": "Bebidas típicas por región",
+      "known_at": 8
+    },
+    {
+      "name": "Cholado",
+      "facet": "Bebidas típicas por región",
+      "known_at": 7
+    },
+    {
+      "name": "Viche",
+      "facet": "Bebidas típicas por región",
+      "known_at": 12
+    },
+    {
+      "name": "Tomaseca",
+      "facet": "Bebidas típicas por región",
+      "known_at": 14
+    },
+    {
+      "name": "Canelazo",
+      "facet": "Bebidas típicas por región",
+      "known_at": 9
+    },
+    {
+      "name": "Chirrinchi",
+      "facet": "Bebidas típicas por región",
+      "known_at": 13
+    },
+    {
+      "name": "Jugo de caña",
+      "facet": "Bebidas típicas por región",
+      "known_at": 6
+    },
+    {
+      "name": "Cali",
+      "facet": "Bebidas típicas por región",
+      "known_at": 3
+    },
+    {
+      "name": "Boyacá",
+      "facet": "Bebidas típicas por región",
+      "known_at": 6
+    },
+    {
+      "name": "Valle del Cauca",
+      "facet": "Bebidas típicas por región",
+      "known_at": 6
+    },
+    {
+      "name": "Costa Caribe",
+      "facet": "Bebidas típicas por región",
+      "known_at": 5
+    },
+    {
+      "name": "Pacífico colombiano",
+      "facet": "Bebidas típicas por región",
+      "known_at": 8
+    },
+    {
+      "name": "Llanos Orientales",
+      "facet": "Bebidas típicas por región",
+      "known_at": 8
+    },
+    {
+      "name": "Santander",
+      "facet": "Bebidas típicas por región",
+      "known_at": 7
+    },
+    {
+      "name": "Bogotá",
+      "facet": "Bebidas típicas por región",
+      "known_at": 1
+    },
+    {
+      "name": "Aguardiente",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Anís",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Ron",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Ron Medellín",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Ron Viejo de Caldas",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Aguardiente Antioqueño",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Aguardiente Néctar",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Sabajón",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Fábrica de Licores de Antioquia",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Destilación",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Alambique",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Tapetusa",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Ley seca",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Grados de alcohol",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Tres Esquinas",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Mistela",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Cerveza",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Vino",
+      "facet": "Aguardiente, ron y licores tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Avena",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Aromática",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Manzanilla",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 5
+    },
+    {
+      "name": "Yerbabuena",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Limoncillo",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 9
+    },
+    {
+      "name": "Toronjil",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 11
+    },
+    {
+      "name": "Cidrón",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 12
+    },
+    {
+      "name": "Café con leche",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 2
+    },
+    {
+      "name": "Milo",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 3
+    },
+    {
+      "name": "Chocolisto",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Leche caliente",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 1
+    },
+    {
+      "name": "Colada",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Jengibre",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Canela",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 4
+    },
+    {
+      "name": "Té",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 2
+    },
+    {
+      "name": "Tetero",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Miel con limón",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 6
+    },
+    {
+      "name": "Eucalipto",
+      "facet": "Bebidas calientes de tienda y abuela",
+      "known_at": 8
+    },
+    {
+      "name": "Molinillo",
+      "facet": "Preparación y utensilios",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolatera",
+      "facet": "Preparación y utensilios",
+      "known_at": 6
+    },
+    {
+      "name": "Colador de tela",
+      "facet": "Preparación y utensilios",
+      "known_at": 7
+    },
+    {
+      "name": "Greca",
+      "facet": "Preparación y utensilios",
+      "known_at": 11
+    },
+    {
+      "name": "Cafetera",
+      "facet": "Preparación y utensilios",
+      "known_at": 2
+    },
+    {
+      "name": "Prensa francesa",
+      "facet": "Preparación y utensilios",
+      "known_at": 11
+    },
+    {
+      "name": "Licuadora",
+      "facet": "Preparación y utensilios",
+      "known_at": 2
+    },
+    {
+      "name": "Termo",
+      "facet": "Preparación y utensilios",
+      "known_at": 3
+    },
+    {
+      "name": "Pocillo",
+      "facet": "Preparación y utensilios",
+      "known_at": 6
+    },
+    {
+      "name": "Totuma",
+      "facet": "Preparación y utensilios",
+      "known_at": 9
+    },
+    {
+      "name": "Exprimidor",
+      "facet": "Preparación y utensilios",
+      "known_at": 5
+    },
+    {
+      "name": "Olla",
+      "facet": "Preparación y utensilios",
+      "known_at": 1
+    },
+    {
+      "name": "Filtro de papel",
+      "facet": "Preparación y utensilios",
+      "known_at": 7
+    },
+    {
+      "name": "Despulpadora",
+      "facet": "Preparación y utensilios",
+      "known_at": 12
+    },
+    {
+      "name": "Tostadora de café",
+      "facet": "Preparación y utensilios",
+      "known_at": 11
+    },
+    {
+      "name": "Molino de café",
+      "facet": "Preparación y utensilios",
+      "known_at": 6
+    },
+    {
+      "name": "Hielo",
+      "facet": "Preparación y utensilios",
+      "known_at": 1
+    },
+    {
+      "name": "Jarra",
+      "facet": "Preparación y utensilios",
+      "known_at": 2
+    },
+    {
+      "name": "Tetera",
+      "facet": "Preparación y utensilios",
+      "known_at": 4
+    },
+    {
+      "name": "Fogón de leña",
+      "facet": "Preparación y utensilios",
+      "known_at": 8
+    },
+    {
+      "name": "Pitillo",
+      "facet": "Preparación y utensilios",
+      "known_at": 4
+    },
+    {
+      "name": "Navidad",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 1
+    },
+    {
+      "name": "Brindis",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 5
+    },
+    {
+      "name": "Onces",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Media nueve",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 13
+    },
+    {
+      "name": "Piquete",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 9
+    },
+    {
+      "name": "Paseo de olla",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Año Nuevo",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 1
+    },
+    {
+      "name": "Champaña",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 6
+    },
+    {
+      "name": "Tienda de barrio",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 4
+    },
+    {
+      "name": "Bazar",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 7
+    },
+    {
+      "name": "Desayuno",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 1
+    },
+    {
+      "name": "Refajo",
+      "facet": "Bebidas en fiestas y costumbres",
+      "known_at": 10
+    },
+    {
+      "name": "Muiscas",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Chicherías",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Prohibición de la chicha",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Leo Kopp",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Bonanza cafetera",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Paisaje Cultural Cafetero",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Jesuitas",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco Romero",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 15
+    },
+    {
+      "name": "Estanco de aguardiente",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Rebelión de los Comuneros",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Época colonial",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Etiopía",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Kaldi",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Aztecas",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Ingenio Manuelita",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Denominación de origen",
+      "facet": "Historia de las bebidas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Guayabo",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 10
+    },
+    {
+      "name": "Al que no quiere caldo, se le dan dos tazas",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 9
+    },
+    {
+      "name": "Agua pasada no mueve molino",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 10
+    },
+    {
+      "name": "Ni chicha ni limonada",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 10
+    },
+    {
+      "name": "Las cosas claras y el chocolate espeso",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 11
+    },
+    {
+      "name": "Como agua para chocolate",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 12
+    },
+    {
+      "name": "Ahogarse en un vaso de agua",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Se me hace agua la boca",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "La última Coca-Cola del desierto",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 10
+    },
+    {
+      "name": "Sed",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 1
+    },
+    {
+      "name": "Sorbo",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 5
+    },
+    {
+      "name": "Trago",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Chorro",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 4
+    },
+    {
+      "name": "Cafetal",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Clarito",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Agüita",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Gaseosa",
+      "facet": "Palabras y dichos de bebidas",
+      "known_at": 2
+    }
+  ]
+}

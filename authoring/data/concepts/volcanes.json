@@ -1,0 +1,952 @@
+{
+  "subcategory": "Volcanes",
+  "facets": [
+    "Partes de un volcán",
+    "Tipos de volcanes y erupciones",
+    "Lava, ceniza y materiales volcánicos",
+    "Volcanes famosos del mundo",
+    "Volcanes de Colombia",
+    "Erupciones históricas",
+    "Placas tectónicas y Cinturón de Fuego",
+    "Paisajes y fenómenos volcánicos",
+    "Vulcanología y monitoreo",
+    "Volcanes en mitos y cultura",
+    "Vida y suelos volcánicos",
+    "Volcanes en otros planetas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cráter",
+      "facet": "Partes de un volcán",
+      "known_at": 2
+    },
+    {
+      "name": "Chimenea volcánica",
+      "facet": "Partes de un volcán",
+      "known_at": 5
+    },
+    {
+      "name": "Cámara magmática",
+      "facet": "Partes de un volcán",
+      "known_at": 7
+    },
+    {
+      "name": "Cono volcánico",
+      "facet": "Partes de un volcán",
+      "known_at": 5
+    },
+    {
+      "name": "Caldera",
+      "facet": "Partes de un volcán",
+      "known_at": 9
+    },
+    {
+      "name": "Dique volcánico",
+      "facet": "Partes de un volcán",
+      "known_at": 12
+    },
+    {
+      "name": "Cono secundario",
+      "facet": "Partes de un volcán",
+      "known_at": 10
+    },
+    {
+      "name": "Fisura eruptiva",
+      "facet": "Partes de un volcán",
+      "known_at": 10
+    },
+    {
+      "name": "Laderas del volcán",
+      "facet": "Partes de un volcán",
+      "known_at": 4
+    },
+    {
+      "name": "Cumbre",
+      "facet": "Partes de un volcán",
+      "known_at": 3
+    },
+    {
+      "name": "Respiradero",
+      "facet": "Partes de un volcán",
+      "known_at": 9
+    },
+    {
+      "name": "Lacolito",
+      "facet": "Partes de un volcán",
+      "known_at": 14
+    },
+    {
+      "name": "Sill",
+      "facet": "Partes de un volcán",
+      "known_at": 14
+    },
+    {
+      "name": "Boca eruptiva",
+      "facet": "Partes de un volcán",
+      "known_at": 6
+    },
+    {
+      "name": "Conducto volcánico",
+      "facet": "Partes de un volcán",
+      "known_at": 8
+    },
+    {
+      "name": "Estratovolcán",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 9
+    },
+    {
+      "name": "Volcán en escudo",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 9
+    },
+    {
+      "name": "Cono de escoria",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 11
+    },
+    {
+      "name": "Supervolcán",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 7
+    },
+    {
+      "name": "Volcán activo",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 3
+    },
+    {
+      "name": "Volcán dormido",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 4
+    },
+    {
+      "name": "Volcán extinto",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 5
+    },
+    {
+      "name": "Erupción hawaiana",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 10
+    },
+    {
+      "name": "Erupción estromboliana",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 12
+    },
+    {
+      "name": "Erupción pliniana",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 12
+    },
+    {
+      "name": "Erupción vulcaniana",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 12
+    },
+    {
+      "name": "Erupción freática",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 13
+    },
+    {
+      "name": "Erupción efusiva",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 10
+    },
+    {
+      "name": "Erupción explosiva",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 5
+    },
+    {
+      "name": "Volcán de lodo",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 6
+    },
+    {
+      "name": "Domo de lava",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 11
+    },
+    {
+      "name": "Maar",
+      "facet": "Tipos de volcanes y erupciones",
+      "known_at": 14
+    },
+    {
+      "name": "Lava",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 1
+    },
+    {
+      "name": "Magma",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Ceniza volcánica",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 3
+    },
+    {
+      "name": "Piedra pómez",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Obsidiana",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Basalto",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Azufre",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Lapilli",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Bomba volcánica",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Flujo piroclástico",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Lava pahoehoe",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Lava aa",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Lava almohadillada",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Toba volcánica",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Tefra",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Dióxido de azufre",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Cabello de Pele",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 15
+    },
+    {
+      "name": "Andesita",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Roca ígnea",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 8
+    },
+    {
+      "name": "Escoria volcánica",
+      "facet": "Lava, ceniza y materiales volcánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Fuji",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Vesubio",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Etna",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Mauna Loa",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Kilauea",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Stromboli",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Popocatépetl",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Cotopaxi",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Chimborazo",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Teide",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Ojos del Salado",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Villarrica",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Tungurahua",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Monte Rainier",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Santorini",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Yellowstone",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Hekla",
+      "facet": "Volcanes famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Volcán Galeras",
+      "facet": "Volcanes de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Nevado del Huila",
+      "facet": "Volcanes de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Volcán Puracé",
+      "facet": "Volcanes de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Nevado del Tolima",
+      "facet": "Volcanes de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán Cerro Machín",
+      "facet": "Volcanes de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán Doña Juana",
+      "facet": "Volcanes de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Volcán Azufral",
+      "facet": "Volcanes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Volcán Cumbal",
+      "facet": "Volcanes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Nevado de Santa Isabel",
+      "facet": "Volcanes de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán de lodo El Totumo",
+      "facet": "Volcanes de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Paramillo del Quindío",
+      "facet": "Volcanes de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Volcán Sotará",
+      "facet": "Volcanes de Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Volcán Chiles",
+      "facet": "Volcanes de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Natural Los Nevados",
+      "facet": "Volcanes de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Volcanes de lodo de Arboletes",
+      "facet": "Volcanes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Pompeya",
+      "facet": "Erupciones históricas",
+      "known_at": 6
+    },
+    {
+      "name": "Herculano",
+      "facet": "Erupciones históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Erupción del Krakatoa de 1883",
+      "facet": "Erupciones históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Erupción del Tambora de 1815",
+      "facet": "Erupciones históricas",
+      "known_at": 14
+    },
+    {
+      "name": "Erupción del Monte Santa Helena de 1980",
+      "facet": "Erupciones históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Erupción del Pinatubo de 1991",
+      "facet": "Erupciones históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Erupción del Eyjafjallajökull de 2010",
+      "facet": "Erupciones históricas",
+      "known_at": 11
+    },
+    {
+      "name": "Tragedia de Armero",
+      "facet": "Erupciones históricas",
+      "known_at": 8
+    },
+    {
+      "name": "Plinio el Joven",
+      "facet": "Erupciones históricas",
+      "known_at": 13
+    },
+    {
+      "name": "Erupción del Laki",
+      "facet": "Erupciones históricas",
+      "known_at": 15
+    },
+    {
+      "name": "Nacimiento del Paricutín",
+      "facet": "Erupciones históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Erupción de Hunga Tonga de 2022",
+      "facet": "Erupciones históricas",
+      "known_at": 12
+    },
+    {
+      "name": "Erupción de La Palma de 2021",
+      "facet": "Erupciones históricas",
+      "known_at": 10
+    },
+    {
+      "name": "Erupción del Monte Pelée de 1902",
+      "facet": "Erupciones históricas",
+      "known_at": 14
+    },
+    {
+      "name": "Zona de subducción",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Punto caliente",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Placa de Nazca",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Placa del Pacífico",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 10
+    },
+    {
+      "name": "Placa Sudamericana",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Valle del Rift",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 13
+    },
+    {
+      "name": "Manto terrestre",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 7
+    },
+    {
+      "name": "Núcleo de la Tierra",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 4
+    },
+    {
+      "name": "Corteza terrestre",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 6
+    },
+    {
+      "name": "Falla de San Andrés",
+      "facet": "Placas tectónicas y Cinturón de Fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Géiser",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Old Faithful",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Aguas termales",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 4
+    },
+    {
+      "name": "Fumarola",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Solfatara",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Lago de cráter",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Isla volcánica",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Calzada del Gigante",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Tubo de lava",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Rayo volcánico",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Columna eruptiva",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 8
+    },
+    {
+      "name": "Lahar",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Playa de arena negra",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 6
+    },
+    {
+      "name": "Campo de lava",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Nacional de Timanfaya",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Fuente de lava",
+      "facet": "Paisajes y fenómenos volcánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Vulcanología",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 7
+    },
+    {
+      "name": "Vulcanólogo",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 6
+    },
+    {
+      "name": "Sismógrafo",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 8
+    },
+    {
+      "name": "Sismo volcánico",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 10
+    },
+    {
+      "name": "Semáforo de alerta volcánica",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 6
+    },
+    {
+      "name": "Servicio Geológico Colombiano",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 11
+    },
+    {
+      "name": "Observatorio vulcanológico",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 9
+    },
+    {
+      "name": "Índice de explosividad volcánica",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 13
+    },
+    {
+      "name": "Mapa de amenaza volcánica",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 11
+    },
+    {
+      "name": "Inclinómetro",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 14
+    },
+    {
+      "name": "Traje aluminizado",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 9
+    },
+    {
+      "name": "Katia y Maurice Krafft",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 14
+    },
+    {
+      "name": "Haroun Tazieff",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 15
+    },
+    {
+      "name": "Simulacro de evacuación",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 4
+    },
+    {
+      "name": "Cámara térmica",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 8
+    },
+    {
+      "name": "Satélite de observación",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 9
+    },
+    {
+      "name": "Escala de Richter",
+      "facet": "Vulcanología y monitoreo",
+      "known_at": 9
+    },
+    {
+      "name": "Vulcano",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Hefesto",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Pele",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Monte del Destino",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Volcán de bicarbonato y vinagre",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Volcán de chocolate",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 5
+    },
+    {
+      "name": "El suelo es lava",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 2
+    },
+    {
+      "name": "Lava (cortometraje de Pixar)",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Te Kā",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Mustafar",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Leyenda de Popocatépetl e Iztaccíhuatl",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "La gran ola de Kanagawa",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Jurassic World: El reino caído",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Viaje al centro de la Tierra",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Cíclopes",
+      "facet": "Volcanes en mitos y cultura",
+      "known_at": 9
+    },
+    {
+      "name": "Suelo volcánico",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Iguana marina",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Tortuga gigante de Galápagos",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Surtsey",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Líquenes",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Sucesión ecológica",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Fuentes hidrotermales",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Megápodo",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 15
+    },
+    {
+      "name": "Macaco japonés",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 8
+    },
+    {
+      "name": "Andosol",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 15
+    },
+    {
+      "name": "Energía geotérmica",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Arrozales de Bali",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Extremófilos",
+      "facet": "Vida y suelos volcánicos",
+      "known_at": 12
+    },
+    {
+      "name": "Monte Olimpo de Marte",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 8
+    },
+    {
+      "name": "Criovolcán",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 12
+    },
+    {
+      "name": "Meseta de Tharsis",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 14
+    },
+    {
+      "name": "Maat Mons",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 15
+    },
+    {
+      "name": "Wright Mons",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 15
+    },
+    {
+      "name": "Mares lunares",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 10
+    },
+    {
+      "name": "Sonda Galileo",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 12
+    },
+    {
+      "name": "Loki Patera",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 15
+    },
+    {
+      "name": "Ahuna Mons",
+      "facet": "Volcanes en otros planetas",
+      "known_at": 15
+    }
+  ]
+}

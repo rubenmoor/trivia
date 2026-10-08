@@ -1,0 +1,1022 @@
+{
+  "subcategory": "Clubes de fútbol colombianos",
+  "facets": [
+    "Clubes grandes y sus títulos",
+    "Apodos y mascotas de clubes",
+    "Escudos, colores y camisetas",
+    "Estadios y sus ciudades",
+    "Clásicos y rivalidades",
+    "Ídolos y jugadores históricos",
+    "Técnicos y figuras del banquillo",
+    "Copa Libertadores y torneos internacionales",
+    "Liga colombiana: formato y reglas",
+    "Hinchadas, barras y cantos",
+    "Historia y fundación de clubes",
+    "Récords y momentos memorables"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Atlético Nacional",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 4
+    },
+    {
+      "name": "Millonarios",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 4
+    },
+    {
+      "name": "América de Cali",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 5
+    },
+    {
+      "name": "Deportivo Cali",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 6
+    },
+    {
+      "name": "Independiente Santa Fe",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 6
+    },
+    {
+      "name": "Independiente Medellín",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 6
+    },
+    {
+      "name": "Once Caldas",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 8
+    },
+    {
+      "name": "Deportes Tolima",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 8
+    },
+    {
+      "name": "Atlético Bucaramanga",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 8
+    },
+    {
+      "name": "Deportivo Pasto",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 9
+    },
+    {
+      "name": "Deportivo Pereira",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 9
+    },
+    {
+      "name": "Cúcuta Deportivo",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 10
+    },
+    {
+      "name": "Envigado FC",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 11
+    },
+    {
+      "name": "Boyacá Chicó",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 11
+    },
+    {
+      "name": "Atlético Huila",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 11
+    },
+    {
+      "name": "Real Cartagena",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 11
+    },
+    {
+      "name": "Unión Magdalena",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 11
+    },
+    {
+      "name": "Águilas Doradas",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 12
+    },
+    {
+      "name": "La Equidad",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 12
+    },
+    {
+      "name": "Patriotas Boyacá",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 12
+    },
+    {
+      "name": "Jaguares de Córdoba",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 12
+    },
+    {
+      "name": "Alianza Petrolera",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 12
+    },
+    {
+      "name": "Fortaleza CEIF",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 13
+    },
+    {
+      "name": "Llaneros",
+      "facet": "Clubes grandes y sus títulos",
+      "known_at": 13
+    },
+    {
+      "name": "Verdolaga",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Diablos Rojos",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 7
+    },
+    {
+      "name": "Embajador",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Cardenal",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Azucarero",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Poderoso de la Montaña",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Blanco Blanco",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Pijao",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Volcánico",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Matecaña",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Motilón",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Opita",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Bananero",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Naranja Mecánica",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Heroico",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Ajedrezado",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Rey de Copas",
+      "facet": "Apodos y mascotas de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Verde y blanco",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 5
+    },
+    {
+      "name": "Azul y blanco",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 6
+    },
+    {
+      "name": "Rayas rojas y blancas",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Rojo y azul",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 8
+    },
+    {
+      "name": "Vinotinto y oro",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 10
+    },
+    {
+      "name": "Amarillo y rojo",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 10
+    },
+    {
+      "name": "Escudo de Atlético Nacional",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 6
+    },
+    {
+      "name": "Escudo de Millonarios",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Diablito del América",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Escudo del Junior",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 9
+    },
+    {
+      "name": "Estrellas en el escudo",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 8
+    },
+    {
+      "name": "Patrocinador en la camiseta",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 8
+    },
+    {
+      "name": "Camiseta alterna",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 8
+    },
+    {
+      "name": "Brazalete de capitán",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 6
+    },
+    {
+      "name": "Número 10",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 5
+    },
+    {
+      "name": "Dorsal",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 7
+    },
+    {
+      "name": "Uniforme de arquero",
+      "facet": "Escudos, colores y camisetas",
+      "known_at": 5
+    },
+    {
+      "name": "Estadio Pascual Guerrero",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Deportivo Cali",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Palogrande",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Manuel Murillo Toro",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Hernán Ramírez Villegas",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Alfonso López",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Jaime Morón",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Departamental Libertad",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio General Santander",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Sierra Nevada",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Guillermo Plazas Alcid",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Polideportivo Sur",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Estadio La Independencia",
+      "facet": "Estadios y sus ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Clásico capitalino",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 7
+    },
+    {
+      "name": "Clásico paisa",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 7
+    },
+    {
+      "name": "Clásico vallecaucano",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 8
+    },
+    {
+      "name": "Clásico de las estrellas",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 10
+    },
+    {
+      "name": "Clásico costeño",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 11
+    },
+    {
+      "name": "Clásico del Eje Cafetero",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 11
+    },
+    {
+      "name": "Clásico de los Santanderes",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 12
+    },
+    {
+      "name": "Clásico del Tolima Grande",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 12
+    },
+    {
+      "name": "Derbi",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 9
+    },
+    {
+      "name": "Rivalidad Nacional–América",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 10
+    },
+    {
+      "name": "Rivalidad Millonarios–América",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 11
+    },
+    {
+      "name": "Rivalidad Junior–Nacional",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 11
+    },
+    {
+      "name": "Equipo local",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 4
+    },
+    {
+      "name": "Equipo visitante",
+      "facet": "Clásicos y rivalidades",
+      "known_at": 5
+    },
+    {
+      "name": "Carlos Valderrama",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 4
+    },
+    {
+      "name": "Radamel Falcao García",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 5
+    },
+    {
+      "name": "Juan Fernando Quintero",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Alfredo Di Stéfano",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Dayro Moreno",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Arnoldo Iguarán",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Antony de Ávila",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Iván René Valenciano",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Víctor Hugo Aristizábal",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Sergio Galván Rey",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Jhon Jairo Tréllez",
+      "facet": "Ídolos y jugadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Director técnico",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 5
+    },
+    {
+      "name": "Banco de suplentes",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 5
+    },
+    {
+      "name": "Asistente técnico",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 7
+    },
+    {
+      "name": "Preparador físico",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 8
+    },
+    {
+      "name": "Zona técnica",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 9
+    },
+    {
+      "name": "Cambio de jugador",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 4
+    },
+    {
+      "name": "Hernán Darío Gómez",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 7
+    },
+    {
+      "name": "Reinaldo Rueda",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Carlos Osorio",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Luis Pinto",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 9
+    },
+    {
+      "name": "Gabriel Ochoa Uribe",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 11
+    },
+    {
+      "name": "Luis Fernando Montoya",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 11
+    },
+    {
+      "name": "Alberto Gamero",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 11
+    },
+    {
+      "name": "Julio Comesaña",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 12
+    },
+    {
+      "name": "Hernán Torres",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Escobar",
+      "facet": "Técnicos y figuras del banquillo",
+      "known_at": 12
+    },
+    {
+      "name": "Copa Libertadores",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Copa Sudamericana",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Clubes",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Conmebol",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Recopa Sudamericana",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Copa Intercontinental",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Copa Merconorte",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Copa Interamericana",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Libertadores de 1989",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Libertadores de 2004",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Libertadores de 2016",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Sudamericana de 2015",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Finales perdidas del América",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Olimpia",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Boca Juniors",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Independiente del Valle",
+      "facet": "Copa Libertadores y torneos internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Liga BetPlay",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 6
+    },
+    {
+      "name": "Torneo Apertura",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Torneo Finalización",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 9
+    },
+    {
+      "name": "Todos contra todos",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Cuadrangulares",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Descenso",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 7
+    },
+    {
+      "name": "Tabla del promedio",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Reclasificación",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 12
+    },
+    {
+      "name": "Primera B",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Copa Colombia",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 8
+    },
+    {
+      "name": "Superliga de Colombia",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 10
+    },
+    {
+      "name": "Dimayor",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 9
+    },
+    {
+      "name": "Federación Colombiana de Fútbol",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 9
+    },
+    {
+      "name": "Liga Femenina",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 9
+    },
+    {
+      "name": "Tanda de penales",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 4
+    },
+    {
+      "name": "Tarjeta amarilla",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 2
+    },
+    {
+      "name": "Tarjeta roja",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 2
+    },
+    {
+      "name": "VAR",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 6
+    },
+    {
+      "name": "Fuera de lugar",
+      "facet": "Liga colombiana: formato y reglas",
+      "known_at": 5
+    },
+    {
+      "name": "Hinchada",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 5
+    },
+    {
+      "name": "Barra brava",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 6
+    },
+    {
+      "name": "Cantos de tribuna",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 5
+    },
+    {
+      "name": "Bengalas",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 6
+    },
+    {
+      "name": "Trapos",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 9
+    },
+    {
+      "name": "Tifo",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 9
+    },
+    {
+      "name": "Tribuna popular",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 8
+    },
+    {
+      "name": "Barrismo social",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 12
+    },
+    {
+      "name": "Los del Sur",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 9
+    },
+    {
+      "name": "Comandos Azules",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 10
+    },
+    {
+      "name": "Barón Rojo Sur",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 10
+    },
+    {
+      "name": "La Guardia Albi-Roja Sur",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 11
+    },
+    {
+      "name": "Frente Rojiblanco Sur",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 11
+    },
+    {
+      "name": "Rexixtenxia Norte",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 12
+    },
+    {
+      "name": "Frente Radical Verdiblanco",
+      "facet": "Hinchadas, barras y cantos",
+      "known_at": 12
+    },
+    {
+      "name": "Ballet Azul",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Liga profesional de 1948",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Adolfo Pedernera",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Néstor Raúl Rossi",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Heleno de Freitas",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Pacto de Lima",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Atlético Municipal",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Club Deportivo Municipal",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Juventud Junior",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Once Deportivo",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Deportes Caldas",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 14
+    },
+    {
+      "name": "Deportes Quindío",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Cortuluá",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Lanceros Boyacá",
+      "facet": "Historia y fundación de clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Autogol",
+      "facet": "Récords y momentos memorables",
+      "known_at": 4
+    },
+    {
+      "name": "Atajada",
+      "facet": "Récords y momentos memorables",
+      "known_at": 4
+    },
+    {
+      "name": "Gol de chilena",
+      "facet": "Récords y momentos memorables",
+      "known_at": 5
+    },
+    {
+      "name": "Gol de tiro libre",
+      "facet": "Récords y momentos memorables",
+      "known_at": 5
+    },
+    {
+      "name": "Gol de último minuto",
+      "facet": "Récords y momentos memorables",
+      "known_at": 5
+    },
+    {
+      "name": "Hat-trick",
+      "facet": "Récords y momentos memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Goleador del torneo",
+      "facet": "Récords y momentos memorables",
+      "known_at": 6
+    },
+    {
+      "name": "Remontada",
+      "facet": "Récords y momentos memorables",
+      "known_at": 7
+    },
+    {
+      "name": "Gol olímpico",
+      "facet": "Récords y momentos memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Gol de arquero",
+      "facet": "Récords y momentos memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Invicto",
+      "facet": "Récords y momentos memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Doblete",
+      "facet": "Récords y momentos memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Récord de asistencia",
+      "facet": "Récords y momentos memorables",
+      "known_at": 8
+    },
+    {
+      "name": "Tricampeonato",
+      "facet": "Récords y momentos memorables",
+      "known_at": 9
+    },
+    {
+      "name": "Valla menos vencida",
+      "facet": "Récords y momentos memorables",
+      "known_at": 10
+    },
+    {
+      "name": "Penal a lo Panenka",
+      "facet": "Récords y momentos memorables",
+      "known_at": 11
+    }
+  ]
+}

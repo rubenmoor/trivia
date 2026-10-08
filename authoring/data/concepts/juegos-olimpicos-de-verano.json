@@ -1,0 +1,982 @@
+{
+  "subcategory": "Juegos Olímpicos de verano",
+  "facets": [
+    "Historia y Grecia antigua",
+    "Símbolos y ceremonias",
+    "Sedes y ciudades olímpicas",
+    "Atletismo y maratón",
+    "Natación y deportes acuáticos",
+    "Gimnasia y deportes artísticos",
+    "Deportes de combate y pesas",
+    "Deportes de equipo y pelota",
+    "Ciclismo, remo y aventura",
+    "Leyendas y récords olímpicos",
+    "Colombia en los Olímpicos",
+    "Mascotas, medallas y curiosidades"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pierre de Coubertin",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 11
+    },
+    {
+      "name": "Juegos Olímpicos antiguos",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 6
+    },
+    {
+      "name": "Tregua olímpica",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 11
+    },
+    {
+      "name": "Corona de olivo",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio de Olimpia",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 11
+    },
+    {
+      "name": "Pentatlón antiguo",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 12
+    },
+    {
+      "name": "Pancracio",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 14
+    },
+    {
+      "name": "Carrera de carros",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 9
+    },
+    {
+      "name": "Teodosio I",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 15
+    },
+    {
+      "name": "Comité Olímpico Internacional",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 9
+    },
+    {
+      "name": "Corebo de Élide",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 15
+    },
+    {
+      "name": "Olimpiada",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Panhelénicos",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 14
+    },
+    {
+      "name": "Kyniska",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 15
+    },
+    {
+      "name": "Estatua de Zeus en Olimpia",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos de 1916",
+      "facet": "Historia y Grecia antigua",
+      "known_at": 13
+    },
+    {
+      "name": "Anillos olímpicos",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 2
+    },
+    {
+      "name": "Bandera olímpica",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 4
+    },
+    {
+      "name": "Llama olímpica",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 4
+    },
+    {
+      "name": "Antorcha olímpica",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 3
+    },
+    {
+      "name": "Relevo de la antorcha",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 6
+    },
+    {
+      "name": "Pebetero",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 10
+    },
+    {
+      "name": "Citius, Altius, Fortius",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 12
+    },
+    {
+      "name": "Himno olímpico",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 11
+    },
+    {
+      "name": "Juramento olímpico",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 12
+    },
+    {
+      "name": "Desfile de las naciones",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 6
+    },
+    {
+      "name": "Ceremonia de inauguración",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 4
+    },
+    {
+      "name": "Ceremonia de clausura",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 6
+    },
+    {
+      "name": "Podio",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 3
+    },
+    {
+      "name": "Villa olímpica",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 8
+    },
+    {
+      "name": "Espejo parabólico",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 13
+    },
+    {
+      "name": "Palomas de la paz",
+      "facet": "Símbolos y ceremonias",
+      "known_at": 11
+    },
+    {
+      "name": "Atenas",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 5
+    },
+    {
+      "name": "Los Ángeles",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 8
+    },
+    {
+      "name": "Barcelona",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Sídney",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 9
+    },
+    {
+      "name": "Múnich",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Atlanta",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 12
+    },
+    {
+      "name": "Montreal",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 13
+    },
+    {
+      "name": "Brisbane",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 13
+    },
+    {
+      "name": "Nido de pájaro",
+      "facet": "Sedes y ciudades olímpicas",
+      "known_at": 11
+    },
+    {
+      "name": "Maratón",
+      "facet": "Atletismo y maratón",
+      "known_at": 3
+    },
+    {
+      "name": "Filípides",
+      "facet": "Atletismo y maratón",
+      "known_at": 11
+    },
+    {
+      "name": "100 metros planos",
+      "facet": "Atletismo y maratón",
+      "known_at": 3
+    },
+    {
+      "name": "Salto con garrocha",
+      "facet": "Atletismo y maratón",
+      "known_at": 6
+    },
+    {
+      "name": "Salto largo",
+      "facet": "Atletismo y maratón",
+      "known_at": 4
+    },
+    {
+      "name": "Salto alto",
+      "facet": "Atletismo y maratón",
+      "known_at": 4
+    },
+    {
+      "name": "Salto triple",
+      "facet": "Atletismo y maratón",
+      "known_at": 7
+    },
+    {
+      "name": "Lanzamiento de jabalina",
+      "facet": "Atletismo y maratón",
+      "known_at": 6
+    },
+    {
+      "name": "Lanzamiento de disco",
+      "facet": "Atletismo y maratón",
+      "known_at": 7
+    },
+    {
+      "name": "Lanzamiento de bala",
+      "facet": "Atletismo y maratón",
+      "known_at": 7
+    },
+    {
+      "name": "Lanzamiento de martillo",
+      "facet": "Atletismo y maratón",
+      "known_at": 9
+    },
+    {
+      "name": "Decatlón",
+      "facet": "Atletismo y maratón",
+      "known_at": 10
+    },
+    {
+      "name": "Heptatlón",
+      "facet": "Atletismo y maratón",
+      "known_at": 12
+    },
+    {
+      "name": "Carrera de relevos",
+      "facet": "Atletismo y maratón",
+      "known_at": 4
+    },
+    {
+      "name": "Testimonio",
+      "facet": "Atletismo y maratón",
+      "known_at": 10
+    },
+    {
+      "name": "Carrera de obstáculos",
+      "facet": "Atletismo y maratón",
+      "known_at": 8
+    },
+    {
+      "name": "Carrera de vallas",
+      "facet": "Atletismo y maratón",
+      "known_at": 5
+    },
+    {
+      "name": "Marcha atlética",
+      "facet": "Atletismo y maratón",
+      "known_at": 8
+    },
+    {
+      "name": "Estilo Fosbury",
+      "facet": "Atletismo y maratón",
+      "known_at": 13
+    },
+    {
+      "name": "Spyridon Louis",
+      "facet": "Atletismo y maratón",
+      "known_at": 14
+    },
+    {
+      "name": "Estilo libre",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Estilo mariposa",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 5
+    },
+    {
+      "name": "Estilo espalda",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Estilo pecho",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Natación artística",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Clavados",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 5
+    },
+    {
+      "name": "Waterpolo",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Aguas abiertas",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Combinado individual",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Piscina olímpica",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Viraje",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Gafas de natación",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 2
+    },
+    {
+      "name": "Bañador de poliuretano",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Bloque de salida",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Corchera",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Katie Ledecky",
+      "facet": "Natación y deportes acuáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Gimnasia artística",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 5
+    },
+    {
+      "name": "Gimnasia rítmica",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 6
+    },
+    {
+      "name": "Gimnasia en trampolín",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 7
+    },
+    {
+      "name": "Barra de equilibrio",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 6
+    },
+    {
+      "name": "Barras asimétricas",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 8
+    },
+    {
+      "name": "Caballo con arcos",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Anillas",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 7
+    },
+    {
+      "name": "Barra fija",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 8
+    },
+    {
+      "name": "Salto de potro",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 7
+    },
+    {
+      "name": "Ejercicio de suelo",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 7
+    },
+    {
+      "name": "Cinta",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 5
+    },
+    {
+      "name": "Aro",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 6
+    },
+    {
+      "name": "Mazas",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Nadia Comăneci",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Simone Biles",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 7
+    },
+    {
+      "name": "Breaking",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 8
+    },
+    {
+      "name": "Doma clásica",
+      "facet": "Gimnasia y deportes artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Judo",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 5
+    },
+    {
+      "name": "Taekwondo",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 5
+    },
+    {
+      "name": "Boxeo",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 3
+    },
+    {
+      "name": "Lucha grecorromana",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Lucha libre olímpica",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Esgrima",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 6
+    },
+    {
+      "name": "Florete",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Sable",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Espada",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 10
+    },
+    {
+      "name": "Karate",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 4
+    },
+    {
+      "name": "Halterofilia",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 8
+    },
+    {
+      "name": "Arranque",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Envión",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 13
+    },
+    {
+      "name": "Cinturón negro",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 3
+    },
+    {
+      "name": "Judogi",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 11
+    },
+    {
+      "name": "Ippon",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 12
+    },
+    {
+      "name": "Tatami",
+      "facet": "Deportes de combate y pesas",
+      "known_at": 9
+    },
+    {
+      "name": "Fútbol",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 1
+    },
+    {
+      "name": "Baloncesto",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 2
+    },
+    {
+      "name": "Voleibol",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 3
+    },
+    {
+      "name": "Voleibol de playa",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 5
+    },
+    {
+      "name": "Balonmano",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 7
+    },
+    {
+      "name": "Hockey sobre césped",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 8
+    },
+    {
+      "name": "Rugby 7",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 10
+    },
+    {
+      "name": "Tenis",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 2
+    },
+    {
+      "name": "Tenis de mesa",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 3
+    },
+    {
+      "name": "Bádminton",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 6
+    },
+    {
+      "name": "Golf",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 4
+    },
+    {
+      "name": "Béisbol",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 4
+    },
+    {
+      "name": "Sóftbol",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 10
+    },
+    {
+      "name": "Dream Team",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 11
+    },
+    {
+      "name": "Volante",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 9
+    },
+    {
+      "name": "Críquet",
+      "facet": "Deportes de equipo y pelota",
+      "known_at": 11
+    },
+    {
+      "name": "Ciclismo de ruta",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Ciclismo de pista",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 8
+    },
+    {
+      "name": "BMX",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 5
+    },
+    {
+      "name": "BMX estilo libre",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Ciclismo de montaña",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Velódromo",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Keirin",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Remo",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 4
+    },
+    {
+      "name": "Canotaje",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 9
+    },
+    {
+      "name": "Kayak",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Escalada deportiva",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Skateboarding",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 3
+    },
+    {
+      "name": "Triatlón",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 7
+    },
+    {
+      "name": "Pentatlón moderno",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Equitación",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 6
+    },
+    {
+      "name": "Tiro con arco",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 3
+    },
+    {
+      "name": "Tiro deportivo",
+      "facet": "Ciclismo, remo y aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Michael Phelps",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 6
+    },
+    {
+      "name": "Usain Bolt",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 4
+    },
+    {
+      "name": "Jesse Owens",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Carl Lewis",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Muhammad Ali",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Larisa Latýnina",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 15
+    },
+    {
+      "name": "Abebe Bikila",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Emil Zátopek",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Mark Spitz",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Paavo Nurmi",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 15
+    },
+    {
+      "name": "Bob Beamon",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Florence Griffith-Joyner",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Eliud Kipchoge",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Yelena Isinbáyeva",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Armand Duplantis",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Jim Thorpe",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 15
+    },
+    {
+      "name": "Fanny Blankers-Koen",
+      "facet": "Leyendas y récords olímpicos",
+      "known_at": 15
+    },
+    {
+      "name": "María Luisa Calle",
+      "facet": "Colombia en los Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Ángel Barajas",
+      "facet": "Colombia en los Olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Diego Salazar",
+      "facet": "Colombia en los Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Comité Olímpico Colombiano",
+      "facet": "Colombia en los Olímpicos",
+      "known_at": 10
+    },
+    {
+      "name": "Medalla de oro",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 1
+    },
+    {
+      "name": "Medalla de plata",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 2
+    },
+    {
+      "name": "Medalla de bronce",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 3
+    },
+    {
+      "name": "Medallero",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 7
+    },
+    {
+      "name": "Cobi",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 13
+    },
+    {
+      "name": "Misha",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Phryge",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 9
+    },
+    {
+      "name": "Miraitowa",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Vinicius",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 13
+    },
+    {
+      "name": "Wenlock",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Juegos Paralímpicos",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 6
+    },
+    {
+      "name": "Juegos Olímpicos de la Juventud",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Equipo Olímpico de Refugiados",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Boicot de Moscú 1980",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 13
+    },
+    {
+      "name": "Morder la medalla",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 5
+    },
+    {
+      "name": "Diploma olímpico",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Tira y afloja",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 9
+    },
+    {
+      "name": "Concursos de arte olímpicos",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Medallas de París 2024",
+      "facet": "Mascotas, medallas y curiosidades",
+      "known_at": 10
+    }
+  ]
+}

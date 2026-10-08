@@ -1,0 +1,812 @@
+{
+  "subcategory": "Carnaval de Barranquilla",
+  "facets": [
+    "Disfraces y personajes típicos",
+    "Danzas y comparsas",
+    "Música y ritmos del Carnaval",
+    "Instrumentos del Carnaval",
+    "Eventos y desfiles del calendario",
+    "Reinas, Rey Momo y figuras",
+    "Historia y orígenes",
+    "Joselito Carnaval y tradiciones",
+    "Comida y bebida de Carnaval",
+    "Barranquilla: ciudad y lugares",
+    "Artistas y famosos barranquilleros",
+    "Frases, dichos y lenguaje carnavalero"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Marimonda",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 6
+    },
+    {
+      "name": "Descabezado",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 10
+    },
+    {
+      "name": "Hombre Caimán",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Cabezones",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 8
+    },
+    {
+      "name": "Burrita",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 10
+    },
+    {
+      "name": "Gorila",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Capuchón",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 11
+    },
+    {
+      "name": "Indio",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 9
+    },
+    {
+      "name": "Máscara",
+      "facet": "Disfraces y personajes típicos",
+      "known_at": 2
+    },
+    {
+      "name": "Danza del Garabato",
+      "facet": "Danzas y comparsas",
+      "known_at": 9
+    },
+    {
+      "name": "Danza del Congo",
+      "facet": "Danzas y comparsas",
+      "known_at": 9
+    },
+    {
+      "name": "Danza de los Diablos",
+      "facet": "Danzas y comparsas",
+      "known_at": 10
+    },
+    {
+      "name": "Las Farotas",
+      "facet": "Danzas y comparsas",
+      "known_at": 11
+    },
+    {
+      "name": "Danza del Paloteo",
+      "facet": "Danzas y comparsas",
+      "known_at": 12
+    },
+    {
+      "name": "Son de Negro",
+      "facet": "Danzas y comparsas",
+      "known_at": 12
+    },
+    {
+      "name": "Danza de los Coyongos",
+      "facet": "Danzas y comparsas",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de las Pilanderas",
+      "facet": "Danzas y comparsas",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de relación",
+      "facet": "Danzas y comparsas",
+      "known_at": 13
+    },
+    {
+      "name": "Comparsa",
+      "facet": "Danzas y comparsas",
+      "known_at": 7
+    },
+    {
+      "name": "Cumbiamba",
+      "facet": "Danzas y comparsas",
+      "known_at": 9
+    },
+    {
+      "name": "Comparsa de fantasía",
+      "facet": "Danzas y comparsas",
+      "known_at": 11
+    },
+    {
+      "name": "Danza del Caimán",
+      "facet": "Danzas y comparsas",
+      "known_at": 11
+    },
+    {
+      "name": "Congo Grande de Barranquilla",
+      "facet": "Danzas y comparsas",
+      "known_at": 13
+    },
+    {
+      "name": "Merecumbé",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 13
+    },
+    {
+      "name": "Chandé",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 13
+    },
+    {
+      "name": "Fandango",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Te olvidé",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "La pollera colorá",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 8
+    },
+    {
+      "name": "Se va el caimán",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 8
+    },
+    {
+      "name": "La Rebelión",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 11
+    },
+    {
+      "name": "Cumbia cienaguera",
+      "facet": "Música y ritmos del Carnaval",
+      "known_at": 12
+    },
+    {
+      "name": "Tambor alegre",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 9
+    },
+    {
+      "name": "Llamador",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 11
+    },
+    {
+      "name": "Tambora",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 7
+    },
+    {
+      "name": "Maracas",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 2
+    },
+    {
+      "name": "Gaita hembra",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Gaita macho",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Flauta de millo",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Guache",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 11
+    },
+    {
+      "name": "Bombo",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 4
+    },
+    {
+      "name": "Trompeta",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 1
+    },
+    {
+      "name": "Clarinete",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 5
+    },
+    {
+      "name": "Timbales",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 6
+    },
+    {
+      "name": "Conga",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 6
+    },
+    {
+      "name": "Pito",
+      "facet": "Instrumentos del Carnaval",
+      "known_at": 2
+    },
+    {
+      "name": "Gran Parada de Tradición",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Parada de Fantasía",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 11
+    },
+    {
+      "name": "Desfile del Rey Momo",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 10
+    },
+    {
+      "name": "Festival de Orquestas",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 10
+    },
+    {
+      "name": "Noche de Tambó",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de los Niños",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 6
+    },
+    {
+      "name": "Precarnaval",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 8
+    },
+    {
+      "name": "Carnaval de la 44",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 12
+    },
+    {
+      "name": "Coronación de la Reina",
+      "facet": "Eventos y desfiles del calendario",
+      "known_at": 7
+    },
+    {
+      "name": "Reina infantil",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 6
+    },
+    {
+      "name": "Rey Momo infantil",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 9
+    },
+    {
+      "name": "Momo",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Corona",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 1
+    },
+    {
+      "name": "Cetro",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 5
+    },
+    {
+      "name": "Carroza",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 4
+    },
+    {
+      "name": "Capa real",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 3
+    },
+    {
+      "name": "Hacedores del Carnaval",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Barranquilla S.A.S.",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 13
+    },
+    {
+      "name": "Reina Popular",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 12
+    },
+    {
+      "name": "Congo de Oro",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 11
+    },
+    {
+      "name": "Comparsero",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 9
+    },
+    {
+      "name": "Cumbiambero",
+      "facet": "Reinas, Rey Momo y figuras",
+      "known_at": 9
+    },
+    {
+      "name": "UNESCO",
+      "facet": "Historia y orígenes",
+      "known_at": 9
+    },
+    {
+      "name": "Patrimonio Oral e Inmaterial de la Humanidad",
+      "facet": "Historia y orígenes",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval de Venecia",
+      "facet": "Historia y orígenes",
+      "known_at": 8
+    },
+    {
+      "name": "Carnaval de Río",
+      "facet": "Historia y orígenes",
+      "known_at": 5
+    },
+    {
+      "name": "Cabildos",
+      "facet": "Historia y orígenes",
+      "known_at": 12
+    },
+    {
+      "name": "Herencia africana",
+      "facet": "Historia y orígenes",
+      "known_at": 8
+    },
+    {
+      "name": "Saturnales",
+      "facet": "Historia y orígenes",
+      "known_at": 13
+    },
+    {
+      "name": "Carnestolendas",
+      "facet": "Historia y orígenes",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra de los Mil Días",
+      "facet": "Historia y orígenes",
+      "known_at": 10
+    },
+    {
+      "name": "Mestizaje",
+      "facet": "Historia y orígenes",
+      "known_at": 9
+    },
+    {
+      "name": "Herencia indígena",
+      "facet": "Historia y orígenes",
+      "known_at": 8
+    },
+    {
+      "name": "Colonia española",
+      "facet": "Historia y orígenes",
+      "known_at": 8
+    },
+    {
+      "name": "Carnaval de Cádiz",
+      "facet": "Historia y orígenes",
+      "known_at": 13
+    },
+    {
+      "name": "Mardi Gras",
+      "facet": "Historia y orígenes",
+      "known_at": 11
+    },
+    {
+      "name": "Entierro de Joselito",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Viudas de Joselito",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Picó",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Serpentina",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "Confeti",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Palco",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 7
+    },
+    {
+      "name": "Caseta",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Verbena",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Ataúd",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 6
+    },
+    {
+      "name": "Maquillaje",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Club Barranquilla",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Tarima",
+      "facet": "Joselito Carnaval y tradiciones",
+      "known_at": 6
+    },
+    {
+      "name": "Butifarra",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 8
+    },
+    {
+      "name": "Carimañola",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 8
+    },
+    {
+      "name": "Bollo de yuca",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 7
+    },
+    {
+      "name": "Bollo limpio",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Raspao",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 4
+    },
+    {
+      "name": "Jugo de corozo",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Patacón",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 3
+    },
+    {
+      "name": "Sancocho de guandú",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 10
+    },
+    {
+      "name": "Arroz de lisa",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 11
+    },
+    {
+      "name": "Cocadas",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 4
+    },
+    {
+      "name": "Enyucado",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 9
+    },
+    {
+      "name": "Quibbe",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 11
+    },
+    {
+      "name": "Agua de coco",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 2
+    },
+    {
+      "name": "Chicha de maíz",
+      "facet": "Comida y bebida de Carnaval",
+      "known_at": 8
+    },
+    {
+      "name": "Río Magdalena",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 5
+    },
+    {
+      "name": "Mar Caribe",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 3
+    },
+    {
+      "name": "Bocas de Ceniza",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 11
+    },
+    {
+      "name": "Vía 40",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio Metropolitano Roberto Meléndez",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 7
+    },
+    {
+      "name": "Junior de Barranquilla",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 4
+    },
+    {
+      "name": "Puerta de Oro de Colombia",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 10
+    },
+    {
+      "name": "Atlántico",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 6
+    },
+    {
+      "name": "Catedral Metropolitana María Reina",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Malecón del Río",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 9
+    },
+    {
+      "name": "Ventana al Mundo",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Caribe",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 11
+    },
+    {
+      "name": "Casa del Carnaval",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 11
+    },
+    {
+      "name": "Paseo Bolívar",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Teatro Amira de la Rosa",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 13
+    },
+    {
+      "name": "Estadio Romelio Martínez",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Pumarejo",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 10
+    },
+    {
+      "name": "Aeropuerto Ernesto Cortissoz",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Muelle de Puerto Colombia",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 12
+    },
+    {
+      "name": "Esthercita Forero",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 13
+    },
+    {
+      "name": "Checo Acosta",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 11
+    },
+    {
+      "name": "Antonio María Peñaloza",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 14
+    },
+    {
+      "name": "Pacho Galán",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 14
+    },
+    {
+      "name": "Edgar Rentería",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 12
+    },
+    {
+      "name": "Teófilo Gutiérrez",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 9
+    },
+    {
+      "name": "Grupo de Barranquilla",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 14
+    },
+    {
+      "name": "Ernesto McCausland",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Bacca",
+      "facet": "Artistas y famosos barranquilleros",
+      "known_at": 9
+    },
+    {
+      "name": "Quien lo vive es quien lo goza",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 8
+    },
+    {
+      "name": "Curramba la Bella",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 9
+    },
+    {
+      "name": "La Arenosa",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 11
+    },
+    {
+      "name": "Mamar gallo",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 8
+    },
+    {
+      "name": "Ajá",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 4
+    },
+    {
+      "name": "Eche",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 8
+    },
+    {
+      "name": "Ombe",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 9
+    },
+    {
+      "name": "Erda",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 9
+    },
+    {
+      "name": "Pelao",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 6
+    },
+    {
+      "name": "Costeño",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 5
+    },
+    {
+      "name": "Cachaco",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 8
+    },
+    {
+      "name": "Bololó",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 12
+    },
+    {
+      "name": "Jartera",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 11
+    },
+    {
+      "name": "Goce",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 7
+    },
+    {
+      "name": "Carnavalero",
+      "facet": "Frases, dichos y lenguaje carnavalero",
+      "known_at": 5
+    }
+  ]
+}

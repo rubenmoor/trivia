@@ -1,0 +1,1032 @@
+{
+  "subcategory": "YouTubers",
+  "facets": [
+    "YouTubers de videojuegos",
+    "YouTubers latinoamericanos y colombianos",
+    "Youtubers de humor y retos",
+    "Canales de ciencia y educación",
+    "Canales infantiles y de música",
+    "Vocabulario de YouTube",
+    "Historia de YouTube y sus hitos",
+    "Videos virales y memes famosos",
+    "Formatos y tipos de video",
+    "Equipo y herramientas del creador",
+    "Plataformas y redes vecinas",
+    "Premios, botones y récords del canal"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "PewDiePie",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Fernanfloo",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "ElRubius",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Vegetta777",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Willyrex",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Mikecrack",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "TheGrefg",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Markiplier",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Jacksepticeye",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "DanTDM",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Dream",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Technoblade",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Ninja",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Alexby11",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Luzu",
+      "facet": "YouTubers de videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Germán Garmendia",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 6
+    },
+    {
+      "name": "Luisito Comunica",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 6
+    },
+    {
+      "name": "Yuya",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Werevertumorro",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Kimberly Loaiza",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Juanpa Zurita",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Dross",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Pautips",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Kika Nieto",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "La Divaza",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Calle y Poché",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Ami Rodríguez",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Mis Pastelitos",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Los Polinesios",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Enchufe.tv",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Whindersson Nunes",
+      "facet": "YouTubers latinoamericanos y colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "MrBeast",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 3
+    },
+    {
+      "name": "AuronPlay",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 7
+    },
+    {
+      "name": "Dude Perfect",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 6
+    },
+    {
+      "name": "Smosh",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 11
+    },
+    {
+      "name": "Ryan Higa",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 12
+    },
+    {
+      "name": "Lele Pons",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 8
+    },
+    {
+      "name": "Sidemen",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 11
+    },
+    {
+      "name": "Rhett & Link",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 13
+    },
+    {
+      "name": "Ibai Llanos",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 7
+    },
+    {
+      "name": "Jake Paul",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 10
+    },
+    {
+      "name": "Logan Paul",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 10
+    },
+    {
+      "name": "Yes Theory",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 13
+    },
+    {
+      "name": "Squid Game de MrBeast",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 6
+    },
+    {
+      "name": "Broma con cámara escondida",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 4
+    },
+    {
+      "name": "Reto de 24 horas",
+      "facet": "Youtubers de humor y retos",
+      "known_at": 4
+    },
+    {
+      "name": "Veritasium",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 11
+    },
+    {
+      "name": "Vsauce",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 11
+    },
+    {
+      "name": "Kurzgesagt",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 10
+    },
+    {
+      "name": "Mark Rober",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 8
+    },
+    {
+      "name": "CuriosaMente",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 9
+    },
+    {
+      "name": "QuantumFracture",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 12
+    },
+    {
+      "name": "Date un Vlog",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 12
+    },
+    {
+      "name": "Khan Academy",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 9
+    },
+    {
+      "name": "TED",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 10
+    },
+    {
+      "name": "CrashCourse",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 12
+    },
+    {
+      "name": "SmarterEveryDay",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 13
+    },
+    {
+      "name": "MinutePhysics",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Scott",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 13
+    },
+    {
+      "name": "Julioprofe",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 8
+    },
+    {
+      "name": "Unicoos",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 11
+    },
+    {
+      "name": "Derivando",
+      "facet": "Canales de ciencia y educación",
+      "known_at": 13
+    },
+    {
+      "name": "Pinkfong",
+      "facet": "Canales infantiles y de música",
+      "known_at": 3
+    },
+    {
+      "name": "Baby Shark",
+      "facet": "Canales infantiles y de música",
+      "known_at": 1
+    },
+    {
+      "name": "Cocomelon",
+      "facet": "Canales infantiles y de música",
+      "known_at": 3
+    },
+    {
+      "name": "La Granja de Zenón",
+      "facet": "Canales infantiles y de música",
+      "known_at": 2
+    },
+    {
+      "name": "Plim Plim",
+      "facet": "Canales infantiles y de música",
+      "known_at": 3
+    },
+    {
+      "name": "Ryan's World",
+      "facet": "Canales infantiles y de música",
+      "known_at": 5
+    },
+    {
+      "name": "Like Nastya",
+      "facet": "Canales infantiles y de música",
+      "known_at": 5
+    },
+    {
+      "name": "Vlad y Niki",
+      "facet": "Canales infantiles y de música",
+      "known_at": 5
+    },
+    {
+      "name": "Masha y el Oso",
+      "facet": "Canales infantiles y de música",
+      "known_at": 2
+    },
+    {
+      "name": "Luli Pampín",
+      "facet": "Canales infantiles y de música",
+      "known_at": 4
+    },
+    {
+      "name": "Little Baby Bum",
+      "facet": "Canales infantiles y de música",
+      "known_at": 9
+    },
+    {
+      "name": "T-Series",
+      "facet": "Canales infantiles y de música",
+      "known_at": 10
+    },
+    {
+      "name": "Vevo",
+      "facet": "Canales infantiles y de música",
+      "known_at": 10
+    },
+    {
+      "name": "Justin Bieber",
+      "facet": "Canales infantiles y de música",
+      "known_at": 6
+    },
+    {
+      "name": "Despacito",
+      "facet": "Canales infantiles y de música",
+      "known_at": 4
+    },
+    {
+      "name": "Suscriptor",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 3
+    },
+    {
+      "name": "Like",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 2
+    },
+    {
+      "name": "Miniatura",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 7
+    },
+    {
+      "name": "Clickbait",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 7
+    },
+    {
+      "name": "Algoritmo",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 9
+    },
+    {
+      "name": "Monetización",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 9
+    },
+    {
+      "name": "Influencer",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 4
+    },
+    {
+      "name": "Hater",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 5
+    },
+    {
+      "name": "Spoiler",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 4
+    },
+    {
+      "name": "Viral",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 5
+    },
+    {
+      "name": "Hashtag",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 5
+    },
+    {
+      "name": "Colab",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 7
+    },
+    {
+      "name": "Tendencias",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 6
+    },
+    {
+      "name": "Campanita de notificaciones",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 3
+    },
+    {
+      "name": "Lista de reproducción",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 5
+    },
+    {
+      "name": "Derechos de autor",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 9
+    },
+    {
+      "name": "Patrocinio",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 8
+    },
+    {
+      "name": "Superchat",
+      "facet": "Vocabulario de YouTube",
+      "known_at": 10
+    },
+    {
+      "name": "Me at the zoo",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 11
+    },
+    {
+      "name": "Jawed Karim",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 13
+    },
+    {
+      "name": "Chad Hurley",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 14
+    },
+    {
+      "name": "Steve Chen",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 14
+    },
+    {
+      "name": "Fundación de YouTube",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 10
+    },
+    {
+      "name": "Compra de YouTube por Google",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 8
+    },
+    {
+      "name": "Susan Wojcicki",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 14
+    },
+    {
+      "name": "Broadcast Yourself",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 13
+    },
+    {
+      "name": "Calificación con estrellas",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 13
+    },
+    {
+      "name": "Límite de 10 minutos",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 14
+    },
+    {
+      "name": "YouTube Rewind",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 10
+    },
+    {
+      "name": "YouTube Kids",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 3
+    },
+    {
+      "name": "YouTube Premium",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 7
+    },
+    {
+      "name": "YouTube Music",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 6
+    },
+    {
+      "name": "Ocultación del contador de dislikes",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 10
+    },
+    {
+      "name": "Adobe Flash Player",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 13
+    },
+    {
+      "name": "San Bruno",
+      "facet": "Historia de YouTube y sus hitos",
+      "known_at": 15
+    },
+    {
+      "name": "Gangnam Style",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Charlie bit my finger",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Nyan Cat",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Rickroll",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Harlem Shake",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Keyboard Cat",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Dramatic Chipmunk",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Chocolate Rain",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Evolution of Dance",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Ice Bucket Challenge",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Reto del maniquí",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Bottle flip",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Sneezing Baby Panda",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Numa Numa",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Trololo",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 12
+    },
+    {
+      "name": "David After Dentist",
+      "facet": "Videos virales y memes famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Vlog",
+      "facet": "Formatos y tipos de video",
+      "known_at": 5
+    },
+    {
+      "name": "Tutorial",
+      "facet": "Formatos y tipos de video",
+      "known_at": 3
+    },
+    {
+      "name": "Unboxing",
+      "facet": "Formatos y tipos de video",
+      "known_at": 5
+    },
+    {
+      "name": "Gameplay",
+      "facet": "Formatos y tipos de video",
+      "known_at": 4
+    },
+    {
+      "name": "Video de reacción",
+      "facet": "Formatos y tipos de video",
+      "known_at": 5
+    },
+    {
+      "name": "Haul",
+      "facet": "Formatos y tipos de video",
+      "known_at": 10
+    },
+    {
+      "name": "Short",
+      "facet": "Formatos y tipos de video",
+      "known_at": 4
+    },
+    {
+      "name": "ASMR",
+      "facet": "Formatos y tipos de video",
+      "known_at": 7
+    },
+    {
+      "name": "Speedrun",
+      "facet": "Formatos y tipos de video",
+      "known_at": 9
+    },
+    {
+      "name": "Reseña",
+      "facet": "Formatos y tipos de video",
+      "known_at": 6
+    },
+    {
+      "name": "Podcast",
+      "facet": "Formatos y tipos de video",
+      "known_at": 8
+    },
+    {
+      "name": "Transmisión en vivo",
+      "facet": "Formatos y tipos de video",
+      "known_at": 3
+    },
+    {
+      "name": "Storytime",
+      "facet": "Formatos y tipos de video",
+      "known_at": 9
+    },
+    {
+      "name": "Mukbang",
+      "facet": "Formatos y tipos de video",
+      "known_at": 11
+    },
+    {
+      "name": "Preguntas y respuestas",
+      "facet": "Formatos y tipos de video",
+      "known_at": 6
+    },
+    {
+      "name": "Lyric video",
+      "facet": "Formatos y tipos de video",
+      "known_at": 9
+    },
+    {
+      "name": "Timelapse",
+      "facet": "Formatos y tipos de video",
+      "known_at": 8
+    },
+    {
+      "name": "Room tour",
+      "facet": "Formatos y tipos de video",
+      "known_at": 8
+    },
+    {
+      "name": "Cámara",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 1
+    },
+    {
+      "name": "Trípode",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 5
+    },
+    {
+      "name": "Aro de luz",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 5
+    },
+    {
+      "name": "Pantalla verde",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 5
+    },
+    {
+      "name": "Webcam",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 4
+    },
+    {
+      "name": "Filtro antipop",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 11
+    },
+    {
+      "name": "Gimbal",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 11
+    },
+    {
+      "name": "Teleprompter",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 11
+    },
+    {
+      "name": "Audífonos",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 1
+    },
+    {
+      "name": "OBS",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 11
+    },
+    {
+      "name": "Adobe Premiere",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 11
+    },
+    {
+      "name": "Final Cut",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 12
+    },
+    {
+      "name": "CapCut",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 7
+    },
+    {
+      "name": "Tarjeta de captura",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 12
+    },
+    {
+      "name": "Micrófono de solapa",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 8
+    },
+    {
+      "name": "Softbox",
+      "facet": "Equipo y herramientas del creador",
+      "known_at": 13
+    },
+    {
+      "name": "TikTok",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 3
+    },
+    {
+      "name": "Twitch",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 6
+    },
+    {
+      "name": "Instagram",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 3
+    },
+    {
+      "name": "Facebook",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 3
+    },
+    {
+      "name": "Netflix",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 2
+    },
+    {
+      "name": "Vimeo",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 12
+    },
+    {
+      "name": "Kick",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 10
+    },
+    {
+      "name": "X (Twitter)",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 6
+    },
+    {
+      "name": "Snapchat",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 7
+    },
+    {
+      "name": "Dailymotion",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 13
+    },
+    {
+      "name": "Spotify",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 4
+    },
+    {
+      "name": "Discord",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 7
+    },
+    {
+      "name": "Reels",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 7
+    },
+    {
+      "name": "Vine",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 12
+    },
+    {
+      "name": "Patreon",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 12
+    },
+    {
+      "name": "WhatsApp",
+      "facet": "Plataformas y redes vecinas",
+      "known_at": 2
+    },
+    {
+      "name": "Botón de Plata",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 6
+    },
+    {
+      "name": "Botón de Oro",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 6
+    },
+    {
+      "name": "Botón de Diamante",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 7
+    },
+    {
+      "name": "Botón de Rubí",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 10
+    },
+    {
+      "name": "Botón Rojo de Diamante",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 11
+    },
+    {
+      "name": "Insignia de verificación",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 6
+    },
+    {
+      "name": "Récord Guinness",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 4
+    },
+    {
+      "name": "Video más visto de YouTube",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 6
+    },
+    {
+      "name": "Canal con más suscriptores",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 6
+    },
+    {
+      "name": "Video con más 'no me gusta'",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 12
+    },
+    {
+      "name": "PewDiePie contra T-Series",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 11
+    },
+    {
+      "name": "Streamy Awards",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 14
+    },
+    {
+      "name": "Kids' Choice Awards",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 7
+    },
+    {
+      "name": "Premios ESLAND",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 11
+    },
+    {
+      "name": "Social Blade",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 13
+    },
+    {
+      "name": "Mil millones de vistas",
+      "facet": "Premios, botones y récords del canal",
+      "known_at": 8
+    }
+  ]
+}

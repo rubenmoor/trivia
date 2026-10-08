@@ -1,0 +1,627 @@
+{
+  "subcategory": "Regiones de Colombia",
+  "facets": [
+    "Región Andina",
+    "Región Caribe",
+    "Región Pacífica",
+    "Región Amazónica",
+    "Región de la Orinoquía",
+    "Región Insular y San Andrés",
+    "Paisajes y relieve regionales",
+    "Comidas típicas por región",
+    "Música y bailes regionales",
+    "Fiestas y carnavales regionales",
+    "Gentilicios y habla regional",
+    "Pueblos indígenas y afrocolombianos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 1,
+      "connection": 5,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 4,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Villa de Leyva",
+      "facet": "Región Andina",
+      "known_at": 9
+    },
+    {
+      "name": "Manizales",
+      "facet": "Región Andina",
+      "known_at": 8
+    },
+    {
+      "name": "Pereira",
+      "facet": "Región Andina",
+      "known_at": 8
+    },
+    {
+      "name": "Armenia",
+      "facet": "Región Andina",
+      "known_at": 8
+    },
+    {
+      "name": "Bucaramanga",
+      "facet": "Región Andina",
+      "known_at": 7
+    },
+    {
+      "name": "Popayán",
+      "facet": "Región Andina",
+      "known_at": 9
+    },
+    {
+      "name": "Pasto",
+      "facet": "Región Andina",
+      "known_at": 8
+    },
+    {
+      "name": "Cañón del Chicamocha",
+      "facet": "Región Andina",
+      "known_at": 10
+    },
+    {
+      "name": "Peñol de Guatapé",
+      "facet": "Región Andina",
+      "known_at": 7
+    },
+    {
+      "name": "Barichara",
+      "facet": "Región Andina",
+      "known_at": 11
+    },
+    {
+      "name": "Ciudad Perdida",
+      "facet": "Región Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Sincelejo",
+      "facet": "Región Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Aracataca",
+      "facet": "Región Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Murallas de Cartagena",
+      "facet": "Región Caribe",
+      "known_at": 6
+    },
+    {
+      "name": "Torre del Reloj",
+      "facet": "Región Caribe",
+      "known_at": 6
+    },
+    {
+      "name": "Volcán del Totumo",
+      "facet": "Región Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Chocó",
+      "facet": "Región Pacífica",
+      "known_at": 8
+    },
+    {
+      "name": "Quibdó",
+      "facet": "Región Pacífica",
+      "known_at": 10
+    },
+    {
+      "name": "Río Atrato",
+      "facet": "Región Pacífica",
+      "known_at": 10
+    },
+    {
+      "name": "Ensenada de Utría",
+      "facet": "Región Pacífica",
+      "known_at": 13
+    },
+    {
+      "name": "Guapi",
+      "facet": "Región Pacífica",
+      "known_at": 13
+    },
+    {
+      "name": "Rana dorada venenosa",
+      "facet": "Región Pacífica",
+      "known_at": 8
+    },
+    {
+      "name": "Lloró",
+      "facet": "Región Pacífica",
+      "known_at": 12
+    },
+    {
+      "name": "Tutunendo",
+      "facet": "Región Pacífica",
+      "known_at": 14
+    },
+    {
+      "name": "Golfo de Tribugá",
+      "facet": "Región Pacífica",
+      "known_at": 14
+    },
+    {
+      "name": "Amazonas (departamento)",
+      "facet": "Región Amazónica",
+      "known_at": 4
+    },
+    {
+      "name": "Leticia",
+      "facet": "Región Amazónica",
+      "known_at": 7
+    },
+    {
+      "name": "Puerto Nariño",
+      "facet": "Región Amazónica",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de los Micos",
+      "facet": "Región Amazónica",
+      "known_at": 11
+    },
+    {
+      "name": "Trapecio amazónico",
+      "facet": "Región Amazónica",
+      "known_at": 12
+    },
+    {
+      "name": "Caquetá",
+      "facet": "Región Amazónica",
+      "known_at": 10
+    },
+    {
+      "name": "Putumayo",
+      "facet": "Región Amazónica",
+      "known_at": 10
+    },
+    {
+      "name": "Guainía",
+      "facet": "Región Amazónica",
+      "known_at": 11
+    },
+    {
+      "name": "Vaupés",
+      "facet": "Región Amazónica",
+      "known_at": 11
+    },
+    {
+      "name": "Guaviare",
+      "facet": "Región Amazónica",
+      "known_at": 11
+    },
+    {
+      "name": "Victoria regia",
+      "facet": "Región Amazónica",
+      "known_at": 9
+    },
+    {
+      "name": "Mitú",
+      "facet": "Región Amazónica",
+      "known_at": 13
+    },
+    {
+      "name": "Triple frontera amazónica",
+      "facet": "Región Amazónica",
+      "known_at": 11
+    },
+    {
+      "name": "Mono tití",
+      "facet": "Región Amazónica",
+      "known_at": 6
+    },
+    {
+      "name": "Villavicencio",
+      "facet": "Región de la Orinoquía",
+      "known_at": 8
+    },
+    {
+      "name": "Meta",
+      "facet": "Región de la Orinoquía",
+      "known_at": 8
+    },
+    {
+      "name": "Casanare",
+      "facet": "Región de la Orinoquía",
+      "known_at": 10
+    },
+    {
+      "name": "Arauca",
+      "facet": "Región de la Orinoquía",
+      "known_at": 10
+    },
+    {
+      "name": "Vichada",
+      "facet": "Región de la Orinoquía",
+      "known_at": 11
+    },
+    {
+      "name": "Puerto Carreño",
+      "facet": "Región de la Orinoquía",
+      "known_at": 12
+    },
+    {
+      "name": "Yopal",
+      "facet": "Región de la Orinoquía",
+      "known_at": 11
+    },
+    {
+      "name": "Hato llanero",
+      "facet": "Región de la Orinoquía",
+      "known_at": 13
+    },
+    {
+      "name": "Palma de moriche",
+      "facet": "Región de la Orinoquía",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional El Tuparro",
+      "facet": "Región de la Orinoquía",
+      "known_at": 13
+    },
+    {
+      "name": "Sierra de La Macarena",
+      "facet": "Región de la Orinoquía",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Catalina",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 12
+    },
+    {
+      "name": "Hoyo Soplador",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 11
+    },
+    {
+      "name": "Cayo Bolívar",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 13
+    },
+    {
+      "name": "Creole sanandresano",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Fuerte",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 14
+    },
+    {
+      "name": "Islas de San Bernardo",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de los Enamorados",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva de Morgan",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 12
+    },
+    {
+      "name": "Cangrejo negro",
+      "facet": "Región Insular y San Andrés",
+      "known_at": 12
+    },
+    {
+      "name": "Cordillera Occidental",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Cordillera Central",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Cordillera Oriental",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Río Cauca",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Macizo Colombiano",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Nudo de los Pastos",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Llanura",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 6
+    },
+    {
+      "name": "Pisos térmicos",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 10
+    },
+    {
+      "name": "Altiplano cundiboyacense",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Estrella Fluvial Colombiana",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 14
+    },
+    {
+      "name": "Departamentos de Colombia",
+      "facet": "Paisajes y relieve regionales",
+      "known_at": 9
+    },
+    {
+      "name": "Arepa",
+      "facet": "Comidas típicas por región",
+      "known_at": 1
+    },
+    {
+      "name": "Changua",
+      "facet": "Comidas típicas por región",
+      "known_at": 9
+    },
+    {
+      "name": "Mamona",
+      "facet": "Comidas típicas por región",
+      "known_at": 11
+    },
+    {
+      "name": "Rondón",
+      "facet": "Comidas típicas por región",
+      "known_at": 12
+    },
+    {
+      "name": "Mute santandereano",
+      "facet": "Comidas típicas por región",
+      "known_at": 12
+    },
+    {
+      "name": "Hormigas culonas",
+      "facet": "Comidas típicas por región",
+      "known_at": 8
+    },
+    {
+      "name": "Casabe",
+      "facet": "Comidas típicas por región",
+      "known_at": 12
+    },
+    {
+      "name": "Viudo de pescado",
+      "facet": "Comidas típicas por región",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa caleña",
+      "facet": "Música y bailes regionales",
+      "known_at": 7
+    },
+    {
+      "name": "Concurso Nacional de Belleza",
+      "facet": "Fiestas y carnavales regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Festival del Bambuco",
+      "facet": "Fiestas y carnavales regionales",
+      "known_at": 12
+    },
+    {
+      "name": "Aguinaldo boyacense",
+      "facet": "Fiestas y carnavales regionales",
+      "known_at": 13
+    },
+    {
+      "name": "Rolo",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 7
+    },
+    {
+      "name": "Caleño",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 6
+    },
+    {
+      "name": "Pastuso",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 7
+    },
+    {
+      "name": "Llanero",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 6
+    },
+    {
+      "name": "Santandereano",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 8
+    },
+    {
+      "name": "Boyacense",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 8
+    },
+    {
+      "name": "Vallecaucano",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 9
+    },
+    {
+      "name": "Samario",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 10
+    },
+    {
+      "name": "Chocoano",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 9
+    },
+    {
+      "name": "Sanandresano",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 10
+    },
+    {
+      "name": "Tolimense",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 11
+    },
+    {
+      "name": "Parce",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 6
+    },
+    {
+      "name": "Chévere",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 3
+    },
+    {
+      "name": "Bacano",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 5
+    },
+    {
+      "name": "Sumercé",
+      "facet": "Gentilicios y habla regional",
+      "known_at": 9
+    },
+    {
+      "name": "Arhuaco",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Wiwa",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Kankuamo",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Emberá",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Misak",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Muisca",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Ticuna",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Mochila wayuu",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Lengua palenquera",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 12
+    },
+    {
+      "name": "San Basilio de Palenque",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Benkos Biohó",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Palenqueras",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Raizales",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Poporo",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Mochila arhuaca",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Pueblo Rrom",
+      "facet": "Pueblos indígenas y afrocolombianos",
+      "known_at": 13
+    }
+  ]
+}

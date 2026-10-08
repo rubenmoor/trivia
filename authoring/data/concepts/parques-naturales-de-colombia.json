@@ -1,0 +1,767 @@
+{
+  "subcategory": "Parques naturales de Colombia",
+  "facets": [
+    "Parques de montaña y nevados",
+    "Parques amazónicos y selváticos",
+    "Parques del Caribe y el mar",
+    "Parques del Pacífico y sus islas",
+    "Páramos y frailejones",
+    "Llanos, ríos y cascadas",
+    "Fauna emblemática de los parques",
+    "Flora y árboles de los parques",
+    "Pueblos indígenas y territorios sagrados",
+    "Arqueología y patrimonio en los parques",
+    "Turismo, senderos y reglas del parque",
+    "Conservación, guardaparques y Parques Nacionales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Parque Nacional Natural El Cocuy",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Nacional Natural Puracé",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna del Otún",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 10
+    },
+    {
+      "name": "Glaciar",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 5
+    },
+    {
+      "name": "Parque Nacional Natural Las Hermosas",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 12
+    },
+    {
+      "name": "Parque Nacional Natural Tatamá",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 13
+    },
+    {
+      "name": "Pan de Azúcar",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural Cordillera de los Picachos",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural Serranía de los Yariguíes",
+      "facet": "Parques de montaña y nevados",
+      "known_at": 13
+    },
+    {
+      "name": "Serranía de Chiribiquete",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Nacional Natural Amacayacu",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 11
+    },
+    {
+      "name": "Tepuy",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Nacional Natural Cahuinarí",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Natural La Paya",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 14
+    },
+    {
+      "name": "Río Apaporis",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 13
+    },
+    {
+      "name": "Río Caquetá",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 11
+    },
+    {
+      "name": "Lagos de Tarapoto",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural Río Puré",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Natural Serranía de los Churumbelos",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 14
+    },
+    {
+      "name": "Bosque húmedo tropical",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 7
+    },
+    {
+      "name": "Pulmón del planeta",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Nacional Natural Los Katíos",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 12
+    },
+    {
+      "name": "Tapón del Darién",
+      "facet": "Parques amazónicos y selváticos",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Tayrona",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 5
+    },
+    {
+      "name": "Cabo San Juan",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Nacional Natural Corales del Rosario y San Bernardo",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Nacional Natural Old Providence McBean Lagoon",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 12
+    },
+    {
+      "name": "Vía Parque Isla de Salamanca",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 12
+    },
+    {
+      "name": "Santuario de Flora y Fauna Los Flamencos",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Nacional Natural Macuira",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía Concha",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario de Flora y Fauna El Corchal",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 14
+    },
+    {
+      "name": "Pastos marinos",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 12
+    },
+    {
+      "name": "Oceanario de las Islas del Rosario",
+      "facet": "Parques del Caribe y el mar",
+      "known_at": 9
+    },
+    {
+      "name": "Isla Gorgonilla",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Natural Utría",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Nacional Natural Uramba Bahía Málaga",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural Sanquianga",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 14
+    },
+    {
+      "name": "Serranía del Baudó",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 13
+    },
+    {
+      "name": "Antigua cárcel de Gorgona",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 10
+    },
+    {
+      "name": "Parque Nacional Natural Munchique",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural Farallones de Cali",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 10
+    },
+    {
+      "name": "Juanchaco y Ladrilleros",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 11
+    },
+    {
+      "name": "Cabo Corrientes",
+      "facet": "Parques del Pacífico y sus islas",
+      "known_at": 14
+    },
+    {
+      "name": "Frailejón",
+      "facet": "Páramos y frailejones",
+      "known_at": 4
+    },
+    {
+      "name": "Páramo de Sumapaz",
+      "facet": "Páramos y frailejones",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Nacional Natural Chingaza",
+      "facet": "Páramos y frailejones",
+      "known_at": 9
+    },
+    {
+      "name": "Páramo de Santurbán",
+      "facet": "Páramos y frailejones",
+      "known_at": 11
+    },
+    {
+      "name": "Páramo de Ocetá",
+      "facet": "Páramos y frailejones",
+      "known_at": 14
+    },
+    {
+      "name": "Laguna de Siecha",
+      "facet": "Páramos y frailejones",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Natural Pisba",
+      "facet": "Páramos y frailejones",
+      "known_at": 13
+    },
+    {
+      "name": "Fábrica de agua",
+      "facet": "Páramos y frailejones",
+      "known_at": 8
+    },
+    {
+      "name": "Turbera",
+      "facet": "Páramos y frailejones",
+      "known_at": 14
+    },
+    {
+      "name": "Santuario de Flora y Fauna Iguaque",
+      "facet": "Páramos y frailejones",
+      "known_at": 12
+    },
+    {
+      "name": "Neblina",
+      "facet": "Páramos y frailejones",
+      "known_at": 4
+    },
+    {
+      "name": "Chusque",
+      "facet": "Páramos y frailejones",
+      "known_at": 14
+    },
+    {
+      "name": "Romero de páramo",
+      "facet": "Páramos y frailejones",
+      "known_at": 14
+    },
+    {
+      "name": "Embalse de Chuza",
+      "facet": "Páramos y frailejones",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural Tamá",
+      "facet": "Páramos y frailejones",
+      "known_at": 14
+    },
+    {
+      "name": "Macarenia clavigera",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Natural El Tuparro",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 12
+    },
+    {
+      "name": "Raudal de Maipures",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 14
+    },
+    {
+      "name": "Río Meta",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 10
+    },
+    {
+      "name": "Río Bita",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 14
+    },
+    {
+      "name": "Cascada",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 2
+    },
+    {
+      "name": "Río Guayabero",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Cerros de Mavecure",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 12
+    },
+    {
+      "name": "Estrella Fluvial de Inírida",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Río Inírida",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 12
+    },
+    {
+      "name": "Humedal",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 7
+    },
+    {
+      "name": "Sitio Ramsar",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Natural Tinigua",
+      "facet": "Llanos, ríos y cascadas",
+      "known_at": 14
+    },
+    {
+      "name": "Flamenco rosado",
+      "facet": "Fauna emblemática de los parques",
+      "known_at": 2
+    },
+    {
+      "name": "Guacamaya",
+      "facet": "Fauna emblemática de los parques",
+      "known_at": 3
+    },
+    {
+      "name": "Mangle",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 7
+    },
+    {
+      "name": "Ceiba",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 8
+    },
+    {
+      "name": "Victoria amazónica",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 10
+    },
+    {
+      "name": "Bromelia",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 10
+    },
+    {
+      "name": "Roble andino",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 12
+    },
+    {
+      "name": "Encenillo",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 14
+    },
+    {
+      "name": "Siete cueros",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 12
+    },
+    {
+      "name": "Helecho arborescente",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 9
+    },
+    {
+      "name": "Liquen",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 8
+    },
+    {
+      "name": "Árbol de caucho",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 8
+    },
+    {
+      "name": "Romerón",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 14
+    },
+    {
+      "name": "Guadua",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 8
+    },
+    {
+      "name": "Yarumo",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 11
+    },
+    {
+      "name": "Flor de Inírida",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 11
+    },
+    {
+      "name": "Bejuco",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 8
+    },
+    {
+      "name": "Cardón guajiro",
+      "facet": "Flora y árboles de los parques",
+      "known_at": 11
+    },
+    {
+      "name": "Línea Negra",
+      "facet": "Pueblos indígenas y territorios sagrados",
+      "known_at": 14
+    },
+    {
+      "name": "Mamo",
+      "facet": "Pueblos indígenas y territorios sagrados",
+      "known_at": 12
+    },
+    {
+      "name": "Tikuna",
+      "facet": "Pueblos indígenas y territorios sagrados",
+      "known_at": 12
+    },
+    {
+      "name": "Nukak",
+      "facet": "Pueblos indígenas y territorios sagrados",
+      "known_at": 13
+    },
+    {
+      "name": "Pueblos en aislamiento voluntario",
+      "facet": "Pueblos indígenas y territorios sagrados",
+      "known_at": 13
+    },
+    {
+      "name": "Uitoto",
+      "facet": "Pueblos indígenas y territorios sagrados",
+      "known_at": 13
+    },
+    {
+      "name": "Pueblito Chairama",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 13
+    },
+    {
+      "name": "Pinturas rupestres de Chiribiquete",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 11
+    },
+    {
+      "name": "Hipogeo",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 14
+    },
+    {
+      "name": "Petroglifo",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 12
+    },
+    {
+      "name": "Patrimonio de la Humanidad",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 9
+    },
+    {
+      "name": "Cultura tayrona",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 10
+    },
+    {
+      "name": "Terrazas de piedra",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 12
+    },
+    {
+      "name": "Serranía de La Lindosa",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 13
+    },
+    {
+      "name": "Arqueólogo",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 6
+    },
+    {
+      "name": "Cerámica precolombina",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 10
+    },
+    {
+      "name": "Reserva de Biosfera",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 13
+    },
+    {
+      "name": "Precolombino",
+      "facet": "Arqueología y patrimonio en los parques",
+      "known_at": 9
+    },
+    {
+      "name": "Sendero",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 3
+    },
+    {
+      "name": "Guía local",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 5
+    },
+    {
+      "name": "Camping",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 4
+    },
+    {
+      "name": "Avistamiento de aves",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 8
+    },
+    {
+      "name": "Careteo",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 8
+    },
+    {
+      "name": "Mal de altura",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 9
+    },
+    {
+      "name": "Hipotermia",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 10
+    },
+    {
+      "name": "Bloqueador solar",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 3
+    },
+    {
+      "name": "Repelente",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 3
+    },
+    {
+      "name": "No dejar rastro",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 11
+    },
+    {
+      "name": "Tarifa de ingreso",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 9
+    },
+    {
+      "name": "Cierre temporal del Tayrona",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 11
+    },
+    {
+      "name": "Ecoturismo",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 8
+    },
+    {
+      "name": "Capacidad de carga",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 14
+    },
+    {
+      "name": "Ecohabs",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 13
+    },
+    {
+      "name": "Alimentar animales silvestres",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 6
+    },
+    {
+      "name": "Plástico de un solo uso",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 9
+    },
+    {
+      "name": "Mirador",
+      "facet": "Turismo, senderos y reglas del parque",
+      "known_at": 5
+    },
+    {
+      "name": "Parques Nacionales Naturales de Colombia",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Guardaparques",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Santuario de Flora y Fauna",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Área protegida",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Tráfico de fauna",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Incendio forestal",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 5
+    },
+    {
+      "name": "Minería ilegal",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Biodiversidad",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Reserva natural de la sociedad civil",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 14
+    },
+    {
+      "name": "Reforestación",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Cambio climático",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Deshielo de glaciares",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Ministerio de Ambiente",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Inderena",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 15
+    },
+    {
+      "name": "Restauración de corales",
+      "facet": "Conservación, guardaparques y Parques Nacionales",
+      "known_at": 11
+    }
+  ]
+}

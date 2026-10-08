@@ -1,0 +1,1141 @@
+{
+  "subcategory": "Fiestas colombianas",
+  "facets": [
+    "Carnavales de Colombia",
+    "Ferias de las ciudades",
+    "Festivales de música colombiana",
+    "Semana Santa y fiestas religiosas",
+    "Navidad y Año Nuevo colombianos",
+    "Fiestas patrias y días festivos",
+    "Disfraces, máscaras y personajes",
+    "Comida típica de fiesta",
+    "Bailes y ritmos de fiesta",
+    "Fiestas regionales y reinados",
+    "Celebraciones familiares y del calendario"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Carnaval de Barranquilla",
+      "facet": "Carnavales de Colombia",
+      "known_at": 2
+    },
+    {
+      "name": "Carnaval de Negros y Blancos",
+      "facet": "Carnavales de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Joselito Carnaval",
+      "facet": "Carnavales de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Batalla de Flores",
+      "facet": "Carnavales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Rey Momo",
+      "facet": "Carnavales de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Reina del Carnaval",
+      "facet": "Carnavales de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Gran Parada",
+      "facet": "Carnavales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "La Guacherna",
+      "facet": "Carnavales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Lectura del Bando",
+      "facet": "Carnavales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Maicena",
+      "facet": "Carnavales de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Espuma de carnaval",
+      "facet": "Carnavales de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Carrozas",
+      "facet": "Carnavales de Colombia",
+      "known_at": 4
+    },
+    {
+      "name": "Día de Negros",
+      "facet": "Carnavales de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Desfile Magno",
+      "facet": "Carnavales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Familia Castañeda",
+      "facet": "Carnavales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Carnaval del Diablo de Riosucio",
+      "facet": "Carnavales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Quien lo vive es quien lo goza",
+      "facet": "Carnavales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Martes de Carnaval",
+      "facet": "Carnavales de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Carnaval de Bogotá",
+      "facet": "Carnavales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Feria de las Flores",
+      "facet": "Ferias de las ciudades",
+      "known_at": 4
+    },
+    {
+      "name": "Silleteros",
+      "facet": "Ferias de las ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Feria de Cali",
+      "facet": "Ferias de las ciudades",
+      "known_at": 5
+    },
+    {
+      "name": "Salsódromo",
+      "facet": "Ferias de las ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Feria de Manizales",
+      "facet": "Ferias de las ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Reinado Internacional del Café",
+      "facet": "Ferias de las ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Desfile de Autos Clásicos y Antiguos",
+      "facet": "Ferias de las ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Cabalgata",
+      "facet": "Ferias de las ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "Superconcierto",
+      "facet": "Ferias de las ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Encuentro de Melómanos y Coleccionistas",
+      "facet": "Ferias de las ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Feria Bonita de Bucaramanga",
+      "facet": "Ferias de las ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Festival Nacional de la Trova",
+      "facet": "Ferias de las ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Fonda paisa",
+      "facet": "Ferias de las ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Feria Internacional del Libro de Bogotá",
+      "facet": "Ferias de las ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Festival de Verano de Bogotá",
+      "facet": "Ferias de las ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Carnaval del Cali Viejo",
+      "facet": "Ferias de las ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Iberoamericano de Teatro",
+      "facet": "Ferias de las ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de la Leyenda Vallenata",
+      "facet": "Festivales de música colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Rey Vallenato",
+      "facet": "Festivales de música colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Rock al Parque",
+      "facet": "Festivales de música colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Festival Petronio Álvarez",
+      "facet": "Festivales de música colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Festival Mono Núñez",
+      "facet": "Festivales de música colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Estéreo Picnic",
+      "facet": "Festivales de música colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Festival Cuna de Acordeones",
+      "facet": "Festivales de música colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Festival Nacional de la Cumbia",
+      "facet": "Festivales de música colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Torneo Internacional del Joropo",
+      "facet": "Festivales de música colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Festival Internacional de Música de Cartagena",
+      "facet": "Festivales de música colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Piqueria vallenata",
+      "facet": "Festivales de música colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Acordeón",
+      "facet": "Festivales de música colombiana",
+      "known_at": 2
+    },
+    {
+      "name": "Caja vallenata",
+      "facet": "Festivales de música colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Guacharaca",
+      "facet": "Festivales de música colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Francisco el Hombre",
+      "facet": "Festivales de música colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Jazz al Parque",
+      "facet": "Festivales de música colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Salsa al Parque",
+      "facet": "Festivales de música colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de Gaitas de Ovejas",
+      "facet": "Festivales de música colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Gaita colombiana",
+      "facet": "Festivales de música colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Marimba de chonta",
+      "facet": "Festivales de música colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Semana Santa de Popayán",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Procesión",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 4
+    },
+    {
+      "name": "Domingo de Ramos",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 6
+    },
+    {
+      "name": "Miércoles de Ceniza",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 7
+    },
+    {
+      "name": "Jueves Santo",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Viernes Santo",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 7
+    },
+    {
+      "name": "Domingo de Resurrección",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Huevos de Pascua",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 3
+    },
+    {
+      "name": "Cuaresma",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Palma de cera",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Visita a los Monumentos",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Pasos de Semana Santa",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Corpus Christi",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Virgen del Carmen",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 10
+    },
+    {
+      "name": "Virgen de Chiquinquirá",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario de Las Lajas",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Monserrate",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 6
+    },
+    {
+      "name": "Divino Niño",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Fiesta de la Candelaria",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Día de San José",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas de San Pacho",
+      "facet": "Semana Santa y fiestas religiosas",
+      "known_at": 12
+    },
+    {
+      "name": "Novena de Aguinaldos",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Día de las Velitas",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Alumbrados navideños",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 3
+    },
+    {
+      "name": "Pesebre",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 3
+    },
+    {
+      "name": "Juegos de aguinaldos",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Villancicos",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 3
+    },
+    {
+      "name": "Mi burrito sabanero",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Los peces en el río",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Niño Dios",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 2
+    },
+    {
+      "name": "Papá Noel",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 1
+    },
+    {
+      "name": "Árbol de Navidad",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 1
+    },
+    {
+      "name": "Muñeco de Año Viejo",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 6
+    },
+    {
+      "name": "Doce uvas",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Vuelta a la manzana con la maleta",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 6
+    },
+    {
+      "name": "Ropa interior amarilla",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Lentejas de Año Nuevo",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Pólvora",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Reyes Magos",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Día de Reyes",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 6
+    },
+    {
+      "name": "Faltan cinco pa' las doce",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Gozos",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Nochebuena",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Navidad y Año Nuevo colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Grito de Independencia",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 5
+    },
+    {
+      "name": "Batalla de Boyacá",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 7
+    },
+    {
+      "name": "Florero de Llorente",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 8
+    },
+    {
+      "name": "Puente festivo",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 5
+    },
+    {
+      "name": "Ley Emiliani",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 14
+    },
+    {
+      "name": "Desfile militar del 20 de julio",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 8
+    },
+    {
+      "name": "Día del Trabajo",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 5
+    },
+    {
+      "name": "Bandera de Colombia",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 1
+    },
+    {
+      "name": "Himno Nacional de Colombia",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 3
+    },
+    {
+      "name": "Puente de Boyacá",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 8
+    },
+    {
+      "name": "Independencia de Cartagena",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Diversidad Étnica y Cultural",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 9
+    },
+    {
+      "name": "Día de la Afrocolombianidad",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Colombia",
+      "facet": "Fiestas patrias y días festivos",
+      "known_at": 4
+    },
+    {
+      "name": "Marimonda",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 8
+    },
+    {
+      "name": "Torito",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Congo",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Monocuco",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Matachín",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "María Moñitos",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Negrita Puloy",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Pocaropa",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Sombrero vueltiao",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 4
+    },
+    {
+      "name": "Pollera",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 6
+    },
+    {
+      "name": "Sombrero aguadeño",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Carriel",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 8
+    },
+    {
+      "name": "Ruana",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 5
+    },
+    {
+      "name": "Poncho",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 6
+    },
+    {
+      "name": "Alpargatas",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Cabezudos",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Zanqueros",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Máscara de carnaval",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 2
+    },
+    {
+      "name": "Diablo de Riosucio",
+      "facet": "Disfraces, máscaras y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Natilla",
+      "facet": "Comida típica de fiesta",
+      "known_at": 3
+    },
+    {
+      "name": "Buñuelos",
+      "facet": "Comida típica de fiesta",
+      "known_at": 2
+    },
+    {
+      "name": "Tamal",
+      "facet": "Comida típica de fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "Lechona",
+      "facet": "Comida típica de fiesta",
+      "known_at": 5
+    },
+    {
+      "name": "Ajiaco",
+      "facet": "Comida típica de fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "Sancocho",
+      "facet": "Comida típica de fiesta",
+      "known_at": 3
+    },
+    {
+      "name": "Hojuelas",
+      "facet": "Comida típica de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Arequipe",
+      "facet": "Comida típica de fiesta",
+      "known_at": 2
+    },
+    {
+      "name": "Manjar blanco",
+      "facet": "Comida típica de fiesta",
+      "known_at": 7
+    },
+    {
+      "name": "Bandeja paisa",
+      "facet": "Comida típica de fiesta",
+      "known_at": 3
+    },
+    {
+      "name": "Arepa de huevo",
+      "facet": "Comida típica de fiesta",
+      "known_at": 5
+    },
+    {
+      "name": "Empanada",
+      "facet": "Comida típica de fiesta",
+      "known_at": 1
+    },
+    {
+      "name": "Pandebono",
+      "facet": "Comida típica de fiesta",
+      "known_at": 4
+    },
+    {
+      "name": "Chicha",
+      "facet": "Comida típica de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Masato",
+      "facet": "Comida típica de fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Mazamorra",
+      "facet": "Comida típica de fiesta",
+      "known_at": 7
+    },
+    {
+      "name": "Dulce de brevas",
+      "facet": "Comida típica de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Postre de natas",
+      "facet": "Comida típica de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Siete potajes",
+      "facet": "Comida típica de fiesta",
+      "known_at": 13
+    },
+    {
+      "name": "Pernil de cerdo",
+      "facet": "Comida típica de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Champús",
+      "facet": "Comida típica de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Mote de queso",
+      "facet": "Comida típica de fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Fritanga",
+      "facet": "Comida típica de fiesta",
+      "known_at": 6
+    },
+    {
+      "name": "Cumbia",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 3
+    },
+    {
+      "name": "Vallenato",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 3
+    },
+    {
+      "name": "Salsa",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 2
+    },
+    {
+      "name": "Champeta",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 6
+    },
+    {
+      "name": "Mapalé",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Porro",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Bambuco",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Joropo",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 8
+    },
+    {
+      "name": "Currulao",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 10
+    },
+    {
+      "name": "Pasillo",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Garabato",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Puya",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Bullerengue",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Guabina",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Sanjuanero",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 9
+    },
+    {
+      "name": "Torbellino",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 12
+    },
+    {
+      "name": "Chirimía",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Merengue",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 5
+    },
+    {
+      "name": "Reguetón",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 2
+    },
+    {
+      "name": "Crossover",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 11
+    },
+    {
+      "name": "Hora loca",
+      "facet": "Bailes y ritmos de fiesta",
+      "known_at": 5
+    },
+    {
+      "name": "Señorita Colombia",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 6
+    },
+    {
+      "name": "Festival Folclórico y Reinado Nacional del Bambuco",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 11
+    },
+    {
+      "name": "Fiestas del Mar",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 11
+    },
+    {
+      "name": "Festival del Burro",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 11
+    },
+    {
+      "name": "Reinado Nacional de la Panela",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 13
+    },
+    {
+      "name": "Reinado Nacional del Coco",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 14
+    },
+    {
+      "name": "Festival Nacional del Porro",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Cometas de Villa de Leyva",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 8
+    },
+    {
+      "name": "Festival de Luces de Villa de Leyva",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 11
+    },
+    {
+      "name": "Coleo",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 9
+    },
+    {
+      "name": "Encuentro Mundial de Coleo",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 13
+    },
+    {
+      "name": "Fiesta de la Cosecha",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 13
+    },
+    {
+      "name": "Fiestas del Retorno",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 13
+    },
+    {
+      "name": "Corona de reina",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 3
+    },
+    {
+      "name": "Fiestas de San Pedro",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 10
+    },
+    {
+      "name": "Festival de la Arepa",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 12
+    },
+    {
+      "name": "Tejo",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 7
+    },
+    {
+      "name": "Fiestas de la Virgen del Mar",
+      "facet": "Fiestas regionales y reinados",
+      "known_at": 14
+    },
+    {
+      "name": "Quinceañero",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 4
+    },
+    {
+      "name": "Primera Comunión",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 5
+    },
+    {
+      "name": "Bautizo",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 4
+    },
+    {
+      "name": "Cumpleaños",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 1
+    },
+    {
+      "name": "Torta de cumpleaños",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 1
+    },
+    {
+      "name": "Piñata",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 2
+    },
+    {
+      "name": "Bolsa de sorpresas",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 3
+    },
+    {
+      "name": "Día de la Madre",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 2
+    },
+    {
+      "name": "Día del Padre",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 2
+    },
+    {
+      "name": "Día del Amor y la Amistad",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 5
+    },
+    {
+      "name": "Amigo secreto",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 5
+    },
+    {
+      "name": "Halloween",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 2
+    },
+    {
+      "name": "Día de los Niños",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 3
+    },
+    {
+      "name": "Matrimonio",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 3
+    },
+    {
+      "name": "Ceremonia de grado",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 5
+    },
+    {
+      "name": "Día del Maestro",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 6
+    },
+    {
+      "name": "Baby shower",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 6
+    },
+    {
+      "name": "Serenata",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 6
+    },
+    {
+      "name": "Mariachi",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 4
+    },
+    {
+      "name": "Día del Idioma",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 9
+    },
+    {
+      "name": "Bodas de oro",
+      "facet": "Celebraciones familiares y del calendario",
+      "known_at": 8
+    }
+  ]
+}

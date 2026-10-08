@@ -14051,6 +14051,1924 @@
         "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "background": null
+    },
+    {
+      "id": "q-0514",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Animales de Colombia",
+      "bundle": "base",
+      "description": "Tiene cara de marrano, olor de perfume barato y cero ganas de que lo confundan.",
+      "question": "Este animal de las selvas colombianas se llama saíno y parece un marrano salvaje, pero no lo es. ¿A qué grupo de animales pertenece en realidad?",
+      "answer": "Los pecaríes",
+      "wrong_answers": [
+        "Los jabalíes",
+        "Los tapires",
+        "Los hipopótamos"
+      ],
+      "hints": [
+        "Es un grupo que solo vive en América, desde el sur de Estados Unidos hasta Argentina.",
+        "Se parecen a los cerdos, pero son parientes separados desde hace millones de años.",
+        "A este grupo los científicos también lo llaman tayasuidos."
+      ],
+      "fun_fact": "El saíno tiene una glándula en la espalda que suelta un olor fuerte, y la manada lo usa para reconocerse entre sí.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Young_collared_peccary_standing_on_ground_-_DPLA_-_bddb5c0b1e099ffeb8f2f9a203772594.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_collared_peccary_standing_on_ground_-_DPLA_-_bddb5c0b1e099ffeb8f2f9a203772594.jpg",
+        "credit": "Garst, Warren, 1922-2016, photographer · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0515",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Bebidas colombianas",
+      "bundle": "base",
+      "description": "Antes de ser la chocolatina de tu lonchera, esto vivía colgado de un árbol.",
+      "question": "Crece en árboles de clima caliente, sus semillas vienen dentro de una mazorca grande y con ellas se hace el chocolate. ¿Qué es?",
+      "answer": "El cacao",
+      "wrong_answers": [
+        "El café",
+        "La vainilla",
+        "El coco"
+      ],
+      "hints": [
+        "Sus semillas se tuestan y se muelen.",
+        "Con él se hace la bebida caliente que en Colombia se toma con queso.",
+        "Su nombre empieza por “ca” y termina en “ao”."
+      ],
+      "fun_fact": "Las semillas de cacao son tan amargas recién sacadas de la mazorca que nadie las confundiría con chocolate.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Reserve_coffee_farm_in_Colombia_%284604557800%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReserve_coffee_farm_in_Colombia_%284604557800%29.jpg",
+        "credit": "U. S. Fish and Wildlife Service - Northeast Region · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0516",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Capitales del mundo",
+      "bundle": "base",
+      "description": "Una capital con un nombre tan cortico que cabe entero dentro de un iglú.",
+      "question": "Estás viendo un documental sobre Groenlandia y el narrador cuenta que el nombre de su capital, Nuuk, es una palabra en idioma groenlandés. ¿Qué significa?",
+      "answer": "Cabo",
+      "wrong_answers": [
+        "Ballena",
+        "Hielo",
+        "Aurora"
+      ],
+      "hints": [
+        "El nombre tiene que ver con la forma del terreno donde está la ciudad.",
+        "La ciudad está en la punta de una península, entre fiordos que se meten en el mar.",
+        "Es el mismo tipo de lugar que el de Buena Esperanza en África o el de Hornos en Suramérica."
+      ],
+      "fun_fact": "Antes Nuuk se llamaba Godthåb, un nombre danés que significa 'Buena Esperanza'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Closeup_colorful_houses_Nuuk_Greenland.jpg/3840px-Closeup_colorful_houses_Nuuk_Greenland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACloseup_colorful_houses_Nuuk_Greenland.jpg",
+        "credit": "amanderson2 · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0517",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Carnaval de Barranquilla",
+      "bundle": "colombia",
+      "description": "En esta región el 'ajá' sirve para saludar, preguntar, quejarse y dar la razón, todo a la vez.",
+      "question": "Llegas al Carnaval de Barranquilla y todo el mundo dice 'ajá', 'eche' y '¡qué nota!'. Con esa forma de hablar, ¿cómo te dirán en Colombia que son esas personas?",
+      "answer": "Costeños",
+      "wrong_answers": [
+        "Paisas",
+        "Rolos",
+        "Vallunos"
+      ],
+      "hints": [
+        "Se les llama según la región de Colombia de donde vienen.",
+        "Viven cerca del mar Caribe, donde hace calor todo el año.",
+        "La palabra viene de 'costa'."
+      ],
+      "fun_fact": "Los costeños suelen 'comerse' la s al final de las palabras, y por eso 'los cocos' puede sonar como 'lo' coco'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Congo_grande_dancers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACongo_grande_dancers.jpg",
+        "credit": "Camilo1982 · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0518",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Clubes de fútbol colombianos",
+      "bundle": "base",
+      "description": "El único del estadio al que le pagan por gritarle a la gente sin que lo expulsen.",
+      "question": "Estás viendo un partido y el narrador habla de la persona que da instrucciones a los jugadores desde la orilla de la cancha. ¿Cuál de estas palabras NO es otro nombre para esa persona?",
+      "answer": "Árbitro",
+      "wrong_answers": [
+        "Técnico",
+        "Entrenador",
+        "DT"
+      ],
+      "hints": [
+        "Tres de las palabras nombran a la misma persona del banquillo.",
+        "La palabra intrusa nombra a alguien que también corre por la cancha, pero no es de ningún equipo.",
+        "Esa persona lleva silbato y tarjetas amarillas y rojas."
+      ],
+      "fun_fact": "En Colombia a los directores técnicos también les dicen 'profe', aunque no den clases en ningún colegio.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Gary_White_On_The_Sidelines_During_FiFA_International_Game.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGary_White_On_The_Sidelines_During_FiFA_International_Game.jpg",
+        "credit": "Hemstead · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0520",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Continentes",
+      "bundle": "base",
+      "description": "Unos vecinos que contaban los días mejor que tu calendario de la nevera.",
+      "question": "Pista 1: escribían con glifos, unos dibujitos que eran palabras y sonidos. Pista 2: construyeron la gran pirámide de Chichén Itzá. Pista 3: millones de personas en México y Guatemala todavía hablan sus idiomas. ¿Qué pueblo es?",
+      "answer": "Los mayas",
+      "wrong_answers": [
+        "Los incas",
+        "Los muiscas",
+        "Los vikingos"
+      ],
+      "hints": [
+        "Vivían en Centroamérica y el sur de México, no en los Andes.",
+        "Usaban el cero mucho antes que los europeos.",
+        "Su nombre también es el de una famosa abeja de dibujos animados."
+      ],
+      "fun_fact": "Los mayas usaban el cero en sus cuentas hace más de 1.500 años, mucho antes de que se conociera en Europa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Cenote_Zaci%2C_Valladolid_de_Yucatan%2C_Julio_2012_04.jpg/3840px-Cenote_Zaci%2C_Valladolid_de_Yucatan%2C_Julio_2012_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACenote_Zaci%2C_Valladolid_de_Yucatan%2C_Julio_2012_04.jpg",
+        "credit": "Kirt Edblom · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0521",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Continentes",
+      "bundle": "base",
+      "description": "Una región donde el frío es tan serio que hasta los muebles vienen en caja para armar.",
+      "question": "Soy una región del norte de Europa, tierra de vikingos, fiordos y auroras boreales. Me llamo Escandinavia. ¿Qué tres países me forman?",
+      "answer": "Noruega, Suecia y Dinamarca",
+      "wrong_answers": [
+        "Irlanda, Escocia y Gales",
+        "Alemania, Polonia y Austria",
+        "Rusia, Estonia y Letonia"
+      ],
+      "hints": [
+        "Son tres reinos que todavía tienen reyes y reinas.",
+        "Sus idiomas se parecen tanto que sus habitantes casi se entienden entre ellos.",
+        "Uno de ellos inspiró el paisaje de 'Frozen' y otro es la tierra de los LEGO."
+      ],
+      "fun_fact": "Los noruegos, suecos y daneses pueden entenderse bastante bien hablando cada uno en su propio idioma.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Viking_Ship_Museum_Roskilde.JPG/3840px-Viking_Ship_Museum_Roskilde.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AViking_Ship_Museum_Roskilde.JPG",
+        "credit": "Boatbuilder · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0522",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "Continentes",
+      "bundle": "base",
+      "description": "Un palacio con tantos cuartos que perderse ahí era casi una tradición imperial.",
+      "question": "Este enorme palacio de Pekín, la Ciudad Prohibida, se construyó a comienzos del siglo XV. ¿Qué emperador ordenó construirlo?",
+      "answer": "El emperador Yongle",
+      "wrong_answers": [
+        "El emperador Qin Shi Huang",
+        "El emperador Kublai Kan",
+        "El emperador Qianlong"
+      ],
+      "hints": [
+        "Pertenecía a la dinastía Ming.",
+        "Fue él quien trasladó la capital de Nankín a Pekín.",
+        "Su nombre de reinado significa 'felicidad perpetua'."
+      ],
+      "fun_fact": "La Ciudad Prohibida fue el hogar de 24 emperadores de China durante casi 500 años.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/China_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChina_%28Beijing%29_Aerial_view_of_Forbidden_City_%2838884882275%29.jpg",
+        "credit": "Güldem Üstün from Istanbul, TURKEY · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0523",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Feria de las Flores",
+      "bundle": "colombia",
+      "description": "Una ciudad metida en una olla gigante, pero de las bonitas y con montañas de tapa.",
+      "question": "En clase de historia, la profe explica dónde se fundaron las ciudades y lanza una analogía: \"La Sabana es a Bogotá como el Valle de Aburrá es a…\". ¿Qué ciudad completa la frase?",
+      "answer": "Medellín",
+      "wrong_answers": [
+        "Cali",
+        "Bucaramanga",
+        "Manizales"
+      ],
+      "hints": [
+        "Es una ciudad de Antioquia.",
+        "Por el fondo de ese valle corre un río que tiene el mismo nombre que la ciudad.",
+        "Es la ciudad del Metrocable y de la Feria de las Flores."
+      ],
+      "fun_fact": "En el Valle de Aburrá no hay una sola ciudad: allí viven diez municipios, unidos en un área metropolitana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Plaza_de_Bol%C3%ADvar_-_Flickr_-_Hernanenrique.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_de_Bol%C3%ADvar_-_Flickr_-_Hernanenrique.jpg",
+        "credit": "Hernán Enrique Carvajal Cortés from Paris, France · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0524",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Feria de las Flores",
+      "bundle": "base",
+      "description": "Una flor con nombre de barón sueco y de imperio andino a la vez.",
+      "question": "Tres pistas para una flor: su nombre científico honra a un barón sueco amigo del botánico Linneo, también la llaman \"lirio de los incas\" y sus pétalos tienen rayitas que parecen pintadas a mano. ¿Cómo se llama en Colombia?",
+      "answer": "Astromelia",
+      "wrong_answers": [
+        "Gerbera",
+        "Crisantemo",
+        "Clavel"
+      ],
+      "hints": [
+        "Es nativa de Suramérica y se cultiva muchísimo en la Sabana de Bogotá y en Antioquia.",
+        "Es muy común en los ramos que se venden en supermercados y floristerías.",
+        "Su nombre suena un poco a 'astro', como las estrellas."
+      ],
+      "fun_fact": "Las astromelias cortadas pueden durar hasta unas dos semanas en un florero, por eso les encantan a los floristas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Cuando_pasa_un_silletero%2C_es_medellin_el_que_pasa.jpg/3840px-Cuando_pasa_un_silletero%2C_es_medellin_el_que_pasa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACuando_pasa_un_silletero%2C_es_medellin_el_que_pasa.jpg",
+        "credit": "Mariaalejandragallego · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0525",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Fiestas colombianas",
+      "bundle": "colombia",
+      "description": "Lo que hace que los perros del barrio se escondan debajo de la cama en diciembre.",
+      "question": "Es 24 de diciembre y tu tío saca voladores, totes y luces de bengala. Tu mamá le grita: «¡Cuidado con esa…!». ¿Con qué palabra se le dice en Colombia a todo eso que explota y echa chispas?",
+      "answer": "Pólvora",
+      "wrong_answers": [
+        "Serpentina",
+        "Natilla",
+        "Piñata"
+      ],
+      "hints": [
+        "Hace mucho ruido y llena el cielo de luces.",
+        "Los niños nunca deben manipularla, porque puede quemar.",
+        "Su nombre suena parecido a «polvo»."
+      ],
+      "fun_fact": "La pólvora se inventó en China hace más de mil años.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Christmas_med_19.jpg/3840px-Christmas_med_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChristmas_med_19.jpg",
+        "credit": "Staticshakedown · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0526",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Fiestas colombianas",
+      "bundle": "base",
+      "description": "Unas esculturas que no caminan, pero salen a la calle cada año.",
+      "question": "Estás en Popayán en Semana Santa y ves pasar, cargados en hombros, el del Señor del Huerto, el de la Dolorosa y el del Santo Sepulcro. ¿Con qué palabra se nombran los tres?",
+      "answer": "Pasos",
+      "wrong_answers": [
+        "Carrozas",
+        "Comparsas",
+        "Pesebres"
+      ],
+      "hints": [
+        "Son plataformas de madera con esculturas religiosas encima.",
+        "Los llevan los «cargueros», caminando muy despacio.",
+        "Su nombre es el mismo que el de lo que das al caminar."
+      ],
+      "fun_fact": "Las procesiones de Semana Santa de Popayán fueron declaradas Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Calle_silenciosa_en_centro_hist%C3%B3rico_de_Popay%C3%A1n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalle_silenciosa_en_centro_hist%C3%B3rico_de_Popay%C3%A1n.jpg",
+        "credit": "Uhernandez · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0527",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Frutas exóticas de Colombia",
+      "bundle": "colombia",
+      "description": "Uno de estos nombres se coló en el frutero, pero en realidad venía en vaso.",
+      "question": "Estás leyendo el menú de una juguería en la costa colombiana. ¿Cuál de estos nombres NO es una fruta?",
+      "answer": "Champola",
+      "wrong_answers": [
+        "Borojó",
+        "Zapote",
+        "Pitahaya"
+      ],
+      "hints": [
+        "Tres crecen en un árbol o en una planta; el otro sale de la licuadora.",
+        "El intruso se sirve frío y lleva leche.",
+        "Se prepara licuando guanábana con leche y azúcar."
+      ],
+      "fun_fact": "La champola de guanábana es típica del Caribe colombiano, y en Cuba también se toma una bebida con ese mismo nombre.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Colombia%2C_Cartagena%2C_Instituto_Geogr%C3%A1fico_Agust%C3%ADn_Codazzi.jpg/3840px-Colombia%2C_Cartagena%2C_Instituto_Geogr%C3%A1fico_Agust%C3%ADn_Codazzi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia%2C_Cartagena%2C_Instituto_Geogr%C3%A1fico_Agust%C3%ADn_Codazzi.jpg",
+        "credit": "Dr. Thomas Liptak · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0529",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Inventores famosos",
+      "bundle": "base",
+      "description": "Un aparato que se pasa la vida brillando, hasta el día en que hace «tic» y se queda dormido para siempre.",
+      "question": "Mira este bombillo antiguo: ¿qué pieza se pone tan caliente que brilla y da luz?",
+      "answer": "El filamento",
+      "wrong_answers": [
+        "La rosca",
+        "El vidrio",
+        "El tornillo"
+      ],
+      "hints": [
+        "Está en el centro, dentro de la bola de vidrio.",
+        "Es un hilo de metal muy delgadito.",
+        "Cuando el bombillo se funde, normalmente es porque esa pieza se rompió."
+      ],
+      "fun_fact": "Los filamentos de los bombillos modernos son de tungsteno, un metal que aguanta más de 3.000 grados sin derretirse.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Lamp_with_lit_incandescent_light_bulb_and_black_background.jpg/3840px-Lamp_with_lit_incandescent_light_bulb_and_black_background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALamp_with_lit_incandescent_light_bulb_and_black_background.jpg",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0532",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Juegos de mesa",
+      "bundle": "base",
+      "description": "Un juego donde mentir con cara de póker es parte de las reglas, no un problema.",
+      "question": "Se juega con cubiletes y dados escondidos; cada jugador apuesta cuántos dados de un mismo número hay en toda la mesa; y los piratas lo juegan en 'Piratas del Caribe: el cofre de la muerte'. ¿Cómo se llama este juego?",
+      "answer": "Perudo",
+      "wrong_answers": [
+        "Generala",
+        "Yahtzee",
+        "Craps"
+      ],
+      "hints": [
+        "Para ganar hay que saber mentir y saber cuándo el otro miente.",
+        "Cuando no le crees a alguien, dices '¡Dudo!'.",
+        "Su nombre suena a un país sudamericano famoso por Machu Picchu."
+      ],
+      "fun_fact": "En inglés lo llaman 'Liar's Dice', es decir, 'dados del mentiroso'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Macke_Wuerfelspiel-JD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMacke_Wuerfelspiel-JD.jpg",
+        "credit": "original by Angela Monika Arnold, crops and changes by user:JD · CC BY 2.0 de · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0535",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Leyendas colombianas",
+      "bundle": "base",
+      "description": "El amuleto favorito de todo el mundo, menos del dueño original.",
+      "question": "Adivina: «Me llevan en el bolsillo o colgado del llavero; fui parte del cuerpo de un animal que no caminaba sino que saltaba; y dicen que le doy buena suerte a quien me carga». ¿Qué soy?",
+      "answer": "Una pata de conejo",
+      "wrong_answers": [
+        "Una herradura",
+        "Un trébol de cuatro hojas",
+        "Un colmillo de jaguar"
+      ],
+      "hints": [
+        "No soy de metal ni soy una planta.",
+        "El animal del que vengo tiene orejas largas.",
+        "Bugs Bunny no me cargaría nunca."
+      ],
+      "fun_fact": "Según la tradición popular, la pata que traía más suerte era la trasera izquierda del conejo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Old_key_on_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_key_on_table.jpg",
+        "credit": "Daniele from Domodossola, Italia · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0537",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Mar",
+      "bundle": "base",
+      "description": "Una cantante que nunca sale a dar conciertos porque no tiene pies.",
+      "question": "Estás viendo una película de criaturas fantásticas y tu primo te explica: «Mitad hombre y mitad caballo» es a centauro como «mitad mujer y mitad pez» es a…",
+      "answer": "Sirena",
+      "wrong_answers": [
+        "Hada",
+        "Ninfa",
+        "Medusa"
+      ],
+      "hints": [
+        "Vive en el mar, aunque es un ser de leyenda.",
+        "Según las historias, canta muy bonito para atraer a los marineros.",
+        "Ariel, la de la película de Disney, es una de ellas."
+      ],
+      "fun_fact": "Cuando Cristóbal Colón vio manatíes en el Caribe, escribió que había visto sirenas, ¡pero que no eran tan bonitas como las pintaban!",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%C3%89douard_Adam_-_Steam_sailing_ship_Finsbury_in_a_stormy_sea_%281881%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%C3%89douard_Adam_-_Steam_sailing_ship_Finsbury_in_a_stormy_sea_%281881%29.jpg",
+        "credit": "Édouard Adam · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0538",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Mar",
+      "bundle": "base",
+      "description": "Unos animalitos tan pequeños que, para que alguien los note, tuvieron que construir algo visible desde el espacio.",
+      "question": "Los arrecifes de coral están hechos por millones de pólipos diminutos como los de la foto. ¿A qué grupo de animales pertenecen?",
+      "answer": "Cnidarios",
+      "wrong_answers": [
+        "Poríferos",
+        "Equinodermos",
+        "Moluscos"
+      ],
+      "hints": [
+        "No son plantas ni rocas: son animales de verdad.",
+        "Tienen tentáculos con células urticantes para cazar su comida.",
+        "Son parientes cercanos de las medusas y las anémonas."
+      ],
+      "fun_fact": "La Gran Barrera de Coral de Australia, construida por pólipos, es la estructura hecha por seres vivos más grande del mundo y se puede ver desde el espacio.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Coral_%28Goniopora_lobata%29%2C_islas_Ad_Dimaniyat%2C_Om%C3%A1n%2C_2024-08-13%2C_DD_64.jpg/3840px-Coral_%28Goniopora_lobata%29%2C_islas_Ad_Dimaniyat%2C_Om%C3%A1n%2C_2024-08-13%2C_DD_64.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoral_%28Goniopora_lobata%29%2C_islas_Ad_Dimaniyat%2C_Om%C3%A1n%2C_2024-08-13%2C_DD_64.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0540",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Mundiales de fútbol",
+      "bundle": "colombia",
+      "description": "Hay goles que se celebran una vez y goles que tu papá sigue celebrando en cada almuerzo familiar.",
+      "question": "Tu papá todavía se emociona cuando ve en el celular el golazo de James a Uruguay: control de pecho y volea, y Colombia a cuartos de final. ¿En qué año fue ese gol?",
+      "answer": "2014",
+      "wrong_answers": [
+        "2010",
+        "2018",
+        "2022"
+      ],
+      "hints": [
+        "Fue en un Mundial en el que James terminó como goleador del torneo.",
+        "Ese Mundial se jugó en Sudamérica, en el país vecino más grande.",
+        "Fue el mismo Mundial en el que Alemania le ganó 7-1 a Brasil."
+      ],
+      "fun_fact": "Ese gol ganó el Premio Puskás de la FIFA al mejor gol del año 2014.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Colombia_fan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColombia_fan.jpg",
+        "credit": "Agência Brasil · CC BY 3.0 br · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0543",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Música clásica",
+      "bundle": "base",
+      "description": "Un dibujo animado donde la peluquería termina en ópera y la ópera termina en desastre.",
+      "question": "Estás viendo el clásico dibujo animado 'El conejo de Sevilla'. Bugs Bunny es al barbero como ¿quién es al cliente que termina afeitado y peinado a la fuerza?",
+      "answer": "Elmer Gruñón",
+      "wrong_answers": [
+        "El Pato Lucas",
+        "Porky",
+        "Sam Bigotes"
+      ],
+      "hints": [
+        "Es un personaje de los Looney Tunes.",
+        "Es un cazador que siempre persigue al conejo.",
+        "Es calvo y no le salen bien las erres."
+      ],
+      "fun_fact": "El dibujo usa la música de 'El barbero de Sevilla' de Rossini, quien según se cuenta compuso esa ópera en menos de tres semanas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Hollywood_bowl_and_sign.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHollywood_bowl_and_sign.jpg",
+        "credit": "Matthew Field, http://www.photography.mattfield.com · CC BY-SA 2.5 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0544",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Océanos",
+      "bundle": "base",
+      "description": "El mar también se sonroja, pero no precisamente de pena.",
+      "question": "Estás de vacaciones en la playa y de pronto el mar se ve rojizo, como si le hubieran echado jugo de mora. Dicen que es una \"marea roja\". ¿De dónde sale ese color?",
+      "answer": "De millones de algas diminutas",
+      "wrong_answers": [
+        "Del reflejo del atardecer",
+        "De arena roja del fondo",
+        "Del óxido de barcos hundidos"
+      ],
+      "hints": [
+        "El color viene de algo que está vivo.",
+        "Son tan pequeñitos que no se ven a simple vista, pero cuando son millones pintan el agua.",
+        "Es un tipo de planta marina microscópica que se multiplica muchísimo."
+      ],
+      "fun_fact": "Algunas de esas algas microscópicas producen sustancias tóxicas, por eso durante una marea roja a veces se prohíbe comer mariscos de la zona.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg/3840px-Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHavelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0545",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Océanos",
+      "bundle": "base",
+      "description": "Allá abajo el agua aprieta más que un abrazo de la abuela.",
+      "question": "Mira este robot submarino bajando a las profundidades. Si amarras un vaso de icopor por fuera y lo llevas hasta la zona hadal, a más de 6.000 metros, ¿qué le pasa al vaso?",
+      "answer": "Se encoge y queda en miniatura",
+      "wrong_answers": [
+        "Explota en mil pedacitos",
+        "Se infla como un globo",
+        "Se derrite por el calor"
+      ],
+      "hints": [
+        "Piensa en todo el peso del agua que hay encima del vaso.",
+        "La presión allá abajo es cientos de veces mayor que en la superficie.",
+        "El icopor tiene burbujitas de aire, y la presión las aplasta."
+      ],
+      "fun_fact": "Los científicos en expediciones de mar profundo suelen decorar vasos de icopor, los mandan al fondo y vuelven como recuerdos del tamaño de un dedal.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Ex1402-dive03.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEx1402-dive03.webm",
+        "credit": "NOAA Okeanos Explorer · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0546",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "Océanos",
+      "bundle": "base",
+      "description": "Un matrimonio donde uno de los dos claramente se quedó con la mejor parte del mercado.",
+      "question": "Imagina que encuentras una pareja de rapes abisales de una especie como Ceratias holboelli. La hembra es gigante comparada con el macho, que vive pegado a ella. ¿Hasta cuántas veces más larga que el macho puede ser la hembra?",
+      "answer": "Unas 60 veces",
+      "wrong_answers": [
+        "Unas 2 veces",
+        "Unas 6 veces",
+        "Unas 600 veces"
+      ],
+      "hints": [
+        "La diferencia es enorme, mucho más que entre un perro grande y uno pequeño.",
+        "El macho es tan chiquito que se queda pegado a la hembra el resto de su vida.",
+        "Si la hembra midiera lo que un carro, el macho sería del tamaño de un dedo."
+      ],
+      "fun_fact": "En algunos rapes abisales el macho se fusiona con la hembra hasta compartir su sangre, y una sola hembra puede llevar varios machos pegados.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Deep_sea_corals%2C_Wagner_Seamount.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeep_sea_corals%2C_Wagner_Seamount.jpg",
+        "credit": "Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0547",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Océanos",
+      "bundle": "base",
+      "description": "El mar tiene horario de oficina: se va, vuelve y se vuelve a ir.",
+      "question": "Por la mañana haces un castillo de arena en la playa justo en la bajamar, cuando el agua está más lejos. ¿Más o menos cuántas horas pasan hasta que vuelve a haber bajamar?",
+      "answer": "Unas 12 horas",
+      "wrong_answers": [
+        "Unas 2 horas",
+        "Unas 72 horas",
+        "Unas 240 horas"
+      ],
+      "hints": [
+        "La marea sube y baja varias veces en un mismo día.",
+        "En la mayoría de playas hay dos mareas bajas al día.",
+        "Es aproximadamente medio día."
+      ],
+      "fun_fact": "Las mareas se atrasan unos 50 minutos cada día porque siguen el ritmo de la Luna, no el del Sol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Low_tide_at_Tenby%2C_United_Kingdom.jpg/3840px-Low_tide_at_Tenby%2C_United_Kingdom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALow_tide_at_Tenby%2C_United_Kingdom.jpg",
+        "credit": "Ввласенко · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0548",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Países del mundo",
+      "bundle": "base",
+      "description": "Unos señores de piedra que llevan siglos mirando el horizonte sin pestañear.",
+      "question": "¿Cómo se llaman estas enormes estatuas de piedra de la Isla de Pascua?",
+      "answer": "Moáis",
+      "wrong_answers": [
+        "Tótems",
+        "Menhires",
+        "Esfinges"
+      ],
+      "hints": [
+        "Están en una isla perdida en medio del océano Pacífico que pertenece a Chile.",
+        "Casi todas son cabezas gigantes con narices largas y cejas serias.",
+        "En la película \"Una noche en el museo\", una de ellas le dice a Ben Stiller \"Dum-Dum\"."
+      ],
+      "fun_fact": "La Isla de Pascua tiene cerca de 900 moáis, y muchos tienen cuerpo enterrado debajo de la cabeza.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Amanecer_en_tongakiri%2C_isla_de_pascua_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmanecer_en_tongakiri%2C_isla_de_pascua_%282%29.JPG",
+        "credit": "Claire Provost · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0550",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Parques naturales de Colombia",
+      "bundle": "base",
+      "description": "Una playa con nombre de caracol, pero que no camina despacio.",
+      "question": "Soy una playa famosa cerca de Santa Marta y me llamo Bahía Concha. ¿Qué significa la palabra «bahía» de mi nombre?",
+      "answer": "Una entrada del mar en la costa",
+      "wrong_answers": [
+        "Una montaña junto al mar",
+        "Un río que llega al mar",
+        "Una isla en medio del mar"
+      ],
+      "hints": [
+        "Tiene que ver con la forma de la orilla.",
+        "El agua queda rodeada de tierra por casi todos lados, y las olas llegan más suaves.",
+        "Es como si el mar le diera un mordisco a la tierra."
+      ],
+      "fun_fact": "Bahía Concha queda dentro del Parque Nacional Natural Tayrona, a pocos minutos de Santa Marta.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Palm_trees_with_cruise_liner_near_Catalina_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalm_trees_with_cruise_liner_near_Catalina_Island.jpg",
+        "credit": "Mstyslav Chernov · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0551",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Piratas",
+      "bundle": "base",
+      "description": "Antes de Netflix, los romanos se entretenían persiguiendo piratas por todo el Mediterráneo.",
+      "question": "Estás viendo un documental de historia: el general romano Pompeyo recibe una flota enorme y en pocos meses limpia el mar Mediterráneo de piratas. ¿En qué siglo ocurrió?",
+      "answer": "Siglo I a. C.",
+      "wrong_answers": [
+        "Siglo V a. C.",
+        "Siglo III d. C.",
+        "Siglo VIII d. C."
+      ],
+      "hints": [
+        "Fue en tiempos de la República romana, antes de que hubiera emperadores.",
+        "Pompeyo fue rival de Julio César.",
+        "Fue pocas décadas antes del nacimiento de Cristo."
+      ],
+      "fun_fact": "Unos años antes, el joven Julio César fue secuestrado por piratas y, ofendido, les exigió que pidieran un rescate más alto por él.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Pomp%C3%A9i_%28N%C3%AEmes%29_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APomp%C3%A9i_%28N%C3%AEmes%29_04.jpg",
+        "credit": "Finoskov · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0552",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Regiones de Colombia",
+      "bundle": "colombia",
+      "description": "Un documental donde alguien se metió en la foto equivocada.",
+      "question": "En un documental sobre la región Andina de Colombia salen cuatro personas, y una no es de esa región. ¿Cuál es?",
+      "answer": "Un chocoano",
+      "wrong_answers": [
+        "Un boyacense",
+        "Un tolimense",
+        "Un huilense"
+      ],
+      "hints": [
+        "El que se coló vive cerca del mar, no en las montañas.",
+        "Su departamento es de los más lluviosos del mundo.",
+        "Su capital es Quibdó."
+      ],
+      "fun_fact": "El Chocó es uno de los lugares más lluviosos del planeta: en algunas zonas llueve casi todos los días del año.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Nevado_del_quindio_-_servicio_geologico_de_colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_quindio_-_servicio_geologico_de_colombia.jpg",
+        "credit": "Servicio Geológico Colombiano · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0554",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Animales de Colombia",
+      "bundle": "base",
+      "description": "Un pájaro con fama de genio en la ciencia y de villano en los cuentos.",
+      "question": "Escucha: ¿qué ave hace este sonido?",
+      "answer": "El cuervo",
+      "wrong_answers": [
+        "El búho",
+        "El loro",
+        "La gallina"
+      ],
+      "hints": [
+        "Es un ave completamente negra.",
+        "Su graznido suena como '¡cra, cra!'.",
+        "Según un refrán muy conocido, si lo crías, te sacará los ojos."
+      ],
+      "fun_fact": "Los cuervos son tan inteligentes que pueden recordar la cara de una persona durante años.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Corvus_corax_-_Northern_Raven_XC101590.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACorvus_corax_-_Northern_Raven_XC101590.mp3",
+        "credit": "Jonathon Jongsma · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Dead_trees_silhouetted_against_cloudy_sky._%288c8556be7c9e4c7ba294e6f2c7d871f0%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADead_trees_silhouetted_against_cloudy_sky._%288c8556be7c9e4c7ba294e6f2c7d871f0%29.JPG",
+        "credit": "Steve Redman (MORA) · Public domain · Wikimedia Commons"
+      }
+    },
+    {
+      "id": "q-0555",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Bebidas colombianas",
+      "bundle": "colombia",
+      "description": "Su nombre suena a golpe, pero en realidad es de lo más dulce.",
+      "question": "Estás en una juguería de la Costa y te ofrecen un jugo de zapote. ¿Cómo es la pulpa de esa fruta?",
+      "answer": "Anaranjada y fibrosa, con pepas grandes",
+      "wrong_answers": [
+        "Blanca y cremosa, con pepas negras",
+        "Amarilla y gelatinosa, con pepitas",
+        "Roja y aguada, con pepitas negras"
+      ],
+      "hints": [
+        "Crece en un árbol de clima caliente.",
+        "Por fuera tiene una cáscara verde parduzca y áspera.",
+        "Su pulpa tiene un color parecido al de la mandarina."
+      ],
+      "fun_fact": "La pulpa del zapote es tan fibrosa que, al comerlo, a uno se le quedan hilitos entre los dientes.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Tropical_fruit_%281491475214%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATropical_fruit_%281491475214%29.jpg",
+        "credit": "Francisco Anzola · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0556",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Cantantes colombianos",
+      "bundle": "colombia",
+      "description": "Una palabra que sirve igualito para un corazón roto que para la cocina de la abuela.",
+      "question": "Tres pistas: es una palabra muy colombiana, le da título a un éxito de Karol G con Nicki Minaj y se usa para hablar del despecho. Pero en sentido literal, ¿qué es una «tusa»?",
+      "answer": "El centro de la mazorca sin granos",
+      "wrong_answers": [
+        "La cáscara del plátano verde",
+        "La semilla grande del aguacate",
+        "El hueso duro del mango"
+      ],
+      "hints": [
+        "Es algo que normalmente se bota después de comer.",
+        "Viene de una planta cuyo fruto crece envuelto en hojas.",
+        "Queda en la mano cuando terminas de comer maíz asado en el parque."
+      ],
+      "fun_fact": "Por eso en Colombia se dice que alguien «está con la tusa»: quedó vacío, como la mazorca después de que se comieron todos los granos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Live_band_performance_at_an_outdoor_concert_with_lights_and_energetic_crowd_during_nighttime.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALive_band_performance_at_an_outdoor_concert_with_lights_and_energetic_crowd_during_nighttime.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0557",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Cantantes colombianos",
+      "bundle": "colombia",
+      "description": "Un clásico tan bailado en diciembre que ya debería tener cédula y pensión.",
+      "question": "Estás en la casa de los abuelos y sacan los discos de vinilo de la salsa colombiana clásica. Completa: Grupo Niche es a «Cali pachanguero» como Fruko y sus Tesos es a…",
+      "answer": "El preso",
+      "wrong_answers": [
+        "Rebelión",
+        "Oiga, mire, vea",
+        "Gotas de lluvia"
+      ],
+      "hints": [
+        "La canción la grabó el sello Discos Fuentes de Medellín.",
+        "La cantaba Wilson «Saoko» Manyoma, con voz de lamento.",
+        "Cuenta la historia de alguien encerrado en una cárcel."
+      ],
+      "fun_fact": "El gran Joe Arroyo empezó su carrera cantando con Fruko y sus Tesos antes de armar su propia orquesta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Groove_and_needle_in_close_embrace_from_beginning_to_end.jpg/3840px-Groove_and_needle_in_close_embrace_from_beginning_to_end.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGroove_and_needle_in_close_embrace_from_beginning_to_end.jpg",
+        "credit": "Franz van Duns · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0558",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Carnaval de Barranquilla",
+      "bundle": "base",
+      "description": "Alguien que tiene más disfraces en el clóset que ropa para ir al colegio.",
+      "question": "Adivina: cuando llegan las fiestas me pinto la cara, me pongo un disfraz de colores y bailo en el desfile hasta que se acaba la fiesta. ¿Qué soy?",
+      "answer": "Un carnavalero",
+      "wrong_answers": [
+        "Un bombero",
+        "Un panadero",
+        "Un marinero"
+      ],
+      "hints": [
+        "Mi trabajo favorito es gozar en una fiesta muy grande.",
+        "Me encantan las carrozas, las comparsas y la maicena.",
+        "Mi nombre viene del nombre de la fiesta en la que bailo."
+      ],
+      "fun_fact": "En el Carnaval de Barranquilla desfilan cada año miles de carnavaleros, y muchos preparan su disfraz durante meses.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/FLipsConfetti1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFLipsConfetti1.JPG",
+        "credit": "Japalac · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0559",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Carnaval de Barranquilla",
+      "bundle": "colombia",
+      "description": "Un estadio veterano que ha visto más goles y más reinas que cualquier otro de su barrio.",
+      "question": "Pista triple: el Estadio Romelio Martínez queda en una ciudad cerca de donde el río Magdalena llega al mar, allí se corona cada año a la reina de una fiesta muy famosa y fue la casa de un equipo grande del fútbol colombiano antes de 1986. ¿En qué ciudad está?",
+      "answer": "Barranquilla",
+      "wrong_answers": [
+        "Cartagena",
+        "Santa Marta",
+        "Cali"
+      ],
+      "hints": [
+        "Está en la costa Caribe de Colombia.",
+        "Es la ciudad del equipo apodado 'el Tiburón'.",
+        "Es la ciudad de la Batalla de Flores y de la Marimonda."
+      ],
+      "fun_fact": "El Junior dejó el Romelio Martínez cuando se inauguró el Estadio Metropolitano, uno de los más grandes de Colombia.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Galabank_Football_Stadium_stands%2C_Annan%2C_Scotland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGalabank_Football_Stadium_stands%2C_Annan%2C_Scotland.jpg",
+        "credit": "Rosser1954 · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0560",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Clima",
+      "bundle": "base",
+      "description": "Una tormenta que trabaja horas extra casi todas las noches del año y nunca pide vacaciones.",
+      "question": "Eres un marinero de hace 300 años y navegas de noche cerca del lago de Maracaibo. En el horizonte ves los relámpagos del Catatumbo, que brillan casi todas las noches en el mismo lugar. ¿Para qué te servían?",
+      "answer": "Como faro para orientarte",
+      "wrong_answers": [
+        "Como reloj para saber la hora",
+        "Como aviso de un huracán",
+        "Como señal de piratas cerca"
+      ],
+      "hints": [
+        "Piensa en lo que necesita un barco cuando todo está oscuro.",
+        "Lo útil es que siempre aparecen en el mismo sitio y se ven desde muy lejos.",
+        "Los marineros les pusieron el nombre de esas torres con luz que hay en las costas."
+      ],
+      "fun_fact": "El relámpago del Catatumbo puede producir miles de rayos en una sola noche, y desde lejos casi no se oye el trueno.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Contaminaci%C3%B3n_de_lemna_y_residuos_en_el_Lago_de_Maracaibo._09.jpg/3840px-Contaminaci%C3%B3n_de_lemna_y_residuos_en_el_Lago_de_Maracaibo._09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AContaminaci%C3%B3n_de_lemna_y_residuos_en_el_Lago_de_Maracaibo._09.jpg",
+        "credit": "Mgta122001vzla · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0561",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Clima",
+      "bundle": "base",
+      "description": "Un dicho para los días en que todo sale mal… hasta que deja de salir mal.",
+      "question": "Soy un dicho que repiten las abuelas cuando por fin se acaban los problemas. Empiezo así: «Después de la tormenta llega la…». ¿Con qué palabra termino?",
+      "answer": "calma",
+      "wrong_answers": [
+        "noche",
+        "lluvia",
+        "niebla"
+      ],
+      "hints": [
+        "Piensa en cómo queda todo cuando la tormenta por fin se va.",
+        "También se dice de un mar sin olas ni viento.",
+        "Rima con «palma» y significa tranquilidad."
+      ],
+      "fun_fact": "Este dicho tiene una variante igual de famosa: «Después de la tormenta sale el sol».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Dark_storm_clouds_%2846515591005%29.jpg/3840px-Dark_storm_clouds_%2846515591005%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADark_storm_clouds_%2846515591005%29.jpg",
+        "credit": "Joshua Tree National Park · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0562",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Clima",
+      "bundle": "base",
+      "description": "El último piso del edificio de aire de la Tierra, sin barandas y con vista al espacio.",
+      "question": "Es la capa más externa de la atmósfera; su aire es tan escaso que algunos átomos se escapan al espacio; y en ella el aire se va confundiendo poco a poco con el espacio exterior. ¿Cómo se llama?",
+      "answer": "Exosfera",
+      "wrong_answers": [
+        "Termosfera",
+        "Mesosfera",
+        "Estratosfera"
+      ],
+      "hints": [
+        "Está mucho más arriba de donde vuelan los aviones.",
+        "Empieza por encima de la altura a la que da vueltas la Estación Espacial Internacional.",
+        "Su nombre empieza con un prefijo griego que significa «afuera»."
+      ],
+      "fun_fact": "Según algunas definiciones, la exosfera llega hasta unos 10.000 km de altura, apenas un 3 % del camino hasta la Luna.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Earth-limb-sage-iii.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEarth-limb-sage-iii.webp",
+        "credit": "NASA · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0563",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Continentes",
+      "bundle": "base",
+      "description": "Un río tan largo que al final se cansa y se abre como abanico.",
+      "question": "Navegas por el río Nilo hacia el mar Mediterráneo. Justo antes de llegar, el río se divide en muchos brazos y forma una tierra en forma de triángulo. ¿Cómo se llama esa forma de desembocadura?",
+      "answer": "Delta",
+      "wrong_answers": [
+        "Estuario",
+        "Meandro",
+        "Fiordo"
+      ],
+      "hints": [
+        "Es una palabra que también se usa en matemáticas y física.",
+        "La letra griega que le dio el nombre tiene forma de triángulo.",
+        "Es la cuarta letra del alfabeto griego: alfa, beta, gamma…"
+      ],
+      "fun_fact": "El historiador griego Heródoto llamó 'delta' a la desembocadura del Nilo porque se parecía a la letra griega Δ.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Aswan_Nile_R23.jpg/3840px-Aswan_Nile_R23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAswan_Nile_R23.jpg",
+        "credit": "Marc Ryckaert (MJJR) · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0564",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Fiestas colombianas",
+      "bundle": "base",
+      "description": "Un día en que no le puedes creer nada ni a tu propia abuela.",
+      "question": "Soy el día de las bromas en Colombia: caigo el 28 de diciembre, y si alguien te engaña ese día, te grita una frase que lleva mi nombre. ¿A qué grupo de un relato de la Biblia le debo mi nombre?",
+      "answer": "Los Santos Inocentes",
+      "wrong_answers": [
+        "Los Reyes Magos",
+        "Los pastores de Belén",
+        "Los doce apóstoles"
+      ],
+      "hints": [
+        "Caigo pocos días después de Navidad.",
+        "El grupo es del relato de la Navidad, pero no fue a visitar al niño Jesús.",
+        "La frase de la broma es «¡Pásela por…!»"
+      ],
+      "fun_fact": "En muchos países anglosajones el día de las bromas es el 1 de abril, pero en España y en buena parte de Latinoamérica es el 28 de diciembre.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bogota_-_Christmas_decorations_At_the_plaza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABogota_-_Christmas_decorations_At_the_plaza.jpg",
+        "credit": "momentcaptured1 · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0565",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Fiestas colombianas",
+      "bundle": "colombia",
+      "description": "El momento de la fiesta en que hasta el abuelo se pone un sombrero de colores.",
+      "question": "Estás en unos quince años en Colombia: ya pasaron el vals y la comida, y de repente entran personajes disfrazados, con pitos, espuma, luces y sombreros gigantes. ¿Qué momento de la fiesta empezó?",
+      "answer": "La hora loca",
+      "wrong_answers": [
+        "La serenata",
+        "El baile sorpresa",
+        "El brindis"
+      ],
+      "hints": [
+        "Suele llegar tarde en la noche, cuando la fiesta ya está caliente.",
+        "Hay zancos, máscaras, collares luminosos y música a todo volumen.",
+        "Su nombre dice que durante un rato todos se vuelven un poco locos."
+      ],
+      "fun_fact": "La hora loca es tan popular en las fiestas colombianas que hay empresas dedicadas solo a animarla.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/88mph_high_res_illuminated_dance_floor_20260411.jpg/3840px-88mph_high_res_illuminated_dance_floor_20260411.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A88mph_high_res_illuminated_dance_floor_20260411.jpg",
+        "credit": "Alex Sims · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0566",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Frutas exóticas de Colombia",
+      "bundle": "base",
+      "description": "Pelar una fruta es fácil; ponerle nombre científico a lo que botas ya es otro cuento.",
+      "question": "Estás en clase de biología pelando un mango. La profe explica que la pulpa es el mesocarpio y el hueso es el endocarpio. Entonces, mesocarpio es a pulpa como… ¿qué es a cáscara?",
+      "answer": "Epicarpio",
+      "wrong_answers": [
+        "Pericarpio",
+        "Episperma",
+        "Endospermo"
+      ],
+      "hints": [
+        "Es una capa del fruto, no de la semilla.",
+        "El prefijo significa «encima» o «sobre», como en «epidermis».",
+        "Es la capa más externa del fruto: epi-…"
+      ],
+      "fun_fact": "Las tres capas juntas (epicarpio, mesocarpio y endocarpio) forman el pericarpio, la pared completa del fruto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Mangos_-_single_and_halved.jpg/3840px-Mangos_-_single_and_halved.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMangos_-_single_and_halved.jpg",
+        "credit": "Ivar Leidus · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0567",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Frutas exóticas de Colombia",
+      "bundle": "colombia",
+      "description": "Una fruta con dos mamás y cero dramas familiares.",
+      "question": "Un vendedor del mercado te da a probar una atemoya, dulce y cremosa, y te cuenta que es un cruce de dos frutas. Si la mula es a la yegua y el burro, la atemoya es a la chirimoya y… ¿a cuál?",
+      "answer": "El anón",
+      "wrong_answers": [
+        "La guanábana",
+        "La guayaba",
+        "El lulo"
+      ],
+      "hints": [
+        "Las dos frutas de la mezcla son primas: misma familia, pulpa blanca y semillas negras.",
+        "La otra mamá es pequeña, verde y con la cáscara llena de escamitas.",
+        "En otros países la llaman saramuyo; en Colombia su nombre tiene solo cuatro letras y se parece a «anona»."
+      ],
+      "fun_fact": "La atemoya nació de cruces hechos a propósito en Florida a principios del siglo XX (hacia 1907), y su nombre mezcla «ate» (otro nombre del anón) con «chirimoya».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cherimoya_fruit_hg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACherimoya_fruit_hg.jpg",
+        "credit": "Hannes Grobe 21:22, 5 November 2006 (UTC) · CC BY-SA 2.5 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0568",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Inventores famosos",
+      "bundle": "base",
+      "description": "Un invento que en los museos hace que hasta los papás más aburridos saquen el celular para grabar.",
+      "question": "Tengo forma de torre con una dona de metal en la punta, me inventó Nikola Tesla y en los museos de ciencia la gente se queda boquiabierta al verme. ¿Para qué sirvo?",
+      "answer": "Para generar un voltaje altísimo",
+      "wrong_answers": [
+        "Para enfriar el aire de un cuarto",
+        "Para medir la fuerza de un sismo",
+        "Para guardar energía como una pila"
+      ],
+      "hints": [
+        "Mi inventor trabajó toda la vida con la electricidad.",
+        "Cuando estoy encendida, suelto chispas que parecen rayos.",
+        "Mis rayos saltan por el aire porque la electricidad que fabrico empuja con una fuerza enorme."
+      ],
+      "fun_fact": "Algunas bobinas de Tesla pueden «cantar»: al cambiar el ritmo de sus chispas tocan melodías que se oyen en el aire.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Hall_of_Mirrors_in_the_New_York_Hall_of_Science.JPG/3840px-Hall_of_Mirrors_in_the_New_York_Hall_of_Science.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHall_of_Mirrors_in_the_New_York_Hall_of_Science.JPG",
+        "credit": "MusikAnimal · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0569",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Juegos de mesa",
+      "bundle": "base",
+      "description": "Un señor tan rico que nunca se quita el sombrero de copa, ni para dormir.",
+      "question": "Estás mirando cajas de juegos en una tienda. El plomero Mario es la mascota de Nintendo, como el señor de bigote blanco, sombrero de copa y bastón es la mascota de…",
+      "answer": "Monopoly",
+      "wrong_answers": [
+        "Cluedo",
+        "Scrabble",
+        "Jenga"
+      ],
+      "hints": [
+        "Es un juego en el que se gana mucho dinero… de mentiras.",
+        "En él compras calles, construyes casitas y hoteles y cobras arriendo.",
+        "Si caes en la casilla equivocada, te mandan directo a la cárcel."
+      ],
+      "fun_fact": "Al señor Monopoly le pusieron nombre propio: en inglés lo llamaban 'Rich Uncle Pennybags', algo así como 'el tío rico Bolsas de Monedas'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Dice_and_wooden_game_pieces_%2851536588226%29.jpg/3840px-Dice_and_wooden_game_pieces_%2851536588226%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADice_and_wooden_game_pieces_%2851536588226%29.jpg",
+        "credit": "Cindy Shebley · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0571",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Juegos Olímpicos de verano",
+      "bundle": "base",
+      "description": "Un premio que no se podía guardar en una vitrina porque se secaba en unas semanas.",
+      "question": "En los Juegos Olímpicos de la antigua Grecia, los ganadores no recibían medallas sino una corona de ramas. ¿De qué árbol eran esas ramas?",
+      "answer": "Olivo",
+      "wrong_answers": [
+        "Laurel",
+        "Roble",
+        "Pino"
+      ],
+      "hints": [
+        "Era un árbol sagrado para la diosa Atenea.",
+        "Es un árbol típico del Mediterráneo, de hojas plateadas.",
+        "De su fruto se saca un aceite famosísimo en la cocina."
+      ],
+      "fun_fact": "En Atenas 2004 los ganadores olímpicos también recibieron coronas de olivo, como homenaje a los Juegos antiguos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Ancient_Olympia_Stadium_in_Greece_%2851224128585%29.jpg/3840px-Ancient_Olympia_Stadium_in_Greece_%2851224128585%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAncient_Olympia_Stadium_in_Greece_%2851224128585%29.jpg",
+        "credit": "dronepicr · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0572",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Juegos Olímpicos de verano",
+      "bundle": "base",
+      "description": "La Fórmula 1 de la antigüedad, pero sin gasolina ni pits.",
+      "question": "En los antiguos Juegos Olímpicos había carreras de carros de dos ruedas. ¿Qué animales los tiraban?",
+      "answer": "Caballos",
+      "wrong_answers": [
+        "Bueyes",
+        "Burros",
+        "Perros"
+      ],
+      "hints": [
+        "Tenían que ser animales muy rápidos.",
+        "Hoy todavía hacen carreras con ellos en los hipódromos.",
+        "Relinchan."
+      ],
+      "fun_fact": "En las carreras de carros antiguas el premio era para el dueño de los caballos, no para el conductor; así una princesa espartana, Cinisca, fue la primera mujer en ganar en Olimpia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Olympia_Nymphaeum_of_Herodes_Atticus_from_SW_%281993%29.jpg/3840px-Olympia_Nymphaeum_of_Herodes_Atticus_from_SW_%281993%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlympia_Nymphaeum_of_Herodes_Atticus_from_SW_%281993%29.jpg",
+        "credit": "Mark Landon · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0573",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Mamíferos",
+      "bundle": "base",
+      "description": "Más de un millón de viajeros sin maleta, sin GPS y sin parar a echar gasolina.",
+      "question": "Estás viendo un documental: más de un millón de ñus, cebras y gacelas recorren en círculo el Serengueti (Tanzania) y el Masái Mara (Kenia) cada año. ¿Para qué hacen este viaje tan largo?",
+      "answer": "Para seguir las lluvias y el pasto fresco",
+      "wrong_answers": [
+        "Para huir de los incendios de la sabana",
+        "Para buscar sal en las montañas",
+        "Para buscar sombra en la selva"
+      ],
+      "hints": [
+        "En la sabana africana hay temporadas secas y temporadas lluviosas.",
+        "Los ñus son herbívoros y comen muchísimo cada día.",
+        "Donde llueve, crece la comida que ellos necesitan."
+      ],
+      "fun_fact": "Durante la migración nacen cientos de miles de crías de ñu en pocas semanas, y pueden caminar pocos minutos después de nacer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Wildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg/3840px-Wildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg",
+        "credit": "Christoph Strässler · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0574",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Mamíferos",
+      "bundle": "base",
+      "description": "Un nombre ruso para un animal que nunca ha pisado Moscú.",
+      "question": "Su nombre viene de una palabra rusa que significa 'blanco'. ¿Cómo se llama esta ballena del Ártico?",
+      "answer": "Beluga",
+      "wrong_answers": [
+        "Narval",
+        "Ballena jorobada",
+        "Cachalote"
+      ],
+      "hints": [
+        "Vive en aguas heladas, cerca del Polo Norte.",
+        "Los marineros la llamaban 'canario del mar' por sus silbidos y chirridos.",
+        "Su nombre empieza por 'Be…' y rima con 'tortuga'."
+      ],
+      "fun_fact": "Las belugas nacen de color gris y se van volviendo blancas a medida que crecen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Arctic_ice_floe.jpg/3840px-Arctic_ice_floe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArctic_ice_floe.jpg",
+        "credit": "Paul Gierszewski (Gierszep) · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0575",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Mitología nórdica",
+      "bundle": "base",
+      "description": "En Asgard no hay carros, pero este taxi llega rapidísimo a cualquiera de los nueve mundos.",
+      "question": "Visitas un museo de mitos. En un cuadro está Pegaso, el caballo griego que se reconoce por sus alas. En otro está Sleipnir, el caballo del dios Odín. Pegaso es a «alas» como Sleipnir es a…",
+      "answer": "Ocho patas",
+      "wrong_answers": [
+        "Dos cabezas",
+        "Crin de fuego",
+        "Un cuerno dorado"
+      ],
+      "hints": [
+        "Sleipnir era el caballo más rápido de los mitos nórdicos.",
+        "Tiene el doble de lo normal.",
+        "Tiene tantas como una araña."
+      ],
+      "fun_fact": "Según los mitos, Sleipnir era hijo de Loki, que se había transformado en yegua.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Metallplastik_Pegasus_%28Otto_Charles_B%C3%A4nninger_1953%29_09.jpg/3840px-Metallplastik_Pegasus_%28Otto_Charles_B%C3%A4nninger_1953%29_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetallplastik_Pegasus_%28Otto_Charles_B%C3%A4nninger_1953%29_09.jpg",
+        "credit": "AnBuKu · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0576",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Música clásica",
+      "bundle": "base",
+      "description": "Primavera, verano, otoño e invierno: un músico que nunca tuvo que ir a la tienda a comprar inspiración.",
+      "question": "¿En qué ciudad nació Antonio Vivaldi, el compositor de 'Las cuatro estaciones'?",
+      "answer": "Venecia",
+      "wrong_answers": [
+        "Roma",
+        "Florencia",
+        "Nápoles"
+      ],
+      "hints": [
+        "Está en el norte de Italia, junto al mar Adriático.",
+        "Es famosa por su carnaval de máscaras.",
+        "En vez de calles tiene canales, y la gente se mueve en góndolas."
+      ],
+      "fun_fact": "A Vivaldi le decían 'il Prete Rosso', el cura rojo, porque era sacerdote y pelirrojo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Baroque_violin_Walter_Mahr%2C_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABaroque_violin_Walter_Mahr%2C_2010.jpg",
+        "credit": "David Schou · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0577",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Música clásica",
+      "bundle": "base",
+      "description": "Aquí nadie habla: si quieres pedir la sal, tienes que cantarlo.",
+      "question": "Adivina: 'En mí la historia se cuenta cantando, con disfraces, escenario y orquesta. Mozart me usó para La flauta mágica, con su famosa Reina de la Noche'. ¿Qué soy?",
+      "answer": "Una ópera",
+      "wrong_answers": [
+        "Una sinfonía",
+        "Una sonata",
+        "Un concierto"
+      ],
+      "hints": [
+        "Mezcla música con teatro.",
+        "Sus cantantes suelen tener voces muy potentes, como sopranos y tenores.",
+        "En Colombia, el Teatro Colón de Bogotá presenta este tipo de obras."
+      ],
+      "fun_fact": "El aria de la Reina de la Noche sube hasta una nota tan aguda que es un reto hasta para las sopranos profesionales.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Mozart_Family_Croce.jpg/3840px-Mozart_Family_Croce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMozart_Family_Croce.jpg",
+        "credit": "Possibly Johann Nepomuk della Croce · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0578",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Países del mundo",
+      "bundle": "base",
+      "description": "Un país que se sentó en la esquina de Europa, como el estudiante que siempre pide el puesto de la ventana.",
+      "question": "¿Qué país está resaltado en este mapa?",
+      "answer": "Portugal",
+      "wrong_answers": [
+        "Grecia",
+        "Irlanda",
+        "Italia"
+      ],
+      "hints": [
+        "Está en la esquina suroeste de Europa, mirando al océano Atlántico.",
+        "Allá se habla un idioma muy parecido al de Brasil.",
+        "Cristiano Ronaldo nació en una isla de este país, y su capital es Lisboa."
+      ],
+      "fun_fact": "La frontera entre Portugal y España es una de las más antiguas de Europa: casi no ha cambiado desde hace más de 700 años.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Europe_map_portugal.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEurope_map_portugal.png",
+        "credit": "Theeuro at English Wikipedia · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0579",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Parques naturales de Colombia",
+      "bundle": "base",
+      "description": "Mitad hongo, mitad alga y cien por ciento pegado a las piedras como chicle debajo del pupitre.",
+      "question": "En los senderos de los parques naturales es fácil encontrar líquenes como los de la foto. Durante siglos, la gente les sacó provecho. ¿Para qué se usaban?",
+      "answer": "Para teñir lana y telas",
+      "wrong_answers": [
+        "Para fabricar velas",
+        "Para hacer cuerdas",
+        "Para endulzar bebidas"
+      ],
+      "hints": [
+        "Piensa más en artesanos que en cocineros.",
+        "En Escocia se usaban para preparar la lana del famoso tweed.",
+        "Servían para cambiarle el color a una ruana."
+      ],
+      "fun_fact": "El papel tornasol, que cambia de color con los ácidos, se hacía originalmente con tintes sacados de líquenes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Lichens_and_mortars_%2816735777311%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALichens_and_mortars_%2816735777311%29.jpg",
+        "credit": "Peter D. Tillman from USA · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0580",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Piratas",
+      "bundle": "colombia",
+      "description": "Un plan de vacaciones perfecto hasta que alguien pregunta: '¿y trajiste el pasaporte?'",
+      "question": "Planeas recorrer los fuertes que los españoles construyeron en el Caribe colombiano para defenderse de los piratas, pero uno de esta lista hoy queda en otro país. ¿Cuál?",
+      "answer": "Castillo de San Lorenzo del Chagres",
+      "wrong_answers": [
+        "Castillo de San Felipe de Barajas",
+        "Fuerte de San Fernando de Bocachica",
+        "Fuerte de San Sebastián del Pastelillo"
+      ],
+      "hints": [
+        "Tres de ellos están en la misma ciudad amurallada colombiana.",
+        "El que sobra cuidaba la desembocadura de un río por donde pasaban el oro y la plata.",
+        "Ese país se separó de Colombia en 1903."
+      ],
+      "fun_fact": "En 1671 el pirata Henry Morgan tomó el castillo de San Lorenzo antes de cruzar el istmo y saquear la ciudad de Panamá.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Views_of_Fort_Matanzas_National_Monument%2C_Florida_%28b80d9829-465d-4538-9d71-0b93a0386f78%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AViews_of_Fort_Matanzas_National_Monument%2C_Florida_%28b80d9829-465d-4538-9d71-0b93a0386f78%29.jpg",
+        "credit": "NPS staff · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0581",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "Piratas",
+      "bundle": "base",
+      "description": "Una fortaleza contra piratas que terminó enfrentando a un ejército entero: como poner candado contra ladrones y que llegue un tanque.",
+      "question": "Visitas el Castillo del Morro de La Habana, levantado para frenar a piratas y corsarios. El guía cuenta que los ingleses lo tomaron tras un largo asedio y luego devolvieron la ciudad a España a cambio de la Florida. ¿En qué año cayó el Morro?",
+      "answer": "1762",
+      "wrong_answers": [
+        "1588",
+        "1741",
+        "1810"
+      ],
+      "hints": [
+        "Fue durante la Guerra de los Siete Años.",
+        "Fue unos veinte años después del fallido ataque inglés a Cartagena de Blas de Lezo.",
+        "Fue apenas catorce años antes de la independencia de Estados Unidos."
+      ],
+      "fun_fact": "Los ingleses solo se quedaron con La Habana unos once meses antes de cambiarla por la Florida en el Tratado de París de 1763.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/AvMalecon-LaHabanaCuba-04735.jpg/3840px-AvMalecon-LaHabanaCuba-04735.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAvMalecon-LaHabanaCuba-04735.jpg",
+        "credit": "Ezarate · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0583",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Regiones de Colombia",
+      "bundle": "colombia",
+      "description": "Una isla donde hasta los cangrejos negros parecen bilingües.",
+      "question": "En la isla de San Andrés, el pueblo raizal habla creole. ¿De qué idioma viene la mayoría de las palabras de esa lengua?",
+      "answer": "Inglés",
+      "wrong_answers": [
+        "Francés",
+        "Portugués",
+        "Neerlandés"
+      ],
+      "hints": [
+        "La isla queda en el Caribe, muy cerca de Centroamérica.",
+        "Durante siglos la isla tuvo más contacto con Jamaica que con Bogotá.",
+        "Es el idioma de las canciones que más suenan en la radio en Estados Unidos."
+      ],
+      "fun_fact": "En San Andrés se oyen tres lenguas: el creole, el español y el inglés.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Panor%C3%A1mica_de_Isla_de_San_Andres.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APanor%C3%A1mica_de_Isla_de_San_Andres.JPG",
+        "credit": "Mr.Jhosimar · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0584",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Reptiles",
+      "bundle": "base",
+      "description": "Un reptil con un problema serio de contacto visual.",
+      "question": "Adivina: «Soy una serpiente gigante que duerme bajo un colegio de magia, en la Cámara Secreta. Quien ve mis ojos en un reflejo queda petrificado». ¿Qué soy?",
+      "answer": "El basilisco",
+      "wrong_answers": [
+        "Nagini",
+        "Colacuerno",
+        "Aragog"
+      ],
+      "hints": [
+        "Aparezco en la segunda película de Harry Potter.",
+        "Harry me vence con la espada de Gryffindor.",
+        "Mi nombre lo comparte un lagarto real que corre sobre el agua."
+      ],
+      "fun_fact": "Existe un lagarto real llamado basilisco que corre sobre el agua con sus patas traseras, por eso en algunos lugares le dicen «lagarto Jesucristo».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Alnwick_Castle_2011.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlnwick_Castle_2011.JPG",
+        "credit": "Dr.Haus · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0585",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Reptiles",
+      "bundle": "base",
+      "description": "Alguien en la antigüedad tenía muchísima hambre y nada más a mano.",
+      "question": "El uróboros es un símbolo antiguo que muestra a un animal mordiéndose su propia cola. ¿Qué animal es?",
+      "answer": "Una serpiente",
+      "wrong_answers": [
+        "Un lagarto",
+        "Un gusano",
+        "Una anguila"
+      ],
+      "hints": [
+        "Es un reptil.",
+        "No tiene patas.",
+        "Algunas de su tipo son venenosas y sacan una lengua partida."
+      ],
+      "fun_fact": "El uróboros representa el ciclo que nunca termina, y aparece desde el antiguo Egipto hasta en logos y tatuajes de hoy.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Karnak_temple_complex_12.jpg/3840px-Karnak_temple_complex_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKarnak_temple_complex_12.jpg",
+        "credit": "Hamerani · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0586",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Símbolos patrios de Colombia",
+      "bundle": "colombia",
+      "description": "Vestido de negro, siempre en el basurero y aun así nadie le dice que se arregle.",
+      "question": "Mucha gente confunde al cóndor con un primo más pequeño, todo negro, que en Colombia se ve volando en círculos sobre los basureros y comiendo animales muertos. ¿Cómo se llama esa ave?",
+      "answer": "Gallinazo",
+      "wrong_answers": [
+        "Cuervo",
+        "Mirla",
+        "Garrapatero"
+      ],
+      "hints": [
+        "Aunque no es muy bonito, hace un trabajo de limpieza muy importante.",
+        "Es negro, con la cabeza pelada y gris, y limpia el campo de animales muertos.",
+        "Su nombre empieza por 'galli…'."
+      ],
+      "fun_fact": "Los gallinazos pueden comer carne podrida sin enfermarse gracias a sus jugos gástricos, que son muy ácidos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Condor_des_Andes_m%C3%A2le_adulte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACondor_des_Andes_m%C3%A2le_adulte.jpg",
+        "credit": "Hugo Pedel · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0589",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Volcanes",
+      "bundle": "base",
+      "description": "Un vecino gigante de Ciudad de México con nombre de trabalenguas.",
+      "question": "En un documental sobre México, el guía cuenta que el volcán Popocatépetl tiene un nombre en náhuatl, la lengua de los aztecas. ¿Qué significa ese nombre?",
+      "answer": "Cerro que humea",
+      "wrong_answers": [
+        "Cerro que tiembla",
+        "Cerro que brilla",
+        "Cerro que ruge"
+      ],
+      "hints": [
+        "El nombre describe algo que el volcán hace casi todo el tiempo.",
+        "Desde Ciudad de México a veces se le ve una columna gris encima.",
+        "Piensa en lo que sale de una chimenea."
+      ],
+      "fun_fact": "Los mexicanos le dicen de cariño 'Don Goyo', y es uno de los volcanes más activos de México.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Ruinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg/3840px-Ruinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0590",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Volcanes",
+      "bundle": "base",
+      "description": "Una foto en la que nadie sale con sus colores de verdad, ni siquiera el volcán.",
+      "question": "En un observatorio que vigila un volcán, usan una cámara que no muestra colores normales, sino qué tan caliente está cada parte: lo frío sale azul y lo caliente amarillo. ¿Cómo se llama?",
+      "answer": "Cámara térmica",
+      "wrong_answers": [
+        "Cámara sísmica",
+        "Cámara de rayos X",
+        "Cámara oscura"
+      ],
+      "hints": [
+        "También la usan los bomberos para ver a través del humo.",
+        "Su nombre comparte raíz con la palabra 'termómetro'.",
+        "Es la misma raíz de 'termo', donde guardas el tinto caliente."
+      ],
+      "fun_fact": "Con cámaras térmicas los vulcanólogos pueden notar que un cráter se está calentando antes de que el volcán haga erupción.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Nevado_del_Ruiz_visto_desde_Pereira_-_Flickr_-_Alejandro_Bayer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_Ruiz_visto_desde_Pereira_-_Flickr_-_Alejandro_Bayer.jpg",
+        "credit": "Alejandro  Bayer Tamayo from Armenia, Colombia · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0591",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "YouTubers",
+      "bundle": "base",
+      "description": "Un niño que ganó más plata antes de aprender a amarrarse los zapatos que tu papá en toda su vida.",
+      "question": "Soy Ryan, del canal «Ryan's World». Empecé en YouTube a los 3 años y llegué a ser el youtuber que más ganaba en el mundo. ¿Con qué tipo de videos me hice famoso?",
+      "answer": "Reseñas de juguetes",
+      "wrong_answers": [
+        "Partidas de videojuegos",
+        "Canciones infantiles",
+        "Tutoriales de dibujo"
+      ],
+      "hints": [
+        "Lo que hacía es lo que hace cualquier niño el día de Navidad.",
+        "Las marcas le mandaban cajas y cajas de cosas para que las mostrara.",
+        "Abría cajas, sacaba lo de adentro, jugaba y contaba si le gustaba o no."
+      ],
+      "fun_fact": "La revista Forbes nombró a Ryan el youtuber mejor pagado del mundo en 2018 y 2019, cuando apenas tenía unos 7 u 8 años.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Tiny_video_camera_%28Unsplash%29.jpg/3840px-Tiny_video_camera_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATiny_video_camera_%28Unsplash%29.jpg",
+        "credit": "Fabrizio Verrecchia fabryv · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0592",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "YouTubers",
+      "bundle": "base",
+      "description": "El profe que te explicó las derivadas a las 2 de la mañana, la noche antes del examen.",
+      "question": "Soy profesor en una academia de Madrid; en mi canal «Unicoos» subo clases gratis de matemáticas, física y química, y en 2017 quedé entre los 10 finalistas del llamado «Nobel de los profesores». ¿Quién soy?",
+      "answer": "David Calle",
+      "wrong_answers": [
+        "Eduardo Sáenz de Cabezón",
+        "Javier Santaolalla",
+        "José Luis Crespo"
+      ],
+      "hints": [
+        "Es español, como todas las opciones.",
+        "Las otras tres opciones también hacen divulgación, pero no son profesores de academia.",
+        "Su nombre de pila es el del rey bíblico que venció a Goliat."
+      ],
+      "fun_fact": "David Calle empezó a grabar sus clases cuando muchos alumnos dejaron de ir a su academia porque, con la crisis, sus familias ya no podían pagarla.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Example_absolute_value.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AExample_absolute_value.jpg",
+        "credit": "Manuelzapata04 · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0593",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Volcanes",
+      "bundle": "base",
+      "description": "El hijo salió igualito al papá: igual de explosivo.",
+      "question": "Este volcán, el Anak Krakatau ('hijo del Krakatoa'), nació donde el Krakatoa hizo en 1883 una de las explosiones más ruidosas de la historia. ¿En qué país está?",
+      "answer": "Indonesia",
+      "wrong_answers": [
+        "Filipinas",
+        "Japón",
+        "Islandia"
+      ],
+      "hints": [
+        "Está en Asia, en un país formado por miles de islas.",
+        "Queda entre las islas de Java y Sumatra.",
+        "Su capital es Yakarta."
+      ],
+      "fun_fact": "La explosión del Krakatoa se oyó a casi 4.800 km de distancia, en islas del océano Índico.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Anak_Krakatau_Eruption_2026-09-05_0548z.png/3840px-Anak_Krakatau_Eruption_2026-09-05_0548z.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnak_Krakatau_Eruption_2026-09-05_0548z.png",
+        "credit": "Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0594",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Volcanes",
+      "bundle": "base",
+      "description": "Pediste vacaciones de verano y te mandaron un invierno con moño.",
+      "question": "Imagina que vives en Europa en 1816: nieva en junio y se pierden las cosechas. La culpa es de la ceniza del volcán Tambora, que explotó un año antes en Indonesia. Más o menos, ¿qué tan lejos de Europa está ese volcán?",
+      "answer": "Unos 12.000 km",
+      "wrong_answers": [
+        "Unos 300 km",
+        "Unos 1.500 km",
+        "Unos 50.000 km"
+      ],
+      "hints": [
+        "Indonesia está en el otro lado del mundo, en Asia.",
+        "Ningún punto de la Tierra está a más de unos 20.000 km de otro.",
+        "Es más o menos la distancia de ir en avión de Bogotá hasta Japón."
+      ],
+      "fun_fact": "A 1816 lo llamaron 'el año sin verano', y por el mal clima Mary Shelley se quedó encerrada en casa y escribió 'Frankenstein'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Snow_covered_harvested_wheat_field_-_geograph.org.uk_-_1685461.jpg/3840px-Snow_covered_harvested_wheat_field_-_geograph.org.uk_-_1685461.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnow_covered_harvested_wheat_field_-_geograph.org.uk_-_1685461.jpg",
+        "credit": "IrenicRhonda · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0595",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "YouTubers",
+      "bundle": "base",
+      "description": "La razón por la que todos los youtubers salen con la boca abierta como si hubieran visto un fantasma.",
+      "question": "Es la imagen pequeñita que ves antes de abrir un video; los youtubers la diseñan con caras exageradas y letras grandes para que le des clic. ¿Cómo se llama?",
+      "answer": "Miniatura",
+      "wrong_answers": [
+        "Avatar",
+        "Banner",
+        "Etiqueta"
+      ],
+      "hints": [
+        "No es la foto de perfil del canal.",
+        "Su nombre habla de su tamaño.",
+        "En inglés se llama «thumbnail», como la uña del pulgar."
+      ],
+      "fun_fact": "En inglés se llama «thumbnail» porque es una imagen tan pequeña como la uña del dedo pulgar.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Laptop_on_desk_book_stacks_%28Unsplash%29.jpg/3840px-Laptop_on_desk_book_stacks_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALaptop_on_desk_book_stacks_%28Unsplash%29.jpg",
+        "credit": "freddie marriage fredmarriage · CC0 · Wikimedia Commons"
+      },
+      "background": null
     }
   ]
 }

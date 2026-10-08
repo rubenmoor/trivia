@@ -1,0 +1,1117 @@
+{
+  "subcategory": "Mar",
+  "facets": [
+    "Océanos y mares del mundo",
+    "Animales marinos",
+    "Arrecifes, algas y plantas marinas",
+    "Olas, mareas y corrientes",
+    "Costas, playas e islas",
+    "Fondo marino y abismo",
+    "Mar Caribe y Pacífico colombiano",
+    "Navegación, barcos y exploradores",
+    "Pesca y mariscos en la mesa",
+    "Sal, agua de mar y química del océano",
+    "Contaminación y protección del mar",
+    "El mar en películas y leyendas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 3,
+      "sound": 3,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mar del Norte",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Mar Báltico",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Mar de los Sargazos",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Mar de China Meridional",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Mar Arábigo",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía de Bengala",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Mar de Bering",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Tiburón",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Ballena azul",
+      "facet": "Animales marinos",
+      "known_at": 2
+    },
+    {
+      "name": "Delfín",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Pulpo",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Estrella de mar",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Medusa",
+      "facet": "Animales marinos",
+      "known_at": 2
+    },
+    {
+      "name": "Caballito de mar",
+      "facet": "Animales marinos",
+      "known_at": 2
+    },
+    {
+      "name": "Tortuga marina",
+      "facet": "Animales marinos",
+      "known_at": 2
+    },
+    {
+      "name": "Pez payaso",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Orca",
+      "facet": "Animales marinos",
+      "known_at": 3
+    },
+    {
+      "name": "Calamar gigante",
+      "facet": "Animales marinos",
+      "known_at": 6
+    },
+    {
+      "name": "Narval",
+      "facet": "Animales marinos",
+      "known_at": 8
+    },
+    {
+      "name": "Manatí",
+      "facet": "Animales marinos",
+      "known_at": 5
+    },
+    {
+      "name": "Mantarraya",
+      "facet": "Animales marinos",
+      "known_at": 4
+    },
+    {
+      "name": "Pez globo",
+      "facet": "Animales marinos",
+      "known_at": 3
+    },
+    {
+      "name": "Cangrejo",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Pingüino",
+      "facet": "Animales marinos",
+      "known_at": 1
+    },
+    {
+      "name": "Morsa",
+      "facet": "Animales marinos",
+      "known_at": 4
+    },
+    {
+      "name": "Foca",
+      "facet": "Animales marinos",
+      "known_at": 2
+    },
+    {
+      "name": "Pez espada",
+      "facet": "Animales marinos",
+      "known_at": 5
+    },
+    {
+      "name": "Tiburón ballena",
+      "facet": "Animales marinos",
+      "known_at": 5
+    },
+    {
+      "name": "Tiburón martillo",
+      "facet": "Animales marinos",
+      "known_at": 5
+    },
+    {
+      "name": "Rape",
+      "facet": "Animales marinos",
+      "known_at": 8
+    },
+    {
+      "name": "Krill",
+      "facet": "Animales marinos",
+      "known_at": 9
+    },
+    {
+      "name": "Coral",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 2
+    },
+    {
+      "name": "Anémona",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 4
+    },
+    {
+      "name": "Kelp",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 9
+    },
+    {
+      "name": "Pasto marino",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 9
+    },
+    {
+      "name": "Manglar",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 6
+    },
+    {
+      "name": "Plancton",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 6
+    },
+    {
+      "name": "Fitoplancton",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 9
+    },
+    {
+      "name": "Blanqueamiento del coral",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 9
+    },
+    {
+      "name": "Esponja de mar",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 4
+    },
+    {
+      "name": "Pólipo",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 11
+    },
+    {
+      "name": "Sargazo",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 11
+    },
+    {
+      "name": "Alga nori",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 9
+    },
+    {
+      "name": "Zooxantelas",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 14
+    },
+    {
+      "name": "Erizo de mar",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 4
+    },
+    {
+      "name": "Pepino de mar",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 6
+    },
+    {
+      "name": "Arrecife artificial",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 12
+    },
+    {
+      "name": "Alga roja",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 12
+    },
+    {
+      "name": "Espirulina",
+      "facet": "Arrecifes, algas y plantas marinas",
+      "known_at": 11
+    },
+    {
+      "name": "Ola",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 1
+    },
+    {
+      "name": "Marea alta",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 4
+    },
+    {
+      "name": "Marea baja",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 4
+    },
+    {
+      "name": "Corriente del Golfo",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 10
+    },
+    {
+      "name": "Fenómeno de El Niño",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 8
+    },
+    {
+      "name": "Fenómeno de La Niña",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 9
+    },
+    {
+      "name": "Marea viva",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 12
+    },
+    {
+      "name": "Corriente de resaca",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 9
+    },
+    {
+      "name": "Surf",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 3
+    },
+    {
+      "name": "Huracán",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 5
+    },
+    {
+      "name": "Corriente de Humboldt",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 11
+    },
+    {
+      "name": "Olas gigantes de Nazaré",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 11
+    },
+    {
+      "name": "Cinta transportadora oceánica",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 14
+    },
+    {
+      "name": "Remolino",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 5
+    },
+    {
+      "name": "Espuma de mar",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 4
+    },
+    {
+      "name": "Mar de leva",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 11
+    },
+    {
+      "name": "Brisa marina",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 7
+    },
+    {
+      "name": "Efecto Coriolis",
+      "facet": "Olas, mareas y corrientes",
+      "known_at": 13
+    },
+    {
+      "name": "Playa",
+      "facet": "Costas, playas e islas",
+      "known_at": 1
+    },
+    {
+      "name": "Arena",
+      "facet": "Costas, playas e islas",
+      "known_at": 1
+    },
+    {
+      "name": "Isla",
+      "facet": "Costas, playas e islas",
+      "known_at": 1
+    },
+    {
+      "name": "Archipiélago",
+      "facet": "Costas, playas e islas",
+      "known_at": 7
+    },
+    {
+      "name": "Península",
+      "facet": "Costas, playas e islas",
+      "known_at": 6
+    },
+    {
+      "name": "Golfo",
+      "facet": "Costas, playas e islas",
+      "known_at": 7
+    },
+    {
+      "name": "Bahía",
+      "facet": "Costas, playas e islas",
+      "known_at": 7
+    },
+    {
+      "name": "Acantilado",
+      "facet": "Costas, playas e islas",
+      "known_at": 7
+    },
+    {
+      "name": "Atolón",
+      "facet": "Costas, playas e islas",
+      "known_at": 11
+    },
+    {
+      "name": "Islas Galápagos",
+      "facet": "Costas, playas e islas",
+      "known_at": 7
+    },
+    {
+      "name": "Hawái",
+      "facet": "Costas, playas e islas",
+      "known_at": 5
+    },
+    {
+      "name": "Faro",
+      "facet": "Costas, playas e islas",
+      "known_at": 3
+    },
+    {
+      "name": "Duna",
+      "facet": "Costas, playas e islas",
+      "known_at": 5
+    },
+    {
+      "name": "Fiordo",
+      "facet": "Costas, playas e islas",
+      "known_at": 11
+    },
+    {
+      "name": "Delta",
+      "facet": "Costas, playas e islas",
+      "known_at": 9
+    },
+    {
+      "name": "Estrecho",
+      "facet": "Costas, playas e islas",
+      "known_at": 9
+    },
+    {
+      "name": "Zona abisal",
+      "facet": "Fondo marino y abismo",
+      "known_at": 11
+    },
+    {
+      "name": "Bioluminiscencia",
+      "facet": "Fondo marino y abismo",
+      "known_at": 9
+    },
+    {
+      "name": "Submarino",
+      "facet": "Fondo marino y abismo",
+      "known_at": 2
+    },
+    {
+      "name": "Batiscafo",
+      "facet": "Fondo marino y abismo",
+      "known_at": 12
+    },
+    {
+      "name": "Chimenea hidrotermal",
+      "facet": "Fondo marino y abismo",
+      "known_at": 12
+    },
+    {
+      "name": "Placa tectónica",
+      "facet": "Fondo marino y abismo",
+      "known_at": 9
+    },
+    {
+      "name": "Volcán submarino",
+      "facet": "Fondo marino y abismo",
+      "known_at": 7
+    },
+    {
+      "name": "Presión del agua",
+      "facet": "Fondo marino y abismo",
+      "known_at": 7
+    },
+    {
+      "name": "Pecio",
+      "facet": "Fondo marino y abismo",
+      "known_at": 13
+    },
+    {
+      "name": "Abismo Challenger",
+      "facet": "Fondo marino y abismo",
+      "known_at": 13
+    },
+    {
+      "name": "Jacques Piccard",
+      "facet": "Fondo marino y abismo",
+      "known_at": 14
+    },
+    {
+      "name": "Escafandra",
+      "facet": "Fondo marino y abismo",
+      "known_at": 8
+    },
+    {
+      "name": "Buzo",
+      "facet": "Fondo marino y abismo",
+      "known_at": 3
+    },
+    {
+      "name": "Plataforma continental",
+      "facet": "Fondo marino y abismo",
+      "known_at": 11
+    },
+    {
+      "name": "Zona de penumbra",
+      "facet": "Fondo marino y abismo",
+      "known_at": 13
+    },
+    {
+      "name": "Gusano tubícola gigante",
+      "facet": "Fondo marino y abismo",
+      "known_at": 14
+    },
+    {
+      "name": "Sonar",
+      "facet": "Fondo marino y abismo",
+      "known_at": 9
+    },
+    {
+      "name": "Robot submarino",
+      "facet": "Fondo marino y abismo",
+      "known_at": 12
+    },
+    {
+      "name": "San Andrés",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 4
+    },
+    {
+      "name": "Providencia",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Cartagena",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 3
+    },
+    {
+      "name": "Santa Marta",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 4
+    },
+    {
+      "name": "Isla Gorgona",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Isla de Malpelo",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía Solano",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Buenaventura",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Tumaco",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Islas del Rosario",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Parque Tayrona",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 6
+    },
+    {
+      "name": "Mar de los siete colores",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 7
+    },
+    {
+      "name": "Ballena jorobada",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 5
+    },
+    {
+      "name": "Golfo de Urabá",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Nuquí",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Cabo de la Vela",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Barú",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 8
+    },
+    {
+      "name": "Capurganá",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 10
+    },
+    {
+      "name": "Galeón San José",
+      "facet": "Mar Caribe y Pacífico colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Ancla",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 2
+    },
+    {
+      "name": "Barco pirata",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 2
+    },
+    {
+      "name": "Velero",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 3
+    },
+    {
+      "name": "Carabela",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 8
+    },
+    {
+      "name": "Nao Santa María",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 6
+    },
+    {
+      "name": "Barco vikingo",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 7
+    },
+    {
+      "name": "Jacques Cousteau",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 11
+    },
+    {
+      "name": "Galeón",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 8
+    },
+    {
+      "name": "Nudo (velocidad)",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 12
+    },
+    {
+      "name": "Timón",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 5
+    },
+    {
+      "name": "Portaaviones",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 7
+    },
+    {
+      "name": "Babor y estribor",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 11
+    },
+    {
+      "name": "Kon-Tiki",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Buque Gloria",
+      "facet": "Navegación, barcos y exploradores",
+      "known_at": 11
+    },
+    {
+      "name": "Camarón",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Langosta",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Atún",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Salmón",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Mojarra frita",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Arroz con coco",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Ostra",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Perla",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Red de pesca",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Caña de pescar",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Bacalao",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Sardina",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Anzuelo",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Pargo rojo",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Piangua",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 13
+    },
+    {
+      "name": "Pesca de arrastre",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Cazuela de mariscos",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Mejillón",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Chipichipi",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Caviar",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 8
+    },
+    {
+      "name": "Róbalo",
+      "facet": "Pesca y mariscos en la mesa",
+      "known_at": 9
+    },
+    {
+      "name": "Agua salada",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 1
+    },
+    {
+      "name": "Sal marina",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 3
+    },
+    {
+      "name": "Salinas de Manaure",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 9
+    },
+    {
+      "name": "Cloruro de sodio",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 9
+    },
+    {
+      "name": "Salinidad",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 9
+    },
+    {
+      "name": "Desalinización",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 10
+    },
+    {
+      "name": "Evaporación",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 6
+    },
+    {
+      "name": "Flotabilidad",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 8
+    },
+    {
+      "name": "Acidificación del océano",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 12
+    },
+    {
+      "name": "Ciclo del agua",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 5
+    },
+    {
+      "name": "Agua dulce",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 3
+    },
+    {
+      "name": "Densidad",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 9
+    },
+    {
+      "name": "Ósmosis",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 12
+    },
+    {
+      "name": "Yodo",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 11
+    },
+    {
+      "name": "Oxígeno disuelto",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 12
+    },
+    {
+      "name": "Color azul del mar",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 5
+    },
+    {
+      "name": "Termoclina",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 14
+    },
+    {
+      "name": "Hielo marino",
+      "facet": "Sal, agua de mar y química del océano",
+      "known_at": 9
+    },
+    {
+      "name": "Basura plástica",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 3
+    },
+    {
+      "name": "Isla de basura del Pacífico",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 8
+    },
+    {
+      "name": "Microplásticos",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 8
+    },
+    {
+      "name": "Derrame de petróleo",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 6
+    },
+    {
+      "name": "Pitillo de plástico",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 4
+    },
+    {
+      "name": "Reciclaje",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 2
+    },
+    {
+      "name": "Sobrepesca",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 10
+    },
+    {
+      "name": "Área marina protegida",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 11
+    },
+    {
+      "name": "Greenpeace",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 9
+    },
+    {
+      "name": "Día Mundial de los Océanos",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 10
+    },
+    {
+      "name": "Bolsa de plástico",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 2
+    },
+    {
+      "name": "Calentamiento global",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 6
+    },
+    {
+      "name": "Red fantasma",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 13
+    },
+    {
+      "name": "Exxon Valdez",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 14
+    },
+    {
+      "name": "Limpieza de playas",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 3
+    },
+    {
+      "name": "Veda de pesca",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 11
+    },
+    {
+      "name": "Zona muerta",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 13
+    },
+    {
+      "name": "The Ocean Cleanup",
+      "facet": "Contaminación y protección del mar",
+      "known_at": 13
+    },
+    {
+      "name": "Buscando a Nemo",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 1
+    },
+    {
+      "name": "La Sirenita",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 1
+    },
+    {
+      "name": "Bob Esponja",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 1
+    },
+    {
+      "name": "Tiburón (película)",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 8
+    },
+    {
+      "name": "Titanic",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "Piratas del Caribe",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 5
+    },
+    {
+      "name": "Jack Sparrow",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "Kraken",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 7
+    },
+    {
+      "name": "Moby Dick",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Veinte mil leguas de viaje submarino",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Poseidón",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 7
+    },
+    {
+      "name": "Atlántida",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 8
+    },
+    {
+      "name": "Triángulo de las Bermudas",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 7
+    },
+    {
+      "name": "Holandés Errante",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Sirena",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 1
+    },
+    {
+      "name": "Aquaman",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 5
+    },
+    {
+      "name": "Popeye",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "La Odisea",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Mohán",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Capitán Nemo",
+      "facet": "El mar en películas y leyendas",
+      "known_at": 11
+    }
+  ]
+}

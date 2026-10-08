@@ -1,0 +1,897 @@
+{
+  "subcategory": "Países del mundo",
+  "facets": [
+    "Capitales del mundo",
+    "Banderas y símbolos nacionales",
+    "Monumentos y lugares famosos",
+    "Comidas típicas por país",
+    "Idiomas y monedas",
+    "Animales emblemáticos de cada país",
+    "Récords y tamaños de países",
+    "Fronteras, vecinos y ubicación",
+    "Costumbres, fiestas y tradiciones",
+    "Países en películas y juegos",
+    "Países que cambiaron de nombre",
+    "Gentilicios y nombres de países"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 5,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 5,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Londres",
+      "facet": "Capitales del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Madrid",
+      "facet": "Capitales del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Roma",
+      "facet": "Capitales del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Buenos Aires",
+      "facet": "Capitales del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Quito",
+      "facet": "Capitales del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Caracas",
+      "facet": "Capitales del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Ciudad de México",
+      "facet": "Capitales del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Moscú",
+      "facet": "Capitales del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "El Cairo",
+      "facet": "Capitales del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Berlín",
+      "facet": "Capitales del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Nueva Delhi",
+      "facet": "Capitales del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Santiago de Chile",
+      "facet": "Capitales del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Ankara",
+      "facet": "Capitales del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Wellington",
+      "facet": "Capitales del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Japón",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 2
+    },
+    {
+      "name": "Bandera de Estados Unidos",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 2
+    },
+    {
+      "name": "Bandera de Canadá",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Bandera de Brasil",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Bandera de Nepal",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Union Jack",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de Suiza",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera de Francia",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 5
+    },
+    {
+      "name": "Bandera de México",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Bandera de Italia",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 5
+    },
+    {
+      "name": "Bandera de Corea del Sur",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de Alemania",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de Argentina",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Bandera de Chipre",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Paraguay",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Jamaica",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 8
+    },
+    {
+      "name": "La Marsellesa",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Escudo de México",
+      "facet": "Banderas y símbolos nacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Coliseo romano",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Acrópolis de Atenas",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Moáis de la Isla de Pascua",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Alhambra",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Kremlin",
+      "facet": "Monumentos y lugares famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Pizza",
+      "facet": "Comidas típicas por país",
+      "known_at": 1
+    },
+    {
+      "name": "Sushi",
+      "facet": "Comidas típicas por país",
+      "known_at": 3
+    },
+    {
+      "name": "Tacos",
+      "facet": "Comidas típicas por país",
+      "known_at": 2
+    },
+    {
+      "name": "Paella",
+      "facet": "Comidas típicas por país",
+      "known_at": 6
+    },
+    {
+      "name": "Croissant",
+      "facet": "Comidas típicas por país",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburguesa",
+      "facet": "Comidas típicas por país",
+      "known_at": 3
+    },
+    {
+      "name": "Ceviche",
+      "facet": "Comidas típicas por país",
+      "known_at": 7
+    },
+    {
+      "name": "Kimchi",
+      "facet": "Comidas típicas por país",
+      "known_at": 10
+    },
+    {
+      "name": "Fish and chips",
+      "facet": "Comidas típicas por país",
+      "known_at": 8
+    },
+    {
+      "name": "Pad thai",
+      "facet": "Comidas típicas por país",
+      "known_at": 11
+    },
+    {
+      "name": "Hummus",
+      "facet": "Comidas típicas por país",
+      "known_at": 10
+    },
+    {
+      "name": "Gulash",
+      "facet": "Comidas típicas por país",
+      "known_at": 13
+    },
+    {
+      "name": "Poutine",
+      "facet": "Comidas típicas por país",
+      "known_at": 13
+    },
+    {
+      "name": "Feijoada",
+      "facet": "Comidas típicas por país",
+      "known_at": 11
+    },
+    {
+      "name": "Fondue",
+      "facet": "Comidas típicas por país",
+      "known_at": 9
+    },
+    {
+      "name": "Ramen",
+      "facet": "Comidas típicas por país",
+      "known_at": 5
+    },
+    {
+      "name": "Curry",
+      "facet": "Comidas típicas por país",
+      "known_at": 7
+    },
+    {
+      "name": "Borscht",
+      "facet": "Comidas típicas por país",
+      "known_at": 13
+    },
+    {
+      "name": "Baklava",
+      "facet": "Comidas típicas por país",
+      "known_at": 12
+    },
+    {
+      "name": "Pasta",
+      "facet": "Comidas típicas por país",
+      "known_at": 2
+    },
+    {
+      "name": "Euro",
+      "facet": "Idiomas y monedas",
+      "known_at": 4
+    },
+    {
+      "name": "Dólar estadounidense",
+      "facet": "Idiomas y monedas",
+      "known_at": 3
+    },
+    {
+      "name": "Yen",
+      "facet": "Idiomas y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Libra esterlina",
+      "facet": "Idiomas y monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Rublo",
+      "facet": "Idiomas y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Yuan",
+      "facet": "Idiomas y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Rupia india",
+      "facet": "Idiomas y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Franco suizo",
+      "facet": "Idiomas y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Real brasileño",
+      "facet": "Idiomas y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Chino mandarín",
+      "facet": "Idiomas y monedas",
+      "known_at": 7
+    },
+    {
+      "name": "Inglés",
+      "facet": "Idiomas y monedas",
+      "known_at": 2
+    },
+    {
+      "name": "Francés",
+      "facet": "Idiomas y monedas",
+      "known_at": 3
+    },
+    {
+      "name": "Quechua",
+      "facet": "Idiomas y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Guaraní",
+      "facet": "Idiomas y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Águila calva",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 7
+    },
+    {
+      "name": "Camello",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 3
+    },
+    {
+      "name": "Gallo galo",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 12
+    },
+    {
+      "name": "Quetzal",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 10
+    },
+    {
+      "name": "Dragón de Komodo",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 7
+    },
+    {
+      "name": "Castor",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 10
+    },
+    {
+      "name": "Reno",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 3
+    },
+    {
+      "name": "Yak",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 10
+    },
+    {
+      "name": "Unicornio",
+      "facet": "Animales emblemáticos de cada país",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad del Vaticano",
+      "facet": "Récords y tamaños de países",
+      "known_at": 6
+    },
+    {
+      "name": "Brasil",
+      "facet": "Récords y tamaños de países",
+      "known_at": 3
+    },
+    {
+      "name": "Mónaco",
+      "facet": "Récords y tamaños de países",
+      "known_at": 9
+    },
+    {
+      "name": "Kazajistán",
+      "facet": "Récords y tamaños de países",
+      "known_at": 13
+    },
+    {
+      "name": "Chile",
+      "facet": "Récords y tamaños de países",
+      "known_at": 5
+    },
+    {
+      "name": "Mongolia",
+      "facet": "Récords y tamaños de países",
+      "known_at": 12
+    },
+    {
+      "name": "Nauru",
+      "facet": "Récords y tamaños de países",
+      "known_at": 15
+    },
+    {
+      "name": "San Marino",
+      "facet": "Récords y tamaños de países",
+      "known_at": 12
+    },
+    {
+      "name": "Maldivas",
+      "facet": "Récords y tamaños de países",
+      "known_at": 12
+    },
+    {
+      "name": "Paraguay",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 7
+    },
+    {
+      "name": "Bolivia",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 6
+    },
+    {
+      "name": "Lesoto",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 14
+    },
+    {
+      "name": "Panamá",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 4
+    },
+    {
+      "name": "Portugal",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 6
+    },
+    {
+      "name": "Haití",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 9
+    },
+    {
+      "name": "Andorra",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 11
+    },
+    {
+      "name": "Corea del Norte",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 8
+    },
+    {
+      "name": "Liechtenstein",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 13
+    },
+    {
+      "name": "Península Ibérica",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 10
+    },
+    {
+      "name": "Cuerno de África",
+      "facet": "Fronteras, vecinos y ubicación",
+      "known_at": 13
+    },
+    {
+      "name": "Año Nuevo chino",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 5
+    },
+    {
+      "name": "Oktoberfest",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "San Fermín",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 11
+    },
+    {
+      "name": "La Tomatina",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Día de Acción de Gracias",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 7
+    },
+    {
+      "name": "Holi",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Ceremonia del té japonesa",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Siesta",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 6
+    },
+    {
+      "name": "Diwali",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Flamenco",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 6
+    },
+    {
+      "name": "Kilt",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Día de San Patricio",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Inti Raymi",
+      "facet": "Costumbres, fiestas y tradiciones",
+      "known_at": 12
+    },
+    {
+      "name": "Encanto",
+      "facet": "Países en películas y juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Mulán",
+      "facet": "Países en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Frozen",
+      "facet": "Países en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Ratatouille",
+      "facet": "Países en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Up",
+      "facet": "Países en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Moana",
+      "facet": "Países en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Kung Fu Panda",
+      "facet": "Países en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Río (película)",
+      "facet": "Países en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Madagascar (película)",
+      "facet": "Países en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Luca",
+      "facet": "Países en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Red (película)",
+      "facet": "Países en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "El Rey León",
+      "facet": "Países en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Valiente",
+      "facet": "Países en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Carmen Sandiego",
+      "facet": "Países en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Wakanda",
+      "facet": "Países en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Región de Kanto",
+      "facet": "Países en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Tintín",
+      "facet": "Países en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Persia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 10
+    },
+    {
+      "name": "Siam",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 12
+    },
+    {
+      "name": "Ceilán",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 13
+    },
+    {
+      "name": "Birmania",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 13
+    },
+    {
+      "name": "Unión Soviética",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 9
+    },
+    {
+      "name": "Checoslovaquia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 11
+    },
+    {
+      "name": "Yugoslavia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 12
+    },
+    {
+      "name": "Zaire",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 14
+    },
+    {
+      "name": "Rodesia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 14
+    },
+    {
+      "name": "Abisinia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 14
+    },
+    {
+      "name": "Nueva Granada",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Colombia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 8
+    },
+    {
+      "name": "Formosa",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 14
+    },
+    {
+      "name": "Alto Volta",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 15
+    },
+    {
+      "name": "Suazilandia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 14
+    },
+    {
+      "name": "Chequia",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 11
+    },
+    {
+      "name": "Macedonia del Norte",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 13
+    },
+    {
+      "name": "Costa de Oro",
+      "facet": "Países que cambiaron de nombre",
+      "known_at": 15
+    },
+    {
+      "name": "Estadounidense",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 4
+    },
+    {
+      "name": "Costarricense",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 6
+    },
+    {
+      "name": "Guatemalteco",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 7
+    },
+    {
+      "name": "Puertorriqueño",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 6
+    },
+    {
+      "name": "Salvadoreño",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 7
+    },
+    {
+      "name": "Monegasco",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 13
+    },
+    {
+      "name": "Malgache",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 14
+    },
+    {
+      "name": "Chipriota",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 12
+    },
+    {
+      "name": "Nipón",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 11
+    },
+    {
+      "name": "Helénico",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 13
+    },
+    {
+      "name": "Neerlandés",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 12
+    },
+    {
+      "name": "Danés",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 9
+    },
+    {
+      "name": "Islandés",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 9
+    },
+    {
+      "name": "Filipino",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 6
+    },
+    {
+      "name": "Argentina",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 10
+    },
+    {
+      "name": "Venezuela",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 10
+    },
+    {
+      "name": "Ecuador",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 7
+    },
+    {
+      "name": "Colombia",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 8
+    },
+    {
+      "name": "Costa de Marfil",
+      "facet": "Gentilicios y nombres de países",
+      "known_at": 10
+    }
+  ]
+}

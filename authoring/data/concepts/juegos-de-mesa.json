@@ -1,0 +1,1042 @@
+{
+  "subcategory": "Juegos de mesa",
+  "facets": [
+    "Ajedrez y sus piezas",
+    "Damas, go y juegos de estrategia clásicos",
+    "Juegos de dados y azar",
+    "Cartas y barajas",
+    "Juegos de propiedades y dinero",
+    "Juegos de palabras y preguntas",
+    "Juegos de mesa modernos",
+    "Juegos tradicionales colombianos de mesa",
+    "Juegos antiguos y su historia",
+    "Fichas, tableros y accesorios",
+    "Reglas, jugadas y vocabulario",
+    "Campeones y jugadores famosos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rey",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 2
+    },
+    {
+      "name": "Dama",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 3
+    },
+    {
+      "name": "Torre",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 3
+    },
+    {
+      "name": "Alfil",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 6
+    },
+    {
+      "name": "Caballo",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 3
+    },
+    {
+      "name": "Peón",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 4
+    },
+    {
+      "name": "Reloj de ajedrez",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 7
+    },
+    {
+      "name": "Piezas Staunton",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 14
+    },
+    {
+      "name": "Ajedrez de Lewis",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 13
+    },
+    {
+      "name": "Defensa siciliana",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 13
+    },
+    {
+      "name": "Gambito de dama",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 9
+    },
+    {
+      "name": "Mate del pastor",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 10
+    },
+    {
+      "name": "Ajedrez 960",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 14
+    },
+    {
+      "name": "Notación algebraica",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 12
+    },
+    {
+      "name": "Shogi",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 13
+    },
+    {
+      "name": "Xiangqi",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 14
+    },
+    {
+      "name": "Puntuación Elo",
+      "facet": "Ajedrez y sus piezas",
+      "known_at": 12
+    },
+    {
+      "name": "Damas",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "Damas chinas",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 4
+    },
+    {
+      "name": "Go",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Othello",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Cuatro en línea",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 3
+    },
+    {
+      "name": "Backgammon",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Halma",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "Stratego",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla naval",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 3
+    },
+    {
+      "name": "Gomoku",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Hex",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 15
+    },
+    {
+      "name": "Mastermind",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Abalone",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "Quoridor",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "Rasta (risk) de dominación",
+      "facet": "Damas, go y juegos de estrategia clásicos",
+      "known_at": 15
+    },
+    {
+      "name": "Dado",
+      "facet": "Juegos de dados y azar",
+      "known_at": 1
+    },
+    {
+      "name": "Dado de veinte caras",
+      "facet": "Juegos de dados y azar",
+      "known_at": 9
+    },
+    {
+      "name": "Generala",
+      "facet": "Juegos de dados y azar",
+      "known_at": 10
+    },
+    {
+      "name": "Yahtzee",
+      "facet": "Juegos de dados y azar",
+      "known_at": 10
+    },
+    {
+      "name": "Serpientes y escaleras",
+      "facet": "Juegos de dados y azar",
+      "known_at": 2
+    },
+    {
+      "name": "Juego de la oca",
+      "facet": "Juegos de dados y azar",
+      "known_at": 7
+    },
+    {
+      "name": "Parchís",
+      "facet": "Juegos de dados y azar",
+      "known_at": 5
+    },
+    {
+      "name": "Bingo",
+      "facet": "Juegos de dados y azar",
+      "known_at": 2
+    },
+    {
+      "name": "Lotería mexicana",
+      "facet": "Juegos de dados y azar",
+      "known_at": 9
+    },
+    {
+      "name": "Ruleta",
+      "facet": "Juegos de dados y azar",
+      "known_at": 5
+    },
+    {
+      "name": "Dados de póker",
+      "facet": "Juegos de dados y azar",
+      "known_at": 11
+    },
+    {
+      "name": "Cara o sello",
+      "facet": "Juegos de dados y azar",
+      "known_at": 1
+    },
+    {
+      "name": "Perudo",
+      "facet": "Juegos de dados y azar",
+      "known_at": 14
+    },
+    {
+      "name": "Probabilidad",
+      "facet": "Juegos de dados y azar",
+      "known_at": 8
+    },
+    {
+      "name": "Piedra, papel o tijera",
+      "facet": "Juegos de dados y azar",
+      "known_at": 1
+    },
+    {
+      "name": "Baraja española",
+      "facet": "Cartas y barajas",
+      "known_at": 6
+    },
+    {
+      "name": "Baraja francesa",
+      "facet": "Cartas y barajas",
+      "known_at": 7
+    },
+    {
+      "name": "Uno",
+      "facet": "Cartas y barajas",
+      "known_at": 1
+    },
+    {
+      "name": "Solitario",
+      "facet": "Cartas y barajas",
+      "known_at": 4
+    },
+    {
+      "name": "Póker",
+      "facet": "Cartas y barajas",
+      "known_at": 7
+    },
+    {
+      "name": "Veintiuno",
+      "facet": "Cartas y barajas",
+      "known_at": 7
+    },
+    {
+      "name": "Chinchón",
+      "facet": "Cartas y barajas",
+      "known_at": 11
+    },
+    {
+      "name": "Rummy",
+      "facet": "Cartas y barajas",
+      "known_at": 11
+    },
+    {
+      "name": "Tute",
+      "facet": "Cartas y barajas",
+      "known_at": 13
+    },
+    {
+      "name": "Mus",
+      "facet": "Cartas y barajas",
+      "known_at": 13
+    },
+    {
+      "name": "Escoba",
+      "facet": "Cartas y barajas",
+      "known_at": 12
+    },
+    {
+      "name": "Magic: The Gathering",
+      "facet": "Cartas y barajas",
+      "known_at": 9
+    },
+    {
+      "name": "Cartas Pokémon",
+      "facet": "Cartas y barajas",
+      "known_at": 2
+    },
+    {
+      "name": "Yu-Gi-Oh!",
+      "facet": "Cartas y barajas",
+      "known_at": 6
+    },
+    {
+      "name": "Castillo de naipes",
+      "facet": "Cartas y barajas",
+      "known_at": 4
+    },
+    {
+      "name": "Comodín",
+      "facet": "Cartas y barajas",
+      "known_at": 3
+    },
+    {
+      "name": "As",
+      "facet": "Cartas y barajas",
+      "known_at": 4
+    },
+    {
+      "name": "Copas",
+      "facet": "Cartas y barajas",
+      "known_at": 7
+    },
+    {
+      "name": "Picas",
+      "facet": "Cartas y barajas",
+      "known_at": 7
+    },
+    {
+      "name": "Concéntrese",
+      "facet": "Cartas y barajas",
+      "known_at": 2
+    },
+    {
+      "name": "Señor Monopoly",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 6
+    },
+    {
+      "name": "The Landlord's Game",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 14
+    },
+    {
+      "name": "Lizzie Magie",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Darrow",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 15
+    },
+    {
+      "name": "Cárcel del Monopoly",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 4
+    },
+    {
+      "name": "Casilla de salida",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 4
+    },
+    {
+      "name": "Hotel",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 4
+    },
+    {
+      "name": "Casas del Monopoly",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 4
+    },
+    {
+      "name": "Hipoteca",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 11
+    },
+    {
+      "name": "Ferrocarriles del Monopoly",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 9
+    },
+    {
+      "name": "Parada libre",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 9
+    },
+    {
+      "name": "Tarjeta de suerte",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Banca",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Juego de la vida",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 7
+    },
+    {
+      "name": "Cashflow",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de Monopoly",
+      "facet": "Juegos de propiedades y dinero",
+      "known_at": 3
+    },
+    {
+      "name": "Scrabble",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 6
+    },
+    {
+      "name": "Alfred Butts",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 15
+    },
+    {
+      "name": "Atril de Scrabble",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 11
+    },
+    {
+      "name": "Pictionary",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 5
+    },
+    {
+      "name": "Tabú",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 8
+    },
+    {
+      "name": "Trivial Pursuit",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 9
+    },
+    {
+      "name": "Quesitos del Trivial",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 12
+    },
+    {
+      "name": "¿Quién es quién?",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 2
+    },
+    {
+      "name": "Boggle",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 12
+    },
+    {
+      "name": "Ahorcado",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 1
+    },
+    {
+      "name": "Crucigrama",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 3
+    },
+    {
+      "name": "Sopa de letras",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 1
+    },
+    {
+      "name": "Stop",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 3
+    },
+    {
+      "name": "Codenames",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 11
+    },
+    {
+      "name": "Scattergories",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 12
+    },
+    {
+      "name": "Mímica",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 1
+    },
+    {
+      "name": "Bananagrams",
+      "facet": "Juegos de palabras y preguntas",
+      "known_at": 14
+    },
+    {
+      "name": "Catan",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 9
+    },
+    {
+      "name": "Klaus Teuber",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 15
+    },
+    {
+      "name": "Carcassonne",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Ticket to Ride",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Dixit",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 10
+    },
+    {
+      "name": "Jenga",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 1
+    },
+    {
+      "name": "Pandemic",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Dobble",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 6
+    },
+    {
+      "name": "Exploding Kittens",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 9
+    },
+    {
+      "name": "Calabozos y Dragones",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 7
+    },
+    {
+      "name": "Risk",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 8
+    },
+    {
+      "name": "Clue",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 6
+    },
+    {
+      "name": "Operando",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 3
+    },
+    {
+      "name": "Hipopótamos glotones",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 3
+    },
+    {
+      "name": "Azul",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Wingspan",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 14
+    },
+    {
+      "name": "Spiel des Jahres",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 15
+    },
+    {
+      "name": "Munchkin",
+      "facet": "Juegos de mesa modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Parqués",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Seguro del parqués",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Cárcel del parqués",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Dominó",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Capicúa",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Doble seis",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Triqui",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Remigio",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 10
+    },
+    {
+      "name": "Pirinola",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Juego de la rana",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Bolirana",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 9
+    },
+    {
+      "name": "Cubilete",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Golosa",
+      "facet": "Juegos tradicionales colombianos de mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Senet",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Juego real de Ur",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Mancala",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 9
+    },
+    {
+      "name": "Pachisi",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Chaturanga",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Shatranj",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Tabas",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Hnefatafl",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Patolli",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Molino",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 11
+    },
+    {
+      "name": "Alquerque",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Tabula",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Mehen",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Libro de los juegos de Alfonso X",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Mahjong",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 9
+    },
+    {
+      "name": "Ludus latrunculorum",
+      "facet": "Juegos antiguos y su historia",
+      "known_at": 15
+    },
+    {
+      "name": "Tablero",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 1
+    },
+    {
+      "name": "Casilla",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 2
+    },
+    {
+      "name": "Ficha",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 1
+    },
+    {
+      "name": "Meeple",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 13
+    },
+    {
+      "name": "Flecha giratoria",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 4
+    },
+    {
+      "name": "Fichas de póker",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 7
+    },
+    {
+      "name": "Ficha de dominó",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 2
+    },
+    {
+      "name": "Goban",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 15
+    },
+    {
+      "name": "Reglamento",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 3
+    },
+    {
+      "name": "Libreta de puntos",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 4
+    },
+    {
+      "name": "Pantalla del máster",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 14
+    },
+    {
+      "name": "Tablero hexagonal",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 11
+    },
+    {
+      "name": "Puntos del dado",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 5
+    },
+    {
+      "name": "Tapete",
+      "facet": "Fichas, tableros y accesorios",
+      "known_at": 9
+    },
+    {
+      "name": "Jaque",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 4
+    },
+    {
+      "name": "Jaque mate",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 3
+    },
+    {
+      "name": "Enroque",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 9
+    },
+    {
+      "name": "Captura al paso",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 13
+    },
+    {
+      "name": "Coronación",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 8
+    },
+    {
+      "name": "Tablas",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 10
+    },
+    {
+      "name": "Ahogado",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 12
+    },
+    {
+      "name": "Turno",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 1
+    },
+    {
+      "name": "Empate",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 1
+    },
+    {
+      "name": "Barajar",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 3
+    },
+    {
+      "name": "Repartir",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 2
+    },
+    {
+      "name": "Descartar",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 6
+    },
+    {
+      "name": "Farol",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 11
+    },
+    {
+      "name": "Zugzwang",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 15
+    },
+    {
+      "name": "Sacrificio",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 11
+    },
+    {
+      "name": "Apertura",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 10
+    },
+    {
+      "name": "Escalera de color",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 11
+    },
+    {
+      "name": "Triunfo",
+      "facet": "Reglas, jugadas y vocabulario",
+      "known_at": 12
+    },
+    {
+      "name": "Garry Kasparov",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Bobby Fischer",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Magnus Carlsen",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Anatoli Karpov",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Judit Polgár",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 14
+    },
+    {
+      "name": "José Raúl Capablanca",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Boris Spassky",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Deep Blue",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Beth Harmon",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Morphy",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Viswanathan Anand",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Mijaíl Tal",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Lee Sedol",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 14
+    },
+    {
+      "name": "AlphaGo",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Boris de Greiff",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Alonso Zapata",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Nigel Richards",
+      "facet": "Campeones y jugadores famosos",
+      "known_at": 15
+    }
+  ]
+}

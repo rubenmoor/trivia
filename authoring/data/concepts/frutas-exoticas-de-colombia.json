@@ -1,0 +1,842 @@
+{
+  "subcategory": "Frutas exóticas de Colombia",
+  "facets": [
+    "Frutas del Caribe y la costa",
+    "Frutas amazónicas y de selva",
+    "Frutas andinas y de clima frío",
+    "Pasifloras: maracuyá, granadilla, curuba",
+    "Anonáceas y frutas cremosas",
+    "Frutas ácidas para jugo",
+    "Palmas y sus frutos",
+    "Jugos, postres y bebidas con frutas",
+    "Plaza de mercado y venta callejera",
+    "Nombres regionales de las frutas",
+    "Frutas colombianas de exportación",
+    "Partes, semillas y cultivo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 1,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 4,
+      "history": 2,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Papaya",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 2
+    },
+    {
+      "name": "Melón",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 2
+    },
+    {
+      "name": "Tamarindo",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 6
+    },
+    {
+      "name": "Mamón",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 6
+    },
+    {
+      "name": "Carambola",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 9
+    },
+    {
+      "name": "Ciruela costeña",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 10
+    },
+    {
+      "name": "Marañón",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 10
+    },
+    {
+      "name": "Grosella",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 10
+    },
+    {
+      "name": "Pomarrosa",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 11
+    },
+    {
+      "name": "Icaco",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Uvita de playa",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Noni",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Cañandonga",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 13
+    },
+    {
+      "name": "Jobo",
+      "facet": "Frutas del Caribe y la costa",
+      "known_at": 13
+    },
+    {
+      "name": "Achiote",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 9
+    },
+    {
+      "name": "Guaraná",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 10
+    },
+    {
+      "name": "Guamo",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 10
+    },
+    {
+      "name": "Castaña amazónica",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 11
+    },
+    {
+      "name": "Árbol del pan",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 11
+    },
+    {
+      "name": "Arazá",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 12
+    },
+    {
+      "name": "Copoazú",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 13
+    },
+    {
+      "name": "Camu camu",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 13
+    },
+    {
+      "name": "Cocona",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 13
+    },
+    {
+      "name": "Sacha inchi",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 13
+    },
+    {
+      "name": "Jagua",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 13
+    },
+    {
+      "name": "Uva caimarona",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 14
+    },
+    {
+      "name": "Umarí",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 15
+    },
+    {
+      "name": "Maraco",
+      "facet": "Frutas amazónicas y de selva",
+      "known_at": 15
+    },
+    {
+      "name": "Fresa",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 1
+    },
+    {
+      "name": "Lulo",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 4
+    },
+    {
+      "name": "Durazno",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 4
+    },
+    {
+      "name": "Ciruela",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 4
+    },
+    {
+      "name": "Uchuva",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 6
+    },
+    {
+      "name": "Arándano",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 6
+    },
+    {
+      "name": "Breva",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 8
+    },
+    {
+      "name": "Pepino dulce",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 11
+    },
+    {
+      "name": "Agraz",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 12
+    },
+    {
+      "name": "Papayuela",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 12
+    },
+    {
+      "name": "Babaco",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 14
+    },
+    {
+      "name": "Chachafruto",
+      "facet": "Frutas andinas y de clima frío",
+      "known_at": 14
+    },
+    {
+      "name": "Enredadera",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 6
+    },
+    {
+      "name": "Flor de la pasión",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 10
+    },
+    {
+      "name": "Gulupa",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 11
+    },
+    {
+      "name": "Zarcillo",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 11
+    },
+    {
+      "name": "Té de pasiflora",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 12
+    },
+    {
+      "name": "Cholupa",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 13
+    },
+    {
+      "name": "Arilo",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 13
+    },
+    {
+      "name": "Espaldera",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 13
+    },
+    {
+      "name": "Abejorro carpintero",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 14
+    },
+    {
+      "name": "Corona de filamentos",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 14
+    },
+    {
+      "name": "Mariposa Heliconius",
+      "facet": "Pasifloras: maracuyá, granadilla, curuba",
+      "known_at": 14
+    },
+    {
+      "name": "Guacamole",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 3
+    },
+    {
+      "name": "Chirimoya",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 9
+    },
+    {
+      "name": "Anón",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 9
+    },
+    {
+      "name": "Mamey",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 10
+    },
+    {
+      "name": "Caimito",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 10
+    },
+    {
+      "name": "Mangostino",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 12
+    },
+    {
+      "name": "Champola",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 12
+    },
+    {
+      "name": "Lúcuma",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 13
+    },
+    {
+      "name": "Biribá",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 14
+    },
+    {
+      "name": "Familia Annonaceae",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 14
+    },
+    {
+      "name": "Caimo",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 14
+    },
+    {
+      "name": "Chupa chupa",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 14
+    },
+    {
+      "name": "Atemoya",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 15
+    },
+    {
+      "name": "Limón",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 1
+    },
+    {
+      "name": "Piña",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 1
+    },
+    {
+      "name": "Mandarina",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 2
+    },
+    {
+      "name": "Colador",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 2
+    },
+    {
+      "name": "Vitamina C",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 5
+    },
+    {
+      "name": "Lima",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 6
+    },
+    {
+      "name": "Pulpa congelada",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 7
+    },
+    {
+      "name": "Naranja agria",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 8
+    },
+    {
+      "name": "Ácido cítrico",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 9
+    },
+    {
+      "name": "pH",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 11
+    },
+    {
+      "name": "Escorbuto",
+      "facet": "Frutas ácidas para jugo",
+      "known_at": 12
+    },
+    {
+      "name": "Coco",
+      "facet": "Palmas y sus frutos",
+      "known_at": 1
+    },
+    {
+      "name": "Chontaduro",
+      "facet": "Palmas y sus frutos",
+      "known_at": 6
+    },
+    {
+      "name": "Aceite de coco",
+      "facet": "Palmas y sus frutos",
+      "known_at": 6
+    },
+    {
+      "name": "Dátil",
+      "facet": "Palmas y sus frutos",
+      "known_at": 8
+    },
+    {
+      "name": "Valle de Cocora",
+      "facet": "Palmas y sus frutos",
+      "known_at": 8
+    },
+    {
+      "name": "Asaí",
+      "facet": "Palmas y sus frutos",
+      "known_at": 9
+    },
+    {
+      "name": "Palmito",
+      "facet": "Palmas y sus frutos",
+      "known_at": 9
+    },
+    {
+      "name": "Palma de aceite",
+      "facet": "Palmas y sus frutos",
+      "known_at": 10
+    },
+    {
+      "name": "Copra",
+      "facet": "Palmas y sus frutos",
+      "known_at": 13
+    },
+    {
+      "name": "Canangucha",
+      "facet": "Palmas y sus frutos",
+      "known_at": 14
+    },
+    {
+      "name": "Milpesos",
+      "facet": "Palmas y sus frutos",
+      "known_at": 14
+    },
+    {
+      "name": "Palma de vino",
+      "facet": "Palmas y sus frutos",
+      "known_at": 14
+    },
+    {
+      "name": "Bacaba",
+      "facet": "Palmas y sus frutos",
+      "known_at": 15
+    },
+    {
+      "name": "Ensalada de frutas",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 1
+    },
+    {
+      "name": "Mermelada de mora",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 3
+    },
+    {
+      "name": "Cocada",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 5
+    },
+    {
+      "name": "Brevas con arequipe",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 6
+    },
+    {
+      "name": "Bocadillo veleño",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 7
+    },
+    {
+      "name": "Mousse de maracuyá",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 7
+    },
+    {
+      "name": "Dulce de papaya",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 9
+    },
+    {
+      "name": "Merengón",
+      "facet": "Jugos, postres y bebidas con frutas",
+      "known_at": 9
+    },
+    {
+      "name": "Fruta picada",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 2
+    },
+    {
+      "name": "Carretilla",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 3
+    },
+    {
+      "name": "Sal y limón",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 4
+    },
+    {
+      "name": "Libra",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 5
+    },
+    {
+      "name": "Ñapa",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 6
+    },
+    {
+      "name": "Palenquera",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 7
+    },
+    {
+      "name": "Bulto",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 7
+    },
+    {
+      "name": "Ponchera",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 8
+    },
+    {
+      "name": "Corabastos",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 9
+    },
+    {
+      "name": "Galería",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 9
+    },
+    {
+      "name": "Paloquemao",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 10
+    },
+    {
+      "name": "Pregón",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 10
+    },
+    {
+      "name": "Mercado de Bazurto",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 11
+    },
+    {
+      "name": "Plaza Minorista de Medellín",
+      "facet": "Plaza de mercado y venta callejera",
+      "known_at": 12
+    },
+    {
+      "name": "Pepa",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 3
+    },
+    {
+      "name": "Patilla",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 6
+    },
+    {
+      "name": "Biche",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 6
+    },
+    {
+      "name": "Pomelo",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 9
+    },
+    {
+      "name": "Pintón",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 9
+    },
+    {
+      "name": "Naranja Valencia",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 9
+    },
+    {
+      "name": "Limón mandarino",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 10
+    },
+    {
+      "name": "Totumo",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 10
+    },
+    {
+      "name": "Murrapo",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 12
+    },
+    {
+      "name": "Popocho",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 12
+    },
+    {
+      "name": "Jecho",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 12
+    },
+    {
+      "name": "Uva isabelina",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 12
+    },
+    {
+      "name": "Acerola",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 12
+    },
+    {
+      "name": "Topocho",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 13
+    },
+    {
+      "name": "Peralejo",
+      "facet": "Nombres regionales de las frutas",
+      "known_at": 14
+    },
+    {
+      "name": "Banano",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 1
+    },
+    {
+      "name": "Plátano",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 2
+    },
+    {
+      "name": "Aguacate Hass",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 8
+    },
+    {
+      "name": "Pitahaya amarilla",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 9
+    },
+    {
+      "name": "Mosca de la fruta",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto El Dorado",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 9
+    },
+    {
+      "name": "Contenedor refrigerado",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto de Santa Marta",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 10
+    },
+    {
+      "name": "Unión Europea",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 10
+    },
+    {
+      "name": "Urabá",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 11
+    },
+    {
+      "name": "Comercio justo",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 11
+    },
+    {
+      "name": "Zona bananera",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 12
+    },
+    {
+      "name": "Procolombia",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 14
+    },
+    {
+      "name": "Variedad Cavendish",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 14
+    },
+    {
+      "name": "Mal de Panamá",
+      "facet": "Frutas colombianas de exportación",
+      "known_at": 14
+    },
+    {
+      "name": "Cáscara",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 2
+    },
+    {
+      "name": "Pulpa",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 4
+    },
+    {
+      "name": "Cosecha",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 4
+    },
+    {
+      "name": "Abono",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 6
+    },
+    {
+      "name": "Racimo",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 6
+    },
+    {
+      "name": "Polinización",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 7
+    },
+    {
+      "name": "Germinación",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 7
+    },
+    {
+      "name": "Vivero",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 8
+    },
+    {
+      "name": "Injerto",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 10
+    },
+    {
+      "name": "Baya",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 11
+    },
+    {
+      "name": "Cáliz",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 11
+    },
+    {
+      "name": "Drupa",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 13
+    },
+    {
+      "name": "Etileno",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 13
+    },
+    {
+      "name": "Colino",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 13
+    },
+    {
+      "name": "Pericarpio",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 13
+    },
+    {
+      "name": "Fruto climatérico",
+      "facet": "Partes, semillas y cultivo",
+      "known_at": 15
+    }
+  ]
+}

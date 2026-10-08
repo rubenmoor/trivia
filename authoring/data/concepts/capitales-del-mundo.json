@@ -1,0 +1,972 @@
+{
+  "subcategory": "Capitales del mundo",
+  "facets": [
+    "Capitales de América",
+    "Capitales de Europa",
+    "Capitales de Asia",
+    "Capitales de África",
+    "Capitales de Oceanía y islas",
+    "Monumentos famosos de capitales",
+    "Ríos, montañas y paisajes capitalinos",
+    "Capitales que cambiaron o se mudaron",
+    "Capitales en películas y series",
+    "Nombres y apodos de capitales",
+    "Capitales récord y curiosas",
+    "Vida y costumbres en las capitales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 5,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Montevideo",
+      "facet": "Capitales de América",
+      "known_at": 8
+    },
+    {
+      "name": "Asunción",
+      "facet": "Capitales de América",
+      "known_at": 9
+    },
+    {
+      "name": "La Habana",
+      "facet": "Capitales de América",
+      "known_at": 7
+    },
+    {
+      "name": "Ciudad de Panamá",
+      "facet": "Capitales de América",
+      "known_at": 5
+    },
+    {
+      "name": "San José de Costa Rica",
+      "facet": "Capitales de América",
+      "known_at": 9
+    },
+    {
+      "name": "Managua",
+      "facet": "Capitales de América",
+      "known_at": 10
+    },
+    {
+      "name": "Tegucigalpa",
+      "facet": "Capitales de América",
+      "known_at": 11
+    },
+    {
+      "name": "Santo Domingo",
+      "facet": "Capitales de América",
+      "known_at": 9
+    },
+    {
+      "name": "Kingston",
+      "facet": "Capitales de América",
+      "known_at": 12
+    },
+    {
+      "name": "Georgetown",
+      "facet": "Capitales de América",
+      "known_at": 14
+    },
+    {
+      "name": "Paramaribo",
+      "facet": "Capitales de América",
+      "known_at": 14
+    },
+    {
+      "name": "Puerto Príncipe",
+      "facet": "Capitales de América",
+      "known_at": 13
+    },
+    {
+      "name": "París",
+      "facet": "Capitales de Europa",
+      "known_at": 2
+    },
+    {
+      "name": "Lisboa",
+      "facet": "Capitales de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Atenas",
+      "facet": "Capitales de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Ámsterdam",
+      "facet": "Capitales de Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Bruselas",
+      "facet": "Capitales de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Viena",
+      "facet": "Capitales de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Praga",
+      "facet": "Capitales de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Budapest",
+      "facet": "Capitales de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Varsovia",
+      "facet": "Capitales de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Estocolmo",
+      "facet": "Capitales de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Oslo",
+      "facet": "Capitales de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Copenhague",
+      "facet": "Capitales de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Dublín",
+      "facet": "Capitales de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Helsinki",
+      "facet": "Capitales de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Berna",
+      "facet": "Capitales de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Liubliana",
+      "facet": "Capitales de Europa",
+      "known_at": 15
+    },
+    {
+      "name": "Seúl",
+      "facet": "Capitales de Asia",
+      "known_at": 7
+    },
+    {
+      "name": "Bangkok",
+      "facet": "Capitales de Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Hanói",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Manila",
+      "facet": "Capitales de Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Yakarta",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Kabul",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Teherán",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Bagdad",
+      "facet": "Capitales de Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Riad",
+      "facet": "Capitales de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Katmandú",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Kuala Lumpur",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Taskent",
+      "facet": "Capitales de Asia",
+      "known_at": 15
+    },
+    {
+      "name": "Doha",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Abu Dabi",
+      "facet": "Capitales de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Pretoria",
+      "facet": "Capitales de África",
+      "known_at": 13
+    },
+    {
+      "name": "Addis Abeba",
+      "facet": "Capitales de África",
+      "known_at": 14
+    },
+    {
+      "name": "Rabat",
+      "facet": "Capitales de África",
+      "known_at": 13
+    },
+    {
+      "name": "Argel",
+      "facet": "Capitales de África",
+      "known_at": 13
+    },
+    {
+      "name": "Túnez",
+      "facet": "Capitales de África",
+      "known_at": 12
+    },
+    {
+      "name": "Dakar",
+      "facet": "Capitales de África",
+      "known_at": 12
+    },
+    {
+      "name": "Acra",
+      "facet": "Capitales de África",
+      "known_at": 14
+    },
+    {
+      "name": "Kinshasa",
+      "facet": "Capitales de África",
+      "known_at": 13
+    },
+    {
+      "name": "Luanda",
+      "facet": "Capitales de África",
+      "known_at": 14
+    },
+    {
+      "name": "Kampala",
+      "facet": "Capitales de África",
+      "known_at": 14
+    },
+    {
+      "name": "Antananarivo",
+      "facet": "Capitales de África",
+      "known_at": 14
+    },
+    {
+      "name": "Jartum",
+      "facet": "Capitales de África",
+      "known_at": 14
+    },
+    {
+      "name": "Trípoli",
+      "facet": "Capitales de África",
+      "known_at": 13
+    },
+    {
+      "name": "Harare",
+      "facet": "Capitales de África",
+      "known_at": 15
+    },
+    {
+      "name": "Canberra",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 10
+    },
+    {
+      "name": "Suva",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Port Moresby",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Apia",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Nukualofa",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Port Vila",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Honiara",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Funafuti",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Reikiavik",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 12
+    },
+    {
+      "name": "La Valeta",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 14
+    },
+    {
+      "name": "Nuuk",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 14
+    },
+    {
+      "name": "Malé",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 14
+    },
+    {
+      "name": "Puerto Luis",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Victoria de Seychelles",
+      "facet": "Capitales de Oceanía y islas",
+      "known_at": 15
+    },
+    {
+      "name": "Puerta de Brandeburgo",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Casa Blanca",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Capitolio de Washington",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Obelisco de Buenos Aires",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Ángel de la Independencia",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Santuario de Monserrate",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Museo del Oro",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Torre de Belém",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Buckingham",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Arco del Triunfo",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Museo del Louvre",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Torre de Tokio",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Atomium",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Manneken Pis",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de Carlos",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Torres Petronas",
+      "facet": "Monumentos famosos de capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Río Sena",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 7
+    },
+    {
+      "name": "Río Támesis",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 8
+    },
+    {
+      "name": "Río Tíber",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 12
+    },
+    {
+      "name": "Río de la Plata",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 10
+    },
+    {
+      "name": "Río Spree",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 15
+    },
+    {
+      "name": "Río Moscova",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 13
+    },
+    {
+      "name": "Río Potomac",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 14
+    },
+    {
+      "name": "Río Rímac",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 14
+    },
+    {
+      "name": "Río Moldava",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 15
+    },
+    {
+      "name": "Río Liffey",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 15
+    },
+    {
+      "name": "Río Han",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 15
+    },
+    {
+      "name": "Río Chao Phraya",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 15
+    },
+    {
+      "name": "Cerros Orientales",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 8
+    },
+    {
+      "name": "Volcán Pichincha",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 12
+    },
+    {
+      "name": "Nevado Illimani",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 14
+    },
+    {
+      "name": "Cerro Ávila",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 13
+    },
+    {
+      "name": "Cerro San Cristóbal",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 14
+    },
+    {
+      "name": "Montaña de la Mesa",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 14
+    },
+    {
+      "name": "Canales de Ámsterdam",
+      "facet": "Ríos, montañas y paisajes capitalinos",
+      "known_at": 9
+    },
+    {
+      "name": "Río de Janeiro",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 5
+    },
+    {
+      "name": "Astaná",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 14
+    },
+    {
+      "name": "Abuja",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 14
+    },
+    {
+      "name": "Lagos",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 13
+    },
+    {
+      "name": "Dodoma",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 15
+    },
+    {
+      "name": "Naipyidó",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 15
+    },
+    {
+      "name": "Bonn",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 12
+    },
+    {
+      "name": "San Petersburgo",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 11
+    },
+    {
+      "name": "Kioto",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 11
+    },
+    {
+      "name": "Filadelfia",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 13
+    },
+    {
+      "name": "Calcuta",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 14
+    },
+    {
+      "name": "Islamabad",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 14
+    },
+    {
+      "name": "Nusantara",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 15
+    },
+    {
+      "name": "Almaty",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 15
+    },
+    {
+      "name": "Yangón",
+      "facet": "Capitales que cambiaron o se mudaron",
+      "known_at": 15
+    },
+    {
+      "name": "Los Aristogatos",
+      "facet": "Capitales en películas y series",
+      "known_at": 4
+    },
+    {
+      "name": "El jorobado de Notre Dame",
+      "facet": "Capitales en películas y series",
+      "known_at": 4
+    },
+    {
+      "name": "101 dálmatas",
+      "facet": "Capitales en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "Peter Pan",
+      "facet": "Capitales en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "Paddington",
+      "facet": "Capitales en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "Mary Poppins",
+      "facet": "Capitales en películas y series",
+      "known_at": 5
+    },
+    {
+      "name": "Harry Potter",
+      "facet": "Capitales en películas y series",
+      "known_at": 4
+    },
+    {
+      "name": "Cars 2",
+      "facet": "Capitales en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "La casa de papel",
+      "facet": "Capitales en películas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Emily en París",
+      "facet": "Capitales en películas y series",
+      "known_at": 10
+    },
+    {
+      "name": "Notting Hill",
+      "facet": "Capitales en películas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Vacaciones en Roma",
+      "facet": "Capitales en películas y series",
+      "known_at": 14
+    },
+    {
+      "name": "Lost in Translation",
+      "facet": "Capitales en películas y series",
+      "known_at": 14
+    },
+    {
+      "name": "Amélie",
+      "facet": "Capitales en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Medianoche en París",
+      "facet": "Capitales en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Sherlock",
+      "facet": "Capitales en películas y series",
+      "known_at": 10
+    },
+    {
+      "name": "Bridgerton",
+      "facet": "Capitales en películas y series",
+      "known_at": 11
+    },
+    {
+      "name": "Anastasia",
+      "facet": "Capitales en películas y series",
+      "known_at": 8
+    },
+    {
+      "name": "Ciudad Luz",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Ciudad Eterna",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Atenas Suramericana",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 11
+    },
+    {
+      "name": "La Nevera",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Santafé",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Distrito Capital",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Tenochtitlan",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Edo",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Lutecia",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Londinium",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 12
+    },
+    {
+      "name": "Krung Thep",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 15
+    },
+    {
+      "name": "Ciudad de los Reyes",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad de las Cien Torres",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 14
+    },
+    {
+      "name": "Ciudad de la Furia",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad de las Siete Colinas",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 13
+    },
+    {
+      "name": "Batavia",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 15
+    },
+    {
+      "name": "Christiania",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 15
+    },
+    {
+      "name": "Leopoldville",
+      "facet": "Nombres y apodos de capitales",
+      "known_at": 15
+    },
+    {
+      "name": "Ulán Bator",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 14
+    },
+    {
+      "name": "Sucre",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Brazzaville",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 15
+    },
+    {
+      "name": "Damasco",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Andorra la Vieja",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Yaren",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 15
+    },
+    {
+      "name": "La Haya",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 13
+    },
+    {
+      "name": "Singapur",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Bloemfontein",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 15
+    },
+    {
+      "name": "Luxemburgo",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Belmopán",
+      "facet": "Capitales récord y curiosas",
+      "known_at": 15
+    },
+    {
+      "name": "Autobús de dos pisos",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Taxi negro de Londres",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Metro de Moscú",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 12
+    },
+    {
+      "name": "Tuk-tuk",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Ciclovía",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 4
+    },
+    {
+      "name": "TransMilenio",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Pico y placa",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Cambio de guardia",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Té de las cinco",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Baguette",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Mate",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Churros con chocolate",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Tapas",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Mercado flotante",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 11
+    },
+    {
+      "name": "Bicicletas de Ámsterdam",
+      "facet": "Vida y costumbres en las capitales",
+      "known_at": 10
+    }
+  ]
+}

@@ -1,0 +1,702 @@
+{
+  "subcategory": "Animales de Colombia",
+  "facets": [
+    "Mamíferos de selva y montaña",
+    "Aves y colibríes",
+    "Animales de ríos y humedales",
+    "Fauna del mar y los arrecifes",
+    "Reptiles y anfibios",
+    "Insectos, mariposas y arañas",
+    "Animales en peligro y conservación",
+    "Animales símbolo y escudos",
+    "Animales del campo y la finca",
+    "Ecosistemas y regiones de fauna",
+    "Animales en cultura y Encanto",
+    "Nombres y dichos de animales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Danta de montaña",
+      "facet": "Mamíferos de selva y montaña",
+      "known_at": 9
+    },
+    {
+      "name": "Cusumbo",
+      "facet": "Mamíferos de selva y montaña",
+      "known_at": 8
+    },
+    {
+      "name": "Perro de monte",
+      "facet": "Mamíferos de selva y montaña",
+      "known_at": 12
+    },
+    {
+      "name": "Saíno",
+      "facet": "Mamíferos de selva y montaña",
+      "known_at": 11
+    },
+    {
+      "name": "Colibrí",
+      "facet": "Aves y colibríes",
+      "known_at": 2
+    },
+    {
+      "name": "Guacamaya bandera",
+      "facet": "Aves y colibríes",
+      "known_at": 4
+    },
+    {
+      "name": "Tucán",
+      "facet": "Aves y colibríes",
+      "known_at": 2
+    },
+    {
+      "name": "Gallito de roca",
+      "facet": "Aves y colibríes",
+      "known_at": 10
+    },
+    {
+      "name": "Barranquero",
+      "facet": "Aves y colibríes",
+      "known_at": 11
+    },
+    {
+      "name": "Garza",
+      "facet": "Aves y colibríes",
+      "known_at": 4
+    },
+    {
+      "name": "Pájaro carpintero",
+      "facet": "Aves y colibríes",
+      "known_at": 2
+    },
+    {
+      "name": "Búho",
+      "facet": "Aves y colibríes",
+      "known_at": 1
+    },
+    {
+      "name": "Toche",
+      "facet": "Aves y colibríes",
+      "known_at": 9
+    },
+    {
+      "name": "Turpial",
+      "facet": "Aves y colibríes",
+      "known_at": 10
+    },
+    {
+      "name": "Mirla",
+      "facet": "Aves y colibríes",
+      "known_at": 8
+    },
+    {
+      "name": "Copetón",
+      "facet": "Aves y colibríes",
+      "known_at": 9
+    },
+    {
+      "name": "Hoatzín",
+      "facet": "Aves y colibríes",
+      "known_at": 12
+    },
+    {
+      "name": "Águila arpía",
+      "facet": "Aves y colibríes",
+      "known_at": 8
+    },
+    {
+      "name": "Pelícano",
+      "facet": "Aves y colibríes",
+      "known_at": 3
+    },
+    {
+      "name": "Martín pescador",
+      "facet": "Aves y colibríes",
+      "known_at": 8
+    },
+    {
+      "name": "Chigüiro",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 3
+    },
+    {
+      "name": "Piraña",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 3
+    },
+    {
+      "name": "Bocachico",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 8
+    },
+    {
+      "name": "Pirarucú",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 11
+    },
+    {
+      "name": "Bagre",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 7
+    },
+    {
+      "name": "Temblón",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 10
+    },
+    {
+      "name": "Capitán de la sabana",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 13
+    },
+    {
+      "name": "Arawana",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Mojarra",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 6
+    },
+    {
+      "name": "Chavarrí",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 13
+    },
+    {
+      "name": "Pato pisingo",
+      "facet": "Animales de ríos y humedales",
+      "known_at": 12
+    },
+    {
+      "name": "Pez loro",
+      "facet": "Fauna del mar y los arrecifes",
+      "known_at": 8
+    },
+    {
+      "name": "Delfín nariz de botella",
+      "facet": "Fauna del mar y los arrecifes",
+      "known_at": 5
+    },
+    {
+      "name": "Morena",
+      "facet": "Fauna del mar y los arrecifes",
+      "known_at": 8
+    },
+    {
+      "name": "Caracol pala",
+      "facet": "Fauna del mar y los arrecifes",
+      "known_at": 12
+    },
+    {
+      "name": "Barracuda",
+      "facet": "Fauna del mar y los arrecifes",
+      "known_at": 8
+    },
+    {
+      "name": "Rana dorada",
+      "facet": "Reptiles y anfibios",
+      "known_at": 6
+    },
+    {
+      "name": "Anaconda",
+      "facet": "Reptiles y anfibios",
+      "known_at": 3
+    },
+    {
+      "name": "Iguana",
+      "facet": "Reptiles y anfibios",
+      "known_at": 2
+    },
+    {
+      "name": "Boa",
+      "facet": "Reptiles y anfibios",
+      "known_at": 4
+    },
+    {
+      "name": "Salamandra",
+      "facet": "Reptiles y anfibios",
+      "known_at": 5
+    },
+    {
+      "name": "Sapo",
+      "facet": "Reptiles y anfibios",
+      "known_at": 1
+    },
+    {
+      "name": "Rana de cristal",
+      "facet": "Reptiles y anfibios",
+      "known_at": 7
+    },
+    {
+      "name": "Caimán aguja",
+      "facet": "Reptiles y anfibios",
+      "known_at": 11
+    },
+    {
+      "name": "Rana arlequín",
+      "facet": "Reptiles y anfibios",
+      "known_at": 12
+    },
+    {
+      "name": "Cecilia",
+      "facet": "Reptiles y anfibios",
+      "known_at": 13
+    },
+    {
+      "name": "Mariposa morpho azul",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 6
+    },
+    {
+      "name": "Hormiga culona",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 6
+    },
+    {
+      "name": "Luciérnaga",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 2
+    },
+    {
+      "name": "Abeja",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 1
+    },
+    {
+      "name": "Hormiga arriera",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 6
+    },
+    {
+      "name": "Tarántula",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 3
+    },
+    {
+      "name": "Escarabajo Hércules",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 7
+    },
+    {
+      "name": "Grillo",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 2
+    },
+    {
+      "name": "Libélula",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 3
+    },
+    {
+      "name": "Mantis religiosa",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 5
+    },
+    {
+      "name": "Comején",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 7
+    },
+    {
+      "name": "Zancudo",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 2
+    },
+    {
+      "name": "Mariposa búho",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 9
+    },
+    {
+      "name": "Viuda negra",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 6
+    },
+    {
+      "name": "Cucaracha",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 1
+    },
+    {
+      "name": "Avispa",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 2
+    },
+    {
+      "name": "Mariquita",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 1
+    },
+    {
+      "name": "Saltamontes",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 2
+    },
+    {
+      "name": "Metamorfosis",
+      "facet": "Insectos, mariposas y arañas",
+      "known_at": 5
+    },
+    {
+      "name": "Loro orejiamarillo",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Paujil de pico azul",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 13
+    },
+    {
+      "name": "Hipopótamos del Magdalena",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Especie invasora",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Caracol africano",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Tráfico de fauna silvestre",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Especie endémica",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Extinción",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 4
+    },
+    {
+      "name": "Parque Nacional Natural",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 6
+    },
+    {
+      "name": "Santuario de fauna y flora",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Corredor biológico",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 12
+    },
+    {
+      "name": "Cría en cautiverio",
+      "facet": "Animales en peligro y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Cóndor andino",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 4
+    },
+    {
+      "name": "Ave nacional de Colombia",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 5
+    },
+    {
+      "name": "Águila del escudo de Bogotá",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 12
+    },
+    {
+      "name": "Moneda de 50 pesos",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 9
+    },
+    {
+      "name": "Moneda de 200 pesos",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 7
+    },
+    {
+      "name": "Moneda de 500 pesos",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Moneda de 1.000 pesos",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 7
+    },
+    {
+      "name": "León de Santa Fe",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Tiburón del Junior",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 8
+    },
+    {
+      "name": "Leopardo del Bucaramanga",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 11
+    },
+    {
+      "name": "Animal nacional",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 10
+    },
+    {
+      "name": "Árbol nacional",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 10
+    },
+    {
+      "name": "Símbolos patrios",
+      "facet": "Animales símbolo y escudos",
+      "known_at": 6
+    },
+    {
+      "name": "Gallina",
+      "facet": "Animales del campo y la finca",
+      "known_at": 1
+    },
+    {
+      "name": "Gallo",
+      "facet": "Animales del campo y la finca",
+      "known_at": 1
+    },
+    {
+      "name": "Pavo",
+      "facet": "Animales del campo y la finca",
+      "known_at": 2
+    },
+    {
+      "name": "Ganado cebú",
+      "facet": "Animales del campo y la finca",
+      "known_at": 10
+    },
+    {
+      "name": "Caballo de paso fino",
+      "facet": "Animales del campo y la finca",
+      "known_at": 10
+    },
+    {
+      "name": "Romosinuano",
+      "facet": "Animales del campo y la finca",
+      "known_at": 14
+    },
+    {
+      "name": "Blanco orejinegro",
+      "facet": "Animales del campo y la finca",
+      "known_at": 14
+    },
+    {
+      "name": "Selva amazónica",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 3
+    },
+    {
+      "name": "Chocó biogeográfico",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 10
+    },
+    {
+      "name": "Desierto de La Guajira",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 6
+    },
+    {
+      "name": "Caño Cristales",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 8
+    },
+    {
+      "name": "Bosque de niebla",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 10
+    },
+    {
+      "name": "Serranía de Chiribiquete",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 12
+    },
+    {
+      "name": "País megadiverso",
+      "facet": "Ecosistemas y regiones de fauna",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Madrigal",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 3
+    },
+    {
+      "name": "Tucán de Encanto",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 4
+    },
+    {
+      "name": "Rin Rin Renacuajo",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 5
+    },
+    {
+      "name": "Mirringa Mirronga",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 7
+    },
+    {
+      "name": "El gato bandido",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 9
+    },
+    {
+      "name": "Tío Conejo",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 8
+    },
+    {
+      "name": "Pájaros de verano",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 13
+    },
+    {
+      "name": "El abrazo de la serpiente",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Bachué",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Danza del torito",
+      "facet": "Animales en cultura y Encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Camarón que se duerme se lo lleva la corriente",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 5
+    },
+    {
+      "name": "Más vale pájaro en mano que cien volando",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 6
+    },
+    {
+      "name": "Perro que ladra no muerde",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 5
+    },
+    {
+      "name": "A caballo regalado no se le mira el colmillo",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 8
+    },
+    {
+      "name": "Pagar el pato",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 9
+    },
+    {
+      "name": "Cada oveja con su pareja",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 8
+    },
+    {
+      "name": "Matar dos pájaros de un tiro",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 6
+    },
+    {
+      "name": "Dar gato por liebre",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 9
+    },
+    {
+      "name": "Cría cuervos y te sacarán los ojos",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 11
+    },
+    {
+      "name": "Qué bicho le picó",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 6
+    },
+    {
+      "name": "Renacuajo",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 4
+    },
+    {
+      "name": "Bandada",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 5
+    },
+    {
+      "name": "Cardumen",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 7
+    },
+    {
+      "name": "Kikiriki",
+      "facet": "Nombres y dichos de animales",
+      "known_at": 1
+    }
+  ]
+}

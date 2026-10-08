@@ -1,0 +1,347 @@
+{
+  "subcategory": "Océanos",
+  "facets": [
+    "Océanos y mares del mundo",
+    "Fauna marina",
+    "Arrecifes, plantas y algas",
+    "Mareas, olas y corrientes",
+    "Relieve del fondo marino",
+    "Costas, playas e islas",
+    "Mares y costas de Colombia",
+    "Exploración y navegación oceánica",
+    "Océanos en películas y cuentos",
+    "Agua de mar: sal y propiedades",
+    "Contaminación y protección marina",
+    "Recursos y vida junto al mar"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 3,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Océano Pacífico",
+      "facet": "Océanos y mares del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Tiburón blanco",
+      "facet": "Fauna marina",
+      "known_at": 2
+    },
+    {
+      "name": "Rape abisal",
+      "facet": "Fauna marina",
+      "known_at": 8
+    },
+    {
+      "name": "Kril",
+      "facet": "Fauna marina",
+      "known_at": 10
+    },
+    {
+      "name": "Arrecife de coral",
+      "facet": "Arrecifes, plantas y algas",
+      "known_at": 4
+    },
+    {
+      "name": "Diatomea",
+      "facet": "Arrecifes, plantas y algas",
+      "known_at": 13
+    },
+    {
+      "name": "Anémona de mar",
+      "facet": "Arrecifes, plantas y algas",
+      "known_at": 3
+    },
+    {
+      "name": "Marea roja",
+      "facet": "Arrecifes, plantas y algas",
+      "known_at": 12
+    },
+    {
+      "name": "Arrecife Mesoamericano",
+      "facet": "Arrecifes, plantas y algas",
+      "known_at": 13
+    },
+    {
+      "name": "Marea",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 3
+    },
+    {
+      "name": "Pleamar",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 11
+    },
+    {
+      "name": "Bajamar",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 11
+    },
+    {
+      "name": "Ola gigante de Nazaré",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 12
+    },
+    {
+      "name": "Circulación termohalina",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 14
+    },
+    {
+      "name": "Giro oceánico",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 13
+    },
+    {
+      "name": "Afloramiento",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 13
+    },
+    {
+      "name": "Mareógrafo",
+      "facet": "Mareas, olas y corrientes",
+      "known_at": 13
+    },
+    {
+      "name": "Talud continental",
+      "facet": "Relieve del fondo marino",
+      "known_at": 12
+    },
+    {
+      "name": "Llanura abisal",
+      "facet": "Relieve del fondo marino",
+      "known_at": 12
+    },
+    {
+      "name": "Fumarola hidrotermal",
+      "facet": "Relieve del fondo marino",
+      "known_at": 12
+    },
+    {
+      "name": "Monte submarino",
+      "facet": "Relieve del fondo marino",
+      "known_at": 11
+    },
+    {
+      "name": "Guyot",
+      "facet": "Relieve del fondo marino",
+      "known_at": 15
+    },
+    {
+      "name": "Cañón submarino",
+      "facet": "Relieve del fondo marino",
+      "known_at": 11
+    },
+    {
+      "name": "Zona hadal",
+      "facet": "Relieve del fondo marino",
+      "known_at": 14
+    },
+    {
+      "name": "Batimetría",
+      "facet": "Relieve del fondo marino",
+      "known_at": 14
+    },
+    {
+      "name": "Istmo",
+      "facet": "Costas, playas e islas",
+      "known_at": 9
+    },
+    {
+      "name": "Johnny Cay",
+      "facet": "Mares y costas de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Reserva de Biosfera Seaflower",
+      "facet": "Mares y costas de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Playa Blanca de Barú",
+      "facet": "Mares y costas de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Ciénaga Grande de Santa Marta",
+      "facet": "Mares y costas de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Avistamiento de ballenas",
+      "facet": "Mares y costas de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Batiscafo Trieste",
+      "facet": "Exploración y navegación oceánica",
+      "known_at": 13
+    },
+    {
+      "name": "Buceo",
+      "facet": "Exploración y navegación oceánica",
+      "known_at": 3
+    },
+    {
+      "name": "Sextante",
+      "facet": "Exploración y navegación oceánica",
+      "known_at": 13
+    },
+    {
+      "name": "Canal de Panamá",
+      "facet": "Exploración y navegación oceánica",
+      "known_at": 5
+    },
+    {
+      "name": "Robert Ballard",
+      "facet": "Exploración y navegación oceánica",
+      "known_at": 14
+    },
+    {
+      "name": "Deepsea Challenger",
+      "facet": "Exploración y navegación oceánica",
+      "known_at": 13
+    },
+    {
+      "name": "Dory",
+      "facet": "Océanos en películas y cuentos",
+      "known_at": 1
+    },
+    {
+      "name": "Úrsula",
+      "facet": "Océanos en películas y cuentos",
+      "known_at": 3
+    },
+    {
+      "name": "El viejo y el mar",
+      "facet": "Océanos en películas y cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Pinocho y la ballena",
+      "facet": "Océanos en películas y cuentos",
+      "known_at": 3
+    },
+    {
+      "name": "Ponyo",
+      "facet": "Océanos en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Sal",
+      "facet": "Agua de mar: sal y propiedades",
+      "known_at": 1
+    },
+    {
+      "name": "Punto de congelación",
+      "facet": "Agua de mar: sal y propiedades",
+      "known_at": 10
+    },
+    {
+      "name": "Bolsa plástica",
+      "facet": "Contaminación y protección marina",
+      "known_at": 2
+    },
+    {
+      "name": "Deepwater Horizon",
+      "facet": "Contaminación y protección marina",
+      "known_at": 13
+    },
+    {
+      "name": "Redes fantasma",
+      "facet": "Contaminación y protección marina",
+      "known_at": 12
+    },
+    {
+      "name": "Aleteo de tiburones",
+      "facet": "Contaminación y protección marina",
+      "known_at": 12
+    },
+    {
+      "name": "Pez león",
+      "facet": "Contaminación y protección marina",
+      "known_at": 11
+    },
+    {
+      "name": "Pesca",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 1
+    },
+    {
+      "name": "Puerto",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 3
+    },
+    {
+      "name": "Plataforma petrolera",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 8
+    },
+    {
+      "name": "Energía mareomotriz",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 11
+    },
+    {
+      "name": "Acuicultura",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 12
+    },
+    {
+      "name": "Canoa",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 2
+    },
+    {
+      "name": "Salvavidas",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 2
+    },
+    {
+      "name": "Ámbar gris",
+      "facet": "Recursos y vida junto al mar",
+      "known_at": 14
+    }
+  ]
+}

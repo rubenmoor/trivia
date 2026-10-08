@@ -1,0 +1,891 @@
+{
+  "subcategory": "Piratas",
+  "facets": [
+    "Piratas famosos de la historia",
+    "Barcos y navegación pirata",
+    "Armas, tesoros y objetos piratas",
+    "Vida y costumbres a bordo",
+    "Vocabulario y jerga pirata",
+    "Piratas en el Caribe y Colombia",
+    "Ciudades, fuertes y defensas costeras",
+    "Corsarios, bucaneros y filibusteros",
+    "Piratas en películas, libros y juegos",
+    "Banderas, símbolos y leyendas piratas",
+    "Piratas de otras épocas y mares"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Barbanegra",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 5
+    },
+    {
+      "name": "Anne Bonny",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Mary Read",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Calico Jack",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Bartholomew Roberts",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "William Kidd",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Samuel Bellamy",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Stede Bonnet",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Vane",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Every",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Benjamin Hornigold",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Low",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Olivier Levasseur",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Jean Lafitte",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Edward England",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Edad de oro de la piratería",
+      "facet": "Piratas famosos de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Balandra",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 12
+    },
+    {
+      "name": "Fragata",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 9
+    },
+    {
+      "name": "Bergantín",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 12
+    },
+    {
+      "name": "Goleta",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 11
+    },
+    {
+      "name": "Mástil",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 4
+    },
+    {
+      "name": "Vela",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 2
+    },
+    {
+      "name": "Carta náutica",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 10
+    },
+    {
+      "name": "Mascarón de proa",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 10
+    },
+    {
+      "name": "Cofa",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 10
+    },
+    {
+      "name": "Proa",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 6
+    },
+    {
+      "name": "Popa",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 6
+    },
+    {
+      "name": "La Venganza de la Reina Ana",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 12
+    },
+    {
+      "name": "Whydah",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 14
+    },
+    {
+      "name": "Golden Hind",
+      "facet": "Barcos y navegación pirata",
+      "known_at": 14
+    },
+    {
+      "name": "Cofre del tesoro",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 1
+    },
+    {
+      "name": "Mapa del tesoro",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 1
+    },
+    {
+      "name": "Doblón",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 8
+    },
+    {
+      "name": "Real de a ocho",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 12
+    },
+    {
+      "name": "Alfanje",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 10
+    },
+    {
+      "name": "Pistola de chispa",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 10
+    },
+    {
+      "name": "Cañón",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 2
+    },
+    {
+      "name": "Bala de cañón",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 3
+    },
+    {
+      "name": "Mosquete",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 8
+    },
+    {
+      "name": "Garfio",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 2
+    },
+    {
+      "name": "Pata de palo",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 2
+    },
+    {
+      "name": "Parche en el ojo",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 1
+    },
+    {
+      "name": "Catalejo",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 4
+    },
+    {
+      "name": "Loro",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 1
+    },
+    {
+      "name": "Sombrero tricornio",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 8
+    },
+    {
+      "name": "Gancho de abordaje",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 9
+    },
+    {
+      "name": "Lingote de oro",
+      "facet": "Armas, tesoros y objetos piratas",
+      "known_at": 4
+    },
+    {
+      "name": "Capitán",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 1
+    },
+    {
+      "name": "Contramaestre",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 10
+    },
+    {
+      "name": "Grumete",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 8
+    },
+    {
+      "name": "Vigía",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 6
+    },
+    {
+      "name": "Cirujano de barco",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 11
+    },
+    {
+      "name": "Galleta marinera",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 11
+    },
+    {
+      "name": "Código pirata",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 9
+    },
+    {
+      "name": "Caminar por la tabla",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 5
+    },
+    {
+      "name": "Pasar por la quilla",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 13
+    },
+    {
+      "name": "Abandono en una isla desierta",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 6
+    },
+    {
+      "name": "Reparto del botín",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 8
+    },
+    {
+      "name": "Hamaca",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 5
+    },
+    {
+      "name": "Fregar la cubierta",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 5
+    },
+    {
+      "name": "Saloma marinera",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 13
+    },
+    {
+      "name": "Ratas a bordo",
+      "facet": "Vida y costumbres a bordo",
+      "known_at": 6
+    },
+    {
+      "name": "Babor",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 9
+    },
+    {
+      "name": "Estribor",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 9
+    },
+    {
+      "name": "Abordaje",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 6
+    },
+    {
+      "name": "Botín",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 5
+    },
+    {
+      "name": "Motín",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 8
+    },
+    {
+      "name": "Polizón",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 8
+    },
+    {
+      "name": "Grog",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 13
+    },
+    {
+      "name": "Marinero de agua dulce",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 9
+    },
+    {
+      "name": "Nudo",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 11
+    },
+    {
+      "name": "Zafarrancho de combate",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 11
+    },
+    {
+      "name": "¡Tierra a la vista!",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 3
+    },
+    {
+      "name": "¡Hombre al agua!",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 5
+    },
+    {
+      "name": "Naufragio",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 6
+    },
+    {
+      "name": "Barlovento",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 13
+    },
+    {
+      "name": "Sotavento",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 13
+    },
+    {
+      "name": "Rumbo",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 6
+    },
+    {
+      "name": "Pirata",
+      "facet": "Vocabulario y jerga pirata",
+      "known_at": 1
+    },
+    {
+      "name": "Henry Morgan",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Tortuga",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Port Royal",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Nassau",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Jamaica",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Isla de Providencia",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Flota de Indias",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Saqueo de Panamá",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Saqueo de Portobelo",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Ataque de Drake a Cartagena",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Ataque del barón de Pointis",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Sitio de Cartagena de 1741",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Riohacha",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "La Española",
+      "facet": "Piratas en el Caribe y Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Cartagena de Indias",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 4
+    },
+    {
+      "name": "Castillo San Felipe de Barajas",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 8
+    },
+    {
+      "name": "Torre del Reloj de Cartagena",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 6
+    },
+    {
+      "name": "Las Bóvedas",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 11
+    },
+    {
+      "name": "Fuerte de San Fernando de Bocachica",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Blas de Lezo",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo del Morro de La Habana",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo San Felipe del Morro",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo de San Marcos",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 14
+    },
+    {
+      "name": "Castillo de San Lorenzo el Real del Chagres",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 15
+    },
+    {
+      "name": "Murallas de Campeche",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 14
+    },
+    {
+      "name": "Baluarte",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 10
+    },
+    {
+      "name": "Garita",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 9
+    },
+    {
+      "name": "Foso",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 5
+    },
+    {
+      "name": "Torre vigía",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 6
+    },
+    {
+      "name": "Cadena de bahía",
+      "facet": "Ciudades, fuertes y defensas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Corsario",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 8
+    },
+    {
+      "name": "Bucanero",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 9
+    },
+    {
+      "name": "Filibustero",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 11
+    },
+    {
+      "name": "Patente de corso",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 12
+    },
+    {
+      "name": "Francis Drake",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 9
+    },
+    {
+      "name": "John Hawkins",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 14
+    },
+    {
+      "name": "Walter Raleigh",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 13
+    },
+    {
+      "name": "Isabel I de Inglaterra",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 10
+    },
+    {
+      "name": "Jean Bart",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 15
+    },
+    {
+      "name": "Robert Surcouf",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 15
+    },
+    {
+      "name": "François l'Olonnais",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 14
+    },
+    {
+      "name": "Laurens de Graaf",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 15
+    },
+    {
+      "name": "Piet Heyn",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 15
+    },
+    {
+      "name": "Amaro Pargo",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 15
+    },
+    {
+      "name": "Hermanos de la Costa",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 14
+    },
+    {
+      "name": "Bucán",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 13
+    },
+    {
+      "name": "Alexandre Exquemelin",
+      "facet": "Corsarios, bucaneros y filibusteros",
+      "known_at": 15
+    },
+    {
+      "name": "Perla Negra",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Héctor Barbossa",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "La isla del tesoro",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Long John Silver",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Louis Stevenson",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Capitán Garfio",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Jake y los piratas del País de Nunca Jamás",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "One Piece",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Monkey D. Luffy",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Sea of Thieves",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Monkey Island",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Assassin's Creed IV: Black Flag",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "El Corsario Negro",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Sandokán",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Emilio Salgari",
+      "facet": "Piratas en películas, libros y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Jolly Roger",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 6
+    },
+    {
+      "name": "Calavera con tibias cruzadas",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 2
+    },
+    {
+      "name": "Bandera roja pirata",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 13
+    },
+    {
+      "name": "Davy Jones",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 7
+    },
+    {
+      "name": "Barco fantasma",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 4
+    },
+    {
+      "name": "La X marca el lugar",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 3
+    },
+    {
+      "name": "Tesoro de la isla del Coco",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 13
+    },
+    {
+      "name": "Tesoro de Oak Island",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 14
+    },
+    {
+      "name": "Tesoro enterrado del capitán Kidd",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Barbanegra",
+      "facet": "Banderas, símbolos y leyendas piratas",
+      "known_at": 12
+    },
+    {
+      "name": "Drakkar",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 10
+    },
+    {
+      "name": "Barbarroja",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 11
+    },
+    {
+      "name": "Corsarios berberiscos",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 13
+    },
+    {
+      "name": "Ching Shih",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 13
+    },
+    {
+      "name": "Cheung Po Tsai",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Wokou",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Grace O'Malley",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 14
+    },
+    {
+      "name": "Klaus Störtebeker",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Julio César secuestrado por piratas",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 13
+    },
+    {
+      "name": "Piratas de Cilicia",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Pompeyo contra los piratas",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Pueblos del Mar",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Reina Teuta de Iliria",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 15
+    },
+    {
+      "name": "Piratas somalíes",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 11
+    },
+    {
+      "name": "Estrecho de Malaca",
+      "facet": "Piratas de otras épocas y mares",
+      "known_at": 13
+    }
+  ]
+}

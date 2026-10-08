@@ -1,0 +1,1142 @@
+{
+  "subcategory": "Mamíferos",
+  "facets": [
+    "Mamíferos de la granja y mascotas",
+    "Grandes mamíferos de la sabana",
+    "Mamíferos de Colombia y Suramérica",
+    "Mamíferos marinos",
+    "Primates",
+    "Felinos y otros carnívoros",
+    "Roedores, conejos y murciélagos",
+    "Marsupiales y monotremas",
+    "Crías, partes del cuerpo y sonidos",
+    "Alimentación, hábitat y comportamiento",
+    "Mamíferos en películas y dibujos",
+    "Mamíferos extintos y en peligro"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 5,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Vaca",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Perro",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Gato",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Caballo",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Cerdo",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Oveja",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Toro",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Cabra",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 2
+    },
+    {
+      "name": "Burro",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 2
+    },
+    {
+      "name": "Hámster",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 3
+    },
+    {
+      "name": "Pony",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 3
+    },
+    {
+      "name": "Chihuahua",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 3
+    },
+    {
+      "name": "Dálmata",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 3
+    },
+    {
+      "name": "Pastor alemán",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 4
+    },
+    {
+      "name": "Golden retriever",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 4
+    },
+    {
+      "name": "Bulldog",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 4
+    },
+    {
+      "name": "Buey",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "Gato siamés",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "Gato persa",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "Hurón",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 7
+    },
+    {
+      "name": "Búfalo de agua",
+      "facet": "Mamíferos de la granja y mascotas",
+      "known_at": 8
+    },
+    {
+      "name": "Elefante africano",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 1
+    },
+    {
+      "name": "Rinoceronte",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 2
+    },
+    {
+      "name": "Suricata",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 4
+    },
+    {
+      "name": "Gacela",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 4
+    },
+    {
+      "name": "Antílope",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 5
+    },
+    {
+      "name": "Facóquero",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 7
+    },
+    {
+      "name": "Impala",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 8
+    },
+    {
+      "name": "Búfalo cafre",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Migración del Serengueti",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 10
+    },
+    {
+      "name": "Cerdo hormiguero",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 11
+    },
+    {
+      "name": "Kudú",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 12
+    },
+    {
+      "name": "Órix",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 12
+    },
+    {
+      "name": "Dik-dik",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Serengueti",
+      "facet": "Grandes mamíferos de la sabana",
+      "known_at": 9
+    },
+    {
+      "name": "Perezoso",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 2
+    },
+    {
+      "name": "Chigüiro",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 3
+    },
+    {
+      "name": "Oso hormiguero",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 3
+    },
+    {
+      "name": "Armadillo",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 3
+    },
+    {
+      "name": "Delfín rosado",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 5
+    },
+    {
+      "name": "Oso de anteojos",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 6
+    },
+    {
+      "name": "Alpaca",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 6
+    },
+    {
+      "name": "Cuy",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 6
+    },
+    {
+      "name": "Venado de cola blanca",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 6
+    },
+    {
+      "name": "Coatí",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 7
+    },
+    {
+      "name": "Danta",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 8
+    },
+    {
+      "name": "Tigrillo",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 8
+    },
+    {
+      "name": "Nutria gigante",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 8
+    },
+    {
+      "name": "Vicuña",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 9
+    },
+    {
+      "name": "Guatín",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 9
+    },
+    {
+      "name": "Pecarí",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 10
+    },
+    {
+      "name": "Guanaco",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 11
+    },
+    {
+      "name": "Kinkajú",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 11
+    },
+    {
+      "name": "Olinguito",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 11
+    },
+    {
+      "name": "León marino",
+      "facet": "Mamíferos marinos",
+      "known_at": 4
+    },
+    {
+      "name": "Nutria marina",
+      "facet": "Mamíferos marinos",
+      "known_at": 6
+    },
+    {
+      "name": "Beluga",
+      "facet": "Mamíferos marinos",
+      "known_at": 7
+    },
+    {
+      "name": "Elefante marino",
+      "facet": "Mamíferos marinos",
+      "known_at": 7
+    },
+    {
+      "name": "Cachalote",
+      "facet": "Mamíferos marinos",
+      "known_at": 8
+    },
+    {
+      "name": "Marsopa",
+      "facet": "Mamíferos marinos",
+      "known_at": 10
+    },
+    {
+      "name": "Ballena gris",
+      "facet": "Mamíferos marinos",
+      "known_at": 10
+    },
+    {
+      "name": "Dugongo",
+      "facet": "Mamíferos marinos",
+      "known_at": 11
+    },
+    {
+      "name": "Rorcual común",
+      "facet": "Mamíferos marinos",
+      "known_at": 13
+    },
+    {
+      "name": "Chimpancé",
+      "facet": "Primates",
+      "known_at": 2
+    },
+    {
+      "name": "Mandril",
+      "facet": "Primates",
+      "known_at": 4
+    },
+    {
+      "name": "Mono araña",
+      "facet": "Primates",
+      "known_at": 5
+    },
+    {
+      "name": "Mono aullador",
+      "facet": "Primates",
+      "known_at": 6
+    },
+    {
+      "name": "Babuino",
+      "facet": "Primates",
+      "known_at": 6
+    },
+    {
+      "name": "Mono capuchino",
+      "facet": "Primates",
+      "known_at": 6
+    },
+    {
+      "name": "Homo sapiens",
+      "facet": "Primates",
+      "known_at": 7
+    },
+    {
+      "name": "Tití cabeciblanco",
+      "facet": "Primates",
+      "known_at": 9
+    },
+    {
+      "name": "Gibón",
+      "facet": "Primates",
+      "known_at": 9
+    },
+    {
+      "name": "Mono narigudo",
+      "facet": "Primates",
+      "known_at": 9
+    },
+    {
+      "name": "Bonobo",
+      "facet": "Primates",
+      "known_at": 10
+    },
+    {
+      "name": "Jane Goodall",
+      "facet": "Primates",
+      "known_at": 10
+    },
+    {
+      "name": "Tarsero",
+      "facet": "Primates",
+      "known_at": 11
+    },
+    {
+      "name": "Aye-aye",
+      "facet": "Primates",
+      "known_at": 12
+    },
+    {
+      "name": "Koko",
+      "facet": "Primates",
+      "known_at": 12
+    },
+    {
+      "name": "Dian Fossey",
+      "facet": "Primates",
+      "known_at": 13
+    },
+    {
+      "name": "Tigre",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 1
+    },
+    {
+      "name": "Lobo",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 1
+    },
+    {
+      "name": "Zorro",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 2
+    },
+    {
+      "name": "Guepardo",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 3
+    },
+    {
+      "name": "Pantera negra",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 3
+    },
+    {
+      "name": "Oso pardo",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 3
+    },
+    {
+      "name": "Mapache",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 3
+    },
+    {
+      "name": "Leopardo",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 4
+    },
+    {
+      "name": "Puma",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 4
+    },
+    {
+      "name": "Hiena",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 4
+    },
+    {
+      "name": "Mofeta",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 4
+    },
+    {
+      "name": "Lince",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 6
+    },
+    {
+      "name": "Leopardo de las nieves",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 7
+    },
+    {
+      "name": "Tejón",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 7
+    },
+    {
+      "name": "Comadreja",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 7
+    },
+    {
+      "name": "Panda rojo",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 7
+    },
+    {
+      "name": "Chacal",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 8
+    },
+    {
+      "name": "Ocelote",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 9
+    },
+    {
+      "name": "Glotón",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 10
+    },
+    {
+      "name": "Licaón",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 11
+    },
+    {
+      "name": "Caracal",
+      "facet": "Felinos y otros carnívoros",
+      "known_at": 11
+    },
+    {
+      "name": "Ratón",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 1
+    },
+    {
+      "name": "Ardilla",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 1
+    },
+    {
+      "name": "Conejo",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 1
+    },
+    {
+      "name": "Rata",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 2
+    },
+    {
+      "name": "Murciélago",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 2
+    },
+    {
+      "name": "Puercoespín",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 3
+    },
+    {
+      "name": "Liebre",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 4
+    },
+    {
+      "name": "Murciélago vampiro",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 5
+    },
+    {
+      "name": "Chinchilla",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 6
+    },
+    {
+      "name": "Marmota",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 6
+    },
+    {
+      "name": "Ardilla voladora",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 6
+    },
+    {
+      "name": "Jerbo",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 8
+    },
+    {
+      "name": "Perro de la pradera",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 8
+    },
+    {
+      "name": "Zorro volador",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 8
+    },
+    {
+      "name": "Lirón",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 9
+    },
+    {
+      "name": "Rata topo desnuda",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 10
+    },
+    {
+      "name": "Lemming",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 10
+    },
+    {
+      "name": "Pika",
+      "facet": "Roedores, conejos y murciélagos",
+      "known_at": 11
+    },
+    {
+      "name": "Ornitorrinco",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 4
+    },
+    {
+      "name": "Marsupio",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 5
+    },
+    {
+      "name": "Zarigüeya",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 6
+    },
+    {
+      "name": "Wallaby",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 8
+    },
+    {
+      "name": "Equidna",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 9
+    },
+    {
+      "name": "Wombat",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 9
+    },
+    {
+      "name": "Quokka",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 9
+    },
+    {
+      "name": "Petauro del azúcar",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 10
+    },
+    {
+      "name": "Monotrema",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 12
+    },
+    {
+      "name": "Bandicut",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 12
+    },
+    {
+      "name": "Cuscús",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 12
+    },
+    {
+      "name": "Numbat",
+      "facet": "Marsupiales y monotremas",
+      "known_at": 13
+    },
+    {
+      "name": "Trompa",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 1
+    },
+    {
+      "name": "Cachorro",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 2
+    },
+    {
+      "name": "Rugido",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 2
+    },
+    {
+      "name": "Colmillo",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 2
+    },
+    {
+      "name": "Cuerno",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 2
+    },
+    {
+      "name": "Melena",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 2
+    },
+    {
+      "name": "Bigotes",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 2
+    },
+    {
+      "name": "Ternero",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Potro",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Cordero",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Relincho",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Mugido",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Aullido",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Ronroneo",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Joroba",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 3
+    },
+    {
+      "name": "Lechón",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 4
+    },
+    {
+      "name": "Cabrito",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 4
+    },
+    {
+      "name": "Pelaje",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 4
+    },
+    {
+      "name": "Cervatillo",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 5
+    },
+    {
+      "name": "Rebuzno",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 5
+    },
+    {
+      "name": "Pezuña",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 5
+    },
+    {
+      "name": "Balido",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 6
+    },
+    {
+      "name": "Ubre",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 6
+    },
+    {
+      "name": "Glándulas mamarias",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 8
+    },
+    {
+      "name": "Barba de ballena",
+      "facet": "Crías, partes del cuerpo y sonidos",
+      "known_at": 9
+    },
+    {
+      "name": "Bambú",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Leche materna",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Herbívoro",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 3
+    },
+    {
+      "name": "Carnívoro",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 3
+    },
+    {
+      "name": "Manada",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 3
+    },
+    {
+      "name": "Camuflaje",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 4
+    },
+    {
+      "name": "Madriguera",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 4
+    },
+    {
+      "name": "Animal nocturno",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 4
+    },
+    {
+      "name": "Omnívoro",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Hibernación",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Migración",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Dique de castor",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Territorio",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Insectívoro",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 7
+    },
+    {
+      "name": "Ecolocalización",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 8
+    },
+    {
+      "name": "Rumiante",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Acicalamiento",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Macho alfa",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Estivación",
+      "facet": "Alimentación, hábitat y comportamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Simba",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 1
+    },
+    {
+      "name": "Dumbo",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 1
+    },
+    {
+      "name": "Mickey Mouse",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 1
+    },
+    {
+      "name": "Tom",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 1
+    },
+    {
+      "name": "Bambi",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Pumba",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Bugs Bunny",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Gato con Botas",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Garfield",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Scooby-Doo",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Po",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Pluto",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Rafiki",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 3
+    },
+    {
+      "name": "Baloo",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 3
+    },
+    {
+      "name": "Remy",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 3
+    },
+    {
+      "name": "Judy Hopps",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 3
+    },
+    {
+      "name": "Snoopy",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 3
+    },
+    {
+      "name": "Rey Julien",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 4
+    },
+    {
+      "name": "Manny",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 4
+    },
+    {
+      "name": "Scrat",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 4
+    },
+    {
+      "name": "King Kong",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 5
+    },
+    {
+      "name": "Pantera Rosa",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 5
+    },
+    {
+      "name": "Babe",
+      "facet": "Mamíferos en películas y dibujos",
+      "known_at": 7
+    },
+    {
+      "name": "Panda gigante",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 1
+    },
+    {
+      "name": "Mamut lanudo",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 2
+    },
+    {
+      "name": "Tigre dientes de sable",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 3
+    },
+    {
+      "name": "Caza furtiva",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 8
+    },
+    {
+      "name": "Pangolín",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 8
+    },
+    {
+      "name": "Gorila de montaña",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 8
+    },
+    {
+      "name": "Megaterio",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 10
+    },
+    {
+      "name": "Rinoceronte lanudo",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 10
+    },
+    {
+      "name": "Lince ibérico",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 10
+    },
+    {
+      "name": "Tilacino",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 11
+    },
+    {
+      "name": "Rinoceronte blanco del norte",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 11
+    },
+    {
+      "name": "Vaquita marina",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 11
+    },
+    {
+      "name": "Gliptodonte",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 11
+    },
+    {
+      "name": "Leopardo de Amur",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 11
+    },
+    {
+      "name": "Lista Roja de la UICN",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 12
+    },
+    {
+      "name": "Vaca marina de Steller",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 13
+    },
+    {
+      "name": "Uro",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 13
+    },
+    {
+      "name": "Ciervo gigante irlandés",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 14
+    },
+    {
+      "name": "Macrauquenia",
+      "facet": "Mamíferos extintos y en peligro",
+      "known_at": 14
+    }
+  ]
+}

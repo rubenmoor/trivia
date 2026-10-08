@@ -1,0 +1,837 @@
+{
+  "subcategory": "Cantantes colombianos",
+  "facets": [
+    "Estrellas del pop latino",
+    "Reguetón y música urbana",
+    "Ídolos del vallenato",
+    "Salsa y música tropical",
+    "Cumbia y porro clásicos",
+    "Rock y alternativo colombiano",
+    "Música popular y despecho",
+    "Voces del Pacífico y folclor",
+    "Canciones famosas y sus intérpretes",
+    "Premios, giras y récords",
+    "Apodos, orígenes y ciudades natales",
+    "Cantantes en cine, TV y Encanto"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Shakira",
+      "facet": "Estrellas del pop latino",
+      "known_at": 1
+    },
+    {
+      "name": "Morat",
+      "facet": "Estrellas del pop latino",
+      "known_at": 5
+    },
+    {
+      "name": "Greeicy",
+      "facet": "Estrellas del pop latino",
+      "known_at": 7
+    },
+    {
+      "name": "Mike Bahía",
+      "facet": "Estrellas del pop latino",
+      "known_at": 9
+    },
+    {
+      "name": "Fanny Lu",
+      "facet": "Estrellas del pop latino",
+      "known_at": 10
+    },
+    {
+      "name": "Cabas",
+      "facet": "Estrellas del pop latino",
+      "known_at": 12
+    },
+    {
+      "name": "Santiago Cruz",
+      "facet": "Estrellas del pop latino",
+      "known_at": 12
+    },
+    {
+      "name": "Paula Arenas",
+      "facet": "Estrellas del pop latino",
+      "known_at": 13
+    },
+    {
+      "name": "Lucas Arnau",
+      "facet": "Estrellas del pop latino",
+      "known_at": 13
+    },
+    {
+      "name": "Soraya",
+      "facet": "Estrellas del pop latino",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Turizo",
+      "facet": "Reguetón y música urbana",
+      "known_at": 6
+    },
+    {
+      "name": "Piso 21",
+      "facet": "Reguetón y música urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Cali y El Dandee",
+      "facet": "Reguetón y música urbana",
+      "known_at": 9
+    },
+    {
+      "name": "Reykon",
+      "facet": "Reguetón y música urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Kevin Roldán",
+      "facet": "Reguetón y música urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Beéle",
+      "facet": "Reguetón y música urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Lalo Ebratt",
+      "facet": "Reguetón y música urbana",
+      "known_at": 12
+    },
+    {
+      "name": "Kapo",
+      "facet": "Reguetón y música urbana",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Manjarrés",
+      "facet": "Ídolos del vallenato",
+      "known_at": 11
+    },
+    {
+      "name": "Martín Elías",
+      "facet": "Ídolos del vallenato",
+      "known_at": 11
+    },
+    {
+      "name": "Binomio de Oro",
+      "facet": "Ídolos del vallenato",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Oñate",
+      "facet": "Ídolos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Rafael Orozco",
+      "facet": "Ídolos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Los Hermanos Zuleta",
+      "facet": "Ídolos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Kaleth Morales",
+      "facet": "Ídolos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Felipe Peláez",
+      "facet": "Ídolos del vallenato",
+      "known_at": 12
+    },
+    {
+      "name": "Iván Villazón",
+      "facet": "Ídolos del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Alejo Durán",
+      "facet": "Ídolos del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Egidio Cuadrado",
+      "facet": "Ídolos del vallenato",
+      "known_at": 13
+    },
+    {
+      "name": "Leandro Díaz",
+      "facet": "Ídolos del vallenato",
+      "known_at": 14
+    },
+    {
+      "name": "Mr. Black",
+      "facet": "Salsa y música tropical",
+      "known_at": 10
+    },
+    {
+      "name": "Guayacán Orquesta",
+      "facet": "Salsa y música tropical",
+      "known_at": 11
+    },
+    {
+      "name": "Fruko y sus Tesos",
+      "facet": "Salsa y música tropical",
+      "known_at": 12
+    },
+    {
+      "name": "Jairo Varela",
+      "facet": "Salsa y música tropical",
+      "known_at": 12
+    },
+    {
+      "name": "Yuri Buenaventura",
+      "facet": "Salsa y música tropical",
+      "known_at": 13
+    },
+    {
+      "name": "Son de Cali",
+      "facet": "Salsa y música tropical",
+      "known_at": 13
+    },
+    {
+      "name": "La Sonora Carruseles",
+      "facet": "Salsa y música tropical",
+      "known_at": 13
+    },
+    {
+      "name": "Orquesta La 33",
+      "facet": "Salsa y música tropical",
+      "known_at": 13
+    },
+    {
+      "name": "Piper Pimienta",
+      "facet": "Salsa y música tropical",
+      "known_at": 14
+    },
+    {
+      "name": "Alberto Barros",
+      "facet": "Salsa y música tropical",
+      "known_at": 14
+    },
+    {
+      "name": "Charlie Cardona",
+      "facet": "Salsa y música tropical",
+      "known_at": 14
+    },
+    {
+      "name": "Los Gaiteros de San Jacinto",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 12
+    },
+    {
+      "name": "Alfredo Gutiérrez",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 12
+    },
+    {
+      "name": "Aníbal Velásquez",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Los Corraleros de Majagual",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Rodolfo Aicardi",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Gustavo 'El Loco' Quintero",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Calixto Ochoa",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Lisandro Meza",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Festival del Porro",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Landero",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "Matilde Díaz",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Laza",
+      "facet": "Cumbia y porro clásicos",
+      "known_at": 14
+    },
+    {
+      "name": "Monsieur Periné",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Andrea Echeverri",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Li Saumet",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Diamante Eléctrico",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Doctor Krápula",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Systema Solar",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Ekhymosis",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Superlitio",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "The Mills",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Esteman",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Elkin Ramírez",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "1280 Almas",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "La Derecha",
+      "facet": "Rock y alternativo colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Jessi Uribe",
+      "facet": "Música popular y despecho",
+      "known_at": 8
+    },
+    {
+      "name": "Paola Jara",
+      "facet": "Música popular y despecho",
+      "known_at": 8
+    },
+    {
+      "name": "Pipe Bueno",
+      "facet": "Música popular y despecho",
+      "known_at": 8
+    },
+    {
+      "name": "Yeison Jiménez",
+      "facet": "Música popular y despecho",
+      "known_at": 8
+    },
+    {
+      "name": "Jhonny Rivera",
+      "facet": "Música popular y despecho",
+      "known_at": 9
+    },
+    {
+      "name": "Charlie Zaa",
+      "facet": "Música popular y despecho",
+      "known_at": 10
+    },
+    {
+      "name": "Alzate",
+      "facet": "Música popular y despecho",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Alberto Posada",
+      "facet": "Música popular y despecho",
+      "known_at": 11
+    },
+    {
+      "name": "Giovany Ayala",
+      "facet": "Música popular y despecho",
+      "known_at": 11
+    },
+    {
+      "name": "Arelys Henao",
+      "facet": "Música popular y despecho",
+      "known_at": 11
+    },
+    {
+      "name": "Galy Galiano",
+      "facet": "Música popular y despecho",
+      "known_at": 11
+    },
+    {
+      "name": "Helenita Vargas",
+      "facet": "Música popular y despecho",
+      "known_at": 12
+    },
+    {
+      "name": "Francy",
+      "facet": "Música popular y despecho",
+      "known_at": 12
+    },
+    {
+      "name": "Jhon Alex Castaño",
+      "facet": "Música popular y despecho",
+      "known_at": 12
+    },
+    {
+      "name": "El Charrito Negro",
+      "facet": "Música popular y despecho",
+      "known_at": 14
+    },
+    {
+      "name": "ChocQuibTown",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 7
+    },
+    {
+      "name": "Arpa llanera",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 10
+    },
+    {
+      "name": "Goyo",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 11
+    },
+    {
+      "name": "Carranga",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 11
+    },
+    {
+      "name": "Herencia de Timbiquí",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Velosa",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 12
+    },
+    {
+      "name": "Cholo Valderrama",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo Bahía",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 13
+    },
+    {
+      "name": "Leonor González Mina",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 13
+    },
+    {
+      "name": "Nidia Góngora",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 13
+    },
+    {
+      "name": "Garzón y Collazos",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 14
+    },
+    {
+      "name": "Silva y Villalba",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 14
+    },
+    {
+      "name": "Kombilesa Mí",
+      "facet": "Voces del Pacífico y folclor",
+      "known_at": 14
+    },
+    {
+      "name": "Waka Waka",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 1
+    },
+    {
+      "name": "Hips Don't Lie",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 4
+    },
+    {
+      "name": "Tusa",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 4
+    },
+    {
+      "name": "Mi Gente",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 4
+    },
+    {
+      "name": "La Camisa Negra",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 5
+    },
+    {
+      "name": "A Dios le pido",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 6
+    },
+    {
+      "name": "Provenza",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 6
+    },
+    {
+      "name": "Robarte un beso",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 6
+    },
+    {
+      "name": "Traicionera",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 7
+    },
+    {
+      "name": "La Gota Fría",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 8
+    },
+    {
+      "name": "Cali Pachanguero",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 9
+    },
+    {
+      "name": "Ojos así",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 9
+    },
+    {
+      "name": "La Tierra del Olvido",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 9
+    },
+    {
+      "name": "Fruta fresca",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 9
+    },
+    {
+      "name": "Colombia, Tierra Querida",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 9
+    },
+    {
+      "name": "Ay Hombe",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 10
+    },
+    {
+      "name": "Pies Descalzos",
+      "facet": "Canciones famosas y sus intérpretes",
+      "known_at": 11
+    },
+    {
+      "name": "Premios Grammy",
+      "facet": "Premios, giras y récords",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Sudáfrica 2010",
+      "facet": "Premios, giras y récords",
+      "known_at": 6
+    },
+    {
+      "name": "Grammy Latino",
+      "facet": "Premios, giras y récords",
+      "known_at": 7
+    },
+    {
+      "name": "Medio tiempo del Super Bowl 2020",
+      "facet": "Premios, giras y récords",
+      "known_at": 7
+    },
+    {
+      "name": "Paseo de la Fama de Hollywood",
+      "facet": "Premios, giras y récords",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio El Campín",
+      "facet": "Premios, giras y récords",
+      "known_at": 8
+    },
+    {
+      "name": "Coachella",
+      "facet": "Premios, giras y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Billboard Hot 100",
+      "facet": "Premios, giras y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Festival de Viña del Mar",
+      "facet": "Premios, giras y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Mañana Será Bonito",
+      "facet": "Premios, giras y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Premios Lo Nuestro",
+      "facet": "Premios, giras y récords",
+      "known_at": 11
+    },
+    {
+      "name": "Premios Billboard de la Música Latina",
+      "facet": "Premios, giras y récords",
+      "known_at": 11
+    },
+    {
+      "name": "Premios Juventud",
+      "facet": "Premios, giras y récords",
+      "known_at": 11
+    },
+    {
+      "name": "Gaviota de Plata",
+      "facet": "Premios, giras y récords",
+      "known_at": 12
+    },
+    {
+      "name": "Persona del Año del Grammy Latino",
+      "facet": "Premios, giras y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Medellín",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 2
+    },
+    {
+      "name": "La Bichota",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 6
+    },
+    {
+      "name": "Valledupar",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 7
+    },
+    {
+      "name": "Ferxxo",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 8
+    },
+    {
+      "name": "Montería",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 9
+    },
+    {
+      "name": "Líbano",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 9
+    },
+    {
+      "name": "Pretty Boy, Dirty Boy",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 10
+    },
+    {
+      "name": "Ibagué",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 11
+    },
+    {
+      "name": "El Cacique de La Junta",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 12
+    },
+    {
+      "name": "El Rey del Despecho",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 12
+    },
+    {
+      "name": "Carmen de Viboral",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 13
+    },
+    {
+      "name": "El Papá de los Pollitos",
+      "facet": "Apodos, orígenes y ciudades natales",
+      "known_at": 13
+    },
+    {
+      "name": "No se habla de Bruno",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 3
+    },
+    {
+      "name": "Gazelle",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 4
+    },
+    {
+      "name": "Dos oruguitas",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 5
+    },
+    {
+      "name": "Colombia, mi encanto",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 6
+    },
+    {
+      "name": "Yo me llamo",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 6
+    },
+    {
+      "name": "Try Everything",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 7
+    },
+    {
+      "name": "La Voz Kids Colombia",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 7
+    },
+    {
+      "name": "Mariano Guzmán",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 8
+    },
+    {
+      "name": "The Voice",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 10
+    },
+    {
+      "name": "La Reina del Flow",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 10
+    },
+    {
+      "name": "A otro nivel",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Factor X Colombia",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 11
+    },
+    {
+      "name": "Escalona",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Mauro Castillo",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Diomedes, el Cacique de La Junta",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Orozco, el ídolo",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 13
+    },
+    {
+      "name": "El amor en los tiempos del cólera",
+      "facet": "Cantantes en cine, TV y Encanto",
+      "known_at": 14
+    }
+  ]
+}

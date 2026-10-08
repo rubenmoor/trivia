@@ -1,0 +1,987 @@
+{
+  "subcategory": "Mundiales de fútbol",
+  "facets": [
+    "Campeones y finales",
+    "Sedes y estadios",
+    "Goleadores y récords",
+    "Grandes estrellas mundialistas",
+    "Colombia en los Mundiales",
+    "Mascotas y balones oficiales",
+    "Trofeos y premios",
+    "Jugadas y momentos célebres",
+    "Reglas, formato y tecnología",
+    "Historia y orígenes del Mundial",
+    "Hinchas, cánticos y tradiciones",
+    "Mundial femenino"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Alemania",
+      "facet": "Campeones y finales",
+      "known_at": 4
+    },
+    {
+      "name": "Italia",
+      "facet": "Campeones y finales",
+      "known_at": 5
+    },
+    {
+      "name": "Francia",
+      "facet": "Campeones y finales",
+      "known_at": 4
+    },
+    {
+      "name": "Uruguay",
+      "facet": "Campeones y finales",
+      "known_at": 7
+    },
+    {
+      "name": "España",
+      "facet": "Campeones y finales",
+      "known_at": 6
+    },
+    {
+      "name": "Inglaterra",
+      "facet": "Campeones y finales",
+      "known_at": 7
+    },
+    {
+      "name": "Croacia",
+      "facet": "Campeones y finales",
+      "known_at": 9
+    },
+    {
+      "name": "Final de Catar 2022",
+      "facet": "Campeones y finales",
+      "known_at": 4
+    },
+    {
+      "name": "Final de Brasil 2014",
+      "facet": "Campeones y finales",
+      "known_at": 8
+    },
+    {
+      "name": "Final de Sudáfrica 2010",
+      "facet": "Campeones y finales",
+      "known_at": 9
+    },
+    {
+      "name": "Final de Rusia 2018",
+      "facet": "Campeones y finales",
+      "known_at": 8
+    },
+    {
+      "name": "Final de Francia 1998",
+      "facet": "Campeones y finales",
+      "known_at": 11
+    },
+    {
+      "name": "Final de Estados Unidos 1994",
+      "facet": "Campeones y finales",
+      "known_at": 12
+    },
+    {
+      "name": "Pentacampeonato de Brasil",
+      "facet": "Campeones y finales",
+      "known_at": 8
+    },
+    {
+      "name": "Milagro de Berna",
+      "facet": "Campeones y finales",
+      "known_at": 14
+    },
+    {
+      "name": "Estadio Maracaná",
+      "facet": "Sedes y estadios",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Azteca",
+      "facet": "Sedes y estadios",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio Centenario",
+      "facet": "Sedes y estadios",
+      "known_at": 13
+    },
+    {
+      "name": "Estadio Lusail",
+      "facet": "Sedes y estadios",
+      "known_at": 11
+    },
+    {
+      "name": "Estadio de Wembley",
+      "facet": "Sedes y estadios",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Santiago Bernabéu",
+      "facet": "Sedes y estadios",
+      "known_at": 10
+    },
+    {
+      "name": "MetLife Stadium",
+      "facet": "Sedes y estadios",
+      "known_at": 13
+    },
+    {
+      "name": "Estadio Soccer City",
+      "facet": "Sedes y estadios",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de 2026",
+      "facet": "Sedes y estadios",
+      "known_at": 5
+    },
+    {
+      "name": "Mundial de Catar 2022",
+      "facet": "Sedes y estadios",
+      "known_at": 4
+    },
+    {
+      "name": "Mundial de Rusia 2018",
+      "facet": "Sedes y estadios",
+      "known_at": 7
+    },
+    {
+      "name": "Mundial de Brasil 2014",
+      "facet": "Sedes y estadios",
+      "known_at": 6
+    },
+    {
+      "name": "Mundial de Alemania 2006",
+      "facet": "Sedes y estadios",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial de Corea del Sur y Japón 2002",
+      "facet": "Sedes y estadios",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de 2030",
+      "facet": "Sedes y estadios",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial de Arabia Saudita 2034",
+      "facet": "Sedes y estadios",
+      "known_at": 12
+    },
+    {
+      "name": "Miroslav Klose",
+      "facet": "Goleadores y récords",
+      "known_at": 11
+    },
+    {
+      "name": "Just Fontaine",
+      "facet": "Goleadores y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Ronaldo Nazário",
+      "facet": "Goleadores y récords",
+      "known_at": 8
+    },
+    {
+      "name": "Kylian Mbappé",
+      "facet": "Goleadores y récords",
+      "known_at": 4
+    },
+    {
+      "name": "Gerd Müller",
+      "facet": "Goleadores y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Oleg Salenko",
+      "facet": "Goleadores y récords",
+      "known_at": 15
+    },
+    {
+      "name": "Hakan Şükür",
+      "facet": "Goleadores y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Hungría 10-1 El Salvador",
+      "facet": "Goleadores y récords",
+      "known_at": 15
+    },
+    {
+      "name": "Roger Milla",
+      "facet": "Goleadores y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Lothar Matthäus",
+      "facet": "Goleadores y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Antonio Carbajal",
+      "facet": "Goleadores y récords",
+      "known_at": 15
+    },
+    {
+      "name": "Norman Whiteside",
+      "facet": "Goleadores y récords",
+      "known_at": 15
+    },
+    {
+      "name": "Eusébio",
+      "facet": "Goleadores y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Gary Lineker",
+      "facet": "Goleadores y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Harry Kane",
+      "facet": "Goleadores y récords",
+      "known_at": 7
+    },
+    {
+      "name": "Pelé",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 3
+    },
+    {
+      "name": "Diego Maradona",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 3
+    },
+    {
+      "name": "Lionel Messi",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 1
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 1
+    },
+    {
+      "name": "Neymar",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 2
+    },
+    {
+      "name": "Zinedine Zidane",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 6
+    },
+    {
+      "name": "Ronaldinho",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 5
+    },
+    {
+      "name": "Johan Cruyff",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 10
+    },
+    {
+      "name": "Franz Beckenbauer",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 11
+    },
+    {
+      "name": "Luka Modrić",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 7
+    },
+    {
+      "name": "Garrincha",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 13
+    },
+    {
+      "name": "Paolo Rossi",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Iniesta",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 8
+    },
+    {
+      "name": "Lev Yashin",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 13
+    },
+    {
+      "name": "Mario Kempes",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 13
+    },
+    {
+      "name": "Bobby Charlton",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 13
+    },
+    {
+      "name": "Gianluigi Buffon",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 9
+    },
+    {
+      "name": "Emiliano Martínez",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 7
+    },
+    {
+      "name": "Thierry Henry",
+      "facet": "Grandes estrellas mundialistas",
+      "known_at": 10
+    },
+    {
+      "name": "Faryd Mondragón",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 9
+    },
+    {
+      "name": "Gol olímpico de Marcos Coll",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Chile 1962",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de Italia 1990",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 11
+    },
+    {
+      "name": "José Pékerman",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 9
+    },
+    {
+      "name": "Gol de James a Uruguay",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 7
+    },
+    {
+      "name": "Gol de Rincón a Alemania",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 11
+    },
+    {
+      "name": "Bailes de gol de Colombia en 2014",
+      "facet": "Colombia en los Mundiales",
+      "known_at": 8
+    },
+    {
+      "name": "Willie",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 14
+    },
+    {
+      "name": "Naranjito",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 12
+    },
+    {
+      "name": "Zakumi",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 10
+    },
+    {
+      "name": "Fuleco",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 8
+    },
+    {
+      "name": "Zabivaka",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 9
+    },
+    {
+      "name": "La'eeb",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 7
+    },
+    {
+      "name": "Footix",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 12
+    },
+    {
+      "name": "Goleo",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 11
+    },
+    {
+      "name": "Pique",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 14
+    },
+    {
+      "name": "Gauchito",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 14
+    },
+    {
+      "name": "Ciao",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 14
+    },
+    {
+      "name": "Maple, Zayu y Clutch",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 8
+    },
+    {
+      "name": "Jabulani",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 10
+    },
+    {
+      "name": "Brazuca",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 8
+    },
+    {
+      "name": "Telstar",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 11
+    },
+    {
+      "name": "Al Rihla",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 9
+    },
+    {
+      "name": "Trionda",
+      "facet": "Mascotas y balones oficiales",
+      "known_at": 8
+    },
+    {
+      "name": "Trofeo de la Copa del Mundo",
+      "facet": "Trofeos y premios",
+      "known_at": 3
+    },
+    {
+      "name": "Copa Jules Rimet",
+      "facet": "Trofeos y premios",
+      "known_at": 12
+    },
+    {
+      "name": "Balón de Oro del Mundial",
+      "facet": "Trofeos y premios",
+      "known_at": 9
+    },
+    {
+      "name": "Bota de Oro",
+      "facet": "Trofeos y premios",
+      "known_at": 7
+    },
+    {
+      "name": "Guante de Oro",
+      "facet": "Trofeos y premios",
+      "known_at": 9
+    },
+    {
+      "name": "Premio al Mejor Jugador Joven",
+      "facet": "Trofeos y premios",
+      "known_at": 12
+    },
+    {
+      "name": "Premio Fair Play",
+      "facet": "Trofeos y premios",
+      "known_at": 12
+    },
+    {
+      "name": "Silvio Gazzaniga",
+      "facet": "Trofeos y premios",
+      "known_at": 15
+    },
+    {
+      "name": "Robo de la Copa Jules Rimet",
+      "facet": "Trofeos y premios",
+      "known_at": 15
+    },
+    {
+      "name": "Pickles",
+      "facet": "Trofeos y premios",
+      "known_at": 14
+    },
+    {
+      "name": "Medalla de campeón",
+      "facet": "Trofeos y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Estrellas en la camiseta",
+      "facet": "Trofeos y premios",
+      "known_at": 6
+    },
+    {
+      "name": "Jugador del partido",
+      "facet": "Trofeos y premios",
+      "known_at": 8
+    },
+    {
+      "name": "Bisht de Messi",
+      "facet": "Trofeos y premios",
+      "known_at": 11
+    },
+    {
+      "name": "Oro de 18 quilates",
+      "facet": "Trofeos y premios",
+      "known_at": 12
+    },
+    {
+      "name": "Mano de Dios",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Gol del Siglo",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Cabezazo de Zidane",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Maracanazo",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Mineirazo",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Atajada de Gordon Banks a Pelé",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Gol de Iniesta en la final de 2010",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Gol fantasma de 1966",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Mano de Luis Suárez ante Ghana",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Gol de Götze en la final de 2014",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Atajada del Dibu Martínez a Kolo Muani",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Triplete de Mbappé en la final de 2022",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Penalti fallado de Roberto Baggio",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Gol de Pavard a Argentina",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Partido del Siglo",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Gol de Carlos Alberto en 1970",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Celebración de Roger Milla",
+      "facet": "Jugadas y momentos célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Tanda de penaltis",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 3
+    },
+    {
+      "name": "Tiempo extra",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 4
+    },
+    {
+      "name": "Fase de grupos",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 5
+    },
+    {
+      "name": "Octavos de final",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 6
+    },
+    {
+      "name": "Gol de oro",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 12
+    },
+    {
+      "name": "Fuera de lugar semiautomático",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 11
+    },
+    {
+      "name": "Tecnología de línea de gol",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 9
+    },
+    {
+      "name": "Spray evanescente",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 9
+    },
+    {
+      "name": "Eliminatorias",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 6
+    },
+    {
+      "name": "Repechaje",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 8
+    },
+    {
+      "name": "Árbitro",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 1
+    },
+    {
+      "name": "Cinco cambios",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 10
+    },
+    {
+      "name": "Pausa de hidratación",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 9
+    },
+    {
+      "name": "Sorteo de grupos",
+      "facet": "Reglas, formato y tecnología",
+      "known_at": 7
+    },
+    {
+      "name": "Copa Mundial de la FIFA",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 2
+    },
+    {
+      "name": "FIFA",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 4
+    },
+    {
+      "name": "Jules Rimet",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Uruguay 1930",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial de Italia 1934",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 13
+    },
+    {
+      "name": "Mundiales suspendidos por la Segunda Guerra Mundial",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Fútbol en los Juegos Olímpicos",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Zúrich",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 13
+    },
+    {
+      "name": "Gianni Infantino",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 13
+    },
+    {
+      "name": "João Havelange",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 15
+    },
+    {
+      "name": "Lucien Laurent",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 15
+    },
+    {
+      "name": "Mundial de Suiza 1954",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 15
+    },
+    {
+      "name": "Ampliación a 32 selecciones",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Viaje en barco a Uruguay 1930",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 15
+    },
+    {
+      "name": "Indias Orientales Neerlandesas",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 15
+    },
+    {
+      "name": "Mundial de México 1970",
+      "facet": "Historia y orígenes del Mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Vuvuzela",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 7
+    },
+    {
+      "name": "Ola mexicana",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Álbum Panini",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "FIFA Fan Festival",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 11
+    },
+    {
+      "name": "Himno nacional",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 4
+    },
+    {
+      "name": "Camiseta de la selección",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 1
+    },
+    {
+      "name": "Cara pintada",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "Muchachos, ahora nos volvimos a ilusionar",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Hinchas japoneses que limpian el estadio",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Pulpo Paul",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "La copa de la vida",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 10
+    },
+    {
+      "name": "We Are One (Ole Ola)",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 11
+    },
+    {
+      "name": "Seven Nation Army",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Lluvia de papelitos",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Grito de gol",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 2
+    },
+    {
+      "name": "Caravana de celebración",
+      "facet": "Hinchas, cánticos y tradiciones",
+      "known_at": 6
+    },
+    {
+      "name": "Copa Mundial Femenina de la FIFA",
+      "facet": "Mundial femenino",
+      "known_at": 6
+    },
+    {
+      "name": "Selección femenina de Estados Unidos",
+      "facet": "Mundial femenino",
+      "known_at": 9
+    },
+    {
+      "name": "Marta",
+      "facet": "Mundial femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Megan Rapinoe",
+      "facet": "Mundial femenino",
+      "known_at": 11
+    },
+    {
+      "name": "Alex Morgan",
+      "facet": "Mundial femenino",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial Femenino de Australia y Nueva Zelanda 2023",
+      "facet": "Mundial femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Selección femenina de España",
+      "facet": "Mundial femenino",
+      "known_at": 9
+    },
+    {
+      "name": "Aitana Bonmatí",
+      "facet": "Mundial femenino",
+      "known_at": 9
+    },
+    {
+      "name": "Alexia Putellas",
+      "facet": "Mundial femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial Femenino de China 1991",
+      "facet": "Mundial femenino",
+      "known_at": 14
+    },
+    {
+      "name": "Birgit Prinz",
+      "facet": "Mundial femenino",
+      "known_at": 15
+    },
+    {
+      "name": "Selección femenina de Noruega",
+      "facet": "Mundial femenino",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial Femenino de Brasil 2027",
+      "facet": "Mundial femenino",
+      "known_at": 12
+    },
+    {
+      "name": "Carli Lloyd",
+      "facet": "Mundial femenino",
+      "known_at": 14
+    },
+    {
+      "name": "Gol de Linda Caicedo a Alemania",
+      "facet": "Mundial femenino",
+      "known_at": 8
+    },
+    {
+      "name": "Selección femenina de Japón",
+      "facet": "Mundial femenino",
+      "known_at": 13
+    },
+    {
+      "name": "Homare Sawa",
+      "facet": "Mundial femenino",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+{
+  "subcategory": "Símbolos patrios de Colombia",
+  "facets": [
+    "La bandera de Colombia",
+    "El himno nacional y su letra",
+    "El escudo y sus elementos",
+    "Cóndor, orquídea y palma de cera",
+    "Símbolos culturales de la nación",
+    "Fechas y fiestas patrias",
+    "Próceres de la independencia",
+    "Lugares y monumentos patrios",
+    "Protocolo y uso de los símbolos",
+    "Historia de los símbolos patrios",
+    "Banderas y escudos departamentales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Franja amarilla",
+      "facet": "La bandera de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Franja azul",
+      "facet": "La bandera de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Franja roja",
+      "facet": "La bandera de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Tricolor nacional",
+      "facet": "La bandera de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Asta",
+      "facet": "La bandera de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de Ecuador",
+      "facet": "La bandera de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de Venezuela",
+      "facet": "La bandera de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Escarapela",
+      "facet": "La bandera de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Pabellón nacional",
+      "facet": "La bandera de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de guerra",
+      "facet": "La bandera de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera mercante",
+      "facet": "La bandera de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera presidencial",
+      "facet": "La bandera de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Gallardete",
+      "facet": "La bandera de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Rusia",
+      "facet": "La bandera de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Coro del himno",
+      "facet": "El himno nacional y su letra",
+      "known_at": 4
+    },
+    {
+      "name": "Oh gloria inmarcesible",
+      "facet": "El himno nacional y su letra",
+      "known_at": 5
+    },
+    {
+      "name": "Júbilo inmortal",
+      "facet": "El himno nacional y su letra",
+      "known_at": 7
+    },
+    {
+      "name": "Cesó la horrible noche",
+      "facet": "El himno nacional y su letra",
+      "known_at": 7
+    },
+    {
+      "name": "Primera estrofa",
+      "facet": "El himno nacional y su letra",
+      "known_at": 7
+    },
+    {
+      "name": "Inmarcesible",
+      "facet": "El himno nacional y su letra",
+      "known_at": 8
+    },
+    {
+      "name": "Surco de dolores",
+      "facet": "El himno nacional y su letra",
+      "known_at": 8
+    },
+    {
+      "name": "Libertad sublime",
+      "facet": "El himno nacional y su letra",
+      "known_at": 8
+    },
+    {
+      "name": "Estrofas del himno",
+      "facet": "El himno nacional y su letra",
+      "known_at": 9
+    },
+    {
+      "name": "Centauros indomables",
+      "facet": "El himno nacional y su letra",
+      "known_at": 13
+    },
+    {
+      "name": "Termópilas",
+      "facet": "El himno nacional y su letra",
+      "known_at": 14
+    },
+    {
+      "name": "Himno de Antioquia",
+      "facet": "El himno nacional y su letra",
+      "known_at": 11
+    },
+    {
+      "name": "Libertad y Orden",
+      "facet": "El escudo y sus elementos",
+      "known_at": 5
+    },
+    {
+      "name": "Cuerno de la abundancia",
+      "facet": "El escudo y sus elementos",
+      "known_at": 7
+    },
+    {
+      "name": "Cinta del lema",
+      "facet": "El escudo y sus elementos",
+      "known_at": 8
+    },
+    {
+      "name": "Corona de laurel",
+      "facet": "El escudo y sus elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Monedas de oro",
+      "facet": "El escudo y sus elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Barcos del escudo",
+      "facet": "El escudo y sus elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Lanza",
+      "facet": "El escudo y sus elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Granada (fruta)",
+      "facet": "El escudo y sus elementos",
+      "known_at": 10
+    },
+    {
+      "name": "Istmo de Panamá",
+      "facet": "El escudo y sus elementos",
+      "known_at": 10
+    },
+    {
+      "name": "Gorro frigio",
+      "facet": "El escudo y sus elementos",
+      "known_at": 11
+    },
+    {
+      "name": "Banderas del escudo",
+      "facet": "El escudo y sus elementos",
+      "known_at": 12
+    },
+    {
+      "name": "Heráldica",
+      "facet": "El escudo y sus elementos",
+      "known_at": 13
+    },
+    {
+      "name": "Jefe del escudo",
+      "facet": "El escudo y sus elementos",
+      "known_at": 14
+    },
+    {
+      "name": "Faja del escudo",
+      "facet": "El escudo y sus elementos",
+      "known_at": 14
+    },
+    {
+      "name": "Cóndor de los Andes",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 2
+    },
+    {
+      "name": "Orquídea",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 4
+    },
+    {
+      "name": "Palma de cera del Quindío",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 5
+    },
+    {
+      "name": "Gallinazo",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 5
+    },
+    {
+      "name": "Carroñero",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 6
+    },
+    {
+      "name": "Especie en peligro de extinción",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 6
+    },
+    {
+      "name": "Quindío",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 7
+    },
+    {
+      "name": "Envergadura",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 9
+    },
+    {
+      "name": "Salento",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 9
+    },
+    {
+      "name": "Cattleya",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 11
+    },
+    {
+      "name": "Planta epífita",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 12
+    },
+    {
+      "name": "José Jerónimo Triana",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 14
+    },
+    {
+      "name": "Café de Colombia",
+      "facet": "Símbolos culturales de la nación",
+      "known_at": 2
+    },
+    {
+      "name": "Esmeralda",
+      "facet": "Símbolos culturales de la nación",
+      "known_at": 7
+    },
+    {
+      "name": "Festivo",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 4
+    },
+    {
+      "name": "Fiestas patrias",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 5
+    },
+    {
+      "name": "20 de julio",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 5
+    },
+    {
+      "name": "Desfile militar",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 6
+    },
+    {
+      "name": "Día de la Raza",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 6
+    },
+    {
+      "name": "7 de agosto",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 7
+    },
+    {
+      "name": "1810",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 7
+    },
+    {
+      "name": "1819",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 9
+    },
+    {
+      "name": "Constitución de 1991",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 9
+    },
+    {
+      "name": "Posesión presidencial",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 10
+    },
+    {
+      "name": "Bicentenario",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla del Pantano de Vargas",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Patria Boba",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 12
+    },
+    {
+      "name": "Reconquista española",
+      "facet": "Fechas y fiestas patrias",
+      "known_at": 12
+    },
+    {
+      "name": "Ejército Libertador",
+      "facet": "Próceres de la independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Camilo Torres",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Los Comuneros",
+      "facet": "Próceres de la independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco de Miranda",
+      "facet": "Próceres de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Derechos del Hombre",
+      "facet": "Próceres de la independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Pablo Morillo",
+      "facet": "Próceres de la independencia",
+      "known_at": 13
+    },
+    {
+      "name": "Plaza de Bolívar",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 4
+    },
+    {
+      "name": "Casa de Nariño",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 7
+    },
+    {
+      "name": "Capitolio Nacional",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 8
+    },
+    {
+      "name": "Museo Nacional de Colombia",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 8
+    },
+    {
+      "name": "Casa del Florero",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 9
+    },
+    {
+      "name": "Quinta de Bolívar",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral Primada de Bogotá",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 10
+    },
+    {
+      "name": "Quinta de San Pedro Alejandrino",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Chorro de Quevedo",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Monumento a los Lanceros",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Villa del Rosario",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Templo Histórico de Cúcuta",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de San Carlos",
+      "facet": "Lugares y monumentos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Mano en el pecho",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Izada de bandera",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Acto cívico",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Minuto de silencio",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Quitarse la gorra",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 5
+    },
+    {
+      "name": "Banda presidencial",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 6
+    },
+    {
+      "name": "Posición firme",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 6
+    },
+    {
+      "name": "Transmisión del himno en radio y televisión",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Abanderado",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera en las casas",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Saludo militar",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera a media asta",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Escolta de bandera",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Duelo nacional",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Juramento a la bandera",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Ofrenda floral",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Arriada de bandera",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Honores militares",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Ultraje a los símbolos patrios",
+      "facet": "Protocolo y uso de los símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Separación de Panamá",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de la Gran Colombia",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Constitución de 1886",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Miranda",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Estado Libre de Cundinamarca",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Congreso de Cúcuta",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Academia Colombiana de Historia",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Estados Unidos de Colombia",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Confederación Granadina",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Congreso de Angostura",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de la Gran Colombia",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Ley 33 de 1920",
+      "facet": "Historia de los símbolos patrios",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Bogotá",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de Antioquia",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera de Cundinamarca",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera del Valle del Cauca",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de Boyacá",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 10
+    },
+    {
+      "name": "Escudo de Bogotá",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de Santander",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera del Atlántico",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de San Andrés",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera del Amazonas",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Caldas",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Bolívar",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Cali",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Nariño",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera del Tolima",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Medellín",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de Antioquia",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de Barranquilla",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera del Quindío",
+      "facet": "Banderas y escudos departamentales",
+      "known_at": 13
+    }
+  ]
+}

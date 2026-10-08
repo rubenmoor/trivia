@@ -1,0 +1,1207 @@
+{
+  "subcategory": "Inventores famosos",
+  "facets": [
+    "Inventores de la electricidad y la luz",
+    "Inventores de las comunicaciones",
+    "Pioneros del transporte y el vuelo",
+    "Inventos médicos y sus creadores",
+    "Inventores de la Antigüedad y el Renacimiento",
+    "Inventoras y mujeres pioneras",
+    "Inventos de la casa y la cocina",
+    "Pioneros de la computación e internet",
+    "Inventos por accidente y sus historias",
+    "Inventores latinoamericanos y colombianos",
+    "Inventores de la imagen y el sonido",
+    "Inventos de juguetes y entretenimiento"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Thomas Edison",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 4
+    },
+    {
+      "name": "Bombillo",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 1
+    },
+    {
+      "name": "Nikola Tesla",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 6
+    },
+    {
+      "name": "Benjamin Franklin",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 8
+    },
+    {
+      "name": "Alessandro Volta",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 10
+    },
+    {
+      "name": "Pila eléctrica",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 3
+    },
+    {
+      "name": "Michael Faraday",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 11
+    },
+    {
+      "name": "Corriente alterna",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 11
+    },
+    {
+      "name": "André-Marie Ampère",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Ohm",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 12
+    },
+    {
+      "name": "Joseph Swan",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 14
+    },
+    {
+      "name": "Motor eléctrico",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 6
+    },
+    {
+      "name": "Bobina de Tesla",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 10
+    },
+    {
+      "name": "Guerra de las corrientes",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 13
+    },
+    {
+      "name": "Luz de neón",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 7
+    },
+    {
+      "name": "LED",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 6
+    },
+    {
+      "name": "Generador eléctrico",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 8
+    },
+    {
+      "name": "Linterna",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 2
+    },
+    {
+      "name": "Lewis Latimer",
+      "facet": "Inventores de la electricidad y la luz",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander Graham Bell",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Teléfono",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 1
+    },
+    {
+      "name": "Samuel Morse",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Código Morse",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Telégrafo",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Guglielmo Marconi",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Radio",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 2
+    },
+    {
+      "name": "Celular",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 1
+    },
+    {
+      "name": "Martin Cooper",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Meucci",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Satélite de comunicaciones",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Fax",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Sello postal",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Mensaje de texto",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Cable telegráfico transatlántico",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Heinrich Hertz",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Louis Braille",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Teléfono inteligente",
+      "facet": "Inventores de las comunicaciones",
+      "known_at": 2
+    },
+    {
+      "name": "Hermanos Wright",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 6
+    },
+    {
+      "name": "Avión",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 1
+    },
+    {
+      "name": "Karl Benz",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 10
+    },
+    {
+      "name": "Henry Ford",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 8
+    },
+    {
+      "name": "Ford Modelo T",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 11
+    },
+    {
+      "name": "James Watt",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 11
+    },
+    {
+      "name": "Máquina de vapor",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 7
+    },
+    {
+      "name": "George Stephenson",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 12
+    },
+    {
+      "name": "Locomotora",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 4
+    },
+    {
+      "name": "Hermanos Montgolfier",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 9
+    },
+    {
+      "name": "Globo aerostático",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 2
+    },
+    {
+      "name": "Bicicleta",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 1
+    },
+    {
+      "name": "Karl Drais",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 14
+    },
+    {
+      "name": "Helicóptero",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 2
+    },
+    {
+      "name": "Ígor Sikorski",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 13
+    },
+    {
+      "name": "Rudolf Diesel",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 11
+    },
+    {
+      "name": "Gottlieb Daimler",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Lindbergh",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Goddard",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 13
+    },
+    {
+      "name": "Semáforo",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 3
+    },
+    {
+      "name": "Isaac Peral",
+      "facet": "Pioneros del transporte y el vuelo",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander Fleming",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 8
+    },
+    {
+      "name": "Penicilina",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 7
+    },
+    {
+      "name": "Vacuna",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 2
+    },
+    {
+      "name": "Edward Jenner",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 11
+    },
+    {
+      "name": "Louis Pasteur",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 8
+    },
+    {
+      "name": "Pasteurización",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 9
+    },
+    {
+      "name": "Rayos X",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 4
+    },
+    {
+      "name": "Wilhelm Röntgen",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 11
+    },
+    {
+      "name": "Estetoscopio",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 4
+    },
+    {
+      "name": "René Laennec",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 14
+    },
+    {
+      "name": "Anestesia",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 8
+    },
+    {
+      "name": "Marcapasos",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 10
+    },
+    {
+      "name": "Insulina",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 10
+    },
+    {
+      "name": "Frederick Banting",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 14
+    },
+    {
+      "name": "Jonas Salk",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 13
+    },
+    {
+      "name": "Vacuna contra la polio",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 11
+    },
+    {
+      "name": "Gafas",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 4
+    },
+    {
+      "name": "Jeringa",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 3
+    },
+    {
+      "name": "Aspirina",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 6
+    },
+    {
+      "name": "Curita",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 2
+    },
+    {
+      "name": "Resonancia magnética",
+      "facet": "Inventos médicos y sus creadores",
+      "known_at": 10
+    },
+    {
+      "name": "Johannes Gutenberg",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 8
+    },
+    {
+      "name": "Imprenta",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 5
+    },
+    {
+      "name": "Leonardo da Vinci",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 4
+    },
+    {
+      "name": "Arquímedes",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 8
+    },
+    {
+      "name": "Tornillo de Arquímedes",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 12
+    },
+    {
+      "name": "Rueda",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 1
+    },
+    {
+      "name": "Papel",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 2
+    },
+    {
+      "name": "Cai Lun",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 14
+    },
+    {
+      "name": "Herón de Alejandría",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 14
+    },
+    {
+      "name": "Reloj de arena",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Ábaco",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 5
+    },
+    {
+      "name": "Acueducto romano",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 9
+    },
+    {
+      "name": "Microscopio",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 4
+    },
+    {
+      "name": "Anton van Leeuwenhoek",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 12
+    },
+    {
+      "name": "Christiaan Huygens",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 14
+    },
+    {
+      "name": "Máquina voladora de Leonardo",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 8
+    },
+    {
+      "name": "Escritura cuneiforme",
+      "facet": "Inventores de la Antigüedad y el Renacimiento",
+      "known_at": 10
+    },
+    {
+      "name": "Marie Curie",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 7
+    },
+    {
+      "name": "Ada Lovelace",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 11
+    },
+    {
+      "name": "Hedy Lamarr",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 12
+    },
+    {
+      "name": "Grace Hopper",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Anderson",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 13
+    },
+    {
+      "name": "Limpiaparabrisas",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 4
+    },
+    {
+      "name": "Josephine Cochrane",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 14
+    },
+    {
+      "name": "Stephanie Kwolek",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 14
+    },
+    {
+      "name": "Kevlar",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 11
+    },
+    {
+      "name": "Margaret Knight",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 14
+    },
+    {
+      "name": "Melitta Bentz",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 14
+    },
+    {
+      "name": "Amelia Earhart",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 9
+    },
+    {
+      "name": "Rosalind Franklin",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 13
+    },
+    {
+      "name": "Bette Nesmith Graham",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 15
+    },
+    {
+      "name": "Corrector líquido",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 3
+    },
+    {
+      "name": "Ruth Handler",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth Magie",
+      "facet": "Inventoras y mujeres pioneras",
+      "known_at": 14
+    },
+    {
+      "name": "Lavadora",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Aspiradora",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Lavavajillas",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Tostadora",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Plancha",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Olla a presión",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Inodoro",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Cremallera",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Filtro de café",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Abrelatas",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Lata de conserva",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Nicolas Appert",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Cafetera moka",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Aire acondicionado",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Willis Carrier",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Imperdible",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Tupperware",
+      "facet": "Inventos de la casa y la cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Computador",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 1
+    },
+    {
+      "name": "Alan Turing",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 10
+    },
+    {
+      "name": "Charles Babbage",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 12
+    },
+    {
+      "name": "Tim Berners-Lee",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 12
+    },
+    {
+      "name": "World Wide Web",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 8
+    },
+    {
+      "name": "Internet",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 2
+    },
+    {
+      "name": "Steve Jobs",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 6
+    },
+    {
+      "name": "Bill Gates",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 6
+    },
+    {
+      "name": "Steve Wozniak",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 12
+    },
+    {
+      "name": "iPhone",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 2
+    },
+    {
+      "name": "Ratón de computador",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 2
+    },
+    {
+      "name": "Douglas Engelbart",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 14
+    },
+    {
+      "name": "Correo electrónico",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 3
+    },
+    {
+      "name": "Ray Tomlinson",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 14
+    },
+    {
+      "name": "Arroba",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 4
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 7
+    },
+    {
+      "name": "Google",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 1
+    },
+    {
+      "name": "Larry Page",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 12
+    },
+    {
+      "name": "Máquina Enigma",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 11
+    },
+    {
+      "name": "ENIAC",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 13
+    },
+    {
+      "name": "Transistor",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 12
+    },
+    {
+      "name": "Wikipedia",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 4
+    },
+    {
+      "name": "Linus Torvalds",
+      "facet": "Pioneros de la computación e internet",
+      "known_at": 14
+    },
+    {
+      "name": "Microondas",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 1
+    },
+    {
+      "name": "Percy Spencer",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 13
+    },
+    {
+      "name": "Velcro",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 4
+    },
+    {
+      "name": "George de Mestral",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 14
+    },
+    {
+      "name": "Teflón",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 8
+    },
+    {
+      "name": "Post-it",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 4
+    },
+    {
+      "name": "Galleta con chips de chocolate",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 3
+    },
+    {
+      "name": "Ruth Wakefield",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 14
+    },
+    {
+      "name": "Papas chips",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 3
+    },
+    {
+      "name": "John Pemberton",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 12
+    },
+    {
+      "name": "Paleta de helado",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 3
+    },
+    {
+      "name": "Plastilina",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 2
+    },
+    {
+      "name": "Vulcanización del caucho",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Goodyear",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 12
+    },
+    {
+      "name": "Sacarina",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 11
+    },
+    {
+      "name": "Alfred Nobel",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 8
+    },
+    {
+      "name": "Radiactividad",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 10
+    },
+    {
+      "name": "Corn flakes",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 3
+    },
+    {
+      "name": "Superpegante",
+      "facet": "Inventos por accidente y sus historias",
+      "known_at": 5
+    },
+    {
+      "name": "Válvula de Hakim",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Guillermo González Camarena",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Ladislao Biro",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Bolígrafo",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 2
+    },
+    {
+      "name": "Juan Vucetich",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Huellas dactilares",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Alberto Santos-Dumont",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Luis Federico Leloir",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Quipu",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Chicle",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 2
+    },
+    {
+      "name": "Cero maya",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Juego de pelota maya",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Hipsómetro",
+      "facet": "Inventores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Hermanos Lumière",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 10
+    },
+    {
+      "name": "Cine",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 1
+    },
+    {
+      "name": "Cinematógrafo",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 11
+    },
+    {
+      "name": "Fonógrafo",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 10
+    },
+    {
+      "name": "Louis Daguerre",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 13
+    },
+    {
+      "name": "Daguerrotipo",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 13
+    },
+    {
+      "name": "Fotografía",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 2
+    },
+    {
+      "name": "Cámara de fotos",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 1
+    },
+    {
+      "name": "Nicéphore Niépce",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 14
+    },
+    {
+      "name": "John Logie Baird",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 13
+    },
+    {
+      "name": "Televisión",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 1
+    },
+    {
+      "name": "Gramófono",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 9
+    },
+    {
+      "name": "Disco de vinilo",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 5
+    },
+    {
+      "name": "Casete",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 5
+    },
+    {
+      "name": "Disco compacto",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 3
+    },
+    {
+      "name": "Walkman",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 8
+    },
+    {
+      "name": "George Eastman",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 13
+    },
+    {
+      "name": "Kodak",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 7
+    },
+    {
+      "name": "Cámara Polaroid",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 6
+    },
+    {
+      "name": "Micrófono",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 2
+    },
+    {
+      "name": "Georges Méliès",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 12
+    },
+    {
+      "name": "Cámara oscura",
+      "facet": "Inventores de la imagen y el sonido",
+      "known_at": 11
+    },
+    {
+      "name": "LEGO",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 1
+    },
+    {
+      "name": "Ole Kirk Christiansen",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 14
+    },
+    {
+      "name": "Cubo de Rubik",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Ernő Rubik",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 11
+    },
+    {
+      "name": "Monopoly",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 4
+    },
+    {
+      "name": "Barbie",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 1
+    },
+    {
+      "name": "Slinky",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 6
+    },
+    {
+      "name": "Frisbee",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Yoyo",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 1
+    },
+    {
+      "name": "Videojuego",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 1
+    },
+    {
+      "name": "Pong",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 10
+    },
+    {
+      "name": "Ralph Baer",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 14
+    },
+    {
+      "name": "Game Boy",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 5
+    },
+    {
+      "name": "Shigeru Miyamoto",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 12
+    },
+    {
+      "name": "Tetris",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Alekséi Pázhitnov",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 14
+    },
+    {
+      "name": "Pac-Man",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Montaña rusa",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 2
+    },
+    {
+      "name": "Rueda de Chicago",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 2
+    },
+    {
+      "name": "Oso de peluche",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 1
+    },
+    {
+      "name": "Patineta",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 2
+    },
+    {
+      "name": "Ajedrez",
+      "facet": "Inventos de juguetes y entretenimiento",
+      "known_at": 2
+    }
+  ]
+}
