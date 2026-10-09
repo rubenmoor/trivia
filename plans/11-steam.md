@@ -66,7 +66,7 @@ All are logged in [`open-questions.md`](open-questions.md):
 | OQ-31 | Launch languages (Spanish only? plus English?) and Spanish usage (Colombian vs. neutral) | 15, 16 |
 | OQ-32 | Content target for launch: games per new player, per language | 16 |
 | OQ-33 | Price model (paid, free, free + paid packs) and who holds the Steamworks account (person or company, tax) | 17 |
-| OQ-34 | Store name: «¡Trivia!» is generic and hard to find in search | 17 |
+| OQ-34 | ~~Store name~~ answered: «Living Room Trivia» / «Trivia en Familia», pending PUB-7 (D-50) | 17 |
 | OQ-35 | Code and content license; does the question pool stay public on GitHub? | 17 |
 | OQ-36 | ~~Audience~~ answered: four age groups on one shared scale (D-38) | 13, 16 |
 | OQ-37 | Competitive and couch co-op: hot-seat on one screen, one controller per player, or phones as buzzers | 13, 14 |

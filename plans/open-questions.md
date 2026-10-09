@@ -16,11 +16,11 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-31** Launch languages (Spanish only? plus English? more?) and the Spanish variety: Colombian as today, or neutral Spanish with Colombian variants?
 - **OQ-32** Content target for release: how many games per new player, per language (draft: ≥ 30, primary language ≥ 50; `16-content-target.md`)?
 - **OQ-33** Price model (paid, free, free + paid packs), and who holds the Steamworks account (a person or a company; tax)?
-- **OQ-34** Store name: keep «¡Trivia!» (generic, hard to find in search), or a distinct name with «¡Trivia!» as a subtitle?
 - **OQ-35** Code and content license (the repo has no `LICENSE` today); does new release content stay public on GitHub?
 - **OQ-37** Competitive mode and couch co-op: format (relay ladder, parallel ladders, buzzer), and input (hot-seat, one controller per player, phones as buzzers)?
 
 ## Resolved
+- **OQ-34** Store name: «Living Room Trivia», in Spanish «Trivia en Familia» (Steam localized name), pending the name and trademark check PUB-7 (D-50).
 - **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).
 - **OQ-44** No per-bundle house style: a session mixes questions from every active bundle, so they all follow one house style (D-44).
 - **OQ-41** A non-base bundle's categories are in `app/data/bundles/<id>/` (they ship), and its concepts and axes in `authoring/data/bundles/<id>/`. Subcategory names and category slugs are unique across bundles; question ids are global. **OQ-42** The Colombian subcategories leave `base` for `colombia`'s own list, and their questions keep their bundle. **OQ-43** Prompt only; the gamemaster moves the rest in the review tool (D-43).

@@ -148,6 +148,5 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
 | OQ-32 | Content target for release | Steam S4 (16) |
 | OQ-33 | Price model; Steamworks account holder | Steam S5 (17) |
-| OQ-34 | Store name | Steam S5 (17) |
 | OQ-35 | Code and content license | Steam S2 (17) |
 | OQ-37 | Competitive mode and couch co-op format and input | Steam later (13, 14) |
