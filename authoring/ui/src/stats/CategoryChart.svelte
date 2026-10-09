@@ -1,42 +1,31 @@
 <script lang="ts">
-  // Questions per broad category (D-19), most first. Hover a row for its subcategories.
+  // Questions per broad category (D-19), most first. Click a bar to open its subcategories
+  // (RV-19); each one links to its approved questions in the review tool.
   import type { Category, Question } from "../lib/types";
+  import { breakdown, reviewLink, type CategoryRow } from "./breakdown";
   import "./chart.css";
 
   let { questions, categories }: { questions: Question[]; categories: Category[] } = $props();
 
-  interface Row {
-    name: string;
-    count: number;
-    subs: { name: string; count: number }[];
-  }
-
-  const rows = $derived.by(() => {
-    const perSub = new Map<string, number>();
-    for (const q of questions) perSub.set(q.subcategory, (perSub.get(q.subcategory) ?? 0) + 1);
-    const known = new Set(categories.flatMap((c) => c.subcategories));
-    const out: Row[] = categories.map((c) => {
-      const subs = c.subcategories.map((s) => ({ name: s, count: perSub.get(s) ?? 0 }));
-      return { name: c.name, count: subs.reduce((n, s) => n + s.count, 0), subs };
-    });
-    const unknown = [...perSub].filter(([s]) => !known.has(s)).map(([name, count]) => ({ name, count }));
-    if (unknown.length) {
-      out.push({ name: "(not in categories.json)", count: unknown.reduce((n, s) => n + s.count, 0), subs: unknown });
-    }
-    // Stable sort: ties keep the order of app/data/categories.json.
-    return out.sort((a, b) => b.count - a.count);
-  });
+  // Stable sort: ties keep the order of app/data/categories.json.
+  const rows = $derived(breakdown(questions, categories).sort((a, b) => b.count - a.count));
   const max = $derived(Math.max(1, ...rows.map((r) => r.count)));
+  /** Subcategory bars share one scale across categories, so they compare. */
+  const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));
   const empty = $derived(rows.filter((r) => r.count === 0).length);
 
-  let hover = $state<{ row: Row; x: number; y: number } | null>(null);
+  let open = $state(new Set<string>());
+  const allOpen = $derived(rows.length > 0 && rows.every((r) => open.has(r.name)));
 
-  function move(row: Row, e: PointerEvent) {
-    // Keep the tooltip inside the window.
-    const x = Math.min(e.clientX + 16, window.innerWidth - 360);
-    const y = Math.min(e.clientY + 16, window.innerHeight - 280);
-    hover = { row, x: Math.max(8, x), y: Math.max(8, y) };
+  function toggle(row: CategoryRow) {
+    const next = new Set(open);
+    if (!next.delete(row.name)) next.add(row.name);
+    open = next;
   }
+  function toggleAll() {
+    open = allOpen ? new Set() : new Set(rows.map((r) => r.name));
+  }
+  const bySize = (row: CategoryRow) => [...row.subs].sort((a, b) => b.count - a.count);
 </script>
 
 <section class="chart-panel">
@@ -44,77 +33,78 @@
   <p class="sub">
     {questions.length} questions in {rows.length - empty} of {rows.length} categories{empty
       ? ` · ${empty} without questions`
-      : ""} · hover a bar for its subcategories
+      : ""} · click a bar for its subcategories ·
+    <button class="link" onclick={toggleAll}>{allOpen ? "close all" : "open all"}</button>
   </p>
 
   <ol class="bars">
     {#each rows as row (row.name)}
-      <li
-        onpointermove={(e) => move(row, e)}
-        onpointerleave={() => (hover = null)}
-        class:dim={hover && hover.row !== row}
-      >
-        <span class="label">{row.name}</span>
-        <span class="track">
-          {#if row.count > 0}
-            <span class="bar" style:width="{(row.count / max) * 100}%"></span>
-          {/if}
-          <span class="value">{row.count}</span>
-        </span>
+      <li>
+        <button class="row" aria-expanded={open.has(row.name)} onclick={() => toggle(row)}>
+          <span class="label">{row.name}</span>
+          <span class="track">
+            {#if row.count > 0}
+              <span class="bar" style:width="{(row.count / max) * 100}%"></span>
+            {/if}
+            <span class="value">{row.count}</span>
+            <span class="more">{row.subs.length} sub{open.has(row.name) ? " ▴" : " ▾"}</span>
+          </span>
+        </button>
+        {#if open.has(row.name)}
+          <ol class="subs">
+            {#each bySize(row) as s (s.name)}
+              <li class="row">
+                <a class="label" href={reviewLink(s.name)} title="Review its approved questions">{s.name}</a>
+                <span class="track">
+                  {#if s.count > 0}
+                    <span class="bar sub-bar" style:width="{(s.count / subMax) * 100}%"></span>
+                  {/if}
+                  <span class="value">{s.count}</span>
+                </span>
+              </li>
+            {/each}
+          </ol>
+        {/if}
       </li>
     {/each}
   </ol>
-
-  <details class="table-view">
-    <summary>Table with subcategories</summary>
-    <table>
-      <thead><tr><th>Category</th><th>Subcategory</th><th class="num">Questions</th></tr></thead>
-      <tbody>
-        {#each rows as row}
-          {#each row.subs as s, i}
-            <tr>
-              <td>{i === 0 ? `${row.name} (${row.count})` : ""}</td>
-              <td>{s.name}</td>
-              <td class="num">{s.count}</td>
-            </tr>
-          {/each}
-        {/each}
-      </tbody>
-    </table>
-  </details>
 </section>
 
-{#if hover}
-  {@const used = hover.row.subs.filter((s) => s.count > 0).sort((a, b) => b.count - a.count)}
-  {@const unused = hover.row.subs.length - used.length}
-  <div class="tooltip" style:left="{hover.x}px" style:top="{hover.y}px">
-    <strong>{hover.row.name} · {hover.row.count}</strong>
-    {#each used as s}
-      <div>{s.name} · {s.count}</div>
-    {/each}
-    {#if unused}
-      <div class="muted">{unused} subcategor{unused === 1 ? "y" : "ies"} without questions</div>
-    {/if}
-  </div>
-{/if}
-
 <style>
-  .bars {
+  .bars,
+  .subs {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  li {
+  .subs {
+    margin: 0.15rem 0 0.6rem;
+    font-size: 0.85rem;
+  }
+  .row {
     display: grid;
     grid-template-columns: minmax(8rem, 15rem) 1fr;
     align-items: center;
     gap: 0.75rem;
-    /* The whole row is the hover target, not just the bar. */
+    width: 100%;
     padding: 4px 0;
-    transition: opacity 0.12s;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
   }
-  li.dim {
-    opacity: 0.45;
+  button.row {
+    cursor: pointer;
+  }
+  button.row:hover .value,
+  button.row:hover .label {
+    color: var(--text);
+  }
+  button.row:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
   .label {
     text-align: right;
@@ -123,13 +113,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .subs .label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .subs a.label:hover {
+    color: var(--text);
+    text-decoration: underline;
+  }
   .track {
     display: flex;
     align-items: center;
     gap: 0.4rem;
     min-width: 0;
     /* Room for the value label after the longest bar. */
-    padding-right: 2.5rem;
+    padding-right: 6.5rem;
     border-left: 1px solid #3a3d4a;
   }
   .bar {
@@ -138,16 +137,36 @@
     border-radius: 0 4px 4px 0;
     flex: none;
   }
+  .sub-bar {
+    height: 10px;
+    opacity: 0.7;
+  }
   .value {
     font-size: 0.85rem;
     font-variant-numeric: tabular-nums;
     color: var(--muted);
   }
-  li:hover .value {
+  .more {
+    flex: none;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    color: var(--muted);
+    opacity: 0.7;
+  }
+  .link {
+    border: 0;
+    padding: 0;
+    background: none;
+    color: var(--muted);
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .link:hover {
     color: var(--text);
   }
   @media (max-width: 560px) {
-    li {
+    .row {
       grid-template-columns: 1fr;
       gap: 0.15rem;
     }
