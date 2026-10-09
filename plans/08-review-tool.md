@@ -125,7 +125,7 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 
 **API.** `GET /api/overview` returns everything above except the statistics (they use `/api/questions?status=approved` like the stats pages) in one JSON object, built on the server so the page doesn't fetch the whole pool with media candidates. It reuses `selection.supply` / `selection.burned_ids` (`app/server/`, allowed by D-35) and the same unfinished-run test as `qgen.next_batch`; that test moves into a small shared helper rather than being copied. Reading the game save is read-only; when `state/` doesn't exist the per-player rows are left out.
 
-**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` and `reviewer=human|llm|none` (the API already does both) `media=missing` (approved questions whose media has no picked file) and `subcategory=<name>` (new in the API too, RV-19). The URL keeps them like `batch` and `bundle`.
+**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` and `reviewer=human|llm|none` (the API already does both), `media=missing` (approved questions whose media has no picked file) and `subcategory=<name>` (new in the API too). The URL keeps them like `batch` and `bundle`.
 
 
 ## Statistics on approved questions (RV-18..RV-21)
@@ -153,13 +153,17 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `authoring/ui/src/review/RevisionPanel.svelte`.*
 - [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
 - [x] RV-11 Human review of LLM-reviewed questions (D-33): they count as open, show the LLM's verdict, and the summary counts them. *2026-10-07, QP-15.*
-- [ ] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), difficulty counts. Share the unfinished-run test with `qgen.next_batch`.
-- [ ] RV-13 Review filters `status`, `reviewer` and `media=missing` in the API and the review screen (URL, empty-queue message).
-- [ ] RV-14 Start page `authoring/ui/src/home/Home.svelte`: sections 1–5; `App.svelte` routes exactly `/` to it; `/` with `batch`/`bundle`/`id` redirects to `/review`.
+
+### Start page and statistics: order of work
+One task = one commit, top to bottom (each builds only on the ones above it):
+
+- [ ] RV-13 Review filters `status`, `reviewer`, `subcategory` and `media=missing` in the API and the review screen (URL, empty-queue message).
 - [ ] RV-15 Serve batch reports at `/reports/<name>.md` (plain text, names restricted to `authoring/reports/*.md`) for the batches table.
-- [ ] RV-16 One nav bar on the start page, the stats pages and the review summary ("Start", "Stats", "Review"); the server's startup line and AGENTS.md name `/` as the start page.
-- [ ] RV-17 (later) `qgen validate` result on the start page: errors and warnings, without the exit. Needs `cmd_validate` split into a function that returns its findings.
+- [ ] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), the next batch's subcategories. The unfinished-run test and the subcategory choice move from `qgen.py` into a shared helper.
 - [ ] RV-18 Difficulty histogram over 1–15 with the young-teen window marked.
-- [ ] RV-19 Category bars open their subcategories on click; new page `/stats/subcategories` with links to review; review filter `subcategory` (with RV-13).
-- [ ] RV-20 Sparse list (categories < 12, subcategories < 3, marked if the next batch picks them); `/api/overview` returns the next batch's subcategories.
-- [ ] RV-21 Bundle switch on the stats pages; compact versions of the histogram, category bars and sparse list on the start page (section 5).
+- [ ] RV-19 Category bars open their subcategories on click; new page `/stats/subcategories` with links to review.
+- [ ] RV-20 Sparse list (categories < 12, subcategories < 3, marked if the next batch picks them) on `/stats/subcategories`.
+- [ ] RV-21 Bundle switch (`?bundle=`) on the stats pages.
+- [ ] RV-14 Start page `authoring/ui/src/home/Home.svelte`: sections 1–6, with compact versions of the histogram, category bars and sparse list; `App.svelte` routes exactly `/` to it; `/` with `batch`/`bundle`/`id` redirects to `/review`.
+- [ ] RV-16 One nav bar on the start page, the stats pages and the review summary ("Start", "Stats", "Review"); the server's startup line and AGENTS.md name `/` as the start page.
+- [ ] RV-17 (later, not in this round) `qgen validate` result on the start page: errors and warnings, without the exit. Needs `cmd_validate` split into a function that returns its findings.
