@@ -54,6 +54,16 @@ export async function deletePlayer(name: string): Promise<Player[]> {
   );
 }
 
+/** IDs of the questions flagged for review (GM-5, D-47). */
+export async function fetchFlags(): Promise<string[]> {
+  return json(await call("/api/flags"));
+}
+
+/** Flag or unflag a question for review; returns every flagged ID. */
+export async function setFlag(id: string, flagged: boolean, player: string | null): Promise<string[]> {
+  return post("/api/flags", { id, flagged, player });
+}
+
 export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }> {
   return json(await call("/api/game"));
 }

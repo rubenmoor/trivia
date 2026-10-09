@@ -184,6 +184,7 @@ Menu items (keyboard-navigable, large enough for the TV):
 - **Reiniciar partida / Volver al inicio,** with a confirmation.
 - **Pantalla completa** on/off.
 - **Comodines de esta partida** (MD-4, `13-game-modes.md`): the joker budget of the running game, «Sin límite» (default), «Como las cartas» (4 Soplo, 2 each other) or a count per joker, with the uses left. In a second column with the volume controls.
+- **Flag for review** (GM-5, D-47) is not in the menu: it is a small faint flag next to the ☰ (`M`).
 - **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `authoring/data/questions.json` and the review tool. The ID links to `/review/<id>` (new tab), next to links to the stats pages (`/stats/categories`, `/stats/difficulty`).
 - **Demo de efectos** (later): play every transition and effect for testing on the TV (B-3).
 
@@ -192,7 +193,7 @@ The detailed action set and any extra keys are owned by `05-gamemaster-controls.
 ## Input
 **Rule (IN-1): no action without a clickable control.** A key is a shortcut shown on its button (`<kbd>`), never the only way. The overlay opens with `Esc` or the faint ☰ button in the top right corner.
 
-Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer, `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, `Esc` = admin overlay. A clicker or phone remote can map to these later.
+Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer, `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
 
 **Debugging keys:** the dev browser runs the Vimium extension, which grabs single-letter keys before the page sees them (`r` reloads the page, which lands on Start). When a key press doesn't work, first ask the gamemaster whether Vimium is disabled for the page before you look for a bug in the code.
 

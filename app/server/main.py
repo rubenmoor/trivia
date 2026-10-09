@@ -28,6 +28,9 @@ API:
                                                    (09-jokers.md); the response adds {"event": what happened}
     POST /api/game/jokers                          body {"jokers": {joker: count or null}}: the running game's
                                                    joker budget (13-game-modes.md, MD-4); null = unlimited
+    GET  /api/flags                                IDs of the questions flagged for review (GM-5, D-47)
+    POST /api/flags                                body {"id": question ID, "flagged": bool, "player": name}:
+                                                   flag or unflag; returns the flagged IDs (state/flags.json)
 Game responses are {"game": ...} (app/server/game.py: never the correct answer before the final answer).
 While a question is on screen, the game has `jokers`: per joker {"available", "reason"} (D-27).
 Every game has `jokers_left`: per joker the uses left, or null = unlimited (MD-1).
@@ -37,6 +40,7 @@ from http.server import ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
 import categories
+import flags
 import game
 import paths
 from http_base import BaseHandler
@@ -62,6 +66,8 @@ class Handler(BaseHandler):
             return self.send_json(200, game.players())
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())
+        if url.path == "/api/flags":
+            return self.send_json(200, sorted(flags.load()))
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
@@ -103,6 +109,14 @@ class Handler(BaseHandler):
                 return self.send_json(200, game.players())
             except game.GameError as e:
                 return self.send_json(409, {"error": str(e)})
+        if parts == ["api", "flags"]:
+            body = self.read_body()
+            try:
+                with _lock:
+                    return self.send_json(200, flags.set_flag(body.get("id"), bool(body.get("flagged")),
+                                                              body.get("player")))
+            except ValueError as e:
+                return self.send_json(400, {"error": str(e)})
         return self.send_json(404, {"error": "not found"})
 
 

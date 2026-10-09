@@ -55,6 +55,8 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [~] QP-9 More batches: `qgen batch`, one per run (D-36) — [`02`](02-question-pool.md), [RUNBOOK](../authoring/RUNBOOK.md)
 - [ ] QP-6 An image for every question: 122 approved questions have no picked media (115 in `batch-3`, 7 in `pilot`) — [`02`](02-question-pool.md), [`06`](06-images.md)
 - [~] QP-7 Validation script: image check once media is cached — [`02`](02-question-pool.md)
+- [x] GM-5 Flag a question for review from the game (`M`); `trivia-authoring` turns flags into needs-work reviews (D-47) — [`05`](05-gamemaster-controls.md)
+- [x] RV-22 `/review?status=!approved`: every question that isn't approved, across batches — [`08`](08-review-tool.md)
 - [ ] Gamemaster decides the 20 `needs_work` questions (6 older: q-0256, q-0338, q-0369, q-0384, q-0388, q-0420; 14 from `batch-5`) and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them)
 - [ ] Top up difficulties 9–10 (only 24 approved, 2 at 10) — [`backlog`](backlog.md) B-6
 - [x] PE-1..PE-5 Fewer Claude calls and tokens per batch (grouped rate and revise, kept fact-checks, per-subcategory avoid list, compact JSON) — [`20`](20-pipeline-efficiency.md)

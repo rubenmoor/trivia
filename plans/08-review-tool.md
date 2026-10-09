@@ -63,6 +63,7 @@ While the feedback box is open, all other shortcuts are off so typing works norm
 - By default: every question from one batch that no human has reviewed yet, e.g. `?batch=pilot`: drafts and LLM-reviewed questions (D-33). An LLM-reviewed question shows the LLM's decision and feedback; a human decision replaces it and keeps it in `review.previous`. The pilot is identified by a new `batch` field (the `qgen.py` run name, set by `merge`).
 - Undecided questions come first, in pool order. Already-decided ones stay reachable with `←` so decisions can be changed.
 - The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. `/review/q-0123` reviews just that one question, whatever its status (linked from the admin overlay, 04): after a decision it stays on the question. Decisions are saved in `authoring/data/questions.json` immediately, so nothing is lost when the server restarts.
+- `?status=!approved` (RV-12, D-42): every question that isn't approved, across all batches (drafts, needs work, rejected; flags from the game end up here as needs work). Every one counts as undecided until it gets a decision in this session, whoever reviewed it before. `trivia-authoring` prints this link with the count when it starts. `status` also takes a single status (`?status=needs_work`), and `!` before it negates it.
 - When all are decided: a summary screen with the counts and the share kept (the keep rate for QG-11).
 
 ## Revised questions (QG-13)
@@ -87,7 +88,7 @@ Proposed schema changes (in `02-question-pool.md` once agreed):
 The decision keys set `status` and `review` together. Feedback sets `status: "needs_work"`.
 
 ## API
-- `GET /api/questions?batch=pilot&status=draft&reviewer=llm`: the matching questions (`reviewer`: human, llm or none).
+- `GET /api/questions?batch=pilot&status=draft&reviewer=llm`: the matching questions (`reviewer`: human, llm or none; `status=!approved`: every status but approved).
 - `POST /api/questions/<id>/review` with `{decision, feedback}`: updates one question and returns it.
 - Every write re-reads `authoring/data/questions.json`, changes the one question, and writes atomically (temp file + rename). That way nothing is lost if `qgen.py` touched the file in the meantime. Don't run `qgen.py merge` while reviewing.
 
@@ -153,6 +154,7 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `authoring/ui/src/review/RevisionPanel.svelte`.*
 - [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
 - [x] RV-11 Human review of LLM-reviewed questions (D-33): they count as open, show the LLM's verdict, and the summary counts them. *2026-10-07, QP-15.*
+- [x] RV-22 Review every question that isn't approved, across batches: `/review?status=!approved`; the link and count print at startup; applies the game's flags first (D-47, GM-5). *2026-10-08: `matches_status` in `authoring/server/main.py`; `QuestionFilter.status` and `decidedNow` in `authoring/ui/src/review/Review.svelte`.*
 
 ### Start page and statistics: order of work
 One task = one commit, top to bottom (each builds only on the ones above it):

@@ -8,7 +8,8 @@ export { fetchCategories } from "$app/lib/api";
 export interface QuestionFilter {
   /** A qgen.py run name, or "none" for questions without a batch. */
   batch?: string | null;
-  status?: Status | null;
+  /** A status, or `!` and a status for every other one (`!approved`, RV-22). */
+  status?: Status | `!${Status}` | null;
   reviewer?: "human" | "llm" | "none" | null;
   bundle?: string | null;
   subcategory?: string | null;

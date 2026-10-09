@@ -3,7 +3,7 @@
   // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onMount } from "svelte";
-  import { fetchGame, gameAction, GameError, playJoker, type GameActionBody } from "../lib/api";
+  import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
@@ -65,13 +65,25 @@
   /** Media that was playing when the overlay opened; it resumes on close. */
   let pausedMedia: HTMLMediaElement[] = [];
 
+  /** Questions flagged for review (GM-5, D-47); `trivia-authoring` turns them into reviews. */
+  let flagged = $state<Set<string>>(new Set());
+
   const running = $derived(game !== null && game.result === null);
+  /** The question the flag button acts on: the one on screen, or the one just answered. */
+  const flagTarget = $derived(
+    screen === "question"
+      ? (game?.question?.id ?? null)
+      : ["correct", "wrong", "victory"].includes(screen)
+        ? (game?.last?.question_id ?? null)
+        : null,
+  );
   /** Blocks on the tower: correct answers in this game. */
   const blocks = $derived(game?.history.filter((h) => h.correct).length ?? 0);
 
   onMount(() => {
     music(MUSIC.start);
     refresh();
+    fetchFlags().then((ids) => (flagged = new Set(ids)), () => {});
   });
 
   async function refresh() {
@@ -271,6 +283,19 @@
     await toStart();
   }
 
+  /** Flag or unflag the question for review (GM-5); errors show in the corner. */
+  async function toggleFlag() {
+    const id = flagTarget;
+    if (!id) return;
+    try {
+      flagged = new Set(await setFlag(id, !flagged.has(id), game?.player ?? null));
+      sfx(flagged.has(id) ? "menú abierto" : "menú cerrado");
+      error = null;
+    } catch (e) {
+      error = e instanceof Error ? e.message : String(e);
+    }
+  }
+
   /** The question's final answer is out: skip and undo would race the reveal. */
   const questionBusy = () => screen === "question" && (questionRef?.busy() ?? false);
 
@@ -285,6 +310,10 @@
     if (e.key === "Escape") {
       e.preventDefault();
       return openOverlay();
+    }
+    if (e.key.toLowerCase() === "m" && flagTarget) {
+      e.preventDefault();
+      return toggleFlag();
     }
     if (busy) return;
     const next = e.key === "Enter" || e.key === " ";
@@ -478,6 +507,21 @@
 
   {#if error}
     <div class="error-box corner">{error}</div>
+  {/if}
+
+  {#if !loading && !overlayOpen && flagTarget}
+    <!-- Flag for review (GM-5): as faint as the menu button; no focus, like it. -->
+    <button
+      class="flag-button"
+      class:on={flagged.has(flagTarget)}
+      onclick={toggleFlag}
+      onmousedown={(e) => e.preventDefault()}
+      tabindex="-1"
+      aria-label={flagged.has(flagTarget) ? "Marcada para revisar (M)" : "Marcar para revisar (M)"}
+      title={flagged.has(flagTarget) ? "Marcada para revisar (M)" : "Marcar para revisar (M)"}
+    >
+      <Icon name="flag" />
+    </button>
   {/if}
 
   {#if !loading && !overlayOpen}
@@ -956,6 +1000,36 @@
     height: calc(0.25 * var(--u));
     border-radius: calc(0.15 * var(--u));
     background: var(--paper);
+  }
+  .flag-button {
+    position: fixed;
+    top: calc(var(--safe-y) * 0.5);
+    right: calc(var(--safe-x) * 0.5 + 3.8 * var(--u));
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    width: calc(3.2 * var(--u));
+    height: calc(3.2 * var(--u));
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: calc(0.8 * var(--u));
+    background: transparent;
+    color: var(--paper);
+    font-size: calc(1.6 * var(--u));
+    opacity: 0.35;
+    transition:
+      opacity 0.2s,
+      background 0.2s;
+  }
+  .flag-button:hover {
+    opacity: 1;
+    background: var(--glass-strong);
+    border-color: var(--slate-400);
+  }
+  .flag-button.on {
+    --flag-fill: 1;
+    color: var(--amber);
+    opacity: 0.7;
   }
   .corner {
     position: fixed;

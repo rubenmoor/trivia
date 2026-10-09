@@ -351,3 +351,10 @@ Template:
 - Decision: They are an option, not a to-do. The start page links to a queue of questions only an LLM has approved, for all batches and per batch, below the queues that need the gamemaster: `needs_work`, unreviewed drafts, missing media and unchecked bundle proposals.
 - Consequences: The review screen gets a `reviewer` filter (RV-13). A human review of an LLM-approved question works as today: it replaces the LLM review and keeps it in `review.previous` (D-33).
 - Supersedes / related: D-33, OQ-45
+
+## D-47: Flags from the game go through the game state; the authoring server turns them into reviews
+- Date: 2026-10-08
+- Context: The gamemaster wants to flag a question for review during a game night (it needs work), without leaving the game. The game must not write `authoring/data/` (D-35), and a question that leaves the pool while it is on screen breaks the running game.
+- Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
+- Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store).
+- Supersedes / related: D-30, D-33, D-35; GM-5, RV-22

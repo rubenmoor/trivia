@@ -5,14 +5,17 @@ printable joker cards, with the question API. Never ships (D-35).
     trivia-authoring [--port 8001] [--host 127.0.0.1]   (or: python3 authoring/server/main.py)
 
 It edits authoring/data/questions.json and re-exports app/data/pool.json after every change,
-so the game (port 8000) sees reviews at once.
+so the game (port 8000) sees reviews at once. At startup it turns the questions flagged in the
+game (state/flags.json) into needs-work reviews (D-47) and prints the link to every question
+that isn't approved (/review?status=!approved, RV-22).
 
 API:
     GET  /api/categories                           app/data/categories.json: broad categories with subcategories (D-19)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
     GET  /api/age-groups                           app/data/age-groups.json: the difficulty scale and age groups (D-38)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
-         &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch;
+         &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch,
+                                                   status=!approved every status but approved;
          &subcategory=Pirámides&media=missing      media=missing: no picked media file)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
@@ -38,6 +41,7 @@ from urllib.parse import parse_qs, urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
 import layout  # noqa: E402,F401  (authoring/tools/layout.py; makes app/server importable)
 import categories  # noqa: E402  (app/server/categories.py)
+import flags  # noqa: E402  (app/server/flags.py)
 from http_base import BaseHandler  # noqa: E402  (app/server/http_base.py)
 import media  # noqa: E402  (authoring/tools/media.py)
 import media_cache  # noqa: E402  (app/server/media_cache.py)
@@ -172,6 +176,31 @@ def set_review(qid, review):
     return update_question(qid, change)
 
 
+def apply_flags():
+    """Questions flagged in the game become human needs-work reviews (GM-5, D-47); returns their IDs.
+    Runs only at startup: a question that left the pool while on screen would break a running game."""
+    pending = flags.load()
+    known = {q["id"]: q for q in load_pool()["questions"]}
+    done = []
+    for qid, flag in pending.items():
+        if qid not in known:
+            print(f"Flag for unknown question {qid} dropped", file=sys.stderr)
+            continue
+        who = f"{flag['player']}, " if flag.get("player") else ""
+        feedback = f"Marcada en el juego ({who}{flag['flagged_on'][:10]})."
+        old = (known[qid].get("review") or {}).get("feedback")
+        set_review(qid, {"decision": "needs_work", "feedback": f"{feedback} Antes: {old}" if old else feedback})
+        done.append(qid)
+    if pending:  # re-read: the game may have flagged another question meanwhile
+        flags.save({k: v for k, v in flags.load().items() if k not in pending})
+    return done
+
+
+def matches_status(q, want):
+    """`want` is a status, or `!` and a status for every other one (RV-22)."""
+    return q["status"] != want[1:] if want.startswith("!") else q["status"] == want
+
+
 class Handler(BaseHandler):
     dist = layout.DIST
     pool_file = POOL
@@ -186,7 +215,7 @@ class Handler(BaseHandler):
                 want = None if query["batch"] == "none" else query["batch"]
                 qs = [q for q in qs if q.get("batch") == want]
             if "status" in query:
-                qs = [q for q in qs if q["status"] == query["status"]]
+                qs = [q for q in qs if matches_status(q, query["status"])]
             if "bundle" in query:
                 qs = [q for q in qs if q.get("bundle") == query["bundle"]]
             if "reviewer" in query:
@@ -260,7 +289,13 @@ def main():
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8001)
     args = ap.parse_args()
-    print(f"Authoring on http://{args.host}:{args.port}/  (start page; review: /review, stats: /stats/categories)")
+    base = f"http://{args.host}:{args.port}"
+    applied = apply_flags()
+    if applied:
+        print(f"Flagged in the game, now needs work: {', '.join(applied)}")
+    open_count = sum(q["status"] != "approved" for q in load_pool()["questions"])
+    print(f"Authoring on {base}/  (start page; review: /review, stats: /stats/categories)")
+    print(f"Not approved ({open_count}): {base}/review?status=!approved")
     ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()
 
 

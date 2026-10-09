@@ -38,6 +38,7 @@ trivia                   # http://127.0.0.1:8000/   (--port, --host)
 Open the page on the TV's browser and go fullscreen. Pick or type a player name and play.
 
 - `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget. It links to the review tool and stats while the authoring server runs.
+- `M` (or the faint flag next to the menu button) flags the question for review; the next start of `trivia-authoring` marks it «needs work».
 - Game saves and burned questions (questions a player has already seen) live in `state/game.sqlite`. Delete it to reset everything.
 - The game plays fine with an empty media cache when online: a missing file is downloaded the first time it's shown. Offline, sync first (next section).
 
@@ -56,7 +57,7 @@ This needs internet once. Files go to `media/` (gitignored); credits (author, li
 trivia-authoring         # http://127.0.0.1:8001/
 ```
 
-The start page shows what waits for you (new batches, `needs_work` questions, questions without media), batches and game readiness, each as a link into a review queue. You can also open a queue directly: `/review?batch=batch-5`, `/review?bundle=colombia`, or one question with `/review/<id>`.
+The start page shows what waits for you (new batches, `needs_work` questions, questions without media), batches and game readiness, each as a link into a review queue. You can also open a queue directly: `/review?batch=batch-5`, `/review?status=!approved` (everything not approved; the link prints at startup), `/review?bundle=colombia`, or one question with `/review/<id>`.
 
 The review tool is keyboard-driven:
 

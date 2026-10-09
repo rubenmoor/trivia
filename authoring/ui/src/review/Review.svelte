@@ -17,7 +17,8 @@
   import RevisionPanel from "./RevisionPanel.svelte";
 
   // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
-  // media=missing (RV-13). The id follows the current question, so a reload (or a bookmark) comes
+  // media=missing (RV-13); status=!approved is every question that isn't
+  // approved, across batches (RV-22, D-47). The id follows the current question, so a reload (or a bookmark) comes
   // back to it. Decisions themselves live in authoring/data/questions.json.
   const params = new URLSearchParams(location.search);
   const batch = params.get("batch");
@@ -84,10 +85,14 @@
   }
   const undoStack: { id: string; previous: Review | null }[] = [];
 
+  /** Decided in this session: with a status filter, a question is open until it gets one (RV-22). */
+  let decidedNow = $state<Set<string>>(new Set());
   /** Open until a human has reviewed it: drafts and LLM-reviewed questions (D-33). In the media queue
-   *  (media=missing) a question stays open until it has picked media, whoever reviewed it. */
+   *  (media=missing) a question stays open until it has picked media, whoever reviewed it. With a
+   *  status filter the list is one pass over questions that may already have a human review. */
   const isOpen = (q: Question) =>
-    filter.media === "missing" ? !q.media.file_url : q.review?.reviewer !== "human";
+    filter.media === "missing" ? !q.media.file_url
+      : filter.status ? !decidedNow.has(q.id) : q.review?.reviewer !== "human";
 
   const current = $derived(questions[index]);
   const counts = $derived({
@@ -199,6 +204,7 @@
       undoStack.push({ id: questions[i].id, previous: questions[i].review });
       pushed = true;
       await store(i, { decision, feedback });
+      decidedNow = new Set(decidedNow).add(questions[i].id);
       flash(LABELS[decision]);
       if (suggestions.length) pickSuggestionsInBackground(questions[i].id, suggestions);
       const next = singleId ? i : nextOpen(i);
@@ -220,6 +226,7 @@
     try {
       const i = questions.findIndex((q) => q.id === last.id);
       await store(i, last.previous);
+      decidedNow = new Set([...decidedNow].filter((id) => id !== last.id));
       index = i;
       finished = false;
       flash("↶ undone");

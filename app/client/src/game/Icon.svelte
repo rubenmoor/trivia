@@ -2,7 +2,7 @@
   // The game's icons (plans/10-visual-design.md, VD-8): small inline SVGs in one rounded style,
   // drawn in currentColor. No emoji on the TV: they look different on every system.
   export type IconName = "lock" | "unlock" | "replay" | "speaker" | "film" | "check" | "cross" | "crown" | "star" | "trash"
-    | "bulb" | "door" | "stairs" | "compass" | "crosshair";
+    | "flag" | "bulb" | "door" | "stairs" | "compass" | "crosshair";
 </script>
 
 <script lang="ts">
@@ -51,6 +51,9 @@
     <path d="M9.5 7V5a1.5 1.5 0 0 1 1.5-1.5h2A1.5 1.5 0 0 1 14.5 5v2" />
     <path d="M6.5 7l1 12.5a1.5 1.5 0 0 0 1.5 1.4h6a1.5 1.5 0 0 0 1.5-1.4l1-12.5" fill="currentColor" fill-opacity="0.25" />
     <path d="M10.5 11v6M13.5 11v6" />
+  {:else if name === "flag"}
+    <path d="M5.5 21V4" />
+    <path d="M5.5 4.5h12l-2.5 4 2.5 4h-12" fill="currentColor" fill-opacity="var(--flag-fill, 0.25)" />
   {:else if name === "bulb"}
     <path d="M9 17.5h6M10 21h4" />
     <path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2v1.5h5V16c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3z" fill="currentColor" fill-opacity="0.25" />
