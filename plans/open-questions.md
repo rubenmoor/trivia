@@ -23,10 +23,8 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-43** In a `base` batch, what happens to a question that turns out to need a connection to Colombia: drop it, mark it `needs_work`, or keep it out by prompt only?
 - **OQ-44** Does a bundle with its own axes also get its own house style (e.g. a sports bundle that allows more statistics)?
 
-### Added 2026-10-09 (review tool start page, [`08`](08-review-tool.md))
-- **OQ-45** Do LLM-approved questions that no human has seen (293 today) count as work waiting for the gamemaster, or only as optional spot checks? D-33 lets an LLM approval stand, so the plan shows them in a lower "Spot checks" section, not under "Waiting for you". Doesn't block RV-12..RV-16; moving the line is a one-line change.
-
 ## Resolved
+- **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).
 - **OQ-36** Four age groups, adults included: kids, young teens, young adults, adults, on one shared difficulty scale 1–15 (D-38).
 - **OQ-38** About 150–250 concepts per subcategory, with top-ups; **OQ-39** the axis values as drafted in plan 20, and existing questions get axes too; **OQ-40** concept names unique across subcategories by normalized name only, synonyms accepted (D-37).
 - **OQ-4** No timer per question; **OQ-13** no separate gamemaster device and no GM-only view; **OQ-8** no family-specific questions; **OQ-11** a computer connected to the TV via HDMI; **OQ-12** internet is available during play; **OQ-28** the game is called «¡Trivia!» (D-30).

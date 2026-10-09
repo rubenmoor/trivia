@@ -136,7 +136,6 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
-| OQ-45 | Do unseen LLM approvals count as the gamemaster's to-do? | Nothing (placement on the start page, RV-14) |
 | OQ-41..OQ-44 | Bundle taxonomy: where it lives, what happens to `colombia`, base questions that need Colombia, per-bundle house style | BN-8..BN-12 (22) |
 | OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
