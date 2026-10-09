@@ -22,12 +22,13 @@ API:
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
+    GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not)
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched).
 """
-import argparse, datetime, json, sys, threading
+import argparse, datetime, json, re, sys, threading
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -197,9 +198,23 @@ class Handler(BaseHandler):
             return self.send_json(200, categories.load())
         if url.path == "/api/bundles":
             return self.send_json(200, load_bundles())
+        if url.path.startswith("/reports/"):
+            return self.send_report(url.path.removeprefix("/reports/"))
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
+
+    def send_report(self, name):
+        """authoring/reports/<name>.md as plain text, so the browser shows it instead of downloading it."""
+        path = layout.REPORTS / name
+        if not re.fullmatch(r"[\w.-]+\.md", name) or not path.is_file():
+            return self.send_json(404, {"error": f"no report {name}"})
+        raw = path.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Length", str(len(raw)))
+        self.end_headers()
+        self.wfile.write(raw)
 
     def do_POST(self):
         parts = urlparse(self.path).path.strip("/").split("/")
