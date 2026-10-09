@@ -163,7 +163,7 @@ One task = one commit, top to bottom (each builds only on the ones above it):
 - [x] RV-18 Difficulty histogram over 1–15 with the young-teen window marked. *2026-10-09, `authoring/ui/src/stats/DifficultyChart.svelte`; `GET /api/age-groups`.*
 - [x] RV-19 Category bars open their subcategories on click; new page `/stats/subcategories` with links to review. *2026-10-09, `authoring/ui/src/stats/CategoryChart.svelte`, `SubcategoryTable.svelte`, `breakdown.ts`; the hover tooltip and the table view gave way to the open bars and the new page.*
 - [x] RV-20 Sparse list (categories < 12, subcategories < 3, marked if the next batch picks them) on `/stats/subcategories`. *2026-10-09, `authoring/ui/src/stats/SparseList.svelte`; limits in `breakdown.ts`; sparse counts also amber in the subcategory table.*
-- [ ] RV-21 Bundle switch (`?bundle=`) on the stats pages.
+- [x] RV-21 Bundle switch (`?bundle=`) on the stats pages. *2026-10-09, `authoring/ui/src/stats/Stats.svelte`; the compact versions for the start page moved to RV-14.*
 - [ ] RV-14 Start page `authoring/ui/src/home/Home.svelte`: sections 1–6, with compact versions of the histogram, category bars and sparse list; `App.svelte` routes exactly `/` to it; `/` with `batch`/`bundle`/`id` redirects to `/review`.
 - [ ] RV-16 One nav bar on the start page, the stats pages and the review summary ("Start", "Stats", "Review"); the server's startup line and AGENTS.md name `/` as the start page.
 - [ ] RV-17 (later, not in this round) `qgen validate` result on the start page: errors and warnings, without the exit. Needs `cmd_validate` split into a function that returns its findings.
