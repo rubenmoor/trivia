@@ -3,8 +3,8 @@
   // and per difficulty, approved questions only (the ones a game can use).
   // URL: /stats/categories or /stats/difficulty.
   import { onMount } from "svelte";
-  import { fetchCategories, fetchQuestions } from "../lib/api";
-  import type { Category, Question } from "../lib/types";
+  import { fetchAgeGroups, fetchCategories, fetchQuestions } from "../lib/api";
+  import type { AgeGroups, Category, Question } from "../lib/types";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
 
@@ -12,12 +12,17 @@
 
   let questions = $state<Question[]>([]);
   let categories = $state<Category[]>([]);
+  let ageGroups = $state<AgeGroups | null>(null);
   let loading = $state(true);
   let error = $state<string | null>(null);
 
   onMount(async () => {
     try {
-      [questions, categories] = await Promise.all([fetchQuestions({ status: "approved" }), fetchCategories()]);
+      [questions, categories, ageGroups] = await Promise.all([
+        fetchQuestions({ status: "approved" }),
+        fetchCategories(),
+        fetchAgeGroups(),
+      ]);
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
     } finally {
@@ -42,8 +47,8 @@
     <p class="error">{error}</p>
   {:else if page === "categories"}
     <CategoryChart {questions} {categories} />
-  {:else}
-    <DifficultyChart {questions} />
+  {:else if ageGroups}
+    <DifficultyChart {questions} {ageGroups} />
   {/if}
 </main>
 

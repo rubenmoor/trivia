@@ -1,11 +1,25 @@
 <script lang="ts">
-  // Histogram: questions per difficulty level, 1–10.
-  import type { Question } from "../lib/types";
+  // Histogram: questions per difficulty over the whole shared scale 1–15 (D-38), with the window
+  // the game plays today (young teens, until AG-7) shaded (RV-18).
+  import type { AgeGroups, Question } from "../lib/types";
   import "./chart.css";
 
-  let { questions }: { questions: Question[] } = $props();
+  let { questions, ageGroups }: { questions: Question[]; ageGroups: AgeGroups } = $props();
 
-  const LEVELS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  /** The group the game plays until players can choose one (AG-7). */
+  const PLAYED_GROUP = "young_teens";
+
+  const LEVELS = $derived(
+    Array.from({ length: ageGroups.scale[1] - ageGroups.scale[0] + 1 }, (_, i) => ageGroups.scale[0] + i),
+  );
+  const played = $derived(ageGroups.groups.find((g) => g.id === PLAYED_GROUP));
+  /** Shaded band for the played window, in % of the plot width. */
+  const band = $derived.by(() => {
+    if (!played) return null;
+    const [lo, hi] = played.window;
+    const n = LEVELS.length;
+    return { left: ((lo - LEVELS[0]) / n) * 100, width: ((hi - lo + 1) / n) * 100 };
+  });
 
   const counts = $derived(LEVELS.map((l) => questions.filter((q) => q.difficulty === l).length));
   const total = $derived(counts.reduce((a, b) => a + b, 0));
@@ -33,9 +47,15 @@
 
 <section class="chart-panel">
   <h2>Questions per difficulty</h2>
-  <p class="sub">{total} questions · average difficulty {mean.toFixed(1)} · 1 = easiest, 10 = hardest</p>
+  <p class="sub">
+    {total} questions · average difficulty {mean.toFixed(1)} · {LEVELS[0]} = easiest, {LEVELS[LEVELS.length - 1]} = hardest
+    {#if played}· shaded: {played.window[0]}–{played.window[1]}, the window the game plays ({played.name}){/if}
+  </p>
 
-  <div class="plot">
+  <div class="plot" style:--n={LEVELS.length}>
+    {#if band}
+      <div class="band" style:left="{band.left}%" style:width="{band.width}%" aria-hidden="true"></div>
+    {/if}
     <div class="grid" aria-hidden="true">
       {#each axis.ticks as t}
         <div class="tick" style:bottom="{(t / axis.max) * 100}%"><span>{t}</span></div>
@@ -59,7 +79,7 @@
       {/each}
     </div>
   </div>
-  <div class="xlabels" aria-hidden="true">
+  <div class="xlabels" aria-hidden="true" style:--n={LEVELS.length}>
     {#each LEVELS as level}<span>{level}</span>{/each}
   </div>
   <p class="xtitle">Difficulty</p>
@@ -78,7 +98,7 @@
 </section>
 
 {#if hover}
-  {@const n = counts[hover.level - 1]}
+  {@const n = counts[LEVELS.indexOf(hover.level)]}
   <div class="tooltip" style:left="{hover.x}px" style:top="{hover.y}px">
     <strong>Difficulty {hover.level}</strong>
     <div>{n} question{n === 1 ? "" : "s"} · {pct(n)} %</div>
@@ -96,6 +116,13 @@
   .grid {
     position: absolute;
     inset: 0;
+  }
+  .band {
+    position: absolute;
+    top: -1.5rem;
+    bottom: 0;
+    background: rgb(255 255 255 / 0.04);
+    border-radius: 6px 6px 0 0;
   }
   .tick {
     position: absolute;
@@ -115,7 +142,7 @@
     position: absolute;
     inset: 0;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(var(--n), 1fr);
   }
   .slot {
     /* The whole slot is the hover target, not just the column. */
@@ -152,7 +179,7 @@
   }
   .xlabels {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(var(--n), 1fr);
     margin-left: 2.25rem;
     margin-top: 0.4rem;
     text-align: center;
