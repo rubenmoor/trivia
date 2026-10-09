@@ -66,6 +66,36 @@ While the feedback box is open, all other shortcuts are off so typing works norm
 - The tool lives at `/review` (D-25). The URL carries the current question (`/review?batch=pilot&id=q-0123`). Opening or reloading that URL shows that question; without `id`, the first undecided one. Decisions are saved in `data/questions.json` immediately, so nothing is lost when the server restarts.
 - When all are decided: a summary screen with the counts and the share kept (the keep rate for QG-11).
 
+## Start page (`/review` without parameters)
+**Today:** bare `/review` loads the whole pool (316 questions, every batch and status mixed) and jumps to the first draft anywhere. The stats pages link there, so the most common way in drops the gamemaster into an arbitrary question with no overview. The start page replaces that: it answers "what is waiting for me, and where?" and links straight into the right review run.
+
+**When it shows:** only when the URL has no `batch`, `id` or `queue` parameter. Every existing URL keeps working; `/review?batch=all` opens the old whole-pool run.
+
+**Data:** one `GET /api/questions` call, everything computed in the client (the stats pages already do this; the pool is about 0.7 MB). No new server endpoint, no new stored fields.
+
+**Content, top to bottom:**
+1. **Navigation bar** (same style as the stats pages): Review · Stats: categories · Stats: difficulty · Joker cards · Game.
+2. **Pool totals:** total questions, then approved / open (draft) / needs work / rejected, as one line of counts. Plus "approved without picked media: n" (QP-6) because it decides what `media.py sync` can cache.
+3. **Work queues:** one line per queue with its count and a link; queues with count 0 are greyed out, not hidden. Each link opens the normal review screen over just those questions, across all batches (`/review?queue=<name>`):
+
+   | Queue | Questions | Why |
+   |---|---|---|
+   | `open` | `status: "draft"` | not decided yet |
+   | `revisions` | has a `revision` field (QG-13) | proposed changes waiting for a decision |
+   | `needs-work` | `status: "needs_work"` | feedback given, waiting for `qgen.py rework`; useful to re-read before a rework run |
+   | `no-media` | approved, media slot (or background for audio, D-14) has no `file_url` | QP-6; pick media with `c` / `1`–`6` |
+   | `unchecked` | `fact_checked` not `true` | fact-check uncertain or missing |
+   | `claude` | `review.reviewer == "claude"` (D-32) | spot-check Claude's decisions |
+
+4. **Batches table:** one row per `batch` value (`first-120`, `pilot`, `batch-3`, …; questions without a batch as `none`). Columns: name · total · open · approved · needs work · rejected · keep rate (as on the summary screen) · media picked (n / total) · last `reviewed_on`. The name links to `/review?batch=<name>` (opens at the first undecided question, or the summary screen when there is none). Order: batches with open questions first, then by last `reviewed_on`, newest first. A last row "all" links to `/review?batch=all`.
+5. **Jump to a question:** a text field for a question ID (`q-0123`); `Enter` opens `/review?id=q-0123` (whole pool, so `←` / `→` still work). Unknown IDs show "not found" under the field.
+
+**Keyboard on the start page:** `Enter` opens the first non-empty queue in table order (`open`, then `revisions`, …), `/` focuses the ID field. Nothing else, so typing in the field never triggers anything.
+
+**Getting back:** the review screen header and the "Batch done" summary get a "← overview" link to `/review`; key `o` does the same (not while the feedback or search box is open). The stats pages' "Review tool →" link then lands on the start page by itself.
+
+**Review screen changes for queues:** `queue=<name>` filters the loaded list in the client by the rule in the table; it combines with `batch` (`?batch=pilot&queue=no-media`). The header shows the queue name next to the progress ("no-media · 3 / 14"). A question that leaves the queue through a decision stays in the list until reload, so `u` and `←` still work. For `no-media` and `revisions` the "first undecided" rule doesn't fit (they are often approved already): the run starts at the first question of the queue, and "done" means the queue is empty after reload.
+
 ## Revised questions (QG-13)
 A question with a `revision` field shows a panel above the question: the reason, and for each changed field the old value next to the new one. A revision with `action: "drop"` shows as **proposed reject**: `r` confirms it, `a` or `f` overrules it.
 
@@ -110,3 +140,8 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - [x] RV-7 `qgen.py merge` sets `batch`; `validate` knows the new fields and status. *2026-10-06.*
 - [x] RV-8 Try it on the 120 existing questions before the pilot runs (`/?batch=none`). *2026-10-06, approved by the gamemaster; "level" renamed to "difficulty n/10".*
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `client/src/review/RevisionPanel.svelte`.*
+- [ ] RV-10 Start page skeleton: `App.svelte` routes bare `/review` to a new `client/src/review/Overview.svelte`; navigation bar, pool totals; `?batch=all` keeps the whole-pool run.
+- [ ] RV-11 Start page: batches table with counts, keep rate, media picked, last review date and links.
+- [ ] RV-12 Queues: queue rules in one shared module (`client/src/review/queues.ts`) used by the start page counts and by `Review.svelte` for `?queue=`; header label; start position and "done" rule for `no-media` and `revisions`.
+- [ ] RV-13 Jump-to-ID field, start page keys (`Enter`, `/`), "← overview" link and key `o` on the review screen and summary.
+- [ ] RV-14 Update `AGENTS.md`, `README.md` and the server's start message (`/review` instead of `/review?batch=pilot`).

@@ -109,6 +109,7 @@ The game is called «¡Trivia!» (D-30).
 - [ ] QP-6 An image for every question — [`02`](02-question-pool.md), [`06`](06-images.md)
 - [~] QP-7 Validation script: image check once media is cached — [`02`](02-question-pool.md)
 - [x] JK-10 Supply report per subcategory × difficulty (shared with M2): `qgen.py report --subcategories` — [`09`](09-jokers.md)
+- [ ] RV-10..RV-14 Review start page at bare `/review`: pool totals, work queues (open, revisions, needs work, no media, unchecked, Claude-reviewed), batches table, jump to ID — [`08`](08-review-tool.md)
 
 No family-specific questions (D-30).
 
