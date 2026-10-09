@@ -24,7 +24,7 @@ If you are asked to make, generate, add, review or approve questions, follow [`a
 - `app/` is what ships: the game server (`app/server/`), the game UI (`app/client/`) and its data (`app/data/categories.json`, `app/data/pool.json`).
 - `authoring/` never ships: the source pool (`authoring/data/questions.json`), the pipeline (`authoring/tools/`), the review/stats/print pages (`authoring/server/`, `authoring/ui/`).
 - `authoring/` may import from `app/`; `app/` never imports from `authoring/` and never reads `authoring/data/`. Put new code on the side it belongs to: if a player's install needs it, it's `app/`.
-- Details: [`plans/19-repo-layout.md`](plans/19-repo-layout.md).
+- Details: [`plans/19-repo-layout.md`](plans/19-repo-layout.md); every path explained: [`directory.md`](directory.md).
 
 ## Tech stack
 - Server: Python, standard library only (`http.server`, `sqlite3`) (D-3, D-4).
