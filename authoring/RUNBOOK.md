@@ -13,13 +13,13 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    qgen batch
    ```
 
-   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle. Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. Use the same command, with the same `--bundle`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish.
+   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle. Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. Use the same command, with the same `--bundle`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
 3. **Act on the exit code:**
 
    | Exit code | Meaning | What you do |
    |---|---|---|
    | 0 | The batch is done | Go to step 4 |
-   | 75 | Claude's usage limit | Stop. Tell the user the batch stopped at a usage limit and quote the message, including the reset time. When the user says to continue, go back to step 2 (same command) |
+   | 75 | Claude's usage limit without a reset time it could read | Stop. Tell the user the batch stopped at a usage limit and quote the message, including the reset time. When the user says to continue, go back to step 2 (same command) |
    | 1 | A step failed | Run step 2 again. If it fails at the **same step three times in a row**, stop and give the user the last 30 lines of output verbatim |
    | other | Unexpected | Stop and give the user the last 30 lines of output verbatim |
 

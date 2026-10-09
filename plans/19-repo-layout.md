@@ -60,7 +60,7 @@ Fixed rules, so there is nothing left to decide:
 - **Record:** writes the reviews as `{"reviewer": "llm", "model": <the model id the call reported>}` (D-33) and the picks (without downloading).
 - **Sync:** downloads the picked files. A Commons rate limit doesn't fail the batch; the report lists what is still missing.
 - **Batch report (`batch-report`):** `authoring/reports/<run>.md`, written by code: counts, the needs_work list with feedback, dropped drafts, cost.
-- **Usage limits:** when Claude reports a usage limit, `qgen batch` stops with exit code 75 and prints when to rerun.
+- **Usage limits:** when Claude reports a usage limit, `qgen batch` waits until 5 minutes after the reset time in the message and continues (QG-21); exit code 75 only when it can't read a reset time.
 
 The individual steps stay available as subcommands for debugging, but the RUNBOOK uses only `qgen batch`.
 

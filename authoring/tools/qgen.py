@@ -191,6 +191,60 @@ class UsageLimit(RuntimeError):
 
 
 LIMIT_WORDS = ("usage limit", "session limit", "rate limit", "hit your limit")
+# "resets 11pm (America/Bogota)", "resets 11:30pm", "resets Oct 9, 3am (Europe/Berlin)"
+RESET_RE = re.compile(r"resets\s+(?:(?P<mon>[a-z]{3})[a-z]*\.?\s+(?P<day>\d{1,2}),?\s+(?:at\s+)?)?"
+                      r"(?P<h>\d{1,2})(?::(?P<m>\d{2}))?\s*(?P<ap>[ap]\.?m\.?)?(?:\s*\((?P<tz>[^)]+)\))?", re.I)
+LIMIT_MARGIN = datetime.timedelta(minutes=5)  # resume this long after the reset (QG-21)
+
+
+def limit_reset(msg, now=None):
+    """When Claude's usage limit in `msg` resets (an aware datetime), or None if it doesn't say."""
+    m = RESET_RE.search(str(msg))
+    if not m:
+        return None
+    tz = None
+    if m["tz"]:
+        try:
+            import zoneinfo
+            tz = zoneinfo.ZoneInfo(m["tz"].strip())
+        except Exception:  # noqa: BLE001 — unknown zone or no tz data: assume local time
+            tz = None
+    tz = tz or datetime.datetime.now().astimezone().tzinfo
+    now = (now or datetime.datetime.now(datetime.timezone.utc)).astimezone(tz)
+    hour, minute = int(m["h"]), int(m["m"] or 0)
+    if m["ap"]:
+        hour = hour % 12 + (12 if m["ap"][0].lower() == "p" else 0)
+    if hour > 23 or minute > 59:
+        return None
+    try:
+        if m["mon"]:
+            month = datetime.datetime.strptime(m["mon"][:3].title(), "%b").month
+            reset = now.replace(month=month, day=int(m["day"]), hour=hour, minute=minute, second=0, microsecond=0)
+            if reset < now - datetime.timedelta(days=1):  # "resets Jan 2" said in December
+                reset = reset.replace(year=now.year + 1)
+        else:
+            reset = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            if reset < now - datetime.timedelta(hours=1):  # "resets 2am" said in the evening
+                reset += datetime.timedelta(days=1)
+    except ValueError:
+        return None
+    return reset
+
+
+def wait_for_reset(limit):
+    """Sleep until LIMIT_MARGIN after the reset that `limit` names (at least LIMIT_MARGIN).
+    Returns False, without waiting, when the message has no reset time (QG-21)."""
+    reset = limit_reset(limit)
+    if reset is None:
+        return False
+    until = max(reset + LIMIT_MARGIN, datetime.datetime.now(reset.tzinfo) + LIMIT_MARGIN)
+    left = (until - datetime.datetime.now(until.tzinfo)).total_seconds()
+    print(f"\nClaude's usage limit ({limit}).\nWaiting until {until:%Y-%m-%d %H:%M} {until.tzname()} "
+          f"({progress.duration(left)}), then continuing. Ctrl-C stops; `qgen batch` continues later.",
+          file=sys.stderr, flush=True)
+    while (left := (until - datetime.datetime.now(until.tzinfo)).total_seconds()) > 0:
+        time.sleep(min(left, 60))  # the wall clock, so a suspended laptop still wakes up on time
+    return True
 
 
 def main_model(out):
@@ -1476,14 +1530,24 @@ def cmd_batch(args):
         ("batch-report", cmd_batch_report, ns()),
     ]
     t0 = time.monotonic()
-    for i, (name, fn, a) in enumerate(steps, 1):
+    i = 0
+    while i < len(steps):
+        name, fn, a = steps[i]
+        i += 1
         print(f"\n== [{i}/{len(steps) + 1}] {name}", flush=True)
         t = time.monotonic()
-        errors = fn(a) or []
+        try:
+            errors = fn(a) or []
+        except UsageLimit as e:  # a call outside parallel()
+            errors = [e]
         print(f"   {name} took {progress.duration(time.monotonic() - t)} "
               f"(batch: {progress.duration(time.monotonic() - t0)})", flush=True)
-        if any(isinstance(e, UsageLimit) for e in errors):
-            print(f"\nStopped at `{name}`: Claude's usage limit ({next(e for e in errors if isinstance(e, UsageLimit))}).\n"
+        limit = next((e for e in errors if isinstance(e, UsageLimit)), None)
+        if limit and wait_for_reset(limit):
+            i -= 1  # the step skips the work it already did (QG-21)
+            continue
+        if limit:
+            print(f"\nStopped at `{name}`: Claude's usage limit ({limit}).\n"
                   "Wait for the reset, then run `qgen batch` again.", file=sys.stderr)
             sys.exit(75)
         if errors:
