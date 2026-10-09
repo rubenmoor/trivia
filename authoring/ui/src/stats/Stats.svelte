@@ -1,14 +1,19 @@
 <script lang="ts">
   // Statistics (plans/02-question-pool.md, QP-13): questions per broad category (D-19)
   // and per difficulty, approved questions only (the ones a game can use).
-  // URL: /stats/categories or /stats/difficulty.
+  // URL: /stats/categories, /stats/subcategories or /stats/difficulty.
   import { onMount } from "svelte";
   import { fetchAgeGroups, fetchCategories, fetchQuestions } from "../lib/api";
   import type { AgeGroups, Category, Question } from "../lib/types";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
+  import SubcategoryTable from "./SubcategoryTable.svelte";
 
-  const page = location.pathname.startsWith("/stats/difficulty") ? "difficulty" : "categories";
+  const page = location.pathname.startsWith("/stats/difficulty")
+    ? "difficulty"
+    : location.pathname.startsWith("/stats/subcategories")
+      ? "subcategories"
+      : "categories";
 
   let questions = $state<Question[]>([]);
   let categories = $state<Category[]>([]);
@@ -35,6 +40,7 @@
 <main>
   <nav>
     <a href="/stats/categories" class:current={page === "categories"}>Categories</a>
+    <a href="/stats/subcategories" class:current={page === "subcategories"}>Subcategories</a>
     <a href="/stats/difficulty" class:current={page === "difficulty"}>Difficulty</a>
     <a href="/review" class="review">Review tool →</a>
   </nav>
@@ -47,6 +53,8 @@
     <p class="error">{error}</p>
   {:else if page === "categories"}
     <CategoryChart {questions} {categories} />
+  {:else if page === "subcategories"}
+    <SubcategoryTable {questions} {categories} />
   {:else if ageGroups}
     <DifficultyChart {questions} {ageGroups} />
   {/if}
