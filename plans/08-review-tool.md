@@ -157,7 +157,7 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
 ### Start page and statistics: order of work
 One task = one commit, top to bottom (each builds only on the ones above it):
 
-- [x] RV-13 Review filters `status`, `reviewer`, `subcategory` and `media=missing` in the API and the review screen (URL, empty-queue message). *2026-10-09, `authoring/server/main.py`, `authoring/ui/src/review/Review.svelte`.*
+- [x] RV-13 Review filters `status`, `reviewer`, `subcategory` and `media=missing` in the API and the review screen (URL, empty-queue message). *2026-10-09, `authoring/server/main.py`, `authoring/ui/src/review/Review.svelte`.* In the `media=missing` queue a question counts as open until it has picked media, not until a human reviewed it.
 - [x] RV-15 Serve batch reports at `/reports/<name>.md` (plain text, names restricted to `authoring/reports/*.md`) for the batches table. *2026-10-09, `authoring/server/main.py` (`send_report`).*
 - [x] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), the next batch's subcategories. The unfinished-run test and the subcategory choice move from `qgen.py` into a shared helper. *2026-10-09, `authoring/server/overview.py`; shared helper `authoring/tools/batches.py` (used by `qgen.py`).*
 - [x] RV-18 Difficulty histogram over 1–15 with the young-teen window marked. *2026-10-09, `authoring/ui/src/stats/DifficultyChart.svelte`; `GET /api/age-groups`.*
