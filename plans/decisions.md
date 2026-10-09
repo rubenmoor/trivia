@@ -352,13 +352,6 @@ Template:
 - Consequences: The review screen gets a `reviewer` filter (RV-13). A human review of an LLM-approved question works as today: it replaces the LLM review and keeps it in `review.previous` (D-33).
 - Supersedes / related: D-33, OQ-45
 
-## D-47: Flags from the game go through the game state; the authoring server turns them into reviews
-- Date: 2026-10-08
-- Context: The gamemaster wants to flag a question for review during a game night (it needs work), without leaving the game. The game must not write `authoring/data/` (D-35), and a question that leaves the pool while it is on screen breaks the running game.
-- Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
-- Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store).
-- Supersedes / related: D-30, D-33, D-35; GM-5, RV-22
-
 ## D-43: Where a bundle's taxonomy lives; Colombian subcategories leave `base`
 - Date: 2026-10-08
 - Context: Batch-6 wrote `base` questions with a Colombian flavour because 27 of `base`'s subcategories are about Colombia (OQ-42). D-41 gives each bundle its own taxonomy but left the layout open (OQ-41).
@@ -386,3 +379,10 @@ Template:
 - Decision: A batch takes half of its bundle's subcategories (rounded up), the ones with the fewest approved questions in that bundle (D-41), and drafts 18 slots per subcategory (`BATCH_SHARE`, `BATCH_SLOTS` in `qgen.py`). For `base` (113 subcategories) that is 57 × 18 = 1026 slots, about 700 merged questions at batch-6's yield (0.68).
 - Consequences: About 8× the per-question Claude calls of a 30-subcategory batch; a batch will usually hit the usage limit and be resumed (exit 75, RUNBOOK step 3). The draft prompt gets 18 slots in one call per subcategory. A `colombia` batch (27 subcategories → 14) gets about 250 slots, about 170 questions. Concept lists (150–250 concepts, top-up below 30 unused) cover 18 draws per batch.
 - Supersedes / related: D-36, D-37, D-41; PE-10, PE-14
+
+## D-47: Flags from the game go through the game state; the authoring server turns them into reviews
+- Date: 2026-10-08
+- Context: The gamemaster wants to flag a question for review during a game night (it needs work), without leaving the game. The game must not write `authoring/data/` (D-35), and a question that leaves the pool while it is on screen breaks the running game.
+- Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
+- Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store).
+- Supersedes / related: D-30, D-33, D-35; GM-5, RV-22
