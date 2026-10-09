@@ -67,7 +67,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
 - [ ] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes (D-41) — [`22`](22-bundles.md)
 
-- [ ] RV-12..RV-17 Start page for the authoring tool at `/`: what waits for the gamemaster, batches, game readiness, all as links into review queues — [`08`](08-review-tool.md)
+- [ ] RV-12..RV-17 Start page for the authoring tool at `/`: what waits for the gamemaster, batches, game readiness, all as links into review queues; order of work in 08 — [`08`](08-review-tool.md)
 - [ ] RV-18..RV-21 Stats on approved questions: difficulty 1–15, category and subcategory breakdown, sparse categories and subcategories; compact on the start page — [`08`](08-review-tool.md)
 
 No family-specific questions (D-30).
