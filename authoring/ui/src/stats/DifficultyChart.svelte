@@ -4,7 +4,11 @@
   import type { AgeGroups, Question } from "../lib/types";
   import "./chart.css";
 
-  let { questions, ageGroups }: { questions: Question[]; ageGroups: AgeGroups } = $props();
+  let {
+    questions,
+    ageGroups,
+    compact = false,
+  }: { questions: Question[]; ageGroups: AgeGroups; compact?: boolean } = $props();
 
   /** The group the game plays until players can choose one (AG-7). */
   const PLAYED_GROUP = "young_teens";
@@ -45,7 +49,7 @@
   const pct = (n: number) => (total ? Math.round((n / total) * 100) : 0);
 </script>
 
-<section class="chart-panel">
+<section class="chart-panel" class:compact>
   <h2>Questions per difficulty</h2>
   <p class="sub">
     {total} questions · average difficulty {mean.toFixed(1)} · {LEVELS[0]} = easiest, {LEVELS[LEVELS.length - 1]} = hardest
@@ -84,7 +88,7 @@
   </div>
   <p class="xtitle">Difficulty</p>
 
-  <details class="table-view">
+  {#if !compact}<details class="table-view">
     <summary>Table</summary>
     <table>
       <thead><tr><th>Difficulty</th><th class="num">Questions</th><th class="num">Share</th></tr></thead>
@@ -94,7 +98,7 @@
         {/each}
       </tbody>
     </table>
-  </details>
+  </details>{/if}
 </section>
 
 {#if hover}
@@ -185,6 +189,13 @@
     text-align: center;
     font-size: 0.85rem;
     color: var(--muted);
+  }
+  .compact .plot {
+    height: 150px;
+  }
+  .compact .stack,
+  .compact .column {
+    width: 16px;
   }
   .xtitle {
     margin: 0.2rem 0 0 2.25rem;

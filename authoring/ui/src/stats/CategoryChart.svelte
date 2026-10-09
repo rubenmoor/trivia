@@ -5,7 +5,11 @@
   import { breakdown, reviewLink, type CategoryRow } from "./breakdown";
   import "./chart.css";
 
-  let { questions, categories }: { questions: Question[]; categories: Category[] } = $props();
+  let {
+    questions,
+    categories,
+    compact = false,
+  }: { questions: Question[]; categories: Category[]; compact?: boolean } = $props();
 
   // Stable sort: ties keep the order of app/data/categories.json.
   const rows = $derived(breakdown(questions, categories).sort((a, b) => b.count - a.count));
@@ -28,7 +32,7 @@
   const bySize = (row: CategoryRow) => [...row.subs].sort((a, b) => b.count - a.count);
 </script>
 
-<section class="chart-panel">
+<section class="chart-panel" class:compact>
   <h2>Questions per category</h2>
   <p class="sub">
     {questions.length} questions in {rows.length - empty} of {rows.length} categories{empty
@@ -136,6 +140,15 @@
     background: var(--bar);
     border-radius: 0 4px 4px 0;
     flex: none;
+  }
+  .compact .row {
+    padding: 1px 0;
+  }
+  .compact .label {
+    font-size: 0.8rem;
+  }
+  .compact .bar:not(.sub-bar) {
+    height: 11px;
   }
   .sub-bar {
     height: 10px;
