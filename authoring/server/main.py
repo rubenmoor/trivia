@@ -10,6 +10,7 @@ so the game (port 8000) sees reviews at once.
 API:
     GET  /api/categories                           app/data/categories.json: broad categories with subcategories (D-19)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
+    GET  /api/age-groups                           app/data/age-groups.json: the difficulty scale and age groups (D-38)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
          &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch;
          &subcategory=Pirámides&media=missing      media=missing: no picked media file)
@@ -200,6 +201,8 @@ class Handler(BaseHandler):
             return self.send_json(200, categories.load())
         if url.path == "/api/overview":
             return self.send_json(200, overview.build(load_pool()["questions"], load_bundles()))
+        if url.path == "/api/age-groups":
+            return self.send_json(200, json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")))
         if url.path == "/api/bundles":
             return self.send_json(200, load_bundles())
         if url.path.startswith("/reports/"):

@@ -109,3 +109,10 @@ export type Bundle = {
   description: string;
   rule: string;
 };
+
+/** app/data/age-groups.json (D-38): one shared difficulty scale, a window of it per age group. */
+export type AgeGroups = {
+  scale: [number, number];
+  focus: string | null;
+  groups: { id: string; name: string; ages: [number, number | null]; window: [number, number] }[];
+};
