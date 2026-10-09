@@ -10,7 +10,11 @@
     questions,
     categories,
     nextBatch,
-  }: { questions: Question[]; categories: Category[]; nextBatch: string[] | null } = $props();
+    compact = false,
+  }: { questions: Question[]; categories: Category[]; nextBatch: string[] | null; compact?: boolean } = $props();
+
+  /** In compact form (start page) the subcategory list stops here and links to the full page. */
+  const COMPACT_ROWS = 8;
 
   const rows = $derived(breakdown(questions, categories));
   // Stable sorts: ties keep the order of app/data/categories.json.
@@ -23,9 +27,10 @@
   );
   const picked = $derived(new Set(nextBatch ?? []));
   const covered = $derived(sparseSubs.filter((s) => picked.has(s.name)).length);
+  const shownSubs = $derived(compact ? sparseSubs.slice(0, COMPACT_ROWS) : sparseSubs);
 </script>
 
-<section class="chart-panel">
+<section class="chart-panel" class:compact>
   <h2>Sparse areas</h2>
   <p class="sub">
     Categories with fewer than {SPARSE_CATEGORY} approved questions (a game asks {SPARSE_CATEGORY}), subcategories with
@@ -50,17 +55,20 @@
       <h3>Subcategories <span class="n">{sparseSubs.length}</span></h3>
       {#if sparseSubs.length}
         <ul>
-          {#each sparseSubs as s (s.name)}
+          {#each shownSubs as s (s.name)}
             <li>
               <span>
                 <a href={reviewLink(s.name)}>{s.name}</a>
-                <span class="cat">{s.category}</span>
+                {#if !compact}<span class="cat">{s.category}</span>{/if}
                 {#if picked.has(s.name)}<span class="next">next batch</span>{/if}
               </span>
               <span class="num">{s.count}</span>
             </li>
           {/each}
         </ul>
+        {#if shownSubs.length < sparseSubs.length}
+          <p class="none"><a href="/stats/subcategories">all {sparseSubs.length} →</a></p>
+        {/if}
       {:else}
         <p class="none">None.</p>
       {/if}
