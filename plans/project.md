@@ -67,6 +67,8 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
 - [ ] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes (D-41) — [`22`](22-bundles.md)
 
+- [ ] RV-12..RV-17 Start page for the authoring tool at `/`: what waits for the gamemaster, batches, game readiness, all as links into review queues — [`08`](08-review-tool.md)
+
 No family-specific questions (D-30).
 
 ### M7 — Game engine in TypeScript
@@ -134,6 +136,7 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
+| OQ-45 | Do unseen LLM approvals count as the gamemaster's to-do? | Nothing (placement on the start page, RV-14) |
 | OQ-41..OQ-44 | Bundle taxonomy: where it lives, what happens to `colombia`, base questions that need Colombia, per-bundle house style | BN-8..BN-12 (22) |
 | OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |

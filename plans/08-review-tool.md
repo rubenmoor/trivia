@@ -100,6 +100,32 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - **Reject:** the question is unsalvageable; it will never be reworked. No reason needed, so rejecting stays one key press.
 - **Feedback:** the question is salvageable but needs changes; the feedback says what. It goes to `needs_work` and later to `qgen.py rework`.
 
+## Start page `/` (RV-12..RV-17)
+**Why.** `trivia-authoring` prints `/` first, but `/` is the review screen without a filter: it walks all 513 questions, and the first "open" one is any of the 293 LLM-approved questions (D-33). Nothing tells the gamemaster what is waiting for them. The start page answers "what needs me now?" in one look, and every number on it is a link to the queue that works it off.
+
+**Rules.**
+- Read-only: no keys, no decisions. All work happens in the existing pages it links to.
+- Computed fresh on every load from `authoring/data/questions.json` (plus `work/`, `authoring/reports/` and the game save where named below). No caching, no new stored state.
+- Old links keep working: `/` with `batch`, `bundle` or `id` in the query redirects to `/review` with the same query. `/review` without a filter stays as it is.
+- Charts stay on `/stats/…`; the start page shows numbers and links to them.
+
+**Sections, top to bottom:**
+1. **Waiting for you.** One line per queue, with its count, hidden when it is 0:
+   - `needs_work` questions (now 20) → `/review?status=needs_work`. Only a human decides these (RUNBOOK).
+   - Drafts nobody reviewed (now 1) → `/review?status=draft`.
+   - Approved questions without picked media (now 122, QP-6) → `/review?media=missing`.
+   - Bundle proposals not checked by a human (`colombia`, now 79) → `/review?bundle=colombia`.
+   - Picked files not in the cache → the command to run: `trivia-media sync --status approved`.
+   - An unfinished `qgen batch` run in `work/` (`run.json` without `done`) → "resume with `qgen batch`".
+2. **Spot checks** (lower priority, OQ-45): LLM-approved questions no human has seen, per batch → `/review?batch=<name>`.
+3. **Batches.** A table, newest first: name, date (latest `reviewed_on` in the batch), merged, approved, needs_work, rejected, share reviewed by a human; links to `/review?batch=<name>` and the batch report (`authoring/reports/<name>.md`, when it exists). `batch=none` is the first 120.
+4. **Game readiness.** Supply per game level 1–12 for a new player (the numbers `qgen report` prints: candidates per level, a game needs 4, D-22), with missing levels flagged; one row per player from the game save when it exists (burned questions, D-28). Under it, approved questions per difficulty 1–15 as plain numbers, with a link to `/stats/difficulty` (the thin top end, B-6, shows up here).
+5. **Go to.** A box that opens `/review/<id>` for a typed id (`q-0123` or `123`); links to `/stats/categories`, `/stats/difficulty`, `/comodines`; the counts by status and by bundle as a footer line.
+
+**API.** `GET /api/overview` returns everything above in one JSON object, built on the server so the page doesn't fetch the whole pool with media candidates. It reuses `selection.supply` / `selection.burned_ids` (`app/server/`, allowed by D-35) and the same unfinished-run test as `qgen.next_batch`; that test moves into a small shared helper rather than being copied. Reading the game save is read-only; when `state/` doesn't exist the per-player rows are left out.
+
+**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` (the API already does) and `media=missing` (approved questions whose media has no picked file). The URL keeps them like `batch` and `bundle`.
+
 ## Tasks
 - [x] RV-1 Agree the schema changes (`needs_work`, `review`, `batch`) and record them in `02-question-pool.md`. *2026-10-06.*
 - [x] RV-2 Scaffold `server/` and `client/` (ARC-2, ARC-3) with run commands in `AGENTS.md`. *2026-10-06, `server/`, `client/`, `shell.nix` (D-12).*
@@ -112,3 +138,9 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `authoring/ui/src/review/RevisionPanel.svelte`.*
 - [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
 - [x] RV-11 Human review of LLM-reviewed questions (D-33): they count as open, show the LLM's verdict, and the summary counts them. *2026-10-07, QP-15.*
+- [ ] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), difficulty counts. Share the unfinished-run test with `qgen.next_batch`.
+- [ ] RV-13 Review filters `status` and `media=missing` in the API and the review screen (URL, empty-queue message).
+- [ ] RV-14 Start page `authoring/ui/src/home/Home.svelte`: sections 1–5; `App.svelte` routes exactly `/` to it; `/` with `batch`/`bundle`/`id` redirects to `/review`.
+- [ ] RV-15 Serve batch reports at `/reports/<name>.md` (plain text, names restricted to `authoring/reports/*.md`) for the batches table.
+- [ ] RV-16 One nav bar on the start page, the stats pages and the review summary ("Start", "Stats", "Review"); the server's startup line and AGENTS.md name `/` as the start page.
+- [ ] RV-17 (later) `qgen validate` result on the start page: errors and warnings, without the exit. Needs `cmd_validate` split into a function that returns its findings.
