@@ -1,10 +1,11 @@
 <script lang="ts">
   // Statistics (plans/02-question-pool.md, QP-13): questions per broad category (D-19)
   // and per difficulty, approved questions only (the ones a game can use).
-  // URL: /stats/categories, /stats/subcategories or /stats/difficulty.
+  // URL: /stats/categories, /stats/subcategories or /stats/difficulty; ?bundle=colombia counts one
+  // bundle only (RV-21), without it every bundle (the family's default, D-39).
   import { onMount } from "svelte";
-  import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
-  import type { AgeGroups, Category, Question } from "../lib/types";
+  import { fetchAgeGroups, fetchBundles, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
+  import type { AgeGroups, Bundle, Category, Question } from "../lib/types";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
   import SparseList from "./SparseList.svelte";
@@ -15,10 +16,17 @@
     : location.pathname.startsWith("/stats/subcategories")
       ? "subcategories"
       : "categories";
+  const bundle = new URLSearchParams(location.search).get("bundle");
+  /** Link to a stats page or bundle, keeping the other choice. */
+  function href(path: string, b: string | null = bundle) {
+    return b ? `${path}?${new URLSearchParams({ bundle: b })}` : path;
+  }
+  const path = `/stats/${page}`;
 
   let questions = $state<Question[]>([]);
   let categories = $state<Category[]>([]);
   let ageGroups = $state<AgeGroups | null>(null);
+  let bundles = $state<Bundle[]>([]);
   /** The subcategories the next `qgen batch` picks; null until loaded or when it fails. */
   let nextBatch = $state<string[] | null>(null);
   let loading = $state(true);
@@ -30,10 +38,11 @@
       fetchOverview().then((o) => (nextBatch = o.next_batch_subcategories), () => {});
     }
     try {
-      [questions, categories, ageGroups] = await Promise.all([
-        fetchQuestions({ status: "approved" }),
+      [questions, categories, ageGroups, bundles] = await Promise.all([
+        fetchQuestions({ status: "approved", bundle }),
         fetchCategories(),
         fetchAgeGroups(),
+        fetchBundles(),
       ]);
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
@@ -46,13 +55,17 @@
 
 <main>
   <nav>
-    <a href="/stats/categories" class:current={page === "categories"}>Categories</a>
-    <a href="/stats/subcategories" class:current={page === "subcategories"}>Subcategories</a>
-    <a href="/stats/difficulty" class:current={page === "difficulty"}>Difficulty</a>
+    <a href={href("/stats/categories")} class:current={page === "categories"}>Categories</a>
+    <a href={href("/stats/subcategories")} class:current={page === "subcategories"}>Subcategories</a>
+    <a href={href("/stats/difficulty")} class:current={page === "difficulty"}>Difficulty</a>
     <a href="/review" class="review">Review tool →</a>
   </nav>
 
-  <p class="scope muted">Approved questions only</p>
+  <p class="scope muted">
+    Approved questions only · bundles:
+    <a href={href(path, null)} class:current={!bundle}>all</a>
+    {#each bundles as b (b.id)}{" · "}<a href={href(path, b.id)} class:current={bundle === b.id}>{b.name}</a>{/each}
+  </p>
 
   {#if loading}
     <p class="muted">Loading…</p>
@@ -101,6 +114,14 @@
   .scope {
     margin: 0 0 1.5rem;
     font-size: 0.9rem;
+  }
+  .scope a {
+    color: var(--muted);
+  }
+  .scope a.current {
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
   }
   .muted {
     color: var(--muted);
