@@ -83,8 +83,10 @@
   }
   const undoStack: { id: string; previous: Review | null }[] = [];
 
-  /** Open until a human has reviewed it: drafts and LLM-reviewed questions (D-33). */
-  const isOpen = (q: Question) => q.review?.reviewer !== "human";
+  /** Open until a human has reviewed it: drafts and LLM-reviewed questions (D-33). In the media queue
+   *  (media=missing) a question stays open until it has picked media, whoever reviewed it. */
+  const isOpen = (q: Question) =>
+    filter.media === "missing" ? !q.media.file_url : q.review?.reviewer !== "human";
 
   const current = $derived(questions[index]);
   const counts = $derived({
