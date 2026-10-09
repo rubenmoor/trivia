@@ -27,7 +27,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).
 - **Resolutions:** 720p to 4K. The size unit `--u` scales with the width (D-29), so a 16:10 screen (Deck, 1280×800) has more height. Check every screen at 1280×800 and at 1280×720 (smallest). Valve's Deck legibility guideline is text ≥ 9 px at 1280×800.
 - **Windows specifics:** set explicit MIME types if any local serving remains; use atomic save writes with a retry (antivirus locks).
-- **Media size:** the cache is ~720 MB for ~300 files. Resize to at most 2560 px wide (1440p; 4K upscales well behind glass panels), re-encode to WebP/AVIF, and transcode audio to Opus. Target: under 1 MB per image.
+- **Media size:** the cache is ~720 MB for ~300 files. Resize to at most 3840 px wide (4K, D-48), re-encode to WebP/AVIF, and transcode audio to Opus. Target: under 1 MB per image.
 
 ## Builds and depots
 - **electron-builder** builds both platforms in GitHub Actions (Windows and Linux runners). The pool export (PORT-6), the media bundle (SW-9) and the credits (PUB-5) are build steps.

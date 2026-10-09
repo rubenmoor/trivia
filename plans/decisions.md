@@ -386,3 +386,10 @@ Template:
 - Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
 - Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store).
 - Supersedes / related: D-30, D-33, D-35; GM-5, RV-22
+
+## D-48: 4K is the image target
+- Date: 2026-10-08
+- Context: The game is shown on a 4K TV. Images were downloaded at up to 2560 px wide, and 1920 px was the only size rule, so 129 of 428 cached images are below 4K.
+- Decision: Images target 4K: 3840 px wide (or 2160 px tall for a portrait image). Larger files are downloaded as a 3840 px thumbnail; among fitting candidates the larger one wins. 1920 px stays the minimum for decorative and illustrative images, and essential images may still be smaller if nothing better exists.
+- Consequences: Bigger media cache; the Steam build's re-encode resizes to 3840 px, not 2560 (18). IMG-16 changes the providers and ranking; IMG-17 brings existing picks up to 4K where their source allows it.
+- Supersedes / related: D-13, D-17, D-45; IMG-3, IMG-16, IMG-17
