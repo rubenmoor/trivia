@@ -58,7 +58,7 @@ trivia                            # http://127.0.0.1:8000/ — the game
 
 | Command | What it does |
 |---|---|
-| `trivia-authoring` | Review tool and stats on http://127.0.0.1:8001/: `/review?batch=batch-4`, `/review/<id>`, `/stats/categories`, `/stats/difficulty`, `/comodines` (printable joker cards) |
+| `trivia-authoring` | Review tool and stats on http://127.0.0.1:8001/: the start page (what waits for you, batches, game readiness), `/review?batch=batch-4`, `/review/<id>`, `/stats/categories`, `/stats/subcategories`, `/stats/difficulty`, `/comodines` (printable joker cards) |
 | `npm run dev -w authoring/ui` | Authoring UI with hot reload on port 5174 (run `trivia-authoring` too) |
 | `qgen batch` | **Make a new batch of questions**, reviewed and illustrated: see [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) |
 | `qgen validate` | Check the source pool and that `app/data/pool.json` is its current export |

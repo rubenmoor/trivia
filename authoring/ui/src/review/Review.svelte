@@ -12,6 +12,7 @@
     type QuestionFilter,
   } from "../lib/api";
   import type { Bundle, Decision, Question, Review, Slot } from "../lib/types";
+  import Nav from "../lib/Nav.svelte";
   import MediaPanel from "./MediaPanel.svelte";
   import RevisionPanel from "./RevisionPanel.svelte";
 
@@ -422,6 +423,7 @@
     </p>
   {:else if finished}
     <section class="summary">
+      <Nav current="review" />
       <h1>All done{filterText ? `: ${filterText}` : ""}</h1>
       <ul>
         <li><b>{counts.approved}</b> approved</li>
@@ -459,7 +461,7 @@
         {#if current.style}· {current.style.split(":")[0]}{/if}
         · <span class="bundle" class:other={current.bundle !== "base"}>{bundles.find((b) => b.id === current.bundle)?.name ?? current.bundle}</span>
       </span>
-      <a class="stats" href="/stats/categories">Stats →</a>
+      <span><a class="stats" href="/">Start</a> · <a class="stats" href="/stats/categories">Stats</a></span>
     </header>
 
     {#if current.review}

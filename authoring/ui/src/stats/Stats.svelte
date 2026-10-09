@@ -6,6 +6,7 @@
   import { onMount } from "svelte";
   import { fetchAgeGroups, fetchBundles, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
   import type { AgeGroups, Bundle, Category, Question } from "../lib/types";
+  import Nav from "../lib/Nav.svelte";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
   import SparseList from "./SparseList.svelte";
@@ -54,11 +55,11 @@
 </script>
 
 <main>
+  <Nav current="stats" />
   <nav>
     <a href={href("/stats/categories")} class:current={page === "categories"}>Categories</a>
     <a href={href("/stats/subcategories")} class:current={page === "subcategories"}>Subcategories</a>
     <a href={href("/stats/difficulty")} class:current={page === "difficulty"}>Difficulty</a>
-    <a href="/review" class="review">Review tool →</a>
   </nav>
 
   <p class="scope muted">
@@ -105,11 +106,6 @@
   }
   nav a:hover {
     color: var(--text);
-  }
-  nav .review {
-    margin-left: auto;
-    font-size: 0.95rem;
-    font-weight: 400;
   }
   .scope {
     margin: 0 0 1.5rem;

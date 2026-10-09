@@ -13,6 +13,6 @@ export default defineConfig({
   publicDir: "../../app/client/public",
   server: {
     port: 5174,
-    proxy: { "/api": backend, "/media": backend },
+    proxy: { "/api": backend, "/media": backend, "/reports": backend },
   },
 });
