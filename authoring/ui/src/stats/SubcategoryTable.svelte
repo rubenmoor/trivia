@@ -2,7 +2,7 @@
   // Every subcategory with its approved questions, grouped by broad category in
   // app/data/categories.json order (RV-19). Each one links to its questions in the review tool.
   import type { Category, Question } from "../lib/types";
-  import { breakdown, reviewLink } from "./breakdown";
+  import { breakdown, reviewLink, SPARSE_SUBCATEGORY } from "./breakdown";
   import "./chart.css";
 
   let { questions, categories }: { questions: Question[]; categories: Category[] } = $props();
@@ -31,7 +31,7 @@
                 <td class="bar-cell">
                   {#if s.count > 0}<span class="bar" style:width="{(s.count / subMax) * 100}%"></span>{/if}
                 </td>
-                <td class="num">{s.count}</td>
+                <td class="num" class:sparse={s.count < SPARSE_SUBCATEGORY}>{s.count}</td>
               </tr>
             {/each}
           </tbody>
@@ -93,5 +93,8 @@
     text-align: right;
     font-variant-numeric: tabular-nums;
     color: var(--muted);
+  }
+  .num.sparse {
+    color: var(--warn);
   }
 </style>

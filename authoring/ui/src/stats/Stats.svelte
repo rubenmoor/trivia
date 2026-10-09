@@ -3,10 +3,11 @@
   // and per difficulty, approved questions only (the ones a game can use).
   // URL: /stats/categories, /stats/subcategories or /stats/difficulty.
   import { onMount } from "svelte";
-  import { fetchAgeGroups, fetchCategories, fetchQuestions } from "../lib/api";
+  import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
   import type { AgeGroups, Category, Question } from "../lib/types";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
+  import SparseList from "./SparseList.svelte";
   import SubcategoryTable from "./SubcategoryTable.svelte";
 
   const page = location.pathname.startsWith("/stats/difficulty")
@@ -18,10 +19,16 @@
   let questions = $state<Question[]>([]);
   let categories = $state<Category[]>([]);
   let ageGroups = $state<AgeGroups | null>(null);
+  /** The subcategories the next `qgen batch` picks; null until loaded or when it fails. */
+  let nextBatch = $state<string[] | null>(null);
   let loading = $state(true);
   let error = $state<string | null>(null);
 
   onMount(async () => {
+    if (page === "subcategories") {
+      // Only for the "next batch" marks: the page works without it.
+      fetchOverview().then((o) => (nextBatch = o.next_batch_subcategories), () => {});
+    }
     try {
       [questions, categories, ageGroups] = await Promise.all([
         fetchQuestions({ status: "approved" }),
@@ -54,6 +61,7 @@
   {:else if page === "categories"}
     <CategoryChart {questions} {categories} />
   {:else if page === "subcategories"}
+    <SparseList {questions} {categories} {nextBatch} />
     <SubcategoryTable {questions} {categories} />
   {:else if ageGroups}
     <DifficultyChart {questions} {ageGroups} />

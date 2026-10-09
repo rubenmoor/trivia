@@ -116,3 +116,37 @@ export type AgeGroups = {
   focus: string | null;
   groups: { id: string; name: string; ages: [number, number | null]; window: [number, number] }[];
 };
+
+/** GET /api/overview (authoring/server/overview.py, RV-12): what the start page shows. */
+export interface Overview {
+  queues: {
+    needs_work: number;
+    drafts: number;
+    approved_without_media: number;
+    not_cached: number;
+    bundles: { id: string; name: string; questions: number; unreviewed: number }[];
+  };
+  llm_approved: number;
+  unfinished_runs: string[];
+  batches: {
+    name: string;
+    date: string | null;
+    merged: number;
+    approved: number;
+    needs_work: number;
+    rejected: number;
+    draft: number;
+    human: number;
+    llm_approved: number;
+    report: string | null;
+  }[];
+  supply: {
+    /** null: a new player (global burns only). */
+    player: string | null;
+    burned: number;
+    levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
+  }[];
+  per_level: number;
+  next_batch_subcategories: string[];
+  counts: { status: Record<string, number>; bundle: Record<string, number> };
+}
