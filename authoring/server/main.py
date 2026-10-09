@@ -260,7 +260,7 @@ def main():
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8001)
     args = ap.parse_args()
-    print(f"Authoring on http://{args.host}:{args.port}/  (review: /review?batch=pilot, stats: /stats/categories)")
+    print(f"Authoring on http://{args.host}:{args.port}/  (start page; review: /review, stats: /stats/categories)")
     ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()
 
 

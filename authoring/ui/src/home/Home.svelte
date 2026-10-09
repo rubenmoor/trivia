@@ -4,6 +4,7 @@
   // every number links to the page or review queue that works it off.
   import { onMount } from "svelte";
   import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
+  import Nav from "../lib/Nav.svelte";
   import type { AgeGroups, Category, Overview, Question } from "../lib/types";
   import CategoryChart from "../stats/CategoryChart.svelte";
   import DifficultyChart from "../stats/DifficultyChart.svelte";
@@ -88,6 +89,7 @@
 <svelte:head><title>Trivia authoring</title></svelte:head>
 
 <main>
+  <Nav current="start" />
   <h1>Trivia authoring</h1>
 
   {#if error}
