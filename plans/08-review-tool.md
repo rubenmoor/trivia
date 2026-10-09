@@ -107,7 +107,7 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - Read-only: no keys, no decisions. All work happens in the existing pages it links to.
 - Computed fresh on every load from `authoring/data/questions.json` (plus `work/`, `authoring/reports/` and the game save where named below). No caching, no new stored state.
 - Old links keep working: `/` with `batch`, `bundle` or `id` in the query redirects to `/review` with the same query. `/review` without a filter stays as it is.
-- Charts stay on `/stats/…`; the start page shows numbers and links to them.
+- The full charts live on `/stats/…`; the start page shows them compact and links to them.
 
 **Sections, top to bottom:**
 1. **Waiting for you.** One line per queue, with its count, hidden when it is 0:
@@ -119,12 +119,27 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
    - An unfinished `qgen batch` run in `work/` (`run.json` without `done`) → "resume with `qgen batch`".
 2. **Check the LLM's approvals** (optional, D-42): questions only an LLM has approved so far, all together → `/review?status=approved&reviewer=llm`, and per batch → `/review?batch=<name>&status=approved&reviewer=llm`. Below section 1 on purpose: `needs_work` and the other queues there come first.
 3. **Batches.** A table, newest first: name, date (latest `reviewed_on` in the batch), merged, approved, needs_work, rejected, share reviewed by a human; links to `/review?batch=<name>` and the batch report (`authoring/reports/<name>.md`, when it exists). `batch=none` is the first 120.
-4. **Game readiness.** Supply per game level 1–12 for a new player (the numbers `qgen report` prints: candidates per level, a game needs 4, D-22), with missing levels flagged; one row per player from the game save when it exists (burned questions, D-28). Under it, approved questions per difficulty 1–15 as plain numbers, with a link to `/stats/difficulty` (the thin top end, B-6, shows up here).
-5. **Go to.** A box that opens `/review/<id>` for a typed id (`q-0123` or `123`); links to `/stats/categories`, `/stats/difficulty`, `/comodines`; the counts by status and by bundle as a footer line.
+4. **Game readiness.** Supply per game level 1–12 for a new player (the numbers `qgen report` prints: candidates per level, a game needs 4, D-22), with missing levels flagged; one row per player from the game save when it exists (burned questions, D-28). The difficulty spread itself is in section 5.
+5. **Approved questions.** The statistics below ("Statistics on approved questions"), in compact form: the difficulty histogram, the category bars with their subcategories, and the sparse list. Each one links to its full page under `/stats/…`.
+6. **Go to.** A box that opens `/review/<id>` for a typed id (`q-0123` or `123`); links to `/stats/categories`, `/stats/difficulty`, `/comodines`; the counts by status and by bundle as a footer line.
 
-**API.** `GET /api/overview` returns everything above in one JSON object, built on the server so the page doesn't fetch the whole pool with media candidates. It reuses `selection.supply` / `selection.burned_ids` (`app/server/`, allowed by D-35) and the same unfinished-run test as `qgen.next_batch`; that test moves into a small shared helper rather than being copied. Reading the game save is read-only; when `state/` doesn't exist the per-player rows are left out.
+**API.** `GET /api/overview` returns everything above except the statistics (they use `/api/questions?status=approved` like the stats pages) in one JSON object, built on the server so the page doesn't fetch the whole pool with media candidates. It reuses `selection.supply` / `selection.burned_ids` (`app/server/`, allowed by D-35) and the same unfinished-run test as `qgen.next_batch`; that test moves into a small shared helper rather than being copied. Reading the game save is read-only; when `state/` doesn't exist the per-player rows are left out.
 
-**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` and `reviewer=human|llm|none` (the API already does both) and `media=missing` (approved questions whose media has no picked file). The URL keeps them like `batch` and `bundle`.
+**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` and `reviewer=human|llm|none` (the API already does both) `media=missing` (approved questions whose media has no picked file) and `subcategory=<name>` (new in the API too, RV-19). The URL keeps them like `batch` and `bundle`.
+
+
+## Statistics on approved questions (RV-18..RV-21)
+The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved questions only, the ones a game can use. They get three fixes and one new page, and the start page shows them compact (section 5 above). Today: 483 approved, 24 categories, 140 subcategories.
+
+- **Difficulty histogram over the whole scale 1–15** (D-38). It stops at 10 today, so a difficulty of 11–15 set in the review tool (AG-9) isn't counted. Mark the young-teen window (1–10, `app/data/age-groups.json`) on the axis, so the thin top end (9: 26, 10: 2, B-6) is visible at a glance.
+- **Category and subcategory breakdown.** The category bars stay sorted by count. Clicking a bar opens its subcategories as bars below it, instead of the hover-only tooltip, so the breakdown also works without a mouse and can stay open. A new page, `/stats/subcategories`, lists all 140 subcategories grouped by category, with the count of each and a link to `/review?subcategory=<name>&status=approved`.
+- **Sparse areas.** One list, worst first, on `/stats/subcategories` and on the start page:
+  - **Categories with fewer than 12 approved questions.** A game asks 12 questions, so below that a category can't cover every level even once. Today that's 5: Amazonas 9, Cuerpo humano 11, Espacio 11, Videojuegos 11, Fútbol 11.
+  - **Subcategories with fewer than 3 approved questions.** One player sees them all in one or two games. Today that's 27 (none is empty).
+  - Each sparse subcategory is marked if the next `qgen batch` will pick it (the 30 with the fewest approved questions, `qgen.batch_subcategories`). Then the gamemaster can see whether the next batch fixes the gap or whether it needs a bundle or a top-up (B-6).
+
+  The two limits are constants at the top of the component, so they're easy to change.
+- **Filters.** Every page keeps "approved questions only" (gamemaster, 2026-10-06). A bundle switch (all / `base` / `colombia`) reads `?bundle=`, so the family's default (every bundle on) and a single bundle can both be checked (M11).
 
 ## Tasks
 - [x] RV-1 Agree the schema changes (`needs_work`, `review`, `batch`) and record them in `02-question-pool.md`. *2026-10-06.*
@@ -144,3 +159,7 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - [ ] RV-15 Serve batch reports at `/reports/<name>.md` (plain text, names restricted to `authoring/reports/*.md`) for the batches table.
 - [ ] RV-16 One nav bar on the start page, the stats pages and the review summary ("Start", "Stats", "Review"); the server's startup line and AGENTS.md name `/` as the start page.
 - [ ] RV-17 (later) `qgen validate` result on the start page: errors and warnings, without the exit. Needs `cmd_validate` split into a function that returns its findings.
+- [ ] RV-18 Difficulty histogram over 1–15 with the young-teen window marked.
+- [ ] RV-19 Category bars open their subcategories on click; new page `/stats/subcategories` with links to review; review filter `subcategory` (with RV-13).
+- [ ] RV-20 Sparse list (categories < 12, subcategories < 3, marked if the next batch picks them); `/api/overview` returns the next batch's subcategories.
+- [ ] RV-21 Bundle switch on the stats pages; compact versions of the histogram, category bars and sparse list on the start page (section 5).
