@@ -54,7 +54,8 @@
     size: letter;
     margin: 0.5in;
   }
-  :global(body) {
+  /* Only on this page: every authoring page shares one stylesheet (the others are dark). */
+  :global(body:has(.sheet)) {
     background: #e9e6df;
     color: #2a2238;
   }
@@ -146,7 +147,7 @@
   }
 
   @media print {
-    :global(body) {
+    :global(body:has(.sheet)) {
       background: white;
     }
     .screen-only {
