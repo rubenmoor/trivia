@@ -10,6 +10,7 @@ for credits). `search` here keeps only candidates whose licence is on the allowl
 import re, sys, threading, time
 
 from media_cache import RateLimited
+import progress  # authoring/tools/progress.py: the bar says what a search waits for (QG-20)
 from providers import commons, freesound, nasa, openverse
 
 PROVIDERS = {m.ID: m for m in [commons, nasa, openverse, freesound]}
@@ -63,7 +64,8 @@ def search(provider, query, kind, limit=30):
     if cooling(provider):
         raise RateLimited(int(_cooldown[provider] - time.monotonic()) + 1, PROVIDERS[provider].NAME)
     try:
-        found = PROVIDERS[provider].search(query, kind, limit)
+        with progress.waiting(f"{PROVIDERS[provider].NAME} search"):
+            found = PROVIDERS[provider].search(query, kind, limit)
     except RateLimited as e:
         with _cooldown_lock:
             _cooldown[provider] = time.monotonic() + e.retry_after

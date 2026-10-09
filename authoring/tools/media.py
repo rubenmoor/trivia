@@ -19,6 +19,7 @@ from layout import CANDIDATES, SOURCE_POOL as POOL
 from media_cache import (MEDIA, RateLimited, USER_AGENT, cache_path, cached, http_get,  # noqa: F401
                          picked, pool_urls)
 import categories  # app/server/categories.py (D-19, D-43)
+import progress  # authoring/tools/progress.py: the bar says what a step waits for (QG-20)
 import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)
 
 MAX_CANDIDATES = 6
@@ -173,14 +174,16 @@ def make_sheet(candidates, out, thumbs):
             continue
         f = thumbs / f"{i}.img"
         if not f.exists():
-            f.write_bytes(http_get(c["preview_url"]))
+            with progress.waiting(f"{providers.provider_of(c).NAME} preview"):
+                f.write_bytes(http_get(c["preview_url"]))
         args += ["-label", str(i), f"{f}[0]"]
         shown.append(i)
     if not shown:
         return []
     out.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
-                    "-pointsize", "28", str(out)], check=True, capture_output=True)
+    with progress.waiting("ImageMagick"):
+        subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
+                        "-pointsize", "28", str(out)], check=True, capture_output=True)
     return shown
 
 

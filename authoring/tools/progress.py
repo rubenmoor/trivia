@@ -3,8 +3,10 @@
 On a terminal: a live bar on the last line, redrawn twice a second; other output scrolls above it.
 Otherwise (a pipe or a log, e.g. Claude Code running `qgen batch`): no bar, a plain status line
 every minute, so the output stays readable as text. Either way a summary line when a bar closes.
+The bar names what the running items wait for (`waiting()`: a Claude call, a provider search, …).
+`detail()` prints a line per item; `qgen batch` turns those off (`verbose = False`, QG-20).
 """
-import shutil, sys, threading, time
+import contextlib, shutil, sys, threading, time
 
 LIVE = sys.stdout.isatty() and sys.stderr.isatty()
 REDRAW = 0.5  # seconds between redraws on a terminal
@@ -16,6 +18,41 @@ _err = sys.stderr  # the real stderr, where the live bar is drawn
 _active = None  # the bar on screen
 _drawn = False  # the live bar is drawn on the current line
 _line_start = True  # nothing else is half-written on the current line
+_waits = {}  # thread id -> stack of (what, since): what that thread is waiting for
+verbose = True  # print detail() lines
+
+
+def detail(msg):
+    """A line about one item: printed by the single steps, not by `qgen batch` (QG-20)."""
+    if verbose:
+        print(msg, flush=True)
+
+
+@contextlib.contextmanager
+def waiting(what):
+    """Mark what the current thread waits for ("claude opus", "Openverse search", …) while the
+    block runs; the bar shows it. Nested marks: the innermost one counts."""
+    me = threading.get_ident()
+    with _lock:
+        _waits.setdefault(me, []).append((what, time.monotonic()))
+    try:
+        yield
+    finally:
+        with _lock:
+            stack = _waits[me]
+            stack.pop()
+            if not stack:
+                del _waits[me]
+
+
+def _waiting_text():
+    """"claude opus ×3 2m10s, Openverse search 3s": per kind, how many and the longest wait."""
+    now, groups = time.monotonic(), {}
+    for stack in _waits.values():
+        what, since = stack[-1]
+        n, oldest = groups.get(what, (0, now))
+        groups[what] = (n + 1, min(oldest, since))
+    return ", ".join(f"{w}{f' ×{n}' if n > 1 else ''} {duration(now - t)}" for w, (n, t) in sorted(groups.items()))
 
 
 def duration(seconds):
@@ -125,13 +162,16 @@ class Bar:
     def line(self, live=True):
         elapsed = time.monotonic() - self.t0
         parts = [f"{self.n}/{self.total} {self.unit}"]
-        if self.running:
-            parts.append(f"{self.running} running")
         if self.failed:
             parts.append(f"{self.failed} failed")
         parts.append(duration(elapsed))
         if 0 < self.n < self.total:
             parts.append(f"~{duration(elapsed / self.n * (self.total - self.n))} left")
+        waits = _waiting_text()
+        if waits:
+            parts.append("waiting: " + waits)
+        elif self.running:
+            parts.append(f"{self.running} running")
         if live:
             full = WIDTH * self.n // self.total
             return f"  {self.label} {'█' * full}{'░' * (WIDTH - full)} " + " · ".join(parts)

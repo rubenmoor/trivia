@@ -27,6 +27,7 @@ Revising questions that are already in the pool (07, QG-13):
     qgen rate | factcheck | revise | apply --run <run>
 """
 import argparse, concurrent.futures, datetime, difflib, json, random, re, subprocess, sys, threading, time, unicodedata
+import urllib.parse
 from pathlib import Path
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
@@ -211,8 +212,9 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
     else:
         cmd += ["--tools", ""]
     last = None
-    for _ in range(retries + 1):
-        p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=1800)
+    for attempt in range(retries + 1):
+        with progress.waiting(f"claude {model}" + (f" (retry {attempt})" if attempt else "")):
+            p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=1800)
         try:
             out = json.loads(p.stdout)
         except json.JSONDecodeError:
@@ -345,7 +347,7 @@ def cmd_concepts(args):
                 raise RuntimeError(f"{sub}: no concept for {', '.join(sorted(missing))}")
             r.update(out)
             save_json(path, r)
-        print(f"  concepts: {sub}: {len(r['facets'])} facets, {len(r['concepts'])} concepts", flush=True)
+        progress.detail(f"  concepts: {sub}: {len(r['facets'])} facets, {len(r['concepts'])} concepts")
 
     def wanted(sub):
         """How many concepts a top-up asks for: up to TARGET_SIZE with --fill, else TOP_UP when low."""
@@ -366,7 +368,7 @@ def cmd_concepts(args):
                 + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"]))
         out = claude(prompt("house-style", "concepts-topup"), user, TOPUP_SCHEMA, args.model, d)
         save_json(path, out)
-        print(f"  top-up: {sub}: {len(out['concepts'])} new concepts", flush=True)
+        progress.detail(f"  top-up: {sub}: {len(out['concepts'])} new concepts")
 
     bundles = sorted({categories.bundle_of(s) for s in subs}, key=categories.bundle_ids().index)
     errors = parallel(make, create, args.jobs, "concepts", "lists")
@@ -432,8 +434,8 @@ def finalize_concepts(d, bundle):
             tagged += 1
         concepts.save(s, lst)
         topup.unlink(missing_ok=True)
-        print(f"  list: {s}: {len(lst['concepts'])} concepts"
-              + (f"; dropped {len(shared)} already in another list: {', '.join(shared)}" if shared else ""))
+        progress.detail(f"  list: {s}: {len(lst['concepts'])} concepts"
+                        + (f"; dropped {len(shared)} already in another list: {', '.join(shared)}" if shared else ""))
     if tagged:
         save_json(POOL, data)
         print(f"  tagged {tagged} pool question(s) with a concept and axes")
@@ -614,7 +616,7 @@ def cmd_draft(args):
             good.append(q)
         retire(sub, slots, out["skipped"])
         save_json(d / "drafts" / f"{slug(sub)}.json", {"questions": good, "skipped": out["skipped"]})
-        print(f"  draft: {sub}: {len(good)} written, {len(out['skipped'])} skipped")
+        progress.detail(f"  draft: {sub}: {len(good)} written, {len(out['skipped'])} skipped")
 
     return parallel(work, todo, args.jobs, "draft", "subcategories")
 
@@ -630,7 +632,7 @@ def retire(sub, slots, skipped):
         if c["name"] in why:
             c["retired"] = why[c["name"]]
     concepts.save(sub, lst)
-    print(f"  {sub}: retired {', '.join(why)}")
+    progress.detail(f"  {sub}: retired {', '.join(why)}")
 
 
 def check_question_shape(q):
@@ -687,7 +689,7 @@ def cmd_rate(args):
                 save_json(d / "ratings" / f"{name}.json", {i: got[i] for i in ids})
             else:  # a partial file would count as done and never be retried
                 missing += [i for i in ids if i not in got]
-        print(f"  rate: {', '.join(name for name, _ in group)} ({len(qs)} questions)")
+        progress.detail(f"  rate: {', '.join(name for name, _ in group)} ({len(qs)} questions)")
         if missing:
             raise RuntimeError(f"no rating for {', '.join(sorted(missing))}")
 
@@ -713,7 +715,7 @@ def cmd_factcheck(args):
         user = "## Questions (Spanish)\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
         out = claude(system, user, FACT_SCHEMA, args.model, d, web=True)
         save_json(d / "factchecks" / f"{name}.json", {c["id"]: c for c in out["checks"]})
-        print(f"  factcheck: {name}: " + ", ".join(c["verdict"] for c in out["checks"]))
+        progress.detail(f"  factcheck: {name}: " + ", ".join(c["verdict"] for c in out["checks"]))
 
     return parallel(work, todo, args.jobs, "factcheck", "calls")
 
@@ -788,7 +790,7 @@ def cmd_merge(args):
                 if not reason.startswith("not "):
                     dropped.append({"tmp_id": tid, "reason": reason, "question": q["question"], "answer": q["answer"]})
                     merged.add(tid)
-                print(f"  skip {tid}: {reason}")
+                progress.detail(f"  skip {tid}: {reason}")
                 continue
             new = {
                 "id": f"q-{next_id:04d}", "status": "draft",
@@ -911,8 +913,8 @@ def cmd_revise(args):
             else:  # a partial file would count as done and never be retried
                 missing += [i for i in ids if i not in got]
         actions = [r["action"] for r in got.values()]
-        print(f"  revise: {', '.join(name for name, _ in group)}: {len(items)} with issues → "
-              + ", ".join(f"{a} {actions.count(a)}" for a in ["keep", "revise", "drop"] if a in actions))
+        progress.detail(f"  revise: {', '.join(name for name, _ in group)}: {len(items)} with issues → "
+                        + ", ".join(f"{a} {actions.count(a)}" for a in ["keep", "revise", "drop"] if a in actions))
         if missing:
             raise RuntimeError(f"no revision result for {', '.join(sorted(missing))}")
 
@@ -1166,7 +1168,7 @@ def cmd_media(args):
         for q, slot in todo:
             try:
                 data = media_tool.fetch_for(q, slot)
-                print(f"  media: {q['id']} {slot}: {len(data['candidates'])} candidate(s)", flush=True)
+                progress.detail(f"  media: {q['id']} {slot}: {len(data['candidates'])} candidate(s)")
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — rerun retries the rest
                 errors.append(e)
@@ -1187,7 +1189,7 @@ def cmd_sheets(args):
             try:
                 thumbs = d / "sheets" / "thumbs" / out.stem
                 shown = media_tool.make_sheet(found["candidates"], out, thumbs)
-                print(f"  sheets: {out.name}: {len(shown)} picture(s)", flush=True)
+                progress.detail(f"  sheets: {out.name}: {len(shown)} picture(s)")
                 bar.finished()
             except Exception as e:  # noqa: BLE001
                 errors.append(e)
@@ -1257,8 +1259,8 @@ def cmd_review(args):
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
         r[f"round{args.round}"] = {**out, "model": model}
         save_json(reviews / f"{q['id']}.json", r)
-        print(f"  review {args.round}: {q['id']}: {out['decision']}, pick {out['pick']}"
-              + (f", new search “{out['new_query']}”" if out["new_query"] and args.round == 1 else ""), flush=True)
+        progress.detail(f"  review {args.round}: {q['id']}: {out['decision']}, pick {out['pick']}"
+                        + (f", new search “{out['new_query']}”" if out["new_query"] and args.round == 1 else ""))
 
     return parallel(work, todo, args.jobs, f"review {args.round}", "questions")
 
@@ -1289,7 +1291,7 @@ def cmd_research(args):
             sheet_path(d, q["id"], "media").unlink(missing_ok=True)  # `sheets` builds the new one
             r["researched"] = query
             save_json(path, r)
-            print(f"  research: {q['id']}: “{query}”", flush=True)
+            progress.detail(f"  research: {q['id']}: “{query}”")
             bar.finished()
     return errors
 
@@ -1339,7 +1341,7 @@ def cmd_record(args):
                 x[slot].update(f)
             x.update(review=review, status=review["decision"])
         changes[q["id"]] = change
-        print(f"  record: {q['id']}: {decision}", flush=True)
+        progress.detail(f"  record: {q['id']}: {decision}")
     update_pool(changes)
     if missing:
         print(f"  no review yet: {', '.join(missing)}", file=sys.stderr)
@@ -1355,7 +1357,8 @@ def cmd_sync_run(args):
     with progress.Bar("sync", len(todo), "files") as bar:
         for label, url in todo:
             try:
-                media.cached(url)
+                with progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
+                    media.cached(url)
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — listed in the report; `trivia-media sync` retries
                 missing.append(label)
@@ -1444,6 +1447,7 @@ def cmd_batch(args):
         save_json(d / "run.json", {"mode": "batch", "bundle": args.bundle, "subcategories": subs,
                                    "started": datetime.date.today().isoformat()})
     subs = load_json(d / "run.json")["subcategories"]
+    progress.verbose = False  # one bar per step, no line per item (QG-20)
     print(f"{'Resuming' if resuming else 'Starting'} {run} for bundle {args.bundle}: {len(subs)} subcategories. "
           "This takes from several minutes to an hour.", flush=True)
 
