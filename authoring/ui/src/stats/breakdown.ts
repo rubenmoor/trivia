@@ -34,3 +34,8 @@ export function breakdown(questions: Question[], categories: Category[]): Catego
 export function reviewLink(subcategory: string): string {
   return `/review?${new URLSearchParams({ subcategory, status: "approved" })}`;
 }
+
+/** Fewer approved questions than a game asks (12): the category can't cover every level even once (RV-20). */
+export const SPARSE_CATEGORY = 12;
+/** Fewer than this: one player sees the whole subcategory in a game or two (RV-20). */
+export const SPARSE_SUBCATEGORY = 3;
