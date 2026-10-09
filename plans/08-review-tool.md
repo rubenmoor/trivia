@@ -159,7 +159,7 @@ One task = one commit, top to bottom (each builds only on the ones above it):
 
 - [x] RV-13 Review filters `status`, `reviewer`, `subcategory` and `media=missing` in the API and the review screen (URL, empty-queue message). *2026-10-09, `authoring/server/main.py`, `authoring/ui/src/review/Review.svelte`.*
 - [x] RV-15 Serve batch reports at `/reports/<name>.md` (plain text, names restricted to `authoring/reports/*.md`) for the batches table. *2026-10-09, `authoring/server/main.py` (`send_report`).*
-- [ ] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), the next batch's subcategories. The unfinished-run test and the subcategory choice move from `qgen.py` into a shared helper.
+- [x] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), the next batch's subcategories. The unfinished-run test and the subcategory choice move from `qgen.py` into a shared helper. *2026-10-09, `authoring/server/overview.py`; shared helper `authoring/tools/batches.py` (used by `qgen.py`).*
 - [ ] RV-18 Difficulty histogram over 1–15 with the young-teen window marked.
 - [ ] RV-19 Category bars open their subcategories on click; new page `/stats/subcategories` with links to review.
 - [ ] RV-20 Sparse list (categories < 12, subcategories < 3, marked if the next batch picks them) on `/stats/subcategories`.
