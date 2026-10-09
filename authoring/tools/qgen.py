@@ -29,6 +29,7 @@ from pathlib import Path
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
+import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # app/server/categories.py: app/data/categories.json (D-19)
@@ -1085,7 +1086,6 @@ def cmd_report(args):
 
 # --- the LLM batch (D-36, plans/19-repo-layout.md) ----------------------------------------------
 
-BATCH_SUBCATEGORIES = 30  # per batch: the subcategories with the fewest approved questions
 REVIEW_MODEL = "opus"
 
 REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "pick", "background_pick", "new_query", "reasons"],
@@ -1362,8 +1362,7 @@ def cmd_batch_report(args):
 
 def next_batch():
     """(run name, resuming?) — an unfinished `qgen batch` run is resumed; otherwise batch-<n+1>."""
-    open_runs = sorted(p.parent.name for p in WORK.glob("*/run.json")
-                       if (load_json(p) or {}).get("mode") == "batch" and not load_json(p).get("done"))
+    open_runs = batches.unfinished_runs()
     if len(open_runs) > 1:
         sys.exit(f"More than one unfinished batch: {', '.join(open_runs)}. Ask the gamemaster which to finish.")
     if open_runs:
@@ -1375,12 +1374,7 @@ def next_batch():
 
 def batch_subcategories(count):
     """The `count` subcategories with the fewest approved questions; ties in categories.json order."""
-    approved = {}
-    for q in load_json(POOL)["questions"]:
-        if q["status"] == "approved":
-            approved[q["subcategory"]] = approved.get(q["subcategory"], 0) + 1
-    order = [s for c in categories.load() for s in c["subcategories"]]
-    return sorted(order, key=lambda s: (approved.get(s, 0), order.index(s)))[:count]
+    return batches.subcategories(load_json(POOL)["questions"], count)
 
 
 def cmd_batch(args):
@@ -1600,7 +1594,7 @@ def main():
     b.set_defaults(fn=cmd_batch)
     b.add_argument("--run", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--subcategories", help=argparse.SUPPRESS)  # tests and debugging only
-    b.add_argument("--count", type=int, default=BATCH_SUBCATEGORIES, help=argparse.SUPPRESS)
+    b.add_argument("--count", type=int, default=batches.SUBCATEGORIES, help=argparse.SUPPRESS)
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     args = ap.parse_args()
     args.fn(args)

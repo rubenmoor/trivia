@@ -22,6 +22,7 @@ API:
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
+    GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not)
@@ -39,6 +40,7 @@ import categories  # noqa: E402  (app/server/categories.py)
 from http_base import BaseHandler  # noqa: E402  (app/server/http_base.py)
 import media  # noqa: E402  (authoring/tools/media.py)
 import media_cache  # noqa: E402  (app/server/media_cache.py)
+import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
 
 media_cache.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
@@ -196,6 +198,8 @@ class Handler(BaseHandler):
             return self.send_json(200, [with_candidates(q) for q in qs])
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())
+        if url.path == "/api/overview":
+            return self.send_json(200, overview.build(load_pool()["questions"], load_bundles()))
         if url.path == "/api/bundles":
             return self.send_json(200, load_bundles())
         if url.path.startswith("/reports/"):
