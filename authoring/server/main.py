@@ -11,7 +11,8 @@ API:
     GET  /api/categories                           app/data/categories.json: broad categories with subcategories (D-19)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
-         &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch)
+         &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch;
+         &subcategory=Pirámides&media=missing      media=missing: no picked media file)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
@@ -187,6 +188,10 @@ class Handler(BaseHandler):
             if "reviewer" in query:
                 want = None if query["reviewer"] == "none" else query["reviewer"]
                 qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
+            if "subcategory" in query:
+                qs = [q for q in qs if q["subcategory"] == query["subcategory"]]
+            if query.get("media") == "missing":
+                qs = [q for q in qs if not q["media"].get("file_url")]
             return self.send_json(200, [with_candidates(q) for q in qs])
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())

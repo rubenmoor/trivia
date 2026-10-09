@@ -4,12 +4,21 @@ import type { Bundle, Question, Review, Slot, Status } from "./types";
 
 export { fetchCategories } from "$app/lib/api";
 
-/** batch: a qgen.py run name, "none" for questions without a batch, or null for all. */
-export async function fetchQuestions(batch: string | null, status?: Status, bundle?: string | null): Promise<Question[]> {
+/** Filters of GET /api/questions; all optional (authoring/server/main.py). */
+export interface QuestionFilter {
+  /** A qgen.py run name, or "none" for questions without a batch. */
+  batch?: string | null;
+  status?: Status | null;
+  reviewer?: "human" | "llm" | "none" | null;
+  bundle?: string | null;
+  subcategory?: string | null;
+  /** "missing": no picked media file. */
+  media?: "missing" | null;
+}
+
+export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Question[]> {
   const params = new URLSearchParams();
-  if (batch) params.set("batch", batch);
-  if (status) params.set("status", status);
-  if (bundle) params.set("bundle", bundle);
+  for (const [key, value] of Object.entries(filter)) if (value) params.set(key, value);
   const query = params.size ? `?${params}` : "";
   return json(await call(`/api/questions${query}`));
 }
