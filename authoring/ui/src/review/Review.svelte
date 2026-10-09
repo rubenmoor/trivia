@@ -1,16 +1,45 @@
 <script lang="ts">
   // Review tool (plans/08-review-tool.md): one question per screen, single-key decisions.
   import { onMount, tick } from "svelte";
-  import { fetchBundles, fetchQuestions, pickMedia, saveReview, searchMedia, setBundle, setDifficulty } from "../lib/api";
+  import {
+    fetchBundles,
+    fetchQuestions,
+    pickMedia,
+    saveReview,
+    searchMedia,
+    setBundle,
+    setDifficulty,
+    type QuestionFilter,
+  } from "../lib/api";
   import type { Bundle, Decision, Question, Review, Slot } from "../lib/types";
   import MediaPanel from "./MediaPanel.svelte";
   import RevisionPanel from "./RevisionPanel.svelte";
 
-  // URL: ?batch=pilot&bundle=colombia&id=q-0123. The id follows the current question, so a reload
-  // (or a bookmark) comes back to it. Decisions themselves live in authoring/data/questions.json.
+  // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
+  // media=missing (RV-13). The id follows the current question, so a reload (or a bookmark) comes
+  // back to it. Decisions themselves live in authoring/data/questions.json.
   const params = new URLSearchParams(location.search);
   const batch = params.get("batch");
   const bundleFilter = params.get("bundle");
+  const filter = {
+    batch,
+    bundle: bundleFilter,
+    status: params.get("status"),
+    reviewer: params.get("reviewer"),
+    subcategory: params.get("subcategory"),
+    media: params.get("media"),
+  } as QuestionFilter;
+  /** The active filters in words, for the empty and summary screens. */
+  const filterText = [
+    batch && `batch “${batch}”`,
+    bundleFilter && `bundle “${bundleFilter}”`,
+    filter.subcategory && `subcategory “${filter.subcategory}”`,
+    filter.status && `status ${filter.status}`,
+    filter.reviewer && `reviewed by ${filter.reviewer}`,
+    filter.media === "missing" && "without media",
+  ]
+    .filter(Boolean)
+    .join(", ");
   // /review/q-0123: just that one question (linked from the game's admin overlay).
   const singleId = decodeURIComponent(location.pathname.match(/^\/review\/([^/]+)/)?.[1] ?? "") || null;
   const startId = singleId ?? params.get("id");
@@ -74,7 +103,7 @@
 
   onMount(async () => {
     try {
-      [questions, bundles] = await Promise.all([fetchQuestions(batch, undefined, bundleFilter), fetchBundles()]);
+      [questions, bundles] = await Promise.all([fetchQuestions(filter), fetchBundles()]);
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
       const firstOpen = questions.findIndex(isOpen);
@@ -387,11 +416,11 @@
     <p class="center error">{error}</p>
   {:else if questions.length === 0}
     <p class="center">
-      {singleId ? `No question “${singleId}”` : `No questions${batch ? ` in batch “${batch}”` : ""}${bundleFilter ? ` in bundle “${bundleFilter}”` : ""}`}.
+      {singleId ? `No question “${singleId}”` : `No questions${filterText ? `: ${filterText}` : ""}`}.
     </p>
   {:else if finished}
     <section class="summary">
-      <h1>Batch done{batch ? `: ${batch}` : ""}</h1>
+      <h1>All done{filterText ? `: ${filterText}` : ""}</h1>
       <ul>
         <li><b>{counts.approved}</b> approved</li>
         <li><b>{counts.needs_work}</b> need work</li>

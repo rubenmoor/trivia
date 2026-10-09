@@ -17,7 +17,7 @@
 
   onMount(async () => {
     try {
-      [questions, categories] = await Promise.all([fetchQuestions(null, "approved"), fetchCategories()]);
+      [questions, categories] = await Promise.all([fetchQuestions({ status: "approved" }), fetchCategories()]);
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
     } finally {

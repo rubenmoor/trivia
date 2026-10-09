@@ -157,7 +157,7 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
 ### Start page and statistics: order of work
 One task = one commit, top to bottom (each builds only on the ones above it):
 
-- [ ] RV-13 Review filters `status`, `reviewer`, `subcategory` and `media=missing` in the API and the review screen (URL, empty-queue message).
+- [x] RV-13 Review filters `status`, `reviewer`, `subcategory` and `media=missing` in the API and the review screen (URL, empty-queue message). *2026-10-09, `authoring/server/main.py`, `authoring/ui/src/review/Review.svelte`.*
 - [ ] RV-15 Serve batch reports at `/reports/<name>.md` (plain text, names restricted to `authoring/reports/*.md`) for the batches table.
 - [ ] RV-12 `GET /api/overview`: queues, unfinished run, batches table, supply per level (new player + players from the save), the next batch's subcategories. The unfinished-run test and the subcategory choice move from `qgen.py` into a shared helper.
 - [ ] RV-18 Difficulty histogram over 1–15 with the young-teen window marked.
