@@ -344,3 +344,10 @@ Template:
 - Decision: `qgen batch` writes `base` questions by default; questions for another bundle are made only with the bundle named on the command (`qgen batch --bundle <id>`). A separate command creates an empty bundle, which is set up with its own categories, subcategories and concept lists, and possibly its own question axes, independent of `base`'s.
 - Consequences: The drafter no longer picks a bundle (BN-4 is undone by BN-8). The RUNBOOK's "no arguments" (D-36) gets one exception, `--bundle`, used only when the user names a bundle. `22-bundles.md` has the design and tasks BN-8..BN-12; open points OQ-41..OQ-44. Not implemented yet: batch-6 still follows D-39.
 - Supersedes / related: D-39 (who picks the bundle), D-36, D-37, D-19
+
+## D-42: The start page offers LLM approvals for human review; open work comes first
+- Date: 2026-10-09
+- Context: 293 approved questions have only an LLM review (D-33). The authoring start page (08, RV-12..RV-17) has to say whether they are the gamemaster's work (OQ-45).
+- Decision: They are an option, not a to-do. The start page links to a queue of questions only an LLM has approved, for all batches and per batch, below the queues that need the gamemaster: `needs_work`, unreviewed drafts, missing media and unchecked bundle proposals.
+- Consequences: The review screen gets a `reviewer` filter (RV-13). A human review of an LLM-approved question works as today: it replaces the LLM review and keeps it in `review.previous` (D-33).
+- Supersedes / related: D-33, OQ-45
