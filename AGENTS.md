@@ -16,6 +16,7 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 - Log architectural choices in `plans/decisions.md`.
 - Keep dependencies minimal. This is a hobby project that has to run offline in a living room.
 - Never commit secrets. The game needs no accounts and no telemetry.
+- Push directly to `main`. No feature branches or pull requests.
 - Use comments sparingly and keep them ultra-short.
 - Don't write tests by default. Keep only the few, if any, that stay useful long-term; verify everything else with a throw-away script.
 
