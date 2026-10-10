@@ -16,6 +16,8 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 - Log architectural choices in `plans/decisions.md`.
 - Keep dependencies minimal. This is a hobby project that has to run offline in a living room.
 - Never commit secrets. The game needs no accounts and no telemetry.
+- Use comments sparingly and keep them ultra-short.
+- Don't write tests by default. Keep only the few, if any, that stay useful long-term; verify everything else with a throw-away script.
 
 ## Making questions
 If you are asked to make, generate, add, review or approve questions, follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly and nothing else (D-36). It is one command, `qgen batch`. Don't run pipeline steps by hand, don't edit the pools, and don't pick media yourself.
