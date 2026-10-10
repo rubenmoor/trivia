@@ -37,6 +37,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | Path | Contents |
 |---|---|
 | `plans/` | Plans, decisions, open questions, backlog; start at [`plans/README.md`](plans/README.md) |
+| `CLAUDE.md` | Imports `AGENTS.md` for Claude Code |
 | `AGENTS.md` | Guide for AI coding assistants |
 | `flake.nix`, `flake.lock` | Dev shell and packages (D-18) |
 | `package.json` | npm workspaces: `app/client`, `authoring/ui` |
