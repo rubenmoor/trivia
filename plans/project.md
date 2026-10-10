@@ -11,7 +11,7 @@ The road from today onward: milestones, every open task, every open question. Th
 
 ## Where we stand (2026-10-07)
 
-- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. `base`: 23 categories / 113 subcategories; `colombia`: 6 / 27 (D-19, D-43). Exported for the game to `app/data/pool.json` (D-35).
+- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. `base`: 28 categories / 184 subcategories; `colombia`: 6 / 27 (D-19, D-43). Exported for the game to `app/data/pool.json` (D-35).
 - **Bundles (D-39):** every question is in one bundle. Approved: 404 in `base`, 79 in `colombia` (proposed by an LLM pass, not yet checked by the gamemaster). Since 2026-10-08 a batch writes for one bundle named by the command, and `colombia` has its own 27 subcategories, which left `base` (D-41, D-43).
 - **Difficulty supply (approved, shared scale D-38; young teens play 1–10):** 1: 27 · 2: 41 · 3: 67 · 4: 66 · 5: 79 · 6: 91 · 7: 55 · 8: 29 · 9: 26 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
 - **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
@@ -52,7 +52,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 **Exit:** `qgen report --player <name>` shows enough supply at every level for the target number of games; `qgen validate` is clean; `trivia-media sync` has filled the cache.
 
 - [ ] OQ-17 Decide the target pool size (it sets how many more batches to run)
-- [~] QP-16 5 new `base` categories (2026-10-10), subcategories still to write — [`02`](02-question-pool.md)
+- [x] QP-16 5 new `base` categories, 68 new subcategories (2026-10-10) — [`02`](02-question-pool.md)
 - [~] QP-9 More batches: `qgen batch`, one per run (D-36) — [`02`](02-question-pool.md), [RUNBOOK](../authoring/RUNBOOK.md)
 - [ ] QP-6 An image for every question. 2026-10-08: the 122 approved questions without picked media (116 images, 5 audio, 1 video) are now `needs_work` — [`02`](02-question-pool.md), [`06`](06-images.md)
 - [ ] IMG-16 4K image target in the providers and ranking (D-48) — [`06`](06-images.md)

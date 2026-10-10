@@ -11,7 +11,9 @@
       "Comida japonesa",
       "Comida rápida",
       "Comida latinoamericana",
-      "Bebidas"
+      "Bebidas",
+      "Quesos",
+      "Dulces y chocolate"
     ]},
     {"slug": "geografia-mundo", "name": "Geografía del mundo", "subcategories": [
       "Continentes",
@@ -52,7 +54,8 @@
       "Peces",
       "Insectos",
       "Bichos raros",
-      "Récords de animales"
+      "Récords de animales",
+      "Fauna africana"
     ]},
     {"slug": "mascotas-granja", "name": "Mascotas y granja", "subcategories": [
       "Animales de la granja",
@@ -64,7 +67,11 @@
       "Ciencia",
       "Matemáticas",
       "Números",
-      "Formas"
+      "Formas",
+      "Química",
+      "Física",
+      "Científicos famosos",
+      "Premios Nobel"
     ]},
     {"slug": "cuerpo-humano", "name": "Cuerpo humano", "subcategories": [
       "Cuerpo humano",
@@ -99,7 +106,16 @@
       "Momias",
       "Caballeros",
       "Castillos",
-      "Piratas"
+      "Piratas",
+      "Imperio romano",
+      "Revolución francesa",
+      "Exploradores y descubrimientos",
+      "Segunda Guerra Mundial",
+      "Guerra Fría",
+      "Presidentes de Estados Unidos",
+      "Monarquía británica",
+      "Crímenes famosos",
+      "Escándalos famosos"
     ]},
     {"slug": "mitos-leyendas", "name": "Mitos y leyendas", "subcategories": [
       "Dioses griegos",
@@ -111,7 +127,13 @@
     {"slug": "musica", "name": "Música", "subcategories": [
       "Instrumentos musicales",
       "Música clásica",
-      "Música del mundo"
+      "Música del mundo",
+      "Rock",
+      "Música pop",
+      "Hip hop y rap",
+      "Eurovisión",
+      "Musicales",
+      "Canciones infantiles"
     ]},
     {"slug": "cine-series-superheroes", "name": "Cine, series y superhéroes", "subcategories": [
       "Cine",
@@ -122,7 +144,16 @@
       "Caricaturas",
       "Superhéroes de Marvel",
       "Superhéroes de DC",
-      "Villanos famosos"
+      "Villanos famosos",
+      "Premios Óscar",
+      "Ciencia ficción",
+      "Fantasía",
+      "Cine de terror",
+      "Reality shows",
+      "Telenovelas",
+      "James Bond",
+      "Harry Potter",
+      "El Señor de los Anillos"
     ]},
     {"slug": "videojuegos", "name": "Videojuegos", "subcategories": [
       "Videojuegos",
@@ -140,7 +171,10 @@
       "Atletismo",
       "Deportes extremos",
       "Juegos Olímpicos de verano",
-      "Juegos Olímpicos de invierno"
+      "Juegos Olímpicos de invierno",
+      "Fórmula 1 y automovilismo",
+      "Rugby",
+      "Críquet"
     ]},
     {"slug": "arte-literatura", "name": "Arte y literatura", "subcategories": [
       "Arte",
@@ -148,11 +182,17 @@
       "Colores",
       "Literatura",
       "Cuentos infantiles",
-      "Libros infantiles"
+      "Libros infantiles",
+      "Shakespeare",
+      "Poesía",
+      "Novela policiaca",
+      "Fotografía"
     ]},
     {"slug": "idiomas-palabras", "name": "Idiomas y palabras", "subcategories": [
       "Idioma",
-      "Idiomas del mundo"
+      "Idiomas del mundo",
+      "Frases célebres",
+      "Refranes y dichos"
     ]},
     {"slug": "juegos-curiosidades", "name": "Juegos y curiosidades", "subcategories": [
       "Juguetes",
@@ -160,12 +200,45 @@
       "Magia",
       "Trucos",
       "Ilusiones ópticas",
-      "Récords Guinness"
+      "Récords Guinness",
+      "Circo",
+      "Dúos famosos"
     ]},
-    {"slug": "moda", "name": "Moda y diseño", "subcategories": []},
-    {"slug": "arquitectura", "name": "Arquitectura y monumentos", "subcategories": []},
-    {"slug": "monedas-dinero", "name": "Monedas y dinero", "subcategories": []},
-    {"slug": "religiones", "name": "Religiones y filosofía", "subcategories": []},
-    {"slug": "marcas-logos", "name": "Marcas y logotipos", "subcategories": []}
+    {"slug": "moda", "name": "Moda y diseño", "subcategories": [
+      "Historia de la moda",
+      "Diseñadores de moda",
+      "Trajes típicos del mundo",
+      "Zapatos y accesorios",
+      "Diseño de objetos"
+    ]},
+    {"slug": "arquitectura", "name": "Arquitectura y monumentos", "subcategories": [
+      "Maravillas del mundo",
+      "Monumentos famosos",
+      "Rascacielos",
+      "Puentes famosos",
+      "Templos y catedrales",
+      "Estilos arquitectónicos"
+    ]},
+    {"slug": "monedas-dinero", "name": "Monedas y dinero", "subcategories": [
+      "Monedas del mundo",
+      "Billetes del mundo",
+      "Historia del dinero",
+      "Ahorro y bancos"
+    ]},
+    {"slug": "religiones", "name": "Religiones y filosofía", "subcategories": [
+      "Religiones del mundo",
+      "Historias de la Biblia",
+      "Lugares sagrados",
+      "Filósofos famosos",
+      "Preguntas filosóficas"
+    ]},
+    {"slug": "marcas-logos", "name": "Marcas y logotipos", "subcategories": [
+      "Logotipos famosos",
+      "Eslóganes publicitarios",
+      "Mascotas de marcas",
+      "Origen de las marcas",
+      "Empresas famosas",
+      "Productos del supermercado"
+    ]}
   ]
 }
