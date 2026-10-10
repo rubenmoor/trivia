@@ -16,9 +16,30 @@
         "type": "github"
       }
     },
+    "pm": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791649537,
+        "narHash": "sha256-Wuc01pXj1+m3UEMvlFimiXS3b8QgGdnuV/0AH1MVTK0=",
+        "owner": "rubenmoor",
+        "repo": "project-manager",
+        "rev": "8903d30cf213046a03eb6674892f66e743a041ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rubenmoor",
+        "repo": "project-manager",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "pm": "pm"
       }
     }
   },
