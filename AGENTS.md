@@ -19,6 +19,7 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 - Push directly to `main`. No feature branches or pull requests.
 - Use comments sparingly and keep them ultra-short.
 - Don't write tests by default. Keep only the few, if any, that stay useful long-term; verify everything else with a throw-away script.
+- Style of `.md` files: bullet points, ultra-concise, no full sentences needed. Exception: an intro paragraph in full sentences at the top of the document and under each top-level heading.
 
 ## Making questions
 If you are asked to make, generate, add, review or approve questions, follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly and nothing else (D-36). It is one command, `qgen batch`. Don't run pipeline steps by hand, don't edit the pools, and don't pick media yourself.
