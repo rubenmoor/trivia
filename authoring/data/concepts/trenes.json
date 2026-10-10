@@ -1,0 +1,956 @@
+{
+  "subcategory": "Trenes",
+  "facets": [
+    "Tipos de trenes",
+    "Partes del tren y la vía",
+    "Estaciones y oficios ferroviarios",
+    "Historia del ferrocarril",
+    "Trenes famosos del mundo",
+    "Trenes y ferrocarriles en Colombia",
+    "Metros y tranvías urbanos",
+    "Trenes en películas, juguetes y juegos",
+    "Tecnología y física ferroviaria",
+    "Récords y grandes obras ferroviarias",
+    "Palabras y dichos del tren"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tren de vapor",
+      "facet": "Tipos de trenes",
+      "known_at": 1
+    },
+    {
+      "name": "Tren bala",
+      "facet": "Tipos de trenes",
+      "known_at": 4
+    },
+    {
+      "name": "Tren de carga",
+      "facet": "Tipos de trenes",
+      "known_at": 3
+    },
+    {
+      "name": "Tren de pasajeros",
+      "facet": "Tipos de trenes",
+      "known_at": 3
+    },
+    {
+      "name": "Tren eléctrico",
+      "facet": "Tipos de trenes",
+      "known_at": 3
+    },
+    {
+      "name": "Tren diésel",
+      "facet": "Tipos de trenes",
+      "known_at": 7
+    },
+    {
+      "name": "Tren de cremallera",
+      "facet": "Tipos de trenes",
+      "known_at": 11
+    },
+    {
+      "name": "Monorriel",
+      "facet": "Tipos de trenes",
+      "known_at": 7
+    },
+    {
+      "name": "Tren de levitación magnética",
+      "facet": "Tipos de trenes",
+      "known_at": 9
+    },
+    {
+      "name": "Funicular",
+      "facet": "Tipos de trenes",
+      "known_at": 9
+    },
+    {
+      "name": "Tren nocturno",
+      "facet": "Tipos de trenes",
+      "known_at": 7
+    },
+    {
+      "name": "Tren turístico",
+      "facet": "Tipos de trenes",
+      "known_at": 4
+    },
+    {
+      "name": "Tren de cercanías",
+      "facet": "Tipos de trenes",
+      "known_at": 10
+    },
+    {
+      "name": "Tren ligero",
+      "facet": "Tipos de trenes",
+      "known_at": 10
+    },
+    {
+      "name": "Tren de dos pisos",
+      "facet": "Tipos de trenes",
+      "known_at": 6
+    },
+    {
+      "name": "Tren minero",
+      "facet": "Tipos de trenes",
+      "known_at": 5
+    },
+    {
+      "name": "Draisina",
+      "facet": "Tipos de trenes",
+      "known_at": 14
+    },
+    {
+      "name": "Vagón",
+      "facet": "Partes del tren y la vía",
+      "known_at": 2
+    },
+    {
+      "name": "Riel",
+      "facet": "Partes del tren y la vía",
+      "known_at": 2
+    },
+    {
+      "name": "Traviesa",
+      "facet": "Partes del tren y la vía",
+      "known_at": 9
+    },
+    {
+      "name": "Rueda ferroviaria",
+      "facet": "Partes del tren y la vía",
+      "known_at": 7
+    },
+    {
+      "name": "Chimenea",
+      "facet": "Partes del tren y la vía",
+      "known_at": 2
+    },
+    {
+      "name": "Pantógrafo",
+      "facet": "Partes del tren y la vía",
+      "known_at": 12
+    },
+    {
+      "name": "Catenaria",
+      "facet": "Partes del tren y la vía",
+      "known_at": 12
+    },
+    {
+      "name": "Enganche",
+      "facet": "Partes del tren y la vía",
+      "known_at": 6
+    },
+    {
+      "name": "Cambio de vía",
+      "facet": "Partes del tren y la vía",
+      "known_at": 6
+    },
+    {
+      "name": "Semáforo ferroviario",
+      "facet": "Partes del tren y la vía",
+      "known_at": 5
+    },
+    {
+      "name": "Cabús",
+      "facet": "Partes del tren y la vía",
+      "known_at": 11
+    },
+    {
+      "name": "Ténder",
+      "facet": "Partes del tren y la vía",
+      "known_at": 12
+    },
+    {
+      "name": "Silbato del tren",
+      "facet": "Partes del tren y la vía",
+      "known_at": 1
+    },
+    {
+      "name": "Balasto",
+      "facet": "Partes del tren y la vía",
+      "known_at": 13
+    },
+    {
+      "name": "Paso a nivel",
+      "facet": "Partes del tren y la vía",
+      "known_at": 7
+    },
+    {
+      "name": "Bogie",
+      "facet": "Partes del tren y la vía",
+      "known_at": 14
+    },
+    {
+      "name": "Vagón restaurante",
+      "facet": "Partes del tren y la vía",
+      "known_at": 5
+    },
+    {
+      "name": "Coche cama",
+      "facet": "Partes del tren y la vía",
+      "known_at": 6
+    },
+    {
+      "name": "Maquinista",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 3
+    },
+    {
+      "name": "Fogonero",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 10
+    },
+    {
+      "name": "Revisor",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 6
+    },
+    {
+      "name": "Jefe de estación",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 6
+    },
+    {
+      "name": "Guardagujas",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 12
+    },
+    {
+      "name": "Guardabarrera",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 12
+    },
+    {
+      "name": "Garrotero",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 14
+    },
+    {
+      "name": "Maletero",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 8
+    },
+    {
+      "name": "Andén",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 4
+    },
+    {
+      "name": "Taquilla",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 4
+    },
+    {
+      "name": "Sala de espera",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 2
+    },
+    {
+      "name": "Reloj de estación",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 5
+    },
+    {
+      "name": "Estación terminal",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 7
+    },
+    {
+      "name": "Mesa giratoria",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 11
+    },
+    {
+      "name": "Cochera de locomotoras",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 10
+    },
+    {
+      "name": "Grand Central Terminal",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 11
+    },
+    {
+      "name": "Estación de Atocha",
+      "facet": "Estaciones y oficios ferroviarios",
+      "known_at": 12
+    },
+    {
+      "name": "Locomotora Rocket",
+      "facet": "Historia del ferrocarril",
+      "known_at": 13
+    },
+    {
+      "name": "Richard Trevithick",
+      "facet": "Historia del ferrocarril",
+      "known_at": 15
+    },
+    {
+      "name": "Ferrocarril de Stockton y Darlington",
+      "facet": "Historia del ferrocarril",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrocarril Liverpool-Mánchester",
+      "facet": "Historia del ferrocarril",
+      "known_at": 13
+    },
+    {
+      "name": "Primer ferrocarril transcontinental de Estados Unidos",
+      "facet": "Historia del ferrocarril",
+      "known_at": 11
+    },
+    {
+      "name": "Clavo de oro",
+      "facet": "Historia del ferrocarril",
+      "known_at": 14
+    },
+    {
+      "name": "Lejano Oeste",
+      "facet": "Historia del ferrocarril",
+      "known_at": 5
+    },
+    {
+      "name": "Hora ferroviaria",
+      "facet": "Historia del ferrocarril",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrocarril de Cuba",
+      "facet": "Historia del ferrocarril",
+      "known_at": 14
+    },
+    {
+      "name": "George Pullman",
+      "facet": "Historia del ferrocarril",
+      "known_at": 14
+    },
+    {
+      "name": "Isambard Kingdom Brunel",
+      "facet": "Historia del ferrocarril",
+      "known_at": 15
+    },
+    {
+      "name": "Tren de la Fresa",
+      "facet": "Historia del ferrocarril",
+      "known_at": 13
+    },
+    {
+      "name": "Tren de caballos",
+      "facet": "Historia del ferrocarril",
+      "known_at": 9
+    },
+    {
+      "name": "Orient Express",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Transiberiano",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "TGV",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "AVE",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Eurostar",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Flying Scotsman",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Mallard",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Big Boy",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Glacier Express",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Bernina Express",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Tren a las Nubes",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Tren a Machu Picchu",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Maglev de Shanghái",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrocarril de Darjeeling",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Tren Maya",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "El Chepe",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrocarril Central Andino",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "The Ghan",
+      "facet": "Trenes famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Ferrocarril de Antioquia",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco Javier Cisneros",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Túnel de La Quiebra",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Tren de la Sabana",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Estación de la Sabana",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Autoferro",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrocarril de Panamá",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrocarril de Bolívar",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Muelle de Puerto Colombia",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrocarril del Cerrejón",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrocarril del Pacífico",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrocarril de Girardot",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrocarril del Atlántico",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Brujitas de San Cipriano",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrocarril de Caldas",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Regiotram de Occidente",
+      "facet": "Trenes y ferrocarriles en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Metro de Londres",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 7
+    },
+    {
+      "name": "Metro de Medellín",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 5
+    },
+    {
+      "name": "Metro de Bogotá",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Metro de París",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Metro de Nueva York",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 8
+    },
+    {
+      "name": "Metro de Ciudad de México",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 10
+    },
+    {
+      "name": "Metro de Tokio",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 10
+    },
+    {
+      "name": "Subte de Buenos Aires",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Metro de Caracas",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Metro de Panamá",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 12
+    },
+    {
+      "name": "Tranvía de Ayacucho",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 10
+    },
+    {
+      "name": "Metrocable",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Tranvía de San Francisco",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 11
+    },
+    {
+      "name": "Tranvía 28 de Lisboa",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 14
+    },
+    {
+      "name": "Tranvía de mulas de Bogotá",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 13
+    },
+    {
+      "name": "Mapa del metro de Londres",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 13
+    },
+    {
+      "name": "Torniquete",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 6
+    },
+    {
+      "name": "Tarjeta Cívica",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 9
+    },
+    {
+      "name": "Hora pico",
+      "facet": "Metros y tranvías urbanos",
+      "known_at": 5
+    },
+    {
+      "name": "Thomas y sus amigos",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Expreso de Hogwarts",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Andén 9¾",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Modelismo ferroviario",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Tren de madera de juguete",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Aventureros al tren",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Asesinato en el Orient Express",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Casey Junior",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Volver al futuro III",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Chuggington",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "El maquinista de La General",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Llegada de un tren a la estación",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Subway Surfers",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Vagoneta de Minecraft",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "La pequeña locomotora que sí pudo",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Tren fantasma",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Cien años de soledad",
+      "facet": "Trenes en películas, juguetes y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Levitación magnética",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 9
+    },
+    {
+      "name": "Ancho de vía",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 11
+    },
+    {
+      "name": "Efecto Doppler",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 11
+    },
+    {
+      "name": "Inercia",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 8
+    },
+    {
+      "name": "Fricción",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 7
+    },
+    {
+      "name": "Electroimán",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 8
+    },
+    {
+      "name": "Superconductor",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 12
+    },
+    {
+      "name": "Frenado regenerativo",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 12
+    },
+    {
+      "name": "Peralte",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 12
+    },
+    {
+      "name": "Nariz del tren bala",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 11
+    },
+    {
+      "name": "Dilatación térmica",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 10
+    },
+    {
+      "name": "Motor diésel-eléctrico",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 13
+    },
+    {
+      "name": "Tercer riel",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 12
+    },
+    {
+      "name": "Conicidad de las ruedas",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 14
+    },
+    {
+      "name": "Hyperloop",
+      "facet": "Tecnología y física ferroviaria",
+      "known_at": 11
+    },
+    {
+      "name": "Túnel de base de San Gotardo",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 13
+    },
+    {
+      "name": "Eurotúnel",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 10
+    },
+    {
+      "name": "Túnel Seikan",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 15
+    },
+    {
+      "name": "Ferrocarril Qinghái-Tíbet",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 13
+    },
+    {
+      "name": "Estación de Tanggula",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 15
+    },
+    {
+      "name": "Puente de Forth",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrocarril Transandino",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 13
+    },
+    {
+      "name": "Recta de Nullarbor",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 15
+    },
+    {
+      "name": "Tren de hierro de Mauritania",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 14
+    },
+    {
+      "name": "Estación de Shinjuku",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Puente Danyang-Kunshan",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 15
+    },
+    {
+      "name": "Nariz del Diablo",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 14
+    },
+    {
+      "name": "Récord de velocidad sobre rieles",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 11
+    },
+    {
+      "name": "Red de alta velocidad de China",
+      "facet": "Récords y grandes obras ferroviarias",
+      "known_at": 12
+    },
+    {
+      "name": "Perder el tren",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 6
+    },
+    {
+      "name": "Descarrilar",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 7
+    },
+    {
+      "name": "Vía libre",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 7
+    },
+    {
+      "name": "Ferrocarril",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 5
+    },
+    {
+      "name": "Metropolitano",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 10
+    },
+    {
+      "name": "A todo vapor",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 8
+    },
+    {
+      "name": "A toda máquina",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 8
+    },
+    {
+      "name": "Ir sobre rieles",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 10
+    },
+    {
+      "name": "Tren de vida",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 12
+    },
+    {
+      "name": "Tren de aterrizaje",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 9
+    },
+    {
+      "name": "Chucuchú",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 1
+    },
+    {
+      "name": "Vía muerta",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 12
+    },
+    {
+      "name": "Trencito",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 2
+    },
+    {
+      "name": "Tranvía",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 9
+    },
+    {
+      "name": "Echar humo",
+      "facet": "Palabras y dichos del tren",
+      "known_at": 5
+    }
+  ]
+}

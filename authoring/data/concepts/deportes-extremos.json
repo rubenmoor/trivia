@@ -1,0 +1,917 @@
+{
+  "subcategory": "Deportes extremos",
+  "facets": [
+    "Deportes de tabla y ruedas",
+    "Deportes aéreos y paracaidismo",
+    "Escalada y montañismo",
+    "Deportes acuáticos extremos",
+    "Deportes de nieve y hielo",
+    "Motor y velocidad extrema",
+    "Equipo y seguridad",
+    "Trucos y jerga",
+    "Atletas y hazañas famosas",
+    "Lugares y escenarios extremos",
+    "Deportes extremos en Colombia",
+    "Competencias y eventos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 3,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Patineta",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 1
+    },
+    {
+      "name": "Patines en línea",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 2
+    },
+    {
+      "name": "Scooter freestyle",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 5
+    },
+    {
+      "name": "Longboard",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 6
+    },
+    {
+      "name": "Ciclomontañismo",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 6
+    },
+    {
+      "name": "Downhill",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 8
+    },
+    {
+      "name": "Sandboard",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 9
+    },
+    {
+      "name": "Patinaje agresivo",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 10
+    },
+    {
+      "name": "Skimboard",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 11
+    },
+    {
+      "name": "Bicicleta de trial",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 11
+    },
+    {
+      "name": "Mountainboard",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 12
+    },
+    {
+      "name": "Street luge",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 12
+    },
+    {
+      "name": "Surfskate",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 12
+    },
+    {
+      "name": "Monopatín eléctrico",
+      "facet": "Deportes de tabla y ruedas",
+      "known_at": 3
+    },
+    {
+      "name": "Paracaidismo",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 3
+    },
+    {
+      "name": "Tirolesa",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 3
+    },
+    {
+      "name": "Caída libre",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 4
+    },
+    {
+      "name": "Parapente",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 5
+    },
+    {
+      "name": "Puenting",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 5
+    },
+    {
+      "name": "Ala delta",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 6
+    },
+    {
+      "name": "Salto tándem",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 8
+    },
+    {
+      "name": "Vuelo acrobático",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 8
+    },
+    {
+      "name": "Planeador",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de alas",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 9
+    },
+    {
+      "name": "Túnel de viento",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 9
+    },
+    {
+      "name": "Salto BASE",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 10
+    },
+    {
+      "name": "Paramotor",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 10
+    },
+    {
+      "name": "Columpio extremo",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 10
+    },
+    {
+      "name": "Skysurf",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 12
+    },
+    {
+      "name": "Speed flying",
+      "facet": "Deportes aéreos y paracaidismo",
+      "known_at": 13
+    },
+    {
+      "name": "Escalada en roca",
+      "facet": "Escalada y montañismo",
+      "known_at": 3
+    },
+    {
+      "name": "Muro de escalada",
+      "facet": "Escalada y montañismo",
+      "known_at": 3
+    },
+    {
+      "name": "Rápel",
+      "facet": "Escalada y montañismo",
+      "known_at": 5
+    },
+    {
+      "name": "Trekking",
+      "facet": "Escalada y montañismo",
+      "known_at": 6
+    },
+    {
+      "name": "Alpinismo",
+      "facet": "Escalada y montañismo",
+      "known_at": 7
+    },
+    {
+      "name": "Escalada en hielo",
+      "facet": "Escalada y montañismo",
+      "known_at": 7
+    },
+    {
+      "name": "Sherpa",
+      "facet": "Escalada y montañismo",
+      "known_at": 8
+    },
+    {
+      "name": "Mal de altura",
+      "facet": "Escalada y montañismo",
+      "known_at": 8
+    },
+    {
+      "name": "Campamento base",
+      "facet": "Escalada y montañismo",
+      "known_at": 8
+    },
+    {
+      "name": "Escalada libre",
+      "facet": "Escalada y montañismo",
+      "known_at": 8
+    },
+    {
+      "name": "Búlder",
+      "facet": "Escalada y montañismo",
+      "known_at": 9
+    },
+    {
+      "name": "Barranquismo",
+      "facet": "Escalada y montañismo",
+      "known_at": 10
+    },
+    {
+      "name": "Vía ferrata",
+      "facet": "Escalada y montañismo",
+      "known_at": 11
+    },
+    {
+      "name": "Solo integral",
+      "facet": "Escalada y montañismo",
+      "known_at": 12
+    },
+    {
+      "name": "Ochomiles",
+      "facet": "Escalada y montañismo",
+      "known_at": 13
+    },
+    {
+      "name": "Siete Cumbres",
+      "facet": "Escalada y montañismo",
+      "known_at": 13
+    },
+    {
+      "name": "Moto acuática",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 4
+    },
+    {
+      "name": "Rafting",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 5
+    },
+    {
+      "name": "Esquí acuático",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 5
+    },
+    {
+      "name": "Windsurf",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 6
+    },
+    {
+      "name": "Kitesurf",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Clavados de altura",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Paddle surf",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 7
+    },
+    {
+      "name": "Bodyboard",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 8
+    },
+    {
+      "name": "Wakeboard",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 9
+    },
+    {
+      "name": "Surf de olas gigantes",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 9
+    },
+    {
+      "name": "Flyboard",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 10
+    },
+    {
+      "name": "Hidrospeed",
+      "facet": "Deportes acuáticos extremos",
+      "known_at": 13
+    },
+    {
+      "name": "Esquí",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 2
+    },
+    {
+      "name": "Patinaje sobre hielo",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 2
+    },
+    {
+      "name": "Snowboard",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 3
+    },
+    {
+      "name": "Moto de nieve",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 4
+    },
+    {
+      "name": "Salto de esquí",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 6
+    },
+    {
+      "name": "Telesilla",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 6
+    },
+    {
+      "name": "Bobsleigh",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 8
+    },
+    {
+      "name": "Esquí acrobático",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 8
+    },
+    {
+      "name": "Esquí de fondo",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 10
+    },
+    {
+      "name": "Skeleton",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 11
+    },
+    {
+      "name": "Luge",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 11
+    },
+    {
+      "name": "Esquí fuera de pista",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 11
+    },
+    {
+      "name": "Biatlón",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 12
+    },
+    {
+      "name": "Snowkite",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 12
+    },
+    {
+      "name": "Heliesquí",
+      "facet": "Deportes de nieve y hielo",
+      "known_at": 13
+    },
+    {
+      "name": "Fórmula 1",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 2
+    },
+    {
+      "name": "Monster truck",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 2
+    },
+    {
+      "name": "Motocross",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 4
+    },
+    {
+      "name": "Karting",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 4
+    },
+    {
+      "name": "Cuatrimoto",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 4
+    },
+    {
+      "name": "MotoGP",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 6
+    },
+    {
+      "name": "Rally",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 7
+    },
+    {
+      "name": "NASCAR",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 7
+    },
+    {
+      "name": "Freestyle motocross",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 8
+    },
+    {
+      "name": "Enduro",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 10
+    },
+    {
+      "name": "Carrera de aceleración",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 10
+    },
+    {
+      "name": "Motonáutica",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 10
+    },
+    {
+      "name": "Ayrton Senna",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 9
+    },
+    {
+      "name": "Thrust SSC",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de Man TT",
+      "facet": "Motor y velocidad extrema",
+      "known_at": 14
+    },
+    {
+      "name": "Rodilleras",
+      "facet": "Equipo y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Coderas",
+      "facet": "Equipo y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Paracaídas",
+      "facet": "Equipo y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Gafas de esquí",
+      "facet": "Equipo y seguridad",
+      "known_at": 4
+    },
+    {
+      "name": "Arnés",
+      "facet": "Equipo y seguridad",
+      "known_at": 5
+    },
+    {
+      "name": "Tanque de oxígeno",
+      "facet": "Equipo y seguridad",
+      "known_at": 5
+    },
+    {
+      "name": "Cámara GoPro",
+      "facet": "Equipo y seguridad",
+      "known_at": 6
+    },
+    {
+      "name": "Mosquetón",
+      "facet": "Equipo y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Paracaídas de reserva",
+      "facet": "Equipo y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Magnesio de escalada",
+      "facet": "Equipo y seguridad",
+      "known_at": 9
+    },
+    {
+      "name": "Altímetro",
+      "facet": "Equipo y seguridad",
+      "known_at": 10
+    },
+    {
+      "name": "Piolet",
+      "facet": "Equipo y seguridad",
+      "known_at": 11
+    },
+    {
+      "name": "Crampones",
+      "facet": "Equipo y seguridad",
+      "known_at": 11
+    },
+    {
+      "name": "Colchoneta de búlder",
+      "facet": "Equipo y seguridad",
+      "known_at": 11
+    },
+    {
+      "name": "Cuerda dinámica",
+      "facet": "Equipo y seguridad",
+      "known_at": 12
+    },
+    {
+      "name": "Pies de gato",
+      "facet": "Equipo y seguridad",
+      "known_at": 12
+    },
+    {
+      "name": "Leash",
+      "facet": "Equipo y seguridad",
+      "known_at": 12
+    },
+    {
+      "name": "Detector de víctimas de avalancha",
+      "facet": "Equipo y seguridad",
+      "known_at": 13
+    },
+    {
+      "name": "Adrenalina",
+      "facet": "Trucos y jerga",
+      "known_at": 3
+    },
+    {
+      "name": "Caballito",
+      "facet": "Trucos y jerga",
+      "known_at": 3
+    },
+    {
+      "name": "Mortal hacia atrás",
+      "facet": "Trucos y jerga",
+      "known_at": 5
+    },
+    {
+      "name": "360",
+      "facet": "Trucos y jerga",
+      "known_at": 6
+    },
+    {
+      "name": "Freestyle",
+      "facet": "Trucos y jerga",
+      "known_at": 6
+    },
+    {
+      "name": "Half-pipe",
+      "facet": "Trucos y jerga",
+      "known_at": 7
+    },
+    {
+      "name": "Ollie",
+      "facet": "Trucos y jerga",
+      "known_at": 8
+    },
+    {
+      "name": "Kickflip",
+      "facet": "Trucos y jerga",
+      "known_at": 9
+    },
+    {
+      "name": "Tubo",
+      "facet": "Trucos y jerga",
+      "known_at": 9
+    },
+    {
+      "name": "Grind",
+      "facet": "Trucos y jerga",
+      "known_at": 10
+    },
+    {
+      "name": "Big air",
+      "facet": "Trucos y jerga",
+      "known_at": 10
+    },
+    {
+      "name": "900",
+      "facet": "Trucos y jerga",
+      "known_at": 11
+    },
+    {
+      "name": "Manual",
+      "facet": "Trucos y jerga",
+      "known_at": 11
+    },
+    {
+      "name": "Wipeout",
+      "facet": "Trucos y jerga",
+      "known_at": 11
+    },
+    {
+      "name": "Shaka",
+      "facet": "Trucos y jerga",
+      "known_at": 11
+    },
+    {
+      "name": "Drop in",
+      "facet": "Trucos y jerga",
+      "known_at": 12
+    },
+    {
+      "name": "Tailwhip",
+      "facet": "Trucos y jerga",
+      "known_at": 12
+    },
+    {
+      "name": "Shove-it",
+      "facet": "Trucos y jerga",
+      "known_at": 12
+    },
+    {
+      "name": "Tony Hawk",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Felix Baumgartner",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Shaun White",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Kelly Slater",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Rayssa Leal",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Sky Brown",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Alex Honnold",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Bethany Hamilton",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Travis Pastrana",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Evel Knievel",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Tenzing Norgay",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Reinhold Messner",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Danny Way",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Garrett McNamara",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Duke Kahanamoku",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Junko Tabei",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Lynn Hill",
+      "facet": "Atletas y hazañas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Skatepark",
+      "facet": "Lugares y escenarios extremos",
+      "known_at": 3
+    },
+    {
+      "name": "Nazaré",
+      "facet": "Lugares y escenarios extremos",
+      "known_at": 12
+    },
+    {
+      "name": "Pipeline",
+      "facet": "Lugares y escenarios extremos",
+      "known_at": 13
+    },
+    {
+      "name": "Chamonix",
+      "facet": "Lugares y escenarios extremos",
+      "known_at": 13
+    },
+    {
+      "name": "Interlaken",
+      "facet": "Lugares y escenarios extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Mariana Pajón",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Buceo en San Andrés",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "San Gil",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Juan Pablo Montoya",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Sierra Nevada del Cocuy",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Lago Calima",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Río Suárez",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Mesa de los Santos",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Suesca",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Ramírez",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Roldanillo",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Río Fonce",
+      "facet": "Deportes extremos en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Olímpicos de Invierno",
+      "facet": "Competencias y eventos",
+      "known_at": 6
+    },
+    {
+      "name": "X Games",
+      "facet": "Competencias y eventos",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Premio de Mónaco",
+      "facet": "Competencias y eventos",
+      "known_at": 10
+    },
+    {
+      "name": "Red Bull Stratos",
+      "facet": "Competencias y eventos",
+      "known_at": 11
+    },
+    {
+      "name": "Red Bull Cliff Diving",
+      "facet": "Competencias y eventos",
+      "known_at": 11
+    },
+    {
+      "name": "24 Horas de Le Mans",
+      "facet": "Competencias y eventos",
+      "known_at": 11
+    },
+    {
+      "name": "Liga Mundial de Surf",
+      "facet": "Competencias y eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Red Bull Air Race",
+      "facet": "Competencias y eventos",
+      "known_at": 12
+    },
+    {
+      "name": "Red Bull Rampage",
+      "facet": "Competencias y eventos",
+      "known_at": 13
+    },
+    {
+      "name": "Iditarod",
+      "facet": "Competencias y eventos",
+      "known_at": 14
+    },
+    {
+      "name": "Maratón de las Arenas",
+      "facet": "Competencias y eventos",
+      "known_at": 14
+    },
+    {
+      "name": "Vendée Globe",
+      "facet": "Competencias y eventos",
+      "known_at": 14
+    },
+    {
+      "name": "Freeride World Tour",
+      "facet": "Competencias y eventos",
+      "known_at": 14
+    }
+  ]
+}

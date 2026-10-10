@@ -1,0 +1,902 @@
+{
+  "subcategory": "Insectos",
+  "facets": [
+    "Cuerpo y anatomía del insecto",
+    "Metamorfosis y ciclos de vida",
+    "Mariposas y polillas",
+    "Abejas, avispas y hormigas",
+    "Escarabajos y mariquitas",
+    "Grillos, libélulas, mantis y compañía",
+    "Insectos de la casa y plagas",
+    "Picaduras y enfermedades transmitidas",
+    "Productos y usos de los insectos",
+    "Insectos de Colombia y el trópico",
+    "Récords y rarezas del mundo insecto",
+    "Insectos en cine, cuentos y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 5,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Seis patas",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 3
+    },
+    {
+      "name": "Antenas",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 2
+    },
+    {
+      "name": "Ojo compuesto",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 7
+    },
+    {
+      "name": "Exoesqueleto",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 9
+    },
+    {
+      "name": "Tórax",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 8
+    },
+    {
+      "name": "Abdomen",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 6
+    },
+    {
+      "name": "Alas",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 1
+    },
+    {
+      "name": "Élitros",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 12
+    },
+    {
+      "name": "Probóscide",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 11
+    },
+    {
+      "name": "Mandíbulas",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 6
+    },
+    {
+      "name": "Aguijón",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 3
+    },
+    {
+      "name": "Espiráculos",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 13
+    },
+    {
+      "name": "Ocelos",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 13
+    },
+    {
+      "name": "Hemolinfa",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 14
+    },
+    {
+      "name": "Halterios",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 14
+    },
+    {
+      "name": "Artrópodo",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 9
+    },
+    {
+      "name": "Invertebrado",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 6
+    },
+    {
+      "name": "Araña",
+      "facet": "Cuerpo y anatomía del insecto",
+      "known_at": 3
+    },
+    {
+      "name": "Oruga",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 2
+    },
+    {
+      "name": "Crisálida",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 5
+    },
+    {
+      "name": "Capullo",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 4
+    },
+    {
+      "name": "Pupa",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 8
+    },
+    {
+      "name": "Ninfa",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 11
+    },
+    {
+      "name": "Metamorfosis completa",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 10
+    },
+    {
+      "name": "Metamorfosis incompleta",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 11
+    },
+    {
+      "name": "Muda",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 9
+    },
+    {
+      "name": "Larva de mosquito",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 9
+    },
+    {
+      "name": "Cigarra periódica",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 13
+    },
+    {
+      "name": "Efímera",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 12
+    },
+    {
+      "name": "Ooteca",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 14
+    },
+    {
+      "name": "Imago",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 13
+    },
+    {
+      "name": "Huevos de mariposa",
+      "facet": "Metamorfosis y ciclos de vida",
+      "known_at": 4
+    },
+    {
+      "name": "Mariposa",
+      "facet": "Mariposas y polillas",
+      "known_at": 1
+    },
+    {
+      "name": "Polilla",
+      "facet": "Mariposas y polillas",
+      "known_at": 3
+    },
+    {
+      "name": "Morpho azul",
+      "facet": "Mariposas y polillas",
+      "known_at": 8
+    },
+    {
+      "name": "Polilla de la ropa",
+      "facet": "Mariposas y polillas",
+      "known_at": 6
+    },
+    {
+      "name": "Polilla atlas",
+      "facet": "Mariposas y polillas",
+      "known_at": 11
+    },
+    {
+      "name": "Escamas de las alas",
+      "facet": "Mariposas y polillas",
+      "known_at": 9
+    },
+    {
+      "name": "Mariposa de alas de cristal",
+      "facet": "Mariposas y polillas",
+      "known_at": 9
+    },
+    {
+      "name": "Polilla esfinge",
+      "facet": "Mariposas y polillas",
+      "known_at": 12
+    },
+    {
+      "name": "Lepidópteros",
+      "facet": "Mariposas y polillas",
+      "known_at": 12
+    },
+    {
+      "name": "Mariposa cola de golondrina",
+      "facet": "Mariposas y polillas",
+      "known_at": 10
+    },
+    {
+      "name": "Polilla luna",
+      "facet": "Mariposas y polillas",
+      "known_at": 11
+    },
+    {
+      "name": "Mariposa limonera",
+      "facet": "Mariposas y polillas",
+      "known_at": 10
+    },
+    {
+      "name": "Mariposa almirante rojo",
+      "facet": "Mariposas y polillas",
+      "known_at": 13
+    },
+    {
+      "name": "Mariposa pavo real",
+      "facet": "Mariposas y polillas",
+      "known_at": 10
+    },
+    {
+      "name": "Santuario de la mariposa monarca",
+      "facet": "Mariposas y polillas",
+      "known_at": 11
+    },
+    {
+      "name": "Avispa",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 2
+    },
+    {
+      "name": "Hormiga",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 1
+    },
+    {
+      "name": "Abeja reina",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 4
+    },
+    {
+      "name": "Zángano",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 8
+    },
+    {
+      "name": "Abeja obrera",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 5
+    },
+    {
+      "name": "Panal",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 2
+    },
+    {
+      "name": "Colmena",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 3
+    },
+    {
+      "name": "Abejorro",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 3
+    },
+    {
+      "name": "Hormiga reina",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 5
+    },
+    {
+      "name": "Danza de las abejas",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 9
+    },
+    {
+      "name": "Avispa asiática",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 12
+    },
+    {
+      "name": "Avispa del higo",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 14
+    },
+    {
+      "name": "Hormiguero",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 2
+    },
+    {
+      "name": "Himenópteros",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 13
+    },
+    {
+      "name": "Hormiga de fuego",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 9
+    },
+    {
+      "name": "Avispero",
+      "facet": "Abejas, avispas y hormigas",
+      "known_at": 4
+    },
+    {
+      "name": "Mariquita",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 1
+    },
+    {
+      "name": "Escarabajo",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 2
+    },
+    {
+      "name": "Ciervo volante",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 9
+    },
+    {
+      "name": "Escarabajo sagrado egipcio",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 11
+    },
+    {
+      "name": "Gorgojo",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 8
+    },
+    {
+      "name": "Cucarrón",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 6
+    },
+    {
+      "name": "Escarabajo bombardero",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 11
+    },
+    {
+      "name": "Coleópteros",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 12
+    },
+    {
+      "name": "Escarabajo de la patata",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 12
+    },
+    {
+      "name": "Mariquita de siete puntos",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 7
+    },
+    {
+      "name": "Escarabajo joya",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 11
+    },
+    {
+      "name": "Escarabajo buceador",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 12
+    },
+    {
+      "name": "Escarabajo tigre",
+      "facet": "Escarabajos y mariquitas",
+      "known_at": 12
+    },
+    {
+      "name": "Grillo",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 1
+    },
+    {
+      "name": "Mantis religiosa",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 4
+    },
+    {
+      "name": "Saltamontes",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 2
+    },
+    {
+      "name": "Chinche hedionda",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 10
+    },
+    {
+      "name": "Caballito del diablo",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 9
+    },
+    {
+      "name": "Tijereta",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 7
+    },
+    {
+      "name": "Zapatero",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 9
+    },
+    {
+      "name": "Mantis orquídea",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 9
+    },
+    {
+      "name": "Estridulación",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 13
+    },
+    {
+      "name": "Grillo topo",
+      "facet": "Grillos, libélulas, mantis y compañía",
+      "known_at": 12
+    },
+    {
+      "name": "Mosca",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 1
+    },
+    {
+      "name": "Zancudo",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 1
+    },
+    {
+      "name": "Piojo",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 3
+    },
+    {
+      "name": "Liendre",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 5
+    },
+    {
+      "name": "Chinche de cama",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 8
+    },
+    {
+      "name": "Pescadito de plata",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 9
+    },
+    {
+      "name": "Mosca de la fruta",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 6
+    },
+    {
+      "name": "Insecticida",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 4
+    },
+    {
+      "name": "Matamoscas",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 3
+    },
+    {
+      "name": "Repelente",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 6
+    },
+    {
+      "name": "Plaga",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 5
+    },
+    {
+      "name": "Fumigación",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 6
+    },
+    {
+      "name": "Garrapata",
+      "facet": "Insectos de la casa y plagas",
+      "known_at": 5
+    },
+    {
+      "name": "Dengue",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 6
+    },
+    {
+      "name": "Zika",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 10
+    },
+    {
+      "name": "Chikunguña",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 10
+    },
+    {
+      "name": "Fiebre amarilla",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 9
+    },
+    {
+      "name": "Mal de Chagas",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 11
+    },
+    {
+      "name": "Chinche pito",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 11
+    },
+    {
+      "name": "Aedes aegypti",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 10
+    },
+    {
+      "name": "Anopheles",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 13
+    },
+    {
+      "name": "Mosca tsetsé",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 11
+    },
+    {
+      "name": "Enfermedad del sueño",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 13
+    },
+    {
+      "name": "Peste negra",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 9
+    },
+    {
+      "name": "Leishmaniasis",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 12
+    },
+    {
+      "name": "Picadura de abeja",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 3
+    },
+    {
+      "name": "Choque anafiláctico",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 12
+    },
+    {
+      "name": "Roncha",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 3
+    },
+    {
+      "name": "Piquiña",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 4
+    },
+    {
+      "name": "Toldillo",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 5
+    },
+    {
+      "name": "Ronald Ross",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Finlay",
+      "facet": "Picaduras y enfermedades transmitidas",
+      "known_at": 14
+    },
+    {
+      "name": "Miel",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 1
+    },
+    {
+      "name": "Cera de abejas",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 5
+    },
+    {
+      "name": "Seda",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 6
+    },
+    {
+      "name": "Gusano de seda",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 5
+    },
+    {
+      "name": "Jalea real",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 10
+    },
+    {
+      "name": "Propóleo",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 11
+    },
+    {
+      "name": "Cochinilla del carmín",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 12
+    },
+    {
+      "name": "Goma laca",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 13
+    },
+    {
+      "name": "Harina de grillo",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 11
+    },
+    {
+      "name": "Apicultor",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 6
+    },
+    {
+      "name": "Control biológico",
+      "facet": "Productos y usos de los insectos",
+      "known_at": 12
+    },
+    {
+      "name": "Hormiga culona",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 6
+    },
+    {
+      "name": "Mariposa 88",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 11
+    },
+    {
+      "name": "Broca del café",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 11
+    },
+    {
+      "name": "Mariposario del Quindío",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 10
+    },
+    {
+      "name": "Hormiga conga",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 10
+    },
+    {
+      "name": "Mariposa Heliconius",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 13
+    },
+    {
+      "name": "Abeja africanizada",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 10
+    },
+    {
+      "name": "Machaca",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 10
+    },
+    {
+      "name": "Chapola",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 9
+    },
+    {
+      "name": "Gusano pollo",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 12
+    },
+    {
+      "name": "Selva del Chocó",
+      "facet": "Insectos de Colombia y el trópico",
+      "known_at": 10
+    },
+    {
+      "name": "Weta gigante",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 13
+    },
+    {
+      "name": "Meganeura",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 12
+    },
+    {
+      "name": "Avispa hada",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 14
+    },
+    {
+      "name": "Hormiga zombi",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 9
+    },
+    {
+      "name": "Hormiga trampa-mandíbula",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 13
+    },
+    {
+      "name": "Escarabajo acorazado diabólico",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 14
+    },
+    {
+      "name": "Supercolonia de hormigas",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 13
+    },
+    {
+      "name": "Enjambre",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 5
+    },
+    {
+      "name": "Polilla vampiro",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 13
+    },
+    {
+      "name": "Hormiga melífera",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 12
+    },
+    {
+      "name": "Termita reina",
+      "facet": "Récords y rarezas del mundo insecto",
+      "known_at": 11
+    },
+    {
+      "name": "Bichos: una aventura en miniatura",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Flik",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Hormigaz",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "La abeja Maya",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Gregorio Samsa",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Ant-Man",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Hollow Knight",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Mantis (Kung Fu Panda)",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Miraculous Ladybug",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Butterfree",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Scyther",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "La Cucaracha (canción)",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Mariposas amarillas de Mauricio Babilonia",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Ray (La princesa y el sapo)",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Volkswagen Escarabajo",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "The Beatles",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Abejas de Minecraft",
+      "facet": "Insectos en cine, cuentos y juegos",
+      "known_at": 4
+    }
+  ]
+}

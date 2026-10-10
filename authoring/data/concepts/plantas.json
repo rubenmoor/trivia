@@ -1,0 +1,922 @@
+{
+  "subcategory": "Plantas",
+  "facets": [
+    "Partes de la planta",
+    "Fotosíntesis y procesos vitales",
+    "Semillas, flores y polinización",
+    "Árboles del mundo",
+    "Frutas y verduras",
+    "Plantas de Colombia",
+    "Flores y plantas ornamentales",
+    "Plantas medicinales y aromáticas",
+    "Cultivos y agricultura",
+    "Plantas curiosas y extremas",
+    "Clasificación y tipos de plantas",
+    "Plantas en cuentos, cine y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hoja",
+      "facet": "Partes de la planta",
+      "known_at": 1
+    },
+    {
+      "name": "Flor",
+      "facet": "Partes de la planta",
+      "known_at": 1
+    },
+    {
+      "name": "Fruto",
+      "facet": "Partes de la planta",
+      "known_at": 2
+    },
+    {
+      "name": "Tronco",
+      "facet": "Partes de la planta",
+      "known_at": 1
+    },
+    {
+      "name": "Rama",
+      "facet": "Partes de la planta",
+      "known_at": 1
+    },
+    {
+      "name": "Corteza",
+      "facet": "Partes de la planta",
+      "known_at": 4
+    },
+    {
+      "name": "Savia",
+      "facet": "Partes de la planta",
+      "known_at": 7
+    },
+    {
+      "name": "Estoma",
+      "facet": "Partes de la planta",
+      "known_at": 11
+    },
+    {
+      "name": "Xilema",
+      "facet": "Partes de la planta",
+      "known_at": 12
+    },
+    {
+      "name": "Floema",
+      "facet": "Partes de la planta",
+      "known_at": 12
+    },
+    {
+      "name": "Zarcillo",
+      "facet": "Partes de la planta",
+      "known_at": 10
+    },
+    {
+      "name": "Yema",
+      "facet": "Partes de la planta",
+      "known_at": 8
+    },
+    {
+      "name": "Bulbo",
+      "facet": "Partes de la planta",
+      "known_at": 8
+    },
+    {
+      "name": "Anillos de crecimiento",
+      "facet": "Partes de la planta",
+      "known_at": 6
+    },
+    {
+      "name": "Pelos radicales",
+      "facet": "Partes de la planta",
+      "known_at": 10
+    },
+    {
+      "name": "Nervadura",
+      "facet": "Partes de la planta",
+      "known_at": 7
+    },
+    {
+      "name": "Raíz aérea",
+      "facet": "Partes de la planta",
+      "known_at": 9
+    },
+    {
+      "name": "Cloroplasto",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 9
+    },
+    {
+      "name": "Luz solar",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 1
+    },
+    {
+      "name": "Agua de riego",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 1
+    },
+    {
+      "name": "Glucosa",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 9
+    },
+    {
+      "name": "Almidón",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 9
+    },
+    {
+      "name": "Respiración celular",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 10
+    },
+    {
+      "name": "Transpiración vegetal",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 9
+    },
+    {
+      "name": "Fototropismo",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 11
+    },
+    {
+      "name": "Gravitropismo",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 13
+    },
+    {
+      "name": "Caída de las hojas en otoño",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 4
+    },
+    {
+      "name": "Ciclo del carbono",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 11
+    },
+    {
+      "name": "Nutrientes del suelo",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 6
+    },
+    {
+      "name": "Fotoperiodismo",
+      "facet": "Fotosíntesis y procesos vitales",
+      "known_at": 14
+    },
+    {
+      "name": "Polen",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 3
+    },
+    {
+      "name": "Abeja",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 1
+    },
+    {
+      "name": "Colibrí",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 3
+    },
+    {
+      "name": "Néctar",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 4
+    },
+    {
+      "name": "Pétalo",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 3
+    },
+    {
+      "name": "Sépalo",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 10
+    },
+    {
+      "name": "Estambre",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 9
+    },
+    {
+      "name": "Pistilo",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 9
+    },
+    {
+      "name": "Ovario de la flor",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 11
+    },
+    {
+      "name": "Dispersión por el viento",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 7
+    },
+    {
+      "name": "Sámara",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 10
+    },
+    {
+      "name": "Cadillo",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 8
+    },
+    {
+      "name": "Cotiledón",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 11
+    },
+    {
+      "name": "Murciélago polinizador",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 10
+    },
+    {
+      "name": "Polinización cruzada",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 12
+    },
+    {
+      "name": "Piña de pino",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 4
+    },
+    {
+      "name": "Bóveda Global de Semillas de Svalbard",
+      "facet": "Semillas, flores y polinización",
+      "known_at": 13
+    },
+    {
+      "name": "Roble",
+      "facet": "Árboles del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Sauce llorón",
+      "facet": "Árboles del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Palmera",
+      "facet": "Árboles del mundo",
+      "known_at": 1
+    },
+    {
+      "name": "Arce",
+      "facet": "Árboles del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Olivo",
+      "facet": "Árboles del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Cedro",
+      "facet": "Árboles del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Ginkgo",
+      "facet": "Árboles del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Drago",
+      "facet": "Árboles del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Cerezo japonés",
+      "facet": "Árboles del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Matusalén",
+      "facet": "Árboles del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Árbol del caucho",
+      "facet": "Árboles del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Ceiba",
+      "facet": "Árboles del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Abedul",
+      "facet": "Árboles del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Ébano",
+      "facet": "Árboles del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Manzana",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Banano",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Fresa",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Piña",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Mango",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Sandía",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Limón",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Naranja",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Uva",
+      "facet": "Frutas y verduras",
+      "known_at": 1
+    },
+    {
+      "name": "Coco",
+      "facet": "Frutas y verduras",
+      "known_at": 2
+    },
+    {
+      "name": "Durián",
+      "facet": "Frutas y verduras",
+      "known_at": 13
+    },
+    {
+      "name": "Palma de cera",
+      "facet": "Plantas de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Cattleya trianae",
+      "facet": "Plantas de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Guadua",
+      "facet": "Plantas de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Lulo",
+      "facet": "Plantas de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Maracuyá",
+      "facet": "Plantas de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Granadilla",
+      "facet": "Plantas de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Uchuva",
+      "facet": "Plantas de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Borojó",
+      "facet": "Plantas de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Guanábana",
+      "facet": "Plantas de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Feijoa",
+      "facet": "Plantas de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Curuba",
+      "facet": "Plantas de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Guayaba",
+      "facet": "Plantas de Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Mamoncillo",
+      "facet": "Plantas de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Tomate de árbol",
+      "facet": "Plantas de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Rosa",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 1
+    },
+    {
+      "name": "Girasol",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 1
+    },
+    {
+      "name": "Tulipán",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 3
+    },
+    {
+      "name": "Orquídea",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 5
+    },
+    {
+      "name": "Clavel",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 6
+    },
+    {
+      "name": "Lirio",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 7
+    },
+    {
+      "name": "Hortensia",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 9
+    },
+    {
+      "name": "Bonsái",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 6
+    },
+    {
+      "name": "Crisantemo",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 10
+    },
+    {
+      "name": "Poinsettia",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Begonia",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 12
+    },
+    {
+      "name": "Violeta",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 7
+    },
+    {
+      "name": "Jazmín",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 8
+    },
+    {
+      "name": "Bugambilia",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 9
+    },
+    {
+      "name": "Anturio",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 10
+    },
+    {
+      "name": "Heliconia",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 10
+    },
+    {
+      "name": "Dalia",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 11
+    },
+    {
+      "name": "Amapola",
+      "facet": "Flores y plantas ornamentales",
+      "known_at": 8
+    },
+    {
+      "name": "Sábila",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 4
+    },
+    {
+      "name": "Manzanilla",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 4
+    },
+    {
+      "name": "Menta",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 3
+    },
+    {
+      "name": "Lavanda",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 5
+    },
+    {
+      "name": "Caléndula",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Valeriana",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Quina",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 13
+    },
+    {
+      "name": "Cidrón",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 11
+    },
+    {
+      "name": "Ruda",
+      "facet": "Plantas medicinales y aromáticas",
+      "known_at": 11
+    },
+    {
+      "name": "Café",
+      "facet": "Cultivos y agricultura",
+      "known_at": 1
+    },
+    {
+      "name": "Trigo",
+      "facet": "Cultivos y agricultura",
+      "known_at": 4
+    },
+    {
+      "name": "Caña de azúcar",
+      "facet": "Cultivos y agricultura",
+      "known_at": 4
+    },
+    {
+      "name": "Algodón",
+      "facet": "Cultivos y agricultura",
+      "known_at": 5
+    },
+    {
+      "name": "Cebada",
+      "facet": "Cultivos y agricultura",
+      "known_at": 10
+    },
+    {
+      "name": "Arado",
+      "facet": "Cultivos y agricultura",
+      "known_at": 7
+    },
+    {
+      "name": "Tractor",
+      "facet": "Cultivos y agricultura",
+      "known_at": 2
+    },
+    {
+      "name": "Monocultivo",
+      "facet": "Cultivos y agricultura",
+      "known_at": 12
+    },
+    {
+      "name": "Revolución verde",
+      "facet": "Cultivos y agricultura",
+      "known_at": 14
+    },
+    {
+      "name": "Cosecha",
+      "facet": "Cultivos y agricultura",
+      "known_at": 3
+    },
+    {
+      "name": "Venus atrapamoscas",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 4
+    },
+    {
+      "name": "Rafflesia",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 12
+    },
+    {
+      "name": "Dormidera",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 8
+    },
+    {
+      "name": "Nepenthes",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 10
+    },
+    {
+      "name": "Drosera",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 12
+    },
+    {
+      "name": "Lithops",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 12
+    },
+    {
+      "name": "Hiedra venenosa",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 8
+    },
+    {
+      "name": "Puya raimondii",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 13
+    },
+    {
+      "name": "Higuerón estrangulador",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 13
+    },
+    {
+      "name": "Bromelia",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 10
+    },
+    {
+      "name": "Helecho",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 6
+    },
+    {
+      "name": "Algas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 6
+    },
+    {
+      "name": "Gimnospermas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Angiospermas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Monocotiledóneas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 12
+    },
+    {
+      "name": "Dicotiledóneas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 12
+    },
+    {
+      "name": "Plantas carnívoras",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 4
+    },
+    {
+      "name": "Suculentas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 7
+    },
+    {
+      "name": "Coníferas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 9
+    },
+    {
+      "name": "Plantas trepadoras",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 6
+    },
+    {
+      "name": "Hoja caduca",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 9
+    },
+    {
+      "name": "Hoja perenne",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 9
+    },
+    {
+      "name": "Hierba",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 3
+    },
+    {
+      "name": "Arbusto",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 4
+    },
+    {
+      "name": "Plantas acuáticas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 5
+    },
+    {
+      "name": "Epífitas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Planta parásita",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 10
+    },
+    {
+      "name": "Reino vegetal",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 8
+    },
+    {
+      "name": "Carlos Linneo",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 12
+    },
+    {
+      "name": "Nombre científico",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 10
+    },
+    {
+      "name": "Gramíneas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Leguminosas",
+      "facet": "Clasificación y tipos de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Plantas contra Zombis",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Planta Piraña",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Groot",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Audrey II",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Árbol de las Almas",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Rosa encantada de La Bella y la Bestia",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Abuela Sauce",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Ents",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Sauce Boxeador",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Mandrágora",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Bulbasaur",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Flor dorada de Enredados",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Árboles de trúfula",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Gran Árbol Deku",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Flor de fuego",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Isabela Madrigal",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Planta de WALL·E",
+      "facet": "Plantas en cuentos, cine y juegos",
+      "known_at": 6
+    }
+  ]
+}

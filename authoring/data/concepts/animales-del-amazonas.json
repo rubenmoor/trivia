@@ -1,0 +1,824 @@
+{
+  "subcategory": "Animales del Amazonas",
+  "facets": [
+    "Primates amazónicos",
+    "Felinos y mamíferos terrestres",
+    "Mamíferos del río",
+    "Aves de la selva",
+    "Reptiles y caimanes",
+    "Ranas y anfibios venenosos",
+    "Peces del río Amazonas",
+    "Insectos, arañas y hormigas",
+    "Adaptaciones y defensas animales",
+    "Animales en leyendas y películas",
+    "Conservación y especies amenazadas",
+    "Naturalistas y descubrimientos amazónicos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mono aullador",
+      "facet": "Primates amazónicos",
+      "known_at": 4
+    },
+    {
+      "name": "Mono ardilla",
+      "facet": "Primates amazónicos",
+      "known_at": 7
+    },
+    {
+      "name": "Tití pigmeo",
+      "facet": "Primates amazónicos",
+      "known_at": 7
+    },
+    {
+      "name": "Uakarí calvo",
+      "facet": "Primates amazónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Mono nocturno",
+      "facet": "Primates amazónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Tamarino emperador",
+      "facet": "Primates amazónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Saki cariblanco",
+      "facet": "Primates amazónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Mono lanudo",
+      "facet": "Primates amazónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Tití de Goeldi",
+      "facet": "Primates amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Mono tocón",
+      "facet": "Primates amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Tamarino de manto negro",
+      "facet": "Primates amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Mono maicero",
+      "facet": "Primates amazónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Mono churuco",
+      "facet": "Primates amazónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Margay",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 12
+    },
+    {
+      "name": "Jaguarundi",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 12
+    },
+    {
+      "name": "Danta amazónica",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 6
+    },
+    {
+      "name": "Pecarí de collar",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 9
+    },
+    {
+      "name": "Oso hormiguero gigante",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 3
+    },
+    {
+      "name": "Perezoso de tres dedos",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 2
+    },
+    {
+      "name": "Armadillo gigante",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 5
+    },
+    {
+      "name": "Boruga",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 9
+    },
+    {
+      "name": "Ñeque",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 10
+    },
+    {
+      "name": "Perro de orejas cortas",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 14
+    },
+    {
+      "name": "Tamandúa",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 11
+    },
+    {
+      "name": "Venado colorado",
+      "facet": "Felinos y mamíferos terrestres",
+      "known_at": 10
+    },
+    {
+      "name": "Tucuxi",
+      "facet": "Mamíferos del río",
+      "known_at": 13
+    },
+    {
+      "name": "Manatí amazónico",
+      "facet": "Mamíferos del río",
+      "known_at": 5
+    },
+    {
+      "name": "Nutria neotropical",
+      "facet": "Mamíferos del río",
+      "known_at": 10
+    },
+    {
+      "name": "Zarigüeya de agua",
+      "facet": "Mamíferos del río",
+      "known_at": 14
+    },
+    {
+      "name": "Murciélago pescador",
+      "facet": "Mamíferos del río",
+      "known_at": 11
+    },
+    {
+      "name": "Delfín del Araguaia",
+      "facet": "Mamíferos del río",
+      "known_at": 15
+    },
+    {
+      "name": "Delfín boliviano",
+      "facet": "Mamíferos del río",
+      "known_at": 15
+    },
+    {
+      "name": "Delfín de río",
+      "facet": "Mamíferos del río",
+      "known_at": 5
+    },
+    {
+      "name": "Rata espinosa de agua",
+      "facet": "Mamíferos del río",
+      "known_at": 15
+    },
+    {
+      "name": "Guacamaya roja",
+      "facet": "Aves de la selva",
+      "known_at": 2
+    },
+    {
+      "name": "Guacamaya azul y amarilla",
+      "facet": "Aves de la selva",
+      "known_at": 4
+    },
+    {
+      "name": "Tucán",
+      "facet": "Aves de la selva",
+      "known_at": 1
+    },
+    {
+      "name": "Hoatzín",
+      "facet": "Aves de la selva",
+      "known_at": 12
+    },
+    {
+      "name": "Gallito de roca",
+      "facet": "Aves de la selva",
+      "known_at": 10
+    },
+    {
+      "name": "Loro amazónico",
+      "facet": "Aves de la selva",
+      "known_at": 3
+    },
+    {
+      "name": "Garza real",
+      "facet": "Aves de la selva",
+      "known_at": 6
+    },
+    {
+      "name": "Jabirú",
+      "facet": "Aves de la selva",
+      "known_at": 12
+    },
+    {
+      "name": "Piha gritona",
+      "facet": "Aves de la selva",
+      "known_at": 14
+    },
+    {
+      "name": "Paujil",
+      "facet": "Aves de la selva",
+      "known_at": 12
+    },
+    {
+      "name": "Oropéndola",
+      "facet": "Aves de la selva",
+      "known_at": 9
+    },
+    {
+      "name": "Rey de los gallinazos",
+      "facet": "Aves de la selva",
+      "known_at": 10
+    },
+    {
+      "name": "Tángara",
+      "facet": "Aves de la selva",
+      "known_at": 11
+    },
+    {
+      "name": "Guácharo",
+      "facet": "Aves de la selva",
+      "known_at": 12
+    },
+    {
+      "name": "Hormiguero (ave)",
+      "facet": "Aves de la selva",
+      "known_at": 14
+    },
+    {
+      "name": "Anaconda verde",
+      "facet": "Reptiles y caimanes",
+      "known_at": 2
+    },
+    {
+      "name": "Charapa",
+      "facet": "Reptiles y caimanes",
+      "known_at": 10
+    },
+    {
+      "name": "Mapaná",
+      "facet": "Reptiles y caimanes",
+      "known_at": 10
+    },
+    {
+      "name": "Verrugosa",
+      "facet": "Reptiles y caimanes",
+      "known_at": 12
+    },
+    {
+      "name": "Falsa coral",
+      "facet": "Reptiles y caimanes",
+      "known_at": 9
+    },
+    {
+      "name": "Boa esmeralda",
+      "facet": "Reptiles y caimanes",
+      "known_at": 9
+    },
+    {
+      "name": "Taricaya",
+      "facet": "Reptiles y caimanes",
+      "known_at": 13
+    },
+    {
+      "name": "Rana dardo venenosa",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 4
+    },
+    {
+      "name": "Rana kambó",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 14
+    },
+    {
+      "name": "Sapo de caña",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 8
+    },
+    {
+      "name": "Rana de cristal",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 6
+    },
+    {
+      "name": "Rana mono",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 12
+    },
+    {
+      "name": "Rana cornuda",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 10
+    },
+    {
+      "name": "Sapo pipa",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 13
+    },
+    {
+      "name": "Rana arborícola",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 5
+    },
+    {
+      "name": "Cecilia",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 13
+    },
+    {
+      "name": "Renacuajo",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 2
+    },
+    {
+      "name": "Rana dardo de tres rayas",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 13
+    },
+    {
+      "name": "Batracotoxina",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 14
+    },
+    {
+      "name": "Rana payaso",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 13,
+      "retired": "unaskable: The clown tree frog is obscure, and a clear recording of its call is unlikely on Commons."
+    },
+    {
+      "name": "Rana lechera",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 13
+    },
+    {
+      "name": "Cerbatana",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 8
+    },
+    {
+      "name": "Salamandra amazónica",
+      "facet": "Ranas y anfibios venenosos",
+      "known_at": 12,
+      "retired": "unaskable: The Amazon salamander is obscure, and the options only allow trivial counting or forced analogies."
+    },
+    {
+      "name": "Pirarucú",
+      "facet": "Peces del río Amazonas",
+      "known_at": 7
+    },
+    {
+      "name": "Candirú",
+      "facet": "Peces del río Amazonas",
+      "known_at": 12
+    },
+    {
+      "name": "Bagre dorado",
+      "facet": "Peces del río Amazonas",
+      "known_at": 12
+    },
+    {
+      "name": "Arawana",
+      "facet": "Peces del río Amazonas",
+      "known_at": 9
+    },
+    {
+      "name": "Pez disco",
+      "facet": "Peces del río Amazonas",
+      "known_at": 8
+    },
+    {
+      "name": "Escalar",
+      "facet": "Peces del río Amazonas",
+      "known_at": 7
+    },
+    {
+      "name": "Neón tetra",
+      "facet": "Peces del río Amazonas",
+      "known_at": 6
+    },
+    {
+      "name": "Raya de río",
+      "facet": "Peces del río Amazonas",
+      "known_at": 7
+    },
+    {
+      "name": "Pacú",
+      "facet": "Peces del río Amazonas",
+      "known_at": 11
+    },
+    {
+      "name": "Cachama",
+      "facet": "Peces del río Amazonas",
+      "known_at": 8
+    },
+    {
+      "name": "Piraíba",
+      "facet": "Peces del río Amazonas",
+      "known_at": 13
+    },
+    {
+      "name": "Cucha",
+      "facet": "Peces del río Amazonas",
+      "known_at": 9
+    },
+    {
+      "name": "Pavón",
+      "facet": "Peces del río Amazonas",
+      "known_at": 10
+    },
+    {
+      "name": "Pez hacha",
+      "facet": "Peces del río Amazonas",
+      "known_at": 12
+    },
+    {
+      "name": "Bocachico",
+      "facet": "Peces del río Amazonas",
+      "known_at": 9
+    },
+    {
+      "name": "Pez pulmonado sudamericano",
+      "facet": "Peces del río Amazonas",
+      "known_at": 13
+    },
+    {
+      "name": "Hormiga arriera",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 4
+    },
+    {
+      "name": "Hormiga legionaria",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 8
+    },
+    {
+      "name": "Mariposa morfo azul",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 6
+    },
+    {
+      "name": "Escarabajo Hércules",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 6
+    },
+    {
+      "name": "Tarántula Goliat",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 5
+    },
+    {
+      "name": "Comején",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 5
+    },
+    {
+      "name": "Mosquito Anopheles",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 10
+    },
+    {
+      "name": "Luciérnaga",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 1
+    },
+    {
+      "name": "Escarabajo titán",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 10
+    },
+    {
+      "name": "Pito (chinche)",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 11
+    },
+    {
+      "name": "Abeja angelita",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 11
+    },
+    {
+      "name": "Insecto hoja",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 4
+    },
+    {
+      "name": "Araña errante brasileña",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 12
+    },
+    {
+      "name": "Mariposa búho",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 8
+    },
+    {
+      "name": "Cigarra",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 5
+    },
+    {
+      "name": "Mariposa de cristal",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 9
+    },
+    {
+      "name": "Escarabajo arlequín",
+      "facet": "Insectos, arañas y hormigas",
+      "known_at": 13
+    },
+    {
+      "name": "Colores de advertencia",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 6
+    },
+    {
+      "name": "Cola prensil",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 7
+    },
+    {
+      "name": "Descarga eléctrica",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 4
+    },
+    {
+      "name": "Respiración de aire en peces",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 11
+    },
+    {
+      "name": "Vida nocturna",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 3
+    },
+    {
+      "name": "Metamorfosis",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 5
+    },
+    {
+      "name": "Fosetas termosensibles",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 13
+    },
+    {
+      "name": "Algas en el pelaje del perezoso",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 10
+    },
+    {
+      "name": "Saladero de arcilla",
+      "facet": "Adaptaciones y defensas animales",
+      "known_at": 13
+    },
+    {
+      "name": "Leyenda del delfín rosado",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 9
+    },
+    {
+      "name": "Curupira",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Mapinguarí",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Chullachaqui",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Anaconda ancestral",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Las amazonas (guerreras)",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Río 2",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 3
+    },
+    {
+      "name": "Blu",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 3
+    },
+    {
+      "name": "El abrazo de la serpiente",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Madrigal",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Botas (Dora la exploradora)",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Kevin (Up)",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 3
+    },
+    {
+      "name": "Jaguar en la mitología indígena",
+      "facet": "Animales en leyendas y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Tráfico de fauna",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 8
+    },
+    {
+      "name": "Parque Nacional Amacayacu",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Parque Nacional Chiribiquete",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 11
+    },
+    {
+      "name": "Guacamaya de Spix",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 10
+    },
+    {
+      "name": "Fundación Omacha",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Mercurio en los ríos",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Puerto Nariño",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 11
+    },
+    {
+      "name": "CITES",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 14
+    },
+    {
+      "name": "Reintroducción de especies",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 10
+    },
+    {
+      "name": "Incendios forestales",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 5
+    },
+    {
+      "name": "Corredor biológico",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 12
+    },
+    {
+      "name": "Ecoturismo",
+      "facet": "Conservación y especies amenazadas",
+      "known_at": 9
+    },
+    {
+      "name": "Alfred Russel Wallace",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Henry Walter Bates",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Evans Schultes",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Aimé Bonpland",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Charles-Marie de La Condamine",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Theodore Roosevelt",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Cândido Rondon",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Percy Fawcett",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Spruce",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Johann Baptist von Spix",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Gaspar de Carvajal",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Margaret Mee",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Mimetismo batesiano",
+      "facet": "Naturalistas y descubrimientos amazónicos",
+      "known_at": 14
+    }
+  ]
+}

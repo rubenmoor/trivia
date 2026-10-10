@@ -1,0 +1,572 @@
+{
+  "subcategory": "Medio ambiente",
+  "facets": [
+    "Reciclaje y manejo de basuras",
+    "Contaminación del aire, agua y suelo",
+    "Cambio climático y efecto invernadero",
+    "Energías renovables y no renovables",
+    "Ecosistemas y biodiversidad",
+    "Especies en peligro y conservación",
+    "Parques naturales y áreas protegidas",
+    "Agua: ciclo, ríos y cuidado",
+    "Deforestación y suelos",
+    "Ecología: cadenas tróficas y conceptos",
+    "Ambientalistas, acuerdos y fechas verdes",
+    "Medio ambiente en películas y cultura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 2,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Caneca de reciclaje",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 3
+    },
+    {
+      "name": "Papel reciclado",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 3
+    },
+    {
+      "name": "Pila",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 4
+    },
+    {
+      "name": "Residuos orgánicos",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 5
+    },
+    {
+      "name": "Reciclador",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 6
+    },
+    {
+      "name": "Código de colores de las canecas",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 7
+    },
+    {
+      "name": "Botella PET",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 8
+    },
+    {
+      "name": "Basura electrónica",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 8
+    },
+    {
+      "name": "Lombricultura",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 10
+    },
+    {
+      "name": "Incineración de basuras",
+      "facet": "Reciclaje y manejo de basuras",
+      "known_at": 10
+    },
+    {
+      "name": "Humo de los carros",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 3
+    },
+    {
+      "name": "Chimenea de fábrica",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 3
+    },
+    {
+      "name": "Contaminación acústica",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 7
+    },
+    {
+      "name": "Capa de ozono",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 7
+    },
+    {
+      "name": "Aguas residuales",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 8
+    },
+    {
+      "name": "Plaguicidas",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 9
+    },
+    {
+      "name": "Monóxido de carbono",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 10
+    },
+    {
+      "name": "Accidente de Chernóbil",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 10
+    },
+    {
+      "name": "Material particulado",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 12
+    },
+    {
+      "name": "Eutrofización",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 13
+    },
+    {
+      "name": "Bioacumulación",
+      "facet": "Contaminación del aire, agua y suelo",
+      "known_at": 13
+    },
+    {
+      "name": "Deshielo de los polos",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 4
+    },
+    {
+      "name": "Carbono neutral",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 11
+    },
+    {
+      "name": "Refugiados climáticos",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 12
+    },
+    {
+      "name": "Curva de Keeling",
+      "facet": "Cambio climático y efecto invernadero",
+      "known_at": 15
+    },
+    {
+      "name": "Carro eléctrico",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 2
+    },
+    {
+      "name": "Energía eólica",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 3
+    },
+    {
+      "name": "Bombillo LED",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 4
+    },
+    {
+      "name": "Gas natural",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 5
+    },
+    {
+      "name": "Energía hidroeléctrica",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 6
+    },
+    {
+      "name": "Energía nuclear",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 7
+    },
+    {
+      "name": "Turbina",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 9
+    },
+    {
+      "name": "Biocombustible",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 10
+    },
+    {
+      "name": "Uranio",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 10
+    },
+    {
+      "name": "Etanol",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 11
+    },
+    {
+      "name": "Hidrógeno verde",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 12
+    },
+    {
+      "name": "Fracking",
+      "facet": "Energías renovables y no renovables",
+      "known_at": 12
+    },
+    {
+      "name": "Hábitat",
+      "facet": "Ecosistemas y biodiversidad",
+      "known_at": 5
+    },
+    {
+      "name": "País megadiverso",
+      "facet": "Ecosistemas y biodiversidad",
+      "known_at": 11
+    },
+    {
+      "name": "Punto caliente de biodiversidad",
+      "facet": "Ecosistemas y biodiversidad",
+      "known_at": 13
+    },
+    {
+      "name": "Extinción",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 4
+    },
+    {
+      "name": "Tráfico de fauna silvestre",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Centro de rescate de fauna",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Paloma migratoria americana",
+      "facet": "Especies en peligro y conservación",
+      "known_at": 15
+    },
+    {
+      "name": "Parque nacional",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 4
+    },
+    {
+      "name": "Guardaparques",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Yellowstone",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 8
+    },
+    {
+      "name": "Serengueti",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 9
+    },
+    {
+      "name": "Santuario de fauna y flora",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 9
+    },
+    {
+      "name": "Parque Los Nevados",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 10
+    },
+    {
+      "name": "Torres del Paine",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 11
+    },
+    {
+      "name": "Patrimonio natural de la UNESCO",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 12
+    },
+    {
+      "name": "Reserva de la biosfera",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 12
+    },
+    {
+      "name": "Parque Kruger",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 12
+    },
+    {
+      "name": "Parque Banff",
+      "facet": "Parques naturales y áreas protegidas",
+      "known_at": 13
+    },
+    {
+      "name": "Llave goteando",
+      "facet": "Agua: ciclo, ríos y cuidado",
+      "known_at": 2
+    },
+    {
+      "name": "Nacimiento de un río",
+      "facet": "Agua: ciclo, ríos y cuidado",
+      "known_at": 5
+    },
+    {
+      "name": "Huella hídrica",
+      "facet": "Agua: ciclo, ríos y cuidado",
+      "known_at": 13
+    },
+    {
+      "name": "Tala de árboles",
+      "facet": "Deforestación y suelos",
+      "known_at": 3
+    },
+    {
+      "name": "Deforestación",
+      "facet": "Deforestación y suelos",
+      "known_at": 4
+    },
+    {
+      "name": "Quema de bosques",
+      "facet": "Deforestación y suelos",
+      "known_at": 4
+    },
+    {
+      "name": "Suelo fértil",
+      "facet": "Deforestación y suelos",
+      "known_at": 5
+    },
+    {
+      "name": "Minería ilegal",
+      "facet": "Deforestación y suelos",
+      "known_at": 9
+    },
+    {
+      "name": "Ganadería extensiva",
+      "facet": "Deforestación y suelos",
+      "known_at": 10
+    },
+    {
+      "name": "Palma de aceite",
+      "facet": "Deforestación y suelos",
+      "known_at": 10
+    },
+    {
+      "name": "Agricultura de tala y quema",
+      "facet": "Deforestación y suelos",
+      "known_at": 12
+    },
+    {
+      "name": "Bosque primario",
+      "facet": "Deforestación y suelos",
+      "known_at": 12
+    },
+    {
+      "name": "Arco de deforestación amazónica",
+      "facet": "Deforestación y suelos",
+      "known_at": 14
+    },
+    {
+      "name": "Depredador",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 5
+    },
+    {
+      "name": "Presa",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 5
+    },
+    {
+      "name": "Productor",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 6
+    },
+    {
+      "name": "Carroñero",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 6
+    },
+    {
+      "name": "Consumidor",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 7
+    },
+    {
+      "name": "Descomponedor",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 7
+    },
+    {
+      "name": "Superdepredador",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 8
+    },
+    {
+      "name": "Pirámide trófica",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 9
+    },
+    {
+      "name": "Simbiosis",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 10
+    },
+    {
+      "name": "Parasitismo",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 10
+    },
+    {
+      "name": "Red trófica",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 10
+    },
+    {
+      "name": "Mutualismo",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 11
+    },
+    {
+      "name": "Nicho ecológico",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 12
+    },
+    {
+      "name": "Especie clave",
+      "facet": "Ecología: cadenas tróficas y conceptos",
+      "known_at": 13
+    },
+    {
+      "name": "Día Mundial del Agua",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 7
+    },
+    {
+      "name": "WWF",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 8
+    },
+    {
+      "name": "David Attenborough",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 9
+    },
+    {
+      "name": "Cumbre de la Tierra de Río",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 13
+    },
+    {
+      "name": "Conferencia de las Partes (COP)",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 13
+    },
+    {
+      "name": "Rachel Carson",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 14
+    },
+    {
+      "name": "Chico Mendes",
+      "facet": "Ambientalistas, acuerdos y fechas verdes",
+      "known_at": 14
+    },
+    {
+      "name": "Happy Feet",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Avatar",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Bee Movie",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Colores en el viento",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 9
+    },
+    {
+      "name": "Planeta Tierra (documental)",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 9
+    },
+    {
+      "name": "Nuestro planeta (documental)",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 9
+    },
+    {
+      "name": "La princesa Mononoke",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "No mires arriba",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Una verdad incómoda",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Nausicaä del Valle del Viento",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Erin Brockovich",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Earth Song",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "FernGully",
+      "facet": "Medio ambiente en películas y cultura",
+      "known_at": 14
+    }
+  ]
+}

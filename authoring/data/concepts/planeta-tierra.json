@@ -1,0 +1,472 @@
+{
+  "subcategory": "Planeta Tierra",
+  "facets": [
+    "Volcanes y terremotos",
+    "Montañas, valles y relieve",
+    "Ríos, lagos y océanos",
+    "Clima y fenómenos del tiempo",
+    "Rocas, minerales y suelos",
+    "Capas y estructura interna",
+    "Ecosistemas y biomas",
+    "Desiertos, glaciares y polos",
+    "Rotación, traslación y estaciones",
+    "Mapas, coordenadas y orientación",
+    "Contaminación y cuidado ambiental",
+    "Eras geológicas y fósiles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 3,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Epicentro",
+      "facet": "Volcanes y terremotos",
+      "known_at": 8
+    },
+    {
+      "name": "Réplica sísmica",
+      "facet": "Volcanes y terremotos",
+      "known_at": 8
+    },
+    {
+      "name": "Montaña",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 1
+    },
+    {
+      "name": "Cordillera de los Andes",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 5
+    },
+    {
+      "name": "Valle",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 3
+    },
+    {
+      "name": "Meseta",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 8
+    },
+    {
+      "name": "Llanura",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 6
+    },
+    {
+      "name": "Colina",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 3
+    },
+    {
+      "name": "Gran Cañón del Colorado",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 6
+    },
+    {
+      "name": "Altiplano cundiboyacense",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 11
+    },
+    {
+      "name": "Mont Blanc",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 10
+    },
+    {
+      "name": "Denali",
+      "facet": "Montañas, valles y relieve",
+      "known_at": 13
+    },
+    {
+      "name": "Planeta azul",
+      "facet": "Ríos, lagos y océanos",
+      "known_at": 3
+    },
+    {
+      "name": "Laguna de Guatavita",
+      "facet": "Ríos, lagos y océanos",
+      "known_at": 10
+    },
+    {
+      "name": "Escala de Beaufort",
+      "facet": "Clima y fenómenos del tiempo",
+      "known_at": 14
+    },
+    {
+      "name": "Roca",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 1
+    },
+    {
+      "name": "Diamante",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 2
+    },
+    {
+      "name": "Oro",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 1
+    },
+    {
+      "name": "Esmeralda",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 5
+    },
+    {
+      "name": "Cuarzo",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 7
+    },
+    {
+      "name": "Granito",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 8
+    },
+    {
+      "name": "Mármol",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 7
+    },
+    {
+      "name": "Carbón",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 4
+    },
+    {
+      "name": "Sal de roca",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 5
+    },
+    {
+      "name": "Escala de Mohs",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 11
+    },
+    {
+      "name": "Roca sedimentaria",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 10
+    },
+    {
+      "name": "Roca metamórfica",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 10
+    },
+    {
+      "name": "Arcilla",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 5
+    },
+    {
+      "name": "Erosión",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 8
+    },
+    {
+      "name": "Estalactita",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 7
+    },
+    {
+      "name": "Grafito",
+      "facet": "Rocas, minerales y suelos",
+      "known_at": 11
+    },
+    {
+      "name": "Corteza terrestre",
+      "facet": "Capas y estructura interna",
+      "known_at": 5
+    },
+    {
+      "name": "Núcleo externo",
+      "facet": "Capas y estructura interna",
+      "known_at": 10
+    },
+    {
+      "name": "Núcleo interno",
+      "facet": "Capas y estructura interna",
+      "known_at": 9
+    },
+    {
+      "name": "Litosfera",
+      "facet": "Capas y estructura interna",
+      "known_at": 10
+    },
+    {
+      "name": "Astenosfera",
+      "facet": "Capas y estructura interna",
+      "known_at": 12
+    },
+    {
+      "name": "Campo magnético terrestre",
+      "facet": "Capas y estructura interna",
+      "known_at": 9
+    },
+    {
+      "name": "Discontinuidad de Mohorovičić",
+      "facet": "Capas y estructura interna",
+      "known_at": 14
+    },
+    {
+      "name": "Biosfera",
+      "facet": "Capas y estructura interna",
+      "known_at": 8
+    },
+    {
+      "name": "Selva amazónica",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 3
+    },
+    {
+      "name": "Bosque de niebla",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 9
+    },
+    {
+      "name": "Llanos Orientales",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 5
+    },
+    {
+      "name": "Cadena alimenticia",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 5
+    },
+    {
+      "name": "Pradera",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 4
+    },
+    {
+      "name": "Humedal",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 8
+    },
+    {
+      "name": "Bioma",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 10
+    },
+    {
+      "name": "Especie endémica",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 10
+    },
+    {
+      "name": "Ecosistema",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 6
+    },
+    {
+      "name": "Biodiversidad",
+      "facet": "Ecosistemas y biomas",
+      "known_at": 7
+    },
+    {
+      "name": "Desierto de La Guajira",
+      "facet": "Desiertos, glaciares y polos",
+      "known_at": 7
+    },
+    {
+      "name": "Rotación terrestre",
+      "facet": "Rotación, traslación y estaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Traslación terrestre",
+      "facet": "Rotación, traslación y estaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Eje terrestre",
+      "facet": "Rotación, traslación y estaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Día y noche",
+      "facet": "Rotación, traslación y estaciones",
+      "known_at": 1
+    },
+    {
+      "name": "Perihelio",
+      "facet": "Rotación, traslación y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Precesión de los equinoccios",
+      "facet": "Rotación, traslación y estaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Mapa",
+      "facet": "Mapas, coordenadas y orientación",
+      "known_at": 1
+    },
+    {
+      "name": "Curvas de nivel",
+      "facet": "Mapas, coordenadas y orientación",
+      "known_at": 12
+    },
+    {
+      "name": "Continente",
+      "facet": "Mapas, coordenadas y orientación",
+      "known_at": 3
+    },
+    {
+      "name": "Cartógrafo",
+      "facet": "Mapas, coordenadas y orientación",
+      "known_at": 10
+    },
+    {
+      "name": "Mapamundi",
+      "facet": "Mapas, coordenadas y orientación",
+      "known_at": 4
+    },
+    {
+      "name": "Cambio climático",
+      "facet": "Contaminación y cuidado ambiental",
+      "known_at": 6
+    },
+    {
+      "name": "Energía eólica",
+      "facet": "Contaminación y cuidado ambiental",
+      "known_at": 7
+    },
+    {
+      "name": "Compostaje",
+      "facet": "Contaminación y cuidado ambiental",
+      "known_at": 6
+    },
+    {
+      "name": "Protocolo de Montreal",
+      "facet": "Contaminación y cuidado ambiental",
+      "known_at": 14
+    },
+    {
+      "name": "Contenedores de colores",
+      "facet": "Contaminación y cuidado ambiental",
+      "known_at": 3
+    },
+    {
+      "name": "Especie en peligro de extinción",
+      "facet": "Contaminación y cuidado ambiental",
+      "known_at": 5
+    },
+    {
+      "name": "Dinosaurio",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 1
+    },
+    {
+      "name": "Tiranosaurio rex",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 1
+    },
+    {
+      "name": "Paleontólogo",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 6
+    },
+    {
+      "name": "Jurásico",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 5
+    },
+    {
+      "name": "Cretácico",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 9
+    },
+    {
+      "name": "Triásico",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 10
+    },
+    {
+      "name": "Era Paleozoica",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 12
+    },
+    {
+      "name": "Era Cenozoica",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 12
+    },
+    {
+      "name": "Edad de Hielo",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 4
+    },
+    {
+      "name": "Trilobite",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 12
+    },
+    {
+      "name": "Amonite",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 12
+    },
+    {
+      "name": "Mary Anning",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 14
+    },
+    {
+      "name": "Carbono 14",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 11
+    },
+    {
+      "name": "Estegosaurio",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 4
+    },
+    {
+      "name": "Megalodón",
+      "facet": "Eras geológicas y fósiles",
+      "known_at": 6
+    }
+  ]
+}

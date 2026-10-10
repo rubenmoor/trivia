@@ -1,0 +1,759 @@
+{
+  "subcategory": "Pueblos indígenas del Amazonas",
+  "facets": [
+    "Pueblos y etnias amazónicas",
+    "Maloca, aldea y vida diaria",
+    "Yuca, frutos y cocina indígena",
+    "Caza, pesca y herramientas",
+    "Navegación y vida en el río",
+    "Arte, adornos y artesanía",
+    "Mitos, leyendas y cosmovisión",
+    "Música, fiestas y rituales",
+    "Chamanes y plantas medicinales",
+    "Palabras indígenas en el español",
+    "Historia: exploradores, caucho y misiones",
+    "Resguardos, territorio y líderes actuales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Huitoto",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 10
+    },
+    {
+      "name": "Yanomami",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Yagua",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 12,
+      "retired": "unaskable: The Yagua people are too obscure, and the 'who'/person options don't fit."
+    },
+    {
+      "name": "Cocama",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Andoque",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Muinane",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Tucano",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Desano",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Cubeo",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Bora",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Nukak",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Puinave",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Siona",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Kofán",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13,
+      "retired": "unaskable: Too obscure, and the best-known fact (yagé) isn't suitable for the family."
+    },
+    {
+      "name": "Inga",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Asháninka",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Kayapó",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Shuar",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Yukuna",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Makuna",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Pueblos en aislamiento voluntario",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Maloca",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Chagra",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Palafito",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Techo de palma",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Fogón de leña",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Mambeadero",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 13
+    },
+    {
+      "name": "Tala y quema",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Canasto de carga",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Pilón",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Guayuco",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 12
+    },
+    {
+      "name": "Totuma",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Mosquitero",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Minga",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Aldea ribereña",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Bejuco",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Palma de caraná",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 14
+    },
+    {
+      "name": "Casabe",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 7
+    },
+    {
+      "name": "Yuca brava",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 11
+    },
+    {
+      "name": "Tipití",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Ají negro",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Mojojoy",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Pescado moqueado",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 12
+    },
+    {
+      "name": "Aguaje",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Cerbatana",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Dardo",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 5
+    },
+    {
+      "name": "Arco y flecha",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 2
+    },
+    {
+      "name": "Lanza",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 3
+    },
+    {
+      "name": "Arpón",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Hacha de piedra",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Machete",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 3
+    },
+    {
+      "name": "Trampa",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 3
+    },
+    {
+      "name": "Rastreo de huellas",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 5
+    },
+    {
+      "name": "Río Putumayo",
+      "facet": "Navegación y vida en el río",
+      "known_at": 10
+    },
+    {
+      "name": "Río Caquetá",
+      "facet": "Navegación y vida en el río",
+      "known_at": 10
+    },
+    {
+      "name": "Río Vaupés",
+      "facet": "Navegación y vida en el río",
+      "known_at": 12
+    },
+    {
+      "name": "Peque-peque",
+      "facet": "Navegación y vida en el río",
+      "known_at": 13
+    },
+    {
+      "name": "Encuentro de las aguas",
+      "facet": "Navegación y vida en el río",
+      "known_at": 11
+    },
+    {
+      "name": "Leticia",
+      "facet": "Navegación y vida en el río",
+      "known_at": 6
+    },
+    {
+      "name": "Raudal",
+      "facet": "Navegación y vida en el río",
+      "known_at": 12
+    },
+    {
+      "name": "Chorro de Araracuara",
+      "facet": "Navegación y vida en el río",
+      "known_at": 14
+    },
+    {
+      "name": "Tres Fronteras",
+      "facet": "Navegación y vida en el río",
+      "known_at": 9
+    },
+    {
+      "name": "Lago Tarapoto",
+      "facet": "Navegación y vida en el río",
+      "known_at": 13
+    },
+    {
+      "name": "Pintura corporal",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 5
+    },
+    {
+      "name": "Corona de plumas",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 4
+    },
+    {
+      "name": "Collar de semillas",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 4
+    },
+    {
+      "name": "Tejido de chambira",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 13
+    },
+    {
+      "name": "Cestería",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 8
+    },
+    {
+      "name": "Máscara ritual",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 7
+    },
+    {
+      "name": "Tallado en madera",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 6
+    },
+    {
+      "name": "Plumas de guacamaya",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 5
+    },
+    {
+      "name": "Chaquiras",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 8
+    },
+    {
+      "name": "Banco del chamán",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 13
+    },
+    {
+      "name": "Petroglifos",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 11
+    },
+    {
+      "name": "Pinturas rupestres",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 9
+    },
+    {
+      "name": "Abanico de palma",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 6
+    },
+    {
+      "name": "Collar de dientes",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 9
+    },
+    {
+      "name": "El Dorado",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 9
+    },
+    {
+      "name": "Árbol de la abundancia",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Madre Tierra",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 5
+    },
+    {
+      "name": "Dueños de los animales",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Mujeres guerreras amazonas",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 10
+    },
+    {
+      "name": "Leyenda de la victoria regia",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 12
+    },
+    {
+      "name": "Paititi",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Mito del origen del Sol y la Luna",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 11
+    },
+    {
+      "name": "Yuruparí",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Flauta de pan",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 8
+    },
+    {
+      "name": "Maraca",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 3
+    },
+    {
+      "name": "Tambor de madera",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 3
+    },
+    {
+      "name": "Manguaré",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 12
+    },
+    {
+      "name": "Pelazón",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de la Confraternidad Amazónica",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 14
+    },
+    {
+      "name": "Baile del chontaduro",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Flauta de hueso",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 10
+    },
+    {
+      "name": "Sonajero de semillas",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 6
+    },
+    {
+      "name": "Cascabeles de tobillo",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 8
+    },
+    {
+      "name": "Ritual de paso",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 11
+    },
+    {
+      "name": "Cantos de curación",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 10
+    },
+    {
+      "name": "Trompeta de corteza",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Baile con máscaras",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 11
+    },
+    {
+      "name": "Danza en círculo",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 6
+    },
+    {
+      "name": "Chamán",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 7
+    },
+    {
+      "name": "Payé",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 14
+    },
+    {
+      "name": "Mambe",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 13
+    },
+    {
+      "name": "Sabedor tradicional",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 12
+    },
+    {
+      "name": "Rezo de curación",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 13
+    },
+    {
+      "name": "Malaria",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 10
+    },
+    {
+      "name": "Plantas medicinales",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 5
+    },
+    {
+      "name": "Capibara",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 6
+    },
+    {
+      "name": "Ñandú",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 10
+    },
+    {
+      "name": "Yaguareté",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 13
+    },
+    {
+      "name": "Cajú",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 12
+    },
+    {
+      "name": "Tapir",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 9
+    },
+    {
+      "name": "Carioca",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 13
+    },
+    {
+      "name": "Yacaré",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 13
+    },
+    {
+      "name": "Urubú",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 13
+    },
+    {
+      "name": "Casa Arana",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 13
+    },
+    {
+      "name": "Julio César Arana",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 14
+    },
+    {
+      "name": "Roger Casement",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 15
+    },
+    {
+      "name": "La vorágine",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 11
+    },
+    {
+      "name": "José Eustasio Rivera",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 11
+    },
+    {
+      "name": "Misioneros capuchinos",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo Pizarro",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra colombo-peruana",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 13
+    },
+    {
+      "name": "Lope de Aguirre",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 13
+    },
+    {
+      "name": "Misiones jesuitas",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 11
+    },
+    {
+      "name": "La Chorrera",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 14
+    },
+    {
+      "name": "Resguardo indígena",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 11
+    },
+    {
+      "name": "Parque Nacional La Paya",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Predio Putumayo",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 15
+    },
+    {
+      "name": "Constitución de 1991",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 10
+    },
+    {
+      "name": "Guardia indígena",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 12
+    },
+    {
+      "name": "ONIC",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "OPIAC",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 15
+    },
+    {
+      "name": "Cabildo indígena",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Territorio ancestral",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 10
+    },
+    {
+      "name": "Raoni",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Davi Kopenawa",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Lenguas cooficiales",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 11
+    }
+  ]
+}

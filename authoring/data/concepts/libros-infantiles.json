@@ -1,0 +1,688 @@
+{
+  "subcategory": "Libros infantiles",
+  "facets": [
+    "Cuentos de hadas clásicos",
+    "Fábulas y sus moralejas",
+    "Literatura infantil colombiana",
+    "Rimas, nanas y adivinanzas",
+    "Clásicos juveniles de aventuras",
+    "Autores infantiles del mundo",
+    "Literatura infantil hispanoamericana",
+    "Sagas juveniles modernas",
+    "Álbumes ilustrados y primeros libros",
+    "Animales protagonistas de libros",
+    "Libros llevados al cine",
+    "El libro y sus partes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 1,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Juan y las habichuelas mágicas",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 5
+    },
+    {
+      "name": "La zorra y la cigüeña",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 10
+    },
+    {
+      "name": "El lobo y el cordero",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 10
+    },
+    {
+      "name": "La rana y el buey",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 12
+    },
+    {
+      "name": "El burro flautista",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 13
+    },
+    {
+      "name": "Cartilla Nacho",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Cuentos pintados para niños",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Ivar Da Coll",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Jairo Aníbal Niño",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Cuentos morales para niños formales",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Chunguero",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "La alegría de querer",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Yolanda Reyes",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Celso Román",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Triunfo Arciniegas",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Pilar Lozano",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Irene Vasco",
+      "facet": "Literatura infantil colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Estrellita, ¿dónde estás?",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 1
+    },
+    {
+      "name": "Pin Pon",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 2
+    },
+    {
+      "name": "Tres tristes tigres",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 3
+    },
+    {
+      "name": "Tengo una muñeca vestida de azul",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 4
+    },
+    {
+      "name": "La vaca lechera",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 4
+    },
+    {
+      "name": "Debajo de un botón",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 4
+    },
+    {
+      "name": "Juguemos en el bosque",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 4
+    },
+    {
+      "name": "Canción de cuna",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 5
+    },
+    {
+      "name": "La gallina turuleca",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 5
+    },
+    {
+      "name": "Arrorró mi niño",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 6
+    },
+    {
+      "name": "Pito, pito, colorito",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 6
+    },
+    {
+      "name": "Humpty Dumpty",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 8
+    },
+    {
+      "name": "Retahíla",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 10
+    },
+    {
+      "name": "Mamá Gansa",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 10
+    },
+    {
+      "name": "Pinocho",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 1
+    },
+    {
+      "name": "Peter Pan",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 1
+    },
+    {
+      "name": "El Principito",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 5
+    },
+    {
+      "name": "La vuelta al mundo en ochenta días",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 7
+    },
+    {
+      "name": "Las aventuras de Tom Sawyer",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 8
+    },
+    {
+      "name": "Colmillo Blanco",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 9
+    },
+    {
+      "name": "Las aventuras de Huckleberry Finn",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 11
+    },
+    {
+      "name": "La llamada de lo salvaje",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 13
+    },
+    {
+      "name": "Corazón, diario de un niño",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 13
+    },
+    {
+      "name": "Jeff Kinney",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Michael Ende",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "C. S. Lewis",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Rick Riordan",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Astrid Lindgren",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Eric Carle",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Defoe",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Jonathan Swift",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Gianni Rodari",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Maurice Sendak",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Manuelita la tortuga",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 7
+    },
+    {
+      "name": "El reino del revés",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 11
+    },
+    {
+      "name": "María Elena Walsh",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 12
+    },
+    {
+      "name": "Papelucho",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 12
+    },
+    {
+      "name": "La tortuga gigante",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "Marcela Paz",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "Elsa Bornemann",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "La peor señora del mundo",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "A Margarita Debayle",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "Paco Yunque",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Hinojosa",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Graciela Montes",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Ema Wolf",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Laura Devetach",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Geronimo Stilton",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 4
+    },
+    {
+      "name": "Wigetta",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 8
+    },
+    {
+      "name": "Una serie de eventos desafortunados",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 10
+    },
+    {
+      "name": "El corredor del laberinto",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 10
+    },
+    {
+      "name": "Diario de Nikki",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 10
+    },
+    {
+      "name": "Divergente",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 11
+    },
+    {
+      "name": "Eragon",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 12
+    },
+    {
+      "name": "Cazadores de sombras",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 12
+    },
+    {
+      "name": "Kika Superbruja",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 12
+    },
+    {
+      "name": "Los Futbolísimos",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 12
+    },
+    {
+      "name": "Alas de fuego",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 12
+    },
+    {
+      "name": "Artemis Fowl",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 13
+    },
+    {
+      "name": "Manolito Gafotas",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 13
+    },
+    {
+      "name": "Memorias de Idhún",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 14
+    },
+    {
+      "name": "Libro para colorear",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 1
+    },
+    {
+      "name": "Abecedario",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 2
+    },
+    {
+      "name": "Libro de cartón",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 3
+    },
+    {
+      "name": "Libro pop-up",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 4
+    },
+    {
+      "name": "El pez arcoíris",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 5
+    },
+    {
+      "name": "¿A qué sabe la luna?",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 9
+    },
+    {
+      "name": "Choco encuentra una mamá",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 10
+    },
+    {
+      "name": "Orejas de mariposa",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 11,
+      "retired": "unaskable: El álbum es demasiado poco conocido para estas opciones de lenguaje y conexión."
+    },
+    {
+      "name": "Los tres bandidos",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 11
+    },
+    {
+      "name": "Libro álbum",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 12
+    },
+    {
+      "name": "Willy el tímido",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 13
+    },
+    {
+      "name": "El cazo de Lorenzo",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 13
+    },
+    {
+      "name": "Winnie the Pooh",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 1
+    },
+    {
+      "name": "Tigger",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 3
+    },
+    {
+      "name": "Stuart Little",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 5
+    },
+    {
+      "name": "Hedwig",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 6
+    },
+    {
+      "name": "Aslan",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 7
+    },
+    {
+      "name": "Carlota la araña",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 9
+    },
+    {
+      "name": "Platero",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 10
+    },
+    {
+      "name": "Azabache",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 12
+    },
+    {
+      "name": "Rikki-Tikki-Tavi",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Salvador Gaviota",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 12
+    },
+    {
+      "name": "Jumanji",
+      "facet": "Libros llevados al cine",
+      "known_at": 5
+    },
+    {
+      "name": "El robot salvaje",
+      "facet": "Libros llevados al cine",
+      "known_at": 6
+    },
+    {
+      "name": "El gigante bonachón",
+      "facet": "Libros llevados al cine",
+      "known_at": 7
+    },
+    {
+      "name": "Las aventuras de Tintín",
+      "facet": "Libros llevados al cine",
+      "known_at": 7
+    },
+    {
+      "name": "Coraline",
+      "facet": "Libros llevados al cine",
+      "known_at": 8
+    },
+    {
+      "name": "Astérix",
+      "facet": "Libros llevados al cine",
+      "known_at": 9
+    },
+    {
+      "name": "Wonder",
+      "facet": "Libros llevados al cine",
+      "known_at": 9
+    },
+    {
+      "name": "El superzorro",
+      "facet": "Libros llevados al cine",
+      "known_at": 11
+    },
+    {
+      "name": "La invención de Hugo Cabret",
+      "facet": "Libros llevados al cine",
+      "known_at": 12
+    },
+    {
+      "name": "El castillo ambulante",
+      "facet": "Libros llevados al cine",
+      "known_at": 12
+    },
+    {
+      "name": "Título",
+      "facet": "El libro y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Página",
+      "facet": "El libro y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Érase una vez",
+      "facet": "El libro y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Autor",
+      "facet": "El libro y sus partes",
+      "known_at": 2
+    },
+    {
+      "name": "Personaje",
+      "facet": "El libro y sus partes",
+      "known_at": 2
+    },
+    {
+      "name": "Capítulo",
+      "facet": "El libro y sus partes",
+      "known_at": 4
+    },
+    {
+      "name": "Separador",
+      "facet": "El libro y sus partes",
+      "known_at": 4
+    },
+    {
+      "name": "Ilustrador",
+      "facet": "El libro y sus partes",
+      "known_at": 5
+    },
+    {
+      "name": "Contraportada",
+      "facet": "El libro y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Lomo",
+      "facet": "El libro y sus partes",
+      "known_at": 7
+    },
+    {
+      "name": "Dedicatoria",
+      "facet": "El libro y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Glosario",
+      "facet": "El libro y sus partes",
+      "known_at": 9
+    },
+    {
+      "name": "Epílogo",
+      "facet": "El libro y sus partes",
+      "known_at": 11
+    },
+    {
+      "name": "Solapa",
+      "facet": "El libro y sus partes",
+      "known_at": 11
+    },
+    {
+      "name": "Colofón",
+      "facet": "El libro y sus partes",
+      "known_at": 14
+    }
+  ]
+}

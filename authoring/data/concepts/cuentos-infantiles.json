@@ -1,0 +1,1143 @@
+{
+  "subcategory": "Cuentos infantiles",
+  "facets": [
+    "Cuentos de hadas clásicos",
+    "Princesas y príncipes de cuento",
+    "Villanos: brujas, lobos y ogros",
+    "Objetos mágicos de los cuentos",
+    "Animales que hablan y fábulas",
+    "Autores y recopiladores de cuentos",
+    "Cuentos en el cine y la televisión",
+    "Fórmulas y frases de cuento",
+    "Lugares y castillos de cuento",
+    "Cuentos y rimas latinoamericanas",
+    "Seres fantásticos: hadas, duendes, gigantes",
+    "Libros infantiles ilustrados modernos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 1,
+      "record": 1,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 5,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Caperucita Roja",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "La Cenicienta",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Blancanieves",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Los tres cerditos",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Pinocho",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "La Bella Durmiente",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "Ricitos de Oro",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "El patito feo",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "La bella y la bestia",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "Aladino",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "Hansel y Gretel",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 3
+    },
+    {
+      "name": "Alicia en el país de las maravillas",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 3
+    },
+    {
+      "name": "Pulgarcito",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 4
+    },
+    {
+      "name": "Jack y las habichuelas mágicas",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 4
+    },
+    {
+      "name": "El soldadito de plomo",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "El traje nuevo del emperador",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "El flautista de Hamelín",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "Pulgarcita",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "Alí Babá y los cuarenta ladrones",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "La reina de las nieves",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 7
+    },
+    {
+      "name": "Las mil y una noches",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 8
+    },
+    {
+      "name": "Los músicos de Bremen",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 8
+    },
+    {
+      "name": "Rumpelstiltskin",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "La vendedora de fósforos",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Ariel",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 1
+    },
+    {
+      "name": "Elsa",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 1
+    },
+    {
+      "name": "Anna",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 2
+    },
+    {
+      "name": "Jasmín",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Fiona",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Príncipe Encantador",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Tiana",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Pocahontas",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Príncipe rana",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Aurora",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 5
+    },
+    {
+      "name": "Mérida",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 5
+    },
+    {
+      "name": "Rey Tritón",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 5
+    },
+    {
+      "name": "Flynn Rider",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Príncipe Eric",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Kristoff",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Príncipe Felipe",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 8
+    },
+    {
+      "name": "Príncipe Naveen",
+      "facet": "Princesas y príncipes de cuento",
+      "known_at": 9
+    },
+    {
+      "name": "Lobo feroz",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 1
+    },
+    {
+      "name": "Bruja",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 1
+    },
+    {
+      "name": "Scar",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 2
+    },
+    {
+      "name": "Madrastra de Cenicienta",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 3
+    },
+    {
+      "name": "Reina Malvada",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 3
+    },
+    {
+      "name": "Maléfica",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 3
+    },
+    {
+      "name": "Cruella de Vil",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 3
+    },
+    {
+      "name": "Hermanastras de Cenicienta",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 4
+    },
+    {
+      "name": "Shere Khan",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 6
+    },
+    {
+      "name": "Madre Gothel",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 7
+    },
+    {
+      "name": "Lord Farquaad",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 7
+    },
+    {
+      "name": "Hans",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 8
+    },
+    {
+      "name": "Bruja Blanca",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 9
+    },
+    {
+      "name": "Barba Azul",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 11
+    },
+    {
+      "name": "Baba Yaga",
+      "facet": "Villanos: brujas, lobos y ogros",
+      "known_at": 11
+    },
+    {
+      "name": "Zapatilla de cristal",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 1
+    },
+    {
+      "name": "Varita mágica",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 1
+    },
+    {
+      "name": "Espejo mágico",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Manzana envenenada",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Lámpara maravillosa",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Alfombra mágica",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Carroza de calabaza",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Cesta de Caperucita",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 3
+    },
+    {
+      "name": "Polvo de hadas",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 4
+    },
+    {
+      "name": "Migas de pan",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 4
+    },
+    {
+      "name": "Rosa encantada",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Gallina de los huevos de oro",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Pluma mágica de Dumbo",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Tridente del rey Tritón",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Espada en la piedra",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Rueca",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Arpa de oro",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Botas de siete leguas",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Sopa de piedra",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Olla mágica",
+      "facet": "Objetos mágicos de los cuentos",
+      "known_at": 13
+    },
+    {
+      "name": "Winnie Pooh",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 1
+    },
+    {
+      "name": "Burro de Shrek",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 2
+    },
+    {
+      "name": "La cigarra y la hormiga",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 3
+    },
+    {
+      "name": "Pepe Grillo",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 3
+    },
+    {
+      "name": "El pastorcito mentiroso",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 3
+    },
+    {
+      "name": "El libro de la selva",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 3
+    },
+    {
+      "name": "El león y el ratón",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 4
+    },
+    {
+      "name": "Conejo Blanco",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 4
+    },
+    {
+      "name": "Sebastián el cangrejo",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 4
+    },
+    {
+      "name": "Fábula",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 5
+    },
+    {
+      "name": "El zorro y las uvas",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 6
+    },
+    {
+      "name": "Gato de Cheshire",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 6
+    },
+    {
+      "name": "El ratón de campo y el ratón de ciudad",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 6
+    },
+    {
+      "name": "Bagheera",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 7
+    },
+    {
+      "name": "La lechera",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 7
+    },
+    {
+      "name": "La ratita presumida",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 7
+    },
+    {
+      "name": "El cuervo y el zorro",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 8
+    },
+    {
+      "name": "El perro y su reflejo",
+      "facet": "Animales que hablan y fábulas",
+      "known_at": 10
+    },
+    {
+      "name": "Walt Disney",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 3
+    },
+    {
+      "name": "Hermanos Grimm",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Rafael Pombo",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 7
+    },
+    {
+      "name": "Esopo",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Lewis Carroll",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Antoine de Saint-Exupéry",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Charles Perrault",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Roald Dahl",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Dr. Seuss",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Jean de La Fontaine",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Carlo Collodi",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Horacio Quiroga",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Rudyard Kipling",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "J. M. Barrie",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Oscar Wilde",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Gloria Fuertes",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Beatrix Potter",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Félix María Samaniego",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 13
+    },
+    {
+      "name": "L. Frank Baum",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 13
+    },
+    {
+      "name": "Tomás de Iriarte",
+      "facet": "Autores y recopiladores de cuentos",
+      "known_at": 14
+    },
+    {
+      "name": "Enredados",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 3
+    },
+    {
+      "name": "La princesa y el sapo",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 5
+    },
+    {
+      "name": "El gato con botas: el último deseo",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Wish: el poder de los deseos",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 7
+    },
+    {
+      "name": "Encantada",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "La verdadera historia de Caperucita",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "El mago de Oz",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Hook",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Pinocho de Guillermo del Toro",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Into the Woods",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Érase una vez (serie)",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Blancanieves y la leyenda del cazador",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 12,
+      "retired": "unaskable: Película de 2012 más oscura y para mayores; no da ningún dato interesante que sirva para toda la familia."
+    },
+    {
+      "name": "Por siempre Cenicienta",
+      "facet": "Cuentos en el cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Había una vez",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 1
+    },
+    {
+      "name": "Y vivieron felices para siempre",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 1
+    },
+    {
+      "name": "Colorín colorado",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 1
+    },
+    {
+      "name": "Espejito, espejito",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 2
+    },
+    {
+      "name": "Abuelita, qué ojos tan grandes tienes",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 2
+    },
+    {
+      "name": "Abracadabra",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 2
+    },
+    {
+      "name": "Soplaré y soplaré",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Fueron felices y comieron perdices",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Las doce campanadas",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Beso de amor verdadero",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Tres deseos",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Ábrete sésamo",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 5
+    },
+    {
+      "name": "Bibidi babidi bú",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 5
+    },
+    {
+      "name": "Rapunzel, suelta tu cabello",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Moraleja",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Fi, fai, fo, fum",
+      "facet": "Fórmulas y frases de cuento",
+      "known_at": 10
+    },
+    {
+      "name": "Casita de chocolate",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 2
+    },
+    {
+      "name": "País de Nunca Jamás",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "País de las Maravillas",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Torre de Rapunzel",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Casa de los siete enanitos",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Palacio de hielo de Elsa",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 3
+    },
+    {
+      "name": "Muy Muy Lejano",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Arendelle",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 4
+    },
+    {
+      "name": "Narnia",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 6
+    },
+    {
+      "name": "Camino de baldosas amarillas",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 7
+    },
+    {
+      "name": "Hamelín",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 8
+    },
+    {
+      "name": "Ciudad Esmeralda",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 8
+    },
+    {
+      "name": "Atlántica",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 9
+    },
+    {
+      "name": "Bremen",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 9
+    },
+    {
+      "name": "Castillo de Neuschwanstein",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 10
+    },
+    {
+      "name": "Estatua de la Sirenita de Copenhague",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de los Juegos",
+      "facet": "Lugares y castillos de cuento",
+      "known_at": 12
+    },
+    {
+      "name": "Los pollitos dicen",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 1
+    },
+    {
+      "name": "Arroz con leche",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 2
+    },
+    {
+      "name": "Un elefante se balanceaba",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 2
+    },
+    {
+      "name": "Aserrín, aserrán",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "El patio de mi casa",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Ratón Pérez",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 3
+    },
+    {
+      "name": "Doña Blanca",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 5
+    },
+    {
+      "name": "El renacuajo paseador",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 6
+    },
+    {
+      "name": "Simón el bobito",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 6
+    },
+    {
+      "name": "Tío Conejo",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 6
+    },
+    {
+      "name": "La pobre viejecita",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 7
+    },
+    {
+      "name": "Mirringa Mirronga",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 7
+    },
+    {
+      "name": "Mambrú se fue a la guerra",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 8
+    },
+    {
+      "name": "Michín",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 9
+    },
+    {
+      "name": "El gato bandido",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 9
+    },
+    {
+      "name": "La pastorcita",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 9
+    },
+    {
+      "name": "Cuentos de la selva",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Urdemales",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 12
+    },
+    {
+      "name": "Los zapaticos de rosa",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 12
+    },
+    {
+      "name": "La Edad de Oro",
+      "facet": "Cuentos y rimas latinoamericanas",
+      "known_at": 13
+    },
+    {
+      "name": "Campanita",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 1
+    },
+    {
+      "name": "Siete enanitos",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 1
+    },
+    {
+      "name": "Dragón",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 1
+    },
+    {
+      "name": "Hada madrina",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 2
+    },
+    {
+      "name": "Duende",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 2
+    },
+    {
+      "name": "Ogro",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 2
+    },
+    {
+      "name": "Gigante",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 2
+    },
+    {
+      "name": "Gnomo",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 3
+    },
+    {
+      "name": "Elfo",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 3
+    },
+    {
+      "name": "Pitufos",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 3
+    },
+    {
+      "name": "Hada Azul",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 6
+    },
+    {
+      "name": "Oompa Loompas",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 6
+    },
+    {
+      "name": "Grifo",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 9
+    },
+    {
+      "name": "Patasola",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 9
+    },
+    {
+      "name": "Los duendes y el zapatero",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 11
+    },
+    {
+      "name": "El gigante egoísta",
+      "facet": "Seres fantásticos: hadas, duendes, gigantes",
+      "known_at": 13
+    },
+    {
+      "name": "¿Dónde está Wally?",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 4
+    },
+    {
+      "name": "Charlie y la fábrica de chocolate",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 5
+    },
+    {
+      "name": "Diario de Greg",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 5
+    },
+    {
+      "name": "El monstruo de colores",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 7
+    },
+    {
+      "name": "Matilda",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 7
+    },
+    {
+      "name": "Capitán Calzoncillos",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 8
+    },
+    {
+      "name": "La oruga muy hambrienta",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 9
+    },
+    {
+      "name": "El gato en el sombrero",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 9
+    },
+    {
+      "name": "Perico el conejo travieso",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 9
+    },
+    {
+      "name": "El grúfalo",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 10
+    },
+    {
+      "name": "Adivina cuánto te quiero",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 10
+    },
+    {
+      "name": "Donde viven los monstruos",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Elmer",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Olivia",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Babar",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Teo",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Harold y el lápiz color morado",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 13
+    },
+    {
+      "name": "Frederick",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 13
+    },
+    {
+      "name": "Ferdinando el toro",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 13
+    },
+    {
+      "name": "Pequeño Azul y Pequeño Amarillo",
+      "facet": "Libros infantiles ilustrados modernos",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,662 @@
+{
+  "subcategory": "Árboles",
+  "facets": [
+    "Partes del árbol",
+    "Biología y ciclo de vida",
+    "Árboles de Colombia",
+    "Árboles frutales",
+    "Árboles emblemáticos del mundo",
+    "Árboles récord y famosos",
+    "Bosques y ecosistemas",
+    "Madera y productos del árbol",
+    "Árboles en mitos y tradiciones",
+    "Árboles en cine y juegos",
+    "Cuidado, tala y reforestación",
+    "Palabras y dichos del árbol"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Copa",
+      "facet": "Partes del árbol",
+      "known_at": 5
+    },
+    {
+      "name": "Cono de pino",
+      "facet": "Partes del árbol",
+      "known_at": 3
+    },
+    {
+      "name": "Estomas",
+      "facet": "Partes del árbol",
+      "known_at": 10
+    },
+    {
+      "name": "Duramen",
+      "facet": "Partes del árbol",
+      "known_at": 13
+    },
+    {
+      "name": "Cámbium",
+      "facet": "Partes del árbol",
+      "known_at": 14
+    },
+    {
+      "name": "Raíces aéreas",
+      "facet": "Partes del árbol",
+      "known_at": 8
+    },
+    {
+      "name": "Fotosíntesis",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 5
+    },
+    {
+      "name": "Árbol de hoja caduca",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 8
+    },
+    {
+      "name": "Árbol de hoja perenne",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 8
+    },
+    {
+      "name": "Dendrocronología",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 13
+    },
+    {
+      "name": "Dispersión de semillas",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 6
+    },
+    {
+      "name": "Conífera",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 9
+    },
+    {
+      "name": "Angiosperma",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 11
+    },
+    {
+      "name": "Gimnosperma",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 11
+    },
+    {
+      "name": "Plántula",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 9
+    },
+    {
+      "name": "Micorriza",
+      "facet": "Biología y ciclo de vida",
+      "known_at": 14
+    },
+    {
+      "name": "Palma de cera",
+      "facet": "Árboles de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Guayacán amarillo",
+      "facet": "Árboles de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Ocobo",
+      "facet": "Árboles de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Samán",
+      "facet": "Árboles de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Yarumo",
+      "facet": "Árboles de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Nogal cafetero",
+      "facet": "Árboles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Roble andino",
+      "facet": "Árboles de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Caracolí",
+      "facet": "Árboles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Abarco",
+      "facet": "Árboles de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Totumo",
+      "facet": "Árboles de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Carbonero",
+      "facet": "Árboles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Chiminango",
+      "facet": "Árboles de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Palma de moriche",
+      "facet": "Árboles de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Siete cueros",
+      "facet": "Árboles de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Chicalá",
+      "facet": "Árboles de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Manzano",
+      "facet": "Árboles frutales",
+      "known_at": 1
+    },
+    {
+      "name": "Naranjo",
+      "facet": "Árboles frutales",
+      "known_at": 2
+    },
+    {
+      "name": "Limonero",
+      "facet": "Árboles frutales",
+      "known_at": 2
+    },
+    {
+      "name": "Guayabo",
+      "facet": "Árboles frutales",
+      "known_at": 4
+    },
+    {
+      "name": "Papayo",
+      "facet": "Árboles frutales",
+      "known_at": 5
+    },
+    {
+      "name": "Higuera",
+      "facet": "Árboles frutales",
+      "known_at": 8
+    },
+    {
+      "name": "Guanábano",
+      "facet": "Árboles frutales",
+      "known_at": 6
+    },
+    {
+      "name": "Palma de chontaduro",
+      "facet": "Árboles frutales",
+      "known_at": 8
+    },
+    {
+      "name": "Peral",
+      "facet": "Árboles frutales",
+      "known_at": 4
+    },
+    {
+      "name": "Árbol del pan",
+      "facet": "Árboles frutales",
+      "known_at": 13
+    },
+    {
+      "name": "Acacia",
+      "facet": "Árboles emblemáticos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Jacarandá",
+      "facet": "Árboles emblemáticos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Ombú",
+      "facet": "Árboles emblemáticos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Araucaria",
+      "facet": "Árboles emblemáticos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Secuoya roja",
+      "facet": "Árboles récord y famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Old Tjikko",
+      "facet": "Árboles récord y famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Árbol de Ténéré",
+      "facet": "Árboles récord y famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Gran Baniano de Calcuta",
+      "facet": "Árboles récord y famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Manzano de Newton",
+      "facet": "Árboles récord y famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Árbol de la vida de Baréin",
+      "facet": "Árboles récord y famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Árbol de Navidad del Rockefeller Center",
+      "facet": "Árboles récord y famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Árbol de Guernica",
+      "facet": "Árboles récord y famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Samán de Güere",
+      "facet": "Árboles récord y famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Plátano de Hipócrates",
+      "facet": "Árboles récord y famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Bosque tropical lluvioso",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 5
+    },
+    {
+      "name": "Selva Negra",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 11
+    },
+    {
+      "name": "Bosque de bambú de Arashiyama",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque templado",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 10
+    },
+    {
+      "name": "Dosel",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 11
+    },
+    {
+      "name": "Sotobosque",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 12
+    },
+    {
+      "name": "Hojarasca",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 7
+    },
+    {
+      "name": "Chocó biogeográfico",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 11
+    },
+    {
+      "name": "Bosque petrificado",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 10
+    },
+    {
+      "name": "Línea de árboles",
+      "facet": "Bosques y ecosistemas",
+      "known_at": 13
+    },
+    {
+      "name": "Corcho",
+      "facet": "Madera y productos del árbol",
+      "known_at": 5
+    },
+    {
+      "name": "Caucho",
+      "facet": "Madera y productos del árbol",
+      "known_at": 7
+    },
+    {
+      "name": "Resina",
+      "facet": "Madera y productos del árbol",
+      "known_at": 7
+    },
+    {
+      "name": "Jarabe de arce",
+      "facet": "Madera y productos del árbol",
+      "known_at": 6
+    },
+    {
+      "name": "Carbón vegetal",
+      "facet": "Madera y productos del árbol",
+      "known_at": 7
+    },
+    {
+      "name": "Aserrín",
+      "facet": "Madera y productos del árbol",
+      "known_at": 5
+    },
+    {
+      "name": "Caoba",
+      "facet": "Madera y productos del árbol",
+      "known_at": 10
+    },
+    {
+      "name": "Balso",
+      "facet": "Madera y productos del árbol",
+      "known_at": 9
+    },
+    {
+      "name": "Celulosa",
+      "facet": "Madera y productos del árbol",
+      "known_at": 11
+    },
+    {
+      "name": "Teca",
+      "facet": "Madera y productos del árbol",
+      "known_at": 12
+    },
+    {
+      "name": "Árbol del conocimiento",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Árbol Bodhi",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Rama de olivo",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Corona de laurel",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Dríade",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Árbol de la vida",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Madremonte",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Manzanas de oro de las Hespérides",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Kodama",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Día del Árbol",
+      "facet": "Árboles en mitos y tradiciones",
+      "known_at": 5
+    },
+    {
+      "name": "Árbol Deku",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Árbol Blanco de Gondor",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Sudowoodo",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Whispy Woods",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Árbol de Rafiki",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Bosque de los Cien Acres",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Árbol del dinero de Animal Crossing",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Alcanforero de Totoro",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "El árbol generoso",
+      "facet": "Árboles en cine y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Vivero",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 6
+    },
+    {
+      "name": "Poda",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 6
+    },
+    {
+      "name": "Injerto",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 10
+    },
+    {
+      "name": "Wangari Maathai",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 14
+    },
+    {
+      "name": "Guardabosques",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 4
+    },
+    {
+      "name": "Motosierra",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 3
+    },
+    {
+      "name": "Hacha",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 1
+    },
+    {
+      "name": "Captura de carbono",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 11
+    },
+    {
+      "name": "Agroforestería",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 13
+    },
+    {
+      "name": "Termita",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 5
+    },
+    {
+      "name": "Especie invasora",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 11
+    },
+    {
+      "name": "Reciclaje de papel",
+      "facet": "Cuidado, tala y reforestación",
+      "known_at": 3
+    },
+    {
+      "name": "Árbol genealógico",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 5
+    },
+    {
+      "name": "Árbol que nace torcido jamás su tronco endereza",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 7
+    },
+    {
+      "name": "El que a buen árbol se arrima, buena sombra lo cobija",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 8
+    },
+    {
+      "name": "Los árboles no dejan ver el bosque",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 11
+    },
+    {
+      "name": "De tal palo, tal astilla",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 6
+    },
+    {
+      "name": "Del árbol caído todos hacen leña",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 10
+    },
+    {
+      "name": "Tocar madera",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 5
+    },
+    {
+      "name": "Irse por las ramas",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 6
+    },
+    {
+      "name": "Echar raíces",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 8
+    },
+    {
+      "name": "Arboleda",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 6
+    },
+    {
+      "name": "Silvicultura",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 12
+    },
+    {
+      "name": "Dendrología",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 14
+    },
+    {
+      "name": "Frondoso",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 8
+    },
+    {
+      "name": "Plantar un árbol, tener un hijo y escribir un libro",
+      "facet": "Palabras y dichos del árbol",
+      "known_at": 10
+    }
+  ]
+}

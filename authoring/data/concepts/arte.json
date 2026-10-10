@@ -1,0 +1,822 @@
+{
+  "subcategory": "Arte",
+  "facets": [
+    "Pinturas famosas del mundo",
+    "Pintores y escultores célebres",
+    "Escultura y monumentos",
+    "Movimientos y estilos artísticos",
+    "Colores y teoría del color",
+    "Técnicas, materiales y herramientas",
+    "Arte colombiano y latinoamericano",
+    "Museos, colecciones y robos",
+    "Arte prehistórico y antiguo",
+    "Arte urbano y artesanías",
+    "Fotografía, ilustración y diseño",
+    "El arte en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 5,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mona Lisa",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 2
+    },
+    {
+      "name": "La noche estrellada",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "La creación de Adán",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Las dos Fridas",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "American Gothic",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "La libertad guiando al pueblo",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Impresión, sol naciente",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Los fusilamientos del 3 de mayo",
+      "facet": "Pinturas famosas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Vincent van Gogh",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Pablo Picasso",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Miguel Ángel",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Frida Kahlo",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Salvador Dalí",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Claude Monet",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Rafael Sanzio",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Donatello",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Andy Warhol",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Rembrandt",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Diego Velázquez",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco de Goya",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Auguste Rodin",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Gustav Klimt",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Johannes Vermeer",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Henri Matisse",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 12
+    },
+    {
+      "name": "El Greco",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Sandro Botticelli",
+      "facet": "Pintores y escultores célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Esfinge de Giza",
+      "facet": "Escultura y monumentos",
+      "known_at": 4
+    },
+    {
+      "name": "Moái de la Isla de Pascua",
+      "facet": "Escultura y monumentos",
+      "known_at": 6
+    },
+    {
+      "name": "El David",
+      "facet": "Escultura y monumentos",
+      "known_at": 7
+    },
+    {
+      "name": "La Sirenita de Copenhague",
+      "facet": "Escultura y monumentos",
+      "known_at": 9
+    },
+    {
+      "name": "La Piedad",
+      "facet": "Escultura y monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Coloso de Rodas",
+      "facet": "Escultura y monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Discóbolo",
+      "facet": "Escultura y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Victoria de Samotracia",
+      "facet": "Escultura y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Renacimiento",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 6
+    },
+    {
+      "name": "Arte pop",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 8
+    },
+    {
+      "name": "Arte abstracto",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 8
+    },
+    {
+      "name": "Puntillismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 8
+    },
+    {
+      "name": "Impresionismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Cubismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Surrealismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 9
+    },
+    {
+      "name": "Gótico",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 10
+    },
+    {
+      "name": "Romanticismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 11
+    },
+    {
+      "name": "Muralismo mexicano",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 11
+    },
+    {
+      "name": "Expresionismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 12
+    },
+    {
+      "name": "Dadaísmo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Art nouveau",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Neoclasicismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Rococó",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 13
+    },
+    {
+      "name": "Fauvismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 14
+    },
+    {
+      "name": "Futurismo",
+      "facet": "Movimientos y estilos artísticos",
+      "known_at": 14
+    },
+    {
+      "name": "Morado",
+      "facet": "Colores y teoría del color",
+      "known_at": 1
+    },
+    {
+      "name": "Verde",
+      "facet": "Colores y teoría del color",
+      "known_at": 1
+    },
+    {
+      "name": "Marrón",
+      "facet": "Colores y teoría del color",
+      "known_at": 2
+    },
+    {
+      "name": "Gris",
+      "facet": "Colores y teoría del color",
+      "known_at": 2
+    },
+    {
+      "name": "Colores primarios",
+      "facet": "Colores y teoría del color",
+      "known_at": 2
+    },
+    {
+      "name": "Colores secundarios",
+      "facet": "Colores y teoría del color",
+      "known_at": 3
+    },
+    {
+      "name": "Colores cálidos",
+      "facet": "Colores y teoría del color",
+      "known_at": 4
+    },
+    {
+      "name": "Colores fríos",
+      "facet": "Colores y teoría del color",
+      "known_at": 4
+    },
+    {
+      "name": "Colores pastel",
+      "facet": "Colores y teoría del color",
+      "known_at": 7
+    },
+    {
+      "name": "Círculo cromático",
+      "facet": "Colores y teoría del color",
+      "known_at": 7
+    },
+    {
+      "name": "Colores complementarios",
+      "facet": "Colores y teoría del color",
+      "known_at": 8
+    },
+    {
+      "name": "Pigmento",
+      "facet": "Colores y teoría del color",
+      "known_at": 9
+    },
+    {
+      "name": "Sepia",
+      "facet": "Colores y teoría del color",
+      "known_at": 9
+    },
+    {
+      "name": "Monocromático",
+      "facet": "Colores y teoría del color",
+      "known_at": 10
+    },
+    {
+      "name": "Modelo RGB",
+      "facet": "Colores y teoría del color",
+      "known_at": 11
+    },
+    {
+      "name": "Azul ultramar",
+      "facet": "Colores y teoría del color",
+      "known_at": 12
+    },
+    {
+      "name": "CMYK",
+      "facet": "Colores y teoría del color",
+      "known_at": 13
+    },
+    {
+      "name": "Pincel",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 1
+    },
+    {
+      "name": "Crayones",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 1
+    },
+    {
+      "name": "Paleta de pintor",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 3
+    },
+    {
+      "name": "Acuarela",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 4
+    },
+    {
+      "name": "Témpera",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 4
+    },
+    {
+      "name": "Caballete",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 5
+    },
+    {
+      "name": "Mosaico",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Collage",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Autorretrato",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Óleo",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 7
+    },
+    {
+      "name": "Lienzo",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 7
+    },
+    {
+      "name": "Carboncillo",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 7
+    },
+    {
+      "name": "Cincel",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 8
+    },
+    {
+      "name": "Bronce",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 8
+    },
+    {
+      "name": "Perspectiva",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 9
+    },
+    {
+      "name": "Grabado",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 10
+    },
+    {
+      "name": "Bodegón",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 10
+    },
+    {
+      "name": "Fresco",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 11
+    },
+    {
+      "name": "Claroscuro",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 12
+    },
+    {
+      "name": "Sfumato",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 13
+    },
+    {
+      "name": "Trampantojo",
+      "facet": "Técnicas, materiales y herramientas",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando Botero",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 4
+    },
+    {
+      "name": "Plaza Botero",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 7
+    },
+    {
+      "name": "El Gato del Río",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 9
+    },
+    {
+      "name": "Diego Rivera",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 10
+    },
+    {
+      "name": "Débora Arango",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro Obregón",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Oswaldo Guayasamín",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Omar Rayo",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Edgar Negret",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Doris Salcedo",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Nel Gómez",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Beatriz González",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Ana Mercedes Hoyos",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "José Clemente Orozco",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "David Alfaro Siqueiros",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Rufino Tamayo",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Tarsila do Amaral",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Joaquín Torres García",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Gregorio Vásquez de Arce y Ceballos",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Feliza Bursztyn",
+      "facet": "Arte colombiano y latinoamericano",
+      "known_at": 15
+    },
+    {
+      "name": "Capilla Sixtina",
+      "facet": "Museos, colecciones y robos",
+      "known_at": 7
+    },
+    {
+      "name": "Casa Azul de Frida Kahlo",
+      "facet": "Museos, colecciones y robos",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámides de Giza",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 3
+    },
+    {
+      "name": "Estatuas de San Agustín",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 10
+    },
+    {
+      "name": "Cerámica griega",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 10
+    },
+    {
+      "name": "Petroglifo",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 11
+    },
+    {
+      "name": "Chiribiquete",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 12
+    },
+    {
+      "name": "Ánfora",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 12
+    },
+    {
+      "name": "Orfebrería quimbaya",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 12
+    },
+    {
+      "name": "Cueva de Lascaux",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva de las Manos",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 13
+    },
+    {
+      "name": "Venus de Willendorf",
+      "facet": "Arte prehistórico y antiguo",
+      "known_at": 14
+    },
+    {
+      "name": "Grafiti",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 4
+    },
+    {
+      "name": "Mural",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 5
+    },
+    {
+      "name": "Sombrero vueltiao",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 5
+    },
+    {
+      "name": "Origami",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 5
+    },
+    {
+      "name": "Chiva",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 6
+    },
+    {
+      "name": "Alebrijes",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 7
+    },
+    {
+      "name": "Comuna 13",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 8
+    },
+    {
+      "name": "Silletas",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 9
+    },
+    {
+      "name": "Banksy",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 10
+    },
+    {
+      "name": "Molas",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 10
+    },
+    {
+      "name": "Esténcil",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 11
+    },
+    {
+      "name": "Cerámica de Ráquira",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 11
+    },
+    {
+      "name": "Cerámica de La Chamba",
+      "facet": "Arte urbano y artesanías",
+      "known_at": 12
+    },
+    {
+      "name": "Flash",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 2
+    },
+    {
+      "name": "Cómic",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 4
+    },
+    {
+      "name": "Fotografía en blanco y negro",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 4
+    },
+    {
+      "name": "Caricatura",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 5
+    },
+    {
+      "name": "Logotipo",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 5
+    },
+    {
+      "name": "Anime",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 6
+    },
+    {
+      "name": "Animación stop motion",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 9
+    },
+    {
+      "name": "Tipografía",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 10
+    },
+    {
+      "name": "Infografía",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 10
+    },
+    {
+      "name": "Bauhaus",
+      "facet": "Fotografía, ilustración y diseño",
+      "known_at": 14
+    },
+    {
+      "name": "Gartic Phone",
+      "facet": "El arte en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Retratos de Hogwarts",
+      "facet": "El arte en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Arte pixelado",
+      "facet": "El arte en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Edna Moda",
+      "facet": "El arte en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Splatoon",
+      "facet": "El arte en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Bob Ross",
+      "facet": "El arte en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Frida (película)",
+      "facet": "El arte en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Loving Vincent",
+      "facet": "El arte en películas y juegos",
+      "known_at": 14
+    }
+  ]
+}

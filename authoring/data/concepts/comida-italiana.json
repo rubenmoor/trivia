@@ -1,0 +1,1063 @@
+{
+  "subcategory": "Comida italiana",
+  "facets": [
+    "Formas de pasta",
+    "Pizza y sus variedades",
+    "Salsas y pestos",
+    "Quesos italianos",
+    "Embutidos y carnes curadas",
+    "Platos típicos y entradas",
+    "Postres, helados y dulces",
+    "Café y bebidas italianas",
+    "Ingredientes y hierbas de la cocina",
+    "Regiones y ciudades de origen",
+    "Palabras y costumbres en la mesa",
+    "Comida italiana en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Espagueti",
+      "facet": "Formas de pasta",
+      "known_at": 1
+    },
+    {
+      "name": "Macarrones",
+      "facet": "Formas de pasta",
+      "known_at": 2
+    },
+    {
+      "name": "Ravioles",
+      "facet": "Formas de pasta",
+      "known_at": 3
+    },
+    {
+      "name": "Ñoquis",
+      "facet": "Formas de pasta",
+      "known_at": 5
+    },
+    {
+      "name": "Canelones",
+      "facet": "Formas de pasta",
+      "known_at": 5
+    },
+    {
+      "name": "Fusilli",
+      "facet": "Formas de pasta",
+      "known_at": 6
+    },
+    {
+      "name": "Penne",
+      "facet": "Formas de pasta",
+      "known_at": 6
+    },
+    {
+      "name": "Farfalle",
+      "facet": "Formas de pasta",
+      "known_at": 7
+    },
+    {
+      "name": "Fettuccine",
+      "facet": "Formas de pasta",
+      "known_at": 7
+    },
+    {
+      "name": "Tortellini",
+      "facet": "Formas de pasta",
+      "known_at": 7
+    },
+    {
+      "name": "Linguine",
+      "facet": "Formas de pasta",
+      "known_at": 10
+    },
+    {
+      "name": "Rigatoni",
+      "facet": "Formas de pasta",
+      "known_at": 10
+    },
+    {
+      "name": "Conchiglie",
+      "facet": "Formas de pasta",
+      "known_at": 11
+    },
+    {
+      "name": "Pappardelle",
+      "facet": "Formas de pasta",
+      "known_at": 12
+    },
+    {
+      "name": "Orecchiette",
+      "facet": "Formas de pasta",
+      "known_at": 13
+    },
+    {
+      "name": "Bucatini",
+      "facet": "Formas de pasta",
+      "known_at": 13
+    },
+    {
+      "name": "Orzo",
+      "facet": "Formas de pasta",
+      "known_at": 13
+    },
+    {
+      "name": "Cappelletti",
+      "facet": "Formas de pasta",
+      "known_at": 14
+    },
+    {
+      "name": "Pizza margarita",
+      "facet": "Pizza y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Pizza hawaiana",
+      "facet": "Pizza y sus variedades",
+      "known_at": 2
+    },
+    {
+      "name": "Pizza de pepperoni",
+      "facet": "Pizza y sus variedades",
+      "known_at": 2
+    },
+    {
+      "name": "Pizza cuatro quesos",
+      "facet": "Pizza y sus variedades",
+      "known_at": 4
+    },
+    {
+      "name": "Calzone",
+      "facet": "Pizza y sus variedades",
+      "known_at": 8
+    },
+    {
+      "name": "Pizza napolitana",
+      "facet": "Pizza y sus variedades",
+      "known_at": 7
+    },
+    {
+      "name": "Horno de leña",
+      "facet": "Pizza y sus variedades",
+      "known_at": 4
+    },
+    {
+      "name": "Focaccia",
+      "facet": "Pizza y sus variedades",
+      "known_at": 10
+    },
+    {
+      "name": "Pizza cuatro estaciones",
+      "facet": "Pizza y sus variedades",
+      "known_at": 9
+    },
+    {
+      "name": "Pizza marinara",
+      "facet": "Pizza y sus variedades",
+      "known_at": 12
+    },
+    {
+      "name": "Pizza diavola",
+      "facet": "Pizza y sus variedades",
+      "known_at": 12
+    },
+    {
+      "name": "Pizza capricciosa",
+      "facet": "Pizza y sus variedades",
+      "known_at": 13
+    },
+    {
+      "name": "Pizza al taglio",
+      "facet": "Pizza y sus variedades",
+      "known_at": 13
+    },
+    {
+      "name": "Pizzaiolo",
+      "facet": "Pizza y sus variedades",
+      "known_at": 9
+    },
+    {
+      "name": "Reina Margarita de Saboya",
+      "facet": "Pizza y sus variedades",
+      "known_at": 12
+    },
+    {
+      "name": "Raffaele Esposito",
+      "facet": "Pizza y sus variedades",
+      "known_at": 15
+    },
+    {
+      "name": "Pizza estilo Chicago",
+      "facet": "Pizza y sus variedades",
+      "known_at": 11
+    },
+    {
+      "name": "Panzerotti",
+      "facet": "Pizza y sus variedades",
+      "known_at": 14
+    },
+    {
+      "name": "Pesto genovés",
+      "facet": "Salsas y pestos",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa boloñesa",
+      "facet": "Salsas y pestos",
+      "known_at": 3
+    },
+    {
+      "name": "Salsa carbonara",
+      "facet": "Salsas y pestos",
+      "known_at": 7
+    },
+    {
+      "name": "Salsa Alfredo",
+      "facet": "Salsas y pestos",
+      "known_at": 7
+    },
+    {
+      "name": "Salsa pomodoro",
+      "facet": "Salsas y pestos",
+      "known_at": 5
+    },
+    {
+      "name": "Salsa bechamel",
+      "facet": "Salsas y pestos",
+      "known_at": 8
+    },
+    {
+      "name": "Salsa napolitana",
+      "facet": "Salsas y pestos",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa arrabbiata",
+      "facet": "Salsas y pestos",
+      "known_at": 11
+    },
+    {
+      "name": "Salsa puttanesca",
+      "facet": "Salsas y pestos",
+      "known_at": 12
+    },
+    {
+      "name": "Aglio e olio",
+      "facet": "Salsas y pestos",
+      "known_at": 12
+    },
+    {
+      "name": "Cacio e pepe",
+      "facet": "Salsas y pestos",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa amatriciana",
+      "facet": "Salsas y pestos",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa de almejas",
+      "facet": "Salsas y pestos",
+      "known_at": 11
+    },
+    {
+      "name": "Pesto rojo",
+      "facet": "Salsas y pestos",
+      "known_at": 11
+    },
+    {
+      "name": "Pesto trapanese",
+      "facet": "Salsas y pestos",
+      "known_at": 15
+    },
+    {
+      "name": "Salsa verde italiana",
+      "facet": "Salsas y pestos",
+      "known_at": 14
+    },
+    {
+      "name": "Mozzarella",
+      "facet": "Quesos italianos",
+      "known_at": 3
+    },
+    {
+      "name": "Queso parmesano",
+      "facet": "Quesos italianos",
+      "known_at": 4
+    },
+    {
+      "name": "Ricotta",
+      "facet": "Quesos italianos",
+      "known_at": 8
+    },
+    {
+      "name": "Mascarpone",
+      "facet": "Quesos italianos",
+      "known_at": 10
+    },
+    {
+      "name": "Gorgonzola",
+      "facet": "Quesos italianos",
+      "known_at": 10
+    },
+    {
+      "name": "Burrata",
+      "facet": "Quesos italianos",
+      "known_at": 11
+    },
+    {
+      "name": "Provolone",
+      "facet": "Quesos italianos",
+      "known_at": 10
+    },
+    {
+      "name": "Pecorino romano",
+      "facet": "Quesos italianos",
+      "known_at": 12
+    },
+    {
+      "name": "Grana Padano",
+      "facet": "Quesos italianos",
+      "known_at": 12
+    },
+    {
+      "name": "Fontina",
+      "facet": "Quesos italianos",
+      "known_at": 13
+    },
+    {
+      "name": "Taleggio",
+      "facet": "Quesos italianos",
+      "known_at": 14
+    },
+    {
+      "name": "Asiago",
+      "facet": "Quesos italianos",
+      "known_at": 14
+    },
+    {
+      "name": "Scamorza",
+      "facet": "Quesos italianos",
+      "known_at": 14
+    },
+    {
+      "name": "Caciocavallo",
+      "facet": "Quesos italianos",
+      "known_at": 15
+    },
+    {
+      "name": "Mozzarella de búfala",
+      "facet": "Quesos italianos",
+      "known_at": 11
+    },
+    {
+      "name": "Salami",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 3
+    },
+    {
+      "name": "Jamón de Parma",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 9
+    },
+    {
+      "name": "Mortadela",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 6
+    },
+    {
+      "name": "Pancetta",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 11
+    },
+    {
+      "name": "Guanciale",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 14
+    },
+    {
+      "name": "Bresaola",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 14
+    },
+    {
+      "name": "Coppa",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 14
+    },
+    {
+      "name": "Speck",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 14
+    },
+    {
+      "name": "Nduja",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 15
+    },
+    {
+      "name": "Lardo di Colonnata",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 15
+    },
+    {
+      "name": "Culatello",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 15
+    },
+    {
+      "name": "Finocchiona",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 15
+    },
+    {
+      "name": "Salchicha italiana",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 8
+    },
+    {
+      "name": "Cotechino",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 15
+    },
+    {
+      "name": "Zampone",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 15
+    },
+    {
+      "name": "Porchetta",
+      "facet": "Embutidos y carnes curadas",
+      "known_at": 13
+    },
+    {
+      "name": "Lasaña",
+      "facet": "Platos típicos y entradas",
+      "known_at": 1
+    },
+    {
+      "name": "Risotto",
+      "facet": "Platos típicos y entradas",
+      "known_at": 8
+    },
+    {
+      "name": "Bruschetta",
+      "facet": "Platos típicos y entradas",
+      "known_at": 10
+    },
+    {
+      "name": "Ensalada caprese",
+      "facet": "Platos típicos y entradas",
+      "known_at": 11
+    },
+    {
+      "name": "Minestrone",
+      "facet": "Platos típicos y entradas",
+      "known_at": 10
+    },
+    {
+      "name": "Ossobuco",
+      "facet": "Platos típicos y entradas",
+      "known_at": 13
+    },
+    {
+      "name": "Carpaccio",
+      "facet": "Platos típicos y entradas",
+      "known_at": 11
+    },
+    {
+      "name": "Arancini",
+      "facet": "Platos típicos y entradas",
+      "known_at": 13
+    },
+    {
+      "name": "Vitel toné",
+      "facet": "Platos típicos y entradas",
+      "known_at": 14
+    },
+    {
+      "name": "Antipasto",
+      "facet": "Platos típicos y entradas",
+      "known_at": 11
+    },
+    {
+      "name": "Polenta",
+      "facet": "Platos típicos y entradas",
+      "known_at": 11
+    },
+    {
+      "name": "Milanesa",
+      "facet": "Platos típicos y entradas",
+      "known_at": 5
+    },
+    {
+      "name": "Berenjenas a la parmesana",
+      "facet": "Platos típicos y entradas",
+      "known_at": 11
+    },
+    {
+      "name": "Saltimbocca",
+      "facet": "Platos típicos y entradas",
+      "known_at": 14
+    },
+    {
+      "name": "Pasta e fagioli",
+      "facet": "Platos típicos y entradas",
+      "known_at": 14
+    },
+    {
+      "name": "Supplì",
+      "facet": "Platos típicos y entradas",
+      "known_at": 15
+    },
+    {
+      "name": "Caponata",
+      "facet": "Platos típicos y entradas",
+      "known_at": 15
+    },
+    {
+      "name": "Fritto misto",
+      "facet": "Platos típicos y entradas",
+      "known_at": 14
+    },
+    {
+      "name": "Panzanella",
+      "facet": "Platos típicos y entradas",
+      "known_at": 15
+    },
+    {
+      "name": "Tiramisú",
+      "facet": "Postres, helados y dulces",
+      "known_at": 6
+    },
+    {
+      "name": "Gelato",
+      "facet": "Postres, helados y dulces",
+      "known_at": 4
+    },
+    {
+      "name": "Panna cotta",
+      "facet": "Postres, helados y dulces",
+      "known_at": 10
+    },
+    {
+      "name": "Cannoli",
+      "facet": "Postres, helados y dulces",
+      "known_at": 10
+    },
+    {
+      "name": "Nutella",
+      "facet": "Postres, helados y dulces",
+      "known_at": 1
+    },
+    {
+      "name": "Helado de stracciatella",
+      "facet": "Postres, helados y dulces",
+      "known_at": 9
+    },
+    {
+      "name": "Cassata",
+      "facet": "Postres, helados y dulces",
+      "known_at": 13,
+      "retired": "unaskable: La cassata es demasiado desconocida para la dificultad 2 y para casi todos los jugadores."
+    },
+    {
+      "name": "Biscotti",
+      "facet": "Postres, helados y dulces",
+      "known_at": 9
+    },
+    {
+      "name": "Zabaglione",
+      "facet": "Postres, helados y dulces",
+      "known_at": 14
+    },
+    {
+      "name": "Affogato",
+      "facet": "Postres, helados y dulces",
+      "known_at": 12
+    },
+    {
+      "name": "Granita",
+      "facet": "Postres, helados y dulces",
+      "known_at": 11
+    },
+    {
+      "name": "Semifreddo",
+      "facet": "Postres, helados y dulces",
+      "known_at": 13
+    },
+    {
+      "name": "Sfogliatella",
+      "facet": "Postres, helados y dulces",
+      "known_at": 14
+    },
+    {
+      "name": "Amaretti",
+      "facet": "Postres, helados y dulces",
+      "known_at": 13
+    },
+    {
+      "name": "Pandoro",
+      "facet": "Postres, helados y dulces",
+      "known_at": 13
+    },
+    {
+      "name": "Turrón italiano",
+      "facet": "Postres, helados y dulces",
+      "known_at": 12
+    },
+    {
+      "name": "Zeppole",
+      "facet": "Postres, helados y dulces",
+      "known_at": 14
+    },
+    {
+      "name": "Ferrero Rocher",
+      "facet": "Postres, helados y dulces",
+      "known_at": 3
+    },
+    {
+      "name": "Espresso",
+      "facet": "Café y bebidas italianas",
+      "known_at": 6
+    },
+    {
+      "name": "Capuchino",
+      "facet": "Café y bebidas italianas",
+      "known_at": 4
+    },
+    {
+      "name": "Latte macchiato",
+      "facet": "Café y bebidas italianas",
+      "known_at": 9
+    },
+    {
+      "name": "Café macchiato",
+      "facet": "Café y bebidas italianas",
+      "known_at": 10
+    },
+    {
+      "name": "Ristretto",
+      "facet": "Café y bebidas italianas",
+      "known_at": 13
+    },
+    {
+      "name": "Café lungo",
+      "facet": "Café y bebidas italianas",
+      "known_at": 13
+    },
+    {
+      "name": "Café corretto",
+      "facet": "Café y bebidas italianas",
+      "known_at": 15
+    },
+    {
+      "name": "Mocaccino",
+      "facet": "Café y bebidas italianas",
+      "known_at": 8
+    },
+    {
+      "name": "Barista",
+      "facet": "Café y bebidas italianas",
+      "known_at": 7
+    },
+    {
+      "name": "Limoncello",
+      "facet": "Café y bebidas italianas",
+      "known_at": 12
+    },
+    {
+      "name": "Chianti",
+      "facet": "Café y bebidas italianas",
+      "known_at": 13
+    },
+    {
+      "name": "Prosecco",
+      "facet": "Café y bebidas italianas",
+      "known_at": 12
+    },
+    {
+      "name": "Aperol spritz",
+      "facet": "Café y bebidas italianas",
+      "known_at": 13
+    },
+    {
+      "name": "San Pellegrino",
+      "facet": "Café y bebidas italianas",
+      "known_at": 11
+    },
+    {
+      "name": "Chinotto",
+      "facet": "Café y bebidas italianas",
+      "known_at": 15
+    },
+    {
+      "name": "Grappa",
+      "facet": "Café y bebidas italianas",
+      "known_at": 14
+    },
+    {
+      "name": "Albahaca",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Aceite de oliva",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Aceitunas",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Alcaparras",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Piñones",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Vinagre balsámico",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Trufa",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Sémola de trigo duro",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Tomate San Marzano",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Rúcula",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Hongos porcini",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Anchoas",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Peperoncino",
+      "facet": "Ingredientes y hierbas de la cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Nápoles",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 8
+    },
+    {
+      "name": "Bolonia",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 8
+    },
+    {
+      "name": "Génova",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 10
+    },
+    {
+      "name": "Parma",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 10
+    },
+    {
+      "name": "Milán",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 7
+    },
+    {
+      "name": "Sicilia",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 9
+    },
+    {
+      "name": "Toscana",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 11
+    },
+    {
+      "name": "Módena",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Venecia",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 6
+    },
+    {
+      "name": "Florencia",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 9
+    },
+    {
+      "name": "Piamonte",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Cerdeña",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 11
+    },
+    {
+      "name": "Emilia-Romaña",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Liguria",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Campania",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Amatrice",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 15
+    },
+    {
+      "name": "Treviso",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Sorrento",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Alba",
+      "facet": "Regiones y ciudades de origen",
+      "known_at": 15
+    },
+    {
+      "name": "Al dente",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Buon appetito",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Mamma mia",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Nonna",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Trattoria",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Pizzería",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Osteria",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 13
+    },
+    {
+      "name": "Primo piatto",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Secondo piatto",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Contorno",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Aperitivo",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 10
+    },
+    {
+      "name": "Scarpetta",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Coperto",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Dieta mediterránea",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 10
+    },
+    {
+      "name": "Slow Food",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Gesto de la mano italiana",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Grazie",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Partir los espaguetis",
+      "facet": "Palabras y costumbres en la mesa",
+      "known_at": 10
+    },
+    {
+      "name": "La dama y el vagabundo",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Super Mario",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Luigi",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Pizza Planeta",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Luigi Risotto",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "El Padrino",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Comer, rezar, amar",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Papa's Pizzeria",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Good Pizza, Great Pizza",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Pizza Tower",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Surfer Boy Pizza",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Parker repartidor de pizza",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Big Night",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 15
+    },
+    {
+      "name": "Spaghetti western",
+      "facet": "Comida italiana en películas y juegos",
+      "known_at": 13
+    }
+  ]
+}

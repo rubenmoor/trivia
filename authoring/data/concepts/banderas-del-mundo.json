@@ -1,0 +1,973 @@
+{
+  "subcategory": "Banderas del mundo",
+  "facets": [
+    "Banderas de América",
+    "Banderas de Europa",
+    "Banderas de Asia y Oceanía",
+    "Banderas de África y Oriente Medio",
+    "Colores y su significado",
+    "Símbolos y escudos en banderas",
+    "Formas, franjas y diseños raros",
+    "Banderas parecidas y confundibles",
+    "Historia y origen de banderas",
+    "Banderas de organizaciones y señales",
+    "Costumbres y protocolo de banderas",
+    "Banderas en deporte y cultura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 5,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 4,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "México",
+      "facet": "Banderas de América",
+      "known_at": 2
+    },
+    {
+      "name": "Estados Unidos",
+      "facet": "Banderas de América",
+      "known_at": 2
+    },
+    {
+      "name": "Perú",
+      "facet": "Banderas de América",
+      "known_at": 4
+    },
+    {
+      "name": "Cuba",
+      "facet": "Banderas de América",
+      "known_at": 7
+    },
+    {
+      "name": "Puerto Rico",
+      "facet": "Banderas de América",
+      "known_at": 8
+    },
+    {
+      "name": "Costa Rica",
+      "facet": "Banderas de América",
+      "known_at": 8
+    },
+    {
+      "name": "República Dominicana",
+      "facet": "Banderas de América",
+      "known_at": 8
+    },
+    {
+      "name": "Guatemala",
+      "facet": "Banderas de América",
+      "known_at": 9
+    },
+    {
+      "name": "Honduras",
+      "facet": "Banderas de América",
+      "known_at": 10
+    },
+    {
+      "name": "El Salvador",
+      "facet": "Banderas de América",
+      "known_at": 10
+    },
+    {
+      "name": "Nicaragua",
+      "facet": "Banderas de América",
+      "known_at": 11
+    },
+    {
+      "name": "Belice",
+      "facet": "Banderas de América",
+      "known_at": 13
+    },
+    {
+      "name": "Trinidad y Tobago",
+      "facet": "Banderas de América",
+      "known_at": 13
+    },
+    {
+      "name": "Reino Unido",
+      "facet": "Banderas de Europa",
+      "known_at": 4
+    },
+    {
+      "name": "Suiza",
+      "facet": "Banderas de Europa",
+      "known_at": 5
+    },
+    {
+      "name": "Suecia",
+      "facet": "Banderas de Europa",
+      "known_at": 7
+    },
+    {
+      "name": "Grecia",
+      "facet": "Banderas de Europa",
+      "known_at": 7
+    },
+    {
+      "name": "Noruega",
+      "facet": "Banderas de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Irlanda",
+      "facet": "Banderas de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Países Bajos",
+      "facet": "Banderas de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Dinamarca",
+      "facet": "Banderas de Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Finlandia",
+      "facet": "Banderas de Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Bélgica",
+      "facet": "Banderas de Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Ucrania",
+      "facet": "Banderas de Europa",
+      "known_at": 9
+    },
+    {
+      "name": "Polonia",
+      "facet": "Banderas de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Austria",
+      "facet": "Banderas de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Escocia",
+      "facet": "Banderas de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Gales",
+      "facet": "Banderas de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Chipre",
+      "facet": "Banderas de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Albania",
+      "facet": "Banderas de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Corea del Sur",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 7
+    },
+    {
+      "name": "Vietnam",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 9
+    },
+    {
+      "name": "Nepal",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Tailandia",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Filipinas",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 11
+    },
+    {
+      "name": "Pakistán",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 11
+    },
+    {
+      "name": "Malasia",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 12
+    },
+    {
+      "name": "Bután",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Sri Lanka",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Papúa Nueva Guinea",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Fiyi",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Kiribati",
+      "facet": "Banderas de Asia y Oceanía",
+      "known_at": 14
+    },
+    {
+      "name": "Israel",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 9
+    },
+    {
+      "name": "Kenia",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 10
+    },
+    {
+      "name": "Nigeria",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 10
+    },
+    {
+      "name": "Marruecos",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 10
+    },
+    {
+      "name": "Arabia Saudita",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 10
+    },
+    {
+      "name": "Líbano",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 10
+    },
+    {
+      "name": "Etiopía",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 11
+    },
+    {
+      "name": "Ghana",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 11
+    },
+    {
+      "name": "Irán",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 12
+    },
+    {
+      "name": "Senegal",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 12
+    },
+    {
+      "name": "Camerún",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 12
+    },
+    {
+      "name": "Argelia",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 12
+    },
+    {
+      "name": "Catar",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 12
+    },
+    {
+      "name": "Emiratos Árabes Unidos",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 12
+    },
+    {
+      "name": "Mozambique",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 13
+    },
+    {
+      "name": "Tanzania",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 13
+    },
+    {
+      "name": "Ruanda",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 13
+    },
+    {
+      "name": "Uganda",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 13
+    },
+    {
+      "name": "Libia",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 13
+    },
+    {
+      "name": "Jordania",
+      "facet": "Banderas de África y Oriente Medio",
+      "known_at": 13
+    },
+    {
+      "name": "Color rojo",
+      "facet": "Colores y su significado",
+      "known_at": 3
+    },
+    {
+      "name": "Color blanco",
+      "facet": "Colores y su significado",
+      "known_at": 3
+    },
+    {
+      "name": "Color azul",
+      "facet": "Colores y su significado",
+      "known_at": 3
+    },
+    {
+      "name": "Color amarillo",
+      "facet": "Colores y su significado",
+      "known_at": 3
+    },
+    {
+      "name": "Color verde",
+      "facet": "Colores y su significado",
+      "known_at": 4
+    },
+    {
+      "name": "Color negro",
+      "facet": "Colores y su significado",
+      "known_at": 6
+    },
+    {
+      "name": "Color naranja",
+      "facet": "Colores y su significado",
+      "known_at": 6
+    },
+    {
+      "name": "Albiceleste",
+      "facet": "Colores y su significado",
+      "known_at": 7
+    },
+    {
+      "name": "Bicolor",
+      "facet": "Colores y su significado",
+      "known_at": 8
+    },
+    {
+      "name": "Color morado",
+      "facet": "Colores y su significado",
+      "known_at": 10
+    },
+    {
+      "name": "Rojigualda",
+      "facet": "Colores y su significado",
+      "known_at": 10
+    },
+    {
+      "name": "Colores de la Gran Colombia",
+      "facet": "Colores y su significado",
+      "known_at": 11
+    },
+    {
+      "name": "Verde del islam",
+      "facet": "Colores y su significado",
+      "known_at": 12
+    },
+    {
+      "name": "Colores panafricanos",
+      "facet": "Colores y su significado",
+      "known_at": 13
+    },
+    {
+      "name": "Colores panárabes",
+      "facet": "Colores y su significado",
+      "known_at": 14
+    },
+    {
+      "name": "Colores paneslavos",
+      "facet": "Colores y su significado",
+      "known_at": 14
+    },
+    {
+      "name": "Hoja de arce",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 2
+    },
+    {
+      "name": "Águila y serpiente",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 5
+    },
+    {
+      "name": "Círculo rojo de Japón",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 5
+    },
+    {
+      "name": "Escudo de Colombia",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 6
+    },
+    {
+      "name": "Sol de Mayo",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 8
+    },
+    {
+      "name": "Estrella roja",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 8
+    },
+    {
+      "name": "Estrella de David",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 9
+    },
+    {
+      "name": "Media luna y estrella",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 9
+    },
+    {
+      "name": "Dragón de Gales",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 9
+    },
+    {
+      "name": "Cedro del Líbano",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 10
+    },
+    {
+      "name": "Taegeuk",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 10
+    },
+    {
+      "name": "Cruz de san Jorge",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 11
+    },
+    {
+      "name": "Hoz y martillo",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 11
+    },
+    {
+      "name": "Rueda de Ashoka",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 12
+    },
+    {
+      "name": "Gorro frigio",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Ave del paraíso",
+      "facet": "Símbolos y escudos en banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Banderín",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 4
+    },
+    {
+      "name": "Franjas horizontales",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 4
+    },
+    {
+      "name": "Franjas verticales",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 5
+    },
+    {
+      "name": "Bandera tricolor",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 5
+    },
+    {
+      "name": "Triángulo junto al asta",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera cuadrada",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 9
+    },
+    {
+      "name": "Franja diagonal",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 9
+    },
+    {
+      "name": "Cruz nórdica",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 10
+    },
+    {
+      "name": "Estandarte",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera no rectangular",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 11
+    },
+    {
+      "name": "Gallardete",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera de un solo color",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 12
+    },
+    {
+      "name": "Cantón",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de dos caras distintas",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 13
+    },
+    {
+      "name": "Proporción de la bandera",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de Ohio",
+      "facet": "Formas, franjas y diseños raros",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Texas",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 11
+    },
+    {
+      "name": "Hungría",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 11
+    },
+    {
+      "name": "Rumania",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 12
+    },
+    {
+      "name": "Serbia",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 12
+    },
+    {
+      "name": "Eslovenia",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 13
+    },
+    {
+      "name": "Eslovaquia",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 13
+    },
+    {
+      "name": "Lituania",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 13
+    },
+    {
+      "name": "Bulgaria",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 13
+    },
+    {
+      "name": "Estonia",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 13
+    },
+    {
+      "name": "Letonia",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 13,
+      "retired": "unaskable: Latvia isn't known at this level, and the flag's origin legend is about blood."
+    },
+    {
+      "name": "Chad",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 14
+    },
+    {
+      "name": "Malí",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 14
+    },
+    {
+      "name": "Guinea",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 14
+    },
+    {
+      "name": "Moldavia",
+      "facet": "Banderas parecidas y confundibles",
+      "known_at": 14
+    },
+    {
+      "name": "Simón Bolívar",
+      "facet": "Historia y origen de banderas",
+      "known_at": 4
+    },
+    {
+      "name": "Bandera en la Luna",
+      "facet": "Historia y origen de banderas",
+      "known_at": 5
+    },
+    {
+      "name": "José de San Martín",
+      "facet": "Historia y origen de banderas",
+      "known_at": 9
+    },
+    {
+      "name": "Francisco de Miranda",
+      "facet": "Historia y origen de banderas",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel Belgrano",
+      "facet": "Historia y origen de banderas",
+      "known_at": 10
+    },
+    {
+      "name": "Revolución francesa",
+      "facet": "Historia y origen de banderas",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera de la Gran Colombia",
+      "facet": "Historia y origen de banderas",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de la Unión Soviética",
+      "facet": "Historia y origen de banderas",
+      "known_at": 11
+    },
+    {
+      "name": "Trece colonias",
+      "facet": "Historia y origen de banderas",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Cartagena",
+      "facet": "Historia y origen de banderas",
+      "known_at": 12
+    },
+    {
+      "name": "Dannebrog",
+      "facet": "Historia y origen de banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Betsy Ross",
+      "facet": "Historia y origen de banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Vexilología",
+      "facet": "Historia y origen de banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Vexillum romano",
+      "facet": "Historia y origen de banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Cruz de Borgoña",
+      "facet": "Historia y origen de banderas",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de Sudáfrica de 1994",
+      "facet": "Historia y origen de banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera pirata",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 2
+    },
+    {
+      "name": "Bandera blanca",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 3
+    },
+    {
+      "name": "Cruz Roja",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 4
+    },
+    {
+      "name": "Bandera a cuadros",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 5
+    },
+    {
+      "name": "Bandera roja de playa",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 5
+    },
+    {
+      "name": "Banderín del juez de línea",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera de la Unión Europea",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera de la ONU",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera amarilla de carreras",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera de la paz",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 10
+    },
+    {
+      "name": "Media Luna Roja",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 11
+    },
+    {
+      "name": "Wiphala",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 12
+    },
+    {
+      "name": "Banderas de señales marítimas",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 12
+    },
+    {
+      "name": "Semáforo de banderas",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera azul de playas",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de la OTAN",
+      "facet": "Banderas de organizaciones y señales",
+      "known_at": 13
+    },
+    {
+      "name": "Izada de bandera",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 5
+    },
+    {
+      "name": "Asta",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 6
+    },
+    {
+      "name": "Abanderado",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 6
+    },
+    {
+      "name": "Saludo a la bandera",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 6
+    },
+    {
+      "name": "Día de la Bandera",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 6
+    },
+    {
+      "name": "Desfile del 20 de julio",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera a media asta",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 8
+    },
+    {
+      "name": "Juramento a la bandera",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera en la cima del Everest",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 8
+    },
+    {
+      "name": "Doblado de la bandera",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera al revés",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 13
+    },
+    {
+      "name": "Bandera de conveniencia",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera de cortesía",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 14
+    },
+    {
+      "name": "Orden de precedencia de banderas",
+      "facet": "Costumbres y protocolo de banderas",
+      "known_at": 14
+    },
+    {
+      "name": "Camiseta de la Selección Colombia",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Capitán América",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Asta de bandera de Super Mario Bros.",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Pintura facial con bandera",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Álbum Panini del Mundial",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Capturar la bandera",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Emoji de bandera",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Banderazo",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Tifo",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Senyera",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Sheldon Cooper",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Banderines de la Copa América",
+      "facet": "Banderas en deporte y cultura",
+      "known_at": 8
+    }
+  ]
+}

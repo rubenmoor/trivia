@@ -1,0 +1,1077 @@
+{
+  "subcategory": "Museos",
+  "facets": [
+    "Grandes museos del mundo",
+    "Museos de Colombia",
+    "Obras maestras famosas",
+    "Edificios y arquitectura de museos",
+    "Museos de ciencia y planetarios",
+    "Museos de historia natural",
+    "Arqueología y tesoros antiguos",
+    "Oficio del museo y conservación",
+    "Robos, falsificaciones y curiosidades",
+    "Museos en películas y juegos",
+    "Museos insólitos y temáticos",
+    "Historia de los museos y coleccionismo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Museo del Louvre",
+      "facet": "Grandes museos del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Museo del Prado",
+      "facet": "Grandes museos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Museo Británico",
+      "facet": "Grandes museos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Metropolitano de Arte",
+      "facet": "Grandes museos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Museos Vaticanos",
+      "facet": "Grandes museos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Galería de los Uffizi",
+      "facet": "Grandes museos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Hermitage",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Rijksmuseum",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Museo de Orsay",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "MoMA",
+      "facet": "Grandes museos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Galería Nacional de Londres",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Nacional de Antropología de México",
+      "facet": "Grandes museos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Reina Sofía",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Van Gogh",
+      "facet": "Grandes museos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Tate Modern",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Egipcio de El Cairo",
+      "facet": "Grandes museos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Museo del Palacio de la Ciudad Prohibida",
+      "facet": "Grandes museos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Pérgamo",
+      "facet": "Grandes museos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Instituto Smithsoniano",
+      "facet": "Grandes museos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Gran Museo Egipcio",
+      "facet": "Grandes museos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Oro",
+      "facet": "Museos de Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Museo Nacional de Colombia",
+      "facet": "Museos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Museo Botero",
+      "facet": "Museos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Museo de Antioquia",
+      "facet": "Museos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Museo de Arte Moderno de Bogotá",
+      "facet": "Museos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Quinta de Bolívar",
+      "facet": "Museos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Museo Colonial",
+      "facet": "Museos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Casa del Florero",
+      "facet": "Museos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Museo de Arte Moderno de Medellín",
+      "facet": "Museos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Museo del Caribe",
+      "facet": "Museos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Santa Clara",
+      "facet": "Museos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Internacional de la Esmeralda",
+      "facet": "Museos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Parque Arqueológico de San Agustín",
+      "facet": "Museos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Museo La Tertulia",
+      "facet": "Museos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Museo Gabriel García Márquez",
+      "facet": "Museos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Casa de Moneda de Bogotá",
+      "facet": "Museos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de la Inquisición de Cartagena",
+      "facet": "Museos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Museo Naval del Caribe",
+      "facet": "Museos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Mona Lisa",
+      "facet": "Obras maestras famosas",
+      "known_at": 2
+    },
+    {
+      "name": "La noche estrellada",
+      "facet": "Obras maestras famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Las Meninas",
+      "facet": "Obras maestras famosas",
+      "known_at": 9
+    },
+    {
+      "name": "El grito",
+      "facet": "Obras maestras famosas",
+      "known_at": 5
+    },
+    {
+      "name": "La joven de la perla",
+      "facet": "Obras maestras famosas",
+      "known_at": 9
+    },
+    {
+      "name": "El nacimiento de Venus",
+      "facet": "Obras maestras famosas",
+      "known_at": 10
+    },
+    {
+      "name": "La última cena",
+      "facet": "Obras maestras famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Guernica",
+      "facet": "Obras maestras famosas",
+      "known_at": 10
+    },
+    {
+      "name": "La persistencia de la memoria",
+      "facet": "Obras maestras famosas",
+      "known_at": 9
+    },
+    {
+      "name": "El jardín de las delicias",
+      "facet": "Obras maestras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "La ronda de noche",
+      "facet": "Obras maestras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Los girasoles",
+      "facet": "Obras maestras famosas",
+      "known_at": 7
+    },
+    {
+      "name": "El pensador",
+      "facet": "Obras maestras famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Venus de Milo",
+      "facet": "Obras maestras famosas",
+      "known_at": 8
+    },
+    {
+      "name": "David de Miguel Ángel",
+      "facet": "Obras maestras famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Victoria alada de Samotracia",
+      "facet": "Obras maestras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Los nenúfares",
+      "facet": "Obras maestras famosas",
+      "known_at": 11
+    },
+    {
+      "name": "El beso de Klimt",
+      "facet": "Obras maestras famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Mona Lisa de Botero",
+      "facet": "Obras maestras famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Pirámide del Louvre",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 4
+    },
+    {
+      "name": "Museo Guggenheim Bilbao",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 10
+    },
+    {
+      "name": "Museo Guggenheim de Nueva York",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 12
+    },
+    {
+      "name": "Centro Pompidou",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Soumaya",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 11
+    },
+    {
+      "name": "Frank Gehry",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 13
+    },
+    {
+      "name": "I. M. Pei",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 14
+    },
+    {
+      "name": "Zaha Hadid",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 14
+    },
+    {
+      "name": "Ciudad de las Artes y las Ciencias",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Mañana",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 12
+    },
+    {
+      "name": "Louvre Abu Dabi",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Bellas Artes de México",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de la Acrópolis",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Judío de Berlín",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 14
+    },
+    {
+      "name": "Museo de Arte de Milwaukee",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 14
+    },
+    {
+      "name": "Planetario",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 3
+    },
+    {
+      "name": "Maloka",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 7
+    },
+    {
+      "name": "Planetario de Bogotá",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 6
+    },
+    {
+      "name": "Parque Explora",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 7
+    },
+    {
+      "name": "CosmoCaixa",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Nacional del Aire y el Espacio",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 10
+    },
+    {
+      "name": "Deutsches Museum",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 13
+    },
+    {
+      "name": "Exploratorium",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad de las Ciencias y la Industria",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 13
+    },
+    {
+      "name": "Science Museum de Londres",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 12
+    },
+    {
+      "name": "Péndulo de Foucault",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 11
+    },
+    {
+      "name": "Bola de plasma",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 6
+    },
+    {
+      "name": "Generador de Van de Graaff",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 10
+    },
+    {
+      "name": "Transbordador espacial Discovery",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 9
+    },
+    {
+      "name": "Centro Espacial Kennedy",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 9
+    },
+    {
+      "name": "Simulador de vuelo",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 5
+    },
+    {
+      "name": "Museo de Historia Natural de Londres",
+      "facet": "Museos de historia natural",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Americano de Historia Natural",
+      "facet": "Museos de historia natural",
+      "known_at": 9
+    },
+    {
+      "name": "Esqueleto de dinosaurio",
+      "facet": "Museos de historia natural",
+      "known_at": 2
+    },
+    {
+      "name": "Sue (Tyrannosaurus rex)",
+      "facet": "Museos de historia natural",
+      "known_at": 12
+    },
+    {
+      "name": "Dippy",
+      "facet": "Museos de historia natural",
+      "known_at": 13
+    },
+    {
+      "name": "Hope (ballena azul)",
+      "facet": "Museos de historia natural",
+      "known_at": 13
+    },
+    {
+      "name": "Taxidermia",
+      "facet": "Museos de historia natural",
+      "known_at": 10
+    },
+    {
+      "name": "Diorama",
+      "facet": "Museos de historia natural",
+      "known_at": 9
+    },
+    {
+      "name": "Mamut",
+      "facet": "Museos de historia natural",
+      "known_at": 3
+    },
+    {
+      "name": "Dodo",
+      "facet": "Museos de historia natural",
+      "known_at": 7
+    },
+    {
+      "name": "Insectario",
+      "facet": "Museos de historia natural",
+      "known_at": 8
+    },
+    {
+      "name": "Herbario",
+      "facet": "Museos de historia natural",
+      "known_at": 10
+    },
+    {
+      "name": "Diamante Hope",
+      "facet": "Museos de historia natural",
+      "known_at": 12
+    },
+    {
+      "name": "Ámbar",
+      "facet": "Museos de historia natural",
+      "known_at": 8
+    },
+    {
+      "name": "Titanosaurio",
+      "facet": "Museos de historia natural",
+      "known_at": 11
+    },
+    {
+      "name": "Piedra de Rosetta",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 9
+    },
+    {
+      "name": "Guerreros de terracota",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Tesoro Quimbaya",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad Perdida",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 9
+    },
+    {
+      "name": "Jeroglíficos",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 6
+    },
+    {
+      "name": "Sarcófago",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 6
+    },
+    {
+      "name": "Piedra del Sol",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Howard Carter",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Arqueólogo",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 4
+    },
+    {
+      "name": "Poporo Quimbaya",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Balsa Muisca",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Mármoles del Partenón",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Busto de Nefertiti",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Ötzi",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Excavación arqueológica",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 5
+    },
+    {
+      "name": "Tierradentro",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Curador",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Restaurador",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Guía de museo",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 3
+    },
+    {
+      "name": "Vitrina",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 4
+    },
+    {
+      "name": "Audioguía",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Exposición temporal",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Catálogo",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Inventario",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Réplica",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 6
+    },
+    {
+      "name": "Pedestal",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 5
+    },
+    {
+      "name": "Guantes de algodón",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Barniz",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Ficha técnica",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Museografía",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 14
+    },
+    {
+      "name": "Día Internacional de los Museos",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Noche de los Museos",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Prohibido usar flash",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 6
+    },
+    {
+      "name": "Control de humedad",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 12
+    },
+    {
+      "name": "Robo de la Mona Lisa",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 10
+    },
+    {
+      "name": "Vincenzo Peruggia",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Han van Meegeren",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Robo del Museo Isabella Stewart Gardner",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Robo de El grito",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Falsificación",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 7
+    },
+    {
+      "name": "Certificado de autenticidad",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 10
+    },
+    {
+      "name": "Robo de la Bóveda Verde de Dresde",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Gatos del Hermitage",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "New York City I de Mondrian",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 15
+    },
+    {
+      "name": "Niña con globo",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Comediante (plátano pegado con cinta)",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 10
+    },
+    {
+      "name": "Elmyr de Hory",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 15
+    },
+    {
+      "name": "Ecce Homo de Borja",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 10
+    },
+    {
+      "name": "Wolfgang Beltracchi",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 15
+    },
+    {
+      "name": "Monuments Men",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Una noche en el museo",
+      "facet": "Museos en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Larry Daley",
+      "facet": "Museos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Ahkmenrah",
+      "facet": "Museos en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Sócrates (Animal Crossing)",
+      "facet": "Museos en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "El código Da Vinci",
+      "facet": "Museos en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Robert Langdon",
+      "facet": "Museos en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Mr. Bean: la película",
+      "facet": "Museos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Lupin",
+      "facet": "Museos en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de Ciudad Plateada",
+      "facet": "Museos en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Kaito Kid",
+      "facet": "Museos en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "La momia (1999)",
+      "facet": "Museos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Assassin's Creed Discovery Tour",
+      "facet": "Museos en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Black Panther",
+      "facet": "Museos en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "El caso Thomas Crown",
+      "facet": "Museos en películas y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Madame Tussauds",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Museo de las Momias de Guanajuato",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Chocolate",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 5
+    },
+    {
+      "name": "Museo de las Relaciones Rotas",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Mundial del Fútbol de la FIFA",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 9
+    },
+    {
+      "name": "LEGO House",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Ripley ¡Aunque usted no lo crea!",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Museo de las Ilusiones",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Parque del Café",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 6
+    },
+    {
+      "name": "Museo Subacuático de Arte de Cancún",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Sal de Zipaquirá",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Museo Ghibli",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Estudios Warner Bros. de Harry Potter",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Museo del FC Barcelona",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Museo del Helado",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Museo Internacional de los Inodoros",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Casa del Carnaval de Barranquilla",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Juguete",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 4
+    },
+    {
+      "name": "Mouseion de Alejandría",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 13
+    },
+    {
+      "name": "Gabinete de curiosidades",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 13
+    },
+    {
+      "name": "Museo Ashmolean",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 15
+    },
+    {
+      "name": "Familia Médici",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 12
+    },
+    {
+      "name": "Apertura del Louvre en 1793",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 14
+    },
+    {
+      "name": "Musas",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 9
+    },
+    {
+      "name": "Coleccionismo",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 8
+    },
+    {
+      "name": "Hans Sloane",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 15
+    },
+    {
+      "name": "Botín de Napoleón",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 12
+    },
+    {
+      "name": "Expolio",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 13
+    },
+    {
+      "name": "Repatriación de obras",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 13
+    },
+    {
+      "name": "Museos Capitolinos",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 14
+    },
+    {
+      "name": "James Smithson",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 14
+    },
+    {
+      "name": "Consejo Internacional de Museos (ICOM)",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 15
+    },
+    {
+      "name": "Subasta",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 8
+    },
+    {
+      "name": "Peggy Guggenheim",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 14
+    },
+    {
+      "name": "Catalina la Grande",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 12
+    },
+    {
+      "name": "Mecenas",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,1002 @@
+{
+  "subcategory": "Literatura",
+  "facets": [
+    "Cuentos clásicos y fábulas",
+    "Literatura infantil y juvenil",
+    "Novelas universales famosas",
+    "Personajes literarios célebres",
+    "Autores y autoras del mundo",
+    "Literatura colombiana y latinoamericana",
+    "Poesía y poetas",
+    "Teatro y dramaturgos",
+    "Mitos, leyendas y epopeyas",
+    "Géneros y formas literarias",
+    "Figuras retóricas y recursos",
+    "Libros, premios y vida lectora"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 5,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "La zorra y las uvas",
+      "facet": "Cuentos clásicos y fábulas",
+      "known_at": 6
+    },
+    {
+      "name": "La historia interminable",
+      "facet": "Literatura infantil y juvenil",
+      "known_at": 10
+    },
+    {
+      "name": "Momo",
+      "facet": "Literatura infantil y juvenil",
+      "known_at": 12
+    },
+    {
+      "name": "Mujercitas",
+      "facet": "Literatura infantil y juvenil",
+      "known_at": 9
+    },
+    {
+      "name": "J. K. Rowling",
+      "facet": "Literatura infantil y juvenil",
+      "known_at": 6
+    },
+    {
+      "name": "Don Quijote de la Mancha",
+      "facet": "Novelas universales famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Frankenstein",
+      "facet": "Novelas universales famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Los miserables",
+      "facet": "Novelas universales famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Orgullo y prejuicio",
+      "facet": "Novelas universales famosas",
+      "known_at": 11
+    },
+    {
+      "name": "La vuelta al mundo en 80 días",
+      "facet": "Novelas universales famosas",
+      "known_at": 7
+    },
+    {
+      "name": "1984",
+      "facet": "Novelas universales famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra y paz",
+      "facet": "Novelas universales famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Crimen y castigo",
+      "facet": "Novelas universales famosas",
+      "known_at": 13
+    },
+    {
+      "name": "El extraño caso del Dr. Jekyll y Mr. Hyde",
+      "facet": "Novelas universales famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Los viajes de Gulliver",
+      "facet": "Novelas universales famosas",
+      "known_at": 8
+    },
+    {
+      "name": "El conde de Montecristo",
+      "facet": "Novelas universales famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Los tres mosqueteros",
+      "facet": "Novelas universales famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Rebelión en la granja",
+      "facet": "Novelas universales famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Fahrenheit 451",
+      "facet": "Novelas universales famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Madame Bovary",
+      "facet": "Novelas universales famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Ana Karénina",
+      "facet": "Novelas universales famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Sherlock Holmes",
+      "facet": "Personajes literarios célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Capitán Ahab",
+      "facet": "Personajes literarios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Frodo Bolsón",
+      "facet": "Personajes literarios célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Hermione Granger",
+      "facet": "Personajes literarios célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Tom Sawyer",
+      "facet": "Personajes literarios célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Phileas Fogg",
+      "facet": "Personajes literarios célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Hércules Poirot",
+      "facet": "Personajes literarios célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Sombrerero Loco",
+      "facet": "Personajes literarios célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Dorian Gray",
+      "facet": "Personajes literarios célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Aureliano Buendía",
+      "facet": "Personajes literarios célebres",
+      "known_at": 11
+    },
+    {
+      "name": "D'Artagnan",
+      "facet": "Personajes literarios célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Jean Valjean",
+      "facet": "Personajes literarios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel de Cervantes",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Julio Verne",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Mark Twain",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Edgar Allan Poe",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Victor Hugo",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "León Tolstói",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Fiódor Dostoievski",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Jane Austen",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Franz Kafka",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Agatha Christie",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Arthur Conan Doyle",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Mary Shelley",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Ernest Hemingway",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Stephen King",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "George Orwell",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Virginia Woolf",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Bram Stoker",
+      "facet": "Autores y autoras del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Gabriel García Márquez",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 7
+    },
+    {
+      "name": "Macondo",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge Isaacs",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 11
+    },
+    {
+      "name": "María (novela)",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 11
+    },
+    {
+      "name": "Rin Rin Renacuajo",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 5
+    },
+    {
+      "name": "El amor en los tiempos del cólera",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 11
+    },
+    {
+      "name": "Crónica de una muerte anunciada",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 12
+    },
+    {
+      "name": "Tomás Carrasquilla",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Luis Borges",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 12
+    },
+    {
+      "name": "Julio Cortázar",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 13
+    },
+    {
+      "name": "Mario Vargas Llosa",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 12
+    },
+    {
+      "name": "Isabel Allende",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Rulfo",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Pedro Páramo",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Laura Restrepo",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Héctor Abad Faciolince",
+      "facet": "Literatura colombiana y latinoamericana",
+      "known_at": 14
+    },
+    {
+      "name": "Pablo Neruda",
+      "facet": "Poesía y poetas",
+      "known_at": 10
+    },
+    {
+      "name": "Gabriela Mistral",
+      "facet": "Poesía y poetas",
+      "known_at": 11
+    },
+    {
+      "name": "Rubén Darío",
+      "facet": "Poesía y poetas",
+      "known_at": 12
+    },
+    {
+      "name": "Federico García Lorca",
+      "facet": "Poesía y poetas",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Machado",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Gustavo Adolfo Bécquer",
+      "facet": "Poesía y poetas",
+      "known_at": 12
+    },
+    {
+      "name": "José Asunción Silva",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Veinte poemas de amor y una canción desesperada",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Sor Juana Inés de la Cruz",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Emily Dickinson",
+      "facet": "Poesía y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Walt Whitman",
+      "facet": "Poesía y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Mario Benedetti",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonsina Storni",
+      "facet": "Poesía y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Octavio Paz",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "José Martí",
+      "facet": "Poesía y poetas",
+      "known_at": 12
+    },
+    {
+      "name": "Versos sencillos",
+      "facet": "Poesía y poetas",
+      "known_at": 13
+    },
+    {
+      "name": "El cuervo (poema)",
+      "facet": "Poesía y poetas",
+      "known_at": 12
+    },
+    {
+      "name": "León de Greiff",
+      "facet": "Poesía y poetas",
+      "known_at": 14
+    },
+    {
+      "name": "Porfirio Barba Jacob",
+      "facet": "Poesía y poetas",
+      "known_at": 15
+    },
+    {
+      "name": "William Shakespeare",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 5
+    },
+    {
+      "name": "Romeo y Julieta",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 4
+    },
+    {
+      "name": "Hamlet",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 9
+    },
+    {
+      "name": "Macbeth",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 11
+    },
+    {
+      "name": "Otelo",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 11
+    },
+    {
+      "name": "El rey Lear",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "Sueño de una noche de verano",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 12
+    },
+    {
+      "name": "Molière",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 12
+    },
+    {
+      "name": "Lope de Vega",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 12
+    },
+    {
+      "name": "Calderón de la Barca",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "La vida es sueño",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "Don Juan Tenorio",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "La Celestina",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 14
+    },
+    {
+      "name": "Sófocles",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 14
+    },
+    {
+      "name": "Edipo rey",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "Tragedia griega",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 10
+    },
+    {
+      "name": "Bodas de sangre",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "La casa de Bernarda Alba",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 13
+    },
+    {
+      "name": "Antón Chéjov",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 14
+    },
+    {
+      "name": "Esperando a Godot",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 15
+    },
+    {
+      "name": "Teatro de títeres",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 2
+    },
+    {
+      "name": "Telón",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 3
+    },
+    {
+      "name": "Monólogo",
+      "facet": "Teatro y dramaturgos",
+      "known_at": 9
+    },
+    {
+      "name": "Ulises",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 8
+    },
+    {
+      "name": "Cíclope",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 6
+    },
+    {
+      "name": "El Silbón",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 9
+    },
+    {
+      "name": "Robin Hood",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 4
+    },
+    {
+      "name": "Cantar de mio Cid",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 13
+    },
+    {
+      "name": "La Divina Comedia",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 12
+    },
+    {
+      "name": "Dante Alighieri",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 12
+    },
+    {
+      "name": "Epopeya de Gilgamesh",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 14
+    },
+    {
+      "name": "Eneida",
+      "facet": "Mitos, leyendas y epopeyas",
+      "known_at": 14
+    },
+    {
+      "name": "Cuento",
+      "facet": "Géneros y formas literarias",
+      "known_at": 3
+    },
+    {
+      "name": "Novela",
+      "facet": "Géneros y formas literarias",
+      "known_at": 6
+    },
+    {
+      "name": "Poema",
+      "facet": "Géneros y formas literarias",
+      "known_at": 2
+    },
+    {
+      "name": "Leyenda",
+      "facet": "Géneros y formas literarias",
+      "known_at": 5
+    },
+    {
+      "name": "Mito",
+      "facet": "Géneros y formas literarias",
+      "known_at": 6
+    },
+    {
+      "name": "Adivinanza",
+      "facet": "Géneros y formas literarias",
+      "known_at": 1
+    },
+    {
+      "name": "Trabalenguas",
+      "facet": "Géneros y formas literarias",
+      "known_at": 2
+    },
+    {
+      "name": "Novela gráfica",
+      "facet": "Géneros y formas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Ciencia ficción",
+      "facet": "Géneros y formas literarias",
+      "known_at": 6
+    },
+    {
+      "name": "Novela policíaca",
+      "facet": "Géneros y formas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Realismo mágico",
+      "facet": "Géneros y formas literarias",
+      "known_at": 10
+    },
+    {
+      "name": "Distopía",
+      "facet": "Géneros y formas literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Biografía",
+      "facet": "Géneros y formas literarias",
+      "known_at": 7
+    },
+    {
+      "name": "Autobiografía",
+      "facet": "Géneros y formas literarias",
+      "known_at": 8
+    },
+    {
+      "name": "Ensayo",
+      "facet": "Géneros y formas literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Soneto",
+      "facet": "Géneros y formas literarias",
+      "known_at": 11
+    },
+    {
+      "name": "Haiku",
+      "facet": "Géneros y formas literarias",
+      "known_at": 10
+    },
+    {
+      "name": "Copla",
+      "facet": "Géneros y formas literarias",
+      "known_at": 8
+    },
+    {
+      "name": "Décima",
+      "facet": "Géneros y formas literarias",
+      "known_at": 12
+    },
+    {
+      "name": "Verso",
+      "facet": "Géneros y formas literarias",
+      "known_at": 5
+    },
+    {
+      "name": "Estrofa",
+      "facet": "Géneros y formas literarias",
+      "known_at": 6
+    },
+    {
+      "name": "Rima",
+      "facet": "Géneros y formas literarias",
+      "known_at": 4
+    },
+    {
+      "name": "Prosa",
+      "facet": "Géneros y formas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Prólogo",
+      "facet": "Géneros y formas literarias",
+      "known_at": 9
+    },
+    {
+      "name": "Protagonista",
+      "facet": "Géneros y formas literarias",
+      "known_at": 5
+    },
+    {
+      "name": "Narrador",
+      "facet": "Géneros y formas literarias",
+      "known_at": 7
+    },
+    {
+      "name": "Hipérbole",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 9
+    },
+    {
+      "name": "Metáfora",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 9
+    },
+    {
+      "name": "Símil",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 10
+    },
+    {
+      "name": "Personificación",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 9
+    },
+    {
+      "name": "Onomatopeya",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 8
+    },
+    {
+      "name": "Aliteración",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 11
+    },
+    {
+      "name": "Anáfora",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 13
+    },
+    {
+      "name": "Ironía",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 10
+    },
+    {
+      "name": "Oxímoron",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 13
+    },
+    {
+      "name": "Hipérbaton",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 14
+    },
+    {
+      "name": "Epíteto",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 13
+    },
+    {
+      "name": "Antítesis",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 13
+    },
+    {
+      "name": "Paradoja",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 12
+    },
+    {
+      "name": "Eufemismo",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 12
+    },
+    {
+      "name": "Sinestesia",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 14
+    },
+    {
+      "name": "Polisíndeton",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 14
+    },
+    {
+      "name": "Retruécano",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 15
+    },
+    {
+      "name": "Pregunta retórica",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 11
+    },
+    {
+      "name": "Sinónimo",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 4
+    },
+    {
+      "name": "Antónimo",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 3
+    },
+    {
+      "name": "Palíndromo",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 9
+    },
+    {
+      "name": "Anagrama",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 10
+    },
+    {
+      "name": "Seudónimo",
+      "facet": "Figuras retóricas y recursos",
+      "known_at": 11
+    },
+    {
+      "name": "Biblioteca",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 1
+    },
+    {
+      "name": "Portada",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 3
+    },
+    {
+      "name": "Marcapáginas",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 3
+    },
+    {
+      "name": "Índice",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 5
+    },
+    {
+      "name": "Audiolibro",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 5
+    },
+    {
+      "name": "Libro electrónico",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 6
+    },
+    {
+      "name": "Pergamino",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 8
+    },
+    {
+      "name": "Biblioteca de Alejandría",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Nobel de Literatura",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 9
+    },
+    {
+      "name": "Premio Cervantes",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Pulitzer",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 13
+    },
+    {
+      "name": "Día del Idioma",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 8
+    },
+    {
+      "name": "Día Internacional del Libro",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 9
+    },
+    {
+      "name": "Feria Internacional del Libro de Bogotá",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 11
+    },
+    {
+      "name": "Hay Festival",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 14
+    },
+    {
+      "name": "Biblioburro",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 10
+    },
+    {
+      "name": "Biblioteca Luis Ángel Arango",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 12
+    },
+    {
+      "name": "Editorial",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 9
+    },
+    {
+      "name": "Best seller",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 10
+    },
+    {
+      "name": "Club de lectura",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 8
+    },
+    {
+      "name": "Booktuber",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 9
+    },
+    {
+      "name": "ISBN",
+      "facet": "Libros, premios y vida lectora",
+      "known_at": 13
+    }
+  ]
+}

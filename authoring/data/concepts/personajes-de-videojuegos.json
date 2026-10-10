@@ -1,0 +1,987 @@
+{
+  "subcategory": "Personajes de videojuegos",
+  "facets": [
+    "Héroes y mascotas clásicas",
+    "Villanos y jefes finales",
+    "Compañeros y personajes secundarios",
+    "Pokémon y criaturas coleccionables",
+    "Personajes de juegos de pelea",
+    "Personajes de Minecraft y construcción",
+    "Personajes de juegos móviles y casuales",
+    "Aventureros de acción y exploración",
+    "Poderes, objetos y transformaciones",
+    "Avatares, skins y personajes personalizables",
+    "Creadores y orígenes de personajes",
+    "Personajes en cine, series y juguetes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pac-Man",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 3
+    },
+    {
+      "name": "Link",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Sackboy",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Bomberman",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Rayman",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Ratchet",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Samus Aran",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Pit",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Banjo",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Q*bert",
+      "facet": "Héroes y mascotas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Boo",
+      "facet": "Villanos y jefes finales",
+      "known_at": 4
+    },
+    {
+      "name": "Bowser Jr.",
+      "facet": "Villanos y jefes finales",
+      "known_at": 5
+    },
+    {
+      "name": "King K. Rool",
+      "facet": "Villanos y jefes finales",
+      "known_at": 8
+    },
+    {
+      "name": "Neo Cortex",
+      "facet": "Villanos y jefes finales",
+      "known_at": 9
+    },
+    {
+      "name": "Drácula de Castlevania",
+      "facet": "Villanos y jefes finales",
+      "known_at": 12
+    },
+    {
+      "name": "Andross",
+      "facet": "Villanos y jefes finales",
+      "known_at": 13
+    },
+    {
+      "name": "Tails",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 4
+    },
+    {
+      "name": "Knuckles",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 5
+    },
+    {
+      "name": "Princesa Zelda",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 6
+    },
+    {
+      "name": "Diddy Kong",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 6
+    },
+    {
+      "name": "Princesa Daisy",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 6
+    },
+    {
+      "name": "Shadow",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 7
+    },
+    {
+      "name": "Amy Rose",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 7
+    },
+    {
+      "name": "Rosalina",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 8
+    },
+    {
+      "name": "Cappy",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 8
+    },
+    {
+      "name": "Lakitu",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 8
+    },
+    {
+      "name": "Toadette",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 8
+    },
+    {
+      "name": "Clank",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 10
+    },
+    {
+      "name": "Epona",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 10
+    },
+    {
+      "name": "Navi",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 11
+    },
+    {
+      "name": "Midna",
+      "facet": "Compañeros y personajes secundarios",
+      "known_at": 12
+    },
+    {
+      "name": "Pikachu",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 1
+    },
+    {
+      "name": "Ash Ketchum",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 3
+    },
+    {
+      "name": "Charmander",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 3
+    },
+    {
+      "name": "Jigglypuff",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 4
+    },
+    {
+      "name": "Charizard",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 4
+    },
+    {
+      "name": "Eevee",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 5
+    },
+    {
+      "name": "Snorlax",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 5
+    },
+    {
+      "name": "Meowth",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 5
+    },
+    {
+      "name": "Pokédex",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 5
+    },
+    {
+      "name": "Mewtwo",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 6
+    },
+    {
+      "name": "Psyduck",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 6
+    },
+    {
+      "name": "Mew",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 7
+    },
+    {
+      "name": "Gengar",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 7
+    },
+    {
+      "name": "Magikarp",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 7
+    },
+    {
+      "name": "Ditto",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 7
+    },
+    {
+      "name": "Profesor Oak",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 7
+    },
+    {
+      "name": "Lucario",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 8
+    },
+    {
+      "name": "Tamagotchi",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 8
+    },
+    {
+      "name": "Agumon",
+      "facet": "Pokémon y criaturas coleccionables",
+      "known_at": 10
+    },
+    {
+      "name": "Ryu",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 9
+    },
+    {
+      "name": "Chun-Li",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 9
+    },
+    {
+      "name": "Scorpion",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 9
+    },
+    {
+      "name": "Sub-Zero",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 9
+    },
+    {
+      "name": "Ken Masters",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 10
+    },
+    {
+      "name": "Blanka",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 11
+    },
+    {
+      "name": "Guile",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 11
+    },
+    {
+      "name": "Dhalsim",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 11
+    },
+    {
+      "name": "Zangief",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 11
+    },
+    {
+      "name": "Raiden",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 12
+    },
+    {
+      "name": "Liu Kang",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 12
+    },
+    {
+      "name": "Cammy",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 12
+    },
+    {
+      "name": "Akuma",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 13
+    },
+    {
+      "name": "Kitana",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 13
+    },
+    {
+      "name": "Jin Kazama",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 13
+    },
+    {
+      "name": "Heihachi Mishima",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 13
+    },
+    {
+      "name": "Terry Bogard",
+      "facet": "Personajes de juegos de pelea",
+      "known_at": 13
+    },
+    {
+      "name": "Steve",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 2
+    },
+    {
+      "name": "Enderman",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 3
+    },
+    {
+      "name": "Aldeano de Minecraft",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 3
+    },
+    {
+      "name": "Alex",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 4
+    },
+    {
+      "name": "Dragón del End",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 5
+    },
+    {
+      "name": "Gólem de hierro",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 5
+    },
+    {
+      "name": "Wither",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 6
+    },
+    {
+      "name": "Piglin",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 6
+    },
+    {
+      "name": "Warden",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 6
+    },
+    {
+      "name": "Noob de Roblox",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 6
+    },
+    {
+      "name": "Ghast",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 7
+    },
+    {
+      "name": "Blaze",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 7
+    },
+    {
+      "name": "Allay",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 8
+    },
+    {
+      "name": "Shulker",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 9
+    },
+    {
+      "name": "Guía de Terraria",
+      "facet": "Personajes de Minecraft y construcción",
+      "known_at": 13
+    },
+    {
+      "name": "Talking Tom",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 2
+    },
+    {
+      "name": "Red de Angry Birds",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 3
+    },
+    {
+      "name": "Cerdos verdes de Angry Birds",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 3
+    },
+    {
+      "name": "Pou",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 3
+    },
+    {
+      "name": "Tripulante de Among Us",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 3
+    },
+    {
+      "name": "Dinosaurio de Chrome",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 4
+    },
+    {
+      "name": "Jake de Subway Surfers",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 5
+    },
+    {
+      "name": "Lanzaguisantes",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 5
+    },
+    {
+      "name": "Om Nom",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 6
+    },
+    {
+      "name": "Flappy Bird",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 6
+    },
+    {
+      "name": "Fall Guy",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 6
+    },
+    {
+      "name": "Tom Nook",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 7
+    },
+    {
+      "name": "Rey de Clash Royale",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 7
+    },
+    {
+      "name": "Bárbaro de Clash of Clans",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 7
+    },
+    {
+      "name": "Crazy Dave",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 10
+    },
+    {
+      "name": "Barry Steakfries",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 11
+    },
+    {
+      "name": "Tiffi",
+      "facet": "Personajes de juegos móviles y casuales",
+      "known_at": 12
+    },
+    {
+      "name": "Cuphead",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 7
+    },
+    {
+      "name": "Lara Croft",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 8
+    },
+    {
+      "name": "Master Chief",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 9
+    },
+    {
+      "name": "Nathan Drake",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 11
+    },
+    {
+      "name": "Ellie",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 11
+    },
+    {
+      "name": "Ezio Auditore",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Aloy",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Geralt de Rivia",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Joel",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Príncipe de Persia",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Sly Cooper",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Jak",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Arthur Morgan",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 13
+    },
+    {
+      "name": "Solid Snake",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 13
+    },
+    {
+      "name": "Doom Slayer",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 13
+    },
+    {
+      "name": "Madeline",
+      "facet": "Aventureros de acción y exploración",
+      "known_at": 14
+    },
+    {
+      "name": "Superhongo",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 2
+    },
+    {
+      "name": "Moneda de Mario",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 2
+    },
+    {
+      "name": "Estrella de invencibilidad",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 3
+    },
+    {
+      "name": "Anillos de Sonic",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 3
+    },
+    {
+      "name": "Bloque de interrogación",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 3
+    },
+    {
+      "name": "Cáscara de plátano",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 3
+    },
+    {
+      "name": "Pico de diamante",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Caparazón azul",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Champiñón 1-Up",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Poder de copiar de Kirby",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Super Sonic",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Esmeraldas del Caos",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Espada Maestra",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de tanuki",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Pastilla de poder",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Trifuerza",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Hadouken",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Megaevolución",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Ocarina del Tiempo",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Fatality",
+      "facet": "Poderes, objetos y transformaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Avatar de Roblox",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 3
+    },
+    {
+      "name": "Skin de Minecraft",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 3
+    },
+    {
+      "name": "Mii",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 5
+    },
+    {
+      "name": "Sims",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 5
+    },
+    {
+      "name": "Peely",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 6
+    },
+    {
+      "name": "Pavos de Fortnite",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 6
+    },
+    {
+      "name": "Pase de batalla",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 6
+    },
+    {
+      "name": "Emote",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 6
+    },
+    {
+      "name": "Habitante de Animal Crossing",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 6
+    },
+    {
+      "name": "Baile por defecto",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 7
+    },
+    {
+      "name": "Plumbob",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 8
+    },
+    {
+      "name": "Jonesy",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 9
+    },
+    {
+      "name": "Fishstick",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 9
+    },
+    {
+      "name": "Inkling",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 9
+    },
+    {
+      "name": "Midas",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 10
+    },
+    {
+      "name": "Avatar de Xbox",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 12
+    },
+    {
+      "name": "Comandante Shepard",
+      "facet": "Avatares, skins y personajes personalizables",
+      "known_at": 14
+    },
+    {
+      "name": "Sega",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Mojang",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Markus Persson",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Capcom",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Namco",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Satoshi Tajiri",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Toru Iwatani",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Hideo Kojima",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Masahiro Sakurai",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Game Freak",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Naughty Dog",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Yuji Naka",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Ed Boon",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Rare",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Ken Sugimori",
+      "facet": "Creadores y orígenes de personajes",
+      "known_at": 15
+    },
+    {
+      "name": "Pokémon (serie animada)",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 2
+    },
+    {
+      "name": "Sonic, la película",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 4
+    },
+    {
+      "name": "Minecraft, la película",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 4
+    },
+    {
+      "name": "Angry Birds, la película",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 4
+    },
+    {
+      "name": "Ralph el Demoledor",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 5
+    },
+    {
+      "name": "Detective Pikachu",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 6
+    },
+    {
+      "name": "LEGO Super Mario",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 6
+    },
+    {
+      "name": "Miles Morales",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 7
+    },
+    {
+      "name": "Amiibo",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 7
+    },
+    {
+      "name": "Jack Black",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 8
+    },
+    {
+      "name": "Funko Pop",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 8
+    },
+    {
+      "name": "Jim Carrey",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 9
+    },
+    {
+      "name": "Chris Pratt",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 9
+    },
+    {
+      "name": "Pedro Pascal",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 10
+    },
+    {
+      "name": "Jinx",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 10
+    },
+    {
+      "name": "The Last of Us (serie)",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 12
+    },
+    {
+      "name": "Tetris (película)",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 13
+    },
+    {
+      "name": "The Super Mario Bros. Super Show!",
+      "facet": "Personajes en cine, series y juguetes",
+      "known_at": 14
+    }
+  ]
+}

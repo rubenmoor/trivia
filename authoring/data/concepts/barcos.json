@@ -1,0 +1,622 @@
+{
+  "subcategory": "Barcos",
+  "facets": [
+    "Tipos de embarcaciones",
+    "Partes del barco",
+    "Vocabulario y jerga marinera",
+    "Navegación e instrumentos",
+    "Cómo flota y se mueve",
+    "Barcos famosos de la historia",
+    "Navegantes y exploradores",
+    "Piratas y corsarios",
+    "Barcos en películas y cuentos",
+    "Puertos, canales y rutas",
+    "Barcos y ríos de Colombia",
+    "Oficios y vida a bordo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lancha",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 2
+    },
+    {
+      "name": "Bote salvavidas",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Yate",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Góndola",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Ferry",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Piragua",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Buque portacontenedores",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Transatlántico",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Rompehielos",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Catamarán",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Remolcador",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Petrolero",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Aerodeslizador",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Junco chino",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Trirreme",
+      "facet": "Tipos de embarcaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Proa",
+      "facet": "Partes del barco",
+      "known_at": 6
+    },
+    {
+      "name": "Cubierta",
+      "facet": "Partes del barco",
+      "known_at": 6
+    },
+    {
+      "name": "Camarote",
+      "facet": "Partes del barco",
+      "known_at": 7
+    },
+    {
+      "name": "Casco",
+      "facet": "Partes del barco",
+      "known_at": 8
+    },
+    {
+      "name": "Ojo de buey",
+      "facet": "Partes del barco",
+      "known_at": 8
+    },
+    {
+      "name": "Bodega",
+      "facet": "Partes del barco",
+      "known_at": 8
+    },
+    {
+      "name": "Puente de mando",
+      "facet": "Partes del barco",
+      "known_at": 8
+    },
+    {
+      "name": "Quilla",
+      "facet": "Partes del barco",
+      "known_at": 10
+    },
+    {
+      "name": "Escotilla",
+      "facet": "Partes del barco",
+      "known_at": 10
+    },
+    {
+      "name": "Línea de flotación",
+      "facet": "Partes del barco",
+      "known_at": 11
+    },
+    {
+      "name": "Bauprés",
+      "facet": "Partes del barco",
+      "known_at": 13
+    },
+    {
+      "name": "SOS",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 5
+    },
+    {
+      "name": "Amarrar",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 6
+    },
+    {
+      "name": "Zarpar",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 7
+    },
+    {
+      "name": "Atracar",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 8
+    },
+    {
+      "name": "Mayday",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 9
+    },
+    {
+      "name": "Levar anclas",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 10
+    },
+    {
+      "name": "Encallar",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 11
+    },
+    {
+      "name": "Bitácora",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 11
+    },
+    {
+      "name": "Arriar",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 12
+    },
+    {
+      "name": "Escorar",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 13
+    },
+    {
+      "name": "Singladura",
+      "facet": "Vocabulario y jerga marinera",
+      "known_at": 14
+    },
+    {
+      "name": "Boya",
+      "facet": "Navegación e instrumentos",
+      "known_at": 5
+    },
+    {
+      "name": "Bengala",
+      "facet": "Navegación e instrumentos",
+      "known_at": 7
+    },
+    {
+      "name": "Radar",
+      "facet": "Navegación e instrumentos",
+      "known_at": 8
+    },
+    {
+      "name": "Nudo marino",
+      "facet": "Navegación e instrumentos",
+      "known_at": 9
+    },
+    {
+      "name": "Milla náutica",
+      "facet": "Navegación e instrumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Cronómetro marino",
+      "facet": "Navegación e instrumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Corredera",
+      "facet": "Navegación e instrumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Remar",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 2
+    },
+    {
+      "name": "Eureka",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 7
+    },
+    {
+      "name": "Motor de vapor",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 8
+    },
+    {
+      "name": "Corriente marina",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 8
+    },
+    {
+      "name": "Rueda de paletas",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 9
+    },
+    {
+      "name": "Principio de Arquímedes",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 10
+    },
+    {
+      "name": "Lastre",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 12
+    },
+    {
+      "name": "Propulsión nuclear",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 12
+    },
+    {
+      "name": "Desplazamiento",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 13
+    },
+    {
+      "name": "Ceñir",
+      "facet": "Cómo flota y se mueve",
+      "known_at": 14
+    },
+    {
+      "name": "Santa María",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 4
+    },
+    {
+      "name": "Mayflower",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Beagle",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Nao Victoria",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Argo",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Bounty",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Bismarck",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Queen Mary",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Lusitania",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Endurance",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Vasa",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Cutty Sark",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "HMS Victory",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Acorazado Potemkin",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Rose",
+      "facet": "Barcos famosos de la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Bartolomé Díaz",
+      "facet": "Navegantes y exploradores",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Álvares Cabral",
+      "facet": "Navegantes y exploradores",
+      "known_at": 13
+    },
+    {
+      "name": "Enrique el Navegante",
+      "facet": "Navegantes y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Thor Heyerdahl",
+      "facet": "Navegantes y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Rodrigo de Bastidas",
+      "facet": "Navegantes y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Loro pirata",
+      "facet": "Piratas y corsarios",
+      "known_at": 2
+    },
+    {
+      "name": "Bandera de calavera",
+      "facet": "Piratas y corsarios",
+      "known_at": 5
+    },
+    {
+      "name": "Barco de papel",
+      "facet": "Barcos en películas y cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Simbad el marino",
+      "facet": "Barcos en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Going Merry",
+      "facet": "Barcos en películas y cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Capitán Haddock",
+      "facet": "Barcos en películas y cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Vida de Pi",
+      "facet": "Barcos en películas y cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Steamboat Willie",
+      "facet": "Barcos en películas y cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Mar Caribe",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 4
+    },
+    {
+      "name": "Faro de Alejandría",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 10
+    },
+    {
+      "name": "Canal de la Mancha",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 12
+    },
+    {
+      "name": "Puerto de Rotterdam",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 13
+    },
+    {
+      "name": "Puerto de Shanghái",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 14
+    },
+    {
+      "name": "Paso del Noroeste",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 14
+    },
+    {
+      "name": "Galeón de Manila",
+      "facet": "Puertos, canales y rutas",
+      "known_at": 14
+    },
+    {
+      "name": "Puerto de Cartagena",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Puerto de Barranquilla",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Lancha a las Islas del Rosario",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Buque Escuela ARC Gloria",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Armada de Colombia",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Río Meta",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Mompox",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Vapor del Magdalena",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Planchón",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Canal del Dique",
+      "facet": "Barcos y ríos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Marinero",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 2
+    },
+    {
+      "name": "Remero",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 3
+    },
+    {
+      "name": "Chaleco salvavidas",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 3
+    },
+    {
+      "name": "Mareo",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 4
+    },
+    {
+      "name": "Traje de marinero",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 5
+    },
+    {
+      "name": "Guardacostas",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 7
+    },
+    {
+      "name": "Timonel",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 8
+    },
+    {
+      "name": "Almirante",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 9
+    },
+    {
+      "name": "Estibador",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 13
+    },
+    {
+      "name": "Galeote",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 13
+    },
+    {
+      "name": "Guardia de a bordo",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 13
+    },
+    {
+      "name": "Práctico",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 14
+    },
+    {
+      "name": "Armador",
+      "facet": "Oficios y vida a bordo",
+      "known_at": 14
+    }
+  ]
+}

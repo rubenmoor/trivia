@@ -1,0 +1,513 @@
+{
+  "subcategory": "Récords Guinness",
+  "facets": [
+    "Animales de récord",
+    "Plantas y árboles de récord",
+    "Cuerpo humano extraordinario",
+    "Hazañas deportivas y atléticas",
+    "Edificios y construcciones gigantes",
+    "Extremos de la naturaleza",
+    "Vehículos y máquinas de récord",
+    "Comida gigante y récords culinarios",
+    "Récords colectivos y hazañas curiosas",
+    "Récords de cine, música y videojuegos",
+    "Récords colombianos",
+    "Historia del libro Guinness"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 1,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 5,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 1,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 4,
+      "language": 1
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tortuga Jonathan",
+      "facet": "Animales de récord",
+      "known_at": 12
+    },
+    {
+      "name": "Cocodrilo de agua salada",
+      "facet": "Animales de récord",
+      "known_at": 8
+    },
+    {
+      "name": "Rafflesia",
+      "facet": "Plantas y árboles de récord",
+      "known_at": 9
+    },
+    {
+      "name": "Pino Matusalén",
+      "facet": "Plantas y árboles de récord",
+      "known_at": 13
+    },
+    {
+      "name": "Cactus saguaro",
+      "facet": "Plantas y árboles de récord",
+      "known_at": 6
+    },
+    {
+      "name": "Robert Wadlow",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 9,
+      "retired": "used_up: His height is already asked; the remaining options (photo or detail of the person) don't give a clear question."
+    },
+    {
+      "name": "Chandra Bahadur Dangi",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 13
+    },
+    {
+      "name": "Jeanne Calment",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 12
+    },
+    {
+      "name": "Sultan Kösen",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 12
+    },
+    {
+      "name": "Uñas más largas",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 6
+    },
+    {
+      "name": "Cabello más largo",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 5
+    },
+    {
+      "name": "Lengua más larga",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 6
+    },
+    {
+      "name": "Barba más larga",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 6
+    },
+    {
+      "name": "Bigote más largo",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 7,
+      "retired": "unaskable: The record holder (Ram Singh Chauhan) is too obscure to ask about as a person."
+    },
+    {
+      "name": "Pies más grandes",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 6
+    },
+    {
+      "name": "Fémur",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 8
+    },
+    {
+      "name": "Masetero",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Osborne",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 13
+    },
+    {
+      "name": "Grito más fuerte",
+      "facet": "Cuerpo humano extraordinario",
+      "known_at": 5
+    },
+    {
+      "name": "Javier Sotomayor",
+      "facet": "Hazañas deportivas y atléticas",
+      "known_at": 13
+    },
+    {
+      "name": "Serena Williams",
+      "facet": "Hazañas deportivas y atléticas",
+      "known_at": 8
+    },
+    {
+      "name": "Wayne Gretzky",
+      "facet": "Hazañas deportivas y atléticas",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Jordan",
+      "facet": "Hazañas deportivas y atléticas",
+      "known_at": 5
+    },
+    {
+      "name": "Roger Federer",
+      "facet": "Hazañas deportivas y atléticas",
+      "known_at": 8
+    },
+    {
+      "name": "Rafael Nadal",
+      "facet": "Hazañas deportivas y atléticas",
+      "known_at": 7
+    },
+    {
+      "name": "Empire State Building",
+      "facet": "Edificios y construcciones gigantes",
+      "known_at": 6
+    },
+    {
+      "name": "Estadio Rungrado Primero de Mayo",
+      "facet": "Edificios y construcciones gigantes",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Danyang–Kunshan",
+      "facet": "Edificios y construcciones gigantes",
+      "known_at": 14
+    },
+    {
+      "name": "Palacio del Parlamento de Bucarest",
+      "facet": "Edificios y construcciones gigantes",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Pirámide de Cholula",
+      "facet": "Edificios y construcciones gigantes",
+      "known_at": 14
+    },
+    {
+      "name": "Concorde",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 10
+    },
+    {
+      "name": "Airbus A380",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 10
+    },
+    {
+      "name": "Antonov An-225",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 13
+    },
+    {
+      "name": "Bagger 288",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 13
+    },
+    {
+      "name": "Sonda Parker",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 13
+    },
+    {
+      "name": "SR-71 Blackbird",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 13
+    },
+    {
+      "name": "Hindenburg",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 12
+    },
+    {
+      "name": "Shinkansen",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 9
+    },
+    {
+      "name": "Flyer de los hermanos Wright",
+      "facet": "Vehículos y máquinas de récord",
+      "known_at": 10
+    },
+    {
+      "name": "Pizza gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 3
+    },
+    {
+      "name": "Hamburguesa gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 3,
+      "retired": "unaskable: The giant burger record holder is unknown and the record changes."
+    },
+    {
+      "name": "Perro caliente más largo",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 4
+    },
+    {
+      "name": "Calabaza gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 4
+    },
+    {
+      "name": "Sandía más pesada",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 5
+    },
+    {
+      "name": "Torta gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 3
+    },
+    {
+      "name": "Galleta gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 3
+    },
+    {
+      "name": "Huevo de Pascua gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 4
+    },
+    {
+      "name": "Paella gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 8
+    },
+    {
+      "name": "Carolina Reaper",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 11
+    },
+    {
+      "name": "Trufa blanca",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 12
+    },
+    {
+      "name": "Kopi luwak",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 13
+    },
+    {
+      "name": "Concurso de perros calientes de Nathan's",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 11,
+      "retired": "unaskable: A US eating contest that is little known and of little interest to these players."
+    },
+    {
+      "name": "Rosca de Reyes gigante",
+      "facet": "Comida gigante y récords culinarios",
+      "known_at": 9
+    },
+    {
+      "name": "Efecto dominó",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 5
+    },
+    {
+      "name": "Cubo de Rubik",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 5
+    },
+    {
+      "name": "Bomba de chicle",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 6
+    },
+    {
+      "name": "Burbuja de jabón gigante",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 4
+    },
+    {
+      "name": "Castells",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 11
+    },
+    {
+      "name": "Ashrita Furman",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 14
+    },
+    {
+      "name": "Saltar la cuerda",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 3
+    },
+    {
+      "name": "Cometa gigante",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 6
+    },
+    {
+      "name": "Pelota de cauchos",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 7
+    },
+    {
+      "name": "Dominadas de balón",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 5
+    },
+    {
+      "name": "Muñeco de nieve más alto",
+      "facet": "Récords colectivos y hazañas curiosas",
+      "known_at": 5
+    },
+    {
+      "name": "Avengers: Endgame",
+      "facet": "Récords de cine, música y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Super Mario Bros.",
+      "facet": "Récords de cine, música y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Thriller",
+      "facet": "Récords de cine, música y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Shakira",
+      "facet": "Récords de cine, música y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Taylor Swift",
+      "facet": "Récords de cine, música y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "White Christmas",
+      "facet": "Récords de cine, música y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Aves de Colombia",
+      "facet": "Récords colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Mariposas de Colombia",
+      "facet": "Récords colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Orquídeas de Colombia",
+      "facet": "Récords colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Egan Bernal",
+      "facet": "Récords colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Caterine Ibargüen",
+      "facet": "Récords colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Óscar Figueroa",
+      "facet": "Récords colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Libro Guinness de los récords",
+      "facet": "Historia del libro Guinness",
+      "known_at": 5
+    },
+    {
+      "name": "Sir Hugh Beaver",
+      "facet": "Historia del libro Guinness",
+      "known_at": 14
+    },
+    {
+      "name": "Hermanos McWhirter",
+      "facet": "Historia del libro Guinness",
+      "known_at": 14,
+      "retired": "unaskable: The McWhirter brothers are too little known; no option gives a fair question without repeating the 1951 story already in the pool."
+    },
+    {
+      "name": "Cervecería Guinness",
+      "facet": "Historia del libro Guinness",
+      "known_at": 8
+    },
+    {
+      "name": "Chorlito dorado",
+      "facet": "Historia del libro Guinness",
+      "known_at": 14
+    },
+    {
+      "name": "Urogallo",
+      "facet": "Historia del libro Guinness",
+      "known_at": 14,
+      "retired": "used_up: The 1951 game bird story is already in the pool."
+    },
+    {
+      "name": "Juez oficial de Guinness",
+      "facet": "Historia del libro Guinness",
+      "known_at": 8
+    },
+    {
+      "name": "Certificado Guinness",
+      "facet": "Historia del libro Guinness",
+      "known_at": 7
+    },
+    {
+      "name": "Día Guinness World Records",
+      "facet": "Historia del libro Guinness",
+      "known_at": 12
+    },
+    {
+      "name": "Biblia",
+      "facet": "Historia del libro Guinness",
+      "known_at": 8
+    },
+    {
+      "name": "Guinness World Records Gamer's Edition",
+      "facet": "Historia del libro Guinness",
+      "known_at": 12
+    },
+    {
+      "name": "Ripley's ¡Aunque usted no lo crea!",
+      "facet": "Historia del libro Guinness",
+      "known_at": 10
+    },
+    {
+      "name": "Condado de Wexford",
+      "facet": "Historia del libro Guinness",
+      "known_at": 15
+    }
+  ]
+}

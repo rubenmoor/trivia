@@ -1,0 +1,943 @@
+{
+  "subcategory": "Héroes griegos",
+  "facets": [
+    "Hércules y sus doce trabajos",
+    "Aquiles y la guerra de Troya",
+    "Odiseo y su viaje de regreso",
+    "Perseo, Teseo y otros cazadores de monstruos",
+    "Jasón y los argonautas",
+    "Heroínas griegas",
+    "Monstruos que enfrentan los héroes",
+    "Armas y objetos mágicos",
+    "Dioses que ayudan o castigan a los héroes",
+    "Lugares de las aventuras heroicas",
+    "Palabras y expresiones nacidas de los héroes",
+    "Héroes griegos en películas, series y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 5,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hércules",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 2
+    },
+    {
+      "name": "Doce trabajos de Hércules",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 7
+    },
+    {
+      "name": "León de Nemea",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 9
+    },
+    {
+      "name": "Jabalí de Erimanto",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Cierva de Cerinea",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Aves del Estínfalo",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Establos de Augías",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 11
+    },
+    {
+      "name": "Toro de Creta",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Yeguas de Diomedes",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Cinturón de Hipólita",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 13
+    },
+    {
+      "name": "Bueyes de Gerión",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Euristeo",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Alcmena",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 14
+    },
+    {
+      "name": "Deyanira",
+      "facet": "Hércules y sus doce trabajos",
+      "known_at": 15
+    },
+    {
+      "name": "Aquiles",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 6
+    },
+    {
+      "name": "Guerra de Troya",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 7
+    },
+    {
+      "name": "Caballo de Troya",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 4
+    },
+    {
+      "name": "Héctor",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 10
+    },
+    {
+      "name": "Helena de Troya",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 9
+    },
+    {
+      "name": "Agamenón",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 12
+    },
+    {
+      "name": "Menelao",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 12
+    },
+    {
+      "name": "Patroclo",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 12
+    },
+    {
+      "name": "Príamo",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 13
+    },
+    {
+      "name": "Tetis",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 12
+    },
+    {
+      "name": "Manzana de la discordia",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 11
+    },
+    {
+      "name": "Juicio de Paris",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 13
+    },
+    {
+      "name": "Ilíada",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 10
+    },
+    {
+      "name": "Homero",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 9
+    },
+    {
+      "name": "Áyax",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 13
+    },
+    {
+      "name": "Laocoonte",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 14
+    },
+    {
+      "name": "Mirmidones",
+      "facet": "Aquiles y la guerra de Troya",
+      "known_at": 14
+    },
+    {
+      "name": "Odiseo",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 8
+    },
+    {
+      "name": "Penélope",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 10
+    },
+    {
+      "name": "Telémaco",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 12
+    },
+    {
+      "name": "Argos (perro de Odiseo)",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 12
+    },
+    {
+      "name": "Polifemo",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 9
+    },
+    {
+      "name": "Circe",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 11
+    },
+    {
+      "name": "Calipso",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 12
+    },
+    {
+      "name": "Lotófagos",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 14
+    },
+    {
+      "name": "Odre de los vientos",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 13
+    },
+    {
+      "name": "Feacios",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 15
+    },
+    {
+      "name": "Euriclea",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 15
+    },
+    {
+      "name": "Pretendientes de Penélope",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 12
+    },
+    {
+      "name": "Tiresias",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 14
+    },
+    {
+      "name": "Vacas del Sol",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 14
+    },
+    {
+      "name": "Concurso del arco de Odiseo",
+      "facet": "Odiseo y su viaje de regreso",
+      "known_at": 13
+    },
+    {
+      "name": "Perseo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 7
+    },
+    {
+      "name": "Teseo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 9
+    },
+    {
+      "name": "Belerofonte",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 13
+    },
+    {
+      "name": "Orfeo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 11
+    },
+    {
+      "name": "Edipo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 11
+    },
+    {
+      "name": "Meleagro",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Cadmo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 14
+    },
+    {
+      "name": "Dédalo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 10
+    },
+    {
+      "name": "Ícaro",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 6
+    },
+    {
+      "name": "Egeo",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 13
+    },
+    {
+      "name": "Rey Minos",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 11
+    },
+    {
+      "name": "Procusto",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 14
+    },
+    {
+      "name": "Jabalí de Calidón",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Polidectes",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 15
+    },
+    {
+      "name": "Cástor y Pólux",
+      "facet": "Perseo, Teseo y otros cazadores de monstruos",
+      "known_at": 12
+    },
+    {
+      "name": "Jasón",
+      "facet": "Jasón y los argonautas",
+      "known_at": 9
+    },
+    {
+      "name": "Argonautas",
+      "facet": "Jasón y los argonautas",
+      "known_at": 10
+    },
+    {
+      "name": "Vellocino de oro",
+      "facet": "Jasón y los argonautas",
+      "known_at": 10
+    },
+    {
+      "name": "Medea",
+      "facet": "Jasón y los argonautas",
+      "known_at": 12
+    },
+    {
+      "name": "Pelias",
+      "facet": "Jasón y los argonautas",
+      "known_at": 14
+    },
+    {
+      "name": "Eetes",
+      "facet": "Jasón y los argonautas",
+      "known_at": 15
+    },
+    {
+      "name": "Cólquida",
+      "facet": "Jasón y los argonautas",
+      "known_at": 14
+    },
+    {
+      "name": "Toros de bronce",
+      "facet": "Jasón y los argonautas",
+      "known_at": 14
+    },
+    {
+      "name": "Guerreros nacidos de dientes de dragón",
+      "facet": "Jasón y los argonautas",
+      "known_at": 13
+    },
+    {
+      "name": "Rocas Simplégades",
+      "facet": "Jasón y los argonautas",
+      "known_at": 14
+    },
+    {
+      "name": "Fineo",
+      "facet": "Jasón y los argonautas",
+      "known_at": 15
+    },
+    {
+      "name": "Quirón",
+      "facet": "Jasón y los argonautas",
+      "known_at": 11
+    },
+    {
+      "name": "Sandalia perdida de Jasón",
+      "facet": "Jasón y los argonautas",
+      "known_at": 15
+    },
+    {
+      "name": "Hipsípila",
+      "facet": "Jasón y los argonautas",
+      "known_at": 15,
+      "retired": "unaskable: Hipsípila es muy poco conocida, y su mito clave (las mujeres de Lemnos matando a los hombres) no es apto para toda la familia."
+    },
+    {
+      "name": "Atalanta",
+      "facet": "Heroínas griegas",
+      "known_at": 11
+    },
+    {
+      "name": "Andrómeda",
+      "facet": "Heroínas griegas",
+      "known_at": 10
+    },
+    {
+      "name": "Ariadna",
+      "facet": "Heroínas griegas",
+      "known_at": 10
+    },
+    {
+      "name": "Antígona",
+      "facet": "Heroínas griegas",
+      "known_at": 12
+    },
+    {
+      "name": "Pentesilea",
+      "facet": "Heroínas griegas",
+      "known_at": 14
+    },
+    {
+      "name": "Dánae",
+      "facet": "Heroínas griegas",
+      "known_at": 14
+    },
+    {
+      "name": "Psique",
+      "facet": "Heroínas griegas",
+      "known_at": 12
+    },
+    {
+      "name": "Alcestis",
+      "facet": "Heroínas griegas",
+      "known_at": 15
+    },
+    {
+      "name": "Electra",
+      "facet": "Heroínas griegas",
+      "known_at": 13
+    },
+    {
+      "name": "Ifigenia",
+      "facet": "Heroínas griegas",
+      "known_at": 14
+    },
+    {
+      "name": "Casandra",
+      "facet": "Heroínas griegas",
+      "known_at": 12
+    },
+    {
+      "name": "Andrómaca",
+      "facet": "Heroínas griegas",
+      "known_at": 14
+    },
+    {
+      "name": "Fedra",
+      "facet": "Heroínas griegas",
+      "known_at": 14
+    },
+    {
+      "name": "Nausícaa",
+      "facet": "Heroínas griegas",
+      "known_at": 14
+    },
+    {
+      "name": "Pandora",
+      "facet": "Heroínas griegas",
+      "known_at": 8
+    },
+    {
+      "name": "Minotauro",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 6
+    },
+    {
+      "name": "Cerbero",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 7
+    },
+    {
+      "name": "Quimera",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 11
+    },
+    {
+      "name": "Gorgonas",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 11
+    },
+    {
+      "name": "Sirenas",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 6
+    },
+    {
+      "name": "Escila",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 13
+    },
+    {
+      "name": "Caribdis",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 13
+    },
+    {
+      "name": "Harpías",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 10
+    },
+    {
+      "name": "Centauros",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 5
+    },
+    {
+      "name": "Grayas",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 14
+    },
+    {
+      "name": "Pitón",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 14
+    },
+    {
+      "name": "Ceto (monstruo marino)",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 13
+    },
+    {
+      "name": "Ladón",
+      "facet": "Monstruos que enfrentan los héroes",
+      "known_at": 15
+    },
+    {
+      "name": "Égida",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 13
+    },
+    {
+      "name": "Casco de invisibilidad",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Sandalias aladas",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 6
+    },
+    {
+      "name": "Harpe",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 15
+    },
+    {
+      "name": "Hilo de Ariadna",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Escudo de Aquiles",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 13
+    },
+    {
+      "name": "Tridente de Poseidón",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 5
+    },
+    {
+      "name": "Rayo de Zeus",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 3
+    },
+    {
+      "name": "Caduceo",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Flechas envenenadas de Hércules",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 14
+    },
+    {
+      "name": "Clava de Hércules",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Alas de cera",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 7
+    },
+    {
+      "name": "Ambrosía",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Lira de Orfeo",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Brida dorada de Pegaso",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 15
+    },
+    {
+      "name": "Moly",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 15
+    },
+    {
+      "name": "Túnica de Neso",
+      "facet": "Armas y objetos mágicos",
+      "known_at": 15
+    },
+    {
+      "name": "Hera",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 7
+    },
+    {
+      "name": "Atenea",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 7
+    },
+    {
+      "name": "Hades",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 4
+    },
+    {
+      "name": "Hermes",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 7
+    },
+    {
+      "name": "Apolo",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 8
+    },
+    {
+      "name": "Artemisa",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 9
+    },
+    {
+      "name": "Afrodita",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 8
+    },
+    {
+      "name": "Ares",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 8
+    },
+    {
+      "name": "Eris",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 13
+    },
+    {
+      "name": "Perséfone",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 11
+    },
+    {
+      "name": "Némesis",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 12
+    },
+    {
+      "name": "Moiras",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 10
+    },
+    {
+      "name": "Prometeo",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 10
+    },
+    {
+      "name": "Dioniso",
+      "facet": "Dioses que ayudan o castigan a los héroes",
+      "known_at": 11
+    },
+    {
+      "name": "Troya",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 7
+    },
+    {
+      "name": "Monte Olimpo",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 4
+    },
+    {
+      "name": "Inframundo",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 5
+    },
+    {
+      "name": "Laberinto de Creta",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 7
+    },
+    {
+      "name": "Micenas",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 13
+    },
+    {
+      "name": "Esparta",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 8
+    },
+    {
+      "name": "Tebas",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 13
+    },
+    {
+      "name": "Oráculo de Delfos",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 11
+    },
+    {
+      "name": "Río Estigia",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 10
+    },
+    {
+      "name": "Columnas de Hércules",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 12
+    },
+    {
+      "name": "Campos Elíseos",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 12
+    },
+    {
+      "name": "Tártaro",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 13
+    },
+    {
+      "name": "Río Leteo",
+      "facet": "Lugares de las aventuras heroicas",
+      "known_at": 14
+    },
+    {
+      "name": "Talón de Aquiles",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 5
+    },
+    {
+      "name": "Mentor",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 13
+    },
+    {
+      "name": "Caja de Pandora",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 8
+    },
+    {
+      "name": "Hercúleo",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 10
+    },
+    {
+      "name": "Suplicio de Tántalo",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 14
+    },
+    {
+      "name": "Complejo de Edipo",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 13
+    },
+    {
+      "name": "Troyano (virus informático)",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 9
+    },
+    {
+      "name": "Estentóreo",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 15
+    },
+    {
+      "name": "Nostalgia",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 14
+    },
+    {
+      "name": "Nike (marca)",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 8
+    },
+    {
+      "name": "Trabajo de Sísifo",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 12
+    },
+    {
+      "name": "Proteico",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 15
+    },
+    {
+      "name": "Eco",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 11
+    },
+    {
+      "name": "Pánico",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 12
+    },
+    {
+      "name": "Titánico",
+      "facet": "Palabras y expresiones nacidas de los héroes",
+      "known_at": 10
+    },
+    {
+      "name": "Hércules (película de Disney)",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Megara",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Fil",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Percy Jackson",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Troya (película de 2004)",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Furia de titanes",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Xena, la princesa guerrera",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Hércules: sus viajes legendarios",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Hades (videojuego)",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Assassin's Creed Odyssey",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Wonder Woman",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Epic: The Musical",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Ulises 31",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Jasón y los argonautas (película de 1963)",
+      "facet": "Héroes griegos en películas, series y juegos",
+      "known_at": 15
+    }
+  ]
+}

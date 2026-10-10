@@ -1,0 +1,676 @@
+{
+  "subcategory": "Inteligencia artificial",
+  "facets": [
+    "Robots y androides famosos",
+    "IA en películas y series",
+    "Asistentes de voz y chatbots",
+    "Pioneros e historia de la IA",
+    "Máquinas contra humanos en juegos",
+    "Conceptos y vocabulario de la IA",
+    "Aprendizaje automático y redes neuronales",
+    "IA en la vida cotidiana",
+    "Visión, voz y reconocimiento",
+    "Robots en la industria y el espacio",
+    "Riesgos, ética y reglas de la IA"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Baymax",
+      "facet": "Robots y androides famosos",
+      "known_at": 2
+    },
+    {
+      "name": "EVA (WALL·E)",
+      "facet": "Robots y androides famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Sophia (robot)",
+      "facet": "Robots y androides famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Skynet",
+      "facet": "IA en películas y series",
+      "known_at": 10
+    },
+    {
+      "name": "Matrix",
+      "facet": "IA en películas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Agente Smith",
+      "facet": "IA en películas y series",
+      "known_at": 11
+    },
+    {
+      "name": "JARVIS",
+      "facet": "IA en películas y series",
+      "known_at": 6
+    },
+    {
+      "name": "Visión (Marvel)",
+      "facet": "IA en películas y series",
+      "known_at": 8
+    },
+    {
+      "name": "Her",
+      "facet": "IA en películas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Ex Machina",
+      "facet": "IA en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Blade Runner",
+      "facet": "IA en películas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Yo, robot",
+      "facet": "IA en películas y series",
+      "known_at": 10
+    },
+    {
+      "name": "Black Mirror",
+      "facet": "IA en películas y series",
+      "known_at": 11
+    },
+    {
+      "name": "Westworld",
+      "facet": "IA en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "El hombre bicentenario",
+      "facet": "IA en películas y series",
+      "known_at": 12
+    },
+    {
+      "name": "KITT (El auto fantástico)",
+      "facet": "IA en películas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Los Mitchell contra las máquinas",
+      "facet": "IA en películas y series",
+      "known_at": 6
+    },
+    {
+      "name": "A.I. Inteligencia artificial (película)",
+      "facet": "IA en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Chatbot",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 5
+    },
+    {
+      "name": "Bixby",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 11
+    },
+    {
+      "name": "Gemini",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 8
+    },
+    {
+      "name": "Claude",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 11
+    },
+    {
+      "name": "Copilot",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 10
+    },
+    {
+      "name": "OpenAI",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 9
+    },
+    {
+      "name": "Clippy",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 12
+    },
+    {
+      "name": "Tay (Microsoft)",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 15
+    },
+    {
+      "name": "Altavoz inteligente",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 5
+    },
+    {
+      "name": "Palabra de activación",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 6
+    },
+    {
+      "name": "Asistente virtual",
+      "facet": "Asistentes de voz y chatbots",
+      "known_at": 4
+    },
+    {
+      "name": "John McCarthy",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Conferencia de Dartmouth",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Marvin Minsky",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Geoffrey Hinton",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 13
+    },
+    {
+      "name": "Demis Hassabis",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Fei-Fei Li",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 15
+    },
+    {
+      "name": "Joseph Weizenbaum",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 15
+    },
+    {
+      "name": "Invierno de la IA",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Turing",
+      "facet": "Pioneros e historia de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Deep Blue",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Jeopardy!",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 12
+    },
+    {
+      "name": "AlphaZero",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Stockfish",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Chinook (damas)",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 15
+    },
+    {
+      "name": "Turco mecánico",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Póquer",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Libratus",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 15
+    },
+    {
+      "name": "OpenAI Five",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 15
+    },
+    {
+      "name": "AlphaStar",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 15
+    },
+    {
+      "name": "Tres en línea",
+      "facet": "Máquinas contra humanos en juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Bot",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 5
+    },
+    {
+      "name": "Prompt",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 9
+    },
+    {
+      "name": "Alucinación (IA)",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 11
+    },
+    {
+      "name": "IA generativa",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 10
+    },
+    {
+      "name": "Modelo de lenguaje grande",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 12
+    },
+    {
+      "name": "Token",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 13
+    },
+    {
+      "name": "Agente de IA",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 12
+    },
+    {
+      "name": "Inteligencia artificial general",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 13
+    },
+    {
+      "name": "Sistema experto",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Big data",
+      "facet": "Conceptos y vocabulario de la IA",
+      "known_at": 11
+    },
+    {
+      "name": "Neurona artificial",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 11
+    },
+    {
+      "name": "Perceptrón",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 15
+    },
+    {
+      "name": "Aprendizaje profundo",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 12
+    },
+    {
+      "name": "Datos de entrenamiento",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 10
+    },
+    {
+      "name": "Aprendizaje por refuerzo",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 13
+    },
+    {
+      "name": "Aprendizaje supervisado",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 13
+    },
+    {
+      "name": "Retropropagación",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 15
+    },
+    {
+      "name": "Transformer",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 14
+    },
+    {
+      "name": "GPU",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 11
+    },
+    {
+      "name": "Nvidia",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 11
+    },
+    {
+      "name": "Sobreajuste",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 15
+    },
+    {
+      "name": "Árbol de decisión",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 13
+    },
+    {
+      "name": "Parámetro (modelo)",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 14
+    },
+    {
+      "name": "ImageNet",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 15
+    },
+    {
+      "name": "AlphaFold",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 14
+    },
+    {
+      "name": "Prueba y error",
+      "facet": "Aprendizaje automático y redes neuronales",
+      "known_at": 4
+    },
+    {
+      "name": "Aspiradora robot",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 2
+    },
+    {
+      "name": "Autocorrector",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 4
+    },
+    {
+      "name": "Texto predictivo",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Filtro de spam",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Recomendaciones de series",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 5
+    },
+    {
+      "name": "Algoritmo de TikTok",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 7
+    },
+    {
+      "name": "Filtros de fotos",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 3
+    },
+    {
+      "name": "Navegador GPS",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 4
+    },
+    {
+      "name": "Waze",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Casa inteligente",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 5
+    },
+    {
+      "name": "Corrector ortográfico",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 5
+    },
+    {
+      "name": "Cortacésped robot",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Duolingo",
+      "facet": "IA en la vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Face ID",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 7
+    },
+    {
+      "name": "Huella dactilar",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Reconocimiento de voz",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 6
+    },
+    {
+      "name": "Dictado por voz",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 5
+    },
+    {
+      "name": "Síntesis de voz",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 10
+    },
+    {
+      "name": "Shazam",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 7
+    },
+    {
+      "name": "Google Lens",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 9
+    },
+    {
+      "name": "Visión por computador",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 11
+    },
+    {
+      "name": "Reconocimiento óptico de caracteres",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 13
+    },
+    {
+      "name": "Lector de placas",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 8
+    },
+    {
+      "name": "Escaneo de iris",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 8
+    },
+    {
+      "name": "Detección de objetos",
+      "facet": "Visión, voz y reconocimiento",
+      "known_at": 12
+    },
+    {
+      "name": "Línea de ensamblaje",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 8
+    },
+    {
+      "name": "Lunojod 1",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 15
+    },
+    {
+      "name": "Atlas (Boston Dynamics)",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 12
+    },
+    {
+      "name": "Spot (perro robot)",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 8
+    },
+    {
+      "name": "Robot de almacén",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 8
+    },
+    {
+      "name": "Vehículo submarino robótico",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 9
+    },
+    {
+      "name": "Rover marciano",
+      "facet": "Robots en la industria y el espacio",
+      "known_at": 7
+    },
+    {
+      "name": "Deepfake",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 9
+    },
+    {
+      "name": "Noticias falsas",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 6
+    },
+    {
+      "name": "Sesgo algorítmico",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de IA de la Unión Europea",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Privacidad de datos",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 8
+    },
+    {
+      "name": "Plagio",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 7
+    },
+    {
+      "name": "Automatización del empleo",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 10
+    },
+    {
+      "name": "Luditas",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Caja negra",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 13
+    },
+    {
+      "name": "Armas autónomas",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 12
+    },
+    {
+      "name": "Problema del tranvía",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 12
+    },
+    {
+      "name": "Alineamiento de la IA",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 14
+    },
+    {
+      "name": "Maximizador de clips",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 15
+    },
+    {
+      "name": "Marca de agua digital",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 11
+    },
+    {
+      "name": "Suplantación de identidad",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 9
+    },
+    {
+      "name": "Huelga de guionistas de Hollywood de 2023",
+      "facet": "Riesgos, ética y reglas de la IA",
+      "known_at": 14
+    }
+  ]
+}

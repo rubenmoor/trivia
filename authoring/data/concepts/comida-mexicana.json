@@ -1,0 +1,871 @@
+{
+  "subcategory": "Comida mexicana",
+  "facets": [
+    "Tortillas, tacos y antojitos",
+    "Chiles, salsas y moles",
+    "Platos y guisos tradicionales",
+    "Ingredientes nativos de México",
+    "Dulces, panes y postres",
+    "Bebidas y aguas frescas",
+    "Fiestas y costumbres en la mesa",
+    "Historia y cocina prehispánica",
+    "Cocinas regionales de México",
+    "Utensilios y técnicas de cocina",
+    "Comida mexicana en el mundo y la pantalla"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Taco",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 1
+    },
+    {
+      "name": "Tortilla de maíz",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 2
+    },
+    {
+      "name": "Tortilla de harina",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 6
+    },
+    {
+      "name": "Tacos al pastor",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 6
+    },
+    {
+      "name": "Quesadilla",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 3
+    },
+    {
+      "name": "Burrito",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 3
+    },
+    {
+      "name": "Enchilada",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 6
+    },
+    {
+      "name": "Tostada",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 7
+    },
+    {
+      "name": "Sope",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 11
+    },
+    {
+      "name": "Gordita",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 11
+    },
+    {
+      "name": "Huarache",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 13
+    },
+    {
+      "name": "Tlayuda",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 13
+    },
+    {
+      "name": "Flautas",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 10
+    },
+    {
+      "name": "Chalupa",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 11
+    },
+    {
+      "name": "Elote",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 7
+    },
+    {
+      "name": "Esquites",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 11
+    },
+    {
+      "name": "Totopos",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 9
+    },
+    {
+      "name": "Torta",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 7
+    },
+    {
+      "name": "Tacos de canasta",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 12
+    },
+    {
+      "name": "Tlacoyo",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 14
+    },
+    {
+      "name": "Chile jalapeño",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 4
+    },
+    {
+      "name": "Chile habanero",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 7
+    },
+    {
+      "name": "Chile chipotle",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 10
+    },
+    {
+      "name": "Chile poblano",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 11
+    },
+    {
+      "name": "Chile serrano",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 11
+    },
+    {
+      "name": "Chile ancho",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 13
+    },
+    {
+      "name": "Chile de árbol",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa verde",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 7
+    },
+    {
+      "name": "Mole poblano",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 9
+    },
+    {
+      "name": "Mole negro",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 13
+    },
+    {
+      "name": "Pipián",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 14
+    },
+    {
+      "name": "Salsa macha",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 14
+    },
+    {
+      "name": "Escala Scoville",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 11
+    },
+    {
+      "name": "Pozole",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Chiles en nogada",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Cochinita pibil",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Barbacoa",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Birria",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Menudo",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Carnitas",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Chilaquiles",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Huevos rancheros",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Huevos divorciados",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Sopa de tortilla",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Chile relleno",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Frijoles refritos",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Arroz a la mexicana",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Tinga",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Enfrijoladas",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Molletes",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Maíz",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 1
+    },
+    {
+      "name": "Cacao",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 4
+    },
+    {
+      "name": "Vainilla",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 8
+    },
+    {
+      "name": "Nopal",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 7
+    },
+    {
+      "name": "Huitlacoche",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 14
+    },
+    {
+      "name": "Epazote",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 14
+    },
+    {
+      "name": "Amaranto",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 11
+    },
+    {
+      "name": "Chía",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 9
+    },
+    {
+      "name": "Achiote",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 11
+    },
+    {
+      "name": "Chapulines",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Escamoles",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 14
+    },
+    {
+      "name": "Churros",
+      "facet": "Dulces, panes y postres",
+      "known_at": 2
+    },
+    {
+      "name": "Concha",
+      "facet": "Dulces, panes y postres",
+      "known_at": 10
+    },
+    {
+      "name": "Rosca de Reyes",
+      "facet": "Dulces, panes y postres",
+      "known_at": 9
+    },
+    {
+      "name": "Flan",
+      "facet": "Dulces, panes y postres",
+      "known_at": 4
+    },
+    {
+      "name": "Cajeta",
+      "facet": "Dulces, panes y postres",
+      "known_at": 11
+    },
+    {
+      "name": "Alegría",
+      "facet": "Dulces, panes y postres",
+      "known_at": 13
+    },
+    {
+      "name": "Pastel de tres leches",
+      "facet": "Dulces, panes y postres",
+      "known_at": 7
+    },
+    {
+      "name": "Mazapán de cacahuate",
+      "facet": "Dulces, panes y postres",
+      "known_at": 10
+    },
+    {
+      "name": "Buñuelos mexicanos",
+      "facet": "Dulces, panes y postres",
+      "known_at": 10
+    },
+    {
+      "name": "Glorias",
+      "facet": "Dulces, panes y postres",
+      "known_at": 14
+    },
+    {
+      "name": "Jamoncillo",
+      "facet": "Dulces, panes y postres",
+      "known_at": 14
+    },
+    {
+      "name": "Cocada",
+      "facet": "Dulces, panes y postres",
+      "known_at": 8
+    },
+    {
+      "name": "Bolillo",
+      "facet": "Dulces, panes y postres",
+      "known_at": 12
+    },
+    {
+      "name": "Paleta de hielo",
+      "facet": "Dulces, panes y postres",
+      "known_at": 5
+    },
+    {
+      "name": "Dulce de tamarindo",
+      "facet": "Dulces, panes y postres",
+      "known_at": 9
+    },
+    {
+      "name": "Tequila",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 7
+    },
+    {
+      "name": "Mezcal",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11
+    },
+    {
+      "name": "Pulque",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 13
+    },
+    {
+      "name": "Agave azul",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11
+    },
+    {
+      "name": "Horchata",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 8
+    },
+    {
+      "name": "Agua de jamaica",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 9
+    },
+    {
+      "name": "Agua de tamarindo",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 9
+    },
+    {
+      "name": "Agua de chía",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 12
+    },
+    {
+      "name": "Atole",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11
+    },
+    {
+      "name": "Champurrado",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 12
+    },
+    {
+      "name": "Café de olla",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11
+    },
+    {
+      "name": "Tejate",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 15
+    },
+    {
+      "name": "Tepache",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 13
+    },
+    {
+      "name": "Michelada",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 12
+    },
+    {
+      "name": "Margarita",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11
+    },
+    {
+      "name": "Tascalate",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 15
+    },
+    {
+      "name": "Chocolate caliente mexicano",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 6
+    },
+    {
+      "name": "Ofrenda",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Cempasúchil",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 8
+    },
+    {
+      "name": "Grito de Independencia",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Fiesta de quince años",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 6
+    },
+    {
+      "name": "Mariachi",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Tianguis",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 13
+    },
+    {
+      "name": "Fonda",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Comida corrida",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 13
+    },
+    {
+      "name": "Sobremesa",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 10
+    },
+    {
+      "name": "Guelaguetza",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Taquiza",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Aztecas",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 5
+    },
+    {
+      "name": "Olmecas",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 12
+    },
+    {
+      "name": "Náhuatl",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 10
+    },
+    {
+      "name": "Moctezuma",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 9
+    },
+    {
+      "name": "Chinampa",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 12
+    },
+    {
+      "name": "Xocolatl",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 11
+    },
+    {
+      "name": "Popol Vuh",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 13
+    },
+    {
+      "name": "Mercado de Tlatelolco",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 14
+    },
+    {
+      "name": "Fray Bernardino de Sahagún",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 15
+    },
+    {
+      "name": "Teotihuacán",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 10
+    },
+    {
+      "name": "Granos de cacao como moneda",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 11
+    },
+    {
+      "name": "Yucatán",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Oaxaca",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Puebla",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Jalisco",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Guadalajara",
+      "facet": "Cocinas regionales de México",
+      "known_at": 8
+    },
+    {
+      "name": "Monterrey",
+      "facet": "Cocinas regionales de México",
+      "known_at": 9
+    },
+    {
+      "name": "Veracruz",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Michoacán",
+      "facet": "Cocinas regionales de México",
+      "known_at": 12
+    },
+    {
+      "name": "Chiapas",
+      "facet": "Cocinas regionales de México",
+      "known_at": 12
+    },
+    {
+      "name": "Tijuana",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Torta ahogada",
+      "facet": "Cocinas regionales de México",
+      "known_at": 13
+    },
+    {
+      "name": "Aguachile",
+      "facet": "Cocinas regionales de México",
+      "known_at": 13
+    },
+    {
+      "name": "Tacos de pescado",
+      "facet": "Cocinas regionales de México",
+      "known_at": 10
+    },
+    {
+      "name": "Papadzules",
+      "facet": "Cocinas regionales de México",
+      "known_at": 15
+    },
+    {
+      "name": "Huachinango a la veracruzana",
+      "facet": "Cocinas regionales de México",
+      "known_at": 14
+    },
+    {
+      "name": "Comal",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Molcajete",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Metate",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Prensa para tortillas",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Molinillo",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Olla de barro",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Cazuela de barro",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Tortillero",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Trompo",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Nixtamalización",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Cal",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Pib",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Hoja de maíz",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Hoja de plátano",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Tatemar",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Capear",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Tex-Mex",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 10
+    },
+    {
+      "name": "Chili con carne",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Nachos",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 3
+    },
+    {
+      "name": "Fajitas",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 8
+    },
+    {
+      "name": "Taco Bell",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 10
+    },
+    {
+      "name": "Ensalada César",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "El Chavo del 8",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 3
+    },
+    {
+      "name": "Torta de jamón",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 6
+    },
+    {
+      "name": "Como agua para chocolate",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Speedy González",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 6
+    },
+    {
+      "name": "Nacho Libre",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "El libro de la vida",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 8
+    },
+    {
+      "name": "Patrimonio Cultural Inmaterial de la UNESCO",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 13
+    },
+    {
+      "name": "Taco Tuesday",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 12
+    },
+    {
+      "name": "Enrique Olvera",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 15
+    },
+    {
+      "name": "Salsa Valentina",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 11
+    }
+  ]
+}

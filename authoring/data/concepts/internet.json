@@ -1,0 +1,967 @@
+{
+  "subcategory": "Internet",
+  "facets": [
+    "Historia de internet",
+    "Pioneros y creadores",
+    "Navegadores y buscadores",
+    "Redes sociales y apps",
+    "Correo y mensajería",
+    "Vocabulario y siglas web",
+    "Cómo funciona la red",
+    "Seguridad y estafas en línea",
+    "Cultura digital y memes",
+    "Videos, streaming y creadores",
+    "Conexión y dispositivos",
+    "Comercio y servicios en línea"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Primer correo electrónico",
+      "facet": "Historia de internet",
+      "known_at": 10
+    },
+    {
+      "name": "CERN",
+      "facet": "Historia de internet",
+      "known_at": 12
+    },
+    {
+      "name": "Primera página web",
+      "facet": "Historia de internet",
+      "known_at": 11
+    },
+    {
+      "name": "Burbuja puntocom",
+      "facet": "Historia de internet",
+      "known_at": 13
+    },
+    {
+      "name": "Napster",
+      "facet": "Historia de internet",
+      "known_at": 12
+    },
+    {
+      "name": "Efecto 2000",
+      "facet": "Historia de internet",
+      "known_at": 12
+    },
+    {
+      "name": "Primer mensaje de ARPANET",
+      "facet": "Historia de internet",
+      "known_at": 14
+    },
+    {
+      "name": "GeoCities",
+      "facet": "Historia de internet",
+      "known_at": 13
+    },
+    {
+      "name": "Primer emoji",
+      "facet": "Historia de internet",
+      "known_at": 11
+    },
+    {
+      "name": "Primer SMS",
+      "facet": "Historia de internet",
+      "known_at": 11
+    },
+    {
+      "name": "Primer tuit",
+      "facet": "Historia de internet",
+      "known_at": 12
+    },
+    {
+      "name": "Primer dominio .com",
+      "facet": "Historia de internet",
+      "known_at": 14
+    },
+    {
+      "name": "Llegada de internet a Colombia",
+      "facet": "Historia de internet",
+      "known_at": 13
+    },
+    {
+      "name": "Encarta",
+      "facet": "Historia de internet",
+      "known_at": 11
+    },
+    {
+      "name": "Primera compra en línea",
+      "facet": "Historia de internet",
+      "known_at": 13
+    },
+    {
+      "name": "Día de Internet",
+      "facet": "Historia de internet",
+      "known_at": 13
+    },
+    {
+      "name": "Vint Cerf",
+      "facet": "Pioneros y creadores",
+      "known_at": 14
+    },
+    {
+      "name": "Bob Kahn",
+      "facet": "Pioneros y creadores",
+      "known_at": 15
+    },
+    {
+      "name": "Sergey Brin",
+      "facet": "Pioneros y creadores",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmy Wales",
+      "facet": "Pioneros y creadores",
+      "known_at": 13
+    },
+    {
+      "name": "Jack Dorsey",
+      "facet": "Pioneros y creadores",
+      "known_at": 13
+    },
+    {
+      "name": "Kevin Systrom",
+      "facet": "Pioneros y creadores",
+      "known_at": 14
+    },
+    {
+      "name": "Jan Koum",
+      "facet": "Pioneros y creadores",
+      "known_at": 15
+    },
+    {
+      "name": "Marc Andreessen",
+      "facet": "Pioneros y creadores",
+      "known_at": 14
+    },
+    {
+      "name": "Sam Altman",
+      "facet": "Pioneros y creadores",
+      "known_at": 12
+    },
+    {
+      "name": "Satoshi Nakamoto",
+      "facet": "Pioneros y creadores",
+      "known_at": 12
+    },
+    {
+      "name": "Google Chrome",
+      "facet": "Navegadores y buscadores",
+      "known_at": 4
+    },
+    {
+      "name": "Mozilla Firefox",
+      "facet": "Navegadores y buscadores",
+      "known_at": 6
+    },
+    {
+      "name": "Safari",
+      "facet": "Navegadores y buscadores",
+      "known_at": 6
+    },
+    {
+      "name": "Internet Explorer",
+      "facet": "Navegadores y buscadores",
+      "known_at": 8
+    },
+    {
+      "name": "Microsoft Edge",
+      "facet": "Navegadores y buscadores",
+      "known_at": 8
+    },
+    {
+      "name": "Netscape Navigator",
+      "facet": "Navegadores y buscadores",
+      "known_at": 13
+    },
+    {
+      "name": "Mosaic",
+      "facet": "Navegadores y buscadores",
+      "known_at": 15
+    },
+    {
+      "name": "Opera",
+      "facet": "Navegadores y buscadores",
+      "known_at": 11
+    },
+    {
+      "name": "Yahoo!",
+      "facet": "Navegadores y buscadores",
+      "known_at": 9
+    },
+    {
+      "name": "Bing",
+      "facet": "Navegadores y buscadores",
+      "known_at": 9
+    },
+    {
+      "name": "AltaVista",
+      "facet": "Navegadores y buscadores",
+      "known_at": 14
+    },
+    {
+      "name": "DuckDuckGo",
+      "facet": "Navegadores y buscadores",
+      "known_at": 12
+    },
+    {
+      "name": "Google Maps",
+      "facet": "Navegadores y buscadores",
+      "known_at": 3
+    },
+    {
+      "name": "Google Street View",
+      "facet": "Navegadores y buscadores",
+      "known_at": 6
+    },
+    {
+      "name": "Barra de direcciones",
+      "facet": "Navegadores y buscadores",
+      "known_at": 6
+    },
+    {
+      "name": "Pestaña",
+      "facet": "Navegadores y buscadores",
+      "known_at": 5
+    },
+    {
+      "name": "Marcadores",
+      "facet": "Navegadores y buscadores",
+      "known_at": 8
+    },
+    {
+      "name": "Historial de navegación",
+      "facet": "Navegadores y buscadores",
+      "known_at": 7
+    },
+    {
+      "name": "Modo incógnito",
+      "facet": "Navegadores y buscadores",
+      "known_at": 7
+    },
+    {
+      "name": "Google Doodle",
+      "facet": "Navegadores y buscadores",
+      "known_at": 7
+    },
+    {
+      "name": "Voy a tener suerte",
+      "facet": "Navegadores y buscadores",
+      "known_at": 12
+    },
+    {
+      "name": "LinkedIn",
+      "facet": "Redes sociales y apps",
+      "known_at": 11
+    },
+    {
+      "name": "Pinterest",
+      "facet": "Redes sociales y apps",
+      "known_at": 9
+    },
+    {
+      "name": "Reddit",
+      "facet": "Redes sociales y apps",
+      "known_at": 11
+    },
+    {
+      "name": "Myspace",
+      "facet": "Redes sociales y apps",
+      "known_at": 13
+    },
+    {
+      "name": "Hi5",
+      "facet": "Redes sociales y apps",
+      "known_at": 13
+    },
+    {
+      "name": "Fotolog",
+      "facet": "Redes sociales y apps",
+      "known_at": 14
+    },
+    {
+      "name": "Tumblr",
+      "facet": "Redes sociales y apps",
+      "known_at": 13
+    },
+    {
+      "name": "Threads",
+      "facet": "Redes sociales y apps",
+      "known_at": 12
+    },
+    {
+      "name": "BeReal",
+      "facet": "Redes sociales y apps",
+      "known_at": 11
+    },
+    {
+      "name": "Me gusta",
+      "facet": "Redes sociales y apps",
+      "known_at": 2
+    },
+    {
+      "name": "Seguidores",
+      "facet": "Redes sociales y apps",
+      "known_at": 3
+    },
+    {
+      "name": "Historias de Instagram",
+      "facet": "Redes sociales y apps",
+      "known_at": 5
+    },
+    {
+      "name": "Filtros de cámara",
+      "facet": "Redes sociales y apps",
+      "known_at": 4
+    },
+    {
+      "name": "Spam",
+      "facet": "Correo y mensajería",
+      "known_at": 6
+    },
+    {
+      "name": "Sticker",
+      "facet": "Correo y mensajería",
+      "known_at": 3
+    },
+    {
+      "name": "MSN Messenger",
+      "facet": "Correo y mensajería",
+      "known_at": 12
+    },
+    {
+      "name": "Telegram",
+      "facet": "Correo y mensajería",
+      "known_at": 8
+    },
+    {
+      "name": "Gmail",
+      "facet": "Correo y mensajería",
+      "known_at": 5
+    },
+    {
+      "name": "Hotmail",
+      "facet": "Correo y mensajería",
+      "known_at": 10
+    },
+    {
+      "name": "Zumbido",
+      "facet": "Correo y mensajería",
+      "known_at": 13
+    },
+    {
+      "name": "Doble chulito azul",
+      "facet": "Correo y mensajería",
+      "known_at": 4
+    },
+    {
+      "name": "Nota de voz",
+      "facet": "Correo y mensajería",
+      "known_at": 3
+    },
+    {
+      "name": "Copia (CC)",
+      "facet": "Correo y mensajería",
+      "known_at": 11
+    },
+    {
+      "name": "Copia oculta (CCO)",
+      "facet": "Correo y mensajería",
+      "known_at": 13
+    },
+    {
+      "name": "Asunto del correo",
+      "facet": "Correo y mensajería",
+      "known_at": 9
+    },
+    {
+      "name": "Bandeja de entrada",
+      "facet": "Correo y mensajería",
+      "known_at": 8
+    },
+    {
+      "name": "Grupo de WhatsApp",
+      "facet": "Correo y mensajería",
+      "known_at": 3
+    },
+    {
+      "name": "Videollamada",
+      "facet": "Correo y mensajería",
+      "known_at": 2
+    },
+    {
+      "name": "Zoom",
+      "facet": "Correo y mensajería",
+      "known_at": 6
+    },
+    {
+      "name": "Skype",
+      "facet": "Correo y mensajería",
+      "known_at": 9
+    },
+    {
+      "name": "Emoticón",
+      "facet": "Correo y mensajería",
+      "known_at": 7
+    },
+    {
+      "name": "Mensajes temporales",
+      "facet": "Correo y mensajería",
+      "known_at": 10
+    },
+    {
+      "name": "World Wide Web",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 7
+    },
+    {
+      "name": "HTTP",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 11
+    },
+    {
+      "name": "HTTPS",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 12
+    },
+    {
+      "name": "JPEG",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 10
+    },
+    {
+      "name": "Enlace",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 4
+    },
+    {
+      "name": "Descargar",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 3
+    },
+    {
+      "name": "Cookie",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 9
+    },
+    {
+      "name": "En línea",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 4
+    },
+    {
+      "name": "FAQ",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 13
+    },
+    {
+      "name": "Dominio",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 11
+    },
+    {
+      "name": "Página de inicio",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 7
+    },
+    {
+      "name": "Blog",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 8
+    },
+    {
+      "name": "Wiki",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 10
+    },
+    {
+      "name": "Error 404",
+      "facet": "Vocabulario y siglas web",
+      "known_at": 9
+    },
+    {
+      "name": "Router",
+      "facet": "Cómo funciona la red",
+      "known_at": 5
+    },
+    {
+      "name": "Servidor",
+      "facet": "Cómo funciona la red",
+      "known_at": 9
+    },
+    {
+      "name": "Fibra óptica",
+      "facet": "Cómo funciona la red",
+      "known_at": 9
+    },
+    {
+      "name": "Cable submarino",
+      "facet": "Cómo funciona la red",
+      "known_at": 11
+    },
+    {
+      "name": "Paquete de datos",
+      "facet": "Cómo funciona la red",
+      "known_at": 13
+    },
+    {
+      "name": "TCP/IP",
+      "facet": "Cómo funciona la red",
+      "known_at": 14
+    },
+    {
+      "name": "DNS",
+      "facet": "Cómo funciona la red",
+      "known_at": 14
+    },
+    {
+      "name": "Ancho de banda",
+      "facet": "Cómo funciona la red",
+      "known_at": 12
+    },
+    {
+      "name": "Megabits por segundo",
+      "facet": "Cómo funciona la red",
+      "known_at": 11
+    },
+    {
+      "name": "La nube",
+      "facet": "Cómo funciona la red",
+      "known_at": 6
+    },
+    {
+      "name": "Centro de datos",
+      "facet": "Cómo funciona la red",
+      "known_at": 11
+    },
+    {
+      "name": "Byte",
+      "facet": "Cómo funciona la red",
+      "known_at": 8
+    },
+    {
+      "name": "Ping",
+      "facet": "Cómo funciona la red",
+      "known_at": 10
+    },
+    {
+      "name": "Torre de telefonía celular",
+      "facet": "Cómo funciona la red",
+      "known_at": 7
+    },
+    {
+      "name": "Protocolo",
+      "facet": "Cómo funciona la red",
+      "known_at": 12
+    },
+    {
+      "name": "IPv6",
+      "facet": "Cómo funciona la red",
+      "known_at": 15
+    },
+    {
+      "name": "Antivirus",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 6
+    },
+    {
+      "name": "Verificación en dos pasos",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 9
+    },
+    {
+      "name": "Ciberacoso",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Troyano",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 10
+    },
+    {
+      "name": "Ransomware",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 13
+    },
+    {
+      "name": "Cortafuegos",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 12
+    },
+    {
+      "name": "Candado del navegador",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 9
+    },
+    {
+      "name": "Encriptación",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 12
+    },
+    {
+      "name": "Copia de seguridad",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 8
+    },
+    {
+      "name": "Estafa del príncipe nigeriano",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 13
+    },
+    {
+      "name": "Control parental",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 6
+    },
+    {
+      "name": "Datos personales",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Gusano informático",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 12
+    },
+    {
+      "name": "Malware",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 11
+    },
+    {
+      "name": "Huella digital en internet",
+      "facet": "Seguridad y estafas en línea",
+      "known_at": 10
+    },
+    {
+      "name": "Doge",
+      "facet": "Cultura digital y memes",
+      "known_at": 9
+    },
+    {
+      "name": "Trollface",
+      "facet": "Cultura digital y memes",
+      "known_at": 11
+    },
+    {
+      "name": "Reto viral",
+      "facet": "Cultura digital y memes",
+      "known_at": 5
+    },
+    {
+      "name": "Troll",
+      "facet": "Cultura digital y memes",
+      "known_at": 8
+    },
+    {
+      "name": "Novio distraído",
+      "facet": "Cultura digital y memes",
+      "known_at": 10
+    },
+    {
+      "name": "Stonks",
+      "facet": "Cultura digital y memes",
+      "known_at": 11
+    },
+    {
+      "name": "Cultura de la cancelación",
+      "facet": "Cultura digital y memes",
+      "known_at": 12
+    },
+    {
+      "name": "FOMO",
+      "facet": "Cultura digital y memes",
+      "known_at": 13
+    },
+    {
+      "name": "LOL",
+      "facet": "Cultura digital y memes",
+      "known_at": 8
+    },
+    {
+      "name": "Wordle",
+      "facet": "Cultura digital y memes",
+      "known_at": 10
+    },
+    {
+      "name": "Youtuber",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 2
+    },
+    {
+      "name": "Streamer",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 5
+    },
+    {
+      "name": "Disney+",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 4
+    },
+    {
+      "name": "Suscriptores",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 3
+    },
+    {
+      "name": "Botón de YouTube",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 9
+    },
+    {
+      "name": "El Rubius",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 6
+    },
+    {
+      "name": "Buffering",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 6
+    },
+    {
+      "name": "Maratón de series",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 8
+    },
+    {
+      "name": "Alta definición",
+      "facet": "Videos, streaming y creadores",
+      "known_at": 6
+    },
+    {
+      "name": "Celular inteligente",
+      "facet": "Conexión y dispositivos",
+      "known_at": 2
+    },
+    {
+      "name": "Computador portátil",
+      "facet": "Conexión y dispositivos",
+      "known_at": 2
+    },
+    {
+      "name": "Módem",
+      "facet": "Conexión y dispositivos",
+      "known_at": 9
+    },
+    {
+      "name": "Conexión por módem telefónico",
+      "facet": "Conexión y dispositivos",
+      "known_at": 11
+    },
+    {
+      "name": "Cable Ethernet",
+      "facet": "Conexión y dispositivos",
+      "known_at": 12
+    },
+    {
+      "name": "Datos móviles",
+      "facet": "Conexión y dispositivos",
+      "known_at": 5
+    },
+    {
+      "name": "4G",
+      "facet": "Conexión y dispositivos",
+      "known_at": 7
+    },
+    {
+      "name": "5G",
+      "facet": "Conexión y dispositivos",
+      "known_at": 7
+    },
+    {
+      "name": "Punto de acceso móvil",
+      "facet": "Conexión y dispositivos",
+      "known_at": 8
+    },
+    {
+      "name": "Smart TV",
+      "facet": "Conexión y dispositivos",
+      "known_at": 4
+    },
+    {
+      "name": "Modo avión",
+      "facet": "Conexión y dispositivos",
+      "known_at": 3
+    },
+    {
+      "name": "Consola de videojuegos",
+      "facet": "Conexión y dispositivos",
+      "known_at": 2
+    },
+    {
+      "name": "Internet de las cosas",
+      "facet": "Conexión y dispositivos",
+      "known_at": 13
+    },
+    {
+      "name": "Roaming",
+      "facet": "Conexión y dispositivos",
+      "known_at": 12
+    },
+    {
+      "name": "Tarjeta SIM",
+      "facet": "Conexión y dispositivos",
+      "known_at": 7
+    },
+    {
+      "name": "Café internet",
+      "facet": "Conexión y dispositivos",
+      "known_at": 7
+    },
+    {
+      "name": "Mercado Libre",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 7
+    },
+    {
+      "name": "PayPal",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 10
+    },
+    {
+      "name": "Compras en línea",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 3
+    },
+    {
+      "name": "Carrito de compras",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 4
+    },
+    {
+      "name": "eBay",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 11
+    },
+    {
+      "name": "Uber",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 6
+    },
+    {
+      "name": "Airbnb",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 10
+    },
+    {
+      "name": "Nequi",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 8
+    },
+    {
+      "name": "Bitcoin",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 9
+    },
+    {
+      "name": "Banca en línea",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 8
+    },
+    {
+      "name": "Reseñas con estrellas",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 5
+    },
+    {
+      "name": "Black Friday",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Cyber Monday",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 11
+    },
+    {
+      "name": "Código de descuento",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Google Play",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 4
+    },
+    {
+      "name": "App Store",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 5
+    },
+    {
+      "name": "Suscripción",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Alibaba",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 12
+    },
+    {
+      "name": "Temu",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 9
+    },
+    {
+      "name": "Shein",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 8
+    },
+    {
+      "name": "Teletrabajo",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 8
+    },
+    {
+      "name": "Clases virtuales",
+      "facet": "Comercio y servicios en línea",
+      "known_at": 4
+    }
+  ]
+}

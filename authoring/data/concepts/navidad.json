@@ -1,0 +1,1092 @@
+{
+  "subcategory": "Navidad",
+  "facets": [
+    "Comidas y bebidas navideñas",
+    "Novena y villancicos",
+    "Personajes de la Navidad",
+    "Pesebre y relato bíblico",
+    "Adornos y decoración",
+    "Fechas y calendario navideño",
+    "Navidad en el mundo",
+    "Navidad en Colombia",
+    "Navidad en películas y cuentos",
+    "Origen e historia de costumbres",
+    "Plantas y animales navideños",
+    "Palabras y expresiones navideñas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Natilla",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 1
+    },
+    {
+      "name": "Buñuelo",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 1
+    },
+    {
+      "name": "Hojuelas",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 5
+    },
+    {
+      "name": "Tamal",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 2
+    },
+    {
+      "name": "Lechona",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 3
+    },
+    {
+      "name": "Pavo",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 2
+    },
+    {
+      "name": "Panettone",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 4
+    },
+    {
+      "name": "Turrón",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 6
+    },
+    {
+      "name": "Ponche",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 8
+    },
+    {
+      "name": "Sabajón",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 9
+    },
+    {
+      "name": "Mazapán",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 7
+    },
+    {
+      "name": "Galletas de jengibre",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 3
+    },
+    {
+      "name": "Roscón de Reyes",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 9
+    },
+    {
+      "name": "Hallaca",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 9
+    },
+    {
+      "name": "Pan de jamón",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 11
+    },
+    {
+      "name": "Polvorones",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 10
+    },
+    {
+      "name": "Chocolate caliente",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 1
+    },
+    {
+      "name": "Bastón de caramelo",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 2
+    },
+    {
+      "name": "Pudín de Navidad",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 11
+    },
+    {
+      "name": "Stollen",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 14
+    },
+    {
+      "name": "Tronco de Navidad",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 11
+    },
+    {
+      "name": "Novena de Aguinaldos",
+      "facet": "Novena y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Gozos",
+      "facet": "Novena y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Consideraciones de la novena",
+      "facet": "Novena y villancicos",
+      "known_at": 8
+    },
+    {
+      "name": "Fray Fernando de Jesús Larrea",
+      "facet": "Novena y villancicos",
+      "known_at": 14
+    },
+    {
+      "name": "Madre María Ignacia",
+      "facet": "Novena y villancicos",
+      "known_at": 14
+    },
+    {
+      "name": "Villancico",
+      "facet": "Novena y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Noche de paz",
+      "facet": "Novena y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Los peces en el río",
+      "facet": "Novena y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "El tamborilero",
+      "facet": "Novena y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Mi burrito sabanero",
+      "facet": "Novena y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Tutaina",
+      "facet": "Novena y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Antón Tiruliruliru",
+      "facet": "Novena y villancicos",
+      "known_at": 5
+    },
+    {
+      "name": "Campana sobre campana",
+      "facet": "Novena y villancicos",
+      "known_at": 4
+    },
+    {
+      "name": "Jingle Bells",
+      "facet": "Novena y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "A la nanita nana",
+      "facet": "Novena y villancicos",
+      "known_at": 8
+    },
+    {
+      "name": "Hugo Blanco",
+      "facet": "Novena y villancicos",
+      "known_at": 13
+    },
+    {
+      "name": "Franz Gruber",
+      "facet": "Novena y villancicos",
+      "known_at": 14
+    },
+    {
+      "name": "Feliz Navidad de José Feliciano",
+      "facet": "Novena y villancicos",
+      "known_at": 6
+    },
+    {
+      "name": "All I Want for Christmas Is You",
+      "facet": "Novena y villancicos",
+      "known_at": 6
+    },
+    {
+      "name": "Adeste fideles",
+      "facet": "Novena y villancicos",
+      "known_at": 12
+    },
+    {
+      "name": "Pandereta",
+      "facet": "Novena y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Maracas",
+      "facet": "Novena y villancicos",
+      "known_at": 2
+    },
+    {
+      "name": "Papá Noel",
+      "facet": "Personajes de la Navidad",
+      "known_at": 1
+    },
+    {
+      "name": "Niño Dios",
+      "facet": "Personajes de la Navidad",
+      "known_at": 1
+    },
+    {
+      "name": "Rodolfo el reno",
+      "facet": "Personajes de la Navidad",
+      "known_at": 2
+    },
+    {
+      "name": "Duendes de Papá Noel",
+      "facet": "Personajes de la Navidad",
+      "known_at": 1
+    },
+    {
+      "name": "Señora Claus",
+      "facet": "Personajes de la Navidad",
+      "known_at": 4
+    },
+    {
+      "name": "San Nicolás",
+      "facet": "Personajes de la Navidad",
+      "known_at": 8
+    },
+    {
+      "name": "La Befana",
+      "facet": "Personajes de la Navidad",
+      "known_at": 12
+    },
+    {
+      "name": "Krampus",
+      "facet": "Personajes de la Navidad",
+      "known_at": 10
+    },
+    {
+      "name": "Olentzero",
+      "facet": "Personajes de la Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "Ded Moroz",
+      "facet": "Personajes de la Navidad",
+      "known_at": 14
+    },
+    {
+      "name": "Sinterklaas",
+      "facet": "Personajes de la Navidad",
+      "known_at": 12
+    },
+    {
+      "name": "Tió de Nadal",
+      "facet": "Personajes de la Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Christkind",
+      "facet": "Personajes de la Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Viejito Pascuero",
+      "facet": "Personajes de la Navidad",
+      "known_at": 11
+    },
+    {
+      "name": "Ángel de la Navidad",
+      "facet": "Personajes de la Navidad",
+      "known_at": 2
+    },
+    {
+      "name": "Renos de Papá Noel",
+      "facet": "Personajes de la Navidad",
+      "known_at": 2
+    },
+    {
+      "name": "Pesebre",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 1
+    },
+    {
+      "name": "Belén",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 4
+    },
+    {
+      "name": "Nazaret",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 8
+    },
+    {
+      "name": "Virgen María",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 1
+    },
+    {
+      "name": "San José",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 1
+    },
+    {
+      "name": "Reyes Magos",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 2
+    },
+    {
+      "name": "Melchor",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 6
+    },
+    {
+      "name": "Gaspar",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 6
+    },
+    {
+      "name": "Baltasar",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 6
+    },
+    {
+      "name": "Estrella de Belén",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 3
+    },
+    {
+      "name": "Oro, incienso y mirra",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 6
+    },
+    {
+      "name": "Ángel Gabriel",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 7
+    },
+    {
+      "name": "Pastores",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 3
+    },
+    {
+      "name": "Rey Herodes",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 9
+    },
+    {
+      "name": "Mula y buey",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 3
+    },
+    {
+      "name": "Anunciación",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 10
+    },
+    {
+      "name": "Huida a Egipto",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 10
+    },
+    {
+      "name": "Evangelio de Lucas",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 12
+    },
+    {
+      "name": "César Augusto",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 12
+    },
+    {
+      "name": "Árbol de Navidad",
+      "facet": "Adornos y decoración",
+      "known_at": 1
+    },
+    {
+      "name": "Bolas de Navidad",
+      "facet": "Adornos y decoración",
+      "known_at": 1
+    },
+    {
+      "name": "Luces de Navidad",
+      "facet": "Adornos y decoración",
+      "known_at": 1
+    },
+    {
+      "name": "Guirnalda",
+      "facet": "Adornos y decoración",
+      "known_at": 4
+    },
+    {
+      "name": "Calcetín navideño",
+      "facet": "Adornos y decoración",
+      "known_at": 2
+    },
+    {
+      "name": "Muñeco de nieve",
+      "facet": "Adornos y decoración",
+      "known_at": 1
+    },
+    {
+      "name": "Tarjeta de Navidad",
+      "facet": "Adornos y decoración",
+      "known_at": 3
+    },
+    {
+      "name": "Papel de regalo",
+      "facet": "Adornos y decoración",
+      "known_at": 1
+    },
+    {
+      "name": "Campana navideña",
+      "facet": "Adornos y decoración",
+      "known_at": 2
+    },
+    {
+      "name": "Moño",
+      "facet": "Adornos y decoración",
+      "known_at": 3
+    },
+    {
+      "name": "Nieve artificial",
+      "facet": "Adornos y decoración",
+      "known_at": 4
+    },
+    {
+      "name": "Gorro de Papá Noel",
+      "facet": "Adornos y decoración",
+      "known_at": 1
+    },
+    {
+      "name": "Suéter navideño",
+      "facet": "Adornos y decoración",
+      "known_at": 6
+    },
+    {
+      "name": "Farolito",
+      "facet": "Adornos y decoración",
+      "known_at": 3
+    },
+    {
+      "name": "Estrella del árbol",
+      "facet": "Adornos y decoración",
+      "known_at": 2
+    },
+    {
+      "name": "Nochebuena",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 2
+    },
+    {
+      "name": "25 de diciembre",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 1
+    },
+    {
+      "name": "Adviento",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 8
+    },
+    {
+      "name": "Corona de Adviento",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 8
+    },
+    {
+      "name": "Calendario de Adviento",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 6
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 6
+    },
+    {
+      "name": "Nochevieja",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 3
+    },
+    {
+      "name": "Año Nuevo",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 1
+    },
+    {
+      "name": "Día de Reyes",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 5
+    },
+    {
+      "name": "Día de la Candelaria",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 11
+    },
+    {
+      "name": "Misa de Gallo",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 10
+    },
+    {
+      "name": "Navidad ortodoxa",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 13
+    },
+    {
+      "name": "Boxing Day",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 12
+    },
+    {
+      "name": "Día de la Inmaculada Concepción",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 8
+    },
+    {
+      "name": "Doce días de Navidad",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 11
+    },
+    {
+      "name": "Calendario juliano",
+      "facet": "Fechas y calendario navideño",
+      "known_at": 13
+    },
+    {
+      "name": "Rovaniemi",
+      "facet": "Navidad en el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Laponia",
+      "facet": "Navidad en el mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Árbol del Rockefeller Center",
+      "facet": "Navidad en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Las Posadas",
+      "facet": "Navidad en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Uvas de la suerte",
+      "facet": "Navidad en el mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Lotería de El Gordo",
+      "facet": "Navidad en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Cabra de Gävle",
+      "facet": "Navidad en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Santa Lucía de Suecia",
+      "facet": "Navidad en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Navidad en la playa de Australia",
+      "facet": "Navidad en el mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Mercados navideños alemanes",
+      "facet": "Navidad en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Pesebre napolitano",
+      "facet": "Navidad en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Parrandas puertorriqueñas",
+      "facet": "Navidad en el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Gaitas zulianas",
+      "facet": "Navidad en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Pollo frito de Navidad en Japón",
+      "facet": "Navidad en el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Parol",
+      "facet": "Navidad en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Wigilia",
+      "facet": "Navidad en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Noche de Rábanos",
+      "facet": "Navidad en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Día de las Velitas",
+      "facet": "Navidad en Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Alumbrados de Medellín",
+      "facet": "Navidad en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Muñeco de Año Viejo",
+      "facet": "Navidad en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Pólvora",
+      "facet": "Navidad en Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Juegos de aguinaldos",
+      "facet": "Navidad en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Pajita en boca",
+      "facet": "Navidad en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Tres pies",
+      "facet": "Navidad en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Dar y no recibir",
+      "facet": "Navidad en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Sí y no",
+      "facet": "Navidad en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Estatua",
+      "facet": "Navidad en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Feria de Cali",
+      "facet": "Navidad en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Carnaval de Negros y Blancos",
+      "facet": "Navidad en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Festival de Luces de Villa de Leyva",
+      "facet": "Navidad en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Festival de Velas y Faroles de Quimbaya",
+      "facet": "Navidad en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Prima de Navidad",
+      "facet": "Navidad en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Agüero de la maleta",
+      "facet": "Navidad en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Ropa interior amarilla",
+      "facet": "Navidad en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Lentejas de Año Nuevo",
+      "facet": "Navidad en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Mi pobre angelito",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 4
+    },
+    {
+      "name": "Kevin McCallister",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "El Grinch",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Cuento de Navidad",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Ebenezer Scrooge",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Charles Dickens",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Chaikovski",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "El extraño mundo de Jack",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Jack Skellington",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Klaus",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 7
+    },
+    {
+      "name": "El expreso polar",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Elf",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Milagro en la calle 34",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Qué bello es vivir",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Cláusula",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Arthur Christmas",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 7
+    },
+    {
+      "name": "La pequeña cerillera",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Christian Andersen",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "San Francisco de Asís",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 9
+    },
+    {
+      "name": "Greccio",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 14
+    },
+    {
+      "name": "Saturnales",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Solsticio de invierno",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 9
+    },
+    {
+      "name": "Sol Invictus",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 14
+    },
+    {
+      "name": "Coca-Cola y Papá Noel",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Thomas Nast",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 15
+    },
+    {
+      "name": "Una visita de San Nicolás",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 14
+    },
+    {
+      "name": "Martín Lutero",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Príncipe Alberto",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Cole",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 15
+    },
+    {
+      "name": "Tregua de Navidad de 1914",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Christmas cracker",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Edward Johnson",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 15
+    },
+    {
+      "name": "San Nicolás de Bari",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Flor de Pascua",
+      "facet": "Plantas y animales navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Acebo",
+      "facet": "Plantas y animales navideños",
+      "known_at": 9
+    },
+    {
+      "name": "Pino",
+      "facet": "Plantas y animales navideños",
+      "known_at": 2
+    },
+    {
+      "name": "Abeto",
+      "facet": "Plantas y animales navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Musgo",
+      "facet": "Plantas y animales navideños",
+      "known_at": 4
+    },
+    {
+      "name": "Barba de viejo",
+      "facet": "Plantas y animales navideños",
+      "known_at": 10
+    },
+    {
+      "name": "Petirrojo",
+      "facet": "Plantas y animales navideños",
+      "known_at": 11
+    },
+    {
+      "name": "Canela",
+      "facet": "Plantas y animales navideños",
+      "known_at": 3
+    },
+    {
+      "name": "Clavo de olor",
+      "facet": "Plantas y animales navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Jengibre",
+      "facet": "Plantas y animales navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Ciprés",
+      "facet": "Plantas y animales navideños",
+      "known_at": 9
+    },
+    {
+      "name": "Aguinaldo",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 5
+    },
+    {
+      "name": "Natividad",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 8
+    },
+    {
+      "name": "Feliz Navidad",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 1
+    },
+    {
+      "name": "Próspero año nuevo",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 3
+    },
+    {
+      "name": "Xmas",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 10
+    },
+    {
+      "name": "Noel",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 7
+    },
+    {
+      "name": "Jo, jo, jo",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 1
+    },
+    {
+      "name": "Trineo",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 2
+    },
+    {
+      "name": "Amigo secreto",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 3
+    },
+    {
+      "name": "Inocentada",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 8
+    },
+    {
+      "name": "Cuesta de enero",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 12
+    },
+    {
+      "name": "Parranda",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 6
+    },
+    {
+      "name": "Felices Pascuas",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 9
+    },
+    {
+      "name": "Emmanuel",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 12
+    },
+    {
+      "name": "Aleluya",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 5
+    },
+    {
+      "name": "Gloria in excelsis Deo",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 13
+    },
+    {
+      "name": "Cotillón",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 11
+    },
+    {
+      "name": "Brindis",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 5
+    }
+  ]
+}

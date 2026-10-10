@@ -1,0 +1,758 @@
+{
+  "subcategory": "Natación",
+  "facets": [
+    "Estilos de nado",
+    "Nadadores famosos del mundo",
+    "Natación en Colombia",
+    "Piscinas y equipo de natación",
+    "Reglas, pruebas y distancias",
+    "Natación en los Juegos Olímpicos",
+    "Travesías y aguas abiertas",
+    "Clavados, waterpolo y natación artística",
+    "El cuerpo y la ciencia del nado",
+    "Aprender a nadar y seguridad",
+    "Animales grandes nadadores",
+    "Natación en películas y caricaturas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 3,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Crol",
+      "facet": "Estilos de nado",
+      "known_at": 4
+    },
+    {
+      "name": "Espalda",
+      "facet": "Estilos de nado",
+      "known_at": 3
+    },
+    {
+      "name": "Pecho",
+      "facet": "Estilos de nado",
+      "known_at": 4
+    },
+    {
+      "name": "Mariposa",
+      "facet": "Estilos de nado",
+      "known_at": 4
+    },
+    {
+      "name": "Estilo perrito",
+      "facet": "Estilos de nado",
+      "known_at": 2
+    },
+    {
+      "name": "Patada de delfín",
+      "facet": "Estilos de nado",
+      "known_at": 7
+    },
+    {
+      "name": "Patada de rana",
+      "facet": "Estilos de nado",
+      "known_at": 6
+    },
+    {
+      "name": "Nado de costado",
+      "facet": "Estilos de nado",
+      "known_at": 9
+    },
+    {
+      "name": "Brazada",
+      "facet": "Estilos de nado",
+      "known_at": 5
+    },
+    {
+      "name": "Respiración bilateral",
+      "facet": "Estilos de nado",
+      "known_at": 11
+    },
+    {
+      "name": "Batido de piernas",
+      "facet": "Estilos de nado",
+      "known_at": 6
+    },
+    {
+      "name": "Nado submarino",
+      "facet": "Estilos de nado",
+      "known_at": 5
+    },
+    {
+      "name": "Trudgen",
+      "facet": "Estilos de nado",
+      "known_at": 15
+    },
+    {
+      "name": "Michael Phelps",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Ian Thorpe",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny Weissmuller",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Caeleb Dressel",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Léon Marchand",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Federica Pellegrini",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Ryan Lochte",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Dara Torres",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 15,
+      "retired": "unaskable: Dara Torres is too obscure for difficulty 5, and the connection options would be forced."
+    },
+    {
+      "name": "Dawn Fraser",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Summer McIntosh",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Ariarne Titmus",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Eric Moussambani",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Sarah Sjöström",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Alexander Popov",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "César Cielo",
+      "facet": "Nadadores famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Omar Pinzón",
+      "facet": "Natación en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Isabella Arcila",
+      "facet": "Natación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Jorge Murillo",
+      "facet": "Natación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Carolina Colorado",
+      "facet": "Natación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Nelson Crispín",
+      "facet": "Natación en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Serrano Zárate",
+      "facet": "Natación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Moisés Fuentes",
+      "facet": "Natación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Sebastián Morales",
+      "facet": "Natación en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Víctor Ortega",
+      "facet": "Natación en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Juegos Panamericanos de Cali 1971",
+      "facet": "Natación en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Bolivarianos",
+      "facet": "Natación en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Juegos Nacionales de Colombia",
+      "facet": "Natación en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Federación Colombiana de Natación",
+      "facet": "Natación en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Complejo Acuático de Medellín",
+      "facet": "Natación en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Suramericanos de Medellín 2010",
+      "facet": "Natación en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Centroamericanos y del Caribe",
+      "facet": "Natación en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Gorro de natación",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 2
+    },
+    {
+      "name": "Tapones para los oídos",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 4
+    },
+    {
+      "name": "Tabla de natación",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 3
+    },
+    {
+      "name": "Pull buoy",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 11
+    },
+    {
+      "name": "Aletas",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 2
+    },
+    {
+      "name": "Banderines de espalda",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 11
+    },
+    {
+      "name": "Placa de contacto",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 11
+    },
+    {
+      "name": "Vestido de baño",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 1
+    },
+    {
+      "name": "Traje LZR Racer",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 14
+    },
+    {
+      "name": "Cloro",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 4
+    },
+    {
+      "name": "Piscina olímpica",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 4
+    },
+    {
+      "name": "Piscina semiolímpica",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 7
+    },
+    {
+      "name": "Reloj de ritmo",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 12
+    },
+    {
+      "name": "Línea negra del fondo",
+      "facet": "Piscinas y equipo de natación",
+      "known_at": 7
+    },
+    {
+      "name": "Relevo combinado",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 10
+    },
+    {
+      "name": "Relevo 4x100 libre",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 8
+    },
+    {
+      "name": "1.500 metros libre",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 10
+    },
+    {
+      "name": "50 metros libre",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 7
+    },
+    {
+      "name": "800 metros libre",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 11
+    },
+    {
+      "name": "Salida falsa",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 7
+    },
+    {
+      "name": "Viraje de voltereta",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 9
+    },
+    {
+      "name": "Juez de virajes",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 12
+    },
+    {
+      "name": "Carril central",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 10
+    },
+    {
+      "name": "Piscina corta",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 11
+    },
+    {
+      "name": "Récord mundial",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 5
+    },
+    {
+      "name": "Salida de espalda",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 9
+    },
+    {
+      "name": "Descalificación",
+      "facet": "Reglas, pruebas y distancias",
+      "known_at": 7
+    },
+    {
+      "name": "Juegos Olímpicos de Atenas 1896",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Juegos Olímpicos de Pekín 2008",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 9
+    },
+    {
+      "name": "Juegos Olímpicos de Múnich 1972",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Juegos Olímpicos de París 2024",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 7
+    },
+    {
+      "name": "Juegos Olímpicos de Tokio 2020",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Juegos Olímpicos de Londres 2012",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 9
+    },
+    {
+      "name": "Juegos Olímpicos de Sídney 2000",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Juegos Olímpicos de Estocolmo 1912",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Cubo de Agua",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Centro Acuático de Londres",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Paris La Défense Arena",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Podio olímpico",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 3
+    },
+    {
+      "name": "Medalla de oro olímpica",
+      "facet": "Natación en los Juegos Olímpicos",
+      "known_at": 3
+    },
+    {
+      "name": "Matthew Webb",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 14
+    },
+    {
+      "name": "Gertrude Ederle",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 15
+    },
+    {
+      "name": "Diana Nyad",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 13
+    },
+    {
+      "name": "Maratón acuática de 10 km",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 11
+    },
+    {
+      "name": "Lynne Cox",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 15
+    },
+    {
+      "name": "Ironman",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 10
+    },
+    {
+      "name": "Traje de neopreno",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 8
+    },
+    {
+      "name": "Boya de señalización",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 6
+    },
+    {
+      "name": "Natación en hielo",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 11
+    },
+    {
+      "name": "Estrecho de los Dardanelos",
+      "facet": "Travesías y aguas abiertas",
+      "known_at": 15
+    },
+    {
+      "name": "Trampolín de 3 metros",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 8
+    },
+    {
+      "name": "Plataforma de 10 metros",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 8
+    },
+    {
+      "name": "Clavados sincronizados",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 8
+    },
+    {
+      "name": "Salto de gran altura",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 11
+    },
+    {
+      "name": "Clavadistas de La Quebrada",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Daley",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 13
+    },
+    {
+      "name": "Greg Louganis",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 15
+    },
+    {
+      "name": "Gorro de waterpolo",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 11
+    },
+    {
+      "name": "Arquero de waterpolo",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 9
+    },
+    {
+      "name": "Pinza nasal",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 8
+    },
+    {
+      "name": "Esther Williams",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 15
+    },
+    {
+      "name": "Patada de batidora",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 13
+    },
+    {
+      "name": "Hockey subacuático",
+      "facet": "Clavados, waterpolo y natación artística",
+      "known_at": 13
+    },
+    {
+      "name": "Resistencia del agua",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 8
+    },
+    {
+      "name": "Hidrodinámica",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 11
+    },
+    {
+      "name": "Calambre",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 4
+    },
+    {
+      "name": "Dedos arrugados",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 3
+    },
+    {
+      "name": "Oído de nadador",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 11
+    },
+    {
+      "name": "Hombro de nadador",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 12
+    },
+    {
+      "name": "Capacidad pulmonar",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 9
+    },
+    {
+      "name": "Apnea",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 9
+    },
+    {
+      "name": "Dorsal ancho",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 13
+    },
+    {
+      "name": "Hipotermia",
+      "facet": "El cuerpo y la ciencia del nado",
+      "known_at": 9
+    },
+    {
+      "name": "Flotador",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 1
+    },
+    {
+      "name": "Brazaletes inflables",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 1
+    },
+    {
+      "name": "Flotar como estrella",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 3
+    },
+    {
+      "name": "Hacer burbujas",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Reanimación cardiopulmonar",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 10
+    },
+    {
+      "name": "Aro salvavidas",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 3
+    },
+    {
+      "name": "Piscina para niños",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 1
+    },
+    {
+      "name": "Zona honda",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Protector solar",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Esperar después de comer",
+      "facet": "Aprender a nadar y seguridad",
+      "known_at": 5
+    },
+    {
+      "name": "Tiburón mako",
+      "facet": "Animales grandes nadadores",
+      "known_at": 12
+    },
+    {
+      "name": "Nutria",
+      "facet": "Animales grandes nadadores",
+      "known_at": 4
+    },
+    {
+      "name": "Pato",
+      "facet": "Animales grandes nadadores",
+      "known_at": 1
+    },
+    {
+      "name": "Cocodrilo",
+      "facet": "Animales grandes nadadores",
+      "known_at": 2
+    },
+    {
+      "name": "Pez volador",
+      "facet": "Animales grandes nadadores",
+      "known_at": 5
+    },
+    {
+      "name": "Nemo",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 1
+    },
+    {
+      "name": "Arenita Mejillas",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 3
+    },
+    {
+      "name": "Free!",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 12
+    },
+    {
+      "name": "Rico McPato",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 6
+    },
+    {
+      "name": "Tiburón (película de 1975)",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 9
+    },
+    {
+      "name": "Splash",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 13
+    },
+    {
+      "name": "Marlin",
+      "facet": "Natación en películas y caricaturas",
+      "known_at": 4
+    }
+  ]
+}

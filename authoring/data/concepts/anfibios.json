@@ -1,0 +1,877 @@
+{
+  "subcategory": "Anfibios",
+  "facets": [
+    "Ranas y sapos del mundo",
+    "Ranas venenosas y colores de advertencia",
+    "Salamandras, tritones y ajolotes",
+    "Cecilias y anfibios extraños",
+    "Metamorfosis y ciclo de vida",
+    "Piel, cuerpo y respiración",
+    "Cantos, defensa y comportamiento",
+    "Hábitats, peligros y conservación",
+    "Anfibios de Colombia",
+    "Anfibios en cuentos, cine y juegos",
+    "Palabras y dichos de sapos y ranas",
+    "Récords y gigantes anfibios"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 1,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rana",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 1
+    },
+    {
+      "name": "Sapo",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 1
+    },
+    {
+      "name": "Rana toro",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Rana arborícola de ojos rojos",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Rana voladora de Wallace",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Sapo partero",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Rana africana de uñas",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Rana tomate",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Rana cornuda argentina",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Rana leopardo",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Coquí",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Rana de Budgett",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Rana arborícola verde",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Sapo común europeo",
+      "facet": "Ranas y sapos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Coloración aposemática",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 13
+    },
+    {
+      "name": "Rana flecha azul",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 8
+    },
+    {
+      "name": "Rana fresa",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 9
+    },
+    {
+      "name": "Glándulas parotoideas",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 13
+    },
+    {
+      "name": "Sapo de vientre de fuego",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 11
+    },
+    {
+      "name": "Mantella dorada",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 13
+    },
+    {
+      "name": "Bufotoxina",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 14
+    },
+    {
+      "name": "Dardo envenenado",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 7
+    },
+    {
+      "name": "Pueblo emberá",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 12
+    },
+    {
+      "name": "Epibatidina",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 15
+    },
+    {
+      "name": "Rana dardo verde y negra",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 10
+    },
+    {
+      "name": "Tetrodotoxina",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 14
+    },
+    {
+      "name": "Salamandra",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 3
+    },
+    {
+      "name": "Ajolote",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 3
+    },
+    {
+      "name": "Salamandra común",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 8
+    },
+    {
+      "name": "Salamandra gigante japonesa",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 12
+    },
+    {
+      "name": "Proteo",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 13
+    },
+    {
+      "name": "Tritón crestado",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 11
+    },
+    {
+      "name": "Sirena (anfibio)",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 14
+    },
+    {
+      "name": "Anfiuma",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 15
+    },
+    {
+      "name": "Tritón jaspeado",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 12
+    },
+    {
+      "name": "Salamandra tigre",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 10
+    },
+    {
+      "name": "Salamandras sin pulmones",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 13
+    },
+    {
+      "name": "Tritón de vientre rojo",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 11
+    },
+    {
+      "name": "Salamandra gigante americana",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 13
+    },
+    {
+      "name": "Xochimilco",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 9
+    },
+    {
+      "name": "Bolitoglossa",
+      "facet": "Salamandras, tritones y ajolotes",
+      "known_at": 14
+    },
+    {
+      "name": "Sapo de Surinam",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 12
+    },
+    {
+      "name": "Rana peluda",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 12
+    },
+    {
+      "name": "Rana de Darwin",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 12
+    },
+    {
+      "name": "Rana incubadora gástrica",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 13
+    },
+    {
+      "name": "Rana morada",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 13
+    },
+    {
+      "name": "Rana paradójica",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 13
+    },
+    {
+      "name": "Rana sin pulmones de Borneo",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 14
+    },
+    {
+      "name": "Rana tortuga",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 13
+    },
+    {
+      "name": "Rana del Titicaca",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 12
+    },
+    {
+      "name": "Cecilia acuática",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 14
+    },
+    {
+      "name": "Dermatofagia",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 15
+    },
+    {
+      "name": "Rana de cristal transparente de vientre",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 12
+    },
+    {
+      "name": "Rana pinocho",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 12
+    },
+    {
+      "name": "Rana vidrio de Australia (Cyclorana)",
+      "facet": "Cecilias y anfibios extraños",
+      "known_at": 15
+    },
+    {
+      "name": "Renacuajo",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 2
+    },
+    {
+      "name": "Huevos de rana",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 2
+    },
+    {
+      "name": "Larva",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 6
+    },
+    {
+      "name": "Cola del renacuajo",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 3
+    },
+    {
+      "name": "Patas traseras",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 4
+    },
+    {
+      "name": "Tiroxina",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 14
+    },
+    {
+      "name": "Neotenia",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 13
+    },
+    {
+      "name": "Desarrollo directo",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 13
+    },
+    {
+      "name": "Ovíparo",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 7
+    },
+    {
+      "name": "Amplexo",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 14
+    },
+    {
+      "name": "Nido de espuma",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 12
+    },
+    {
+      "name": "Cuidado parental",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 10
+    },
+    {
+      "name": "Fecundación externa",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 9
+    },
+    {
+      "name": "Reabsorción de la cola",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 10
+    },
+    {
+      "name": "Masa gelatinosa de huevos",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 6
+    },
+    {
+      "name": "Ranita juvenil",
+      "facet": "Metamorfosis y ciclo de vida",
+      "known_at": 4
+    },
+    {
+      "name": "Piel húmeda",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 4
+    },
+    {
+      "name": "Respiración cutánea",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 9
+    },
+    {
+      "name": "Pulmones",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 5
+    },
+    {
+      "name": "Branquias",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 5
+    },
+    {
+      "name": "Lengua pegajosa",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 2
+    },
+    {
+      "name": "Tímpano",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 10
+    },
+    {
+      "name": "Animal de sangre fría",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 6
+    },
+    {
+      "name": "Corazón de tres cavidades",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 11
+    },
+    {
+      "name": "Patas palmeadas",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 5
+    },
+    {
+      "name": "Discos adhesivos",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 9
+    },
+    {
+      "name": "Mucosidad",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 6
+    },
+    {
+      "name": "Vertebrado",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 6
+    },
+    {
+      "name": "Regeneración",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 8
+    },
+    {
+      "name": "Cloaca",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 12
+    },
+    {
+      "name": "Ojos saltones",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 3
+    },
+    {
+      "name": "Tragar con los ojos",
+      "facet": "Piel, cuerpo y respiración",
+      "known_at": 10
+    },
+    {
+      "name": "Croar",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Saco vocal",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 8
+    },
+    {
+      "name": "Coro de ranas",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Salto",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 1
+    },
+    {
+      "name": "Tanatosis",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Inflarse",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 7
+    },
+    {
+      "name": "Cazar insectos",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Migración a las charcas",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Territorialidad",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Reflejo unken",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 15
+    },
+    {
+      "name": "Hábitos nocturnos",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Planeo",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Grito de alarma",
+      "facet": "Cantos, defensa y comportamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Charca",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 2
+    },
+    {
+      "name": "Pantano",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 4
+    },
+    {
+      "name": "Quitridiomicosis",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 14
+    },
+    {
+      "name": "Bioindicador",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 12
+    },
+    {
+      "name": "Contaminación del agua",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 5
+    },
+    {
+      "name": "Sapo dorado",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 13
+    },
+    {
+      "name": "Pasos de fauna",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Pesticidas",
+      "facet": "Hábitats, peligros y conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Rana de cristal",
+      "facet": "Anfibios de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Rana arlequín",
+      "facet": "Anfibios de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Rana kokoi",
+      "facet": "Anfibios de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Rana sabanera",
+      "facet": "Anfibios de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Rana de lluvia",
+      "facet": "Anfibios de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Rana venenosa de Lehmann",
+      "facet": "Anfibios de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Rana arlequín de Santa Marta",
+      "facet": "Anfibios de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Colombia, país de anfibios",
+      "facet": "Anfibios de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Rana de oro tairona",
+      "facet": "Anfibios de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Oophaga histrionica",
+      "facet": "Anfibios de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Andinobates",
+      "facet": "Anfibios de Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Rana toro en Colombia",
+      "facet": "Anfibios de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "La rana René",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Frogger",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Greninja",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Sr. Sapo",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Keroppi",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Michigan J. Frog",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Ajolote de Minecraft",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Trevor",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Ranas de chocolate",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Slippy Toad",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Sapo y Sepo",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Rey Harold",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Tsuyu Asui",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Wooper",
+      "facet": "Anfibios en cuentos, cine y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Anfibio",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 4
+    },
+    {
+      "name": "Batracio",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 11
+    },
+    {
+      "name": "Anuro",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 12
+    },
+    {
+      "name": "Urodelo",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 13
+    },
+    {
+      "name": "Echar sapos y culebras",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 9
+    },
+    {
+      "name": "Sapear",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 6
+    },
+    {
+      "name": "Tragarse el sapo",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 10
+    },
+    {
+      "name": "Cuando la rana eche pelos",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 9
+    },
+    {
+      "name": "Salir rana",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 12
+    },
+    {
+      "name": "Sapo de otro pozo",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 11
+    },
+    {
+      "name": "Besar sapos",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 8
+    },
+    {
+      "name": "Patas de rana",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 6
+    },
+    {
+      "name": "Hombre rana",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 8
+    },
+    {
+      "name": "Vehículo anfibio",
+      "facet": "Palabras y dichos de sapos y ranas",
+      "known_at": 8
+    },
+    {
+      "name": "Rana Goliat",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 8
+    },
+    {
+      "name": "Paedophryne amauensis",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 13
+    },
+    {
+      "name": "Salamandra gigante china",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 10
+    },
+    {
+      "name": "Beelzebufo",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 13
+    },
+    {
+      "name": "Rana de bosque congelada",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 11
+    },
+    {
+      "name": "Cecilia gigante",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 14
+    },
+    {
+      "name": "Sapo gigante colombiano",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 13
+    },
+    {
+      "name": "Prionosuchus",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 15
+    },
+    {
+      "name": "Eryops",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 14
+    },
+    {
+      "name": "Ichthyostega",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 14
+    },
+    {
+      "name": "Sapito pulga",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 13
+    },
+    {
+      "name": "Longevidad del proteo",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 13
+    },
+    {
+      "name": "Salto récord de una rana",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 9
+    },
+    {
+      "name": "Primeros vertebrados terrestres",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 11
+    },
+    {
+      "name": "Anfibio más venenoso",
+      "facet": "Récords y gigantes anfibios",
+      "known_at": 9
+    }
+  ]
+}

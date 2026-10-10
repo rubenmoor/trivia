@@ -1,0 +1,977 @@
+{
+  "subcategory": "Cine",
+  "facets": [
+    "Películas animadas famosas",
+    "Personajes inolvidables del cine",
+    "Grandes sagas y franquicias",
+    "Directores y cineastas",
+    "Actores y actrices famosos",
+    "Premios y festivales de cine",
+    "Historia del cine",
+    "Oficios y técnicas de rodaje",
+    "Frases y bandas sonoras célebres",
+    "Cine colombiano y latinoamericano",
+    "Lugares y escenarios de película",
+    "Ir a cine: salas y costumbres"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Toy Story",
+      "facet": "Películas animadas famosas",
+      "known_at": 1
+    },
+    {
+      "name": "Los Increíbles",
+      "facet": "Películas animadas famosas",
+      "known_at": 2
+    },
+    {
+      "name": "Intensa-Mente",
+      "facet": "Películas animadas famosas",
+      "known_at": 2
+    },
+    {
+      "name": "Monsters, Inc.",
+      "facet": "Películas animadas famosas",
+      "known_at": 2
+    },
+    {
+      "name": "Blancanieves y los siete enanitos",
+      "facet": "Películas animadas famosas",
+      "known_at": 3
+    },
+    {
+      "name": "Mi vecino Totoro",
+      "facet": "Películas animadas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Mi villano favorito",
+      "facet": "Películas animadas famosas",
+      "known_at": 1
+    },
+    {
+      "name": "Cars",
+      "facet": "Películas animadas famosas",
+      "known_at": 1
+    },
+    {
+      "name": "Zootopia",
+      "facet": "Películas animadas famosas",
+      "known_at": 2
+    },
+    {
+      "name": "Spider-Man: un nuevo universo",
+      "facet": "Películas animadas famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Fantasía",
+      "facet": "Películas animadas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "E.T.",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 4
+    },
+    {
+      "name": "Yoda",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 3
+    },
+    {
+      "name": "Willy Wonka",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 5
+    },
+    {
+      "name": "Rocky Balboa",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Forrest Gump",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 9
+    },
+    {
+      "name": "Tarzán",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 3
+    },
+    {
+      "name": "Mowgli",
+      "facet": "Personajes inolvidables del cine",
+      "known_at": 4
+    },
+    {
+      "name": "Harry Potter",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 3
+    },
+    {
+      "name": "El Señor de los Anillos",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 7
+    },
+    {
+      "name": "Jurassic Park",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 4
+    },
+    {
+      "name": "Rápidos y furiosos",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 7
+    },
+    {
+      "name": "Misión imposible",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 9
+    },
+    {
+      "name": "James Bond",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 9
+    },
+    {
+      "name": "Los juegos del hambre",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 8
+    },
+    {
+      "name": "Crepúsculo",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 9
+    },
+    {
+      "name": "Volver al futuro",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 9
+    },
+    {
+      "name": "Transformers",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 4
+    },
+    {
+      "name": "Cazafantasmas",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 9
+    },
+    {
+      "name": "Las crónicas de Narnia",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 7
+    },
+    {
+      "name": "Super Mario Bros. La película",
+      "facet": "Grandes sagas y franquicias",
+      "known_at": 2
+    },
+    {
+      "name": "Steven Spielberg",
+      "facet": "Directores y cineastas",
+      "known_at": 8
+    },
+    {
+      "name": "Charles Chaplin",
+      "facet": "Directores y cineastas",
+      "known_at": 7
+    },
+    {
+      "name": "Alfred Hitchcock",
+      "facet": "Directores y cineastas",
+      "known_at": 11
+    },
+    {
+      "name": "George Lucas",
+      "facet": "Directores y cineastas",
+      "known_at": 10
+    },
+    {
+      "name": "James Cameron",
+      "facet": "Directores y cineastas",
+      "known_at": 10
+    },
+    {
+      "name": "Tim Burton",
+      "facet": "Directores y cineastas",
+      "known_at": 9
+    },
+    {
+      "name": "Hayao Miyazaki",
+      "facet": "Directores y cineastas",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Jackson",
+      "facet": "Directores y cineastas",
+      "known_at": 12
+    },
+    {
+      "name": "Christopher Nolan",
+      "facet": "Directores y cineastas",
+      "known_at": 11
+    },
+    {
+      "name": "Quentin Tarantino",
+      "facet": "Directores y cineastas",
+      "known_at": 12
+    },
+    {
+      "name": "Stanley Kubrick",
+      "facet": "Directores y cineastas",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo del Toro",
+      "facet": "Directores y cineastas",
+      "known_at": 11
+    },
+    {
+      "name": "Alfonso Cuarón",
+      "facet": "Directores y cineastas",
+      "known_at": 12
+    },
+    {
+      "name": "Alejandro González Iñárritu",
+      "facet": "Directores y cineastas",
+      "known_at": 13
+    },
+    {
+      "name": "Pedro Almodóvar",
+      "facet": "Directores y cineastas",
+      "known_at": 12
+    },
+    {
+      "name": "Martin Scorsese",
+      "facet": "Directores y cineastas",
+      "known_at": 12
+    },
+    {
+      "name": "Federico Fellini",
+      "facet": "Directores y cineastas",
+      "known_at": 14
+    },
+    {
+      "name": "Akira Kurosawa",
+      "facet": "Directores y cineastas",
+      "known_at": 14
+    },
+    {
+      "name": "Greta Gerwig",
+      "facet": "Directores y cineastas",
+      "known_at": 12
+    },
+    {
+      "name": "Orson Welles",
+      "facet": "Directores y cineastas",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Hanks",
+      "facet": "Actores y actrices famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Leonardo DiCaprio",
+      "facet": "Actores y actrices famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Marilyn Monroe",
+      "facet": "Actores y actrices famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Audrey Hepburn",
+      "facet": "Actores y actrices famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Johnny Depp",
+      "facet": "Actores y actrices famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Dwayne Johnson",
+      "facet": "Actores y actrices famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Will Smith",
+      "facet": "Actores y actrices famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Emma Watson",
+      "facet": "Actores y actrices famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Daniel Radcliffe",
+      "facet": "Actores y actrices famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Meryl Streep",
+      "facet": "Actores y actrices famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Cantinflas",
+      "facet": "Actores y actrices famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Sofía Vergara",
+      "facet": "Actores y actrices famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Salma Hayek",
+      "facet": "Actores y actrices famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Jackie Chan",
+      "facet": "Actores y actrices famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Arnold Schwarzenegger",
+      "facet": "Actores y actrices famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Zendaya",
+      "facet": "Actores y actrices famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Tom Holland",
+      "facet": "Actores y actrices famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Robert Downey Jr.",
+      "facet": "Actores y actrices famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Antonio Banderas",
+      "facet": "Actores y actrices famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Penélope Cruz",
+      "facet": "Actores y actrices famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Gael García Bernal",
+      "facet": "Actores y actrices famosos",
+      "known_at": 12
+    },
+    {
+      "name": "John Leguizamo",
+      "facet": "Actores y actrices famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Shirley Temple",
+      "facet": "Actores y actrices famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Premio Óscar",
+      "facet": "Premios y festivales de cine",
+      "known_at": 4
+    },
+    {
+      "name": "Alfombra roja",
+      "facet": "Premios y festivales de cine",
+      "known_at": 3
+    },
+    {
+      "name": "Globos de Oro",
+      "facet": "Premios y festivales de cine",
+      "known_at": 9
+    },
+    {
+      "name": "Festival de Cannes",
+      "facet": "Premios y festivales de cine",
+      "known_at": 10
+    },
+    {
+      "name": "Palma de Oro",
+      "facet": "Premios y festivales de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Oso de Oro",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "León de Oro",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Premios Goya",
+      "facet": "Premios y festivales de cine",
+      "known_at": 12
+    },
+    {
+      "name": "Premios BAFTA",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Sundance",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Premios Razzie",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Premios Platino",
+      "facet": "Premios y festivales de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Festival Internacional de Cine de Cartagena",
+      "facet": "Premios y festivales de cine",
+      "known_at": 13
+    },
+    {
+      "name": "Mejor película",
+      "facet": "Premios y festivales de cine",
+      "known_at": 7
+    },
+    {
+      "name": "Premios Ariel",
+      "facet": "Premios y festivales de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Premios India Catalina",
+      "facet": "Premios y festivales de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de San Sebastián",
+      "facet": "Premios y festivales de cine",
+      "known_at": 14
+    },
+    {
+      "name": "Cine mudo",
+      "facet": "Historia del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Viaje a la Luna",
+      "facet": "Historia del cine",
+      "known_at": 12
+    },
+    {
+      "name": "El cantante de jazz",
+      "facet": "Historia del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Cine sonoro",
+      "facet": "Historia del cine",
+      "known_at": 10
+    },
+    {
+      "name": "Technicolor",
+      "facet": "Historia del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Lo que el viento se llevó",
+      "facet": "Historia del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Casablanca",
+      "facet": "Historia del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudadano Kane",
+      "facet": "Historia del cine",
+      "known_at": 13
+    },
+    {
+      "name": "Metrópolis",
+      "facet": "Historia del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Cine en blanco y negro",
+      "facet": "Historia del cine",
+      "known_at": 4
+    },
+    {
+      "name": "Cine en 3D",
+      "facet": "Historia del cine",
+      "known_at": 4
+    },
+    {
+      "name": "Kinetoscopio",
+      "facet": "Historia del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Época de oro de Hollywood",
+      "facet": "Historia del cine",
+      "known_at": 13
+    },
+    {
+      "name": "Titanic",
+      "facet": "Historia del cine",
+      "known_at": 7
+    },
+    {
+      "name": "Claqueta",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 5
+    },
+    {
+      "name": "Doble de riesgo",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 6
+    },
+    {
+      "name": "Efectos especiales",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 4
+    },
+    {
+      "name": "Stop-motion",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 8
+    },
+    {
+      "name": "Guion",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 6
+    },
+    {
+      "name": "Storyboard",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 10
+    },
+    {
+      "name": "Director de fotografía",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 11
+    },
+    {
+      "name": "Doblaje",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 6
+    },
+    {
+      "name": "Subtítulos",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 4
+    },
+    {
+      "name": "Maquillaje de caracterización",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 10
+    },
+    {
+      "name": "Captura de movimiento",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 9
+    },
+    {
+      "name": "Animación por computador",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 7
+    },
+    {
+      "name": "Cámara lenta",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 4
+    },
+    {
+      "name": "Montaje",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 11
+    },
+    {
+      "name": "Plano secuencia",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 13
+    },
+    {
+      "name": "Extras",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 7
+    },
+    {
+      "name": "Foley",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "Travelling",
+      "facet": "Oficios y técnicas de rodaje",
+      "known_at": 14
+    },
+    {
+      "name": "\"Que la Fuerza te acompañe\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Hakuna Matata",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 2
+    },
+    {
+      "name": "\"Hasta el infinito y más allá\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 1
+    },
+    {
+      "name": "\"Volveré\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Libre soy",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 2
+    },
+    {
+      "name": "No se habla de Bruno",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 2
+    },
+    {
+      "name": "\"Mi tesoro\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 7
+    },
+    {
+      "name": "\"Houston, tenemos un problema\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 11
+    },
+    {
+      "name": "\"Bond, James Bond\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 10
+    },
+    {
+      "name": "\"Sigue nadando\"",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Recuérdame",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 4
+    },
+    {
+      "name": "My Heart Will Go On",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Un mundo ideal",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Supercalifragilisticoespialidoso",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Tema de Tiburón",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Eye of the Tiger",
+      "facet": "Frases y bandas sonoras célebres",
+      "known_at": 11
+    },
+    {
+      "name": "La estrategia del caracol",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Rodrigo D: No futuro",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "María llena eres de gracia",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Pájaros de verano",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Víctor Gaviria",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Ciro Guerra",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Sergio Cabrera",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Dago García",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 12
+    },
+    {
+      "name": "El paseo",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 9
+    },
+    {
+      "name": "Relatos salvajes",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "El secreto de sus ojos",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Ciudad de Dios",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Diarios de motocicleta",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Monos",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Los colores de la montaña",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Soñar no cuesta nada",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Condorito: la película",
+      "facet": "Cine colombiano y latinoamericano",
+      "known_at": 9
+    },
+    {
+      "name": "Hollywood",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 4
+    },
+    {
+      "name": "Paseo de la Fama",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 8
+    },
+    {
+      "name": "Bollywood",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 9
+    },
+    {
+      "name": "Universal Studios",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 6
+    },
+    {
+      "name": "Disneylandia",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 3
+    },
+    {
+      "name": "Hobbiton",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 10
+    },
+    {
+      "name": "Skellig Michael",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 14
+    },
+    {
+      "name": "Valle de Cocora",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 8
+    },
+    {
+      "name": "Cinecittà",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 14
+    },
+    {
+      "name": "Nueva York",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 5
+    },
+    {
+      "name": "Monte Rushmore",
+      "facet": "Lugares y escenarios de película",
+      "known_at": 12
+    },
+    {
+      "name": "Crispetas",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 1
+    },
+    {
+      "name": "Boleta",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 3
+    },
+    {
+      "name": "Tráiler",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 4
+    },
+    {
+      "name": "Gafas 3D",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 3
+    },
+    {
+      "name": "Sala IMAX",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 7
+    },
+    {
+      "name": "Autocine",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Escena poscréditos",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 7
+    },
+    {
+      "name": "Estreno",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 5
+    },
+    {
+      "name": "Butaca",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 6
+    },
+    {
+      "name": "Sala 4DX",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 9
+    },
+    {
+      "name": "Cinemateca",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Clasificación por edades",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 7
+    },
+    {
+      "name": "Créditos finales",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 5
+    },
+    {
+      "name": "Maratón de películas",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 6
+    },
+    {
+      "name": "Cine al parque",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Taquillazo",
+      "facet": "Ir a cine: salas y costumbres",
+      "known_at": 9
+    }
+  ]
+}

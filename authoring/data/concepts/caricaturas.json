@@ -1,0 +1,712 @@
+{
+  "subcategory": "Caricaturas",
+  "facets": [
+    "Personajes clásicos de caricatura",
+    "Películas animadas de Disney y Pixar",
+    "Animación japonesa y anime",
+    "Series animadas de televisión",
+    "Mascotas y animales de caricatura",
+    "Villanos animados",
+    "Creadores y estudios de animación",
+    "Historia y técnicas de animación",
+    "Frases, canciones y nombres célebres",
+    "Caricaturas en Colombia y Latinoamérica",
+    "Caricaturas de videojuegos y juguetes",
+    "Objetos y lugares de caricaturas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 5,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mickey Mouse",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 1
+    },
+    {
+      "name": "Minnie Mouse",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 1
+    },
+    {
+      "name": "Pato Donald",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 1
+    },
+    {
+      "name": "Goofy",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 2
+    },
+    {
+      "name": "Porky",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 5
+    },
+    {
+      "name": "Piolín",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 3
+    },
+    {
+      "name": "Pedro Picapiedra",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 3
+    },
+    {
+      "name": "Oso Yogui",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 7
+    },
+    {
+      "name": "Betty Boop",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 11
+    },
+    {
+      "name": "Félix el Gato",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 10
+    },
+    {
+      "name": "Gasparín",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 6
+    },
+    {
+      "name": "Minions",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 1
+    },
+    {
+      "name": "Po (Kung Fu Panda)",
+      "facet": "Personajes clásicos de caricatura",
+      "known_at": 3
+    },
+    {
+      "name": "Lilo & Stitch",
+      "facet": "Películas animadas de Disney y Pixar",
+      "known_at": 2
+    },
+    {
+      "name": "Blancanieves y los siete enanos",
+      "facet": "Películas animadas de Disney y Pixar",
+      "known_at": 3
+    },
+    {
+      "name": "Demon Slayer",
+      "facet": "Animación japonesa y anime",
+      "known_at": 9
+    },
+    {
+      "name": "Manga",
+      "facet": "Animación japonesa y anime",
+      "known_at": 8
+    },
+    {
+      "name": "Thundercats",
+      "facet": "Series animadas de televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Odie",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 7
+    },
+    {
+      "name": "Dino",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 7
+    },
+    {
+      "name": "Patán",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 9
+    },
+    {
+      "name": "Bolt",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 6
+    },
+    {
+      "name": "Dug",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 6
+    },
+    {
+      "name": "Abu",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 6
+    },
+    {
+      "name": "Rajah",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 9
+    },
+    {
+      "name": "Sebastián",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 4
+    },
+    {
+      "name": "Flounder",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 5
+    },
+    {
+      "name": "Maximus",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 7
+    },
+    {
+      "name": "Gary el caracol",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 4
+    },
+    {
+      "name": "Perry el ornitorrinco",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 5
+    },
+    {
+      "name": "Ayudante de Santa",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 7
+    },
+    {
+      "name": "Clifford",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 6
+    },
+    {
+      "name": "Heihei",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 5
+    },
+    {
+      "name": "Gromit",
+      "facet": "Mascotas y animales de caricatura",
+      "known_at": 11
+    },
+    {
+      "name": "Gargamel",
+      "facet": "Villanos animados",
+      "known_at": 5
+    },
+    {
+      "name": "Señor Burns",
+      "facet": "Villanos animados",
+      "known_at": 7
+    },
+    {
+      "name": "Doctor Doofenshmirtz",
+      "facet": "Villanos animados",
+      "known_at": 5
+    },
+    {
+      "name": "Mojo Jojo",
+      "facet": "Villanos animados",
+      "known_at": 6
+    },
+    {
+      "name": "Juez Frollo",
+      "facet": "Villanos animados",
+      "known_at": 11
+    },
+    {
+      "name": "Sid Phillips",
+      "facet": "Villanos animados",
+      "known_at": 5
+    },
+    {
+      "name": "Lotso",
+      "facet": "Villanos animados",
+      "known_at": 6
+    },
+    {
+      "name": "Síndrome",
+      "facet": "Villanos animados",
+      "known_at": 6
+    },
+    {
+      "name": "Freezer",
+      "facet": "Villanos animados",
+      "known_at": 7
+    },
+    {
+      "name": "Equipo Rocket",
+      "facet": "Villanos animados",
+      "known_at": 4
+    },
+    {
+      "name": "Shan Yu",
+      "facet": "Villanos animados",
+      "known_at": 12
+    },
+    {
+      "name": "Pixar",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 3
+    },
+    {
+      "name": "DreamWorks",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 6
+    },
+    {
+      "name": "Studio Ghibli",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 9
+    },
+    {
+      "name": "Matt Groening",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 11
+    },
+    {
+      "name": "Hanna-Barbera",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 11
+    },
+    {
+      "name": "Warner Bros.",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 7
+    },
+    {
+      "name": "Cartoon Network",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 5
+    },
+    {
+      "name": "Nickelodeon",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 5
+    },
+    {
+      "name": "Illumination",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 9
+    },
+    {
+      "name": "Chuck Jones",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 14
+    },
+    {
+      "name": "Tex Avery",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 14
+    },
+    {
+      "name": "John Lasseter",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 14
+    },
+    {
+      "name": "Stephen Hillenburg",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 13
+    },
+    {
+      "name": "Osamu Tezuka",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 14
+    },
+    {
+      "name": "Akira Toriyama",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 10
+    },
+    {
+      "name": "Max Fleischer",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 14
+    },
+    {
+      "name": "Aardman",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 13
+    },
+    {
+      "name": "Lin-Manuel Miranda",
+      "facet": "Creadores y estudios de animación",
+      "known_at": 10
+    },
+    {
+      "name": "Animación por computadora",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 5
+    },
+    {
+      "name": "Rotoscopia",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 13
+    },
+    {
+      "name": "Cuadros por segundo",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 10
+    },
+    {
+      "name": "Acetato de celuloide",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 12
+    },
+    {
+      "name": "Taumatropo",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 13
+    },
+    {
+      "name": "Zoótropo",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 12
+    },
+    {
+      "name": "Folioscopio",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 6
+    },
+    {
+      "name": "Actor de voz",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 4
+    },
+    {
+      "name": "Fantasmagorie",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 15
+    },
+    {
+      "name": "Persistencia de la visión",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 13
+    },
+    {
+      "name": "Óscar a mejor película animada",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 9
+    },
+    {
+      "name": "Renderizado",
+      "facet": "Historia y técnicas de animación",
+      "known_at": 11
+    },
+    {
+      "name": "Bajo el mar",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Ohana",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Yo soy tu amigo fiel",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 4
+    },
+    {
+      "name": "¡Estoy listo!",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 3
+    },
+    {
+      "name": "Bip bip",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 3
+    },
+    {
+      "name": "Hi-ho",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 7
+    },
+    {
+      "name": "De nada",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Ka-chow",
+      "facet": "Frases, canciones y nombres célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Mirabel Madrigal",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 1
+    },
+    {
+      "name": "Bruno Madrigal",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 2
+    },
+    {
+      "name": "Abuela Alma",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 3
+    },
+    {
+      "name": "Dos oruguitas",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 6
+    },
+    {
+      "name": "Sebastián Yatra",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 7
+    },
+    {
+      "name": "Carlos Vives",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 6
+    },
+    {
+      "name": "El Chavo animado",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 3
+    },
+    {
+      "name": "Condorito",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 8
+    },
+    {
+      "name": "Mafalda",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 9
+    },
+    {
+      "name": "Quino",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "Bolívar, el héroe",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Pequeñas voces",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Huevocartoon",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 9
+    },
+    {
+      "name": "Elpidio Valdés",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Patoruzú",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Gaturro",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "La Leyenda de la Nahuala",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 10
+    },
+    {
+      "name": "Elena de Ávalor",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 9
+    },
+    {
+      "name": "Mario Castañeda",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "El Apóstol",
+      "facet": "Caricaturas en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Mario",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 1
+    },
+    {
+      "name": "Kirby",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 5
+    },
+    {
+      "name": "Princesa Peach",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 3
+    },
+    {
+      "name": "Toad",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 5
+    },
+    {
+      "name": "Angry Birds",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 3
+    },
+    {
+      "name": "Steve (Minecraft)",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 3
+    },
+    {
+      "name": "Crash Bandicoot",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 8
+    },
+    {
+      "name": "Spyro",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 10
+    },
+    {
+      "name": "He-Man",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 10
+    },
+    {
+      "name": "My Little Pony",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 5
+    },
+    {
+      "name": "Hot Wheels",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 4
+    },
+    {
+      "name": "Polly Pocket",
+      "facet": "Caricaturas de videojuegos y juguetes",
+      "known_at": 9
+    },
+    {
+      "name": "Fondo de Bikini",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 3
+    },
+    {
+      "name": "Piedradura",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 8
+    },
+    {
+      "name": "Roca del Rey",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 6
+    },
+    {
+      "name": "Monstruópolis",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 7
+    },
+    {
+      "name": "Casita",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 3
+    },
+    {
+      "name": "Lámpara mágica",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 2
+    },
+    {
+      "name": "Productos Acme",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 7
+    },
+    {
+      "name": "Corazón de Te Fiti",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 5
+    },
+    {
+      "name": "Piña de Bob Esponja",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 2
+    },
+    {
+      "name": "Tierra de los Muertos",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 4
+    },
+    {
+      "name": "Casa voladora de Up",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 3
+    },
+    {
+      "name": "Bolsillo mágico de Doraemon",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 7
+    },
+    {
+      "name": "Esferas del dragón",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 5
+    },
+    {
+      "name": "Pokébola",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 2
+    },
+    {
+      "name": "Espinacas de Popeye",
+      "facet": "Objetos y lugares de caricaturas",
+      "known_at": 3
+    }
+  ]
+}

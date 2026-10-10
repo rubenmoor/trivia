@@ -1,0 +1,1068 @@
+{
+  "subcategory": "Caballeros",
+  "facets": [
+    "Armaduras y armas",
+    "Castillos y asedios",
+    "Formación del caballero",
+    "Torneos y justas",
+    "Heráldica y escudos de armas",
+    "Código de caballería y corte",
+    "Órdenes militares y cruzadas",
+    "Caballeros históricos famosos",
+    "Leyendas artúricas y libros de caballerías",
+    "Caballeros en cine y videojuegos",
+    "Feudalismo y fin de la caballería",
+    "Guerreros a caballo de otras culturas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Yelmo",
+      "facet": "Armaduras y armas",
+      "known_at": 5
+    },
+    {
+      "name": "Cota de malla",
+      "facet": "Armaduras y armas",
+      "known_at": 6
+    },
+    {
+      "name": "Escudo",
+      "facet": "Armaduras y armas",
+      "known_at": 1
+    },
+    {
+      "name": "Armadura de placas",
+      "facet": "Armaduras y armas",
+      "known_at": 4
+    },
+    {
+      "name": "Visera",
+      "facet": "Armaduras y armas",
+      "known_at": 7
+    },
+    {
+      "name": "Guantelete",
+      "facet": "Armaduras y armas",
+      "known_at": 8
+    },
+    {
+      "name": "Mangual",
+      "facet": "Armaduras y armas",
+      "known_at": 9
+    },
+    {
+      "name": "Maza",
+      "facet": "Armaduras y armas",
+      "known_at": 5
+    },
+    {
+      "name": "Ballesta",
+      "facet": "Armaduras y armas",
+      "known_at": 5
+    },
+    {
+      "name": "Arco largo inglés",
+      "facet": "Armaduras y armas",
+      "known_at": 11
+    },
+    {
+      "name": "Hacha de guerra",
+      "facet": "Armaduras y armas",
+      "known_at": 4
+    },
+    {
+      "name": "Alabarda",
+      "facet": "Armaduras y armas",
+      "known_at": 11
+    },
+    {
+      "name": "Peto",
+      "facet": "Armaduras y armas",
+      "known_at": 9
+    },
+    {
+      "name": "Grebas",
+      "facet": "Armaduras y armas",
+      "known_at": 13
+    },
+    {
+      "name": "Gambesón",
+      "facet": "Armaduras y armas",
+      "known_at": 14
+    },
+    {
+      "name": "Bacinete",
+      "facet": "Armaduras y armas",
+      "known_at": 14
+    },
+    {
+      "name": "Daga",
+      "facet": "Armaduras y armas",
+      "known_at": 5
+    },
+    {
+      "name": "Castillo",
+      "facet": "Castillos y asedios",
+      "known_at": 1
+    },
+    {
+      "name": "Puente levadizo",
+      "facet": "Castillos y asedios",
+      "known_at": 4
+    },
+    {
+      "name": "Torre del homenaje",
+      "facet": "Castillos y asedios",
+      "known_at": 11
+    },
+    {
+      "name": "Almena",
+      "facet": "Castillos y asedios",
+      "known_at": 8
+    },
+    {
+      "name": "Catapulta",
+      "facet": "Castillos y asedios",
+      "known_at": 3
+    },
+    {
+      "name": "Trebuchet",
+      "facet": "Castillos y asedios",
+      "known_at": 9
+    },
+    {
+      "name": "Ariete",
+      "facet": "Castillos y asedios",
+      "known_at": 7
+    },
+    {
+      "name": "Torre de asedio",
+      "facet": "Castillos y asedios",
+      "known_at": 8
+    },
+    {
+      "name": "Mazmorra",
+      "facet": "Castillos y asedios",
+      "known_at": 5
+    },
+    {
+      "name": "Rastrillo",
+      "facet": "Castillos y asedios",
+      "known_at": 12
+    },
+    {
+      "name": "Muralla",
+      "facet": "Castillos y asedios",
+      "known_at": 2
+    },
+    {
+      "name": "Aspillera",
+      "facet": "Castillos y asedios",
+      "known_at": 13
+    },
+    {
+      "name": "Matacán",
+      "facet": "Castillos y asedios",
+      "known_at": 14
+    },
+    {
+      "name": "Barbacana",
+      "facet": "Castillos y asedios",
+      "known_at": 14
+    },
+    {
+      "name": "Torre de Londres",
+      "facet": "Castillos y asedios",
+      "known_at": 10
+    },
+    {
+      "name": "Alcázar de Segovia",
+      "facet": "Castillos y asedios",
+      "known_at": 12
+    },
+    {
+      "name": "Carcasona",
+      "facet": "Castillos y asedios",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo de Windsor",
+      "facet": "Castillos y asedios",
+      "known_at": 11
+    },
+    {
+      "name": "Asedio",
+      "facet": "Castillos y asedios",
+      "known_at": 7
+    },
+    {
+      "name": "Paje",
+      "facet": "Formación del caballero",
+      "known_at": 6
+    },
+    {
+      "name": "Escudero",
+      "facet": "Formación del caballero",
+      "known_at": 6
+    },
+    {
+      "name": "Doncel",
+      "facet": "Formación del caballero",
+      "known_at": 13
+    },
+    {
+      "name": "Espaldarazo",
+      "facet": "Formación del caballero",
+      "known_at": 10
+    },
+    {
+      "name": "Velación de armas",
+      "facet": "Formación del caballero",
+      "known_at": 13
+    },
+    {
+      "name": "Cetrería",
+      "facet": "Formación del caballero",
+      "known_at": 11
+    },
+    {
+      "name": "Destrero",
+      "facet": "Formación del caballero",
+      "known_at": 14
+    },
+    {
+      "name": "Quintana",
+      "facet": "Formación del caballero",
+      "known_at": 14
+    },
+    {
+      "name": "Espuelas",
+      "facet": "Formación del caballero",
+      "known_at": 6
+    },
+    {
+      "name": "Padrino de armas",
+      "facet": "Formación del caballero",
+      "known_at": 14
+    },
+    {
+      "name": "Sir",
+      "facet": "Formación del caballero",
+      "known_at": 6
+    },
+    {
+      "name": "Caza con perros",
+      "facet": "Formación del caballero",
+      "known_at": 8
+    },
+    {
+      "name": "Justa",
+      "facet": "Torneos y justas",
+      "known_at": 7
+    },
+    {
+      "name": "Torneo",
+      "facet": "Torneos y justas",
+      "known_at": 4
+    },
+    {
+      "name": "Melé",
+      "facet": "Torneos y justas",
+      "known_at": 13
+    },
+    {
+      "name": "Tela",
+      "facet": "Torneos y justas",
+      "known_at": 14
+    },
+    {
+      "name": "Heraldo",
+      "facet": "Torneos y justas",
+      "known_at": 10
+    },
+    {
+      "name": "Paso honroso",
+      "facet": "Torneos y justas",
+      "known_at": 15
+    },
+    {
+      "name": "Gualdrapa",
+      "facet": "Torneos y justas",
+      "known_at": 14
+    },
+    {
+      "name": "Coronel de lanza",
+      "facet": "Torneos y justas",
+      "known_at": 15
+    },
+    {
+      "name": "Prenda de la dama",
+      "facet": "Torneos y justas",
+      "known_at": 11
+    },
+    {
+      "name": "Palenque",
+      "facet": "Torneos y justas",
+      "known_at": 13
+    },
+    {
+      "name": "Juego de cañas",
+      "facet": "Torneos y justas",
+      "known_at": 14
+    },
+    {
+      "name": "Bohordo",
+      "facet": "Torneos y justas",
+      "known_at": 15
+    },
+    {
+      "name": "Feria medieval",
+      "facet": "Torneos y justas",
+      "known_at": 5
+    },
+    {
+      "name": "Lanza de justa",
+      "facet": "Torneos y justas",
+      "known_at": 7
+    },
+    {
+      "name": "Pabellón de torneo",
+      "facet": "Torneos y justas",
+      "known_at": 12
+    },
+    {
+      "name": "Escudo de armas",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 6
+    },
+    {
+      "name": "Blasón",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 11
+    },
+    {
+      "name": "Flor de lis",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 8
+    },
+    {
+      "name": "León rampante",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 12
+    },
+    {
+      "name": "Águila bicéfala",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 12
+    },
+    {
+      "name": "Gules",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 14
+    },
+    {
+      "name": "Azur",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 12
+    },
+    {
+      "name": "Metales heráldicos",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 14
+    },
+    {
+      "name": "Lema",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 8
+    },
+    {
+      "name": "Cimera",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 14
+    },
+    {
+      "name": "Cuartelado",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 15
+    },
+    {
+      "name": "Pendón",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 12
+    },
+    {
+      "name": "Heráldica",
+      "facet": "Heráldica y escudos de armas",
+      "known_at": 11
+    },
+    {
+      "name": "Caballerosidad",
+      "facet": "Código de caballería y corte",
+      "known_at": 7
+    },
+    {
+      "name": "Honor",
+      "facet": "Código de caballería y corte",
+      "known_at": 5
+    },
+    {
+      "name": "Amor cortés",
+      "facet": "Código de caballería y corte",
+      "known_at": 13
+    },
+    {
+      "name": "Trovador",
+      "facet": "Código de caballería y corte",
+      "known_at": 10
+    },
+    {
+      "name": "Juglar",
+      "facet": "Código de caballería y corte",
+      "known_at": 9
+    },
+    {
+      "name": "Bufón",
+      "facet": "Código de caballería y corte",
+      "known_at": 4
+    },
+    {
+      "name": "Ordalía",
+      "facet": "Código de caballería y corte",
+      "known_at": 14
+    },
+    {
+      "name": "Duelo",
+      "facet": "Código de caballería y corte",
+      "known_at": 6
+    },
+    {
+      "name": "Arrojar el guante",
+      "facet": "Código de caballería y corte",
+      "known_at": 10
+    },
+    {
+      "name": "Largueza",
+      "facet": "Código de caballería y corte",
+      "known_at": 15
+    },
+    {
+      "name": "Lealtad",
+      "facet": "Código de caballería y corte",
+      "known_at": 5
+    },
+    {
+      "name": "Doncella",
+      "facet": "Código de caballería y corte",
+      "known_at": 5
+    },
+    {
+      "name": "Banquete medieval",
+      "facet": "Código de caballería y corte",
+      "known_at": 6
+    },
+    {
+      "name": "Leonor de Aquitania",
+      "facet": "Código de caballería y corte",
+      "known_at": 14
+    },
+    {
+      "name": "Trono",
+      "facet": "Código de caballería y corte",
+      "known_at": 2
+    },
+    {
+      "name": "Templarios",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 9
+    },
+    {
+      "name": "Hospitalarios",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 13
+    },
+    {
+      "name": "Orden de Malta",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 13
+    },
+    {
+      "name": "Caballeros teutónicos",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 13
+    },
+    {
+      "name": "Orden de Santiago",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 13
+    },
+    {
+      "name": "Orden de Calatrava",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Orden de Alcántara",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 15
+    },
+    {
+      "name": "Primera Cruzada",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 11
+    },
+    {
+      "name": "Cruzadas",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 8
+    },
+    {
+      "name": "Jerusalén",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 8
+    },
+    {
+      "name": "Saladino",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 12
+    },
+    {
+      "name": "Cruzada de los niños",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Krak de los Caballeros",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 15
+    },
+    {
+      "name": "Viernes 13",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 10
+    },
+    {
+      "name": "Orden de la Jarretera",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Toisón de Oro",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Acre",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 15
+    },
+    {
+      "name": "Reconquista",
+      "facet": "Órdenes militares y cruzadas",
+      "known_at": 10
+    },
+    {
+      "name": "Ricardo Corazón de León",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "El Cid",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Tizona",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Babieca",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Juana de Arco",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Guillermo el Mariscal",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Bertrand du Guesclin",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 15,
+      "retired": "unaskable: Bertrand du Guesclin es demasiado desconocido para esta familia; no da una pregunta justa."
+    },
+    {
+      "name": "Príncipe Negro",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Carlomagno",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Godofredo de Bouillon",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Jacques de Molay",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Bayardo",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "William Wallace",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Robert the Bruce",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo el Conquistador",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Jaime I el Conquistador",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Fernán González",
+      "facet": "Caballeros históricos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Rey Arturo",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 3
+    },
+    {
+      "name": "Excalibur",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 4
+    },
+    {
+      "name": "Mesa Redonda",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 6
+    },
+    {
+      "name": "Merlín",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 3
+    },
+    {
+      "name": "Lancelot",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 10
+    },
+    {
+      "name": "Ginebra",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 12
+    },
+    {
+      "name": "Camelot",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 9
+    },
+    {
+      "name": "Santo Grial",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 9
+    },
+    {
+      "name": "Morgana",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 11
+    },
+    {
+      "name": "Galahad",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 14
+    },
+    {
+      "name": "Percival",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 14
+    },
+    {
+      "name": "Caballero Verde",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 14
+    },
+    {
+      "name": "Tristán e Isolda",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 13
+    },
+    {
+      "name": "Dama del Lago",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 12
+    },
+    {
+      "name": "Mordred",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 14
+    },
+    {
+      "name": "Avalon",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 13
+    },
+    {
+      "name": "Don Quijote",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 4
+    },
+    {
+      "name": "Sancho Panza",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 6
+    },
+    {
+      "name": "Rocinante",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 9
+    },
+    {
+      "name": "Dulcinea",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 10
+    },
+    {
+      "name": "Molinos de viento",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 6
+    },
+    {
+      "name": "Amadís de Gaula",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 14
+    },
+    {
+      "name": "Cantar de Roldán",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 14
+    },
+    {
+      "name": "Tirant lo Blanch",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 15
+    },
+    {
+      "name": "Ivanhoe",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 13
+    },
+    {
+      "name": "San Jorge y el dragón",
+      "facet": "Leyendas artúricas y libros de caballerías",
+      "known_at": 8
+    },
+    {
+      "name": "Caballeros Jedi",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Sable de luz",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Los caballeros de la mesa cuadrada",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Corazón de caballero",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Corazón de dragón",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "El reino de los cielos",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "El caballero de la noche",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Los caballeros del Zodiaco",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Shovel Knight",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Assassin's Creed",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Age of Empires",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "For Honor",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Kingdom Come: Deliverance",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Mike el Caballero",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Brienne de Tarth",
+      "facet": "Caballeros en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Feudalismo",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 10
+    },
+    {
+      "name": "Feudo",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 10
+    },
+    {
+      "name": "Señor feudal",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 9
+    },
+    {
+      "name": "Vasallo",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 10
+    },
+    {
+      "name": "Siervo de la gleba",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 12
+    },
+    {
+      "name": "Homenaje feudal",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 13
+    },
+    {
+      "name": "Diezmo",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámide feudal",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 10
+    },
+    {
+      "name": "Edad Media",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 5
+    },
+    {
+      "name": "Batalla de Agincourt",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Crécy",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 15
+    },
+    {
+      "name": "Guerra de los Cien Años",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 11
+    },
+    {
+      "name": "Caída de Constantinopla",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 12
+    },
+    {
+      "name": "Condotieros",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 15
+    },
+    {
+      "name": "Tercios españoles",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 13
+    },
+    {
+      "name": "Hidalgo",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 11
+    },
+    {
+      "name": "Carta Magna",
+      "facet": "Feudalismo y fin de la caballería",
+      "known_at": 13
+    },
+    {
+      "name": "Katana",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 6
+    },
+    {
+      "name": "Bushido",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 12
+    },
+    {
+      "name": "Shogún",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 11
+    },
+    {
+      "name": "Daimio",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 14
+    },
+    {
+      "name": "Ronin",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 12
+    },
+    {
+      "name": "Gengis Kan",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 9
+    },
+    {
+      "name": "Cosacos",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 12
+    },
+    {
+      "name": "Mamelucos",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 14
+    },
+    {
+      "name": "Húsares alados",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 14
+    },
+    {
+      "name": "Catafractos",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 15
+    },
+    {
+      "name": "Hunos",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 10
+    },
+    {
+      "name": "Atila",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 11
+    },
+    {
+      "name": "Escitas",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 14
+    },
+    {
+      "name": "Sipahi",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 15
+    },
+    {
+      "name": "Lanceros llaneros",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 10
+    },
+    {
+      "name": "Comanches",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 11
+    },
+    {
+      "name": "Estribo",
+      "facet": "Guerreros a caballo de otras culturas",
+      "known_at": 8
+    }
+  ]
+}

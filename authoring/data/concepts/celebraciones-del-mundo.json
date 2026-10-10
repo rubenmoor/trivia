@@ -1,0 +1,762 @@
+{
+  "subcategory": "Celebraciones del mundo",
+  "facets": [
+    "Navidad alrededor del mundo",
+    "Año Nuevo y calendarios",
+    "Carnavales y desfiles",
+    "Fiestas religiosas y espirituales",
+    "Festivales de luces y fuego",
+    "Día de Muertos y Halloween",
+    "Fiestas de cosecha y estaciones",
+    "Fiestas insólitas y populares",
+    "Comidas y dulces festivos",
+    "Personajes y seres festivos",
+    "Adornos, símbolos y regalos",
+    "Fiestas nacionales y patrias"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mercado navideño",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Santa Lucía en Suecia",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Navidad en Japón",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Navidad en Australia",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Doce uvas",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 2
+    },
+    {
+      "name": "Año Nuevo chino",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 4
+    },
+    {
+      "name": "Horóscopo chino",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 6
+    },
+    {
+      "name": "Calendario gregoriano",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Año bisiesto",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 5
+    },
+    {
+      "name": "Bola de Times Square",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 8
+    },
+    {
+      "name": "Nowruz",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Hogmanay",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Auld Lang Syne",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Calendario lunar",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 8
+    },
+    {
+      "name": "Maleta de Año Nuevo",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 4
+    },
+    {
+      "name": "Songkran",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Rosh Hashaná",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Río de Janeiro",
+      "facet": "Carnavales y desfiles",
+      "known_at": 4
+    },
+    {
+      "name": "Carnaval de Barranquilla",
+      "facet": "Carnavales y desfiles",
+      "known_at": 3
+    },
+    {
+      "name": "Carnaval de Venecia",
+      "facet": "Carnavales y desfiles",
+      "known_at": 7
+    },
+    {
+      "name": "Mardi Gras de Nueva Orleans",
+      "facet": "Carnavales y desfiles",
+      "known_at": 11
+    },
+    {
+      "name": "Sambódromo",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9
+    },
+    {
+      "name": "Escola de samba",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9
+    },
+    {
+      "name": "Marimonda",
+      "facet": "Carnavales y desfiles",
+      "known_at": 6
+    },
+    {
+      "name": "Máscara veneciana",
+      "facet": "Carnavales y desfiles",
+      "known_at": 6
+    },
+    {
+      "name": "Desfile de Acción de Gracias de Macy's",
+      "facet": "Carnavales y desfiles",
+      "known_at": 11
+    },
+    {
+      "name": "Carnaval de Notting Hill",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Oruro",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Cádiz",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Santa Cruz de Tenerife",
+      "facet": "Carnavales y desfiles",
+      "known_at": 12
+    },
+    {
+      "name": "Carroza",
+      "facet": "Carnavales y desfiles",
+      "known_at": 3
+    },
+    {
+      "name": "Comparsa",
+      "facet": "Carnavales y desfiles",
+      "known_at": 7
+    },
+    {
+      "name": "Joselito Carnaval",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9
+    },
+    {
+      "name": "Desfile de las Rosas de Pasadena",
+      "facet": "Carnavales y desfiles",
+      "known_at": 14
+    },
+    {
+      "name": "Semana Santa",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 2
+    },
+    {
+      "name": "Ramadán",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 8
+    },
+    {
+      "name": "Eid al-Fitr",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 13
+    },
+    {
+      "name": "Pésaj",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 12
+    },
+    {
+      "name": "Bar mitzvá",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 11
+    },
+    {
+      "name": "Vesak",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Peregrinación a La Meca",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Corpus Christi",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Miércoles de Ceniza",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 6
+    },
+    {
+      "name": "Pentecostés",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 11
+    },
+    {
+      "name": "Domingo de Ramos",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 6
+    },
+    {
+      "name": "Kumbh Mela",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Primera comunión",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 4
+    },
+    {
+      "name": "Yom Kipur",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 13
+    },
+    {
+      "name": "Semana Santa de Popayán",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Virgen de Guadalupe",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Hanukkah",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Noche de San Juan",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 10
+    },
+    {
+      "name": "Fallas de Valencia",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Noche de Guy Fawkes",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de los Faroles",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Yi Peng",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Up Helly Aa",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 15
+    },
+    {
+      "name": "Loy Krathong",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta de las Luces de Lyon",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Quema del Diablo",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 13
+    },
+    {
+      "name": "Alumbrados navideños de Medellín",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 5
+    },
+    {
+      "name": "Fuegos artificiales",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 1
+    },
+    {
+      "name": "Las Luminarias de San Bartolomé",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 15
+    },
+    {
+      "name": "Día de Muertos",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 3
+    },
+    {
+      "name": "Halloween",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Truco o trato",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 2
+    },
+    {
+      "name": "Calabaza de Halloween",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Calaverita de azúcar",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 5
+    },
+    {
+      "name": "La Catrina",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Altar de muertos",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 6
+    },
+    {
+      "name": "Flor de cempasúchil",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Coco (película)",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 2
+    },
+    {
+      "name": "Samhain",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 14
+    },
+    {
+      "name": "Día de Todos los Santos",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Disfraz",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Alebrije",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Xoloitzcuintle",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 9
+    },
+    {
+      "name": "Bruja",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Acción de Gracias",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Festival del Medio Otoño",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Hanami",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Solsticio de verano",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Sucot",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Pongal",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Chuseok",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Vendimia",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Marmota",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Midsommar",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de la Nieve de Sapporo",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Holi",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Setsubun",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Batalla del Vino de Haro",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14
+    },
+    {
+      "name": "Carrera del queso de Cooper's Hill",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 11
+    },
+    {
+      "name": "Feria de las Flores",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 5
+    },
+    {
+      "name": "Festival de la Leyenda Vallenata",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 7
+    },
+    {
+      "name": "Banquete de los monos de Lopburi",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Carrera de cargar a la esposa",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 11
+    },
+    {
+      "name": "Festival del Hielo de Harbin",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 12
+    },
+    {
+      "name": "Festival del Barro de Boryeong",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de las Naranjas de Ivrea",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14
+    },
+    {
+      "name": "Tamborrada de San Sebastián",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14
+    },
+    {
+      "name": "El Colacho",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 15
+    },
+    {
+      "name": "San Valentín",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 3
+    },
+    {
+      "name": "Rock al Parque",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 10
+    },
+    {
+      "name": "Burning Man",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Pavo de Acción de Gracias",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 4
+    },
+    {
+      "name": "Pan de muerto",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 9
+    },
+    {
+      "name": "Pastel de luna",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 13
+    },
+    {
+      "name": "Galleta de jengibre",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 3
+    },
+    {
+      "name": "Jiaozi",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 13
+    },
+    {
+      "name": "Fanesca",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 14
+    },
+    {
+      "name": "Hot cross bun",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 14
+    },
+    {
+      "name": "Conejo de Pascua",
+      "facet": "Personajes y seres festivos",
+      "known_at": 2
+    },
+    {
+      "name": "Rey Momo",
+      "facet": "Personajes y seres festivos",
+      "known_at": 10
+    },
+    {
+      "name": "Cupido",
+      "facet": "Personajes y seres festivos",
+      "known_at": 3
+    },
+    {
+      "name": "Leprechaun",
+      "facet": "Personajes y seres festivos",
+      "known_at": 8
+    },
+    {
+      "name": "Menorá",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Piñata",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 1
+    },
+    {
+      "name": "Papel picado",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 8
+    },
+    {
+      "name": "Huevo de Pascua",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 2
+    },
+    {
+      "name": "Sobre rojo",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Trébol",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 7
+    },
+    {
+      "name": "Esfera navideña",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 1
+    },
+    {
+      "name": "Dreidel",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 13
+    },
+    {
+      "name": "20 de julio",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 5
+    },
+    {
+      "name": "4 de julio",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 7
+    },
+    {
+      "name": "Toma de la Bastilla",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Boyacá",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 7
+    },
+    {
+      "name": "Cinco de Mayo",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Grito de Dolores",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 12
+    },
+    {
+      "name": "Día de la Hispanidad",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 7
+    },
+    {
+      "name": "Día de Australia",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 14
+    },
+    {
+      "name": "Día de Canadá",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Fiestas Patrias de Chile",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 12
+    },
+    {
+      "name": "Día del Rey en Países Bajos",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Día Nacional de Noruega",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 15
+    },
+    {
+      "name": "Día de la Independencia de Brasil",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Juneteenth",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 14
+    },
+    {
+      "name": "Desfile militar",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 4
+    },
+    {
+      "name": "Día de la Reunificación alemana",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    }
+  ]
+}

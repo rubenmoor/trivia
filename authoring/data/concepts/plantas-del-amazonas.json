@@ -1,0 +1,739 @@
+{
+  "subcategory": "Plantas del Amazonas",
+  "facets": [
+    "Árboles gigantes de la selva",
+    "Frutas amazónicas comestibles",
+    "Plantas acuáticas y de inundación",
+    "Plantas medicinales y sagradas",
+    "Flores, orquídeas y bromelias",
+    "Palmas amazónicas",
+    "Plantas que dieron materias primas",
+    "Plantas carnívoras, trepadoras y estranguladoras",
+    "Capas y ecología del bosque",
+    "Plantas amazónicas en la cocina",
+    "Exploradores y botánicos del Amazonas",
+    "Nombres indígenas de plantas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Angelim rojo",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 14
+    },
+    {
+      "name": "Shihuahuaco",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 14
+    },
+    {
+      "name": "Cedro amazónico",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 9
+    },
+    {
+      "name": "Lupuna",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 14
+    },
+    {
+      "name": "Capirona",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 14
+    },
+    {
+      "name": "Tornillo",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 15
+    },
+    {
+      "name": "Árbol bala de cañón",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 12
+    },
+    {
+      "name": "Huayruro",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 13
+    },
+    {
+      "name": "Cumala",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 15
+    },
+    {
+      "name": "Itaúba",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 15
+    },
+    {
+      "name": "Achapo",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 15
+    },
+    {
+      "name": "Quinilla",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 15
+    },
+    {
+      "name": "Pashaco",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 15,
+      "retired": "unaskable: El pashaco es demasiado oscuro incluso para adultos."
+    },
+    {
+      "name": "Asaí",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 6
+    },
+    {
+      "name": "Copoazú",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 10
+    },
+    {
+      "name": "Camu camu",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 11
+    },
+    {
+      "name": "Arazá",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 10
+    },
+    {
+      "name": "Guaraná",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 6
+    },
+    {
+      "name": "Nuez de Brasil",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 7
+    },
+    {
+      "name": "Caimito",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 10
+    },
+    {
+      "name": "Cocona",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 12
+    },
+    {
+      "name": "Umarí",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 14
+    },
+    {
+      "name": "Uva caimarona",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 13
+    },
+    {
+      "name": "Bacurí",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 15
+    },
+    {
+      "name": "Biribá",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 15
+    },
+    {
+      "name": "Zapote amazónico",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 12
+    },
+    {
+      "name": "Guama",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 9
+    },
+    {
+      "name": "Marañón",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria regia",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 5
+    },
+    {
+      "name": "Jacinto de agua",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 11
+    },
+    {
+      "name": "Lechuga de agua",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 10
+    },
+    {
+      "name": "Salvinia",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 14
+    },
+    {
+      "name": "Azolla",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 14
+    },
+    {
+      "name": "Lenteja de agua",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 9
+    },
+    {
+      "name": "Gramalote",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 14
+    },
+    {
+      "name": "Cabomba",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 14
+    },
+    {
+      "name": "Espada amazónica",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 13
+    },
+    {
+      "name": "Várzea",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 13
+    },
+    {
+      "name": "Igapó",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 13
+    },
+    {
+      "name": "Neumatóforo",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 14
+    },
+    {
+      "name": "Creciente del río",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 7
+    },
+    {
+      "name": "Aninga",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 15
+    },
+    {
+      "name": "Hidrocoria",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 15
+    },
+    {
+      "name": "Sangre de drago",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 11
+    },
+    {
+      "name": "Copaiba",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 13
+    },
+    {
+      "name": "Curare",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 11
+    },
+    {
+      "name": "Yagé",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 12,
+      "retired": "unaskable: El yagé es una bebida ritual psicoactiva, no apta para un juego familiar."
+    },
+    {
+      "name": "Tabaco",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 7
+    },
+    {
+      "name": "Guayusa",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 13
+    },
+    {
+      "name": "Chuchuhuasi",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 14
+    },
+    {
+      "name": "Ipecacuana",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 14
+    },
+    {
+      "name": "Paico",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 12
+    },
+    {
+      "name": "Chiric sanango",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 15
+    },
+    {
+      "name": "Clavo huasca",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 15
+    },
+    {
+      "name": "Ojé",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 15
+    },
+    {
+      "name": "Ambil",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 14
+    },
+    {
+      "name": "Pasiflora",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 11
+    },
+    {
+      "name": "Clavel del aire",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 11
+    },
+    {
+      "name": "Guzmania",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 13
+    },
+    {
+      "name": "Catasetum",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 15
+    },
+    {
+      "name": "Calathea",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 12
+    },
+    {
+      "name": "Costus",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 14
+    },
+    {
+      "name": "Brownea",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 14
+    },
+    {
+      "name": "Gongora",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 15
+    },
+    {
+      "name": "Canangucho",
+      "facet": "Palmas amazónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Milpesos",
+      "facet": "Palmas amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Palma caminante",
+      "facet": "Palmas amazónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Chambira",
+      "facet": "Palmas amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Babasú",
+      "facet": "Palmas amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Inayá",
+      "facet": "Palmas amazónicas",
+      "known_at": 15
+    },
+    {
+      "name": "Bacaba",
+      "facet": "Palmas amazónicas",
+      "known_at": 15
+    },
+    {
+      "name": "Caraná",
+      "facet": "Palmas amazónicas",
+      "known_at": 15
+    },
+    {
+      "name": "Bussú",
+      "facet": "Palmas amazónicas",
+      "known_at": 15
+    },
+    {
+      "name": "Huicungo",
+      "facet": "Palmas amazónicas",
+      "known_at": 15
+    },
+    {
+      "name": "Estípite",
+      "facet": "Palmas amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Pambil",
+      "facet": "Palmas amazónicas",
+      "known_at": 15
+    },
+    {
+      "name": "Látex",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 7
+    },
+    {
+      "name": "Fiebre del caucho",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 11
+    },
+    {
+      "name": "Tagua",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 12
+    },
+    {
+      "name": "Huito",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 13
+    },
+    {
+      "name": "Barbasco",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 13
+    },
+    {
+      "name": "Palo de rosa",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 12
+    },
+    {
+      "name": "Bijao",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 9
+    },
+    {
+      "name": "Balatá",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 15
+    },
+    {
+      "name": "Andiroba",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 14
+    },
+    {
+      "name": "Yanchama",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 14
+    },
+    {
+      "name": "Copal",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 13
+    },
+    {
+      "name": "Siringuero",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 13
+    },
+    {
+      "name": "Matapalo",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 9
+    },
+    {
+      "name": "Liana",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 4
+    },
+    {
+      "name": "Escalera de mono",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 12
+    },
+    {
+      "name": "Utricularia",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 13
+    },
+    {
+      "name": "Genlisea",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 15
+    },
+    {
+      "name": "Philodendron",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 10
+    },
+    {
+      "name": "Monstera",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 8
+    },
+    {
+      "name": "Clusia",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 14
+    },
+    {
+      "name": "Hemiepífita",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 14
+    },
+    {
+      "name": "Planta carnívora",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 3
+    },
+    {
+      "name": "Planta trepadora",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 3
+    },
+    {
+      "name": "Estrato emergente",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Suelo del bosque",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 4
+    },
+    {
+      "name": "Raíces tabulares",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 12
+    },
+    {
+      "name": "Epífita",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Pulmón del mundo",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 4
+    },
+    {
+      "name": "Claro del bosque",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 9
+    },
+    {
+      "name": "Terra preta",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 14
+    },
+    {
+      "name": "Fariña",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Casabe",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Tucupí",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Sacha inchi",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Ají charapita",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Tacacá",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 15
+    },
+    {
+      "name": "Juane",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Caguana",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Patarashca",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 15
+    },
+    {
+      "name": "Masato",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Tapioca",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 7
+    },
+    {
+      "name": "José Celestino Mutis",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 10
+    },
+    {
+      "name": "Henry Wickham",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 14
+    },
+    {
+      "name": "Expedición Botánica",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 10
+    },
+    {
+      "name": "Carl von Martius",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 15
+    },
+    {
+      "name": "Wade Davis",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 14
+    },
+    {
+      "name": "Theodor Koch-Grünberg",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 15
+    },
+    {
+      "name": "Tupí",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 12
+    },
+    {
+      "name": "Mandioca",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 9
+    },
+    {
+      "name": "Ananá",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 9
+    },
+    {
+      "name": "Petunia",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 10
+    },
+    {
+      "name": "Sacha",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 14
+    },
+    {
+      "name": "Huasca",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 15
+    },
+    {
+      "name": "Caá",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 15
+    },
+    {
+      "name": "Ipê",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 14
+    },
+    {
+      "name": "Abacaxi",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 13
+    },
+    {
+      "name": "Ticuna",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 12
+    },
+    {
+      "name": "Uitoto",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 13
+    },
+    {
+      "name": "Kawchu",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 15
+    }
+  ]
+}

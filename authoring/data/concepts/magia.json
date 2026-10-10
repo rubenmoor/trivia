@@ -1,0 +1,818 @@
+{
+  "subcategory": "Magia",
+  "facets": [
+    "Trucos de cartas y monedas",
+    "Accesorios del mago",
+    "Magos e ilusionistas famosos",
+    "Grandes ilusiones y escapismo",
+    "Palabras mágicas y conjuros",
+    "Magos y brujas de cuentos",
+    "El mundo de Harry Potter",
+    "Objetos y criaturas encantadas",
+    "Realismo mágico y Encanto",
+    "Ciencia detrás de los trucos",
+    "Historia de la magia y la alquimia",
+    "Hechizos en juegos y videojuegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Prestidigitación",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Baraja de póker",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 3
+    },
+    {
+      "name": "As de picas",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 6
+    },
+    {
+      "name": "Carta elegida",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda detrás de la oreja",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 2
+    },
+    {
+      "name": "Moneda que desaparece",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 2
+    },
+    {
+      "name": "Cortar la baraja",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 6
+    },
+    {
+      "name": "Baraja marcada",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Forzaje de carta",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Levantada doble",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 14
+    },
+    {
+      "name": "Empalme",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 14
+    },
+    {
+      "name": "Carta ambiciosa",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Juego de los tres vasos",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 7
+    },
+    {
+      "name": "Moneda de dos caras",
+      "facet": "Trucos de cartas y monedas",
+      "known_at": 7
+    },
+    {
+      "name": "Sombrero de copa",
+      "facet": "Accesorios del mago",
+      "known_at": 3
+    },
+    {
+      "name": "Capa",
+      "facet": "Accesorios del mago",
+      "known_at": 2
+    },
+    {
+      "name": "Conejo en el sombrero",
+      "facet": "Accesorios del mago",
+      "known_at": 1
+    },
+    {
+      "name": "Paloma",
+      "facet": "Accesorios del mago",
+      "known_at": 3
+    },
+    {
+      "name": "Pañuelos de colores",
+      "facet": "Accesorios del mago",
+      "known_at": 3
+    },
+    {
+      "name": "Bola de cristal",
+      "facet": "Accesorios del mago",
+      "known_at": 3
+    },
+    {
+      "name": "Guantes blancos",
+      "facet": "Accesorios del mago",
+      "known_at": 4
+    },
+    {
+      "name": "Cubiletes",
+      "facet": "Accesorios del mago",
+      "known_at": 10
+    },
+    {
+      "name": "Ayudante del mago",
+      "facet": "Accesorios del mago",
+      "known_at": 4
+    },
+    {
+      "name": "Papel flash",
+      "facet": "Accesorios del mago",
+      "known_at": 13
+    },
+    {
+      "name": "Pulgar falso",
+      "facet": "Accesorios del mago",
+      "known_at": 13
+    },
+    {
+      "name": "Cuerda cortada y restaurada",
+      "facet": "Accesorios del mago",
+      "known_at": 8
+    },
+    {
+      "name": "Harry Houdini",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 7
+    },
+    {
+      "name": "David Copperfield",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Tamariz",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Penn y Teller",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Siegfried y Roy",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "David Blaine",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Jean-Eugène Robert-Houdin",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Uri Geller",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Dynamo",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Criss Angel",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Derren Brown",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Shin Lim",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Blass",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Mag Lari",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Chung Ling Soo",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Tommy Cooper",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Mujer cortada en dos",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 4
+    },
+    {
+      "name": "Levitación",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 6
+    },
+    {
+      "name": "Desaparición de la Estatua de la Libertad",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 11
+    },
+    {
+      "name": "Camisa de fuerza",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 8
+    },
+    {
+      "name": "Celda de tortura china del agua",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 13
+    },
+    {
+      "name": "Esposas",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 3
+    },
+    {
+      "name": "Truco de la cuerda india",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 12,
+      "retired": "unaskable: El truco de la cuerda india es demasiado poco conocido para estos jugadores, y su dato clave (que probablemente fue un engaño de un periódico) es difícil de plantear en estos formatos."
+    },
+    {
+      "name": "Atrapar la bala",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 13
+    },
+    {
+      "name": "Metamorfosis del baúl",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 14
+    },
+    {
+      "name": "Caminar a través de la Gran Muralla",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 13
+    },
+    {
+      "name": "Mujer zigzag",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 13
+    },
+    {
+      "name": "Escapismo",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 7
+    },
+    {
+      "name": "Bloque de hielo de David Blaine",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 13
+    },
+    {
+      "name": "Tanque de leche",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 14
+    },
+    {
+      "name": "Caminar sobre el agua",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 9
+    },
+    {
+      "name": "Vuelo de Copperfield",
+      "facet": "Grandes ilusiones y escapismo",
+      "known_at": 13
+    },
+    {
+      "name": "Hocus pocus",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 9
+    },
+    {
+      "name": "Sim sala bim",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 8
+    },
+    {
+      "name": "Tachán",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 2
+    },
+    {
+      "name": "Por favor",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 1
+    },
+    {
+      "name": "Hechizo",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 3
+    },
+    {
+      "name": "Conjuro",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 7
+    },
+    {
+      "name": "Maldición",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 4
+    },
+    {
+      "name": "Runa",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 10
+    },
+    {
+      "name": "Talismán",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 9
+    },
+    {
+      "name": "Encantamiento",
+      "facet": "Palabras mágicas y conjuros",
+      "known_at": 5
+    },
+    {
+      "name": "Bruja Malvada del Oeste",
+      "facet": "Magos y brujas de cuentos",
+      "known_at": 7
+    },
+    {
+      "name": "Glinda",
+      "facet": "Magos y brujas de cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Mickey aprendiz de brujo",
+      "facet": "Magos y brujas de cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Bruja Blanca de Narnia",
+      "facet": "Magos y brujas de cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Bruja Avería",
+      "facet": "Magos y brujas de cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Doctor Strange",
+      "facet": "Magos y brujas de cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Hogwarts",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 4
+    },
+    {
+      "name": "Ron Weasley",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 4
+    },
+    {
+      "name": "Albus Dumbledore",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Severus Snape",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 6
+    },
+    {
+      "name": "Rubeus Hagrid",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Quidditch",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Snitch dorada",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 6
+    },
+    {
+      "name": "Sombrero Seleccionador",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Gryffindor",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Slytherin",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Andén 9 ¾",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 6
+    },
+    {
+      "name": "Expecto patronum",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 8
+    },
+    {
+      "name": "Muggle",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 6
+    },
+    {
+      "name": "Dobby",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 5
+    },
+    {
+      "name": "Expelliarmus",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 8
+    },
+    {
+      "name": "Wingardium Leviosa",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 6
+    },
+    {
+      "name": "Callejón Diagon",
+      "facet": "El mundo de Harry Potter",
+      "known_at": 9
+    },
+    {
+      "name": "Lámpara de Aladino",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 2
+    },
+    {
+      "name": "Alfombra voladora",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 2
+    },
+    {
+      "name": "Escoba voladora",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 1
+    },
+    {
+      "name": "Fénix",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 6
+    },
+    {
+      "name": "Hada",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 1
+    },
+    {
+      "name": "Zapatillas de rubí",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 9
+    },
+    {
+      "name": "Calabaza de Cenicienta",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 2
+    },
+    {
+      "name": "Habichuelas mágicas",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 3
+    },
+    {
+      "name": "Capa de invisibilidad",
+      "facet": "Objetos y criaturas encantadas",
+      "known_at": 5
+    },
+    {
+      "name": "Remedios la bella",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 12
+    },
+    {
+      "name": "Mariposas amarillas",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 10
+    },
+    {
+      "name": "Melquíades",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 13
+    },
+    {
+      "name": "La casa de los espíritus",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 13
+    },
+    {
+      "name": "Mirabel",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 2
+    },
+    {
+      "name": "Luisa Madrigal",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 3
+    },
+    {
+      "name": "Pepa Madrigal",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 4
+    },
+    {
+      "name": "Vela mágica",
+      "facet": "Realismo mágico y Encanto",
+      "known_at": 4
+    },
+    {
+      "name": "Ilusión óptica",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 5
+    },
+    {
+      "name": "Fantasma de Pepper",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 14
+    },
+    {
+      "name": "Desvío de atención",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 9
+    },
+    {
+      "name": "Punto ciego",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 10
+    },
+    {
+      "name": "Luz ultravioleta",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 7
+    },
+    {
+      "name": "Tinta invisible",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 4
+    },
+    {
+      "name": "Ceguera por falta de atención",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 13
+    },
+    {
+      "name": "Hielo seco",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 7
+    },
+    {
+      "name": "Lectura en frío",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 13
+    },
+    {
+      "name": "Tensión superficial",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 10
+    },
+    {
+      "name": "Centro de gravedad",
+      "facet": "Ciencia detrás de los trucos",
+      "known_at": 9
+    },
+    {
+      "name": "Alquimia",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 8
+    },
+    {
+      "name": "Piedra filosofal",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 6
+    },
+    {
+      "name": "Elixir de la vida",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 8
+    },
+    {
+      "name": "Nicolas Flamel",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 12
+    },
+    {
+      "name": "Transmutación en oro",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 10
+    },
+    {
+      "name": "Paracelso",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 14
+    },
+    {
+      "name": "Isaac Newton alquimista",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 13
+    },
+    {
+      "name": "Juicios de Salem",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 12
+    },
+    {
+      "name": "Caza de brujas",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 10
+    },
+    {
+      "name": "Linterna mágica",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 12
+    },
+    {
+      "name": "Druidas",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 9
+    },
+    {
+      "name": "Cuatro elementos",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 7
+    },
+    {
+      "name": "Fósforo",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 14
+    },
+    {
+      "name": "Tarot",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 10
+    },
+    {
+      "name": "Homúnculo",
+      "facet": "Historia de la magia y la alquimia",
+      "known_at": 14
+    },
+    {
+      "name": "Maná",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Bola de fuego",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Poción de curación",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Mesa de encantamientos",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Libro de hechizos",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Dungeons & Dragons",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Alakazam",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Mago Oscuro",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Mago negro",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Hechizo de rayo",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Bruja de Clash Royale",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Fus Ro Dah",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Hearthstone",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Invocación",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Escudo mágico",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Poción de invisibilidad",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Teletransporte",
+      "facet": "Hechizos en juegos y videojuegos",
+      "known_at": 4
+    }
+  ]
+}

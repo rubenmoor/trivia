@@ -1,0 +1,932 @@
+{
+  "subcategory": "Robots",
+  "facets": [
+    "Robots del cine y la televisión",
+    "Robots de videojuegos y animación",
+    "Robots en el hogar",
+    "Robots industriales y de fábrica",
+    "Robots espaciales y exploradores",
+    "Partes y funcionamiento de un robot",
+    "Inteligencia artificial y asistentes",
+    "Historia y autómatas antiguos",
+    "Humanoides y robots famosos reales",
+    "Robots con forma de animal",
+    "Palabras y conceptos de robótica",
+    "Drones y vehículos autónomos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 4,
+      "science_news": 5,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "BB-8",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 4
+    },
+    {
+      "name": "Optimus Prime",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 4
+    },
+    {
+      "name": "Bumblebee",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 4
+    },
+    {
+      "name": "Ultrón",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "RoboCop",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 10
+    },
+    {
+      "name": "K-2SO",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Jaegers de Titanes del Pacífico",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Atom de Gigantes de acero",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "HAL 9000",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Sonny de Yo, robot",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "M3GAN",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny 5",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Data de Star Trek",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Chappie",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Ava de Ex Machina",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "María de Metrópolis",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Robby el robot",
+      "facet": "Robots del cine y la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "WALL-E",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 1
+    },
+    {
+      "name": "EVA",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 3
+    },
+    {
+      "name": "Roz de Robot salvaje",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 5
+    },
+    {
+      "name": "Mega Man",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 8
+    },
+    {
+      "name": "Metal Sonic",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 9
+    },
+    {
+      "name": "Rodney Copperbottom",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 9
+    },
+    {
+      "name": "Robotina",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 10
+    },
+    {
+      "name": "Bender",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 10
+    },
+    {
+      "name": "Inspector Gadget",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 10
+    },
+    {
+      "name": "El gigante de hierro",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 11
+    },
+    {
+      "name": "GLaDOS",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 11
+    },
+    {
+      "name": "Astro Boy",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 12
+    },
+    {
+      "name": "Mazinger Z",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 12
+    },
+    {
+      "name": "Claptrap",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 12
+    },
+    {
+      "name": "Voltron",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 13
+    },
+    {
+      "name": "Robo de Chrono Trigger",
+      "facet": "Robots de videojuegos y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Robot de juguete",
+      "facet": "Robots en el hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Robot mesero",
+      "facet": "Robots en el hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Robot trapeador",
+      "facet": "Robots en el hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Roomba",
+      "facet": "Robots en el hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Robot cortacésped",
+      "facet": "Robots en el hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Robot de cocina",
+      "facet": "Robots en el hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Robot de compañía",
+      "facet": "Robots en el hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Robot limpiavidrios",
+      "facet": "Robots en el hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Robot limpiador de piscinas",
+      "facet": "Robots en el hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Lego Mindstorms",
+      "facet": "Robots en el hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Termostato inteligente",
+      "facet": "Robots en el hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Robot cuidador de ancianos",
+      "facet": "Robots en el hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Domótica",
+      "facet": "Robots en el hogar",
+      "known_at": 12
+    },
+    {
+      "name": "Robot de telepresencia",
+      "facet": "Robots en el hogar",
+      "known_at": 13
+    },
+    {
+      "name": "Fábrica de carros",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 5
+    },
+    {
+      "name": "Línea de montaje",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 7
+    },
+    {
+      "name": "Robot soldador",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 8
+    },
+    {
+      "name": "Robot de pintura",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 8
+    },
+    {
+      "name": "Robot desactivador de bombas",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 9
+    },
+    {
+      "name": "Robot clasificador de paquetes",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 9
+    },
+    {
+      "name": "Robot de corte láser",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 10
+    },
+    {
+      "name": "Robot de ordeño",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 11
+    },
+    {
+      "name": "Robot quirúrgico Da Vinci",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 12
+    },
+    {
+      "name": "Cobot",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 13
+    },
+    {
+      "name": "Robot paletizador",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 13
+    },
+    {
+      "name": "Unimate",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 14
+    },
+    {
+      "name": "KUKA",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 14
+    },
+    {
+      "name": "Robots de almacén Kiva",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 14
+    },
+    {
+      "name": "Fanuc",
+      "facet": "Robots industriales y de fábrica",
+      "known_at": 15
+    },
+    {
+      "name": "Rover",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 6
+    },
+    {
+      "name": "Voyager",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 10
+    },
+    {
+      "name": "Spirit",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 13
+    },
+    {
+      "name": "Sojourner",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Canadarm",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Robonaut",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Philae",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Viking",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 14
+    },
+    {
+      "name": "Lunojod",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 15
+    },
+    {
+      "name": "Yutu",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 15
+    },
+    {
+      "name": "Zhurong",
+      "facet": "Robots espaciales y exploradores",
+      "known_at": 15
+    },
+    {
+      "name": "Batería",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 2
+    },
+    {
+      "name": "Motor",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 4
+    },
+    {
+      "name": "Antena",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 4
+    },
+    {
+      "name": "Pinza",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 5
+    },
+    {
+      "name": "Engranaje",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 5
+    },
+    {
+      "name": "Programa",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 5
+    },
+    {
+      "name": "Sensor",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 6
+    },
+    {
+      "name": "Articulación",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 6
+    },
+    {
+      "name": "Placa de circuito",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 9
+    },
+    {
+      "name": "Arduino",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 11
+    },
+    {
+      "name": "Sensor ultrasónico",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 11
+    },
+    {
+      "name": "Servomotor",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 12
+    },
+    {
+      "name": "Microcontrolador",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 12
+    },
+    {
+      "name": "Giroscopio",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 12
+    },
+    {
+      "name": "Actuador",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 13
+    },
+    {
+      "name": "LiDAR",
+      "facet": "Partes y funcionamiento de un robot",
+      "known_at": 14
+    },
+    {
+      "name": "Asistente de Google",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 6
+    },
+    {
+      "name": "Traductor automático",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 6
+    },
+    {
+      "name": "Reconocimiento facial",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 8
+    },
+    {
+      "name": "Chatbot",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 9
+    },
+    {
+      "name": "Cortana",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 11
+    },
+    {
+      "name": "Aprendizaje automático",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 12
+    },
+    {
+      "name": "Red neuronal",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 13
+    },
+    {
+      "name": "Garri Kaspárov",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 13
+    },
+    {
+      "name": "Watson de IBM",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 14
+    },
+    {
+      "name": "ELIZA",
+      "facet": "Inteligencia artificial y asistentes",
+      "known_at": 15
+    },
+    {
+      "name": "Caja de música",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 5
+    },
+    {
+      "name": "Autómata",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Caballero mecánico de Leonardo da Vinci",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Tres leyes de la robótica",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "El Turco ajedrecista",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Talos",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Gólem",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Karel Čapek",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Reloj astronómico de Praga",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Telar de Jacquard",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Al-Jazari",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Pato de Vaucanson",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "El escritor de Jaquet-Droz",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "R.U.R.",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Elektro",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Shakey",
+      "facet": "Historia y autómatas antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Robot humanoide",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 5
+    },
+    {
+      "name": "ASIMO",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Sophia",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Pepper",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Optimus de Tesla",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 11
+    },
+    {
+      "name": "NAO",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Ameca",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 14
+    },
+    {
+      "name": "Valkyrie",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 15
+    },
+    {
+      "name": "Kismet",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 15
+    },
+    {
+      "name": "Geminoid",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 15
+    },
+    {
+      "name": "Digit",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 15
+    },
+    {
+      "name": "iCub",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 15
+    },
+    {
+      "name": "Robots futbolistas de la RoboCup",
+      "facet": "Humanoides y robots famosos reales",
+      "known_at": 12
+    },
+    {
+      "name": "Mascota robot",
+      "facet": "Robots con forma de animal",
+      "known_at": 4
+    },
+    {
+      "name": "Furby",
+      "facet": "Robots con forma de animal",
+      "known_at": 7
+    },
+    {
+      "name": "Robot pez",
+      "facet": "Robots con forma de animal",
+      "known_at": 8
+    },
+    {
+      "name": "Spot",
+      "facet": "Robots con forma de animal",
+      "known_at": 9
+    },
+    {
+      "name": "Robot serpiente",
+      "facet": "Robots con forma de animal",
+      "known_at": 9
+    },
+    {
+      "name": "Aibo",
+      "facet": "Robots con forma de animal",
+      "known_at": 10
+    },
+    {
+      "name": "Robot hexápodo",
+      "facet": "Robots con forma de animal",
+      "known_at": 11
+    },
+    {
+      "name": "Robot cucaracha",
+      "facet": "Robots con forma de animal",
+      "known_at": 11
+    },
+    {
+      "name": "Robot hormiga",
+      "facet": "Robots con forma de animal",
+      "known_at": 11
+    },
+    {
+      "name": "Zoomer",
+      "facet": "Robots con forma de animal",
+      "known_at": 12
+    },
+    {
+      "name": "BigDog",
+      "facet": "Robots con forma de animal",
+      "known_at": 13
+    },
+    {
+      "name": "RoboBee",
+      "facet": "Robots con forma de animal",
+      "known_at": 13
+    },
+    {
+      "name": "Robot medusa",
+      "facet": "Robots con forma de animal",
+      "known_at": 13
+    },
+    {
+      "name": "Cheetah del MIT",
+      "facet": "Robots con forma de animal",
+      "known_at": 13
+    },
+    {
+      "name": "Pleo",
+      "facet": "Robots con forma de animal",
+      "known_at": 14
+    },
+    {
+      "name": "Paro",
+      "facet": "Robots con forma de animal",
+      "known_at": 14
+    },
+    {
+      "name": "SmartBird",
+      "facet": "Robots con forma de animal",
+      "known_at": 14
+    },
+    {
+      "name": "Biomimética",
+      "facet": "Robots con forma de animal",
+      "known_at": 14
+    },
+    {
+      "name": "Robot",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 1
+    },
+    {
+      "name": "Robótica",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 5
+    },
+    {
+      "name": "Programación",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 6
+    },
+    {
+      "name": "Cíborg",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 8
+    },
+    {
+      "name": "Automatización",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 9
+    },
+    {
+      "name": "Prótesis biónica",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 9
+    },
+    {
+      "name": "Nanorobot",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 10
+    },
+    {
+      "name": "Mecatrónica",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 11
+    },
+    {
+      "name": "Biónica",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 12
+    },
+    {
+      "name": "Enjambre de robots",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 12
+    },
+    {
+      "name": "Mecha",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 13
+    },
+    {
+      "name": "Teleoperación",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 14
+    },
+    {
+      "name": "Valle inquietante",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 14
+    },
+    {
+      "name": "Singularidad tecnológica",
+      "facet": "Palabras y conceptos de robótica",
+      "known_at": 15
+    },
+    {
+      "name": "Hélice",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 4
+    },
+    {
+      "name": "Espectáculo de drones",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 6
+    },
+    {
+      "name": "Piloto automático",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 7
+    },
+    {
+      "name": "Dron de reparto",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 7
+    },
+    {
+      "name": "Metro sin conductor",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 9
+    },
+    {
+      "name": "Cuadricóptero",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 10
+    },
+    {
+      "name": "Robotaxi",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 11
+    },
+    {
+      "name": "Dron agrícola",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 11
+    },
+    {
+      "name": "Dron submarino",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 11
+    },
+    {
+      "name": "Tractor autónomo",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 11
+    },
+    {
+      "name": "Dron de carreras FPV",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 12
+    },
+    {
+      "name": "Vehículo aéreo no tripulado",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 12
+    },
+    {
+      "name": "Waymo",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 14
+    },
+    {
+      "name": "Niveles de conducción autónoma",
+      "facet": "Drones y vehículos autónomos",
+      "known_at": 15
+    }
+  ]
+}

@@ -261,7 +261,8 @@
     {
       "name": "Draugr",
       "facet": "Criaturas y monstruos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The draugr are scary undead and obscure: not suitable for difficulty 1 or for a family game."
     },
     {
       "name": "Trol",
@@ -696,7 +697,8 @@
     {
       "name": "Castigo de Loki",
       "facet": "Mitos y aventuras famosas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Loki's punishment (tied up with entrails, venom on his face) is torture: too dark for the house tone."
     },
     {
       "name": "Saga de los Volsungos",

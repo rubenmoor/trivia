@@ -1,0 +1,1047 @@
+{
+  "subcategory": "Comida rápida",
+  "facets": [
+    "Hamburguesas y sándwiches",
+    "Pizza y sus variedades",
+    "Perros calientes y salchichas",
+    "Papas fritas y acompañamientos",
+    "Pollo frito y alitas",
+    "Cadenas y mascotas famosas",
+    "Comida rápida del mundo",
+    "Comida callejera colombiana",
+    "Salsas y aderezos",
+    "Bebidas, malteadas y postres",
+    "Historia e inventores de la comida rápida",
+    "Comida rápida en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hamburguesa con queso",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 2
+    },
+    {
+      "name": "Pan de hamburguesa",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 2
+    },
+    {
+      "name": "Carne de hamburguesa",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 3
+    },
+    {
+      "name": "Hamburguesa doble",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 3
+    },
+    {
+      "name": "Hamburguesa de pollo",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 4
+    },
+    {
+      "name": "Pan con ajonjolí",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburguesa vegetariana",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 6
+    },
+    {
+      "name": "Big Mac",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 6
+    },
+    {
+      "name": "Whopper",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 8
+    },
+    {
+      "name": "Sándwich",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 2
+    },
+    {
+      "name": "Sándwich mixto",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 5
+    },
+    {
+      "name": "Wrap",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 8
+    },
+    {
+      "name": "Club sándwich",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 9
+    },
+    {
+      "name": "Panini",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 9
+    },
+    {
+      "name": "Bagel",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 10
+    },
+    {
+      "name": "Smash burger",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 11
+    },
+    {
+      "name": "Sándwich cubano",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 11
+    },
+    {
+      "name": "Sloppy Joe",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 13
+    },
+    {
+      "name": "Sándwich Reuben",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 14
+    },
+    {
+      "name": "Masa de pizza",
+      "facet": "Pizza y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Pizza de champiñones",
+      "facet": "Pizza y sus variedades",
+      "known_at": 4
+    },
+    {
+      "name": "Pizza de borde relleno",
+      "facet": "Pizza y sus variedades",
+      "known_at": 8
+    },
+    {
+      "name": "Pizza estilo Nueva York",
+      "facet": "Pizza y sus variedades",
+      "known_at": 11
+    },
+    {
+      "name": "Perro caliente",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 1
+    },
+    {
+      "name": "Salchicha",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 1
+    },
+    {
+      "name": "Pan de perro",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 3
+    },
+    {
+      "name": "Perro salchicha",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 3
+    },
+    {
+      "name": "Salchipapa",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 4
+    },
+    {
+      "name": "Chorizo",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 4
+    },
+    {
+      "name": "Perro caliente colombiano",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 5
+    },
+    {
+      "name": "Salchichón",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 6
+    },
+    {
+      "name": "Papitas ripio",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 6
+    },
+    {
+      "name": "Salchicha ranchera",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 7
+    },
+    {
+      "name": "Salchicha alemana",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 8
+    },
+    {
+      "name": "Corn dog",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 8
+    },
+    {
+      "name": "Salchicha de Viena",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 9
+    },
+    {
+      "name": "Choripán",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 10
+    },
+    {
+      "name": "Salchicha de Frankfurt",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 11
+    },
+    {
+      "name": "Bratwurst",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 12
+    },
+    {
+      "name": "Chili dog",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 12
+    },
+    {
+      "name": "Coney Island",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 13
+    },
+    {
+      "name": "Tripa natural",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 13
+    },
+    {
+      "name": "Perro caliente estilo Chicago",
+      "facet": "Perros calientes y salchichas",
+      "known_at": 14
+    },
+    {
+      "name": "Puré de papa",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 3
+    },
+    {
+      "name": "Papas de paquete",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 3
+    },
+    {
+      "name": "Papas a la francesa",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Aros de cebolla",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Freidora",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Papas en cascos",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Papas onduladas",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Yuca frita",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Papas con queso cheddar",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 7
+    },
+    {
+      "name": "Papas criollas fritas",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 8
+    },
+    {
+      "name": "Croquetas",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 8
+    },
+    {
+      "name": "Ensalada de repollo",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 9
+    },
+    {
+      "name": "Papas rústicas",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 9
+    },
+    {
+      "name": "Papas fritas belgas",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 12
+    },
+    {
+      "name": "Doble fritura",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 13
+    },
+    {
+      "name": "Tater tots",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 13
+    },
+    {
+      "name": "Pollo frito",
+      "facet": "Pollo frito y alitas",
+      "known_at": 1
+    },
+    {
+      "name": "Nuggets de pollo",
+      "facet": "Pollo frito y alitas",
+      "known_at": 2
+    },
+    {
+      "name": "Alitas de pollo",
+      "facet": "Pollo frito y alitas",
+      "known_at": 3
+    },
+    {
+      "name": "Muslito de pollo",
+      "facet": "Pollo frito y alitas",
+      "known_at": 3
+    },
+    {
+      "name": "Pollo asado",
+      "facet": "Pollo frito y alitas",
+      "known_at": 3
+    },
+    {
+      "name": "Apanado",
+      "facet": "Pollo frito y alitas",
+      "known_at": 6
+    },
+    {
+      "name": "Pechuga apanada",
+      "facet": "Pollo frito y alitas",
+      "known_at": 6
+    },
+    {
+      "name": "Alitas picantes",
+      "facet": "Pollo frito y alitas",
+      "known_at": 6
+    },
+    {
+      "name": "Coronel Sanders",
+      "facet": "Pollo frito y alitas",
+      "known_at": 8
+    },
+    {
+      "name": "Tenders de pollo",
+      "facet": "Pollo frito y alitas",
+      "known_at": 8
+    },
+    {
+      "name": "Popcorn chicken",
+      "facet": "Pollo frito y alitas",
+      "known_at": 9
+    },
+    {
+      "name": "Pollo a la broaster",
+      "facet": "Pollo frito y alitas",
+      "known_at": 9
+    },
+    {
+      "name": "Alitas búfalo",
+      "facet": "Pollo frito y alitas",
+      "known_at": 10
+    },
+    {
+      "name": "Kentucky",
+      "facet": "Pollo frito y alitas",
+      "known_at": 10
+    },
+    {
+      "name": "Receta de 11 hierbas y especias",
+      "facet": "Pollo frito y alitas",
+      "known_at": 11
+    },
+    {
+      "name": "Hueso de la suerte",
+      "facet": "Pollo frito y alitas",
+      "known_at": 11
+    },
+    {
+      "name": "Pollo frito coreano",
+      "facet": "Pollo frito y alitas",
+      "known_at": 12
+    },
+    {
+      "name": "Pollo frito sureño",
+      "facet": "Pollo frito y alitas",
+      "known_at": 13
+    },
+    {
+      "name": "McDonald's",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 1
+    },
+    {
+      "name": "Cajita feliz",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 2
+    },
+    {
+      "name": "Burger King",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 3
+    },
+    {
+      "name": "Ronald McDonald",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 4
+    },
+    {
+      "name": "KFC",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 4
+    },
+    {
+      "name": "Arcos dorados",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 5
+    },
+    {
+      "name": "Subway",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "El Corral",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Frisby",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Domino's",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Pizza Hut",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Juan Valdez",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Starbucks",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Kokoriko",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Presto",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Jeno's Pizza",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Sirena de Starbucks",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Wendy's",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Dunkin'",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Grimace",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Popeyes",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Hamburglar",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Pretzel",
+      "facet": "Comida rápida del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Kebab",
+      "facet": "Comida rápida del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Shawarma",
+      "facet": "Comida rápida del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Poutine",
+      "facet": "Comida rápida del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Falafel",
+      "facet": "Comida rápida del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Dim sum",
+      "facet": "Comida rápida del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Gyros",
+      "facet": "Comida rápida del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Samosa",
+      "facet": "Comida rápida del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Currywurst",
+      "facet": "Comida rápida del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Croque monsieur",
+      "facet": "Comida rápida del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Bánh mì",
+      "facet": "Comida rápida del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Pierogi",
+      "facet": "Comida rápida del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Empanada",
+      "facet": "Comida callejera colombiana",
+      "known_at": 1
+    },
+    {
+      "name": "Arepa",
+      "facet": "Comida callejera colombiana",
+      "known_at": 1
+    },
+    {
+      "name": "Obleas",
+      "facet": "Comida callejera colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Pandebono",
+      "facet": "Comida callejera colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Mazorca asada",
+      "facet": "Comida callejera colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Mango biche con sal",
+      "facet": "Comida callejera colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Arepa de huevo",
+      "facet": "Comida callejera colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Almojábana",
+      "facet": "Comida callejera colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Chuzo",
+      "facet": "Comida callejera colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Raspao",
+      "facet": "Comida callejera colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Papa rellena",
+      "facet": "Comida callejera colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Arepa de choclo",
+      "facet": "Comida callejera colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Picada",
+      "facet": "Comida callejera colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Salpicón",
+      "facet": "Comida callejera colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Chontaduro",
+      "facet": "Comida callejera colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Pan de yuca",
+      "facet": "Comida callejera colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Carimañola",
+      "facet": "Comida callejera colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Cholado",
+      "facet": "Comida callejera colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Butifarra soledeña",
+      "facet": "Comida callejera colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Chorizo santarrosano",
+      "facet": "Comida callejera colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Kétchup",
+      "facet": "Salsas y aderezos",
+      "known_at": 1
+    },
+    {
+      "name": "Mayonesa",
+      "facet": "Salsas y aderezos",
+      "known_at": 2
+    },
+    {
+      "name": "Salsa picante",
+      "facet": "Salsas y aderezos",
+      "known_at": 3
+    },
+    {
+      "name": "Salsa BBQ",
+      "facet": "Salsas y aderezos",
+      "known_at": 5
+    },
+    {
+      "name": "Salsa rosada",
+      "facet": "Salsas y aderezos",
+      "known_at": 5
+    },
+    {
+      "name": "Guacamole",
+      "facet": "Salsas y aderezos",
+      "known_at": 5
+    },
+    {
+      "name": "Salsa de ajo",
+      "facet": "Salsas y aderezos",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa de queso cheddar",
+      "facet": "Salsas y aderezos",
+      "known_at": 6
+    },
+    {
+      "name": "Pepinillos",
+      "facet": "Salsas y aderezos",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa de piña",
+      "facet": "Salsas y aderezos",
+      "known_at": 7
+    },
+    {
+      "name": "Mostaza miel",
+      "facet": "Salsas y aderezos",
+      "known_at": 8
+    },
+    {
+      "name": "Tabasco",
+      "facet": "Salsas y aderezos",
+      "known_at": 9
+    },
+    {
+      "name": "Salsa tártara",
+      "facet": "Salsas y aderezos",
+      "known_at": 11
+    },
+    {
+      "name": "Aderezo ranch",
+      "facet": "Salsas y aderezos",
+      "known_at": 11
+    },
+    {
+      "name": "Mostaza Dijon",
+      "facet": "Salsas y aderezos",
+      "known_at": 12
+    },
+    {
+      "name": "Sriracha",
+      "facet": "Salsas y aderezos",
+      "known_at": 12
+    },
+    {
+      "name": "Tzatziki",
+      "facet": "Salsas y aderezos",
+      "known_at": 13
+    },
+    {
+      "name": "Gaseosa",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 1
+    },
+    {
+      "name": "Coca-Cola",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 1
+    },
+    {
+      "name": "Helado de cono",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 2
+    },
+    {
+      "name": "Dona",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 2
+    },
+    {
+      "name": "Pitillo",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 2
+    },
+    {
+      "name": "Malteada",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 3
+    },
+    {
+      "name": "Pepsi",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 4
+    },
+    {
+      "name": "Brownie",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 5
+    },
+    {
+      "name": "Waffle",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 5
+    },
+    {
+      "name": "Colombiana",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 5
+    },
+    {
+      "name": "McFlurry",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 6
+    },
+    {
+      "name": "Postobón",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 6
+    },
+    {
+      "name": "Granizado",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 6
+    },
+    {
+      "name": "Té helado",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 6
+    },
+    {
+      "name": "Malta",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 6
+    },
+    {
+      "name": "Sundae",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 7
+    },
+    {
+      "name": "Limonada de coco",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 7
+    },
+    {
+      "name": "Pie de manzana",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 8
+    },
+    {
+      "name": "Frappé",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 8
+    },
+    {
+      "name": "Comida para llevar",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 3
+    },
+    {
+      "name": "Menú combo",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 4
+    },
+    {
+      "name": "Plazoleta de comidas",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 4
+    },
+    {
+      "name": "Autoservicio",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 6
+    },
+    {
+      "name": "Food truck",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 6
+    },
+    {
+      "name": "Hermanos McDonald",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 9
+    },
+    {
+      "name": "Hamburgo",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 10
+    },
+    {
+      "name": "Frankfurt",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 11
+    },
+    {
+      "name": "Conde de Sándwich",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 11
+    },
+    {
+      "name": "Restaurante drive-in",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 12
+    },
+    {
+      "name": "Ray Kroc",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "White Castle",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 14
+    },
+    {
+      "name": "Sistema de Servicio Speedee",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 14
+    },
+    {
+      "name": "San Bernardino",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 14
+    },
+    {
+      "name": "Nathan's Famous",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Feltman",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 15
+    },
+    {
+      "name": "Cangreburger",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Crustáceo Cascarudo",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Plankton",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Homero Simpson",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Fórmula secreta",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Pizza Planet",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Five Nights at Freddy's",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Overcooked",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Krusty Burger",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Super Size Me",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Hambre de poder",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Good Burger",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Wimpy",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "BurgerTime",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 14
+    }
+  ]
+}

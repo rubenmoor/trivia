@@ -1,0 +1,921 @@
+{
+  "subcategory": "Gatos",
+  "facets": [
+    "Razas de gatos",
+    "Cuerpo y sentidos felinos",
+    "Comportamiento y lenguaje gatuno",
+    "Cuidados, salud y alimentación",
+    "Ciclo de vida y crías",
+    "Gatos famosos de ficción",
+    "Gatos en la historia y mitos",
+    "Gatos en el idioma y refranes",
+    "Parientes salvajes del gato",
+    "Gatos en el hogar y la vida diaria",
+    "Récords y curiosidades felinas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Siamés",
+      "facet": "Razas de gatos",
+      "known_at": 4
+    },
+    {
+      "name": "Persa",
+      "facet": "Razas de gatos",
+      "known_at": 5
+    },
+    {
+      "name": "Esfinge",
+      "facet": "Razas de gatos",
+      "known_at": 5
+    },
+    {
+      "name": "Maine Coon",
+      "facet": "Razas de gatos",
+      "known_at": 9
+    },
+    {
+      "name": "Bengalí",
+      "facet": "Razas de gatos",
+      "known_at": 10
+    },
+    {
+      "name": "Ragdoll",
+      "facet": "Razas de gatos",
+      "known_at": 11
+    },
+    {
+      "name": "Azul ruso",
+      "facet": "Razas de gatos",
+      "known_at": 10
+    },
+    {
+      "name": "Angora turco",
+      "facet": "Razas de gatos",
+      "known_at": 8
+    },
+    {
+      "name": "Británico de pelo corto",
+      "facet": "Razas de gatos",
+      "known_at": 11
+    },
+    {
+      "name": "Scottish Fold",
+      "facet": "Razas de gatos",
+      "known_at": 11
+    },
+    {
+      "name": "Abisinio",
+      "facet": "Razas de gatos",
+      "known_at": 12
+    },
+    {
+      "name": "Sagrado de Birmania",
+      "facet": "Razas de gatos",
+      "known_at": 12
+    },
+    {
+      "name": "Manx",
+      "facet": "Razas de gatos",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque de Noruega",
+      "facet": "Razas de gatos",
+      "known_at": 12
+    },
+    {
+      "name": "Siberiano",
+      "facet": "Razas de gatos",
+      "known_at": 11
+    },
+    {
+      "name": "Devon Rex",
+      "facet": "Razas de gatos",
+      "known_at": 13
+    },
+    {
+      "name": "Savannah",
+      "facet": "Razas de gatos",
+      "known_at": 13
+    },
+    {
+      "name": "Mau egipcio",
+      "facet": "Razas de gatos",
+      "known_at": 13
+    },
+    {
+      "name": "Gato criollo",
+      "facet": "Razas de gatos",
+      "known_at": 4
+    },
+    {
+      "name": "Bigotes",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 1
+    },
+    {
+      "name": "Uñas retráctiles",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 5
+    },
+    {
+      "name": "Lengua del gato",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 4
+    },
+    {
+      "name": "Almohadillas",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 3
+    },
+    {
+      "name": "Pupila vertical",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 6
+    },
+    {
+      "name": "Tapetum lucidum",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 13
+    },
+    {
+      "name": "Visión nocturna",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 4
+    },
+    {
+      "name": "Cola del gato",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 2
+    },
+    {
+      "name": "Oído felino",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 6
+    },
+    {
+      "name": "Reflejo de enderezamiento",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 7
+    },
+    {
+      "name": "Clavícula flotante",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 13
+    },
+    {
+      "name": "Heterocromía",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 10
+    },
+    {
+      "name": "Gato calicó",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 10
+    },
+    {
+      "name": "Gato atigrado",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 5
+    },
+    {
+      "name": "Tercer párpado",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 11
+    },
+    {
+      "name": "Insensibilidad al sabor dulce",
+      "facet": "Cuerpo y sentidos felinos",
+      "known_at": 12
+    },
+    {
+      "name": "Maullido",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 1
+    },
+    {
+      "name": "Amasar",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 6
+    },
+    {
+      "name": "Restregarse contra las piernas",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 4
+    },
+    {
+      "name": "Parpadeo lento",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 9
+    },
+    {
+      "name": "Lomo arqueado",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 4
+    },
+    {
+      "name": "Cola erizada",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 4
+    },
+    {
+      "name": "Regalos de presas",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 7
+    },
+    {
+      "name": "Afilar las uñas",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 3
+    },
+    {
+      "name": "Siesta gatuna",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 2
+    },
+    {
+      "name": "Locura nocturna",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 7
+    },
+    {
+      "name": "Acecho",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 5
+    },
+    {
+      "name": "Castañeteo",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 10
+    },
+    {
+      "name": "Marcaje territorial",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 8
+    },
+    {
+      "name": "Mostrar la barriga",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 5
+    },
+    {
+      "name": "Enterrar las heces",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 5
+    },
+    {
+      "name": "Respuesta de Flehmen",
+      "facet": "Comportamiento y lenguaje gatuno",
+      "known_at": 14
+    },
+    {
+      "name": "Arenero",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 3
+    },
+    {
+      "name": "Rascador",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 4
+    },
+    {
+      "name": "Vacuna antirrábica",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 7
+    },
+    {
+      "name": "Desparasitación",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Esterilización",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Veterinario",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 1
+    },
+    {
+      "name": "Bola de pelo",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 5
+    },
+    {
+      "name": "Taurina",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 13
+    },
+    {
+      "name": "Comida húmeda",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 4
+    },
+    {
+      "name": "Concentrado para gatos",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 3
+    },
+    {
+      "name": "Chocolate",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 5
+    },
+    {
+      "name": "Leche de vaca",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "Cepillado",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 4
+    },
+    {
+      "name": "Microchip",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 8
+    },
+    {
+      "name": "Pulgas",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 3
+    },
+    {
+      "name": "Toxoplasmosis",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 12
+    },
+    {
+      "name": "Collar isabelino",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 10
+    },
+    {
+      "name": "Fuente de agua para gatos",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 6
+    },
+    {
+      "name": "Gatito",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 1
+    },
+    {
+      "name": "Camada",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 6
+    },
+    {
+      "name": "Gestación felina",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 10
+    },
+    {
+      "name": "Ojos cerrados al nacer",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 5
+    },
+    {
+      "name": "Destete",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 10
+    },
+    {
+      "name": "Calostro",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 12
+    },
+    {
+      "name": "Celo",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 9
+    },
+    {
+      "name": "Agarre del pescuezo",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 4
+    },
+    {
+      "name": "Ojos azules de los gatitos",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 9
+    },
+    {
+      "name": "Dientes de leche del gato",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 8
+    },
+    {
+      "name": "Socialización temprana",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 11
+    },
+    {
+      "name": "Gato senior",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 8
+    },
+    {
+      "name": "Esperanza de vida del gato",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 6
+    },
+    {
+      "name": "Edad gatuna en años humanos",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 7
+    },
+    {
+      "name": "Lactancia",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 5
+    },
+    {
+      "name": "Parto de la gata",
+      "facet": "Ciclo de vida y crías",
+      "known_at": 8
+    },
+    {
+      "name": "Gato de Cheshire",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 6
+    },
+    {
+      "name": "Silvestre",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 4
+    },
+    {
+      "name": "Don Gato",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Hello Kitty",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 2
+    },
+    {
+      "name": "Duquesa",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Gato Félix",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 10
+    },
+    {
+      "name": "Salem",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Gatúbela",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Azrael",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Fígaro",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 10
+    },
+    {
+      "name": "Lucifer",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 8
+    },
+    {
+      "name": "Gatobús",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Crookshanks",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 10
+    },
+    {
+      "name": "Señora Norris",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Cats",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Jiji",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 9
+    },
+    {
+      "name": "El gato negro",
+      "facet": "Gatos famosos de ficción",
+      "known_at": 13
+    },
+    {
+      "name": "Bastet",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 9
+    },
+    {
+      "name": "Momias de gatos",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 8
+    },
+    {
+      "name": "Gato negro y mala suerte",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 3
+    },
+    {
+      "name": "Siete vidas",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 3
+    },
+    {
+      "name": "Maneki-neko",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 8
+    },
+    {
+      "name": "Gato de barco",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 10
+    },
+    {
+      "name": "Gatos y brujas",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 4
+    },
+    {
+      "name": "Domesticación del gato",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 10
+    },
+    {
+      "name": "Tumba de Chipre",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 14
+    },
+    {
+      "name": "Muezza",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 14
+    },
+    {
+      "name": "Félicette",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 12
+    },
+    {
+      "name": "Gatos de Hemingway",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 13
+    },
+    {
+      "name": "Unsinkable Sam",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 14
+    },
+    {
+      "name": "Gatos cazadores de ratones en graneros",
+      "facet": "Gatos en la historia y mitos",
+      "known_at": 6
+    },
+    {
+      "name": "Gato por liebre",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 9
+    },
+    {
+      "name": "Cuatro gatos",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 7
+    },
+    {
+      "name": "De noche todos los gatos son pardos",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 12
+    },
+    {
+      "name": "Buscarle tres pies al gato",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 11
+    },
+    {
+      "name": "Llevarse el gato al agua",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 12
+    },
+    {
+      "name": "Gato escaldado del agua fría huye",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 12
+    },
+    {
+      "name": "La curiosidad mató al gato",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 6
+    },
+    {
+      "name": "Cuando el gato no está, los ratones bailan",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 6
+    },
+    {
+      "name": "Aquí hay gato encerrado",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 10
+    },
+    {
+      "name": "Ponerle el cascabel al gato",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 11
+    },
+    {
+      "name": "Como perros y gatos",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 4
+    },
+    {
+      "name": "Gatear",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 3
+    },
+    {
+      "name": "Felino",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 6
+    },
+    {
+      "name": "Michi",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 3
+    },
+    {
+      "name": "Minino",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 5
+    },
+    {
+      "name": "Gato hidráulico",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 10
+    },
+    {
+      "name": "Ojo de gato",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 9
+    },
+    {
+      "name": "Gatuperio",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 15
+    },
+    {
+      "name": "Gatos de Madrid",
+      "facet": "Gatos en el idioma y refranes",
+      "known_at": 14
+    },
+    {
+      "name": "Serval",
+      "facet": "Parientes salvajes del gato",
+      "known_at": 12
+    },
+    {
+      "name": "Gato salvaje africano",
+      "facet": "Parientes salvajes del gato",
+      "known_at": 12
+    },
+    {
+      "name": "Gato montés europeo",
+      "facet": "Parientes salvajes del gato",
+      "known_at": 11
+    },
+    {
+      "name": "Manul",
+      "facet": "Parientes salvajes del gato",
+      "known_at": 13
+    },
+    {
+      "name": "Gato de las arenas",
+      "facet": "Parientes salvajes del gato",
+      "known_at": 12
+    },
+    {
+      "name": "Gato andino",
+      "facet": "Parientes salvajes del gato",
+      "known_at": 14
+    },
+    {
+      "name": "Juguete de plumas",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 2
+    },
+    {
+      "name": "Puntero láser",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Caja de cartón",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 2
+    },
+    {
+      "name": "Hierba gatera",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Gatera",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Guacal transportador",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Torre para gatos",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Ratón de juguete",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 1
+    },
+    {
+      "name": "Ovillo de lana",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 2
+    },
+    {
+      "name": "Malla de seguridad en ventanas",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Alergia a los gatos",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Adopción de gatos",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Gato callejero",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Café de gatos",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Día Internacional del Gato",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Rodillo quitapelos",
+      "facet": "Gatos en el hogar y la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Creme Puff",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 14
+    },
+    {
+      "name": "Grumpy Cat",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 8
+    },
+    {
+      "name": "Gato de Schrödinger",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 11
+    },
+    {
+      "name": "Gato polidáctilo",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 12
+    },
+    {
+      "name": "Gato tricolor macho",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 13
+    },
+    {
+      "name": "Sordera en gatos blancos",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 12
+    },
+    {
+      "name": "Velocidad del gato",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 8
+    },
+    {
+      "name": "Salto del gato",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 5
+    },
+    {
+      "name": "Horas de sueño del gato",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 5
+    },
+    {
+      "name": "Maru",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 13
+    },
+    {
+      "name": "Gata Tama",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de los gatos",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 11
+    },
+    {
+      "name": "Gatos de Torre Argentina",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 14
+    },
+    {
+      "name": "Gato herrumbroso",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 14
+    },
+    {
+      "name": "Bigotes del mismo ancho del cuerpo",
+      "facet": "Récords y curiosidades felinas",
+      "known_at": 9
+    }
+  ]
+}

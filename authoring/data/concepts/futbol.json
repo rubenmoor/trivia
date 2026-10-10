@@ -1,0 +1,917 @@
+{
+  "subcategory": "Fútbol",
+  "facets": [
+    "Reglas y arbitraje",
+    "Posiciones y jugadas",
+    "Equipamiento y balón",
+    "Mundiales y Copa América",
+    "Selecciones nacionales",
+    "Clubes y ligas del mundo",
+    "Grandes jugadores de la historia",
+    "Estadios famosos",
+    "Origen e historia del fútbol",
+    "Jerga y vocabulario futbolero",
+    "Hinchas, mascotas y celebraciones",
+    "Fútbol femenino"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Penalti",
+      "facet": "Reglas y arbitraje",
+      "known_at": 2
+    },
+    {
+      "name": "Tarjeta amarilla",
+      "facet": "Reglas y arbitraje",
+      "known_at": 3
+    },
+    {
+      "name": "Tarjeta roja",
+      "facet": "Reglas y arbitraje",
+      "known_at": 3
+    },
+    {
+      "name": "Saque de esquina",
+      "facet": "Reglas y arbitraje",
+      "known_at": 3
+    },
+    {
+      "name": "Tiro libre",
+      "facet": "Reglas y arbitraje",
+      "known_at": 4
+    },
+    {
+      "name": "Mano",
+      "facet": "Reglas y arbitraje",
+      "known_at": 4
+    },
+    {
+      "name": "Saque de banda",
+      "facet": "Reglas y arbitraje",
+      "known_at": 5
+    },
+    {
+      "name": "Juez de línea",
+      "facet": "Reglas y arbitraje",
+      "known_at": 5
+    },
+    {
+      "name": "VAR",
+      "facet": "Reglas y arbitraje",
+      "known_at": 6
+    },
+    {
+      "name": "Saque de meta",
+      "facet": "Reglas y arbitraje",
+      "known_at": 6
+    },
+    {
+      "name": "Prórroga",
+      "facet": "Reglas y arbitraje",
+      "known_at": 6
+    },
+    {
+      "name": "Fuera de lugar",
+      "facet": "Reglas y arbitraje",
+      "known_at": 8
+    },
+    {
+      "name": "Tiempo de reposición",
+      "facet": "Reglas y arbitraje",
+      "known_at": 8
+    },
+    {
+      "name": "Spray del árbitro",
+      "facet": "Reglas y arbitraje",
+      "known_at": 9
+    },
+    {
+      "name": "Ley de la ventaja",
+      "facet": "Reglas y arbitraje",
+      "known_at": 11
+    },
+    {
+      "name": "IFAB",
+      "facet": "Reglas y arbitraje",
+      "known_at": 15
+    },
+    {
+      "name": "Arquero",
+      "facet": "Posiciones y jugadas",
+      "known_at": 1
+    },
+    {
+      "name": "Delantero",
+      "facet": "Posiciones y jugadas",
+      "known_at": 3
+    },
+    {
+      "name": "Cabezazo",
+      "facet": "Posiciones y jugadas",
+      "known_at": 3
+    },
+    {
+      "name": "Autogol",
+      "facet": "Posiciones y jugadas",
+      "known_at": 4
+    },
+    {
+      "name": "Defensa central",
+      "facet": "Posiciones y jugadas",
+      "known_at": 5
+    },
+    {
+      "name": "Chilena",
+      "facet": "Posiciones y jugadas",
+      "known_at": 6
+    },
+    {
+      "name": "Número 10",
+      "facet": "Posiciones y jugadas",
+      "known_at": 6
+    },
+    {
+      "name": "Taquito",
+      "facet": "Posiciones y jugadas",
+      "known_at": 6
+    },
+    {
+      "name": "Lateral",
+      "facet": "Posiciones y jugadas",
+      "known_at": 7
+    },
+    {
+      "name": "Pared",
+      "facet": "Posiciones y jugadas",
+      "known_at": 8
+    },
+    {
+      "name": "Contragolpe",
+      "facet": "Posiciones y jugadas",
+      "known_at": 8
+    },
+    {
+      "name": "Gol olímpico",
+      "facet": "Posiciones y jugadas",
+      "known_at": 9
+    },
+    {
+      "name": "Tiki-taka",
+      "facet": "Posiciones y jugadas",
+      "known_at": 10
+    },
+    {
+      "name": "Líbero",
+      "facet": "Posiciones y jugadas",
+      "known_at": 11
+    },
+    {
+      "name": "Panenka",
+      "facet": "Posiciones y jugadas",
+      "known_at": 11
+    },
+    {
+      "name": "Rabona",
+      "facet": "Posiciones y jugadas",
+      "known_at": 11
+    },
+    {
+      "name": "Falso nueve",
+      "facet": "Posiciones y jugadas",
+      "known_at": 12
+    },
+    {
+      "name": "Catenaccio",
+      "facet": "Posiciones y jugadas",
+      "known_at": 13
+    },
+    {
+      "name": "Balón",
+      "facet": "Equipamiento y balón",
+      "known_at": 1
+    },
+    {
+      "name": "Camiseta",
+      "facet": "Equipamiento y balón",
+      "known_at": 1
+    },
+    {
+      "name": "Guayos",
+      "facet": "Equipamiento y balón",
+      "known_at": 2
+    },
+    {
+      "name": "Guantes de arquero",
+      "facet": "Equipamiento y balón",
+      "known_at": 2
+    },
+    {
+      "name": "Silbato",
+      "facet": "Equipamiento y balón",
+      "known_at": 2
+    },
+    {
+      "name": "Medias",
+      "facet": "Equipamiento y balón",
+      "known_at": 2
+    },
+    {
+      "name": "Red",
+      "facet": "Equipamiento y balón",
+      "known_at": 3
+    },
+    {
+      "name": "Canilleras",
+      "facet": "Equipamiento y balón",
+      "known_at": 4
+    },
+    {
+      "name": "Círculo central",
+      "facet": "Equipamiento y balón",
+      "known_at": 4
+    },
+    {
+      "name": "Punto penal",
+      "facet": "Equipamiento y balón",
+      "known_at": 4
+    },
+    {
+      "name": "Área grande",
+      "facet": "Equipamiento y balón",
+      "known_at": 5
+    },
+    {
+      "name": "Brazalete de capitán",
+      "facet": "Equipamiento y balón",
+      "known_at": 6
+    },
+    {
+      "name": "Banderín de córner",
+      "facet": "Equipamiento y balón",
+      "known_at": 6
+    },
+    {
+      "name": "Travesaño",
+      "facet": "Equipamiento y balón",
+      "known_at": 7
+    },
+    {
+      "name": "Balón Telstar",
+      "facet": "Equipamiento y balón",
+      "known_at": 11
+    },
+    {
+      "name": "Balón de cuero con cordones",
+      "facet": "Equipamiento y balón",
+      "known_at": 12
+    },
+    {
+      "name": "Copa América",
+      "facet": "Mundiales y Copa América",
+      "known_at": 5
+    },
+    {
+      "name": "Mundial de México 1986",
+      "facet": "Mundiales y Copa América",
+      "known_at": 10
+    },
+    {
+      "name": "Bota de Oro del Mundial",
+      "facet": "Mundiales y Copa América",
+      "known_at": 10
+    },
+    {
+      "name": "Copa América 2001",
+      "facet": "Mundiales y Copa América",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial de Estados Unidos 1994",
+      "facet": "Mundiales y Copa América",
+      "known_at": 11
+    },
+    {
+      "name": "Selección Colombia",
+      "facet": "Selecciones nacionales",
+      "known_at": 1
+    },
+    {
+      "name": "Selección de Brasil",
+      "facet": "Selecciones nacionales",
+      "known_at": 3
+    },
+    {
+      "name": "Selección de Argentina",
+      "facet": "Selecciones nacionales",
+      "known_at": 3
+    },
+    {
+      "name": "Selección de México",
+      "facet": "Selecciones nacionales",
+      "known_at": 5
+    },
+    {
+      "name": "Selección de Alemania",
+      "facet": "Selecciones nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Selección de Francia",
+      "facet": "Selecciones nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Selección de España",
+      "facet": "Selecciones nacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Selección de Uruguay",
+      "facet": "Selecciones nacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Selección de Inglaterra",
+      "facet": "Selecciones nacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Selección de Italia",
+      "facet": "Selecciones nacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Selección de Japón",
+      "facet": "Selecciones nacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Selección de Marruecos",
+      "facet": "Selecciones nacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Naranja Mecánica",
+      "facet": "Selecciones nacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Selección de Islandia",
+      "facet": "Selecciones nacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Selección de Camerún",
+      "facet": "Selecciones nacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Selección de Croacia",
+      "facet": "Selecciones nacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Real Madrid",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "FC Barcelona",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Atlético Nacional",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Champions League",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Manchester United",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Millonarios",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "América de Cali",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Inter Miami",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Liverpool",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Bayern Múnich",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Boca Juniors",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Junior de Barranquilla",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Premier League",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "LaLiga",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Copa Libertadores",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Juventus",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "River Plate",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Santos",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Ajax",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Once Caldas",
+      "facet": "Clubes y ligas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Luis Díaz",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 3
+    },
+    {
+      "name": "James Rodríguez",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 4
+    },
+    {
+      "name": "Radamel Falcao",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 5
+    },
+    {
+      "name": "Erling Haaland",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 5
+    },
+    {
+      "name": "Carlos Valderrama",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 6
+    },
+    {
+      "name": "Balón de Oro",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 6
+    },
+    {
+      "name": "René Higuita",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Faustino Asprilla",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Alfredo Di Stéfano",
+      "facet": "Grandes jugadores de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "Maracaná",
+      "facet": "Estadios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Camp Nou",
+      "facet": "Estadios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Santiago Bernabéu",
+      "facet": "Estadios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "El Campín",
+      "facet": "Estadios famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Estadio Metropolitano Roberto Meléndez",
+      "facet": "Estadios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Estadio Atanasio Girardot",
+      "facet": "Estadios famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Wembley",
+      "facet": "Estadios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "La Bombonera",
+      "facet": "Estadios famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio Pascual Guerrero",
+      "facet": "Estadios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Allianz Arena",
+      "facet": "Estadios famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Old Trafford",
+      "facet": "Estadios famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Anfield",
+      "facet": "Estadios famosos",
+      "known_at": 12
+    },
+    {
+      "name": "San Siro",
+      "facet": "Estadios famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Estadio Monumental de Núñez",
+      "facet": "Estadios famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Signal Iduna Park",
+      "facet": "Estadios famosos",
+      "known_at": 14
+    },
+    {
+      "name": "CONMEBOL",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Juego de pelota mesoamericano",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Dimayor",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Football Association",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Cuju",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Calcio florentino",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Escocia contra Inglaterra de 1872",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Ken Aston",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "El Dorado del fútbol colombiano",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Reglas de Cambridge",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 15
+    },
+    {
+      "name": "Sheffield FC",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 15
+    },
+    {
+      "name": "Charles Miller",
+      "facet": "Origen e historia del fútbol",
+      "known_at": 15
+    },
+    {
+      "name": "Golazo",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 2
+    },
+    {
+      "name": "Atajada",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 4
+    },
+    {
+      "name": "Clásico",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 5
+    },
+    {
+      "name": "Caño",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 6
+    },
+    {
+      "name": "Cañonazo",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 6
+    },
+    {
+      "name": "Palomita",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 7
+    },
+    {
+      "name": "Remontada",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 7
+    },
+    {
+      "name": "Pelotazo",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 7
+    },
+    {
+      "name": "Hat-trick",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 8
+    },
+    {
+      "name": "Gambeta",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 8
+    },
+    {
+      "name": "Picadito",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 8
+    },
+    {
+      "name": "Media vuelta",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 8
+    },
+    {
+      "name": "Derbi",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 9
+    },
+    {
+      "name": "Vaselina",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 9
+    },
+    {
+      "name": "La escuadra",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 9
+    },
+    {
+      "name": "Jugada de pizarra",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 11
+    },
+    {
+      "name": "Gol de camerino",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 12
+    },
+    {
+      "name": "Garra charrúa",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 12
+    },
+    {
+      "name": "Pichichi",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 13
+    },
+    {
+      "name": "Celebración Siuuu",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 3
+    },
+    {
+      "name": "Himno nacional antes del partido",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 4
+    },
+    {
+      "name": "Bufanda de hincha",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 5
+    },
+    {
+      "name": "Mascota del Mundial",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 5
+    },
+    {
+      "name": "Waka Waka",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 5
+    },
+    {
+      "name": "Marea amarilla",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 8
+    },
+    {
+      "name": "Peluca del Pibe",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 8
+    },
+    {
+      "name": "Barra",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 9
+    },
+    {
+      "name": "Palmas vikingas",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 11
+    },
+    {
+      "name": "You'll Never Walk Alone",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 13
+    },
+    {
+      "name": "Celebración de la cuna",
+      "facet": "Hinchas, mascotas y celebraciones",
+      "known_at": 14
+    },
+    {
+      "name": "Selección Colombia femenina",
+      "facet": "Fútbol femenino",
+      "known_at": 5
+    },
+    {
+      "name": "Mundial femenino",
+      "facet": "Fútbol femenino",
+      "known_at": 6
+    },
+    {
+      "name": "Linda Caicedo",
+      "facet": "Fútbol femenino",
+      "known_at": 6
+    },
+    {
+      "name": "Copa América Femenina",
+      "facet": "Fútbol femenino",
+      "known_at": 8
+    },
+    {
+      "name": "Liga Femenina BetPlay",
+      "facet": "Fútbol femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Balón de Oro femenino",
+      "facet": "Fútbol femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial femenino 2023",
+      "facet": "Fútbol femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Selección de Estados Unidos femenina",
+      "facet": "Fútbol femenino",
+      "known_at": 10
+    },
+    {
+      "name": "Catalina Usme",
+      "facet": "Fútbol femenino",
+      "known_at": 11
+    },
+    {
+      "name": "Mayra Ramírez",
+      "facet": "Fútbol femenino",
+      "known_at": 12
+    },
+    {
+      "name": "Sam Kerr",
+      "facet": "Fútbol femenino",
+      "known_at": 12
+    },
+    {
+      "name": "Leicy Santos",
+      "facet": "Fútbol femenino",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial Sub-17 femenino 2022",
+      "facet": "Fútbol femenino",
+      "known_at": 12
+    },
+    {
+      "name": "Mia Hamm",
+      "facet": "Fútbol femenino",
+      "known_at": 14
+    }
+  ]
+}

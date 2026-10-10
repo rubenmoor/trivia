@@ -1,0 +1,977 @@
+{
+  "subcategory": "Villanos famosos",
+  "facets": [
+    "Villanos clásicos de Disney",
+    "Villanos de Pixar y DreamWorks",
+    "Supervillanos de Marvel",
+    "Supervillanos de DC y Batman",
+    "Villanos de sagas galácticas",
+    "Villanos de fantasía y magia",
+    "Villanos de videojuegos",
+    "Villanos de cuentos y literatura",
+    "Monstruos clásicos del cine",
+    "Villanos de series y telenovelas",
+    "Secuaces, mascotas y guaridas",
+    "Frases, poderes y armas villanas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 1,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 2,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Úrsula",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 3
+    },
+    {
+      "name": "Gastón",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 4
+    },
+    {
+      "name": "Lady Tremaine",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 4
+    },
+    {
+      "name": "Yzma",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 7
+    },
+    {
+      "name": "Juez Claude Frollo",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 10
+    },
+    {
+      "name": "Dr. Facilier",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 9
+    },
+    {
+      "name": "Gobernador Ratcliffe",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 11
+    },
+    {
+      "name": "Príncipe Juan",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 11
+    },
+    {
+      "name": "Ratigan",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 13
+    },
+    {
+      "name": "Madam Mim",
+      "facet": "Villanos clásicos de Disney",
+      "known_at": 12
+    },
+    {
+      "name": "Randall",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 6
+    },
+    {
+      "name": "Henry J. Waternoose",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 9
+    },
+    {
+      "name": "Charles Muntz",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 8
+    },
+    {
+      "name": "Hopper",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 9
+    },
+    {
+      "name": "Oloroso Pete",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 8
+    },
+    {
+      "name": "Sid",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 5
+    },
+    {
+      "name": "Al McWhiggin",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 9
+    },
+    {
+      "name": "Gabby Gabby",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 8
+    },
+    {
+      "name": "Chick Hicks",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 6
+    },
+    {
+      "name": "Ernesto de la Cruz",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 6
+    },
+    {
+      "name": "Hada Madrina de Shrek",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 7
+    },
+    {
+      "name": "Tai Lung",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 7
+    },
+    {
+      "name": "Lord Shen",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 9
+    },
+    {
+      "name": "Kai",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 10
+    },
+    {
+      "name": "Megamente",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 8
+    },
+    {
+      "name": "Lobo de El gato con botas: el último deseo",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 7
+    },
+    {
+      "name": "Drago Bludvist",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 10
+    },
+    {
+      "name": "Grimmel",
+      "facet": "Villanos de Pixar y DreamWorks",
+      "known_at": 11
+    },
+    {
+      "name": "Thanos",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 3
+    },
+    {
+      "name": "Duende Verde",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 5
+    },
+    {
+      "name": "Doctor Octopus",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 5
+    },
+    {
+      "name": "Venom",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 4
+    },
+    {
+      "name": "Magneto",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 6
+    },
+    {
+      "name": "Cráneo Rojo",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 8
+    },
+    {
+      "name": "Doctor Doom",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 9
+    },
+    {
+      "name": "Galactus",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 11
+    },
+    {
+      "name": "Kingpin",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 10
+    },
+    {
+      "name": "Mysterio",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 7
+    },
+    {
+      "name": "Hombre de Arena",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 6
+    },
+    {
+      "name": "Killmonger",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 8
+    },
+    {
+      "name": "Hela",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 8
+    },
+    {
+      "name": "Kang el Conquistador",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 10
+    },
+    {
+      "name": "Electro",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 7
+    },
+    {
+      "name": "Lagarto",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 7
+    },
+    {
+      "name": "Carnage",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 9
+    },
+    {
+      "name": "Mística",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 8
+    },
+    {
+      "name": "Kraven el Cazador",
+      "facet": "Supervillanos de Marvel",
+      "known_at": 10
+    },
+    {
+      "name": "Joker",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 2
+    },
+    {
+      "name": "Acertijo",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 6
+    },
+    {
+      "name": "Dos Caras",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 6
+    },
+    {
+      "name": "Lex Luthor",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 6
+    },
+    {
+      "name": "Bane",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 7
+    },
+    {
+      "name": "Harley Quinn",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 5
+    },
+    {
+      "name": "Señor Frío",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 7
+    },
+    {
+      "name": "Darkseid",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 10
+    },
+    {
+      "name": "General Zod",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 9
+    },
+    {
+      "name": "Brainiac",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 10
+    },
+    {
+      "name": "Ra's al Ghul",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 11
+    },
+    {
+      "name": "Sinestro",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 12
+    },
+    {
+      "name": "Deathstroke",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 11
+    },
+    {
+      "name": "Cara de Barro",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 12
+    },
+    {
+      "name": "Flash Reverso",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 12
+    },
+    {
+      "name": "Cheetah",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 10
+    },
+    {
+      "name": "Doomsday",
+      "facet": "Supervillanos de DC y Batman",
+      "known_at": 10
+    },
+    {
+      "name": "Darth Vader",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 2
+    },
+    {
+      "name": "Emperador Palpatine",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 6
+    },
+    {
+      "name": "Kylo Ren",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 6
+    },
+    {
+      "name": "Darth Maul",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 7
+    },
+    {
+      "name": "Conde Dooku",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 10
+    },
+    {
+      "name": "General Grievous",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 9
+    },
+    {
+      "name": "Jabba el Hutt",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 6
+    },
+    {
+      "name": "Boba Fett",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 7
+    },
+    {
+      "name": "Gran Moff Tarkin",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Almirante Thrawn",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 13
+    },
+    {
+      "name": "Líder Supremo Snoke",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 10
+    },
+    {
+      "name": "Emperador Zurg",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 4
+    },
+    {
+      "name": "Khan",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 13
+    },
+    {
+      "name": "Borg",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 13
+    },
+    {
+      "name": "Xenomorfo",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 11
+    },
+    {
+      "name": "Daleks",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 14
+    },
+    {
+      "name": "Barón Harkonnen",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 13
+    },
+    {
+      "name": "Ming el Despiadado",
+      "facet": "Villanos de sagas galácticas",
+      "known_at": 14
+    },
+    {
+      "name": "Lord Voldemort",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 4
+    },
+    {
+      "name": "Sauron",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 8
+    },
+    {
+      "name": "Saruman",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 9
+    },
+    {
+      "name": "Gollum",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 6
+    },
+    {
+      "name": "Bellatrix Lestrange",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 8
+    },
+    {
+      "name": "Dolores Umbridge",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 8
+    },
+    {
+      "name": "Draco Malfoy",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 5
+    },
+    {
+      "name": "Lucius Malfoy",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 9
+    },
+    {
+      "name": "Peter Pettigrew",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 9
+    },
+    {
+      "name": "Gellert Grindelwald",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 10
+    },
+    {
+      "name": "Dementores",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 7
+    },
+    {
+      "name": "Smaug",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 9
+    },
+    {
+      "name": "Rey Brujo de Angmar",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 13
+    },
+    {
+      "name": "Rey de la Noche",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 12
+    },
+    {
+      "name": "Bruja Mala del Oeste",
+      "facet": "Villanos de fantasía y magia",
+      "known_at": 6
+    },
+    {
+      "name": "Rey K. Rool",
+      "facet": "Villanos de videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Dr. Eggman",
+      "facet": "Villanos de videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Ganondorf",
+      "facet": "Villanos de videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Wario",
+      "facet": "Villanos de videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Waluigi",
+      "facet": "Villanos de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Rey Boo",
+      "facet": "Villanos de videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Rey Dedede",
+      "facet": "Villanos de videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Dr. Wily",
+      "facet": "Villanos de videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Sephiroth",
+      "facet": "Villanos de videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Kefka",
+      "facet": "Villanos de videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Giovanni",
+      "facet": "Villanos de videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Creeper",
+      "facet": "Villanos de videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Dragón del Fin",
+      "facet": "Villanos de videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Herobrine",
+      "facet": "Villanos de videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Blinky",
+      "facet": "Villanos de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "M. Bison",
+      "facet": "Villanos de videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Ridley",
+      "facet": "Villanos de videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Freddy Fazbear",
+      "facet": "Villanos de videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Bruja de Hansel y Gretel",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 2
+    },
+    {
+      "name": "Gigante de las habichuelas mágicas",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 3
+    },
+    {
+      "name": "Ogro de Pulgarcito",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 6
+    },
+    {
+      "name": "Reina de Corazones",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 5
+    },
+    {
+      "name": "Señorita Trunchbull",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 8
+    },
+    {
+      "name": "Conde Olaf",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 10
+    },
+    {
+      "name": "Profesor Moriarty",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 11
+    },
+    {
+      "name": "Mr. Hyde",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 10
+    },
+    {
+      "name": "Javert",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Yago",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 14
+    },
+    {
+      "name": "Lady Macbeth",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Milady de Winter",
+      "facet": "Villanos de cuentos y literatura",
+      "known_at": 13
+    },
+    {
+      "name": "Drácula",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 3
+    },
+    {
+      "name": "Monstruo de Frankenstein",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 3
+    },
+    {
+      "name": "Hombre Lobo",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 2
+    },
+    {
+      "name": "Hombre Invisible",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 6
+    },
+    {
+      "name": "Gremlins",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 9
+    },
+    {
+      "name": "Fantasma de la Ópera",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 10
+    },
+    {
+      "name": "Novia de Frankenstein",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 11
+    },
+    {
+      "name": "Criatura de la Laguna Negra",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Nosferatu",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Mothra",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 13
+    },
+    {
+      "name": "La Mancha Voraz",
+      "facet": "Monstruos clásicos del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Doofenshmirtz",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 4
+    },
+    {
+      "name": "Bob Patiño",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 8
+    },
+    {
+      "name": "Dr. Drakken",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Aku",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 12
+    },
+    {
+      "name": "Skeletor",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Dr. Claw",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Rita Repulsa",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Vecna",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Demogorgon",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 9
+    },
+    {
+      "name": "Soraya Montenegro",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Catalina Creel",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 13
+    },
+    {
+      "name": "Marcela Valencia",
+      "facet": "Villanos de series y telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Iago",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 5
+    },
+    {
+      "name": "Señor Smee",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 6
+    },
+    {
+      "name": "Cocodrilo Tic-Tac",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 5
+    },
+    {
+      "name": "Diablo",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 9
+    },
+    {
+      "name": "Pena y Pánico",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 7
+    },
+    {
+      "name": "Hienas de Scar",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 4
+    },
+    {
+      "name": "Flotsam y Jetsam",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 8
+    },
+    {
+      "name": "Gaspar y Horacio",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 8
+    },
+    {
+      "name": "LeFou",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 6
+    },
+    {
+      "name": "Monos voladores",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 6
+    },
+    {
+      "name": "Stormtroopers",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 4
+    },
+    {
+      "name": "Mortífagos",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 8
+    },
+    {
+      "name": "Goombas",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 3
+    },
+    {
+      "name": "Igor",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 10
+    },
+    {
+      "name": "Estrella de la Muerte",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 4
+    },
+    {
+      "name": "Mordor",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 9
+    },
+    {
+      "name": "Asilo Arkham",
+      "facet": "Secuaces, mascotas y guaridas",
+      "known_at": 10
+    },
+    {
+      "name": "Guantelete del Infinito",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 5
+    },
+    {
+      "name": "Gemas del Infinito",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 5
+    },
+    {
+      "name": "Chasquido de Thanos",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 4
+    },
+    {
+      "name": "Huso de la rueca",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 5
+    },
+    {
+      "name": "Kryptonita",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 4
+    },
+    {
+      "name": "Anillo Único",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 7
+    },
+    {
+      "name": "Yo soy tu padre",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 4
+    },
+    {
+      "name": "Lado oscuro de la Fuerza",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 6
+    },
+    {
+      "name": "Avada Kedavra",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 8
+    },
+    {
+      "name": "Horrocrux",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 8
+    },
+    {
+      "name": "Varita de saúco",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 9
+    },
+    {
+      "name": "Rayo encogedor",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 5
+    },
+    {
+      "name": "Inators de Doofenshmirtz",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 6
+    },
+    {
+      "name": "Risa malvada",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 2
+    },
+    {
+      "name": "¿Por qué tan serio?",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 9
+    },
+    {
+      "name": "Caracola de Úrsula",
+      "facet": "Frases, poderes y armas villanas",
+      "known_at": 7
+    }
+  ]
+}

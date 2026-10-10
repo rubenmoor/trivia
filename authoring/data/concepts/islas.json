@@ -1,0 +1,676 @@
+{
+  "subcategory": "Islas",
+  "facets": [
+    "Islas de Colombia",
+    "Las islas más grandes del mundo",
+    "Islas del Caribe",
+    "Países insulares y archipiélagos",
+    "Volcanes, corales y formación de islas",
+    "Animales y plantas de islas",
+    "Islas en la historia y la exploración",
+    "Islas en películas, libros y juegos",
+    "Palabras del mar y la costa",
+    "Ciudades y monumentos sobre islas",
+    "Islas del Pacífico y Polinesia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 1,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 4,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Santa Catalina",
+      "facet": "Islas de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Barú",
+      "facet": "Islas de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Isla Múcura",
+      "facet": "Islas de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Santa Cruz del Islote",
+      "facet": "Islas de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Isla Fuerte",
+      "facet": "Islas de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Tierra Bomba",
+      "facet": "Islas de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de Mompox",
+      "facet": "Islas de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Gorgonilla",
+      "facet": "Islas de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Archipiélago de San Bernardo",
+      "facet": "Islas de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Isla Tintipán",
+      "facet": "Islas de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de los Micos",
+      "facet": "Islas de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Cayo Bolívar",
+      "facet": "Islas de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Groenlandia",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Nueva Guinea",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Borneo",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Madagascar",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Sumatra",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Honshu",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Bretaña",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Isla Victoria",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de Baffin",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Ellesmere",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Célebes",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Isla Sur de Nueva Zelanda",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Java",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Terranova",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Luzón",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Tierra del Fuego",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Sajalín",
+      "facet": "Las islas más grandes del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Aruba",
+      "facet": "Islas del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Curazao",
+      "facet": "Islas del Caribe",
+      "known_at": 9
+    },
+    {
+      "name": "Bonaire",
+      "facet": "Islas del Caribe",
+      "known_at": 12
+    },
+    {
+      "name": "Barbados",
+      "facet": "Islas del Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Bahamas",
+      "facet": "Islas del Caribe",
+      "known_at": 8
+    },
+    {
+      "name": "Isla Margarita",
+      "facet": "Islas del Caribe",
+      "known_at": 10
+    },
+    {
+      "name": "Martinica",
+      "facet": "Islas del Caribe",
+      "known_at": 12
+    },
+    {
+      "name": "Guadalupe",
+      "facet": "Islas del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Caimán",
+      "facet": "Islas del Caribe",
+      "known_at": 11
+    },
+    {
+      "name": "Santa Lucía",
+      "facet": "Islas del Caribe",
+      "known_at": 12
+    },
+    {
+      "name": "Antigua y Barbuda",
+      "facet": "Islas del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Vírgenes",
+      "facet": "Islas del Caribe",
+      "known_at": 12
+    },
+    {
+      "name": "Dominica",
+      "facet": "Islas del Caribe",
+      "known_at": 13
+    },
+    {
+      "name": "Taiwán",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 10
+    },
+    {
+      "name": "Islas Canarias",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 9
+    },
+    {
+      "name": "Islas Baleares",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 11
+    },
+    {
+      "name": "Azores",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 12
+    },
+    {
+      "name": "Cabo Verde",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 12
+    },
+    {
+      "name": "Seychelles",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 12
+    },
+    {
+      "name": "Mauricio",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Malvinas",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 10
+    },
+    {
+      "name": "Islas Feroe",
+      "facet": "Países insulares y archipiélagos",
+      "known_at": 14
+    },
+    {
+      "name": "Cayo",
+      "facet": "Volcanes, corales y formación de islas",
+      "known_at": 10
+    },
+    {
+      "name": "Pólipo de coral",
+      "facet": "Volcanes, corales y formación de islas",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Etna",
+      "facet": "Volcanes, corales y formación de islas",
+      "known_at": 11
+    },
+    {
+      "name": "Krakatoa",
+      "facet": "Volcanes, corales y formación de islas",
+      "known_at": 12
+    },
+    {
+      "name": "Anillo de Fuego del Pacífico",
+      "facet": "Volcanes, corales y formación de islas",
+      "known_at": 10
+    },
+    {
+      "name": "Hunga Tonga",
+      "facet": "Volcanes, corales y formación de islas",
+      "known_at": 14
+    },
+    {
+      "name": "Piquero de patas azules",
+      "facet": "Animales y plantas de islas",
+      "known_at": 9
+    },
+    {
+      "name": "Fosa",
+      "facet": "Animales y plantas de islas",
+      "known_at": 11
+    },
+    {
+      "name": "Kakapo",
+      "facet": "Animales y plantas de islas",
+      "known_at": 13
+    },
+    {
+      "name": "Cangrejo rojo de la Isla de Navidad",
+      "facet": "Animales y plantas de islas",
+      "known_at": 11
+    },
+    {
+      "name": "Pinzones de Darwin",
+      "facet": "Animales y plantas de islas",
+      "known_at": 10
+    },
+    {
+      "name": "Cocotero",
+      "facet": "Animales y plantas de islas",
+      "known_at": 3
+    },
+    {
+      "name": "Cangrejo negro de Providencia",
+      "facet": "Animales y plantas de islas",
+      "known_at": 12
+    },
+    {
+      "name": "Pez loro",
+      "facet": "Animales y plantas de islas",
+      "known_at": 10
+    },
+    {
+      "name": "Ballena jorobada",
+      "facet": "Animales y plantas de islas",
+      "known_at": 5
+    },
+    {
+      "name": "Guanahaní",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de Santa Elena",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de Elba",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 13
+    },
+    {
+      "name": "Alcatraz",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 9
+    },
+    {
+      "name": "Robben Island",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 13
+    },
+    {
+      "name": "Isla Ellis",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Pearl Harbor",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 10
+    },
+    {
+      "name": "Viaje del Beagle",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Creta",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 10
+    },
+    {
+      "name": "Ítaca",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 12
+    },
+    {
+      "name": "Archipiélago Juan Fernández",
+      "facet": "Islas en la historia y la exploración",
+      "known_at": 13
+    },
+    {
+      "name": "Robinson Crusoe",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Lilo y Stitch",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Isla Nublar",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Isla Calavera",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Náufrago (película)",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Nunca Jamás",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Animal Crossing",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Lost",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Isla de Sodor",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Liliput",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "El señor de las moscas",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "La isla misteriosa",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Isla Berk",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Isla de los Cerdos (Angry Birds)",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Isla de los Juegos (Pinocho)",
+      "facet": "Islas en películas, libros y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Cabo",
+      "facet": "Palabras del mar y la costa",
+      "known_at": 9
+    },
+    {
+      "name": "Islote",
+      "facet": "Palabras del mar y la costa",
+      "known_at": 9
+    },
+    {
+      "name": "Ensenada",
+      "facet": "Palabras del mar y la costa",
+      "known_at": 12
+    },
+    {
+      "name": "Muelle",
+      "facet": "Palabras del mar y la costa",
+      "known_at": 5
+    },
+    {
+      "name": "Insular",
+      "facet": "Palabras del mar y la costa",
+      "known_at": 10
+    },
+    {
+      "name": "Litoral",
+      "facet": "Palabras del mar y la costa",
+      "known_at": 10
+    },
+    {
+      "name": "Manhattan",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 8
+    },
+    {
+      "name": "Hong Kong",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 9
+    },
+    {
+      "name": "Mont Saint-Michel",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 12
+    },
+    {
+      "name": "Willemstad",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 12
+    },
+    {
+      "name": "Bombay",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 13
+    },
+    {
+      "name": "Capri",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 12
+    },
+    {
+      "name": "Honolulu",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 10
+    },
+    {
+      "name": "Santuario de Itsukushima",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de la Cité",
+      "facet": "Ciudades y monumentos sobre islas",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Pascua",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 7
+    },
+    {
+      "name": "Tahití",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 9
+    },
+    {
+      "name": "Bora Bora",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 9
+    },
+    {
+      "name": "Samoa",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 11
+    },
+    {
+      "name": "Tonga",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 12
+    },
+    {
+      "name": "Guam",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Marshall",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 13
+    },
+    {
+      "name": "Polinesia",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 9
+    },
+    {
+      "name": "Micronesia",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 13
+    },
+    {
+      "name": "Melanesia",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 14
+    },
+    {
+      "name": "Tuvalu",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 12
+    },
+    {
+      "name": "Isla Clipperton",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 15
+    },
+    {
+      "name": "Islas Cook",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 13
+    },
+    {
+      "name": "Vanuatu",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Salomón",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 13
+    },
+    {
+      "name": "Hula",
+      "facet": "Islas del Pacífico y Polinesia",
+      "known_at": 6
+    }
+  ]
+}

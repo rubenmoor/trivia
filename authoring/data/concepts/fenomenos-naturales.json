@@ -1,0 +1,457 @@
+{
+  "subcategory": "Fenómenos naturales",
+  "facets": [
+    "Volcanes y erupciones",
+    "Terremotos y tsunamis",
+    "Tormentas, rayos y truenos",
+    "Huracanes, tornados y vientos",
+    "Nubes, lluvia, granizo y nieve",
+    "Arcoíris, auroras y fenómenos de luz",
+    "El Niño, sequías e inundaciones",
+    "Deslizamientos, avalanchas y erosión",
+    "Mareas, olas y corrientes marinas",
+    "Eclipses y fenómenos del cielo",
+    "Géiseres, cuevas y aguas termales",
+    "Ciclo del agua y estaciones"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 4
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Erupción",
+      "facet": "Volcanes y erupciones",
+      "known_at": 3
+    },
+    {
+      "name": "Galeras",
+      "facet": "Volcanes y erupciones",
+      "known_at": 9
+    },
+    {
+      "name": "Piroclastos",
+      "facet": "Volcanes y erupciones",
+      "known_at": 13
+    },
+    {
+      "name": "Monte Santa Helena",
+      "facet": "Volcanes y erupciones",
+      "known_at": 13
+    },
+    {
+      "name": "Sismólogo",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 10
+    },
+    {
+      "name": "Hipocentro",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 11
+    },
+    {
+      "name": "Onda sísmica",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 11
+    },
+    {
+      "name": "Terremoto del Eje Cafetero",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 11
+    },
+    {
+      "name": "Charles Richter",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 12
+    },
+    {
+      "name": "Escala de magnitud de momento",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 14
+    },
+    {
+      "name": "Terremoto de Valdivia",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 14
+    },
+    {
+      "name": "Terremoto de Lisboa de 1755",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 14
+    },
+    {
+      "name": "Licuefacción del suelo",
+      "facet": "Terremotos y tsunamis",
+      "known_at": 14
+    },
+    {
+      "name": "Rayo",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 1
+    },
+    {
+      "name": "Electricidad estática",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 7
+    },
+    {
+      "name": "Cometa de Benjamin Franklin",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 8
+    },
+    {
+      "name": "Velocidad del sonido",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 9
+    },
+    {
+      "name": "Plasma",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 11
+    },
+    {
+      "name": "Jaula de Faraday",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 13
+    },
+    {
+      "name": "Duendes rojos",
+      "facet": "Tormentas, rayos y truenos",
+      "known_at": 15
+    },
+    {
+      "name": "Nombres de huracanes",
+      "facet": "Huracanes, tornados y vientos",
+      "known_at": 10
+    },
+    {
+      "name": "Huracán Katrina",
+      "facet": "Huracanes, tornados y vientos",
+      "known_at": 11
+    },
+    {
+      "name": "Callejón de los Tornados",
+      "facet": "Huracanes, tornados y vientos",
+      "known_at": 12
+    },
+    {
+      "name": "Petricor",
+      "facet": "Nubes, lluvia, granizo y nieve",
+      "known_at": 12
+    },
+    {
+      "name": "Color azul del cielo",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 5
+    },
+    {
+      "name": "Prisma",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 7
+    },
+    {
+      "name": "Aurora austral",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 10
+    },
+    {
+      "name": "Halo solar",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 10
+    },
+    {
+      "name": "Arcoíris lunar",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 12
+    },
+    {
+      "name": "Arco de niebla",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 13
+    },
+    {
+      "name": "Fuego fatuo",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 13
+    },
+    {
+      "name": "Rayo verde",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 14
+    },
+    {
+      "name": "Parhelio",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 14
+    },
+    {
+      "name": "Columna solar",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 14
+    },
+    {
+      "name": "Dispersión de Rayleigh",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 14
+    },
+    {
+      "name": "Fata Morgana",
+      "facet": "Arcoíris, auroras y fenómenos de luz",
+      "known_at": 15
+    },
+    {
+      "name": "Incendio forestal",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 4
+    },
+    {
+      "name": "Racionamiento de agua",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Desbordamiento de un río",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 6
+    },
+    {
+      "name": "La Niña",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Crecida del Nilo",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 11
+    },
+    {
+      "name": "La Mojana",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Oscilación del Sur",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Dust Bowl",
+      "facet": "El Niño, sequías e inundaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Avalancha de nieve",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 5
+    },
+    {
+      "name": "Deslizamiento de tierra",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 6
+    },
+    {
+      "name": "Dunas",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 6
+    },
+    {
+      "name": "Reforestación",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 7
+    },
+    {
+      "name": "Cañón del Chicamocha",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 10
+    },
+    {
+      "name": "Terrazas de cultivo",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 11
+    },
+    {
+      "name": "Erosión costera",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 11
+    },
+    {
+      "name": "Meteorización",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 13
+    },
+    {
+      "name": "Chimeneas de hadas de Capadocia",
+      "facet": "Deslizamientos, avalanchas y erosión",
+      "known_at": 14
+    },
+    {
+      "name": "Corrientes oceánicas",
+      "facet": "Mareas, olas y corrientes marinas",
+      "known_at": 9
+    },
+    {
+      "name": "Gravedad lunar",
+      "facet": "Mareas, olas y corrientes marinas",
+      "known_at": 10
+    },
+    {
+      "name": "Maelstrom",
+      "facet": "Mareas, olas y corrientes marinas",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía de Fundy",
+      "facet": "Mareas, olas y corrientes marinas",
+      "known_at": 15
+    },
+    {
+      "name": "Lluvia de estrellas",
+      "facet": "Eclipses y fenómenos del cielo",
+      "known_at": 5
+    },
+    {
+      "name": "Luna de sangre",
+      "facet": "Eclipses y fenómenos del cielo",
+      "known_at": 8
+    },
+    {
+      "name": "Lucero de la mañana",
+      "facet": "Eclipses y fenómenos del cielo",
+      "known_at": 11
+    },
+    {
+      "name": "Luna azul",
+      "facet": "Eclipses y fenómenos del cielo",
+      "known_at": 12
+    },
+    {
+      "name": "Eclipse anular",
+      "facet": "Eclipses y fenómenos del cielo",
+      "known_at": 12
+    },
+    {
+      "name": "Cueva",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 2
+    },
+    {
+      "name": "Géiser",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 6
+    },
+    {
+      "name": "Agua mineral",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 6
+    },
+    {
+      "name": "Estalagmita",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 8
+    },
+    {
+      "name": "Termales de Santa Rosa de Cabal",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 10
+    },
+    {
+      "name": "Cenote",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 11
+    },
+    {
+      "name": "Cueva de Altamira",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 11
+    },
+    {
+      "name": "Termales de Paipa",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 11
+    },
+    {
+      "name": "Espeleología",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 12
+    },
+    {
+      "name": "Dolina",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva del Guácharo",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 13
+    },
+    {
+      "name": "Cueva de los Cristales de Naica",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva Son Doong",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 14
+    },
+    {
+      "name": "Pamukkale",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva del Mamut",
+      "facet": "Géiseres, cuevas y aguas termales",
+      "known_at": 14
+    },
+    {
+      "name": "Estación seca",
+      "facet": "Ciclo del agua y estaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Nieve perpetua",
+      "facet": "Ciclo del agua y estaciones",
+      "known_at": 10
+    }
+  ]
+}

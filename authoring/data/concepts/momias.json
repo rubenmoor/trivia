@@ -1,0 +1,786 @@
+{
+  "subcategory": "Momias",
+  "facets": [
+    "Momificación en el antiguo Egipto",
+    "Faraones y momias famosas",
+    "Tumbas, pirámides y sarcófagos",
+    "Dioses y creencias egipcias de la muerte",
+    "Momias de los Andes y América",
+    "Momias naturales: hielo, pantanos y desiertos",
+    "Momias de animales",
+    "Arqueólogos y grandes descubrimientos",
+    "Ciencia moderna para estudiar momias",
+    "Momias en películas, juegos y leyendas",
+    "Museos y momias en el mundo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Momificación",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 3
+    },
+    {
+      "name": "Embalsamamiento",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 8
+    },
+    {
+      "name": "Embalsamador",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 9
+    },
+    {
+      "name": "Natrón",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 11
+    },
+    {
+      "name": "Vasos canopos",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 10
+    },
+    {
+      "name": "Lino",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 7
+    },
+    {
+      "name": "Corazón",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 7
+    },
+    {
+      "name": "Cerebro",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 6
+    },
+    {
+      "name": "Hígado",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 9
+    },
+    {
+      "name": "Mirra",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 11
+    },
+    {
+      "name": "Amuleto",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 7
+    },
+    {
+      "name": "Escarabajo del corazón",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 12
+    },
+    {
+      "name": "Setenta días",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 12
+    },
+    {
+      "name": "Ibu",
+      "facet": "Momificación en el antiguo Egipto",
+      "known_at": 15
+    },
+    {
+      "name": "Faraón",
+      "facet": "Faraones y momias famosas",
+      "known_at": 3
+    },
+    {
+      "name": "Ramsés II",
+      "facet": "Faraones y momias famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Keops",
+      "facet": "Faraones y momias famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Kefrén",
+      "facet": "Faraones y momias famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Hatshepsut",
+      "facet": "Faraones y momias famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Nefertiti",
+      "facet": "Faraones y momias famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Akenatón",
+      "facet": "Faraones y momias famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Seti I",
+      "facet": "Faraones y momias famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Tutmosis III",
+      "facet": "Faraones y momias famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Amenhotep III",
+      "facet": "Faraones y momias famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Ramsés III",
+      "facet": "Faraones y momias famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Narmer",
+      "facet": "Faraones y momias famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Desfile dorado de los faraones",
+      "facet": "Faraones y momias famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Pirámide de Guiza",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 3
+    },
+    {
+      "name": "Esfinge de Guiza",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 4
+    },
+    {
+      "name": "Valle de las Reinas",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 12
+    },
+    {
+      "name": "Sarcófago",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 5
+    },
+    {
+      "name": "Mastaba",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide de Djoser",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide acodada",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 14
+    },
+    {
+      "name": "Pirámides de Meroe",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 14
+    },
+    {
+      "name": "Tumba KV62",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 13
+    },
+    {
+      "name": "Máscara de Tutankamón",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 5
+    },
+    {
+      "name": "Ataúd antropomorfo",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 12
+    },
+    {
+      "name": "Ushebti",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 14
+    },
+    {
+      "name": "Ladrones de tumbas",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 6
+    },
+    {
+      "name": "Cámara del rey",
+      "facet": "Tumbas, pirámides y sarcófagos",
+      "known_at": 11
+    },
+    {
+      "name": "Anubis",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 6
+    },
+    {
+      "name": "Osiris",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 10
+    },
+    {
+      "name": "Isis",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 10
+    },
+    {
+      "name": "Ra",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 7
+    },
+    {
+      "name": "Horus",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 9
+    },
+    {
+      "name": "Set",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 11
+    },
+    {
+      "name": "Thot",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 12
+    },
+    {
+      "name": "Neftis",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 14
+    },
+    {
+      "name": "Maat",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 12
+    },
+    {
+      "name": "Ammit",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 13
+    },
+    {
+      "name": "Apofis",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 13
+    },
+    {
+      "name": "Pesaje del corazón",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 10
+    },
+    {
+      "name": "Libro de los Muertos",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 10
+    },
+    {
+      "name": "Ka",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 13
+    },
+    {
+      "name": "Ba",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 14
+    },
+    {
+      "name": "Duat",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 13
+    },
+    {
+      "name": "Barca solar",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 12
+    },
+    {
+      "name": "Ojo de Horus",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 9
+    },
+    {
+      "name": "Ankh",
+      "facet": "Dioses y creencias egipcias de la muerte",
+      "known_at": 10
+    },
+    {
+      "name": "Momias Chinchorro",
+      "facet": "Momias de los Andes y América",
+      "known_at": 12
+    },
+    {
+      "name": "Momia Juanita",
+      "facet": "Momias de los Andes y América",
+      "known_at": 11
+    },
+    {
+      "name": "Niños de Llullaillaco",
+      "facet": "Momias de los Andes y América",
+      "known_at": 13
+    },
+    {
+      "name": "Momia del Cerro El Plomo",
+      "facet": "Momias de los Andes y América",
+      "known_at": 14
+    },
+    {
+      "name": "Capacocha",
+      "facet": "Momias de los Andes y América",
+      "known_at": 14
+    },
+    {
+      "name": "Mallqui",
+      "facet": "Momias de los Andes y América",
+      "known_at": 15
+    },
+    {
+      "name": "Momias de Guanajuato",
+      "facet": "Momias de los Andes y América",
+      "known_at": 9
+    },
+    {
+      "name": "Momias de San Bernardo",
+      "facet": "Momias de los Andes y América",
+      "known_at": 11
+    },
+    {
+      "name": "Momias muiscas",
+      "facet": "Momias de los Andes y América",
+      "known_at": 10
+    },
+    {
+      "name": "Señora de Cao",
+      "facet": "Momias de los Andes y América",
+      "known_at": 14
+    },
+    {
+      "name": "Sarcófagos de Karajía",
+      "facet": "Momias de los Andes y América",
+      "known_at": 14
+    },
+    {
+      "name": "Momias de Leymebamba",
+      "facet": "Momias de los Andes y América",
+      "known_at": 15
+    },
+    {
+      "name": "Fardo funerario de Paracas",
+      "facet": "Momias de los Andes y América",
+      "known_at": 13
+    },
+    {
+      "name": "Volcán Llullaillaco",
+      "facet": "Momias de los Andes y América",
+      "known_at": 14
+    },
+    {
+      "name": "Momificación natural",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 8
+    },
+    {
+      "name": "Momias de pantano",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Hombre de Tollund",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 13
+    },
+    {
+      "name": "Hombre de Lindow",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Hombre de Grauballe",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Turba",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Princesa de Ukok",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Belleza de Loulan",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Ginger",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Hombres de la sal",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Sokushinbutsu",
+      "facet": "Momias naturales: hielo, pantanos y desiertos",
+      "known_at": 15
+    },
+    {
+      "name": "Gato momificado",
+      "facet": "Momias de animales",
+      "known_at": 6
+    },
+    {
+      "name": "Ibis",
+      "facet": "Momias de animales",
+      "known_at": 12
+    },
+    {
+      "name": "Cocodrilo momificado",
+      "facet": "Momias de animales",
+      "known_at": 8
+    },
+    {
+      "name": "Sobek",
+      "facet": "Momias de animales",
+      "known_at": 13
+    },
+    {
+      "name": "Halcón",
+      "facet": "Momias de animales",
+      "known_at": 7
+    },
+    {
+      "name": "Perro momificado",
+      "facet": "Momias de animales",
+      "known_at": 7
+    },
+    {
+      "name": "Toro Apis",
+      "facet": "Momias de animales",
+      "known_at": 14
+    },
+    {
+      "name": "Serapeum de Saqqara",
+      "facet": "Momias de animales",
+      "known_at": 15
+    },
+    {
+      "name": "Mamut Yuka",
+      "facet": "Momias de animales",
+      "known_at": 13
+    },
+    {
+      "name": "Lyuba",
+      "facet": "Momias de animales",
+      "known_at": 13
+    },
+    {
+      "name": "Borealopelta",
+      "facet": "Momias de animales",
+      "known_at": 14
+    },
+    {
+      "name": "Edmontosaurio momificado",
+      "facet": "Momias de animales",
+      "known_at": 12
+    },
+    {
+      "name": "Lobo Zhùr",
+      "facet": "Momias de animales",
+      "known_at": 15
+    },
+    {
+      "name": "Lord Carnarvon",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Zahi Hawass",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Jean-François Champollion",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Flinders Petrie",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Expedición de Napoleón a Egipto",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Giovanni Belzoni",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Auguste Mariette",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Gaston Maspero",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Escondite real de Deir el-Bahari",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Johan Reinhard",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Max Uhle",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Egiptología",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 9
+    },
+    {
+      "name": "Sarcófagos de Saqqara",
+      "facet": "Arqueólogos y grandes descubrimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Tomografía computarizada",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 10
+    },
+    {
+      "name": "Análisis de ADN",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 9
+    },
+    {
+      "name": "Paleopatología",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 14
+    },
+    {
+      "name": "Autopsia virtual",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 12
+    },
+    {
+      "name": "Endoscopio",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 11
+    },
+    {
+      "name": "Reconstrucción facial",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 9
+    },
+    {
+      "name": "Isótopos",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 12
+    },
+    {
+      "name": "Voz de Nesyamun",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 14
+    },
+    {
+      "name": "ScanPyramids",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 14
+    },
+    {
+      "name": "Impresión 3D",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 7
+    },
+    {
+      "name": "Antropología forense",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 12
+    },
+    {
+      "name": "Caries dental",
+      "facet": "Ciencia moderna para estudiar momias",
+      "known_at": 5
+    },
+    {
+      "name": "Imhotep",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Maldición del faraón",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 7
+    },
+    {
+      "name": "Cleo de Nile",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 5
+    },
+    {
+      "name": "Cofagrigus",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "Rascar Capac",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Tadeo Jones",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 5
+    },
+    {
+      "name": "Assassin's Creed Origins",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Las crónicas de Kane",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Santo contra las momias de Guanajuato",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 14
+    },
+    {
+      "name": "Boris Karloff",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 14
+    },
+    {
+      "name": "Disfraz de momia",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 1
+    },
+    {
+      "name": "Juego de la momia con papel higiénico",
+      "facet": "Momias en películas, juegos y leyendas",
+      "known_at": 2
+    },
+    {
+      "name": "Museo Nacional de la Civilización Egipcia",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Museo Egipcio de Turín",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Neues Museum",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Museo de Santuarios Andinos",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "MAAM de Salta",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Museo Arqueológico del Tirol del Sur",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Catacumbas de los Capuchinos",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Rosalia Lombardo",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Museo de Silkeborg",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Museo San Miguel de Azapa",
+      "facet": "Museos y momias en el mundo",
+      "known_at": 15
+    }
+  ]
+}

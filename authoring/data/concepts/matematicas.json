@@ -1,0 +1,1107 @@
+{
+  "subcategory": "Matemáticas",
+  "facets": [
+    "Números y operaciones básicas",
+    "Fracciones, decimales y porcentajes",
+    "Figuras geométricas planas",
+    "Cuerpos geométricos y sólidos",
+    "Medidas, unidades y tiempo",
+    "Números especiales y constantes",
+    "Álgebra, ecuaciones y funciones",
+    "Probabilidad, estadística y azar",
+    "Matemáticos famosos y descubrimientos",
+    "Numeraciones antiguas e instrumentos de cálculo",
+    "Juegos, acertijos y paradojas",
+    "Patrones y simetría en la naturaleza"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 5,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Suma",
+      "facet": "Números y operaciones básicas",
+      "known_at": 1
+    },
+    {
+      "name": "Resta",
+      "facet": "Números y operaciones básicas",
+      "known_at": 1
+    },
+    {
+      "name": "Multiplicación",
+      "facet": "Números y operaciones básicas",
+      "known_at": 3
+    },
+    {
+      "name": "División",
+      "facet": "Números y operaciones básicas",
+      "known_at": 3
+    },
+    {
+      "name": "Tablas de multiplicar",
+      "facet": "Números y operaciones básicas",
+      "known_at": 3
+    },
+    {
+      "name": "Número par",
+      "facet": "Números y operaciones básicas",
+      "known_at": 2
+    },
+    {
+      "name": "Número impar",
+      "facet": "Números y operaciones básicas",
+      "known_at": 2
+    },
+    {
+      "name": "Cero",
+      "facet": "Números y operaciones básicas",
+      "known_at": 1
+    },
+    {
+      "name": "Docena",
+      "facet": "Números y operaciones básicas",
+      "known_at": 3
+    },
+    {
+      "name": "Decena",
+      "facet": "Números y operaciones básicas",
+      "known_at": 3
+    },
+    {
+      "name": "Centena",
+      "facet": "Números y operaciones básicas",
+      "known_at": 4
+    },
+    {
+      "name": "Millón",
+      "facet": "Números y operaciones básicas",
+      "known_at": 3
+    },
+    {
+      "name": "Valor posicional",
+      "facet": "Números y operaciones básicas",
+      "known_at": 6
+    },
+    {
+      "name": "Múltiplo",
+      "facet": "Números y operaciones básicas",
+      "known_at": 6
+    },
+    {
+      "name": "Divisor",
+      "facet": "Números y operaciones básicas",
+      "known_at": 7
+    },
+    {
+      "name": "Mínimo común múltiplo",
+      "facet": "Números y operaciones básicas",
+      "known_at": 8
+    },
+    {
+      "name": "Máximo común divisor",
+      "facet": "Números y operaciones básicas",
+      "known_at": 8
+    },
+    {
+      "name": "Potencia",
+      "facet": "Números y operaciones básicas",
+      "known_at": 8
+    },
+    {
+      "name": "Raíz cuadrada",
+      "facet": "Números y operaciones básicas",
+      "known_at": 8
+    },
+    {
+      "name": "Número negativo",
+      "facet": "Números y operaciones básicas",
+      "known_at": 6
+    },
+    {
+      "name": "Jerarquía de operaciones",
+      "facet": "Números y operaciones básicas",
+      "known_at": 9
+    },
+    {
+      "name": "Redondeo",
+      "facet": "Números y operaciones básicas",
+      "known_at": 6
+    },
+    {
+      "name": "Fracción",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 4
+    },
+    {
+      "name": "Numerador",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 6
+    },
+    {
+      "name": "Denominador",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 6
+    },
+    {
+      "name": "Mitad",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 1
+    },
+    {
+      "name": "Cuarto",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 3
+    },
+    {
+      "name": "Tercio",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 5
+    },
+    {
+      "name": "Número decimal",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 5
+    },
+    {
+      "name": "Coma decimal",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 6
+    },
+    {
+      "name": "Porcentaje",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 6
+    },
+    {
+      "name": "Descuento",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 6
+    },
+    {
+      "name": "Fracciones equivalentes",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 7
+    },
+    {
+      "name": "Fracción impropia",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 9
+    },
+    {
+      "name": "Número mixto",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 9
+    },
+    {
+      "name": "Regla de tres",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 9
+    },
+    {
+      "name": "Proporción",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 9
+    },
+    {
+      "name": "Propina",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 8
+    },
+    {
+      "name": "Interés",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 11
+    },
+    {
+      "name": "Simplificación de fracciones",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 8
+    },
+    {
+      "name": "Decimal periódico",
+      "facet": "Fracciones, decimales y porcentajes",
+      "known_at": 10
+    },
+    {
+      "name": "Círculo",
+      "facet": "Figuras geométricas planas",
+      "known_at": 1
+    },
+    {
+      "name": "Cuadrado",
+      "facet": "Figuras geométricas planas",
+      "known_at": 1
+    },
+    {
+      "name": "Rectángulo",
+      "facet": "Figuras geométricas planas",
+      "known_at": 2
+    },
+    {
+      "name": "Óvalo",
+      "facet": "Figuras geométricas planas",
+      "known_at": 3
+    },
+    {
+      "name": "Rombo",
+      "facet": "Figuras geométricas planas",
+      "known_at": 4
+    },
+    {
+      "name": "Pentágono",
+      "facet": "Figuras geométricas planas",
+      "known_at": 5
+    },
+    {
+      "name": "Hexágono",
+      "facet": "Figuras geométricas planas",
+      "known_at": 5
+    },
+    {
+      "name": "Octágono",
+      "facet": "Figuras geométricas planas",
+      "known_at": 6
+    },
+    {
+      "name": "Heptágono",
+      "facet": "Figuras geométricas planas",
+      "known_at": 9
+    },
+    {
+      "name": "Trapecio",
+      "facet": "Figuras geométricas planas",
+      "known_at": 7
+    },
+    {
+      "name": "Paralelogramo",
+      "facet": "Figuras geométricas planas",
+      "known_at": 8
+    },
+    {
+      "name": "Triángulo equilátero",
+      "facet": "Figuras geométricas planas",
+      "known_at": 7
+    },
+    {
+      "name": "Triángulo rectángulo",
+      "facet": "Figuras geométricas planas",
+      "known_at": 8
+    },
+    {
+      "name": "Triángulo isósceles",
+      "facet": "Figuras geométricas planas",
+      "known_at": 9
+    },
+    {
+      "name": "Triángulo escaleno",
+      "facet": "Figuras geométricas planas",
+      "known_at": 10
+    },
+    {
+      "name": "Ángulo recto",
+      "facet": "Figuras geométricas planas",
+      "known_at": 6
+    },
+    {
+      "name": "Perímetro",
+      "facet": "Figuras geométricas planas",
+      "known_at": 6
+    },
+    {
+      "name": "Área",
+      "facet": "Figuras geométricas planas",
+      "known_at": 6
+    },
+    {
+      "name": "Diámetro",
+      "facet": "Figuras geométricas planas",
+      "known_at": 6
+    },
+    {
+      "name": "Circunferencia",
+      "facet": "Figuras geométricas planas",
+      "known_at": 8
+    },
+    {
+      "name": "Polígono",
+      "facet": "Figuras geométricas planas",
+      "known_at": 7
+    },
+    {
+      "name": "Teorema de Pitágoras",
+      "facet": "Figuras geométricas planas",
+      "known_at": 9
+    },
+    {
+      "name": "Cubo",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 2
+    },
+    {
+      "name": "Pirámide",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 3
+    },
+    {
+      "name": "Esfera",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 4
+    },
+    {
+      "name": "Cono",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 4
+    },
+    {
+      "name": "Cilindro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 5
+    },
+    {
+      "name": "Semiesfera",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 7
+    },
+    {
+      "name": "Ortoedro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 10
+    },
+    {
+      "name": "Poliedro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 9
+    },
+    {
+      "name": "Tetraedro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 10
+    },
+    {
+      "name": "Octaedro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 11
+    },
+    {
+      "name": "Dodecaedro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 11
+    },
+    {
+      "name": "Icosaedro",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 12
+    },
+    {
+      "name": "Sólidos platónicos",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 13
+    },
+    {
+      "name": "Cara",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 5
+    },
+    {
+      "name": "Arista",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 7
+    },
+    {
+      "name": "Vértice",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 7
+    },
+    {
+      "name": "Volumen",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 7
+    },
+    {
+      "name": "Fórmula de Euler para poliedros",
+      "facet": "Cuerpos geométricos y sólidos",
+      "known_at": 14
+    },
+    {
+      "name": "Metro",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Centímetro",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Milímetro",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 5
+    },
+    {
+      "name": "Kilómetro",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Gramo",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 4
+    },
+    {
+      "name": "Kilogramo",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Libra",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Litro",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 3
+    },
+    {
+      "name": "Hora",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 1
+    },
+    {
+      "name": "Minuto",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 2
+    },
+    {
+      "name": "Segundo",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 2
+    },
+    {
+      "name": "Década",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Lustro",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "Siglo",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 4
+    },
+    {
+      "name": "Milenio",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Pulgada",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Milla",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Hectárea",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "Metro cúbico",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Grado",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Sistema métrico decimal",
+      "facet": "Medidas, unidades y tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Infinito",
+      "facet": "Números especiales y constantes",
+      "known_at": 4
+    },
+    {
+      "name": "Número pi",
+      "facet": "Números especiales y constantes",
+      "known_at": 6
+    },
+    {
+      "name": "Número capicúa",
+      "facet": "Números especiales y constantes",
+      "known_at": 6
+    },
+    {
+      "name": "Número primo",
+      "facet": "Números especiales y constantes",
+      "known_at": 7
+    },
+    {
+      "name": "Cuadrado perfecto",
+      "facet": "Números especiales y constantes",
+      "known_at": 8
+    },
+    {
+      "name": "Sucesión de Fibonacci",
+      "facet": "Números especiales y constantes",
+      "known_at": 9
+    },
+    {
+      "name": "Gúgol",
+      "facet": "Números especiales y constantes",
+      "known_at": 10
+    },
+    {
+      "name": "Números triangulares",
+      "facet": "Números especiales y constantes",
+      "known_at": 11
+    },
+    {
+      "name": "Número irracional",
+      "facet": "Números especiales y constantes",
+      "known_at": 11
+    },
+    {
+      "name": "Número áureo",
+      "facet": "Números especiales y constantes",
+      "known_at": 12
+    },
+    {
+      "name": "Número perfecto",
+      "facet": "Números especiales y constantes",
+      "known_at": 12
+    },
+    {
+      "name": "Raíz cuadrada de 2",
+      "facet": "Números especiales y constantes",
+      "known_at": 12
+    },
+    {
+      "name": "Número e",
+      "facet": "Números especiales y constantes",
+      "known_at": 13
+    },
+    {
+      "name": "Número imaginario",
+      "facet": "Números especiales y constantes",
+      "known_at": 13
+    },
+    {
+      "name": "Primos gemelos",
+      "facet": "Números especiales y constantes",
+      "known_at": 14
+    },
+    {
+      "name": "Constante de Kaprekar",
+      "facet": "Números especiales y constantes",
+      "known_at": 14
+    },
+    {
+      "name": "Incógnita",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 8
+    },
+    {
+      "name": "Ecuación",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 8
+    },
+    {
+      "name": "Coordenadas",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 8
+    },
+    {
+      "name": "Variable",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 9
+    },
+    {
+      "name": "Plano cartesiano",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 9
+    },
+    {
+      "name": "Desigualdad",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 9
+    },
+    {
+      "name": "Valor absoluto",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 9
+    },
+    {
+      "name": "Función lineal",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 10
+    },
+    {
+      "name": "Pendiente",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 10
+    },
+    {
+      "name": "Polinomio",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema de ecuaciones",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 10
+    },
+    {
+      "name": "Progresión aritmética",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 10
+    },
+    {
+      "name": "Progresión geométrica",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 11
+    },
+    {
+      "name": "Parábola",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 11
+    },
+    {
+      "name": "Ecuación de segundo grado",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 11
+    },
+    {
+      "name": "Binomio al cuadrado",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 11
+    },
+    {
+      "name": "Crecimiento exponencial",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 11
+    },
+    {
+      "name": "Fórmula general",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 12
+    },
+    {
+      "name": "Logaritmo",
+      "facet": "Álgebra, ecuaciones y funciones",
+      "known_at": 12
+    },
+    {
+      "name": "Dado",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 2
+    },
+    {
+      "name": "Baraja de cartas",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 4
+    },
+    {
+      "name": "Lotería",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 4
+    },
+    {
+      "name": "Gráfico de barras",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 5
+    },
+    {
+      "name": "Gráfico circular",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 6
+    },
+    {
+      "name": "Promedio",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 6
+    },
+    {
+      "name": "Encuesta",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 6
+    },
+    {
+      "name": "Moda",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 8
+    },
+    {
+      "name": "Mediana",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 8
+    },
+    {
+      "name": "Diagrama de árbol",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 10
+    },
+    {
+      "name": "Factorial",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 11
+    },
+    {
+      "name": "Combinaciones",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 11
+    },
+    {
+      "name": "Muestra",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 11
+    },
+    {
+      "name": "Campana de Gauss",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 12
+    },
+    {
+      "name": "Desviación estándar",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de los grandes números",
+      "facet": "Probabilidad, estadística y azar",
+      "known_at": 14
+    },
+    {
+      "name": "Pitágoras",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 6
+    },
+    {
+      "name": "Tales de Mileto",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Fibonacci",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Euclides",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "René Descartes",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Blaise Pascal",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Carl Friedrich Gauss",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 12
+    },
+    {
+      "name": "John Nash",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Al-Juarismi",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Leonhard Euler",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Gottfried Leibniz",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Pierre de Fermat",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 13
+    },
+    {
+      "name": "Último teorema de Fermat",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Srinivasa Ramanujan",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Emmy Noether",
+      "facet": "Matemáticos famosos y descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Calculadora",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 1
+    },
+    {
+      "name": "Marcas de conteo",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 3
+    },
+    {
+      "name": "Números romanos",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 5
+    },
+    {
+      "name": "Sistema decimal",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 7
+    },
+    {
+      "name": "Números arábigos",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 9
+    },
+    {
+      "name": "Sistema binario",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 9
+    },
+    {
+      "name": "Numeración maya",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 11
+    },
+    {
+      "name": "Numeración egipcia",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 12
+    },
+    {
+      "name": "Numeración babilónica",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 13
+    },
+    {
+      "name": "Sistema sexagesimal",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 13
+    },
+    {
+      "name": "Regla de cálculo",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 13
+    },
+    {
+      "name": "Sorobán",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 13
+    },
+    {
+      "name": "Pascalina",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 14
+    },
+    {
+      "name": "Máquina analítica",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 14
+    },
+    {
+      "name": "Mecanismo de Anticitera",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 14
+    },
+    {
+      "name": "Hueso de Ishango",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 15
+    },
+    {
+      "name": "Varillas de Napier",
+      "facet": "Numeraciones antiguas e instrumentos de cálculo",
+      "known_at": 15
+    },
+    {
+      "name": "Laberinto",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 2
+    },
+    {
+      "name": "Sudoku",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 5
+    },
+    {
+      "name": "Tangram",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 6
+    },
+    {
+      "name": "Acertijo del lobo, la cabra y la col",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 8
+    },
+    {
+      "name": "Cuadrado mágico",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 9
+    },
+    {
+      "name": "Leyenda de los granos de trigo en el ajedrez",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 10
+    },
+    {
+      "name": "Torres de Hanói",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 11
+    },
+    {
+      "name": "Banda de Möbius",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 11
+    },
+    {
+      "name": "Paradoja de Aquiles y la tortuga",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 12
+    },
+    {
+      "name": "Problema de Monty Hall",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 13
+    },
+    {
+      "name": "Paradoja del cumpleaños",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 13
+    },
+    {
+      "name": "Puentes de Königsberg",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 14
+    },
+    {
+      "name": "Hotel de Hilbert",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 14
+    },
+    {
+      "name": "Paradoja del barbero",
+      "facet": "Juegos, acertijos y paradojas",
+      "known_at": 14
+    },
+    {
+      "name": "Panal de abejas",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 3
+    },
+    {
+      "name": "Telaraña",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 3
+    },
+    {
+      "name": "Espiral",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 5
+    },
+    {
+      "name": "Eje de simetría",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 6
+    },
+    {
+      "name": "Simetría bilateral",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 7
+    },
+    {
+      "name": "Simetría radial",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 9
+    },
+    {
+      "name": "Fractal",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 11
+    },
+    {
+      "name": "Nautilus",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 11
+    },
+    {
+      "name": "Cristales de sal",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 11
+    },
+    {
+      "name": "Teselado",
+      "facet": "Patrones y simetría en la naturaleza",
+      "known_at": 12
+    }
+  ]
+}

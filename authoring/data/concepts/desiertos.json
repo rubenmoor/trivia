@@ -1,0 +1,816 @@
+{
+  "subcategory": "Desiertos",
+  "facets": [
+    "Grandes desiertos del mundo",
+    "Desiertos fríos y polares",
+    "Animales del desierto",
+    "Plantas del desierto",
+    "Clima y fenómenos desérticos",
+    "Dunas, oasis y paisajes",
+    "Pueblos y vida nómada",
+    "Desiertos de Colombia y América",
+    "Historia y rutas por el desierto",
+    "Desiertos en películas y cuentos",
+    "Recursos y ciencia en desiertos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Desierto del Sahara",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Desierto de Namib",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Desierto de Arabia",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Desierto de Sonora",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Desierto de Mojave",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Gran Desierto de Victoria",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Desierto de Thar",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Rub al-Jali",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Desierto de Taklamakán",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Desierto de Chihuahua",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Cuenca",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Desierto del Sinaí",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Desierto de Siria",
+      "facet": "Grandes desiertos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Valles Secos de McMurdo",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 14
+    },
+    {
+      "name": "Desierto polar",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 9
+    },
+    {
+      "name": "Glaciar",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 5
+    },
+    {
+      "name": "Meseta tibetana",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 12
+    },
+    {
+      "name": "Patagonia",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 8
+    },
+    {
+      "name": "Puna",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 12
+    },
+    {
+      "name": "Estación Vostok",
+      "facet": "Desiertos fríos y polares",
+      "known_at": 14
+    },
+    {
+      "name": "Camello",
+      "facet": "Animales del desierto",
+      "known_at": 1
+    },
+    {
+      "name": "Camello bactriano",
+      "facet": "Animales del desierto",
+      "known_at": 8
+    },
+    {
+      "name": "Fénec",
+      "facet": "Animales del desierto",
+      "known_at": 7
+    },
+    {
+      "name": "Escorpión",
+      "facet": "Animales del desierto",
+      "known_at": 2
+    },
+    {
+      "name": "Correcaminos",
+      "facet": "Animales del desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Coyote",
+      "facet": "Animales del desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Lagarto espinoso",
+      "facet": "Animales del desierto",
+      "known_at": 11
+    },
+    {
+      "name": "Escarabajo pelotero",
+      "facet": "Animales del desierto",
+      "known_at": 6
+    },
+    {
+      "name": "Avestruz",
+      "facet": "Animales del desierto",
+      "known_at": 2
+    },
+    {
+      "name": "Buitre",
+      "facet": "Animales del desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Tarántula",
+      "facet": "Animales del desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Iguana",
+      "facet": "Animales del desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Escarabajo de niebla del Namib",
+      "facet": "Animales del desierto",
+      "known_at": 13
+    },
+    {
+      "name": "Cactus",
+      "facet": "Plantas del desierto",
+      "known_at": 1
+    },
+    {
+      "name": "Saguaro",
+      "facet": "Plantas del desierto",
+      "known_at": 8
+    },
+    {
+      "name": "Aloe vera",
+      "facet": "Plantas del desierto",
+      "known_at": 5
+    },
+    {
+      "name": "Palmera datilera",
+      "facet": "Plantas del desierto",
+      "known_at": 5
+    },
+    {
+      "name": "Dátil",
+      "facet": "Plantas del desierto",
+      "known_at": 5
+    },
+    {
+      "name": "Agave",
+      "facet": "Plantas del desierto",
+      "known_at": 8
+    },
+    {
+      "name": "Welwitschia",
+      "facet": "Plantas del desierto",
+      "known_at": 13
+    },
+    {
+      "name": "Planta rodadora",
+      "facet": "Plantas del desierto",
+      "known_at": 6
+    },
+    {
+      "name": "Árbol de Josué",
+      "facet": "Plantas del desierto",
+      "known_at": 11
+    },
+    {
+      "name": "Tuna",
+      "facet": "Plantas del desierto",
+      "known_at": 5
+    },
+    {
+      "name": "Rosa de Jericó",
+      "facet": "Plantas del desierto",
+      "known_at": 12
+    },
+    {
+      "name": "Cardón",
+      "facet": "Plantas del desierto",
+      "known_at": 10
+    },
+    {
+      "name": "Baobab",
+      "facet": "Plantas del desierto",
+      "known_at": 6
+    },
+    {
+      "name": "Suculenta",
+      "facet": "Plantas del desierto",
+      "known_at": 6
+    },
+    {
+      "name": "Tamarisco",
+      "facet": "Plantas del desierto",
+      "known_at": 13
+    },
+    {
+      "name": "Pitahaya",
+      "facet": "Plantas del desierto",
+      "known_at": 4
+    },
+    {
+      "name": "Espina",
+      "facet": "Plantas del desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Erosión eólica",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 9
+    },
+    {
+      "name": "Haboob",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 14
+    },
+    {
+      "name": "Desierto florido",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 11
+    },
+    {
+      "name": "Amplitud térmica",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 11
+    },
+    {
+      "name": "Desertificación",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 10
+    },
+    {
+      "name": "Aridez",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 8
+    },
+    {
+      "name": "Sombra orográfica",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 13
+    },
+    {
+      "name": "Remolino de polvo",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 8
+    },
+    {
+      "name": "Insolación",
+      "facet": "Clima y fenómenos desérticos",
+      "known_at": 6
+    },
+    {
+      "name": "Oasis",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 4
+    },
+    {
+      "name": "Wadi",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 13
+    },
+    {
+      "name": "Mesa",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Cañón",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 6
+    },
+    {
+      "name": "Monument Valley",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 9
+    },
+    {
+      "name": "Salar de Uyuni",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 8
+    },
+    {
+      "name": "Valle de la Luna",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 9
+    },
+    {
+      "name": "Erg",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 14
+    },
+    {
+      "name": "Arco natural",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 7
+    },
+    {
+      "name": "Duna estrella",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 13
+    },
+    {
+      "name": "Sossusvlei",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 13
+    },
+    {
+      "name": "Wadi Rum",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 12
+    },
+    {
+      "name": "Lago salado",
+      "facet": "Dunas, oasis y paisajes",
+      "known_at": 8
+    },
+    {
+      "name": "Beduinos",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 8
+    },
+    {
+      "name": "Wayuu",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 7
+    },
+    {
+      "name": "Nómada",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 5
+    },
+    {
+      "name": "Caravana",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 5
+    },
+    {
+      "name": "Jaima",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 12
+    },
+    {
+      "name": "Turbante",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 4
+    },
+    {
+      "name": "Bosquimanos",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 12
+    },
+    {
+      "name": "Mongoles",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 9
+    },
+    {
+      "name": "Yurta",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 10
+    },
+    {
+      "name": "Cultura Chinchorro",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 13
+    },
+    {
+      "name": "Atacameños",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 13
+    },
+    {
+      "name": "Mochila wayuu",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 6
+    },
+    {
+      "name": "Ranchería",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 10
+    },
+    {
+      "name": "Pozo de agua",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 4
+    },
+    {
+      "name": "Té a la menta",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 11
+    },
+    {
+      "name": "Navajos",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 10
+    },
+    {
+      "name": "Pastoreo",
+      "facet": "Pueblos y vida nómada",
+      "known_at": 6
+    },
+    {
+      "name": "Desierto de la Tatacoa",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 6
+    },
+    {
+      "name": "La Guajira",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 4
+    },
+    {
+      "name": "Dunas de Taroa",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 11
+    },
+    {
+      "name": "Desierto de la Candelaria",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 13
+    },
+    {
+      "name": "Médanos de Coro",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 12
+    },
+    {
+      "name": "Desierto de Sechura",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 13
+    },
+    {
+      "name": "Huacachina",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 12
+    },
+    {
+      "name": "Desierto Pintado",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 13
+    },
+    {
+      "name": "Observatorio de la Tatacoa",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 11
+    },
+    {
+      "name": "Serranía de la Macuira",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 13
+    },
+    {
+      "name": "Península de Paraguaná",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 12
+    },
+    {
+      "name": "Uribia",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 11
+    },
+    {
+      "name": "Cerro Pilón de Azúcar",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 12
+    },
+    {
+      "name": "Lençóis Maranhenses",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 12
+    },
+    {
+      "name": "Arizona",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 7
+    },
+    {
+      "name": "Las Vegas",
+      "facet": "Desiertos de Colombia y América",
+      "known_at": 6
+    },
+    {
+      "name": "Antiguo Egipto",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 3
+    },
+    {
+      "name": "Esfinge",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 4
+    },
+    {
+      "name": "Tutankamón",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 6
+    },
+    {
+      "name": "Cleopatra",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 6
+    },
+    {
+      "name": "Momia",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 4
+    },
+    {
+      "name": "Valle de los Reyes",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 10
+    },
+    {
+      "name": "Lawrence de Arabia",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 12
+    },
+    {
+      "name": "Tombuctú",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 12
+    },
+    {
+      "name": "Líneas de Nazca",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 9
+    },
+    {
+      "name": "Rally Dakar",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 9
+    },
+    {
+      "name": "Comercio transahariano de sal",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 12
+    },
+    {
+      "name": "Mansa Musa",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 13
+    },
+    {
+      "name": "Moisés",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 5
+    },
+    {
+      "name": "Ruta 66",
+      "facet": "Historia y rutas por el desierto",
+      "known_at": 10
+    },
+    {
+      "name": "El Principito",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Aladdín",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 3
+    },
+    {
+      "name": "Genio de la lámpara",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 2
+    },
+    {
+      "name": "Jafar",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 4
+    },
+    {
+      "name": "Agrabah",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Dune",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Arrakis",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Gusano de arena",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Atreides",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 12
+    },
+    {
+      "name": "Tatooine",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Luke Skywalker",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Mad Max",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Wile E. Coyote",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Las mil y una noches",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Sherezade",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 11
+    },
+    {
+      "name": "Alí Babá",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Simbad",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 7
+    },
+    {
+      "name": "Radiador Springs",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Indiana Jones",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "El príncipe de Egipto",
+      "facet": "Desiertos en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "Petróleo",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 5
+    },
+    {
+      "name": "Energía solar",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 4
+    },
+    {
+      "name": "Litio",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 11
+    },
+    {
+      "name": "Cobre",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 8
+    },
+    {
+      "name": "Salitre",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "ALMA",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 13
+    },
+    {
+      "name": "Very Large Telescope",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 13
+    },
+    {
+      "name": "Atrapanieblas",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Muralla Verde",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 12
+    },
+    {
+      "name": "Planta solar Noor",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 14
+    },
+    {
+      "name": "Vidrio",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 6
+    },
+    {
+      "name": "Cantimplora",
+      "facet": "Recursos y ciencia en desiertos",
+      "known_at": 4
+    }
+  ]
+}

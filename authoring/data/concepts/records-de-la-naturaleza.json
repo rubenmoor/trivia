@@ -1,0 +1,457 @@
+{
+  "subcategory": "Récords de la naturaleza",
+  "facets": [
+    "Montañas y volcanes récord",
+    "Ríos, lagos y cascadas récord",
+    "Océanos, mares y profundidades",
+    "Desiertos, polos y lugares extremos",
+    "Clima y fenómenos extremos",
+    "Cuevas, islas y rocas récord",
+    "Animales terrestres récord",
+    "Animales marinos récord",
+    "Aves e insectos récord",
+    "Plantas y árboles récord",
+    "Récords naturales de Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 5,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 1,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 1,
+      "language": 1
+    }
+  },
+  "concepts": [
+    {
+      "name": "K2",
+      "facet": "Montañas y volcanes récord",
+      "known_at": 10
+    },
+    {
+      "name": "Monte Elbrus",
+      "facet": "Montañas y volcanes récord",
+      "known_at": 13
+    },
+    {
+      "name": "Monte Vinson",
+      "facet": "Montañas y volcanes récord",
+      "known_at": 14
+    },
+    {
+      "name": "Tambora",
+      "facet": "Montañas y volcanes récord",
+      "known_at": 14
+    },
+    {
+      "name": "Puncak Jaya",
+      "facet": "Montañas y volcanes récord",
+      "known_at": 14
+    },
+    {
+      "name": "Macizo Tamu",
+      "facet": "Montañas y volcanes récord",
+      "known_at": 15
+    },
+    {
+      "name": "Lago Superior",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 12
+    },
+    {
+      "name": "Lago Victoria",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 11
+    },
+    {
+      "name": "Lago Tanganica",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 13
+    },
+    {
+      "name": "Lago de Maracaibo",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 10
+    },
+    {
+      "name": "Lago Vostok",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 14
+    },
+    {
+      "name": "Lago Natron",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 13
+    },
+    {
+      "name": "Salto Ángel",
+      "facet": "Ríos, lagos y cascadas récord",
+      "known_at": 7
+    },
+    {
+      "name": "Mar de Filipinas",
+      "facet": "Océanos, mares y profundidades",
+      "known_at": 13
+    },
+    {
+      "name": "Punto Nemo",
+      "facet": "Océanos, mares y profundidades",
+      "known_at": 13
+    },
+    {
+      "name": "Fuente hidrotermal",
+      "facet": "Océanos, mares y profundidades",
+      "known_at": 12
+    },
+    {
+      "name": "Desierto del Sahara",
+      "facet": "Desiertos, polos y lugares extremos",
+      "known_at": 3
+    },
+    {
+      "name": "Desierto de Lut",
+      "facet": "Desiertos, polos y lugares extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Oymyakon",
+      "facet": "Desiertos, polos y lugares extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Depresión de Danakil",
+      "facet": "Desiertos, polos y lugares extremos",
+      "known_at": 14
+    },
+    {
+      "name": "Mawsynram",
+      "facet": "Clima y fenómenos extremos",
+      "known_at": 15
+    },
+    {
+      "name": "Cueva Krubera",
+      "facet": "Cuevas, islas y rocas récord",
+      "known_at": 15,
+      "retired": "unaskable: La Krubera ya no es la cueva más profunda (la superó Veryovkina); récord cambiante y oscuro."
+    },
+    {
+      "name": "Tristán de Acuña",
+      "facet": "Cuevas, islas y rocas récord",
+      "known_at": 15
+    },
+    {
+      "name": "Monte Roraima",
+      "facet": "Cuevas, islas y rocas récord",
+      "known_at": 12
+    },
+    {
+      "name": "Rinoceronte blanco",
+      "facet": "Animales terrestres récord",
+      "known_at": 6
+    },
+    {
+      "name": "Caracol",
+      "facet": "Animales terrestres récord",
+      "known_at": 2
+    },
+    {
+      "name": "Musaraña etrusca",
+      "facet": "Animales terrestres récord",
+      "known_at": 14
+    },
+    {
+      "name": "Murciélago abejorro",
+      "facet": "Animales terrestres récord",
+      "known_at": 14
+    },
+    {
+      "name": "Rana dorada venenosa",
+      "facet": "Animales terrestres récord",
+      "known_at": 9
+    },
+    {
+      "name": "Berrendo",
+      "facet": "Animales terrestres récord",
+      "known_at": 13
+    },
+    {
+      "name": "Gorila",
+      "facet": "Animales terrestres récord",
+      "known_at": 4
+    },
+    {
+      "name": "Canguro rojo",
+      "facet": "Animales terrestres récord",
+      "known_at": 5
+    },
+    {
+      "name": "Calamar colosal",
+      "facet": "Animales marinos récord",
+      "known_at": 12
+    },
+    {
+      "name": "Pez vela",
+      "facet": "Animales marinos récord",
+      "known_at": 9
+    },
+    {
+      "name": "Medusa inmortal",
+      "facet": "Animales marinos récord",
+      "known_at": 11
+    },
+    {
+      "name": "Tiburón de Groenlandia",
+      "facet": "Animales marinos récord",
+      "known_at": 12
+    },
+    {
+      "name": "Cangrejo araña japonés",
+      "facet": "Animales marinos récord",
+      "known_at": 11
+    },
+    {
+      "name": "Avispa de mar",
+      "facet": "Animales marinos récord",
+      "known_at": 12
+    },
+    {
+      "name": "Pez luna",
+      "facet": "Animales marinos récord",
+      "known_at": 9
+    },
+    {
+      "name": "Ballena de Groenlandia",
+      "facet": "Animales marinos récord",
+      "known_at": 13
+    },
+    {
+      "name": "Colibrí abeja",
+      "facet": "Aves e insectos récord",
+      "known_at": 9
+    },
+    {
+      "name": "Halcón peregrino",
+      "facet": "Aves e insectos récord",
+      "known_at": 7
+    },
+    {
+      "name": "Albatros errante",
+      "facet": "Aves e insectos récord",
+      "known_at": 10
+    },
+    {
+      "name": "Charrán ártico",
+      "facet": "Aves e insectos récord",
+      "known_at": 12
+    },
+    {
+      "name": "Águila arpía",
+      "facet": "Aves e insectos récord",
+      "known_at": 10
+    },
+    {
+      "name": "Vencejo común",
+      "facet": "Aves e insectos récord",
+      "known_at": 13
+    },
+    {
+      "name": "Escarabajo Goliat",
+      "facet": "Aves e insectos récord",
+      "known_at": 11
+    },
+    {
+      "name": "Escarabajo rinoceronte",
+      "facet": "Aves e insectos récord",
+      "known_at": 9
+    },
+    {
+      "name": "Mariposa monarca",
+      "facet": "Aves e insectos récord",
+      "known_at": 5
+    },
+    {
+      "name": "Mariposa atlas",
+      "facet": "Aves e insectos récord",
+      "known_at": 12
+    },
+    {
+      "name": "Hormiga bala",
+      "facet": "Aves e insectos récord",
+      "known_at": 12
+    },
+    {
+      "name": "Abeja melífera",
+      "facet": "Aves e insectos récord",
+      "known_at": 3
+    },
+    {
+      "name": "Mosquito",
+      "facet": "Aves e insectos récord",
+      "known_at": 3
+    },
+    {
+      "name": "Pulga",
+      "facet": "Aves e insectos récord",
+      "known_at": 4
+    },
+    {
+      "name": "Libélula",
+      "facet": "Aves e insectos récord",
+      "known_at": 4
+    },
+    {
+      "name": "Insecto palo",
+      "facet": "Aves e insectos récord",
+      "known_at": 7
+    },
+    {
+      "name": "Cucaracha",
+      "facet": "Aves e insectos récord",
+      "known_at": 3
+    },
+    {
+      "name": "Secuoya roja",
+      "facet": "Plantas y árboles récord",
+      "known_at": 8
+    },
+    {
+      "name": "Secuoya gigante",
+      "facet": "Plantas y árboles récord",
+      "known_at": 10
+    },
+    {
+      "name": "Pino longevo",
+      "facet": "Plantas y árboles récord",
+      "known_at": 13
+    },
+    {
+      "name": "Rafflesia arnoldii",
+      "facet": "Plantas y árboles récord",
+      "known_at": 11
+    },
+    {
+      "name": "Flor cadáver",
+      "facet": "Plantas y árboles récord",
+      "known_at": 11
+    },
+    {
+      "name": "Wolffia",
+      "facet": "Plantas y árboles récord",
+      "known_at": 14
+    },
+    {
+      "name": "Pando",
+      "facet": "Plantas y árboles récord",
+      "known_at": 14
+    },
+    {
+      "name": "Eucalipto",
+      "facet": "Plantas y árboles récord",
+      "known_at": 8
+    },
+    {
+      "name": "Árbol del Tule",
+      "facet": "Plantas y árboles récord",
+      "known_at": 13
+    },
+    {
+      "name": "General Sherman",
+      "facet": "Plantas y árboles récord",
+      "known_at": 12
+    },
+    {
+      "name": "Hyperion",
+      "facet": "Plantas y árboles récord",
+      "known_at": 13
+    },
+    {
+      "name": "Coco de mar",
+      "facet": "Plantas y árboles récord",
+      "known_at": 13
+    },
+    {
+      "name": "Ginkgo biloba",
+      "facet": "Plantas y árboles récord",
+      "known_at": 11
+    },
+    {
+      "name": "Venus atrapamoscas",
+      "facet": "Plantas y árboles récord",
+      "known_at": 5
+    },
+    {
+      "name": "Kelp gigante",
+      "facet": "Plantas y árboles récord",
+      "known_at": 11
+    },
+    {
+      "name": "Armillaria",
+      "facet": "Plantas y árboles récord",
+      "known_at": 14
+    },
+    {
+      "name": "Palma de cera del Quindío",
+      "facet": "Récords naturales de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Lloró",
+      "facet": "Récords naturales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Piedra del Peñol",
+      "facet": "Récords naturales de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Serranía de Chiribiquete",
+      "facet": "Récords naturales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Lago de Tota",
+      "facet": "Récords naturales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Orquídea Cattleya trianae",
+      "facet": "Récords naturales de Colombia",
+      "known_at": 10
+    }
+  ]
+}

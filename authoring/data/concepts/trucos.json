@@ -1,0 +1,772 @@
+{
+  "subcategory": "Trucos",
+  "facets": [
+    "Trucos de magia clásicos",
+    "Magos e ilusionistas famosos",
+    "Ilusiones ópticas",
+    "Trucos con cartas y monedas",
+    "Acertijos y preguntas trampa",
+    "Trucos de cálculo mental",
+    "Reglas mnemotécnicas",
+    "Trucos caseros y de cocina",
+    "Experimentos caseros sorprendentes",
+    "Trucos y códigos en videojuegos",
+    "Engaños del cuerpo y los sentidos",
+    "Camuflaje y engaños animales"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 5,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Paloma que aparece",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 5
+    },
+    {
+      "name": "Mujer cortada por la mitad",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 5
+    },
+    {
+      "name": "Hipnotismo",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "Caja de espadas",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 7
+    },
+    {
+      "name": "Ventriloquía",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Cubiletes y bolitas",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 9
+    },
+    {
+      "name": "Aros chinos",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Mentalismo",
+      "facet": "Trucos de magia clásicos",
+      "known_at": 10
+    },
+    {
+      "name": "Mago Pop",
+      "facet": "Magos e ilusionistas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Arte 3D en la calle",
+      "facet": "Ilusiones ópticas",
+      "known_at": 7
+    },
+    {
+      "name": "Vestido azul y negro o blanco y dorado",
+      "facet": "Ilusiones ópticas",
+      "known_at": 8
+    },
+    {
+      "name": "Pato-conejo",
+      "facet": "Ilusiones ópticas",
+      "known_at": 9
+    },
+    {
+      "name": "La joven y la anciana",
+      "facet": "Ilusiones ópticas",
+      "known_at": 9
+    },
+    {
+      "name": "Copa de Rubin",
+      "facet": "Ilusiones ópticas",
+      "known_at": 10
+    },
+    {
+      "name": "Serpientes rotatorias",
+      "facet": "Ilusiones ópticas",
+      "known_at": 10
+    },
+    {
+      "name": "Triángulo de Penrose",
+      "facet": "Ilusiones ópticas",
+      "known_at": 11
+    },
+    {
+      "name": "M. C. Escher",
+      "facet": "Ilusiones ópticas",
+      "known_at": 11
+    },
+    {
+      "name": "Ilusión de Müller-Lyer",
+      "facet": "Ilusiones ópticas",
+      "known_at": 12
+    },
+    {
+      "name": "Ilusión de la Luna",
+      "facet": "Ilusiones ópticas",
+      "known_at": 12
+    },
+    {
+      "name": "Estereograma",
+      "facet": "Ilusiones ópticas",
+      "known_at": 12
+    },
+    {
+      "name": "Ilusión de la cara hueca",
+      "facet": "Ilusiones ópticas",
+      "known_at": 12
+    },
+    {
+      "name": "Cuarto de Ames",
+      "facet": "Ilusiones ópticas",
+      "known_at": 13
+    },
+    {
+      "name": "Rejilla de Hermann",
+      "facet": "Ilusiones ópticas",
+      "known_at": 13
+    },
+    {
+      "name": "Anamorfosis",
+      "facet": "Ilusiones ópticas",
+      "known_at": 13
+    },
+    {
+      "name": "Tablero de Adelson",
+      "facet": "Ilusiones ópticas",
+      "known_at": 13
+    },
+    {
+      "name": "Abanico de cartas",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 6
+    },
+    {
+      "name": "Barajado americano",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Moneda que atraviesa la mesa",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Moneda entre los nudillos",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Truco de las 21 cartas",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 10
+    },
+    {
+      "name": "Carta forzada",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Falso barajado",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Juego de las tres cartas",
+      "facet": "Trucos con cartas y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "El huevo o la gallina",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 3
+    },
+    {
+      "name": "El caballo blanco de Bolívar",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 4
+    },
+    {
+      "name": "Kilo de plumas y kilo de hierro",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 4
+    },
+    {
+      "name": "Acertijo de la Esfinge",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 9
+    },
+    {
+      "name": "Problema de los nueve puntos",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 12
+    },
+    {
+      "name": "Pregunta capciosa",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 12
+    },
+    {
+      "name": "Aquiles y la tortuga",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 13
+    },
+    {
+      "name": "Acertijo de caballeros y mentirosos",
+      "facet": "Acertijos y preguntas trampa",
+      "known_at": 13
+    },
+    {
+      "name": "Contar con los dedos",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 1
+    },
+    {
+      "name": "Sacar la mitad",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 3
+    },
+    {
+      "name": "Multiplicar por 10",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 4
+    },
+    {
+      "name": "Redondear",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 5
+    },
+    {
+      "name": "Tabla del 9 con los dedos",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 6
+    },
+    {
+      "name": "Doblar y dividir",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 7
+    },
+    {
+      "name": "Adivinar el número pensado",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 8
+    },
+    {
+      "name": "Propina del 10 %",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 8
+    },
+    {
+      "name": "Divisibilidad entre 3",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 9
+    },
+    {
+      "name": "Multiplicar por 11",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 10
+    },
+    {
+      "name": "Prueba del nueve",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 12
+    },
+    {
+      "name": "Gauss y la suma del 1 al 100",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 12
+    },
+    {
+      "name": "Cuadrado de números terminados en 5",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 12
+    },
+    {
+      "name": "Número 1089",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 13
+    },
+    {
+      "name": "Regla del 72",
+      "facet": "Trucos de cálculo mental",
+      "known_at": 14
+    },
+    {
+      "name": "Canción del abecedario",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 1
+    },
+    {
+      "name": "Cocodrilo de mayor y menor que",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 5
+    },
+    {
+      "name": "Colores del arcoíris",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 6
+    },
+    {
+      "name": "Meses en los nudillos",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 7
+    },
+    {
+      "name": "Orden de los planetas",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 7
+    },
+    {
+      "name": "Treinta días trae noviembre",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 8
+    },
+    {
+      "name": "Hilo atado al dedo",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 8
+    },
+    {
+      "name": "Acrónimo",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 10
+    },
+    {
+      "name": "Mnemotecnia",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Estalactita y estalagmita",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Regla de la mano derecha",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 12
+    },
+    {
+      "name": "SOH CAH TOA",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de la memoria",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 13
+    },
+    {
+      "name": "Poemas para recordar pi",
+      "facet": "Reglas mnemotécnicas",
+      "known_at": 14
+    },
+    {
+      "name": "Vinagre",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Bicarbonato de sodio",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Cinta pegante para quitar pelusa",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Arroz y celular mojado",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Cortar cebolla sin llorar",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Hielo para quitar chicle",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Prueba del huevo fresco",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Limón contra la oxidación",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Madurar aguacates en bolsa de papel",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Papel periódico para los vidrios",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Pan duro en el horno",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Cuchara de palo sobre la olla",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Pasta de dientes para la plata",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Papel aluminio para afilar tijeras",
+      "facet": "Trucos caseros y de cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Germinador de fríjol",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 4
+    },
+    {
+      "name": "Mentos y Coca-Cola",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 5
+    },
+    {
+      "name": "Globo y electricidad estática",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 5
+    },
+    {
+      "name": "Huevo que flota en agua salada",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 6
+    },
+    {
+      "name": "Lámpara de lava casera",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 7
+    },
+    {
+      "name": "Tinta invisible de limón",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 7
+    },
+    {
+      "name": "Lápiz quebrado en el vaso de agua",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 7
+    },
+    {
+      "name": "Prisma y arcoíris",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 7
+    },
+    {
+      "name": "Huevo sin cáscara en vinagre",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 8
+    },
+    {
+      "name": "Pila de limón",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 8
+    },
+    {
+      "name": "Pimienta que huye del jabón",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 8
+    },
+    {
+      "name": "Leche con colorantes y jabón",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 8
+    },
+    {
+      "name": "Maicena con agua",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 9
+    },
+    {
+      "name": "Pasta de dientes de elefante",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 9
+    },
+    {
+      "name": "Torre de densidades",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 10
+    },
+    {
+      "name": "Huevo que entra en la botella",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 11
+    },
+    {
+      "name": "Repollo morado indicador",
+      "facet": "Experimentos caseros sorprendentes",
+      "known_at": 12
+    },
+    {
+      "name": "Superchampiñón",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Partida guardada",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Vida extra",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Modo creativo de Minecraft",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Doble salto",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Ollie",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Derrape con turbo",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Glitch",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Reaparecer",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Código de trucos",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Salto en la pared",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Mod",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Zona warp",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Código Konami",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Bunny hop",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "MissingNo",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Mundo menos uno",
+      "facet": "Trucos y códigos en videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Pierna dormida",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 4
+    },
+    {
+      "name": "Bostezo contagioso",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 4
+    },
+    {
+      "name": "Cosquillas a uno mismo",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 5
+    },
+    {
+      "name": "Nariz tapada y sabor",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 7
+    },
+    {
+      "name": "Agua tibia con manos fría y caliente",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 8
+    },
+    {
+      "name": "Déjà vu",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 9
+    },
+    {
+      "name": "Laurel o Yanny",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 10
+    },
+    {
+      "name": "Efecto placebo",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 11
+    },
+    {
+      "name": "Persistencia retiniana",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 12
+    },
+    {
+      "name": "Estornudo con la luz del sol",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 12
+    },
+    {
+      "name": "Ilusión de Aristóteles",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 13
+    },
+    {
+      "name": "Miembro fantasma",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 13
+    },
+    {
+      "name": "Brazo que se levanta solo",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 13
+    },
+    {
+      "name": "Ilusión de la mano de goma",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 14
+    },
+    {
+      "name": "Efecto McGurk",
+      "facet": "Engaños del cuerpo y los sentidos",
+      "known_at": 14
+    },
+    {
+      "name": "Lagartija que suelta la cola",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 4
+    },
+    {
+      "name": "Tinta del calamar",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 5
+    },
+    {
+      "name": "Rayas de la cebra",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 5
+    },
+    {
+      "name": "Zarigüeya que se hace la muerta",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 7
+    },
+    {
+      "name": "Cuco",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 10
+    },
+    {
+      "name": "Bienparado",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 11
+    },
+    {
+      "name": "Pez hoja",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 12
+    },
+    {
+      "name": "Rana venenosa de colores",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 12
+    },
+    {
+      "name": "Mariposa hoja seca",
+      "facet": "Camuflaje y engaños animales",
+      "known_at": 13
+    }
+  ]
+}

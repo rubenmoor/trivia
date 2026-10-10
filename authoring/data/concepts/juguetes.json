@@ -1,0 +1,834 @@
+{
+  "subcategory": "Juguetes",
+  "facets": [
+    "Juguetes clásicos y tradicionales",
+    "Juguetes tradicionales colombianos",
+    "Muñecas y figuras de acción",
+    "Juguetes de construcción",
+    "Peluches y muñecos de felpa",
+    "Rompecabezas y juguetes de ingenio",
+    "Juguetes de movimiento y física",
+    "Vehículos de juguete y radiocontrol",
+    "Juguetes al aire libre",
+    "Juguetes en el cine y la TV",
+    "Juguetes electrónicos y de moda",
+    "Historia e inventores de juguetes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Trompo",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 1
+    },
+    {
+      "name": "Canicas",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Caballito de madera",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Matrioska",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Muñeca de trapo",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Sonajero",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Caleidoscopio",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Marioneta",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Casa de muñecas",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Tren de madera",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Diábolo",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Caja sorpresa",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Kendama",
+      "facet": "Juguetes clásicos y tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Coca",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Zumbambico",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Cauchera",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Carro de balineras",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 7
+    },
+    {
+      "name": "Muñeca de tusa",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Tejo",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 6
+    },
+    {
+      "name": "Yermis",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 8
+    },
+    {
+      "name": "Matraca",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Caballitos de Ráquira",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 11
+    },
+    {
+      "name": "Pito de barro",
+      "facet": "Juguetes tradicionales colombianos",
+      "known_at": 10
+    },
+    {
+      "name": "Ken",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 3
+    },
+    {
+      "name": "G.I. Joe",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 10
+    },
+    {
+      "name": "Bratz",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 8
+    },
+    {
+      "name": "Monster High",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 6
+    },
+    {
+      "name": "Playmobil",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 5
+    },
+    {
+      "name": "Cabbage Patch Kids",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 12
+    },
+    {
+      "name": "Max Steel",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 8
+    },
+    {
+      "name": "Baby Born",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 5
+    },
+    {
+      "name": "Action Man",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 10
+    },
+    {
+      "name": "Sylvanian Families",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 9
+    },
+    {
+      "name": "LOL Surprise",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 4
+    },
+    {
+      "name": "Nenuco",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 8
+    },
+    {
+      "name": "Muñeca de porcelana",
+      "facet": "Muñecas y figuras de acción",
+      "known_at": 5
+    },
+    {
+      "name": "LEGO",
+      "facet": "Juguetes de construcción",
+      "known_at": 1
+    },
+    {
+      "name": "Duplo",
+      "facet": "Juguetes de construcción",
+      "known_at": 6
+    },
+    {
+      "name": "Minifigura de LEGO",
+      "facet": "Juguetes de construcción",
+      "known_at": 3
+    },
+    {
+      "name": "Lego Technic",
+      "facet": "Juguetes de construcción",
+      "known_at": 9
+    },
+    {
+      "name": "Legoland",
+      "facet": "Juguetes de construcción",
+      "known_at": 7
+    },
+    {
+      "name": "Mega Bloks",
+      "facet": "Juguetes de construcción",
+      "known_at": 8
+    },
+    {
+      "name": "K'Nex",
+      "facet": "Juguetes de construcción",
+      "known_at": 11
+    },
+    {
+      "name": "Meccano",
+      "facet": "Juguetes de construcción",
+      "known_at": 11
+    },
+    {
+      "name": "Lincoln Logs",
+      "facet": "Juguetes de construcción",
+      "known_at": 14
+    },
+    {
+      "name": "Tinkertoy",
+      "facet": "Juguetes de construcción",
+      "known_at": 14
+    },
+    {
+      "name": "Bloques de madera",
+      "facet": "Juguetes de construcción",
+      "known_at": 1
+    },
+    {
+      "name": "Bloques magnéticos",
+      "facet": "Juguetes de construcción",
+      "known_at": 4
+    },
+    {
+      "name": "Tente",
+      "facet": "Juguetes de construcción",
+      "known_at": 13
+    },
+    {
+      "name": "Rasti",
+      "facet": "Juguetes de construcción",
+      "known_at": 13
+    },
+    {
+      "name": "Play-Doh",
+      "facet": "Juguetes de construcción",
+      "known_at": 4
+    },
+    {
+      "name": "Ositos Cariñositos",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 4
+    },
+    {
+      "name": "Beanie Babies",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 12
+    },
+    {
+      "name": "Steiff",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 13
+    },
+    {
+      "name": "Pound Puppies",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 13,
+      "retired": "unaskable: Pound Puppies es muy poco conocido en el mundo hispano; su inventor y el juego de palabras en inglés son demasiado oscuros."
+    },
+    {
+      "name": "Squishmallows",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 6
+    },
+    {
+      "name": "Jellycat",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 11
+    },
+    {
+      "name": "Build-A-Bear",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 9
+    },
+    {
+      "name": "Máquina de garra",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 3
+    },
+    {
+      "name": "Tickle Me Elmo",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 11
+    },
+    {
+      "name": "Totoro",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 8
+    },
+    {
+      "name": "Monchhichi",
+      "facet": "Peluches y muñecos de felpa",
+      "known_at": 13
+    },
+    {
+      "name": "Cubo de Rubik",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 2
+    },
+    {
+      "name": "Rompecabezas",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 1
+    },
+    {
+      "name": "Rompecabezas de 15",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 9
+    },
+    {
+      "name": "Cubo Soma",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 14
+    },
+    {
+      "name": "Pyraminx",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 11
+    },
+    {
+      "name": "Megaminx",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 12
+    },
+    {
+      "name": "Serpiente de Rubik",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 11
+    },
+    {
+      "name": "Anillos chinos",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 13
+    },
+    {
+      "name": "Rompecabezas de alambre",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 8
+    },
+    {
+      "name": "Laberinto de canicas",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 4
+    },
+    {
+      "name": "Rompecabezas 3D",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 5
+    },
+    {
+      "name": "Speedcubing",
+      "facet": "Rompecabezas y juguetes de ingenio",
+      "known_at": 9
+    },
+    {
+      "name": "Péndulo de Newton",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 9
+    },
+    {
+      "name": "Pájaro bebedor",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 11
+    },
+    {
+      "name": "Tentempié",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 8
+    },
+    {
+      "name": "Radiómetro de Crookes",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 14
+    },
+    {
+      "name": "Molinete",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 2
+    },
+    {
+      "name": "Lámpara de lava",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 6
+    },
+    {
+      "name": "Arena kinética",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 4
+    },
+    {
+      "name": "Slime",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 2
+    },
+    {
+      "name": "Pelota saltarina",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 2
+    },
+    {
+      "name": "Tornado en botella",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 7
+    },
+    {
+      "name": "Juguete de cuerda",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 3
+    },
+    {
+      "name": "Carro de fricción",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 5
+    },
+    {
+      "name": "Levitron",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 14
+    },
+    {
+      "name": "Barco pop-pop",
+      "facet": "Juguetes de movimiento y física",
+      "known_at": 13
+    },
+    {
+      "name": "Matchbox",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 9
+    },
+    {
+      "name": "Carro a control remoto",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 1
+    },
+    {
+      "name": "Scalextric",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 11
+    },
+    {
+      "name": "Tamiya",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 12
+    },
+    {
+      "name": "Tonka",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 12
+    },
+    {
+      "name": "Majorette",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 13
+    },
+    {
+      "name": "Lionel",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 14
+    },
+    {
+      "name": "Carro de pedales",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 4
+    },
+    {
+      "name": "Barco a control remoto",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 3
+    },
+    {
+      "name": "Helicóptero a control remoto",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 3
+    },
+    {
+      "name": "Aeromodelismo",
+      "facet": "Vehículos de juguete y radiocontrol",
+      "known_at": 10
+    },
+    {
+      "name": "Cometa",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Frisbi",
+      "facet": "Juguetes al aire libre",
+      "known_at": 3
+    },
+    {
+      "name": "Hula hula",
+      "facet": "Juguetes al aire libre",
+      "known_at": 2
+    },
+    {
+      "name": "Columpio",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Pompas de jabón",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Patines",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Lazo",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Zancos",
+      "facet": "Juguetes al aire libre",
+      "known_at": 4
+    },
+    {
+      "name": "Pistola de agua",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Globo de agua",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Balancín",
+      "facet": "Juguetes al aire libre",
+      "known_at": 2
+    },
+    {
+      "name": "Rodadero",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Trampolín",
+      "facet": "Juguetes al aire libre",
+      "known_at": 2
+    },
+    {
+      "name": "Saltarín pogo",
+      "facet": "Juguetes al aire libre",
+      "known_at": 6
+    },
+    {
+      "name": "Bumerán",
+      "facet": "Juguetes al aire libre",
+      "known_at": 4
+    },
+    {
+      "name": "Avión de papel",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Pelota de playa",
+      "facet": "Juguetes al aire libre",
+      "known_at": 1
+    },
+    {
+      "name": "Woody",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 1
+    },
+    {
+      "name": "Jessie",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 2
+    },
+    {
+      "name": "Rex",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 2
+    },
+    {
+      "name": "Hamm",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 4
+    },
+    {
+      "name": "Bo Peep",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 5
+    },
+    {
+      "name": "Forky",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 3
+    },
+    {
+      "name": "Zurg",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 4
+    },
+    {
+      "name": "Los marcianitos",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 3
+    },
+    {
+      "name": "Andy",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 2
+    },
+    {
+      "name": "La gran aventura LEGO",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 5
+    },
+    {
+      "name": "Mi pequeño pony",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 3
+    },
+    {
+      "name": "La casa de muñecas de Gabby",
+      "facet": "Juguetes en el cine y la TV",
+      "known_at": 3
+    },
+    {
+      "name": "Fidget spinner",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 3
+    },
+    {
+      "name": "Pop It",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 2
+    },
+    {
+      "name": "Beyblade",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 5
+    },
+    {
+      "name": "Tazos",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Labubu",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 5
+    },
+    {
+      "name": "Simón",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 11
+    },
+    {
+      "name": "Pizarra mágica",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 5
+    },
+    {
+      "name": "Lite-Brite",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 14,
+      "retired": "unaskable: Lite-Brite casi no se conoce en el mundo hispano; ninguna opción da una pregunta clara."
+    },
+    {
+      "name": "Speak & Spell",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 14
+    },
+    {
+      "name": "Bakugan",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Squishy",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 3
+    },
+    {
+      "name": "Hatchimals",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Teddy Ruxpin",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 14
+    },
+    {
+      "name": "Bola 8 mágica",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Mascota de piedra",
+      "facet": "Juguetes electrónicos y de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Margarete Steiff",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 15
+    },
+    {
+      "name": "Richard James",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 15
+    },
+    {
+      "name": "Pedro Flores",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 15
+    },
+    {
+      "name": "Mattel",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 8
+    },
+    {
+      "name": "Hasbro",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 10
+    },
+    {
+      "name": "Fisher-Price",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 9
+    },
+    {
+      "name": "Bandai",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 11
+    },
+    {
+      "name": "Wham-O",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 15
+    },
+    {
+      "name": "Hamleys",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 14
+    },
+    {
+      "name": "Kinder Sorpresa",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 2
+    },
+    {
+      "name": "Salón Nacional de la Fama del Juguete",
+      "facet": "Historia e inventores de juguetes",
+      "known_at": 15
+    }
+  ]
+}

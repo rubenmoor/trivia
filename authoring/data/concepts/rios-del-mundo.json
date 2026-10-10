@@ -1,0 +1,1037 @@
+{
+  "subcategory": "Ríos del mundo",
+  "facets": [
+    "Grandes ríos de América",
+    "Grandes ríos de Europa",
+    "Grandes ríos de África",
+    "Grandes ríos de Asia y Oceanía",
+    "Partes de un río",
+    "Cataratas y rápidos",
+    "Desembocaduras, deltas y estuarios",
+    "Animales y plantas de los ríos",
+    "Ciudades y puentes sobre ríos",
+    "Ríos en la historia y las civilizaciones",
+    "Ríos en mitos, películas y canciones",
+    "Usos del río: navegación, represas y agua"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Amazonas",
+      "facet": "Grandes ríos de América",
+      "known_at": 2
+    },
+    {
+      "name": "Misisipi",
+      "facet": "Grandes ríos de América",
+      "known_at": 6
+    },
+    {
+      "name": "Río Magdalena",
+      "facet": "Grandes ríos de América",
+      "known_at": 4
+    },
+    {
+      "name": "Orinoco",
+      "facet": "Grandes ríos de América",
+      "known_at": 6
+    },
+    {
+      "name": "Río Cauca",
+      "facet": "Grandes ríos de América",
+      "known_at": 6
+    },
+    {
+      "name": "Paraná",
+      "facet": "Grandes ríos de América",
+      "known_at": 9
+    },
+    {
+      "name": "Río Bravo",
+      "facet": "Grandes ríos de América",
+      "known_at": 9
+    },
+    {
+      "name": "Río Colorado",
+      "facet": "Grandes ríos de América",
+      "known_at": 9
+    },
+    {
+      "name": "San Lorenzo",
+      "facet": "Grandes ríos de América",
+      "known_at": 11
+    },
+    {
+      "name": "Yukón",
+      "facet": "Grandes ríos de América",
+      "known_at": 12
+    },
+    {
+      "name": "Misuri",
+      "facet": "Grandes ríos de América",
+      "known_at": 11
+    },
+    {
+      "name": "Río Uruguay",
+      "facet": "Grandes ríos de América",
+      "known_at": 11
+    },
+    {
+      "name": "Río Paraguay",
+      "facet": "Grandes ríos de América",
+      "known_at": 11
+    },
+    {
+      "name": "Río Negro",
+      "facet": "Grandes ríos de América",
+      "known_at": 11
+    },
+    {
+      "name": "Río Columbia",
+      "facet": "Grandes ríos de América",
+      "known_at": 13
+    },
+    {
+      "name": "Hudson",
+      "facet": "Grandes ríos de América",
+      "known_at": 11
+    },
+    {
+      "name": "Madeira",
+      "facet": "Grandes ríos de América",
+      "known_at": 13
+    },
+    {
+      "name": "Río Atrato",
+      "facet": "Grandes ríos de América",
+      "known_at": 9
+    },
+    {
+      "name": "Ohio",
+      "facet": "Grandes ríos de América",
+      "known_at": 13
+    },
+    {
+      "name": "Danubio",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 6
+    },
+    {
+      "name": "Támesis",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 5
+    },
+    {
+      "name": "Sena",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 6
+    },
+    {
+      "name": "Rin",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Volga",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Tíber",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Ebro",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Tajo",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 10
+    },
+    {
+      "name": "Guadalquivir",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Loira",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Duero",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Elba",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Ródano",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Vístula",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Dniéper",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Arno",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Spree",
+      "facet": "Grandes ríos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Nilo",
+      "facet": "Grandes ríos de África",
+      "known_at": 3
+    },
+    {
+      "name": "Congo",
+      "facet": "Grandes ríos de África",
+      "known_at": 9
+    },
+    {
+      "name": "Níger",
+      "facet": "Grandes ríos de África",
+      "known_at": 10
+    },
+    {
+      "name": "Zambeze",
+      "facet": "Grandes ríos de África",
+      "known_at": 10
+    },
+    {
+      "name": "Nilo Azul",
+      "facet": "Grandes ríos de África",
+      "known_at": 12
+    },
+    {
+      "name": "Nilo Blanco",
+      "facet": "Grandes ríos de África",
+      "known_at": 12
+    },
+    {
+      "name": "Orange",
+      "facet": "Grandes ríos de África",
+      "known_at": 14
+    },
+    {
+      "name": "Limpopo",
+      "facet": "Grandes ríos de África",
+      "known_at": 12
+    },
+    {
+      "name": "Okavango",
+      "facet": "Grandes ríos de África",
+      "known_at": 12
+    },
+    {
+      "name": "Gambia",
+      "facet": "Grandes ríos de África",
+      "known_at": 13
+    },
+    {
+      "name": "Volta",
+      "facet": "Grandes ríos de África",
+      "known_at": 13
+    },
+    {
+      "name": "Kasai",
+      "facet": "Grandes ríos de África",
+      "known_at": 15
+    },
+    {
+      "name": "Ubangi",
+      "facet": "Grandes ríos de África",
+      "known_at": 15
+    },
+    {
+      "name": "Atbara",
+      "facet": "Grandes ríos de África",
+      "known_at": 15
+    },
+    {
+      "name": "Yangtsé",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 8
+    },
+    {
+      "name": "Río Amarillo",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Ganges",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 7
+    },
+    {
+      "name": "Mekong",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 9
+    },
+    {
+      "name": "Indo",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Éufrates",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Tigris",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Jordán",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 9
+    },
+    {
+      "name": "Brahmaputra",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 12
+    },
+    {
+      "name": "Lena",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Obi",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Yeniséi",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Amur",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Murray",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 12
+    },
+    {
+      "name": "Darling",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 14
+    },
+    {
+      "name": "Irawadi",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 14
+    },
+    {
+      "name": "Río Perla",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Sepik",
+      "facet": "Grandes ríos de Asia y Oceanía",
+      "known_at": 15
+    },
+    {
+      "name": "Nacimiento",
+      "facet": "Partes de un río",
+      "known_at": 4
+    },
+    {
+      "name": "Orilla",
+      "facet": "Partes de un río",
+      "known_at": 2
+    },
+    {
+      "name": "Ribera",
+      "facet": "Partes de un río",
+      "known_at": 6
+    },
+    {
+      "name": "Cauce",
+      "facet": "Partes de un río",
+      "known_at": 7
+    },
+    {
+      "name": "Afluente",
+      "facet": "Partes de un río",
+      "known_at": 6
+    },
+    {
+      "name": "Meandro",
+      "facet": "Partes de un río",
+      "known_at": 9
+    },
+    {
+      "name": "Curso alto",
+      "facet": "Partes de un río",
+      "known_at": 8
+    },
+    {
+      "name": "Curso medio",
+      "facet": "Partes de un río",
+      "known_at": 8
+    },
+    {
+      "name": "Curso bajo",
+      "facet": "Partes de un río",
+      "known_at": 8
+    },
+    {
+      "name": "Caudal",
+      "facet": "Partes de un río",
+      "known_at": 7
+    },
+    {
+      "name": "Cuenca hidrográfica",
+      "facet": "Partes de un río",
+      "known_at": 9
+    },
+    {
+      "name": "Lecho",
+      "facet": "Partes de un río",
+      "known_at": 9
+    },
+    {
+      "name": "Margen derecha",
+      "facet": "Partes de un río",
+      "known_at": 10
+    },
+    {
+      "name": "Vado",
+      "facet": "Partes de un río",
+      "known_at": 10
+    },
+    {
+      "name": "Brazo",
+      "facet": "Partes de un río",
+      "known_at": 9
+    },
+    {
+      "name": "Confluencia",
+      "facet": "Partes de un río",
+      "known_at": 10
+    },
+    {
+      "name": "Divisoria de aguas",
+      "facet": "Partes de un río",
+      "known_at": 12
+    },
+    {
+      "name": "Lago en herradura",
+      "facet": "Partes de un río",
+      "known_at": 12
+    },
+    {
+      "name": "Llanura de inundación",
+      "facet": "Partes de un río",
+      "known_at": 11
+    },
+    {
+      "name": "Cataratas Victoria",
+      "facet": "Cataratas y rápidos",
+      "known_at": 9
+    },
+    {
+      "name": "Salto del Tequendama",
+      "facet": "Cataratas y rápidos",
+      "known_at": 8
+    },
+    {
+      "name": "Garganta del Diablo",
+      "facet": "Cataratas y rápidos",
+      "known_at": 10
+    },
+    {
+      "name": "Rápidos",
+      "facet": "Cataratas y rápidos",
+      "known_at": 5
+    },
+    {
+      "name": "Cascada",
+      "facet": "Cataratas y rápidos",
+      "known_at": 2
+    },
+    {
+      "name": "Catarata",
+      "facet": "Cataratas y rápidos",
+      "known_at": 3
+    },
+    {
+      "name": "Rafting",
+      "facet": "Cataratas y rápidos",
+      "known_at": 6
+    },
+    {
+      "name": "Cataratas del Nilo",
+      "facet": "Cataratas y rápidos",
+      "known_at": 13
+    },
+    {
+      "name": "Cataratas Kaieteur",
+      "facet": "Cataratas y rápidos",
+      "known_at": 14
+    },
+    {
+      "name": "Gullfoss",
+      "facet": "Cataratas y rápidos",
+      "known_at": 14
+    },
+    {
+      "name": "Cataratas Tugela",
+      "facet": "Cataratas y rápidos",
+      "known_at": 15
+    },
+    {
+      "name": "Cataratas de Yosemite",
+      "facet": "Cataratas y rápidos",
+      "known_at": 13
+    },
+    {
+      "name": "Lagos de Plitvice",
+      "facet": "Cataratas y rápidos",
+      "known_at": 13
+    },
+    {
+      "name": "Annie Edson Taylor",
+      "facet": "Cataratas y rápidos",
+      "known_at": 14
+    },
+    {
+      "name": "Estuario",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 9
+    },
+    {
+      "name": "Desembocadura",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 5
+    },
+    {
+      "name": "Delta del Nilo",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 9
+    },
+    {
+      "name": "Delta del Misisipi",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Delta del Okavango",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 12
+    },
+    {
+      "name": "Delta del Ganges",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 12
+    },
+    {
+      "name": "Delta del Orinoco",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Delta del Danubio",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 13
+    },
+    {
+      "name": "Delta del Ebro",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 13
+    },
+    {
+      "name": "Bocas de Ceniza",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 10
+    },
+    {
+      "name": "Marisma",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Agua salobre",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 11
+    },
+    {
+      "name": "Sedimento",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 8
+    },
+    {
+      "name": "Pororoca",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 13
+    },
+    {
+      "name": "Cuenca endorreica",
+      "facet": "Desembocaduras, deltas y estuarios",
+      "known_at": 14
+    },
+    {
+      "name": "Piraña",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 3
+    },
+    {
+      "name": "Anaconda",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 3
+    },
+    {
+      "name": "Caimán",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 5
+    },
+    {
+      "name": "Victoria amazónica",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 7
+    },
+    {
+      "name": "Papiro",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 9
+    },
+    {
+      "name": "Anguila eléctrica",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 5
+    },
+    {
+      "name": "Arapaima",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Martín pescador",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 8
+    },
+    {
+      "name": "Junco",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 8
+    },
+    {
+      "name": "Caño Cristales",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 8
+    },
+    {
+      "name": "Bagre",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 6
+    },
+    {
+      "name": "Garza",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 4
+    },
+    {
+      "name": "Flor de loto",
+      "facet": "Animales y plantas de los ríos",
+      "known_at": 9
+    },
+    {
+      "name": "Tower Bridge",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 5
+    },
+    {
+      "name": "Puente de Brooklyn",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 9
+    },
+    {
+      "name": "Ponte Vecchio",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de Rialto",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de las Cadenas",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Alejandro III",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Sant'Angelo",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Pumarejo",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Manaos",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Iquitos",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Honda",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Varanasi",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 13
+    },
+    {
+      "name": "Sevilla",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 9
+    },
+    {
+      "name": "Nueva Orleans",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 10
+    },
+    {
+      "name": "Shanghái",
+      "facet": "Ciudades y puentes sobre ríos",
+      "known_at": 11
+    },
+    {
+      "name": "Mesopotamia",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Media Luna Fértil",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Crecidas del Nilo",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Rubicón",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Civilización del valle del Indo",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Sumerios",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Francisco de Orellana",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Lewis y Clark",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Fiebre del oro de Klondike",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Expedición de Humboldt",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Nilómetro",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla del Puente de Boyacá",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 7
+    },
+    {
+      "name": "David Livingstone",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Fuentes del Nilo",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Rómulo y Remo",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Champán",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Washington cruzando el Delaware",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Shaduf",
+      "facet": "Ríos en la historia y las civilizaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Estigia",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 11
+    },
+    {
+      "name": "Leteo",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 13
+    },
+    {
+      "name": "Baño en el Ganges",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 11
+    },
+    {
+      "name": "La Llorona",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 5
+    },
+    {
+      "name": "Moisés en el Nilo",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 6
+    },
+    {
+      "name": "Bautismo en el Jordán",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 8
+    },
+    {
+      "name": "Huckleberry Finn",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 10
+    },
+    {
+      "name": "Moon River",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Muerte en el Nilo",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 11
+    },
+    {
+      "name": "El puente sobre el río Kwai",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 13
+    },
+    {
+      "name": "El pescador",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Yacumama",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 13
+    },
+    {
+      "name": "Hapi",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Jungle Cruise",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 7
+    },
+    {
+      "name": "El Moldava",
+      "facet": "Ríos en mitos, películas y canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Represa",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 5
+    },
+    {
+      "name": "Embalse",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 8
+    },
+    {
+      "name": "Hidroeléctrica",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 7
+    },
+    {
+      "name": "Presa de las Tres Gargantas",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 11
+    },
+    {
+      "name": "Presa Hoover",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 12
+    },
+    {
+      "name": "Represa de Itaipú",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 11
+    },
+    {
+      "name": "Presa de Asuán",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 12
+    },
+    {
+      "name": "Hidroituango",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 10
+    },
+    {
+      "name": "Esclusa",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 10
+    },
+    {
+      "name": "Molino de agua",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 6
+    },
+    {
+      "name": "Noria",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 10
+    },
+    {
+      "name": "Riego",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 6
+    },
+    {
+      "name": "Acueducto",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 9
+    },
+    {
+      "name": "Planta potabilizadora",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 9
+    },
+    {
+      "name": "Balsa",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 4
+    },
+    {
+      "name": "Barco de vapor",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 8
+    },
+    {
+      "name": "Gran Canal de China",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 13
+    },
+    {
+      "name": "Draga",
+      "facet": "Usos del río: navegación, represas y agua",
+      "known_at": 13
+    }
+  ]
+}

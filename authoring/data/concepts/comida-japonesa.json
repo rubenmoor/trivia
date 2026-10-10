@@ -1,0 +1,983 @@
+{
+  "subcategory": "Comida japonesa",
+  "facets": [
+    "Sushi y sus tipos",
+    "Sopas y fideos",
+    "Frituras y platos a la plancha",
+    "Ingredientes y condimentos",
+    "Pescados y mariscos",
+    "Dulces y postres japoneses",
+    "Té y bebidas",
+    "Utensilios y modales en la mesa",
+    "Restaurantes y costumbres al comer",
+    "Comida japonesa en anime y videojuegos",
+    "Comida japonesa en Colombia y el mundo",
+    "Historia y origen de los platos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Maki",
+      "facet": "Sushi y sus tipos",
+      "known_at": 7
+    },
+    {
+      "name": "Nigiri",
+      "facet": "Sushi y sus tipos",
+      "known_at": 9
+    },
+    {
+      "name": "Sashimi",
+      "facet": "Sushi y sus tipos",
+      "known_at": 8
+    },
+    {
+      "name": "Uramaki",
+      "facet": "Sushi y sus tipos",
+      "known_at": 11
+    },
+    {
+      "name": "Temaki",
+      "facet": "Sushi y sus tipos",
+      "known_at": 11
+    },
+    {
+      "name": "California roll",
+      "facet": "Sushi y sus tipos",
+      "known_at": 7
+    },
+    {
+      "name": "Philadelphia roll",
+      "facet": "Sushi y sus tipos",
+      "known_at": 8
+    },
+    {
+      "name": "Gunkan",
+      "facet": "Sushi y sus tipos",
+      "known_at": 13
+    },
+    {
+      "name": "Chirashi",
+      "facet": "Sushi y sus tipos",
+      "known_at": 13
+    },
+    {
+      "name": "Hosomaki",
+      "facet": "Sushi y sus tipos",
+      "known_at": 13
+    },
+    {
+      "name": "Futomaki",
+      "facet": "Sushi y sus tipos",
+      "known_at": 13
+    },
+    {
+      "name": "Inari sushi",
+      "facet": "Sushi y sus tipos",
+      "known_at": 13
+    },
+    {
+      "name": "Arroz de sushi",
+      "facet": "Sushi y sus tipos",
+      "known_at": 6
+    },
+    {
+      "name": "Oshizushi",
+      "facet": "Sushi y sus tipos",
+      "known_at": 14
+    },
+    {
+      "name": "Temari sushi",
+      "facet": "Sushi y sus tipos",
+      "known_at": 14
+    },
+    {
+      "name": "Ramen",
+      "facet": "Sopas y fideos",
+      "known_at": 3
+    },
+    {
+      "name": "Sopa de miso",
+      "facet": "Sopas y fideos",
+      "known_at": 7
+    },
+    {
+      "name": "Udon",
+      "facet": "Sopas y fideos",
+      "known_at": 8
+    },
+    {
+      "name": "Soba",
+      "facet": "Sopas y fideos",
+      "known_at": 9
+    },
+    {
+      "name": "Somen",
+      "facet": "Sopas y fideos",
+      "known_at": 13
+    },
+    {
+      "name": "Yakisoba",
+      "facet": "Sopas y fideos",
+      "known_at": 8
+    },
+    {
+      "name": "Caldo tonkotsu",
+      "facet": "Sopas y fideos",
+      "known_at": 12
+    },
+    {
+      "name": "Shoyu ramen",
+      "facet": "Sopas y fideos",
+      "known_at": 12
+    },
+    {
+      "name": "Tsukemen",
+      "facet": "Sopas y fideos",
+      "known_at": 14
+    },
+    {
+      "name": "Oden",
+      "facet": "Sopas y fideos",
+      "known_at": 13
+    },
+    {
+      "name": "Shabu-shabu",
+      "facet": "Sopas y fideos",
+      "known_at": 12
+    },
+    {
+      "name": "Sukiyaki",
+      "facet": "Sopas y fideos",
+      "known_at": 12
+    },
+    {
+      "name": "Nabe",
+      "facet": "Sopas y fideos",
+      "known_at": 13
+    },
+    {
+      "name": "Narutomaki",
+      "facet": "Sopas y fideos",
+      "known_at": 10
+    },
+    {
+      "name": "Ajitama",
+      "facet": "Sopas y fideos",
+      "known_at": 12
+    },
+    {
+      "name": "Chashu",
+      "facet": "Sopas y fideos",
+      "known_at": 12
+    },
+    {
+      "name": "Tempura",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 6
+    },
+    {
+      "name": "Tonkatsu",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 10
+    },
+    {
+      "name": "Karaage",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 10
+    },
+    {
+      "name": "Teriyaki",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 6
+    },
+    {
+      "name": "Yakitori",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 10
+    },
+    {
+      "name": "Gyoza",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 7
+    },
+    {
+      "name": "Okonomiyaki",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 10
+    },
+    {
+      "name": "Takoyaki",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 9
+    },
+    {
+      "name": "Teppanyaki",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 9
+    },
+    {
+      "name": "Curry japonés",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 9
+    },
+    {
+      "name": "Katsudon",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 11
+    },
+    {
+      "name": "Panko",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 9
+    },
+    {
+      "name": "Korokke",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 13
+    },
+    {
+      "name": "Ebi furai",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 12
+    },
+    {
+      "name": "Kushikatsu",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 13
+    },
+    {
+      "name": "Agedashi tofu",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 13
+    },
+    {
+      "name": "Robatayaki",
+      "facet": "Frituras y platos a la plancha",
+      "known_at": 14
+    },
+    {
+      "name": "Arroz",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 1
+    },
+    {
+      "name": "Wasabi",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Salsa de soya",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 3
+    },
+    {
+      "name": "Nori",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 6
+    },
+    {
+      "name": "Gari",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 8
+    },
+    {
+      "name": "Miso",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 8
+    },
+    {
+      "name": "Tofu",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 6
+    },
+    {
+      "name": "Dashi",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Mirin",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Vinagre de arroz",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Kombu",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Katsuobushi",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Umami",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Shiitake",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 9
+    },
+    {
+      "name": "Umeboshi",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Furikake",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 11
+    },
+    {
+      "name": "Natto",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 11
+    },
+    {
+      "name": "Shichimi",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 13
+    },
+    {
+      "name": "Yuzu",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Daikon",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Ponzu",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Sésamo",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Wagyu",
+      "facet": "Ingredientes y condimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Calamar",
+      "facet": "Pescados y mariscos",
+      "known_at": 4
+    },
+    {
+      "name": "Anguila",
+      "facet": "Pescados y mariscos",
+      "known_at": 9
+    },
+    {
+      "name": "Atún rojo",
+      "facet": "Pescados y mariscos",
+      "known_at": 10
+    },
+    {
+      "name": "Ikura",
+      "facet": "Pescados y mariscos",
+      "known_at": 11
+    },
+    {
+      "name": "Kanikama",
+      "facet": "Pescados y mariscos",
+      "known_at": 8
+    },
+    {
+      "name": "Caballa",
+      "facet": "Pescados y mariscos",
+      "known_at": 11
+    },
+    {
+      "name": "Hamachi",
+      "facet": "Pescados y mariscos",
+      "known_at": 13
+    },
+    {
+      "name": "Vieira",
+      "facet": "Pescados y mariscos",
+      "known_at": 11
+    },
+    {
+      "name": "Tobiko",
+      "facet": "Pescados y mariscos",
+      "known_at": 12
+    },
+    {
+      "name": "Mochi",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 5
+    },
+    {
+      "name": "Dorayaki",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 6
+    },
+    {
+      "name": "Taiyaki",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 9
+    },
+    {
+      "name": "Dango",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 8
+    },
+    {
+      "name": "Pocky",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 5
+    },
+    {
+      "name": "Helado de té verde",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 6
+    },
+    {
+      "name": "Anko",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 10
+    },
+    {
+      "name": "Kakigori",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 11
+    },
+    {
+      "name": "Daifuku",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 11
+    },
+    {
+      "name": "Castella",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 13
+    },
+    {
+      "name": "Wagashi",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 13
+    },
+    {
+      "name": "Yokan",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 14
+    },
+    {
+      "name": "Melonpan",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 10
+    },
+    {
+      "name": "Kit Kat japonés",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 9
+    },
+    {
+      "name": "Warabimochi",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 14
+    },
+    {
+      "name": "Cheesecake japonés",
+      "facet": "Dulces y postres japoneses",
+      "known_at": 10
+    },
+    {
+      "name": "Té verde",
+      "facet": "Té y bebidas",
+      "known_at": 3
+    },
+    {
+      "name": "Matcha",
+      "facet": "Té y bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Sake",
+      "facet": "Té y bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Ramune",
+      "facet": "Té y bebidas",
+      "known_at": 9
+    },
+    {
+      "name": "Ceremonia del té",
+      "facet": "Té y bebidas",
+      "known_at": 9
+    },
+    {
+      "name": "Sencha",
+      "facet": "Té y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Genmaicha",
+      "facet": "Té y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Hojicha",
+      "facet": "Té y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Calpis",
+      "facet": "Té y bebidas",
+      "known_at": 12
+    },
+    {
+      "name": "Whisky japonés",
+      "facet": "Té y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Mugicha",
+      "facet": "Té y bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Chawan",
+      "facet": "Té y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Chasen",
+      "facet": "Té y bebidas",
+      "known_at": 12
+    },
+    {
+      "name": "Máquina expendedora",
+      "facet": "Té y bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Sen no Rikyu",
+      "facet": "Té y bebidas",
+      "known_at": 15
+    },
+    {
+      "name": "Shochu",
+      "facet": "Té y bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Palillos",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Itadakimasu",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 9
+    },
+    {
+      "name": "Gochisosama",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 13
+    },
+    {
+      "name": "Bento",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Oshibori",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Sorber los fideos",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 9
+    },
+    {
+      "name": "Palillos clavados en el arroz",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Hashioki",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 13
+    },
+    {
+      "name": "Cuchillo santoku",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Yanagiba",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Makisu",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 10
+    },
+    {
+      "name": "Arrocera",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 6
+    },
+    {
+      "name": "No dar propina",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Seiza",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Donabe",
+      "facet": "Utensilios y modales en la mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Sushi de banda",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 7
+    },
+    {
+      "name": "Izakaya",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 12
+    },
+    {
+      "name": "Itamae",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 13
+    },
+    {
+      "name": "Omakase",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 12
+    },
+    {
+      "name": "Yatai",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 12
+    },
+    {
+      "name": "Mercado de Tsukiji",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 12
+    },
+    {
+      "name": "Comida de plástico",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 11
+    },
+    {
+      "name": "Máquina de tiquetes",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 12
+    },
+    {
+      "name": "Konbini",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 10
+    },
+    {
+      "name": "Ekiben",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 14
+    },
+    {
+      "name": "Osechi",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 14
+    },
+    {
+      "name": "Pastel de Navidad japonés",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 13
+    },
+    {
+      "name": "KFC en Navidad",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 11
+    },
+    {
+      "name": "Kaiseki",
+      "facet": "Restaurantes y costumbres al comer",
+      "known_at": 14
+    },
+    {
+      "name": "Doraemon",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Onigiri",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Ichiraku Ramen",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "El viaje de Chihiro",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Shokugeki no Soma",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Cooking Mama",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Sanji",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Luffy",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Goku",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Gudetama",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Tatsugiri",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Kiki entrega a domicilio",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Sushi Go",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Kyaraben",
+      "facet": "Comida japonesa en anime y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Roll de plátano maduro",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Comunidad japonesa de Palmira",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Colonia El Jagual",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Cocina nikkei",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Tiradito",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Poke",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Spam musubi",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Sushi burrito",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Día Internacional del Sushi",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 12,
+      "retired": "unaskable: La fecha del Día Internacional del Sushi es un dato arbitrario y poco establecido; ninguna opción da una buena pregunta."
+    },
+    {
+      "name": "Washoku",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Guía Michelin de Tokio",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Benihana",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa acevichada",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Maruchan",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Salsa de anguila",
+      "facet": "Comida japonesa en Colombia y el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Narezushi",
+      "facet": "Historia y origen de los platos",
+      "known_at": 14
+    },
+    {
+      "name": "Periodo Edo",
+      "facet": "Historia y origen de los platos",
+      "known_at": 13
+    },
+    {
+      "name": "Hanaya Yohei",
+      "facet": "Historia y origen de los platos",
+      "known_at": 15
+    },
+    {
+      "name": "Momofuku Ando",
+      "facet": "Historia y origen de los platos",
+      "known_at": 12
+    },
+    {
+      "name": "Museo del Cup Noodles",
+      "facet": "Historia y origen de los platos",
+      "known_at": 13
+    },
+    {
+      "name": "Shojin ryori",
+      "facet": "Historia y origen de los platos",
+      "known_at": 14
+    },
+    {
+      "name": "Restauración Meiji",
+      "facet": "Historia y origen de los platos",
+      "known_at": 14
+    },
+    {
+      "name": "Kikunae Ikeda",
+      "facet": "Historia y origen de los platos",
+      "known_at": 14
+    },
+    {
+      "name": "Eisai",
+      "facet": "Historia y origen de los platos",
+      "known_at": 15
+    },
+    {
+      "name": "Samurái",
+      "facet": "Historia y origen de los platos",
+      "known_at": 7
+    },
+    {
+      "name": "Fideos chinos",
+      "facet": "Historia y origen de los platos",
+      "known_at": 10
+    },
+    {
+      "name": "Osaka",
+      "facet": "Historia y origen de los platos",
+      "known_at": 11
+    },
+    {
+      "name": "Hokkaido",
+      "facet": "Historia y origen de los platos",
+      "known_at": 13
+    },
+    {
+      "name": "Comerciantes portugueses",
+      "facet": "Historia y origen de los platos",
+      "known_at": 11
+    }
+  ]
+}

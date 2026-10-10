@@ -1,0 +1,1147 @@
+{
+  "subcategory": "Verduras",
+  "facets": [
+    "Hortalizas de hoja y tallo",
+    "Raíces, tubérculos y bulbos",
+    "Verduras de fruto",
+    "Legumbres y granos tiernos",
+    "Coles, flores y brotes comestibles",
+    "Hierbas aromáticas y condimentos",
+    "Verduras de la cocina colombiana",
+    "Origen e historia de las verduras",
+    "Nutrición, vitaminas y salud",
+    "Cultivo, huerta y partes de la planta",
+    "Preparaciones y técnicas de cocina",
+    "Verduras en dichos, cuentos y pantallas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lechuga",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 1
+    },
+    {
+      "name": "Espinaca",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 2
+    },
+    {
+      "name": "Apio",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 4
+    },
+    {
+      "name": "Acelga",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 6
+    },
+    {
+      "name": "Espárrago",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 6
+    },
+    {
+      "name": "Rúgula",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 8
+    },
+    {
+      "name": "Puerro",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 8
+    },
+    {
+      "name": "Berro",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 9
+    },
+    {
+      "name": "Kale",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 9
+    },
+    {
+      "name": "Hinojo",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 11
+    },
+    {
+      "name": "Ruibarbo",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 12
+    },
+    {
+      "name": "Endivia",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 12
+    },
+    {
+      "name": "Ortiga",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 12
+    },
+    {
+      "name": "Canónigos",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 13
+    },
+    {
+      "name": "Radicchio",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 13
+    },
+    {
+      "name": "Cardo",
+      "facet": "Hortalizas de hoja y tallo",
+      "known_at": 14
+    },
+    {
+      "name": "Zanahoria",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 1
+    },
+    {
+      "name": "Papa",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 1
+    },
+    {
+      "name": "Cebolla",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 1
+    },
+    {
+      "name": "Ajo",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 2
+    },
+    {
+      "name": "Remolacha",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 5
+    },
+    {
+      "name": "Rábano",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 5
+    },
+    {
+      "name": "Batata",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 7
+    },
+    {
+      "name": "Nabo",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 7
+    },
+    {
+      "name": "Wasabi",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 8
+    },
+    {
+      "name": "Cúrcuma",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 9
+    },
+    {
+      "name": "Rábano picante",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 12
+    },
+    {
+      "name": "Jícama",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 12
+    },
+    {
+      "name": "Chirivía",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 13
+    },
+    {
+      "name": "Chalote",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 13
+    },
+    {
+      "name": "Colinabo",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 13
+    },
+    {
+      "name": "Apionabo",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 14
+    },
+    {
+      "name": "Oca",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 14
+    },
+    {
+      "name": "Topinambur",
+      "facet": "Raíces, tubérculos y bulbos",
+      "known_at": 15
+    },
+    {
+      "name": "Tomate",
+      "facet": "Verduras de fruto",
+      "known_at": 1
+    },
+    {
+      "name": "Pepino",
+      "facet": "Verduras de fruto",
+      "known_at": 2
+    },
+    {
+      "name": "Aguacate",
+      "facet": "Verduras de fruto",
+      "known_at": 2
+    },
+    {
+      "name": "Calabaza",
+      "facet": "Verduras de fruto",
+      "known_at": 2
+    },
+    {
+      "name": "Pimentón",
+      "facet": "Verduras de fruto",
+      "known_at": 3
+    },
+    {
+      "name": "Berenjena",
+      "facet": "Verduras de fruto",
+      "known_at": 5
+    },
+    {
+      "name": "Calabacín",
+      "facet": "Verduras de fruto",
+      "known_at": 5
+    },
+    {
+      "name": "Aceituna",
+      "facet": "Verduras de fruto",
+      "known_at": 5
+    },
+    {
+      "name": "Jalapeño",
+      "facet": "Verduras de fruto",
+      "known_at": 6
+    },
+    {
+      "name": "Pepinillo",
+      "facet": "Verduras de fruto",
+      "known_at": 6
+    },
+    {
+      "name": "Habanero",
+      "facet": "Verduras de fruto",
+      "known_at": 9
+    },
+    {
+      "name": "Chayote",
+      "facet": "Verduras de fruto",
+      "known_at": 10
+    },
+    {
+      "name": "Okra",
+      "facet": "Verduras de fruto",
+      "known_at": 11
+    },
+    {
+      "name": "Tomatillo",
+      "facet": "Verduras de fruto",
+      "known_at": 13
+    },
+    {
+      "name": "Calabaza espagueti",
+      "facet": "Verduras de fruto",
+      "known_at": 13
+    },
+    {
+      "name": "Melón amargo",
+      "facet": "Verduras de fruto",
+      "known_at": 14
+    },
+    {
+      "name": "Pimiento de Padrón",
+      "facet": "Verduras de fruto",
+      "known_at": 14
+    },
+    {
+      "name": "Fríjol",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 1
+    },
+    {
+      "name": "Mazorca",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 1
+    },
+    {
+      "name": "Arveja",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 2
+    },
+    {
+      "name": "Maní",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 2
+    },
+    {
+      "name": "Lenteja",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 3
+    },
+    {
+      "name": "Garbanzo",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 4
+    },
+    {
+      "name": "Habichuela",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 4
+    },
+    {
+      "name": "Haba",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 6
+    },
+    {
+      "name": "Soya",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 6
+    },
+    {
+      "name": "Quinua",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 8
+    },
+    {
+      "name": "Edamame",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 10
+    },
+    {
+      "name": "Guandul",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 11
+    },
+    {
+      "name": "Frijol de carita",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 12
+    },
+    {
+      "name": "Frijol mungo",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 13
+    },
+    {
+      "name": "Chocho",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 13
+    },
+    {
+      "name": "Tirabeque",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 13
+    },
+    {
+      "name": "Pallar",
+      "facet": "Legumbres y granos tiernos",
+      "known_at": 14
+    },
+    {
+      "name": "Brócoli",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 1
+    },
+    {
+      "name": "Coliflor",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 2
+    },
+    {
+      "name": "Repollo",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 3
+    },
+    {
+      "name": "Repollo morado",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 4
+    },
+    {
+      "name": "Coles de Bruselas",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 5
+    },
+    {
+      "name": "Alcachofa",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 7
+    },
+    {
+      "name": "Brotes de soya",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 8
+    },
+    {
+      "name": "Brotes de bambú",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 9
+    },
+    {
+      "name": "Palmito",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 9
+    },
+    {
+      "name": "Diente de león",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 10
+    },
+    {
+      "name": "Romanesco",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 11
+    },
+    {
+      "name": "Bok choy",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 11
+    },
+    {
+      "name": "Flor de calabaza",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 11
+    },
+    {
+      "name": "Germinado de alfalfa",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 11
+    },
+    {
+      "name": "Alcaparra",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 11
+    },
+    {
+      "name": "Brocolini",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 12
+    },
+    {
+      "name": "Col china",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 12
+    },
+    {
+      "name": "Capuchina",
+      "facet": "Coles, flores y brotes comestibles",
+      "known_at": 13
+    },
+    {
+      "name": "Ají",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 2
+    },
+    {
+      "name": "Pimienta",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 2
+    },
+    {
+      "name": "Mostaza",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 2
+    },
+    {
+      "name": "Cilantro",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 3
+    },
+    {
+      "name": "Perejil",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Orégano",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Hierbabuena",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Albahaca",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 5
+    },
+    {
+      "name": "Romero",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 7
+    },
+    {
+      "name": "Laurel",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 7
+    },
+    {
+      "name": "Comino",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 7
+    },
+    {
+      "name": "Tomillo",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 8
+    },
+    {
+      "name": "Paprika",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 8
+    },
+    {
+      "name": "Azafrán",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 9
+    },
+    {
+      "name": "Limoncillo",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Eneldo",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 11
+    },
+    {
+      "name": "Salvia",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 11
+    },
+    {
+      "name": "Toronjil",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 11
+    },
+    {
+      "name": "Estragón",
+      "facet": "Hierbas aromáticas y condimentos",
+      "known_at": 13
+    },
+    {
+      "name": "Plátano",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 1
+    },
+    {
+      "name": "Yuca",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 2
+    },
+    {
+      "name": "Patacón",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 2
+    },
+    {
+      "name": "Papa criolla",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Sancocho",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Ahuyama",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Ajiaco",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 5
+    },
+    {
+      "name": "Cebolla larga",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 6
+    },
+    {
+      "name": "Arracacha",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Guascas",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Ñame",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Fríjol cargamanto",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Ají dulce",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Papa sabanera",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Malanga",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Cubios",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Ulluco",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Cilantro cimarrón",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Bore",
+      "facet": "Verduras de la cocina colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Aztecas",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 6
+    },
+    {
+      "name": "Ruta de las especias",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 10
+    },
+    {
+      "name": "Mesoamérica",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 10
+    },
+    {
+      "name": "Gregor Mendel",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 11
+    },
+    {
+      "name": "Intercambio colombino",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 12
+    },
+    {
+      "name": "Zanahoria morada",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 12
+    },
+    {
+      "name": "Chuño",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 12
+    },
+    {
+      "name": "Chinampas",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 13
+    },
+    {
+      "name": "Milpa",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 13
+    },
+    {
+      "name": "Tres hermanas",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 13
+    },
+    {
+      "name": "Banco Mundial de Semillas de Svalbard",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 13
+    },
+    {
+      "name": "Creciente Fértil",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 13
+    },
+    {
+      "name": "Antoine Parmentier",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 14
+    },
+    {
+      "name": "Federico el Grande",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 14
+    },
+    {
+      "name": "Teosinte",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 15
+    },
+    {
+      "name": "Nikolái Vavílov",
+      "facet": "Origen e historia de las verduras",
+      "known_at": 15
+    },
+    {
+      "name": "Vitamina C",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 4
+    },
+    {
+      "name": "Calcio",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 4
+    },
+    {
+      "name": "Hierro",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 5
+    },
+    {
+      "name": "Pirámide alimentaria",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 5
+    },
+    {
+      "name": "Fibra",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 6
+    },
+    {
+      "name": "Calorías",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 6
+    },
+    {
+      "name": "Vitamina A",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 7
+    },
+    {
+      "name": "Vegetarianismo",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 7
+    },
+    {
+      "name": "Proteína vegetal",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 8
+    },
+    {
+      "name": "Veganismo",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 8
+    },
+    {
+      "name": "Potasio",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 9
+    },
+    {
+      "name": "Antioxidantes",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 10
+    },
+    {
+      "name": "Escorbuto",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 11
+    },
+    {
+      "name": "Cinco al día",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 11
+    },
+    {
+      "name": "Betacaroteno",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 12
+    },
+    {
+      "name": "Ácido fólico",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 12
+    },
+    {
+      "name": "Capsaicina",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 12
+    },
+    {
+      "name": "Vitamina K",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 13
+    },
+    {
+      "name": "Licopeno",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 13
+    },
+    {
+      "name": "Carotenemia",
+      "facet": "Nutrición, vitaminas y salud",
+      "known_at": 14
+    },
+    {
+      "name": "Semilla",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 1
+    },
+    {
+      "name": "Raíz",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 2
+    },
+    {
+      "name": "Espantapájaros",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 2
+    },
+    {
+      "name": "Tallo",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 3
+    },
+    {
+      "name": "Huerta",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 3
+    },
+    {
+      "name": "Lombriz de tierra",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 3
+    },
+    {
+      "name": "Babosa",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 4
+    },
+    {
+      "name": "Invernadero",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 5
+    },
+    {
+      "name": "Germinación",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 6
+    },
+    {
+      "name": "Fotosíntesis",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 7
+    },
+    {
+      "name": "Clorofila",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 7
+    },
+    {
+      "name": "Compost",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 7
+    },
+    {
+      "name": "Polinización",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 7
+    },
+    {
+      "name": "Tubérculo",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 8
+    },
+    {
+      "name": "Pulgón",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 9
+    },
+    {
+      "name": "Agricultura orgánica",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 9
+    },
+    {
+      "name": "Riego por goteo",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 10
+    },
+    {
+      "name": "Hidroponía",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 11
+    },
+    {
+      "name": "Rotación de cultivos",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 11
+    },
+    {
+      "name": "Rizoma",
+      "facet": "Cultivo, huerta y partes de la planta",
+      "known_at": 12
+    },
+    {
+      "name": "Ensalada",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Sopa",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Papas fritas",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Puré",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Guacamole",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Rallador",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Cocción al vapor",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Hogao",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Pesto",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Pico de gallo",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 7
+    },
+    {
+      "name": "Encurtido",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Saltear",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Gazpacho",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Tempura",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Chucrut",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Corte en juliana",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Mandolina",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Blanquear",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Escabeche",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Brunoise",
+      "facet": "Preparaciones y técnicas de cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Señor Cara de Papa",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 2
+    },
+    {
+      "name": "Cenicienta",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 2
+    },
+    {
+      "name": "Jack-o'-lantern",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 2
+    },
+    {
+      "name": "Jack y los frijoles mágicos",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 3
+    },
+    {
+      "name": "Ponerse rojo como un tomate",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 4
+    },
+    {
+      "name": "Shrek",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 5
+    },
+    {
+      "name": "Plants vs. Zombies",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 5
+    },
+    {
+      "name": "Intensamente",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 6
+    },
+    {
+      "name": "Peter Rabbit",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 6
+    },
+    {
+      "name": "La princesa y el guisante",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 7
+    },
+    {
+      "name": "Importar un pepino",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 8
+    },
+    {
+      "name": "VeggieTales",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 10
+    },
+    {
+      "name": "Dar calabazas",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 11
+    },
+    {
+      "name": "Estar como una lechuga",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 12
+    },
+    {
+      "name": "El nabo gigante",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 13
+    },
+    {
+      "name": "Rapunzel",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 13
+    },
+    {
+      "name": "Wallace y Gromit: La batalla de los vegetales",
+      "facet": "Verduras en dichos, cuentos y pantallas",
+      "known_at": 13
+    }
+  ]
+}

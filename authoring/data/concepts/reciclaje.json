@@ -1,0 +1,1004 @@
+{
+  "subcategory": "Reciclaje",
+  "facets": [
+    "Materiales reciclables y no reciclables",
+    "Separación de residuos y colores de canecas",
+    "Símbolos, sellos y códigos de reciclaje",
+    "Procesos industriales de reciclaje",
+    "Compostaje y residuos orgánicos",
+    "Reducir, reutilizar y las tres erres",
+    "Plásticos y contaminación de océanos",
+    "Basura electrónica, pilas y residuos peligrosos",
+    "Recicladores, rellenos sanitarios y gestión de basuras",
+    "Tiempo de descomposición de los objetos",
+    "Reciclaje en películas, campañas y personajes",
+    "Historia y economía circular"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 5,
+      "record": 2,
+      "origin": 3,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 4,
+      "history": 2,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cartón",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 1
+    },
+    {
+      "name": "Botella de plástico",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 1
+    },
+    {
+      "name": "Lata de aluminio",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 3
+    },
+    {
+      "name": "Icopor",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 4
+    },
+    {
+      "name": "Papel higiénico usado",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 5
+    },
+    {
+      "name": "Servilleta usada",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 6
+    },
+    {
+      "name": "Tetra Pak",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 8
+    },
+    {
+      "name": "Papel aluminio",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 6
+    },
+    {
+      "name": "Chatarra",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 6
+    },
+    {
+      "name": "Bolsa de papel",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 3
+    },
+    {
+      "name": "Espejo",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 9
+    },
+    {
+      "name": "Cerámica",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 9
+    },
+    {
+      "name": "Vaso de cartón para café",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 10
+    },
+    {
+      "name": "Papel encerado",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 11
+    },
+    {
+      "name": "Caja de pizza engrasada",
+      "facet": "Materiales reciclables y no reciclables",
+      "known_at": 9
+    },
+    {
+      "name": "Caneca blanca",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 6
+    },
+    {
+      "name": "Caneca negra",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 6
+    },
+    {
+      "name": "Caneca verde",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 5
+    },
+    {
+      "name": "Caneca azul",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 7
+    },
+    {
+      "name": "Caneca amarilla",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 9
+    },
+    {
+      "name": "Caneca roja",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 9
+    },
+    {
+      "name": "Punto ecológico",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 6
+    },
+    {
+      "name": "Separación en la fuente",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 10
+    },
+    {
+      "name": "Residuos aprovechables",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 9
+    },
+    {
+      "name": "Residuos no aprovechables",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 10
+    },
+    {
+      "name": "Resolución 2184 de 2019",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 14
+    },
+    {
+      "name": "Contenedor de vidrio",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 8
+    },
+    {
+      "name": "Lavar los envases",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 5
+    },
+    {
+      "name": "Bolsa de basura",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 2
+    },
+    {
+      "name": "Shut de basuras",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 10
+    },
+    {
+      "name": "Día de recolección",
+      "facet": "Separación de residuos y colores de canecas",
+      "known_at": 6
+    },
+    {
+      "name": "Símbolo de reciclaje",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 3
+    },
+    {
+      "name": "Anillo de Möbius",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "Código de identificación de resina",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "PET",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 10
+    },
+    {
+      "name": "PEAD",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "PVC",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 10
+    },
+    {
+      "name": "Polipropileno",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 12
+    },
+    {
+      "name": "Poliestireno",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 12
+    },
+    {
+      "name": "Punto Verde",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "Sello FSC",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "Contenedor tachado",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 12
+    },
+    {
+      "name": "Tidyman",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 14
+    },
+    {
+      "name": "Gary Anderson",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 15
+    },
+    {
+      "name": "Etiqueta Ecológica de la Unión Europea",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 14
+    },
+    {
+      "name": "Sello Ambiental Colombiano",
+      "facet": "Símbolos, sellos y códigos de reciclaje",
+      "known_at": 14
+    },
+    {
+      "name": "Planta de reciclaje",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 6
+    },
+    {
+      "name": "Fundición",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 8
+    },
+    {
+      "name": "Pulpa de papel",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 9
+    },
+    {
+      "name": "Triturado",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 7
+    },
+    {
+      "name": "Imán separador",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 8
+    },
+    {
+      "name": "Peletizado",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "Corrientes de Foucault",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 15
+    },
+    {
+      "name": "Calcín",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 15
+    },
+    {
+      "name": "Destintado",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 14
+    },
+    {
+      "name": "Hojuelas de PET",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 12
+    },
+    {
+      "name": "Reciclaje químico",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 13
+    },
+    {
+      "name": "Separación óptica",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 14
+    },
+    {
+      "name": "Fibra de poliéster reciclado",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 11,
+      "retired": "used_up: El pool ya tiene lo de las camisetas hechas de botellas; el número de botellas por prenda cambia mucho y no es seguro."
+    },
+    {
+      "name": "Madera plástica",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 11
+    },
+    {
+      "name": "Infraciclaje",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 14
+    },
+    {
+      "name": "Compactadora",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 7
+    },
+    {
+      "name": "Paca de reciclaje",
+      "facet": "Procesos industriales de reciclaje",
+      "known_at": 10
+    },
+    {
+      "name": "Compost",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 6
+    },
+    {
+      "name": "Abono",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 4
+    },
+    {
+      "name": "Lombriz roja californiana",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Lombricompostaje",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Humus",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Cáscara de banano",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 2
+    },
+    {
+      "name": "Borra de café",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 6
+    },
+    {
+      "name": "Compostera",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Hojas secas",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 2
+    },
+    {
+      "name": "Cáscara de huevo",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 4
+    },
+    {
+      "name": "Bocashi",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Biogás",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 10
+    },
+    {
+      "name": "Biodigestor",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Bacterias descomponedoras",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Hongos",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 6
+    },
+    {
+      "name": "Paca digestora Silva",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 15
+    },
+    {
+      "name": "Relación carbono-nitrógeno",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 15
+    },
+    {
+      "name": "Mosca soldado negra",
+      "facet": "Compostaje y residuos orgánicos",
+      "known_at": 14
+    },
+    {
+      "name": "Tres erres",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 5
+    },
+    {
+      "name": "Reducir",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 4
+    },
+    {
+      "name": "Reutilizar",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 4
+    },
+    {
+      "name": "Reciclar",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 2
+    },
+    {
+      "name": "Reparar",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 5
+    },
+    {
+      "name": "Rechazar",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 9
+    },
+    {
+      "name": "Bolsa de tela",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 3
+    },
+    {
+      "name": "Termo reutilizable",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 4
+    },
+    {
+      "name": "Pitillo de metal",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 5
+    },
+    {
+      "name": "Ecoladrillo",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 9
+    },
+    {
+      "name": "Supraciclaje",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 13
+    },
+    {
+      "name": "Basura cero",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 11
+    },
+    {
+      "name": "Ropa de segunda mano",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 7
+    },
+    {
+      "name": "Trueque",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 8
+    },
+    {
+      "name": "Moda rápida",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 12
+    },
+    {
+      "name": "Obsolescencia programada",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 12
+    },
+    {
+      "name": "Envase retornable",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 7
+    },
+    {
+      "name": "Venta a granel",
+      "facet": "Reducir, reutilizar y las tres erres",
+      "known_at": 10
+    },
+    {
+      "name": "Gran Mancha de Basura del Pacífico",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 10
+    },
+    {
+      "name": "Anillos plásticos de six-pack",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 9
+    },
+    {
+      "name": "Pellets de plástico",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 14
+    },
+    {
+      "name": "Boyan Slat",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 15
+    },
+    {
+      "name": "Plástico de un solo uso",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 8
+    },
+    {
+      "name": "Bioplástico",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 10
+    },
+    {
+      "name": "Ácido poliláctico",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 14
+    },
+    {
+      "name": "Ley 2232 de 2022",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 14
+    },
+    {
+      "name": "Microesferas",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 13
+    },
+    {
+      "name": "Albatros",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 11
+    },
+    {
+      "name": "Nanoplásticos",
+      "facet": "Plásticos y contaminación de océanos",
+      "known_at": 13
+    },
+    {
+      "name": "Pilas",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 2
+    },
+    {
+      "name": "Pilas recargables",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 5
+    },
+    {
+      "name": "Batería de celular",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 5
+    },
+    {
+      "name": "RAEE",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 13
+    },
+    {
+      "name": "Plomo",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 9
+    },
+    {
+      "name": "Cadmio",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 13
+    },
+    {
+      "name": "Bombillo ahorrador",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 8
+    },
+    {
+      "name": "Cartucho de tóner",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 9
+    },
+    {
+      "name": "Aceite de cocina usado",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 6
+    },
+    {
+      "name": "Medicamentos vencidos",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 6
+    },
+    {
+      "name": "Agbogbloshie",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 15
+    },
+    {
+      "name": "Minería urbana",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 13
+    },
+    {
+      "name": "Oro en los celulares",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 10
+    },
+    {
+      "name": "Coltán",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 12
+    },
+    {
+      "name": "Llantas usadas",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 7
+    },
+    {
+      "name": "Residuos hospitalarios",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 9
+    },
+    {
+      "name": "Pilas con el Ambiente",
+      "facet": "Basura electrónica, pilas y residuos peligrosos",
+      "known_at": 13
+    },
+    {
+      "name": "Reciclador de oficio",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 5
+    },
+    {
+      "name": "Relleno sanitario",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 7
+    },
+    {
+      "name": "Relleno Sanitario Doña Juana",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 9
+    },
+    {
+      "name": "Botadero a cielo abierto",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 9
+    },
+    {
+      "name": "Carreta de reciclaje",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 6
+    },
+    {
+      "name": "Camión recolector de basura",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 1
+    },
+    {
+      "name": "Barrendero",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 3
+    },
+    {
+      "name": "Centro de acopio",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 9
+    },
+    {
+      "name": "Chatarrería",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 7
+    },
+    {
+      "name": "Incineradora",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 10
+    },
+    {
+      "name": "Gas metano",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 10
+    },
+    {
+      "name": "Lixiviado",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 13
+    },
+    {
+      "name": "Nohra Padilla",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 15
+    },
+    {
+      "name": "Asociación de Recicladores de Bogotá",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 14
+    },
+    {
+      "name": "Fresh Kills",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 15
+    },
+    {
+      "name": "Valorización energética",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 14
+    },
+    {
+      "name": "Tarifa de aseo",
+      "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
+      "known_at": 11
+    },
+    {
+      "name": "Biodegradable",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 6
+    },
+    {
+      "name": "Cáscara de naranja",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 5
+    },
+    {
+      "name": "Corazón de manzana",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 4
+    },
+    {
+      "name": "Colilla de cigarrillo",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 9
+    },
+    {
+      "name": "Pañal desechable",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 6
+    },
+    {
+      "name": "Cepillo de dientes",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 6
+    },
+    {
+      "name": "Periódico",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 4
+    },
+    {
+      "name": "Camiseta de algodón",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 8
+    },
+    {
+      "name": "Hilo de pescar",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 11
+    },
+    {
+      "name": "Fósforo de madera",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 8
+    },
+    {
+      "name": "Tenis de caucho",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 9
+    },
+    {
+      "name": "Bolsa de té",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 9
+    },
+    {
+      "name": "Globo de látex",
+      "facet": "Tiempo de descomposición de los objetos",
+      "known_at": 8
+    },
+    {
+      "name": "Rocky de Paw Patrol",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 2
+    },
+    {
+      "name": "Óscar el Gruñón",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 6
+    },
+    {
+      "name": "El Lorax",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Capitán Planeta",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Día de la Tierra",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 6
+    },
+    {
+      "name": "Día Mundial del Reciclaje",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 10,
+      "retired": "unaskable: La fecha es ambigua: el Día Mundial del Reciclaje es el 18 de marzo, pero en el mundo hispano el 17 de mayo también es muy conocido."
+    },
+    {
+      "name": "Día Mundial del Medio Ambiente",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "La Hora del Planeta",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Orquesta de Instrumentos Reciclados de Cateura",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Waste Land",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Mr. Trash Wheel",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 14
+    },
+    {
+      "name": "Los Wombles",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 15
+    },
+    {
+      "name": "Julio sin plástico",
+      "facet": "Reciclaje en películas, campañas y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Economía circular",
+      "facet": "Historia y economía circular",
+      "known_at": 10
+    },
+    {
+      "name": "Economía lineal",
+      "facet": "Historia y economía circular",
+      "known_at": 12
+    },
+    {
+      "name": "Ellen MacArthur",
+      "facet": "Historia y economía circular",
+      "known_at": 15
+    },
+    {
+      "name": "De la cuna a la cuna",
+      "facet": "Historia y economía circular",
+      "known_at": 15
+    },
+    {
+      "name": "Traperos",
+      "facet": "Historia y economía circular",
+      "known_at": 13
+    },
+    {
+      "name": "Papel de trapo",
+      "facet": "Historia y economía circular",
+      "known_at": 13
+    },
+    {
+      "name": "Baquelita",
+      "facet": "Historia y economía circular",
+      "known_at": 14
+    },
+    {
+      "name": "Leo Baekeland",
+      "facet": "Historia y economía circular",
+      "known_at": 15
+    },
+    {
+      "name": "Revolución Industrial",
+      "facet": "Historia y economía circular",
+      "known_at": 9
+    },
+    {
+      "name": "Campañas de chatarra de la Segunda Guerra Mundial",
+      "facet": "Historia y economía circular",
+      "known_at": 13
+    },
+    {
+      "name": "Ecodiseño",
+      "facet": "Historia y economía circular",
+      "known_at": 13
+    },
+    {
+      "name": "Responsabilidad extendida del productor",
+      "facet": "Historia y economía circular",
+      "known_at": 14
+    },
+    {
+      "name": "Huella ecológica",
+      "facet": "Historia y economía circular",
+      "known_at": 11
+    },
+    {
+      "name": "Desarrollo sostenible",
+      "facet": "Historia y economía circular",
+      "known_at": 10
+    },
+    {
+      "name": "Objetivos de Desarrollo Sostenible",
+      "facet": "Historia y economía circular",
+      "known_at": 12
+    },
+    {
+      "name": "Kamikatsu",
+      "facet": "Historia y economía circular",
+      "known_at": 15
+    },
+    {
+      "name": "Bonos de carbono",
+      "facet": "Historia y economía circular",
+      "known_at": 13
+    },
+    {
+      "name": "Simbiosis industrial",
+      "facet": "Historia y economía circular",
+      "known_at": 15
+    }
+  ]
+}

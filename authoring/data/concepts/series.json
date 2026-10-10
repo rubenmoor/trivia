@@ -1,0 +1,1083 @@
+{
+  "subcategory": "Series",
+  "facets": [
+    "Dibujos animados infantiles",
+    "Anime japonés",
+    "Animación para toda la familia",
+    "Telenovelas colombianas",
+    "Comedias latinoamericanas clásicas",
+    "Sitcoms y comedias internacionales",
+    "Fantasía y ciencia ficción",
+    "Misterio, detectives y aventura",
+    "Programas infantiles educativos",
+    "Formatos y jerga televisiva",
+    "Historia de la televisión",
+    "Frases y canciones de series"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Patricio Estrella",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Calamardo",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Peppa Pig",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Bluey",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "La Patrulla Canina",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Dora la Exploradora",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Pato Lucas",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Pájaro Loco",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Tortugas Ninja",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Splinter",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Phineas y Ferb",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Las Chicas Superpoderosas",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Ben 10",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Hora de Aventura",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "El Laboratorio de Dexter",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Gravity Falls",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Pikachu",
+      "facet": "Anime japonés",
+      "known_at": 1
+    },
+    {
+      "name": "Dragon Ball",
+      "facet": "Anime japonés",
+      "known_at": 3
+    },
+    {
+      "name": "Shin-chan",
+      "facet": "Anime japonés",
+      "known_at": 4
+    },
+    {
+      "name": "Naruto",
+      "facet": "Anime japonés",
+      "known_at": 4
+    },
+    {
+      "name": "Digimon",
+      "facet": "Anime japonés",
+      "known_at": 5
+    },
+    {
+      "name": "Hamtaro",
+      "facet": "Anime japonés",
+      "known_at": 5
+    },
+    {
+      "name": "Supercampeones",
+      "facet": "Anime japonés",
+      "known_at": 6
+    },
+    {
+      "name": "Detective Conan",
+      "facet": "Anime japonés",
+      "known_at": 6
+    },
+    {
+      "name": "Sailor Moon",
+      "facet": "Anime japonés",
+      "known_at": 7
+    },
+    {
+      "name": "Ataque a los Titanes",
+      "facet": "Anime japonés",
+      "known_at": 8
+    },
+    {
+      "name": "Heidi",
+      "facet": "Anime japonés",
+      "known_at": 8
+    },
+    {
+      "name": "Death Note",
+      "facet": "Anime japonés",
+      "known_at": 9,
+      "retired": "unaskable: Death Note centres on a notebook that kills people; too dark for a family game."
+    },
+    {
+      "name": "Candy Candy",
+      "facet": "Anime japonés",
+      "known_at": 11
+    },
+    {
+      "name": "Astroboy",
+      "facet": "Anime japonés",
+      "known_at": 12
+    },
+    {
+      "name": "Los Simpson",
+      "facet": "Animación para toda la familia",
+      "known_at": 2
+    },
+    {
+      "name": "Bart Simpson",
+      "facet": "Animación para toda la familia",
+      "known_at": 2
+    },
+    {
+      "name": "Springfield",
+      "facet": "Animación para toda la familia",
+      "known_at": 4
+    },
+    {
+      "name": "Los Padrinos Mágicos",
+      "facet": "Animación para toda la familia",
+      "known_at": 3
+    },
+    {
+      "name": "El Increíble Mundo de Gumball",
+      "facet": "Animación para toda la familia",
+      "known_at": 4
+    },
+    {
+      "name": "Los Picapiedra",
+      "facet": "Animación para toda la familia",
+      "known_at": 5
+    },
+    {
+      "name": "Rugrats",
+      "facet": "Animación para toda la familia",
+      "known_at": 5
+    },
+    {
+      "name": "Avatar: la leyenda de Aang",
+      "facet": "Animación para toda la familia",
+      "known_at": 6
+    },
+    {
+      "name": "Hey Arnold!",
+      "facet": "Animación para toda la familia",
+      "known_at": 6
+    },
+    {
+      "name": "Steven Universe",
+      "facet": "Animación para toda la familia",
+      "known_at": 6
+    },
+    {
+      "name": "Coraje, el perro cobarde",
+      "facet": "Animación para toda la familia",
+      "known_at": 6
+    },
+    {
+      "name": "Ed, Edd y Eddy",
+      "facet": "Animación para toda la familia",
+      "known_at": 6
+    },
+    {
+      "name": "Futurama",
+      "facet": "Animación para toda la familia",
+      "known_at": 7
+    },
+    {
+      "name": "Arcane",
+      "facet": "Animación para toda la familia",
+      "known_at": 8
+    },
+    {
+      "name": "Pinky y Cerebro",
+      "facet": "Animación para toda la familia",
+      "known_at": 8
+    },
+    {
+      "name": "Los Thornberrys",
+      "facet": "Animación para toda la familia",
+      "known_at": 8
+    },
+    {
+      "name": "Animaniacs",
+      "facet": "Animación para toda la familia",
+      "known_at": 9
+    },
+    {
+      "name": "Yo soy Betty, la fea",
+      "facet": "Telenovelas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Armando Mendoza",
+      "facet": "Telenovelas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Ecomoda",
+      "facet": "Telenovelas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Café con aroma de mujer",
+      "facet": "Telenovelas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Pasión de gavilanes",
+      "facet": "Telenovelas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Pedro el escamoso",
+      "facet": "Telenovelas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "La reina del flow",
+      "facet": "Telenovelas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Francisco el Matemático",
+      "facet": "Telenovelas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Padres e hijos",
+      "facet": "Telenovelas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Hasta que la plata nos separe",
+      "facet": "Telenovelas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "La Pola",
+      "facet": "Telenovelas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Bolívar (serie)",
+      "facet": "Telenovelas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Los Reyes",
+      "facet": "Telenovelas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Diomedes, el cacique de La Junta",
+      "facet": "Telenovelas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Chepe Fortuna",
+      "facet": "Telenovelas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Escalona",
+      "facet": "Telenovelas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Rafael Orozco, el ídolo",
+      "facet": "Telenovelas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Las Juanas",
+      "facet": "Telenovelas colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "La Saga, negocio de familia",
+      "facet": "Telenovelas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Gallito Ramírez",
+      "facet": "Telenovelas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Azúcar",
+      "facet": "Telenovelas colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "El Chapulín Colorado",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 4
+    },
+    {
+      "name": "Don Ramón",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 4
+    },
+    {
+      "name": "Quico",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 4
+    },
+    {
+      "name": "La Chilindrina",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "Doña Florinda",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "Señor Barriga",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 5
+    },
+    {
+      "name": "Profesor Jirafales",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 6
+    },
+    {
+      "name": "Chespirito",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 7
+    },
+    {
+      "name": "Sábados Felices",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 8
+    },
+    {
+      "name": "Una familia de diez",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "La familia P. Luche",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Vecinos",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Dejémonos de vainas",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Los Caquitos",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Casados con hijos",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Don Chinche",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Romeo y Buseta",
+      "facet": "Comedias latinoamericanas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Mr. Bean",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 3
+    },
+    {
+      "name": "Hannah Montana",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 5
+    },
+    {
+      "name": "iCarly",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Zack y Cody",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Los Hechiceros de Waverly Place",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Friends",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "The Big Bang Theory",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "El Príncipe del Rap",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Malcolm",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Todo el mundo odia a Chris",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Cómo conocí a tu madre",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Modern Family",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Tres por tres",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Glee",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Central Perk",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "The Office",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Brooklyn Nine-Nine",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Seinfeld",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Frasier",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 14
+    },
+    {
+      "name": "Cheers",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 14
+    },
+    {
+      "name": "Yo amo a Lucy",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 14
+    },
+    {
+      "name": "Power Rangers",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 5
+    },
+    {
+      "name": "Grogu",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 6
+    },
+    {
+      "name": "Merlina",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 6
+    },
+    {
+      "name": "Stranger Things",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Los Locos Addams",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Once (Stranger Things)",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 8
+    },
+    {
+      "name": "The Mandalorian",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 8
+    },
+    {
+      "name": "El Mundo del Revés",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Sabrina, la bruja adolescente",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Juego de Tronos",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 10
+    },
+    {
+      "name": "Spock",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 10
+    },
+    {
+      "name": "The Witcher",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 10
+    },
+    {
+      "name": "Doctor Who",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Los Anillos de Poder",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Expedientes X",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 12
+    },
+    {
+      "name": "Embrujadas",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 12
+    },
+    {
+      "name": "TARDIS",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 13
+    },
+    {
+      "name": "La Dimensión Desconocida",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 13
+    },
+    {
+      "name": "El Profesor (La Casa de Papel)",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 10
+    },
+    {
+      "name": "Lassie",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 10
+    },
+    {
+      "name": "CSI",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 11
+    },
+    {
+      "name": "MacGyver",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Dark",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Flipper",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Guardianes de la Bahía",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Colombo",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "El Auto Fantástico",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "El Equipo A",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Los Cinco",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 13
+    },
+    {
+      "name": "Se ha escrito un crimen",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 14
+    },
+    {
+      "name": "Monk",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 14
+    },
+    {
+      "name": "Twin Peaks",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 15
+    },
+    {
+      "name": "Elmo",
+      "facet": "Programas infantiles educativos",
+      "known_at": 2
+    },
+    {
+      "name": "Comegalletas",
+      "facet": "Programas infantiles educativos",
+      "known_at": 2
+    },
+    {
+      "name": "Los Teletubbies",
+      "facet": "Programas infantiles educativos",
+      "known_at": 2
+    },
+    {
+      "name": "Pocoyó",
+      "facet": "Programas infantiles educativos",
+      "known_at": 2
+    },
+    {
+      "name": "Barney",
+      "facet": "Programas infantiles educativos",
+      "known_at": 3
+    },
+    {
+      "name": "Plaza Sésamo",
+      "facet": "Programas infantiles educativos",
+      "known_at": 4
+    },
+    {
+      "name": "Las Pistas de Blue",
+      "facet": "Programas infantiles educativos",
+      "known_at": 4
+    },
+    {
+      "name": "Discovery Kids",
+      "facet": "Programas infantiles educativos",
+      "known_at": 4
+    },
+    {
+      "name": "El Autobús Mágico",
+      "facet": "Programas infantiles educativos",
+      "known_at": 8
+    },
+    {
+      "name": "Art Attack",
+      "facet": "Programas infantiles educativos",
+      "known_at": 8
+    },
+    {
+      "name": "Mi Señal",
+      "facet": "Programas infantiles educativos",
+      "known_at": 9
+    },
+    {
+      "name": "Abelardo",
+      "facet": "Programas infantiles educativos",
+      "known_at": 10
+    },
+    {
+      "name": "El Mundo de Beakman",
+      "facet": "Programas infantiles educativos",
+      "known_at": 11
+    },
+    {
+      "name": "Zoboomafoo",
+      "facet": "Programas infantiles educativos",
+      "known_at": 12
+    },
+    {
+      "name": "Bill Nye, el científico",
+      "facet": "Programas infantiles educativos",
+      "known_at": 13
+    },
+    {
+      "name": "Club 10",
+      "facet": "Programas infantiles educativos",
+      "known_at": 13
+    },
+    {
+      "name": "Cosmos",
+      "facet": "Programas infantiles educativos",
+      "known_at": 14
+    },
+    {
+      "name": "Comercial",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 2
+    },
+    {
+      "name": "Telenovela",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 3
+    },
+    {
+      "name": "Temporada",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 4
+    },
+    {
+      "name": "Concurso",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 4
+    },
+    {
+      "name": "Reality show",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 6
+    },
+    {
+      "name": "Opening",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 7
+    },
+    {
+      "name": "Final de temporada",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 7
+    },
+    {
+      "name": "Miniserie",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 8
+    },
+    {
+      "name": "Precuela",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 9
+    },
+    {
+      "name": "Cameo",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 10
+    },
+    {
+      "name": "Talk show",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 10
+    },
+    {
+      "name": "Capítulo piloto",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 11
+    },
+    {
+      "name": "Spin-off",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 11
+    },
+    {
+      "name": "Sitcom",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 11
+    },
+    {
+      "name": "Risas enlatadas",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 11
+    },
+    {
+      "name": "Rating",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 11
+    },
+    {
+      "name": "Horario estelar",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 12
+    },
+    {
+      "name": "Cliffhanger",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 13
+    },
+    {
+      "name": "Televisión en blanco y negro",
+      "facet": "Historia de la televisión",
+      "known_at": 4
+    },
+    {
+      "name": "Pantalla plana",
+      "facet": "Historia de la televisión",
+      "known_at": 5
+    },
+    {
+      "name": "Caracol Televisión",
+      "facet": "Historia de la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "RCN Televisión",
+      "facet": "Historia de la televisión",
+      "known_at": 6
+    },
+    {
+      "name": "Televisión a color",
+      "facet": "Historia de la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Señal Colombia",
+      "facet": "Historia de la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Televisión por cable",
+      "facet": "Historia de la televisión",
+      "known_at": 8
+    },
+    {
+      "name": "Antena de conejo",
+      "facet": "Historia de la televisión",
+      "known_at": 9
+    },
+    {
+      "name": "Transmisión de la llegada a la Luna",
+      "facet": "Historia de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "MTV",
+      "facet": "Historia de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "Televisión digital terrestre",
+      "facet": "Historia de la televisión",
+      "known_at": 12
+    },
+    {
+      "name": "Llegada de la televisión a Colombia",
+      "facet": "Historia de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Gustavo Rojas Pinilla",
+      "facet": "Historia de la televisión",
+      "known_at": 13
+    },
+    {
+      "name": "Inravisión",
+      "facet": "Historia de la televisión",
+      "known_at": 14
+    },
+    {
+      "name": "Philo Farnsworth",
+      "facet": "Historia de la televisión",
+      "known_at": 15
+    },
+    {
+      "name": "Canción de entrada de Bob Esponja",
+      "facet": "Frases y canciones de series",
+      "known_at": 2
+    },
+    {
+      "name": "Scooby Dooby Doo",
+      "facet": "Frases y canciones de series",
+      "known_at": 3
+    },
+    {
+      "name": "¿Qué hay de nuevo, viejo?",
+      "facet": "Frases y canciones de series",
+      "known_at": 4
+    },
+    {
+      "name": "Kamehameha",
+      "facet": "Frases y canciones de series",
+      "known_at": 4
+    },
+    {
+      "name": "¡Eso, eso, eso!",
+      "facet": "Frases y canciones de series",
+      "known_at": 5
+    },
+    {
+      "name": "Fue sin querer queriendo",
+      "facet": "Frases y canciones de series",
+      "known_at": 5
+    },
+    {
+      "name": "¡Ay, caramba!",
+      "facet": "Frases y canciones de series",
+      "known_at": 5
+    },
+    {
+      "name": "Atrápalos ya",
+      "facet": "Frases y canciones de series",
+      "known_at": 5
+    },
+    {
+      "name": "Eso es todo, amigos",
+      "facet": "Frases y canciones de series",
+      "known_at": 5
+    },
+    {
+      "name": "¡No contaban con mi astucia!",
+      "facet": "Frases y canciones de series",
+      "known_at": 6
+    },
+    {
+      "name": "¡Yabba Dabba Doo!",
+      "facet": "Frases y canciones de series",
+      "known_at": 6
+    },
+    {
+      "name": "D'oh!",
+      "facet": "Frases y canciones de series",
+      "known_at": 6
+    },
+    {
+      "name": "¡Bazinga!",
+      "facet": "Frases y canciones de series",
+      "known_at": 9
+    },
+    {
+      "name": "Bella Ciao",
+      "facet": "Frases y canciones de series",
+      "known_at": 9
+    },
+    {
+      "name": "Se acerca el invierno",
+      "facet": "Frases y canciones de series",
+      "known_at": 11
+    },
+    {
+      "name": "Larga vida y prosperidad",
+      "facet": "Frases y canciones de series",
+      "known_at": 12
+    }
+  ]
+}

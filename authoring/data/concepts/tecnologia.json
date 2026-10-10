@@ -1,0 +1,872 @@
+{
+  "subcategory": "Tecnología",
+  "facets": [
+    "Computadores y sus partes",
+    "Internet y la web",
+    "Celulares y aparatos portátiles",
+    "Videojuegos y consolas",
+    "Robots e inteligencia artificial",
+    "Electrodomésticos y tecnología del hogar",
+    "Electricidad, energía y baterías",
+    "Siglas y jerga tecnológica",
+    "Empresas y pioneros tecnológicos",
+    "Historia de la computación",
+    "Imagen, sonido y almacenamiento",
+    "Tecnología espacial y satélites"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Teclado",
+      "facet": "Computadores y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Mouse",
+      "facet": "Computadores y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Monitor",
+      "facet": "Computadores y sus partes",
+      "known_at": 3
+    },
+    {
+      "name": "Portátil",
+      "facet": "Computadores y sus partes",
+      "known_at": 2
+    },
+    {
+      "name": "Impresora",
+      "facet": "Computadores y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Cámara web",
+      "facet": "Computadores y sus partes",
+      "known_at": 3
+    },
+    {
+      "name": "Puerto USB",
+      "facet": "Computadores y sus partes",
+      "known_at": 4
+    },
+    {
+      "name": "Escáner",
+      "facet": "Computadores y sus partes",
+      "known_at": 5
+    },
+    {
+      "name": "Disco duro",
+      "facet": "Computadores y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Hardware",
+      "facet": "Computadores y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Software",
+      "facet": "Computadores y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Touchpad",
+      "facet": "Computadores y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Memoria RAM",
+      "facet": "Computadores y sus partes",
+      "known_at": 7
+    },
+    {
+      "name": "Procesador",
+      "facet": "Computadores y sus partes",
+      "known_at": 7
+    },
+    {
+      "name": "Tarjeta gráfica",
+      "facet": "Computadores y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Sistema operativo",
+      "facet": "Computadores y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Tarjeta madre",
+      "facet": "Computadores y sus partes",
+      "known_at": 9
+    },
+    {
+      "name": "Fuente de poder",
+      "facet": "Computadores y sus partes",
+      "known_at": 9
+    },
+    {
+      "name": "Disco de estado sólido",
+      "facet": "Computadores y sus partes",
+      "known_at": 11
+    },
+    {
+      "name": "YouTube",
+      "facet": "Internet y la web",
+      "known_at": 1
+    },
+    {
+      "name": "Emoji",
+      "facet": "Internet y la web",
+      "known_at": 1
+    },
+    {
+      "name": "Wifi",
+      "facet": "Internet y la web",
+      "known_at": 2
+    },
+    {
+      "name": "Contraseña",
+      "facet": "Internet y la web",
+      "known_at": 2
+    },
+    {
+      "name": "Página web",
+      "facet": "Internet y la web",
+      "known_at": 3
+    },
+    {
+      "name": "Buscador",
+      "facet": "Internet y la web",
+      "known_at": 4
+    },
+    {
+      "name": "Virus informático",
+      "facet": "Internet y la web",
+      "known_at": 4
+    },
+    {
+      "name": "Twitter",
+      "facet": "Internet y la web",
+      "known_at": 5
+    },
+    {
+      "name": "Navegador web",
+      "facet": "Internet y la web",
+      "known_at": 6
+    },
+    {
+      "name": "Spam",
+      "facet": "Internet y la web",
+      "known_at": 7
+    },
+    {
+      "name": "Router",
+      "facet": "Internet y la web",
+      "known_at": 8
+    },
+    {
+      "name": "Hipervínculo",
+      "facet": "Internet y la web",
+      "known_at": 9
+    },
+    {
+      "name": "Dirección IP",
+      "facet": "Internet y la web",
+      "known_at": 11
+    },
+    {
+      "name": "Cargador",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 1
+    },
+    {
+      "name": "Tableta",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 2
+    },
+    {
+      "name": "Selfie",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 2
+    },
+    {
+      "name": "Pantalla táctil",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 3
+    },
+    {
+      "name": "Audífonos inalámbricos",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 3
+    },
+    {
+      "name": "Aplicación",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 3
+    },
+    {
+      "name": "Reloj inteligente",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 4
+    },
+    {
+      "name": "Código QR",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 4
+    },
+    {
+      "name": "Smartphone",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 5
+    },
+    {
+      "name": "Lector de huella",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 5
+    },
+    {
+      "name": "Android",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 6
+    },
+    {
+      "name": "Nokia",
+      "facet": "Celulares y aparatos portátiles",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Bros",
+      "facet": "Videojuegos y consolas",
+      "known_at": 1
+    },
+    {
+      "name": "Minecraft",
+      "facet": "Videojuegos y consolas",
+      "known_at": 1
+    },
+    {
+      "name": "Pokémon",
+      "facet": "Videojuegos y consolas",
+      "known_at": 1
+    },
+    {
+      "name": "PlayStation",
+      "facet": "Videojuegos y consolas",
+      "known_at": 2
+    },
+    {
+      "name": "Nintendo Switch",
+      "facet": "Videojuegos y consolas",
+      "known_at": 2
+    },
+    {
+      "name": "Sonic",
+      "facet": "Videojuegos y consolas",
+      "known_at": 2
+    },
+    {
+      "name": "Roblox",
+      "facet": "Videojuegos y consolas",
+      "known_at": 2
+    },
+    {
+      "name": "Control de videojuegos",
+      "facet": "Videojuegos y consolas",
+      "known_at": 2
+    },
+    {
+      "name": "Xbox",
+      "facet": "Videojuegos y consolas",
+      "known_at": 3
+    },
+    {
+      "name": "Fortnite",
+      "facet": "Videojuegos y consolas",
+      "known_at": 3
+    },
+    {
+      "name": "Nintendo",
+      "facet": "Videojuegos y consolas",
+      "known_at": 3
+    },
+    {
+      "name": "Donkey Kong",
+      "facet": "Videojuegos y consolas",
+      "known_at": 5
+    },
+    {
+      "name": "Realidad virtual",
+      "facet": "Videojuegos y consolas",
+      "known_at": 5
+    },
+    {
+      "name": "Link",
+      "facet": "Videojuegos y consolas",
+      "known_at": 8
+    },
+    {
+      "name": "Atari",
+      "facet": "Videojuegos y consolas",
+      "known_at": 11
+    },
+    {
+      "name": "Robot",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 1
+    },
+    {
+      "name": "Baymax",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 2
+    },
+    {
+      "name": "Robot aspiradora",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 3
+    },
+    {
+      "name": "Dron",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 3
+    },
+    {
+      "name": "C-3PO",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 4
+    },
+    {
+      "name": "Alexa",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 4
+    },
+    {
+      "name": "Asistente de voz",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 4
+    },
+    {
+      "name": "Inteligencia artificial",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 5
+    },
+    {
+      "name": "ChatGPT",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 5
+    },
+    {
+      "name": "Siri",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 5
+    },
+    {
+      "name": "Brazo robótico",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 5
+    },
+    {
+      "name": "Carro autónomo",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 6
+    },
+    {
+      "name": "Androide",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 7
+    },
+    {
+      "name": "Terminator",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 9
+    },
+    {
+      "name": "Test de Turing",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 12
+    },
+    {
+      "name": "Isaac Asimov",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 13
+    },
+    {
+      "name": "Leyes de la robótica",
+      "facet": "Robots e inteligencia artificial",
+      "known_at": 13
+    },
+    {
+      "name": "Licuadora",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 1
+    },
+    {
+      "name": "Televisor",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 1
+    },
+    {
+      "name": "Control remoto",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 1
+    },
+    {
+      "name": "Ventilador",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 1
+    },
+    {
+      "name": "Secador de pelo",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Timbre",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Olla arrocera",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Cafetera",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Lavaplatos",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Freidora de aire",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 4
+    },
+    {
+      "name": "Termostato",
+      "facet": "Electrodomésticos y tecnología del hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Cable",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 1
+    },
+    {
+      "name": "Enchufe",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 2
+    },
+    {
+      "name": "Imán",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 2
+    },
+    {
+      "name": "Cortocircuito",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 6
+    },
+    {
+      "name": "Conductor eléctrico",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 8
+    },
+    {
+      "name": "Batería de litio",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 9
+    },
+    {
+      "name": "Voltio",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 10
+    },
+    {
+      "name": "Fusible",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 10
+    },
+    {
+      "name": "Vatio",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 11
+    },
+    {
+      "name": "Dínamo",
+      "facet": "Electricidad, energía y baterías",
+      "known_at": 11
+    },
+    {
+      "name": "Meme",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 4
+    },
+    {
+      "name": "Gamer",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 4
+    },
+    {
+      "name": "USB",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 5
+    },
+    {
+      "name": "PDF",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 6
+    },
+    {
+      "name": "Píxel",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 6
+    },
+    {
+      "name": "Hacker",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 6
+    },
+    {
+      "name": "Streaming",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 6
+    },
+    {
+      "name": "GIF",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 6
+    },
+    {
+      "name": "Gigabyte",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 7
+    },
+    {
+      "name": "Lag",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 7
+    },
+    {
+      "name": "Captcha",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 8
+    },
+    {
+      "name": "Backup",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 8
+    },
+    {
+      "name": "Bug",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 9
+    },
+    {
+      "name": "CPU",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 9
+    },
+    {
+      "name": "Bit",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 10
+    },
+    {
+      "name": "URL",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 10
+    },
+    {
+      "name": "Cookies",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 10
+    },
+    {
+      "name": "HTML",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 11
+    },
+    {
+      "name": "Phishing",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 11
+    },
+    {
+      "name": "Software libre",
+      "facet": "Siglas y jerga tecnológica",
+      "known_at": 12
+    },
+    {
+      "name": "Apple",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 2
+    },
+    {
+      "name": "Samsung",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 3
+    },
+    {
+      "name": "Microsoft",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 4
+    },
+    {
+      "name": "Amazon",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 4
+    },
+    {
+      "name": "Sony",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 5
+    },
+    {
+      "name": "Elon Musk",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 5
+    },
+    {
+      "name": "Tesla (empresa)",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 6
+    },
+    {
+      "name": "Rappi",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 6
+    },
+    {
+      "name": "Jeff Bezos",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 9
+    },
+    {
+      "name": "IBM",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 10
+    },
+    {
+      "name": "Silicon Valley",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 10
+    },
+    {
+      "name": "Intel",
+      "facet": "Empresas y pioneros tecnológicos",
+      "known_at": 10
+    },
+    {
+      "name": "Máquina de escribir",
+      "facet": "Historia de la computación",
+      "known_at": 4
+    },
+    {
+      "name": "Windows",
+      "facet": "Historia de la computación",
+      "known_at": 5
+    },
+    {
+      "name": "Disquete",
+      "facet": "Historia de la computación",
+      "known_at": 6
+    },
+    {
+      "name": "Chip",
+      "facet": "Historia de la computación",
+      "known_at": 7
+    },
+    {
+      "name": "Computador personal",
+      "facet": "Historia de la computación",
+      "known_at": 8
+    },
+    {
+      "name": "Código binario",
+      "facet": "Historia de la computación",
+      "known_at": 8
+    },
+    {
+      "name": "Macintosh",
+      "facet": "Historia de la computación",
+      "known_at": 10
+    },
+    {
+      "name": "Tarjeta perforada",
+      "facet": "Historia de la computación",
+      "known_at": 12
+    },
+    {
+      "name": "ARPANET",
+      "facet": "Historia de la computación",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de Moore",
+      "facet": "Historia de la computación",
+      "known_at": 14
+    },
+    {
+      "name": "Bletchley Park",
+      "facet": "Historia de la computación",
+      "known_at": 14
+    },
+    {
+      "name": "Válvula de vacío",
+      "facet": "Historia de la computación",
+      "known_at": 14
+    },
+    {
+      "name": "Cámara fotográfica",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 1
+    },
+    {
+      "name": "Parlante",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Cine 3D",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 3
+    },
+    {
+      "name": "CD",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 4
+    },
+    {
+      "name": "DVD",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 4
+    },
+    {
+      "name": "Memoria USB",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 4
+    },
+    {
+      "name": "Proyector",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 4
+    },
+    {
+      "name": "Tarjeta de memoria",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Impresora 3D",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Blu-ray",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 7
+    },
+    {
+      "name": "MP3",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 7
+    },
+    {
+      "name": "Holograma",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 7
+    },
+    {
+      "name": "Rollo fotográfico",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 8
+    },
+    {
+      "name": "Polaroid",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 8
+    },
+    {
+      "name": "VHS",
+      "facet": "Imagen, sonido y almacenamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Antena parabólica",
+      "facet": "Tecnología espacial y satélites",
+      "known_at": 5
+    },
+    {
+      "name": "Starlink",
+      "facet": "Tecnología espacial y satélites",
+      "known_at": 9
+    },
+    {
+      "name": "Rover Curiosity",
+      "facet": "Tecnología espacial y satélites",
+      "known_at": 10
+    },
+    {
+      "name": "Sonda Voyager",
+      "facet": "Tecnología espacial y satélites",
+      "known_at": 11
+    },
+    {
+      "name": "Rover Perseverance",
+      "facet": "Tecnología espacial y satélites",
+      "known_at": 11
+    },
+    {
+      "name": "Cohete Saturno V",
+      "facet": "Tecnología espacial y satélites",
+      "known_at": 12
+    }
+  ]
+}
