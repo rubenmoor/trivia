@@ -16,7 +16,7 @@ Milestones and open tasks: [`plans/project.md`](plans/project.md). Where each fi
 
 ## Getting started
 
-You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus the commands `trivia`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts.
+You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus the commands `trivia`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
 
 ```sh
 git clone https://github.com/rubenmoor/trivia.git && cd trivia
@@ -119,5 +119,5 @@ The package contains only `app/`. It keeps its saves and media cache in `$XDG_DA
 
 ### Update dependencies
 
-- `nix flake update` updates Node, Python, ImageMagick and Claude Code (`flake.lock`); `direnv reload` after editing `flake.nix`.
+- `nix flake update` updates Node, Python, ImageMagick, Claude Code and `pm` (`flake.lock`); `direnv reload` after editing `flake.nix`.
 - After changing `package-lock.json`, update `npmDepsHash` in `flake.nix` (`nix run nixpkgs#prefetch-npm-deps -- package-lock.json`).

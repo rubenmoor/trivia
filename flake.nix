@@ -10,9 +10,16 @@
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
   description = "Family trivia party game";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # `pm`, the project manager CLI, in the dev shell only.
+    pm = {
+      url = "github:rubenmoor/project-manager";
+      inputs.nixpkgs.follows = "nixpkgs";  # one nixpkgs for both
+    };
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, pm }:
     let
       systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       forAll = f: nixpkgs.lib.genAttrs systems (system: f (import nixpkgs {
@@ -86,7 +93,7 @@
             packages = [
               pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev
-            ];
+            ] ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
           };
         });
     };
