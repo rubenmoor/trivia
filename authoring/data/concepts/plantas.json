@@ -917,6 +917,16 @@
       "name": "Planta de WALL·E",
       "facet": "Plantas en cuentos, cine y juegos",
       "known_at": 6
+    },
+    {
+      "name": "Cáscara",
+      "facet": "Partes de la planta",
+      "known_at": 1
+    },
+    {
+      "name": "Liquen",
+      "facet": "Plantas curiosas y extremas",
+      "known_at": 6
     }
   ]
 }

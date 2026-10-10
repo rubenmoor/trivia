@@ -28,7 +28,7 @@
         "credit": "Estebanhphoto · CC BY 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Colombia es uno de los mayores productores de café del mundo, y su café es famoso por ser suave.",
-      "subcategory": "Bebidas colombianas",
+      "subcategory": "Bebidas",
       "style": null,
       "quality": null,
       "fact_checked": null,
@@ -44,7 +44,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": "Café",
+      "concept": null,
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -165,7 +165,7 @@
         "credit": "William Neuheisel from DC, US · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "La arepa de huevo es típica de la Costa Caribe: ¡se fríe con un huevo adentro!",
-      "subcategory": "Platos típicos colombianos",
+      "subcategory": "Comida latinoamericana",
       "style": null,
       "quality": {
         "correct": 5,
@@ -219,7 +219,7 @@
         "credit": "Niek van Son · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Bogotá está a unos 2.640 metros sobre el nivel del mar: ¡más cerca de las estrellas!",
-      "subcategory": "Ciudades de Colombia",
+      "subcategory": "Capitales del mundo",
       "style": null,
       "quality": {
         "correct": 5,
@@ -414,7 +414,7 @@
         "credit": "Osama Shukir Muhammed Amin FRCP(Glasg) · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "A Gabo le encantaban las rosas amarillas: decía que le daban buena suerte.",
-      "subcategory": "Colombianos famosos",
+      "subcategory": "Literatura",
       "style": null,
       "quality": {
         "correct": 5,
@@ -2217,7 +2217,7 @@
         "credit": "Diferoch · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Una sola de estas ranas tiene veneno suficiente para unas 10 personas.",
-      "subcategory": "Animales de Colombia",
+      "subcategory": "Anfibios",
       "style": null,
       "quality": {
         "correct": 4,
@@ -4169,7 +4169,7 @@
         "credit": "fading · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "'Waka Waka' es uno de los videos musicales más vistos de la historia en YouTube.",
-      "subcategory": "Cantantes colombianos",
+      "subcategory": "Mundiales de fútbol",
       "style": null,
       "quality": {
         "correct": 3,
@@ -4762,7 +4762,7 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "colombia"
     },
     {
       "id": "q-0072",
@@ -8694,7 +8694,7 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "colombia"
     },
     {
       "id": "q-0134",
@@ -11640,7 +11640,7 @@
         "credit": "Jdvillalobos · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "La palabra 'empanada' viene de 'empanar', que significa envolver algo en masa o pan.",
-      "subcategory": "Platos típicos colombianos",
+      "subcategory": "Comida latinoamericana",
       "style": "showing a zoomed-in detail of a picture and asking what it is",
       "quality": {
         "correct": 5,
@@ -12052,7 +12052,7 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "colombia"
     },
     {
       "id": "q-0194",
@@ -22729,7 +22729,7 @@
         "credit": "Ruth Hartnup from Vancouver, Canada · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Si las claras quedan bien batidas, puedes voltear el recipiente sobre tu cabeza y no se caen.",
-      "subcategory": "Postres colombianos",
+      "subcategory": "Comida latinoamericana",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -22783,7 +22783,7 @@
         "credit": "User:Ing.anamz · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "La breva es el primer fruto del año de la higuera; el segundo, que sale después, es el higo.",
-      "subcategory": "Postres colombianos",
+      "subcategory": "Árboles",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 4,
@@ -24827,7 +24827,7 @@
         "credit": "Dtarazona · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "En Cartagena, las palenqueras venden cocadas de muchos sabores, como de guayaba, de piña y hasta de leche.",
-      "subcategory": "Postres colombianos",
+      "subcategory": "Comida latinoamericana",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -24881,7 +24881,7 @@
         "credit": "Juan Emilio Prades Bel · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "El arroz con leche se prepara en casi todos los países de habla hispana, y hasta tiene una canción infantil: 'Arroz con leche, me quiero casar'.",
-      "subcategory": "Postres colombianos",
+      "subcategory": "Comida latinoamericana",
       "style": "showing a zoomed-in detail of a picture and asking what it is",
       "quality": {
         "correct": 5,
@@ -26621,7 +26621,7 @@
         "credit": "Nafisathallah · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "El camarón pistola cierra su tenaza tan rápido que hace un chasquido fortísimo bajo el agua, capaz de aturdir a sus presas.",
-      "subcategory": "Dichos colombianos",
+      "subcategory": "Idioma",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -26974,7 +26974,7 @@
         "credit": null
       },
       "fun_fact": "Según la leyenda, las cabras del pastor Kaldi se pusieron a brincar como locas después de comerse los frutos del café.",
-      "subcategory": "Bebidas colombianas",
+      "subcategory": "Bebidas",
       "style": "where does it come from (origin of a food, invention or animal)",
       "quality": {
         "correct": 4,
@@ -27000,7 +27000,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": "Etiopía",
+      "concept": null,
       "axes": {
         "move": "origin",
         "stimulus": "none",
@@ -28757,7 +28757,7 @@
         "credit": "Giridhar Appaji Nag Y · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Colombia es uno de los países que más panela producen y consumen en el mundo.",
-      "subcategory": "Bebidas colombianas",
+      "subcategory": "Bebidas",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -28783,7 +28783,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": "Panela",
+      "concept": null,
       "axes": {
         "move": "made_of",
         "stimulus": "none",
@@ -28989,7 +28989,7 @@
         "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Juan Valdez no es una persona real: es un personaje que se inventó a finales de los años 50, y desde entonces varios hombres lo han interpretado, siempre con su mula Conchita.",
-      "subcategory": "Colombianos famosos",
+      "subcategory": "Bebidas",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -29015,7 +29015,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": "Juan Valdez",
+      "concept": null,
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -29801,7 +29801,7 @@
         "credit": "Greenlindae · CC0 · Wikimedia Commons"
       },
       "fun_fact": "La Llorona es una de las leyendas más conocidas de América Latina: hay versiones en Colombia, México, Venezuela y muchos otros países.",
-      "subcategory": "Leyendas colombianas",
+      "subcategory": "Leyendas y supersticiones",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -29827,7 +29827,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": "La Llorona",
+      "concept": null,
       "axes": {
         "move": "cause_effect",
         "stimulus": "none",
@@ -30610,7 +30610,7 @@
         "credit": "Grombo · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "A las bromas de ese día se les dice 'inocentadas', y en algunos países hasta los periódicos publican noticias falsas de chiste.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Celebraciones del mundo",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -31544,7 +31544,7 @@
         "credit": "Garst, Warren, 1922-2016, photographer · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "El saíno tiene una glándula en la espalda que suelta un olor fuerte, y la manada lo usa para reconocerse entre sí.",
-      "subcategory": "Animales de Colombia",
+      "subcategory": "Mamíferos",
       "style": null,
       "concept": "Saíno",
       "axes": {
@@ -31606,7 +31606,7 @@
         "credit": "U. S. Fish and Wildlife Service - Northeast Region · Public domain · Wikimedia Commons"
       },
       "fun_fact": "Las semillas de cacao son tan amargas recién sacadas de la mazorca que nadie las confundiría con chocolate.",
-      "subcategory": "Bebidas colombianas",
+      "subcategory": "Plantas del Amazonas",
       "style": null,
       "concept": "Cacao",
       "axes": {
@@ -31792,7 +31792,7 @@
         "credit": "Hemstead · CC0 · Wikimedia Commons"
       },
       "fun_fact": "En Colombia a los directores técnicos también les dicen 'profe', aunque no den clases en ningún colegio.",
-      "subcategory": "Clubes de fútbol colombianos",
+      "subcategory": "Fútbol",
       "style": null,
       "concept": "Director técnico",
       "axes": {
@@ -32288,7 +32288,7 @@
         "credit": "Uhernandez · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Las procesiones de Semana Santa de Popayán fueron declaradas Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2009.",
-      "subcategory": "Fiestas colombianas",
+      "subcategory": "Celebraciones del mundo",
       "style": null,
       "concept": "Pasos de Semana Santa",
       "axes": {
@@ -32784,9 +32784,9 @@
         "credit": "Grand Canyon NPS · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Nadie sabe con certeza de dónde salió el agüero de no pasar debajo de una escalera, aunque hay muchas teorías sobre su origen.",
-      "subcategory": "Leyendas colombianas",
+      "subcategory": "Leyendas y supersticiones",
       "style": null,
-      "concept": "Pasar debajo de una escalera",
+      "concept": null,
       "axes": {
         "move": "connection",
         "stimulus": "none",
@@ -32846,9 +32846,9 @@
         "credit": "Daniele from Domodossola, Italia · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Según la tradición popular, la pata que traía más suerte era la trasera izquierda del conejo.",
-      "subcategory": "Leyendas colombianas",
+      "subcategory": "Leyendas y supersticiones",
       "style": null,
-      "concept": "Pata de conejo",
+      "concept": null,
       "axes": {
         "move": "name_concept",
         "stimulus": "none",
@@ -33781,7 +33781,7 @@
         "credit": "Mstyslav Chernov · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Bahía Concha queda dentro del Parque Nacional Natural Tayrona, a pocos minutos de Santa Marta.",
-      "subcategory": "Parques naturales de Colombia",
+      "subcategory": "Mar",
       "style": null,
       "concept": "Bahía Concha",
       "axes": {
@@ -34029,9 +34029,9 @@
         "credit": "Jonathon Jongsma · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Los cuervos son tan inteligentes que pueden recordar la cara de una persona durante años.",
-      "subcategory": "Animales de Colombia",
+      "subcategory": "Aves",
       "style": null,
-      "concept": "Cría cuervos y te sacarán los ojos",
+      "concept": null,
       "axes": {
         "move": "identify",
         "stimulus": "sound",
@@ -34282,7 +34282,7 @@
         "credit": "Japalac · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "En el Carnaval de Barranquilla desfilan cada año miles de carnavaleros, y muchos preparan su disfraz durante meses.",
-      "subcategory": "Carnaval de Barranquilla",
+      "subcategory": "Celebraciones del mundo",
       "style": null,
       "concept": "Carnavalero",
       "axes": {
@@ -34654,7 +34654,7 @@
         "credit": "momentcaptured1 · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "En muchos países anglosajones el día de las bromas es el 1 de abril, pero en España y en buena parte de Latinoamérica es el 28 de diciembre.",
-      "subcategory": "Fiestas colombianas",
+      "subcategory": "Celebraciones del mundo",
       "style": null,
       "concept": "Día de los Santos Inocentes",
       "axes": {
@@ -34778,7 +34778,7 @@
         "credit": "Ivar Leidus · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Las tres capas juntas (epicarpio, mesocarpio y endocarpio) forman el pericarpio, la pared completa del fruto.",
-      "subcategory": "Frutas exóticas de Colombia",
+      "subcategory": "Plantas",
       "style": null,
       "concept": "Cáscara",
       "axes": {
@@ -35584,7 +35584,7 @@
         "credit": "Peter D. Tillman from USA · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "El papel tornasol, que cambia de color con los ácidos, se hacía originalmente con tintes sacados de líquenes.",
-      "subcategory": "Parques naturales de Colombia",
+      "subcategory": "Plantas",
       "style": null,
       "concept": "Liquen",
       "axes": {

@@ -872,6 +872,11 @@
       "name": "Anfibio más venenoso",
       "facet": "Récords y gigantes anfibios",
       "known_at": 9
+    },
+    {
+      "name": "Rana dorada",
+      "facet": "Ranas venenosas y colores de advertencia",
+      "known_at": 4
     }
   ]
 }

@@ -734,6 +734,11 @@
       "name": "Kawchu",
       "facet": "Nombres indígenas de plantas",
       "known_at": 15
+    },
+    {
+      "name": "Cacao",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 2
     }
   ]
 }

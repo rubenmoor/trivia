@@ -394,6 +394,13 @@ Template:
 - Consequences: Bigger media cache; the Steam build's re-encode resizes to 3840 px, not 2560 (18). IMG-16 changes the providers and ranking; IMG-17 brings existing picks up to 4K where their source allows it.
 - Supersedes / related: D-13, D-17, D-45; IMG-3, IMG-16, IMG-17
 
+## D-49: A `base` question uses a `base` subcategory
+- Date: 2026-10-09
+- Context: D-43 let a question keep a subcategory from another bundle's list, so 32 `base` questions (the capital of Colombia, coffee, Shakira, arepas, …) still sat in `colombia`'s subcategories. The gamemaster wants `colombia`'s categories and subcategories to have no `base` questions: a broad category belongs to one bundle, and so do its questions.
+- Decision: A `base` question's subcategory comes from `base`'s own list. A question that fits `base` but sits in a Colombian subcategory moves to the `base` subcategory that fits it. One that needs a connection to Colombia moves to `colombia` and keeps its subcategory. Where `base` has no fitting subcategory, `base` gets a new one: «Bebidas», «Comida latinoamericana» (Comida y bebida) and «Leyendas y supersticiones» (Mitos y leyendas). A moved question keeps its concept when the target subcategory has a concept list, and the concept is added to that list if it's missing. Without a list the concept is cleared, and the next `base` batch makes the list (D-37). `validate` fails on a `base` question in another bundle's subcategory.
+- Consequences: `base` has 116 subcategories. The three new ones are the thinnest, so the next `base` batch picks them (D-46). The other direction (a `colombia` question in a `base` subcategory) is still allowed, see OQ-46.
+- Supersedes / related: D-43 (the sentence "a question may keep a subcategory from another bundle's list", for `base` questions); D-19, D-37, D-39; BN-13
+
 ## D-50: Store name «Living Room Trivia», «Trivia en Familia» in Spanish
 - Date: 2026-10-09
 - Context: OQ-34: «¡Trivia!» is generic and hard to find on Steam. The game will get single-player modes and a competitive couch mode with timers (13), so a name built on the family co-op or the 12-in-a-row ladder (e.g. «Doce en Raya») would set the wrong expectations. The name should say: a classic quiz, best played as a group on the TV, no twist, no gimmick, a smooth game that rewards knowing things. Steamworks lets a game set a localized name per language; a customer whose Steam runs in that language sees it in the store and the library, and it follows the same limits as a name change.

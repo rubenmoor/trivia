@@ -757,6 +757,21 @@
       "name": "Día de la Reunificación alemana",
       "facet": "Fiestas nacionales y patrias",
       "known_at": 13
+    },
+    {
+      "name": "Pasos de Semana Santa",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 8
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 4
+    },
+    {
+      "name": "Carnavalero",
+      "facet": "Carnavales y desfiles",
+      "known_at": 3
     }
   ]
 }

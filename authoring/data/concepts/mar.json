@@ -1112,6 +1112,11 @@
       "name": "Capitán Nemo",
       "facet": "El mar en películas y leyendas",
       "known_at": 11
+    },
+    {
+      "name": "Bahía Concha",
+      "facet": "Costas, playas e islas",
+      "known_at": 10
     }
   ]
 }

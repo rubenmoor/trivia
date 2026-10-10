@@ -9,7 +9,9 @@
       "Comida italiana",
       "Comida mexicana",
       "Comida japonesa",
-      "Comida rápida"
+      "Comida rápida",
+      "Comida latinoamericana",
+      "Bebidas"
     ]},
     {"slug": "geografia-mundo", "name": "Geografía del mundo", "subcategories": [
       "Continentes",
@@ -103,7 +105,8 @@
       "Dioses griegos",
       "Héroes griegos",
       "Mitología romana",
-      "Mitología nórdica"
+      "Mitología nórdica",
+      "Leyendas y supersticiones"
     ]},
     {"slug": "musica", "name": "Música", "subcategories": [
       "Instrumentos musicales",

@@ -1137,6 +1137,11 @@
       "name": "Macrauquenia",
       "facet": "Mamíferos extintos y en peligro",
       "known_at": 14
+    },
+    {
+      "name": "Saíno",
+      "facet": "Mamíferos de Colombia y Suramérica",
+      "known_at": 12
     }
   ]
 }

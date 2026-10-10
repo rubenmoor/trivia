@@ -912,6 +912,11 @@
       "name": "Mia Hamm",
       "facet": "Fútbol femenino",
       "known_at": 14
+    },
+    {
+      "name": "Director técnico",
+      "facet": "Jerga y vocabulario futbolero",
+      "known_at": 2
     }
   ]
 }

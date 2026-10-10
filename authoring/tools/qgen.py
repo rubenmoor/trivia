@@ -1610,6 +1610,8 @@ def validate_pool():
             if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
                 errors.append(f"{qid}: review.previous must be an llm review under a human one")
         if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in any bundle's categories (D-19, D-43)")
+        elif q.get("bundle") == "base" and subcategories[q["subcategory"]]["bundle"] != "base":
+            errors.append(f"{qid}: a base question needs a subcategory from base's categories (D-49)")
         if q.get("bundle") not in bundle_ids: errors.append(f"{qid}: bundle must be one of app/data/bundles.json (D-39)")
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
