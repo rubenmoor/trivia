@@ -343,6 +343,43 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (10, 10, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (11, 11, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (12, 1, 'Targets and progress', 700, 'Part 1 of the masterplan (plan 1). The `base` bundle grows to 5000 approved questions (D-52), with a target per difficulty that tapers at the top. This plan stores those targets where the authoring tools can read them, shows approved vs. target in `qgen report` and on `/stats/difficulty`, and turns the milestone''s "done when" into one command that says pass or fail.
+
+## Targets file (D-53)
+- New `authoring/data/targets.json`, keyed by bundle: `{"about": "…", "base": {"total": 5000, "difficulty": {"1": n, …, "15": n}}}`.
+- Numbers: pm decision 1 (recommended: 1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each).
+- Loader in `authoring/tools/` (e.g. `load_targets(bundle)` in `qgen.py`, or a small `targets.py` if the server also imports it); `None` for a bundle without targets.
+- `qgen validate`: levels = the scale in `app/data/age-groups.json`, every value ≥ 0, sum = `total`.
+- Per category: no stored number. Derived share = `total × subcategories in category / subcategories in bundle`; shown as a guide, not part of the exit check.
+- Part 2 (aim batches at gaps, plan for task 14) reads the same loader for `draft`''s weights; this plan only provides it.
+
+## Progress view
+- `qgen report`: new section "progress vs. targets (base)": per difficulty `approved / target`, missing count, percent; total line; per broad category `approved / derived share`. Approved = status `approved`, bundle `base`, regardless of burns. `--bundle <id>` for another bundle with targets.
+- Authoring server: `GET /api/targets` (the file as JSON); doc line in `authoring/server/main.py`''s docstring.
+- `/stats/difficulty` (`authoring/ui/src/stats/DifficultyChart.svelte`): a target marker per bar (tick or outline) and `approved / target` in the bar''s label, when the selected bundle has targets. `fetchTargets` in `authoring/ui/src/lib/api.ts`, type in `lib/types.ts`.
+- `/stats/categories`: approved vs. derived share per broad category, same style. Only if it fits the existing chart without a redesign; otherwise leave it to `qgen report`.
+- `npm run check` clean; check the page in the browser with `trivia-authoring`.
+
+## Exit check ("quality is fine")
+- `qgen report --exit-check` (or a `qgen milestone` subcommand; pick the one that fits `qgen.py`''s CLI): one line per criterion, ✓/✗, exit 1 if any fails:
+  - approved `base` ≥ 5000;
+  - every difficulty ≥ its target;
+  - the last two committed `base` batches pass part 4''s thresholds (plan for task 16: per-batch health metrics, `authoring/reports/<batch>.md`);
+  - the last two batches'' human spot checks agree with the LLM review at the rate of pm decision 2, with at least its sample size (part 5, plan for task 17, records them);
+  - `qgen validate` clean.
+- Reads part 4''s metrics and part 5''s spot-check records; doesn''t compute them. Until those exist, the criterion prints "not available" and counts as ✗.
+- Write the agreed criteria (decision 2''s numbers) into `plans/16-content-target.md` "Quality bar" as the family pool''s bar, and close CT-5''s question there for the family pool.
+
+## Tasks (for the split)
+1. Targets file, loader, `validate` check, D-53 already logged. Waits for pm decision 1.
+2. `qgen report` progress section. Waits for decision 1 (needs the file).
+3. `/api/targets` and target markers on `/stats/difficulty` (+ categories if cheap). Waits for decision 1. Priority 500 (client).
+4. Exit check. Waits for decision 2; runs after the tooling of parts 4 and 5 (priority 640).
+
+## Done when
+- `qgen report` prints approved vs. target per difficulty and per category for `base`.
+- `/stats/difficulty` shows the targets.
+- The exit check runs and, today, fails on the count criteria with the right numbers.', '2026-10-11T23:39:28Z', 13);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -379,12 +416,12 @@ divided into parts. State in the masterplan that its own tasks are not implement
 plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (12, 1, 'create tasks for plan 1', 'split', 'done', 1000, '2026-10-11, tasks 13–18 (plans for parts 1–6), decisions 1–3 (difficulty targets, QC threshold, needs_work handling)', 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:15:47Z', '2026-10-11T23:16:53Z', 1);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (13, 1, 'write plan: targets and progress', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of the masterplan (plan 1): `pm plan add 1 "Targets and progress" --priority 700`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (13, 1, 'write plan: targets and progress', 'plan', 'done', 1000, '2026-10-11, plan 12 (Targets and progress), plans/decisions.md (D-53)', 'Write the plan for part 1 of the masterplan (plan 1): `pm plan add 1 "Targets and progress" --priority 700`.
 
 - Target count per difficulty 1–15, summing to 5000: decision 1. Store them where `qgen` and the authoring server can read them (e.g. a file under `authoring/data/` or `app/data/age-groups.json`; pick and log a D-entry).
 - Progress view: approved vs. target per difficulty and per category in `qgen report` and `/stats/difficulty`.
 - The milestone''s exit check: ≥ 5000 approved, every level at target, quality criteria from decision 2 (spot-check size, agreement rate) and part 4''s thresholds.
-- Tasks that need decision 1 or 2: link them with `pm task-pending-decision`.', '2026-10-11T23:16:50Z', NULL, 12);
+- Tasks that need decision 1 or 2: link them with `pm task-pending-decision`.', '2026-10-11T23:16:50Z', '2026-10-11T23:39:30Z', 12);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (14, 1, 'write plan: aim batches at difficulty gaps', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 1, B-6): `pm plan add 1 "Aim batches at difficulty gaps" --priority 700`.
 
 - `draft` draws target difficulties weighted by the gap to part 1''s targets (decision 1), not evenly (D-40); subcategory choice should consider difficulty gaps too.
@@ -416,6 +453,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - needs_work handling per decision 3 (RUNBOOK: `qgen rework` only on the gamemaster''s word).
 - Watch media yield; if missing media limits throughput, propose a new plan with `plans/06-images.md`, `plans/23-media-providers.md`, IMG-16/17.
 - Last task: the exit check from part 1, plus `qgen validate` and `trivia-media sync --status approved`.', '2026-10-11T23:16:50Z', NULL, 12);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (19, 12, 'create tasks for plan 12', 'split', 'open', 1000, NULL, 'Split plan 12 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:39:28Z', NULL, 13);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -427,3 +466,4 @@ Rework costs LLM calls but saves the gamemaster''s time; overlaps (once part 4 d
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (3, 13, '2026-10-11T23:38:39Z', '2026-10-11T23:39:37Z', 'done', NULL, 0, '695c887e9c67db86f9ee0d3940dbc6cdd1f21c7c', 'claude-opus-5-5[1m]', 'cdb8babf-965b-40c1-b805-81625b28c7ff', 10, 20, 5455, 395561, 43117, 0.5332282, 80113);

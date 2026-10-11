@@ -421,3 +421,10 @@ Template:
 - Decision: The `base` bundle grows to 5000 approved questions. Fewer at high difficulties is fine, but each level gets a target (pm milestone 1, part 1).
 - Consequences: About 8 more `base` batches (D-46). Each batch is followed by quality control; batch runs have the lowest priority (-100), after any implementation work.
 - Supersedes / related: D-6 (~120 questions), D-22, D-38, D-46; OQ-17, B-6
+
+## D-53: Pool targets live in `authoring/data/targets.json`
+- Date: 2026-10-11
+- Context: D-52 sets 5000 approved `base` questions with a target per difficulty (pm milestone 1, part 1). `qgen` (report, `draft`'s gap weighting) and the authoring server (`/stats/difficulty`) both need the numbers; the game doesn't.
+- Decision: A new file `authoring/data/targets.json`, keyed by bundle: `{"base": {"total": 5000, "difficulty": {"1": n, …, "15": n}}}`. Authoring-only, so not in `app/data/age-groups.json` (D-35: what the game doesn't need stays in `authoring/`). Per-category targets aren't stored: they follow from the total and the bundle's subcategory count. A bundle without an entry has no targets.
+- Consequences: `qgen validate` checks the file (levels match the scale, sum = total). The authoring server serves it at `/api/targets`. The difficulty numbers come from pm decision 1.
+- Supersedes / related: D-35, D-38, D-40, D-52
