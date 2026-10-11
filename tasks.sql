@@ -575,6 +575,37 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The gamemaster can do a blind spot check of a batch in the review tool, and it is recorded in `spot-checks.json`.
 - `qgen report --qc` shows agreement per batch against decision 2''s rate; plan 12''s exit check can read it.
 - `authoring/QC.md` describes steps 1–5, and RUNBOOK points to it.', '2026-10-11T23:48:16Z', 17);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (17, 1, 'Batch runs', -100, 'Part 6 of the masterplan (plan 1). The recurring work of the milestone: finish batch-8, then one `qgen batch` per task, each followed by part 5''s QC, until part 1''s targets are met. Every task here runs `qgen batch` or depends on one, so the plan has priority -100: it runs only when every implementation task is done or waits for a decision. Plan 16 calls this plan "plan 18" (it was task 18''s plan).
+
+## State (2026-10-11)
+- batch-8: `work/batch-8` (WIP commit d7fb13f, on `main`): 57 subcategories in `run.json`, 61 draft files, ~$1.6 in `costs.log`. Resumes with plain `qgen batch` (RUNBOOK).
+- Approved `base`: 1035; needs_work: 33 (batch-7''s reasons: giveaway hints, overlap, no usable media).
+- Depends on: plan 12 (targets, exit check), 13 (aim at gaps), 14 (subcategories), 15 (overlap, health, stop rule), 16 (audit, spot check, `authoring/QC.md`). Their tasks run first by priority; a batch task doesn''t wait for unfinished ones, it uses what exists and says what was missing in its note.
+
+## Batch tasks under `pm run`
+- RUNBOOK clashes with a pm worker in two places: step 1 stops on a dirty tree, but `pm run` keeps `tasks.sql` modified; step 4 commits, but a worker only stages. Fixed once in RUNBOOK (task below): `tasks.sql` alone doesn''t count as dirty; the worker stages exactly the printed `git add` paths and doesn''t commit (pm commits as "task N: …").
+- Exit 75 (usage limit, no reset time): `pm decision add "Continue <batch> after the usage limit?"`, `pm task-pending-decision`, stage nothing, stop. Exit 1 three times at one step, other codes, exit 2 (plan 15''s health stop): same, with the last 30 lines in the decision body.
+- Never inside a batch task: prompt, `qgen.py`, subcategory or media changes (RUNBOOK). Findings become decisions or tasks in their own plans.
+
+## Per-batch pattern
+1. **Batch task** `run batch-<n>` (-100): RUNBOOK steps 1–5. Note: "Done:" line, report path.
+2. **QC task** `QC batch-<n>` (-100): `authoring/QC.md` (plan 16): spot-check decision ("Spot check <batch> done?", the task waits on it), then `qgen report --qc <batch>` and the proposals decision ("QC <batch>: which changes?"). Approved proposals become tasks in plans 13–16 (their priority, so above -100). Missing tooling: do what exists, list the rest in the note.
+   - Also records: approved/target per difficulty (`qgen report`), needs_work by reason, media yield (questions `needs_work` for no usable media / merged).
+   - Then adds the next pair: `run batch-<n+1>` and `QC batch-<n+1>`, and makes the batch task wait on the QC decisions (`pm task-pending-decision`). If the targets of plan 12 are met (or the next batch would overshoot every remaining gap), it adds the exit-check task instead.
+3. **needs_work** per pm decision 3: a task pending on it handles batch-7/8''s; once answered, every QC task does the same for its batch (e.g. `qgen rework` only if decision 3 says so: that answer is the gamemaster''s word, RUNBOOK).
+- Only one or two batch tasks open at a time, so plans 13–16''s results shape the next batch.
+
+## Media yield
+- QC tasks track no-media `needs_work` / merged per batch (batch-7: part of 112 needs_work).
+- If it is ≥ 10% in two batches in a row, or the top needs_work reason: the QC task adds `pm task add 1 "write plan: media yield" --kind plan` (masterplan), pointing to `plans/06-images.md`, `plans/23-media-providers.md`, IMG-16/17. Once.
+
+## Exit check (last task)
+- `qgen report --exit-check` (plan 12) passes: ≥ 5000 approved `base`, every difficulty at target, last two batches pass health (plan 15) and spot-check agreement (pm decision 2).
+- `qgen validate` clean; `trivia-media sync --status approved` (fills the cache; nothing to stage).
+- Fails: add the batch/QC pair the failure calls for, drop the task with the failing lines as the reason; the next QC task re-adds it.
+
+## Done when
+- The exit-check task is done.', '2026-10-11T23:49:34Z', 18);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -641,13 +672,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - (c) Procedure that turns findings into prompt or house-style changes before the next batch; documented in `authoring/RUNBOOK.md` or a plan file.
 - Trend over batches of the human/LLM disagreement rate.
 - Only the tooling and procedure; the QC runs themselves are tasks of part 6.', '2026-10-11T23:16:50Z', '2026-10-11T23:48:22Z', 12);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (18, 1, 'write plan: batch runs', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 1): `pm plan add 1 "Batch runs" --priority -100`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (18, 1, 'write plan: batch runs', 'plan', 'done', 1000, '2026-10-11, tasks.sql (plan 17: Batch runs)', 'Write the plan for part 6 of the masterplan (plan 1): `pm plan add 1 "Batch runs" --priority -100`.
 
 - Plan priority -100: every task that runs `qgen batch` must run only after all implementation work (milestone 1).
 - First tasks: finish batch-8 (`work/batch-8`, commit d7fb13f) per `authoring/RUNBOOK.md`, then its QC (part 5''s procedure, once that exists), then the next batch. Add batch tasks one or two at a time, not all ~8 up front; the plan says that each batch task adds the next one while targets (part 1) are unmet.
 - needs_work handling per decision 3 (RUNBOOK: `qgen rework` only on the gamemaster''s word).
 - Watch media yield; if missing media limits throughput, propose a new plan with `plans/06-images.md`, `plans/23-media-providers.md`, IMG-16/17.
-- Last task: the exit check from part 1, plus `qgen validate` and `trivia-media sync --status approved`.', '2026-10-11T23:16:50Z', NULL, 12);
+- Last task: the exit check from part 1, plus `qgen validate` and `trivia-media sync --status approved`.', '2026-10-11T23:16:50Z', '2026-10-11T23:49:37Z', 12);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (19, 12, 'create tasks for plan 12', 'split', 'open', 1000, NULL, 'Split plan 12 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:39:28Z', NULL, 13);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (20, 13, 'create tasks for plan 13', 'split', 'open', 1000, NULL, 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -658,6 +689,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', NULL, 16);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (23, 16, 'create tasks for plan 16', 'split', 'open', 1000, NULL, 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:48:16Z', NULL, 17);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (24, 17, 'create tasks for plan 17', 'split', 'open', 1000, NULL, 'Split plan 17 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:49:34Z', NULL, 18);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -674,3 +707,4 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (5, 15, '2026-10-11T23:41:51Z', '2026-10-11T23:44:00Z', 'done', NULL, 0, 'a979e6531d99f0e1e108fd42991906d9b6276453', 'claude-opus-5-5[1m]', '54bd36dd-a66a-4aa3-925f-fb9e8e55c0f8', 16, 32, 12922, 785142, 59246, 0.88956440000000014, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (6, 16, '2026-10-11T23:44:00Z', '2026-10-11T23:46:18Z', 'done', NULL, 0, '935c36d3b4ace0118f044d7942768252932eb593', 'claude-opus-5-5[1m]', 'e0185921-1dee-4604-a220-e5d303e29352', 17, 34, 13786, 823893, 60167, 0.92197059999999986, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (7, 17, '2026-10-11T23:46:18Z', '2026-10-11T23:48:31Z', 'done', NULL, 0, '785f63de17c58a8bd08796231eeca632561842ce', 'claude-opus-5-5[1m]', 'e6f532e2-0f7b-4920-8bb4-37928071b4f0', 13, 24, 12609, 496968, 59600, 0.82846960000000014, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (8, 18, '2026-10-11T23:48:31Z', '2026-10-11T23:49:47Z', 'done', NULL, 0, 'ec3c4411dbc8a830fbcc7b022548022ae86edbc5', 'claude-opus-5-5[1m]', '9a45fda3-74a3-4272-9402-2568736e1756', 10, 18, 6999, 320901, 37758, 0.50629620000000009, 80113);
