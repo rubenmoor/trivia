@@ -333,7 +333,64 @@ Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside;
 - `qgen report` shows ≥ 5000 approved `base` questions, and every difficulty meets part 1''s target.
 - The last two batches pass part 4''s thresholds, and part 5''s human spot checks agree with the LLM review at the agreed rate.
 - `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-11T20:08:18Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'The game referee moves from Python into `app/client/src/engine/`, a pure TypeScript module, with the same rules and the family''s saves kept; afterwards the game runs without Python, which the Steam desktop shell needs. Source plan: `plans/12-client-engine.md` (tasks PORT-1..PORT-8; PORT-6, the pool export, is done).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 2 …`), with its own tasks, files and checks.
+
+## Today (what the parts must cover)
+- `app/server/game.py` (583 lines): players, one running game as a JSON state in `state/game.sqlite` (tables players, games, burned), pick, answer, skip (for the player / for everyone), undo (one step), abandon, delete player, jokers hint/skip/easier/category/snipe with availability checks (`jokers_view`, `trial`), joker budget per game (MD-1, `set_jokers`). Uses `random.shuffle` for answers and joker replacements.
+- `app/server/selection.py` (130 lines): levels, `LEVEL_RANGES`, `available`, bipartite matching `assign`, `draw`, `supply`; also `burned_ids` / `STATE_DB`, read by the authoring side: `authoring/server/overview.py` (start page) and `qgen report`.
+- `app/server/main.py`: game routes `/api/game*`, `/api/players*`; also non-referee routes `/api/categories` (all bundles, D-43), `/media` (cache + download on miss, D-17), `/api/flags` (`state/flags.json`, read by `trivia-authoring`, GM-5/D-47).
+- Client: `app/client/src/lib/api.ts` (fetch calls), `lib/types.ts`, screens in `app/client/src/game/`.
+- Packaging: `flake.nix` `.#app` copies `app/server`, `app/data`, `app/client/dist`.
+
+## Parts
+
+1. **Parity fixtures (PORT-1)**
+   - Scenario recorder for `game.py` + `selection.py`: scripted games on a small fixed pool (picks, answers, every joker incl. unavailable ones, skip, burn for everyone, undo, abandon, joker budget, supply failure at new game, several players).
+   - Randomness made deterministic (inject the shuffle/draw choices or a seeded RNG whose sequence TS can reproduce); record inputs and resulting states/views as JSON in `app/client/src/engine/fixtures/`.
+   - Recorder lives in `authoring/tools/` or as a throw-away script (decide in the plan; fixtures are committed either way).
+   - Suggested priority: 700 (first; everything else replays its fixtures).
+
+2. **Engine core: rng, pool, selection (PORT-2)**
+   - `engine/rng.ts` (seedable PRNG), `engine/pool.ts` (load `pool.json` + categories files incl. bundles, filter), `engine/selection.ts` (levels, supply, matching, draw).
+   - Test runner with no new dependency: `node:test` on Node 22 (type stripping or a `tsc` step; settle in the plan), wired into an `npm` script.
+   - Done when: selection fixtures replay identically; invariant tests (every level 4 cards, burned never return).
+   - Suggested priority: 600.
+
+3. **Engine game state machine (PORT-3)**
+   - `engine/game.ts`: pure functions state → state for new game, pick, answer, skip, undo, abandon, jokers + availability + budget, players and burns; the view the screens need (same shape as today''s `{"game": …}` where practical).
+   - Decision entry in `plans/decisions.md`: the client holds the correct answer (relaxes D-25); the UI still never renders hidden data.
+   - Done when: all game fixtures replay identically.
+   - Suggested priority: 600, after part 2.
+
+4. **Save document, stores and migration (PORT-4, PORT-5)**
+   - `SaveData` `{version, players, games, burned}`, one JSON document; `Store` interface `load/save`; `ServerStore` (`GET/PUT /api/save`, atomic write of `state/game.json`, retry on Windows file locks); `MemoryStore` for tests/demo.
+   - Migration `state/game.sqlite` → `state/game.json` once on server start; `.sqlite` kept as backup; tested on a copy of the family''s real save (never on the original).
+   - Authoring readers switch from SQLite to `game.json`: `authoring/server/overview.py`, `qgen report` (`selection.burned_ids`).
+   - Decide where flags live (stay in `state/flags.json` via `/api/flags`, or move into `SaveData`); `trivia-authoring` must still pick them up.
+   - Suggested priority: 900 (save format = schema); the plan must still order it after part 1 so fixtures are recorded against the untouched Python state.
+
+5. **Screens on the engine (PORT-7)**
+   - Replace the game calls in `lib/api.ts` with engine calls + `ServerStore`; keep categories/media/flags calls as decided in parts 4 and 6.
+   - Client loads `pool.json` and categories statically (server serves `app/data/` read-only or the build copies it; settle in the plan).
+   - Placeholders (D-25 `PLACEHOLDER(...)`) stay as they are; no UI changes beyond the wiring.
+   - Done when: a full game, every joker, undo and admin overlay work in the browser; the family plays a test night on the TS engine.
+   - Suggested priority: 500.
+
+6. **Python server cleanup and docs (PORT-8)**
+   - Delete `app/server/game.py` and the game routes from `main.py`; decide the fate of `selection.py` (only what `qgen report`/overview still need, or they call the TS engine via Node).
+   - Milestone says `trivia` serves static files plus `/api/save` only: resolve against `/media` (download on cache miss) and `/api/flags`; if they stay, record why (decision entry), otherwise move them.
+   - Update `plans/01-architecture.md`, `plans/12-client-engine.md` (tasks `[x]`), `AGENTS.md`, `directory.md`, `README.md`, the `main.py` docstring; check `nix build .#app` still runs.
+   - Suggested priority: 400 (last).
+
+## Order
+1 → 2 → 3 → 4 → 5 → 6. Part 4''s Python side can start after part 1; its TS side needs part 3''s state shape.
+
+## Constraints (from the milestone)
+- Same rules; the family''s saves survive (migration tested on a copy).
+- No new dependencies beyond Svelte/Vite and Node built-ins.
+- Out of scope: desktop shell (`FileStore`, plan 18), controller, new game modes.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (3, 3, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (4, 4, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
@@ -610,9 +667,9 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T20:08:18Z', '2026-10-11T23:15:56Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (2, 2, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 2, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (2, 2, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, tasks.sql (plan 2 body)', 'Write plan 2, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:54:55Z', '2026-10-11T23:55:45Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (3, 3, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 3, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
@@ -945,6 +1002,8 @@ Phases (the task runs again after each decision is answered; check which decisio
 Missing tooling (audit, `--qc`, spot-check page): do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 5 done; note lists decisions, change tasks, numbers.', '2026-10-11T23:54:42Z', NULL, 24);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (54, 2, 'create tasks for plan 2', 'split', 'open', 1000, NULL, 'Split plan 2 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:55:44Z', NULL, 2);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -968,6 +1027,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (12, 22, '2026-10-11T23:51:49Z', '2026-10-11T23:52:49Z', 'done', NULL, 0, '3d9fa2fda59849b2763367b9b440ac866818c465', 'claude-opus-5-5[1m]', '17dc73a2-9011-4a4d-88dd-8cd1e998649c', 9, 18, 5816, 355709, 37673, 0.48891779999999996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (13, 23, '2026-10-11T23:52:49Z', '2026-10-11T23:53:45Z', 'done', NULL, 0, '776787ea570c7b398ba40c2e4da2e7003f323435', 'claude-opus-5-5[1m]', 'f12a1a7f-b761-46de-8040-60e2bd1e05df', 8, 16, 4891, 287815, 34064, 0.427959, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (14, 24, '2026-10-11T23:53:45Z', '2026-10-11T23:54:52Z', 'done', NULL, 0, '3def4ab41f85709722f02ca7b0ffa6e6fc0209d0', 'claude-opus-5-5[1m]', '968a74a2-a95a-4f6b-ae51-6a7fbac8aa99', 9, 18, 6577, 346223, 39040, 0.5131766, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (15, 2, '2026-10-11T23:54:52Z', '2026-10-11T23:55:53Z', 'done', NULL, 0, '00a9a2efc5c7ffc663fcdc31b80b0959bcecee90', 'claude-opus-5-5[1m]', '405770f5-0bf4-48f2-9f6a-bb47813468d9', 10, 20, 5689, 348572, 33337, 0.45027039999999996, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
