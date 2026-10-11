@@ -13,7 +13,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle (D-41)
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
-    qgen media | sheets | review [--round 2] | research | record | sync | batch-report --run <run>
+    qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--subcategories]
     qgen validate
@@ -975,6 +975,37 @@ def cmd_revise(args):
     return parallel(work, grouped([(n, its) for n, its in todo if its]), args.jobs, "revise", "calls")
 
 
+def revise_in_pool(q, new, reason, today):
+    """Write a revised question into pool question q; `revision.previous` keeps what changed
+    (the review tool shows it). Returns the changed keys."""
+    import media as media_tool  # authoring/tools/media.py
+    new_media = {**q["media"], **new["media"], "note": new["media"]["note"] or None}
+    media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
+    if media_changed:
+        new_media.update(source_url=None, file_url=None, credit=None)
+    if new_media["type"] == "audio":
+        bgq = new.get("background_query") or (q.get("background") or {}).get("query") or new_media["query"]
+        old_bg = q.get("background")
+        new_bg = old_bg if old_bg and old_bg["query"] == bgq else {
+            "query": bgq, "source_url": None, "file_url": None, "credit": None}
+    else:
+        new_bg = None
+    proposed = {**{k: new[k] for k in ["difficulty", "description", "question", "answer", "wrong_answers",
+                                       "hints", "fun_fact", "needs_media"]},
+                "media": new_media, "background": new_bg}
+    previous = {k: q.get(k) for k in REVISABLE if proposed[k] != q.get(k)}
+    if "difficulty" in previous and q.get("difficulty_original") is None:
+        q["difficulty_original"] = q["difficulty"]
+    q.update(proposed)
+    q["revision"] = {"action": "revise", "reason": reason, "previous": previous, "revised_on": today}
+    for slot in ("media", "background"):  # stale candidates for a changed search
+        if slot in previous:
+            path = media_tool.candidates_path(q["id"], slot)
+            if path.exists():
+                path.unlink()
+    return previous
+
+
 def cmd_apply(args):
     d = run_dir(args)
     cfg = load_json(d / "run.json") or {}
@@ -988,7 +1019,6 @@ def cmd_apply(args):
     data = load_json(POOL)
     today = datetime.date.today().isoformat()
     counts = {"keep": 0, "revise": 0, "drop": 0, "unchanged": 0, "malformed": 0}
-    import media as media_tool  # authoring/tools/media.py
 
     for q in data["questions"]:
         qid = q["id"]
@@ -1011,30 +1041,7 @@ def cmd_apply(args):
                 print(f"  {qid}: revision malformed ({'; '.join(check_question_shape(new))}), skipped")
                 counts["malformed"] += 1
                 continue
-            new_media = {**q["media"], **new["media"], "note": new["media"]["note"] or None}
-            media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
-            if media_changed:
-                new_media.update(source_url=None, file_url=None, credit=None)
-            if new_media["type"] == "audio":
-                bgq = new.get("background_query") or (q.get("background") or {}).get("query") or new_media["query"]
-                old_bg = q.get("background")
-                new_bg = old_bg if old_bg and old_bg["query"] == bgq else {
-                    "query": bgq, "source_url": None, "file_url": None, "credit": None}
-            else:
-                new_bg = None
-            proposed = {**{k: new[k] for k in ["difficulty", "description", "question", "answer", "wrong_answers",
-                                               "hints", "fun_fact", "needs_media"]},
-                        "media": new_media, "background": new_bg}
-            previous = {k: q.get(k) for k in REVISABLE if proposed[k] != q.get(k)}
-            if "difficulty" in previous and q.get("difficulty_original") is None:
-                q["difficulty_original"] = q["difficulty"]
-            q.update(proposed)
-            q["revision"] = {"action": "revise", "reason": rev["reason"], "previous": previous, "revised_on": today}
-            for slot in ("media", "background"):  # stale candidates for a changed search
-                if slot in previous:
-                    path = media_tool.candidates_path(qid, slot)
-                    if path.exists():
-                        path.unlink()
+            revise_in_pool(q, new, rev["reason"], today)
         if q["status"] == "needs_work":
             q["status"], q["review"] = "draft", None
         counts[rev["action"]] += 1
@@ -1184,8 +1191,8 @@ def cmd_report(args):
 BATCH_SLOTS = 18  # draft slots per subcategory (D-46); base: 57 × 18 slots, about 700 merged questions
 REVIEW_MODEL = "opus"
 
-REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "pick", "background_pick", "new_query", "reasons"],
-    "properties": {"decision": {"type": "string", "enum": ["approved", "needs_work"]}, "feedback": STR,
+REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "fix", "pick", "background_pick", "new_query", "reasons"],
+    "properties": {"decision": {"type": "string", "enum": ["approved", "needs_work"]}, "feedback": STR, "fix": STR,
                    "pick": {"type": ["integer", "null"]}, "background_pick": {"type": ["integer", "null"]},
                    "new_query": {"type": ["string", "null"]}, "reasons": STR}}
 
@@ -1292,7 +1299,7 @@ def cmd_review(args):
         r = load_json(reviews / f"{q['id']}.json", {})
         if args.round == 1 and "round1" not in r:
             todo.append((q, r))
-        if args.round == 2 and r.get("researched") and "round2" not in r:
+        if args.round == 2 and (r.get("researched") or fixed(r)) and "round2" not in r:
             todo.append((q, r))
 
     def work(item):
@@ -1302,12 +1309,13 @@ def cmd_review(args):
             "question": {k: q[k] for k in ["id", "subcategory", "difficulty", "description", "question", "answer",
                                            "wrong_answers", "hints", "fun_fact"]},
             "rater_notes": (ratings.get(tmp) or {}).get("notes") or (q.get("quality") or {}).get("notes"),
-            "fact_check": ({k: checks[tmp][k] for k in ["verdict", "problem", "correction"]}
-                           if tmp in checks else "not needed (no number, date or record)"),
+            "fact_check": ({k: check[k] for k in ["verdict", "problem", "correction"]}
+                           if (check := fact_check(r, checks.get(tmp))) else "not needed (no number, date or record)"),
             "related": related_questions(q, pool),
             "media": slot_input(d, q, "media"),
             "background": slot_input(d, q, "background") if q.get("background") else None,
             "can_search_again": args.round == 1,
+            "can_fix": args.round == 1,
         }
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
@@ -1319,6 +1327,86 @@ def cmd_review(args):
     return parallel(work, todo, args.jobs, f"review {args.round}", "questions")
 
 
+def fixed(r):
+    return (r.get("fix") or {}).get("action") == "revise"
+
+
+def fact_check(r, check):
+    """The fact check that holds for the question now: the fix's own when it changed facts (QG-22)."""
+    fix = r.get("fix") or {}
+    return fix["factcheck"] if "factcheck" in fix else check
+
+
+_pool_lock = threading.Lock()
+
+
+def cmd_fix(args):
+    """One revision for every question that round 1 sent back with a fixable problem (QG-22): the
+    reviewer's `fix` goes to the revise prompt. Changed facts are checked again; round 2 reviews it.
+    Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the gamemaster."""
+    d = run_dir(args)
+    tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
+    _, checks = collect(d)
+    system = prompt("house-style", "revise")
+    today = datetime.date.today().isoformat()
+    revise, recheck = [], []
+    for q in batch_questions(args.run):
+        path = d / "reviews" / f"{q['id']}.json"
+        r = load_json(path, {})
+        r1 = r.get("round1") or {}
+        if "fix" not in r and r1.get("decision") == "needs_work" and r1.get("fix", "").strip():
+            revise.append((q, path, r))
+        elif fixed(r) and set(FACT_FIELDS) & set(r["fix"]["changed"]) and "factcheck" not in r["fix"]:
+            recheck.append((q, path, r))
+
+    def work(item):
+        q, path, r = item
+        issues = [f"final reviewer: {r['round1']['fix'].strip()}"]
+        c = checks.get(tmp_of.get(q["id"]))
+        if c and c["verdict"] != "confirmed":
+            issues.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
+        it = {**for_review({**q, "tmp_id": q["id"]}), "background_query": (q.get("background") or {}).get("query", ""),
+              "needs_media": q.get("needs_media", False), "issues": issues}
+        out = claude(system, "## Questions with issues\n" + json.dumps([it], ensure_ascii=False), REVISE_SCHEMA,
+                     args.model, d)
+        rev = next((x for x in out["results"] if x["id"] == q["id"]), None)
+        if rev is None:
+            raise RuntimeError(f"no fix result for {q['id']}")
+        fix = {"action": rev["action"], "reason": rev["reason"]}
+        if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
+            fix["action"], fix["reason"] = "malformed", "; ".join(bad)
+        if fix["action"] == "revise":
+            with _pool_lock:
+                changed = []
+                update_pool({q["id"]: lambda x: changed.extend(revise_in_pool(x, rev["question"], rev["reason"], today))})
+            fix["changed"] = sorted(changed)
+            for slot in ("media", "background"):
+                if slot in changed:
+                    sheet_path(d, q["id"], slot).unlink(missing_ok=True)
+            if set(FACT_FIELDS) & set(changed):
+                recheck.append((q, path, r))
+        r["fix"] = fix
+        save_json(path, r)
+        progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
+
+    def check(item):
+        q, path, r = item
+        q = next(x for x in load_json(POOL)["questions"] if x["id"] == q["id"])
+        user = "## Questions (Spanish)\n" + json.dumps([for_review({**q, "tmp_id": q["id"]})], ensure_ascii=False)
+        out = claude(prompt("factcheck"), user, FACT_SCHEMA, args.check_model, d, web=True)
+        c = next((x for x in out["checks"] if x["id"] == q["id"]), None)
+        if c is None:
+            raise RuntimeError(f"no fact check for {q['id']}")
+        r["fix"]["factcheck"] = c
+        save_json(path, r)
+        progress.detail(f"  fix factcheck: {q['id']}: {c['verdict']}")
+
+    errors = parallel(work, revise, args.jobs, "fix", "questions")
+    if any(isinstance(e, UsageLimit) for e in errors):
+        return errors
+    return errors + parallel(check, recheck, args.jobs, "fix factcheck", "questions")
+
+
 def cmd_research(args):
     """One new media search for questions whose round-1 review found no adequate media."""
     import media as media_tool
@@ -1328,7 +1416,8 @@ def cmd_research(args):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         r1 = r.get("round1") or {}
-        if r1.get("pick") is None and r1.get("new_query") and not r.get("researched"):
+        if (r1.get("pick") is None and r1.get("new_query") and not r.get("researched")
+                and "media" not in (r.get("fix") or {}).get("changed", [])):
             todo.append((q, path, r))
     with progress.Bar("research", len(todo), "searches") as bar:
         for q, path, r in todo:
@@ -1365,7 +1454,8 @@ def cmd_record(args):
     today = datetime.date.today().isoformat()
     changes, missing = {}, []
     for q in batch_questions(args.run):
-        r = final_review(load_json(d / "reviews" / f"{q['id']}.json", {}))
+        full = load_json(d / "reviews" / f"{q['id']}.json", {})
+        r = final_review(full)
         if r is None:
             missing.append(q["id"])
             continue
@@ -1381,7 +1471,7 @@ def cmd_record(args):
                                 else "No se encontró una imagen de fondo adecuada.")
                 continue
             fields[slot] = media_tool.pick_fields(found[n - 1], slot)
-        check = checks.get(tmp_of.get(q["id"]))
+        check = fact_check(full, checks.get(tmp_of.get(q["id"])))
         if check and check["verdict"] != "confirmed":
             decision = "needs_work"
             problems.append(f"Verificación de datos: {check['verdict']}. {check['problem']}".strip())
@@ -1390,9 +1480,11 @@ def cmd_record(args):
         review = {"decision": decision, "feedback": " ".join(problems) if decision == "needs_work" else None,
                   "reviewed_on": today, "reviewer": "llm", "model": r["model"], "previous": None}
 
-        def change(x, review=review, fields=fields):
+        def change(x, review=review, fields=fields, check=check if "factcheck" in (full.get("fix") or {}) else None):
             for slot, f in fields.items():
                 x[slot].update(f)
+            if check:
+                x["fact_checked"] = check["verdict"] == "confirmed"
             x.update(review=review, status=review["decision"])
         changes[q["id"]] = change
         progress.detail(f"  record: {q['id']}: {decision}")
@@ -1521,7 +1613,9 @@ def cmd_batch(args):
         ("media", cmd_media, ns()),
         ("sheets", cmd_sheets, ns()),
         ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
         ("research", cmd_research, ns()),
+        ("media", cmd_media, ns()),
         ("sheets", cmd_sheets, ns()),
         ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
         ("record", cmd_record, ns()),
@@ -1756,6 +1850,7 @@ def main():
     add("media", cmd_media)
     add("sheets", cmd_sheets)
     add("review", cmd_review, REVIEW_MODEL).add_argument("--round", type=int, choices=[1, 2], default=1)
+    add("fix", cmd_fix, "opus").add_argument("--check-model", default="sonnet")
     add("research", cmd_research)
     add("record", cmd_record)
     add("sync", cmd_sync_run)
