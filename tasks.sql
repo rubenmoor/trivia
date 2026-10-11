@@ -683,8 +683,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:39:28Z', '2026-10-11T23:50:10Z', 13);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (20, 13, 'create tasks for plan 13', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 29–36; 33 dropped as duplicate of 34; 35, 36 wait for decision 1; 32 waits for the anchor decision task 34 creates)', 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:41:37Z', '2026-10-11T23:51:08Z', 14);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (21, 14, 'create tasks for plan 14', 'split', 'open', 1000, NULL, 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', NULL, 15);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (21, 14, 'create tasks for plan 14', 'split', 'done', 1000, '2026-10-11, tasks 37–39 for plan 14; no upfront decision (task 38 creates the proposal decision, task 39 waits for it)', 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', '2026-10-11T23:51:42Z', 15);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', NULL, 16);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (23, 16, 'create tasks for plan 16', 'split', 'open', 1000, NULL, 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -786,6 +786,33 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Throw-away check: seeded dry run of `draw_slots`: targets weighted by deficit, mean concept `known_at` per target within ±1 (plan 13 "Done when").
 
 Done when: dry-run numbers in the task note; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (37, 14, 'qgen report --subcategories with saturation flags', 'work', 'open', NULL, NULL, 'Part 1 of plan 14: the check that spots saturated subcategories.
+
+- Add `qgen report --subcategories [--bundle <id>]` (`authoring/tools/`), next to plan 13''s `--calibration` code (task 29); share its loading/counting helpers, don''t duplicate them.
+- One row per subcategory: approved, asked (all statuses = avoid-list length), concept-list size, unused, unused at `known_at` ≥ 11, top-ups so far, overlaps (merge duplicate drops + review needs_work for overlap, last two batches). Reuse plan 15''s overlap counts if they exist by then; otherwise count from batch logs/review notes once, in a helper plan 15 can reuse.
+- One row per broad category: subcategories, approved, unused hard concepts.
+- Flag **saturated** when any holds: unused < 36 right after a top-up; unused at `known_at` ≥ 11 < 10; overlaps ≥ 10 % of its drafts in the last batch; asked ≥ 60. Tune these against the real numbers.
+- Subcategories without a concept list yet: show them as "no list", not saturated.
+- Record the baseline output (short summary) and the tuned thresholds in plan 14''s body (`pm plan edit 14 --body -`; keep the rest of the body as is).
+
+Done when: the report prints both tables with flags for `base` and `--bundle colombia`; plan 14 holds baseline and thresholds; `qgen validate` clean.', '2026-10-11T23:51:37Z', NULL, 21);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (38, 14, 'Proposal round: new base subcategories', 'work', 'open', NULL, NULL, 'Part 2 of plan 14. No changes to `categories.json` here.
+
+- Run `qgen report --subcategories` (task above).
+- Write 10–20 proposals by plan 14''s "Proposals" rules: sources (a) saturated subcategories (split or neighbour), (b) broad categories with ≤ 3 subcategories (Espacio, Cuerpo humano, Fiestas y tradiciones, Fútbol, Videojuegos, Amazonas, …), (c) topics with hard questions (11–15).
+- Each: Spanish name, broad category, one-line scope, reason with numbers, ~10 sample concepts with `known_at` (≥ 3 at 11–15). Mark the recommended ones.
+- Checks: no name or near-synonym of an existing subcategory in any bundle (D-43); no Colombia-only topic (D-49); broad enough for ≥ 100 concepts; no new broad categories.
+- `did=$(pm decision add "Which new base subcategories?" --body "<proposals>" --option "add the recommended ones" --option "add all" --option "none for now")`, then `pm task-pending-decision <id of the task "Add the approved base subcategories"> "$did"`.
+
+Done when: the decision exists with the proposals and the add task waits for it.', '2026-10-11T23:51:37Z', NULL, 21);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (39, 14, 'Add the approved base subcategories', 'work', 'open', NULL, NULL, 'Part 3 of plan 14. Waits for the decision "Which new base subcategories?" (created by the proposal-round task); read the answer in `pm show`. If the answer is "none for now", drop this task.
+
+- Add the approved subcategories to `app/data/categories.json`, each in its broad category, with the scope from the proposal.
+- Create their concept lists: `qgen concepts --subcategories "<names>"` (one Opus call per list; not a batch run).
+- Log a QP entry in `plans/02-question-pool.md` (what was added, why, counts).
+- `qgen validate` clean (also re-export `app/data/pool.json` if validate asks).
+
+Done when: the subcategories are in `categories.json` with concept lists, QP entry written, `qgen validate` clean.', '2026-10-11T23:51:37Z', NULL, 21);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -805,6 +832,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (8, 18, '2026-10-11T23:48:31Z', '2026-10-11T23:49:47Z', 'done', NULL, 0, 'ec3c4411dbc8a830fbcc7b022548022ae86edbc5', 'claude-opus-5-5[1m]', '9a45fda3-74a3-4272-9402-2568736e1756', 10, 18, 6999, 320901, 37758, 0.50629620000000009, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (9, 19, '2026-10-11T23:49:47Z', '2026-10-11T23:50:15Z', 'done', NULL, 0, '29edfcb1393298ba2322f16f6f605a051a4e036e', 'claude-opus-5-5[1m]', '09948f6a-545e-48ed-9d10-3ff1972e22b3', 6, 12, 2859, 175801, 26236, 0.3022762, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (10, 20, '2026-10-11T23:50:15Z', '2026-10-11T23:51:15Z', 'done', NULL, 0, '8fdfc21f0a7e6f58f5050acf29b50fe08158bacf', 'claude-opus-5-5[1m]', '4d70826f-4639-4508-9b2c-6d8111de8f1f', 9, 18, 6170, 311821, 32442, 0.4453722, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (11, 21, '2026-10-11T23:51:15Z', '2026-10-11T23:51:49Z', 'done', NULL, 0, '8975495c4bc7ec1e851d125441f7178b300fb2dd', 'claude-opus-5-5[1m]', '48250d51-c9cd-4467-8b6b-c19264e71694', 5, 10, 2622, 137512, 23878, 0.27100640000000004, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
