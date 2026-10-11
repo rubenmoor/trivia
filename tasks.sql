@@ -117,9 +117,35 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
  cf. those past plans for reference:
 
  Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (2, 'Game engine in TypeScript', 'open', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
+
+## Outcome
+- Scenario recorder for the Python referee; fixtures committed (PORT-1).
+- `engine/selection.ts` and `engine/game.ts` (state machine, players, burning, jokers, undo), fixture-tested (PORT-2, PORT-3).
+- Store interface: `ServerStore` with `GET/PUT /api/save`, `MemoryStore` (PORT-4).
+- Migration `game.sqlite` → `game.json`, tested on a copy of the real save (PORT-5).
+- Screens use the engine (PORT-7); `game.py` and the game routes deleted, `01-architecture.md` and AGENTS.md updated (PORT-8).
+
+## Constraints
+- Same rules as today; the family''s saves survive.
+- The client holds the answer; this relaxes D-25 and needs a decision entry.
+- No new dependencies beyond what Svelte/Vite already bring.
+
+## Out of scope
+- Desktop shell, controller, new game modes.
+
+## Done when
+- The family plays a test night on the TS engine.
+- `trivia` serves static files plus `/api/save` only.
+
+Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'tbd.', '2026-10-11T20:08:18Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T20:08:18Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (2, 2, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 2, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
