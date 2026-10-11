@@ -1,0 +1,787 @@
+{
+  "subcategory": "Rascacielos",
+  "facets": [
+    "Rascacielos famosos del mundo",
+    "Récords de altura",
+    "Rascacielos de Colombia",
+    "Historia de los rascacielos",
+    "Arquitectos e ingenieros famosos",
+    "Materiales y estructura",
+    "Ascensores y tecnología del edificio",
+    "Formas y estilos arquitectónicos",
+    "Ciudades y skylines",
+    "Rascacielos en películas y videojuegos",
+    "Vida y trabajo en las alturas",
+    "Palabras del mundo vertical"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Shard",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "30 St Mary Axe",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Torres Gemelas",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Marina Bay Sands",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Edificio Flatiron",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Torre Willis",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Rockefeller Center",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Torre Agbar",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Lotte World Tower",
+      "facet": "Rascacielos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Torre Jeddah",
+      "facet": "Récords de altura",
+      "known_at": 12
+    },
+    {
+      "name": "Merdeka 118",
+      "facet": "Récords de altura",
+      "known_at": 13
+    },
+    {
+      "name": "Pirámide de Keops",
+      "facet": "Récords de altura",
+      "known_at": 5
+    },
+    {
+      "name": "Catedral de Lincoln",
+      "facet": "Récords de altura",
+      "known_at": 14
+    },
+    {
+      "name": "Lakhta Center",
+      "facet": "Récords de altura",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Torre Santiago",
+      "facet": "Récords de altura",
+      "known_at": 11
+    },
+    {
+      "name": "Abraj Al Bait",
+      "facet": "Récords de altura",
+      "known_at": 13
+    },
+    {
+      "name": "Torre Ostankino",
+      "facet": "Récords de altura",
+      "known_at": 14
+    },
+    {
+      "name": "Ping An Finance Center",
+      "facet": "Récords de altura",
+      "known_at": 14
+    },
+    {
+      "name": "Mjøstårnet",
+      "facet": "Récords de altura",
+      "known_at": 15
+    },
+    {
+      "name": "Capital Gate",
+      "facet": "Récords de altura",
+      "known_at": 14
+    },
+    {
+      "name": "BD Bacatá",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Edificio Coltejer",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Torre de Cali",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Edificio Avianca",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Torres del Parque",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Centro Internacional Tequendama",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Torre Atrio",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Edificio Inteligente EPM",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Edificio Aquarela",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Bocagrande",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Centro de Comercio Internacional de Bogotá",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Edificio Colseguros",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Torre Bancafé",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Centro Administrativo La Alpujarra",
+      "facet": "Rascacielos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Home Insurance Building",
+      "facet": "Historia de los rascacielos",
+      "known_at": 12
+    },
+    {
+      "name": "Escuela de Chicago",
+      "facet": "Historia de los rascacielos",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Incendio de Chicago",
+      "facet": "Historia de los rascacielos",
+      "known_at": 12
+    },
+    {
+      "name": "Edificio Woolworth",
+      "facet": "Historia de los rascacielos",
+      "known_at": 14
+    },
+    {
+      "name": "Carrera hacia el cielo",
+      "facet": "Historia de los rascacielos",
+      "known_at": 13
+    },
+    {
+      "name": "Shibam",
+      "facet": "Historia de los rascacielos",
+      "known_at": 13
+    },
+    {
+      "name": "San Gimignano",
+      "facet": "Historia de los rascacielos",
+      "known_at": 14
+    },
+    {
+      "name": "Ley de zonificación de 1916",
+      "facet": "Historia de los rascacielos",
+      "known_at": 15
+    },
+    {
+      "name": "Monadnock Building",
+      "facet": "Historia de los rascacielos",
+      "known_at": 15
+    },
+    {
+      "name": "Insulae romanas",
+      "facet": "Historia de los rascacielos",
+      "known_at": 13
+    },
+    {
+      "name": "Equitable Building",
+      "facet": "Historia de los rascacielos",
+      "known_at": 15
+    },
+    {
+      "name": "Edificio Wainwright",
+      "facet": "Historia de los rascacielos",
+      "known_at": 15
+    },
+    {
+      "name": "Louis Sullivan",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 14
+    },
+    {
+      "name": "William Le Baron Jenney",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Adrian Smith",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Fazlur Rahman Khan",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Norman Foster",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 12
+    },
+    {
+      "name": "César Pelli",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Renzo Piano",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago Calatrava",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Philip Johnson",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 15
+    },
+    {
+      "name": "William Van Alen",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Bjarke Ingels",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Daniel Libeskind",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Stefano Boeri",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Jean Nouvel",
+      "facet": "Arquitectos e ingenieros famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Hormigón armado",
+      "facet": "Materiales y estructura",
+      "known_at": 9
+    },
+    {
+      "name": "Muro cortina",
+      "facet": "Materiales y estructura",
+      "known_at": 13
+    },
+    {
+      "name": "Pilote",
+      "facet": "Materiales y estructura",
+      "known_at": 11
+    },
+    {
+      "name": "Esqueleto de acero",
+      "facet": "Materiales y estructura",
+      "known_at": 10
+    },
+    {
+      "name": "Núcleo central",
+      "facet": "Materiales y estructura",
+      "known_at": 12
+    },
+    {
+      "name": "Estructura tubular",
+      "facet": "Materiales y estructura",
+      "known_at": 14
+    },
+    {
+      "name": "Proceso Bessemer",
+      "facet": "Materiales y estructura",
+      "known_at": 14
+    },
+    {
+      "name": "Remache",
+      "facet": "Materiales y estructura",
+      "known_at": 9
+    },
+    {
+      "name": "Grúa torre",
+      "facet": "Materiales y estructura",
+      "known_at": 4
+    },
+    {
+      "name": "Madera laminada cruzada",
+      "facet": "Materiales y estructura",
+      "known_at": 14
+    },
+    {
+      "name": "Elisha Otis",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 12
+    },
+    {
+      "name": "Freno de seguridad del ascensor",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 10
+    },
+    {
+      "name": "Escalera eléctrica",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 2
+    },
+    {
+      "name": "Ascensor de doble cabina",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 13
+    },
+    {
+      "name": "Sky lobby",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 13
+    },
+    {
+      "name": "Góndola de limpieza de fachadas",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 9
+    },
+    {
+      "name": "Bomba de agua",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 8
+    },
+    {
+      "name": "Escalera de emergencia",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 4
+    },
+    {
+      "name": "Rociador contra incendios",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 7
+    },
+    {
+      "name": "Tanque de agua en la azotea",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 9
+    },
+    {
+      "name": "Turbina eólica",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 7
+    },
+    {
+      "name": "Ascensor panorámico",
+      "facet": "Ascensores y tecnología del edificio",
+      "known_at": 5
+    },
+    {
+      "name": "Estilo internacional",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Posmodernismo",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Arquitectura high-tech",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Neogótico",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Deconstructivismo",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Arquitectura bioclimática",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Jardín vertical",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 7
+    },
+    {
+      "name": "Bosco Verticale",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Turning Torso",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Cayan Tower",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Torres Kio",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Arquitectura modernista",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Arquitectura paramétrica",
+      "facet": "Formas y estilos arquitectónicos",
+      "known_at": 15
+    },
+    {
+      "name": "Dubái",
+      "facet": "Ciudades y skylines",
+      "known_at": 5
+    },
+    {
+      "name": "Benidorm",
+      "facet": "Ciudades y skylines",
+      "known_at": 12
+    },
+    {
+      "name": "São Paulo",
+      "facet": "Ciudades y skylines",
+      "known_at": 8
+    },
+    {
+      "name": "La Défense",
+      "facet": "Ciudades y skylines",
+      "known_at": 14
+    },
+    {
+      "name": "Fráncfort",
+      "facet": "Ciudades y skylines",
+      "known_at": 12
+    },
+    {
+      "name": "Toronto",
+      "facet": "Ciudades y skylines",
+      "known_at": 9
+    },
+    {
+      "name": "Shenzhen",
+      "facet": "Ciudades y skylines",
+      "known_at": 13
+    },
+    {
+      "name": "Taipéi",
+      "facet": "Ciudades y skylines",
+      "known_at": 11
+    },
+    {
+      "name": "Bogotá",
+      "facet": "Ciudades y skylines",
+      "known_at": 2
+    },
+    {
+      "name": "Ciudad Gótica",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Edificio Daily Planet",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "New Donk City",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Up: Una aventura de altura",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 2
+    },
+    {
+      "name": "Spider-Man",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 1
+    },
+    {
+      "name": "Metrópolis (película de 1927)",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "El hombre mosca (Safety Last!)",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Rascacielos: Rescate en las alturas",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Misión imposible: Protocolo fantasma",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "SimCity",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Rampage",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Mirror's Edge",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "San Fransokyo",
+      "facet": "Rascacielos en películas y videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Limpiaventanas",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 3
+    },
+    {
+      "name": "Lunch atop a Skyscraper",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 11
+    },
+    {
+      "name": "Obreros mohawk",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 15
+    },
+    {
+      "name": "Alain Robert",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 13
+    },
+    {
+      "name": "Mirador",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 3
+    },
+    {
+      "name": "Piso de vidrio",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 4
+    },
+    {
+      "name": "Presión en los oídos",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 5
+    },
+    {
+      "name": "Carrera de escaleras",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudad vertical",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 12
+    },
+    {
+      "name": "Balanceo del edificio",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 9
+    },
+    {
+      "name": "Restaurante giratorio",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 8
+    },
+    {
+      "name": "Piscina infinita",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 9
+    },
+    {
+      "name": "Portero",
+      "facet": "Vida y trabajo en las alturas",
+      "known_at": 2
+    },
+    {
+      "name": "Skyline",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 10
+    },
+    {
+      "name": "Azotea",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 5
+    },
+    {
+      "name": "Penthouse",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 9
+    },
+    {
+      "name": "Sótano",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 3
+    },
+    {
+      "name": "Mezanine",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 10
+    },
+    {
+      "name": "Fachada",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 7
+    },
+    {
+      "name": "Aguja",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 10
+    },
+    {
+      "name": "Retranqueo",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 14
+    },
+    {
+      "name": "Lobby",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 6
+    },
+    {
+      "name": "Planta baja",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 4
+    },
+    {
+      "name": "Superalto",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 14
+    },
+    {
+      "name": "Megaalto",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 15
+    },
+    {
+      "name": "Helipuerto",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 6
+    },
+    {
+      "name": "Voladizo",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 12
+    },
+    {
+      "name": "Menos es más",
+      "facet": "Palabras del mundo vertical",
+      "known_at": 12
+    }
+  ]
+}

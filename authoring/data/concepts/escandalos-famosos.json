@@ -1,0 +1,818 @@
+{
+  "subcategory": "Escándalos famosos",
+  "facets": [
+    "Escándalos políticos y de gobierno",
+    "Fraudes y burbujas financieras",
+    "Trampas en el deporte",
+    "Fraudes científicos y falsos hallazgos",
+    "Falsificaciones y robos de arte",
+    "Engaños y bromas mediáticas",
+    "Impostores y falsas identidades",
+    "Escándalos de reyes y cortes",
+    "Espionaje y juicios célebres",
+    "Escándalos del espectáculo y la música",
+    "Escándalos de empresas y productos",
+    "Escándalos de la historia colombiana"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Watergate",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 11
+    },
+    {
+      "name": "Garganta Profunda",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 13
+    },
+    {
+      "name": "Impeachment",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 11
+    },
+    {
+      "name": "Papeles de Panamá",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12
+    },
+    {
+      "name": "Papeles de Pandora",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 13
+    },
+    {
+      "name": "WikiLeaks",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 11
+    },
+    {
+      "name": "Julian Assange",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12
+    },
+    {
+      "name": "Edward Snowden",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12
+    },
+    {
+      "name": "Papeles del Pentágono",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14
+    },
+    {
+      "name": "Irán-Contra",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14
+    },
+    {
+      "name": "Lava Jato",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 13
+    },
+    {
+      "name": "Partygate",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 13
+    },
+    {
+      "name": "Tangentopoli",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 15
+    },
+    {
+      "name": "Vladivideos",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14
+    },
+    {
+      "name": "Teapot Dome",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 15
+    },
+    {
+      "name": "Mensalão",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 15
+    },
+    {
+      "name": "Escándalo de los gastos parlamentarios británicos",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 15
+    },
+    {
+      "name": "Tulipomanía",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 12
+    },
+    {
+      "name": "Burbuja de los Mares del Sur",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14
+    },
+    {
+      "name": "Burbuja del Misisipi",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 15
+    },
+    {
+      "name": "Crac del 29",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 10
+    },
+    {
+      "name": "Crisis financiera de 2008",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 11
+    },
+    {
+      "name": "Lehman Brothers",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 12
+    },
+    {
+      "name": "Enron",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 13
+    },
+    {
+      "name": "FTX",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 13
+    },
+    {
+      "name": "Sam Bankman-Fried",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 13
+    },
+    {
+      "name": "Jordan Belfort",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 12
+    },
+    {
+      "name": "Nick Leeson",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14
+    },
+    {
+      "name": "Wirecard",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 15
+    },
+    {
+      "name": "Allen Stanford",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 15
+    },
+    {
+      "name": "Dopaje",
+      "facet": "Trampas en el deporte",
+      "known_at": 8
+    },
+    {
+      "name": "Lance Armstrong",
+      "facet": "Trampas en el deporte",
+      "known_at": 10
+    },
+    {
+      "name": "Ben Johnson",
+      "facet": "Trampas en el deporte",
+      "known_at": 13
+    },
+    {
+      "name": "Marion Jones",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Rosie Ruiz",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Calciopoli",
+      "facet": "Trampas en el deporte",
+      "known_at": 13
+    },
+    {
+      "name": "Black Sox",
+      "facet": "Trampas en el deporte",
+      "known_at": 15
+    },
+    {
+      "name": "Deflategate",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Mano de Thierry Henry",
+      "facet": "Trampas en el deporte",
+      "known_at": 13
+    },
+    {
+      "name": "Escándalo de la lija",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Tonya Harding",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "FIFA Gate",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "Sepp Blatter",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "Dopaje de Estado ruso",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "Crashgate",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Bloodgate",
+      "facet": "Trampas en el deporte",
+      "known_at": 15
+    },
+    {
+      "name": "Pacto de Gijón",
+      "facet": "Trampas en el deporte",
+      "known_at": 15
+    },
+    {
+      "name": "Baloncesto paralímpico de Sídney 2000",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Hombre de Nebraska",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Archaeoraptor",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Sirena de Fiyi",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 11
+    },
+    {
+      "name": "Hans el Listo",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 12
+    },
+    {
+      "name": "Fusión fría",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 13
+    },
+    {
+      "name": "Rayos N",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Canales de Marte",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 12
+    },
+    {
+      "name": "Hwang Woo-suk",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Andrew Wakefield",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Jan Hendrik Schön",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Trofim Lysenko",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Calavera de cristal",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 12
+    },
+    {
+      "name": "Piedras de Ica",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Momia persa",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Tasaday",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Robo de las joyas del Louvre",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 12
+    },
+    {
+      "name": "Salvator Mundi",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 13
+    },
+    {
+      "name": "Tiara de Saitafernes",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 15
+    },
+    {
+      "name": "Galería Knoedler",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 15
+    },
+    {
+      "name": "La guerra de los mundos",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 10
+    },
+    {
+      "name": "Espaguetis en los árboles",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Chupacabras",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 8
+    },
+    {
+      "name": "Círculos en los cultivos",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 10
+    },
+    {
+      "name": "Incidente de Roswell",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Gran engaño de la Luna",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 14
+    },
+    {
+      "name": "Día de los Inocentes",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 5
+    },
+    {
+      "name": "Niño del globo",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 14
+    },
+    {
+      "name": "Fake news",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 8
+    },
+    {
+      "name": "Papa con abrigo blanco",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Anna Anderson",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 14
+    },
+    {
+      "name": "Martin Guerre",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Ferdinand Waldo Demara",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "El estafador de Tinder",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 13
+    },
+    {
+      "name": "Princesa Caraboo",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Demandante de Tichborne",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "George Psalmanazar",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Falso Dimitri",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 14
+    },
+    {
+      "name": "Perkin Warbeck",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Enric Marco",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 14,
+      "retired": "unaskable: A fake Nazi-camp survivor is too heavy and too obscure for a family game."
+    },
+    {
+      "name": "Clark Rockefeller",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Tania Head",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Collar de la reina",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 13
+    },
+    {
+      "name": "Abdicación de Eduardo VIII",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 12
+    },
+    {
+      "name": "Rasputín",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 11
+    },
+    {
+      "name": "Cacería de Botsuana",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 12
+    },
+    {
+      "name": "Caso Nóos",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 14
+    },
+    {
+      "name": "Incitatus",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 13
+    },
+    {
+      "name": "Juana la Loca",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel Godoy",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 15
+    },
+    {
+      "name": "Asunto de los venenos",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 15
+    },
+    {
+      "name": "Mata Hari",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Caso Dreyfus",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Juicio de Galileo",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Juicio de Sócrates",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Brujas de Salem",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Juicio del mono",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Juicio de O. J. Simpson",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Agente Garbo",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Incidente del U-2",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Milli Vanilli",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 13
+    },
+    {
+      "name": "Playback",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 8
+    },
+    {
+      "name": "Ashlee Simpson",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 15
+    },
+    {
+      "name": "Payola",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 15
+    },
+    {
+      "name": "Error del Óscar de La La Land",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12
+    },
+    {
+      "name": "Bofetada de Will Smith",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 9
+    },
+    {
+      "name": "Kanye West y Taylor Swift en los VMA",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 10
+    },
+    {
+      "name": "Taylor's Version",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 9
+    },
+    {
+      "name": "Más populares que Jesús",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 14
+    },
+    {
+      "name": "Paul está muerto",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 13
+    },
+    {
+      "name": "Concursos amañados de Twenty-One",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 15
+    },
+    {
+      "name": "Fyre Festival",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 13
+    },
+    {
+      "name": "Free Britney",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12
+    },
+    {
+      "name": "Music Sessions #53",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 7
+    },
+    {
+      "name": "Caderas de Elvis",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12
+    },
+    {
+      "name": "Error de Miss Universo 2015",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12
+    },
+    {
+      "name": "Backmasking",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 14
+    },
+    {
+      "name": "Dieselgate",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Elizabeth Holmes",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13
+    },
+    {
+      "name": "Cambridge Analytica",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Samsung Galaxy Note 7",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 11
+    },
+    {
+      "name": "New Coke",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13
+    },
+    {
+      "name": "Ford Pinto",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 15
+    },
+    {
+      "name": "Cártel Phoebus",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 14
+    },
+    {
+      "name": "Batterygate",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13
+    },
+    {
+      "name": "Juguetes con pintura de plomo",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 15
+    },
+    {
+      "name": "Hoverboard",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Escándalo de la carne de caballo",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13
+    },
+    {
+      "name": "Pepsi Points",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 14
+    },
+    {
+      "name": "Error del Pentium",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 15
+    },
+    {
+      "name": "Proceso 8000",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "A mis espaldas",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "Odebrecht",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "DMG",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 13
+    },
+    {
+      "name": "David Murcia Guzmán",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Agro Ingreso Seguro",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Carrusel de la contratación",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Reficar",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 15
+    },
+    {
+      "name": "Yidispolítica",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 15
+    },
+    {
+      "name": "Chuzadas del DAS",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Elecciones de 1970",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Centros Poblados",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Mermelada",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "Robo del Banco de la República de Valledupar",
+      "facet": "Escándalos de la historia colombiana",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,957 @@
+{
+  "subcategory": "Eurovisión",
+  "facets": [
+    "Ganadores históricos",
+    "Canciones famosas del festival",
+    "Países participantes",
+    "Ciudades y sedes",
+    "Reglas y votaciones",
+    "Puestas en escena y vestuario",
+    "Idiomas de las canciones",
+    "Récords y curiosidades",
+    "Estrellas lanzadas por Eurovisión",
+    "Historia del festival",
+    "Eurovisión en el cine y la TV",
+    "Versiones y festivales hermanos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 1,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Céline Dion",
+      "facet": "Ganadores históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Måneskin",
+      "facet": "Ganadores históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Loreen",
+      "facet": "Ganadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Conchita Wurst",
+      "facet": "Ganadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Lordi",
+      "facet": "Ganadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Massiel",
+      "facet": "Ganadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Salomé",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Johnny Logan",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Dana International",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Salvador Sobral",
+      "facet": "Ganadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Netta",
+      "facet": "Ganadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Alexander Rybak",
+      "facet": "Ganadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Duncan Laurence",
+      "facet": "Ganadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Kalush Orchestra",
+      "facet": "Ganadores históricos",
+      "known_at": 12
+    },
+    {
+      "name": "JJ",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Ruslana",
+      "facet": "Ganadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Helena Paparizou",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Måns Zelmerlöw",
+      "facet": "Ganadores históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Gigliola Cinquetti",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Toto Cutugno",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Brotherhood of Man",
+      "facet": "Ganadores históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Waterloo",
+      "facet": "Canciones famosas del festival",
+      "known_at": 8
+    },
+    {
+      "name": "Volare",
+      "facet": "Canciones famosas del festival",
+      "known_at": 10
+    },
+    {
+      "name": "Euphoria",
+      "facet": "Canciones famosas del festival",
+      "known_at": 12
+    },
+    {
+      "name": "Arcade",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Toy",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Zitti e buoni",
+      "facet": "Canciones famosas del festival",
+      "known_at": 12
+    },
+    {
+      "name": "Eres tú",
+      "facet": "Canciones famosas del festival",
+      "known_at": 12
+    },
+    {
+      "name": "Rise Like a Phoenix",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Hard Rock Hallelujah",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Fairytale",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Satellite",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Amar pelos dois",
+      "facet": "Canciones famosas del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Tattoo",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Stefania",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "SloMo",
+      "facet": "Canciones famosas del festival",
+      "known_at": 12
+    },
+    {
+      "name": "Cha Cha Cha",
+      "facet": "Canciones famosas del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Save Your Kisses for Me",
+      "facet": "Canciones famosas del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Puppet on a String",
+      "facet": "Canciones famosas del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Poupée de cire, poupée de son",
+      "facet": "Canciones famosas del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Ding-a-dong",
+      "facet": "Canciones famosas del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Azerbaiyán",
+      "facet": "Países participantes",
+      "known_at": 13
+    },
+    {
+      "name": "Lugano",
+      "facet": "Ciudades y sedes",
+      "known_at": 14
+    },
+    {
+      "name": "Malmö",
+      "facet": "Ciudades y sedes",
+      "known_at": 13
+    },
+    {
+      "name": "Turín",
+      "facet": "Ciudades y sedes",
+      "known_at": 12
+    },
+    {
+      "name": "Róterdam",
+      "facet": "Ciudades y sedes",
+      "known_at": 12
+    },
+    {
+      "name": "Tel Aviv",
+      "facet": "Ciudades y sedes",
+      "known_at": 12
+    },
+    {
+      "name": "Basilea",
+      "facet": "Ciudades y sedes",
+      "known_at": 13
+    },
+    {
+      "name": "Kiev",
+      "facet": "Ciudades y sedes",
+      "known_at": 12
+    },
+    {
+      "name": "Millstreet",
+      "facet": "Ciudades y sedes",
+      "known_at": 15
+    },
+    {
+      "name": "Edimburgo",
+      "facet": "Ciudades y sedes",
+      "known_at": 14
+    },
+    {
+      "name": "Bakú",
+      "facet": "Ciudades y sedes",
+      "known_at": 13
+    },
+    {
+      "name": "Douze points",
+      "facet": "Reglas y votaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Cero puntos",
+      "facet": "Reglas y votaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Big Five",
+      "facet": "Reglas y votaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Semifinal",
+      "facet": "Reglas y votaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Jurado profesional",
+      "facet": "Reglas y votaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Televoto",
+      "facet": "Reglas y votaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Regla de los tres minutos",
+      "facet": "Reglas y votaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Libertad de idioma",
+      "facet": "Reglas y votaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Límite de seis personas en el escenario",
+      "facet": "Reglas y votaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Canto en directo",
+      "facet": "Reglas y votaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Voto vecinal",
+      "facet": "Reglas y votaciones",
+      "known_at": 13
+    },
+    {
+      "name": "País anfitrión",
+      "facet": "Reglas y votaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Portavoz de votaciones",
+      "facet": "Reglas y votaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Prohibición de mensajes políticos",
+      "facet": "Reglas y votaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Voto del resto del mundo",
+      "facet": "Reglas y votaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Prohibición de votar por el propio país",
+      "facet": "Reglas y votaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Desempate",
+      "facet": "Reglas y votaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Máscaras de Lordi",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 12
+    },
+    {
+      "name": "Barba de Conchita Wurst",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 12
+    },
+    {
+      "name": "Falda arrancada de Bucks Fizz",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 14
+    },
+    {
+      "name": "Rueda de hámster",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 14
+    },
+    {
+      "name": "Verka Serduchka",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 13
+    },
+    {
+      "name": "Buranovskiye Babushki",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 13
+    },
+    {
+      "name": "Bolero verde de Käärijä",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 13
+    },
+    {
+      "name": "Baile de la gallina de Netta",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 13
+    },
+    {
+      "name": "Muñequitos animados de Måns Zelmerlöw",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 13
+    },
+    {
+      "name": "Caja de Loreen",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 14
+    },
+    {
+      "name": "Máquina de viento",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 11
+    },
+    {
+      "name": "Pirotecnia",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 9
+    },
+    {
+      "name": "Pantalla LED",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 10
+    },
+    {
+      "name": "Lentejuelas",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 8
+    },
+    {
+      "name": "Jedward",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 13
+    },
+    {
+      "name": "Dschinghis Khan",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 14
+    },
+    {
+      "name": "Epic Sax Guy",
+      "facet": "Puestas en escena y vestuario",
+      "known_at": 12
+    },
+    {
+      "name": "Español",
+      "facet": "Idiomas de las canciones",
+      "known_at": 6
+    },
+    {
+      "name": "Italiano",
+      "facet": "Idiomas de las canciones",
+      "known_at": 9
+    },
+    {
+      "name": "Hebreo",
+      "facet": "Idiomas de las canciones",
+      "known_at": 13
+    },
+    {
+      "name": "Ucraniano",
+      "facet": "Idiomas de las canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Sueco",
+      "facet": "Idiomas de las canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Alemán",
+      "facet": "Idiomas de las canciones",
+      "known_at": 11
+    },
+    {
+      "name": "Serbio",
+      "facet": "Idiomas de las canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Griego",
+      "facet": "Idiomas de las canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Finés",
+      "facet": "Idiomas de las canciones",
+      "known_at": 13
+    },
+    {
+      "name": "Bretón",
+      "facet": "Idiomas de las canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Corso",
+      "facet": "Idiomas de las canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Idioma inventado",
+      "facet": "Idiomas de las canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Spanglish",
+      "facet": "Idiomas de las canciones",
+      "known_at": 10
+    },
+    {
+      "name": "Micrófono de cristal",
+      "facet": "Récords y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Empate de 1969",
+      "facet": "Récords y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Sandra Kim",
+      "facet": "Récords y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Te Deum de Charpentier",
+      "facet": "Récords y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Eurofan",
+      "facet": "Récords y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "OGAE",
+      "facet": "Récords y curiosidades",
+      "known_at": 15
+    },
+    {
+      "name": "Premios Marcel Bezençon",
+      "facet": "Récords y curiosidades",
+      "known_at": 15
+    },
+    {
+      "name": "Jemini",
+      "facet": "Récords y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Jahn Teigen",
+      "facet": "Récords y curiosidades",
+      "known_at": 15
+    },
+    {
+      "name": "Récord de victorias de Irlanda",
+      "facet": "Récords y curiosidades",
+      "known_at": 13
+    },
+    {
+      "name": "Fiesta de Eurovisión",
+      "facet": "Récords y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Marcador de Eurovisión",
+      "facet": "Récords y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Audiencia de Eurovisión",
+      "facet": "Récords y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera en el escenario",
+      "facet": "Récords y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Final",
+      "facet": "Récords y curiosidades",
+      "known_at": 10
+    },
+    {
+      "name": "Julio Iglesias",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 12
+    },
+    {
+      "name": "Olivia Newton-John",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Nana Mouskouri",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Raphael",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Mocedades",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Cliff Richard",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Engelbert Humperdinck",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Bonnie Tyler",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "t.A.T.u.",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Al Bano y Romina Power",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Domenico Modugno",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Rosa López",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Chanel",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 12
+    },
+    {
+      "name": "Blanca Paloma",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Pastora Soler",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Edurne",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Mahmood",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Marco Mengoni",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Il Volo",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Melody",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 13
+    },
+    {
+      "name": "Patricia Kaas",
+      "facet": "Estrellas lanzadas por Eurovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Lys Assia",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Marcel Bezençon",
+      "facet": "Historia del festival",
+      "known_at": 15
+    },
+    {
+      "name": "Unión Europea de Radiodifusión",
+      "facet": "Historia del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Prix Eurovision de la Chanson",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Primer Festival de Eurovisión",
+      "facet": "Historia del festival",
+      "known_at": 12
+    },
+    {
+      "name": "Primera transmisión en color",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Orquesta en directo",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Revolución de los Claveles",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "E depois do adeus",
+      "facet": "Historia del festival",
+      "known_at": 15
+    },
+    {
+      "name": "Retirada de Rusia",
+      "facet": "Historia del festival",
+      "known_at": 13
+    },
+    {
+      "name": "Edición cancelada de 2020",
+      "facet": "Historia del festival",
+      "known_at": 11
+    },
+    {
+      "name": "Europe Shine a Light",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Llegada de Europa del Este",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Congratulations",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Red Eurovisión",
+      "facet": "Historia del festival",
+      "known_at": 14
+    },
+    {
+      "name": "Fin de la Guerra Fría",
+      "facet": "Historia del festival",
+      "known_at": 12
+    },
+    {
+      "name": "Eurovision Song Contest: The Story of Fire Saga",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Will Ferrell",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Rachel McAdams",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Pierce Brosnan",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Husavik",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 13
+    },
+    {
+      "name": "Jaja Ding Dong",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 13
+    },
+    {
+      "name": "Graham Norton",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 14
+    },
+    {
+      "name": "Terry Wogan",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 14
+    },
+    {
+      "name": "José Luis Uribarri",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 14
+    },
+    {
+      "name": "Petra Mede",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 15
+    },
+    {
+      "name": "Rodolfo Chikilicuatre",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 13
+    },
+    {
+      "name": "Operación Triunfo",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 11
+    },
+    {
+      "name": "Father Ted",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 15
+    },
+    {
+      "name": "Comentarista de Eurovisión",
+      "facet": "Eurovisión en el cine y la TV",
+      "known_at": 12
+    },
+    {
+      "name": "Eurovisión Junior",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 11
+    },
+    {
+      "name": "Melodifestivalen",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 13
+    },
+    {
+      "name": "Benidorm Fest",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Sanremo",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 13
+    },
+    {
+      "name": "American Song Contest",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 13
+    },
+    {
+      "name": "Intervisión",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 15
+    },
+    {
+      "name": "Festival OTI de la Canción",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 14
+    },
+    {
+      "name": "Eurovision Choir",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 15
+    },
+    {
+      "name": "Eurovision Young Musicians",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 15
+    },
+    {
+      "name": "Turkvision",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 15
+    },
+    {
+      "name": "Uuden Musiikin Kilpailu",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 15
+    },
+    {
+      "name": "Festival da Canção",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 14
+    },
+    {
+      "name": "Eurovision Dance Contest",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 15
+    },
+    {
+      "name": "Preselección nacional",
+      "facet": "Versiones y festivales hermanos",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,1027 @@
+{
+  "subcategory": "Fotografía",
+  "facets": [
+    "Cámaras y sus partes",
+    "Exposición, luz y flash",
+    "Lentes y óptica",
+    "Composición y encuadre",
+    "Géneros fotográficos",
+    "Inventos e historia de la fotografía",
+    "Película, revelado y Polaroid",
+    "Fotografía digital y celulares",
+    "Fotógrafos famosos del mundo",
+    "Fotos icónicas de la historia",
+    "Fotografía científica y espacial",
+    "Fotografía en Colombia y Latinoamérica"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Objetivo",
+      "facet": "Cámaras y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Disparador",
+      "facet": "Cámaras y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Visor",
+      "facet": "Cámaras y sus partes",
+      "known_at": 7
+    },
+    {
+      "name": "Cámara réflex",
+      "facet": "Cámaras y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Sensor de imagen",
+      "facet": "Cámaras y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Obturador",
+      "facet": "Cámaras y sus partes",
+      "known_at": 9
+    },
+    {
+      "name": "Diafragma",
+      "facet": "Cámaras y sus partes",
+      "known_at": 10
+    },
+    {
+      "name": "Cámara estenopeica",
+      "facet": "Cámaras y sus partes",
+      "known_at": 12
+    },
+    {
+      "name": "Cámara sin espejo",
+      "facet": "Cámaras y sus partes",
+      "known_at": 12
+    },
+    {
+      "name": "Espejo réflex",
+      "facet": "Cámaras y sus partes",
+      "known_at": 12
+    },
+    {
+      "name": "Cámara de fuelle",
+      "facet": "Cámaras y sus partes",
+      "known_at": 12
+    },
+    {
+      "name": "Zapata para flash",
+      "facet": "Cámaras y sus partes",
+      "known_at": 13
+    },
+    {
+      "name": "Pentaprisma",
+      "facet": "Cámaras y sus partes",
+      "known_at": 14
+    },
+    {
+      "name": "Correa de cámara",
+      "facet": "Cámaras y sus partes",
+      "known_at": 3
+    },
+    {
+      "name": "Silueta",
+      "facet": "Exposición, luz y flash",
+      "known_at": 4
+    },
+    {
+      "name": "Ojos rojos",
+      "facet": "Exposición, luz y flash",
+      "known_at": 5
+    },
+    {
+      "name": "Foto movida",
+      "facet": "Exposición, luz y flash",
+      "known_at": 5
+    },
+    {
+      "name": "Estudio fotográfico",
+      "facet": "Exposición, luz y flash",
+      "known_at": 5
+    },
+    {
+      "name": "Contraluz",
+      "facet": "Exposición, luz y flash",
+      "known_at": 7
+    },
+    {
+      "name": "Exposición",
+      "facet": "Exposición, luz y flash",
+      "known_at": 9
+    },
+    {
+      "name": "Hora dorada",
+      "facet": "Exposición, luz y flash",
+      "known_at": 10
+    },
+    {
+      "name": "Pintura con luz",
+      "facet": "Exposición, luz y flash",
+      "known_at": 10
+    },
+    {
+      "name": "ISO",
+      "facet": "Exposición, luz y flash",
+      "known_at": 10
+    },
+    {
+      "name": "Velocidad de obturación",
+      "facet": "Exposición, luz y flash",
+      "known_at": 11
+    },
+    {
+      "name": "Larga exposición",
+      "facet": "Exposición, luz y flash",
+      "known_at": 11
+    },
+    {
+      "name": "Sobreexposición",
+      "facet": "Exposición, luz y flash",
+      "known_at": 11
+    },
+    {
+      "name": "Hora azul",
+      "facet": "Exposición, luz y flash",
+      "known_at": 12
+    },
+    {
+      "name": "Rebotador",
+      "facet": "Exposición, luz y flash",
+      "known_at": 12
+    },
+    {
+      "name": "Fotómetro",
+      "facet": "Exposición, luz y flash",
+      "known_at": 13
+    },
+    {
+      "name": "Enfoque",
+      "facet": "Lentes y óptica",
+      "known_at": 5
+    },
+    {
+      "name": "Tapa del objetivo",
+      "facet": "Lentes y óptica",
+      "known_at": 5
+    },
+    {
+      "name": "Desenfoque",
+      "facet": "Lentes y óptica",
+      "known_at": 6
+    },
+    {
+      "name": "Ojo de pez",
+      "facet": "Lentes y óptica",
+      "known_at": 7
+    },
+    {
+      "name": "Gran angular",
+      "facet": "Lentes y óptica",
+      "known_at": 9
+    },
+    {
+      "name": "Teleobjetivo",
+      "facet": "Lentes y óptica",
+      "known_at": 9
+    },
+    {
+      "name": "Lente macro",
+      "facet": "Lentes y óptica",
+      "known_at": 9
+    },
+    {
+      "name": "Lente convexa",
+      "facet": "Lentes y óptica",
+      "known_at": 10
+    },
+    {
+      "name": "Distancia focal",
+      "facet": "Lentes y óptica",
+      "known_at": 12
+    },
+    {
+      "name": "Profundidad de campo",
+      "facet": "Lentes y óptica",
+      "known_at": 12
+    },
+    {
+      "name": "Bokeh",
+      "facet": "Lentes y óptica",
+      "known_at": 12
+    },
+    {
+      "name": "Filtro polarizador",
+      "facet": "Lentes y óptica",
+      "known_at": 12
+    },
+    {
+      "name": "Parasol",
+      "facet": "Lentes y óptica",
+      "known_at": 12
+    },
+    {
+      "name": "Lente de 50 mm",
+      "facet": "Lentes y óptica",
+      "known_at": 13
+    },
+    {
+      "name": "Aberración cromática",
+      "facet": "Lentes y óptica",
+      "known_at": 14
+    },
+    {
+      "name": "Horizonte",
+      "facet": "Composición y encuadre",
+      "known_at": 5
+    },
+    {
+      "name": "Simetría",
+      "facet": "Composición y encuadre",
+      "known_at": 6
+    },
+    {
+      "name": "Primer plano",
+      "facet": "Composición y encuadre",
+      "known_at": 7
+    },
+    {
+      "name": "Encuadre",
+      "facet": "Composición y encuadre",
+      "known_at": 8
+    },
+    {
+      "name": "Orientación horizontal",
+      "facet": "Composición y encuadre",
+      "known_at": 8
+    },
+    {
+      "name": "Cuadrícula",
+      "facet": "Composición y encuadre",
+      "known_at": 8
+    },
+    {
+      "name": "Plano general",
+      "facet": "Composición y encuadre",
+      "known_at": 9
+    },
+    {
+      "name": "Regla de los tercios",
+      "facet": "Composición y encuadre",
+      "known_at": 11
+    },
+    {
+      "name": "Líneas guía",
+      "facet": "Composición y encuadre",
+      "known_at": 12
+    },
+    {
+      "name": "Punto de fuga",
+      "facet": "Composición y encuadre",
+      "known_at": 12
+    },
+    {
+      "name": "Marco natural",
+      "facet": "Composición y encuadre",
+      "known_at": 12
+    },
+    {
+      "name": "Primerísimo primer plano",
+      "facet": "Composición y encuadre",
+      "known_at": 12
+    },
+    {
+      "name": "Picado",
+      "facet": "Composición y encuadre",
+      "known_at": 13
+    },
+    {
+      "name": "Contrapicado",
+      "facet": "Composición y encuadre",
+      "known_at": 13
+    },
+    {
+      "name": "Plano cenital",
+      "facet": "Composición y encuadre",
+      "known_at": 13
+    },
+    {
+      "name": "Plano americano",
+      "facet": "Composición y encuadre",
+      "known_at": 13
+    },
+    {
+      "name": "Proporción áurea",
+      "facet": "Composición y encuadre",
+      "known_at": 13
+    },
+    {
+      "name": "Espacio negativo",
+      "facet": "Composición y encuadre",
+      "known_at": 13
+    },
+    {
+      "name": "Paisaje",
+      "facet": "Géneros fotográficos",
+      "known_at": 3
+    },
+    {
+      "name": "Retrato",
+      "facet": "Géneros fotográficos",
+      "known_at": 4
+    },
+    {
+      "name": "Foto de pasaporte",
+      "facet": "Géneros fotográficos",
+      "known_at": 4
+    },
+    {
+      "name": "Fotografía de naturaleza",
+      "facet": "Géneros fotográficos",
+      "known_at": 5
+    },
+    {
+      "name": "Fotografía de bodas",
+      "facet": "Géneros fotográficos",
+      "known_at": 6
+    },
+    {
+      "name": "Fotografía submarina",
+      "facet": "Géneros fotográficos",
+      "known_at": 6
+    },
+    {
+      "name": "Fotografía deportiva",
+      "facet": "Géneros fotográficos",
+      "known_at": 7
+    },
+    {
+      "name": "Fotografía de alimentos",
+      "facet": "Géneros fotográficos",
+      "known_at": 7
+    },
+    {
+      "name": "Fotografía de moda",
+      "facet": "Géneros fotográficos",
+      "known_at": 8
+    },
+    {
+      "name": "Fotografía aérea",
+      "facet": "Géneros fotográficos",
+      "known_at": 8
+    },
+    {
+      "name": "Fotografía de producto",
+      "facet": "Géneros fotográficos",
+      "known_at": 10
+    },
+    {
+      "name": "Fotografía de arquitectura",
+      "facet": "Géneros fotográficos",
+      "known_at": 10
+    },
+    {
+      "name": "Fotografía callejera",
+      "facet": "Géneros fotográficos",
+      "known_at": 11
+    },
+    {
+      "name": "Fotografía documental",
+      "facet": "Géneros fotográficos",
+      "known_at": 12
+    },
+    {
+      "name": "Fotografía de guerra",
+      "facet": "Géneros fotográficos",
+      "known_at": 12
+    },
+    {
+      "name": "Bodegón fotográfico",
+      "facet": "Géneros fotográficos",
+      "known_at": 13
+    },
+    {
+      "name": "Fotografía en color",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 8
+    },
+    {
+      "name": "Primera fotografía",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 10
+    },
+    {
+      "name": "Leica",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 12
+    },
+    {
+      "name": "Placa de vidrio",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 13
+    },
+    {
+      "name": "Estereoscopio",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 13
+    },
+    {
+      "name": "William Henry Fox Talbot",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 14
+    },
+    {
+      "name": "Kodak Brownie",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 14
+    },
+    {
+      "name": "Vista desde la ventana en Le Gras",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 15
+    },
+    {
+      "name": "Calotipo",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 15
+    },
+    {
+      "name": "Colodión húmedo",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 15
+    },
+    {
+      "name": "Autocromo",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 15
+    },
+    {
+      "name": "Ferrotipo",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 15
+    },
+    {
+      "name": "Robert Cornelius",
+      "facet": "Inventos e historia de la fotografía",
+      "known_at": 15
+    },
+    {
+      "name": "Álbum de fotos",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 2
+    },
+    {
+      "name": "Fotografía instantánea",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 5
+    },
+    {
+      "name": "Cuarto oscuro",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 7
+    },
+    {
+      "name": "Fujifilm Instax",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 7
+    },
+    {
+      "name": "Negativo",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 8
+    },
+    {
+      "name": "Revelado",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 8
+    },
+    {
+      "name": "Cámara desechable",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 8
+    },
+    {
+      "name": "Diapositiva",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 9
+    },
+    {
+      "name": "Luz roja de seguridad",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 11
+    },
+    {
+      "name": "Película de 35 mm",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 11
+    },
+    {
+      "name": "Velar la película",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 12
+    },
+    {
+      "name": "Grano fotográfico",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 13
+    },
+    {
+      "name": "Ampliadora",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 14
+    },
+    {
+      "name": "Fijador",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 14
+    },
+    {
+      "name": "Hoja de contactos",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 14
+    },
+    {
+      "name": "Edwin Land",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 14
+    },
+    {
+      "name": "Kodachrome",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 14
+    },
+    {
+      "name": "Haluro de plata",
+      "facet": "Película, revelado y Polaroid",
+      "known_at": 15
+    },
+    {
+      "name": "Celular con cámara",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 2
+    },
+    {
+      "name": "Captura de pantalla",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 3
+    },
+    {
+      "name": "Palo de selfie",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 3
+    },
+    {
+      "name": "Cámara frontal",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 4
+    },
+    {
+      "name": "Filtro de Instagram",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 5
+    },
+    {
+      "name": "Photoshop",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 6
+    },
+    {
+      "name": "Panorámica",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 6
+    },
+    {
+      "name": "Modo nocturno",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 6
+    },
+    {
+      "name": "Modo retrato",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 7
+    },
+    {
+      "name": "Retoque fotográfico",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 8
+    },
+    {
+      "name": "Foto en ráfaga",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 8
+    },
+    {
+      "name": "Megapíxel",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 9
+    },
+    {
+      "name": "Zoom digital",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 10
+    },
+    {
+      "name": "Estabilizador de imagen",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 10
+    },
+    {
+      "name": "HDR",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 11
+    },
+    {
+      "name": "Formato RAW",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 13
+    },
+    {
+      "name": "Primera cámara digital",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 13
+    },
+    {
+      "name": "Metadatos EXIF",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 14
+    },
+    {
+      "name": "Steven Sasson",
+      "facet": "Fotografía digital y celulares",
+      "known_at": 15
+    },
+    {
+      "name": "Peter Parker",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Ansel Adams",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Henri Cartier-Bresson",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Annie Leibovitz",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Alberto Korda",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Mario Testino",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Capa",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Dorothea Lange",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Steve McCurry",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Sebastião Salgado",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Man Ray",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Eadweard Muybridge",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Avedon",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Diane Arbus",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Vivian Maier",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Cindy Sherman",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Yousuf Karsh",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Robert Doisneau",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Brassaï",
+      "facet": "Fotógrafos famosos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Huella de Buzz Aldrin en la Luna",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 6
+    },
+    {
+      "name": "Einstein sacando la lengua",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 6
+    },
+    {
+      "name": "Bliss (fondo de Windows XP)",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 7
+    },
+    {
+      "name": "Primera foto de un agujero negro",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Portada de Abbey Road",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Almuerzo en lo alto de un rascacielos",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 9
+    },
+    {
+      "name": "La canica azul",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Selfie de los Óscar 2014",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Marilyn Monroe y el vestido blanco",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 10
+    },
+    {
+      "name": "El beso de Times Square",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "La niña afgana",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Salida de la Tierra",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Pálido punto azul",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Guerrillero Heroico",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Alzando la bandera en Iwo Jima",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Foto del cirujano del lago Ness",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Madre migrante",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "El hombre del tanque",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "El beso del Hôtel de Ville",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 13
+    },
+    {
+      "name": "El caballo en movimiento",
+      "facet": "Fotos icónicas de la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Google Earth",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 5
+    },
+    {
+      "name": "Ecografía",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 6
+    },
+    {
+      "name": "Imagen satelital",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 6
+    },
+    {
+      "name": "Cámara trampa",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 8
+    },
+    {
+      "name": "Time-lapse",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 8
+    },
+    {
+      "name": "Astrofotografía",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 9
+    },
+    {
+      "name": "Fotografía infrarroja",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 11
+    },
+    {
+      "name": "Fotografía 51",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 14
+    },
+    {
+      "name": "Fotomicrografía",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 14
+    },
+    {
+      "name": "Corona de una gota de leche",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 14
+    },
+    {
+      "name": "Harold Edgerton",
+      "facet": "Fotografía científica y espacial",
+      "known_at": 15
+    },
+    {
+      "name": "Foto para la cédula",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 4
+    },
+    {
+      "name": "Llamas de la Plaza de Bolívar",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 10
+    },
+    {
+      "name": "Fotógrafo minutero",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "Fotonovela",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "Revista Cromos",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Jesús Abad Colorado",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Leo Matiz",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Fotos del Bogotazo",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Melitón Rodríguez",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Nereo López",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Sady González",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Hernán Díaz",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel H. Rodríguez",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Graciela Iturbide",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel Álvarez Bravo",
+      "facet": "Fotografía en Colombia y Latinoamérica",
+      "known_at": 15
+    }
+  ]
+}

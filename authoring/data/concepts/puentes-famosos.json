@@ -1,0 +1,722 @@
+{
+  "subcategory": "Puentes famosos",
+  "facets": [
+    "Puentes icónicos del mundo",
+    "Tipos de puentes",
+    "Partes y materiales de puentes",
+    "Puentes de Colombia",
+    "Puentes históricos y antiguos",
+    "Récords y megaestructuras",
+    "Ingenieros y hazañas de construcción",
+    "Puentes en cine y cultura pop",
+    "Puentes naturales y colgantes de cuerda",
+    "Puentes en lenguaje y costumbres"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pont Neuf",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Pont des Arts",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Pont Alexandre III",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Puente del Bósforo",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Puente 25 de Abril",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de la Mujer",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Erasmus",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Helix",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "London Bridge",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Puente Khaju",
+      "facet": "Puentes icónicos del mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Puente atirantado",
+      "facet": "Tipos de puentes",
+      "known_at": 9
+    },
+    {
+      "name": "Puente en arco",
+      "facet": "Tipos de puentes",
+      "known_at": 5
+    },
+    {
+      "name": "Puente de vigas",
+      "facet": "Tipos de puentes",
+      "known_at": 9
+    },
+    {
+      "name": "Puente basculante",
+      "facet": "Tipos de puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Puente giratorio",
+      "facet": "Tipos de puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Puente en ménsula",
+      "facet": "Tipos de puentes",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de pontones",
+      "facet": "Tipos de puentes",
+      "known_at": 11
+    },
+    {
+      "name": "Puente peatonal",
+      "facet": "Tipos de puentes",
+      "known_at": 2
+    },
+    {
+      "name": "Viaducto",
+      "facet": "Tipos de puentes",
+      "known_at": 8
+    },
+    {
+      "name": "Puente de celosía",
+      "facet": "Tipos de puentes",
+      "known_at": 12
+    },
+    {
+      "name": "Puente transbordador",
+      "facet": "Tipos de puentes",
+      "known_at": 13
+    },
+    {
+      "name": "Puente ferroviario",
+      "facet": "Tipos de puentes",
+      "known_at": 4
+    },
+    {
+      "name": "Puente Bailey",
+      "facet": "Tipos de puentes",
+      "known_at": 13
+    },
+    {
+      "name": "Puente cubierto",
+      "facet": "Tipos de puentes",
+      "known_at": 9
+    },
+    {
+      "name": "Puente vehicular elevado",
+      "facet": "Tipos de puentes",
+      "known_at": 5
+    },
+    {
+      "name": "Pilar",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 5
+    },
+    {
+      "name": "Cable de suspensión",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 6
+    },
+    {
+      "name": "Tirante",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Clave del arco",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 12
+    },
+    {
+      "name": "Dovela",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 13
+    },
+    {
+      "name": "Baranda",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 3
+    },
+    {
+      "name": "Junta de dilatación",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 11
+    },
+    {
+      "name": "Hierro fundido",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 10
+    },
+    {
+      "name": "Piedra",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 1
+    },
+    {
+      "name": "Madera",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 1
+    },
+    {
+      "name": "Cimbra",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 14
+    },
+    {
+      "name": "Cajón neumático",
+      "facet": "Partes y materiales de puentes",
+      "known_at": 14
+    },
+    {
+      "name": "Viaducto César Gaviria Trujillo",
+      "facet": "Puentes de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Puente Hisgaura",
+      "facet": "Puentes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Puente del Común",
+      "facet": "Puentes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Ortiz",
+      "facet": "Puentes de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Internacional Simón Bolívar",
+      "facet": "Puentes de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Puente Internacional de Rumichaca",
+      "facet": "Puentes de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Navarro",
+      "facet": "Puentes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Plato",
+      "facet": "Puentes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Gilberto Echeverri Mejía",
+      "facet": "Puentes de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Chirajara",
+      "facet": "Puentes de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de San Antonio de Cali",
+      "facet": "Puentes de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Guillermo Gaviria Correa",
+      "facet": "Puentes de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Heredia",
+      "facet": "Puentes de Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Puente Romano de Alcántara",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Stari Most",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Iron Bridge",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Aviñón",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Romano de Córdoba",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Zhaozhou",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Puente Milvio",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Puente de Arkadiko",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Puente Kintai",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 15
+    },
+    {
+      "name": "Kapellbrücke",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Nuevo de Ronda",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Vizcaya",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Romano de Mérida",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Puente de Trajano",
+      "facet": "Puentes históricos y antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Puente Danyang–Kunshan",
+      "facet": "Récords y megaestructuras",
+      "known_at": 12
+    },
+    {
+      "name": "Puente Akashi Kaikyō",
+      "facet": "Récords y megaestructuras",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Çanakkale 1915",
+      "facet": "Récords y megaestructuras",
+      "known_at": 14
+    },
+    {
+      "name": "Puente del Gran Cañón de Huajiang",
+      "facet": "Récords y megaestructuras",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Hong Kong–Zhuhai–Macao",
+      "facet": "Récords y megaestructuras",
+      "known_at": 13
+    },
+    {
+      "name": "Calzada del lago Pontchartrain",
+      "facet": "Récords y megaestructuras",
+      "known_at": 14
+    },
+    {
+      "name": "Puente del Rey Fahd",
+      "facet": "Récords y megaestructuras",
+      "known_at": 14
+    },
+    {
+      "name": "Puente de Quebec",
+      "facet": "Récords y megaestructuras",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Russky",
+      "facet": "Récords y megaestructuras",
+      "known_at": 15
+    },
+    {
+      "name": "Puente de la Confederación",
+      "facet": "Récords y megaestructuras",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Vasco da Gama",
+      "facet": "Récords y megaestructuras",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Duge",
+      "facet": "Récords y megaestructuras",
+      "known_at": 15
+    },
+    {
+      "name": "Puente Rion-Antirion",
+      "facet": "Récords y megaestructuras",
+      "known_at": 15
+    },
+    {
+      "name": "Puente Seven Mile",
+      "facet": "Récords y megaestructuras",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de cristal de Zhangjiajie",
+      "facet": "Récords y megaestructuras",
+      "known_at": 11
+    },
+    {
+      "name": "John A. Roebling",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 13
+    },
+    {
+      "name": "Emily Warren Roebling",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 14
+    },
+    {
+      "name": "Joseph Strauss",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Telford",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 14
+    },
+    {
+      "name": "Apolodoro de Damasco",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 15
+    },
+    {
+      "name": "Othmar Ammann",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 15
+    },
+    {
+      "name": "Robert Maillart",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 15,
+      "retired": "unaskable: Robert Maillart es demasiado poco conocido; cualquier pregunta sobre él sería de especialista, muy por encima de 12."
+    },
+    {
+      "name": "Eduardo Torroja",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 15
+    },
+    {
+      "name": "José María Villa",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Tacoma Narrows",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 11
+    },
+    {
+      "name": "Puente colgante de Clifton",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 15
+    },
+    {
+      "name": "Problema de los puentes de Königsberg",
+      "facet": "Ingenieros y hazañas de construcción",
+      "known_at": 12
+    },
+    {
+      "name": "Un puente demasiado lejano",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "Un puente hacia Terabithia",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 7
+    },
+    {
+      "name": "Los puentes de Madison",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Khazad-dûm",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 10
+    },
+    {
+      "name": "Troll bajo el puente",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 3
+    },
+    {
+      "name": "Los tres chivitos",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 4
+    },
+    {
+      "name": "Puente de cuerda de Indiana Jones",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Puente del castillo de la Dragona en Shrek",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 3
+    },
+    {
+      "name": "Bridge over Troubled Water",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Poly Bridge",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 8,
+      "retired": "unaskable: Poly Bridge es un videojuego de nicho; ninguna opción da una pregunta buena a dificultad 4."
+    },
+    {
+      "name": "Puente del Arcoíris de las mascotas",
+      "facet": "Puentes en cine y cultura pop",
+      "known_at": 9
+    },
+    {
+      "name": "Puente de Q'eswachaka",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 12
+    },
+    {
+      "name": "Puente natural de Icononzo",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 13
+    },
+    {
+      "name": "Rainbow Bridge de Utah",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 15
+    },
+    {
+      "name": "Puentes de raíces vivas",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 12
+    },
+    {
+      "name": "Iya Kazurabashi",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 15
+    },
+    {
+      "name": "Tarabita",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 11
+    },
+    {
+      "name": "Puente tibetano",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 8
+    },
+    {
+      "name": "Puente colgante de Capilano",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 14
+    },
+    {
+      "name": "Puente de Carrick-a-Rede",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 15
+    },
+    {
+      "name": "Puente de Hussaini",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 15
+    },
+    {
+      "name": "Pont d'Arc",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 15
+    },
+    {
+      "name": "Puente del Inca",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Arches",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Natural de Virginia",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 15
+    },
+    {
+      "name": "Puente de hielo",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 8
+    },
+    {
+      "name": "Puente de lianas",
+      "facet": "Puentes naturales y colgantes de cuerda",
+      "known_at": 5
+    },
+    {
+      "name": "Puente festivo",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 4
+    },
+    {
+      "name": "Ley Emiliani",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Candados del amor",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Tender puentes",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 9
+    },
+    {
+      "name": "A enemigo que huye, puente de plata",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Pontífice",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Puente aéreo",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Puente dental",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Puente (ejercicio)",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 4
+    },
+    {
+      "name": "Puente de Einstein-Rosen",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Varolio",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 14
+    },
+    {
+      "name": "Puente musical",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Puente de las gafas",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 6
+    },
+    {
+      "name": "Puente de la guitarra",
+      "facet": "Puentes en lenguaje y costumbres",
+      "known_at": 8
+    }
+  ]
+}

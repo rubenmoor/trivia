@@ -1,0 +1,872 @@
+{
+  "subcategory": "Aviones",
+  "facets": [
+    "Partes del avión",
+    "Cómo vuela un avión",
+    "Tipos de aeronaves",
+    "Aviones famosos y modelos",
+    "Pioneros e historia de la aviación",
+    "Aeropuertos y viajes en avión",
+    "Pilotos, tripulación y oficios",
+    "Aviación en Colombia",
+    "Aviones militares y de rescate",
+    "Aviones en películas y juegos",
+    "Récords y curiosidades aéreas",
+    "Vocabulario y señales de aviación"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cola del avión",
+      "facet": "Partes del avión",
+      "known_at": 2
+    },
+    {
+      "name": "Fuselaje",
+      "facet": "Partes del avión",
+      "known_at": 10
+    },
+    {
+      "name": "Cabina de mando",
+      "facet": "Partes del avión",
+      "known_at": 4
+    },
+    {
+      "name": "Alerones",
+      "facet": "Partes del avión",
+      "known_at": 10
+    },
+    {
+      "name": "Flaps",
+      "facet": "Partes del avión",
+      "known_at": 12
+    },
+    {
+      "name": "Timón de dirección",
+      "facet": "Partes del avión",
+      "known_at": 10
+    },
+    {
+      "name": "Estabilizador horizontal",
+      "facet": "Partes del avión",
+      "known_at": 12
+    },
+    {
+      "name": "Ventanilla",
+      "facet": "Partes del avión",
+      "known_at": 1
+    },
+    {
+      "name": "Winglet",
+      "facet": "Partes del avión",
+      "known_at": 12
+    },
+    {
+      "name": "Caja negra",
+      "facet": "Partes del avión",
+      "known_at": 6
+    },
+    {
+      "name": "Compartimiento de equipaje",
+      "facet": "Partes del avión",
+      "known_at": 4
+    },
+    {
+      "name": "Palanca de mando",
+      "facet": "Partes del avión",
+      "known_at": 7
+    },
+    {
+      "name": "Tanque de combustible",
+      "facet": "Partes del avión",
+      "known_at": 6
+    },
+    {
+      "name": "Salida de emergencia",
+      "facet": "Partes del avión",
+      "known_at": 4
+    },
+    {
+      "name": "Mascarilla de oxígeno",
+      "facet": "Partes del avión",
+      "known_at": 6
+    },
+    {
+      "name": "Sustentación",
+      "facet": "Cómo vuela un avión",
+      "known_at": 10
+    },
+    {
+      "name": "Empuje",
+      "facet": "Cómo vuela un avión",
+      "known_at": 9
+    },
+    {
+      "name": "Principio de Bernoulli",
+      "facet": "Cómo vuela un avión",
+      "known_at": 12
+    },
+    {
+      "name": "Perfil alar",
+      "facet": "Cómo vuela un avión",
+      "known_at": 12
+    },
+    {
+      "name": "Despegue",
+      "facet": "Cómo vuela un avión",
+      "known_at": 2
+    },
+    {
+      "name": "Aterrizaje",
+      "facet": "Cómo vuela un avión",
+      "known_at": 2
+    },
+    {
+      "name": "Turbulencia",
+      "facet": "Cómo vuela un avión",
+      "known_at": 6
+    },
+    {
+      "name": "Pérdida de sustentación",
+      "facet": "Cómo vuela un avión",
+      "known_at": 13
+    },
+    {
+      "name": "Presurización de cabina",
+      "facet": "Cómo vuela un avión",
+      "known_at": 11
+    },
+    {
+      "name": "Altitud de crucero",
+      "facet": "Cómo vuela un avión",
+      "known_at": 10
+    },
+    {
+      "name": "Viento de cola",
+      "facet": "Cómo vuela un avión",
+      "known_at": 9
+    },
+    {
+      "name": "Ángulo de ataque",
+      "facet": "Cómo vuela un avión",
+      "known_at": 13
+    },
+    {
+      "name": "Tercera ley de Newton",
+      "facet": "Cómo vuela un avión",
+      "known_at": 10
+    },
+    {
+      "name": "Avión de pasajeros",
+      "facet": "Tipos de aeronaves",
+      "known_at": 1
+    },
+    {
+      "name": "Avión de carga",
+      "facet": "Tipos de aeronaves",
+      "known_at": 3
+    },
+    {
+      "name": "Hidroavión",
+      "facet": "Tipos de aeronaves",
+      "known_at": 5
+    },
+    {
+      "name": "Avioneta",
+      "facet": "Tipos de aeronaves",
+      "known_at": 3
+    },
+    {
+      "name": "Dirigible",
+      "facet": "Tipos de aeronaves",
+      "known_at": 6
+    },
+    {
+      "name": "Jet privado",
+      "facet": "Tipos de aeronaves",
+      "known_at": 5
+    },
+    {
+      "name": "Avión supersónico",
+      "facet": "Tipos de aeronaves",
+      "known_at": 8
+    },
+    {
+      "name": "Autogiro",
+      "facet": "Tipos de aeronaves",
+      "known_at": 13
+    },
+    {
+      "name": "Ultraligero",
+      "facet": "Tipos de aeronaves",
+      "known_at": 11
+    },
+    {
+      "name": "Avión cisterna",
+      "facet": "Tipos de aeronaves",
+      "known_at": 11
+    },
+    {
+      "name": "Convertiplano",
+      "facet": "Tipos de aeronaves",
+      "known_at": 13
+    },
+    {
+      "name": "Boeing 747",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 9
+    },
+    {
+      "name": "Airbus A380",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 8
+    },
+    {
+      "name": "Spirit of St. Louis",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 13
+    },
+    {
+      "name": "Wright Flyer",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 11
+    },
+    {
+      "name": "Boeing 737",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 10
+    },
+    {
+      "name": "Douglas DC-3",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 14
+    },
+    {
+      "name": "Boeing 787 Dreamliner",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 12
+    },
+    {
+      "name": "Tupolev Tu-144",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 14
+    },
+    {
+      "name": "Airbus A320",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 11
+    },
+    {
+      "name": "Airbus Beluga",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 10
+    },
+    {
+      "name": "14-bis",
+      "facet": "Aviones famosos y modelos",
+      "known_at": 14
+    },
+    {
+      "name": "Hermanos Wright",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 6
+    },
+    {
+      "name": "Louis Blériot",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 14
+    },
+    {
+      "name": "Otto Lilienthal",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 14
+    },
+    {
+      "name": "Kitty Hawk",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 12
+    },
+    {
+      "name": "Igor Sikorsky",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 14
+    },
+    {
+      "name": "Bessie Coleman",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 14
+    },
+    {
+      "name": "Chuck Yeager",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 14
+    },
+    {
+      "name": "Ferdinand von Zeppelin",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 12
+    },
+    {
+      "name": "Juan de la Cierva",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 15
+    },
+    {
+      "name": "Amy Johnson",
+      "facet": "Pioneros e historia de la aviación",
+      "known_at": 15
+    },
+    {
+      "name": "Pasaporte",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 3
+    },
+    {
+      "name": "Tarjeta de embarque",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 6
+    },
+    {
+      "name": "Equipaje de mano",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 4
+    },
+    {
+      "name": "Control de seguridad",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 5
+    },
+    {
+      "name": "Puerta de embarque",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 5
+    },
+    {
+      "name": "Pista de aterrizaje",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 3
+    },
+    {
+      "name": "Torre de control",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 4
+    },
+    {
+      "name": "Aduana",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 8
+    },
+    {
+      "name": "Banda de equipaje",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 4
+    },
+    {
+      "name": "Duty free",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 9
+    },
+    {
+      "name": "Check-in",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 7
+    },
+    {
+      "name": "Sobreventa de vuelos",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 11
+    },
+    {
+      "name": "Clase ejecutiva",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 7
+    },
+    {
+      "name": "Escáner de equipaje",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 5
+    },
+    {
+      "name": "Comida de avión",
+      "facet": "Aeropuertos y viajes en avión",
+      "known_at": 3
+    },
+    {
+      "name": "Piloto",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 1
+    },
+    {
+      "name": "Copiloto",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 3
+    },
+    {
+      "name": "Auxiliar de vuelo",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 3
+    },
+    {
+      "name": "Controlador aéreo",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 6
+    },
+    {
+      "name": "Mecánico de aviación",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 5
+    },
+    {
+      "name": "Comandante",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 7
+    },
+    {
+      "name": "Licencia de piloto",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 8
+    },
+    {
+      "name": "Uniforme de piloto",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 3
+    },
+    {
+      "name": "Despachador de vuelo",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 13
+    },
+    {
+      "name": "Señalero de pista",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 7
+    },
+    {
+      "name": "Jefe de cabina",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 9
+    },
+    {
+      "name": "Ingeniero aeronáutico",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 8
+    },
+    {
+      "name": "Bombero de aeropuerto",
+      "facet": "Pilotos, tripulación y oficios",
+      "known_at": 6
+    },
+    {
+      "name": "Avianca",
+      "facet": "Aviación en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Aeropuerto El Dorado",
+      "facet": "Aviación en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Satena",
+      "facet": "Aviación en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Fuerza Aérea Colombiana",
+      "facet": "Aviación en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Aeropuerto José María Córdova",
+      "facet": "Aviación en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto Rafael Núñez",
+      "facet": "Aviación en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Aerocivil",
+      "facet": "Aviación en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto Gustavo Rojas Pinilla",
+      "facet": "Aviación en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Wingo",
+      "facet": "Aviación en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Aeropuerto Ernesto Cortissoz",
+      "facet": "Aviación en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto Olaya Herrera",
+      "facet": "Aviación en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Aeroespacial Colombiano",
+      "facet": "Aviación en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Camilo Daza",
+      "facet": "Aviación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Aeropuerto Alfonso Bonilla Aragón",
+      "facet": "Aviación en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto Matecaña",
+      "facet": "Aviación en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Aeropuerto El Embrujo",
+      "facet": "Aviación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "F-AIR Colombia",
+      "facet": "Aviación en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Avión caza",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 6
+    },
+    {
+      "name": "Bombardero",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 8
+    },
+    {
+      "name": "Helicóptero de rescate",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 3
+    },
+    {
+      "name": "Avión apagafuegos",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 5
+    },
+    {
+      "name": "Asiento eyectable",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 9
+    },
+    {
+      "name": "Avión furtivo",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 11
+    },
+    {
+      "name": "F-16",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 11
+    },
+    {
+      "name": "Supermarine Spitfire",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 13
+    },
+    {
+      "name": "Barón Rojo",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 11
+    },
+    {
+      "name": "Hércules C-130",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 12
+    },
+    {
+      "name": "Ambulancia aérea",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 4
+    },
+    {
+      "name": "Super Tucano",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 13
+    },
+    {
+      "name": "Kfir",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 14
+    },
+    {
+      "name": "Patrulla acrobática",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 8
+    },
+    {
+      "name": "Harrier",
+      "facet": "Aviones militares y de rescate",
+      "known_at": 14
+    },
+    {
+      "name": "Aviones (película de Disney)",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Dusty Crophopper",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Super Wings",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Jett",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Porco Rosso",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "El viento se levanta",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "¿Y dónde está el piloto?",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "El aviador",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Sully",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Microsoft Flight Simulator",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Baloo piloto",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Avión invisible de la Mujer Maravilla",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Quinjet",
+      "facet": "Aviones en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Hughes H-4 Hercules",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 14
+    },
+    {
+      "name": "Aeropuerto de Lukla",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 13
+    },
+    {
+      "name": "Playa Maho",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 11
+    },
+    {
+      "name": "Aeropuerto de Barra",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 14
+    },
+    {
+      "name": "Aeropuerto de Gibraltar",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 13
+    },
+    {
+      "name": "Cementerio de aviones",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 10
+    },
+    {
+      "name": "Estela de condensación",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 8
+    },
+    {
+      "name": "Rayo sobre un avión",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 8
+    },
+    {
+      "name": "Choque con aves",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 7
+    },
+    {
+      "name": "Vuelo Singapur–Nueva York",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 13
+    },
+    {
+      "name": "Aeropuerto Daocheng Yading",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 15
+    },
+    {
+      "name": "Solar Impulse",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 12
+    },
+    {
+      "name": "Rutan Voyager",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 15
+    },
+    {
+      "name": "Aeropuerto de Atlanta",
+      "facet": "Récords y curiosidades aéreas",
+      "known_at": 13
+    },
+    {
+      "name": "Alfabeto aeronáutico",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 10
+    },
+    {
+      "name": "Pie de altitud",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 10
+    },
+    {
+      "name": "Código de aeropuerto",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 9
+    },
+    {
+      "name": "Transpondedor",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 13
+    },
+    {
+      "name": "Señal de abrocharse el cinturón",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 4
+    },
+    {
+      "name": "Roger",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 9
+    },
+    {
+      "name": "Aerolínea",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 4
+    },
+    {
+      "name": "Aeronave",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 5
+    },
+    {
+      "name": "Hangar",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 8
+    },
+    {
+      "name": "Plan de vuelo",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 9
+    },
+    {
+      "name": "Amerizaje",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 11
+    },
+    {
+      "name": "Carreteo",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 12
+    },
+    {
+      "name": "Vuelo chárter",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 12
+    },
+    {
+      "name": "Número Mach",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 11
+    },
+    {
+      "name": "Aerodinámica",
+      "facet": "Vocabulario y señales de aviación",
+      "known_at": 8
+    }
+  ]
+}

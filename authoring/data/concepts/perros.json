@@ -1,0 +1,842 @@
+{
+  "subcategory": "Perros",
+  "facets": [
+    "Razas de perros",
+    "Cuerpo y sentidos del perro",
+    "Comportamiento y lenguaje canino",
+    "Cuidados, salud y alimentación",
+    "Cachorros y ciclo de vida",
+    "Perros de trabajo y servicio",
+    "Perros famosos de cine y dibujos",
+    "Perros en la historia y la leyenda",
+    "Parientes salvajes y origen del perro",
+    "Palabras y dichos perrunos",
+    "Entrenamiento, deportes y concursos caninos",
+    "Perros en Colombia y en la calle"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Chihuahua",
+      "facet": "Razas de perros",
+      "known_at": 2
+    },
+    {
+      "name": "Labrador retriever",
+      "facet": "Razas de perros",
+      "known_at": 3
+    },
+    {
+      "name": "Caniche",
+      "facet": "Razas de perros",
+      "known_at": 4
+    },
+    {
+      "name": "Bulldog inglés",
+      "facet": "Razas de perros",
+      "known_at": 4
+    },
+    {
+      "name": "Bulldog francés",
+      "facet": "Razas de perros",
+      "known_at": 5
+    },
+    {
+      "name": "Husky siberiano",
+      "facet": "Razas de perros",
+      "known_at": 3
+    },
+    {
+      "name": "San Bernardo",
+      "facet": "Razas de perros",
+      "known_at": 4
+    },
+    {
+      "name": "Gran danés",
+      "facet": "Razas de perros",
+      "known_at": 6
+    },
+    {
+      "name": "Pug",
+      "facet": "Razas de perros",
+      "known_at": 3
+    },
+    {
+      "name": "Shar pei",
+      "facet": "Razas de perros",
+      "known_at": 6
+    },
+    {
+      "name": "Chow chow",
+      "facet": "Razas de perros",
+      "known_at": 7
+    },
+    {
+      "name": "Border collie",
+      "facet": "Razas de perros",
+      "known_at": 7
+    },
+    {
+      "name": "Galgo",
+      "facet": "Razas de perros",
+      "known_at": 6
+    },
+    {
+      "name": "Rottweiler",
+      "facet": "Razas de perros",
+      "known_at": 5
+    },
+    {
+      "name": "Dóberman",
+      "facet": "Razas de perros",
+      "known_at": 5
+    },
+    {
+      "name": "Schnauzer",
+      "facet": "Razas de perros",
+      "known_at": 5
+    },
+    {
+      "name": "Yorkshire terrier",
+      "facet": "Razas de perros",
+      "known_at": 5
+    },
+    {
+      "name": "Pomerania",
+      "facet": "Razas de perros",
+      "known_at": 6
+    },
+    {
+      "name": "Basset hound",
+      "facet": "Razas de perros",
+      "known_at": 8
+    },
+    {
+      "name": "Shiba inu",
+      "facet": "Razas de perros",
+      "known_at": 9
+    },
+    {
+      "name": "Mastín tibetano",
+      "facet": "Razas de perros",
+      "known_at": 12
+    },
+    {
+      "name": "Olfato",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 2
+    },
+    {
+      "name": "Oído",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 3
+    },
+    {
+      "name": "Cola",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 1
+    },
+    {
+      "name": "Hocico",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 4
+    },
+    {
+      "name": "Vibrisas",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 10
+    },
+    {
+      "name": "Dentadura del perro",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 10
+    },
+    {
+      "name": "Visión en colores",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 9
+    },
+    {
+      "name": "Jadeo",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 7
+    },
+    {
+      "name": "Sudor en las almohadillas",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 9
+    },
+    {
+      "name": "Espolón",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 11
+    },
+    {
+      "name": "Lengua manchada",
+      "facet": "Cuerpo y sentidos del perro",
+      "known_at": 10
+    },
+    {
+      "name": "Ladrido",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 1
+    },
+    {
+      "name": "Gruñido",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 2
+    },
+    {
+      "name": "Mover la cola",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 1
+    },
+    {
+      "name": "Olfatear",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 3
+    },
+    {
+      "name": "Marcar territorio",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 6
+    },
+    {
+      "name": "Enterrar huesos",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 3
+    },
+    {
+      "name": "Perseguir la cola",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 2
+    },
+    {
+      "name": "Dar vueltas antes de acostarse",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 7
+    },
+    {
+      "name": "Revolcarse",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 6
+    },
+    {
+      "name": "Bostezo",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 8
+    },
+    {
+      "name": "Reverencia de juego",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 9
+    },
+    {
+      "name": "Orejas hacia atrás",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 6
+    },
+    {
+      "name": "Lamer",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 3
+    },
+    {
+      "name": "Gemido",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 5
+    },
+    {
+      "name": "Instinto de manada",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 8
+    },
+    {
+      "name": "Ansiedad por separación",
+      "facet": "Comportamiento y lenguaje canino",
+      "known_at": 10
+    },
+    {
+      "name": "Rabia",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 7
+    },
+    {
+      "name": "Garrapatas",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 4
+    },
+    {
+      "name": "Uvas",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 10
+    },
+    {
+      "name": "Concentrado",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 4
+    },
+    {
+      "name": "Correa",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 1
+    },
+    {
+      "name": "Collar",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 1
+    },
+    {
+      "name": "Moquillo",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 11
+    },
+    {
+      "name": "Parvovirus",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 11
+    },
+    {
+      "name": "Peluquería canina",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 4
+    },
+    {
+      "name": "Cortaúñas",
+      "facet": "Cuidados, salud y alimentación",
+      "known_at": 5
+    },
+    {
+      "name": "Gestación de la perra",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 10
+    },
+    {
+      "name": "Dientes de leche",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 6
+    },
+    {
+      "name": "Años perro",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 6
+    },
+    {
+      "name": "Esperanza de vida del perro",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 7
+    },
+    {
+      "name": "Perro senior",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 8
+    },
+    {
+      "name": "Socialización",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 10
+    },
+    {
+      "name": "Perra",
+      "facet": "Cachorros y ciclo de vida",
+      "known_at": 3
+    },
+    {
+      "name": "Perro lazarillo",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 5
+    },
+    {
+      "name": "Perro policía",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 4
+    },
+    {
+      "name": "Perro de rescate",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 4
+    },
+    {
+      "name": "Perro pastor",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 4
+    },
+    {
+      "name": "Perro antidrogas",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 6
+    },
+    {
+      "name": "Perro de trineo",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 5
+    },
+    {
+      "name": "Perro de terapia",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 8
+    },
+    {
+      "name": "Perro detector de explosivos",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 8
+    },
+    {
+      "name": "Perro de avalancha",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 8
+    },
+    {
+      "name": "Perro guardián",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 3
+    },
+    {
+      "name": "Perro de alerta médica",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 12
+    },
+    {
+      "name": "Perro de caza",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 5
+    },
+    {
+      "name": "Perro trufero",
+      "facet": "Perros de trabajo y servicio",
+      "known_at": 12
+    },
+    {
+      "name": "Pongo",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 6
+    },
+    {
+      "name": "Beethoven",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 6
+    },
+    {
+      "name": "Rin Tin Tin",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 13
+    },
+    {
+      "name": "Dante",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 4
+    },
+    {
+      "name": "Chase",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 2
+    },
+    {
+      "name": "Scrappy-Doo",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 6
+    },
+    {
+      "name": "Brian Griffin",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 10
+    },
+    {
+      "name": "Krypto",
+      "facet": "Perros famosos de cine y dibujos",
+      "known_at": 8
+    },
+    {
+      "name": "Hachiko",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 7
+    },
+    {
+      "name": "Argos",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 12
+    },
+    {
+      "name": "Barry",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 12
+    },
+    {
+      "name": "Balto",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 8
+    },
+    {
+      "name": "Greyfriars Bobby",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 14
+    },
+    {
+      "name": "Diógenes el Cínico",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 14
+    },
+    {
+      "name": "Xólotl",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 13
+    },
+    {
+      "name": "Perros de Fu",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 12
+    },
+    {
+      "name": "Cave canem",
+      "facet": "Perros en la historia y la leyenda",
+      "known_at": 14
+    },
+    {
+      "name": "Lobo",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 1
+    },
+    {
+      "name": "Dingo",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 8
+    },
+    {
+      "name": "Zorro ártico",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 6
+    },
+    {
+      "name": "Perro de monte",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 12
+    },
+    {
+      "name": "Zorro cangrejero",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 12
+    },
+    {
+      "name": "Aguará guazú",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 12
+    },
+    {
+      "name": "Domesticación",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 8
+    },
+    {
+      "name": "Cánidos",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 9
+    },
+    {
+      "name": "Canis lupus familiaris",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 11
+    },
+    {
+      "name": "Perro mapache",
+      "facet": "Parientes salvajes y origen del perro",
+      "known_at": 11
+    },
+    {
+      "name": "Jauría",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 7
+    },
+    {
+      "name": "Perro que ladra no muerde",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 3
+    },
+    {
+      "name": "Can",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 6
+    },
+    {
+      "name": "Canino",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 6
+    },
+    {
+      "name": "Perrera",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 5
+    },
+    {
+      "name": "A otro perro con ese hueso",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 10
+    },
+    {
+      "name": "Muerto el perro se acabó la rabia",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 12
+    },
+    {
+      "name": "El perro del hortelano",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 13
+    },
+    {
+      "name": "Mejor amigo del hombre",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 2
+    },
+    {
+      "name": "Guau",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 1
+    },
+    {
+      "name": "Tiempo de perros",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 9
+    },
+    {
+      "name": "Echar los perros",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 10
+    },
+    {
+      "name": "Perro viejo",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 10
+    },
+    {
+      "name": "Perruno",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 5
+    },
+    {
+      "name": "Canícula",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 13
+    },
+    {
+      "name": "Cinología",
+      "facet": "Palabras y dichos perrunos",
+      "known_at": 14
+    },
+    {
+      "name": "Sentado",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 1
+    },
+    {
+      "name": "Dar la pata",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 1
+    },
+    {
+      "name": "Traer la pelota",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 2
+    },
+    {
+      "name": "Clicker",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 9
+    },
+    {
+      "name": "Premio",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 3
+    },
+    {
+      "name": "Agility",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 9
+    },
+    {
+      "name": "Westminster Dog Show",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 13
+    },
+    {
+      "name": "Crufts",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 14
+    },
+    {
+      "name": "Frisbee canino",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 6
+    },
+    {
+      "name": "Adiestrador",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 5
+    },
+    {
+      "name": "Refuerzo positivo",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 10
+    },
+    {
+      "name": "Carreras de galgos",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 8
+    },
+    {
+      "name": "Canicross",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 13
+    },
+    {
+      "name": "Exposición canina",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 7
+    },
+    {
+      "name": "Pedigrí",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 10
+    },
+    {
+      "name": "Silbato para perros",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 7
+    },
+    {
+      "name": "Obediencia",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 5
+    },
+    {
+      "name": "César Millán",
+      "facet": "Entrenamiento, deportes y concursos caninos",
+      "known_at": 11
+    },
+    {
+      "name": "Perro criollo",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 6
+    },
+    {
+      "name": "Perro callejero",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 2
+    },
+    {
+      "name": "Adopción",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 3
+    },
+    {
+      "name": "Refugio de animales",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 5
+    },
+    {
+      "name": "Chandoso",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 8
+    },
+    {
+      "name": "Gozque",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 13
+    },
+    {
+      "name": "Zoonosis",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 13
+    },
+    {
+      "name": "Jornada de esterilización",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 9
+    },
+    {
+      "name": "Bozal",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 6
+    },
+    {
+      "name": "Perros potencialmente peligrosos",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 12
+    },
+    {
+      "name": "Paseador de perros",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 5
+    },
+    {
+      "name": "Recoger los excrementos",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 2
+    },
+    {
+      "name": "Pólvora en diciembre",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 6
+    },
+    {
+      "name": "Parque para perros",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 4
+    },
+    {
+      "name": "Ley 1774 de 2016",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 15
+    },
+    {
+      "name": "Perro de finca",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 6
+    },
+    {
+      "name": "Guardería canina",
+      "facet": "Perros en Colombia y en la calle",
+      "known_at": 8
+    }
+  ]
+}

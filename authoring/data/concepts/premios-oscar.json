@@ -1,0 +1,747 @@
+{
+  "subcategory": "Premios Óscar",
+  "facets": [
+    "Películas ganadoras de Mejor Película",
+    "Películas animadas premiadas",
+    "Actores y actrices ganadores",
+    "Directores premiados",
+    "Canciones y bandas sonoras premiadas",
+    "Efectos visuales, maquillaje y vestuario",
+    "La estatuilla y la ceremonia",
+    "Récords y curiosidades del Óscar",
+    "Latinoamérica y Colombia en los Óscar",
+    "Cine internacional premiado",
+    "Historia de la Academia y del premio",
+    "Presentadores y momentos famosos de la gala"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "El señor de los anillos: el retorno del rey",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 6
+    },
+    {
+      "name": "Parásitos",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 10
+    },
+    {
+      "name": "Rocky",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 7
+    },
+    {
+      "name": "Slumdog Millonario",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 12
+    },
+    {
+      "name": "El artista",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 13
+    },
+    {
+      "name": "Todo en todas partes al mismo tiempo",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 11
+    },
+    {
+      "name": "Oppenheimer",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 9
+    },
+    {
+      "name": "CODA",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 13
+    },
+    {
+      "name": "La forma del agua",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 12
+    },
+    {
+      "name": "Corazón valiente",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 11
+    },
+    {
+      "name": "Amadeus",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 12
+    },
+    {
+      "name": "Anora",
+      "facet": "Películas ganadoras de Mejor Película",
+      "known_at": 13
+    },
+    {
+      "name": "Toy Story 3",
+      "facet": "Películas animadas premiadas",
+      "known_at": 2
+    },
+    {
+      "name": "Grandes héroes",
+      "facet": "Películas animadas premiadas",
+      "known_at": 3
+    },
+    {
+      "name": "El niño y la garza",
+      "facet": "Películas animadas premiadas",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Day-Lewis",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 13
+    },
+    {
+      "name": "Denzel Washington",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 10
+    },
+    {
+      "name": "Julia Roberts",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 10
+    },
+    {
+      "name": "Natalie Portman",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 10
+    },
+    {
+      "name": "Jennifer Lawrence",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 9
+    },
+    {
+      "name": "Joaquin Phoenix",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 10
+    },
+    {
+      "name": "Heath Ledger",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 10
+    },
+    {
+      "name": "Cillian Murphy",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 10
+    },
+    {
+      "name": "Michelle Yeoh",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 11
+    },
+    {
+      "name": "Russell Crowe",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 11
+    },
+    {
+      "name": "Morgan Freeman",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 9
+    },
+    {
+      "name": "Brendan Fraser",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 11
+    },
+    {
+      "name": "Robin Williams",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 8
+    },
+    {
+      "name": "Rami Malek",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 11
+    },
+    {
+      "name": "Javier Bardem",
+      "facet": "Actores y actrices ganadores",
+      "known_at": 12
+    },
+    {
+      "name": "Bong Joon-ho",
+      "facet": "Directores premiados",
+      "known_at": 12
+    },
+    {
+      "name": "Kathryn Bigelow",
+      "facet": "Directores premiados",
+      "known_at": 13
+    },
+    {
+      "name": "Chloé Zhao",
+      "facet": "Directores premiados",
+      "known_at": 13
+    },
+    {
+      "name": "Ang Lee",
+      "facet": "Directores premiados",
+      "known_at": 12
+    },
+    {
+      "name": "Clint Eastwood",
+      "facet": "Directores premiados",
+      "known_at": 10
+    },
+    {
+      "name": "Francis Ford Coppola",
+      "facet": "Directores premiados",
+      "known_at": 12
+    },
+    {
+      "name": "John Ford",
+      "facet": "Directores premiados",
+      "known_at": 14
+    },
+    {
+      "name": "Ron Howard",
+      "facet": "Directores premiados",
+      "known_at": 13
+    },
+    {
+      "name": "Mel Gibson",
+      "facet": "Directores premiados",
+      "known_at": 11
+    },
+    {
+      "name": "Jane Campion",
+      "facet": "Directores premiados",
+      "known_at": 14
+    },
+    {
+      "name": "Damien Chazelle",
+      "facet": "Directores premiados",
+      "known_at": 13
+    },
+    {
+      "name": "Sean Baker",
+      "facet": "Directores premiados",
+      "known_at": 14
+    },
+    {
+      "name": "Naatu Naatu",
+      "facet": "Canciones y bandas sonoras premiadas",
+      "known_at": 12
+    },
+    {
+      "name": "Shallow",
+      "facet": "Canciones y bandas sonoras premiadas",
+      "known_at": 9
+    },
+    {
+      "name": "Skyfall",
+      "facet": "Canciones y bandas sonoras premiadas",
+      "known_at": 9
+    },
+    {
+      "name": "Over the Rainbow",
+      "facet": "Canciones y bandas sonoras premiadas",
+      "known_at": 8
+    },
+    {
+      "name": "Esta noche es para amar",
+      "facet": "Canciones y bandas sonoras premiadas",
+      "known_at": 5
+    },
+    {
+      "name": "Ludwig Göransson",
+      "facet": "Canciones y bandas sonoras premiadas",
+      "known_at": 14
+    },
+    {
+      "name": "Terminator 2",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 10
+    },
+    {
+      "name": "Mad Max: furia en el camino",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 11
+    },
+    {
+      "name": "Edith Head",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 14
+    },
+    {
+      "name": "El curioso caso de Benjamin Button",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 12
+    },
+    {
+      "name": "Hombres de negro",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 6
+    },
+    {
+      "name": "Godzilla Minus One",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 11
+    },
+    {
+      "name": "Papá por siempre",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 10
+    },
+    {
+      "name": "Cruella",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 6
+    },
+    {
+      "name": "Rick Baker",
+      "facet": "Efectos visuales, maquillaje y vestuario",
+      "known_at": 15
+    },
+    {
+      "name": "Estatuilla del Óscar",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 3
+    },
+    {
+      "name": "Dolby Theatre",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 12
+    },
+    {
+      "name": "Sobre del ganador",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 6
+    },
+    {
+      "name": "Cedric Gibbons",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 15
+    },
+    {
+      "name": "Britanio",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 14
+    },
+    {
+      "name": "Rollo de película",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 8
+    },
+    {
+      "name": "Espada del caballero",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 11
+    },
+    {
+      "name": "Discurso de agradecimiento",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 5
+    },
+    {
+      "name": "Nominación",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 6
+    },
+    {
+      "name": "Margaret Herrick",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 15
+    },
+    {
+      "name": "Estatuillas de yeso",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 14
+    },
+    {
+      "name": "Música para cortar discursos",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 10
+    },
+    {
+      "name": "Marzo",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 9
+    },
+    {
+      "name": "Gala de los Óscar",
+      "facet": "La estatuilla y la ceremonia",
+      "known_at": 4
+    },
+    {
+      "name": "Katharine Hepburn",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Tatum O'Neal",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 15
+    },
+    {
+      "name": "Peter O'Toole",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 14
+    },
+    {
+      "name": "Jack Nicholson",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Frances McDormand",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Glenn Close",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Marlee Matlin",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 14
+    },
+    {
+      "name": "Once estatuillas",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Película muda",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 10
+    },
+    {
+      "name": "Óscar póstumo",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Óscar compartido",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Nominaciones sin victoria",
+      "facet": "Récords y curiosidades del Óscar",
+      "known_at": 11
+    },
+    {
+      "name": "El laberinto del fauno",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge Drexler",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Emmanuel Lubezki",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 14
+    },
+    {
+      "name": "Anthony Quinn",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 14
+    },
+    {
+      "name": "La historia oficial",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Una mujer fantástica",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Historia de un oso",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Emilio Fernández",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 14
+    },
+    {
+      "name": "Catalina Sandino Moreno",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 12
+    },
+    {
+      "name": "Aún estoy aquí",
+      "facet": "Latinoamérica y Colombia en los Óscar",
+      "known_at": 13
+    },
+    {
+      "name": "Mejor película internacional",
+      "facet": "Cine internacional premiado",
+      "known_at": 8
+    },
+    {
+      "name": "Roberto Benigni",
+      "facet": "Cine internacional premiado",
+      "known_at": 12
+    },
+    {
+      "name": "El tigre y el dragón",
+      "facet": "Cine internacional premiado",
+      "known_at": 12
+    },
+    {
+      "name": "Cinema Paradiso",
+      "facet": "Cine internacional premiado",
+      "known_at": 12
+    },
+    {
+      "name": "Todo sobre mi madre",
+      "facet": "Cine internacional premiado",
+      "known_at": 13
+    },
+    {
+      "name": "Mar adentro",
+      "facet": "Cine internacional premiado",
+      "known_at": 13
+    },
+    {
+      "name": "Drive My Car",
+      "facet": "Cine internacional premiado",
+      "known_at": 14
+    },
+    {
+      "name": "Sin novedad en el frente",
+      "facet": "Cine internacional premiado",
+      "known_at": 12
+    },
+    {
+      "name": "Ingmar Bergman",
+      "facet": "Cine internacional premiado",
+      "known_at": 14
+    },
+    {
+      "name": "Fanny y Alexander",
+      "facet": "Cine internacional premiado",
+      "known_at": 15
+    },
+    {
+      "name": "Despedidas",
+      "facet": "Cine internacional premiado",
+      "known_at": 15
+    },
+    {
+      "name": "Una separación",
+      "facet": "Cine internacional premiado",
+      "known_at": 14
+    },
+    {
+      "name": "Belle Époque",
+      "facet": "Cine internacional premiado",
+      "known_at": 14
+    },
+    {
+      "name": "Volver a empezar",
+      "facet": "Cine internacional premiado",
+      "known_at": 15
+    },
+    {
+      "name": "Academia de Artes y Ciencias Cinematográficas",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 10
+    },
+    {
+      "name": "1929",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 12
+    },
+    {
+      "name": "Hotel Roosevelt",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 15
+    },
+    {
+      "name": "Louis B. Mayer",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 14
+    },
+    {
+      "name": "Douglas Fairbanks",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 15
+    },
+    {
+      "name": "Emil Jannings",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 15
+    },
+    {
+      "name": "Janet Gaynor",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 15
+    },
+    {
+      "name": "Hattie McDaniel",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 14
+    },
+    {
+      "name": "Sidney Poitier",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 13
+    },
+    {
+      "name": "Halle Berry",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 11
+    },
+    {
+      "name": "Óscar honorífico",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 11
+    },
+    {
+      "name": "Primera transmisión por televisión",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 12
+    },
+    {
+      "name": "Categoría de Mejor Película Animada",
+      "facet": "Historia de la Academia y del premio",
+      "known_at": 8
+    },
+    {
+      "name": "Billy Crystal",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 13
+    },
+    {
+      "name": "Bob Hope",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 14
+    },
+    {
+      "name": "Ellen DeGeneres",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 8
+    },
+    {
+      "name": "Jimmy Kimmel",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 10
+    },
+    {
+      "name": "Whoopi Goldberg",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 11
+    },
+    {
+      "name": "Error del sobre de 2017",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 11
+    },
+    {
+      "name": "Selfie de los Óscar",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 8
+    },
+    {
+      "name": "Pizza de Ellen",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 11
+    },
+    {
+      "name": "Caída de Jennifer Lawrence",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 10
+    },
+    {
+      "name": "Marlon Brando",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 11
+    },
+    {
+      "name": "Charlie Chaplin",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 7
+    },
+    {
+      "name": "Flexiones de Jack Palance",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 15
+    },
+    {
+      "name": "Vestido de cisne de Björk",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 13
+    },
+    {
+      "name": "Conan O'Brien",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 13
+    },
+    {
+      "name": "Steve Martin",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 12
+    },
+    {
+      "name": "Chris Rock",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 11
+    },
+    {
+      "name": "Discurso de Cuba Gooding Jr.",
+      "facet": "Presentadores y momentos famosos de la gala",
+      "known_at": 15
+    }
+  ]
+}

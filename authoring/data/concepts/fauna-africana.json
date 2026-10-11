@@ -1,0 +1,682 @@
+{
+  "subcategory": "Fauna africana",
+  "facets": [
+    "Grandes felinos y depredadores",
+    "Gigantes de la sabana",
+    "Herbívoros y antílopes",
+    "Primates de África",
+    "Aves africanas",
+    "Reptiles y anfibios africanos",
+    "Insectos, arañas y pequeños animales",
+    "Ríos, lagos y costas africanas",
+    "Fauna de Madagascar",
+    "Migraciones y cadenas alimentarias",
+    "Comportamientos y adaptaciones",
+    "Animales africanos en el cine y la cultura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hiena manchada",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 3
+    },
+    {
+      "name": "Hiena rayada",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 10
+    },
+    {
+      "name": "Zorro orejudo",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 11
+    },
+    {
+      "name": "Ratel",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 9
+    },
+    {
+      "name": "Gato de patas negras",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 13
+    },
+    {
+      "name": "Lobo etíope",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 13
+    },
+    {
+      "name": "Civeta africana",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 12
+    },
+    {
+      "name": "León de Berbería",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 13
+    },
+    {
+      "name": "Leopardo negro",
+      "facet": "Grandes felinos y depredadores",
+      "known_at": 6
+    },
+    {
+      "name": "Elefante de bosque africano",
+      "facet": "Gigantes de la sabana",
+      "known_at": 11
+    },
+    {
+      "name": "Rinoceronte negro",
+      "facet": "Gigantes de la sabana",
+      "known_at": 6
+    },
+    {
+      "name": "Hipopótamo pigmeo",
+      "facet": "Gigantes de la sabana",
+      "known_at": 8
+    },
+    {
+      "name": "Los cinco grandes",
+      "facet": "Gigantes de la sabana",
+      "known_at": 11
+    },
+    {
+      "name": "Marfil",
+      "facet": "Gigantes de la sabana",
+      "known_at": 6
+    },
+    {
+      "name": "Cuerno de rinoceronte",
+      "facet": "Gigantes de la sabana",
+      "known_at": 5
+    },
+    {
+      "name": "Osiconos",
+      "facet": "Gigantes de la sabana",
+      "known_at": 12
+    },
+    {
+      "name": "Sabana africana",
+      "facet": "Gigantes de la sabana",
+      "known_at": 3
+    },
+    {
+      "name": "Gacela de Thomson",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 6
+    },
+    {
+      "name": "Eland",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 12
+    },
+    {
+      "name": "Springbok",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 11
+    },
+    {
+      "name": "Antílope sable",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 12
+    },
+    {
+      "name": "Gerenuk",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 13
+    },
+    {
+      "name": "Bongo",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 12
+    },
+    {
+      "name": "Sitatunga",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 14
+    },
+    {
+      "name": "Cebra de Grévy",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 12
+    },
+    {
+      "name": "Cuaga",
+      "facet": "Herbívoros y antílopes",
+      "known_at": 14
+    },
+    {
+      "name": "Gorila occidental",
+      "facet": "Primates de África",
+      "known_at": 10
+    },
+    {
+      "name": "Gelada",
+      "facet": "Primates de África",
+      "known_at": 12
+    },
+    {
+      "name": "Colobo",
+      "facet": "Primates de África",
+      "known_at": 12
+    },
+    {
+      "name": "Gálago",
+      "facet": "Primates de África",
+      "known_at": 11
+    },
+    {
+      "name": "Mono verde",
+      "facet": "Primates de África",
+      "known_at": 11
+    },
+    {
+      "name": "Mono de Brazza",
+      "facet": "Primates de África",
+      "known_at": 14
+    },
+    {
+      "name": "Potto",
+      "facet": "Primates de África",
+      "known_at": 14
+    },
+    {
+      "name": "Parque Nacional Gombe",
+      "facet": "Primates de África",
+      "known_at": 14
+    },
+    {
+      "name": "Lucy",
+      "facet": "Primates de África",
+      "known_at": 10
+    },
+    {
+      "name": "Pingüino africano",
+      "facet": "Aves africanas",
+      "known_at": 7
+    },
+    {
+      "name": "Marabú",
+      "facet": "Aves africanas",
+      "known_at": 10
+    },
+    {
+      "name": "Picozapato",
+      "facet": "Aves africanas",
+      "known_at": 10
+    },
+    {
+      "name": "Pájaro secretario",
+      "facet": "Aves africanas",
+      "known_at": 11
+    },
+    {
+      "name": "Ibis sagrado",
+      "facet": "Aves africanas",
+      "known_at": 11
+    },
+    {
+      "name": "Grulla coronada",
+      "facet": "Aves africanas",
+      "known_at": 11
+    },
+    {
+      "name": "Cálao",
+      "facet": "Aves africanas",
+      "known_at": 9
+    },
+    {
+      "name": "Pájaro tejedor",
+      "facet": "Aves africanas",
+      "known_at": 9
+    },
+    {
+      "name": "Indicador grande",
+      "facet": "Aves africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Buitre dorsiblanco africano",
+      "facet": "Aves africanas",
+      "known_at": 8
+    },
+    {
+      "name": "Pigargo vocinglero",
+      "facet": "Aves africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Turaco",
+      "facet": "Aves africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Gallina de Guinea",
+      "facet": "Aves africanas",
+      "known_at": 9
+    },
+    {
+      "name": "Quelea",
+      "facet": "Aves africanas",
+      "known_at": 14
+    },
+    {
+      "name": "Avutarda kori",
+      "facet": "Aves africanas",
+      "known_at": 14
+    },
+    {
+      "name": "Picabueyes",
+      "facet": "Aves africanas",
+      "known_at": 10
+    },
+    {
+      "name": "Pitón de roca africana",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 7
+    },
+    {
+      "name": "Cobra egipcia",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 11
+    },
+    {
+      "name": "Víbora bufadora",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga leopardo",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 10
+    },
+    {
+      "name": "Tortuga de espolones africana",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga gigante de Aldabra",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 11
+    },
+    {
+      "name": "Agama",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 12
+    },
+    {
+      "name": "Rana de uñas africana",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 14
+    },
+    {
+      "name": "Rana toro africana",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 12
+    },
+    {
+      "name": "Lagarto armadillo",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 13
+    },
+    {
+      "name": "Tortuga panqueque",
+      "facet": "Reptiles y anfibios africanos",
+      "known_at": 14
+    },
+    {
+      "name": "Termitero",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 7
+    },
+    {
+      "name": "Hormiga safari",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 12
+    },
+    {
+      "name": "Langosta del desierto",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 9
+    },
+    {
+      "name": "Escorpión emperador",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 9
+    },
+    {
+      "name": "Escarabajo del desierto de Namib",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 13
+    },
+    {
+      "name": "Araña babuino",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 13
+    },
+    {
+      "name": "Damán",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 13
+    },
+    {
+      "name": "Erizo pigmeo africano",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 9
+    },
+    {
+      "name": "Musaraña elefante",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 12
+    },
+    {
+      "name": "Liebre saltadora",
+      "facet": "Insectos, arañas y pequeños animales",
+      "known_at": 14
+    },
+    {
+      "name": "Lago Malaui",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Río Zambeze",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 12
+    },
+    {
+      "name": "Cíclidos",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 12
+    },
+    {
+      "name": "Perca del Nilo",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Pez tigre goliat",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 12
+    },
+    {
+      "name": "Celacanto",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 12
+    },
+    {
+      "name": "Manatí africano",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 11
+    },
+    {
+      "name": "Lobo marino del Cabo",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 11
+    },
+    {
+      "name": "Pez pulmonado africano",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Siluro eléctrico",
+      "facet": "Ríos, lagos y costas africanas",
+      "known_at": 13
+    },
+    {
+      "name": "Lémur de cola anillada",
+      "facet": "Fauna de Madagascar",
+      "known_at": 3
+    },
+    {
+      "name": "Sifaka",
+      "facet": "Fauna de Madagascar",
+      "known_at": 12
+    },
+    {
+      "name": "Indri",
+      "facet": "Fauna de Madagascar",
+      "known_at": 13
+    },
+    {
+      "name": "Lémur ratón",
+      "facet": "Fauna de Madagascar",
+      "known_at": 11
+    },
+    {
+      "name": "Lémur de collar",
+      "facet": "Fauna de Madagascar",
+      "known_at": 12
+    },
+    {
+      "name": "Camaleón pantera",
+      "facet": "Fauna de Madagascar",
+      "known_at": 10
+    },
+    {
+      "name": "Tenrec",
+      "facet": "Fauna de Madagascar",
+      "known_at": 13
+    },
+    {
+      "name": "Ave elefante",
+      "facet": "Fauna de Madagascar",
+      "known_at": 12
+    },
+    {
+      "name": "Gecko cola de hoja",
+      "facet": "Fauna de Madagascar",
+      "known_at": 12
+    },
+    {
+      "name": "Cucaracha silbadora de Madagascar",
+      "facet": "Fauna de Madagascar",
+      "known_at": 10
+    },
+    {
+      "name": "Gorgojo jirafa",
+      "facet": "Fauna de Madagascar",
+      "known_at": 12
+    },
+    {
+      "name": "Tortuga radiada",
+      "facet": "Fauna de Madagascar",
+      "known_at": 13
+    },
+    {
+      "name": "Polilla cometa",
+      "facet": "Fauna de Madagascar",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de Madagascar",
+      "facet": "Fauna de Madagascar",
+      "known_at": 5
+    },
+    {
+      "name": "Gran Migración",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 8
+    },
+    {
+      "name": "Masái Mara",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 12
+    },
+    {
+      "name": "Río Mara",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 12
+    },
+    {
+      "name": "Cráter del Ngorongoro",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 13
+    },
+    {
+      "name": "Parque Nacional Kruger",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 12
+    },
+    {
+      "name": "Cigüeña blanca",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 8
+    },
+    {
+      "name": "Golondrina común",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 9
+    },
+    {
+      "name": "Cadena alimentaria",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 5
+    },
+    {
+      "name": "Abrevadero",
+      "facet": "Migraciones y cadenas alimentarias",
+      "known_at": 8
+    },
+    {
+      "name": "Matriarca",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Rumia",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Infrasonido",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Marcaje de territorio",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Sudor rojo del hipopótamo",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Baño de barro",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Pronking",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Uso de herramientas",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Garras retráctiles",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Lengua prensil",
+      "facet": "Comportamientos y adaptaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Mufasa",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Zazú",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Nala",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Marty",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Gloria",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Melman",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Jumbo",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Nacida libre",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 14
+    },
+    {
+      "name": "Hipopótamos de Hacienda Nápoles",
+      "facet": "Animales africanos en el cine y la cultura",
+      "known_at": 9
+    }
+  ]
+}

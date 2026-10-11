@@ -1,0 +1,611 @@
+{
+  "subcategory": "Ahorro y bancos",
+  "facets": [
+    "Alcancías y ahorro en casa",
+    "Cuentas, tarjetas y cajeros",
+    "Préstamos, intereses y deudas",
+    "Historia de la banca",
+    "Bancos centrales y Banco de la República",
+    "Pagos digitales y billeteras",
+    "Inversión, bolsa y acciones",
+    "Vocabulario y refranes del dinero",
+    "Personajes ricos y ahorradores de ficción",
+    "Seguridad bancaria y bóvedas",
+    "Presupuesto y finanzas del hogar"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Frasco de monedas",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 2
+    },
+    {
+      "name": "Ahorro",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 2
+    },
+    {
+      "name": "Meta de ahorro",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 5
+    },
+    {
+      "name": "Plata debajo del colchón",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 6
+    },
+    {
+      "name": "Natillera",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 9
+    },
+    {
+      "name": "Cadena de ahorro",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 10
+    },
+    {
+      "name": "Método de los sobres",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 12
+    },
+    {
+      "name": "Día Mundial del Ahorro",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 11
+    },
+    {
+      "name": "PIN",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Cuenta corriente",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Chequera",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 9
+    },
+    {
+      "name": "Extracto bancario",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 11
+    },
+    {
+      "name": "Número de cuenta",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Consignación",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 8
+    },
+    {
+      "name": "Retiro",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 5
+    },
+    {
+      "name": "Saldo",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Cuota de manejo",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 11
+    },
+    {
+      "name": "CVV",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 11
+    },
+    {
+      "name": "Sucursal",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 8
+    },
+    {
+      "name": "Visa",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 7
+    },
+    {
+      "name": "Mastercard",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 8
+    },
+    {
+      "name": "Deuda",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 5
+    },
+    {
+      "name": "Crédito",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 6
+    },
+    {
+      "name": "Cuota",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 7
+    },
+    {
+      "name": "Plazo",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "Gota a gota",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 10
+    },
+    {
+      "name": "Fiador",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 11
+    },
+    {
+      "name": "Moroso",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 11
+    },
+    {
+      "name": "ICETEX",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 11
+    },
+    {
+      "name": "Interés compuesto",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 12
+    },
+    {
+      "name": "Datacrédito",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 12
+    },
+    {
+      "name": "Embargo",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 12
+    },
+    {
+      "name": "Microcrédito",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 12
+    },
+    {
+      "name": "Usura",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 13
+    },
+    {
+      "name": "Leasing",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 13
+    },
+    {
+      "name": "Banco de Bogotá",
+      "facet": "Historia de la banca",
+      "known_at": 10
+    },
+    {
+      "name": "Banca del cambista",
+      "facet": "Historia de la banca",
+      "known_at": 11
+    },
+    {
+      "name": "Pagaré",
+      "facet": "Historia de la banca",
+      "known_at": 12
+    },
+    {
+      "name": "Familia Rothschild",
+      "facet": "Historia de la banca",
+      "known_at": 13
+    },
+    {
+      "name": "Orfebres",
+      "facet": "Historia de la banca",
+      "known_at": 13
+    },
+    {
+      "name": "Corralito",
+      "facet": "Historia de la banca",
+      "known_at": 13
+    },
+    {
+      "name": "Banco de Estocolmo",
+      "facet": "Historia de la banca",
+      "known_at": 15
+    },
+    {
+      "name": "Familia Fugger",
+      "facet": "Historia de la banca",
+      "known_at": 15
+    },
+    {
+      "name": "Monte dei Paschi di Siena",
+      "facet": "Historia de la banca",
+      "known_at": 15
+    },
+    {
+      "name": "Emisión de billetes",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10
+    },
+    {
+      "name": "TRM",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Banco de España",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Reservas internacionales",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 13
+    },
+    {
+      "name": "Junta Directiva del Banco de la República",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 13
+    },
+    {
+      "name": "Superintendencia Financiera",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 14
+    },
+    {
+      "name": "Misión Kemmerer",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 14
+    },
+    {
+      "name": "Transferencia",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 7
+    },
+    {
+      "name": "Daviplata",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 9
+    },
+    {
+      "name": "Apple Pay",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 9
+    },
+    {
+      "name": "Criptomoneda",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 9
+    },
+    {
+      "name": "PSE",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 10
+    },
+    {
+      "name": "Dinero electrónico",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 10
+    },
+    {
+      "name": "Bitcoin Pizza Day",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 15
+    },
+    {
+      "name": "M-Pesa",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 15
+    },
+    {
+      "name": "Acción",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 8
+    },
+    {
+      "name": "Accionista",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 10
+    },
+    {
+      "name": "Bolsa de Nueva York",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Warren Buffett",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "CDT",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Rentabilidad",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Bienes raíces",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Dividendo",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Bono",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Fondo de inversión",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Diversificación",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide de Ponzi",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Bolsa de Valores de Colombia",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Mercado bajista",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Dow Jones",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Nasdaq",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Ganga",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 6
+    },
+    {
+      "name": "Codo",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 7
+    },
+    {
+      "name": "El que guarda siempre tiene",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 7
+    },
+    {
+      "name": "Derrochar",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 8
+    },
+    {
+      "name": "Grano a grano llena la gallina el buche",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 8
+    },
+    {
+      "name": "Rebusque",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 9
+    },
+    {
+      "name": "Plata llama plata",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 9
+    },
+    {
+      "name": "Chichigua",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 11
+    },
+    {
+      "name": "Patrimonio",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 11
+    },
+    {
+      "name": "Bruce Wayne",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 5
+    },
+    {
+      "name": "Hermanos Beagle",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 6
+    },
+    {
+      "name": "Richie Rich",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Jay Gatsby",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 13
+    },
+    {
+      "name": "Alarma",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 3
+    },
+    {
+      "name": "Camión blindado",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 6
+    },
+    {
+      "name": "Caja de seguridad",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 10
+    },
+    {
+      "name": "Clonación de tarjeta",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 11
+    },
+    {
+      "name": "Autenticación de dos factores",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 12
+    },
+    {
+      "name": "Lista de mercado",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "Gasto",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Arriendo",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Factura",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Presupuesto",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Recibo de servicios",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Ingreso",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Impuesto",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Salario mínimo",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Pensión",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Prima de servicios",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Fondo de emergencia",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Canasta familiar",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Gastos hormiga",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "DIAN",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 12
+    },
+    {
+      "name": "Cesantías",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 12
+    },
+    {
+      "name": "Regla 50/30/20",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 13
+    }
+  ]
+}

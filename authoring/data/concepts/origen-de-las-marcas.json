@@ -1,0 +1,302 @@
+{
+  "subcategory": "Origen de las marcas",
+  "facets": [
+    "Gaseosas y bebidas famosas",
+    "Comida rápida y restaurantes",
+    "Dulces, snacks y alimentos",
+    "Juguetes y videojuegos",
+    "Tecnología e internet",
+    "Marcas deportivas y de ropa",
+    "Carros y motos",
+    "Marcas colombianas tradicionales",
+    "Aseo, hogar y cuidado personal",
+    "Aerolíneas, transporte y servicios",
+    "Lujo, joyas y accesorios",
+    "Marcas que se volvieron palabras"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nesquik",
+      "facet": "Gaseosas y bebidas famosas",
+      "known_at": 4
+    },
+    {
+      "name": "Mountain Dew",
+      "facet": "Gaseosas y bebidas famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Perrier",
+      "facet": "Gaseosas y bebidas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Evian",
+      "facet": "Gaseosas y bebidas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Cheetos",
+      "facet": "Dulces, snacks y alimentos",
+      "known_at": 4
+    },
+    {
+      "name": "KitKat",
+      "facet": "Dulces, snacks y alimentos",
+      "known_at": 5
+    },
+    {
+      "name": "Maggi",
+      "facet": "Dulces, snacks y alimentos",
+      "known_at": 9
+    },
+    {
+      "name": "PEZ",
+      "facet": "Dulces, snacks y alimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Café Sello Rojo",
+      "facet": "Marcas colombianas tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Leonisa",
+      "facet": "Marcas colombianas tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Dove",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 6
+    },
+    {
+      "name": "Johnson's",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 6
+    },
+    {
+      "name": "Oral-B",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 7
+    },
+    {
+      "name": "Sedal",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 8
+    },
+    {
+      "name": "Palmolive",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 9
+    },
+    {
+      "name": "Rexona",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 9
+    },
+    {
+      "name": "Axe",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 9
+    },
+    {
+      "name": "L'Oréal",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 10
+    },
+    {
+      "name": "Old Spice",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 11
+    },
+    {
+      "name": "Procter & Gamble",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 12
+    },
+    {
+      "name": "Boeing",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 8
+    },
+    {
+      "name": "American Airlines",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 8
+    },
+    {
+      "name": "DHL",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 8
+    },
+    {
+      "name": "Airbus",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 9
+    },
+    {
+      "name": "Iberia",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 9
+    },
+    {
+      "name": "LATAM",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 9
+    },
+    {
+      "name": "Lufthansa",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Emirates",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 10
+    },
+    {
+      "name": "Michelin",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 10
+    },
+    {
+      "name": "KLM",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 11
+    },
+    {
+      "name": "Western Union",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 11
+    },
+    {
+      "name": "Ryanair",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 12
+    },
+    {
+      "name": "Qantas",
+      "facet": "Aerolíneas, transporte y servicios",
+      "known_at": 13
+    },
+    {
+      "name": "Casio",
+      "facet": "Lujo, joyas y accesorios",
+      "known_at": 7
+    },
+    {
+      "name": "Versace",
+      "facet": "Lujo, joyas y accesorios",
+      "known_at": 10
+    },
+    {
+      "name": "Dior",
+      "facet": "Lujo, joyas y accesorios",
+      "known_at": 10
+    },
+    {
+      "name": "Omega",
+      "facet": "Lujo, joyas y accesorios",
+      "known_at": 12
+    },
+    {
+      "name": "Montblanc",
+      "facet": "Lujo, joyas y accesorios",
+      "known_at": 12
+    },
+    {
+      "name": "Bulgari",
+      "facet": "Lujo, joyas y accesorios",
+      "known_at": 13
+    },
+    {
+      "name": "Chicle Chiclets",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 5
+    },
+    {
+      "name": "Pósit",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 6
+    },
+    {
+      "name": "Maicena",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 6
+    },
+    {
+      "name": "Jacuzzi",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 9
+    },
+    {
+      "name": "Cinta Scotch",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 9
+    },
+    {
+      "name": "Rímel",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 10
+    },
+    {
+      "name": "Jet ski",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 11
+    },
+    {
+      "name": "Xerox",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 12
+    },
+    {
+      "name": "Fórmica",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 13
+    }
+  ]
+}

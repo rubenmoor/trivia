@@ -44,7 +44,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": null,
+      "concept": "Café",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -1067,7 +1067,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pirámides de Guiza",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0017",
@@ -1743,7 +1751,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Araña",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0027",
@@ -4826,7 +4842,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "The Beatles",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0073",
@@ -6489,7 +6513,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Dinosaurio",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0098",
@@ -8915,7 +8947,15 @@
       },
       "background": null,
       "difficulty_original": 2,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Estegosaurio",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0138",
@@ -8968,7 +9008,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Espinosaurio",
+      "axes": {
+        "move": "identify",
+        "stimulus": "silhouette",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0139",
@@ -9021,7 +9069,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Argentinosaurio",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0140",
@@ -9074,7 +9130,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Dinosaurio",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0141",
@@ -9136,6 +9200,14 @@
           "question": "Soy hermano de Zeus, mi arma tiene tres puntas y cuando me pongo bravo hago temblar la tierra y levanto olas gigantes. ¿Quién soy?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Poseidón",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "riddle",
+        "answer_kind": "person",
+        "lens": "school"
       }
     },
     {
@@ -9189,7 +9261,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Monte Olimpo",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0143",
@@ -9243,7 +9323,15 @@
       },
       "background": null,
       "difficulty_original": 5,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Atenea",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0144",
@@ -9304,6 +9392,14 @@
           "question": "Los romanos copiaron a los dioses griegos y les pusieron nombres nuevos. ¿Cómo llamaron los romanos a Eros, el dios griego del amor?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Cupido",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "school"
       }
     },
     {
@@ -10308,7 +10404,15 @@
       },
       "background": null,
       "difficulty_original": 4,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Horno microondas",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "popular_science"
+      }
     },
     {
       "id": "q-0163",
@@ -10369,6 +10473,14 @@
           "question": "En 1928, Alexander Fleming volvió de vacaciones y encontró un moho creciendo en un plato de laboratorio olvidado. ¿Qué medicina descubrió gracias a eso?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Penicilina",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "popular_science"
       }
     },
     {
@@ -10422,7 +10534,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Velcro",
+      "axes": {
+        "move": "identify",
+        "stimulus": "detail",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0165",
@@ -10483,6 +10603,14 @@
           "question": "Un niño de 11 años llamado Frank Epperson dejó afuera, en una noche muy fría, un vaso de soda dulce con un palito para revolver. ¿Qué pasó a la mañana siguiente?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Paleta de hielo",
+      "axes": {
+        "move": "cause_effect",
+        "stimulus": "none",
+        "clue": "scenario",
+        "answer_kind": "thing",
+        "lens": "everyday"
       }
     },
     {
@@ -13062,7 +13190,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Hermanos Wright",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0209",
@@ -13123,7 +13259,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Airbus A380",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0210",
@@ -13184,7 +13328,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Caja negra",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0211",
@@ -13368,7 +13520,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ferrari",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0214",
@@ -13429,7 +13589,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Lamborghini",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0215",
@@ -13490,7 +13658,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ford Modelo T",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0216",
@@ -13551,7 +13727,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Neuschwanstein",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0217",
@@ -13613,6 +13797,14 @@
           "question": "¿Cómo se llaman los bloques de piedra en forma de diente que hay en lo alto de las murallas de un castillo, detrás de los cuales se protegían los arqueros?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Almenas",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "history"
       }
     },
     {
@@ -13674,7 +13866,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cuervos de la Torre de Londres",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0219",
@@ -13735,7 +13935,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Castillo de Bran",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0220",
@@ -14145,7 +14353,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Huellas dactilares",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0226",
@@ -14206,7 +14422,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Volumen de sangre",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0227",
@@ -14267,7 +14491,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Columna vertebral",
+      "axes": {
+        "move": "cause_effect",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "popular_science"
+      }
     },
     {
       "id": "q-0228",
@@ -14779,7 +15011,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tutankamón",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0236",
@@ -14840,7 +15080,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Momificación",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0237",
@@ -14901,7 +15149,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Gran Pirámide de Guiza",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0238",
@@ -15100,7 +15356,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Octágono",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0241",
@@ -15161,7 +15425,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Hipotenusa",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0242",
@@ -15222,7 +15494,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cubo",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0243",
@@ -15283,7 +15563,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Hexágono",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "three_facts",
+        "answer_kind": "word",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0244",
@@ -16426,7 +16714,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Branquias",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0261",
@@ -16487,7 +16783,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Shar pei",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0262",
@@ -16553,7 +16857,15 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Twilight%2C_stars%2C_snowy_forest_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Tomi Mäkitalo · CC BY-SA 3.0 · Wikimedia Commons"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Lobo",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0263",
@@ -16614,7 +16926,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Estaño",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0264",
@@ -16675,7 +16995,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pinturas rupestres",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0265",
@@ -17273,7 +17601,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Hidroavión",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0274",
@@ -17461,7 +17797,15 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Traffic_waiting_at_the_level_crossing_in_Duke_Street_-_geograph.org.uk_-_5092352.jpg/3840px-Traffic_waiting_at_the_level_crossing_in_Duke_Street_-_geograph.org.uk_-_5092352.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Ian Greig · CC BY-SA 2.0 · Wikimedia Commons"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pito",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0277",
@@ -17798,7 +18142,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Hipo",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0282",
@@ -17928,7 +18280,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Jeroglífico",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0284",
@@ -18202,7 +18562,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Curling",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0288",
@@ -18263,7 +18631,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Biatlón",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0289",
@@ -18324,7 +18700,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Disco de hockey",
+      "axes": {
+        "move": "identify",
+        "stimulus": "detail",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0290",
@@ -18385,7 +18769,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Bobsleigh",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0291",
@@ -18900,7 +19292,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pez payaso",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0299",
@@ -18961,7 +19361,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tiburón ballena",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0300",
@@ -19022,7 +19430,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tiburón martillo",
+      "axes": {
+        "move": "identify",
+        "stimulus": "silhouette",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0301",
@@ -19083,7 +19499,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Chihuahua",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0302",
@@ -19144,7 +19568,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Jauría",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0303",
@@ -19205,7 +19637,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mamut",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0304",
@@ -19266,7 +19706,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Megalodón",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "popular_science"
+      }
     },
     {
       "id": "q-0305",
@@ -21975,7 +22423,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ajolote",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0347",
@@ -22037,6 +22493,14 @@
           "question": "Un caracol de jardín, como los que algunos niños tienen de mascota, ¿cuántos tentáculos tiene en la cabeza?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Caracol de jardín",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "nature"
       }
     },
     {
@@ -22215,7 +22679,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Vulcano",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0351",
@@ -22269,7 +22741,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Júpiter",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0352",
@@ -22323,7 +22803,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Marzo",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0353",
@@ -22571,7 +23059,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Número primo",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0357",
@@ -22625,7 +23121,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cuadrado perfecto",
+      "axes": {
+        "move": "sequence",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0358",
@@ -22679,7 +23183,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mil millones",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0359",
@@ -22733,7 +23245,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Números romanos",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0360",
@@ -23430,6 +23950,14 @@
           "question": "En las redes sociales, ¿cómo se llama la etiqueta que empieza con el símbolo # y sirve para agrupar todas las publicaciones sobre un mismo tema?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Hashtag",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "everyday"
       }
     },
     {
@@ -23484,7 +24012,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "ByteDance",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0372",
@@ -24343,7 +24879,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cuy",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0386",
@@ -24397,7 +24941,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Erizo pigmeo africano",
+      "axes": {
+        "move": "cause_effect",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0387",
@@ -24582,7 +25134,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Rómulo y Remo",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0390",
@@ -25248,7 +25808,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Fantasma de Snapchat",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0401",
@@ -25302,7 +25870,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Selfie",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0402",
@@ -26176,7 +26752,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Epicentro",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0417",
@@ -26230,7 +26814,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Terremoto de Valdivia de 1960",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0418",
@@ -26284,7 +26876,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tsunami",
+      "axes": {
+        "move": "cause_effect",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0419",
@@ -26338,7 +26938,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Sismógrafo",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0420",
@@ -27262,7 +27870,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": null,
+      "concept": "Cafeto",
       "axes": {
         "move": "origin",
         "stimulus": "none",
@@ -27323,7 +27931,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pangolín",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0436",
@@ -27377,7 +27993,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tardígrado",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "science_news"
+      }
     },
     {
       "id": "q-0437",
@@ -28080,7 +28704,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Didgeridoo",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0449",
@@ -28134,7 +28766,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tango",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0450",
@@ -28188,7 +28828,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Chichén Itzá",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0451",
@@ -28242,7 +28890,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pirámides de Guiza",
+      "axes": {
+        "move": "purpose",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0452",
@@ -29067,13 +29723,13 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": null,
+      "concept": "Aguapanela",
       "axes": {
         "move": "made_of",
         "stimulus": "none",
         "clue": "direct",
         "answer_kind": "thing",
-        "lens": "everyday"
+        "lens": "colombia"
       }
     },
     {
@@ -29128,7 +29784,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mariposa",
+      "axes": {
+        "move": "identify",
+        "stimulus": "detail",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0467",
@@ -29299,7 +29963,7 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": null,
+      "concept": "Juan Valdez",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -30154,9 +30818,9 @@
       },
       "background": null,
       "bundle": "base",
-      "concept": null,
+      "concept": "La Llorona",
       "axes": {
-        "move": "cause_effect",
+        "move": "identify",
         "stimulus": "none",
         "clue": "direct",
         "answer_kind": "person",
@@ -30397,7 +31061,15 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg/3840px-A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Michal Klajban · CC BY-SA 4.0 · Wikimedia Commons"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Gaita escocesa",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0488",
@@ -30451,7 +31123,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pirámide de Cholula",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0489",
@@ -33254,11 +33934,11 @@
       "fun_fact": "Nadie sabe con certeza de dónde salió el agüero de no pasar debajo de una escalera, aunque hay muchas teorías sobre su origen.",
       "subcategory": "Leyendas y supersticiones",
       "style": null,
-      "concept": null,
+      "concept": "Gato negro",
       "axes": {
         "move": "connection",
         "stimulus": "none",
-        "clue": "scenario",
+        "clue": "three_facts",
         "answer_kind": "word",
         "lens": "everyday"
       },
@@ -33329,13 +34009,13 @@
       "fun_fact": "Según la tradición popular, la pata que traía más suerte era la trasera izquierda del conejo.",
       "subcategory": "Leyendas y supersticiones",
       "style": null,
-      "concept": null,
+      "concept": "Pata de conejo",
       "axes": {
-        "move": "name_concept",
+        "move": "identify",
         "stimulus": "none",
         "clue": "riddle",
         "answer_kind": "thing",
-        "lens": "history"
+        "lens": "everyday"
       },
       "quality": {
         "correct": 5,

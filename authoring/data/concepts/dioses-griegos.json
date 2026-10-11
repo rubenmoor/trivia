@@ -1,0 +1,507 @@
+{
+  "subcategory": "Dioses griegos",
+  "facets": [
+    "Los doce dioses olímpicos",
+    "Símbolos y animales de los dioses",
+    "Titanes y dioses primordiales",
+    "Héroes y semidioses",
+    "Monstruos y criaturas míticas",
+    "Lugares del mundo mítico",
+    "Mitos y relatos famosos",
+    "Nombres romanos y planetas",
+    "Palabras nacidas de los mitos",
+    "Dioses en películas y videojuegos",
+    "Templos, oráculos y Olimpiadas antiguas",
+    "Musas, ninfas y dioses menores"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 1,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Poseidón",
+      "facet": "Los doce dioses olímpicos",
+      "known_at": 8
+    },
+    {
+      "name": "Atenea",
+      "facet": "Los doce dioses olímpicos",
+      "known_at": 9
+    },
+    {
+      "name": "Deméter",
+      "facet": "Los doce dioses olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Hestia",
+      "facet": "Los doce dioses olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Tridente",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 6
+    },
+    {
+      "name": "Lechuza de Atenea",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 9
+    },
+    {
+      "name": "Águila de Zeus",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 10
+    },
+    {
+      "name": "Pavo real de Hera",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Arco y flechas de Artemisa",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 10
+    },
+    {
+      "name": "Martillo de Hefesto",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Paloma de Afrodita",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Uvas de Dioniso",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 12
+    },
+    {
+      "name": "Ciervo de Artemisa",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Granada de Perséfone",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Concha de Afrodita",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Olivo de Atenea",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Tirso",
+      "facet": "Símbolos y animales de los dioses",
+      "known_at": 15
+    },
+    {
+      "name": "Titanes",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 8
+    },
+    {
+      "name": "Cronos",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 10
+    },
+    {
+      "name": "Rea",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 13
+    },
+    {
+      "name": "Gea",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 11
+    },
+    {
+      "name": "Caos",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 12
+    },
+    {
+      "name": "Océano",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 13
+    },
+    {
+      "name": "Hiperión",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 14
+    },
+    {
+      "name": "Mnemósine",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 14
+    },
+    {
+      "name": "Temis",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 14
+    },
+    {
+      "name": "Epimeteo",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 14
+    },
+    {
+      "name": "Selene",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 12
+    },
+    {
+      "name": "Helios",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 11
+    },
+    {
+      "name": "Eos",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 13
+    },
+    {
+      "name": "Nix",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 13
+    },
+    {
+      "name": "Érebo",
+      "facet": "Titanes y dioses primordiales",
+      "known_at": 15
+    },
+    {
+      "name": "Hipólita",
+      "facet": "Héroes y semidioses",
+      "known_at": 13
+    },
+    {
+      "name": "Arpías",
+      "facet": "Monstruos y criaturas míticas",
+      "known_at": 10
+    },
+    {
+      "name": "Escila y Caribdis",
+      "facet": "Monstruos y criaturas míticas",
+      "known_at": 13
+    },
+    {
+      "name": "Sátiro",
+      "facet": "Monstruos y criaturas míticas",
+      "known_at": 10
+    },
+    {
+      "name": "Monte Olimpo",
+      "facet": "Lugares del mundo mítico",
+      "known_at": 5
+    },
+    {
+      "name": "Río Lete",
+      "facet": "Lugares del mundo mítico",
+      "known_at": 14
+    },
+    {
+      "name": "Cólquide",
+      "facet": "Lugares del mundo mítico",
+      "known_at": 14
+    },
+    {
+      "name": "Jardín de las Hespérides",
+      "facet": "Lugares del mundo mítico",
+      "known_at": 14
+    },
+    {
+      "name": "Prados de Asfódelos",
+      "facet": "Lugares del mundo mítico",
+      "known_at": 14
+    },
+    {
+      "name": "Rey Midas",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Narciso",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Sísifo",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Tántalo",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Titanomaquia",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Eurídice",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Aracne",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Pigmalión",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Faetón",
+      "facet": "Mitos y relatos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Cupido",
+      "facet": "Nombres romanos y planetas",
+      "known_at": 6
+    },
+    {
+      "name": "Fobos y Deimos",
+      "facet": "Nombres romanos y planetas",
+      "known_at": 13
+    },
+    {
+      "name": "Misión Apolo",
+      "facet": "Nombres romanos y planetas",
+      "known_at": 9
+    },
+    {
+      "name": "Programa Artemis",
+      "facet": "Nombres romanos y planetas",
+      "known_at": 12
+    },
+    {
+      "name": "Cereal",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 12
+    },
+    {
+      "name": "Música",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 12
+    },
+    {
+      "name": "Museo",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 12
+    },
+    {
+      "name": "Hipnosis",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 13
+    },
+    {
+      "name": "Hermético",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 13
+    },
+    {
+      "name": "Iris",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 12
+    },
+    {
+      "name": "Nike",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 9
+    },
+    {
+      "name": "Fobia",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 12
+    },
+    {
+      "name": "Martes",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 9
+    },
+    {
+      "name": "Junio",
+      "facet": "Palabras nacidas de los mitos",
+      "known_at": 11
+    },
+    {
+      "name": "Filoctetes",
+      "facet": "Dioses en películas y videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Campamento Mestizo",
+      "facet": "Dioses en películas y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Annabeth Chase",
+      "facet": "Dioses en películas y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Zagreus",
+      "facet": "Dioses en películas y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Troya (película)",
+      "facet": "Dioses en películas y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Xena",
+      "facet": "Dioses en películas y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Pitia",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 13
+    },
+    {
+      "name": "Olimpia",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 10
+    },
+    {
+      "name": "Estadio",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Templo de Artemisa en Éfeso",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 13
+    },
+    {
+      "name": "Pentatlón",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Erecteión",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Cariátides",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de Poseidón en Sunión",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Oráculo de Dodona",
+      "facet": "Templos, oráculos y Olimpiadas antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Clío",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 14
+    },
+    {
+      "name": "Pan",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 10
+    },
+    {
+      "name": "Gracias",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 13
+    },
+    {
+      "name": "Erinias",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 13
+    },
+    {
+      "name": "Dríadas",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 13
+    },
+    {
+      "name": "Náyades",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 13
+    },
+    {
+      "name": "Nereidas",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 14
+    },
+    {
+      "name": "Hebe",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 14
+    },
+    {
+      "name": "Asclepio",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 13
+    },
+    {
+      "name": "Bóreas",
+      "facet": "Musas, ninfas y dioses menores",
+      "known_at": 14
+    }
+  ]
+}

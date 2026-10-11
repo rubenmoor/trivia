@@ -1,0 +1,887 @@
+{
+  "subcategory": "Quesos",
+  "facets": [
+    "Quesos colombianos y campesinos",
+    "Quesos famosos del mundo",
+    "Cómo se hace el queso",
+    "Leches y animales lecheros",
+    "Tipos y familias de queso",
+    "Hongos, huecos y cortezas",
+    "Platos y comidas con queso",
+    "Quesos en la cocina diaria",
+    "Historia y leyendas del queso",
+    "Queso en caricaturas y películas",
+    "Palabras y dichos del queso",
+    "Queso, nutrición y cuerpo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Queso costeño",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 3
+    },
+    {
+      "name": "Quesillo",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 4
+    },
+    {
+      "name": "Queso campesino",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 3
+    },
+    {
+      "name": "Cuajada",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 5
+    },
+    {
+      "name": "Queso Paipa",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 10
+    },
+    {
+      "name": "Queso doble crema",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 4
+    },
+    {
+      "name": "Queso de capa",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 11
+    },
+    {
+      "name": "Queso pera",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 9
+    },
+    {
+      "name": "Queso de hoja",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 10
+    },
+    {
+      "name": "Suero costeño",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 6
+    },
+    {
+      "name": "Queso del Caquetá",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 11
+    },
+    {
+      "name": "Queso molido",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 8
+    },
+    {
+      "name": "Ubaté",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 11
+    },
+    {
+      "name": "Quesito antioqueño",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 7
+    },
+    {
+      "name": "Queso blanco",
+      "facet": "Quesos colombianos y campesinos",
+      "known_at": 2
+    },
+    {
+      "name": "Parmesano",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Cheddar",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Gouda",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Edam",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Emmental",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Roquefort",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Camembert",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Brie",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Gruyère",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Manchego",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Feta",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Stilton",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Pecorino",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Halloumi",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Queso Oaxaca",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Wensleydale",
+      "facet": "Quesos famosos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Cuajo",
+      "facet": "Cómo se hace el queso",
+      "known_at": 8
+    },
+    {
+      "name": "Suero de leche",
+      "facet": "Cómo se hace el queso",
+      "known_at": 7
+    },
+    {
+      "name": "Fermentación",
+      "facet": "Cómo se hace el queso",
+      "known_at": 8
+    },
+    {
+      "name": "Bacterias lácticas",
+      "facet": "Cómo se hace el queso",
+      "known_at": 10
+    },
+    {
+      "name": "Prensado",
+      "facet": "Cómo se hace el queso",
+      "known_at": 7
+    },
+    {
+      "name": "Salmuera",
+      "facet": "Cómo se hace el queso",
+      "known_at": 10
+    },
+    {
+      "name": "Maduración",
+      "facet": "Cómo se hace el queso",
+      "known_at": 8
+    },
+    {
+      "name": "Corte de la cuajada",
+      "facet": "Cómo se hace el queso",
+      "known_at": 11
+    },
+    {
+      "name": "Molde para queso",
+      "facet": "Cómo se hace el queso",
+      "known_at": 5
+    },
+    {
+      "name": "Coagulación",
+      "facet": "Cómo se hace el queso",
+      "known_at": 10
+    },
+    {
+      "name": "Cheddarización",
+      "facet": "Cómo se hace el queso",
+      "known_at": 14
+    },
+    {
+      "name": "Pasta hilada",
+      "facet": "Cómo se hace el queso",
+      "known_at": 12
+    },
+    {
+      "name": "Quesería",
+      "facet": "Cómo se hace el queso",
+      "known_at": 5
+    },
+    {
+      "name": "Estómago de ternero",
+      "facet": "Cómo se hace el queso",
+      "known_at": 11
+    },
+    {
+      "name": "Quimosina",
+      "facet": "Cómo se hace el queso",
+      "known_at": 14
+    },
+    {
+      "name": "Cava de maduración",
+      "facet": "Cómo se hace el queso",
+      "known_at": 11
+    },
+    {
+      "name": "Lira quesera",
+      "facet": "Cómo se hace el queso",
+      "known_at": 14
+    },
+    {
+      "name": "Búfala",
+      "facet": "Leches y animales lecheros",
+      "known_at": 9
+    },
+    {
+      "name": "Camella",
+      "facet": "Leches y animales lecheros",
+      "known_at": 11
+    },
+    {
+      "name": "Yegua",
+      "facet": "Leches y animales lecheros",
+      "known_at": 10
+    },
+    {
+      "name": "Burra",
+      "facet": "Leches y animales lecheros",
+      "known_at": 12
+    },
+    {
+      "name": "Vaca Holstein",
+      "facet": "Leches y animales lecheros",
+      "known_at": 8
+    },
+    {
+      "name": "Vaca Jersey",
+      "facet": "Leches y animales lecheros",
+      "known_at": 12
+    },
+    {
+      "name": "Vaca Normando",
+      "facet": "Leches y animales lecheros",
+      "known_at": 12
+    },
+    {
+      "name": "Ordeño",
+      "facet": "Leches y animales lecheros",
+      "known_at": 3
+    },
+    {
+      "name": "Leche cruda",
+      "facet": "Leches y animales lecheros",
+      "known_at": 7
+    },
+    {
+      "name": "Leche descremada",
+      "facet": "Leches y animales lecheros",
+      "known_at": 6
+    },
+    {
+      "name": "Kumis",
+      "facet": "Leches y animales lecheros",
+      "known_at": 5
+    },
+    {
+      "name": "Queso fresco",
+      "facet": "Tipos y familias de queso",
+      "known_at": 4
+    },
+    {
+      "name": "Queso madurado",
+      "facet": "Tipos y familias de queso",
+      "known_at": 8
+    },
+    {
+      "name": "Queso azul",
+      "facet": "Tipos y familias de queso",
+      "known_at": 7
+    },
+    {
+      "name": "Queso de pasta dura",
+      "facet": "Tipos y familias de queso",
+      "known_at": 9
+    },
+    {
+      "name": "Queso semiduro",
+      "facet": "Tipos y familias de queso",
+      "known_at": 10
+    },
+    {
+      "name": "Queso crema",
+      "facet": "Tipos y familias de queso",
+      "known_at": 4
+    },
+    {
+      "name": "Queso fundido",
+      "facet": "Tipos y familias de queso",
+      "known_at": 8
+    },
+    {
+      "name": "Queso rallado",
+      "facet": "Tipos y familias de queso",
+      "known_at": 3
+    },
+    {
+      "name": "Queso de cabra",
+      "facet": "Tipos y familias de queso",
+      "known_at": 6
+    },
+    {
+      "name": "Queso de oveja",
+      "facet": "Tipos y familias de queso",
+      "known_at": 8
+    },
+    {
+      "name": "Queso ahumado",
+      "facet": "Tipos y familias de queso",
+      "known_at": 7
+    },
+    {
+      "name": "Queso de corteza lavada",
+      "facet": "Tipos y familias de queso",
+      "known_at": 13
+    },
+    {
+      "name": "Queso de corteza enmohecida",
+      "facet": "Tipos y familias de queso",
+      "known_at": 12
+    },
+    {
+      "name": "Queso vegano",
+      "facet": "Tipos y familias de queso",
+      "known_at": 9
+    },
+    {
+      "name": "Requesón",
+      "facet": "Tipos y familias de queso",
+      "known_at": 8
+    },
+    {
+      "name": "Queso tajado",
+      "facet": "Tipos y familias de queso",
+      "known_at": 2
+    },
+    {
+      "name": "Denominación de origen",
+      "facet": "Tipos y familias de queso",
+      "known_at": 11
+    },
+    {
+      "name": "Penicillium roqueforti",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 12
+    },
+    {
+      "name": "Penicillium camemberti",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 13
+    },
+    {
+      "name": "Moho",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 5
+    },
+    {
+      "name": "Ojos del queso",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 9
+    },
+    {
+      "name": "Propionibacterium",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 14
+    },
+    {
+      "name": "Cera roja",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 6
+    },
+    {
+      "name": "Corteza de ceniza",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 13
+    },
+    {
+      "name": "Cristales de tirosina",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 14
+    },
+    {
+      "name": "Cuevas de Roquefort",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 12
+    },
+    {
+      "name": "Moho blanco",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 9
+    },
+    {
+      "name": "Vetas azules",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 8
+    },
+    {
+      "name": "Punción con agujas",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 13
+    },
+    {
+      "name": "Ácaros del queso",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 14
+    },
+    {
+      "name": "Partículas de heno",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 14
+    },
+    {
+      "name": "Brevibacterium linens",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 14
+    },
+    {
+      "name": "Corteza comestible",
+      "facet": "Hongos, huecos y cortezas",
+      "known_at": 9
+    },
+    {
+      "name": "Raclette",
+      "facet": "Platos y comidas con queso",
+      "known_at": 13
+    },
+    {
+      "name": "Macarrones con queso",
+      "facet": "Platos y comidas con queso",
+      "known_at": 3
+    },
+    {
+      "name": "Sándwich de queso",
+      "facet": "Platos y comidas con queso",
+      "known_at": 1
+    },
+    {
+      "name": "Arepa de queso",
+      "facet": "Platos y comidas con queso",
+      "known_at": 2
+    },
+    {
+      "name": "Tequeño",
+      "facet": "Platos y comidas con queso",
+      "known_at": 6
+    },
+    {
+      "name": "Cheesecake",
+      "facet": "Platos y comidas con queso",
+      "known_at": 6
+    },
+    {
+      "name": "Ensalada griega",
+      "facet": "Platos y comidas con queso",
+      "known_at": 11
+    },
+    {
+      "name": "Chocolate con queso",
+      "facet": "Platos y comidas con queso",
+      "known_at": 4
+    },
+    {
+      "name": "Papas chorreadas",
+      "facet": "Platos y comidas con queso",
+      "known_at": 9
+    },
+    {
+      "name": "Pão de queijo",
+      "facet": "Platos y comidas con queso",
+      "known_at": 11
+    },
+    {
+      "name": "Khachapuri",
+      "facet": "Platos y comidas con queso",
+      "known_at": 15
+    },
+    {
+      "name": "Gratinar",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Tabla de quesos",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Cuchillo para queso",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Quesera",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Bocadillo con queso",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Maridaje",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 12
+    },
+    {
+      "name": "Papel parafinado",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Queso derretido",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 1
+    },
+    {
+      "name": "Queso en cubos",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Queso en tiras",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Fecha de vencimiento",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Lonchera",
+      "facet": "Quesos en la cocina diaria",
+      "known_at": 2
+    },
+    {
+      "name": "Pastor árabe",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 11
+    },
+    {
+      "name": "Antigua Roma",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 7
+    },
+    {
+      "name": "Monjes trapenses",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 13
+    },
+    {
+      "name": "Marie Harel",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 15
+    },
+    {
+      "name": "Pastor de Roquefort",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 13
+    },
+    {
+      "name": "Mercado de quesos de Alkmaar",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 13
+    },
+    {
+      "name": "James L. Kraft",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 14
+    },
+    {
+      "name": "Queso gigante de Jefferson",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 15
+    },
+    {
+      "name": "Coladores de cerámica de Polonia",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 15
+    },
+    {
+      "name": "Momias de Xiaohe",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 15
+    },
+    {
+      "name": "Llegada del ganado a América",
+      "facet": "Historia y leyendas del queso",
+      "known_at": 10
+    },
+    {
+      "name": "Jerry",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 1
+    },
+    {
+      "name": "Wallace y Gromit",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 7
+    },
+    {
+      "name": "Chester Cheetah",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 6
+    },
+    {
+      "name": "Cheese Touch",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 7
+    },
+    {
+      "name": "¿Quién se ha llevado mi queso?",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Ratonera",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Cheese Shop de Monty Python",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Luna de queso",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 4
+    },
+    {
+      "name": "Chuck E. Cheese",
+      "facet": "Queso en caricaturas y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Caseus",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 12
+    },
+    {
+      "name": "Formaticus",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 14
+    },
+    {
+      "name": "Fromage",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 10
+    },
+    {
+      "name": "Turófilo",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 14
+    },
+    {
+      "name": "Say cheese",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 5
+    },
+    {
+      "name": "Uvas con queso saben a beso",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 12
+    },
+    {
+      "name": "Dársela con queso",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 13
+    },
+    {
+      "name": "Queso de cerdo",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 12
+    },
+    {
+      "name": "Big cheese",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 13
+    },
+    {
+      "name": "Cheesy",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 11
+    },
+    {
+      "name": "Quesero",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 4
+    },
+    {
+      "name": "Queijo",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 9
+    },
+    {
+      "name": "Mozzare",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 14
+    },
+    {
+      "name": "Pan y queso",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 13
+    },
+    {
+      "name": "Queso suizo",
+      "facet": "Palabras y dichos del queso",
+      "known_at": 4
+    },
+    {
+      "name": "Proteína",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "Caseína",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 12
+    },
+    {
+      "name": "Lactosa",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "Intolerancia a la lactosa",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "Grasa saturada",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 10
+    },
+    {
+      "name": "Sodio",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Vitamina B12",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 12
+    },
+    {
+      "name": "Huesos",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 2
+    },
+    {
+      "name": "Dientes",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 2
+    },
+    {
+      "name": "Colesterol",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Probióticos",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 10
+    },
+    {
+      "name": "Listeria",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 13
+    },
+    {
+      "name": "Alergia a la leche",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Triptófano",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 13
+    },
+    {
+      "name": "Pesadillas por comer queso",
+      "facet": "Queso, nutrición y cuerpo",
+      "known_at": 11
+    }
+  ]
+}

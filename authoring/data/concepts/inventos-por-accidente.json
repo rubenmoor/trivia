@@ -1,0 +1,512 @@
+{
+  "subcategory": "Inventos por accidente",
+  "facets": [
+    "Comidas y golosinas por error",
+    "Bebidas nacidas por accidente",
+    "Medicinas y avances médicos",
+    "Materiales, plásticos y pegantes",
+    "Aparatos de cocina y hogar",
+    "Juguetes y pasatiempos accidentales",
+    "Colores, tintes y sustancias químicas",
+    "Descubrimientos de física y espacio",
+    "Inventores y científicos con suerte",
+    "Leyendas y mitos de origen",
+    "Ideas halladas en la naturaleza",
+    "Objetos de oficina y seguridad"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 5,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Galletas con chispas de chocolate",
+      "facet": "Comidas y golosinas por error",
+      "known_at": 5
+    },
+    {
+      "name": "Paleta de hielo",
+      "facet": "Comidas y golosinas por error",
+      "known_at": 2
+    },
+    {
+      "name": "Hojuelas de maíz",
+      "facet": "Comidas y golosinas por error",
+      "known_at": 6
+    },
+    {
+      "name": "Tarte Tatin",
+      "facet": "Comidas y golosinas por error",
+      "known_at": 13
+    },
+    {
+      "name": "Salsa inglesa",
+      "facet": "Comidas y golosinas por error",
+      "known_at": 12
+    },
+    {
+      "name": "Doritos",
+      "facet": "Comidas y golosinas por error",
+      "known_at": 8
+    },
+    {
+      "name": "Té en bolsita",
+      "facet": "Bebidas nacidas por accidente",
+      "known_at": 6
+    },
+    {
+      "name": "Cerveza",
+      "facet": "Bebidas nacidas por accidente",
+      "known_at": 10
+    },
+    {
+      "name": "Champaña",
+      "facet": "Bebidas nacidas por accidente",
+      "known_at": 10
+    },
+    {
+      "name": "Penicilina",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 7
+    },
+    {
+      "name": "Lisozima",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 15
+    },
+    {
+      "name": "Gas de la risa",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 10
+    },
+    {
+      "name": "Warfarina",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 14
+    },
+    {
+      "name": "Vacuna contra la viruela",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 10
+    },
+    {
+      "name": "Minoxidil",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 14
+    },
+    {
+      "name": "Cisplatino",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 15
+    },
+    {
+      "name": "Quinina",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 12
+    },
+    {
+      "name": "Implante dental de titanio",
+      "facet": "Medicinas y avances médicos",
+      "known_at": 14
+    },
+    {
+      "name": "Caucho vulcanizado",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 12
+    },
+    {
+      "name": "Superpegamento",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 6
+    },
+    {
+      "name": "Celuloide",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 13
+    },
+    {
+      "name": "Plástico de burbujas",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 4
+    },
+    {
+      "name": "Acero inoxidable",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 10
+    },
+    {
+      "name": "Gore-Tex",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 13
+    },
+    {
+      "name": "Celofán",
+      "facet": "Materiales, plásticos y pegantes",
+      "known_at": 10
+    },
+    {
+      "name": "Horno microondas",
+      "facet": "Aparatos de cocina y hogar",
+      "known_at": 1
+    },
+    {
+      "name": "Jabón que flota",
+      "facet": "Aparatos de cocina y hogar",
+      "known_at": 12
+    },
+    {
+      "name": "Toalla de papel",
+      "facet": "Aparatos de cocina y hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Pañuelo desechable",
+      "facet": "Aparatos de cocina y hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Repelente de manchas",
+      "facet": "Aparatos de cocina y hogar",
+      "known_at": 13
+    },
+    {
+      "name": "Cafetera de filtro",
+      "facet": "Aparatos de cocina y hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Masilla loca",
+      "facet": "Juguetes y pasatiempos accidentales",
+      "known_at": 10
+    },
+    {
+      "name": "Bola de nieve de cristal",
+      "facet": "Juguetes y pasatiempos accidentales",
+      "known_at": 4
+    },
+    {
+      "name": "Tablero mágico",
+      "facet": "Juguetes y pasatiempos accidentales",
+      "known_at": 6
+    },
+    {
+      "name": "Monopolio",
+      "facet": "Juguetes y pasatiempos accidentales",
+      "known_at": 6
+    },
+    {
+      "name": "Malva",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 13
+    },
+    {
+      "name": "Azul de Prusia",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 13
+    },
+    {
+      "name": "Azul YInMn",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 15
+    },
+    {
+      "name": "Anilina",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 14
+    },
+    {
+      "name": "Carmín",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 12
+    },
+    {
+      "name": "Pintura fosforescente",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 6
+    },
+    {
+      "name": "Blanqueador",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 7
+    },
+    {
+      "name": "Índigo",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 9
+    },
+    {
+      "name": "Tornasol",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 11
+    },
+    {
+      "name": "Fucsina",
+      "facet": "Colores, tintes y sustancias químicas",
+      "known_at": 14
+    },
+    {
+      "name": "Radiación de fondo de microondas",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 14
+    },
+    {
+      "name": "Púlsar",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Electromagnetismo",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 11
+    },
+    {
+      "name": "Destellos de rayos gamma",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 14
+    },
+    {
+      "name": "Anillos de Urano",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Movimiento browniano",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Superconductividad",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 13
+    },
+    {
+      "name": "Cristal líquido",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 12
+    },
+    {
+      "name": "Efecto Mpemba",
+      "facet": "Descubrimientos de física y espacio",
+      "known_at": 14
+    },
+    {
+      "name": "Henri Becquerel",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 13
+    },
+    {
+      "name": "Roy Plunkett",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 15
+    },
+    {
+      "name": "William Perkin",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 14
+    },
+    {
+      "name": "Spencer Silver",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 15
+    },
+    {
+      "name": "Frank Epperson",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 15
+    },
+    {
+      "name": "Harry Coover",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 15
+    },
+    {
+      "name": "Jocelyn Bell",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 14
+    },
+    {
+      "name": "Hans Christian Ørsted",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 13
+    },
+    {
+      "name": "Luigi Galvani",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 12
+    },
+    {
+      "name": "Wilson Greatbatch",
+      "facet": "Inventores y científicos con suerte",
+      "known_at": 15
+    },
+    {
+      "name": "Shen Nong",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Queso roquefort",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Dom Pérignon",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Péndulo de Galileo",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Vidrio fenicio",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 13
+    },
+    {
+      "name": "Púrpura de Tiro",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 14
+    },
+    {
+      "name": "Tetera de James Watt",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 12
+    },
+    {
+      "name": "Torre de Pisa de Galileo",
+      "facet": "Leyendas y mitos de origen",
+      "known_at": 11
+    },
+    {
+      "name": "Velcro",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 2
+    },
+    {
+      "name": "Bardana",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 11
+    },
+    {
+      "name": "Piel de tiburón",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 10
+    },
+    {
+      "name": "Hoja de loto",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 11
+    },
+    {
+      "name": "Avispa papelera",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 12
+    },
+    {
+      "name": "Ornitóptero",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 12
+    },
+    {
+      "name": "Aletas de buceo",
+      "facet": "Ideas halladas en la naturaleza",
+      "known_at": 4
+    },
+    {
+      "name": "Borrador",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Lápiz de grafito",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 5
+    },
+    {
+      "name": "Cinta adhesiva",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 2
+    },
+    {
+      "name": "Clip",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 3
+    },
+    {
+      "name": "Impresora de inyección de tinta",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 10
+    },
+    {
+      "name": "Detector de humo",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 6
+    },
+    {
+      "name": "Vidrio de seguridad",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 9
+    },
+    {
+      "name": "Chaleco antibalas",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Airbag",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 6
+    },
+    {
+      "name": "Papel carbón",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 11
+    },
+    {
+      "name": "Fotocopiadora",
+      "facet": "Objetos de oficina y seguridad",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "subcategory": "Empresas famosas",
+  "facets": [
+    "Comida rápida y restaurantes",
+    "Bebidas y golosinas",
+    "Tecnología y videojuegos",
+    "Carros y transporte",
+    "Ropa y deportes",
+    "Juguetes y entretenimiento",
+    "Fundadores y mascotas de marca",
+    "Logotipos y eslóganes",
+    "Origen de los nombres",
+    "Empresas colombianas",
+    "Historia e inventos de empresas",
+    "Tiendas y comercio en línea"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Guía Michelin",
+      "facet": "Comida rápida y restaurantes",
+      "known_at": 12
+    },
+    {
+      "name": "Epic Games",
+      "facet": "Tecnología y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Manzana mordida",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 2
+    },
+    {
+      "name": "Caballo rampante",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 7
+    },
+    {
+      "name": "Anillos de Audi",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 8
+    },
+    {
+      "name": "Concha de Shell",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 10
+    },
+    {
+      "name": "Pléyades de Subaru",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 14
+    },
+    {
+      "name": "Pocket Monsters",
+      "facet": "Origen de los nombres",
+      "known_at": 8
+    },
+    {
+      "name": "Hoja de coca",
+      "facet": "Origen de los nombres",
+      "known_at": 10
+    },
+    {
+      "name": "Googol",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Leg godt",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Ingvar Kamprad",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Starbuck",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Pepsina",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Sonus",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Mercedes Jellinek",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Samsung (tres estrellas)",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Ahura Mazda",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Horch",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Colombiana (gaseosa)",
+      "facet": "Empresas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Ponqué Ramo",
+      "facet": "Empresas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Crepes & Waffles",
+      "facet": "Empresas colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Bavaria",
+      "facet": "Empresas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Haceb",
+      "facet": "Empresas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Mario Hernández",
+      "facet": "Empresas colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Nespresso",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 10
+    },
+    {
+      "name": "Nokia 3310",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Cuchilla desechable",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Hanafuda",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 13
+    },
+    {
+      "name": "Game & Watch",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Apple Store",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 6
+    },
+    {
+      "name": "AliExpress",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Amazon Prime",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Walmart",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 8
+    },
+    {
+      "name": "Costco",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 10
+    },
+    {
+      "name": "Toys \"R\" Us",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 11
+    },
+    {
+      "name": "Etsy",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 12
+    }
+  ]
+}

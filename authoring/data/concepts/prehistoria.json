@@ -1,0 +1,767 @@
+{
+  "subcategory": "Prehistoria",
+  "facets": [
+    "Evolución humana y homínidos",
+    "Herramientas de piedra y técnicas",
+    "Fuego, caza y recolección",
+    "Arte rupestre y pinturas",
+    "Megafauna de la Edad de Hielo",
+    "Revolución neolítica y agricultura",
+    "Monumentos megalíticos",
+    "Edad de los Metales",
+    "Hallazgos y yacimientos famosos",
+    "Poblamiento de América y Colombia prehistórica",
+    "Arqueología y métodos de datación",
+    "Prehistoria en películas y caricaturas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Neandertal",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 6
+    },
+    {
+      "name": "Australopithecus",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 11
+    },
+    {
+      "name": "Homo erectus",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 10
+    },
+    {
+      "name": "Homo habilis",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 10
+    },
+    {
+      "name": "Homo floresiensis",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 13
+    },
+    {
+      "name": "Denisovanos",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 14
+    },
+    {
+      "name": "Bipedismo",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 10
+    },
+    {
+      "name": "Cromañón",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 9
+    },
+    {
+      "name": "Hombre de Pekín",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 13
+    },
+    {
+      "name": "Homo naledi",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 14
+    },
+    {
+      "name": "Eslabón perdido",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 9
+    },
+    {
+      "name": "Toumaï",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 15
+    },
+    {
+      "name": "Ardipithecus",
+      "facet": "Evolución humana y homínidos",
+      "known_at": 14
+    },
+    {
+      "name": "Hacha de mano",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 7
+    },
+    {
+      "name": "Sílex",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 9
+    },
+    {
+      "name": "Propulsor",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 12
+    },
+    {
+      "name": "Paleolítico",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 7
+    },
+    {
+      "name": "Mesolítico",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Edad de Piedra",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 4
+    },
+    {
+      "name": "Industria olduvayense",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 14
+    },
+    {
+      "name": "Achelense",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 14
+    },
+    {
+      "name": "Lasca",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Raspador",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 11
+    },
+    {
+      "name": "Aguja de hueso",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 8
+    },
+    {
+      "name": "Percutor",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 13
+    },
+    {
+      "name": "Piedra pulida",
+      "facet": "Herramientas de piedra y técnicas",
+      "known_at": 10
+    },
+    {
+      "name": "Cazadores-recolectores",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 6
+    },
+    {
+      "name": "Frotar palos",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 4
+    },
+    {
+      "name": "Hoguera",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 2
+    },
+    {
+      "name": "Pieles de animales",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 2
+    },
+    {
+      "name": "Trampa de caza",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 5
+    },
+    {
+      "name": "Ahumado de carne",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 8
+    },
+    {
+      "name": "Recolección de bayas",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 4
+    },
+    {
+      "name": "Cocción de alimentos",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 5
+    },
+    {
+      "name": "Tribu",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 4
+    },
+    {
+      "name": "Clan",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 8
+    },
+    {
+      "name": "Campamento estacional",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 11
+    },
+    {
+      "name": "Antorcha",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 3
+    },
+    {
+      "name": "Domesticación del lobo",
+      "facet": "Fuego, caza y recolección",
+      "known_at": 8
+    },
+    {
+      "name": "Pinturas rupestres",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 4
+    },
+    {
+      "name": "Cueva de Chauvet",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 13
+    },
+    {
+      "name": "Manos en negativo",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 8
+    },
+    {
+      "name": "Ocre",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 10
+    },
+    {
+      "name": "Arte mobiliar",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 14
+    },
+    {
+      "name": "Pigmentos naturales",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 7
+    },
+    {
+      "name": "Hombre león de Hohlenstein-Stadel",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 15
+    },
+    {
+      "name": "Tassili n'Ajjer",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 15
+    },
+    {
+      "name": "Piedras de Tunja en Facatativá",
+      "facet": "Arte rupestre y pinturas",
+      "known_at": 11
+    },
+    {
+      "name": "Mamut",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 2
+    },
+    {
+      "name": "Megalodón",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 4
+    },
+    {
+      "name": "Oso cavernario",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 7
+    },
+    {
+      "name": "Alce irlandés",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 12
+    },
+    {
+      "name": "Mastodonte",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 8
+    },
+    {
+      "name": "Bisonte estepario",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 11
+    },
+    {
+      "name": "Toxodonte",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 14
+    },
+    {
+      "name": "Lobo terrible",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 10
+    },
+    {
+      "name": "Diprotodonte",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 14
+    },
+    {
+      "name": "León cavernario",
+      "facet": "Megafauna de la Edad de Hielo",
+      "known_at": 9
+    },
+    {
+      "name": "Agricultura",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 4
+    },
+    {
+      "name": "Domesticación de animales",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 6
+    },
+    {
+      "name": "Sedentarismo",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 9
+    },
+    {
+      "name": "Telar",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 8
+    },
+    {
+      "name": "Çatalhöyük",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 14
+    },
+    {
+      "name": "Jericó",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 12
+    },
+    {
+      "name": "Aldea",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 3
+    },
+    {
+      "name": "Molino de mano",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 11
+    },
+    {
+      "name": "Ganadería",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 5
+    },
+    {
+      "name": "Excedente agrícola",
+      "facet": "Revolución neolítica y agricultura",
+      "known_at": 12
+    },
+    {
+      "name": "Menhir",
+      "facet": "Monumentos megalíticos",
+      "known_at": 8
+    },
+    {
+      "name": "Dolmen",
+      "facet": "Monumentos megalíticos",
+      "known_at": 10
+    },
+    {
+      "name": "Crómlech",
+      "facet": "Monumentos megalíticos",
+      "known_at": 13
+    },
+    {
+      "name": "Alineamientos de Carnac",
+      "facet": "Monumentos megalíticos",
+      "known_at": 13
+    },
+    {
+      "name": "Göbekli Tepe",
+      "facet": "Monumentos megalíticos",
+      "known_at": 13
+    },
+    {
+      "name": "Newgrange",
+      "facet": "Monumentos megalíticos",
+      "known_at": 14
+    },
+    {
+      "name": "Dolmen de Menga",
+      "facet": "Monumentos megalíticos",
+      "known_at": 14
+    },
+    {
+      "name": "Talayot",
+      "facet": "Monumentos megalíticos",
+      "known_at": 15
+    },
+    {
+      "name": "Nuraga",
+      "facet": "Monumentos megalíticos",
+      "known_at": 15
+    },
+    {
+      "name": "Skara Brae",
+      "facet": "Monumentos megalíticos",
+      "known_at": 14
+    },
+    {
+      "name": "Megalito",
+      "facet": "Monumentos megalíticos",
+      "known_at": 10
+    },
+    {
+      "name": "Avebury",
+      "facet": "Monumentos megalíticos",
+      "known_at": 14
+    },
+    {
+      "name": "Edad del Bronce",
+      "facet": "Edad de los Metales",
+      "known_at": 7
+    },
+    {
+      "name": "Edad del Hierro",
+      "facet": "Edad de los Metales",
+      "known_at": 7
+    },
+    {
+      "name": "Edad del Cobre",
+      "facet": "Edad de los Metales",
+      "known_at": 10
+    },
+    {
+      "name": "Estaño",
+      "facet": "Edad de los Metales",
+      "known_at": 9
+    },
+    {
+      "name": "Metalurgia",
+      "facet": "Edad de los Metales",
+      "known_at": 10
+    },
+    {
+      "name": "Hititas",
+      "facet": "Edad de los Metales",
+      "known_at": 13
+    },
+    {
+      "name": "Espada de bronce",
+      "facet": "Edad de los Metales",
+      "known_at": 7
+    },
+    {
+      "name": "Tumbaga",
+      "facet": "Edad de los Metales",
+      "known_at": 12
+    },
+    {
+      "name": "Herrería",
+      "facet": "Edad de los Metales",
+      "known_at": 6
+    },
+    {
+      "name": "Fuelle",
+      "facet": "Edad de los Metales",
+      "known_at": 8
+    },
+    {
+      "name": "Molde de fundición",
+      "facet": "Edad de los Metales",
+      "known_at": 9
+    },
+    {
+      "name": "Celtas",
+      "facet": "Edad de los Metales",
+      "known_at": 9
+    },
+    {
+      "name": "Yunque",
+      "facet": "Edad de los Metales",
+      "known_at": 5
+    },
+    {
+      "name": "Atapuerca",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Garganta de Olduvai",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Huellas de Laetoli",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Cueva de Denisova",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Cueva de Blombos",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Niño de Turkana",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Sima de los Huesos",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Pozos de alquitrán de La Brea",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Doggerland",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Mary Leakey",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Louis Leakey",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Disco celeste de Nebra",
+      "facet": "Hallazgos y yacimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Beringia",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 11
+    },
+    {
+      "name": "Cultura Clovis",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 13
+    },
+    {
+      "name": "Monte Verde",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 14
+    },
+    {
+      "name": "El Abra",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 13
+    },
+    {
+      "name": "Hombre de Tequendama",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Tumaco-La Tolita",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 13
+    },
+    {
+      "name": "Cultura Quimbaya",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 9
+    },
+    {
+      "name": "Cultura Tairona",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 7
+    },
+    {
+      "name": "Cultura Zenú",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 9
+    },
+    {
+      "name": "Puerto Hormiga",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 14
+    },
+    {
+      "name": "Gonzalo Correal Urrego",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 15
+    },
+    {
+      "name": "Taima-Taima",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 15
+    },
+    {
+      "name": "Paleoindios",
+      "facet": "Poblamiento de América y Colombia prehistórica",
+      "known_at": 12
+    },
+    {
+      "name": "Estratigrafía",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 12
+    },
+    {
+      "name": "Excavación",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 4
+    },
+    {
+      "name": "Pincel de arqueólogo",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 3
+    },
+    {
+      "name": "Museo de historia natural",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 2
+    },
+    {
+      "name": "Coprolito",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 13
+    },
+    {
+      "name": "Termoluminiscencia",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 15
+    },
+    {
+      "name": "ADN antiguo",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 11
+    },
+    {
+      "name": "Vida media",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 13
+    },
+    {
+      "name": "Yacimiento arqueológico",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 6
+    },
+    {
+      "name": "Cuadrícula de excavación",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 12
+    },
+    {
+      "name": "Antropología",
+      "facet": "Arqueología y métodos de datación",
+      "known_at": 10
+    },
+    {
+      "name": "Pablo Mármol",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 6
+    },
+    {
+      "name": "Diego",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 4
+    },
+    {
+      "name": "Los Croods",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 3
+    },
+    {
+      "name": "Guy",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 8
+    },
+    {
+      "name": "Cavernícola",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 9
+    },
+    {
+      "name": "Pie Pequeño",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 6
+    },
+    {
+      "name": "Alfa",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 13
+    },
+    {
+      "name": "10.000 a. C.",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 13
+    },
+    {
+      "name": "Primal",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 13
+    },
+    {
+      "name": "Vilma Picapiedra",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 6
+    },
+    {
+      "name": "Bam-Bam",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 6
+    },
+    {
+      "name": "Pebbles",
+      "facet": "Prehistoria en películas y caricaturas",
+      "known_at": 6
+    }
+  ]
+}

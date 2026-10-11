@@ -1,0 +1,1118 @@
+{
+  "subcategory": "Fórmula 1 y automovilismo",
+  "facets": [
+    "Pilotos y campeones de F1",
+    "Escuderías y fabricantes",
+    "Circuitos y grandes premios",
+    "Reglas, banderas y carrera",
+    "Partes y tecnología del carro",
+    "Pits, llantas y estrategia",
+    "Otras competencias de motor",
+    "Rally, karts y motos",
+    "Automovilismo en Colombia",
+    "Historia del automovilismo",
+    "Autos de carreras en películas y juegos",
+    "Jerga y términos del automovilismo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Lewis Hamilton",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 5
+    },
+    {
+      "name": "Michael Schumacher",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 6
+    },
+    {
+      "name": "Max Verstappen",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 6
+    },
+    {
+      "name": "Fernando Alonso",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 8
+    },
+    {
+      "name": "Sergio 'Checo' Pérez",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 7
+    },
+    {
+      "name": "Charles Leclerc",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 9
+    },
+    {
+      "name": "Sebastian Vettel",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 9
+    },
+    {
+      "name": "Lando Norris",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos Sainz",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 9
+    },
+    {
+      "name": "Oscar Piastri",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Manuel Fangio",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 11
+    },
+    {
+      "name": "Niki Lauda",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 11
+    },
+    {
+      "name": "Kimi Räikkönen",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 11
+    },
+    {
+      "name": "Alain Prost",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 12
+    },
+    {
+      "name": "Nico Rosberg",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 12
+    },
+    {
+      "name": "Jenson Button",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 12
+    },
+    {
+      "name": "Mika Häkkinen",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 12
+    },
+    {
+      "name": "James Hunt",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 12
+    },
+    {
+      "name": "Nelson Piquet",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 13
+    },
+    {
+      "name": "Jim Clark",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 13
+    },
+    {
+      "name": "Jackie Stewart",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 13
+    },
+    {
+      "name": "Emerson Fittipaldi",
+      "facet": "Pilotos y campeones de F1",
+      "known_at": 13
+    },
+    {
+      "name": "Ferrari",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 3
+    },
+    {
+      "name": "Lamborghini",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 4
+    },
+    {
+      "name": "Mercedes",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 5
+    },
+    {
+      "name": "Red Bull Racing",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 6
+    },
+    {
+      "name": "Porsche",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 6
+    },
+    {
+      "name": "McLaren",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 7
+    },
+    {
+      "name": "Audi",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 7
+    },
+    {
+      "name": "Bugatti",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 8
+    },
+    {
+      "name": "Renault",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 9
+    },
+    {
+      "name": "Aston Martin",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 9
+    },
+    {
+      "name": "Williams",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 10
+    },
+    {
+      "name": "Lotus",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 11
+    },
+    {
+      "name": "Alpine",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 11
+    },
+    {
+      "name": "Haas",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 11,
+      "retired": "unaskable: Haas no es conocido para niños; ninguna opción da una pregunta de dificultad 3."
+    },
+    {
+      "name": "Cadillac",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 11
+    },
+    {
+      "name": "Sauber",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 12
+    },
+    {
+      "name": "Racing Bulls",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 12
+    },
+    {
+      "name": "Brabham",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 14
+    },
+    {
+      "name": "Tyrrell",
+      "facet": "Escuderías y fabricantes",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Premio de Las Vegas",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 9
+    },
+    {
+      "name": "Gran Premio de Singapur",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 10
+    },
+    {
+      "name": "Gran Premio de Miami",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 10
+    },
+    {
+      "name": "Monza",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 11
+    },
+    {
+      "name": "Silverstone",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 11
+    },
+    {
+      "name": "Interlagos",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 11
+    },
+    {
+      "name": "Autódromo Hermanos Rodríguez",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Premio de Abu Dabi",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 11
+    },
+    {
+      "name": "Spa-Francorchamps",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 12
+    },
+    {
+      "name": "Suzuka",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 12
+    },
+    {
+      "name": "Nürburgring",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 12
+    },
+    {
+      "name": "Circuito de las Américas",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Premio de Bahréin",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 12
+    },
+    {
+      "name": "Circuito de Barcelona-Cataluña",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 12
+    },
+    {
+      "name": "Imola",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 13
+    },
+    {
+      "name": "Circuito de Bakú",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 13
+    },
+    {
+      "name": "Zandvoort",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Premio de Arabia Saudita",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 13
+    },
+    {
+      "name": "Eau Rouge",
+      "facet": "Circuitos y grandes premios",
+      "known_at": 14
+    },
+    {
+      "name": "Semáforo de salida",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 5
+    },
+    {
+      "name": "Parrilla de salida",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 6
+    },
+    {
+      "name": "Bandera verde",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 6
+    },
+    {
+      "name": "Champaña en el podio",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 6
+    },
+    {
+      "name": "Pole position",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera amarilla",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 7
+    },
+    {
+      "name": "Bandera roja",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 7
+    },
+    {
+      "name": "Auto de seguridad",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 7
+    },
+    {
+      "name": "Vuelta rápida",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 8
+    },
+    {
+      "name": "Clasificación",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 8
+    },
+    {
+      "name": "Bandera azul",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 10
+    },
+    {
+      "name": "Bandera negra",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema de puntos",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 10
+    },
+    {
+      "name": "Penalización de tiempo",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 10
+    },
+    {
+      "name": "Campeonato de constructores",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 10
+    },
+    {
+      "name": "Vuelta de formación",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 11
+    },
+    {
+      "name": "Carrera sprint",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 11
+    },
+    {
+      "name": "Límites de pista",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 11
+    },
+    {
+      "name": "Auto de seguridad virtual",
+      "facet": "Reglas, banderas y carrera",
+      "known_at": 12
+    },
+    {
+      "name": "Alerón",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 6
+    },
+    {
+      "name": "Caballos de fuerza",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 6
+    },
+    {
+      "name": "Caja de cambios",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 7
+    },
+    {
+      "name": "Frenos de disco",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 8
+    },
+    {
+      "name": "Monoplaza",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 9
+    },
+    {
+      "name": "Motor híbrido",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 9
+    },
+    {
+      "name": "Chasis",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 9
+    },
+    {
+      "name": "Turbo",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 9
+    },
+    {
+      "name": "Halo",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 10
+    },
+    {
+      "name": "Morro",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 10
+    },
+    {
+      "name": "Overol ignífugo",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 10
+    },
+    {
+      "name": "DRS",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 11
+    },
+    {
+      "name": "Efecto suelo",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 12
+    },
+    {
+      "name": "Telemetría",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 12
+    },
+    {
+      "name": "Difusor",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 13
+    },
+    {
+      "name": "Sistema de recuperación de energía (ERS)",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 13
+    },
+    {
+      "name": "Pontones",
+      "facet": "Partes y tecnología del carro",
+      "known_at": 13
+    },
+    {
+      "name": "Parada en pits",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 6
+    },
+    {
+      "name": "Llantas de lluvia",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 6
+    },
+    {
+      "name": "Pit lane",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 7
+    },
+    {
+      "name": "Pirelli",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 9
+    },
+    {
+      "name": "Compuesto blando",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 9
+    },
+    {
+      "name": "Pistola neumática",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 9
+    },
+    {
+      "name": "Radio de equipo",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 9
+    },
+    {
+      "name": "Llantas slick",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 10
+    },
+    {
+      "name": "Llantas intermedias",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 10
+    },
+    {
+      "name": "Calentadores de llantas",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 11
+    },
+    {
+      "name": "Ingeniero de pista",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 11
+    },
+    {
+      "name": "Límite de velocidad en el pit lane",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 11
+    },
+    {
+      "name": "Repostaje",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 11
+    },
+    {
+      "name": "Muro de boxes",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 11
+    },
+    {
+      "name": "Degradación de llantas",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 12
+    },
+    {
+      "name": "Undercut",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 13
+    },
+    {
+      "name": "Overcut",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 14
+    },
+    {
+      "name": "Graining",
+      "facet": "Pits, llantas y estrategia",
+      "known_at": 14
+    },
+    {
+      "name": "Monster trucks",
+      "facet": "Otras competencias de motor",
+      "known_at": 3
+    },
+    {
+      "name": "Carreras de demolición",
+      "facet": "Otras competencias de motor",
+      "known_at": 8
+    },
+    {
+      "name": "500 Millas de Indianápolis",
+      "facet": "Otras competencias de motor",
+      "known_at": 9
+    },
+    {
+      "name": "Fórmula E",
+      "facet": "Otras competencias de motor",
+      "known_at": 9
+    },
+    {
+      "name": "Arrancones",
+      "facet": "Otras competencias de motor",
+      "known_at": 9
+    },
+    {
+      "name": "IndyCar",
+      "facet": "Otras competencias de motor",
+      "known_at": 10
+    },
+    {
+      "name": "Fórmula 2",
+      "facet": "Otras competencias de motor",
+      "known_at": 11
+    },
+    {
+      "name": "Fórmula 3",
+      "facet": "Otras competencias de motor",
+      "known_at": 11
+    },
+    {
+      "name": "Daytona 500",
+      "facet": "Otras competencias de motor",
+      "known_at": 11
+    },
+    {
+      "name": "Campeonato Mundial de Resistencia",
+      "facet": "Otras competencias de motor",
+      "known_at": 12
+    },
+    {
+      "name": "Triple Corona del automovilismo",
+      "facet": "Otras competencias de motor",
+      "known_at": 13
+    },
+    {
+      "name": "Turismos",
+      "facet": "Otras competencias de motor",
+      "known_at": 13
+    },
+    {
+      "name": "DTM",
+      "facet": "Otras competencias de motor",
+      "known_at": 14
+    },
+    {
+      "name": "Extreme E",
+      "facet": "Otras competencias de motor",
+      "known_at": 14
+    },
+    {
+      "name": "Pikes Peak",
+      "facet": "Otras competencias de motor",
+      "known_at": 14
+    },
+    {
+      "name": "Valentino Rossi",
+      "facet": "Rally, karts y motos",
+      "known_at": 8
+    },
+    {
+      "name": "Copiloto de rally",
+      "facet": "Rally, karts y motos",
+      "known_at": 9
+    },
+    {
+      "name": "Marc Márquez",
+      "facet": "Rally, karts y motos",
+      "known_at": 10
+    },
+    {
+      "name": "Sidecar",
+      "facet": "Rally, karts y motos",
+      "known_at": 10
+    },
+    {
+      "name": "Campeonato Mundial de Rally",
+      "facet": "Rally, karts y motos",
+      "known_at": 11
+    },
+    {
+      "name": "Ken Block",
+      "facet": "Rally, karts y motos",
+      "known_at": 11
+    },
+    {
+      "name": "Superbike",
+      "facet": "Rally, karts y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Moto2",
+      "facet": "Rally, karts y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Rallycross",
+      "facet": "Rally, karts y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Trial",
+      "facet": "Rally, karts y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Jorge Lorenzo",
+      "facet": "Rally, karts y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Sébastien Loeb",
+      "facet": "Rally, karts y motos",
+      "known_at": 13
+    },
+    {
+      "name": "Sébastien Ogier",
+      "facet": "Rally, karts y motos",
+      "known_at": 14
+    },
+    {
+      "name": "Giacomo Agostini",
+      "facet": "Rally, karts y motos",
+      "known_at": 14
+    },
+    {
+      "name": "Carros de balineras",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Tatiana Calderón",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Autódromo de Tocancipá",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastián Montoya",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "David Alonso",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Roberto José Guerrero",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Carlos Muñoz",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Sebastián Saavedra",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Gabby Chaves",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Óscar Tunjo",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Carlos Huertas",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Martín Cárdenas",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Ricardo Londoño",
+      "facet": "Automovilismo en Colombia",
+      "known_at": 15
+    },
+    {
+      "name": "Enzo Ferrari",
+      "facet": "Historia del automovilismo",
+      "known_at": 9
+    },
+    {
+      "name": "Benz Patent-Motorwagen",
+      "facet": "Historia del automovilismo",
+      "known_at": 12
+    },
+    {
+      "name": "Primer Gran Premio de F1 (Silverstone 1950)",
+      "facet": "Historia del automovilismo",
+      "known_at": 12
+    },
+    {
+      "name": "Ferdinand Porsche",
+      "facet": "Historia del automovilismo",
+      "known_at": 12
+    },
+    {
+      "name": "Ford GT40",
+      "facet": "Historia del automovilismo",
+      "known_at": 12
+    },
+    {
+      "name": "Bertha Benz",
+      "facet": "Historia del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Flechas de Plata",
+      "facet": "Historia del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Bruce McLaren",
+      "facet": "Historia del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Bernie Ecclestone",
+      "facet": "Historia del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Mille Miglia",
+      "facet": "Historia del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Premio de Francia de 1906",
+      "facet": "Historia del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Colin Chapman",
+      "facet": "Historia del automovilismo",
+      "known_at": 14
+    },
+    {
+      "name": "París-Rouen 1894",
+      "facet": "Historia del automovilismo",
+      "known_at": 14
+    },
+    {
+      "name": "Targa Florio",
+      "facet": "Historia del automovilismo",
+      "known_at": 14
+    },
+    {
+      "name": "Carrera Panamericana",
+      "facet": "Historia del automovilismo",
+      "known_at": 14
+    },
+    {
+      "name": "Rayo McQueen",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Mario Kart",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Doc Hudson",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Need for Speed",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Rocket League",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Gran Turismo",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Forza Horizon",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Crash Team Racing",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Los autos locos",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "F1: la película",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Meteoro",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Herbie",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Contra lo imposible (Ford v Ferrari)",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Drive to Survive",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Rush",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Senna (documental)",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Días de trueno",
+      "facet": "Autos de carreras en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Adelantamiento",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 5
+    },
+    {
+      "name": "Recta principal",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 6
+    },
+    {
+      "name": "Pedal a fondo",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 6
+    },
+    {
+      "name": "Quemar llanta",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 6
+    },
+    {
+      "name": "Derrape",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 6
+    },
+    {
+      "name": "Novato",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 7
+    },
+    {
+      "name": "Vuelta de honor",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 7
+    },
+    {
+      "name": "Doblar a un rival",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 9
+    },
+    {
+      "name": "Piloto de pruebas",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 9
+    },
+    {
+      "name": "Tuerca",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 9
+    },
+    {
+      "name": "Rebufo",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 10
+    },
+    {
+      "name": "Box, box",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 10
+    },
+    {
+      "name": "Frenada tardía",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 10
+    },
+    {
+      "name": "Chicana",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 11
+    },
+    {
+      "name": "Horquilla",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 11
+    },
+    {
+      "name": "Paddock",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 11
+    },
+    {
+      "name": "Escapatoria",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 11
+    },
+    {
+      "name": "Trazada",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 11
+    },
+    {
+      "name": "Vértice de la curva",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Sobreviraje",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Subviraje",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Aire sucio",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Chelem",
+      "facet": "Jerga y términos del automovilismo",
+      "known_at": 14
+    }
+  ]
+}

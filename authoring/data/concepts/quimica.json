@@ -1,0 +1,948 @@
+{
+  "subcategory": "Química",
+  "facets": [
+    "Tabla periódica y elementos",
+    "Átomos, moléculas y enlaces",
+    "Estados y cambios de la materia",
+    "Mezclas, soluciones y separación",
+    "Reacciones químicas y combustión",
+    "Ácidos, bases y pH",
+    "Química en la cocina",
+    "Limpieza, aseo y cosméticos",
+    "Metales, minerales y gemas",
+    "Plásticos y materiales modernos",
+    "Gases del aire y agua",
+    "Químicos y descubrimientos famosos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 5,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tabla periódica",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 6
+    },
+    {
+      "name": "Hidrógeno",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 5
+    },
+    {
+      "name": "Carbono",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 5
+    },
+    {
+      "name": "Helio",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 4
+    },
+    {
+      "name": "Neón",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 7
+    },
+    {
+      "name": "Flúor",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 8
+    },
+    {
+      "name": "Silicio",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Plutonio",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 10
+    },
+    {
+      "name": "Polonio",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 13
+    },
+    {
+      "name": "Radón",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolo químico",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 7
+    },
+    {
+      "name": "Número atómico",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 10
+    },
+    {
+      "name": "Gases nobles",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 10
+    },
+    {
+      "name": "Halógenos",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 13
+    },
+    {
+      "name": "Metaloides",
+      "facet": "Tabla periódica y elementos",
+      "known_at": 13
+    },
+    {
+      "name": "Átomo",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 5
+    },
+    {
+      "name": "Molécula",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 7
+    },
+    {
+      "name": "Electrón",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 8
+    },
+    {
+      "name": "Protón",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 9
+    },
+    {
+      "name": "Neutrón",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 9
+    },
+    {
+      "name": "Núcleo atómico",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 9
+    },
+    {
+      "name": "H2O",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 5
+    },
+    {
+      "name": "Fórmula química",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 9
+    },
+    {
+      "name": "Enlace covalente",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 11
+    },
+    {
+      "name": "Enlace iónico",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 11
+    },
+    {
+      "name": "Enlace metálico",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 13
+    },
+    {
+      "name": "Ion",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 11
+    },
+    {
+      "name": "Isótopo",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 12
+    },
+    {
+      "name": "Valencia",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 12
+    },
+    {
+      "name": "Modelo atómico de Bohr",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 12
+    },
+    {
+      "name": "Mol",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 12
+    },
+    {
+      "name": "Número de Avogadro",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de hidrógeno",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 13
+    },
+    {
+      "name": "Orbital",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 13
+    },
+    {
+      "name": "Quark",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 13
+    },
+    {
+      "name": "Masa atómica",
+      "facet": "Átomos, moléculas y enlaces",
+      "known_at": 11
+    },
+    {
+      "name": "Sólido",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 2
+    },
+    {
+      "name": "Líquido",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 2
+    },
+    {
+      "name": "Gas",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 3
+    },
+    {
+      "name": "Fusión",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 6
+    },
+    {
+      "name": "Congelación",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 4
+    },
+    {
+      "name": "Ebullición",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 6
+    },
+    {
+      "name": "Solidificación",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 7
+    },
+    {
+      "name": "Deposición",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 13
+    },
+    {
+      "name": "Punto de ebullición",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 8
+    },
+    {
+      "name": "Punto de fusión",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 9
+    },
+    {
+      "name": "Fluido no newtoniano",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 11
+    },
+    {
+      "name": "Cambio físico",
+      "facet": "Estados y cambios de la materia",
+      "known_at": 9
+    },
+    {
+      "name": "Mezcla",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 4
+    },
+    {
+      "name": "Mezcla homogénea",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 9
+    },
+    {
+      "name": "Mezcla heterogénea",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 9
+    },
+    {
+      "name": "Solución",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 8
+    },
+    {
+      "name": "Soluto",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 10
+    },
+    {
+      "name": "Solvente",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 10
+    },
+    {
+      "name": "Disolvente universal",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 10
+    },
+    {
+      "name": "Solución saturada",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 11
+    },
+    {
+      "name": "Concentración",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 11
+    },
+    {
+      "name": "Filtración",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 7
+    },
+    {
+      "name": "Tamizado",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 7
+    },
+    {
+      "name": "Decantación",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 9
+    },
+    {
+      "name": "Destilación",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 10
+    },
+    {
+      "name": "Cristalización",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 10
+    },
+    {
+      "name": "Separación magnética",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 8
+    },
+    {
+      "name": "Centrifugación",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 11
+    },
+    {
+      "name": "Cromatografía",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 12
+    },
+    {
+      "name": "Emulsión",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 11
+    },
+    {
+      "name": "Coloide",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 13
+    },
+    {
+      "name": "Suspensión",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 12
+    },
+    {
+      "name": "Agua destilada",
+      "facet": "Mezclas, soluciones y separación",
+      "known_at": 9
+    },
+    {
+      "name": "Fuego",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 1
+    },
+    {
+      "name": "Reacción química",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 7
+    },
+    {
+      "name": "Combustión",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 8
+    },
+    {
+      "name": "Triángulo del fuego",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 10
+    },
+    {
+      "name": "Extintor",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 6
+    },
+    {
+      "name": "Oxidación",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 8
+    },
+    {
+      "name": "Óxido",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 5
+    },
+    {
+      "name": "Corrosión",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 9
+    },
+    {
+      "name": "Explosión",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 4
+    },
+    {
+      "name": "Reactivo",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 11,
+      "retired": "unaskable: 'Reactivo' has no clear person, record or photo for a well-defined question."
+    },
+    {
+      "name": "Catalizador",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 12
+    },
+    {
+      "name": "Reacción exotérmica",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 12
+    },
+    {
+      "name": "Reacción endotérmica",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de conservación de la masa",
+      "facet": "Reacciones químicas y combustión",
+      "known_at": 12
+    },
+    {
+      "name": "Ácido",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 6
+    },
+    {
+      "name": "Base",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 10
+    },
+    {
+      "name": "pH",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 9
+    },
+    {
+      "name": "Escala de pH",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 10
+    },
+    {
+      "name": "Sustancia neutra",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 10
+    },
+    {
+      "name": "Alcalino",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 11
+    },
+    {
+      "name": "Indicador de pH",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 11
+    },
+    {
+      "name": "Papel tornasol",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 10
+    },
+    {
+      "name": "Ácido cítrico",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 8
+    },
+    {
+      "name": "Ácido acético",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 12
+    },
+    {
+      "name": "Ácido clorhídrico",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 12
+    },
+    {
+      "name": "Ácido sulfúrico",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 12
+    },
+    {
+      "name": "Ácido fórmico",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 13
+    },
+    {
+      "name": "Jugo gástrico",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 9
+    },
+    {
+      "name": "Neutralización",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 11
+    },
+    {
+      "name": "Antiácido",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 8
+    },
+    {
+      "name": "Leche de magnesia",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 11
+    },
+    {
+      "name": "Soda cáustica",
+      "facet": "Ácidos, bases y pH",
+      "known_at": 10
+    },
+    {
+      "name": "Sal de cocina",
+      "facet": "Química en la cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Aceite",
+      "facet": "Química en la cocina",
+      "known_at": 3
+    },
+    {
+      "name": "Masa madre",
+      "facet": "Química en la cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Gelatina",
+      "facet": "Química en la cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Cafeína",
+      "facet": "Química en la cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Gluten",
+      "facet": "Química en la cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Glutamato monosódico",
+      "facet": "Química en la cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Sal de frutas",
+      "facet": "Química en la cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Jabón",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 1
+    },
+    {
+      "name": "Champú",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 3
+    },
+    {
+      "name": "Crema dental",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 2
+    },
+    {
+      "name": "Detergente",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 5
+    },
+    {
+      "name": "Lavaloza",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 4
+    },
+    {
+      "name": "Suavizante",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 6
+    },
+    {
+      "name": "Límpido",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 6
+    },
+    {
+      "name": "Hipoclorito de sodio",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 12
+    },
+    {
+      "name": "Amoníaco",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 10
+    },
+    {
+      "name": "Gel antibacterial",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 4
+    },
+    {
+      "name": "Alcohol antiséptico",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 5
+    },
+    {
+      "name": "Agua oxigenada",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 7
+    },
+    {
+      "name": "Desodorante",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 5
+    },
+    {
+      "name": "Perfume",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 3
+    },
+    {
+      "name": "Esmalte de uñas",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 5
+    },
+    {
+      "name": "Acetona",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 7
+    },
+    {
+      "name": "Tinte de cabello",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 7
+    },
+    {
+      "name": "Talco",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 6
+    },
+    {
+      "name": "Glicerina",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 10
+    },
+    {
+      "name": "Saponificación",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 13
+    },
+    {
+      "name": "Tensioactivo",
+      "facet": "Limpieza, aseo y cosméticos",
+      "known_at": 13
+    },
+    {
+      "name": "Plata",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 2
+    },
+    {
+      "name": "Aluminio",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 5
+    },
+    {
+      "name": "Titanio",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 8
+    },
+    {
+      "name": "Platino",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 8
+    },
+    {
+      "name": "Estaño",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 10
+    },
+    {
+      "name": "Zinc",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 10
+    },
+    {
+      "name": "Níquel",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 10
+    },
+    {
+      "name": "Acero",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 6
+    },
+    {
+      "name": "Aleación",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 10
+    },
+    {
+      "name": "Rubí",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 5
+    },
+    {
+      "name": "Zafiro",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 7
+    },
+    {
+      "name": "Amatista",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 9
+    },
+    {
+      "name": "Pirita",
+      "facet": "Metales, minerales y gemas",
+      "known_at": 10
+    },
+    {
+      "name": "Plástico",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 2
+    },
+    {
+      "name": "Polímero",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 11
+    },
+    {
+      "name": "Polietileno",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Nailon",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 7
+    },
+    {
+      "name": "Poliéster",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 8
+    },
+    {
+      "name": "Lycra",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 7
+    },
+    {
+      "name": "Silicona",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 7
+    },
+    {
+      "name": "Neopreno",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 10
+    },
+    {
+      "name": "Fibra de carbono",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 10
+    },
+    {
+      "name": "Fibra de vidrio",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 10
+    },
+    {
+      "name": "Grafeno",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 12
+    },
+    {
+      "name": "Aerogel",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 13
+    },
+    {
+      "name": "Concreto",
+      "facet": "Plásticos y materiales modernos",
+      "known_at": 8
+    },
+    {
+      "name": "Aire",
+      "facet": "Gases del aire y agua",
+      "known_at": 1
+    },
+    {
+      "name": "Agua",
+      "facet": "Gases del aire y agua",
+      "known_at": 1
+    },
+    {
+      "name": "Argón",
+      "facet": "Gases del aire y agua",
+      "known_at": 12
+    },
+    {
+      "name": "Óxido nitroso",
+      "facet": "Gases del aire y agua",
+      "known_at": 12
+    },
+    {
+      "name": "Gas propano",
+      "facet": "Gases del aire y agua",
+      "known_at": 8
+    },
+    {
+      "name": "Aire comprimido",
+      "facet": "Gases del aire y agua",
+      "known_at": 9
+    },
+    {
+      "name": "Agua potable",
+      "facet": "Gases del aire y agua",
+      "known_at": 5
+    },
+    {
+      "name": "Agua dura",
+      "facet": "Gases del aire y agua",
+      "known_at": 12
+    },
+    {
+      "name": "Potabilización",
+      "facet": "Gases del aire y agua",
+      "known_at": 9
+    },
+    {
+      "name": "Dmitri Mendeléiev",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Antoine Lavoisier",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Dinamita",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "John Dalton",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Boyle",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Ernest Rutherford",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Experimento de la lámina de oro",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Niels Bohr",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Amedeo Avogadro",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Linus Pauling",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Humphry Davy",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Mario Molina",
+      "facet": "Químicos y descubrimientos famosos",
+      "known_at": 13
+    }
+  ]
+}

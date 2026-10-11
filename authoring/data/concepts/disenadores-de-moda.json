@@ -1,0 +1,902 @@
+{
+  "subcategory": "Diseñadores de moda",
+  "facets": [
+    "Grandes casas de moda",
+    "Diseñadores clásicos del siglo XX",
+    "Diseñadores contemporáneos famosos",
+    "Diseñadores latinoamericanos y colombianos",
+    "Prendas y creaciones icónicas",
+    "Logos, marcas y símbolos",
+    "Capitales y semanas de la moda",
+    "Oficio y herramientas del diseñador",
+    "Vocabulario de la alta costura",
+    "Diseñadores en cine, series y animación",
+    "Calzado, accesorios y perfumes de autor",
+    "Moda deportiva y urbana"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Burberry",
+      "facet": "Grandes casas de moda",
+      "known_at": 10
+    },
+    {
+      "name": "Fendi",
+      "facet": "Grandes casas de moda",
+      "known_at": 10
+    },
+    {
+      "name": "Dolce & Gabbana",
+      "facet": "Grandes casas de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Lanvin",
+      "facet": "Grandes casas de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Moschino",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Céline",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Loewe",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Bottega Veneta",
+      "facet": "Grandes casas de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Chloé",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Balmain",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Missoni",
+      "facet": "Grandes casas de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Miu Miu",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "LVMH",
+      "facet": "Grandes casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Hubert de Givenchy",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Pierre Cardin",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Valentino Garavani",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Calvin Klein",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "Jean Paul Gaultier",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Kenzo Takada",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Issey Miyake",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Poiret",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Madeleine Vionnet",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 15
+    },
+    {
+      "name": "Halston",
+      "facet": "Diseñadores clásicos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Stella McCartney",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Ford",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Marc Jacobs",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Donatella Versace",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "John Galliano",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Virgil Abloh",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Miuccia Prada",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Alessandro Michele",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Pharrell Williams",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Olivier Rousteing",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Demna",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Kors",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Vera Wang",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Iris van Herpen",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Simon Porte Jacquemus",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Maria Grazia Chiuri",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Tommy Hilfiger",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria Beckham",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Diane von Fürstenberg",
+      "facet": "Diseñadores contemporáneos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Esteban Cortázar",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Francesca Miranda",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Hernán Zajar",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Pepa Pombo",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Amelia Toro",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Ricardo Piñeres",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Haider Ackermann",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 15
+    },
+    {
+      "name": "Lina Cantillo",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Kika Vargas",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Olga Piedrahita",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Narciso Rodriguez",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 14
+    },
+    {
+      "name": "Isabel Toledo",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 15
+    },
+    {
+      "name": "Arturo Calle",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 9
+    },
+    {
+      "name": "Agua Bendita",
+      "facet": "Diseñadores latinoamericanos y colombianos",
+      "known_at": 13
+    },
+    {
+      "name": "Vestidito negro",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 8
+    },
+    {
+      "name": "Chaqueta de tweed de Chanel",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Le Smoking",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Vestido cruzado",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Jeans",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 2
+    },
+    {
+      "name": "Vestido Mondrian",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Vestido blanco de Marilyn Monroe",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 9
+    },
+    {
+      "name": "Vestido negro de Desayuno en Tiffany's",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Vestido de novia de Lady Di",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Vestido de carne de Lady Gaga",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 9
+    },
+    {
+      "name": "Corsé cónico de Madonna",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Vestido de imperdibles de Versace",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Vestido langosta de Schiaparelli",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Vestido verde de Jennifer Lopez",
+      "facet": "Prendas y creaciones icónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Doble C de Chanel",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Monograma LV",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 6
+    },
+    {
+      "name": "Medusa de Versace",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Swoosh de Nike",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 2
+    },
+    {
+      "name": "Tres rayas de Adidas",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 2
+    },
+    {
+      "name": "Jugador de polo de Ralph Lauren",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Doble G de Gucci",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Cuadros de Burberry",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 11
+    },
+    {
+      "name": "Triángulo de Prada",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Jumpman",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Suela roja de Louboutin",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Doble F de Fendi",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Carruaje de Hermès",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 13
+    },
+    {
+      "name": "Franja verde y roja de Gucci",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 11
+    },
+    {
+      "name": "Azul Tiffany",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 11
+    },
+    {
+      "name": "Bandera de Tommy Hilfiger",
+      "facet": "Logos, marcas y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Bogotá Fashion Week",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 11
+    },
+    {
+      "name": "Cali Exposhow",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 12
+    },
+    {
+      "name": "Pasarela Cibeles",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "São Paulo Fashion Week",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 13
+    },
+    {
+      "name": "Rodeo Drive",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 11
+    },
+    {
+      "name": "Avenue Montaigne",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 14
+    },
+    {
+      "name": "Quinta Avenida",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 9
+    },
+    {
+      "name": "Via Montenapoleone",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 14
+    },
+    {
+      "name": "Rue Cambon",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 15
+    },
+    {
+      "name": "Pitti Uomo",
+      "facet": "Capitales y semanas de la moda",
+      "known_at": 15
+    },
+    {
+      "name": "Tijeras de sastre",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 4
+    },
+    {
+      "name": "Cinta métrica",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 2
+    },
+    {
+      "name": "Patrón",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 7
+    },
+    {
+      "name": "Figurín",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 11
+    },
+    {
+      "name": "Dedal",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 4
+    },
+    {
+      "name": "Alfiletero",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 6
+    },
+    {
+      "name": "Tiza de sastre",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 8
+    },
+    {
+      "name": "Moodboard",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 11
+    },
+    {
+      "name": "Muestrario de telas",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 7
+    },
+    {
+      "name": "Fileteadora",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 10
+    },
+    {
+      "name": "Toile",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 14
+    },
+    {
+      "name": "Sastre",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 4
+    },
+    {
+      "name": "Modista",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 5
+    },
+    {
+      "name": "Patronista",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 11
+    },
+    {
+      "name": "Director creativo",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 10
+    },
+    {
+      "name": "Estilista",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 6
+    },
+    {
+      "name": "Coolhunter",
+      "facet": "Oficio y herramientas del diseñador",
+      "known_at": 13
+    },
+    {
+      "name": "Haute couture",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 9
+    },
+    {
+      "name": "Atelier",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 10
+    },
+    {
+      "name": "Colección",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 5
+    },
+    {
+      "name": "Bordado",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 5
+    },
+    {
+      "name": "Plisado",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 9
+    },
+    {
+      "name": "Drapeado",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 12
+    },
+    {
+      "name": "Corte al bies",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 13
+    },
+    {
+      "name": "Petite main",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 15
+    },
+    {
+      "name": "Couturier",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 12
+    },
+    {
+      "name": "Musa",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 9
+    },
+    {
+      "name": "A medida",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 7
+    },
+    {
+      "name": "Pedrería",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 8
+    },
+    {
+      "name": "Tul",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 6
+    },
+    {
+      "name": "Avant-garde",
+      "facet": "Vocabulario de la alta costura",
+      "known_at": 13
+    },
+    {
+      "name": "Miranda Priestly",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 10
+    },
+    {
+      "name": "Zoolander",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 11
+    },
+    {
+      "name": "El hilo invisible",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Coco antes de Chanel",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 13
+    },
+    {
+      "name": "Baronesa von Hellman",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 10
+    },
+    {
+      "name": "Carrie Bradshaw",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 12
+    },
+    {
+      "name": "Rarity",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 4
+    },
+    {
+      "name": "Marinette Dupain-Cheng",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 3
+    },
+    {
+      "name": "La casa Gucci",
+      "facet": "Diseñadores en cine, series y animación",
+      "known_at": 12
+    },
+    {
+      "name": "Chanel N.º 5",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 8
+    },
+    {
+      "name": "Bolso Birkin",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 11
+    },
+    {
+      "name": "Bolso Kelly",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 14
+    },
+    {
+      "name": "Christian Louboutin",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 11
+    },
+    {
+      "name": "Manolo Blahnik",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmy Choo",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 12
+    },
+    {
+      "name": "Salvatore Ferragamo",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 12
+    },
+    {
+      "name": "Bolso 2.55",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 14
+    },
+    {
+      "name": "Pañuelo de Hermès",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 13
+    },
+    {
+      "name": "Gafas de aviador",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 5
+    },
+    {
+      "name": "Ray-Ban",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 8
+    },
+    {
+      "name": "Swarovski",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 9
+    },
+    {
+      "name": "Cartier",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 11
+    },
+    {
+      "name": "Tiffany & Co.",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 10
+    },
+    {
+      "name": "Acqua di Giò",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 12
+    },
+    {
+      "name": "Vélez",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 10
+    },
+    {
+      "name": "Mercedes Salazar",
+      "facet": "Calzado, accesorios y perfumes de autor",
+      "known_at": 14
+    },
+    {
+      "name": "Adidas",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 1
+    },
+    {
+      "name": "Converse Chuck Taylor",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 7
+    },
+    {
+      "name": "Vans",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 7
+    },
+    {
+      "name": "Supreme",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 10
+    },
+    {
+      "name": "Levi's 501",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 9
+    },
+    {
+      "name": "H&M",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 8
+    },
+    {
+      "name": "Uniqlo",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Crocs",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 2
+    },
+    {
+      "name": "Yeezy",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 10
+    },
+    {
+      "name": "Hoodie",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 5
+    },
+    {
+      "name": "Stan Smith",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 10
+    },
+    {
+      "name": "Fast fashion",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 11
+    },
+    {
+      "name": "Totto",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 5
+    },
+    {
+      "name": "Gorra de béisbol",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 2
+    },
+    {
+      "name": "Athleisure",
+      "facet": "Moda deportiva y urbana",
+      "known_at": 13
+    }
+  ]
+}

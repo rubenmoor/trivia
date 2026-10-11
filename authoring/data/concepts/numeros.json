@@ -1,0 +1,567 @@
+{
+  "subcategory": "Números",
+  "facets": [
+    "Operaciones y cálculo mental",
+    "Tipos de números",
+    "Números romanos y sistemas de numeración",
+    "Números gigantes y diminutos",
+    "Números famosos y constantes",
+    "Fracciones y porcentajes cotidianos",
+    "Números en la naturaleza y el cuerpo",
+    "Calendario, reloj y dinero",
+    "Números en el deporte y la cultura",
+    "Palabras y expresiones numéricas",
+    "Matemáticos e historia del número",
+    "Juegos y acertijos numéricos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 5,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Doble",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 2
+    },
+    {
+      "name": "Triple",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 4
+    },
+    {
+      "name": "Tabla del 9",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 4
+    },
+    {
+      "name": "Tabla del 7",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 5
+    },
+    {
+      "name": "Residuo de una división",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 6
+    },
+    {
+      "name": "Orden de las operaciones",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 9
+    },
+    {
+      "name": "Propiedad conmutativa",
+      "facet": "Operaciones y cálculo mental",
+      "known_at": 9
+    },
+    {
+      "name": "Número primo",
+      "facet": "Tipos de números",
+      "known_at": 7
+    },
+    {
+      "name": "Número entero",
+      "facet": "Tipos de números",
+      "known_at": 7
+    },
+    {
+      "name": "Número natural",
+      "facet": "Tipos de números",
+      "known_at": 8
+    },
+    {
+      "name": "Cuadrado perfecto",
+      "facet": "Tipos de números",
+      "known_at": 8
+    },
+    {
+      "name": "Número ordinal",
+      "facet": "Tipos de números",
+      "known_at": 8
+    },
+    {
+      "name": "Número compuesto",
+      "facet": "Tipos de números",
+      "known_at": 10
+    },
+    {
+      "name": "Número racional",
+      "facet": "Tipos de números",
+      "known_at": 10
+    },
+    {
+      "name": "Unidades, decenas y centenas",
+      "facet": "Números romanos y sistemas de numeración",
+      "known_at": 3
+    },
+    {
+      "name": "Palotes de conteo",
+      "facet": "Números romanos y sistemas de numeración",
+      "known_at": 3
+    },
+    {
+      "name": "Números romanos",
+      "facet": "Números romanos y sistemas de numeración",
+      "known_at": 4
+    },
+    {
+      "name": "Sistema hexadecimal",
+      "facet": "Números romanos y sistemas de numeración",
+      "known_at": 13
+    },
+    {
+      "name": "Prefijo kilo",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 6
+    },
+    {
+      "name": "Mil millones",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 7
+    },
+    {
+      "name": "Prefijo giga",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 8
+    },
+    {
+      "name": "Población mundial",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 8
+    },
+    {
+      "name": "Billón",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 9
+    },
+    {
+      "name": "Notación científica",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 10
+    },
+    {
+      "name": "Nanómetro",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 11
+    },
+    {
+      "name": "Trillón",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 11
+    },
+    {
+      "name": "Edad del universo",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 12
+    },
+    {
+      "name": "Gúgolplex",
+      "facet": "Números gigantes y diminutos",
+      "known_at": 14
+    },
+    {
+      "name": "Siete, número de la suerte",
+      "facet": "Números famosos y constantes",
+      "known_at": 4
+    },
+    {
+      "name": "Trece, número de la mala suerte",
+      "facet": "Números famosos y constantes",
+      "known_at": 5
+    },
+    {
+      "name": "Punto de ebullición del agua",
+      "facet": "Números famosos y constantes",
+      "known_at": 6
+    },
+    {
+      "name": "Pi",
+      "facet": "Números famosos y constantes",
+      "known_at": 7
+    },
+    {
+      "name": "Día de Pi",
+      "facet": "Números famosos y constantes",
+      "known_at": 10
+    },
+    {
+      "name": "El número 42 de la Guía del autoestopista galáctico",
+      "facet": "Números famosos y constantes",
+      "known_at": 13
+    },
+    {
+      "name": "Número 1729",
+      "facet": "Números famosos y constantes",
+      "known_at": 15
+    },
+    {
+      "name": "Constante de Planck",
+      "facet": "Números famosos y constantes",
+      "known_at": 15
+    },
+    {
+      "name": "Pizza en porciones",
+      "facet": "Fracciones y porcentajes cotidianos",
+      "known_at": 2
+    },
+    {
+      "name": "Cien por ciento",
+      "facet": "Fracciones y porcentajes cotidianos",
+      "known_at": 4
+    },
+    {
+      "name": "Fracción equivalente",
+      "facet": "Fracciones y porcentajes cotidianos",
+      "known_at": 8
+    },
+    {
+      "name": "IVA",
+      "facet": "Fracciones y porcentajes cotidianos",
+      "known_at": 11
+    },
+    {
+      "name": "Tasa de interés",
+      "facet": "Fracciones y porcentajes cotidianos",
+      "known_at": 12
+    },
+    {
+      "name": "Dedos de las manos",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 1
+    },
+    {
+      "name": "Patas de la araña",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 2
+    },
+    {
+      "name": "Brazos del pulpo",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 2
+    },
+    {
+      "name": "Cinco sentidos",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 3
+    },
+    {
+      "name": "Patas de los insectos",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "Anillos de los árboles",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "Temperatura corporal",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Celdas hexagonales del panal",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Puntas del copo de nieve",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Dientes de un adulto",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Corazones del pulpo",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Latidos del corazón",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Huesos del cuerpo humano",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "Costillas",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Espirales del girasol",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 11
+    },
+    {
+      "name": "Cromosomas humanos",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 12
+    },
+    {
+      "name": "Vértebras",
+      "facet": "Números en la naturaleza y el cuerpo",
+      "known_at": 12
+    },
+    {
+      "name": "Días de la semana",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 1
+    },
+    {
+      "name": "Meses del año",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 2
+    },
+    {
+      "name": "Mediodía",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 2
+    },
+    {
+      "name": "Reloj de manecillas",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 3
+    },
+    {
+      "name": "Medianoche",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 3
+    },
+    {
+      "name": "Febrero",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 3
+    },
+    {
+      "name": "Peso colombiano",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 3
+    },
+    {
+      "name": "Centavo",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Formato de 24 horas",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 6
+    },
+    {
+      "name": "Billete de 100.000 pesos",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 6
+    },
+    {
+      "name": "Huso horario",
+      "facet": "Calendario, reloj y dinero",
+      "known_at": 10
+    },
+    {
+      "name": "Jugadores de un equipo de fútbol",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Camiseta número 10",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Jugadores de un equipo de baloncesto",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Juegos Olímpicos cada cuatro años",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Siete maravillas del mundo",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Bolos",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Triple en baloncesto",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Notas musicales",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Agente 007",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Tablero de ajedrez",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Set de tenis",
+      "facet": "Números en el deporte y la cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Par",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 2
+    },
+    {
+      "name": "Media docena",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 4
+    },
+    {
+      "name": "Trío",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 4
+    },
+    {
+      "name": "Siete vidas del gato",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 4
+    },
+    {
+      "name": "Dúo",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 5
+    },
+    {
+      "name": "Quincena",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 6
+    },
+    {
+      "name": "Cuarentena",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 6
+    },
+    {
+      "name": "Más vale pájaro en mano que cien volando",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 6
+    },
+    {
+      "name": "En un dos por tres",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 7
+    },
+    {
+      "name": "Las onces",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 8
+    },
+    {
+      "name": "Cero a la izquierda",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 10
+    },
+    {
+      "name": "Bicentenario",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 10
+    },
+    {
+      "name": "Estar en el séptimo cielo",
+      "facet": "Palabras y expresiones numéricas",
+      "known_at": 11
+    },
+    {
+      "name": "Invención del cero",
+      "facet": "Matemáticos e historia del número",
+      "known_at": 10
+    },
+    {
+      "name": "Brahmagupta",
+      "facet": "Matemáticos e historia del número",
+      "known_at": 15
+    },
+    {
+      "name": "Escaleras y serpientes",
+      "facet": "Juegos y acertijos numéricos",
+      "known_at": 2
+    },
+    {
+      "name": "Uno (juego de cartas)",
+      "facet": "Juegos y acertijos numéricos",
+      "known_at": 2
+    },
+    {
+      "name": "Blackjack",
+      "facet": "Juegos y acertijos numéricos",
+      "known_at": 10
+    },
+    {
+      "name": "Torre de Hanói",
+      "facet": "Juegos y acertijos numéricos",
+      "known_at": 12
+    },
+    {
+      "name": "Kakuro",
+      "facet": "Juegos y acertijos numéricos",
+      "known_at": 13
+    },
+    {
+      "name": "Problema del cumpleaños",
+      "facet": "Juegos y acertijos numéricos",
+      "known_at": 14
+    }
+  ]
+}

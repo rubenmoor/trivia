@@ -1,0 +1,662 @@
+{
+  "subcategory": "Logotipos famosos",
+  "facets": [
+    "Logos de comida rápida",
+    "Logos de bebidas y mecato",
+    "Logos de tecnología e internet",
+    "Logos de carros y motos",
+    "Logos de ropa y deportes",
+    "Mascotas y personajes de marcas",
+    "Logos de marcas colombianas",
+    "Logos de juguetes, videojuegos y cine",
+    "Animales en los logotipos",
+    "Historia y cambios de logos",
+    "Colores, formas y mensajes ocultos",
+    "Nombres de marcas y su significado"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Domino's Pizza",
+      "facet": "Logos de comida rápida",
+      "known_at": 4
+    },
+    {
+      "name": "Little Caesars",
+      "facet": "Logos de comida rápida",
+      "known_at": 8
+    },
+    {
+      "name": "Papa John's",
+      "facet": "Logos de comida rápida",
+      "known_at": 8
+    },
+    {
+      "name": "Krispy Kreme",
+      "facet": "Logos de comida rápida",
+      "known_at": 10
+    },
+    {
+      "name": "Carl's Jr.",
+      "facet": "Logos de comida rápida",
+      "known_at": 10
+    },
+    {
+      "name": "Dairy Queen",
+      "facet": "Logos de comida rápida",
+      "known_at": 11
+    },
+    {
+      "name": "Five Guys",
+      "facet": "Logos de comida rápida",
+      "known_at": 12
+    },
+    {
+      "name": "Chick-fil-A",
+      "facet": "Logos de comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "Tim Hortons",
+      "facet": "Logos de comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "Telepizza",
+      "facet": "Logos de comida rápida",
+      "known_at": 11
+    },
+    {
+      "name": "Pollo Campero",
+      "facet": "Logos de comida rápida",
+      "known_at": 11
+    },
+    {
+      "name": "Red Bull",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 6
+    },
+    {
+      "name": "Nestlé",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 6
+    },
+    {
+      "name": "Kinder",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 3
+    },
+    {
+      "name": "Pringles",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 4
+    },
+    {
+      "name": "Lay's",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 4
+    },
+    {
+      "name": "Monster Energy",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 8
+    },
+    {
+      "name": "Gatorade",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 6
+    },
+    {
+      "name": "Kellogg's",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 5
+    },
+    {
+      "name": "Heinz",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 10
+    },
+    {
+      "name": "Lipton",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 10
+    },
+    {
+      "name": "Danone",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 8
+    },
+    {
+      "name": "Wi-Fi",
+      "facet": "Logos de tecnología e internet",
+      "known_at": 7
+    },
+    {
+      "name": "Yamaha",
+      "facet": "Logos de carros y motos",
+      "known_at": 8
+    },
+    {
+      "name": "Mitsubishi",
+      "facet": "Logos de carros y motos",
+      "known_at": 10
+    },
+    {
+      "name": "Harley-Davidson",
+      "facet": "Logos de carros y motos",
+      "known_at": 9
+    },
+    {
+      "name": "Ducati",
+      "facet": "Logos de carros y motos",
+      "known_at": 12
+    },
+    {
+      "name": "Suzuki",
+      "facet": "Logos de carros y motos",
+      "known_at": 9
+    },
+    {
+      "name": "Bajaj",
+      "facet": "Logos de carros y motos",
+      "known_at": 10
+    },
+    {
+      "name": "Under Armour",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Converse",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 6
+    },
+    {
+      "name": "Fila",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Umbro",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 10
+    },
+    {
+      "name": "Levi's",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Champion",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 10
+    },
+    {
+      "name": "The North Face",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 10
+    },
+    {
+      "name": "NBA",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 7
+    },
+    {
+      "name": "Wilson",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Diadora",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 12
+    },
+    {
+      "name": "Mizuno",
+      "facet": "Logos de ropa y deportes",
+      "known_at": 12
+    },
+    {
+      "name": "Tony el Tigre",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 5
+    },
+    {
+      "name": "Bibendum",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 9
+    },
+    {
+      "name": "Quicky",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 5
+    },
+    {
+      "name": "Chester Cheetos",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 7
+    },
+    {
+      "name": "Osito Bimbo",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 6
+    },
+    {
+      "name": "Rey de Burger King",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 8
+    },
+    {
+      "name": "Maestro Limpio",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 11
+    },
+    {
+      "name": "Conejo de Energizer",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 10
+    },
+    {
+      "name": "Gallo Cornelius",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 11
+    },
+    {
+      "name": "Mr. Peanut",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Pillsbury Doughboy",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Bebé Gerber",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 12
+    },
+    {
+      "name": "Hombre de Quaker",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 9
+    },
+    {
+      "name": "Gecko de Geico",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 14
+    },
+    {
+      "name": "Ramo",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Jet",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Alpina",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Bancolombia",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Éxito",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Crem Helado",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Águila Roja",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Olímpica",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "D1",
+      "facet": "Logos de marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "MGM",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 11
+    },
+    {
+      "name": "Paramount",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 10
+    },
+    {
+      "name": "Universal Pictures",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 11
+    },
+    {
+      "name": "20th Century Fox",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 10
+    },
+    {
+      "name": "Marvel",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 5
+    },
+    {
+      "name": "DC Comics",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 8
+    },
+    {
+      "name": "Nerf",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 7
+    },
+    {
+      "name": "Columbia Pictures",
+      "facet": "Logos de juguetes, videojuegos y cine",
+      "known_at": 13
+    },
+    {
+      "name": "Lacoste",
+      "facet": "Animales en los logotipos",
+      "known_at": 5
+    },
+    {
+      "name": "Tux",
+      "facet": "Animales en los logotipos",
+      "known_at": 12
+    },
+    {
+      "name": "Abarth",
+      "facet": "Animales en los logotipos",
+      "known_at": 14
+    },
+    {
+      "name": "Ram",
+      "facet": "Animales en los logotipos",
+      "known_at": 13
+    },
+    {
+      "name": "Le Coq Sportif",
+      "facet": "Animales en los logotipos",
+      "known_at": 12
+    },
+    {
+      "name": "Hush Puppies",
+      "facet": "Animales en los logotipos",
+      "known_at": 12
+    },
+    {
+      "name": "Penguin Books",
+      "facet": "Animales en los logotipos",
+      "known_at": 13
+    },
+    {
+      "name": "Evernote",
+      "facet": "Animales en los logotipos",
+      "known_at": 13
+    },
+    {
+      "name": "Polo Ralph Lauren",
+      "facet": "Animales en los logotipos",
+      "known_at": 11
+    },
+    {
+      "name": "NBC",
+      "facet": "Animales en los logotipos",
+      "known_at": 13
+    },
+    {
+      "name": "Pájaro de Twitter",
+      "facet": "Historia y cambios de logos",
+      "known_at": 5
+    },
+    {
+      "name": "Carolyn Davidson",
+      "facet": "Historia y cambios de logos",
+      "known_at": 13
+    },
+    {
+      "name": "Rob Janoff",
+      "facet": "Historia y cambios de logos",
+      "known_at": 15
+    },
+    {
+      "name": "Milton Glaser",
+      "facet": "Historia y cambios de logos",
+      "known_at": 14
+    },
+    {
+      "name": "I ♥ NY",
+      "facet": "Historia y cambios de logos",
+      "known_at": 8
+    },
+    {
+      "name": "Paul Rand",
+      "facet": "Historia y cambios de logos",
+      "known_at": 15
+    },
+    {
+      "name": "Frank Mason Robinson",
+      "facet": "Historia y cambios de logos",
+      "known_at": 14
+    },
+    {
+      "name": "Letra Spencer",
+      "facet": "Historia y cambios de logos",
+      "known_at": 14
+    },
+    {
+      "name": "Logo de Gap de 2010",
+      "facet": "Historia y cambios de logos",
+      "known_at": 14
+    },
+    {
+      "name": "Rebranding",
+      "facet": "Historia y cambios de logos",
+      "known_at": 11
+    },
+    {
+      "name": "Blockbuster",
+      "facet": "Historia y cambios de logos",
+      "known_at": 12
+    },
+    {
+      "name": "Pan Am",
+      "facet": "Historia y cambios de logos",
+      "known_at": 14
+    },
+    {
+      "name": "BlackBerry",
+      "facet": "Historia y cambios de logos",
+      "known_at": 9
+    },
+    {
+      "name": "Diseño plano",
+      "facet": "Historia y cambios de logos",
+      "known_at": 13
+    },
+    {
+      "name": "FedEx",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 10
+    },
+    {
+      "name": "Baskin-Robbins",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 13
+    },
+    {
+      "name": "Tostitos",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 11
+    },
+    {
+      "name": "Pantone",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 12
+    },
+    {
+      "name": "Vaio",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 13
+    },
+    {
+      "name": "Unilever",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 12
+    },
+    {
+      "name": "Carrefour",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 11
+    },
+    {
+      "name": "LG",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 9
+    },
+    {
+      "name": "Beats",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 11
+    },
+    {
+      "name": "Tour de Francia",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 13
+    },
+    {
+      "name": "Shell",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 8
+    },
+    {
+      "name": "Colgate",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 4
+    },
+    {
+      "name": "Bic",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 6
+    },
+    {
+      "name": "Kleenex",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 8
+    },
+    {
+      "name": "Gillette",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 10
+    },
+    {
+      "name": "Nivea",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 9
+    },
+    {
+      "name": "Ikea",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 8
+    },
+    {
+      "name": "Häagen-Dazs",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 12
+    },
+    {
+      "name": "Asus",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 11
+    },
+    {
+      "name": "Huawei",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 8
+    },
+    {
+      "name": "Xiaomi",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 8
+    },
+    {
+      "name": "Lenovo",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 11
+    },
+    {
+      "name": "Isotipo",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 14
+    },
+    {
+      "name": "Marca registrada",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 10
+    },
+    {
+      "name": "Eslogan",
+      "facet": "Nombres de marcas y su significado",
+      "known_at": 9
+    }
+  ]
+}

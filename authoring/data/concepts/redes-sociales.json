@@ -1,0 +1,652 @@
+{
+  "subcategory": "Redes sociales",
+  "facets": [
+    "Plataformas y aplicaciones",
+    "Logos, íconos y colores",
+    "Fundadores y empresas",
+    "Vocabulario de redes",
+    "Emojis y stickers",
+    "Funciones y formatos",
+    "Mensajería y chats",
+    "Redes del pasado",
+    "Memes, retos y virales",
+    "Creadores de contenido famosos",
+    "Seguridad y privacidad digital",
+    "Redes sociales en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Kwai",
+      "facet": "Plataformas y aplicaciones",
+      "known_at": 9
+    },
+    {
+      "name": "WeChat",
+      "facet": "Plataformas y aplicaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Bluesky",
+      "facet": "Plataformas y aplicaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Mastodon",
+      "facet": "Plataformas y aplicaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Botón rojo de reproducción de YouTube",
+      "facet": "Logos, íconos y colores",
+      "known_at": 2
+    },
+    {
+      "name": "Letra f de Facebook",
+      "facet": "Logos, íconos y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Teléfono en globo de WhatsApp",
+      "facet": "Logos, íconos y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Corazón de Instagram",
+      "facet": "Logos, íconos y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Pulgar arriba de Me gusta",
+      "facet": "Logos, íconos y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Cámara de Instagram",
+      "facet": "Logos, íconos y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Pajarito azul de Twitter",
+      "facet": "Logos, íconos y colores",
+      "known_at": 4
+    },
+    {
+      "name": "Nota musical de TikTok",
+      "facet": "Logos, íconos y colores",
+      "known_at": 5
+    },
+    {
+      "name": "Fantasma de Snapchat",
+      "facet": "Logos, íconos y colores",
+      "known_at": 6
+    },
+    {
+      "name": "Degradado de Instagram",
+      "facet": "Logos, íconos y colores",
+      "known_at": 7
+    },
+    {
+      "name": "Logo de la X",
+      "facet": "Logos, íconos y colores",
+      "known_at": 7
+    },
+    {
+      "name": "Avión de papel de Telegram",
+      "facet": "Logos, íconos y colores",
+      "known_at": 8
+    },
+    {
+      "name": "Morado de Twitch",
+      "facet": "Logos, íconos y colores",
+      "known_at": 9
+    },
+    {
+      "name": "Letra P de Pinterest",
+      "facet": "Logos, íconos y colores",
+      "known_at": 9
+    },
+    {
+      "name": "Snoo, el alien de Reddit",
+      "facet": "Logos, íconos y colores",
+      "known_at": 11
+    },
+    {
+      "name": "Clyde, el control de Discord",
+      "facet": "Logos, íconos y colores",
+      "known_at": 11
+    },
+    {
+      "name": "Mariposa de Bluesky",
+      "facet": "Logos, íconos y colores",
+      "known_at": 13
+    },
+    {
+      "name": "Meta",
+      "facet": "Fundadores y empresas",
+      "known_at": 7
+    },
+    {
+      "name": "Universidad de Harvard",
+      "facet": "Fundadores y empresas",
+      "known_at": 10
+    },
+    {
+      "name": "ByteDance",
+      "facet": "Fundadores y empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Anderson",
+      "facet": "Fundadores y empresas",
+      "known_at": 13
+    },
+    {
+      "name": "Evan Spiegel",
+      "facet": "Fundadores y empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Pável Dúrov",
+      "facet": "Fundadores y empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Sheryl Sandberg",
+      "facet": "Fundadores y empresas",
+      "known_at": 14
+    },
+    {
+      "name": "Selfie",
+      "facet": "Vocabulario de redes",
+      "known_at": 2
+    },
+    {
+      "name": "Seguidor",
+      "facet": "Vocabulario de redes",
+      "known_at": 3
+    },
+    {
+      "name": "Hashtag",
+      "facet": "Vocabulario de redes",
+      "known_at": 4
+    },
+    {
+      "name": "Mención con arroba",
+      "facet": "Vocabulario de redes",
+      "known_at": 6
+    },
+    {
+      "name": "Unfollow",
+      "facet": "Vocabulario de redes",
+      "known_at": 7
+    },
+    {
+      "name": "Feed",
+      "facet": "Vocabulario de redes",
+      "known_at": 8
+    },
+    {
+      "name": "Tendencia",
+      "facet": "Vocabulario de redes",
+      "known_at": 8
+    },
+    {
+      "name": "Engagement",
+      "facet": "Vocabulario de redes",
+      "known_at": 11
+    },
+    {
+      "name": "Emoji de la caca sonriente",
+      "facet": "Emojis y stickers",
+      "known_at": 2
+    },
+    {
+      "name": "Emoji llorando de risa",
+      "facet": "Emojis y stickers",
+      "known_at": 3
+    },
+    {
+      "name": "Emoji con ojos de corazón",
+      "facet": "Emojis y stickers",
+      "known_at": 3
+    },
+    {
+      "name": "Emoji del fuego",
+      "facet": "Emojis y stickers",
+      "known_at": 4
+    },
+    {
+      "name": "Stickers de WhatsApp",
+      "facet": "Emojis y stickers",
+      "known_at": 4
+    },
+    {
+      "name": "Emoji pensativo",
+      "facet": "Emojis y stickers",
+      "known_at": 5
+    },
+    {
+      "name": "Emoji de la calavera",
+      "facet": "Emojis y stickers",
+      "known_at": 6
+    },
+    {
+      "name": "Emoticono :)",
+      "facet": "Emojis y stickers",
+      "known_at": 7
+    },
+    {
+      "name": "Emoji de las manos juntas",
+      "facet": "Emojis y stickers",
+      "known_at": 7
+    },
+    {
+      "name": "Emoji de la cara al revés",
+      "facet": "Emojis y stickers",
+      "known_at": 8
+    },
+    {
+      "name": "Memoji",
+      "facet": "Emojis y stickers",
+      "known_at": 9
+    },
+    {
+      "name": "Bitmoji",
+      "facet": "Emojis y stickers",
+      "known_at": 10
+    },
+    {
+      "name": "Japón, cuna del emoji",
+      "facet": "Emojis y stickers",
+      "known_at": 10
+    },
+    {
+      "name": "Día Mundial del Emoji",
+      "facet": "Emojis y stickers",
+      "known_at": 12
+    },
+    {
+      "name": "Kaomoji",
+      "facet": "Emojis y stickers",
+      "known_at": 13
+    },
+    {
+      "name": "Unicode",
+      "facet": "Emojis y stickers",
+      "known_at": 14
+    },
+    {
+      "name": "Shigetaka Kurita",
+      "facet": "Emojis y stickers",
+      "known_at": 15
+    },
+    {
+      "name": "Filtros",
+      "facet": "Funciones y formatos",
+      "known_at": 3
+    },
+    {
+      "name": "Compartir",
+      "facet": "Funciones y formatos",
+      "known_at": 3
+    },
+    {
+      "name": "Historias",
+      "facet": "Funciones y formatos",
+      "known_at": 4
+    },
+    {
+      "name": "Etiquetar",
+      "facet": "Funciones y formatos",
+      "known_at": 5
+    },
+    {
+      "name": "Shorts",
+      "facet": "Funciones y formatos",
+      "known_at": 6
+    },
+    {
+      "name": "Fijar publicación",
+      "facet": "Funciones y formatos",
+      "known_at": 7
+    },
+    {
+      "name": "Dúo de TikTok",
+      "facet": "Funciones y formatos",
+      "known_at": 8
+    },
+    {
+      "name": "Racha de Snapchat",
+      "facet": "Funciones y formatos",
+      "known_at": 8
+    },
+    {
+      "name": "Retuit",
+      "facet": "Funciones y formatos",
+      "known_at": 9
+    },
+    {
+      "name": "Mejores amigos",
+      "facet": "Funciones y formatos",
+      "known_at": 9
+    },
+    {
+      "name": "Hilo",
+      "facet": "Funciones y formatos",
+      "known_at": 10
+    },
+    {
+      "name": "Límite de 140 caracteres",
+      "facet": "Funciones y formatos",
+      "known_at": 10
+    },
+    {
+      "name": "Realidad aumentada",
+      "facet": "Funciones y formatos",
+      "known_at": 10
+    },
+    {
+      "name": "Notas de la comunidad",
+      "facet": "Funciones y formatos",
+      "known_at": 12
+    },
+    {
+      "name": "Grupo de la familia",
+      "facet": "Mensajería y chats",
+      "known_at": 3
+    },
+    {
+      "name": "Escribiendo...",
+      "facet": "Mensajería y chats",
+      "known_at": 5
+    },
+    {
+      "name": "Estado de WhatsApp",
+      "facet": "Mensajería y chats",
+      "known_at": 6
+    },
+    {
+      "name": "Última conexión",
+      "facet": "Mensajería y chats",
+      "known_at": 7
+    },
+    {
+      "name": "Messenger",
+      "facet": "Mensajería y chats",
+      "known_at": 7
+    },
+    {
+      "name": "SMS",
+      "facet": "Mensajería y chats",
+      "known_at": 8
+    },
+    {
+      "name": "Google Meet",
+      "facet": "Mensajería y chats",
+      "known_at": 8
+    },
+    {
+      "name": "Reenviado muchas veces",
+      "facet": "Mensajería y chats",
+      "known_at": 9
+    },
+    {
+      "name": "iMessage",
+      "facet": "Mensajería y chats",
+      "known_at": 11
+    },
+    {
+      "name": "Cifrado de extremo a extremo",
+      "facet": "Mensajería y chats",
+      "known_at": 12
+    },
+    {
+      "name": "Club Penguin",
+      "facet": "Redes del pasado",
+      "known_at": 10
+    },
+    {
+      "name": "Musical.ly",
+      "facet": "Redes del pasado",
+      "known_at": 11
+    },
+    {
+      "name": "BlackBerry Messenger",
+      "facet": "Redes del pasado",
+      "known_at": 12
+    },
+    {
+      "name": "Blogger",
+      "facet": "Redes del pasado",
+      "known_at": 12
+    },
+    {
+      "name": "Tuenti",
+      "facet": "Redes del pasado",
+      "known_at": 13
+    },
+    {
+      "name": "Second Life",
+      "facet": "Redes del pasado",
+      "known_at": 13
+    },
+    {
+      "name": "Periscope",
+      "facet": "Redes del pasado",
+      "known_at": 13
+    },
+    {
+      "name": "Orkut",
+      "facet": "Redes del pasado",
+      "known_at": 14
+    },
+    {
+      "name": "Metroflog",
+      "facet": "Redes del pasado",
+      "known_at": 14
+    },
+    {
+      "name": "ICQ",
+      "facet": "Redes del pasado",
+      "known_at": 14
+    },
+    {
+      "name": "Friendster",
+      "facet": "Redes del pasado",
+      "known_at": 15
+    },
+    {
+      "name": "Skibidi Toilet",
+      "facet": "Memes, retos y virales",
+      "known_at": 5
+    },
+    {
+      "name": "Bottle Flip Challenge",
+      "facet": "Memes, retos y virales",
+      "known_at": 7
+    },
+    {
+      "name": "Mujer gritándole a un gato",
+      "facet": "Memes, retos y virales",
+      "known_at": 9
+    },
+    {
+      "name": "Mannequin Challenge",
+      "facet": "Memes, retos y virales",
+      "known_at": 10
+    },
+    {
+      "name": "El vestido azul y negro",
+      "facet": "Memes, retos y virales",
+      "known_at": 10
+    },
+    {
+      "name": "Pepe the Frog",
+      "facet": "Memes, retos y virales",
+      "known_at": 10
+    },
+    {
+      "name": "Khaby Lame",
+      "facet": "Creadores de contenido famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Charli D'Amelio",
+      "facet": "Creadores de contenido famosos",
+      "known_at": 9
+    },
+    {
+      "name": "HolaSoyGerman",
+      "facet": "Creadores de contenido famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Kim Kardashian",
+      "facet": "Creadores de contenido famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Bloquear",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 4
+    },
+    {
+      "name": "Perfil privado",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 6
+    },
+    {
+      "name": "Hackeo",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 6
+    },
+    {
+      "name": "Reportar",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 6
+    },
+    {
+      "name": "Código de verificación",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 8
+    },
+    {
+      "name": "Edad mínima de 13 años",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 9
+    },
+    {
+      "name": "Estafa por WhatsApp",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 9
+    },
+    {
+      "name": "Huella digital",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 10
+    },
+    {
+      "name": "VPN",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 12
+    },
+    {
+      "name": "Día de Internet Segura",
+      "facet": "Seguridad y privacidad digital",
+      "known_at": 13
+    },
+    {
+      "name": "Westcol",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Yeferson Cossio",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Epa Colombia",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "La Liendra",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Juanpis González",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Luisa Fernanda W",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Pablo Jaramillo",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "La Segura",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Platzi",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "La Pulla",
+      "facet": "Redes sociales en Colombia",
+      "known_at": 13
+    }
+  ]
+}

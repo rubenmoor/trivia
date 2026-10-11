@@ -1,0 +1,667 @@
+{
+  "subcategory": "Mascotas de marcas",
+  "facets": [
+    "Mascotas de cereales y desayunos",
+    "Mascotas de comida rápida",
+    "Mascotas de dulces y pasabocas",
+    "Mascotas de bebidas y jugos",
+    "Mascotas de marcas colombianas",
+    "Mascotas de aseo y hogar",
+    "Mascotas de carros, llantas y tecnología",
+    "Mascotas de videojuegos y estudios",
+    "Animales en emblemas de marca",
+    "Mascotas de Mundiales y Olímpicos",
+    "Lemas, frases y comerciales famosos",
+    "Historia y creadores de mascotas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Melvin el elefante",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 4
+    },
+    {
+      "name": "Sam el Tucán",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 4
+    },
+    {
+      "name": "Conejo de Trix",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 7
+    },
+    {
+      "name": "Capitán Crunch",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 9
+    },
+    {
+      "name": "Count Chocula",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 13
+    },
+    {
+      "name": "Snap, Crackle y Pop",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 11
+    },
+    {
+      "name": "Buzz la abeja de Honey Nut Cheerios",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 11
+    },
+    {
+      "name": "Lucky el duende",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 9
+    },
+    {
+      "name": "Cornelius el gallo",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 9
+    },
+    {
+      "name": "Sonny el pájaro cucú",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 13
+    },
+    {
+      "name": "Chef Wendell",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 14
+    },
+    {
+      "name": "Fruity Pebbles",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 8
+    },
+    {
+      "name": "Dig'em la rana",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 15
+    },
+    {
+      "name": "Birdie",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "Fry Kids",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 15
+    },
+    {
+      "name": "Alcalde McCheese",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 15
+    },
+    {
+      "name": "McDonaldland",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "Jack de Jack in the Box",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "Little Caesar",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 10
+    },
+    {
+      "name": "Chihuahua de Taco Bell",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 13
+    },
+    {
+      "name": "Techo rojo de Pizza Hut",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 8
+    },
+    {
+      "name": "Señor Pringles",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 3
+    },
+    {
+      "name": "Osito de Haribo",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 4
+    },
+    {
+      "name": "Elfos de Keebler",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 14
+    },
+    {
+      "name": "Twinkie the Kid",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 15
+    },
+    {
+      "name": "Little Debbie",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 15
+    },
+    {
+      "name": "Vaca Milka",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 8
+    },
+    {
+      "name": "Bazooka Joe",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 14
+    },
+    {
+      "name": "Conejo de Cadbury",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 14
+    },
+    {
+      "name": "Sun-Maid",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 15
+    },
+    {
+      "name": "La vaca que ríe",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 6
+    },
+    {
+      "name": "Miss Chiquita",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 10
+    },
+    {
+      "name": "Kool-Aid Man",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 9
+    },
+    {
+      "name": "Toros de Red Bull",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 5
+    },
+    {
+      "name": "Quicky el conejo de Nesquik",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 4
+    },
+    {
+      "name": "Fido Dido",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 13
+    },
+    {
+      "name": "Cool Spot",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 14
+    },
+    {
+      "name": "Pepsiman",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 13
+    },
+    {
+      "name": "Chocolate Abuelita",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 12
+    },
+    {
+      "name": "Garra de Monster Energy",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 8
+    },
+    {
+      "name": "Dino de Danonino",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 5
+    },
+    {
+      "name": "Punchy de Hawaiian Punch",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 15
+    },
+    {
+      "name": "Elsie la vaca",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 15
+    },
+    {
+      "name": "Mula Conchita",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 10
+    },
+    {
+      "name": "Gaseosa Colombiana",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburguesas El Corral",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 7
+    },
+    {
+      "name": "Jabón Rey",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Galletas Noel",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolisto",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Supercoco",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Trululú",
+      "facet": "Mascotas de marcas colombianas",
+      "known_at": 4
+    },
+    {
+      "name": "Pato Purific",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Osos de Charmin",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 12
+    },
+    {
+      "name": "Osito Snuggle",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 13
+    },
+    {
+      "name": "Cachorro de Scottex",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Insectos de Raid",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Caballero blanco de Ajax",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Brawny Man",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Técnico de Maytag",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Pato de Aflac",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 13
+    },
+    {
+      "name": "Scrubbing Bubbles",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 13
+    },
+    {
+      "name": "Gato de Whiskas",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Muñeco de Michelin",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 4
+    },
+    {
+      "name": "Tigre de Esso",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 13
+    },
+    {
+      "name": "Robot de Android",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 5
+    },
+    {
+      "name": "Zorro de Firefox",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 7
+    },
+    {
+      "name": "Búho de Duolingo",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 3
+    },
+    {
+      "name": "Octocat",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 13
+    },
+    {
+      "name": "Nipper",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 14
+    },
+    {
+      "name": "Snoo",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 12
+    },
+    {
+      "name": "Freddie de Mailchimp",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 14
+    },
+    {
+      "name": "Gopher de Go",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 15
+    },
+    {
+      "name": "Duke de Java",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 15
+    },
+    {
+      "name": "Luxo Jr.",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 6
+    },
+    {
+      "name": "León de la MGM",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 9
+    },
+    {
+      "name": "Dama de la antorcha de Columbia",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 14
+    },
+    {
+      "name": "Niño pescando en la luna de DreamWorks",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 10
+    },
+    {
+      "name": "Alex Kidd",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 13
+    },
+    {
+      "name": "Caballo de Ferrari",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 4
+    },
+    {
+      "name": "León de Peugeot",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 8
+    },
+    {
+      "name": "Pegaso de Mobil",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Caballo de Mustang",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 8
+    },
+    {
+      "name": "Escorpión de Abarth",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Serpiente de Alfa Romeo",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 14
+    },
+    {
+      "name": "Panda de WWF",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 7
+    },
+    {
+      "name": "Ciervo de John Deere",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 12
+    },
+    {
+      "name": "Pingüino de Penguin Books",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Canguro de Qantas",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 12
+    },
+    {
+      "name": "Caballo de Porsche",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 11
+    },
+    {
+      "name": "Gallo de Le Coq Sportif",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Cisne de Swarovski",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Galgo de Greyhound",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 14
+    },
+    {
+      "name": "Zayu",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 9
+    },
+    {
+      "name": "Juanito",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "World Cup Willie",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Striker",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Fuwa",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Izzy",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Waldi",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Me encanta",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Destapa la felicidad",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Think Different",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 12
+    },
+    {
+      "name": "¡Son grrrandiosas!",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Porque tú lo vales",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Para todo lo demás existe MasterCard",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Para chuparse los dedos",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 7
+    },
+    {
+      "name": "A que no puedes comer solo una",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Una vez que haces pop, no hay stop",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Se derrite en tu boca, no en tu mano",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Have It Your Way",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Un diamante es para siempre",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Got Milk?",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Where's the beef?",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Connecting People",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Haddon Sundblom",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 14
+    },
+    {
+      "name": "Ub Iwerks",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 15
+    },
+    {
+      "name": "O'Galop",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 15
+    },
+    {
+      "name": "Leo Burnett",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 15
+    },
+    {
+      "name": "Javier Mariscal",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 14
+    },
+    {
+      "name": "Willard Scott",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 15
+    },
+    {
+      "name": "Mascota (palabra)",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 12
+    }
+  ]
+}

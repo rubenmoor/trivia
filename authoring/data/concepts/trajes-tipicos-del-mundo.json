@@ -1,0 +1,852 @@
+{
+  "subcategory": "Trajes típicos del mundo",
+  "facets": [
+    "Trajes típicos de Colombia",
+    "Vestimenta tradicional de Asia",
+    "Trajes típicos de Europa",
+    "Ropa tradicional de América Latina",
+    "Vestimenta tradicional de África",
+    "Pueblos indígenas y su ropa",
+    "Sombreros y tocados del mundo",
+    "Calzado tradicional",
+    "Telas, tejidos y estampados",
+    "Accesorios y joyas tradicionales",
+    "Trajes de fiestas y carnavales",
+    "Trajes típicos en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 1,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 1,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sanjuanero huilense",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Traje llanero",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de silletero",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Traje paisa",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Traje de currulao",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de bambuco",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Pañolón",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de joropo",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de mapalé",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Cuadrillas de San Martín",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Traje campesino boyacense",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Hanbok",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Qipao",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Sherwani",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Ao dai",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Hanfu",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Yukata",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Kurta",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Salwar kameez",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Deel mongol",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Kebaya",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Thobe",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Abaya",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Barong tagalog",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 14
+    },
+    {
+      "name": "Hakama",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Lehenga",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Gho",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 14
+    },
+    {
+      "name": "Dirndl",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Lederhosen",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de flamenca",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 5
+    },
+    {
+      "name": "Traje de luces",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 7
+    },
+    {
+      "name": "Sarafán",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Fustanela",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Bunad",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Traje de chulapo",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Vyshyvanka",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de fallera",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de baturro",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Gákti",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 14
+    },
+    {
+      "name": "Capa española",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Poncho",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 4
+    },
+    {
+      "name": "Huipil",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de charro",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 5
+    },
+    {
+      "name": "China poblana",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 11
+    },
+    {
+      "name": "Pollera panameña",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 11
+    },
+    {
+      "name": "Sarape",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de gaucho",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 8
+    },
+    {
+      "name": "Bombachas de campo",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Chola paceña",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Rebozo",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de bahiana",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de tehuana",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de chalán",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Quechquémitl",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 15
+    },
+    {
+      "name": "Traje de huaso",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Chamanto",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 14
+    },
+    {
+      "name": "Dashiki",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 11
+    },
+    {
+      "name": "Boubou",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Kaftán",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 10
+    },
+    {
+      "name": "Chilaba",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 12
+    },
+    {
+      "name": "Shuka",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 12
+    },
+    {
+      "name": "Kanga",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Agbada",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Habesha kemis",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Tagelmust",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Kanzu",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Traje herero",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Manta basotho",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Pagne",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Galabiya",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Traje xhosa",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Arhuacos",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 9
+    },
+    {
+      "name": "Kogui",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 11
+    },
+    {
+      "name": "Emberá",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 11
+    },
+    {
+      "name": "Misak",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 11
+    },
+    {
+      "name": "Maasái",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 8
+    },
+    {
+      "name": "Lakota",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 10
+    },
+    {
+      "name": "Maorí",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 8
+    },
+    {
+      "name": "Aymara",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 10
+    },
+    {
+      "name": "Quechuas",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 8
+    },
+    {
+      "name": "Zenú",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 10
+    },
+    {
+      "name": "Mapuche",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 10
+    },
+    {
+      "name": "Gunadule",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 11
+    },
+    {
+      "name": "Ainu",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 14
+    },
+    {
+      "name": "Himba",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 13
+    },
+    {
+      "name": "Navajo",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 9
+    },
+    {
+      "name": "Sombrero de charro",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Sombrero de paja toquilla",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Fez",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Penacho de plumas",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Kokoshnik",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Chullo",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Sombrero cordobés",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Montera",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Gele",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Kipá",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Nón lá",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Barretina",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Mantilla",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Sombrero tirolés",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Hiyab",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Zuecos",
+      "facet": "Calzado tradicional",
+      "known_at": 7
+    },
+    {
+      "name": "Geta",
+      "facet": "Calzado tradicional",
+      "known_at": 11
+    },
+    {
+      "name": "Mocasines",
+      "facet": "Calzado tradicional",
+      "known_at": 6
+    },
+    {
+      "name": "Babuchas",
+      "facet": "Calzado tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Huaraches",
+      "facet": "Calzado tradicional",
+      "known_at": 11
+    },
+    {
+      "name": "Abarcas",
+      "facet": "Calzado tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Botas vaqueras",
+      "facet": "Calzado tradicional",
+      "known_at": 4
+    },
+    {
+      "name": "Mukluks",
+      "facet": "Calzado tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Zori",
+      "facet": "Calzado tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Ojotas",
+      "facet": "Calzado tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Jutti",
+      "facet": "Calzado tradicional",
+      "known_at": 14
+    },
+    {
+      "name": "Valenki",
+      "facet": "Calzado tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Cotizas",
+      "facet": "Calzado tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Kolhapuri",
+      "facet": "Calzado tradicional",
+      "known_at": 15
+    },
+    {
+      "name": "Botas pantaneras",
+      "facet": "Calzado tradicional",
+      "known_at": 6
+    },
+    {
+      "name": "Tartán",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 8
+    },
+    {
+      "name": "Batik",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 13
+    },
+    {
+      "name": "Kente",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 12
+    },
+    {
+      "name": "Ikat",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 15
+    },
+    {
+      "name": "Paisley",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 12
+    },
+    {
+      "name": "Mezclilla",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 6
+    },
+    {
+      "name": "Fique",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 11
+    },
+    {
+      "name": "Lana de alpaca",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 9
+    },
+    {
+      "name": "Brocado",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 13
+    },
+    {
+      "name": "Caña flecha",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 10
+    },
+    {
+      "name": "Collar de chaquiras",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Faja",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Bindi",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Peineta",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Sporran",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Anillos de cuello",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Tupu",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 15
+    },
+    {
+      "name": "Kanzashi",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Nariguera",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Pectoral precolombino",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Henna",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Collar de flores hawaiano",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 5
+    },
+    {
+      "name": "Garabato",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 10
+    },
+    {
+      "name": "Diablada",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 12
+    },
+    {
+      "name": "Traje de samba",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 7
+    },
+    {
+      "name": "Reina del carnaval",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 6
+    },
+    {
+      "name": "Diablo de Riosucio",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 12
+    },
+    {
+      "name": "Danza del dragón",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 6
+    },
+    {
+      "name": "Gigantes y cabezudos",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 11
+    },
+    {
+      "name": "Falda de hula",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 6
+    },
+    {
+      "name": "Diablos danzantes",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 14
+    },
+    {
+      "name": "Monocuco",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 12
+    },
+    {
+      "name": "Torito",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 13
+    },
+    {
+      "name": "Caporal",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Rivera",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Jasmine",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Jin Sakai",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Kubo",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Shang-Chi",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Raya",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Kuzco",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Memorias de una geisha",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 13
+    }
+  ]
+}

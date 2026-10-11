@@ -1,0 +1,347 @@
+{
+  "subcategory": "Fantasía",
+  "facets": [
+    "Sagas épicas y Tierra Media",
+    "Magos y escuelas de magia",
+    "Criaturas mágicas y dragones",
+    "Princesas y cuentos de hadas",
+    "Animación de fantasía y Disney",
+    "Objetos y armas mágicas",
+    "Mundos y reinos imaginarios",
+    "Villanos, brujas y hechiceros",
+    "Mitología en el cine y series",
+    "Anime y fantasía japonesa",
+    "Fantasía en series y videojuegos",
+    "Autores y creadores de fantasía"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Aragorn",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 8
+    },
+    {
+      "name": "Legolas",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 7
+    },
+    {
+      "name": "Bilbo Bolsón",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 7
+    },
+    {
+      "name": "Samsagaz Gamyi",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 8
+    },
+    {
+      "name": "La Comarca",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 8
+    },
+    {
+      "name": "Comunidad del Anillo",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 9
+    },
+    {
+      "name": "Rohan",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 11
+    },
+    {
+      "name": "Gondor",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 11
+    },
+    {
+      "name": "Rivendel",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 11
+    },
+    {
+      "name": "Boromir",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 11
+    },
+    {
+      "name": "Arwen",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 10
+    },
+    {
+      "name": "Galadriel",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 11
+    },
+    {
+      "name": "Orcos",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 7
+    },
+    {
+      "name": "Minas Tirith",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 12
+    },
+    {
+      "name": "Uruk-hai",
+      "facet": "Sagas épicas y Tierra Media",
+      "known_at": 12
+    },
+    {
+      "name": "Neville Longbottom",
+      "facet": "Magos y escuelas de magia",
+      "known_at": 8
+    },
+    {
+      "name": "Minerva McGonagall",
+      "facet": "Magos y escuelas de magia",
+      "known_at": 9
+    },
+    {
+      "name": "Hufflepuff",
+      "facet": "Magos y escuelas de magia",
+      "known_at": 8
+    },
+    {
+      "name": "Ravenclaw",
+      "facet": "Magos y escuelas de magia",
+      "known_at": 8
+    },
+    {
+      "name": "Yeti",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 5
+    },
+    {
+      "name": "Centauro",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 7
+    },
+    {
+      "name": "Dementor",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 8
+    },
+    {
+      "name": "Hidra",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 8
+    },
+    {
+      "name": "Hipogrifo",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 9
+    },
+    {
+      "name": "Thestral",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 11
+    },
+    {
+      "name": "Drogon",
+      "facet": "Criaturas mágicas y dragones",
+      "known_at": 12
+    },
+    {
+      "name": "Bella",
+      "facet": "Princesas y cuentos de hadas",
+      "known_at": 2
+    },
+    {
+      "name": "Princesa Fiona",
+      "facet": "Animación de fantasía y Disney",
+      "known_at": 2
+    },
+    {
+      "name": "Genio de Aladdín",
+      "facet": "Animación de fantasía y Disney",
+      "known_at": 3
+    },
+    {
+      "name": "Maui",
+      "facet": "Animación de fantasía y Disney",
+      "known_at": 3
+    },
+    {
+      "name": "Raya y el último dragón",
+      "facet": "Animación de fantasía y Disney",
+      "known_at": 6
+    },
+    {
+      "name": "Fantasía (película de 1940)",
+      "facet": "Animación de fantasía y Disney",
+      "known_at": 11
+    },
+    {
+      "name": "Vela mágica de los Madrigal",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 4
+    },
+    {
+      "name": "Mapa del Merodeador",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 9
+    },
+    {
+      "name": "Andúril",
+      "facet": "Objetos y armas mágicas",
+      "known_at": 13
+    },
+    {
+      "name": "Reino Champiñón",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 5
+    },
+    {
+      "name": "Tierra Media",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 7
+    },
+    {
+      "name": "Tierra de Oz",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 7
+    },
+    {
+      "name": "Hyrule",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 9
+    },
+    {
+      "name": "Terabithia",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 11
+    },
+    {
+      "name": "Westeros",
+      "facet": "Mundos y reinos imaginarios",
+      "known_at": 12
+    },
+    {
+      "name": "Ganon",
+      "facet": "Villanos, brujas y hechiceros",
+      "known_at": 9
+    },
+    {
+      "name": "Shenlong",
+      "facet": "Anime y fantasía japonesa",
+      "known_at": 7
+    },
+    {
+      "name": "Sin Cara",
+      "facet": "Anime y fantasía japonesa",
+      "known_at": 10
+    },
+    {
+      "name": "Kiki: entregas a domicilio",
+      "facet": "Anime y fantasía japonesa",
+      "known_at": 10
+    },
+    {
+      "name": "Calcifer",
+      "facet": "Anime y fantasía japonesa",
+      "known_at": 11
+    },
+    {
+      "name": "Jake el Perro",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Ender Dragon",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "The Legend of Zelda",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 6
+    },
+    {
+      "name": "Final Fantasy",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "World of Warcraft",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "La casa del dragón",
+      "facet": "Fantasía en series y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "George R. R. Martin",
+      "facet": "Autores y creadores de fantasía",
+      "known_at": 12
+    },
+    {
+      "name": "Christopher Paolini",
+      "facet": "Autores y creadores de fantasía",
+      "known_at": 13
+    },
+    {
+      "name": "Neil Gaiman",
+      "facet": "Autores y creadores de fantasía",
+      "known_at": 13
+    },
+    {
+      "name": "Ursula K. Le Guin",
+      "facet": "Autores y creadores de fantasía",
+      "known_at": 14
+    },
+    {
+      "name": "Terry Pratchett",
+      "facet": "Autores y creadores de fantasía",
+      "known_at": 14
+    }
+  ]
+}

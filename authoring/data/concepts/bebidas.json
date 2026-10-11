@@ -1,0 +1,972 @@
+{
+  "subcategory": "Bebidas",
+  "facets": [
+    "Café y tinto",
+    "Té e infusiones",
+    "Jugos y frutas para beber",
+    "Bebidas tradicionales colombianas",
+    "Bebidas típicas del mundo",
+    "Gaseosas y refrescos",
+    "Chocolate y bebidas calientes",
+    "Leche y bebidas lácteas",
+    "Agua y bebidas hidratantes",
+    "Historia e inventos de las bebidas",
+    "Recipientes y utensilios para beber",
+    "Bebidas en películas y cultura pop"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Café",
+      "facet": "Café y tinto",
+      "known_at": 2
+    },
+    {
+      "name": "Tinto",
+      "facet": "Café y tinto",
+      "known_at": 4
+    },
+    {
+      "name": "Café con leche",
+      "facet": "Café y tinto",
+      "known_at": 3
+    },
+    {
+      "name": "Café americano",
+      "facet": "Café y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Latte",
+      "facet": "Café y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Grano de café",
+      "facet": "Café y tinto",
+      "known_at": 4
+    },
+    {
+      "name": "Cafeto",
+      "facet": "Café y tinto",
+      "known_at": 9
+    },
+    {
+      "name": "Cereza del café",
+      "facet": "Café y tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Café descafeinado",
+      "facet": "Café y tinto",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Valdez",
+      "facet": "Café y tinto",
+      "known_at": 5
+    },
+    {
+      "name": "Eje Cafetero",
+      "facet": "Café y tinto",
+      "known_at": 7
+    },
+    {
+      "name": "Federación Nacional de Cafeteros",
+      "facet": "Café y tinto",
+      "known_at": 11
+    },
+    {
+      "name": "Café arábica",
+      "facet": "Café y tinto",
+      "known_at": 11
+    },
+    {
+      "name": "Café robusta",
+      "facet": "Café y tinto",
+      "known_at": 12
+    },
+    {
+      "name": "Pintado",
+      "facet": "Café y tinto",
+      "known_at": 9
+    },
+    {
+      "name": "Perico",
+      "facet": "Café y tinto",
+      "known_at": 8
+    },
+    {
+      "name": "Tostión",
+      "facet": "Café y tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Café irlandés",
+      "facet": "Café y tinto",
+      "known_at": 12
+    },
+    {
+      "name": "Té",
+      "facet": "Té e infusiones",
+      "known_at": 2
+    },
+    {
+      "name": "Té negro",
+      "facet": "Té e infusiones",
+      "known_at": 7
+    },
+    {
+      "name": "Té chai",
+      "facet": "Té e infusiones",
+      "known_at": 10
+    },
+    {
+      "name": "Té matcha",
+      "facet": "Té e infusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Aromática",
+      "facet": "Té e infusiones",
+      "known_at": 4
+    },
+    {
+      "name": "Té de jengibre",
+      "facet": "Té e infusiones",
+      "known_at": 8
+    },
+    {
+      "name": "Limonaria",
+      "facet": "Té e infusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Tila",
+      "facet": "Té e infusiones",
+      "known_at": 11
+    },
+    {
+      "name": "Flor de Jamaica",
+      "facet": "Té e infusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Rooibos",
+      "facet": "Té e infusiones",
+      "known_at": 13
+    },
+    {
+      "name": "Earl Grey",
+      "facet": "Té e infusiones",
+      "known_at": 12
+    },
+    {
+      "name": "Té oolong",
+      "facet": "Té e infusiones",
+      "known_at": 14
+    },
+    {
+      "name": "Camellia sinensis",
+      "facet": "Té e infusiones",
+      "known_at": 14
+    },
+    {
+      "name": "Infusión",
+      "facet": "Té e infusiones",
+      "known_at": 8
+    },
+    {
+      "name": "Bolsita de té",
+      "facet": "Té e infusiones",
+      "known_at": 5
+    },
+    {
+      "name": "Jugo de naranja",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Limonada",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 2
+    },
+    {
+      "name": "Jugo de lulo",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Jugo de maracuyá",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Jugo de guanábana",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Jugo de mora",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 4
+    },
+    {
+      "name": "Jugo de tomate de árbol",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Jugo de mango",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo de guayaba",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Jugo de piña",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo de zanahoria",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Jugo de uva",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo de sandía",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 3
+    },
+    {
+      "name": "Jugo de feijoa",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 10
+    },
+    {
+      "name": "Jugo de borojó",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 10
+    },
+    {
+      "name": "Jugo de corozo",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Batido",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 4
+    },
+    {
+      "name": "Smoothie",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Néctar de frutas",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Aguapanela",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 3
+    },
+    {
+      "name": "Agua de panela con queso",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 6
+    },
+    {
+      "name": "Avena colombiana",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 5
+    },
+    {
+      "name": "Chicha",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Champús",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Lulada",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Mazamorra",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 8
+    },
+    {
+      "name": "Chocolate santafereño",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Guarapo",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 9
+    },
+    {
+      "name": "Guandolo",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Forcha",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 14
+    },
+    {
+      "name": "Chucula",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 13
+    },
+    {
+      "name": "Kola Granulada",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 11
+    },
+    {
+      "name": "Sorbete de curuba",
+      "facet": "Bebidas tradicionales colombianas",
+      "known_at": 12
+    },
+    {
+      "name": "Tereré",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Té de burbujas",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Lassi",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Chicha morada",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Agua fresca",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Café turco",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Café vienés",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Té moruno",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Kombucha",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Kvas",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Ayran",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Pozol",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Mote con huesillo",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Inca Kola",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Sprite",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 3
+    },
+    {
+      "name": "7Up",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 7
+    },
+    {
+      "name": "Manzana Postobón",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 6
+    },
+    {
+      "name": "Pony Malta",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 5
+    },
+    {
+      "name": "Kola Román",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 10
+    },
+    {
+      "name": "Quatro",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 9
+    },
+    {
+      "name": "Big Cola",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 8
+    },
+    {
+      "name": "Dr Pepper",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 11
+    },
+    {
+      "name": "Ginger ale",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 9
+    },
+    {
+      "name": "Root beer",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 9
+    },
+    {
+      "name": "Agua tónica",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 11
+    },
+    {
+      "name": "Schweppes",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 10
+    },
+    {
+      "name": "Bebida energética",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 7
+    },
+    {
+      "name": "Gaseosa light",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 7
+    },
+    {
+      "name": "Experimento de Mentos y Coca-Cola",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 6
+    },
+    {
+      "name": "Fórmula de la Coca-Cola",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 8
+    },
+    {
+      "name": "Árbol del cacao",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 8
+    },
+    {
+      "name": "Pastilla de chocolate",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 6
+    },
+    {
+      "name": "Milo",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 4
+    },
+    {
+      "name": "Cocoa en polvo",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate en agua",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 7
+    },
+    {
+      "name": "Chocolate amargo",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 8
+    },
+    {
+      "name": "Chocolate de taza",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 9
+    },
+    {
+      "name": "Malvaviscos",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 3
+    },
+    {
+      "name": "Colada",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 7
+    },
+    {
+      "name": "Agua de canela",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 6
+    },
+    {
+      "name": "Leche dorada",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Sopa caliente en termo",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 5
+    },
+    {
+      "name": "Leche",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 1
+    },
+    {
+      "name": "Yogur",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 2
+    },
+    {
+      "name": "Kéfir",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 11
+    },
+    {
+      "name": "Leche condensada",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 5
+    },
+    {
+      "name": "Leche en polvo",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 5
+    },
+    {
+      "name": "Leche deslactosada",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 7
+    },
+    {
+      "name": "Leche entera",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 6
+    },
+    {
+      "name": "Leche chocolatada",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 3
+    },
+    {
+      "name": "Leche de almendras",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 8
+    },
+    {
+      "name": "Leche de soya",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 7
+    },
+    {
+      "name": "Leche de coco",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 6
+    },
+    {
+      "name": "Leche de cabra",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 4
+    },
+    {
+      "name": "Bolsa de leche",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 8
+    },
+    {
+      "name": "Leche merengada",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 12
+    },
+    {
+      "name": "Sed",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 1
+    },
+    {
+      "name": "Hielo",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 1
+    },
+    {
+      "name": "Agua con gas",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 6
+    },
+    {
+      "name": "Agua de manantial",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 9
+    },
+    {
+      "name": "Agua alcalina",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 12
+    },
+    {
+      "name": "Agua de la llave",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 4
+    },
+    {
+      "name": "Agua de coco",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 5
+    },
+    {
+      "name": "Bebida isotónica",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 8
+    },
+    {
+      "name": "Suero oral",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 8
+    },
+    {
+      "name": "Electrolitos",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 10
+    },
+    {
+      "name": "Deshidratación",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 6
+    },
+    {
+      "name": "Filtro de agua",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 6
+    },
+    {
+      "name": "Botellón",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 6
+    },
+    {
+      "name": "Purificación del agua",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 10
+    },
+    {
+      "name": "Caleb Bradham",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 15
+    },
+    {
+      "name": "Charles Alderton",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 15
+    },
+    {
+      "name": "Kaldi",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Shen Nung",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Motín del té de Boston",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 11
+    },
+    {
+      "name": "Café instantáneo",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Nescafé",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 7
+    },
+    {
+      "name": "Máquina de espresso",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 11
+    },
+    {
+      "name": "Tapa corona",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 10
+    },
+    {
+      "name": "Fuente de soda",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 11
+    },
+    {
+      "name": "Comercio del hielo",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Cafés de Estambul",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "James Dewar",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Vaso",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Taza",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Botella",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Jarra",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 2
+    },
+    {
+      "name": "Lata",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 2
+    },
+    {
+      "name": "Pocillo",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Mug",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Tetero",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 3
+    },
+    {
+      "name": "Vaso de icopor",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolatera",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Colador de tela",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 8
+    },
+    {
+      "name": "Tetera",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 4
+    },
+    {
+      "name": "Cafetera italiana",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 9
+    },
+    {
+      "name": "Prensa francesa",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 11
+    },
+    {
+      "name": "Exprimidor",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Bombilla",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 13
+    },
+    {
+      "name": "Samovar",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 14
+    },
+    {
+      "name": "Poción mágica de Astérix",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 7
+    },
+    {
+      "name": "Fiesta del té del Sombrerero Loco",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 6
+    },
+    {
+      "name": "Botella 'Bébeme' de Alicia",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 7
+    },
+    {
+      "name": "Leche y galletas para Papá Noel",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 3
+    },
+    {
+      "name": "Río de chocolate de Willy Wonka",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate caliente de El Expreso Polar",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 8
+    },
+    {
+      "name": "Poción de invisibilidad de Minecraft",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 7
+    },
+    {
+      "name": "Leche Mu-mu",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Squishee",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Slurm",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Nuka-Cola",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Leche azul de Star Wars",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Té de Iroh",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Osos polares de Coca-Cola",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 9
+    },
+    {
+      "name": "Fuente de la eterna juventud",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 9
+    },
+    {
+      "name": "Néctar de los dioses",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 10
+    }
+  ]
+}

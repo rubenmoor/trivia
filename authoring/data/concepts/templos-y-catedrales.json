@@ -1,0 +1,717 @@
+{
+  "subcategory": "Templos y catedrales",
+  "facets": [
+    "Catedrales famosas del mundo",
+    "Templos y catedrales de Colombia",
+    "Partes de una iglesia",
+    "Estilos arquitectónicos religiosos",
+    "Templos antiguos y desaparecidos",
+    "Mezquitas, sinagogas y templos orientales",
+    "Templos precolombinos y pirámides",
+    "Vitrales, campanas y decoración",
+    "Arquitectos y constructores célebres",
+    "Templos en películas, libros y juegos",
+    "Récords y datos curiosos",
+    "Peregrinaciones, fiestas y costumbres"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Catedral de Milán",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Catedral de San Pablo de Londres",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral de Chartres",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de Sevilla",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral de Florencia",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral Metropolitana de México",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Reims",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Basílica de Guadalupe",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de Burgos",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de Toledo",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Canterbury",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de San Patricio de Nueva York",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Basílica del Sagrado Corazón de Montmartre",
+      "facet": "Catedrales famosas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral Primada de Bogotá",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral Metropolitana de Medellín",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Iglesia de San Pedro Claver",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Catedral de Manizales",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Basílica del Señor de los Milagros de Buga",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Iglesia de La Ermita de Cali",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Catedral de Santa Catalina de Cartagena",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Capilla del Sagrario de Bogotá",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Iglesia de San Francisco de Bogotá",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral de Santa Fe de Antioquia",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Santuario del Divino Niño del 20 de Julio",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Catedral de Popayán",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Catedral de Tunja",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Santuario de Guadalupe de Bogotá",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Iglesia de Santa Bárbara de Mompox",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Catedral Metropolitana de Barranquilla",
+      "facet": "Templos y catedrales de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Campanario",
+      "facet": "Partes de una iglesia",
+      "known_at": 4
+    },
+    {
+      "name": "Altar",
+      "facet": "Partes de una iglesia",
+      "known_at": 4
+    },
+    {
+      "name": "Nave",
+      "facet": "Partes de una iglesia",
+      "known_at": 9
+    },
+    {
+      "name": "Cripta",
+      "facet": "Partes de una iglesia",
+      "known_at": 9
+    },
+    {
+      "name": "Ábside",
+      "facet": "Partes de una iglesia",
+      "known_at": 13
+    },
+    {
+      "name": "Transepto",
+      "facet": "Partes de una iglesia",
+      "known_at": 13
+    },
+    {
+      "name": "Púlpito",
+      "facet": "Partes de una iglesia",
+      "known_at": 9
+    },
+    {
+      "name": "Sacristía",
+      "facet": "Partes de una iglesia",
+      "known_at": 10
+    },
+    {
+      "name": "Claustro",
+      "facet": "Partes de una iglesia",
+      "known_at": 11
+    },
+    {
+      "name": "Pila bautismal",
+      "facet": "Partes de una iglesia",
+      "known_at": 8
+    },
+    {
+      "name": "Capilla",
+      "facet": "Partes de una iglesia",
+      "known_at": 6
+    },
+    {
+      "name": "Presbiterio",
+      "facet": "Partes de una iglesia",
+      "known_at": 13
+    },
+    {
+      "name": "Baptisterio",
+      "facet": "Partes de una iglesia",
+      "known_at": 12
+    },
+    {
+      "name": "Nártex",
+      "facet": "Partes de una iglesia",
+      "known_at": 14
+    },
+    {
+      "name": "Crucero",
+      "facet": "Partes de una iglesia",
+      "known_at": 13
+    },
+    {
+      "name": "Románico",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 10
+    },
+    {
+      "name": "Bizantino",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 11
+    },
+    {
+      "name": "Renacentista",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 10
+    },
+    {
+      "name": "Colonial",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 7
+    },
+    {
+      "name": "Mudéjar",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Neoclásico",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Arco ojival",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Churrigueresco",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Plateresco",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Modernismo catalán",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Paleocristiano",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Planta de cruz latina",
+      "facet": "Estilos arquitectónicos religiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Templo de Salomón",
+      "facet": "Templos antiguos y desaparecidos",
+      "known_at": 10
+    },
+    {
+      "name": "Templo de Zeus en Olimpia",
+      "facet": "Templos antiguos y desaparecidos",
+      "known_at": 12
+    },
+    {
+      "name": "Cúpula de la Roca",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 11
+    },
+    {
+      "name": "Kaaba",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 9
+    },
+    {
+      "name": "Mezquita Sheikh Zayed",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 12
+    },
+    {
+      "name": "Pagoda",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 6
+    },
+    {
+      "name": "Templo del Cielo de Pekín",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 13
+    },
+    {
+      "name": "Fushimi Inari",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 11
+    },
+    {
+      "name": "Pagoda de Shwedagon",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 14
+    },
+    {
+      "name": "Sinagoga",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 8
+    },
+    {
+      "name": "Minarete",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 9
+    },
+    {
+      "name": "Torii",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 9
+    },
+    {
+      "name": "Sinagoga Vieja-Nueva de Praga",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 14
+    },
+    {
+      "name": "Mezquita de Hassan II",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 13
+    },
+    {
+      "name": "Templo del Loto",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 12
+    },
+    {
+      "name": "Monasterio de Shaolin",
+      "facet": "Mezquitas, sinagogas y templos orientales",
+      "known_at": 10
+    },
+    {
+      "name": "Coricancha",
+      "facet": "Templos precolombinos y pirámides",
+      "known_at": 13
+    },
+    {
+      "name": "Templo del Sol de Sogamoso",
+      "facet": "Templos precolombinos y pirámides",
+      "known_at": 11
+    },
+    {
+      "name": "Chavín de Huántar",
+      "facet": "Templos precolombinos y pirámides",
+      "known_at": 14
+    },
+    {
+      "name": "Templo de las Inscripciones",
+      "facet": "Templos precolombinos y pirámides",
+      "known_at": 14
+    },
+    {
+      "name": "Huacas del Sol y de la Luna",
+      "facet": "Templos precolombinos y pirámides",
+      "known_at": 14
+    },
+    {
+      "name": "Rosetón",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 10
+    },
+    {
+      "name": "Campana",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 2
+    },
+    {
+      "name": "Retablo",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 11
+    },
+    {
+      "name": "Campana Zar",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 14
+    },
+    {
+      "name": "Ícono",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 11
+    },
+    {
+      "name": "Pan de oro",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 9
+    },
+    {
+      "name": "Carrillón",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 12
+    },
+    {
+      "name": "Crucifijo",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 4
+    },
+    {
+      "name": "Cristo Pantocrátor",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 14
+    },
+    {
+      "name": "Azulejo",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 10
+    },
+    {
+      "name": "Puertas del Paraíso",
+      "facet": "Vitrales, campanas y decoración",
+      "known_at": 14
+    },
+    {
+      "name": "Fray Domingo de Petrés",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Donato Bramante",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Isidoro de Mileto",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Mimar Sinán",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Abad Suger",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Maestro de obras",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Cantero",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Carlo Maderno",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Ictino",
+      "facet": "Arquitectos y constructores célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Quasimodo",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Frollo",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Indiana Jones y el templo maldito",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Los pilares de la Tierra",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Templo del Tiempo",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Templo Jedi",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Ángeles y demonios",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Templo Aire del Sur",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Palacio de Jade",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Temple Run",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Templo de la jungla de Minecraft",
+      "facet": "Templos en películas, libros y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Basílica de Nuestra Señora de la Paz de Yamusukro",
+      "facet": "Récords y datos curiosos",
+      "known_at": 15
+    },
+    {
+      "name": "Catedral de Ulm",
+      "facet": "Récords y datos curiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Hallgrímskirkja",
+      "facet": "Récords y datos curiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Iglesia de la Transfiguración de Kizhi",
+      "facet": "Récords y datos curiosos",
+      "known_at": 15
+    },
+    {
+      "name": "Iglesias de Lalibela",
+      "facet": "Récords y datos curiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Mezquita de Djenné",
+      "facet": "Récords y datos curiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de Cartón de Christchurch",
+      "facet": "Récords y datos curiosos",
+      "known_at": 14
+    },
+    {
+      "name": "Meteora",
+      "facet": "Récords y datos curiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de Liverpool",
+      "facet": "Récords y datos curiosos",
+      "known_at": 15
+    },
+    {
+      "name": "Templo de Debod",
+      "facet": "Récords y datos curiosos",
+      "known_at": 12
+    },
+    {
+      "name": "Iglesia del Salvador sobre la Sangre Derramada",
+      "facet": "Récords y datos curiosos",
+      "known_at": 13
+    },
+    {
+      "name": "Camino de Santiago",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 9
+    },
+    {
+      "name": "Navidad",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 1
+    },
+    {
+      "name": "Peregrinación",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 7
+    },
+    {
+      "name": "Hajj",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Procesión",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 6
+    },
+    {
+      "name": "Bautizo",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 4
+    },
+    {
+      "name": "Viacrucis",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 8
+    },
+    {
+      "name": "Santuario de Lourdes",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Santuario de Fátima",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Cónclave",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 11
+    },
+    {
+      "name": "Romería",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 12
+    },
+    {
+      "name": "Baños sagrados en el Ganges",
+      "facet": "Peregrinaciones, fiestas y costumbres",
+      "known_at": 13
+    }
+  ]
+}

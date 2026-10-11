@@ -1,0 +1,1063 @@
+{
+  "subcategory": "Telenovelas",
+  "facets": [
+    "Telenovelas colombianas clásicas",
+    "Telenovelas mexicanas y de Televisa",
+    "Telenovelas venezolanas, argentinas y brasileñas",
+    "Personajes y villanos icónicos",
+    "Actores y actrices de telenovela",
+    "Canciones y temas de apertura",
+    "Clichés y recursos del melodrama",
+    "Vocabulario y jerga telenovelera",
+    "Telenovelas juveniles e infantiles",
+    "Adaptaciones y remakes internacionales",
+    "Historia de la telenovela y la radionovela",
+    "Canales, horarios y costumbres de verlas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "La casa de las dos palmas",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Pero sigo siendo el rey",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Las aguas mansas",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "San Tropel",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Amor en custodia",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "La hija del mariachi",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Señora Isabel",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Me llaman Lolita",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Sofía dame tiempo",
+      "facet": "Telenovelas colombianas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "María la del Barrio",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 8
+    },
+    {
+      "name": "Marimar",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 8
+    },
+    {
+      "name": "Rosalinda",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 11
+    },
+    {
+      "name": "Los ricos también lloran",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "Teresa",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "Corazón salvaje",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "La usurpadora",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 9
+    },
+    {
+      "name": "Amor real",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "Cuna de lobos",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 13
+    },
+    {
+      "name": "Abrázame muy fuerte",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "Mañana es para siempre",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 11
+    },
+    {
+      "name": "Destilando amor",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 10
+    },
+    {
+      "name": "La fea más bella",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 9
+    },
+    {
+      "name": "Soy tu dueña",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 11
+    },
+    {
+      "name": "Alborada",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 13
+    },
+    {
+      "name": "Amores verdaderos",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "El privilegio de amar",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 12
+    },
+    {
+      "name": "La madrastra",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 11
+    },
+    {
+      "name": "Mi corazón es tuyo",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 11
+    },
+    {
+      "name": "La rosa de Guadalupe",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 6
+    },
+    {
+      "name": "Televisa",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 6
+    },
+    {
+      "name": "TV Azteca",
+      "facet": "Telenovelas mexicanas y de Televisa",
+      "known_at": 10
+    },
+    {
+      "name": "Kassandra",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 12
+    },
+    {
+      "name": "Cristal",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 12
+    },
+    {
+      "name": "Topacio",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "La dama de rosa",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "Señora",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 14
+    },
+    {
+      "name": "Por estas calles",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "Mi gorda bella",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 11
+    },
+    {
+      "name": "Leonela",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 14
+    },
+    {
+      "name": "Muñeca brava",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 11
+    },
+    {
+      "name": "Grande Pa!",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 14
+    },
+    {
+      "name": "Celeste",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 14
+    },
+    {
+      "name": "Montecristo",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "La esclava Isaura",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 12
+    },
+    {
+      "name": "El clon",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 10
+    },
+    {
+      "name": "Pantanal",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "Avenida Brasil",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 12
+    },
+    {
+      "name": "Terra Nostra",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "Xica da Silva",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 13
+    },
+    {
+      "name": "Rede Globo",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 11
+    },
+    {
+      "name": "Venevisión",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 12
+    },
+    {
+      "name": "RCTV",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 12
+    },
+    {
+      "name": "Beatriz Pinzón Solano",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 5
+    },
+    {
+      "name": "Patricia Fernández",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 9
+    },
+    {
+      "name": "Nicolás Mora",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Hugo Lombardi",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Mario Calderón",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Freddy Stewart Contreras",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Hermes Pinzón",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 9
+    },
+    {
+      "name": "El cuartel de las feas",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Catalina Ángel",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro Coral Tavera",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Gaviota",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastián Vallejo",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Paola Bracho",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Juan del Diablo",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Leticia Padilla",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Sarita Elizondo",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Reyes",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Fernando Escandón",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Ana María Orozco",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 8
+    },
+    {
+      "name": "Jorge Enrique Abello",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Lorna Cepeda",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Margarita Rosa de Francisco",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Marlon Moreno",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Manolo Cardona",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Kristina Lilley",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 13
+    },
+    {
+      "name": "Danna García",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Mario Cimarro",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Verónica Castro",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Lucero",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Itatí Cantoral",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Gabriela Spanic",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "William Levy",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Colunga",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastián Rulli",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 11
+    },
+    {
+      "name": "Lucía Méndez",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 13
+    },
+    {
+      "name": "Kate del Castillo",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Natalia Oreiro",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 10
+    },
+    {
+      "name": "Grecia Colmenares",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Se dice de mí",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 8
+    },
+    {
+      "name": "Gaviota (canción)",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 12
+    },
+    {
+      "name": "¿Quién es ese hombre?",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 9
+    },
+    {
+      "name": "La gota fría",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 8
+    },
+    {
+      "name": "Rebelde (canción)",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 7
+    },
+    {
+      "name": "Sálvame",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 9
+    },
+    {
+      "name": "Sólo quédate en silencio",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 11
+    },
+    {
+      "name": "Flores amarillas",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 10
+    },
+    {
+      "name": "En mi mundo",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 10
+    },
+    {
+      "name": "Lambada",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 9
+    },
+    {
+      "name": "Cambio dolor",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 12
+    },
+    {
+      "name": "Erreway",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 12
+    },
+    {
+      "name": "Cabezote",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 13
+    },
+    {
+      "name": "Banda sonora",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 6
+    },
+    {
+      "name": "Gemelas separadas al nacer",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Amnesia",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 7
+    },
+    {
+      "name": "Bebé cambiado al nacer",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 9
+    },
+    {
+      "name": "Triángulo amoroso",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 9
+    },
+    {
+      "name": "Boda interrumpida",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Final feliz con boda",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 6
+    },
+    {
+      "name": "Cachetada",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 6
+    },
+    {
+      "name": "Muchacha pobre enamorada del rico",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 6
+    },
+    {
+      "name": "Herencia millonaria",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 9
+    },
+    {
+      "name": "Prueba de ADN",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 10
+    },
+    {
+      "name": "Falsa muerte",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 11
+    },
+    {
+      "name": "Carta escondida",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 9
+    },
+    {
+      "name": "Transformación de la fea",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 7
+    },
+    {
+      "name": "Venganza",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Madrastra malvada",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 5
+    },
+    {
+      "name": "Hijo secreto",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 10
+    },
+    {
+      "name": "Ceguera temporal",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 12,
+      "retired": "unaskable: La ceguera temporal como cliché no da una pregunta clara de opción múltiple con datos seguros; la tendría que contestar un especialista y quedaría ambigua."
+    },
+    {
+      "name": "Malentendido",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 7
+    },
+    {
+      "name": "Hablar sola en voz alta",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 10
+    },
+    {
+      "name": "Primer plano dramático",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 12
+    },
+    {
+      "name": "Final de capítulo en suspenso",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 9
+    },
+    {
+      "name": "Escuchar detrás de la puerta",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Culebrón",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 11
+    },
+    {
+      "name": "Novelón",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 10
+    },
+    {
+      "name": "Melodrama",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 11
+    },
+    {
+      "name": "Galán",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 8
+    },
+    {
+      "name": "Antagonista",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 9
+    },
+    {
+      "name": "Avance",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 8
+    },
+    {
+      "name": "Libretista",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 12
+    },
+    {
+      "name": "Elenco",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 11
+    },
+    {
+      "name": "Primera actriz",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 12
+    },
+    {
+      "name": "Actor de reparto",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 11
+    },
+    {
+      "name": "Extra",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 9
+    },
+    {
+      "name": "Chica vampiro",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Rebelde",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Floricienta",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Grachi",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Club 57",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Isa TKM",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Rebelde Way",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Casi Ángeles",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Carrusel",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Chiquititas",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Cómplices al rescate",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Carita de ángel",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Atrévete a soñar",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Amigos x siempre",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Luz Clarita",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "El abuelo y yo",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Gotita de amor",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 13
+    },
+    {
+      "name": "Primer amor, a mil por hora",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 12
+    },
+    {
+      "name": "Clase 406",
+      "facet": "Telenovelas juveniles e infantiles",
+      "known_at": 11
+    },
+    {
+      "name": "Ugly Betty",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "America Ferrera",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Verliebt in Berlin",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 14
+    },
+    {
+      "name": "Jassi Jaissi Koi Nahin",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 15
+    },
+    {
+      "name": "Betty en NY",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Betty la fea, la historia continúa",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Jane the Virgin",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "Fuego en la sangre",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Hasta que el dinero nos separe",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Lo que la vida me robó",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "El triunfo del amor",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Corazón indomable",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 13
+    },
+    {
+      "name": "Doña Bárbara",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Remake",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Radionovela",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 10
+    },
+    {
+      "name": "Radioteatro",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 12
+    },
+    {
+      "name": "El derecho de nacer",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Félix B. Caignet",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 15
+    },
+    {
+      "name": "Kalimán",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 13
+    },
+    {
+      "name": "Folletín",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 13
+    },
+    {
+      "name": "Novela rosa",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 12
+    },
+    {
+      "name": "Corín Tellado",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Lector de tabaquería",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Soap opera",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 11
+    },
+    {
+      "name": "Senda prohibida",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 15
+    },
+    {
+      "name": "Gutierritos",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Simplemente María",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 13
+    },
+    {
+      "name": "Ernesto Alonso",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Delia Fiallo",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Gaitán",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 12
+    },
+    {
+      "name": "Canal Uno",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 12
+    },
+    {
+      "name": "Canal A",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 13
+    },
+    {
+      "name": "RTI",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 14
+    },
+    {
+      "name": "Punch",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 14
+    },
+    {
+      "name": "Telecaribe",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 12
+    },
+    {
+      "name": "Teleantioquia",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 12
+    },
+    {
+      "name": "Telemundo",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 10
+    },
+    {
+      "name": "Univision",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 10
+    },
+    {
+      "name": "Las Estrellas",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 11
+    },
+    {
+      "name": "Amazon Prime Video",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 6
+    },
+    {
+      "name": "Novela de la tarde",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 10
+    },
+    {
+      "name": "Corte comercial",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 6
+    },
+    {
+      "name": "Repetición",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 8
+    },
+    {
+      "name": "Ibope",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,872 @@
+{
+  "subcategory": "Novela policiaca",
+  "facets": [
+    "Detectives clásicos famosos",
+    "Autores del género policiaco",
+    "Villanos y criminales célebres",
+    "Novelas y casos emblemáticos",
+    "Subgéneros y estilos del policiaco",
+    "Técnicas y recursos narrativos",
+    "Herramientas e investigación forense",
+    "Lugares y escenarios del crimen",
+    "Detectives en cine, series y juegos",
+    "Detectives infantiles y juveniles",
+    "Policiaco latinoamericano y colombiano",
+    "Vocabulario del crimen y la investigación"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Auguste Dupin",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Comisario Maigret",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Philip Marlowe",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Sam Spade",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Ellery Queen",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Nero Wolfe",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Kurt Wallander",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Inspector Lestrade",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Comisario Montalbano",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Capitán Hastings",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Inspector Japp",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Lord Peter Wimsey",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Mycroft Holmes",
+      "facet": "Detectives clásicos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Georges Simenon",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Raymond Chandler",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Dashiell Hammett",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Patricia Highsmith",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Stieg Larsson",
+      "facet": "Autores del género policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Henning Mankell",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Andrea Camilleri",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "P. D. James",
+      "facet": "Autores del género policiaco",
+      "known_at": 14
+    },
+    {
+      "name": "Dorothy L. Sayers",
+      "facet": "Autores del género policiaco",
+      "known_at": 14
+    },
+    {
+      "name": "Wilkie Collins",
+      "facet": "Autores del género policiaco",
+      "known_at": 14
+    },
+    {
+      "name": "Maurice Leblanc",
+      "facet": "Autores del género policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Gaston Leroux",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Umberto Eco",
+      "facet": "Autores del género policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Jo Nesbø",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Dan Brown",
+      "facet": "Autores del género policiaco",
+      "known_at": 10
+    },
+    {
+      "name": "Manuel Vázquez Montalbán",
+      "facet": "Autores del género policiaco",
+      "known_at": 14
+    },
+    {
+      "name": "G. K. Chesterton",
+      "facet": "Autores del género policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Fantomas",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Irene Adler",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Tom Ripley",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Coronel Sebastian Moran",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Profesor Ratigan",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Doctor Mabuse",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Keyser Söze",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Golfos Apandadores",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Raffles",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Charles Augustus Milverton",
+      "facet": "Villanos y criminales célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Estudio en escarlata",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "El sabueso de los Baskerville",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Y no quedó ninguno",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Los crímenes de la calle Morgue",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "El asesinato de Roger Ackroyd",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 14
+    },
+    {
+      "name": "El halcón maltés",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "El sueño eterno",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 14
+    },
+    {
+      "name": "La piedra lunar",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 15
+    },
+    {
+      "name": "El nombre de la rosa",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Los hombres que no amaban a las mujeres",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 12
+    },
+    {
+      "name": "El misterio del cuarto amarillo",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 14
+    },
+    {
+      "name": "El signo de los cuatro",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 13
+    },
+    {
+      "name": "La carta robada",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Escándalo en Bohemia",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 13
+    },
+    {
+      "name": "La banda de lunares",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 14
+    },
+    {
+      "name": "El talento de Mr. Ripley",
+      "facet": "Novelas y casos emblemáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Novela negra",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 10
+    },
+    {
+      "name": "Whodunit",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Misterio de cuarto cerrado",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Novela de espionaje",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 9
+    },
+    {
+      "name": "Cozy mystery",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 14
+    },
+    {
+      "name": "Procedimiento policial",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Novela negra nórdica",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Thriller psicológico",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 11
+    },
+    {
+      "name": "Hard-boiled",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 13
+    },
+    {
+      "name": "Novela de enigma",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Cine negro",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 11
+    },
+    {
+      "name": "True crime",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Thriller judicial",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Misterio histórico",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 12
+    },
+    {
+      "name": "Película de atracos",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 10
+    },
+    {
+      "name": "Novela de detectives",
+      "facet": "Subgéneros y estilos del policiaco",
+      "known_at": 6
+    },
+    {
+      "name": "Pista falsa",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 9
+    },
+    {
+      "name": "Giro argumental",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 10
+    },
+    {
+      "name": "Narrador poco fiable",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 13
+    },
+    {
+      "name": "Deducción",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 8
+    },
+    {
+      "name": "Suspenso",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 6
+    },
+    {
+      "name": "Reunión final de sospechosos",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 11
+    },
+    {
+      "name": "Flashback",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 10
+    },
+    {
+      "name": "MacGuffin",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 14
+    },
+    {
+      "name": "Juego limpio con el lector",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 14
+    },
+    {
+      "name": "Arma de Chéjov",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 14
+    },
+    {
+      "name": "Final abierto",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 10
+    },
+    {
+      "name": "In medias res",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 13
+    },
+    {
+      "name": "Narrador testigo",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 12
+    },
+    {
+      "name": "Final sorpresa",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 7
+    },
+    {
+      "name": "Prefiguración",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 13
+    },
+    {
+      "name": "Reglas de Van Dine",
+      "facet": "Técnicas y recursos narrativos",
+      "known_at": 15
+    },
+    {
+      "name": "Autopsia",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 11
+    },
+    {
+      "name": "Detector de mentiras",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 7
+    },
+    {
+      "name": "Cinta de escena del crimen",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 5
+    },
+    {
+      "name": "Polvo para huellas",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 7
+    },
+    {
+      "name": "Medicina forense",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 10
+    },
+    {
+      "name": "Rigor mortis",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 12
+    },
+    {
+      "name": "Antropometría de Bertillon",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 15
+    },
+    {
+      "name": "Dactiloscopia",
+      "facet": "Herramientas e investigación forense",
+      "known_at": 13
+    },
+    {
+      "name": "Baker Street 221B",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 8
+    },
+    {
+      "name": "Cataratas de Reichenbach",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 14
+    },
+    {
+      "name": "Páramo de Dartmoor",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 14
+    },
+    {
+      "name": "St. Mary Mead",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 15
+    },
+    {
+      "name": "Sala de interrogatorios",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 7
+    },
+    {
+      "name": "Comisaría",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 5
+    },
+    {
+      "name": "Escena del crimen",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 6
+    },
+    {
+      "name": "Mansión de campo inglesa",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 9
+    },
+    {
+      "name": "Isla del Soldado",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 15
+    },
+    {
+      "name": "Abadía medieval",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 13
+    },
+    {
+      "name": "Gotham City",
+      "facet": "Lugares y escenarios del crimen",
+      "known_at": 5
+    },
+    {
+      "name": "Batman",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Sherlock (serie de la BBC)",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Basil, el ratón superdetective",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Phoenix Wright",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Cluedo",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "L (Death Note)",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Ace Ventura",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Merlina Addams",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Mulder y Scully",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Enola Holmes",
+      "facet": "Detectives en cine, series y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Nancy Drew",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 11
+    },
+    {
+      "name": "Hermanos Hardy",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 13
+    },
+    {
+      "name": "Los Tres Investigadores",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 13
+    },
+    {
+      "name": "Emil y los detectives",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 13
+    },
+    {
+      "name": "Enid Blyton",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 12
+    },
+    {
+      "name": "Los Siete Secretos",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 13
+    },
+    {
+      "name": "Agatha Mistery",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 9
+    },
+    {
+      "name": "Mortadelo y Filemón",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 7
+    },
+    {
+      "name": "Enciclopedia Brown",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 14
+    },
+    {
+      "name": "Flanagan",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 14
+    },
+    {
+      "name": "Los Hollister",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 14
+    },
+    {
+      "name": "Tom Sawyer detective",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 14
+    },
+    {
+      "name": "Erich Kästner",
+      "facet": "Detectives infantiles y juveniles",
+      "known_at": 14
+    },
+    {
+      "name": "Santiago Nasar",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "La muerte y la brújula",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Rodolfo Walsh",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Mario Mendoza",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago Gamboa",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Leonardo Padura",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Mario Conde",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Paco Ignacio Taibo II",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Héctor Belascoarán Shayne",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Rubem Fonseca",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Juan Gabriel Vásquez",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Ricardo Piglia",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 15
+    },
+    {
+      "name": "Nueve reinas",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Adolfo Bioy Casares",
+      "facet": "Policiaco latinoamericano y colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Sospechoso",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 4
+    },
+    {
+      "name": "Testigo",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 5
+    },
+    {
+      "name": "Móvil del crimen",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 11
+    },
+    {
+      "name": "Cómplice",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 8
+    },
+    {
+      "name": "Detective privado",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 6
+    },
+    {
+      "name": "Interrogatorio",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 8
+    },
+    {
+      "name": "Culpable",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 3
+    },
+    {
+      "name": "Pista",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 3
+    },
+    {
+      "name": "Fianza",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 12
+    },
+    {
+      "name": "Orden de captura",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 11
+    },
+    {
+      "name": "Fiscal",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 10
+    },
+    {
+      "name": "Infiltrado",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 10
+    },
+    {
+      "name": "Soplón",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 11
+    },
+    {
+      "name": "Evidencia",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 7
+    },
+    {
+      "name": "Modus operandi",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 13
+    },
+    {
+      "name": "Atraco",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 9
+    },
+    {
+      "name": "Chantaje",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 10
+    },
+    {
+      "name": "Veredicto",
+      "facet": "Vocabulario del crimen y la investigación",
+      "known_at": 11
+    }
+  ]
+}

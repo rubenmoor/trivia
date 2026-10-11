@@ -1,0 +1,426 @@
+{
+  "subcategory": "Lugares sagrados",
+  "facets": [
+    "Iglesias y catedrales cristianas",
+    "Mezquitas y lugares del islam",
+    "Templos hindúes, budistas y sintoístas",
+    "Jerusalén y Tierra Santa",
+    "Templos del mundo antiguo",
+    "Lugares sagrados precolombinos",
+    "Santuarios y templos de Colombia",
+    "Peregrinaciones y rutas sagradas",
+    "Montañas, ríos y naturaleza sagrada",
+    "Partes y objetos del templo",
+    "Monasterios, mausoleos y tumbas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Basílica de San Marcos",
+      "facet": "Iglesias y catedrales cristianas",
+      "known_at": 11
+    },
+    {
+      "name": "Basílica de San Juan de Letrán",
+      "facet": "Iglesias y catedrales cristianas",
+      "known_at": 14
+    },
+    {
+      "name": "Mezquita del Profeta",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 11
+    },
+    {
+      "name": "Piedra Negra",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 12
+    },
+    {
+      "name": "Pozo de Zamzam",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 13
+    },
+    {
+      "name": "Mezquita de los Omeyas",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 14
+    },
+    {
+      "name": "Mezquita de Solimán",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Mezquita de Samarra",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 14
+    },
+    {
+      "name": "Mezquita Faisal",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 14
+    },
+    {
+      "name": "Monte Arafat",
+      "facet": "Mezquitas y lugares del islam",
+      "known_at": 14
+    },
+    {
+      "name": "Templo Shaolin",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 8
+    },
+    {
+      "name": "Santuario Fushimi Inari",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 9
+    },
+    {
+      "name": "Templo del Buda Esmeralda",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 13
+    },
+    {
+      "name": "Wat Arun",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 13
+    },
+    {
+      "name": "Todai-ji",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de Meenakshi",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 14
+    },
+    {
+      "name": "Prambanan",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 14
+    },
+    {
+      "name": "Akshardham",
+      "facet": "Templos hindúes, budistas y sintoístas",
+      "known_at": 14
+    },
+    {
+      "name": "Iglesia del Santo Sepulcro",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 10
+    },
+    {
+      "name": "Basílica de la Natividad",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 10
+    },
+    {
+      "name": "Ciudad Vieja de Jerusalén",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 10
+    },
+    {
+      "name": "Mezquita de Al-Aqsa",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 11
+    },
+    {
+      "name": "Getsemaní",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 11
+    },
+    {
+      "name": "Vía Dolorosa",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 11
+    },
+    {
+      "name": "Monte del Templo",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 12
+    },
+    {
+      "name": "Cenáculo",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 12
+    },
+    {
+      "name": "Cafarnaúm",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 13
+    },
+    {
+      "name": "Qumrán",
+      "facet": "Jerusalén y Tierra Santa",
+      "known_at": 14
+    },
+    {
+      "name": "Templos de Ggantija",
+      "facet": "Templos del mundo antiguo",
+      "known_at": 15
+    },
+    {
+      "name": "Moáis de Rapa Nui",
+      "facet": "Lugares sagrados precolombinos",
+      "known_at": 6
+    },
+    {
+      "name": "Tulum",
+      "facet": "Lugares sagrados precolombinos",
+      "known_at": 10
+    },
+    {
+      "name": "Isla del Sol",
+      "facet": "Lugares sagrados precolombinos",
+      "known_at": 12
+    },
+    {
+      "name": "Huaca",
+      "facet": "Lugares sagrados precolombinos",
+      "known_at": 13
+    },
+    {
+      "name": "Divino Niño del 20 de Julio",
+      "facet": "Santuarios y templos de Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "La Ermita de Cali",
+      "facet": "Santuarios y templos de Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Catedral de Cartagena",
+      "facet": "Santuarios y templos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Santa Marta",
+      "facet": "Santuarios y templos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Iglesia de San Ignacio de Bogotá",
+      "facet": "Santuarios y templos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Ermita de la Veracruz de Medellín",
+      "facet": "Santuarios y templos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Peregrino",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 4
+    },
+    {
+      "name": "Vía Crucis",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 7
+    },
+    {
+      "name": "Camino Inca",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 9
+    },
+    {
+      "name": "Procesiones de Semana Santa de Popayán",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 9
+    },
+    {
+      "name": "Santiago Apóstol",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 9
+    },
+    {
+      "name": "Concha de vieira",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 10
+    },
+    {
+      "name": "Asís",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 11
+    },
+    {
+      "name": "Umrah",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 13
+    },
+    {
+      "name": "Compostela",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 13
+    },
+    {
+      "name": "Puerta Santa",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 13
+    },
+    {
+      "name": "Tawaf",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 14
+    },
+    {
+      "name": "Virgen Negra de Częstochowa",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 14
+    },
+    {
+      "name": "Kumano Kodo",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 15
+    },
+    {
+      "name": "Peregrinación de los 88 templos de Shikoku",
+      "facet": "Peregrinaciones y rutas sagradas",
+      "known_at": 15
+    },
+    {
+      "name": "Vaca sagrada",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 5
+    },
+    {
+      "name": "Monte Kailash",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 13
+    },
+    {
+      "name": "Laguna de Iguaque",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 13
+    },
+    {
+      "name": "Apu",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 13
+    },
+    {
+      "name": "Monte Tabor",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 13
+    },
+    {
+      "name": "Roble de los druidas",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 13
+    },
+    {
+      "name": "Monte Tai",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 14
+    },
+    {
+      "name": "Monte Meru",
+      "facet": "Montañas, ríos y naturaleza sagrada",
+      "known_at": 15
+    },
+    {
+      "name": "Órgano de tubos",
+      "facet": "Partes y objetos del templo",
+      "known_at": 6
+    },
+    {
+      "name": "Incensario",
+      "facet": "Partes y objetos del templo",
+      "known_at": 9
+    },
+    {
+      "name": "Rollo de la Torá",
+      "facet": "Partes y objetos del templo",
+      "known_at": 10
+    },
+    {
+      "name": "Sagrario",
+      "facet": "Partes y objetos del templo",
+      "known_at": 12
+    },
+    {
+      "name": "Mihrab",
+      "facet": "Partes y objetos del templo",
+      "known_at": 13
+    },
+    {
+      "name": "Catacumbas de Roma",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 9
+    },
+    {
+      "name": "Monasterio de Montserrat",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 12
+    },
+    {
+      "name": "Monasterio del Nido del Tigre",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 13
+    },
+    {
+      "name": "Monasterio de Santa Catalina del Sinaí",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 13
+    },
+    {
+      "name": "Tumba de Pakal",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 13
+    },
+    {
+      "name": "Monasterio de Rila",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 14
+    },
+    {
+      "name": "Mausoleo de Augusto",
+      "facet": "Monasterios, mausoleos y tumbas",
+      "known_at": 14
+    }
+  ]
+}

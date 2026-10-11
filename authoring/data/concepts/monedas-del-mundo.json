@@ -1,0 +1,852 @@
+{
+  "subcategory": "Monedas del mundo",
+  "facets": [
+    "Monedas de América",
+    "El euro y monedas europeas",
+    "Monedas de Asia y Oceanía",
+    "Monedas de África y Medio Oriente",
+    "Símbolos y códigos de monedas",
+    "Personajes en los billetes",
+    "Animales y paisajes en billetes",
+    "Monedas que ya desaparecieron",
+    "Origen de los nombres",
+    "Billetes, monedas y seguridad",
+    "Dinero de ficción y videojuegos",
+    "Cambio de moneda y curiosidades"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Peso mexicano",
+      "facet": "Monedas de América",
+      "known_at": 4
+    },
+    {
+      "name": "Sol peruano",
+      "facet": "Monedas de América",
+      "known_at": 8
+    },
+    {
+      "name": "Bolívar venezolano",
+      "facet": "Monedas de América",
+      "known_at": 5
+    },
+    {
+      "name": "Peso argentino",
+      "facet": "Monedas de América",
+      "known_at": 6
+    },
+    {
+      "name": "Peso chileno",
+      "facet": "Monedas de América",
+      "known_at": 7
+    },
+    {
+      "name": "Dólar canadiense",
+      "facet": "Monedas de América",
+      "known_at": 7
+    },
+    {
+      "name": "Boliviano",
+      "facet": "Monedas de América",
+      "known_at": 9
+    },
+    {
+      "name": "Guaraní paraguayo",
+      "facet": "Monedas de América",
+      "known_at": 11
+    },
+    {
+      "name": "Peso uruguayo",
+      "facet": "Monedas de América",
+      "known_at": 9
+    },
+    {
+      "name": "Quetzal guatemalteco",
+      "facet": "Monedas de América",
+      "known_at": 11
+    },
+    {
+      "name": "Colón costarricense",
+      "facet": "Monedas de América",
+      "known_at": 11
+    },
+    {
+      "name": "Balboa panameño",
+      "facet": "Monedas de América",
+      "known_at": 12
+    },
+    {
+      "name": "Córdoba nicaragüense",
+      "facet": "Monedas de América",
+      "known_at": 13
+    },
+    {
+      "name": "Lempira hondureño",
+      "facet": "Monedas de América",
+      "known_at": 12
+    },
+    {
+      "name": "Peso cubano",
+      "facet": "Monedas de América",
+      "known_at": 9
+    },
+    {
+      "name": "Gourde haitiano",
+      "facet": "Monedas de América",
+      "known_at": 15
+    },
+    {
+      "name": "Corona noruega",
+      "facet": "El euro y monedas europeas",
+      "known_at": 12
+    },
+    {
+      "name": "Corona danesa",
+      "facet": "El euro y monedas europeas",
+      "known_at": 12
+    },
+    {
+      "name": "Corona checa",
+      "facet": "El euro y monedas europeas",
+      "known_at": 13
+    },
+    {
+      "name": "Corona islandesa",
+      "facet": "El euro y monedas europeas",
+      "known_at": 14
+    },
+    {
+      "name": "Rublo ruso",
+      "facet": "El euro y monedas europeas",
+      "known_at": 8
+    },
+    {
+      "name": "Zloty polaco",
+      "facet": "El euro y monedas europeas",
+      "known_at": 13
+    },
+    {
+      "name": "Florín húngaro",
+      "facet": "El euro y monedas europeas",
+      "known_at": 14
+    },
+    {
+      "name": "Grivna ucraniana",
+      "facet": "El euro y monedas europeas",
+      "known_at": 14
+    },
+    {
+      "name": "Leu rumano",
+      "facet": "El euro y monedas europeas",
+      "known_at": 14
+    },
+    {
+      "name": "Lira turca",
+      "facet": "El euro y monedas europeas",
+      "known_at": 11
+    },
+    {
+      "name": "Eurozona",
+      "facet": "El euro y monedas europeas",
+      "known_at": 10
+    },
+    {
+      "name": "Banco Central Europeo",
+      "facet": "El euro y monedas europeas",
+      "known_at": 11
+    },
+    {
+      "name": "Moneda de 2 euros",
+      "facet": "El euro y monedas europeas",
+      "known_at": 8
+    },
+    {
+      "name": "Yen japonés",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 5
+    },
+    {
+      "name": "Yuan chino",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 8
+    },
+    {
+      "name": "Won surcoreano",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 9
+    },
+    {
+      "name": "Dólar australiano",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 7
+    },
+    {
+      "name": "Dólar neozelandés",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 10
+    },
+    {
+      "name": "Baht tailandés",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 12
+    },
+    {
+      "name": "Rupia indonesia",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Dong vietnamita",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Ringgit malayo",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 14
+    },
+    {
+      "name": "Peso filipino",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 11
+    },
+    {
+      "name": "Dólar de Hong Kong",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 12
+    },
+    {
+      "name": "Dólar de Singapur",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 12
+    },
+    {
+      "name": "Tugrik mongol",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 15
+    },
+    {
+      "name": "Rupia pakistaní",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 13
+    },
+    {
+      "name": "Taka bangladesí",
+      "facet": "Monedas de Asia y Oceanía",
+      "known_at": 15
+    },
+    {
+      "name": "Rand sudafricano",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 11
+    },
+    {
+      "name": "Libra egipcia",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 10
+    },
+    {
+      "name": "Dírham marroquí",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 12
+    },
+    {
+      "name": "Naira nigeriana",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 14
+    },
+    {
+      "name": "Chelín keniano",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 14
+    },
+    {
+      "name": "Birr etíope",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 15
+    },
+    {
+      "name": "Cedi ghanés",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 15
+    },
+    {
+      "name": "Franco CFA",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 14
+    },
+    {
+      "name": "Dólar zimbabuense",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 13
+    },
+    {
+      "name": "Riyal saudí",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 12
+    },
+    {
+      "name": "Dírham de los Emiratos",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 12
+    },
+    {
+      "name": "Riyal catarí",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 13
+    },
+    {
+      "name": "Dinar kuwaití",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 14
+    },
+    {
+      "name": "Dinar jordano",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 14
+    },
+    {
+      "name": "Séquel israelí",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 13
+    },
+    {
+      "name": "Rial iraní",
+      "facet": "Monedas de África y Medio Oriente",
+      "known_at": 14
+    },
+    {
+      "name": "Signo de dólar",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 1
+    },
+    {
+      "name": "Signo del euro",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 4
+    },
+    {
+      "name": "Signo de la libra",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Signo del yen",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 10
+    },
+    {
+      "name": "Signo de la rupia india",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Signo del won",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Signo del rublo",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Signo del centavo",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 8
+    },
+    {
+      "name": "Signo del bitcoin",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Código ISO 4217",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 14
+    },
+    {
+      "name": "COP",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 10
+    },
+    {
+      "name": "USD",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 8
+    },
+    {
+      "name": "EUR",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 8
+    },
+    {
+      "name": "GBP",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 12
+    },
+    {
+      "name": "JPY",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 12
+    },
+    {
+      "name": "MXN",
+      "facet": "Símbolos y códigos de monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Virginia Gutiérrez",
+      "facet": "Personajes en los billetes",
+      "known_at": 13
+    },
+    {
+      "name": "Alfonso López Michelsen",
+      "facet": "Personajes en los billetes",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Lleras Restrepo",
+      "facet": "Personajes en los billetes",
+      "known_at": 11
+    },
+    {
+      "name": "Francisco de Paula Santander",
+      "facet": "Personajes en los billetes",
+      "known_at": 7
+    },
+    {
+      "name": "Benito Juárez",
+      "facet": "Personajes en los billetes",
+      "known_at": 11
+    },
+    {
+      "name": "Águila real",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 4
+    },
+    {
+      "name": "Tití león dorado",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Lobo de crin",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 12
+    },
+    {
+      "name": "Kiwi (ave)",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 5
+    },
+    {
+      "name": "Colimbo",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 14
+    },
+    {
+      "name": "Cinco Grandes de África",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Cóndor andino",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 4
+    },
+    {
+      "name": "Quetzal (ave)",
+      "facet": "Animales y paisajes en billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Peseta",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 8
+    },
+    {
+      "name": "Marco alemán",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 11
+    },
+    {
+      "name": "Lira italiana",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 11
+    },
+    {
+      "name": "Dracma griego",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 11
+    },
+    {
+      "name": "Escudo portugués",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 13
+    },
+    {
+      "name": "Florín neerlandés",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 13
+    },
+    {
+      "name": "Chelín austríaco",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 14
+    },
+    {
+      "name": "Sestercio",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 11
+    },
+    {
+      "name": "Maravedí",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 13
+    },
+    {
+      "name": "Sucre ecuatoriano",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 11
+    },
+    {
+      "name": "Austral argentino",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 14
+    },
+    {
+      "name": "Inti peruano",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 14
+    },
+    {
+      "name": "Cruzeiro brasileño",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 14
+    },
+    {
+      "name": "Peso oro colombiano",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 13
+    },
+    {
+      "name": "Ecu",
+      "facet": "Monedas que ya desaparecieron",
+      "known_at": 15
+    },
+    {
+      "name": "Tálero",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Juno Moneta",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Pecunia",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Bancarrota",
+      "facet": "Origen de los nombres",
+      "known_at": 11
+    },
+    {
+      "name": "Ceca",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Esterlina",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Witwatersrand",
+      "facet": "Origen de los nombres",
+      "known_at": 15
+    },
+    {
+      "name": "Guinea (moneda)",
+      "facet": "Origen de los nombres",
+      "known_at": 15
+    },
+    {
+      "name": "Cacique Lempira",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco Hernández de Córdoba",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio José de Sucre",
+      "facet": "Origen de los nombres",
+      "known_at": 9
+    },
+    {
+      "name": "Palo (millón)",
+      "facet": "Origen de los nombres",
+      "known_at": 8
+    },
+    {
+      "name": "Plata (dinero)",
+      "facet": "Origen de los nombres",
+      "known_at": 3
+    },
+    {
+      "name": "Billete (palabra)",
+      "facet": "Origen de los nombres",
+      "known_at": 10
+    },
+    {
+      "name": "Hilo de seguridad",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Tinta que cambia de color",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Microtexto",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 11
+    },
+    {
+      "name": "Impresión en relieve",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 9
+    },
+    {
+      "name": "Imagen latente",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 13
+    },
+    {
+      "name": "Constelación EURion",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 15
+    },
+    {
+      "name": "Billete de polímero",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 10
+    },
+    {
+      "name": "Papel de algodón",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 10
+    },
+    {
+      "name": "Número de serie",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 6
+    },
+    {
+      "name": "Canto estriado",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 10
+    },
+    {
+      "name": "Moneda bimetálica",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 7
+    },
+    {
+      "name": "Casa de Moneda",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Banco de la República",
+      "facet": "Billetes, monedas y seguridad",
+      "known_at": 8
+    },
+    {
+      "name": "Monedas de Super Mario",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 1
+    },
+    {
+      "name": "Rupias de Zelda",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Robux",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 2
+    },
+    {
+      "name": "Esmeraldas de Minecraft",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Bayas de Animal Crossing",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Simoleones",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Galeón (Harry Potter)",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Berries de One Piece",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Créditos de Star Wars",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Chapas de Fallout",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Gemas de Clash Royale",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 4
+    },
+    {
+      "name": "Billetes de Monopoly",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Moneda número uno",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Señor Cangrejo",
+      "facet": "Dinero de ficción y videojuegos",
+      "known_at": 1
+    },
+    {
+      "name": "Tasa de cambio",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 8
+    },
+    {
+      "name": "Casa de cambio",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 7
+    },
+    {
+      "name": "Inflación",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 9
+    },
+    {
+      "name": "Hiperinflación",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Devaluación",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Dolarización",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Patrón oro",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Índice Big Mac",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 13
+    },
+    {
+      "name": "Cauri",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 13
+    },
+    {
+      "name": "Piedras rai de Yap",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 14
+    },
+    {
+      "name": "Alcancía",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 1
+    },
+    {
+      "name": "Fondo Monetario Internacional",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 12
+    },
+    {
+      "name": "Numismática",
+      "facet": "Cambio de moneda y curiosidades",
+      "known_at": 11
+    }
+  ]
+}

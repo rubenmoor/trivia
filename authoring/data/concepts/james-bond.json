@@ -1,0 +1,1038 @@
+{
+  "subcategory": "James Bond",
+  "facets": [
+    "Actores que fueron Bond",
+    "Villanos y sus guaridas",
+    "Chicas Bond y aliadas",
+    "Aliados del MI6: M, Q y Moneypenny",
+    "Gadgets y armas de Q",
+    "Carros de Bond",
+    "Títulos de las películas",
+    "Canciones y música Bond",
+    "Locaciones y viajes por el mundo",
+    "Ian Fleming y las novelas",
+    "Frases y costumbres de 007",
+    "Videojuegos, parodias y cultura Bond"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sean Connery",
+      "facet": "Actores que fueron Bond",
+      "known_at": 9
+    },
+    {
+      "name": "Roger Moore",
+      "facet": "Actores que fueron Bond",
+      "known_at": 11
+    },
+    {
+      "name": "George Lazenby",
+      "facet": "Actores que fueron Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Timothy Dalton",
+      "facet": "Actores que fueron Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Daniel Craig",
+      "facet": "Actores que fueron Bond",
+      "known_at": 8
+    },
+    {
+      "name": "David Niven",
+      "facet": "Actores que fueron Bond",
+      "known_at": 15
+    },
+    {
+      "name": "Barry Nelson",
+      "facet": "Actores que fueron Bond",
+      "known_at": 15
+    },
+    {
+      "name": "Bob Holness",
+      "facet": "Actores que fueron Bond",
+      "known_at": 15,
+      "retired": "unaskable: Que Bob Holness hiciera de Bond en la radio sudafricana es demasiado oscuro para esta familia."
+    },
+    {
+      "name": "Remington Steele",
+      "facet": "Actores que fueron Bond",
+      "known_at": 15
+    },
+    {
+      "name": "El Santo (serie de TV)",
+      "facet": "Actores que fueron Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Benoit Blanc",
+      "facet": "Actores que fueron Bond",
+      "known_at": 11
+    },
+    {
+      "name": "Ernst Stavro Blofeld",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 11
+    },
+    {
+      "name": "Gato blanco persa",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 8
+    },
+    {
+      "name": "SPECTRE",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 11
+    },
+    {
+      "name": "Auric Goldfinger",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 9
+    },
+    {
+      "name": "Oddjob",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 11
+    },
+    {
+      "name": "Tiburón (Jaws)",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 10
+    },
+    {
+      "name": "Dr. No",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 10
+    },
+    {
+      "name": "Le Chiffre",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 12
+    },
+    {
+      "name": "Raoul Silva",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 13
+    },
+    {
+      "name": "Alec Trevelyan",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco Scaramanga",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 13
+    },
+    {
+      "name": "Rosa Klebb",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Hugo Drax",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 13
+    },
+    {
+      "name": "Max Zorin",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Elliot Carver",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Mr. Big",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Lyutsifer Safin",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Nick Nack",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Guarida en el volcán",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 12
+    },
+    {
+      "name": "Piz Gloria",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Isla Crab Key",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Atlantis (base de Stromberg)",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 14
+    },
+    {
+      "name": "Tanque de pirañas",
+      "facet": "Villanos y sus guaridas",
+      "known_at": 12
+    },
+    {
+      "name": "Honey Ryder",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 13
+    },
+    {
+      "name": "Ursula Andress",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 13
+    },
+    {
+      "name": "Tracy di Vicenzo",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Vesper Lynd",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 12
+    },
+    {
+      "name": "Eva Green",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 13
+    },
+    {
+      "name": "Xenia Onatopp",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Natalya Simonova",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Wai Lin",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Ana de Armas",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 12
+    },
+    {
+      "name": "Madeleine Swann",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 13
+    },
+    {
+      "name": "Léa Seydoux",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Felix Leiter",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 13
+    },
+    {
+      "name": "Solitaire",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Jane Seymour",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Tiffany Case",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Elektra King",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 14
+    },
+    {
+      "name": "Holly Goodhead",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 15
+    },
+    {
+      "name": "Kara Milovy",
+      "facet": "Chicas Bond y aliadas",
+      "known_at": 15
+    },
+    {
+      "name": "M",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 9
+    },
+    {
+      "name": "Q",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 9
+    },
+    {
+      "name": "Miss Moneypenny",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 11
+    },
+    {
+      "name": "Judi Dench",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 11
+    },
+    {
+      "name": "Ralph Fiennes",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 12
+    },
+    {
+      "name": "Ben Whishaw",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 13
+    },
+    {
+      "name": "Desmond Llewelyn",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 14
+    },
+    {
+      "name": "Lois Maxwell",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 15
+    },
+    {
+      "name": "John Cleese",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 13
+    },
+    {
+      "name": "Bernard Lee",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 15
+    },
+    {
+      "name": "Bill Tanner",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 15
+    },
+    {
+      "name": "Naomie Harris",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 13
+    },
+    {
+      "name": "Gareth Mallory",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 14
+    },
+    {
+      "name": "Edificio del MI6 en Vauxhall Cross",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 14
+    },
+    {
+      "name": "Agentes doble cero",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 11
+    },
+    {
+      "name": "Nomi",
+      "facet": "Aliados del MI6: M, Q y Moneypenny",
+      "known_at": 14
+    },
+    {
+      "name": "Reloj láser",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 11
+    },
+    {
+      "name": "Walther PPK",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 12
+    },
+    {
+      "name": "Bolígrafo explosivo",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 12
+    },
+    {
+      "name": "Mochila propulsora (jetpack)",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Zapato con cuchilla",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Sombrero de ala cortante",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 11
+    },
+    {
+      "name": "Pistola dorada",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Little Nellie",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 14
+    },
+    {
+      "name": "Maletín de Q",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Llavero explosivo",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 15
+    },
+    {
+      "name": "Localizador GPS",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 12
+    },
+    {
+      "name": "Reloj Omega Seamaster",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 12
+    },
+    {
+      "name": "Rolex Submariner",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 14
+    },
+    {
+      "name": "Pistola con lector de palma",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Gafas de rayos X",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Paracaídas de la Union Jack",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 13
+    },
+    {
+      "name": "Cigarrillo cohete",
+      "facet": "Gadgets y armas de Q",
+      "known_at": 15
+    },
+    {
+      "name": "Aston Martin DB5",
+      "facet": "Carros de Bond",
+      "known_at": 10
+    },
+    {
+      "name": "Lotus Esprit submarino",
+      "facet": "Carros de Bond",
+      "known_at": 12
+    },
+    {
+      "name": "BMW Z3",
+      "facet": "Carros de Bond",
+      "known_at": 13
+    },
+    {
+      "name": "BMW 750iL",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Aston Martin Vanquish invisible",
+      "facet": "Carros de Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Aston Martin DBS",
+      "facet": "Carros de Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Aston Martin V8 Vantage",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Aston Martin DB10",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Asiento eyector",
+      "facet": "Carros de Bond",
+      "known_at": 11
+    },
+    {
+      "name": "Placas giratorias",
+      "facet": "Carros de Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Toyota 2000GT",
+      "facet": "Carros de Bond",
+      "known_at": 15
+    },
+    {
+      "name": "AMC Hornet",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Citroën 2CV",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Ford Mustang Mach 1",
+      "facet": "Carros de Bond",
+      "known_at": 15
+    },
+    {
+      "name": "Tanque en San Petersburgo",
+      "facet": "Carros de Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Lancha Q-Boat",
+      "facet": "Carros de Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Rolls-Royce Phantom de Goldfinger",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Bentley",
+      "facet": "Carros de Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Casino Royale",
+      "facet": "Títulos de las películas",
+      "known_at": 10
+    },
+    {
+      "name": "GoldenEye",
+      "facet": "Títulos de las películas",
+      "known_at": 10
+    },
+    {
+      "name": "Desde Rusia con amor",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "Operación Trueno",
+      "facet": "Títulos de las películas",
+      "known_at": 13
+    },
+    {
+      "name": "Solo se vive dos veces",
+      "facet": "Títulos de las películas",
+      "known_at": 13
+    },
+    {
+      "name": "Al servicio secreto de Su Majestad",
+      "facet": "Títulos de las películas",
+      "known_at": 14
+    },
+    {
+      "name": "Los diamantes son eternos",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "Vive y deja morir",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "El hombre de la pistola de oro",
+      "facet": "Títulos de las películas",
+      "known_at": 13
+    },
+    {
+      "name": "La espía que me amó",
+      "facet": "Títulos de las películas",
+      "known_at": 13
+    },
+    {
+      "name": "Moonraker",
+      "facet": "Títulos de las películas",
+      "known_at": 13
+    },
+    {
+      "name": "Solo para tus ojos",
+      "facet": "Títulos de las películas",
+      "known_at": 13
+    },
+    {
+      "name": "Panorama para matar",
+      "facet": "Títulos de las películas",
+      "known_at": 14
+    },
+    {
+      "name": "Licencia para matar",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "El mañana nunca muere",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "El mundo no basta",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "Muere otro día",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "Quantum of Solace",
+      "facet": "Títulos de las películas",
+      "known_at": 12
+    },
+    {
+      "name": "Sin tiempo para morir",
+      "facet": "Títulos de las películas",
+      "known_at": 11
+    },
+    {
+      "name": "Tema de James Bond",
+      "facet": "Canciones y música Bond",
+      "known_at": 8
+    },
+    {
+      "name": "Monty Norman",
+      "facet": "Canciones y música Bond",
+      "known_at": 14
+    },
+    {
+      "name": "John Barry",
+      "facet": "Canciones y música Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Shirley Bassey",
+      "facet": "Canciones y música Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Sam Smith",
+      "facet": "Canciones y música Bond",
+      "known_at": 11
+    },
+    {
+      "name": "Duran Duran",
+      "facet": "Canciones y música Bond",
+      "known_at": 13
+    },
+    {
+      "name": "a-ha",
+      "facet": "Canciones y música Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Chris Cornell",
+      "facet": "Canciones y música Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Sheryl Crow",
+      "facet": "Canciones y música Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Alicia Keys",
+      "facet": "Canciones y música Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Nobody Does It Better",
+      "facet": "Canciones y música Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Writing's on the Wall",
+      "facet": "Canciones y música Bond",
+      "known_at": 13
+    },
+    {
+      "name": "You Know My Name",
+      "facet": "Canciones y música Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Secuencia de títulos",
+      "facet": "Canciones y música Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Maurice Binder",
+      "facet": "Canciones y música Bond",
+      "known_at": 15
+    },
+    {
+      "name": "Isla de James Bond (Tailandia)",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Teleférico del Pan de Azúcar",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Macao",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Matera",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Isla de Hashima",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Montenegro",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Día de Muertos en Ciudad de México",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Cádiz",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Glencoe",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Fort Knox",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Presa de Verzasca",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Puente Golden Gate",
+      "facet": "Locaciones y viajes por el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Ian Fleming",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 11
+    },
+    {
+      "name": "Goldeneye (casa de Fleming en Jamaica)",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 14
+    },
+    {
+      "name": "Inteligencia naval británica",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 14
+    },
+    {
+      "name": "Segunda Guerra Mundial",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 11
+    },
+    {
+      "name": "James Bond (ornitólogo)",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 14
+    },
+    {
+      "name": "Aves de las Indias Occidentales",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Eton",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 14
+    },
+    {
+      "name": "Novela de espías",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 11
+    },
+    {
+      "name": "Kingsley Amis",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Anthony Horowitz",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 14
+    },
+    {
+      "name": "John Gardner",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Sebastian Faulks",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Peter Fleming",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Máquina de escribir de oro",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Hoagy Carmichael",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Young Bond",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Tira cómica del Daily Express",
+      "facet": "Ian Fleming y las novelas",
+      "known_at": 15
+    },
+    {
+      "name": "Agitado, no revuelto",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 10
+    },
+    {
+      "name": "Vodka martini",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 10
+    },
+    {
+      "name": "007",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 7
+    },
+    {
+      "name": "Esmoquin",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 9
+    },
+    {
+      "name": "Secuencia del cañón de pistola",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 11
+    },
+    {
+      "name": "Bacará",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 13
+    },
+    {
+      "name": "Comandante de la Marina Real",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 13
+    },
+    {
+      "name": "Escena previa a los créditos",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 12
+    },
+    {
+      "name": "James Bond volverá",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 13
+    },
+    {
+      "name": "Champán Bollinger",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 14
+    },
+    {
+      "name": "Origen escocés de Bond",
+      "facet": "Frases y costumbres de 007",
+      "known_at": 14
+    },
+    {
+      "name": "GoldenEye 007 (Nintendo 64)",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Austin Powers",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 11
+    },
+    {
+      "name": "Dr. Evil",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 11
+    },
+    {
+      "name": "Mini-Yo",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny English",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 10
+    },
+    {
+      "name": "Rowan Atkinson",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 9
+    },
+    {
+      "name": "El Superagente 86",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Spy Kids",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 8
+    },
+    {
+      "name": "Finn McMissile",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 8
+    },
+    {
+      "name": "Ceremonia de apertura de Londres 2012",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Reina Isabel II",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 10
+    },
+    {
+      "name": "Kingsman",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 12
+    },
+    {
+      "name": "Agente Cody Banks",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 13
+    },
+    {
+      "name": "Hank Scorpio",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 13
+    },
+    {
+      "name": "James Bond 007: Nightfire",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Everything or Nothing (videojuego)",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 15
+    },
+    {
+      "name": "Eon Productions",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 14
+    },
+    {
+      "name": "Albert R. Broccoli",
+      "facet": "Videojuegos, parodias y cultura Bond",
+      "known_at": 14
+    }
+  ]
+}

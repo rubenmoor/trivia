@@ -1,0 +1,958 @@
+{
+  "subcategory": "Shakespeare",
+  "facets": [
+    "Tragedias famosas",
+    "Comedias y obras de enredo",
+    "Dramas históricos ingleses",
+    "Personajes inolvidables",
+    "Frases y citas célebres",
+    "Vida y época de Shakespeare",
+    "Teatro isabelino y el Globe",
+    "Sonetos y poesía",
+    "Palabras y expresiones inventadas",
+    "Adaptaciones en cine y animación",
+    "Escenarios y lugares de las obras",
+    "Objetos y símbolos de las obras"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Antonio y Cleopatra",
+      "facet": "Tragedias famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Tito Andrónico",
+      "facet": "Tragedias famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Coriolano",
+      "facet": "Tragedias famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Timón de Atenas",
+      "facet": "Tragedias famosas",
+      "known_at": 15
+    },
+    {
+      "name": "Troilo y Crésida",
+      "facet": "Tragedias famosas",
+      "known_at": 15
+    },
+    {
+      "name": "Tragedia",
+      "facet": "Tragedias famosas",
+      "known_at": 6
+    },
+    {
+      "name": "Montescos y Capuletos",
+      "facet": "Tragedias famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Celos",
+      "facet": "Tragedias famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Venganza de Hamlet",
+      "facet": "Tragedias famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Profecía de las brujas",
+      "facet": "Tragedias famosas",
+      "known_at": 10
+    },
+    {
+      "name": "La fierecilla domada",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 11
+    },
+    {
+      "name": "Mucho ruido y pocas nueces",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 11
+    },
+    {
+      "name": "Noche de reyes",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 12
+    },
+    {
+      "name": "Como gustéis",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 13
+    },
+    {
+      "name": "El mercader de Venecia",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 10
+    },
+    {
+      "name": "La comedia de las equivocaciones",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 13
+    },
+    {
+      "name": "Las alegres comadres de Windsor",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 13
+    },
+    {
+      "name": "La tempestad",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 11
+    },
+    {
+      "name": "Cuento de invierno",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 14
+    },
+    {
+      "name": "Bien está lo que bien acaba",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 13
+    },
+    {
+      "name": "Los dos hidalgos de Verona",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 14
+    },
+    {
+      "name": "Trabajos de amor perdidos",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 14
+    },
+    {
+      "name": "Medida por medida",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 14
+    },
+    {
+      "name": "Cimbelino",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 15
+    },
+    {
+      "name": "Pericles",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 15
+    },
+    {
+      "name": "Gemelos separados",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 10
+    },
+    {
+      "name": "Disfraz de varón",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 11
+    },
+    {
+      "name": "Comedia",
+      "facet": "Comedias y obras de enredo",
+      "known_at": 5
+    },
+    {
+      "name": "Enrique IV",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 13
+    },
+    {
+      "name": "Ricardo II",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 14
+    },
+    {
+      "name": "Enrique VI",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 14
+    },
+    {
+      "name": "El rey Juan",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 15
+    },
+    {
+      "name": "Eduardo III",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 15,
+      "retired": "unaskable: 'Eduardo III' es una obra de autoría dudosa, muy poco conocida; ninguna de las opciones da una pregunta justa para esta familia."
+    },
+    {
+      "name": "Batalla de Bosworth",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 14
+    },
+    {
+      "name": "Príncipes de la Torre",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 14
+    },
+    {
+      "name": "Crónicas de Holinshed",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 15
+    },
+    {
+      "name": "Dinastía Tudor",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 12
+    },
+    {
+      "name": "Discurso del día de San Crispín",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 14
+    },
+    {
+      "name": "Drama histórico",
+      "facet": "Dramas históricos ingleses",
+      "known_at": 10
+    },
+    {
+      "name": "Puck",
+      "facet": "Personajes inolvidables",
+      "known_at": 10
+    },
+    {
+      "name": "Shylock",
+      "facet": "Personajes inolvidables",
+      "known_at": 12
+    },
+    {
+      "name": "Falstaff",
+      "facet": "Personajes inolvidables",
+      "known_at": 13
+    },
+    {
+      "name": "Ofelia",
+      "facet": "Personajes inolvidables",
+      "known_at": 10
+    },
+    {
+      "name": "Mercucio",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Tybalt",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Desdémona",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Próspero",
+      "facet": "Personajes inolvidables",
+      "known_at": 12
+    },
+    {
+      "name": "Calibán",
+      "facet": "Personajes inolvidables",
+      "known_at": 13
+    },
+    {
+      "name": "Bottom",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Oberón",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Titania",
+      "facet": "Personajes inolvidables",
+      "known_at": 11
+    },
+    {
+      "name": "Porcia",
+      "facet": "Personajes inolvidables",
+      "known_at": 13
+    },
+    {
+      "name": "Fray Lorenzo",
+      "facet": "Personajes inolvidables",
+      "known_at": 10
+    },
+    {
+      "name": "Las tres brujas",
+      "facet": "Personajes inolvidables",
+      "known_at": 8
+    },
+    {
+      "name": "Fantasma del padre de Hamlet",
+      "facet": "Personajes inolvidables",
+      "known_at": 8
+    },
+    {
+      "name": "Cordelia",
+      "facet": "Personajes inolvidables",
+      "known_at": 13
+    },
+    {
+      "name": "Malvolio",
+      "facet": "Personajes inolvidables",
+      "known_at": 14
+    },
+    {
+      "name": "Petruchio",
+      "facet": "Personajes inolvidables",
+      "known_at": 13
+    },
+    {
+      "name": "Ser o no ser",
+      "facet": "Frases y citas célebres",
+      "known_at": 5
+    },
+    {
+      "name": "¿Por qué eres tú Romeo?",
+      "facet": "Frases y citas célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Algo huele mal en Dinamarca",
+      "facet": "Frases y citas célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Mi reino por un caballo",
+      "facet": "Frases y citas célebres",
+      "known_at": 12
+    },
+    {
+      "name": "El mundo entero es un teatro",
+      "facet": "Frases y citas célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Somos de la misma materia que los sueños",
+      "facet": "Frases y citas célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Fuera, maldita mancha",
+      "facet": "Frases y citas célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Cuídate de los idus de marzo",
+      "facet": "Frases y citas célebres",
+      "known_at": 11
+    },
+    {
+      "name": "El resto es silencio",
+      "facet": "Frases y citas célebres",
+      "known_at": 13
+    },
+    {
+      "name": "La brevedad es el alma del ingenio",
+      "facet": "Frases y citas célebres",
+      "known_at": 13
+    },
+    {
+      "name": "¿Qué hay en un nombre?",
+      "facet": "Frases y citas célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Es el este, y Julieta es el sol",
+      "facet": "Frases y citas célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Amigos, romanos, compatriotas",
+      "facet": "Frases y citas célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Hay más cosas en el cielo y en la tierra, Horacio",
+      "facet": "Frases y citas célebres",
+      "known_at": 13
+    },
+    {
+      "name": "El curso del amor verdadero nunca fue fácil",
+      "facet": "Frases y citas célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Lo hecho, hecho está",
+      "facet": "Frases y citas célebres",
+      "known_at": 10
+    },
+    {
+      "name": "El invierno de nuestro descontento",
+      "facet": "Frases y citas célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Ni prestador ni prestatario seas",
+      "facet": "Frases y citas célebres",
+      "known_at": 14
+    },
+    {
+      "name": "No es oro todo lo que reluce",
+      "facet": "Frases y citas célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Stratford-upon-Avon",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 11
+    },
+    {
+      "name": "Hamnet",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 13
+    },
+    {
+      "name": "Jacobo I",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 13
+    },
+    {
+      "name": "Día del Libro",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 7
+    },
+    {
+      "name": "Primer Folio",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 14
+    },
+    {
+      "name": "Años perdidos",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 14
+    },
+    {
+      "name": "Guantero",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 14
+    },
+    {
+      "name": "Segunda mejor cama",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 14
+    },
+    {
+      "name": "Iglesia de la Santísima Trinidad de Stratford",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 15
+    },
+    {
+      "name": "El Bardo de Avon",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 11
+    },
+    {
+      "name": "Época isabelina",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 11
+    },
+    {
+      "name": "Peste",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 10
+    },
+    {
+      "name": "Gorguera",
+      "facet": "Vida y época de Shakespeare",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro The Globe",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 9
+    },
+    {
+      "name": "Teatro The Rose",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 14
+    },
+    {
+      "name": "Blackfriars",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 15
+    },
+    {
+      "name": "Mosqueteros del patio",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 14
+    },
+    {
+      "name": "Hombres del Lord Chambelán",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 14
+    },
+    {
+      "name": "Hombres del Rey",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 14
+    },
+    {
+      "name": "Actores varones en papeles femeninos",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 9
+    },
+    {
+      "name": "Incendio del Globe",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 13
+    },
+    {
+      "name": "Shakespeare's Globe reconstruido",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 13
+    },
+    {
+      "name": "Tejado de paja",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 11
+    },
+    {
+      "name": "Southwark",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 15
+    },
+    {
+      "name": "Richard Burbage",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 15
+    },
+    {
+      "name": "Christopher Marlowe",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 14
+    },
+    {
+      "name": "Ben Jonson",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 14
+    },
+    {
+      "name": "Bandera del teatro",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 13
+    },
+    {
+      "name": "Acto",
+      "facet": "Teatro isabelino y el Globe",
+      "known_at": 6
+    },
+    {
+      "name": "Soneto 18",
+      "facet": "Sonetos y poesía",
+      "known_at": 14
+    },
+    {
+      "name": "Soneto 130",
+      "facet": "Sonetos y poesía",
+      "known_at": 15
+    },
+    {
+      "name": "Pentámetro yámbico",
+      "facet": "Sonetos y poesía",
+      "known_at": 14
+    },
+    {
+      "name": "Verso blanco",
+      "facet": "Sonetos y poesía",
+      "known_at": 13
+    },
+    {
+      "name": "Dama Oscura",
+      "facet": "Sonetos y poesía",
+      "known_at": 14
+    },
+    {
+      "name": "Bello Joven",
+      "facet": "Sonetos y poesía",
+      "known_at": 15
+    },
+    {
+      "name": "Venus y Adonis",
+      "facet": "Sonetos y poesía",
+      "known_at": 14
+    },
+    {
+      "name": "Pareado",
+      "facet": "Sonetos y poesía",
+      "known_at": 12
+    },
+    {
+      "name": "Catorce versos",
+      "facet": "Sonetos y poesía",
+      "known_at": 10
+    },
+    {
+      "name": "Soliloquio",
+      "facet": "Sonetos y poesía",
+      "known_at": 11
+    },
+    {
+      "name": "Aparte",
+      "facet": "Sonetos y poesía",
+      "known_at": 12
+    },
+    {
+      "name": "154 sonetos",
+      "facet": "Sonetos y poesía",
+      "known_at": 15
+    },
+    {
+      "name": "El fénix y la tórtola",
+      "facet": "Sonetos y poesía",
+      "known_at": 15
+    },
+    {
+      "name": "Monstruo de ojos verdes",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 12
+    },
+    {
+      "name": "Eyeball",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 13
+    },
+    {
+      "name": "Swagger",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 12
+    },
+    {
+      "name": "Bedroom",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 12
+    },
+    {
+      "name": "Lonely",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 12
+    },
+    {
+      "name": "Assassination",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 13
+    },
+    {
+      "name": "Fashionable",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 13
+    },
+    {
+      "name": "Uncomfortable",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 13
+    },
+    {
+      "name": "Lackluster",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 15
+    },
+    {
+      "name": "Bedazzled",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 15
+    },
+    {
+      "name": "Break the ice",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 12
+    },
+    {
+      "name": "Wild-goose chase",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 14
+    },
+    {
+      "name": "Heart of gold",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 12
+    },
+    {
+      "name": "In a pickle",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 14
+    },
+    {
+      "name": "Vanish into thin air",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 14
+    },
+    {
+      "name": "Wear my heart upon my sleeve",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 14
+    },
+    {
+      "name": "Un romeo",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 8
+    },
+    {
+      "name": "Shakespeariano",
+      "facet": "Palabras y expresiones inventadas",
+      "known_at": 11
+    },
+    {
+      "name": "Romeo + Julieta de Baz Luhrmann",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 11
+    },
+    {
+      "name": "Shakespeare apasionado",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 12
+    },
+    {
+      "name": "10 cosas que odio de ti",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 11
+    },
+    {
+      "name": "Gnomeo y Julieta",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 6
+    },
+    {
+      "name": "Trono de sangre",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 15
+    },
+    {
+      "name": "Ella es el chico",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 12
+    },
+    {
+      "name": "Romeo y Julieta de Zeffirelli",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Hamlet de Kenneth Branagh",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Laurence Olivier",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Kiss Me, Kate",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 15
+    },
+    {
+      "name": "Otello de Verdi",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Romeo y Julieta de Prokófiev",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 14
+    },
+    {
+      "name": "Hamnet (película)",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 13
+    },
+    {
+      "name": "Warm Bodies",
+      "facet": "Adaptaciones en cine y animación",
+      "known_at": 13
+    },
+    {
+      "name": "Verona",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 7
+    },
+    {
+      "name": "Elsinor",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque de Birnam",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 14
+    },
+    {
+      "name": "Dunsinane",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 15
+    },
+    {
+      "name": "Bosque de Arden",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 14
+    },
+    {
+      "name": "Iliria",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 14
+    },
+    {
+      "name": "Padua",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Mantua",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Próspero",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 12
+    },
+    {
+      "name": "Bohemia",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 14
+    },
+    {
+      "name": "Mesina",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 14
+    },
+    {
+      "name": "Casa de Julieta",
+      "facet": "Escenarios y lugares de las obras",
+      "known_at": 11
+    },
+    {
+      "name": "Calavera de Yorick",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 8
+    },
+    {
+      "name": "Pañuelo de Desdémona",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Daga de Macbeth",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 12
+    },
+    {
+      "name": "Caldero de las brujas",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 9
+    },
+    {
+      "name": "Libra de carne",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Cofres de oro, plata y plomo",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 14
+    },
+    {
+      "name": "Cabeza de burro",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 10
+    },
+    {
+      "name": "Flor del amor",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 11
+    },
+    {
+      "name": "Bastón mágico de Próspero",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 12
+    },
+    {
+      "name": "Corona",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 2
+    },
+    {
+      "name": "Pócima para dormir",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 9
+    },
+    {
+      "name": "Balcón",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 3
+    },
+    {
+      "name": "Flores de Ofelia",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Tormenta",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 4
+    },
+    {
+      "name": "Rosa roja y rosa blanca",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 13
+    },
+    {
+      "name": "Calzas amarillas de Malvolio",
+      "facet": "Objetos y símbolos de las obras",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "subcategory": "Monumentos famosos",
+  "facets": [
+    "Maravillas del mundo antiguo",
+    "Nuevas siete maravillas",
+    "Torres y rascacielos célebres",
+    "Estatuas y esculturas monumentales",
+    "Templos, iglesias y catedrales",
+    "Palacios, castillos y fortalezas",
+    "Ruinas y ciudades antiguas",
+    "Puentes, arcos y murallas",
+    "Monumentos de Colombia",
+    "Monumentos de América Latina",
+    "Monumentos en películas y juegos",
+    "Construcción y constructores de monumentos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Templo de Artemisa",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 12
+    },
+    {
+      "name": "Mausolo",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 14
+    },
+    {
+      "name": "Heróstrato",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 15
+    },
+    {
+      "name": "Votación de las nuevas siete maravillas",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 11
+    },
+    {
+      "name": "Paul Landowski",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 14
+    },
+    {
+      "name": "Dinastía Ming",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Torre del Oro",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Buda de Leshan",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 13
+    },
+    {
+      "name": "Ángel del Norte",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Buda de Kamakura",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 13
+    },
+    {
+      "name": "La Piedad de Miguel Ángel",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 12
+    },
+    {
+      "name": "Toro de Wall Street",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 11
+    },
+    {
+      "name": "Notre Dame de París",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 5
+    },
+    {
+      "name": "Santa Sofía de Estambul",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 11
+    },
+    {
+      "name": "Templo Dorado de Amritsar",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 13
+    },
+    {
+      "name": "Pabellón Dorado de Kioto",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 12
+    },
+    {
+      "name": "Cnosos",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Delfos",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Arco del Triunfo de París",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 7
+    },
+    {
+      "name": "Muro de Adriano",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de la Bahía de Sídney",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Puerta de la India",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 13
+    },
+    {
+      "name": "Muro de las Lamentaciones",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Puerta de Alcalá",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 11
+    },
+    {
+      "name": "Cristo Rey de Cali",
+      "facet": "Monumentos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Plaza de Bolívar de Bogotá",
+      "facet": "Monumentos de Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Casa de Nariño",
+      "facet": "Monumentos de Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Monumento a los Héroes",
+      "facet": "Monumentos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de Occidente",
+      "facet": "Monumentos de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "India Catalina",
+      "facet": "Monumentos de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Monumento a los Zapatos Viejos",
+      "facet": "Monumentos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Basílica de Chiquinquirá",
+      "facet": "Monumentos de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Capitolio de La Habana",
+      "facet": "Monumentos de América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Mitad del Mundo",
+      "facet": "Monumentos de América Latina",
+      "known_at": 8
+    },
+    {
+      "name": "Catedral de Brasilia",
+      "facet": "Monumentos de América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Tiwanaku",
+      "facet": "Monumentos de América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Cristo de la Concordia",
+      "facet": "Monumentos de América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Plaza de Mayo",
+      "facet": "Monumentos de América Latina",
+      "known_at": 9
+    },
+    {
+      "name": "Casa Rosada",
+      "facet": "Monumentos de América Latina",
+      "known_at": 8
+    },
+    {
+      "name": "Malecón de La Habana",
+      "facet": "Monumentos de América Latina",
+      "known_at": 10
+    },
+    {
+      "name": "Zócalo de Ciudad de México",
+      "facet": "Monumentos de América Latina",
+      "known_at": 9
+    },
+    {
+      "name": "Copán",
+      "facet": "Monumentos de América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral Metropolitana de Ciudad de México",
+      "facet": "Monumentos de América Latina",
+      "known_at": 11
+    },
+    {
+      "name": "Castillo de la Bella Durmiente de Disneyland",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Castillo de Hogwarts",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Casita de Encanto",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Palacio del Sultán de Agrabah",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Reino de Muy Muy Lejano",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Orthanc",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Torre Stark",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Gian Lorenzo Bernini",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Rogelio Salmona",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Bóveda",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Arbotante",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Columna dórica",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide escalonada de Zoser",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Andamio",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 8
+    }
+  ]
+}

@@ -1,0 +1,1173 @@
+{
+  "subcategory": "Rock",
+  "facets": [
+    "Bandas legendarias del rock",
+    "Solistas e íconos del rock",
+    "Instrumentos y equipo del rock",
+    "Subgéneros y estilos de rock",
+    "Canciones y riffs famosos",
+    "Álbumes y portadas icónicas",
+    "Rock en español y latino",
+    "Rock colombiano",
+    "Festivales y conciertos históricos",
+    "Historia y orígenes del rock",
+    "Rock en el cine y los videojuegos",
+    "Jerga y cultura rockera"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Queen",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 5
+    },
+    {
+      "name": "The Rolling Stones",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 7
+    },
+    {
+      "name": "Led Zeppelin",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Pink Floyd",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 9
+    },
+    {
+      "name": "AC/DC",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 7
+    },
+    {
+      "name": "Nirvana",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Metallica",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Guns N' Roses",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Kiss",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 7
+    },
+    {
+      "name": "U2",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 9
+    },
+    {
+      "name": "Coldplay",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 6
+    },
+    {
+      "name": "The Doors",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Linkin Park",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Imagine Dragons",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 5
+    },
+    {
+      "name": "Red Hot Chili Peppers",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Black Sabbath",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 11
+    },
+    {
+      "name": "The Who",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Ramones",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Green Day",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 9
+    },
+    {
+      "name": "Iron Maiden",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Foo Fighters",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Radiohead",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 12
+    },
+    {
+      "name": "The Police",
+      "facet": "Bandas legendarias del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Freddie Mercury",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 6
+    },
+    {
+      "name": "Chuck Berry",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Jimi Hendrix",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 9
+    },
+    {
+      "name": "Kurt Cobain",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Ozzy Osbourne",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 9
+    },
+    {
+      "name": "Mick Jagger",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 9
+    },
+    {
+      "name": "John Lennon",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 7
+    },
+    {
+      "name": "Paul McCartney",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Ringo Starr",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 9
+    },
+    {
+      "name": "David Bowie",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Bruce Springsteen",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Janis Joplin",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Axl Rose",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Slash",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Angus Young",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Tina Turner",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Little Richard",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Elton John",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Joan Jett",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 13
+    },
+    {
+      "name": "Jim Morrison",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Brian May",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Eric Clapton",
+      "facet": "Solistas e íconos del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Guitarra eléctrica",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 2
+    },
+    {
+      "name": "Bajo eléctrico",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 5
+    },
+    {
+      "name": "Amplificador",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 4
+    },
+    {
+      "name": "Pedal de distorsión",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 10
+    },
+    {
+      "name": "Púa",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 6
+    },
+    {
+      "name": "Fender Stratocaster",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Gibson Les Paul",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Baquetas",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 4
+    },
+    {
+      "name": "Pedal wah-wah",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Guitarra de doble mástil",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Trastes",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Palanca de trémolo",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 13
+    },
+    {
+      "name": "Bombo",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 4
+    },
+    {
+      "name": "Sintetizador",
+      "facet": "Instrumentos y equipo del rock",
+      "known_at": 8
+    },
+    {
+      "name": "Heavy metal",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 6
+    },
+    {
+      "name": "Punk",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 6
+    },
+    {
+      "name": "Grunge",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 10
+    },
+    {
+      "name": "Rock progresivo",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 12
+    },
+    {
+      "name": "Glam rock",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 11
+    },
+    {
+      "name": "Hard rock",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 9
+    },
+    {
+      "name": "Rock alternativo",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 10
+    },
+    {
+      "name": "Rock psicodélico",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 12
+    },
+    {
+      "name": "Thrash metal",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 13
+    },
+    {
+      "name": "Pop punk",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 11
+    },
+    {
+      "name": "Indie rock",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 11
+    },
+    {
+      "name": "Rockabilly",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 12
+    },
+    {
+      "name": "Emo",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 10
+    },
+    {
+      "name": "Nu metal",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 13
+    },
+    {
+      "name": "Blues",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 8
+    },
+    {
+      "name": "Surf rock",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 12
+    },
+    {
+      "name": "Rock sinfónico",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 12
+    },
+    {
+      "name": "Britpop",
+      "facet": "Subgéneros y estilos de rock",
+      "known_at": 13
+    },
+    {
+      "name": "Bohemian Rhapsody",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 6
+    },
+    {
+      "name": "We Will Rock You",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Smoke on the Water",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Smells Like Teen Spirit",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Sweet Child O' Mine",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Stairway to Heaven",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Back in Black",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Highway to Hell",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Hotel California",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Yellow Submarine",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Hey Jude",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Johnny B. Goode",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Jailhouse Rock",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "(I Can't Get No) Satisfaction",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Another Brick in the Wall",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Livin' on a Prayer",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Thunderstruck",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "We Are the Champions",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Enter Sandman",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 11
+    },
+    {
+      "name": "In the End",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Don't Stop Me Now",
+      "facet": "Canciones y riffs famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Abbey Road",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 9
+    },
+    {
+      "name": "The Dark Side of the Moon",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 10
+    },
+    {
+      "name": "Nevermind",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Sgt. Pepper's Lonely Hearts Club Band",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Appetite for Destruction",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Led Zeppelin IV",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "The Wall",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 12
+    },
+    {
+      "name": "London Calling",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Hybrid Theory",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "A Night at the Opera",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Rumours",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Master of Puppets",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "American Idiot",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 12
+    },
+    {
+      "name": "Sticky Fingers",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Born in the U.S.A.",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Paranoid",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "The Joshua Tree",
+      "facet": "Álbumes y portadas icónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Soda Stereo",
+      "facet": "Rock en español y latino",
+      "known_at": 9
+    },
+    {
+      "name": "Gustavo Cerati",
+      "facet": "Rock en español y latino",
+      "known_at": 10
+    },
+    {
+      "name": "Caifanes",
+      "facet": "Rock en español y latino",
+      "known_at": 12
+    },
+    {
+      "name": "Café Tacvba",
+      "facet": "Rock en español y latino",
+      "known_at": 11
+    },
+    {
+      "name": "Los Fabulosos Cadillacs",
+      "facet": "Rock en español y latino",
+      "known_at": 11
+    },
+    {
+      "name": "Héroes del Silencio",
+      "facet": "Rock en español y latino",
+      "known_at": 12
+    },
+    {
+      "name": "Charly García",
+      "facet": "Rock en español y latino",
+      "known_at": 12
+    },
+    {
+      "name": "Fito Páez",
+      "facet": "Rock en español y latino",
+      "known_at": 12
+    },
+    {
+      "name": "Enanitos Verdes",
+      "facet": "Rock en español y latino",
+      "known_at": 11
+    },
+    {
+      "name": "Los Prisioneros",
+      "facet": "Rock en español y latino",
+      "known_at": 12
+    },
+    {
+      "name": "Molotov",
+      "facet": "Rock en español y latino",
+      "known_at": 11
+    },
+    {
+      "name": "Hombres G",
+      "facet": "Rock en español y latino",
+      "known_at": 11
+    },
+    {
+      "name": "Zoé",
+      "facet": "Rock en español y latino",
+      "known_at": 11
+    },
+    {
+      "name": "El Tri",
+      "facet": "Rock en español y latino",
+      "known_at": 13
+    },
+    {
+      "name": "Los Pericos",
+      "facet": "Rock en español y latino",
+      "known_at": 13
+    },
+    {
+      "name": "Bersuit Vergarabat",
+      "facet": "Rock en español y latino",
+      "known_at": 13
+    },
+    {
+      "name": "Rata Blanca",
+      "facet": "Rock en español y latino",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Ríos",
+      "facet": "Rock en español y latino",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Calamaro",
+      "facet": "Rock en español y latino",
+      "known_at": 12
+    },
+    {
+      "name": "Los Bunkers",
+      "facet": "Rock en español y latino",
+      "known_at": 14
+    },
+    {
+      "name": "Aterciopelados",
+      "facet": "Rock colombiano",
+      "known_at": 9
+    },
+    {
+      "name": "Andrea Echeverri",
+      "facet": "Rock colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Juanes",
+      "facet": "Rock colombiano",
+      "known_at": 4
+    },
+    {
+      "name": "Ekhymosis",
+      "facet": "Rock colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Elkin Ramírez",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "1280 Almas",
+      "facet": "Rock colombiano",
+      "known_at": 12
+    },
+    {
+      "name": "Doctor Krápula",
+      "facet": "Rock colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Diamante Eléctrico",
+      "facet": "Rock colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Los Speakers",
+      "facet": "Rock colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Los Yetis",
+      "facet": "Rock colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Pestilencia",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "La Derecha",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Compañía Ilimitada",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Superlitio",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Masacre",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Don Tetto",
+      "facet": "Rock colombiano",
+      "known_at": 13
+    },
+    {
+      "name": "Hora Local",
+      "facet": "Rock colombiano",
+      "known_at": 14
+    },
+    {
+      "name": "Woodstock",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Live Aid",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Rock in Rio",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 10
+    },
+    {
+      "name": "Lollapalooza",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Glastonbury",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Concierto en la azotea de los Beatles",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Wacken Open Air",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Monterey",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Festival de la Isla de Wight",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Festival Estéreo Picnic",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Download Festival",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Vive Latino",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 12
+    },
+    {
+      "name": "Cosquín Rock",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Coachella",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 9
+    },
+    {
+      "name": "Hellfest",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Los Beatles en The Ed Sullivan Show",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Pink Floyd en Pompeya",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Concierto de los Rolling Stones en La Habana",
+      "facet": "Festivales y conciertos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Beatlemanía",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 9
+    },
+    {
+      "name": "Invasión británica",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Sun Records",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 14
+    },
+    {
+      "name": "Memphis",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 12
+    },
+    {
+      "name": "The Cavern Club",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 13
+    },
+    {
+      "name": "Rhythm and blues",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Sister Rosetta Tharpe",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 14
+    },
+    {
+      "name": "Salón de la Fama del Rock and Roll",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 12
+    },
+    {
+      "name": "Club de los 27",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 12,
+      "retired": "unaskable: El concepto gira en torno a muertes de músicos; no apto para el tono familiar."
+    },
+    {
+      "name": "Rocola",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 7
+    },
+    {
+      "name": "Tocadiscos",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 4
+    },
+    {
+      "name": "Contracultura",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 13
+    },
+    {
+      "name": "Cleveland",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 14
+    },
+    {
+      "name": "Seattle",
+      "facet": "Historia y orígenes del rock",
+      "known_at": 11
+    },
+    {
+      "name": "Guitar Hero",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Rock Band",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Escuela de rock",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 8
+    },
+    {
+      "name": "Bohemian Rhapsody (película)",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Wayne's World",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Rocketman",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Marty McFly",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Rocksmith",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Tenacious D",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "The Blues Brothers",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Brütal Legend",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Alvin y las ardillas",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Elvis (película)",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "This Is Spinal Tap",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "Awesome Mix",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Eddie Munson",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Scott Pilgrim",
+      "facet": "Rock en el cine y los videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Cuernos del rock",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 5
+    },
+    {
+      "name": "Pogo",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 10
+    },
+    {
+      "name": "Headbanging",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 9
+    },
+    {
+      "name": "Guitarra de aire",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 7
+    },
+    {
+      "name": "Stage diving",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 10
+    },
+    {
+      "name": "Solo de guitarra",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 5
+    },
+    {
+      "name": "Riff",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 9
+    },
+    {
+      "name": "Roadie",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 12
+    },
+    {
+      "name": "Groupie",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 13
+    },
+    {
+      "name": "Unplugged",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 11
+    },
+    {
+      "name": "Power chord",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 12
+    },
+    {
+      "name": "Acople",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 12
+    },
+    {
+      "name": "Lengua de los Rolling Stones",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 6
+    },
+    {
+      "name": "Chaqueta de cuero",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 4
+    },
+    {
+      "name": "Gira",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 6
+    },
+    {
+      "name": "Banda de garaje",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 8
+    },
+    {
+      "name": "Cover",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 7
+    },
+    {
+      "name": "Backstage",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 8
+    },
+    {
+      "name": "Balada rockera",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 11
+    },
+    {
+      "name": "Destrozar la guitarra en el escenario",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 9
+    },
+    {
+      "name": "Setlist",
+      "facet": "Jerga y cultura rockera",
+      "known_at": 12
+    }
+  ]
+}

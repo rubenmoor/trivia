@@ -1,0 +1,437 @@
+{
+  "subcategory": "Estilos arquitectónicos",
+  "facets": [
+    "Arquitectura de la Antigüedad",
+    "Románico y gótico",
+    "Renacimiento y barroco",
+    "Arquitectura islámica y mudéjar",
+    "Arquitectura asiática tradicional",
+    "Arquitectura precolombina",
+    "Colonial y republicano en Colombia",
+    "Neoclásico e historicismo",
+    "Art nouveau y art déco",
+    "Modernismo y arquitectos del siglo XX",
+    "Rascacielos y arquitectura contemporánea",
+    "Elementos y términos arquitectónicos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Puerta de Ishtar",
+      "facet": "Arquitectura de la Antigüedad",
+      "known_at": 13
+    },
+    {
+      "name": "Orden dórico",
+      "facet": "Arquitectura de la Antigüedad",
+      "known_at": 10
+    },
+    {
+      "name": "Orden jónico",
+      "facet": "Arquitectura de la Antigüedad",
+      "known_at": 10
+    },
+    {
+      "name": "Orden corintio",
+      "facet": "Arquitectura de la Antigüedad",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro de Epidauro",
+      "facet": "Arquitectura de la Antigüedad",
+      "known_at": 13
+    },
+    {
+      "name": "Termas romanas",
+      "facet": "Arquitectura de la Antigüedad",
+      "known_at": 9
+    },
+    {
+      "name": "Catedral de Notre Dame de París",
+      "facet": "Románico y gótico",
+      "known_at": 4
+    },
+    {
+      "name": "Bóveda de crucería",
+      "facet": "Románico y gótico",
+      "known_at": 12
+    },
+    {
+      "name": "Sainte-Chapelle",
+      "facet": "Románico y gótico",
+      "known_at": 13
+    },
+    {
+      "name": "Castillo medieval",
+      "facet": "Románico y gótico",
+      "known_at": 2
+    },
+    {
+      "name": "Monasterio",
+      "facet": "Románico y gótico",
+      "known_at": 5
+    },
+    {
+      "name": "Cúpula de Santa María del Fiore",
+      "facet": "Renacimiento y barroco",
+      "known_at": 10
+    },
+    {
+      "name": "Andrea Palladio",
+      "facet": "Renacimiento y barroco",
+      "known_at": 13
+    },
+    {
+      "name": "Columnata de la plaza de San Pedro",
+      "facet": "Renacimiento y barroco",
+      "known_at": 11
+    },
+    {
+      "name": "Galería de los Espejos",
+      "facet": "Renacimiento y barroco",
+      "known_at": 10
+    },
+    {
+      "name": "Francesco Borromini",
+      "facet": "Renacimiento y barroco",
+      "known_at": 14
+    },
+    {
+      "name": "Bramante",
+      "facet": "Renacimiento y barroco",
+      "known_at": 14
+    },
+    {
+      "name": "Arco de herradura",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 10
+    },
+    {
+      "name": "Mocárabes",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 14
+    },
+    {
+      "name": "Arabesco",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 10
+    },
+    {
+      "name": "Patio de los Leones",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 10
+    },
+    {
+      "name": "Artesonado",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 13
+    },
+    {
+      "name": "Alcázar de Sevilla",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 11
+    },
+    {
+      "name": "Generalife",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 13
+    },
+    {
+      "name": "Celosía",
+      "facet": "Arquitectura islámica y mudéjar",
+      "known_at": 11
+    },
+    {
+      "name": "Pabellón Dorado",
+      "facet": "Arquitectura asiática tradicional",
+      "known_at": 11
+    },
+    {
+      "name": "Shoji",
+      "facet": "Arquitectura asiática tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Estupa",
+      "facet": "Arquitectura asiática tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Hanok",
+      "facet": "Arquitectura asiática tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide de Kukulkán",
+      "facet": "Arquitectura precolombina",
+      "known_at": 9
+    },
+    {
+      "name": "San Agustín",
+      "facet": "Arquitectura precolombina",
+      "known_at": 8
+    },
+    {
+      "name": "Chan Chan",
+      "facet": "Arquitectura precolombina",
+      "known_at": 13
+    },
+    {
+      "name": "Bohío",
+      "facet": "Arquitectura precolombina",
+      "known_at": 8
+    },
+    {
+      "name": "Cancha inca",
+      "facet": "Arquitectura precolombina",
+      "known_at": 14
+    },
+    {
+      "name": "Barrio La Candelaria",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Popayán",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Barichara",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "Balcón colonial",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Casa de patio",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Palacio de la Cultura Rafael Uribe Uribe",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de San Francisco",
+      "facet": "Colonial y republicano en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Iglesia de la Madeleine",
+      "facet": "Neoclásico e historicismo",
+      "known_at": 14
+    },
+    {
+      "name": "Crystal Palace",
+      "facet": "Neoclásico e historicismo",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Bellas Artes de Ciudad de México",
+      "facet": "Neoclásico e historicismo",
+      "known_at": 11
+    },
+    {
+      "name": "Park Güell",
+      "facet": "Art nouveau y art déco",
+      "known_at": 9
+    },
+    {
+      "name": "Casa Batlló",
+      "facet": "Art nouveau y art déco",
+      "known_at": 10
+    },
+    {
+      "name": "Casa Milà",
+      "facet": "Art nouveau y art déco",
+      "known_at": 11
+    },
+    {
+      "name": "Trencadís",
+      "facet": "Art nouveau y art déco",
+      "known_at": 12
+    },
+    {
+      "name": "Victor Horta",
+      "facet": "Art nouveau y art déco",
+      "known_at": 14
+    },
+    {
+      "name": "Bocas del metro de París",
+      "facet": "Art nouveau y art déco",
+      "known_at": 12
+    },
+    {
+      "name": "Hector Guimard",
+      "facet": "Art nouveau y art déco",
+      "known_at": 15
+    },
+    {
+      "name": "Miami Beach art déco",
+      "facet": "Art nouveau y art déco",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de la Música Catalana",
+      "facet": "Art nouveau y art déco",
+      "known_at": 13
+    },
+    {
+      "name": "Secesión de Viena",
+      "facet": "Art nouveau y art déco",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Rennie Mackintosh",
+      "facet": "Art nouveau y art déco",
+      "known_at": 15
+    },
+    {
+      "name": "Casa de la Cascada",
+      "facet": "Modernismo y arquitectos del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Jørn Utzon",
+      "facet": "Modernismo y arquitectos del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Villa Savoye",
+      "facet": "Modernismo y arquitectos del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Luis Barragán",
+      "facet": "Modernismo y arquitectos del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "The Gherkin",
+      "facet": "Rascacielos y arquitectura contemporánea",
+      "known_at": 12
+    },
+    {
+      "name": "Premio Pritzker",
+      "facet": "Rascacielos y arquitectura contemporánea",
+      "known_at": 13
+    },
+    {
+      "name": "Edificio Home Insurance",
+      "facet": "Rascacielos y arquitectura contemporánea",
+      "known_at": 14
+    },
+    {
+      "name": "Estadio Nacional de Pekín",
+      "facet": "Rascacielos y arquitectura contemporánea",
+      "known_at": 10
+    },
+    {
+      "name": "Frontón",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Capitel",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Fuste",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Cariátide",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Clave",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Planta",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 7
+    },
+    {
+      "name": "Maqueta",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 5
+    },
+    {
+      "name": "Plano arquitectónico",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 6
+    },
+    {
+      "name": "Pórtico",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Columnata",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Pilastra",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Escalera de caracol",
+      "facet": "Elementos y términos arquitectónicos",
+      "known_at": 3
+    }
+  ]
+}

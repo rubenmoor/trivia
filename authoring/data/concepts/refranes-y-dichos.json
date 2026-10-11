@@ -1,0 +1,993 @@
+{
+  "subcategory": "Refranes y dichos",
+  "facets": [
+    "Refranes con animales",
+    "Refranes de comida y cocina",
+    "Refranes sobre el tiempo y el clima",
+    "Dichos colombianos y regionalismos",
+    "Expresiones con partes del cuerpo",
+    "Refranes de consejos y sabiduría",
+    "Frases hechas y modismos cotidianos",
+    "Comparaciones populares (más… que…)",
+    "Dichos de dinero y trabajo",
+    "Origen histórico de las expresiones",
+    "Refranes y frases en libros y películas",
+    "Equivalentes de refranes en otros idiomas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Camarón que se duerme se lo lleva la corriente",
+      "facet": "Refranes con animales",
+      "known_at": 4
+    },
+    {
+      "name": "A caballo regalado no se le mira el colmillo",
+      "facet": "Refranes con animales",
+      "known_at": 8
+    },
+    {
+      "name": "En boca cerrada no entran moscas",
+      "facet": "Refranes con animales",
+      "known_at": 4
+    },
+    {
+      "name": "Matar dos pájaros de un tiro",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Aunque la mona se vista de seda, mona se queda",
+      "facet": "Refranes con animales",
+      "known_at": 7
+    },
+    {
+      "name": "Dar gato por liebre",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Cada oveja con su pareja",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "El pez por la boca muere",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Al perro flaco todo son pulgas",
+      "facet": "Refranes con animales",
+      "known_at": 11
+    },
+    {
+      "name": "Ser la oveja negra",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Como pez en el agua",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "Cría cuervos y te sacarán los ojos",
+      "facet": "Refranes con animales",
+      "known_at": 11
+    },
+    {
+      "name": "Al pan, pan y al vino, vino",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "A falta de pan, buenas son tortas",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Las cuentas claras y el chocolate espeso",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Ser pan comido",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Pedir peras al olmo",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Contigo pan y cebolla",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Ser la media naranja",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Estar como agua para chocolate",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 11
+    },
+    {
+      "name": "Barriga llena, corazón contento",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 4
+    },
+    {
+      "name": "No hay que llorar sobre la leche derramada",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 7
+    },
+    {
+      "name": "El que con leche se quema, ve una vaca y llora",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Sacar las castañas del fuego",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 13
+    },
+    {
+      "name": "Estar en su salsa",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Ser harina de otro costal",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Del plato a la boca se cae la sopa",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Pan para hoy, hambre para mañana",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Nunca llueve a gusto de todos",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 8
+    },
+    {
+      "name": "Hasta el cuarenta de mayo no te quites el sayo",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 14
+    },
+    {
+      "name": "Más vale tarde que nunca",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 3
+    },
+    {
+      "name": "No por mucho madrugar amanece más temprano",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 8
+    },
+    {
+      "name": "Al que madruga Dios lo ayuda",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 3
+    },
+    {
+      "name": "El tiempo lo cura todo",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 5
+    },
+    {
+      "name": "Mañana será otro día",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 4
+    },
+    {
+      "name": "Hacer castillos en el aire",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 9
+    },
+    {
+      "name": "Dar papaya",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 7
+    },
+    {
+      "name": "Qué pena con usted",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 8
+    },
+    {
+      "name": "Hacer una vaca",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 8
+    },
+    {
+      "name": "Bacano",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 5
+    },
+    {
+      "name": "Parcero",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 6
+    },
+    {
+      "name": "Al que no quiere caldo se le dan dos tazas",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 9
+    },
+    {
+      "name": "El que nace pa' tamal, del cielo le caen las hojas",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 11
+    },
+    {
+      "name": "Mamar gallo",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 10
+    },
+    {
+      "name": "Chévere",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 3
+    },
+    {
+      "name": "Llave",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 9
+    },
+    {
+      "name": "Hacerse el de la oreja mocha",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 13
+    },
+    {
+      "name": "Paila",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 8
+    },
+    {
+      "name": "Ñapa",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 7
+    },
+    {
+      "name": "Berraco",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 8
+    },
+    {
+      "name": "Sacar la piedra",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 9
+    },
+    {
+      "name": "Embarrarla",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 7
+    },
+    {
+      "name": "Pedir cacao",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 10
+    },
+    {
+      "name": "Estar en la olla",
+      "facet": "Dichos colombianos y regionalismos",
+      "known_at": 9
+    },
+    {
+      "name": "Tomar el pelo",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Costar un ojo de la cara",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "Meter la pata",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "Estar con el agua al cuello",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Echar una mano",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "No tener pelos en la lengua",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Ser uña y mugre",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Hablar por los codos",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "Poner los pelos de punta",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Ojos que no ven, corazón que no siente",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Con el corazón en la mano",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "Dar el brazo a torcer",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Hacerse agua la boca",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "Estar hasta las narices",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Empezar con el pie derecho",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 5
+    },
+    {
+      "name": "Hacer de tripas corazón",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 12
+    },
+    {
+      "name": "Tener sangre fría",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Dar la espalda",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Estar en boca de todos",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 8
+    },
+    {
+      "name": "Tener buen ojo",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Rascarse la barriga",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 7
+    },
+    {
+      "name": "Dime con quién andas y te diré quién eres",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 5
+    },
+    {
+      "name": "No dejes para mañana lo que puedas hacer hoy",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "Más sabe el diablo por viejo que por diablo",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "El que busca encuentra",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "Cuando el río suena, piedras lleva",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 7
+    },
+    {
+      "name": "Agua que no has de beber, déjala correr",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "No hay mal que por bien no venga",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 7
+    },
+    {
+      "name": "Quien mucho abarca poco aprieta",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "Del dicho al hecho hay mucho trecho",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "Haz bien y no mires a quién",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "En casa de herrero, cuchillo de palo",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "Obras son amores y no buenas razones",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 12
+    },
+    {
+      "name": "No hay peor sordo que el que no quiere oír",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "Poco a poco se va lejos",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 5
+    },
+    {
+      "name": "Quien siembra vientos recoge tempestades",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 11
+    },
+    {
+      "name": "Más vale prevenir que lamentar",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "La unión hace la fuerza",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "Errar es humano",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "No todo lo que brilla es oro",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 6
+    },
+    {
+      "name": "Donde fueres, haz lo que vieres",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 11
+    },
+    {
+      "name": "Más vale maña que fuerza",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "Ponerse las pilas",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 5
+    },
+    {
+      "name": "Tirar la toalla",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 7
+    },
+    {
+      "name": "Ir al grano",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 6
+    },
+    {
+      "name": "Dar en el clavo",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 7
+    },
+    {
+      "name": "Echar leña al fuego",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 8
+    },
+    {
+      "name": "Buscar una aguja en un pajar",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 6
+    },
+    {
+      "name": "Hacer la vista gorda",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 9
+    },
+    {
+      "name": "Tirar la casa por la ventana",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 8
+    },
+    {
+      "name": "Estar entre la espada y la pared",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 9
+    },
+    {
+      "name": "Poner los puntos sobre las íes",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 10
+    },
+    {
+      "name": "La gota que rebosó la copa",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 8
+    },
+    {
+      "name": "Quedarse en blanco",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 5
+    },
+    {
+      "name": "Consultar con la almohada",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 7
+    },
+    {
+      "name": "Pagar los platos rotos",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 9
+    },
+    {
+      "name": "Hacer borrón y cuenta nueva",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 10
+    },
+    {
+      "name": "Dormirse en los laureles",
+      "facet": "Frases hechas y modismos cotidianos",
+      "known_at": 11
+    },
+    {
+      "name": "Más viejo que Matusalén",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 11
+    },
+    {
+      "name": "Más terco que una mula",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 6
+    },
+    {
+      "name": "Más feliz que una lombriz",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 4
+    },
+    {
+      "name": "Más lento que una tortuga",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 2
+    },
+    {
+      "name": "Más bueno que el pan",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 7
+    },
+    {
+      "name": "Más largo que un día sin pan",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 7
+    },
+    {
+      "name": "Más claro que el agua",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 4
+    },
+    {
+      "name": "Más pobre que una rata",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 8
+    },
+    {
+      "name": "Más sordo que una tapia",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 10
+    },
+    {
+      "name": "Más loco que una cabra",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 6
+    },
+    {
+      "name": "Rápido como un rayo",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 3
+    },
+    {
+      "name": "Más fresco que una lechuga",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 7
+    },
+    {
+      "name": "Dormir como un tronco",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 5
+    },
+    {
+      "name": "Rojo como un tomate",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 3
+    },
+    {
+      "name": "Más perdido que el hijo de Lindbergh",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 14,
+      "retired": "unaskable: El dicho se refiere al secuestro de un bebé; no es apropiado para un juego familiar."
+    },
+    {
+      "name": "Fuerte como un roble",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 6
+    },
+    {
+      "name": "Más listo que el hambre",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 12
+    },
+    {
+      "name": "Más aburrido que una ostra",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 8
+    },
+    {
+      "name": "Más sabio que Salomón",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 11
+    },
+    {
+      "name": "Comer como un pajarito",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 4
+    },
+    {
+      "name": "Llorar como una Magdalena",
+      "facet": "Comparaciones populares (más… que…)",
+      "known_at": 11
+    },
+    {
+      "name": "El tiempo es oro",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Poderoso caballero es don Dinero",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 14
+    },
+    {
+      "name": "Ganarse el pan con el sudor de la frente",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 9
+    },
+    {
+      "name": "Dinero llama dinero",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "Estar sin un peso",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Hacer su agosto",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 12
+    },
+    {
+      "name": "Sin prisa pero sin pausa",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 9
+    },
+    {
+      "name": "No hay atajo sin trabajo",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 10
+    },
+    {
+      "name": "Quien guarda halla",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 10
+    },
+    {
+      "name": "Manirroto",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 13
+    },
+    {
+      "name": "Pagar el pato",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 10
+    },
+    {
+      "name": "Tener la sartén por el mango",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 10
+    },
+    {
+      "name": "El dinero no crece en los árboles",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 3
+    },
+    {
+      "name": "El dinero no da la felicidad",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Lo barato sale caro",
+      "facet": "Dichos de dinero y trabajo",
+      "known_at": 6
+    },
+    {
+      "name": "Lavarse las manos",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Poner una pica en Flandes",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 14
+    },
+    {
+      "name": "Estar en el limbo",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Quemar las naves",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 12
+    },
+    {
+      "name": "Prueba de fuego",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Ser un don Juan",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Abrir la caja de Pandora",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 10
+    },
+    {
+      "name": "Las cosas de palacio van despacio",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Estar sin blanca",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 14
+    },
+    {
+      "name": "Salvado por la campana",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 8
+    },
+    {
+      "name": "Ser un cero a la izquierda",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 9
+    },
+    {
+      "name": "Armarse la de San Quintín",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 14
+    },
+    {
+      "name": "Espada de Damocles",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Ir de Herodes a Pilatos",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 14
+    },
+    {
+      "name": "Meterse en camisa de once varas",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Ojo por ojo, diente por diente",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 9
+    },
+    {
+      "name": "Dorar la píldora",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Estar en Babia",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Trabajo de Hércules",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Al infinito y más allá",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 2
+    },
+    {
+      "name": "Elemental, mi querido Watson",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 8
+    },
+    {
+      "name": "Hasta la vista, baby",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 10
+    },
+    {
+      "name": "Mi precioso",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 8
+    },
+    {
+      "name": "It's raining cats and dogs",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 10
+    },
+    {
+      "name": "Break a leg",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 12
+    },
+    {
+      "name": "Piece of cake",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 9
+    },
+    {
+      "name": "The early bird catches the worm",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 11
+    },
+    {
+      "name": "When in Rome, do as the Romans do",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 11
+    },
+    {
+      "name": "C'est la vie",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 9
+    },
+    {
+      "name": "Don't judge a book by its cover",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 10
+    },
+    {
+      "name": "Actions speak louder than words",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 12
+    },
+    {
+      "name": "Once in a blue moon",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 12
+    },
+    {
+      "name": "Bon appétit",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 6
+    },
+    {
+      "name": "Saudade",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 13
+    },
+    {
+      "name": "The ball is in your court",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 12
+    },
+    {
+      "name": "Spill the beans",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 13
+    },
+    {
+      "name": "When pigs fly",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 12
+    },
+    {
+      "name": "Ich verstehe nur Bahnhof",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 15
+    }
+  ]
+}

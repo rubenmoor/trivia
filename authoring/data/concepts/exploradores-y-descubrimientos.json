@@ -1,0 +1,412 @@
+{
+  "subcategory": "Exploradores y descubrimientos",
+  "facets": [
+    "Viajes de Colón y llegada a América",
+    "Conquistadores y fundación de ciudades",
+    "Expediciones científicas y naturalistas",
+    "Vueltas al mundo y navegantes",
+    "Exploradores de la Antigüedad y Edad Media",
+    "Rutas comerciales y especias",
+    "Exploración polar",
+    "Montañas, selvas y ríos explorados",
+    "Barcos, mapas e instrumentos de navegación",
+    "Carrera espacial y exploración del espacio",
+    "Exploración de las profundidades del mar",
+    "Descubrimientos arqueológicos famosos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "La Pinta",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 6
+    },
+    {
+      "name": "12 de octubre de 1492",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 3
+    },
+    {
+      "name": "Día de la Raza",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 5
+    },
+    {
+      "name": "Isabel la Católica",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 8
+    },
+    {
+      "name": "Reyes Católicos",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 8
+    },
+    {
+      "name": "Puerto de Palos",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 12
+    },
+    {
+      "name": "Rodrigo de Triana",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 13
+    },
+    {
+      "name": "Martín Alonso Pinzón",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 13
+    },
+    {
+      "name": "Indias Occidentales",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 10
+    },
+    {
+      "name": "Taínos",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 11
+    },
+    {
+      "name": "Capitulaciones de Santa Fe",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 14
+    },
+    {
+      "name": "Huevo de Colón",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 12
+    },
+    {
+      "name": "Cuarto viaje de Colón",
+      "facet": "Viajes de Colón y llegada a América",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo Jiménez de Quesada",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 10
+    },
+    {
+      "name": "Sebastián de Belalcázar",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro de Heredia",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Nikolaus Federmann",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Vasco Núñez de Balboa",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro de Valdivia",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Atahualpa",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "La Malinche",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Cuzco",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Santafé de Bogotá",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 6
+    },
+    {
+      "name": "Leyenda de El Dorado",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 5
+    },
+    {
+      "name": "Muiscas",
+      "facet": "Conquistadores y fundación de ciudades",
+      "known_at": 7
+    },
+    {
+      "name": "El origen de las especies",
+      "facet": "Expediciones científicas y naturalistas",
+      "known_at": 10
+    },
+    {
+      "name": "Real Expedición Botánica",
+      "facet": "Expediciones científicas y naturalistas",
+      "known_at": 9
+    },
+    {
+      "name": "Comisión Corográfica",
+      "facet": "Expediciones científicas y naturalistas",
+      "known_at": 13
+    },
+    {
+      "name": "Joseph Banks",
+      "facet": "Expediciones científicas y naturalistas",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Pigafetta",
+      "facet": "Vueltas al mundo y navegantes",
+      "known_at": 14
+    },
+    {
+      "name": "Vitus Bering",
+      "facet": "Vueltas al mundo y navegantes",
+      "known_at": 13
+    },
+    {
+      "name": "Navegantes polinesios",
+      "facet": "Vueltas al mundo y navegantes",
+      "known_at": 10
+    },
+    {
+      "name": "Libro de las maravillas",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 12
+    },
+    {
+      "name": "Kublai Kan",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 11
+    },
+    {
+      "name": "Drakar",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 8
+    },
+    {
+      "name": "Vinland",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 13
+    },
+    {
+      "name": "Xuanzang",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Fenicios",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 9
+    },
+    {
+      "name": "Hannón el Navegante",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Piteas",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 15
+    },
+    {
+      "name": "Heródoto",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 11
+    },
+    {
+      "name": "Alejandro Magno",
+      "facet": "Exploradores de la Antigüedad y Edad Media",
+      "known_at": 8
+    },
+    {
+      "name": "Nuez moscada",
+      "facet": "Rutas comerciales y especias",
+      "known_at": 7
+    },
+    {
+      "name": "Islas Molucas",
+      "facet": "Rutas comerciales y especias",
+      "known_at": 12
+    },
+    {
+      "name": "Caravana de camellos",
+      "facet": "Rutas comerciales y especias",
+      "known_at": 4
+    },
+    {
+      "name": "Tratado de Tordesillas",
+      "facet": "Rutas comerciales y especias",
+      "known_at": 11
+    },
+    {
+      "name": "Compañía Neerlandesa de las Indias Orientales",
+      "facet": "Rutas comerciales y especias",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Peary",
+      "facet": "Exploración polar",
+      "known_at": 14
+    },
+    {
+      "name": "Matthew Henson",
+      "facet": "Exploración polar",
+      "known_at": 15
+    },
+    {
+      "name": "Fridtjof Nansen",
+      "facet": "Exploración polar",
+      "known_at": 14
+    },
+    {
+      "name": "Fram",
+      "facet": "Exploración polar",
+      "known_at": 14
+    },
+    {
+      "name": "Expedición Franklin",
+      "facet": "Exploración polar",
+      "known_at": 14
+    },
+    {
+      "name": "Trineo de perros",
+      "facet": "Exploración polar",
+      "known_at": 3
+    },
+    {
+      "name": "Base científica antártica",
+      "facet": "Exploración polar",
+      "known_at": 10
+    },
+    {
+      "name": "Sherpas",
+      "facet": "Montañas, selvas y ríos explorados",
+      "known_at": 9
+    },
+    {
+      "name": "Nacimiento del Nilo",
+      "facet": "Montañas, selvas y ríos explorados",
+      "known_at": 12
+    },
+    {
+      "name": "Henry Morton Stanley",
+      "facet": "Montañas, selvas y ríos explorados",
+      "known_at": 13
+    },
+    {
+      "name": "Hiram Bingham",
+      "facet": "Montañas, selvas y ríos explorados",
+      "known_at": 13
+    },
+    {
+      "name": "Jimmie Angel",
+      "facet": "Montañas, selvas y ríos explorados",
+      "known_at": 14
+    },
+    {
+      "name": "John Harrison",
+      "facet": "Barcos, mapas e instrumentos de navegación",
+      "known_at": 15
+    },
+    {
+      "name": "Cuaderno de bitácora",
+      "facet": "Barcos, mapas e instrumentos de navegación",
+      "known_at": 10
+    },
+    {
+      "name": "Mapa de Juan de la Cosa",
+      "facet": "Barcos, mapas e instrumentos de navegación",
+      "known_at": 14
+    },
+    {
+      "name": "Mapa de Waldseemüller",
+      "facet": "Barcos, mapas e instrumentos de navegación",
+      "known_at": 15
+    },
+    {
+      "name": "Guerra Fría",
+      "facet": "Carrera espacial y exploración del espacio",
+      "known_at": 10
+    },
+    {
+      "name": "Calypso",
+      "facet": "Exploración de las profundidades del mar",
+      "known_at": 13
+    },
+    {
+      "name": "Escafandra autónoma",
+      "facet": "Exploración de las profundidades del mar",
+      "known_at": 10
+    },
+    {
+      "name": "Batisfera",
+      "facet": "Exploración de las profundidades del mar",
+      "known_at": 15
+    },
+    {
+      "name": "Heinrich Schliemann",
+      "facet": "Descubrimientos arqueológicos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Rollos del mar Muerto",
+      "facet": "Descubrimientos arqueológicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Cuevas de Altamira",
+      "facet": "Descubrimientos arqueológicos famosos",
+      "known_at": 10
+    }
+  ]
+}

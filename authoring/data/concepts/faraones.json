@@ -1,0 +1,642 @@
+{
+  "subcategory": "Faraones",
+  "facets": [
+    "Faraones famosos",
+    "Pirámides y la Esfinge",
+    "Momias y momificación",
+    "Tumbas y el Valle de los Reyes",
+    "Dioses y religión del faraón",
+    "Jeroglíficos y escritura",
+    "Símbolos y atuendo real",
+    "Reinas y familia real",
+    "El río Nilo y la vida cotidiana",
+    "Templos y monumentos",
+    "Arqueología y descubrimientos",
+    "Faraones en cine y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tutankamón",
+      "facet": "Faraones famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Micerinos",
+      "facet": "Faraones famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Zoser",
+      "facet": "Faraones famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ptolomeo I",
+      "facet": "Faraones famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Snefru",
+      "facet": "Faraones famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Pepi II",
+      "facet": "Faraones famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Psamético I",
+      "facet": "Faraones famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Gran Pirámide de Guiza",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 4
+    },
+    {
+      "name": "Gran Esfinge de Guiza",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 3
+    },
+    {
+      "name": "Meseta de Guiza",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 8
+    },
+    {
+      "name": "Siete maravillas del mundo antiguo",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 7
+    },
+    {
+      "name": "Nariz de la Esfinge",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 8
+    },
+    {
+      "name": "Piedra caliza",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 8
+    },
+    {
+      "name": "Rampas de construcción",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 9
+    },
+    {
+      "name": "Pirámide de Kefrén",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámide escalonada de Saqqara",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámide de Micerinos",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámides de Nubia",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Galería",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 13
+    },
+    {
+      "name": "Pirámide roja",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 14
+    },
+    {
+      "name": "Piramidión",
+      "facet": "Pirámides y la Esfinge",
+      "known_at": 14
+    },
+    {
+      "name": "Momificación",
+      "facet": "Momias y momificación",
+      "known_at": 3
+    },
+    {
+      "name": "Vendas de lino",
+      "facet": "Momias y momificación",
+      "known_at": 4
+    },
+    {
+      "name": "Máscara funeraria",
+      "facet": "Momias y momificación",
+      "known_at": 5
+    },
+    {
+      "name": "Amuletos funerarios",
+      "facet": "Momias y momificación",
+      "known_at": 10
+    },
+    {
+      "name": "Momia de cocodrilo",
+      "facet": "Momias y momificación",
+      "known_at": 10
+    },
+    {
+      "name": "Vasos canópicos",
+      "facet": "Momias y momificación",
+      "known_at": 11
+    },
+    {
+      "name": "Momia de Ramsés II",
+      "facet": "Momias y momificación",
+      "known_at": 13
+    },
+    {
+      "name": "Tumba de Tutankamón",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 7
+    },
+    {
+      "name": "Cámara funeraria",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 8
+    },
+    {
+      "name": "Ajuar funerario",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 10
+    },
+    {
+      "name": "Tumba de Nefertari",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 13
+    },
+    {
+      "name": "Barca solar de Keops",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 13
+    },
+    {
+      "name": "Deir el-Medina",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 14
+    },
+    {
+      "name": "Falsa puerta",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 14
+    },
+    {
+      "name": "Tumba de Seti I",
+      "facet": "Tumbas y el Valle de los Reyes",
+      "known_at": 14
+    },
+    {
+      "name": "Sumo sacerdote",
+      "facet": "Dioses y religión del faraón",
+      "known_at": 10
+    },
+    {
+      "name": "Hathor",
+      "facet": "Dioses y religión del faraón",
+      "known_at": 11
+    },
+    {
+      "name": "Amón",
+      "facet": "Dioses y religión del faraón",
+      "known_at": 11
+    },
+    {
+      "name": "Atón",
+      "facet": "Dioses y religión del faraón",
+      "known_at": 12
+    },
+    {
+      "name": "Ptah",
+      "facet": "Dioses y religión del faraón",
+      "known_at": 13
+    },
+    {
+      "name": "Jepri",
+      "facet": "Dioses y religión del faraón",
+      "known_at": 13
+    },
+    {
+      "name": "Jeroglífico",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 4
+    },
+    {
+      "name": "Escriba",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 6
+    },
+    {
+      "name": "Cartucho",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 11
+    },
+    {
+      "name": "Paleta de escriba",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 12
+    },
+    {
+      "name": "Escritura hierática",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 13
+    },
+    {
+      "name": "Escritura demótica",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 13
+    },
+    {
+      "name": "Cálamo",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 13
+    },
+    {
+      "name": "Ostracon",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Young",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 14
+    },
+    {
+      "name": "Idioma copto",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 14
+    },
+    {
+      "name": "Determinativo",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 15
+    },
+    {
+      "name": "Escritura bustrofedón",
+      "facet": "Jeroglíficos y escritura",
+      "known_at": 15
+    },
+    {
+      "name": "Escarabajo sagrado",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 6
+    },
+    {
+      "name": "Anj",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 8
+    },
+    {
+      "name": "Barba postiza",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 8
+    },
+    {
+      "name": "Peluca egipcia",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 8
+    },
+    {
+      "name": "Delineador kohl",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 9
+    },
+    {
+      "name": "Nemes",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 10
+    },
+    {
+      "name": "Ureo",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 10
+    },
+    {
+      "name": "Báculo y mayal",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 11
+    },
+    {
+      "name": "Doble corona",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 11
+    },
+    {
+      "name": "Corona blanca",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 12
+    },
+    {
+      "name": "Corona roja",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 12
+    },
+    {
+      "name": "Collar usej",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 12
+    },
+    {
+      "name": "Shendyt",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 13
+    },
+    {
+      "name": "Corona azul",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 14
+    },
+    {
+      "name": "Pilar Djed",
+      "facet": "Símbolos y atuendo real",
+      "known_at": 15
+    },
+    {
+      "name": "Nefertari",
+      "facet": "Reinas y familia real",
+      "known_at": 11
+    },
+    {
+      "name": "Matrimonio entre hermanos",
+      "facet": "Reinas y familia real",
+      "known_at": 11
+    },
+    {
+      "name": "Gran esposa real",
+      "facet": "Reinas y familia real",
+      "known_at": 12
+    },
+    {
+      "name": "Cesarión",
+      "facet": "Reinas y familia real",
+      "known_at": 13
+    },
+    {
+      "name": "Dinastía ptolemaica",
+      "facet": "Reinas y familia real",
+      "known_at": 13
+    },
+    {
+      "name": "Tiy",
+      "facet": "Reinas y familia real",
+      "known_at": 14
+    },
+    {
+      "name": "Anjesenamón",
+      "facet": "Reinas y familia real",
+      "known_at": 14
+    },
+    {
+      "name": "Ptolomeo XIII",
+      "facet": "Reinas y familia real",
+      "known_at": 14
+    },
+    {
+      "name": "Sobekneferu",
+      "facet": "Reinas y familia real",
+      "known_at": 15
+    },
+    {
+      "name": "Arsinoe II",
+      "facet": "Reinas y familia real",
+      "known_at": 15
+    },
+    {
+      "name": "Gato doméstico",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Ladrillos de adobe",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Limo",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Cerveza egipcia",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Faluca",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 11
+    },
+    {
+      "name": "Represa de Asuán",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Calendario egipcio",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Loto azul",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Lago Nasser",
+      "facet": "El río Nilo y la vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Obelisco",
+      "facet": "Templos y monumentos",
+      "known_at": 8
+    },
+    {
+      "name": "Abu Simbel",
+      "facet": "Templos y monumentos",
+      "known_at": 9
+    },
+    {
+      "name": "Templo de Karnak",
+      "facet": "Templos y monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Templo de Luxor",
+      "facet": "Templos y monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Menfis",
+      "facet": "Templos y monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Avenida de las esfinges",
+      "facet": "Templos y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Obelisco de la Plaza de la Concordia",
+      "facet": "Templos y monumentos",
+      "known_at": 12
+    },
+    {
+      "name": "Colosos de Memnón",
+      "facet": "Templos y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de Hatshepsut",
+      "facet": "Templos y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Sala hipóstila",
+      "facet": "Templos y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de Filae",
+      "facet": "Templos y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Aguja de Cleopatra",
+      "facet": "Templos y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Amarna",
+      "facet": "Templos y monumentos",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de Edfu",
+      "facet": "Templos y monumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Templo de Dendera",
+      "facet": "Templos y monumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Pilono",
+      "facet": "Templos y monumentos",
+      "known_at": 14
+    },
+    {
+      "name": "Escáner de momias",
+      "facet": "Arqueología y descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Pruebas de ADN de momias",
+      "facet": "Arqueología y descubrimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad dorada perdida de Luxor",
+      "facet": "Arqueología y descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Templo del desierto de Minecraft",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Plants vs. Zombies 2: Antiguo Egipto",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Astérix y Cleopatra",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Moon Knight",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Tomb Raider",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Cleopatra (película de 1963)",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Elizabeth Taylor",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Los diez mandamientos",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Stargate",
+      "facet": "Faraones en cine y juegos",
+      "known_at": 13
+    }
+  ]
+}

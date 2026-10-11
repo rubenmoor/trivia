@@ -1,0 +1,1027 @@
+{
+  "subcategory": "Harry Potter",
+  "facets": [
+    "Harry y sus amigos",
+    "Profesores y personal de Hogwarts",
+    "Villanos y mortífagos",
+    "Casas y vida en Hogwarts",
+    "Hechizos y maldiciones",
+    "Pociones y dulces mágicos",
+    "Objetos y artefactos mágicos",
+    "Criaturas y mascotas mágicas",
+    "Lugares del mundo mágico",
+    "Quidditch y juegos mágicos",
+    "Libros, autora y películas",
+    "Animales fantásticos y mundo ampliado"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 3,
+      "history": 2,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Luna Lovegood",
+      "facet": "Harry y sus amigos",
+      "known_at": 6
+    },
+    {
+      "name": "Ginny Weasley",
+      "facet": "Harry y sus amigos",
+      "known_at": 5
+    },
+    {
+      "name": "Fred y George Weasley",
+      "facet": "Harry y sus amigos",
+      "known_at": 5
+    },
+    {
+      "name": "Cedric Diggory",
+      "facet": "Harry y sus amigos",
+      "known_at": 7
+    },
+    {
+      "name": "Cho Chang",
+      "facet": "Harry y sus amigos",
+      "known_at": 8
+    },
+    {
+      "name": "Seamus Finnigan",
+      "facet": "Harry y sus amigos",
+      "known_at": 10
+    },
+    {
+      "name": "Dean Thomas",
+      "facet": "Harry y sus amigos",
+      "known_at": 11
+    },
+    {
+      "name": "Sirius Black",
+      "facet": "Harry y sus amigos",
+      "known_at": 6
+    },
+    {
+      "name": "Molly Weasley",
+      "facet": "Harry y sus amigos",
+      "known_at": 6
+    },
+    {
+      "name": "Arthur Weasley",
+      "facet": "Harry y sus amigos",
+      "known_at": 7
+    },
+    {
+      "name": "Lily Potter",
+      "facet": "Harry y sus amigos",
+      "known_at": 6
+    },
+    {
+      "name": "James Potter",
+      "facet": "Harry y sus amigos",
+      "known_at": 6
+    },
+    {
+      "name": "Dudley Dursley",
+      "facet": "Harry y sus amigos",
+      "known_at": 6
+    },
+    {
+      "name": "Vernon Dursley",
+      "facet": "Harry y sus amigos",
+      "known_at": 8
+    },
+    {
+      "name": "Petunia Dursley",
+      "facet": "Harry y sus amigos",
+      "known_at": 8
+    },
+    {
+      "name": "Percy Weasley",
+      "facet": "Harry y sus amigos",
+      "known_at": 9
+    },
+    {
+      "name": "Oliver Wood",
+      "facet": "Harry y sus amigos",
+      "known_at": 10
+    },
+    {
+      "name": "Ejército de Dumbledore",
+      "facet": "Harry y sus amigos",
+      "known_at": 8
+    },
+    {
+      "name": "Cicatriz de rayo",
+      "facet": "Harry y sus amigos",
+      "known_at": 3
+    },
+    {
+      "name": "Remus Lupin",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 7
+    },
+    {
+      "name": "Gilderoy Lockhart",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Quirinus Quirrell",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Horace Slughorn",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 10
+    },
+    {
+      "name": "Pomona Sprout",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 10
+    },
+    {
+      "name": "Filius Flitwick",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Sybill Trelawney",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Argus Filch",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Alastor Moody",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Madame Pomfrey",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 11
+    },
+    {
+      "name": "Madame Hooch",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 11
+    },
+    {
+      "name": "Firenze",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 12
+    },
+    {
+      "name": "Cuthbert Binns",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 13
+    },
+    {
+      "name": "Madame Pince",
+      "facet": "Profesores y personal de Hogwarts",
+      "known_at": 14
+    },
+    {
+      "name": "Tom Riddle",
+      "facet": "Villanos y mortífagos",
+      "known_at": 6
+    },
+    {
+      "name": "Narcisa Malfoy",
+      "facet": "Villanos y mortífagos",
+      "known_at": 10
+    },
+    {
+      "name": "Fenrir Greyback",
+      "facet": "Villanos y mortífagos",
+      "known_at": 12
+    },
+    {
+      "name": "Barty Crouch Jr.",
+      "facet": "Villanos y mortífagos",
+      "known_at": 11
+    },
+    {
+      "name": "Crabbe y Goyle",
+      "facet": "Villanos y mortífagos",
+      "known_at": 9
+    },
+    {
+      "name": "Marca Tenebrosa",
+      "facet": "Villanos y mortífagos",
+      "known_at": 8
+    },
+    {
+      "name": "Igor Karkarov",
+      "facet": "Villanos y mortífagos",
+      "known_at": 12
+    },
+    {
+      "name": "Regulus Black",
+      "facet": "Villanos y mortífagos",
+      "known_at": 13
+    },
+    {
+      "name": "Antonin Dolohov",
+      "facet": "Villanos y mortífagos",
+      "known_at": 14
+    },
+    {
+      "name": "Hermanos Carrow",
+      "facet": "Villanos y mortífagos",
+      "known_at": 14
+    },
+    {
+      "name": "Copa de las Casas",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Puntos de las casas",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 6
+    },
+    {
+      "name": "Gran Comedor",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 5
+    },
+    {
+      "name": "Escaleras móviles",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 6
+    },
+    {
+      "name": "Sala común de Gryffindor",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Prefecto",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 10
+    },
+    {
+      "name": "Torneo de los Tres Magos",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Baile de Navidad",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Godric Gryffindor",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Salazar Slytherin",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Helga Hufflepuff",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 11
+    },
+    {
+      "name": "Rowena Ravenclaw",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 11
+    },
+    {
+      "name": "Nick Casi Decapitado",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 8
+    },
+    {
+      "name": "Peeves",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 10
+    },
+    {
+      "name": "Defensa Contra las Artes Oscuras",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 7
+    },
+    {
+      "name": "Herbología",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Transformaciones",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 9
+    },
+    {
+      "name": "Adivinación",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 10
+    },
+    {
+      "name": "TIMOS",
+      "facet": "Casas y vida en Hogwarts",
+      "known_at": 12
+    },
+    {
+      "name": "Lumos",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 4
+    },
+    {
+      "name": "Alohomora",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 5
+    },
+    {
+      "name": "Accio",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 7
+    },
+    {
+      "name": "Patronus",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 7
+    },
+    {
+      "name": "Petrificus Totalus",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Riddikulus",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 8
+    },
+    {
+      "name": "Obliviate",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Reparo",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Nox",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Desmaius",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Maldiciones imperdonables",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 10
+    },
+    {
+      "name": "Crucio",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 11
+    },
+    {
+      "name": "Imperio",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 11
+    },
+    {
+      "name": "Sectumsempra",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 11
+    },
+    {
+      "name": "Aparición",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Animago",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Morsmordre",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Muffliato",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Episkey",
+      "facet": "Hechizos y maldiciones",
+      "known_at": 14
+    },
+    {
+      "name": "Cerveza de mantequilla",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 5
+    },
+    {
+      "name": "Caldero",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 5
+    },
+    {
+      "name": "Zumo de calabaza",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 6
+    },
+    {
+      "name": "Poción multijugos",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 7
+    },
+    {
+      "name": "Sortilegios Weasley",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Felix Felicis",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Filtro de amor",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Veritaserum",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Amortentia",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Bezoar",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Poción crecehuesos",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Surtido Saltaclases",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Varitas de regaliz",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Poción matalobos",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Caramelos longuilinguos",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Poción de los muertos en vida",
+      "facet": "Pociones y dulces mágicos",
+      "known_at": 13
+    },
+    {
+      "name": "Nimbus 2000",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 7
+    },
+    {
+      "name": "Saeta de Fuego",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Reliquias de la Muerte",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Vociferador",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Cáliz de Fuego",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Espada de Gryffindor",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Ford Anglia volador",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Espejo de Oesed",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Diario de Tom Riddle",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "El Profeta",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Piedra de la Resurrección",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Recordadora",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Traslador",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Pensadero",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Desiluminador",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 11
+    },
+    {
+      "name": "Diadema de Ravenclaw",
+      "facet": "Objetos y artefactos mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Duendes de Gringotts",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 5
+    },
+    {
+      "name": "Elfo doméstico",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 6
+    },
+    {
+      "name": "Fluffy",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 7
+    },
+    {
+      "name": "Scabbers",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 7
+    },
+    {
+      "name": "Buckbeak",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 8
+    },
+    {
+      "name": "Fawkes",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 8
+    },
+    {
+      "name": "Aragog",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 9
+    },
+    {
+      "name": "Gnomo de jardín",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 9
+    },
+    {
+      "name": "Kreacher",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 10
+    },
+    {
+      "name": "Colacuerno húngaro",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 11
+    },
+    {
+      "name": "Grawp",
+      "facet": "Criaturas y mascotas mágicas",
+      "known_at": 12
+    },
+    {
+      "name": "Bosque Prohibido",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 5
+    },
+    {
+      "name": "Gringotts",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 6
+    },
+    {
+      "name": "Cámara de los Secretos",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 6
+    },
+    {
+      "name": "Hogsmeade",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 7
+    },
+    {
+      "name": "Ministerio de Magia",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 7
+    },
+    {
+      "name": "Privet Drive",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 8
+    },
+    {
+      "name": "Ollivanders",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 8
+    },
+    {
+      "name": "Caldero Chorreante",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 9
+    },
+    {
+      "name": "Casa de los Gritos",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 9
+    },
+    {
+      "name": "Sala de los Menesteres",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 9
+    },
+    {
+      "name": "Grimmauld Place",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 10
+    },
+    {
+      "name": "Valle de Godric",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 10
+    },
+    {
+      "name": "Las Tres Escobas",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 10
+    },
+    {
+      "name": "Torre de Astronomía",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 10
+    },
+    {
+      "name": "Callejón Knockturn",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 11
+    },
+    {
+      "name": "Durmstrang",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 11
+    },
+    {
+      "name": "Beauxbatons",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 11
+    },
+    {
+      "name": "Hospital San Mungo",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 12
+    },
+    {
+      "name": "Cabeza de Puerco",
+      "facet": "Lugares del mundo mágico",
+      "known_at": 13
+    },
+    {
+      "name": "Ajedrez mágico",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 6
+    },
+    {
+      "name": "Viktor Krum",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 8
+    },
+    {
+      "name": "Bludger",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Quaffle",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Guardián",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Golpeador",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Cazador",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Mundial de Quidditch",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Copa de Quidditch",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 9
+    },
+    {
+      "name": "Club de Duelo",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 10
+    },
+    {
+      "name": "Snap explosivo",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 12
+    },
+    {
+      "name": "Quidditch muggle",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 13
+    },
+    {
+      "name": "Gobstones",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 14
+    },
+    {
+      "name": "Chudley Cannons",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 14
+    },
+    {
+      "name": "Amago de Wronski",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 14
+    },
+    {
+      "name": "Ludo Bagman",
+      "facet": "Quidditch y juegos mágicos",
+      "known_at": 14
+    },
+    {
+      "name": "Harry Potter y la piedra filosofal",
+      "facet": "Libros, autora y películas",
+      "known_at": 4
+    },
+    {
+      "name": "Harry Potter y las Reliquias de la Muerte",
+      "facet": "Libros, autora y películas",
+      "known_at": 8
+    },
+    {
+      "name": "Harry Potter y el legado maldito",
+      "facet": "Libros, autora y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Rupert Grint",
+      "facet": "Libros, autora y películas",
+      "known_at": 9
+    },
+    {
+      "name": "Tom Felton",
+      "facet": "Libros, autora y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Alan Rickman",
+      "facet": "Libros, autora y películas",
+      "known_at": 11
+    },
+    {
+      "name": "Maggie Smith",
+      "facet": "Libros, autora y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Robbie Coltrane",
+      "facet": "Libros, autora y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Chris Columbus",
+      "facet": "Libros, autora y películas",
+      "known_at": 13
+    },
+    {
+      "name": "David Yates",
+      "facet": "Libros, autora y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Tema de Hedwig",
+      "facet": "Libros, autora y películas",
+      "known_at": 9
+    },
+    {
+      "name": "Bloomsbury",
+      "facet": "Libros, autora y películas",
+      "known_at": 14
+    },
+    {
+      "name": "Warner Bros. Studio Tour Londres",
+      "facet": "Libros, autora y películas",
+      "known_at": 12
+    },
+    {
+      "name": "Newt Scamander",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 8
+    },
+    {
+      "name": "Escarbato",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 9
+    },
+    {
+      "name": "Animales fantásticos y dónde encontrarlos",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 9
+    },
+    {
+      "name": "Hogwarts Legacy",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 8
+    },
+    {
+      "name": "Cuento de los tres hermanos",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 10
+    },
+    {
+      "name": "Sangre limpia",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 10
+    },
+    {
+      "name": "Jacob Kowalski",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 11
+    },
+    {
+      "name": "Squib",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 11
+    },
+    {
+      "name": "Albus Severus Potter",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 11
+    },
+    {
+      "name": "Eddie Redmayne",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 12
+    },
+    {
+      "name": "Tina Goldstein",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 12
+    },
+    {
+      "name": "Queenie Goldstein",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 12
+    },
+    {
+      "name": "Scorpius Malfoy",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 12
+    },
+    {
+      "name": "Credence Barebone",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 13
+    },
+    {
+      "name": "Obscurial",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 13
+    },
+    {
+      "name": "Los cuentos de Beedle el Bardo",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 13
+    },
+    {
+      "name": "Teddy Lupin",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 13
+    },
+    {
+      "name": "MACUSA",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 14
+    },
+    {
+      "name": "Ilvermorny",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 14
+    },
+    {
+      "name": "Quidditch a través de los tiempos",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 14
+    },
+    {
+      "name": "Leta Lestrange",
+      "facet": "Animales fantásticos y mundo ampliado",
+      "known_at": 14
+    }
+  ]
+}

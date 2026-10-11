@@ -1,0 +1,924 @@
+{
+  "subcategory": "Rugby",
+  "facets": [
+    "Reglas y puntuación",
+    "Posiciones y jugadores",
+    "Jugadas y formaciones",
+    "Balón, campo y equipamiento",
+    "Copa del Mundo de Rugby",
+    "Selecciones y apodos famosos",
+    "Leyendas y figuras del rugby",
+    "Rugby 7 y Juegos Olímpicos",
+    "Origen e historia del rugby",
+    "Tradiciones y cultura (haka)",
+    "Rugby en Colombia y Latinoamérica",
+    "Rugby en cine y videojuegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 5,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Conversión",
+      "facet": "Reglas y puntuación",
+      "known_at": 9
+    },
+    {
+      "name": "Golpe de castigo",
+      "facet": "Reglas y puntuación",
+      "known_at": 10
+    },
+    {
+      "name": "Drop",
+      "facet": "Reglas y puntuación",
+      "known_at": 10
+    },
+    {
+      "name": "Pase adelantado",
+      "facet": "Reglas y puntuación",
+      "known_at": 7
+    },
+    {
+      "name": "Avant",
+      "facet": "Reglas y puntuación",
+      "known_at": 11
+    },
+    {
+      "name": "Fuera de juego",
+      "facet": "Reglas y puntuación",
+      "known_at": 7
+    },
+    {
+      "name": "Ensayo de castigo",
+      "facet": "Reglas y puntuación",
+      "known_at": 13
+    },
+    {
+      "name": "Placaje alto",
+      "facet": "Reglas y puntuación",
+      "known_at": 11
+    },
+    {
+      "name": "Regla de la ventaja",
+      "facet": "Reglas y puntuación",
+      "known_at": 10
+    },
+    {
+      "name": "Punto bonus",
+      "facet": "Reglas y puntuación",
+      "known_at": 13
+    },
+    {
+      "name": "TMO",
+      "facet": "Reglas y puntuación",
+      "known_at": 11
+    },
+    {
+      "name": "Pilier",
+      "facet": "Posiciones y jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Talonador",
+      "facet": "Posiciones y jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Segunda línea",
+      "facet": "Posiciones y jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Ala",
+      "facet": "Posiciones y jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Número 8",
+      "facet": "Posiciones y jugadores",
+      "known_at": 11
+    },
+    {
+      "name": "Medio scrum",
+      "facet": "Posiciones y jugadores",
+      "known_at": 11
+    },
+    {
+      "name": "Centro",
+      "facet": "Posiciones y jugadores",
+      "known_at": 11
+    },
+    {
+      "name": "Wing",
+      "facet": "Posiciones y jugadores",
+      "known_at": 10
+    },
+    {
+      "name": "Zaguero",
+      "facet": "Posiciones y jugadores",
+      "known_at": 11
+    },
+    {
+      "name": "Delanteros",
+      "facet": "Posiciones y jugadores",
+      "known_at": 9
+    },
+    {
+      "name": "Tres cuartos",
+      "facet": "Posiciones y jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Pateador",
+      "facet": "Posiciones y jugadores",
+      "known_at": 7
+    },
+    {
+      "name": "Entrenador",
+      "facet": "Posiciones y jugadores",
+      "known_at": 3
+    },
+    {
+      "name": "Primera línea",
+      "facet": "Posiciones y jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Saque de lateral",
+      "facet": "Jugadas y formaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Ruck",
+      "facet": "Jugadas y formaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Maul",
+      "facet": "Jugadas y formaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Placaje",
+      "facet": "Jugadas y formaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Garryowen",
+      "facet": "Jugadas y formaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Grubber",
+      "facet": "Jugadas y formaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Hand-off",
+      "facet": "Jugadas y formaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Side-step",
+      "facet": "Jugadas y formaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Offload",
+      "facet": "Jugadas y formaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Saque inicial",
+      "facet": "Jugadas y formaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Drop-out",
+      "facet": "Jugadas y formaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Patada cruzada",
+      "facet": "Jugadas y formaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Box kick",
+      "facet": "Jugadas y formaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Pick and go",
+      "facet": "Jugadas y formaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Pase en espiral",
+      "facet": "Jugadas y formaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Balón ovalado",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 2
+    },
+    {
+      "name": "Postes en H",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Zona de ingoal",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Línea de 22 metros",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Línea de mitad de campo",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 6
+    },
+    {
+      "name": "Tee de pateo",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Protector bucal",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 8
+    },
+    {
+      "name": "Casco de rugby",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Hombreras",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Banderines",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Gilbert",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Vejiga de cerdo",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 13
+    },
+    {
+      "name": "Línea de touch",
+      "facet": "Balón, campo y equipamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Copa Webb Ellis",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 11
+    },
+    {
+      "name": "Mundial de Rugby 1987",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de Rugby 1995",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Rugby 2003",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de Rugby 2011",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de Rugby 2015",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de Rugby 2019",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Rugby 2023",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Rugby 2027",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Milagro de Brighton",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Stade de France",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 11
+    },
+    {
+      "name": "Eden Park",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Twickenham",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Ellis Park",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Copa del Mundo Femenina de Rugby",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 12
+    },
+    {
+      "name": "World Rugby",
+      "facet": "Copa del Mundo de Rugby",
+      "known_at": 11
+    },
+    {
+      "name": "All Blacks",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Springboks",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Los Pumas",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Wallabies",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "XV de Francia",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Rosa inglesa",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Trébol irlandés",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Brave Blossoms",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Flying Fijians",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Manu Samoa",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Leones Británicos e Irlandeses",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Barbarians",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Los Teros",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Los Cóndores",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Seis Naciones",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Rugby Championship",
+      "facet": "Selecciones y apodos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Jonah Lomu",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Richie McCaw",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Dan Carter",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Jonny Wilkinson",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Siya Kolisi",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "François Pienaar",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Hugo Porta",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Agustín Pichot",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Felipe Contepomi",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 15
+    },
+    {
+      "name": "Brian O'Driscoll",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Gareth Edwards",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "David Campese",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Serge Blanco",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Martin Johnson",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Antoine Dupont",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Bryan Habana",
+      "facet": "Leyendas y figuras del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Rugby 7 en Río 2016",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Rugby 7 en Tokio 2020",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby 7 en París 2024",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby en los Juegos Olímpicos de 1924",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Serie Mundial de Rugby 7",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Hong Kong Sevens",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Dubái Sevens",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Copa del Mundo de Rugby 7",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 14
+    },
+    {
+      "name": "Melrose Sevens",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 15
+    },
+    {
+      "name": "Rugby 7 femenino",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby touch",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Rugby tag",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Rugby playa",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 12
+    },
+    {
+      "name": "Rugby en silla de ruedas",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 11
+    },
+    {
+      "name": "Rugby 7 en los Juegos Panamericanos",
+      "facet": "Rugby 7 y Juegos Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "William Webb Ellis",
+      "facet": "Origen e historia del rugby",
+      "known_at": 11
+    },
+    {
+      "name": "Escuela de Rugby",
+      "facet": "Origen e historia del rugby",
+      "known_at": 12
+    },
+    {
+      "name": "Rugby union",
+      "facet": "Origen e historia del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby league",
+      "facet": "Origen e historia del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby Football Union",
+      "facet": "Origen e historia del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Gran División de 1895",
+      "facet": "Origen e historia del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Fútbol americano",
+      "facet": "Origen e historia del rugby",
+      "known_at": 5
+    },
+    {
+      "name": "Fútbol australiano",
+      "facet": "Origen e historia del rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Primer partido internacional de rugby",
+      "facet": "Origen e historia del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Profesionalismo en el rugby",
+      "facet": "Origen e historia del rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Harpastum",
+      "facet": "Origen e historia del rugby",
+      "known_at": 15
+    },
+    {
+      "name": "Soule",
+      "facet": "Origen e historia del rugby",
+      "known_at": 15
+    },
+    {
+      "name": "Tom Brown's School Days",
+      "facet": "Origen e historia del rugby",
+      "known_at": 15
+    },
+    {
+      "name": "Ka Mate",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 13
+    },
+    {
+      "name": "Kapa o Pango",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 14
+    },
+    {
+      "name": "Te Rauparaha",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 15
+    },
+    {
+      "name": "Sipi Tau",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 15
+    },
+    {
+      "name": "Cibi",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 15
+    },
+    {
+      "name": "Siva Tau",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 15
+    },
+    {
+      "name": "Tercer tiempo",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 12
+    },
+    {
+      "name": "Pasillo de honor",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 11
+    },
+    {
+      "name": "Swing Low, Sweet Chariot",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 14
+    },
+    {
+      "name": "Flower of Scotland",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 14
+    },
+    {
+      "name": "Helecho plateado",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 12
+    },
+    {
+      "name": "Cap",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 14
+    },
+    {
+      "name": "Calcutta Cup",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 14
+    },
+    {
+      "name": "Bledisloe Cup",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 14
+    },
+    {
+      "name": "Respeto al árbitro",
+      "facet": "Tradiciones y cultura (haka)",
+      "known_at": 10
+    },
+    {
+      "name": "Los Tucanes",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Federación Colombiana de Rugby",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Juegos Suramericanos",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Rugby subacuático",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Sudamérica Rugby",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Super Rugby Américas",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Unión Argentina de Rugby",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Jaguares",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Dogos XV",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Peñarol Rugby",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Selknam",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Chile en el Mundial de Rugby 2023",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Tupís",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "Bronce de Argentina en 2007",
+      "facet": "Rugby en Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Invictus",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Matt Damon",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "La sociedad de la nieve",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Viven",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Old Christians Club",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Astérix en Bretaña",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 13
+    },
+    {
+      "name": "Forever Strong",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "All or Nothing: New Zealand All Blacks",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Chasing Great",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "All Out!!",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "Try Knights",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "Jonah Lomu Rugby",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15,
+      "retired": "unaskable: Videojuego de 1997 demasiado oscuro; no tengo datos fiables más allá de que Lomu era neozelandés."
+    },
+    {
+      "name": "Rugby 08",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "Rugby 25",
+      "facet": "Rugby en cine y videojuegos",
+      "known_at": 15,
+      "retired": "unaskable: Videojuego reciente y oscuro; no hay datos estables ni conocidos para la familia."
+    }
+  ]
+}

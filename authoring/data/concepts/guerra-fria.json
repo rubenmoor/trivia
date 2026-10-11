@@ -1,0 +1,982 @@
+{
+  "subcategory": "Guerra Fría",
+  "facets": [
+    "Bloques y alianzas",
+    "Líderes y personajes",
+    "Carrera espacial",
+    "Carrera armamentista y nuclear",
+    "Muro de Berlín y Alemania dividida",
+    "Crisis y conflictos calientes",
+    "Espionaje y servicios secretos",
+    "Propaganda, cine y cultura pop",
+    "Vocabulario y conceptos clave",
+    "América Latina en la Guerra Fría",
+    "Vida cotidiana a ambos lados",
+    "Fin de la Guerra Fría"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "ONU",
+      "facet": "Bloques y alianzas",
+      "known_at": 6
+    },
+    {
+      "name": "República Popular China",
+      "facet": "Bloques y alianzas",
+      "known_at": 8
+    },
+    {
+      "name": "Pacto de Varsovia",
+      "facet": "Bloques y alianzas",
+      "known_at": 10
+    },
+    {
+      "name": "Consejo de Seguridad de la ONU",
+      "facet": "Bloques y alianzas",
+      "known_at": 10
+    },
+    {
+      "name": "Doctrina Truman",
+      "facet": "Bloques y alianzas",
+      "known_at": 12
+    },
+    {
+      "name": "Bloque del Este",
+      "facet": "Bloques y alianzas",
+      "known_at": 11
+    },
+    {
+      "name": "Movimiento de Países No Alineados",
+      "facet": "Bloques y alianzas",
+      "known_at": 13
+    },
+    {
+      "name": "Comecon",
+      "facet": "Bloques y alianzas",
+      "known_at": 14
+    },
+    {
+      "name": "SEATO",
+      "facet": "Bloques y alianzas",
+      "known_at": 15
+    },
+    {
+      "name": "John F. Kennedy",
+      "facet": "Líderes y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Fidel Castro",
+      "facet": "Líderes y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Che Guevara",
+      "facet": "Líderes y personajes",
+      "known_at": 7
+    },
+    {
+      "name": "Juan Pablo II",
+      "facet": "Líderes y personajes",
+      "known_at": 9
+    },
+    {
+      "name": "Mao Zedong",
+      "facet": "Líderes y personajes",
+      "known_at": 10
+    },
+    {
+      "name": "Nikita Jruschov",
+      "facet": "Líderes y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Ronald Reagan",
+      "facet": "Líderes y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Richard Nixon",
+      "facet": "Líderes y personajes",
+      "known_at": 11
+    },
+    {
+      "name": "Margaret Thatcher",
+      "facet": "Líderes y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Kim Il-sung",
+      "facet": "Líderes y personajes",
+      "known_at": 12
+    },
+    {
+      "name": "Leonid Brézhnev",
+      "facet": "Líderes y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Ho Chi Minh",
+      "facet": "Líderes y personajes",
+      "known_at": 13
+    },
+    {
+      "name": "Caminata espacial",
+      "facet": "Carrera espacial",
+      "known_at": 7
+    },
+    {
+      "name": "Belka y Strelka",
+      "facet": "Carrera espacial",
+      "known_at": 12
+    },
+    {
+      "name": "Vostok 1",
+      "facet": "Carrera espacial",
+      "known_at": 13
+    },
+    {
+      "name": "Misión Apolo-Soyuz",
+      "facet": "Carrera espacial",
+      "known_at": 13
+    },
+    {
+      "name": "Programa Gemini",
+      "facet": "Carrera espacial",
+      "known_at": 14
+    },
+    {
+      "name": "Explorer 1",
+      "facet": "Carrera espacial",
+      "known_at": 14
+    },
+    {
+      "name": "Hongo nuclear",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 6
+    },
+    {
+      "name": "Botón nuclear",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 7
+    },
+    {
+      "name": "Chernóbil",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 8
+    },
+    {
+      "name": "Submarino nuclear",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 9
+    },
+    {
+      "name": "Refugio antinuclear",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 9
+    },
+    {
+      "name": "AK-47",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 9
+    },
+    {
+      "name": "Bomba de hidrógeno",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 11
+    },
+    {
+      "name": "Teléfono rojo",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 11
+    },
+    {
+      "name": "Reloj del Apocalipsis",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 11
+    },
+    {
+      "name": "Misil balístico intercontinental",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 12
+    },
+    {
+      "name": "Bomba del Zar",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 12
+    },
+    {
+      "name": "Bombardero B-52",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 12
+    },
+    {
+      "name": "Destrucción mutua asegurada",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 13
+    },
+    {
+      "name": "Iniciativa de Defensa Estratégica",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 13
+    },
+    {
+      "name": "Tratado de No Proliferación Nuclear",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 13
+    },
+    {
+      "name": "Tratado de Prohibición Parcial de Ensayos Nucleares",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 14
+    },
+    {
+      "name": "Tratado INF",
+      "facet": "Carrera armamentista y nuclear",
+      "known_at": 14
+    },
+    {
+      "name": "Alemania Oriental",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 9
+    },
+    {
+      "name": "Alemania Occidental",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 9
+    },
+    {
+      "name": "Berlín Oriental",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 9
+    },
+    {
+      "name": "Checkpoint Charlie",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 11
+    },
+    {
+      "name": "Torre de televisión de Berlín",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 11
+    },
+    {
+      "name": "Bloqueo de Berlín",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 12
+    },
+    {
+      "name": "Ich bin ein Berliner",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 12
+    },
+    {
+      "name": "Señor Gorbachov, derribe este muro",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 12
+    },
+    {
+      "name": "Franja de la muerte",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 13
+    },
+    {
+      "name": "Bombarderos de dulces",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 13
+    },
+    {
+      "name": "Ampelmännchen",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 13
+    },
+    {
+      "name": "Erich Honecker",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 14
+    },
+    {
+      "name": "Willy Brandt",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 14
+    },
+    {
+      "name": "Konrad Adenauer",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 14
+    },
+    {
+      "name": "Túnel 57",
+      "facet": "Muro de Berlín y Alemania dividida",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de Vietnam",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 8
+    },
+    {
+      "name": "Crisis de los misiles en Cuba",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 9
+    },
+    {
+      "name": "Guerra de Corea",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Invasión de Bahía de Cochinos",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 11
+    },
+    {
+      "name": "Guerra de Afganistán (1979-1989)",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Paralelo 38",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Zona Desmilitarizada de Corea",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 12
+    },
+    {
+      "name": "Primavera de Praga",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Caída de Saigón",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Agente Naranja",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Helicóptero Huey",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Muyahidines",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 13
+    },
+    {
+      "name": "Revolución húngara de 1956",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 14
+    },
+    {
+      "name": "Crisis de Suez",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 14
+    },
+    {
+      "name": "Ofensiva del Tet",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de Yom Kipur",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra civil de Angola",
+      "facet": "Crisis y conflictos calientes",
+      "known_at": 14
+    },
+    {
+      "name": "CIA",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 6
+    },
+    {
+      "name": "Mensaje cifrado",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 6
+    },
+    {
+      "name": "Agente doble",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 7
+    },
+    {
+      "name": "Escuchas telefónicas",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 7
+    },
+    {
+      "name": "KGB",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 8
+    },
+    {
+      "name": "MI6",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 9
+    },
+    {
+      "name": "Stasi",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 11
+    },
+    {
+      "name": "Microfilm",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 11
+    },
+    {
+      "name": "Avión espía U-2",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 12
+    },
+    {
+      "name": "Matrimonio Rosenberg",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 13
+    },
+    {
+      "name": "Francis Gary Powers",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 13
+    },
+    {
+      "name": "Buzón muerto",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 13
+    },
+    {
+      "name": "Puente Glienicke",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 14
+    },
+    {
+      "name": "Cinco de Cambridge",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 14
+    },
+    {
+      "name": "Kim Philby",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 14
+    },
+    {
+      "name": "Rudolf Abel",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 14
+    },
+    {
+      "name": "Paraguas búlgaro",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 14
+    },
+    {
+      "name": "Cámara Minox",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 14
+    },
+    {
+      "name": "Aldrich Ames",
+      "facet": "Espionaje y servicios secretos",
+      "known_at": 15
+    },
+    {
+      "name": "Call of Duty: Black Ops",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 8
+    },
+    {
+      "name": "Rocky IV",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 9
+    },
+    {
+      "name": "Top Gun",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 10
+    },
+    {
+      "name": "1984 (novela)",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Agáchate y cúbrete",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Olímpicos de Moscú 1980",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Ballet Bolshói",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Olímpicos de Los Ángeles 1984",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Milagro sobre hielo",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Watchmen",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de espías",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Dr. Strangelove",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "Realismo socialista",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "El espía que surgió del frío",
+      "facet": "Propaganda, cine y cultura pop",
+      "known_at": 15
+    },
+    {
+      "name": "Superpotencia",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 8
+    },
+    {
+      "name": "Comunismo",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 9
+    },
+    {
+      "name": "Capitalismo",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 9
+    },
+    {
+      "name": "Carrera armamentista",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 9
+    },
+    {
+      "name": "Tercer Mundo",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 11
+    },
+    {
+      "name": "Disidente",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 12
+    },
+    {
+      "name": "Gulag",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 12
+    },
+    {
+      "name": "Teoría del dominó",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 13
+    },
+    {
+      "name": "Bipolaridad",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 13
+    },
+    {
+      "name": "Estado satélite",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 13
+    },
+    {
+      "name": "Disuasión nuclear",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 13
+    },
+    {
+      "name": "Proletariado",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 13
+    },
+    {
+      "name": "Contención",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 14
+    },
+    {
+      "name": "Distensión",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 14
+    },
+    {
+      "name": "Macartismo",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra subsidiaria",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 14
+    },
+    {
+      "name": "Coexistencia pacífica",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 14
+    },
+    {
+      "name": "Democracia popular",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 14
+    },
+    {
+      "name": "Cortina de bambú",
+      "facet": "Vocabulario y conceptos clave",
+      "known_at": 15
+    },
+    {
+      "name": "Revolución cubana",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 9
+    },
+    {
+      "name": "Bogotazo",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 11
+    },
+    {
+      "name": "Embargo estadounidense a Cuba",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 11
+    },
+    {
+      "name": "Salvador Allende",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 12
+    },
+    {
+      "name": "Augusto Pinochet",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 12
+    },
+    {
+      "name": "Sierra Maestra",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra de las Malvinas",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 12
+    },
+    {
+      "name": "Golpe de Estado en Chile de 1973",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Revolución sandinista",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Frente Nacional",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Batallón Colombia",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Invasión de Panamá",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Yate Granma",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Alianza para el Progreso",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Operación Cóndor",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra civil de El Salvador",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Noriega",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Óscar Romero",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Contras",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Golpe de Estado en Guatemala de 1954",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 15
+    },
+    {
+      "name": "Escuela de las Américas",
+      "facet": "América Latina en la Guerra Fría",
+      "known_at": 15
+    },
+    {
+      "name": "Los Beatles",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 5
+    },
+    {
+      "name": "Televisor en blanco y negro",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 6
+    },
+    {
+      "name": "Rock and roll",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 6
+    },
+    {
+      "name": "Elvis Presley",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 6
+    },
+    {
+      "name": "Hula hoop",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 6
+    },
+    {
+      "name": "Ushanka",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 11
+    },
+    {
+      "name": "Cartilla de racionamiento",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 12
+    },
+    {
+      "name": "Trabant",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 12
+    },
+    {
+      "name": "Lada",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 12
+    },
+    {
+      "name": "Suburbios estadounidenses",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 12
+    },
+    {
+      "name": "Pioneros soviéticos",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 13
+    },
+    {
+      "name": "Blue jeans en la URSS",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 13
+    },
+    {
+      "name": "Pepsi en la URSS",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 13
+    },
+    {
+      "name": "Koljós",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 14
+    },
+    {
+      "name": "Discos en radiografías",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 14
+    },
+    {
+      "name": "Radio Europa Libre",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 14
+    },
+    {
+      "name": "Jruschovka",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 15
+    },
+    {
+      "name": "Kommunalka",
+      "facet": "Vida cotidiana a ambos lados",
+      "known_at": 15
+    },
+    {
+      "name": "Caída del Muro de Berlín",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 8
+    },
+    {
+      "name": "Reunificación alemana",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 11
+    },
+    {
+      "name": "Disolución de la Unión Soviética",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 11
+    },
+    {
+      "name": "Perestroika",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 12
+    },
+    {
+      "name": "Boris Yeltsin",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 12
+    },
+    {
+      "name": "Glásnost",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Solidaridad (sindicato)",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Revoluciones de 1989",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Tratado START",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 13
+    },
+    {
+      "name": "Revolución de Terciopelo",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Cumbre de Reikiavik",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Comunidad de Estados Independientes",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Golpe de agosto de 1991",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Cadena Báltica",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Revolución rumana",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 14
+    },
+    {
+      "name": "Cumbre de Malta",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 15
+    },
+    {
+      "name": "Picnic Paneuropeo",
+      "facet": "Fin de la Guerra Fría",
+      "known_at": 15
+    }
+  ]
+}

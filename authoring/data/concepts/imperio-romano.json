@@ -1,0 +1,1073 @@
+{
+  "subcategory": "Imperio romano",
+  "facets": [
+    "Emperadores y gobernantes",
+    "Fundación y leyendas de Roma",
+    "República, Senado y política",
+    "Ejército y legiones",
+    "Guerras y conquistas",
+    "Monumentos y arquitectura",
+    "Ingeniería: acueductos y calzadas",
+    "Vida cotidiana y comida",
+    "Gladiadores, circo y espectáculos",
+    "Dioses y religión romana",
+    "Latín y herencia romana",
+    "Ciudades y provincias del imperio",
+    "Roma en cine, cómics y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Augusto",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 8
+    },
+    {
+      "name": "Nerón",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 7
+    },
+    {
+      "name": "Calígula",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 10
+    },
+    {
+      "name": "Trajano",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 12
+    },
+    {
+      "name": "Adriano",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 11
+    },
+    {
+      "name": "Marco Aurelio",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 11
+    },
+    {
+      "name": "Constantino",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 11
+    },
+    {
+      "name": "Cómodo",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 11
+    },
+    {
+      "name": "Tiberio",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 13
+    },
+    {
+      "name": "Claudio",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 13
+    },
+    {
+      "name": "Vespasiano",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 13
+    },
+    {
+      "name": "Diocleciano",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 14
+    },
+    {
+      "name": "Teodosio",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 14
+    },
+    {
+      "name": "Rómulo Augústulo",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 14
+    },
+    {
+      "name": "Septimio Severo",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 15
+    },
+    {
+      "name": "Livia",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 15
+    },
+    {
+      "name": "Agripina",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 14
+    },
+    {
+      "name": "Púrpura imperial",
+      "facet": "Emperadores y gobernantes",
+      "known_at": 12
+    },
+    {
+      "name": "Loba capitolina",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 5
+    },
+    {
+      "name": "Eneas",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 11
+    },
+    {
+      "name": "Siete colinas",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 8
+    },
+    {
+      "name": "Monte Palatino",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 12
+    },
+    {
+      "name": "Rapto de las sabinas",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 13
+    },
+    {
+      "name": "753 a. C.",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 13
+    },
+    {
+      "name": "Tarquinio el Soberbio",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Numa Pompilio",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Lucrecia",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Rea Silvia",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Fáustulo",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Ascanio",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Virgilio",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 12
+    },
+    {
+      "name": "Reyes de Roma",
+      "facet": "Fundación y leyendas de Roma",
+      "known_at": 12
+    },
+    {
+      "name": "Julio César",
+      "facet": "República, Senado y política",
+      "known_at": 4
+    },
+    {
+      "name": "Senado romano",
+      "facet": "República, Senado y política",
+      "known_at": 7
+    },
+    {
+      "name": "Cónsul",
+      "facet": "República, Senado y política",
+      "known_at": 11
+    },
+    {
+      "name": "Cicerón",
+      "facet": "República, Senado y política",
+      "known_at": 11
+    },
+    {
+      "name": "Bruto",
+      "facet": "República, Senado y política",
+      "known_at": 9
+    },
+    {
+      "name": "Idus de marzo",
+      "facet": "República, Senado y política",
+      "known_at": 11
+    },
+    {
+      "name": "SPQR",
+      "facet": "República, Senado y política",
+      "known_at": 10
+    },
+    {
+      "name": "Tribuno de la plebe",
+      "facet": "República, Senado y política",
+      "known_at": 13
+    },
+    {
+      "name": "Patricios",
+      "facet": "República, Senado y política",
+      "known_at": 11
+    },
+    {
+      "name": "Plebeyos",
+      "facet": "República, Senado y política",
+      "known_at": 11
+    },
+    {
+      "name": "Dictador romano",
+      "facet": "República, Senado y política",
+      "known_at": 12
+    },
+    {
+      "name": "Triunvirato",
+      "facet": "República, Senado y política",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Antonio",
+      "facet": "República, Senado y política",
+      "known_at": 9
+    },
+    {
+      "name": "Pompeyo",
+      "facet": "República, Senado y política",
+      "known_at": 13
+    },
+    {
+      "name": "Hermanos Graco",
+      "facet": "República, Senado y política",
+      "known_at": 14
+    },
+    {
+      "name": "Catón el Viejo",
+      "facet": "República, Senado y política",
+      "known_at": 14
+    },
+    {
+      "name": "Sila",
+      "facet": "República, Senado y política",
+      "known_at": 14
+    },
+    {
+      "name": "Fasces",
+      "facet": "República, Senado y política",
+      "known_at": 14
+    },
+    {
+      "name": "Legión romana",
+      "facet": "Ejército y legiones",
+      "known_at": 6
+    },
+    {
+      "name": "Legionario",
+      "facet": "Ejército y legiones",
+      "known_at": 6
+    },
+    {
+      "name": "Centurión",
+      "facet": "Ejército y legiones",
+      "known_at": 9
+    },
+    {
+      "name": "Formación tortuga",
+      "facet": "Ejército y legiones",
+      "known_at": 8
+    },
+    {
+      "name": "Scutum",
+      "facet": "Ejército y legiones",
+      "known_at": 11
+    },
+    {
+      "name": "Gladius",
+      "facet": "Ejército y legiones",
+      "known_at": 10
+    },
+    {
+      "name": "Pilum",
+      "facet": "Ejército y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Águila de la legión",
+      "facet": "Ejército y legiones",
+      "known_at": 11
+    },
+    {
+      "name": "Casco con penacho",
+      "facet": "Ejército y legiones",
+      "known_at": 6
+    },
+    {
+      "name": "Balista",
+      "facet": "Ejército y legiones",
+      "known_at": 11
+    },
+    {
+      "name": "Campamento romano",
+      "facet": "Ejército y legiones",
+      "known_at": 12
+    },
+    {
+      "name": "Cohorte",
+      "facet": "Ejército y legiones",
+      "known_at": 12
+    },
+    {
+      "name": "Guardia pretoriana",
+      "facet": "Ejército y legiones",
+      "known_at": 12
+    },
+    {
+      "name": "Cáligas",
+      "facet": "Ejército y legiones",
+      "known_at": 13
+    },
+    {
+      "name": "Cayo Mario",
+      "facet": "Ejército y legiones",
+      "known_at": 15
+    },
+    {
+      "name": "Decimación",
+      "facet": "Ejército y legiones",
+      "known_at": 14
+    },
+    {
+      "name": "Salario",
+      "facet": "Ejército y legiones",
+      "known_at": 11
+    },
+    {
+      "name": "Aníbal",
+      "facet": "Guerras y conquistas",
+      "known_at": 9
+    },
+    {
+      "name": "Guerras púnicas",
+      "facet": "Guerras y conquistas",
+      "known_at": 11
+    },
+    {
+      "name": "Cartago",
+      "facet": "Guerras y conquistas",
+      "known_at": 10
+    },
+    {
+      "name": "Elefantes de guerra",
+      "facet": "Guerras y conquistas",
+      "known_at": 8
+    },
+    {
+      "name": "Vercingétorix",
+      "facet": "Guerras y conquistas",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de Alesia",
+      "facet": "Guerras y conquistas",
+      "known_at": 14
+    },
+    {
+      "name": "Río Rubicón",
+      "facet": "Guerras y conquistas",
+      "known_at": 12
+    },
+    {
+      "name": "Guerra de las Galias",
+      "facet": "Guerras y conquistas",
+      "known_at": 12
+    },
+    {
+      "name": "Bosque de Teutoburgo",
+      "facet": "Guerras y conquistas",
+      "known_at": 15
+    },
+    {
+      "name": "Batalla de Actium",
+      "facet": "Guerras y conquistas",
+      "known_at": 14
+    },
+    {
+      "name": "Escipión el Africano",
+      "facet": "Guerras y conquistas",
+      "known_at": 13
+    },
+    {
+      "name": "Bárbaros",
+      "facet": "Guerras y conquistas",
+      "known_at": 7
+    },
+    {
+      "name": "Visigodos",
+      "facet": "Guerras y conquistas",
+      "known_at": 11
+    },
+    {
+      "name": "Caída del Imperio romano de Occidente",
+      "facet": "Guerras y conquistas",
+      "known_at": 9
+    },
+    {
+      "name": "Saqueo de Roma",
+      "facet": "Guerras y conquistas",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria pírrica",
+      "facet": "Guerras y conquistas",
+      "known_at": 14
+    },
+    {
+      "name": "Desfile triunfal",
+      "facet": "Guerras y conquistas",
+      "known_at": 12
+    },
+    {
+      "name": "Coliseo",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 3
+    },
+    {
+      "name": "Panteón de Agripa",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 9
+    },
+    {
+      "name": "Foro romano",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 9
+    },
+    {
+      "name": "Arco de Tito",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 13
+    },
+    {
+      "name": "Arco de Constantino",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 12
+    },
+    {
+      "name": "Columna de Trajano",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 13
+    },
+    {
+      "name": "Termas de Caracalla",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 13
+    },
+    {
+      "name": "Circo Máximo",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 10
+    },
+    {
+      "name": "Muralla de Adriano",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro romano de Mérida",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 13
+    },
+    {
+      "name": "Domus Aurea",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 14
+    },
+    {
+      "name": "Castillo de Sant'Angelo",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 14
+    },
+    {
+      "name": "Cúpula",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 8
+    },
+    {
+      "name": "Ara Pacis",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 15
+    },
+    {
+      "name": "Basílica romana",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 13
+    },
+    {
+      "name": "Columna corintia",
+      "facet": "Monumentos y arquitectura",
+      "known_at": 12
+    },
+    {
+      "name": "Acueducto de Segovia",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 9
+    },
+    {
+      "name": "Puente del Gard",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 12
+    },
+    {
+      "name": "Vía Apia",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 11
+    },
+    {
+      "name": "Calzada romana",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 8
+    },
+    {
+      "name": "Hormigón romano",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 12
+    },
+    {
+      "name": "Arco de medio punto",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 11
+    },
+    {
+      "name": "Miliario",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Cloaca Máxima",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 13
+    },
+    {
+      "name": "Alcantarillado",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 9
+    },
+    {
+      "name": "Hipocausto",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Grúa romana",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Puente de Alcántara",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 15
+    },
+    {
+      "name": "Vitruvio",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 13
+    },
+    {
+      "name": "Groma",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 15
+    },
+    {
+      "name": "Torre de Hércules",
+      "facet": "Ingeniería: acueductos y calzadas",
+      "known_at": 14
+    },
+    {
+      "name": "Toga",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 5
+    },
+    {
+      "name": "Termas",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 9
+    },
+    {
+      "name": "Domus",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 12
+    },
+    {
+      "name": "Ínsula",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 14
+    },
+    {
+      "name": "Garum",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 14
+    },
+    {
+      "name": "Sandalias romanas",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 4
+    },
+    {
+      "name": "Triclinio",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 12
+    },
+    {
+      "name": "Vino",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 6
+    },
+    {
+      "name": "Bulla",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 15
+    },
+    {
+      "name": "Esclavos romanos",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 8
+    },
+    {
+      "name": "Denario",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 11
+    },
+    {
+      "name": "Tablilla de cera",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 11
+    },
+    {
+      "name": "Lucerna",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 11
+    },
+    {
+      "name": "Atrio",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 11
+    },
+    {
+      "name": "Letrina pública",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 9
+    },
+    {
+      "name": "Taberna romana",
+      "facet": "Vida cotidiana y comida",
+      "known_at": 13
+    },
+    {
+      "name": "Gladiador",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 3
+    },
+    {
+      "name": "Espartaco",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 9
+    },
+    {
+      "name": "Reciario",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 12
+    },
+    {
+      "name": "Mirmillón",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 14
+    },
+    {
+      "name": "Pulgar hacia arriba",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 4
+    },
+    {
+      "name": "Carreras de carros",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 7
+    },
+    {
+      "name": "Cuadriga",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 9
+    },
+    {
+      "name": "Auriga",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 12
+    },
+    {
+      "name": "Naumaquia",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 13
+    },
+    {
+      "name": "Pan y circo",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 11
+    },
+    {
+      "name": "Ludus",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 13
+    },
+    {
+      "name": "Lanista",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 15
+    },
+    {
+      "name": "Velarium",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 14
+    },
+    {
+      "name": "Venatio",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 14
+    },
+    {
+      "name": "Rudis",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 15
+    },
+    {
+      "name": "Máscara de teatro",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 8
+    },
+    {
+      "name": "Plauto",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 15
+    },
+    {
+      "name": "Equipos de colores del circo",
+      "facet": "Gladiadores, circo y espectáculos",
+      "known_at": 14
+    },
+    {
+      "name": "Minerva",
+      "facet": "Dioses y religión romana",
+      "known_at": 10
+    },
+    {
+      "name": "Juno",
+      "facet": "Dioses y religión romana",
+      "known_at": 10
+    },
+    {
+      "name": "Vírgenes vestales",
+      "facet": "Dioses y religión romana",
+      "known_at": 13
+    },
+    {
+      "name": "Jano",
+      "facet": "Dioses y religión romana",
+      "known_at": 11
+    },
+    {
+      "name": "Baco",
+      "facet": "Dioses y religión romana",
+      "known_at": 9
+    },
+    {
+      "name": "Diana",
+      "facet": "Dioses y religión romana",
+      "known_at": 10
+    },
+    {
+      "name": "Lares",
+      "facet": "Dioses y religión romana",
+      "known_at": 15
+    },
+    {
+      "name": "Augur",
+      "facet": "Dioses y religión romana",
+      "known_at": 14
+    },
+    {
+      "name": "Latín",
+      "facet": "Latín y herencia romana",
+      "known_at": 4
+    },
+    {
+      "name": "Veni, vidi, vici",
+      "facet": "Latín y herencia romana",
+      "known_at": 9
+    },
+    {
+      "name": "Carpe diem",
+      "facet": "Latín y herencia romana",
+      "known_at": 9
+    },
+    {
+      "name": "Julio (mes)",
+      "facet": "Latín y herencia romana",
+      "known_at": 8
+    },
+    {
+      "name": "Agosto (mes)",
+      "facet": "Latín y herencia romana",
+      "known_at": 9
+    },
+    {
+      "name": "Derecho romano",
+      "facet": "Latín y herencia romana",
+      "known_at": 13
+    },
+    {
+      "name": "Lenguas romances",
+      "facet": "Latín y herencia romana",
+      "known_at": 11
+    },
+    {
+      "name": "Alea iacta est",
+      "facet": "Latín y herencia romana",
+      "known_at": 12
+    },
+    {
+      "name": "Todos los caminos llevan a Roma",
+      "facet": "Latín y herencia romana",
+      "known_at": 6
+    },
+    {
+      "name": "Roma no se hizo en un día",
+      "facet": "Latín y herencia romana",
+      "known_at": 6
+    },
+    {
+      "name": "Alfabeto latino",
+      "facet": "Latín y herencia romana",
+      "known_at": 8
+    },
+    {
+      "name": "¿Tú también, Bruto?",
+      "facet": "Latín y herencia romana",
+      "known_at": 11
+    },
+    {
+      "name": "Mens sana in corpore sano",
+      "facet": "Latín y herencia romana",
+      "known_at": 11
+    },
+    {
+      "name": "Etcétera",
+      "facet": "Latín y herencia romana",
+      "known_at": 10
+    },
+    {
+      "name": "Plinio el Viejo",
+      "facet": "Latín y herencia romana",
+      "known_at": 14
+    },
+    {
+      "name": "Ovidio",
+      "facet": "Latín y herencia romana",
+      "known_at": 15
+    },
+    {
+      "name": "Constantinopla",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 10
+    },
+    {
+      "name": "Hispania",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 11
+    },
+    {
+      "name": "Galia",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 9
+    },
+    {
+      "name": "Britania",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 11
+    },
+    {
+      "name": "Tarragona",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Alejandría",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 11
+    },
+    {
+      "name": "Mare Nostrum",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 11
+    },
+    {
+      "name": "Ostia",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 14
+    },
+    {
+      "name": "Bizancio",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 13
+    },
+    {
+      "name": "Itálica",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 15
+    },
+    {
+      "name": "Dacia",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 15
+    },
+    {
+      "name": "Limes",
+      "facet": "Ciudades y provincias del imperio",
+      "known_at": 15
+    },
+    {
+      "name": "Obélix",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Panorámix",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Ideafix",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Gladiator",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Máximo Décimo Meridio",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Ben-Hur",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "La vida de Brian",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Civilization",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Yo, Claudio",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 15
+    },
+    {
+      "name": "Roma (serie)",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Julio César (Shakespeare)",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Quo Vadis",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 14
+    },
+    {
+      "name": "Octavio (Una noche en el museo)",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Campamento Júpiter",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Pompeya (película)",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Cleopatra (película)",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Abraracúrcix",
+      "facet": "Roma en cine, cómics y juegos",
+      "known_at": 12
+    }
+  ]
+}

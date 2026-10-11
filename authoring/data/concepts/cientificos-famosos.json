@@ -1,0 +1,567 @@
+{
+  "subcategory": "Científicos famosos",
+  "facets": [
+    "Físicos y astrónomos",
+    "Químicos y sus descubrimientos",
+    "Biólogos y naturalistas",
+    "Médicos y pioneros de la salud",
+    "Matemáticos célebres",
+    "Inventores e ingenieros",
+    "Mujeres pioneras de la ciencia",
+    "Científicos de Colombia y Latinoamérica",
+    "Exploradores y científicos viajeros",
+    "Anécdotas y experimentos famosos",
+    "Premios, unidades y leyes con nombre",
+    "Científicos en el cine y la cultura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 3,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 5,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Edmond Halley",
+      "facet": "Físicos y astrónomos",
+      "known_at": 11
+    },
+    {
+      "name": "Erwin Schrödinger",
+      "facet": "Físicos y astrónomos",
+      "known_at": 12
+    },
+    {
+      "name": "Enrico Fermi",
+      "facet": "Físicos y astrónomos",
+      "known_at": 13
+    },
+    {
+      "name": "Werner Heisenberg",
+      "facet": "Físicos y astrónomos",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Higgs",
+      "facet": "Físicos y astrónomos",
+      "known_at": 13
+    },
+    {
+      "name": "Radio (elemento)",
+      "facet": "Químicos y sus descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Teoría atómica",
+      "facet": "Químicos y sus descubrimientos",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Bunsen",
+      "facet": "Químicos y sus descubrimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Joseph Priestley",
+      "facet": "Químicos y sus descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Henry Cavendish",
+      "facet": "Químicos y sus descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Fritz Haber",
+      "facet": "Químicos y sus descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Célula",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 5
+    },
+    {
+      "name": "Teoría de la evolución",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 7
+    },
+    {
+      "name": "ADN de doble hélice",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 9
+    },
+    {
+      "name": "Selección natural",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 10
+    },
+    {
+      "name": "Antonie van Leeuwenhoek",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 12
+    },
+    {
+      "name": "James Watson",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 12
+    },
+    {
+      "name": "Francis Crick",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 12
+    },
+    {
+      "name": "Jean-Baptiste Lamarck",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 13
+    },
+    {
+      "name": "Konrad Lorenz",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 14
+    },
+    {
+      "name": "Jean-Henri Fabre",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 14
+    },
+    {
+      "name": "Ernst Haeckel",
+      "facet": "Biólogos y naturalistas",
+      "known_at": 15
+    },
+    {
+      "name": "Hipócrates",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 10
+    },
+    {
+      "name": "Sigmund Freud",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 10
+    },
+    {
+      "name": "Juramento hipocrático",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Koch",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 13
+    },
+    {
+      "name": "Galeno",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 13
+    },
+    {
+      "name": "Santiago Ramón y Cajal",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 13
+    },
+    {
+      "name": "Ignaz Semmelweis",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Joseph Lister",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Christiaan Barnard",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "William Harvey",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés Vesalio",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Avicena",
+      "facet": "Médicos y pioneros de la salud",
+      "known_at": 14
+    },
+    {
+      "name": "Kurt Gödel",
+      "facet": "Matemáticos célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Florence Nightingale",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 10
+    },
+    {
+      "name": "Margaret Hamilton",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 13
+    },
+    {
+      "name": "Lise Meitner",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 14
+    },
+    {
+      "name": "Vera Rubin",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 14
+    },
+    {
+      "name": "Jennifer Doudna",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 14
+    },
+    {
+      "name": "Barbara McClintock",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 15
+    },
+    {
+      "name": "Henrietta Leavitt",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 15
+    },
+    {
+      "name": "Tu Youyou",
+      "facet": "Mujeres pioneras de la ciencia",
+      "known_at": 15
+    },
+    {
+      "name": "Manuel Elkin Patarroyo",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 8
+    },
+    {
+      "name": "Francisco José de Caldas",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 9
+    },
+    {
+      "name": "Diana Trujillo",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 10
+    },
+    {
+      "name": "Jorge Reynolds Pombo",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 11
+    },
+    {
+      "name": "Rodolfo Llinás",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "Observatorio Astronómico de Bogotá",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 12
+    },
+    {
+      "name": "Salomón Hakim",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Ángela Restrepo",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "René Favaloro",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Raúl Cuero",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Adriana Ocampo",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Bernardo Houssay",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "César Milstein",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Emilio Yunis",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 14
+    },
+    {
+      "name": "Vital Brazil",
+      "facet": "Científicos de Colombia y Latinoamérica",
+      "known_at": 15
+    },
+    {
+      "name": "HMS Beagle",
+      "facet": "Exploradores y científicos viajeros",
+      "known_at": 11
+    },
+    {
+      "name": "Agustín Codazzi",
+      "facet": "Exploradores y científicos viajeros",
+      "known_at": 12
+    },
+    {
+      "name": "Perra Laika",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Cometa de Franklin",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Perro de Pavlov",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Experimento de la torre de Pisa",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Oveja Dolly",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Medición de la Tierra de Eratóstenes",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ranas de Galvani",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Experimento de la doble rendija",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Cerebro de Einstein",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Experimento de Rutherford",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Demonio de Maxwell",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Experimento de Miller",
+      "facet": "Anécdotas y experimentos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Grado Celsius",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 4
+    },
+    {
+      "name": "Premio Nobel",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 5
+    },
+    {
+      "name": "Grado Fahrenheit",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 8
+    },
+    {
+      "name": "Julio (unidad)",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 11
+    },
+    {
+      "name": "Pascal (unidad)",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 12
+    },
+    {
+      "name": "Ley de Ohm",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 12
+    },
+    {
+      "name": "Medalla Fields",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de Boyle",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de Hubble",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Abel",
+      "facet": "Premios, unidades y leyes con nombre",
+      "known_at": 15
+    },
+    {
+      "name": "Tony Stark",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 3
+    },
+    {
+      "name": "Bruce Banner",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Profesor Utonio",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Jimmy Neutrón",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Dr. Nefario",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 5
+    },
+    {
+      "name": "Dexter (El laboratorio de Dexter)",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Victor Frankenstein",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 6
+    },
+    {
+      "name": "Flint Lockwood",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 7
+    },
+    {
+      "name": "Doc Brown",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 8
+    },
+    {
+      "name": "Profesor Tornasol",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 10
+    },
+    {
+      "name": "Rick Sánchez",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 11
+    },
+    {
+      "name": "J. Robert Oppenheimer",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Dr. Jekyll",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 11
+    },
+    {
+      "name": "La teoría del todo",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Figuras ocultas",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Una mente brillante",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 12
+    },
+    {
+      "name": "The Imitation Game",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Egon Spengler",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Bill Nye",
+      "facet": "Científicos en el cine y la cultura",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "subcategory": "Ciencia ficción",
+  "facets": [
+    "Robots y androides",
+    "Extraterrestres del cine",
+    "Naves y vehículos espaciales",
+    "Viajes en el tiempo",
+    "Sagas galácticas (Star Wars, Star Trek)",
+    "Futuros distópicos y apocalipsis",
+    "Inventos y tecnología ficticia",
+    "Monstruos, mutantes y dinosaurios",
+    "Clásicos y pioneros del género",
+    "Directores, autores y actores",
+    "Planetas y mundos imaginarios",
+    "Ciencia real detrás de la ficción"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 2,
+      "nature": 1,
+      "body_senses": 1,
+      "history": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Megatron",
+      "facet": "Robots y androides",
+      "known_at": 6
+    },
+    {
+      "name": "Replicante",
+      "facet": "Robots y androides",
+      "known_at": 12
+    },
+    {
+      "name": "Monstruos vs. Aliens",
+      "facet": "Extraterrestres del cine",
+      "known_at": 6
+    },
+    {
+      "name": "Na'vi",
+      "facet": "Extraterrestres del cine",
+      "known_at": 8
+    },
+    {
+      "name": "Xenomorfo (Alien)",
+      "facet": "Extraterrestres del cine",
+      "known_at": 9
+    },
+    {
+      "name": "Invasor Zim",
+      "facet": "Extraterrestres del cine",
+      "known_at": 9
+    },
+    {
+      "name": "Kang y Kodos",
+      "facet": "Extraterrestres del cine",
+      "known_at": 10
+    },
+    {
+      "name": "Área 51",
+      "facet": "Extraterrestres del cine",
+      "known_at": 10
+    },
+    {
+      "name": "Encuentros cercanos del tercer tipo",
+      "facet": "Extraterrestres del cine",
+      "known_at": 12
+    },
+    {
+      "name": "Heptápodos (La llegada)",
+      "facet": "Extraterrestres del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Klaatu",
+      "facet": "Extraterrestres del cine",
+      "known_at": 14
+    },
+    {
+      "name": "Platillo volador",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 2
+    },
+    {
+      "name": "Ala-X",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 7
+    },
+    {
+      "name": "Nave nodriza",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 7
+    },
+    {
+      "name": "Caza TIE",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 8
+    },
+    {
+      "name": "Destructor estelar",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 8
+    },
+    {
+      "name": "AT-AT",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 9
+    },
+    {
+      "name": "USS Enterprise",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 10
+    },
+    {
+      "name": "Axiom (WALL·E)",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 10
+    },
+    {
+      "name": "Arwing",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 10
+    },
+    {
+      "name": "Milano (Guardianes de la Galaxia)",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 11
+    },
+    {
+      "name": "Cohete de Tintín",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 11
+    },
+    {
+      "name": "Endurance (Interstellar)",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 12
+    },
+    {
+      "name": "Discovery One",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 14
+    },
+    {
+      "name": "Nostromo",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 14
+    },
+    {
+      "name": "Nabucodonosor (Matrix)",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 14
+    },
+    {
+      "name": "Battlestar Galactica",
+      "facet": "Naves y vehículos espaciales",
+      "known_at": 14
+    },
+    {
+      "name": "DeLorean",
+      "facet": "Viajes en el tiempo",
+      "known_at": 6
+    },
+    {
+      "name": "Giratiempo",
+      "facet": "Viajes en el tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "La familia del futuro (Los Robinsons)",
+      "facet": "Viajes en el tiempo",
+      "known_at": 7
+    },
+    {
+      "name": "Reino cuántico",
+      "facet": "Viajes en el tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Peabody y Sherman",
+      "facet": "Viajes en el tiempo",
+      "known_at": 8
+    },
+    {
+      "name": "Loki (AVT)",
+      "facet": "Viajes en el tiempo",
+      "known_at": 9
+    },
+    {
+      "name": "Bucle temporal",
+      "facet": "Viajes en el tiempo",
+      "known_at": 10
+    },
+    {
+      "name": "Condensador de flujo",
+      "facet": "Viajes en el tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Hill Valley",
+      "facet": "Viajes en el tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Efecto mariposa",
+      "facet": "Viajes en el tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "La máquina del tiempo",
+      "facet": "Viajes en el tiempo",
+      "known_at": 11
+    },
+    {
+      "name": "Paradoja del abuelo",
+      "facet": "Viajes en el tiempo",
+      "known_at": 12
+    },
+    {
+      "name": "Atrapado en el tiempo (El día de la marmota)",
+      "facet": "Viajes en el tiempo",
+      "known_at": 12
+    },
+    {
+      "name": "Tenet",
+      "facet": "Viajes en el tiempo",
+      "known_at": 13
+    },
+    {
+      "name": "Jedi",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 3
+    },
+    {
+      "name": "Princesa Leia",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 4
+    },
+    {
+      "name": "Chewbacca",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 4
+    },
+    {
+      "name": "Soldado de asalto",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 4
+    },
+    {
+      "name": "Han Solo",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 5
+    },
+    {
+      "name": "Obi-Wan Kenobi",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 5
+    },
+    {
+      "name": "Ewok",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 6
+    },
+    {
+      "name": "Sith",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 8
+    },
+    {
+      "name": "Palpatine",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 9
+    },
+    {
+      "name": "Saludo vulcano",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 11
+    },
+    {
+      "name": "Capitán Kirk",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 12
+    },
+    {
+      "name": "Klingon",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 12
+    },
+    {
+      "name": "Capitán Picard",
+      "facet": "Sagas galácticas (Star Wars, Star Trek)",
+      "known_at": 13
+    },
+    {
+      "name": "Katniss Everdeen",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 7
+    },
+    {
+      "name": "Sinsajo",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 8
+    },
+    {
+      "name": "Neo",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 9
+    },
+    {
+      "name": "El planeta de los simios",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 9
+    },
+    {
+      "name": "Maze Runner",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 9
+    },
+    {
+      "name": "Ready Player One",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 9
+    },
+    {
+      "name": "Pastilla roja",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 10
+    },
+    {
+      "name": "El dador",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 11
+    },
+    {
+      "name": "Gran Hermano (1984)",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 12
+    },
+    {
+      "name": "Snowpiercer",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 13
+    },
+    {
+      "name": "Un mundo feliz",
+      "facet": "Futuros distópicos y apocalipsis",
+      "known_at": 14
+    },
+    {
+      "name": "Rayo reductor",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 4
+    },
+    {
+      "name": "Rayo congelante",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 5
+    },
+    {
+      "name": "Mochila cohete",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 5
+    },
+    {
+      "name": "Patineta voladora",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 6
+    },
+    {
+      "name": "Campo de fuerza",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 6
+    },
+    {
+      "name": "Pistola láser",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 6
+    },
+    {
+      "name": "Rayo tractor",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 7
+    },
+    {
+      "name": "Teletransportador",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 8
+    },
+    {
+      "name": "Neuralizador",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 8
+    },
+    {
+      "name": "Mochila de protones (Cazafantasmas)",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 8
+    },
+    {
+      "name": "Velocidad warp",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 10
+    },
+    {
+      "name": "Pistola de portales",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 10
+    },
+    {
+      "name": "Cámara de hibernación",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 10
+    },
+    {
+      "name": "Destornillador sónico",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 12
+    },
+    {
+      "name": "Replicador",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 13
+    },
+    {
+      "name": "Tricorder",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 14
+    },
+    {
+      "name": "Holocubierta",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 14
+    },
+    {
+      "name": "Pez Babel",
+      "facet": "Inventos y tecnología ficticia",
+      "known_at": 14
+    },
+    {
+      "name": "Zombi",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 5
+    },
+    {
+      "name": "Velociraptor",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 6
+    },
+    {
+      "name": "Once (Eleven)",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 8
+    },
+    {
+      "name": "Indominus rex",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 8
+    },
+    {
+      "name": "Mosquito en ámbar",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 8
+    },
+    {
+      "name": "Dr. Jekyll y Mr. Hyde",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 10
+    },
+    {
+      "name": "Kaiju",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 11
+    },
+    {
+      "name": "Jaeger (Titanes del Pacífico)",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 11
+    },
+    {
+      "name": "Cloverfield",
+      "facet": "Monstruos, mutantes y dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Viaje a la Luna (1902)",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 13
+    },
+    {
+      "name": "De la Tierra a la Luna",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 13
+    },
+    {
+      "name": "Flash Gordon",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 13
+    },
+    {
+      "name": "Perdidos en el espacio",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 13
+    },
+    {
+      "name": "Fundación",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 13
+    },
+    {
+      "name": "El día que paralizaron la Tierra",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 14
+    },
+    {
+      "name": "Viaje fantástico",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 14
+    },
+    {
+      "name": "Solaris",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 15
+    },
+    {
+      "name": "El planeta prohibido",
+      "facet": "Clásicos y pioneros del género",
+      "known_at": 15
+    },
+    {
+      "name": "Harrison Ford",
+      "facet": "Directores, autores y actores",
+      "known_at": 9
+    },
+    {
+      "name": "Keanu Reeves",
+      "facet": "Directores, autores y actores",
+      "known_at": 9
+    },
+    {
+      "name": "Mark Hamill",
+      "facet": "Directores, autores y actores",
+      "known_at": 11
+    },
+    {
+      "name": "Michael J. Fox",
+      "facet": "Directores, autores y actores",
+      "known_at": 11
+    },
+    {
+      "name": "Ridley Scott",
+      "facet": "Directores, autores y actores",
+      "known_at": 12
+    },
+    {
+      "name": "H. G. Wells",
+      "facet": "Directores, autores y actores",
+      "known_at": 12
+    },
+    {
+      "name": "Sigourney Weaver",
+      "facet": "Directores, autores y actores",
+      "known_at": 12
+    },
+    {
+      "name": "Ray Bradbury",
+      "facet": "Directores, autores y actores",
+      "known_at": 13
+    },
+    {
+      "name": "Leonard Nimoy",
+      "facet": "Directores, autores y actores",
+      "known_at": 13
+    },
+    {
+      "name": "Frank Herbert",
+      "facet": "Directores, autores y actores",
+      "known_at": 13
+    },
+    {
+      "name": "Philip K. Dick",
+      "facet": "Directores, autores y actores",
+      "known_at": 14
+    },
+    {
+      "name": "Arthur C. Clarke",
+      "facet": "Directores, autores y actores",
+      "known_at": 14
+    },
+    {
+      "name": "Denis Villeneuve",
+      "facet": "Directores, autores y actores",
+      "known_at": 14
+    },
+    {
+      "name": "Namek",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 6
+    },
+    {
+      "name": "Cybertron",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 8
+    },
+    {
+      "name": "Planeta Vegeta",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 8
+    },
+    {
+      "name": "Dagobah",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 9
+    },
+    {
+      "name": "Hoth",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 10
+    },
+    {
+      "name": "Coruscant",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 11
+    },
+    {
+      "name": "Endor",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 11
+    },
+    {
+      "name": "Naboo",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 11
+    },
+    {
+      "name": "Alderaan",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 11
+    },
+    {
+      "name": "Vulcano (Star Trek)",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 12
+    },
+    {
+      "name": "Jakku",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 12
+    },
+    {
+      "name": "Planeta de Miller (Interstellar)",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 12
+    },
+    {
+      "name": "Zion (Matrix)",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 12
+    },
+    {
+      "name": "Kamino",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 13
+    },
+    {
+      "name": "Gallifrey",
+      "facet": "Planetas y mundos imaginarios",
+      "known_at": 14
+    },
+    {
+      "name": "Colonización de Marte",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 8
+    },
+    {
+      "name": "Clonación",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 8
+    },
+    {
+      "name": "Vacío del espacio",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 9
+    },
+    {
+      "name": "Criogenia",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Gravedad artificial",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Terraformación",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 12
+    },
+    {
+      "name": "Ascensor espacial",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 13
+    },
+    {
+      "name": "Esfera de Dyson",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 14
+    },
+    {
+      "name": "Paradoja de Fermi",
+      "facet": "Ciencia real detrás de la ficción",
+      "known_at": 14
+    }
+  ]
+}

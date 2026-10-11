@@ -1,0 +1,577 @@
+{
+  "subcategory": "Pirámides",
+  "facets": [
+    "Pirámides de Guiza",
+    "Faraones y constructores",
+    "Construcción y materiales",
+    "Interior, momias y tumbas",
+    "Esfinge y monumentos egipcios",
+    "Pirámides mesoamericanas",
+    "Pirámides de Sudán y Nubia",
+    "Zigurats y otras pirámides antiguas",
+    "Arqueólogos y descubrimientos",
+    "Pirámides en películas y juegos",
+    "Pirámides modernas y geometría",
+    "Mitos y misterios populares"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pirámides de Guiza",
+      "facet": "Pirámides de Guiza",
+      "known_at": 2
+    },
+    {
+      "name": "Pirámides de las reinas",
+      "facet": "Pirámides de Guiza",
+      "known_at": 13
+    },
+    {
+      "name": "Revestimiento de piedra caliza blanca",
+      "facet": "Pirámides de Guiza",
+      "known_at": 11
+    },
+    {
+      "name": "Templo del valle de Kefrén",
+      "facet": "Pirámides de Guiza",
+      "known_at": 14
+    },
+    {
+      "name": "Calzada procesional",
+      "facet": "Pirámides de Guiza",
+      "known_at": 14
+    },
+    {
+      "name": "Hemiunu",
+      "facet": "Faraones y constructores",
+      "known_at": 15
+    },
+    {
+      "name": "Obreros de las pirámides",
+      "facet": "Faraones y constructores",
+      "known_at": 7
+    },
+    {
+      "name": "Bloque de piedra caliza",
+      "facet": "Construcción y materiales",
+      "known_at": 6
+    },
+    {
+      "name": "Granito de Asuán",
+      "facet": "Construcción y materiales",
+      "known_at": 12
+    },
+    {
+      "name": "Rampa",
+      "facet": "Construcción y materiales",
+      "known_at": 5
+    },
+    {
+      "name": "Trineo de madera",
+      "facet": "Construcción y materiales",
+      "known_at": 9
+    },
+    {
+      "name": "Cantera",
+      "facet": "Construcción y materiales",
+      "known_at": 8
+    },
+    {
+      "name": "Cincel de cobre",
+      "facet": "Construcción y materiales",
+      "known_at": 10
+    },
+    {
+      "name": "Mortero de yeso",
+      "facet": "Construcción y materiales",
+      "known_at": 13
+    },
+    {
+      "name": "Ladrillo de adobe",
+      "facet": "Construcción y materiales",
+      "known_at": 7
+    },
+    {
+      "name": "Arena mojada",
+      "facet": "Construcción y materiales",
+      "known_at": 11
+    },
+    {
+      "name": "Plomada",
+      "facet": "Construcción y materiales",
+      "known_at": 10
+    },
+    {
+      "name": "Codo real",
+      "facet": "Construcción y materiales",
+      "known_at": 13
+    },
+    {
+      "name": "Diario de Merer",
+      "facet": "Construcción y materiales",
+      "known_at": 15
+    },
+    {
+      "name": "Aldea de los trabajadores",
+      "facet": "Construcción y materiales",
+      "known_at": 13
+    },
+    {
+      "name": "Pirámide escalonada",
+      "facet": "Construcción y materiales",
+      "known_at": 8
+    },
+    {
+      "name": "Cámara de la Reina",
+      "facet": "Interior, momias y tumbas",
+      "known_at": 12
+    },
+    {
+      "name": "Pozos de ventilación",
+      "facet": "Interior, momias y tumbas",
+      "known_at": 13
+    },
+    {
+      "name": "Textos de las pirámides",
+      "facet": "Interior, momias y tumbas",
+      "known_at": 14
+    },
+    {
+      "name": "Estela del Sueño",
+      "facet": "Esfinge y monumentos egipcios",
+      "known_at": 15
+    },
+    {
+      "name": "Saqqara",
+      "facet": "Esfinge y monumentos egipcios",
+      "known_at": 12
+    },
+    {
+      "name": "Chichén Itzá",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 5
+    },
+    {
+      "name": "Pirámide del Sol",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 10
+    },
+    {
+      "name": "Pirámide de la Luna",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 11
+    },
+    {
+      "name": "Calzada de los Muertos",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide de Cholula",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 13
+    },
+    {
+      "name": "Templo Mayor",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 11
+    },
+    {
+      "name": "Tikal",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 11
+    },
+    {
+      "name": "Pakal",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 13
+    },
+    {
+      "name": "Descenso de la serpiente en el equinoccio",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 11
+    },
+    {
+      "name": "Uxmal",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 13
+    },
+    {
+      "name": "Calakmul",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 14
+    },
+    {
+      "name": "El Tajín",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 14
+    },
+    {
+      "name": "Eco del quetzal",
+      "facet": "Pirámides mesoamericanas",
+      "known_at": 13
+    },
+    {
+      "name": "Meroe",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 13
+    },
+    {
+      "name": "Reino de Kush",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 12
+    },
+    {
+      "name": "Nubia",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 11
+    },
+    {
+      "name": "Sudán",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 9
+    },
+    {
+      "name": "Faraones negros",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 13
+    },
+    {
+      "name": "Taharqa",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 14
+    },
+    {
+      "name": "Piye",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Nuri",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "El-Kurru",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Candaces",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 14
+    },
+    {
+      "name": "Amanirenas",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Jebel Barkal",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Napata",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Kerma",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Giuseppe Ferlini",
+      "facet": "Pirámides de Sudán y Nubia",
+      "known_at": 15
+    },
+    {
+      "name": "Zigurat de Ur",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Zigurat",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 10
+    },
+    {
+      "name": "Torre de Babel",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 7
+    },
+    {
+      "name": "Babilonia",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 9
+    },
+    {
+      "name": "Etemenanki",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Caral",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 13
+    },
+    {
+      "name": "Huaca del Sol",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Pirámide Cestia",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Pirámides de Güímar",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Borobudur",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 13
+    },
+    {
+      "name": "Mausoleo de Qin Shi Huang",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Koh Ker",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Cahokia",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Chogha Zanbil",
+      "facet": "Zigurats y otras pirámides antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Descubrimiento de la tumba de Tutankamón",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 8
+    },
+    {
+      "name": "Champollion",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 12
+    },
+    {
+      "name": "Robot Upuaut",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Muones",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 14
+    },
+    {
+      "name": "Túnel de Al-Mamún",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Alberto Ruz Lhuillier",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Arqueología",
+      "facet": "Arqueólogos y descubrimientos",
+      "known_at": 5
+    },
+    {
+      "name": "La momia (película)",
+      "facet": "Pirámides en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Los cigarros del faraón",
+      "facet": "Pirámides en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Murray la momia",
+      "facet": "Pirámides en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Rompecabezas del Milenio",
+      "facet": "Pirámides en películas y juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Hotel Luxor de Las Vegas",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámide de Memphis",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 15
+    },
+    {
+      "name": "Transamerica Pyramid",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 14
+    },
+    {
+      "name": "Pirámide de Tirana",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 15
+    },
+    {
+      "name": "Pirámide cuadrangular",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 5
+    },
+    {
+      "name": "Cara triangular",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 3
+    },
+    {
+      "name": "Volumen de la pirámide",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 10
+    },
+    {
+      "name": "Tronco de pirámide",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámide alimenticia",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 5
+    },
+    {
+      "name": "Pirámide de Maslow",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 12
+    },
+    {
+      "name": "Pirámide de edades",
+      "facet": "Pirámides modernas y geometría",
+      "known_at": 10
+    },
+    {
+      "name": "Extraterrestres antiguos",
+      "facet": "Mitos y misterios populares",
+      "known_at": 8
+    },
+    {
+      "name": "Pirámides de Bosnia",
+      "facet": "Mitos y misterios populares",
+      "known_at": 14
+    },
+    {
+      "name": "Mito de los esclavos constructores",
+      "facet": "Mitos y misterios populares",
+      "known_at": 11
+    },
+    {
+      "name": "Poder de las pirámides",
+      "facet": "Mitos y misterios populares",
+      "known_at": 12
+    },
+    {
+      "name": "Teoría de la correlación de Orión",
+      "facet": "Mitos y misterios populares",
+      "known_at": 13
+    },
+    {
+      "name": "Graneros de José",
+      "facet": "Mitos y misterios populares",
+      "known_at": 14
+    },
+    {
+      "name": "Cámara secreta",
+      "facet": "Mitos y misterios populares",
+      "known_at": 7
+    },
+    {
+      "name": "Gunung Padang",
+      "facet": "Mitos y misterios populares",
+      "known_at": 15
+    },
+    {
+      "name": "Sala de los Registros",
+      "facet": "Mitos y misterios populares",
+      "known_at": 15
+    },
+    {
+      "name": "Erich von Däniken",
+      "facet": "Mitos y misterios populares",
+      "known_at": 14
+    },
+    {
+      "name": "Pirámides de la Antártida",
+      "facet": "Mitos y misterios populares",
+      "known_at": 13
+    },
+    {
+      "name": "Monumento de Yonaguni",
+      "facet": "Mitos y misterios populares",
+      "known_at": 15
+    },
+    {
+      "name": "Profecía maya de 2012",
+      "facet": "Mitos y misterios populares",
+      "known_at": 9
+    }
+  ]
+}

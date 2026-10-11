@@ -1,0 +1,872 @@
+{
+  "subcategory": "Carros",
+  "facets": [
+    "Partes del carro",
+    "Motor y funcionamiento",
+    "Marcas y logotipos",
+    "Modelos famosos",
+    "Tipos de vehículos",
+    "Historia del automóvil",
+    "Inventores y pioneros",
+    "Carreras y automovilismo",
+    "Señales y normas de tránsito",
+    "Carros en películas y juegos",
+    "Carros en Colombia",
+    "Combustibles y energía"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Llanta",
+      "facet": "Partes del carro",
+      "known_at": 1
+    },
+    {
+      "name": "Pito",
+      "facet": "Partes del carro",
+      "known_at": 1
+    },
+    {
+      "name": "Freno",
+      "facet": "Partes del carro",
+      "known_at": 2
+    },
+    {
+      "name": "Espejo retrovisor",
+      "facet": "Partes del carro",
+      "known_at": 3
+    },
+    {
+      "name": "Parabrisas",
+      "facet": "Partes del carro",
+      "known_at": 3
+    },
+    {
+      "name": "Baúl",
+      "facet": "Partes del carro",
+      "known_at": 3
+    },
+    {
+      "name": "Acelerador",
+      "facet": "Partes del carro",
+      "known_at": 3
+    },
+    {
+      "name": "Placa",
+      "facet": "Partes del carro",
+      "known_at": 3
+    },
+    {
+      "name": "Direccionales",
+      "facet": "Partes del carro",
+      "known_at": 4
+    },
+    {
+      "name": "Llanta de repuesto",
+      "facet": "Partes del carro",
+      "known_at": 4
+    },
+    {
+      "name": "Capó",
+      "facet": "Partes del carro",
+      "known_at": 5
+    },
+    {
+      "name": "Velocímetro",
+      "facet": "Partes del carro",
+      "known_at": 5
+    },
+    {
+      "name": "Tubo de escape",
+      "facet": "Partes del carro",
+      "known_at": 6
+    },
+    {
+      "name": "Embrague",
+      "facet": "Partes del carro",
+      "known_at": 7
+    },
+    {
+      "name": "Radiador",
+      "facet": "Partes del carro",
+      "known_at": 8
+    },
+    {
+      "name": "Amortiguador",
+      "facet": "Partes del carro",
+      "known_at": 8
+    },
+    {
+      "name": "Aceite de motor",
+      "facet": "Motor y funcionamiento",
+      "known_at": 5
+    },
+    {
+      "name": "Transmisión automática",
+      "facet": "Motor y funcionamiento",
+      "known_at": 7
+    },
+    {
+      "name": "Tracción 4x4",
+      "facet": "Motor y funcionamiento",
+      "known_at": 7
+    },
+    {
+      "name": "Motor de combustión interna",
+      "facet": "Motor y funcionamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Pistón",
+      "facet": "Motor y funcionamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Revoluciones por minuto",
+      "facet": "Motor y funcionamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Frenos ABS",
+      "facet": "Motor y funcionamiento",
+      "known_at": 9
+    },
+    {
+      "name": "Bujía",
+      "facet": "Motor y funcionamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Cilindraje",
+      "facet": "Motor y funcionamiento",
+      "known_at": 10
+    },
+    {
+      "name": "Carburador",
+      "facet": "Motor y funcionamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Alternador",
+      "facet": "Motor y funcionamiento",
+      "known_at": 11
+    },
+    {
+      "name": "Cigüeñal",
+      "facet": "Motor y funcionamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Motor de cuatro tiempos",
+      "facet": "Motor y funcionamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Correa de repartición",
+      "facet": "Motor y funcionamiento",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrari",
+      "facet": "Marcas y logotipos",
+      "known_at": 3
+    },
+    {
+      "name": "Ford",
+      "facet": "Marcas y logotipos",
+      "known_at": 4
+    },
+    {
+      "name": "Chevrolet",
+      "facet": "Marcas y logotipos",
+      "known_at": 4
+    },
+    {
+      "name": "Volkswagen",
+      "facet": "Marcas y logotipos",
+      "known_at": 4
+    },
+    {
+      "name": "Lamborghini",
+      "facet": "Marcas y logotipos",
+      "known_at": 5
+    },
+    {
+      "name": "Mercedes-Benz",
+      "facet": "Marcas y logotipos",
+      "known_at": 5
+    },
+    {
+      "name": "Toyota",
+      "facet": "Marcas y logotipos",
+      "known_at": 5
+    },
+    {
+      "name": "BMW",
+      "facet": "Marcas y logotipos",
+      "known_at": 6
+    },
+    {
+      "name": "Mazda",
+      "facet": "Marcas y logotipos",
+      "known_at": 6
+    },
+    {
+      "name": "Tesla",
+      "facet": "Marcas y logotipos",
+      "known_at": 6
+    },
+    {
+      "name": "Kia",
+      "facet": "Marcas y logotipos",
+      "known_at": 6
+    },
+    {
+      "name": "Nissan",
+      "facet": "Marcas y logotipos",
+      "known_at": 6
+    },
+    {
+      "name": "Hyundai",
+      "facet": "Marcas y logotipos",
+      "known_at": 7
+    },
+    {
+      "name": "Fiat",
+      "facet": "Marcas y logotipos",
+      "known_at": 8
+    },
+    {
+      "name": "Rolls-Royce",
+      "facet": "Marcas y logotipos",
+      "known_at": 8
+    },
+    {
+      "name": "Peugeot",
+      "facet": "Marcas y logotipos",
+      "known_at": 8
+    },
+    {
+      "name": "Volvo",
+      "facet": "Marcas y logotipos",
+      "known_at": 9
+    },
+    {
+      "name": "Subaru",
+      "facet": "Marcas y logotipos",
+      "known_at": 11
+    },
+    {
+      "name": "Alfa Romeo",
+      "facet": "Marcas y logotipos",
+      "known_at": 12
+    },
+    {
+      "name": "Escarabajo de Volkswagen",
+      "facet": "Modelos famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Mini Cooper",
+      "facet": "Modelos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Ford Mustang",
+      "facet": "Modelos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Chevrolet Camaro",
+      "facet": "Modelos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Volkswagen Kombi",
+      "facet": "Modelos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Ford Modelo T",
+      "facet": "Modelos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Fiat 500",
+      "facet": "Modelos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Porsche 911",
+      "facet": "Modelos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Chevrolet Corvette",
+      "facet": "Modelos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Toyota Corolla",
+      "facet": "Modelos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Bugatti Veyron",
+      "facet": "Modelos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Toyota Prius",
+      "facet": "Modelos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Land Rover Defender",
+      "facet": "Modelos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Lamborghini Countach",
+      "facet": "Modelos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ferrari F40",
+      "facet": "Modelos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Shelby Cobra",
+      "facet": "Modelos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Mercedes-Benz 300 SL",
+      "facet": "Modelos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Bus",
+      "facet": "Tipos de vehículos",
+      "known_at": 1
+    },
+    {
+      "name": "Taxi",
+      "facet": "Tipos de vehículos",
+      "known_at": 1
+    },
+    {
+      "name": "Camión",
+      "facet": "Tipos de vehículos",
+      "known_at": 1
+    },
+    {
+      "name": "Ambulancia",
+      "facet": "Tipos de vehículos",
+      "known_at": 1
+    },
+    {
+      "name": "Carro de bomberos",
+      "facet": "Tipos de vehículos",
+      "known_at": 1
+    },
+    {
+      "name": "Patrulla de policía",
+      "facet": "Tipos de vehículos",
+      "known_at": 2
+    },
+    {
+      "name": "Camioneta",
+      "facet": "Tipos de vehículos",
+      "known_at": 3
+    },
+    {
+      "name": "Grúa",
+      "facet": "Tipos de vehículos",
+      "known_at": 3
+    },
+    {
+      "name": "Carro deportivo",
+      "facet": "Tipos de vehículos",
+      "known_at": 3
+    },
+    {
+      "name": "Volqueta",
+      "facet": "Tipos de vehículos",
+      "known_at": 4
+    },
+    {
+      "name": "Convertible",
+      "facet": "Tipos de vehículos",
+      "known_at": 5
+    },
+    {
+      "name": "Limusina",
+      "facet": "Tipos de vehículos",
+      "known_at": 5
+    },
+    {
+      "name": "Casa rodante",
+      "facet": "Tipos de vehículos",
+      "known_at": 5
+    },
+    {
+      "name": "Carro de golf",
+      "facet": "Tipos de vehículos",
+      "known_at": 5
+    },
+    {
+      "name": "Vehículo autónomo",
+      "facet": "Tipos de vehículos",
+      "known_at": 7
+    },
+    {
+      "name": "Carro híbrido",
+      "facet": "Tipos de vehículos",
+      "known_at": 8
+    },
+    {
+      "name": "Carro blindado",
+      "facet": "Tipos de vehículos",
+      "known_at": 8
+    },
+    {
+      "name": "Sedán",
+      "facet": "Tipos de vehículos",
+      "known_at": 9
+    },
+    {
+      "name": "Hatchback",
+      "facet": "Tipos de vehículos",
+      "known_at": 10
+    },
+    {
+      "name": "Carruaje de caballos",
+      "facet": "Historia del automóvil",
+      "known_at": 3
+    },
+    {
+      "name": "Carro antiguo",
+      "facet": "Historia del automóvil",
+      "known_at": 5
+    },
+    {
+      "name": "Cadena de montaje",
+      "facet": "Historia del automóvil",
+      "known_at": 9
+    },
+    {
+      "name": "Autobahn",
+      "facet": "Historia del automóvil",
+      "known_at": 10
+    },
+    {
+      "name": "Carretera Panamericana",
+      "facet": "Historia del automóvil",
+      "known_at": 10
+    },
+    {
+      "name": "Manivela de arranque",
+      "facet": "Historia del automóvil",
+      "known_at": 12
+    },
+    {
+      "name": "Carro sin caballos",
+      "facet": "Historia del automóvil",
+      "known_at": 12
+    },
+    {
+      "name": "Crisis del petróleo de 1973",
+      "facet": "Historia del automóvil",
+      "known_at": 13
+    },
+    {
+      "name": "Primera gasolinera",
+      "facet": "Historia del automóvil",
+      "known_at": 13
+    },
+    {
+      "name": "Salón del Automóvil de Ginebra",
+      "facet": "Historia del automóvil",
+      "known_at": 13
+    },
+    {
+      "name": "Fardier de Cugnot",
+      "facet": "Historia del automóvil",
+      "known_at": 14
+    },
+    {
+      "name": "Viaje de Bertha Benz",
+      "facet": "Historia del automóvil",
+      "known_at": 14
+    },
+    {
+      "name": "Ley de la bandera roja",
+      "facet": "Historia del automóvil",
+      "known_at": 15
+    },
+    {
+      "name": "Ferruccio Lamborghini",
+      "facet": "Inventores y pioneros",
+      "known_at": 12
+    },
+    {
+      "name": "Soichiro Honda",
+      "facet": "Inventores y pioneros",
+      "known_at": 12
+    },
+    {
+      "name": "Louis Renault",
+      "facet": "Inventores y pioneros",
+      "known_at": 12
+    },
+    {
+      "name": "Louis Chevrolet",
+      "facet": "Inventores y pioneros",
+      "known_at": 12
+    },
+    {
+      "name": "André Citroën",
+      "facet": "Inventores y pioneros",
+      "known_at": 13
+    },
+    {
+      "name": "John Boyd Dunlop",
+      "facet": "Inventores y pioneros",
+      "known_at": 13
+    },
+    {
+      "name": "Carroll Shelby",
+      "facet": "Inventores y pioneros",
+      "known_at": 13
+    },
+    {
+      "name": "Nicolas-Joseph Cugnot",
+      "facet": "Inventores y pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Garrett Morgan",
+      "facet": "Inventores y pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Kiichiro Toyoda",
+      "facet": "Inventores y pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Nils Bohlin",
+      "facet": "Inventores y pioneros",
+      "known_at": 15
+    },
+    {
+      "name": "Pit stop",
+      "facet": "Carreras y automovilismo",
+      "known_at": 6
+    },
+    {
+      "name": "Safety car",
+      "facet": "Carreras y automovilismo",
+      "known_at": 9
+    },
+    {
+      "name": "Agente de tránsito",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 3
+    },
+    {
+      "name": "Límite de velocidad",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 4
+    },
+    {
+      "name": "Carril",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 4
+    },
+    {
+      "name": "Glorieta",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 5
+    },
+    {
+      "name": "Licencia de conducción",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 5
+    },
+    {
+      "name": "Prohibido parquear",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 5
+    },
+    {
+      "name": "Policía acostado",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 5
+    },
+    {
+      "name": "Ceda el paso",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 6
+    },
+    {
+      "name": "Contravía",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 6
+    },
+    {
+      "name": "Conducir por la derecha",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 6
+    },
+    {
+      "name": "Triángulo de emergencia",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 7
+    },
+    {
+      "name": "Doble línea amarilla",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 8
+    },
+    {
+      "name": "Luces estacionarias",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 8
+    },
+    {
+      "name": "Señales preventivas",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 9
+    },
+    {
+      "name": "Prueba de alcoholemia",
+      "facet": "Señales y normas de tránsito",
+      "known_at": 10
+    },
+    {
+      "name": "Sally Carrera",
+      "facet": "Carros en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Batimóvil",
+      "facet": "Carros en películas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Máquina del Misterio",
+      "facet": "Carros en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Carro de los Picapiedra",
+      "facet": "Carros en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Aston Martin de James Bond",
+      "facet": "Carros en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "KITT",
+      "facet": "Carros en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Ecto-1",
+      "facet": "Carros en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Taxi amarillo",
+      "facet": "Carros en Colombia",
+      "known_at": 3
+    },
+    {
+      "name": "Buseta",
+      "facet": "Carros en Colombia",
+      "known_at": 4
+    },
+    {
+      "name": "Peaje",
+      "facet": "Carros en Colombia",
+      "known_at": 5
+    },
+    {
+      "name": "Campero",
+      "facet": "Carros en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Colectivo",
+      "facet": "Carros en Colombia",
+      "known_at": 6
+    },
+    {
+      "name": "Jeep Willys",
+      "facet": "Carros en Colombia",
+      "known_at": 7
+    },
+    {
+      "name": "Renault 4",
+      "facet": "Carros en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "Fotomulta",
+      "facet": "Carros en Colombia",
+      "known_at": 9
+    },
+    {
+      "name": "SOAT",
+      "facet": "Carros en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Comparendo",
+      "facet": "Carros en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Túnel de La Línea",
+      "facet": "Carros en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Revisión técnico-mecánica",
+      "facet": "Carros en Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Desfile de Yipaos",
+      "facet": "Carros en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Chevrolet Sprint",
+      "facet": "Carros en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "GM Colmotores",
+      "facet": "Carros en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Sofasa",
+      "facet": "Carros en Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Bomba de gasolina",
+      "facet": "Combustibles y energía",
+      "known_at": 2
+    },
+    {
+      "name": "Tanque de gasolina",
+      "facet": "Combustibles y energía",
+      "known_at": 3
+    },
+    {
+      "name": "Galón",
+      "facet": "Combustibles y energía",
+      "known_at": 6
+    },
+    {
+      "name": "Contaminación del aire",
+      "facet": "Combustibles y energía",
+      "known_at": 6
+    },
+    {
+      "name": "Estación de carga",
+      "facet": "Combustibles y energía",
+      "known_at": 8
+    },
+    {
+      "name": "Carro solar",
+      "facet": "Combustibles y energía",
+      "known_at": 8
+    },
+    {
+      "name": "Refinería",
+      "facet": "Combustibles y energía",
+      "known_at": 9
+    },
+    {
+      "name": "Ecopetrol",
+      "facet": "Combustibles y energía",
+      "known_at": 9
+    },
+    {
+      "name": "ACPM",
+      "facet": "Combustibles y energía",
+      "known_at": 10
+    },
+    {
+      "name": "Gas natural vehicular",
+      "facet": "Combustibles y energía",
+      "known_at": 10
+    },
+    {
+      "name": "Autonomía",
+      "facet": "Combustibles y energía",
+      "known_at": 10
+    },
+    {
+      "name": "Biodiésel",
+      "facet": "Combustibles y energía",
+      "known_at": 11
+    },
+    {
+      "name": "Octanaje",
+      "facet": "Combustibles y energía",
+      "known_at": 12
+    }
+  ]
+}
