@@ -377,8 +377,53 @@ plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (11, 11, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 11, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (12, 1, 'create tasks for plan 1', 'split', 'open', 1000, NULL, 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:15:47Z', NULL, 1);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (12, 1, 'create tasks for plan 1', 'split', 'done', 1000, '2026-10-11, tasks 13–18 (plans for parts 1–6), decisions 1–3 (difficulty targets, QC threshold, needs_work handling)', 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:15:47Z', '2026-10-11T23:16:53Z', 1);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (13, 1, 'write plan: targets and progress', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of the masterplan (plan 1): `pm plan add 1 "Targets and progress" --priority 700`.
 
+- Target count per difficulty 1–15, summing to 5000: decision 1. Store them where `qgen` and the authoring server can read them (e.g. a file under `authoring/data/` or `app/data/age-groups.json`; pick and log a D-entry).
+- Progress view: approved vs. target per difficulty and per category in `qgen report` and `/stats/difficulty`.
+- The milestone''s exit check: ≥ 5000 approved, every level at target, quality criteria from decision 2 (spot-check size, agreement rate) and part 4''s thresholds.
+- Tasks that need decision 1 or 2: link them with `pm task-pending-decision`.', '2026-10-11T23:16:50Z', NULL, 12);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (14, 1, 'write plan: aim batches at difficulty gaps', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 1, B-6): `pm plan add 1 "Aim batches at difficulty gaps" --priority 700`.
+
+- `draft` draws target difficulties weighted by the gap to part 1''s targets (decision 1), not evenly (D-40); subcategory choice should consider difficulty gaps too.
+- Measure first: target vs. rated vs. reviewed difficulty for batch-7 and batch-8; where do 11–15 targets land?
+- Fix prompts or concept `known_at` choice where hard drafts come out at 7–9. These are implementation tasks on `qgen.py`/prompts, never workarounds inside a batch run (RUNBOOK).
+- Depends on part 1''s target storage; refer to that plan once it exists (`pm plan list`).', '2026-10-11T23:16:50Z', NULL, 12);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (15, 1, 'write plan: more subcategories', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 1): `pm plan add 1 "More subcategories" --priority 600`.
+
+- Find saturated `base` subcategories: approved count, concept-list use, duplicate rate, avoid-list length.
+- Propose new subcategories, especially ones that carry hard (11–15) questions, with draft concept lists.
+- Which ones to add is the gamemaster''s call (RUNBOOK): the plan''s analysis task raises a decision with the proposals as options; the task that adds them to `app/data/categories.json` waits for it.', '2026-10-11T23:16:50Z', NULL, 12);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (16, 1, 'write plan: duplicate and drift detection', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 1, B-5; absorbs PE-6, PE-13, MP-11): `pm plan add 1 "Duplicate and drift detection" --priority 700`.
+
+- Pre-merge overlap check of drafts against the whole approved pool by answer, concept and topic, not only question text (`dedupe`), so overlaps get dropped instead of ending up `needs_work` (cf. q-0644/q-0957, q-0646/q-0217, q-0689/q-0279).
+- Per-batch health metrics in `authoring/reports/<batch>.md` and a cross-batch comparison: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question.
+- Thresholds that say "stop and look before the next batch"; they feed the milestone''s exit check.
+- Close or update PE-6, PE-13, MP-11, B-5 in `plans/backlog.md` as the plan covers them.', '2026-10-11T23:16:50Z', NULL, 12);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (17, 1, 'write plan: quality control after every batch', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 1): `pm plan add 1 "Quality control after every batch" --priority 650`.
+
+- (a) LLM audit with its own prompt (not `review.md`) on a sample of a batch: facts, ambiguity, giveaways, difficulty, house style; results into the batch report.
+- (b) Human spot check: random sample in the review tool (e.g. a sample filter on `/review?batch=…`), recording agree/disagree with the LLM verdict. Sample size and agreement rate: decision 2.
+- (c) Procedure that turns findings into prompt or house-style changes before the next batch; documented in `authoring/RUNBOOK.md` or a plan file.
+- Trend over batches of the human/LLM disagreement rate.
+- Only the tooling and procedure; the QC runs themselves are tasks of part 6.', '2026-10-11T23:16:50Z', NULL, 12);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (18, 1, 'write plan: batch runs', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 1): `pm plan add 1 "Batch runs" --priority -100`.
+
+- Plan priority -100: every task that runs `qgen batch` must run only after all implementation work (milestone 1).
+- First tasks: finish batch-8 (`work/batch-8`, commit d7fb13f) per `authoring/RUNBOOK.md`, then its QC (part 5''s procedure, once that exists), then the next batch. Add batch tasks one or two at a time, not all ~8 up front; the plan says that each batch task adds the next one while targets (part 1) are unmet.
+- needs_work handling per decision 3 (RUNBOOK: `qgen rework` only on the gamemaster''s word).
+- Watch media yield; if missing media limits throughput, propose a new plan with `plans/06-images.md`, `plans/23-media-providers.md`, IMG-16/17.
+- Last task: the exit check from part 1, plus `qgen validate` and `trivia-media sync --status approved`.', '2026-10-11T23:16:50Z', NULL, 12);
+
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
+The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
+Recommended curve tapers at both ends; the masterplan draft puts more at 1–2 than at the middle levels, which is likely more easy questions than game nights need.', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (2, 'When is batch quality "fine": human spot-check size and agreement rate with the LLM review?', 'pending', '["30 random questions per batch; ≥ 90% agreement in each of the last two batches", "50 per batch; ≥ 95% agreement", "20 per batch; ≥ 85% agreement"]', 'Milestone 1, parts 1 and 5. After every batch the gamemaster checks a random sample in the review tool and records agree/disagree with the LLM verdict. This rate is the main "quality is fine" signal and part of the milestone''s exit check (last two batches).
+30 questions take roughly 10–15 minutes; 50 gives a tighter rate but costs more of the human''s time per batch (~8 batches left).', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (3, 'How are needs_work questions (33 now, more per batch) resolved?', 'pending', '["qgen rework once after each batch''s QC, then the gamemaster decides what is still needs_work in the review tool", "the gamemaster decides all of them in the review tool; no qgen rework", "leave them; only approved questions count toward 5000"]', 'Milestone 1, part 6. RUNBOOK: `qgen rework` runs only on the gamemaster''s word; this answer is that word for the batch tasks of this milestone. batch-7 needs_work reasons: mostly giveaway hints, overlap with a pool question, or no usable media.
+Rework costs LLM calls but saves the gamemaster''s time; overlaps (once part 4 drops them before merge) and media misses don''t benefit from rework.', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
