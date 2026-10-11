@@ -1307,7 +1307,8 @@ def cmd_review(args):
     ratings, checks = collect(d)
     pool = load_json(POOL)["questions"]
     system = prompt("house-style", "review")
-    rework = run_mode(args.run) in ("rework", "tighten")
+    mode = run_mode(args.run)
+    rework = mode in ("rework", "tighten")
     todo = []
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
@@ -1330,6 +1331,7 @@ def cmd_review(args):
             "background": slot_input(d, q, "background") if q.get("background") else None,
             "can_search_again": args.round == 1,
             "can_fix": args.round == 1 and not rework,
+            "only_shortened": mode == "tighten",
         }
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
@@ -1785,9 +1787,7 @@ def cmd_scan(args):
     d = run_dir(args)
     if "issues" in load_json(d / "run.json", {}):
         return []
-    # retired 'connection' questions stay as they are: the review would send them back (gamemaster, 2026-10-11)
-    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")
-          and (q.get("axes") or {}).get("move") != "connection"]
+    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")]
     groups = [g for g in chunks(qs, 50) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
     system = prompt("house-style", "tighten")
 

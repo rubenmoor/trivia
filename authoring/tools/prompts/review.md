@@ -9,6 +9,7 @@ You are the reviewer who decides whether one finished question goes into the gam
 - `media`: the slot to fill (type, role, search term, note) and its candidates, numbered from 1, with title, size, author and license.
 - `sheet`: the path of a contact sheet image that shows every picture candidate with its number. **Open it with the Read tool and look at every candidate before you decide.** Titles are not enough: in the last batch, titles hid wrong subjects (a pizza slice for "lasagna", flies for "butterfly stroke") and giveaways (a caption naming the answer).
 - `background` (audio questions only): the background picture slot, with its own candidates and sheet.
+- `only_shortened`: true when the question was already in the game and was only shortened (`qgen tighten`). Then reason 7 doesn't apply.
 
 ## Decide
 Answer `approved` unless one of these is true; then answer `needs_work` and say what is wrong in `feedback` (Spanish, one or two sentences the gamemaster can act on):
