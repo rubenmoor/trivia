@@ -103,3 +103,19 @@ WHERE m.status = 'open' AND t.status = 'open'
   AND NOT EXISTS (SELECT 1 FROM task_decision td JOIN decision d ON d.id = td.decision_id
                   WHERE td.task_id = t.id AND d.status = 'pending')
 ORDER BY priority DESC, m.id, p.id, t.id;
+
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (1, 'Enough content for game nights', 'open', 'we want 5000 questions. note the current difficulty scale (i think from 1 to 15). it''s okay to have fewer questions for higher difficulties, but currently there are way too few questions at high difficulties.
+
+ `qgen batch` creates new questions, so it''s just a matter of running it a couple of times, but there might be improvements necessary along the way. E.g. we are currently assuming that our list of categories is complete. Creating more subcategories might be useful, though. Any task that runs qgen batch should be prioritized at -100.
+
+ also, we need regular quality control. typically ones after the completion of a batch.
+
+ we should also have quality control on the process of creating questions. the typical flow: go ahead, create questions. get human feedback, gather LLM feedback. watch out if question quality deteriorates when running a new batch, e.g. too many duplicates.
+
+ once we have 5000 questions and a good reason to assume the quality is fine, we are done with this.', '2026-10-11T20:08:18Z', NULL);
+
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'tbd.', '2026-10-11T20:08:18Z', NULL);
+
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-11T20:08:18Z', NULL, NULL);
