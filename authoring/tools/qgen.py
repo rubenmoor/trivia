@@ -1785,7 +1785,9 @@ def cmd_scan(args):
     d = run_dir(args)
     if "issues" in load_json(d / "run.json", {}):
         return []
-    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")]
+    # retired 'connection' questions stay as they are: the review would send them back (gamemaster, 2026-10-11)
+    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")
+          and (q.get("axes") or {}).get("move") != "connection"]
     groups = [g for g in chunks(qs, 50) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
     system = prompt("house-style", "tighten")
 
