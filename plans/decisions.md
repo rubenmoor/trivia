@@ -435,3 +435,10 @@ Template:
 - Decision: When the bundle has targets, `draft` weights each level by its deficit, `max(0, target − approved)`; even weights stay for bundles without targets (D-40). `qgen batch` ranks subcategories by approved questions weighted by the same deficits, so subcategories thin where the pool is thin come first. Slot targets go to subcategories whose concept lists can carry them (unused concepts with `known_at` near the target).
 - Consequences: `qgen batch` still takes no arguments (D-36). Batches change shape as the pool fills. pm plan 13 (Aim batches at difficulty gaps) has the tasks.
 - Supersedes / related: D-36, D-40, D-46, D-53; B-6
+
+## D-55: Batch health thresholds stop the next batch
+- Date: 2026-10-11
+- Context: D-52 grows `base` by ~8 batches. Overlaps with the pool reach the review as `needs_work` (B-5), and nothing says when a batch got worse than the ones before (pm milestone 1, part 4).
+- Decision: `rate` judges each draft against pool questions that share its answer or concept (`no_overlap`, a hard criterion), so overlaps are dropped before merge. Every batch report gets health metrics with thresholds stored in `authoring/data/targets.json` (`batch_health`). When the last batch fails one, `qgen batch` exits 2 before drafting until the gamemaster acknowledges it (`qgen health ack`). Threshold numbers: a pm decision of plan 15.
+- Consequences: No new `qgen batch` arguments (D-36); RUNBOOK's "other exit code: stop" covers the stop. Plan 12's exit check reads the same health data. pm plan 15 (Duplicate and drift detection) has the tasks.
+- Supersedes / related: D-33, D-36, D-46, D-52, D-53; B-5, PE-6, PE-13, MP-11

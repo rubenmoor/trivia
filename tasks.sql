@@ -455,6 +455,77 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - `qgen report --subcategories` shows the flags; baseline and thresholds are recorded here.
 - The gamemaster has answered the proposal decision; the approved subcategories are in `categories.json` with concept lists, and `qgen validate` is clean.', '2026-10-11T23:43:50Z', 15);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (15, 1, 'Duplicate and drift detection', 700, 'Part 4 of the masterplan (plan 1, B-5; absorbs PE-6, PE-13, MP-11). Two things get worse quietly as the pool grows to 5000: drafts that ask a fact the pool already asks, and the batch as a whole (more drops, more `needs_work`, narrower styles, higher cost). This plan catches overlaps before merge instead of at review, measures every batch''s health against thresholds, and makes a batch that fails them stop the next one until the gamemaster has looked (D-55).
+
+## Baseline (2026-10-11, throw-away script)
+- `dedupe`/`duplicates()` (in `merge`): a duplicate needs the same normalized answer **and** question similarity > 0.6 or the same essential media type. Batch-6/7: 1 duplicate dropped.
+- Overlaps caught only by the review (needs_work), none of them by `duplicates()`:
+  - q-0646 / q-0217 «Almenas»: same answer, different wording, different subcategory (Caballeros / Castillos); concepts «Almena» / «Almenas».
+  - q-0644 / q-0957 «Son constelaciones»: same answer, different topic (Caballeros / Héroes griegos).
+  - q-0689 / q-0279 «Ramen»: same answer; the draft''s concept «Fideos chinos», the pool question''s concept «Ramen».
+  - q-1210 / q-0315: answers differ (El Imperio contraataca / Darth Vader); the draft''s concept «Yo soy tu padre» is in the pool question''s text.
+  - B-5: q-0369 / q-0341 (Rubik → Hungría), q-0420 / q-0328 (silleteros).
+- The review sees related questions (`related_questions()`: similar answer or same subcategory, first 30) only after merge, media and sheets have been paid for.
+- `review.reasons` is free text and not stored; `needs_work` reasons are only in `review.feedback`. batch-7: 112 needs_work of 616 merged; 96 dropped by the pipeline (hard fails, duplicates, skipped slots); ~$120.74 for 504 approved (~$0.24 each).
+- `work/batch-4…7` have drafts, ratings, `dropped.json`, `costs.log`, `run.json` (batch-4 without `slots.json`/reviews); `work/` is gitignored, so old batches are measured locally only.
+
+## Overlap check before merge (B-5)
+- **Candidates (code, no LLM):** for each draft, pool questions of every bundle (status ≠ `rejected`) and earlier drafts of the same batch where any of these holds:
+  - normalized answers equal or similar (`SequenceMatcher` ≥ 0.8, or one contains the other); numbers and yes/no excluded as now;
+  - the draft''s concept or answer stem-matches the other''s concept or answer (Almena/Almenas, Ramen);
+  - the draft''s concept or answer occurs in the other''s question or `fun_fact`, or the other way round («Yo soy tu padre»).
+  - Cap ~8 candidates per draft, closest first. Stem match: lowercase, no accents, drop a trailing «s»/«es»; no new dependencies.
+- **Judge in `rate`, no extra calls:** the grouped `rate` call (PE-1) gets each draft''s candidates and a new hard criterion `no_overlap` (5 = asks a different fact; ≤ 3 = knowing one answer gives the other away, or the same fact asked again). A hard fail is dropped at merge, as today, with reason `overlap like q-…`. The concept isn''t retired. Within-batch pairs: the later draft fails.
+- `duplicates()` stays as the cheap exact check in `merge`.
+- `prompts/rate.md` and the schema are the gamemaster''s prompts (RUNBOOK): changed here as an implementation task, never inside a batch run.
+- Check: replay the candidate finder on batch-7''s merged questions against the pool as it was before batch-7 (ids < q-0596): it must list all four pairs above (and B-5''s two against their pools); report candidates per draft (mean, max). Then rate ~20 batch-7 drafts with and without candidates (one call each way) and check the four overlaps fail `no_overlap` and the others don''t.
+- `qgen report --overlaps`: the same candidate finder over the approved pool (pairs, no LLM), so the gamemaster can clean old overlaps in the review tool. Listing only.
+
+## Needs-work reasons
+- `REVIEW_SCHEMA`: `problems`, an array of `giveaway`, `fact`, `ambiguity`, `overlap`, `media`, `difficulty`, `style`, `other`; stored in `q.review.problems`. `record` adds `media` (no adequate media) and `fact` (fact check not confirmed) for the fixed rules. `prompts/review.md` says when to use each.
+- Older questions without `problems`: a keyword classifier in the report (`No se encontró una imagen adecuada` → media, `q-\d{4}` → overlap, `pista` + `regala|delata|da la respuesta` → giveaway, …), marked as guessed. No backfill into the pool.
+
+## Batch health
+- `authoring/tools/health.py`: `batch_health(run) -> dict` from `work/<run>/` and the pool. Shared by `batch-report`, `qgen report --batches` and plan 12''s exit check (which reads, doesn''t recompute).
+- Metrics per batch:
+  - drafts, dropped (by reason: hard fail per criterion, overlap, duplicate, skipped slot), drop rate;
+  - merged, approved, needs_work; needs_work rate by `problems`;
+  - overlap rate = (dropped as overlap or duplicate + needs_work for overlap) / drafts;
+  - difficulty: merged per target level vs. drawn slots; final vs. target from plan 13''s `qgen report --calibration` code (reuse, don''t rebuild); approved per level vs. the deficit to plan 12''s targets;
+  - variety: per axis, the top value''s share and the number of values used; media share (stimulus ≠ `none`); mean `fun` score;
+  - cost: total $, $ per approved, calls per approved; wall time per step where `run.json`/the log has it.
+- `batch-report`: a "## Health" section at the top of `authoring/reports/<batch>.md`: each metric, its threshold, ✓/✗, and the previous two batches'' values.
+- Cross-batch: `qgen report --batches [<batch>…]` (default batch-4 onward) prints one column per batch; `batch-report` also regenerates `authoring/reports/batches.md` with the same table and the gamemaster''s acknowledgements (below).
+
+## Thresholds (first guess; the gamemaster decides)
+- drop rate ≤ 20 % of drafts;
+- needs_work ≤ 20 % of merged; any one problem ≤ 8 %;
+- overlap rate ≤ 3 % of drafts, needs_work for overlap ≤ 1 % of merged;
+- merged at 11–15 ≥ 60 % of the slots drawn there; final difficulty within ±1.5 of target at 11–15 (plan 13''s goal);
+- top value of any axis ≤ 25 % of merged; media share 20–50 %;
+- $ per approved ≤ $0.35;
+- trend: no metric worse than the mean of the previous two batches by more than half its threshold''s margin.
+- Stored in `authoring/data/targets.json` under `"batch_health"` (plan 12''s file and loader, D-53); `qgen validate` checks the keys.
+- **Stop before the next batch (D-55):** when the last committed batch fails a threshold, `qgen batch` exits 2 before `concepts` and names the report. RUNBOOK step 3 already says "other exit code: stop and show the output", so an agent stops without new rules. The gamemaster clears it with `qgen health ack <batch> "<note>"`, which records the note in `authoring/data/health-acks.json` (shown in `batches.md`). Add one line to RUNBOOK''s exit-code table for 2. `qgen rework`/`tighten` aren''t blocked.
+- Plan 12''s exit check: "the last two batches pass" = no ✗ in `batch_health` (an ack doesn''t count as a pass).
+
+## Old checks this plan closes
+- PE-6 (grouped rate/revise, batch-6 vs. batch-4/5), PE-13 (concepts and axes, batch-7 vs. batch-6), MP-11 (media providers, batch-7 vs. batch-6): answered by `qgen report --batches` over batch-4…7 plus the needs_work `media` share; write the numbers into plans 20 and 23 and mark them `[x]`. Their blind side-by-side and re-rating parts are dropped: part 5''s spot checks (plan for task 17) cover quality.
+
+## Tasks (for the split)
+1. Overlap candidate finder (in `qgen.py` or a small `overlap.py`) + `qgen report --overlaps`; replay on batch-7 as above, record recall and candidates per draft here. Priority 710: it shapes the next batch most.
+2. `no_overlap` in `rate` (schema, `rate.md`, candidates in the payload, merge drop reason); the 20-draft before/after check. After task 1.
+3. `problems` in the review schema, `review.md`, `record`; keyword classifier for old questions.
+4. `health.py`, `qgen report --batches`, Health section in `batch-report`, `batches.md`. Run it over batch-4…7, record the baseline here, then close PE-6, PE-13, MP-11 as above. Plan 13''s `--calibration` is reused if it exists; otherwise this task leaves the difficulty-vs-target rows "n/a" and plan 13 task 1 fills them.
+5. Threshold decision: from task 4''s baseline, `pm decision add "Batch health thresholds and stop rule?"` with the numbers above adjusted to the baseline (options: the recommended set; looser; warning only, no stop). Then task 6 waits for it.
+6. Thresholds into `targets.json`, validate, ✓/✗ in the report, the stop in `qgen batch`, `qgen health ack`, RUNBOOK exit code 2. Needs plan 12 task 1 (targets file) and task 5''s decision.
+- Every task: `qgen validate` clean; no batch run inside these tasks. Batch-8 is in progress: tasks 1–2 change `rate`/`merge`, so they land before or after batch-8''s rate step, not during it (check `work/batch-8` first; if batch-8 is mid-rate, wait for plan 18''s batch-run task).
+
+## Done when
+- The replay finds the known overlaps before merge, and the next batch''s overlaps are dropped by `rate`, not left `needs_work`.
+- Every `authoring/reports/<batch>.md` from the next batch on has a Health section; `batches.md` compares batch-4 onward.
+- Thresholds are decided and stored; a failing batch stops the next `qgen batch` until acknowledged.
+- PE-6, PE-13, MP-11 and B-5 are closed with numbers.', '2026-10-11T23:45:50Z', 16);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -508,12 +579,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Find saturated `base` subcategories: approved count, concept-list use, duplicate rate, avoid-list length.
 - Propose new subcategories, especially ones that carry hard (11–15) questions, with draft concept lists.
 - Which ones to add is the gamemaster''s call (RUNBOOK): the plan''s analysis task raises a decision with the proposals as options; the task that adds them to `app/data/categories.json` waits for it.', '2026-10-11T23:16:50Z', '2026-10-11T23:43:52Z', 12);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (16, 1, 'write plan: duplicate and drift detection', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 1, B-5; absorbs PE-6, PE-13, MP-11): `pm plan add 1 "Duplicate and drift detection" --priority 700`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (16, 1, 'write plan: duplicate and drift detection', 'plan', 'done', 1000, '2026-10-11, pm plan 15; plans/decisions.md (D-55), plans/backlog.md (B-5), plans/20-pipeline-efficiency.md (PE-6, PE-13), plans/23-media-providers.md (MP-11), plans/project.md', 'Write the plan for part 4 of the masterplan (plan 1, B-5; absorbs PE-6, PE-13, MP-11): `pm plan add 1 "Duplicate and drift detection" --priority 700`.
 
 - Pre-merge overlap check of drafts against the whole approved pool by answer, concept and topic, not only question text (`dedupe`), so overlaps get dropped instead of ending up `needs_work` (cf. q-0644/q-0957, q-0646/q-0217, q-0689/q-0279).
 - Per-batch health metrics in `authoring/reports/<batch>.md` and a cross-batch comparison: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question.
 - Thresholds that say "stop and look before the next batch"; they feed the milestone''s exit check.
-- Close or update PE-6, PE-13, MP-11, B-5 in `plans/backlog.md` as the plan covers them.', '2026-10-11T23:16:50Z', NULL, 12);
+- Close or update PE-6, PE-13, MP-11, B-5 in `plans/backlog.md` as the plan covers them.', '2026-10-11T23:16:50Z', '2026-10-11T23:46:07Z', 12);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (17, 1, 'write plan: quality control after every batch', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 1): `pm plan add 1 "Quality control after every batch" --priority 650`.
 
 - (a) LLM audit with its own prompt (not `review.md`) on a sample of a batch: facts, ambiguity, giveaways, difficulty, house style; results into the batch report.
@@ -534,6 +605,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:41:37Z', NULL, 14);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (21, 14, 'create tasks for plan 14', 'split', 'open', 1000, NULL, 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', NULL, 15);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', NULL, 16);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -548,3 +621,4 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (3, 13, '2026-10-11T23:38:39Z', '2026-10-11T23:39:37Z', 'done', NULL, 0, '695c887e9c67db86f9ee0d3940dbc6cdd1f21c7c', 'claude-opus-5-5[1m]', 'cdb8babf-965b-40c1-b805-81625b28c7ff', 10, 20, 5455, 395561, 43117, 0.5332282, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (4, 14, '2026-10-11T23:39:37Z', '2026-10-11T23:41:51Z', 'done', NULL, 0, '3c2593167a0ea1330113d47a576182ad79943b4c', 'claude-opus-5-5[1m]', 'd31a158b-e857-4d3c-af7f-592d06d0b6da', 22, 44, 12603, 1024603, 52175, 0.87455660000000013, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (5, 15, '2026-10-11T23:41:51Z', '2026-10-11T23:44:00Z', 'done', NULL, 0, 'a979e6531d99f0e1e108fd42991906d9b6276453', 'claude-opus-5-5[1m]', '54bd36dd-a66a-4aa3-925f-fb9e8e55c0f8', 16, 32, 12922, 785142, 59246, 0.88956440000000014, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (6, 16, '2026-10-11T23:44:00Z', '2026-10-11T23:46:18Z', 'done', NULL, 0, '935c36d3b4ace0118f044d7942768252932eb593', 'claude-opus-5-5[1m]', 'e0185921-1dee-4604-a220-e5d303e29352', 17, 34, 13786, 823893, 60167, 0.92197059999999986, 80113);
