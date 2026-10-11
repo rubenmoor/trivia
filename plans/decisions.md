@@ -428,3 +428,10 @@ Template:
 - Decision: A new file `authoring/data/targets.json`, keyed by bundle: `{"base": {"total": 5000, "difficulty": {"1": n, …, "15": n}}}`. Authoring-only, so not in `app/data/age-groups.json` (D-35: what the game doesn't need stays in `authoring/`). Per-category targets aren't stored: they follow from the total and the bundle's subcategory count. A bundle without an entry has no targets.
 - Consequences: `qgen validate` checks the file (levels match the scale, sum = total). The authoring server serves it at `/api/targets`. The difficulty numbers come from pm decision 1.
 - Supersedes / related: D-35, D-38, D-40, D-52
+
+## D-54: `draft` aims at the gaps to the pool targets
+- Date: 2026-10-11
+- Context: D-40 spreads target difficulties evenly over 1–15, and `qgen batch` picks subcategories by fewest approved (D-46). With targets per level (D-53) the pool still fills 5–8 fastest; hard targets land ~3 levels low (B-6; batch-7: target 15 → final 12.1).
+- Decision: When the bundle has targets, `draft` weights each level by its deficit, `max(0, target − approved)`; even weights stay for bundles without targets (D-40). `qgen batch` ranks subcategories by approved questions weighted by the same deficits, so subcategories thin where the pool is thin come first. Slot targets go to subcategories whose concept lists can carry them (unused concepts with `known_at` near the target).
+- Consequences: `qgen batch` still takes no arguments (D-36). Batches change shape as the pool fills. pm plan 13 (Aim batches at difficulty gaps) has the tasks.
+- Supersedes / related: D-36, D-40, D-46, D-53; B-6
