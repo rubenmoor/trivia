@@ -15,6 +15,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
+    qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--subcategories]
     qgen validate
@@ -1206,8 +1207,12 @@ def batch_questions(run, statuses=("draft",)):
             if (q["id"] in ids if ids else q.get("batch") == run) and q["status"] in statuses]
 
 
+def run_mode(run):
+    return (load_json(WORK / run / "run.json", {}) or {}).get("mode")
+
+
 def is_rework(run):
-    return (load_json(WORK / run / "run.json", {}) or {}).get("mode") == "rework"
+    return run_mode(run) == "rework"
 
 
 def update_pool(changes):
@@ -1302,7 +1307,7 @@ def cmd_review(args):
     ratings, checks = collect(d)
     pool = load_json(POOL)["questions"]
     system = prompt("house-style", "review")
-    rework = is_rework(args.run)
+    rework = run_mode(args.run) in ("rework", "tighten")
     todo = []
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
@@ -1357,16 +1362,17 @@ def cmd_fix(args):
     go back to draft, are all fact-checked and reviewed again, with a new media search if needed."""
     d = run_dir(args)
     rework = is_rework(args.run)
+    tighten = load_json(d / "run.json", {}).get("issues") if run_mode(args.run) == "tighten" else None
     tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
     _, checks = collect(d)
     system = prompt("house-style", "revise")
     today = datetime.date.today().isoformat()
     revise, recheck = [], []
-    for q in batch_questions(args.run, ("draft", "needs_work")):
+    for q in batch_questions(args.run, ("draft", "needs_work", "approved")):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         fix = r.get("fix")
-        if fix is None and (issue := fix_issue(q, r, rework)):
+        if fix is None and (issue := f"too long: {tighten[q['id']]}" if tighten else fix_issue(q, r, rework)):
             revise.append((q, path, r, issue))
         elif fix and "factcheck" not in fix and needs_recheck(fix, rework):
             recheck.append((q, path, r))
@@ -1396,7 +1402,7 @@ def cmd_fix(args):
                 def change(x, rev=rev, fix=fix):
                     if fix["action"] == "revise":
                         changed.extend(revise_in_pool(x, rev["question"], rev["reason"], today))
-                    if rework:
+                    if rework or tighten:
                         x["status"], x["review"] = "draft", None
                 with _pool_lock:
                     update_pool({q["id"]: change})
@@ -1770,6 +1776,78 @@ def cmd_rework(args):
           f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
 
 
+TIGHTEN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {
+    "type": "object", "required": ["id", "issue"], "properties": {"id": STR, "issue": STR}}}}}
+
+
+def cmd_scan(args):
+    """Claude reads every approved and needs_work question text and flags long-winded ones (QG-24)."""
+    d = run_dir(args)
+    if "issues" in load_json(d / "run.json", {}):
+        return []
+    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")]
+    groups = [g for g in chunks(qs, 50) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
+    system = prompt("house-style", "tighten")
+
+    def work(group):
+        items = [{"id": q["id"], "clue": (q.get("axes") or {}).get("clue"), "question": q["question"]} for q in group]
+        out = claude(system, "## Questions\n" + json.dumps(items, ensure_ascii=False), TIGHTEN_SCHEMA, args.model, d)
+        ids = {q["id"] for q in group}
+        save_json(d / "scan" / f"{group[0]['id']}.json", [f for f in out["flagged"] if f["id"] in ids])
+
+    errors = parallel(work, groups, args.jobs, "scan", "calls")
+    if not errors:
+        flagged = [f for p in sorted((d / "scan").glob("*.json")) for f in load_json(p)]
+        cfg = load_json(d / "run.json")
+        save_json(d / "run.json", {**cfg, "ids": [f["id"] for f in flagged],
+                                   "issues": {f["id"]: f["issue"] for f in flagged}})
+        print(f"  {len(flagged)} of {len(qs)} questions flagged", flush=True)
+    return errors
+
+
+def cmd_tighten(args):
+    """Find long-winded questions in the whole pool, approved ones included, then shorten, fact-check,
+    review and record them like `qgen rework` (QG-24). Kept and dropped ones stay as they were."""
+    open_runs = sorted(p.parent.name for p in WORK.glob("tighten-*/run.json") if not load_json(p).get("done"))
+    if open_runs:
+        run = open_runs[0]
+        print(f"Resuming {run}.", flush=True)
+    else:
+        numbers = [int(p.name.split("-")[1]) for p in WORK.glob("tighten-*") if p.name.split("-")[1].isdigit()]
+        run = f"tighten-{max(numbers, default=0) + 1}"
+        save_json(WORK / run / "run.json", {"mode": "tighten", "started": datetime.date.today().isoformat()})
+        print(f"Starting {run}: reading the whole pool.", flush=True)
+    d = WORK / run
+    progress.verbose = False
+
+    def ns(**kw):
+        return argparse.Namespace(run=run, jobs=args.jobs, **kw)
+
+    t0 = run_steps([
+        ("scan", cmd_scan, ns(model="opus")),
+        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
+        ("media", cmd_media, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+        ("research", cmd_research, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
+        ("record", cmd_record, ns()),
+        ("export", lambda a: cmd_export(a) or [], ns()),
+        ("sync", cmd_sync_run, ns()),
+    ], "qgen tighten")
+    cfg = load_json(d / "run.json")
+    save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
+    fixes = {p.stem: (load_json(p).get("fix") or {}).get("action") for p in (d / "reviews").glob("*.json")}
+    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    revised = [i for i, a in fixes.items() if a == "revise"]
+    n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
+    print(f"\nDone: {run}: {len(cfg.get('ids', []))} flagged, {len(revised)} shortened, {n_ok} of those approved, "
+          f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
+    print("Commit exactly this:\n  git add authoring/data/questions.json app/data/pool.json\n"
+          f"  git commit -m \"{run}: {len(revised)} long-winded questions shortened, {n_ok} approved (qgen tighten)\"")
+
+
 # --- export (D-35) --------------------------------------------------------------
 
 def cmd_export(args):
@@ -1962,6 +2040,9 @@ def main():
     rw.set_defaults(fn=cmd_rework)
     rw.add_argument("--batch", help="only this batch's needs_work questions")
     rw.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
+    tg = sub.add_parser("tighten", help="find long-winded questions in the whole pool, shorten and review them (QG-24)")
+    tg.set_defaults(fn=cmd_tighten)
+    tg.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     b = sub.add_parser("batch", help="the whole pipeline for one new batch (authoring/RUNBOOK.md)")
     b.set_defaults(fn=cmd_batch)
     b.add_argument("--bundle", default="base", help="write for this bundle (default base); only when the user names one")

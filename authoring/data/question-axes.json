@@ -39,7 +39,7 @@
       "values": {
         "direct": "a plain, direct question",
         "riddle": "a riddle in the first person: \"Tengo…, vivo en…, ¿qué soy?\"",
-        "scenario": "an everyday situation the player can picture: \"Estás en la cocina y…\"",
+        "scenario": "one short clause of everyday situation that is part of the clue: \"Estás en la cocina y…\"; no invented relatives, friends or backstory",
         "completion": "complete a saying, a famous line or a well-known phrase",
         "three_facts": "three short facts that together point to exactly one answer"
       }
@@ -76,6 +76,7 @@
   },
   "weights": {
     "move": {"connection": 0},
+    "clue": {"scenario": 0.4},
     "stimulus": {"none": 7, "photo": 1.5, "detail": 0.8, "silhouette": 0.4, "map_outline": 0.4, "sound": 0.8, "video": 0.3}
   },
   "rules": [

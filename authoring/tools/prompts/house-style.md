@@ -25,6 +25,13 @@ The game has four age groups: {age_groups}. Every question has one difficulty on
   - Bad: "¿Qué ritmo del Caribe colombiano se baila con velas en la mano?" Other dances use candles too.
   - Bad: "¿En qué deporte se usa una raqueta y una pelotica amarilla?" Pádel and frontenis do too, and tennis doesn't depend on the ball's colour.
 
+## Keep it short
+The question is read aloud on a TV; the family should get it in one breath.
+- `question`: one or two short sentences, ideally under 120 characters, rarely over 160.
+- A bit of extra context (a surprising detail, a setting) is allowed, but always optional: cut it when it makes the question long.
+- No invented story around the question: no relatives, friends, guides or influencers telling you something ("Tu tío…", "Tu prima te reta…", "Un amigo…"), no "Imagina que…", no backstory. A situation ("Estás en la cocina y…") only when it is the clue itself, in one short clause.
+- Don't explain what the hints, the fun fact or the description already say.
+
 ## No giveaways
 Nothing may give the answer away: not the description, not the question text, not hints 1 and 2, not the media (an illustrative image is shown sharp, so it is the riskiest). Don't name things in the question that make it trivial (naming EVE and Pixar in a WALL·E question; a carnival's own slogan in a question about its city; a first clue that already identifies the answer). Hint 3 may come close.
 
