@@ -13,6 +13,7 @@
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Placeholder from "./Placeholder.svelte";
   import Shredder from "./Shredder.svelte";
+  import Stage from "./Stage.svelte";
   import { duck, mediaVolume, music, sfx, sound } from "./sound.svelte";
   import { cardFlip, crossfade } from "./swap";
   import {
@@ -71,6 +72,12 @@
   let revealed = $state(false);
   let error = $state<string | null>(null);
   let mediaFailed = $state(false);
+  /** A sharp image's native size in CSS px at this screen's pixel density (D-51). */
+  let native = $state<{ w: number; h: number } | null>(null);
+  function measure(e: Event) {
+    const img = e.currentTarget as HTMLImageElement;
+    native = { w: img.naturalWidth / devicePixelRatio, h: img.naturalHeight / devicePixelRatio };
+  }
   let player = $state<HTMLMediaElement>();
   let padlockTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -106,9 +113,13 @@
 
   const media = $derived(question.media);
   const src = (url: string | null) => (url ? `/media?url=${encodeURIComponent(url)}` : null);
-  /** The full-bleed picture: the image itself, or an audio question's background (D-14). */
+  /** The picture: the image itself, or an audio question's background (D-14). */
   const picture = $derived(media.type === "image" ? src(media.file_url) : src(question.background?.file_url ?? null));
   const decorative = $derived(media.type === "audio" || media.role === "decorative");
+  $effect.pre(() => {
+    void picture;
+    native = null;
+  });
   const credits = $derived(
     [media.credit, media.type === "audio" ? question.background?.credit : null].filter(Boolean).join(" · "),
   );
@@ -354,8 +365,20 @@
     {#if media.type === "video" && media.file_url}
       <!-- svelte-ignore a11y_media_has_caption -->
       <video bind:this={player} src={src(media.file_url)} autoplay onended={mediaEnded} onerror={() => (mediaFailed = true)}></video>
+    {:else if picture && !mediaFailed && decorative}
+      <img src={picture} alt="" class="blurred" onerror={() => (mediaFailed = true)} />
     {:else if picture && !mediaFailed}
-      <img src={picture} alt="" class:blurred={decorative} onerror={() => (mediaFailed = true)} />
+      <Stage />
+      <img
+        src={picture}
+        alt=""
+        class="fit"
+        class:ready={native}
+        style:--w={native?.w}
+        style:--ratio={native ? native.w / native.h : 1}
+        onload={measure}
+        onerror={() => (mediaFailed = true)}
+      />
     {/if}
     {#if decorative && !mediaFailed}<div class="mark">?</div>{/if}
   </div>
@@ -541,6 +564,32 @@
     height: 100%;
     object-fit: cover;
     transition: filter 0.6s;
+  }
+  /* D-51: native size, down to fit, never up; rounded fade into the stage. */
+  .backdrop {
+    container-type: size;
+  }
+  .backdrop img.fit {
+    --fade: min(calc(4.5 * var(--u)), 20%);
+    --ramp:
+      transparent, rgba(0, 0, 0, 0.12) calc(0.25 * var(--fade)), rgba(0, 0, 0, 0.5) calc(0.5 * var(--fade)),
+      rgba(0, 0, 0, 0.88) calc(0.75 * var(--fade)), #000 var(--fade), #000 calc(100% - var(--fade)),
+      rgba(0, 0, 0, 0.88) calc(100% - 0.75 * var(--fade)), rgba(0, 0, 0, 0.5) calc(100% - 0.5 * var(--fade)),
+      rgba(0, 0, 0, 0.12) calc(100% - 0.25 * var(--fade)), transparent;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: min(calc(var(--w) * 1px), 100cqw, calc(100cqh * var(--ratio)));
+    height: auto;
+    opacity: 0;
+    transition:
+      filter 0.6s,
+      opacity 0.3s;
+    mask-image: linear-gradient(to right, var(--ramp)), linear-gradient(to bottom, var(--ramp));
+    mask-composite: intersect;
+  }
+  .backdrop img.fit.ready {
+    opacity: 1;
   }
   .backdrop img.blurred {
     filter: blur(calc(1.4 * var(--u))) brightness(0.6);

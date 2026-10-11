@@ -6,7 +6,7 @@ The game as the family sees it on the TV: screen states, transitions, sound and 
 
 ## Requirements
 - Full-screen, 16:9, readable from the couch with a **compact** type scale and high contrast. The look (colours, type, glass panels, components) is owned by `10-visual-design.md` (D-29).
-- A full-bleed background image for each question. Everything over it is a separate, semi-transparent glass panel (no full-width scrims), so the picture stays visible (D-29).
+- A background image for each question, shown at its own size and centred on the night stage: scaled down only when it is bigger than the screen, never up, never stretched; its edges fade softly into the stage (D-51). Everything over it is a separate, semi-transparent glass panel (no full-width scrims), so the picture stays visible (D-29).
 - Decorative images are blurred and slightly darkened, with a big question mark in the centre (D-15), so they read as mood, not as a clue. Illustrative and essential media are shown sharp (D-24).
 - Progress is shown as a **tower of blocks** that grows by one block per correct answer and gets narrower towards the top (see Level screen).
 - Players choose each question by its humorous `description` (D-8). The category is never shown.

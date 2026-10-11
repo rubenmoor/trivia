@@ -407,3 +407,10 @@ Template:
 - Decision: The store name is **Living Room Trivia**. Its Spanish localized name is **«Trivia en Familia»**: a literal «Trivia de Sala» splits Spanish (Latin American «sala», Spain «salón», OQ-31) and reads less naturally. The logo makes the word "Trivia" the main element, so both names look like the same game. Other languages get a localized name when they launch (15a). In-game, the title comes from the UI string catalog. The name stands only once PUB-7 (Steam search, trademark registers, domain) passes for both names; if it fails, OQ-34 reopens. Candidates considered: «Doce en Raya» / «Doce Seguidas» (only fit the co-op ladder), "Trivia Together" (doesn't fit competitive or single-player), "Trivia Night" (taken by an app and a Steam group), "Just Trivia", "Couch Trivia".
 - Consequences: Set both names in Steamworks' General Application Settings before the coming-soon page, since a later change is restricted. Localized capsule art per language (PUB-8). The family game keeps showing «¡Trivia!» until the UI catalog (15a) carries the title.
 - Supersedes / related: D-30 (OQ-28, «¡Trivia!»), D-34; OQ-31, OQ-34; PUB-7, PUB-8
+
+## D-51: Sharp images keep their size and fade into the stage
+- Date: 2026-10-11
+- Context: Question images filled the screen with `object-fit: cover`, which crops wide and tall images and upscales small ones.
+- Decision: A sharp image (illustrative, essential) is shown at its native size in device pixels, scaled down only when bigger than the screen, never upscaled, aspect ratio kept, centred. Behind it the night stage (VD-6). Its edges fade into the stage with a rounded feather. Decorative images stay blurred and full-bleed (D-15); video stays full-bleed.
+- Consequences: Small images show small; D-48 (4K target) keeps them big on the TV.
+- Supersedes / related: D-15, D-29 (full-bleed picture), D-48; VD-6, VD-10
