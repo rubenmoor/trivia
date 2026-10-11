@@ -210,6 +210,30 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - The gamemaster approves the new sounds on the TV.
 
 Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (7, 'Steam S2: product definition', 'open', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
+
+## Outcome
+Answers, each recorded in `plans/decisions.md`, to:
+- OQ-29 desktop shell (Electron recommended, Tauri, or browser + local server)
+- OQ-30 default mode: joker presets per difficulty, which levels count as won
+- OQ-31 launch languages and Spanish variety
+- OQ-32 content target per new player and language
+- OQ-33 price model; who holds the Steamworks account
+- OQ-35 code and content license; whether the pool stays public
+- OQ-37 competitive and couch co-op format and input
+- OQ-45 Freesound API use for a commercial release
+Then the S2 tasks that follow from them: MD-5..MD-7, I18N-1, CT-1, PUB-4.
+
+## Constraints
+- The gamemaster answers; workers prepare options and recommendations as pm decisions.
+
+## Out of scope
+- S3–S6 (desktop build, release content, Steamworks, launch).
+
+## Done when
+- OQ-29..OQ-37 (and OQ-45) are resolved in `decisions.md`, and the later phases in `plans/11-steam.md` are updated to match.
+
+Plan files: `plans/11-steam.md`, `plans/13-game-modes.md`, `plans/15-i18n.md`, `plans/16-content-target.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:54:56Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'tbd.', '2026-10-11T20:08:18Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
@@ -217,6 +241,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (4, 4, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -234,5 +259,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (6, 6, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 6, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (7, 7, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 7, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
