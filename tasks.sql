@@ -424,6 +424,37 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `qgen report --calibration` exists and the baseline is recorded.
 - A seeded dry run draws targets weighted by deficit, and mean concept `known_at` per target is within ±1.
 - The first batch after these tasks lands within ±1.5 of the target at every level 11–15 (final difficulty), or the gap is logged with the next fix.', '2026-10-11T23:41:37Z', 14);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (14, 1, 'More subcategories', 600, 'Part 3 of the masterplan (plan 1). The concern was that subcategories run dry as the pool grows to 5000: concept lists and the per-subcategory avoid list wear out, and that leads to duplicates and easy hard questions. The baseline says this hasn''t happened yet: QP-16 (2026-10-10) took `base` to 184 subcategories, so this plan builds the check that spots saturation, proposes new subcategories where the check or the category balance asks for them, and adds the ones the gamemaster approves (RUNBOOK: the subcategory list is the gamemaster''s).
+
+## Baseline (2026-10-11, throw-away script)
+- `base`: 28 broad categories, 184 subcategories (QP-16 added 68, 26 of them in 5 new broad categories). 66 subcategories have 0 approved questions; batch-8 (92 subcategories) drafts most of them.
+- Most approved in one subcategory: 19 (Plantas, Mundiales de fútbol). At 5000 the mean is ~27 approved and ~50 asked per subcategory.
+- Concept lists: 37–255 concepts. Fewest unused: Empresas famosas 37, Origen de las marcas 48, Océanos 51, Fantasía 57, Monumentos famosos 57, Bichos raros 58. `qgen batch` tops up automatically below 30 unused (`LOW_STOCK`).
+- 21 old subcategories have no concept list yet (Idioma, Ciencia, Historia, Aves, Anime, …). The batch that picks them creates the list (D-37).
+- Hard supply is fine overall: ~14k unused concepts at `known_at` ≥ 11, against roughly 900 wanted at 11–15 (plan 12). Thin spots: Productos del supermercado 8, Planeta Tierra 13, Tecnología 17, Números 18; broad categories Cuerpo humano and Marcas y logotipos ~36 per subcategory.
+- Duplicates: merge dropped 1 duplicate in batch-6/7. Overlaps show up at review instead (needs_work). 2 of batch-7''s 3 overlaps span two subcategories with near-synonym concepts (Caballeros «Almena» / Castillos «Almenas»; Caballeros / Héroes griegos «Son constelaciones»). Catching those is part 4''s job (plan for task 16), not this plan''s.
+- Broad categories with few subcategories get few questions, because batches pick by subcategory (D-46) and plan 12''s per-category targets follow subcategory count (D-53): Espacio 1, Cuerpo humano 2, Fiestas y tradiciones 2, Fútbol 2, Videojuegos 3, Amazonas 3. At 5000 Espacio would have ~27 questions; Historia would have ~490.
+
+## Saturation check
+- `qgen report --subcategories [--bundle <id>]`: one row per subcategory, with approved and asked counts (asked = all statuses = avoid-list length), list size, unused, unused at `known_at` ≥ 11, top-ups so far, and overlaps (merge duplicate drops + review needs_work for overlap, last two batches). Also a row per broad category: subcategories, approved, unused hard concepts.
+- A subcategory is **saturated** when any of these holds: unused < 36 (2 batches of 18 slots) right after a top-up; unused at `known_at` ≥ 11 < 10; overlaps ≥ 10 % of its drafts in the last batch; asked ≥ 60 (a long avoid list in the draft prompt). These thresholds are a first guess. Tune them in the report task and write them here.
+- Reuse plan 13''s `qgen report` code (`--calibration`) and part 4''s overlap counts once they exist; don''t count things twice.
+
+## Proposals
+- Three sources: (a) subcategories the check flags as saturated: split them or add a neighbour; (b) broad categories with ≤ 3 subcategories (category balance in play); (c) topics that carry hard questions (11–15), where a well-informed adult knows the answer and a child doesn''t, e.g. inside Espacio, Cuerpo humano, Ciencia y matemáticas.
+- Each proposal has: name (Spanish, like the others), broad category, one-line scope, reason (which source, which numbers), and ~10 sample concepts with `known_at`, at least 3 of them at 11–15.
+- Checks before proposing: no name or near-synonym of an existing subcategory in any bundle (unique names, D-43); no Colombia-only topic (D-49, `colombia` bundle); broad enough for ≥ 100 concepts.
+- New broad categories are out of scope: they add tiles to the game''s «Cambiazo» picker. Propose one only if the decision''s answer asks for it.
+
+## Tasks (for the split)
+1. `qgen report --subcategories` with the saturation flags; record the baseline numbers and the tuned thresholds in this plan (`pm plan edit`). `qgen validate` clean.
+2. Proposal round: run the report and write 10–20 proposals by the rules above into the body of a pm decision (`pm decision add "Which new base subcategories?"`, options: "add the recommended ones" first, then "add all", "none for now"). Then make task 3 wait for it (`pm task-pending-decision`). No changes to `categories.json` in this task.
+3. Add the approved subcategories to `app/data/categories.json`, in their broad category, then create their concept lists with `qgen concepts --subcategories "<names>"` (one Opus call per list, not a batch run). Log the change as a QP entry in `plans/02-question-pool.md`. `qgen validate` clean. Pending on task 2''s decision.
+- Later rounds: the plan for task 18 (batch runs) reruns `qgen report --subcategories` every two batches. When it flags subcategories, it adds a proposal round like task 2 to this plan.
+
+## Done when
+- `qgen report --subcategories` shows the flags; baseline and thresholds are recorded here.
+- The gamemaster has answered the proposal decision; the approved subcategories are in `categories.json` with concept lists, and `qgen validate` is clean.', '2026-10-11T23:43:50Z', 15);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -472,11 +503,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Measure first: target vs. rated vs. reviewed difficulty for batch-7 and batch-8; where do 11–15 targets land?
 - Fix prompts or concept `known_at` choice where hard drafts come out at 7–9. These are implementation tasks on `qgen.py`/prompts, never workarounds inside a batch run (RUNBOOK).
 - Depends on part 1''s target storage; refer to that plan once it exists (`pm plan list`).', '2026-10-11T23:16:50Z', '2026-10-11T23:41:40Z', 12);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (15, 1, 'write plan: more subcategories', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 1): `pm plan add 1 "More subcategories" --priority 600`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (15, 1, 'write plan: more subcategories', 'plan', 'done', 1000, '2026-10-11, plan 14 (More subcategories)', 'Write the plan for part 3 of the masterplan (plan 1): `pm plan add 1 "More subcategories" --priority 600`.
 
 - Find saturated `base` subcategories: approved count, concept-list use, duplicate rate, avoid-list length.
 - Propose new subcategories, especially ones that carry hard (11–15) questions, with draft concept lists.
-- Which ones to add is the gamemaster''s call (RUNBOOK): the plan''s analysis task raises a decision with the proposals as options; the task that adds them to `app/data/categories.json` waits for it.', '2026-10-11T23:16:50Z', NULL, 12);
+- Which ones to add is the gamemaster''s call (RUNBOOK): the plan''s analysis task raises a decision with the proposals as options; the task that adds them to `app/data/categories.json` waits for it.', '2026-10-11T23:16:50Z', '2026-10-11T23:43:52Z', 12);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (16, 1, 'write plan: duplicate and drift detection', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 1, B-5; absorbs PE-6, PE-13, MP-11): `pm plan add 1 "Duplicate and drift detection" --priority 700`.
 
 - Pre-merge overlap check of drafts against the whole approved pool by answer, concept and topic, not only question text (`dedupe`), so overlaps get dropped instead of ending up `needs_work` (cf. q-0644/q-0957, q-0646/q-0217, q-0689/q-0279).
@@ -501,6 +532,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:39:28Z', NULL, 13);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (20, 13, 'create tasks for plan 13', 'split', 'open', 1000, NULL, 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:41:37Z', NULL, 14);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (21, 14, 'create tasks for plan 14', 'split', 'open', 1000, NULL, 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', NULL, 15);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -514,3 +547,4 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (3, 13, '2026-10-11T23:38:39Z', '2026-10-11T23:39:37Z', 'done', NULL, 0, '695c887e9c67db86f9ee0d3940dbc6cdd1f21c7c', 'claude-opus-5-5[1m]', 'cdb8babf-965b-40c1-b805-81625b28c7ff', 10, 20, 5455, 395561, 43117, 0.5332282, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (4, 14, '2026-10-11T23:39:37Z', '2026-10-11T23:41:51Z', 'done', NULL, 0, '3c2593167a0ea1330113d47a576182ad79943b4c', 'claude-opus-5-5[1m]', 'd31a158b-e857-4d3c-af7f-592d06d0b6da', 22, 44, 12603, 1024603, 52175, 0.87455660000000013, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (5, 15, '2026-10-11T23:41:51Z', '2026-10-11T23:44:00Z', 'done', NULL, 0, 'a979e6531d99f0e1e108fd42991906d9b6276453', 'claude-opus-5-5[1m]', '54bd36dd-a66a-4aa3-925f-fb9e8e55c0f8', 16, 32, 12922, 785142, 59246, 0.88956440000000014, 80113);
