@@ -159,10 +159,30 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Every question has `bundle`, checked by `qgen validate`.
 
 Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced. Needed before any public release; small and independent of the other milestones.
+
+## Outcome
+- `media.py licenses` report listing the files to replace (PUB-1).
+- Full license data per media item in the pool (PUB-2).
+- Problem files replaced in the review tool (PUB-3).
+
+## Constraints
+- Replacements are picked by the gamemaster in the review tool, not by an LLM.
+- Media files stay a gitignored cache (D-17); only metadata lives in the pool.
+
+## Out of scope
+- Credits screen and store disclosures (Steam S3, S5).
+
+## Done when
+- `qgen validate` requires license data for approved questions.
+- The audit''s replacement list is empty.
+
+Plan files: `plans/17-publishing.md`.', '2026-10-11T21:54:55Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'tbd.', '2026-10-11T20:08:18Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (3, 3, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (4, 4, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -171,5 +191,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (3, 3, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 3, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (4, 4, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 4, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
