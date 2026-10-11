@@ -139,13 +139,37 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - `trivia` serves static files plus `/api/save` only.
 
 Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (3, 'UI strings in a catalog', 'open', 'Every on-screen string comes from a catalog, with no visible change. This is the groundwork for translations. Bundles (the other half of the old M9) are done in the pipeline; only the gamemaster''s check of the `colombia` proposals is left.
+
+## Outcome
+- `t()` helper and the `es` catalog; every string moved into it (LUI-1).
+- Pseudo-locale for length and missing-string tests (LUI-2).
+- Draft `en` catalog with English joker names (LUI-3).
+- The gamemaster has checked the 84 `colombia` proposals at `/review?bundle=colombia` (D-39).
+
+## Constraints
+- No visible change in Spanish.
+- No i18n library; a small hand-written helper.
+
+## Out of scope
+- Translating questions (`plans/15b-question-translation.md`), choosing launch languages (OQ-31).
+
+## Done when
+- No Spanish literals left in `app/client/src/game` outside the catalog.
+- Every question has `bundle`, checked by `qgen validate`.
+
+Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'tbd.', '2026-10-11T20:08:18Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (3, 3, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T20:08:18Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (2, 2, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 2, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (3, 3, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 3, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
