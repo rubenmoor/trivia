@@ -233,7 +233,7 @@ def limit_reset(msg, now=None):
     return reset
 
 
-def wait_for_reset(limit):
+def wait_for_reset(limit, again="qgen batch"):
     """Sleep until LIMIT_MARGIN after the reset that `limit` names (at least LIMIT_MARGIN).
     Returns False, without waiting, when the message has no reset time (QG-21)."""
     reset = limit_reset(limit)
@@ -242,7 +242,7 @@ def wait_for_reset(limit):
     until = max(reset + LIMIT_MARGIN, datetime.datetime.now(reset.tzinfo) + LIMIT_MARGIN)
     left = (until - datetime.datetime.now(until.tzinfo)).total_seconds()
     print(f"\nClaude's usage limit ({limit}).\nWaiting until {until:%Y-%m-%d %H:%M} {until.tzname()} "
-          f"({progress.duration(left)}), then continuing. Ctrl-C stops; `qgen batch` continues later.",
+          f"({progress.duration(left)}), then continuing. Ctrl-C stops; `{again}` continues later.",
           file=sys.stderr, flush=True)
     while (left := (until - datetime.datetime.now(until.tzinfo)).total_seconds()) > 0:
         time.sleep(min(left, 60))  # the wall clock, so a suspended laptop still wakes up on time
@@ -1645,7 +1645,7 @@ def run_steps(steps, again):
         print(f"   {name} took {progress.duration(time.monotonic() - t)} "
               f"(batch: {progress.duration(time.monotonic() - t0)})", flush=True)
         limit = next((e for e in errors if isinstance(e, UsageLimit)), None)
-        if limit and wait_for_reset(limit):
+        if limit and wait_for_reset(limit, again):
             i -= 1  # the step skips the work it already did (QG-21)
             continue
         if limit:
