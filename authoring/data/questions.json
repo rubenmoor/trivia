@@ -15649,10 +15649,10 @@
     },
     {
       "id": "q-0250",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 7,
       "description": "Una serie de números tan famosa que aparece hasta en los girasoles.",
-      "question": "¿Qué número sigue en esta serie: 1, 1, 2, 3, 5, 8...?",
+      "question": "¿Qué número sigue en la sucesión de Fibonacci: 1, 1, 2, 3, 5, 8...?",
       "answer": "13",
       "wrong_answers": [
         "11",
@@ -15667,7 +15667,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "sunflower head spiral",
+        "query": "Fibonacci statue Pisa",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -15690,21 +15690,7 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "the image doesn't help, but moreover, the question isn't technically correct. a couple of numbers do not define a series. mention fibonacci directly in the question instead, and then it's fine",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "approved",
-          "feedback": null,
-          "reviewed_on": "2026-10-06",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "background": null,
       "bundle": "base",
       "concept": "Sucesión de Fibonacci",
@@ -15714,6 +15700,23 @@
         "clue": "direct",
         "answer_kind": "number",
         "lens": "school"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Named the Fibonacci sequence in the question so a few numbers define it, and switched the unhelpful sunflower image to the Fibonacci statue in Pisa.",
+        "previous": {
+          "question": "¿Qué número sigue en esta serie: 1, 1, 2, 3, 5, 8...?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "sunflower head spiral",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-10"
       }
     },
     {
@@ -18716,7 +18719,7 @@
     },
     {
       "id": "q-0297",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 3,
       "description": "Una fiesta tan buena que no cabe en una sola noche y hay que repetirla con natilla y buñuelos.",
       "question": "¿Qué día empieza la Novena de Aguinaldos?",
@@ -18757,21 +18760,7 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-3",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "subcategory: colombia something",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "approved",
-          "feedback": null,
-          "reviewed_on": "2026-10-06",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "background": null,
       "bundle": "colombia",
       "concept": "Novena de Aguinaldos",
@@ -27519,20 +27508,20 @@
     },
     {
       "id": "q-0443",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 6,
       "description": "Tres inventos, un solo papá, y ninguno de los tres le ayudaba a hacer las tareas.",
-      "question": "Un bombillo que duraba muchas horas encendido, el fonógrafo (una máquina que grababa y reproducía sonido) y una de las primeras cámaras de cine: ¿qué tienen en común?",
-      "answer": "Los desarrolló Thomas Edison",
+      "question": "Un bombillo que duraba muchas horas encendido, el fonógrafo (una máquina que grababa y reproducía sonido) y una de las primeras cámaras de cine: ¿qué inventor los desarrolló?",
+      "answer": "Thomas Edison",
       "wrong_answers": [
-        "Los desarrolló Nikola Tesla",
-        "Los desarrolló Alexander Graham Bell",
-        "Los desarrolló Benjamin Franklin"
+        "Nikola Tesla",
+        "Alexander Graham Bell",
+        "Benjamin Franklin"
       ],
       "hints": [
-        "Los tres salieron del laboratorio del mismo inventor de Estados Unidos.",
+        "Era de Estados Unidos y trabajaba con un gran equipo en su laboratorio.",
         "A este inventor lo llamaban 'el mago de Menlo Park' y tenía más de mil patentes.",
-        "Su nombre empieza por Thomas."
+        "Su apellido empieza por E."
       ],
       "media": {
         "type": "image",
@@ -27560,21 +27549,7 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-5",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "the concept of this question has a flaw: \"what do they have in common\" together with 4 answers that all start with \"developed by ...\". If you use \"what do they have in common?\" the 4 answers can't be that similar",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta está bien, pero ninguna de las imágenes candidatas sirve como fondo decorativo: hay un grabado de mujeres japonesas, un edificio con una antena, el retrato de un señor y una pintura de demonios. Hay que buscar una imagen nueva, por ejemplo con \"vintage laboratory glassware\" o \"19th century workshop tools\", que no muestre fonógrafos con la marca Edison. Commons no tiene una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-07",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "background": null,
       "bundle": "base",
       "concept": "Thomas Edison",
@@ -27584,6 +27559,25 @@
         "clue": "three_facts",
         "answer_kind": "person",
         "lens": "history"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded as 'which inventor developed them' so the options are plain names instead of near-identical 'what they have in common' answers, and adjusted the hints to match.",
+        "previous": {
+          "question": "Un bombillo que duraba muchas horas encendido, el fonógrafo (una máquina que grababa y reproducía sonido) y una de las primeras cámaras de cine: ¿qué tienen en común?",
+          "answer": "Los desarrolló Thomas Edison",
+          "wrong_answers": [
+            "Los desarrolló Nikola Tesla",
+            "Los desarrolló Alexander Graham Bell",
+            "Los desarrolló Benjamin Franklin"
+          ],
+          "hints": [
+            "Los tres salieron del laboratorio del mismo inventor de Estados Unidos.",
+            "A este inventor lo llamaban 'el mago de Menlo Park' y tenía más de mil patentes.",
+            "Su nombre empieza por Thomas."
+          ]
+        },
+        "revised_on": "2026-10-10"
       }
     },
     {
@@ -31966,10 +31960,10 @@
     },
     {
       "id": "q-0519",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 12,
       "description": "Un prócer que, en vez de estatua, se ganó miles de estudiantes con carné.",
-      "question": "Llevo el nombre de un prócer que fue el primer presidente del Estado de Cundinamarca en 1811 y que estudió animales en la Expedición Botánica. Estoy en Bogotá y doy clases. ¿Qué soy?",
+      "question": "Llevo el nombre de un prócer que fue el primer presidente del Estado de Cundinamarca en 1811 y que estudió animales en la Expedición Botánica. Estoy en Bogotá y en mí estudian miles de jóvenes. ¿Qué soy?",
       "answer": "La Universidad Jorge Tadeo Lozano",
       "wrong_answers": [
         "La Universidad del Rosario",
@@ -32015,23 +32009,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-6",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "a university doesn't \"give classes\"",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pista 1 ('Mi nombre es el nombre completo de una persona') delata la respuesta: ninguna de las otras tres opciones (Rosario, Javeriana, Externado) lleva el nombre completo de alguien, así que hay que cambiarla por una pista que no descarte opciones. Además, el dato curioso dice 'casi 140 años', pero de 1811 a 1954 van 143: debe decir 'más de 140 años'.",
-          "reviewed_on": "2026-10-08",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "colombia",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced 'doy clases' with wording that fits a university (thousands of young people study there).",
+        "previous": {
+          "question": "Llevo el nombre de un prócer que fue el primer presidente del Estado de Cundinamarca en 1811 y que estudió animales en la Expedición Botánica. Estoy en Bogotá y doy clases. ¿Qué soy?"
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0520",
@@ -38010,10 +37998,10 @@
     },
     {
       "id": "q-0614",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 11,
       "description": "Para quienes miran con lupa cuando deberían mirar con binoculares.",
-      "question": "Ana revisa cada coma de su informe y no nota que le falta la conclusión; un técnico discute el color de las medias del equipo y olvida que no tiene arquero; Luis compara 30 tonos de pintura y no ve la gotera del techo. ¿Qué dicho describe a los tres?",
+      "question": "Ana revisa cada coma de su informe y olvida la conclusión; Luis compara 30 tonos de pintura y no ve la gotera del techo. ¿Qué dicho los describe?",
       "answer": "Los árboles no dejan ver el bosque",
       "wrong_answers": [
         "Árbol que nace torcido jamás su tronco endereza",
@@ -38059,23 +38047,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "too long. the whole \"what do these three have in common\" seems to result in too long questions. we can keep the concept, but only if the question is short enough",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta está bien, pero la imagen no se puede elegir: la hoja de contacto muestra seis caminos de bosque que no corresponden a los títulos de los candidatos (muestras de tela, muestras de pintura, relojes Swatch). Además, una foto de bosque insinuaría la respuesta («el bosque»). Hay que regenerar la hoja o buscar otra vez una imagen decorativa de muestras de pintura, por ejemplo «paint sample cards». No se encontró una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Shortened the question to two brief examples, as the gamemaster asked.",
+        "previous": {
+          "question": "Ana revisa cada coma de su informe y no nota que le falta la conclusión; un técnico discute el color de las medias del equipo y olvida que no tiene arquero; Luis compara 30 tonos de pintura y no ve la gotera del techo. ¿Qué dicho describe a los tres?"
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0615",
@@ -47780,10 +47762,10 @@
     },
     {
       "id": "q-0768",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 12,
       "description": "Una letra que vale más que el resto del abecedario cuando vas a pagar en línea.",
-      "question": "Soy la «s» que se agrega al final de «http» en algunas direcciones web, y mi nombre viene de la palabra inglesa «secure». ¿Para qué sirvo?",
+      "question": "Soy la «s» que se agrega al final de «http» en algunas direcciones web. ¿Para qué sirvo?",
       "answer": "Para cifrar los datos entre tu navegador y la página",
       "wrong_answers": [
         "Para que la página cargue más rápido",
@@ -47829,23 +47811,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "just don't mention \"secure\" in the question",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta delata la respuesta: dice que la «s» viene de «secure», y la única opción que tiene que ver con seguridad es la correcta. Quiten «secure» del enunciado o cambien los distractores por otras funciones de seguridad que suenen creíbles (p. ej. «Para bloquear los virus de la página», «Para comprobar que la página no tiene publicidad», «Para guardar tus contraseñas»).",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the mention of 'secure' from the question, as the gamemaster asked.",
+        "previous": {
+          "question": "Soy la «s» que se agrega al final de «http» en algunas direcciones web, y mi nombre viene de la palabra inglesa «secure». ¿Para qué sirvo?"
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0769",
@@ -48035,20 +48011,20 @@
     },
     {
       "id": "q-0772",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 15,
-      "description": "Una isla con nombre de tesoro, para los que traen pala y diccionario.",
+      "description": "Una isla con nombre de trabalenguas, para los que traen diccionario y paciencia.",
       "question": "Viajas a la Isla Sur de Nueva Zelanda y un guía maorí te dice que su nombre es Te Waipounamu. ¿Qué significa?",
       "answer": "Aguas de la piedra verde",
       "wrong_answers": [
         "Tierra de la nube blanca",
         "Montaña de fuego dormida",
-        "Bosque de los pájaros"
+        "Aguas del pájaro gigante"
       ],
       "hints": [
-        "El nombre habla de algo que los maoríes encontraban en sus ríos.",
-        "Con ese material hacían herramientas y joyas muy valiosas.",
-        "Es una piedra parecida al jade."
+        "Los maoríes solían nombrar los lugares por lo que encontraban en ellos.",
+        "En maorí, 'wai' significa agua.",
+        "Es una piedra parecida al jade, que tallaban para hacer joyas."
       ],
       "media": {
         "type": "image",
@@ -48059,7 +48035,7 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Main_Divide_from_Yeats_Ridge_Hut%2C_West_Coast_Region%2C_New_Zealand.jpg/3840px-Main_Divide_from_Yeats_Ridge_Hut%2C_West_Coast_Region%2C_New_Zealand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Michal Klajban · CC BY-SA 4.0 · Wikimedia Commons"
       },
-      "fun_fact": "'Tierra de la gran nube blanca' es Aotearoa, el nombre maorí de todo el país.",
+      "fun_fact": "Aotearoa, el nombre maorí de todo el país, se suele traducir como 'tierra de la larga nube blanca'.",
       "subcategory": "Islas",
       "style": null,
       "concept": "Isla Sur de Nueva Zelanda",
@@ -48084,16 +48060,28 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 ya da la respuesta: «algo que encontraban en sus ríos» solo encaja con «Aguas de la piedra verde», y la pista 2 (herramientas y joyas) también la deja sola. Las pistas 1 y 2 deberían ser más vagas, y la descripción no debería decir «nombre de tesoro». Además, el dato curioso traduce mal Aotearoa: lo normal es «Tierra de la larga nube blanca», no «gran nube blanca».",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hints 1 and 2 vaguer (adding a second water option so the 'wai' hint doesn't single out the answer), removed 'tesoro' from the description and fixed Aotearoa's translation in the fun fact.",
+        "previous": {
+          "description": "Una isla con nombre de tesoro, para los que traen pala y diccionario.",
+          "wrong_answers": [
+            "Tierra de la nube blanca",
+            "Montaña de fuego dormida",
+            "Bosque de los pájaros"
+          ],
+          "hints": [
+            "El nombre habla de algo que los maoríes encontraban en sus ríos.",
+            "Con ese material hacían herramientas y joyas muy valiosas.",
+            "Es una piedra parecida al jade."
+          ],
+          "fun_fact": "'Tierra de la gran nube blanca' es Aotearoa, el nombre maorí de todo el país."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0773",
@@ -48724,7 +48712,7 @@
     },
     {
       "id": "q-0783",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 7,
       "description": "Una muñeca tan pequeña que viene con más envoltorio que muñeca.",
       "question": "Soy una muñeca LOL Surprise: vengo escondida en una bola con capas que se van abriendo una por una. Mis creadores se inspiraron en los videos de internet en los que alguien abre paquetes nuevos frente a la cámara. ¿Cómo se llaman esos videos?",
@@ -48736,8 +48724,8 @@
       ],
       "hints": [
         "Es una palabra en inglés.",
-        "La palabra tiene adentro 'box', que significa caja.",
-        "Literalmente quiere decir 'sacar de la caja'."
+        "En estos videos suelen mostrar celulares o juguetes recién comprados.",
+        "La palabra tiene adentro 'box', que significa caja."
       ],
       "media": {
         "type": "image",
@@ -48773,22 +48761,27 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"La palabra tiene adentro 'box'\") regala la respuesta: es la única opción que contiene \"box\", así que ya en la segunda pista se descartan las otras tres. Hay que cambiarla por algo menos directo (por ejemplo, que estos videos suelen mostrar celulares o juguetes recién comprados), y dejar la pista sobre \"box\" como la tercera.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave the answer away with 'box', with a vaguer one and moved the 'box' hint to third place.",
+        "previous": {
+          "hints": [
+            "Es una palabra en inglés.",
+            "La palabra tiene adentro 'box', que significa caja.",
+            "Literalmente quiere decir 'sacar de la caja'."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0784",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 2,
-      "description": "Un dinosaurio feroz que le tiene miedo hasta a su propia sombra.",
+      "description": "Juguetes que cobran vida cuando nadie los mira... y un colado que no debería estar en la fiesta.",
       "question": "¿Cuál de estos personajes NO es un juguete de Toy Story?",
       "answer": "Rayo McQueen",
       "wrong_answers": [
@@ -48804,7 +48797,7 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "children's toys floor",
+        "query": "wooden toy chest",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -48835,23 +48828,33 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La descripción habla de Rex (un dinosaurio miedoso), que es una de las opciones incorrectas, y así lo descarta de entrada. Hay que cambiarla por una frase sobre los juguetes que cobran vida o sobre Pixar que no describa ninguna opción. Además, la hoja de contacto no corresponde a los candidatos de imagen y hay que regenerar la búsqueda de imagen. No se encontró una imagen adecuada para esta pregunta.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer describes Rex (a wrong option), and set a new image query so the image search runs again.",
+        "previous": {
+          "description": "Un dinosaurio feroz que le tiene miedo hasta a su propia sombra.",
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "children's toys floor",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0785",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 10,
-      "description": "El consejero que nunca estudió nada pero siempre tiene respuesta.",
-      "question": "Tiene 20 caras, todas son triángulos, y flota en un líquido azul dentro de la bola 8 mágica para darte las respuestas. ¿Cómo se llama esa figura?",
+      "description": "Una figura con tantas caras que ni el más hipócrita le gana.",
+      "question": "¿Cómo se llama la figura geométrica que tiene 20 caras, todas en forma de triángulo?",
       "answer": "Icosaedro",
       "wrong_answers": [
         "Dodecaedro",
@@ -48866,13 +48869,13 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "icosahedron",
+        "query": "polyhedral dice set",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AIcosahedron.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Icosahedron.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Tomruen · Attribution · Wikimedia Commons"
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
-      "fun_fact": "La bola 8 mágica tiene 20 respuestas: 10 dicen que sí, 5 no se comprometen y 5 dicen que no.",
+      "fun_fact": "Muchos virus, como el adenovirus, tienen una cubierta con forma de icosaedro.",
       "subcategory": "Juguetes",
       "style": null,
       "concept": "Bola 8 mágica",
@@ -48897,23 +48900,28 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "just ask for a ikosahedron, skip the part with the magic 8",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta está bien, pero ninguna imagen sirve: en la hoja no aparece ninguna bola 8 mágica (hay máquinas de pinball, piezas de madera, un grabado de billar, una foto antigua y Epcot). Hace falta otra imagen ilustrativa, por ejemplo una bola 8 mágica sola o un juguete clásico de adivinación, que no muestre el dado de 20 caras. No se encontró una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Per gamemaster, removed the magic 8 ball from the question, description and fun fact, and switched the image to a neutral dice set.",
+        "previous": {
+          "description": "El consejero que nunca estudió nada pero siempre tiene respuesta.",
+          "question": "Tiene 20 caras, todas son triángulos, y flota en un líquido azul dentro de la bola 8 mágica para darte las respuestas. ¿Cómo se llama esa figura?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "icosahedron",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AIcosahedron.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Icosahedron.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Tomruen · Attribution · Wikimedia Commons"
+          },
+          "fun_fact": "La bola 8 mágica tiene 20 respuestas: 10 dicen que sí, 5 no se comprometen y 5 dicen que no."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0786",
@@ -49048,18 +49056,18 @@
     },
     {
       "id": "q-0788",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 10,
-      "description": "Una palabra que no se cansa de hablar.",
-      "question": "Soy la palabra 'retahíla'. Los niños me dicen en sus juegos, como 'Pin, uno, pin dos...'. ¿Qué significo?",
+      "description": "Una palabra con una tilde escondida en la mitad, como sorpresa de huevo.",
+      "question": "Soy la palabra 'retahíla'. ¿Qué significo?",
       "answer": "Una serie larga de cosas dichas una tras otra",
       "wrong_answers": [
         "Una canción suave para dormir a un bebé",
-        "Un cuento de miedo muy corto",
+        "Una frase difícil de pronunciar rápido",
         "Una palabra que se lee igual al revés"
       ],
       "hints": [
-        "Se usa también cuando alguien regaña sin parar.",
+        "Los niños a veces la usan para escoger quién 'la lleva'.",
         "Suena larguísima y encadenada.",
         "'Me echó una ... de quejas': una tras otra, sin parar."
       ],
@@ -49097,16 +49105,28 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta delata la respuesta. La descripción (\"no se cansa de hablar\") y la pista 1 (\"cuando alguien regaña sin parar\") ya señalan la única opción sobre hablar mucho seguido, y el ejemplo \"Pin, uno, pin dos...\" descarta por sí solo la canción de cuna, el cuento de miedo y el palíndromo. Hay que cambiar la descripción por una que no hable de hablar mucho, dejar la pista 1 más vaga y usar un ejemplo que no descarte las opciones falsas (o cambiar esas opciones por otras más cercanas, como \"un trabalenguas\").",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the giveaway description, the example that ruled out options and the strong hint 1, and swapped one wrong answer for a closer one (tongue twister).",
+        "previous": {
+          "description": "Una palabra que no se cansa de hablar.",
+          "question": "Soy la palabra 'retahíla'. Los niños me dicen en sus juegos, como 'Pin, uno, pin dos...'. ¿Qué significo?",
+          "wrong_answers": [
+            "Una canción suave para dormir a un bebé",
+            "Un cuento de miedo muy corto",
+            "Una palabra que se lee igual al revés"
+          ],
+          "hints": [
+            "Se usa también cuando alguien regaña sin parar.",
+            "Suena larguísima y encadenada.",
+            "'Me echó una ... de quejas': una tras otra, sin parar."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0789",
@@ -50503,7 +50523,7 @@
     },
     {
       "id": "q-0811",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 10,
       "description": "La noche antes del examen, YouTube se convierte en tu profesor particular favorito.",
       "question": "Viendo un tutorial la noche antes del examen, el profe del video repite tres palabras: sustitución, igualación y reducción. ¿Qué tienen en común?",
@@ -50514,8 +50534,8 @@
         "Son formas de calcular el área de un círculo"
       ],
       "hints": [
-        "Sirven cuando tienes dos incógnitas, como x e y.",
-        "Necesitas al menos dos ecuaciones para usarlos.",
+        "Es un tema de álgebra de noveno grado.",
+        "El resultado se puede comprobar dibujando dos rectas que se cruzan.",
         "Con ellos averiguas varias incógnitas que deben cumplir varias ecuaciones a la vez."
       ],
       "media": {
@@ -50552,16 +50572,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "Las pistas 1 y 2 regalan la respuesta: «dos incógnitas, como x e y» y «al menos dos ecuaciones» solo encajan con la opción de sistemas de ecuaciones, y la pista 2 casi la repite. Hay que hacerlas más vagas (por ejemplo, que es un tema de álgebra de noveno grado, o que se pueden comprobar con una gráfica de dos rectas que se cruzan) y dejar lo de «varias ecuaciones» para la pista 3.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hints 1 and 2 vaguer so they no longer point straight at systems of equations.",
+        "previous": {
+          "hints": [
+            "Sirven cuando tienes dos incógnitas, como x e y.",
+            "Necesitas al menos dos ecuaciones para usarlos.",
+            "Con ellos averiguas varias incógnitas que deben cumplir varias ecuaciones a la vez."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0812",
@@ -51626,7 +51651,7 @@
     },
     {
       "id": "q-0829",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 15,
       "description": "El despertador más dramático de la historia: no tiene botón de «cinco minutos más».",
       "question": "Te despierta un gallo y recuerdas que, según el antiguo poema nórdico «Völuspá», el Ragnarök se anuncia con el canto de gallos, como Fjalar, el gallo de los gigantes. ¿Cuántos gallos cantan en total?",
@@ -51638,7 +51663,7 @@
       ],
       "hints": [
         "Hay un gallo para distintos mundos.",
-        "Uno canta para los gigantes, otro para los dioses y otro en el mundo de los muertos.",
+        "Uno de ellos canta bajo tierra, en el reino de Hel.",
         "Son tantos como los mosqueteros de Dumas."
       ],
       "media": {
@@ -51675,16 +51700,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 enumera los tres gallos (gigantes, dioses, mundo de los muertos), así que basta contarlos para tener la respuesta; hay que cambiarla por algo que no los cuente, por ejemplo que uno canta bajo tierra, en el reino de Hel.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which listed all three roosters, with one that mentions only one of them.",
+        "previous": {
+          "hints": [
+            "Hay un gallo para distintos mundos.",
+            "Uno canta para los gigantes, otro para los dioses y otro en el mundo de los muertos.",
+            "Son tantos como los mosqueteros de Dumas."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0830",
@@ -52308,7 +52338,7 @@
     },
     {
       "id": "q-0840",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 7,
       "description": "Un gol tan largo que empezó en un siglo y casi termina en otro.",
       "question": "Este argentino marcó en el Mundial de 1986, contra Inglaterra, el gol que la FIFA eligió como el 'Gol del Siglo', tras driblar a medio equipo rival. ¿Quién es?",
@@ -52332,7 +52362,7 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Maradona_belgium_1986.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Dani Yako · Public domain · Wikimedia Commons"
       },
-      "fun_fact": "En el 'Gol del Siglo' Maradona recorrió unos 60 metros en unos 10 segundos y dejó atrás a cinco jugadores ingleses y al arquero.",
+      "fun_fact": "En el 'Gol del Siglo' Maradona recorrió unos 60 metros en unos 10 segundos y dejó atrás a cuatro jugadores ingleses y al arquero.",
       "subcategory": "Mundiales de fútbol",
       "style": null,
       "concept": "Gol del Siglo",
@@ -52357,16 +52387,17 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "El dato curioso está mal contado: en el 'Gol del Siglo' Maradona dejó atrás a cuatro jugadores de campo ingleses (Beardsley, Reid, Butcher y Fenwick) y además al arquero Shilton, no a cinco más el arquero. Corregir a 'dejó atrás a cuatro jugadores ingleses y al arquero' (o 'a cinco ingleses contando al arquero').",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Corrected the fun fact: four English outfield players plus the goalkeeper.",
+        "previous": {
+          "fun_fact": "En el 'Gol del Siglo' Maradona recorrió unos 60 metros en unos 10 segundos y dejó atrás a cinco jugadores ingleses y al arquero."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0841",
@@ -52804,7 +52835,7 @@
     },
     {
       "id": "q-0848",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 2,
       "description": "Una copa dorada en la que nadie se atreve a servir chocolate.",
       "question": "¿Quién se lleva este trofeo dorado?",
@@ -52828,7 +52859,7 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FIFA_World_Cup_Trophy_%28Ank_Kumar%2C_Infosys_Limited%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "credit": "Ank Kumar · CC BY-SA 4.0 · Wikimedia Commons"
       },
-      "fun_fact": "El trofeo está hecho de oro macizo de 18 quilates y pesa más de 6 kilos.",
+      "fun_fact": "El trofeo es de oro de 18 quilates y pesa más de 6 kilos.",
       "subcategory": "Mundiales de fútbol",
       "style": null,
       "concept": "Copa Mundial de la FIFA",
@@ -52853,16 +52884,17 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "El dato curioso dice \"oro macizo\", pero se calcula que el trofeo es hueco: si fuera macizo con ese tamaño pesaría mucho más de 6 kilos. Quiten \"macizo\" y escriban, por ejemplo: \"El trofeo es de oro de 18 quilates y pesa más de 6 kilos\".",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Removed 'macizo' from the fun fact because the trophy is believed to be hollow.",
+        "previous": {
+          "fun_fact": "El trofeo está hecho de oro macizo de 18 quilates y pesa más de 6 kilos."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0849",
@@ -52928,7 +52960,7 @@
     },
     {
       "id": "q-0850",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 12,
       "description": "Una bola que se pasa el día entero columpiándose y aun así trabaja más que tú.",
       "question": "Estás en un museo de ciencias y ves una bola pesadísima colgada de un cable larguísimo. Con las horas, su vaivén va cambiando de dirección y tumba unos palitos puestos en círculo, igual que en la novela de Umberto Eco que lleva su nombre. ¿Qué demuestra este aparato?",
@@ -52940,7 +52972,7 @@
       ],
       "hints": [
         "El que de verdad se mueve no es el aparato.",
-        "El péndulo mantiene su dirección; lo que va cambiando es el piso que tiene debajo.",
+        "Su demostración más famosa se hizo colgándolo de la cúpula del Panteón de París.",
         "Es el mismo movimiento que hace que tengamos día y noche."
       ],
       "media": {
@@ -52977,16 +53009,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"lo que va cambiando es el piso que tiene debajo\") prácticamente dice la respuesta: si el piso gira, la Tierra gira. Hay que cambiarla por algo más vago, por ejemplo una pista sobre el físico francés que lo presentó en 1851 o sobre el Panteón de París.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which nearly stated the answer, with a vaguer hint about the Panthéon in Paris.",
+        "previous": {
+          "hints": [
+            "El que de verdad se mueve no es el aparato.",
+            "El péndulo mantiene su dirección; lo que va cambiando es el piso que tiene debajo.",
+            "Es el mismo movimiento que hace que tengamos día y noche."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0851",
@@ -53114,7 +53151,7 @@
     },
     {
       "id": "q-0853",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 4,
       "description": "La obra de arte más cara que alguna vez terminó como merienda.",
       "question": "Adivina: 'Soy una fruta común y corriente, pero un artista me pegó a una pared con cinta gris y me llamó Comediante. Alguien pagó millones de dólares por mí… ¡y después me comió!' ¿Qué fruta soy?",
@@ -53126,7 +53163,7 @@
       ],
       "hints": [
         "Por fuera soy amarilla.",
-        "A los monos les encanto.",
+        "Crezco en racimos en zonas tropicales.",
         "Me pelan y tengo forma de media luna."
       ],
       "media": {
@@ -53163,16 +53200,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 («A los monos les encanto») junto con la pista 1 (amarilla) ya delata el banano: cualquier jugador, hasta un niño pequeño, lo adivina en ese momento. Cambia la pista 2 por algo más vago, por ejemplo «Crezco en racimos en zonas tropicales» o «En Colombia me cultivan mucho en Urabá».",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer so hints 1 and 2 together no longer give away the banana.",
+        "previous": {
+          "hints": [
+            "Por fuera soy amarilla.",
+            "A los monos les encanto.",
+            "Me pelan y tengo forma de media luna."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0854",
@@ -54361,7 +54403,7 @@
     },
     {
       "id": "q-0873",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 4,
       "description": "La fruta más peligrosa de la isla, y no por resbalosa.",
       "question": "Estás jugando Fortnite y ves un plátano gigante con piernas que baila y carga armas. ¿Cómo se llama ese personaje?",
@@ -54385,7 +54427,7 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bunch_of_bananas_on_sale.jpg/3840px-Bunch_of_bananas_on_sale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Wilfredor · CC0 · Wikimedia Commons"
       },
-      "fun_fact": "En Fortnite también existe una versión de Peely tan madura que se ve llena de manchas cafés.",
+      "fun_fact": "Peely llegó a Fortnite en 2019, en la Temporada 8 del Capítulo 1.",
       "subcategory": "Personajes de videojuegos",
       "style": null,
       "concept": "Peely",
@@ -54410,16 +54452,17 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "No se pudo confirmar el dato curioso: que exista una versión oficial de Peely \"tan madura que se ve llena de manchas cafés\". Verifiquen ese estilo con su nombre exacto o cámbienlo por un dato seguro, por ejemplo que Peely llegó en la Temporada 8 del Capítulo 1 (2019).",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the unverified fun fact with a sure one: Peely arrived in Chapter 1, Season 8 (2019).",
+        "previous": {
+          "fun_fact": "En Fortnite también existe una versión de Peely tan madura que se ve llena de manchas cafés."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0874",
@@ -54733,10 +54776,10 @@
     },
     {
       "id": "q-0879",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 7,
       "description": "Una pregunta enredada, pero con cuerda suficiente para salir de ella.",
-      "question": "Primero: los marineros tiraban al mar una tablita atada a una cuerda llena de nudos. Segundo: contaban cuántos nudos se soltaban mientras se vaciaba un reloj de arena. Tercero: todavía hoy los barcos que llegan a Cartagena usan esa palabra. ¿Para qué sirve el \"nudo\" en el mar?",
+      "question": "Los barcos y los aviones hablan de \"nudos\". ¿Para qué sirve esa unidad?",
       "answer": "Para medir la velocidad",
       "wrong_answers": [
         "Para medir la profundidad",
@@ -54744,14 +54787,14 @@
         "Para medir la temperatura del agua"
       ],
       "hints": [
-        "El reloj de arena es la pista clave.",
-        "Mientras más nudos se soltaban, mejor iba el viaje.",
+        "Antes se medía con una cuerda llena de nudos y un reloj de arena.",
+        "Mientras más nudos se soltaban en ese tiempo, mejor iba el viaje.",
         "Es como los kilómetros por hora de un carro."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "sailing ship open sea",
+        "query": "tall ship at sea",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -54782,23 +54825,31 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta está bien, pero no hay una imagen que sirva: la hoja de contacto no muestra veleros, sino una pintura de un señor y fachadas de pubs ingleses llamados \"The Old Ship\". Hay que repetir la búsqueda de medios, por ejemplo con \"tall ship at sea\", y revisar que la hoja coincida con los candidatos. No se encontró una imagen adecuada para esta pregunta.\n\nquestion is too long, just ask for meaning of the knots",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta está bien, pero no hay una imagen que sirva: la hoja de contacto no muestra veleros, sino una pintura de un señor y fachadas de pubs ingleses llamados \"The Old Ship\". Hay que repetir la búsqueda de medios, por ejemplo con \"tall ship at sea\", y revisar que la hoja coincida con los candidatos. No se encontró una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Per gamemaster, shortened the question to just the meaning of knots, moved the old rope story into the hints and changed the media query to find a real sailing ship.",
+        "previous": {
+          "question": "Primero: los marineros tiraban al mar una tablita atada a una cuerda llena de nudos. Segundo: contaban cuántos nudos se soltaban mientras se vaciaba un reloj de arena. Tercero: todavía hoy los barcos que llegan a Cartagena usan esa palabra. ¿Para qué sirve el \"nudo\" en el mar?",
+          "hints": [
+            "El reloj de arena es la pista clave.",
+            "Mientras más nudos se soltaban, mejor iba el viaje.",
+            "Es como los kilómetros por hora de un carro."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "sailing ship open sea",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0880",
@@ -55946,9 +55997,9 @@
     },
     {
       "id": "q-0898",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 11,
-      "description": "Un congelador tan importante que si se daña, el mundo entero se queda sin mercado.",
+      "description": "Un lugar tan frío y tan escondido que ni el domiciliario más valiente se atreve a llegar.",
       "question": "Adivinanza: Vivo dentro de una montaña helada en una isla de Noruega, cerca del Polo Norte, y me llaman 'la bóveda del fin del mundo'. ¿Qué guardo?",
       "answer": "Semillas de cultivos de todo el mundo",
       "wrong_answers": [
@@ -55958,7 +56009,7 @@
       ],
       "hints": [
         "Lo que guardo serviría para volver a empezar después de una gran catástrofe.",
-        "Lo que guardo tiene que ver con la comida de la humanidad.",
+        "Casi todos los países del mundo me han mandado algo para guardar.",
         "Si me abrieras encontrarías frijoles, arroz, maíz y trigo… pero sin cocinar y listos para sembrar."
       ],
       "media": {
@@ -55995,16 +56046,22 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La descripción (\"el mundo entero se queda sin mercado\") apunta a la comida y deja solo las semillas como opción posible antes de leer la pregunta. Cámbiela por una que no hable de comida ni de mercado. Además la pista 2 (\"tiene que ver con la comida\") ya elimina las otras tres opciones; conviene hacerla más vaga.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the food/market description and made hint 2 vaguer so they no longer rule out the other options.",
+        "previous": {
+          "description": "Un congelador tan importante que si se daña, el mundo entero se queda sin mercado.",
+          "hints": [
+            "Lo que guardo serviría para volver a empezar después de una gran catástrofe.",
+            "Lo que guardo tiene que ver con la comida de la humanidad.",
+            "Si me abrieras encontrarías frijoles, arroz, maíz y trigo… pero sin cocinar y listos para sembrar."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0899",
@@ -56642,19 +56699,19 @@
     },
     {
       "id": "q-0909",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 13,
-      "description": "Muchos exploradores lo buscaron; ninguno ha traído foto para Instagram.",
+      "description": "Un nombre que suena a trabalenguas de bebé, pero esconde una leyenda gigante.",
       "question": "Según una famosa leyenda de la selva sudamericana, ¿qué es el Paititi?",
-      "answer": "Una ciudad inca perdida llena de oro",
+      "answer": "Una ciudad perdida de los incas",
       "wrong_answers": [
-        "Un espíritu que cuida los ríos",
-        "Un árbol sagrado que toca el cielo",
-        "Una serpiente que creó la selva"
+        "Un galeón hundido con tesoros",
+        "Una mina secreta de esmeraldas",
+        "Una isla flotante de oro"
       ],
       "hints": [
         "Se cuenta que estaría escondido en la selva entre Perú, Bolivia y Brasil.",
-        "Muchas expediciones lo han buscado sin éxito.",
+        "Dicen que tenía calles, palacios y mucha gente viviendo allí.",
         "Es un 'primo' de la leyenda de El Dorado."
       ],
       "media": {
@@ -56691,23 +56748,35 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La descripción (\"muchos exploradores lo buscaron\") y la pista 2 (\"muchas expediciones lo han buscado\") delatan que es un lugar perdido y descartan el espíritu, el árbol y la serpiente; además la respuesta es mucho más larga y específica que las demás. Hay que cambiar la descripción y la pista 2 por algo que no hable de buscarlo, y poner distractores que también sean lugares o tesoros escondidos (o acortar la respuesta para que tenga la misma forma que los distractores).",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description and hint 2 so they no longer reveal a searched-for place, shortened the answer and made all distractors hidden places or treasures of the same form.",
+        "previous": {
+          "description": "Muchos exploradores lo buscaron; ninguno ha traído foto para Instagram.",
+          "answer": "Una ciudad inca perdida llena de oro",
+          "wrong_answers": [
+            "Un espíritu que cuida los ríos",
+            "Un árbol sagrado que toca el cielo",
+            "Una serpiente que creó la selva"
+          ],
+          "hints": [
+            "Se cuenta que estaría escondido en la selva entre Perú, Bolivia y Brasil.",
+            "Muchas expediciones lo han buscado sin éxito.",
+            "Es un 'primo' de la leyenda de El Dorado."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0910",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 13,
-      "description": "Unas palabras que llevan miles de años grabadas en piedra… y en el diccionario.",
-      "question": "Navegando un río amazónico, el guía señala unas rocas con figuras grabadas y las llama 'petroglifos'. Esa palabra comparte una raíz griega con 'jeroglífico' y 'glifo'. ¿Qué significa esa raíz?",
+      "description": "Unas figuras que llevan miles de años en la piedra… y en el diccionario.",
+      "question": "En un río amazónico, el guía llama 'petroglifos' a unas rocas con figuras antiguas. ¿Qué significa la raíz griega 'glifo', la misma de 'jeroglífico'?",
       "answer": "Tallar o grabar",
       "wrong_answers": [
         "Pintar",
@@ -56715,7 +56784,7 @@
         "Sagrado"
       ],
       "hints": [
-        "La raíz común es 'glifo'.",
+        "Piensa en cómo se hicieron esas figuras en una roca tan dura.",
         "'Petro' ya es la parte que significa otra cosa.",
         "Es lo que hace un escultor con su cincel."
       ],
@@ -56753,23 +56822,23 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La respuesta se delata: la pregunta dice \"rocas con figuras grabadas\" y la descripción dice \"grabadas en piedra\", y la respuesta correcta es \"Tallar o grabar\". Hay que cambiar esas palabras por otras neutras, por ejemplo \"rocas con figuras antiguas\" o \"unas figuras que llevan miles de años en la piedra\".\n\na solution would be to shorten the question",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La respuesta se delata: la pregunta dice \"rocas con figuras grabadas\" y la descripción dice \"grabadas en piedra\", y la respuesta correcta es \"Tallar o grabar\". Hay que cambiar esas palabras por otras neutras, por ejemplo \"rocas con figuras antiguas\" o \"unas figuras que llevan miles de años en la piedra\".",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Shortened the question and removed 'grabadas' from the question and description; replaced hint 1, which became redundant.",
+        "previous": {
+          "description": "Unas palabras que llevan miles de años grabadas en piedra… y en el diccionario.",
+          "question": "Navegando un río amazónico, el guía señala unas rocas con figuras grabadas y las llama 'petroglifos'. Esa palabra comparte una raíz griega con 'jeroglífico' y 'glifo'. ¿Qué significa esa raíz?",
+          "hints": [
+            "La raíz común es 'glifo'.",
+            "'Petro' ya es la parte que significa otra cosa.",
+            "Es lo que hace un escultor con su cincel."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0911",
@@ -58661,7 +58730,7 @@
     },
     {
       "id": "q-0941",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 8,
       "description": "Un lugar tan oscuro que ni con la linterna del celular encuentras la salida.",
       "question": "Estás de visita en la Cueva del Guácharo, oscura como boca de lobo. ¿Qué tienen en común el guácharo que vive allí, el murciélago y el delfín?",
@@ -58685,7 +58754,7 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Cueva_del_Guacharo_por_dentro.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "credit": "Jiberch · CC BY-SA 3.0 · Wikimedia Commons"
       },
-      "fun_fact": "El guácharo es el único pájaro nocturno del mundo que se alimenta de frutas, y Alexander von Humboldt lo describió en 1799.",
+      "fun_fact": "El guácharo es el único pájaro nocturno volador que se alimenta de frutas, y Alexander von Humboldt lo conoció en esta cueva en 1799.",
       "subcategory": "Fenómenos naturales",
       "style": null,
       "concept": "Cueva del Guácharo",
@@ -58710,16 +58779,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "El dato curioso no es exacto: el kakapo de Nueva Zelanda también es nocturno y come frutas, y Humboldt visitó la cueva en 1799, pero la descripción científica del guácharo es de 1817. Propuesta: \"El guácharo es el único pájaro nocturno volador que se alimenta de frutas, y Alexander von Humboldt lo conoció en esta cueva en 1799\".",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Corrected the fun fact per the reviewer (flying nocturnal fruit-eater; Humboldt met it in 1799).",
+        "previous": {
+          "fun_fact": "El guácharo es el único pájaro nocturno del mundo que se alimenta de frutas, y Alexander von Humboldt lo describió en 1799."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0942",
@@ -59343,15 +59413,15 @@
     },
     {
       "id": "q-0952",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 13,
       "description": "Una palabra que suena a pelea de mascotas, pero es todavía peor.",
       "question": "Es una palabra del diccionario que empieza con 'gat', pero no tiene nada que ver con animales. ¿Qué significa 'gatuperio'?",
       "answer": "Un enredo o mezcla turbia",
       "wrong_answers": [
-        "Una siesta muy larga",
-        "Un salto muy alto",
-        "Un ruido muy agudo"
+        "Un berrinche muy ruidoso",
+        "Un robo de poca monta",
+        "Una pelea a los gritos"
       ],
       "hints": [
         "Nada bueno sale de un gatuperio.",
@@ -59361,7 +59431,7 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "open dictionary pages",
+        "query": "old library bookshelves",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -59392,16 +59462,30 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La respuesta es la única opción negativa, y la descripción ('todavía peor') y la pista 1 ('Nada bueno sale…') lo confirman: así se descartan la siesta, el salto y el ruido. Hay que usar distractores también negativos y del mismo formato (p. ej. 'Una pelea a escondidas', 'Un robo pequeño', 'Un berrinche ruidoso'). Además, ninguna imagen sirve: se necesita una foto real de un diccionario abierto. No se encontró una imagen adecuada para esta pregunta.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made all distractors negative and of the same form so tone no longer gives the answer away, and switched the decorative image query to one that is easy to find.",
+        "previous": {
+          "wrong_answers": [
+            "Una siesta muy larga",
+            "Un salto muy alto",
+            "Un ruido muy agudo"
+          ],
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "open dictionary pages",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0953",
@@ -60404,7 +60488,7 @@
     },
     {
       "id": "q-0969",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 10,
       "description": "Tres destinos con playa, mucho calor y un pasado que llegó en barco desde Europa.",
       "question": "Revisas el álbum de viajes de tu abuela: fotos de Hong Kong, Singapur y Jamaica. Además de tener costa y puertos famosos, ¿qué tienen en común en su historia?",
@@ -60416,7 +60500,7 @@
       ],
       "hints": [
         "Ese imperio europeo les dejó a las tres su idioma como lengua oficial.",
-        "Era el imperio 'donde nunca se ponía el sol', con capital en Londres.",
+        "Ese imperio tenía la marina más poderosa del mundo en el siglo XIX.",
         "En los tres sitios todavía se maneja por la izquierda."
       ],
       "media": {
@@ -60453,16 +60537,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 delata la respuesta: decir \"con capital en Londres\" ya identifica al Imperio británico, y eso solo se permite en la pista 3. Cambiarla por algo más vago, por ejemplo \"Ese imperio tenía la marina más poderosa del mundo en el siglo XIX\", sin nombrar Londres ni Inglaterra.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer so it no longer names London.",
+        "previous": {
+          "hints": [
+            "Ese imperio europeo les dejó a las tres su idioma como lengua oficial.",
+            "Era el imperio 'donde nunca se ponía el sol', con capital en Londres.",
+            "En los tres sitios todavía se maneja por la izquierda."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0970",
@@ -60652,7 +60741,7 @@
     },
     {
       "id": "q-0973",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 5,
       "description": "Una torre de animales que ningún arquitecto aprobaría.",
       "question": "En un álbum ilustrado muy famoso, una tortuga, un elefante, una jirafa, una cebra y hasta un ratón se suben unos encima de otros. ¿Qué querían probar todos?",
@@ -60676,7 +60765,7 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/African_bush_elephant_and_Giraffe_%2837485520280%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Sonse · CC BY 2.0 · Wikimedia Commons"
       },
-      "fun_fact": "El libro lo escribió e ilustró el polaco Michael Grejniec, y al final un pez se ríe porque él ve la luna reflejada en el agua.",
+      "fun_fact": "El libro lo escribió e ilustró el polaco Michael Grejniec, y al final un pez no entiende tanto esfuerzo, porque tiene otra luna a su lado, reflejada en el agua.",
       "subcategory": "Libros infantiles",
       "style": null,
       "concept": "¿A qué sabe la luna?",
@@ -60701,16 +60790,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "El dato curioso no es exacto: en «¿A qué sabe la luna?» el pez no se ríe. Se extraña de que los animales se esfuercen tanto cuando tiene otra luna justo a su lado, reflejada en el agua. Hay que corregir esa frase, por ejemplo: «...y al final un pez no entiende tanto esfuerzo, porque tiene otra luna a su lado, reflejada en el agua».",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Corrected the fun fact: the fish doesn't laugh; it is puzzled because the moon's reflection is right beside it.",
+        "previous": {
+          "fun_fact": "El libro lo escribió e ilustró el polaco Michael Grejniec, y al final un pez se ríe porque él ve la luna reflejada en el agua."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-0974",
@@ -63406,10 +63496,10 @@
     },
     {
       "id": "q-1017",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 9,
       "description": "El único juego en el que te regalan medias y tienes que fingir que es lo que siempre soñaste.",
-      "question": "Un amigo español te cuenta que en su oficina sacan papelitos con nombres, nadie puede revelar a quién le tocó y en la fiesta de diciembre cada uno entrega un regalo. Tú lo llamas 'amigo secreto'. ¿Cómo lo llama él?",
+      "question": "En España, el juego de sacar papelitos y dar un regalo sin revelar a quién te tocó no se llama 'amigo secreto'. ¿Cómo lo llaman allá?",
       "answer": "Amigo invisible",
       "wrong_answers": [
         "Amigo fantasma",
@@ -63455,23 +63545,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "image is fine, but the question is unnecessary long",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta está bien, pero ninguna imagen del contact sheet sirve: muestra fotos de archivo de la Cruz Roja, frascos de perfume, fresas y una cigarrera, no regalos bajo el árbol. Hay que regenerar el sheet o buscar de nuevo el medio, por ejemplo con 'Christmas presents under tree' o 'wrapped gift exchange'. No se encontró una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Shortened the question per gamemaster feedback.",
+        "previous": {
+          "question": "Un amigo español te cuenta que en su oficina sacan papelitos con nombres, nadie puede revelar a quién le tocó y en la fiesta de diciembre cada uno entrega un regalo. Tú lo llamas 'amigo secreto'. ¿Cómo lo llama él?"
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1018",
@@ -65859,7 +65943,7 @@
     },
     {
       "id": "q-1056",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 10,
       "description": "Un muchacho holandés que decidió que su tarea de vacaciones sería arreglar el planeta.",
       "question": "Tres pistas sobre Boyan Slat: es holandés, a los 18 años dio una charla TEDx que se volvió viral, y en 2013 fundó una organización con su idea. ¿A qué se dedica esa organización?",
@@ -65871,7 +65955,7 @@
       ],
       "hints": [
         "Tiene que ver con el agua.",
-        "La idea se le ocurrió buceando en Grecia, cuando vio más bolsas que peces.",
+        "La idea se le ocurrió buceando en unas vacaciones en Grecia.",
         "Usa barreras flotantes gigantes en el mar."
       ],
       "media": {
@@ -65908,16 +65992,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 ('vio más bolsas que peces') ya da la respuesta: deja claro que se trata de basura plástica en el mar y descarta las otras tres opciones. Cámbiala por algo más vago, por ejemplo que la idea se le ocurrió buceando en vacaciones en Grecia, sin decir lo que vio.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer so it no longer reveals plastic waste.",
+        "previous": {
+          "hints": [
+            "Tiene que ver con el agua.",
+            "La idea se le ocurrió buceando en Grecia, cuando vio más bolsas que peces.",
+            "Usa barreras flotantes gigantes en el mar."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1057",
@@ -67548,10 +67637,10 @@
     },
     {
       "id": "q-1083",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 8,
       "description": "Una cena de Navidad que se pone más incómoda que cuando el tío saca el tema de la política.",
-      "question": "Lees un poema medieval inglés: en plena fiesta de Navidad entra un caballero gigante, verde de pies a cabeza, y reta a la corte a darle un hachazo. El sobrino del rey acepta el reto. ¿A qué grupo de leyendas pertenece esta historia?",
+      "question": "En un poema medieval inglés, un caballero gigante y todo verde entra a una fiesta de Navidad y reta a la corte del rey. ¿A qué grupo de leyendas pertenece?",
       "answer": "Las leyendas del rey Arturo",
       "wrong_answers": [
         "Las leyendas de Carlomagno",
@@ -67597,23 +67686,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "image isn't super important, but the question is too long",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "Ninguna imagen candidata sirve: la hoja de contacto muestra salas de museo (una con un moái), una mansión, un letrero de 'Mead Hall' y casas largas vikingas, que además sugieren una opción incorrecta. La pregunta está bien, pero necesita una nueva búsqueda de imagen decorativa, por ejemplo 'medieval castle great hall'. No se encontró una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Shortened the question per gamemaster feedback.",
+        "previous": {
+          "question": "Lees un poema medieval inglés: en plena fiesta de Navidad entra un caballero gigante, verde de pies a cabeza, y reta a la corte a darle un hachazo. El sobrino del rey acepta el reto. ¿A qué grupo de leyendas pertenece esta historia?"
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1084",
@@ -68430,10 +68513,10 @@
     },
     {
       "id": "q-1097",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 6,
       "description": "Una prima que no ha probado una hamburguesa en su vida, y aun así nadie le gana una carrera.",
-      "question": "Tu prima no come carne, así que come fríjoles, lentejas y garbanzos para conseguir el nutriente importante que normalmente sacaría de la carne. ¿Cómo se llama ese nutriente que obtiene de esas plantas?",
+      "question": "Tu prima no come carne, pero con fríjoles, lentejas y garbanzos consigue el nutriente clave que da la carne. ¿Cuál es?",
       "answer": "Proteína vegetal",
       "wrong_answers": [
         "Fibra vegetal",
@@ -68448,7 +68531,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "dried legumes assortment",
+        "query": "dried lentils chickpeas beans",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -68479,23 +68562,26 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta está bien, pero ninguna imagen sirve: en la hoja de contacto salen macarrones con logo de la FDA, frutas con ciruelas pasas y unos granos y semillas en vasijas, y ninguna muestra fríjoles, lentejas o garbanzos. Además, los títulos de los candidatos no coinciden con lo que se ve, así que hay que buscar de nuevo la imagen (por ejemplo \"dried lentils chickpeas beans\"). No se encontró una imagen adecuada para esta pregunta.\n\nimage not important, but question too long",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pregunta está bien, pero ninguna imagen sirve: en la hoja de contacto salen macarrones con logo de la FDA, frutas con ciruelas pasas y unos granos y semillas en vasijas, y ninguna muestra fríjoles, lentejas o garbanzos. Además, los títulos de los candidatos no coinciden con lo que se ve, así que hay que buscar de nuevo la imagen (por ejemplo \"dried lentils chickpeas beans\"). No se encontró una imagen adecuada para esta pregunta.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Shortened the question as the gamemaster asked and changed the image query so it shows the legumes the question names.",
+        "previous": {
+          "question": "Tu prima no come carne, así que come fríjoles, lentejas y garbanzos para conseguir el nutriente importante que normalmente sacaría de la carne. ¿Cómo se llama ese nutriente que obtiene de esas plantas?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "dried legumes assortment",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1098",
@@ -68823,7 +68909,7 @@
     },
     {
       "id": "q-1103",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 9,
       "description": "Tres villanos que jamás se han visto en persona, pero tienen exactamente la misma costumbre.",
       "question": "Tu papá dice que el Dr. Claw del 'Inspector Gadget', Blofeld de James Bond y el Doctor Maligno de 'Austin Powers' son del mismo club. ¿Qué tienen en común?",
@@ -68834,7 +68920,7 @@
         "Usan capa negra"
       ],
       "hints": [
-        "Es una mascota.",
+        "Lo tienen siempre a la mano mientras planean maldades.",
         "Suelen tenerla sentada en las piernas mientras dan órdenes.",
         "Dice 'miau'."
       ],
@@ -68872,16 +68958,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 («Es una mascota») ya revela la respuesta, porque ninguna otra opción (garfio, monóculo, capa) es un animal. Cámbiala por algo vago, por ejemplo «No es ropa ni un accesorio: está vivo y a veces se duerme», o mejor «Lo tienen siempre a la mano mientras planean maldades». Así la palabra mascota queda para la pista 2 o la 3.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 1, which gave away that the answer is an animal, with a vaguer one.",
+        "previous": {
+          "hints": [
+            "Es una mascota.",
+            "Suelen tenerla sentada en las piernas mientras dan órdenes.",
+            "Dice 'miau'."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1104",
@@ -70008,10 +70099,10 @@
     },
     {
       "id": "q-1122",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 3,
       "description": "Dos estrellas de Hollywood que en esta película solo prestaron la voz, pero igual se robaron el show.",
-      "question": "Ves con tu familia una película de la saga de Shrek: Antonio Banderas y Salma Hayek ponen la voz a dos personajes que pelean con espadas y roban habichuelas mágicas. ¿Qué animales son los dos?",
+      "question": "En la saga de Shrek, Antonio Banderas y Salma Hayek ponen la voz a dos personajes que pelean con espadas y roban habichuelas mágicas. ¿Qué animales son?",
       "answer": "Gatos",
       "wrong_answers": [
         "Burros",
@@ -70020,7 +70111,7 @@
       ],
       "hints": [
         "Él apareció por primera vez en 'Shrek 2'.",
-        "Ella se llama Kitty Patitas Suaves.",
+        "En la película, ella es una ladrona experta que roba con mucho sigilo.",
         "Él usa sombrero con pluma y unas botas muy elegantes."
       ],
       "media": {
@@ -70057,23 +70148,22 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 ('Kitty Patitas Suaves') casi revela la respuesta, porque 'Kitty' es como se le dice a un gatito y todos conocen a Hello Kitty. Cámbienla por una pista que no tenga el nombre del personaje, por ejemplo: 'En la película, ella es una ladrona experta que roba con mucho sigilo'.\n\nthis epic intro to the question is bullshit",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "needs_work",
-          "feedback": "La pista 2 ('Kitty Patitas Suaves') casi revela la respuesta, porque 'Kitty' es como se le dice a un gatito y todos conocen a Hello Kitty. Cámbienla por una pista que no tenga el nombre del personaje, por ejemplo: 'En la película, ella es una ladrona experta que roba con mucho sigilo'.",
-          "reviewed_on": "2026-10-10",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        }
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Cut the scene-setting opening of the question and replaced hint 2 so it no longer has the name 'Kitty', following the gamemaster.",
+        "previous": {
+          "question": "Ves con tu familia una película de la saga de Shrek: Antonio Banderas y Salma Hayek ponen la voz a dos personajes que pelean con espadas y roban habichuelas mágicas. ¿Qué animales son los dos?",
+          "hints": [
+            "Él apareció por primera vez en 'Shrek 2'.",
+            "Ella se llama Kitty Patitas Suaves.",
+            "Él usa sombrero con pluma y unas botas muy elegantes."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1123",
@@ -71565,7 +71655,7 @@
     },
     {
       "id": "q-1147",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 6,
       "description": "Un señor de traje blanco que se pasó la vida pensando en pollo.",
       "question": "Adivina: llevo traje blanco, corbatín negro, gafas y barbita de chivo, y mi cara está en millones de baldes de pollo frito. Mi cadena lleva en su nombre un estado de Estados Unidos. ¿Cuál?",
@@ -71577,7 +71667,7 @@
       ],
       "hints": [
         "La cadena se conoce por tres letras.",
-        "La 'K' de esas tres letras es la inicial del estado.",
+        "El estado es famoso por sus caballos de carreras y una carrera llamada el Derby.",
         "KFC significa '… Fried Chicken'."
       ],
       "media": {
@@ -71614,16 +71704,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"La 'K' de esas tres letras es la inicial del estado\") regala la respuesta: Kentucky es la única opción que empieza por K. Cámbiala por una pista más vaga (por ejemplo, que el estado es famoso por sus caballos de carreras y el Derby) y deja la sigla KFC para la pista 3.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which pointed to the only option starting with K, with a hint about horse racing and the Derby.",
+        "previous": {
+          "hints": [
+            "La cadena se conoce por tres letras.",
+            "La 'K' de esas tres letras es la inicial del estado.",
+            "KFC significa '… Fried Chicken'."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1148",
@@ -72075,7 +72170,7 @@
     },
     {
       "id": "q-1155",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 12,
       "description": "Un museo donde todo echa humo, menos el guía.",
       "question": "En un museo ves tres vitrinas: una sobre Mickey Mouse en su famoso corto de 1928, otra sobre el escritor Mark Twain y otra sobre el inventor Robert Fulton. ¿Qué tienen en común?",
@@ -72086,7 +72181,7 @@
         "Los submarinos"
       ],
       "hints": [
-        "Los tres tienen que ver con ríos.",
+        "Los tres tienen que ver con una forma de viajar.",
         "Mark Twain trabajó como piloto en el río Misisipi.",
         "Funcionan con una caldera y una gran rueda de paletas."
       ],
@@ -72124,20 +72219,25 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 (\"Los tres tienen que ver con ríos\") ya da la respuesta: descarta de una vez los trenes, los globos y los submarinos, y solo quedan los barcos de vapor. Cámbiala por algo más vago, por ejemplo que los tres son del siglo XIX en Estados Unidos o que tienen que ver con viajar.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 1, which left only the steamboats once rivers were mentioned, with a vague travel hint that fits all four options.",
+        "previous": {
+          "hints": [
+            "Los tres tienen que ver con ríos.",
+            "Mark Twain trabajó como piloto en el río Misisipi.",
+            "Funcionan con una caldera y una gran rueda de paletas."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1156",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 13,
       "description": "Un dragón negro que separa a dos vecinos muy grandes.",
       "question": "Tres pistas: forma gran parte de la frontera entre Rusia y China; en sus bosques vive el tigre siberiano; y en chino su nombre significa 'río del Dragón Negro'. ¿Qué río es?",
@@ -72150,7 +72250,7 @@
       "hints": [
         "Está en el extremo oriental de Asia, donde los inviernos son helados.",
         "El tigre más grande del mundo lleva a veces su nombre.",
-        "Su nombre suena a 'amor' sin la o."
+        "Su nombre suena casi como 'amor', pero con u en vez de o."
       ],
       "media": {
         "type": "image",
@@ -72186,16 +72286,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 3 está mal: 'amor' sin la o da 'amr', no 'Amur'. Cámbiala por algo como \"Su nombre suena casi como 'amor', pero con u en vez de o\".",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Fixed hint 3, which was wrong: 'amor' with a u instead of the o gives 'Amur'.",
+        "previous": {
+          "hints": [
+            "Está en el extremo oriental de Asia, donde los inviernos son helados.",
+            "El tigre más grande del mundo lleva a veces su nombre.",
+            "Su nombre suena a 'amor' sin la o."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1157",
@@ -72447,7 +72552,7 @@
     },
     {
       "id": "q-1161",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 7,
       "description": "El único empleado de la casa que nunca se queja de barrer, pero sí se queda atascado debajo del sofá.",
       "question": "Tu abuela dice que la aspiradora robot Roomba, ese disco que barre solo, es un invento «de toda la vida». ¿En qué década empezó a venderse?",
@@ -72459,7 +72564,7 @@
       ],
       "hints": [
         "Es más joven que tus papás, pero más vieja que muchos de ustedes.",
-        "Salió cuando ya existían los celulares, pero antes de los teléfonos con pantalla táctil.",
+        "Salió antes del primer iPhone.",
         "Salió en 2002."
       ],
       "media": {
@@ -72496,16 +72601,21 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 es falsa tal como está: ya había celulares con pantalla táctil antes de 2002 (el IBM Simon de 1994, el Ericsson R380 del 2000). Cámbiala por algo como «Salió antes del primer iPhone» o «antes de que existieran los teléfonos inteligentes como los de hoy».",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the false touchscreen hint with a true one: the Roomba came out before the first iPhone.",
+        "previous": {
+          "hints": [
+            "Es más joven que tus papás, pero más vieja que muchos de ustedes.",
+            "Salió cuando ya existían los celulares, pero antes de los teléfonos con pantalla táctil.",
+            "Salió en 2002."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1162",
@@ -73446,7 +73556,7 @@
     },
     {
       "id": "q-1177",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 9,
       "description": "La carta más lenta del universo, enviada sin dirección y sin estampilla.",
       "question": "Adivinanza: soy una sonda, salí de la Tierra en 1977, pasé junto a Júpiter y Saturno y ahora viajo más allá de los planetas. ¿Qué llevo a bordo por si me encuentran extraterrestres?",
@@ -73457,8 +73567,8 @@
         "Una carta escrita por niños del mundo"
       ],
       "hints": [
-        "Mi mensaje se puede escuchar, si sabes cómo.",
-        "Trae saludos en muchos idiomas, cantos de animales y canciones.",
+        "Lo preparó un equipo dirigido por el astrónomo Carl Sagan.",
+        "Trae dibujadas unas instrucciones para saber cómo usarlo.",
         "Es un disco dorado, como los discos de vinilo de los abuelos."
       ],
       "media": {
@@ -73495,31 +73605,36 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 (\"Mi mensaje se puede escuchar\") ya descarta las tres opciones incorrectas (bandera, semillas, carta), y la pista 2 prácticamente describe la respuesta (\"saludos… cantos de animales y canciones\"). Cambia la pista 1 por algo vago (p. ej. que lo preparó un equipo dirigido por Carl Sagan) y la pista 2 por algo que no deje fuera todas las demás opciones (p. ej. que trae instrucciones grabadas para usarlo).",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hints 1 and 2 vaguer so they no longer rule out every wrong option or describe the answer.",
+        "previous": {
+          "hints": [
+            "Mi mensaje se puede escuchar, si sabes cómo.",
+            "Trae saludos en muchos idiomas, cantos de animales y canciones.",
+            "Es un disco dorado, como los discos de vinilo de los abuelos."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1178",
-      "status": "needs_work",
-      "difficulty": 7,
+      "status": "draft",
+      "difficulty": 9,
       "description": "Un metro que tiene más estilo para rodar que tú para caminar.",
       "question": "Nací en 1969 bajo una ciudad gigante que antes fue un lago azteca, y cada una de mis estaciones tiene su propio dibujito. Soy el metro de Ciudad de México: ¿sobre qué ruedan los trenes en la mayoría de mis líneas?",
       "answer": "Llantas de caucho",
       "wrong_answers": [
-        "Ruedas de madera",
+        "Ruedas de acero sobre rieles",
         "Un colchón de aire",
         "Imanes que flotan"
       ],
       "hints": [
-        "Es algo que también tienen los carros y los buses.",
+        "No es tecnología del futuro: se usa desde hace más de cien años.",
         "La idea vino del metro de París, que buscaba trenes más silenciosos.",
         "Es lo mismo que se infla en un taller cuando se pincha el carro."
       ],
@@ -73557,16 +73672,28 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 (\"algo que también tienen los carros y los buses\") delata la respuesta: ninguna otra opción la cumple. Además, \"Llantas de caucho\" es la única opción realista. Hay que cambiar la pista 1 por algo más vago y poner como distractor la alternativa real, \"Ruedas de acero sobre rieles\", en vez de \"Ruedas de madera\".",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "difficulty_original": 7,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the revealing hint 1, swapped 'Ruedas de madera' for the realistic 'Ruedas de acero sobre rieles', and raised the difficulty.",
+        "previous": {
+          "difficulty": 7,
+          "wrong_answers": [
+            "Ruedas de madera",
+            "Un colchón de aire",
+            "Imanes que flotan"
+          ],
+          "hints": [
+            "Es algo que también tienen los carros y los buses.",
+            "La idea vino del metro de París, que buscaba trenes más silenciosos.",
+            "Es lo mismo que se infla en un taller cuando se pincha el carro."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1179",
@@ -73632,7 +73759,7 @@
     },
     {
       "id": "q-1180",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 4,
       "description": "El lugar donde la fila siempre es más larga justo cuando tienes afán.",
       "question": "Vas al cine, al estadio y a la estación del tren, y en los tres lugares haces fila frente a una ventanilla para comprar tu boleto. ¿Cómo se llama esa ventanilla?",
@@ -73644,7 +73771,7 @@
       ],
       "hints": [
         "Allí se paga para poder entrar o viajar.",
-        "De una película que vende muchísimos boletos se dice que es '…era'.",
+        "Suele ser una ventanilla con vidrio y un huequito para pasar la plata.",
         "Rima con 'mantequilla'."
       ],
       "media": {
@@ -73681,16 +73808,21 @@
       "fact_checked": false,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"de una película que vende muchísimos boletos se dice que es '…era'\") prácticamente regala la respuesta, porque solo hay que completar \"taquillera\". Además, el dato curioso repite lo mismo. Cambien la pista 2 por una más vaga (por ejemplo, que suele ser una ventanilla con vidrio y un huequito para pasar la plata) y dejen lo de \"taquillera\" solo para el dato curioso.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave away the word through 'taquillera', with a vaguer description; 'taquillera' now appears only in the fun fact.",
+        "previous": {
+          "hints": [
+            "Allí se paga para poder entrar o viajar.",
+            "De una película que vende muchísimos boletos se dice que es '…era'.",
+            "Rima con 'mantequilla'."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1181",
@@ -74445,7 +74577,7 @@
     },
     {
       "id": "q-1193",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 13,
       "description": "Una mezcla que no sabe si es líquida o sólida, igual que tú un lunes por la mañana.",
       "question": "Esta mezcla de maicena y agua se pone dura si la golpeas o la aprietas, pero escurre como líquido si la dejas quieta. ¿Qué tipo de sustancia es?",
@@ -74456,7 +74588,7 @@
         "Un plasma frío"
       ],
       "hints": [
-        "Su nombre recuerda a un científico inglés muy famoso.",
+        "La salsa de tomate de botella y la arena movediza son de la misma familia.",
         "Su 'espesor' cambia según la fuerza que le hagas.",
         "No cumple las reglas de los fluidos que estudió el de la manzana."
       ],
@@ -74494,16 +74626,21 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 (\"su nombre recuerda a un científico inglés muy famoso\") ya delata la respuesta: cualquiera piensa en Newton y solo una opción dice \"newtoniano\". Hay que cambiarla por una pista vaga que no aluda al nombre, y dejar la referencia a Newton para la pista 3.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 1, which pointed straight to Newton and the only 'newtoniano' option, with a vague hint; the Newton reference stays in hint 3.",
+        "previous": {
+          "hints": [
+            "Su nombre recuerda a un científico inglés muy famoso.",
+            "Su 'espesor' cambia según la fuerza que le hagas.",
+            "No cumple las reglas de los fluidos que estudió el de la manzana."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1194",
@@ -74817,10 +74954,10 @@
     },
     {
       "id": "q-1199",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 8,
       "description": "Un bicho chiquito que se toma el jugo de tus plantas sin pedir permiso.",
-      "question": "Adivinanza: 'Soy un insecto chiquito, casi siempre verde, y chupo la savia de tus lechugas y tus rosas. Pero si en tu huerta sueltan muchos de cierto insecto, desaparezco rapidito'. ¿Qué insectos son esos?",
+      "question": "Adivinanza: 'Soy un insecto chiquito, casi siempre verde, y chupo la savia de tus lechugas y tus rosas. Pero si en tu huerta sueltan muchos de cierto insecto, que si lo molestas suelta un juguito amarillo por las patas, desaparezco rapidito'. ¿Qué insectos son esos?",
       "answer": "Las mariquitas",
       "wrong_answers": [
         "Las abejas",
@@ -74829,7 +74966,7 @@
       ],
       "hints": [
         "Esos insectos son cazadores.",
-        "Son pequeños, redondos y de colores.",
+        "Los agricultores los usan como control natural de plagas.",
         "Suelen ser rojos con puntos negros."
       ],
       "media": {
@@ -74866,16 +75003,22 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 ('pequeños, redondos y de colores') ya delata a las mariquitas: es la única opción redonda, así que deja la pista 3 sin nada que hacer. Cambiarla por algo más vago, por ejemplo 'Los agricultores los usan como control natural de plagas'. Además, la adivinanza también le sirve a las crisopas, que igual se sueltan contra los pulgones. Conviene que la pregunta diga algo que solo tengan las mariquitas.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Added a ladybug-only trait (reflex bleeding of yellow liquid) to the riddle so lacewings no longer fit, and replaced the giveaway hint 2 with a vaguer one.",
+        "previous": {
+          "question": "Adivinanza: 'Soy un insecto chiquito, casi siempre verde, y chupo la savia de tus lechugas y tus rosas. Pero si en tu huerta sueltan muchos de cierto insecto, desaparezco rapidito'. ¿Qué insectos son esos?",
+          "hints": [
+            "Esos insectos son cazadores.",
+            "Son pequeños, redondos y de colores.",
+            "Suelen ser rojos con puntos negros."
+          ]
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1200",
@@ -75334,7 +75477,7 @@
     },
     {
       "id": "q-1207",
-      "status": "needs_work",
+      "status": "draft",
       "difficulty": 10,
       "description": "Una villana que nunca necesita bus porque corre más rápido que el bus.",
       "question": "Estás jugando a emparejar héroes con sus enemigos. Completa: 'El Joker es a Batman como Cheetah es a…'.",
@@ -75358,7 +75501,7 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Savanna_at_the_Cincinnati_zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "credit": "Mark Dumont · CC BY 2.0 · Wikimedia Commons"
       },
-      "fun_fact": "En 'Mujer Maravilla 1984', Cheetah es una arqueóloga llamada Barbara Minerva.",
+      "fun_fact": "En 'Mujer Maravilla 1984', Cheetah es una gemóloga del Smithsonian llamada Barbara Minerva.",
       "subcategory": "Villanos famosos",
       "style": null,
       "concept": "Cheetah",
@@ -75383,16 +75526,17 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": {
-        "decision": "needs_work",
-        "feedback": "El dato curioso está mal: en 'Mujer Maravilla 1984' Barbara Minerva no es arqueóloga, sino gemóloga (y geóloga) en el Smithsonian; lo de arqueóloga viene de los cómics. Corrígelo, por ejemplo: \"En 'Mujer Maravilla 1984', Cheetah es una gemóloga del Smithsonian llamada Barbara Minerva\", o di que en los cómics es arqueóloga.",
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
-      },
+      "review": null,
       "bundle": "base",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Corrected the fun fact: in Wonder Woman 1984 Barbara Minerva is a Smithsonian gemologist, not an archaeologist.",
+        "previous": {
+          "fun_fact": "En 'Mujer Maravilla 1984', Cheetah es una arqueóloga llamada Barbara Minerva."
+        },
+        "revised_on": "2026-10-10"
+      }
     },
     {
       "id": "q-1208",
