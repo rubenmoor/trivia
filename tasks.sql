@@ -687,8 +687,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', '2026-10-11T23:51:42Z', 15);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 40–45; 43 dropped, re-added as 45 with task 44''s id; plan tasks 4+5 merged into 45; 44 waits for decision 1 and the threshold decision 45 creates)', 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', '2026-10-11T23:52:42Z', 16);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (23, 16, 'create tasks for plan 16', 'split', 'open', 1000, NULL, 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:48:16Z', NULL, 17);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (23, 16, 'create tasks for plan 16', 'split', 'done', 1000, '2026-10-11, tasks 46–49 (48 pending on decisions 1, 2)', 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:48:16Z', '2026-10-11T23:53:40Z', 17);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (24, 17, 'create tasks for plan 17', 'split', 'open', 1000, NULL, 'Split plan 17 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:49:34Z', NULL, 18);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (25, 12, 'Targets file, loader and validate check', 'work', 'open', NULL, NULL, 'Part "Targets file" of plan 12 (D-53, already logged in `plans/decisions.md`).
@@ -873,6 +873,41 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Decision: `pm decision add "Batch health thresholds and stop rule?"` with the plan''s first-guess thresholds adjusted to the baseline in the body; options: recommended set (first) / looser set / warnings only, no stop. Then `pm task-pending-decision 44 <decision id>`.
 
 Done when: `qgen report --batches` prints batch-4…7; plan 15 has the baseline; PE-6/PE-13/MP-11 closed; decision created and the thresholds task waits on it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:38Z', NULL, 22);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (46, 16, 'LLM audit: audit.md, qgen audit, batch step, Audit section; batch-7 baseline', 'work', 'open', NULL, NULL, 'Part "LLM audit (a)" of plan 16: an independent second LLM reader of a seeded sample per batch.
+
+- `authoring/tools/prompts/audit.md` (new): strict reader of the question as played; sees question, options, hints, fun fact, difficulty, media title/role, `related` pool questions, house style; not the review verdict, `fix`, rater notes or fact check. Checks facts (web search like `factcheck`), ambiguity, giveaways, overlap, difficulty (1–15, D-38), house style.
+- `AUDIT_SCHEMA` in `authoring/tools/qgen.py`: `verdict` ok|problem, `problems` (plan 15''s shared constant; task 42 may define it first: reuse, else define it where task 42 finds it), `severity` minor|major, `difficulty_estimate` 1–15, `notes`.
+- Sample draw: seeded by batch name, `AUDIT_SAMPLE` = 60 merged questions with an LLM review, approved/needs_work in proportion; one function, so task "spot-check tooling" can draw its subset from it.
+- `qgen audit [--batch <b>]`: one opus call per question, `work/<batch>/audit/<id>.json`, skips done ones; never changes the pool.
+- Step in `qgen batch` after `record`, before `export`. `work/batch-8` exists: if batch-8 is mid-run, make sure the new step doesn''t break resuming it.
+- `batch-report`: "## Audit" section (sample size, major among approved / among needs_work, problems by kind, mean |audit − final difficulty|, audit/review agreement, every major finding on an approved question as `id: problem — notes` + `/review/<id>` link).
+
+Done when: `qgen audit --batch batch-7` ran; flagged rates, problems by kind, cost (`costs.log`) and audit/review agreement recorded in plan 16''s Baseline (`pm plan edit 16 --body -`); `qgen validate` clean. No batch run.', '2026-10-11T23:53:37Z', NULL, 23);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (47, 16, 'Spot-check tooling: sample, spot-checks.json, endpoints, blind review mode, audit=flagged', 'work', 'open', 640, NULL, 'Part "Human spot check (b)" of plan 16. After the audit task (it provides the sample draw).
+
+- Spot-check sample: subset of the audit sample, seeded by batch name, size `quality.spot_check_size` from `authoring/data/targets.json` (task 25''s loader) or 30 when absent.
+- `authoring/data/spot-checks.json` in the format of plan 16; written only by the server; undo removes the item.
+- `authoring/server/main.py`: `POST /api/spot-checks/<batch>/<id>`, `GET /api/spot-checks`, doc lines in the docstring.
+- `qgen validate`: file checks (batch/ids exist, values in range).
+- Review page (`authoring/ui`): `/review?batch=<b>&sample=1` blind (hide LLM decision, feedback, reasons, audit until decided; media stays visible), then reveal next to the human verdict with agree/disagree; decide = normal human review (D-33) + spot-check POST. `/review?batch=<b>&audit=flagged`: audited questions with a major finding, audit notes next to the review''s.
+
+Done when: `npm run check` and `qgen validate` clean; checked in the browser with `trivia-authoring` on batch-7 (decide, reveal, undo; then restore any test entries).', '2026-10-11T23:53:37Z', NULL, 23);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (48, 16, 'qgen report --qc, QC section and trend table; quality keys in targets.json', 'work', 'open', 630, NULL, 'Parts "Findings → changes" step 3 and "Trend" of plan 16. Needs the spot-check file (previous task), task 25 (targets file, waits on decision 1) and pm decision 2 (spot-check size, agreement rate).
+
+- `quality` keys in `authoring/data/targets.json`: `spot_check_size`, `min_agreement` (values from decision 2); `qgen validate` checks them.
+- `qgen report --qc <batch>`: rewrites "## Quality control" in `authoring/reports/<batch>.md`: agreement, false approve / false needs_work, difficulty |Δ| ≥ 2, media changed, audit vs. human, disagreements with the human''s feedback grouped by `problems`; ends with "Changes from this QC: …" (filled in by QC step 4).
+- `qgen report --qc` without batch: trend table per batch (audit n, major among approved %, human n, agreement %, false approve %, difficulty |Δ| ≥ 2 %, audit/human agreement %, ✓/✗ vs. `min_agreement`); also into `authoring/reports/batches.md` if task 45 made it.
+- Output plan 12''s exit check (task 28) can read without recomputing; tell task 28 in a note if it needs a shared function.
+
+Done when: run on batch-7 with a few throw-away spot-check entries (removed afterwards) gives plausible numbers; `qgen validate` clean.', '2026-10-11T23:53:37Z', NULL, 23);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (49, 16, 'authoring/QC.md, RUNBOOK/AGENTS/directory pointers; per-batch pattern for plan 17', 'work', 'open', 620, NULL, 'Part "Findings → changes (c)" of plan 16, the written procedure.
+
+- `authoring/QC.md` (new): steps 1–5 of plan 16 (batch done → blind spot check by the gamemaster, a pm decision "Spot check <batch> done?" for workers → `qgen report --qc <batch>` → proposals by the threshold rule into one pm decision "QC <batch>: which changes?" → approved ones become implementation tasks; next batch waits on both decisions). Prompt changes never inside a batch run.
+- D-56 already in `plans/decisions.md`: check it matches.
+- One line in `authoring/RUNBOOK.md` step 5 pointing to QC.md; one line in AGENTS.md "Making questions"; `directory.md` entry.
+- Plan 17 (batch runs): make sure its tasks follow the pattern batch → spot-check decision → `--qc` + proposal decision → change tasks → next batch (`pm plan edit 17` if its body lacks it; that requeues its split).
+
+Done when: files written and consistent with the commands from the previous tasks as built; no batch or QC run.', '2026-10-11T23:53:37Z', NULL, 23);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -894,6 +929,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (10, 20, '2026-10-11T23:50:15Z', '2026-10-11T23:51:15Z', 'done', NULL, 0, '8fdfc21f0a7e6f58f5050acf29b50fe08158bacf', 'claude-opus-5-5[1m]', '4d70826f-4639-4508-9b2c-6d8111de8f1f', 9, 18, 6170, 311821, 32442, 0.4453722, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (11, 21, '2026-10-11T23:51:15Z', '2026-10-11T23:51:49Z', 'done', NULL, 0, '8975495c4bc7ec1e851d125441f7178b300fb2dd', 'claude-opus-5-5[1m]', '48250d51-c9cd-4467-8b6b-c19264e71694', 5, 10, 2622, 137512, 23878, 0.27100640000000004, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (12, 22, '2026-10-11T23:51:49Z', '2026-10-11T23:52:49Z', 'done', NULL, 0, '3d9fa2fda59849b2763367b9b440ac866818c465', 'claude-opus-5-5[1m]', '17dc73a2-9011-4a4d-88dd-8cd1e998649c', 9, 18, 5816, 355709, 37673, 0.48891779999999996, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (13, 23, '2026-10-11T23:52:49Z', '2026-10-11T23:53:45Z', 'done', NULL, 0, '776787ea570c7b398ba40c2e4da2e7003f323435', 'claude-opus-5-5[1m]', 'f12a1a7f-b761-46de-8040-60e2bd1e05df', 8, 16, 4891, 287815, 34064, 0.427959, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -903,3 +939,5 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (28, 2);
 INSERT INTO task_decision (task_id, decision_id) VALUES (35, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (36, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (44, 1);
+INSERT INTO task_decision (task_id, decision_id) VALUES (48, 1);
+INSERT INTO task_decision (task_id, decision_id) VALUES (48, 2);
