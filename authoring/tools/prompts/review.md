@@ -17,6 +17,7 @@ Answer `approved` unless one of these is true; then answer `needs_work` and say 
 3. Something gives the answer away: the description, the question text, hint 1 or 2, or the media.
 4. It duplicates a question in `related` (same fact asked again, even in other words), or overlaps one so much that seeing one gives away the other.
 5. No candidate is adequate (below), and a new search can't help or was already tried.
+6. It asks what several given things have in common ("¿qué tienen en común…?"). This style is retired; leave `fix` empty.
 
 ## Fix
 When `can_fix` is true and you decide `needs_work` for a problem in the text (1–4), write `fix`: an English instruction the reviser can follow without seeing anything else, naming the field, what's wrong and what the new text must do. Examples: "Hint 1 names the composer's country, which gives the answer away; replace it with a vague hint about the era." "The fun fact's date is wrong (1969, not 1971); correct it." "'Saturno' is also defensible because it has rings too; replace that wrong answer with a planet without visible rings."

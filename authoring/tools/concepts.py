@@ -157,9 +157,10 @@ def value_weight(axes_def, axis, v, fit, usage, offered):
 
 
 def possible_combos(axes_def, fit):
-    """Every compatible combination whose values all fit the subcategory (fit 3 or more)."""
-    allowed = {a: [v for v in values(axes_def, a)
-                   if a not in FIT_AXES or fit.get(a, {}).get(v, 3) > 2] for a in DRAW_ORDER}
+    """Every compatible combination whose values all fit the subcategory (fit 3 or more);
+    a value with base weight 0 is never drawn."""
+    allowed = {a: [v for v in values(axes_def, a) if base_weight(axes_def, a, v) > 0
+                   and (a not in FIT_AXES or fit.get(a, {}).get(v, 3) > 2)] for a in DRAW_ORDER}
     out = []
 
     def walk(combo, rest):

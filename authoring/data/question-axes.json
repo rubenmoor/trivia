@@ -1,5 +1,5 @@
 {
-  "about": "Question styles as independent axes (plans/20-pipeline-efficiency.md, PE-7, D-37). A question is one value on each axis. `draft` draws compatible combinations; `rules` say which values go together. Explanations go into the prompts. `weights`: base weight per value when drawing (default 1); it sets each value's expected share, and values used more than expected are drawn less. The axes say nothing about the players' age: who can answer a question is the difficulty's job.",
+  "about": "Question styles as independent axes (plans/20-pipeline-efficiency.md, PE-7, D-37). A question is one value on each axis. `draft` draws compatible combinations; `rules` say which values go together. Explanations go into the prompts. `weights`: base weight per value when drawing (default 1); it sets each value's expected share, and values used more than expected are drawn less; weight 0 retires a value (never drawn, still valid on old questions). The axes say nothing about the players' age: who can answer a question is the difficulty's job.",
   "axes": {
     "move": {
       "label": "what the player has to do",
@@ -15,7 +15,7 @@
         "purpose": "what it is for, or what it is used for",
         "cause_effect": "what happens if…, or why something happens",
         "sequence": "what comes before or after, what it was called before, what it becomes, or what comes next in a series",
-        "connection": "what three given things have in common",
+        "connection": "retired (weight 0): what three given things have in common; it made weak questions",
         "analogy": "\"A es a B como C es a…\"",
         "odd_one_out": "which of the four does NOT belong or is NOT true; the other three share a real-world property",
         "who": "who made, invented, discovered, said or did it",
@@ -75,6 +75,7 @@
     }
   },
   "weights": {
+    "move": {"connection": 0},
     "stimulus": {"none": 7, "photo": 1.5, "detail": 0.8, "silhouette": 0.4, "map_outline": 0.4, "sound": 0.8, "video": 0.3}
   },
   "rules": [
