@@ -74,7 +74,7 @@ The review tool is keyboard-driven:
 
 Every decision is saved into `authoring/data/questions.json` and re-exported to `app/data/pool.json` at once, so the game sees it on its next question. Switch off browser extensions that grab single keys (e.g. Vimium) for `127.0.0.1:8001`. All keys: [`plans/08-review-tool.md`](plans/08-review-tool.md).
 
-Also on the authoring server: stats at `/stats/categories`, `/stats/subcategories` and `/stats/difficulty`, and printable joker cards at `/comodines`.
+Also on the authoring server: stats at `/stats/categories`, `/stats/subcategories`, `/stats/difficulty` and `/stats/media`, and printable joker cards at `/comodines`.
 
 ### Make new questions
 

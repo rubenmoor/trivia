@@ -37,7 +37,7 @@ If you are asked to make, generate, add, review or approve questions, follow [`a
 
 ## Commands
 All tools come from the flake (D-18, D-35): `direnv allow` once (or `nix develop`) gives Node 22, Python 3, ImageMagick, Claude Code and the commands below. Commands for humans: `README.md`.
-- Game: `trivia` (http://127.0.0.1:8000/). Authoring: `trivia-authoring` (start page http://127.0.0.1:8001/, `/review?batch=…`, `/review?status=!approved`, `/review/<id>`, `/stats/categories`, `/stats/subcategories`, `/stats/difficulty`, `/comodines`).
+- Game: `trivia` (http://127.0.0.1:8000/). Authoring: `trivia-authoring` (start page http://127.0.0.1:8001/, `/review?batch=…`, `/review?status=!approved`, `/review/<id>`, `/stats/categories`, `/stats/subcategories`, `/stats/difficulty`, `/stats/media`, `/comodines`).
 - Clients: `npm install`, `npm run build` (both), `npm run check` (type-check both), `npm run dev -w app/client` or `-w authoring/ui` (hot reload; run the matching server too).
 - Project manager: `pm` ([project-manager](https://github.com/rubenmoor/project-manager), in the dev shell). Run `pm instructions` before you use it: every command with examples.
 - Pool: `qgen validate` (also fails when `app/data/pool.json` is stale), `qgen export`, `qgen report`, `qgen rework` (needs_work questions once more through fix and review; only when the gamemaster asks), `qgen tighten` (shortens long-winded questions in the whole pool; only when the gamemaster asks).

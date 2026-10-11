@@ -155,3 +155,14 @@ export interface Overview {
   next_batch_subcategories: string[];
   counts: { status: Record<string, number>; bundle: Record<string, number> };
 }
+
+/** GET /api/stats/media (authoring/server/media_stats.py, RV-23). */
+export interface MediaStats {
+  questions: number;
+  /** Most questions first; counts per media type and without a picked file. */
+  roles: ({ role: Media["role"]; questions: number; no_file: number } & Partial<Record<Media["type"], number>>)[];
+  /** Picked images by long edge in px, small to large, then SVG / not cached / unreadable. */
+  bands: { band: string; questions: number }[];
+  /** The most common exact sizes. */
+  sizes: { size: string; questions: number }[];
+}

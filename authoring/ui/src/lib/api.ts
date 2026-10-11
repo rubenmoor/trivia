@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/api";
-import type { AgeGroups, Bundle, Overview, Question, Review, Slot, Status } from "./types";
+import type { AgeGroups, Bundle, MediaStats, Overview, Question, Review, Slot, Status } from "./types";
 
 export { fetchCategories } from "$app/lib/api";
 
@@ -65,4 +65,9 @@ export async function fetchAgeGroups(): Promise<AgeGroups> {
 /** Everything the start page shows except the statistics (RV-12). */
 export async function fetchOverview(): Promise<Overview> {
   return json(await call("/api/overview"));
+}
+
+/** Approved questions per media role and image resolution (RV-23). */
+export async function fetchMediaStats(bundle: string | null): Promise<MediaStats> {
+  return json(await call(`/api/stats/media${bundle ? `?${new URLSearchParams({ bundle })}` : ""}`));
 }

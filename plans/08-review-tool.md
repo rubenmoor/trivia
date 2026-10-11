@@ -140,6 +140,10 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
   - Each sparse subcategory is marked if the next `qgen batch` will pick it (the 30 with the fewest approved questions, `qgen.batch_subcategories`). Then the gamemaster can see whether the next batch fixes the gap or whether it needs a bundle or a top-up (B-6).
 
   The two limits are constants at the top of the component, so they're easy to change.
+- **Media page** (`/stats/media`, RV-23, gamemaster 2026-10-11): approved questions per media role (split by type, picked file or not) and per image resolution.
+  - Resolution: pixel size read from the cached file (`media/`, D-17), not from the candidates; bands on the long edge: < 800, 800–1279, 1280–1919, 1920–3839, ≥ 3840 px; plus SVG, not cached, unreadable.
+  - Media images only (`type: image`); audio backgrounds aren't counted.
+  - `GET /api/stats/media?bundle=` builds it on the server (reads file headers, standard library only).
 - **Filters.** Every page keeps "approved questions only" (gamemaster, 2026-10-06). A bundle switch (all / `base` / `colombia`) reads `?bundle=`, so the family's default (every bundle on) and a single bundle can both be checked (M11).
 
 ## Tasks
@@ -168,4 +172,5 @@ One task = one commit, top to bottom (each builds only on the ones above it):
 - [x] RV-21 Bundle switch (`?bundle=`) on the stats pages. *2026-10-09, `authoring/ui/src/stats/Stats.svelte`; the compact versions for the start page moved to RV-14.*
 - [x] RV-14 Start page `authoring/ui/src/home/Home.svelte`: sections 1–6, with compact versions of the histogram, category bars and sparse list; `App.svelte` routes exactly `/` to it; `/` with `batch`/`bundle`/`id` redirects to `/review`. *2026-10-09, `authoring/ui/src/home/Home.svelte`, `App.svelte`; `compact` mode for the three stats components. A bundle counts as checked for a question once a human reviewed it (no separate mark exists).*
 - [x] RV-16 One nav bar on the start page, the stats pages and the review summary ("Start", "Stats", "Review"); the server's startup line and AGENTS.md name `/` as the start page. *2026-10-09, `authoring/ui/src/lib/Nav.svelte`; Start/Stats links in the review header; `/reports` proxied in `vite.config.ts`; AGENTS.md and README name the start page.*
+- [x] RV-23 Media stats page `/stats/media`: questions per media role and per image resolution band. *2026-10-11, `authoring/server/media_stats.py` (`GET /api/stats/media`), `authoring/ui/src/stats/MediaStats.svelte`.*
 - [ ] RV-17 (later, not in this round) `qgen validate` result on the start page: errors and warnings, without the exit. Needs `cmd_validate` split into a function that returns its findings.

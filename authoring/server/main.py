@@ -27,6 +27,8 @@ API:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
+    GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
+                                                   (RV-23, authoring/server/media_stats.py)
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not)
@@ -45,6 +47,7 @@ import flags  # noqa: E402  (app/server/flags.py)
 from http_base import BaseHandler  # noqa: E402  (app/server/http_base.py)
 import media  # noqa: E402  (authoring/tools/media.py)
 import media_cache  # noqa: E402  (app/server/media_cache.py)
+import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
 
@@ -230,6 +233,11 @@ class Handler(BaseHandler):
             return self.send_json(200, categories.load())
         if url.path == "/api/overview":
             return self.send_json(200, overview.build(load_pool()["questions"], load_bundles()))
+        if url.path == "/api/stats/media":
+            bundle = parse_qs(url.query).get("bundle", [None])[0]
+            qs = [q for q in load_pool()["questions"]
+                  if q["status"] == "approved" and (not bundle or q.get("bundle") == bundle)]
+            return self.send_json(200, media_stats.build(qs))
         if url.path == "/api/age-groups":
             return self.send_json(200, json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")))
         if url.path == "/api/bundles":
