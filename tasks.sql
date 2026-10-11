@@ -112,7 +112,11 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
  we should also have quality control on the process of creating questions. the typical flow: go ahead, create questions. get human feedback, gather LLM feedback. watch out if question quality deteriorates when running a new batch, e.g. too many duplicates.
 
- once we have 5000 questions and a good reason to assume the quality is fine, we are done with this.', '2026-10-11T20:08:18Z', NULL);
+ once we have 5000 questions and a good reason to assume the quality is fine, we are done with this.
+
+ cf. those past plans for reference:
+
+ Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'tbd.', '2026-10-11T20:08:18Z', NULL);
 
