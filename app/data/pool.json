@@ -8241,6 +8241,35 @@
       "background": null
     },
     {
+      "id": "q-0297",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Navidad",
+      "bundle": "colombia",
+      "description": "Una fiesta tan buena que no cabe en una sola noche y hay que repetirla con natilla y buñuelos.",
+      "question": "¿Qué día empieza la Novena de Aguinaldos?",
+      "answer": "16 de diciembre",
+      "wrong_answers": [
+        "1 de diciembre",
+        "8 de diciembre",
+        "24 de diciembre"
+      ],
+      "hints": [
+        "Empieza unos días después del Día de las Velitas.",
+        "Termina el 24 de diciembre, en Nochebuena.",
+        "Cuenta nueve días hacia atrás desde Nochebuena, incluyéndola."
+      ],
+      "fun_fact": "La Novena de Aguinaldos la escribió un fraile hace unos 240 años, y se reza sobre todo en Colombia y Ecuador.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/D%C3%BClmen%2C_St.-Viktor-Kirche%2C_Innenansicht%2C_Krippe_--_2018_--_0614.jpg/3840px-D%C3%BClmen%2C_St.-Viktor-Kirche%2C_Innenansicht%2C_Krippe_--_2018_--_0614.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_St.-Viktor-Kirche%2C_Innenansicht%2C_Krippe_--_2018_--_0614.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0298",
       "status": "approved",
       "difficulty": 1,
@@ -12421,6 +12450,35 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/British-made_Antique_Rotary_Telephone.jpg/1920px-British-made_Antique_Rotary_Telephone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ABritish-made_Antique_Rotary_Telephone.jpg",
         "credit": "Amitbalani · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0443",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Inventores famosos",
+      "bundle": "base",
+      "description": "Tres inventos, un solo papá, y ninguno de los tres le ayudaba a hacer las tareas.",
+      "question": "Un bombillo que duraba muchas horas encendido, el fonógrafo (una máquina que grababa y reproducía sonido) y una de las primeras cámaras de cine: ¿qué inventor los desarrolló?",
+      "answer": "Thomas Edison",
+      "wrong_answers": [
+        "Nikola Tesla",
+        "Alexander Graham Bell",
+        "Benjamin Franklin"
+      ],
+      "hints": [
+        "Era de Estados Unidos y trabajaba con un gran equipo en su laboratorio.",
+        "A este inventor lo llamaban 'el mago de Menlo Park' y tenía más de mil patentes.",
+        "Su apellido empieza por E."
+      ],
+      "fun_fact": "Edison registró más de 1.000 patentes y de niño fue a la escuela solo unos pocos meses: lo demás lo aprendió con su mamá.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Pharmacy_Museum_Tarima_Company_Ma_abarot_Avney_Moreshet_6e5238a5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APharmacy_Museum_Tarima_Company_Ma_abarot_Avney_Moreshet_6e5238a5.jpg",
+        "credit": "Zeev Stein ( זאב שטיין) · CC BY 2.5 · Wikimedia Commons"
       },
       "background": null
     },
@@ -17255,6 +17313,35 @@
       "background": null
     },
     {
+      "id": "q-0614",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Árboles",
+      "bundle": "base",
+      "description": "Para quienes miran con lupa cuando deberían mirar con binoculares.",
+      "question": "Ana revisa cada coma de su informe y olvida la conclusión; Luis compara 30 tonos de pintura y no ve la gotera del techo. ¿Qué dicho los describe?",
+      "answer": "Los árboles no dejan ver el bosque",
+      "wrong_answers": [
+        "Árbol que nace torcido jamás su tronco endereza",
+        "Del árbol caído todos hacen leña",
+        "Quien a buen árbol se arrima, buena sombra lo cobija"
+      ],
+      "hints": [
+        "Se fijan tanto en los detalles que pierden algo importante.",
+        "Les falta mirar el panorama completo.",
+        "El dicho habla de muchos árboles juntos."
+      ],
+      "fun_fact": "En inglés existe un dicho casi igual: 'can't see the forest for the trees'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/CSIRO_ScienceImage_1853_Fabric_Swatches.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACSIRO_ScienceImage_1853_Fabric_Swatches.jpg",
+        "credit": "Textile and Fibre Technology, CSIRO · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0615",
       "status": "approved",
       "difficulty": 5,
@@ -21526,6 +21613,35 @@
       "background": null
     },
     {
+      "id": "q-0772",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "Islas",
+      "bundle": "base",
+      "description": "Una isla con nombre de trabalenguas, para los que traen diccionario y paciencia.",
+      "question": "Viajas a la Isla Sur de Nueva Zelanda y un guía maorí te dice que su nombre es Te Waipounamu. ¿Qué significa?",
+      "answer": "Aguas de la piedra verde",
+      "wrong_answers": [
+        "Tierra de la nube blanca",
+        "Montaña de fuego dormida",
+        "Aguas del pájaro gigante"
+      ],
+      "hints": [
+        "Los maoríes solían nombrar los lugares por lo que encontraban en ellos.",
+        "En maorí, 'wai' significa agua.",
+        "Es una piedra parecida al jade, que tallaban para hacer joyas."
+      ],
+      "fun_fact": "Aotearoa, el nombre maorí de todo el país, se suele traducir como 'tierra de la larga nube blanca'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/009_NZ_Southern_Alps_mountain_landscape_in_New_Zealand_seen_from_Gillespies_Beach%2C_West_Coast_-_sunset_light.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A009_NZ_Southern_Alps_mountain_landscape_in_New_Zealand_seen_from_Gillespies_Beach%2C_West_Coast_-_sunset_light.jpg",
+        "credit": "Marek Ślusarczyk (Tupungato) Photo portfolio · CC BY 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0773",
       "status": "approved",
       "difficulty": 14,
@@ -21787,6 +21903,35 @@
       "background": null
     },
     {
+      "id": "q-0784",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Juguetes",
+      "bundle": "base",
+      "description": "Juguetes que cobran vida cuando nadie los mira... y un colado que no debería estar en la fiesta.",
+      "question": "¿Cuál de estos personajes NO es un juguete de Toy Story?",
+      "answer": "Rayo McQueen",
+      "wrong_answers": [
+        "Rex",
+        "Woody",
+        "Buzz Lightyear"
+      ],
+      "hints": [
+        "Tres de ellos viven en el cuarto de Andy.",
+        "El intruso es un personaje de otra película de Pixar.",
+        "El intruso es un carro de carreras rojo."
+      ],
+      "fun_fact": "Rex es un tiranosaurio de juguete que sueña con dar miedo, pero es el más nervioso de todos los juguetes de Andy.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Looking_N_through_second_eldest_bedroom_-_vertical_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALooking_N_through_second_eldest_bedroom_-_vertical_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+        "credit": "Tim Evanson · CC BY-SA 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0786",
       "status": "approved",
       "difficulty": 6,
@@ -21812,6 +21957,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Children_reading_The_Grinch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_reading_The_Grinch.jpg",
         "credit": "scbailey · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0788",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Libros infantiles",
+      "bundle": "base",
+      "description": "Una palabra con una tilde escondida en la mitad, como sorpresa de huevo.",
+      "question": "Soy la palabra 'retahíla'. ¿Qué significo?",
+      "answer": "Una serie larga de cosas dichas una tras otra",
+      "wrong_answers": [
+        "Una canción suave para dormir a un bebé",
+        "Una frase difícil de pronunciar rápido",
+        "Una palabra que se lee igual al revés"
+      ],
+      "hints": [
+        "Los niños a veces la usan para escoger quién 'la lleva'.",
+        "Suena larguísima y encadenada.",
+        "'Me echó una ... de quejas': una tras otra, sin parar."
+      ],
+      "fun_fact": "Muchas retahílas infantiles sirven para echar suertes y escoger quién 'la lleva' en un juego.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Speelplaats_van_een_Rooms-Katholieke_school_-_Schoolyard_of_a_Roman_Catholic_school_%283915530371%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpeelplaats_van_een_Rooms-Katholieke_school_-_Schoolyard_of_a_Roman_Catholic_school_%283915530371%29.jpg",
+        "credit": "Wiel van der Randen · Public domain · Wikimedia Commons"
       },
       "background": null
     },
@@ -22860,6 +23034,35 @@
       "background": null
     },
     {
+      "id": "q-0829",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "Mitología nórdica",
+      "bundle": "base",
+      "description": "El despertador más dramático de la historia: no tiene botón de «cinco minutos más».",
+      "question": "Te despierta un gallo y recuerdas que, según el antiguo poema nórdico «Völuspá», el Ragnarök se anuncia con el canto de gallos, como Fjalar, el gallo de los gigantes. ¿Cuántos gallos cantan en total?",
+      "answer": "3",
+      "wrong_answers": [
+        "2",
+        "4",
+        "9"
+      ],
+      "hints": [
+        "Hay un gallo para distintos mundos.",
+        "Uno de ellos canta bajo tierra, en el reino de Hel.",
+        "Son tantos como los mosqueteros de Dumas."
+      ],
+      "fun_fact": "El gallo que despierta a los dioses se llama Gullinkambi, que significa «cresta de oro».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Junglefowl_on_tree.jpg/3840px-Junglefowl_on_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJunglefowl_on_tree.jpg",
+        "credit": "Philip Pikart · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0830",
       "status": "approved",
       "difficulty": 7,
@@ -23150,6 +23353,35 @@
       "background": null
     },
     {
+      "id": "q-0840",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Mundiales de fútbol",
+      "bundle": "base",
+      "description": "Un gol tan largo que empezó en un siglo y casi termina en otro.",
+      "question": "Este argentino marcó en el Mundial de 1986, contra Inglaterra, el gol que la FIFA eligió como el 'Gol del Siglo', tras driblar a medio equipo rival. ¿Quién es?",
+      "answer": "Diego Maradona",
+      "wrong_answers": [
+        "Lionel Messi",
+        "Pelé",
+        "Mario Kempes"
+      ],
+      "hints": [
+        "Llevaba la camiseta número 10 de Argentina.",
+        "En ese mismo partido marcó otro gol muy polémico con la mano.",
+        "Ese gol con la mano se conoce como 'la mano de Dios'."
+      ],
+      "fun_fact": "En el 'Gol del Siglo' Maradona recorrió unos 60 metros en unos 10 segundos y dejó atrás a cuatro jugadores ingleses y al arquero.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Maradona_scoring_england_1986.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaradona_scoring_england_1986.jpg",
+        "credit": "Dani Yako · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0841",
       "status": "approved",
       "difficulty": 9,
@@ -23353,6 +23585,35 @@
       "background": null
     },
     {
+      "id": "q-0848",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Mundiales de fútbol",
+      "bundle": "base",
+      "description": "Una copa dorada en la que nadie se atreve a servir chocolate.",
+      "question": "¿Quién se lleva este trofeo dorado?",
+      "answer": "La selección campeona del Mundial",
+      "wrong_answers": [
+        "El mejor arquero del Mundial",
+        "El equipo con más hinchas",
+        "El jugador que más goles hizo"
+      ],
+      "hints": [
+        "No es un premio para un solo jugador.",
+        "Solo un país lo puede levantar cada vez.",
+        "Se entrega al final del último partido del torneo."
+      ],
+      "fun_fact": "El trofeo es de oro de 18 quilates y pesa más de 6 kilos.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/FIFA_World_Cup_Trophy_%28Ank_Kumar%2C_Infosys_Limited%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFIFA_World_Cup_Trophy_%28Ank_Kumar%2C_Infosys_Limited%29_01.jpg",
+        "credit": "Ank Kumar · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0849",
       "status": "approved",
       "difficulty": 12,
@@ -23378,6 +23639,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sydney_Opera_House_-_Dec_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ASydney_Opera_House_-_Dec_2008.jpg",
         "credit": "Diliff · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0850",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Museos",
+      "bundle": "base",
+      "description": "Una bola que se pasa el día entero columpiándose y aun así trabaja más que tú.",
+      "question": "Estás en un museo de ciencias y ves una bola pesadísima colgada de un cable larguísimo. Con las horas, su vaivén va cambiando de dirección y tumba unos palitos puestos en círculo, igual que en la novela de Umberto Eco que lleva su nombre. ¿Qué demuestra este aparato?",
+      "answer": "Que la Tierra gira sobre sí misma",
+      "wrong_answers": [
+        "Que la Luna mueve las mareas",
+        "Que el aire tiene peso propio",
+        "Que la gravedad cambia de noche"
+      ],
+      "hints": [
+        "El que de verdad se mueve no es el aparato.",
+        "Su demostración más famosa se hizo colgándolo de la cúpula del Panteón de París.",
+        "Es el mismo movimiento que hace que tengamos día y noche."
+      ],
+      "fun_fact": "Léon Foucault lo presentó en 1851 y en el Panteón de París colgó una bola de 28 kilos de un cable de 67 metros.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Daqing_Science_and_Technology_Museum_main_building_interior_%283%29.jpg/3840px-Daqing_Science_and_Technology_Museum_main_building_interior_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADaqing_Science_and_Technology_Museum_main_building_interior_%283%29.jpg",
+        "credit": "Jason Zhang · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "background": null
     },
@@ -23436,6 +23726,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Sandro_Botticelli_046.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ASandro_Botticelli_046.jpg",
         "credit": "Sandro Botticelli · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0853",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Museos",
+      "bundle": "base",
+      "description": "La obra de arte más cara que alguna vez terminó como merienda.",
+      "question": "Adivina: 'Soy una fruta común y corriente, pero un artista me pegó a una pared con cinta gris y me llamó Comediante. Alguien pagó millones de dólares por mí… ¡y después me comió!' ¿Qué fruta soy?",
+      "answer": "Un banano",
+      "wrong_answers": [
+        "Una manzana",
+        "Una pera",
+        "Una naranja"
+      ],
+      "hints": [
+        "Por fuera soy amarilla.",
+        "Crezco en racimos en zonas tropicales.",
+        "Me pelan y tengo forma de media luna."
+      ],
+      "fun_fact": "En 2024 la obra se subastó por más de 6 millones de dólares, y el banano en sí había costado unos 35 centavos de dólar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Duct-tape.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADuct-tape.jpg",
+        "credit": "Evan-Amos · Public domain · Wikimedia Commons"
       },
       "background": null
     },
@@ -24136,6 +24455,35 @@
       "background": null
     },
     {
+      "id": "q-0879",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Piratas",
+      "bundle": "base",
+      "description": "Una pregunta enredada, pero con cuerda suficiente para salir de ella.",
+      "question": "Los barcos y los aviones hablan de \"nudos\". ¿Para qué sirve esa unidad?",
+      "answer": "Para medir la velocidad",
+      "wrong_answers": [
+        "Para medir la profundidad",
+        "Para medir el peso de la carga",
+        "Para medir la temperatura del agua"
+      ],
+      "hints": [
+        "Antes se medía con una cuerda llena de nudos y un reloj de arena.",
+        "Mientras más nudos se soltaban en ese tiempo, mejor iba el viaje.",
+        "Es como los kilómetros por hora de un carro."
+      ],
+      "fun_fact": "Un nudo equivale a una milla náutica por hora, unos 1,85 km/h.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Tall_Ship_at_Sea_off_Cabo_San_Lucas_-_panoramio.jpg/3840px-Tall_Ship_at_Sea_off_Cabo_San_Lucas_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATall_Ship_at_Sea_off_Cabo_San_Lucas_-_panoramio.jpg",
+        "credit": "Shane Smith · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0880",
       "status": "approved",
       "difficulty": 2,
@@ -24629,6 +24977,35 @@
       "background": null
     },
     {
+      "id": "q-0898",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Plantas",
+      "bundle": "base",
+      "description": "Un lugar tan frío y tan escondido que ni el domiciliario más valiente se atreve a llegar.",
+      "question": "Adivinanza: Vivo dentro de una montaña helada en una isla de Noruega, cerca del Polo Norte, y me llaman 'la bóveda del fin del mundo'. ¿Qué guardo?",
+      "answer": "Semillas de cultivos de todo el mundo",
+      "wrong_answers": [
+        "Muestras de ADN de animales en peligro",
+        "Lingotes de oro de reserva mundial",
+        "Vacunas para futuras pandemias"
+      ],
+      "hints": [
+        "Lo que guardo serviría para volver a empezar después de una gran catástrofe.",
+        "Casi todos los países del mundo me han mandado algo para guardar.",
+        "Si me abrieras encontrarías frijoles, arroz, maíz y trigo… pero sin cocinar y listos para sembrar."
+      ],
+      "fun_fact": "La bóveda está en Svalbard porque el frío del permafrost mantendría las semillas congeladas incluso si se fuera la luz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Snowy_mountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_mountains.jpg",
+        "credit": "Billy Lindblom · CC BY 2.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0899",
       "status": "approved",
       "difficulty": 10,
@@ -24857,6 +25234,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Selva_Amazonica_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ASelva_Amazonica_2023.jpg",
         "credit": "DMGonzalez2023 · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0909",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Pueblos indígenas del Amazonas",
+      "bundle": "base",
+      "description": "Un nombre que suena a trabalenguas de bebé, pero esconde una leyenda gigante.",
+      "question": "Según una famosa leyenda de la selva sudamericana, ¿qué es el Paititi?",
+      "answer": "Una ciudad perdida de los incas",
+      "wrong_answers": [
+        "Un galeón hundido con tesoros",
+        "Una mina secreta de esmeraldas",
+        "Una isla flotante de oro"
+      ],
+      "hints": [
+        "Se cuenta que estaría escondido en la selva entre Perú, Bolivia y Brasil.",
+        "Dicen que tenía calles, palacios y mucha gente viviendo allí.",
+        "Es un 'primo' de la leyenda de El Dorado."
+      ],
+      "fun_fact": "Según la leyenda, los incas habrían escondido allí sus tesoros para que no los encontraran los conquistadores.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Peruexpedition-_Djungel_och_berg-_DIG130747.tif/lossy-page1-1920px-Peruexpedition-_Djungel_och_berg-_DIG130747.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeruexpedition-_Djungel_och_berg-_DIG130747.tif",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons"
       },
       "background": null
     },
@@ -25963,6 +26369,35 @@
       "background": null
     },
     {
+      "id": "q-0952",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Gatos",
+      "bundle": "base",
+      "description": "Una palabra que suena a pelea de mascotas, pero es todavía peor.",
+      "question": "Es una palabra del diccionario que empieza con 'gat', pero no tiene nada que ver con animales. ¿Qué significa 'gatuperio'?",
+      "answer": "Un enredo o mezcla turbia",
+      "wrong_answers": [
+        "Un berrinche muy ruidoso",
+        "Un robo de poca monta",
+        "Una pelea a los gritos"
+      ],
+      "hints": [
+        "Nada bueno sale de un gatuperio.",
+        "En la cocina sería un revuelto de cosas que no combinan.",
+        "En política sería un chanchullo o una intriga."
+      ],
+      "fun_fact": "El diccionario de la RAE define 'gatuperio' como una mezcla de cosas que no combinan y también como un embrollo o intriga.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Library_Books_Bookshelves_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALibrary_Books_Bookshelves_%28Unsplash%29.jpg",
+        "credit": "Davide Cantelli cant89 · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-0953",
       "status": "approved",
       "difficulty": 6,
@@ -26481,6 +26916,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Gottschalk_dollhouse_and_dollhouse_miniatures%2C_2016_%28Brighton_Toy_and_Model_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AGottschalk_dollhouse_and_dollhouse_miniatures%2C_2016_%28Brighton_Toy_and_Model_Museum%29.jpg",
         "credit": "Nadege Gault · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0973",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Libros infantiles",
+      "bundle": "base",
+      "description": "Una torre de animales que ningún arquitecto aprobaría.",
+      "question": "En un álbum ilustrado muy famoso, una tortuga, un elefante, una jirafa, una cebra y hasta un ratón se suben unos encima de otros. ¿Qué querían probar todos?",
+      "answer": "La luna",
+      "wrong_answers": [
+        "Una nube",
+        "Una estrella",
+        "El arcoíris"
+      ],
+      "hints": [
+        "Lo que buscan está muy, muy alto.",
+        "Solo se ve bien de noche.",
+        "El título del libro pregunta a qué sabe."
+      ],
+      "fun_fact": "El libro lo escribió e ilustró el polaco Michael Grejniec, y al final un pez no entiende tanto esfuerzo, porque tiene otra luna a su lado, reflejada en el agua.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Elephant_and_Giraffe%2C_Etosha_National_Park%2C_Namibia_%283924545812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElephant_and_Giraffe%2C_Etosha_National_Park%2C_Namibia_%283924545812%29.jpg",
+        "credit": "Frank Vassen from Brussels, Belgium · CC BY 2.0 · Wikimedia Commons"
       },
       "background": null
     },
@@ -27678,6 +28142,35 @@
       }
     },
     {
+      "id": "q-1017",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Navidad",
+      "bundle": "base",
+      "description": "El único juego en el que te regalan medias y tienes que fingir que es lo que siempre soñaste.",
+      "question": "En España, el juego de sacar papelitos y dar un regalo sin revelar a quién te tocó no se llama 'amigo secreto'. ¿Cómo lo llaman allá?",
+      "answer": "Amigo invisible",
+      "wrong_answers": [
+        "Amigo fantasma",
+        "Amigo misterioso",
+        "Amigo escondido"
+      ],
+      "hints": [
+        "En España la palabra 'amigo' se queda; solo cambia el adjetivo.",
+        "Ese adjetivo no quiere decir que el amigo se esconda a propósito.",
+        "Así sería un superhéroe al que nadie logra ver."
+      ],
+      "fun_fact": "En los países de habla inglesa este juego se llama 'Secret Santa', o sea, 'Papá Noel secreto'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Christmas_presents_under_Christmas_tree_in_a_private_house_in_Brisbane%2C_2019.jpg/3840px-Christmas_presents_under_Christmas_tree_in_a_private_house_in_Brisbane%2C_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChristmas_presents_under_Christmas_tree_in_a_private_house_in_Brisbane%2C_2019.jpg",
+        "credit": "Chris Olszewski · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-1018",
       "status": "approved",
       "difficulty": 10,
@@ -28693,6 +29186,35 @@
       "background": null
     },
     {
+      "id": "q-1056",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Reciclaje",
+      "bundle": "base",
+      "description": "Un muchacho holandés que decidió que su tarea de vacaciones sería arreglar el planeta.",
+      "question": "Tres pistas sobre Boyan Slat: es holandés, a los 18 años dio una charla TEDx que se volvió viral, y en 2013 fundó una organización con su idea. ¿A qué se dedica esa organización?",
+      "answer": "A sacar el plástico de los océanos",
+      "wrong_answers": [
+        "A proteger a las ballenas de la caza",
+        "A desalinizar el agua del mar",
+        "A salvar los arrecifes de coral"
+      ],
+      "hints": [
+        "Tiene que ver con el agua.",
+        "La idea se le ocurrió buceando en unas vacaciones en Grecia.",
+        "Usa barreras flotantes gigantes en el mar."
+      ],
+      "fun_fact": "Boyan Slat tuvo su gran idea cuando todavía estaba en el colegio.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Delft%2C_straatzicht_de_Oude_Delft_vanaf_de_Bagijnhofbrug_foto6-_2016-03-13_12.08.JPG/3840px-Delft%2C_straatzicht_de_Oude_Delft_vanaf_de_Bagijnhofbrug_foto6-_2016-03-13_12.08.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADelft%2C_straatzicht_de_Oude_Delft_vanaf_de_Bagijnhofbrug_foto6-_2016-03-13_12.08.JPG",
+        "credit": "Michielverbeek · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-1057",
       "status": "approved",
       "difficulty": 7,
@@ -29443,6 +29965,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Clawfoot_bathtub.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AClawfoot_bathtub.jpg",
         "credit": "Yannick Trottier (ytrottier) · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1083",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Caballeros",
+      "bundle": "base",
+      "description": "Una cena de Navidad que se pone más incómoda que cuando el tío saca el tema de la política.",
+      "question": "En un poema medieval inglés, un caballero gigante y todo verde entra a una fiesta de Navidad y reta a la corte del rey. ¿A qué grupo de leyendas pertenece?",
+      "answer": "Las leyendas del rey Arturo",
+      "wrong_answers": [
+        "Las leyendas de Carlomagno",
+        "Las sagas de los vikingos",
+        "Los mitos de la antigua Grecia"
+      ],
+      "hints": [
+        "El rey de esta corte tiene un castillo muy famoso.",
+        "En esta corte también vivía un mago muy famoso.",
+        "Piensa en Camelot y la Mesa Redonda."
+      ],
+      "fun_fact": "El poema 'Sir Gawain y el Caballero Verde' lo escribió en el siglo XIV un autor del que ni siquiera se sabe el nombre.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/STIRLING_CASTLE_Great_Hall_interior_view.JPG/3840px-STIRLING_CASTLE_Great_Hall_interior_view.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASTIRLING_CASTLE_Great_Hall_interior_view.JPG",
+        "credit": "HARTLEPOOLMARINA2014 · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "background": null
     },
@@ -30491,6 +31042,35 @@
       "background": null
     },
     {
+      "id": "q-1122",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Cine",
+      "bundle": "base",
+      "description": "Dos estrellas de Hollywood que en esta película solo prestaron la voz, pero igual se robaron el show.",
+      "question": "En la saga de Shrek, Antonio Banderas y Salma Hayek ponen la voz a dos personajes que pelean con espadas y roban habichuelas mágicas. ¿Qué animales son?",
+      "answer": "Gatos",
+      "wrong_answers": [
+        "Burros",
+        "Zorros",
+        "Dragones"
+      ],
+      "hints": [
+        "Él apareció por primera vez en 'Shrek 2'.",
+        "En la película, ella es una ladrona experta que roba con mucho sigilo.",
+        "Él usa sombrero con pluma y unas botas muy elegantes."
+      ],
+      "fun_fact": "Salma Hayek nació en México y fue nominada al Óscar por interpretar a la pintora Frida Kahlo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/The_Boyd_Smith_Mother_Goose_%281920%29_%2814777067542%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Boyd_Smith_Mother_Goose_%281920%29_%2814777067542%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-1123",
       "status": "approved",
       "difficulty": 12,
@@ -31187,6 +31767,35 @@
       "background": null
     },
     {
+      "id": "q-1147",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Comida rápida",
+      "bundle": "base",
+      "description": "Un señor de traje blanco que se pasó la vida pensando en pollo.",
+      "question": "Adivina: llevo traje blanco, corbatín negro, gafas y barbita de chivo, y mi cara está en millones de baldes de pollo frito. Mi cadena lleva en su nombre un estado de Estados Unidos. ¿Cuál?",
+      "answer": "Kentucky",
+      "wrong_answers": [
+        "Texas",
+        "Florida",
+        "California"
+      ],
+      "hints": [
+        "La cadena se conoce por tres letras.",
+        "El estado es famoso por sus caballos de carreras y una carrera llamada el Derby.",
+        "KFC significa '… Fried Chicken'."
+      ],
+      "fun_fact": "Sanders no era militar: 'coronel' era un título honorífico que le dio el gobierno de Kentucky.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Fried_chicken_with_chips.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFried_chicken_with_chips.jpg",
+        "credit": "Jameswasswa · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-1148",
       "status": "approved",
       "difficulty": 9,
@@ -31386,6 +31995,35 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Zagreb_Bot_Gdn_Victoria_Amazonica_1055.jpg/3840px-Zagreb_Bot_Gdn_Victoria_Amazonica_1055.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AZagreb_Bot_Gdn_Victoria_Amazonica_1055.jpg",
         "credit": "ImagePerson · CC BY 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1156",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Ríos del mundo",
+      "bundle": "base",
+      "description": "Un dragón negro que separa a dos vecinos muy grandes.",
+      "question": "Tres pistas: forma gran parte de la frontera entre Rusia y China; en sus bosques vive el tigre siberiano; y en chino su nombre significa 'río del Dragón Negro'. ¿Qué río es?",
+      "answer": "El Amur",
+      "wrong_answers": [
+        "El Yangtsé",
+        "El Volga",
+        "El Mekong"
+      ],
+      "hints": [
+        "Está en el extremo oriental de Asia, donde los inviernos son helados.",
+        "El tigre más grande del mundo lleva a veces su nombre.",
+        "Su nombre suena casi como 'amor', pero con u en vez de o."
+      ],
+      "fun_fact": "En invierno el Amur se congela tanto que en algunos tramos se puede caminar sobre él.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Siberian_Tiger_enjoying_snow_69.jpg/3840px-Siberian_Tiger_enjoying_snow_69.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASiberian_Tiger_enjoying_snow_69.jpg",
+        "credit": "albinfo · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "background": null
     },
@@ -31941,6 +32579,35 @@
       "background": null
     },
     {
+      "id": "q-1177",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Tecnología",
+      "bundle": "base",
+      "description": "La carta más lenta del universo, enviada sin dirección y sin estampilla.",
+      "question": "Adivinanza: soy una sonda, salí de la Tierra en 1977, pasé junto a Júpiter y Saturno y ahora viajo más allá de los planetas. ¿Qué llevo a bordo por si me encuentran extraterrestres?",
+      "answer": "Un disco con sonidos y música de la Tierra",
+      "wrong_answers": [
+        "Una bandera de cada país del mundo",
+        "Semillas de plantas de la Tierra",
+        "Una carta escrita por niños del mundo"
+      ],
+      "hints": [
+        "Lo preparó un equipo dirigido por el astrónomo Carl Sagan.",
+        "Trae dibujadas unas instrucciones para saber cómo usarlo.",
+        "Es un disco dorado, como los discos de vinilo de los abuelos."
+      ],
+      "fun_fact": "El disco dorado de las Voyager trae saludos en 55 idiomas y hasta el canto de una ballena jorobada.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_from_Voyager_1.jpg/3840px-Jupiter_from_Voyager_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJupiter_from_Voyager_1.jpg",
+        "credit": "NASA, Caltech/JPL · Public domain · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
       "id": "q-1179",
       "status": "approved",
       "difficulty": 10,
@@ -31966,6 +32633,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Giralda_cath%C3%A9drale_tour_Seville_Espagne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AGiralda_cath%C3%A9drale_tour_Seville_Espagne.jpg",
         "credit": "Jebulon · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1180",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Trenes",
+      "bundle": "base",
+      "description": "El lugar donde la fila siempre es más larga justo cuando tienes afán.",
+      "question": "Vas al cine, al estadio y a la estación del tren, y en los tres lugares haces fila frente a una ventanilla para comprar tu boleto. ¿Cómo se llama esa ventanilla?",
+      "answer": "Taquilla",
+      "wrong_answers": [
+        "Recepción",
+        "Aduana",
+        "Bodega"
+      ],
+      "hints": [
+        "Allí se paga para poder entrar o viajar.",
+        "Suele ser una ventanilla con vidrio y un huequito para pasar la plata.",
+        "Rima con 'mantequilla'."
+      ],
+      "fun_fact": "Por la taquilla, a una película muy exitosa se le llama 'taquillera'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Crowd_in_Vernazza_train_station_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd_in_Vernazza_train_station_2.jpg",
+        "credit": "Tangopaso · Public domain · Wikimedia Commons"
       },
       "background": null
     },
@@ -32285,6 +32981,35 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Red_brick_wall_texture.JPG/3840px-Red_brick_wall_texture.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_brick_wall_texture.JPG",
         "credit": "M0tty · CC BY-SA 3.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1193",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Trucos",
+      "bundle": "base",
+      "description": "Una mezcla que no sabe si es líquida o sólida, igual que tú un lunes por la mañana.",
+      "question": "Esta mezcla de maicena y agua se pone dura si la golpeas o la aprietas, pero escurre como líquido si la dejas quieta. ¿Qué tipo de sustancia es?",
+      "answer": "Un fluido no newtoniano",
+      "wrong_answers": [
+        "Un fluido supercrítico",
+        "Un cristal líquido",
+        "Un plasma frío"
+      ],
+      "hints": [
+        "La salsa de tomate de botella y la arena movediza son de la misma familia.",
+        "Su 'espesor' cambia según la fuerza que le hagas.",
+        "No cumple las reglas de los fluidos que estudió el de la manzana."
+      ],
+      "fun_fact": "Hay personas que han corrido sobre una piscina llena de maicena con agua sin hundirse, siempre que no se detengan.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://live.staticflickr.com/3597/3457513001_79387b759a_b.jpg",
+        "source_url": "https://www.flickr.com/photos/66335021@N00/3457513001",
+        "credit": "somegeekintn · CC BY 2.0 · Flickr via Openverse"
       },
       "background": null
     },
@@ -32633,6 +33358,35 @@
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Gollum_s_journey_commences_by_Frederic_Bennett.jpg/3840px-Gollum_s_journey_commences_by_Frederic_Bennett.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AGollum_s_journey_commences_by_Frederic_Bennett.jpg",
         "credit": "Frédéric Bennett (Benef) · CC BY-SA 4.0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1207",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Villanos famosos",
+      "bundle": "base",
+      "description": "Una villana que nunca necesita bus porque corre más rápido que el bus.",
+      "question": "Estás jugando a emparejar héroes con sus enemigos. Completa: 'El Joker es a Batman como Cheetah es a…'.",
+      "answer": "La Mujer Maravilla",
+      "wrong_answers": [
+        "Flash",
+        "Aquaman",
+        "Supergirl"
+      ],
+      "hints": [
+        "Es una heroína de DC.",
+        "Viene de una isla donde solo viven amazonas.",
+        "Usa un lazo que obliga a decir la verdad."
+      ],
+      "fun_fact": "En 'Mujer Maravilla 1984', Cheetah es una gemóloga del Smithsonian llamada Barbara Minerva.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Savanna_at_the_Cincinnati_zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASavanna_at_the_Cincinnati_zoo.jpg",
+        "credit": "Mark Dumont · CC BY 2.0 · Wikimedia Commons"
       },
       "background": null
     },

@@ -15649,7 +15649,7 @@
     },
     {
       "id": "q-0250",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "Una serie de números tan famosa que aparece hasta en los girasoles.",
       "question": "¿Qué número sigue en la sucesión de Fibonacci: 1, 1, 2, 3, 5, 8...?",
@@ -15690,7 +15690,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "background": null,
       "bundle": "base",
       "concept": "Sucesión de Fibonacci",
@@ -18719,7 +18726,7 @@
     },
     {
       "id": "q-0297",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una fiesta tan buena que no cabe en una sola noche y hay que repetirla con natilla y buñuelos.",
       "question": "¿Qué día empieza la Novena de Aguinaldos?",
@@ -18739,9 +18746,9 @@
         "role": "illustrative",
         "query": "Christmas nativity scene",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_St.-Viktor-Kirche%2C_Innenansicht%2C_Krippe_--_2018_--_0614.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/D%C3%BClmen%2C_St.-Viktor-Kirche%2C_Innenansicht%2C_Krippe_--_2018_--_0614.jpg/3840px-D%C3%BClmen%2C_St.-Viktor-Kirche%2C_Innenansicht%2C_Krippe_--_2018_--_0614.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "La Novena de Aguinaldos la escribió un fraile hace unos 240 años, y se reza sobre todo en Colombia y Ecuador.",
       "subcategory": "Navidad",
@@ -18757,10 +18764,17 @@
         "difficulty_estimate": 2,
         "notes": "Colombian kids live the Novena every year, so this is easier than rated. Hint 2 ('ends on the 24th') together with the 'nine' in its name basically gives the answer at hint 2. The fun fact (Fray Larrea, around 1784) is fine."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-3",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "background": null,
       "bundle": "colombia",
       "concept": "Novena de Aguinaldos",
@@ -27508,7 +27522,7 @@
     },
     {
       "id": "q-0443",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Tres inventos, un solo papá, y ninguno de los tres le ayudaba a hacer las tareas.",
       "question": "Un bombillo que duraba muchas horas encendido, el fonógrafo (una máquina que grababa y reproducía sonido) y una de las primeras cámaras de cine: ¿qué inventor los desarrolló?",
@@ -27528,9 +27542,9 @@
         "role": "decorative",
         "query": "antique laboratory equipment",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APharmacy_Museum_Tarima_Company_Ma_abarot_Avney_Moreshet_6e5238a5.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Pharmacy_Museum_Tarima_Company_Ma_abarot_Avney_Moreshet_6e5238a5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Zeev Stein ( זאב שטיין) · CC BY 2.5 · Wikimedia Commons"
       },
       "fun_fact": "Edison registró más de 1.000 patentes y de niño fue a la escuela solo unos pocos meses: lo demás lo aprendió con su mamá.",
       "subcategory": "Inventores famosos",
@@ -27549,7 +27563,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-5",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "background": null,
       "bundle": "base",
       "concept": "Thomas Edison",
@@ -31960,7 +31981,7 @@
     },
     {
       "id": "q-0519",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 12,
       "description": "Un prócer que, en vez de estatua, se ganó miles de estudiantes con carné.",
       "question": "Llevo el nombre de un prócer que fue el primer presidente del Estado de Cundinamarca en 1811 y que estudió animales en la Expedición Botánica. Estoy en Bogotá y en mí estudian miles de jóvenes. ¿Qué soy?",
@@ -31980,9 +32001,9 @@
         "role": "decorative",
         "query": "La Candelaria Bogota street",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALascar_La_Candelaria_-_Downtown_Bogota_%284585116020%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Lascar_La_Candelaria_-_Downtown_Bogota_%284585116020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Jorge Láscar from Australia · CC BY 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Candelaria%2C_Bogot%C3%A1%2C_Colombia_-_panoramio_%2828%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/La_Candelaria%2C_Bogot%C3%A1%2C_Colombia_-_panoramio_%2828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Jimmy Gómez N · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "La universidad que lleva su nombre se fundó en Bogotá en 1954, casi 140 años después de su presidencia.",
       "subcategory": "Colombianos famosos",
@@ -32009,7 +32030,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-6",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "El fun fact está mal: de 1811 a 1954 hay 143 años, así que no son \"casi 140\" sino \"más de 140\". Además, la pregunta se resuelve sola: \"Llevo el nombre de un prócer\" y la pista 1 (\"el nombre completo de una persona\") descartan de una vez al Rosario, el Externado y la Javeriana, porque ninguno lleva el nombre de un prócer. Hay que cambiar los distractores por universidades que lleven nombre de persona (por ejemplo, la Universidad Antonio Nariño o la Universidad Francisco José de Caldas) y corregir el fun fact.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "colombia",
       "background": null,
       "revision": {
@@ -37998,7 +38026,7 @@
     },
     {
       "id": "q-0614",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 11,
       "description": "Para quienes miran con lupa cuando deberían mirar con binoculares.",
       "question": "Ana revisa cada coma de su informe y olvida la conclusión; Luis compara 30 tonos de pintura y no ve la gotera del techo. ¿Qué dicho los describe?",
@@ -38018,9 +38046,9 @@
         "role": "decorative",
         "query": "paint color swatches",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACSIRO_ScienceImage_1853_Fabric_Swatches.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/CSIRO_ScienceImage_1853_Fabric_Swatches.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Textile and Fibre Technology, CSIRO · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "En inglés existe un dicho casi igual: 'can't see the forest for the trees'.",
       "subcategory": "Árboles",
@@ -38047,7 +38075,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -47762,7 +47797,7 @@
     },
     {
       "id": "q-0768",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 12,
       "description": "Una letra que vale más que el resto del abecedario cuando vas a pagar en línea.",
       "question": "Soy la «s» que se agrega al final de «http» en algunas direcciones web. ¿Para qué sirvo?",
@@ -47811,7 +47846,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pista 1 («Tiene que ver con la seguridad, no con la velocidad») resuelve la pregunta: la única opción relacionada con la seguridad es la correcta, y además descarta una de las opciones falsas. La pista 1 tiene que ser vaga, por ejemplo sobre cuándo se nota (al pagar o al iniciar sesión), sin nombrar la seguridad.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -48011,7 +48053,7 @@
     },
     {
       "id": "q-0772",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 15,
       "description": "Una isla con nombre de trabalenguas, para los que traen diccionario y paciencia.",
       "question": "Viajas a la Isla Sur de Nueva Zelanda y un guía maorí te dice que su nombre es Te Waipounamu. ¿Qué significa?",
@@ -48031,9 +48073,9 @@
         "role": "illustrative",
         "query": "Southern Alps New Zealand",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMain_Divide_from_Yeats_Ridge_Hut%2C_West_Coast_Region%2C_New_Zealand.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Main_Divide_from_Yeats_Ridge_Hut%2C_West_Coast_Region%2C_New_Zealand.jpg/3840px-Main_Divide_from_Yeats_Ridge_Hut%2C_West_Coast_Region%2C_New_Zealand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Michal Klajban · CC BY-SA 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A009_NZ_Southern_Alps_mountain_landscape_in_New_Zealand_seen_from_Gillespies_Beach%2C_West_Coast_-_sunset_light.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/009_NZ_Southern_Alps_mountain_landscape_in_New_Zealand_seen_from_Gillespies_Beach%2C_West_Coast_-_sunset_light.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Marek Ślusarczyk (Tupungato) Photo portfolio · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Aotearoa, el nombre maorí de todo el país, se suele traducir como 'tierra de la larga nube blanca'.",
       "subcategory": "Islas",
@@ -48060,7 +48102,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -48712,7 +48761,7 @@
     },
     {
       "id": "q-0783",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "Una muñeca tan pequeña que viene con más envoltorio que muñeca.",
       "question": "Soy una muñeca LOL Surprise: vengo escondida en una bola con capas que se van abriendo una por una. Mis creadores se inspiraron en los videos de internet en los que alguien abre paquetes nuevos frente a la cámara. ¿Cómo se llaman esos videos?",
@@ -48730,7 +48779,7 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "child opening gift box",
+        "query": "wrapped gift boxes",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ALibrarian%27s_Room._South_wall_lunette_with_Pandora_opening_box._Library_of_Congress_Thomas_Jefferson_Building%2C_Washington%2C_D.C._LCCN2011647668.tif",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Librarian%27s_Room._South_wall_lunette_with_Pandora_opening_box._Library_of_Congress_Thomas_Jefferson_Building%2C_Washington%2C_D.C._LCCN2011647668.tif/lossy-page1-3840px-Librarian%27s_Room._South_wall_lunette_with_Pandora_opening_box._Library_of_Congress_Thomas_Jefferson_Building%2C_Washington%2C_D.C._LCCN2011647668.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -48761,7 +48810,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta es demasiado larga (unos 230 caracteres) y viene envuelta en un personaje (\"Soy una muñeca LOL Surprise…\"). Hay que dejar solo la pista y la pregunta, por ejemplo: \"Las muñecas LOL Surprise se inspiraron en videos de internet donde alguien abre paquetes nuevos. ¿Cómo se llaman?\". Además, ninguna imagen candidata sirve (la hoja muestra iglesias, un plato, un teatro y techos, no regalos envueltos), y no se puede buscar de nuevo. No se encontró una imagen adecuada para esta pregunta.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -48779,7 +48835,7 @@
     },
     {
       "id": "q-0784",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Juguetes que cobran vida cuando nadie los mira... y un colado que no debería estar en la fiesta.",
       "question": "¿Cuál de estos personajes NO es un juguete de Toy Story?",
@@ -48799,9 +48855,9 @@
         "role": "decorative",
         "query": "wooden toy chest",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALooking_N_through_second_eldest_bedroom_-_vertical_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Looking_N_through_second_eldest_bedroom_-_vertical_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Tim Evanson · CC BY-SA 2.0 · Wikimedia Commons"
       },
       "fun_fact": "Rex es un tiranosaurio de juguete que sueña con dar miedo, pero es el más nervioso de todos los juguetes de Andy.",
       "subcategory": "Juguetes",
@@ -48825,10 +48881,17 @@
         "difficulty_estimate": 2,
         "notes": "The description describes Rex, a wrong option, which effectively confirms Rex as a Toy Story toy and rules an option out. Easy and pleasant, but not surprising."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -48851,7 +48914,7 @@
     },
     {
       "id": "q-0785",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "Una figura con tantas caras que ni el más hipócrita le gana.",
       "question": "¿Cómo se llama la figura geométrica que tiene 20 caras, todas en forma de triángulo?",
@@ -48900,7 +48963,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -49056,7 +49126,7 @@
     },
     {
       "id": "q-0788",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una palabra con una tilde escondida en la mitad, como sorpresa de huevo.",
       "question": "Soy la palabra 'retahíla'. ¿Qué significo?",
@@ -49102,10 +49172,17 @@
         "difficulty_estimate": 9,
         "notes": "The correct option is noticeably longer and more definition-like than the distractors. The 'Pin, uno, pin dos' example is somewhat regional. This is a dry vocabulary question."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -50523,7 +50600,7 @@
     },
     {
       "id": "q-0811",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "La noche antes del examen, YouTube se convierte en tu profesor particular favorito.",
       "question": "Viendo un tutorial la noche antes del examen, el profe del video repite tres palabras: sustitución, igualación y reducción. ¿Qué tienen en común?",
@@ -50572,7 +50649,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta usa el formato retirado \"¿Qué tienen en común…?\" (sustitución, igualación y reducción). Habría que reescribirla en otro formato, por ejemplo \"¿Para qué sirven los métodos de sustitución, igualación y reducción?\".",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -51651,7 +51735,7 @@
     },
     {
       "id": "q-0829",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 15,
       "description": "El despertador más dramático de la historia: no tiene botón de «cinco minutos más».",
       "question": "Te despierta un gallo y recuerdas que, según el antiguo poema nórdico «Völuspá», el Ragnarök se anuncia con el canto de gallos, como Fjalar, el gallo de los gigantes. ¿Cuántos gallos cantan en total?",
@@ -51700,7 +51784,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -52338,7 +52429,7 @@
     },
     {
       "id": "q-0840",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un gol tan largo que empezó en un siglo y casi termina en otro.",
       "question": "Este argentino marcó en el Mundial de 1986, contra Inglaterra, el gol que la FIFA eligió como el 'Gol del Siglo', tras driblar a medio equipo rival. ¿Quién es?",
@@ -52358,8 +52449,8 @@
         "role": "essential",
         "query": "Diego Maradona 1986",
         "note": "Clear photo of Diego Maradona as a player, ideally in the Argentina shirt; no caption with his name.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaradona_belgium_1986.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Maradona_belgium_1986.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaradona_scoring_england_1986.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Maradona_scoring_england_1986.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Dani Yako · Public domain · Wikimedia Commons"
       },
       "fun_fact": "En el 'Gol del Siglo' Maradona recorrió unos 60 metros en unos 10 segundos y dejó atrás a cuatro jugadores ingleses y al arquero.",
@@ -52387,7 +52478,14 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -52835,7 +52933,7 @@
     },
     {
       "id": "q-0848",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una copa dorada en la que nadie se atreve a servir chocolate.",
       "question": "¿Quién se lleva este trofeo dorado?",
@@ -52884,7 +52982,14 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -52960,7 +53065,7 @@
     },
     {
       "id": "q-0850",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 12,
       "description": "Una bola que se pasa el día entero columpiándose y aun así trabaja más que tú.",
       "question": "Estás en un museo de ciencias y ves una bola pesadísima colgada de un cable larguísimo. Con las horas, su vaivén va cambiando de dirección y tumba unos palitos puestos en círculo, igual que en la novela de Umberto Eco que lleva su nombre. ¿Qué demuestra este aparato?",
@@ -53009,7 +53114,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -53151,7 +53263,7 @@
     },
     {
       "id": "q-0853",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "La obra de arte más cara que alguna vez terminó como merienda.",
       "question": "Adivina: 'Soy una fruta común y corriente, pero un artista me pegó a una pared con cinta gris y me llamó Comediante. Alguien pagó millones de dólares por mí… ¡y después me comió!' ¿Qué fruta soy?",
@@ -53200,7 +53312,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -54403,7 +54522,7 @@
     },
     {
       "id": "q-0873",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "La fruta más peligrosa de la isla, y no por resbalosa.",
       "question": "Estás jugando Fortnite y ves un plátano gigante con piernas que baila y carga armas. ¿Cómo se llama ese personaje?",
@@ -54421,7 +54540,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "fortnite peely",
+        "query": "ripe banana bunch",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ABunch_of_bananas_on_sale.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bunch_of_bananas_on_sale.jpg/3840px-Bunch_of_bananas_on_sale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -54449,10 +54568,17 @@
         "difficulty_estimate": 4,
         "notes": "Good distractors (other real Fortnite skins). I'm not fully sure about the fun fact that there is an 'overripe, brown-spotted' Peely variant. Hint 2 ('pelar') helps anyone who knows English."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "El texto de la pregunta está bien, pero ninguna imagen del sheet muestra bananos: hay una mariposa, una choza, un edificio, dos lagos y una señal de carretera. Hay que buscar de nuevo la imagen ilustrativa con algo como \"ripe banana bunch\" y revisar por qué el sheet no coincide con los candidatos. No se encontró una imagen adecuada para esta pregunta.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -54776,7 +54902,7 @@
     },
     {
       "id": "q-0879",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una pregunta enredada, pero con cuerda suficiente para salir de ella.",
       "question": "Los barcos y los aviones hablan de \"nudos\". ¿Para qué sirve esa unidad?",
@@ -54796,9 +54922,9 @@
         "role": "illustrative",
         "query": "tall ship at sea",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATall_Ship_at_Sea_off_Cabo_San_Lucas_-_panoramio.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Tall_Ship_at_Sea_off_Cabo_San_Lucas_-_panoramio.jpg/3840px-Tall_Ship_at_Sea_off_Cabo_San_Lucas_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shane Smith · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Un nudo equivale a una milla náutica por hora, unos 1,85 km/h.",
       "subcategory": "Piratas",
@@ -54825,7 +54951,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -55997,7 +56130,7 @@
     },
     {
       "id": "q-0898",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 11,
       "description": "Un lugar tan frío y tan escondido que ni el domiciliario más valiente se atreve a llegar.",
       "question": "Adivinanza: Vivo dentro de una montaña helada en una isla de Noruega, cerca del Polo Norte, y me llaman 'la bóveda del fin del mundo'. ¿Qué guardo?",
@@ -56046,7 +56179,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -56699,7 +56839,7 @@
     },
     {
       "id": "q-0909",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un nombre que suena a trabalenguas de bebé, pero esconde una leyenda gigante.",
       "question": "Según una famosa leyenda de la selva sudamericana, ¿qué es el Paititi?",
@@ -56745,10 +56885,17 @@
         "difficulty_estimate": 12,
         "notes": "The answer is noticeably longer and more specific than the distractors, so it stands out. Hint 1 (hidden somewhere) and the description (explorers searching) hint at a lost place. Peru/Bolivia legend, so only loosely Colombian Amazon."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -56773,7 +56920,7 @@
     },
     {
       "id": "q-0910",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 13,
       "description": "Unas figuras que llevan miles de años en la piedra… y en el diccionario.",
       "question": "En un río amazónico, el guía llama 'petroglifos' a unas rocas con figuras antiguas. ¿Qué significa la raíz griega 'glifo', la misma de 'jeroglífico'?",
@@ -56822,7 +56969,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta mete una historia inventada (\"el guía llama 'petroglifos'…\"), y eso va contra el estilo de la casa. Hay que dejar solo la pista y la pregunta, por ejemplo: \"En la Amazonía hay 'petroglifos', rocas con figuras antiguas. ¿Qué significa la raíz griega 'glifo', la misma de 'jeroglífico'?\". Además, el dato curioso usa Chiribiquete, cuyas figuras son sobre todo pinturas y no grabados, así que conviene cambiarlo por un sitio con petroglifos de verdad.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -58730,7 +58884,7 @@
     },
     {
       "id": "q-0941",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 8,
       "description": "Un lugar tan oscuro que ni con la linterna del celular encuentras la salida.",
       "question": "Estás de visita en la Cueva del Guácharo, oscura como boca de lobo. ¿Qué tienen en común el guácharo que vive allí, el murciélago y el delfín?",
@@ -58779,7 +58933,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta usa el formato retirado «¿Qué tienen en común…?» (guácharo, murciélago y delfín), así que hay que reemplazarla por otra pregunta. Además, el inicio «Estás de visita en la Cueva del Guácharo…» es una historia de relleno que no aporta ninguna pista.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -59413,7 +59574,7 @@
     },
     {
       "id": "q-0952",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una palabra que suena a pelea de mascotas, pero es todavía peor.",
       "question": "Es una palabra del diccionario que empieza con 'gat', pero no tiene nada que ver con animales. ¿Qué significa 'gatuperio'?",
@@ -59433,9 +59594,9 @@
         "role": "decorative",
         "query": "old library bookshelves",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALibrary_Books_Bookshelves_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Library_Books_Bookshelves_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Davide Cantelli cant89 · CC0 · Wikimedia Commons"
       },
       "fun_fact": "El diccionario de la RAE define 'gatuperio' como una mezcla de cosas que no combinan y también como un embrollo o intriga.",
       "subcategory": "Gatos",
@@ -59462,7 +59623,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -60488,7 +60656,7 @@
     },
     {
       "id": "q-0969",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "Tres destinos con playa, mucho calor y un pasado que llegó en barco desde Europa.",
       "question": "Revisas el álbum de viajes de tu abuela: fotos de Hong Kong, Singapur y Jamaica. Además de tener costa y puertos famosos, ¿qué tienen en común en su historia?",
@@ -60508,9 +60676,9 @@
         "role": "illustrative",
         "query": "Victoria Harbour skyline night",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AInternational_Commerce_Centre_on_Victoria_Harbour.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/International_Commerce_Centre_on_Victoria_Harbour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Wilfredor · CC0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHong_Kong_Harbour_Night_2019-06-11.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Hong_Kong_Harbour_Night_2019-06-11.jpg/3840px-Hong_Kong_Harbour_Night_2019-06-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Benh LIEU SONG (Flickr) · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "Hong Kong volvió a manos de China en 1997, después de más de 150 años bajo gobierno británico.",
       "subcategory": "Islas",
@@ -60537,7 +60705,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta usa el formato retirado de «¿qué tienen en común…?» (Hong Kong, Singapur y Jamaica) y además va envuelta en una historia inventada (el álbum de la abuela). Hay que reemplazarla por una pregunta nueva, por ejemplo sobre un solo lugar: «¿Qué país gobernó Hong Kong hasta 1997?».",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -60741,7 +60916,7 @@
     },
     {
       "id": "q-0973",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una torre de animales que ningún arquitecto aprobaría.",
       "question": "En un álbum ilustrado muy famoso, una tortuga, un elefante, una jirafa, una cebra y hasta un ratón se suben unos encima de otros. ¿Qué querían probar todos?",
@@ -60761,9 +60936,9 @@
         "role": "decorative",
         "query": "giraffe and elephant",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAfrican_bush_elephant_and_Giraffe_%2837485520280%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/African_bush_elephant_and_Giraffe_%2837485520280%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Sonse · CC BY 2.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElephant_and_Giraffe%2C_Etosha_National_Park%2C_Namibia_%283924545812%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Elephant_and_Giraffe%2C_Etosha_National_Park%2C_Namibia_%283924545812%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Frank Vassen from Brussels, Belgium · CC BY 2.0 · Wikimedia Commons"
       },
       "fun_fact": "El libro lo escribió e ilustró el polaco Michael Grejniec, y al final un pez no entiende tanto esfuerzo, porque tiene otra luna a su lado, reflejada en el agua.",
       "subcategory": "Libros infantiles",
@@ -60790,7 +60965,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -63496,7 +63678,7 @@
     },
     {
       "id": "q-1017",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "El único juego en el que te regalan medias y tienes que fingir que es lo que siempre soñaste.",
       "question": "En España, el juego de sacar papelitos y dar un regalo sin revelar a quién te tocó no se llama 'amigo secreto'. ¿Cómo lo llaman allá?",
@@ -63516,9 +63698,9 @@
         "role": "illustrative",
         "query": "Christmas presents under tree",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChristmas_presents_under_Christmas_tree_in_a_private_house_in_Brisbane%2C_2019.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Christmas_presents_under_Christmas_tree_in_a_private_house_in_Brisbane%2C_2019.jpg/3840px-Christmas_presents_under_Christmas_tree_in_a_private_house_in_Brisbane%2C_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Chris Olszewski · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "En los países de habla inglesa este juego se llama 'Secret Santa', o sea, 'Papá Noel secreto'.",
       "subcategory": "Navidad",
@@ -63545,7 +63727,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -65943,7 +66132,7 @@
     },
     {
       "id": "q-1056",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 10,
       "description": "Un muchacho holandés que decidió que su tarea de vacaciones sería arreglar el planeta.",
       "question": "Tres pistas sobre Boyan Slat: es holandés, a los 18 años dio una charla TEDx que se volvió viral, y en 2013 fundó una organización con su idea. ¿A qué se dedica esa organización?",
@@ -65992,7 +66181,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -67637,7 +67833,7 @@
     },
     {
       "id": "q-1083",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una cena de Navidad que se pone más incómoda que cuando el tío saca el tema de la política.",
       "question": "En un poema medieval inglés, un caballero gigante y todo verde entra a una fiesta de Navidad y reta a la corte del rey. ¿A qué grupo de leyendas pertenece?",
@@ -67657,9 +67853,9 @@
         "role": "decorative",
         "query": "castle great hall interior",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASTIRLING_CASTLE_Great_Hall_interior_view.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/STIRLING_CASTLE_Great_Hall_interior_view.JPG/3840px-STIRLING_CASTLE_Great_Hall_interior_view.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "HARTLEPOOLMARINA2014 · CC BY-SA 4.0 · Wikimedia Commons"
       },
       "fun_fact": "El poema 'Sir Gawain y el Caballero Verde' lo escribió en el siglo XIV un autor del que ni siquiera se sabe el nombre.",
       "subcategory": "Caballeros",
@@ -67686,7 +67882,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -68513,7 +68716,7 @@
     },
     {
       "id": "q-1097",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 6,
       "description": "Una prima que no ha probado una hamburguesa en su vida, y aun así nadie le gana una carrera.",
       "question": "Tu prima no come carne, pero con fríjoles, lentejas y garbanzos consigue el nutriente clave que da la carne. ¿Cuál es?",
@@ -68533,9 +68736,9 @@
         "role": "illustrative",
         "query": "dried lentils chickpeas beans",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACSIRO_ScienceImage_3224_Pulses_and_legumes.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/CSIRO_ScienceImage_3224_Pulses_and_legumes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "division, CSIRO · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "Combinar arroz con fríjoles da una proteína más completa que comer cada uno por separado.",
       "subcategory": "Verduras",
@@ -68562,7 +68765,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta está envuelta en una historia inventada (\"Tu prima no come carne…\"), y eso va contra el estilo de la casa. Hay que dejar solo la pista y la pregunta, por ejemplo: \"Los fríjoles, las lentejas y los garbanzos aportan el mismo nutriente clave que da la carne. ¿Cuál es?\". La descripción también habla de la prima y habría que cambiarla para que no dependa de ese personaje.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -68909,7 +69119,7 @@
     },
     {
       "id": "q-1103",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 9,
       "description": "Tres villanos que jamás se han visto en persona, pero tienen exactamente la misma costumbre.",
       "question": "Tu papá dice que el Dr. Claw del 'Inspector Gadget', Blofeld de James Bond y el Doctor Maligno de 'Austin Powers' son del mismo club. ¿Qué tienen en común?",
@@ -68929,9 +69139,9 @@
         "role": "decorative",
         "query": "dark leather armchair",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal_Opulence_The_Great_Hall_of_Pena_Palace_in_Sintra_%2854937254065%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Royal_Opulence_The_Great_Hall_of_Pena_Palace_in_Sintra_%2854937254065%29.jpg/3840px-Royal_Opulence_The_Great_Hall_of_Pena_Palace_in_Sintra_%2854937254065%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Dale Cruse - 10M views from San Francisco, CA, USA · CC BY 4.0 · Wikimedia Commons"
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADot_%28181845429%29.jpeg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Dot_%28181845429%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Weston Woodbury · CC BY 3.0 · Wikimedia Commons"
       },
       "fun_fact": "En 'Inspector Gadget' nunca se le ve la cara al Dr. Claw: solo su mano con guante metálico y su gato.",
       "subcategory": "Villanos famosos",
@@ -68958,7 +69168,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta es del tipo \"¿qué tienen en común…?\", un estilo que ya no usamos; además viene envuelta en una historia inventada (\"Tu papá dice…\"). Hay que reemplazarla por otra pregunta sobre villanos famosos.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -70099,7 +70316,7 @@
     },
     {
       "id": "q-1122",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 3,
       "description": "Dos estrellas de Hollywood que en esta película solo prestaron la voz, pero igual se robaron el show.",
       "question": "En la saga de Shrek, Antonio Banderas y Salma Hayek ponen la voz a dos personajes que pelean con espadas y roban habichuelas mágicas. ¿Qué animales son?",
@@ -70148,7 +70365,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -71655,7 +71879,7 @@
     },
     {
       "id": "q-1147",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un señor de traje blanco que se pasó la vida pensando en pollo.",
       "question": "Adivina: llevo traje blanco, corbatín negro, gafas y barbita de chivo, y mi cara está en millones de baldes de pollo frito. Mi cadena lleva en su nombre un estado de Estados Unidos. ¿Cuál?",
@@ -71704,7 +71928,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -72170,7 +72401,7 @@
     },
     {
       "id": "q-1155",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 12,
       "description": "Un museo donde todo echa humo, menos el guía.",
       "question": "En un museo ves tres vitrinas: una sobre Mickey Mouse en su famoso corto de 1928, otra sobre el escritor Mark Twain y otra sobre el inventor Robert Fulton. ¿Qué tienen en común?",
@@ -72219,7 +72450,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta es del tipo \"¿qué tienen en común…?\", un estilo que ya no usamos. Además viene envuelta en una historia inventada (\"En un museo ves tres vitrinas…\"). Hay que reemplazarla por otra pregunta.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -72237,7 +72475,7 @@
     },
     {
       "id": "q-1156",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un dragón negro que separa a dos vecinos muy grandes.",
       "question": "Tres pistas: forma gran parte de la frontera entre Rusia y China; en sus bosques vive el tigre siberiano; y en chino su nombre significa 'río del Dragón Negro'. ¿Qué río es?",
@@ -72286,7 +72524,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -72552,7 +72797,7 @@
     },
     {
       "id": "q-1161",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "El único empleado de la casa que nunca se queja de barrer, pero sí se queda atascado debajo del sofá.",
       "question": "Tu abuela dice que la aspiradora robot Roomba, ese disco que barre solo, es un invento «de toda la vida». ¿En qué década empezó a venderse?",
@@ -72601,7 +72846,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta está envuelta en una historia inventada («Tu abuela dice que… es un invento de toda la vida»), y eso va contra el estilo de la casa. Hay que dejar solo la pista y la pregunta, por ejemplo: «La aspiradora robot Roomba, ese disco que barre solo, ¿en qué década empezó a venderse?»",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -73556,7 +73808,7 @@
     },
     {
       "id": "q-1177",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 9,
       "description": "La carta más lenta del universo, enviada sin dirección y sin estampilla.",
       "question": "Adivinanza: soy una sonda, salí de la Tierra en 1977, pasé junto a Júpiter y Saturno y ahora viajo más allá de los planetas. ¿Qué llevo a bordo por si me encuentran extraterrestres?",
@@ -73605,7 +73857,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -73623,7 +73882,7 @@
     },
     {
       "id": "q-1178",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 9,
       "description": "Un metro que tiene más estilo para rodar que tú para caminar.",
       "question": "Nací en 1969 bajo una ciudad gigante que antes fue un lago azteca, y cada una de mis estaciones tiene su propio dibujito. Soy el metro de Ciudad de México: ¿sobre qué ruedan los trenes en la mayoría de mis líneas?",
@@ -73669,10 +73928,17 @@
         "difficulty_estimate": 8,
         "notes": "The facts are right: 10 of 12 lines run on rubber tyres (Line A and Line 12 don't), it opened in 1969 and the pictograms are by Lance Wyman. The obvious real alternative, ordinary steel wheels, is missing from the options. That leaves wooden wheels, an air cushion and magnets, so the one realistic option stands out. This is niche knowledge, so difficulty 7 is a bit low. Hint 1 almost gives it away."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pista 1 es falsa: el metro con llantas de caucho tiene unos 70-75 años (París lo probó hacia 1951 y la Línea 11 abrió en 1956), no más de cien; hay que cambiarla a 'más de setenta años'. Además la pregunta es larga y está envuelta en un relato en primera persona ('Nací en 1969…'). Hay que dejarla en algo como '¿Sobre qué ruedan los trenes en la mayoría de las líneas del metro de Ciudad de México?'. Verificación de datos: wrong. The answer (rubber tires on most lines), the 1969 opening, the lake-bed location, the pictograms and the Paris origin are all correct. The first hint is false: it says rubber-tyred metro tech has been used for 'more than a hundred years'. Paris first tested rubber-tyred metro trains around 1951, and Line 11 opened in 1956, so it is about 70 to 75 years old.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "difficulty_original": 7,
@@ -73759,7 +74025,7 @@
     },
     {
       "id": "q-1180",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 4,
       "description": "El lugar donde la fila siempre es más larga justo cuando tienes afán.",
       "question": "Vas al cine, al estadio y a la estación del tren, y en los tres lugares haces fila frente a una ventanilla para comprar tu boleto. ¿Cómo se llama esa ventanilla?",
@@ -73805,10 +74071,17 @@
         "difficulty_estimate": 4,
         "notes": "'Boletería' is common in Colombia and would also be correct, but it isn't among the options. Hint 2 ('…era') nearly gives the answer, and the fun fact repeats hint 2. It's a dry vocabulary question."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -74577,7 +74850,7 @@
     },
     {
       "id": "q-1193",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una mezcla que no sabe si es líquida o sólida, igual que tú un lunes por la mañana.",
       "question": "Esta mezcla de maicena y agua se pone dura si la golpeas o la aprietas, pero escurre como líquido si la dejas quieta. ¿Qué tipo de sustancia es?",
@@ -74626,7 +74899,14 @@
       "fact_checked": true,
       "needs_media": true,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -74954,7 +75234,7 @@
     },
     {
       "id": "q-1199",
-      "status": "draft",
+      "status": "needs_work",
       "difficulty": 8,
       "description": "Un bicho chiquito que se toma el jugo de tus plantas sin pedir permiso.",
       "question": "Adivinanza: 'Soy un insecto chiquito, casi siempre verde, y chupo la savia de tus lechugas y tus rosas. Pero si en tu huerta sueltan muchos de cierto insecto, que si lo molestas suelta un juguito amarillo por las patas, desaparezco rapidito'. ¿Qué insectos son esos?",
@@ -75003,7 +75283,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "needs_work",
+        "feedback": "La pregunta es demasiado larga para leerla en voz alta (unos 290 caracteres). Hay que recortar la adivinanza a la pista clave: un insecto cazador de pulgones que suelta un líquido amarillo por las patas cuando lo molestan. Los datos están bien y la foto 1 (pulgones en un tallo de rosal) sirve.",
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
@@ -75477,7 +75764,7 @@
     },
     {
       "id": "q-1207",
-      "status": "draft",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una villana que nunca necesita bus porque corre más rápido que el bus.",
       "question": "Estás jugando a emparejar héroes con sus enemigos. Completa: 'El Joker es a Batman como Cheetah es a…'.",
@@ -75526,7 +75813,14 @@
       "fact_checked": true,
       "needs_media": false,
       "batch": "batch-7",
-      "review": null,
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-10",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
       "bundle": "base",
       "background": null,
       "revision": {
