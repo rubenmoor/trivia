@@ -14,6 +14,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
+    qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--subcategories]
     qgen validate
@@ -1198,8 +1199,15 @@ REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "fix", "
 
 
 def batch_questions(run, statuses=("draft",)):
-    """The pool's questions of this run that are still waiting for the given steps."""
-    return [q for q in load_json(POOL)["questions"] if q.get("batch") == run and q["status"] in statuses]
+    """The pool's questions of this run that are still waiting for the given steps.
+    A `qgen rework` run's questions are the ids in its run.json (QG-23)."""
+    ids = set((load_json(WORK / run / "run.json", {}) or {}).get("ids") or [])
+    return [q for q in load_json(POOL)["questions"]
+            if (q["id"] in ids if ids else q.get("batch") == run) and q["status"] in statuses]
+
+
+def is_rework(run):
+    return (load_json(WORK / run / "run.json", {}) or {}).get("mode") == "rework"
 
 
 def update_pool(changes):
@@ -1294,12 +1302,13 @@ def cmd_review(args):
     ratings, checks = collect(d)
     pool = load_json(POOL)["questions"]
     system = prompt("house-style", "review")
+    rework = is_rework(args.run)
     todo = []
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
         if args.round == 1 and "round1" not in r:
             todo.append((q, r))
-        if args.round == 2 and (r.get("researched") or fixed(r)) and "round2" not in r:
+        if args.round == 2 and (r.get("researched") or fixed(r) and not rework) and "round2" not in r:
             todo.append((q, r))
 
     def work(item):
@@ -1315,7 +1324,7 @@ def cmd_review(args):
             "media": slot_input(d, q, "media"),
             "background": slot_input(d, q, "background") if q.get("background") else None,
             "can_search_again": args.round == 1,
-            "can_fix": args.round == 1,
+            "can_fix": args.round == 1 and not rework,
         }
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
@@ -1343,68 +1352,110 @@ _pool_lock = threading.Lock()
 def cmd_fix(args):
     """One revision for every question that round 1 sent back with a fixable problem (QG-22): the
     reviewer's `fix` goes to the revise prompt. Changed facts are checked again; round 2 reviews it.
-    Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the gamemaster."""
+    Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the gamemaster.
+    In a `qgen rework` run (QG-23) the issue is the needs_work feedback; kept and revised questions
+    go back to draft, are all fact-checked and reviewed again, with a new media search if needed."""
     d = run_dir(args)
+    rework = is_rework(args.run)
     tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
     _, checks = collect(d)
     system = prompt("house-style", "revise")
     today = datetime.date.today().isoformat()
     revise, recheck = [], []
-    for q in batch_questions(args.run):
+    for q in batch_questions(args.run, ("draft", "needs_work")):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
-        r1 = r.get("round1") or {}
-        if "fix" not in r and r1.get("decision") == "needs_work" and r1.get("fix", "").strip():
-            revise.append((q, path, r))
-        elif fixed(r) and set(FACT_FIELDS) & set(r["fix"]["changed"]) and "factcheck" not in r["fix"]:
+        fix = r.get("fix")
+        if fix is None and (issue := fix_issue(q, r, rework)):
+            revise.append((q, path, r, issue))
+        elif fix and "factcheck" not in fix and needs_recheck(fix, rework):
             recheck.append((q, path, r))
 
-    def work(item):
-        q, path, r = item
-        issues = [f"final reviewer: {r['round1']['fix'].strip()}"]
-        c = checks.get(tmp_of.get(q["id"]))
-        if c and c["verdict"] != "confirmed":
-            issues.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
-        it = {**for_review({**q, "tmp_id": q["id"]}), "background_query": (q.get("background") or {}).get("query", ""),
-              "needs_media": q.get("needs_media", False), "issues": issues}
-        out = claude(system, "## Questions with issues\n" + json.dumps([it], ensure_ascii=False), REVISE_SCHEMA,
+    def work(group):
+        items = []
+        for q, _, _, issue in group:
+            issues = [issue]
+            c = checks.get(tmp_of.get(q["id"]))
+            if c and c["verdict"] != "confirmed":
+                issues.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
+            items.append({**for_review({**q, "tmp_id": q["id"]}), "issues": issues,
+                          "background_query": (q.get("background") or {}).get("query", ""),
+                          "needs_media": q.get("needs_media", False)})
+        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
                      args.model, d)
-        rev = next((x for x in out["results"] if x["id"] == q["id"]), None)
-        if rev is None:
-            raise RuntimeError(f"no fix result for {q['id']}")
-        fix = {"action": rev["action"], "reason": rev["reason"]}
-        if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
-            fix["action"], fix["reason"] = "malformed", "; ".join(bad)
-        if fix["action"] == "revise":
-            with _pool_lock:
-                changed = []
-                update_pool({q["id"]: lambda x: changed.extend(revise_in_pool(x, rev["question"], rev["reason"], today))})
-            fix["changed"] = sorted(changed)
-            for slot in ("media", "background"):
-                if slot in changed:
-                    sheet_path(d, q["id"], slot).unlink(missing_ok=True)
-            if set(FACT_FIELDS) & set(changed):
+        got = {x["id"]: x for x in out["results"]}
+        for q, path, r, _ in group:
+            rev = got.get(q["id"])
+            if rev is None:
+                continue
+            fix = {"action": rev["action"], "reason": rev["reason"]}
+            if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
+                fix["action"], fix["reason"] = "malformed", "; ".join(bad)
+            changed = []
+            if fix["action"] == "revise" or (rework and fix["action"] == "keep"):
+                def change(x, rev=rev, fix=fix):
+                    if fix["action"] == "revise":
+                        changed.extend(revise_in_pool(x, rev["question"], rev["reason"], today))
+                    if rework:
+                        x["status"], x["review"] = "draft", None
+                with _pool_lock:
+                    update_pool({q["id"]: change})
+            if fix["action"] == "revise":
+                fix["changed"] = sorted(changed)
+                for slot in ("media", "background"):
+                    if slot in changed:
+                        sheet_path(d, q["id"], slot).unlink(missing_ok=True)
+            r["fix"] = fix
+            save_json(path, r)
+            if needs_recheck(fix, rework):
                 recheck.append((q, path, r))
-        r["fix"] = fix
-        save_json(path, r)
-        progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
+            progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
+        missing = [q["id"] for q, *_ in group if q["id"] not in got]
+        if missing:
+            raise RuntimeError(f"no fix result for {', '.join(missing)}")
 
-    def check(item):
-        q, path, r = item
-        q = next(x for x in load_json(POOL)["questions"] if x["id"] == q["id"])
-        user = "## Questions (Spanish)\n" + json.dumps([for_review({**q, "tmp_id": q["id"]})], ensure_ascii=False)
+    def check(group):
+        ids = {q["id"] for q, _, _ in group}
+        qs = [x for x in load_json(POOL)["questions"] if x["id"] in ids]
+        user = "## Questions (Spanish)\n" + json.dumps([for_review({**q, "tmp_id": q["id"]}) for q in qs], ensure_ascii=False)
         out = claude(prompt("factcheck"), user, FACT_SCHEMA, args.check_model, d, web=True)
-        c = next((x for x in out["checks"] if x["id"] == q["id"]), None)
-        if c is None:
-            raise RuntimeError(f"no fact check for {q['id']}")
-        r["fix"]["factcheck"] = c
-        save_json(path, r)
-        progress.detail(f"  fix factcheck: {q['id']}: {c['verdict']}")
+        got = {c["id"]: c for c in out["checks"]}
+        for q, path, r in group:
+            if q["id"] in got:
+                r["fix"]["factcheck"] = got[q["id"]]
+                save_json(path, r)
+                progress.detail(f"  fix factcheck: {q['id']}: {got[q['id']]['verdict']}")
+        if ids - got.keys():
+            raise RuntimeError(f"no fact check for {', '.join(sorted(ids - got.keys()))}")
 
-    errors = parallel(work, revise, args.jobs, "fix", "questions")
+    errors = parallel(work, chunks(revise), args.jobs, "fix", "calls")
     if any(isinstance(e, UsageLimit) for e in errors):
         return errors
-    return errors + parallel(check, recheck, args.jobs, "fix factcheck", "questions")
+    return errors + parallel(check, chunks(recheck), args.jobs, "fix factcheck", "calls")
+
+
+def chunks(items, size=GROUP_SIZE):
+    return [items[i:i + size] for i in range(0, len(items), size)]
+
+
+def fix_issue(q, r, rework):
+    """What the reviser has to fix, or None."""
+    if rework:
+        review = q.get("review") or {}
+        if q["status"] != "needs_work" or not (review.get("feedback") or "").strip():
+            return None
+        who = "final reviewer" if review.get("reviewer") == "llm" else "gamemaster feedback"
+        return f"{who}: {review['feedback'].strip()}"
+    r1 = r.get("round1") or {}
+    if r1.get("decision") == "needs_work" and r1.get("fix", "").strip():
+        return f"final reviewer: {r1['fix'].strip()}"
+    return None
+
+
+def needs_recheck(fix, rework):
+    if rework:
+        return fix["action"] in ("revise", "keep")
+    return fix["action"] == "revise" and bool(set(FACT_FIELDS) & set(fix["changed"]))
 
 
 def cmd_research(args):
@@ -1569,6 +1620,43 @@ def batch_subcategories(count=None, bundle="base"):
     return batches.subcategories(load_json(POOL)["questions"], count, bundle)
 
 
+def run_steps(steps, again):
+    """Run (name, fn, args) steps in order, then validate; waits out Claude's usage limit (QG-21).
+    Exits 75 or 1 on a step that fails; `again` is the command that continues. Returns the start time."""
+    t0 = time.monotonic()
+    i = 0
+    while i < len(steps):
+        name, fn, a = steps[i]
+        i += 1
+        print(f"\n== [{i}/{len(steps) + 1}] {name}", flush=True)
+        t = time.monotonic()
+        try:
+            errors = fn(a) or []
+        except UsageLimit as e:  # a call outside parallel()
+            errors = [e]
+        print(f"   {name} took {progress.duration(time.monotonic() - t)} "
+              f"(batch: {progress.duration(time.monotonic() - t0)})", flush=True)
+        limit = next((e for e in errors if isinstance(e, UsageLimit)), None)
+        if limit and wait_for_reset(limit):
+            i -= 1  # the step skips the work it already did (QG-21)
+            continue
+        if limit:
+            print(f"\nStopped at `{name}`: Claude's usage limit ({limit}).\n"
+                  f"Wait for the reset, then run `{again}` again.", file=sys.stderr)
+            sys.exit(75)
+        if errors:
+            print(f"\nStopped at `{name}` with {len(errors)} error(s). Run `{again}` again; "
+                  "if the same step fails three times in a row, stop and report the output.", file=sys.stderr)
+            sys.exit(1)
+    print(f"\n== [{len(steps) + 1}/{len(steps) + 1}] validate", flush=True)
+    errors, _ = validate_pool()
+    if errors:
+        print("\n".join(errors), file=sys.stderr)
+        print("\n`qgen validate` failed. Stop and report the output.", file=sys.stderr)
+        sys.exit(1)
+    return t0
+
+
 def cmd_batch(args):
     """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped."""
     if args.run:
@@ -1623,37 +1711,7 @@ def cmd_batch(args):
         ("sync", cmd_sync_run, ns()),
         ("batch-report", cmd_batch_report, ns()),
     ]
-    t0 = time.monotonic()
-    i = 0
-    while i < len(steps):
-        name, fn, a = steps[i]
-        i += 1
-        print(f"\n== [{i}/{len(steps) + 1}] {name}", flush=True)
-        t = time.monotonic()
-        try:
-            errors = fn(a) or []
-        except UsageLimit as e:  # a call outside parallel()
-            errors = [e]
-        print(f"   {name} took {progress.duration(time.monotonic() - t)} "
-              f"(batch: {progress.duration(time.monotonic() - t0)})", flush=True)
-        limit = next((e for e in errors if isinstance(e, UsageLimit)), None)
-        if limit and wait_for_reset(limit):
-            i -= 1  # the step skips the work it already did (QG-21)
-            continue
-        if limit:
-            print(f"\nStopped at `{name}`: Claude's usage limit ({limit}).\n"
-                  "Wait for the reset, then run `qgen batch` again.", file=sys.stderr)
-            sys.exit(75)
-        if errors:
-            print(f"\nStopped at `{name}` with {len(errors)} error(s). Run `qgen batch` again; "
-                  "if the same step fails three times in a row, stop and report the output.", file=sys.stderr)
-            sys.exit(1)
-    print(f"\n== [{len(steps) + 1}/{len(steps) + 1}] validate", flush=True)
-    errors, _ = validate_pool()
-    if errors:
-        print("\n".join(errors), file=sys.stderr)
-        print("\n`qgen validate` failed. Stop and report the output.", file=sys.stderr)
-        sys.exit(1)
+    t0 = run_steps(steps, "qgen batch" + (f" --bundle {args.bundle}" if args.bundle != "base" else ""))
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == run]
@@ -1665,6 +1723,51 @@ def cmd_batch(args):
           f"  git add authoring/data/questions.json app/data/pool.json {concept_dir}/ authoring/reports/{run}.md\n"
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
           f"{n_ok} approved (qgen batch)\"")
+
+
+def cmd_rework(args):
+    """Every needs_work question with feedback (of one batch with --batch) once more through
+    fix → fact check → review with a new media search → record (QG-23). Rerunning continues."""
+    open_runs = sorted(p.parent.name for p in WORK.glob("rework-*/run.json") if not load_json(p).get("done"))
+    if open_runs:
+        run = open_runs[0]
+        print(f"Resuming {run}" + (" (--batch ignored)" if args.batch else "") + ".", flush=True)
+    else:
+        ids = [q["id"] for q in load_json(POOL)["questions"] if q["status"] == "needs_work"
+               and (q.get("review") or {}).get("feedback") and (not args.batch or q.get("batch") == args.batch)]
+        if not ids:
+            sys.exit("No needs_work questions with feedback.")
+        numbers = [int(p.name.split("-")[1]) for p in WORK.glob("rework-*") if p.name.split("-")[1].isdigit()]
+        run = f"rework-{max(numbers, default=0) + 1}"
+        save_json(WORK / run / "run.json", {"mode": "rework", "ids": ids, "batch": args.batch,
+                                            "started": datetime.date.today().isoformat()})
+        print(f"Starting {run}: {len(ids)} needs_work question(s).", flush=True)
+    d = WORK / run
+    progress.verbose = False
+
+    def ns(**kw):
+        return argparse.Namespace(run=run, jobs=args.jobs, **kw)
+
+    t0 = run_steps([
+        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
+        ("media", cmd_media, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+        ("research", cmd_research, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
+        ("record", cmd_record, ns()),
+        ("export", lambda a: cmd_export(a) or [], ns()),
+        ("sync", cmd_sync_run, ns()),
+    ], "qgen rework")
+    cfg = load_json(d / "run.json")
+    save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
+    qs = batch_questions(run, ("approved", "needs_work", "draft", "rejected"))
+    n_ok = sum(q["status"] == "approved" for q in qs)
+    print(f"\nDone: {run}: {n_ok} of {len(qs)} approved, {len(qs) - n_ok} still need work "
+          f"(took {progress.duration(time.monotonic() - t0)}).")
+    print("Commit exactly this:\n  git add authoring/data/questions.json app/data/pool.json\n"
+          f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
 
 
 # --- export (D-35) --------------------------------------------------------------
@@ -1855,6 +1958,10 @@ def main():
     add("record", cmd_record)
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
+    rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
+    rw.set_defaults(fn=cmd_rework)
+    rw.add_argument("--batch", help="only this batch's needs_work questions")
+    rw.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     b = sub.add_parser("batch", help="the whole pipeline for one new batch (authoring/RUNBOOK.md)")
     b.set_defaults(fn=cmd_batch)
     b.add_argument("--bundle", default="base", help="write for this bundle (default base); only when the user names one")
