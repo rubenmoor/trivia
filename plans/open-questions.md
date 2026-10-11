@@ -4,9 +4,6 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 
 ## Open
 
-### Added 2026-10-06
-- **OQ-17** Target total pool size? It decides how many questions to generate and how strict the quality filter is (see `07-question-generation.md`). *Input from D-22: every level offers 4 questions from its difficulty range, so a game needs 48 unburned questions to show and burns 12 (`03-game-flow.md`). Unlimited jokers burn extra questions (D-27), but burning is per player (D-28).*
-
 ### Added 2026-10-08 (media providers, D-45, [`23`](23-media-providers.md))
 - **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
 
@@ -23,6 +20,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-46** Should a `colombia` question also have to use a `colombia` subcategory? 19 `colombia` questions use a `base` subcategory today (Historia: Grito de Independencia, Boyacá, Panamá; Navidad: novena; Piratas: Cartagena's walls; Mundiales de fútbol: James's goal; …). The game's «Cambiazo» picker then offers «Historia» and serves a Colombian question. If yes, `colombia` needs subcategories like «Historia de Colombia» and «Literatura colombiana».
 
 ## Resolved
+- **OQ-17** Target pool size: 5000 approved `base` questions, tapering at high difficulties (D-52).
 - **OQ-34** Store name: «Living Room Trivia», in Spanish «Trivia en Familia» (Steam localized name), pending the name and trademark check PUB-7 (D-50).
 - **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).
 - **OQ-44** No per-bundle house style: a session mixes questions from every active bundle, so they all follow one house style (D-44).

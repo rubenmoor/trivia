@@ -414,3 +414,10 @@ Template:
 - Decision: A sharp image (illustrative, essential) is shown at its native size in device pixels, scaled down only when bigger than the screen, never upscaled, aspect ratio kept, centred. Behind it the night stage (VD-6). Its edges fade into the stage with a rounded feather. Decorative images stay blurred and full-bleed (D-15); video stays full-bleed.
 - Consequences: Small images show small; D-48 (4K target) keeps them big on the TV.
 - Supersedes / related: D-15, D-29 (full-bleed picture), D-48; VD-6, VD-10
+
+## D-52: Target 5000 approved `base` questions
+- Date: 2026-10-11
+- Context: OQ-17. The pool has ~1000 approved `base` questions, thin at the top of the scale 1–15.
+- Decision: The `base` bundle grows to 5000 approved questions. Fewer at high difficulties is fine, but each level gets a target (pm milestone 1, part 1).
+- Consequences: About 8 more `base` batches (D-46). Each batch is followed by quality control; batch runs have the lowest priority (-100), after any implementation work.
+- Supersedes / related: D-6 (~120 questions), D-22, D-38, D-46; OQ-17, B-6
