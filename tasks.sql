@@ -681,8 +681,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Last task: the exit check from part 1, plus `qgen validate` and `trivia-media sync --status approved`.', '2026-10-11T23:16:50Z', '2026-10-11T23:49:37Z', 12);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (19, 12, 'create tasks for plan 12', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 25–28; 25–27 wait for decision 1, 28 for decisions 1 and 2)', 'Split plan 12 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:39:28Z', '2026-10-11T23:50:10Z', 13);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (20, 13, 'create tasks for plan 13', 'split', 'open', 1000, NULL, 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:41:37Z', NULL, 14);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (20, 13, 'create tasks for plan 13', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 29–36; 33 dropped as duplicate of 34; 35, 36 wait for decision 1; 32 waits for the anchor decision task 34 creates)', 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:41:37Z', '2026-10-11T23:51:08Z', 14);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (21, 14, 'create tasks for plan 14', 'split', 'open', 1000, NULL, 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', NULL, 15);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -727,6 +727,65 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md` "Quality bar": write decision 2''s numbers as the family pool''s bar; close CT-5 for the family pool.
 
 Done when: the check runs and, today, fails on the count criteria with the right numbers.', '2026-10-11T23:50:08Z', NULL, 19);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (29, 13, 'qgen report --calibration and baseline', 'work', 'open', 710, NULL, 'Part "Measurement" of plan 13. The baseline comes first, so the fixes can be measured.
+
+- `qgen report --calibration [<batch>…]` in `authoring/tools/qgen.py`: per target level 1–15: n drafted, mean drafted / rated / final difficulty, mean concept `known_at`, merged and approved counts.
+- Reads `work/<batch>/slots.json`, `drafts/`, `ratings/`, `ids.json` and the pool; default: the last two batches. Missing ratings (batch not rated yet) → `–`, no error.
+- Write it so plan 16''s batch health metrics ("difficulty spread vs. targets") can call the same function; don''t build it twice.
+- Record the batch-7 and batch-8 numbers in plan 13''s "Baseline" section (`pm plan edit 13 --body -`); batch-8 rated numbers once it''s rated, else note that they''re pending.
+- `README`/`AGENTS.md` command lists: mention the flag where `qgen report` is listed.
+
+Done when: `qgen report --calibration` prints the table for batch-7 and batch-8, matching the throw-away baseline in plan 13 (±0.1); `qgen validate` clean.', '2026-10-11T23:50:50Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (30, 13, 'rate.md on the 1–15 scale; re-check DIFFICULTY_GAP', 'work', 'open', NULL, NULL, 'Part "Fixes → Rater scale" of plan 13. `authoring/tools/prompts/rate.md` asks for `difficulty_estimate` 1–10, so the rater can''t rate above 10 and every question at 13+ looks overrated to `revise` (`DIFFICULTY_GAP = 3`, `qgen.py`).
+
+- `rate.md`: `difficulty_estimate` on the shared scale 1–15, as defined in the house style (refer to it, don''t restate it); fix the JSON schema bounds in `qgen.py` if the rating schema has them.
+- Re-check `DIFFICULTY_GAP`: with a throw-away script, re-rate ~20 approved questions at 10–15 (few LLM calls; no batch run) and compare estimate vs. stored difficulty. Keep 3 or change it with a short reason in the comment; log a decision in `plans/decisions.md` if the meaning changes.
+
+Done when: rate prompt and schema allow 1–15; the throw-away check shows estimates above 10 for hard questions; `qgen validate` clean.', '2026-10-11T23:50:50Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (31, 13, 'Concept draw follows known_at', 'work', 'open', NULL, NULL, 'Part "Fixes → Concept draw" of plan 13. `concepts.draw_concepts` (`authoring/tools/concepts.py`) weights `1/(1+uses)² / (1+|known_at−d|/2)`; use count dominates, so mean `known_at` per target sits at 7–9 for targets 1–8 and ~11 for 13–15.
+
+- Draw from a window: concepts with `|known_at − d| ≤ 1`, widen to ±2, ±3 … only when the window has no unused, unretired concept left; use count breaks ties inside the window. Retired concepts never (unchanged).
+- Keep the signature, so `draw_slots` and the focus-group path keep working; update the docstring (D-38).
+- Throw-away check: a seeded dry run of `draw_slots` (no LLM calls) over the base subcategories; mean `known_at` per target within ±1 at every level 1–15, or report the levels where the supply runs out.
+
+Done when: the dry-run numbers are in the task note; `qgen validate` clean; no batch run.', '2026-10-11T23:50:50Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (32, 13, 'Write the confirmed difficulty anchors into the house style', 'work', 'open', 690, NULL, 'Second half of "Fixes → Prompts" of plan 13. Waits for the gamemaster''s answer to the anchor decision the previous task creates.
+
+- Add the confirmed anchors (questions at 9–15 with the gamemaster''s levels) to the calibration section of `authoring/tools/prompts/house-style.md`, next to the existing 1–6 examples; levels as the gamemaster answered, not as proposed.
+- Where the gamemaster corrected a level, set it on the question in `authoring/data/questions.json` only via the existing tooling (not by hand); if there''s none, log it in `plans/backlog.md`.
+
+Done when: house style has anchors spread over 9–15; `qgen validate` clean.', '2026-10-11T23:50:50Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (33, 13, 'Hard-question guidance in draft.md and house style; propose anchors', 'work', 'dropped', NULL, 're-added as the next task with the follow-up task id filled in', 'First half of "Fixes → Prompts" of plan 13. Hard targets are drafted ~3 levels low; house style''s calibration examples are all at 1–6 and all say "AI guessed too high".
+
+- `authoring/tools/prompts/house-style.md`: what makes a question hard on the 1–15 scale (who can answer it: few adults, specialists; not obscure trivia nobody could know).
+- `authoring/tools/prompts/draft.md`: the ±1 tolerance must not become a habit of rounding down; aim at the target, not below it.
+- Anchor candidates: pick ~8 approved questions at 9–15 (spread over levels and broad categories) and propose them with `pm decision add "Difficulty anchors 9–15: are these levels right?" --body …` (id, question, answer, stored level each; options e.g. "levels as proposed" / "corrections in the answer"). Then `pm task-pending-decision TASK_4B <decision id>` so the follow-up task waits for the answer.
+- Don''t write the anchors into the house style here.
+
+Done when: prompts updated, decision created and task TASK_4B pending on it; `qgen validate` clean; no batch run.', '2026-10-11T23:50:50Z', '2026-10-11T23:51:05Z', 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (34, 13, 'Hard-question guidance in draft.md and house style; propose anchors', 'work', 'open', NULL, NULL, 'First half of "Fixes → Prompts" of plan 13. Hard targets are drafted ~3 levels low; house style''s calibration examples are all at 1–6 and all say "AI guessed too high".
+
+- `authoring/tools/prompts/house-style.md`: what makes a question hard on the 1–15 scale (who can answer it: few adults, specialists; not obscure trivia nobody could know).
+- `authoring/tools/prompts/draft.md`: the ±1 tolerance must not become a habit of rounding down; aim at the target, not below it.
+- Anchor candidates: pick ~8 approved questions at 9–15 (spread over levels and broad categories) and propose them with `pm decision add "Difficulty anchors 9–15: are these levels right?" --body …` (id, question, answer, stored level each; options e.g. "levels as proposed" / "corrections in the answer"). Then `pm task-pending-decision 32 <decision id>` so task 32 (writes the anchors in) waits for the answer.
+- Don''t write the anchors into the house style here.
+
+Done when: prompts updated, decision created and task 32 pending on it; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (35, 13, 'Deficit weights in target_weights()', 'work', 'open', NULL, NULL, 'Part "Aim at gaps" of plan 13 (D-54), first step. Needs plan 12''s targets file and loader (task 25, same decision).
+
+- `target_weights()` in `authoring/tools/qgen.py`: with targets for the batch''s bundle (`load_targets(bundle)`), weight per level = `max(0, target − approved)`; approved = status `approved` in that bundle. Even weights (D-40) when the bundle has no targets or every deficit is 0; the focus-group path (`LEVEL_WEIGHTS`) unchanged.
+- Print the drawn target histogram at the start of `draft`, so the batch log shows the batch''s shape.
+- Throw-away check: seeded dry run of `draw_slots` (no LLM calls) draws targets roughly proportional to the deficits.
+
+Done when: dry-run histogram in the task note; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', NULL, 20);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (36, 13, 'Subcategory ranking and per-subcategory targets by deficit and concept supply', 'work', 'open', 690, NULL, 'Part "Aim at gaps" of plan 13 (D-54), second step. After the `target_weights()` task.
+
+- `batches.subcategories()` (`authoring/tools/batches.py`, shared with the authoring start page): rank by `Σ_level approved(sub, level) × deficit_share(level)`, ties as now; still `batches.SHARE` of the subcategories (D-46); no new `qgen batch` arguments (D-36). Without targets: ranking as today.
+- `assign_difficulties`/`draw_slots` (`qgen.py`): hand each subcategory the targets its concept list can carry (unused, unretired concepts with `known_at` near the target) instead of a plain shuffle; a subcategory without hard concepts gets no 15s.
+- Check the authoring start page still shows the next batch''s subcategories (`trivia-authoring`).
+- Throw-away check: seeded dry run of `draw_slots`: targets weighted by deficit, mean concept `known_at` per target within ±1 (plan 13 "Done when").
+
+Done when: dry-run numbers in the task note; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', NULL, 20);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -745,9 +804,12 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (7, 17, '2026-10-11T23:46:18Z', '2026-10-11T23:48:31Z', 'done', NULL, 0, '785f63de17c58a8bd08796231eeca632561842ce', 'claude-opus-5-5[1m]', 'e6f532e2-0f7b-4920-8bb4-37928071b4f0', 13, 24, 12609, 496968, 59600, 0.82846960000000014, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (8, 18, '2026-10-11T23:48:31Z', '2026-10-11T23:49:47Z', 'done', NULL, 0, 'ec3c4411dbc8a830fbcc7b022548022ae86edbc5', 'claude-opus-5-5[1m]', '9a45fda3-74a3-4272-9402-2568736e1756', 10, 18, 6999, 320901, 37758, 0.50629620000000009, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (9, 19, '2026-10-11T23:49:47Z', '2026-10-11T23:50:15Z', 'done', NULL, 0, '29edfcb1393298ba2322f16f6f605a051a4e036e', 'claude-opus-5-5[1m]', '09948f6a-545e-48ed-9d10-3ff1972e22b3', 6, 12, 2859, 175801, 26236, 0.3022762, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (10, 20, '2026-10-11T23:50:15Z', '2026-10-11T23:51:15Z', 'done', NULL, 0, '8fdfc21f0a7e6f58f5050acf29b50fe08158bacf', 'claude-opus-5-5[1m]', '4d70826f-4639-4508-9b2c-6d8111de8f1f', 9, 18, 6170, 311821, 32442, 0.4453722, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (27, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (28, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (28, 2);
+INSERT INTO task_decision (task_id, decision_id) VALUES (35, 1);
+INSERT INTO task_decision (task_id, decision_id) VALUES (36, 1);
