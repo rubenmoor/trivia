@@ -685,8 +685,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:41:37Z', '2026-10-11T23:51:08Z', 14);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (21, 14, 'create tasks for plan 14', 'split', 'done', 1000, '2026-10-11, tasks 37–39 for plan 14; no upfront decision (task 38 creates the proposal decision, task 39 waits for it)', 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', '2026-10-11T23:51:42Z', 15);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', NULL, 16);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 40–45; 43 dropped, re-added as 45 with task 44''s id; plan tasks 4+5 merged into 45; 44 waits for decision 1 and the threshold decision 45 creates)', 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', '2026-10-11T23:52:42Z', 16);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (23, 16, 'create tasks for plan 16', 'split', 'open', 1000, NULL, 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:48:16Z', NULL, 17);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (24, 17, 'create tasks for plan 17', 'split', 'open', 1000, NULL, 'Split plan 17 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -813,6 +813,66 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen validate` clean (also re-export `app/data/pool.json` if validate asks).
 
 Done when: the subcategories are in `categories.json` with concept lists, QP entry written, `qgen validate` clean.', '2026-10-11T23:51:37Z', NULL, 21);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (40, 15, 'Overlap candidate finder and qgen report --overlaps', 'work', 'open', 710, NULL, 'Part "Overlap check before merge" (B-5) of plan 15, code only, no LLM. Shapes the next batch most, so it runs first.
+
+- Candidate finder in `authoring/tools/qgen.py` or a small `authoring/tools/overlap.py`: for a draft, pool questions of every bundle (status ≠ `rejected`) and earlier drafts of the same batch where:
+  - normalized answers equal or similar (`SequenceMatcher` ≥ 0.8, or one contains the other); numbers and yes/no excluded as in `duplicates()`;
+  - draft''s concept or answer stem-matches the other''s concept or answer (lowercase, no accents, drop trailing «s»/«es»);
+  - draft''s concept or answer occurs in the other''s question or `fun_fact`, or the other way round.
+  - Cap ~8 per draft, closest first. No new dependencies. `duplicates()` stays as is.
+- `qgen report --overlaps`: the same finder over the approved pool, pairs listed (ids, answers, why matched); listing only. Mention the flag where `qgen report` is listed (README, AGENTS.md).
+- Replay (throw-away script): batch-7''s merged questions against the pool before batch-7 (ids < q-0596) must list q-0646/q-0217, q-0644/q-0957, q-0689/q-0279, q-1210/q-0315; B-5''s q-0369/q-0341 and q-0420/q-0328 against their pools. Record recall and candidates per draft (mean, max) in plan 15''s Baseline (`pm plan edit 15 --body -`).
+- Not wired into `rate` yet (next task).
+
+Done when: replay finds all six pairs, numbers in plan 15; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', NULL, 22);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (41, 15, 'no_overlap criterion in rate; drop overlaps at merge', 'work', 'open', NULL, NULL, 'Part "Judge in rate" of plan 15. After the candidate finder task.
+
+- Check `work/batch-8` first: if batch-8 is between `draft` and `merge` (rated partly or not yet merged), don''t change `rate`/`merge` now; stop and note it (plan 17''s batch-run task finishes batch-8 first).
+- Grouped `rate` call (PE-1) in `authoring/tools/qgen.py`: each draft''s candidates (id, question, answer, concept) in the payload; new hard criterion `no_overlap` in the rating schema and `authoring/tools/prompts/rate.md` (5 = asks a different fact; ≤ 3 = knowing one answer gives the other away, or the same fact again). Within-batch pairs: the later draft fails.
+- `merge`: a `no_overlap` hard fail is dropped with reason `overlap like q-…` in `dropped.json`; the concept isn''t retired.
+- Prompts are changed here as an implementation task, never inside a batch run (RUNBOOK).
+- Check (throw-away script, two LLM calls): rate ~20 batch-7 drafts incl. the four known overlaps, once without and once with candidates; the four fail `no_overlap`, the others don''t. Result in the task note.
+
+Done when: check passes; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', NULL, 22);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (42, 15, 'Needs-work problems in review and record; classifier for old questions', 'work', 'open', NULL, NULL, 'Part "Needs-work reasons" of plan 15. Today `needs_work` reasons are only free text in `review.feedback`.
+
+- `REVIEW_SCHEMA` (`authoring/tools/qgen.py`): `problems`, array of `giveaway`, `fact`, `ambiguity`, `overlap`, `media`, `difficulty`, `style`, `other`; stored in `q.review.problems`. One shared constant; plan 16''s audit task may already have defined it: reuse it.
+- `record`: adds `media` (no adequate media) and `fact` (fact check not confirmed) for the fixed rules.
+- `authoring/tools/prompts/review.md`: when to use each problem.
+- Keyword classifier for questions without `problems` (`No se encontró una imagen adecuada` → media, `q-\d{4}` → overlap, `pista` + `regala|delata|da la respuesta` → giveaway, …), results marked as guessed; for the reports only, no backfill into the pool.
+- `qgen validate`: `problems` values from the list when present.
+
+Done when: classifier run over batch-7''s needs_work (throw-away script) gives counts per problem, in the task note; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', NULL, 22);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (43, 15, 'Batch health: health.py, qgen report --batches, Health section, baseline; propose thresholds', 'work', 'dropped', 690, 're-added as the next task with task 44''s id filled in', 'Part "Batch health" of plan 15, plus the threshold decision (plan''s tasks 4 and 5). After the problems task (needs_work by problem) and the no_overlap task (overlap drops); without them those rows read "n/a".
+
+- `authoring/tools/health.py`: `batch_health(run) -> dict` from `work/<run>/` and the pool; metrics as listed in plan 15 (drops by reason, merged/approved/needs_work, needs_work by `problems` incl. the guessed classifier, overlap rate, difficulty, variety, media share, mean `fun`, cost, calls, wall time).
+- Difficulty vs. target: reuse plan 13''s `--calibration` code (task 29) if it exists; else "n/a". Approved per level vs. deficit: plan 12''s `load_targets` (task 25) if it exists; else "n/a".
+- `qgen report --batches [<batch>…]` (default batch-4 onward): one column per batch.
+- `batch-report`: "## Health" at the top of `authoring/reports/<batch>.md` with each metric and the previous two batches'' values (✓/✗ comes with the thresholds task); regenerates `authoring/reports/batches.md` with the same table. `directory.md`: lines for `health.py` and `batches.md`.
+- Baseline: run over batch-4…7 (and batch-8 if recorded); record the table in plan 15 (`pm plan edit 15 --body -`). Close PE-6, PE-13, MP-11: numbers into `plans/20-pipeline-efficiency.md` and `plans/23-media-providers.md`, mark them `[x]`.
+- Decision: `pm decision add "Batch health thresholds and stop rule?"` with the plan''s first-guess thresholds adjusted to the baseline in the body; options: recommended set (first) / looser set / warnings only, no stop. Then `pm task-pending-decision <thresholds task id> <decision id>` (the task "Batch health thresholds, stop rule and ack").
+
+Done when: `qgen report --batches` prints batch-4…7; plan 15 has the baseline; PE-6/PE-13/MP-11 closed; decision created and the thresholds task waits on it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:32Z', '2026-10-11T23:52:38Z', 22);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (44, 15, 'Batch health thresholds, stop rule and ack', 'work', 'open', 690, NULL, 'Part "Thresholds" of plan 15 (D-55). Waits for the threshold decision (created by the batch-health task) and for pm decision 1 via plan 12''s targets file (task 25).
+
+- `authoring/data/targets.json`: `"batch_health"` with the decided thresholds; `qgen validate` checks the keys.
+- `health.py`: ✓/✗ per metric incl. the trend rule; shown in the Health section and `batches.md`.
+- `qgen batch` (`authoring/tools/qgen.py`): if the last committed batch fails a threshold and has no ack, exit 2 before `concepts`, naming the report. `qgen rework`/`tighten` not blocked. If the decision chose "warnings only", print instead of exit.
+- `qgen health ack <batch> "<note>"` → `authoring/data/health-acks.json` (shown in `batches.md`; `directory.md` line). An ack clears the stop but isn''t a pass for plan 12''s exit check.
+- `authoring/RUNBOOK.md`: one line in the exit-code table for 2.
+- Log in `plans/decisions.md` only if the answer changes D-55.
+
+Done when: a throw-away failing threshold makes `qgen batch` exit 2 before `concepts` (no LLM calls), and `qgen health ack` clears it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:32Z', NULL, 22);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (45, 15, 'Batch health: health.py, qgen report --batches, Health section, baseline; propose thresholds', 'work', 'open', 690, NULL, 'Part "Batch health" of plan 15, plus the threshold decision (plan''s tasks 4 and 5). After the problems task (needs_work by problem) and the no_overlap task (overlap drops); without them those rows read "n/a".
+
+- `authoring/tools/health.py`: `batch_health(run) -> dict` from `work/<run>/` and the pool; metrics as listed in plan 15 (drops by reason, merged/approved/needs_work, needs_work by `problems` incl. the guessed classifier, overlap rate, difficulty, variety, media share, mean `fun`, cost, calls, wall time).
+- Difficulty vs. target: reuse plan 13''s `--calibration` code (task 29) if it exists; else "n/a". Approved per level vs. deficit: plan 12''s `load_targets` (task 25) if it exists; else "n/a".
+- `qgen report --batches [<batch>…]` (default batch-4 onward): one column per batch.
+- `batch-report`: "## Health" at the top of `authoring/reports/<batch>.md` with each metric and the previous two batches'' values (✓/✗ comes with the thresholds task); regenerates `authoring/reports/batches.md` with the same table. `directory.md`: lines for `health.py` and `batches.md`.
+- Baseline: run over batch-4…7 (and batch-8 if recorded); record the table in plan 15 (`pm plan edit 15 --body -`). Close PE-6, PE-13, MP-11: numbers into `plans/20-pipeline-efficiency.md` and `plans/23-media-providers.md`, mark them `[x]`.
+- Decision: `pm decision add "Batch health thresholds and stop rule?"` with the plan''s first-guess thresholds adjusted to the baseline in the body; options: recommended set (first) / looser set / warnings only, no stop. Then `pm task-pending-decision 44 <decision id>`.
+
+Done when: `qgen report --batches` prints batch-4…7; plan 15 has the baseline; PE-6/PE-13/MP-11 closed; decision created and the thresholds task waits on it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:38Z', NULL, 22);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -833,6 +893,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (9, 19, '2026-10-11T23:49:47Z', '2026-10-11T23:50:15Z', 'done', NULL, 0, '29edfcb1393298ba2322f16f6f605a051a4e036e', 'claude-opus-5-5[1m]', '09948f6a-545e-48ed-9d10-3ff1972e22b3', 6, 12, 2859, 175801, 26236, 0.3022762, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (10, 20, '2026-10-11T23:50:15Z', '2026-10-11T23:51:15Z', 'done', NULL, 0, '8fdfc21f0a7e6f58f5050acf29b50fe08158bacf', 'claude-opus-5-5[1m]', '4d70826f-4639-4508-9b2c-6d8111de8f1f', 9, 18, 6170, 311821, 32442, 0.4453722, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (11, 21, '2026-10-11T23:51:15Z', '2026-10-11T23:51:49Z', 'done', NULL, 0, '8975495c4bc7ec1e851d125441f7178b300fb2dd', 'claude-opus-5-5[1m]', '48250d51-c9cd-4467-8b6b-c19264e71694', 5, 10, 2622, 137512, 23878, 0.27100640000000004, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (12, 22, '2026-10-11T23:51:49Z', '2026-10-11T23:52:49Z', 'done', NULL, 0, '3d9fa2fda59849b2763367b9b440ac866818c465', 'claude-opus-5-5[1m]', '17dc73a2-9011-4a4d-88dd-8cd1e998649c', 9, 18, 5816, 355709, 37673, 0.48891779999999996, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -841,3 +902,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (28, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (28, 2);
 INSERT INTO task_decision (task_id, decision_id) VALUES (35, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (36, 1);
+INSERT INTO task_decision (task_id, decision_id) VALUES (44, 1);
