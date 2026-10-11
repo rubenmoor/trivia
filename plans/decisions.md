@@ -442,3 +442,10 @@ Template:
 - Decision: `rate` judges each draft against pool questions that share its answer or concept (`no_overlap`, a hard criterion), so overlaps are dropped before merge. Every batch report gets health metrics with thresholds stored in `authoring/data/targets.json` (`batch_health`). When the last batch fails one, `qgen batch` exits 2 before drafting until the gamemaster acknowledges it (`qgen health ack`). Threshold numbers: a pm decision of plan 15.
 - Consequences: No new `qgen batch` arguments (D-36); RUNBOOK's "other exit code: stop" covers the stop. Plan 12's exit check reads the same health data. pm plan 15 (Duplicate and drift detection) has the tasks.
 - Supersedes / related: D-33, D-36, D-46, D-52, D-53; B-5, PE-6, PE-13, MP-11
+
+## D-56: Every batch gets an LLM audit and a blind human spot check
+- Date: 2026-10-11
+- Context: D-52 grows `base` by ~8 batches, judged only by the LLM review (D-33). Nothing measures whether that review judges like the gamemaster (pm milestone 1, part 5).
+- Decision: `qgen batch` runs an independent LLM audit (`prompts/audit.md`, blind to the review) on a seeded sample of the batch; it never changes a status. The gamemaster spot-checks a smaller subset of that sample in the review tool (`/review?batch=…&sample=1`), blind to the LLM verdict until deciding; the results go to `authoring/data/spot-checks.json`. Agreement (both accept or both don't) per batch is the main quality signal. Findings become prompt changes through a pm decision before the next batch; procedure in `authoring/QC.md`.
+- Consequences: `qgen batch` still takes no arguments (D-36); one opus call more per sampled question. Sample size and agreement rate: pm decision 2. Plan 12's exit check reads the spot checks. pm plan 16 (Quality control after every batch) has the tasks.
+- Supersedes / related: D-33, D-36, D-38, D-52, D-53, D-55

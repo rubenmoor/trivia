@@ -526,6 +526,55 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Every `authoring/reports/<batch>.md` from the next batch on has a Health section; `batches.md` compares batch-4 onward.
 - Thresholds are decided and stored; a failing batch stops the next `qgen batch` until acknowledged.
 - PE-6, PE-13, MP-11 and B-5 are closed with numbers.', '2026-10-11T23:45:50Z', 16);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (16, 1, 'Quality control after every batch', 650, 'Part 5 of the masterplan (plan 1). Today the only judge of a batch is the LLM review (`prompts/review.md`, D-33), and nobody measures whether it judges well. This plan adds three checks per batch: an independent LLM audit of a sample, a blind human spot check of a smaller sample, and a fixed procedure that turns their findings into prompt or house-style changes before the next batch. Across batches it tracks the human/LLM agreement rate, the main "quality is fine" signal of the milestone (pm decision 2, plan 12''s exit check). Only tooling and procedure here; the QC runs themselves are tasks of plan for task 18 (batch runs).
+
+## Baseline (2026-10-11)
+- Human verdicts already exist: a human review in the review tool replaces the LLM one and keeps it in `review.previous` (`authoring/server/main.py` `set_review`, D-33). But the human picks what to look at (mostly `needs_work`, `/review?status=!approved`), so that is no random sample, and the page shows the LLM verdict before the human decides.
+- No second LLM opinion: `review` is the last judge; `factcheck` (sonnet) checks facts only, before review.
+- batch-7: 504 approved, 112 needs_work, no record of how many approved ones the gamemaster would have sent back.
+
+## LLM audit (a)
+- New prompt `authoring/tools/prompts/audit.md` (the gamemaster''s prompt, RUNBOOK; written here as an implementation task). Different job from `review.md`: a strict second reader of the question **as played**. It doesn''t see the review''s verdict, `fix`, rater notes or fact check, so it is independent. It sees the question, options, hints, fun fact, difficulty, media title/role, `related` pool questions, and the house style.
+- Checks: facts (own knowledge + web search, like `factcheck`), ambiguity (second defensible option), giveaways (text, hints, media title), overlap with `related`, difficulty on the shared 1–15 scale (D-38; its own estimate), house style ("Keep it short", retired styles).
+- Answer schema: `verdict` `ok` | `problem`; `problems` from plan 15''s list (`giveaway`, `fact`, `ambiguity`, `overlap`, `media`, `difficulty`, `style`, `other`; reuse its constant, don''t copy it); `severity` `minor` | `major` (major = would be `needs_work`); `difficulty_estimate` 1–15; `notes` (English, one or two sentences).
+- Sample: seeded by batch name, `AUDIT_SAMPLE` = 60 merged questions with an LLM review (approved and needs_work in proportion), always ⊇ the spot-check sample, so audit, review and human can be compared on the same questions. One opus call per question (~$5 per batch; check against `costs.log` on the baseline run).
+- `qgen audit [--batch <b>]`: writes `work/<batch>/audit/<id>.json`; skips done ones like every step. A step of `qgen batch` after `record`, before `export`; so RUNBOOK and D-36 don''t change. Changes nothing in the pool: the audit never approves or rejects (RUNBOOK).
+- `batch-report`: a "## Audit" section: sample size, flagged (major) among approved and among needs_work, problems by kind, mean |audit difficulty − final difficulty|, audit/review agreement (both accept or both not), and every major finding on an approved question as `id: problem — notes` with its `/review/<id>` link.
+- Review tool: `/review?batch=<b>&audit=flagged` lists the audited questions with a major finding; the audit''s notes show next to the review''s. The gamemaster decides them there.
+
+## Human spot check (b)
+- `/review?batch=<b>&sample=1`: the batch''s spot-check sample, `size` from `authoring/data/targets.json` `quality.spot_check_size` (plan 12''s file and loader, D-53; default 30 until pm decision 2 is answered). Seeded by batch name, a subset of the audit sample, same ids on every reload.
+- **Blind:** in sample mode the page hides the LLM decision, feedback, reasons and the audit until the human has decided; then it shows them next to the human''s verdict (agree / disagree). Picked media stays visible (it is part of the question as played).
+- The human decides as usual (approve / needs_work / reject, feedback, difficulty, media); that is a normal human review (D-33). In addition the server records the spot check in `authoring/data/spot-checks.json`: `{"<batch>": {"size": n, "seed": "<batch>", "items": {"<id>": {"llm": "approved", "audit": "ok"|"problem"|null, "human": "needs_work", "problems": [...], "difficulty": [llm, human], "media_changed": bool, "on": "YYYY-MM-DD"}}}}`. Its own record, so later reworks or re-reviews don''t change past agreement numbers. Undo removes the item.
+- `POST /api/spot-checks/<batch>/<id>` (written by the review page on decide), `GET /api/spot-checks`; doc lines in `main.py`''s docstring. `qgen validate` checks the file (ids exist, values in range).
+- Agreement: **agree** = both accept (`approved`) or both don''t (`needs_work`/`rejected`). Also counted: **false approve** (LLM approved, human not; the one that puts bad questions on the TV), false needs_work, difficulty |Δ| ≥ 2, media changed.
+
+## Findings → changes (c)
+- Procedure in a new `authoring/QC.md` (for the gamemaster and pm workers; RUNBOOK stays the batch procedure, with one line in step 5 pointing to QC.md). D-56.
+  1. `qgen batch` finished and committed: the report has the Audit section.
+  2. Spot check: the gamemaster opens `/review?batch=<b>&sample=1` (~10–15 min for 30). A pm worker can''t do this: the part-6 task adds a pm decision "Spot check <batch> done?" and waits on it.
+  3. `qgen report --qc <batch>`: rewrites the "## Quality control" section of `authoring/reports/<batch>.md`: agreement, false approves, difficulty and media changes, audit vs. human, every disagreement with the human''s feedback, grouped by `problems`.
+  4. Findings → proposals: a problem kind with ≥ 2 disagreements or major audit findings, or any false approve for `fact`, gets a concrete proposal: which prompt (`review.md`, `draft.md`, `house-style.md`, `rate.md`, `audit.md`) and the change in a few lines. All proposals go into one pm decision ("QC <batch>: which changes?", options: recommended set / all / none). Approved ones become implementation tasks (their plan''s priority, so above the -100 batch tasks). Prompt changes never happen inside a batch run (RUNBOOK).
+  5. The next batch task waits for 2 and for 4''s decision (pm `task-pending-decision`); plan 18 sets that up.
+- The report''s QC section ends with "Changes from this QC: …" (task ids), written in step 4, so the trend table can tell batches before and after a change.
+
+## Trend
+- `qgen report --qc` without a batch: one column per batch with a spot check or audit: audit n, major findings among approved %, human n, agreement %, false approve %, difficulty |Δ| ≥ 2 %, audit/human agreement %; ✓/✗ against `quality.min_agreement` (pm decision 2). Same table in `authoring/reports/batches.md` (plan 15''s file, task 4 there) when it exists.
+- Plan 12''s exit check reads `spot-checks.json` and `quality` for "the last two batches agree at the agreed rate with at least the agreed size"; it doesn''t recompute.
+- If the audit agrees with the human clearly better than the review does over two batches, that is a finding for step 4 (move the audit''s checks into `review.md`, or make the audit a gate); not automatic.
+
+## Tasks (for the split)
+1. `audit.md`, `AUDIT_SCHEMA`, `qgen audit`, the step in `qgen batch`, the Audit section in `batch-report`. Baseline: `qgen audit --batch batch-7`, record flagged rates, problems by kind, cost and audit/review agreement here (`pm plan edit`). Reuses plan 15''s `problems` constant if it exists, else defines it where plan 15 task 3 will find it. `qgen validate` clean. If batch-8 is mid-run, add the step only after its `record` (check `work/batch-8` first).
+2. Spot-check tooling: sample draw (shared by audit and server, seeded), `spot-checks.json`, the two endpoints, validate check, review page sample mode (blind, reveal after decide, undo) and `audit=flagged`. `npm run check` clean; check in the browser with `trivia-authoring` on batch-7. Priority 640 (after task 1, which provides the audit sample).
+3. `qgen report --qc [<batch>]`, the QC section in the batch report, the trend table (also in `batches.md` if plan 15 task 4 is done). `quality` keys in `targets.json` with `qgen validate` checks: wait for pm decision 2 (`pm task-pending-decision`) and plan 12 task 1 (targets file).
+4. `authoring/QC.md` with the procedure above, D-56 (already logged), RUNBOOK step 5 pointer, AGENTS.md "Making questions" one line, `directory.md` entry. Then tell plan 18 (batch runs) the per-batch task pattern: batch → spot-check decision → `--qc` + proposal decision → changes → next batch.
+- No batch run and no QC run inside these tasks; the first real QC run (batch-8, or batch-7 as a baseline) is a plan 18 task.
+
+## Done when
+- `qgen batch` audits a sample and the report shows it; batch-7''s audit baseline is recorded here.
+- The gamemaster can do a blind spot check of a batch in the review tool, and it is recorded in `spot-checks.json`.
+- `qgen report --qc` shows agreement per batch against decision 2''s rate; plan 12''s exit check can read it.
+- `authoring/QC.md` describes steps 1–5, and RUNBOOK points to it.', '2026-10-11T23:48:16Z', 17);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -585,13 +634,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Per-batch health metrics in `authoring/reports/<batch>.md` and a cross-batch comparison: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question.
 - Thresholds that say "stop and look before the next batch"; they feed the milestone''s exit check.
 - Close or update PE-6, PE-13, MP-11, B-5 in `plans/backlog.md` as the plan covers them.', '2026-10-11T23:16:50Z', '2026-10-11T23:46:07Z', 12);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (17, 1, 'write plan: quality control after every batch', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 1): `pm plan add 1 "Quality control after every batch" --priority 650`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (17, 1, 'write plan: quality control after every batch', 'plan', 'done', 1000, '2026-10-11, pm plan 16, plans/decisions.md (D-56)', 'Write the plan for part 5 of the masterplan (plan 1): `pm plan add 1 "Quality control after every batch" --priority 650`.
 
 - (a) LLM audit with its own prompt (not `review.md`) on a sample of a batch: facts, ambiguity, giveaways, difficulty, house style; results into the batch report.
 - (b) Human spot check: random sample in the review tool (e.g. a sample filter on `/review?batch=…`), recording agree/disagree with the LLM verdict. Sample size and agreement rate: decision 2.
 - (c) Procedure that turns findings into prompt or house-style changes before the next batch; documented in `authoring/RUNBOOK.md` or a plan file.
 - Trend over batches of the human/LLM disagreement rate.
-- Only the tooling and procedure; the QC runs themselves are tasks of part 6.', '2026-10-11T23:16:50Z', NULL, 12);
+- Only the tooling and procedure; the QC runs themselves are tasks of part 6.', '2026-10-11T23:16:50Z', '2026-10-11T23:48:22Z', 12);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (18, 1, 'write plan: batch runs', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 1): `pm plan add 1 "Batch runs" --priority -100`.
 
 - Plan priority -100: every task that runs `qgen batch` must run only after all implementation work (milestone 1).
@@ -607,6 +656,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:43:50Z', NULL, 15);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (22, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:45:50Z', NULL, 16);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (23, 16, 'create tasks for plan 16', 'split', 'open', 1000, NULL, 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:48:16Z', NULL, 17);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -622,3 +673,4 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (4, 14, '2026-10-11T23:39:37Z', '2026-10-11T23:41:51Z', 'done', NULL, 0, '3c2593167a0ea1330113d47a576182ad79943b4c', 'claude-opus-5-5[1m]', 'd31a158b-e857-4d3c-af7f-592d06d0b6da', 22, 44, 12603, 1024603, 52175, 0.87455660000000013, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (5, 15, '2026-10-11T23:41:51Z', '2026-10-11T23:44:00Z', 'done', NULL, 0, 'a979e6531d99f0e1e108fd42991906d9b6276453', 'claude-opus-5-5[1m]', '54bd36dd-a66a-4aa3-925f-fb9e8e55c0f8', 16, 32, 12922, 785142, 59246, 0.88956440000000014, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (6, 16, '2026-10-11T23:44:00Z', '2026-10-11T23:46:18Z', 'done', NULL, 0, '935c36d3b4ace0118f044d7942768252932eb593', 'claude-opus-5-5[1m]', 'e0185921-1dee-4604-a220-e5d303e29352', 17, 34, 13786, 823893, 60167, 0.92197059999999986, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (7, 17, '2026-10-11T23:46:18Z', '2026-10-11T23:48:31Z', 'done', NULL, 0, '785f63de17c58a8bd08796231eeca632561842ce', 'claude-opus-5-5[1m]', 'e6f532e2-0f7b-4920-8bb4-37928071b4f0', 13, 24, 12609, 496968, 59600, 0.82846960000000014, 80113);
