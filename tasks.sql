@@ -1002,8 +1002,58 @@ Phases (the task runs again after each decision is answered; check which decisio
 Missing tooling (audit, `--qc`, spot-check page): do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 5 done; note lists decisions, change tasks, numbers.', '2026-10-11T23:54:42Z', NULL, 24);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (54, 2, 'create tasks for plan 2', 'split', 'open', 1000, NULL, 'Split plan 2 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:55:44Z', NULL, 2);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (54, 2, 'create tasks for plan 2', 'split', 'done', 1000, '2026-10-11, tasks 56-61 (55 dropped), decisions 4 5', 'Split plan 2 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:55:44Z', '2026-10-11T23:56:58Z', 2);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (55, 2, 'write plan: Parity fixtures (PORT-1)', 'plan', 'dropped', 1000, 'body had a wrong hint about pm plan add; replaced by the next task', 'Write the plan for part 1 of the masterplan (plan 2): a scenario recorder for the Python referee and the committed fixtures every later part replays.
+
+- Scope: `app/server/game.py` + `app/server/selection.py`, scripted games on a small fixed pool: picks, answers, every joker incl. unavailable ones (`jokers_view`, `trial`), skip for the player / for everyone, undo, abandon, delete player, joker budget (`set_jokers`), supply failure at new game, several players.
+- Decide in the plan: how randomness becomes deterministic (inject shuffle/draw choices vs. a seeded PRNG TS can reproduce; must match what part 2''s `engine/rng.ts` will do); where the recorder lives (`authoring/tools/` vs. throw-away script); fixture format in `app/client/src/engine/fixtures/` (inputs, states, views as JSON).
+- Recorder runs against today''s untouched SQLite state code, never `state/game.sqlite` of the family (temp dir).
+- Plan priority: 700 (must run before parts 2–6).
+- `pm plan list` first; `pm plan add 2 …` is wrong: add it to milestone 2 (`pm plan add <milestone> …`).', '2026-10-11T23:56:40Z', '2026-10-11T23:56:49Z', 54);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (56, 2, 'write plan: Engine core: rng, pool, selection (PORT-2)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 2): `app/client/src/engine/rng.ts`, `pool.ts`, `selection.ts`.
+
+- `rng.ts`: seedable PRNG, consistent with the determinism chosen in part 1''s plan.
+- `pool.ts`: load `app/data/pool.json` + `app/data/categories.json` + `app/data/bundles/<id>/categories.json` (D-43), filter; pure, no fetch (loading happens in part 5).
+- `selection.ts`: levels, `LEVEL_RANGES`, `available`, bipartite matching `assign`, `draw`, `supply` (GF-2), same results as `selection.py`.
+- Test runner without new dependencies: `node:test` on Node 22; settle type stripping vs. a `tsc` step; wire into an `npm` script.
+- Done when: selection fixtures from part 1 replay identically; invariant tests (every level 4 cards, burned never return).
+- Plan priority: 610 (after part 1''s plan at 700, before part 3).', '2026-10-11T23:56:40Z', NULL, 54);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (57, 2, 'write plan: Engine game state machine (PORT-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 2): `app/client/src/engine/game.ts`.
+
+- Pure functions state → state: new game, pick, answer, skip (player / everyone), undo (one step), abandon, delete player, jokers hint/skip/easier/category/snipe with availability and per-game budget (MD-1), burns.
+- The view the screens need, same shape as today''s `{"game": …}` from `GET /api/game` where practical; `lib/types.ts` reused.
+- Defines the state shape part 4''s `SaveData` stores (`{version, players, games, burned}`).
+- Decision entry in `plans/decisions.md`: the client holds the correct answer (relaxes D-25; settled by the milestone), the UI still never renders hidden data.
+- Done when: all game fixtures from part 1 replay identically.
+- Plan priority: 600 (after part 2).', '2026-10-11T23:56:40Z', NULL, 54);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (58, 2, 'write plan: Save document, stores and migration (PORT-4, PORT-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 2).
+
+- `SaveData` `{version, players, games, burned}`, one JSON document; `Store` interface `load/save`; `ServerStore` (`GET/PUT /api/save`, atomic write of `state/game.json`, retry on Windows file locks); `MemoryStore` for tests/demo. `FileStore` is out of scope (plan 18).
+- Migration `state/game.sqlite` → `state/game.json` once on server start; `.sqlite` kept as backup; tested on a copy of the family''s real save, never the original.
+- Authoring readers switch to `game.json`: `authoring/server/overview.py` (`selection.STATE_DB`, `burned_ids`), `qgen report`.
+- Where flags live follows the decision linked to this task (`state/flags.json` via `/api/flags`, or inside `SaveData`); `trivia-authoring`''s `apply_flags` (D-47) must still pick them up.
+- Ordering: Python side after part 1 (fixtures recorded on untouched state); TS side needs part 3''s state shape.
+- Plan priority: 590 (after part 3, despite the schema rule''s 900).', '2026-10-11T23:56:40Z', NULL, 54);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (59, 2, 'write plan: Screens on the engine (PORT-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 2).
+
+- Replace the game calls in `app/client/src/lib/api.ts` with engine calls + `ServerStore`; categories/media/flags calls as decided (decision linked to this task, part 4''s plan).
+- Client loads `pool.json` and categories statically: server serves `app/data/` read-only, or the Vite build copies it; settle in the plan (`flake.nix` `.#app` packaging must still work).
+- `PLACEHOLDER(...)` (D-25) stays; no UI changes beyond the wiring.
+- Done when: a full game, every joker, undo and admin overlay work in the browser; the family plays a test night on the TS engine (gamemaster''s check).
+- Plan priority: 500.', '2026-10-11T23:56:40Z', NULL, 54);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (60, 2, 'write plan: Python server cleanup and docs (PORT-8)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 2).
+
+- Delete `app/server/game.py` and the `/api/game*`, `/api/players*` routes from `app/server/main.py`.
+- Fate of `selection.py` (used by `qgen report` and `authoring/server/overview.py`) and of `/media`, `/api/flags`, `/api/categories` vs. the milestone''s "`trivia` serves static files plus `/api/save` only": follow the decisions linked to this task; record the outcome in `plans/decisions.md`.
+- Update `plans/01-architecture.md`, `plans/12-client-engine.md` (PORT tasks `[x]`), `AGENTS.md`, `directory.md`, `README.md`, the `main.py` docstring; check `nix build .#app` and `result/bin/trivia` still run.
+- Plan priority: 400 (last).', '2026-10-11T23:56:40Z', NULL, 54);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (61, 2, 'write plan: Parity fixtures (PORT-1)', 'plan', 'open', 1010, NULL, 'Write the plan for part 1 of the masterplan (plan 2): a scenario recorder for the Python referee and the committed fixtures every later part replays. Priority 1010: runs before the other parts'' plan tasks.
+
+- Scope: `app/server/game.py` + `app/server/selection.py`, scripted games on a small fixed pool: picks, answers, every joker incl. unavailable ones (`jokers_view`, `trial`), skip for the player / for everyone, undo, abandon, delete player, joker budget (`set_jokers`), supply failure at new game, several players.
+- Decide in the plan: how randomness becomes deterministic (inject shuffle/draw choices vs. a seeded PRNG TS can reproduce; must match what part 2''s `engine/rng.ts` will do); where the recorder lives (`authoring/tools/` vs. throw-away script); fixture format in `app/client/src/engine/fixtures/` (inputs, states, views as JSON).
+- Recorder runs on a temp state dir, never on the family''s `state/game.sqlite`.
+- Plan priority: 700 (must run before parts 2–6).', '2026-10-11T23:56:49Z', NULL, 54);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1012,6 +1062,8 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 30 questions take roughly 10–15 minutes; 50 gives a tighter rate but costs more of the human''s time per batch (~8 batches left).', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (3, 'How are needs_work questions (33 now, more per batch) resolved?', 'pending', '["qgen rework once after each batch''s QC, then the gamemaster decides what is still needs_work in the review tool", "the gamemaster decides all of them in the review tool; no qgen rework", "leave them; only approved questions count toward 5000"]', 'Milestone 1, part 6. RUNBOOK: `qgen rework` runs only on the gamemaster''s word; this answer is that word for the batch tasks of this milestone. batch-7 needs_work reasons: mostly giveaway hints, overlap with a pool question, or no usable media.
 Rework costs LLM calls but saves the gamemaster''s time; overlaps (once part 4 drops them before merge) and media misses don''t benefit from rework.', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (4, 'After the engine port, which routes does the Python game server keep besides static files and /api/save?', 'pending', '["Keep /media (download on cache miss, D-17), /api/flags (state/flags.json, D-47) and /api/categories; amend the milestone''s ''static files plus /api/save only'' accordingly", "Move flags into SaveData (drop /api/flags, trivia-authoring reads game.json); keep /media and /api/categories", "Strictly static + /api/save: flags into SaveData, categories served as static files, media served only from the synced cache (no download on miss; trivia-media sync required before play)"]', 'Milestone 2 "Done when" says `trivia` serves static files plus `/api/save` only. Today `app/server/main.py` also has `/media` (cache + download on miss, D-17), `/api/flags` (game flags questions, `trivia-authoring` turns them into reviews, D-47) and `/api/categories` (all bundles, D-43). Python stays in family mode anyway (plan 12, D-3); the desktop shell (plan 18) is out of scope. Affects parts 4, 5, 6 of the masterplan.', NULL, NULL, '2026-10-11T23:56:57Z', NULL, 54, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (5, 'Where does the supply check for qgen report and the authoring start page live once app/server/selection.py has no game to serve?', 'pending', '["Move selection.py to authoring/tools/ unchanged (reads game.json), parity with engine/selection.ts guarded by the PORT-1 selection fixtures", "Authoring calls the TS engine via node (type stripping), no Python copy", "Keep app/server/selection.py where it is"]', '`qgen report` and `authoring/server/overview.py` use `selection.py` (levels, `LEVEL_RANGES`, `available`, `supply`, `burned_ids`). After PORT-8 the game no longer needs it. A Python copy duplicates the rules in two languages; calling Node from Python tooling adds a runtime hop. Plan 12 (PORT-8) left it open. Affects part 6 (and part 4''s switch of the authoring readers).', NULL, NULL, '2026-10-11T23:56:58Z', NULL, 54, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -1028,6 +1080,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (13, 23, '2026-10-11T23:52:49Z', '2026-10-11T23:53:45Z', 'done', NULL, 0, '776787ea570c7b398ba40c2e4da2e7003f323435', 'claude-opus-5-5[1m]', 'f12a1a7f-b761-46de-8040-60e2bd1e05df', 8, 16, 4891, 287815, 34064, 0.427959, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (14, 24, '2026-10-11T23:53:45Z', '2026-10-11T23:54:52Z', 'done', NULL, 0, '3def4ab41f85709722f02ca7b0ffa6e6fc0209d0', 'claude-opus-5-5[1m]', '968a74a2-a95a-4f6b-ae51-6a7fbac8aa99', 9, 18, 6577, 346223, 39040, 0.5131766, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (15, 2, '2026-10-11T23:54:52Z', '2026-10-11T23:55:53Z', 'done', NULL, 0, '00a9a2efc5c7ffc663fcdc31b80b0959bcecee90', 'claude-opus-5-5[1m]', '405770f5-0bf4-48f2-9f6a-bb47813468d9', 10, 20, 5689, 348572, 33337, 0.45027039999999996, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (16, 54, '2026-10-11T23:55:53Z', '2026-10-11T23:57:08Z', 'done', NULL, 0, '76cdfdd3b4b2be8a52558adffa5925b0b01da56d', 'claude-opus-5-5[1m]', '67665ee3-61b2-43f5-a24c-8ab0630b9ff7', 8, 16, 7760, 302651, 36510, 0.5078742, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -1040,3 +1093,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (44, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (48, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (48, 2);
 INSERT INTO task_decision (task_id, decision_id) VALUES (52, 3);
+INSERT INTO task_decision (task_id, decision_id) VALUES (58, 4);
+INSERT INTO task_decision (task_id, decision_id) VALUES (58, 5);
+INSERT INTO task_decision (task_id, decision_id) VALUES (59, 4);
+INSERT INTO task_decision (task_id, decision_id) VALUES (60, 4);
+INSERT INTO task_decision (task_id, decision_id) VALUES (60, 5);
