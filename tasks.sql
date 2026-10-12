@@ -632,7 +632,92 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck. A credits screen covers the licences. No Steamworks yet: the build runs without Steam (S5 adds the binding).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s tasks stop and say so if one is missing)
+- TS engine (milestone 2): screens on the engine (part 5, PORT-7) and the Store interface + `SaveData` (part 4, PORT-4/5). Plans 19 "Engine core" and 20 "Engine game state machine" today; parts 4–5 have no plan yet (tasks 58, 59). The shell must load the client without Python.
+- Shell decision (OQ-29): plan 34 "Desktop shell (OQ-29)" (milestone 7). Parts 1–3 write their plans against the answer; until it is in, they assume nothing beyond "a Chromium-like window that loads `app/client/dist/`". If OQ-29 is still pending when a part''s plan task runs, it makes the task pending on that decision.
+- Licence data per media file: plan 26 "Licence data in the pool" (milestone 4), for part 7.
+
+## Rules for every part
+- The family game at home (`trivia`, Python server + browser on the TV) keeps working after every task: same keys, same screens, same save (`ServerStore`).
+- New shipped code goes under `app/` (D-35, e.g. `app/desktop/`); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`.
+- Dependencies: the shell and its builder only (OQ-29''s answer). Anything else (a gamepad library, a focus library, a glyph pack with code) needs a `pm decision`.
+- Offline, no accounts, no telemetry. No Steamworks calls (S5).
+- Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
+
+## Parts
+
+1. **Desktop shell skeleton (SW-2)**
+   - Owner: `plans/18-steam-integration.md` ("Desktop shell").
+   - Window, fullscreen by default with a toggle (F11 / menu), loads `app/client/dist/` without a server; a minimal preload bridge (no Node in the page).
+   - Data and media without Python: the client''s data files (pool, categories, age groups, bundles) and `/media?url=…` (today `app/server/main.py` + `media_cache.py`) need a shell-side resolver, e.g. a custom protocol mapping a media URL to a file in a bundled media folder. Same URLs for the client in both setups, or one small adapter in `lib/`.
+   - Dev on NixOS: the npm Electron binary doesn''t run there; the flake provides the shell runtime (e.g. `pkgs.electron`) and a dev command (`trivia-desktop`). Linux/Windows builds still use the builder''s binaries (part 3).
+   - Done when: the dev command opens the game fullscreen and a whole game plays with media and sound, no Python process running.
+   - Suggested priority: 480 (after M2''s PORT-7, ~500).
+
+2. **File saves (SW-3)**
+   - Owner: `plans/18-steam-integration.md`; interface from `plans/12-client-engine.md` (Store, `SaveData`, PORT-4).
+   - `FileStore` behind the bridge: one JSON file in the shell''s user data folder (Steam Auto-Cloud later syncs it with no code); atomic write (temp + rename) with a retry for Windows file locks; corrupt or newer-version file → keep a backup, start fresh, show a message (strings through the catalog, milestone 3).
+   - Optional: import a save file (the family''s `state/game.json`) — only if cheap; otherwise backlog.
+   - Done when: players and burned questions survive a restart and a crash during write (throw-away script kills the process mid-write).
+   - Suggested priority: 470 (after part 1).
+
+3. **Local builds for Windows and Linux (SW-5, SW-6)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - Builder per OQ-29 (electron-builder in the draft): Windows x64 (installer or portable zip) and Linux x64 (AppImage or tar.gz; the Deck runs this one). Build steps: client build, `app/data/` export current (`qgen validate`), media bundled.
+   - Media for S3: the approved media cache as is (`trivia-media sync --status approved`, ~720 MB) is fine for a local build; resizing/re-encoding is SW-9 (S5). Media is gitignored (D-17), so a CI build has no media: the plan decides (pm decision if unclear) whether CI builds without media (content added locally or as a later depot) or fetches it with `trivia-media sync`.
+   - SW-6 CI in GitHub Actions: no secrets needed in S3 (no upload). If CI is more work than it''s worth before S5, the plan may move SW-6 to S5 via a decision.
+   - Offline start test on a clean Windows machine and a Linux machine without Nix: written checklist; the gamemaster runs it (workers don''t own such machines).
+   - Done when: `nix` or `npm` command produces both artefacts; each starts offline and plays a game.
+   - Suggested priority: 460 (after parts 1–2).
+
+4. **Action layer and focus navigation (IN-2, IN-3)**
+   - Owner: `plans/14-input.md` (section 2).
+   - Action layer in `app/client/src/lib/` (e.g. `input.ts`): `confirm`, `back`, `menu`, `answer(1..4)`, `joker(name)`, `navigate(dir)`; keyboard and mouse produce actions; screens listen only to actions. Replaces the `keydown` branches in `Game.svelte` and the dialogs (IN-1''s audit lists them). Keys unchanged for the family.
+   - Focus model: spatial focus between controls, the sky-blue focus ring (D-29), focus memory per screen, focus never lands on the ☰ overlay button by accident (IN-1).
+   - Independent of the shell; works in the browser setup too. New screens from milestones 5 and 7 (plans 29, 36) use it if they land later; if they landed earlier, this part converts them.
+   - Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the family''s keys behave as before.
+   - Suggested priority: 500 (client code; no dependency on the engine).
+
+5. **Gamepad input and button glyphs (IN-4, IN-5)**
+   - Owner: `plans/14-input.md`. Builds on part 4.
+   - Gamepad API polling (`requestAnimationFrame` while a pad is connected), standard mapping (Steam Input presents an Xbox pad): D-pad/stick → `navigate`, A/B/Start → `confirm`/`back`/`menu`.
+   - Design first (IN-4): direct answer buttons (A/B/X/Y on the Question screen) and joker access (bumpers, wheel or focus row); a pm decision with a recommendation if the plan can''t settle it from 14.
+   - Glyphs follow the last-used device (keyboard letters, Xbox, PlayStation from `Gamepad.id`); art original or from a free set with a clear licence (D-45 style), listed for part 7.
+   - Done when: a full game, every joker and every dialog work with an Xbox-style pad in Chromium on Linux and Windows; the prompts switch when the device changes.
+   - Suggested priority: 490 (after part 4).
+
+6. **Deck layout and controller-only text entry (SW-4)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display"), `plans/14-input.md` (Deck), `plans/04-ui-tv-display.md`.
+   - Screen check of every screen at 1280×800 and 1280×720 (and 4K as a sanity check); text ≥ 9 px at 800p (Valve''s guideline); fixes in the `--u` system (D-29), no separate Deck layout unless needed.
+   - Player name without a keyboard: the Steamworks on-screen keyboard is S5 (SW-8), so S3 needs an in-game letter picker or another controller-only way (pick existing player, preset names); the plan proposes one, pm decision if it changes the Player screen visibly for the family.
+   - Done when: screenshots at both sizes pass (Playwright or the shell at a fixed window size); a new player can be created with a pad only.
+   - Suggested priority: 380 (after parts 4–5 and the screen changes of milestones 5–6).
+
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**
+   - Owner: `plans/17-publishing.md` ("Credits in the game").
+   - Generated at build time from the pool''s licence data (plan 26) plus fixed lists: audio (`app/client/public/audio/CREDITS.md`, Elgar note), fonts (`app/client/public/fonts/`), glyphs (part 5), libraries (Svelte, the shell; their licences), and the code/content licence (OQ-35, plan 40) if decided. Generator lives in `app/` or the build step, not in `authoring/` if the shipped build runs it.
+   - Screen reachable from the start screen or the ☰ overlay, scrollable with a pad (part 4); `CREDITS.md` in the shipped files.
+   - Done when: every media file in `app/data/pool.json` appears with author, licence and source link; the build contains `CREDITS.md`; the screen works with keyboard, mouse and pad.
+   - Suggested priority: 400.
+
+8. **S3 close-out and platform test**
+   - Test checklist for the gamemaster: Windows, Linux, Deck (Linux build; also via Proton if cheap), controller only, offline, a full game to level 12 or a loss, a restart keeps the save. Workers prepare it and record the results the gamemaster reports (pm decision "S3 test passed?" with the checklist in the body).
+   - `plans/11-steam.md` S3 row done; 14, 17, 18 statuses and tasks; `plans/project.md`; `plans/README.md`. Masterplans of milestones 9–11 (plans 9–11) get a note if S3 changed their scope (e.g. SW-6 moved, media bundle needs).
+   - Done when: the milestone''s "Done when" holds.
+   - Suggested priority: 140 (last; below plan 43 "S2 close-out" at 150).
+
+## Order
+- Parts 4 → 5 → 6 can start before the engine lands (client only).
+- Plan 34 (OQ-29) + M2 PORT-7 → part 1 → part 2 → part 3.
+- Part 7 after plan 26 and part 5 (glyph credits); its screen needs part 4.
+- Part 8 last.
+
+## Out of scope (from the milestone)
+- Steamworks (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (10, 10, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (11, 11, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
@@ -1983,9 +2068,9 @@ plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:32:24Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (7, 7, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-12, plan 7 body (10 parts); tasks.sql', 'Write plan 7, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:38:11Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (8, 8, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 8, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (8, 8, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-12, tasks.sql (plan 8 body: 8 parts)', 'Write plan 8, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T00:52:44Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (9, 9, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 9, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
@@ -3445,6 +3530,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Note the state of plan 36 (MD-6, MD-7) in `project.md`; don''t wait for it.
 
 Done when: milestone 7''s "Done when" holds (OQ-29..OQ-37 and the Freesound question resolved in `decisions.md`, later phases in `11-steam.md` match); `qgen validate` unaffected (no data touched).', '2026-10-12T00:51:05Z', NULL, 181);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (208, 8, 'create tasks for plan 8', 'split', 'open', 1000, NULL, 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:52:42Z', NULL, 8);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3536,6 +3623,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (75, 179, '2026-10-12T00:49:49Z', '2026-10-12T00:50:14Z', 'done', NULL, 0, '36ce9f055935129958cb26493cbf7027edf758e4', 'claude-opus-5-5[1m]', '66e85f33-14fd-4787-979a-4aa66167404b', 5, 10, 2615, 135545, 22992, 0.263385, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (76, 180, '2026-10-12T00:50:14Z', '2026-10-12T00:50:43Z', 'done', NULL, 0, '5025c8633aee3f5aa586222a9097788e437866c1', 'claude-opus-5-5[1m]', 'b23eb71a-4dc8-4043-a734-6c197147b7a2', 5, 10, 2973, 143617, 26259, 0.2982954, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (77, 181, '2026-10-12T00:50:43Z', '2026-10-12T00:51:13Z', 'done', NULL, 0, 'daf6bd27f2f0c08c14863a72ecfdc257d3ecb10c', 'claude-opus-5-5[1m]', '9265f951-bbab-4d3b-bd84-b3674781b041', 5, 10, 2624, 147857, 27724, 0.3038834, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (78, 8, '2026-10-12T00:51:14Z', '2026-10-12T00:52:54Z', 'done', NULL, 0, 'c915c05219cdd9fbbaffbdc70d9ccd3109280dfd', 'claude-opus-5-5[1m]', 'd93901ef-0cc7-4e68-be21-e1ea094eed89', 12, 22, 9677, 451848, 51253, 0.6940216, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
