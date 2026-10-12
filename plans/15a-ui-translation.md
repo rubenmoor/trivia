@@ -15,7 +15,8 @@ Sub-plan of [15](15-i18n.md). Translates everything on screen that isn't a quest
 - **Translation work:** Claude drafts the catalogs; a native speaker checks each launch language (playtest, not only a read-through).
 
 ## Tasks
-- [ ] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).
+- [x] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).
+  - Done 2026-10-12 (pm plan 21, D-70): `lib/i18n.ts`, `locales/es.ts`, neutral sound cues, `npm run check:literals -w app/client`. Before/after Playwright run (43 screens incl. every joker, overlay, victory, wrong): pixel-identical, same text, `aria-label`/`title`/`placeholder`.
 - [ ] LUI-2 Pseudo-locale for length and missing-string tests.
 - [ ] LUI-3 `en` catalog with English joker names (draft).
 - [ ] LUI-4 Joker keys per language or neutral keys (decision).

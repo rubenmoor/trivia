@@ -3696,13 +3696,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when:
 - `npm run check`, `npm run build`, `npm run check:literals -w app/client` pass.
 - The script fails on a planted literal (try, then remove).', '2026-10-12T00:14:29Z', '2026-10-12T05:01:23Z', 86);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (97, 21, 'LUI-1: before/after comparison and close-out', 'work', 'open', NULL, NULL, 'Show that plan 21 changed nothing visible in Spanish, then close LUI-1.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (97, 21, 'LUI-1: before/after comparison and close-out', 'work', 'done', NULL, '2026-10-12, plans/15a-ui-translation.md, plans/project.md; throw-away Playwright before (e1218f2) vs after: 43 screens pixel-identical (picker <1 px blur noise), texts and aria/title identical; worktree and temp files removed', 'Show that plan 21 changed nothing visible in Spanish, then close LUI-1.
 
 - Comparison per decision (see `pm show`): screens start, player, level, select, question incl. every joker, result, victory, overlay; "before" from the commit before plan 21''s first task (`git log --grep "LUI-1: i18n helper"`, its parent; a `git worktree`, removed afterwards).
 - Any difference: fix it here if small, else a task in plan 21.
 - Mark LUI-1 `[x]` in `plans/15a-ui-translation.md`; `plans/project.md` (M3: part 1 done).
 
-Done when: the comparison shows no difference; plans updated; temp files and worktree gone.', '2026-10-12T00:14:30Z', NULL, 86);
+Done when: the comparison shows no difference; plans updated; temp files and worktree gone.', '2026-10-12T00:14:30Z', '2026-10-12T05:25:27Z', 86);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (98, 22, 'Server errors as codes: server + client wiring, interim Spanish map', 'work', 'done', NULL, '2026-10-11, app/server/game.py, app/server/main.py, app/client/src/lib/{api,types,errors}.ts, Game/JokerTray/Question/Player.svelte, D-57, plans/12-client-engine.md, directory.md; 28 codes checked over HTTP, Spanish word for word; no PORT-1 fixtures yet; ErrorInfo.params is Record<string, unknown> (supply_short carries a list)', 'Part 2 of M3, task 1 of plan 22 (see the plan for the design and the full code table). Runs at 710, before PORT-1''s fixture tasks (700), so fixtures record codes.
 
 - `app/server/game.py`:
@@ -5937,6 +5937,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (193, 94, '2026-10-12T04:56:20Z', '2026-10-12T04:57:24Z', 'done', NULL, 0, 'd8159d45b1dcd56bbbb2dde02d03c8a36a9daf97', 'claude-opus-5-5[1m]', '11ed3442-63d3-4257-8413-25127ea60763', 12, 24, 6278, 476554, 37975, 0.5247668, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (194, 95, '2026-10-12T04:57:24Z', '2026-10-12T04:59:32Z', 'done', NULL, 0, '53e51b002b2a6a601f71a3f1425570214329d483', 'claude-opus-5-5[1m]', '0248d745-29d9-441c-be74-e9242ead637e', 19, 34, 14312, 985806, 63503, 0.99156119999999992, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (195, 96, '2026-10-12T04:59:32Z', '2026-10-12T05:01:34Z', 'done', NULL, 0, '1d9158ab4ed4b09f24e507fd5c89c54c30335fc4', 'claude-opus-5-5[1m]', 'aaa80109-2ac0-4f88-afbc-605dd67ed274', 21, 38, 12125, 941652, 53601, 0.85979040000000018, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (196, 97, '2026-10-12T05:01:34Z', '2026-10-12T05:25:44Z', 'done', NULL, 0, '9924511415b7f8b776c32fa1ab45ad15535068af', 'claude-opus-5-5[1m]', '58315e57-acf5-4061-8de3-6218099fa47d', 42, 70, 18235, 2642075, 98217, 1.6791310000000004, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
