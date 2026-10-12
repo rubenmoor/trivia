@@ -20,17 +20,21 @@ A new step in `authoring/tools/qgen.py`, reusing the existing steps:
 - Only `approved` source questions are translated. A source question that changes later marks its translations `stale` (`validate` reports them).
 - `costs.log` gives the cost per translated question; budget it before a full run (CT-3).
 
-## Storage (decide in QT-1)
+## Storage (decided: D-81)
+Option A is decided in D-81; the options below are kept as history.
+
 - **A: one file per locale** (`authoring/data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. The Spanish file stays the source. Small diffs, easy to review.
 - **B: a `translations` map inside each question.** One file, but `questions.json` grows with every language and gets harder to diff.
 - Draft preference: **A**. The export (PORT-6) builds one playable pool per locale either way.
-- Plan: pm plan 63. A: `questions.<locale>.json` with `source_hash` (`stale` derived, left out of the export), `translatable: false` on sources, names in `app/data/names.<locale>.json` (+ per bundle); export → `app/data/pool.<locale>.json`.
+- Decided: A (D-81, pm plan 63). `questions.<locale>.json` with `source_hash` (`stale` derived, left out of the export), `translatable: false` on sources, names in `app/data/names.<locale>.json` (+ per bundle); export → `app/data/pool.<locale>.json`.
+- Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish rewrite, masterplan part 8) stale every touched translation: full runs come after them.
 
 ## Review tool
 - `/review?batch=…&locale=en` shows the source and the translation side by side, with the same approve / needs work / reject decisions (RV-*).
 
 ## Tasks
 - [ ] QT-1 Storage layout (A or B) and schema; `validate` covers translations and `stale`.
+  - Schema: D-81 (layout A); `validate`/`export`: pm plan 63.
 - [ ] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `authoring/tools/prompts/`.
 - [ ] QT-3 `rate` and `factcheck` per locale.
 - [ ] QT-4 Review tool: side-by-side locale view.
