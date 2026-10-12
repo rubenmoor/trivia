@@ -68,5 +68,5 @@ Only for gaps the free ones leave, and only once a Steam release is real (11): e
 - [x] MP-8 Pool fields `provider`, `license`, `license_url`, `author` per picked slot; migrate existing picks; `validate` checks the allowlist; credit names the provider (shared with PUB-2). *Done in pm plan 26 (tasks 111–113): 1,202 picks migrated on 2026-10-11.*
 - [x] MP-9 Review tool: provider and licence on candidates; search modal over all providers. *2026-10-08; the LLM review also sees each candidate's source.*
 - [x] MP-10 Prompts: "the media sources" instead of Commons only. *2026-10-08: house style lists the sources; Freesound allows everyday sounds too.*
-- [~] MP-11 Compare the first batch with providers against batch-6. *Moved to pm plan 15 (`qgen report --batches`, needs_work `media` share).*
+- [x] MP-11 Compare the first batch with providers against batch-6. *2026-10-11, `qgen report --batches` (pm plan 15). batch-7 vs. batch-6: needs_work for media 7.3 → 7.0 % of merged (guessed from feedback); picks: Commons 602, Openverse 2, Freesound 2 (batch-6: Commons 84). The providers barely change what gets picked; media share fell 25.6 → 13.8 %. Time per step wasn't recorded; `qgen batch` writes it to `run.json` from batch-8 on. Gamemaster media rejections: not counted.*
 - [ ] MP-12 Pixabay, once full API access (≥ 1920 px) is granted

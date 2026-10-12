@@ -26,6 +26,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/data/question-axes.json` | Question styles as axes (D-37) |
 | `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53) |
 | `authoring/tools/qgen.py` | The question pipeline (`qgen batch`, `validate`, `export`, `report`, single steps) |
+| `authoring/tools/health.py` | Batch health metrics per run (`batch_health`), `qgen report --batches`, the Health section and `batches.md` (plan 15) |
 | `authoring/tools/targets.py` | Loads the pool targets (`load_targets`), derived per-category shares, `validate`'s check (D-53) |
 | `authoring/tools/media.py` | Commons search, candidate storage, media sync (`trivia-media`) |
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
@@ -35,6 +36,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/ui/` | Authoring UI (Svelte): `home/` start page, `review/` review tool, `stats/` stats pages, `print/` printable joker cards |
 | `authoring/RUNBOOK.md` | How an LLM makes a batch of questions: one command |
 | `authoring/reports/` | One generated report per batch |
+| `authoring/reports/batches.md` | Generated: batch health of every batch from batch-4 on, side by side (plan 15) |
 
 ## Everything else
 

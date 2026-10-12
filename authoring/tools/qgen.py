@@ -17,7 +17,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
-    qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps]
+    qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -1359,6 +1359,14 @@ def cmd_report(args):
         return report_calibration(args.calibration or last_batches())
     if args.overlaps:
         return report_overlaps()
+    if args.batches is not None:
+        import health  # authoring/tools/health.py (imports qgen)
+        runs = args.batches or health.batch_runs()
+        missing = [r for r in runs if not (WORK / r / "dropped.json").exists()]
+        if missing:
+            sys.exit(f"not merged yet: {', '.join(missing)}")
+        print("\n".join(health.table(runs)))
+        return print(health.deficit_line())
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
     print(f"pool: {len(pool)} questions")
@@ -1421,7 +1429,7 @@ REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "fix", "
 # Keywords in `review.feedback` → problem, for reviews without `problems` (plan 15). Reports only.
 _GUESS = [("media", r"imagen (de fondo )?adecuada|ninguna (imagen|candidat|foto)|hoja de contacto|\bsheet\b"),
           ("fact", r"verificaci[oó]n de datos|es fals[oa]|no es (cierto|exact)|incorrect|err[oó]ne|equivocad|est[aá] mal|no se pudo confirmar"),
-          ("overlap", r"q-\d{4}|duplica|se cruza|misma respuesta|\bduplicate\b"),
+          ("overlap", r"(?<![/\w])q-\d{4}(?!\.jpg)|duplica|se cruza|misma respuesta|\bduplicate\b"),
           ("giveaway", r"(pistas?|descripci[oó]n|imagen|texto|pregunta|respuesta)\b.{0,120}\b(regala|delata|revela|resuelve|descarta|dan? la respuesta|dice la respuesta|apunta|deja solo|se delata)"),
           ("ambiguity", r"defend|ambig|tambi[eé]n (es|ser[ií]a|podr[ií]a ser) (correct|v[aá]lid)|m[aá]s de una respuesta"),
           ("style", r"en com[uú]n|relleno|larg[oa]|historia|imagina|retirad"),
@@ -1755,6 +1763,7 @@ def cmd_record(args):
     _, checks = collect(d)
     today = datetime.date.today().isoformat()
     changes, missing = {}, []
+    snapshot = load_json(d / "recorded.json", {})
     for q in batch_questions(args.run):
         full = load_json(d / "reviews" / f"{q['id']}.json", {})
         r = final_review(full)
@@ -1793,8 +1802,10 @@ def cmd_record(args):
                 x["fact_checked"] = check["verdict"] == "confirmed"
             x.update(review=review, status=review["decision"])
         changes[q["id"]] = change
+        snapshot[q["id"]] = {"decision": review["decision"], "problems": review["problems"]}
         progress.detail(f"  record: {q['id']}: {decision}")
     update_pool(changes)
+    save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
     if missing:
         print(f"  no review yet: {', '.join(missing)}", file=sys.stderr)
         return [RuntimeError(f"{len(missing)} question(s) without a review")]
@@ -1821,7 +1832,8 @@ def cmd_sync_run(args):
 
 
 def cmd_batch_report(args):
-    """authoring/reports/<run>.md: what the batch produced, written by code."""
+    """authoring/reports/<run>.md: what the batch produced, written by code; also batches.md (plan 15)."""
+    import health  # authoring/tools/health.py (imports qgen)
     d = run_dir(args)
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == args.run]
     cfg = load_json(d / "run.json", {})
@@ -1843,7 +1855,7 @@ def cmd_batch_report(args):
              f"- Reviewed by: {', '.join(models) or '-'}",
              f"- Claude calls: {len(costs)}, about ${sum(costs):.2f} at list price",
              f"- Picked files not cached yet: {len(not_cached)}" + (" (run `trivia-media sync --status approved`)" if not_cached else ""),
-             "", "## Needs work", ""]
+             "", *health.health_section(args.run), "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}" for q in work] or ["None."]
     lines += ["", "## Question axes", ""]
     lines += [f"- {a}: " + ", ".join(f"{v} {n}" for v, n in count(qs, lambda q, a=a: (q.get('axes') or {}).get(a)).items())
@@ -1854,6 +1866,7 @@ def cmd_batch_report(args):
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"  report: {out.relative_to(ROOT)}")
+    print(f"  report: {health.write_batches_md().relative_to(ROOT)}")
     return []
 
 
@@ -1875,9 +1888,10 @@ def batch_subcategories(count=None, bundle="base"):
     return batches.subcategories(load_json(POOL)["questions"], count, bundle)
 
 
-def run_steps(steps, again):
+def run_steps(steps, again, run=None):
     """Run (name, fn, args) steps in order, then validate; waits out Claude's usage limit (QG-21).
-    Exits 75 or 1 on a step that fails; `again` is the command that continues. Returns the start time."""
+    Exits 75 or 1 on a step that fails; `again` is the command that continues. Returns the start time.
+    With `run`, adds each step's seconds to run.json's "seconds" (batch health, plan 15)."""
     t0 = time.monotonic()
     i = 0
     while i < len(steps):
@@ -1891,6 +1905,11 @@ def run_steps(steps, again):
             errors = [e]
         print(f"   {name} took {progress.duration(time.monotonic() - t)} "
               f"(batch: {progress.duration(time.monotonic() - t0)})", flush=True)
+        if run:
+            cfg = load_json(WORK / run / "run.json")
+            secs = cfg.setdefault("seconds", {})
+            secs[name] = round(secs.get(name, 0) + time.monotonic() - t)
+            save_json(WORK / run / "run.json", cfg)
         limit = next((e for e in errors if isinstance(e, UsageLimit)), None)
         if limit and wait_for_reset(limit, again):
             i -= 1  # the step skips the work it already did (QG-21)
@@ -1966,7 +1985,7 @@ def cmd_batch(args):
         ("sync", cmd_sync_run, ns()),
         ("batch-report", cmd_batch_report, ns()),
     ]
-    t0 = run_steps(steps, "qgen batch" + (f" --bundle {args.bundle}" if args.bundle != "base" else ""))
+    t0 = run_steps(steps, "qgen batch" + (f" --bundle {args.bundle}" if args.bundle != "base" else ""), run)
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == run]
@@ -2292,6 +2311,8 @@ def main():
                     help="supply per subcategory × difficulty, for the jokers (JK-10)")
     rp.add_argument("--calibration", nargs="*", metavar="BATCH",
                     help="drafted/rated/final difficulty per target level (plan 13); default: the last two batches")
+    rp.add_argument("--batches", nargs="*", metavar="BATCH",
+                    help="batch health side by side (plan 15); default: batch-4 onward")
     rp.add_argument("--overlaps", action="store_true",
                     help="approved questions that may ask the same fact (plan 15); listing only")
     add("validate", cmd_validate, run=False)

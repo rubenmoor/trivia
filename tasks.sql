@@ -1165,6 +1165,32 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `batch-report`: a "## Health" section at the top of `authoring/reports/<batch>.md`: each metric, its threshold, ✓/✗, and the previous two batches'' values.
 - Cross-batch: `qgen report --batches [<batch>…]` (default batch-4 onward) prints one column per batch; `batch-report` also regenerates `authoring/reports/batches.md` with the same table and the gamemaster''s acknowledgements (below).
 
+## Batch health baseline (2026-10-11, task 45)
+- `health.py` + `qgen report --batches` over batch-4…7 (batch-8 not merged yet); full table: `authoring/reports/batches.md`.
+- Needs_work = `record`''s decisions, before rework and the gamemaster''s review: `work/<run>/recorded.json` (written by `record` from batch-8 on), else the batch report''s needs-work list, else the oldest llm review (batch-4). Problems guessed from feedback for batch-4…7.
+- Wall time: `qgen batch` adds each step''s seconds to `run.json` (`seconds`) from batch-8 on; older batches: days only.
+
+| metric | b4 | b5 | b6 | b7 |
+|---|---:|---:|---:|---:|
+| drafts / merged / approved | 114 / 112 / 104 | 96 / 85 / 71 | 91 / 82 / 66 | 712 / 616 / 504 |
+| skipped slots | 3 | 8 | 29 | 313 |
+| drop rate | 1.8 % | 11.5 % | 9.9 % | 13.5 % |
+| hard fail no_giveaway (drops) | 2 | 7 | 9 | 90 |
+| needs_work rate | 7.1 % | 16.5 % | 19.5 % | 18.2 % |
+| ↳ giveaway / media / fact | 2.7 / 0.9 / 0.9 % | 4.7 / 10.6 / 2.4 % | 9.8 / 7.3 / 1.2 % | 8.9 / 7.0 / 2.9 % |
+| ↳ overlap | 3.6 % | 1.2 % | 1.2 % | 2.9 % |
+| overlap rate | 3.5 % | 3.1 % | 1.1 % | 2.7 % |
+| merged / slots 11–15 | n/a | n/a | 52.5 % | 60.0 % |
+| max final−target gap 11–15 | n/a | n/a | 2.0 | 2.95 |
+| top move / clue / answer_kind / lens | 42 / 94 / 40 / 21 % | 52 / 95 / 33 / 21 % | 15 / 43 / 44 / 21 % | 13 / 45 / 28 / 19 % |
+| media share | 23 % | 33 % | 26 % | 14 % |
+| mean fun | 3.65 | 3.69 | 3.56 | 3.67 |
+| $ / approved, calls / approved | $0.16* / 1.4 | $0.37 / 3.3 | $0.30 / 2.6 | $0.24 / 1.9 |
+
+- \* batch-4''s work dir has no review step.
+- Against the first guess below, batch-7 fails: one problem > 8 % (giveaway), overlap needs_work > 1 %, final difficulty gap 2.95 > 1.5, top stimulus/clue/answer_kind > 25 % (by design for stimulus), media share 14 % < 20 %. Adjusted proposal: pm decision 13 (task 44 waits for it).
+- PE-6, PE-13 (plan 20) and MP-11 (plan 23) closed with these numbers.
+
 ## Thresholds (first guess; the gamemaster decides)
 - drop rate ≤ 20 % of drafts;
 - needs_work ≤ 20 % of merged; any one problem ≤ 8 %;
@@ -2826,7 +2852,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Log in `plans/decisions.md` only if the answer changes D-55.
 
 Done when: a throw-away failing threshold makes `qgen batch` exit 2 before `concepts` (no LLM calls), and `qgen health ack` clears it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:32Z', NULL, 22);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (45, 15, 'Batch health: health.py, qgen report --batches, Health section, baseline; propose thresholds', 'work', 'open', 690, NULL, 'Part "Batch health" of plan 15, plus the threshold decision (plan''s tasks 4 and 5). After the problems task (needs_work by problem) and the no_overlap task (overlap drops); without them those rows read "n/a".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (45, 15, 'Batch health: health.py, qgen report --batches, Health section, baseline; propose thresholds', 'work', 'done', 690, '2026-10-11, authoring/tools/health.py, authoring/tools/qgen.py (report --batches, Health section, recorded.json, step seconds), authoring/reports/batches.md, plans/20, plans/23, plans/project.md, directory.md, AGENTS.md; decision 13 blocks task 44', 'Part "Batch health" of plan 15, plus the threshold decision (plan''s tasks 4 and 5). After the problems task (needs_work by problem) and the no_overlap task (overlap drops); without them those rows read "n/a".
 
 - `authoring/tools/health.py`: `batch_health(run) -> dict` from `work/<run>/` and the pool; metrics as listed in plan 15 (drops by reason, merged/approved/needs_work, needs_work by `problems` incl. the guessed classifier, overlap rate, difficulty, variety, media share, mean `fun`, cost, calls, wall time).
 - Difficulty vs. target: reuse plan 13''s `--calibration` code (task 29) if it exists; else "n/a". Approved per level vs. deficit: plan 12''s `load_targets` (task 25) if it exists; else "n/a".
@@ -2835,7 +2861,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Baseline: run over batch-4…7 (and batch-8 if recorded); record the table in plan 15 (`pm plan edit 15 --body -`). Close PE-6, PE-13, MP-11: numbers into `plans/20-pipeline-efficiency.md` and `plans/23-media-providers.md`, mark them `[x]`.
 - Decision: `pm decision add "Batch health thresholds and stop rule?"` with the plan''s first-guess thresholds adjusted to the baseline in the body; options: recommended set (first) / looser set / warnings only, no stop. Then `pm task-pending-decision 44 <decision id>`.
 
-Done when: `qgen report --batches` prints batch-4…7; plan 15 has the baseline; PE-6/PE-13/MP-11 closed; decision created and the thresholds task waits on it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:38Z', NULL, 22);
+Done when: `qgen report --batches` prints batch-4…7; plan 15 has the baseline; PE-6/PE-13/MP-11 closed; decision created and the thresholds task waits on it; `qgen validate` clean; no batch run.', '2026-10-11T23:52:38Z', '2026-10-12T02:40:53Z', 22);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (46, 16, 'LLM audit: audit.md, qgen audit, batch step, Audit section; batch-7 baseline', 'work', 'open', NULL, NULL, 'Part "LLM audit (a)" of plan 16: an independent second LLM reader of a seeded sample per batch.
 
 - `authoring/tools/prompts/audit.md` (new): strict reader of the question as played; sees question, options, hints, fun fact, difficulty, media title/role, `related` pool questions, house style; not the review verdict, `fix`, rater notes or fact check. Checks facts (web search like `factcheck`), ambiguity, giveaways, overlap, difficulty (1–15, D-38), house style.
@@ -4498,6 +4524,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: check passes; `qgen validate` clean; no batch run.', '2026-10-12T01:31:50Z', '2026-10-12T01:39:49Z', 273);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (275, 18, 'create tasks for plan 18', 'split', 'dropped', 1000, 'plan 18 body edit by task 70 only notes the soak db/step-count format; tasks 70/71 already cover it, nothing new to split', 'Split plan 18 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:07:41Z', '2026-10-12T02:08:03Z', 70);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (276, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:40:39Z', NULL, 45);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4553,6 +4581,37 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Browser + server: + closest to today. − no game window, no overlay, two runtimes, PyInstaller AV false positives.
 
 **Recommendation:** Electron. Wrap the Steam calls in one small bridge, so the binding can be swapped.', NULL, NULL, '2026-10-12T02:10:48Z', NULL, 182, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (13, 'Batch health thresholds and stop rule?', 'pending', '["Recommended set (body), stop the next qgen batch on a ✗ until qgen health ack", "Looser set (body), same stop rule", "Recommended set as warnings only: ✓/✗ in the report, no stop"]', 'Plan 15 (D-55): every batch report gets health metrics; a batch that fails a threshold makes the next `qgen batch` exit 2 until you run `qgen health ack <batch> "<note>"`. Baseline batch-4…7 (`qgen report --batches`, `authoring/reports/batches.md`; needs_work = `record`''s decisions, problems guessed from feedback for these old batches):
+
+| metric | b4 | b5 | b6 | b7 |
+|---|---:|---:|---:|---:|
+| drop rate (of drafts) | 1.8 % | 11.5 % | 9.9 % | 13.5 % |
+| needs_work (of merged) | 7.1 % | 16.5 % | 19.5 % | 18.2 % |
+| largest problem | overlap 3.6 % | media 10.6 % | giveaway 9.8 % | giveaway 8.9 % |
+| overlap rate (of drafts) | 3.5 % | 3.1 % | 1.1 % | 2.7 % |
+| needs_work for overlap | 3.6 % | 1.2 % | 1.2 % | 2.9 % |
+| merged / slots at 11–15 | n/a | n/a | 52.5 % | 60.0 % |
+| max mean-final gap to target, 11–15 | n/a | n/a | 2.0 | 2.95 |
+| top move / lens | 42 / 21 % | 52 / 21 % | 15 / 21 % | 13 / 19 % |
+| top clue / answer_kind | 94 / 40 % | 95 / 33 % | 43 / 44 % | 45 / 28 % |
+| media share (stimulus ≠ none) | 23 % | 33 % | 26 % | 14 % |
+| mean fun | 3.65 | 3.69 | 3.56 | 3.67 |
+| $ per approved | $0.16* | $0.37 | $0.30 | $0.24 |
+
+\* batch-4 without review costs. Top stimulus is 67–86 % by design (`none` weighs 7), so "top value ≤ 25 %" can''t apply to every axis.
+
+**Recommended set** (plan''s first guess, adjusted):
+- drop rate ≤ 20 %; needs_work ≤ 20 %; any one problem ≤ 10 % (was 8 %: giveaway sits at 9–10 %).
+- overlap rate ≤ 3 %; needs_work for overlap ≤ 1 % (`no_overlap` in `rate` is new; b7 had 2.9 %).
+- merged at 11–15 ≥ 55 % of slots there (was 60 %); mean final within ±1.5 of target at each of 11–15 (plan 13''s goal).
+- top value: move and lens ≤ 25 %, answer_kind ≤ 40 %, clue ≤ 50 %; stimulus only through media share 15–50 % (was 20–50 %).
+- mean fun ≥ 3.4 (new); $ per approved ≤ $0.35.
+- trend: no metric worse than the mean of the previous two batches by more than half its threshold''s margin.
+- batch-7 would fail 3: overlap needs_work 2.9 %, difficulty gap 2.95, media share 13.8 %. If batch-8 looks the same, batch-9 waits for your ack.
+
+**Looser set:** drop ≤ 25 %; needs_work ≤ 25 %, one problem ≤ 12 %; overlap rate ≤ 5 %, overlap needs_work ≤ 3 %; merged 11–15 ≥ 45 %, gap ±2.5; move/lens ≤ 30 %, answer_kind ≤ 50 %, clue ≤ 60 %; media 10–60 %; fun ≥ 3.3; $ ≤ $0.50; no trend rule. batch-7 passes all.
+
+**Warnings only:** the recommended numbers, ✓/✗ in the reports and `batches.md`, but `qgen batch` never stops.', NULL, NULL, '2026-10-12T02:40:28Z', NULL, 45, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -4677,6 +4736,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (120, 36, '2026-10-12T02:14:07Z', '2026-10-12T02:17:21Z', 'done', NULL, 0, '08ee712be02e3a256dea5791671aa1f1f691f5c7', 'claude-opus-5-5[1m]', '116aa6b4-22ae-4696-af49-8b80917434d1', 30, 54, 16924, 1429487, 58455, 1.0922334000000002, 159754);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (121, 44, '2026-10-12T02:17:21Z', '2026-10-12T02:17:43Z', 'failed', 'still open and not blocked', 0, '21d6534a8bf026cd138e58e23acb043d2bc414f2', 'claude-opus-5-5[1m]', '17e748ae-1eb0-46ea-86b0-9a47cffae6ab', 6, 12, 1782, 173875, 25733, 0.276327, 159754);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (122, 113, '2026-10-12T02:35:53Z', '2026-10-12T02:36:23Z', 'done', NULL, 0, '016e5df3377c9006f2053d819260db6dbe2ca89a', 'claude-opus-5-5[1m]', '42ec4817-94cf-4f2b-a10c-cd51ce960a76', 8, 16, 2827, 228644, 23558, 0.2907968, 175567);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (123, 45, '2026-10-12T02:36:23Z', '2026-10-12T02:41:06Z', 'done', NULL, 0, '15427b299f0bc03d7d19891c672ebb969b48d881', 'claude-opus-5-5[1m]', '45359b4d-24db-46a4-b6be-e71dd1201d05', 32, 62, 30320, 2500388, 107711, 1.9684135999999999, 175567);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -4687,6 +4747,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (32, 11);
 INSERT INTO task_decision (task_id, decision_id) VALUES (35, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (36, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (44, 1);
+INSERT INTO task_decision (task_id, decision_id) VALUES (44, 13);
 INSERT INTO task_decision (task_id, decision_id) VALUES (48, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (48, 2);
 INSERT INTO task_decision (task_id, decision_id) VALUES (52, 3);

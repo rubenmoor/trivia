@@ -63,14 +63,14 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [ ] Gamemaster decides the 159 `needs_work` questions at `/review?status=needs_work` and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them). 2026-10-08: 122 of them have no media picked (QP-6), and q-0046's cached image is damaged (download it again)
 - [ ] Top up difficulties 9–10 (only 24 approved, 2 at 10) — [`backlog`](backlog.md) B-6
 - [x] PE-1..PE-5 Fewer Claude calls and tokens per batch (grouped rate and revise, kept fact-checks, per-subcategory avoid list, compact JSON) — [`20`](20-pipeline-efficiency.md)
-- [~] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 (pm plan 15) — [`20`](20-pipeline-efficiency.md)
+- [x] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 (pm plan 15) — [`20`](20-pipeline-efficiency.md)
 - [x] PE-7..PE-12 Concept lists per subcategory and question styles as axes; `draft` draws concepts and axis combinations by code (D-37) — [`20`](20-pipeline-efficiency.md)
-- [~] PE-13 Compare the first concept-based batch against the PE-6 batch (pm plan 15) — [`20`](20-pipeline-efficiency.md)
+- [x] PE-13 Compare the first concept-based batch against the PE-6 batch (pm plan 15) — [`20`](20-pipeline-efficiency.md)
 - [x] AG-2..AG-6 Four age groups, shared scale 1–15, focus group young teens: data file, house style, prompts, `qgen`, Espacio list again (D-38) — [`21`](21-age-groups.md)
 - [x] AG-10 No focus: `"focus": null` writes across the whole scale 1–15, even targets (D-40) — [`21`](21-age-groups.md)
 - [ ] AG-8 Batches for other age groups (`LEVEL_WEIGHTS` per group) — [`21`](21-age-groups.md)
 - [x] AG-9 Review tool: set difficulties 11–15 (`d`, number, Enter) — [`21`](21-age-groups.md)
-- [~] MP-2..MP-12 Media providers next to Commons (done: MP-2..MP-4, MP-6..MP-10; open: MP-5 Pexels paused, MP-11 (pm plan 15), MP-12) (Openverse, Pexels, Freesound, NASA) with a licence allowlist; a rate-limited provider is skipped, not waited for (D-45) — [`23`](23-media-providers.md)
+- [~] MP-2..MP-12 Media providers next to Commons (done: MP-2..MP-4, MP-6..MP-11; open: MP-5 Pexels paused, MP-12) (Openverse, Pexels, Freesound, NASA) with a licence allowlist; a rate-limited provider is skipped, not waited for (D-45) — [`23`](23-media-providers.md)
 - [x] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes; Colombian subcategories moved to `colombia` (D-41, D-43) — [`22`](22-bundles.md)
 
 - [~] RV-12..RV-17 Start page for the authoring tool at `/` (done 2026-10-09 except RV-17, the `validate` result): what waits for the gamemaster, batches, game readiness, all as links into review queues; order of work in 08 — [`08`](08-review-tool.md)
