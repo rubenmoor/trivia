@@ -429,6 +429,15 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Core design issues (cross-cutting, bigger refactor, changed behaviour or formats): no refactor yet; `pm decision add` with the options (recommended first), link a follow-up task with `pm task-pending-decision`.
 - Larger follow-up work: `pm task add` in this milestone.
 
+## Linter for TypeScript
+- Evaluate first: would a linter catch the bugs and bad code pm workers (Claude) actually write here? Evidence from the review findings so far and a trial run on `app/client/src`, `authoring/ui/src`, `app/desktop` (`.mjs`/`.cjs`).
+- Candidates: stricter `tsconfig` flags only (`noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`, …; no new dependency), Biome, oxlint, ESLint + typescript-eslint + eslint-plugin-svelte. Weigh: bugs caught, Svelte support, dependency count, offline, speed, noise.
+- Result in `code-review.md`; a new dependency needs `pm decision add` (minimal dependencies rule).
+- If useful: a lint pass whenever a task changes TypeScript (`.ts`, `.svelte`, `.mjs`/`.cjs`): one `npm run lint` (or part of `npm run check`), added to the pre-commit checks in `AGENTS.md` (D-73) and `pm` worker instructions.
+  - Until the existing issues are fixed, the pass fails only on new issues (baseline or changed files), so it can land at once.
+  - Existing issues count as bugs: one follow-up task in this milestone fixes them (behaviour unchanged), then the pass covers everything.
+- If not useful: the reasons in `code-review.md`, nothing added.
+
 ## Report: `code-review.md` (repo root)
 - Each review task appends its findings: file, finding, category (unused / practice / complexity / performance / bug / inconsistency), severity, status (fixed in commit / follow-up task N / decision N / won''t fix + why).
 - A last task writes the executive summary right at the top:
@@ -439,6 +448,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Done when
 - Every code file in scope is reviewed and listed in `code-review.md`.
 - Every finding has a status; the executive summary is on top.
+- Linter evaluated; if adopted: the lint pass runs before every commit touching TypeScript and reports no issues.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
@@ -11858,6 +11868,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (592, 59, 'Start screen subtitle follows the game''s levels', 'work', 'done', NULL, '2026-10-12, app/client/src/game/Game.svelte, app/client/src/locales/{es,en}.ts: subtitle {n} = levelsOf(game) (latest game, running or finished; none = 12), plural one/other; browser walk not done, verified by throw-away script (5, 1, 20, missing, null)', '`screen.start.subtitle` («12 preguntas seguidas para llegar a la cima», en "12 questions in a row to reach the top") hardcodes 12; with D-88 (`settings.levels` 1–20) a running game or the configured choice can have another count.
 - `app/client/src/game/Game.svelte` Start screen: `{n}` = `levelsOf(game)` (`game/levels.ts`) for a running game, else the last choice''s `levels` (or 12); catalog `screen.start.subtitle` in every locale gets `{n}` (singular for 1 if needed).
 - Check: `npm run check`, `npm run build`, `npm run check:literals -w app/client`; browser: a running 5-level game shows 5, a fresh save 12.', '2026-10-12T23:20:39Z', '2026-10-12T23:22:15Z', 499);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (593, 72, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 72, the masterplan, in line with it (`pm plan edit 72 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T23:33:08Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -12883,6 +12895,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (394, 309, '2026-10-12T23:28:23Z', '2026-10-12T23:30:05Z', 'done', NULL, 0, '3d35b87fbd0ee273febc8b3d00fa3005389430f5', 'claude-opus-5-5[1m]', '0059d461-a68e-46d4-adbe-03b3f97b78bd', 18, 36, 8066, 785845, 45986, 0.686521, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (395, 310, '2026-10-12T23:30:06Z', '2026-10-12T23:32:21Z', 'done', NULL, 0, '0288399a0cac79f0a87393135f6ead8aeabfd9a1', 'claude-opus-5-5[1m]', 'b2e465b0-5a60-47db-b0da-810e562de690', 33, 52, 10589, 1730142, 78270, 1.1841764000000001, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (396, 311, '2026-10-12T23:32:21Z', '2026-10-12T23:33:08Z', 'done', NULL, 0, 'f578d0695d04b5c06c30ec35ba2f35716b788415', 'claude-opus-5-5[1m]', '1355e2e8-b628-4ed2-a921-97721357f06a', 9, 16, 3311, 237856, 26022, 0.32203119999999996, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (397, 312, '2026-10-12T23:33:08Z', NULL, 'running', NULL, NULL, 'be88cf3f1018589620ffa364764a6dbebc3f4bd6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
