@@ -614,7 +614,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 9. **Freesound API for a commercial release (OQ-45)**
    - Owner: `plans/23-media-providers.md` (Freesound row, MP-6). Today: 9 questions in `authoring/data/questions.json` reference Freesound (6 in `app/data/pool.json`); the game ships the CC0/CC BY files, not the API.
-   - Options: ask Freesound/UPF (the worker drafts the email, the gamemaster sends it); replace the Freesound picks with other allowlisted sources (D-45) and drop Freesound from the pipeline before release; keep it for the family only and exclude it from the Steam media bundle (SW-9).
+   - Options: ask Freesound/UPF (the worker drafts the email, the gamemaster sends it); replace the Freesound picks with other allowlisted sources (D-45) and drop Freesound from the pipeline before release; keep it in the current game only and exclude it from the Steam media bundle (SW-9).
    - Housekeeping: `open-questions.md` uses OQ-45 twice (the resolved one is D-42''s); give the Freesound question a free number and update the references.
    - Done when: D-entry; plan 23 and the provider order reflect the answer; if replacing, the replacement is a task in the plan (picks through the review tool, never by hand, D-36).
    - Suggested priority: 200.
@@ -4546,6 +4546,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (281, 11, 'create tasks for plan 11', 'split', 'open', 1000, NULL, 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (282, 7, 'create tasks for plan 7', 'split', 'open', 1000, NULL, 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
