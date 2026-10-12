@@ -4327,7 +4327,7 @@ Work:
 Check: Enter straight through on an existing family save plays today''s game; each preset starts with its joker budget; `?mode=default` presets the toggle; keyboard only and mouse only; `npm run check`.
 
 Done when: checks pass, docs updated.', '2026-10-12T00:47:35Z', NULL, 174);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (189, 37, 'Launch languages: gather facts, write the decisions (OQ-31)', 'work', 'open', NULL, NULL, 'Part 1 of plan 37. Prepare the OQ-31 decision(s); no code, no translation.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (189, 37, 'Launch languages: gather facts, write the decisions (OQ-31)', 'work', 'done', NULL, '2026-10-12, pm decisions 26 (launch languages) and 27 (Spanish variety); task 190 waits on both; Steam shares from memory (web search denied), to confirm', 'Part 1 of plan 37. Prepare the OQ-31 decision(s); no code, no translation.
 
 - Facts (numbers in the decision body, one-line source each):
   - Steam language shares: latest Steam Hardware & Software Survey; "Spanish – Spain" and "Spanish – Latin America" are separate store languages
@@ -4340,7 +4340,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 37).
 - Delete throw-away scripts.
 
-Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:48:02Z', NULL, 175);
+Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:48:02Z', '2026-10-12T05:30:32Z', 175);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (190, 37, 'Launch languages: record the answer (OQ-31, I18N-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 37. Waits for the OQ-31 decision(s) from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number).
@@ -5739,6 +5739,30 @@ Checklist:
 - [ ] Delete a (test) player
 
 Answer "problems" with one line per problem.', NULL, NULL, '2026-10-12T04:50:41Z', NULL, 299, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (26, 'Launch languages (OQ-31): which languages at Steam launch, and which comes first after?', 'pending', '["Spanish only at launch; English named as the first post-launch language (plan 24 stays as later work)", "Spanish only; no later language planned (plan 24 to be dropped by the gamemaster)", "Spanish + English at launch (plan 24 and QT-6 become S4 work)", "Spanish + English + more at launch (name them)"]', 'Plan 37, I18N-1. Today: everything Spanish (D-6); the pipeline, review and family checks are Spanish. Also decides whether plan 24''s `en` catalog is launch or later work.
+
+Facts
+- Steam survey language shares (approx., from memory of 2025 surveys; web lookup unavailable, gamemaster to confirm at store.steampowered.com/hwsurvey): English ~35–40 %, Simplified Chinese ~25–50 % (swings monthly), Russian ~9 %, Spanish – Spain ~4–5 %, Portuguese – Brazil ~3–4 %, German ~3 %, Spanish – Latin America ~1–2 %. Steam lists "Spanish – Spain" and "Spanish – Latin America" as separate store languages.
+- Pool: 1,136 approved (base 1,034, colombia 102) of 1,211 (`authoring/data/questions.json`, 2026-10-12).
+- Cost per approved question (generation + fix + review): $183 / 835 approved = ~$0.22 (batches 4–7, `work/*/costs.log`). Translation proxy (translate + re-rate + fact-check + review, 15b): ~$0.10–0.22. × plan 16 draft 2,000–3,000 → ~$200–650 per language, plus a native speaker''s review time (the real bottleneck).
+- UI: `app/client/src/locales/es.ts` 218 lines, ~126 keys (LUI-1 done); one more UI language is small (15a, LUI-3 draft exists as plan 24).
+
+Trade-offs
+- Spanish only: Spanish shares ~5–7 % of Steam; every review stays with the family. OQ-32: one target. D-50: only «Trivia en Familia» + English store name.
+- + English: biggest share, ~$200–650 + native review of 2,000–3,000 questions; English trivia market is crowded; difficulty re-rated per locale. OQ-32: two targets. D-50: English name «Living Room Trivia» becomes an in-game name too.
+- More (pt-BR, de …): cost × N, no native reviewer in the family.', NULL, NULL, '2026-10-12T05:30:16Z', NULL, 189, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (27, 'Spanish variety (OQ-31): which Spanish does base speak, and which Steam store languages to tick?', 'pending', '["Neutral Latin American Spanish in base (rewrite ~40 Colombianisms via the pipeline, S4), Colombian in colombia; tick Spanish – Latin America and Spanish – Spain", "Keep Colombian usage as is; tick Spanish – Latin America and Spanish – Spain", "Keep Colombian usage as is; tick Spanish – Latin America only", "Neutral base + per-variety variants (es-419 and es-ES)"]', 'Plan 37, I18N-1. D-6: Colombian usage where natural. D-39/D-49: `colombia` bundle holds what needs a real Colombian connection, `base` the rest. D-50 picked «Trivia en Familia» partly because «sala»/«salón» splits Spanish.
+
+Facts
+- Pool: base 1,034 approved / 1,102; colombia 102 / 109 (`authoring/data/questions.json`, 2026-10-12).
+- Colombian vocabulary in approved base (throw-away regex over question, answers, hints, fun fact): 40 / 1,034 (~4 %) with a clear Colombianism (computador(es) 25, bombillo(s) 14, crispetas 3, banano(s) 4, arequipe, guayabo, cobija …). Pan-LatAm forms common: carro(s) ~40, celular(es) 22; «ustedes» not «vosotros» (1 hit, 0 «vosotros»). Reads as Latin American, not regional.
+- Steam store languages: "Spanish – Latin America" and "Spanish – Spain" separate; Spain''s share is ~2–4× LatAm''s (approx., see the launch-languages decision).
+
+Trade-offs
+- As is, tick LatAm + Spain: no work; Spain players see LatAm forms (carro, celular, ustedes) — understandable, common in Steam games. OQ-32: one Spanish target.
+- Neutral LatAm in base, Colombianisms only in colombia: rewrite ~40 base questions through the pipeline (S4 backlog row, D-36), prompts say neutral LatAm from then on; cheap. OQ-32: one target. D-50 unchanged.
+- Neutral + per-variety variants (es-419 / es-ES): two text sets per question, double review; OQ-32: shared target, variants per question. D-50: maybe two Spanish names.
+- LatAm only: drops the larger Spanish store audience for no saving.', NULL, NULL, '2026-10-12T05:30:29Z', NULL, 189, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -5940,6 +5964,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (196, 97, '2026-10-12T05:01:34Z', '2026-10-12T05:25:44Z', 'done', NULL, 0, '9924511415b7f8b776c32fa1ab45ad15535068af', 'claude-opus-5-5[1m]', '58315e57-acf5-4061-8de3-6218099fa47d', 42, 70, 18235, 2642075, 98217, 1.6791310000000004, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (197, 140, '2026-10-12T05:25:44Z', '2026-10-12T05:28:02Z', 'done', NULL, 0, '312ee10c4eaeaea3cd7dd8fe3fda0887a61e494d', 'claude-opus-5-5[1m]', 'f989e314-9cba-4dd3-a105-9dedfdfaba11', 19, 32, 8510, 794683, 49849, 0.72805660000000017, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (198, 141, '2026-10-12T05:28:02Z', '2026-10-12T05:29:13Z', 'done', NULL, 0, '715803c0a7966af8dba7a092ce38c5439fa21409', 'claude-opus-5-5[1m]', 'c797c737-ad98-410b-bbe1-037ef24d0be8', 15, 30, 4573, 477535, 26959, 0.402759, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (199, 189, '2026-10-12T05:29:13Z', '2026-10-12T05:30:42Z', 'done', NULL, 0, '19f921c502462fd9da9e23fd44eafa3184406ac9', 'claude-opus-5-5[1m]', '9d24e28f-530c-4119-899b-6d3e1adb983a', 12, 24, 6332, 428964, 32269, 0.4706808, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -5970,6 +5995,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (127, 22);
 INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 20);
+INSERT INTO task_decision (task_id, decision_id) VALUES (190, 26);
+INSERT INTO task_decision (task_id, decision_id) VALUES (190, 27);
 INSERT INTO task_decision (task_id, decision_id) VALUES (192, 21);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 23);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 24);
