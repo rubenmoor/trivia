@@ -937,8 +937,11 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 4. **Steam Cloud saves**
    - Owner: `plans/18-steam-integration.md` ("Steam features"); save format from `plans/12-client-engine.md`.
-   - Auto-Cloud only (no Cloud API code) unless the test shows a need. Check: `FileStore`''s atomic write (temp + rename) leaves only the real file in the synced pattern; temp/backup files excluded; one save per OS user vs. per Steam user (decide; pm decision if it changes behaviour for two Steam accounts on one PC).
-   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and burns there; offline on both then online → conflict dialog behaves.
+   - Auto-Cloud only (no Cloud API code) unless the test shows a need. Check: `FileStore`''s atomic write (temp + rename) leaves only the real file in the synced pattern; temp/backup files excluded.
+   - **One save per Steam user** (gamemaster, 2026-10-12): a save = a profile; seen counters and selection per profile (plan 65). Path `<userData>/save/<steamid64>/game.json` (SteamID from part 3''s binding); without Steam `<userData>/save/local/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72, D-entry update). Auto-Cloud root `<appData>/trivia/save/{64BitSteamID}` (Steam''s documented token; Windows `%APPDATA%`, Linux `~/.config`), pattern `game.json`, non-recursive; part 2 enters it.
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot, nothing extra.
+   - First start under a SteamID with no save while `save/local/` has one: ask «Usar el progreso de este equipo» (copy, don''t move) or «Empezar de cero»; no silent merge. Same if SW-3''s single `save/game.json` from S3 builds exists (migrate it to `local/` first).
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves.
    - Suggested priority: 680 (after parts 2–3).
 
 5. **Achievements (SW-11)**
@@ -7834,6 +7837,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:20:34Z', NULL, 243);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (418, 65, 'create tasks for plan 65', 'split', 'open', 1000, NULL, 'Split plan 65 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:23:46Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (419, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:24:08Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
