@@ -3,9 +3,12 @@ import type { Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import type { Rng } from "./rng.ts";
 
+/** Defaults; a game's own: `settings.levels` (= its ranges' length) and `settings.cards` (D-88). */
 export const LEVELS = 12;
 export const PER_LEVEL = 4;
-const ALL_LEVELS = Array.from({ length: LEVELS }, (_, i) => i + 1);
+
+/** Levels 1..n of `ranges`. */
+export const levelsOf = (ranges: LevelRanges): number[] => Array.from({ length: ranges.length }, (_, i) => i + 1);
 
 type Q = Pick<PoolQuestion, "id" | "difficulty">;
 export type CategoryKey = string | null;
@@ -24,13 +27,13 @@ export function available<T extends Pick<PoolQuestion, "id" | "status"> & { bund
   return pool.filter((q) => q.status === "approved" && !skip.has(q.id) && bundles.has(q.bundle ?? "base"));
 }
 
-/** PER_LEVEL distinct questions per level from its range (augmenting paths); `missing` empty = all filled. */
+/** `perLevel` distinct questions per level from its range (augmenting paths); `missing` empty = all filled. */
 export function assign(
-  questions: Q[], levels: Iterable<number>, ranges: LevelRanges,
+  questions: Q[], levels: Iterable<number>, ranges: LevelRanges, perLevel = PER_LEVEL,
 ): { assignment: Map<number, string[]>; missing: Map<number, number> } {
   const width = (l: number) => ranges[l - 1][1] - ranges[l - 1][0];
   const sorted = [...levels].sort((a, b) => width(a) - width(b) || a - b);
-  const slots = sorted.flatMap((l) => Array<number>(PER_LEVEL).fill(l));
+  const slots = sorted.flatMap((l) => Array<number>(perLevel).fill(l));
   const cands = new Map(sorted.map((l) => [l, questions.filter((q) => inRange(q, l, ranges)).map((q) => q.id)]));
   const owner = new Map<string, number>(); // question id -> slot index
 
@@ -59,6 +62,8 @@ export function assign(
 export interface DrawOptions<T> {
   ranges: LevelRanges;
   n?: number;
+  /** Cards each later level must keep fillable. */
+  perLevel?: number;
   keep?: T[];
   avoidCategories?: Iterable<CategoryKey>;
   categoryOf?: (q: T) => CategoryKey;
@@ -70,11 +75,11 @@ export interface DrawOptions<T> {
 /** n questions for `level` from `questions` (already `available`): the lowest seen count first, then
  * fresh categories, each only if later levels stay fillable; null if the level can't be filled. */
 export function draw<T extends Q & { subcategory?: string | null }>(
-  level: number, questions: T[], { ranges, n = PER_LEVEL, keep = [], avoidCategories = [], categoryOf, countOf, rng }: DrawOptions<T>,
+  level: number, questions: T[], { ranges, n = PER_LEVEL, perLevel = PER_LEVEL, keep = [], avoidCategories = [], categoryOf, countOf, rng }: DrawOptions<T>,
 ): T[] | null {
   const cat = categoryOf ?? ((q: T) => q.subcategory ?? null);
   const avoid = new Set(avoidCategories);
-  const later = Array.from({ length: LEVELS - level }, (_, i) => level + 1 + i);
+  const later = Array.from({ length: ranges.length - level }, (_, i) => level + 1 + i);
   const taken = new Set(keep.map((q) => q.id));
   const cands = questions.filter((q) => inRange(q, level, ranges) && !taken.has(q.id));
   rng.shuffle(cands, "draw");
@@ -88,7 +93,7 @@ export function draw<T extends Q & { subcategory?: string | null }>(
     const q = cands.find((q) => {
       if (pickedIds.has(q.id)) return false;
       const gone = new Set([...taken, ...pickedIds, q.id]);
-      return assign(questions.filter((x) => !gone.has(x.id)), later, ranges).missing.size === 0;
+      return assign(questions.filter((x) => !gone.has(x.id)), later, ranges, perLevel).missing.size === 0;
     });
     if (!q) return null;
     picked.push(q);
@@ -97,9 +102,10 @@ export function draw<T extends Q & { subcategory?: string | null }>(
 }
 
 /** Per-level supply for the supply check (GF-5). */
-export function supply(questions: Q[], ranges: LevelRanges): SupplyLevel[] {
-  const { missing } = assign(questions, ALL_LEVELS, ranges);
-  return ALL_LEVELS.map((level) => ({
+export function supply(questions: Q[], ranges: LevelRanges, perLevel = PER_LEVEL): SupplyLevel[] {
+  const all = levelsOf(ranges);
+  const { missing } = assign(questions, all, ranges, perLevel);
+  return all.map((level) => ({
     level,
     range: [ranges[level - 1][0], ranges[level - 1][1]],
     candidates: questions.filter((q) => inRange(q, level, ranges)).length,

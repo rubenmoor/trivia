@@ -1,6 +1,6 @@
 // The referee (PORT-3, plan 20): port of app/server/game.py. Public functions are pure:
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
-import type { Choice, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
+import type { Choice, Difficulty, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { bundlesFor, categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
@@ -116,18 +116,28 @@ function askedCategories(state: GameState, data: EngineData): Set<string | null>
 /** The age group of a game that doesn't name one (D-22's ranges). */
 export const DEFAULT_AGE_GROUP = "young_teens";
 
-/** The default age group; the locale's first base bundle plus every other bundle offered in it (plan 71). */
+/** Ranges of the configure screen's fields (D-88). */
+export const LEVELS_MAX = 20;
+export const CARDS_MAX = 4;
+export const DIFFICULTY_MAX = 15;
+
+/** The default age group; the locale's first base bundle plus every other bundle offered in it (plan 71);
+ * 12 levels, 4 cards, media allowed; the standard joker set (configure screen only, D-88). */
 export function defaultChoice(data: EngineData): Choice {
   const offered = bundlesFor(data);
   const base = offered.find((b) => b.kind === "base");
-  return { age_group: DEFAULT_AGE_GROUP, bundles: offered.filter((b) => b === base || b.kind !== "base").map((b) => b.id) };
+  return {
+    age_group: DEFAULT_AGE_GROUP, difficulty: null,
+    bundles: offered.filter((b) => b === base || b.kind !== "base").map((b) => b.id),
+    levels: selection.LEVELS, cards: selection.PER_LEVEL, video: true, audio: true, jokers: { ...STANDARD_JOKERS },
+  };
 }
 
 /** The game's choice; missing keys, an unknown group or bundles that don't resolve (plan 71) are the
- * defaults, resolved here and never written back. */
+ * defaults (jokers: the game's budget), resolved here and never written back. */
 export function gameChoice(state: GameState, data: EngineData): Choice {
   const d = defaultChoice(data);
-  const { age_group, bundles } = state.settings;
+  const { age_group, bundles, difficulty, levels, cards, video, audio, jokers } = state.settings;
   let out = d.bundles;
   if (bundles !== undefined) {
     try {
@@ -136,7 +146,11 @@ export function gameChoice(state: GameState, data: EngineData): Choice {
       if (!(e instanceof GameError)) throw e;
     }
   }
-  return { age_group: age_group !== undefined && data.groupById.has(age_group) ? age_group : d.age_group, bundles: out };
+  return {
+    age_group: difficulty ? null : age_group !== undefined && data.groupById.has(age_group) ? age_group : d.age_group,
+    difficulty: difficulty ? { ...difficulty } : null, bundles: out,
+    levels: levels ?? d.levels, cards: cards ?? d.cards, video: video !== false, audio: audio !== false, jokers: { ...jokers },
+  };
 }
 
 /** Bundles offered in the locale, duplicates dropped, exactly one base bundle, bundles.json order. */
@@ -154,32 +168,116 @@ function resolveBundles(data: EngineData, wanted: unknown): string[] {
   return on.map((b) => b.id);
 }
 
-/** Validate and normalize a requested choice; a missing key comes from `base`. */
-export function resolveChoice(
-  data: EngineData, input: { age_group?: unknown; bundles?: unknown }, base: Choice = defaultChoice(data),
-): Choice {
-  const group = input.age_group === undefined ? base.age_group : input.age_group;
-  if (typeof group !== "string" || !data.groupById.has(group)) throw new GameError("age_group_unknown", { group: String(group) });
-  return { age_group: group, bundles: resolveBundles(data, input.bundles === undefined ? base.bundles : input.bundles) };
+/** What a choice may get from a request body (plan 27, D-88). */
+export interface ChoiceInput {
+  age_group?: unknown;
+  /** Non-null: custom, then no age_group. */
+  difficulty?: unknown;
+  bundles?: unknown;
+  levels?: unknown;
+  cards?: unknown;
+  video?: unknown;
+  audio?: unknown;
+  /** Merged into `base.jokers`. */
+  jokers?: unknown;
 }
 
-const rangesFor = (data: EngineData, choice: Choice): LevelRanges => data.groupById.get(choice.age_group)!.levels;
+export const CHOICE_KEYS = ["age_group", "difficulty", "bundles", "levels", "cards", "video", "audio", "jokers"] as const;
+
+function checkDifficulty(d: unknown): Difficulty {
+  const ok = (n: unknown): n is number => Number.isInteger(n) && 1 <= (n as number) && (n as number) <= DIFFICULTY_MAX;
+  if (d === null || typeof d !== "object" || Array.isArray(d)) throw new GameError("difficulty_invalid");
+  const { start, end } = d as Record<string, unknown>;
+  if (!ok(start) || !ok(end) || end < start) throw new GameError("difficulty_invalid");
+  return { start, end };
+}
+
+function checkCount(v: unknown, min: number, max: number, code: string): number {
+  if (!Number.isInteger(v) || (v as number) < min || (v as number) > max) throw new GameError(code, { min, max });
+  return v as number;
+}
+
+function checkSwitch(v: unknown, field: string): boolean {
+  if (typeof v !== "boolean") throw new GameError("switch_invalid", { field });
+  return v;
+}
+
+/** Validate and normalize a requested choice; a missing key comes from `base`. */
+export function resolveChoice(data: EngineData, input: ChoiceInput, base: Choice = defaultChoice(data)): Choice {
+  let age_group: string | null = null, difficulty: Difficulty | null = null;
+  if (input.difficulty != null) {
+    if (input.age_group != null) throw new GameError("difficulty_invalid");
+    difficulty = checkDifficulty(input.difficulty);
+  } else if (input.age_group === undefined && input.difficulty === undefined && base.difficulty) {
+    difficulty = { ...base.difficulty };
+  } else {
+    const group = input.age_group !== undefined ? input.age_group : (base.age_group ?? DEFAULT_AGE_GROUP);
+    if (typeof group !== "string" || !data.groupById.has(group)) throw new GameError("age_group_unknown", { group: String(group) });
+    age_group = group;
+  }
+  const or = <T>(v: unknown, fallback: T, check: (v: unknown) => T): T => (v === undefined ? fallback : check(v));
+  return {
+    age_group, difficulty,
+    bundles: resolveBundles(data, input.bundles === undefined ? base.bundles : input.bundles),
+    levels: or(input.levels, base.levels, (v) => checkCount(v, 1, LEVELS_MAX, "levels_invalid")),
+    cards: or(input.cards, base.cards, (v) => checkCount(v, 0, CARDS_MAX, "cards_invalid")),
+    video: or(input.video, base.video, (v) => checkSwitch(v, "video")),
+    audio: or(input.audio, base.audio, (v) => checkSwitch(v, "audio")),
+    jokers: or(input.jokers, base.jokers, (v) => ({ ...base.jokers, ...checkBudget(v) })),
+  };
+}
+
+/** [lo, hi] per level for `choice.levels` levels (decision 46): custom ramps evenly from start to end,
+ * an age group's 12 ranges are stepped over n levels. */
+export function rangesFor(data: EngineData, choice: Pick<Choice, "age_group" | "difficulty" | "levels">): LevelRanges {
+  const n = choice.levels;
+  const at = (i: number) => (n === 1 ? 0 : (i - 1) / (n - 1));
+  const levels = Array.from({ length: n }, (_, k) => k + 1);
+  if (choice.difficulty) {
+    const { start, end } = choice.difficulty;
+    return levels.map((i) => {
+      const t = start + (end - start) * at(i);
+      return [Math.floor(t), Math.ceil(t)] as const;
+    });
+  }
+  const group = data.groupById.get(choice.age_group!)!.levels;
+  if (n === group.length) return group;
+  return levels.map((i) => group[Math.round((group.length - 1) * at(i))]);
+}
+
 const rangesOf = (state: GameState, data: EngineData): LevelRanges => rangesFor(data, gameChoice(state, data));
+
+/** The game's number of levels and cards per level (D-88). */
+export const levelsOf = (state: GameState): number => state.settings.levels ?? selection.LEVELS;
+export const cardsOf = (state: GameState): number => state.settings.cards ?? selection.PER_LEVEL;
+/** Questions the table and the supply need per level: with 0 cards still one. */
+const perLevel = (cards: number): number => Math.max(cards, 1);
+
+/** Video / audio questions off (D-88): images and backgrounds stay. */
+export function mediaAllowed(s: { video?: boolean; audio?: boolean }): (q: PoolQuestion) => boolean {
+  return (q) => !((s.video === false && q.media?.type === "video") || (s.audio === false && q.media?.type === "audio"));
+}
+
+/** What a game with `choice` could draw: approved, not blocked, in `bundles`, media allowed; any seen count. */
+export function availableFor(save: SaveData, data: EngineData, choice: Choice, bundles: Iterable<string> = choice.bundles): PoolQuestion[] {
+  return selection.available(data.pool, save.blocked, [], new Set(bundles)).filter(mediaAllowed(choice));
+}
 
 /** Questions that can still come up in this game: approved, not blocked, not offered, not purged; seen ones too. */
 export function availableNow(work: SaveData, state: GameState, data: EngineData): PoolQuestion[] {
   const purged = new Set<string | null>(state.purged);
   const bundles = new Set(gameChoice(state, data).bundles);
-  return selection.available(data.pool, work.blocked, state.offered, bundles).filter((q) => !purged.has(q.subcategory));
+  const media = mediaAllowed(state.settings);
+  return selection.available(data.pool, work.blocked, state.offered, bundles).filter((q) => !purged.has(q.subcategory) && media(q));
 }
 
 /** Draw n cards for the state's level from what's still available in this game, lowest seen count first. */
 function draw(
-  work: SaveData, state: GameState, data: EngineData, io: Io, n = selection.PER_LEVEL, keep: PoolQuestion[] = [],
+  work: SaveData, state: GameState, data: EngineData, io: Io, n = perLevel(cardsOf(state)), keep: PoolQuestion[] = [],
 ): string[] {
   const ranges = rangesOf(state, data);
   const drawn = selection.draw(state.level, availableNow(work, state, data), {
-    ranges, n, keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
+    ranges, n, perLevel: perLevel(cardsOf(state)), keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
     countOf: countOf(work), rng: io.rng,
   });
   if (drawn === null) {
@@ -201,39 +299,42 @@ function block(work: SaveData, qid: string): void {
 }
 
 /** The supply check before a new game (GF-5): the pool minus blocked, any seen count (plan 65).
- * `choice`: age group and bundles, default defaultChoice. */
+ * `choice`: the whole configuration, default defaultChoice. */
 export function supply(save: SaveData, data: EngineData, choice: Choice = defaultChoice(data)): Supply {
-  const avail = selection.available(data.pool, save.blocked, [], new Set(choice.bundles));
-  const levels = selection.supply(avail, rangesFor(data, choice));
+  const avail = availableFor(save, data, choice);
+  const levels = selection.supply(avail, rangesFor(data, choice), perLevel(choice.cards));
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
-/** What a new game may get from the request body besides the player (plan 27, plan 36). */
-export interface ChoiceArgs {
-  age_group?: unknown;
-  bundles?: unknown;
+/** What a new game may get from the request body besides the player (plan 27, plan 36, D-88). */
+export interface ChoiceArgs extends ChoiceInput {
   mode?: unknown;
-  /** Overrides of the mode's joker set; in `solo` a difference sets `customized`. */
+  /** Overrides of the mode's joker set (not of `Choice.jokers`); in `solo` a difference sets `customized`. */
   jokers?: unknown;
 }
 
-/** The choice of the player's newest game, else the defaults. */
+/** The choice of the player's newest game (its budget as now), else the defaults with the first base
+ * bundle only (pm decision 33). */
 export function playerChoice(save: SaveData, data: EngineData, player?: unknown): Choice {
   const pid = player ? playerId(save, cleanName(player)) : null;
   const row = pid === null ? null
     : save.games.filter((g) => g.player_id === pid).reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
-  return row ? gameChoice(withDefaults(structuredClone(row.state)), data) : defaultChoice(data);
+  if (row) return gameChoice(withDefaults(structuredClone(row.state)), data);
+  const d = defaultChoice(data);
+  return { ...d, bundles: d.bundles.filter((id) => data.bundles.find((b) => b.id === id)?.kind === "base") };
 }
 
 /** Start a game for `player` (known or new, D-28); a running game is abandoned. The settings get
- * `age_group` / `bundles` / `mode` only when `args` carries them. */
+ * `age_group` / `difficulty` / `bundles` / `mode` / `levels` / `cards` only when `args` carries them,
+ * `video` / `audio` only when off. */
 export function newGame(
   save: SaveData, data: EngineData, io: Io, player: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
   const name = cleanName(player);
   const locale = (save.language ?? SPANISH).questions;
   if (data.locale !== locale) throw new Error(`new game in ${locale} on the ${data.locale} pool`);
-  const choice = resolveChoice(data, args);
+  const { jokers: _, ...rest } = args;
+  const choice = resolveChoice(data, rest);
   const mode = args.mode ?? "gamemaster";
   if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
   if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
@@ -256,8 +357,13 @@ export function newGame(
       level: 1, phase: "select", options: [], offered: [], current: null,
       answers: [], history: [], last: null, undo: null,
     } as unknown as GameState);
-    if (args.age_group !== undefined) state.settings.age_group = choice.age_group;
+    if (choice.difficulty) state.settings.difficulty = choice.difficulty;
+    else if (args.age_group !== undefined) state.settings.age_group = choice.age_group!;
     if (args.bundles !== undefined) state.settings.bundles = choice.bundles;
+    if (args.levels !== undefined) state.settings.levels = choice.levels;
+    if (args.cards !== undefined) state.settings.cards = choice.cards;
+    if (!choice.video) state.settings.video = false;
+    if (!choice.audio) state.settings.audio = false;
     if (args.mode !== undefined) state.settings.mode = mode as GameMode;
     if (mode === "gamemaster") Object.assign(state.settings.jokers, overrides);
     else {
@@ -265,7 +371,7 @@ export function newGame(
       state.settings.jokers = jokers;
       state.settings.customized = JOKERS.some((j) => jokers[j] !== STANDARD_JOKERS[j]);
     }
-    state.options = draw(work, state, data, io);
+    deal(work, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
       ...(locale === "es" ? {} : { locale }), state: structuredClone(state),
@@ -279,15 +385,31 @@ function action(save: SaveData, fn: (work: SaveData) => GameState): { save: Save
   return { save: out, state: result };
 }
 
+/** Turn card `index` over: its question goes on screen. */
+function open(state: GameState, data: EngineData, io: Io, index: number): void {
+  const q = question(data, state.options[index]);
+  const answers = [q.answer, ...q.wrong_answers];
+  io.rng.shuffle(answers, "pick");
+  Object.assign(state, { phase: "question", current: q.id, answers, repeat: false });
+}
+
+/** With `cards: 0` (D-88) the one card on the table opens at once. */
+function openIfNoCards(state: GameState, data: EngineData, io: Io): void {
+  if (cardsOf(state) === 0 && state.phase === "select") open(state, data, io, 0);
+}
+
+/** A new table for the state's level. */
+function deal(work: SaveData, state: GameState, data: EngineData, io: Io): void {
+  state.options = draw(work, state, data, io);
+  openIfNoCards(state, data, io);
+}
+
 export function pick(save: SaveData, data: EngineData, io: Io, index: number): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
     if (state.phase !== "select") throw new GameError("no_cards");
     if (!(0 <= index && index < state.options.length)) throw new GameError("card_invalid", { n: index + 1 });
-    const q = question(data, state.options[index]);
-    const answers = [q.answer, ...q.wrong_answers];
-    io.rng.shuffle(answers, "pick");
-    Object.assign(state, { phase: "question", current: q.id, answers, repeat: false });
+    open(state, data, io, index);
     saveGame(row, state, io);
     return state;
   });
@@ -310,12 +432,12 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
     let result: Result = null;
     if (!correct) {
       state.phase = result = "lost";
-    } else if (state.level === selection.LEVELS) {
+    } else if (state.level >= levelsOf(state)) {
       state.phase = result = "won";
     } else {
       Object.assign(state, { level: state.level + 1, phase: "select" });
       leaveQuestion(state);
-      state.options = draw(work, state, data, io);
+      deal(work, state, data, io);
     }
     saveGame(row, state, io, result);
     return state;
@@ -359,6 +481,7 @@ export function backToSelect(
   state.options = state.options.map((i) => (removed.has(i) ? fresh.shift()! : i));
   state.phase = "select";
   leaveQuestion(state);
+  openIfNoCards(state, data, io);
 }
 
 /** «Saltar pregunta» (admin): the question on screen counts as seen (blocked with `everyone`,
@@ -378,30 +501,31 @@ export function skip(save: SaveData, data: EngineData, io: Io, everyone = false)
 
 type Fill = [Set<string>, boolean];
 
-/** (question IDs the matching uses for the levels after `level`, whether they all fill). */
-export function laterFill(avail: PoolQuestion[], level: number, ranges: LevelRanges): Fill {
-  const { assignment, missing } = selection.assign(avail, laterLevels(level), ranges);
+/** (question IDs the matching uses for the levels after `level`, whether they all fill); the game's
+ * levels = `ranges.length`, `cards` per level. */
+export function laterFill(avail: PoolQuestion[], level: number, ranges: LevelRanges, cards = selection.PER_LEVEL): Fill {
+  const { assignment, missing } = selection.assign(avail, laterLevels(level, ranges), ranges, perLevel(cards));
   return [new Set([...assignment.values()].flat()), missing.size === 0];
 }
 
-function laterLevels(level: number): number[] {
-  return Array.from({ length: selection.LEVELS - level }, (_, i) => level + 1 + i);
+function laterLevels(level: number, ranges: LevelRanges): number[] {
+  return Array.from({ length: ranges.length - level }, (_, i) => level + 1 + i);
 }
 
 /** The best of `cands` by (seen count, `order`) (random among ties) whose removal still lets every
  * later level fill (GF-2), or null. */
 export function replacement(
   avail: PoolQuestion[], level: number, ranges: LevelRanges, cands: PoolQuestion[], order: (q: PoolQuestion) => number,
-  count: (q: PoolQuestion) => number, io: Io, fill?: Fill,
+  count: (q: PoolQuestion) => number, io: Io, fill?: Fill, cards = selection.PER_LEVEL,
 ): PoolQuestion | null {
-  const [used, ok] = fill ?? laterFill(avail, level, ranges);
+  const [used, ok] = fill ?? laterFill(avail, level, ranges, cards);
   if (!ok) return null;
-  const later = laterLevels(level);
+  const later = laterLevels(level, ranges);
   const list = [...cands];
   io.rng.shuffle(list, "replacement");
   list.sort((a, b) => count(a) - count(b) || order(a) - order(b));
   return list.find((q) => !used.has(q.id)
-    || selection.assign(avail.filter((x) => x.id !== q.id), later, ranges).missing.size === 0) ?? null;
+    || selection.assign(avail.filter((x) => x.id !== q.id), later, ranges, perLevel(cards)).missing.size === 0) ?? null;
 }
 
 export function categoryCandidates(avail: PoolQuestion[], level: number, ranges: LevelRanges, sub: string): PoolQuestion[] {
@@ -450,7 +574,7 @@ const playEasier: Play = (work, gid, state, data, io) => {
   const cur = question(data, state.current);
   const avail = availableNow(work, state, data);
   const cands = avail.filter((q) => q.subcategory === cur.subcategory && q.difficulty < cur.difficulty);
-  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, countOf(work), io);
+  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, countOf(work), io, undefined, cardsOf(state));
   if (!fresh) throw new GameError("easier_none");
   state.jokers.push("easier");
   swapIn(work, gid, state, fresh, "easier", io);
@@ -465,7 +589,7 @@ const playCategory: Play = (work, gid, state, data, io, { subcategory }) => {
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
   const fresh = replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, subcategory),
-    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io);
+    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io, undefined, cardsOf(state));
   if (!fresh) throw new GameError("category_empty");
   state.jokers.push("category");
   swapIn(work, gid, state, fresh, "category", io);
@@ -496,6 +620,8 @@ const playSnipe: Play = (work, gid, state, data, io, { index }) => {
   }
   Object.assign(state, { phase: "select", repeat: true });
   leaveQuestion(state);
+  openIfNoCards(state, data, io);
+  state.repeat = true;
   return { outcome: "hit", index: i, correct_index: correctIndex };
 };
 
@@ -534,14 +660,14 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
 
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
-  const fill = laterFill(avail, state.level, ranges);
+  const fill = laterFill(avail, state.level, ranges, cardsOf(state));
   const count = countOf(work);
   const active = new Set(gameChoice(state, data).bundles);
   const groups = data.categories.filter((c) => active.has(c.bundle)).map((c) => {
     const subs = c.subcategories.map((s) => ({
       name: s,
       available: s !== cur.subcategory
-        && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, s), () => 0, count, io, fill) !== null,
+        && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, s), () => 0, count, io, fill, cardsOf(state)) !== null,
     }));
     return { slug: c.slug, name: c.name, available: subs.some((s) => s.available), subcategories: subs };
   });

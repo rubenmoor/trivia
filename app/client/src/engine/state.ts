@@ -1,6 +1,6 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
 // SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state (app/server/game.py docstring).
-import type { Category, ErrorInfo, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
+import type { Category, Difficulty, ErrorInfo, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
@@ -109,8 +109,12 @@ export interface GameState {
   swapped_to: string | null;
   repeat: boolean;
   /** age_group / bundles / mode: only when the new game's request carried them (plan 27, plan 36);
-   * missing mode = gamemaster. `customized`: outside gamemaster mode only. */
-  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean };
+   * missing mode = gamemaster. `customized`: outside gamemaster mode only. D-88: `difficulty` (then no
+   * age_group), `levels` (missing 12), `cards` (missing 4), `video` / `audio` (only false; missing = allowed). */
+  settings: {
+    jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean;
+    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false;
+  };
 }
 
 export const UNLIMITED: JokerBudget = { hint: null, skip: null, easier: null, category: null, snipe: null };
@@ -176,6 +180,10 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   bundles_not_list: "bundles must be a list",
   bundle_not_offered: (p) => `bundle ${pyRepr(String(p.bundle))} isn't offered in ${p.locale}`,
   base_bundle_count: "pick exactly one base bundle",
+  difficulty_invalid: "a custom difficulty is {start, end}, whole numbers 1–15, end ≥ start, without an age group",
+  levels_invalid: (p) => `levels: a whole number ${p.min}–${p.max}`,
+  cards_invalid: (p) => `cards per level: a whole number ${p.min}–${p.max}`,
+  switch_invalid: (p) => `${p.field} is true or false`,
   mode_unknown: (p) => `unknown mode ${pyRepr(String(p.mode))}`,
   mode_not_built: (p) => `mode ${pyRepr(String(p.mode))} isn't playable yet`,
   gamemaster_only: (p) => `${p.action} only in gamemaster mode`,

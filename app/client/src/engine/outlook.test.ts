@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { STANDARD_JOKERS } from "./game.ts";
 import { noteExhausted, outlook } from "./outlook.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type SaveData } from "./state.ts";
@@ -19,7 +20,10 @@ const pool = [
 ];
 const data = engineData(pool, [{ slug: "s", name: "S", bundle: "base", subcategories: ["X", "Y"] },
   { slug: "z", name: "Z", bundle: "colombia", subcategories: ["Z"] }], [bundle("base", "base"), bundle("colombia", "region")], [group]);
-const solo = { age_group: "g", bundles: ["base"], mode: "solo" as const };
+const solo = {
+  age_group: "g", difficulty: null, bundles: ["base"], levels: 12, cards: 4, video: true, audio: true,
+  jokers: STANDARD_JOKERS, mode: "solo" as const,
+};
 const seen = (save: SaveData, ...ids: string[]) =>
   ({ ...save, seen: ids.map((id) => ({ question_id: id, game_id: 1, seen_on: "x" })) });
 

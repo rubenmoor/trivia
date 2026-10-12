@@ -1,7 +1,7 @@
 import * as engine from "../engine/api.ts";
 import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
 import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
-import type { ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Language, Player, Report, Supply } from "./types";
+import type { Difficulty, ErrorInfo, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Report, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
 
@@ -83,12 +83,20 @@ export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }
 }
 
 /** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
- * `jokers` for the joker budget (MD-4). */
+ * `jokers` for the joker budget (MD-4); new: the configuration (D-88). */
 export interface GameActionBody {
   index?: number;
   player?: string;
   everyone?: boolean;
   jokers?: Partial<JokerBudget>;
+  mode?: GameMode;
+  age_group?: string | null;
+  difficulty?: Difficulty | null;
+  bundles?: string[];
+  levels?: number;
+  cards?: number;
+  video?: boolean;
+  audio?: boolean;
 }
 
 /** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */

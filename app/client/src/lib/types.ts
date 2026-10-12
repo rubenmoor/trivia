@@ -35,11 +35,26 @@ export interface Supply {
   levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
 }
 
-/** The age group and active bundles of a game (plan 27, D-38, D-39). */
+/** A custom difficulty ramp (D-88): integers 1–15, end ≥ start. */
+export interface Difficulty {
+  start: number;
+  end: number;
+}
+
+/** A game's configuration (plan 27, D-38, D-39, D-88): what the configure screen shows. */
 export interface Choice {
-  age_group: string;
+  /** null with a custom `difficulty`. */
+  age_group: string | null;
+  difficulty: Difficulty | null;
   /** In bundles.json order, exactly one base bundle (plan 71). */
   bundles: string[];
+  /** 1–20. */
+  levels: number;
+  /** Cards per level, 0–4; 0: the question opens at once. */
+  cards: number;
+  video: boolean;
+  audio: boolean;
+  jokers: JokerBudget;
 }
 
 /** UI and question language of a save (plan 68); a game keeps the question locale it started in. */
@@ -126,8 +141,12 @@ export interface Game {
   jokers: Jokers | null;
   /** Game settings (13-game-modes.md, MD-1): the joker budget per game, null = unlimited;
    * age group and bundles as stored (plan 27), missing = `DEFAULT_AGE_GROUP` / every bundle;
-   * mode as stored, missing = `gamemaster`; `customized` outside gamemaster mode (plan 36). */
-  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean };
+   * mode as stored, missing = `gamemaster`; `customized` outside gamemaster mode (plan 36);
+   * difficulty, levels, cards, video, audio (D-88): missing = age group, 12, 4, allowed. */
+  settings: {
+    jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean;
+    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false;
+  };
   /** Uses left in this game per joker, null = unlimited (MD-1). */
   jokers_left: JokerBudget;
   question: {

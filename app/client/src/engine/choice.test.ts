@@ -165,17 +165,19 @@ if (json === undefined) {
     const r = choice(save, data, { player: "ana" });
     assert.equal(r.status, 200);
     const body = r.body as { choice: unknown; supply: { levels: { range: number[] }[] } };
-    assert.deepEqual(body.choice, { age_group: "kids", bundles: ["base"] });
+    const kids = { ...game.defaultChoice(data), age_group: "kids", bundles: ["base"], jokers: game.UNLIMITED };
+    assert.deepEqual(body.choice, kids);
     assert.deepEqual(body.supply.levels.map((l) => l.range), data.groupById.get("kids")!.levels);
     assert.deepEqual(choice(save, data, { player: "bea" }).body, {
-      choice: game.defaultChoice(data), supply: game.supply(save, data),
+      choice: { ...game.defaultChoice(data), bundles: ["base"] }, supply: game.supply(save, data, { ...game.defaultChoice(data), bundles: ["base"] }),
     });
     const adults = choice(save, data, { player: "ana", age_group: "adults" }).body as { choice: unknown };
-    assert.deepEqual(adults.choice, { age_group: "adults", bundles: ["base"] });
+    assert.deepEqual(adults.choice, { ...kids, age_group: "adults" });
     save = game.newGame(save, data, io(10), "ana").save;
-    assert.deepEqual((choice(save, data, { player: "ana" }).body as { choice: unknown }).choice, game.defaultChoice(data));
+    assert.deepEqual((choice(save, data, { player: "ana" }).body as { choice: unknown }).choice,
+      { ...game.defaultChoice(data), jokers: game.UNLIMITED });
     save = game.newGame(save, data, io(15), "ana", { age_group: "kids", bundles: ["base", "colombia"] }).save;
     assert.deepEqual((choice(save, enData, { player: "ana" }).body as { choice: unknown }).choice,
-      { age_group: "kids", bundles: ["base"] });
+      { ...game.defaultChoice(enData), age_group: "kids", bundles: ["base"], jokers: game.UNLIMITED });
   });
 }

@@ -60,12 +60,12 @@ function pick<K extends string>(body: Record<string, unknown>, keys: readonly K[
   return Object.fromEntries(keys.filter((k) => k in body).map((k) => [k, body[k]])) as Partial<Record<K, unknown>>;
 }
 
-/** The start screen's preset and supply per choice (plan 27): a missing field comes from the
- * player's newest game, else the defaults. */
+/** The start / configure screen's preset and supply per choice (plan 27, D-88): a missing field comes
+ * from the player's newest game, else the defaults. */
 export function choice(save: SaveData, data: EngineData, body: Record<string, unknown>):
   Reply<{ choice: Choice; supply: Supply }> {
   return guard(save, 409, () => {
-    const out = game.resolveChoice(data, pick(body, ["age_group", "bundles"]), game.playerChoice(save, data, body.player));
+    const out = game.resolveChoice(data, pick(body, game.CHOICE_KEYS), game.playerChoice(save, data, body.player));
     return { save, status: 200, body: { choice: out, supply: game.supply(save, data, out) } };
   });
 }
@@ -77,7 +77,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   Reply<{ game: Game | null; event?: JokerEvent }> {
   const index = () => pyInt("index" in body ? body.index : -1);
   const actions: Record<string, Action> = {
-    new: (s) => game.newGame(s, data, io, body.player, pick(body, ["age_group", "bundles", "mode", "jokers"])),
+    new: (s) => game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
     pick: (s) => game.pick(s, data, io, index()),
     answer: (s) => game.answer(s, data, io, index()),
     skip: (s) => game.skip(s, data, io, pyTruthy(body.everyone)),
@@ -99,7 +99,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
 /** Supply outlook for the start screen (plan 65): body = choice + mode (+ players). */
 export function outlook(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<Outlook> {
   return guard(save, 409, () => {
-    const choice = game.resolveChoice(data, pick(body, ["age_group", "bundles"]));
+    const choice = game.resolveChoice(data, pick(body, game.CHOICE_KEYS));
     const mode = body.mode ?? "gamemaster";
     if (!(game.MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
     const players = Number.isInteger(body.players) && (body.players as number) > 0 ? body.players as number : 1;
@@ -110,7 +110,7 @@ export function outlook(save: SaveData, data: EngineData, body: Record<string, u
 /** Exhausted subcategories shown (plan 65): body = choice + `subcategories`. */
 export function noteExhausted(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<{ ok: true }> {
   return guard(save, 409, () => {
-    const choice = game.resolveChoice(data, pick(body, ["age_group", "bundles"]));
+    const choice = game.resolveChoice(data, pick(body, game.CHOICE_KEYS));
     const shown = Array.isArray(body.subcategories) ? body.subcategories.filter((s) => typeof s === "string") : [];
     return { save: noteExhaustedIn(save, data, choice, shown), status: 200, body: { ok: true } };
   });
