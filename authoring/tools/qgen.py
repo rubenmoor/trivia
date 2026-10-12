@@ -821,6 +821,7 @@ def soft_score(r):
 
 
 def cmd_merge(args):
+    import media as media_tool  # authoring/tools/media.py
     d = run_dir(args)
     data = load_json(POOL)
     pool = data["questions"]
@@ -852,7 +853,7 @@ def cmd_merge(args):
                 "id": f"q-{next_id:04d}", "status": "draft",
                 "difficulty": q["difficulty"], "description": q["description"], "question": q["question"],
                 "answer": q["answer"], "wrong_answers": q["wrong_answers"], "hints": q["hints"],
-                "media": {**q["media"], "source_url": None, "file_url": None, "credit": None},
+                "media": media_tool.unpicked(q["media"]),
                 "fun_fact": q["fun_fact"], "subcategory": q["subcategory"], "style": q.get("style"),
                 "concept": q.get("concept"), "axes": q.get("axes"),
                 "quality": {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]},
@@ -984,7 +985,7 @@ def revise_in_pool(q, new, reason, today):
     new_media = {**q["media"], **new["media"], "note": new["media"]["note"] or None}
     media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
     if media_changed:
-        new_media.update(source_url=None, file_url=None, credit=None)
+        new_media = media_tool.unpicked(new_media)
     if new_media["type"] == "audio":
         bgq = new.get("background_query") or (q.get("background") or {}).get("query") or new_media["query"]
         old_bg = q.get("background")
@@ -1859,10 +1860,17 @@ def cmd_export(args):
     print(f"exported {n} approved question(s) to {layout.EXPORT.relative_to(ROOT)}")
 
 
+def licence_problem(slot):
+    """True when a picked slot's licence record (plans/26) is missing or invalid."""
+    return (any(k not in slot for k in providers.LICENCE_FIELDS) or slot["provider"] not in providers.PROVIDERS
+            or not providers.licence_kind(slot["license"])
+            or not isinstance(slot["restrictions"], list) or not isinstance(slot["pd_reasons"], list))
+
+
 def validate_pool():
     """(errors, warnings) for the whole source pool and its export (QP-7)."""
     data = load_json(POOL)
-    errors, warnings, ids = [], [], set()
+    errors, warnings, ids, unlicensed = [], [], set(), []
     subcategories = categories.broad_of()
     lists = {}
     axes_of = {b: concepts.load_axes(b) for b in categories.bundle_ids()}
@@ -1904,6 +1912,8 @@ def validate_pool():
                     warnings.append(f"{qid}: approved but no {label} picked")
                 elif not media.cache_path(slot["file_url"]).is_file():
                     warnings.append(f"{qid}: {label} not cached")
+                if slot.get("file_url") and licence_problem(slot):
+                    unlicensed.append(qid if label == "media" else f"{qid} background")
         if all(k in q for k in ["wrong_answers", "hints", "difficulty", "answer"]):
             errors += [f"{qid}: {p}" for p in check_question_shape(q)]
         if q.get("axes") is not None:  # D-37
@@ -1927,6 +1937,9 @@ def validate_pool():
         if bad:
             errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): "
                           f"{', '.join(bad[:5])}{' …' if len(bad) > 5 else ''}")
+    if unlicensed:  # warnings until the migration (plans/26)
+        warnings.append(f"{len(unlicensed)} approved pick(s) without a complete licence record: "
+                        f"{', '.join(unlicensed[:5])}{' …' if len(unlicensed) > 5 else ''}")
     exported = layout.EXPORT.read_text(encoding="utf-8") if layout.EXPORT.exists() else None
     if exported != export_text(data):
         errors.append(f"{layout.EXPORT.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")

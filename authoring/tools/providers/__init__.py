@@ -92,6 +92,23 @@ def pd_reasons(candidate):
     return provider_of(candidate).pd_reasons(candidate)
 
 
+LICENCE_FIELDS = ("provider", "license", "license_url", "author", "author_url", "restrictions", "pd_reasons")
+
+
+def licence_fields(candidate):
+    """A pick's licence record (plans/26 "Slot fields"). Commons candidates stored before plan 26
+    lack author_url and restrictions: fetched in the same call as the PD templates."""
+    p = provider_of(candidate)
+    pd = licence_kind(candidate.get("license")) == "public-domain"
+    if "restrictions" not in candidate and hasattr(p, "lookup"):
+        extra = p.lookup(candidate, templates=pd)
+    else:
+        extra = {"author_url": candidate.get("author_url"), "restrictions": candidate.get("restrictions", []),
+                 "pd_reasons": pd_reasons(candidate)}
+    record = {"provider": p.ID, **{k: candidate.get(k) for k in ("license", "license_url", "author")}, **extra}
+    return {k: record[k] for k in LICENCE_FIELDS}
+
+
 def name(candidate):
     """Where the file comes from, for credits: "Wikimedia Commons", "Flickr via Openverse", …"""
     p = provider_of(candidate).NAME

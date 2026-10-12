@@ -23,6 +23,8 @@ The pool lives in `authoring/data/questions.json`: `{"version": 1, "questions": 
     "query": "Colombian Andes landscape",  // search term for sourcing (06-images.md)
     "note": null,              // what exactly to play/show, for audio and video
     "source_url": null, "file_url": null, "credit": null  // filled when the media is picked; file_url is the cache key (D-17)
+    // a pick also adds provider, license, license_url, author, author_url, restrictions, pd_reasons
+    // (plan 26, also on background); absent while unpicked
   },
   "fun_fact": "Shown on the reveal screen."
 }

@@ -151,8 +151,15 @@ def pick_fields(candidate, slot="media"):
     """The fields to store in the pool for a picked candidate, without downloading it."""
     url = providers.download_url(candidate)
     credit = credit_of(candidate)
-    fields = {"source_url": candidate["page_url"], "file_url": url, "credit": credit}
+    fields = {"source_url": candidate["page_url"], "file_url": url, "credit": credit,
+              **providers.licence_fields(candidate)}
     return {"type": candidate["type"], **fields} if slot == "media" else fields
+
+
+def unpicked(slot):
+    """The slot with its pick cleared: no file, no credit, no licence fields (plans/26)."""
+    out = {k: v for k, v in slot.items() if k not in providers.LICENCE_FIELDS}
+    return {**out, "source_url": None, "file_url": None, "credit": None}
 
 
 def download(candidate, slot="media"):
