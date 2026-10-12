@@ -1924,8 +1924,42 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The human pass through the list until `media.py licenses` reports nothing, then `trivia-media sync --status approved --prune`; a task for the human or a note in the plan.
 - Optional `qgen validate` gate against files on the replacement list.
 - If flagged files can be kept per the linked decision: how the gamemaster marks one as checked and where that is stored.', '2026-10-12T00:17:48Z', NULL, 106);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (110, 26, 'create tasks for plan 26', 'split', 'open', 1000, NULL, 'Split plan 26 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:19:16Z', NULL, 107);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (110, 26, 'create tasks for plan 26', 'split', 'done', 1000, '2026-10-11, tasks.sql: tasks 111-113, no decisions needed', 'Split plan 26 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:19:16Z', '2026-10-12T00:20:09Z', 107);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (111, 26, 'Providers: author_url, restrictions and pd_reasons', 'work', 'open', NULL, NULL, 'Part 1 of plan 26 ("Providers" section). Candidates from every provider carry `author_url` and `restrictions`; new `providers.pd_reasons(candidate)` returns the public-domain reasons at pick time.
+
+- `authoring/tools/providers/commons.py`: search `extmetadatafilter` adds `Restrictions|License|UsageTerms|AttributionRequired|Copyrighted`; `restrictions` = extmetadata `Restrictions` split on `|` (`[]` when empty); `author_url` = first `href` in the `Artist` HTML before `plain()`, protocol-relative → `https:`. `pd_reasons(candidate)`: one `api(titles=…, prop="templates", tlnamespace=10, tllimit="max")`, keep `PD-*` names, strip `Template:`.
+- `openverse.py`: `author_url` from `creator_url`, `restrictions: []`, `pd_reasons`: `["PDM"]` for `pdm`, else `[]`.
+- `freesound.py`: `author_url` = `https://freesound.org/people/<username>/`, `restrictions: []`.
+- `nasa.py`: `author_url: None`, `restrictions: []`, `pd_reasons` → `["PD-USGov-NASA"]`.
+- `providers/__init__.py`: `pd_reasons(candidate)` dispatches to the provider (only meaningful when `licence_kind` is `public-domain`; `[]` otherwise); update the candidate field list in the docstring.
+- `plans/23-media-providers.md` "Data": add the new candidate fields.
+
+Not here: writing the fields into the pool (next task).
+
+Done when: a throw-away script searches each provider once and shows `author_url`/`restrictions` on the candidates, and `pd_reasons` returns e.g. `PD-old-70` for a known PD Commons file.', '2026-10-12T00:20:05Z', NULL, 110);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (112, 26, 'pick_fields writes the licence fields; clearing clears them; validate warns', 'work', 'open', NULL, NULL, 'Part 2 of plan 26 ("Slot fields", "`media.pick_fields`", "`qgen validate`" sections). Depends on the providers task.
+
+- `authoring/tools/media.py` `pick_fields`: writes `provider`, `license`, `license_url`, `author`, `author_url`, `restrictions`, `pd_reasons` for `media` and `background` slots. `pd_reasons` via `providers.pd_reasons` only for `public-domain` licences, else `[]`. Commons candidates stored before plan 26 (no `author_url`/`restrictions`): fetch them in the same titles query as the templates (one call per pick); other providers: `None` / `[]`. `credit`, `credit_of` unchanged.
+- Both pick paths go through it: `authoring/server/main.py` `pick_media` → `media.download`, and `qgen.py` review (~1532); check nothing bypasses it.
+- Clearing a pick (`qgen.py` ~855, ~987, and any server path that clears) removes the new fields too; unpicked slots keep them absent.
+- `validate_pool`: for picked slots of approved questions check keys present, `provider` known, `license` non-null and on the allowlist (`providers.licence_kind`), `restrictions`/`pd_reasons` lists. **Warnings** for now, as one summary line (count + first few ids). Non-approved questions not checked.
+- `qgen export` unchanged (decided in the plan).
+
+Done when: a pick in the review tool and one via `qgen review` (or a throw-away script calling the same paths) store all fields, incl. `pd_reasons` for a PD Commons file; clearing removes them; `qgen validate` passes with one warning line about the unmigrated picks.', '2026-10-12T00:20:06Z', NULL, 110);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (113, 26, 'Migrate licence data of existing picks; validate errors', 'work', 'open', NULL, NULL, 'Part 3 of plan 26 ("Migration" section). Depends on the two tasks before. One change: write the one-time command, run it, switch validate to errors, delete the command.
+
+- `qgen migrate-licences [--dry-run]` over all statuses and bundles in `authoring/data/questions.json`:
+  - Commons picks: title from `source_url` (`File:…`, URL-unquoted), batched 50 per `api()` call: extmetadata (`Artist`, `LicenseShortName`, `LicenseUrl`, `Restrictions`, …) + templates → all slot fields, same mapping as the providers/`pick_fields` code (reuse it).
+  - Other providers (2 Freesound, 2 Openverse): from the stored candidate matching `source_url` (`load_candidates`), else the live page where cheap (Freesound sound id), else leave out and list.
+  - Skips slots that already have `provider`; doesn''t touch `credit`, `file_url`, the cache. A licence failing the allowlist is written as found.
+  - Prints a tally (per provider, licence family, PD reasons, restrictions) and the unfilled picks.
+- Run `--dry-run`, check the tally, then run for real. Fix unfilled approved picks by hand only if trivially possible; otherwise report them in the done note.
+- `validate_pool`: licence checks become **errors** (no flag).
+- Delete the migration command again.
+- Mark MP-8 in `plans/23-media-providers.md`, PUB-2 in `plans/17-publishing.md` and `plans/project.md` done; `qgen export` stays unchanged.
+
+Done when: `qgen validate` passes on the pool with the licence checks as errors; the tally is in the done note.', '2026-10-12T00:20:06Z', NULL, 110);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1977,6 +2011,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (35, 4, '2026-10-12T00:16:37Z', '2026-10-12T00:17:24Z', 'done', NULL, 0, 'edc4316c5a2e73de7f630abaf1310d52470f514c', 'claude-opus-5-5[1m]', '6fe83abf-1d85-4871-988d-07ebe9593fe4', 7, 14, 4380, 216089, 29610, 0.36775380000000008, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (36, 106, '2026-10-12T00:17:24Z', '2026-10-12T00:17:54Z', 'done', NULL, 0, 'ab328d8bc1ca4095eb732f71ce01a1db755e3e4c', 'claude-opus-5-5[1m]', '70538cb7-2b9c-42ca-8de3-f2e7cd8f5cdd', 6, 12, 2848, 180214, 27498, 0.3130348, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (37, 107, '2026-10-12T00:17:54Z', '2026-10-12T00:19:38Z', 'done', NULL, 0, '108450cbd1f0af835247f1eedc5df687b5d252eb', 'claude-opus-5-5[1m]', '669603f9-cc8f-4b7e-850e-ef062460877f', 14, 26, 8949, 598914, 52311, 0.71735480000000007, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (38, 110, '2026-10-12T00:19:38Z', '2026-10-12T00:20:15Z', 'done', NULL, 0, 'b993c3ffdf9ae3482c11803a85ddc846b228d1bb', 'claude-opus-5-5[1m]', '2336a44f-548a-470c-91a9-f146233b05e1', 5, 10, 3099, 140041, 25137, 0.2911242, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
