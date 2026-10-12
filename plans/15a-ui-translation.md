@@ -28,6 +28,6 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - Server errors (pm plan 22, D-57): codes + params on the wire; `lib/errors.ts` renders `error.<code>` from `es.ts` if the key exists, else the English `message`.
 - [ ] LUI-2 Pseudo-locale for length and missing-string tests.
 - [ ] LUI-3 `en` catalog with English joker names (draft; pm plan 24). Ships at launch (D-78); `de.ts` follows the same path.
-- [ ] LUI-4 Joker keys per language or neutral keys (decision).
-- [ ] LUI-5 Launch catalogs (D-78): `es` (neutral Latin American, es-419), `es-ES` override (only differing strings: regionalisms, `vosotros`), `en`, `de`; native-speaker playtest each. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12; need CJK/Cyrillic fonts).
-- [ ] LUI-6 Store page texts per language (with PUB-8).
+- [ ] LUI-4 Joker keys per language or neutral keys (decision; pm plan 69).
+- [ ] LUI-5 Launch catalogs (D-78): `es` (neutral Latin American, es-419), `es-ES` override (only differing strings: regionalisms, `vosotros`), `en`, `de`; native-speaker playtest each (pm plan 69). Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12; need CJK/Cyrillic fonts).
+- [ ] LUI-6 Store page texts per language (with PUB-8). S5, not milestone 9 (S4).
