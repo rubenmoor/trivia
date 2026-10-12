@@ -1766,6 +1766,38 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - In the default mode a report burns the question for everyone, lists it on the report page and draws a replacement.
 - The settings screen starts a default-mode game with a preset.
 - A gamemaster-mode game plays exactly as today (fixture replay passes, overlay unchanged, Enter straight through).', '2026-10-12T00:41:03Z', 164);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (37, 7, 'Launch languages and Spanish variety (OQ-31)', 500, 'Part 4 of the masterplan (plan 7): decide which languages the Steam release launches with and which Spanish the pool speaks (OQ-31, I18N-1). Decision only; no code, no translation. Owner: `plans/15-i18n.md` ("Model", "Spanish varieties"), with `15a-ui-translation.md` (LUI-*), `15b-question-translation.md` (QT-*), `15c-regional-questions.md` (RG-5).
+
+## Context
+- Today: everything Spanish, Colombian usage and references where natural (D-6). Bundles replace 15c''s `region` (D-39): `colombia` holds what needs a real connection to Colombia, `base` holds the rest (D-49 moved Colombian-subcategory `base` questions out).
+- D-50: store name «Living Room Trivia», Spanish localized «Trivia en Familia» (chosen partly because «sala»/«salón» splits Spanish); other languages get a localized name when they launch.
+- Feeds part 5 (OQ-32, content target per language, plan "Content target per player and language") and part 10 (S4''s exit in `plans/11-steam.md`).
+- Related: plan 24 "Draft en catalog (LUI-3)" (milestone 3) drafts `en.ts` without launching it.
+
+## Tasks
+1. **Prep: facts, options and recommendation as a pm decision**
+   - Facts (numbers in the decision body, sources one line each):
+     - Steam language shares: latest Steam Hardware & Software Survey (English, Simplified Chinese, Russian, Spanish – Spain, Spanish – Latin America, Portuguese – Brazil, German, …); note Steam lists "Spanish – Spain" and "Spanish – Latin America" as separate store languages.
+     - Translation cost per question: estimate from `work/*/costs.log` (gitignored; generation, fix and review cost per approved question) as a proxy for translate + re-rate + fact-check + review (15b); times the content target draft of plan 16 (2,000–3,000 per language) → cost per language.
+     - Pool flavour: approved and total counts per bundle (`base` vs `colombia`) from `authoring/data/questions.json` (throw-away script or `qgen report`); a rough count of Colombian vocabulary in `base` wording (e.g. "bombillo", "crispetas", "carro", "celular" vs neutral) from a sample, to size a neutral-Spanish rewrite.
+     - UI side: size of `es` catalog (plan 21) if it exists; LUI work per language is small (15a).
+   - Questions to settle (one decision, or two if too big: "Launch languages (OQ-31)" and "Spanish variety (OQ-31)"):
+     - (a) Launch languages: Spanish only (recommended unless the facts say otherwise: the pool and the review loop are Spanish, the family checks it); Spanish + English (biggest Steam share, doubles content and review cost, needs a native check); more.
+     - (b) Spanish variety: ship as "Spanish – Latin America" with Colombian usage as is; neutral Latin American Spanish in `base` with Colombian wording kept in `colombia`; or neutral + per-variety variants. Which Steam store languages to tick (Latin America only, or Spain too).
+     - (c) If a later language is planned: name it as the first post-launch language, so plan 24 and 15b know whether `en` is launch or later work.
+   - Recommended option first; body = context + facts + trade-offs, ultra-short. Note what each option means for part 5 (content target per language) and D-50 (localized names).
+   - `pm task-pending-decision` on task 2 for each decision.
+2. **Follow-up: record the answer** (waits for the decision(s))
+   - D-entry in `plans/decisions.md` (next free D-number).
+   - OQ-31 moved to "Resolved" in `plans/open-questions.md` with the D-number.
+   - `plans/15-i18n.md`: "Spanish varieties" bullet decided, launch languages stated, I18N-1 `[x]` with a note; status no longer "stub" if the model is settled.
+   - `15a`: LUI-5 names the launch languages (or "none beyond es"); `15b`: QT-6 and the intro name the target languages (or "after launch"); `15c`: RG-5 checked against the answer.
+   - If the answer changes `base` wording (neutral Spanish): log the rewrite as a backlog row in `plans/backlog.md` (it is S4 content work, through the pipeline, D-36), no pool edits here.
+   - Plan 24 "Draft en catalog (LUI-3)": check against the answer. English at launch or as first later language → keep, add a one-line note to its body (`pm plan edit 24 --body`) if the scope changes; no English planned → say so in plan 24 and leave dropping it to the gamemaster (note in the task''s done note).
+   - `plans/11-steam.md` open-questions row and `plans/project.md` kept in sync (S4''s exit wording stays with part 10).
+
+## Done when
+- Decision(s) answered; D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages; plan 24 checked against the answer.', '2026-10-12T00:41:48Z', 165);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2890,9 +2922,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Implementation after part 2''s decision; tasks wait for it (`pm task-pending-decision` on part 2''s decision if still pending).
 - Builds on plan 20 "Engine game state machine (PORT-3)" and `SaveData`; strings via plan 21 "t() helper and the es catalog (LUI-1)". No second implementation in `app/server/game.py`.
 - Done when as in part 3.', '2026-10-12T00:38:51Z', '2026-10-12T00:41:06Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (165, 7, 'write plan: Launch languages and Spanish variety (OQ-31)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 7): `pm plan add 7 "Launch languages and Spanish variety (OQ-31)" --priority 500`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (165, 7, 'write plan: Launch languages and Spanish variety (OQ-31)', 'plan', 'done', 1000, '2026-10-11, plan 37 (Launch languages and Spanish variety, OQ-31) in tasks.sql', 'Write the plan for part 4 of the masterplan (plan 7): `pm plan add 7 "Launch languages and Spanish variety (OQ-31)" --priority 500`.
 - Owner: `plans/15-i18n.md` (+15a/15b/15c), I18N-1.
-- Tasks: prep (Steam survey language shares, translation cost per question from `costs.log`, `colombia` vs `base` share, D-39, D-49, D-50; decision), follow-up (D-entry, OQ-31 resolved, I18N-1 `[x]`, 15/15a/15b updated, plan 24 "Draft en catalog (LUI-3)" checked against the answer).', '2026-10-12T00:38:52Z', NULL, 151);
+- Tasks: prep (Steam survey language shares, translation cost per question from `costs.log`, `colombia` vs `base` share, D-39, D-49, D-50; decision), follow-up (D-entry, OQ-31 resolved, I18N-1 `[x]`, 15/15a/15b updated, plan 24 "Draft en catalog (LUI-3)" checked against the answer).', '2026-10-12T00:38:52Z', '2026-10-12T00:41:50Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (166, 7, 'write plan: Content target per player and language (OQ-32)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 7): `pm plan add 7 "Content target per player and language (OQ-32)" --priority 590`.
 - Owner: `plans/16-content-target.md`, CT-1. Needs parts 2 and 4 (their decisions): the follow-up waits on them; part 8''s burn multiplier too, if known.
 - Tasks: prep (estimate from approved counts per level and window, D-52, D-53, burns per game; quality bar: point to D-56 / pm decision 2 instead of duplicating), follow-up (D-entry, OQ-32 resolved, CT-1 `[x]` noting CT-2 in S4 confirms it).', '2026-10-12T00:38:52Z', NULL, 151);
@@ -2918,6 +2950,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', NULL, 163);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', NULL, 164);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (175, 37, 'create tasks for plan 37', 'split', 'open', 1000, NULL, 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', NULL, 165);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2992,6 +3026,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (58, 162, '2026-10-12T00:39:00Z', '2026-10-12T00:39:26Z', 'done', NULL, 0, '28f62b5f898ca2e2d7be301b184e7f28ffde696f', 'claude-opus-5-5[1m]', 'fe939d73-121d-4575-be7e-cc929bbb2a34', 5, 10, 1932, 145256, 25438, 0.27123520000000007, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (59, 163, '2026-10-12T00:39:27Z', '2026-10-12T00:39:55Z', 'done', NULL, 0, '350427cee4811a071ebc75c14379dfab6776ed4c', 'claude-opus-5-5[1m]', 'dbecc7b6-b72e-4872-8e78-0c159e940683', 6, 12, 2664, 197763, 32552, 0.35329659999999996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (60, 164, '2026-10-12T00:39:55Z', '2026-10-12T00:41:14Z', 'done', NULL, 0, '2074a341a37cd2db64a11bd2f97bcb978ec40e04', 'claude-opus-5-5[1m]', '23aed49f-002b-4f2d-8c28-2b5f14fe6986', 11, 20, 7664, 421197, 52399, 0.6567914, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (61, 165, '2026-10-12T00:41:14Z', '2026-10-12T00:41:58Z', 'done', NULL, 0, '0968f233ac9f95da94c965e1198e22eb10328c78', 'claude-opus-5-5[1m]', '3776f64b-3400-4590-8b1f-1a64005b7825', 10, 20, 4209, 383866, 40750, 0.4870332, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
