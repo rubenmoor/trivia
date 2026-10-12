@@ -80,6 +80,18 @@ But don't overcorrect: names of prizes, years and school theory are still hard f
 - 7: which Colombian writer won the Nobel Prize in 1982 → García Márquez (lowered to 3 by mistake)
 - 7: how many notes the basic scale has (do, re, mi…) → 7 (lowered to 3 by mistake)
 
+Anchors for 9–15, confirmed by the gamemaster:
+- 9: capital of Australia → Canberra
+- 10: painted stone bust found in Amarna in 1912 → Nefertiti
+- 11: French 17th-century philosopher who made x, y, z the unknowns → Descartes
+- 12: Spanish midfielder, 2023 world champion, best player of the World Cup and Ballon d'Or → Aitana Bonmatí
+- 13: who created the World Wide Web and HTML → Tim Berners-Lee
+- 13: style of the Paris metro entrances, Mucha's posters and Horta's houses → Art nouveau
+- 14: the seven bridges of Königsberg, proven impossible in 1736 → Euler
+- 14: in which of these years did February have no 29th? → 1900
+- 15: harmless butterfly that copies a bad-tasting one, named after an English naturalist → Batesian mimicry
+- 15: tempura came to Japan about 450 years ago from which European country? → Portugal
+
 ## Description
 Every question has a `description`: one full, humorous Spanish sentence shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "un nevado" when only two options are nevados). Examples from the pool:
 - Café: "Los papás no funcionan por la mañana hasta que les echas este combustible."
