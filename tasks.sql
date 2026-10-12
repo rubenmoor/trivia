@@ -4428,14 +4428,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Mark LUI-2 `[x]` in `plans/15a-ui-translation.md` with a note (date, backlog rows, or "no overflow found"); update M3 status in `plans/project.md`.
 
 Done when: every screen above checked under `xx`; `npm run check` and `npm run build` pass; `es` output unchanged; screenshots and scripts not committed.', '2026-10-12T00:15:27Z', '2026-10-12T21:53:26Z', 88);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (102, 24, 'LUI-3: English joker name candidates and decisions', 'work', 'open', NULL, NULL, 'Task 1 of plan 24. Needs plan 21 (LUI-1: `app/client/src/lib/i18n.ts`, `locales/es.ts`, `Catalog`/`Key` types) and plan 22 task 2 (`error.<code>` keys in `es.ts`). If they don''t exist yet, stop and say so (`pm task drop` with a note); don''t build them here.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (102, 24, 'LUI-3: English joker name candidates and decisions', 'work', 'done', NULL, '2026-10-12, plans/15a-ui-translation.md; pm decisions 40-44, task 104 waits on them', 'Task 1 of plan 24. Needs plan 21 (LUI-1: `app/client/src/lib/i18n.ts`, `locales/es.ts`, `Catalog`/`Key` types) and plan 22 task 2 (`error.<code>` keys in `es.ts`). If they don''t exist yet, stop and say so (`pm task drop` with a note); don''t build them here.
 
 - Per joker (`hint` «Soplo», `skip` «Paso», `easier` «Bájale», `category` «Cambiazo», `snipe` «Francotirador»): 3–5 playful English candidates, not literal translations, ≤ 13 characters (length of «Francotirador», tray width); each with a one-line reason (pun, tone, what it evokes). Recommended one first.
 - One `pm decision add` per joker: subject e.g. "English name for the hint joker «Soplo»?", candidates as `--option`s (recommended first), body: Spanish name, what the joker does (from the catalog/joker code), why these candidates.
 - Link the plan''s task "LUI-3: chosen joker names into en.ts" (task 3 of plan 24; id via `pm show <this task>`) to all five decisions with `pm task-pending-decision`.
 - `plans/15a-ui-translation.md` under LUI-3: candidate lists as bullets (recommended first, decision id per joker).
 
-Done when: five pending decisions exist, task 3 waits on all five, 15a lists the candidates.', '2026-10-12T00:16:05Z', NULL, 89);
+Done when: five pending decisions exist, task 3 waits on all five, 15a lists the candidates.', '2026-10-12T00:16:05Z', '2026-10-12T21:55:14Z', 89);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (103, 24, 'LUI-3: draft en.ts catalog and ?lang=en dev override', 'work', 'open', NULL, NULL, 'Task 2 of plan 24. Doesn''t wait for the joker-name decisions: joker names use the recommended candidates from task 1 (in `plans/15a-ui-translation.md`, LUI-3) for now. Needs plan 21 (LUI-1) and plan 22 task 2 done; if not, stop and say so.
 
 - `app/client/src/locales/en.ts`: `export const en = { … } satisfies Catalog`; every key of `es`, own English wording.
@@ -10155,6 +10155,34 @@ Windows x64 without Node/Python, and Linux x64 without Nix (e.g. Ubuntu 24.04):
 - CREDITS.md in the folder (n/a until plan 47)
 
 On issues: name the failing rows and machine (or fill the tables in the plan file).', NULL, NULL, '2026-10-12T21:18:46Z', NULL, 331, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (40, 'English name for the hint joker «Soplo»?', 'pending', '["Psst", "Little Bird", "Nudge", "Tip-off", "Whisper"]', 'Spanish «Soplo»: the classroom whisper (soplar = whisper the answer to a classmate). Joker: reveals the next of the question''s three hints, vague → strong; hint notes are labelled «Soplo 1/2/3». Light-bulb icon. Candidates keep the sneaky-whisper idea. Not a literal translation (15a: joker names are content). ≤ 13 characters (tray width, «Francotirador»). The name also shows in «Use {name}?», the aria label, «no … left» errors and the printable cards. Key letter stays as in es (S, P, F, T, X) until LUI-4. Answer with one option or your own name.
+- Psst: the classroom whisper itself, cheeky, 4 chars; notes read «Psst 1/2/3»
+- Little Bird: «a little bird told me», warm, family tone
+- Nudge: a gentle push toward the answer
+- Tip-off: a sly insider tip, a bit spy-like
+- Whisper: plain and clear, least playful', NULL, NULL, '2026-10-12T21:55:04Z', NULL, 102, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (41, 'English name for the skip joker «Paso»?', 'pending', '["Hard Pass", "Nope", "Next!", "Dodge", "Bye-Bye"]', 'Spanish «Paso»: «I pass». Joker: skips the current question (a new one from the pool), optionally purging its whole subcategory from later draws («Paso, y fuera el tema …»). Door/arrow icon. Not a literal translation (15a: joker names are content). ≤ 13 characters (tray width, «Francotirador»). The name also shows in «Use {name}?», the aria label, «no … left» errors and the printable cards. Key letter stays as in es (S, P, F, T, X) until LUI-4. Answer with one option or your own name.
+- Hard Pass: the cheeky idiom for a firm no; keeps P as a matching key
+- Nope: shortest, most cheeky; «Nope, and out goes the topic …» reads well
+- Next!: the barber''s call, brisk
+- Dodge: ducking the question, playground feel
+- Bye-Bye: waving the question off, kid-friendly', NULL, NULL, '2026-10-12T21:55:04Z', NULL, 102, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (42, 'English name for the easier joker «Bájale»?', 'pending', '["Dial Down", "Ease Up", "Go Easy", "Simmer Down", "Baby Steps"]', 'Spanish «Bájale»: «turn it down / take it down a notch», colloquial imperative. Joker: swaps the current question for an easier one from the same subcategory; its animation is a difficulty dial («Dificultad») turning down. Down-stairs icon. Not a literal translation (15a: joker names are content). ≤ 13 characters (tray width, «Francotirador»). The name also shows in «Use {name}?», the aria label, «no … left» errors and the printable cards. Key letter stays as in es (S, P, F, T, X) until LUI-4. Answer with one option or your own name.
+- Dial Down: matches the dial animation, casual imperative like bájale
+- Ease Up: casual plea, same register
+- Go Easy: «go easy on us», warm family tone
+- Simmer Down: cheeky, playful scolding
+- Baby Steps: playful, but may sound condescending to adults', NULL, NULL, '2026-10-12T21:55:04Z', NULL, 102, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (43, 'English name for the category joker «Cambiazo»?', 'pending', '["Switcheroo", "Topic Hop", "Plot Twist", "Swap Shop"]', 'Spanish «Cambiazo»: a sneaky swap (dar el cambiazo = swap something behind someone''s back). Joker: swaps the current question for one of similar difficulty from a subcategory the players choose (dialog «Cambiazo: ¿qué tema quieren?»). Compass/wheel icon. Not a literal translation (15a: joker names are content). ≤ 13 characters (tray width, «Francotirador»). The name also shows in «Use {name}?», the aria label, «no … left» errors and the printable cards. Key letter stays as in es (S, P, F, T, X) until LUI-4. Answer with one option or your own name.
+- Switcheroo: exactly the sneaky-swap tone of cambiazo, fun to say
+- Topic Hop: says what it does, light
+- Plot Twist: dramatic, playful
+- Swap Shop: rhyming, cheerful', NULL, NULL, '2026-10-12T21:55:04Z', NULL, 102, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (44, 'English name for the snipe joker «Francotirador»?', 'pending', '["Trick Shot", "Sharpshooter", "Long Shot", "Pot Shot"]', 'Spanish «Francotirador»: sniper. Joker: the players aim at the answer they think is false; a wrong answer hit is struck out and play goes on; hitting the right answer loses the question and the level repeats with fresh cards. Crosshair icon. Not a literal translation (15a: joker names are content). ≤ 13 characters (tray width, «Francotirador»). The name also shows in «Use {name}?», the aria label, «no … left» errors and the printable cards. Key letter stays as in es (S, P, F, T, X) until LUI-4. Answer with one option or your own name.
+- Trick Shot: playful, the trick is shooting a wrong answer
+- Sharpshooter: clear for kids, 12 chars, closest to the Spanish
+- Long Shot: pun on a risky bet, fits the repeat-the-level risk
+- Pot Shot: a casual, opportunistic shot, cheeky', NULL, NULL, '2026-10-12T21:55:04Z', NULL, 102, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -10513,6 +10541,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (351, 100, '2026-10-12T21:27:55Z', '2026-10-12T21:30:06Z', 'done', NULL, 0, 'c9af0acb40d6bfa84fdbe0e24c7980444a95dbff', 'claude-opus-5-5[1m]', 'af4d75aa-a52b-4255-a7b6-9e993875d8f0', 20, 40, 9096, 727051, 32457, 0.5871462, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (352, 101, '2026-10-12T21:30:06Z', '2026-10-12T21:53:38Z', 'done', NULL, 0, 'f6659a6975b8d697bd50bcf58b377f0b7f0f8a69', 'claude-opus-5-5[1m]', '7c4a4824-582c-4977-a9f3-db60a5e5b36f', 110, 158, 45894, 11742192, 234703, 5.1445743999999989, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (353, 493, '2026-10-12T21:53:38Z', '2026-10-12T21:54:20Z', 'done', NULL, 0, '31c216d644695f68e968649bc18d6861fac17881', 'claude-opus-5-5[1m]', 'cafdd268-fa31-49db-ac7d-cb3c9f4b68a6', 7, 14, 1829, 185125, 19805, 0.23210099999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (354, 102, '2026-10-12T21:54:20Z', '2026-10-12T21:55:20Z', 'done', NULL, 0, 'e194ac5f16fca1e499b4e3b9d1c5dfd9a68b53fe', 'claude-opus-5-5[1m]', '0bc448cb-7afa-4313-afba-22e4ed5dea76', 8, 14, 5722, 221138, 32428, 0.4181476, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -10535,6 +10564,11 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (60, 4);
 INSERT INTO task_decision (task_id, decision_id) VALUES (60, 5);
 INSERT INTO task_decision (task_id, decision_id) VALUES (97, 6);
 INSERT INTO task_decision (task_id, decision_id) VALUES (101, 6);
+INSERT INTO task_decision (task_id, decision_id) VALUES (104, 40);
+INSERT INTO task_decision (task_id, decision_id) VALUES (104, 41);
+INSERT INTO task_decision (task_id, decision_id) VALUES (104, 42);
+INSERT INTO task_decision (task_id, decision_id) VALUES (104, 43);
+INSERT INTO task_decision (task_id, decision_id) VALUES (104, 44);
 INSERT INTO task_decision (task_id, decision_id) VALUES (105, 7);
 INSERT INTO task_decision (task_id, decision_id) VALUES (108, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
