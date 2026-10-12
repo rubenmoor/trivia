@@ -456,3 +456,10 @@ Template:
 - Decision: `GameError(code, params)`; codes in `ERRORS` (`app/server/game.py`) with English templates. Error bodies are `{"error": code, "params", "message": English, "supply"}`; 404/500 are `not_found`/`server_error`. Joker `reason`s are `{"code", "params"}`. The client turns player-facing codes into Spanish (`app/client/src/lib/errors.ts`, later the `es` catalog); internal codes show the English `message`.
 - Consequences: `str(e)` is English (logs). PORT-1 fixtures and PORT-3 carry the same codes; parity compares `error`/`params`. `/api/flags` and authoring errors unchanged.
 - Supersedes / related: D-25; plan 12, plan 21 (LUI-1)
+
+## D-58: Engine randomness is an injected `Rng`; parity uses a recorded shuffle tape
+- Date: 2026-10-11
+- Context: PORT-1 fixtures must make the Python referee's randomness replayable in the TS engine (plan 12, plan 18). Reproducing Python's Mersenne Twister in TS is work with no value for the game.
+- Decision: No shared PRNG. All referee randomness is `random.shuffle`; the recorder logs each call as `{site, n, perm}` (`perm[j]` = old index now at j). The TS engine takes an injected `Rng` with `shuffle(xs, site?)` (in place); tests use `tapeRng(tape)`, which fails on a wrong `n`, a site mismatch or a missing/leftover entry. Production `rng.ts` is any seedable PRNG.
+- Consequences: PORT-2/3 shuffle at the same points, in the same order, on arrays of the same length (also inside `view`). Format: `app/client/src/engine/fixtures/README.md`.
+- Supersedes / related: plan 12 (PORT-1–3), plan 18

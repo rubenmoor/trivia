@@ -1,0 +1,73 @@
+# Engine parity fixtures (PORT-1)
+
+Recorded output of today's Python referee (`app/server/game.py` + `selection.py`), played through scripted and random games on synthetic data. The TS engine (PORT-2 `selection.ts`, PORT-3 `game.ts`) replays them and must match exactly. Written by `authoring/tools/record_fixtures.py` (plan 18); don't edit by hand.
+
+## Re-record and check
+Run from the repo root, Python standard library only. The recorder never touches `state/`: game state lives in a fresh temp dir per scenario.
+- `python3 authoring/tools/record_fixtures.py`: rewrite every fixture from scratch
+- `python3 authoring/tools/record_fixtures.py --check`: re-record into a temp dir, diff; exit 1 + `differs: <file>` on a difference
+- Output is deterministic: `sort_keys`, `ensure_ascii=False`, one list item (step, question, case) per line
+- Re-record when a port finds a gap: add a case/scenario to the recorder, run, commit both
+
+## Files
+Fixtures are self-contained: synthetic categories and pools, never the real `app/data/`.
+- `categories.json`: `categories.load()` output (with `bundle`); 2 bundles (`base`, `colombia`), 3 broad categories, 6 subcategories
+- `pools/main.json`, `pools/tight.json`: `{"questions": [...]}`, `pool.json` entries
+  - `main`: several games per player, with jokers
+  - `tight`: exactly the 48 cards of one game; no replacement ever fits (Bájale, Cambiazo, purge, snipe hit), a player's second game fails the supply check
+- `selection.json`: direct `selection.py` calls, `[{name, fn, args, tape, result}]`
+  - `fn` ∈ `in_range`, `assign`, `supply`, `draw`; fresh DB + seed per case
+  - `args.pool`: pool name (`none` = empty); `without`: IDs removed from it
+  - `supply`: `players` (IDs 1.., in order) and `burns` (`player` null = global, game 1) written first; `player` = whose burns count
+  - `draw`: `keep` (IDs from the pool), `n` (default 4), `avoid_categories`, `category_of: "broad"` (broad category instead of subcategory); `result` IDs or null (unfillable)
+- `game/<scenario>.json`: `{name, about, seed, pool, steps}`
+
+## Game steps
+One step = one HTTP request, recorded as `main.py` answers it.
+- `{now, pool, call, args, tape, response: {status, body}, db}`
+- `pool`: the pool for this step; a scenario may switch pools, always right before a `new`
+- `call` ∈ `get_game` (`player`), `players`, `new` (`player`), `pick` (`index`), `answer` (`index`), `skip` (`everyone`), `undo`, `abandon`, `jokers` (`jokers`: budget), `joker` (`joker`, optional `purge`/`subcategory`/`index`), `delete_player` (`name`)
+- `response`:
+  - action ok: `200 {"game": view}`, `joker` adds `"event"`
+  - `get_game`: `200 {"game", "supply"}`; error `400`
+  - `players`, `delete_player`: `200 [players]`
+  - error: `409 {"error": code, "params", "message", "supply"}` (D-57); compare `error`/`params`, not `message`
+- `db`: full snapshot after the step
+  - `players` `[{id, name, created_on}]` by id
+  - `games` `[{id, started_on, finished_on, result, player_id, state}]` by id, `state` parsed
+  - `burned` `[{question_id, player_id, game_id, burned_on}]` sorted by (game_id, question_id, player_id)
+  - an error leaves it unchanged (rollback); the engine must do the same
+  - `soak-<n>`: only on every 10th and the last step (size)
+- IDs: SQLite gives max+1 after a delete; the `players` scenario pins it
+
+## Time
+- One fixed `now` per step: `2026-01-01T00:00:00` + step index minutes (`selection.json`: always the start)
+- The engine takes `now` as a parameter, never reads the clock
+
+## Shuffle tape (D-58)
+All referee randomness is `random.shuffle`; the recorder replaces it and logs every call. No shared PRNG.
+- Tape entry: `{"site", "n", "perm"}`
+  - `n`: length of the shuffled list
+  - `perm[j]`: old index of the element now at position j (`xs = perm.map(i => old[i])`)
+  - `site`: name of the Python function that called `shuffle` (`draw`, `pick`, `swap_in`, `replacement`, …)
+- Engine: injected `Rng` with `shuffle(xs, site?)`, in place
+- Tests: `tapeRng(tape)` applies the perms in order and fails on
+  - a wrong `n`
+  - a `site` mismatch
+  - a missing entry (more shuffles than recorded) or a leftover one (fewer)
+- So shuffles must happen at the same points, in the same order, on arrays of the same length
+  - including those inside `view` → `jokers_view` → `trial`: hint, skip, easier, snipe, skip+purge, then Cambiazo's `replacement` per subcategory in `categories.load()` order
+- Production `rng.ts`: any seedable PRNG (e.g. mulberry32 + Fisher–Yates)
+
+## Scenarios
+Scripted ones pin one rule each; soak walks catch paths they miss.
+- `win`, `lose-undo`, `hint`, `skip-purge`, `easier`, `category`, `snipe`, `budget`: rules and jokers; every joker has an available and an unavailable case
+- `admin-skip`, `players`, `abandon`, `supply`, `errors`: players, admin skip, supply failures, errors
+- `soak-1` … `soak-10`: seeded random walks of legal actions, 30–40 steps (choices from `random.Random("soak-<n>")`, not the tape); `soak-10` on `tight`
+
+## Notes for the port (parts 2/3)
+- Python `sort` and JS `Array.prototype.sort` are both stable; keep the same sort keys (booleans: False < True)
+- `casefold()` ≠ `toLowerCase()` in general; `players` pins the cases that matter («Íngrid»/«íngrid»)
+- `players()` sorts by `coalesce(max(started_on), created_on) DESC`; scenarios avoid ties (distinct `now` per step)
+- Python sets (`later_fill`, `asked_categories`) are only used for membership; their order doesn't matter
+- Legacy SQLite schemas (pre-D-28, pre-JK-2) aren't here; the migration (PORT-5) reads them in Python

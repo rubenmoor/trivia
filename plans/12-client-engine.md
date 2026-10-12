@@ -34,7 +34,7 @@ flowchart LR
 With the engine in the client, the correct answer is in memory before the players answer. For an offline single-player game that is acceptable: anyone who opens devtools to cheat at family trivia only spoils their own game. This relaxes D-25 ("the client never learns the correct answer"). The UI still must never *render* hidden data. Record it as a decision when PORT-3 lands.
 
 ## Parity strategy
-1. **Fixtures first (PORT-1):** before porting, write a scenario recorder for the Python engine. It plays scripted games (picks, answers, every joker, skip, burn for everyone, undo, supply failures) on a small fixed pool and stores the inputs and outputs as JSON in `app/client/src/engine/fixtures/`. Randomness is made deterministic by injecting the shuffle choices into the recording.
+1. **Fixtures first (PORT-1):** before porting, write a scenario recorder for the Python engine. It plays scripted games (picks, answers, every joker, skip, burn for everyone, undo, supply failures) on a small fixed pool and stores the inputs and outputs as JSON in `app/client/src/engine/fixtures/`. Randomness is a recorded shuffle tape, not a shared PRNG (D-58): every `random.shuffle` is logged as `{site, n, perm}`; the TS engine takes an injected `Rng`, and tests replay the tape. Format: `fixtures/README.md`.
 2. **Port module by module:** `selection` first (pure, easy to compare), then `game`.
 3. **Fixture tests:** the TS engine replays every fixture and must produce the same states. Tests use Node's built-in `node:test` (no new dependency).
    - Errors (D-57): PORT-3 throws the same codes as `game.py` (`GameError(code, params)`); parity compares `error`/`params`, not `message`. Joker `reason`s too.
@@ -45,7 +45,7 @@ With the engine in the client, the correct answer is in memory before the player
 - `SaveData.version` makes later migrations possible (game modes in 13, multiple locales in 15).
 
 ## Tasks
-- [ ] PORT-1 Scenario recorder for `app/server/game.py` + `app/server/selection.py`; commit the fixtures.
+- [x] PORT-1 Scenario recorder for `app/server/game.py` + `app/server/selection.py`; commit the fixtures. Done 2026-10-11 (plan 18): `authoring/tools/record_fixtures.py` (`--check`), fixtures + README in `app/client/src/engine/fixtures/`.
 - [ ] PORT-2 `engine/selection.ts`: supply check and draw (GF-2, D-25), fixture-tested.
 - [ ] PORT-3 `engine/game.ts`: state machine, players, burning, jokers, undo. Decision: the client holds the answer (relaxes D-25).
 - [ ] PORT-4 Store interface; `ServerStore` + Python `GET/PUT /api/save` (atomic write, with a retry for Windows file locks); `MemoryStore` for tests.

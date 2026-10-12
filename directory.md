@@ -10,6 +10,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `app/client/` | Game UI: Svelte 5 + Vite + TypeScript, built to `app/client/dist/` |
 | `app/client/src/game/` | The game screens and their parts (stage, question, jokers, tower, fireworks, sound, copy) |
 | `app/client/src/lib/` | API client and types; `errors.ts`: server error codes → Spanish (D-57) |
+| `app/client/src/engine/fixtures/` | Parity fixtures of the Python referee for the TS engine (PORT-1, D-58): synthetic categories and pools, `selection.json`, `game/<scenario>.json`; format in its `README.md` |
 | `app/client/public/` | Fonts and audio |
 | `app/data/categories.json` | The `base` bundle's 23 broad categories and their 113 subcategories (D-19, D-43) |
 | `app/data/age-groups.json` | Age groups and their windows on the shared difficulty scale 1–15 (D-38) |
@@ -25,6 +26,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/data/question-axes.json` | Question styles as axes (D-37) |
 | `authoring/tools/qgen.py` | The question pipeline (`qgen batch`, `validate`, `export`, `report`, single steps) |
 | `authoring/tools/media.py` | Commons search, candidate storage, media sync (`trivia-media`) |
+| `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
 | `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising and the house style |
 | `authoring/tools/` (rest) | Helpers: `batches.py`, `concepts.py`, `layout.py` (paths), `pool_export.py`, `progress.py` |
 | `authoring/server/` | Authoring server on port 8001: question API for the review tool, stats, start page |
