@@ -77,6 +77,9 @@ const es = {
     apply: "Cambiar (reinicia la pantalla)",
     /** A question language whose pool can't fill a game. */
     short: "Faltan preguntas ({n} disponibles)",
+    /** First-start screen (fresh save): heading and confirm prompt. */
+    choose: "Elige el idioma",
+    confirm: "Aceptar",
   },
   /** «Reportar pregunta» and the report list (MD-6). */
   report: {

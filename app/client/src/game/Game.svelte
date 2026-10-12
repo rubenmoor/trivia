@@ -4,7 +4,7 @@
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, fetchReports, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
-  import { saveError, takeSaveNotice } from "../lib/engine";
+  import { language, saveError, takeSaveNotice } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
@@ -16,6 +16,7 @@
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
   import JokerTray from "./JokerTray.svelte";
+  import LanguageScreen from "./LanguageScreen.svelte";
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
@@ -27,9 +28,10 @@
   import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
-  type Screen = "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
+  type Screen = "language" | "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
 
   const MUSIC: Record<Screen, Track | null> = {
+    language: "normal",
     start: "normal",
     player: "normal",
     level: "normal",
@@ -108,6 +110,7 @@
   async function refresh() {
     try {
       ({ game, supply } = await fetchGame());
+      if (loading && (await language()).ask) screen = "language"; // a fresh save, once (plan 68)
       notice ??= takeSaveNotice();
       error = saveWarning();
     } catch (e) {
@@ -372,7 +375,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "player" || on === "question") return; // they push their own
+    if (on === "language" || on === "player" || on === "question") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
@@ -412,6 +415,9 @@
   {#if loading}
     <Stage />
     <p class="center label">{t("screen.loading")}</p>
+  {:else if screen === "language"}
+    <Stage />
+    <LanguageScreen onpicked={() => go("start", "whoosh")} />
   {:else if screen === "start"}
     <Stage />
     {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
@@ -589,7 +595,7 @@
     </button>
   {/if}
 
-  {#if !loading && !overlayOpen}
+  {#if !loading && !overlayOpen && screen !== "language"}
     <!-- The overlay for the mouse (IN-1); no focus, so a later Enter can't open it. -->
     <button
       class="menu-button"

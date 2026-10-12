@@ -16,6 +16,8 @@ interface Loaded {
   save: SaveData & { language: Language };
   /** Question locales with a pool (plan 68). */
   locales: string[];
+  /** No save stored yet (no file, 404, backed-up broken file): the first-start screen may ask (plan 68). */
+  fresh: boolean;
 }
 
 const store = desktop ? new FileStore(desktop) : new ServerStore();
@@ -23,14 +25,19 @@ let loading: Promise<Loaded> | null = null;
 let chain: Promise<unknown> = Promise.resolve();
 let lastSaveError: GameError | null = null;
 
-/** Save + available locales, once per page load; a fresh save gets the browser's language (plan 68).
+/** The player's language tag; milestone 10 swaps in Steam's client language (plan 68). */
+export function guessTag(): string {
+  return globalThis.navigator?.language ?? "es";
+}
+
+/** Save + available locales, once per page load; a fresh save gets the guessed language (plan 68).
  * A failure is retried on the next call. */
 export function ready(): Promise<Loaded> {
   loading ??= Promise.all([store.load(), availableLocales()]).then(
     async ([save, locales]) => {
-      let language = save.language ?? defaultLanguage(globalThis.navigator?.language ?? "es", UI_LANGS, locales);
+      let language = save.language ?? defaultLanguage(guessTag(), UI_LANGS, locales);
       if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
-      const loaded = { save: { ...save, language }, locales };
+      const loaded = { save: { ...save, language }, locales, fresh: !save.language };
       await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
       return loaded;
     },
@@ -77,10 +84,11 @@ function exclusive<T>(fn: () => Promise<T>): Promise<T> {
   return out;
 }
 
-/** The stored language (fresh save: the default), and the options a player can pick from. */
-export async function language(): Promise<{ language: Language; ui: string[]; questions: string[] }> {
-  const { save, locales } = await ready();
-  return { language: save.language, ui: UI_LANGS, questions: locales };
+/** The stored language (fresh save: the default), the options a player can pick from, and whether
+ * the first-start screen asks (a fresh save with something to pick). */
+export async function language(): Promise<{ language: Language; ui: string[]; questions: string[]; ask: boolean }> {
+  const { save, locales, fresh } = await ready();
+  return { language: save.language, ui: UI_LANGS, questions: locales, ask: fresh && (UI_LANGS.length > 1 || locales.length > 1) };
 }
 
 /** Per question locale, the supply check for the default bundles (plan 68): not ok → listed, disabled. */
@@ -116,6 +124,7 @@ async function exec<T>(route: Route<T>, write: boolean, scope: Scope): Promise<T
   }
   if (write) {
     loaded.save = { ...reply.save, language: reply.save.language ?? loaded.save.language };
+    loaded.fresh = false;
     try {
       await store.save(reply.save); // on failure the new save stays; the next action PUTs it again
       lastSaveError = null;
