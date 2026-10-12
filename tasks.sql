@@ -8448,8 +8448,39 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md`; `plans/11-steam.md` row 15 if 15a is done.
 
 Done when: `npm run check`, `check:literals`, `npm run build` pass; every launch language passed its playtest.', '2026-10-12T19:44:18Z', NULL, 452);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (460, 70, 'create tasks for plan 70', 'split', 'open', 1000, NULL, 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:46:01Z', NULL, 248);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (460, 70, 'create tasks for plan 70', 'split', 'done', 1000, '2026-10-12, tasks 461-463 (no new decisions needed now; budget decision is task 463''s own)', 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:46:01Z', '2026-10-12T19:46:46Z', 248);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (461, 70, 'qgen report --cost: $/approved per run kind and projection per language (CT-3)', 'work', 'open', NULL, NULL, 'Plan 70 design "Cost report (CT-3)". `qgen report --cost [--json]` in `authoring/qgen.py`, reusing `costs()` and the `health` metrics.
+
+- Per run (`batch-*`, `tr-<L>-*`, `rework-*`, `tighten-*`, `neutralize-*`, `concepts`, others): calls, $ (incl. `work/<run>/audit/costs.log`), approved, $ per approved.
+- Per kind: draft $/approved (last 3 `batch-*`, weighted by approved), translation $/approved per locale (`tr-<L>-*`), overhead ratio = non-batch $ / batch $.
+- Projection per launch language (`es`, `en`, `de`, decision 26): deficit × $/approved × (1 + overhead ratio). `en`/`de`: "no pilot yet" until a `tr-<L>-*` run exists. Until task 2 lands, deficit = `targets.deficits()` for `es` and the full target for `en`/`de`; task 2 swaps in per-locale deficits and the `es` source shortfall.
+- Spent vs. budget per language when `targets.json` has `"budget"` (task 3); information only, no stop (D-55).
+- `work/` is local and gitignored: print which runs/logs were missing or skipped.
+- AGENTS.md `qgen report` line; plan 16 "Cost": today''s numbers.
+
+Done when: `qgen report --cost` and `--json` run on the local `work/`; batch-4..7 $/approved match `authoring/reports/batches.md` (0.16 / 0.37 / 0.30 / 0.24); `npm run check` / `qgen validate` still pass.', '2026-10-12T19:46:44Z', NULL, 460);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (462, 70, 'Per-locale deficits and es source shortfall (CT-4)', 'work', 'open', 550, NULL, 'Plan 70 design "Per-locale targets", "Translation aimed at gaps", "Source supply". No new target numbers: every launch language uses `targets.json` `base` (decision 21: Content target per player and language).
+
+- `targets.deficits(pool, bundle, locale=None)`: with a locale, count that locale''s approved, non-stale translations (via `translations.py`) by their own difficulty.
+- `qgen report --locale L` (default `es`) progress section; `target_check` of `--simulate` uses the same function (drop the "until part 9 sets per-locale targets" note).
+- `--translate` selection (plan 66, task 440: qgen batch --translate <locale>): within the fewest-translations subcategory order, weight by the locale''s deficit at the source''s difficulty. If task 440 is still open: do the rest, add this weight as a follow-up task in plan 66.
+- Source shortfall per level = locale deficit / yield − untranslated translatable approved `es` sources at that level; yield = approved translations / translated sources from `tr-*` runs (1.0 before a pilot), largest over `en`/`de`.
+- `target_weights()` for `base`: `es` deficit while any (D-54 unchanged); then the source shortfall; even weights (D-40) only when both are zero.
+- Show per-locale deficits and the shortfall in `--cost` (task 1''s projection: `es` extra sources at the draft rate) and in `--locale` progress.
+- Throw-away check: seeded `draw_slots` with a fake `es` pool at 5000 and an `en` deficit → slots follow the shortfall.
+- D-entry "Per-locale targets and gaps" (`pm decision record`): D-75''s numbers per locale, deficits per locale, source shortfall drives `es` drafting past its target, no per-mode/age-group targets; D-54 "amended by" it.
+- Plan 16: CT-4 `[x]` (generation plan = deficits per locale + source shortfall, read by `draft` and `--translate`).
+
+Done when: `qgen report --locale en` and `--simulate` use per-locale deficits; the dry run passes; `qgen validate` passes.', '2026-10-12T19:46:44Z', NULL, 460);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (463, 70, 'Release budget per language (pm decision, CT-3)', 'work', 'open', -95, NULL, 'Plan 70 task 3. Runs after part 11''s translation pilot (QT-5: `tr-en-1`, `tr-de-1` done, go/no-go decided); before QT-6''s full runs, which wait for this decision.
+
+- If the pilot runs or their reports don''t exist: `pm decision add "Translation pilot done (tr-en-1, tr-de-1)?"` (kind once), `pm task-pending-decision` this task on it, stop.
+- Otherwise: `qgen report --cost` → `pm decision add "Release budget per language"` with a table: `es` remaining, `en`, `de`, `es` extra sources for translation, overhead, QC. Options: recommended = projection + 20 % margin; a lower cap, naming which levels/languages give way; grow `es` `base` past 5000 for sources or not.
+- On the answer: `"budget": {"es": $, "en": $, "de": $}` in `targets.json`, loader in `targets.py`, check in `qgen validate`; `--cost` shows spent vs. budget (information only, no stop, D-55).
+- Plan 16 "Cost" and CT-3 `[x]`; `plans/project.md`.
+
+Done when: the decision is answered and stored in `targets.json`; `qgen validate` passes.', '2026-10-12T19:46:44Z', NULL, 460);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9334,6 +9365,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (312, 247, '2026-10-12T19:41:30Z', '2026-10-12T19:43:44Z', 'done', NULL, 0, 'cd16b9d403efa061416de791fe7fc6024661ed9b', 'claude-opus-5-5[1m]', '1d7cf782-713e-4b54-b9ea-f7e78e19b595', 17, 34, 11699, 881960, 57357, 0.869364, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (313, 452, '2026-10-12T19:43:44Z', '2026-10-12T19:44:32Z', 'done', NULL, 0, 'd0f6ceb9af0ba2fbeb79984b3753dc4ade54a074', 'claude-opus-5-5[1m]', '9965c746-a65a-4237-9541-ee173df15c62', 6, 12, 4897, 188961, 29003, 0.36780420000000008, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (314, 248, '2026-10-12T19:44:32Z', '2026-10-12T19:46:19Z', 'done', NULL, 0, 'ebd612bdf9d6675a6ba930acc6fa93c40fd79b1d', 'claude-opus-5-5[1m]', 'd5cd8c50-f2be-4d1e-9a85-fa6ccc76184c', 15, 26, 9867, 695871, 64782, 0.8548742, 626610);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (315, 460, '2026-10-12T19:46:19Z', '2026-10-12T19:46:53Z', 'done', NULL, 0, '2ce72da99514975b6e7fbe4511d4179e5a8460f9', 'claude-opus-5-5[1m]', '25ec8370-a191-49f0-954e-b83b7f899907', 6, 12, 3211, 177929, 26517, 0.3119898, 626610);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
