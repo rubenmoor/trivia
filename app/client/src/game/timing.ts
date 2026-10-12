@@ -2,6 +2,8 @@
 
 /** Fade to black and back, each way. */
 export const FADE_MS = 400;
+/** The fade-in waits at most this long for the next question's media to load (UI-7). */
+export const PRELOAD_MAX_MS = 2000;
 /** «¡Hola, …!» on the Player screen before the transition to Level (UI-16). */
 export const GREETING_MS = 1300;
 /** The picked card pulses and tears open while the others slide off, before the transition (UI-11). */

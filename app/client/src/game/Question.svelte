@@ -37,6 +37,7 @@
     level,
     playerName,
     paused,
+    shown = true,
     jokers,
     jokersLeft = null,
     swappedBy = null,
@@ -50,6 +51,8 @@
     playerName: string | null;
     /** The admin overlay is open: the wait before the reveal stops. */
     paused: boolean;
+    /** False while the screen sits behind the black of a transition: the media waits to start (UI-7). */
+    shown?: boolean;
     /** Joker availability from the server, or null. */
     jokers: Jokers | null;
     /** Uses left per joker for the tray's badges, null = unlimited (MD-3). */
@@ -68,7 +71,7 @@
   /** The answer locked in, or null. */
   let locked = $state<number | null>(null);
   /** «Respuesta final» is visible (the padlock has moved away). */
-  let ready = $state(false);
+  let finalReady = $state(false);
   let submitted = $state(false);
   let result = $state<Game["last"]>(null);
   let revealed = $state(false);
@@ -81,6 +84,8 @@
     native = { w: img.naturalWidth / devicePixelRatio, h: img.naturalHeight / devicePixelRatio };
   }
   let player = $state<HTMLMediaElement>();
+  let started = false;
+
   let padlockTimer: ReturnType<typeof setTimeout> | undefined;
 
   /** The joker token lifted by a first tap (Soplo, Bájale), waiting for the second. */
@@ -126,6 +131,35 @@
     [media.credit, media.type === "audio" ? question.background?.credit : null].filter(Boolean).join(" · "),
   );
 
+  // UI-7: ready once the picture and the audio/video have loaded; any failure ends the wait.
+  const waiting = new Set<"picture" | "player">();
+  // svelte-ignore state_referenced_locally
+  if (picture && media.type !== "video") waiting.add("picture");
+  // svelte-ignore state_referenced_locally
+  if (media.type !== "image" && media.file_url) waiting.add("player");
+  let settleAll: () => void;
+  const settled = new Promise<void>((resolve) => (settleAll = resolve));
+  function settle(what: "picture" | "player") {
+    waiting.delete(what);
+    if (!waiting.size) settleAll();
+  }
+  if (!waiting.size) settleAll!();
+  function fail() {
+    mediaFailed = true;
+    settleAll();
+  }
+  /** Resolves once the media is ready to show (or failed); Game.svelte waits for it before the fade-in. */
+  export function ready() {
+    return settled;
+  }
+
+  // The audio/video starts with the fade-in, not behind the black (UI-7), and not while the overlay is open.
+  $effect(() => {
+    if (!shown || paused || !player || started) return;
+    started = true;
+    player.play().catch(() => {});
+  });
+
   /** True while the final answer is out: nothing may change the question (the overlay checks it). */
   export function busy() {
     return submitted;
@@ -165,7 +199,7 @@
     lockMusic();
     // The big padlock shakes for a suspense beat, opens and slides away (UI-12, CSS below).
     padlockTimer = setTimeout(() => {
-      ready = true;
+      finalReady = true;
       sfx("padlock-open");
     }, PADLOCK_MS);
   }
@@ -174,7 +208,7 @@
     if (submitted || locked === null) return;
     clearTimeout(padlockTimer);
     locked = null;
-    ready = false;
+    finalReady = false;
     sfx("padlock-close");
     lockMusic();
   }
@@ -188,7 +222,7 @@
   }
 
   async function submit() {
-    if (!ready || submitted || locked === null) return;
+    if (!finalReady || submitted || locked === null) return;
     submitted = true;
     error = null;
     player?.pause();
@@ -367,9 +401,16 @@
   <div class="backdrop" in:crossfade|global out:crossfade|global>
     {#if media.type === "video" && media.file_url}
       <!-- svelte-ignore a11y_media_has_caption -->
-      <video bind:this={player} src={src(media.file_url)} autoplay onended={mediaEnded} onerror={() => (mediaFailed = true)}></video>
+      <video
+        bind:this={player}
+        src={src(media.file_url)}
+        preload="auto"
+        oncanplaythrough={() => settle("player")}
+        onended={mediaEnded}
+        onerror={fail}
+      ></video>
     {:else if picture && !mediaFailed && decorative}
-      <img src={picture} alt="" class="blurred" onerror={() => (mediaFailed = true)} />
+      <img src={picture} alt="" class="blurred" onload={() => settle("picture")} onerror={fail} />
     {:else if picture && !mediaFailed}
       <Stage />
       <img
@@ -379,14 +420,21 @@
         class:ready={native}
         style:--w={native?.w}
         style:--ratio={native ? native.w / native.h : 1}
-        onload={measure}
-        onerror={() => (mediaFailed = true)}
+        onload={(e) => (measure(e), settle("picture"))}
+        onerror={fail}
       />
     {/if}
     {#if decorative && !mediaFailed}<div class="mark">?</div>{/if}
   </div>
   {#if media.type === "audio" && media.file_url}
-    <audio bind:this={player} src={src(media.file_url)} autoplay onended={mediaEnded} onerror={() => (mediaFailed = true)}></audio>
+    <audio
+      bind:this={player}
+      src={src(media.file_url)}
+      preload="auto"
+      oncanplaythrough={() => settle("player")}
+      onended={mediaEnded}
+      onerror={fail}
+    ></audio>
   {/if}
 
   <div class="top">
@@ -531,11 +579,11 @@
       {:else if submitted}
         {#if !revealed}<p class="waiting">{t("screen.question.finalWaiting")}</p>{/if}
       {:else}
-        <button class="candy final-button" class:ready onclick={submit} disabled={!ready} tabindex={ready ? 0 : -1}>
+        <button class="candy final-button" class:ready={finalReady} onclick={submit} disabled={!finalReady} tabindex={finalReady ? 0 : -1}>
           {t("screen.question.final")} <kbd>Enter</kbd>
         </button>
-        <div class="padlock" class:shaking={locked !== null && !ready} class:open={ready} aria-hidden="true">
-          <Icon name={ready ? "unlock" : "lock"} size="100%" />
+        <div class="padlock" class:shaking={locked !== null && !finalReady} class:open={finalReady} aria-hidden="true">
+          <Icon name={finalReady ? "unlock" : "lock"} size="100%" />
         </div>
         {#if locked === null}<p class="prompt label">{t("screen.question.prompt")}</p>{/if}
       {/if}

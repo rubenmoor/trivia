@@ -2,7 +2,7 @@
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
   // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
@@ -19,7 +19,7 @@
   import Stage from "./Stage.svelte";
   import { swap } from "./swap";
   import "./theme.css";
-  import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, TEAR_MS, sleep } from "./timing";
+  import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
   type Screen = "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
@@ -116,7 +116,10 @@
     picked = null;
     swappedBy = null;
     if (next !== "select") fresh = new Set();
-    // PLACEHOLDER(UI-7): no preloading of the next screen's media before fading in.
+    if (next === "question") {
+      await tick();
+      await Promise.race([questionRef?.ready() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
+    }
     black = false;
     await sleep(FADE_MS);
     busy = false;
@@ -454,6 +457,7 @@
         level={game.level}
         playerName={game.player}
         paused={overlayOpen}
+        shown={!black}
         jokers={game.jokers}
         jokersLeft={game.jokers_left}
         {swappedBy}
