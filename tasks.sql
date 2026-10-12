@@ -11057,11 +11057,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11086,11 +11087,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11111,11 +11113,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11139,11 +11142,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11164,11 +11168,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11194,11 +11199,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11220,11 +11226,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11246,11 +11253,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11271,11 +11279,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11297,11 +11306,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
 - Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Report rows: status `fixed (task N)` (pm commits the task) / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.
 - Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
 - Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
 
 ## Check
-- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed. Real `state/` never written: temp `TRIVIA_STATE` / `TRIVIA_MEDIA`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## What
@@ -11312,7 +11322,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - One list of this part''s duplication candidates in `## Part 7` for part 10 (`plan 82`).
 
 ## Done when
-- Structure verdict logged in `## Part 7` (fixed / decision N); duplication list there; every part 1 row `handed to part 7` has a final status.', '2026-10-12T23:07:26Z', NULL, 519);
+- Structure verdict logged in `## Part 7` (`fixed (task N)` / `decision N`); duplication list there; every part 1 row `handed to part 7` has a final status.', '2026-10-12T23:07:26Z', NULL, 519);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (567, 80, 'Review batch health and targets: health.py, targets.py, batches.py, age_groups.py', 'work', 'open', NULL, NULL, 'Task 1 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -12379,8 +12389,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:39:12Z', '2026-10-12T23:39:54Z', 599);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (611, 78, 'create tasks for plan 78', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 554-556 aligned with revised plan 78 (lint evidence tags, fixed (task N) status, lint pass in checks); no new decisions', 'Split plan 78 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:40:19Z', '2026-10-12T23:40:47Z', 600);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (612, 79, 'create tasks for plan 79', 'split', 'open', 1000, NULL, 'Split plan 79 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:41:07Z', NULL, 601);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (612, 79, 'create tasks for plan 79', 'split', 'done', 1000, '2026-10-12, tasks 557–566 synced with revised plan 79: fixed (task N) status, temp TRIVIA_STATE/TRIVIA_MEDIA rule; no new decisions', 'Split plan 79 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:41:07Z', '2026-10-12T23:41:40Z', 601);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13423,6 +13433,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (410, 600, '2026-10-12T23:39:59Z', '2026-10-12T23:40:26Z', 'done', NULL, 0, 'b3423b0f590928ef5746857e4f437bf470dd4490', 'claude-opus-5-5[1m]', 'a1615139-b8e5-481b-a3e7-4d724618a5ec', 6, 12, 2517, 218752, 36797, 0.3885144, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (411, 611, '2026-10-12T23:40:26Z', '2026-10-12T23:40:52Z', 'done', NULL, 0, '5caf42916a5ca99f8bd3260129565e88e6f89a7e', 'claude-opus-5-5[1m]', '6abbf0aa-0d90-4efe-a863-7cd9d691d35e', 6, 12, 2218, 177876, 27994, 0.3039352, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (412, 601, '2026-10-12T23:40:53Z', '2026-10-12T23:41:11Z', 'done', NULL, 0, 'ebe9f8dede8afe7512c7ca9c9ce786892a4b96f3', 'claude-opus-5-5[1m]', 'dec15498-e943-4ab9-a5e4-6bb7bdd7e9c8', 5, 10, 1485, 165286, 29751, 0.30080519999999994, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (413, 612, '2026-10-12T23:41:12Z', '2026-10-12T23:41:44Z', 'done', NULL, 0, '959e057615b1db4ab5b45e2c6758be77876bf57c', 'claude-opus-5-5[1m]', 'd375e190-faec-44bf-b866-9ba160d13469', 8, 16, 2412, 300125, 40770, 0.43448900000000007, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
