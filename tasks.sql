@@ -2663,13 +2663,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: line for the new file.
 
 Done when: `qgen validate` passes; a throw-away edit (wrong sum, missing level) makes it fail.', '2026-10-11T23:50:08Z', '2026-10-12T02:12:00Z', 19);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (26, 12, 'qgen report: progress vs. targets', 'work', 'open', NULL, NULL, 'Part "Progress view" of plan 12, CLI side. Needs the targets file and loader (previous task).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (26, 12, 'qgen report: progress vs. targets', 'work', 'done', NULL, '2026-10-11, authoring/tools/qgen.py (report_progress, --bundle), README.md, AGENTS.md', 'Part "Progress view" of plan 12, CLI side. Needs the targets file and loader (previous task).
 
 - `qgen report`: new section "progress vs. targets (base)": per difficulty `approved / target`, missing count, percent; a total line; per broad category `approved / derived share`.
 - Approved = status `approved`, bundle `base`, regardless of burns.
 - `--bundle <id>` for another bundle with targets; skip the section quietly when the bundle has none.
 
-Done when: `qgen report` prints the section with today''s numbers (well under target at 9–15).', '2026-10-11T23:50:08Z', NULL, 19);
+Done when: `qgen report` prints the section with today''s numbers (well under target at 9–15).', '2026-10-11T23:50:08Z', '2026-10-12T02:12:43Z', 19);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (27, 12, '/api/targets and target markers on /stats/difficulty', 'work', 'open', 500, NULL, 'Part "Progress view" of plan 12, authoring server and UI. Needs the targets file and loader.
 
 - Authoring server: `GET /api/targets` (the file as JSON); doc line in `authoring/server/main.py`''s docstring.
@@ -4671,6 +4671,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (114, 71, '2026-10-12T02:08:14Z', '2026-10-12T02:09:47Z', 'done', NULL, 0, '592295ae0134ec9973121e4882a6d709ea9cbd20', 'claude-opus-5-5[1m]', 'ea1ea066-39bb-45e9-89d4-81bf17aa7c8e', 13, 24, 6941, 481561, 40993, 0.5631722, 159754);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (115, 182, '2026-10-12T02:09:47Z', '2026-10-12T02:11:11Z', 'done', NULL, 0, 'edffe68621ae6a27c0fa04a15c87623b0a4a25d7', 'claude-opus-5-5[1m]', '309f2e2f-cd40-4a02-aef1-926d94ee7c9e', 18, 32, 7208, 593681, 36153, 0.55224820000000008, 159754);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (116, 25, '2026-10-12T02:11:11Z', '2026-10-12T02:12:10Z', 'done', NULL, 0, '1b10c1f0a8953f816da344934b258f64d2e9a4d0', 'claude-opus-5-5[1m]', 'eeffabf8-b4a2-40b3-8fdf-32b23fa570ef', 16, 30, 5990, 615555, 40131, 0.564079, 159754);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (117, 26, '2026-10-12T02:12:10Z', '2026-10-12T02:12:53Z', 'done', NULL, 0, '8bc8f45edf0937356cbc706f3d52873b7e626a70', 'claude-opus-5-5[1m]', '2757d6a2-a896-4943-9fb1-5e0bcb49403c', 16, 28, 4161, 470158, 29830, 0.41600360000000003, 159754);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

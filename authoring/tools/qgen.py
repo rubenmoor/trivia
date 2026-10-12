@@ -17,7 +17,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
-    qgen report [--run <run>] [--player <name>] [--subcategories] [--calibration [<batch>…]] [--overlaps]
+    qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps]
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -31,6 +31,7 @@ Revising questions that are already in the pool (07, QG-13):
 import argparse, concurrent.futures, datetime, difflib, json, random, re, subprocess, sys, threading, time, unicodedata
 import urllib.parse
 from pathlib import Path
+from collections import Counter
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
@@ -1285,6 +1286,31 @@ def report_overlaps():
               f"      {p['question']}\n      {q['question']}")
 
 
+def report_progress(pool, bundle):
+    """Approved vs. targets per difficulty and per broad category (plan 12); quiet without targets."""
+    t = targets.load_targets(bundle)
+    if t is None:
+        return
+    approved = [q for q in pool if q["status"] == "approved" and q.get("bundle") == bundle]
+    print(f"progress vs. targets ({bundle}):")
+
+    def line(label, n, goal):
+        pct = f"{100 * n / goal:3.0f}%" if goal else "   –"
+        miss = f"  missing {goal - n}" if n < goal else ""
+        print(f"  {label}: {n:4} / {goal:4}  {pct}{miss}")
+    by_diff = Counter(q["difficulty"] for q in approved)
+    for d, goal in sorted(t["difficulty"].items()):
+        line(f"difficulty {d:2}", by_diff[d], goal)
+    line("total        ", len(approved), t["total"])
+    broad = categories.broad_of()
+    by_cat = Counter(broad[q["subcategory"]]["slug"] for q in approved if q.get("subcategory") in broad)
+    shares = targets.category_shares(bundle)
+    w = max(map(len, shares), default=0)
+    print("  per broad category (derived share, guide only):")
+    for slug, share in shares.items():
+        line(f"  {slug:{w}}", by_cat[slug], round(share))
+
+
 def cmd_report(args):
     if args.calibration is not None:
         return report_calibration(args.calibration or last_batches())
@@ -1314,6 +1340,7 @@ def cmd_report(args):
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""
         print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
+    report_progress(pool, args.bundle)
     if args.subcategories:
         report_subcategories(avail)
     if args.run:
@@ -2217,6 +2244,7 @@ def main():
     rp = add("report", cmd_report, run=False)
     rp.add_argument("--run")
     rp.add_argument("--player", help="supply for this player (D-28); default: a new player")
+    rp.add_argument("--bundle", default="base", help="progress vs. targets for this bundle (plan 12)")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10)")
     rp.add_argument("--calibration", nargs="*", metavar="BATCH",
