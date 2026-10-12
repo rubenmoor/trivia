@@ -2339,7 +2339,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Options (recommended first; recommendation from the facts, e.g. replace if the count stays small):
      - (a) Replace the Freesound picks with allowlisted sources before release and drop Freesound from the audio order (`providers.ORDER`) or from release batches.
      - (b) Ask Freesound/UPF: the worker drafts the email (English, short: what the tool does, that only CC0/CC BY files ship, no API in the game, the expected volume, the question); the gamemaster sends it. The draft goes in the decision body.
-     - (c) Keep Freesound for the family only: tag its picks and exclude them from the Steam media bundle (SW-9); questions without their sound then don''t ship or need another pick.
+     - (c) Keep Freesound in the current game only: tag its picks and exclude them from the Steam media bundle (SW-9); questions without their sound then don''t ship or need another pick.
    - Each option notes its consequence for plan 39''s answer (free release vs paid).
    - `pm decision add`, then `pm task-pending-decision` on task 3. Never contact Freesound/UPF.
 3. **Follow-up: record the answer** (waits for the decision)
@@ -4547,6 +4547,8 @@ bring them in line with the plan. A task that writes a plan gets `--kind plan`.'
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (281, 11, 'create tasks for plan 11', 'split', 'open', 1000, NULL, 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (282, 7, 'create tasks for plan 7', 'split', 'open', 1000, NULL, 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (283, 42, 'create tasks for plan 42', 'split', 'open', 1000, NULL, 'Split plan 42 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
