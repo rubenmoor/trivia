@@ -30,6 +30,16 @@ The steps run in order; a pm worker stops at each decision and continues when it
    - Answered: each approved change becomes a task in its plan (`pm task add <plan>`, the plan's priority, so above the -100 batch tasks). Then `qgen report --qc <batch> --changes "<task ids>"` (or `"none"`) writes the report's "Changes from this QC" line.
 5. **Next batch waits.** The next batch task runs only after both decisions are answered and the change tasks are done (they outrank it; plan 17 "Per-batch pattern").
 
+## Neutralize runs
+
+A `qgen neutralize` run (D-83) changes approved questions, so it gets the same steps as a batch, with `neutralize-<n>` in place of `<batch>`.
+
+- Report: `authoring/reports/neutralize-<n>.md` (Audit section included).
+- Flagged audit findings: `http://127.0.0.1:8001/review?run=neutralize-<n>&audit=flagged`.
+- Spot check: `http://127.0.0.1:8001/review?run=neutralize-<n>&sample=1`.
+- QC report: `qgen report --qc neutralize-<n>`; the trend table has a column per run.
+- Extra check in the spot check: the wording is neutral, the meaning unchanged.
+
 ## Never
 
 - Change prompts, house style or `qgen.py` inside a batch run or a QC task; only in the change tasks of step 4.

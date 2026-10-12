@@ -309,7 +309,7 @@ Template:
 - Context: Batch-4's Claude review (D-32) worked, but it was done by hand in an interactive session: choosing subcategories, running steps, building contact sheets, judging images and writing review records were all improvised. The gamemaster wants the process unambiguous, with no room for variation by the LLM.
 - Decision: `qgen batch` runs the whole pipeline in a fixed order with fixed rules (run name, subcategory choice, all steps, review, media pick, export, validate, sync, report). The review is a pipeline step: one `claude -p` call per question with `prompts/review.md` and the contact sheet of its media candidates, answering by JSON schema. An LLM operating the pipeline follows `authoring/RUNBOOK.md` only: run `qgen batch`, rerun it after a usage limit, commit the listed paths. It doesn't edit the pool, pick media or change prompts by hand.
 - Consequences: The interactive procedure of batch-4 is retired. Prompt changes are code changes reviewed by the gamemaster. D-32's criteria live in `prompts/review.md`.
-- Supersedes / related: D-10, D-16, D-32, D-33; QG-17
+- Supersedes / related: D-10, D-16, D-32, D-33; QG-17; amended by D-83 (`qgen neutralize`)
 
 ## D-37: New questions start from stored concept lists and multi-axis styles
 - Date: 2026-10-07
@@ -701,3 +701,15 @@ Template:
   - **Python referee:** `app/server/game.py` (unused since PORT-7, deleted by plan 51) keeps its SQLite burn rules; divergence accepted. `app/server/save.py` only checks the envelope (D-67).
 - Consequences: Plan 65 (tasks 421–429). Engine invariant "burned never comes back" becomes "never a count-k card while a count-<k card fits and keeps the later levels fillable". CT-2 headline: games until the first repeat.
 - Supersedes / related: D-28 (burn rules); D-27, D-59, D-67, D-75; plan 65
+
+## D-83: Neutral Spanish rewrite via `qgen neutralize`; voice per bundle
+- Date: 2026-10-12
+- Context: D-78 puts `base` in es-419; the house style said Colombian usage for every bundle, so each `base` batch added Colombianisms. Plan 64, pm decision 32 (prompts approved as drafted, numbers RAE style).
+- Decision:
+  - **Voice per bundle:** `voice` string per bundle in `app/data/bundles.json`, filled into `house-style.md`'s `{voices}`. `base`: neutral Latin American Spanish (a word understood across Latin America and Spain where one exists; "tú"); `colombia`: Colombian usage.
+  - **Numbers (all bundles, RAE):** no separator up to 9999 ("2640"), a space from 10 000 ("42 195"), decimal comma ("42,195").
+  - **Review/audit:** a `base` question in Colombian or other national wording is `needs_work` (`review.md`, `audit.md`).
+  - **`qgen neutralize`:** one more gamemaster-asked command (amends D-36), like `qgen tighten`: run `neutralize-<n>`, scan of `base` (approved + needs_work, `prompts/neutralize.md`) → fix → review 1 → research → review 2 → record → audit → export → sync; report `authoring/reports/neutralize-<n>.md`. `--dry-run`: scan, flagged ids, cost estimate.
+  - **`es-ES` for questions:** no `questions.es-ES.json` at launch; the scan lists words with no pan-Hispanic form, a sparse override can follow if there are many.
+- Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the gamemaster asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
+- Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32
