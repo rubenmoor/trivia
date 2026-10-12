@@ -13,7 +13,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    qgen batch
    ```
 
-   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle. Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. Use the same command, with the same `--bundle`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
+   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle. Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. If the user names a language ("translate questions into English", "German questions"), run `qgen batch --translate <locale>` with that language's locale (`en`, `de`) instead (D-87). Use the same command, with the same `--bundle` or `--translate`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
 3. **Act on the exit code:**
 
    | Exit code | Meaning | What you do |
@@ -21,19 +21,19 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    | 0 | The batch is done | Go to step 4 |
    | 75 | Claude's usage limit without a reset time it could read | Stop. Tell the user the batch stopped at a usage limit and quote the message, including the reset time. When the user says to continue, go back to step 2 (same command) |
    | 1 | A step failed | Run step 2 again. If it fails at the **same step three times in a row**, stop and give the user the last 30 lines of output verbatim |
-   | 2 | The last batch failed the batch health thresholds (plan 15); no new batch started | Stop. Give the user the output verbatim. Only the gamemaster clears it (`qgen health ack`) |
+   | 2 | The last batch failed the batch health thresholds (plan 15), or (`--translate`) the last run was the language's pilot `tr-<locale>-1`; no new batch started | Stop. Give the user the output verbatim. Only the gamemaster clears it (`qgen health ack`) |
    | other | Unexpected | Stop and give the user the last 30 lines of output verbatim |
 
    If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so.
 4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks.
-5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the gamemaster's, not part of this procedure.
+5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`; `tr-<locale>-<n>.md` for a translation run), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the gamemaster's, not part of this procedure.
 
 ## Never
 
 - Edit `authoring/data/questions.json`, `app/data/pool.json` or anything in `work/` by hand.
 - Pick, change or judge media yourself, or search Commons yourself.
 - Change prompts, `qgen.py`, `media.py` or the subcategory list to get past a failure.
-- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch` other than a `--bundle` the user named. They exist for the gamemaster's debugging.
+- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch` other than a `--bundle` or `--translate` the user named. They exist for the gamemaster's debugging.
 - Create bundles (`qgen bundle new`) or edit any bundle's categories. That is the gamemaster's call.
 - Approve, reject or revise questions that `qgen batch` marked `needs_work`. The gamemaster decides those in the review tool, or asks for `qgen rework`: then run exactly that (with `--batch` only if the user names one), act on the exit code as in step 3, and commit what it prints. The same goes for `qgen tighten` and `qgen neutralize` (no arguments) when the gamemaster asks for them.
 - Run `qgen audit --backlog` unless the gamemaster asks for it (with `--slice N` only if they name a size); act on the exit code as in step 3 and commit what it prints.
@@ -50,4 +50,5 @@ The fixed rules are in `authoring/tools/qgen.py` (`cmd_batch`):
 - **Review:** one Claude call per question (`prompts/review.md`). It sees the question, the rater's notes, the fact check, related pool questions, and a contact sheet of the media candidates, and answers with a decision and a pick.
 - **Fix (QG-22):** for every text problem it can fix (a giveaway hint, a wrong fact, a second defensible option), the review says how in `fix`; the `fix` step revises the question once, fact-checks changed facts again, and the review looks at it again. Only what can't be fixed stays `needs_work`.
 - **Fixed rules on top of the review:** no adequate media after one new search, or a fact check that isn't confirmed, makes a question `needs_work`. Reviews are recorded as `reviewer: "llm"` with the model's id (D-33).
+- **Translation runs (`--translate <locale>`, D-87):** run `tr-<locale>-<n>`; 300 approved `base` sources (the language's first run: a 50-question pilot), stale translations first, then the subcategories with the fewest approved translations. Steps: translate → rate → factcheck → merge → review → fix → review → record → audit → export → batch-report. Questions that don't travel (wordplay, about Spanish itself) get no translation; once the review confirms, they become `translatable: false`. After the pilot, the next run exits 2 until the gamemaster's `qgen health ack tr-<locale>-1 "<note>"`.
 - **Audit (plan 16):** after `record`, a second Claude call reads a seeded sample of 60 questions without seeing the review (`prompts/audit.md`). It never approves or rejects anything; its findings go into the report's "Audit" section.

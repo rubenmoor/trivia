@@ -26,7 +26,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Unpolished game parts: `PLACEHOLDER(<task id>)` in code and on screen.
 
 ## Making questions
-- Asked to make, add, review or approve questions: follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly, nothing else. One command, `qgen batch` (`--bundle <id>` for a bundle other than `base`).
+- Asked to make, add, review or approve questions: follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly, nothing else. One command, `qgen batch` (`--bundle <id>` for a bundle other than `base`; `--translate <locale>` when a language is named).
 - Don't run pipeline steps by hand, edit the pools or pick media.
 - `qgen rework`, `qgen tighten`, `qgen neutralize`: only when the gamemaster asks.
 

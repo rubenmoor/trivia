@@ -40,6 +40,17 @@ A `qgen neutralize` run (D-83) changes approved questions, so it gets the same s
 - QC report: `qgen report --qc neutralize-<n>`; the trend table has a column per run.
 - Extra check in the spot check: the wording is neutral, the meaning unchanged.
 
+## Translation runs
+
+A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<locale>-<n>` in place of `<batch>`; the spot check is by a native speaker of the locale.
+
+- Report: `authoring/reports/tr-<locale>-<n>.md` (Health, Audit, Not travelling, Stale re-translated).
+- Spot check (native speaker): `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`; source and translation side by side (plan 67).
+- Extra checks: faithful to the source, natural in the language, hints and wrong answers that work in it, difficulty for the locale's market; text in media is never a problem (decision 35).
+- QC report: `qgen report --qc tr-<locale>-<n>`; the trend table has a column per run.
+- Proposals: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
+- Pilot `tr-<locale>-1` (QT-5): the next run waits for `qgen health ack`; the go is the gamemaster's.
+
 ## Never
 
 - Change prompts, house style or `qgen.py` inside a batch run or a QC task; only in the change tasks of step 4.

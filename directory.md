@@ -44,13 +44,13 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
 | `authoring/tools/engine.py`, `supply.ts` | The TS engine under Node for authoring (D-60): `supply` (supply check of `qgen report` and the start page), `simulate` (`sim/`); `package.json` makes the `.ts` files ES modules |
 | `authoring/tools/save_file.py` | The game's save for authoring, read-only (D-59): players, burns, flags from `state/game.json`, before the switch-over `game.sqlite`/`flags.json`; keeps `state/flags-applied.json` |
-| `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising, reviewing, auditing and the house style |
+| `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising, reviewing, auditing and the house style; translation runs (D-87): `translate.md`, `translate-review.md` (added to review and audit), `locale-<locale>.md` (language and market, filled into house style's `{locale}`; `locale-es.md`: the Spanish voice) |
 | `authoring/tools/` (rest) | Helpers: `batches.py`, `concepts.py`, `layout.py` (paths), `pool_export.py`, `progress.py` |
 | `authoring/server/` | Authoring server on port 8001: question API for the review tool, stats, start page, spot checks (`spot_checks.py`) |
 | `authoring/ui/` | Authoring UI (Svelte): `home/` start page, `review/` review tool, `stats/` stats pages, `print/` printable joker cards |
 | `authoring/RUNBOOK.md` | How an LLM makes a batch of questions: one command |
 | `authoring/QC.md` | Quality control after every batch: audit, blind spot check, `qgen report --qc`, findings → prompt changes (D-56, plan 16) |
-| `authoring/reports/` | One generated report per batch |
+| `authoring/reports/` | One generated report per batch or run (`tr-<locale>-<n>.md` for translation runs) |
 | `authoring/reports/batches.md` | Generated: batch health of every batch from batch-4 on, side by side (plan 15) |
 
 ## Everything else
@@ -65,4 +65,5 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `state/` | Game saves (gitignored): `game.sqlite` (until the switch-over, then the backup), `game.json` (players, games, burns, flags; plan 49), `flags.json` (flags before the switch-over), `flags-applied.json` (flags already turned into reviews, written by `trivia-authoring`), `desktop/` (`trivia-desktop`'s save in dev: `game.json`, `backup/`; D-72) |
 | `media/` | Media cache (gitignored, D-17) |
 | `work/` | Pipeline work files, one folder per run (gitignored) |
+| `work/tr-<locale>-<n>/` | One translation run (D-87): `run.json` (`mode: translate`, `locale`, `ids`, `stale`), `translations/`, `not-travelling.json`, the review, record and audit files |
 | `work/backaudit-<k>/` | One back-audit slice (plan 57): `run.json` (ids), `audit/<id>.json`, `audit/costs.log` |
