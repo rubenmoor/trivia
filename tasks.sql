@@ -1026,7 +1026,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
   - the last two batches'' human spot checks agree with the LLM review at the rate of pm decision 2, with at least its sample size (part 5, plan for task 17, records them);
   - `qgen validate` clean.
 - Reads part 4''s metrics and part 5''s spot-check records; doesn''t compute them. Until those exist, the criterion prints "not available" and counts as ✗.
-- Write the agreed criteria (decision 2''s numbers) into `plans/16-content-target.md` "Quality bar" as the family pool''s bar, and close CT-5''s question there for the family pool.
+- Write the agreed criteria (decision 2''s numbers) into `plans/16-content-target.md` "Quality bar" as the pool''s bar, and close CT-5''s question there for the current pool.
 
 ## Tasks (for the split)
 1. Targets file, loader, `validate` check, D-53 already logged. Waits for pm decision 1.
@@ -4549,6 +4549,8 @@ bring them in line with the plan. A task that writes a plan gets `--kind plan`.'
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (282, 7, 'create tasks for plan 7', 'split', 'open', 1000, NULL, 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (283, 42, 'create tasks for plan 42', 'split', 'open', 1000, NULL, 'Split plan 42 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (284, 12, 'create tasks for plan 12', 'split', 'open', 1000, NULL, 'Split plan 12 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
