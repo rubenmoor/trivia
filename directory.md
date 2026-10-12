@@ -30,7 +30,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/tools/targets.py` | Loads the pool targets (`load_targets`), derived per-category shares, `validate`'s check (D-53) |
 | `authoring/tools/media.py` | Commons search, candidate storage, media sync (`trivia-media`) |
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
-| `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising and the house style |
+| `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising, reviewing, auditing and the house style |
 | `authoring/tools/` (rest) | Helpers: `batches.py`, `concepts.py`, `layout.py` (paths), `pool_export.py`, `progress.py` |
 | `authoring/server/` | Authoring server on port 8001: question API for the review tool, stats, start page |
 | `authoring/ui/` | Authoring UI (Svelte): `home/` start page, `review/` review tool, `stats/` stats pages, `print/` printable joker cards |

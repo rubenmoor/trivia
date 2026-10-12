@@ -14,6 +14,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
+    qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
@@ -1812,6 +1813,141 @@ def cmd_record(args):
     return []
 
 
+AUDIT_SAMPLE = 60  # questions per batch the audit reads (plan 16)
+AUDIT_SCHEMA = {"type": "object", "required": ["verdict", "problems", "severity", "difficulty_estimate", "notes"],
+    "properties": {"verdict": {"type": "string", "enum": ["ok", "problem"]},
+                   "problems": {"type": "array", "items": {"type": "string", "enum": PROBLEMS}},
+                   "severity": {"type": "string", "enum": ["minor", "major"]},
+                   "difficulty_estimate": INT, "notes": STR}}
+
+
+def llm_decisions(run):
+    """{id: decision} of `record`'s LLM review per merged question of the run (plan 16): recorded.json;
+    for older runs health.recorded's needs_work and approved for every other question with an llm review."""
+    rec = load_json(WORK / run / "recorded.json")
+    if rec is not None:
+        return {i: r["decision"] for i, r in rec.items()}
+    import health  # authoring/tools/health.py (imports qgen)
+    qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == run]
+    work = health.recorded(run, qs)
+
+    def by_llm(r):
+        return r is not None and (r.get("reviewer") == "llm" or by_llm(r.get("previous")))
+    return {q["id"]: "needs_work" if q["id"] in work else "approved" for q in qs if q["id"] in work or by_llm(q.get("review"))}
+
+
+def audit_sample(run, n=AUDIT_SAMPLE):
+    """The first n ids of the run's audit order (plan 16), seeded by the run's name: LLM-approved and
+    needs_work questions interleaved in proportion, so every prefix is a proportional sample and the
+    spot check's smaller one is a subset. Drawn once into work/<run>/audit/sample.json."""
+    path = WORK / run / "audit" / "sample.json"
+    order = load_json(path)
+    if order is None:
+        rng, strata = random.Random(run), {}
+        for i, dec in sorted(llm_decisions(run).items()):
+            strata.setdefault(dec, []).append(i)
+        keyed = []
+        for _, ids in sorted(strata.items()):
+            rng.shuffle(ids)
+            keyed += [((k + 0.5) / len(ids), rng.random(), i) for k, i in enumerate(ids)]
+        order = [i for *_, i in sorted(keyed)]
+        if order:
+            save_json(path, order)
+    return order[:n]
+
+
+def audits(run):
+    """{id: audit} of the run's audited questions."""
+    return {p.stem: load_json(p) for p in sorted((WORK / run / "audit").glob("q-*.json"))}
+
+
+def is_major(a):
+    return a["verdict"] == "problem" and a["severity"] == "major"
+
+
+def audit_input(q, pool):
+    """The question as played (plan 16): no review, fix, rater notes or fact check."""
+    import media as media_tool
+
+    def slot(spec, name):
+        found = (media_tool.load_candidates(q["id"], name) or {"candidates": []})["candidates"]
+        pick = next((c for c in found if spec.get("source_url") and c.get("page_url") == spec["source_url"]), None)
+        return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"),
+                "title": pick["title"] if pick else None}
+    return {"question": {k: q[k] for k in ["id", "subcategory", "difficulty", "description", "question", "answer",
+                                           "wrong_answers", "hints", "fun_fact"]},
+            "media": slot(q["media"], "media"),
+            "background": slot(q["background"], "background") if q.get("background") else None,
+            "related": related_questions(q, pool)}
+
+
+def cmd_audit(args):
+    """An independent LLM reader of the run's audit sample (plan 16, prompts/audit.md): one call per
+    question into work/<run>/audit/<id>.json. Never changes the pool."""
+    import health  # authoring/tools/health.py (imports qgen)
+    run = args.batch or (health.batch_runs() or [None])[-1]
+    if run is None or not (WORK / run).is_dir():
+        sys.exit(f"no work/{run}/")
+    d = WORK / run / "audit"
+    d.mkdir(parents=True, exist_ok=True)
+    pool = load_json(POOL)["questions"]
+    by_id = {q["id"]: q for q in pool}
+    ids = audit_sample(run)
+    if not ids:
+        return [RuntimeError(f"{run}: no recorded LLM review to audit")]
+    todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
+    system = prompt("house-style", "audit")
+    lo, hi = load_age_groups()["scale"]
+    today = datetime.date.today().isoformat()
+
+    def work(q):
+        user = "## Question to audit\n" + json.dumps(audit_input(q, pool), ensure_ascii=False)
+        out, model = claude(system, user, AUDIT_SCHEMA, args.model, d, web=True, with_model=True)
+        if not lo <= out["difficulty_estimate"] <= hi:
+            raise RuntimeError(f"difficulty_estimate {out['difficulty_estimate']} not {lo}–{hi}")
+        save_json(d / f"{q['id']}.json", {**out, "model": model, "on": today})
+        progress.detail(f"  audit: {q['id']}: {out['verdict']} {out['severity']} {', '.join(out['problems'])}")
+
+    return parallel(work, todo, args.jobs, "audit", "questions")
+
+
+def costs(path):
+    """Dollar amounts in a costs.log, one per Claude call."""
+    return [float(line.split("\t")[1]) for line in path.read_text().splitlines()
+            if line.count("\t") == 1 and line.split("\t")[1] not in ("None", "")] if path.exists() else []
+
+
+def audit_section(run):
+    """The batch report's "## Audit" (plan 16); [] before the audit ran."""
+    found = audits(run)
+    if not found:
+        return []
+    dec = llm_decisions(run)
+    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    pct = lambda n, of: f"{n} of {of} ({100 * n / of:.0f} %)" if of else "0 of 0"
+    lines = ["## Audit", "", "A second LLM reader of a seeded sample, blind to the review (plan 16, `prompts/audit.md`). "
+             "It changes nothing in the pool; the gamemaster decides its findings in the review tool.", ""]
+    for label, d in [("approved", "approved"), ("needs work", "needs_work")]:
+        ids = [i for i in found if dec.get(i) == d]
+        lines.append(f"- Major among review {label}: {pct(sum(is_major(found[i]) for i in ids), len(ids))}")
+    kinds = Counter(p for a in found.values() for p in a["problems"])
+    majors = Counter(p for a in found.values() if is_major(a) for p in a["problems"])
+    lines.append("- Problems by kind: " + (", ".join(f"{p} {kinds[p]} ({majors[p]} major)" for p in PROBLEMS if kinds[p])
+                                          or "none"))
+    gaps = [abs(a["difficulty_estimate"] - by_id[i]["difficulty"]) for i, a in found.items() if i in by_id]
+    if gaps:
+        lines.append(f"- Mean |audit − final difficulty|: {sum(gaps) / len(gaps):.1f}; ≥ 3 on {pct(sum(g >= 3 for g in gaps), len(gaps))}")
+    both = [i for i in found if i in dec]
+    agree = sum((dec[i] == "approved") == (not is_major(found[i])) for i in both)
+    lines.append(f"- Audit/review agreement (both accept or both not): {pct(agree, len(both))}")
+    c = costs(WORK / run / "audit" / "costs.log")
+    lines += [f"- Sample: {len(found)} audited of {len(audit_sample(run))}; {len(c)} Claude calls, about ${sum(c):.2f}",
+              "", "Major findings on approved questions:", ""]
+    lines += [f"- **{i}**: {', '.join(a['problems']) or 'other'} — {a['notes']} (http://127.0.0.1:8001/review/{i})"
+              for i, a in found.items() if is_major(a) and dec.get(i) == "approved"] or ["None."]
+    return lines + [""]
+
+
 def cmd_sync_run(args):
     """Download the run's picked files into the media cache. Rate limits don't fail the batch."""
     missing = []
@@ -1838,8 +1974,7 @@ def cmd_batch_report(args):
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == args.run]
     cfg = load_json(d / "run.json", {})
     dropped = load_json(d / "dropped.json", [])
-    costs = [float(line.split("\t")[1]) for line in (d / "costs.log").read_text().splitlines()
-             if line.count("\t") == 1 and line.split("\t")[1] not in ("None", "")] if (d / "costs.log").exists() else []
+    calls = costs(d / "costs.log") + costs(d / "audit" / "costs.log")
     models = sorted({(q.get("review") or {}).get("model") for q in qs} - {None})
     approved = [q for q in qs if q["status"] == "approved"]
     work = [q for q in qs if q["status"] == "needs_work"]
@@ -1853,9 +1988,9 @@ def cmd_batch_report(args):
              f"- Approved: {len(approved)}", f"- Needs work: {len(work)}",
              f"- Dropped by the pipeline: {len(dropped)}",
              f"- Reviewed by: {', '.join(models) or '-'}",
-             f"- Claude calls: {len(costs)}, about ${sum(costs):.2f} at list price",
+             f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price",
              f"- Picked files not cached yet: {len(not_cached)}" + (" (run `trivia-media sync --status approved`)" if not_cached else ""),
-             "", *health.health_section(args.run), "## Needs work", ""]
+             "", *health.health_section(args.run), *audit_section(args.run), "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}" for q in work] or ["None."]
     lines += ["", "## Question axes", ""]
     lines += [f"- {a}: " + ", ".join(f"{v} {n}" for v, n in count(qs, lambda q, a=a: (q.get('axes') or {}).get(a)).items())
@@ -1981,6 +2116,7 @@ def cmd_batch(args):
         ("sheets", cmd_sheets, ns()),
         ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
         ("record", cmd_record, ns()),
+        ("audit", cmd_audit, ns(model="opus", batch=run)),
         ("export", lambda a: cmd_export(a) or [], ns()),
         ("sync", cmd_sync_run, ns()),
         ("batch-report", cmd_batch_report, ns()),
@@ -2324,6 +2460,7 @@ def main():
     add("fix", cmd_fix, "opus").add_argument("--check-model", default="sonnet")
     add("research", cmd_research)
     add("record", cmd_record)
+    add("audit", cmd_audit, "opus", run=False).add_argument("--batch", help="default: the newest merged batch")
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
     rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
