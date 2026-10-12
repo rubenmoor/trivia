@@ -8732,8 +8732,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:46Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (471, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:47Z', NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (472, 71, 'create tasks for plan 71', 'split', 'open', 1000, NULL, 'Split plan 71 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:22:37Z', NULL, 469);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (472, 71, 'create tasks for plan 71', 'split', 'done', 1000, '2026-10-12, tasks 480, 481', 'Split plan 71 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:22:37Z', '2026-10-12T20:26:52Z', 469);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (473, 29, 'create tasks for plan 29', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 474, 475 replace 128, 129, 347', 'Split plan 29 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:23:35Z', '2026-10-12T20:24:27Z', 467);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (474, 29, 'Choice screen: group, base bundle and bundle choice between Player and Level', 'work', 'open', NULL, NULL, 'Build plan 29''s Choice screen (AG-7, BN-6, IN-1, IN-2). Everything in plan 29''s "Decisions taken here" applies; this task covers all of it except the overlay line (next task). Replaces tasks 128 and 347 (dropped: written before base bundles and the action layer).
@@ -8828,6 +8828,53 @@ If "all sessions played fine":
 - `plans/decisions.md`: D-68 gets "superseded in part by D-<plan 71''s entry>" if plan 71 didn''t add it; new D entry (play-test confirmed, date, milestone 5 done-when met; related D-38, D-39, D-68, plans 28/71 entries) only if the answer adds something beyond "fine".
 
 Done when: AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `grep -rn "until AG-7\|until BN-6\|always_on\|always on\|Siempre activo" plans/21-age-groups.md plans/22-bundles.md plans/project.md directory.md app/data/*.json app/client/src` finds nothing; `qgen validate` passes.', '2026-10-12T20:25:56Z', NULL, 476);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (480, 71, 'Bundle languages and base bundles in data and engine', 'work', 'open', NULL, NULL, 'Plan 71, part 1. Give each bundle the languages it exists in, make `kind: "base"` the mark of a base bundle (exactly one per session), drop `always_on`. Builds on plan 27 (bundle choice) and plan 68 (`EngineData.locale`; decision 36: GameRow.locale written only for non-es games). All rules: plan 71 "Decisions taken here" (`pm show p71`).
+
+## Data
+- `app/data/bundles.json`: remove `always_on` from every entry; add `languages`: `base` → `["es", "en", "de"]`, `colombia` → `["es"]` (no colombia pool for en/de yet). `kind` stays (`base`, `region`, `theme`). File order = "the locale''s first base bundle". Keep `about` as is apart from removing any `always_on` mention (plan 30 rewrites it).
+
+## Engine (`app/client/src/engine/`)
+- `pool.ts`: `Bundle {id, kind, languages, name, description}`; `parseBundles` throws on missing/empty `languages` or missing `kind`; export `bundlesFor(data, locale = data.locale)` → bundles whose `languages` contain `locale`, file order (plan 29 uses it).
+- `game.ts`:
+  - `resolveChoice`: not a list → `bundles_not_list`; unknown id → `bundle_unknown` (as today); known but not offered in `data.locale` → `GameError("bundle_not_offered", {bundle, locale})`; drop duplicates; not exactly one `kind: base` → `GameError("base_bundle_count", {count})`; order normalized to file order. Nothing is added any more (`[]`, `["colombia"]` refused).
+  - `defaultChoice(data)`: locale''s first base bundle + every non-base bundle offered in the locale (`es` → `["base","colombia"]`, `en`/`de` → `["base"]`).
+  - `gameChoice`: resolve stored `bundles` with `resolveChoice`; on `GameError` use the locale''s default bundles (keep stored `age_group` if known, else default). Read-only, never written back. `playerChoice` (preset from the player''s newest game) same fallback, e.g. an es game presets en defaults in an en engine.
+- `state.ts` English messages; `app/client/src/locales/es.ts`: `bundle_not_offered` «el paquete ''{bundle}'' no está disponible en este idioma», `base_bundle_count` «elige exactamente un paquete básico».
+- `app/client/src/lib/types.ts` line 41 comment ("every always_on bundle included") → reflect exactly one base bundle.
+- `outlook.ts` `bundleHint`: only non-base bundles offered in the locale and not yet active.
+- `outlook.test.ts`, `pool.test.ts` (line ~94): use `kind`/`languages`.
+
+## Authoring readers (same task: removing `always_on` breaks them)
+- `authoring/server/overview.py` line ~52: `b["always_on"]` → `b["kind"] == "base"`.
+- `authoring/ui/src/lib/types.ts` line ~147: `always_on: boolean` → `languages: string[]`.
+- `authoring/tools/qgen.py` `bundle new` (line ~3360): write `"languages": ["es"]`, no `always_on`.
+- `authoring/tools/sim/simulate.ts`: check its cells still resolve (non-es pass `["base"]`, es every bundle).
+
+## Tests (`choice.test.ts`)
+- Replace "base added" cases: `[]` and `["colombia"]` → 409 `base_bundle_count`, save unchanged; two base bundles (temp data with a second `kind: base`) → 409; bundle not offered (temp `engineData(..., "en")`, colombia `["es"]`) → 409 `bundle_not_offered`; defaults per locale (es → base+colombia, en → base); stored game whose bundles don''t resolve plays with defaults; `choice` route preset from an es game in an en engine → en defaults.
+
+## Done when
+- `grep -rn always_on app authoring` (excluding build output, node_modules, `app/desktop/release`) finds nothing.
+- `npm test` passes with plan 18''s fixture replay byte-identical (nothing re-recorded); `npm run check`, `npm run build` pass; `trivia-authoring` start page loads.', '2026-10-12T20:26:50Z', NULL, 472);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (481, 71, 'qgen validate: bundle languages and base bundles; decision entry', 'work', 'open', NULL, NULL, 'Plan 71, part 2; runs after "Bundle languages and base bundles in data and engine" (needs `languages` in `app/data/bundles.json`, no `always_on`). Rules: plan 71 "Decisions taken here" (`pm show p71`).
+
+## `qgen validate` (`authoring/tools/qgen.py`, next to `taxonomy_problems`)
+- Errors:
+  - every bundle: `languages` a non-empty list of distinct codes from `LAUNCH_LOCALES`; no `always_on` key; `kind` one of `base`, `region`, `theme`;
+  - each launch language has at least one `kind: base` bundle.
+- Warnings (not errors):
+  - a bundle listed for a locale ≠ es whose `app/data/pool.<locale>.json` is missing or has no approved question of that bundle (expected for en/de `base` until their pools ship; decision 26: Launch languages);
+  - `pool.<locale>.json` has approved questions of a bundle not listed for that locale (translated but not offered).
+- Questions without `bundle` count as `base`.
+- `taxonomy_problems`'' "base must come first" stays.
+- Verify with a throw-away script (delete it after): temp `bundles.json` without `languages`, with `always_on`, with no base bundle for `de`, with an unknown locale → each flagged; temp `pool.en.json` with a colombia question → the "not listed" warning.
+
+## Decision entry
+- `plans/decisions.md`: next free D number. Content: base bundles (`kind: base`) replace `always_on`, exactly one per session; default = the locale''s first base bundle plus every non-base bundle offered in the locale; bundles offered per `languages`; stored choices that no longer resolve read as the locale''s defaults (never written back); supersedes D-68''s "every always_on bundle is always on" and its auto-adding of `base`.
+- Same content via `pm decision record "<subject>" --answer "…" --body "…"`.
+
+## Done when
+- `qgen validate` passes on the real data (en/de base warnings allowed); decision entry written in both places.', '2026-10-12T20:26:50Z', NULL, 472);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9724,6 +9771,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (324, 473, '2026-10-12T20:23:46Z', '2026-10-12T20:24:33Z', 'done', NULL, 0, '8788f351a9d6324e1b14bdae45a281f06681ffc3', 'claude-opus-5-5[1m]', 'c26c6f95-d36a-41b8-b6e0-3ded65d23438', 9, 18, 4723, 289980, 30622, 0.397504, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (325, 468, '2026-10-12T20:24:33Z', '2026-10-12T20:25:22Z', 'done', NULL, 0, 'f643fdcfc263fb5b83c2b6475ac27248767d6e54', 'claude-opus-5-5[1m]', '059ac91b-4a57-4ad4-b41a-4aed634c7677', 9, 18, 4725, 296768, 35154, 0.4351576, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (326, 476, '2026-10-12T20:25:22Z', '2026-10-12T20:26:05Z', 'done', NULL, 0, 'c839acb75320dac51bd3c5585cd509014beaad69', 'claude-opus-5-5[1m]', '32860f44-38dd-42f5-9330-812025cd1899', 11, 22, 4456, 342705, 28388, 0.384853, 655319);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (327, 472, '2026-10-12T20:26:06Z', '2026-10-12T20:26:58Z', 'done', NULL, 0, 'cf81d8b579b5a5d9c1151aeee22ab8212eb9b139', 'claude-opus-5-5[1m]', 'e4dff9be-3b3e-456e-b81a-5960be5a1ddd', 7, 14, 3921, 209859, 26572, 0.33302380000000004, 655319);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
