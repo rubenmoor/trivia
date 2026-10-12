@@ -1,6 +1,6 @@
 // The Spanish catalog (plans/15a-ui-translation.md, LUI-1, D-70). Players are addressed as
 // «ustedes» (Colombian usage, D-6). Leaves: a string, a plural map ({ one, other, … }) or a
-// string[] of variants. The `error` namespace is reserved for plan 22.
+// string[] of variants. `error` holds the server's refusals by code (plan 22).
 
 const es = {
   app: {
@@ -185,6 +185,39 @@ const es = {
         "Nivel {n}: ¡la corona ya los estaba esperando!",
       ],
     },
+  },
+  /** Refusals by server error code (plan 22, D-57); codes without a key show the English message. */
+  error: {
+    name_missing: "falta el nombre del jugador",
+    name_too_long: "el nombre es demasiado largo (máximo {max} letras)",
+    player_unknown: "no hay ningún jugador «{name}»",
+    level_empty: "no quedan preguntas para el nivel {level} (dificultad {lo}–{hi})",
+    /** {levels}: `supply_level` items joined with ", ". */
+    supply_short: "no hay suficientes preguntas: {levels}",
+    supply_level: "nivel {level} (dificultad {lo}–{hi}): faltan {missing}",
+    purge_short: "sin este tema no alcanzan las preguntas",
+    refill_empty: "no hay otra pregunta para este nivel",
+    hints_used_up: "no quedan pistas",
+    easier_none: "no hay preguntas más fáciles de este tema",
+    category_unknown: "ese tema no existe",
+    category_same: "ya están en ese tema",
+    category_empty: "no hay preguntas de ese tema para este nivel",
+    category_none: "no hay preguntas de otros temas para este nivel",
+    snipe_last: "solo queda una respuesta",
+    snipe_invalid: "no se puede apuntar a esa respuesta",
+    snipe_no_repeat: "si le dan a la correcta, no quedan preguntas para repetir el nivel",
+    joker_not_question: "los comodines solo se juegan en una pregunta",
+    /** By joker id. */
+    joker_spent: {
+      hint: "ya no les quedan Soplos",
+      skip: "ya no les quedan Pasos",
+      easier: "ya no les quedan Bájales",
+      category: "ya no les quedan Cambiazos",
+      snipe: "ya no les quedan Francotiradores",
+    },
+    age_group_unknown: "grupo de edad desconocido: '{group}'",
+    bundle_unknown: "paquete desconocido: '{bundle}'",
+    bundles_not_list: "los paquetes deben ser una lista",
   },
 } as const;
 

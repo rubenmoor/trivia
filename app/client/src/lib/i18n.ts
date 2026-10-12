@@ -38,6 +38,12 @@ export function fill(text: string, params?: Params): string {
   });
 }
 
+/** Whether `key` names a text in the catalog (for keys built at runtime). */
+export function has(key: string): key is TextKey {
+  const v = lookup(key);
+  return typeof v === "string" || (!!v && typeof v === "object" && !Array.isArray(v) && "other" in v);
+}
+
 /** The text of a key; plural maps pick by `params.n`. Missing → `⟦key⟧`. */
 export function t(key: TextKey, params?: Params): string {
   const v = lookup(key);

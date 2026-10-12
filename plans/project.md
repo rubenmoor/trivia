@@ -31,7 +31,7 @@ The road from today onward: milestones, every open task, every open question. Th
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
 | M7 | Game engine in TypeScript | 12 | todo |
 | M8 | Mouse everywhere and a joker budget | 14, 13 | done (2026-10-07) |
-| M9 | UI strings in a catalog; bundles | 15a, 22 | in progress (bundles done in the pipeline; LUI-1 done 2026-10-12) |
+| M9 | UI strings in a catalog; bundles | 15a, 22 | in progress (bundles done in the pipeline; LUI-1 and server errors as codes done 2026-10-12) |
 | M10 | Media license audit | 17 | todo |
 | M11 | Age groups and bundles in the game | 21, 22 | todo |
 
@@ -108,6 +108,7 @@ No family-specific questions (D-30).
 **Exit:** no Spanish literals left in `app/client/src/game` outside the catalog; every question has `bundle`, checked by `validate` (D-39).
 
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string into it (2026-10-12, pm plan 21) — [`15a`](15a-ui-translation.md)
+- [x] Server errors as codes; Spanish texts under `error.*` in `es.ts` (2026-10-12, pm plan 22, D-57) — [`15a`](15a-ui-translation.md)
 - [ ] LUI-2 Pseudo-locale for length and missing-string tests — [`15a`](15a-ui-translation.md)
 - [ ] LUI-3 Draft `en` catalog with English joker names — [`15a`](15a-ui-translation.md)
 - [x] BN-2..BN-5 Bundles (replace RG-1, RG-2): `bundle` on every question, `colombia` proposed by an LLM pass (D-39) — [`22`](22-bundles.md)
