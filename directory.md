@@ -6,7 +6,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 
 | Path | Contents |
 |---|---|
-| `app/server/` | Game server, Python standard library only: `main.py` (static files, game API, `/api/save`), `save.py` (the save `state/game.json`: store, migration from `game.sqlite`), `game.py` (game rules, the referee), `selection.py` (question selection), `media_cache.py` (media cache, downloads on a miss), `categories.py`, `paths.py`, `http_base.py` |
+| `app/server/` | Game server, Python standard library only: `main.py` (static files, game API, `/api/save`), `save.py` (the save `state/game.json`: store, migration from `game.sqlite`), `game.py` (game rules, the referee), `selection.py` (question selection), `media_cache.py` (media cache, read-only: never downloads), `categories.py`, `paths.py`, `http_base.py` |
 | `app/desktop/` | Electron shell (D-63, D-71): `main.mjs` (window, F11, `app://` protocol, offline/security rules, IPC), `resolve.mjs` (`app://` URL → file: `dist`, `/data/`, `/media?url=…`, ranges; pure, testable under `node`), `save.mjs` (the save file: atomic write, lock retry, backups, stale `.tmp`; pure `node:fs`, D-72), `preload.cjs` (bridge `window.trivia`), `package.json` + own `package-lock.json` (`electron`, `electron-builder`; not a workspace, D-73); run with `trivia-desktop`. Local builds (D-73): `electron-builder.yml`, `after-pack.mjs` (Linux `trivia` launcher, `--no-sandbox`), `stage-media.mjs` (pool media → `build/media/`); `build/`, `release/` (artefacts) gitignored; run with `trivia-desktop-build` |
 | `app/client/` | Game UI: Svelte 5 + Vite + TypeScript, built to `app/client/dist/` |
 | `app/client/src/game/` | The game screens and their parts (stage, question, jokers, tower, fireworks, sound, copy); `Prompt.svelte`: key or pad-glyph hint per last device, `Glyph.svelte`: pad button glyphs (IN-5); `LanguageScreen.svelte`: first-start language pick for a fresh save (plan 68) |
@@ -40,6 +40,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/tools/age_groups.py` | `validate`'s check of `age-groups.json`'s `levels` and `level_weights` (D-68, D-76) |
 | `authoring/tools/targets.py` | Loads the pool targets (`load_targets`), derived per-category shares, `validate`'s check (D-53) |
 | `authoring/tools/media.py` | Commons search, candidate storage, media sync (`trivia-media`) |
+| `authoring/tools/download.py` | HTTP for the authoring tools: `http_get` (rate limits, Commons token), `cached` (download into the media cache on a miss) |
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
 | `authoring/tools/engine.py`, `supply.ts` | The TS engine under Node for authoring (D-60): `supply` (supply check of `qgen report` and the start page), `simulate` (`sim/`); `package.json` makes the `.ts` files ES modules |
 | `authoring/tools/save_file.py` | The game's save for authoring, read-only (D-59): players, burns, flags from `state/game.json`, before the switch-over `game.sqlite`/`flags.json`; keeps `state/flags-applied.json` |

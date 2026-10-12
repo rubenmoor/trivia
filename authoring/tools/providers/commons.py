@@ -1,11 +1,11 @@
 """Wikimedia Commons (plans/06-images.md, D-13): file search through the MediaWiki API.
 
-API calls are throttled here; `media_cache.http_get` adds the account token (IMG-15).
+API calls are throttled here; `download.http_get` adds the account token (IMG-15).
 """
 import html, json, re, threading, time, urllib.parse
 
 import layout  # noqa: F401  (makes app/server importable)
-from media_cache import API_URL, http_get
+from download import API_URL, http_get
 
 ID = "commons"
 NAME = "Wikimedia Commons"

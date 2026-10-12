@@ -47,6 +47,7 @@ import concepts  # authoring/tools/concepts.py: concept lists and question axes 
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # app/server/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
+import download  # authoring/tools/download.py: fills the media cache
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g. the supply check (GF-5)
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
@@ -2622,7 +2623,7 @@ def cmd_sync_run(args):
         for label, url in todo:
             try:
                 with progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
-                    media.cached(url)
+                    download.cached(url)
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — listed in the report; `trivia-media sync` retries
                 missing.append(label)

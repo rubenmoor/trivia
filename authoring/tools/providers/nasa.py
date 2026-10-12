@@ -6,7 +6,7 @@ company, ESA, a news agency) are skipped, since their rights aren't NASA's to gi
 import json, re, threading, time, urllib.parse
 
 import layout  # noqa: F401  (makes app/server importable)
-from media_cache import RateLimited, http_get
+from download import RateLimited, http_get
 
 ID = "nasa"
 NAME = "NASA"

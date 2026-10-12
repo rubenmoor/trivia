@@ -1,5 +1,5 @@
 """Shared request handling for the game server and the authoring server: JSON, files,
-the built client (single-page app) and /media from the cache (D-17)."""
+the built client (single-page app) and /media from the cache only (D-17, plan 51)."""
 import json, mimetypes
 from http.server import BaseHTTPRequestHandler
 
@@ -32,12 +32,9 @@ class BaseHandler(BaseHTTPRequestHandler):
     def send_media(self, file_url):
         if file_url not in media_cache.pool_urls(self.pool_file):  # not an open proxy: only files questions use
             return self.send_json(404, {"error": "not a media file of any question"})
-        try:
-            path = media_cache.cached(file_url)
-        except media_cache.RateLimited as e:
-            return self.send_json(429, {"error": str(e)})
-        except OSError as e:  # offline, or Commons unreachable
-            return self.send_json(502, {"error": f"not cached and download failed: {e}"})
+        path = media_cache.cache_path(file_url)
+        if not path.is_file():
+            return self.send_json(404, {"error": "media_missing", "message": "not in the media cache; run trivia-media sync"})
         return self.send_file(path)
 
     def send_static(self, url_path):

@@ -7,7 +7,7 @@ and OPENVERSE_CLIENT_SECRET (.env.local; registered through the API) the limits 
 import json, os, threading, time, urllib.parse, urllib.request
 
 import layout  # noqa: F401  (makes app/server importable)
-from media_cache import USER_AGENT, http_get
+from download import USER_AGENT, http_get
 
 ID = "openverse"
 NAME = "Openverse"

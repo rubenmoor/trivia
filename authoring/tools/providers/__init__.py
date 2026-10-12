@@ -10,7 +10,7 @@ for credits). `search` here keeps only candidates whose licence is on the allowl
 """
 import re, sys, threading, time
 
-from media_cache import RateLimited
+from download import RateLimited
 import progress  # authoring/tools/progress.py: the bar says what a search waits for (QG-20)
 from providers import commons, freesound, nasa, openverse
 

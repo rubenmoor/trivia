@@ -10,7 +10,8 @@ question's media, work/media/<id>-background.json for the background image of au
 questions (D-14). The review tool and `qgen review` choose among them; `download()` and
 `pick_fields()` turn a chosen candidate into the fields stored in the pool.
 
-Picked files live in the media cache (app/server/media_cache.py, D-17). `sync` downloads
+Picked files live in the media cache (app/server/media_cache.py, D-17); downloads go through
+authoring/tools/download.py. `sync` downloads
 every picked file that isn't cached yet, ahead of game night.
 
 `licenses` (plans/52, PUB-1) checks the stored licence record of every picked file (no network):
@@ -22,8 +23,8 @@ import argparse, json, re, sys
 
 import layout  # noqa: F401  (also makes app/server importable)
 from layout import CANDIDATES, SOURCE_POOL as POOL
-from media_cache import (MEDIA, RateLimited, USER_AGENT, cache_path, cached, http_get,  # noqa: F401
-                         picked, pool_urls)
+from download import RateLimited, USER_AGENT, cached, http_get  # noqa: F401
+from media_cache import MEDIA, cache_path, picked, pool_urls  # noqa: F401
 import categories  # app/server/categories.py (D-19, D-43)
 import progress  # authoring/tools/progress.py: the bar says what a step waits for (QG-20)
 import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)

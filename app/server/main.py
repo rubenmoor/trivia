@@ -3,8 +3,9 @@
 
     trivia [--port 8000] [--host 127.0.0.1]        (or: python3 app/server/main.py)
 
-It reads app/data/ and serves it under /data/, and writes only the game state
-(TRIVIA_STATE, default state/) and the media cache (TRIVIA_MEDIA, default media/), D-35.
+It reads app/data/ and serves it under /data/, writes only the game state (TRIVIA_STATE,
+default state/), D-35, and reads media from the cache (TRIVIA_MEDIA, default media/) without
+downloading: `trivia-media sync --status approved` fills it before play (plan 51).
 The referee runs in the browser (app/client/src/engine/, D-69) and saves via /api/save. At start,
 game.sqlite + flags.json move to game.json once (save.migrate(), PORT-5); the old files stay as backup.
 The /api/game*, /api/players*, /api/flags routes below are unused since PORT-7 and go in PORT-8.
@@ -13,8 +14,8 @@ The review tool and stats pages are authoring tools with their own server (autho
 API:
     GET  /data/<path>                              a file under app/data/, read-only (plan 50); else 404
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
-    GET  /media?url=<file_url>                     a picked media file from the cache; downloaded first on a
-                                                   cache miss. Only URLs in the pool (D-17).
+    GET  /media?url=<file_url>                     a picked media file from the cache, never downloaded; only
+                                                   URLs in the pool (D-17), else 404; not cached: 404 "media_missing"
     GET  /api/game[?player=<name>]                 {"game": the newest game or null, "supply": supply check
                                                    for that player (default: a new player, D-28)}
     GET  /api/players                              known players, most recent first (D-28)
@@ -51,6 +52,7 @@ from urllib.parse import parse_qs, urlparse
 import categories
 import flags
 import game
+import media_cache
 import paths
 import save
 from http_base import BaseHandler
@@ -64,6 +66,14 @@ NOT_FOUND = {"error": "not_found", "message": "not found"}
 def error_body(e):
     """A GameError on the wire (D-57): code and params for the client, English message for logs."""
     return {"error": e.code, "params": e.params, "message": str(e), "supply": e.details}
+
+
+def missing_media():
+    """The startup line when pool files are missing from the cache, else None."""
+    urls = media_cache.pool_urls()
+    missing = sum(not media_cache.cache_path(u).is_file() for u in urls)
+    if missing:
+        return f"media: {missing} of {len(urls)} pool files missing from the cache; run trivia-media sync --status approved"
 
 
 def load_pool():
@@ -186,6 +196,8 @@ def main():
     ap.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()
     save.migrate()
+    if line := missing_media():
+        print(line)
     print(f"Game on http://{args.host}:{args.port}/")
     ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()
 

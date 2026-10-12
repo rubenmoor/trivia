@@ -39,7 +39,7 @@ API:
                                                    (RV-23, authoring/server/media_stats.py)
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
-                                                   source pool, approved or not)
+                                                   source pool, approved or not); downloaded first on a miss
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched) and `audit` (the newest back-audit, else work/<batch>/audit/<id>.json,
 or null; plans 16, 57).
@@ -54,6 +54,7 @@ import layout  # noqa: E402,F401  (authoring/tools/layout.py; makes app/server i
 import categories  # noqa: E402  (app/server/categories.py)
 import flags  # noqa: E402  (app/server/flags.py)
 from http_base import BaseHandler  # noqa: E402  (app/server/http_base.py)
+import download  # noqa: E402  (authoring/tools/download.py)
 import media  # noqa: E402  (authoring/tools/media.py)
 import media_cache  # noqa: E402  (app/server/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
@@ -64,7 +65,7 @@ from qgen import PROBLEMS, is_major  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 import targets  # noqa: E402  (authoring/tools/targets.py)
 
-media_cache.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
+download.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
 
 POOL = layout.SOURCE_POOL
 DECISIONS = {"approved", "rejected", "needs_work"}
@@ -230,6 +231,17 @@ class Handler(BaseHandler):
     pool_file = POOL
     build_hint = "authoring UI not built: run `npm run build -w authoring/ui`"
 
+    def send_media(self, file_url):
+        """Like the game's, but downloads on a cache miss (the game server never does)."""
+        if file_url in media_cache.pool_urls(self.pool_file):
+            try:
+                download.cached(file_url)
+            except download.RateLimited as e:
+                return self.send_json(429, {"error": str(e)})
+            except OSError as e:  # offline, or Commons unreachable
+                return self.send_json(502, {"error": f"not cached and download failed: {e}"})
+        return super().send_media(file_url)
+
     def do_GET(self):
         url = urlparse(self.path)
         if url.path == "/api/questions":
@@ -332,7 +344,7 @@ class Handler(BaseHandler):
             return self.send_json(404, {"error": f"no question {qid}"})
         except (ValueError, TypeError, AttributeError) as e:
             return self.send_json(400, {"error": str(e)})
-        except media_cache.RateLimited as e:
+        except download.RateLimited as e:
             return self.send_json(429, {"error": str(e)})
         except OSError as e:  # network problems talking to a media provider (D-45)
             return self.send_json(502, {"error": f"media search: {e}"})
