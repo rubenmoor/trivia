@@ -222,8 +222,8 @@ Answers, each recorded in `plans/decisions.md`, to:
 - OQ-35 code and content license; whether the pool stays public
 - OQ-37 competitive and couch co-op format and input
 - OQ-45 Freesound API use for a commercial release
-- Gamemaster mode as its own mode (D-73, plan 13): one person holds every control (keyboard, mouse, gamepad, switchable at any time); a configure game screen with full customization before every game; an `Esc` gamemaster menu with unlimited cheats (jokers, skip, replace the question, mark correct/wrong, jump level, …). The gamemaster confirms the field and cheat lists (MD-11, MD-12)
-Then the S2 tasks that follow from them: MD-5..MD-7, MD-10..MD-12, I18N-1, CT-1, PUB-4.
+- Gamemaster mode as its own mode, apart from all others: one person, the gamemaster, holds every control (keyboard, mouse, gamepad, switchable at any time); a "configure game" screen with full customization before every game; a gamemaster menu (`Esc`) that allows arbitrary cheats: manage the available jokers, skip a question, replace the current question, …
+Then the S2 tasks that follow from them: MD-5..MD-7, I18N-1, CT-1, PUB-4.
 
 ## Constraints
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
@@ -5572,6 +5572,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Priority: by the plan-priority table (user interface / core functionality).
 
 Done when: the new plan exists with D-73''s scope, plans 35/36 don''t contradict D-73.', '2026-10-12T16:08:48Z', '2026-10-12T16:10:55Z', NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (359, 7, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 7, the masterplan, in line with it (`pm plan edit 7 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T16:11:37Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
