@@ -1559,6 +1559,51 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Soplo''s rustle and the token pop-back are audible.
 - `CREDITS.md` has a row per new file; audio folder within budget; `npm run check` and `npm run build` pass.
 - The gamemaster approves the effects on the TV.', '2026-10-12T00:34:28Z', 135);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (33, 6, 'Recorded music loops (UI-10)', 190, 'Replaces the three generated music loops (`normal`, `question`, `submitted`) with CC0 (or D-45 allowlisted) recordings, as one matched set: one theme at three intensities, same key and tempo family, gapless. Owner plan file: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10). Runs after plan 32 "Recorded sound effects (UI-10)", whose pipeline, budget conventions and `/?efectos` audition aid it reuses; closes UI-10.
+
+## Scope
+- Generated today in `app/client/src/game/sound.svelte.ts` (`startTrack`, lookahead scheduler, `CHORDS`, `TEMPO`): A minor i–VI–III–V at 76/96/120 bpm; normal = pad + soft pulse, question = + ticking, submitted = heartbeat/timpani roll, pad creeping upwards.
+- Replace: `normal`, `question`, `submitted`.
+- Out of scope: `roll` (`redoble.m4a`) and `victory` (`victoria.m4a`) are already recordings; effects (plan 32).
+- Behaviour stays as in 04 "Music": 600/800 ms fades on screen changes, ~80 ms sharp cuts `question` ↔ `submitted`, cut to `roll` on submit, ducking for jokers.
+
+## Sources and licences
+- Kenney.nl CC0 first (music loops / jingles packs), then OpenGameArt CC0, Freesound CC0; D-45 allowlist only (CC0 preferred; CC BY ok with credit; no NC/ND/unknown).
+- Need: a matched set (one piece with calm / tense / most-tense variants or stems), or loops close enough in key and tempo that the 80 ms cuts don''t clash.
+- If no matched set exists, don''t guess: a decision for the gamemaster with options
+  1. one CC0 loop for all three, varied by playback rate / low-pass filter / an added layer (e.g. the existing synth ticks/heartbeat on top);
+  2. recordings for some tracks, synth for the rest;
+  3. keep the synthesized loops (UI-10 closes with music noted as synthesized).
+- Download by hand; don''t commit pack zips; keep only the converted files.
+
+## Pipeline (as plan 32)
+- `nix shell nixpkgs#ffmpeg-headless` (not a project dependency).
+- Cut to a whole number of bars at the loop point, loudness-normalize to the same target as the other music (`redoble.m4a`), stereo ok, AAC `.m4a`.
+- AAC adds encoder padding at the start: check the seam; if it clicks, store the loop points (`loopStart`/`loopEnd` in seconds per track in `sound.svelte.ts`) instead of relying on the file length.
+- Files: `app/client/public/audio/musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a` (flat, like the existing files).
+- `app/client/public/audio/CREDITS.md`: one row per file (source URL, pack, author, licence), CC0 too.
+- Budget: the three loops ≤ 900 kB together (loop length 20–40 s, ~96–128 kbit/s); whole folder ≤ 3.5 MB.
+
+## Wiring
+- `SAMPLE_NAMES` gets the three files; `startTrack()` plays the decoded buffer with `AudioBufferSourceNode.loop = true` (+ loop points) into the track''s gain, like the `redoble` branch; the scheduler stays as the fallback when a file is missing or fails to decode.
+- A per-track level constant if the recordings don''t sit right against the music bus (as `redoble` uses 2.2).
+- Sharp cuts `question` ↔ `submitted`: if the loops share tempo, start the new one at the old one''s position modulo its length so the beat continues; otherwise start at 0. Decide by ear.
+- Update the header comment of `sound.svelte.ts` (what is still synthesized).
+
+## Audition aid
+- Add the three tracks to plan 32''s `/?efectos` list: «grabado» / «sintetizado» per track, plus a «corte» button that toggles `question` ↔ `submitted` to hear the cut, and a loop that runs long enough to hear the seam.
+
+## Tasks (suggested split)
+1. Source a matched set; if none, the decision above (task pending on it); credit rows.
+2. Convert, set loop points, wire into `startTrack()` with synth fallback; extend `/?efectos`.
+3. Gamemaster check on the TV (`/?efectos` and a real game; clicks at the seam, the cuts, level against effects and question media): pending on a decision; apply the feedback.
+4. Close UI-10: `[x]` with a note in 04 (incl. what stayed synthesized), `plans/project.md` line, 04 "Sound assets" (`music/`, `sfx/` subfolders were never used: say flat folder).
+
+## Done when
+- The three loops are recordings (or the gamemaster chose another option via the decision), gapless, no click at the seam on the TV.
+- Synth fallback works with the files removed.
+- `CREDITS.md` rows; folder within budget; `npm run check` and `npm run build` pass.
+- The gamemaster approves the music on the TV; UI-10 `[x]` in 04 and `plans/project.md` updated.', '2026-10-12T00:35:05Z', 136);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2549,11 +2594,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:32:21Z', '2026-10-12T00:32:24Z', 6);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (134, 6, 'write plan: Preload the next screen''s media (UI-7)', 'plan', 'done', 1000, '2026-10-11, plan 31 (tasks.sql)', 'Write the plan for part 1 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 1.', '2026-10-12T00:32:21Z', '2026-10-12T00:33:14Z', 6);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (135, 6, 'write plan: Recorded sound effects (UI-10)', 'plan', 'done', 1000, '2026-10-11, plan 32 (tasks.sql)', 'Write the plan for part 2 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 2.', '2026-10-12T00:32:21Z', '2026-10-12T00:34:31Z', 6);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (136, 6, 'write plan: Recorded music loops (UI-10)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 3.', '2026-10-12T00:32:21Z', NULL, 6);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (136, 6, 'write plan: Recorded music loops (UI-10)', 'plan', 'done', 1000, '2026-10-11, plan 33 (tasks.sql)', 'Write the plan for part 3 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 3.', '2026-10-12T00:32:21Z', '2026-10-12T00:35:06Z', 6);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (137, 31, 'create tasks for plan 31', 'split', 'open', 1000, NULL, 'Split plan 31 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:33:12Z', NULL, 134);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (138, 32, 'create tasks for plan 32', 'split', 'open', 1000, NULL, 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:34:28Z', NULL, 135);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (139, 33, 'create tasks for plan 33', 'split', 'open', 1000, NULL, 'Split plan 33 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:35:05Z', NULL, 136);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2619,6 +2666,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (49, 6, '2026-10-12T00:31:32Z', '2026-10-12T00:32:33Z', 'done', NULL, 0, '6262f5802b6c5b1fade0950c0366b229ce836a38', 'claude-opus-5-5[1m]', '5d235fd1-3ff2-4e75-9bb3-105a9731f335', 10, 18, 5732, 342880, 38435, 0.49076800000000004, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (50, 134, '2026-10-12T00:32:33Z', '2026-10-12T00:33:22Z', 'done', NULL, 0, '628ee8aaabbc958ab2a40c538f11137dd40e8052', 'claude-opus-5-5[1m]', '9919c7ba-6fc1-4735-8ae7-37bd209d7d2c', 8, 16, 4710, 268736, 34111, 0.42089920000000003, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (51, 135, '2026-10-12T00:33:22Z', '2026-10-12T00:34:38Z', 'done', NULL, 0, '1e4f9f203abdfae13d97b609611a03b9c191305d', 'claude-opus-5-5[1m]', '7a27c0ff-b031-444f-b3ca-6d79e93d587a', 10, 20, 4511, 360873, 37034, 0.45874660000000006, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (52, 136, '2026-10-12T00:34:38Z', '2026-10-12T00:35:14Z', 'done', NULL, 0, 'f66b83b0826fd7a28c82b17ed22d01f12937ec3a', 'claude-opus-5-5[1m]', 'dcf5fdea-cb31-4515-aef0-b7edee5e07ec', 6, 12, 3488, 193246, 33780, 0.3786972, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
