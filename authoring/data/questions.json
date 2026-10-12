@@ -9512,9 +9512,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "difficulty_original": 4,
@@ -18949,9 +18956,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -21360,10 +21374,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-10",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -23580,9 +23601,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -23597,7 +23625,7 @@
     },
     {
       "id": "q-0328",
-      "status": "needs_work",
+      "status": "rejected",
       "difficulty": 5,
       "description": "Una mochila tan florecida que tu abuela la querría poner en la sala.",
       "question": "Mira la foto: ¿cómo se llama esta estructura de flores de la Feria de las Flores de Medellín?",
@@ -23646,12 +23674,19 @@
       "needs_media": true,
       "batch": "batch-4",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Se solapa casi por completo con q-0420 (aprobada), que pregunta por los \"silleteros\" con una foto parecida: ver una regala la otra, y la pista 2 de esta pregunta hasta lo dice. Además, ninguna foto muestra con claridad una silleta de flores en el desfile: dos son estatuas, una es en blanco y negro con follaje poco reconocible y otra es un puesto de flores. No se encontró una imagen adecuada para esta pregunta.",
+        "decision": "rejected",
+        "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Se solapa casi por completo con q-0420 (aprobada), que pregunta por los \"silleteros\" con una foto parecida: ver una regala la otra, y la pista 2 de esta pregunta hasta lo dice. Además, ninguna foto muestra con claridad una silleta de flores en el desfile: dos son estatuas, una es en blanco y negro con follaje poco reconocible y otra es un puesto de flores. No se encontró una imagen adecuada para esta pregunta.",
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -23725,10 +23760,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -27184,10 +27226,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -28237,10 +28286,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -28983,7 +29039,7 @@
     {
       "id": "q-0405",
       "status": "approved",
-      "difficulty": 3,
+      "difficulty": 5,
       "description": "La única noche del año en que a nadie lo regañan por jugar con fuego en el andén.",
       "question": "¿Qué noche se celebra en Colombia el Día de las Velitas, cuando las familias prenden velas y faroles en ventanas y andenes?",
       "answer": "La noche del 7 de diciembre",
@@ -29033,13 +29089,21 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 3
     },
     {
       "id": "q-0406",
@@ -29094,10 +29158,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -30536,10 +30607,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -31252,7 +31330,7 @@
     {
       "id": "q-0438",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 7,
       "description": "Tres semanas pedaleando por Francia y al final le regalan una camiseta amarilla: el negocio del siglo.",
       "question": "¿Quién fue el primer colombiano en ganar el Tour de Francia?",
       "answer": "Egan Bernal",
@@ -31302,18 +31380,26 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 4
     },
     {
       "id": "q-0439",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 8,
       "description": "Una subida tan larga que arrancas en tierra caliente y llegas pidiendo ruana.",
       "question": "¿Qué subida colombiana, de unos 80 km, es considerada por muchos ciclistas la subida pavimentada más larga del mundo?",
       "answer": "El Alto de Letras",
@@ -31363,13 +31449,21 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 7
     },
     {
       "id": "q-0440",
@@ -31435,7 +31529,7 @@
     {
       "id": "q-0441",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 8,
       "description": "Un deporte con nombre de pueblo, como si el fútbol se llamara 'Fusagasugá'.",
       "question": "Antes, al tejo también le decían 'turmequé', por el nombre de un pueblo. ¿En qué departamento está ese pueblo?",
       "answer": "Boyacá",
@@ -31487,13 +31581,21 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 7
     },
     {
       "id": "q-0442",
@@ -32377,10 +32479,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -32446,10 +32555,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -33316,10 +33432,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -33934,10 +34057,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -34063,10 +34193,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -34399,10 +34536,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -34410,7 +34554,7 @@
     {
       "id": "q-0485",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 9,
       "description": "Antes de ella, Colombia guardaba las medallas de oro en el mismo lugar que los unicornios.",
       "question": "¿Quién fue la primera mujer colombiana en ganar una medalla de oro en unos Juegos Olímpicos?",
       "answer": "María Isabel Urrutia",
@@ -34460,13 +34604,21 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 7
     },
     {
       "id": "q-0486",
@@ -34963,10 +35115,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -35093,10 +35252,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -35154,10 +35320,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -35165,7 +35338,7 @@
     {
       "id": "q-0496",
       "status": "approved",
-      "difficulty": 3,
+      "difficulty": 7,
       "description": "Ningún peluquero se atrevió jamás a tocar este peinado.",
       "question": "¿Qué futbolista es? Era un volante colombiano con una enorme melena rubia y crespa, famoso por sus pases mágicos y por jugar casi sin correr.",
       "answer": "Carlos Valderrama",
@@ -35215,13 +35388,21 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 3
     },
     {
       "id": "q-0497",
@@ -35306,14 +35487,14 @@
         "role": "illustrative",
         "query": "lechona",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALechona.JPG",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Lechona.JPG/3840px-Lechona.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Tamorlan · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASuckling_pig_6450.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Suckling_pig_6450.JPG/3840px-Suckling_pig_6450.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Karl Gruber · CC BY-SA 3.0 at · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Tamorlan",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Tamorlan",
+        "license": "CC BY-SA 3.0 at",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+        "author": "Karl Gruber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Karl_Gruber",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -35338,9 +35519,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia",
@@ -35530,10 +35718,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -35932,7 +36127,7 @@
     {
       "id": "q-0508",
       "status": "approved",
-      "difficulty": 5,
+      "difficulty": 4,
       "description": "Un bus que se fue de rumba y nunca volvió a ponerse serio.",
       "question": "Mira la foto: ¿cómo se llama este vehículo de madera pintado de colores, típico de los pueblos de Colombia?",
       "answer": "Chiva",
@@ -35982,13 +36177,21 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
-      "bundle": "colombia"
+      "bundle": "colombia",
+      "difficulty_original": 5
     },
     {
       "id": "q-0509",
@@ -36043,10 +36246,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-07",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "background": null,
       "bundle": "colombia"
@@ -36574,9 +36784,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -36668,7 +36885,7 @@
     },
     {
       "id": "q-0519",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un prócer que, en vez de estatua, se ganó miles de estudiantes con carné.",
       "question": "Soy una universidad de Bogotá y llevo el nombre del primer presidente del Estado de Cundinamarca, en 1811. ¿Cuál soy?",
@@ -36725,12 +36942,19 @@
       "needs_media": false,
       "batch": "batch-6",
       "review": {
-        "decision": "needs_work",
-        "feedback": "El dato curioso dice \"casi 140 años\" entre 1811 y 1954, pero son 143 años: debe decir \"más de 140 años\". Lo demás está bien.",
+        "decision": "approved",
+        "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "El dato curioso dice \"casi 140 años\" entre 1811 y 1954, pero son 143 años: debe decir \"más de 140 años\". Lo demás está bien.",
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -37025,9 +37249,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -37102,9 +37333,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -37179,9 +37417,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -37324,10 +37569,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-08",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-08",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -38321,9 +38573,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -38400,9 +38659,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -39240,9 +39506,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -39476,9 +39749,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -39553,9 +39833,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -39635,9 +39922,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -39781,9 +40075,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -40251,9 +40552,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -40405,9 +40713,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -41374,9 +41689,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -41603,10 +41925,17 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "reviewed_on": "2026-10-08",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-11",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-08",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null
@@ -41811,9 +42140,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,
@@ -41964,9 +42300,16 @@
         "decision": "approved",
         "feedback": null,
         "reviewed_on": "2026-10-11",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "colombia",
       "background": null,

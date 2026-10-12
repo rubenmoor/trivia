@@ -11234,7 +11234,7 @@
     {
       "id": "q-0405",
       "status": "approved",
-      "difficulty": 3,
+      "difficulty": 5,
       "subcategory": "Tradiciones colombianas",
       "bundle": "colombia",
       "description": "La única noche del año en que a nadie lo regañan por jugar con fuego en el andén.",
@@ -12195,7 +12195,7 @@
     {
       "id": "q-0438",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 7,
       "subcategory": "Ciclismo colombiano",
       "bundle": "colombia",
       "description": "Tres semanas pedaleando por Francia y al final le regalan una camiseta amarilla: el negocio del siglo.",
@@ -12224,7 +12224,7 @@
     {
       "id": "q-0439",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 8,
       "subcategory": "Ciclismo colombiano",
       "bundle": "colombia",
       "description": "Una subida tan larga que arrancas en tierra caliente y llegas pidiendo ruana.",
@@ -12282,7 +12282,7 @@
     {
       "id": "q-0441",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 8,
       "subcategory": "Deportes tradicionales colombianos",
       "bundle": "colombia",
       "description": "Un deporte con nombre de pueblo, como si el fútbol se llamara 'Fusagasugá'.",
@@ -13533,7 +13533,7 @@
     {
       "id": "q-0485",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 9,
       "subcategory": "Medallistas olímpicos colombianos",
       "bundle": "colombia",
       "description": "Antes de ella, Colombia guardaba las medallas de oro en el mismo lugar que los unicornios.",
@@ -13827,7 +13827,7 @@
     {
       "id": "q-0496",
       "status": "approved",
-      "difficulty": 3,
+      "difficulty": 7,
       "subcategory": "Selección Colombia",
       "bundle": "colombia",
       "description": "Ningún peluquero se atrevió jamás a tocar este peinado.",
@@ -13905,9 +13905,9 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Lechona.JPG/3840px-Lechona.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALechona.JPG",
-        "credit": "Tamorlan · CC BY-SA 3.0 · Wikimedia Commons"
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Suckling_pig_6450.JPG/3840px-Suckling_pig_6450.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASuckling_pig_6450.JPG",
+        "credit": "Karl Gruber · CC BY-SA 3.0 at · Wikimedia Commons"
       },
       "background": null
     },
@@ -14175,7 +14175,7 @@
     {
       "id": "q-0508",
       "status": "approved",
-      "difficulty": 5,
+      "difficulty": 4,
       "subcategory": "Tradiciones colombianas",
       "bundle": "colombia",
       "description": "Un bus que se fue de rumba y nunca volvió a ponerse serio.",
@@ -14488,6 +14488,35 @@
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Gary_White_On_The_Sidelines_During_FiFA_International_Game.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AGary_White_On_The_Sidelines_During_FiFA_International_Game.jpg",
         "credit": "Hemstead · CC0 · Wikimedia Commons"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0519",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Colombianos famosos",
+      "bundle": "colombia",
+      "description": "Un prócer que, en vez de estatua, se ganó miles de estudiantes con carné.",
+      "question": "Soy una universidad de Bogotá y llevo el nombre del primer presidente del Estado de Cundinamarca, en 1811. ¿Cuál soy?",
+      "answer": "La Universidad Jorge Tadeo Lozano",
+      "wrong_answers": [
+        "La Universidad del Rosario",
+        "La Universidad Javeriana",
+        "La Universidad Externado"
+      ],
+      "hints": [
+        "Mi nombre es el nombre completo de una persona.",
+        "Ese prócer era hijo del marqués de San Jorge.",
+        "Mucha gente me llama simplemente 'la Tadeo'."
+      ],
+      "fun_fact": "La universidad que lleva su nombre se fundó en Bogotá en 1954, casi 140 años después de su presidencia.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/La_Candelaria%2C_Bogot%C3%A1%2C_Colombia_-_panoramio_%2828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Candelaria%2C_Bogot%C3%A1%2C_Colombia_-_panoramio_%2828%29.jpg",
+        "credit": "Jimmy Gómez N · CC BY-SA 3.0 · Wikimedia Commons"
       },
       "background": null
     },
