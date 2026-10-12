@@ -10305,8 +10305,8 @@ Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-as
 - Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', '2026-10-12T23:02:09Z', 501);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (513, 73, 'create tasks for plan 73', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 524-531 for plan 73', 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:49:44Z', '2026-10-12T23:02:57Z', 502);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (514, 74, 'create tasks for plan 74', 'split', 'open', 1000, NULL, 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:50:32Z', NULL, 503);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (514, 74, 'create tasks for plan 74', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 532-534 for plan 74', 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:50:32Z', '2026-10-12T23:03:32Z', 503);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (515, 75, 'create tasks for plan 75', 'split', 'open', 1000, NULL, 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:51:29Z', NULL, 504);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (516, 76, 'create tasks for plan 76', 'split', 'open', 1000, NULL, 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -10420,6 +10420,59 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Baseline table in `code-review.md`; every bloat finding a row with a status.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (532, 74, 'Review save.py and paths.py', 'work', 'open', NULL, NULL, 'Task 1 of `plan 74: Python game server review (code review part 2)`. Needs `code-review.md` with `## Part 2` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
+
+## What
+- `app/server/save.py` (109 lines):
+  - atomic write (temp file + `os.replace`, fsync), lock / concurrent PUTs
+  - PUT body: size limit, JSON validation; error codes vs. what `app/client/src/lib/store.ts` `ServerStore` expects
+  - `migrate()`: source untouched, idempotent, partial-failure state, legacy SQLite schemas (`_upgrade` is added by `task 302: Delete the Python referee`: don''t add it here)
+- `app/server/paths.py` (33 lines): `TRIVIA_STATE`/`TRIVIA_MEDIA` defaults, `~`/relative paths, Windows separators, directories created when missing, constants still used (`grep -rn` over `app/` + `authoring/`).
+- Duplication candidates (log, part 10 consolidates): `save.py` ↔ `app/desktop/save.mjs` (D-72: lock, backup) and `authoring/tools/save_file.py`; `paths.py` ↔ `authoring/tools/layout.py`.
+- Part 1 rows `handed to part 2` for these files: re-check, final status in `## Part 2`, quoting the part 1 row.
+- Renamed/removed names: `grep -rn` over `authoring/` first; authoring behaviour unchanged.
+
+## Check
+- Throw-away script in `/tmp` on a temp `TRIVIA_STATE` (asserted before start) for every fix: PUT/GET round trip, migration of a copied legacy `game.sqlite` + `flags.json`, source byte-identical.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- `save.py` and `paths.py` listed in `## Part 2` (or "no findings"), every finding with a status.', '2026-10-12T23:03:30Z', NULL, 514);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (533, 74, 'Review main.py, http_base.py, media_cache.py', 'work', 'open', NULL, NULL, 'Task 2 of `plan 74: Python game server review (code review part 2)`; after task 1 of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
+
+## What
+- `app/server/main.py` (206), `http_base.py` (54), `media_cache.py` (32 lines).
+- Against `decision 4: After the engine port, which routes does the Python game server keep besides static files and /api/save?`: routes beyond static + `/data/` + `/media` + `/api/save` → `superseded by task 302` (no edits to those handlers). The `main.py` docstring rewrite to the final routes is owned by `task 303: Decision entry, docs and package check (PORT-8)`: only fix it here if it is wrong about routes that stay.
+- `/data/<path>` and static serving: path traversal (`..`, `%2e%2e`, absolute paths, Windows `\`), content types, 404 body format.
+- `/media`: only pool URLs (not an open proxy), no network access, `media_missing`; `load_pool` cost per request (cached or re-read), sync IO per request, large-file reads.
+- Errors: `error_body`, bad JSON / missing `Content-Length`, handler exceptions (500 vs. crash vs. swallowed), host/port flags, startup media line.
+- `media_cache.py`: `cache_path` hashing/extensions stable vs. `trivia-media sync` and `authoring/tools/download.py` (duplication candidate), `pool_urls` reads.
+- `http_base.py` is subclassed by `authoring/server/main.py` (overrides `send_media`): keep its behaviour.
+- Part 1 rows `handed to part 2` for these files: re-check, final status in `## Part 2`, quoting the part 1 row.
+
+## Check
+- `trivia` on temp `TRIVIA_STATE` / `TRIVIA_MEDIA` (asserted before start), `curl` the cases above; stop it by PID.
+- If `http_base.py` changed: `trivia-authoring` on temp state still starts and serves its pages.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- The three files listed in `## Part 2` (or "no findings"), every finding with a status.', '2026-10-12T23:03:30Z', NULL, 514);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (534, 74, 'Short review of game.py, selection.py, flags.py; review categories.py', 'work', 'open', NULL, NULL, 'Task 3 of `plan 74: Python game server review (code review part 2)`; last task of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
+
+## What
+- `app/server/game.py` (619), `selection.py` (130), `flags.py` (41): short review per the task 302 rule (`task 302: Delete the Python referee` deletes them). One row per file; findings only if task 302 must know them; everything else `superseded by task 302`.
+- Check task 302''s body against `decision 4: After the engine port, which routes does the Python game server keep besides static files and /api/save?` and today''s imports: `grep -rn "import \(game\|selection\|flags\|categories\)\|from \(game\|selection\|flags\|categories\) import" app/ authoring/` (known: `save_file.py` → `flags`, `selection`; `record_fixtures.py` → `game`, `selection`; `authoring/server/main.py` → `flags`).
+- Gaps (something authoring still needs that task 302''s body misses): `pm task set 302 --body -` with the addition if task 302 is open and not running; else a follow-up task in plan 51.
+- `app/server/categories.py` (58): full review (it survives, moved to `authoring/tools/` by task 302): caching, bundle/locale handling, errors on missing/malformed `categories.json`. Small fixes here only if they don''t conflict with the move; otherwise a follow-up task in plan 74 noting it runs after task 302.
+- Duplication candidates (log for part 10): `selection.py` ↔ `app/client/src/engine/selection.ts`; `categories.py` ↔ the client''s category loading.
+- Part 1 rows `handed to part 2` for these files: re-check, final status in `## Part 2`, quoting the part 1 row.
+
+## Check
+- Fixes in `categories.py`: throw-away script in `/tmp` (missing / malformed `categories.json` on a temp copy), `qgen validate`.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- All 9 files of `app/server/` are listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.', '2026-10-12T23:03:30Z', NULL, 514);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -11429,6 +11482,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (378, 511, '2026-10-12T22:59:41Z', '2026-10-12T23:01:31Z', 'done', NULL, 0, 'd4e1f76f54930233d42896db7b1c6ba7b7020ccb', 'claude-opus-5-5[1m]', '8fa9f223-ecc8-489e-918d-94c7e154915c', 8, 16, 9194, 316854, 46222, 0.6170908, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (379, 512, '2026-10-12T23:01:32Z', '2026-10-12T23:02:15Z', 'done', NULL, 0, '5568f0bf1416ec69d20361d8818db84a76f6a887', 'claude-opus-5-5[1m]', '2e364715-b370-4cca-b84b-308d7917aa42', 5, 10, 4021, 166178, 35501, 0.39770360000000005, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (380, 513, '2026-10-12T23:02:16Z', '2026-10-12T23:03:02Z', 'done', NULL, 0, '443a6cb15a46b6dd31e7be6b6fd4bcc776923581', 'claude-opus-5-5[1m]', '030d1e9e-09da-4cd2-b348-4f84c49b66fe', 5, 10, 5284, 153875, 31149, 0.385687, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (381, 514, '2026-10-12T23:03:02Z', '2026-10-12T23:03:36Z', 'done', NULL, 0, 'df8b8446c994952e21bcd6a194f4821bc2353100', 'claude-opus-5-5[1m]', '5c106a27-7fbf-4dae-9595-07198458235c', 6, 12, 3545, 196796, 32722, 0.3720832, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
