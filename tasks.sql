@@ -3329,6 +3329,41 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Running the rewrite on the whole pool (part 11); the UI''s `es-ES` catalog (LUI-5, part 7); moving questions between bundles (D-49); finer Spanish variants (D-78).', '2026-10-12T18:20:34Z', 243);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (65, 8, 'Seen counters instead of burning; supply warning and exhausted subcategories', 600, 'Replaces burning (D-28) with a seen counter per question. Repeats become a fallback, not a dead end. The gamemaster decided this on 2026-10-12; it gets a new D-entry that supersedes D-28''s burn rules.
+
+## Profile = save
+- One save = one profile. On Steam that is one Steam user (masterplan 10, part 4: a save per SteamID). Without Steam it is the local save (`state/game.json`, the desktop `save/…/game.json`).
+- Player names stay labels: «Continuar: Sofía, nivel 5», game history, multiplayer turn order. They no longer scope selection; every seen event counts for the whole save, in every mode.
+- GF-7 «Borrar jugador» deletes the name and its games but keeps their seen rows (the profile still saw those questions).
+
+## Seen counter
+- Events: the same ones that burn today (answered, skipped by joker or admin, swapped away, Snipe hit). Unpicked card descriptions don''t count.
+- Save v3: `seen: {question_id, game_id, seen_on}[]` replaces `burned`; count(q) = rows for q. One row per event, so undo removes exactly that game''s row.
+- `blocked: string[]`: «Saltar y quemar para todos» becomes «Bloquear pregunta», a hard exclusion for broken questions.
+- Migration v2 → v3 in `parseSave` (fixtures, test on a copy of the family save): each `burned` row with `player_id` → one `seen` row (two kids who saw it = count 2); `player_id: null` → `blocked`.
+- Python server (frozen, D-59): it only stores the document (D-67). Check that nothing in `app/server/` still reads `burned`; otherwise record the divergence.
+
+## Selection
+- `available`: approved, active bundles, not blocked, not offered this game, not purged. Seen questions are no longer excluded.
+- `draw`: after the shuffle, sort by `(count, category key)`. The lowest count always wins; category variety only breaks ties. Then accept the first candidate that keeps the later levels fillable (as now). Jokers draw the same way.
+- The hard supply-check failure stays only for "the whole pool, any count, can''t fill 12 levels".
+- Engine tests: the invariant "burned never comes back" becomes "never a count-k card while a count-<k card fits the slot and keeps the later levels fillable".
+
+## Low-supply warning (game start)
+- After mode, bundles and age group are chosen, before level 1; informational, «Jugar» stays.
+- Fresh games left k = the largest k such that the count-0 questions fill `4 + k·b` slots per level (`assign` with a per-level demand; binary search). `b` = seen events per level per game for the mode (D-75 multipliers: ≈ (12 + standard joker burns)/12; × N players in `rr-competitive` and `timed`).
+- Warn when k < K. K is a pm decision for the gamemaster (proposal: 3).
+- Bottleneck: the level(s) that fail first at k+1, shown as their difficulty range: «Quedan preguntas nuevas para unas 2 partidas; después se repetirán algunas, sobre todo de dificultad 13–15.» If a bundle is off, suggest switching it on. k = 0: «En esta partida pueden salir preguntas que ya vieron.»
+- Strings in the `es` catalog (LUI-1); reachable with keys and pad.
+
+## Exhausted subcategories (informational)
+- A subcategory is exhausted when every approved question of it in the active bundles, within the age group''s overall difficulty span, has count ≥ 1.
+- Shown at game start, once per subcategory: «Ya vieron todas las preguntas de: Ríos, Mundiales de fútbol». The save keeps `notified_exhausted`; a subcategory leaves the list when an update brings it unseen questions.
+- No effect on selection.
+
+## Also
+- `qgen report --simulate` (CT-2): simulate with counts; "games until the first repeat" stays the headline; print k for a fresh profile as a cross-check.
+- Docs: D-28 superseded in `plans/02`, `03`, `04`, `05`, `12`, `13`, `16`; `directory.md` if files move.', '2026-10-12T18:23:46Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -7797,6 +7832,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: every current category, subcategory and bundle has a name in `en` and `de`; `qgen validate` is clean (no missing-name warnings, no unknown keys).', '2026-10-12T18:14:16Z', '2026-10-12T18:19:18Z', 413);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (417, 64, 'create tasks for plan 64', 'split', 'open', 1000, NULL, 'Split plan 64 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:20:34Z', NULL, 243);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (418, 65, 'create tasks for plan 65', 'split', 'open', 1000, NULL, 'Split plan 65 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:23:46Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
