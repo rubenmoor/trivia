@@ -17,7 +17,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
-    qgen report [--run <run>] [--player <name>] [--subcategories]
+    qgen report [--run <run>] [--player <name>] [--subcategories] [--calibration [<batch>…]]
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -1144,7 +1144,61 @@ def report_subcategories(avail):
         print(f"    level {level:2} (difficulty {lo}–{hi}): {n:3}")
 
 
+def calibration(run, pool=None):
+    """{target level: row} for a run (plan 13): drawn slots and their mean concept `known_at`; n drafted;
+    mean drafted, rated and final difficulty (None if there are none); merged and approved counts.
+    Plan 16 reuses it."""
+    d = WORK / run
+    plan = load_json(d / "slots.json", {})
+    ratings, _ = collect(d)
+    ids = load_json(d / "ids.json", {})
+    by_id = {q["id"]: q for q in (pool if pool is not None else load_json(POOL)["questions"])}
+    rows = {}
+    row = lambda lvl: rows.setdefault(lvl, {"slots": 0, "known_at": [], "drafted": [], "rated": [], "final": [],
+                                            "merged": 0, "approved": 0})
+    for sub, slots in plan.items():
+        known = {c["name"]: c["known_at"] for c in (concepts.load(sub) or {"concepts": []})["concepts"]}
+        for sl in slots:
+            r = row(sl["target_difficulty"])
+            r["slots"] += 1
+            if sl["concept"] in known: r["known_at"].append(known[sl["concept"]])
+    for _, qs in drafts(d):  # revised drafts too (revised-*.json)
+        for q in qs:
+            r = row(plan[q["subcategory"]][q["slot"]]["target_difficulty"])
+            r["drafted"].append(q["difficulty"])
+            if q["tmp_id"] in ratings: r["rated"].append(ratings[q["tmp_id"]]["difficulty_estimate"])
+            final = by_id.get(ids.get(q["tmp_id"]))
+            if final:
+                r["final"].append(final["difficulty"])
+                r["merged"] += 1
+                r["approved"] += final["status"] == "approved"
+    mean = lambda xs: sum(xs) / len(xs) if xs else None
+    return {lvl: {"slots": r["slots"], "n": len(r["drafted"]),
+                  **{k: mean(r[k]) for k in ("drafted", "rated", "final", "known_at")},
+                  "merged": r["merged"], "approved": r["approved"]} for lvl, r in sorted(rows.items())}
+
+
+def last_batches(n=2):
+    runs = [p.name for p in WORK.glob("batch-*") if (p / "slots.json").exists() and re.fullmatch(r"batch-\d+", p.name)]
+    return sorted(runs, key=lambda r: int(r[6:]))[-n:]
+
+
+def report_calibration(runs):
+    pool = load_json(POOL)["questions"]
+    fmt = lambda x: f"{x:5.1f}" if x is not None else "    –"
+    for run in runs:
+        if not (WORK / run / "slots.json").exists():
+            sys.exit(f"no work/{run}/slots.json")
+        print(f"calibration {run} (per target level; means; '–' = none yet):")
+        print("  target  slots  known_at  drafts  drafted  rated  final  merged  approved")
+        for lvl, r in calibration(run, pool).items():
+            print(f"  {lvl:6} {r['slots']:6}     {fmt(r['known_at'])}  {r['n']:6}    {fmt(r['drafted'])}  "
+                  f"{fmt(r['rated'])}  {fmt(r['final'])}  {r['merged']:6}  {r['approved']:8}")
+
+
 def cmd_report(args):
+    if args.calibration is not None:
+        return report_calibration(args.calibration or last_batches())
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
     print(f"pool: {len(pool)} questions")
@@ -2040,6 +2094,8 @@ def main():
     rp.add_argument("--player", help="supply for this player (D-28); default: a new player")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10)")
+    rp.add_argument("--calibration", nargs="*", metavar="BATCH",
+                    help="drafted/rated/final difficulty per target level (plan 13); default: the last two batches")
     add("validate", cmd_validate, run=False)
     add("export", cmd_export, run=False)
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging

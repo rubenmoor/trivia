@@ -1040,15 +1040,20 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The exit check runs and, today, fails on the count criteria with the right numbers.', '2026-10-11T23:39:28Z', 13);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (13, 1, 'Aim batches at difficulty gaps', 700, 'Part 2 of the masterplan (plan 1, B-6). Batches should fill the pool where it is thin against the targets of plan 12 (D-53), and a question drafted for difficulty 14 should come out near 14. Today `draft` spreads targets evenly (D-40), the concept draw barely follows the target, and the drafter writes hard targets about three levels too easy. This plan measures that, then fixes the drawing (D-54) and the prompts as implementation tasks; never as a workaround inside a batch run (RUNBOOK).
 
-## Baseline (2026-10-11, throw-away script)
-- Mean difficulty per target level, batch-7 (drafted · rated · final, merged questions):
-  - targets 1–3 → 3.6–4.1 · 3.6–4.1 · 3.6–3.9 (too hard at the bottom)
-  - targets 4–8 → roughly on target (±1)
-  - targets 9–10 → 8.7 · 8.2 · 8.8–9.0
-  - targets 11–12 → 10.0 · 9.0 · 10.1–10.3
-  - targets 13–15 → 11.2–11.8 · 10.0–10.8 · 11.3–12.1
-- batch-8 drafts (not rated yet): closer at the top (target 15 → 13.2), worse at the bottom (target 1 → 5.1).
-- Mean concept `known_at` per target: batch-7 7.0–8.6 at targets 1–8, 10.7–10.8 at 12–15; batch-8 8.4–9.4 at 1–5, 11.5–11.6 at 13–15. The concept draw (`concepts.draw_concepts`, weight `1/(1+uses)² / (1+|known_at−d|/2)`) is dominated by use count; `known_at` hardly matters.
+## Baseline (2026-10-11, `qgen report --calibration batch-7 batch-8`)
+- Columns: drawn slots · mean concept `known_at` (all slots) · drafts · mean drafted / rated / final difficulty (all drafts, revised ones included) · merged · approved.
+- batch-7 (rated, merged, reviewed):
+  - target 1–3: known_at 8.2 / 7.4 / 7.0; drafted 3.6 / 3.7 / 4.1; rated 3.6 / 3.7 / 4.1; final 3.6 / 3.7 / 3.9 (too hard at the bottom)
+  - target 4–8: drafted 5.3 / 6.0 / 6.9 / 7.6 / 7.6; final 5.2 / 6.0 / 6.7 / 7.8 / 7.8 (roughly on target, 8 one low)
+  - target 9–10: known_at 9.7 / 9.9; drafted 8.8 / 8.7; rated 8.5 / 8.2; final 9.0 / 8.8
+  - target 11–12: known_at 10.1 / 10.7; drafted 9.9 / 10.0; rated 9.2 / 8.9; final 10.1 / 10.3
+  - target 13–15: known_at 10.8 / 10.7 / 10.8; drafted 11.2 / 11.3 / 11.8; rated 10.4 / 10.0 / 10.8; final 11.3 / 11.5 / 12.1
+  - 712 drafts, 616 merged, 568 approved; known_at 7.0–8.6 at targets 1–8
+- batch-8 (drafted only; rated and final numbers pending until it''s rated):
+  - drafted 5.1 / 4.3 / 5.3 at targets 1–3 (worse at the bottom); 6.6 / 6.1 / 7.0 / 7.8 / 8.6 at 4–8
+  - drafted 9.5 / 9.8 / 10.6 / 11.6 at 9–12; 12.1 / 12.6 / 13.2 at 13–15 (closer at the top)
+  - known_at 8.4–9.4 at targets 1–5, 11.5–11.6 at 13–15
+- The concept draw (`concepts.draw_concepts`, weight `1/(1+uses)² / (1+|known_at−d|/2)`) is dominated by use count; `known_at` hardly matters.
 - Concept supply isn''t the problem: the base concept lists have ~1000–3000 unretired concepts at each `known_at` 9–15, but only ~500–1000 at 1–4.
 - `prompts/rate.md` asks for `difficulty_estimate` 1–10, so the rater can''t rate above 10; with `DIFFICULTY_GAP = 3` every question at 13+ looks overrated and may get lowered in `revise`.
 - House style''s calibration examples are all at 1–6 and all say "AI guessed too high": they push the drafter down, and nothing anchors 10–15.
@@ -2679,7 +2684,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md` "Quality bar": write decision 2''s numbers as the family pool''s bar; close CT-5 for the family pool.
 
 Done when: the check runs and, today, fails on the count criteria with the right numbers.', '2026-10-11T23:50:08Z', NULL, 19);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (29, 13, 'qgen report --calibration and baseline', 'work', 'open', 710, NULL, 'Part "Measurement" of plan 13. The baseline comes first, so the fixes can be measured.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (29, 13, 'qgen report --calibration and baseline', 'work', 'done', 710, '2026-10-11, authoring/tools/qgen.py (qgen report --calibration, calibration()), README.md, AGENTS.md, plan 13 baseline; qgen validate''s only error is q-0021 (pre-existing, decision 10)', 'Part "Measurement" of plan 13. The baseline comes first, so the fixes can be measured.
 
 - `qgen report --calibration [<batch>…]` in `authoring/tools/qgen.py`: per target level 1–15: n drafted, mean drafted / rated / final difficulty, mean concept `known_at`, merged and approved counts.
 - Reads `work/<batch>/slots.json`, `drafts/`, `ratings/`, `ids.json` and the pool; default: the last two batches. Missing ratings (batch not rated yet) → `–`, no error.
@@ -2687,7 +2692,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Record the batch-7 and batch-8 numbers in plan 13''s "Baseline" section (`pm plan edit 13 --body -`); batch-8 rated numbers once it''s rated, else note that they''re pending.
 - `README`/`AGENTS.md` command lists: mention the flag where `qgen report` is listed.
 
-Done when: `qgen report --calibration` prints the table for batch-7 and batch-8, matching the throw-away baseline in plan 13 (±0.1); `qgen validate` clean.', '2026-10-11T23:50:50Z', NULL, 20);
+Done when: `qgen report --calibration` prints the table for batch-7 and batch-8, matching the throw-away baseline in plan 13 (±0.1); `qgen validate` clean.', '2026-10-11T23:50:50Z', '2026-10-12T01:28:17Z', 20);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (30, 13, 'rate.md on the 1–15 scale; re-check DIFFICULTY_GAP', 'work', 'open', NULL, NULL, 'Part "Fixes → Rater scale" of plan 13. `authoring/tools/prompts/rate.md` asks for `difficulty_estimate` 1–10, so the rater can''t rate above 10 and every question at 13+ looks overrated to `revise` (`DIFFICULTY_GAP = 3`, `qgen.py`).
 
 - `rate.md`: `difficulty_estimate` on the shared scale 1–15, as defined in the house style (refer to it, don''t restate it); fix the JSON schema bounds in `qgen.py` if the rating schema has them.
@@ -4472,6 +4477,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Content: `plans/11-steam.md` ST-3..ST-5 `[x]`, S6 row done, status; leftovers in `plans/17-publishing.md` and `plans/18-steam-integration.md` done or deferred with a note; `plans/project.md`, `plans/README.md`; `README.md`: how to cut a release and send a patch (commands for humans).
 - Leftovers to `plans/backlog.md`: competitive mode, couch co-op, more regions/languages, SW-13, SW-14.
 - Done when: the milestone''s "Done when" holds (released, first content patch out).', '2026-10-12T01:16:13Z', NULL, 264);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (272, 13, 'create tasks for plan 13', 'split', 'dropped', 1000, 'queued by task 29''s baseline edit to plan 13; plan 13 is already split (task 20), the tasks are unchanged', 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:28:12Z', '2026-10-12T01:28:17Z', 29);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4591,6 +4598,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (96, 111, '2026-10-12T01:16:22Z', '2026-10-12T01:17:39Z', 'done', NULL, 0, 'fc06477fae30d3e7b96c077ff88e59e3d6ef46b9', 'claude-opus-5-5[1m]', 'c4eb59b7-b2db-4e19-9163-73d939642fa0', 10, 20, 6073, 349739, 30974, 0.43927979999999994, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (97, 112, '2026-10-12T01:17:39Z', '2026-10-12T01:19:30Z', 'done', NULL, 0, '45622b612c8c3ad4ae198d64f07eab44cc18700a', 'claude-opus-5-5[1m]', '27f2bb00-c52d-49c2-9dda-e696f75cf000', 28, 46, 10671, 1125475, 50504, 0.84273100000000012, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (98, 113, '2026-10-12T01:19:30Z', '2026-10-12T01:26:11Z', 'blocked', NULL, 0, '4b81cdd472403d6cb17c61cf9fd1542c7b7cf8ca', 'claude-opus-5-5[1m]', '2f30ec08-45d4-4159-9527-fa6006c00d7e', 20, 40, 11314, 883678, 46584, 0.7758476, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (99, 29, '2026-10-12T01:26:11Z', '2026-10-12T01:28:28Z', 'done', NULL, 0, 'ef824b4742e8dac6436b132f47f8ae79b36c3a65', 'claude-opus-5-5[1m]', '4b54a0e4-f6d7-4d3a-b668-f50d8fcfeaa5', 29, 48, 14654, 1388065, 61137, 1.0599810000000003, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
