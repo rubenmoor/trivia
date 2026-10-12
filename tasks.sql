@@ -4433,7 +4433,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Delete throw-away scripts.
 
 Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:48:02Z', '2026-10-12T05:30:32Z', 175);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (190, 37, 'Launch languages: record the answer (OQ-31, I18N-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 37. Waits for the OQ-31 decision(s) from the previous task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (190, 37, 'Launch languages: record the answer (OQ-31, I18N-1)', 'work', 'dropped', NULL, 'superseded by the revised plan 37 (task 380): replacement task with es/en/de and mode names', 'Part 2 of plan 37. Waits for the OQ-31 decision(s) from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number).
 - OQ-31 → "Resolved" in `plans/open-questions.md` with the D-number.
@@ -4443,7 +4443,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plan 24 "Draft en catalog (LUI-3)": English at launch or first later language → keep, one-line note via `pm plan edit 24 --body` if scope changes; no English planned → say so in plan 24, leave dropping it to the gamemaster (mention in done note).
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
 
-Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages; plan 24 checked.', '2026-10-12T00:48:02Z', NULL, 175);
+Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages; plan 24 checked.', '2026-10-12T00:48:02Z', '2026-10-12T16:48:10Z', 175);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (191, 38, 'Content target: estimate games per player, write the decision (OQ-32)', 'work', 'done', NULL, '2026-10-11, pm decision 21 (estimate in body); no files', 'Part 1 of plan 38. Prepare the OQ-32 decision; estimate only, no simulation (CT-2, `qgen report --simulate`, is S4). Can start now: use drafts where answers are missing and say so in the body.
 
 - Facts (numbers in the decision body, one-line source each):
@@ -6726,8 +6726,21 @@ Guard: the MD-7 task of plan 36 still open → stop, leave open.
 - «Personalizar partida»: modal scope (`pushScope({ modal: true, root, … })`); `data-focus-default` on the first stepper; steppers handle ←/→ themselves while focused (as `Overlay.svelte` does for jokers) and return `false` for ↑/↓; `back`/`menu` close it, focus back to the button.
 
 Done when: mode choice and customizing play with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T16:47:15Z', NULL, 375);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (380, 37, 'create tasks for plan 37', 'split', 'open', 1000, NULL, 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:47:45Z', NULL, 363);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (380, 37, 'create tasks for plan 37', 'split', 'done', 1000, '2026-10-12, tasks: 190 dropped (outdated), 381 added (record the answer, waits for decision 27)', 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:47:45Z', '2026-10-12T16:48:12Z', 363);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (381, 37, 'Launch languages: record the answer (OQ-31, I18N-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 37. Waits for decision 27 (Spanish variety, store languages); decision 26 answered: es, en, de at launch; zh-Hans, ru, pt-BR later (milestone 12, on hold).
+
+- D-entry in `plans/decisions.md` (next free D-number): launch languages es, en, de; later zh-Hans, ru, pt-BR (milestone 12); Spanish variety and Steam store languages from decision 27.
+- OQ-31 → "Resolved" in `plans/open-questions.md` with the D-number.
+- `plans/15-i18n.md`: "Spanish varieties" decided, launch languages stated, I18N-1 `[x]` with a note; drop "stub" status if the model is settled.
+- `15a`: LUI-5 names es, en, de; `15b`: QT-6 and intro name en, de as launch targets, zh-Hans/ru/pt-BR later (milestone 12); `15c`: RG-5 checked against the answer.
+- Mode names: Spanish forms of the five modes listed for the catalog in `15a` and named in `plans/13-game-modes.md`; «Solo o en grupo» fixed, the others flagged as proposals for the gamemaster.
+- Decision 27 → neutral Spanish for `base`: backlog row in `plans/backlog.md` for the rewrite (S4 content work, via pipeline, D-36); no pool edits.
+- Plan 24 "Draft en catalog (LUI-3)": keep; one-line note via `pm plan edit 24 --body`: `en.ts` ships at launch, `de.ts` follows the same path.
+- Content per language: plan 38 and S4, not here.
+- `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
+
+Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name es, en, de; plan 24 noted; mode names'' Spanish forms listed.', '2026-10-12T16:48:10Z', NULL, 380);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7240,6 +7253,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (238, 362, '2026-10-12T16:45:19Z', '2026-10-12T16:46:30Z', 'done', NULL, 0, '9b8ea27c2f16bf6a8e34ccc809ea71dd27a9ead7', 'claude-opus-5-5[1m]', '09fe6cc1-ebbb-42ba-8ae2-f26f0d7bb39a', 8, 16, 4870, 273597, 31567, 0.4047194, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (239, 375, '2026-10-12T16:46:30Z', '2026-10-12T16:47:25Z', 'done', NULL, 0, 'e50706ee111571286e33ac17a416e92eeea1d6b5', 'claude-opus-5-5[1m]', 'eee477ad-93be-49aa-984e-e9f589ca416d', 9, 18, 5633, 310588, 36830, 0.46948959999999995, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (240, 363, '2026-10-12T16:47:25Z', '2026-10-12T16:47:53Z', 'done', NULL, 0, '15cdb2d5435fb4ecf5c6d5130ccdcec8f54d36d5', 'claude-opus-5-5[1m]', '6e36a4fc-af0e-4b79-a8bc-8ee531fcd4e9', 4, 8, 2840, 130806, 34330, 0.3576332, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (241, 380, '2026-10-12T16:47:53Z', '2026-10-12T16:48:17Z', 'done', NULL, 0, '3981fc61f463441897c4bab266fa063485c19734', 'claude-opus-5-5[1m]', '3331d6d6-3e74-4090-8381-c9291fc666cc', 6, 12, 2101, 192830, 29494, 0.31658600000000003, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -7313,3 +7327,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (348, 20);
 INSERT INTO task_decision (task_id, decision_id) VALUES (353, 28);
 INSERT INTO task_decision (task_id, decision_id) VALUES (355, 29);
 INSERT INTO task_decision (task_id, decision_id) VALUES (374, 30);
+INSERT INTO task_decision (task_id, decision_id) VALUES (381, 27);
