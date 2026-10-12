@@ -23,7 +23,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Language:** the default UI and question language come from the Steam client language (I18N-2).
 - **Rich presence** (optional): «Nivel 7 de 12».
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
-- **No DRM:** the game runs without Steam running (offline living room, family copy). steamworks.js calls are optional; the game works without them.
+- **No DRM:** the game runs without Steam running (offline living room). steamworks.js calls are optional; the game works without them.
 
 ## Platforms and display
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).

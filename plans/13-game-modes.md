@@ -9,7 +9,7 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 ### Gamemaster mode (today's game, kept)
 - One team, one screen. A gamemaster runs it with the `Esc` overlay (skip, burn for everyone, undo, abandon; D-30).
 - **New:** the joker budget can be set per game: unlimited (today), or a count per joker. A preset «Como las cartas» matches the printed set (4 Soplo, 2 each other), so the family can drop the paper cards if they like, or keep them and leave the budget at unlimited.
-- This is the family's mode. Its defaults never change without the gamemaster's say.
+- This is how the game plays today. Its defaults never change without the gamemaster's say.
 
 ### Default mode (Steam's first choice, to define, OQ-30)
 - One team (one player name, or the family as one name), no gamemaster.

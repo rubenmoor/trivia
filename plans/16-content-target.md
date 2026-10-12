@@ -2,7 +2,7 @@
 
 **Status:** stub
 
-Part of the Steam plan ([11](11-steam.md)). The family's pool target is open too (OQ-17). A public release needs its own, higher target, set per language: buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
+Part of the Steam plan ([11](11-steam.md)). The current pool's target is open too (OQ-17). The release needs a higher target, set per language: buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
 
 ## Where we stand (2026-10-07)
 404 approved questions in Spanish (batches pilot, first-120, batch-3, batch-4), 24 categories / 140 subcategories (D-19). About 290 of them have media with a credit; the rest wait for QP-6.
@@ -20,7 +20,7 @@ Part of the Steam plan ([11](11-steam.md)). The family's pool target is open too
 - The release also needs **every subcategory** to have depth at several difficulties, or it is merged into a neighbour (D-19).
 
 ## Quality bar
-- A public product needs a lower error rate than family play. Draft: every question passes the fact-check with certainty (D-32's rule), plus a **human spot check** of a random sample per batch (e.g. 10 %). If the sample shows an error rate above an agreed limit, the batch goes back to review.
+- A public product needs a lower error rate than private play. Draft: every question passes the fact-check with certainty (D-32's rule), plus a **human spot check** of a random sample per batch (e.g. 10 %). If the sample shows an error rate above an agreed limit, the batch goes back to review.
 - Family pool (`base`, milestone 1, pm decision 2): human spot check of 30 random questions per batch (plan 16 tooling), ≥ 90 % agreement with the LLM review in each of the last two batches; plus 5000 approved, every difficulty at its target, the last two batches pass plan 15's health thresholds, `qgen validate` clean. Checked by `qgen report --exit-check`.
 - LLM-reviewed questions (D-33) are allowed, but the AI disclosure (17) must describe the process honestly.
 - After release: «Reportar pregunta» (MD-6) plus a manual channel (ST-5) feeds fixes into patches.

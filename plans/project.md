@@ -4,9 +4,9 @@
 
 The road from today onward: milestones, every open task, every open question. The plan files stay the source of truth for each task's details and status; this file only groups and orders them. When you tick a task in its plan file, tick it here too.
 
-**The family game is done (2026-10-07).** It is living-room ready: a full game night on the TV with sound, jokers and the final look, played by player name without touching code (success criteria in [`00-vision.md`](00-vision.md)). From here on there are three kinds of work:
+**The current game is done (2026-10-07).** It is living-room ready: a full game night on the TV with sound, jokers and the final look, played by player name without touching code (success criteria in [`00-vision.md`](00-vision.md)). From here on there are three kinds of work:
 1. **Content** (M5): more and better questions, media for every question.
-2. **Groundwork** (M7–M10): changes that are useful on their own and don't change how the family plays. The Steam release needs them too, but none of them is Steam-specific.
+2. **Groundwork** (M7–M10): changes that are useful on their own and don't change how the current game plays. The Steam release needs them too, but none of them is Steam-specific.
 3. **Steam** (separate track, [`11-steam.md`](11-steam.md), D-34): everything that only matters for a public release.
 
 ## Where we stand (2026-10-07)

@@ -294,7 +294,7 @@ Template:
 - Context: The gamemaster wants the game packaged, installable and sold or given away on Steam, not only run natively on Windows. D-2 and `00-vision.md` list publishing and monetisation as non-goals.
 - Decision: A Steam release is planned as its own track: master plan `11-steam.md`, sub-plans 12–18. The family game stays the priority. Changes that don't change how the family plays (the TypeScript engine, mouse support, string extraction, the joker budget with "unlimited" as the default, the license audit) can start now. Everything else waits for its open question (OQ-29..OQ-37). The current way of playing stays as the gamemaster mode.
 - Consequences: D-2's "no publishing concerns" and the non-goals in `00-vision.md` no longer hold for the Steam track. New task prefixes: ST, PORT, MD, IN, I18N, LUI, QT, RG, CT, PUB, SW. The shell, the default mode and the content target are not decided yet.
-- Supersedes / related: D-2 (scope, in part); D-3, D-4, D-25 (revisited by `12-client-engine.md`); OQ-29..OQ-37
+- Supersedes / related: D-2 (scope, in part); D-3, D-4, D-25 (revisited by `12-client-engine.md`); OQ-29..OQ-37; superseded in part by D-59 (no family mode)
 
 ## D-35: The repo separates what ships from the tooling; the flake packages both
 - Date: 2026-10-07
@@ -463,3 +463,10 @@ Template:
 - Decision: No shared PRNG. All referee randomness is `random.shuffle`; the recorder logs each call as `{site, n, perm}` (`perm[j]` = old index now at j). The TS engine takes an injected `Rng` with `shuffle(xs, site?)` (in place); tests use `tapeRng(tape)`, which fails on a wrong `n`, a site mismatch or a missing/leftover entry. Production `rng.ts` is any seedable PRNG.
 - Consequences: PORT-2/3 shuffle at the same points, in the same order, on arrays of the same length (also inside `view`). Format: `app/client/src/engine/fixtures/README.md`.
 - Supersedes / related: plan 12 (PORT-1–3), plan 18
+
+## D-59: No family mode; the Python server is a bridge to the Steam build
+- Date: 2026-10-12
+- Context: Plans spoke of a "family mode" or family version that would live on next to the Steam release (D-34, plan 12's `ServerStore` "family mode, the default for now"). The gamemaster: the game will be a Steam application; there won't be a family mode.
+- Decision: Two implementations only: the current one (`trivia`, Python server + browser) and the Steam build (desktop shell, S3+). The current one keeps working until the Steam build replaces it; it gets nothing the Steam build won't have. The Python game server after the port: static files plus `/api/save` only (pm decision 4, option 3): flags move into `SaveData`, categories become static files from `qgen export`, media is served from the synced cache only (no download on miss; `trivia-media sync` before play).
+- Consequences: `trivia-authoring` reads flags from `game.json` and never writes it (it skips flags it already turned into reviews). "The family" in plans means the people who play and test, not a separate product or pool. Supersedes D-34's "the family game stays the priority" and the family half of D-47's flag file.
+- Supersedes / related: D-3, D-17 (download on miss, for the game), D-34, D-47; plan 12, plan 11

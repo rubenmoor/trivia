@@ -26,9 +26,9 @@ flowchart LR
 
 - **`app/client/src/engine/`**: a pure TypeScript module with no DOM and no Svelte. It covers `selection.ts` (matching, supply), `game.ts` (state machine, jokers, burning, undo), `pool.ts` (loading and filtering), `rng.ts` (a seedable PRNG). Every function takes the state and returns the new state, so undo and saves stay simple.
 - **Store interface**: `load(): SaveData` / `save(SaveData)`. `SaveData` is one versioned JSON document (`{version, players, games, burned}`) that replaces the SQLite tables. The data is small (players × burned IDs), so one document fits easily, and it suits Steam Cloud (one file) too.
-- **`ServerStore`** (family mode, the default for now): the Python server keeps a tiny `GET/PUT /api/save` that writes `state/game.json` atomically. Python doesn't drop out of the family setup yet: D-3 rejected localStorage as fragile, and that reasoning still holds.
+- **`ServerStore`** (current game, until the Steam build replaces it, D-59): the Python server keeps a tiny `GET/PUT /api/save` that writes `state/game.json` atomically. No localStorage: D-3 rejected it as fragile.
 - **Pool export** (done, D-35): `qgen export` writes the playable pool (`approved` only, without `review`, `quality` and pipeline fields) to `app/data/pool.json`. The TS engine loads that file; with locales (15b) it becomes one file per locale.
-- **Python server after the port**: static files plus the authoring API (review, stats, media fetch) plus `/api/save`. `app/server/game.py` and the game routes are deleted once parity holds.
+- **Python game server after the port** (pm decision 4, D-59): static files plus `/api/save` only. Flags go into `SaveData`, categories are static files from `qgen export`, media is served from the synced cache only (no download on miss). The authoring API (review, stats, media fetch) stays in `trivia-authoring`. `app/server/game.py` and the game routes are deleted once parity holds.
 
 ## The referee question (needs a decision)
 With the engine in the client, the correct answer is in memory before the players answer. For an offline single-player game that is acceptable: anyone who opens devtools to cheat at family trivia only spoils their own game. This relaxes D-25 ("the client never learns the correct answer"). The UI still must never *render* hidden data. Record it as a decision when PORT-3 lands.

@@ -44,7 +44,7 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 
 Order of work: **02 (question pool) first, together with 07 (question generation)**, then 03 → 01 → 06 → 04 → 10 → 09 → 05.
 
-The family game is done and living-room ready (2026-10-07). Open work is grouped in [`project.md`](project.md): content (M5) and groundwork that doesn't change how the family plays (M7–M10, from plans 12, 13, 14, 15a, 15c, 17). The Steam release (11–18) is a separate track with its own phases (S2–S6) in [`11-steam.md`](11-steam.md).
+The current game (Python server + browser) is done and living-room ready (2026-10-07); the Steam build replaces it (D-59). Open work is grouped in [`project.md`](project.md): content (M5) and groundwork that doesn't change how the current game plays (M7–M10, from plans 12, 13, 14, 15a, 15c, 17). The Steam release (11–18) is its own track with phases (S2–S6) in [`11-steam.md`](11-steam.md).
 
 ## Conventions
 

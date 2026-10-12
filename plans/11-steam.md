@@ -7,10 +7,10 @@ Turns «¡Trivia!» from a private living-room game (D-2) into a game anyone can
 *2026-10-07: the groundwork that can be done now and isn't Steam-specific (the TypeScript engine, mouse support, the joker budget, UI string extraction, region tags, the media license audit) has moved to [`project.md`](project.md) as milestones M7–M10. This plan keeps only what a public release needs on top of that.*
 
 ## Goal
-A family can install the game from Steam on Windows, Linux or the Steam Deck. They can play it offline in a language they speak, without a gamemaster who knows the code, with a mouse, keyboard or controller, and with enough questions for many evenings. The family version at home keeps working the whole way through.
+A family can install the game from Steam on Windows, Linux or the Steam Deck. They can play it offline in a language they speak, without a gamemaster who knows the code, with a mouse, keyboard or controller, and with enough questions for many evenings. The current game (`trivia`, Python server + browser) keeps working until the Steam build replaces it; there is no separate family version (D-59).
 
 ## Principles
-1. **The family game night comes first.** A change ships to the family only when it doesn't make their game worse. Changes that don't change how the game plays (the TypeScript port, mouse support, string extraction) can land right away.
+1. **The current game keeps working until the Steam build replaces it.** A change lands in it only when it doesn't make game night worse. Changes that don't change how the game plays (the TypeScript port, mouse support, string extraction) can land right away.
 2. **One codebase, several modes.** The current way of playing stays as a mode (the gamemaster mode, [13](13-game-modes.md)). The Steam default mode is added next to it and doesn't replace it.
 3. **Offline, no accounts, no telemetry.** Steam distributes the game and syncs saves. The game itself never phones home (AGENTS.md).
 4. **Authoring stays in Python.** `qgen.py`, `media.py`, the review tool and the stats pages are authoring tools and don't ship. Only the game moves to TypeScript ([12](12-client-engine.md)).
@@ -18,8 +18,8 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 
 ## Tracks
 
-| # | Sub-plan | What it covers | Changes the family game? | Groundwork in `project.md` | Steam part starts |
-|---|----------|----------------|--------------------------|----------------------------|-------------------|
+| # | Sub-plan | What it covers | Changes the current game? | Groundwork in `project.md` | Steam part starts |
+|---|----------|----------------|---------------------------|----------------------------|-------------------|
 | 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export | No (same rules, same saves) | all of it (M7) | — |
 | 13 | [Game modes](13-game-modes.md) | Gamemaster mode with joker counts you can set, a default mode with difficulty presets, a competitive mode for 8+ players (stub), small rule changes | Only if the family opts in | joker budget MD-1..MD-4 (M8) | after OQ-30, OQ-36 |
 | 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller) |
