@@ -2236,6 +2236,48 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Every media file in `app/data/pool.json` appears in `credits.json` and `CREDITS.md` with author, licence and source link; sounds (incl. the Elgar note), fonts, glyphs (if drawn) and Svelte too.
 - `npm run build` and `nix build .#app` contain `CREDITS.md`; the shell build (part 3) does because it ships `dist/`.
 - The Credits screen opens from the ☰ overlay and scrolls and closes with keyboard, mouse and pad.', '2026-10-12T01:02:33Z', 215);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (48, 8, 'S3 close-out and platform test', 140, 'The last step of milestone 8 (S3). Part 8 of masterplan 8. Once every other S3 part is implemented, this plan hands the gamemaster one test checklist (Windows, Linux, Deck; controller only; offline; a full game; the save survives a restart), records what they report through a pm decision, and brings the docs in line. Workers own no Windows machine or Deck: they prepare the checklist and record results; they never tick a row themselves. Docs and pm only; no code (failures become tasks in the owning plans).
+
+## Depends on (every task waits)
+- Plans 44 "Action layer and focus navigation", 45 "Gamepad input and button glyphs", 46 "Deck layout and controller-only text entry", 47 "Credits screen and generated CREDITS.md", and the plans written by tasks 209 (desktop shell, SW-2), 210 (file saves, SW-3), 211 (local builds, SW-5/SW-6): all their tasks done or dropped.
+- Guard at the start of each task: `pm show` of this plan and `pm plans list`. If another milestone-8 plan still has open tasks: if one of them waits for a pending decision, `pm task-pending-decision <this task> <that decision>`; otherwise stop without changes and say so (the queue brings the task back). Never drop tasks of other plans.
+- Not the milestone''s "post-milestone cleanup" (pm queues it once nothing is open); this plan doesn''t set the milestone status.
+
+## The checklist
+- Lives in `plans/18-steam-integration.md`, new section "S3 platform test" (after "Steam Deck Verified"); one table per platform, columns: check, result (pass / fail / skipped), note. Short intro: build commit, date, artefact names.
+- Reuses, doesn''t copy: part 3''s offline start checklist (plan from task 211) is linked or merged in; the "what the gamemaster should try" items in the task notes of plans 45 and 46 (`pm show` of their tasks; plan 46 task 3: real Deck in Game Mode) become rows.
+- Before the test (worker checks what it can): artefacts built from one commit (part 3''s command); `qgen validate` clean; `trivia-media sync --status approved` run before the build; `CREDITS.md` in the artefact.
+- Platforms: Windows x64 (clean machine, no Node/Python), Linux x64 without Nix, Steam Deck in Game Mode (Linux build added as a non-Steam game; built-in controls only). Optional row: Windows build on the Deck via Proton, marked "if cheap".
+- Rows per platform:
+  - Offline: network off before install and start; no error, no launcher, no console window.
+  - Start: fullscreen; F11/menu toggles windowed and back.
+  - Controller only (keyboard and mouse unplugged; Xbox-style pad on Windows/Linux): create a new player with the letter picker; pick an existing player; play to level 12 or a loss.
+  - Every joker once, including Paso dialog, Francotirador aim and Cambiazo both levels; the ☰ overlay via Start (volume, presets); every dialog closes with B.
+  - Glyphs match the pad (Xbox; PlayStation pad if at hand); after a key press they switch to keyboard prompts and back on a pad press.
+  - Media: an image, a video and an audio question play; music and sounds audible.
+  - Credits screen opens and scrolls with the pad.
+  - Save: quit mid-game and restart → players and burned questions kept; force-quit (Deck: Steam button → exit game) and restart → same.
+  - Deck only: text readable at arm''s length (800p), nothing cut off, suspend and resume mid-question.
+- Family check (once, not per platform): `trivia` + browser on the TV with keyboard plays a round as before; `state/` save intact.
+
+## Tasks
+1. **Checklist and the test decision**
+   - Guard (above). Write the "S3 platform test" section in `18-steam-integration.md` as above, results empty.
+   - Run what a worker can (build command, `qgen validate`, artefact contains `CREDITS.md`); note it in the section''s intro.
+   - `did=$(pm decision add "S3 test passed?" --body - …)` with the whole checklist in the body (platform tables as Markdown, how to report: copy the tables, fill result and note; "skipped" needs a reason) and options `passed`, `passed with minor issues (list them; they go to the backlog)`, `failed (list the failing rows)`.
+   - `pm task-pending-decision` for tasks 2 and 3 of this plan on `did`.
+   - Done when: the section exists, the decision is pending, tasks 2 and 3 wait for it.
+2. **Record the result**
+   - Copy the reported results into the section''s tables (date, build commit); add a D-entry in `plans/decisions.md` only if the answer settles something (e.g. Proton row dropped for good).
+   - `passed`: done. `passed with minor issues`: each issue into `plans/backlog.md` with the owning plan file''s task ID prefix; done.
+   - `failed`: per failing row a `pm task add` in the plan that owns it (shell/saves/builds plans from tasks 209–211, or 44–47) with the row, the note and how to reproduce, at that plan''s priority; then a new decision "S3 re-test passed?" with only the failed rows (plus the full-game row), `pm task-pending-decision` for this task and task 3 on it; stage and stop without closing. Repeat until passed.
+   - Done when: the section shows a passing result for every non-optional row.
+3. **Docs close-out** (after task 2)
+   - `plans/11-steam.md`: S3 row marked done with the date and the checklist link; ST-4 (release checklist) notes that it starts from the S3 checklist.
+   - `plans/14-input.md`, `17-publishing.md`, `18-steam-integration.md`: IN-2..IN-5, PUB-5, SW-2..SW-6 ticked with notes (check, don''t redo, the parts'' own ticks); status lines brought up to date (e.g. `stub` → `draft`, or `agreed` where everything for S3 is decided); `plans/README.md` status column to match.
+   - `plans/project.md`: "Steam track" paragraph says S3 done (date); any ticked task ticked there too; open-questions rows that S3 resolved removed.
+   - Masterplans 9–11 (S4–S6): if still "tbd.", nothing (their writers read the plan files). If written and S3 changed their scope (SW-6 CI moved to S5, media bundle size or depot layout, Proton or Deck findings for SW-12, letter picker vs. on-screen keyboard for SW-8), add a short dated note with `pm plan edit <id> --body -`. Milestone bodies change only if they name something S3 ruled out; listed in the task note.
+   - Done when: the milestone''s "Done when" holds and is cited in the task note (decision id, date); `qgen validate` unaffected.', '2026-10-12T01:03:55Z', 216);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -3767,11 +3809,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Needs plan 26 "Licence data in the pool" (fields per media file) and part 5''s glyph sources; its screen uses part 4''s actions. Implementation tasks wait for those; the plan names them.
 - Content: generator at build time (in `app/` or the build step, not `authoring/`) from pool licence data + fixed lists (audio `app/client/public/audio/CREDITS.md` incl. Elgar note, fonts, glyphs, Svelte, the shell); code/content licence from plan 40 (OQ-35) if decided. Screen from start screen or ☰ overlay, scrollable with a pad; `CREDITS.md` in the shipped files.
 - Owner `plans/17-publishing.md` ("Credits in the game").', '2026-10-12T00:53:42Z', '2026-10-12T01:02:36Z', 208);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (216, 8, 'write plan: S3 close-out and platform test', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of the masterplan (plan 8): `pm plan add 8 "S3 close-out and platform test" --priority 140`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (216, 8, 'write plan: S3 close-out and platform test', 'plan', 'done', 1000, '2026-10-11, pm plan 48 (S3 close-out and platform test), plans/11-steam.md', 'Write the plan for part 8 of the masterplan (plan 8): `pm plan add 8 "S3 close-out and platform test" --priority 140`.
 
 - Last; below plan 43 "S2 close-out" (150).
 - Content: gamemaster test checklist (Windows, Linux, Deck; controller only; offline; full game to level 12 or a loss; restart keeps the save); a `pm decision` "S3 test passed?" with the checklist in the body, a task that records the result.
-- Docs: `plans/11-steam.md` S3 row; 14, 17, 18 statuses; `plans/project.md`; `plans/README.md`; notes in masterplans 9–11 if S3 changed their scope (SW-6 moved, media bundle).', '2026-10-12T00:53:42Z', NULL, 208);
+- Docs: `plans/11-steam.md` S3 row; 14, 17, 18 statuses; `plans/project.md`; `plans/README.md`; notes in masterplans 9–11 if S3 changed their scope (SW-6 moved, media bundle).', '2026-10-12T00:53:42Z', '2026-10-12T01:04:03Z', 208);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (217, 44, 'create tasks for plan 44', 'split', 'open', 1000, NULL, 'Split plan 44 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', NULL, 212);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (218, 45, 'create tasks for plan 45', 'split', 'open', 1000, NULL, 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3780,6 +3822,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:00:20Z', NULL, 214);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (220, 47, 'create tasks for plan 47', 'split', 'open', 1000, NULL, 'Split plan 47 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:02:33Z', NULL, 215);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (221, 48, 'create tasks for plan 48', 'split', 'open', 1000, NULL, 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:03:55Z', NULL, 216);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3883,6 +3927,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (81, 213, '2026-10-12T00:56:14Z', '2026-10-12T00:58:37Z', 'done', NULL, 0, '7386a4b72c6454f65f50d548f69def20196acdae', 'claude-opus-5-5[1m]', '67171dce-a404-4450-a752-d8228b7685a2', 13, 26, 13902, 606088, 57745, 0.86132159999999991, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (82, 214, '2026-10-12T00:58:37Z', '2026-10-12T01:00:37Z', 'done', NULL, 0, '8cab26d6dce119a55f167c1adbeb1a51eaa53089', 'claude-opus-5-5[1m]', '64c3dc00-b4c6-42ed-9808-48e3e6f4f2b2', 18, 34, 11314, 887842, 66537, 0.9362803999999999, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (83, 215, '2026-10-12T01:00:37Z', '2026-10-12T01:02:45Z', 'done', NULL, 0, 'b70a9336f95a293c8673592a06fa411a9d01ed1b', 'claude-opus-5-5[1m]', '179066a4-08b8-48a4-82ee-8821eab60359', 15, 30, 12372, 688261, 58275, 0.85141220000000006, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (84, 216, '2026-10-12T01:02:45Z', '2026-10-12T01:04:11Z', 'done', NULL, 0, '2a00239b3a701c7a4957c1debfb8beaf7e62766a', 'claude-opus-5-5[1m]', '8a00b665-f8d3-47e8-9619-c262df80cb25', 13, 22, 8318, 447245, 46264, 0.62600900000000015, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

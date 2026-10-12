@@ -54,7 +54,7 @@ flowchart LR
 | **S6 — Release** | Coming-soon page, wishlists, release, patches | ST-3..ST-5 | Released; content updates go out as patches |
 | **Later** | Competitive mode (8+ players), couch co-op, more regions and languages | MD-8+, IN-6+ | — |
 
-S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python).
+S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python). S3 ends with a gamemaster platform test (Windows, Linux, Deck; controller only; offline): pm plan 48.
 
 ## Open questions (blocking)
 All are logged in [`open-questions.md`](open-questions.md):
