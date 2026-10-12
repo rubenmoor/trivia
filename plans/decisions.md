@@ -512,3 +512,10 @@ Template:
 - Decision: `qgen rework --model {opus,fable}`, default `opus`. Switches fix and review 1 (it decides keep/fix after the reworked fix); fact check stays `sonnet`; review 2 stays `REVIEW_MODEL` (opus) so the final verdict is comparable to rework-1. Model stored in `run.json`; on resume `--model` is ignored with a notice.
 - Consequences: `qgen batch`, `qgen tighten`, `REVIEW_MODEL` unchanged. Model per call already in `costs.log` and `review.model`. RUNBOOK unchanged until the experiment (task 345) changes the default.
 - Supersedes / related: QG-23; plans 16, 58
+
+## D-66: The client holds the correct answer; the view still hides it
+- Date: 2026-10-12
+- Context: The TS referee (PORT-3, plan 20) runs in the browser, so the pool with answers and all hints is in client memory. D-25/D-26 said the client never learns the correct answer before the final answer.
+- Decision: Accepted for an offline party game: devtools only spoil your own game. The view (`Game`) still carries no correct answer before the final answer and only the hints played; screens render only the view, never `PoolQuestion` or the save.
+- Consequences: Relaxes D-25/D-26 "the client never learns the correct answer". Engine modules (`app/client/src/engine/`) may hold the pool; screens go through the view only (PORT-7).
+- Supersedes / related: D-25, D-26; plans 12, 20
