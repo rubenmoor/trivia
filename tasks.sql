@@ -966,7 +966,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
 - **Secrets never in git** (AGENTS.md): build account login, beta password, `steam_appid.txt` is fine (public), Steam Guard files are not. Gitignore what the upload script writes.
 - The current game (`trivia`, Python server + browser) keeps working after every task until the Steam build replaces it (D-59).
-- Shipped code under `app/` (D-35); dependencies: the Steamworks binding chosen with OQ-29 (steamworks.js in the draft) and nothing else without a pm decision.
+- Shipped code under `app/` (D-35); dependencies: the Steamworks binding steamworks-ffi-node (decision 28: Steam binding for the Electron shell) and nothing else without a pm decision.
 - Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
 
 ## Parts
@@ -987,10 +987,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 3. **Steamworks binding in the shell (SW-8)**
    - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
-   - Binding in the shell''s main process (steamworks.js or OQ-29''s alternative), exposed through the preload bridge as one optional `steam` object; the page checks `steam?.available`. Init failure (no Steam, wrong App ID, offline) → silent fallback.
-   - Overlay in Electron (known workarounds; Windows and Deck); on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name under Steam, letter picker stays the fallback (plan 46); per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id` (plan 45); default UI/question language from the Steam language (I18N-2''s setting from milestone 9 wins once set); rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Binding in the shell''s main process (steamworks-ffi-node, decision 28; overlay experimental via OSR), exposed through the preload bridge as one optional `steam` object; the page checks `steam?.available`. Init failure (no Steam, wrong App ID, offline) → silent fallback.
+   - Overlay in Electron (known workarounds; Windows and Deck); on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name under Steam, letter picker stays the fallback (plan 46); per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id` (plan 45); rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess (milestone outcome): `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms on the language screen; a saved language always wins.
+     - mapping table Steam API name → our tag: `latam` → `es` (neutral es-419), `spanish` → `es-ES` (UI variant, `es` questions; decision 27: Spanish variety), `english` → `en`, `german` → `de`; later `schinese`, `russian`, `brazilian` (milestone 12, on hold) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language` as before
    - Dev on NixOS: test with the real App ID or Spacewar (480); the binding''s native library from the npm package in the builds, from the flake in dev (like part 1 of masterplan 8).
-   - Done when: under Steam the overlay opens, the keyboard fills the name, the language follows Steam; without Steam a full game plays as in S3.
+   - Done when: under Steam the overlay opens, the keyboard fills the name, a fresh save preselects Steam''s language; without Steam a full game plays as in S3.
    - Suggested priority: 690.
 
 4. **Steam Cloud saves**
@@ -1004,7 +1007,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 5. **Achievements (SW-11)**
    - Owner: `plans/18-steam-integration.md` ("Steam features").
-   - List (few, no grind; plan 18''s draft: first victory, a win without jokers, a win on Experto, every broad category answered, level 12 in each preset), each with its exact trigger as an engine event (preset names from OQ-30''s D-entry; gamemaster mode counts or not: decide in the plan). Names and descriptions per launch language.
+   - List (few, no grind; plan 18''s draft, minus presets: first victory, a win without jokers, every broad category answered, a win per game mode), each with its exact trigger as an engine event. No presets exist and only uncustomized games earn achievements (decision 19: Default mode: presets, checkpoints and won levels); gamemaster mode counts or not: decide in the plan. Names and descriptions per launch language.
    - Unlock through part 3''s bridge; offline unlocks are cached by Steam; nothing in the save depends on Steam. Optional: unlock retroactively from the save on first start under Steam.
    - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); Steamworks setup values in plan 18 for the gamemaster.
    - The list goes to the gamemaster as a pm decision before icons are made.
@@ -1017,10 +1020,10 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Applies the Freesound answer (plan 42: exclude or replace) and the licence rules (GFDL/PD-US replaced in milestone 4); `CREDITS.md` lists exactly the shipped files.
    - Suggested priority: 640 (before part 7; a build step, not asset work).
 
-7. **Builds, depots and upload (SW-10, SW-6 if moved)**
+7. **Builds, depots and upload (SW-10, SW-6)**
    - Owner: `plans/18-steam-integration.md` ("Builds and depots").
-   - SteamCMD app/depot VDFs in the repo (no secrets), one upload command (e.g. `trivia-steam upload --branch beta`) that builds from a clean tagged commit, runs `qgen validate` and `npm run check`, builds both platforms + the media bundle, and calls `run_app_build`. SteamCMD from nixpkgs (unfree) or Valve''s SDK tools; the plan decides.
-   - Where it runs: the author''s machine first (recommended; Steam Guard once, no CI secrets); CI upload only with a pm decision. The dedicated build account is the gamemaster''s.
+   - SteamCMD app/depot VDFs in the repo (no secrets), one upload command (e.g. `trivia-steam upload --branch beta`) that builds from a clean tagged commit, runs the release check of decision 14 (CI builds (SW-6): local per-commit checks + e.g. `trivia-release-check`; its owner is plan 56 or this part, whichever has it), builds both platforms + the media bundle, and calls `run_app_build`. SteamCMD from nixpkgs (unfree) or Valve''s SDK tools; the plan decides.
+   - Where it runs: the author''s machine, by hand with SteamCMD (decision 14: no GitHub Actions; Steam Guard once, no CI secrets). The dedicated build account is the gamemaster''s.
    - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
    - Suggested priority: 620.
 
@@ -8739,8 +8742,8 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (469, 5, 'write plan: Bundle languages and base bundles (data, engine, validate)', 'plan', 'done', 1000, '2026-10-12, plan 71 (tasks.sql)', 'Write the plan for part 5 of masterplan 5 (`pm plan add 5 "Bundle languages and base bundles" --priority 600`): `languages` per bundle in `app/data/bundles.json`, `kind: base` replacing `always_on` (exactly one base bundle per session, default the locale''s first), the engine''s `resolveChoice`/defaults per game locale, `qgen validate` checks, authoring readers of `always_on`. See the masterplan''s "Part 5" for scope and checks; plans 27 (done) and 68 (language setting) for the code it builds on. Must leave the family''s defaults and plan 18''s fixture replay unchanged.', '2026-10-12T20:20:30Z', '2026-10-12T20:22:40Z', 465);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (470, 9, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-12, plan 9 body: part 6 first-start language screen, part 12 check', 'The milestone changed. Bring plan 9, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:46Z', '2026-10-12T20:29:23Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (471, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:47Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (471, 10, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-12, plan 10 body: part 3 Steam language guess + mapping (milestone outcome), steamworks-ffi-node (decision 28), part 5 without presets (decision 19), part 7 local release check + manual SteamCMD (decision 14)', 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:47Z', '2026-10-12T20:34:29Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (472, 71, 'create tasks for plan 71', 'split', 'done', 1000, '2026-10-12, tasks 480, 481', 'Split plan 71 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:22:37Z', '2026-10-12T20:26:52Z', 469);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (473, 29, 'create tasks for plan 29', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 474, 475 replace 128, 129, 347', 'Split plan 29 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -9554,6 +9557,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Fresh save with a second language present asks once with the guess preselected; a stored save never sees the screen; with only `es` the game is exactly as today.', '2026-10-12T20:32:21Z', NULL, 489);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (491, 69, 'create tasks for plan 69', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 454, 456, 458 updated for the first-start language screen (language.* keys, walks, playtest checklist); 453, 455, 457, 459 already match; no new decisions (task 453 creates them)', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:32:46Z', '2026-10-12T20:33:24Z', 487);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (492, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:34:26Z', NULL, 471);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10461,6 +10466,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (335, 487, '2026-10-12T20:32:28Z', '2026-10-12T20:32:55Z', 'done', NULL, 0, '7726d39038362831635d85adfb87e0383cc8981b', 'claude-opus-5-5[1m]', '504ccb6a-0ea5-48e2-8cdc-3b117828bcbe', 7, 14, 2352, 227453, 26584, 0.30525859999999994, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (336, 491, '2026-10-12T20:32:56Z', '2026-10-12T20:33:29Z', 'done', NULL, 0, '10e6cf8b178feeff7616858a8ead2f863387f542', 'claude-opus-5-5[1m]', '428ddc6e-be0c-4e76-9314-a422cb881196', 6, 12, 3240, 169637, 25669, 0.3041274, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (337, 488, '2026-10-12T20:33:29Z', '2026-10-12T20:33:52Z', 'done', NULL, 0, 'ec96a84d4116a4489c292a2397a0caa8173d4613', 'claude-opus-5-5[1m]', 'bb6371ba-aba5-4a90-b17b-b1167e503aa8', 3, 6, 710, 75351, 23297, 0.21567019999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (338, 471, '2026-10-12T20:33:52Z', '2026-10-12T20:34:35Z', 'done', NULL, 0, '0b848714423635631e1293a327fcd62b24d791c4', 'claude-opus-5-5[1m]', '9d0b5277-1abb-4fee-aa79-593f74894529', 10, 18, 3892, 318111, 31939, 0.3970462, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
