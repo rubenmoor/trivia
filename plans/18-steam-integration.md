@@ -33,16 +33,18 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Media size:** the pool's media is ~2.4 GB for 1102 files (2026-10-12). Resize to at most 3840 px wide (4K, D-48), re-encode to WebP/AVIF, and transcode audio to Opus. Target: under 1 MB per image.
 
 ## Builds and depots
-Local builds since S3 (SW-5, D-73); CI (SW-6) and Steam uploads come later. One command on the gamemaster's Linux machine builds both platforms; the artefacts are plain folders, so Steam (S5) can install them as they are.
+Local builds since S3 (SW-5, D-73); the release check (SW-6) and Steam uploads come in S5. No GitHub Actions: CI is local (pm decision 14). One command on the gamemaster's Linux machine builds both platforms; the artefacts are plain folders, so Steam (S5) can install them as they are.
 - **Command:** `trivia-desktop-build` (dev shell) = `qgen validate`, `npm run build -w app/client`, `stage-media.mjs`, `electron-builder --x64 --linux tar.gz --win zip`. Outside Nix: `npm ci --prefix app/desktop`, then `npm run dist --prefix app/desktop` (no `qgen validate`). First build downloads the Electron zips into `~/.cache/electron`; later builds run offline.
 - **Targets:** `app/desktop/release/Trivia-<version>-win-x64.zip` (files at the zip root; `Trivia.exe`, unsigned, Electron's icon until S5) and `Trivia-<version>-linux-x64.tar.gz` (folder `Trivia-<version>-linux-x64/`; `./trivia` = launcher with `--no-sandbox`, binary `trivia-bin`; the Deck runs this one). No installer, no AppImage. ~2.5 GB each today.
 - **Layout:** `resources/app.asar` (`package.json`, `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs`), `resources/client/` (client `dist/`), `resources/data/` (`app/data/`), `resources/media/` (only the pool's media and backgrounds, from the cache via `app/desktop/build/media/`; outside the asar for the S5 content depot); `LICENSE.electron.txt`, `LICENSES.chromium.html` at the root.
 - **Config:** `app/desktop/electron-builder.yml`, `after-pack.mjs` (Linux launcher), own `package-lock.json` (`electron`, `electron-builder`; not a root workspace).
 - **Checked (task 330, 2026-10-12):** unpacked Linux build, no network (`unshare -rn`), no Nix env (`env -i` + an FHS runtime), no Python: new player → level 5 with image, audio (playing) and video (playing) questions, no missing-media notice; «Salir del juego» → restart: player resumes, no answered question comes back; save at `~/.config/trivia/save/game.json`; nothing written outside `HOME`. Windows: zip content listed only.
 - Later (S5): **upload with SteamCMD** (`run_app_build` with a VDF per depot). Depots: Windows, Linux, shared content (pool and media). Language or region packs can be separate depots or DLC later (15c).
-- Later (S5): **credentials:** a dedicated Steam build account; its login in GitHub Actions secrets. Steam Guard needs a one-time setup. Never commit credentials (AGENTS.md). Alternative: upload from the author's machine by hand.
+- Later (S5): **credentials:** a dedicated Steam build account; upload by hand with SteamCMD from the author's machine (pm decision 14). Steam Guard needs a one-time setup. Never commit credentials (AGENTS.md).
 - Later (S5): **branches:** `default` (public) and a password-protected `beta`. The family plays the beta first.
-- CI (SW-6): pm decision 14.
+- **CI (SW-6, pm decision 14):** local, no GitHub Actions.
+  - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`, the task's own check (AGENTS.md).
+  - Later (S5): release check (e.g. `trivia-release-check`) before every Steam upload: the per-commit checks, `trivia-media licenses`, the release quality bar (pm decision 15), `nix build .#app`, both packaged builds, a scripted smoke game in the packaged Linux build (CDP), and a manual checklist (start test on clean Windows and the Deck, sound, the timed-competitive red frame).
 
 ## Local build start test
 The gamemaster's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Plan 48 merges it into the S3 platform test. Fill one table per machine, with date and build commit.
@@ -86,7 +88,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - [x] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry). *Done 2026-10-12 (pm plan 55, D-72): `app/desktop/save.mjs`, `main.mjs` (userData path, `save:*` IPC, write queue, quit wait, `--import-save`), `preload.cjs`, `lib/desktop.ts`, `lib/store.ts` (`FileStore`, shared `WriteQueue`), `lib/engine.ts` (store choice, notice, `saveError()`), `engine/save.ts` (`SaveNewerError`), start-screen notice, «Salir» flush, `es` catalog; kill loop (60 × `SIGKILL` of main mid-write, 1–5 MB documents): `game.json` always one of the documents sent, stale `.tmp` dropped, no backup.*
 - [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Plan: pm plan 46 (also the letter picker for player names with a pad).*
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine. *Plan: pm plan 56 (Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`, start-test checklist).*
-- [ ] SW-6 CI build in GitHub Actions for both platforms. *S3 or S5, with or without media: pm decision 14; plan 56 task 5.*
+- [ ] SW-6 Local CI: per-commit checks (AGENTS.md) and a release check before every Steam upload ("Builds and depots"); no GitHub Actions. *Moved to S5 (pm decision 14, D-73); per-commit checks in AGENTS.md since 2026-10-12; release check: pm plan 10 part 7 (task 261).*
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
 - [ ] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam.
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.

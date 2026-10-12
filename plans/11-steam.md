@@ -48,9 +48,9 @@ flowchart LR
 |-------|---------|--------------------|------|
 | **S1 — Groundwork** | Moved to [`project.md`](project.md): M7 (TS engine), M8 (mouse, joker budget), M9 (UI strings, region tags), M10 (license audit) | — | M7–M10 done |
 | **S2 — Product definition** | Answer the open questions below. Define the game modes and the launch languages. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 resolved in `decisions.md` |
-| **S3 — Playable desktop build** | Electron shell, file saves, controller support, Deck layout, credits screen | SW-1..SW-6, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
+| **S3 — Playable desktop build** | Electron shell, file saves, controller support, Deck layout, credits screen | SW-1..SW-5, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
 | **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-3..RG-5, LUI-4..LUI-6, CT-* | Every launch language (es, en, de) has 5000 approved with D-53's mix (D-75); `qgen report --simulate` reports games per player |
-| **S5 — Steam** | Steamworks app, Cloud, achievements, depots, beta branch, store page, disclosures | SW-7..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
+| **S5 — Steam** | Steamworks app, Cloud, achievements, depots, beta branch, store page, disclosures | SW-6..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
 | **S6 — Release** | Coming-soon page, wishlists, release, patches | ST-3..ST-5 | Released; content updates go out as patches |
 | **Later** | Competitive mode (8+ players), couch co-op, more regions and languages | MD-8+, IN-6+ | — |
 
