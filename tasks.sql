@@ -4016,6 +4016,47 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - Every file in `app/client/src/game/` at the time of task 11 is listed in `## Part 5` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 5` has its final status there.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`, `check:literals` pass.', '2026-10-12T22:53:36Z', 506);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (78, 13, 'Desktop shell and packaging review (code review part 6)', 0, 'Part 6 of `plan 72: masterplan` (milestone 13, Code quality): review the desktop shell and its packaging, `app/desktop/` (9 tracked files: ≈500 lines of code in 7 files, plus `package.json` and the 3600-line `package-lock.json`), once; fix what is cheap, log every file and finding in `## Part 6` of `code-review.md`. Scope, checklist, fix-or-ask, the task 302 rule, duplication candidates and the report format: plan 72 "Ground rules for every part"; not restated here.
+
+## Depends on
+- `plan 73: Baseline scans and report skeleton (code review part 1)`: `code-review.md` with `## Part 6`, the inventory and the scan rows `handed to part 6` (unused deps of `app/desktop/package.json`, `fs.*Sync` in protocol/IPC handlers, `catch {}`, desktop package size if `release/` existed). Each task re-checks those rows for its files and logs their final status in `## Part 6`, quoting the part 1 row.
+- `plan 76: Client lib, locales and boot review (code review part 4)` owns the client side of the bridge (`lib/desktop.ts`, `lib/store.ts` `FileStore`, `lib/engine.ts` save errors); read its findings, don''t redo them. A mismatch between `preload.cjs` and `lib/desktop.ts` is logged here.
+- Not here: `flake.nix` wrappers `trivia-desktop` / `trivia-desktop-build` (part 10), `.gitignore` (part 10). Findings on them → row "handed to part 10".
+- Open desktop work elsewhere (check `pm show` first; still open when this plan runs → findings only, status `superseded by task N`, no refactor):
+  - plan 54: `task 355: Desktop shell: act on the play test` (pending decision 29, play test): fixes in `app/desktop/`.
+  - plan 56: `task 332: Local builds: record the start test` (pending decision 39): failing rows become tasks in plan 54/55/56 that touch `main.mjs`, `electron-builder.yml`, `after-pack.mjs`, `stage-media.mjs`.
+  - plan 10: `task 255: write plan: Steamworks binding in the shell (SW-8)` and the tasks its plan creates: `main.mjs`, `preload.cjs` (`steam` object), `package.json`, `electron-builder.yml` (`asarUnpack`).
+  - plan 47: `task 232` (Electron/Chromium licence entry in the credits generator; may touch `extraResources`).
+  - plan 46: `task 231` (throw-away Electron script only, no committed change).
+- Binding: D-63 / `decision 12: Desktop shell (OQ-29)?` (Electron), D-71 (shell, `app://`), D-72 (save file, lock retry, backup, `--import-save`), D-73 (electron-builder, layout, pinned Electron 43.7.7, own lockfile, no AppImage, unsigned exe), `decision 14: CI builds (SW-6)` (local CI, no GitHub Actions), `decision 4` (`/media` cache-only, no download), `decision 28: Steam binding for the Electron shell?`; `pm decision list --answered --grep <file or term>` per file before a fix.
+
+## Rules for this plan
+- Behaviour unchanged unless obviously broken: same `app://trivia/` URLs, `/data`/`/media` responses and error bodies (`not_found`, `media_missing`), IPC channel names and rejection codes (`bad_save`, `save_locked`), save path and file format (D-72), package layout and artefact names (D-73). A change to any of these → decision + follow-up task in this plan.
+- Security settings (`contextIsolation`, `sandbox`, `nodeIntegration`, permission handlers, network block, `will-navigate`, window open handler, sender check in `bridge()`) are only tightened, never loosened.
+- Never `npm install`/update the desktop lockfile in a review task; a dependency bump is a follow-up task (offline, pinned checksums in `electron-builder.yml`).
+- Check per fix: throw-away `node` scripts for `resolve.mjs` (`makeResolver` with temp dirs, web `Request`) and `save.mjs` (`makeSaveFile` on a temp dir, injected `rename` for lock errors); for `main.mjs`/`preload.cjs`: `trivia-desktop` on a temp `TRIVIA_SAVE_DIR`/`TRIVIA_MEDIA` (`xvfb-run` + CDP via `--remote-debugging-port` if no display, as task 314 did), never the real `state/desktop/`. Packaging only when `app/desktop/node_modules` exists: `npx electron-builder --linux dir` into a temp output, no network; else review only and say so.
+- Duplication candidates for part 10: `cacheName`/`poolUrls` ↔ `app/server/media_cache.py` (`cache_path`, `pool_urls`), `MIME`/`parseRange`/`sendFile` ↔ `app/server/http_base.py`, `save.mjs` ↔ `app/server/save.py` (envelope check, atomic write), `REPO`/path roots ↔ `app/server/paths.py`.
+- Before every commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+## Tasks (in this order; no own priority)
+1. **Review window, protocol and bridge: `main.mjs` (window/protocol/IPC parts), `preload.cjs`, `resolve.mjs`** (160 + 11 + 129 lines)
+   - Electron security: settings above, `onBeforeRequest` patterns (other schemes: `file:`, `data:`, `blob:`, `ftp:`), `setPermissionCheckHandler`, devtools switch, `autoplay-policy`, single-instance lock path.
+   - `resolve.mjs`: `contained()` traversal incl. Windows (`\`, drive letters, `%5C`, `%2e%2e`, UNC, case), symlinks out of the root, SPA fallback for missing assets (`/assets/x.js` → `index.html` with 200?), range parsing edge cases (`bytes=0-0`, empty file, multi-range), `readPoolUrls` swallowing a missing/broken `pool.json` (every media then `not_found`), pool loaded once vs. a re-exported pool in dev, MIME gaps vs. the files in `dist`/`media`.
+   - `main.mjs`: `roots()` dev vs. packaged, missing-dist dialog text (Spanish/English, catalog?), `win` null after close vs. IPC, F11 vs. the client''s own fullscreen, magic values (`BACKGROUND` vs. `theme.css`).
+   - `preload.cjs` vs. `lib/desktop.ts` (part 4): every exposed function used, types match.
+2. **Review saves: `save.mjs` and its wiring in `main.mjs`** (92 lines + `queued`, `before-quit`, `importSave`, `save:*` handlers)
+   - Against D-72: tmp + fsync + rename (directory fsync? Windows rename over an open file), lock retry, `.tmp` cleanup on every error path, `backup()` when `game.json` is missing (ENOENT surfaces as what?), TOCTOU in the `fs.access` loop, `bad backup kind` error text vs. codes, `stamp()` local time.
+   - Queue: a failed write blocking later ones, `pending` counter vs. quit while a write is queued after `before-quit`, `writing.then(() => app.quit())` loop, `--import-save` error paths (unreadable file, invalid JSON → `bad_save` message), import before the window exists.
+3. **Review packaging: `package.json`, `package-lock.json` (deps only), `electron-builder.yml`, `after-pack.mjs`, `stage-media.mjs`** (16 + 3600 + 34 + 16 + 46 lines)
+   - `package.json`: `dist` script vs. `trivia-desktop-build` (D-73: `qgen validate` lives in the flake wrapper; running `npm run dist` alone skips it), unused or undeclared deps, `electron-builder` caret range vs. the lockfile, version `0.1.0` source of truth.
+   - `electron-builder.yml`: `files` globs ship exactly `package.json`, `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs` (D-73), `extraResources` paths, checksums vs. pinned Electron, Windows/Linux names (`Trivia.exe` vs. `trivia`).
+   - `after-pack.mjs`: `--no-sandbox` launcher (risk vs. alternatives: a decision, not a fix), `readlink -f` portability, re-run on an already patched folder.
+   - `stage-media.mjs`: sync IO (fine for a CLI), hard-link fallback catching every error, stale files when the pool shrinks (`rmSync` first), `--allow-missing`, `TRIVIA_MEDIA`, duplicated pool parsing with `resolve.mjs`.
+   - Then: `git ls-files app/desktop` vs. the part 1 inventory and tasks 1–3; every file added since (e.g. Steam binding) reviewed with the same checklist and added to the inventory with part 6; if that exceeds one worker run, `pm task add <this plan>` per remaining group.
+
+## Done when
+- Every file in `app/desktop/` at the time of task 3 is listed in `## Part 6` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 6` has its final status there.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:54:58Z', 507);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -9964,14 +10005,14 @@ Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-as
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
 - Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', '2026-10-12T22:53:38Z', 501);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (507, 72, 'write plan: Desktop shell and packaging review (part 6)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of plan 72: **Desktop shell and packaging** (`app/desktop/`), as described there.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (507, 72, 'write plan: Desktop shell and packaging review (part 6)', 'plan', 'done', 1000, '2026-10-12, plan 78 (tasks.sql)', 'Write the plan for part 6 of plan 72: **Desktop shell and packaging** (`app/desktop/`), as described there.
 - Check open desktop plans (54, 56, 46) first.
 
 
 Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
-- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', '2026-10-12T22:54:59Z', 501);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (508, 72, 'write plan: qgen review (part 7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of plan 72: **qgen** (`authoring/tools/qgen.py`), split by command/section into several review tasks plus one module-structure task, as described there.
 - Map the real sections (`grep -n ''^def \|^# '' authoring/tools/qgen.py`) to tasks by line range; the structure task runs last in the plan.
 - Check open qgen plans (57, 58, 65, 70, 17) for code they still change.
@@ -10024,6 +10065,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:52:33Z', NULL, 505);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (517, 77, 'create tasks for plan 77', 'split', 'open', 1000, NULL, 'Split plan 77 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:53:36Z', NULL, 506);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (518, 78, 'create tasks for plan 78', 'split', 'open', 1000, NULL, 'Split plan 78 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:54:58Z', NULL, 507);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -11026,6 +11069,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (371, 504, '2026-10-12T22:50:41Z', '2026-10-12T22:51:40Z', 'done', NULL, 0, 'bfaf5b341bc83668924243dad5eda3e01c168ac8', 'claude-opus-5-5[1m]', '49bd2b08-40cd-4555-b7ea-a0a524da575d', 9, 14, 5647, 279967, 45505, 0.5330294, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (372, 505, '2026-10-12T22:51:40Z', '2026-10-12T22:52:42Z', 'done', NULL, 0, '4fc660081ea144d4a6752f54bdc1a2dcf700b124', 'claude-opus-5-5[1m]', '072463c3-d984-4b83-b79a-62c0dc8f8d23', 8, 16, 5889, 297816, 42539, 0.51771919999999994, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (373, 506, '2026-10-12T22:52:42Z', '2026-10-12T22:53:46Z', 'done', NULL, 0, '44dc5978c7c92aa5636f59c58ea4ec08d063fd90', 'claude-opus-5-5[1m]', 'b023e831-59e8-4830-a44c-2fd1c75b6536', 8, 16, 6094, 286714, 38638, 0.4883908, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (374, 507, '2026-10-12T22:53:46Z', '2026-10-12T22:55:07Z', 'done', NULL, 0, '6c1a2b818b27ed24beaff23f20a789332b257803', 'claude-opus-5-5[1m]', 'c33a2136-5baa-4d6e-bab1-8f3e32d11cbb', 13, 26, 7769, 563482, 52208, 0.6858444, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
