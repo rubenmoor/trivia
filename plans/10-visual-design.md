@@ -107,7 +107,7 @@ The picture should stay visible; the interface floats over it.
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-- **HUD (new):** a small level chip top-left, «Nivel 5» with a 12-tick mini tower, plus the player's name (D-28). Shown on Select and Question, so the family always knows what's at stake.
+- **HUD (new):** a small level chip top-left, «Nivel 5» with a mini tower of one tick per level (12 by default, D-88), plus the player's name (D-28). Shown on Select and Question, so the family always knows what's at stake.
 - The joker tray (09) runs down the left edge inside the safe area; nothing else uses that strip.
 
 ## Components

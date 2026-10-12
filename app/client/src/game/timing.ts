@@ -12,7 +12,7 @@ export const PICK_MS = 1000;
 export const TEAR_MS = 300;
 /** Suspense beat plus the padlock moving away before «Respuesta final» appears (UI-12). */
 export const PADLOCK_MS = 1400;
-/** Wait between the final answer and the reveal, by level (index 0 = level 1). */
+/** Wait between the final answer and the reveal, by level on the 12-level scale (index 0 = level 1, game/levels.ts). */
 export const REVEAL_WAIT_S = [3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 10, 12];
 /** An armed joker token drops back after this long (09, "Arming"). */
 export const ARM_MS = 4000;

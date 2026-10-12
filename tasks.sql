@@ -10194,7 +10194,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `npm test`, `npm run check`, `npm run build`, `npm run check:literals -w app/client`.
 - Throw-away script per cheat: state change, history/seen/blocked rows, undo after the cheat, refusal in `solo`.', '2026-10-12T22:38:15Z', '2026-10-12T22:46:50Z', 496);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (499, 59, 'Game screens follow levels and cards per game (Tower, table, HUD copy)', 'work', 'open', 460, NULL, 'The play screens still assume 12 levels and 4 cards; with D-88 (plan 13 "Configure game screen": `settings.levels` 1–20, `settings.cards` 0–4) they must follow the game. Needs the engine configure-settings task of plan 59 done; check `pm show`, else leave open and stop.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (499, 59, 'Game screens follow levels and cards per game (Tower, table, HUD copy)', 'work', 'done', 460, '2026-10-12, app/client/src/game/{levels.ts,Tower,Hud,Game,Question}.svelte, copy.ts, timing.ts; plans/04, plans/10, directory.md', 'The play screens still assume 12 levels and 4 cards; with D-88 (plan 13 "Configure game screen": `settings.levels` 1–20, `settings.cards` 0–4) they must follow the game. Needs the engine configure-settings task of plan 59 done; check `pm show`, else leave open and stop.
 
 ## Changes (`app/client/src/game/`)
 - `Tower.svelte`: `LEVELS = 12` → the game''s `levels` (width curve, crown at the top level, 1 and 20 steps readable on the TV).
@@ -10204,7 +10204,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - `npm run check`, `npm run build`, `npm test`, `npm run check:literals -w app/client`.
-- Browser walk with games started via `lib/api.ts` (`new` with `levels` 1 / 5 / 20, `cards` 0 / 1 / 4): Tower, table and win work; a game without the fields looks as today.', '2026-10-12T22:38:15Z', NULL, 496);
+- Browser walk with games started via `lib/api.ts` (`new` with `levels` 1 / 5 / 20, `cards` 0 / 1 / 4): Tower, table and win work; a game without the fields looks as today.', '2026-10-12T22:38:15Z', '2026-10-12T23:20:46Z', 496);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (500, 72, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-12, plan 72 body (tasks.sql)', 'Write plan 72, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-12T22:44:46Z', '2026-10-12T22:48:15Z', NULL);
@@ -11855,6 +11855,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - All checks above pass; note the results in the done note.
 - Stage any doc fixes.', '2026-10-12T23:10:57Z', NULL, 523);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (592, 59, 'Start screen subtitle follows the game''s levels', 'work', 'open', NULL, NULL, '`screen.start.subtitle` («12 preguntas seguidas para llegar a la cima», en "12 questions in a row to reach the top") hardcodes 12; with D-88 (`settings.levels` 1–20) a running game or the configured choice can have another count.
+- `app/client/src/game/Game.svelte` Start screen: `{n}` = `levelsOf(game)` (`game/levels.ts`) for a running game, else the last choice''s `levels` (or 12); catalog `screen.start.subtitle` in every locale gets `{n}` (singular for 1 if needed).
+- Check: `npm run check`, `npm run build`, `npm run check:literals -w app/client`; browser: a running 5-level game shows 5, a fresh save 12.', '2026-10-12T23:20:39Z', NULL, 499);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -12874,6 +12877,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (388, 521, '2026-10-12T23:08:26Z', '2026-10-12T23:09:18Z', 'done', NULL, 0, 'c3cb97ca4b35546f4bf0d2342de976c4f54ed657', 'claude-opus-5-5[1m]', '89c74dfc-5a5e-44f7-9325-cb1e6bd0bd31', 7, 14, 6063, 246442, 36093, 0.45934839999999994, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (389, 522, '2026-10-12T23:09:19Z', '2026-10-12T23:10:28Z', 'done', NULL, 0, 'd7e8f994afd9a4112046e94ff9f4cf5d1b5bc447', 'claude-opus-5-5[1m]', 'cb576a4e-7142-463b-bd40-0c5fd1835ce5', 6, 12, 8628, 230321, 42329, 0.55730419999999992, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (390, 523, '2026-10-12T23:10:29Z', '2026-10-12T23:11:05Z', 'done', NULL, 0, 'dc04f10e3f4ed449ef9e7529eff1e59497db750f', 'claude-opus-5-5[1m]', 'efe54355-8ec9-476f-97ac-97ab80dff142', 5, 10, 3626, 150971, 29403, 0.3379782, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (391, 499, '2026-10-12T23:11:05Z', '2026-10-12T23:20:58Z', 'done', NULL, 0, '523104a5001de7ede0dfbc2564988b9191d6a6f9', 'claude-opus-5-5[1m]', '7adc6e18-4a2c-4885-9d31-0f00e7b2f9bb', 57, 98, 23292, 3678158, 97354, 1.9806955999999996, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

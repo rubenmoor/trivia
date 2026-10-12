@@ -16,6 +16,7 @@
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
   import JokerTray from "./JokerTray.svelte";
+  import { levelsOf, onTwelve } from "./levels";
   import LanguageScreen from "./LanguageScreen.svelte";
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
@@ -93,6 +94,7 @@
   const mode = $derived(game?.settings.mode ?? "gamemaster");
   /** The question on screen of the running game, which «Reportar pregunta» logs. */
   const reportTarget = $derived(running && screen === "question" ? (game?.question?.id ?? null) : null);
+  const levels = $derived(levelsOf(game));
   /** Blocks on the tower: correct answers in this game. */
   const blocks = $derived(game?.history.filter((h) => h.correct).length ?? 0);
 
@@ -206,7 +208,7 @@
     }
     if (event.joker === "skip") {
       const cards = newCards(next);
-      await go("select", "paper", () => ((game = next), (fresh = cards)));
+      await go(table(next), "paper", () => ((game = next), (fresh = cards)));
     } else if (event.joker === "snipe" && event.outcome === "hit") {
       await go("level", "rewind", () => (game = next));
     } else game = next;
@@ -215,10 +217,13 @@
   /** After «¡Correcto!»: the Level screen, where the new block drops and lands with a thud. */
   async function toLevel() {
     const level = blocks;
-    const landed = sleep(FADE_MS * 2 + 750).then(() => sfx("block", level)); // the fall in Tower.svelte
+    const landed = sleep(FADE_MS * 2 + 750).then(() => sfx("block", onTwelve(level, levels))); // the fall in Tower.svelte
     await go("level", "whoosh");
     await landed;
   }
+
+  /** The table after the Level screen; with `cards: 0` the engine already opened the question (D-88). */
+  const table = (g: Game | null): Screen => (g?.phase === "question" ? "question" : "select");
 
   /** Where a game continues: the Level screen before a choice, else its question. */
   function resume() {
@@ -295,7 +300,7 @@
     const next = await request("skip", { everyone });
     if (next === undefined) return;
     const cards = newCards(next);
-    await go("select", "paper", () => ((game = next), (fresh = cards)));
+    await go(table(next), "paper", () => ((game = next), (fresh = cards)));
   }
 
   async function undo() {
@@ -353,7 +358,7 @@
       if (running) resume();
       else newGame();
     } else if (on === "start" && a.type === "new") newGame();
-    else if (on === "level" && a.type === "confirm") go("select", "paper");
+    else if (on === "level" && a.type === "confirm") go(table(game), "paper");
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
     else if (on === "correct" && a.type === "confirm") toLevel();
     else if ((on === "wrong" || on === "victory") && a.type === "confirm") toStart();
@@ -461,28 +466,28 @@
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
     <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
     <section class="level">
-      <Tower filled={blocks} drop={previous === "correct"} />
+      <Tower filled={blocks} {levels} drop={previous === "correct"} />
       <div class="level-text">
         <p class="kicker">{t("screen.level.kicker")}</p>
-        <h1 class="title big">{game.level} <span class="of">{t("screen.level.of", { n: 12 })}</span></h1>
+        <h1 class="title big">{game.level} <span class="of">{t("screen.level.of", { n: levels })}</span></h1>
         {#if game.repeat}
           <p class="milestone again">{t("screen.level.again")}</p>
-        {:else if milestone(game.level, game.id)}
-          <p class="milestone">{milestone(game.level, game.id)}</p>
+        {:else if milestone(game.level, levels, game.id)}
+          <p class="milestone">{milestone(game.level, levels, game.id)}</p>
         {/if}
-        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
+        <button class="secondary hint" onclick={() => go(table(game), "paper")} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
       </div>
     </section>
   {:else if screen === "select" && game}
     <Stage />
-    <div class="corner-hud"><Hud level={game.level} player={game.player} /></div>
+    <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} /></div>
     <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
     <section class="select">
       <h2 class="title">{t("screen.select.title")}</h2>
       {#if game.options.length === 0}
         <p class="error-box">{t("screen.select.empty")} <Prompt action="menu" /> → {t("action.home")}.</p>
       {/if}
-      <div class="cards">
+      <div class="cards" style:--n={game.options.length}>
         {#each game.options as option, i (i)}
           <button
             class="card"
@@ -513,6 +518,7 @@
         bind:this={questionRef}
         question={game.question}
         level={game.level}
+        {levels}
         playerName={game.player}
         paused={overlayOpen}
         shown={!black}
@@ -539,7 +545,7 @@
     <Stage mood="wrong" />
     <section class="result wrong">
       <div class="columns">
-        <Tower filled={blocks} small crumble />
+        <Tower filled={blocks} {levels} small crumble />
         <div class="stack">
           <h1 class="title bad">{t("screen.result.wrong")}</h1>
           <div class="panel glass">
@@ -547,7 +553,7 @@
             <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
             <p class="fun-fact">{game.last.fun_fact}</p>
           </div>
-          <p class="consolation">{consolation(game.level, game.id)}</p>
+          <p class="consolation">{consolation(game.level, levels, game.id)}</p>
         </div>
       </div>
       <button class="candy" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
@@ -556,7 +562,7 @@
     <Stage mood="victory" />
     <Fireworks mode="finale" />
     <section class="result victory">
-      <Tower filled={12} drop />
+      <Tower filled={levels} {levels} drop />
       <div class="stack">
         <h1 class="title big gold">{t("screen.victory.title")}</h1>
         {#if game.player}<p class="milestone">{t("screen.victory.top", { name: game.player })}</p>{/if}
@@ -777,7 +783,8 @@
   /* Select: paper envelopes on the night table (VD-5, UI-11) */
   .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(var(--n), minmax(0, calc(23.5 * var(--u))));
+    justify-content: center;
     gap: calc(2 * var(--u));
     width: 100%;
     max-width: calc(100 * var(--u));

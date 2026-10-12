@@ -1,16 +1,19 @@
 <script lang="ts">
-  // The tower of 12 blocks, narrower towards the top (D-22, UI-3, VD-7). Materials get fancier
+  // The tower of one block per level (12 by default, 1–20 per game, D-88), narrower towards the top (D-22, UI-3, VD-7). Materials get fancier
   // with height (stone → brick → marble → sapphire → gold); the newest block drops in and settles;
   // a full tower wears the crown; on Wrong the blocks fall away one by one.
   import Icon from "./Icon.svelte";
+  import { DEFAULT_LEVELS, onTwelve } from "./levels";
 
   let {
     filled,
+    levels = DEFAULT_LEVELS,
     small = false,
     drop = false,
     crumble = false,
   }: {
     filled: number;
+    levels?: number;
     small?: boolean;
     /** The newest block drops in from the top (the Level screen after a correct answer). */
     drop?: boolean;
@@ -18,11 +21,11 @@
     crumble?: boolean;
   } = $props();
 
-  const LEVELS = 12;
-  /** Block 1 is ~90 % of the foundation's width, block 12 ~35 % (04-ui-tv-display.md). */
-  const width = (level: number) => 90 - ((level - 1) * 55) / (LEVELS - 1);
+  /** Block 1 is ~90 % of the foundation's width, the top block ~35 % (04-ui-tv-display.md). */
+  const width = (level: number) => (levels === 1 ? 90 : 90 - ((level - 1) * 55) / (levels - 1));
 
-  function material(level: number) {
+  function material(at: number) {
+    const level = onTwelve(at, levels);
     if (level <= 3) return "stone";
     if (level <= 6) return "brick";
     if (level <= 9) return "marble";
@@ -31,9 +34,9 @@
   }
 </script>
 
-<div class="tower" class:small class:crumble class:wobble={drop && filled > 0}>
-  <div class="crown" class:on={filled === LEVELS}><Icon name="crown" size="100%" /></div>
-  {#each Array.from({ length: LEVELS }, (_, i) => LEVELS - i) as level (level)}
+<div class="tower" style:--n={levels} class:small class:crumble class:wobble={drop && filled > 0}>
+  <div class="crown" class:on={filled >= levels}><Icon name="crown" size="100%" /></div>
+  {#each Array.from({ length: levels }, (_, i) => levels - i) as level (level)}
     <div
       class="block {level <= filled ? material(level) : 'empty'}"
       class:newest={level === filled}
@@ -48,18 +51,21 @@
 </div>
 
 <style>
+  /* --base-h: a block of the 12-level tower; with more levels the blocks get flatter (same height). */
   .tower {
-    --block-h: calc(3.7 * var(--u));
+    --base-h: calc(3.7 * var(--u));
+    --block-h: calc(min(5, 44.4 / var(--n)) * var(--u));
     width: calc(30 * var(--u));
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(0.3 * var(--u));
+    gap: calc(min(0.3, 3.6 / var(--n)) * var(--u));
   }
   .tower.small {
-    --block-h: calc(1.5 * var(--u));
+    --base-h: calc(1.5 * var(--u));
+    --block-h: calc(min(2, 18 / var(--n)) * var(--u));
     width: calc(14 * var(--u));
-    gap: calc(0.15 * var(--u));
+    gap: calc(min(0.15, 1.8 / var(--n)) * var(--u));
   }
   .wobble {
     animation: wobble 0.9s 0.75s ease-out;
@@ -168,14 +174,14 @@
   }
   .foundation {
     width: 100%;
-    height: calc(var(--block-h) * 0.7);
+    height: calc(var(--base-h) * 0.7);
     background: var(--night-700);
     border-top: calc(0.25 * var(--u)) solid var(--amber);
     border-radius: calc(0.45 * var(--u));
   }
   .crown {
-    width: calc(var(--block-h) * 1.6);
-    height: calc(var(--block-h) * 1.6);
+    width: calc(var(--base-h) * 1.6);
+    height: calc(var(--base-h) * 1.6);
     color: var(--amber);
     opacity: 0;
     transform: translateY(-50%) scale(0.4);

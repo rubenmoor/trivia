@@ -16,6 +16,7 @@
   import Prompt from "./Prompt.svelte";
   import JokerFlight from "./JokerFlight.svelte";
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
+  import { DEFAULT_LEVELS, onTwelve } from "./levels";
   import Shredder from "./Shredder.svelte";
   import Stage from "./Stage.svelte";
   import { duck, mediaVolume, music, sfx, sound } from "./sound.svelte";
@@ -37,6 +38,7 @@
   let {
     question,
     level,
+    levels = DEFAULT_LEVELS,
     playerName,
     paused,
     shown = true,
@@ -49,6 +51,8 @@
   }: {
     question: NonNullable<Game["question"]>;
     level: number;
+    /** The game's levels (D-88). */
+    levels?: number;
     /** For the HUD (D-28). */
     playerName: string | null;
     /** The admin overlay is open: the wait before the reveal stops. */
@@ -232,7 +236,7 @@
     music("roll"); // the drum roll until the reveal (gamemaster feedback)
     sfx("boom");
     try {
-      const [game] = await Promise.all([gameAction("answer", { index: locked }), wait(REVEAL_WAIT_S[level - 1] * 1000)]);
+      const [game] = await Promise.all([gameAction("answer", { index: locked }), wait(REVEAL_WAIT_S[onTwelve(level, levels) - 1] * 1000)]);
       result = game?.last ?? null;
       revealed = true;
       music(null);
@@ -305,7 +309,7 @@
     if (res.event.joker === "snipe") {
       // The scope tightens on the target, a beat of silence, then the cork pops (09, "Francotirador").
       sfx("silence");
-      await wait(SNIPE_BEAT_MS(level));
+      await wait(SNIPE_BEAT_MS(onTwelve(level, levels)));
       sfx("cork-pop");
       if (res.event.outcome === "hit") {
         hit = res.event.correct_index;
@@ -502,7 +506,7 @@
   {/if}
 
   <div class="top">
-    <Hud {level} player={playerName} />
+    <Hud {level} {levels} player={playerName} />
   </div>
 
   {#if swappedBy?.joker === "easier"}

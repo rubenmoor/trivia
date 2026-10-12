@@ -1,16 +1,17 @@
 <script lang="ts">
-  // The HUD (plans/10-visual-design.md, "Layout"): the level with a 12-tick mini tower, and the
+  // The HUD (plans/10-visual-design.md, "Layout"): the level with a mini tower of one tick per level, and the
   // player's name (D-28). Shown on Select and Question, so the family always sees what's at stake.
   import { t } from "../lib/i18n";
+  import { DEFAULT_LEVELS } from "./levels";
 
-  let { level, player }: { level: number; player: string | null } = $props();
+  let { level, levels = DEFAULT_LEVELS, player }: { level: number; levels?: number; player: string | null } = $props();
 </script>
 
 <div class="hud">
   <div class="chip glass">
     <span class="level">{t("hud.level", { n: level })}</span>
     <span class="ticks" aria-hidden="true">
-      {#each Array.from({ length: 12 }, (_, i) => i + 1) as l (l)}
+      {#each Array.from({ length: levels }, (_, i) => i + 1) as l (l)}
         <span class="tick" class:done={l < level} class:now={l === level}></span>
       {/each}
     </span>
