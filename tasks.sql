@@ -10518,11 +10518,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Removed/renamed export: grep `app/client/src`, `authoring/tools/*.ts`, `authoring/tools/sim/` first; no TS-only syntax (node type stripping).
 - Fixtures pin behaviour: a fix that changes a fixture''s expected output → decision. Save format unchanged.
 - Duplication candidate (log for part 10): `game.ts` ↔ `app/server/game.py` (deleted by `task 302: Delete the Python referee`).
-- Part 1 rows `handed to part 3` for this file: re-check, final status in `## Part 3`, quoting the part 1 row.
+- Part 1 rows `handed to part 3` for this file (incl. the `tsc --noUnusedLocals --noUnusedParameters` hits): re-check, final status in `## Part 3`, quoting the part 1 row.
+- Linter evidence for part 10: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: noFallthroughCasesInSwitch)`, `(lint: no-non-null-assertion)`.
 
 ## Check
 - Throw-away script in `/tmp` driving a game through `engine/api.ts` with a `MemoryStore`, for every fix.
-- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass (plus the lint pass, if part 10 has adopted one by then).
 
 ## Done when
 - `game.ts` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:10Z', NULL, 515);
@@ -10538,11 +10539,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `api.ts` (133): `body: Record<string, unknown>` coercion, status codes vs. the old Python routes (`app/server/main.py` while `task 302: Delete the Python referee` is open), error replies.
 - Removed/renamed export: grep `app/client/src`, `authoring/tools/*.ts`, `authoring/tools/sim/` first.
 - Duplication candidates (log for part 10): `engine/api.ts` ↔ `lib/api.ts`, `engine/store.ts` ↔ `lib/store.ts`, `engine/save.ts` ↔ `app/server/save.py`/`app/desktop/save.mjs`, `state.ts` types ↔ `lib/types.ts`.
-- Part 1 rows `handed to part 3` for these files: re-check, final status in `## Part 3`, quoting the part 1 row.
+- Part 1 rows `handed to part 3` for these files (incl. the `tsc --noUnusedLocals --noUnusedParameters` hits): re-check, final status in `## Part 3`, quoting the part 1 row.
+- Linter evidence for part 10: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: noFallthroughCasesInSwitch)`, `(lint: no-non-null-assertion)`.
 
 ## Check
 - Throw-away script in `/tmp`: corrupt / newer / older saves through `parseSave`; an action that throws leaves the save untouched.
-- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass (plus the lint pass, if part 10 has adopted one by then).
 
 ## Done when
 - The 4 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:10Z', NULL, 515);
@@ -10560,11 +10562,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pycompat.ts` (77): which helpers still earn their keep once task 302 freezes the fixtures (`pyRepr`, `pyTruthy`, `pyInt`, `pyStr`); replacing them changes outputs → `pm decision add` unless byte-identical.
 - Removed/renamed export: grep `app/client/src`, `authoring/tools/*.ts`, `authoring/tools/sim/` first; no TS-only syntax.
 - Duplication candidate (log for part 10): `selection.ts` ↔ `app/server/selection.py`.
-- Part 1 rows `handed to part 3` for these files: re-check, final status in `## Part 3`, quoting the part 1 row.
+- Part 1 rows `handed to part 3` for these files (incl. the `tsc --noUnusedLocals --noUnusedParameters` hits): re-check, final status in `## Part 3`, quoting the part 1 row.
+- Linter evidence for part 10: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: noFallthroughCasesInSwitch)`, `(lint: no-non-null-assertion)`.
 
 ## Check
 - Throw-away script in `/tmp` on `app/data/pool.json` timing `outlook`/`supply` per call, before and after any fix.
-- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass (plus the lint pass, if part 10 has adopted one by then).
 
 ## Done when
 - The 5 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:11Z', NULL, 515);
@@ -10576,12 +10579,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - fixture replay coverage of the MD-11/MD-12 settings and cheats (`decision 33: Configure game screen: which fields?`, `decision 34: Gamemaster menu: which cheats?`): gaps → `pm task add` follow-up, no new tests here
 - Helpers `test/fixtures.ts`, `test/save.ts`, `test/tape.ts`: dead helpers, `tape.ts` vs `rng.ts`, `npm test` glob still catches every test.
 - `fixtures/README.md` (text only, fixtures are data): matches the state of `task 302: Delete the Python referee` (re-record instructions while open vs. frozen after).
-- Part 1 rows `handed to part 3` for these files: re-check, final status in `## Part 3`, quoting the part 1 row.
+- Part 1 rows `handed to part 3` for these files (incl. the `tsc --noUnusedLocals --noUnusedParameters` hits): re-check, final status in `## Part 3`, quoting the part 1 row.
 - Plan-wide: every part 1 row `handed to part 3` has a final status in `## Part 3`; missing → do it here.
+- Linter evidence for part 10: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: noFallthroughCasesInSwitch)`, `(lint: no-non-null-assertion)`; tests included.
 
 ## Check
 - `npm test` count and time before/after (in the report row).
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus the lint pass, if part 10 has adopted one by then).
 
 ## Done when
 - The 8 tests, 3 helpers and `fixtures/README.md` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:11Z', NULL, 515);
@@ -12335,8 +12339,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:35:06Z', '2026-10-12T23:35:52Z', 595);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (607, 74, 'create tasks for plan 74', 'split', 'done', 1000, '2026-10-12, tasks 532-534 already match plan 74; added plan 72 report status wording (fixed (task N), no-findings rows); no decisions needed', 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:36:20Z', '2026-10-12T23:36:46Z', 596);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (608, 75, 'create tasks for plan 75', 'split', 'open', 1000, NULL, 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:37:14Z', NULL, 597);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (608, 75, 'create tasks for plan 75', 'split', 'done', 1000, '2026-10-12, tasks 535–538 aligned with revised plan 75: tsc --noUnused hits in part 1 rows, (lint: …) evidence tags, lint pass in checks if adopted; no new decisions', 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:37:14Z', '2026-10-12T23:37:56Z', 597);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13371,6 +13375,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (402, 596, '2026-10-12T23:36:01Z', '2026-10-12T23:36:23Z', 'done', NULL, 0, '425de045cbb3962ad86354ef6a090c13f24ae15d', 'claude-opus-5-5[1m]', '9338a375-9f15-4717-99ca-2c2278c0efce', 6, 12, 1734, 180661, 24561, 0.2673482, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (403, 607, '2026-10-12T23:36:23Z', '2026-10-12T23:36:50Z', 'done', NULL, 0, '347ad2007a9f14a839ea5e64c65ef20db377729c', 'claude-opus-5-5[1m]', 'ef78f6ef-bcd7-4ce1-a831-828567824c62', 8, 16, 2089, 245958, 29152, 0.32425160000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (404, 597, '2026-10-12T23:36:50Z', '2026-10-12T23:37:22Z', 'done', NULL, 0, '7b81159ce9fc3de6eeb0c385e2005f1537b84d0b', 'claude-opus-5-5[1m]', '3e20c337-4219-41b5-bee3-62f01d5774ea', 7, 14, 2148, 235966, 32018, 0.34635319999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (405, 608, '2026-10-12T23:37:23Z', '2026-10-12T23:38:01Z', 'done', NULL, 0, 'fbb1a32b3c6dd9904b6641f329bd84859da5818a', 'claude-opus-5-5[1m]', '973751f5-9b41-4b5b-b2b6-e8bf62d68282', 8, 16, 3095, 252739, 28662, 0.34180779999999988, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
