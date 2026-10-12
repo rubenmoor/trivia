@@ -10462,7 +10462,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## Done when
-- `save.py` and `paths.py` listed in `## Part 2` (or "no findings"), every finding with a status.', '2026-10-12T23:03:30Z', NULL, 514);
+- `save.py` and `paths.py` listed in `## Part 2` (or "no findings"), every finding with a status.
+- Status per finding as in plan 72 "Report format": `fixed (task 532)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (533, 74, 'Review main.py, http_base.py, media_cache.py', 'work', 'open', NULL, NULL, 'Task 2 of `plan 74: Python game server review (code review part 2)`; after task 1 of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
 
 ## What
@@ -10481,7 +10482,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## Done when
-- The three files listed in `## Part 2` (or "no findings"), every finding with a status.', '2026-10-12T23:03:30Z', NULL, 514);
+- The three files listed in `## Part 2` (or "no findings"), every finding with a status.
+- Status per finding as in plan 72 "Report format": `fixed (task 533)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (534, 74, 'Short review of game.py, selection.py, flags.py; review categories.py', 'work', 'open', NULL, NULL, 'Task 3 of `plan 74: Python game server review (code review part 2)`; last task of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
 
 ## What
@@ -10497,7 +10499,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## Done when
-- All 9 files of `app/server/` are listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.', '2026-10-12T23:03:30Z', NULL, 514);
+- All 9 files of `app/server/` are listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.
+- Status per finding as in plan 72 "Report format": `fixed (task 534)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (535, 75, 'Review game.ts', 'work', 'open', NULL, NULL, 'Task 1 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
 
 ## First
@@ -12329,8 +12332,8 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', NULL, 593);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (606, 73, 'create tasks for plan 73', 'split', 'done', 1000, '2026-10-12, tasks 524, 526, 529 aligned with revised plan 73 (lint tags, no-findings rows, Linter evaluation heading, tsc/bad-practice counts); 525, 527, 528, 530, 531 unchanged', 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:35:06Z', '2026-10-12T23:35:52Z', 595);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (607, 74, 'create tasks for plan 74', 'split', 'open', 1000, NULL, 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:36:20Z', NULL, 596);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (607, 74, 'create tasks for plan 74', 'split', 'done', 1000, '2026-10-12, tasks 532-534 already match plan 74; added plan 72 report status wording (fixed (task N), no-findings rows); no decisions needed', 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:36:20Z', '2026-10-12T23:36:46Z', 596);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13363,6 +13366,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (400, 595, '2026-10-12T23:34:42Z', '2026-10-12T23:35:12Z', 'done', NULL, 0, 'bc500058a3d268de9ba2fe3b0b0ec23658b82938', 'claude-opus-5-5[1m]', '88fee5ba-43d2-429b-b8a3-80638689a1c2', 4, 8, 2543, 117801, 26697, 0.28802819999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (401, 606, '2026-10-12T23:35:12Z', '2026-10-12T23:36:01Z', 'done', NULL, 0, 'eabd074f9d64d51f338c66748dca5648294d3390', 'claude-opus-5-5[1m]', '407c3d37-f7c0-4216-ae11-62ca1e4ad52f', 6, 12, 3796, 191659, 31961, 0.3699878, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (402, 596, '2026-10-12T23:36:01Z', '2026-10-12T23:36:23Z', 'done', NULL, 0, '425de045cbb3962ad86354ef6a090c13f24ae15d', 'claude-opus-5-5[1m]', '9338a375-9f15-4717-99ca-2c2278c0efce', 6, 12, 1734, 180661, 24561, 0.2673482, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (403, 607, '2026-10-12T23:36:23Z', '2026-10-12T23:36:50Z', 'done', NULL, 0, '347ad2007a9f14a839ea5e64c65ef20db377729c', 'claude-opus-5-5[1m]', 'ef78f6ef-bcd7-4ce1-a831-828567824c62', 8, 16, 2089, 245958, 29152, 0.32425160000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
