@@ -3111,8 +3111,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', '2026-10-12T00:46:35Z', 162);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (173, 35, 'create tasks for plan 35', 'split', 'done', 1000, '2026-10-11, tasks 184 (prep + decisions), 185 (record answer; made pending by 184)', 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', '2026-10-12T00:46:59Z', 163);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', NULL, 164);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'done', 1000, '2026-10-11, tasks 186 (engine), 187 (MD-6 UI), 188 (MD-7, prio 380); no new decisions: OQ-30 decisions come from task 184, tasks guard on them', 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', '2026-10-12T00:47:37Z', 164);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (175, 37, 'create tasks for plan 37', 'split', 'open', 1000, NULL, 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', NULL, 165);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (176, 38, 'create tasks for plan 38', 'split', 'open', 1000, NULL, 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3170,6 +3170,51 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Sync the open-questions row in `plans/11-steam.md` and `plans/project.md`.
 
 Done when: D-entry exists, OQ-30 resolved, MD-5 `[x]`, plan 13''s default-mode section is implementable.', '2026-10-12T00:46:59Z', NULL, 173);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (186, 36, 'Engine: mode, preset, report (MD-6 engine part)', 'work', 'open', NULL, NULL, 'Part 1 of plan 36. Engine rules for the default mode; no UI.
+
+Guards (stop without staging anything):
+- `pm show` of plan 35: a pending OQ-30 decision → `pm task-pending-decision <this task> <decision id>`, stop. No decision yet, or record task (MD-5) still open → stop, note why; the spec is plan 13''s default-mode section.
+- `engine/game.ts`, `engine/api.ts`, `engine/state.ts` (plan 20, PORT-3) or part 4''s store with `version` + migration (PORT-4/5) missing → stop, leave open, say which.
+
+Work:
+- `engine/state.ts`: `settings.mode: "gamemaster" | "default"` (missing = `"gamemaster"` in `withDefaults`), `settings.preset`, checkpoint fields per plan 13; `ReportRow {question_id, game_id, player_id, level, reported_on, note?}`; `SaveData.reports`; version bump + migration step (`reports: []`, games untouched).
+- Preset table: one engine constant, plan 13''s decided table.
+- `engine/game.ts` / `api.ts`: `newGame` takes `mode` / `preset`, fills `settings.jokers`; `report` action = skip-for-everyone path (`BurnRow` `player_id: null`, replacement at the same level, same supply check) + `ReportRow`; no undo of a report.
+- Refusals (`409` + reason): default mode → `undo`, skip for everyone, `setJokers`; gamemaster mode → `report`.
+- Checkpoint and won-level rules if plan 13 specifies them.
+- `view` exposes `settings.mode` / `preset`; `lib/types.ts` to match.
+
+Check: `npm test` (fixture replay unchanged), `npm run check`; throw-away script: default-mode game, report burns for everyone, replacement at the same level, row in `reports`, undo / skip-everyone / setJokers refused, report in gamemaster mode refused, empty supply → `409`.
+
+Done when: checks pass; gamemaster-mode games behave exactly as before.', '2026-10-12T00:47:35Z', NULL, 174);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (187, 36, '«Reportar pregunta» and the report list (MD-6 UI)', 'work', 'open', NULL, NULL, 'Part 2 of plan 36. Overlay by mode, confirm step, report list screen.
+
+Guards: part 1 of plan 36 still open → stop, leave open. Screens not on the engine yet (M2 part 5, PORT-7) → stop, leave open, say so.
+
+Work:
+- `Overlay.svelte`: gamemaster mode exactly as today; default mode: sound, «Reportar pregunta», «Preguntas reportadas», «Abandonar partida», read-only preset line; no undo, skip/burn, budget editor.
+- Confirm step: «¿Reportar esta pregunta? Se quema para todos.», Enter/Esc.
+- `Reports.svelte` (new): newest first; date, question id, question text, answer, player; «Copiar» → plain text (one block per report) via `navigator.clipboard`, selectable `<pre>` fallback. Offline; no server route.
+- `Game.svelte`: `Screen` gains `"reports"`, back with Backspace/Esc; `lib/api.ts` `report`.
+- Strings via `t()` (`report.*`); without `lib/i18n.ts`, Spanish literals marked `// LUI-1`.
+
+Check: browser walk in both modes (gamemaster overlay unchanged; default: report → confirm → new question at the same level, list shows it, copy works); keyboard only and mouse only (IN-1); `npm run check`.
+
+Done when: checks pass; plan 13 MD-6 `[x]` with a note.', '2026-10-12T00:47:35Z', NULL, 174);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (188, 36, 'Mode and settings screen (MD-7)', 'work', 'open', 380, NULL, 'Part 3 of plan 36. Mode toggle and preset row on plan 29''s Choice screen; no second screen. Priority 380: after plans 29 and 30.
+
+Guards: part 2 of plan 36 or plan 29''s Choice screen still open → stop, leave open, say which.
+
+Work:
+- `Choice.svelte`: toggle «Con presentador / Sin presentador» (key `M`) in both modes; preset row only in the default mode (tile per preset: name, joker counts as badges; keys per plan 13, else `F`/`N`/`D`/`E` if free; default preset as decided); `newGame({…, mode, preset})`.
+- Preselect mode/preset from the player''s newest game (like the age group); new player / fresh save → `gamemaster`.
+- Launch option `?mode=default|gamemaster` presets the toggle.
+- Strings via `t()` (`mode.*`) or `// LUI-1` literals.
+- Docs: plan 13 MD-7 `[x]` and "Implementation notes" (mode/settings fields as built); `plans/04-ui-tv-display.md` (Choice section, Reports screen, overlay by mode, keys); `directory.md` (new files); `plans/project.md` if MD-6/MD-7 are listed.
+
+Check: Enter straight through on an existing family save plays today''s game; each preset starts with its joker budget; `?mode=default` presets the toggle; keyboard only and mouse only; `npm run check`.
+
+Done when: checks pass, docs updated.', '2026-10-12T00:47:35Z', NULL, 174);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3253,6 +3298,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (67, 171, '2026-10-12T00:45:27Z', '2026-10-12T00:46:19Z', 'done', NULL, 0, '44d7a52342e579c657bff3bd1d203bc638928ad8', 'claude-opus-5-5[1m]', 'f6187c6f-9141-4726-a762-fb90889bfe99', 8, 16, 4298, 287612, 37657, 0.4448024, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (68, 172, '2026-10-12T00:46:19Z', '2026-10-12T00:46:40Z', 'done', NULL, 0, 'a0d5a742e3005af028fda69825c387fae521af1c', 'claude-opus-5-5[1m]', '339ea660-fce4-4f46-90f8-5813f68d7d3a', 5, 10, 2010, 131867, 21311, 0.23710140000000002, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (69, 173, '2026-10-12T00:46:40Z', '2026-10-12T00:47:06Z', 'done', NULL, 0, '5f66200134b9f9436ea6e9dbf2bcd90fb6e0b138', 'claude-opus-5-5[1m]', 'a02e603c-8c95-4185-b093-0277c73f4ee6', 4, 8, 1896, 101830, 22211, 0.236006, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (70, 174, '2026-10-12T00:47:06Z', '2026-10-12T00:47:44Z', 'done', NULL, 0, 'ec676d8f4e5438ff656c70a49dbfcc3df48fdb3a', 'claude-opus-5-5[1m]', 'e0933653-8490-4dc1-89ec-6bca68304c7d', 6, 12, 3878, 190531, 30447, 0.35929019999999995, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
