@@ -197,11 +197,14 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Outcome
 - Choose an age group; levels map to the group''s window; windows and per-group level weights tuned (AG-7, D-38).
-- Choose bundles before a session, `base` always on; selection filters by them (BN-6, D-39).
+- Choose bundles before a session; selection filters by them (BN-6, D-39).
 - Bundle languages: every bundle in `app/data/bundles.json` lists the languages it''s available in (`languages`); the game offers only the bundles of the game''s language.
   - `base`: es, en, de (the launch languages); `colombia`: the languages it''s translated into.
-  - The always-on bundle is the game language''s always-on bundle (`base` for now; `chinese-base` in zh later, milestone 12).
-  - `qgen validate`: each language has exactly one always-on bundle.
+- Base bundles: a base bundle (`kind: base`) is a bundle like any other, except a session has exactly one base bundle.
+  - Replaces `always_on` (D-68: "every always_on bundle is always on").
+  - Picked like the other bundles, among the base bundles of the game''s language; default: the language''s first one (`base` for now; `chinese-base` in zh later, milestone 12).
+  - Other bundles: any number, on or off.
+  - `qgen validate`: each language has at least one base bundle.
 
 ## Constraints
 - Defaults unchanged for the family.
@@ -212,6 +215,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Done when
 - A session can be played for each age group and with `colombia` off.
+- A session can''t start with zero or two base bundles.
 - In en and de, the game offers only the bundles listed for that language.
 - The draft windows are tuned.
 
