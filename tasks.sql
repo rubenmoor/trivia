@@ -441,7 +441,33 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Translating questions, categories, bundle names (content; `plans/15b-question-translation.md`).
 - Launch languages and the Spanish variety (OQ-31), joker keys per language (LUI-4), store texts (LUI-6).
 - `/comodines` printable cards and the review tool (`authoring/`): stay Spanish for now; log in backlog if needed.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (4, 4, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (4, 4, 'masterplan', 1000, 'Milestone 4 makes the licence of every picked media file known, stored and clean before any public release. Today the pool keeps only a `credit` string per slot (`author · licence · provider`); the full data lives in the candidate files (`work/media/<qid>.json`) or not at all, and the Commons query (`providers/commons.py`) reads only `Artist`, `LicenseShortName`, `LicenseUrl`.
+
+**The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 4 …`), with its own tasks queued by pm.
+
+## Part 1: Licence data in the pool (PUB-2, takes over MP-8 of `plans/23-media-providers.md`)
+- Per picked slot (`media`, `background`, all bundles): `provider`, `license`, `license_url`, `author`, `author_url`, `restrictions` (Commons non-copyright templates: personality rights, trademark, …), and for public domain the reason (`PD-old-70`, `PD-US`, `PD-USGov`, …), next to `source_url`, `file_url`, `credit`.
+- `media.pick_fields` writes them on every new pick (pipeline and review tool); `providers/commons.py` asks Commons for the extra extmetadata (`Restrictions`, `AttributionRequired`, `UsageTerms`, PD templates/categories); other providers fill what they have.
+- One migration for existing picks: from the stored candidate, else a live Commons lookup by `source_url`.
+- `qgen validate`: missing licence data on an approved question is an error (milestone "done when"); before the migration a warning. `qgen export`: only what the game needs (decide in the plan; credits screen PUB-5 is out of scope).
+- Priority: schema of the pool, 900; runs first, parts 2 and 3 read its fields.
+
+## Part 2: Audit report `media.py licenses` (PUB-1)
+- Per file in the pool: licence, family (`providers.licence_kind`), PD reason, restrictions, question ids and status.
+- Classifies into ok / replace: PD-US only, GFDL (and anything else off the MP allowlist), flagged restrictions, missing data. Prints the replacement list (empty list = milestone done) and a tally like the one in `plans/17-publishing.md`.
+- Reads the pool fields of part 1, no network at report time.
+- Priority: backend tooling, 700.
+
+## Part 3: Replace the problem files in the review tool (PUB-3)
+- Review tool (`authoring/server/`, `authoring/ui/`): a filter for questions whose media is on the replacement list (e.g. `/review?licence=replace`), the reason shown next to the slot, replacement through the existing candidate list and search modal over all providers.
+- The gamemaster picks; no LLM pick, no automatic swap (milestone constraint). The new pick gets the part 1 fields through `pick_fields`.
+- Then the human work: go through the list until `media.py licenses` reports nothing to replace; `trivia-media sync --status approved --prune` drops the old files from the cache (D-17).
+- Optional gate: `qgen validate` errors on approved questions with a file on the replacement list, so it can''t come back.
+- Priority: review UI, 400; after parts 1 and 2.
+
+## Not in this milestone
+- Credits screen, `CREDITS.md`, store disclosures (PUB-5, Steam S3/S5); code licence (PUB-4).
+- Audio UI sounds and fonts (`app/client/public/audio/CREDITS.md`, OFL): not pool media.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
@@ -1115,9 +1141,9 @@ plan for one part.', '2026-10-11T21:54:55Z', '2026-10-11T23:55:45Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (3, 3, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, tasks.sql (plan 3 body)', 'Write plan 3, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', '2026-10-12T00:06:58Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (4, 4, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 4, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (4, 4, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 4 body (tasks.sql)', 'Write plan 4, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:54:55Z', '2026-10-12T00:17:17Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (5, 5, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 5, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
@@ -1828,6 +1854,8 @@ After the answer:
 - `plans/project.md`: M3 line "Gamemaster checks the 84 `colombia` proposals" → `[x]`; bundle counts under State (Bundles line).
 
 Done when: notes in `22-bundles.md` and `project.md`; `qgen validate` passes; `app/data/pool.json` fresh.', '2026-10-12T00:16:29Z', NULL, 90);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (106, 4, 'create tasks for plan 4', 'split', 'open', 1000, NULL, 'Split plan 4 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:17:15Z', NULL, 4);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1875,6 +1903,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (32, 88, '2026-10-12T00:15:06Z', '2026-10-12T00:15:35Z', 'done', NULL, 0, '3e7e03adfb6af77955939451e0026d067c70fde1', 'claude-opus-5-5[1m]', '1747bc29-143e-4f9a-9a8b-be63ea5afaba', 5, 10, 2467, 137300, 23503, 0.264864, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (33, 89, '2026-10-12T00:15:35Z', '2026-10-12T00:16:14Z', 'done', NULL, 0, '86798ec730c5965c0171a44dffdd17cce42832d5', 'claude-opus-5-5[1m]', 'eec8adb3-21b3-4c29-bb95-618aa0e20397', 6, 12, 3768, 176209, 26896, 0.32581780000000005, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (34, 90, '2026-10-12T00:16:14Z', '2026-10-12T00:16:37Z', 'done', NULL, 0, '0c48ce95e69c76fec549fc431cf3b18a5c20168b', 'claude-opus-5-5[1m]', '2be3d996-3971-49ce-a259-f2d197b10153', 5, 10, 2231, 131828, 22146, 0.24819360000000001, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (35, 4, '2026-10-12T00:16:37Z', '2026-10-12T00:17:24Z', 'done', NULL, 0, 'edc4316c5a2e73de7f630abaf1310d52470f514c', 'claude-opus-5-5[1m]', '6fe83abf-1d85-4871-988d-07ebe9593fe4', 7, 14, 4380, 216089, 29610, 0.36775380000000008, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
