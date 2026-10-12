@@ -39,7 +39,7 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`23-media-providers.md`](23-media-providers.md) | Free media providers next to Commons (Openverse, Pexels, Freesound, NASA), licence allowlist, per-slot order (D-45) | draft |
 | [`project.md`](project.md) | Milestones; all open tasks and questions grouped by milestone | living |
 | [`backlog.md`](backlog.md) | Additional tasks found along the way | living |
-| [`open-questions.md`](open-questions.md) | Unresolved questions and their answers | living |
+| [`open-questions.md`](open-questions.md) | Questions and answers up to 2026-10-12; new questions are `pm` decisions | frozen |
 | [`decisions.md`](decisions.md) | Decision log (lightweight ADRs) | living |
 
 Order of work: **02 (question pool) first, together with 07 (question generation)**, then 03 → 01 → 06 → 04 → 10 → 09 → 05.
@@ -68,5 +68,5 @@ Task IDs are `<file-prefix>-<n>`, for example `QP-3` for question-pool task 3. I
 1. Read [`../AGENTS.md`](../AGENTS.md) and this index before starting any task.
 2. Work one task ID at a time. Keep changes small and reviewable.
 3. When a new requirement comes up, add it to [`backlog.md`](backlog.md). Don't silently widen the scope.
-4. When something is ambiguous, log it in [`open-questions.md`](open-questions.md) and don't guess. Once it's answered, record the outcome in [`decisions.md`](decisions.md).
+4. When something is ambiguous, ask with `pm decision add` and don't guess. Once it's answered, record a lasting outcome in [`decisions.md`](decisions.md).
 5. After you implement something, tick the task and update the file status.

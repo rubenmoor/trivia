@@ -57,7 +57,7 @@ flowchart LR
 S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python). S3 ends with a gamemaster platform test (Windows, Linux, Deck; controller only; offline): pm plan 48.
 
 ## Open questions (blocking)
-All are logged in [`open-questions.md`](open-questions.md):
+Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions still open there are raised as `pm` decisions by their plans):
 
 | ID | Question | Blocks |
 |----|----------|--------|

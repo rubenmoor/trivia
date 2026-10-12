@@ -146,11 +146,10 @@ Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of
 
 ## Open questions
 
-From [`open-questions.md`](open-questions.md), with what each one blocks:
+Pending questions are `pm` decisions (`pm decision list`). Left over from the frozen [`open-questions.md`](open-questions.md), with what each one blocks:
 
 | ID | Question | Blocks |
 |----|----------|--------|
-| OQ-17 | Target total pool size? | M5 (how many batches) |
 | OQ-45 | Freesound API for a commercial release | Steam S5 (23, 17) |
 | OQ-33 | Price model; Steamworks account holder | Steam S5 (17) |
 | OQ-35 | Code and content license | Steam S2 (17) |

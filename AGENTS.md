@@ -7,12 +7,12 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 1. [`plans/README.md`](plans/README.md): index, conventions, task status markers.
 2. [`plans/project.md`](plans/project.md): milestones, open tasks and open questions at a glance.
 3. The plan file that owns the task you're working on.
-4. [`plans/open-questions.md`](plans/open-questions.md): don't implement anything that depends on an unanswered question.
+4. `pm decision list`: don't implement anything that depends on an unanswered question.
 
 ## Working rules
 - Plans are the source of truth. Update the plan **before** you change direction in code.
 - One task ID per change. Mark it `[x]` with a note once it's implemented.
-- Log new work in `plans/backlog.md`. Log ambiguities in `plans/open-questions.md`.
+- Log new work in `plans/backlog.md`. Ask about ambiguities with `pm decision add` (`plans/open-questions.md` is frozen history).
 - Log architectural choices in `plans/decisions.md`.
 - Keep dependencies minimal. This is a hobby project that has to run offline in a living room.
 - Never commit secrets. The game needs no accounts and no telemetry.

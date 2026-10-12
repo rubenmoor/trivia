@@ -35,7 +35,7 @@ The question difficulty (1–10, D-6) is a rating, not a level. Each game level 
 - **State (GF-4, D-25; now D-67, D-82):** history: `state/game.sqlite` held players, games and burned questions. Now one save document (`state/game.json`, save v3): players, games, `seen` rows, `blocked`, `notified_exhausted`. The engine shuffles the answers, checks the final answer and adds a seen row; one undo step restores the state before the last final answer and removes that game's seen row.
 - Pool sizing (OQ-17): one game sees at least 12 questions and shows 48 cards (+ spares for skips and jokers, which are unlimited and count what they replace as seen, D-27, D-82; Bájale needs lower-difficulty questions in the same subcategory). A fresh profile starts with the whole pool unseen, with the most pressure on difficulties 4–6 (levels 4–6 each need 4, plus overlap with levels 3 and 7) and on difficulty 1 (level 1 alone).
 
-## To define (see open-questions.md)
+## To define
 - ~~Jokers or lifelines?~~ Five jokers, unlimited (D-26, D-27, `09-jokers.md`). No timer (D-30).
 - The answer is judged automatically (multiple choice, D-7). The gamemaster can undo it from the admin overlay.
 

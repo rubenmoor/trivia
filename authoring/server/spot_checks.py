@@ -21,11 +21,12 @@ def sample(batch):
 
 
 def run_ids(run):
-    """The ids of a back-audit run (plan 57), or None for any other name."""
-    if not re.fullmatch(r"backaudit-\d+", run):
+    """The ids of a back-audit (plan 57) or neutralize run (plan 64), or None for any other name."""
+    m = re.fullmatch(r"(backaudit|neutralize)-\d+", run)
+    if not m:
         return None
     cfg = qgen.load_json(qgen.WORK / run / "run.json", {}) or {}
-    return cfg.get("ids") if cfg.get("mode") == "backaudit" else None
+    return cfg.get("ids") if cfg.get("mode") == m.group(1) else None
 
 
 def load():

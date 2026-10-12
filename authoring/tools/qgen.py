@@ -18,6 +18,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
+    qgen neutralize [--dry-run]     # reword Colombian usage in base into neutral Spanish (plan 64)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
@@ -1581,7 +1582,8 @@ def qc_trend(pool=None):
     """Markdown table: one column per batch with a spot check or audit (plan 16); [] without any."""
     checks = load_json(layout.SPOT_CHECKS, {}) or {}
     runs = sorted({*checks, *(p.parent.parent.name for p in [*WORK.glob("batch-*/audit/q-*.json"),
-                                                             *WORK.glob("backaudit-*/audit/q-*.json")])},
+                                                             *WORK.glob("backaudit-*/audit/q-*.json"),
+                                                             *WORK.glob("neutralize-*/audit/q-*.json")])},
                   key=lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0)
     if not runs:
         return []
@@ -1956,7 +1958,7 @@ def cmd_review(args):
     pool = load_json(POOL)["questions"]
     system = prompt("house-style", "review")
     mode = run_mode(args.run)
-    rework = mode in ("rework", "tighten")
+    rework = mode in ("rework", *SCANS)
     todo = []
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
@@ -1979,7 +1981,7 @@ def cmd_review(args):
             "background": slot_input(d, q, "background") if q.get("background") else None,
             "can_search_again": args.round == 1,
             "can_fix": args.round == 1 and not rework,
-            "only_shortened": mode == "tighten",
+            "only_shortened": mode in SCANS,  # already in the game, only reworded
         }
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
@@ -2012,7 +2014,8 @@ def cmd_fix(args):
     go back to draft, are all fact-checked and reviewed again, with a new media search if needed."""
     d = run_dir(args)
     rework = is_rework(args.run)
-    tighten = load_json(d / "run.json", {}).get("issues") if run_mode(args.run) == "tighten" else None
+    mode = run_mode(args.run)
+    scanned = load_json(d / "run.json", {}).get("issues") if mode in SCANS else None
     tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
     _, checks = collect(d)
     system = prompt("house-style", "revise")
@@ -2022,7 +2025,7 @@ def cmd_fix(args):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         fix = r.get("fix")
-        if fix is None and (issue := f"too long: {tighten[q['id']]}" if tighten else fix_issue(q, r, rework)):
+        if fix is None and (issue := f"{SCANS[mode]['issue']}: {scanned[q['id']]}" if scanned else fix_issue(q, r, rework)):
             revise.append((q, path, r, issue))
         elif fix and "factcheck" not in fix and needs_recheck(fix, rework):
             recheck.append((q, path, r))
@@ -2052,7 +2055,7 @@ def cmd_fix(args):
                 def change(x, rev=rev, fix=fix):
                     if fix["action"] == "revise":
                         changed.extend(revise_in_pool(x, rev["question"], rev["reason"], today))
-                    if rework or tighten:
+                    if rework or scanned:
                         x["status"], x["review"] = "draft", None
                 with _pool_lock:
                     update_pool({q["id"]: change})
@@ -2265,17 +2268,18 @@ _backaudits = ((), {})  # (folders with mtimes, index)
 
 
 def backaudit_index():
-    """{id: path} of the back-audits (plan 57), newest run wins; rebuilt only when a run's audit folder changes."""
+    """{id: path} of the back-audits (plan 57) and neutralize runs' audits (plan 64), newest file wins; rebuilt only when a run's audit folder changes."""
     global _backaudits
-    dirs = sorted(WORK.glob("backaudit-*/audit"), key=lambda p: run_number(p.parent.name))
+    dirs = sorted([*WORK.glob("backaudit-*/audit"), *WORK.glob("neutralize-*/audit")], key=lambda p: p.stat().st_mtime_ns)
     key = tuple((p, p.stat().st_mtime_ns) for p in dirs)
     if _backaudits[0] != key:
-        _backaudits = (key, {f.stem: f for p in dirs for f in sorted(p.glob("q-*.json"))})
+        files = sorted((f for p in dirs for f in p.glob("q-*.json")), key=lambda f: f.stat().st_mtime_ns)
+        _backaudits = (key, {f.stem: f for f in files})
     return _backaudits[1]
 
 
 def audit_path(q):
-    """The question's audit file: the newest back-audit, else its batch's (plan 16); None without."""
+    """The question's audit file: the newest back-audit or neutralize audit, else its batch's (plan 16); None without."""
     p = backaudit_index().get(q["id"])
     if p is None and q.get("batch"):
         p = WORK / q["batch"] / "audit" / f"{q['id']}.json"
@@ -2712,30 +2716,46 @@ def cmd_rework(args):
           f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
 
 
-TIGHTEN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {
+SCAN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {
     "type": "object", "required": ["id", "issue"], "properties": {"id": STR, "issue": STR}}}}}
+NEUTRAL_FIELDS = ["description", "question", "answer", "wrong_answers", "hints", "fun_fact"]
+SCANS = {  # run mode: scan prompt, questions read, their input, the reviser's issue prefix (QG-24, plan 64)
+    "tighten": {"prompt": "tighten", "bundle": None, "issue": "too long", "schema": SCAN_SCHEMA,
+                "item": lambda q: {"id": q["id"], "clue": (q.get("axes") or {}).get("clue"), "question": q["question"]}},
+    "neutralize": {"prompt": "neutralize", "bundle": "base", "issue": "not neutral Spanish",
+                   "schema": {**SCAN_SCHEMA, "required": ["flagged", "no_neutral_form"], "properties": {
+                       **SCAN_SCHEMA["properties"], "no_neutral_form": {"type": "array", "items": {
+                           "type": "object", "required": ["id", "words"], "properties": {"id": STR, "words": STR}}}}},
+                   "item": lambda q: {"id": q["id"], **{k: q[k] for k in NEUTRAL_FIELDS}}},
+}
 
 
 def cmd_scan(args):
-    """Claude reads every approved and needs_work question text and flags long-winded ones (QG-24)."""
+    """Claude reads every approved and needs_work question of the run's scope in chunks of 50 and flags
+    those its mode's prompt asks for (SCANS); run.json gets their ids and issues."""
     d = run_dir(args)
-    if "issues" in load_json(d / "run.json", {}):
+    cfg = load_json(d / "run.json", {})
+    if "issues" in cfg:
         return []
-    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")]
+    scan, only = SCANS[cfg["mode"]], set(cfg.get("only") or [])
+    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")
+          and (not scan["bundle"] or (q.get("bundle") or "base") == scan["bundle"]) and (not only or q["id"] in only)]
     groups = [g for g in chunks(qs, 50) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
-    system = prompt("house-style", "tighten")
+    system = prompt("house-style", scan["prompt"])
 
     def work(group):
-        items = [{"id": q["id"], "clue": (q.get("axes") or {}).get("clue"), "question": q["question"]} for q in group]
-        out = claude(system, "## Questions\n" + json.dumps(items, ensure_ascii=False), TIGHTEN_SCHEMA, args.model, d)
+        items = [scan["item"](q) for q in group]
+        out = claude(system, "## Questions\n" + json.dumps(items, ensure_ascii=False), scan["schema"], args.model, d)
         ids = {q["id"] for q in group}
         save_json(d / "scan" / f"{group[0]['id']}.json", [f for f in out["flagged"] if f["id"] in ids])
+        if "no_neutral_form" in out:
+            save_json(d / "scan" / "no-neutral-form" / f"{group[0]['id']}.json",
+                      [f for f in out["no_neutral_form"] if f["id"] in ids])
 
     errors = parallel(work, groups, args.jobs, "scan", "calls")
     if not errors:
         flagged = [f for p in sorted((d / "scan").glob("*.json")) for f in load_json(p)]
-        cfg = load_json(d / "run.json")
-        save_json(d / "run.json", {**cfg, "ids": [f["id"] for f in flagged],
+        save_json(d / "run.json", {**cfg, "ids": [f["id"] for f in flagged], "scanned": len(qs),
                                    "issues": {f["id"]: f["issue"] for f in flagged}})
         print(f"  {len(flagged)} of {len(qs)} questions flagged", flush=True)
     return errors
@@ -2782,6 +2802,125 @@ def cmd_tighten(args):
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
     print("Commit exactly this:\n  git add authoring/data/questions.json app/data/pool.json\n"
           f"  git commit -m \"{run}: {len(revised)} long-winded questions shortened, {n_ok} approved (qgen tighten)\"")
+
+
+def cmd_neutralize(args):
+    """Rewrite Colombian and other national wording in `base` into neutral Spanish (plan 64, D-78):
+    scan → fix → review → record → audit → export, like `qgen tighten`. --dry-run: the scan only, then
+    the flagged ids and a cost estimate; the next run continues from that scan."""
+    open_runs = sorted((p.parent.name for p in WORK.glob("neutralize-*/run.json") if not load_json(p).get("done")),
+                       key=run_number)
+    if open_runs:
+        run = open_runs[0]
+        print(f"Resuming {run}" + (" (--ids ignored)" if args.ids else "") + ".", flush=True)
+    else:
+        run = f"neutralize-{max((run_number(p.name) for p in WORK.glob('neutralize-*')), default=0) + 1}"
+        only = [i.strip() for i in (args.ids or "").split(",") if i.strip()]
+        save_json(WORK / run / "run.json", {"mode": "neutralize", "started": datetime.date.today().isoformat(),
+                                            **({"only": only} if only else {})})
+        print(f"Starting {run}: reading the base bundle" + (f" ({len(only)} ids)" if only else "") + ".", flush=True)
+    d = WORK / run
+    progress.verbose = False
+
+    def ns(**kw):
+        return argparse.Namespace(run=run, jobs=args.jobs, **kw)
+
+    again = "qgen neutralize" + (" --dry-run" if args.dry_run else "")
+    t0 = run_steps([("scan", cmd_scan, ns(model="opus"))], again, run)
+    cfg = load_json(d / "run.json")
+    if args.dry_run:
+        print_neutralize_scan(run)
+        return []
+    if cfg["ids"]:
+        run_steps([
+            ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
+            ("media", cmd_media, ns()),
+            ("sheets", cmd_sheets, ns()),
+            ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+            ("research", cmd_research, ns()),
+            ("sheets", cmd_sheets, ns()),
+            ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
+            ("record", cmd_record, ns()),
+            ("audit", lambda a: cmd_audit(a) if load_json(d / "recorded.json") else [], ns(model="opus", batch=run)),
+            ("export", lambda a: cmd_export(a) or [], ns()),
+            ("sync", cmd_sync_run, ns()),
+        ], "qgen neutralize", run)
+    cfg = load_json(d / "run.json")
+    save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
+    revised = [i for i in cfg["ids"] if fixed(load_json(d / "reviews" / f"{i}.json", {}))]
+    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
+    out = write_neutralize_report(run, revised)
+    print(f"\nDone: {run}: {len(cfg['ids'])} flagged, {len(revised)} reworded, {n_ok} of those approved, "
+          f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
+    files = ["authoring/data/questions.json", "app/data/pool.json", out.relative_to(ROOT).as_posix()]
+    for l in translations.LOCALES:
+        if translations.path(l).exists():
+            src = translations.load(l)["questions"]
+            n = sum(t["id"] in by_id and translations.is_stale(t, by_id[t["id"]]) for t in src if t["id"] in revised)
+            print(f"  {l}: {n} translation(s) stale from this run (D-81)")
+            files.append(layout.LOCALE_POOL(l).relative_to(ROOT).as_posix())
+    print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
+          f"  git commit -m \"{run}: {len(revised)} base questions reworded into neutral Spanish, {n_ok} approved (qgen neutralize)\"")
+    return []
+
+
+def scan_extras(run):
+    """[{id, words}] the neutralize scan found no neutral form for (plan 64)."""
+    return [f for p in sorted((WORK / run / "scan" / "no-neutral-form").glob("*.json")) for f in load_json(p)]
+
+
+def print_neutralize_scan(run):
+    """--dry-run: flagged ids with their issues, words without a neutral form, cost estimate."""
+    cfg = load_json(WORK / run / "run.json")
+    ids, issues = cfg["ids"], cfg["issues"]
+    print(f"\n{run}: {len(ids)} of {cfg['scanned']} base questions flagged")
+    for i in ids:
+        print(f"- {i}: {issues[i]}")
+    extras = scan_extras(run)
+    if extras:
+        print(f"\nNo neutral form ({len(extras)}, left as they are):")
+        for f in extras:
+            print(f"- {f['id']}: {f['words']}")
+    scan = sum(costs(WORK / run / "costs.log"))
+    past = [(p.parent, c) for p in WORK.glob("*/run.json") if (c := load_json(p)) and c.get("done")
+            and c.get("mode") in ("rework", *SCANS) and c.get("ids")]
+    n = sum(len(c["ids"]) for _, c in past)
+    per_q = sum(sum(costs(p / "costs.log")) for p, _ in past) / n if n else None
+    audit = [x for p in WORK.glob("*/audit/costs.log") for x in costs(p)]
+    per_audit = sum(audit) / len(audit) if audit else 0
+    if per_q is None:
+        print(f"\nScan: ${scan:.2f}. No finished rework/tighten run yet to estimate the rest from.")
+    else:
+        rest = per_q * len(ids) + per_audit * min(AUDIT_SAMPLE, len(ids))
+        print(f"\nScan: ${scan:.2f}. Estimated rest: about ${rest:.2f} at list price "
+              f"(${per_q:.2f} per flagged question from past rework/tighten runs, "
+              f"${per_audit:.2f} per audit call × {min(AUDIT_SAMPLE, len(ids))}).")
+    print("Run `qgen neutralize` to reword them; it continues from this scan.")
+
+
+def write_neutralize_report(run, revised):
+    """authoring/reports/<run>.md (plan 64); `qgen report --qc <run>` adds its QC section."""
+    cfg = load_json(WORK / run / "run.json")
+    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    work = [i for i in revised if i in by_id and by_id[i]["status"] == "needs_work"]
+    c = costs(WORK / run / "costs.log") + costs(WORK / run / "audit" / "costs.log")
+    lines = [f"# {run}", "",
+             f"Made by `qgen neutralize` on {datetime.date.today().isoformat()} (plan 64, D-78): `base` questions "
+             "reworded from Colombian or other national usage into neutral Spanish. Generated file: don't edit by hand.", "",
+             f"- Scanned: {cfg.get('scanned', 0)}", f"- Flagged: {len(cfg['ids'])}", f"- Reworded: {len(revised)}",
+             f"- Approved: {len(revised) - len(work)}", f"- Needs work: {len(work)}",
+             f"- Claude calls: {len(c)}, about ${sum(c):.2f} at list price", "",
+             "## Reworded", ""]
+    lines += [f"- **{i}**: {cfg['issues'][i]}" for i in revised] or ["None."]
+    lines += ["", "## No neutral form", ""]
+    lines += [f"- {f['id']}: {f['words']}" for f in scan_extras(run)] or ["None."]
+    lines += ["", *audit_section(run), *qc_section(run), "## Needs work", ""]
+    lines += [f"- **{i}** {by_id[i]['question']} → {by_id[i]['answer']}: {by_id[i]['review']['feedback']}" for i in work] or ["None."]
+    out = layout.REPORTS / f"{run}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return out
 
 
 # --- export (D-35) --------------------------------------------------------------
@@ -3193,6 +3332,11 @@ def main():
     tg = sub.add_parser("tighten", help="find long-winded questions in the whole pool, shorten and review them (QG-24)")
     tg.set_defaults(fn=cmd_tighten)
     tg.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
+    nz = sub.add_parser("neutralize", help="reword Colombian usage in base into neutral Spanish (plan 64); only when the gamemaster asks")
+    nz.set_defaults(fn=cmd_neutralize)
+    nz.add_argument("--dry-run", action="store_true", help="scan only: flagged ids, issues and a cost estimate")
+    nz.add_argument("--ids", help=argparse.SUPPRESS)  # debugging: scan only these ids (new run only)
+    nz.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     b = sub.add_parser("batch", help="the whole pipeline for one new batch (authoring/RUNBOOK.md)")
     b.set_defaults(fn=cmd_batch)
     b.add_argument("--bundle", default="base", help="write for this bundle (default base); only when the user names one")

@@ -1,8 +1,12 @@
 # Open Questions
 
-Answer each question here, then record the resulting decision in `decisions.md` and mark the question as resolved.
+Frozen on 2026-10-12: this file is history. New questions for the gamemaster are `pm` decisions (`pm decision add`, see `pm instructions`); answers that set a lasting rule still go to `decisions.md`. Old OQ ids stay valid where they are cited. The four questions below were still open when the file was frozen; the `pm` plan or task named with each one raises it as a `pm` decision.
 
-## Open
+## Open when frozen
+- OQ-45 (Freesound): plan 42, tasks 204–205
+- OQ-33 (price, account): plan 39, tasks 193–194
+- OQ-35 (licence): plan 40, tasks 198–199
+- OQ-46 (`colombia` subcategories): task 249 (write plan: Regional packs)
 
 ### Added 2026-10-08 (media providers, D-45, [`23`](23-media-providers.md))
 - **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
