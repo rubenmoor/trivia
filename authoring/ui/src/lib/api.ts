@@ -24,6 +24,8 @@ export interface QuestionFilter {
   sample?: string | null;
   /** "flagged" = audited with a major finding (plan 16). */
   audit?: "flagged" | null;
+  /** "replace": not rejected, a picked file on the licence replacement list (plan 53). */
+  licence?: "replace" | null;
 }
 
 export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Question[]> {
@@ -46,9 +48,9 @@ export async function pickMedia(id: string, index: number, slot: Slot = "media")
   return post(`/api/questions/${encodeURIComponent(id)}/media`, { index, slot });
 }
 
-/** Save a new search term for the slot and fetch fresh candidates from Commons. */
-export async function searchMedia(id: string, query: string, slot: Slot = "media"): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/media/search`, { query, slot });
+/** Save a new search term for the slot and fetch fresh candidates; `all`: ask every provider (plan 53). */
+export async function searchMedia(id: string, query: string, slot: Slot = "media", all = false): Promise<Question> {
+  return post(`/api/questions/${encodeURIComponent(id)}/media/search`, { query, slot, all });
 }
 
 /** The question bundles (app/data/bundles.json, D-39). */

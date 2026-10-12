@@ -5,8 +5,27 @@ import type { Background as PlayBackground, Media as PlayMedia, Status } from "$
 export type { Category, Status } from "$app/lib/types";
 export type Decision = Exclude<Status, "draft">;
 
+/** A picked file's licence record (plan 26); missing on slots picked before it. */
+export interface LicenceRecord {
+  provider?: string;
+  license?: string | null;
+  license_url?: string | null;
+  author?: string | null;
+  author_url?: string | null;
+  /** Commons restriction flags: information only, never a reason to replace (D-61). */
+  restrictions?: string[];
+  /** PD templates of a public-domain file (D-62). */
+  pd_reasons?: string[];
+}
+
+/** providers.licence_verdict of a picked slot (plan 53); reasons are "code: text". */
+export interface LicenceVerdict {
+  verdict: "ok" | "replace";
+  reasons: string[];
+}
+
 /** The play fields plus the search spec used by `trivia-media fetch`. */
-export interface Media extends PlayMedia {
+export interface Media extends PlayMedia, LicenceRecord {
   query: string;
   note: string | null;
 }
@@ -33,7 +52,7 @@ export interface MediaCandidate {
 }
 
 /** Background image for audio questions (D-14). */
-export interface Background extends PlayBackground {
+export interface Background extends PlayBackground, LicenceRecord {
   query: string;
 }
 
@@ -138,6 +157,8 @@ export interface Question {
   /** Added by the server: null when candidates were never fetched. */
   media_candidates: MediaCandidate[] | null;
   background_candidates: MediaCandidate[] | null;
+  /** Added by the server: per picked slot; unpicked slots left out. */
+  licence: Partial<Record<Slot, LicenceVerdict>>;
 }
 
 /** A question bundle (app/data/bundles.json, D-39). */
@@ -173,6 +194,8 @@ export interface Overview {
     drafts: number;
     approved_without_media: number;
     not_cached: number;
+    /** Questions on the licence replacement list (plan 53). */
+    licence_replace: number;
     bundles: { id: string; name: string; questions: number; unreviewed: number }[];
   };
   llm_approved: number;

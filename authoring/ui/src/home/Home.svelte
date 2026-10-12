@@ -58,6 +58,11 @@
         text: `approved ${q.approved_without_media === 1 ? "question" : "questions"} without picked media`,
         href: review({ status: "approved", media: "missing" }),
       },
+      {
+        count: q.licence_replace,
+        text: `${q.licence_replace === 1 ? "question" : "questions"} with a licence to replace: pick new media files`,
+        href: review({ licence: "replace" }),
+      },
       ...q.bundles.map((b) => ({
         count: b.unreviewed,
         text: `of ${b.questions} questions in the bundle ${b.name} without a human review: check they belong there`,

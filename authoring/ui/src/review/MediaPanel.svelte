@@ -1,9 +1,9 @@
 <script lang="ts">
   // One media slot (the question's media, or the background of an audio question, D-14):
   // what is picked or suggested, plus the alternatives from the media providers (plans/06-images.md, D-45).
-  import type { MediaCandidate } from "../lib/types";
+  import type { LicenceRecord, LicenceVerdict, MediaCandidate } from "../lib/types";
 
-  interface Slot {
+  interface Slot extends LicenceRecord {
     type: "image" | "audio" | "video";
     query: string;
     note?: string | null;
@@ -17,6 +17,7 @@
     slot,
     decorative,
     candidates,
+    licence,
     showCandidates,
     toggleKey,
     working,
@@ -26,6 +27,8 @@
     /** Decorative images get the blurred "?" overlay, as on the TV (D-15). */
     decorative: boolean;
     candidates: MediaCandidate[] | null;
+    /** The picked file's verdict (plan 53); undefined when nothing is picked. */
+    licence: LicenceVerdict | undefined;
     showCandidates: boolean;
     toggleKey: string;
     working: boolean;
@@ -48,6 +51,29 @@
     const p = PROVIDERS[c.provider ?? "commons"] ?? c.provider;
     return c.source ? `${c.source} via ${p}` : p;
   }
+
+  /** providers.licence_verdict reasons ("code: text") in words. */
+  const REASONS: Record<string, string> = {
+    "pd-us-only": "PD-US only",
+    "off-allowlist": "not on the licence allowlist",
+    "missing-data": "licence data missing",
+    "pd-no-reason": "no PD template",
+  };
+  function reason(r: string) {
+    const [code, ...rest] = r.split(": ");
+    return REASONS[code] ? `${REASONS[code]} (${rest.join(": ")})` : r;
+  }
+
+  /** Licence, PD templates and restriction flags; restrictions are info only (D-61). */
+  const licenceInfo = $derived(
+    [
+      slot.license,
+      slot.pd_reasons?.length && `PD: ${slot.pd_reasons.join(", ")}`,
+      slot.restrictions?.length && `restrictions (info): ${slot.restrictions.join(", ")}`,
+    ]
+      .filter(Boolean)
+      .join(" · "),
+  );
 
   function size(c: MediaCandidate) {
     if (c.type === "audio") return c.duration ? `${Math.round(c.duration)} s` : "";
@@ -82,6 +108,8 @@
         <video controls src={fileUrl}></video>
       {/if}
       {#if slot.credit}<p class="credit">{slot.credit}</p>{/if}
+      {#if licence?.verdict === "replace"}<p class="replace">replace: {licence.reasons.map(reason).join("; ")}</p>{/if}
+      {#if licenceInfo}<p class="credit">{licenceInfo}</p>{/if}
     {:else if suggestion}
       {#if suggestion.type === "image"}
         <div class="frame" class:decorative>
@@ -187,6 +215,11 @@
     margin: 0.3rem 0 0;
     font-size: 0.8rem;
     color: var(--muted);
+  }
+  .replace {
+    margin: 0.3rem 0 0;
+    font-weight: 700;
+    color: var(--bad);
   }
   .muted {
     color: var(--muted);

@@ -20,7 +20,7 @@
   import RevisionPanel from "./RevisionPanel.svelte";
 
   // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
-  // media=missing (RV-13); status=!approved is every question that isn't
+  // media=missing (RV-13), licence=replace (plan 53); status=!approved is every question that isn't
   // approved, across batches (RV-22, D-47). The id follows the current question, so a reload (or a bookmark) comes
   // back to it. Decisions themselves live in authoring/data/questions.json.
   // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
@@ -42,7 +42,10 @@
     media: params.get("media"),
     sample: sampleMode ? "1" : null,
     audit: params.get("audit"),
+    licence: params.get("licence"),
   } as QuestionFilter;
+  /** The licence queue (plan 53): searches ask every provider. */
+  const licenceMode = filter.licence === "replace";
   /** The active filters in words, for the empty and summary screens. */
   const filterText = [
     batch && `batch “${batch}”`,
@@ -54,6 +57,7 @@
     filter.media === "missing" && "without media",
     sampleMode && "spot-check sample",
     filter.audit === "flagged" && "flagged by the audit",
+    licenceMode && "licence to replace",
   ]
     .filter(Boolean)
     .join(", ");
@@ -110,11 +114,13 @@
   /** Decided in this session: with a status filter, a question is open until it gets one (RV-22). */
   let decidedNow = $state<Set<string>>(new Set());
   /** Open until a human has reviewed it: drafts and LLM-reviewed questions (D-33). In the media queue
-   *  (media=missing) a question stays open until it has picked media, whoever reviewed it. With a
+   *  (media=missing) a question stays open until it has picked media, whoever reviewed it; in the licence
+   *  queue until no slot is still "replace" (plan 53). With a
    *  status filter the list is one pass over questions that may already have a human review. */
   const isOpen = (q: Question) =>
     sampleMode ? !spotItems[q.id]
       : filter.media === "missing" ? !q.media.file_url
+      : licenceMode ? Object.values(q.licence).some((v) => v.verdict === "replace")
       : filter.status ? !decidedNow.has(q.id) : q.review?.reviewer !== "human";
 
   const current = $derived(questions[index]);
@@ -300,7 +306,7 @@
     mediaWorking = true;
     try {
       questions[i] = await run();
-      flash(label);
+      flash(licenceMode && !questions.some(isOpen) ? `${label} · licence list empty` : label);
     } catch (e) {
       reportError(`${what} for ${questions[i]?.id}`, e);
     } finally {
@@ -333,7 +339,7 @@
     const slot = searchSlot;
     searchOpen = false;
     openSlot = slot;
-    mediaAction("🔍 new candidates", `searching for “${query}”`, () => searchMedia(id, query, slot));
+    mediaAction("🔍 new candidates", `searching for “${query}”`, () => searchMedia(id, query, slot, licenceMode));
   }
 
   function startDifficulty() {
@@ -470,11 +476,16 @@
   {:else if questions.length === 0}
     <p class="center">
       {singleId ? `No question “${singleId}”` : `No questions${filterText ? `: ${filterText}` : ""}`}.
+      {#if licenceMode}The licence list is empty; <code>trivia-media licenses</code> should say so too.{/if}
     </p>
   {:else if finished}
     <section class="summary">
       <Nav current="review" />
       <h1>All done{filterText ? `: ${filterText}` : ""}</h1>
+      {#if licenceMode}
+        <p>The licence list is empty: every file in it has a clean pick. Check with <code>trivia-media licenses</code>,
+          then drop the old files with <code>trivia-media sync --status approved --prune</code>.</p>
+      {/if}
       <ul>
         <li><b>{counts.approved}</b> approved</li>
         <li><b>{counts.needs_work}</b> need work</li>
@@ -564,6 +575,7 @@
         slot={current.media}
         decorative={current.media.role === "decorative"}
         candidates={current.media_candidates ?? null}
+        licence={current.licence.media}
         showCandidates={openSlot === "media"}
         toggleKey="c"
         working={mediaWorking && searchSlot === "media"}
@@ -574,6 +586,7 @@
           slot={{ type: "image", ...current.background }}
           decorative={true}
           candidates={current.background_candidates ?? null}
+          licence={current.licence.background}
           showCandidates={openSlot === "background"}
           toggleKey="b"
           working={mediaWorking && searchSlot === "background"}
@@ -632,7 +645,9 @@
           <input
             bind:this={searchBox}
             bind:value={searchText}
-            placeholder="Search term (English works best; Commons first, then the other sources)"
+            placeholder={licenceMode
+              ? "Search term (English works best; every source, for a licence replacement)"
+              : "Search term (English works best; Commons first, then the other sources)"}
           />
           <p class="muted">Enter: search · Esc: cancel · 2–4 concrete words work best</p>
         </div>

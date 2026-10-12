@@ -37,7 +37,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 
 ## Commands
 Dev shell from the flake: `direnv allow` or `nix develop`. Human how-tos: `README.md`.
-- `trivia` (game, :8000), `trivia-authoring` (authoring pages, :8001)
+- `trivia` (game, :8000), `trivia-authoring` (authoring pages, :8001); `/review?licence=replace`: media files to replace (licence)
 - `trivia-desktop` (Electron shell), `trivia-desktop-build` (Windows zip + Linux tar.gz → `app/desktop/release/`)
 - `npm run build`, `npm run check` (type-check), `npm run dev -w app/client|authoring/ui`
 - `qgen validate` (also flags a stale `app/data/pool.json`), `qgen export`, `qgen report` (`-h` for its options); `qgen report --cost` for $ per approved and the projection per language
