@@ -19,6 +19,7 @@ A new step in `authoring/tools/qgen.py`, reusing the existing steps:
 
 - Only `approved` source questions are translated. A source question that changes later marks its translations `stale` (`validate` reports them).
 - `costs.log` gives the cost per translated question; budget it before a full run (CT-3).
+- Planned in pm plan 66 (`plan 66: Translation pipeline (QT-2, QT-3)`): entry point `qgen batch --translate <locale>`, runs `tr-<locale>-<n>`, first run per locale = 50-question pilot (QT-5), then a stop until `qgen health ack`; new prompts by pm decision.
 
 ## Storage (decided: D-81)
 Option A is decided in D-81; the options below are kept as history.
