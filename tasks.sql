@@ -6061,14 +6061,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - SW-5 stays `[ ]` (task 332).
 
 Done when: the checks above pass and the docs match the code.', '2026-10-12T03:48:57Z', '2026-10-12T21:18:12Z', 323);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (331, 56, 'Local builds: start test checklist and decision', 'work', 'open', NULL, NULL, 'Part 3 of plan 56. Needs task 330 done; if not, stop and say so.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (331, 56, 'Local builds: start test checklist and decision', 'work', 'done', NULL, '2026-10-12, plans/18-steam-integration.md (section ''Local build start test''); pm decision 39 ''Local builds start offline?'', task 332 pending on it. Plan 48: merge this section into the S3 platform test.', 'Part 3 of plan 56. Needs task 330 done; if not, stop and say so.
 
 - `plans/18-steam-integration.md`: section "Local build start test" after "Builds and depots": how to get the artefacts (command, or zip/tar.gz copied over); one table per machine — Windows x64 without Node/Python, Linux x64 without Nix (e.g. Ubuntu 24.04) — columns check | result | note.
 - Rows: network off before unpacking; unpack and start (Windows SmartScreen «More info → Run anyway» expected; `./trivia` on Linux); fullscreen, F11 toggles; keyboard game to level 3 with an image, audio and video question and sound; quit and restart keeps the player; save at `%APPDATA%\trivia\save\game.json` / `~/.config/trivia/save/game.json`; `CREDITS.md` in the folder; no console window (Windows).
 - Plan 48 merges this into its S3 platform test: link it in this task''s done note, don''t edit plan 48.
 - `did=$(pm decision add "Local builds start offline?" --body "<checklist, build commit>" --option "both pass" --option "issues (fill the tables)")`; `pm task-pending-decision 332 "$did"`.
 
-Done when: section written and task 332 waits on the decision.', '2026-10-12T03:48:58Z', NULL, 323);
+Done when: section written and task 332 waits on the decision.', '2026-10-12T03:48:58Z', '2026-10-12T21:18:49Z', 323);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (332, 56, 'Local builds: record the start test', 'work', 'open', NULL, NULL, 'Part 4 of plan 56. Waits for the decision task 331 creates ("Local builds start offline?"); if none is linked or it''s still pending, stop and say so.
 
 - Fill the tables in `plans/18-steam-integration.md` "Local build start test" (date, build commit) from the answer.
@@ -10130,6 +10130,21 @@ index 0000000..381cb7f
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (36, 'GameRow.locale: written only for non-es games?', 'answered', '[]', 'Keeps the family''s saves and the Python fixture replay byte-identical (plan 68: the family''s game stays as today). The lib layer runs ''new'' on the language''s pool (scope next), every other route on the newest game''s locale; newGame throws if the pool''s locale differs from language.questions.', 'Yes: newGame writes locale only when it isn''t es; missing = es', NULL, '2026-10-12T19:41:19Z', '2026-10-12T19:41:19Z', 449, NULL, 'rule', 449, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (37, 'Per-locale content targets and gap aiming', 'answered', '[]', 'Plan 70 (CT-4). D-75 fixes one mix for every language; the simulation is information only (pm decision 21); per-level mix already covers age-group windows (D-76). Translations can only fill a locale from es sources, so the source shortfall is the one new input to D-54''s weights.', 'Every launch language uses targets.json base''s numbers (D-75), deficits counted per locale; no per-mode, per-age-group or per-preset targets; simulation bottlenecks are information; once es meets its target, the en/de source shortfall drives es drafting', NULL, '2026-10-12T19:46:07Z', '2026-10-12T19:46:07Z', 248, NULL, 'rule', 248, '2026-10-12, task 462: 2026-10-12, task 462: targets.deficits(..., locale), source_supply/source_shortfall/draft_gaps in targets.py; target_weights and batches.subcategories use draft_gaps; qgen report --locale, --simulate target check, --cost (es sources past target) per locale; D-84 in plans/decisions.md; --translate weight is task 464.');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (38, 'Base bundles and bundle languages', 'answered', '[]', 'Plan 71, D-85 in plans/decisions.md. Supersedes D-68''s ''every always_on bundle is always on'' and its auto-adding of base: [] and [colombia] are refused (base_bundle_count). A bundle not listed for the game''s locale is refused (bundle_not_offered). qgen validate: errors for missing/invalid languages, leftover always_on, unknown kind, a launch language without a base bundle; warnings for listed bundles without approved questions in pool.<locale>.json and approved questions of unlisted bundles.', 'kind: base replaces always_on; exactly one base bundle per session; bundles offered per languages; default = the locale''s first base bundle plus every non-base bundle offered in the locale; stored choices that no longer resolve read as the locale''s defaults (never written back)', NULL, '2026-10-12T20:39:19Z', '2026-10-12T20:39:19Z', 481, NULL, 'rule', 481, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (39, 'Local builds start offline?', 'pending', '["both pass", "issues (fill the tables)"]', 'Start test of the local desktop builds (SW-5, plan 56), build commit 06c39dc (version 0.1.0).
+Artefacts: `trivia-desktop-build` → app/desktop/release/Trivia-0.1.0-win-x64.zip and Trivia-0.1.0-linux-x64.tar.gz (or copy those over).
+Checklist and tables to fill: plans/18-steam-integration.md, section "Local build start test".
+
+Windows x64 without Node/Python, and Linux x64 without Nix (e.g. Ubuntu 24.04):
+- Network off before unpacking
+- Unpack and start: Trivia.exe (SmartScreen «More info → Run anyway» expected) / ./trivia
+- No console window (Windows)
+- Starts fullscreen; F11 toggles
+- Keyboard-only game to level 3 with an image, an audio and a video question; sound plays
+- «Salir del juego», restart: player still there
+- Save at %APPDATA%\trivia\save\game.json / ~/.config/trivia/save/game.json
+- CREDITS.md in the folder (n/a until plan 47)
+
+On issues: name the failing rows and machine (or fill the tables in the plan file).', NULL, NULL, '2026-10-12T21:18:46Z', NULL, 331, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -10478,6 +10493,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (341, 481, '2026-10-12T20:38:42Z', '2026-10-12T20:39:27Z', 'done', NULL, 0, '3d148b3214bcd4415a712b73a834cc0422b76938', 'claude-opus-5-5[1m]', 'd7429685-d5e6-45f3-b798-32f703bb6296', 8, 16, 4511, 277852, 32938, 0.40935839999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (342, 490, '2026-10-12T20:39:28Z', '2026-10-12T20:43:38Z', 'done', NULL, 0, 'ad9a8aefe5618354fb49843a04b9896b099524bb', 'claude-opus-5-5[1m]', 'f410c10a-7409-45ef-9667-a65b33c44644', 34, 66, 17365, 2023326, 69414, 1.3075412000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (343, 330, '2026-10-12T20:43:38Z', '2026-10-12T21:18:24Z', 'done', NULL, 0, 'e94b1ce3bfe332a8a88da278ec6d0324a923d782', 'claude-opus-5-5[1m]', '1b471262-f2f4-419c-b722-e7d58e95779f', 57, 114, 30148, 4933320, 129443, 2.625624, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (344, 331, '2026-10-12T21:18:24Z', '2026-10-12T21:18:56Z', 'done', NULL, 0, '06c39dc94881b2728077d1570fc2dbd5fc4ce8b5', 'claude-opus-5-5[1m]', '63cf4ac6-5323-4077-bdd2-ba11fad0e0ad', 9, 14, 3137, 226793, 30256, 0.35020260000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -10540,6 +10556,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (248, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (248, 21);
 INSERT INTO task_decision (task_id, decision_id) VALUES (248, 23);
 INSERT INTO task_decision (task_id, decision_id) VALUES (248, 26);
+INSERT INTO task_decision (task_id, decision_id) VALUES (332, 39);
 INSERT INTO task_decision (task_id, decision_id) VALUES (333, 14);
 INSERT INTO task_decision (task_id, decision_id) VALUES (336, 15);
 INSERT INTO task_decision (task_id, decision_id) VALUES (339, 15);

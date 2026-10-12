@@ -44,6 +44,39 @@ Local builds since S3 (SW-5, D-73); CI (SW-6) and Steam uploads come later. One 
 - Later (S5): **branches:** `default` (public) and a password-protected `beta`. The family plays the beta first.
 - CI (SW-6): pm decision 14.
 
+## Local build start test
+The gamemaster's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Plan 48 merges it into the S3 platform test. Fill one table per machine, with date and build commit.
+- **Artefacts:** `trivia-desktop-build` → `app/desktop/release/Trivia-<version>-win-x64.zip`, `Trivia-<version>-linux-x64.tar.gz`; or copy those two files over (USB stick, ~2.5 GB each).
+- **Machines:** Windows x64 without Node/Python; Linux x64 without Nix (e.g. Ubuntu 24.04).
+- **Result:** ✓, ✗ or n/a; a ✗ gets a note on how to reproduce.
+
+### Windows x64
+Date: · Build commit:
+
+| check | result | note |
+|---|---|---|
+| Network off before unpacking | | |
+| Unpack the zip, start `Trivia.exe` (SmartScreen «More info → Run anyway» expected: unsigned) | | |
+| No console window | | |
+| Starts fullscreen; F11 toggles | | |
+| Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | | |
+| «Salir del juego», restart: the player is still there | | |
+| Save at `%APPDATA%\trivia\save\game.json` | | |
+| `CREDITS.md` in the folder (n/a until plan 47) | | |
+
+### Linux x64 (no Nix)
+Date: · Build commit:
+
+| check | result | note |
+|---|---|---|
+| Network off before unpacking | | |
+| `tar xzf`, `cd Trivia-<version>-linux-x64`, `./trivia` | | |
+| Starts fullscreen; F11 toggles | | |
+| Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | | |
+| «Salir del juego», restart: the player is still there | | |
+| Save at `~/.config/trivia/save/game.json` | | |
+| `CREDITS.md` in the folder (n/a until plan 47) | | |
+
 ## Steam Deck Verified
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
 
