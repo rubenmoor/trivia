@@ -718,7 +718,104 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope (from the milestone)
 - Steamworks (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional packs (bundles, D-39), and `qgen report --simulate` passing the content target for every launch language. Today: 1136 approved (`base` 1035, `colombia` 101), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them.
+- Licence/price (plans 39, 40: OQ-33, OQ-35): whether packs are DLC and whether release content (translations) stays public. A part that writes files depending on it checks the D-entry.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The family''s game keeps working after every task: Spanish, Colombia on, same keys (unless LUI-4 changes them by decision).
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting and per-locale pool in the game (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model").
+   - UI language and question language in the save (`SaveData`), default from `navigator.language` (the Steam language is S5, SW-*); on the settings screen (plan 36). Engine loads `pool.<locale>.json`; burns by id, so switching languages never repeats a question. Category/bundle names from the locale''s names. Supply check per locale.
+   - Family: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (after plan 36 at 490).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional packs (RG-3..RG-5)**
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5: which packs launch and which bundles are on by default per language (e.g. `colombia` on for `es`, off elsewhere; is `colombia` translated?): pm decision with a recommendation from OQ-31 and OQ-33 (DLC or free). OQ-46 (`colombia` subcategories) answered first or folded in.
+    - New bundles: `qgen bundle new`, their taxonomy for the gamemaster to approve (subcategory lists are the gamemaster''s); the batches go to part 11.
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional pack batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC packs, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5); competitive mode and couch co-op (Later).', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (10, 10, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (11, 11, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (12, 1, 'Targets and progress', 700, 'Part 1 of the masterplan (plan 1). The `base` bundle grows to 5000 approved questions (D-52), with a target per difficulty that tapers at the top. This plan stores those targets where the authoring tools can read them, shows approved vs. target in `qgen report` and on `/stats/difficulty`, and turns the milestone''s "done when" into one command that says pass or fail.
@@ -2303,9 +2400,9 @@ plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:38:11Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (8, 8, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-12, tasks.sql (plan 8 body: 8 parts)', 'Write plan 8, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T00:52:44Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (9, 9, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 9, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (9, 9, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, masterplan 9 (tasks.sql)', 'Write plan 9, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T01:09:35Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (10, 10, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 10, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
@@ -4003,6 +4100,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` for tasks 236 (record the result) and 237 (close-out) on `did`.
 
 Done when: the section exists, the decision is pending, tasks 236 and 237 wait for it.', '2026-10-12T01:07:16Z', NULL, 221);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (239, 9, 'create tasks for plan 9', 'split', 'open', 1000, NULL, 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:09:32Z', NULL, 9);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4112,6 +4211,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (87, 219, '2026-10-12T01:05:21Z', '2026-10-12T01:05:52Z', 'done', NULL, 0, 'f08803b3cbe6028a60146ddd82e40a230a4e5316', 'claude-opus-5-5[1m]', 'abb5b477-9f26-4530-8121-353a38d45891', 5, 10, 3070, 161592, 32421, 0.35312640000000006, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (88, 220, '2026-10-12T01:05:52Z', '2026-10-12T01:06:28Z', 'done', NULL, 0, '708739fdb6ab6142131fd60fd5a244fbc0368e10', 'claude-opus-5-5[1m]', 'd9401651-6429-4bd8-aa1e-804203465ead', 6, 12, 3824, 189406, 29308, 0.3488732, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (89, 221, '2026-10-12T01:06:28Z', '2026-10-12T01:07:25Z', 'done', NULL, 0, 'f7a29de95ea702b1946f47f6b8d5b37b80b8b4a6', 'claude-opus-5-5[1m]', 'd1ee0391-da39-4384-8cfb-dbffd1cbd0af', 9, 18, 6106, 310040, 32612, 0.44509600000000005, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (90, 9, '2026-10-12T01:07:26Z', '2026-10-12T01:09:45Z', 'done', NULL, 0, '42689dd2e13e74beb576671ac9192ac088dadcfd', 'claude-opus-5-5[1m]', 'e9d0eccc-e33a-4e2e-854d-2c1e902a4082', 12, 24, 11849, 647075, 84247, 1.040467, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
