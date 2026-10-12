@@ -4796,14 +4796,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md`: the burn multiplier line points to the D-entry (plan 38 uses it).
 
 Done when: D-entry exists; OQ-37 resolved; plans 13, 14, 16 match the answer.', '2026-10-12T00:50:05Z', '2026-10-12T16:50:17Z', 179);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (203, 42, 'Renumber the Freesound open question (OQ-45 → next free OQ)', 'work', 'open', NULL, NULL, 'Part 1 of plan 42. Housekeeping only; no code.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (203, 42, 'Renumber the Freesound open question (OQ-45 → next free OQ)', 'work', 'dropped', NULL, 'open-questions.md is frozen (2026-10-12); plan 42''s pm decision carries the Freesound question, so the duplicate OQ-45 id no longer needs a new number', 'Part 1 of plan 42. Housekeeping only; no code.
 
 - `plans/open-questions.md` uses OQ-45 twice: the open Freesound one (line ~8) and the resolved one belonging to D-42 (line ~25). Give the Freesound one the next free number (OQ-47 as of 2026-10-11; check with `grep -rhoE ''OQ-[0-9]+'' plans | sort -V | uniq | tail`).
 - Update every Freesound reference: `plans/open-questions.md`, `plans/23-media-providers.md` (Freesound row), `plans/project.md` (open-questions table), `plans/11-steam.md` if it lists it, milestone 7''s body (`pm milestone set 7 --body -`; outcome line and "Done when"), plan 7''s body and plan 42''s subject/body (`pm plan edit`), any other hit of `grep -rn ''OQ-45'' plans`.
 - Leave references meaning D-42''s OQ-45 as they are (e.g. D-42''s context in `plans/decisions.md`).
 - Note: editing plan 42''s subject/body queues a new "create tasks for plan 42"; that run only has to confirm the tasks still match.
 
-Done when: each OQ number is used once; every Freesound reference uses the new number.', '2026-10-12T00:50:35Z', NULL, 180);
+Done when: each OQ number is used once; every Freesound reference uses the new number.', '2026-10-12T00:50:35Z', '2026-10-12T18:51:07Z', 180);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (204, 42, 'Freesound: facts, options, write the decision', 'work', 'open', NULL, NULL, 'Part 2 of plan 42. Prepare the Freesound decision; no code, no picks, never contact Freesound/UPF.
 
 - Facts (ultra-short, one source line each):
@@ -7957,7 +7957,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check: `prompt()` output for a `base` and a `colombia` batch shows the right voice (throw-away script); `qgen validate` passes.
 
 Done when: the approved prompts are in `authoring/tools/prompts/`, new `base` drafts get the neutral voice and `colombia` drafts the Colombian one.', '2026-10-12T18:28:26Z', '2026-10-12T18:45:12Z', 417);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (431, 64, 'qgen neutralize', 'work', 'open', NULL, NULL, 'Plan 64 task 2. A gamemaster-asked command that rewrites Colombian wording in `base` into neutral Spanish, modelled on `qgen tighten`. Waits for the prompt decision of plan 64 task 1 (`prompts/neutralize.md` must be approved and in place).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (431, 64, 'qgen neutralize', 'work', 'done', NULL, '2026-10-12, authoring/tools/qgen.py (cmd_neutralize, SCANS: cmd_scan by mode, --dry-run with cost estimate, authoring/reports/neutralize-<n>.md, audit index + QC trend read neutralize runs), authoring/server/spot_checks.py (run_ids: neutralize runs, so /review?run=neutralize-<n>&sample=1 works). Review passes only_shortened=true for neutralize too (already in the game; reason 7 off). Verified on 7 ids in a temp work dir: 6 flagged (crispetas, gripa, bombillo, chocolatina, 1.000), 1 no-neutral-form (papa), all through fix, review, record, audit, export; pool restored.', 'Plan 64 task 2. A gamemaster-asked command that rewrites Colombian wording in `base` into neutral Spanish, modelled on `qgen tighten`. Waits for the prompt decision of plan 64 task 1 (`prompts/neutralize.md` must be approved and in place).
 
 - `cmd_neutralize` in `authoring/tools/qgen.py`, modelled on `cmd_tighten` (`qgen.py:2735`): run `neutralize-<n>`, resumes an open run.
 - Scan: reuse `cmd_scan` (`qgen.py:2710`) with a prompt/filter parameter, no copy. Only `bundle == "base"`, approved + needs_work, chunks of 50, `prompts/neutralize.md`.
@@ -7966,7 +7966,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done line + exact `git add` like `tighten`; when locale files exist, print the count of stale translations per locale (D-81, `source_hash`).
 - Verify with a throw-away script on a handful of known Colombianisms (`grep -E ''bombillo|crispetas|gripa'' authoring/data/questions.json`): the scan flags them, a fix on those few ids goes through review and audit. No full-pool run (part 11, plan task 250). Delete the script; don''t keep pool changes from the check unless they passed review.
 
-Done when: `qgen neutralize --dry-run` lists the known Colombianisms with word → replacement and a cost estimate, and a run on a few ids goes through to export.', '2026-10-12T18:28:26Z', NULL, 417);
+Done when: `qgen neutralize --dry-run` lists the known Colombianisms with word → replacement and a cost estimate, and a run on a few ids goes through to export.', '2026-10-12T18:28:26Z', '2026-10-12T18:50:51Z', 417);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (432, 64, 'Docs: RUNBOOK, D-entry, QC for qgen neutralize', 'work', 'open', NULL, NULL, 'Plan 64 task 3. Document the neutral Spanish tooling once `qgen neutralize` (plan 64 task 2) exists and the prompts (task 1''s decision) are approved.
 
 - `authoring/RUNBOOK.md`: `qgen neutralize` (no arguments) only when the gamemaster asks, same handling as `qgen tighten`.
@@ -8699,6 +8699,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (293, 421, '2026-10-12T18:32:37Z', '2026-10-12T18:38:54Z', 'done', NULL, 0, '7add497a00a7ddbffa0f1274261dae48da6d07c5', 'claude-opus-5-5[1m]', 'b576034c-c3a7-4414-a52c-2b032574a590', 44, 82, 30118, 3284983, 95778, 2.0259086, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (294, 422, '2026-10-12T18:38:55Z', '2026-10-12T18:43:53Z', 'done', NULL, 0, 'c3367347e97aaed8d0bd9ac1f8f12ccd3e4f741a', 'claude-opus-5-5[1m]', '0b3bf1cc-fc6c-486c-b436-3aa4e48c62fa', 36, 68, 25111, 2370639, 84962, 1.6563158, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (295, 430, '2026-10-12T18:43:53Z', '2026-10-12T18:45:20Z', 'done', NULL, 0, '2b78d80f84c453f68c675f9cee8979b697452297', 'claude-opus-5-5[1m]', 'cf9a1a6f-2e17-4644-9924-3c906b7fe419', 22, 44, 8561, 1057462, 54784, 0.8211604, 583141);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (296, 431, '2026-10-12T18:45:20Z', NULL, 'running', NULL, NULL, '76a1d8499ac4f74400b588a98fbcb087f863284b', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 583141);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
