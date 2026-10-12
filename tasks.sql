@@ -1415,6 +1415,39 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A session can be started for each group and with `colombia` off, by mouse and by keyboard, and Enter straight through plays the defaults or the player''s last choice.
 - A choice that can''t fill 12 levels can''t start and says why, in today''s wording.
 - The overlay shows the running game''s group and bundles.', '2026-10-12T00:28:05Z', 117);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (30, 5, 'Play-test and close-out of age groups and bundles', 390, 'The last part of milestone 5: prove the milestone''s "done when" in the browser, then close AG-7 and BN-6 in the docs. Plans 27 (engine: group ranges, bundle filter, `choice` API), 28 (tuned windows, `level_weights`) and 29 (choice screen, overlay line) do the work; each leaves AG-7 / BN-6 `[ ]` with a "plan N" note for this part to close. Runs last (390, below plan 29 at 400).
+
+## Depends on
+- Plans 27, 28, 29 done; the game runs on the TS engine (milestone 2).
+- Pm decision 5 (where the authoring supply check lives) may still be pending; the readers check works on whatever is there.
+
+## Play-test (the milestone''s "done when")
+- **Agent pre-check** first, so the gamemaster''s time isn''t spent on crashes: a throw-away `node` script on the engine API over the real `app/data/pool.json`, a fresh player per run: for each of the 4 groups with every bundle, and `young_teens` with `{base}` only: `newGame` with the choice, play 12 levels to the end (answer right, use each joker once where allowed), check every drawn question is in the group''s level range and an active bundle, Cambiazo offers no `colombia` category when it''s off. Plus `npm run build`, `npm run check`, `qgen validate`. Failures → a task in the owning plan (27/29), not a fix here.
+- **Gamemaster session**: a pm decision "Play-test of age groups and bundles". Body: the pre-check''s result table; the checklist: `trivia`, one session per age group (choice screen by mouse and by keyboard once, IN-1), one with `colombia` off; defaults straight through with Enter look as before; overlay shows group and bundles; undo/abandon keep the choice. Options: "all sessions played fine" (recommended); "problems (listed in the answer)".
+- The close-out task waits on it (`pm task-pending-decision`).
+- Answer "problems": the close-out worker adds one fix task per problem to plan 27 or 29, raises the decision again, makes itself pending on it, and stops.
+
+## Close-out docs (after "played fine")
+- `plans/21-age-groups.md`: AG-7 `[x]` with date and plans 27/28/29; drop "The game plays young teens (levels 1–10) until AG-7, whatever the focus" and other "until AG-7" wording.
+- `plans/22-bundles.md`: BN-6 `[x]`; "Later" section: the BN-6 bullet goes (section removed if empty); the Cambiazo sentence ("all of them until BN-6") in the present tense.
+- `plans/project.md`: AG-7, BN-6 `[x]`.
+- `directory.md`: rows for `age-groups.json` / `bundles.json` say the game reads them (group ranges, choice); new files from plans 27–29 listed (they add their own; check only).
+- `about` in `app/data/age-groups.json`: no "The game plays young teens until AG-7", no "draft"; `about` in `app/data/bundles.json`: "players switch on or off" stays true, `base` always on. `qgen validate` passes.
+- Decision entry in `plans/decisions.md` (next D number): play-test confirmed (date), milestone 5 done-when met; related D-38, D-39 and plans 27/28''s entries. Only if the gamemaster''s answer adds something beyond "fine"; else the AG-7/BN-6 notes are enough.
+
+## Authoring readers (levels 1–10, one range table)
+- Known readers: `qgen report` supply (`authoring/tools/qgen.py`: `selection.LEVEL_RANGES`, `selection.supply`), the authoring start page supply table (`authoring/server/overview.py` `supply_for`, `authoring/ui/src/home/Home.svelte`), `/stats/difficulty` (`authoring/ui/src/stats/DifficultyChart.svelte`: `PLAYED_GROUP = "young_teens"` shading). Grep for others: `LEVEL_RANGES`, `young_teens`, `1–10`, `range(1, 11)`.
+- Broken = crashes, wrong numbers for what it claims to show, or text that is now false (e.g. "the window the game plays"). Fix those minimally (wording, or read `young_teens` from `age-groups.json` `levels`).
+- Not broken but young-teens-only (supply per group or bundle set, shading every window): one line each in `plans/backlog.md`, linked to pm decision 5 where it depends on where the supply check lives.
+
+## Tasks
+1. **Readers check**: grep and run `qgen report`, `trivia-authoring` start page and `/stats/difficulty`; fix what''s broken, backlog the rest. Independent of the play-test.
+2. **Pre-check and play-test decision**: the script, build/check/validate, the decision with the table and checklist; script deleted.
+3. **Close-out** (waits on task 2''s decision): the docs above; AG-7, BN-6 `[x]`.
+
+## Done when
+- The gamemaster confirmed the play-test; AG-7 and BN-6 are `[x]` in plans 21, 22 and `project.md`; no "until AG-7/BN-6" wording left in plans, `directory.md` or the data files'' `about`.
+- Authoring readers checked: fixed or logged in `plans/backlog.md`.', '2026-10-12T00:29:06Z', 118);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2223,17 +2256,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - IN-1: every choice clickable and on the keyboard; the plan settles the keys; `<kbd>` hints.
 - Where the running game''s group and bundles show (HUD or admin overlay); undo and abandon keep them.
 - Texts through `t()` if milestone 3''s plan 21 has landed, else literals marked for it.', '2026-10-12T00:22:30Z', '2026-10-12T00:28:07Z', 114);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (118, 5, 'write plan: Play-test and close-out of age groups and bundles', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 5): `pm plan add 5 "Play-test and close-out of age groups and bundles" --priority 390` (last, after part 2''s plan at 400).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (118, 5, 'write plan: Play-test and close-out of age groups and bundles', 'plan', 'done', 1000, '2026-10-11, plan 30 (tasks.sql)', 'Write the plan for part 4 of the masterplan (plan 5): `pm plan add 5 "Play-test and close-out of age groups and bundles" --priority 390` (last, after part 2''s plan at 400).
 
 - Cover: the milestone''s "done when": one session per age group and one with `colombia` off in the browser on the real pool; a task that raises a decision for the gamemaster to confirm, then records it.
 - Docs: `plans/21-age-groups.md` (AG-7 `[x]`, drop "The game plays young teens until AG-7"), `plans/22-bundles.md` (BN-6 `[x]`, "Later" section), `plans/project.md`, `directory.md`, `about` texts of `app/data/age-groups.json` and `app/data/bundles.json`.
-- Authoring readers that assume levels 1–10 or one range table (`/stats/difficulty`, `qgen report` supply; see decision 5) checked; fix only if broken, else log in `plans/backlog.md`.', '2026-10-12T00:22:30Z', NULL, 114);
+- Authoring readers that assume levels 1–10 or one range table (`/stats/difficulty`, `qgen report` supply; see decision 5) checked; fix only if broken, else log in `plans/backlog.md`.', '2026-10-12T00:22:30Z', '2026-10-12T00:29:08Z', 114);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (119, 27, 'create tasks for plan 27', 'split', 'open', 1000, NULL, 'Split plan 27 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:25:09Z', NULL, 115);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (120, 28, 'create tasks for plan 28', 'split', 'open', 1000, NULL, 'Split plan 28 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:26:19Z', NULL, 116);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (121, 29, 'create tasks for plan 29', 'split', 'open', 1000, NULL, 'Split plan 29 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:28:05Z', NULL, 117);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (122, 30, 'create tasks for plan 30', 'split', 'open', 1000, NULL, 'Split plan 30 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:29:06Z', NULL, 118);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2291,6 +2326,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (41, 115, '2026-10-12T00:22:38Z', '2026-10-12T00:25:21Z', 'done', NULL, 0, '3dbac1bfbda4c3236635e8bd72a4e6aeed57251c', 'claude-opus-5-5[1m]', '43edd34a-8d41-4e04-af39-47aa4eccc1a5', 14, 28, 15778, 656573, 64141, 0.96011459999999993, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (42, 116, '2026-10-12T00:25:21Z', '2026-10-12T00:26:36Z', 'done', NULL, 0, 'cda27beb9246172310caa7bb7cd4a868e5d79f82', 'claude-opus-5-5[1m]', 'fe9f7c1e-bdbc-427b-8e1d-67278e2035b3', 11, 18, 7187, 346515, 40259, 0.53518699999999986, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (43, 117, '2026-10-12T00:26:36Z', '2026-10-12T00:28:16Z', 'done', NULL, 0, '325e9ec5e7e0e9d41c839a5d19ae33b41852dfed', 'claude-opus-5-5[1m]', '533ef7fa-60d4-43ae-bb40-739aa5bd6b49', 18, 34, 9375, 748325, 60023, 0.81748499999999991, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (44, 118, '2026-10-12T00:28:16Z', '2026-10-12T00:29:14Z', 'done', NULL, 0, '90470e86f71063c6482a8ecc69aa8c3267eb3359', 'claude-opus-5-5[1m]', 'd61f7c67-ffff-4679-935f-bbadac936d13', 12, 24, 5497, 442591, 37152, 0.49577020000000011, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
