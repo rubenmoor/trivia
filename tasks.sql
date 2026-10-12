@@ -4261,7 +4261,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync. The full S3–S6 rewrite stays with plan 43 (S2 close-out).
 
 Done when: D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:46:31Z', '2026-10-12T03:35:07Z', 172);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (184, 35, 'Default mode: gather facts, write the decisions (OQ-30)', 'work', 'open', NULL, NULL, 'Part 1 of plan 35. Prepare the OQ-30 decision(s); no code.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (184, 35, 'Default mode: gather facts, write the decisions (OQ-30)', 'work', 'done', NULL, '2026-10-11, pm decisions 19 and 20 (task 185 waits on both); no repo files', 'Part 1 of plan 35. Prepare the OQ-30 decision(s); no code.
 
 - Facts (from `plans/13-game-modes.md`, D-28 in `plans/decisions.md`, `plans/21-age-groups.md`, plans 27/28 via `pm show`):
   - what each joker burns or saves (Soplo, Paso, Bájale, Cambiazo, Francotirador)
@@ -4272,7 +4272,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add`, recommended option first, body = context + trade-offs, ultra-short. Two decisions if one is too big: "Presets, checkpoints and won levels (OQ-30)" and "Admin actions in the default mode (OQ-30)".
 - `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 35).
 
-Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:46:59Z', NULL, 173);
+Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:46:59Z', '2026-10-12T04:24:36Z', 173);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (185, 35, 'Default mode: record the answer (OQ-30, MD-5)', 'work', 'open', NULL, NULL, 'Part 2 of plan 35. Waits for the OQ-30 decision(s) (made pending by the prep task); the answers are in `pm show`.
 
 - D-entry (or two) in `plans/decisions.md`, next free D-number.
@@ -5618,6 +5618,24 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 18. ★ **Rocas, minerales y gemas** (Planeta Tierra). Rocks, minerals, gemstones, fossils formation, Mohs scale. Reason: Planeta Tierra subcategory has 13 unused hard; adult-school knowledge. Samples: Diamante (2), Oro (2), Esmeralda (5), Cuarzo (8), Mármol (7), Roca volcánica (6), Escala de Mohs (12), Obsidiana (11), Roca sedimentaria (10), Feldespato (14).
 19. ★ **Economía y bolsa** (Monedas y dinero). Inflation, markets, crashes, famous economists, trade. Reason: hard topic adults know and children don''t; Monedas y dinero has 4 subcategories. Samples: Oferta y demanda (8), Inflación (9), Wall Street (8), Crac de 1929 (11), Adam Smith (12), PIB (11), Tulipomanía (13), Keynes (14), Burbuja puntocom (13), Hiperinflación de Weimar (14).
 20. **Arquitectos famosos** (Arquitectura y monumentos). Architects and their signature buildings. Reason: hard topic; overlaps Estilos arquitectónicos and Monumentos famosos, hence not recommended. Samples: Gaudí (8), Sagrada Familia (6), Gustave Eiffel (7), Le Corbusier (12), Frank Lloyd Wright (12), Zaha Hadid (12), Oscar Niemeyer (13), Frank Gehry y Guggenheim Bilbao (11), Brunelleschi (13), Mies van der Rohe (14).', NULL, NULL, '2026-10-12T04:14:44Z', NULL, 38, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (19, 'Default mode: presets, checkpoints and won levels (OQ-30)?', 'pending', '["Draft table as is, 4 presets, Normal default; presets set only the joker budget (difficulty = age group); no checkpoint; only level 12 = won, the level reached is kept per game for stats/achievements later", "As 1, plus on Fácil a checkpoint at level 6 as a safe mark: losing from level 6 on is shown and stored as a partial result («¡Mitad del camino!»); no replay, no extra burns", "As 1, plus on Fácil a fall-back checkpoint: one wrong answer above level 6 per game drops back to level 6 with fresh cards (up to ~6 extra burns); only 12 = won", "As 1, but presets also shift difficulty: Fácil −1, Difícil/Experto +1 on every level range, clamped to the group''s window (plan 28 tunes 16 tables)"]', 'Plan 35 / MD-5. Default mode = one team, no gamemaster (plans/13-game-modes.md). Age group (D-38, plan 27: 12 level ranges per group in age-groups.json `levels`, tuned in plan 28) is a separate setting either way.
+
+Facts
+- Burns (D-28, per player): every answered question, plus each Paso, Bájale, Cambiazo and Snipe hit (the replaced card). Soplo and Snipe misses burn nothing (a miss still uses the joker, MD-2).
+- Max burns per won game with the draft table: Fácil 24 (Soplo ∞ is free), Normal 20 (= «Como las cartas», JK-11), Difícil 16, Experto 12. A lost game burns fewer. Input for OQ-32 / plan 38.
+- Presets shifting difficulty = 4 groups × 4 presets = 16 range tables, plan 28 tunes 4; Difícil/Experto upward hits the thin top (adults level 12: 27 candidates). The age group already is the difficulty knob.
+- Checkpoint as fall-back (wrong answer above level 6 → back to 6): game continues, so a game can take > 12 answers (breaks "12 to victory" as a clean count); each fall-back burns up to +6 and redraws the thin upper levels. Needs a cap (once per game).
+- Checkpoint as safe mark (Millionaire style): wrong answer still ends the game, but reaching 6 is recorded as a partial result. No extra burns.
+- Today the game row stores result won/lost/abandoned; the level reached is in the state, so "highest level" stats need no new data.
+
+Draft presets (Soplo/Paso/Bájale/Cambiazo/Francotirador): Fácil ∞/3/3/3/3, Normal 4/2/2/2/2, Difícil 2/1/1/1/1, Experto 0/0/0/0/0.', NULL, NULL, '2026-10-12T04:24:25Z', NULL, 184, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (20, 'Default mode: which admin actions in the Esc menu (OQ-30)?', 'pending', '["Esc menu: «Reportar pregunta» (burn for everyone here, report list, replacement; the replacement once per game, later reports only log and the question stays), «Abandonar partida», sound. No undo, no «Saltar y quemar para todos», no budget change, no pause", "As 1, but every report replaces the question (no limit; trust the player)", "As 1, but a report never replaces: it logs, and the question is burned for everyone after the game; the player answers or uses a joker"]', 'Plan 35 / MD-5; MD-6 builds «Reportar pregunta», MD-7 the settings screen. Gamemaster mode keeps its overlay as is (D-30).
+
+Facts
+- Gamemaster overlay today: «Saltar y quemar para todos», undo, «Abandonar partida», sound, joker budget for this game (MD-4).
+- Without a gamemaster, undo and a free skip are cheat buttons; a mid-game budget change bypasses the preset.
+- «Reportar pregunta» (plan 13 draft): burn the question for everyone on this machine (player NULL, D-28), add it to a local report list (a page to copy from), draw a replacement. With unlimited replacements it is a free Paso; cheating only costs the player''s own pool, but matters once Steam achievements exist.
+- No timer (OQ-4), so no pause is needed; the screen just waits.', NULL, NULL, '2026-10-12T04:24:33Z', NULL, 184, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -5794,6 +5812,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (171, 77, '2026-10-12T04:17:33Z', '2026-10-12T04:19:53Z', 'done', NULL, 0, '69fa90446bc7a50a35c84c46847bb6ad5812155d', 'claude-opus-5-5[1m]', '5e737b2a-9fcb-4d31-9972-b714a6e90426', 20, 26, 15928, 778005, 69058, 1.026729, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (172, 78, '2026-10-12T04:19:53Z', '2026-10-12T04:22:12Z', 'done', NULL, 0, 'cb3e1a2f3b8005c8ca5cd6349356880930a0bee0', 'claude-opus-5-5[1m]', '90e10c79-931d-4777-9616-740cfd8ab834', 36, 52, 14511, 1809572, 73838, 1.2430464, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (173, 79, '2026-10-12T04:22:12Z', '2026-10-12T04:23:17Z', 'done', NULL, 0, '51a10029703be4038ad36a032b3a45920b461128', 'claude-opus-5-5[1m]', '53fa14e0-b88d-4259-9b65-6477c2b20819', 17, 26, 6507, 664420, 54473, 0.698912, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (174, 184, '2026-10-12T04:23:17Z', '2026-10-12T04:24:44Z', 'done', NULL, 0, 'f3e27774f69d495ffe5d0b4737b2fb8e1105a1c9', 'claude-opus-5-5[1m]', 'b8d8d81a-17c2-4153-b555-e20c9b5dabee', 13, 22, 6671, 504742, 50661, 0.63974439999999988, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -5821,6 +5840,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (108, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (113, 10);
 INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
+INSERT INTO task_decision (task_id, decision_id) VALUES (185, 19);
+INSERT INTO task_decision (task_id, decision_id) VALUES (185, 20);
 INSERT INTO task_decision (task_id, decision_id) VALUES (209, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (210, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (211, 12);
