@@ -92,6 +92,6 @@ test("parseBundles on the real file: base first and always on", () => {
   const bundles = parseBundles(data("bundles.json"));
   assert.equal(bundles[0].id, "base");
   assert.deepEqual(bundles.filter((b) => b.always_on).map((b) => b.id), ["base"]);
-  assert.ok(bundles.every((b) => b.name && b.description && !("rule" in b)));
+  assert.ok(bundles.every((b) => b.name && b.description && !("rule" in b) && !("voice" in b)));
   assert.throws(() => parseBundles({ bundles: [] }));
 });

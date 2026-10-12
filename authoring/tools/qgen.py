@@ -104,6 +104,9 @@ def ages_text(g):
     return f"{lo}–{hi}" if hi else f"{lo}+"
 
 
+VOICE = "neutral Latin American Spanish (es-419)"
+
+
 def load_bundles():
     return load_json(layout.BUNDLES)["bundles"]
 
@@ -113,10 +116,15 @@ def bundles_text():
     return "\n".join(f"- `{b['id']}`: {b['rule']}" for b in load_bundles())
 
 
+def voices_text():
+    """Each bundle's Spanish voice, for house-style.md (D-78)."""
+    return "\n".join(f"  - `{b['id']}`: {b.get('voice') or VOICE}" for b in load_bundles())
+
+
 def bundle_text(bundle):
     """The one bundle a batch writes for, as a content limit for the drafter (D-41)."""
-    rule = next(b["rule"] for b in load_bundles() if b["id"] == bundle)
-    return f"Every question you write is in the `{bundle}` bundle: {rule}"
+    b = next(b for b in load_bundles() if b["id"] == bundle)
+    return f"Every question you write is in the `{bundle}` bundle: {b['rule']}\nVoice: {b.get('voice') or VOICE}"
 
 
 def check_bundle(bundle):
@@ -134,7 +142,8 @@ def not_in_bundle(subs, bundle=None):
 
 
 def prompt(*names):
-    """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json."""
+    """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
+    {voices} from app/data/bundles.json."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -150,7 +159,7 @@ def prompt(*names):
                    'their world, their humour. "The players" below means them, for the question at hand.')
     text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
-            .replace("{players}", players))
+            .replace("{players}", players).replace("{voices}", voices_text()))
 
 def run_dir(args):
     d = WORK / args.run
@@ -783,7 +792,7 @@ def grouped(files, size=GROUP_SIZE):
 def for_review(q):
     keys = ["difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact"]
     form = {"axes": q["axes"]} if q.get("axes") else {"style": q.get("style")}  # older drafts have a style
-    return {"id": q["tmp_id"], **form, **{k: q[k] for k in keys}}
+    return {"id": q["tmp_id"], "bundle": q.get("bundle") or "base", **form, **{k: q[k] for k in keys}}
 
 
 def rate_candidates(d):
@@ -1960,8 +1969,8 @@ def cmd_review(args):
         q, r = item
         tmp = tmp_of.get(q["id"])
         payload = {
-            "question": {k: q[k] for k in ["id", "subcategory", "difficulty", "description", "question", "answer",
-                                           "wrong_answers", "hints", "fun_fact"]},
+            "question": {k: q[k] for k in ["id", "bundle", "subcategory", "difficulty", "description", "question",
+                                           "answer", "wrong_answers", "hints", "fun_fact"]},
             "rater_notes": (ratings.get(tmp) or {}).get("notes") or (q.get("quality") or {}).get("notes"),
             "fact_check": ({k: check[k] for k in ["verdict", "problem", "correction"]}
                            if (check := fact_check(r, checks.get(tmp))) else "not needed (no number, date or record)"),
@@ -2296,8 +2305,8 @@ def audit_input(q, pool):
         pick = next((c for c in found if spec.get("source_url") and c.get("page_url") == spec["source_url"]), None)
         return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"),
                 "title": pick["title"] if pick else None}
-    return {"question": {k: q[k] for k in ["id", "subcategory", "difficulty", "description", "question", "answer",
-                                           "wrong_answers", "hints", "fun_fact"]},
+    return {"question": {k: q[k] for k in ["id", "bundle", "subcategory", "difficulty", "description", "question",
+                                           "answer", "wrong_answers", "hints", "fun_fact"]},
             "media": slot(q["media"], "media"),
             "background": slot(q["background"], "background") if q.get("background") else None,
             "related": related_questions(q, pool)}
@@ -3060,7 +3069,8 @@ def cmd_bundle_new(args):
     if any(b["id"] == args.id for b in data["bundles"]):
         sys.exit(f"Bundle {args.id!r} already exists.")
     data["bundles"].append({"id": args.id, "kind": args.kind, "always_on": False, "name": args.name,
-                            "description": args.description, "rule": args.rule})
+                            "description": args.description, "rule": args.rule,
+                            **({"voice": args.voice} if args.voice else {})})
     save_json(layout.BUNDLES, data)
     path = categories.path(args.id)
     if not path.exists():
@@ -3108,6 +3118,7 @@ def main():
     bnew.add_argument("--description", required=True, help="Spanish description shown in the game")
     bnew.add_argument("--kind", required=True, choices=["region", "theme"])
     bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")
+    bnew.add_argument("--voice", help=f"English: its Spanish usage in prompts (default: {VOICE})")
     dp = add("draft", cmd_draft, "opus")
     dp.add_argument("--subcategories", help="comma-separated, first call only")
     dp.add_argument("--seed", type=int, default=1)

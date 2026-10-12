@@ -8,9 +8,11 @@ The game has four age groups: {age_groups}. Every question has one difficulty on
 {players}
 
 ## Language
-- All content is in Spanish, with Colombian usage: "bombillo", "carro", "celular", "gripa", "crispetas", "arquero", "tinto" (black coffee), "parcero" only in jokes.
-- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don't force them. Each batch writes for one bundle (D-41): a `base` question may use Colombian references anyone in the Spanish-speaking world knows, but never needs a connection to Colombia to answer; that is the `colombia` bundle's job.
-- Write numbers the Colombian way: "2.640 metros", "42,195 km".
+- All content is in Spanish. The voice depends on the question's bundle:
+{voices}
+- Neutral means: a word understood across Latin America and in Spain where one exists ("bombilla", "palomitas", "gripe", "portero", "café"); no regional diminutives ("pelota", not "pelotica"); "tú", never "vos" or "vosotros". Where no word is shared ("carro"/"coche"/"auto", "celular"/"móvil"), reword around it if that stays natural ("vehículo", "teléfono"); else take the most widespread Latin American form.
+- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don't force them. Each batch writes for one bundle (D-41): a `base` question may use Colombian references anyone in the Spanish-speaking world knows, but never needs a connection to Colombia to answer; that is the `colombia` bundle's job. A neutral voice is about the words, not the topics.
+- Numbers (all bundles): no thousands separator up to 9999 ("2640 metros"), a space from 10 000 ("42 195 personas"), a decimal comma ("42,195 km"); large round numbers in words ("3 millones").
 
 ## Format: multiple choice
 - Exactly one correct `answer` and exactly three `wrong_answers`. The game shuffles them.
@@ -23,7 +25,7 @@ The game has four age groups: {age_groups}. Every question has one difficulty on
 - The same goes for "¿Cuál de estas ciudades está a mayor altura?": ask "¿Cuál es la capital departamental más alta de Colombia?" instead.
 - The clue in the question must point to the answer **in the real world**, not just among the four options. Before writing, ask: "What else in the world fits this clue?" If anything does, use a clue that only the answer has.
   - Bad: "¿Qué ritmo del Caribe colombiano se baila con velas en la mano?" Other dances use candles too.
-  - Bad: "¿En qué deporte se usa una raqueta y una pelotica amarilla?" Pádel and frontenis do too, and tennis doesn't depend on the ball's colour.
+  - Bad: "¿En qué deporte se usa una raqueta y una pelota amarilla?" Pádel and frontenis do too, and tennis doesn't depend on the ball's colour.
 
 ## Keep it short
 The question is read aloud on a TV; the family should get it in one breath.
@@ -95,8 +97,8 @@ Anchors for 9–15, confirmed by the gamemaster:
 ## Description
 Every question has a `description`: one full, humorous Spanish sentence shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "un nevado" when only two options are nevados). Examples from the pool:
 - Café: "Los papás no funcionan por la mañana hasta que les echas este combustible."
-- Chigüiro: "Un ratón al que se le fue la mano en el almuerzo."
-- Bombillo: "Una idea tan buena que hasta tiene forma de idea."
+- Capybara (chigüiro): "Un ratón al que se le fue la mano en el almuerzo."
+- Light bulb: "Una idea tan buena que hasta tiene forma de idea."
 - Saturno: "Un planeta que nunca se quita sus joyas."
 - Año luz: "Una pregunta engañosa, como cuando tu mamá dice 'ya casi llegamos'."
 - Hipérbole: "Esta es la mejor pregunta de la historia del universo, sin exagerar."

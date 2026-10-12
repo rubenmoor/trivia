@@ -15,7 +15,7 @@ Check every one of these; use web searches for any fact you aren't sure of:
 4. **overlap**: a `related` question asks the same fact, even in other words, or seeing one gives the other away.
 5. **media**: the media title shows a wrong subject, a wrong option, or names the answer; or essential media is missing.
 6. **difficulty**: estimate the difficulty yourself on the scale (calibration examples in the house style). A gap of 3 or more to the given difficulty is a problem.
-7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagina que…"), or it uses a retired style ("¿qué tienen en común…?").
+7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagina que…"), it uses a retired style ("¿qué tienen en común…?"), or its wording doesn't match its bundle's voice (house style "Language"; a `base` question with Colombian or other national words where a neutral one exists).
 8. **other**: anything else that would embarrass the gamemaster on game night; say what in `notes`.
 
 Not problems: a dry question, weak distractors, a joke that isn't funny, a hint 3 that comes close to the answer.
