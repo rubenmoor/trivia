@@ -8152,8 +8152,57 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/15b-question-translation.md` "Pipeline" + QT-2, QT-3 `[x]`.
 
 Done when: all listed docs updated and consistent with the code.', '2026-10-12T19:15:58Z', NULL, 436);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (442, 67, 'create tasks for plan 67', 'split', 'open', 1000, NULL, 'Split plan 67 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:34:03Z', NULL, 245);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (442, 67, 'create tasks for plan 67', 'split', 'done', 1000, '2026-10-12, tasks 443-447 (tasks.sql)', 'Split plan 67 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:34:03Z', '2026-10-12T19:34:46Z', 245);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (443, 67, 'Server: locale in the question API', 'work', 'open', NULL, NULL, 'Plan 67, task 1 (QT-4, server side). Files: `authoring/server/main.py` (+ `authoring/tools/translations.py`, `qgen.py` if a helper is missing).
+
+- `GET /api/questions?locale=<l>` (`l` in `translations.LOCALES`; `es` or absent = today, byte-identical): one item per entry of `questions.<l>.json`: the source question (id, `subcategory`, `bundle`, `media`, `background`, `translatable`, candidates) with the translation''s text fields, `difficulty`, `status`, `batch`, `review`, `media_text`; plus `source` (Spanish text fields, `difficulty`, `status`) and `stale` (`translations.is_stale`).
+  - Filters: `batch`, `status`, `reviewer`, `sample`, `audit` on the translation; `bundle`, `subcategory`, `media` on the source; `stale=1` only stale ones.
+  - `audit`: the translation''s own (`work/<t.batch>/audit/<id>.json`), never the source''s back-audit (`qgen.audit_of` takes the batch, or a locale-aware sibling).
+- POST with `"locale"` in the body: `review`, `difficulty`, `difficulty_original` write the locale file through `translations` (one lock, re-read, atomic save, then `translations.exports` → `app/data/pool.<l>.json`); same rules and undo as the source (D-32/D-33: human decision replaces the LLM review, keeps it as `previous`).
+- New `POST /api/questions/<id>/media-text` `{"locale", "media_text": bool}`.
+- New `POST /api/questions/<id>/translatable` `{"translatable": bool}`: sets the source''s flag (not a text field, no staleness, plan 63); with `false`, non-rejected translations of that id become rejected with feedback "no viaja" (validate''s rule); re-export Spanish and locale pools.
+- `media`, `media/search`, `bundle` with a locale → 400.
+- Docstring API lines for every new parameter and route.
+- Plan 66''s shapes (tasks 438–440) may not exist yet: build against them as described in plan 67.
+
+Done when: on a git worktree with a throw-away `authoring/data/questions.en.json` of 3 entries (fresh, stale, non-translatable source), `curl` shows GET with filters, each POST writing the locale file and `pool.en.json`, undo restoring, the refusals; `qgen validate` clean; Spanish GET and `pool.json` unchanged (D-59). Worktree discarded.', '2026-10-12T19:34:43Z', NULL, 442);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (444, 67, 'Review page: translation side by side', 'work', 'open', NULL, NULL, 'Plan 67, task 2 (QT-4, UI). Files: `authoring/ui/src/review/Review.svelte`, new `SourcePanel.svelte` (keep `Review.svelte` from growing). Needs the API of the plan''s server task.
+
+- `?locale=en|de`: header shows the locale; locale switch (es · en · de) keeps the other params.
+- Left: Spanish source, read-only, with its difficulty and status; right: the translation; rows aligned (question, answer, wrong answers, hints, description, fun fact).
+- Stale translation: banner, no approve (the next `--translate` run redoes it).
+- Subcategory and bundle with the locale''s names (`names.<locale>.json`, via an API field or the existing names route) plus the Spanish key.
+- Same verdicts, feedback, problem toggles, difficulty, undo, keyboard keys as the Spanish view, posting with `locale`.
+- Media: shown, not pickable; "media shows text" toggle (`media_text`); link to `/review?id=<id>` to change the source''s media.
+- "Doesn''t travel" button: `translatable: false` with confirm; a source with `translatable: false` shows it and allows undoing.
+- Spanish view unchanged.
+
+Done when: `npm run check`, `npm run build` clean; on a worktree with the throw-away `questions.en.json` (as in the server task), clicking through `/review?locale=en` writes the locale file and `app/data/pool.en.json` for a decision, a difficulty change, `media_text` and doesn''t-travel; undo restores; `qgen validate` clean. Worktree discarded.', '2026-10-12T19:34:44Z', NULL, 442);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (445, 67, 'Spot check per locale (tr-* runs)', 'work', 'open', NULL, NULL, 'Plan 67, task 3 (QT-4, plan 16''s spot check for translations). Files: `authoring/server/spot_checks.py`, `main.py`, the review page, `qgen validate`''s spot-check check in `authoring/tools/qgen.py`.
+
+- `spot_checks.record(batch, q, …)` accepts a translation run (`tr-<locale>-<n>`): batch checked against the translation''s `batch`; the item gets `"locale"`; the LLM decision from `work/<run>/recorded.json`. Same `authoring/data/spot-checks.json`, keyed by run name.
+- `sample=1` with `locale`: the sample from `qgen.audit_sample(run)` (plan 66; build against its shape if task 439 isn''t done).
+- Review page, `&sample=1&locale=…`: blind as plan 16: LLM review, feedback, audit and translator notes hidden until decided; the source stays visible. Reveal + agree/disagree as today.
+- `qgen validate` accepts `tr-*` items.
+
+Done when: on a worktree with a fake `work/tr-en-1/` (`run.json`, `recorded.json`, an audit file) and a throw-away `questions.en.json`, `/review?batch=tr-en-1&locale=en&sample=1` is blind and records into `spot-checks.json` with `locale`; `qgen validate` clean; Spanish spot checks unchanged. Worktree discarded.', '2026-10-12T19:34:44Z', NULL, 442);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (446, 67, 'Stats and start page per locale', 'work', 'open', 390, NULL, 'Plan 67, task 4 (QT-4). Files: `authoring/server/main.py` (stats routes), `overview.py`, `authoring/ui/src/home/Home.svelte`, the stats pages in `authoring/ui/src/`.
+
+- `/stats/*?locale=<l>` (with `bundle`): approved, playing translations (`translations.plays`) with their own difficulty; categories/subcategories by the source, labelled with the locale''s names; targets as for Spanish (whether a translated pool counts toward the 5000 is part 9/12, plan 63). Locale switch next to the bundle switch.
+- Start page: per locale a row: approved, needs_work, draft, rejected, stale, not translatable, untranslated approved translatable sources (`translations.counts` + source); the `tr-*` runs in the batch table, linking `/review?batch=…&locale=…` and its sample.
+- Without `locale`: unchanged.
+
+Done when: `npm run check`, `npm run build` clean; on a worktree with a throw-away `questions.en.json` (and a fake `work/tr-en-1/`), `/stats/difficulty?locale=en` and the start page show the locale. Worktree discarded.', '2026-10-12T19:34:44Z', NULL, 442);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (447, 67, 'Review tool for translations: docs', 'work', 'open', 380, NULL, 'Plan 67, task 5. After the plan''s other tasks.
+
+- `plans/15b-question-translation.md` "Review tool": what exists; QT-4 `[x]`.
+- `plans/08-review-tool.md`: new RV entries (locale view, spot check per locale).
+- `directory.md`: new files (e.g. `SourcePanel.svelte`).
+- `authoring/QC.md`: the native speaker''s spot-check link and steps for `tr-*` runs, unless task 441 already wrote them.
+- Docstrings in `authoring/server/main.py` match the routes.
+
+Done when: the docs describe what the code does; md style as in AGENTS.md.', '2026-10-12T19:34:44Z', NULL, 442);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9029,6 +9078,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (305, 437, '2026-10-12T19:16:08Z', '2026-10-12T19:18:37Z', 'done', NULL, 0, 'ab25a67a1797bd12e15fd7bab840f03f6c5d2da7', 'claude-opus-5-5[1m]', 'ae9cc026-5649-4e7b-bcad-168e96be58df', 13, 20, 14384, 445291, 51043, 0.7851622, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (306, 441, '2026-10-12T19:32:22Z', '2026-10-12T19:32:38Z', 'blocked', NULL, 0, '406a2f67c26f04532dfcb326014c707172094f34', 'claude-opus-5-5[1m]', 'a986d5f5-2526-478c-b561-86aa1c702757', 5, 10, 1210, 132720, 21935, 0.22626399999999997, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (307, 245, '2026-10-12T19:32:39Z', '2026-10-12T19:34:13Z', 'done', NULL, 0, '8662a6873c11ed57e5a3a892afeece020d2fd0a8', 'claude-opus-5-5[1m]', '8aef8b99-861f-458b-b0ea-ab5a3037ea00', 11, 22, 8408, 543940, 61926, 0.772444, 626610);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (308, 442, '2026-10-12T19:34:13Z', '2026-10-12T19:34:50Z', 'done', NULL, 0, '7775bbda99eabd498507c031ecb74a0373f0bd31', 'claude-opus-5-5[1m]', '252c042c-8043-4a5e-a32c-27185fbd5091', 5, 10, 3910, 148375, 28960, 0.33959500000000004, 626610);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
