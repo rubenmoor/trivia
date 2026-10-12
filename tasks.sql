@@ -3559,45 +3559,47 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Replacing media with visible text per locale (flagged only; backlog if many, plan 66).
 - Flags from a game played in English/German (`apply_flags` with a locale): part 6 (task 246) decides how flags carry the locale.
 - Reworking needs_work translations: the next `--translate` run picks them again (plan 66''s selection).', '2026-10-12T19:34:03Z', 245);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (68, 9, 'Language setting and per-locale pool (I18N-2)', 480, 'Part 6 of the masterplan (plan 9): the player picks the UI language and the question language; the game plays from that locale''s pool and shows that locale''s category and bundle names. Launch languages `es`, `en`, `de` (D-78, decision 26: Launch languages (OQ-31)); `es-ES` is a UI variant only (decision 27: Spanish variety). Owner: `plans/15-i18n.md` "Model", I18N-2. The family''s game stays as today: Spanish, gamemaster mode unchanged (D-59).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (68, 9, 'Language setting and per-locale pool (I18N-2)', 480, 'Part 6 of the masterplan (plan 9): the player picks the UI language and the question language; the game plays from that locale''s pool and shows that locale''s category and bundle names; a fresh save asks for the language once, on first start (milestone 9''s revision; replaces this plan''s earlier "no first-start language screen"). Launch languages `es`, `en`, `de` (D-78, decision 26: Launch languages (OQ-31)); `es-ES` is a UI variant only (decision 27: Spanish variety). Owner: `plans/15-i18n.md` "Model", I18N-2. The family''s game stays as today: Spanish, gamemaster mode unchanged (D-59).
 
 ## Builds on
 - Plan 63 (done, D-81): `app/data/pool.<locale>.json` (no `pool.es.json`: `es` = `pool.json`), `app/data/names.<locale>.json`, `app/data/bundles/<id>/names.<locale>.json`; subcategory keys stay Spanish everywhere.
 - Plan 65 (seen counters, supersedes D-28''s burns): `seen` rows by question id for the whole save. Ids are shared across locales, so switching languages never repeats a question with no extra work; the outlook and the low-supply warning (decision 31: super-tight) run on the loaded locale''s pool.
-- Catalog (plan 21, D-70): `lib/i18n.ts`, `CATALOGS`, `?lang=` dev override. `en` draft: plan 24; `de`, `es-ES`: part 7 (task 247). This plan only switches between whatever catalogs exist.
-- Plan 36 has no general settings screen (only the mode screen, MD-7); plan 59 grows the overlay into the gamemaster menu (480, before this plan).
+- Catalog (plan 21, D-70): `lib/i18n.ts`, `CATALOGS`, `?lang=` dev override. `en` draft: plan 24; `de`, `es-ES`: plan 69. This plan only switches between whatever catalogs exist.
+- Plan 36 has no general settings screen (only the mode screen, MD-7); plan 59 grows the overlay into the gamemaster menu.
 - Decision 4 (Python server: static + `/api/save`): new save fields pass through untouched; `/data/` serves the new files statically.
+- Built (tasks 449, 450): `SaveData.language`, `GameRow.locale` (decision 36: written only for non-es games), `defaultLanguage()` in `engine/save.ts`, `ready()`/`language()` in `lib/engine.ts`, boot language in `main.ts`, Esc menu rows in `Overlay.svelte`, `displayName`.
 
 ## Decisions taken here
-- **Save field, no version bump**: `SaveData.language?: { ui: string; questions: string }`. Missing = `{ui: "es", questions: "es"}` (`withDefaults`/`parseSave`), so the family''s save and fixtures stay Spanish whatever the browser says. A fresh save gets the default below. Profile = save (plan 65): on Steam it travels with the SteamID''s save.
-- **Default for a fresh save**: best match of `navigator.language` among the existing catalogs (UI) and locales with a pool (questions): exact tag, then the language part (`es-CO` → `es`, `de-AT` → `de`, `es-ES` → `es-ES` UI + `es` questions), else `en` if present, else `es`. Steam''s client language replaces `navigator.language` in S5 (SW-*); not here.
-- **A game keeps its locale**: `GameRow.locale?` (missing = `es`), set by `newGame` from `language.questions`. Continuing a game loads its own locale''s data; a language change applies to the next game. No mid-game pool swap (an untranslated offered id would break the game).
-- **Where**: two rows «Idioma» / «Idioma de las preguntas» in the Esc menu of every mode (next to sound; allowed in every mode, like sound), shown only when there are ≥2 options. Today (only `es` catalog, only `pool.json`) nothing appears: the family sees no change. No first-start language screen.
-- **Options**: UI = catalogs in `CATALOGS` minus `xx`; questions = locales whose pool file exists (`es` always). A question locale whose pool fails the supply check for the default bundles is listed but disabled, with the reason.
-- **UI language change reloads the app** (`location.reload()` after the save is written); `lang` stays a module constant set once at boot. No reactive catalog.
-- **Names**: one helper `displayName(kind, key)` from the loaded locale''s names files; fallback the Spanish key/`categories.json` name (validate already errors when an exported pool lacks a name).
+- **Save field, no version bump**: `SaveData.language?: { ui: string; questions: string }`. A stored save without it = `{ui: "es", questions: "es"}` (`parseSave`), so the family''s save and fixtures stay Spanish whatever the browser says. A fresh save (`emptySave()`: no file, 404, or a backed-up broken file) gets the default below. Profile = save (plan 65): on Steam it travels with the SteamID''s save.
+- **Default for a fresh save**: best match of the guessed tag among the existing catalogs (UI) and locales with a pool (questions): exact tag, then the language part (`es-CO` → `es`, `de-AT` → `de`, `es-ES` → `es-ES` UI + `es` questions), else `en` if present, else `es`. Guessed tag: `navigator.language` now; Steam''s client language once milestone 10 provides it (one seam, `guessTag()`; not wired here).
+- **A game keeps its locale**: `GameRow.locale?` (missing = `es`), set by `newGame` from `language.questions`. Continuing a game loads its own locale''s data; a language change applies to the next game. No mid-game pool swap.
+- **Esc menu**: two rows «Idioma» / «Idioma de las preguntas» in every mode (next to sound), shown only with ≥2 options. Today (only `es` catalog, only `pool.json`) nothing appears.
+- **First-start language screen** (milestone 9):
+  - Shown when the loaded save is fresh (no `language` stored, i.e. `emptySave()`), before the start screen; asked once: confirming writes `language`, so it never shows again. A stored save without `language` (the family''s) is parsed as `es` and never sees it.
+  - Skipped while there is nothing to pick (one UI option and one question locale, as today); nothing is written then, so it asks once a second language ships.
+  - One list of UI languages by endonym (same data as the Esc rows), the guess preselected and focused; confirm = Enter / pad A / click. A pick sets both: `ui` = the pick, `questions` = `defaultLanguage(pick)` over the locales whose supply check passes for the default bundles (`es` always). Separate question language: Esc menu.
+  - No `t()` text needed to choose: endonyms plus a heading and a confirm prompt in the guessed UI language (`language.*` keys).
+  - Confirm with a different UI language than the boot one: save, then `location.reload()` (same rule as the Esc menu); same one: continue to the start screen without reload.
+- **Options**: UI = catalogs in `CATALOGS` minus `xx`; questions = locales whose pool file exists (`es` always). A question locale whose pool fails the supply check for the default bundles is listed but disabled in the Esc menu, with the reason.
+- **UI language change reloads the app**; `lang` stays a module constant set once at boot. No reactive catalog.
+- **Names**: `displayName(kind, key)` from the loaded locale''s names files; fallback the Spanish key/`categories.json` name.
 
 ## Tasks (for the split)
-1. **Engine and data: language in the save, per-locale data** (priority 480)
-   - `engine/state.ts`: `SaveData.language?`, `GameRow.locale?`; `save.ts` defaults; `newGame` records `locale`; `api.ts` action `language` (`{ui, questions}`, validated against the given option lists, every mode); `lib/types.ts`.
-   - `lib/data.ts`: `loadEngineData(base, locale)`: `pool.<locale>.json` (`es` → `pool.json`, like `authoring/tools/sim/load.ts`), names files (optional, base + each bundle); cached per locale. `availableLocales()`: probes `pool.<l>.json` for `LOCALES` (`es`, `en`, `de`).
-   - `lib/engine.ts` / `store.ts`: the engine data of the active game''s locale, else of `language.questions`.
-   - Check: `npm test` (fixture replay unchanged), `npm run check`; throw-away script with a temp `pool.en.json` (3 levels'' worth faked from `pool.json` ids) + `names.en.json`: old save → `es`; fresh save with `navigator.language = "de-AT"` and only `es`/`en` present → UI `en`, questions `en`; a game started in `en` keeps `en` after switching to `es`; ids seen in an `en` game count as seen (rank after unseen ones) in an `es` game.
-2. **UI: language rows, names, boot** (priority 470)
-   - `lib/i18n.ts`: `lang` from the save at boot (before the first render), `?lang=` dev override kept; `<html lang>`.
-   - Esc menu (`Overlay.svelte`, plan 59''s menu): the two rows, only with ≥2 options, disabled option with reason; UI change → save → reload. Action layer scopes and `data-nav` (IN-2..IN-5), keys and pad; strings via `t()` (`language.*`), endonyms («English», «Deutsch», «Español (Latinoamérica)», «Español (España)») as data, not translated; `npm run check:literals`.
-   - `displayName` in every place that shows a category, subcategory or bundle name (`CategoryPicker.svelte`, plan 29''s Choice screen, Hud/Tower if they show names, report list).
-   - Check: `npm run check`, `npm run build`; browser walk on a copy of the family save: no language rows, game as today; with throw-away `pool.en.json` + `names.en.json` + a stub `en` catalog (or plan 24''s): switch both, names and questions in English, `Continuar` of a Spanish game stays Spanish; keyboard only, pad.
-3. **Docs** (priority 460)
-   - D-entry (next free number) for the decisions above; `plans/15-i18n.md` "Model": stored in the save, default `navigator.language` (Steam language S5), a game keeps its locale, seen counts by id across locales; I18N-2 `[x]` with a note.
-   - `plans/04-ui-tv-display.md` (Esc menu rows), `plans/12-*` save doc if it lists `SaveData` fields, `directory.md` if files were added, `plans/project.md` in sync.
+1. **Engine and data** (task 449, done).
+2. **UI: Esc menu rows, names, boot** (task 450, done).
+3. **Docs** (task 451; runs after task 4): the D-entry and `plans/15-i18n.md` "Model" also cover the first-start screen; `plans/04-ui-tv-display.md` gets the screen next to the Esc menu rows.
+4. **First-start language screen** (priority 470, before the docs task)
+   - `lib/engine.ts`: `ready()` remembers whether the stored save had no `language` (fresh); `language()` returns `ask: boolean` (fresh and >1 UI option or >1 question locale). `guessTag()` wraps `navigator.language` (the seam for milestone 10).
+   - `Game.svelte`: a `language` screen before `start` when `ask`; a new component (e.g. `game/LanguageScreen.svelte`): the endonym list, guess preselected, action layer scope and `data-nav` (IN-2..IN-5), keys and pad; confirm → `setLanguage` → reload if `ui` changed, else `start`. Esc menu not reachable on this screen (nothing to configure yet).
+   - Strings via `t()` (`language.choose`, `language.confirm` or similar) in `es` and in whatever other catalogs exist (plan 24''s `en` if present, else noted for plan 69); `npm run check:literals`.
+   - Check: `npm run check`, `npm run build`, `npm test`; throw-away: browser walk with no save file and throw-away `pool.en.json` + `names.en.json` + a stub `en` catalog: `navigator.language` `de-AT` → `en` preselected; pick `Español (Latinoamérica)` → reload, Spanish start screen; reload again → no screen; a copy of the family save → no screen; only `es` present → no screen, nothing written; keyboard only, pad.
 
 ## Done when
-- The family''s save plays exactly as today (fixture replay passes, no visible language rows with only `es`).
-- With a second pool and catalog present, a player switches both languages from the Esc menu; the next game draws from that locale''s pool with its names, never repeating a question seen in another language before unseen ones run out.
+- The family''s save plays exactly as today (fixture replay passes, no language rows or screen with only `es`; never a screen for a stored save).
+- With a second pool and catalog present: a fresh save opens on the language screen with the guessed language preselected, asks once; a player switches both languages from the Esc menu; the next game draws from that locale''s pool with its names, never repeating a question seen in another language before unseen ones run out.
 
 ## Out of scope
-- Catalogs `en`, `de`, `es-ES` (plan 24, part 7), translated pools (parts 4, 11), Steam client language (S5), store page (LUI-6).', '2026-10-12T19:36:15Z', 246);
+- Catalogs `en`, `de`, `es-ES` (plans 24, 69), translated pools (plans 66, part 11), Steam client language (milestone 10 wires it into `guessTag()`), store page (LUI-6).', '2026-10-12T19:36:15Z', 246);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (69, 9, 'UI catalogs for the launch languages (LUI-4, LUI-5)', 370, 'Part 7 of the masterplan (plan 9): every screen of the game in the launch languages, checked by native speakers. Launch catalogs `es` (neutral Latin American, es-419), `es-ES` (override), `en`, `de` (D-78; decision 26: Launch languages (OQ-31); decision 27: Spanish variety (OQ-31)). Owner: `plans/15a-ui-translation.md` (LUI-4, LUI-5). The family''s game stays Spanish with today''s keys (D-59), unless the LUI-4 decision says otherwise.
 
 ## Builds on
@@ -9197,7 +9199,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:30:44Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (486, 68, 'revise plan 68', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 68, changed; it is quoted below. Bring plan 68 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (486, 68, 'revise plan 68', 'plan', 'done', 1000, '2026-10-12, plan 68 body: first-start language screen (task 4), docs task covers it; split queued as task 489', 'Plan 9, the plan above plan 68, changed; it is quoted below. Bring plan 68 in line with it
 (`pm plan edit 68 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -9302,7 +9304,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', NULL, 470);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:31:54Z', 470);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (487, 69, 'revise plan 69', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -9515,6 +9517,8 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', NULL, 470);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (489, 68, 'create tasks for plan 68', 'split', 'open', 1000, NULL, 'Split plan 68 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:31:51Z', NULL, 486);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10417,6 +10421,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (330, 483, '2026-10-12T20:30:14Z', '2026-10-12T20:30:25Z', 'done', NULL, 0, '9b79144e9f9e509f6bc7f1421ad94764cf95fbd7', 'claude-opus-5-5[1m]', 'ea03ac80-7e9c-4d1e-96c4-c44cd8be44a0', 3, 6, 853, 73876, 22045, 0.20821920000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (331, 484, '2026-10-12T20:30:26Z', '2026-10-12T20:30:35Z', 'done', NULL, 0, '91c23fd31018ac2666dcd5b28c01051bd87aa6c0', 'claude-opus-5-5[1m]', '1084f306-7bac-4063-87c6-b53d9f2b15e5', 3, 6, 589, 78932, 23780, 0.21783039999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (332, 485, '2026-10-12T20:30:35Z', '2026-10-12T20:30:47Z', 'done', NULL, 0, 'de54be21df5aafb3a6cdc97debbb70cd456c149a', 'claude-opus-5-5[1m]', '890e62a5-34e3-4b19-b4da-fbd2706c769d', 4, 8, 877, 110799, 23918, 0.23107580000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (333, 486, '2026-10-12T20:30:47Z', '2026-10-12T20:32:02Z', 'done', NULL, 0, 'b0b046ad1e189120e2e1025f9cd4b08dc91f964e', 'claude-opus-5-5[1m]', '155bf3e5-6c86-461f-b06a-8448c727fe27', 12, 22, 7116, 475679, 44770, 0.5957038, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
