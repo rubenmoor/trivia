@@ -25,6 +25,7 @@ flowchart LR
 ```
 
 - **`app/client/src/engine/`**: a pure TypeScript module with no DOM and no Svelte. It covers `selection.ts` (matching, supply), `game.ts` (state machine, jokers, burning, undo), `pool.ts` (loading and filtering), `rng.ts` (a seedable PRNG). Every function takes the state and returns the new state, so undo and saves stay simple.
+- **Engine runs under plain Node 22** (D-60): erasable TS only (no `enum`, `namespace`, parameter properties), relative imports with `.ts` extensions, no Vite-only imports. tsconfig: `erasableSyntaxOnly`, `allowImportingTsExtensions`. Authoring calls it via `node` for the supply check.
 - **Store interface**: `load(): SaveData` / `save(SaveData)`. `SaveData` is one versioned JSON document (`{version, players, games, burned}`) that replaces the SQLite tables. The data is small (players × burned IDs), so one document fits easily, and it suits Steam Cloud (one file) too.
 - **`ServerStore`** (current game, until the Steam build replaces it, D-59): the Python server keeps a tiny `GET/PUT /api/save` that writes `state/game.json` atomically. No localStorage: D-3 rejected it as fragile.
 - **Pool export** (done, D-35): `qgen export` writes the playable pool (`approved` only, without `review`, `quality` and pipeline fields) to `app/data/pool.json`. The TS engine loads that file; with locales (15b) it becomes one file per locale.
@@ -52,4 +53,4 @@ With the engine in the client, the correct answer is in memory before the player
 - [ ] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the family's real save.
 - [x] PORT-6 `qgen.py export`: the playable pool for the client; `validate` checks that the export is current. *2026-10-07, pulled forward as LP-3 (`19-repo-layout.md`): `app/data/pool.json`; the Python game server reads it too.*
 - [ ] PORT-7 Switch the screens from `lib/api.ts` game calls to the engine. Family test night on the TS engine.
-- [ ] PORT-8 Delete `app/server/game.py` and the game routes; `app/server/selection.py` stays only if `qgen.py report` still needs it (otherwise the report calls the TS engine via Node, or keeps its own copy, to be decided). Update `01-architecture.md` and AGENTS.md.
+- [ ] PORT-8 Delete `app/server/game.py` and the game routes; `app/server/selection.py` goes too: `qgen report` and `authoring/server/overview.py` get the supply from the TS engine via `node` (D-60, pm decision 5). Update `01-architecture.md` and AGENTS.md.

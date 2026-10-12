@@ -470,3 +470,10 @@ Template:
 - Decision: Two implementations only: the current one (`trivia`, Python server + browser) and the Steam build (desktop shell, S3+). The current one keeps working until the Steam build replaces it; it gets nothing the Steam build won't have. The Python game server after the port: static files plus `/api/save` only (pm decision 4, option 3): flags move into `SaveData`, categories become static files from `qgen export`, media is served from the synced cache only (no download on miss; `trivia-media sync` before play).
 - Consequences: `trivia-authoring` reads flags from `game.json` and never writes it (it skips flags it already turned into reviews). "The family" in plans means the people who play and test, not a separate product or pool. Supersedes D-34's "the family game stays the priority" and the family half of D-47's flag file.
 - Supersedes / related: D-3, D-17 (download on miss, for the game), D-34, D-47; plan 12, plan 11
+
+## D-60: Authoring gets the supply check from the TS engine via Node
+- Date: 2026-10-12
+- Context: After the port, only `qgen report` and the authoring start page use `app/server/selection.py`. Age groups (M5), bundles and per-language supply will change the selection rules, in TS first.
+- Decision: No Python copy (pm decision 5, option 2). A small Node entry point runs `engine/selection.ts` and prints the supply as JSON; `qgen report` and `authoring/server/overview.py` call it. The engine stays runnable under plain Node 22 (type stripping): erasable syntax only, `.ts` import extensions.
+- Consequences: Node is needed for `qgen report` (it's in the flake). `selection.py` is deleted with PORT-8. The selection fixtures guard only the Python → TS port, not a second copy.
+- Supersedes / related: D-59; plan 12 (PORT-2, PORT-8)
