@@ -9,11 +9,14 @@ const CATALOGS: Record<string, Catalog> = { es };
 /** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
 export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
 
-/** The save's UI language; `?lang=` overrides it in dev only (also `xx`, LUI-2). Unknown → `es`. */
+/** Dev-only catalogs, loaded on demand: `xx` (LUI-2), `en` draft (LUI-3). */
+const DEV_LANGS = ["xx", "en"];
+
+/** The save's UI language; `?lang=` overrides it in dev only (also `DEV_LANGS`). Unknown → `es`. */
 function pickLang(saved?: string): string {
   if (import.meta.env?.DEV && typeof location !== "undefined") {
     const q = new URLSearchParams(location.search).get("lang");
-    if (q && (q === "xx" || q in CATALOGS)) return q;
+    if (q && (DEV_LANGS.includes(q) || q in CATALOGS)) return q;
   }
   return saved && saved in CATALOGS ? saved : "es";
 }
@@ -30,6 +33,7 @@ let plurals = new Intl.PluralRules(real(lang));
 export async function initLang(saved?: string): Promise<void> {
   lang = pickLang(saved);
   if (import.meta.env?.DEV && lang === "xx" && !CATALOGS.xx) CATALOGS.xx = (await import("../locales/xx")).pseudo(es);
+  if (import.meta.env?.DEV && lang === "en" && !CATALOGS.en) CATALOGS.en = (await import("../locales/en")).en;
   catalog = CATALOGS[lang];
   numbers = new Intl.NumberFormat(real(lang));
   plurals = new Intl.PluralRules(real(lang));
