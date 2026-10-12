@@ -4619,7 +4619,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If (c): add the exclusion rule to SW-9 in `plans/18-steam-integration.md`.
 
 Done when: D-entry exists; OQ resolved; plan 23 (and the provider order, if (a)) reflect the answer; any follow-up is a task in plan 42.', '2026-10-12T00:50:35Z', NULL, 180);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (206, 43, 'S2 close-out: plans/11-steam.md to the answers (ST-1)', 'work', 'open', NULL, NULL, 'Plan 43 task 1. Brings `plans/11-steam.md` in line with the S2 answers in `plans/decisions.md`. Docs only.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (206, 43, 'S2 close-out: plans/11-steam.md to the answers (ST-1)', 'work', 'dropped', NULL, 'superseded by the revised plan 43 (task 369): five game modes, achievements, plan 14, new guard tasks', 'Plan 43 task 1. Brings `plans/11-steam.md` in line with the S2 answers in `plans/decisions.md`. Docs only.
 
 **Guard first:** `pm show` a follow-up task of each of plans 34, 35, 37–42 (e.g. 183, 185, 190, 192, 194, 199, 202, 205). If a decision is still pending: `pm task-pending-decision <this task> <decision id>` and stop. If answered but its record-the-answer task is still open: stop without changes, don''t drop; the queue brings it back. Plan 36 (MD-6, MD-7) is not waited for.
 
@@ -4630,8 +4630,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Risks: media licensing → Freesound outcome; scope creep → co-op format; others only if an answer changed them.
 - ST-1 `[x]` with date and D-numbers; file status `draft` → `agreed`.
 
-Done when: no "open"/"recommended" wording left in `11-steam.md` for OQ-29..OQ-37 or the Freesound question.', '2026-10-12T00:51:05Z', NULL, 181);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (207, 43, 'S2 close-out: indexes and milestones 8–11', 'work', 'open', NULL, NULL, 'Plan 43 task 2, after task 1. Indexes and later milestones in line with the S2 answers. Docs and pm only.
+Done when: no "open"/"recommended" wording left in `11-steam.md` for OQ-29..OQ-37 or the Freesound question.', '2026-10-12T00:51:05Z', '2026-10-12T16:51:42Z', 181);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (207, 43, 'S2 close-out: indexes and milestones 8–11', 'work', 'dropped', NULL, 'superseded by the revised plan 43 (task 369): IN-7, plan 14, plan 59, new guard tasks', 'Plan 43 task 2, after task 1. Indexes and later milestones in line with the S2 answers. Docs and pm only.
 
 **Guard first:** same as task 1 (`pm show` the record-the-answer tasks of plans 34, 35, 37–42; pending decision → `pm task-pending-decision` and stop; open follow-up → stop without changes). Also stop if task 1 (`11-steam.md`) is still open.
 
@@ -4641,7 +4641,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Milestones 8–11: `pm show` their masterplans (plans 8–11) and bodies. Masterplan "tbd." → nothing. Written and scope changed (shell ≠ Electron, languages, licence files, Freesound replacement) → short dated note via `pm plan edit <id> --body -`. Change a milestone body (`pm milestone set <id> --body -`) only if it names something the answers ruled out; list such changes in the task note.
 - Note the state of plan 36 (MD-6, MD-7) in `project.md`; don''t wait for it.
 
-Done when: milestone 7''s "Done when" holds (OQ-29..OQ-37 and the Freesound question resolved in `decisions.md`, later phases in `11-steam.md` match); `qgen validate` unaffected (no data touched).', '2026-10-12T00:51:05Z', NULL, 181);
+Done when: milestone 7''s "Done when" holds (OQ-29..OQ-37 and the Freesound question resolved in `decisions.md`, later phases in `11-steam.md` match); `qgen validate` unaffected (no data touched).', '2026-10-12T00:51:05Z', '2026-10-12T16:51:42Z', 181);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (208, 8, 'create tasks for plan 8', 'split', 'done', 1000, '2026-10-11, tasks 209–216 (plan tasks for parts 1–8; 209–211 at 690/680/670 to run after OQ-29 prep task 182); no new decisions: OQ-29 comes from task 182, the rest are raised by the part plans', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:52:42Z', '2026-10-12T00:53:44Z', 8);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (209, 8, 'write plan: Desktop shell skeleton (SW-2)', 'plan', 'done', 690, '2026-10-11, pm plan 54, plans/18-steam-integration.md', 'Write the plan for part 1 of the masterplan (plan 8): `pm plan add 8 "Desktop shell skeleton (SW-2)" --priority 480`.
@@ -6755,8 +6755,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md`: the burn multiplier line points to the D-entry.
 
 Done when: D-entry exists; OQ-37 resolved; plans 13 and 14 spec the three modes and input that MD-8, MD-9 and IN-6 build later; plans 34 and 38 can read shell needs and burn multipliers from the D-entry.', '2026-10-12T16:50:17Z', NULL, 384);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (386, 43, 'create tasks for plan 43', 'split', 'open', 1000, NULL, 'Split plan 43 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:50:57Z', NULL, 369);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (386, 43, 'create tasks for plan 43', 'split', 'done', 1000, '2026-10-12, dropped 206/207 (pre-revision), added 387 (11-steam.md, ST-1) and 388 (indexes, milestones 8–11); no decisions needed', 'Split plan 43 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:50:57Z', '2026-10-12T16:51:45Z', 369);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (387, 43, 'S2 close-out: plans/11-steam.md to the answers (ST-1)', 'work', 'open', NULL, NULL, 'Plan 43 task 1. Brings `plans/11-steam.md` in line with the S2 answers in `plans/decisions.md`. Docs only, no code, no data.
+
+**Guard first:** `pm show` the follow-up tasks of plans 34, 35, 37–42: 183 (shell), 373 (game modes), 381 (languages), 383 (content target), 194 (price/account), 199 (licence), 385 (multiplayer/input), 203 + 205 (Freesound). If one of them waits for a pending decision: `pm task-pending-decision <this task> <decision id>` and stop. If one is still open (decision answered or a recording task): stop without changes, don''t drop; the queue brings this task back. Plans 36 (MD-6, MD-7) and 59 (MD-10..MD-12) are not waited for.
+
+- Freesound question: the new OQ number from plan 42 (task 203), not OQ-45.
+- "Open questions (blocking)" table: each row → answer + D-number (OQ-34, OQ-36 already done); add the Freesound row.
+- "Tracks" table: "Steam part starts" / "What it covers" match the answers: shell in 18''s row, languages in 15''s, the five game modes in 13''s, per-player gamepads + shared keyboard, no phones, in 14''s.
+- "Phases":
+  - S3 names the chosen shell (not "Electron" if it wasn''t).
+  - S4''s exit names the launch languages and the CT-1 target (CT-2 verifies).
+  - S5 names price model, account holder, licence files, Freesound outcome; achievements only outside gamemaster mode and customized games (needs `settings.mode`, `settings.customized`).
+  - "Later" names the three multiplayer modes (round-robin co-op, round-robin competitive, competitive timed; MD-8, MD-9, IN-6), not in S3–S6 unless the gamemaster adds them.
+- Risks: media licensing → Freesound outcome; scope creep → multiplayer modes stay "Later"; others only if an answer changed them.
+- ST-1 `[x]` with date and D-numbers; file status `draft` → `agreed`.
+
+Done when: no "open"/"recommended"/"default mode" wording left in `11-steam.md` for OQ-29..OQ-37 or the Freesound question.', '2026-10-12T16:51:42Z', NULL, 386);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (388, 43, 'S2 close-out: indexes and milestones 8–11', 'work', 'open', NULL, NULL, 'Plan 43 task 2, after task 1 (`11-steam.md`). Indexes and later milestones in line with the S2 answers. Docs and pm only, no code, no data.
+
+**Guard first:** same as task 1 (follow-up tasks 183, 373, 381, 383, 194, 199, 385, 203, 205; pending decision → `pm task-pending-decision` and stop; open → stop without changes, don''t drop). Also stop without changes while task 1 is open.
+
+- `plans/project.md`:
+  - "Open questions" table: drop the resolved rows.
+  - "Steam track" paragraph: S2 done (D-numbers); state of MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59); don''t wait for them.
+  - Tick SW-1, MD-5, IN-7, I18N-1, CT-1, PUB-4 where their plan files tick them.
+- `plans/README.md`: status column for 13, 14, 15, 15a/15b/15c, 16, 17, 18 (and 23 if changed) to what the files say (`stub` → `draft`/`agreed` where decided).
+- `plans/open-questions.md`: OQ-29..OQ-37 and the Freesound question (new number from plan 42) under "Resolved"; nothing left open for S2.
+- Milestones 8–11 (S3–S6): `pm show` a task of each masterplan (plans 8–11) for milestone body and masterplan.
+  - Masterplan "tbd." → nothing (its writer reads `decisions.md`).
+  - Written and scope changed (shell ≠ Electron, languages, licence files, Freesound replacement, S5 achievements needing `settings.mode` and `settings.customized`, multiplayer modes not in S3–S6) → short dated note via `pm plan edit <id> --body -`.
+  - Milestone body (`pm milestone set <id> --body -`) only if it names something the answers ruled out (phones, presets, a "default mode"); list such changes in the task note.
+
+Done when: milestone 7''s "Done when" holds (OQ-29..OQ-37 and the Freesound question resolved in `decisions.md`, later phases in `11-steam.md` match); `qgen validate` unaffected.', '2026-10-12T16:51:43Z', NULL, 386);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7278,6 +7310,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (247, 384, '2026-10-12T16:49:58Z', '2026-10-12T16:50:24Z', 'done', NULL, 0, '5b5b39886cdc21fe0de66e01a2f826e3c76b0c8f', 'claude-opus-5-5[1m]', '49a9bacf-cec6-4032-8a2d-e60fbd30669e', 7, 14, 2291, 205921, 24360, 0.28194020000000003, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (248, 368, '2026-10-12T16:50:24Z', '2026-10-12T16:50:37Z', 'done', NULL, 0, 'a677589ca4f68b3a266d9ed24361a110fe902684', 'claude-opus-5-5[1m]', '1fe2fcaa-68b2-4207-afc2-c1d829dcc0df', 3, 6, 983, 77743, 22941, 0.21876060000000003, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (249, 369, '2026-10-12T16:50:37Z', '2026-10-12T16:51:09Z', 'done', NULL, 0, '8b2d14fcf110207171f04071c3e4d8ab29aa54ac', 'claude-opus-5-5[1m]', '2c751eb3-0a75-4a6d-88c8-2e30dd6d62ea', 6, 12, 3178, 183782, 24731, 0.2982124, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (250, 386, '2026-10-12T16:51:09Z', '2026-10-12T16:51:49Z', 'done', NULL, 0, '5330f6c4fbd7766ae02bed376eccc4379bd06c47', 'claude-opus-5-5[1m]', '1a4a4e25-5106-4e12-bafd-5ed4e83f6813', 9, 18, 3454, 323050, 35136, 0.41485, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
