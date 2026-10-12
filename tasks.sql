@@ -9710,8 +9710,101 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (500, 72, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-12, plan 72 body (tasks.sql)', 'Write plan 72, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-12T22:44:46Z', '2026-10-12T22:48:15Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (501, 72, 'create tasks for plan 72', 'split', 'open', 1000, NULL, 'Split plan 72 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:48:11Z', NULL, 500);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (501, 72, 'create tasks for plan 72', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 502-512 (plan writers for parts 1-11)', 'Split plan 72 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:48:11Z', '2026-10-12T22:48:55Z', 500);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (502, 72, 'write plan: Baseline scans and report skeleton (part 1)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of plan 72: **Baseline scans and report skeleton**, as described there.
+- Tasks to foresee: `code-review.md` skeleton (format, severity definitions, one `## <part>` section per part 1–11, top placeholder for the executive summary) + `directory.md` entry; file inventory (every tracked file in scope → part); the cross-cutting scans (directory.md vs git ls-files, unused exports/defs, unused npm deps, stale `PLACEHOLDER`s, TODO/FIXME, casts, swallowed errors, sync IO in handlers, bundle-size baseline), split into as many tasks as fit one run each.
+- Findings of the scans go into `code-review.md` with a status, or are handed on to the part that owns the file (row status "handed to part N").
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (503, 72, 'write plan: Python game server review (part 2)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of plan 72: **Python game server** (`app/server/`), as described there.
+- `game.py`, `selection.py`, `flags.py` short-review only (task 302 rule); check decision 4: After the engine port, which routes does the Python game server keep.
+- Uses part 1''s inventory and scan findings for these files.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (504, 72, 'write plan: TS engine review (part 3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of plan 72: **TS engine** (`app/client/src/engine/` incl. tests, test helpers, fixture loader), as described there.
+- `game.ts` alone is likely one task; group the small modules.
+- Check open engine tasks first (`pm queue`, plans 50, 59: engine parts of MD-10..MD-12) to avoid conflicting refactors.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (505, 72, 'write plan: Client lib, locales and boot review (part 4)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of plan 72: **Client lib, locales and boot**, as described there.
+- Catalog drift between `es.ts`/`en.ts`/`xx.ts`: check open catalog plans (24, 69) first; superseded findings there get "superseded by task N".
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (506, 72, 'write plan: Game screens review (part 5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of plan 72: **Game screens** (`app/client/src/game/`), with the per-file and grouped tasks listed there.
+- Check open screen plans (36, 46, 50, 59) for files they still rewrite; review those after or short-review them.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (507, 72, 'write plan: Desktop shell and packaging review (part 6)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of plan 72: **Desktop shell and packaging** (`app/desktop/`), as described there.
+- Check open desktop plans (54, 56, 46) first.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (508, 72, 'write plan: qgen review (part 7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of plan 72: **qgen** (`authoring/tools/qgen.py`), split by command/section into several review tasks plus one module-structure task, as described there.
+- Map the real sections (`grep -n ''^def \|^# '' authoring/tools/qgen.py`) to tasks by line range; the structure task runs last in the plan.
+- Check open qgen plans (57, 58, 65, 70, 17) for code they still change.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (509, 72, 'write plan: Other authoring tools review (part 8)', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of plan 72: **Other authoring tools** (`authoring/tools/` minus `qgen.py` and prompts), as described there.
+- `record_fixtures.py`: short review (task 302 rule).
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (510, 72, 'write plan: Authoring server and UI review (part 9)', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of plan 72: **Authoring server and UI** (`authoring/server/`, `authoring/ui/`), as described there.
+- `Review.svelte` alone is likely one task; group chart components; check open plans 53 and 67 (review tool) first.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (511, 72, 'write plan: Cross-cutting duplication, consistency and build config (part 10)', 'plan', 'open', 1000, NULL, 'Write the plan for part 10 of plan 72: **Cross-cutting: duplication, consistency, build config**, as described there.
+- Its tasks consume the "duplication candidate" rows of parts 2–9 in `code-review.md`; the plan says so, so its tasks run (plan id order) after parts 2–9 and re-read the report rather than assume its content.
+- Build config files (`flake.nix`, root `package.json`, tsconfigs, vite/svelte configs, `.gitignore`, `.envrc`) reviewed here; `directory.md`/`AGENTS.md` checked against the code last.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', NULL, 501);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (512, 72, 'write plan: Executive summary and close-out (part 11)', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of plan 72: **Executive summary and close-out**, as described there.
+- Tasks: completeness check (every file of part 1''s inventory listed, every finding has a status, follow-ups done or listed); the executive summary at the top of `code-review.md` (milestone 13 "Report"); process changes proposed as `pm decision add`, not edited into AGENTS.md or the milestone; final checks.
+
+
+Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
+- `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
+- Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', NULL, 501);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10708,6 +10801,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (365, 497, '2026-10-12T22:38:41Z', '2026-10-12T22:44:09Z', 'done', NULL, 0, '0170394ac1a2a8078a83e58cf1f595fe804452ee', 'claude-opus-5-5[1m]', '53a290b2-79ee-42b5-b3e7-2f24ce6a7793', 28, 54, 34994, 2252159, 106531, 2.0027757999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (366, 498, '2026-10-12T22:44:09Z', '2026-10-12T22:46:59Z', 'done', NULL, 0, '35d0010d01a07440ccb95397160c34af876de043', 'claude-opus-5-5[1m]', 'b8d53a7d-c64a-4d3e-abc6-33551a59a1fa', 26, 44, 15573, 1542293, 79267, 1.2542305999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (367, 500, '2026-10-12T22:46:59Z', '2026-10-12T22:48:24Z', 'done', NULL, 0, '06e6ea015140043cc19556786c8efcc20dac8c94', 'claude-opus-5-5[1m]', 'bb166a20-f51f-4538-a733-64dcb082a9a2', 7, 14, 7501, 250417, 41563, 0.5326634, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (368, 501, '2026-10-12T22:48:24Z', '2026-10-12T22:49:00Z', 'done', NULL, 0, '7d713ccd47e693b3abae45d015435a5a1b5212b8', 'claude-opus-5-5[1m]', '2a55fa6f-469c-4c29-971d-24ffdb2be177', 4, 8, 3315, 116173, 30177, 0.3309826, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
