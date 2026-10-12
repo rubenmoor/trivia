@@ -8524,17 +8524,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: decisions exist and are linked; 15a lists the candidates.', '2026-10-12T19:44:17Z', NULL, 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (454, 69, 'LUI-5: de.ts, es-ES.ts override and shipping wiring', 'work', 'open', NULL, NULL, 'Ship four UI catalogs: `es`, `es-ES`, `en`, `de` (decision 26: Launch languages (OQ-31); decision 27: Spanish variety (OQ-31)). Doesn''t wait for the decisions of plan 69.
 
-Needs `locales/en.ts` (plan 24) and `locales/xx.ts` (plan 23); missing → stop with a note.
+Needs `locales/en.ts` (plan 24) and `locales/xx.ts` (plan 23); missing → stop with a note. The first-start language screen (`LanguageScreen.svelte`, `language.*` keys) comes from plan 68 (task 490: First-start language screen (I18N-2)); missing → translate the rest, note it, `pm task add` a follow-up for its keys.
 
 - `app/client/src/locales/de.ts`: full translation, `satisfies Catalog`; recommended German joker names for now; mode names drafted (English first, D-74).
 - `locales/es-ES.ts`: `DeepPartial<Catalog>`, only differing leaves (`vosotros` for plural addressing, regionalisms); merged over `es` in `lib/i18n.ts` at boot; plural maps and variant arrays replaced whole.
-- `CATALOGS` in production: `es`, `es-ES`, `en`, `de`, statically imported; `xx` stays dev-only. `Intl` plural/number rules per language.
+- `language.*` keys (heading, confirm prompt of the first-start screen) in `en`, `de`, `es-ES` (if it differs): the guessed language''s catalog shows them, so each reads right on its own. Endonyms stay in plan 68''s data, not in catalogs.
+- `CATALOGS` in production: `es`, `es-ES`, `en`, `de`, statically imported; `xx` stays dev-only. `Intl` plural/number rules per language. With a second catalog shipping, the first-start screen appears on a fresh save; the family''s save (no `language` = es) must still never see it.
 - `npm run check:literals -w app/client` extended: key rule per catalog (unique, single letter, not `A`–`D`, no digit, no collision with another scope on the same screen); same `{param}` set per leaf as `es`; no leaf in `en`/`de` identical to `es` except an allow-list (names, `OK`…).
 - Fonts: throw-away script (`nix shell nixpkgs#python3Packages.fonttools`) checks Baloo 2 and Nunito in `app/client/public/fonts` cover every character of every catalog (`ÄÖÜäöüß „“ ‚‘ – … ¡¿ «» ñ`). Gap → `pm decision add` (other OFL subset of the same family), no silent new font.
-- Walk every screen with `?lang=de` and `?lang=es-ES` (method of plans 21/23, throw-away Playwright, decision 6); overflow rows → `plans/backlog.md`, origin `LUI-5`.
+- Walk every screen with `?lang=de` and `?lang=es-ES` (method of plans 21/23, throw-away Playwright, decision 6), incl. the first-start language screen on a fresh save (no save file); also check a copy of the family save opens without it. Overflow rows → `plans/backlog.md`, origin `LUI-5`.
 - `directory.md`: `locales/de.ts`, `locales/es-ES.ts`.
 
-Done when: `npm run check`, `check:literals`, `npm run build` pass; `es` output unchanged; backlog rows written.', '2026-10-12T19:44:17Z', NULL, 452);
+Done when: `npm run check`, `check:literals`, `npm run build` pass; `es` output unchanged; first-start screen reads right in each catalog; backlog rows written.', '2026-10-12T19:44:17Z', NULL, 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (455, 69, 'LUI-4/LUI-5: keys, German names, neutral es, picker letters', 'work', 'open', NULL, NULL, 'Apply the answers of the decisions created by "LUI-4/LUI-5: decisions on keys, German joker names, neutral es wording" (see `pm show` for them).
 
 - Keys per the LUI-4 answer in all catalogs (`es`, `es-ES`, `en`, `de`); `check:literals` key rule passes.
@@ -8548,10 +8549,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - Fixes inside the `--u` system (D-29); no per-language CSS unless unavoidable.
 - `hyphens: auto` on text blocks for long German compounds (needs `<html lang>` from plan 68).
-- Re-walk `de` and `xx` at 1920 × 1080 and 1280 × 800 (plan 46''s sizes); `es` pixel-identical except the fixed spots (throw-away Playwright + ImageMagick compare, decision 6).
+- Re-walk `de` and `xx` at 1920 × 1080 and 1280 × 800 (plan 46''s sizes), incl. the first-start language screen (fresh save, no save file); `es` pixel-identical except the fixed spots (throw-away Playwright + ImageMagick compare, decision 6).
 - Rows → `done`.
 
-Done when: no overflow in `de`/`xx` at both sizes; `npm run check`, `npm run build` pass.', '2026-10-12T19:44:17Z', NULL, 452);
+Done when: no overflow in `de`/`xx` at both sizes, language screen included; `npm run check`, `npm run build` pass.', '2026-10-12T19:44:17Z', NULL, 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (457, 69, 'LUI-5: /comodines per language', 'work', 'open', 360, NULL, 'Make the printable joker cards (`authoring/ui/src/print/JokerCards.svelte`, JK-11) work in every launch language.
 
 - `?lang=es|es-ES|en|de`; names and keys from the app catalogs (`authoring/` may import from `app/`).
@@ -8562,9 +8563,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: four print previews correct; `npm run check`, `check:literals`, `npm run build` pass.', '2026-10-12T19:44:17Z', NULL, 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (458, 69, 'LUI-5: playtest checklist and decisions', 'work', 'open', 350, NULL, 'Prepare the native-speaker playtest per catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the gamemaster.
 
-- "Playtest" section in `plans/15a-ui-translation.md`: full game in each available mode, every joker, overlay/Esc menu incl. language rows, keyboard and pad prompts, victory and wrong, report dialog, `/comodines` printout; what to note (wrong tone, too long, wrong register, unclear rule).
+- "Playtest" section in `plans/15a-ui-translation.md`:
+  - first start on a fresh save: language screen with the guess preselected (`navigator.language` set to the tester''s language), pick another, confirm; asked once (reload → no screen); the family''s save never sees it
+  - full game in each available mode, every joker, overlay/Esc menu incl. language rows, keyboard and pad prompts, victory and wrong, report dialog, `/comodines` printout
+  - what to note: wrong tone, too long, wrong register, unclear rule
 - Four `pm decision add --once` "Playtest passed? (<lang>)", options: passed / passed with fixes listed / failed.
-- Link the task "LUI-5: playtest fixes and close-out" of plan 69 to all four (`pm task-pending-decision`).
+- Link the task "LUI-5: playtest fixes and close-out" (task 459) to all four (`pm task-pending-decision`).
 
 Done when: checklist written, four decisions linked.', '2026-10-12T19:44:17Z', NULL, 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (459, 69, 'LUI-5: playtest fixes and close-out', 'work', 'open', 340, NULL, 'Apply the playtest answers and close LUI-4/LUI-5.
@@ -9548,8 +9552,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Fresh save with a second language present asks once with the guess preselected; a stored save never sees the screen; with only `es` the game is exactly as today.', '2026-10-12T20:32:21Z', NULL, 489);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (491, 69, 'create tasks for plan 69', 'split', 'open', 1000, NULL, 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:32:46Z', NULL, 487);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (491, 69, 'create tasks for plan 69', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 454, 456, 458 updated for the first-start language screen (language.* keys, walks, playtest checklist); 453, 455, 457, 459 already match; no new decisions (task 453 creates them)', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:32:46Z', '2026-10-12T20:33:24Z', 487);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10455,6 +10459,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (333, 486, '2026-10-12T20:30:47Z', '2026-10-12T20:32:02Z', 'done', NULL, 0, 'b0b046ad1e189120e2e1025f9cd4b08dc91f964e', 'claude-opus-5-5[1m]', '155bf3e5-6c86-461f-b06a-8448c727fe27', 12, 22, 7116, 475679, 44770, 0.5957038, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (334, 489, '2026-10-12T20:32:02Z', '2026-10-12T20:32:28Z', 'done', NULL, 0, '7c948aa8864daf09b5e358039b6239bbf9a50ecf', 'claude-opus-5-5[1m]', 'a0996ac0-1919-49ea-942f-e34378b14f45', 5, 10, 2398, 148488, 27012, 0.29379360000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (335, 487, '2026-10-12T20:32:28Z', '2026-10-12T20:32:55Z', 'done', NULL, 0, '7726d39038362831635d85adfb87e0383cc8981b', 'claude-opus-5-5[1m]', '504ccb6a-0ea5-48e2-8cdc-3b117828bcbe', 7, 14, 2352, 227453, 26584, 0.30525859999999994, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (336, 491, '2026-10-12T20:32:56Z', '2026-10-12T20:33:29Z', 'done', NULL, 0, '10e6cf8b178feeff7616858a8ead2f863387f542', 'claude-opus-5-5[1m]', '428ddc6e-be0c-4e76-9314-a422cb881196', 6, 12, 3240, 169637, 25669, 0.3041274, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
