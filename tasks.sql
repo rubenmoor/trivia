@@ -514,7 +514,39 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - New bundles, regional packs (`plans/15c-regional-questions.md`).
 - Batches per age group (AG-8), targets from the windows (plan 21''s distribution proposal, D-53).
 - Mixed-age sessions (one game, several groups at once); log in `plans/open-questions.md` if it comes up.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the two leftovers of M3/M4: preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10). Owner plan file: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", tasks UI-7, UI-10).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Today: `go()` in `app/client/src/game/Game.svelte` switches the screen behind the black and fades in at once (`PLACEHOLDER(UI-7)`, line ~117).
+- Spec (04, "Transitions", step 4): the next screen mounts behind the black, its media and images preload, the fade-in waits for that, at most 2 s.
+- What preloads: mainly the Question screen (`Question.svelte`: image, decorative background, video, audio via `/media?url=…`); check the other screens for images worth waiting for.
+- Shape to decide in the plan: a preload helper (`Image.decode()`, `canplaythrough` for audio/video, timeout) that `go()` awaits, or a promise the next screen hands back. Constant for the 2 s cap in `timing.ts`.
+- Missing or failing media must not block: timeout, then fade in as today (the «medio no disponible» chip stays).
+- Done-when catch: `grep -rn PLACEHOLDER app/client/src` also hits `Placeholder.svelte` itself (comment + `PLACEHOLDER · {task}` tag), used only for the missing-media chip (`task="IMG"`, a runtime fallback, not unfinished work). The plan turns that chip into a plain notice (no `PLACEHOLDER` tag, own component or inline) and removes `Placeholder.svelte`, or the milestone''s grep never comes up empty. Update D-25 references (AGENTS.md "Placeholders" line, 04 "Implementation notes") to say none are left.
+- Overlap: plan 21 (LUI-1) task 95 moves `Placeholder.svelte` labels into the i18n catalog (`placeholder.*`). Coordinate: whichever runs second adapts; note it in the plan.
+- Check: throttled network / large video in the dev browser; the fade waits, never longer than 2 s.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Still synthesized (`app/client/src/game/sound.svelte.ts`, recipes from line ~480): whooshes (incl. «swoosh que sube»), pops (card pick), menu blips, joker shimmer, slide whistle (silbato), shredder (trituradora), heartbeat (latido), rewind (rebobinar), scope tick, cork shot, firework launch/cannon/sparkler/star sounds; still silent: Soplo''s paper rustle and the token pop-back (JK-9).
+- Source: Kenney.nl CC0 packs first (e.g. Interface Sounds, UI Audio, Impact Sounds, Digital Audio), then Freesound CC0 / OpenGameArt; only D-45 allowlisted licences, CC0 preferred.
+- Pipeline as in UI-10''s first rounds: trim, loudness-normalize, AAC `.m4a` via `nix shell nixpkgs#ffmpeg-headless` (not a project dependency); files in `app/client/public/audio/`, committed; row in `CREDITS.md` per file (CC0 too, for provenance).
+- Wiring: add to `SAMPLE_NAMES` and `SAMPLE_FOR`; synthesized recipes stay as the fallback. Keep the folder small (current ~700 kB; set a budget in the plan).
+- An audition aid for the TV check (a URL param like `/?fuegos=…` that plays every effect, or B-3''s «Demo de efectos») is the plan''s call; keep it minimal.
+- Done when the gamemaster approves the effects on the TV.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Still generated: `normal`, `question`, `submitted` (04, "Music"): one theme at three intensities, gapless loops, ideally same key and tempo family so the ~80 ms cuts between `question` and `submitted` don''t clash. `roll` and `victory` are already recordings.
+- Harder than effects: needs a matched set of loops. Sources: Kenney.nl (music jingles/loops), OpenGameArt CC0, Freesound CC0; D-45 allowlist. If no matched set exists, options for the plan: one CC0 loop at three tempos/filters, or keep the synthesized loops; ask the gamemaster via a decision rather than guessing.
+- Seamless loop points matter (`AudioBufferSourceNode.loop`, set `loopStart`/`loopEnd` if needed); test on the TV for clicks at the seam.
+- Wiring in `sound.svelte.ts` (the music scheduler falls back to synthesis if a file is missing); `CREDITS.md` rows.
+- Runs after part 2 (shared conventions, same audition aid).
+- Done when the gamemaster approves the music on the TV; then UI-10 `[x]` in 04 and `plans/project.md` updated.
+
+## Order and constraints
+- Part 1 is independent of 2 and 3. Parts 2 → 3.
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
@@ -1464,9 +1496,9 @@ plan for one part.', '2026-10-11T21:54:55Z', '2026-10-12T00:17:17Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (5, 5, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 5 body (tasks.sql)', 'Write plan 5, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:21:52Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (6, 6, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 6, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (6, 6, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, tasks.sql (plan 6 body; tasks 134-136)', 'Write plan 6, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:32:24Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (7, 7, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 7, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
@@ -2434,6 +2466,11 @@ If "all sessions played fine":
 - `plans/decisions.md`: new D entry (play-test confirmed, date, milestone 5 done-when met; related D-38, D-39, plans 27/28 entries) only if the answer adds something beyond "fine".
 
 Done when: AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `grep -rn "until AG-7\|until BN-6" plans directory.md app/data/*.json` finds nothing; `qgen validate` passes.', '2026-10-12T00:31:20Z', NULL, 122);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (133, 6, 'create tasks for plan 6', 'split', 'dropped', 1000, 'tasks 134-136 added with the masterplan (task 6)', 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:32:21Z', '2026-10-12T00:32:24Z', 6);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (134, 6, 'write plan: Preload the next screen''s media (UI-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 1.', '2026-10-12T00:32:21Z', NULL, 6);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (135, 6, 'write plan: Recorded sound effects (UI-10)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 2.', '2026-10-12T00:32:21Z', NULL, 6);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (136, 6, 'write plan: Recorded music loops (UI-10)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 3.', '2026-10-12T00:32:21Z', NULL, 6);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2496,6 +2533,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (46, 120, '2026-10-12T00:29:52Z', '2026-10-12T00:30:25Z', 'done', NULL, 0, '09f60000c745552efba38285927baffb9c3b8fcb', 'claude-opus-5-5[1m]', '7b4d0951-2e8b-4e4f-a024-f83a9d4700ce', 5, 10, 3249, 145386, 26691, 0.30762520000000004, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (47, 121, '2026-10-12T00:30:25Z', '2026-10-12T00:30:59Z', 'done', NULL, 0, '887b9814d53bf360f2ace8a3143af319e2ad429a', 'claude-opus-5-5[1m]', '8223788e-58c1-4687-9634-096338d24717', 5, 10, 3611, 145377, 27128, 0.3183594, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (48, 122, '2026-10-12T00:30:59Z', '2026-10-12T00:31:32Z', 'done', NULL, 0, '49790417acaf56c24ff59d7d9cd4bccce2480485', 'claude-opus-5-5[1m]', '8717ddc2-17d5-488e-bfc0-ef0657b9e2c2', 6, 12, 3416, 174242, 25147, 0.3043924, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (49, 6, '2026-10-12T00:31:32Z', '2026-10-12T00:32:33Z', 'done', NULL, 0, '6262f5802b6c5b1fade0950c0366b229ce836a38', 'claude-opus-5-5[1m]', '5d235fd1-3ff2-4e75-9bb3-105a9731f335', 10, 18, 5732, 342880, 38435, 0.49076800000000004, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
