@@ -322,6 +322,11 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Translated, re-rated and reviewed questions (QT-*, `plans/15b-question-translation.md`).
 - Regional packs (RG-3..RG-5, `plans/15c-regional-questions.md`).
 - The content target reached and measurable (CT-*, `plans/16-content-target.md`).
+- Language on first start (I18N-2; replaces plan 68''s "no first-start language screen"):
+  - a fresh save opens on a language screen with the guessed language preselected; the player confirms or picks another
+  - guess: `navigator.language` for now, Steam''s language once milestone 10 provides it
+  - changeable later in the Esc menu (task 450, done)
+  - the family''s save (no `language` field = es) never sees the screen
 
 ## Constraints
 - Questions only through `qgen batch` (D-36); the quality bar in plan 16 applies.
@@ -331,6 +336,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Done when
 - `qgen report --simulate` meets the target for every launch language.
+- A fresh save asks for the language once; an existing save doesn''t.
 
 Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Depends on the price model and account holder (OQ-33) and the license decision (OQ-35).
@@ -8638,6 +8644,8 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', NULL, 465);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (469, 5, 'write plan: Bundle languages and base bundles (data, engine, validate)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of masterplan 5 (`pm plan add 5 "Bundle languages and base bundles" --priority 600`): `languages` per bundle in `app/data/bundles.json`, `kind: base` replacing `always_on` (exactly one base bundle per session, default the locale''s first), the engine''s `resolveChoice`/defaults per game locale, `qgen validate` checks, authoring readers of `always_on`. See the masterplan''s "Part 5" for scope and checks; plans 27 (done) and 68 (language setting) for the code it builds on. Must leave the family''s defaults and plan 18''s fixture replay unchanged.', '2026-10-12T20:20:30Z', NULL, 465);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (470, 9, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 9, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:46Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9529,6 +9537,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (319, 450, '2026-10-12T19:51:58Z', '2026-10-12T19:58:12Z', 'done', NULL, 0, 'fef6f4741014c9bc942a5ceeea739eaba889c07b', 'claude-opus-5-5[1m]', '671d55f0-4d8f-49ae-a599-7477ab8ff3eb', 45, 86, 28009, 3521446, 102145, 2.0819732, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (320, 465, '2026-10-12T20:19:40Z', '2026-10-12T20:20:39Z', 'done', NULL, 0, 'fc9f3018f5922e2c6c058cf99a1aea7136d67887', 'claude-opus-5-5[1m]', 'c96833d8-93dd-44f2-8419-fc36874a10b8', 8, 16, 5060, 278926, 35111, 0.4379372, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (321, 466, '2026-10-12T20:20:40Z', '2026-10-12T20:20:57Z', 'done', NULL, 0, 'fd27299ba443b740f9c769c6c58b1665a0ef088a', 'claude-opus-5-5[1m]', 'fd3a2fc6-b0c2-4010-a4a9-f962b8f51cd0', 5, 10, 1143, 160408, 34742, 0.33291760000000004, 655319);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (322, 469, '2026-10-12T20:20:57Z', NULL, 'running', NULL, NULL, 'd23c507f1ea903a6ec40895ee1066e46839b87cd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 655319);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
