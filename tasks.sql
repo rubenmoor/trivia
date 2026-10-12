@@ -11731,7 +11731,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## What
 - Collect every "duplication candidate" row of `## Part 2`–`## Part 9` and every part 1 row `handed to part 10` into `### Duplication clusters` under `## Part 10` of `code-review.md`.
-- One row per cluster: all paths, source rows quoted by part, assigned to one of the plan 82 tasks: 2 client types/API clients, 3 Python ↔ Node/TS twins, 4 authoring tools'' shared logic/constants, 5 styles/screen helpers, 6 naming/errors/env vars/ports, 7 build/package config, 8 docs; or `superseded by task 302` (Python ↔ TS referee port: `game.py`, `selection.py`, `flags.py`, `record_fixtures.py`); or a new follow-up task (`pm task add 82`) if it fits none.
+- One row per cluster: all paths, source rows quoted by part, assigned to one of the plan 82 tasks: 2 client types/API clients, 3 Python ↔ Node/TS twins, 4 authoring tools'' shared logic/constants, 5 styles/screen helpers, 6 naming/errors/env vars/ports, 7 build/package config, 8 linter (task 616), 9 docs; or `superseded by task 302` (Python ↔ TS referee port: `game.py`, `selection.py`, `flags.py`, `record_fixtures.py`); or a new follow-up task (`pm task add 82`) if it fits none.
 - Candidates no part logged but plan 72 names (the two `types.ts`, the two `api.ts`, chart/CSS copies): grep once, add if real.
 - Follow-up tasks and decisions already opened by parts 2–9 for a cluster: cite them in the row, don''t duplicate.
 
@@ -11887,28 +11887,29 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every file above listed in `## Part 10`, every finding with a status; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (587, 82, 'Part 10: docs vs. code, close part 10', 'work', 'open', NULL, NULL, 'Task 8 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586 and every fix of parts 2–9.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (587, 82, 'Part 10: docs vs. code, close part 10', 'work', 'dropped', -10, 'replaced by task 617 so it queues after task 616 (linter) and before plan 83', 'Task 9 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586, `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful` and every fix of parts 2–9.
 
 ## First
 - Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
 - `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
 - `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
-- Tasks 580–586 done, and no open task in plans 73–81 that still changes code; else stop and say so.
+- Tasks 580–586 and 616 done, and no open task in plans 73–81 that still changes code; else stop and say so.
 
 ## What
 - `directory.md`: every tracked code/config path and directory present (`git ls-files`), descriptions true after this milestone''s fixes and moves, `code-review.md` listed.
 - `AGENTS.md`/`CLAUDE.md`: commands exist and do what it says (`qgen report --cost`, `trivia-desktop-build`, `nix build .#app`); rules hold in the code (layout direction: grep `app/` for `authoring` imports/reads; no telemetry/network beyond decision 4).
 - `README.md`: commands and env vars run as written (temp dirs).
+- `AGENTS.md`/`README.md` mention the lint pass as task 616 left it (or nothing, if not adopted).
 - Doc-only fixes here (style per AGENTS.md); rule changes to `AGENTS.md` → decision (plan 72 part 11 proposes process rules: don''t pre-empt).
 - Close: every part 1 row `handed to part 10` (quoted) and every duplication row of parts 2–9 has a final status in `## Part 10`; every part 10 inventory file listed (no-findings rows included); files added since part 1 under these paths added to the inventory; remaining clusters each a follow-up task or decision.
 
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
 - Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if task 616 adopted one.
 
 ## Done when
-- Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part); staged.', '2026-10-12T23:10:18Z', NULL, 522);
+- Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:10:18Z', '2026-10-12T23:44:45Z', 522);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (588, 83, 'Part 11: completeness check of code-review.md', 'work', 'open', NULL, NULL, 'Task 1 of `plan 83: Executive summary and close-out (code review part 11)`. Scope, row format and status set: plan 72 "Ground rules for every part". Runs after parts 1–10 (plans 73–82) and their follow-ups.
 
 ## What
@@ -12429,8 +12430,66 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:03Z', '2026-10-12T23:42:34Z', 602);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (614, 81, 'create tasks for plan 81', 'split', 'done', 1000, '2026-10-12, tasks 573–579 bodies: fixed (task N) status, lint evidence tags, lint pass in pre-commit checks once part 10 adopts it (plan 81 revision by task 603); no new decisions', 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:53Z', '2026-10-12T23:43:19Z', 603);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (615, 82, 'create tasks for plan 82', 'split', 'open', 1000, NULL, 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:43:49Z', NULL, 604);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (615, 82, 'create tasks for plan 82', 'split', 'done', 1000, '2026-10-12, tasks.sql: added task 616 (linter), replaced 587 with 617 (queues after 616), task 580 assignee numbering', 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:43:49Z', '2026-10-12T23:44:52Z', 604);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (616, 82, 'Part 10: linter for TypeScript, evaluate and adopt if useful', 'work', 'open', NULL, NULL, 'Task 8 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: evaluate a TypeScript linter (milestone 13 "Linter for TypeScript"), adopt it if useful. Runs after `task 586: Part 10: review build and package config` (same build config), before `task 617: Part 10: docs vs. code, close part 10`.
+
+## First
+- Needs `code-review.md` with `## Part 10` and parts 2–9 done (plans 74–81), and task 586 done; else stop and say so.
+- `pm decision list --answered --grep lint --grep tsconfig --grep dependenc`: binding answers (minimal dependencies, offline per AGENTS.md; D-73 local CI).
+
+## Evidence
+- Count the `(lint: …)` tags in `code-review.md` per rule; part 1''s recorded `tsc --noUnusedLocals --noUnusedParameters` and bad-practice counts.
+- Which logged findings (bugs first) each candidate would have caught, which none would.
+
+## Trial
+- Trees: `app/client/src`, `authoring/ui/src`, `app/desktop` (`.mjs`/`.cjs`).
+- Candidates: stricter `tsconfig` flags only (`noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, …; no new dependency), Biome, oxlint, ESLint + typescript-eslint + eslint-plugin-svelte.
+- Installs only in a temp copy (`git worktree` or `cp -r` under `/tmp`); nothing committed before a decision; delete the copy afterwards.
+- Weigh: bugs caught, Svelte support (`.svelte` script and markup), dependency count (packages added to `package-lock.json`), offline (npm cache, `nix build .#app` `npmDepsHash`), speed, noise (false positives per 100 issues).
+
+## Result
+- `### Linter evaluation` in `## Part 10` of `code-review.md`: table per candidate, recommendation, reasons.
+- `tsconfig` flags only: no decision needed; adopt here.
+- New dependency: `pm decision add` (options, recommended first; minimal-dependencies rule); adoption as `pm task add 82` + `pm task-pending-decision`; nothing installed here.
+- Not useful: the reasons in `### Linter evaluation`, nothing added.
+
+## Adoption (here or in that follow-up task)
+- One `npm run lint` (or inside `npm run check`) covering the three trees; fails only on new issues (committed baseline file or changed files only) so it lands at once.
+- Added to the pre-commit checks in `AGENTS.md` (D-73 line) and the worker prompt in `project-manager.toml` (both authorized by milestone 13).
+- `nix build .#app` (update `npmDepsHash`) if the lockfile changed.
+- Then `pm task add 82`: one follow-up task fixes the existing issues (behaviour unchanged) and drops the baseline so the pass covers everything.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan".
+- Never the real `state/`, `authoring/data/`, `work/`, media cache; stop processes by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if adopted.
+
+## Done when
+- `### Linter evaluation` written; adopted (pass in `AGENTS.md` and `project-manager.toml`, passes, follow-up fix task added), or a decision + pending adoption task, or reasons for not adopting; staged.', '2026-10-12T23:44:22Z', NULL, 615);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (617, 82, 'Part 10: docs vs. code, close part 10', 'work', 'open', NULL, NULL, 'Task 9 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586, `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful` and every fix of parts 2–9.
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Tasks 580–586 and 616 done, and no open task in plans 73–81 that still changes code; else stop and say so.
+
+## What
+- `directory.md`: every tracked code/config path and directory present (`git ls-files`), descriptions true after this milestone''s fixes and moves, `code-review.md` listed.
+- `AGENTS.md`/`CLAUDE.md`: commands exist and do what it says (`qgen report --cost`, `trivia-desktop-build`, `nix build .#app`); rules hold in the code (layout direction: grep `app/` for `authoring` imports/reads; no telemetry/network beyond decision 4).
+- `README.md`: commands and env vars run as written (temp dirs).
+- `AGENTS.md`/`README.md` mention the lint pass as task 616 left it (or nothing, if not adopted).
+- Doc-only fixes here (style per AGENTS.md); rule changes to `AGENTS.md` → decision (plan 72 part 11 proposes process rules: don''t pre-empt).
+- Close: every part 1 row `handed to part 10` (quoted) and every duplication row of parts 2–9 has a final status in `## Part 10`; every part 10 inventory file listed (no-findings rows included); files added since part 1 under these paths added to the inventory; remaining clusters each a follow-up task or decision.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if task 616 adopted one.
+
+## Done when
+- Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:44:45Z', NULL, 615);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13479,6 +13538,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (416, 603, '2026-10-12T23:42:38Z', '2026-10-12T23:42:58Z', 'done', NULL, 0, 'c19f3830183b1eeb55a63ef2077174dfa4e393ee', 'claude-opus-5-5[1m]', '94c45e2e-5d10-46f9-802c-c066cecbbcb9', 6, 12, 1855, 202310, 31038, 0.32591400000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (417, 614, '2026-10-12T23:42:58Z', '2026-10-12T23:43:23Z', 'done', NULL, 0, '99ea59edeaea6ead5607ef75a527549dbbf7c109', 'claude-opus-5-5[1m]', '11a86192-53ff-4655-a272-4baf56840b32', 7, 14, 1964, 252611, 36459, 0.3815302, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (418, 604, '2026-10-12T23:43:23Z', '2026-10-12T23:43:57Z', 'done', NULL, 0, '673a98aa0e01f457fad2030fde4b4098df1bd748', 'claude-opus-5-5[1m]', 'd8d3eede-6505-4f35-8c22-bf691c8d0655', 6, 12, 3396, 218855, 35744, 0.397691, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (419, 615, '2026-10-12T23:43:58Z', '2026-10-12T23:44:59Z', 'done', NULL, 0, '9df565348796a079597a5f36c2f39b7ffb207c46', 'claude-opus-5-5[1m]', '71053503-b360-4244-9f16-844e986c920e', 13, 26, 5831, 587680, 43962, 0.58595599999999992, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
