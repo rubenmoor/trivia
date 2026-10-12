@@ -779,6 +779,71 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Invariant tests pass: every level 4 cards, burned never return.
 - `npm run check` and `npm run build` pass; no new entries in `package.json` dependencies.
 - Engine modules import nothing outside `src/engine/` and `src/lib/types.ts`, and nothing from `node:`.', '2026-10-12T00:00:50Z', 56);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (20, 2, 'Engine game state machine (PORT-3)', 600, 'The TypeScript referee: `app/client/src/engine/game.ts` ports `app/server/game.py` (state machine, players, burns, jokers, budget, undo) and the game routes of `app/server/main.py`, so the same requests give the same responses and leave the same saved data. It builds on part 2 (plan 19: `rng.ts`, `pool.ts`, `selection.ts`) and replays every `fixtures/game/*.json` scenario of plan 18 (PORT-1). It also defines the save document that part 4 (task 58) stores and migrates into. Source: `plans/12-client-engine.md`, PORT-3.
+
+## Depends on
+- Plan 18: `fixtures/game/*.json` (`steps: [{now, call, args, tape, response, db}]`), `fixtures/categories.json`, `fixtures/pools/*.json`.
+- Plan 19: `Rng`/`tapeRng`, `PoolQuestion`, `loadCategories`, `broadOf`, `categoryOf`, `byId`, `selection.ts` (`available`, `assign`, `draw`, `supply`, `inRange`, `LEVELS`, `PER_LEVEL`, `LEVEL_RANGES`), the `node:test` setup.
+
+## Decisions taken here
+- **Save document = the SQLite tables as JSON** (the fixtures'' `db` snapshot plus `version`):
+  - `SaveData {version: 1, players: PlayerRow[], games: GameRow[], burned: BurnRow[]}`
+  - `PlayerRow {id, name, created_on}`; `GameRow {id, started_on, finished_on, result, player_id, state: GameState}` (state as an object, not a JSON string); `BurnRow {question_id, player_id, game_id, burned_on}` (`player_id` null = everyone, D-28).
+  - `GameState`: the fields of the `game.py` docstring (`level`, `phase`, `options`, `offered`, `current`, `answers`, `history`, `last`, `undo`, `purged`, `hints_shown`, `struck`, `jokers`, `swapped_to`, `repeat`, `settings`), unchanged names (snake_case), so the migration (part 4) copies rows 1:1 and fixture `db` compares directly.
+  - Part 4 owns `version` handling, stores and migration; this plan only exports the types, `SAVE_VERSION = 1` and `emptySave()`.
+  - IDs like SQLite `INTEGER PRIMARY KEY` without AUTOINCREMENT: `max(id) + 1`, `1` when empty (IDs are reused after a delete; the `players` scenario pins it).
+  - Burn uniqueness like `burned_once` + `INSERT OR IGNORE`: no second row with the same `question_id` and the same `player_id` (null equals null).
+  - `withDefaults(state)` on every read of a game (like `latest()`), written back only when the action saves.
+- **Pure API, mutable inside.** Public functions take `(save, data, io, …)` and return `{save, …}`; the input is never changed. Internally `transact(save, fn)` works on `structuredClone(save)` (= the open SQLite transaction) so the port can mutate like Python; a thrown `GameError` discards the clone (= rollback). `trial` (savepoint) = run on a clone of the working copy, return the message or `null`, discard.
+- **Inputs, no globals.** `data = {pool, byId, categories, broad}` built once per pool by `engineData(pool, categories)`; `io = {rng: Rng, now: string}` per action (the Python `now()` calls within one request all read `io.now`). Nothing reads `Math.random` or the clock.
+- **No seed in the game state.** Python''s randomness isn''t reproducible either, and a seed field would break `db` equality with the fixtures. Production passes `seededRng(randomSeed())` per action (part 5).
+- **`engine/api.ts` mirrors `main.py`''s routes**, so part 5 swaps `lib/api.ts` with the least change and the replay compares `{status, body}` as recorded:
+  - `getGame(save, data, io, player?)` → `200 {game, supply}` | `400 {error}` (view first, then supply, like `do_GET`).
+  - `getPlayers(save)` → `200 Player[]`; `deletePlayer(save, body)` → `200 Player[]` | `409 {error}`.
+  - `gameAction(save, data, io, action, body)` → `200 {game, event?}` | `409 {error, supply}` (`supply` = the report for supply failures, else `null`) | `404 {error: "not found"}`.
+  - Argument coercion like `game_action`: `int(…)` for `index` (numbers truncate, bools → 0/1, numeric strings), `bool(…)` / truthiness for `everyone` and `purge`, `str(…)` for the joker name (missing → `"None"`, so «no joker ''None''»). What raises in Python (→ 500) throws a plain `Error` in TS; fixtures contain no 500.
+  - Joker args: only `purge`, `subcategory`, `index` are passed; extra ones are ignored (Python would 500; not in fixtures).
+- **Reuse `lib/types.ts`** for the responses (`Game`, `Jokers`, `JokerEvent`, `Player`, `Supply`, `JokerBudget`, `JokerName`); the save/state types live in the engine. No change to `Game`''s shape.
+- **Decision entry** (next D number in `plans/decisions.md`): the client holds the correct answer and all hints in memory (the engine runs in the browser); relaxes D-25/D-26 "the client never learns the correct answer". Acceptable for an offline family game (devtools only spoil your own game). The view (`Game`) still carries no correct answer before the final answer and only the hints played; screens only render the view, never `PoolQuestion` or the save. Update `12-client-engine.md` "The referee question" to point to it.
+
+## Files
+- `app/client/src/engine/state.ts`: `SaveData`, `PlayerRow`, `GameRow`, `BurnRow`, `GameState`, `HistoryEntry`, `SAVE_VERSION`, `emptySave()`, `withDefaults`, `nextId`.
+- `app/client/src/engine/pycompat.ts`: the few Python semantics the port needs: `casefold` (`toLowerCase` + `ß`→`ss`, `ς`→`σ`; pinned by the `players` scenario), `pyLen` (code points: `[...s].length`, for the 30-letter name limit), `pySplitJoin` (`" ".join(s.split())`), `pyRepr` (quotes like `repr(str)`), `pyTruthy`, `pyInt`, `pyStr`.
+- `app/client/src/engine/game.ts`: `GameError {message, details}`, `cleanName`, `players`, `deletePlayer`, `supply`, `newGame`, `pick`, `answer`, `skip`, `undo`, `abandon`, `setJokers`, `joker` (+ `playHint`, `playSkip`, `playEasier`, `playCategory`, `playSnipe`), `jokersLeft`, `jokersView`, `view`; constants `JOKERS`, `UNLIMITED`, `CARDS`, `SPENT` (Spanish messages verbatim, English ones too: fixtures compare them).
+- `app/client/src/engine/api.ts`: the routes above.
+- `app/client/src/engine/game.test.ts`: fixture replay; `engine/test/save.ts`: normalize for comparison.
+
+## Parity details
+- Rng sites and order (plan 18): `pick` and `swap_in` shuffle `[answer, ...wrong_answers]`; `draw` shuffles once per call; `replacement` shuffles only when the later levels fill (`fill` ok), even an empty list.
+- `jokersView` order: trial hint, skip, easier, snipe (index = correct answer: worst case), skip+purge; then per category in `categories` order, per subcategory: skip the current subcategory (short-circuit, no shuffle), else `replacement(…, order 0, shared fill)`. Spent jokers are still tried, then overwritten with the `SPENT` reason.
+- `view` only builds `jokers` when `result` is null, phase `question` and `current` is in the pool; `GET` calls `view`, so its tape has these shuffles too.
+- `undo` works on the newest game unless `abandoned`, also on a `won`/`lost` one: result and `finished_on` go back to null (the game reopens); un-burns only `(last.question_id, pid, gid)`; keeps the current `settings`.
+- `answer`: `before = {...clone(state), undo: null}`; `correct_index` = first index of the answer.
+- `newGame`: supply check (409 with report) before anything else; a running game becomes `abandoned`; new player row only if no casefold match.
+- `deletePlayer`: their games (also a running one) and their burns go; global burns stay.
+- `players()`: sort by `max(started_on)` of their games, else `created_on`, descending; ties by player `id` (fixtures avoid ties).
+- `setJokers`: budget must be a plain object (not array/null) with known keys; values `null` or integers 0–99, bools rejected.
+- `playSnipe` index check: `Number.isInteger`; Python also accepts `true`/`false` as 1/0 (only matters if a fixture has it).
+- Sorts: `Array.prototype.sort` is stable like Python''s; booleans false before true; keys `-difficulty`, `abs(Δdifficulty)`, `0`.
+- Pool IDs missing from the pool: `view` skips them like Python; actions throw a plain `Error` (Python: KeyError → 500).
+
+## Replay (`game.test.ts`)
+- Per scenario: `save = emptySave()`, `data = engineData(fixture pool, fixture categories)`; per step `io = {rng: tapeRng(step.tape), now: step.now}`; call the `api.ts` route for `step.call` with `step.args`.
+- Compare deep-equal (object key order ignored, array order exact): `{status, body}` with `step.response`; `{players, games, burned}` of the new save with `step.db` (both `burned` sorted by `(game_id, question_id, player_id)`, null first); `tape.done()`.
+- On a 409/400 the returned save must equal the previous one.
+- A mismatch is fixed in the engine; a fixture gap goes back to plan 18''s recorder (re-record, never hand-edit fixtures).
+
+## Tasks to split into
+1. **State and helpers**: `state.ts`, `pycompat.ts`, `transact`/`trial`, `engineData`; decision entry; `12-client-engine.md` referee section. Check: `npm run check`; a few `pycompat` asserts in a throw-away script.
+2. **Game actions**: `game.ts` without jokers: players, names, delete, supply, new, pick, answer, skip (player/everyone), undo, abandon, `setJokers`, `jokersLeft`, `view` with `jokers: null` stubbed only until task 3.
+3. **Jokers**: the five `play*`, `replacement`, `laterFill`, `categoryCandidates`, `swapIn`, `joker` (budget/`SPENT`), `jokersView` in `view`.
+4. **`api.ts` + fixture replay**: routes and coercion as above; `game.test.ts` replays every `fixtures/game/*.json` (scripted and soak) until all pass with tapes used up. Then `plans/12-client-engine.md` PORT-3 `[x]` with a note, `directory.md` (engine files).
+
+## Done when
+- `npm test` passes, including every `fixtures/game/*.json` step: same response, same save, tape fully consumed.
+- `npm run check` and `npm run build` pass; no new dependencies.
+- Engine modules import nothing outside `src/engine/` and `src/lib/types.ts`, and nothing from `node:`.
+- Decision entry written; screens untouched (part 5 wires them, task 59).', '2026-10-12T00:03:19Z', 57);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -1135,14 +1200,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Test runner without new dependencies: `node:test` on Node 22; settle type stripping vs. a `tsc` step; wire into an `npm` script.
 - Done when: selection fixtures from part 1 replay identically; invariant tests (every level 4 cards, burned never return).
 - Plan priority: 610 (after part 1''s plan at 700, before part 3).', '2026-10-11T23:56:40Z', '2026-10-12T00:00:53Z', 54);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (57, 2, 'write plan: Engine game state machine (PORT-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 2): `app/client/src/engine/game.ts`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (57, 2, 'write plan: Engine game state machine (PORT-3)', 'plan', 'done', 1000, '2026-10-11, plan 20 (tasks.sql)', 'Write the plan for part 3 of the masterplan (plan 2): `app/client/src/engine/game.ts`.
 
 - Pure functions state → state: new game, pick, answer, skip (player / everyone), undo (one step), abandon, delete player, jokers hint/skip/easier/category/snipe with availability and per-game budget (MD-1), burns.
 - The view the screens need, same shape as today''s `{"game": …}` from `GET /api/game` where practical; `lib/types.ts` reused.
 - Defines the state shape part 4''s `SaveData` stores (`{version, players, games, burned}`).
 - Decision entry in `plans/decisions.md`: the client holds the correct answer (relaxes D-25; settled by the milestone), the UI still never renders hidden data.
 - Done when: all game fixtures from part 1 replay identically.
-- Plan priority: 600 (after part 2).', '2026-10-11T23:56:40Z', NULL, 54);
+- Plan priority: 600 (after part 2).', '2026-10-11T23:56:40Z', '2026-10-12T00:03:22Z', 54);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (58, 2, 'write plan: Save document, stores and migration (PORT-4, PORT-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 2).
 
 - `SaveData` `{version, players, games, burned}`, one JSON document; `Store` interface `load/save`; `ServerStore` (`GET/PUT /api/save`, atomic write of `state/game.json`, retry on Windows file locks); `MemoryStore` for tests/demo. `FileStore` is out of scope (plan 18).
@@ -1174,6 +1239,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:58:59Z', NULL, 61);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (63, 19, 'create tasks for plan 19', 'split', 'open', 1000, NULL, 'Split plan 19 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:00:50Z', NULL, 56);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (64, 20, 'create tasks for plan 20', 'split', 'open', 1000, NULL, 'Split plan 20 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:03:19Z', NULL, 57);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1203,6 +1270,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (16, 54, '2026-10-11T23:55:53Z', '2026-10-11T23:57:08Z', 'done', NULL, 0, '76cdfdd3b4b2be8a52558adffa5925b0b01da56d', 'claude-opus-5-5[1m]', '67665ee3-61b2-43f5-a24c-8ab0630b9ff7', 8, 16, 7760, 302651, 36510, 0.5078742, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (17, 61, '2026-10-11T23:57:08Z', '2026-10-11T23:59:10Z', 'done', NULL, 0, '0fef3579bab3dd745acb81b226ed6c4c0d5744a3', 'claude-opus-5-5[1m]', 'e5654647-a002-4ece-8190-adcca9bf52cb', 10, 20, 11845, 431697, 55270, 0.7654794, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (18, 56, '2026-10-11T23:59:10Z', '2026-10-12T00:01:02Z', 'done', NULL, 0, '43f5f4666a0f606e3d1746d0d183e7fdbb82f4f6', 'claude-opus-5-5[1m]', '3e435859-8756-4e90-a382-239bb8c0804f', 13, 26, 9512, 558720, 47366, 0.68101600000000007, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (19, 57, '2026-10-12T00:01:03Z', '2026-10-12T00:03:33Z', 'done', NULL, 0, '9d77fa68242b8cf8cab66bc29da2b042b32deb70', 'claude-opus-5-5[1m]', '13b030d7-c338-41cd-9fa1-15ef264a09a8', 13, 22, 13320, 506931, 62286, 0.8661622, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
