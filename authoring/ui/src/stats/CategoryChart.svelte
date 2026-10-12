@@ -1,21 +1,38 @@
 <script lang="ts">
   // Questions per broad category (D-19), most first. Click a bar to open its subcategories
-  // (RV-19); each one links to its approved questions in the review tool.
-  import type { Category, Question } from "../lib/types";
+  // (RV-19); each one links to its approved questions in the review tool. With targets: approved / derived share (D-53).
+  import type { BundleTargets, Category, Question } from "../lib/types";
   import { breakdown, reviewLink, type CategoryRow } from "./breakdown";
   import "./chart.css";
 
   let {
     questions,
     categories,
+    targets = null,
+    bundle = null,
     compact = false,
-  }: { questions: Question[]; categories: Category[]; compact?: boolean } = $props();
+  }: {
+    questions: Question[];
+    categories: Category[];
+    /** With `bundle`: the bundle the targets belong to. */
+    targets?: BundleTargets | null;
+    bundle?: string | null;
+    compact?: boolean;
+  } = $props();
 
   // Stable sort: ties keep the order of app/data/categories.json.
   const rows = $derived(breakdown(questions, categories).sort((a, b) => b.count - a.count));
   const max = $derived(Math.max(1, ...rows.map((r) => r.count)));
   /** Subcategory bars share one scale across categories, so they compare. */
   const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));
+  /** Derived share per category name: total × its subcategories / the bundle's (a guide, plan 12). */
+  const shares = $derived.by(() => {
+    if (!targets || !bundle) return new Map<string, number>();
+    const t = targets;
+    const own = categories.filter((c) => c.bundle === bundle);
+    const n = own.reduce((k, c) => k + c.subcategories.length, 0);
+    return new Map(own.map((c) => [c.name, n ? Math.round((t.total * c.subcategories.length) / n) : 0]));
+  });
   const empty = $derived(rows.filter((r) => r.count === 0).length);
 
   let open = $state(new Set<string>());
@@ -32,7 +49,7 @@
   const bySize = (row: CategoryRow) => [...row.subs].sort((a, b) => b.count - a.count);
 </script>
 
-<section class="chart-panel" class:compact>
+<section class="chart-panel" class:compact class:shares={shares.size > 0}>
   <h2>Questions per category</h2>
   <p class="sub">
     {questions.length} questions in {rows.length - empty} of {rows.length} categories{empty
@@ -50,7 +67,7 @@
             {#if row.count > 0}
               <span class="bar" style:width="{(row.count / max) * 100}%"></span>
             {/if}
-            <span class="value">{row.count}</span>
+            <span class="value">{row.count}{shares.has(row.name) ? ` / ${shares.get(row.name)}` : ""}</span>
             <span class="more">{row.subs.length} sub{open.has(row.name) ? " ▴" : " ▾"}</span>
           </span>
         </button>
@@ -135,6 +152,9 @@
     padding-right: 6.5rem;
     border-left: 1px solid #3a3d4a;
   }
+  .shares .track {
+    padding-right: 8.5rem;
+  }
   .bar {
     height: 18px;
     background: var(--bar);
@@ -155,6 +175,8 @@
     opacity: 0.7;
   }
   .value {
+    flex: none;
+    white-space: nowrap;
     font-size: 0.85rem;
     font-variant-numeric: tabular-nums;
     color: var(--muted);

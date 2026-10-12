@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/api";
-import type { AgeGroups, Bundle, MediaStats, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status } from "./types";
+import type { AgeGroups, Bundle, MediaStats, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
 
 export { fetchCategories } from "$app/lib/api";
 
@@ -66,6 +66,11 @@ export async function setDifficulty(id: string, difficulty: number): Promise<Que
 /** The difficulty scale and the age groups' windows (app/data/age-groups.json, D-38). */
 export async function fetchAgeGroups(): Promise<AgeGroups> {
   return json(await call("/api/age-groups"));
+}
+
+/** Pool targets per bundle (authoring/data/targets.json, D-53). */
+export async function fetchTargets(): Promise<Targets> {
+  return json(await call("/api/targets"));
 }
 
 /** Everything the start page shows except the statistics (RV-12). */

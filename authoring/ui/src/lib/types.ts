@@ -157,6 +157,15 @@ export type AgeGroups = {
   groups: { id: string; name: string; ages: [number, number | null]; window: [number, number] }[];
 };
 
+/** A bundle's targets in authoring/data/targets.json (D-53): approved questions in total and per difficulty. */
+export interface BundleTargets {
+  total: number;
+  difficulty: Record<string, number>;
+}
+
+/** GET /api/targets: the whole file; non-bundle keys ("about", "batch_health", "quality") left untyped. */
+export type Targets = Record<string, unknown>;
+
 /** GET /api/overview (authoring/server/overview.py, RV-12): what the start page shows. */
 export interface Overview {
   queues: {

@@ -1,14 +1,15 @@
 <script lang="ts">
   // Histogram: questions per difficulty over the whole shared scale 1–15 (D-38), with the window
-  // the game plays today (young teens, until AG-7) shaded (RV-18).
-  import type { AgeGroups, Question } from "../lib/types";
+  // the game plays today (young teens, until AG-7) shaded (RV-18); with targets a tick per level (D-53).
+  import type { AgeGroups, BundleTargets, Question } from "../lib/types";
   import "./chart.css";
 
   let {
     questions,
     ageGroups,
+    targets = null,
     compact = false,
-  }: { questions: Question[]; ageGroups: AgeGroups; compact?: boolean } = $props();
+  }: { questions: Question[]; ageGroups: AgeGroups; targets?: BundleTargets | null; compact?: boolean } = $props();
 
   /** The group the game plays until players can choose one (AG-7). */
   const PLAYED_GROUP = "young_teens";
@@ -26,12 +27,14 @@
   });
 
   const counts = $derived(LEVELS.map((l) => questions.filter((q) => q.difficulty === l).length));
+  /** Target per level, or null without targets. */
+  const goals = $derived(targets ? LEVELS.map((l) => targets.difficulty[String(l)] ?? 0) : null);
   const total = $derived(counts.reduce((a, b) => a + b, 0));
   const mean = $derived(total ? questions.reduce((n, q) => n + q.difficulty, 0) / total : 0);
 
   /** Clean axis: a step of 1, 2 or 5 × 10ⁿ, about five gridlines. */
   const axis = $derived.by(() => {
-    const top = Math.max(1, ...counts);
+    const top = Math.max(1, ...counts, ...(goals ?? []));
     const raw = top / 5;
     const mag = 10 ** Math.floor(Math.log10(raw));
     const step = Math.max(1, [1, 2, 5, 10].map((m) => m * mag).find((s) => s >= raw) ?? 10 * mag);
@@ -54,6 +57,7 @@
   <p class="sub">
     {total} questions · average difficulty {mean.toFixed(1)} · {LEVELS[0]} = easiest, {LEVELS[LEVELS.length - 1]} = hardest
     {#if played}· shaded: {played.window[0]}–{played.window[1]}, the window the game plays ({played.name}){/if}
+    {#if targets}· tick: target ({total} / {targets.total} approved){/if}
   </p>
 
   <div class="plot" style:--n={LEVELS.length}>
@@ -70,14 +74,19 @@
         <div
           class="slot"
           role="img"
-          aria-label="Difficulty {level}: {counts[i]} questions"
+          aria-label="Difficulty {level}: {counts[i]} questions{goals ? `, target ${goals[i]}` : ''}"
           onpointermove={(e) => move(level, e)}
           onpointerleave={() => (hover = null)}
           class:dim={hover && hover.level !== level}
         >
-          <div class="stack" style:height="{(counts[i] / axis.max) * 100}%">
-            <span class="value">{counts[i]}</span>
-            {#if counts[i] > 0}<div class="column"></div>{/if}
+          <div class="stack" style:height="{(Math.max(counts[i], goals?.[i] ?? 0) / axis.max) * 100}%">
+            <span class="value">{counts[i]}{#if goals}<span class="goal">/{goals[i]}</span>{/if}</span>
+            {#if counts[i] > 0}
+              <div class="column" style:height="{(counts[i] / Math.max(counts[i], goals?.[i] ?? 0)) * 100}%"></div>
+            {/if}
+            {#if goals && goals[i] > 0}
+              <div class="target" style:bottom="{(goals[i] / Math.max(counts[i], goals[i])) * 100}%"></div>
+            {/if}
           </div>
         </div>
       {/each}
@@ -91,10 +100,18 @@
   {#if !compact}<details class="table-view">
     <summary>Table</summary>
     <table>
-      <thead><tr><th>Difficulty</th><th class="num">Questions</th><th class="num">Share</th></tr></thead>
+      <thead>
+        <tr>
+          <th>Difficulty</th><th class="num">Questions</th><th class="num">Share</th>
+          {#if goals}<th class="num">Target</th><th class="num">Missing</th>{/if}
+        </tr>
+      </thead>
       <tbody>
         {#each LEVELS as level, i}
-          <tr><td>{level}</td><td class="num">{counts[i]}</td><td class="num">{pct(counts[i])} %</td></tr>
+          <tr>
+            <td>{level}</td><td class="num">{counts[i]}</td><td class="num">{pct(counts[i])} %</td>
+            {#if goals}<td class="num">{goals[i]}</td><td class="num">{Math.max(0, goals[i] - counts[i])}</td>{/if}
+          </tr>
         {/each}
       </tbody>
     </table>
@@ -103,9 +120,11 @@
 
 {#if hover}
   {@const n = counts[LEVELS.indexOf(hover.level)]}
+  {@const goal = goals?.[LEVELS.indexOf(hover.level)]}
   <div class="tooltip" style:left="{hover.x}px" style:top="{hover.y}px">
     <strong>Difficulty {hover.level}</strong>
     <div>{n} question{n === 1 ? "" : "s"} · {pct(n)} %</div>
+    {#if goal !== undefined}<div class="muted">target {goal} · {Math.max(0, goal - n)} missing</div>{/if}
   </div>
 {/if}
 
@@ -166,10 +185,21 @@
     width: 24px;
   }
   .column {
+    align-self: flex-end;
     width: 24px;
-    height: 100%;
     background: var(--bar);
     border-radius: 4px 4px 0 0;
+  }
+  .target {
+    position: absolute;
+    left: -6px;
+    right: -6px;
+    border-top: 2px solid var(--text);
+    opacity: 0.6;
+  }
+  .goal {
+    font-size: 0.75rem;
+    opacity: 0.8;
   }
   .value {
     position: absolute;

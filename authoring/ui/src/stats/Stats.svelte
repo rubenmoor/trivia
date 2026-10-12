@@ -5,8 +5,8 @@
   // URL: /stats/categories, /stats/subcategories, /stats/difficulty or /stats/media; ?bundle=colombia counts one
   // bundle only (RV-21), without it every bundle (the family's default, D-39).
   import { onMount } from "svelte";
-  import { fetchAgeGroups, fetchBundles, fetchCategories, fetchMediaStats, fetchOverview, fetchQuestions } from "../lib/api";
-  import type { AgeGroups, Bundle, Category, MediaStats as MediaStatsData, Question } from "../lib/types";
+  import { fetchAgeGroups, fetchBundles, fetchCategories, fetchMediaStats, fetchOverview, fetchQuestions, fetchTargets } from "../lib/api";
+  import type { AgeGroups, Bundle, BundleTargets, Category, MediaStats as MediaStatsData, Question } from "../lib/types";
   import Nav from "../lib/Nav.svelte";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
@@ -35,6 +35,8 @@
   let mediaStats = $state<MediaStatsData | null>(null);
   /** The subcategories the next `qgen batch` picks; null until loaded or when it fails. */
   let nextBatch = $state<string[] | null>(null);
+  /** The selected bundle's targets (D-53); null for all bundles or a bundle without targets. */
+  let targets = $state<BundleTargets | null>(null);
   let loading = $state(true);
   let error = $state<string | null>(null);
 
@@ -42,6 +44,10 @@
     if (page === "subcategories") {
       // Only for the "next batch" marks: the page works without it.
       fetchOverview().then((o) => (nextBatch = o.next_batch_subcategories), () => {});
+    }
+    if (bundle && (page === "difficulty" || page === "categories")) {
+      // Optional too: the charts work without targets.
+      fetchTargets().then((t) => (targets = (t[bundle] as BundleTargets | undefined) ?? null), () => {});
     }
     try {
       if (page === "media") {
@@ -83,14 +89,14 @@
   {:else if error}
     <p class="error">{error}</p>
   {:else if page === "categories"}
-    <CategoryChart {questions} {categories} />
+    <CategoryChart {questions} {categories} {targets} {bundle} />
   {:else if page === "subcategories"}
     <SparseList {questions} {categories} {nextBatch} />
     <SubcategoryTable {questions} {categories} />
   {:else if page === "media"}
     {#if mediaStats}<MediaStats stats={mediaStats} />{/if}
   {:else if ageGroups}
-    <DifficultyChart {questions} {ageGroups} />
+    <DifficultyChart {questions} {ageGroups} {targets} />
   {/if}
 </main>
 
