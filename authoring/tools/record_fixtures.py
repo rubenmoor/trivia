@@ -190,9 +190,11 @@ class Recorder:
         assert self.steps[-1]["response"]["status"] == 200, (call, args, body)
         return body
 
-    def fail(self, error, call, **args):
+    def fail(self, error, call, status=409, **args):
+        before = self.steps[-1]["db"] if self.steps else snapshot()
         body = self(call, **args)
-        assert self.steps[-1]["response"]["status"] == 409 and body["error"] == error, (call, args, error, body)
+        assert self.steps[-1]["response"]["status"] == status and body["error"] == error, (call, args, error, body)
+        assert self.steps[-1]["db"] == before, ("an error changed the DB", call, args)
         return body
 
     def state(self):
@@ -523,6 +525,161 @@ def budget(rec):
     rec.ok("joker", joker="hint")
     rec.ok("jokers", jokers={"hint": None})
     rec.ok("answer", index=rec.correct())
+
+
+# Game scenarios: players, admin and errors (plan 18, "Scenarios") --------------------------------
+
+def db(rec):
+    return rec.steps[-1]["db"]
+
+
+@scenario("admin-skip", "Admin skip for the player and for everyone (the burn shows in a second player's supply); "
+          "skip outside a question; skip with no replacement on the tight pool.", 9)
+def admin_skip(rec):
+    rec.ok("new", player="Ana")
+    rec.fail("skip_not_question", "skip")
+    rec.ok("pick", index=0)
+    rec.ok("skip")
+    rec.ok("pick", index=1)
+    rec.ok("get_game", player="Bea")
+    rec.ok("skip", everyone=True)
+    assert [b["player_id"] for b in db(rec)["burned"]] == [1, None]
+    rec.ok("get_game", player="Bea")
+    rec.ok("get_game", player="Ana")
+    rec.level_up()
+    rec.ok("new", player="Bea")
+    rec.use("tight")
+    rec.ok("new", player="Carla")
+    rec.ok("pick", index=0)
+    rec.fail("refill_empty", "skip")
+    rec.fail("refill_empty", "skip", everyone=True)
+    rec.ok("answer", index=rec.correct())
+
+
+@scenario("players", "Several players with their own burns; players() order; name cleanup and casefold "
+          "(«Íngrid»/«íngrid», «Straße»/«STRASSE»); bad names; deleting players (with a running game, "
+          "unknown, by another case); IDs after a delete.", 10)
+def players_(rec):
+    rec.ok("players")
+    rec.ok("get_game")
+    rec.ok("new", player="  Ana   María ")
+    rec.level_up()
+    rec.level_up()
+    rec.ok("new", player="Íngrid")
+    rec.level_up()
+    rec.ok("new", player="íngrid")
+    rec.ok("new", player="Straße")
+    rec.ok("new", player="STRASSE")
+    assert [p["name"] for p in db(rec)["players"]] == ["Ana María", "Íngrid", "Straße"]
+    rec.ok("players")
+    for bad in ("", "   ", None, 7 * " "):
+        rec.fail("name_missing", "new", player=bad)
+    rec.fail("name_missing", "new")
+    rec.fail("name_too_long", "new", player="x" * 31)
+    rec.fail("name_too_long", "get_game", status=400, player="x" * 31)
+    rec.ok("new", player="Abcdefghij Klmnopqrst Uvwxyzab")  # 30 letters with spaces
+    rec.ok("new", player=7)
+    rec.ok("get_game", player="ana maría")
+    rec.ok("get_game", player="ÍNGRID")
+    rec.ok("new", player="Bea")
+    rec.ok("pick", index=0)
+    rec.ok("skip", everyone=True)
+    rec.level_up()
+    rec.ok("players")
+    rec.ok("delete_player", name="BEA")
+    assert len(db(rec)["players"]) == 5 and db(rec)["games"][-1]["id"] == 7
+    assert [b["player_id"] for b in db(rec)["burned"] if b["game_id"] == 8] == [None]
+    rec.ok("get_game")
+    rec.ok("new", player="Carla")
+    assert db(rec)["players"][-1]["id"] == 6 and db(rec)["games"][-1]["id"] == 8
+    rec.fail("player_unknown", "delete_player", name="Zoe")
+    rec.fail("name_missing", "delete_player", name="  ")
+    rec.fail("name_missing", "delete_player")
+    rec.ok("delete_player", name="ana maría")
+    rec.ok("new", player="Dani")
+    assert [p["id"] for p in db(rec)["players"]] == [2, 3, 4, 5, 6, 7]
+    rec.ok("delete_player", name="íngrid")
+    rec.ok("players")
+    rec.ok("get_game", player="Íngrid")
+
+
+@scenario("abandon", "Every action on an empty DB; abandon; every action with no running game; "
+          "a new game while one runs abandons it; undo after abandon.", 11)
+def abandon(rec):
+    def no_game():
+        rec.fail("no_game", "pick", index=0)
+        rec.fail("no_game", "answer", index=0)
+        rec.fail("no_game", "skip")
+        rec.fail("no_game", "skip", everyone=True)
+        rec.fail("no_game", "jokers", jokers={"hint": 1})
+        rec.fail("no_game", "joker", joker="hint")
+        rec.fail("joker_unknown", "joker", joker="comodin")
+        rec.fail("nothing_to_undo", "undo")
+        rec.ok("abandon")
+    rec.ok("get_game")
+    no_game()
+    rec.ok("new", player="Ana")
+    rec.level_up()
+    rec.ok("pick", index=0)
+    rec.ok("abandon")
+    assert db(rec)["games"][-1]["result"] == "abandoned"
+    no_game()
+    rec.ok("get_game", player="Ana")
+    rec.ok("new", player="Ana")
+    rec.level_up()
+    rec.ok("new", player="Bea")
+    assert [g["result"] for g in db(rec)["games"]] == ["abandoned", "abandoned", None]
+    rec.fail("nothing_to_undo", "undo")
+    rec.ok("pick", index=0)
+    rec.ok("answer", index=rec.wrong())
+    rec.fail("no_game", "pick", index=0)
+    rec.ok("abandon")
+    rec.ok("undo")
+    rec.ok("answer", index=rec.correct())
+
+
+@scenario("supply", "Tight pool: a second game for the same player fails with the supply report; a new player "
+          "can still play; get_game's supply for a known, a new and no player.", 12, pool="tight")
+def supply_(rec):
+    rec.ok("get_game")
+    rec.ok("new", player="Ana")
+    rec.level_up()
+    rec.ok("get_game", player="Ana")
+    rec.ok("get_game", player="Bea")
+    rec.ok("get_game")
+    body = rec.fail("supply_short", "new", player="ana")
+    assert body["supply"] and not body["supply"]["ok"]
+    assert db(rec)["games"][-1]["result"] is None
+    rec.ok("new", player="Bea")
+    rec.ok("get_game", player="Carla")
+    rec.ok("players")
+
+
+@scenario("errors", "Bad picks and answers: out of range, wrong phase, a struck answer; jokers in the select "
+          "phase; an unknown joker.", 13)
+def errors(rec):
+    rec.ok("new", player="Ana")
+    rec.fail("no_question", "answer", index=0)
+    rec.fail("joker_not_question", "joker", joker="hint")
+    rec.fail("joker_unknown", "joker", joker="comodin")
+    rec.fail("card_invalid", "pick", index=4)
+    rec.fail("card_invalid", "pick", index=-1)
+    rec.fail("card_invalid", "pick")
+    rec.ok("pick", index=3)
+    rec.fail("no_cards", "pick", index=0)
+    rec.fail("joker_unknown", "joker", joker="comodin")
+    rec.fail("joker_unknown", "joker")
+    rec.fail("answer_invalid", "answer", index=4)
+    rec.fail("answer_invalid", "answer", index=-1)
+    rec.fail("answer_invalid", "answer")
+    rec.ok("joker", joker="snipe", index=rec.wrong())
+    rec.fail("answer_invalid", "answer", index=rec.state()["struck"][0])
+    rec.ok("answer", index=rec.correct())
+    rec.fail("no_question", "answer", index=0)
+    rec.ok("pick", index=0)
+    rec.ok("answer", index=rec.wrong())
+    rec.fail("no_game", "answer", index=0)
+    rec.fail("no_game", "joker", joker="hint")
 
 
 def dumps(obj):
