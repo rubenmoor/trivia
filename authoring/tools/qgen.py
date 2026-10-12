@@ -1355,7 +1355,71 @@ def report_progress(pool, bundle):
         line(f"  {slug:{w}}", by_cat[slug], round(share))
 
 
+def committed_batches(bundle, n=2):
+    """The last n `qgen batch` runs of the bundle that are merged and done, oldest first."""
+    import health  # authoring/tools/health.py (imports qgen)
+    def ok(run):
+        cfg = load_json(WORK / run / "run.json", {}) or {}
+        return cfg.get("done") and cfg.get("bundle", "base") == bundle
+    return [r for r in health.batch_runs() if ok(r)][-n:]
+
+
+def spot_agreement(batch, checks):
+    """(decided, agreed) of the batch's spot check: agree = both accept or both don't (plan 16)."""
+    items = [i for i in (checks.get(batch) or {}).get("items", {}).values() if i.get("human")]
+    return len(items), sum((i["llm"] == "approved") == (i["human"] == "approved") for i in items)
+
+
+def exit_check(pool, bundle):
+    """Milestone 1's "done when" (plan 12): [(ok, criterion, detail)]; missing data counts as a fail."""
+    import health  # authoring/tools/health.py (imports qgen)
+    t = targets.load_targets(bundle)
+    if t is None:
+        sys.exit(f"no targets for bundle {bundle!r} in authoring/data/targets.json")
+    approved = [q for q in pool if q["status"] == "approved" and q.get("bundle") == bundle]
+    out = [(len(approved) >= t["total"], f"approved {bundle} ≥ {t['total']}", f"{len(approved)}")]
+    have = Counter(q["difficulty"] for q in approved)
+    short = [f"{d}: {have[d]}/{goal}" for d, goal in sorted(t["difficulty"].items()) if have[d] < goal]
+    out.append((not short, "every difficulty ≥ its target", "short " + ", ".join(short) if short else "all met"))
+    runs = committed_batches(bundle)
+    if len(runs) < 2:
+        out.append((False, "last two batches pass the health thresholds", f"not available (batches: {', '.join(runs) or 'none'})"))
+    else:
+        fails = {r: health.failures(r, pool) for r in runs}
+        if any(f is None for f in fails.values()):
+            out.append((False, "last two batches pass the health thresholds", "not available (no thresholds yet)"))
+        else:
+            bad = [f"{r}: {', '.join(f)}" for r, f in fails.items() if f]
+            out.append((not bad, f"{' and '.join(runs)} pass the health thresholds", "; ".join(bad) or "pass"))
+    quality, checks = targets.load_quality(), load_json(layout.SPOT_CHECKS)
+    if not quality or checks is None or len(runs) < 2:
+        why = "no quality keys in targets.json" if not quality else "no spot-checks.json" if checks is None else "fewer than two batches"
+        out.append((False, "last two spot checks agree with the LLM review", f"not available ({why})"))
+    else:
+        size, rate = quality["spot_check_size"], quality["min_agreement"]
+        parts, ok = [], True
+        for r in runs:
+            n, agreed = spot_agreement(r, checks)
+            pass_ = n >= size and agreed >= rate * n
+            ok &= pass_
+            parts.append(f"{r}: {agreed}/{n} ({100 * agreed / n:.0f} %)" if n else f"{r}: no spot check")
+        out.append((ok, f"last two spot checks: ≥ {size} questions, ≥ {100 * rate:.0f} % agreement", "; ".join(parts)))
+    errors, _ = validate_pool()
+    out.append((not errors, "qgen validate clean", f"{len(errors)} error(s)" if errors else "OK"))
+    return out
+
+
+def report_exit_check(pool, bundle):
+    results = exit_check(pool, bundle)
+    print(f"exit check, milestone 1 ({bundle}):")
+    for ok, criterion, detail in results:
+        print(f"  {'✓' if ok else '✗'} {criterion}: {detail}")
+    sys.exit(0 if all(ok for ok, *_ in results) else 1)
+
+
 def cmd_report(args):
+    if args.exit_check:
+        return report_exit_check(load_json(POOL)["questions"], args.bundle)
     if args.calibration is not None:
         return report_calibration(args.calibration or last_batches())
     if args.overlaps:
@@ -2451,6 +2515,8 @@ def main():
                     help="batch health side by side (plan 15); default: batch-4 onward")
     rp.add_argument("--overlaps", action="store_true",
                     help="approved questions that may ask the same fact (plan 15); listing only")
+    rp.add_argument("--exit-check", action="store_true",
+                    help="milestone 1's done-when per criterion, ✓/✗; exit 1 if any fails (plan 12)")
     add("validate", cmd_validate, run=False)
     add("export", cmd_export, run=False)
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging

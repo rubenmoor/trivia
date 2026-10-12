@@ -21,6 +21,7 @@ Part of the Steam plan ([11](11-steam.md)). The family's pool target is open too
 
 ## Quality bar
 - A public product needs a lower error rate than family play. Draft: every question passes the fact-check with certainty (D-32's rule), plus a **human spot check** of a random sample per batch (e.g. 10 %). If the sample shows an error rate above an agreed limit, the batch goes back to review.
+- Family pool (`base`, milestone 1, pm decision 2): human spot check of 30 random questions per batch (plan 16 tooling), ≥ 90 % agreement with the LLM review in each of the last two batches; plus 5000 approved, every difficulty at its target, the last two batches pass plan 15's health thresholds, `qgen validate` clean. Checked by `qgen report --exit-check`.
 - LLM-reviewed questions (D-33) are allowed, but the AI disclosure (17) must describe the process honestly.
 - After release: «Reportar pregunta» (MD-6) plus a manual channel (ST-5) feeds fixes into patches.
 
@@ -33,3 +34,4 @@ Part of the Steam plan ([11](11-steam.md)). The family's pool target is open too
 - [ ] CT-3 Cost estimate per question (draft → approved, and per translation) from `costs.log`; budget for the release.
 - [ ] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch.
 - [ ] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample.
+  - Family pool: closed 2026-10-11 (pm decision 2: 30 per batch, ≥ 90 % agreement; `qgen report --exit-check`). Open for the public release.

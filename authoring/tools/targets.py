@@ -5,7 +5,7 @@ import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import TARGETS
 import categories  # app/server/categories.py
 
-NOT_BUNDLES = {"about", "batch_health"}  # top-level keys that aren't bundles (D-55)
+NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)
 
 
 def load_all():
@@ -18,6 +18,11 @@ def load_targets(bundle):
     if t is None:
         return None
     return {"total": t["total"], "difficulty": {int(k): v for k, v in t["difficulty"].items()}}
+
+
+def load_quality():
+    """{"spot_check_size": n, "min_agreement": fraction} (plan 16, pm decision 2), or None before it's stored."""
+    return load_all().get("quality")
 
 
 def deficits(pool_questions, bundle):

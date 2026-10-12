@@ -114,6 +114,12 @@ def batch_health(run, pool=None):
     return h
 
 
+def failures(run, pool=None):
+    """Names of the thresholds the run fails ([] = pass), None while targets.json has no thresholds.
+    Plan 12's exit check reads this; plan 15's thresholds task (44) fills it in."""
+    return None
+
+
 PCT = {"drop rate", "needs_work rate", "overlap rate", "merged/slots 11–15", "media share",
        *(f"needs_work: {p}" for p in qgen.PROBLEMS), *(f"top {a}" for a in concepts.AXES)}
 
