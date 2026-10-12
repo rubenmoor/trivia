@@ -4592,7 +4592,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 15 · q-0221 (comida y bebida): El tempura llegó a Japón hace unos 450 años desde un país europeo. ¿Cuál? → Portugal
 
 Answer "levels as proposed", or list corrections as "q-XXXX: <level>" (and any question to drop or swap).', 'yes', NULL, '2026-10-12T01:47:40Z', '2026-10-12T02:02:22Z', 34, NULL);
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (12, 'Desktop shell (OQ-29)?', 'pending', '["Electron; Steam binding: steamworks-ffi-node or steamworks.js, picked in SW-2", "Tauri v2", "Browser + local server (PyInstaller)"]', 'Shell only shows `app/client/dist/` + one save file (after milestone 2). Details: `plans/18-steam-integration.md`. Facts checked 2026-10-11.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (12, 'Desktop shell (OQ-29)?', 'answered', '["Electron; Steam binding: steamworks-ffi-node or steamworks.js, picked in SW-2", "Tauri v2", "Browser + local server (PyInstaller)"]', 'Shell only shows `app/client/dist/` + one save file (after milestone 2). Details: `plans/18-steam-integration.md`. Facts checked 2026-10-11.
 
 **Facts**
 - Electron: v44.7.0 (2026-10-07); zip 158 MB Win, 123 MB Linux (GitHub release assets). Same Chromium everywhere.
@@ -4612,7 +4612,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Tauri: + ~10 MB. − two engines to test, our blur/video effects at risk on Deck, no overlay.
 - Browser + server: + closest to today. − no game window, no overlay, two runtimes, PyInstaller AV false positives.
 
-**Recommendation:** Electron. Wrap the Steam calls in one small bridge, so the binding can be swapped.', NULL, NULL, '2026-10-12T02:10:48Z', NULL, 182, NULL);
+**Recommendation:** Electron. Wrap the Steam calls in one small bridge, so the binding can be swapped.', 'Electron; Steam binding: steamworks-ffi-node or steamworks.js, picked in SW-2', NULL, '2026-10-12T02:10:48Z', '2026-10-12T03:14:46Z', 182, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (13, 'Batch health thresholds and stop rule?', 'pending', '["Recommended set (body), stop the next qgen batch on a ✗ until qgen health ack", "Looser set (body), same stop rule", "Recommended set as warnings only: ✓/✗ in the report, no stop"]', 'Plan 15 (D-55): every batch report gets health metrics; a batch that fails a threshold makes the next `qgen batch` exit 2 until you run `qgen health ack <batch> "<note>"`. Baseline batch-4…7 (`qgen report --batches`, `authoring/reports/batches.md`; needs_work = `record`''s decisions, problems guessed from feedback for these old batches):
 
 | metric | b4 | b5 | b6 | b7 |
