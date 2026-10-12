@@ -560,11 +560,19 @@ def cmd_bundles(args):
     return errors
 
 
-def target_weights():
-    """{difficulty: weight} for drafting: LEVEL_WEIGHTS for the focus group, even over the scale without one (D-40)."""
+def target_weights(pool_questions, bundle):
+    """{difficulty: weight} for drafting: LEVEL_WEIGHTS for the focus group; without one the
+    bundle's deficits vs. its targets (D-54), even over the scale without targets or deficits (D-40)."""
     focus = focus_group()
     if focus is None:
         lo, hi = load_age_groups()["scale"]
+        t = targets.load_targets(bundle)
+        if t:
+            have = Counter(q["difficulty"] for q in pool_questions
+                           if q["status"] == "approved" and q.get("bundle") == bundle)
+            deficit = {lvl: max(0, t["difficulty"].get(lvl, 0) - have[lvl]) for lvl in range(lo, hi + 1)}
+            if any(deficit.values()):
+                return deficit
         return {lvl: 1 for lvl in range(lo, hi + 1)}
     lo, hi = focus["window"]
     if sorted(LEVEL_WEIGHTS) != list(range(lo, hi + 1)):  # AG-8: weights per group
@@ -585,10 +593,11 @@ def assign_difficulties(slots, seed, weights):
     return dict(zip(slots, levels))
 
 
-def draw_slots(subs, pool_questions, axes_def, n, seed):
+def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded."""
-    level_of = assign_difficulties([(s, i) for s in subs for i in range(n)], seed, target_weights())
+    level_of = assign_difficulties([(s, i) for s in subs for i in range(n)], seed,
+                                   target_weights(pool_questions, bundle))
     plan = {}
     for s in subs:
         rng = random.Random(f"{seed}:{s}")
@@ -641,8 +650,10 @@ def cmd_draft(args):
     axes_def = concepts.load_axes(bundle)
     plan = load_json(d / "slots.json")
     if plan is None:  # drawn once, so a rerun drafts the same slots
-        plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed)
+        plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed, bundle)
         save_json(d / "slots.json", plan)
+    drawn = Counter(sl["target_difficulty"] for slots in plan.values() for sl in slots)
+    print("target difficulty: " + "  ".join(f"{lvl}×{c}" for lvl, c in sorted(drawn.items())), flush=True)
     system = prompt("house-style", "draft")
     todo = [s for s in subs if plan.get(s) and not (d / "drafts" / f"{slug(s)}.json").exists()]
 
