@@ -88,7 +88,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - **Quirky design:** cards as sealed envelopes, mystery boxes or old library index cards. Each is tilted at a slightly different angle, with a hand-drawn number (1–4), a wax seal or postage stamp, and a gentle idle wobble. Hover or focus lifts a card and straightens it. A random doodle can sit in a corner (a coffee ring, a paper clip, a googly-eyed question mark).
 - Cards deal in one at a time with a paper "flick" sound (part of the transition into Select).
 - **Picking:** click or press `1`–`4`. An **immediate short sound** plays (a "pop", stamp or seal crack), the chosen card pulses or tears open, the other three slide off, then the transition to the Question screen starts. No confirmation step.
-- There are **always 4 cards** (D-22). They come from the level's difficulty range (GF-2, `03-game-flow.md`). The unchosen questions are not burned (D-20). A card that replaces a skipped or purged one deals in highlighted («¡Nueva!», 09).
+- There are **always 4 cards** (D-22). They come from the level's difficulty range (GF-2, `03-game-flow.md`). The unchosen questions don't count as seen (D-20, D-82). A card that replaces a skipped or purged one deals in highlighted («¡Nueva!», 09).
 
 ### Question
 - Full-bleed media background (D-15 rules), the question in a floating glass card at the top, four answer tiles (A–D) in a 2×2 grid at the bottom, at most 70 % wide. The credit line is in a corner. Layout sketch and tile states: `10-visual-design.md`.
@@ -178,8 +178,8 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 Menu items (keyboard-navigable, large enough for the TV):
 - **Continuar** (close).
 - **Volumen:** music, effects and media sliders, plus mute all.
-- **Saltar pregunta:** back to Select with a new card replacing the current question, without using a joker. The skipped question is burned for the player (D-28).
-- **Saltar y quemar para todos:** the same, but the question is burned for **every** player: for a wrong, broken or ambiguous question. Needs a confirmation.
+- **Saltar pregunta:** back to Select with a new card replacing the current question, without using a joker. The skipped question counts as seen (D-82).
+- **Bloquear pregunta** (was «Saltar y quemar para todos», D-82): the same, but the question is blocked for the save, never shown again: for a wrong, broken or ambiguous question. Needs a confirmation.
 - **Deshacer:** take back the last final answer, if the gamemaster misjudged or someone pressed by accident (GM-2).
 - **Reiniciar partida / Volver al inicio,** with a confirmation.
 - **Pantalla completa** on/off.

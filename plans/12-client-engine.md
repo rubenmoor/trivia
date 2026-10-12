@@ -5,6 +5,8 @@
 Milestone M7 in [`project.md`](project.md); the Steam plan ([11](11-steam.md)) builds on it. It moves the game referee from the Python server into TypeScript, so the game runs without Python: in the browser, in a desktop shell ([18](18-steam-integration.md)), on the Steam Deck. **The rules don't change and the family's saves are kept.** This is a pure engineering change and can start now.
 
 ## Today
+History: the state before the port (D-28 burning, superseded by D-82 seen counters, plan 65).
+
 - `app/server/game.py` (~550 lines): players, games (the state as JSON), burning per player and for everyone, draw, pick, answer, skip, undo, jokers (D-25..D-28).
 - `app/server/selection.py` (~130 lines): supply check and draw via exact bipartite matching (GF-2).
 - `app/server/categories.py`: loads `app/data/categories.json`.
@@ -24,9 +26,9 @@ flowchart LR
   Engine --> Pool[pool.json + categories.json, static]
 ```
 
-- **`app/client/src/engine/`**: a pure TypeScript module with no DOM and no Svelte. It covers `selection.ts` (matching, supply), `game.ts` (state machine, jokers, burning, undo), `pool.ts` (loading and filtering), `rng.ts` (a seedable PRNG). Every function takes the state and returns the new state, so undo and saves stay simple.
+- **`app/client/src/engine/`**: a pure TypeScript module with no DOM and no Svelte. It covers `selection.ts` (matching, supply), `game.ts` (state machine, jokers, seen events, undo; D-82), `pool.ts` (loading and filtering), `rng.ts` (a seedable PRNG). Every function takes the state and returns the new state, so undo and saves stay simple.
 - **Engine runs under plain Node 22** (D-60): erasable TS only (no `enum`, `namespace`, parameter properties), relative imports with `.ts` extensions, no Vite-only imports. tsconfig: `erasableSyntaxOnly`, `allowImportingTsExtensions`. Authoring calls it via `node` for the supply check.
-- **Store interface**: `load(): SaveData` / `save(SaveData)`. `SaveData` is one versioned JSON document (`{version, players, games, burned}`) that replaces the SQLite tables. The data is small (players × burned IDs), so one document fits easily, and it suits Steam Cloud (one file) too.
+- **Store interface**: `load(): SaveData` / `save(SaveData)`. `SaveData` is one versioned JSON document that replaces the SQLite tables; save v3 (D-82, plan 65): `{version, players, games, seen, blocked, notified_exhausted, flags, reports}`, v2 `burned` migrates in `parseSave`. The data is small (seen rows, blocked IDs), so one document fits easily, and it suits Steam Cloud (one file) too.
 - **`ServerStore`** (current game, until the Steam build replaces it, D-59): the Python server keeps a tiny `GET/PUT /api/save` that writes `state/game.json` atomically. No localStorage: D-3 rejected it as fragile.
 - **Pool export** (done, D-35): `qgen export` writes the playable pool (`approved` only, without `review`, `quality` and pipeline fields) to `app/data/pool.json`. The TS engine loads that file; with locales (15b) it becomes one file per locale.
 - **Data in the client** (pm plan 50, PORT-7): the server serves `app/data/` read-only at `/data/…`; the client loads pool and categories once per page load (reload after `qgen export`). `lib/api.ts` keeps its signatures and calls the engine + `ServerStore`.
@@ -36,16 +38,17 @@ flowchart LR
 With the engine in the client, the correct answer is in memory before the players answer. Decided in D-66: acceptable for an offline party game, relaxes D-25. The UI still must never *render* hidden data: screens only render the view.
 
 ## Parity strategy
-1. **Fixtures first (PORT-1):** before porting, write a scenario recorder for the Python engine. It plays scripted games (picks, answers, every joker, skip, burn for everyone, undo, supply failures) on a small fixed pool and stores the inputs and outputs as JSON in `app/client/src/engine/fixtures/`. Randomness is a recorded shuffle tape, not a shared PRNG (D-58): every `random.shuffle` is logged as `{site, n, perm}`; the TS engine takes an injected `Rng`, and tests replay the tape. Format: `fixtures/README.md`.
+1. **Fixtures first (PORT-1):** before porting, write a scenario recorder for the Python engine. It plays scripted games (picks, answers, every joker, skip, burn for everyone (history, D-28), undo, supply failures) on a small fixed pool and stores the inputs and outputs as JSON in `app/client/src/engine/fixtures/`. Randomness is a recorded shuffle tape, not a shared PRNG (D-58): every `random.shuffle` is logged as `{site, n, perm}`; the TS engine takes an injected `Rng`, and tests replay the tape. Format: `fixtures/README.md`.
 2. **Port module by module:** `selection` first (pure, easy to compare), then `game`.
 3. **Fixture tests:** the TS engine replays every fixture and must produce the same states. Tests use Node's built-in `node:test` (no new dependency).
    - Errors (D-57): PORT-3 throws the same codes as `game.py` (`GameError(code, params)`); parity compares `error`/`params`, not `message`. Joker `reason`s too.
-4. **Invariant tests:** for random seeds on the real pool, check that every level gets 4 cards, burned questions never come back, and an available joker never breaks the supply.
+4. **Invariant tests:** for random seeds on the real pool, check that every level gets 4 cards, never a count-k card while a count-<k card fits the slot and keeps the later levels fillable (D-82; was "burned questions never come back"), and an available joker never breaks the supply.
 
 ## Migration
-- `app/server/save.py` `migrate()` turns `state/game.sqlite` + `state/flags.json` into `state/game.json` once (players, games with the running one, burns per player and for everyone, flags); runs on a copy, the `.sqlite` and `flags.json` stay as the backup (plan 49, D-67).
+- `app/server/save.py` `migrate()` turns `state/game.sqlite` + `state/flags.json` into `state/game.json` once (players, games with the running one, burns per player and for everyone, flags; history: v2, the engine migrates v2 → v3 seen rows, D-82); runs on a copy, the `.sqlite` and `flags.json` stay as the backup (plan 49, D-67).
 - Switch-over: `main.py` calls `save.migrate()` before `serve_forever` in PORT-7's switch-over change (plan 50), not earlier; until then `game.py` still writes `game.sqlite` and an early `game.json` would go stale.
 - Rollback: delete `state/game.json`, go back to the commit before the switch; `game.sqlite` is untouched.
+- v2 → v3 (D-82, plan 65): `parseSave` turns each `burned` row with a player into one `seen` row and `player_id: null` into `blocked`; `save.py` only checks the envelope (D-67). The Python referee `game.py` keeps its SQLite burn rules until plan 51 deletes it (divergence, D-82).
 - `SaveData.version` makes later migrations possible (game modes in 13, multiple locales in 15).
 
 ## Tasks

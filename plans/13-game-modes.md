@@ -33,14 +33,14 @@ Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pre
 - Jokers: one shared standard set (3 × Soplo, 1 × each other joker); any player may use what's left on their turn.
 - Drop-out and win: a wrong answer ends the game for the team, as today; level 12 = everyone wins.
 - No timer.
-- Burning: ≈ 1 game's burns (12 + the standard set's burns).
+- Seen events (D-82): ≈ 1 game's (12 + the standard set's skips and swaps).
 
 ### Round-robin competitive (`rr-competitive`; es proposal «Por turnos, todos contra todos»)
 - Turn order: one question per player, in join order; each turn plays that player's own game.
 - Every player: own game, own level, own standard joker set, own age group.
 - Drop-out and win: a wrong answer ends only that player's game; first to level 12 wins.
 - No timer.
-- Burning: ≈ N players × 1 game's burns.
+- Seen events (D-82): ≈ N players × 1 game's; every seen event counts for the save, whichever player saw it.
 
 ### Competitive timed (`timed`; es proposal «Contrarreloj»; D-80, replaces D-77's timed part)
 - 12 rounds; round = level (the question's difficulty follows the round); questions per round = number of players.
@@ -50,7 +50,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pre
 - Lives: three each; round end: no correct answer in that round = −1 life; wrong answer (or claim timeout) = out at once; third life lost = out.
 - Win: round 12 is sudden death (first claim + correct answer wins at once); only one player left = wins at once.
 - Visuals: rounds and hearts; a heart pulses at a player's last chance in a round without a correct answer, stronger on their last heart; last 3 s of a claim: a clock ticks once per second, louder each tick, plus a pulsing red frame (impending-death warning of a first-person shooter); the same red frame when everyone is at risk at once (all on their last life, nobody correct this round yet).
-- Burning: ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs; no joker burns.
+- Seen events (D-82): ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs; no jokers.
 - Open detail (not a decision): after drop-outs, do questions per round follow the players still in?
 
 ## Implementation notes
@@ -60,7 +60,7 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - Standard joker set: one engine constant (3 × Soplo, 1 × Paso, Bájale, Cambiazo, Francotirador); every non-gamemaster game starts with it.
 - `settings.customized`: `true` after any change via "Customize game"; feeds achievements (S5).
 - Refusals outside gamemaster mode (engine, not only UI): undo, skip, replace, joker budget changes.
-- `ReportRow`: logs the current question to a local report list (a page to copy from); no burn, no replacement; the player answers or uses a joker.
+- `ReportRow`: logs the current question to a local report list (a page to copy from); not seen-counted, no replacement; the player answers or uses a joker.
 - Engine as built (task 376): `settings.mode` stored only when `new` carries it; missing resolved by `gameMode()`, never written back (fixtures unchanged); `customized` only outside gamemaster mode; `new` takes `jokers` overrides; refusal code `gamemaster_only` (409); `report` action (`note?`) needs a question on screen; save version 2 (`reports`); `replace` gets its guard with plan 59.
 - Joker availability (JK-2) has a reason «No te quedan Soplos» when the budget is spent; the tray shows count badges (MD-2, MD-3).
 
@@ -72,8 +72,8 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - [x] MD-5 Define the modes (OQ-30, OQ-36). *2026-10-12: D-74: five modes, no default mode, no presets, no checkpoint; outside gamemaster mode no skip, undo, replace or joker changes; «Reportar pregunta» only logs. Sections and implementation notes above.*
 - [x] MD-6 «Reportar pregunta»: local report list only; no burn, no replacement (D-74). *2026-10-12: engine `report` (task 376); overlay by mode (`gamemaster` as before plus «Reportar pregunta» / «Preguntas reportadas»; `solo` without skip, undo and budget editor, read-only joker line); confirm dialog (Enter reports, Esc/⌫ cancel); `Reports.svelte` opens over the overlay instead of a `Screen` (the question below stays mounted), newest first, the answer of the question still on screen hidden, «Copiar» with a selectable `<pre>` fallback.*
 - [ ] MD-7 Mode screen (five modes); age group screen with "Customize game" in `solo`; `settings.mode`, `settings.customized`.
-- [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77, `timed` D-80): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules; `timed`: rounds, claim and 6 s answer timer, lives, sudden death, hint cadence, hearts, ticking clock, red frame; burning; engine first, then screens.
+- [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77, `timed` D-80): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules; `timed`: rounds, claim and 6 s answer timer, lives, sudden death, hint cadence, hearts, ticking clock, red frame; seen events for the save (D-82); engine first, then screens.
 - [ ] MD-9 Later: multiplayer input with IN-6: per-player gamepads, shared keyboard (one key per player takes keyboard and mouse until the turn ends), the claim action in `timed` (any player, any time; per-player claim keys on the shared keyboard; D-80).
 - [ ] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *pm plan for milestone 7 part 11.*
 - [ ] MD-11 Gamemaster mode: "configure game" screen before every game, full customization; defaults = today's game (Enter straight through).
-- [ ] MD-12 Gamemaster menu (`Esc`): today's overlay (undo, skip, burn for everyone, joker budget, MD-4) + manage jokers, replace the current question, further decided cheats.
+- [ ] MD-12 Gamemaster menu (`Esc`): today's overlay (undo, skip, «Bloquear pregunta» (D-82), joker budget, MD-4) + manage jokers, replace the current question, further decided cheats.

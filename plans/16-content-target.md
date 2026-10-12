@@ -9,17 +9,17 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - English, German: no pool yet (launch languages, pm decision 26; translation: 15b).
 
 ## What one game needs
-- A game **shows** 48 cards (4 per level × 12) and **burns** at least 12, plus whatever the jokers swap away (D-27, D-28).
-- Burns per mode (D-74, multipliers D-77, timed D-80): «Solo o en grupo» and round-robin co-op = 12 + the standard joker set's burns (3 × Soplo, 1 × each other joker); round-robin competitive ≈ N players × that; competitive (timed) ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs, no jokers; gamemaster mode: whatever the configure screen allows.
+- A game **shows** 48 cards (4 per level × 12) and **sees** at least 12 (seen counters, D-82), plus whatever the jokers swap away (D-27).
+- Seen events per mode (D-74, multipliers D-77, timed D-80): «Solo o en grupo» and round-robin co-op = 12 + the standard joker set's skips and swaps (3 × Soplo, 1 × each other joker); round-robin competitive ≈ N players × that; competitive (timed) ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs, no jokers; gamemaster mode: whatever the configure screen allows.
 - The tight spots are the ends of the ladder: level 1 draws only difficulty 1, and level 12 only 9–10 (D-22, D-31). Bájale and Cambiazo also need depth *per subcategory*.
 
 ## Metric
 - Target metric: approved questions per launch language vs. D-53's mix (`qgen report`).
 - **Pass/fail = D-75's count**: `qgen report --simulate` ends with a ✓/✗ per launch language (`es`, `en`, `de`, D-78): approved in `app/data/pool.<locale>.json` (`es`: `pool.json`) vs. `targets.json` `base` (5000 + per difficulty) until part 9 sets per-locale targets. No pool = ✗. Exit 1 on any ✗; the games numbers never change it.
-- Information only (no bar, D-75): "games per new player", CT-2. Game after game on the engine (`authoring/tools/sim/`, D-60, plan 62) per locale × bundles × mode × age group × player model until the supply check fails; median, p10, strong bound (min over seeds), bottleneck level + difficulty + top 3 dry subcategories. Default 40 seeds per cell (default matrix ≈ 1 min).
+- Information only (no bar, D-75): "games per new player", CT-2. Headline since D-82: games until the first repeat (seen count ≥ 1 drawn), plus k (fresh games left) for a fresh profile as a cross-check (plan 65, task 426). Game after game on the engine (`authoring/tools/sim/`, D-60, plan 62) per locale × bundles × mode × age group × player model until the supply check fails; median, p10, strong bound (min over seeds), bottleneck level + difficulty + top 3 dry subcategories. Default 40 seeds per cell (default matrix ≈ 1 min).
 - Player models: `strong` = always right, reaches 12 every game (lower bound); `typical` = p(right) linear 0.95 at level 1 → 0.6 at level 12 (`TYPICAL_P` in `simulate.ts`; only a model, tune from real play).
 - Joker policy: standard set (D-74), each joker once at a random level; a joker the engine refuses is skipped. `gamemaster` mode not simulated.
-- Mode approximations: `solo` = `rr-coop` (D-77). `rr-competitive` until MD-8: N solo games per session, every shown question burned for all N. `timed` until MD-9: up to 12 rounds, one question per player still in (`selection.draw`), burned for all, no jokers; `typical` drops out at p(level), `strong` nobody. Swap in the engine's modes once MD-8/MD-9 land.
+- Mode approximations: `solo` = `rr-coop` (D-77). `rr-competitive` until MD-8: N solo games per session, every shown question seen-counted for the save (D-82). `timed` until MD-9: up to 12 rounds, one question per player still in (`selection.draw`), seen-counted for the save (D-82), no jokers; `typical` drops out at p(level), `strong` nobody. Swap in the engine's modes once MD-8/MD-9 land.
 
 ## Target (decided, D-75)
 - **5000 approved per launch language** (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).

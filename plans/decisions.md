@@ -224,11 +224,12 @@ Template:
   - Each Pista reveals one hint of the current question, until all three are shown.
   - A Francotirador hit on the correct answer costs nothing beyond repeating the level.
   - "Category" in the jokers means the **subcategory** (D-19): Más fácil stays in the same subcategory, Saltar purges a subcategory, and Otro tema lets the players choose a subcategory (picked in two steps, broad category first).
-  - Questions skipped or swapped away by a joker are **burned** (for the player, D-28), not returned to the pool.
+  - Questions skipped or swapped away by a joker are **burned** (for the player, D-28), not returned to the pool. Now: they count as seen (D-82).
 - Consequences: The joker tray has no "used up" state. Jokers use up spare questions fast, so the pool and per-subcategory supply matter more (OQ-17, JK-10).
 - Supersedes / related: D-26; OQ-15, OQ-25, OQ-26, OQ-27; JK-1..JK-10
 
 ## D-28: Players, and burning per player
+- **Superseded in part by D-82** (the burn rules → seen counters; player names stay).
 - Date: 2026-10-06
 - Context: With unlimited jokers, a game burns many more questions. The gamemaster wants every question the players have seen burned for good, but only for whoever played.
 - Decision:
@@ -684,3 +685,19 @@ Template:
   - **Names:** Spanish subcategory names stay the keys everywhere. Hand-maintained, shipped `app/data/names.<locale>.json` (`bundles`, `categories`, `subcategories`) and `app/data/bundles/<id>/names.<locale>.json` (same without `bundles`), mirroring D-43.
 - Consequences: `authoring/tools/translations.py` is the one reader/writer; `qgen validate` checks locale files, names and export staleness. Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish) stale every touched translation, so full translation runs come after them.
 - Supersedes / related: D-35, D-36, D-38, D-39, D-43, D-78; plans 15, 15b, 62, 63
+
+## D-82: Seen counters instead of burning
+- Date: 2026-10-12
+- Context: Burning (D-28) makes a profile's pool a dead end: once a level's supply runs dry the game refuses to start. The gamemaster's call (2026-10-12, plan 65): repeats become a fallback, ordered by how often a question was seen.
+- Decision:
+  - **Profile = save:** one save = one profile (on Steam one per SteamID; otherwise `state/game.json` or the desktop save). Player names stay labels («Continuar: Sofía, nivel 5», history, turn order); they no longer scope selection. Every seen event counts for the whole save, in every mode.
+  - **Seen events:** the ones that burned under D-28: answered, skipped (joker or admin), swapped away, Snipe hit. Descriptions on unpicked cards don't count.
+  - **Save v3:** `seen: {question_id, game_id, seen_on}[]` replaces `burned`; count(q) = rows for q; one row per event, so undo removes exactly that game's row. `blocked: string[]`: hard exclusion; «Saltar y quemar para todos» becomes «Bloquear pregunta». `notified_exhausted`: subcategories already announced as exhausted. Migration v2 → v3 in `parseSave`: each `burned` row with `player_id` → one `seen` row; `player_id: null` → `blocked`.
+  - **GF-7 «Borrar jugador»:** deletes the name and its games, keeps their seen rows.
+  - **Selection:** `available` = approved, active bundles, not blocked, not offered this game, not purged; seen questions stay in. `draw` sorts the shuffled candidates by `(count, category key)`: lowest count always wins, category variety only breaks ties; then the first candidate that keeps the later levels fillable. Jokers draw the same way.
+  - **Supply check:** the hard failure stays only for "the whole pool minus blocked, any count, can't fill 12 levels".
+  - **Low-supply warning** (game start, informational, «Jugar» stays): fresh games left k (count-0 questions fill `4 + k·b` slots per level; `b` from D-75's multipliers per mode); warn when k < K, with the bottleneck difficulty range. K: pm decision 31.
+  - **Exhausted subcategories** (informational): every approved question of it in the active bundles, within the age group's difficulty span, has count ≥ 1 → listed once at game start; no effect on selection.
+  - **Python referee:** `app/server/game.py` (unused since PORT-7, deleted by plan 51) keeps its SQLite burn rules; divergence accepted. `app/server/save.py` only checks the envelope (D-67).
+- Consequences: Plan 65 (tasks 421–429). Engine invariant "burned never comes back" becomes "never a count-k card while a count-<k card fits and keeps the later levels fillable". CT-2 headline: games until the first repeat.
+- Supersedes / related: D-28 (burn rules); D-27, D-59, D-67, D-75; plan 65

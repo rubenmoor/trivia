@@ -3,7 +3,7 @@
 **Status:** draft — **first focus area**
 
 ## Purpose
-A curated, reusable set of questions. Each question has an answer, an image, and metadata. Questions are marked **burned** for a player once that player has seen them, so later sessions stay fresh (D-28).
+A curated, reusable set of questions. Each question has an answer, an image, and metadata. Every time the profile sees a question its seen count goes up; selection prefers the least-seen questions, so later sessions stay fresh (D-82, replaces D-28's burning).
 
 ## Schema (D-6, D-7, D-8)
 The pool lives in `authoring/data/questions.json`: `{"version": 1, "questions": [...]}`. Categories live in `app/data/categories.json` (D-19): `{"categories": [{"slug", "name", "subcategories": [...]}]}`, broad categories in display order; a question's broad category is the one that lists its `subcategory`. Field names are English; content is Spanish.
@@ -53,11 +53,11 @@ Review result, set by the review tool (`08-review-tool.md`, D-11) or an LLM revi
   }
 ```
 
-Burned state is not in this file; it lives in SQLite (D-4), per player, plus a global burn set by the gamemaster (D-28, `03-game-flow.md`).
+Seen counts and blocked questions are not in this file; they live in the save (`seen`, `blocked`, save v3, D-82, `03-game-flow.md`).
 
 ## Storage options
 - Questions are stored in a single JSON file, `authoring/data/questions.json` (D-4). Split later if it grows unwieldy.
-- ~~Burned state inline vs. separate~~ Burned state lives in SQLite, not in the question file (D-4). The `burned` and `burned_on` fields move out of the schema.
+- ~~Burned state inline vs. separate~~ Burned state lived in SQLite, not in the question file (D-4); now seen rows in the save (D-82). The `burned` and `burned_on` fields move out of the schema.
 
 ## Tasks
 - [x] QP-1 Finalise the schema (formats, difficulty scale, categories). *2026-10-06, D-6/D-7; categories still proposed (OQ-8).*
