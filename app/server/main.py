@@ -31,6 +31,10 @@ API:
     GET  /api/flags                                IDs of the questions flagged for review (GM-5, D-47)
     POST /api/flags                                body {"id": question ID, "flagged": bool, "player": name}:
                                                    flag or unflag; returns the flagged IDs (state/flags.json)
+    GET  /api/save                                 the save document as stored (state/game.json), or 404
+                                                   {"error": "not_found"} (plan 49, D-67)
+    PUT  /api/save                                 body: the whole save document; replaces it. Envelope check
+                                                   only: 400 "bad_save"; 503 "save_locked" when the file stays locked
 Game responses are {"game": ...} (app/server/game.py: never the correct answer before the final answer).
 While a question is on screen, the game has `jokers`: per joker {"available", "reason"} (D-27).
 Every game has `jokers_left`: per joker the uses left, or null = unlimited (MD-1).
@@ -44,6 +48,7 @@ import categories
 import flags
 import game
 import paths
+import save
 from http_base import BaseHandler
 
 _lock = threading.Lock()
@@ -77,6 +82,11 @@ class Handler(BaseHandler):
             return self.send_json(200, categories.load())
         if url.path == "/api/flags":
             return self.send_json(200, sorted(flags.load()))
+        if url.path == "/api/save":
+            text = save.load()
+            if text is None:
+                return self.send_json(404, NOT_FOUND)
+            return self.send_raw_json(text.encode("utf-8"))
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
@@ -127,6 +137,35 @@ class Handler(BaseHandler):
             except ValueError as e:
                 return self.send_json(400, {"error": str(e)})
         return self.send_json(404, NOT_FOUND)
+
+    def do_PUT(self):
+        if urlparse(self.path).path != "/api/save":
+            return self.send_json(404, NOT_FOUND)
+        length = int(self.headers.get("Content-Length", 0))
+        if length > save.MAX_BYTES:
+            while length > 0:  # drain, so the client reads the answer instead of a reset
+                chunk = self.rfile.read(min(length, 1 << 20))
+                if not chunk:
+                    break
+                length -= len(chunk)
+            return self.send_json(400, {"error": "bad_save", "message": "save larger than 10 MB"})
+        try:
+            body = self.read_body()
+        except ValueError:
+            return self.send_json(400, {"error": "bad_save", "message": "body is not JSON"})
+        try:
+            with _lock:
+                save.write(body)
+            return self.send_json(200, {"ok": True})
+        except save.SaveError as e:
+            return self.send_json(e.status, {"error": e.code, "message": str(e)})
+
+    def send_raw_json(self, raw):
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(raw)))
+        self.end_headers()
+        self.wfile.write(raw)
 
 
 def main():

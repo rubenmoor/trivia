@@ -519,3 +519,10 @@ Template:
 - Decision: Accepted for an offline party game: devtools only spoil your own game. The view (`Game`) still carries no correct answer before the final answer and only the hints played; screens render only the view, never `PoolQuestion` or the save.
 - Consequences: Relaxes D-25/D-26 "the client never learns the correct answer". Engine modules (`app/client/src/engine/`) may hold the pool; screens go through the view only (PORT-7).
 - Supersedes / related: D-25, D-26; plans 12, 20
+
+## D-67: The save is one JSON document, written whole by the client
+- Date: 2026-10-12
+- Context: The TS engine (PORT-3) runs the rules in the browser; the Python server becomes a store (PORT-4). Today's state is `state/game.sqlite` plus `state/flags.json` (D-47).
+- Decision: `state/game.json` `{version: 1, players, games, burned, flags}`. The client writes it whole via `PUT /api/save`; the server checks only the envelope (object, `version` 1, three lists, `flags` object, ≤ 10 MB), no game logic, no merge. Atomic write (tmp + fsync + replace, retry on Windows locks → 503 `save_locked`). Flags live in the document. Authoring reads it, never writes it, and keeps its own applied-flags ledger (`state/flags-applied.json`). Migration from SQLite runs once on a copy; `game.sqlite` and `flags.json` stay as the backup.
+- Consequences: One writer (one TV tab), no revision check; `ServerStore` serializes its PUTs. `migrate()` is wired into startup only at the switch-over (PORT-7). The desktop shell's `FileStore` writes the same document.
+- Supersedes / related: D-4, D-25, D-47, D-59, D-66; plans 12, 49 (PORT-4, PORT-5)
