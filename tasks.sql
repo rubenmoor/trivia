@@ -1235,12 +1235,62 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Decide in the plan: how randomness becomes deterministic (inject shuffle/draw choices vs. a seeded PRNG TS can reproduce; must match what part 2''s `engine/rng.ts` will do); where the recorder lives (`authoring/tools/` vs. throw-away script); fixture format in `app/client/src/engine/fixtures/` (inputs, states, views as JSON).
 - Recorder runs on a temp state dir, never on the family''s `state/game.sqlite`.
 - Plan priority: 700 (must run before parts 2–6).', '2026-10-11T23:56:49Z', '2026-10-11T23:59:02Z', 54);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (62, 18, 'create tasks for plan 18', 'split', 'open', 1000, NULL, 'Split plan 18 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:58:59Z', NULL, 61);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (62, 18, 'create tasks for plan 18', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 65–71)', 'Split plan 18 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:58:59Z', '2026-10-12T00:04:13Z', 61);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (63, 19, 'create tasks for plan 19', 'split', 'open', 1000, NULL, 'Split plan 19 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:00:50Z', NULL, 56);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (64, 20, 'create tasks for plan 20', 'split', 'open', 1000, NULL, 'Split plan 20 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:03:19Z', NULL, 57);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (65, 18, 'Fixture recorder skeleton (PORT-1)', 'work', 'open', NULL, NULL, 'New `authoring/tools/record_fixtures.py` per plan 18 ("Decisions taken here", "Safety"). Python stdlib only.
+
+- Temp state guard: set `TRIVIA_STATE` to `tempfile.mkdtemp()` **before** importing `layout` (it imports `paths`), `game`, `selection`; assert `game.DB` and `selection.STATE_DB` lie inside it, else exit loudly.
+- Fresh state per scenario: `selection.burned_ids(db=STATE_DB)` binds the path at def time, so keep one temp dir per process and delete `game.sqlite` between scenarios (not repointing constants); remove the dir at exit.
+- Patches:
+  - `random.shuffle` → shuffle an index list with `random.Random(seed)`, apply it in place, append `{"site", "n", "perm"}` to the current step''s tape (`perm[j]` = old index now at j; `site` = caller''s function name).
+  - `game.now` → the step''s fixed `now` (`2026-01-01T00:00:00` + step index minutes).
+  - `categories.load` → fixture categories (wherever `game`/`selection` reference it).
+- Dispatch mirroring `main.py` `game_action` (incl. `int(...)` coercions, `event` for `joker`), `GET /api/game` (`{"game", "supply"}`), players routes, delete player. Response `{status, body}`; any 500 aborts recording.
+- Step recorder: `{now, call, args, tape, response, db}`; DB snapshot as in plan 18 "Fixture layout" (state parsed, `burned` sorted by (game_id, question_id, player_id)).
+- Deterministic JSON writer: `sort_keys`, `ensure_ascii=False`, one step per line.
+- CLI: default writes into `app/client/src/engine/fixtures/`; `--check` re-records into a temp dir and diffs, exit 1 on difference.
+
+Done when: a throw-away scenario of 3 steps (new, pick, answer) records with a tape and DB snapshots, and `state/game.sqlite` mtime + checksum are unchanged after the run.', '2026-10-12T00:04:11Z', NULL, 62);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (66, 18, 'Synthetic fixture categories and pools (PORT-1)', 'work', 'open', NULL, NULL, 'The recorder (`authoring/tools/record_fixtures.py`) generates and writes, deterministically, into `app/client/src/engine/fixtures/` (plan 18, "Fixture layout"):
+
+- `categories.json`: 2 bundles (`base` + one more, D-43), 3 broad categories, ~6 subcategories; same shape as `categories.load()` output (with `bundle`).
+- `pools/main.json`: ~90 approved questions, difficulties 1–10 across all subcategories, hints 0–3 (some with 0), all fields the referee and `game.view` read (`id`, `status`, `difficulty`, `subcategory`, `description`, `question`, `answer`, `wrong_answers`, `hints`, `media`, `background`, `fun_fact`, `bundle`).
+- `pools/tight.json`: barely one game: the second game hits a supply failure; Bájale, Cambiazo, purge and snipe-hit unavailable.
+
+Check against `selection.supply` / `assign` with a throw-away call: main supports several games per player with jokers; tight supports exactly one.
+
+Done when: the files are written, re-running gives identical bytes, and the supply checks above hold.', '2026-10-12T00:04:11Z', NULL, 62);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (67, 18, 'Selection fixture cases (PORT-1)', 'work', 'open', NULL, NULL, 'The recorder writes `app/client/src/engine/fixtures/selection.json` (plan 18, "Fixture layout"): direct calls into `app/server/selection.py`, each `{name, fn, args, tape, result}`.
+
+- `in_range`: edges of each level range.
+- `assign`: subsets of levels, shortages.
+- `supply`: main pool, tight pool, tight minus burns (burns written to the temp DB first).
+- `draw`: plain, with `keep`, with `avoid_categories`, `n` < 4, unfillable → `None`.
+
+Done when: every function above has its cases with tapes, and `--check` passes.', '2026-10-12T00:04:11Z', NULL, 62);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (68, 18, 'Scripted game scenarios: rules and jokers (PORT-1)', 'work', 'open', NULL, NULL, 'Add these scenarios to `authoring/tools/record_fixtures.py`, written to `app/client/src/engine/fixtures/game/<name>.json` (plan 18, "Scenarios"): `win`, `lose-undo`, `hint`, `skip-purge`, `easier`, `category`, `snipe`, `budget`. Each case listed in the plan for these scenarios must appear, incl. one available and one unavailable case per joker, and `snipe`''s hit with no cards left on the tight pool.
+
+Pick answers/indexes from the recorded view (the correct index is in the state), not hard-coded, so scenarios survive pool tweaks.
+
+Done when: all 8 files are written, no step returned 500, `--check` passes.', '2026-10-12T00:04:11Z', NULL, 62);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (69, 18, 'Scripted game scenarios: players, admin and errors (PORT-1)', 'work', 'open', NULL, NULL, 'Add these scenarios to `authoring/tools/record_fixtures.py`, written to `app/client/src/engine/fixtures/game/<name>.json` (plan 18, "Scenarios"): `admin-skip`, `players`, `abandon`, `supply`, `errors`. Each case listed in the plan for these scenarios must appear, notably: casefold «Íngrid»/«íngrid», empty and too long names, delete player with a running game, IDs after a delete (SQLite max+1), `supply` 409 report on the tight pool, every action with no running game → error, and DB unchanged after each error.
+
+Done when: all 5 files are written, no step returned 500, `--check` passes.', '2026-10-12T00:04:12Z', NULL, 62);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (70, 18, 'Soak scenarios (PORT-1)', 'work', 'open', NULL, NULL, 'Add ~10 seeded random walks `soak-<n>` to `authoring/tools/record_fixtures.py` (plan 18, "Scenarios"): 30–60 steps each, legal actions chosen from the current view (picks, answers, every joker incl. purge/Cambiazo/snipe, undo, admin skip incl. everyone, new games, new players). The walk''s choices come from a separate `random.Random(seed)`, not the patched shuffle, so the tape only holds referee shuffles.
+
+Done when: the files are written, no step returned 500, the walks cover every action at least once overall, total fixture size < 2 MB, `--check` passes.', '2026-10-12T00:04:12Z', NULL, 62);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (71, 18, 'Fixture README, plan and directory updates (PORT-1)', 'work', 'open', NULL, NULL, '- `app/client/src/engine/fixtures/README.md`: file format, tape semantics (`perm`, `site`, `tapeRng` contract: fail on wrong `n`, site mismatch, leftover/missing entry), fixed `now` per step, how to re-record and check (`python3 authoring/tools/record_fixtures.py [--check]`), and plan 18''s "Notes for parts 2/3".
+- `plans/12-client-engine.md`: PORT-1 `[x]` with a note; "Parity strategy" step 1 states the shuffle-tape choice.
+- `plans/decisions.md`: a D-entry for the shuffle tape (no shared PRNG; the TS engine takes an injected `Rng`).
+- `directory.md`: the recorder and the fixtures directory.
+
+Final check of plan 18 "Done when": fresh run from an empty fixtures dir, `--check` byte-identical, `state/game.sqlite` mtime + checksum unchanged.
+
+Done when: the above is written and the final check passes.', '2026-10-12T00:04:12Z', NULL, 62);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1271,6 +1321,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (17, 61, '2026-10-11T23:57:08Z', '2026-10-11T23:59:10Z', 'done', NULL, 0, '0fef3579bab3dd745acb81b226ed6c4c0d5744a3', 'claude-opus-5-5[1m]', 'e5654647-a002-4ece-8190-adcca9bf52cb', 10, 20, 11845, 431697, 55270, 0.7654794, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (18, 56, '2026-10-11T23:59:10Z', '2026-10-12T00:01:02Z', 'done', NULL, 0, '43f5f4666a0f606e3d1746d0d183e7fdbb82f4f6', 'claude-opus-5-5[1m]', '3e435859-8756-4e90-a382-239bb8c0804f', 13, 26, 9512, 558720, 47366, 0.68101600000000007, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (19, 57, '2026-10-12T00:01:03Z', '2026-10-12T00:03:33Z', 'done', NULL, 0, '9d77fa68242b8cf8cab66bc29da2b042b32deb70', 'claude-opus-5-5[1m]', '13b030d7-c338-41cd-9fa1-15ef264a09a8', 13, 22, 13320, 506931, 62286, 0.8661622, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (20, 62, '2026-10-12T00:03:33Z', '2026-10-12T00:04:21Z', 'done', NULL, 0, '55c09c13403ad0a6b4aae9ade2e8a44acd838591', 'claude-opus-5-5[1m]', 'edf64974-0ddb-46ac-94bb-a99b0c8cd88a', 6, 12, 4886, 190559, 30344, 0.3786318, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
