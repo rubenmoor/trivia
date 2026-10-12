@@ -49,7 +49,8 @@ import providers  # authoring/tools/providers/: where candidates come from (D-45
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
-from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
+import pool_export  # authoring/tools/pool_export.py (D-35)
+import translations  # authoring/tools/translations.py: translated questions (D-81)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
 # ranges (D-22) show per game, times 3. These are the focus group's (young teens, window 1–10,
@@ -1658,7 +1659,7 @@ AGE_GROUP_IDS = ["kids", "young_teens", "young_adults", "adults"]  # D-76
 
 def locale_pool(locale):
     """pool.<locale>.json; es falls back to pool.json (as sim/load.ts)."""
-    own = layout.app_paths.DATA / f"pool.{locale}.json"
+    own = layout.LOCALE_POOL(locale)
     return layout.EXPORT if locale == "es" and not own.exists() else own
 
 
@@ -2778,9 +2779,14 @@ def cmd_tighten(args):
 
 def cmd_export(args):
     pool = load_json(POOL)
-    layout.EXPORT.write_text(export_text(pool), encoding="utf-8")
+    pool_export.write(pool)
     n = sum(q["status"] == "approved" for q in pool["questions"])
     print(f"exported {n} approved question(s) to {layout.EXPORT.relative_to(ROOT)}")
+    for l in translations.LOCALES:
+        if translations.path(l).exists():
+            c = translations.counts(l, pool)
+            print(f"exported {c['exported']} {l} question(s) to {layout.LOCALE_POOL(l).relative_to(ROOT)}; "
+                  f"{c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
 
 
 def licence_problem(slot):
@@ -2813,17 +2819,8 @@ def validate_pool():
         if qid in ids: errors.append(f"{qid}: duplicate id")
         ids.add(qid)
         if q.get("status") not in {"draft", "approved", "rejected", "needs_work"}: errors.append(f"{qid}: bad status")
-        rv = q.get("review")
-        if rv is not None and (rv.get("decision") != q.get("status") or "feedback" not in rv or "reviewed_on" not in rv):
-            errors.append(f"{qid}: review does not match status")
-        if rv is not None and not set(rv.get("problems") or []) <= set(PROBLEMS):  # plan 15
-            errors.append(f"{qid}: review.problems must be from {', '.join(PROBLEMS)}")
-        if rv is not None:  # who reviewed (D-33)
-            if rv.get("reviewer") not in {"human", "llm"}: errors.append(f"{qid}: review.reviewer must be human or llm")
-            if (rv.get("reviewer") == "llm") != bool(rv.get("model")): errors.append(f"{qid}: review.model must be set exactly for an llm review")
-            prev = rv.get("previous")
-            if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
-                errors.append(f"{qid}: review.previous must be an llm review under a human one")
+        errors += [f"{qid}: {p}" for p in review_problems(q)]
+        if "translatable" in q and q["translatable"] is not False: errors.append(f"{qid}: translatable must be false when set (absent = translatable, D-81)")
         if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in any bundle's categories (D-19, D-43)")
         elif q.get("bundle") == "base" and subcategories[q["subcategory"]]["bundle"] != "base":
             errors.append(f"{qid}: a base question needs a subcategory from base's categories (D-49)")
@@ -2870,10 +2867,143 @@ def validate_pool():
     if unlicensed:  # plans/26
         errors.append(f"{len(unlicensed)} approved pick(s) without a complete, allowlisted licence record: "
                         f"{', '.join(unlicensed[:5])}{' …' if len(unlicensed) > 5 else ''}")
-    exported = layout.EXPORT.read_text(encoding="utf-8") if layout.EXPORT.exists() else None
-    if exported != export_text(data):
-        errors.append(f"{layout.EXPORT.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
+    e, w = translation_problems(data, (lo, hi))
+    errors += e
+    warnings += w
+    for path, text in pool_export.exports(data).items():
+        if (path.read_text(encoding="utf-8") if path.exists() else None) != text:
+            errors.append(f"{path.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
+    for l in translations.LOCALES:
+        if layout.LOCALE_POOL(l).exists() and not translations.path(l).exists():
+            errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {translations.path(l).relative_to(ROOT)}; delete it")
     return errors, warnings
+
+
+def review_problems(q):
+    """A question's or translation's review vs. its status (D-33, plan 15)."""
+    rv, out = q.get("review"), []
+    if rv is None:
+        return out
+    if rv.get("decision") != q.get("status") or "feedback" not in rv or "reviewed_on" not in rv:
+        out.append("review does not match status")
+    if not set(rv.get("problems") or []) <= set(PROBLEMS):
+        out.append(f"review.problems must be from {', '.join(PROBLEMS)}")
+    if rv.get("reviewer") not in {"human", "llm"}: out.append("review.reviewer must be human or llm")
+    if (rv.get("reviewer") == "llm") != bool(rv.get("model")): out.append("review.model must be set exactly for an llm review")
+    prev = rv.get("previous")
+    if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
+        out.append("review.previous must be an llm review under a human one")
+    return out
+
+
+def first_ids(ids, n=5):
+    return f"{', '.join(ids[:n])}{' …' if len(ids) > n else ''}"
+
+
+def translation_problems(data, scale):
+    """(errors, warnings) for authoring/data/questions.<locale>.json and the names files (D-81)."""
+    errors, warnings = [], []
+    lo, hi = scale
+    src = {q.get("id"): q for q in data["questions"]}
+    for p in sorted(layout.translations("*").parent.glob("questions.*.json")):
+        if p.name.split(".")[1] not in translations.LOCALES:
+            errors.append(f"{p.relative_to(ROOT)}: locale not in {', '.join(translations.LOCALES)} (D-78)")
+    for l in translations.LOCALES:
+        p = translations.path(l)
+        if not p.exists():
+            continue
+        rel, doc = p.relative_to(ROOT), translations.load(l)
+        if doc.get("version") != 1 or doc.get("locale") != l:
+            errors.append(f"{rel}: header must be version 1, locale {l!r}")
+        ids, stale, orphaned = set(), [], []
+        for t in doc.get("questions", []):
+            tid = t.get("id", "?")
+            where = f"{rel}: {tid}"
+            for k in ["id", "source_hash", "status", "difficulty", *translations.TEXT_FIELDS]:
+                if k not in t: errors.append(f"{where}: missing {k}")
+            if tid in ids: errors.append(f"{where}: duplicate id")
+            ids.add(tid)
+            q = src.get(tid)
+            if q is None:
+                errors.append(f"{where}: no such id in the source pool")
+                continue
+            if t.get("status") not in {"draft", "approved", "rejected", "needs_work"}: errors.append(f"{where}: bad status")
+            errors += [f"{where}: {x}" for x in review_problems(t)]
+            if all(k in t for k in ["wrong_answers", "hints", "difficulty", "answer"]):
+                errors += [f"{where}: {x}" for x in check_question_shape(t)]
+            if t.get("status") == "rejected":
+                continue
+            if q.get("status") == "rejected" or not translations.translatable(q):
+                errors.append(f"{where}: source is rejected or translatable: false; reject the translation")
+                continue
+            if translations.is_stale(t, q): stale.append(tid)
+            if t.get("status") == "approved" and q.get("status") != "approved": orphaned.append(tid)
+        if stale:
+            warnings.append(f"{rel}: {len(stale)} stale translation(s) (source text changed): {first_ids(stale)}")
+        if orphaned:
+            warnings.append(f"{rel}: {len(orphaned)} approved translation(s) of a source not approved: {first_ids(orphaned)}")
+    return errors + names_problems(data), warnings + names_warnings()
+
+
+def names_problems(data):
+    """Errors in the names files: header, unknown keys; a name missing for what pool.<locale>.json uses."""
+    errors, cats = [], categories.load()
+    for l in translations.LOCALES:
+        for b in categories.bundle_ids():
+            p = layout.NAMES(l, b)
+            if not p.exists():
+                continue
+            rel, doc = p.relative_to(ROOT), load_json(p)
+            if doc.get("version") != 1 or doc.get("locale") != l:
+                errors.append(f"{rel}: header must be version 1, locale {l!r}")
+            known = {"categories": {c["slug"] for c in cats if c["bundle"] == b},
+                     "subcategories": set(categories.subcategories(b))}
+            if b == "base":
+                known["bundles"] = set(categories.bundle_ids())
+            elif "bundles" in doc:
+                errors.append(f"{rel}: bundle names go in {layout.NAMES(l).relative_to(ROOT)}")
+            for k, keys in known.items():
+                names = doc.get(k) or {}
+                bad = sorted(set(names) - keys)
+                if bad:
+                    errors.append(f"{rel}: {k} not in the categories/bundles files: {first_ids(bad)}")
+                empty = sorted(n for n, v in names.items() if not name_ok(v, k == "bundles"))
+                if empty:
+                    errors.append(f"{rel}: {k} with an empty or malformed name: {first_ids(empty)}")
+        if not translations.path(l).exists():
+            continue
+        names, broad = categories.load_names(l), categories.broad_of()
+        missing = set()
+        for e in translations.play_entries(l, data):
+            if e["subcategory"] not in names["subcategories"]: missing.add(f"subcategory {e['subcategory']}")
+            c = broad.get(e["subcategory"])
+            if c and c["slug"] not in names["categories"]: missing.add(f"category {c['slug']}")
+            if e["bundle"] not in names["bundles"]: missing.add(f"bundle {e['bundle']}")
+        if missing:
+            errors.append(f"{l}: pool.{l}.json uses names missing in names.{l}.json: {first_ids(sorted(missing))}")
+    return errors
+
+
+def name_ok(v, bundle):
+    """A non-empty string; a bundle's is {"name", "description"}."""
+    if bundle:
+        return isinstance(v, dict) and all(isinstance(v.get(k), str) and v[k].strip() for k in ["name", "description"])
+    return isinstance(v, str) and bool(v.strip())
+
+
+def names_warnings():
+    """Missing names per locale, once the locale has a translation or a names file."""
+    out, cats = [], categories.load()
+    for l in translations.LOCALES:
+        if not (translations.path(l).exists() or any(layout.NAMES(l, b).exists() for b in categories.bundle_ids())):
+            continue
+        names = categories.load_names(l)
+        n = (len(set(categories.bundle_ids()) - set(names["bundles"]))
+             + len({c["slug"] for c in cats} - set(names["categories"]))
+             + len(set(categories.subcategories()) - set(names["subcategories"])))
+        if n:
+            out.append(f"{l}: {n} bundle/category/subcategory name(s) missing in the names.{l}.json files")
+    return out
 
 
 def spot_check_problems(questions, scale):

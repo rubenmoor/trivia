@@ -15,6 +15,18 @@ CATEGORIES = DATA / "categories.json"  # D-19: base's categories
 BUNDLE_DATA = DATA / "bundles"  # D-43: another bundle's categories in bundles/<id>/categories.json
 AGE_GROUPS = DATA / "age-groups.json"  # D-38; the game reads it from AG-7 on
 BUNDLES = DATA / "bundles.json"  # D-39; the game reads it from BN-6 on
+
+
+def locale_pool(locale):
+    """pool.<locale>.json: a translated locale's approved questions (D-81)."""
+    return DATA / f"pool.{locale}.json"
+
+
+def names(locale, bundle="base"):
+    """Display names in a locale (D-81): names.<locale>.json, a bundle's in bundles/<id>/."""
+    return DATA / f"names.{locale}.json" if bundle == "base" else BUNDLE_DATA / bundle / f"names.{locale}.json"
+
+
 DIST = Path(os.environ.get("TRIVIA_DIST", APP / "client" / "dist"))
 
 STATE = Path(os.environ.get("TRIVIA_STATE", REPO / "state"))  # gitignored (D-25)

@@ -33,7 +33,7 @@ Option A is decided in D-81; the options below are kept as history.
 - `/review?batch=…&locale=en` shows the source and the translation side by side, with the same approve / needs work / reject decisions (RV-*).
 
 ## Tasks
-- [ ] QT-1 Storage layout (A or B) and schema; `validate` covers translations and `stale`.
+- [x] QT-1 Storage layout (A or B) and schema; `validate` covers translations and `stale`. Done 2026-10-12 (task 415): `authoring/tools/translations.py`, `qgen export`/`validate` per locale (D-81).
   - Schema: D-81 (layout A); `validate`/`export`: pm plan 63.
 - [ ] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `authoring/tools/prompts/`.
 - [ ] QT-3 `rate` and `factcheck` per locale.

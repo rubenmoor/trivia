@@ -29,3 +29,10 @@ CANDIDATES = WORK / "media"  # Commons candidates per question
 EXPORT = app_paths.POOL  # what the game reads: app/data/pool.json
 AGE_GROUPS = app_paths.AGE_GROUPS  # age groups and the focus group (D-38)
 BUNDLES = app_paths.BUNDLES  # question bundles (D-39)
+LOCALE_POOL = app_paths.locale_pool  # app/data/pool.<locale>.json (D-81)
+NAMES = app_paths.names  # app/data/[bundles/<id>/]names.<locale>.json (D-81)
+
+
+def translations(locale):
+    """authoring/data/questions.<locale>.json: one locale's translations of the source (D-81)."""
+    return AUTHORING / "data" / f"questions.{locale}.json"

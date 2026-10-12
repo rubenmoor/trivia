@@ -5,6 +5,7 @@ Subcategory names and slugs are unique across bundles, so a subcategory names it
 """
 import json
 
+import paths
 from paths import BUNDLES, BUNDLE_DATA, CATEGORIES
 
 
@@ -42,3 +43,16 @@ def bundle_of(sub):
     """The bundle whose list has this subcategory, or None."""
     c = broad_of().get(sub)
     return c["bundle"] if c else None
+
+
+def load_names(locale):
+    """{"bundles", "categories", "subcategories"}: display names in a locale (D-81), base's file
+    merged with every bundle's; keys are bundle ids, category slugs and Spanish subcategory names."""
+    out = {"bundles": {}, "categories": {}, "subcategories": {}}
+    for b in bundle_ids():
+        p = paths.names(locale, b)
+        if p.exists():
+            doc = json.loads(p.read_text(encoding="utf-8"))
+            for k in out:
+                out[k].update(doc.get(k) or {})
+    return out
