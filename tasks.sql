@@ -332,7 +332,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Released; content updates go out as patches.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'open', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam.
 
 ## Outcome
 - Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
