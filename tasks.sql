@@ -4731,8 +4731,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:21:25Z', '2026-10-12T03:27:27Z', 58);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (290, 50, 'create tasks for plan 50', 'split', 'done', 1000, '2026-10-11, tasks 297-299 in plan 50 (tasks.sql)', 'Split plan 50 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:23:36Z', '2026-10-12T03:27:59Z', 59);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (291, 51, 'create tasks for plan 51', 'split', 'open', 1000, NULL, 'Split plan 51 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:26:41Z', NULL, 60);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (291, 51, 'create tasks for plan 51', 'split', 'done', 1000, '2026-10-11, tasks 300-303 for plan 51 (tasks.sql)', 'Split plan 51 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:26:41Z', '2026-10-12T03:28:50Z', 60);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (292, 49, 'save.py store and /api/save (PORT-4)', 'work', 'open', NULL, NULL, 'Server side of the JSON save, plan 49 "Decisions taken here" and task 1. Python only; runs before plan 20 lands.
 
 - `app/server/save.py` (new): `FILE` (`state/game.json` via `paths`), `load()` (text or None), `write(doc)`.
@@ -4816,6 +4816,62 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Add a close-out task in plan 50, pending on that decision (`pm task-pending-decision`): `plans/12-client-engine.md` PORT-7 `[x]` with date; `directory.md` (`lib/engine.ts`, `lib/data.ts`, `/data/`); AGENTS.md "Pool" and README.md (reload after `qgen export`; `trivia` writes `state/game.json`). On "problems": one fix task per problem in plan 50, then raise the decision again.
 
 Done when: the decision and the pending close-out task exist; browser findings (or "no browser tool") in the task note.', '2026-10-12T03:27:57Z', NULL, 290);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (300, 51, 'Supply via Node: supply.ts, engine.py, qgen report and start page', 'work', 'open', NULL, NULL, 'Part 1 of plan 51 (PORT-8, D-60). Authoring gets the supply from `app/client/src/engine/selection.ts` through Node instead of `app/server/selection.py`. Follow plan 51, "Supply check via Node", exactly.
+
+Needs: task 74 (`selection.ts`, plan 19) and task 295 (authoring reads `game.json` via `save_file.py`, plan 49) done. If either is still open, stop and say so.
+
+- New `authoring/tools/supply.ts` (`node authoring/tools/supply.ts`): stdin `{"questions": [...], "burned": [ids]}` → stdout `{"per_level", "ranges": {"1": [lo, hi], …}, "supply": [{level, range, candidates, missing}, …]}` = `available` + `supply` + `LEVEL_RANGES`. Imports `../../app/client/src/engine/selection.ts`; only `node:process`. If task 124 (group windows, bundle filter) has landed, pass its options through.
+- New `authoring/tools/engine.py`: `supply(questions, burned)` via `subprocess.run(["node", …], input=…, check=True)`; Node missing or non-zero exit → `SystemExit("qgen report needs node: run inside the dev shell")` (or similar readable text).
+- `qgen report`: burned ids from `save_file`, supply and the «Cambiazo» table (`LEVELS`/`LEVEL_RANGES`/`in_range`) from `engine.supply` / `ranges`. `authoring/server/overview.py` (`supply_for`, `PER_LEVEL`) on it too. Don''t delete `selection.py` yet (task 3 of this plan).
+- `flake.nix`: `pkgs.nodejs_22` in the runtime inputs of `qgen` and `trivia-authoring`.
+
+Checks (throw-away script, deleted afterwards):
+- `engine.supply` vs `selection.supply(selection.available(…))` on `app/data/pool.json` and the source pool''s approved questions, burned sets: none, 20 % and 60 % random, one that leaves a level short → identical `supply` lists; `ranges` == `LEVEL_RANGES`.
+- `qgen report` and `qgen report --player <name>` (temp `TRIVIA_STATE` with a hand-written `game.json`, asserted before running) print the same supply as before the change.
+- `trivia-authoring` start page shows supply per player; time one load and note it in the done note. If per-player Node calls are slow, batch (`{"players": {name: burned}}`).
+- Without `node` on `PATH`: the readable error.
+- `state/` is never written.
+
+Done when: the checks pass, `qgen validate` passes, no new dependencies.', '2026-10-12T03:28:47Z', NULL, 291);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (301, 51, 'Cache-only /media, download code to authoring', 'work', 'open', NULL, NULL, 'Part 2 of plan 51 (PORT-8). The game server serves media from the cache only; download code and the Commons token leave `app/`. Follow plan 51, "`/media` stays as a cache lookup" and "Download code leaves `app/`".
+
+- `app/server/media_cache.py` keeps `cache_path`, `picked`, `pool_urls`. `http_get`, `cached`, `RateLimited`, `USER_AGENT`, `API_URL`, `TOKEN`, `WAIT_ON_RATE_LIMIT` move to new `authoring/tools/download.py`.
+- Imports updated: `authoring/tools/providers/*.py`, `authoring/tools/media.py`, `qgen.py`, `authoring/server/overview.py`, `authoring/server/media_stats.py`, `authoring/server/main.py`.
+- `app/server/http_base.py`: `send_media` cache-only: `?url=` must be a `pool.json` URL (else 404), file from `TRIVIA_MEDIA` or `404 {"error": "media_missing"}`; no network access. `authoring/server/main.py` overrides `send_media` to download on a miss (today''s review behaviour).
+- `app/server/main.py` prints at start `media: N of M pool files missing from the cache; run trivia-media sync --status approved`; nothing when complete.
+
+Checks (throw-away, `urllib.request.urlopen` monkeypatched to raise; temp `TRIVIA_STATE`/`TRIVIA_MEDIA` asserted before any server starts):
+- Game server: 200 for a cached pool file, `404 media_missing` for an uncached pool URL, 404 for a non-pool URL, network never called; the startup line counts correctly, 0 missing prints nothing.
+- Authoring server downloads on a miss (monkeypatched `http_get` returning bytes).
+- `trivia-media sync --status approved` into a temp `TRIVIA_MEDIA` downloads one file (or `--help` plus a dry path if a real download is unwanted).
+- `qgen validate`; `grep -rn "TOKEN\|http_get\|urlopen" app/server` empty.', '2026-10-12T03:28:47Z', NULL, 291);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (302, 51, 'Delete the Python referee', 'work', 'open', NULL, NULL, 'Part 3 of plan 51 (PORT-8). Remove game logic from Python. Follow plan 51, "Decisions taken here".
+
+Needs: tasks 1 and 2 of this plan done, and plan 50 closed with the decision "Family test night on the TS engine" (raised by task 299) answered "test night played fine". First step: `pm decision list` / `pm show 299`. If that decision is pending, run `pm task-pending-decision <this task> <decision id>` and stop. If it doesn''t exist yet or was answered "problems", stop without changes and say so. Until "fine", the Python referee is the rollback.
+
+- Delete `app/server/game.py`, `app/server/selection.py`, `app/server/flags.py`, `authoring/tools/record_fixtures.py`.
+- `app/server/main.py`: routes `/api/game*`, `/api/players*`, `/api/flags`, `/api/categories` out; final set: static client, `/data/…`, `/media?url=…`, `GET/PUT /api/save`; else 404 `not_found`.
+- Move `app/server/categories.py` → `authoring/tools/categories.py` (`git mv`); imports stay `import categories`, fix comments.
+- `app/server/save.py`: copy `game.init`''s schema + the two `ALTER`/rename steps into `_upgrade(con)`, used by `migrate()` on the temp copy only.
+- `authoring/tools/save_file.py`: drop the SQLite/`flags.json` fallback (no `game.json` → no players, burns, flags). `apply_flags` reads only `game.json` + `state/flags-applied.json`.
+- `app/client/src/engine/fixtures/README.md`: fixtures frozen, recorded from the Python referee up to commit `<parent sha>`; to re-record, check out that commit.
+
+Checks (temp `TRIVIA_STATE` asserted before any server starts; `state/` never written):
+- `grep -rn "import game\|import selection\|import flags\|from selection\|from game" app authoring` empty.
+- Server: `/`, `/data/pool.json`, `/api/save` GET/PUT, a cached `/media` work; `/api/game`, `/api/players`, `/api/flags`, `/api/categories` → 404.
+- Plan 49''s migration cases (a)–(c) pass with `_upgrade`; source DB byte-identical.
+- A short game in the browser or via `lib/api.ts` under `node` with the `fetch` shim (plan 50 task 298''s script).
+- `npm test`, `npm run check`, `npm run build`, `qgen validate`, `qgen report`, `trivia-authoring` start page, `/review` with a flag in `game.json` turning into a review once.', '2026-10-12T03:28:47Z', NULL, 291);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (303, 51, 'Decision entry, docs and package check (PORT-8)', 'work', 'open', NULL, NULL, 'Part 4 of plan 51 (PORT-8); closes milestone 2''s code work. Needs task 3 of this plan done; if open, stop and say so.
+
+- `plans/decisions.md`: next D number: final route set; `/media` cache-only lookup and why (no SHA-1 in the client on plain-http LAN); download code and `categories.py` moved to authoring; `game.py`/`selection.py`/`flags.py` deleted; recorder deleted, fixtures frozen; `migrate()` kept with `_upgrade`; packaged build needs a synced `TRIVIA_MEDIA`. Related: D-17, D-25, D-35, D-47, D-59, D-60.
+- `app/server/main.py` docstring lists exactly the final routes; docstrings of `http_base.py`, `media_cache.py`, `authoring/tools/layout.py`; comments in `app/client/src/lib/types.ts` / `lib/api.ts` pointing at `game.py` or old routes.
+- Docs per plan 51 "Files": `plans/01-architecture.md` (server = static + `/api/save`, engine in the browser, JSON save; strike D-4''s SQLite line with a pointer), `plans/12-client-engine.md` (PORT-8 `[x]` with date and files; every PORT task checked), `plans/19-repo-layout.md`, `plans/project.md` (milestone 2), `AGENTS.md` (state `state/game.json`, no SQLite; `qgen report` needs Node; media sync before play required), `directory.md`, `README.md` (`trivia-media sync --status approved` required before game night). Stale mentions in `plans/03-game-flow.md`, `05-gamemaster-controls.md`, `09-jokers.md`, `13-game-modes.md`, `23-media-providers.md`, `02-question-pool.md`, `11-steam.md` only where they describe current code; history stays.
+
+Checks:
+- `nix build .#app` (update `npmDepsHash` only if the lockfile changed); `result/bin/trivia` with temp `TRIVIA_STATE` and `TRIVIA_MEDIA=$PWD/media` serves `/`, `/data/pool.json`, `/api/save`, one cached `/media`.
+- `result/share/trivia/app/server/` has no `game.py`, `selection.py`, `flags.py`, `categories.py`, no download code.
+- `grep -rn "game\.py\|selection\.py\|/api/game\|/api/players\|/api/flags\|/api/categories" --exclude-dir=node_modules --exclude-dir=dist .` hits only history (decisions, done plan notes, fixtures README).', '2026-10-12T03:28:48Z', NULL, 291);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5040,6 +5096,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (133, 60, '2026-10-12T03:23:52Z', '2026-10-12T03:26:54Z', 'done', NULL, 0, 'e234f0ad29c4363dffa30c1c539e1097d5263898', 'claude-opus-5-5[1m]', '85ac0e1f-1ba5-4901-aa26-487bde27878e', 19, 34, 14792, 801762, 70387, 1.0194244000000001, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (134, 289, '2026-10-12T03:26:54Z', '2026-10-12T03:27:33Z', 'done', NULL, 0, 'f639c737071fcaebfee25318d0ab9fb6062cc65b', 'claude-opus-5-5[1m]', '1cd705dc-eb5d-4b4c-93a4-b889b6fff52b', 5, 10, 4198, 158577, 30199, 0.35730739999999994, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (135, 290, '2026-10-12T03:27:33Z', '2026-10-12T03:28:04Z', 'done', NULL, 0, 'ffc19944d7a0291d22a4d83c019e66f844b8c216', 'claude-opus-5-5[1m]', 'e2e4a192-5699-44b8-a6ef-1be690f1a1b1', 4, 8, 3453, 118886, 30360, 0.33574920000000008, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (136, 291, '2026-10-12T03:28:04Z', '2026-10-12T03:28:56Z', 'done', NULL, 0, 'cb68aacdffe0275a5307f82ae322ec4e37d9606b', 'claude-opus-5-5[1m]', '4ad58b57-544d-4d22-9fd6-f6a3ca85c1eb', 7, 14, 5795, 258611, 37394, 0.4668302, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
