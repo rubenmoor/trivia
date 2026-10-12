@@ -4,7 +4,7 @@ import datetime, json, re
 from collections import Counter
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
-from layout import REPORTS, SOURCE_POOL as POOL, WORK
+from layout import HEALTH_ACKS, REPORTS, SOURCE_POOL as POOL, WORK
 import concepts  # authoring/tools/concepts.py
 import targets  # authoring/tools/targets.py
 import qgen  # authoring/tools/qgen.py: work files, calibration, problems
@@ -114,10 +114,56 @@ def batch_health(run, pool=None):
     return h
 
 
-def failures(run, pool=None):
+EACH_PROBLEM = "needs_work: each problem"
+THRESHOLDABLE = {"drop rate", "needs_work rate", "overlap rate", "merged/slots 11–15", "max final−target gap 11–15",
+                 "media share", "mean fun", "$ per approved", EACH_PROBLEM,
+                 *(f"needs_work: {p}" for p in qgen.PROBLEMS), *(f"top {a}" for a in concepts.AXES)}
+
+
+def thresholds():
+    """{metric: {"min"/"max": x}} from targets.json, «each problem» spread out; None before they're stored."""
+    t = targets.load_batch_health()
+    if t is None: return None
+    each = t.get(EACH_PROBLEM)
+    spread = {f"needs_work: {p}": each for p in qgen.PROBLEMS} if each else {}
+    return spread | {k: v for k, v in t.items() if k != EACH_PROBLEM}
+
+
+def passes(value, bounds):
+    """True/False; None when the metric is n/a (not a fail)."""
+    if value is None: return None
+    return bounds.get("min", value) <= value <= bounds.get("max", value)
+
+
+def failures(run, pool=None, h=None):
     """Names of the thresholds the run fails ([] = pass), None while targets.json has no thresholds.
-    Plan 12's exit check reads this; plan 15's thresholds task (44) fills it in."""
-    return None
+    An ack doesn't change this (plan 12's exit check)."""
+    t = thresholds()
+    if t is None: return None
+    h = h or batch_health(run, pool)
+    return [k for k, b in t.items() if passes(h.get(k), b) is False]
+
+
+def acks():
+    return load(HEALTH_ACKS, {})
+
+
+def last_done_run():
+    """The newest batch run that `qgen batch` finished (any bundle), or None."""
+    done = [r for r in batch_runs() if (load(WORK / r / "run.json", {}) or {}).get("done")]
+    return done[-1] if done else None
+
+
+def stop_reason():
+    """Why the next `qgen batch` must stop (D-55), or None: the last done batch fails a threshold
+    and the gamemaster hasn't acked it."""
+    run = last_done_run()
+    if run is None or run in acks(): return None
+    bad = failures(run)
+    if not bad: return None
+    return (f"{run} fails the batch health thresholds: {', '.join(bad)}.\n"
+            f"See `qgen report --batches` or authoring/reports/batches.md. The gamemaster looks at it and "
+            f"clears the stop with: qgen health ack {run} \"<note>\"")
 
 
 PCT = {"drop rate", "needs_work rate", "overlap rate", "merged/slots 11–15", "media share",
@@ -133,15 +179,32 @@ def fmt(key, v):
     return str(v)
 
 
+def bound_text(key, b):
+    if b is None: return ""
+    if "min" in b and "max" in b: return f"{fmt(key, b['min'])}–{fmt(key, b['max'])}"
+    return f"≥ {fmt(key, b['min'])}" if "min" in b else f"≤ {fmt(key, b['max'])}"
+
+
 def table(runs, pool=None):
-    """Markdown table: one row per metric, one column per run."""
+    """Markdown table: one row per metric, one column per run; ✓/✗ against the thresholds."""
     pool = pool if pool is not None else load(POOL)["questions"]
     cols = [batch_health(r, pool) for r in runs]
-    lines = ["| metric | " + " | ".join(runs) + " |", "|---|" + "---:|" * len(runs)]
+    t, acked = thresholds() or {}, acks()
+    mark = {True: " ✓", False: " ✗", None: ""}
+    lines = ["| metric | threshold | " + " | ".join(runs) + " |", "|---|---|" + "---:|" * len(runs)]
     for key in cols[0]:
-        lines.append(f"| {key} | "
-                     + " | ".join(fmt(key, c[key]) for c in cols) + " |")
+        b = t.get(key)
+        lines.append(f"| {key} | {bound_text(key, b)} | "
+                     + " | ".join(fmt(key, c[key]) + (mark[passes(c[key], b)] if b else "") for c in cols) + " |")
+    if t:
+        verdict = lambda r, c: ("✓ pass" if not failures(r, h=c) else "✗ fail, acked" if r in acked else "✗ fail")
+        lines.append("| **health** | | " + " | ".join(verdict(r, c) for r, c in zip(runs, cols)) + " |")
     return lines
+
+
+def ack_lines():
+    a = acks()
+    return [f"- {r} ({x['date']}): {x['note']}" for r, x in sorted(a.items(), key=lambda kv: int(kv[0][6:]) if kv[0][6:].isdigit() else 0)] or ["None."]
 
 
 def deficit_line(bundle="base", pool=None):
@@ -156,7 +219,8 @@ def health_section(run, pool=None):
     num = lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0
     runs = [r for r in batch_runs() if num(r) < num(run)][-2:] + [run]
     return ["## Health", "",
-            "Batch health (plan 15): this batch and the two before it; thresholds come with plan 15's thresholds task. "
+            "Batch health (plan 15): this batch and the two before it, ✓/✗ against the thresholds in "
+            "`authoring/data/targets.json`; a ✗ stops the next `qgen batch` until `qgen health ack` (D-55). "
             "Needs-work counts are `record`'s decisions; `problems guessed` = classified from feedback.", "",
             *table(runs, pool), "", deficit_line(pool=pool), ""]
 
@@ -167,7 +231,10 @@ def write_batches_md(pool=None):
     lines = ["# Batches", "",
              "Batch health of every `qgen batch` run from batch-4 on (plan 15), regenerated by `qgen batch-report`. "
              "Generated file: don't edit by hand. Needs-work counts are `record`'s decisions, before rework and "
-             "the gamemaster's review.", "", *table(runs, pool), "", deficit_line(pool=pool), ""]
+             "the gamemaster's review. ✓/✗ against the thresholds in `authoring/data/targets.json` (D-55).", "",
+             *table(runs, pool), "", deficit_line(pool=pool), "", "## Acknowledgements", "",
+             "Failing batches the gamemaster has looked at (`qgen health ack`): the stop is cleared, the batch still fails.", "",
+             *ack_lines(), ""]
     out = REPORTS / "batches.md"
     out.write_text("\n".join(lines), encoding="utf-8")
     return out

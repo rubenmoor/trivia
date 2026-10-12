@@ -2143,6 +2143,11 @@ def cmd_batch(args):
             sys.exit(f"{run} is unfinished and writes for bundle {open_bundle!r}, not {args.bundle!r}. "
                      f"Finish it first: qgen batch" + (f" --bundle {open_bundle}" if open_bundle != "base" else ""))
     else:
+        import health  # authoring/tools/health.py (imports qgen)
+        stop = health.stop_reason()  # D-55: before concepts, no LLM calls
+        if stop:
+            print(stop, file=sys.stderr)
+            sys.exit(2)
         check_bundle(args.bundle)
         if args.subcategories:
             subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
@@ -2197,6 +2202,18 @@ def cmd_batch(args):
           f"  git add authoring/data/questions.json app/data/pool.json {concept_dir}/ authoring/reports/{run}.md\n"
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
           f"{n_ok} approved (qgen batch)\"")
+
+
+def cmd_health_ack(args):
+    """The gamemaster has looked at a failing batch: clears the stop of `qgen batch` (D-55)."""
+    import health  # authoring/tools/health.py (imports qgen)
+    if args.batch not in health.batch_runs():
+        sys.exit(f"not a merged batch: {args.batch}")
+    a = health.acks()
+    a[args.batch] = {"date": datetime.date.today().isoformat(), "note": args.note}
+    save_json(layout.HEALTH_ACKS, a)
+    print(f"acked {args.batch}; `qgen batch` may start the next batch")
+    print(f"  report: {health.write_batches_md().relative_to(ROOT)}")
 
 
 def cmd_rework(args):
@@ -2342,6 +2359,8 @@ def validate_pool():
     bundle_ids = {b["id"] for b in load_bundles()}
     errors += taxonomy_problems()
     errors += targets.problems((lo, hi), bundle_ids)
+    import health  # authoring/tools/health.py (imports qgen)
+    errors += targets.health_problems(health.THRESHOLDABLE)
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -2528,6 +2547,11 @@ def main():
     add("audit", cmd_audit, "opus", run=False).add_argument("--batch", help="default: the newest merged batch")
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
+    hp = sub.add_parser("health", help="batch health (plan 15)").add_subparsers(dest="action", required=True)
+    ha = hp.add_parser("ack", help="the gamemaster has looked at a failing batch: clears the stop of `qgen batch` (D-55)")
+    ha.set_defaults(fn=cmd_health_ack)
+    ha.add_argument("batch")
+    ha.add_argument("note")
     rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
     rw.set_defaults(fn=cmd_rework)
     rw.add_argument("--batch", help="only this batch's needs_work questions")

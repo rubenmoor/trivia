@@ -83,6 +83,7 @@ Also on the authoring server: stats at `/stats/categories`, `/stats/subcategorie
 claude                   # log in once (Claude Code is in the dev shell)
 qgen batch               # one new batch: concepts, drafts, rating, fact-check, revision, media
 qgen batch --bundle colombia   # the same for another bundle's subcategories
+qgen health ack <batch> "<note>"  # after looking at a batch that failed the health thresholds: lets `qgen batch` start the next one
 qgen rework              # every needs_work question with feedback once more: Claude fixes it, fact-checks, reviews (--batch <batch>)
 qgen tighten             # Claude reads the whole pool (approved too), shortens long-winded questions, fact-checks, reviews
 qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle; then fill app/data/bundles/<id>/categories.json

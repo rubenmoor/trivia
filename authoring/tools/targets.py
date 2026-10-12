@@ -25,6 +25,25 @@ def load_quality():
     return load_all().get("quality")
 
 
+def load_batch_health():
+    """{metric: {"min"/"max": x}} (plan 15, pm decision 13), or None before it's stored."""
+    t = load_all().get("batch_health")
+    return t and {k: v for k, v in t.items() if k != "about"}
+
+
+def health_problems(metrics):
+    """Errors in targets.json's "batch_health": known metric names, only numeric min/max."""
+    rel = "authoring/data/targets.json"
+    out = []
+    for k, v in (load_batch_health() or {}).items():
+        if k not in metrics:
+            out.append(f"{rel}: batch_health: unknown metric {k!r}")
+        elif not isinstance(v, dict) or not v or set(v) - {"min", "max"} \
+                or not all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in v.values()):
+            out.append(f"{rel}: batch_health: {k}: must be {{\"min\": n, \"max\": n}} (one or both)")
+    return out
+
+
 def deficits(pool_questions, bundle):
     """{level: max(0, target − approved)} for the bundle (D-54); None without targets or deficits."""
     t = load_targets(bundle)

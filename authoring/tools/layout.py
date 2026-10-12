@@ -16,6 +16,7 @@ import paths as app_paths  # noqa: E402  (app/server/paths.py)
 
 SOURCE_POOL = AUTHORING / "data" / "questions.json"  # every question, with reviews and pipeline fields
 TARGETS = AUTHORING / "data" / "targets.json"  # pool targets per bundle (D-53)
+HEALTH_ACKS = AUTHORING / "data" / "health-acks.json"  # the gamemaster's acks of failing batches (plan 15, D-55)
 SPOT_CHECKS = AUTHORING / "data" / "spot-checks.json"  # human spot checks per batch (plan 16)
 AXES_FILE = AUTHORING / "data" / "question-axes.json"  # question styles as axes (D-37)
 CONCEPTS = AUTHORING / "data" / "concepts"  # one concept list per subcategory of base (D-37)

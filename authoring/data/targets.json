@@ -19,5 +19,51 @@
       "14": 125,
       "15": 125
     }
+  },
+  "batch_health": {
+    "about": "Batch health thresholds (plan 15, pm decision 13, D-55): metric of health.py → min/max; a ✗ in the last done batch stops the next `qgen batch` until `qgen health ack`. «needs_work: each problem» applies to every problem without its own key.",
+    "drop rate": {
+      "max": 0.2
+    },
+    "needs_work rate": {
+      "max": 0.2
+    },
+    "needs_work: each problem": {
+      "max": 0.1
+    },
+    "needs_work: overlap": {
+      "max": 0.01
+    },
+    "overlap rate": {
+      "max": 0.03
+    },
+    "merged/slots 11–15": {
+      "min": 0.55
+    },
+    "max final−target gap 11–15": {
+      "max": 1.5
+    },
+    "top move": {
+      "max": 0.25
+    },
+    "top lens": {
+      "max": 0.25
+    },
+    "top answer_kind": {
+      "max": 0.4
+    },
+    "top clue": {
+      "max": 0.5
+    },
+    "media share": {
+      "min": 0.15,
+      "max": 0.5
+    },
+    "mean fun": {
+      "min": 3.4
+    },
+    "$ per approved": {
+      "max": 0.35
+    }
   }
 }

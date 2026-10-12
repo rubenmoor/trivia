@@ -24,9 +24,10 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/data/questions.json` | The source pool: every question with its reviews, ratings and history |
 | `authoring/data/concepts/`, `authoring/data/bundles/<id>/concepts/` | Concept lists per subcategory that drafts start from (D-37): `base`'s, then another bundle's (D-43) |
 | `authoring/data/question-axes.json` | Question styles as axes (D-37) |
-| `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53) |
+| `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53); batch health thresholds (`batch_health`, D-55) |
+| `authoring/data/health-acks.json` | The gamemaster's acks of batches failing the health thresholds (`qgen health ack`, D-55); shown in `authoring/reports/batches.md` |
 | `authoring/tools/qgen.py` | The question pipeline (`qgen batch`, `validate`, `export`, `report`, single steps) |
-| `authoring/tools/health.py` | Batch health metrics per run (`batch_health`), `qgen report --batches`, the Health section and `batches.md` (plan 15) |
+| `authoring/tools/health.py` | Batch health metrics per run (`batch_health`), ✓/✗ against the thresholds, the stop of `qgen batch`, `qgen report --batches`, the Health section and `batches.md` (plan 15) |
 | `authoring/tools/targets.py` | Loads the pool targets (`load_targets`), derived per-category shares, `validate`'s check (D-53) |
 | `authoring/tools/media.py` | Commons search, candidate storage, media sync (`trivia-media`) |
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
