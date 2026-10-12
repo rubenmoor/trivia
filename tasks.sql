@@ -11516,12 +11516,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `main.py` (≈371 lines).
@@ -11546,12 +11548,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `overview.py` (≈74): `supply` (Node call per start-page load, decision 5; cost; error when `node` is missing), `batch_rows` vs. `batches.py`/`health.py`, `build` pool passes; task 477/446 overlap.
@@ -11574,12 +11578,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `Review.svelte` (≈971 lines).
@@ -11602,12 +11608,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `review/MediaPanel.svelte` (≈251): candidate list and search modal (`m`), pick errors, `<img>`/`<audio>`/`<video>` loading of many candidates, credit/licence text vs. decision 8; task 310 parts → findings only while open.
@@ -11627,12 +11635,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `Stats.svelte` (≈146), `CategoryChart.svelte` (≈212), `DifficultyChart.svelte` (≈236), `SubcategoryTable.svelte` (≈100), `SparseList.svelte` (≈142), `MediaStats.svelte` (≈109), `breakdown.ts` (≈41), `chart.css` (≈62).
@@ -11655,12 +11665,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `home/Home.svelte` (≈412): fetches and error states, supply/batch tables vs. `overview.py`''s JSON, reuse of stats components (props passed vs. used), links to review queues, unused CSS; tasks 310/446/477 parts → findings only while open.
@@ -11680,12 +11692,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
 - Duplication with other files: log only, as "duplication candidate for part 10".
+- Status for fixes: `fixed (task N)` (pm commits the task).
+- Lint evidence: a `.ts`/`.svelte` finding that a lint rule or stricter `tsconfig` flag would catch carries the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`, `(lint: svelte/no-unused-svelte-ignore)`; part 10 counts them. Python findings: no tag.
 - Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
 
 ## Check
 - Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
 - UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
-- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; if part 10''s lint pass already exists, it too for `.ts`/`.svelte` changes.
 
 ## What
 - `App.svelte` (≈25), `main.ts` (≈5), `app.css` (≈27), `index.html` (≈12), `lib/Nav.svelte` (≈34), `lib/api.ts` (≈102), `lib/types.ts` (≈215), `package.json` (≈18), `vite.config.ts` (≈18), `svelte.config.js` (≈3), `tsconfig.json` (≈31), `.gitignore` (≈2), all under `authoring/ui/`.
@@ -12403,8 +12417,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:41:07Z', '2026-10-12T23:41:40Z', 601);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (613, 80, 'create tasks for plan 80', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 567–572 aligned with revised plan 80 (status fixed (task N), lint tags and lint pass for TS in task 572); no new decisions', 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:03Z', '2026-10-12T23:42:34Z', 602);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (614, 81, 'create tasks for plan 81', 'split', 'open', 1000, NULL, 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:53Z', NULL, 603);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (614, 81, 'create tasks for plan 81', 'split', 'done', 1000, '2026-10-12, tasks 573–579 bodies: fixed (task N) status, lint evidence tags, lint pass in pre-commit checks once part 10 adopts it (plan 81 revision by task 603); no new decisions', 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:53Z', '2026-10-12T23:43:19Z', 603);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13451,6 +13465,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (414, 602, '2026-10-12T23:41:44Z', '2026-10-12T23:42:11Z', 'done', NULL, 0, '350547c67ef4c0cc316e1136c6a4d861fa28aac1', 'claude-opus-5-5[1m]', '905e23c1-862c-4228-8e96-278d90d1b32c', 7, 14, 1871, 238358, 29344, 0.31989959999999995, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (415, 613, '2026-10-12T23:42:11Z', '2026-10-12T23:42:37Z', 'done', NULL, 0, '866367d456b508e5ce02decaeabcafdd9d657c64', 'claude-opus-5-5[1m]', 'e49072aa-f0b3-4b0b-a9f4-3c4da43ac9e2', 7, 14, 2012, 265864, 38161, 0.3987568, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (416, 603, '2026-10-12T23:42:38Z', '2026-10-12T23:42:58Z', 'done', NULL, 0, 'c19f3830183b1eeb55a63ef2077174dfa4e393ee', 'claude-opus-5-5[1m]', '94c45e2e-5d10-46f9-802c-c066cecbbcb9', 6, 12, 1855, 202310, 31038, 0.32591400000000004, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (417, 614, '2026-10-12T23:42:58Z', '2026-10-12T23:43:23Z', 'done', NULL, 0, '99ea59edeaea6ead5607ef75a527549dbbf7c109', 'claude-opus-5-5[1m]', '11a86192-53ff-4655-a272-4baf56840b32', 7, 14, 1964, 252611, 36459, 0.3815302, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
