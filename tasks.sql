@@ -7425,7 +7425,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:44:27Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (401, 59, 'revise plan 59', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 59, changed; it is quoted below. Bring plan 59 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (401, 59, 'revise plan 59', 'plan', 'done', 1000, '2026-10-12, no change: plan 59 already matches plan 7 part 11 (MD-10..MD-12, decisions first, defaults = today, waits on plan 36 settings.mode and engine, priority 480)', 'Plan 7, the plan above plan 59, changed; it is quoted below. Bring plan 59 in line with it
 (`pm plan edit 59 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -7537,7 +7537,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
-- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', NULL, 394);
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:45:28Z', 394);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (402, 7, 'write plan: Competitive timed: record the revised spec (OQ-37 follow-up, parts 5 and 8)', 'plan', 'done', 1000, '2026-10-12, plan 61 (tasks.sql)', 'Task 394 revised parts 5 and 8 of the masterplan: competitive (timed) is now the milestone''s version (12 rounds, round = level, N questions per round, claim → 6 s, three lives, sudden death in round 12, hearts / ticking clock / red frame). It replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game). Plans 38 and 41 are done and can''t be edited or take new tasks. So write a new plan in milestone 7 (`pm plan list` first; `pm plan add 7 … --priority 580`) that brings the recorded files in line with it.
 
 Stale today (check with `grep -n -i timed`):
@@ -8126,6 +8126,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (267, 399, '2026-10-12T17:43:44Z', '2026-10-12T17:43:57Z', 'done', NULL, 0, '29ad8a445a4d5108e9d442779fbfde9148adb702', 'claude-opus-5-5[1m]', '9d8e743a-9a4d-4b25-8a74-8d4999bcd9d7', 3, 6, 573, 79292, 23600, 0.21614239999999999, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (268, 400, '2026-10-12T17:43:57Z', '2026-10-12T17:44:34Z', 'done', NULL, 0, '8a91eac71fe2fc131c67b16e16e984b1adce6ccb', 'claude-opus-5-5[1m]', 'e2538bde-a06b-4b6e-bf2b-0be693e0f0a4', 11, 22, 3018, 380445, 29016, 0.368665, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (269, 404, '2026-10-12T17:44:34Z', '2026-10-12T17:45:19Z', 'done', NULL, 0, '11d3813080eef55f53292660dde3f138b1062fdc', 'claude-opus-5-5[1m]', '7998a5aa-b02e-4e47-954d-ff70a8f77a00', 9, 18, 4488, 338577, 37735, 0.4594274, 553875);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (270, 401, '2026-10-12T17:45:19Z', '2026-10-12T17:45:33Z', 'done', NULL, 0, 'd0a26498ba3d2da9e2c0661eaae8cf9f589c09df', 'claude-opus-5-5[1m]', '3d38191a-c9de-44af-82a8-8a6648887e60', 3, 6, 1047, 77386, 23191, 0.22196920000000003, 553875);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
