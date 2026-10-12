@@ -6,7 +6,7 @@ printable joker cards, with the question API. Never ships (D-35).
 
 It edits authoring/data/questions.json and re-exports app/data/pool.json after every change,
 so the game (port 8000) sees reviews at once. At startup it turns the questions flagged in the
-game (state/flags.json) into needs-work reviews (D-47) and prints the link to every question
+game (state/game.json's flags, before PORT-7 state/flags.json) into needs-work reviews (D-47) and prints the link to every question
 that isn't approved (/review?status=!approved, RV-22).
 
 API:
@@ -58,6 +58,7 @@ import media_cache  # noqa: E402  (app/server/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
+import save_file  # noqa: E402  (authoring/tools/save_file.py)
 from qgen import PROBLEMS, is_major  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 
@@ -191,8 +192,13 @@ def set_review(qid, review):
 
 def apply_flags():
     """Questions flagged in the game become human needs-work reviews (GM-5, D-47); returns their IDs.
-    Runs only at startup: a question that left the pool while on screen would break a running game."""
-    pending = flags.load()
+    Runs only at startup: a question that left the pool while on screen would break a running game.
+    With game.json the flags stay in the save; state/flags-applied.json records the applied ones (D-59)."""
+    from_save = save_file.has_save()
+    pending = save_file.flags()
+    if from_save:
+        ledger = save_file.applied()
+        pending = {k: v for k, v in pending.items() if ledger.get(k) != v["flagged_on"]}
     known = {q["id"]: q for q in load_pool()["questions"]}
     done = []
     for qid, flag in pending.items():
@@ -204,7 +210,10 @@ def apply_flags():
         old = (known[qid].get("review") or {}).get("feedback")
         set_review(qid, {"decision": "needs_work", "feedback": f"{feedback} Antes: {old}" if old else feedback})
         done.append(qid)
-    if pending:  # re-read: the game may have flagged another question meanwhile
+    if from_save:
+        if pending:
+            save_file.record_applied({k: v["flagged_on"] for k, v in pending.items()})
+    elif pending:  # re-read: the game may have flagged another question meanwhile
         flags.save({k: v for k, v in flags.load().items() if k not in pending})
     return done
 

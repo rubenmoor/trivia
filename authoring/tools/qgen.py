@@ -45,6 +45,7 @@ import categories  # app/server/categories.py: every bundle's categories (D-19, 
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
+import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
 
@@ -1659,7 +1660,7 @@ def cmd_report(args):
                        ("bundle", lambda q: q.get("bundle"))]:
         print(f"  by {title}: {count(pool, key)}")
     try:
-        burned = selection.burned_ids(args.player)
+        burned = save_file.burned_ids(args.player)
     except KeyError:
         sys.exit(f"unknown player: {args.player}")
     avail = selection.available(pool, burned)

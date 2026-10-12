@@ -1,27 +1,16 @@
 """GET /api/overview: everything the authoring start page shows except the statistics
 (plans/08-review-tool.md, "Start page", RV-12). Computed fresh from the pool on every call."""
-import sqlite3
 from collections import Counter
 
 import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server importable)
 import batches  # authoring/tools/batches.py
 import media_cache  # app/server/media_cache.py
+import save_file  # authoring/tools/save_file.py
 import selection  # app/server/selection.py
 
 
-def players():
-    """Player names from the game save, or [] when no game was ever played (D-28)."""
-    if not selection.STATE_DB.is_file():
-        return []
-    try:
-        with sqlite3.connect(f"file:{selection.STATE_DB}?mode=ro", uri=True) as con:
-            return [row[0] for row in con.execute("SELECT name FROM players ORDER BY name COLLATE NOCASE")]
-    except sqlite3.OperationalError:  # a save from before players existed
-        return []
-
-
 def supply_for(pool, player):
-    burned = selection.burned_ids(player)
+    burned = save_file.burned_ids(player)
     return {"player": player, "burned": len(burned),
             "levels": selection.supply(selection.available(pool, burned))}
 
@@ -71,7 +60,7 @@ def build(pool, bundles):
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
         "unfinished_runs": batches.unfinished_runs(),
         "batches": batch_rows(pool),
-        "supply": [supply_for(pool, None)] + [supply_for(pool, p) for p in players()],
+        "supply": [supply_for(pool, None)] + [supply_for(pool, p) for p in save_file.players()],
         "per_level": selection.PER_LEVEL,
         "next_batch_subcategories": batches.subcategories(pool),
         "counts": {"status": dict(Counter(q["status"] for q in pool)),
