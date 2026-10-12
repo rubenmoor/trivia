@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "locale": "en",
+  "categories": {
+    "colombia-pais": "Colombia",
+    "colombia-fiestas": "Colombian festivals, myths and traditions",
+    "colombia-comida": "Colombian food",
+    "colombia-musica-gente": "Colombian music and people",
+    "colombia-deportes": "Colombian sport",
+    "colombia-habla": "How Colombians talk"
+  },
+  "subcategories": {
+    "Regiones de Colombia": "Regions of Colombia",
+    "Ciudades de Colombia": "Colombian cities",
+    "Ríos de Colombia": "Rivers of Colombia",
+    "Parques naturales de Colombia": "Colombia's national parks",
+    "Símbolos patrios de Colombia": "Colombia's national symbols",
+    "Animales de Colombia": "Animals of Colombia",
+    "Fiestas colombianas": "Colombian festivals",
+    "Tradiciones colombianas": "Colombian traditions",
+    "Carnaval de Barranquilla": "Barranquilla Carnival",
+    "Feria de las Flores": "Medellín Flower Festival",
+    "Mitos colombianos": "Colombian myths",
+    "Leyendas colombianas": "Colombian legends",
+    "Platos típicos colombianos": "Colombian dishes",
+    "Dulces colombianos": "Colombian sweets",
+    "Postres colombianos": "Colombian desserts",
+    "Bebidas colombianas": "Colombian drinks",
+    "Frutas exóticas de Colombia": "Colombia's exotic fruits",
+    "Ritmos colombianos": "Colombian rhythms",
+    "Cantantes colombianos": "Colombian singers",
+    "Colombianos famosos": "Famous Colombians",
+    "Selección Colombia": "Colombia national team",
+    "Clubes de fútbol colombianos": "Colombian football clubs",
+    "Ciclismo colombiano": "Colombian cycling",
+    "Medallistas olímpicos colombianos": "Colombian Olympic medallists",
+    "Deportes tradicionales colombianos": "Traditional Colombian sports",
+    "Palabras colombianas": "Colombian words",
+    "Dichos colombianos": "Colombian sayings"
+  }
+}

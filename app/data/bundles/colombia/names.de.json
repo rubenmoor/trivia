@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "locale": "de",
+  "categories": {
+    "colombia-pais": "Kolumbien",
+    "colombia-fiestas": "Feste, Mythen und Bräuche Kolumbiens",
+    "colombia-comida": "Kolumbianisches Essen",
+    "colombia-musica-gente": "Musik und Menschen Kolumbiens",
+    "colombia-deportes": "Sport in Kolumbien",
+    "colombia-habla": "So spricht man in Kolumbien"
+  },
+  "subcategories": {
+    "Regiones de Colombia": "Regionen Kolumbiens",
+    "Ciudades de Colombia": "Städte Kolumbiens",
+    "Ríos de Colombia": "Flüsse Kolumbiens",
+    "Parques naturales de Colombia": "Nationalparks Kolumbiens",
+    "Símbolos patrios de Colombia": "Nationalsymbole Kolumbiens",
+    "Animales de Colombia": "Tiere Kolumbiens",
+    "Fiestas colombianas": "Kolumbianische Feste",
+    "Tradiciones colombianas": "Kolumbianische Bräuche",
+    "Carnaval de Barranquilla": "Karneval von Barranquilla",
+    "Feria de las Flores": "Blumenfest von Medellín",
+    "Mitos colombianos": "Kolumbianische Mythen",
+    "Leyendas colombianas": "Kolumbianische Sagen",
+    "Platos típicos colombianos": "Kolumbianische Gerichte",
+    "Dulces colombianos": "Kolumbianische Süßigkeiten",
+    "Postres colombianos": "Kolumbianische Desserts",
+    "Bebidas colombianas": "Kolumbianische Getränke",
+    "Frutas exóticas de Colombia": "Exotische Früchte Kolumbiens",
+    "Ritmos colombianos": "Kolumbianische Rhythmen",
+    "Cantantes colombianos": "Kolumbianische Sänger",
+    "Colombianos famosos": "Berühmte Kolumbianer",
+    "Selección Colombia": "Kolumbianische Nationalmannschaft",
+    "Clubes de fútbol colombianos": "Kolumbianische Fußballvereine",
+    "Ciclismo colombiano": "Radsport in Kolumbien",
+    "Medallistas olímpicos colombianos": "Kolumbianische Olympiamedaillen",
+    "Deportes tradicionales colombianos": "Traditionelle Sportarten Kolumbiens",
+    "Palabras colombianas": "Kolumbianische Wörter",
+    "Dichos colombianos": "Kolumbianische Redensarten"
+  }
+}
