@@ -1512,6 +1512,53 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Missing file (`/media` 404): fade in after at most 2 s, the «medio no disponible» notice shows.
 - Text questions and screens without media fade in as fast as today.
 - No new dependencies.', '2026-10-12T00:33:12Z', 134);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (32, 6, 'Recorded sound effects (UI-10)', 200, 'Replaces the effects that are still synthesized with CC0 (or D-45 allowlisted) recordings, mainly from Kenney.nl, and gives Soplo''s paper rustle and the token pop-back a sound. Owner plan file: `plans/04-ui-tv-display.md` ("Sound assets", UI-10); joker sounds: `plans/09-jokers.md` ("Sound assets", JK-9). Music loops are plan "Recorded music loops (UI-10)" (masterplan part 3), which runs after this one and reuses its pipeline and audition aid.
+
+## Scope
+- Effects still synthesized (`app/client/src/game/sound.svelte.ts`, `RECIPES`), by name pattern:
+  - whooshes: `whoosh`, «swoosh que sube», `swoosh|escoba` («escoba: fuuush»)
+  - `pop|carta` (card pick), `menú abierto` / `menú cerrado`, `desbloqueado`, `listo|hola`
+  - jokers: `comodín` shimmer, `comodín: preparado`, `comodín: abrir`, `silbato`, `trituradora`, `latido`, `rebobinar`, `mira: tic`, `disparo|corcho`, `rasgado` (envelope tear)
+  - fireworks: `cohete`, `cañón de confeti`, `bengalas`, `estrellas`
+- Still silent: Soplo''s note paper rustle, token pop-back (JK-9); add a name at the call site + recording (+ a tiny synth fallback).
+- Out of scope: the 13 existing recordings (keep), music (part 3), credits screen (none, gamemaster 2026-10-06).
+
+## Sources and licences
+- Kenney.nl CC0 first: Interface Sounds, UI Audio, Impact Sounds, Digital Audio, Casino Audio, Sci-fi Sounds (whoosh/rewind candidates).
+- Then Freesound CC0, OpenGameArt CC0; D-45 allowlist only (CC0 preferred; CC BY ok with credit; no NC/ND/unknown).
+- Download once by hand (a downloaded pack zip is not committed); keep only the converted files.
+- Not every effect must be replaced: if no recording beats the synth, keep the recipe and note it in UI-10.
+
+## Pipeline (as UI-10 rounds 1–2)
+- `nix shell nixpkgs#ffmpeg-headless` (not a project dependency).
+- Trim silence, short fade-out, loudness-normalize (`loudnorm`, same target as the existing files), mono unless stereo matters, AAC `.m4a`.
+- Files: `app/client/public/audio/<spanish-name>.m4a` (flat, like the existing ones), committed.
+- `app/client/public/audio/CREDITS.md`: one row per file, CC0 too (source URL, pack, author, licence).
+- Budget: new effects ≤ 400 kB in total, ≤ 40 kB per file (folder is ~1.9 MB today, 1.2 MB of it `victoria.m4a`).
+
+## Wiring
+- `SAMPLE_NAMES` + `SAMPLE_FOR` entries per file; `rate` callback where pitch should vary (pops, stars, cannon).
+- Recipes stay as the fallback (missing file, offline decode failure).
+- Several variants of one effect (e.g. 3 pops) only if repetition is audible; pick at random.
+
+## Audition aid
+- `/?efectos` on the Start screen, next to `?fuegos` in `Game.svelte`: a small list of every effect name, each with «grabado» and «sintetizado» buttons, so the gamemaster can compare on the TV.
+- Needs a way to force the synth path: an optional flag on `sfx()` (or an exported helper) in `sound.svelte.ts`.
+- Minimal, plain styling; dev/check only, not in the admin overlay (B-3 «Demo de efectos» stays backlog).
+- Part 3 adds the music loops to the same list.
+
+## Tasks (suggested split)
+1. Audition aid `/?efectos` with recorded/synth toggle (first, so every later pick can be compared).
+2. Whooshes, pops, menu blips, `desbloqueado`, `hola`: source, convert, wire, credit.
+3. Joker sounds (shimmer, preparado, abrir, silbato, trituradora, latido, rebobinar, mira, corcho, rasgado) + the two silent ones (Soplo rustle, token pop-back; JK-9 note in 09).
+4. Firework sounds (cohete, cañón, bengalas, estrellas).
+5. Gamemaster check on the TV via `/?efectos` and a real game: make it pending on a decision listing what was replaced and what stayed synthesized; apply the feedback; then update UI-10''s note in 04 and `plans/project.md` (UI-10 stays `[~]` until part 3 is done).
+
+## Done when
+- Every listed effect is either a recording or deliberately kept synthesized (noted in UI-10).
+- Soplo''s rustle and the token pop-back are audible.
+- `CREDITS.md` has a row per new file; audio folder within budget; `npm run check` and `npm run build` pass.
+- The gamemaster approves the effects on the TV.', '2026-10-12T00:34:28Z', 135);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2501,10 +2548,12 @@ Done when: AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `grep -rn "until AG-7
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (133, 6, 'create tasks for plan 6', 'split', 'dropped', 1000, 'tasks 134-136 added with the masterplan (task 6)', 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:32:21Z', '2026-10-12T00:32:24Z', 6);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (134, 6, 'write plan: Preload the next screen''s media (UI-7)', 'plan', 'done', 1000, '2026-10-11, plan 31 (tasks.sql)', 'Write the plan for part 1 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 1.', '2026-10-12T00:32:21Z', '2026-10-12T00:33:14Z', 6);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (135, 6, 'write plan: Recorded sound effects (UI-10)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 2.', '2026-10-12T00:32:21Z', NULL, 6);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (135, 6, 'write plan: Recorded sound effects (UI-10)', 'plan', 'done', 1000, '2026-10-11, plan 32 (tasks.sql)', 'Write the plan for part 2 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 2.', '2026-10-12T00:32:21Z', '2026-10-12T00:34:31Z', 6);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (136, 6, 'write plan: Recorded music loops (UI-10)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 6): `pm plan add 6 "…" --priority …` with the priority given there, and the plan''s scope, files and done-when as described in part 3.', '2026-10-12T00:32:21Z', NULL, 6);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (137, 31, 'create tasks for plan 31', 'split', 'open', 1000, NULL, 'Split plan 31 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:33:12Z', NULL, 134);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (138, 32, 'create tasks for plan 32', 'split', 'open', 1000, NULL, 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:34:28Z', NULL, 135);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2569,6 +2618,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (48, 122, '2026-10-12T00:30:59Z', '2026-10-12T00:31:32Z', 'done', NULL, 0, '49790417acaf56c24ff59d7d9cd4bccce2480485', 'claude-opus-5-5[1m]', '8717ddc2-17d5-488e-bfc0-ef0657b9e2c2', 6, 12, 3416, 174242, 25147, 0.3043924, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (49, 6, '2026-10-12T00:31:32Z', '2026-10-12T00:32:33Z', 'done', NULL, 0, '6262f5802b6c5b1fade0950c0366b229ce836a38', 'claude-opus-5-5[1m]', '5d235fd1-3ff2-4e75-9bb3-105a9731f335', 10, 18, 5732, 342880, 38435, 0.49076800000000004, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (50, 134, '2026-10-12T00:32:33Z', '2026-10-12T00:33:22Z', 'done', NULL, 0, '628ee8aaabbc958ab2a40c538f11137dd40e8052', 'claude-opus-5-5[1m]', '9919c7ba-6fc1-4735-8ae7-37bd209d7d2c', 8, 16, 4710, 268736, 34111, 0.42089920000000003, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (51, 135, '2026-10-12T00:33:22Z', '2026-10-12T00:34:38Z', 'done', NULL, 0, '1e4f9f203abdfae13d97b609611a03b9c191305d', 'claude-opus-5-5[1m]', '7a27c0ff-b031-444f-b3ca-6d79e93d587a', 10, 20, 4511, 360873, 37034, 0.45874660000000006, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
