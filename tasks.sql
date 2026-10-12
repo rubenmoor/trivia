@@ -391,7 +391,56 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Same rules; the family''s saves survive (migration tested on a copy).
 - No new dependencies beyond Svelte/Vite and Node built-ins.
 - Out of scope: desktop shell (`FileStore`, plan 18), controller, new game modes.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (3, 3, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (3, 3, 'masterplan', 1000, 'Milestone 3 moves every on-screen string of the game into a catalog, with no visible change in Spanish, and closes the bundle work with the gamemaster''s check of the `colombia` proposals. Design source: `plans/15a-ui-translation.md` (LUI-1..LUI-3) and `plans/22-bundles.md` (D-39).
+
+**The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 3 …`, priority per the project rules). The part plans then get split into implementation tasks.
+
+## State today (2026-10-11)
+- Spanish literals in 13 files of `app/client/src/game` (`copy.ts`, `Game.svelte`, `Question.svelte`, `Overlay.svelte`, `JokerTray.svelte`, `Player.svelte`, `CategoryPicker.svelte`, `DifficultyDial.svelte`, `Shredder.svelte`, `Fireworks.svelte`, `swap.ts`, `timing.ts`, `sound.svelte.ts`), incl. `aria-label`/`title` attributes.
+- `sound.svelte.ts` matches Spanish cue descriptions by regex (`/trombón|Ups/`, `/menú abierto/`, …): internal keys, not on screen, but they trip the milestone''s grep check.
+- The server sends Spanish error texts that the client shows in the corner as is: `app/server/game.py` (`GameError("ya no les quedan Soplos")`, `"no hay preguntas más fáciles de este tema"`, …), via `app/server/main.py` → `app/client/src/lib/api.ts` → `error` in `Game.svelte`.
+- `app/client/index.html`: `<title>Trivia</title>`.
+- Bundles: every question in `authoring/data/questions.json` has `bundle`, and `validate_pool()` in `authoring/tools/qgen.py` already rejects a missing or unknown one. 84 `colombia` proposals of BN-3 (`work/bundles/proposals.json`) are unchecked.
+
+## Parts
+
+### 1. `t()` helper and the `es` catalog (LUI-1, client, ~500)
+- `app/client/src/lib/i18n.ts`: `t(key, params)`, plurals via `Intl.PluralRules`, numbers via `Intl.NumberFormat`; no library.
+- `app/client/src/locales/es.ts`: typed object; its type is the `Catalog` every other language must satisfy, so a missing key fails `npm run check`.
+- Move every string: `copy.ts` variant arrays (milestones, consolation; `choose()`/seed logic unchanged), all component text, `aria-label`/`title`, joker names and their key hints (keys themselves stay as today; LUI-4 is out of scope), `index.html` title.
+- Sound cues: switch the regex-on-Spanish-text lookup to neutral cue ids, so `sound.svelte.ts` holds no Spanish.
+- Language choice: `es` by default; a dev-only override (e.g. `?lang=xx`) for parts 3 and 4. No language menu (OQ-31).
+- Check: a small script or documented `grep` for Spanish characters and quoted Spanish words in `app/client/src/game` (the milestone''s "done when"); screen-by-screen comparison before/after shows no visible change.
+- Split by component group so each task fits one run.
+
+### 2. Server errors as codes (backend, ~700; before or alongside part 1)
+- `GameError` carries a stable code plus params (e.g. `{"error": "joker_spent", "joker": "hint"}`); the client renders it with `t()`. Keep a readable English fallback text for logs and the authoring side.
+- Files: `app/server/game.py`, `app/server/main.py`, `app/client/src/lib/api.ts`, `Game.svelte`.
+- Without this, on-screen error lines stay Spanish outside the catalog.
+
+### 3. Pseudo-locale `xx` (LUI-2, client, after part 1)
+- Generated from `es` at runtime or build: pads each string by ~40 % and adds accents, keeps `{params}` intact.
+- Missing-string test: every key resolved through `t()` shows visibly (e.g. `⟦key⟧`) when absent; type check covers the static side.
+- Walk every screen on the TV layout with `?lang=xx`; log overflow found as backlog items (`plans/backlog.md`), don''t redesign here.
+
+### 4. Draft `en` catalog (LUI-3, client, after part 1)
+- `app/client/src/locales/en.ts`, satisfies `Catalog`; Claude drafts it.
+- Playful English joker names, not literal translations (15a); a short list of candidates per joker for the gamemaster, if unsure raise a pm decision.
+- Draft only: no native-speaker check, no launch (LUI-5, OQ-31).
+
+### 5. Gamemaster check of the `colombia` proposals (D-39, human)
+- The gamemaster reviews the 84 BN-3 proposals at `/review?bundle=colombia` (key `n` moves a question to the next bundle).
+- Agent side only: a pm decision/sign-off that asks for the check and waits; afterwards note the result in `plans/22-bundles.md` (BN-3) and `plans/project.md`, run `qgen validate` and `qgen export`.
+- "Every question has `bundle`" is already enforced by `validate`; confirm, don''t rebuild.
+
+## Across all parts
+- Update `plans/15a-ui-translation.md` (mark LUI-1..LUI-3), `plans/project.md` (M3 status), `directory.md` (new files `lib/i18n.ts`, `locales/`), and `plans/decisions.md` if the catalog shape or error codes become a decision.
+- `npm run check` and `npm run build` pass after every task.
+
+## Out of scope
+- Translating questions, categories, bundle names (content; `plans/15b-question-translation.md`).
+- Launch languages and the Spanish variety (OQ-31), joker keys per language (LUI-4), store texts (LUI-6).
+- `/comodines` printable cards and the review tool (`authoring/`): stay Spanish for now; log in backlog if needed.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (4, 4, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:55Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
@@ -851,9 +900,9 @@ plan for one part.', '2026-10-11T20:08:18Z', '2026-10-11T23:15:56Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (2, 2, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, tasks.sql (plan 2 body)', 'Write plan 2, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', '2026-10-11T23:55:45Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (3, 3, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 3, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (3, 3, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, tasks.sql (plan 3 body)', 'Write plan 3, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:54:55Z', '2026-10-12T00:06:58Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (4, 4, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 4, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', NULL, NULL);
@@ -1357,6 +1406,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check that engine modules import nothing outside `src/engine/` and `src/lib/types.ts`, and nothing from `node:` (tests and `engine/test/` excepted).
 
 Done when: plan 20''s "Done when" holds: root `npm test` passes with every step identical and every tape used up; `npm run check` and `npm run build` pass; no new dependencies; screens untouched.', '2026-10-12T00:05:37Z', NULL, 64);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (80, 3, 'create tasks for plan 3', 'split', 'open', 1000, NULL, 'Split plan 3 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:06:56Z', NULL, 3);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1390,6 +1441,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (20, 62, '2026-10-12T00:03:33Z', '2026-10-12T00:04:21Z', 'done', NULL, 0, '55c09c13403ad0a6b4aae9ade2e8a44acd838591', 'claude-opus-5-5[1m]', 'edf64974-0ddb-46ac-94bb-a99b0c8cd88a', 6, 12, 4886, 190559, 30344, 0.3786318, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (21, 63, '2026-10-12T00:04:21Z', '2026-10-12T00:04:57Z', 'done', NULL, 0, '096e9c39036dc19181f3a734459186398b0b6bb3', 'claude-opus-5-5[1m]', '5725e50f-0d66-41a4-9315-1d9058b3d7f5', 7, 14, 3613, 222573, 27513, 0.33693460000000003, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (22, 64, '2026-10-12T00:04:57Z', '2026-10-12T00:05:48Z', 'done', NULL, 0, '5f99490ece8b9fc658cd0904b7e0972c85bcc220', 'claude-opus-5-5[1m]', '5ac41bca-defc-4ca4-8f63-883913dd2cfb', 6, 12, 4108, 201341, 32981, 0.3863242, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (23, 3, '2026-10-12T00:05:48Z', '2026-10-12T00:07:07Z', 'done', NULL, 0, 'fcdcd77201876c5380225f69e11e9fa7bb432cb1', 'claude-opus-5-5[1m]', 'ef8ffbe1-f90a-4cea-88fa-c7b6ea5eef0a', 11, 22, 6650, 405513, 36517, 0.5063266, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
