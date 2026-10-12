@@ -54,3 +54,6 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 - [ ] MD-7 Mode and settings screen; the gamemaster mode reachable from it (or from a launch option).
 - [ ] MD-8 Competitive mode: choose the format (OQ-37), the per-game burning and supply rules, joker budgets per player.
 - [ ] MD-9 Couch co-op rules (team confirm), with IN-6.
+- [ ] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *pm plan for milestone 7 part 11.*
+- [ ] MD-11 Gamemaster mode: "configure game" screen before every game, full customization; defaults = today's game (Enter straight through).
+- [ ] MD-12 Gamemaster menu (`Esc`): today's overlay (undo, skip, burn for everyone, joker budget, MD-4) + manage jokers, replace the current question, further decided cheats.

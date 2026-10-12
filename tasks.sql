@@ -3122,6 +3122,37 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - The flag exists, defaults to opus, D-entry written.
 - One Fable rework run compared with rework-1, and the gamemaster has answered the keep/drop/extend decision.', '2026-10-12T04:11:20Z', 341);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (59, 7, 'Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)', 480, 'Part 11 of the masterplan (plan 7). Gamemaster mode is today''s game, kept: one person, the gamemaster, holds every control, configures each game on a "configure game" screen and cheats freely through the gamemaster menu (`Esc`). Today''s overlay (undo, skip, skip and burn for everyone, joker budget MD-4, sound, restart) becomes that menu and grows. Owner: `plans/13-game-modes.md` "Gamemaster mode", tasks MD-10..MD-12.
+
+## Depends on (tasks wait; no second implementation in `app/server/game.py`)
+- Plan 35 (OQ-30, MD-5): rewrites plan 13 "Modes" to the five modes. This plan only owns the gamemaster-mode details (fields, cheats); it doesn''t re-record the modes.
+- Plan 36 (MD-6, MD-7, 490): `settings.mode` (missing = `"gamemaster"`), the standard joker set constant, `settings.customized`, the mode screen and the refusals outside gamemaster mode. Reuse them; don''t add a second mode field.
+- Plan 29 (Choice screen: age group + bundles, 400): the configure screen is plan 29''s Choice screen in its gamemaster-mode form, extended with the decided fields. No second screen with the same choices.
+- Engine (plan 20, done) and screens on the engine (plan 50, PORT-7): `engine/game.ts`, `engine/api.ts`, `SaveData`, `lib/api.ts`.
+- Action layer (IN-2..IN-5, done, pm plans 44/45): `lib/input.svelte.ts`, `lib/focus.ts`, `lib/gamepad.ts`; new controls declare scopes and `data-nav`, no `keydown`.
+- Catalog (plan 21, done): every new string through `t()` (`configure.*`, `overlay.*`), `npm run check:literals` passes.
+- Each implementation task first checks `pm show` for its dependencies; if one hasn''t landed, it leaves the task open and stops.
+
+## Decisions taken here
+- **Engine settings extend `settings`**, each new field optional with today''s behaviour as default (`withDefaults`), so old saves and the fixture replay are unchanged.
+- **Cheats live in the engine** as actions in `engine/api.ts` (like `skip`, `undo`, `jokers`), refused (`409`, reason) when `settings.mode` isn''t `"gamemaster"`. Any cheat marks nothing for achievements: gamemaster mode has none (milestone 7).
+- **Defaults = today''s game**: the configure screen opens on the player''s last choice (plan 29''s preset) or today''s defaults; Enter straight through plays as today (unlimited jokers, `young_teens`, every bundle).
+
+## Tasks
+1. **Proposals and decisions: configure fields and cheat list**
+   - Write two proposals into plan 13 "Gamemaster mode", from the code (`Overlay.svelte`, `engine/game.ts`, `engine/state.ts`, plan 29''s Choice screen):
+     - Configure screen fields. Start from: age group, bundles (plan 29), joker set (unlimited / «Como las cartas» / standard set / custom per joker), media on/off; candidates to weigh: start level, extra fields that already exist as engine levers. Each with its default (= today) and its key.
+     - Cheat list for the menu. Today: continue, skip, skip and burn for everyone, undo, joker budget, sound, fullscreen, restart, quit (desktop). New: manage jokers (give back / take away during the game), replace the current question (new draw at the same level and category; burn or not), candidates: jump to a level, reveal the answer to the gamemaster, change age group or bundles mid-game.
+   - `pm decision add` twice: "Configure game screen: which fields?" and "Gamemaster menu: which cheats?"; option 1 = as proposed in plan 13 (recommended), option 2 = a shorter list named in the body; body = context + trade-offs, ultra-short.
+   - `pm task-pending-decision` tasks 2–4 on the decision(s) they need (2: both; 3: fields; 4: cheats).
+2. **Record the answers**: next free D-number in `plans/decisions.md` (D-73 is taken: local builds); plan 13 "Gamemaster mode": decided fields and cheats as a spec with the `settings` fields and engine actions; MD-10 `[x]` if the action layer already covers it (check: keyboard, mouse and pad each reach every control incl. the menu; else note what''s missing for task 4).
+3. **Configure game screen (MD-11)**: engine settings fields + `newGame` accepts them; plan 29''s Choice screen in gamemaster mode shows the decided fields (focus, keys, pad); `lib/types.ts`. Check: `npm test` (fixture replay unchanged), `npm run check`, `npm run build`, `check:literals`; throw-away script: each field changes the new game as decided; browser walk: Enter straight through on an existing save = today''s game. Then MD-11 `[x]`.
+4. **Gamemaster menu (MD-12)**: new engine actions per decided cheat (refused outside gamemaster mode); `Overlay.svelte` grows into the menu (today''s items kept, new ones added; keyboard, mouse and pad). Check: `npm test`, `npm run check`, `npm run build`, `check:literals`; throw-away script per cheat (state change, burn rows, undo after a cheat); browser walk with keyboard only, mouse only and pad. Then MD-12 `[x]`; docs: `plans/04-ui-tv-display.md` (configure screen, menu, keys), `directory.md` if files were added, `plans/project.md` if MD-10..MD-12 are listed.
+
+## Done when
+- A gamemaster-mode game starts from the configure screen.
+- The menu offers the decided cheats; each is refused outside gamemaster mode.
+- The family''s game with defaults plays as today (fixture replay passes, Enter straight through).', '2026-10-12T16:44:17Z', 370);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -6585,7 +6616,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', NULL, 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (370, 7, 'write plan: Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of the masterplan (plan 7): `pm plan add 7 "Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)" --priority 480`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (370, 7, 'write plan: Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)', 'plan', 'done', 1000, '2026-10-12, plan 59, plans/13-game-modes.md (MD-10..MD-12)', 'Write the plan for part 11 of the masterplan (plan 7): `pm plan add 7 "Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)" --priority 480`.
 
 - Owner: `plans/13-game-modes.md` "Gamemaster mode" (today''s game, kept). Add MD-10..MD-12 there (task list) if missing; D-73 is already taken (local builds), so the gamemaster-mode D-entry gets the next free D-number.
 - MD-10: the gamemaster holds every control (keyboard, mouse, gamepad, switchable at any time) via the IN-2/IN-3 action layer.
@@ -6595,7 +6626,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Dependencies: TS engine (plan 20, PORT-7 = plan 50), `settings.mode` from plan 36 (MD-6/MD-7). Engine settings extend `settings` with today''s behaviour as default; old saves unchanged. Strings through the catalog (plan 21).
 - Done when (plan''s): a gamemaster-mode game starts from the configure screen; the menu offers the decided cheats; the family''s game with defaults plays as today.
 
-Done when: the plan exists with priority 480 (after plan 36 at 490) and doesn''t duplicate plans 35/36.', '2026-10-12T16:43:07Z', NULL, 360);
+Done when: the plan exists with priority 480 (after plan 36 at 490) and doesn''t duplicate plans 35/36.', '2026-10-12T16:43:07Z', '2026-10-12T16:44:20Z', 360);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (371, 59, 'create tasks for plan 59', 'split', 'open', 1000, NULL, 'Split plan 59 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:44:17Z', NULL, 370);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7101,6 +7134,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (232, 329, '2026-10-12T16:04:03Z', '2026-10-12T16:39:06Z', 'done', NULL, 0, '3211e919a5a4b8b3569dcb97328f669b04aa8490', 'claude-opus-5-5[1m]', 'f6cebc12-2e25-481e-b167-45a81a0b1f2a', 42, 72, 20626, 2113031, 71394, 1.4065661999999999, 467251);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (233, 359, '2026-10-12T16:41:10Z', '2026-10-12T16:42:43Z', 'done', NULL, 0, '01fbc2924012902e711d74e029d5e2ec67e34c8f', 'claude-opus-5-5[1m]', '3e60f327-6aaa-47fc-a946-f33bd92f5a76', 10, 20, 9720, 408700, 48077, 0.6608360000000002, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (234, 360, '2026-10-12T16:42:43Z', '2026-10-12T16:43:14Z', 'done', NULL, 0, '30f569a546bd914dcd075429bc63bfd7e3a7c984', 'claude-opus-5-5[1m]', '71337f91-38ce-48b0-a1ee-4d10c22fd519', 8, 16, 2453, 277262, 31052, 0.3529924, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (235, 370, '2026-10-12T16:43:14Z', '2026-10-12T16:44:27Z', 'done', NULL, 0, '0682c6e5862e9cd4e8c2252ac02ddbdccce12519', 'claude-opus-5-5[1m]', 'fee4a50d-de29-454f-9419-f935706e27f3', 13, 26, 7033, 565934, 49110, 0.6468308, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
