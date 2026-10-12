@@ -7,8 +7,6 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Start: `pm status`, `pm show <task>`.
 - Before a choice: `pm decision list --answered --grep <word>`; answers are binding.
 - Question only the gamemaster can answer: `pm decision add`, don't guess. Own lasting choice: `pm decision record`.
-- New work found along the way: `pm task add`, don't widen the current task.
-- Background, cited by id: `plans/*.md` (plan files, task ids like `QP-3`), `plans/decisions.md` (`D-n`).
 
 ## Rules
 - Push directly to `main`. No feature branches or pull requests.
