@@ -921,7 +921,86 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13) and macOS (SW-14): later. Marketing.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (11, 11, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (11, 11, 'masterplan', 1000, 'Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): the Steam app from S5 (milestone 10) goes public. That means a "Coming soon" page that collects wishlists, a release checklist that every public build passes, the launch itself, and a way to ship content updates as patches and take in question reports without telemetry. The milestone is done when the game is released and the first content update has gone out as a patch.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 11 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Milestone 10 (S5), masterplan 10 (plan 10): App ID and names (part 1), app config + branches (part 2), media bundle (part 6), builds + upload command (part 7), store page + AI disclosure (part 8), survey + price (part 9), Deck test (part 10), beta test (part 11). Their plans may not exist yet: read `pm plan list` and plans 17/18, not this summary. S6 adds to the upload command; it doesn''t rebuild it.
+- Milestone 7 decisions: OQ-33 price + account holder (plan 39), OQ-35 licence + public pool (plan 40). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- Milestone 9 (S4): content target met for every launch language (plan 38, `qgen report --simulate`); the release waits for it.
+- «Reportar pregunta» (MD-6, plan 36): the local report list part 5 builds on.
+- Credits (PUB-5, plan 47) and licence data (plan 26): part 3''s "credits complete" check reads them.
+
+## Rules for every part
+- **Never phones home.** No update check, no crash reporter, no report upload, no analytics, no remote content. Steam delivers updates; reports reach the gamemaster only when a player sends them by hand.
+- **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements), Valve''s store and build reviews, uploads that need Steam Guard, the Deck, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
+- **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files.
+- The family game at home (`trivia`, browser on the TV) keeps working after every task; a patch never breaks a save.
+- Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); no new dependency without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **"Coming soon" page (ST-3)**
+   - Owner: `plans/11-steam.md` (ST-3); store texts in `plans/17-publishing.md` (PUB-8).
+   - Needs: masterplan 10 part 8 (store page approved by the gamemaster), part 1 (names cleared, App ID), part 9 (survey).
+   - Checklist for the gamemaster: store page complete, submit for Valve''s store review, fix what Valve returns, then "Coming soon" with a release date or "to be announced"; record the date it went live (pm decision "Coming soon page live? date?").
+   - Timing: Valve requires the page live at least two weeks before release (check the current rule in the Steamworks docs, note the source); aim for longer. The release date in part 4 counts from this date.
+   - Wishlists: only what Steam offers itself (wishlist button, follow); no mailing list, no own website, no marketing (out of scope).
+   - Suggested priority: 450 (first in time; mostly gamemaster steps).
+
+2. **Version numbers and patch-safe saves**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots"); save format in `plans/12-client-engine.md`.
+   - One version per release (semver; today `0.1.0` in `flake.nix`): one source of truth, stamped into the build, shown on the credits/settings screen and in the report text (part 5). Pool version (export hash or tag) next to it.
+   - Git tag per release (`v1.0.0`); the Steam build description = tag.
+   - Saves across patches: a patch may add, fix or drop questions. Burns and history keyed by question id must survive: unknown ids are ignored, not errors; a dropped question never comes back as "new"; save format version + migration if the shape changes. Check what the engine (milestone 2) already does; add only what''s missing, with a throw-away script that loads an old save against a new pool.
+   - Suggested priority: 600 (core; part 3 checks it).
+
+3. **Release checklist (ST-4)**
+   - Owner: `plans/11-steam.md` (ST-4); upload command from masterplan 10 part 7.
+   - Automated, in one command (extend the upload command, e.g. `trivia-steam release-check`, or a flag of it): clean tree on a tagged commit matching part 2''s version; `qgen validate` clean; `npm run check`; pool export fresh; credits complete (every shipped media file, font, sound, glyph and library has an entry in `CREDITS.md`/`credits.json`, nothing extra); media bundle within budget; both platform builds succeed. Fails loudly, prints what''s left for the human.
+   - Manual, as a checklist in `plans/11-steam.md` with the result via one pm decision per release candidate: offline test (network off, Steam off, full game to level 12 or a won checkpoint), Deck test (reuse masterplan 10 part 10''s rows), Windows test, Cloud sync, family sign-off (they play the release candidate from the `beta` branch).
+   - Same checklist for every later patch; a short "patch" variant (skip what a content-only patch can''t break) is allowed if the plan says why.
+   - Suggested priority: 700.
+
+4. **Launch**
+   - Owner: `plans/11-steam.md` (S6 row).
+   - Release candidate: tag, upload to `beta`, run part 3, family sign-off; then Valve''s build review (check current lead time in the docs) and the gamemaster sets the build live on `default` and presses Release on the date from part 1.
+   - Launch-day checklist: price and discounts from OQ-33 (masterplan 10 part 9) live; store languages match the build; Steam discussions open with the report thread from part 5 pinned; a launch announcement text drafted per launch language (gamemaster posts it).
+   - First week: watch the discussions and reviews by hand (gamemaster); bugs become tasks in `plans/backlog.md`; a hotfix goes through part 3.
+   - Result via pm decision "Released? date, build id".
+   - Suggested priority: 160 (after every other part except 7; above plan 48 at 140 is fine since milestone 10 gates it).
+
+5. **Question reports by hand (ST-5)**
+   - Owner: `plans/11-steam.md` (ST-5); in-game part in `plans/13-game-modes.md` (MD-6).
+   - Channel: a pinned Steam discussions thread (recommended) and/or an email address shown in the game; pm decision for the gamemaster (an email address in a public game is personal data of the gamemaster).
+   - In the game: the MD-6 report list page offers "copy" text per report and for all of them: question id, language, version + pool version (part 2), the player''s reason if any; plus where to send it (no link that opens a network request on its own; a `mailto:` or Steam overlay URL only on a click, and only under Steam if overlay). Strings via `t()` for every launch language.
+   - In authoring: one way to turn a pasted report into a `needs_work` flag with the report as review note (a `qgen` command or the review tool''s existing form; reuse `qgen rework` for the fix). No new storage beyond `authoring/data/questions.json`.
+   - Suggested priority: 550 (client + small authoring tool; before launch).
+
+6. **Content updates as patches (ST-5)**
+   - Owner: `plans/11-steam.md` (ST-5); `plans/16-content-target.md` for what a patch adds.
+   - Cadence: a pm decision for the gamemaster (e.g. monthly, or every N new approved questions per launch language, plus hotfixes for wrong answers any time); the plan records the answer.
+   - Patch = new version (part 2) + part 3 + upload: new approved questions (batches as usual, `qgen batch`), fixes from part 5, dropped questions; never changes rules or saves silently.
+   - Patch notes: a `qgen` command that diffs the pool between two tags (added/fixed/dropped per language and category) and drafts the note; the gamemaster posts it as a Steam event/announcement.
+   - Done when: the first content patch after launch went out through this path (pm decision with version and date).
+   - Suggested priority: 250.
+
+7. **S6 close-out**
+   - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done, status), `plans/17-publishing.md` and `plans/18-steam-integration.md` leftovers marked done or deferred with a note, `plans/project.md`, `plans/README.md`, `README.md` (how to cut a release, how to send a patch: commands for humans).
+   - Leftovers go to `plans/backlog.md` (competitive mode, couch co-op, more regions/languages, SW-13, SW-14).
+   - Done when: the milestone''s "Done when" holds.
+   - Suggested priority: 120 (last).
+
+## Order
+- Part 2 → part 3 → part 4 (release candidate) and part 6.
+- Part 1 at least two weeks (better months) before part 4''s release date; it can start as soon as masterplan 10 part 8 is approved.
+- Part 5 before part 4 (the report thread and the copy text ship in the launch build).
+- Part 6 after part 4; part 7 last.
+
+## Out of scope (from the milestone)
+- Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; any telemetry or online reporting.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (12, 1, 'Targets and progress', 700, 'Part 1 of the masterplan (plan 1). The `base` bundle grows to 5000 approved questions (D-52), with a target per difficulty that tapers at the top. This plan stores those targets where the authoring tools can read them, shows approved vs. target in `qgen report` and on `/stats/difficulty`, and turns the milestone''s "done when" into one command that says pass or fail.
 
 ## Targets file (D-53)
@@ -2510,9 +2589,9 @@ plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T01:09:35Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (10, 10, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, masterplan 10 (tasks.sql)', 'Write plan 10, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T01:12:46Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (11, 11, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 11, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (11, 11, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, masterplan 11 (tasks.sql)', 'Write plan 11, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T01:15:15Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (12, 1, 'create tasks for plan 1', 'split', 'done', 1000, '2026-10-11, tasks 13–18 (plans for parts 1–6), decisions 1–3 (difficulty targets, QC threshold, needs_work handling)', 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:15:47Z', '2026-10-11T23:16:53Z', 1);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (13, 1, 'write plan: targets and progress', 'plan', 'done', 1000, '2026-10-11, plan 12 (Targets and progress), plans/decisions.md (D-53)', 'Write the plan for part 1 of the masterplan (plan 1): `pm plan add 1 "Targets and progress" --priority 700`.
@@ -4343,6 +4422,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - Last part; write it after the other parts'' plans exist (or were dropped).
 - Content: beta checklist in plan 18 (install `beta` from Steam on a second machine, offline start, a full family game, Cloud to another machine), result via pm decision "S5 beta test passed?", failures → tasks in the owning parts; `plans/11-steam.md` S5 row done; SW-13, SW-14 marked deferred with a note; statuses in 17, 18, 15a, 14; `plans/project.md`, `plans/README.md`; note in plan 11 (masterplan of milestone 11) if S5 changed S6''s scope.', '2026-10-12T01:13:56Z', NULL, 252);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (264, 11, 'create tasks for plan 11', 'split', 'open', 1000, NULL, 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:15:13Z', NULL, 11);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4456,6 +4537,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (91, 239, '2026-10-12T01:09:45Z', '2026-10-12T01:11:08Z', 'done', NULL, 0, '821c4a922e93ba26c68b49ae89c16c1f301d350d', 'claude-opus-5-5[1m]', '93e6fa81-9603-473b-aeb3-b23f830af4ae', 9, 18, 8915, 372158, 44673, 0.6101876, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (92, 10, '2026-10-12T01:11:08Z', '2026-10-12T01:12:55Z', 'done', NULL, 0, '268cd0a317a19089a143e6b39ecf3b96921991f6', 'claude-opus-5-5[1m]', 'b997afa5-855d-45ce-af5c-78efa6623016', 11, 22, 10472, 578005, 76797, 0.93950500000000015, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (93, 252, '2026-10-12T01:12:55Z', '2026-10-12T01:14:05Z', 'done', NULL, 0, 'a81f4f061f84625c548d35857d777496fcd21c36', 'claude-opus-5-5[1m]', '37c1b395-402a-4d41-8086-62e23401ca49', 7, 14, 7648, 307258, 52507, 0.6345236, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (94, 11, '2026-10-12T01:14:05Z', '2026-10-12T01:15:22Z', 'done', NULL, 0, '3dbc8d6dd51952e9a18895c48e52e946655f1b5a', 'claude-opus-5-5[1m]', '39d45d05-1317-4b13-8ea2-41214bfe7f2f', 8, 16, 7126, 293706, 42144, 0.5384772, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
