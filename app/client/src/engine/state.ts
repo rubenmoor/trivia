@@ -1,5 +1,5 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
-// SaveData = game.sqlite's tables as JSON; GameState = games.state (app/server/game.py docstring).
+// SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state (app/server/game.py docstring).
 import type { Category, ErrorInfo, JokerBudget, JokerName, Supply } from "../lib/types.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { broadOf, byId } from "./pool.ts";
@@ -13,6 +13,13 @@ export interface SaveData {
   players: PlayerRow[];
   games: GameRow[];
   burned: BurnRow[];
+  /** Questions flagged for review (GM-5, D-47); keyed by question ID. */
+  flags: Record<string, FlagEntry>;
+}
+
+export interface FlagEntry {
+  flagged_on: string;
+  player: string | null;
 }
 
 export interface PlayerRow {
@@ -80,7 +87,7 @@ export interface GameState {
 export const UNLIMITED: JokerBudget = { hint: null, skip: null, easier: null, category: null, snipe: null };
 
 export function emptySave(): SaveData {
-  return { version: SAVE_VERSION, players: [], games: [], burned: [] };
+  return { version: SAVE_VERSION, players: [], games: [], burned: [], flags: {} };
 }
 
 /** Fill in the joker fields for games saved before JK-2 (game.with_defaults); mutates and returns. */
