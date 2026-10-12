@@ -643,3 +643,14 @@ Template:
   - **Steam store languages:** Spanish – Latin America, Spanish – Spain, English, German.
 - Consequences: LUI-5 = `en`, `de` catalogs plus an `es-ES` override of `es`; QT-6 targets `en`, `de`; the house style says neutral Latin American Spanish for `base`. D-75's target applies to es, en, de; whether a translated pool counts toward a language's 5000 is left to 15b/S4 (not decided here). Plan 24 (`en.ts`) becomes launch work.
 - Supersedes / related: D-6 (Colombian usage, now `colombia` only), D-39, D-49, D-50, D-75; plans 15, 15a, 15b, 15c, 24, 37, 38
+
+## D-79: The Steam release bar is D-56's quality bar
+- Date: 2026-10-12
+- Context: CT-5, plan 57; pm decision 15 (release bar: D-56's numbers or stricter).
+- Decision:
+  - **Release bar:** D-56's numbers only: spot check ≥ `quality.spot_check_size` (30), agreement ≥ `quality.min_agreement` (90 %); no new keys, no false-approve limits.
+  - Per batch and per back-audit slice (`backaudit-<k>`); release-ready derived from `authoring/data/spot-checks.json`, not stored.
+  - Below it: not release-ready; it only feeds QC step 4 (prompt changes). No full audit (`audit --all`), no second spot check.
+  - Back-audit of the pre-D-56 pool: `qgen audit --backlog`, slices, gamemaster asks (plan 57).
+- Consequences: `qgen report --qc`: row "release" (✓ or ✗ + failed limit), "Release bar" line in the QC section. QC.md step 3. S4 close-out reads the release row.
+- Supersedes / related: D-56, D-75; plans 16, 57

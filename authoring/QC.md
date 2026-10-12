@@ -17,6 +17,9 @@ The steps run in order; a pm worker stops at each decision and continues when it
    - Agreement (both accept or both don't) against `quality.min_agreement` (90 %), false approves, false needs_work, difficulty |Δ| ≥ 2, media changed, audit/human agreement.
    - Every disagreement with the human's feedback, grouped by problem kind.
    - `qgen report --qc` (no batch): the trend table, one column per batch.
+   - **Release bar (D-79):** the same numbers (pm decision 15), per batch and per back-audit slice (`backaudit-<k>`). Section line "Release bar": ✓ release-ready or ✗ with the failed limit; trend row "release".
+     - ✗ → not release-ready; family play and statuses unchanged.
+     - Consequence: only step 4's proposals; no full audit, no second spot check.
 4. **Findings → proposals.** A proposal for each problem kind with:
    - ≥ 2 disagreements in the QC section, or
    - ≥ 2 major audit findings on approved questions (Audit section), or

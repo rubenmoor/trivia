@@ -41,3 +41,4 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - [ ] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch.
 - [ ] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample.
   - Family pool: closed 2026-10-11 (pm decision 2: 30 per batch, ≥ 90 % agreement; `qgen report --exit-check`). Open for the public release: pm plan 57 (release bar, back-audit).
+  - Release bar: D-79 = D-56's numbers (pm decision 15); `qgen report --qc` row "release" (2026-10-12, task 336). Back-audit open.

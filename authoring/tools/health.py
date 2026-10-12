@@ -257,7 +257,7 @@ def write_batches_md(pool=None):
     if qc:
         lines += ["## Quality control", "",
                   "Spot check and audit per batch (plan 16, `qgen report --qc`): human agreement with the LLM review "
-                  "against `quality` in `authoring/data/targets.json` (pm decision 2).", "", *qc, ""]
+                  "against `quality` in `authoring/data/targets.json` (pm decision 2); the same numbers are the release bar (D-79).", "", *qc, ""]
     out = REPORTS / "batches.md"
     out.write_text("\n".join(lines), encoding="utf-8")
     return out

@@ -67,7 +67,7 @@
     }
   },
   "quality": {
-    "about": "Quality bar per batch (plan 16, pm decision 2): human spot-check size and min. share where the human agrees with the LLM review, in each of the last two batches.",
+    "about": "Quality bar per batch (plan 16, pm decision 2): human spot-check size and min. share where the human agrees with the LLM review, in each of the last two batches. Also the Steam release bar per batch/back-audit slice (D-79, pm decision 15).",
     "spot_check_size": 30,
     "min_agreement": 0.9
   }

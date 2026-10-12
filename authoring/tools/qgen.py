@@ -1479,6 +1479,19 @@ def qc_stats(batch, checks, pool):
             "items": items}
 
 
+def release_failures(s):
+    """Failed limits of the release bar (D-79 = D-56's numbers); [] = release-ready."""
+    q, n = targets.load_quality(), s["human_n"]
+    if not q:
+        return ["no quality keys in targets.json"]
+    if not n:
+        return ["no spot check"]
+    out = [f"spot check {n} < {q['spot_check_size']}"] if n < q["spot_check_size"] else []
+    if s["agreed"] < q["min_agreement"] * n:
+        out.append(f"agreement {100 * s['agreed'] / n:.0f} % < {100 * q['min_agreement']:.0f} %")
+    return out
+
+
 def qc_pct(n, of):
     return f"{n} of {of} ({100 * n / of:.0f} %)" if of else "–"
 
@@ -1503,6 +1516,8 @@ def qc_section(batch, pool=None):
              "(plan 16, `qgen report --qc`). Agree = both accept or both don't.", "",
              f"- Spot check: {n} decided of {checks[batch].get('size', '?')}",
              f"- Agreement with the LLM review: {qc_pct(s['agreed'], n)}{verdict}",
+             "- Release bar (D-79): " + ("✓ release-ready" if not (fail := release_failures(s))
+                                         else "✗ not release-ready: " + ", ".join(fail) + " (→ QC step 4)"),
              f"- False approve (LLM approved, human not): {qc_pct(len(s['false_approve']), n)}"
              + (f"; the audit flagged {s['audit_caught']}" if s["false_approve"] else ""),
              f"- False needs work (LLM not approved, human approved): {qc_pct(len(s['false_needs_work']), n)}",
@@ -1571,10 +1586,10 @@ def qc_trend(pool=None):
             ("difficulty |Δ| ≥ 2", lambda s: pct(s["difficulty_2"], s["human_n"])),
             ("audit/human agreement", lambda s: pct(s["audit_human_agreed"], s["audit_human_n"]))]
     bar = f"≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %" if q else "no quality keys"
-    mark = {True: "✓", False: "✗", None: "–"}
     return ["| metric | " + " | ".join(runs) + " |", "|---|" + "---:|" * len(runs),
             *[f"| {k} | " + " | ".join(f(s) for s in cols) + " |" for k, f in rows],
-            f"| **quality** ({bar}) | " + " | ".join(mark[s["passes"]] for s in cols) + " |"]
+            f"| **release** ({bar}, D-79) | " + " | ".join("✗ " + ", ".join(f) if (f := release_failures(s)) else "✓"
+                                                            for s in cols) + " |"]
 
 
 def report_qc(batch, changes=None):
