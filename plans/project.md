@@ -96,6 +96,8 @@ No family-specific questions (D-30).
 **Exit:** a whole game can be played with the mouse alone; «Como las cartas» works from the overlay.
 
 - [x] IN-1 Every keyboard action clickable (menu button for `Esc`, «Continuar», «Atrás»/«Cancelar»); the rule goes into `04` — [`14`](14-input.md)
+- [x] IN-2 Action layer: keys become actions, screens listen to actions only (2026-10-12, pm plan 44) — [`14`](14-input.md)
+- [x] IN-3 Arrows + `Enter` + `Esc`/`Backspace` play every screen: spatial focus, ring, memory (2026-10-12, pm plan 44) — [`14`](14-input.md)
 - [x] MD-1 Joker budget in the game state (`null` = unlimited, the default) — [`13`](13-game-modes.md)
 - [x] MD-2 A spent joker is disabled with a reason — [`13`](13-game-modes.md)
 - [x] MD-3 Count badges on limited jokers, none when unlimited — [`13`](13-game-modes.md)

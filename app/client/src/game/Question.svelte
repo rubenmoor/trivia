@@ -360,6 +360,7 @@
       name: "question",
       keys: KEYS,
       root: () => screenEl,
+      pressable: (el) => locked === null || el !== tiles[locked],
       handle: (a) => {
         const i = answer(a);
         if (a.type === "joker") press(a.name);

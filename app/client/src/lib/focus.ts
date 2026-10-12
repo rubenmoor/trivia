@@ -75,10 +75,10 @@ export function navigate(dir: Dir, scope: string, root: HTMLElement): boolean {
 }
 
 /** Confirm: clicks the shown control if it's inside `root`; false otherwise (the screen's default runs). */
-export function press(root: HTMLElement): boolean {
+export function press(root: HTMLElement, pressable?: (el: HTMLElement) => boolean): boolean {
   const el = shown;
   if (!el || el !== document.activeElement || !root.contains(el) || !candidates(root).includes(el)) return false;
-  if (el instanceof HTMLInputElement) return false;
+  if (el instanceof HTMLInputElement || pressable?.(el) === false) return false;
   el.click();
   return true;
 }

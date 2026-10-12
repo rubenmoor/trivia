@@ -499,7 +499,7 @@
           <p class="consolation">{consolation(game.level, game.id)}</p>
         </div>
       </div>
-      <button class="candy" onclick={toStart} disabled={busy}>{t("action.home")} <kbd>Enter</kbd></button>
+      <button class="candy" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <kbd>Enter</kbd></button>
     </section>
   {:else if screen === "victory" && game}
     <Stage mood="victory" />
@@ -516,7 +516,7 @@
           </div>
         {/if}
 
-        <button class="candy breathe" onclick={toStart} disabled={busy}>{t("action.home")} <kbd>Enter</kbd></button>
+        <button class="candy breathe" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else}

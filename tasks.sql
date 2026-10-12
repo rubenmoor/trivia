@@ -4645,13 +4645,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Cambiazo: `CategoryPicker.move` uses the helper if it gives the same result. Overlay and Francotirador keep handling navigate themselves.
 
 Check: throw-away script for the rect logic (2×2 answers, 4 cards, Cambiazo grid with disabled tiles); in the browser every screen and dialog plays with arrows + Enter + Esc/Backspace, the ring is visible wherever focus is, Enter without arrows behaves as today.', '2026-10-12T01:04:36Z', '2026-10-12T05:54:53Z', 217);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (225, 44, 'Audit, docs and later screens (IN-3)', 'work', 'open', NULL, NULL, 'Plan 44, task 4; needs tasks 1–3.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (225, 44, 'Audit, docs and later screens (IN-3)', 'work', 'done', NULL, '2026-10-12: lib/input.svelte.ts + lib/focus.ts (Scope.pressable: Enter on a ring-focused locked answer submits instead of unlocking), Question.svelte (pressable), Game.svelte (data-focus-default on Wrong and Victory); plans/04-ui-tv-display.md (Input rule: actions, focus default, no keydown elsewhere), plans/14-input.md IN-3 [x], plans/project.md IN-2/IN-3, directory.md (input.svelte.ts, focus.ts). Walked in headless Chrome with keys only: Start → Player (typed new name, delete dialog Cancelar/Sí, Esc) → Level → Select (cards ←→) → answers (lock with Enter, Enter again submits) → Wrong and Correct → every available joker via the ring (Soplo arm+fire, Paso dialog + Esc back to its token, Cambiazo grid/⌫/Esc, Francotirador aim + shoot) → overlay (undo, skip, restart with ¿Seguro?, volumes, mute, joker preset and steppers). Victory not reached (same markup as Wrong). Kept: ↓ from the last tray token goes to answer A (nearest below, not wrap); disabled tokens (e.g. Bájale at level 1) are skipped by arrows. Plans 29/36: no Choice, report or settings screen yet; follow-ups tasks 347 (plan 29, prio 390), 348 and 349 (plan 36, prio 480/370). TV check at the next game night: the family''s keys as before (A–D/1–4, Enter, Backspace unlock, S P F T X, R, M, Esc, N on Start, number keys on Player); then arrows only: ↓ shows the ring on «¡Jugar!»/«Seguir»/first card/answer A, Enter presses it, Enter on the locked answer submits, arrows reach the joker tray left of the answers, Esc/Backspace close every dialog; a mouse click never steals Enter.', 'Plan 44, task 4; needs tasks 1–3.
 
 - Walk a full game with arrows + Enter + Esc/Backspace only: start → player (new name, delete) → levels → every joker → wrong and victory → overlay (undo, skip, restart, volumes, jokers). Fix what''s missing.
 - Plans 29 (Choice screen) and 36 (Reportar pregunta, settings): any of these screens that exists goes on actions and focus; for each that doesn''t, `pm task add <plan> "<screen> on the action layer (IN-2, IN-3)"` with a body pointing to plan 44 and a priority 10 below the task that builds the screen.
 - Docs: `plans/04-ui-tv-display.md` "Input" gets the rule (screens listen to actions from `lib/input.ts` and declare a focus default; no `keydown` elsewhere); `plans/14-input.md` IN-3 `[x]`; `directory.md` lists `lib/input.ts` and `lib/focus.ts`; `plans/project.md` in sync.
 
-Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the task note lists what the gamemaster should try on the TV at the next game night (family keys unchanged).', '2026-10-12T01:04:36Z', NULL, 217);
+Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the task note lists what the gamemaster should try on the TV at the next game night (family keys unchanged).', '2026-10-12T01:04:36Z', '2026-10-12T06:00:41Z', 217);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (226, 45, 'Gamepad source (IN-4)', 'work', 'open', NULL, NULL, 'Part of plan 45, task 1. Needs plan 44''s tasks 222–225 done (`dispatch`, `Action.device`, `lastDevice`, scopes, `navigate` + focus); if one is open, stop and say so.
 
 - `app/client/src/lib/gamepad.ts` (new, no dependency), per plan 45 "Design":
@@ -5500,6 +5500,28 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 On "problems": don''t do this task; add one fix task per problem in plan 50, then raise the decision again.
 
 Done when: the docs above are updated.', '2026-10-12T04:50:41Z', NULL, 299);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (347, 29, 'Choice screen on the action layer (IN-2, IN-3)', 'work', 'open', 390, NULL, 'Plan 44 (action layer and focus navigation) is done; the Choice screen (task 128) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
+
+- Push a scope from `app/client/src/lib/input.svelte.ts` (`pushScope` in `$effect`, with `root`); no `keydown` listener (`grep -rn "keydown\|KeyboardEvent" app/client/src` lists only `input.svelte.ts`).
+- `data-focus-default` on the default choice; `data-focus-id` where the index isn''t stable; arrows move the ring (`lib/focus.ts`), `Enter` confirms, `Backspace`/`Esc` as on the other screens.
+- Number keys (`pick`) if the options carry `<kbd>` chips.
+- The overlay''s Choice line (task 129) goes into `Overlay.svelte`''s own list model (↑/↓, ←/→ to change).
+
+Done when: the Choice screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (348, 36, 'Report dialog on the action layer (IN-2, IN-3)', 'work', 'open', 480, NULL, 'Plan 44 (action layer and focus navigation) is done; «Reportar pregunta» and the report list (task 187) are built after it. Put them on the same rules (`plans/04-ui-tv-display.md`, "Input").
+
+- The report dialog pushes a modal scope (`pushScope({ modal: true, root, … })` from `app/client/src/lib/input.svelte.ts`); `back`/`menu` cancel, focus goes back to the opener (automatic for modal scopes).
+- `data-focus-default` on the safe choice (as «Cancelar» in the Player delete dialog); text fields keep native keys (input.svelte.ts handles it).
+- The report list: a scope with `root`; arrows move the ring between entries; no `keydown` listener.
+
+Done when: reporting and the list work with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (349, 36, 'Settings screen on the action layer (IN-2, IN-3)', 'work', 'open', 370, NULL, 'Plan 44 (action layer and focus navigation) is done; the mode and settings screen (task 188) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
+
+- Push a scope from `app/client/src/lib/input.svelte.ts` with `root`; `data-focus-default` on the first setting; no `keydown` listener.
+- Sliders and steppers: the scope handles ←/→ itself while one has focus (as `Overlay.svelte` does for volumes and jokers) and returns `false` for ↑/↓, so spatial focus moves between rows.
+- `back`/`menu` leave the screen the way its «Atrás» button does.
+
+Done when: the settings screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5968,6 +5990,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (200, 222, '2026-10-12T05:30:42Z', '2026-10-12T05:39:26Z', 'done', NULL, 0, '4443ab2fbf2cdf9977b47408751f15f344cdc131', 'claude-opus-5-5[1m]', 'bbdc295c-1056-403b-91ca-3e6fcd5bc0d5', 31, 54, 26980, 2009852, 85063, 1.6222904000000002, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (201, 223, '2026-10-12T05:39:26Z', '2026-10-12T05:45:15Z', 'done', NULL, 0, '4bc2431c9092ea03254d3cb83fc976ffe8109f28', 'claude-opus-5-5[1m]', '652c7850-82a0-4a1e-abbb-2ea1cb6757d1', 34, 58, 19183, 1989825, 82012, 1.437953, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (202, 224, '2026-10-12T05:45:15Z', '2026-10-12T05:55:06Z', 'done', NULL, 0, '48142d3d87b964b1016f2a5db9e306fdd52b5b84', 'claude-opus-5-5[1m]', '68b75899-d314-497a-b128-5676637af2b1', 50, 90, 50992, 4965931, 134882, 3.0924422000000016, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (203, 225, '2026-10-12T05:55:07Z', '2026-10-12T06:00:51Z', 'done', NULL, 0, '30130ee2c112879846766dc33e3bb1f36c54da4c', 'claude-opus-5-5[1m]', 'b46a3ec3-bbd9-4edc-b3a7-74157a7ac85c', 48, 94, 19383, 3141569, 84149, 1.6895418, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
