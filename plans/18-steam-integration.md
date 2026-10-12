@@ -5,7 +5,7 @@
 Part of the Steam plan ([11](11-steam.md)). Turns the built client into an installable desktop game with Steam features, and gets builds onto Steam. Depends on the client engine ([12](12-client-engine.md)): once the game runs without Python, the shell only has to show the client and save one file.
 
 ## Desktop shell (OQ-29)
-Decided: **Electron** (D-63, pm decision 12; facts checked 2026-10-11, sources there). Steam binding: steamworks-ffi-node or steamworks.js, picked in SW-2.
+Decided: **Electron** (D-63, pm decision 12; facts checked 2026-10-11, sources there). Steam binding: **steamworks-ffi-node** (pm decision 28, picked in SW-2; added in SW-8).
 
 | Option | For | Against |
 |---|---|---|
@@ -43,13 +43,13 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 
 ## Tasks
 - [x] SW-1 Decide the shell (OQ-29); record it in `decisions.md`. *Done 2026-10-12: Electron (D-63).*
-- [x] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Done 2026-10-12 (pm plan 54, D-71): `app/desktop/` (`main.mjs`, `resolve.mjs`, `preload.cjs`, `package.json`), `app/client/src/lib/desktop.ts`, `lib/engine.ts` (`MemoryStore`), `Overlay.svelte`, `flake.nix` (`trivia-desktop`, `pkgs.electron` 43); whole game without Python checked over CDP under Xvfb (task 318: level 12, every joker, undo, abandon, media, samples, clean console). Pending: gamemaster play test (pm decision 29, task 355); binding answer (pm decision 28, recorded by task 353).*
+- [x] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Done 2026-10-12 (pm plan 54, D-71): `app/desktop/` (`main.mjs`, `resolve.mjs`, `preload.cjs`, `package.json`), `app/client/src/lib/desktop.ts`, `lib/engine.ts` (`MemoryStore`), `Overlay.svelte`, `flake.nix` (`trivia-desktop`, `pkgs.electron` 43); whole game without Python checked over CDP under Xvfb (task 318: level 12, every joker, undo, abandon, media, samples, clean console). Pending: gamemaster play test (pm decision 29, task 355); binding: steamworks-ffi-node (pm decision 28, D-63; task 353).*
 - [x] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry). *Done 2026-10-12 (pm plan 55, D-72): `app/desktop/save.mjs`, `main.mjs` (userData path, `save:*` IPC, write queue, quit wait, `--import-save`), `preload.cjs`, `lib/desktop.ts`, `lib/store.ts` (`FileStore`, shared `WriteQueue`), `lib/engine.ts` (store choice, notice, `saveError()`), `engine/save.ts` (`SaveNewerError`), start-screen notice, «Salir» flush, `es` catalog; kill loop (60 × `SIGKILL` of main mid-write, 1–5 MB documents): `game.json` always one of the documents sent, stale `.tmp` dropped, no backup.*
 - [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Plan: pm plan 46 (also the letter picker for player names with a pad).*
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine. *Plan: pm plan 56 (Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`, start-test checklist).*
 - [ ] SW-6 CI build in GitHub Actions for both platforms. *S3 or S5, with or without media: pm decision 14; plan 56 task 5.*
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
-- [ ] SW-8 Steam binding (SW-2): overlay, achievements, on-screen keyboard, language; the game runs without Steam.
+- [ ] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam.
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.
 - [ ] SW-10 SteamCMD upload script; build account; beta branch.
 - [ ] SW-11 Achievements: list, icons, Steamworks setup.

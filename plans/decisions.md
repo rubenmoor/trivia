@@ -497,7 +497,7 @@ Template:
 - Date: 2026-10-12
 - Context: The Steam build needs a desktop shell around `app/client/dist/` (OQ-29, plan 18). Options: Electron, Tauri v2, browser + local server (facts in pm decision 12, checked 2026-10-11).
 - Decision: Electron (pm decision 12). One Chromium on Windows, Linux and the Deck, so the client behaves as on the TV today; a LAN server for phone buzzers (OQ-37) would be Node `http` in the main process. Steam binding: steamworks-ffi-node or steamworks.js, chosen in SW-2 (steamworks.js stale since 2024-08, steamworks-ffi-node active but young).
-- Consequences: ~125–160 MB download for the shell. Builds with electron-builder (SW-5, SW-6); the page talks to the shell through a preload bridge (no Node in the page). Overlay on native Linux/Deck is uncertain; fallback: the Windows build via Proton (SW-12). No Tauri or PyInstaller build.
+- Consequences: ~125–160 MB download for the shell. Builds with electron-builder (SW-5, SW-6); the page talks to the shell through a preload bridge (no Node in the page). Overlay on native Linux/Deck is uncertain; fallback: the Windows build via Proton (SW-12). No Tauri or PyInstaller build. Steam binding: steamworks-ffi-node (pm decision 28, 2026-10-12; added in SW-8), main process only; electron-builder needs `asarUnpack` for it, `koffi`/`@koromix/koffi-*` and our Steamworks SDK `redistributable_bin`. Its overlay is experimental (offscreen render, X11 only).
 - Supersedes / related: D-59; plans 11, 12, 18; OQ-29, OQ-37
 
 ## D-64: Engine tests run on `node:test` with Node's type stripping
