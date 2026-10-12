@@ -16,7 +16,7 @@ Milestones and open tasks: [`plans/project.md`](plans/project.md). Where each fi
 
 ## Getting started
 
-You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
+You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
 
 ```sh
 git clone https://github.com/rubenmoor/trivia.git && cd trivia
@@ -126,6 +126,15 @@ nix build .#app && result/bin/trivia
 ```
 
 The package contains only `app/`. It keeps its saves and media cache in `$XDG_DATA_HOME/trivia/` instead of the checkout; `TRIVIA_STATE` and `TRIVIA_MEDIA` override both locations.
+
+### Build the desktop game
+
+```sh
+trivia-media sync --status approved   # the pool's media must be in the cache
+trivia-desktop-build                  # → app/desktop/release/Trivia-<version>-win-x64.zip, …-linux-x64.tar.gz
+```
+
+Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
 
 ### Update dependencies
 

@@ -12,6 +12,8 @@ app/                    ships: everything a player's install contains
                         categories.py, media_cache.py
   client/               the game UI (Svelte); builds to app/client/dist/
   desktop/              Electron shell (D-71): main.mjs, resolve.mjs (app:// → files), preload.cjs
+                        builds (D-73): electron-builder.yml, after-pack.mjs, stage-media.mjs, own
+                        package-lock.json; release/ (zip, tar.gz) and build/ gitignored
   data/                 categories.json (base's), bundles.json, bundles/<id>/categories.json (D-43),
                         pool.json (exported, approved questions only)
 authoring/              never ships
@@ -37,7 +39,7 @@ package.json            npm workspaces: app/client, authoring/ui (one lockfile)
 ## Ports and commands
 - Game: `python3 app/server/main.py` → http://127.0.0.1:8000/
 - Authoring: `python3 authoring/server/main.py` → http://127.0.0.1:8001/review, /stats, /comodines
-- In the dev shell, wrappers: `trivia` (game), `trivia-authoring`, `qgen`, `trivia-media`.
+- In the dev shell, wrappers: `trivia` (game), `trivia-desktop`, `trivia-desktop-build` (Windows zip + Linux tar.gz in `app/desktop/release/`), `trivia-authoring`, `qgen`, `trivia-media`.
 
 ## Flake
 - `packages.app` (`nix build .#app`): the built game client plus the Python server, run with `trivia`. Writable state and the media cache default to `$XDG_DATA_HOME/trivia/` when run from the package, and to `state/` and `media/` in the repo.

@@ -30,13 +30,19 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).
 - **Resolutions:** 720p to 4K. The size unit `--u` scales with the width (D-29), so a 16:10 screen (Deck, 1280×800) has more height. Check every screen at 1280×800 and at 1280×720 (smallest). Valve's Deck legibility guideline is text ≥ 9 px at 1280×800.
 - **Windows specifics:** set explicit MIME types if any local serving remains; use atomic save writes with a retry (antivirus locks).
-- **Media size:** the cache is ~720 MB for ~300 files. Resize to at most 3840 px wide (4K, D-48), re-encode to WebP/AVIF, and transcode audio to Opus. Target: under 1 MB per image.
+- **Media size:** the pool's media is ~2.4 GB for 1102 files (2026-10-12). Resize to at most 3840 px wide (4K, D-48), re-encode to WebP/AVIF, and transcode audio to Opus. Target: under 1 MB per image.
 
 ## Builds and depots
-- **electron-builder** builds both platforms in GitHub Actions (Windows and Linux runners). The pool export (PORT-6), the media bundle (SW-9) and the credits (PUB-5) are build steps.
-- **Upload with SteamCMD** (`run_app_build` with a VDF per depot). Depots: Windows, Linux, shared content (pool and media). Language or region packs can be separate depots or DLC later (15c).
-- **Credentials:** a dedicated Steam build account; its login in GitHub Actions secrets. Steam Guard needs a one-time setup. Never commit credentials (AGENTS.md). Alternative: upload from the author's machine by hand.
-- **Branches:** `default` (public) and a password-protected `beta`. The family plays the beta first.
+Local builds since S3 (SW-5, D-73); CI (SW-6) and Steam uploads come later. One command on the gamemaster's Linux machine builds both platforms; the artefacts are plain folders, so Steam (S5) can install them as they are.
+- **Command:** `trivia-desktop-build` (dev shell) = `qgen validate`, `npm run build -w app/client`, `stage-media.mjs`, `electron-builder --x64 --linux tar.gz --win zip`. Outside Nix: `npm ci --prefix app/desktop`, then `npm run dist --prefix app/desktop` (no `qgen validate`). First build downloads the Electron zips into `~/.cache/electron`; later builds run offline.
+- **Targets:** `app/desktop/release/Trivia-<version>-win-x64.zip` (files at the zip root; `Trivia.exe`, unsigned, Electron's icon until S5) and `Trivia-<version>-linux-x64.tar.gz` (folder `Trivia-<version>-linux-x64/`; `./trivia` = launcher with `--no-sandbox`, binary `trivia-bin`; the Deck runs this one). No installer, no AppImage. ~2.5 GB each today.
+- **Layout:** `resources/app.asar` (`package.json`, `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs`), `resources/client/` (client `dist/`), `resources/data/` (`app/data/`), `resources/media/` (only the pool's media and backgrounds, from the cache via `app/desktop/build/media/`; outside the asar for the S5 content depot); `LICENSE.electron.txt`, `LICENSES.chromium.html` at the root.
+- **Config:** `app/desktop/electron-builder.yml`, `after-pack.mjs` (Linux launcher), own `package-lock.json` (`electron`, `electron-builder`; not a root workspace).
+- **Checked (task 330, 2026-10-12):** unpacked Linux build, no network (`unshare -rn`), no Nix env (`env -i` + an FHS runtime), no Python: new player → level 5 with image, audio (playing) and video (playing) questions, no missing-media notice; «Salir del juego» → restart: player resumes, no answered question comes back; save at `~/.config/trivia/save/game.json`; nothing written outside `HOME`. Windows: zip content listed only.
+- Later (S5): **upload with SteamCMD** (`run_app_build` with a VDF per depot). Depots: Windows, Linux, shared content (pool and media). Language or region packs can be separate depots or DLC later (15c).
+- Later (S5): **credentials:** a dedicated Steam build account; its login in GitHub Actions secrets. Steam Guard needs a one-time setup. Never commit credentials (AGENTS.md). Alternative: upload from the author's machine by hand.
+- Later (S5): **branches:** `default` (public) and a password-protected `beta`. The family plays the beta first.
+- CI (SW-6): pm decision 14.
 
 ## Steam Deck Verified
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
