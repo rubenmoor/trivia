@@ -132,7 +132,7 @@ No family-specific questions (D-30).
 ---
 
 ### Steam track (separate, D-34)
-Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below; OQ-29 is answered by D-63, OQ-30 by D-74, OQ-32 by D-75, OQ-36 by D-38).
+Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below; OQ-29 is answered by D-63, OQ-30 by D-74, OQ-32 by D-75, OQ-36 by D-38, OQ-37 by D-77).
 
 - [x] S3: SW-2 Electron desktop shell skeleton, `trivia-desktop`, whole game without Python (2026-10-12, pm plan 54, D-71; pending: play test decision 29, Steam binding decision 28) — [`18`](18-steam-integration.md)
 - [x] S3: SW-3 File saves: `save/game.json` in the user's config folder, atomic writes, backups, `--import-save` (2026-10-12, pm plan 55, D-72) — [`18`](18-steam-integration.md)
@@ -154,4 +154,3 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
 | OQ-33 | Price model; Steamworks account holder | Steam S5 (17) |
 | OQ-35 | Code and content license | Steam S2 (17) |
-| OQ-37 | Competitive mode and couch co-op format and input | Steam later (13, 14) |

@@ -10,7 +10,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 
 ## What one game needs
 - A game **shows** 48 cards (4 per level × 12) and **burns** at least 12, plus whatever the jokers swap away (D-27, D-28).
-- Burns per mode (D-74): «Solo o en grupo» and round-robin co-op = 12 + the standard joker set's burns (3 × Soplo, 1 × each other joker); round-robin competitive ≈ N players × that; competitive (timed) ≈ 1 shared question per round, no jokers; gamemaster mode: whatever the configure screen allows.
+- Burns per mode (D-74, multipliers D-77): «Solo o en grupo» and round-robin co-op = 12 + the standard joker set's burns (3 × Soplo, 1 × each other joker); round-robin competitive ≈ N players × that; competitive (timed) ≈ 1 shared question per round, no jokers; gamemaster mode: whatever the configure screen allows.
 - The tight spots are the ends of the ladder: level 1 draws only difficulty 1, and level 12 only 9–10 (D-22, D-31). Bájale and Cambiazo also need depth *per subcategory*.
 
 ## Metric

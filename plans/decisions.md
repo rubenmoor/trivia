@@ -615,3 +615,17 @@ Template:
   - `parseAgeGroups` and `qgen validate` require `level_weights` = what `levels` derive.
 - Consequences: Thin top (14: 19, 15: 8 approved) limits adults to ~8 games per player; reported for milestone 1, not fixed. `qgen` keeps `LEVEL_WEIGHTS` until AG-8 (B-12). Windows feed authoring targets only with a `focus` (D-40); `focus` is null. Plan 21's demand table recomputed.
 - Supersedes / related: D-22, D-31, D-38, D-40, D-53, D-68; plans 21, 27, 28
+
+## D-77: Three multiplayer modes; per-player gamepads and a shared keyboard, no phones
+- Date: 2026-10-12
+- Context: OQ-37 (competitive and couch co-op: format and input), plan 41; pm decisions 23 and 24, milestone 7 "Game modes"; modes and ids from D-74.
+- Decision:
+  - **All three:** no skip, no undo, no replacement, no joker changes mid-game; «Reportar pregunta» only logs (plan 36); achievements unless customized (`settings.customized`); the mode never shifts the age-group window (D-38).
+  - **Round-robin co-op** (`rr-coop`): players take turns, one question each, in join order; one team, one game, one age group; one shared standard joker set (3 × Soplo, 1 × each other joker); a wrong answer ends the game for the team as today; level 12 = everyone wins.
+  - **Round-robin competitive** (`rr-competitive`): players take turns in join order; each player plays their own independent game with their own jokers (standard set) and own age group; a wrong answer ends only that player's game, the others go on; first to level 12 wins.
+  - **Competitive (timed)** (`timed`): everyone answers the same question at once, each with their own input; own track per player; one age group; the question's difficulty = average of the active players' levels; 30 s to answer, a hint every 8 s; no jokers; a wrong answer = out at once; three levels behind the leader = out; first to level 12 wins; timeout = all players lose at once; pulsing red frame around the screen during the last 3 s.
+  - **Input:** one gamepad per player (Gamepad API), keyboard, mouse; **shared keyboard**: every player has one dedicated key; pressing it hands that player keyboard and mouse until their turn is done. No phones, no buzzers.
+  - **Burn multiplier per mode** (D-28 burning, D-75 simulation): round-robin co-op ≈ 1 game's burns (12 + the standard set's burns); round-robin competitive ≈ N players × that; competitive (timed) ≈ 1 shared question per round, no joker burns.
+  - **Shell needs:** several gamepads via the Gamepad API and the shared keyboard, nothing more; no LAN server, no firewall prompt (D-63's phone-buzzer server dropped).
+- Consequences: Plan 13 specs the three modes (MD-8, MD-9), plan 14 section 3 the input (IN-6); IN-7 closed (no phones). Building them stays "Later", after the release (plan 43). Remote Play Together works once local multi-pad input works.
+- Supersedes / related: D-28, D-38, D-63 (LAN server note), D-74, D-75; plans 13, 14, 16, 34, 38, 41

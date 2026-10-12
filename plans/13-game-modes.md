@@ -1,6 +1,6 @@
 # 13 — Game Modes
 
-**Status:** modes decided (D-74); MD-6.. open
+**Status:** modes decided (D-74, multiplayer D-77); MD-6.. open
 
 Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them.
 
@@ -24,14 +24,33 @@ Shared by every mode except gamemaster mode (D-74):
 - Standard joker set, the same for every age group: 3 × Soplo, 1 × each other joker.
 - Customization possible but discouraged: no configure screen, only a small "Customize game" button on the age group screen; a customized game earns no achievements.
 
+### Multiplayer modes (D-77)
+Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pregunta» only logs (plan 36); achievements unless customized. Input: one gamepad per player, keyboard, mouse, shared keyboard ([14](14-input.md) section 3). Built "Later" (MD-8, MD-9, IN-6).
+
 ### Round-robin co-op (`rr-coop`)
-- Players take turns, all on one team, one age group, one shared standard joker set. Spec: plan 41 (OQ-37).
+- Turn order: one question per player, in join order, round after round.
+- One team, one game, one age group.
+- Jokers: one shared standard set (3 × Soplo, 1 × each other joker); any player may use what's left on their turn.
+- Drop-out and win: a wrong answer ends the game for the team, as today; level 12 = everyone wins.
+- No timer.
+- Burning: ≈ 1 game's burns (12 + the standard set's burns).
 
 ### Round-robin competitive (`rr-competitive`)
-- Players take turns, each with their own game, jokers and age group. Spec: plan 41 (OQ-37).
+- Turn order: one question per player, in join order; each turn plays that player's own game.
+- Every player: own game, own level, own standard joker set, own age group.
+- Drop-out and win: a wrong answer ends only that player's game; first to level 12 wins.
+- No timer.
+- Burning: ≈ N players × 1 game's burns.
 
 ### Competitive timed (`timed`)
-- All answer the same question at once, 30 s, hints every 8 s, no jokers, first to level 12 wins. Spec: plan 41 (OQ-37).
+- No turns: all answer the same question at once, each with their own input.
+- Own track per player; one age group for everyone.
+- Difficulty: the question's level = average of the active players' levels (rounded).
+- No jokers.
+- Timer: 30 s to answer; a hint appears every 8 s (3 hints); timeout = all players lose at once.
+- Drama: during the last 3 s a pulsing red frame around the screen (impending-death warning of a first-person shooter).
+- Drop-out and win: a wrong answer = out at once; three levels behind the leader = out; first to level 12 wins.
+- Burning: ≈ 1 shared question per round, no joker burns.
 
 ## Implementation notes
 Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
@@ -51,8 +70,8 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - [x] MD-5 Define the modes (OQ-30, OQ-36). *2026-10-12: D-74: five modes, no default mode, no presets, no checkpoint; outside gamemaster mode no skip, undo, replace or joker changes; «Reportar pregunta» only logs. Sections and implementation notes above.*
 - [ ] MD-6 «Reportar pregunta»: local report list only; no burn, no replacement (D-74).
 - [ ] MD-7 Mode screen (five modes); age group screen with "Customize game" in `solo`; `settings.mode`, `settings.customized`.
-- [ ] MD-8 Multiplayer modes (`rr-coop`, `rr-competitive`, `timed`): per-game burning and supply rules, joker sets per player (plan 41, OQ-37).
-- [ ] MD-9 Shared keyboard and multiplayer input, with IN-6 (plan 41).
+- [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules, timer, hint cadence, red frame, burning; engine first, then screens.
+- [ ] MD-9 Later: multiplayer input with IN-6: per-player gamepads, shared keyboard (one key per player takes keyboard and mouse until the turn ends), per-player answer input in `timed` (D-77).
 - [ ] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *pm plan for milestone 7 part 11.*
 - [ ] MD-11 Gamemaster mode: "configure game" screen before every game, full customization; defaults = today's game (Enter straight through).
 - [ ] MD-12 Gamemaster menu (`Esc`): today's overlay (undo, skip, burn for everyone, joker budget, MD-4) + manage jokers, replace the current question, further decided cheats.
