@@ -829,10 +829,10 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Rules for every part
 - **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater (Steam updates the game), no remote content. Network off must still play a full game.
-- **No DRM:** the game runs without Steam running (family copy, offline living room). Every Steam call is optional; no `restartAppIfNecessary`. Without Steam, behaviour is S3''s (letter picker, `Gamepad.id` glyphs, browser language).
+- **No DRM:** the game runs without Steam running (offline living room). Every Steam call is optional; no `restartAppIfNecessary`. Without Steam, behaviour is S3''s (letter picker, `Gamepad.id` glyphs, browser language).
 - **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
 - **Secrets never in git** (AGENTS.md): build account login, beta password, `steam_appid.txt` is fine (public), Steam Guard files are not. Gitignore what the upload script writes.
-- The family game at home (`trivia`, browser on the TV) keeps working after every task.
+- The current game (`trivia`, Python server + browser) keeps working after every task until the Steam build replaces it (D-59).
 - Shipped code under `app/` (D-35); dependencies: the Steamworks binding chosen with OQ-29 (steamworks.js in the draft) and nothing else without a pm decision.
 - Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
 
@@ -4541,6 +4541,8 @@ bring them in line with the plan. A task that writes a plan gets `--kind plan`.'
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (278, 8, 'create tasks for plan 8', 'split', 'open', 1000, NULL, 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (279, 9, 'create tasks for plan 9', 'split', 'open', 1000, NULL, 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (280, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
