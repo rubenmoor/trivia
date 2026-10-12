@@ -9,6 +9,33 @@ const es = {
   action: {
     back: "Atrás",
     cancel: "Cancelar",
+    next: "Seguir",
+    home: "Volver al inicio",
+  },
+  placeholder: {
+    tag: "PLACEHOLDER · {task}",
+  },
+  /** The pool can't fill a game (GF-5). */
+  supply: {
+    short: "No hay suficientes preguntas para una partida completa ({n} disponibles):",
+    level: "Nivel {level} (dificultad {lo}–{hi}): faltan {missing}",
+  },
+  hud: {
+    level: "Nivel {n}",
+  },
+  /** Flag for review (GM-5); `key` is the shortcut (case-insensitive). */
+  flag: {
+    key: "M",
+    on: "Marcada para revisar ({key})",
+    off: "Marcar para revisar ({key})",
+  },
+  a11y: {
+    menu: "Menú (Esc)",
+  },
+  /** What the admin overlay acts on. */
+  overlay: {
+    question: "pregunta",
+    lastQuestion: "última pregunta",
   },
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
@@ -30,6 +57,62 @@ const es = {
     aria: "{name} ({key})",
   },
   screen: {
+    loading: "Cargando…",
+    noData: "Esta pantalla no tiene datos.",
+    start: {
+      /** The wordmark «¡Trivia!»; the marks bob on their own. */
+      open: "¡",
+      name: "Trivia",
+      close: "!",
+      subtitle: "12 preguntas seguidas para llegar a la cima",
+      resume: "Continuar, nivel {level}",
+      resumePlayer: "Continuar: {name}, nivel {level}",
+      new: "Nueva partida",
+      /** Shortcut for `new` (case-insensitive). */
+      newKey: "N",
+      play: "¡Jugar!",
+    },
+    player: {
+      title: "¿Quién juega?",
+      /** «¡Hola, <name>!» with the name highlighted. */
+      helloOpen: "¡Hola, ",
+      helloClose: "!",
+      gamesNone: "sin partidas",
+      games: { one: "1 partida", other: "{n} partidas" },
+      won: { one: "1 ganada", other: "{n} ganadas" },
+      gamesWon: "{games} · {won}",
+      delete: "Borrar a {name}",
+      newLabel: "¿Alguien nuevo?",
+      firstLabel: "Escriban su nombre",
+      placeholder: "Nombre",
+      submit: "¡A jugar!",
+      /** «¿Borrar a <name>?» with the name highlighted. */
+      confirmOpen: "¿Borrar a ",
+      confirmClose: "?",
+      loseNone: "sus datos",
+      lose: { one: "su partida", other: "sus {n} partidas" },
+      confirmBody: "Se borran {lose} y todo su progreso: las preguntas que ya vio vuelven a salir. No se puede deshacer.",
+      confirm: "Sí, borrar",
+    },
+    level: {
+      kicker: "Nivel",
+      of: "de {n}",
+      again: "¡Otra vez! Le dieron a la correcta.",
+    },
+    select: {
+      title: "Elijan una pregunta",
+      empty: "No quedan preguntas para este nivel.",
+      fresh: "¡Nueva!",
+    },
+    result: {
+      correct: "¡Correcto!",
+      wrong: "¡Oh no!",
+      answerWas: "La respuesta correcta era",
+    },
+    victory: {
+      title: "¡Ganaron!",
+      top: "¡{name} llegó a la cima!",
+    },
     question: {
       topic: "Tema: {name}",
       replay: "repetir",

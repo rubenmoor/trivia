@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { errorText } from "../lib/errors";
+  import { t } from "../lib/i18n";
   import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
@@ -312,7 +313,7 @@
       e.preventDefault();
       return openOverlay();
     }
-    if (e.key.toLowerCase() === "m" && flagTarget) {
+    if (e.key.toLowerCase() === FLAG_KEY.toLowerCase() && flagTarget) {
       e.preventDefault();
       return toggleFlag();
     }
@@ -324,7 +325,7 @@
       e.preventDefault();
       if (running) resume();
       else newGame();
-    } else if (screen === "start" && e.key.toLowerCase() === "n") newGame();
+    } else if (screen === "start" && e.key.toLowerCase() === NEW_KEY) newGame();
     else if (screen === "level" && next) go("select", "paper");
     else if (screen === "select" && picked === null && "1234".includes(e.key) && e.key.length === 1)
       pick(Number(e.key) - 1);
@@ -343,6 +344,9 @@
     }
   }
 
+  const NEW_KEY = t("screen.start.newKey").toLowerCase();
+  const FLAG_KEY = t("flag.key");
+
   /** /?fuegos=<variant> or ?fuegos=finale plays fireworks over the Start screen (preview, UI-9). */
   const preview = new URLSearchParams(location.search).get("fuegos");
 
@@ -358,29 +362,32 @@
 <main class="game">
   {#if loading}
     <Stage />
-    <p class="center label">Cargando…</p>
+    <p class="center label">{t("screen.loading")}</p>
   {:else if screen === "start"}
     <Stage />
     {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
     <section class="start">
-      <h1 class="wordmark"><span class="bang">¡</span>Trivia<span class="bang">!</span></h1>
-      <p class="subtitle">12 preguntas seguidas para llegar a la cima</p>
+      <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
+      <p class="subtitle">{t("screen.start.subtitle")}</p>
       <div class="buttons">
         {#if running}
           <button class="candy breathe" onclick={resume} disabled={busy}>
-            Continuar{game?.player ? `: ${game.player}` : ""}, nivel {game?.level} <kbd>Enter</kbd>
+            {game?.player
+              ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
+              : t("screen.start.resume", { level: game?.level ?? 0 })}
+            <kbd>Enter</kbd>
           </button>
-          <button class="secondary" onclick={newGame} disabled={busy}>Nueva partida <kbd>N</kbd></button>
+          <button class="secondary" onclick={newGame} disabled={busy}>{t("screen.start.new")} <kbd>{t("screen.start.newKey")}</kbd></button>
         {:else}
-          <button class="candy breathe" onclick={newGame} disabled={busy}>¡Jugar! <kbd>Enter</kbd></button>
+          <button class="candy breathe" onclick={newGame} disabled={busy}>{t("screen.start.play")} <kbd>Enter</kbd></button>
         {/if}
       </div>
       {#if supply && !supply.ok}
         <div class="supply glass">
-          <p>No hay suficientes preguntas para una partida completa ({supply.available} disponibles):</p>
+          <p>{t("supply.short", { n: supply.available })}</p>
           <ul>
             {#each supply.levels.filter((l) => l.missing) as l (l.level)}
-              <li>Nivel {l.level} (dificultad {l.range[0]}–{l.range[1]}): faltan {l.missing}</li>
+              <li>{t("supply.level", { level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
             {/each}
           </ul>
         </div>
@@ -396,14 +403,14 @@
     <section class="level">
       <Tower filled={blocks} drop={previous === "correct"} />
       <div class="level-text">
-        <p class="kicker">Nivel</p>
-        <h1 class="title big">{game.level} <span class="of">de 12</span></h1>
+        <p class="kicker">{t("screen.level.kicker")}</p>
+        <h1 class="title big">{game.level} <span class="of">{t("screen.level.of", { n: 12 })}</span></h1>
         {#if game.repeat}
-          <p class="milestone again">¡Otra vez! Le dieron a la correcta.</p>
+          <p class="milestone again">{t("screen.level.again")}</p>
         {:else if milestone(game.level, game.id)}
           <p class="milestone">{milestone(game.level, game.id)}</p>
         {/if}
-        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy}>Seguir <kbd>Enter</kbd></button>
+        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy}>{t("action.next")} <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else if screen === "select" && game}
@@ -411,9 +418,9 @@
     <div class="corner-hud"><Hud level={game.level} player={game.player} /></div>
     <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
     <section class="select">
-      <h2 class="title">Elijan una pregunta</h2>
+      <h2 class="title">{t("screen.select.title")}</h2>
       {#if game.options.length === 0}
-        <p class="error-box">No quedan preguntas para este nivel. <kbd>Esc</kbd> → Volver al inicio.</p>
+        <p class="error-box">{t("screen.select.empty")} <kbd>Esc</kbd> → {t("action.home")}.</p>
       {/if}
       <div class="cards">
         {#each game.options as option, i (i)}
@@ -433,7 +440,7 @@
               <span class="tear"></span>
               <span class="letter-slot"><span class="letter">?</span></span>
             {/if}
-            {#if fresh.has(i)}<span class="new-badge">¡Nueva!</span>{/if}
+            {#if fresh.has(i)}<span class="new-badge">{t("screen.select.fresh")}</span>{/if}
             <span class="description">{option.description}</span>
           </button>
         {/each}
@@ -459,12 +466,12 @@
     <Stage mood="correct" />
     <section class="result">
       <Fireworks />
-      <h1 class="title good">¡Correcto!</h1>
+      <h1 class="title good">{t("screen.result.correct")}</h1>
       <div class="panel glass">
         <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
         <p class="fun-fact">{game.last.fun_fact}</p>
       </div>
-      <button class="secondary hint" onclick={toLevel} disabled={busy}>Seguir <kbd>Enter</kbd></button>
+      <button class="secondary hint" onclick={toLevel} disabled={busy}>{t("action.next")} <kbd>Enter</kbd></button>
     </section>
   {:else if screen === "wrong" && game?.last}
     <Stage mood="wrong" />
@@ -472,16 +479,16 @@
       <div class="columns">
         <Tower filled={blocks} small crumble />
         <div class="stack">
-          <h1 class="title bad">¡Oh no!</h1>
+          <h1 class="title bad">{t("screen.result.wrong")}</h1>
           <div class="panel glass">
-            <p class="label">La respuesta correcta era</p>
+            <p class="label">{t("screen.result.answerWas")}</p>
             <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
             <p class="fun-fact">{game.last.fun_fact}</p>
           </div>
           <p class="consolation">{consolation(game.level, game.id)}</p>
         </div>
       </div>
-      <button class="candy" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
+      <button class="candy" onclick={toStart} disabled={busy}>{t("action.home")} <kbd>Enter</kbd></button>
     </section>
   {:else if screen === "victory" && game}
     <Stage mood="victory" />
@@ -489,8 +496,8 @@
     <section class="result victory">
       <Tower filled={12} drop />
       <div class="stack">
-        <h1 class="title big gold">¡Ganaron!</h1>
-        {#if game.player}<p class="milestone">¡{game.player} llegó a la cima!</p>{/if}
+        <h1 class="title big gold">{t("screen.victory.title")}</h1>
+        {#if game.player}<p class="milestone">{t("screen.victory.top", { name: game.player })}</p>{/if}
         {#if game.last}
           <div class="panel glass">
             <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
@@ -498,12 +505,12 @@
           </div>
         {/if}
 
-        <button class="candy breathe" onclick={toStart} disabled={busy}>Volver al inicio <kbd>Enter</kbd></button>
+        <button class="candy breathe" onclick={toStart} disabled={busy}>{t("action.home")} <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else}
     <Stage />
-    <p class="center">Esta pantalla no tiene datos. <kbd>Esc</kbd> → Volver al inicio.</p>
+    <p class="center">{t("screen.noData")} <kbd>Esc</kbd> → {t("action.home")}.</p>
   {/if}
 
   {#if error}
@@ -518,8 +525,8 @@
       onclick={toggleFlag}
       onmousedown={(e) => e.preventDefault()}
       tabindex="-1"
-      aria-label={flagged.has(flagTarget) ? "Marcada para revisar (M)" : "Marcar para revisar (M)"}
-      title={flagged.has(flagTarget) ? "Marcada para revisar (M)" : "Marcar para revisar (M)"}
+      aria-label={t(flagged.has(flagTarget) ? "flag.on" : "flag.off", { key: FLAG_KEY })}
+      title={t(flagged.has(flagTarget) ? "flag.on" : "flag.off", { key: FLAG_KEY })}
     >
       <Icon name="flag" />
     </button>
@@ -532,8 +539,8 @@
       onclick={openOverlay}
       onmousedown={(e) => e.preventDefault()}
       tabindex="-1"
-      aria-label="Menú (Esc)"
-      title="Menú (Esc)"
+      aria-label={t("a11y.menu")}
+      title={t("a11y.menu")}
     >
       <span></span><span></span><span></span>
     </button>
@@ -547,7 +554,7 @@
     <Overlay
       bind:this={overlayRef}
       questionId={screen === "question" && game?.question ? game.question.id : (game?.last?.question_id ?? null)}
-      questionLabel={screen === "question" ? "pregunta" : "última pregunta"}
+      questionLabel={t(screen === "question" ? "overlay.question" : "overlay.lastQuestion")}
       canSkip={screen === "question" && !questionBusy()}
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={running || screen !== "start"}

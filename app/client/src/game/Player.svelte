@@ -6,6 +6,7 @@
   import { onMount, tick } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
   import { errorText } from "../lib/errors";
+  import { t } from "../lib/i18n";
   import type { Player, Supply } from "../lib/types";
   import Icon from "./Icon.svelte";
 
@@ -57,9 +58,9 @@
   }
 
   function games(p: Player) {
-    if (p.games === 0) return "sin partidas";
-    const n = p.games === 1 ? "1 partida" : `${p.games} partidas`;
-    return p.won ? `${n} · ${p.won === 1 ? "1 ganada" : `${p.won} ganadas`}` : n;
+    if (p.games === 0) return t("screen.player.gamesNone");
+    const n = t("screen.player.games", { n: p.games });
+    return p.won ? t("screen.player.gamesWon", { games: n, won: t("screen.player.won", { n: p.won }) }) : n;
   }
 
   async function askDelete(p: Player) {
@@ -113,9 +114,9 @@
 
 <section class="player">
   {#if greeting}
-    <h1 class="title hello">¡Hola, <span class="name">{greeting}</span>!</h1>
+    <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name">{greeting}</span>{t("screen.player.helloClose")}</h1>
   {:else}
-    <h1 class="title">¿Quién juega?</h1>
+    <h1 class="title">{t("screen.player.title")}</h1>
 
     {#if shown.length}
       <div class="names">
@@ -126,7 +127,7 @@
               <span class="who">{p.name}</span>
               <span class="label">{games(p)}</span>
             </button>
-            <button class="delete" onclick={() => askDelete(p)} disabled={busy} title="Borrar a {p.name}">
+            <button class="delete" onclick={() => askDelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
               <Icon name="trash" />
             </button>
           </div>
@@ -136,7 +137,7 @@
 
     {#if loaded}
       <form class="new glass" onsubmit={submit}>
-        <label class="label" for="new-player">{shown.length ? "¿Alguien nuevo?" : "Escriban su nombre"}</label>
+        <label class="label" for="new-player">{t(shown.length ? "screen.player.newLabel" : "screen.player.firstLabel")}</label>
         <div class="row">
           <input
             id="new-player"
@@ -145,10 +146,10 @@
             maxlength="30"
             autocomplete="off"
             spellcheck="false"
-            placeholder="Nombre"
+            placeholder={t("screen.player.placeholder")}
             disabled={busy}
           />
-          <button class="candy" type="submit" disabled={busy || !typed}>¡A jugar! <kbd>Enter</kbd></button>
+          <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <kbd>Enter</kbd></button>
         </div>
       </form>
     {/if}
@@ -158,24 +159,25 @@
     {#if doomed}
       <div class="backdrop">
         <div class="dialog" role="alertdialog" aria-labelledby="delete-title">
-          <h2 id="delete-title">¿Borrar a <span class="doomed">{doomed.name}</span>?</h2>
+          <h2 id="delete-title">{t("screen.player.confirmOpen")}<span class="doomed">{doomed.name}</span>{t("screen.player.confirmClose")}</h2>
           <p>
-            Se borran {doomed.games === 1 ? "su partida" : doomed.games ? `sus ${doomed.games} partidas` : "sus datos"}
-            y todo su progreso: las preguntas que ya vio vuelven a salir. No se puede deshacer.
+            {t("screen.player.confirmBody", {
+              lose: doomed.games ? t("screen.player.lose", { n: doomed.games }) : t("screen.player.loseNone"),
+            })}
           </p>
           <div class="row">
-            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)}>Cancelar <kbd>Esc</kbd></button>
-            <button class="danger" onclick={confirmDelete} disabled={deleting}>Sí, borrar</button>
+            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)}>{t("action.cancel")} <kbd>Esc</kbd></button>
+            <button class="danger" onclick={confirmDelete} disabled={deleting}>{t("screen.player.confirm")}</button>
           </div>
         </div>
       </div>
     {/if}
     {#if refused && !refused.ok}
       <div class="supply glass">
-        <p>No hay suficientes preguntas para una partida completa ({refused.available} disponibles):</p>
+        <p>{t("supply.short", { n: refused.available })}</p>
         <ul>
           {#each refused.levels.filter((l) => l.missing) as l (l.level)}
-            <li>Nivel {l.level} (dificultad {l.range[0]}–{l.range[1]}): faltan {l.missing}</li>
+            <li>{t("supply.level", { level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
           {/each}
         </ul>
       </div>

@@ -2,13 +2,14 @@
   // A visible stand-in for an unpolished part of the game (D-25). Every use names the task
   // that replaces it; `grep -rn PLACEHOLDER app/client/src` lists them all.
   import type { Snippet } from "svelte";
+  import { t } from "../lib/i18n";
 
   let { task, label, chip = false, children }: { task: string; label: string; chip?: boolean; children?: Snippet } =
     $props();
 </script>
 
 <div class="placeholder" class:chip>
-  <span class="tag">PLACEHOLDER · {task}</span>
+  <span class="tag">{t("placeholder.tag", { task })}</span>
   <span class="label">{label}</span>
   {@render children?.()}
 </div>
