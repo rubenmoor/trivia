@@ -3172,6 +3172,26 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The menu offers the decided cheats; each is refused outside gamemaster mode.
 - The family''s game with defaults plays as today (fixture replay passes, Enter straight through).', '2026-10-12T16:44:17Z', 370);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (60, 12, 'masterplan', 1000, 'tbd.', '2026-10-12T16:46:08Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (61, 7, 'Competitive timed: record the revised spec (OQ-37 follow-up)', 580, 'Task 394 revised masterplan parts 5 and 8: competitive (timed) is now the milestone''s version and replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game). The recorded files still describe the old version. Plans 38 and 41 are done, so this plan brings the files in line. No new pm decisions: the milestone text ("Game modes", "Competitive (timed)") is the answer. Check stale spots with `grep -n -i timed plans/`.
+
+## Spec to record (from milestone 7)
+- 12 rounds; round = level (question difficulty follows the round); questions per round = number of players; one age group; no jokers.
+- Every question shown to all players: 30 s, a hint every 8 s; unclaimed at 30 s = next question, nothing else.
+- Claim: own action, any player, any time → that player has 6 s to answer; 6 s timeout = wrong answer; after the answer is shown, the next question comes; players may claim again after scoring.
+- Lives: three each; round end: no correct answer in that round = −1 life; wrong answer (or claim timeout) = out at once; third life lost = out.
+- Round 12 sudden death: first claim + correct answer wins at once; only one player left wins at once.
+- Visuals: rounds and hearts; a heart pulses at a player''s last chance in a round without a correct answer (stronger on the last heart); last 3 s of a claim: clock ticks once per second, louder each tick, plus pulsing red frame; same red frame when everyone is at risk at once (all on last life, nobody correct this round).
+- Open detail (not a decision): after drop-outs, do questions per round follow the players still in?
+
+## Files
+- `plans/decisions.md`: new D-entry (next free number; the file never edits old entries, a new entry supersedes) that supersedes D-77''s timed bullet and its timed burn multiplier; D-75''s burns-per-game line covered by the same entry ("Supersedes / related: D-77 (timed part), D-75 (timed burns), pm decision 23").
+- `plans/13-game-modes.md` "Competitive timed": rewritten to the spec above; the open detail listed; MD-8 and MD-9 wording to match (claim action instead of per-player answer input), pointing to the new D-entry.
+- `plans/14-input.md` section 3 and IN-6: the claim action (any player, any time, during `timed`) instead of "everyone answers at once"; per-player claim keys on the shared keyboard (claiming player then gets keyboard and mouse for the 6 s).
+- `plans/16-content-target.md` burns per mode: timed ≈ N questions per round (N players) for up to 12 rounds, fewer after drop-outs, no jokers. Decision 21''s answer (D-75: no games number, 5000 per language) doesn''t depend on it: no new decision.
+- `plans/open-questions.md` OQ-37 line and `plans/11-steam.md` OQ-37 row: add the new D-entry next to D-77.
+
+## Done when
+- `grep -n -i "three levels behind\|everyone answers\|answers at once\|1 shared question" plans/` finds nothing outside D-77 itself; the new D-entry exists and the files above point to it.', '2026-10-12T17:43:02Z', 402);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -7517,7 +7537,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', NULL, 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (402, 7, 'write plan: Competitive timed: record the revised spec (OQ-37 follow-up, parts 5 and 8)', 'plan', 'open', 1000, NULL, 'Task 394 revised parts 5 and 8 of the masterplan: competitive (timed) is now the milestone''s version (12 rounds, round = level, N questions per round, claim → 6 s, three lives, sudden death in round 12, hearts / ticking clock / red frame). It replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game). Plans 38 and 41 are done and can''t be edited or take new tasks. So write a new plan in milestone 7 (`pm plan list` first; `pm plan add 7 … --priority 580`) that brings the recorded files in line with it.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (402, 7, 'write plan: Competitive timed: record the revised spec (OQ-37 follow-up, parts 5 and 8)', 'plan', 'done', 1000, '2026-10-12, plan 61 (tasks.sql)', 'Task 394 revised parts 5 and 8 of the masterplan: competitive (timed) is now the milestone''s version (12 rounds, round = level, N questions per round, claim → 6 s, three lives, sudden death in round 12, hearts / ticking clock / red frame). It replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game). Plans 38 and 41 are done and can''t be edited or take new tasks. So write a new plan in milestone 7 (`pm plan list` first; `pm plan add 7 … --priority 580`) that brings the recorded files in line with it.
 
 Stale today (check with `grep -n -i timed`):
 - `plans/decisions.md` D-77 (timed bullet, burn multiplier) and D-75 (burns per game): add a new D-entry that supersedes D-77''s timed part, or amend it with a dated note; whichever matches how `decisions.md` handles revisions.
@@ -7526,7 +7546,9 @@ Stale today (check with `grep -n -i timed`):
 - `plans/16-content-target.md` burns per mode: timed ≈ N questions per round (N players) for up to 12 rounds, fewer after drop-outs, no jokers. Decision 21''s answer (no games number, D-52''s 5000) doesn''t depend on the estimate, so no new decision.
 - `plans/open-questions.md` OQ-37 line and `plans/11-steam.md` OQ-37 row: point to the new D-entry.
 
-No new pm decisions: the milestone text is the answer. Done when: the plan exists with tasks that cover the files above.', '2026-10-12T17:42:35Z', NULL, 395);
+No new pm decisions: the milestone text is the answer. Done when: the plan exists with tasks that cover the files above.', '2026-10-12T17:42:35Z', '2026-10-12T17:43:04Z', 395);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (403, 61, 'create tasks for plan 61', 'split', 'open', 1000, NULL, 'Split plan 61 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T17:43:02Z', NULL, 402);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -8062,6 +8084,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
  M flake.lock', 0, 'b42f277f8c296c21f4fbd63001956c94f6f693f9', 'claude-opus-5-5[1m]', 'a94aa79d-a143-4f9d-b8db-2d8c1590f65e', 49, 82, 29090, 3875800, 117453, 2.296912, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (261, 394, '2026-10-12T17:40:55Z', '2026-10-12T17:41:57Z', 'done', NULL, 0, '5139d7ffe27776792790f31080580e5444d3ff1d', 'claude-opus-5-5[1m]', 'f5194d8b-b59e-4bf9-8842-169a9c67dd96', 5, 10, 6860, 149613, 29372, 0.4021386, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (262, 395, '2026-10-12T17:41:57Z', '2026-10-12T17:42:42Z', 'done', NULL, 0, 'aeeb6fbafee197c7656270555480449830b12863', 'claude-opus-5-5[1m]', '969aaaef-9f64-4346-9b14-bd70aa7c75e4', 10, 20, 4009, 399897, 43971, 0.5120074, 553875);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (263, 402, '2026-10-12T17:42:42Z', '2026-10-12T17:43:10Z', 'done', NULL, 0, 'fc3eabdb86985d5a35713d2f458419169ad9ce2d', 'claude-opus-5-5[1m]', 'b26f29d7-1408-419e-bebb-a5d97aaebf52', 5, 10, 2460, 157724, 29151, 0.3139928, 553875);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
