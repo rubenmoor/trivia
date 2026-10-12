@@ -332,6 +332,21 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Released; content updates go out as patches.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'open', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam.
+
+## Outcome
+- Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
+- Built on the launch languages'' translation pipeline and review tool (Steam S4); no new pipeline per language.
+
+## Constraints
+- On hold until the gamemaster starts it (pending decision on the masterplan task).
+- No native speaker in the family: review needs paid or volunteer native reviewers; plan who and how before generating.
+
+## Out of scope
+- Languages beyond these three.
+
+## Done when
+- All three languages playable in the released game, store pages localized, content target met per language.', '2026-10-12T16:46:08Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
 
@@ -3154,6 +3169,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A gamemaster-mode game starts from the configure screen.
 - The menu offers the decided cheats; each is refused outside gamemaster mode.
 - The family''s game with defaults plays as today (fixture replay passes, Enter straight through).', '2026-10-12T16:44:17Z', 370);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (60, 12, 'masterplan', 1000, 'tbd.', '2026-10-12T16:46:08Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -6654,6 +6670,9 @@ Steps:
 - Sync the OQ-30 row in `plans/11-steam.md` and `plans/project.md`.
 
 Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section per mode and the notes above; `grep -niE ''preset|checkpoint|Fácil|Experto'' plans/13-game-modes.md` finds nothing outdated.', '2026-10-12T16:45:10Z', NULL, 372);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (374, 60, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 60, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-12T16:46:08Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7162,6 +7181,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (235, 370, '2026-10-12T16:43:14Z', '2026-10-12T16:44:27Z', 'done', NULL, 0, '0682c6e5862e9cd4e8c2252ac02ddbdccce12519', 'claude-opus-5-5[1m]', 'fee4a50d-de29-454f-9419-f935706e27f3', 13, 26, 7033, 565934, 49110, 0.6468308, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (236, 361, '2026-10-12T16:44:27Z', '2026-10-12T16:44:50Z', 'done', NULL, 0, '6b8249ea3ab5a6407af573c38484bdb34adc630e', 'claude-opus-5-5[1m]', '1595a90d-6610-4d2b-adf4-f8649287ef88', 4, 8, 2220, 130870, 34637, 0.34770199999999996, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (237, 372, '2026-10-12T16:44:50Z', '2026-10-12T16:45:19Z', 'done', NULL, 0, '28c7171d4e47a2ced5cd77cf8503277a9363d827', 'claude-opus-5-5[1m]', '137a9156-1cc5-438a-9e6d-d3d53778cf9f', 7, 14, 2534, 227511, 28447, 0.3238142, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (238, 362, '2026-10-12T16:45:19Z', NULL, 'running', NULL, NULL, '9b8ea27c2f16bf6a8e34ccc809ea71dd27a9ead7', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
