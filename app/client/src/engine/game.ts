@@ -1,7 +1,7 @@
 // The referee (PORT-3, plan 20): port of app/server/game.py. Public functions are pure:
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
 import type { Game, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
-import type { PoolQuestion } from "./pool.ts";
+import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
@@ -94,10 +94,14 @@ function askedCategories(state: GameState, data: EngineData): Set<string | null>
   return new Set(state.history.filter((h) => data.byId.has(h.question_id)).map((h) => cat(data.byId.get(h.question_id)!)));
 }
 
+// Until the game's choice is wired in (plan 27, task 3): young_teens and every bundle.
+const rangesOf = (data: EngineData): LevelRanges => data.groupById.get("young_teens")!.levels;
+const bundlesOf = (data: EngineData): Set<string> => new Set(data.bundles.map((b) => b.id));
+
 /** Questions that can still come up in this game: approved, not burned, not offered, not purged. */
 export function availableNow(work: SaveData, pid: number | null, state: GameState, data: EngineData): PoolQuestion[] {
   const purged = new Set<string | null>(state.purged);
-  return selection.available(data.pool, burnedFor(work, pid), state.offered).filter((q) => !purged.has(q.subcategory));
+  return selection.available(data.pool, burnedFor(work, pid), state.offered, bundlesOf(data)).filter((q) => !purged.has(q.subcategory));
 }
 
 /** Draw n cards for the state's level from what's still available to the player in this game. */
@@ -105,11 +109,12 @@ function draw(
   work: SaveData, pid: number | null, state: GameState, data: EngineData, io: Io,
   n = selection.PER_LEVEL, keep: PoolQuestion[] = [],
 ): string[] {
+  const ranges = rangesOf(data);
   const drawn = selection.draw(state.level, availableNow(work, pid, state, data), {
-    n, keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad), rng: io.rng,
+    ranges, n, keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad), rng: io.rng,
   });
   if (drawn === null) {
-    const [lo, hi] = selection.LEVEL_RANGES[state.level];
+    const [lo, hi] = ranges[state.level - 1];
     throw new GameError("level_empty", { level: state.level, lo, hi });
   }
   state.offered.push(...drawn.map((q) => q.id));
@@ -125,8 +130,8 @@ function burn(work: SaveData, qid: string, pid: number | null, gid: number, io: 
 /** The supply check before a new game (GF-5); no name or a new one: the pool minus the global burns. */
 export function supply(save: SaveData, data: EngineData, player?: unknown): Supply {
   const pid = player ? playerId(save, cleanName(player)) : null;
-  const avail = selection.available(data.pool, burnedFor(save, pid));
-  const levels = selection.supply(avail);
+  const avail = selection.available(data.pool, burnedFor(save, pid), [], bundlesOf(data));
+  const levels = selection.supply(avail, rangesOf(data));
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
@@ -266,8 +271,8 @@ export function skip(save: SaveData, data: EngineData, io: Io, everyone = false)
 type Fill = [Set<string>, boolean];
 
 /** (question IDs the matching uses for the levels after `level`, whether they all fill). */
-export function laterFill(avail: PoolQuestion[], level: number): Fill {
-  const { assignment, missing } = selection.assign(avail, laterLevels(level));
+export function laterFill(avail: PoolQuestion[], level: number, ranges: LevelRanges): Fill {
+  const { assignment, missing } = selection.assign(avail, laterLevels(level), ranges);
   return [new Set([...assignment.values()].flat()), missing.size === 0];
 }
 
@@ -277,21 +282,21 @@ function laterLevels(level: number): number[] {
 
 /** The best of `cands` by `order` (random among ties) whose removal still lets every later level fill (GF-2), or null. */
 export function replacement(
-  avail: PoolQuestion[], level: number, cands: PoolQuestion[], order: (q: PoolQuestion) => number,
+  avail: PoolQuestion[], level: number, ranges: LevelRanges, cands: PoolQuestion[], order: (q: PoolQuestion) => number,
   io: Io, fill?: Fill,
 ): PoolQuestion | null {
-  const [used, ok] = fill ?? laterFill(avail, level);
+  const [used, ok] = fill ?? laterFill(avail, level, ranges);
   if (!ok) return null;
   const later = laterLevels(level);
   const list = [...cands];
   io.rng.shuffle(list, "replacement");
   list.sort((a, b) => order(a) - order(b));
   return list.find((q) => !used.has(q.id)
-    || selection.assign(avail.filter((x) => x.id !== q.id), later).missing.size === 0) ?? null;
+    || selection.assign(avail.filter((x) => x.id !== q.id), later, ranges).missing.size === 0) ?? null;
 }
 
-export function categoryCandidates(avail: PoolQuestion[], level: number, sub: string): PoolQuestion[] {
-  return avail.filter((q) => q.subcategory === sub && selection.inRange(q, level));
+export function categoryCandidates(avail: PoolQuestion[], level: number, ranges: LevelRanges, sub: string): PoolQuestion[] {
+  return avail.filter((q) => q.subcategory === sub && selection.inRange(q, level, ranges));
 }
 
 /** Replace the question on screen in place with `fresh` (Bájale, Cambiazo). */
@@ -336,7 +341,7 @@ const playEasier: Play = (work, gid, pid, state, data, io) => {
   const cur = question(data, state.current);
   const avail = availableNow(work, pid, state, data);
   const cands = avail.filter((q) => q.subcategory === cur.subcategory && q.difficulty < cur.difficulty);
-  const fresh = replacement(avail, state.level, cands, (q) => -q.difficulty, io);
+  const fresh = replacement(avail, state.level, rangesOf(data), cands, (q) => -q.difficulty, io);
   if (!fresh) throw new GameError("easier_none");
   state.jokers.push("easier");
   swapIn(work, gid, pid, state, fresh, "easier", io);
@@ -349,7 +354,8 @@ const playCategory: Play = (work, gid, pid, state, data, io, { subcategory }) =>
   if (typeof subcategory !== "string" || !data.broad.has(subcategory)) throw new GameError("category_unknown");
   if (subcategory === cur.subcategory) throw new GameError("category_same");
   const avail = availableNow(work, pid, state, data);
-  const fresh = replacement(avail, state.level, categoryCandidates(avail, state.level, subcategory),
+  const ranges = rangesOf(data);
+  const fresh = replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, subcategory),
     (q) => Math.abs(q.difficulty - cur.difficulty), io);
   if (!fresh) throw new GameError("category_empty");
   state.jokers.push("category");
@@ -419,12 +425,13 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory as string };
 
   const avail = availableNow(work, pid, state, data);
-  const fill = laterFill(avail, state.level);
+  const ranges = rangesOf(data);
+  const fill = laterFill(avail, state.level, ranges);
   const groups = data.categories.map((c) => {
     const subs = c.subcategories.map((s) => ({
       name: s,
       available: s !== cur.subcategory
-        && replacement(avail, state.level, categoryCandidates(avail, state.level, s), () => 0, io, fill) !== null,
+        && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, s), () => 0, io, fill) !== null,
     }));
     return { slug: c.slug, name: c.name, available: subs.some((s) => s.available), subcategories: subs };
   });

@@ -59,7 +59,7 @@ test("fixture categories: broadOf, categoryOf", () => {
   assert.equal(bundleOf(cats, "Comida colombiana"), "colombia");
 });
 
-// D-22, written out; checked once against app/server/selection.LEVEL_RANGES.
+// D-22, written out; checked once against the table in app/server/selection.py.
 const D22 = [[1, 1], [2, 3], [3, 5], [4, 6], [4, 6], [4, 6], [5, 7], [6, 8], [6, 9], [7, 10], [8, 10], [9, 10]];
 
 test("parseAgeGroups on the real file: young_teens = D-22", () => {
