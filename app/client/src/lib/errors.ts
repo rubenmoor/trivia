@@ -31,6 +31,9 @@ const ES: Record<string, string> = {
   snipe_invalid: "no se puede apuntar a esa respuesta",
   snipe_no_repeat: "si le dan a la correcta, no quedan preguntas para repetir el nivel",
   joker_not_question: "los comodines solo se juegan en una pregunta",
+  age_group_unknown: "grupo de edad desconocido: '{group}'",
+  bundle_unknown: "paquete desconocido: '{bundle}'",
+  bundles_not_list: "los paquetes deben ser una lista",
 };
 
 function fill(template: string, params: Record<string, unknown>): string {

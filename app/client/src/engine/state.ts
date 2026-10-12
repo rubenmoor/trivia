@@ -81,7 +81,8 @@ export interface GameState {
   jokers: JokerName[];
   swapped_to: string | null;
   repeat: boolean;
-  settings: { jokers: JokerBudget };
+  /** age_group / bundles: only when the new game's request carried them (plan 27). */
+  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[] };
 }
 
 export const UNLIMITED: JokerBudget = { hint: null, skip: null, easier: null, category: null, snipe: null };
@@ -142,6 +143,9 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   joker_not_question: "jokers are only played on a question",
   joker_spent: (p) => `no ${p.joker} jokers left`,
   nothing_to_undo: "nothing to undo",
+  age_group_unknown: (p) => `unknown age group ${pyRepr(String(p.group))}`,
+  bundle_unknown: (p) => `unknown bundle ${pyRepr(String(p.bundle))}`,
+  bundles_not_list: "bundles must be a list",
 };
 
 /** A request that doesn't fit the game's state: a code with params; `details` (a supply report) goes to the client. */

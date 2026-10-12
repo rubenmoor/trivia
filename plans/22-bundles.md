@@ -44,14 +44,14 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 
 - Subcategory names and broad-category slugs are unique across all bundles (`validate`), so a subcategory names its bundle's taxonomy. Question ids are global; concept names are unique within a bundle.
 - The taxonomy steers generation; `bundle` steers play. A `base` question uses a subcategory from `base`'s own list (D-49): "¿Cuál es la capital de Colombia?" is in `base` under «Capitales del mundo», not under a Colombian subcategory. A `colombia` question may still use a `base` subcategory (OQ-46).
-- `app/server/categories.py` reads every bundle's categories (each broad category carries its `bundle`), so the game's «Cambiazo» picker keeps showing all of them until BN-6.
+- `app/server/categories.py` reads every bundle's categories (each broad category carries its `bundle`), and the engine's «Cambiazo» picker shows only the categories of the game's active bundles (plan 27).
 - `colombia`'s list: the 27 Colombian subcategories that were in `base` (Colombia, Fiestas colombianas, Platos típicos colombianos, Selección Colombia, Palabras colombianas, …) in 6 broad categories. Their concept lists moved with them.
 - A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the gamemaster moves the rest with `n`.
 
 - **One house style for every bundle** (D-44): a session mixes questions from all active bundles, so a bundle's own axes may change *what* is asked, never *how* it is written.
 
 ## Later
-- **The game** (BN-6): a choice of bundles before a session, `base` always on; selection filters by the active bundles. Until then the game plays every bundle, as now.
+- **The game** (BN-6): a choice of bundles before a session, `base` always on; selection filters by the active bundles. The engine does it (plan 27); until the start screen offers it (plan 29), games play every bundle.
 
 ## Tasks
 - [x] BN-1 Decision D-39 and this plan; 15c's `region` replaced by bundles
@@ -60,6 +60,7 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 - [x] BN-4 `draft` picks the bundle by the rules; house style explains bundles
 - [x] BN-5 `report` per bundle; review tool shows the bundle, filters by it (`?bundle=`) and lets the gamemaster change it. *Key `n` moves a question to the next bundle. The server also accepts difficulty 1–15 now (D-38); the review tool's digit keys still set 1–10.*
 - [ ] BN-6 The game: choose bundles before a session; selection filters by them
+  - 2026-10-11 engine: bundle filter and choice per game, plan 27 (`always_on` bundles always in, «Cambiazo» groups of active bundles only). Open: start screen, play-test (plans 29–30).
 - [-] BN-7 `qgen batch` aimed at one bundle. *Replaced by BN-8..BN-12 (D-41).*
 - [x] BN-8 `qgen batch` writes `base` by default: `draft` sets the batch's bundle instead of picking one; prompts drop the bundle choice and keep the base rule as a content limit (D-41). *The bundle is stored in `run.json`; runs without one are `base`.*
 - [x] BN-9 `qgen bundle new <id>`: creates an empty bundle (entry in `bundles.json` plus its own categories, concept and optional axes files); layout per D-43. *`--name`, `--description`, `--kind`, `--rule`; writes an empty `categories.json` to fill by hand. Axes stay `base`'s until a `question-axes.json` is added.*

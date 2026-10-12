@@ -1,6 +1,6 @@
 // The referee (PORT-3, plan 20): port of app/server/game.py. Public functions are pure:
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
-import type { Game, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
+import type { Choice, Game, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
@@ -94,14 +94,45 @@ function askedCategories(state: GameState, data: EngineData): Set<string | null>
   return new Set(state.history.filter((h) => data.byId.has(h.question_id)).map((h) => cat(data.byId.get(h.question_id)!)));
 }
 
-// Until the game's choice is wired in (plan 27, task 3): young_teens and every bundle.
-const rangesOf = (data: EngineData): LevelRanges => data.groupById.get("young_teens")!.levels;
-const bundlesOf = (data: EngineData): Set<string> => new Set(data.bundles.map((b) => b.id));
+// Age group and bundles per game (plan 27) ------------------------------------------------------
+
+/** The age group of a game that doesn't name one (D-22's ranges). */
+export const DEFAULT_AGE_GROUP = "young_teens";
+
+/** Every bundle on, the default age group. */
+export function defaultChoice(data: EngineData): Choice {
+  return { age_group: DEFAULT_AGE_GROUP, bundles: data.bundles.map((b) => b.id) };
+}
+
+/** The game's choice; missing keys are the defaults, resolved here and never written back. */
+export function gameChoice(state: GameState, data: EngineData): Choice {
+  const d = defaultChoice(data);
+  return { age_group: state.settings.age_group ?? d.age_group, bundles: state.settings.bundles ?? d.bundles };
+}
+
+/** Validate and normalize a requested choice; a missing key comes from `base`. Bundles: always_on
+ * ones added, duplicates dropped, bundles.json order. */
+export function resolveChoice(
+  data: EngineData, input: { age_group?: unknown; bundles?: unknown }, base: Choice = defaultChoice(data),
+): Choice {
+  const group = input.age_group === undefined ? base.age_group : input.age_group;
+  if (typeof group !== "string" || !data.groupById.has(group)) throw new GameError("age_group_unknown", { group: String(group) });
+  const wanted = input.bundles === undefined ? base.bundles : input.bundles;
+  if (!Array.isArray(wanted)) throw new GameError("bundles_not_list");
+  const known = new Set(data.bundles.map((b) => b.id));
+  for (const b of wanted) if (typeof b !== "string" || !known.has(b)) throw new GameError("bundle_unknown", { bundle: String(b) });
+  const on = new Set<string>(wanted);
+  return { age_group: group, bundles: data.bundles.filter((b) => b.always_on || on.has(b.id)).map((b) => b.id) };
+}
+
+const rangesFor = (data: EngineData, choice: Choice): LevelRanges => data.groupById.get(choice.age_group)!.levels;
+const rangesOf = (state: GameState, data: EngineData): LevelRanges => rangesFor(data, gameChoice(state, data));
 
 /** Questions that can still come up in this game: approved, not burned, not offered, not purged. */
 export function availableNow(work: SaveData, pid: number | null, state: GameState, data: EngineData): PoolQuestion[] {
   const purged = new Set<string | null>(state.purged);
-  return selection.available(data.pool, burnedFor(work, pid), state.offered, bundlesOf(data)).filter((q) => !purged.has(q.subcategory));
+  const bundles = new Set(gameChoice(state, data).bundles);
+  return selection.available(data.pool, burnedFor(work, pid), state.offered, bundles).filter((q) => !purged.has(q.subcategory));
 }
 
 /** Draw n cards for the state's level from what's still available to the player in this game. */
@@ -109,7 +140,7 @@ function draw(
   work: SaveData, pid: number | null, state: GameState, data: EngineData, io: Io,
   n = selection.PER_LEVEL, keep: PoolQuestion[] = [],
 ): string[] {
-  const ranges = rangesOf(data);
+  const ranges = rangesOf(state, data);
   const drawn = selection.draw(state.level, availableNow(work, pid, state, data), {
     ranges, n, keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad), rng: io.rng,
   });
@@ -127,18 +158,37 @@ function burn(work: SaveData, qid: string, pid: number | null, gid: number, io: 
   work.burned.push({ question_id: qid, player_id: pid, game_id: gid, burned_on: io.now });
 }
 
-/** The supply check before a new game (GF-5); no name or a new one: the pool minus the global burns. */
-export function supply(save: SaveData, data: EngineData, player?: unknown): Supply {
+/** The supply check before a new game (GF-5); no name or a new one: the pool minus the global burns.
+ * `choice`: age group and bundles, default every bundle and DEFAULT_AGE_GROUP. */
+export function supply(save: SaveData, data: EngineData, player?: unknown, choice: Choice = defaultChoice(data)): Supply {
   const pid = player ? playerId(save, cleanName(player)) : null;
-  const avail = selection.available(data.pool, burnedFor(save, pid), [], bundlesOf(data));
-  const levels = selection.supply(avail, rangesOf(data));
+  const avail = selection.available(data.pool, burnedFor(save, pid), [], new Set(choice.bundles));
+  const levels = selection.supply(avail, rangesFor(data, choice));
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
-/** Start a game for `player` (known or new, D-28); a running game is abandoned. */
-export function newGame(save: SaveData, data: EngineData, io: Io, player: unknown): { save: SaveData; state: GameState } {
+/** What a new game may get from the request body besides the player (plan 27). */
+export interface ChoiceArgs {
+  age_group?: unknown;
+  bundles?: unknown;
+}
+
+/** The choice of the player's newest game, else the defaults. */
+export function playerChoice(save: SaveData, data: EngineData, player?: unknown): Choice {
+  const pid = player ? playerId(save, cleanName(player)) : null;
+  const row = pid === null ? null
+    : save.games.filter((g) => g.player_id === pid).reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
+  return row ? gameChoice(withDefaults(structuredClone(row.state)), data) : defaultChoice(data);
+}
+
+/** Start a game for `player` (known or new, D-28); a running game is abandoned. The settings get
+ * `age_group` / `bundles` only when `args` carries them. */
+export function newGame(
+  save: SaveData, data: EngineData, io: Io, player: unknown, args: ChoiceArgs = {},
+): { save: SaveData; state: GameState } {
   const name = cleanName(player);
-  const report = supply(save, data, name);
+  const choice = resolveChoice(data, args);
+  const report = supply(save, data, name, choice);
   if (!report.ok) {
     const short = report.levels.filter((l) => l.missing)
       .map((l) => ({ level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing }));
@@ -156,6 +206,8 @@ export function newGame(save: SaveData, data: EngineData, io: Io, player: unknow
       level: 1, phase: "select", options: [], offered: [], current: null,
       answers: [], history: [], last: null, undo: null,
     } as unknown as GameState);
+    if (args.age_group !== undefined) state.settings.age_group = choice.age_group;
+    if (args.bundles !== undefined) state.settings.bundles = choice.bundles;
     state.options = draw(work, pid, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
@@ -341,7 +393,7 @@ const playEasier: Play = (work, gid, pid, state, data, io) => {
   const cur = question(data, state.current);
   const avail = availableNow(work, pid, state, data);
   const cands = avail.filter((q) => q.subcategory === cur.subcategory && q.difficulty < cur.difficulty);
-  const fresh = replacement(avail, state.level, rangesOf(data), cands, (q) => -q.difficulty, io);
+  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, io);
   if (!fresh) throw new GameError("easier_none");
   state.jokers.push("easier");
   swapIn(work, gid, pid, state, fresh, "easier", io);
@@ -354,7 +406,7 @@ const playCategory: Play = (work, gid, pid, state, data, io, { subcategory }) =>
   if (typeof subcategory !== "string" || !data.broad.has(subcategory)) throw new GameError("category_unknown");
   if (subcategory === cur.subcategory) throw new GameError("category_same");
   const avail = availableNow(work, pid, state, data);
-  const ranges = rangesOf(data);
+  const ranges = rangesOf(state, data);
   const fresh = replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, subcategory),
     (q) => Math.abs(q.difficulty - cur.difficulty), io);
   if (!fresh) throw new GameError("category_empty");
@@ -425,9 +477,10 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory as string };
 
   const avail = availableNow(work, pid, state, data);
-  const ranges = rangesOf(data);
+  const ranges = rangesOf(state, data);
   const fill = laterFill(avail, state.level, ranges);
-  const groups = data.categories.map((c) => {
+  const active = new Set(gameChoice(state, data).bundles);
+  const groups = data.categories.filter((c) => active.has(c.bundle)).map((c) => {
     const subs = c.subcategories.map((s) => ({
       name: s,
       available: s !== cur.subcategory

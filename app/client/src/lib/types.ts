@@ -35,6 +35,13 @@ export interface Supply {
   levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
 }
 
+/** The age group and active bundles of a game (plan 27, D-38, D-39). */
+export interface Choice {
+  age_group: string;
+  /** In bundles.json order, every always_on bundle included. */
+  bundles: string[];
+}
+
 /** A known player (app/server/game.py `players`, D-28). */
 export interface Player {
   name: string;
@@ -96,8 +103,9 @@ export interface Game {
   repeat: boolean;
   /** Joker availability while a question is on screen, else null (09-jokers.md). */
   jokers: Jokers | null;
-  /** Game settings (13-game-modes.md, MD-1): the joker budget per game, null = unlimited. */
-  settings: { jokers: JokerBudget };
+  /** Game settings (13-game-modes.md, MD-1): the joker budget per game, null = unlimited;
+   * age group and bundles as stored (plan 27), missing = `DEFAULT_AGE_GROUP` / every bundle. */
+  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[] };
   /** Uses left in this game per joker, null = unlimited (MD-1). */
   jokers_left: JokerBudget;
   question: {
