@@ -10,6 +10,7 @@ Score each criterion 1–5 (5 = excellent, 3 = acceptable, 1 = broken):
 - `fun`: surprising, funny or satisfying to get right; not a dry school test.
 - `description`: the humorous intro is funny, a full sentence, related to the content, and doesn't give the answer away.
 - `no_giveaway`: nothing gives the answer away: description, question text, hints 1–2, illustrative or decorative media. 5 = nothing does; 3 = something makes it much easier; 1 = the answer is obvious without knowing anything.
+- `no_overlap`: compare the question only with its `overlap_candidates` (questions already in the game or written earlier). 5 = it asks a different fact from all of them, or there are none; ≤ 3 = it asks the same fact again (other wording, other subcategory or other answer form included), or knowing one's answer or text gives the other's away. The same famous moment, line, record or object asked from another side counts as the same fact (who says a famous line / in which book it is said). The same answer to the same kind of question counts as the same fact, even with other examples (two «¿Qué tienen en común…?» questions with the same answer). Sharing only a topic is fine. Put the id of the closest overlapping candidate in `overlap_with` (empty when 5 or 4) and name it in `notes`.
 
 Score `unambiguous` ≤ 3 for "¿Cuál de estos es el más …?" questions where the answer is only the record among the four options rather than the real-world record holder.
 

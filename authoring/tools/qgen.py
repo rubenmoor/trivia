@@ -48,10 +48,11 @@ from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
 # D-38); drafting stops if the focus group's window changes without new weights (AG-8).
 # Without a focus, every level of the scale weighs the same (D-40).
 LEVEL_WEIGHTS = {1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13}
-RUBRIC = ["correct", "unambiguous", "no_giveaway", "distractors", "age_fit", "fun", "description"]
+RUBRIC = ["correct", "unambiguous", "no_giveaway", "no_overlap", "distractors", "age_fit", "fun", "description"]
 # Below 4 on any of these drops a question (07). The soft scores didn't predict the
 # gamemaster's decisions in the pilot, so they are recorded but don't filter by default.
-HARD_CRITERIA = ["correct", "unambiguous", "no_giveaway"]
+# no_overlap (plan 15): asks a fact the pool or an earlier draft already asks; dropped, not revised.
+HARD_CRITERIA = ["correct", "unambiguous", "no_giveaway", "no_overlap"]
 SOFT_CRITERIA = ["distractors", "age_fit", "fun", "description"]
 
 
@@ -313,8 +314,9 @@ DRAFT_SCHEMA = {"type": "object", "required": ["questions", "skipped"], "propert
 
 RATE_SCHEMA = {"type": "object", "required": ["ratings"], "properties": {"ratings": {
     "type": "array", "items": {"type": "object",
-        "required": ["id", *RUBRIC, "difficulty_estimate", "notes"],
-        "properties": {"id": STR, **{k: INT for k in RUBRIC}, "difficulty_estimate": INT, "notes": STR}}}}}
+        "required": ["id", *RUBRIC, "overlap_with", "difficulty_estimate", "notes"],
+        "properties": {"id": STR, **{k: INT for k in RUBRIC}, "overlap_with": STR,
+                       "difficulty_estimate": INT, "notes": STR}}}}}
 
 REVISED_SCHEMA = {"type": "object", "required": [
     "difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact",
@@ -728,14 +730,31 @@ def for_review(q):
     return {"id": q["tmp_id"], **form, **{k: q[k] for k in keys}}
 
 
+def rate_candidates(d):
+    """tmp_id → overlap candidates for `rate` (plan 15): pool questions of every bundle (not rejected)
+    and earlier drafts of the run; revised drafts count as later than the first round."""
+    others = [q for q in load_json(POOL)["questions"] if q["status"] != "rejected"]
+    out = {}
+    for _, qs in sorted(drafts(d), key=lambda f: (f[0].startswith("revised-"), f[0])):
+        for q in qs:
+            out[q["tmp_id"]] = [{"id": p.get("id") or p["tmp_id"], "question": p["question"], "answer": p["answer"],
+                                 "concept": p.get("concept")}
+                                for p, _, _ in overlap_candidates(q, others)
+                                if (p.get("id") or p["tmp_id"]) != q["tmp_id"]]
+            others.append(q)
+    return out
+
+
 def cmd_rate(args):
     d = run_dir(args)
     system = prompt("house-style", "rate")
     todo = [(name, qs) for name, qs in drafts(d) if qs and not (d / "ratings" / f"{name}.json").exists()]
+    cands = rate_candidates(d) if todo else {}
 
     def work(group):
         qs = [q for _, qq in group for q in qq]
-        user = "## Questions\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
+        items = [{**for_review(q), "overlap_candidates": cands.get(q["tmp_id"], [])} for q in qs]
+        user = "## Questions\n" + json.dumps(items, ensure_ascii=False)
         out = claude(system, user, RATE_SCHEMA, args.model, d)
         got = {r["id"]: r for r in out["ratings"]}
         missing = []
@@ -881,6 +900,7 @@ def cmd_merge(args):
     next_id = max(int(q["id"][2:]) for q in pool) + 1
     added, dropped = [], load_json(d / "dropped.json", [])
     ids = load_json(d / "ids.json", {})  # tmp_id -> pool id, for the review step
+    by_id = {q["id"]: q for q in pool} | {q["tmp_id"]: q for _, qs in drafts(d) for q in qs}
     for _, qs in drafts(d):
         for q in qs:
             tid = q["tmp_id"]
@@ -889,6 +909,10 @@ def cmd_merge(args):
             reason = None
             if r is None: reason = "not rated yet"
             elif needs_check(q) and c is None: reason = "not fact-checked yet"
+            elif r.get("no_overlap", 5) < 4:  # the concept isn't retired (plan 15)
+                other = r.get("overlap_with") or "?"
+                p = by_id.get(other)
+                reason = f"overlap like {ids.get(other, other)}" + (f": {p['question']} → {p['answer']}" if p else "")
             elif any(r.get(k, 5) < 4 for k in HARD_CRITERIA):
                 reason = "hard fail: " + ", ".join(f"{k} {r.get(k, '-')}" for k in HARD_CRITERIA)
             elif c and c["verdict"] == "wrong": reason = f"fact-check wrong: {c['problem']}"
@@ -966,13 +990,15 @@ DIFFICULTY_GAP = 3  # rater estimates are rough (pilot: ~2.4 levels off), so onl
 
 
 def issues_of(q, r, c):
-    """Reasons to revise a question; empty when it looks fine.
+    """Reasons to revise a question; empty when it looks fine or overlaps (merge drops it).
 
     Only what the pilot showed to matter (D-16): the gamemaster's feedback, the fact-check,
     the hard criteria, and big difficulty gaps. Low soft scores (fun, distractors…) didn't
     predict the gamemaster's decisions, so they don't trigger a revision.
     """
     out = []
+    if r and r.get("no_overlap", 5) < 4:
+        return out  # merge drops it; a revision would only ask another fact (plan 15)
     if q.get("feedback"):
         out.append(f"gamemaster feedback: {q['feedback']}")
     if c and c["verdict"] != "confirmed":
