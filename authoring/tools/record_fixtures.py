@@ -8,6 +8,7 @@ untouched Python referee (app/server/game.py, selection.py), recorded as JSON.
 Never touches state/: the game state lives in a temp dir, set before the game modules load.
 Randomness is a tape: every `random.shuffle` is recorded as {"site", "n", "perm"} (perm[j] = old
 index of the element now at j). Every step has a fixed `now`. Categories and pools are synthetic.
+Every step names its `pool` (a scenario may switch pools, always right before a `new`).
 """
 import argparse, atexit, contextlib, copy, datetime, inspect, json, os, random, shutil, sqlite3, sys, tempfile
 from pathlib import Path
@@ -151,8 +152,12 @@ class Recorder:
         for p in STATE.iterdir():
             p.unlink()
         self.rng = random.Random(seed)
-        self.pool = POOLS[pool]
+        self.use(pool)
         self.steps, self.tape, self.now = [], [], None
+
+    def use(self, pool):
+        self.pool_name, self.pool = pool, POOLS[pool]
+        self.by_id = {q["id"]: q for q in self.pool}
 
     def shuffle(self, xs):
         n = len(xs)
@@ -176,9 +181,56 @@ class Recorder:
         self.now = (START + datetime.timedelta(minutes=len(self.steps))).isoformat(timespec="seconds")
         self.tape = []
         status, body = dispatch(call, args, copy.deepcopy(self.pool))  # main.py reads the pool per request
-        self.steps.append({"now": self.now, "call": call, "args": args, "tape": self.tape,
+        self.steps.append({"now": self.now, "pool": self.pool_name, "call": call, "args": args, "tape": self.tape,
                            "response": {"status": status, "body": body}, "db": snapshot()})
         return body
+
+    def ok(self, call, **args):
+        body = self(call, **args)
+        assert self.steps[-1]["response"]["status"] == 200, (call, args, body)
+        return body
+
+    def fail(self, error, call, **args):
+        body = self(call, **args)
+        assert self.steps[-1]["response"]["status"] == 409 and body["error"] == error, (call, args, error, body)
+        return body
+
+    def state(self):
+        return self.steps[-1]["db"]["games"][-1]["state"]
+
+    def view(self):
+        return next(s["response"]["body"]["game"] for s in reversed(self.steps)
+                    if s["response"]["status"] == 200 and isinstance(s["response"]["body"], dict))
+
+    def jokers(self):
+        return self.view()["jokers"]
+
+    def current(self):
+        return self.by_id[self.state()["current"]]
+
+    def correct(self):
+        return self.state()["answers"].index(self.current()["answer"])
+
+    def wrong(self):
+        s = self.state()
+        return next(i for i in range(len(s["answers"])) if i != self.correct() and i not in s["struck"])
+
+    def card(self, pred=lambda q: True):
+        """Index of the first card on the table matching `pred`, or None."""
+        return next((i for i, qid in enumerate(self.state()["options"]) if pred(self.by_id[qid])), None)
+
+    def level_up(self, index=0):
+        self.ok("pick", index=index)
+        self.ok("answer", index=self.correct())
+
+    def find(self, pred):
+        """Level up until a card on the table matches `pred`; its index."""
+        for _ in range(selection.LEVELS):
+            i = self.card(pred)
+            if i is not None:
+                return i
+            self.level_up()
+        raise AssertionError("no matching card")
 
 
 # Selection cases: direct calls into selection.py -------------------------------------------------
@@ -290,6 +342,187 @@ def selection_cases():
          without=ids("tight", lambda q: q["difficulty"] == 7)[:1] + ids("tight", lambda q: q["difficulty"] >= 8)[9:])
     case("draw empty pool", "draw", pool="none", level=1)
     return cases
+
+
+# Game scenarios: rules and jokers (plan 18, "Scenarios") -----------------------------------------
+
+@scenario("win", "A new player answers all 12 levels right and wins; undo after the win.", 1)
+def win(rec):
+    rec.ok("get_game", player="Ana")
+    rec.ok("new", player="Ana")
+    for _ in range(selection.LEVELS):
+        rec.level_up()
+    assert rec.view()["result"] == "won"
+    rec.ok("get_game", player="Ana")
+    rec.ok("undo")
+    rec.ok("answer", index=rec.correct())
+
+
+@scenario("lose-undo", "A wrong answer loses; undo brings the question back and keeps the settings; "
+          "a second undo has nothing to undo.", 2)
+def lose_undo(rec):
+    rec.ok("new", player="Ana")
+    rec.fail("nothing_to_undo", "undo")
+    rec.level_up()
+    rec.ok("pick", index=1)
+    rec.ok("jokers", jokers={"hint": 2, "snipe": 0})
+    rec.ok("answer", index=rec.wrong())
+    assert rec.view()["result"] == "lost"
+    rec.ok("get_game", player="Ana")
+    rec.ok("undo")
+    assert rec.view()["phase"] == "question" and rec.view()["settings"]["jokers"]["hint"] == 2
+    rec.fail("nothing_to_undo", "undo")
+    rec.ok("answer", index=rec.correct())
+    rec.ok("undo")
+
+
+@scenario("hint", "«Soplo» until no hints are left; a question with no hints at all.", 3)
+def hint(rec):
+    rec.ok("new", player="Ana")
+    rec.ok("pick", index=rec.find(lambda q: len(q["hints"]) == 3))
+    for _ in range(3):
+        rec.ok("joker", joker="hint")
+    assert rec.jokers()["hint"]["reason"]["code"] == "hints_used_up"
+    rec.fail("hints_used_up", "joker", joker="hint")
+    rec.ok("answer", index=rec.correct())
+    rec.ok("pick", index=rec.find(lambda q: not q["hints"]))
+    assert not rec.jokers()["hint"]["available"]
+    rec.fail("hints_used_up", "joker", joker="hint")
+    rec.ok("answer", index=rec.correct())
+
+
+@scenario("skip-purge", "«Paso»; «Paso» with purge replacing the other table cards of that subcategory; "
+          "both unavailable on the tight pool.", 4)
+def skip_purge(rec):
+    rec.ok("new", player="Ana")
+    rec.ok("pick", index=0)
+    rec.ok("joker", joker="skip")
+    rec.ok("pick", index=0)
+    rec.ok("joker", joker="skip", purge=True)
+    rec.ok("pick", index=rec.find(lambda q: [rec.by_id[i]["subcategory"] for i in rec.state()["options"]]
+                                  .count(q["subcategory"]) > 1))
+    assert rec.jokers()["skip"]["purge"]["available"]
+    rec.ok("joker", joker="skip", purge=True)
+    rec.level_up()
+    rec.use("tight")
+    rec.ok("new", player="Bea")
+    rec.ok("pick", index=0)
+    assert not rec.jokers()["skip"]["available"] and not rec.jokers()["skip"]["purge"]["available"]
+    rec.fail("refill_empty", "joker", joker="skip")
+    rec.fail("purge_short", "joker", joker="skip", purge=True)
+
+
+@scenario("easier", "«Bájale» at level 1 (nothing easier), then twice where it works; "
+          "unavailable on the tight pool.", 5)
+def easier(rec):
+    rec.ok("new", player="Ana")
+    rec.ok("pick", index=0)
+    assert not rec.jokers()["easier"]["available"]
+    rec.fail("easier_none", "joker", joker="easier")
+    rec.ok("answer", index=rec.correct())
+    played = 0
+    for _ in range(selection.LEVELS - 1):
+        rec.ok("pick", index=0)
+        while played < 2 and rec.jokers()["easier"]["available"]:
+            rec.ok("joker", joker="easier")
+            played += 1
+        if played >= 2:
+            break
+        rec.ok("answer", index=rec.correct())
+    assert played >= 2
+    rec.ok("answer", index=rec.correct())
+    rec.use("tight")
+    rec.ok("new", player="Bea")
+    rec.level_up()
+    rec.ok("pick", index=0)
+    assert not rec.jokers()["easier"]["available"]
+    rec.fail("easier_none", "joker", joker="easier")
+
+
+@scenario("category", "«Cambiazo» to an available subcategory; the same one; an unknown one; an empty one; "
+          "no subcategory possible on the tight pool.", 6)
+def category(rec):
+    rec.ok("new", player="Ana")
+    rec.ok("pick", index=0)
+    subs = lambda ok: [s["name"] for g in rec.jokers()["category"]["categories"] for s in g["subcategories"]
+                       if s["available"] == ok and s["name"] != rec.current()["subcategory"]]
+    rec.ok("joker", joker="category", subcategory=subs(True)[0])
+    rec.fail("category_same", "joker", joker="category", subcategory=rec.current()["subcategory"])
+    rec.fail("category_unknown", "joker", joker="category", subcategory="Astrología")
+    rec.fail("category_unknown", "joker", joker="category")
+    for _ in range(selection.LEVELS - 1):
+        if subs(False):
+            break
+        rec.ok("answer", index=rec.correct())
+        rec.ok("pick", index=0)
+    rec.fail("category_empty", "joker", joker="category", subcategory=subs(False)[0])
+    rec.ok("joker", joker="category", subcategory=subs(True)[-1])
+    rec.ok("answer", index=rec.correct())
+    rec.use("tight")
+    rec.ok("new", player="Bea")
+    rec.ok("pick", index=0)
+    assert rec.jokers()["category"]["reason"]["code"] == "category_none"
+    other = next(s for c in CATEGORIES for s in c["subcategories"] if s != rec.current()["subcategory"])
+    rec.fail("category_empty", "joker", joker="category", subcategory=other)
+
+
+@scenario("snipe", "«Francotirador»: misses until one answer is left; a struck answer; a hit repeats the level; "
+          "a hit with no cards left on the tight pool.", 7)
+def snipe(rec):
+    rec.ok("new", player="Ana")
+    rec.ok("pick", index=0)
+    rec.ok("joker", joker="snipe", index=rec.wrong())
+    rec.fail("snipe_invalid", "joker", joker="snipe", index=rec.state()["struck"][0])
+    rec.fail("snipe_invalid", "joker", joker="snipe", index=4)
+    rec.fail("snipe_invalid", "joker", joker="snipe")
+    rec.ok("joker", joker="snipe", index=rec.wrong())
+    rec.ok("joker", joker="snipe", index=rec.wrong())
+    assert rec.jokers()["snipe"]["reason"]["code"] == "snipe_last"
+    rec.fail("snipe_last", "joker", joker="snipe", index=rec.correct())
+    rec.ok("answer", index=rec.correct())
+    rec.ok("pick", index=0)
+    assert rec.jokers()["snipe"]["available"]
+    rec.ok("joker", joker="snipe", index=rec.correct())
+    assert rec.view()["repeat"] and rec.view()["level"] == 2
+    rec.ok("pick", index=1)
+    rec.ok("answer", index=rec.correct())
+    rec.use("tight")
+    rec.ok("new", player="Bea")
+    rec.ok("pick", index=0)
+    assert rec.jokers()["snipe"]["reason"]["code"] == "snipe_no_repeat"
+    rec.fail("snipe_no_repeat", "joker", joker="snipe", index=rec.correct())
+    rec.ok("joker", joker="snipe", index=rec.wrong())
+    rec.ok("answer", index=rec.correct())
+
+
+@scenario("budget", "Joker budgets: the «Como las cartas» preset, partial budgets, spending to 0, "
+          "invalid budgets.", 8)
+def budget(rec):
+    rec.ok("new", player="Ana")
+    rec.ok("jokers", jokers=game.CARDS)
+    rec.ok("jokers", jokers={"hint": 1, "snipe": 1})
+    rec.ok("jokers", jokers={"category": None, "easier": 0})
+    rec.fail("budget_unknown_joker", "jokers", jokers={"comodin": 1})
+    rec.fail("budget_unknown_joker", "jokers", jokers=["hint"])
+    rec.fail("budget_unknown_joker", "jokers")
+    for bad in (100, -1, True, "2", 1.5):
+        rec.fail("budget_invalid", "jokers", jokers={"hint": bad})
+    rec.ok("pick", index=rec.find(lambda q: len(q["hints"]) >= 2))
+    assert rec.jokers()["easier"]["reason"]["code"] == "joker_spent"
+    rec.fail("joker_spent", "joker", joker="easier")
+    rec.ok("joker", joker="hint")
+    assert rec.jokers()["hint"]["reason"]["code"] == "joker_spent"
+    rec.fail("joker_spent", "joker", joker="hint")
+    rec.ok("joker", joker="snipe", index=rec.wrong())
+    rec.fail("joker_spent", "joker", joker="snipe", index=rec.wrong())
+    rec.ok("answer", index=rec.correct())
+    rec.ok("pick", index=rec.find(lambda q: q["hints"]))
+    assert rec.view()["jokers_left"]["hint"] == 0
+    rec.fail("joker_spent", "joker", joker="hint")
+    rec.ok("jokers", jokers={"hint": 2, "easier": None})
+    rec.ok("joker", joker="hint")
+    rec.ok("jokers", jokers={"hint": None})
+    rec.ok("answer", index=rec.correct())
 
 
 def dumps(obj):
