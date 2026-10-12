@@ -3119,8 +3119,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', '2026-10-12T00:48:30Z', 166);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'done', 1000, '2026-10-11, tasks 193 (facts + decision(s)), 194 (record answer); no new decisions here: the OQ-33 decision(s) come from task 193, which makes 194 wait on them', 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:13Z', '2026-10-12T00:48:51Z', 167);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (178, 40, 'create tasks for plan 40', 'split', 'open', 1000, NULL, 'Split plan 40 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:52Z', NULL, 168);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (178, 40, 'create tasks for plan 40', 'split', 'done', 1000, '2026-10-11, tasks 198 (facts + decision(s), pends on OQ-33 if unanswered), 199 (record answer), 200 (licence files, PUB-4); 195–197 dropped (re-added in order); no new decisions here: task 198 writes the OQ-35 decision(s) and makes 199/200 wait', 'Split plan 40 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:52Z', '2026-10-12T00:49:43Z', 168);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (179, 41, 'create tasks for plan 41', 'split', 'open', 1000, NULL, 'Split plan 41 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:44:27Z', NULL, 169);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (180, 42, 'create tasks for plan 42', 'split', 'open', 1000, NULL, 'Split plan 42 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3289,6 +3289,80 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If bundles become DLC: one row in `plans/backlog.md` (DLC depots/app IDs for bundles, S5, plan 18 SW tasks); no code.
 
 Done when: D-entry exists; OQ-33 resolved; PUB-6 and PUB-11 match the answer and stay unchecked.', '2026-10-12T00:48:50Z', NULL, 177);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (195, 40, 'Licence: facts, options, write the decision(s) (OQ-35)', 'work', 'dropped', NULL, 're-added by task 178 with a corrected body (ordering)', 'Part 1 of plan 40. Prepare the OQ-35 decision(s); no code, no licence files, never contact a lawyer. Not legal advice: name where a professional must check.
+
+- First: OQ-33 (plan 39, task 193 writes its decision(s)). If OQ-33 is not answered yet: gather the facts, then `pm task-pending-decision <this task> <OQ-33 decision id>`, stage nothing permanent and stop; the decision is written once OQ-33 is answered and recorded (D-entry from plan 39).
+- Facts (one line each, with source):
+  - no licence on GitHub: GitHub ToS lets others view and fork, nothing else
+  - code: MIT vs GPL-3.0 vs AGPL vs all rights reserved for a paid Steam game (GPL: anyone may rebuild and redistribute the game; MIT: anyone may ship a closed fork)
+  - questions: CC BY-SA 4.0 vs CC BY-NC(-SA) 4.0 vs reserved (SA/BY allow reselling the pool; NC blocks commercial reuse, not copying; short factual questions: thin copyright, the curated set and hints/explanations are the protectable part)
+  - AI-drafted text, reviewed by a person: protection uncertain, flag for a professional (link PUB-10)
+  - pool size today: approved per bundle (`qgen report`), so the decision says what is at stake
+- Options, recommended first; one decision or two if too big ("Licence (OQ-35)", "Is release content public (OQ-35)"):
+  - code: MIT (recommended if paid), GPL-3.0, all rights reserved
+  - questions: reserved (recommended if paid), CC BY-NC-SA 4.0, CC BY-SA 4.0
+  - repo: public code + current pool public, release content (new batches, translations, paid bundles) private (repo or submodule); whole repo public; whole repo private before release
+  - each option: effect on the build (`nix build .#app`, packaging step reading a private pool), on D-17 ("pool is public"), on existing forks (already-public content stays copyable as implied)
+- Media (plan 26) and fonts (OFL) are never covered by the repo licence; say so in the body.
+- Lawyer questions as text for the gamemaster in the body.
+- `pm decision add`, body = context + facts + trade-offs, ultra-short.
+- `pm task-pending-decision` on the next two tasks of plan 40 (record the answer; licence files) for each decision.
+
+Done when: the decision(s) exist with facts and sources; both follow-up tasks wait on them.', '2026-10-12T00:49:21Z', '2026-10-12T00:49:31Z', 178);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (196, 40, 'Licence: record the answer (OQ-35)', 'work', 'dropped', NULL, 're-added by task 178 with a corrected body (ordering)', 'Part 2 of plan 40. Waits for the OQ-35 decision(s) from the previous task.
+
+- D-entry in `plans/decisions.md` (next free D-number): code licence, question licence, what stays public; professional checks still owed. Amends D-17 if the pool or release content goes private.
+- OQ-35 → "Resolved" in `plans/open-questions.md` with the D-number; `plans/11-steam.md` open-questions row and `plans/project.md` in sync.
+- `plans/17-publishing.md` "Code and content license": decided. PUB-4 stays open; the next task checks it.
+- If release content goes private: one row in `plans/backlog.md` (private content repo/submodule, how `qgen export` and the build find it, S4/S5); no restructuring.
+
+Done when: D-entry exists; OQ-35 resolved; plan files match the answer.', '2026-10-12T00:49:21Z', '2026-10-12T00:49:31Z', 178);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (197, 40, 'Licence files and mentions (PUB-4)', 'work', 'dropped', NULL, 're-added by task 178 with a corrected body (ordering)', 'Part 3 of plan 40. Runs after the previous task (record the answer); waits for the OQ-35 decision(s) too.
+
+- `LICENSE` at the repo root: the code licence''s full text (or an "all rights reserved" notice).
+- If the questions differ from the code: separate content licence file (e.g. `LICENSE-content.md`): paths it covers (`authoring/data/`, `app/data/`); media and fonts keep their own licences per file (plan 26, `app/client/public/fonts/OFL-*.txt`).
+- `README.md`: short "License" section. `directory.md`: the new file(s).
+- `nix build .#app` still builds; `result/` includes the licence file(s) if the licence requires it (check `flake.nix` install step).
+- `plans/17-publishing.md`: PUB-4 `[x]` with a note.
+
+Done when: licence file(s) exist, linked from `README.md` and `directory.md`; `nix build .#app` passes; PUB-4 `[x]`.', '2026-10-12T00:49:21Z', '2026-10-12T00:49:31Z', 178);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (198, 40, 'Licence: facts, options, write the decision(s) (OQ-35)', 'work', 'open', NULL, NULL, 'Part 1 of plan 40. Prepare the OQ-35 decision(s); no code, no licence files, never contact a lawyer. Not legal advice: name where a professional must check.
+
+- First: OQ-33 (plan 39, task 193 writes its decision(s)). If OQ-33 is not answered yet: gather the facts, then `pm task-pending-decision` this task and the next two tasks of plan 40 on the OQ-33 decision, stage nothing permanent and stop. The OQ-35 decision is written only once OQ-33 is answered and recorded (D-entry from plan 39).
+- Facts (one line each, with source):
+  - no licence on GitHub: GitHub ToS lets others view and fork, nothing else
+  - code: MIT vs GPL-3.0 vs AGPL vs all rights reserved for a paid Steam game (GPL: anyone may rebuild and redistribute the game; MIT: anyone may ship a closed fork)
+  - questions: CC BY-SA 4.0 vs CC BY-NC(-SA) 4.0 vs reserved (SA/BY allow reselling the pool; NC blocks commercial reuse, not copying; short factual questions: thin copyright, the curated set and hints/explanations are the protectable part)
+  - AI-drafted text, reviewed by a person: protection uncertain, flag for a professional (link PUB-10)
+  - pool size today: approved per bundle (`qgen report`), so the decision says what is at stake
+- Options, recommended first; one decision or two if too big ("Licence (OQ-35)", "Is release content public (OQ-35)"):
+  - code: MIT (recommended if paid), GPL-3.0, all rights reserved
+  - questions: reserved (recommended if paid), CC BY-NC-SA 4.0, CC BY-SA 4.0
+  - repo: public code + current pool public, release content (new batches, translations, paid bundles) private (repo or submodule); whole repo public; whole repo private before release
+  - each option: effect on the build (`nix build .#app`, packaging step reading a private pool), on D-17 ("pool is public"), on existing forks (already-public content stays copyable as implied)
+- Media (plan 26) and fonts (OFL) are never covered by the repo licence; say so in the body.
+- Lawyer questions as text for the gamemaster in the body.
+- `pm decision add`, body = context + facts + trade-offs, ultra-short.
+- `pm task-pending-decision` on the next two tasks of plan 40 (record the answer; licence files) for each decision.
+
+Done when: the decision(s) exist with facts and sources; both follow-up tasks wait on them.', '2026-10-12T00:49:40Z', NULL, 178);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (199, 40, 'Licence: record the answer (OQ-35)', 'work', 'open', NULL, NULL, 'Part 2 of plan 40. Waits for the OQ-35 decision(s) from the previous task.
+
+- D-entry in `plans/decisions.md` (next free D-number): code licence, question licence, what stays public; professional checks still owed. Amends D-17 if the pool or release content goes private.
+- OQ-35 → "Resolved" in `plans/open-questions.md` with the D-number; `plans/11-steam.md` open-questions row and `plans/project.md` in sync.
+- `plans/17-publishing.md` "Code and content license": decided. PUB-4 stays open; the next task checks it.
+- If release content goes private: one row in `plans/backlog.md` (private content repo/submodule, how `qgen export` and the build find it, S4/S5); no restructuring.
+
+Done when: D-entry exists; OQ-35 resolved; plan files match the answer.', '2026-10-12T00:49:40Z', NULL, 178);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (200, 40, 'Licence files and mentions (PUB-4)', 'work', 'open', NULL, NULL, 'Part 3 of plan 40. Runs after the previous task (record the answer); waits for the OQ-35 decision(s) too.
+
+- `LICENSE` at the repo root: the code licence''s full text (or an "all rights reserved" notice).
+- If the questions differ from the code: separate content licence file (e.g. `LICENSE-content.md`): paths it covers (`authoring/data/`, `app/data/`); media and fonts keep their own licences per file (plan 26, `app/client/public/fonts/OFL-*.txt`).
+- `README.md`: short "License" section. `directory.md`: the new file(s).
+- `nix build .#app` still builds; `result/` includes the licence file(s) if the licence requires it (check `flake.nix` install step).
+- `plans/17-publishing.md`: PUB-4 `[x]` with a note.
+
+Done when: licence file(s) exist, linked from `README.md` and `directory.md`; `nix build .#app` passes; PUB-4 `[x]`.', '2026-10-12T00:49:40Z', NULL, 178);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3376,6 +3450,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (71, 175, '2026-10-12T00:47:44Z', '2026-10-12T00:48:13Z', 'done', NULL, 0, '178a84015e665cb1c30f105255077ef004d84334', 'claude-opus-5-5[1m]', '3d7df2a2-5c87-439e-a6ea-99f7bd641a99', 5, 10, 2484, 125504, 20183, 0.2362848, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (72, 176, '2026-10-12T00:48:13Z', '2026-10-12T00:48:35Z', 'done', NULL, 0, '2124038a57b5015f3a4e91c6c4a4053af523351b', 'claude-opus-5-5[1m]', 'ff6789bf-3a31-4d6a-bc38-185e10e9f4c1', 5, 10, 2289, 138957, 25582, 0.2782674, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (73, 177, '2026-10-12T00:48:35Z', '2026-10-12T00:48:59Z', 'done', NULL, 0, 'd8e8fa860302c2d2177f4cd1204c046b7f869acc', 'claude-opus-5-5[1m]', 'b24a26e5-2123-48e0-b3ab-aba19167f3ab', 4, 6, 2542, 72584, 24787, 0.2636768, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (74, 178, '2026-10-12T00:48:59Z', '2026-10-12T00:49:49Z', 'done', NULL, 0, 'db9d01b516784d649f6d93369eff0398eb9978d0', 'claude-opus-5-5[1m]', '022cd1ad-3de4-4fc2-b9c0-3341920b6041', 8, 16, 5232, 265681, 30190, 0.39936019999999994, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
