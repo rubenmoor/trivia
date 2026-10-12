@@ -159,7 +159,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Every question has `bundle`, checked by `qgen validate`.
 
 Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced. Needed before any public release; small and independent of the other milestones.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced. Commons restriction flags (personality rights, trademark) are kept (D-61, decision 8). Needed before any public release; small and independent of the other milestones.
 
 ## Outcome
 - `media.py licenses` report listing the files to replace (PUB-1).
