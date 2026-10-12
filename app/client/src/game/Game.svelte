@@ -59,6 +59,7 @@
   /** The first click unlocks audio and autoplay in the browser (04, "Start"). */
   let unlocked = false;
   let questionRef = $state<ReturnType<typeof Question>>();
+  let main = $state<HTMLElement>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
   /** The supply report when the pool can't fill a game for the chosen player. */
@@ -333,11 +334,13 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "player") return; // Player.svelte pushes its own
+    if (on === "player" || on === "question") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
       handle: (a) => onScreen(on, a),
+      root: () => main,
+      keep: on === "start",
     });
   });
 
@@ -365,7 +368,7 @@
   }
 </script>
 
-<main class="game">
+<main class="game" bind:this={main}>
   {#if loading}
     <Stage />
     <p class="center label">{t("screen.loading")}</p>
@@ -377,15 +380,15 @@
       <p class="subtitle">{t("screen.start.subtitle")}</p>
       <div class="buttons">
         {#if running}
-          <button class="candy breathe" onclick={resume} disabled={busy}>
+          <button class="candy breathe" onclick={resume} disabled={busy} data-focus-default data-focus-id="main">
             {game?.player
               ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
               : t("screen.start.resume", { level: game?.level ?? 0 })}
             <kbd>Enter</kbd>
           </button>
-          <button class="secondary" onclick={newGame} disabled={busy}>{t("screen.start.new")} <kbd>{t("screen.start.newKey")}</kbd></button>
+          <button class="secondary" onclick={newGame} disabled={busy} data-focus-id="new">{t("screen.start.new")} <kbd>{t("screen.start.newKey")}</kbd></button>
         {:else}
-          <button class="candy breathe" onclick={newGame} disabled={busy}>{t("screen.start.play")} <kbd>Enter</kbd></button>
+          <button class="candy breathe" onclick={newGame} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <kbd>Enter</kbd></button>
         {/if}
       </div>
       {#if supply && !supply.ok}
@@ -416,7 +419,7 @@
         {:else if milestone(game.level, game.id)}
           <p class="milestone">{milestone(game.level, game.id)}</p>
         {/if}
-        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy}>{t("action.next")} <kbd>Enter</kbd></button>
+        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy} data-focus-default>{t("action.next")} <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else if screen === "select" && game}
@@ -439,6 +442,7 @@
             style:--deal-delay="{i * 0.12}s"
             onclick={() => picked === null && pick(i)}
             disabled={busy}
+            data-focus-default
           >
             <span class="flap"></span>
             <span class="seal">{i + 1}</span>
@@ -478,7 +482,7 @@
         <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
         <p class="fun-fact">{game.last.fun_fact}</p>
       </div>
-      <button class="secondary hint" onclick={toLevel} disabled={busy}>{t("action.next")} <kbd>Enter</kbd></button>
+      <button class="secondary hint" onclick={toLevel} disabled={busy} data-focus-default>{t("action.next")} <kbd>Enter</kbd></button>
     </section>
   {:else if screen === "wrong" && game?.last}
     <Stage mood="wrong" />
@@ -532,6 +536,7 @@
       onclick={toggleFlag}
       onmousedown={(e) => e.preventDefault()}
       tabindex="-1"
+      data-nofocus
       aria-label={t(flagged.has(flagTarget) ? "flag.on" : "flag.off", { key: FLAG_KEY })}
       title={t(flagged.has(flagTarget) ? "flag.on" : "flag.off", { key: FLAG_KEY })}
     >
@@ -546,6 +551,7 @@
       onclick={openOverlay}
       onmousedown={(e) => e.preventDefault()}
       tabindex="-1"
+      data-nofocus
       aria-label={t("a11y.menu")}
       title={t("a11y.menu")}
     >
@@ -834,7 +840,8 @@
     box-shadow: 0 calc(0.2 * var(--u)) calc(0.6 * var(--u)) rgba(0, 0, 0, 0.4);
   }
   .card:hover:not(:disabled),
-  .card:focus-visible {
+  .card:focus-visible,
+  .card:global([data-nav]) {
     transform: translateY(calc(-1.2 * var(--u))) rotate(0deg) scale(1.03);
     outline: calc(0.25 * var(--u)) solid var(--sky);
   }

@@ -142,7 +142,8 @@
     height: 52%;
   }
   .token:not(:disabled):hover,
-  .token:focus-visible {
+  .token:focus-visible,
+  .token:global([data-nav]) {
     transform: translateY(calc(-0.25 * var(--u))) scale(1.06);
   }
   .token.armed {

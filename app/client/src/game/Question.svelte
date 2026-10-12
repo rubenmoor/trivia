@@ -107,6 +107,8 @@
   let shot = $state<number | null>(null);
   let shattering = $state<number | null>(null);
   let tiles = $state<HTMLButtonElement[]>([]);
+  let screenEl = $state<HTMLDivElement>();
+  let skipDialog = $state<HTMLDivElement>();
   /** The scope's hole, over the target answer. */
   let hole = $state<{ x: number; y: number; w: number; h: number } | null>(null);
   $effect(() => {
@@ -357,6 +359,7 @@
     pushScope({
       name: "question",
       keys: KEYS,
+      root: () => screenEl,
       handle: (a) => {
         const i = answer(a);
         if (a.type === "joker") press(a.name);
@@ -390,6 +393,7 @@
     return pushScope({
       name: "question-skip",
       modal: true,
+      root: () => skipDialog,
       handle: (a) => {
         if (a.type === "back" || a.type === "menu") mode = null;
         else if (a.type === "pick" && a.n === 1) fire({ joker: "skip" });
@@ -435,7 +439,7 @@
   }
 </script>
 
-<div class="question-screen" class:dark={submitted && !revealed} class:sweeping>
+<div class="question-screen" bind:this={screenEl} class:dark={submitted && !revealed} class:sweeping>
   <div class="backdrop" in:crossfade|global out:crossfade|global>
     {#if media.type === "video" && media.file_url}
       <!-- svelte-ignore a11y_media_has_caption -->
@@ -528,7 +532,7 @@
 
   {#if mode === "skip" && jokers}
     <div class="backdrop-dim">
-      <div class="dialog glass-strong">
+      <div class="dialog glass-strong" bind:this={skipDialog}>
         <h2>{t("joker.skip.name")}</h2>
         <button class="candy" onclick={() => fire({ joker: "skip" })}>{t("joker.skip.name")} <kbd>1</kbd></button>
         <button
@@ -584,6 +588,7 @@
           disabled={submitted || question.struck.includes(i) || hit !== null}
           class:shatter={shattering === i}
           bind:this={tiles[i]}
+          data-focus-default
         >
           {#if shattering === i}
             <span class="shards" aria-hidden="true">
@@ -918,7 +923,8 @@
     animation-delay: 0.18s;
   }
   .answer:hover:not(:disabled),
-  .answer:focus-visible {
+  .answer:focus-visible,
+  .answer:global([data-nav]) {
     border-color: var(--sky);
     transform: translateY(calc(-0.3 * var(--u)));
   }

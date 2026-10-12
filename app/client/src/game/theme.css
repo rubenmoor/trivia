@@ -129,7 +129,8 @@
 .game button:disabled {
   cursor: default;
 }
-.game button:focus-visible {
+.game button:focus-visible,
+.game [data-nav] {
   outline: calc(0.2 * var(--u)) solid var(--sky);
   outline-offset: calc(0.25 * var(--u));
 }

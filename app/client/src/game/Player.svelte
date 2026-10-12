@@ -3,11 +3,11 @@
   // known names (most recent first, keys 1–9) and a field for a new name. The server keeps the
   // players and burns questions per player (app/server/game.py). Each name can be deleted with all its
   // progress, after a confirmation (GF-7).
-  import { onMount, tick } from "svelte";
+  import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
-  import { pushScope } from "../lib/input.svelte";
+  import { focusControl, pushScope } from "../lib/input.svelte";
   import type { Player, Supply } from "../lib/types";
   import Icon from "./Icon.svelte";
 
@@ -39,6 +39,8 @@
   let doomed = $state<Player | null>(null);
   let deleting = $state(false);
   let cancelButton = $state<HTMLButtonElement>();
+  let section = $state<HTMLElement>();
+  let dialog = $state<HTMLDivElement>();
 
   onMount(async () => {
     try {
@@ -64,10 +66,8 @@
     return p.won ? t("screen.player.gamesWon", { games: n, won: t("screen.player.won", { n: p.won }) }) : n;
   }
 
-  async function askDelete(p: Player) {
+  function askDelete(p: Player) {
     doomed = p;
-    await tick();
-    cancelButton?.focus(); // a stray Enter must not delete anyone
   }
 
   async function confirmDelete() {
@@ -89,6 +89,7 @@
   $effect(() =>
     pushScope({
       name: "player",
+      root: () => section,
       text: () => input,
       handle: (a) => {
         if (a.type === "pick" && a.n <= shown.length) onchoose(shown[a.n - 1].name);
@@ -102,16 +103,19 @@
   // The delete confirmation gets every action; Esc/Backspace cancel, Enter and Tab work on its buttons.
   $effect(() => {
     if (!doomed) return;
-    return pushScope({
+    const pop = pushScope({
       name: "player-delete",
       modal: true,
       whileBusy: true,
+      root: () => dialog,
       handle: (a) => (a.type === "back" || a.type === "menu") && ((doomed = null), true),
     });
+    focusControl(cancelButton); // a stray Enter must not delete anyone
+    return pop;
   });
 </script>
 
-<section class="player">
+<section class="player" bind:this={section}>
   {#if greeting}
     <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name">{greeting}</span>{t("screen.player.helloClose")}</h1>
   {:else}
@@ -121,7 +125,7 @@
       <div class="names">
         {#each shown as p, i (p.name)}
           <div class="entry" style:--i={i}>
-            <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy}>
+            <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} data-focus-default>
               <kbd>{i + 1}</kbd>
               <span class="who">{p.name}</span>
               <span class="label">{games(p)}</span>
@@ -147,6 +151,7 @@
             spellcheck="false"
             placeholder={t("screen.player.placeholder")}
             disabled={busy}
+            data-focus-default
           />
           <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <kbd>Enter</kbd></button>
         </div>
@@ -157,7 +162,7 @@
 
     {#if doomed}
       <div class="backdrop">
-        <div class="dialog" role="alertdialog" aria-labelledby="delete-title">
+        <div class="dialog" bind:this={dialog} role="alertdialog" aria-labelledby="delete-title">
           <h2 id="delete-title">{t("screen.player.confirmOpen")}<span class="doomed">{doomed.name}</span>{t("screen.player.confirmClose")}</h2>
           <p>
             {t("screen.player.confirmBody", {
@@ -165,7 +170,7 @@
             })}
           </p>
           <div class="row">
-            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)}>{t("action.cancel")} <kbd>Esc</kbd></button>
+            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default>{t("action.cancel")} <kbd>Esc</kbd></button>
             <button class="danger" onclick={confirmDelete} disabled={deleting}>{t("screen.player.confirm")}</button>
           </div>
         </div>
@@ -231,7 +236,8 @@
       border-color 0.15s;
   }
   .entry:hover .delete,
-  .delete:focus-visible {
+  .delete:focus-visible,
+  .delete:global([data-nav]) {
     opacity: 1;
   }
   .delete:hover {
@@ -282,7 +288,8 @@
     font-size: calc(1.6 * var(--u));
     font-weight: 800;
   }
-  .danger:focus-visible {
+  .danger:focus-visible,
+  .danger:global([data-nav]) {
     outline-color: var(--paper);
   }
   .name-button {
@@ -300,7 +307,8 @@
       border-color 0.2s;
   }
   .name-button:hover:not(:disabled),
-  .name-button:focus-visible {
+  .name-button:focus-visible,
+  .name-button:global([data-nav]) {
     border-color: var(--sky);
     transform: translateY(calc(-0.3 * var(--u)));
   }

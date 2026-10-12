@@ -5,7 +5,7 @@
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types";
   import { t } from "../lib/i18n";
-  import { pushScope, type Dir } from "../lib/input.svelte";
+  import { focusControl, pushScope } from "../lib/input.svelte";
 
   type Group = Jokers["category"]["categories"][number];
 
@@ -21,10 +21,11 @@
 
   let group = $state<Group | null>(null);
   let grid = $state<HTMLDivElement>();
+  let picker = $state<HTMLDivElement>();
 
   async function focusFirst() {
     await tick();
-    grid?.querySelector<HTMLButtonElement>("button:not(:disabled)")?.focus();
+    focusControl(grid?.querySelector<HTMLButtonElement>("button:not(:disabled)"));
   }
   focusFirst();
 
@@ -38,29 +39,18 @@
     const slug = group.slug;
     group = null;
     await tick();
-    grid?.querySelector<HTMLButtonElement>(`[data-slug="${slug}"]`)?.focus();
+    focusControl(grid?.querySelector<HTMLButtonElement>(`[data-slug="${slug}"]`));
   }
 
-  /** Arrow keys move the focus over the enabled tiles, row by row. */
-  function move(dir: Dir) {
-    const tiles = [...(grid?.querySelectorAll<HTMLButtonElement>("button") ?? [])];
-    const at = tiles.indexOf(document.activeElement as HTMLButtonElement);
-    const cols = getComputedStyle(grid!).gridTemplateColumns.split(" ").length;
-    const step = { right: 1, left: -1, down: cols, up: -cols }[dir];
-    for (let i = at < 0 ? 0 : at + step; i >= 0 && i < tiles.length; i += step) {
-      if (!tiles[i].disabled) return tiles[i].focus();
-    }
-  }
-
-  // Esc cancels, Backspace goes back; Enter and Space press the focused tile natively (not handled).
+  // Esc cancels, Backspace goes back; arrows move over the picker (lib/focus.ts); Enter and Space press the focused tile.
   $effect(() =>
     pushScope({
       name: "cambiazo",
       modal: true,
+      root: () => picker,
       handle: (a) => {
         if (a.type === "menu") oncancel();
         else if (a.type === "back") back();
-        else if (a.type === "navigate") move(a.dir);
         else return false;
         return true;
       },
@@ -69,7 +59,7 @@
 </script>
 
 <div class="backdrop">
-  <div class="picker glass-strong">
+  <div class="picker glass-strong" bind:this={picker}>
     <h2>{group ? group.name : t("joker.category.title")}</h2>
     {#key group}
       <div class="grid" class:subs={group} bind:this={grid}>
@@ -141,7 +131,8 @@
     animation: deal 0.35s calc(var(--i) * 0.015s) var(--spring) backwards;
   }
   .tile:hover:not(:disabled),
-  .tile:focus-visible {
+  .tile:focus-visible,
+  .tile:global([data-nav]) {
     transform: translateY(calc(-0.3 * var(--u))) scale(1.04);
     outline: calc(0.22 * var(--u)) solid var(--sky);
     outline-offset: calc(0.15 * var(--u));

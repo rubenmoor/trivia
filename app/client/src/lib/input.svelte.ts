@@ -1,5 +1,6 @@
 // The action layer (plans/14-input.md, IN-2; plan 44): keys (later the gamepad) become actions, and
 // the top scope of a stack gets them. The only keydown listener of the client.
+import { forget, keyPressed, navigate, opener, press, show, track } from "./focus";
 import { t } from "./i18n";
 import type { JokerName } from "./types";
 
@@ -24,7 +25,10 @@ export type Scope = {
   keys?: Keys;
   /** True if handled; false passes the action down (unless `modal`). */
   handle: (action: Action) => boolean;
+  /** Where arrows move focus and confirm presses the focused control; a scope without one keeps confirm. */
   root?: () => HTMLElement | undefined;
+  /** Keeps its focus memory when pushed again (Start); others start fresh (new content). */
+  keep?: boolean;
   /** Blocks every scope below; always above the non-modal ones. */
   modal?: boolean;
   /** Gets actions while a transition runs (overlay, dialogs). */
@@ -61,12 +65,32 @@ const stack: Scope[] = [];
 
 /** Push a scope (in `$effect`); returns its pop. */
 export function pushScope(scope: Scope): () => void {
+  if (!scope.keep) forget(scope.name);
+  const restore = scope.modal ? opener() : null; // dialogs give focus back to their opener
   const at = scope.modal ? stack.length : stack.findIndex((s) => s.modal);
   stack.splice(at < 0 ? stack.length : at, 0, scope);
   return () => {
     const i = stack.indexOf(scope);
     if (i >= 0) stack.splice(i, 1);
+    restore?.();
   };
+}
+
+/** The scope whose root arrows move in: the top one with a root, never below a modal one. */
+function rooted(): [Scope, HTMLElement] | null {
+  for (let i = stack.length - 1; i >= 0; i--) {
+    const root = stack[i].root?.();
+    if (root) return [stack[i], root];
+    if (stack[i].modal) return null;
+  }
+  return null;
+}
+
+/** Focus a control: with the ring, unless the mouse was last (a dialog's first button). */
+export function focusControl(el: HTMLElement | null | undefined) {
+  if (!el) return;
+  if (lastDevice.current === "mouse") el.focus();
+  else show(el);
 }
 
 let busy = () => false;
@@ -75,12 +99,16 @@ let busy = () => false;
 export function dispatch(action: Action): boolean {
   lastDevice.current = action.device;
   const always = action.type === "menu" || action.type === "flag";
+  const top = stack.at(-1)?.root?.();
+  if (action.type === "confirm" && top && !busy() && press(top)) return true;
   for (let i = stack.length - 1; i >= 0; i--) {
     const s = stack[i];
     if ((always || s.whileBusy || !busy()) && s.handle(action)) return true;
-    if (s.modal) return false;
+    if (s.modal) break;
   }
-  return false;
+  if (action.type !== "navigate" || busy()) return false;
+  const at = rooted();
+  return at ? navigate(action.dir, at[0].name, at[1]) : false;
 }
 
 function textField(el: Element | null) {
@@ -89,6 +117,7 @@ function textField(el: Element | null) {
 }
 
 function keydown(e: KeyboardEvent, first: () => void) {
+  keyPressed(e.key);
   if (e.repeat) return;
   first();
   lastDevice.current = "keyboard";
@@ -109,6 +138,7 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   busy = opts.busy;
   const onkey = (e: KeyboardEvent) => keydown(e, opts.first);
   const onpointer = () => (lastDevice.current = "mouse");
+  const untrack = track();
   window.addEventListener("keydown", onkey);
   window.addEventListener("pointerdown", onpointer);
   window.addEventListener("click", opts.first);
@@ -116,5 +146,6 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
     window.removeEventListener("keydown", onkey);
     window.removeEventListener("pointerdown", onpointer);
     window.removeEventListener("click", opts.first);
+    untrack();
   };
 }
