@@ -7835,10 +7835,110 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: every current category, subcategory and bundle has a name in `en` and `de`; `qgen validate` is clean (no missing-name warnings, no unknown keys).', '2026-10-12T18:14:16Z', '2026-10-12T18:19:18Z', 413);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (417, 64, 'create tasks for plan 64', 'split', 'open', 1000, NULL, 'Split plan 64 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:20:34Z', NULL, 243);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (418, 65, 'create tasks for plan 65', 'split', 'open', 1000, NULL, 'Split plan 65 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:23:46Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (418, 65, 'create tasks for plan 65', 'split', 'done', 1000, '2026-10-12, tasks 420-423, 425-427, 429; decision 31 (K) blocks 429', 'Split plan 65 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:23:46Z', '2026-10-12T18:27:39Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (419, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:24:08Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (420, 65, 'Seen counters: decision entry and plan docs (D-28 superseded)', 'work', 'open', NULL, NULL, 'Plans first (AGENTS.md): write the decision and update the plan files before the code changes of plan 65.
+
+- `plans/decisions.md`: new entry (next number, D-82 unless taken) "Seen counters instead of burning", date 2026-10-12, gamemaster''s call. Content = plan 65: profile = save (player names are labels only); seen events (the ones that burned); save v3 `seen` rows, `blocked`, `notified_exhausted`; selection by `(count, category key)`; hard supply failure only when the whole pool minus blocked can''t fill 12 levels; low-supply warning (threshold K: pm decision 31, open; write "K: pm decision 31" until answered); exhausted subcategories (informational). Python referee (`app/server/game.py`, unused since PORT-7, deleted by plan 51) keeps its SQLite burn rules: record that divergence; `save.py` only checks the envelope. Supersedes D-28''s burn rules; related D-27, D-59, D-67, D-75.
+- Mark D-28 "superseded in part by D-82" (the burn rules; player names stay).
+- Update where they describe current rules (history stays, add pointers): `plans/02-question-pool.md`, `03-game-flow.md` (GF-5 supply check, GF-7 «Borrar jugador» keeps seen rows), `04-ui-tv-display.md`, `05-gamemaster-controls.md` («Saltar y quemar para todos» → «Bloquear pregunta»), `12-client-engine.md` (save v3), `13-game-modes.md` (multiplayer: every seen event counts for the save), `16-content-target.md` (CT-2 headline: games until the first repeat).
+- Add new task IDs in the owning plan files only if those files list tasks by ID for this kind of work; otherwise reference plan 65.
+
+Done when: the D-entry exists, `grep -n "burn" plans/0[2-5]*.md plans/1[236]*.md` hits only history or pointers to the new entry.', '2026-10-12T18:27:23Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (421, 65, 'Save v3: seen rows, blocked, notified_exhausted; seen events in the engine', 'work', 'open', NULL, NULL, 'Data model of plan 65 ("Profile = save", "Seen counter"). Selection behaviour stays as close to today as possible here: a question with count ≥ 1 or blocked is still excluded, so the parity fixtures keep replaying; the selection change is the next task.
+
+- `app/client/src/engine/state.ts`: `SAVE_VERSION = 3`; `SaveData.seen: SeenRow[]` (`{question_id, game_id, seen_on}`) replaces `burned`; `blocked: string[]`; `notified_exhausted: string[]`; `emptySave`. Remove `BurnRow`.
+- `engine/save.ts`: upgrade 2 → 3 in `UPGRADES`: each `burned` row with `player_id` → one `seen` row (`seen_on` = `burned_on`); `player_id: null` → `blocked` (deduplicated); `notified_exhausted: []`. Shape checks for the new keys.
+- `engine/game.ts`: `burn` → record one seen row per event (answered, joker skip/swap/Bájale/category, admin skip, Snipe hit), no per-player dedupe; undo removes exactly that game''s row for the question; `deletePlayer` (GF-7) keeps seen rows; admin "everyone" → `blocked`; outcome `admin_burn` → `admin_block` (keep reading `admin_burn` in old histories). Seen counts are for the whole save in every mode (no `pid` scoping); `players`/history unchanged.
+- UI copy: `es.ts` `skipAll` → «Bloquear pregunta»; comments in `Overlay.svelte`, `Player.svelte`, `lib/api.ts` (GF-7 text: deletes name and games, not what the family saw).
+- `app/server/save.py`: envelope check accepts version 3 with `seen`, `blocked` lists (the client writes v3; `migrate()` still writes v2, the client upgrades it); docstring. Check nothing else in `app/server/` reads the document''s `burned`.
+- Desktop: `app/desktop/save.mjs` only checks `version` is a number; confirm, no change expected.
+- Tests: `save.test.ts` (v2 → v3 cases: per-player rows, two players same question = count 2, null → blocked); `test/save.ts` snapshot and `game.test.ts`: map the fixtures'' `db.burned` to the v3 shape in the test helper (fixtures are frozen Python recordings, don''t edit them). If a scenario can''t match any more (e.g. GF-7 now keeps rows), adapt the comparison in the helper and say so in `fixtures/README.md`.
+- Migration on a copy of the family save: copy `state/game.json` to a temp dir, `parseSave` it, print counts (seen rows, blocked, distinct seen ids) vs. the v2 burns; never write `state/`.
+
+Checks: `npm test`, `npm run check`, `npm run build`; a short game via the engine API under node on a temp save (seen rows appear, undo removes one).', '2026-10-12T18:27:23Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (422, 65, 'Selection by seen count: available, draw, jokers, supply check', 'work', 'open', NULL, NULL, 'Plan 65, "Selection". Needs the save v3 task done.
+
+- `engine/selection.ts`: `available` excludes blocked, offered this game, inactive bundles (not seen). `draw` takes a count per question (e.g. `countOf: (q) => number`, default 0): after the shuffle sort by `(count, category key)`; lowest count always wins, category variety breaks ties; then the first candidate that keeps the later levels fillable (unchanged).
+- `engine/game.ts`: `availableNow` without the seen exclusion; counts from `save.seen`; jokers (`replacement`, `categoryCandidates`, `laterFill`, Snipe repeat) draw the same way (lowest count first). Supply check (GF-5, `supply`/`newGame`): fails only when the pool minus blocked can''t fill 12 levels; `player` no longer scopes it.
+- Tests: `invariants.test.ts`: "burned never come back" → "never a count-k card while a count-<k card fits the slot and keeps the later levels fillable" (random count maps, 0–3); `selection.test.ts` for the sort. Parity fixtures whose recorded draws or supply refusals assume burning (e.g. `tight` second game, `supply.json`) can''t match: retire or replace those scenarios with TS-native expectations and note it in `fixtures/README.md` (the Python recorder is frozen, plan 51). Keep only tests that stay useful (AGENTS.md).
+
+Checks: `npm test`, `npm run check`; throw-away: on the real `app/data/pool.json` with a fake save where 90 % of the approved questions are seen once, a full game still starts and only offers count-1 cards where no count-0 card fits.', '2026-10-12T18:27:23Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (423, 65, 'Supply outlook in the engine: fresh games left, bottleneck, exhausted subcategories', 'work', 'open', NULL, NULL, 'Engine side of plan 65''s "Low-supply warning" and "Exhausted subcategories"; the screen comes in a later task.
+
+- New function (e.g. `engine/outlook.ts`, exported via `engine/api.ts`): input save, data, choice (mode, bundles, age group, players for multiplayer modes). Output:
+  - `k` = largest k such that the count-0 questions fill `4 + k·b` slots per level: `assign` with a per-level demand (generalise `selection.assign`, default `PER_LEVEL`), binary search on k. `b` per mode from D-75: ≈ (12 + the standard joker set''s burns, D-74)/12 per level; × N players in `rr-competitive` and `timed` (check D-80 for timed: one shared question per round). Constants in one place, commented with D-75.
+  - `bottleneck`: the level(s) that fail first at k+1, as their difficulty ranges (merged, e.g. 13–15).
+  - `bundleHint`: an inactive bundle whose activation raises k (or null).
+  - `exhausted`: subcategories where every approved question in the active bundles within the age group''s overall difficulty span has count ≥ 1, minus `save.notified_exhausted`; and a helper that records them in `notified_exhausted` once shown. A subcategory leaves `notified_exhausted` when it has an unseen question again (prune on each call).
+- Performance: one call per game start on a 5000-question pool must stay well under 100 ms in the browser; measure under node with the real pool and note the time.
+- Tests only where they stay useful (a small synthetic pool for k and the bottleneck); otherwise a throw-away script on the real pool and a copy of the family save.
+
+Checks: `npm test`, `npm run check`.', '2026-10-12T18:27:23Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (424, 65, 'Start screen: low-supply warning and exhausted subcategories', 'work', 'dropped', 395, 'replaced by a corrected copy (wrong plan reference)', 'UI side of plan 65. Needs the supply outlook task (engine), the mode screen (plan 36, MD-7) and the choice screen (plan 59/plan 29 task 128: group and bundle choice) done: the warning shows after mode, bundles and age group are chosen, before level 1. If those screens are not there yet, stop and say so.
+
+- Warn when `k < K` (K = pm decision 31''s answer). Informational, «Jugar» stays.
+- Texts in `app/client/src/locales/es.ts` (LUI-1, `npm run check:literals -w app/client`):
+  - «Quedan preguntas nuevas para unas {n} partidas; después se repetirán algunas, sobre todo de dificultad {lo}–{hi}.» (plural/singular for n = 1)
+  - bundle hint, e.g. «Con el paquete {bundle} activado habría más.»
+  - k = 0: «En esta partida pueden salir preguntas que ya vieron.»
+  - exhausted: «Ya vieron todas las preguntas de: {list}» once per subcategory; mark them notified in the save when shown.
+- Reachable and dismissable with keys and pad (action layer, plan 44, if it exists; else the current key handling).
+- Record K in the D-entry of plan 65 (decisions.md) if it still says "pm decision 31".
+
+Checks: `npm run check`, `npm run build`, `check:literals`; in the browser (or the desktop shell) with a temp `TRIVIA_STATE` holding a crafted save: k ≥ K shows nothing, k < K the warning with the right range, k = 0 the repeat line, an exhausted subcategory once and not on the next start. Never write `state/`.', '2026-10-12T18:27:24Z', '2026-10-12T18:27:31Z', 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (425, 65, 'Authoring on save v3: save_file, qgen report, start page', 'work', 'open', NULL, NULL, 'Authoring reads the save (`authoring/tools/save_file.py`, D-59) and still assumes `burned`. Move it to v3 (plan 65).
+
+- `save_file.py`: `burned_ids(player)` → `blocked_ids()` plus `seen_counts()` (`{question_id: count}`), reading `seen`/`blocked`; a v2 document (not yet opened by the new client) is read with the same mapping as `engine/save.ts`''s upgrade.
+- `qgen report`: `--player` no longer scopes anything (profile = save): drop it; the supply line becomes "pool minus blocked", plus "unseen approved: N (seen once: …, twice+: …)".
+- `authoring/server/overview.py` (start page): supply per profile instead of per player; seen summary.
+- `authoring/tools/record_fixtures.py` still imports the Python referee and is deleted by plan 51; leave it.
+- Plan 51 task 300 (Supply via Node) passes `burned` ids to `supply.ts`: after this task those are `blocked`. Note it in that task''s plan only if `pm` allows; otherwise leave a line in `plans/backlog.md` so its worker sees it.
+- AGENTS.md "Commands": update the `qgen report` line if `--player` was mentioned.
+
+Checks: `qgen report`, `qgen validate`, `trivia-authoring` start page with a temp `TRIVIA_STATE` holding a v2 and a v3 `game.json` (asserted before the server starts); never write `state/`.', '2026-10-12T18:27:24Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (426, 65, 'CT-2 simulation with seen counts', 'work', 'open', NULL, NULL, '`qgen report --simulate` (`authoring/tools/sim/simulate.ts`, plan 62) still burns. Plan 65, "Also".
+
+- Simulate on a v3 save: games add seen rows; selection by count (the engine''s own `draw`, no copy). Remove the D-28 workarounds (rr-competitive burns for all, `player_id: null`).
+- Headline per cell stays "games until the first repeat" (first game that offers a count ≥ 1 card); since games no longer run dry, cap the run (e.g. first repeat + a few games or a max) and say so in the output.
+- Print the engine''s `k` (supply outlook task) for a fresh profile per cell as a cross-check next to the simulated number.
+- `--json` keys updated; D-75 multipliers unchanged.
+
+Checks: `qgen report --simulate --seeds 2` runs for all cells; the fresh-profile `k` and the simulated games until first repeat are in the same ballpark (note the numbers in the done note).', '2026-10-12T18:27:24Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (427, 65, 'Plan 65 close-out: full check on a copy of the family save', 'work', 'open', 385, NULL, 'Last task of plan 65.
+
+- On a temp `TRIVIA_STATE` with a copy of `state/game.json` (v2): start `trivia`, play a game through the browser (or the engine API under node): the save upgrades to v3, `PUT /api/save` accepts it, seen counts are right, the start screen shows the warning/exhausted notes as expected, undo and «Bloquear pregunta» work, «Borrar jugador» keeps seen rows.
+- Same with `trivia-desktop` on a temp save dir if the desktop shell exists.
+- `grep -rn "burned\|burn(" app/client/src app/server/save.py app/desktop authoring/tools/sim authoring/tools/save_file.py` only hits the v2 upgrade and history.
+- `directory.md` if files were added (e.g. `engine/outlook.ts`).
+- `npm test`, `npm run check`, `npm run build`, `qgen validate`. Never write `state/`.', '2026-10-12T18:27:24Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (428, 65, 'Start screen: low-supply warning and exhausted subcategories', 'work', 'dropped', 395, 'duplicate note line in body; re-added', 'note: replaced by a corrected copy (wrong plan reference)
+UI side of plan 65. Needs the supply outlook task (engine), the mode screen (plan 36, MD-7) and the choice screen (plan 29, task 128: group and bundle choice) done: the warning shows after mode, bundles and age group are chosen, before level 1. If those screens are not there yet, stop and say so.
+
+- Warn when `k < K` (K = pm decision 31''s answer). Informational, «Jugar» stays.
+- Texts in `app/client/src/locales/es.ts` (LUI-1, `npm run check:literals -w app/client`):
+  - «Quedan preguntas nuevas para unas {n} partidas; después se repetirán algunas, sobre todo de dificultad {lo}–{hi}.» (plural/singular for n = 1)
+  - bundle hint, e.g. «Con el paquete {bundle} activado habría más.»
+  - k = 0: «En esta partida pueden salir preguntas que ya vieron.»
+  - exhausted: «Ya vieron todas las preguntas de: {list}» once per subcategory; mark them notified in the save when shown.
+- Reachable and dismissable with keys and pad (action layer, plan 44, if it exists; else the current key handling).
+- Record K in the D-entry of plan 65 (decisions.md) if it still says "pm decision 31".
+
+Checks: `npm run check`, `npm run build`, `check:literals`; in the browser (or the desktop shell) with a temp `TRIVIA_STATE` holding a crafted save: k ≥ K shows nothing, k < K the warning with the right range, k = 0 the repeat line, an exhausted subcategory once and not on the next start. Never write `state/`.', '2026-10-12T18:27:31Z', '2026-10-12T18:27:35Z', 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (429, 65, 'Start screen: low-supply warning and exhausted subcategories', 'work', 'open', 395, NULL, 'UI side of plan 65. Needs the supply outlook task (engine), the mode screen (plan 36, MD-7) and the choice screen (plan 29, task 128: group and bundle choice) done: the warning shows after mode, bundles and age group are chosen, before level 1. If those screens are not there yet, stop and say so.
+
+- Warn when `k < K` (K = pm decision 31''s answer). Informational, «Jugar» stays.
+- Texts in `app/client/src/locales/es.ts` (LUI-1, `npm run check:literals -w app/client`):
+  - «Quedan preguntas nuevas para unas {n} partidas; después se repetirán algunas, sobre todo de dificultad {lo}–{hi}.» (plural/singular for n = 1)
+  - bundle hint, e.g. «Con el paquete {bundle} activado habría más.»
+  - k = 0: «En esta partida pueden salir preguntas que ya vieron.»
+  - exhausted: «Ya vieron todas las preguntas de: {list}» once per subcategory; mark them notified in the save when shown.
+- Reachable and dismissable with keys and pad (action layer, plan 44, if it exists; else the current key handling).
+- Record K in the D-entry of plan 65 (decisions.md) if it still says "pm decision 31".
+
+Checks: `npm run check`, `npm run build`, `check:literals`; in the browser (or the desktop shell) with a temp `TRIVIA_STATE` holding a crafted save: k ≥ K shows nothing, k < K the warning with the right range, k = 0 the repeat line, an exhausted subcategory once and not on the next start. Never write `state/`.', '2026-10-12T18:27:35Z', NULL, 418);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -8108,6 +8208,11 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Either way the Deck/Linux overlay is a risk; fallback stays the Windows build via Proton (D-63, SW-12).', 'steamworks-ffi-node: maintained, current SDK, documented electron-builder setup; overlay experimental (OSR)', NULL, '2026-10-12T14:42:40Z', '2026-10-12T17:07:55Z', 317, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (29, 'Desktop shell plays?', 'pending', '["plays fine", "problems (listed)"]', 'SW-2 (plan 54, D-71). `npm run build -w app/client && trivia-desktop`: play a short game with sound, F11 toggles fullscreen, ☰ → «Salir del juego» quits. Save stays in memory until SW-3. Automated check passed 2026-10-12: whole game to level 12 under Xvfb, every joker, undo, abandon, all media loaded, samples decoded, console clean, no Python.', NULL, NULL, '2026-10-12T15:48:35Z', NULL, 318, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (30, 'Start milestone "Conquer the world" (zh, ru, pt-BR)?', 'answered', '["start now"]', 'The milestone is on hold: its masterplan task waits for this decision. Answer when the launch languages (en, es, de) are far enough along.', 'Replaced by the milestone hold: milestone 12 is on hold (pm milestone hold 12); resume it with pm milestone resume 12 when the launch languages are far enough along.', NULL, '2026-10-12T16:46:08Z', '2026-10-12T17:25:38Z', NULL, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (31, 'Low-supply warning: below how many fresh games left (K) should the game start warn?', 'pending', '["3", "2", "5"]', 'Plan 65 replaces burning with seen counters. At game start the engine computes k = how many more games the profile can play with only unseen questions (per mode, bundles, age group). The start screen shows an informational warning («Quedan preguntas nuevas para unas 2 partidas; …», «Jugar» stays) when k < K. k = 0 shows «En esta partida pueden salir preguntas que ya vieron.»
+
+- 3 (plan proposal): a few nights of notice before repeats start.
+- 2: fewer warnings; notice only shortly before.
+- 5: early notice, more often shown.', NULL, NULL, '2026-10-12T18:26:35Z', NULL, 418, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -8398,6 +8503,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (284, 416, '2026-10-12T18:17:59Z', '2026-10-12T18:19:23Z', 'done', NULL, 0, 'b318329c52b3b1542dd989f91b9b82d16797c3ff', 'claude-opus-5-5[1m]', '4a7bf9aa-9bc2-4e7c-bc3d-47eef9cbc9ec', 9, 18, 10352, 300387, 35076, 0.5477974, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (285, 243, '2026-10-12T18:19:24Z', '2026-10-12T18:20:52Z', 'failed', 'the worker left changes that are not staged:
 ?? plans/24-profiles-and-repeats.md', 0, 'f2431b45c607a93f3acfe171b69c7d9bfa8ad573', 'claude-opus-5-5[1m]', '2c6403fc-4334-4708-be0c-5216c61b563c', 11, 20, 7223, 447112, 46817, 0.6084984, 553875);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (286, 418, '2026-10-12T18:25:01Z', '2026-10-12T18:27:50Z', 'done', NULL, 0, '1651f573ac9726338eb618d4cd45bace1e5d471f', 'claude-opus-5-5[1m]', 'b176877e-fbe3-4012-8866-0b314b0b43e1', 19, 38, 15312, 1031131, 66567, 1.0451541999999998, 583141);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -8472,3 +8578,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (353, 28);
 INSERT INTO task_decision (task_id, decision_id) VALUES (355, 29);
 INSERT INTO task_decision (task_id, decision_id) VALUES (374, 30);
 INSERT INTO task_decision (task_id, decision_id) VALUES (381, 27);
+INSERT INTO task_decision (task_id, decision_id) VALUES (424, 31);
+INSERT INTO task_decision (task_id, decision_id) VALUES (428, 31);
+INSERT INTO task_decision (task_id, decision_id) VALUES (429, 31);
