@@ -629,3 +629,17 @@ Template:
   - **Shell needs:** several gamepads via the Gamepad API and the shared keyboard, nothing more; no LAN server, no firewall prompt (D-63's phone-buzzer server dropped).
 - Consequences: Plan 13 specs the three modes (MD-8, MD-9), plan 14 section 3 the input (IN-6); IN-7 closed (no phones). Building them stays "Later", after the release (plan 43). Remote Play Together works once local multi-pad input works.
 - Supersedes / related: D-28, D-38, D-63 (LAN server note), D-74, D-75; plans 13, 14, 16, 34, 38, 41
+
+## D-78: Launch languages es, en, de; base in es-419 with an es-ES variant
+- Date: 2026-10-12
+- Context: OQ-31, I18N-1 (plan 37); pm decisions 26 (launch languages) and 27 (Spanish variety, store languages). Today: Spanish with Colombian usage (D-6); regions are bundles (D-39, D-49); store names D-50.
+- Decision:
+  - **Launch languages:** Spanish, English, German (`es`, `en`, `de`). Later: Simplified Chinese, Russian, Portuguese (Brazil) (`zh-Hans`, `ru`, `pt-BR`), milestone 12 "Conquer the world" (on hold).
+  - **Spanish variety:** two variants.
+    - `base` in neutral Latin American Spanish (`es-419`); the ~40 Colombianisms are rewritten through the pipeline (D-36), S4 content work.
+    - `es-ES` variant only where the wording differs: regionalisms, `vosotros` in the UI.
+    - The `colombia` bundle keeps its Colombian voice.
+    - No finer variants; regional flavour comes from bundles (later e.g. `mexico`, `argentina`).
+  - **Steam store languages:** Spanish – Latin America, Spanish – Spain, English, German.
+- Consequences: LUI-5 = `en`, `de` catalogs plus an `es-ES` override of `es`; QT-6 targets `en`, `de`; the house style says neutral Latin American Spanish for `base`. D-75's target applies to es, en, de; whether a translated pool counts toward a language's 5000 is left to 15b/S4 (not decided here). Plan 24 (`en.ts`) becomes launch work.
+- Supersedes / related: D-6 (Colombian usage, now `colombia` only), D-39, D-49, D-50, D-75; plans 15, 15a, 15b, 15c, 24, 37, 38

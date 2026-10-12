@@ -17,4 +17,4 @@ Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6),
 - [ ] RG-2 Tag the existing pool: an LLM pass proposes `co` or `null` per question, and the gamemaster checks the proposals in the review tool (filter by proposed region). Can start now.
 - [ ] RG-3 Region filter in the selection (engine, 12) and in `qgen.py report`.
 - [ ] RG-4 `qgen.py draft --region co`: generate regional questions on purpose.
-- [ ] RG-5 Decide which regional packs come next (by launch language, OQ-31).
+- [ ] RG-5 Decide which regional packs come next (by launch language). *2026-10-12, checked against D-78: still open; Spanish candidates `mexico`, `argentina` (regional flavour via bundles, no finer Spanish variants); en/de packs undecided.*

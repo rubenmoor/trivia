@@ -8,7 +8,6 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
 
 ### Added 2026-10-07 (Steam release, [`11-steam.md`](11-steam.md))
-- **OQ-31** Launch languages (Spanish only? plus English? more?) and the Spanish variety: Colombian as today, or neutral Spanish with Colombian variants?
 - **OQ-33** Price model (paid, free, free + paid packs), and who holds the Steamworks account (a person or a company; tax)?
 - **OQ-35** Code and content license (the repo has no `LICENSE` today); does new release content stay public on GitHub?
 
@@ -16,6 +15,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-46** Should a `colombia` question also have to use a `colombia` subcategory? 19 `colombia` questions use a `base` subcategory today (Historia: Grito de Independencia, Boyacá, Panamá; Navidad: novena; Piratas: Cartagena's walls; Mundiales de fútbol: James's goal; …). The game's «Cambiazo» picker then offers «Historia» and serves a Colombian question. If yes, `colombia` needs subcategories like «Historia de Colombia» and «Literatura colombiana».
 
 ## Resolved
+- **OQ-31** Launch languages es, en, de (zh-Hans, ru, pt-BR later, milestone 12); `base` in neutral Latin American Spanish (es-419) plus an es-ES variant where wording differs; `colombia` keeps its Colombian voice; store: Spanish – Latin America, Spanish – Spain, English, German (D-78).
 - **OQ-37** Multiplayer: round-robin co-op, round-robin competitive, competitive (timed); one gamepad per player, keyboard, mouse, shared keyboard; no phones (D-77).
 - **OQ-32** Content target: 5000 approved per launch language (es, en, de) with D-53's mix; no games-per-player number, CT-2 reports it for information (D-75).
 - **OQ-30** No default mode: five game modes; no presets, no checkpoint, no skip outside gamemaster mode; «Reportar pregunta» only logs (D-74).

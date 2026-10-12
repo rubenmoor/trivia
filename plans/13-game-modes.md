@@ -2,7 +2,7 @@
 
 **Status:** modes decided (D-74, multiplayer D-77); MD-6.. open
 
-Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them.
+Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them. Spanish names: «Solo o en grupo» fixed, the others proposals ([15a](15a-ui-translation.md) "Mode names").
 
 ## Modes
 Shared by every mode except gamemaster mode (D-74):
@@ -12,7 +12,7 @@ Shared by every mode except gamemaster mode (D-74):
 - Input: gamepads, keyboard, mouse; no phones. Multiplayer modes add a "shared keyboard": one key per player hands them keyboard and mouse until their turn is done ([14](14-input.md)).
 - Age group: the mode never shifts the age-group window (D-38, [21](21-age-groups.md)); no change to `age-groups.json`.
 
-### Gamemaster mode (`gamemaster`, today's game)
+### Gamemaster mode (`gamemaster`, today's game; es proposal «Modo anfitrión»)
 - One team; one person, the gamemaster, holds every control (keyboard, mouse, gamepad, switchable any time).
 - "Configure game" screen with full customization before every game (MD-11).
 - Gamemaster menu (`Esc`): arbitrary cheats: manage jokers, skip, replace the current question, undo, … (MD-12; today's overlay, D-30, MD-4).
@@ -27,7 +27,7 @@ Shared by every mode except gamemaster mode (D-74):
 ### Multiplayer modes (D-77)
 Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pregunta» only logs (plan 36); achievements unless customized. Input: one gamepad per player, keyboard, mouse, shared keyboard ([14](14-input.md) section 3). Built "Later" (MD-8, MD-9, IN-6).
 
-### Round-robin co-op (`rr-coop`)
+### Round-robin co-op (`rr-coop`; es proposal «Por turnos en equipo»)
 - Turn order: one question per player, in join order, round after round.
 - One team, one game, one age group.
 - Jokers: one shared standard set (3 × Soplo, 1 × each other joker); any player may use what's left on their turn.
@@ -35,14 +35,14 @@ Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pre
 - No timer.
 - Burning: ≈ 1 game's burns (12 + the standard set's burns).
 
-### Round-robin competitive (`rr-competitive`)
+### Round-robin competitive (`rr-competitive`; es proposal «Por turnos, todos contra todos»)
 - Turn order: one question per player, in join order; each turn plays that player's own game.
 - Every player: own game, own level, own standard joker set, own age group.
 - Drop-out and win: a wrong answer ends only that player's game; first to level 12 wins.
 - No timer.
 - Burning: ≈ N players × 1 game's burns.
 
-### Competitive timed (`timed`)
+### Competitive timed (`timed`; es proposal «Contrarreloj»)
 - No turns: all answer the same question at once, each with their own input.
 - Own track per player; one age group for everyone.
 - Difficulty: the question's level = average of the active players' levels (rounded).

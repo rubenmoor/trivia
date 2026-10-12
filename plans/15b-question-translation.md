@@ -2,7 +2,7 @@
 
 **Status:** stub
 
-Sub-plan of [15](15-i18n.md). Translates the question pool into the launch languages (OQ-31). This is the big one: a question is more than its text. Its difficulty, distractors, hints and image all have to work in the new language and culture, so every translated question goes through rating, fact-checking and review again.
+Sub-plan of [15](15-i18n.md). Translates the question pool into the launch languages: English and German (D-78); Simplified Chinese, Russian and Portuguese (Brazil) later (milestone 12, on hold). This is the big one: a question is more than its text. Its difficulty, distractors, hints and image all have to work in the new language and culture, so every translated question goes through rating, fact-checking and review again.
 
 ## What a translation has to get right
 - **Text:** the question, the answer, the three wrong answers, the three hints, the description (D-8) and the `fun_fact`. Adapt, don't translate literally: units, the answer format, idioms.
@@ -34,4 +34,4 @@ A new step in `authoring/tools/qgen.py`, reusing the existing steps:
 - [ ] QT-3 `rate` and `factcheck` per locale.
 - [ ] QT-4 Review tool: side-by-side locale view.
 - [ ] QT-5 Pilot: translate 50 questions to English, review them, and measure the reject rate and cost before the full run.
-- [ ] QT-6 Full translation per launch language; native-speaker spot check.
+- [ ] QT-6 Full translation per launch language: `en`, `de` (D-78); native-speaker spot check. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
