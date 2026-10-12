@@ -1,0 +1,5 @@
+[
+{"bundle": "base", "name": "Ciencia", "slug": "ciencia", "subcategories": ["Planetas", "Inventos"]},
+{"bundle": "base", "name": "Cultura", "slug": "cultura", "subcategories": ["Música", "Fútbol"]},
+{"bundle": "colombia", "name": "Colombia", "slug": "colombia", "subcategories": ["Ciudades de Colombia", "Comida colombiana"]}
+]

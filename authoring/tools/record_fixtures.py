@@ -28,9 +28,52 @@ for _db in (game.DB, selection.STATE_DB):
 FIXTURES = layout.REPO / "app" / "client" / "src" / "engine" / "fixtures"
 START = datetime.datetime(2026, 1, 1)
 
-CATEGORIES = []  # categories.load() output (with "bundle")
-POOLS = {}  # pool name -> questions (pool.json entries)
 SCENARIOS = {}  # name -> (about, seed, pool name, fn(rec))
+
+
+# Synthetic categories and pools --------------------------------------------------------------------
+
+CATEGORIES = [  # categories.load() output (with "bundle")
+    {"slug": "ciencia", "name": "Ciencia", "bundle": "base", "subcategories": ["Planetas", "Inventos"]},
+    {"slug": "cultura", "name": "Cultura", "bundle": "base", "subcategories": ["Música", "Fútbol"]},
+    {"slug": "colombia", "name": "Colombia", "bundle": "colombia",
+     "subcategories": ["Ciudades de Colombia", "Comida colombiana"]},
+]
+SUBS = [(s, c["bundle"]) for c in CATEGORIES for s in c["subcategories"]]
+
+
+def media(i):
+    kind = ["image", "image", "audio", "video"][i % 4]
+    return {"type": kind, "role": "illustrative", "file_url": f"https://example.org/{kind}/{i}",
+            "source_url": f"https://example.org/file/{i}", "credit": f"Autor {i} · CC BY 4.0"}
+
+
+def make_pool(prefix, counts):
+    """`counts[d - 1]` approved questions of difficulty d; subcategories rotate per difficulty, hints 0–3."""
+    out = []
+    for d, count in enumerate(counts, 1):
+        for k in range(count):
+            i = len(out) + 1
+            sub, bundle = SUBS[(k + d) % len(SUBS)]
+            out.append({
+                "id": f"{prefix}-{i:03d}", "status": "approved", "difficulty": d, "subcategory": sub,
+                "bundle": bundle, "description": f"Pista de la carta {i} ({sub}, nivel {d}).",
+                "question": f"¿Pregunta {i} sobre {sub.lower()}, dificultad {d}?",
+                "answer": f"Respuesta {i}", "wrong_answers": [f"Falsa {i}{x}" for x in "abc"],
+                "hints": [f"Pista {i}.{h}" for h in range(1, (i % 4) + 1)],
+                "media": media(i), "fun_fact": f"Dato curioso {i}.",
+                "background": {"file_url": f"https://example.org/bg/{i}", "source_url": f"https://example.org/file/bg{i}",
+                               "credit": f"Fondo {i} · CC BY-SA 4.0"} if i % 7 == 0 else None})
+    return out
+
+
+POOLS = {  # pool name -> questions (pool.json entries)
+    # Several games per player, with jokers.
+    "main": make_pool("m", [8, 8, 8, 9, 9, 9, 9, 9, 10, 11]),
+    # Exactly the 48 cards of one game: every question is needed, so no replacement ever fits
+    # (Bájale, Cambiazo, purge, snipe hit) and a player's second game fails the supply check.
+    "tight": make_pool("t", [4, 4, 4, 4, 4, 4, 4, 4, 8, 8]),
+}
 
 
 def scenario(name, about, seed, pool="main"):
