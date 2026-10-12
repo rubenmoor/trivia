@@ -835,11 +835,11 @@ def translated_drafts(d):
         yield f.stem, out
 
 
-def media_title(q):
+def media_title(q, slot="media"):
     """The picked file's title from its candidates, if they are still cached."""
     import media as media_tool
-    found = media_tool.load_candidates(q["id"], "media") or {"candidates": []}
-    url = q["media"].get("source_url")
+    found = media_tool.load_candidates(q["id"], slot) or {"candidates": []}
+    url = q[slot].get("source_url")
     return next((c["title"] for c in found["candidates"] if url and c.get("page_url") == url), None)
 
 
@@ -931,6 +931,37 @@ def merge_translations(d):
     rel = translations.path(locale).relative_to(ROOT)
     print(f"merged {len(added)} translation(s) into {rel}; {len(away)} not travelling (not-travelling.json)"
           + (f"; waiting for rate/factcheck: {', '.join(waiting)}" if waiting else ""))
+
+
+def locale_questions(locale):
+    """The locale's translations as played: the source's play fields under the translated text,
+    difficulty, status, batch and review; `source` is the Spanish text."""
+    src = {q["id"]: q for q in load_json(POOL)["questions"]}
+    return [{**{k: src[t["id"]].get(k) for k in ("id", "subcategory", "bundle", "axes", "style", "media", "background")},
+             **{k: t[k] for k in translations.TEXT_FIELDS},
+             **{k: t.get(k) for k in ("difficulty", "status", "batch", "review")}, "locale": locale,
+             "source": {k: src[t["id"]][k] for k in translations.TEXT_FIELDS}}
+            for t in translations.load(locale)["questions"] if t["id"] in src]
+
+
+def update_translations(locale, changes):
+    """Apply {id: change(t)} to the locale file in one write."""
+    doc = translations.load(locale)
+    for t in doc["questions"]:
+        if t["id"] in changes:
+            changes[t["id"]](t)
+    translations.save(locale, doc)
+
+
+def translator_notes(d):
+    return {t["id"]: t["notes"] for f in sorted((d / "translations").glob("*.json")) for t in load_json(f)["items"]}
+
+
+def tmp_ids(d):
+    """Pool id → the run's draft tmp_id (ids.json); a translation run's drafts carry the source id."""
+    if run_locale(d):
+        return {i: i for i in load_json(d / "merged.json", [])}
+    return {v: k for k, v in load_json(d / "ids.json", {}).items()}
 
 
 GROUP_SIZE = 10  # questions per rate/revise call (PE-1, PE-2)
@@ -2171,7 +2202,10 @@ def review_problems(q):
 
 def batch_questions(run, statuses=("draft",)):
     """The pool's questions of this run that are still waiting for the given steps.
-    A `qgen rework` run's questions are the ids in its run.json (QG-23)."""
+    A `qgen rework` run's questions are the ids in its run.json (QG-23); a translation run's are its
+    entries in the locale file, as played (locale_questions)."""
+    if locale := run_locale(WORK / run):
+        return [q for q in locale_questions(locale) if q["batch"] == run and q["status"] in statuses]
     ids = set((load_json(WORK / run / "run.json", {}) or {}).get("ids") or [])
     return [q for q in load_json(POOL)["questions"]
             if (q["id"] in ids if ids else q.get("batch") == run) and q["status"] in statuses]
@@ -2270,13 +2304,17 @@ def slot_input(d, q, slot):
 
 def cmd_review(args):
     """The LLM review (D-32 criteria, prompts/review.md): one call per question.
-    Round 1 reviews every merged question; round 2 only those whose media was searched again."""
+    Round 1 reviews every merged question; round 2 only those whose media was searched again.
+    A translation run (plan 66): the translation with its Spanish source and the source's picked media,
+    no new search; round 1 also decides its not-travelling ids in one line."""
     d = run_dir(args)
     reviews = d / "reviews"
-    tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
+    tmp_of = tmp_ids(d)
     ratings, checks = collect(d)
-    pool = load_json(POOL)["questions"]
-    system = prompt("house-style", "review")
+    locale = run_locale(d)
+    pool = locale_questions(locale) if locale else load_json(POOL)["questions"]
+    system = prompt("house-style", "review", *(["translate-review"] if locale else []), locale=locale or "es")
+    notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
     rework = mode in ("rework", *SCANS)
     todo = []
@@ -2286,11 +2324,35 @@ def cmd_review(args):
             todo.append((q, r))
         if args.round == 2 and (r.get("researched") or fixed(r) and not rework) and "round2" not in r:
             todo.append((q, r))
+    if locale and args.round == 1:
+        src = {q["id"]: q for q in load_json(POOL)["questions"]}
+        todo += [({**x, "not_travelling": True, "source": src[x["id"]]}, r)
+                 for x in load_json(d / "not-travelling.json", [])
+                 if "round1" not in (r := load_json(reviews / f"{x['id']}.json", {}))]
+
+    def translation_payload(q, r, tmp):
+        if q.get("not_travelling"):
+            return {"not_travelling": {k: q[k] for k in ["id", "reason", "notes"]},
+                    "source": {k: q["source"][k] for k in ["subcategory", "difficulty", *translations.TEXT_FIELDS]}}
+        check = fact_check(r, checks.get(tmp))
+        return {
+            "question": {k: q[k] for k in ["id", "bundle", "subcategory", "difficulty", *translations.TEXT_FIELDS]},
+            "source": q["source"],
+            "notes": notes.get(q["id"], ""),
+            "rater_notes": (ratings.get(tmp) or {}).get("notes"),
+            "fact_check": {k: check[k] for k in ["verdict", "problem", "correction"]} if check else "not needed",
+            "related": related_questions(q, pool),
+            "media": {**{k: q["media"].get(k) for k in ["type", "role", "query", "note"]}, "title": media_title(q)},
+            "background": {"title": media_title(q, "background")} if q.get("background") else None,
+            "can_search_again": False,
+            "can_fix": args.round == 1,
+            "only_shortened": False,
+        }
 
     def work(item):
         q, r = item
         tmp = tmp_of.get(q["id"])
-        payload = {
+        payload = translation_payload(q, r, tmp) if locale else {
             "question": {k: q[k] for k in ["id", "bundle", "subcategory", "difficulty", "description", "question",
                                            "answer", "wrong_answers", "hints", "fun_fact"]},
             "rater_notes": (ratings.get(tmp) or {}).get("notes") or (q.get("quality") or {}).get("notes"),
@@ -2331,14 +2393,18 @@ def cmd_fix(args):
     reviewer's `fix` goes to the revise prompt. Changed facts are checked again; round 2 reviews it.
     Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the gamemaster.
     In a `qgen rework` run (QG-23) the issue is the needs_work feedback; kept and revised questions
-    go back to draft, are all fact-checked and reviewed again, with a new media search if needed."""
+    go back to draft, are all fact-checked and reviewed again, with a new media search if needed.
+    A translation run (plan 66): the reviser sees the Spanish source; only the translated text and
+    difficulty are taken (media stays the source's), `fix.previous` keeps the old text."""
     d = run_dir(args)
     rework = is_rework(args.run)
     mode = run_mode(args.run)
+    locale = run_locale(d)
     scanned = load_json(d / "run.json", {}).get("issues") if mode in SCANS else None
-    tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
+    tmp_of = tmp_ids(d)
     _, checks = collect(d)
-    system = prompt("house-style", "revise")
+    system = prompt("house-style", "revise", locale=locale or "es")
+    lo, hi = load_age_groups()["scale"]
     today = datetime.date.today().isoformat()
     revise, recheck = [], []
     for q in batch_questions(args.run, ("draft", "needs_work", "approved")):
@@ -2393,10 +2459,47 @@ def cmd_fix(args):
         if missing:
             raise RuntimeError(f"no fix result for {', '.join(missing)}")
 
+    def work_translation(group):
+        items = []
+        for q, _, _, issue in group:
+            issues = [f"translation into {LANGUAGES[locale]} of the Spanish `source`, which stays as it is; {issue}"]
+            c = checks.get(q["id"])
+            if c and c["verdict"] != "confirmed":
+                issues.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
+            items.append({**for_review({**q, "tmp_id": q["id"]}), "source": q["source"], "issues": issues,
+                          "background_query": "", "needs_media": False})
+        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
+                     args.model, d)
+        got = {x["id"]: x for x in out["results"]}
+        changes = {}
+        for q, path, r, _ in group:
+            rev = got.get(q["id"])
+            if rev is None:
+                continue
+            fix = {"action": rev["action"], "reason": rev["reason"]}
+            if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
+                fix["action"], fix["reason"] = "malformed", "; ".join(bad)
+            if fix["action"] == "revise":
+                new = {**{k: rev["question"][k] for k in translations.TEXT_FIELDS},
+                       "difficulty": min(hi, max(lo, rev["question"]["difficulty"]))}
+                fix["changed"] = sorted(k for k in new if new[k] != q[k])
+                fix["previous"] = {k: q[k] for k in fix["changed"]}
+                changes[q["id"]] = lambda t, new=new: t.update(new)
+            r["fix"] = fix
+            save_json(path, r)
+            if needs_recheck(fix, False):
+                recheck.append((q, path, r))
+            progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
+        with _pool_lock:
+            update_translations(locale, changes)
+        if missing := [q["id"] for q, *_ in group if q["id"] not in got]:
+            raise RuntimeError(f"no fix result for {', '.join(missing)}")
+
     def check(group):
         ids = {q["id"] for q, _, _ in group}
-        qs = [x for x in load_json(POOL)["questions"] if x["id"] in ids]
-        user = "## Questions (Spanish)\n" + json.dumps([for_review({**q, "tmp_id": q["id"]}) for q in qs], ensure_ascii=False)
+        qs = [x for x in (batch_questions(args.run, ("draft",)) if locale else load_json(POOL)["questions"])
+              if x["id"] in ids]
+        user = f"## Questions ({LANGUAGES.get(locale, 'Spanish')})\n" + json.dumps([for_review({**q, "tmp_id": q["id"]}) for q in qs], ensure_ascii=False)
         out = claude(prompt("factcheck"), user, FACT_SCHEMA, args.check_model, d, web=True)
         got = {c["id"]: c for c in out["checks"]}
         for q, path, r in group:
@@ -2407,7 +2510,7 @@ def cmd_fix(args):
         if ids - got.keys():
             raise RuntimeError(f"no fact check for {', '.join(sorted(ids - got.keys()))}")
 
-    errors = parallel(work, chunks(revise), args.jobs, "fix", "calls")
+    errors = parallel(work_translation if locale else work, chunks(revise), args.jobs, "fix", "calls")
     if any(isinstance(e, UsageLimit) for e in errors):
         return errors
     return errors + parallel(check, chunks(recheck), args.jobs, "fix factcheck", "calls")
@@ -2479,7 +2582,9 @@ def cmd_record(args):
     needs_work. Picks are recorded without downloading; `sync` fills the cache."""
     import media as media_tool
     d = run_dir(args)
-    tmp_of = {v: k for k, v in load_json(d / "ids.json", {}).items()}
+    if run_locale(d):
+        return record_translations(args, d)
+    tmp_of = tmp_ids(d)
     _, checks = collect(d)
     today = datetime.date.today().isoformat()
     changes, missing = {}, []
@@ -2526,6 +2631,63 @@ def cmd_record(args):
         progress.detail(f"  record: {q['id']}: {decision}")
     update_pool(changes)
     save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
+    if missing:
+        print(f"  no review yet: {', '.join(missing)}", file=sys.stderr)
+        return [RuntimeError(f"{len(missing)} question(s) without a review")]
+    return []
+
+
+def record_translations(args, d):
+    """cmd_record for a translation run (plan 66): reviews into the locale file; no media rules, a fact
+    check that isn't confirmed means needs_work. A confirmed not-travelling id → `translatable: false`
+    on the source (an older translation of it is rejected); else it is translated again next run."""
+    locale = run_locale(d)
+    _, checks = collect(d)
+    today = datetime.date.today().isoformat()
+    changes, missing = {}, []
+    snapshot = load_json(d / "recorded.json", {})
+
+    def review_of(decision, feedback, kinds, model):
+        return {"decision": decision, "feedback": feedback if decision != "approved" else None,
+                "problems": [p for p in PROBLEMS if p in kinds] if decision != "approved" else [],
+                "reviewed_on": today, "reviewer": "llm", "model": model, "previous": None}
+
+    for q in batch_questions(args.run):
+        full = load_json(d / "reviews" / f"{q['id']}.json", {})
+        r = final_review(full)
+        if r is None:
+            missing.append(q["id"])
+            continue
+        decision, kinds = r["decision"], set(r.get("problems") or [])
+        problems = [r["feedback"].strip()] if r["feedback"].strip() else []
+        check = fact_check(full, checks.get(q["id"]))
+        if check and check["verdict"] != "confirmed":
+            decision = "needs_work"
+            kinds.add("fact")
+            problems.append(f"Fact check: {check['verdict']}. {check['problem']}".strip())
+        if decision == "needs_work" and not problems:
+            problems.append(r["reasons"])
+        review = review_of(decision, " ".join(problems), kinds, r["model"])
+        changes[q["id"]] = lambda t, review=review: t.update(review=review, status=review["decision"])
+        snapshot[q["id"]] = {"decision": decision, "problems": review["problems"]}
+        progress.detail(f"  record: {q['id']}: {decision}")
+    away, confirmed = load_json(d / "not-travelling.json", []), {}
+    for x in away:
+        r = load_json(d / "reviews" / f"{x['id']}.json", {}).get("round1")
+        if r is None:
+            missing.append(x["id"])
+            continue
+        x["decision"], x["feedback"] = r["decision"], r["feedback"].strip() or None
+        if r["decision"] == "approved":
+            confirmed[x["id"]] = review_of("rejected", f"Doesn't travel ({x['reason']}): {r['reasons']}", {"other"}, r["model"])
+        progress.detail(f"  record: {x['id']}: not travelling, " + ("confirmed" if x["id"] in confirmed else "translate again"))
+    for i, review in confirmed.items():
+        changes.setdefault(i, lambda t, review=review: t.update(review=review, status="rejected"))
+    update_translations(locale, changes)
+    if confirmed:
+        update_pool({i: lambda q: q.update(translatable=False) for i in confirmed})
+    save_json(d / "not-travelling.json", away)
+    save_json(d / "recorded.json", snapshot)
     if missing:
         print(f"  no review yet: {', '.join(missing)}", file=sys.stderr)
         return [RuntimeError(f"{len(missing)} question(s) without a review")]
@@ -2620,8 +2782,14 @@ def is_major(a):
     return a["verdict"] == "problem" and a["severity"] == "major"
 
 
+def run_questions(run):
+    """The questions a run's audit reads: the locale's translations for a translation run, else the pool."""
+    locale = run_locale(WORK / run)
+    return locale_questions(locale) if locale else load_json(POOL)["questions"]
+
+
 def audit_input(q, pool):
-    """The question as played (plan 16): no review, fix, rater notes or fact check."""
+    """The question as played (plan 16): no review, fix, rater notes or fact check; a translation with its source."""
     import media as media_tool
 
     def slot(spec, name):
@@ -2633,7 +2801,7 @@ def audit_input(q, pool):
                                            "answer", "wrong_answers", "hints", "fun_fact"]},
             "media": slot(q["media"], "media"),
             "background": slot(q["background"], "background") if q.get("background") else None,
-            "related": related_questions(q, pool)}
+            "related": related_questions(q, pool), **({"source": q["source"]} if q.get("source") else {})}
 
 
 def cmd_audit(args):
@@ -2657,10 +2825,11 @@ def audit_ids(run, ids, args):
     """Audit the ids not yet audited in work/<run>/audit/."""
     d = WORK / run / "audit"
     d.mkdir(parents=True, exist_ok=True)
-    pool = load_json(POOL)["questions"]
+    pool = run_questions(run)
     by_id = {q["id"]: q for q in pool}
     todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
-    system = prompt("house-style", "audit")
+    locale = run_locale(WORK / run)
+    system = prompt("house-style", "audit", *(["translate-review"] if locale else []), locale=locale or "es")
     lo, hi = load_age_groups()["scale"]
     today = datetime.date.today().isoformat()
 
@@ -2756,7 +2925,7 @@ def audit_section(run):
     if not found:
         return []
     dec = llm_decisions(run)
-    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    by_id = {q["id"]: q for q in run_questions(run)}
     pct = lambda n, of: f"{n} of {of} ({100 * n / of:.0f} %)" if of else "0 of 0"
     back = run_mode(run) == "backaudit"
     what = "every question of the slice (plan 57" if back else "a seeded sample (plan 16"
