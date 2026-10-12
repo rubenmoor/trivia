@@ -4977,12 +4977,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Help text in the module docstring; command line in `AGENTS.md` ("Commands", Media line) and `README.md` next to the other `trivia-media` lines.
 
 Done when: `trivia-media licenses` lists exactly q-0021 (GFDL 1.2), q-1100 and q-1194 (PD-US only), lists the restriction flags (26 on 2026-10-11) without classifying them, and exits 1; `--json` and `--status approved` work (q-0021 is needs_work, so it drops out with `--status approved`).', '2026-10-12T03:31:45Z', '2026-10-12T03:34:02Z', 304);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (308, 52, 'PUB-1 close-out: tally in plans/17-publishing.md', 'work', 'open', NULL, NULL, 'Run `trivia-media licenses` (built by the previous task of this plan) and update `plans/17-publishing.md`:
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (308, 52, 'PUB-1 close-out: tally in plans/17-publishing.md', 'work', 'done', NULL, '2026-10-11, plans/17-publishing.md', 'Run `trivia-media licenses` (built by the previous task of this plan) and update `plans/17-publishing.md`:
 
 - "Media licenses" table: refresh the counts per licence family from the report''s tally; the public-domain row points to the verdict (PD-USGov ok, PD-US only replaced, D-entry from the first task of this plan).
 - PUB-1 `[x]` with a note: date, distinct files, replacement count per reason, restriction flag count.
 
-Done when: the table matches the report''s tally and PUB-1 is ticked. Docs only, no code.', '2026-10-12T03:31:45Z', NULL, 304);
+Done when: the table matches the report''s tally and PUB-1 is ticked. Docs only, no code.', '2026-10-12T03:31:45Z', '2026-10-12T03:34:32Z', 304);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (309, 53, 'Server: licence verdicts, licence=replace filter, all-provider search', 'work', 'open', NULL, NULL, 'Server side of plan 53 (PUB-3). Needs plan 52''s `providers.licence_verdict(slot)` (task 306); no classification of its own.
 
 - `authoring/server/main.py`: every question in API responses gets `licence`: per picked slot (`media`, `background`) `{"verdict": "ok"|"replace", "reasons": [...]}` from `providers.licence_verdict`; unpicked slots left out. Add it in `with_candidates` (rename if it no longer fits).
@@ -5248,6 +5248,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (140, 305, '2026-10-12T03:31:53Z', '2026-10-12T03:32:25Z', 'done', NULL, 0, 'fad283d27f950fc74a6ff86f6608480a68c73ae8', 'claude-opus-5-5[1m]', 'bc081085-89a2-465e-bedb-ac7985154314', 5, 10, 3383, 138607, 24491, 0.29134940000000004, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (141, 306, '2026-10-12T03:32:25Z', '2026-10-12T03:33:20Z', 'done', NULL, 0, '378e8ccfed322319901c0d08997bfeaa1c311fe3', 'claude-opus-5-5[1m]', '0343b97c-87c6-4c9d-ae50-d7e9fcdba294', 14, 24, 5936, 399663, 29801, 0.43715660000000006, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (142, 307, '2026-10-12T03:33:20Z', '2026-10-12T03:34:15Z', 'done', NULL, 0, '773bb1e273cc0fd683624b97d42b28c3d54a16e5', 'claude-opus-5-5[1m]', 'a3745276-6424-422e-9bea-44146e51c040', 16, 26, 5799, 455094, 30597, 0.45187879999999991, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (143, 308, '2026-10-12T03:34:15Z', '2026-10-12T03:34:42Z', 'done', NULL, 0, 'd34e3a472c3ec9da5615b7896a615c683ca9f0ea', 'claude-opus-5-5[1m]', 'f12b21a7-6b29-42fe-a397-cd2d5d9cc8f0', 8, 16, 2587, 229906, 24337, 0.2924812, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
