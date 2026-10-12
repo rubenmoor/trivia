@@ -2664,6 +2664,61 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The rehearsal on a copy of the family''s save shows the same players, burns and running-game view in Python and TS; the original''s checksum is unchanged.
 - `trivia-authoring` start page, `qgen report` and `apply_flags` work with and without `game.json`, and never write it.
 - `npm test`, `npm run check`, `npm run build`, `qgen validate` pass; no new dependencies.', '2026-10-12T03:21:25Z', 58);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (50, 2, 'Screens on the engine (PORT-7)', 500, 'The game screens stop talking to the Python referee and run the TypeScript engine in the browser. `lib/api.ts` keeps its function signatures (`fetchGame`, `gameAction`, `playJoker`, `fetchPlayers`, `deletePlayer`, `fetchFlags`, `setFlag`), but each one now calls `engine/api.ts` on an in-memory save and persists it through `ServerStore` (`/api/save`). The client loads `pool.json` and the categories files as static files. The same change turns on plan 49''s `game.sqlite` → `game.json` migration at server start. Part 5 of masterplan 2 (PORT-7); part 6 (task 60, PORT-8) deletes the Python game routes afterwards. Source: `plans/12-client-engine.md`, PORT-7.
+
+## Depends on
+- Plan 19 (PORT-2): `rng.ts` (`seededRng`, `randomSeed`), `pool.ts` (`parsePool`, `loadCategories`).
+- Plan 20 (PORT-3): `engine/api.ts` (`getGame`, `getPlayers`, `deletePlayer`, `gameAction` → `{status, body, save}`), `engineData`, `SaveData`.
+- Plan 49 (PORT-4/5): `engine/save.ts` (`parseSave`, `setFlag`, `flaggedIds`), `lib/store.ts` (`ServerStore`), `app/server/save.py` (`migrate()`, `/api/save`), `authoring/tools/save_file.py` (authoring reads `game.json` once it exists).
+- Plan 27 (age groups, 590), if it has landed first: `engineData` also takes `age-groups.json` / `bundles.json`. The loader then fetches them too; nothing else here changes.
+- Plan 29 (choice screen, 400) builds on this plan: it needs the data files in the client and `lib/api.ts` on the engine.
+- If a dependency''s files aren''t there yet, the task waits. No Python fallback.
+
+## Decisions taken here
+- **Data files: the server serves `app/data/` read-only at `/data/…`**, not copied by the Vite build.
+  - Why: `qgen export` → reload the page is enough, with no `npm run build` after every batch. `dist/` can''t hold a stale pool, and `.#app` already ships `app/data/`.
+  - `GET /data/<path>` in `app/server/main.py`: files under `paths.DATA` only (resolve + `is_relative_to`, like `send_static`), else `404 not_found`. GET only. It counts as "static files" (pm decision 4, D-59).
+  - Vite dev proxy: add `"/data"` next to `"/api"` and `"/media"`.
+  - URLs: `/data/pool.json`, `/data/bundles.json`, `/data/categories.json`, `/data/bundles/<id>/categories.json` (only bundles listed in `bundles.json`; a 404 means the bundle has no categories, like `categories.load()`).
+- **Load once per page load.** `lib/engine.ts` (new) has `ready(): Promise<{data, save}>`, memoized: data files + `store.load()` in parallel, then `engineData(...)`, `parseSave(...)`. Python re-read `pool.json` per request; now a new export needs a page reload (F5). Note it in AGENTS.md "Pool" and README.
+  - Load failure (server down, missing `pool.json`, newer save version): throw a readable `Error`, which the screens show the way they show a failed fetch today.
+- **`lib/api.ts` stays the screens'' only door.** Same exports, same types, same errors, so `Game.svelte`, `Player.svelte` and `Question.svelte` don''t change (at most an import path).
+  - One action at a time: a promise-chain mutex in `lib/engine.ts` (replaces the server''s `_lock`). The UI already awaits each call, so the mutex only guards double clicks.
+  - Per action: `io = {rng: seededRng(randomSeed()), now: localIsoSeconds()}`. `now` must match Python''s `datetime.now().isoformat(timespec="seconds")`: local time, no zone, `YYYY-MM-DDTHH:MM:SS`. Put it in `lib/engine.ts`, not the engine (no clock in the engine).
+  - Status mapping, like `failure()` today: 200 → body; 400/409/404 with `error` → `GameError(code, params, message, supply)`. An exception thrown by the engine → `GameError("server_error", {}, "engine error: …", null)`, like the Python 500 body.
+  - 200 → adopt the new save, then `await store.save(save)`. A failed save keeps the new in-memory save (the next action PUTs the whole document again) and throws `GameError(<server code, e.g. save_locked>)`, so the TV shows something is wrong. Non-200 → the save is unchanged and no PUT.
+  - Read-only calls (`fetchGame`, `fetchPlayers`, `fetchFlags`) never PUT. `getGame` may return `withDefaults`-filled state; don''t save on read, as in Python.
+  - Flags: `fetchFlags` → `flaggedIds(save)`; `setFlag` → `engine/save.ts` `setFlag(save, …, now)`, store, return `flaggedIds`. `/api/flags` is no longer called.
+- **`fetchCategories` leaves `app/client/src/lib/api.ts`**: the game no longer needs `/api/categories`. Move it into `authoring/ui/src/lib/api.ts` (the authoring server keeps its own `/api/categories`). `call`, `json`, `post`, `GameError` stay exported for authoring.
+- **Media unchanged:** `Question.svelte` keeps `/media?url=…`. Whether it becomes a plain static path (no download on miss, decision 4) is part 6 (task 60).
+- **Switch-over in the same change** (plan 49 hand-off): `main.py` calls `save.migrate()` once before `serve_forever`. From then on the game writes only `state/game.json`; `game.sqlite` and `flags.json` stay as backups. The Python game routes stay until part 6 but nothing calls them. Rollback (plan 49): delete `game.json`, check out the commit before the switch.
+- **Decision entry** (next D number in `plans/decisions.md`): the game data comes from `/data/` (read-only, served from `app/data/`, loaded once per page). The engine runs in the browser behind `lib/api.ts`. Each action is persisted by a whole-document PUT. The migration runs at server start from this change on.
+
+## Files
+- `app/server/main.py`: `/data/` route, `save.migrate()` at startup, docstring (routes, "reads app/data/ and serves it under /data/").
+- `app/client/vite.config.ts`: proxy `/data`.
+- `app/client/src/lib/engine.ts` (new): `ready()`, mutex, `io()`, `run(route)` (status mapping, persist).
+- `app/client/src/lib/data.ts` (new): `loadEngineData()`, fetches the data files and builds `engineData`.
+- `app/client/src/lib/api.ts`: game, player and flag functions on the engine; `fetchCategories` removed.
+- `authoring/ui/src/lib/api.ts`: own `fetchCategories`.
+- Screens (`app/client/src/game/*.svelte`): only if an import has to move; no markup, style or behaviour changes. `PLACEHOLDER(...)` (D-25) stays.
+- Docs: `plans/decisions.md`, `plans/12-client-engine.md` (PORT-7), `directory.md` (new `lib/` files, `/data/`), AGENTS.md and README.md (reload after `qgen export`; `trivia` writes `state/game.json`).
+
+## Safety (real save)
+- Workers never start `trivia` on the real `state/` in this plan: the first start migrates for real. Every check sets `TRIVIA_STATE` (and `TRIVIA_MEDIA` if media is touched) to a temp dir and asserts it before starting the server.
+- Rehearsals use a copy of `state/game.sqlite` (+ `flags.json`), with the original''s checksum compared before and after (as in plan 49).
+- The real switch happens when the gamemaster starts `trivia` after pulling; task 3 tells them so in the decision body.
+
+## Tasks to split into
+1. **`/data/` route and data loader**: the route, Vite proxy, `lib/data.ts`, `fetchCategories` moved to authoring. Can land before the switch (screens still on Python). Check with a throw-away script against a server on a temp `TRIVIA_STATE`: `/data/pool.json` and every categories file 200, `/data/../server/main.py`, `/data/%2e%2e/…` and a missing file 404; `loadEngineData()` (run under `node` with a `fetch` shim that prefixes the server URL) gives the same category order as `categories.load()`. Then `trivia-authoring` start page and `/stats/categories` still load. `npm run check`, `npm run build`.
+2. **Screens on the engine + switch-over** (needs plans 19, 20, 49 done): `lib/engine.ts`, the new `lib/api.ts`, `save.migrate()` in `main.py`, docstring, decision entry. Throw-away `node` check: a temp `TRIVIA_STATE` holding a copy of the real `game.sqlite`, the server started there (migration line printed), `lib/api.ts` imported with the `fetch` shim. Then: `fetchPlayers` matches the migrated players; `fetchGame` returns the running game, if any; a new game for a test player played through 12 levels with every joker once (hint, skip, skip+purge, easier, category, snipe), a wrong answer, `skip` for everyone, `undo`, `abandon`, `jokers` budget, flag/unflag, delete the test player. After each step, GET `/api/save` equals the in-memory save. Errors: an unavailable joker → `GameError` with its code; a forced PUT failure (stop the server) → readable error, and the next action after a restart persists. Original `state/game.sqlite` checksum unchanged. `npm test`, `npm run check`, `npm run build`, `qgen validate`. `nix build .#app` and `result/bin/trivia` on a temp `TRIVIA_STATE` serves `/`, `/data/pool.json`, `/api/save`.
+3. **Browser check, test night, close-out** (needs task 2): if the worker has a browser tool, play a short game in it on a temp `TRIVIA_STATE` (admin overlay: undo, abandon, joker budget; every joker animation shows). Then raise a decision "Family test night on the TS engine". Body: what changed for the gamemaster (first `trivia` start migrates to `state/game.json`, `game.sqlite` kept; reload the page after `qgen export`; rollback steps) and the checklist: a full game, every joker, undo, abandon, admin overlay, flag a question and see it in `trivia-authoring`, players list and delete. Options: "test night played fine" (recommended), "problems (listed in the answer)". Make a close-out task (docs: PORT-7 `[x]` in `plans/12-client-engine.md` with date, `directory.md`, AGENTS.md, README.md) pending on it. On "problems": one fix task per problem in this plan, raise the decision again.
+
+## Done when
+- A full game, every joker, undo and the admin overlay work in the browser on the engine; no game call reaches `/api/game*`, `/api/players*` or `/api/flags` (check the server log).
+- The first start migrates a copy of the family''s save, and the game continues it: same players, burns and running game.
+- The gamemaster confirms a family test night on the TS engine (decision answered "fine").
+- `npm test`, `npm run check`, `npm run build`, `qgen validate`, `nix build .#app` pass; no new dependencies; screens unchanged apart from imports.', '2026-10-12T03:23:36Z', 59);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -3036,13 +3091,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Where flags live follows the decision linked to this task (`state/flags.json` via `/api/flags`, or inside `SaveData`); `trivia-authoring`''s `apply_flags` (D-47) must still pick them up.
 - Ordering: Python side after part 1 (fixtures recorded on untouched state); TS side needs part 3''s state shape.
 - Plan priority: 590 (after part 3, despite the schema rule''s 900).', '2026-10-11T23:56:40Z', '2026-10-12T03:21:31Z', 54);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (59, 2, 'write plan: Screens on the engine (PORT-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 2).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (59, 2, 'write plan: Screens on the engine (PORT-7)', 'plan', 'done', 1000, '2026-10-11, pm plan 50, plans/12-client-engine.md (data in the client)', 'Write the plan for part 5 of the masterplan (plan 2).
 
 - Replace the game calls in `app/client/src/lib/api.ts` with engine calls + `ServerStore`; categories/media/flags calls as decided (decision linked to this task, part 4''s plan).
 - Client loads `pool.json` and categories statically: server serves `app/data/` read-only, or the Vite build copies it; settle in the plan (`flake.nix` `.#app` packaging must still work).
 - `PLACEHOLDER(...)` (D-25) stays; no UI changes beyond the wiring.
 - Done when: a full game, every joker, undo and admin overlay work in the browser; the family plays a test night on the TS engine (gamemaster''s check).
-- Plan priority: 500.', '2026-10-11T23:56:40Z', NULL, 54);
+- Plan priority: 500.', '2026-10-11T23:56:40Z', '2026-10-12T03:23:44Z', 54);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (60, 2, 'write plan: Python server cleanup and docs (PORT-8)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 2).
 
 - Delete `app/server/game.py` and the `/api/game*`, `/api/players*` routes from `app/server/main.py`.
@@ -4621,6 +4676,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:19:08Z', '2026-10-12T03:19:14Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (289, 49, 'create tasks for plan 49', 'split', 'open', 1000, NULL, 'Split plan 49 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:21:25Z', NULL, 58);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (290, 50, 'create tasks for plan 50', 'split', 'open', 1000, NULL, 'Split plan 50 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:23:36Z', NULL, 59);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4841,6 +4898,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (130, 28, '2026-10-12T02:49:13Z', '2026-10-12T02:50:50Z', 'failed', 'the worker left changes that are not staged:
  M plans/decisions.md', 0, '402f633654a52357313e6cec797458588a798ea6', 'claude-opus-5-5[1m]', 'aec269a5-5e01-4daa-bc89-691125706de5', 20, 36, 10176, 928615, 60616, 0.87431500000000018, 175567);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (131, 58, '2026-10-12T03:19:06Z', '2026-10-12T03:21:45Z', 'done', NULL, 0, 'd7fbee16a64064bb899621cc6ee68637f6b791d8', 'claude-opus-5-5[1m]', '3d2734f9-89f7-4dd9-b05d-0444e97d31e2', 15, 24, 12930, 574400, 64715, 0.891296, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (132, 59, '2026-10-12T03:21:45Z', '2026-10-12T03:23:52Z', 'done', NULL, 0, '17e59447bd05d090b7b0fd0bbecd70c2bb5baca4', 'claude-opus-5-5[1m]', '2e2c91b4-2b89-41eb-9615-8263ce938ffd', 15, 26, 12404, 643917, 64169, 0.89031940000000009, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
