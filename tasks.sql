@@ -2101,38 +2101,56 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A choice that can''t fill 12 levels can''t start and says why, in today''s wording.
 - The overlay shows the running game''s group and bundles.
 - No `always_on` / «Siempre activo» in the client.', '2026-10-12T00:28:05Z', 117);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (30, 5, 'Play-test and close-out of age groups and bundles', 390, 'The last part of milestone 5: prove the milestone''s "done when" in the browser, then close AG-7 and BN-6 in the docs. Plans 27 (engine: group ranges, bundle filter, `choice` API), 28 (tuned windows, `level_weights`) and 29 (choice screen, overlay line) do the work; each leaves AG-7 / BN-6 `[ ]` with a "plan N" note for this part to close. Runs last (390, below plan 29 at 400).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (30, 5, 'Play-test and close-out of age groups and bundles', 390, 'The last part of milestone 5: prove the milestone''s "done when" in the browser, then close AG-7 and BN-6 in the docs. Plans 27 (engine: group ranges, bundle filter, `choice` API), 28 (tuned windows, `level_weights`), 71 (bundle `languages`, base bundles replacing `always_on`, `bundlesFor`, `resolveChoice` per locale) and 29 (choice screen with the base-bundle pick, overlay line) do the work; each leaves AG-7 / BN-6 `[ ]` with a "plan N" note for this part to close. Runs last (390, below plan 29 at 400).
 
 ## Depends on
-- Plans 27, 28, 29 done; the game runs on the TS engine (milestone 2).
-- Pm decision 5 (where the authoring supply check lives) may still be pending; the readers check works on whatever is there.
+- Plans 27, 28 (done), 71 (600) and 29 (400) done; the game runs on the TS engine (milestone 2).
+- Plan 71''s API: `bundlesFor(data, locale)`, `defaultChoice` per locale, `GameError`s `base_bundle_count` / `bundle_not_offered`; its decision entry in `plans/decisions.md` (supersedes D-68 in part).
+- Plan 68 (I18N-2): `loadEngineData(base, locale)`, `language.questions`; en/de pools may not ship yet.
+- Decision 5: Where does the supply check … live: answered, authoring calls the TS engine via node; the readers check works on whatever plan 51 (PORT-8) has put in place.
 
 ## Play-test (the milestone''s "done when")
-- **Agent pre-check** first, so the gamemaster''s time isn''t spent on crashes: a throw-away `node` script on the engine API over the real `app/data/pool.json`, a fresh player per run: for each of the 4 groups with every bundle, and `young_teens` with `{base}` only: `newGame` with the choice, play 12 levels to the end (answer right, use each joker once where allowed), check every drawn question is in the group''s level range and an active bundle, Cambiazo offers no `colombia` category when it''s off. Plus `npm run build`, `npm run check`, `qgen validate`. Failures → a task in the owning plan (27/29), not a fix here.
-- **Gamemaster session**: a pm decision "Play-test of age groups and bundles". Body: the pre-check''s result table; the checklist: `trivia`, one session per age group (choice screen by mouse and by keyboard once, IN-1), one with `colombia` off; defaults straight through with Enter look as before; overlay shows group and bundles; undo/abandon keep the choice. Options: "all sessions played fine" (recommended); "problems (listed in the answer)".
+- **Agent pre-check** first, so the gamemaster''s time isn''t spent on crashes: a throw-away `node` script on the engine API, a fresh player per run:
+  - over the real `app/data/pool.json` (`es`): each of the 4 groups with the defaults (`base` + `colombia`), and `young_teens` with `["base"]` only: `newGame` with the choice, play 12 levels to the end (answer right, use each joker once where allowed); every drawn question in the group''s level range and an active bundle; Cambiazo offers no `colombia` category when it''s off.
+  - refusals: `newGame` with `[]`, `["colombia"]` (zero base bundles) and, on temp data with a second `kind: base` bundle, two base bundles → `409 base_bundle_count`, save unchanged.
+  - per language: for `en` and `de` (throw-away translated pools and data dir if none ship yet, e.g. a copy of `pool.json` re-labelled): `bundlesFor` lists only the bundles whose `languages` contain it (today `base` only), the defaults are `["base"]`, `newGame` with `colombia` → `409 bundle_not_offered`; one session played to the end.
+  - plus `npm test`, `npm run build`, `npm run check`, `qgen validate` (en/de warnings from plan 71 allowed).
+  - failures → a task in the owning plan (71 engine/data/validate, 29 screen, 27 older engine parts), not a fix here.
+- **Gamemaster session**: a pm decision "Play-test of age groups and bundles". Body: the pre-check''s result table; the checklist:
+  - `trivia`, one session per age group (choice screen by mouse and by keyboard once, IN-1), one with `colombia` off;
+  - defaults straight through with Enter look as before;
+  - Básico shown as the selected base bundle (one-of-N, not a locked toggle); no «Siempre activo»; «¡A jugar!» can''t start without a base bundle (if the screen lets one reach that state, else noted as engine-only);
+  - with the question language set to `en` and to `de` (the throw-away pools, if none ship): the screen lists only `base`;
+  - overlay shows group and bundles; undo/abandon keep the choice.
+  - Options: "all sessions played fine" (recommended); "problems (listed in the answer)".
 - The close-out task waits on it (`pm task-pending-decision`).
-- Answer "problems": the close-out worker adds one fix task per problem to plan 27 or 29, raises the decision again, makes itself pending on it, and stops.
+- Answer "problems": the close-out worker adds one fix task per problem to plan 71, 29 or 27, raises the decision again, makes itself pending on it, and stops.
 
 ## Close-out docs (after "played fine")
 - `plans/21-age-groups.md`: AG-7 `[x]` with date and plans 27/28/29; drop "The game plays young teens (levels 1–10) until AG-7, whatever the focus" and other "until AG-7" wording.
-- `plans/22-bundles.md`: BN-6 `[x]`; "Later" section: the BN-6 bullet goes (section removed if empty); the Cambiazo sentence ("all of them until BN-6") in the present tense.
-- `plans/project.md`: AG-7, BN-6 `[x]`.
-- `directory.md`: rows for `age-groups.json` / `bundles.json` say the game reads them (group ranges, choice); new files from plans 27–29 listed (they add their own; check only).
-- `about` in `app/data/age-groups.json`: no "The game plays young teens until AG-7", no "draft"; `about` in `app/data/bundles.json`: "players switch on or off" stays true, `base` always on. `qgen validate` passes.
-- Decision entry in `plans/decisions.md` (next D number): play-test confirmed (date), milestone 5 done-when met; related D-38, D-39 and plans 27/28''s entries. Only if the gamemaster''s answer adds something beyond "fine"; else the AG-7/BN-6 notes are enough.
+- `plans/22-bundles.md`:
+  - BN-6 `[x]` with date and plans 27/29/71; "Later" section: the BN-6 bullet goes (section removed if empty); the Cambiazo sentence ("all of them until BN-6") in the present tense.
+  - `languages` per bundle (the game offers only the bundles of its language; `qgen validate` rules) and base bundles (`kind: base`, exactly one per session, default the language''s first, then every other bundle of the language); "`base` is always on and can''t be switched off" and every `always_on` mention rewritten; link plan 71''s D entry.
+- `plans/project.md`: AG-7, BN-6 `[x]`; BN-6''s "(`base` always on)" → "(exactly one base bundle)".
+- `directory.md`: rows for `age-groups.json` / `bundles.json` say the game reads them (group ranges, choice; `languages`, `kind: base`); new files from plans 27–29, 71 listed (they add their own; check only).
+- `about` in `app/data/age-groups.json`: no "The game plays young teens until AG-7", no "draft". `about` in `app/data/bundles.json`: `languages` and base bundles (exactly one per session), no "always on"; "players switch on or off" only for non-base bundles. `qgen validate` passes.
+- D-68 in `plans/decisions.md`: a "superseded in part by D-<plan 71''s entry>" note, if plan 71 didn''t add it.
+- Decision entry (next D number): play-test confirmed (date), milestone 5 done-when met; related D-38, D-39, D-68 and plans 28/71''s entries. Only if the gamemaster''s answer adds something beyond "fine"; else the AG-7/BN-6 notes are enough.
 
 ## Authoring readers (levels 1–10, one range table)
-- Known readers: `qgen report` supply (`authoring/tools/qgen.py`: `selection.LEVEL_RANGES`, `selection.supply`), the authoring start page supply table (`authoring/server/overview.py` `supply_for`, `authoring/ui/src/home/Home.svelte`), `/stats/difficulty` (`authoring/ui/src/stats/DifficultyChart.svelte`: `PLAYED_GROUP = "young_teens"` shading). Grep for others: `LEVEL_RANGES`, `young_teens`, `1–10`, `range(1, 11)`.
-- Broken = crashes, wrong numbers for what it claims to show, or text that is now false (e.g. "the window the game plays"). Fix those minimally (wording, or read `young_teens` from `age-groups.json` `levels`).
-- Not broken but young-teens-only (supply per group or bundle set, shading every window): one line each in `plans/backlog.md`, linked to pm decision 5 where it depends on where the supply check lives.
+- Known readers: `qgen report` supply (`authoring/tools/qgen.py`), the authoring start page supply table (`authoring/server/overview.py` `supply_for`, `authoring/ui/src/home/Home.svelte`), `/stats/difficulty` (`authoring/ui/src/stats/DifficultyChart.svelte`: `PLAYED_GROUP = "young_teens"` shading). Grep for others: `LEVEL_RANGES`, `young_teens`, `1–10`, `range(1, 11)`, `always_on`.
+- Plan 71 switches the `always_on` readers to `kind`; this check only confirms none is left.
+- Broken = crashes, wrong numbers for what it claims to show, or text that is now false (e.g. "the window the game plays", "always on"). Fix those minimally (wording, or read `young_teens` from `age-groups.json` `levels`).
+- Not broken but young-teens-only or es-only (supply per group, bundle set or locale; shading every window): one line each in `plans/backlog.md`, linked to decision 5 where it depends on where the supply check lives.
 
 ## Tasks
-1. **Readers check**: grep and run `qgen report`, `trivia-authoring` start page and `/stats/difficulty`; fix what''s broken, backlog the rest. Independent of the play-test.
-2. **Pre-check and play-test decision**: the script, build/check/validate, the decision with the table and checklist; script deleted.
-3. **Close-out** (waits on task 2''s decision): the docs above; AG-7, BN-6 `[x]`.
+1. **Readers check** (task 130): grep and run `qgen report`, `trivia-authoring` start page and `/stats/difficulty`; fix what''s broken, backlog the rest. Independent of the play-test; after plan 71.
+2. **Pre-check and play-test decision** (task 131): the script incl. refusals and en/de, build/check/test/validate, the decision with the table and checklist; script and temp data deleted.
+3. **Close-out** (task 132, waits on task 2''s decision): the docs above; AG-7, BN-6 `[x]`.
 
 ## Done when
-- The gamemaster confirmed the play-test; AG-7 and BN-6 are `[x]` in plans 21, 22 and `project.md`; no "until AG-7/BN-6" wording left in plans, `directory.md` or the data files'' `about`.
+- The gamemaster confirmed the play-test; a start with zero or two base bundles is refused; in en and de only their bundles are offered.
+- AG-7 and BN-6 are `[x]` in plans 21, 22 and `project.md`; `grep -rn "until AG-7\|until BN-6\|always_on\|always on\|Siempre activo" plans/21-age-groups.md plans/22-bundles.md plans/project.md directory.md app/data/*.json app/client/src` finds nothing (`decisions.md` history stays).
 - Authoring readers checked: fixed or logged in `plans/backlog.md`.', '2026-10-12T00:29:06Z', 118);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (31, 6, 'Preload the next screen''s media (UI-7)', 500, 'The fade-in after a screen change waits until the next screen''s media has loaded, at most 2 s (04, "Transitions", step 4). Today `go()` in `app/client/src/game/Game.svelte` switches the screen behind the black and fades in at once (`PLACEHOLDER(UI-7)`, line ~117). The plan also removes the last `PLACEHOLDER` hits, so the milestone''s `grep -rn PLACEHOLDER app/client/src` comes up empty.
 
@@ -8652,7 +8670,7 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', '2026-10-12T20:23:37Z', 465);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (468, 30, 'revise plan 30', 'plan', 'open', 1000, NULL, 'Plan 5, the plan above plan 30, changed; it is quoted below. Bring plan 30 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (468, 30, 'revise plan 30', 'plan', 'done', 1000, '2026-10-12, plan 30 body: plan 71 dependency, base-bundle refusals, en/de offered bundles, languages/kind docs, decision 5 answered', 'Plan 5, the plan above plan 30, changed; it is quoted below. Bring plan 30 in line with it
 (`pm plan edit 30 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -8708,7 +8726,7 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 ## Not in this milestone
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
-- Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', NULL, 465);
+- Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', '2026-10-12T20:25:14Z', 465);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (469, 5, 'write plan: Bundle languages and base bundles (data, engine, validate)', 'plan', 'done', 1000, '2026-10-12, plan 71 (tasks.sql)', 'Write the plan for part 5 of masterplan 5 (`pm plan add 5 "Bundle languages and base bundles" --priority 600`): `languages` per bundle in `app/data/bundles.json`, `kind: base` replacing `always_on` (exactly one base bundle per session, default the locale''s first), the engine''s `resolveChoice`/defaults per game locale, `qgen validate` checks, authoring readers of `always_on`. See the masterplan''s "Part 5" for scope and checks; plans 27 (done) and 68 (language setting) for the code it builds on. Must leave the family''s defaults and plan 18''s fixture replay unchanged.', '2026-10-12T20:20:30Z', '2026-10-12T20:22:40Z', 465);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (470, 9, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 9, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:46Z', NULL, NULL);
@@ -8762,6 +8780,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `npm run check`, `npm run build`, `npm test`, `check:literals` pass.
 - Throw-away browser walk (not committed): Enter, Enter → overlay shows «Adolescentes · Básico, Colombia»; a game with Colombia off and another group shows that; after undo (where the mode allows it, decision 20) the choice is unchanged; after «Reiniciar partida» the next Choice screen presets the abandoned game''s choice.', '2026-10-12T20:24:24Z', NULL, 473);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (476, 30, 'create tasks for plan 30', 'split', 'open', 1000, NULL, 'Split plan 30 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:25:12Z', NULL, 468);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9656,6 +9676,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (322, 469, '2026-10-12T20:20:57Z', '2026-10-12T20:22:50Z', 'done', NULL, 0, 'd23c507f1ea903a6ec40895ee1066e46839b87cd', 'claude-opus-5-5[1m]', '19bdd3fb-7185-44b2-b7df-c678f8e8a562', 17, 32, 10836, 769929, 57010, 0.82691380000000014, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (323, 467, '2026-10-12T20:22:50Z', '2026-10-12T20:23:46Z', 'done', NULL, 0, 'e620948ed9f102ef416b115043899a2503e758d5', 'claude-opus-5-5[1m]', '13cce613-1f65-4977-8e8f-317123f09168', 9, 18, 5727, 324761, 37038, 0.47586819999999996, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (324, 473, '2026-10-12T20:23:46Z', '2026-10-12T20:24:33Z', 'done', NULL, 0, '8788f351a9d6324e1b14bdae45a281f06681ffc3', 'claude-opus-5-5[1m]', 'c26c6f95-d36a-41b8-b6e0-3ded65d23438', 9, 18, 4723, 289980, 30622, 0.397504, 655319);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (325, 468, '2026-10-12T20:24:33Z', '2026-10-12T20:25:22Z', 'done', NULL, 0, 'f643fdcfc263fb5b83c2b6475ac27248767d6e54', 'claude-opus-5-5[1m]', '059ac91b-4a57-4ad4-b41a-4aed634c7677', 9, 18, 4725, 296768, 35154, 0.4351576, 655319);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
