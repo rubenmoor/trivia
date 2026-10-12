@@ -3,6 +3,7 @@
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
   import { t } from "../lib/i18n";
+  import { pushScope, type Action } from "../lib/input.svelte";
   import type { JokerBudget, JokerName } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
@@ -146,22 +147,24 @@
     item.run();
   }
 
-  export function key(e: KeyboardEvent) {
+  function handle(a: Action): boolean {
     const item = items[selected];
-    const by = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-      const step = e.key === "ArrowDown" ? 1 : -1;
+    const by = a.type === "navigate" ? { right: 1, left: -1, up: 0, down: 0 }[a.dir] : 0;
+    if (a.type === "navigate" && (a.dir === "up" || a.dir === "down")) {
+      const step = a.dir === "down" ? 1 : -1;
       do selected = (selected + step + items.length) % items.length;
       while (!items[selected].enabled);
       confirming = null;
     } else if (by && item.volume) change(item.volume, by * STEP);
     else if (by && item.joker) stepJoker(item.joker, by);
     else if (by && item.preset) cyclePreset();
-    else if (e.key === "Enter" || e.key === " ") activate(selected);
-    else if (e.key === "Escape") onclose();
-    else return;
-    e.preventDefault();
+    else if (a.type === "confirm") activate(selected);
+    else if (a.type === "menu") onclose();
+    else return false;
+    return true;
   }
+
+  $effect(() => pushScope({ name: "overlay", handle, modal: true, whileBusy: true }));
 </script>
 
 {#snippet row(item: Item, i: number)}

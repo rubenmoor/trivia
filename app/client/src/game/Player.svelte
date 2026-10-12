@@ -7,6 +7,7 @@
   import { deletePlayer, fetchPlayers } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
+  import { pushScope } from "../lib/input.svelte";
   import type { Player, Supply } from "../lib/types";
   import Icon from "./Icon.svelte";
 
@@ -84,32 +85,30 @@
     }
   }
 
-  /** True while the delete confirmation is open: it gets every key, Esc included. */
-  export function dialogOpen() {
-    return doomed !== null;
-  }
+  // 1–9 pick a name; Enter in the field sends it; a letter elsewhere goes into the field (input.svelte.ts).
+  $effect(() =>
+    pushScope({
+      name: "player",
+      text: () => input,
+      handle: (a) => {
+        if (a.type === "pick" && a.n <= shown.length) onchoose(shown[a.n - 1].name);
+        else if (a.type === "confirm" && document.activeElement === input) submit();
+        else return false;
+        return true;
+      },
+    }),
+  );
 
-  /** Keys from Game.svelte: 1–9 pick a name; any letter starts typing a new one. */
-  export function key(e: KeyboardEvent) {
-    if (doomed) {
-      if (e.key === "Escape" || e.key === "Backspace") {
-        e.preventDefault();
-        doomed = null;
-      }
-      return; // Enter, Tab and arrows work on the dialog's buttons
-    }
-    if (document.activeElement === input) {
-      if (e.key === "Enter") submit(e);
-      return;
-    }
-    const i = "123456789".indexOf(e.key);
-    if (e.key.length === 1 && i >= 0 && i < shown.length) {
-      e.preventDefault();
-      onchoose(shown[i].name);
-    } else if (e.key.length === 1 && /\p{L}/u.test(e.key) && !e.ctrlKey && !e.metaKey) {
-      input?.focus(); // the letter goes into the field
-    }
-  }
+  // The delete confirmation gets every action; Esc/Backspace cancel, Enter and Tab work on its buttons.
+  $effect(() => {
+    if (!doomed) return;
+    return pushScope({
+      name: "player-delete",
+      modal: true,
+      whileBusy: true,
+      handle: (a) => (a.type === "back" || a.type === "menu") && ((doomed = null), true),
+    });
+  });
 </script>
 
 <section class="player">

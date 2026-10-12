@@ -2,10 +2,11 @@
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
   // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
-  import { onMount, tick } from "svelte";
+  import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
+  import { listen, pushScope, type Action } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
@@ -58,12 +59,10 @@
   /** The first click unlocks audio and autoplay in the browser (04, "Start"). */
   let unlocked = false;
   let questionRef = $state<ReturnType<typeof Question>>();
-  let playerRef = $state<ReturnType<typeof Player>>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
   /** The supply report when the pool can't fill a game for the chosen player. */
   let refused = $state<Supply | null>(null);
-  let overlayRef = $state<ReturnType<typeof Overlay>>();
   /** Media that was playing when the overlay opened; it resumes on close. */
   let pausedMedia: HTMLMediaElement[] = [];
 
@@ -304,39 +303,54 @@
   /** The question's final answer is out: skip and undo would race the reveal. */
   const questionBusy = () => screen === "question" && (questionRef?.busy() ?? false);
 
-  // Keyboard (04, "Input") ------------------------------------------------------------------
+  // Input (04, "Input"; lib/input.svelte.ts) ------------------------------------------------
 
-  function onkeydown(e: KeyboardEvent) {
-    if (e.repeat) return;
-    onclick();
-    if (overlayOpen) return overlayRef?.key(e);
-    if (screen === "player" && playerRef?.dialogOpen()) return playerRef.key(e);
-    if (screen === "question" && !busy && questionRef?.dialogOpen()) return questionRef.key(e);
-    if (e.key === "Escape") {
-      e.preventDefault();
-      return openOverlay();
-    }
-    if (e.key.toLowerCase() === FLAG_KEY.toLowerCase() && flagTarget) {
-      e.preventDefault();
-      return toggleFlag();
-    }
-    if (busy) return;
-    const next = e.key === "Enter" || e.key === " ";
-    if (screen === "question") return questionRef?.key(e);
-    if (screen === "player") return playerRef?.key(e);
-    if (screen === "start" && next) {
-      e.preventDefault();
+  /** Screen actions; the scope of the screen on top passes the rest down. */
+  function onScreen(on: Screen, a: Action): boolean {
+    if (on === "start" && a.type === "confirm") {
       if (running) resume();
       else newGame();
-    } else if (screen === "start" && e.key.toLowerCase() === NEW_KEY) newGame();
-    else if (screen === "level" && next) go("select", "paper");
-    else if (screen === "select" && picked === null && "1234".includes(e.key) && e.key.length === 1)
-      pick(Number(e.key) - 1);
-    else if (screen === "correct" && next) toLevel();
-    else if ((screen === "wrong" || screen === "victory") && next) toStart();
-    else return;
-    e.preventDefault();
+    } else if (on === "start" && a.type === "new") newGame();
+    else if (on === "level" && a.type === "confirm") go("select", "paper");
+    else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
+    else if (on === "correct" && a.type === "confirm") toLevel();
+    else if ((on === "wrong" || on === "victory") && a.type === "confirm") toStart();
+    else return false;
+    return true;
   }
+
+  /** Temporary passthrough to Question and Cambiazo (plan 44, task 2). */
+  function questionRaw(e: KeyboardEvent): boolean {
+    if (busy) return false;
+    if (!questionRef?.dialogOpen() && (e.key === "Escape" || e.key.toLowerCase() === FLAG_KEY.toLowerCase())) return false;
+    questionRef?.key(e);
+    return true;
+  }
+
+  // Global: Esc opens the overlay, M flags; under every screen.
+  const popGame = pushScope({
+    name: "game",
+    handle: (a) => {
+      if (a.type === "menu") openOverlay();
+      else if (a.type === "flag" && flagTarget) toggleFlag();
+      else return false;
+      return true;
+    },
+  });
+  onDestroy(popGame);
+
+  $effect(() => {
+    const on = screen;
+    if (on === "player") return; // Player.svelte pushes its own
+    return pushScope({
+      name: on,
+      keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
+      handle: (a) => onScreen(on, a),
+      raw: on === "question" ? questionRaw : undefined,
+    });
+  });
+
+  onMount(() => listen({ busy: () => busy, first: onclick }));
 
   /** The first click or key press unlocks audio and autoplay (04, "Start"). */
   function onclick() {
@@ -359,8 +373,6 @@
     return (seed / 12) * 6 - 3;
   }
 </script>
-
-<svelte:window {onkeydown} {onclick} />
 
 <main class="game">
   {#if loading}
@@ -398,7 +410,7 @@
     </section>
   {:else if screen === "player"}
     <Stage />
-    <Player bind:this={playerRef} {busy} {greeting} {refused} onchoose={choosePlayer} ondeleted={refresh} />
+    <Player {busy} {greeting} {refused} onchoose={choosePlayer} ondeleted={refresh} />
   {:else if screen === "level" && game}
     <Stage />
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
@@ -556,7 +568,6 @@
 
   {#if overlayOpen}
     <Overlay
-      bind:this={overlayRef}
       questionId={screen === "question" && game?.question ? game.question.id : (game?.last?.question_id ?? null)}
       questionLabel={t(screen === "question" ? "overlay.question" : "overlay.lastQuestion")}
       canSkip={screen === "question" && !questionBusy()}
