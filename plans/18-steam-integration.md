@@ -21,7 +21,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Overlay:** the Steam binding needs a call to enable it in Electron; test on Windows and the Deck (fallback on the Deck: the Windows build via Proton).
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
 - **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name on the Deck / Big Picture (IN, Deck Verified).
-- **Language:** the default UI and question language come from the Steam client language (I18N-2).
+- **Language:** the default UI and question language come from the Steam client language (I18N-2, D-86): wire it into `guessTag()` in `lib/engine.ts`.
 - **Rich presence** (optional): «Nivel 7 de 12».
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
 - **No DRM:** the game runs without Steam running (offline living room). Steam binding calls are optional; the game works without them.

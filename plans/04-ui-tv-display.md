@@ -20,7 +20,9 @@ The game as the family sees it on the TV: screen states, transitions, sound and 
 
 ```mermaid
 stateDiagram-v2
+  [*] --> Language: fresh save, ≥2 languages (D-86)
   [*] --> Start
+  Language --> Start: confirm (reload if the UI language changed)
   Start --> Player: «¡Jugar!» (new game)
   Player --> Level: name chosen
   Level --> Select: continue
@@ -50,6 +52,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 | State | Shows | Leaves via | Music |
 |---|---|---|---|
+| Language | First start only (D-86): «Elige el idioma», UI languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n` | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / type + `Enter` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
@@ -58,6 +61,12 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` | Fanfare replaces the music, then Normal |
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
+
+### Language (first start, D-86)
+- Only for a fresh save (no `language` stored) and only with something to pick (>1 UI language or >1 question locale); a stored save, like the family's, never sees it.
+- One list of UI languages by endonym, the guessed one (`guessTag()`) preselected and focused; heading and confirm prompt in the guessed language.
+- A pick sets the UI language and the matching question locale; confirming writes the save, so it asks once. A UI language other than the boot one reloads the app.
+- No Esc menu here; later changes: the overlay's language rows.
 
 ### Start
 - Game title, a short subtitle, a big «¡Jugar!» button.
@@ -183,6 +192,7 @@ Menu items (keyboard-navigable, large enough for the TV):
 - **Deshacer:** take back the last final answer, if the gamemaster misjudged or someone pressed by accident (GM-2).
 - **Reiniciar partida / Volver al inicio,** with a confirmation.
 - **Pantalla completa** on/off.
+- **Idioma** / **Idioma de las preguntas** (D-86), every mode, each only with ≥2 options: ‹ › steps through endonyms. UI: applied with `Enter`, the game reloads. Questions: applies to the next game; a locale whose pool can't fill a game is shown disabled with the reason. The first start asks once on the Language screen.
 - **Comodines de esta partida** (MD-4, `13-game-modes.md`): the joker budget of the running game, «Sin límite» (default), «Como las cartas» (4 Soplo, 2 each other) or a count per joker, with the uses left. In a second column with the volume controls.
 - **Flag for review** (GM-5, D-47) is not in the menu: it is a small faint flag next to the ☰ (`M`).
 - **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `authoring/data/questions.json` and the review tool. The ID links to `/review/<id>` (new tab), next to links to the stats pages (`/stats/categories`, `/stats/difficulty`).

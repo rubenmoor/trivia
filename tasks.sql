@@ -8504,7 +8504,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm run build`.
 - Browser walk on a copy of the family save: no language rows, game as today.
 - With throw-away `pool.en.json` + `names.en.json` + a stub `en` catalog (or plan 24''s): switch both, names and questions in English; `Continuar` of a Spanish game stays Spanish. Keyboard only, pad. Delete the throw-away files.', '2026-10-12T19:36:55Z', '2026-10-12T19:58:01Z', 448);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (451, 68, 'Docs: language setting and per-locale pool (I18N-2)', 'work', 'open', 460, NULL, 'Plan 68, task 3. Runs after tasks 1, 2 and 4 (the first-start language screen, priority 470); document what was actually built.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (451, 68, 'Docs: language setting and per-locale pool (I18N-2)', 'work', 'done', 460, '2026-10-12, plans/decisions.md (D-86), plans/15-i18n.md (Model, I18N-2 [x]), plans/04-ui-tv-display.md (Language screen, Esc rows), plans/12-client-engine.md, plans/18-steam-integration.md, plans/project.md; qgen validate OK', 'Plan 68, task 3. Runs after tasks 1, 2 and 4 (the first-start language screen, priority 470); document what was actually built.
 
 ## What
 - `plans/decisions.md`: D-entry (next free number) for plan 68''s "Decisions taken here" (save field, default and `guessTag()`, a game keeps its locale, Esc menu rows, first-start language screen, options, reload on UI change, `displayName`).
@@ -8513,7 +8513,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/12-client-engine.md` if it lists `SaveData` fields or `language()`; `directory.md` if files were added; `plans/project.md` in sync.
 
 ## Done when
-- Docs match the code; `qgen validate` clean.', '2026-10-12T19:36:55Z', NULL, 448);
+- Docs match the code; `qgen validate` clean.', '2026-10-12T19:36:55Z', '2026-10-12T21:21:33Z', 448);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (452, 69, 'create tasks for plan 69', 'split', 'done', 1000, '2026-10-12, tasks 453-459 for plan 69; decisions created by tasks 453 (LUI-4 keys, German joker names, es wording) and 458 (playtests)', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:43:19Z', '2026-10-12T19:44:24Z', 247);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (453, 69, 'LUI-4/LUI-5: decisions on keys, German joker names, neutral es wording', 'work', 'open', NULL, NULL, 'Create the pm decisions plan 69 needs before keys, names and `es` wording change. No code changes.
@@ -10495,6 +10495,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (343, 330, '2026-10-12T20:43:38Z', '2026-10-12T21:18:24Z', 'done', NULL, 0, 'e94b1ce3bfe332a8a88da278ec6d0324a923d782', 'claude-opus-5-5[1m]', '1b471262-f2f4-419c-b722-e7d58e95779f', 57, 114, 30148, 4933320, 129443, 2.625624, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (344, 331, '2026-10-12T21:18:24Z', '2026-10-12T21:18:56Z', 'done', NULL, 0, '06c39dc94881b2728077d1570fc2dbd5fc4ce8b5', 'claude-opus-5-5[1m]', '63cf4ac6-5323-4077-bdd2-ba11fad0e0ad', 9, 14, 3137, 226793, 30256, 0.35020260000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (345, 333, '2026-10-12T21:18:56Z', '2026-10-12T21:20:08Z', 'done', NULL, 0, '0ecbd328c3b283cc3e82f783907db34dd9e5e341', 'claude-opus-5-5[1m]', '492fff0f-aa47-41a5-938c-fad0b9d652c4', 14, 26, 7066, 621438, 51357, 0.67656759999999994, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (346, 451, '2026-10-12T21:20:09Z', '2026-10-12T21:21:43Z', 'done', NULL, 0, '5b96d9adf0eb9306fe03734be5996dfcd452d7e3', 'claude-opus-5-5[1m]', '7465fbaf-d2e6-45f3-908b-8cd1a9ef3ee0', 21, 40, 7376, 989834, 50711, 0.75133480000000019, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

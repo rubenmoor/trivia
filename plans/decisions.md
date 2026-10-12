@@ -739,3 +739,19 @@ Template:
   - **`qgen validate`:** errors for missing/invalid `languages`, a leftover `always_on`, an unknown `kind`, a launch language without a base bundle; warnings for a listed bundle without approved questions in `pool.<locale>.json` and for approved questions of an unlisted bundle.
 - Consequences: Plan 71 (tasks 480, 481). Start screen (plan 29) picks among `bundlesFor`; docs in plan 30.
 - Supersedes / related: D-68 ("every always_on bundle is always on", auto-adding `base`); D-39, D-78; pm decision 26
+
+## D-86: Language setting, per-locale pool and first-start language screen
+- Date: 2026-10-12
+- Context: I18N-2 (plan 15), plan 68 (tasks 449, 450, 490); launch languages D-78, decision 26: Launch languages (OQ-31); `es-ES` UI-only, decision 27: Spanish variety; files per locale D-81; seen counts by id D-82.
+- Decision:
+  - **Save field, no version bump:** `SaveData.language?: {ui, questions}`. A stored save without it parses as `{es, es}` (`parseSave`): the family's save and fixtures stay Spanish whatever the browser says. Profile = save (D-82).
+  - **Default for a fresh save** (`emptySave()`: no file, 404, backed-up broken file): `defaultLanguage(tag, ui, questions)` per list: exact tag, then its language part (`es-CO` → `es`, `de-AT` → `de`, `es-ES` → UI `es-ES` + questions `es`), else `en` if present, else `es`. Tag: `guessTag()` in `lib/engine.ts` = `navigator.language`; milestone 10 swaps in Steam's client language there.
+  - **A game keeps its locale:** `GameRow.locale` (written only for non-es games, decision 36: GameRow.locale: written only for non-es games?; missing = `es`), set by `newGame` from `language.questions`. Continuing loads the game's own locale; a change applies to the next game; no mid-game pool swap.
+  - **Options:** UI = `CATALOGS` minus `xx` (`UI_LANGS`); questions = locales with a pool file (`pool.json` for `es`, always). Languages shown by endonym (`lib/i18n.ts`).
+  - **Esc menu:** rows «Idioma» / «Idioma de las preguntas» in every mode, each only with ≥2 options. A question locale whose pool fails the supply check for the default bundles is listed, disabled, with the reason.
+  - **First-start language screen** (`LanguageScreen.svelte`): before Start, only for a fresh save with something to pick (>1 UI option or >1 question locale); nothing written when skipped, so it asks once a second language ships. UI languages by endonym, guess preselected and focused; Enter / pad A / click / `1`–`n`. A pick sets `ui` and `questions = defaultLanguage(pick)` over the locales whose supply passes (`es` always). Confirming writes `language`: asked once. No Esc menu on it. A stored save never sees it.
+  - **UI language change reloads the app** (Esc menu: on Enter; screen: if it differs from the boot language); `lang` is a boot constant set in `main.ts`, no reactive catalog.
+  - **Names:** `displayName(kind, key)` (`lib/names.svelte.ts`) from the loaded locale's names files; fallback the Spanish key / `categories.json` / `bundles.json` name.
+  - **Seen across locales:** ids are shared, so a switch never repeats a question before unseen ones run out; supply, outlook and low-supply warning run on the loaded locale's pool.
+- Consequences: only `es` ships today, so no rows and no screen; `en`, `de`, `es-ES` catalogs (plans 24, 69) and translated pools (plan 66) turn them on with no code change. Steam client language: milestone 10, `guessTag()`.
+- Supersedes / related: plan 68's earlier "no first-start language screen"; D-59, D-70, D-78, D-81, D-82; pm decisions 26, 27, 36
