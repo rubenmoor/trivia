@@ -40,8 +40,8 @@ A provider that answers 429 is put on cooldown for its `Retry-After`, so later s
 
 ## Data
 - **Candidate** (`work/media/<qid>.json`): today's fields plus `provider` (`commons`, `openverse`, `pexels`, `freesound`, `nasa`, `pixabay`), the provider's own `id`, and `license_kind`, the allowlist family (`cc0`, `public-domain`, `by`, `attribution`, `by-sa`, `fal`, `pexels`, `pixabay`). `license` stays the provider's short name as shown in credits (`CC BY-SA 3.0 de`), `license_url` its link. `author_url` (the author's page, may be null) and `restrictions` (Commons' non-copyright restriction codes from extmetadata `Restrictions`, else `[]`; plan 26); candidates stored before plan 26 lack both. Candidates stored before MP-2 have no `provider` and count as `commons`.
-- **Pool media and background:** `provider`, `license`, `license_url` and `author` next to `source_url`, `file_url` and `credit`. This is the same data PUB-2 (17) needs. Existing picks get `provider: "commons"` and their licence from the Commons metadata in one migration.
-- **`validate`:** every picked slot has a provider and a licence from the allowlist (error); a missing licence on an old pick is a warning until PUB-2 is done.
+- **Pool media and background:** `provider`, `license`, `license_url`, `author`, `author_url`, `restrictions` and `pd_reasons` next to `source_url`, `file_url` and `credit` (plan 26). This is the same data PUB-2 (17) needs. Existing picks migrated once (task 113).
+- **`validate`:** every picked slot of an approved question has the full licence record and a licence from the allowlist (error).
 - **Credit:** `credit_of` names the provider ("… · Pexels") instead of the fixed "Wikimedia Commons".
 
 ## Code
@@ -65,7 +65,7 @@ Only for gaps the free ones leave, and only once a Steam release is real (11): e
 - [ ] MP-5 Pexels (images, videos), once new API keys are issued again
 - [x] MP-6 Freesound (audio previews). *2026-10-08: `providers/freesound.py`, `FREESOUND_API_KEY`; CC0 and CC BY only, ≤ 60 s, the HQ MP3 preview.*
 - [x] MP-7 NASA Image and Video Library (space photos and videos, Espacio only; third-party items skipped). *2026-10-08: `providers/nasa.py`; videos as MP4 (`~large`). The third-party check reads the credit fields only: footage filmed by a company but credited to NASA staff still gets through, so the review has to watch for it.*
-- [~] MP-8 Pool fields `provider`, `license`, `license_url`, `author` per picked slot; migrate existing picks; `validate` checks the allowlist; credit names the provider (shared with PUB-2). *Moved to pm plan 26 (licence data in the pool, PUB-2).*
+- [x] MP-8 Pool fields `provider`, `license`, `license_url`, `author` per picked slot; migrate existing picks; `validate` checks the allowlist; credit names the provider (shared with PUB-2). *Done in pm plan 26 (tasks 111–113): 1,202 picks migrated on 2026-10-11.*
 - [x] MP-9 Review tool: provider and licence on candidates; search modal over all providers. *2026-10-08; the LLM review also sees each candidate's source.*
 - [x] MP-10 Prompts: "the media sources" instead of Commons only. *2026-10-08: house style lists the sources; Freesound allows everyday sounds too.*
 - [~] MP-11 Compare the first batch with providers against batch-6. *Moved to pm plan 15 (`qgen report --batches`, needs_work `media` share).*

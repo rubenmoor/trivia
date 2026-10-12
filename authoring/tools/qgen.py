@@ -1937,8 +1937,8 @@ def validate_pool():
         if bad:
             errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): "
                           f"{', '.join(bad[:5])}{' …' if len(bad) > 5 else ''}")
-    if unlicensed:  # warnings until the migration (plans/26)
-        warnings.append(f"{len(unlicensed)} approved pick(s) without a complete licence record: "
+    if unlicensed:  # plans/26
+        errors.append(f"{len(unlicensed)} approved pick(s) without a complete, allowlisted licence record: "
                         f"{', '.join(unlicensed[:5])}{' …' if len(unlicensed) > 5 else ''}")
     exported = layout.EXPORT.read_text(encoding="utf-8") if layout.EXPORT.exists() else None
     if exported != export_text(data):
