@@ -3,11 +3,12 @@
 
     trivia [--port 8000] [--host 127.0.0.1]        (or: python3 app/server/main.py)
 
-It reads only app/data/ (pool.json, the categories files) and writes only the game state
+It reads app/data/ and serves it under /data/, and writes only the game state
 (TRIVIA_STATE, default state/) and the media cache (TRIVIA_MEDIA, default media/), D-35.
 The review tool and stats pages are authoring tools with their own server (authoring/server).
 
 API:
+    GET  /data/<path>                              a file under app/data/, read-only (plan 50); else 404
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
     GET  /media?url=<file_url>                     a picked media file from the cache; downloaded first on a
                                                    cache miss. Only URLs in the pool (D-17).
@@ -87,6 +88,8 @@ class Handler(BaseHandler):
             if text is None:
                 return self.send_json(404, NOT_FOUND)
             return self.send_raw_json(text.encode("utf-8"))
+        if url.path.startswith("/data/"):
+            return self.send_data(url.path[len("/data/"):])
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
@@ -159,6 +162,12 @@ class Handler(BaseHandler):
             return self.send_json(200, {"ok": True})
         except save.SaveError as e:
             return self.send_json(e.status, {"error": e.code, "message": str(e)})
+
+    def send_data(self, rel):
+        path = (paths.DATA / rel).resolve()
+        if rel and path.is_file() and path.is_relative_to(paths.DATA.resolve()):
+            return self.send_file(path)
+        return self.send_json(404, NOT_FOUND)
 
     def send_raw_json(self, raw):
         self.send_response(200)

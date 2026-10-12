@@ -1,12 +1,12 @@
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 
-// In development, /api and cached media go to the Python server (app/server/main.py).
+// In development, /api, /data and cached media go to the Python server (app/server/main.py).
 const backend = "http://127.0.0.1:8000";
 
 export default defineConfig({
   plugins: [svelte()],
   server: {
-    proxy: { "/api": backend, "/media": backend },
+    proxy: { "/api": backend, "/data": backend, "/media": backend },
   },
 });

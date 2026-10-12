@@ -1,4 +1,4 @@
-import type { Category, ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
+import type { ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
 
 /** A refused request (D-57): `code` and `params` for errorText(), `message` in English; `supply` is set
  * when the pool can't fill a new game (GF-5). */
@@ -33,10 +33,6 @@ export async function call(url: string, init?: RequestInit): Promise<Response> {
   } catch {
     throw new Error("server not reachable — is the game server (`trivia`) running?");
   }
-}
-
-export async function fetchCategories(): Promise<Category[]> {
-  return json(await call("/api/categories"));
 }
 
 export async function post<T>(url: string, body: unknown): Promise<T> {

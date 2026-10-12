@@ -1,8 +1,11 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/api";
-import type { AgeGroups, Bundle, MediaStats, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
+import type { AgeGroups, Bundle, Category, MediaStats, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
 
-export { fetchCategories } from "$app/lib/api";
+/** Every bundle's broad categories with subcategories (D-19, D-43). */
+export async function fetchCategories(): Promise<Category[]> {
+  return json(await call("/api/categories"));
+}
 
 /** Filters of GET /api/questions; all optional (authoring/server/main.py). */
 export interface QuestionFilter {

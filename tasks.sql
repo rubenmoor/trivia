@@ -5082,7 +5082,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Task note: counts only, not save content.
 
 Done when: rehearsal matches, originals unchanged; `npm test`, `npm run check`, `npm run build`, `qgen validate` pass.', '2026-10-12T03:27:24Z', '2026-10-12T04:31:13Z', 289);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (297, 50, '/data/ route and data loader', 'work', 'open', NULL, NULL, 'Part 1 of plan 50 (PORT-7). Serve `app/data/` read-only at `/data/…` and add the client loader. Screens stay on Python; this can land before the switch-over.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (297, 50, '/data/ route and data loader', 'work', 'done', NULL, '2026-10-11, app/server/main.py, app/client/vite.config.ts, app/client/src/lib/data.ts, fetchCategories moved to authoring/ui/src/lib/api.ts', 'Part 1 of plan 50 (PORT-7). Serve `app/data/` read-only at `/data/…` and add the client loader. Screens stay on Python; this can land before the switch-over.
 
 - `app/server/main.py`: `GET /data/<path>`, files under `paths.DATA` only (resolve + `is_relative_to`, like `send_static`), else `404 not_found`. GET only. Docstring: "reads app/data/ and serves it under /data/".
 - `app/client/vite.config.ts`: proxy `"/data"` next to `"/api"` and `"/media"`.
@@ -5094,7 +5094,7 @@ Done when (throw-away script, server on temp `TRIVIA_STATE`):
 - `/data/pool.json` and every categories file 200; `/data/../server/main.py`, `/data/%2e%2e/…`, a missing file 404.
 - `loadEngineData()` under `node` with a `fetch` shim (prefixes the server URL) gives the same category order as `categories.load()`.
 - `trivia-authoring` start page and `/stats/categories` load.
-- `npm run check`, `npm run build` pass.', '2026-10-12T03:27:57Z', NULL, 290);
+- `npm run check`, `npm run build` pass.', '2026-10-12T03:27:57Z', '2026-10-12T04:47:13Z', 290);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (298, 50, 'Screens on the engine + switch-over', 'work', 'open', NULL, NULL, 'Part 2 of plan 50 (PORT-7). `lib/api.ts` runs the TS engine in the browser and persists via `ServerStore`; `trivia` migrates `game.sqlite` → `game.json` at start. Needs the `/data/` task and plans 19, 20, 49 done; if their files (`engine/api.ts`, `engine/save.ts`, `lib/store.ts`, `save.migrate()`) aren''t there, wait. No Python fallback.
 
 - `app/client/src/lib/engine.ts` (new): memoized `ready()` (`loadEngineData()` + `store.load()` in parallel, `parseSave`; readable `Error` on failure), promise-chain mutex, `io()` = `{rng: seededRng(randomSeed()), now: localIsoSeconds()}` (local, no zone, `YYYY-MM-DDTHH:MM:SS`), `run(route)`: 200 → adopt save, `await store.save`; failed PUT keeps the new save, throws `GameError(<server code>)`; 400/404/409 → `GameError(code, params, message, supply)`, no PUT; engine exception → `GameError("server_error", {}, "engine error: …", null)`.
@@ -5901,6 +5901,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (184, 126, '2026-10-12T04:38:36Z', '2026-10-12T04:41:20Z', 'done', NULL, 0, 'b97185aea2a6a8d2207fee544d18cbac1d79de85', 'claude-opus-5-5[1m]', '4034b6db-c3f5-4578-8a39-af0c24213da1', 16, 28, 15472, 668970, 55138, 0.88445, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (185, 201, '2026-10-12T04:41:20Z', '2026-10-12T04:44:16Z', 'done', NULL, 0, '80918a7b028fa3f7f2b4e1f1f629d282e37b2c38', 'claude-opus-5-5[1m]', '259f7c4b-b2bb-4e59-b863-72b0e5130bb7', 22, 38, 14981, 909055, 56128, 0.930607, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (186, 27, '2026-10-12T04:44:16Z', '2026-10-12T04:46:14Z', 'done', NULL, 0, '258814ce836edbb88d87203f1a0e07fe10c101b6', 'claude-opus-5-5[1m]', '34516819-4706-4300-bfe3-2d98d715ef19', 24, 42, 11302, 1011045, 50804, 0.83484900000000006, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (187, 297, '2026-10-12T04:46:14Z', '2026-10-12T04:47:20Z', 'done', NULL, 0, 'c1991ef85c425794e41c9c6eec395553db20ab57', 'claude-opus-5-5[1m]', 'e6c1eb93-5ee1-40f5-be82-70ac64530f63', 15, 28, 6056, 585571, 38647, 0.54752220000000007, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
