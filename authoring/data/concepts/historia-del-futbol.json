@@ -1,0 +1,502 @@
+{
+  "subcategory": "Historia del fútbol",
+  "facets": [
+    "Orígenes y reglas del fútbol",
+    "Historia de los Mundiales",
+    "Grandes leyendas del fútbol",
+    "Selección Colombia en la historia",
+    "Clubes históricos del mundo",
+    "Fútbol colombiano y sus clubes",
+    "Copa América y fútbol sudamericano",
+    "Estadios legendarios",
+    "Balones, uniformes y tecnología",
+    "Jugadas, goles y momentos célebres",
+    "Fútbol femenino en la historia",
+    "Mascotas, trofeos y símbolos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Definición por penaltis",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 4
+    },
+    {
+      "name": "Sustitución",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 6
+    },
+    {
+      "name": "The Football Association",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Fair play",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Mundial de Inglaterra 1966",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Argentina 1978",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de España 1982",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Francia 1998",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de Corea y Japón 2002",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de Sudáfrica 2010",
+      "facet": "Historia de los Mundiales",
+      "known_at": 6
+    },
+    {
+      "name": "Ferenc Puskás",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "George Best",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "Michel Platini",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Marco van Basten",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "Paolo Maldini",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos \"El Pibe\" Valderrama",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 5
+    },
+    {
+      "name": "Freddy Rincón",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Juan Guillermo Cuadrado",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 6
+    },
+    {
+      "name": "David Ospina",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 5
+    },
+    {
+      "name": "Iván Ramiro Córdoba",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 9
+    },
+    {
+      "name": "Francisco Maturana",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 11
+    },
+    {
+      "name": "Néstor Lorenzo",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Colombia 5–0 Argentina",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Copa América 2024",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Marcos Coll",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Leonel Álvarez",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 12
+    },
+    {
+      "name": "Arnoldo Iguarán",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Willington Ortiz",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Paris Saint-Germain",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Chelsea",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Arsenal",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "AC Milan",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Inter de Milán",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Flamengo",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Peñarol",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Independiente de Avellaneda",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Benfica",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Celtic",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Olympique de Marsella",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Deportivo Cali",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 5
+    },
+    {
+      "name": "Independiente Santa Fe",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 5
+    },
+    {
+      "name": "Independiente Medellín",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 6
+    },
+    {
+      "name": "Deportes Tolima",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 8
+    },
+    {
+      "name": "Atlético Bucaramanga",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 7
+    },
+    {
+      "name": "Cúcuta Deportivo",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Deportes Quindío",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 10
+    },
+    {
+      "name": "Clásico paisa",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 7
+    },
+    {
+      "name": "Ballet Azul",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 13
+    },
+    {
+      "name": "Título de Atlético Nacional en la Libertadores 1989",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 11
+    },
+    {
+      "name": "Título de Once Caldas en la Libertadores 2004",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 9
+    },
+    {
+      "name": "Pentacampeonato del América de Cali",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 12
+    },
+    {
+      "name": "Copa Sudamericana",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 6
+    },
+    {
+      "name": "Eliminatorias sudamericanas",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 6
+    },
+    {
+      "name": "Superclásico argentino",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 9
+    },
+    {
+      "name": "Clásico del Río de la Plata",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Campeonato Sudamericano de 1916",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Copa América Centenario",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Bicampeonato de Chile en la Copa América",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 11
+    },
+    {
+      "name": "Recopa Sudamericana",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Copa Intercontinental",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Clubes",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 7
+    },
+    {
+      "name": "Estadio Centenario de Montevideo",
+      "facet": "Estadios legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Hampden Park",
+      "facet": "Estadios legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Tango (balón)",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 13
+    },
+    {
+      "name": "Balón de vejiga de cerdo",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 13
+    },
+    {
+      "name": "Dorsal",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 3
+    },
+    {
+      "name": "Red de portería",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 5
+    },
+    {
+      "name": "Escorpión de Higuita",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Elástica",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Gol de James a Uruguay en 2014",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 6
+    },
+    {
+      "name": "Final del Mundial 2022",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Final de Estambul 2005",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Remontada del Barcelona ante el PSG",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Brandi Chastain",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Yoreli Rincón",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 10
+    },
+    {
+      "name": "Liga Femenina de Colombia",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Dick, Kerr Ladies",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Lily Parr",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Prohibición inglesa del fútbol femenino de 1921",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 15
+    },
+    {
+      "name": "Copa del Mundo de la FIFA (trofeo)",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Premio The Best",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Premio Puskás",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Trofeo Pichichi",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 12
+    },
+    {
+      "name": "Orejona",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Himno de la Champions League",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Estrellas sobre el escudo",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Juanito (mascota de México 70)",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Pique (mascota de México 86)",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 14
+    }
+  ]
+}

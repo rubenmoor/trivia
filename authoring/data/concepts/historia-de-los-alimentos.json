@@ -1,0 +1,382 @@
+{
+  "subcategory": "Historia de los alimentos",
+  "facets": [
+    "Alimentos del Nuevo Mundo",
+    "Comida de pueblos antiguos",
+    "Especias y rutas comerciales",
+    "Inventos y técnicas de conservación",
+    "Orígenes de platos famosos",
+    "Historia de las bebidas",
+    "Dulces, postres y golosinas",
+    "Historia de la cocina colombiana",
+    "Marcas y comida rápida",
+    "Utensilios y aparatos de cocina",
+    "Personajes de la gastronomía",
+    "Nombres y palabras de alimentos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Papaya",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Descubrimiento del fuego",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 3
+    },
+    {
+      "name": "Lentejas",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 6
+    },
+    {
+      "name": "Dátiles",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Higos",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 8
+    },
+    {
+      "name": "Banquete romano",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 9
+    },
+    {
+      "name": "Pemmican",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Apicio",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Puls",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 14
+    },
+    {
+      "name": "Pimienta negra",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 5
+    },
+    {
+      "name": "Cardamomo",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 11
+    },
+    {
+      "name": "Anís estrellado",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 11
+    },
+    {
+      "name": "Calicut",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 14
+    },
+    {
+      "name": "Refrigerador",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 3
+    },
+    {
+      "name": "Congelador",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 3
+    },
+    {
+      "name": "Lata de conservas",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 5
+    },
+    {
+      "name": "Comida de astronautas",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Ahumado",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Salazón",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Envasado al vacío",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Cecina",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Liofilización",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 12
+    },
+    {
+      "name": "Clarence Birdseye",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 15
+    },
+    {
+      "name": "Agua de panela",
+      "facet": "Historia de las bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Aguardiente",
+      "facet": "Historia de las bebidas",
+      "known_at": 9
+    },
+    {
+      "name": "Kaldi y las cabras",
+      "facet": "Historia de las bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Rosquilla",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 3
+    },
+    {
+      "name": "Malvavisco",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 4
+    },
+    {
+      "name": "Churro",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 4
+    },
+    {
+      "name": "Azúcar de caña",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Tarta Sacher",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 13
+    },
+    {
+      "name": "Tamal tolimense",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Hormigas culonas",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Fritanga",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Changua",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Mote de queso",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Mute santandereano",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 10
+    },
+    {
+      "name": "Cuchuco",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Viudo de pescado",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Posta negra cartagenera",
+      "facet": "Historia de la cocina colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Sartén",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Piedra de moler",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Budare",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Auguste Gusteau",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 6
+    },
+    {
+      "name": "Linguini",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 6
+    },
+    {
+      "name": "Harry Sasson",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 11
+    },
+    {
+      "name": "Jamie Oliver",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 11
+    },
+    {
+      "name": "Leonor Espinosa",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 12
+    },
+    {
+      "name": "Gastón Acurio",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 12
+    },
+    {
+      "name": "Julia Child",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 13
+    },
+    {
+      "name": "Ferran Adrià",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 13
+    },
+    {
+      "name": "Anthony Bourdain",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 13
+    },
+    {
+      "name": "Auguste Escoffier",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Bocuse",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 14
+    },
+    {
+      "name": "Massimo Bottura",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 14
+    },
+    {
+      "name": "Antonin Carême",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 15
+    },
+    {
+      "name": "Brillat-Savarin",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 15
+    },
+    {
+      "name": "Menú",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Chef",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Buffet",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 6
+    },
+    {
+      "name": "Albóndiga",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 9
+    },
+    {
+      "name": "Cacahuate",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 9
+    },
+    {
+      "name": "Gourmet",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Compañero",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 13
+    }
+  ]
+}

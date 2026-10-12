@@ -1,0 +1,487 @@
+{
+  "subcategory": "Economía y bolsa",
+  "facets": [
+    "Conceptos básicos de economía",
+    "Bolsa y mercados de valores",
+    "Bancos y banca central",
+    "Inflación, precios y crisis",
+    "Empresas y marcas famosas",
+    "Economistas e ideas económicas",
+    "Comercio internacional y exportaciones",
+    "Ahorro, crédito y finanzas personales",
+    "Trabajo, salarios e impuestos",
+    "Economía colombiana",
+    "Historia económica mundial",
+    "Economía en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 5,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Dinero",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 1
+    },
+    {
+      "name": "Oferta y demanda",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 8
+    },
+    {
+      "name": "Producto interno bruto (PIB)",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 10
+    },
+    {
+      "name": "Escasez",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 7
+    },
+    {
+      "name": "Costo de oportunidad",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 13
+    },
+    {
+      "name": "Sector primario",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 9
+    },
+    {
+      "name": "Materia prima",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 6
+    },
+    {
+      "name": "Ganancia",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 4
+    },
+    {
+      "name": "Competencia",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 6
+    },
+    {
+      "name": "Bienes y servicios",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 7
+    },
+    {
+      "name": "Oligopolio",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 12
+    },
+    {
+      "name": "Economía informal",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 10
+    },
+    {
+      "name": "Bien público",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 12
+    },
+    {
+      "name": "Externalidad",
+      "facet": "Conceptos básicos de economía",
+      "known_at": 14
+    },
+    {
+      "name": "Mercado alcista",
+      "facet": "Bolsa y mercados de valores",
+      "known_at": 13
+    },
+    {
+      "name": "Bolsa de Ámsterdam",
+      "facet": "Bolsa y mercados de valores",
+      "known_at": 14
+    },
+    {
+      "name": "Salida a bolsa",
+      "facet": "Bolsa y mercados de valores",
+      "known_at": 12
+    },
+    {
+      "name": "Corredor de bolsa",
+      "facet": "Bolsa y mercados de valores",
+      "known_at": 10
+    },
+    {
+      "name": "Índice bursátil",
+      "facet": "Bolsa y mercados de valores",
+      "known_at": 12
+    },
+    {
+      "name": "Nikkei",
+      "facet": "Bolsa y mercados de valores",
+      "known_at": 13
+    },
+    {
+      "name": "Banca Medici",
+      "facet": "Bancos y banca central",
+      "known_at": 14
+    },
+    {
+      "name": "Deflación",
+      "facet": "Inflación, precios y crisis",
+      "known_at": 12
+    },
+    {
+      "name": "Fiebre de los tulipanes",
+      "facet": "Inflación, precios y crisis",
+      "known_at": 13
+    },
+    {
+      "name": "Hiperinflación de Zimbabue",
+      "facet": "Inflación, precios y crisis",
+      "known_at": 13
+    },
+    {
+      "name": "Índice de precios al consumidor",
+      "facet": "Inflación, precios y crisis",
+      "known_at": 12
+    },
+    {
+      "name": "Burbuja inmobiliaria",
+      "facet": "Inflación, precios y crisis",
+      "known_at": 12
+    },
+    {
+      "name": "Estanflación",
+      "facet": "Inflación, precios y crisis",
+      "known_at": 14
+    },
+    {
+      "name": "Mano invisible",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 12
+    },
+    {
+      "name": "John Maynard Keynes",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 13
+    },
+    {
+      "name": "Socialismo",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 9
+    },
+    {
+      "name": "La riqueza de las naciones",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 13
+    },
+    {
+      "name": "El capital",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Malthus",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 14
+    },
+    {
+      "name": "David Ricardo",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 14
+    },
+    {
+      "name": "Ventaja comparativa",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 14
+    },
+    {
+      "name": "Ley de Gresham",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 15
+    },
+    {
+      "name": "Premio Nobel de Economía",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 12
+    },
+    {
+      "name": "Liberalismo económico",
+      "facet": "Economistas e ideas económicas",
+      "known_at": 12
+    },
+    {
+      "name": "Exportación",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Importación",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 6
+    },
+    {
+      "name": "Arancel",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Tratado de libre comercio",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Organización Mundial del Comercio",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Contenedor",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 5
+    },
+    {
+      "name": "Balanza comercial",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 12
+    },
+    {
+      "name": "OPEP",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Puerto de Buenaventura",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Mercosur",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Comunidad Andina",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Globalización",
+      "facet": "Comercio internacional y exportaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Cuota inicial",
+      "facet": "Ahorro, crédito y finanzas personales",
+      "known_at": 11
+    },
+    {
+      "name": "Fondo de pensiones",
+      "facet": "Ahorro, crédito y finanzas personales",
+      "known_at": 11
+    },
+    {
+      "name": "Seguro",
+      "facet": "Ahorro, crédito y finanzas personales",
+      "known_at": 8
+    },
+    {
+      "name": "Impuesto de renta",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 11
+    },
+    {
+      "name": "Desempleo",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 8
+    },
+    {
+      "name": "Día del Trabajo",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 5
+    },
+    {
+      "name": "Sindicato",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 10
+    },
+    {
+      "name": "Huelga",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 8
+    },
+    {
+      "name": "Jornada de ocho horas",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 10
+    },
+    {
+      "name": "Jubilación",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 6
+    },
+    {
+      "name": "Impuesto a la sal de Gandhi",
+      "facet": "Trabajo, salarios e impuestos",
+      "known_at": 13
+    },
+    {
+      "name": "Café colombiano",
+      "facet": "Economía colombiana",
+      "known_at": 3
+    },
+    {
+      "name": "Flores colombianas",
+      "facet": "Economía colombiana",
+      "known_at": 7
+    },
+    {
+      "name": "Carbón del Cerrejón",
+      "facet": "Economía colombiana",
+      "known_at": 11
+    },
+    {
+      "name": "Banano de Urabá",
+      "facet": "Economía colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Bonanza marimbera",
+      "facet": "Economía colombiana",
+      "known_at": 14
+    },
+    {
+      "name": "Zona franca",
+      "facet": "Economía colombiana",
+      "known_at": 12
+    },
+    {
+      "name": "San Andresito",
+      "facet": "Economía colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Plaza de mercado",
+      "facet": "Economía colombiana",
+      "known_at": 4
+    },
+    {
+      "name": "Estrato socioeconómico",
+      "facet": "Economía colombiana",
+      "known_at": 8
+    },
+    {
+      "name": "Medellín, ciudad industrial",
+      "facet": "Economía colombiana",
+      "known_at": 9
+    },
+    {
+      "name": "Potosí",
+      "facet": "Historia económica mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Acuerdos de Bretton Woods",
+      "facet": "Historia económica mundial",
+      "known_at": 14
+    },
+    {
+      "name": "Moneda de Lidia",
+      "facet": "Historia económica mundial",
+      "known_at": 14
+    },
+    {
+      "name": "Papel moneda chino",
+      "facet": "Historia económica mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Sal como salario",
+      "facet": "Historia económica mundial",
+      "known_at": 9
+    },
+    {
+      "name": "Cacao como moneda azteca",
+      "facet": "Historia económica mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Mercantilismo",
+      "facet": "Historia económica mundial",
+      "known_at": 13
+    },
+    {
+      "name": "Gremios medievales",
+      "facet": "Historia económica mundial",
+      "known_at": 12
+    },
+    {
+      "name": "Liga Hanseática",
+      "facet": "Historia económica mundial",
+      "known_at": 14
+    },
+    {
+      "name": "El lobo de Wall Street",
+      "facet": "Economía en películas y juegos",
+      "known_at": 12
+    },
+    {
+      "name": "Monedas de Mario",
+      "facet": "Economía en películas y juegos",
+      "known_at": 1
+    },
+    {
+      "name": "The Big Short",
+      "facet": "Economía en películas y juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Sr. Burns",
+      "facet": "Economía en películas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Minecraft esmeraldas",
+      "facet": "Economía en películas y juegos",
+      "known_at": 4
+    }
+  ]
+}

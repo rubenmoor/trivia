@@ -1,0 +1,787 @@
+{
+  "subcategory": "Medicina y salud",
+  "facets": [
+    "Enfermedades comunes y contagiosas",
+    "Vacunas, microbios y defensas",
+    "Medicamentos y remedios",
+    "Instrumentos y aparatos médicos",
+    "Especialidades y profesiones de la salud",
+    "Hospital, urgencias y primeros auxilios",
+    "Grandes descubrimientos médicos",
+    "Médicos y científicos famosos",
+    "Hábitos saludables: dieta, sueño, higiene",
+    "Salud dental y de los sentidos",
+    "Medicina tradicional y plantas medicinales",
+    "Palabras y síntomas médicos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 5,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Piojos",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 1
+    },
+    {
+      "name": "COVID-19",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 2
+    },
+    {
+      "name": "Diarrea",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 2
+    },
+    {
+      "name": "Varicela",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 3
+    },
+    {
+      "name": "Conjuntivitis",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 5
+    },
+    {
+      "name": "Sarampión",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 6
+    },
+    {
+      "name": "Paperas",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 6
+    },
+    {
+      "name": "Rubéola",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Chikungunya",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Tétanos",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 8
+    },
+    {
+      "name": "Cólera",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Viruela",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Polio",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 9
+    },
+    {
+      "name": "Hepatitis",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 10
+    },
+    {
+      "name": "Lepra",
+      "facet": "Enfermedades comunes y contagiosas",
+      "known_at": 10
+    },
+    {
+      "name": "Virus",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 2
+    },
+    {
+      "name": "Hongo",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 3
+    },
+    {
+      "name": "Microbio",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 4
+    },
+    {
+      "name": "Lombriz intestinal",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 4
+    },
+    {
+      "name": "Parásito",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 5
+    },
+    {
+      "name": "Pandemia",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 5
+    },
+    {
+      "name": "Glóbulo blanco",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 6
+    },
+    {
+      "name": "Epidemia",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 6
+    },
+    {
+      "name": "Sistema inmunitario",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 7
+    },
+    {
+      "name": "Dosis de refuerzo",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 7
+    },
+    {
+      "name": "Anticuerpo",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 9
+    },
+    {
+      "name": "Probiótico",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 9
+    },
+    {
+      "name": "Ganglio linfático",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 10
+    },
+    {
+      "name": "Placa de Petri",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 10
+    },
+    {
+      "name": "Inmunidad de rebaño",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 11
+    },
+    {
+      "name": "ARN mensajero",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 11
+    },
+    {
+      "name": "Linfocito",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 11
+    },
+    {
+      "name": "Antígeno",
+      "facet": "Vacunas, microbios y defensas",
+      "known_at": 12
+    },
+    {
+      "name": "Jarabe",
+      "facet": "Medicamentos y remedios",
+      "known_at": 1
+    },
+    {
+      "name": "Pastilla",
+      "facet": "Medicamentos y remedios",
+      "known_at": 1
+    },
+    {
+      "name": "Gotas para los ojos",
+      "facet": "Medicamentos y remedios",
+      "known_at": 3
+    },
+    {
+      "name": "Acetaminofén",
+      "facet": "Medicamentos y remedios",
+      "known_at": 4
+    },
+    {
+      "name": "Pomada",
+      "facet": "Medicamentos y remedios",
+      "known_at": 4
+    },
+    {
+      "name": "Ibuprofeno",
+      "facet": "Medicamentos y remedios",
+      "known_at": 6
+    },
+    {
+      "name": "Inhalador",
+      "facet": "Medicamentos y remedios",
+      "known_at": 6
+    },
+    {
+      "name": "Fórmula médica",
+      "facet": "Medicamentos y remedios",
+      "known_at": 6
+    },
+    {
+      "name": "Medicamento genérico",
+      "facet": "Medicamentos y remedios",
+      "known_at": 10
+    },
+    {
+      "name": "Antihistamínico",
+      "facet": "Medicamentos y remedios",
+      "known_at": 11
+    },
+    {
+      "name": "Placebo",
+      "facet": "Medicamentos y remedios",
+      "known_at": 11
+    },
+    {
+      "name": "Morfina",
+      "facet": "Medicamentos y remedios",
+      "known_at": 11
+    },
+    {
+      "name": "Silla de ruedas",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 1
+    },
+    {
+      "name": "Tapabocas",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 1
+    },
+    {
+      "name": "Muletas",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 2
+    },
+    {
+      "name": "Tensiómetro",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 6
+    },
+    {
+      "name": "Bisturí",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 6
+    },
+    {
+      "name": "Nebulizador",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 7
+    },
+    {
+      "name": "Oxímetro",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 8
+    },
+    {
+      "name": "Desfibrilador",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 9
+    },
+    {
+      "name": "Otoscopio",
+      "facet": "Instrumentos y aparatos médicos",
+      "known_at": 11
+    },
+    {
+      "name": "Enfermera",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 1
+    },
+    {
+      "name": "Odontólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 2
+    },
+    {
+      "name": "Pediatra",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 4
+    },
+    {
+      "name": "Cirujano",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 5
+    },
+    {
+      "name": "Psicólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 6
+    },
+    {
+      "name": "Nutricionista",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 6
+    },
+    {
+      "name": "Paramédico",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 6
+    },
+    {
+      "name": "Farmacéutico",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 6
+    },
+    {
+      "name": "Dermatólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 7
+    },
+    {
+      "name": "Oftalmólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 7
+    },
+    {
+      "name": "Cardiólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 7
+    },
+    {
+      "name": "Fisioterapeuta",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 8
+    },
+    {
+      "name": "Partera",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 8
+    },
+    {
+      "name": "Neurólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 9
+    },
+    {
+      "name": "Anestesiólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 9
+    },
+    {
+      "name": "Traumatólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 9
+    },
+    {
+      "name": "Psiquiatra",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 9
+    },
+    {
+      "name": "Ginecólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 10
+    },
+    {
+      "name": "Otorrinolaringólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 10
+    },
+    {
+      "name": "Oncólogo",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 11
+    },
+    {
+      "name": "Geriatra",
+      "facet": "Especialidades y profesiones de la salud",
+      "known_at": 11
+    },
+    {
+      "name": "Urgencias",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 3
+    },
+    {
+      "name": "Vendaje",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 3
+    },
+    {
+      "name": "Camilla",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 3
+    },
+    {
+      "name": "Quemadura",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 3
+    },
+    {
+      "name": "Puntos de sutura",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 5
+    },
+    {
+      "name": "Quirófano",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 7
+    },
+    {
+      "name": "Esguince",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 7
+    },
+    {
+      "name": "Unidad de cuidados intensivos",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 8
+    },
+    {
+      "name": "Cabestrillo",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 9
+    },
+    {
+      "name": "Maniobra de Heimlich",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 10
+    },
+    {
+      "name": "Posición lateral de seguridad",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 11
+    },
+    {
+      "name": "Triaje",
+      "facet": "Hospital, urgencias y primeros auxilios",
+      "known_at": 12
+    },
+    {
+      "name": "Transfusión de sangre",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 8
+    },
+    {
+      "name": "Primera vacuna contra la viruela",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 9
+    },
+    {
+      "name": "Primer trasplante de corazón",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 9
+    },
+    {
+      "name": "Doble hélice del ADN",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 10
+    },
+    {
+      "name": "Genoma humano",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 10
+    },
+    {
+      "name": "Circulación de la sangre",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 11
+    },
+    {
+      "name": "Teoría de los gérmenes",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 11
+    },
+    {
+      "name": "Antisepsia",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 12
+    },
+    {
+      "name": "Cura del escorbuto",
+      "facet": "Grandes descubrimientos médicos",
+      "known_at": 12
+    },
+    {
+      "name": "Severo Ochoa",
+      "facet": "Médicos y científicos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Lavado de manos",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 1
+    },
+    {
+      "name": "Frutas y verduras",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 1
+    },
+    {
+      "name": "Ejercicio",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 1
+    },
+    {
+      "name": "Desayuno",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 1
+    },
+    {
+      "name": "Ducha",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 1
+    },
+    {
+      "name": "Hidratación",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 2
+    },
+    {
+      "name": "Comida chatarra",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 2
+    },
+    {
+      "name": "Horas de sueño",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 4
+    },
+    {
+      "name": "Plato saludable",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 4
+    },
+    {
+      "name": "Estiramiento",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 4
+    },
+    {
+      "name": "Carbohidratos",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 7
+    },
+    {
+      "name": "Índice de masa corporal",
+      "facet": "Hábitos saludables: dieta, sueño, higiene",
+      "known_at": 11
+    },
+    {
+      "name": "Seda dental",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 3
+    },
+    {
+      "name": "Brackets",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 3
+    },
+    {
+      "name": "Enjuague bucal",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 4
+    },
+    {
+      "name": "Lengua de señas",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 4
+    },
+    {
+      "name": "Crema dental con flúor",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 5
+    },
+    {
+      "name": "Muela del juicio",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 6
+    },
+    {
+      "name": "Audífono",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 6
+    },
+    {
+      "name": "Cerumen",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 6
+    },
+    {
+      "name": "Miopía",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 7
+    },
+    {
+      "name": "Sarro",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 7
+    },
+    {
+      "name": "Tabla de Snellen",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 9
+    },
+    {
+      "name": "Astigmatismo",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 10
+    },
+    {
+      "name": "Gingivitis",
+      "facet": "Salud dental y de los sentidos",
+      "known_at": 10
+    },
+    {
+      "name": "Agua de panela con limón",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 3
+    },
+    {
+      "name": "Caldo de gallina",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 4
+    },
+    {
+      "name": "Acupuntura",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 8
+    },
+    {
+      "name": "Medicina tradicional china",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 9
+    },
+    {
+      "name": "Tilo",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 10
+    },
+    {
+      "name": "Sobandero",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 10
+    },
+    {
+      "name": "Homeopatía",
+      "facet": "Medicina tradicional y plantas medicinales",
+      "known_at": 11
+    },
+    {
+      "name": "Vómito",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 1
+    },
+    {
+      "name": "Alergia",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 4
+    },
+    {
+      "name": "Contagio",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 4
+    },
+    {
+      "name": "Infección",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 4
+    },
+    {
+      "name": "Fractura",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 4
+    },
+    {
+      "name": "Síntoma",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 6
+    },
+    {
+      "name": "Inflamación",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 6
+    },
+    {
+      "name": "Diagnóstico",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 7
+    },
+    {
+      "name": "Migraña",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 8
+    },
+    {
+      "name": "Hemorragia",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 8
+    },
+    {
+      "name": "Hipertensión",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 9
+    },
+    {
+      "name": "Anemia",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 9
+    },
+    {
+      "name": "Asintomático",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 9
+    },
+    {
+      "name": "Taquicardia",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 10
+    },
+    {
+      "name": "Enfermedad crónica",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 10
+    },
+    {
+      "name": "Pronóstico",
+      "facet": "Palabras y síntomas médicos",
+      "known_at": 11
+    }
+  ]
+}

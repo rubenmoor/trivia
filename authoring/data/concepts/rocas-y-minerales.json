@@ -1,0 +1,522 @@
+{
+  "subcategory": "Rocas y minerales",
+  "facets": [
+    "Tipos de rocas y su ciclo",
+    "Minerales comunes y sus propiedades",
+    "Piedras preciosas y gemas",
+    "Metales y minería",
+    "Rocas y minerales en casa",
+    "Fósiles y formaciones en roca",
+    "Volcanes, lava y rocas ígneas",
+    "Cuevas, cristales y paisajes de piedra",
+    "Rocas y minerales de Colombia",
+    "Piedra en la historia humana",
+    "Rocas del espacio y meteoritos",
+    "Rocas y gemas en películas y juegos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ciclo de las rocas",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 8
+    },
+    {
+      "name": "Arenisca",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 7
+    },
+    {
+      "name": "Caliza",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 8
+    },
+    {
+      "name": "Pizarra",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 6
+    },
+    {
+      "name": "Sedimentación",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 9
+    },
+    {
+      "name": "Cuarcita",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 13
+    },
+    {
+      "name": "Gneis",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 14
+    },
+    {
+      "name": "Esquisto",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 14
+    },
+    {
+      "name": "Conglomerado",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 13
+    },
+    {
+      "name": "Lutita",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 14
+    },
+    {
+      "name": "Canto rodado",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 6
+    },
+    {
+      "name": "Litificación",
+      "facet": "Tipos de rocas y su ciclo",
+      "known_at": 14
+    },
+    {
+      "name": "Feldespato",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 12
+    },
+    {
+      "name": "Mica",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 11
+    },
+    {
+      "name": "Calcita",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 11
+    },
+    {
+      "name": "Halita",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 11
+    },
+    {
+      "name": "Yeso",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 8
+    },
+    {
+      "name": "Dureza",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 8
+    },
+    {
+      "name": "Brillo metálico",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 11
+    },
+    {
+      "name": "Fluorita",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 12
+    },
+    {
+      "name": "Mineral",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 7
+    },
+    {
+      "name": "Exfoliación",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 14
+    },
+    {
+      "name": "Asbesto",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 12
+    },
+    {
+      "name": "Olivino",
+      "facet": "Minerales comunes y sus propiedades",
+      "known_at": 13
+    },
+    {
+      "name": "Ópalo",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 9
+    },
+    {
+      "name": "Jade",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 8
+    },
+    {
+      "name": "Turquesa",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 5
+    },
+    {
+      "name": "Aguamarina",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 9
+    },
+    {
+      "name": "Granate",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 10
+    },
+    {
+      "name": "Tanzanita",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 13
+    },
+    {
+      "name": "Lapislázuli",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 11
+    },
+    {
+      "name": "Corindón",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 13
+    },
+    {
+      "name": "Berilo",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 13
+    },
+    {
+      "name": "Talla brillante",
+      "facet": "Piedras preciosas y gemas",
+      "known_at": 12
+    },
+    {
+      "name": "Bauxita",
+      "facet": "Metales y minería",
+      "known_at": 12
+    },
+    {
+      "name": "Hematita",
+      "facet": "Metales y minería",
+      "known_at": 12
+    },
+    {
+      "name": "Mina",
+      "facet": "Metales y minería",
+      "known_at": 3
+    },
+    {
+      "name": "Fiebre del oro",
+      "facet": "Metales y minería",
+      "known_at": 8
+    },
+    {
+      "name": "Cinabrio",
+      "facet": "Metales y minería",
+      "known_at": 14
+    },
+    {
+      "name": "Mena",
+      "facet": "Metales y minería",
+      "known_at": 13
+    },
+    {
+      "name": "Sal de mesa",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 1
+    },
+    {
+      "name": "Tiza",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 2
+    },
+    {
+      "name": "Cemento",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 4
+    },
+    {
+      "name": "Porcelana",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 6
+    },
+    {
+      "name": "Baldosa",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 3
+    },
+    {
+      "name": "Arena para gatos",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 4
+    },
+    {
+      "name": "Piedra de afilar",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 7
+    },
+    {
+      "name": "Sal de Epsom",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 11
+    },
+    {
+      "name": "Caolín",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 13
+    },
+    {
+      "name": "Teja",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 5
+    },
+    {
+      "name": "Asfalto",
+      "facet": "Rocas y minerales en casa",
+      "known_at": 6
+    },
+    {
+      "name": "Huella de dinosaurio",
+      "facet": "Fósiles y formaciones en roca",
+      "known_at": 3
+    },
+    {
+      "name": "Combustible fósil",
+      "facet": "Fósiles y formaciones en roca",
+      "known_at": 7
+    },
+    {
+      "name": "Madera petrificada",
+      "facet": "Fósiles y formaciones en roca",
+      "known_at": 8
+    },
+    {
+      "name": "Estromatolito",
+      "facet": "Fósiles y formaciones en roca",
+      "known_at": 14
+    },
+    {
+      "name": "Período Jurásico",
+      "facet": "Fósiles y formaciones en roca",
+      "known_at": 6
+    },
+    {
+      "name": "Chimeneas de hadas",
+      "facet": "Fósiles y formaciones en roca",
+      "known_at": 11
+    },
+    {
+      "name": "Volcán escudo",
+      "facet": "Volcanes, lava y rocas ígneas",
+      "known_at": 12
+    },
+    {
+      "name": "Geoda",
+      "facet": "Cuevas, cristales y paisajes de piedra",
+      "known_at": 9
+    },
+    {
+      "name": "Dolomitas",
+      "facet": "Cuevas, cristales y paisajes de piedra",
+      "known_at": 12
+    },
+    {
+      "name": "Karst",
+      "facet": "Cuevas, cristales y paisajes de piedra",
+      "known_at": 14
+    },
+    {
+      "name": "Montaña de Siete Colores",
+      "facet": "Cuevas, cristales y paisajes de piedra",
+      "known_at": 10
+    },
+    {
+      "name": "Pan de Azúcar",
+      "facet": "Cuevas, cristales y paisajes de piedra",
+      "known_at": 9
+    },
+    {
+      "name": "Capillas de Mármol",
+      "facet": "Cuevas, cristales y paisajes de piedra",
+      "known_at": 13
+    },
+    {
+      "name": "Muzo",
+      "facet": "Rocas y minerales de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Barequeo",
+      "facet": "Rocas y minerales de Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Marmato",
+      "facet": "Rocas y minerales de Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Cerros de Mavecure",
+      "facet": "Rocas y minerales de Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Cerro Matoso",
+      "facet": "Rocas y minerales de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Moái",
+      "facet": "Piedra en la historia humana",
+      "known_at": 6
+    },
+    {
+      "name": "Pintura rupestre",
+      "facet": "Piedra en la historia humana",
+      "known_at": 7
+    },
+    {
+      "name": "Pedernal",
+      "facet": "Piedra en la historia humana",
+      "known_at": 8
+    },
+    {
+      "name": "Neolítico",
+      "facet": "Piedra en la historia humana",
+      "known_at": 10
+    },
+    {
+      "name": "Roca lunar",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 6
+    },
+    {
+      "name": "Meteorito de Hoba",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 13
+    },
+    {
+      "name": "Cráter del Meteorito de Arizona",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 12
+    },
+    {
+      "name": "Regolito",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 14
+    },
+    {
+      "name": "Meteorito marciano",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 13
+    },
+    {
+      "name": "Meteorito de Cheliábinsk",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 12
+    },
+    {
+      "name": "Meteoroide",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 10
+    },
+    {
+      "name": "Ryugu",
+      "facet": "Rocas del espacio y meteoritos",
+      "known_at": 14
+    },
+    {
+      "name": "Kriptonita",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Diamante de Minecraft",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Redstone",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 5
+    },
+    {
+      "name": "Portal del Nether",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Geodude",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Onix",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Piedra evolutiva",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Trolls de piedra de Frozen",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Rupias",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Roca de Patricio Estrella",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Dwayne 'La Roca' Johnson",
+      "facet": "Rocas y gemas en películas y juegos",
+      "known_at": 5
+    }
+  ]
+}

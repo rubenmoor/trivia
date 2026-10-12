@@ -2,7 +2,9 @@
   "categories": [
     {"slug": "fiestas-tradiciones", "name": "Fiestas y tradiciones", "subcategories": [
       "Navidad",
-      "Celebraciones del mundo"
+      "Celebraciones del mundo",
+      "Calendarios y Año Nuevo",
+      "Modales y costumbres del mundo"
     ]},
     {"slug": "comida-bebida", "name": "Comida y bebida", "subcategories": [
       "Verduras",
@@ -13,7 +15,8 @@
       "Comida latinoamericana",
       "Bebidas",
       "Quesos",
-      "Dulces y chocolate"
+      "Dulces y chocolate",
+      "Historia de los alimentos"
     ]},
     {"slug": "geografia-mundo", "name": "Geografía del mundo", "subcategories": [
       "Continentes",
@@ -33,7 +36,8 @@
       "Fenómenos naturales",
       "Volcanes",
       "Terremotos",
-      "Récords de la naturaleza"
+      "Récords de la naturaleza",
+      "Rocas y minerales"
     ]},
     {"slug": "plantas-medio-ambiente", "name": "Plantas y medio ambiente", "subcategories": [
       "Plantas",
@@ -44,7 +48,8 @@
     {"slug": "amazonas", "name": "Amazonas", "subcategories": [
       "Animales del Amazonas",
       "Plantas del Amazonas",
-      "Pueblos indígenas del Amazonas"
+      "Pueblos indígenas del Amazonas",
+      "Historia y exploración del Amazonas"
     ]},
     {"slug": "animales", "name": "Animales", "subcategories": [
       "Mamíferos",
@@ -75,10 +80,15 @@
     ]},
     {"slug": "cuerpo-humano", "name": "Cuerpo humano", "subcategories": [
       "Cuerpo humano",
-      "Cosas raras del cuerpo humano"
+      "Cosas raras del cuerpo humano",
+      "Medicina y salud",
+      "Cerebro y mente"
     ]},
     {"slug": "espacio", "name": "Espacio", "subcategories": [
-      "Espacio"
+      "Espacio",
+      "Sistema solar",
+      "Carrera espacial y astronautas",
+      "Estrellas y galaxias"
     ]},
     {"slug": "inventos-tecnologia", "name": "Inventos y tecnología", "subcategories": [
       "Inventos",
@@ -158,11 +168,14 @@
     {"slug": "videojuegos", "name": "Videojuegos", "subcategories": [
       "Videojuegos",
       "Videojuegos clásicos",
-      "Personajes de videojuegos"
+      "Personajes de videojuegos",
+      "Consolas y empresas de videojuegos"
     ]},
     {"slug": "futbol", "name": "Fútbol", "subcategories": [
       "Fútbol",
-      "Mundiales de fútbol"
+      "Mundiales de fútbol",
+      "Historia del fútbol",
+      "Fútbol internacional"
     ]},
     {"slug": "deportes", "name": "Deportes", "subcategories": [
       "Baloncesto",
@@ -223,7 +236,8 @@
       "Monedas del mundo",
       "Billetes del mundo",
       "Historia del dinero",
-      "Ahorro y bancos"
+      "Ahorro y bancos",
+      "Economía y bolsa"
     ]},
     {"slug": "religiones", "name": "Religiones y filosofía", "subcategories": [
       "Religiones del mundo",
