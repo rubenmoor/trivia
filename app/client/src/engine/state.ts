@@ -1,12 +1,14 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
 // SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state (app/server/game.py docstring).
-import type { Category, ErrorInfo, GameMode, JokerBudget, JokerName, Supply } from "../lib/types.ts";
+import type { Category, ErrorInfo, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
 export const SAVE_VERSION = 3;
+
+export type { Language };
 
 export interface SaveData {
   version: typeof SAVE_VERSION;
@@ -22,7 +24,12 @@ export interface SaveData {
   flags: Record<string, FlagEntry>;
   /** «Reportar pregunta» (MD-6): log only; since version 2. */
   reports: ReportRow[];
+  /** UI and question language (plan 68); parseSave fills {es, es}, a fresh save gets defaultLanguage(). */
+  language?: Language;
 }
+
+/** The family's language: what a save from before plan 68 plays in. */
+export const SPANISH: Language = { ui: "es", questions: "es" };
 
 export interface ReportRow {
   question_id: string;
@@ -51,8 +58,12 @@ export interface GameRow {
   result: "won" | "lost" | "abandoned" | null;
   /** null only for games from before D-28. */
   player_id: number | null;
+  /** The question locale the game plays in (plan 68); missing = es. */
+  locale?: string;
   state: GameState;
 }
+
+export const gameLocale = (row: GameRow): string => row.locale ?? "es";
 
 export interface SeenRow {
   question_id: string;
@@ -167,6 +178,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   mode_not_built: (p) => `mode ${pyRepr(String(p.mode))} isn't playable yet`,
   gamemaster_only: (p) => `${p.action} only in gamemaster mode`,
   note_invalid: "a note is text of at most 500 letters",
+  language_unknown: (p) => `no ${p.kind} language ${pyRepr(String(p.lang))}`,
 };
 
 /** A request that doesn't fit the game's state: a code with params; `details` (a supply report) goes to the client. */
@@ -195,8 +207,19 @@ export interface Io {
   now: string;
 }
 
+/** Display names of one locale (D-81): base's names file merged with every bundle's. */
+export interface Names {
+  bundles: Record<string, { name: string; description?: string }>;
+  categories: Record<string, string>;
+  subcategories: Record<string, string>;
+}
+
 /** Per pool: built once by engineData. */
 export interface EngineData {
+  /** The question locale of `pool` (plan 68). */
+  locale: string;
+  /** Empty for es: the keys are the Spanish names. */
+  names: Names;
   pool: PoolQuestion[];
   byId: Map<string, PoolQuestion>;
   categories: Category[];
@@ -206,9 +229,14 @@ export interface EngineData {
   groupById: Map<string, AgeGroup>;
 }
 
-export function engineData(pool: PoolQuestion[], categories: Category[], bundles: Bundle[], ageGroups: AgeGroup[]): EngineData {
+export const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {} };
+
+export function engineData(
+  pool: PoolQuestion[], categories: Category[], bundles: Bundle[], ageGroups: AgeGroup[],
+  locale = "es", names: Names = NO_NAMES,
+): EngineData {
   return {
-    pool, byId: byId(pool), categories, broad: broadOf(categories),
+    locale, names, pool, byId: byId(pool), categories, broad: broadOf(categories),
     bundles, ageGroups, groupById: new Map(ageGroups.map((g) => [g.id, g])),
   };
 }

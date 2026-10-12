@@ -1,5 +1,5 @@
 // The save document on disk (plan 49, PORT-4): parse/upgrade and flags.
-import { SAVE_VERSION, type SaveData } from "./state.ts";
+import { SAVE_VERSION, SPANISH, type Language, type SaveData } from "./state.ts";
 
 const isObject = (v: unknown): v is Record<string, any> => typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -42,9 +42,25 @@ export function parseSave(json: unknown): SaveData {
       throw new Error(`${key} must be a list of IDs`);
   }
   if (!doc.games.every((g: Record<string, any>) => isObject(g.state))) throw new Error("every game needs a state");
+  if (!doc.games.every((g: Record<string, any>) => g.locale === undefined || typeof g.locale === "string"))
+    throw new Error("a game's locale must be text");
   const flags = doc.flags ?? {};
   if (!isObject(flags)) throw new Error("flags must be an object");
-  return { ...doc, flags } as SaveData;
+  const language = doc.language ?? SPANISH;
+  if (!isObject(language) || typeof language.ui !== "string" || typeof language.questions !== "string")
+    throw new Error("language must be {ui, questions}");
+  return { ...doc, flags, language: { ui: language.ui, questions: language.questions } } as SaveData;
+}
+
+/** A fresh save's language (plan 68): per list, the exact tag, then its language part, else en, else es.
+ * `es-ES` → UI es-ES, questions es. */
+export function defaultLanguage(tag: string, ui: readonly string[], questions: readonly string[]): Language {
+  const best = (options: readonly string[]): string => {
+    const exact = options.find((o) => o.toLowerCase() === tag.toLowerCase());
+    const base = tag.split("-")[0].toLowerCase();
+    return exact ?? options.find((o) => o.toLowerCase() === base) ?? (options.includes("en") ? "en" : "es");
+  };
+  return { ui: best(ui), questions: best(questions) };
 }
 
 /** Flag or unflag one question (flags.set_flag): a new save; a reflag keeps the first `flagged_on`. */

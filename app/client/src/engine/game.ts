@@ -6,7 +6,7 @@ import { categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
-import { GameError, UNLIMITED, nextId, transact, trial, withDefaults } from "./state.ts";
+import { GameError, SPANISH, UNLIMITED, nextId, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 
@@ -210,6 +210,8 @@ export function newGame(
   save: SaveData, data: EngineData, io: Io, player: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
   const name = cleanName(player);
+  const locale = (save.language ?? SPANISH).questions;
+  if (data.locale !== locale) throw new Error(`new game in ${locale} on the ${data.locale} pool`);
   const choice = resolveChoice(data, args);
   const mode = args.mode ?? "gamemaster";
   if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
@@ -245,7 +247,7 @@ export function newGame(
     state.options = draw(work, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
-      state: structuredClone(state),
+      ...(locale === "es" ? {} : { locale }), state: structuredClone(state),
     });
     return state;
   });

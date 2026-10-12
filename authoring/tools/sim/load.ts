@@ -28,6 +28,6 @@ export function loadData(locale: string, dir = DATA_DIR): Loaded {
     if (existsSync(f)) files[b.id] = read(f);
   }
   const data = engineData(parsePool(read(pool)), loadCategories(bundlesJson, files), bundles,
-    parseAgeGroups(read(join(dir, "age-groups.json"))));
+    parseAgeGroups(read(join(dir, "age-groups.json"))), locale);
   return { ok: true, data, pool };
 }

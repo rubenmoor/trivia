@@ -42,6 +42,12 @@ export interface Choice {
   bundles: string[];
 }
 
+/** UI and question language of a save (plan 68); a game keeps the question locale it started in. */
+export interface Language {
+  ui: string;
+  questions: string;
+}
+
 /** A known player (app/server/game.py `players`, D-28). */
 export interface Player {
   name: string;

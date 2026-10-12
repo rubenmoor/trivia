@@ -3,7 +3,7 @@ import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/
 import * as game from "./game.ts";
 import { noteExhausted as noteExhaustedIn, outlook as outlookOf, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
-import type { EngineData, Io, SaveData } from "./state.ts";
+import type { EngineData, Io, Language, SaveData } from "./state.ts";
 import { GameError } from "./state.ts";
 
 /** A refused request on the wire (D-57). */
@@ -113,5 +113,18 @@ export function noteExhausted(save: SaveData, data: EngineData, body: Record<str
     const choice = game.resolveChoice(data, pick(body, ["age_group", "bundles"]));
     const shown = Array.isArray(body.subcategories) ? body.subcategories.filter((s) => typeof s === "string") : [];
     return { save: noteExhaustedIn(save, data, choice, shown), status: 200, body: { ok: true } };
+  });
+}
+
+/** The UI and question language (plan 68), any mode; each must be one of `options`. Applies to the next game. */
+export function setLanguage(save: SaveData, body: Record<string, unknown>, options: { ui: readonly string[]; questions: readonly string[] }):
+  Reply<{ language: Language }> {
+  return guard(save, 409, () => {
+    const language = { ui: body.ui, questions: body.questions };
+    for (const kind of ["ui", "questions"] as const) {
+      if (!(options[kind] as unknown[]).includes(language[kind])) throw new GameError("language_unknown", { kind, lang: String(language[kind]) });
+    }
+    const out = { ...save, language: language as Language };
+    return { save: out, status: 200, body: { language: out.language } };
   });
 }

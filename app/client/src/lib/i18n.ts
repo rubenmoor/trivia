@@ -6,6 +6,9 @@ export type Params = Record<string, string | number>;
 
 const CATALOGS: Record<string, Catalog> = { es };
 
+/** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
+export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
+
 /** `es`; `?lang=` overrides it in dev only (no language menu, OQ-31). */
 function pickLang(): string {
   if (import.meta.env?.DEV && typeof location !== "undefined") {

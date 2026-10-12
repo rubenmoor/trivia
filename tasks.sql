@@ -8244,7 +8244,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the docs describe what the code does; md style as in AGENTS.md.', '2026-10-12T19:34:44Z', NULL, 442);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (448, 68, 'create tasks for plan 68', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 449-451', 'Split plan 68 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:36:15Z', '2026-10-12T19:37:00Z', 246);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (449, 68, 'Engine and data: language in the save, per-locale data (I18N-2)', 'work', 'open', NULL, NULL, 'Plan 68, task 1. Engine side of the language setting; no UI yet. Follow plan 68 "Decisions taken here".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (449, 68, 'Engine and data: language in the save, per-locale data (I18N-2)', 'work', 'done', NULL, '2026-10-12, app/client/src/engine/{state,save,game,api,save.test}.ts, app/client/src/lib/{data,engine,api,i18n,types}.ts, authoring/tools/sim/{load,simulate}.ts', 'Plan 68, task 1. Engine side of the language setting; no UI yet. Follow plan 68 "Decisions taken here".
 
 ## What
 - `app/client/src/engine/state.ts`: `SaveData.language?: { ui: string; questions: string }`, `GameRow.locale?`; no save version bump.
@@ -8262,7 +8262,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - old save → `es`/`es`
   - fresh save, `navigator.language = "de-AT"`, only `es`/`en` present → UI `en`, questions `en`
   - game started in `en` keeps `en` after switching to `es`
-  - ids seen in an `en` game rank after unseen ones in an `es` game', '2026-10-12T19:36:54Z', NULL, 448);
+  - ids seen in an `en` game rank after unseen ones in an `es` game', '2026-10-12T19:36:54Z', '2026-10-12T19:41:19Z', 448);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (450, 68, 'UI: language rows in the Esc menu, localized names, boot language (I18N-2)', 'work', 'open', 470, NULL, 'Plan 68, task 2. Needs plan 68 task 1 (engine/data) and plan 59''s `task 392: Gamemaster menu (MD-12)` (the Esc menu it grows); rebase on whatever `Overlay.svelte` looks like then.
 
 ## What
@@ -8852,6 +8852,7 @@ index 0000000..381cb7f
 +- `media_text`: as above.
 +- `notes`: in English, one short line per adaptation that a reviewer should know about (a unit changed, a wrong answer replaced, a hint rewritten, a doubtful source fact); empty if you only translated.
 ```', NULL, NULL, '2026-10-12T19:18:26Z', NULL, 437, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (36, 'GameRow.locale: written only for non-es games?', 'answered', '[]', 'Keeps the family''s saves and the Python fixture replay byte-identical (plan 68: the family''s game stays as today). The lib layer runs ''new'' on the language''s pool (scope next), every other route on the newest game''s locale; newGame throws if the pool''s locale differs from language.questions.', 'Yes: newGame writes locale only when it isn''t es; missing = es', NULL, '2026-10-12T19:41:19Z', '2026-10-12T19:41:19Z', 449, NULL, 'rule', 449, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -9167,6 +9168,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (308, 442, '2026-10-12T19:34:13Z', '2026-10-12T19:34:50Z', 'done', NULL, 0, '7775bbda99eabd498507c031ecb74a0373f0bd31', 'claude-opus-5-5[1m]', '252c042c-8043-4a5e-a32c-27185fbd5091', 5, 10, 3910, 148375, 28960, 0.33959500000000004, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (309, 246, '2026-10-12T19:34:51Z', '2026-10-12T19:36:26Z', 'done', NULL, 0, '3a77adb3f51a435806698decff1a82ddd2bed900', 'claude-opus-5-5[1m]', 'dd1a4567-8907-4030-a1d3-2907b805db47', 11, 20, 8740, 491448, 57587, 0.7338655999999999, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (310, 448, '2026-10-12T19:36:26Z', '2026-10-12T19:37:06Z', 'done', NULL, 0, '9f2ca5ff0b053c2d395da36a03d5834b20b4ddd8', 'claude-opus-5-5[1m]', '936f08e3-674e-4b96-a120-31e2a7d0abae', 6, 12, 3453, 179624, 26321, 0.3156008, 626610);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (311, 449, '2026-10-12T19:37:06Z', '2026-10-12T19:41:30Z', 'done', NULL, 0, '14b8b83b426a847fa17064e7d29c6adc39d526ce', 'claude-opus-5-5[1m]', 'cf7ae8c3-2ff8-422d-8579-c0c40cc04210', 41, 78, 24069, 2829771, 85551, 1.7320541999999997, 626610);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
