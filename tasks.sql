@@ -354,11 +354,25 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Released; content updates go out as patches.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own always-on base bundle, `chinese-base`, which replaces `base` there: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s.
 
 ## Outcome
 - Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
 - Built on the launch languages'' translation pipeline and review tool (Steam S4); no new pipeline per language.
+- Russian and Portuguese play translated `base`, as the launch languages do.
+
+## Chinese: `chinese-base` bundle
+- In the zh game, `chinese-base` is the always-on bundle; `base` isn''t played there.
+- Target: 5000 approved with D-53''s mix, like `base` (pm decision 21).
+- Contents:
+  - translated `base` questions that work for a Chinese family (not about the Spanish-speaking world, no Spanish wordplay); a fit pass picks them, the gamemaster corrects
+  - new China-centric questions (Chinese history, places, food, festivals, people, language, pop culture) fill the rest
+- Own taxonomy and concept lists per D-43, reusing `base`''s where they fit.
+- Other bundles (`colombia`, …) stay switchable in zh only if translated; not required.
+- Open, for the masterplan to raise as pm decisions:
+  - membership: D-39 says one bundle per question, D-81 takes the bundle from the source; how a `base` question also counts for `chinese-base` (e.g. a per-locale fit flag on the zh translation vs. a bundle per locale)
+  - new China-centric questions: drafted in Spanish and translated (one pipeline) or drafted in Chinese
+  - bundle switching in the game: a locale''s base bundle replacing `base` (bundles.json, settings, selection, supply checks)
 
 ## Constraints
 - On hold until the gamemaster starts it (pending decision on the masterplan task).
@@ -366,9 +380,11 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Out of scope
 - Languages beyond these three.
+- Own base bundles for Russian or Portuguese.
 
 ## Done when
-- All three languages playable in the released game, store pages localized, content target met per language.', '2026-10-12T16:46:08Z', NULL);
+- All three languages playable in the released game, store pages localized, content target met per language.
+- zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
 
