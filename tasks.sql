@@ -8042,8 +8042,52 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:31:54Z', '2026-10-12T18:32:12Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (435, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-12, no files: only change since task 419 is plan 65''s reference format; tasks 253-255, 257-263, 433 still match plan 10, no new decisions', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:31:54Z', '2026-10-12T18:32:33Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (436, 66, 'create tasks for plan 66', 'split', 'open', 1000, NULL, 'Split plan 66 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:15:14Z', NULL, 244);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (436, 66, 'create tasks for plan 66', 'split', 'done', 1000, '2026-10-12, tasks 437 (prompts + pm decision; makes 438–440 pending), 438, 439, 440, 441', 'Split plan 66 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:15:14Z', '2026-10-12T19:16:03Z', 244);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (437, 66, 'Translation prompts and market per locale (pm decision)', 'work', 'open', 710, NULL, 'Plan 66, step 1. Draft the prompts the translation pipeline needs; the texts are the gamemaster''s (D-36), so they go through a pm decision.
+
+- Draft `authoring/tools/prompts/translate.md` (adapt, don''t translate literally; units/number/answer format for the market; answer and fact unchanged; three wrong answers plausible in the target language, never accidentally correct; Spanish wordplay in hints rewritten; `description` humour adapted; say when it doesn''t travel: `travels: no` + reason).
+- Draft `authoring/tools/prompts/translate-review.md` (appended to `review.md` / `audit.md` for locale runs): fidelity, natural target language, adapted hints, distractors plausible in that language, `media_text`.
+- House-style: a `{locale}` section (language, market, conventions) filled by `prompt()` per locale; the "Language" voice block applies to `es` only. Proposal: `en` US + UK families, US spelling, metric with imperial where natural; `de` Germany, Austria, Switzerland, standard German, `ß` per Germany.
+- Include `TRANSLATE_SIZE` (proposal 300) and pilot size 50 in the decision body.
+- `pm decision add` with the drafts as diffs in the body; options: approve as drafted / changes. Then `pm task-pending-decision` for the plan''s three code tasks (translate/rate/factcheck/merge; review/fix/record/audit; `qgen batch --translate`).
+- Stage only the drafts (`git add`); prompt texts change only after the answer.
+
+Done when: decision exists, the three code tasks wait on it, drafts staged.', '2026-10-12T19:15:57Z', NULL, 436);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (438, 66, 'Translate, rate, factcheck, merge per locale', 'work', 'open', NULL, NULL, 'Plan 66, step 2 (QT-2). Needs the prompt decision from the plan''s first task.
+
+- `cmd_translate` + `TRANSLATE_SCHEMA` in `authoring/tools/` (opus, chunks per subcategory ~15): input source text fields, subcategory, difficulty, media role/type + picked media title/description; output per id: `question`, `answer`, `wrong_answers`, `hints`, `description`, `fun_fact`, `travels` (+ reason), `media_text`, `notes`. Writes `work/<run>/translations/<chunk>.json`.
+- `run.json` gets `locale`; `cmd_rate` and `cmd_factcheck` read it (`drafts`/`collect` per mode), no copies. Rate: house-style + `rate.md` + locale section, overlap candidates from that locale''s approved translations. Factcheck: only items whose translation changed a number, unit, date or record, or source `needs_fact_check`; others inherit the source''s check.
+- Merge into `questions.<locale>.json` via `translations.save`: `status: draft`, `batch`, `source_hash`, `difficulty` from the rating; `travels: no` → `work/<run>/not-travelling.json`, no entry.
+- Single steps callable for debugging (`qgen translate --run …`).
+
+Done when: on a git worktree, a run with `--ids` of 5 questions, `en`, produces translations, ratings, fact checks and a merged locale file; worktree discarded.', '2026-10-12T19:15:58Z', NULL, 436);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (439, 66, 'Review, fix, record, audit per locale', 'work', 'open', NULL, NULL, 'Plan 66, step 3 (QT-3). Needs the prompt decision and the previous task.
+
+- `cmd_review` with locale: payload = Spanish source + translation + rater notes + fact check + related translated questions + the source''s picked media (no search, no new pick); `review.md` + `translate-review.md`; `can_search_again: false`. Not-travelling ids get a one-line review (confirm → `translatable: false`, else translated next run).
+- `cmd_fix`: revise the translation once with the review''s `fix` (as QG-22); changed facts re-checked.
+- `cmd_record` with locale: `status`, `review` (D-33 shape), `media_text` into the locale file; source media rules don''t apply; unconfirmed fact check → `needs_work`; confirmed not-travelling → `translatable: false` on the source in `questions.json`.
+- `cmd_audit`/`audit_input` with locale: seeded `AUDIT_SAMPLE` from the locale file, `audit.md` + locale section, source alongside; findings → `work/<run>/audit/`.
+
+Done when: the worktree run from the previous task goes through review 1, fix, review 2, record and audit; locale file has reviewed entries; `questions.json` changes only in `translatable`; worktree discarded.', '2026-10-12T19:15:58Z', NULL, 436);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (440, 66, 'qgen batch --translate <locale>', 'work', 'open', NULL, NULL, 'Plan 66, step 4: the entry point (D-36). Needs the prompt decision and the two step tasks before it.
+
+- `cmd_batch` branch (or `cmd_translate_batch`): run `tr-<locale>-<n>`, resumes an open run of that locale; `run.json` `{"mode": "translate", "locale", "ids", "started"}`; steps translate → rate → factcheck → merge → review 1 → fix → factcheck → review 2 → record → audit → export → validate → batch-report (pattern: `cmd_neutralize`).
+- Selection by code: approved, translatable, bundle `base`, no approved non-stale translation, not rejected in that locale; stale first (old review kept as `previous`); then subcategories with fewest approved translations, spread over difficulty, ties in `categories.json` order. `TRANSLATE_SIZE` (as decided), pilot 50 when no locale file exists. Hidden `--count`, `--ids`.
+- Pilot stop: next `--translate <locale>` exits 2 until `qgen health ack tr-<locale>-1 "<note>"`. Health thresholds that apply (needs_work/reject share, audit agreement) noted in `health.py`; `health.batch_runs` stays `batch-*`.
+- Report `authoring/reports/tr-<locale>-<n>.md` (counts, not travelling, `media_text`, stale re-translated, cost per approved translation from `costs.log`, audit, QC section via `qgen report --qc <run>`, spot-check link `/review?batch=<run>&locale=<locale>&sample=1`); "Commit exactly this" lines.
+- `qgen report --qc` and `/stats` read `tr-*` runs where they list batches.
+
+Done when: on a worktree, `qgen batch --translate en --count 5` runs end to end: locale file written, `pool.en.json` exported, `qgen validate` clean, report written, `app/data/pool.json` identical; worktree discarded.', '2026-10-12T19:15:58Z', NULL, 436);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (441, 66, 'Translation pipeline: docs and D-entry', 'work', 'open', 690, NULL, 'Plan 66, step 5. After `qgen batch --translate` works.
+
+- `plans/decisions.md`: D-entry "Translations through `qgen batch --translate`" (run names, selection, pilot stop, steps); D-36 "amended by".
+- `authoring/RUNBOOK.md`: only when the user names a language: `qgen batch --translate <locale>`; same exit codes; the pilot stop.
+- `authoring/QC.md`: native-speaker spot check for `tr-*` runs.
+- AGENTS.md command list; `directory.md` (`work/tr-*`, new prompts).
+- `plans/15b-question-translation.md` "Pipeline" + QT-2, QT-3 `[x]`.
+
+Done when: all listed docs updated and consistent with the code.', '2026-10-12T19:15:58Z', NULL, 436);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -8766,6 +8810,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (301, 389, '2026-10-12T19:11:42Z', '2026-10-12T19:13:01Z', 'done', NULL, 0, '03ae3b0d233daa62b3b60c5ef3a1efc04df50450', 'claude-opus-5-5[1m]', '28696b8e-4db5-42a1-b06b-7e02f89832b2', 17, 28, 6977, 750206, 57597, 0.75046920000000006, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (302, 353, '2026-10-12T19:13:01Z', '2026-10-12T19:13:30Z', 'done', NULL, 0, '80875812c46337b764f51f06565f2dd65bd7bcf3', 'claude-opus-5-5[1m]', '63dcf2ad-8d29-4b3e-a9f0-cb55bb2c6cea', 8, 16, 1987, 304426, 36689, 0.39420120000000003, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (303, 244, '2026-10-12T19:13:30Z', '2026-10-12T19:15:28Z', 'done', NULL, 0, 'eff55f745040b110561ba7a3498427578bbfd038', 'claude-opus-5-5[1m]', '373b36fa-161a-491e-b7de-37d651b32350', 17, 28, 11142, 680686, 66672, 0.8924652, 583141);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (304, 436, '2026-10-12T19:15:29Z', '2026-10-12T19:16:08Z', 'done', NULL, 0, '27dfa37e7c8a7c9f8eeddb8eaaaa22fe4f962572', 'claude-opus-5-5[1m]', '8208169b-3774-4897-aa9c-3f9e3187a747', 6, 12, 3981, 202216, 31204, 0.3697432, 583141);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
