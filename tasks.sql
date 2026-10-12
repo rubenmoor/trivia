@@ -10319,8 +10319,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:56:28Z', '2026-10-12T23:07:29Z', 508);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (520, 80, 'create tasks for plan 80', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 567–572 for plan 80; no decisions needed at split time', 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:58:07Z', '2026-10-12T23:08:19Z', 509);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (521, 81, 'create tasks for plan 81', 'split', 'open', 1000, NULL, 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:59:31Z', NULL, 510);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (521, 81, 'create tasks for plan 81', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 573-579 for plan 81', 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:59:31Z', '2026-10-12T23:09:11Z', 510);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (522, 82, 'create tasks for plan 82', 'split', 'open', 1000, NULL, 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:01:18Z', NULL, 511);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (523, 83, 'create tasks for plan 83', 'split', 'open', 1000, NULL, 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -11420,6 +11420,199 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - These files listed in `## Part 8` with findings and status; plan 80 "Done when" holds.', '2026-10-12T23:08:17Z', NULL, 520);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (573, 81, 'Review the authoring server: authoring/server/main.py', 'work', 'open', NULL, NULL, 'Task 1 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `main.py` (≈371 lines).
+- `Handler` routes (≈125 lines in one class): error responses (status codes, JSON `error` shape, uncaught exception → 500 with a message vs. dropped connection), body parsing/validation (`slot_of`, `DECISIONS`, `REVIEWERS`, bad ids), route dispatch duplication, split candidates.
+- Pool IO: `load_pool`/`save_pool`/`update_question` per request (whole `questions.json` re-read/re-written: atomic? locked against a running `qgen`?), export after every change (D-35/D-36), `with_candidates` reading candidate files per question in a list response.
+- `set_review`/`set_difficulty` vs. D-32/D-33 (`previous`, undo, `difficulty_original`); `set_bundle`/`load_bundles`; `pick_media`/`search_media` errors (provider down, offline); `apply_flags` vs. D-59 (save read-only, `state/flags-applied.json`); `matches_status`.
+- Module docstring API list vs. real routes vs. `authoring/ui/src/lib/api.ts`; `main()` startup (port, `sys.path`, Windows paths).
+- Parts touched by tasks 309/443/302 → findings only while open.
+- Duplication candidate: `Handler` ↔ `app/server/main.py` (both on `http_base.BaseHandler`).
+
+## Done when
+- `main.py` listed in `## Part 9`, every finding with a status; its part 1 rows with final status.
+- Checks pass; route responses identical before/after fixes (diff).', '2026-10-12T23:09:08Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (574, 81, 'Review server helpers: overview.py, spot_checks.py, media_stats.py', 'work', 'open', NULL, NULL, 'Task 2 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `overview.py` (≈74): `supply` (Node call per start-page load, decision 5; cost; error when `node` is missing), `batch_rows` vs. `batches.py`/`health.py`, `build` pool passes; task 477/446 overlap.
+- `spot_checks.py` (≈81): `save` atomicity, `DEFAULT_SIZE` comment vs. decision 2 and `targets.json` `quality` (stale?), `sample` determinism, `record`/`remove` on a missing batch/run, `audit_of` vs. qgen''s.
+- `media_stats.py` (≈83): `image_size` header parsing (PNG/JPEG/GIF/WebP/SVG, truncated files, swallowed exceptions), one file read per question per request (cache?), `BANDS`/`OTHER` vs. the labels in `MediaStats.svelte`.
+- `directory.md` gaps for `overview.py`, `media_stats.py` (part 1 row): fix or final status.
+- Duplication candidates: `supply`/`batch_rows` ↔ qgen report/`health.py`; `image_size`/`band` ↔ `authoring/tools/media.py`; `spot_checks.py` ↔ qgen `audit_sample`/`audit_of`.
+
+## Done when
+- The three files listed in `## Part 9`, every finding with a status.
+- Checks pass; `/api/overview`, spot-check and media-stats responses identical before/after fixes (diff).', '2026-10-12T23:09:08Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (575, 81, 'Review the review page: authoring/ui/src/review/Review.svelte', 'work', 'open', NULL, NULL, 'Task 3 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `Review.svelte` (≈971 lines).
+- Split candidates (filter/URL state, keyboard handling, spot-check mode, decision form, undo) without changing behaviour; task 444 adds `SourcePanel.svelte`: don''t pre-empt it, note where the split would go (while open).
+- Keyboard listeners and focus (added/removed once, inputs not hijacked), `$effect`s that refetch/recompute per keystroke, races between a POST and the next fetch (stale question after fast decisions), error display on failed requests.
+- URL params (`media=missing`, `batch`, `sample`, `id`) parsing; blind sample mode leaking the LLM review before a decision (plan 16); unused CSS/state.
+- Parts touched by tasks 310/444 → findings only while open.
+
+## Done when
+- `Review.svelte` listed in `## Part 9`, every finding with a status.
+- Checks pass; review page clicked through on the temp server (keys, decision, undo, sample mode) or noted why not.', '2026-10-12T23:09:08Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (576, 81, 'Review the review panels: MediaPanel.svelte, RevisionPanel.svelte', 'work', 'open', NULL, NULL, 'Task 4 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `review/MediaPanel.svelte` (≈251): candidate list and search modal (`m`), pick errors, `<img>`/`<audio>`/`<video>` loading of many candidates, credit/licence text vs. decision 8; task 310 parts → findings only while open.
+- `review/RevisionPanel.svelte` (≈128): diff of `previous`/revisions vs. D-33, props unused or passed but ignored, unused CSS.
+
+## Done when
+- Both files listed in `## Part 9`, every finding with a status.
+- Checks pass; panels clicked through on the temp server (search stubbed) or noted why not.', '2026-10-12T23:09:08Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (577, 81, 'Review the stats pages: authoring/ui/src/stats/*', 'work', 'open', NULL, NULL, 'Task 5 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `Stats.svelte` (≈146), `CategoryChart.svelte` (≈212), `DifficultyChart.svelte` (≈236), `SubcategoryTable.svelte` (≈100), `SparseList.svelte` (≈142), `MediaStats.svelte` (≈109), `breakdown.ts` (≈41), `chart.css` (≈62).
+- Shared chart code: repeated scales/bars/legend/label code in `CategoryChart` and `DifficultyChart`, `breakdown`/`reviewLink` use, `chart.css` selectors unused or duplicated in component `<style>`s; extract only if local (same folder) and clearly smaller.
+- `Stats.svelte`: seven fetches on mount (parallel? errors shown?), route/tab handling, `?bundle=`; `breakdown` recomputed over the whole pool per render.
+- `SPARSE_*` thresholds and `PLAYED_GROUP` (task 477) vs. decision 21 and the age-group rules; magic numbers in chart geometry; task 446 parts → findings only while open.
+- Duplication candidate: chart CSS/helpers ↔ the game''s `theme.css`.
+
+## Done when
+- The eight files listed in `## Part 9`, every finding with a status.
+- Checks pass; stats page clicked through on the temp server (each tab, `?bundle=`) or noted why not.', '2026-10-12T23:09:09Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (578, 81, 'Review the start page and print page: Home.svelte, JokerCards.svelte', 'work', 'open', NULL, NULL, 'Task 6 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `home/Home.svelte` (≈412): fetches and error states, supply/batch tables vs. `overview.py`''s JSON, reuse of stats components (props passed vs. used), links to review queues, unused CSS; tasks 310/446/477 parts → findings only while open.
+- `print/JokerCards.svelte` (≈165): imports of `$app/game/theme.css`, `Icon.svelte`, `TOKENS` from `JokerTray.svelte` (one-way `authoring` → `app` per AGENTS.md "Layout"; does importing a game component pull the game into the authoring bundle? check `dist`), print CSS, joker names vs. the catalogs.
+
+## Done when
+- Both files listed in `## Part 9`, every finding with a status.
+- Checks pass; start page and print page opened on the temp server or noted why not.', '2026-10-12T23:09:09Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (579, 81, 'Review the authoring UI shell, lib and configs; close part 9', 'work', 'open', NULL, NULL, 'Task 7 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen) and `## Part 8` (plan 80, other authoring tools): findings and duplication lists for the modules the server imports (`qgen`, `translations`, `media`, `providers`, `layout`, `save_file`, `engine`, `targets`, `age_groups`); don''t redo them; a mismatch seen from the server/UI side is logged here.
+- `pm show <id>` for the open tasks touching these files (plan 81 "Depends on": 309, 310, 443, 444, 445, 446, 302, 477); still open → findings in the code they add or rewrite only, status `superseded by task N`, no conflicting refactor; done → review their code like the rest.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-32/D-33, D-35/D-36, D-59, `decision 2: When is batch quality "fine"`, `decision 4` (`/media` cache-only in the game), `decision 5: Where does the supply check … live`, `decision 8: Media with Commons restriction flags`, `decision 21: Content target per player and language`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 81 "Rules for this plan": behaviour unchanged (routes, query params, status codes, JSON shapes, files written, `app/data/pool*.json` byte-identical after the same action, UI URLs and keyboard keys). A change to any of these → `pm decision add` (recommended option first) + follow-up task in plan 81 linked with `pm task-pending-decision`; larger work: `pm task add 81`.
+- Duplication with other files: log only, as "duplication candidate for part 10".
+- Part 1 rows `handed to part 9` for these files: re-check, final status in `## Part 9`, quoting the row.
+
+## Check
+- Never the real `authoring/data/`, `app/data/`, `work/`, `state/` or media cache: `trivia-authoring` on a git worktree or temp copy with `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`; `curl` the routes, diff responses before/after a fix; stop the server by PID (`kill $!`). No network: media search/download stubbed or skipped.
+- UI fixes: `npm run check`, `npm run build`; click the page through on the temp server (or note why not); bundle size of `authoring/ui/dist` vs. part 1''s baseline when a fix touches imports.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `App.svelte` (≈25), `main.ts` (≈5), `app.css` (≈27), `index.html` (≈12), `lib/Nav.svelte` (≈34), `lib/api.ts` (≈102), `lib/types.ts` (≈215), `package.json` (≈18), `vite.config.ts` (≈18), `svelte.config.js` (≈3), `tsconfig.json` (≈31), `.gitignore` (≈2), all under `authoring/ui/`.
+- `lib/types.ts` vs. the server''s actual JSON: run the temp server once, compare a response of every route to the types (missing, extra, optional fields); types never used.
+- `lib/api.ts`: error handling (non-2xx, JSON parse), one helper vs. copy-pasted `fetch`es, routes vs. `main.py`''s docstring.
+- `App.svelte` routing (unknown path), `Nav.svelte` links vs. routes; `vite.config.ts` proxy/port and `$app` alias; `tsconfig.json` strictness vs. `app/client` (difference → part 10 row); `package.json` deps vs. imports.
+- Not here: root `package.json`/`package-lock.json`, `flake.nix`, consolidating `authoring/ui` ↔ `app/client` configs/types/API clients → part 10 (row "handed to part 10").
+- Close: `git ls-files authoring/server authoring/ui` vs. the part 1 inventory and tasks 1–6 of plan 81; files added since (e.g. `SourcePanel.svelte` from task 444) reviewed with the same checklist and added to the inventory with part 9 (exceeds this run → `pm task add 81` per remaining group); this part''s duplication candidates (at least those in plan 81 "Rules for this plan") collected in one list in `## Part 9` for part 10.
+
+## Done when
+- Every tracked file of `authoring/server/` and `authoring/ui/` listed in `## Part 9` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 9` has its final status.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:09:09Z', NULL, 521);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -12436,6 +12629,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (385, 518, '2026-10-12T23:06:00Z', '2026-10-12T23:06:40Z', 'done', NULL, 0, '43d714912ee3fdc686107ce3718d282bb0427188', 'claude-opus-5-5[1m]', 'a4c7cfab-1f0d-4d0f-aac4-b08e7c1a741b', 5, 10, 4551, 148771, 28983, 0.3526782, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (386, 519, '2026-10-12T23:06:40Z', '2026-10-12T23:07:36Z', 'done', NULL, 0, 'ec8f53ab686ed945af59b88b3b3f4b9b83dfce1e', 'claude-opus-5-5[1m]', 'e277c5e2-17b3-4cc3-a687-6082f1c24d97', 6, 12, 6162, 203478, 34310, 0.4384636, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (387, 520, '2026-10-12T23:07:37Z', '2026-10-12T23:08:26Z', 'done', NULL, 0, 'f82043824dc7bae7d5d52cc7f30a97164bf1b637', 'claude-opus-5-5[1m]', '26cd63be-5528-4df9-9083-0963ab38548f', 6, 12, 5696, 180408, 29519, 0.38620160000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (388, 521, '2026-10-12T23:08:26Z', '2026-10-12T23:09:18Z', 'done', NULL, 0, 'c3cb97ca4b35546f4bf0d2342de976c4f54ed657', 'claude-opus-5-5[1m]', '89c74dfc-5a5e-44f7-9325-cb1e6bd0bd31', 7, 14, 6063, 246442, 36093, 0.45934839999999994, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
