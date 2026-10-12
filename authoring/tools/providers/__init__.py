@@ -94,6 +94,32 @@ def pd_reasons(candidate):
 
 LICENCE_FIELDS = ("provider", "license", "license_url", "author", "author_url", "restrictions", "pd_reasons")
 
+# PD templates that hold in the US only (D-62); PD-USGov* counts as worldwide.
+US_ONLY_PD = r"PD-US(?!Gov).*|PD-1923|PD-Harris-Ewing"
+
+
+def licence_verdict(slot):
+    """("ok" | "replace", ["code: text", …]) for a picked slot's licence record (plans/52).
+    Restrictions never make a file "replace" (D-61)."""
+    missing = [k for k in LICENCE_FIELDS if k not in slot]
+    if missing:
+        return "replace", [f"missing-data: {', '.join(missing)}"]
+    reasons = []
+    if slot["provider"] not in PROVIDERS:
+        reasons.append(f"missing-data: unknown provider {slot['provider']}")
+    for k in ("restrictions", "pd_reasons"):
+        if not isinstance(slot[k], list):
+            reasons.append(f"missing-data: {k} not a list")
+    kind = licence_kind(slot["license"])
+    if not kind:
+        reasons.append(f"off-allowlist: {slot['license']}")
+    elif kind == "public-domain" and isinstance(slot["pd_reasons"], list):
+        if not slot["pd_reasons"]:
+            reasons.append("pd-no-reason: public domain without a template")
+        elif all(re.fullmatch(US_ONLY_PD, r) for r in slot["pd_reasons"]):
+            reasons.append(f"pd-us-only: {', '.join(slot['pd_reasons'])}")
+    return ("replace" if reasons else "ok"), reasons
+
 
 def licence_fields(candidate):
     """A pick's licence record (plans/26 "Slot fields"). Commons candidates stored before plan 26

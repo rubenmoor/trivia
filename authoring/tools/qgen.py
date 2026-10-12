@@ -2326,10 +2326,9 @@ def cmd_export(args):
 
 
 def licence_problem(slot):
-    """True when a picked slot's licence record (plans/26) is missing or invalid."""
-    return (any(k not in slot for k in providers.LICENCE_FIELDS) or slot["provider"] not in providers.PROVIDERS
-            or not providers.licence_kind(slot["license"])
-            or not isinstance(slot["restrictions"], list) or not isinstance(slot["pd_reasons"], list))
+    """True when a picked slot's licence record (plans/26) is missing or off the allowlist.
+    PD-US only and PD without a reason aren't errors yet (plans/53)."""
+    return any(r.startswith(("missing-data:", "off-allowlist:")) for r in providers.licence_verdict(slot)[1])
 
 
 def validate_pool():

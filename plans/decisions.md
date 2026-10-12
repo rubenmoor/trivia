@@ -484,3 +484,10 @@ Template:
 - Decision: Keep every flagged file (pm decision 8). The gamemaster checked them: no problem in any. The licence audit shows the flags for information; they never put a file on the replacement list.
 - Consequences: No per-file "checked, keep" mark, no review-tool control for it. Replacement list: PD-US only, GFDL, off-allowlist licences, missing data.
 - Supersedes / related: D-59; plan 17 (PUB-1), milestone 4
+
+## D-62: PD-US-only media is replaced; US government works count as free
+- Date: 2026-10-12
+- Context: Public-domain files carry Commons PD templates (`pd_reasons`). Some only say the work is PD in the US (expired US copyright, no notice, not renewed); a worldwide release needs more. US government works (`PD-USGov*`, ~55 files) are PD in the US by law, abroad less clear-cut.
+- Decision: A PD file goes on the replacement list when every reason is US-only: `PD-US*` except `PD-USGov*`, `PD-1923`, `PD-Harris-Ewing` (`providers.US_ONLY_PD`). Any other reason (`PD-old-*` incl. `PD-old-70-1923`, `PD-self`, `PD-author`, `PD-Art`, `PD-USGov*`, `PD-NASA`, `PD-Highsmith`, …) makes the file ok. `PD-USGov*` is ok: generally treated as free elsewhere, as in plan 17.
+- Consequences: `providers.licence_verdict` is the one check for the audit report, the review tool and `qgen validate`. Today: q-1100, q-1194 replace (PD-US only).
+- Supersedes / related: D-45, D-61; plans 17 (PUB-1), 52, 53
