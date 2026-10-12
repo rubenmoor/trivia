@@ -1,6 +1,6 @@
 # 13 — Game Modes
 
-**Status:** modes decided (D-74, multiplayer D-77, timed D-80); MD-6 done; MD-7.. open
+**Status:** modes decided (D-74, multiplayer D-77, timed D-80); gamemaster mode specced (D-88); MD-6, MD-10 done; MD-7.. open
 
 Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them. Spanish names: «Solo o en grupo» fixed, the others proposals ([15a](15a-ui-translation.md) "Mode names").
 
@@ -18,25 +18,29 @@ Shared by every mode except gamemaster mode (D-74):
 - Gamemaster menu (`Esc`): arbitrary cheats: manage jokers, skip, replace the current question, undo, … (MD-12; today's overlay, D-30, MD-4).
 - No achievements. Its defaults never change without the gamemaster's say.
 
-#### Proposal A: configure game screen (MD-11; pm decision "Configure game screen: which fields?")
-Plan 29's Choice screen in gamemaster form; opens on the player's last choice (`playerChoice`) or the defaults, so Enter straight through = today's game. Controls for every row: ↑/↓ (D-pad) move, ←/→ (D-pad) change the value, Enter/A on «Jugar» starts (default focus), Enter/A on a toggle toggles, Esc/B back to Player. Mouse: click a value, − / + buttons.
-- Age group (plan 29): default `young_teens`; `settings.age_group`; ←/→ cycles `age-groups.json`.
-- Bundles (plan 29): default every bundle, `base` always on; `settings.bundles`; one toggle row per bundle.
-- Joker set: default «Sin límite»; `settings.jokers` (existing, `new {jokers}`); ←/→ cycles Sin límite / Como las cartas (`CARDS`) / Estándar (`STANDARD_JOKERS`) / A medida; A medida shows the overlay's per-joker rows (0–9, ∞).
-- Media questions on/off: default on; new `settings.media` (missing = on); off = draws skip questions with `media` (background images stay); the supply check counts it.
-- Start level (weighed, recommended): default 1; new `settings.start_level` (missing = 1); ←/→ 1–12; the game starts there, the Tower shows lower levels as not played, level 12 still wins. For a short game or a late start.
-- Not proposed: cards per level (`PER_LEVEL` = 4; the table layout is built for 4), levels to win (12 is the game), hint count (the questions fix it).
-- Option 2 (shorter): age group, bundles, joker set only.
+#### Configure game screen (MD-11; D-88, pm decision 33)
+Plan 29's Choice screen in gamemaster form, no second screen. Opens on the player's last game's settings (`playerChoice` grows to every field below; a budget changed mid-game counts), else the defaults. A field missing in `settings` = the game before D-88 (old saves and the fixture replay unchanged); the configure screen always sends every field. Controls: ↑/↓ (D-pad, stick) move between rows, ←/→ change the value, Enter/A on «Jugar» starts (default focus), Enter/A toggles a switch, Esc/B back to Player; mouse: click a value, − / + buttons. Strings `configure.*`.
+- **Difficulty:** age group (`settings.age_group`, as today) or «Custom» (`configure.custom`; new `settings.difficulty: {start, end}`, integers 1–15, end ≥ start; with it no `age_group`). Default: the last choice, else `young_teens`. ←/→ cycles the age groups, then «Custom» (two −/+ rows: start, end). Ramp: level i of n targets t = start + (end − start)·(i − 1)/(n − 1) (n = 1: start); range [⌊t⌋, ⌈t⌉]. Errors: `difficulty_invalid`.
+- **Bundles:** shared bundle selector component (configure screen, menu, plan 29's Start): `bundlesFor(data)`; base bundles as a radio group, apart from the others (toggles); exactly one base (D-85, `base_bundle_count`). `settings.bundles` as today. Default (fresh player): the locale's first base bundle only (pm decision 33, partly supersedes D-85's default); games without `settings.bundles` keep D-85's default.
+- **Jokers:** one row per joker (`TOKENS` order), 0–99 or ∞ (←/→, −/+); `settings.jokers` via `new {jokers}` as today. Default (fresh player): `STANDARD_JOKERS`; `new` without `jokers` in gamemaster mode stays unlimited (fixtures). No preset picker.
+- **Allow video questions / allow audio questions:** two switches, default on; new `settings.video` / `settings.audio`, stored only as `false` (missing = allowed). Off: `availableNow` and `supply` drop questions whose `media.type` is `video` / `audio`; images and backgrounds stay.
+- **Number of levels:** 1–20, default 12; new `settings.levels` (missing = 12). Won at level `levels`; the Tower draws `levels` steps. With an age group: level i of n uses the group's range at step round(1 + 11·(i − 1)/(n − 1)) (n = 1: step 1; n > 12 repeats steps). `selection.LEVELS` becomes a per-game value (`answer`, `laterLevels`, `selection.draw`, `assign`, `supply`).
+- **Cards per level:** 0–4, default 4; new `settings.cards` (missing = 4). The table shows that many cards (`selection.PER_LEVEL` per game; the supply needs max(cards, 1) per level). 0: one card is drawn and opened at once (no select phase); every return to the table (next level, skip, Paso, replace, jump) does the same.
+- Supply check (GF-5) and outlook (plan 65) run on the whole configuration; «Jugar» disabled with the reason when short (`supply_short`).
 
-#### Proposal B: gamemaster menu cheats (MD-12; pm decision "Gamemaster menu: which cheats?")
-Today's overlay grows; every cheat is an engine action refused outside gamemaster mode (`gamemaster_only`, 409). Undo after any cheat: as after `skip` today, it goes back to the state before the last final answer; seen and blocked rows written by the cheat stay; the budget stays (`settings` survive undo).
-- Kept: continue; «Saltar pregunta» (`skip`, seen +1); «Bloquear pregunta» (`skip {everyone}`, blocked, D-82); undo (`undo`); «Reportar pregunta» / «Preguntas reportadas» (`report`); sound; fullscreen; restart (`abandon` + configure screen); quit (desktop).
-- Joker budget → «Gestionar comodines»: same `jokers` action, but each row edits uses *left* (−/+ gives back or takes away one; limit = used + left), preset row as today; also usable on the table between questions.
-- «Cambiar pregunta» (new `replace {seen?}`): new question at the same level from the same subcategory (`categoryCandidates` + `replacement`, GF-2 kept), any subcategory if none; outcome `admin_replace`; default not seen (the question stays fresh), `seen: true` counts it; refused without a question on screen or without a candidate (`replace_empty`).
-- «Saltar a nivel» (candidate, recommended; new `level {level}`): 1–12; table redrawn at that level; no history rows for skipped levels; refused during a question (skip first).
-- Age group / bundles mid-game (candidate, recommended; new `settings {age_group?, bundles?}`): only on the table (select phase); supply check as at `new`; the table is redrawn; the question history stays.
-- Not proposed: reveal the answer to the gamemaster: the TV is the only screen and the family sees it (UI-13), no phones (D-74).
-- Option 2 (shorter): kept items + «Gestionar comodines» + «Cambiar pregunta» only.
+#### Gamemaster menu (MD-12; D-88, pm decision 34)
+Today's overlay (`Overlay.svelte`) grows into the menu, in two visibly separate parts. Strings `overlay.*`.
+- **General (every mode):** continue; «Reportar pregunta» / «Preguntas reportadas» (`report`, MD-6); sound (volumes, mute); language rows (D-86); fullscreen; restart (`abandon`, then the mode's start screen: configure screen in gamemaster mode); quit (desktop, after `flush`).
+- **Gamemaster cheats (gamemaster mode only, hidden elsewhere):** every one an engine action in `engine/api.ts` / `engine/game.ts`, refused `gamemaster_only` (409) when `gameMode(state) !== "gamemaster"`; `lib/api.ts`, `lib/types.ts`.
+  - «Saltar pregunta»: `skip` (as today): question phase only; outcome `admin_skip`, seen +1, table refilled.
+  - «Bloquear pregunta»: `skip {everyone: true}` (as today, D-82): outcome `admin_block`, blocked, no seen row; confirm («¿Seguro?»).
+  - Undo: `undo` (as today): back to the state before the last final answer, its seen row dropped; `settings` survive; seen and blocked rows written by any cheat stay.
+  - «Gestionar comodines»: `jokers {joker: limit | null}` (as today); the rows show and edit uses *left* (−/+ gives back or takes one away; the client sends limit = used + left; ∞ = null); a preset row Sin límite / Como las cartas (`CARDS`) as today; any phase.
+  - «Cambiar pregunta»: new `replace {seen?: boolean}`: question phase only; a new question at the same level from the same subcategory (`categoryCandidates` + `replacement`, GF-2 kept), else any subcategory in range; the old one gets history outcome `admin_replace` (new `Outcome`), no seen row unless `seen: true`; nothing to draw → `replace_empty`.
+  - «Saltar a nivel»: new `level {level}`: 1..`levels` (`level_invalid`); select phase (with `cards: 0` it also replaces the question on screen, not seen); the table is redrawn at that level (old cards back in the pool); no history rows for skipped levels; the undo snapshot stays.
+  - Difficulty and bundles mid-game: new `settings {age_group? | difficulty?, bundles?}`: same validation and supply check as `new` (rest of the game: current level..`levels`); select phase (with `cards: 0` as for «Saltar a nivel»); the table is redrawn; history and level stay. UI: the configure screen's difficulty row and the shared bundle selector.
+- Not built: revealing the answer (the TV is the only screen, UI-13; no phones, D-74).
+- Input: the menu takes ↑/↓, ←/→, Enter/A, Esc/Start closes, B leaves (pad); mouse hover selects, click runs. Missing today for the new parts (MD-10 check): the overlay navigates a flat item list with its own index (no `root`, no `focus.ts`); the difficulty and bundle editors need either rows that fit that list (←/→ values) or a nested modal scope with `root`, `data-focus-default` and `pad`, like `Reports.svelte`.
 
 ### Alone or as group («Solo o en grupo», `solo`)
 - One player alone, or everyone together as one team; no gamemaster menu, no cheats.
@@ -76,10 +80,10 @@ Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pre
 ## Implementation notes
 Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - `settings.mode`: `gamemaster` | `solo` | `rr-coop` | `rr-competitive` | `timed`; missing = `gamemaster`, old saves unchanged. Today's game = gamemaster mode.
-- `settings.jokers` (MD-1..MD-4, `null` = unlimited) stays; gamemaster mode keeps unlimited as its default.
+- `settings.jokers` (MD-1..MD-4, `null` = unlimited) stays; `new` in gamemaster mode without `jokers` stays unlimited; the configure screen's fresh default is the standard set (D-88).
 - Standard joker set: one engine constant (3 × Soplo, 1 × Paso, Bájale, Cambiazo, Francotirador); every non-gamemaster game starts with it.
 - `settings.customized`: `true` after any change via "Customize game"; feeds achievements (S5).
-- Refusals outside gamemaster mode (engine, not only UI): undo, skip, replace, joker budget changes.
+- Refusals outside gamemaster mode (engine, not only UI): undo, skip, replace, level, settings, joker budget changes (D-88).
 - `ReportRow`: logs the current question to a local report list (a page to copy from); not seen-counted, no replacement; the player answers or uses a joker.
 - Engine as built (task 376): `settings.mode` stored only when `new` carries it; missing resolved by `gameMode()`, never written back (fixtures unchanged); `customized` only outside gamemaster mode; `new` takes `jokers` overrides; refusal code `gamemaster_only` (409); `report` action (`note?`) needs a question on screen; save version 2 (`reports`); `replace` gets its guard with plan 59.
 - Joker availability (JK-2) has a reason «No te quedan Soplos» when the budget is spent; the tray shows count badges (MD-2, MD-3).
@@ -94,6 +98,6 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - [ ] MD-7 Mode screen (five modes); age group screen with "Customize game" in `solo`; `settings.mode`, `settings.customized`.
 - [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77, `timed` D-80): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules; `timed`: rounds, claim and 6 s answer timer, lives, sudden death, hint cadence, hearts, ticking clock, red frame; seen events for the save (D-82); engine first, then screens.
 - [ ] MD-9 Later: multiplayer input with IN-6: per-player gamepads, shared keyboard (one key per player takes keyboard and mouse until the turn ends), the claim action in `timed` (any player, any time; per-player claim keys on the shared keyboard; D-80).
-- [ ] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *pm plan for milestone 7 part 11.*
-- [ ] MD-11 Gamemaster mode: "configure game" screen before every game, full customization; defaults = today's game (Enter straight through).
-- [ ] MD-12 Gamemaster menu (`Esc`): today's overlay (undo, skip, «Bloquear pregunta» (D-82), joker budget, MD-4) + manage jokers, replace the current question, further decided cheats.
+- [x] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *2026-10-12: covered by IN-1..IN-5: one scope stack for all three devices, `lastDevice` follows each action, so switching needs nothing; every screen and dialog pushes a scope; the overlay: Esc / Start / ☰ button opens it, ↑/↓ + ←/→ + Enter or D-pad/stick + A, B leaves, mouse hover + click, −/+ and sliders. Left for MD-12: the new editors in the menu (see "Gamemaster menu" Input); real-pad check by the gamemaster still pending (IN-4).*
+- [ ] MD-11 Gamemaster mode: "configure game" screen before every game, fields as specced above (D-88); opens on the last game's settings, so Enter straight through on an existing save = today's game.
+- [ ] MD-12 Gamemaster menu (`Esc`): general part + gamemaster cheats as specced above (D-88), incl. the input gap noted there.

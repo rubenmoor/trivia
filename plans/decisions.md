@@ -770,3 +770,20 @@ Template:
   - **Text in media** is never a problem (decision 35): no `media_text` flag, no media problem for it.
 - Consequences: RUNBOOK step 2 names `--translate`; QC adds a native-speaker spot check for `tr-*` runs (review view per locale: plan 67). Commit lines: the locale file, `pool.<locale>.json`, the report, `questions.json` when `translatable` changed.
 - Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45
+
+## D-88: Gamemaster mode: configure screen fields and gamemaster menu
+- Date: 2026-10-12
+- Context: MD-11, MD-12 (plan 13 "Gamemaster mode"); plan 59; decision 33: Configure game screen: which fields?; decision 34: Gamemaster menu: which cheats?
+- Decision:
+  - **Configure screen** (plan 29's Choice screen in gamemaster mode; opens on the player's last game's settings, else the defaults below):
+    - Difficulty: an age group, or «Custom»: start and end difficulty 1–15, end ≥ start, levels ramp evenly.
+    - Bundles: a shared bundle selector (also in the menu and elsewhere): the locale's bundles, base bundles apart, exactly one base bundle (D-85). Default: the locale's first base bundle, non-base off.
+    - Jokers: one row per joker, 0–99 or ∞; default the standard set (`STANDARD_JOKERS`); no presets.
+    - Allow video questions, allow audio questions: on/off, default on; no general media switch.
+    - Number of levels 1–20, default 12; the Tower adapts. No start level.
+    - Cards per level 0–4, default 4; 0 = no choice, a question at once.
+  - **Old games unchanged:** each field optional in `settings`, missing = before (12 levels, 4 cards, media allowed, unlimited jokers in gamemaster mode, D-85's default bundles); new defaults only on the configure screen.
+  - **Menu in two parts:** general (every mode): continue, «Reportar pregunta» / «Preguntas reportadas», sound, languages (D-86), fullscreen, restart, quit (desktop). Gamemaster cheats (gamemaster mode only, apart): «Saltar pregunta», «Bloquear pregunta», undo, «Gestionar comodines», «Cambiar pregunta», «Saltar a nivel», difficulty and bundles mid-game. Not: reveal the answer.
+  - **Cheats in the engine:** one action each, refused `gamemaster_only` (409) outside gamemaster mode.
+- Consequences: spec in plan 13 "Gamemaster mode"; MD-11 (task 391), MD-12 (task 392). `LEVELS` and `PER_LEVEL` become per game. MD-10 covered by the action layer (IN-1..IN-5).
+- Supersedes / related: D-85 (default bundles, configure screen only), D-74, D-82, D-86; MD-4; pm decisions 33, 34
