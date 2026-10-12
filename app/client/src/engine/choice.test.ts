@@ -134,7 +134,7 @@ if (json === undefined) {
     assert.deepEqual(body.choice, { age_group: "kids", bundles: ["base"] });
     assert.deepEqual(body.supply.levels.map((l) => l.range), data.groupById.get("kids")!.levels);
     assert.deepEqual(choice(save, data, { player: "bea" }).body, {
-      choice: game.defaultChoice(data), supply: game.supply(save, data, "bea"),
+      choice: game.defaultChoice(data), supply: game.supply(save, data),
     });
     const adults = choice(save, data, { player: "ana", age_group: "adults" }).body as { choice: unknown };
     assert.deepEqual(adults.choice, { age_group: "adults", bundles: ["base"] });

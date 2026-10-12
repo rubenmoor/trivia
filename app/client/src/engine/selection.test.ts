@@ -4,6 +4,7 @@ import type { Category } from "../lib/types.ts";
 import { broadOf, categoryOf, type PoolQuestion } from "./pool.ts";
 import { assign, available, draw, inRange, PER_LEVEL, supply } from "./selection.ts";
 import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
+import { seededRng } from "./rng.ts";
 import { tapeRng, type TapeEntry } from "./test/tape.ts";
 
 interface Case {
@@ -71,3 +72,15 @@ for (const c of fixture("selection.json") as Case[]) {
     rng.done();
   });
 }
+
+test("draw: lowest seen count first, category variety only breaks ties (plan 65)", () => {
+  const [lo] = ranges[11];
+  const q = (id: string, subcategory: string) => ({ id, difficulty: lo, subcategory });
+  const qs = [q("a0", "A"), q("a1", "A"), q("b0", "B"), q("c1", "C"), q("d1", "D"), q("e2", "E")];
+  const countOf = (x: { id: string }) => Number(x.id[1]);
+  for (let seed = 1; seed <= 20; seed++) {
+    const ids = draw(12, qs, { ranges, countOf, rng: seededRng(seed) })!.map((x) => x.id);
+    assert.deepEqual(ids.slice(0, 2).sort(), ["a0", "b0"], `seed ${seed}`);
+    assert.ok(["c1", "d1"].includes(ids[2]) && ["c1", "d1"].includes(ids[3]), `seed ${seed}: ${ids}`);
+  }
+});

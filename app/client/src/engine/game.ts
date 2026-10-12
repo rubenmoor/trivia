@@ -58,11 +58,11 @@ function playerId(work: SaveData, name: string): number | null {
   return [...work.players].sort((a, b) => a.id - b.id).find((p) => casefold(p.name) === key)?.id ?? null;
 }
 
-/** Question IDs not offered: blocked, or seen in one of the player's games (null: only blocked).
- * Interim until selection by seen count (plan 65): keeps today's per-player exclusion. */
-function excluded(work: SaveData, pid: number | null): Set<string> {
-  const games = new Set(work.games.filter((g) => pid !== null && g.player_id === pid).map((g) => g.id));
-  return new Set([...work.blocked, ...work.seen.filter((s) => games.has(s.game_id)).map((s) => s.question_id)]);
+/** Seen count per question: rows in the whole save, every player and mode (plan 65). */
+export function countOf(save: SaveData): (q: PoolQuestion) => number {
+  const counts = new Map<string, number>();
+  for (const s of save.seen) counts.set(s.question_id, (counts.get(s.question_id) ?? 0) + 1);
+  return (q) => counts.get(q.id) ?? 0;
 }
 
 /** Delete a player (GF-7): the name and their games (a running one too); the seen rows stay. */
@@ -145,21 +145,21 @@ export function resolveChoice(
 const rangesFor = (data: EngineData, choice: Choice): LevelRanges => data.groupById.get(choice.age_group)!.levels;
 const rangesOf = (state: GameState, data: EngineData): LevelRanges => rangesFor(data, gameChoice(state, data));
 
-/** Questions that can still come up in this game: approved, not seen or blocked, not offered, not purged. */
-export function availableNow(work: SaveData, pid: number | null, state: GameState, data: EngineData): PoolQuestion[] {
+/** Questions that can still come up in this game: approved, not blocked, not offered, not purged; seen ones too. */
+export function availableNow(work: SaveData, state: GameState, data: EngineData): PoolQuestion[] {
   const purged = new Set<string | null>(state.purged);
   const bundles = new Set(gameChoice(state, data).bundles);
-  return selection.available(data.pool, excluded(work, pid), state.offered, bundles).filter((q) => !purged.has(q.subcategory));
+  return selection.available(data.pool, work.blocked, state.offered, bundles).filter((q) => !purged.has(q.subcategory));
 }
 
-/** Draw n cards for the state's level from what's still available to the player in this game. */
+/** Draw n cards for the state's level from what's still available in this game, lowest seen count first. */
 function draw(
-  work: SaveData, pid: number | null, state: GameState, data: EngineData, io: Io,
-  n = selection.PER_LEVEL, keep: PoolQuestion[] = [],
+  work: SaveData, state: GameState, data: EngineData, io: Io, n = selection.PER_LEVEL, keep: PoolQuestion[] = [],
 ): string[] {
   const ranges = rangesOf(state, data);
-  const drawn = selection.draw(state.level, availableNow(work, pid, state, data), {
-    ranges, n, keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad), rng: io.rng,
+  const drawn = selection.draw(state.level, availableNow(work, state, data), {
+    ranges, n, keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
+    countOf: countOf(work), rng: io.rng,
   });
   if (drawn === null) {
     const [lo, hi] = ranges[state.level - 1];
@@ -179,11 +179,10 @@ function block(work: SaveData, qid: string): void {
   if (!work.blocked.includes(qid)) work.blocked.push(qid);
 }
 
-/** The supply check before a new game (GF-5): the pool minus blocked and the player's seen questions.
+/** The supply check before a new game (GF-5): the pool minus blocked, any seen count (plan 65).
  * `choice`: age group and bundles, default every bundle and DEFAULT_AGE_GROUP. */
-export function supply(save: SaveData, data: EngineData, player?: unknown, choice: Choice = defaultChoice(data)): Supply {
-  const pid = player ? playerId(save, cleanName(player)) : null;
-  const avail = selection.available(data.pool, excluded(save, pid), [], new Set(choice.bundles));
+export function supply(save: SaveData, data: EngineData, choice: Choice = defaultChoice(data)): Supply {
+  const avail = selection.available(data.pool, save.blocked, [], new Set(choice.bundles));
   const levels = selection.supply(avail, rangesFor(data, choice));
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
@@ -216,7 +215,7 @@ export function newGame(
   if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
   if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
   const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
-  const report = supply(save, data, name, choice);
+  const report = supply(save, data, choice);
   if (!report.ok) {
     const short = report.levels.filter((l) => l.missing)
       .map((l) => ({ level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing }));
@@ -243,7 +242,7 @@ export function newGame(
       state.settings.jokers = jokers;
       state.settings.customized = JOKERS.some((j) => jokers[j] !== STANDARD_JOKERS[j]);
     }
-    state.options = draw(work, pid, state, data, io);
+    state.options = draw(work, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
       state: structuredClone(state),
@@ -275,7 +274,6 @@ export function pick(save: SaveData, data: EngineData, io: Io, index: number): {
 export function answer(save: SaveData, data: EngineData, io: Io, index: number): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
-    const pid = row.player_id;
     if (state.phase !== "question") throw new GameError("no_question");
     if (!(0 <= index && index < state.answers.length) || state.struck.includes(index))
       throw new GameError("answer_invalid", { n: index + 1 });
@@ -294,7 +292,7 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
     } else {
       Object.assign(state, { level: state.level + 1, phase: "select" });
       leaveQuestion(state);
-      state.options = draw(work, pid, state, data, io);
+      state.options = draw(work, state, data, io);
     }
     saveGame(row, state, io, result);
     return state;
@@ -318,8 +316,7 @@ export function dropCurrent(
 /** Drop the question on screen and refill the table (admin skip, «Paso»). With `purge`, its
  * subcategory leaves the game and its other cards on the table are replaced too (not seen). */
 export function backToSelect(
-  work: SaveData, gid: number, pid: number | null, state: GameState, data: EngineData, io: Io,
-  outcome: Outcome, purge = false,
+  work: SaveData, gid: number, state: GameState, data: EngineData, io: Io, outcome: Outcome, purge = false,
 ): void {
   const sub = question(data, state.current).subcategory;
   dropCurrent(work, gid, state, outcome, io, outcome === "admin_block");
@@ -331,7 +328,7 @@ export function backToSelect(
   const keep = state.options.filter((i) => !removed.has(i)).map((i) => question(data, i));
   let fresh: string[];
   try {
-    fresh = draw(work, pid, state, data, io, removed.size, keep);
+    fresh = draw(work, state, data, io, removed.size, keep);
   } catch (e) {
     if (e instanceof GameError) throw new GameError(purge ? "purge_short" : "refill_empty");
     throw e;
@@ -348,8 +345,7 @@ export function skip(save: SaveData, data: EngineData, io: Io, everyone = false)
     const { row, state } = running(work);
     gamemasterOnly(state, "skip");
     if (state.phase !== "question") throw new GameError("skip_not_question");
-    backToSelect(work, row.id, row.player_id, state, data, io,
-      everyone ? "admin_block" : "admin_skip");
+    backToSelect(work, row.id, state, data, io, everyone ? "admin_block" : "admin_skip");
     saveGame(row, state, io);
     return state;
   });
@@ -369,17 +365,18 @@ function laterLevels(level: number): number[] {
   return Array.from({ length: selection.LEVELS - level }, (_, i) => level + 1 + i);
 }
 
-/** The best of `cands` by `order` (random among ties) whose removal still lets every later level fill (GF-2), or null. */
+/** The best of `cands` by (seen count, `order`) (random among ties) whose removal still lets every
+ * later level fill (GF-2), or null. */
 export function replacement(
   avail: PoolQuestion[], level: number, ranges: LevelRanges, cands: PoolQuestion[], order: (q: PoolQuestion) => number,
-  io: Io, fill?: Fill,
+  count: (q: PoolQuestion) => number, io: Io, fill?: Fill,
 ): PoolQuestion | null {
   const [used, ok] = fill ?? laterFill(avail, level, ranges);
   if (!ok) return null;
   const later = laterLevels(level);
   const list = [...cands];
   io.rng.shuffle(list, "replacement");
-  list.sort((a, b) => order(a) - order(b));
+  list.sort((a, b) => count(a) - count(b) || order(a) - order(b));
   return list.find((q) => !used.has(q.id)
     || selection.assign(avail.filter((x) => x.id !== q.id), later, ranges).missing.size === 0) ?? null;
 }
@@ -389,7 +386,7 @@ export function categoryCandidates(avail: PoolQuestion[], level: number, ranges:
 }
 
 /** Replace the question on screen in place with `fresh` (Bájale, Cambiazo). */
-function swapIn(work: SaveData, gid: number, pid: number | null, state: GameState, fresh: PoolQuestion, outcome: Outcome, io: Io): void {
+function swapIn(work: SaveData, gid: number, state: GameState, fresh: PoolQuestion, outcome: Outcome, io: Io): void {
   const old = state.current;
   dropCurrent(work, gid, state, outcome, io);
   const answers = [fresh.answer, ...fresh.wrong_answers];
@@ -407,10 +404,10 @@ export interface JokerArgs {
   index?: unknown;
 }
 
-type Play = (work: SaveData, gid: number, pid: number | null, state: GameState, data: EngineData, io: Io, args: JokerArgs) => object;
+type Play = (work: SaveData, gid: number, state: GameState, data: EngineData, io: Io, args: JokerArgs) => object;
 
 /** «Soplo»: show the next hint. */
-const playHint: Play = (_work, _gid, _pid, state, data) => {
+const playHint: Play = (_work, _gid, state, data) => {
   if (state.hints_shown >= question(data, state.current).hints.length) throw new GameError("hints_used_up");
   state.hints_shown += 1;
   state.jokers.push("hint");
@@ -418,43 +415,43 @@ const playHint: Play = (_work, _gid, _pid, state, data) => {
 };
 
 /** «Paso»: back to Select with a new card; optionally the subcategory leaves the game. */
-const playSkip: Play = (work, gid, pid, state, data, io, { purge }) => {
+const playSkip: Play = (work, gid, state, data, io, { purge }) => {
   state.jokers.push("skip");
   const sub = question(data, state.current).subcategory;
-  backToSelect(work, gid, pid, state, data, io, "skipped", pyTruthy(purge));
+  backToSelect(work, gid, state, data, io, "skipped", pyTruthy(purge));
   return { purged: pyTruthy(purge) ? sub : null };
 };
 
 /** «Bájale»: an easier question of the same subcategory, the hardest of those below (09). */
-const playEasier: Play = (work, gid, pid, state, data, io) => {
+const playEasier: Play = (work, gid, state, data, io) => {
   const cur = question(data, state.current);
-  const avail = availableNow(work, pid, state, data);
+  const avail = availableNow(work, state, data);
   const cands = avail.filter((q) => q.subcategory === cur.subcategory && q.difficulty < cur.difficulty);
-  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, io);
+  const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, countOf(work), io);
   if (!fresh) throw new GameError("easier_none");
   state.jokers.push("easier");
-  swapIn(work, gid, pid, state, fresh, "easier", io);
+  swapIn(work, gid, state, fresh, "easier", io);
   return { from: cur.difficulty, to: fresh.difficulty };
 };
 
 /** «Cambiazo»: a question of the level's range from the chosen subcategory, nearest difficulty first (09). */
-const playCategory: Play = (work, gid, pid, state, data, io, { subcategory }) => {
+const playCategory: Play = (work, gid, state, data, io, { subcategory }) => {
   const cur = question(data, state.current);
   if (typeof subcategory !== "string" || !data.broad.has(subcategory)) throw new GameError("category_unknown");
   if (subcategory === cur.subcategory) throw new GameError("category_same");
-  const avail = availableNow(work, pid, state, data);
+  const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
   const fresh = replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, subcategory),
-    (q) => Math.abs(q.difficulty - cur.difficulty), io);
+    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io);
   if (!fresh) throw new GameError("category_empty");
   state.jokers.push("category");
-  swapIn(work, gid, pid, state, fresh, "category", io);
+  swapIn(work, gid, state, fresh, "category", io);
   state.swapped_to = subcategory;
   return { subcategory };
 };
 
 /** «Francotirador» (JK-3): a wrong answer is struck out; the right one drops the question (seen) and repeats the level (D-27). */
-const playSnipe: Play = (work, gid, pid, state, data, io, { index }) => {
+const playSnipe: Play = (work, gid, state, data, io, { index }) => {
   if (state.answers.length - state.struck.length <= 1) throw new GameError("snipe_last");
   if (!Number.isInteger(index) || !(0 <= (index as number) && (index as number) < state.answers.length)
     || state.struck.includes(index as number))
@@ -469,7 +466,7 @@ const playSnipe: Play = (work, gid, pid, state, data, io, { index }) => {
   }
   dropCurrent(work, gid, state, "sniped", io);
   try {
-    state.options = draw(work, pid, state, data, io);
+    state.options = draw(work, state, data, io);
   } catch (e) {
     if (e instanceof GameError) throw new GameError("snipe_no_repeat");
     throw e;
@@ -493,7 +490,7 @@ export function joker(
     const { row, state } = running(work);
     if (state.phase !== "question") throw new GameError("joker_not_question");
     if (jokersLeft(state)[jname] === 0) throw new GameError("joker_spent", { joker: jname });
-    const event = PLAYS[jname](work, row.id, row.player_id, state, data, io, args);
+    const event = PLAYS[jname](work, row.id, state, data, io, args);
     saveGame(row, state, io);
     return { state, event: { joker: jname, ...event } as JokerEvent };
   });
@@ -502,9 +499,8 @@ export function joker(
 
 /** Per joker: available, and the reason if not (09, "Availability"); «Cambiazo» lists the possible subcategories. */
 function jokersView(work: SaveData, row: GameRow, state: GameState, data: EngineData, io: Io): Jokers {
-  const pid = row.player_id;
   const check = (fn: Play, args: JokerArgs = {}): JokerState => {
-    const reason = trial(work, (c) => fn(c, row.id, pid, structuredClone(state), data, io, args));
+    const reason = trial(work, (c) => fn(c, row.id, structuredClone(state), data, io, args));
     return { available: reason === null, reason };
   };
   const cur = question(data, state.current);
@@ -513,15 +509,16 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const snipe = check(playSnipe, { index: state.answers.indexOf(cur.answer) });
   const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory as string };
 
-  const avail = availableNow(work, pid, state, data);
+  const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
   const fill = laterFill(avail, state.level, ranges);
+  const count = countOf(work);
   const active = new Set(gameChoice(state, data).bundles);
   const groups = data.categories.filter((c) => active.has(c.bundle)).map((c) => {
     const subs = c.subcategories.map((s) => ({
       name: s,
       available: s !== cur.subcategory
-        && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, s), () => 0, io, fill) !== null,
+        && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, s), () => 0, count, io, fill) !== null,
     }));
     return { slug: c.slug, name: c.name, available: subs.some((s) => s.available), subcategories: subs };
   });

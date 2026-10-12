@@ -16,11 +16,11 @@ export function inRange(q: Pick<PoolQuestion, "difficulty">, level: number, rang
   return lo <= q.difficulty && q.difficulty <= hi;
 }
 
-/** Questions that can be offered: approved, not burned, not in `exclude`, in an active bundle. */
+/** Questions that can be offered: approved, not blocked, not in `exclude`, in an active bundle (seen ones too, plan 65). */
 export function available<T extends Pick<PoolQuestion, "id" | "status"> & { bundle?: string }>(
-  pool: T[], burned: Iterable<string>, exclude: Iterable<string>, bundles: ReadonlySet<string>,
+  pool: T[], blocked: Iterable<string>, exclude: Iterable<string>, bundles: ReadonlySet<string>,
 ): T[] {
-  const skip = new Set([...burned, ...exclude]);
+  const skip = new Set([...blocked, ...exclude]);
   return pool.filter((q) => q.status === "approved" && !skip.has(q.id) && bundles.has(q.bundle ?? "base"));
 }
 
@@ -62,13 +62,15 @@ export interface DrawOptions<T> {
   keep?: T[];
   avoidCategories?: Iterable<CategoryKey>;
   categoryOf?: (q: T) => CategoryKey;
+  /** Seen count per question (plan 65), default 0. */
+  countOf?: (q: T) => number;
   rng: Rng;
 }
 
-/** n questions for `level` from `questions` (already `available`), preferring fresh categories,
- * each only if later levels stay fillable; null if the level can't be filled. */
+/** n questions for `level` from `questions` (already `available`): the lowest seen count first, then
+ * fresh categories, each only if later levels stay fillable; null if the level can't be filled. */
 export function draw<T extends Q & { subcategory?: string | null }>(
-  level: number, questions: T[], { ranges, n = PER_LEVEL, keep = [], avoidCategories = [], categoryOf, rng }: DrawOptions<T>,
+  level: number, questions: T[], { ranges, n = PER_LEVEL, keep = [], avoidCategories = [], categoryOf, countOf, rng }: DrawOptions<T>,
 ): T[] | null {
   const cat = categoryOf ?? ((q: T) => q.subcategory ?? null);
   const avoid = new Set(avoidCategories);
@@ -76,11 +78,12 @@ export function draw<T extends Q & { subcategory?: string | null }>(
   const taken = new Set(keep.map((q) => q.id));
   const cands = questions.filter((q) => inRange(q, level, ranges) && !taken.has(q.id));
   rng.shuffle(cands, "draw");
+  const count = new Map(cands.map((q) => [q.id, countOf?.(q) ?? 0]));
   const picked: T[] = [];
   for (let k = 0; k < n; k++) {
     const table = new Set([...keep, ...picked].map(cat));
     const key = (q: T) => (table.has(cat(q)) ? 2 : 0) + (avoid.has(cat(q)) ? 1 : 0);
-    cands.sort((a, b) => key(a) - key(b));
+    cands.sort((a, b) => count.get(a.id)! - count.get(b.id)! || key(a) - key(b));
     const pickedIds = new Set(picked.map((p) => p.id));
     const q = cands.find((q) => {
       if (pickedIds.has(q.id)) return false;

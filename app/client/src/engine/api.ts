@@ -36,7 +36,8 @@ export function getGame(save: SaveData, data: EngineData, io: Io, player?: strin
   Reply<{ game: Game | null; supply: Supply }> {
   return guard(save, 400, () => {
     const view = game.view(save, data, io);
-    return { save, status: 200, body: { game: view, supply: game.supply(save, data, player) } };
+    if (player) game.cleanName(player);
+    return { save, status: 200, body: { game: view, supply: game.supply(save, data) } };
   });
 }
 
@@ -64,7 +65,7 @@ export function choice(save: SaveData, data: EngineData, body: Record<string, un
   Reply<{ choice: Choice; supply: Supply }> {
   return guard(save, 409, () => {
     const out = game.resolveChoice(data, pick(body, ["age_group", "bundles"]), game.playerChoice(save, data, body.player));
-    return { save, status: 200, body: { choice: out, supply: game.supply(save, data, body.player, out) } };
+    return { save, status: 200, body: { choice: out, supply: game.supply(save, data, out) } };
   });
 }
 

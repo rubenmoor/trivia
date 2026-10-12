@@ -42,6 +42,10 @@ One step = one HTTP request, recorded as `main.py` answers it.
 - Save v3 (plan 65): the engine stores `seen` rows and `blocked`, the recordings `burned`; `test/save.ts` compares on v3
   - `upgradeDb`: the recorded `db` through `parseSave`'s v2 → v3 upgrade; history outcome `admin_burn` → `admin_block`
   - `withoutOrphans`: GF-7 now keeps the player's seen rows (`game_id` 0), Python deleted the burns; compared without them
+- Selection by seen count (plan 65): Python excluded burned questions, the engine offers them again, lowest count first; the recorder stays frozen (plan 51)
+  - `game.test.ts` replays a scenario only up to the first step where a seen question of the step's pool could be offered again (a later game; undo after a swap); `get_game`'s player-scoped `supply` isn't compared once a seen question is in the pool
+  - Retired that way: `supply` from step 7 (second game refused), the later games of `players`, `abandon`, `admin-skip`, the soaks; TS-native instead: the supply test in `game.test.ts`, `invariants.test.ts` (random counts 0–3), the sort test in `selection.test.ts`
+  - `selection.json` `supply`/`draw` cases still match: their `burns` go in as `blocked`
 
 ## Time
 - One fixed `now` per step: `2026-01-01T00:00:00` + step index minutes (`selection.json`: always the start)
