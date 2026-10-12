@@ -9,27 +9,30 @@ const CATALOGS: Record<string, Catalog> = { es };
 /** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
 export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
 
-/** The save's UI language; `?lang=` overrides it in dev only. Unknown → `es`. */
+/** The save's UI language; `?lang=` overrides it in dev only (also `xx`, LUI-2). Unknown → `es`. */
 function pickLang(saved?: string): string {
   if (import.meta.env?.DEV && typeof location !== "undefined") {
     const q = new URLSearchParams(location.search).get("lang");
-    if (q && q in CATALOGS) return q;
+    if (q && (q === "xx" || q in CATALOGS)) return q;
   }
   return saved && saved in CATALOGS ? saved : "es";
 }
 
 /** Set once by `initLang` before the first render; a change reloads the app (plan 68). */
 export let lang = pickLang();
-let catalog = CATALOGS[lang];
-let numbers = new Intl.NumberFormat(lang);
-let plurals = new Intl.PluralRules(lang);
+/** `xx` has no language of its own: numbers, plurals and `<html lang>` stay `es`. */
+const real = (l: string) => (import.meta.env?.DEV && l === "xx" ? "es" : l);
+let catalog = CATALOGS[lang] ?? es;
+let numbers = new Intl.NumberFormat(real(lang));
+let plurals = new Intl.PluralRules(real(lang));
 
 /** main.ts, before mounting: the save's UI language. */
-export function initLang(saved?: string): void {
+export async function initLang(saved?: string): Promise<void> {
   lang = pickLang(saved);
+  if (import.meta.env?.DEV && lang === "xx" && !CATALOGS.xx) CATALOGS.xx = (await import("../locales/xx")).pseudo(es);
   catalog = CATALOGS[lang];
-  numbers = new Intl.NumberFormat(lang);
-  plurals = new Intl.PluralRules(lang);
+  numbers = new Intl.NumberFormat(real(lang));
+  plurals = new Intl.PluralRules(real(lang));
 }
 
 /** Names of the languages in themselves (plan 68): data, not translated. Question `es` is neutral Spanish. */
@@ -42,6 +45,17 @@ const ENDONYMS: Record<string, string> = {
 
 export function endonym(tag: string, kind: "ui" | "questions"): string {
   return kind === "questions" && tag === "es" ? "Español" : (ENDONYMS[tag] ?? tag);
+}
+
+const warned = new Set<string>();
+
+/** `⟦key⟧`, with a dev warning once per key (LUI-2). */
+function missing(key: string): string {
+  if (import.meta.env?.DEV && !warned.has(key)) {
+    warned.add(key);
+    console.warn(`i18n: missing key ${key} (${lang})`);
+  }
+  return missing(key);
 }
 
 function lookup(key: string): unknown {
@@ -83,11 +97,11 @@ export function t(key: TextKey, params?: Params): string {
 /** The lines of a variant entry. Missing → `[⟦key⟧]`. */
 export function variants(key: VariantsKey): readonly string[] {
   const v = lookup(key);
-  return Array.isArray(v) && v.length ? v : [`⟦${key}⟧`];
+  return Array.isArray(v) && v.length ? v : [missing(key)];
 }
 
 /** `<html lang>` and the tab title; `index.html` keeps «Trivia» as the pre-JS fallback. */
 export function initDocument(): void {
-  document.documentElement.lang = lang;
+  document.documentElement.lang = real(lang);
   document.title = t("app.title");
 }
