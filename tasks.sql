@@ -3435,7 +3435,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Final check of plan 18 "Done when": fresh run from an empty fixtures dir, `--check` byte-identical, `state/game.sqlite` mtime + checksum unchanged.
 
 Done when: the above is written and the final check passes.', '2026-10-12T00:04:12Z', '2026-10-12T02:09:38Z', 62);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (72, 19, 'Test runner and rng.ts (PORT-2)', 'work', 'open', NULL, NULL, 'Set up engine tests with `node:test` and Node''s type stripping, and write the seedable shuffle. See plan 19, "Decisions taken here".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (72, 19, 'Test runner and rng.ts (PORT-2)', 'work', 'done', NULL, '2026-10-12, app/client/src/engine/{rng.ts,rng.test.ts,test/tape.ts}, tsconfigs (client + authoring/ui), npm test scripts, lib/api.ts erasable GameError, D-64', 'Set up engine tests with `node:test` and Node''s type stripping, and write the seedable shuffle. See plan 19, "Decisions taken here".
 
 - `app/client/tsconfig.json`: `allowImportingTsExtensions: true`, `erasableSyntaxOnly: true`; exclude `src/**/*.test.ts` and `src/engine/test/` (no `@types/node`).
 - Scripts: `app/client/package.json` `"test": "node --test ''src/engine/**/*.test.ts''"`; root `package.json` `"test": "npm run test --workspaces --if-present"`.
@@ -3444,7 +3444,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `rng.test.ts`: same seed → same permutations; results are permutations; tape errors; a hand-written tape.
 - Decision entry in `plans/decisions.md` (next D number): `node:test` + type stripping, `.ts` imports, tests not type-checked.
 
-Done when: `npm test` and `npm run check` pass at the root; `npm run build` still works; no new dependencies.', '2026-10-12T00:04:49Z', NULL, 63);
+Done when: `npm test` and `npm run check` pass at the root; `npm run build` still works; no new dependencies.', '2026-10-12T00:04:49Z', '2026-10-12T03:57:47Z', 63);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (73, 19, 'pool.ts: pool and category data (PORT-2)', 'work', 'open', NULL, NULL, 'Pure typed access to `pool.json` and the category files, mirroring `app/server/categories.py` and `game.category_of`. See plan 19, "Files".
 
 - `app/client/src/engine/pool.ts`: `PoolQuestion` (all `pool.json` fields, incl. `answer`, `wrong_answers`, `hints`; reuse `Media`, `Background`, `Category`, `Status` from `lib/types.ts`), `parsePool(json)` (checks `version` 1), `loadCategories(bundlesJson, files)` (bundles.json order, base first, a bundle without a file has none), `subcategories(cats, bundle?)`, `broadOf(cats)`, `bundleOf(cats, sub)`, `categoryOf(broad)` (question → broad slug or `null`), `byId(pool)`.
@@ -5573,6 +5573,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (153, 334, '2026-10-12T03:53:12Z', '2026-10-12T03:53:38Z', 'done', NULL, 0, 'a60754e0137afb986c8f2719ebe8161beafbc617', 'claude-opus-5-5[1m]', '8edcaaa1-5a02-414f-ad61-6cb4190cdd69', 9, 18, 2252, 289761, 27412, 0.32236020000000004, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (154, 48, '2026-10-12T03:53:38Z', '2026-10-12T03:55:59Z', 'done', NULL, 0, '2f8ecf1ec03d429cb56f5086df757c102bd020ff', 'claude-opus-5-5[1m]', 'df231469-9ce6-4451-a6d4-8ae7d4d2f298', 27, 42, 14786, 1279674, 69256, 1.1058708, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (155, 49, '2026-10-12T03:55:59Z', '2026-10-12T03:56:43Z', 'done', NULL, 0, '5aba20d51e867210041e12208e9220ea50de66c3', 'claude-opus-5-5[1m]', '0ed6e0a6-d674-4afd-b364-7da7b4d7e84b', 10, 20, 4427, 388797, 39725, 0.48417940000000004, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (156, 72, '2026-10-12T03:56:43Z', '2026-10-12T03:57:56Z', 'done', NULL, 0, '27879980685c9ae9066721ba56017c1a23723511', 'claude-opus-5-5[1m]', '16eae6a4-11cf-4399-baca-f3a95d9e30ed', 14, 24, 6267, 431962, 33138, 0.47693240000000009, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

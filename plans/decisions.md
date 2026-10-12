@@ -498,3 +498,10 @@ Template:
 - Decision: Electron (pm decision 12). One Chromium on Windows, Linux and the Deck, so the client behaves as on the TV today; a LAN server for phone buzzers (OQ-37) would be Node `http` in the main process. Steam binding: steamworks-ffi-node or steamworks.js, chosen in SW-2 (steamworks.js stale since 2024-08, steamworks-ffi-node active but young).
 - Consequences: ~125–160 MB download for the shell. Builds with electron-builder (SW-5, SW-6); the page talks to the shell through a preload bridge (no Node in the page). Overlay on native Linux/Deck is uncertain; fallback: the Windows build via Proton (SW-12). No Tauri or PyInstaller build.
 - Supersedes / related: D-59; plans 11, 12, 18; OQ-29, OQ-37
+
+## D-64: Engine tests run on `node:test` with Node's type stripping
+- Date: 2026-10-12
+- Context: The TS engine (PORT-2/3) needs tests that replay the parity fixtures. Vitest or `tsc` builds would add dependencies or build output; the flake's Node 22.23 strips types unflagged.
+- Decision: `node --test 'src/engine/**/*.test.ts'` (`npm test`, root and `app/client`). Engine code uses erasable syntax only and imports with `.ts` extensions (`allowImportingTsExtensions`, `erasableSyntaxOnly` in both client tsconfigs). No `@types/node`: `*.test.ts` and `src/engine/test/` are excluded from the tsconfigs, so tests aren't type-checked; engine modules never import from `node:`.
+- Consequences: No new dependency, no build step for tests. `GameError` in `lib/api.ts` lost its parameter properties. Same setup lets authoring run the engine under plain Node (D-60).
+- Supersedes / related: D-58, D-60; plan 19 (PORT-2), task 72

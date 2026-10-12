@@ -3,13 +3,15 @@ import type { Category, ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Pla
 /** A refused request (D-57): `code` and `params` for errorText(), `message` in English; `supply` is set
  * when the pool can't fill a new game (GF-5). */
 export class GameError extends Error implements ErrorInfo {
-  constructor(
-    readonly code: string,
-    readonly params: ErrorInfo["params"],
-    message: string,
-    readonly supply: Supply | null,
-  ) {
+  readonly code: string;
+  readonly params: ErrorInfo["params"];
+  readonly supply: Supply | null;
+
+  constructor(code: string, params: ErrorInfo["params"], message: string, supply: Supply | null) {
     super(message);
+    this.code = code;
+    this.params = params;
+    this.supply = supply;
   }
 }
 
