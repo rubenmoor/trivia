@@ -17,7 +17,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
-    qgen report [--run <run>] [--player <name>] [--subcategories] [--calibration [<batch>…]]
+    qgen report [--run <run>] [--player <name>] [--subcategories] [--calibration [<batch>…]] [--overlaps]
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -798,6 +798,57 @@ def duplicates(q, pool_questions):
     return None
 
 
+def stem(text):
+    """norm() with every word's trailing «s», then «e», dropped: Almenas → almena, padres → padr."""
+    return " ".join(re.sub(r"e$", "", re.sub(r"s$", "", w)) if len(w) > 3 else w for w in norm(text).split())
+
+
+_KEYS = {}  # id(q) → (q, keys): the report compares every pair
+
+
+def _overlap_keys(q, cache=_KEYS):
+    k = cache.get(id(q))
+    if k is None or k[0] is not q:
+        keys = [t for t in (q["answer"], q.get("concept")) if t]
+        keys = [t for t in keys if not re.search(r"\d", t) and norm(t) not in {"si", "no"}]
+        k = cache[id(q)] = (q, {
+            "answer": norm(q["answer"]) if q["answer"] in keys else None,
+            "stems": {stem(t) for t in keys} - {""},
+            "text": f" {stem(q['question'] + ' ' + q.get('fun_fact', ''))} ",
+            "question": norm(q["question"])})
+    return k[1]
+
+
+def overlap_candidates(q, others, cap=8):
+    """[(other, why, rank)] for B-5 (plan 15): questions that may ask the same fact as q, closest first.
+    Rank 0 same answer, 1 similar answer, 2 stem-equal concept or answer, 3 one's concept/answer in
+    the other's text. Answers with digits and yes/no only match through the concept."""
+    a, found = _overlap_keys(q), []
+    for p in others:
+        if p is q:
+            continue
+        b, why, rank = _overlap_keys(p), None, 9
+        if a["answer"] and b["answer"]:
+            if a["answer"] == b["answer"]:
+                why, rank = "same answer", 0
+            elif (difflib.SequenceMatcher(None, a["answer"], b["answer"]).ratio() >= 0.8
+                  or min(len(a["answer"]), len(b["answer"])) >= 4
+                  and (f" {a['answer']} " in f" {b['answer']} " or f" {b['answer']} " in f" {a['answer']} ")):
+                why, rank = "similar answer", 1
+        if not why and a["stems"] & b["stems"]:
+            why, rank = f"same stem «{min(a['stems'] & b['stems'])}»", 2
+        if not why:
+            hit = next((s for s in a["stems"] if len(s) >= 4 and f" {s} " in b["text"]), None)
+            if hit:
+                why, rank = f"«{hit}» in its text", 3
+            elif hit := next((s for s in b["stems"] if len(s) >= 4 and f" {s} " in a["text"]), None):
+                why, rank = f"its «{hit}» in this text", 3
+        if why:
+            found.append((rank, -difflib.SequenceMatcher(None, a["question"], b["question"]).ratio(), p, why))
+    found.sort(key=lambda f: f[:2])
+    return [(p, why, rank) for rank, _, p, why in found[:cap]]
+
+
 def collect(d):
     ratings, checks = {}, {}
     for f in (d / "ratings").glob("*.json"): ratings.update(load_json(f))
@@ -1196,9 +1247,22 @@ def report_calibration(runs):
                   f"{fmt(r['rated'])}  {fmt(r['final'])}  {r['merged']:6}  {r['approved']:8}")
 
 
+def report_overlaps():
+    """Overlap candidates among approved questions (plan 15), for cleanup in the review tool. No LLM."""
+    pool = [q for q in load_json(POOL)["questions"] if q["status"] == "approved"]
+    pairs = sorted(((rank, p["id"], q["id"], p, q, why) for i, q in enumerate(pool)
+                    for p, why, rank in overlap_candidates(q, pool[:i])), key=lambda x: x[:3])
+    print(f"{len(pairs)} overlap candidate pair(s) among {len(pool)} approved questions, strongest first:")
+    for *_, p, q, why in pairs:
+        print(f"  {p['id']} / {q['id']}  {why}: {p['answer']} | {q['answer']}\n"
+              f"      {p['question']}\n      {q['question']}")
+
+
 def cmd_report(args):
     if args.calibration is not None:
         return report_calibration(args.calibration or last_batches())
+    if args.overlaps:
+        return report_overlaps()
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
     print(f"pool: {len(pool)} questions")
@@ -2096,6 +2160,8 @@ def main():
                     help="supply per subcategory × difficulty, for the jokers (JK-10)")
     rp.add_argument("--calibration", nargs="*", metavar="BATCH",
                     help="drafted/rated/final difficulty per target level (plan 13); default: the last two batches")
+    rp.add_argument("--overlaps", action="store_true",
+                    help="approved questions that may ask the same fact (plan 15); listing only")
     add("validate", cmd_validate, run=False)
     add("export", cmd_export, run=False)
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging

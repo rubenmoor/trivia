@@ -1131,6 +1131,11 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The review sees related questions (`related_questions()`: similar answer or same subcategory, first 30) only after merge, media and sheets have been paid for.
 - `review.reasons` is free text and not stored; `needs_work` reasons are only in `review.feedback`. batch-7: 112 needs_work of 616 merged; 96 dropped by the pipeline (hard fails, duplicates, skipped slots); ~$120.74 for 504 approved (~$0.24 each).
 - `work/batch-4…7` have drafts, ratings, `dropped.json`, `costs.log`, `run.json` (batch-4 without `slots.json`/reviews); `work/` is gitignored, so old batches are measured locally only.
+- Candidate finder (task 40, `overlap_candidates()` in `qgen.py`), replay: recall 6/6 (the four batch-7 pairs against ids < q-0596 plus earlier batch-7 questions; B-5''s two against the pool before their batch).
+  - Matched by: same answer (Almenas, constelaciones, Ramen, Hungría), the pool question''s text («yo soy tu padre»; «silleteros» in q-0328).
+  - batch-7, 616 merged: candidates per draft mean 1.9, median 1, max 8 (cap; 36 drafts at cap); 419 with at least one.
+  - Answers with digits, not only pure numbers, excluded (7.000 años ~ 9.000 años).
+  - `qgen report --overlaps` on the approved pool (1136): 1490 pairs, 47 same answer, 101 similar answer, 26 same stem, the rest text containment (noisy: «Bogotá» in a fun fact). Sorted strongest first.
 
 ## Overlap check before merge (B-5)
 - **Candidates (code, no LLM):** for each draft, pool questions of every bundle (status ≠ `rejected`) and earlier drafts of the same batch where any of these holds:
@@ -2770,7 +2775,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen validate` clean (also re-export `app/data/pool.json` if validate asks).
 
 Done when: the subcategories are in `categories.json` with concept lists, QP entry written, `qgen validate` clean.', '2026-10-11T23:51:37Z', NULL, 21);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (40, 15, 'Overlap candidate finder and qgen report --overlaps', 'work', 'open', 710, NULL, 'Part "Overlap check before merge" (B-5) of plan 15, code only, no LLM. Shapes the next batch most, so it runs first.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (40, 15, 'Overlap candidate finder and qgen report --overlaps', 'work', 'done', 710, '2026-10-11, authoring/tools/qgen.py (overlap_candidates, stem, qgen report --overlaps), README.md, AGENTS.md; replay 6/6, numbers in plan 15 Baseline', 'Part "Overlap check before merge" (B-5) of plan 15, code only, no LLM. Shapes the next batch most, so it runs first.
 
 - Candidate finder in `authoring/tools/qgen.py` or a small `authoring/tools/overlap.py`: for a draft, pool questions of every bundle (status ≠ `rejected`) and earlier drafts of the same batch where:
   - normalized answers equal or similar (`SequenceMatcher` ≥ 0.8, or one contains the other); numbers and yes/no excluded as in `duplicates()`;
@@ -2781,7 +2786,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Replay (throw-away script): batch-7''s merged questions against the pool before batch-7 (ids < q-0596) must list q-0646/q-0217, q-0644/q-0957, q-0689/q-0279, q-1210/q-0315; B-5''s q-0369/q-0341 and q-0420/q-0328 against their pools. Record recall and candidates per draft (mean, max) in plan 15''s Baseline (`pm plan edit 15 --body -`).
 - Not wired into `rate` yet (next task).
 
-Done when: replay finds all six pairs, numbers in plan 15; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', NULL, 22);
+Done when: replay finds all six pairs, numbers in plan 15; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', '2026-10-12T01:31:01Z', 22);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (41, 15, 'no_overlap criterion in rate; drop overlaps at merge', 'work', 'open', NULL, NULL, 'Part "Judge in rate" of plan 15. After the candidate finder task.
 
 - Check `work/batch-8` first: if batch-8 is between `draft` and `merge` (rated partly or not yet merged), don''t change `rate`/`merge` now; stop and note it (plan 17''s batch-run task finishes batch-8 first).
@@ -4479,6 +4484,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when: the milestone''s "Done when" holds (released, first content patch out).', '2026-10-12T01:16:13Z', NULL, 264);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (272, 13, 'create tasks for plan 13', 'split', 'dropped', 1000, 'queued by task 29''s baseline edit to plan 13; plan 13 is already split (task 20), the tasks are unchanged', 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:28:12Z', '2026-10-12T01:28:17Z', 29);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (273, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:30:57Z', NULL, 40);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4599,6 +4606,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (97, 112, '2026-10-12T01:17:39Z', '2026-10-12T01:19:30Z', 'done', NULL, 0, '45622b612c8c3ad4ae198d64f07eab44cc18700a', 'claude-opus-5-5[1m]', '27f2bb00-c52d-49c2-9dda-e696f75cf000', 28, 46, 10671, 1125475, 50504, 0.84273100000000012, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (98, 113, '2026-10-12T01:19:30Z', '2026-10-12T01:26:11Z', 'blocked', NULL, 0, '4b81cdd472403d6cb17c61cf9fd1542c7b7cf8ca', 'claude-opus-5-5[1m]', '2f30ec08-45d4-4159-9527-fa6006c00d7e', 20, 40, 11314, 883678, 46584, 0.7758476, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (99, 29, '2026-10-12T01:26:11Z', '2026-10-12T01:28:28Z', 'done', NULL, 0, 'ef824b4742e8dac6436b132f47f8ae79b36c3a65', 'claude-opus-5-5[1m]', '4b54a0e4-f6d7-4d3a-b668-f50d8fcfeaa5', 29, 48, 14654, 1388065, 61137, 1.0599810000000003, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (100, 40, '2026-10-12T01:28:28Z', '2026-10-12T01:31:18Z', 'done', NULL, 0, '6d3039b1ebffb3d039d3843d05f8bf04edbe2f45', 'claude-opus-5-5[1m]', '6bf25820-4627-45d9-88ef-f2a90e9119eb', 32, 50, 14516, 1250925, 51211, 0.950393, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
