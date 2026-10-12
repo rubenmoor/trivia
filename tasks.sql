@@ -3117,8 +3117,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', '2026-10-12T00:48:07Z', 165);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (176, 38, 'create tasks for plan 38', 'split', 'done', 1000, '2026-10-11, tasks 191 (estimate + decision), 192 (record answer); no new decisions here: the OQ-32 decision comes from task 191, which makes 192 wait on it', 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', '2026-10-12T00:48:30Z', 166);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'open', 1000, NULL, 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:13Z', NULL, 167);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'done', 1000, '2026-10-11, tasks 193 (facts + decision(s)), 194 (record answer); no new decisions here: the OQ-33 decision(s) come from task 193, which makes 194 wait on them', 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:13Z', '2026-10-12T00:48:51Z', 167);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (178, 40, 'create tasks for plan 40', 'split', 'open', 1000, NULL, 'Split plan 40 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:52Z', NULL, 168);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (179, 41, 'create tasks for plan 41', 'split', 'open', 1000, NULL, 'Split plan 41 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3264,6 +3264,31 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
 
 Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T00:48:28Z', NULL, 176);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (193, 39, 'Price model and account holder: facts, options, write the decision(s) (OQ-33)', 'work', 'open', NULL, NULL, 'Part 1 of plan 39. Prepare the OQ-33 decision(s); no code, no contact with Valve or an advisor. Not legal or tax advice: name where a professional must check.
+
+- Facts (numbers in the decision body, one-line source each; Valve''s Steamworks docs first):
+  - fees and payout: revenue share 30 % → 25 % above $10 M → 20 % above $50 M; $100 app credit per app (recouped after $1,000 gross); DLC: no app credit; monthly payout threshold and timing; refunds (2 h / 14 days); VAT/sales tax handled by Valve
+  - regional pricing: Valve''s recommended price matrix; a USD band in COP/MXN/ARS/EUR (Spanish-speaking markets, plan 37)
+  - 5–8 comparable trivia/party games on Steam with price and review count (Jackbox packs incl. Trivia Murder Party, smaller solo trivia titles); which sell DLC question packs
+  - free on Steam: wishlists, visibility, refund-free reviews; free + paid DLC (bundles as DLC per D-39/D-49: `colombia`, later bundles) vs paid base + paid DLC
+  - account holder: person (individual tax interview, W-8BEN, personal tax return, real name/address to Valve; store Developer/Publisher can be a label) vs company (W-8BEN-E, formation and bookkeeping cost, liability); app transfer between partner accounts (check the doc)
+  - advisor questions as text for the gamemaster: country of residence, US withholding under the treaty, VAT/small-business thresholds, whether hobby income needs registration
+- Options, recommended first; one decision or two if too big ("Price model (OQ-33)", "Steamworks account holder (OQ-33)"):
+  - price: paid, low band ($4.99–$7.99) with regional pricing (recommended unless the facts say otherwise); free; free base + paid DLC bundles; paid base + paid DLC bundles later
+  - account: person (recommended for a hobby launch) vs company; what would trigger switching later
+- Each option names its consequence for plan 40 (OQ-35: paid + public pool → anyone can copy the content; free → public pool costs nothing) and plan 42 (OQ-45: paid or DLC → "commercial" under Freesound/CC NC; free still counts as distribution).
+- `pm decision add`, body = context + facts + trade-offs, ultra-short.
+- `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 39).
+
+Done when: the decision(s) exist with facts and sources; the record task waits on each.', '2026-10-12T00:48:50Z', NULL, 177);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (194, 39, 'Price model and account holder: record the answer (OQ-33, PUB-6, PUB-11)', 'work', 'open', NULL, NULL, 'Part 2 of plan 39. Waits for the OQ-33 decision(s) from the previous task.
+
+- D-entry in `plans/decisions.md` (next free D-number): price model and account holder, consequences for OQ-35 (plan 40) and OQ-45 (plan 42), professional checks still owed.
+- OQ-33 → "Resolved" in `plans/open-questions.md` with the D-number; `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S5 wording stays with plan 43).
+- `plans/17-publishing.md` "Steamworks and store": account bullet decided; PUB-6 rewritten to the holder (person/company, tax form, app credit, advisor check before signup); PUB-11 rewritten to the price model (band, regional pricing, launch discount, DLC pricing if bundles become DLC). Both stay S5, unchecked.
+- If bundles become DLC: one row in `plans/backlog.md` (DLC depots/app IDs for bundles, S5, plan 18 SW tasks); no code.
+
+Done when: D-entry exists; OQ-33 resolved; PUB-6 and PUB-11 match the answer and stay unchecked.', '2026-10-12T00:48:50Z', NULL, 177);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3350,6 +3375,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (70, 174, '2026-10-12T00:47:06Z', '2026-10-12T00:47:44Z', 'done', NULL, 0, 'ec676d8f4e5438ff656c70a49dbfcc3df48fdb3a', 'claude-opus-5-5[1m]', 'e0933653-8490-4dc1-89ec-6bca68304c7d', 6, 12, 3878, 190531, 30447, 0.35929019999999995, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (71, 175, '2026-10-12T00:47:44Z', '2026-10-12T00:48:13Z', 'done', NULL, 0, '178a84015e665cb1c30f105255077ef004d84334', 'claude-opus-5-5[1m]', '3d7df2a2-5c87-439e-a6ea-99f7bd641a99', 5, 10, 2484, 125504, 20183, 0.2362848, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (72, 176, '2026-10-12T00:48:13Z', '2026-10-12T00:48:35Z', 'done', NULL, 0, '2124038a57b5015f3a4e91c6c4a4053af523351b', 'claude-opus-5-5[1m]', 'ff6789bf-3a31-4d6a-bc38-185e10e9f4c1', 5, 10, 2289, 138957, 25582, 0.2782674, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (73, 177, '2026-10-12T00:48:35Z', '2026-10-12T00:48:59Z', 'done', NULL, 0, 'd8e8fa860302c2d2177f4cd1204c046b7f869acc', 'claude-opus-5-5[1m]', 'b24a26e5-2123-48e0-b3ab-aba19167f3ab', 4, 6, 2542, 72584, 24787, 0.2636768, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
