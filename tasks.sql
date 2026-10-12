@@ -7833,8 +7833,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Natural, short display names for a TV screen; native speakers check them later (part 11 pilot).
 
 Done when: every current category, subcategory and bundle has a name in `en` and `de`; `qgen validate` is clean (no missing-name warnings, no unknown keys).', '2026-10-12T18:14:16Z', '2026-10-12T18:19:18Z', 413);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (417, 64, 'create tasks for plan 64', 'split', 'open', 1000, NULL, 'Split plan 64 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:20:34Z', NULL, 243);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (417, 64, 'create tasks for plan 64', 'split', 'done', 1000, '2026-10-12, tasks 430 (prompts + decision, prio 700), 431 (qgen neutralize), 432 (docs); 430 makes 431/432 pending on its decision', 'Split plan 64 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:20:34Z', '2026-10-12T18:28:29Z', 243);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (418, 65, 'create tasks for plan 65', 'split', 'done', 1000, '2026-10-12, tasks 420-423, 425-427, 429; decision 31 (K) blocks 429', 'Split plan 65 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:23:46Z', '2026-10-12T18:27:39Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (419, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -7939,6 +7939,43 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Record K in the D-entry of plan 65 (decisions.md) if it still says "pm decision 31".
 
 Checks: `npm run check`, `npm run build`, `check:literals`; in the browser (or the desktop shell) with a temp `TRIVIA_STATE` holding a crafted save: k ≥ K shows nothing, k < K the warning with the right range, k = 0 the repeat line, an exhausted subcategory once and not on the next start. Never write `state/`.', '2026-10-12T18:27:35Z', NULL, 418);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (430, 64, 'Prompts: neutral voice per bundle + neutralize prompt (pm decision)', 'work', 'open', 700, NULL, 'Plan 64 task 1. Draft the prompt changes for neutral Spanish in `base` (D-78) and get them approved by the gamemaster (new prompts are theirs, D-36). Task 2 and task 3 of plan 64 wait for this task''s decision.
+
+## First pass: draft and ask
+- `authoring/tools/prompts/house-style.md` "Language": voice by bundle. `base`: neutral Latin American Spanish (`es-419`), words understood across Latin America and Spain where one exists. `colombia`: today''s Colombian usage list.
+- How the bundle''s voice reaches the prompt is a code choice (like `{players}` in `prompt()`, `authoring/tools/qgen.py:136`): e.g. a `voice` string per bundle in `app/data/bundles.json`, or a `{voice}` section filled in `prompt()`. Pick one, note it in the decision body.
+- Number format for `base`: today "the Colombian way" (2.640 / 42,195). Options in the decision, e.g. keep (common across most of Latin America and Spain), or RAE-style (2640 / 42,195, space for 5+ digits).
+- `review.md`, `audit.md`: one line each: a `base` question in Colombian (or other national) wording is `needs_work`.
+- New `prompts/neutralize.md`: a scan prompt like `tighten.md`. Flags `base` questions whose wording (question, options, hints, description, fun_fact) uses Colombian or other national usage where a neutral word exists; `issue` names word → replacement. References anyone knows (Encanto, García Márquez) stay. Colombian content that needs a connection to Colombia is a bundle matter (D-49), not flagged.
+- `es-ES` for questions: recommend no `questions.es-ES.json` at launch; neutral wording reads fine in Spain; the scan lists words with no pan-Hispanic form, so a sparse override can follow if there are many.
+- Don''t change the live prompts yet (every `qgen batch` reads them). Put the full drafts as diffs in the decision body:
+  `did=$(pm decision add "Neutral Spanish prompts for base (plan 64)" --body "<diffs, voice mechanism, number format options, es-ES recommendation>" --option "approve as drafted" --option "changes: …")`
+- Make this task and plan 64''s tasks "`qgen neutralize`" and "Docs: RUNBOOK, D-entry, QC" pending on it (`pm task-pending-decision <id> $did`; ids via `pm show <this task>`). Delete scratch files, stage nothing else, stop.
+
+## Second pass: after the answer
+- Apply the drafts with the gamemaster''s changes and the chosen number format; implement the voice mechanism in `qgen.py`.
+- Check: `prompt()` output for a `base` and a `colombia` batch shows the right voice (throw-away script); `qgen validate` passes.
+
+Done when: the approved prompts are in `authoring/tools/prompts/`, new `base` drafts get the neutral voice and `colombia` drafts the Colombian one.', '2026-10-12T18:28:26Z', NULL, 417);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (431, 64, 'qgen neutralize', 'work', 'open', NULL, NULL, 'Plan 64 task 2. A gamemaster-asked command that rewrites Colombian wording in `base` into neutral Spanish, modelled on `qgen tighten`. Waits for the prompt decision of plan 64 task 1 (`prompts/neutralize.md` must be approved and in place).
+
+- `cmd_neutralize` in `authoring/tools/qgen.py`, modelled on `cmd_tighten` (`qgen.py:2735`): run `neutralize-<n>`, resumes an open run.
+- Scan: reuse `cmd_scan` (`qgen.py:2710`) with a prompt/filter parameter, no copy. Only `bundle == "base"`, approved + needs_work, chunks of 50, `prompts/neutralize.md`.
+- Then fix (with the scan''s issue) → media → sheets → review 1 → research → review 2 → record → audit (D-56, the run''s audit sample) → export → sync.
+- `--dry-run`: scan only; print flagged ids, issues, and an estimated cost (rates from `costs.log`) before any fix.
+- Done line + exact `git add` like `tighten`; when locale files exist, print the count of stale translations per locale (D-81, `source_hash`).
+- Verify with a throw-away script on a handful of known Colombianisms (`grep -E ''bombillo|crispetas|gripa'' authoring/data/questions.json`): the scan flags them, a fix on those few ids goes through review and audit. No full-pool run (part 11, plan task 250). Delete the script; don''t keep pool changes from the check unless they passed review.
+
+Done when: `qgen neutralize --dry-run` lists the known Colombianisms with word → replacement and a cost estimate, and a run on a few ids goes through to export.', '2026-10-12T18:28:26Z', NULL, 417);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (432, 64, 'Docs: RUNBOOK, D-entry, QC for qgen neutralize', 'work', 'open', NULL, NULL, 'Plan 64 task 3. Document the neutral Spanish tooling once `qgen neutralize` (plan 64 task 2) exists and the prompts (task 1''s decision) are approved.
+
+- `authoring/RUNBOOK.md`: `qgen neutralize` (no arguments) only when the gamemaster asks, same handling as `qgen tighten`.
+- `plans/decisions.md`: new D-entry "neutral Spanish rewrite via `qgen neutralize`": amends D-36 (one more gamemaster-asked command), the bundle voices (`base` es-419, `colombia` Colombian), number format and `es-ES` choice from the decision. D-36''s "related" line points to it.
+- `authoring/QC.md`: a neutralize run gets the same QC as a batch: `/review?run=neutralize-<n>&sample=1`, and `qgen report --qc neutralize-<n>` if `--qc` reads runs; if it doesn''t, log the gap in `plans/backlog.md`.
+- `AGENTS.md` "Pool" command list: `qgen neutralize` (only when the gamemaster asks).
+- `plans/15-i18n.md` "Spanish varieties" links plan 64; `plans/backlog.md` B-13 → tooling done, runs in part 11; `plans/project.md` in sync.
+
+Done when: RUNBOOK, decisions, QC.md, AGENTS.md and the plan files say how to run and check a neutralize run.', '2026-10-12T18:28:26Z', NULL, 417);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -8504,6 +8541,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (285, 243, '2026-10-12T18:19:24Z', '2026-10-12T18:20:52Z', 'failed', 'the worker left changes that are not staged:
 ?? plans/24-profiles-and-repeats.md', 0, 'f2431b45c607a93f3acfe171b69c7d9bfa8ad573', 'claude-opus-5-5[1m]', '2c6403fc-4334-4708-be0c-5216c61b563c', 11, 20, 7223, 447112, 46817, 0.6084984, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (286, 418, '2026-10-12T18:25:01Z', '2026-10-12T18:27:50Z', 'done', NULL, 0, '1651f573ac9726338eb618d4cd45bace1e5d471f', 'claude-opus-5-5[1m]', 'b176877e-fbe3-4012-8866-0b314b0b43e1', 19, 38, 15312, 1031131, 66567, 1.0451541999999998, 583141);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (287, 417, '2026-10-12T18:27:50Z', '2026-10-12T18:28:36Z', 'done', NULL, 0, '220263f9cf5c580dbf76c6ce735dcdcacaaef2ca', 'claude-opus-5-5[1m]', '268dba6d-9ff6-4fe1-bbd7-a53e0f6588b8', 5, 10, 4416, 145922, 26820, 0.33210439999999997, 583141);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
