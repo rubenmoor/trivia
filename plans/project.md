@@ -135,6 +135,7 @@ No family-specific questions (D-30).
 Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below; OQ-29 is answered by D-63, OQ-36 by D-38).
 
 - [x] S3: SW-2 Electron desktop shell skeleton, `trivia-desktop`, whole game without Python (2026-10-12, pm plan 54, D-71; pending: play test decision 29, Steam binding decision 28) — [`18`](18-steam-integration.md)
+- [x] S3: SW-3 File saves: `save/game.json` in the user's config folder, atomic writes, backups, `--import-save` (2026-10-12, pm plan 55, D-72) — [`18`](18-steam-integration.md)
 - [x] S3: IN-4, IN-5 Gamepad input and button glyphs (Xbox/PlayStation, drawn in-house) (2026-10-12, pm plan 45; real-pad check pending) — [`14`](14-input.md)
 
 ### Backlog

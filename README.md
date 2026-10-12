@@ -40,6 +40,8 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name 
 - `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget. It links to the review tool and stats while the authoring server runs.
 - `M` (or the faint flag next to the menu button) flags the question for review; the next start of `trivia-authoring` marks it «needs work».
 - Game saves and burned questions (questions a player has already seen) live in `state/game.sqlite`. Delete it to reset everything.
+- Desktop shell (`trivia-desktop`, packaged builds): the save is `save/game.json` in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/game.json`; `TRIVIA_SAVE_DIR` overrides. A broken or newer save moves to `save/backup/` and the game starts fresh.
+- Bring the browser game's save over: `trivia-desktop --import-save state/game.json` (only when no desktop save exists yet), or copy `state/game.json` into the save folder.
 - The game plays fine with an empty media cache when online: a missing file is downloaded the first time it's shown. Offline, sync first (next section).
 
 ### Sync the media before game night
@@ -112,7 +114,7 @@ trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reloa
 npm run check                                      # type-check both clients
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
-npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (save not kept yet)
+npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (save: state/desktop/game.json)
 ```
 
 The dev servers forward `/api` and `/media` to the Python servers, so run both. Before changing anything, read [`plans/README.md`](plans/README.md): plans are the source of truth, and decisions (D-numbers) are logged in [`plans/decisions.md`](plans/decisions.md).
