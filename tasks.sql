@@ -4953,8 +4953,8 @@ Checks:
 - `grep -rn "game\.py\|selection\.py\|/api/game\|/api/players\|/api/flags\|/api/categories" --exclude-dir=node_modules --exclude-dir=dist .` hits only history (decisions, done plan notes, fixtures README).', '2026-10-12T03:28:48Z', NULL, 291);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (304, 52, 'create tasks for plan 52', 'split', 'done', 1000, '2026-10-11, tasks 306-308 for plan 52, no decisions needed', 'Split plan 52 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:29:53Z', '2026-10-12T03:31:47Z', 108);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (305, 53, 'create tasks for plan 53', 'split', 'open', 1000, NULL, 'Split plan 53 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:31:08Z', NULL, 109);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (305, 53, 'create tasks for plan 53', 'split', 'done', 1000, '2026-10-11, tasks.sql: tasks 309-312; no upfront decisions (gate task 312 raises the human-pass decision)', 'Split plan 53 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:31:08Z', '2026-10-12T03:32:19Z', 109);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (306, 52, 'providers.licence_verdict and D-entry for PD-US only', 'work', 'open', NULL, NULL, 'Add `licence_verdict(slot)` to `authoring/tools/providers/__init__.py`, next to `licence_kind` and `LICENCE_FIELDS` (plan 52, "Classification"). Returns `("ok" | "replace", [reasons])`, reasons as short code plus text, e.g. `off-allowlist: GFDL 1.2`.
 
 - `replace` for: missing data (a `LICENCE_FIELDS` field absent, `restrictions`/`pd_reasons` not a list, unknown `provider`), off the allowlist (`licence_kind` is None), PD without a reason (`pd_reasons == []`), PD-US only (every reason matches the US-only pattern list).
@@ -4983,6 +4983,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - PUB-1 `[x]` with a note: date, distinct files, replacement count per reason, restriction flag count.
 
 Done when: the table matches the report''s tally and PUB-1 is ticked. Docs only, no code.', '2026-10-12T03:31:45Z', NULL, 304);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (309, 53, 'Server: licence verdicts, licence=replace filter, all-provider search', 'work', 'open', NULL, NULL, 'Server side of plan 53 (PUB-3). Needs plan 52''s `providers.licence_verdict(slot)` (task 306); no classification of its own.
+
+- `authoring/server/main.py`: every question in API responses gets `licence`: per picked slot (`media`, `background`) `{"verdict": "ok"|"replace", "reasons": [...]}` from `providers.licence_verdict`; unpicked slots left out. Add it in `with_candidates` (rename if it no longer fits).
+- `GET /api/questions?licence=replace`: questions not `rejected` with at least one slot `replace`; combines with the other filters. Update the docstring API list.
+- `media.find_candidates` / `fetch_for`: new param (default off, so `qgen batch` is unchanged) that asks every available provider in `providers.order` instead of stopping at `ENOUGH`, keeping up to `MAX_CANDIDATES`. `POST …/media/search` takes optional `"all": true`.
+- Pick response carries the new verdict; a pick that is itself `replace` is allowed (stays on the list).
+- `overview.build`: count of questions on the list (for the start-page link).
+
+Done when:
+- `/api/questions?licence=replace` returns q-0021, q-1100, q-1194; ids match `trivia-media licenses --json`.
+- Throw-away script: a pick via the API on a test copy of the pool gets all `LICENCE_FIELDS` and a verdict in the response.', '2026-10-12T03:32:16Z', NULL, 305);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (310, 53, 'UI: licence=replace queue, reasons in MediaPanel, start-page link', 'work', 'open', NULL, NULL, 'UI side of plan 53 (PUB-3), on the server API from the previous task of this plan.
+
+- `authoring/ui/src/lib/types.ts`, `lib/api.ts`: `licence` on `Question`, `licence` in `QuestionFilter`, `all` on the search call.
+- `review/Review.svelte`: read `licence=replace` from the URL like `media=missing`; `filterText` "licence to replace"; in this queue `isOpen` = some slot still `replace` (leaves the queue only with a clean pick), summary says when the list is empty.
+- `review/MediaPanel.svelte`: next to the slot''s credit, the reasons when `replace` (e.g. "replace: PD-US only (PD-US-not renewed)"); licence, PD reasons and restrictions as small info text. Restrictions are info only, never a reason, no "keep" mark (D-61). In this queue the `m` search uses `all: true`.
+- `home/Home.svelte`: "Licences to replace (N)" link to `/review?licence=replace` when N > 0.
+- Picking does not change the review status.
+- Docs: `plans/08-review-tool.md` (the queue and the `all` search); `AGENTS.md` "Commands": `/review?licence=replace` in the authoring line.
+
+Done when: `npm run check` and `npm run build` pass; in the browser the queue shows q-0021, q-1100, q-1194 with reasons (don''t pick anything; that''s the gamemaster''s pass).', '2026-10-12T03:32:16Z', NULL, 305);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (311, 53, 'qgen batch: an LLM media pick with licence verdict replace gets needs_work', 'work', 'open', NULL, NULL, 'Keeps new problem files out of the pool (plan 53, Gate).
+
+- `authoring/tools/qgen.py`, media step where `media_tool.pick_fields(found[n - 1], slot)` is called: run `providers.licence_verdict` on the picked slot; on `replace` the question gets needs_work with problem `media` and short Spanish feedback like the existing "no adecuada" ones (with the reason). Never an approved question with a `replace` file.
+
+Done when: a throw-away script feeding the step a PD-US-only / GFDL candidate yields needs_work with problem `media`; an ok candidate is unchanged.', '2026-10-12T03:32:16Z', NULL, 305);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (312, 53, 'Gate: licence list empty, qgen validate rejects replace files, PUB-3 close-out', 'work', 'open', NULL, NULL, 'Last task of plan 53 and milestone 4''s "done when".
+
+1. Run `trivia-media licenses`. If it doesn''t print `nothing to replace` (exit 0): `pm decision add "Replace the files on the licence list" --body "Open /review?licence=replace in trivia-authoring and pick a new file per listed slot until the queue is empty, then answer done." --option "done"`, make this task pending on it, stage nothing else and stop.
+2. Once empty: `trivia-media sync --status approved --prune` (drops the old files from the cache, D-17).
+3. `qgen validate`: an approved question with a slot whose `licence_verdict` is `replace` is an error, reasons in the message.
+4. Docs: `plans/17-publishing.md` PUB-3 `[x]` with date and the replaced files, tally refreshed from `trivia-media licenses`.
+
+Done when: `qgen validate` passes; a throw-away copy with an approved slot hand-edited to `pd_reasons: ["PD-US-expired"]` fails it. Done note: milestone 4 is met — `qgen validate` requires licence data (plan 26) and the list is empty.', '2026-10-12T03:32:17Z', NULL, 305);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5211,6 +5245,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (137, 108, '2026-10-12T03:28:56Z', '2026-10-12T03:30:04Z', 'done', NULL, 0, 'ac86da91cd2c51154826f85c843c6d6bc030ea56', 'claude-opus-5-5[1m]', '54de5ea6-18a3-47a8-a89c-9cf2ed9bec65', 9, 18, 6565, 334044, 41888, 0.5332848, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (138, 109, '2026-10-12T03:30:04Z', '2026-10-12T03:31:20Z', 'done', NULL, 0, 'babb5c083e6fd296165bbb343b6bde49f9b50cf0', 'claude-opus-5-5[1m]', '206f1b80-e5d4-4408-b0c4-a8f158f68816', 15, 28, 7222, 589267, 51996, 0.6783733999999999, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (139, 304, '2026-10-12T03:31:20Z', '2026-10-12T03:31:52Z', 'done', NULL, 0, '8d8c019bc17f4420d1b7bb83412e12546f7748c5', 'claude-opus-5-5[1m]', '11299079-a34a-4e0d-81b4-f926ce13605a', 6, 10, 3329, 143946, 27153, 0.31263320000000006, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (140, 305, '2026-10-12T03:31:53Z', '2026-10-12T03:32:25Z', 'done', NULL, 0, 'fad283d27f950fc74a6ff86f6608480a68c73ae8', 'claude-opus-5-5[1m]', 'bc081085-89a2-465e-bedb-ac7985154314', 5, 10, 3383, 138607, 24491, 0.29134940000000004, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
