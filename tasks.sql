@@ -1406,8 +1406,51 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check that engine modules import nothing outside `src/engine/` and `src/lib/types.ts`, and nothing from `node:` (tests and `engine/test/` excepted).
 
 Done when: plan 20''s "Done when" holds: root `npm test` passes with every step identical and every tape used up; `npm run check` and `npm run build` pass; no new dependencies; screens untouched.', '2026-10-12T00:05:37Z', NULL, 64);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (80, 3, 'create tasks for plan 3', 'split', 'open', 1000, NULL, 'Split plan 3 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:06:56Z', NULL, 3);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (80, 3, 'create tasks for plan 3', 'split', 'done', 1000, '2026-10-11, tasks 81-85', 'Split plan 3 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:06:56Z', '2026-10-12T00:07:35Z', 3);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (81, 3, 'write plan: t() helper and the es catalog (LUI-1)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "t() helper and the es catalog (LUI-1)" --priority 500` (client-side code), with the full body.
+
+- Scope as in part 1: `app/client/src/lib/i18n.ts` (`t(key, params)`, `Intl.PluralRules`, `Intl.NumberFormat`, no library), `app/client/src/locales/es.ts` whose type is `Catalog`, every string of the 13 files in `app/client/src/game` plus `index.html` title, `aria-label`/`title`, joker names and key hints, `copy.ts` variant arrays (`choose()`/seed logic unchanged).
+- Sound cues in `sound.svelte.ts`: neutral cue ids instead of regex on Spanish text.
+- `es` by default; dev-only `?lang=xx` override for parts 3 and 4; no language menu (OQ-31).
+- Check: script or documented `grep` for Spanish literals in `app/client/src/game`; before/after screen comparison, no visible change.
+- Split the plan''s work by component group so each task fits one worker run; first task: helper + catalog skeleton.
+- Coordinate with part 2 (server errors as codes): error keys live in the same catalog.
+- Across all parts: `plans/15a-ui-translation.md` (LUI-1), `directory.md`, `plans/decisions.md` if the catalog shape is a decision.
+
+Done when: the plan exists with priority 500 and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (82, 3, 'write plan: server errors as codes', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Server errors as codes" --priority 700` (backend), with the full body.
+
+- `GameError` in `app/server/game.py` carries a stable code plus params (e.g. `{"error": "joker_spent", "joker": "hint"}`), with a readable English fallback text for logs and the authoring side.
+- Wire through `app/server/main.py` → `app/client/src/lib/api.ts` → `error` in `Game.svelte`, rendered with `t()` from part 1.
+- List every `GameError` raised today and its code.
+- Runs before or alongside part 1 (priority 700 puts it first); if `t()` doesn''t exist yet when its client task runs, it adds the error keys to the catalog from part 1 or waits for it: say which in the plan.
+- Log the code scheme in `plans/decisions.md` if it becomes a decision.
+
+Done when: the plan exists with priority 700 and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (83, 3, 'write plan: pseudo-locale xx (LUI-2)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Pseudo-locale xx (LUI-2)" --priority N`, N below the part-1 plan''s (it runs after part 1; e.g. 400), with the full body.
+
+- `xx` generated from `es` at runtime or build: ~40 % padding, accents, `{params}` intact.
+- Missing keys resolved through `t()` show visibly (e.g. `⟦key⟧`); the type check covers the static side.
+- Walk every screen on the TV layout with `?lang=xx`; log overflow in `plans/backlog.md`, no redesign.
+- Mark LUI-2 in `plans/15a-ui-translation.md` when done.
+
+Done when: the plan exists, ordered after part 1, and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (84, 3, 'write plan: draft en catalog (LUI-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Draft en catalog (LUI-3)" --priority N`, N below the part-1 plan''s (it runs after part 1; e.g. 400), with the full body.
+
+- `app/client/src/locales/en.ts` satisfies `Catalog`; Claude drafts it.
+- Joker names: playful English, not literal (15a); the plan names a task that proposes a short list of candidates per joker and raises a pm decision for the gamemaster to pick.
+- Draft only: no native-speaker check, no launch (LUI-5, OQ-31).
+- Mark LUI-3 in `plans/15a-ui-translation.md` when done.
+
+Done when: the plan exists, ordered after part 1, and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (85, 3, 'write plan: gamemaster check of the colombia proposals (D-39)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Gamemaster check of the colombia proposals (D-39)" --priority 200` (content; no code depends on it), with the full body.
+
+- Human work: the gamemaster reviews the 84 BN-3 proposals (`work/bundles/proposals.json`) at `/review?bundle=colombia` (key `n` moves a question to the next bundle).
+- Agent side: one task raises a pm decision that asks for the check and waits on it; after the answer, note the result in `plans/22-bundles.md` (BN-3) and `plans/project.md`, run `qgen validate` and `qgen export`.
+- "Every question has `bundle`" is already enforced by `validate_pool()` in `authoring/tools/qgen.py`: confirm, don''t rebuild.
+
+Done when: the plan exists with its priority and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1442,6 +1485,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (21, 63, '2026-10-12T00:04:21Z', '2026-10-12T00:04:57Z', 'done', NULL, 0, '096e9c39036dc19181f3a734459186398b0b6bb3', 'claude-opus-5-5[1m]', '5725e50f-0d66-41a4-9315-1d9058b3d7f5', 7, 14, 3613, 222573, 27513, 0.33693460000000003, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (22, 64, '2026-10-12T00:04:57Z', '2026-10-12T00:05:48Z', 'done', NULL, 0, '5f99490ece8b9fc658cd0904b7e0972c85bcc220', 'claude-opus-5-5[1m]', '5ac41bca-defc-4ca4-8f63-883913dd2cfb', 6, 12, 4108, 201341, 32981, 0.3863242, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (23, 3, '2026-10-12T00:05:48Z', '2026-10-12T00:07:07Z', 'done', NULL, 0, 'fcdcd77201876c5380225f69e11e9fa7bb432cb1', 'claude-opus-5-5[1m]', 'ef8ffbe1-f90a-4cea-88fa-c7b6ea5eef0a', 11, 22, 6650, 405513, 36517, 0.5063266, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (24, 80, '2026-10-12T00:07:07Z', '2026-10-12T00:07:39Z', 'done', NULL, 0, '48351dca931872c2e0d97ea68840497acdbe0079', 'claude-opus-5-5[1m]', '86f247c9-de89-48c0-b89e-4eab17be46c8', 5, 10, 3444, 142563, 25794, 0.30378459999999996, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
