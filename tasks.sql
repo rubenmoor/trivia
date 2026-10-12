@@ -4352,7 +4352,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
 
 Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages; plan 24 checked.', '2026-10-12T00:48:02Z', NULL, 175);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (191, 38, 'Content target: estimate games per player, write the decision (OQ-32)', 'work', 'open', NULL, NULL, 'Part 1 of plan 38. Prepare the OQ-32 decision; estimate only, no simulation (CT-2, `qgen report --simulate`, is S4). Can start now: use drafts where answers are missing and say so in the body.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (191, 38, 'Content target: estimate games per player, write the decision (OQ-32)', 'work', 'done', NULL, '2026-10-11, pm decision 21 (estimate in body); no files', 'Part 1 of plan 38. Prepare the OQ-32 decision; estimate only, no simulation (CT-2, `qgen report --simulate`, is S4). Can start now: use drafts where answers are missing and say so in the body.
 
 - Facts (numbers in the decision body, one-line source each):
   - approved per level (1–15) and per age-group window (D-38, `app/data/age-groups.json`) for `base` today (`qgen report`)
@@ -4367,7 +4367,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add`, body = context + facts + estimate + trade-offs, ultra-short.
 - `pm task-pending-decision <record task> <decision id>` (the record task is the next one in plan 38).
 
-Done when: the decision exists with the estimate; the record task waits on it; no throw-away script left.', '2026-10-12T00:48:28Z', NULL, 176);
+Done when: the decision exists with the estimate; the record task waits on it; no throw-away script left.', '2026-10-12T00:48:28Z', '2026-10-12T04:38:22Z', 176);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (192, 38, 'Content target: record the answer (OQ-32, CT-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 38. Waits for the OQ-32 decision from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number): target per language, the estimate behind it, CT-2 (S4) confirms it.
@@ -5636,6 +5636,29 @@ Facts
 - Without a gamemaster, undo and a free skip are cheat buttons; a mid-game budget change bypasses the preset.
 - «Reportar pregunta» (plan 13 draft): burn the question for everyone on this machine (player NULL, D-28), add it to a local report list (a page to copy from), draw a replacement. With unlimited replacements it is a free Paso; cheating only costs the player''s own pool, but matters once Steam achievements exist.
 - No timer (OQ-4), so no pause is needed; the screen just waits.', NULL, NULL, '2026-10-12T04:24:33Z', NULL, 184, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (21, 'Content target per player and language (OQ-32)?', 'pending', '["≥ 50 games per new player in the primary language (Spanish), ≥ 30 in every other launch language; solo, Normal preset, strong-player bound, every age group; D-52''s 5000 meets it (~80, adults'' top); CT-2 (S4) verifies", "≥ 30 games per new player in every launch language (same bound); 5000 base exceeds it, a ~1900-question pool would meet it; CT-2 (S4) verifies", "A target per age group: ≥ 50 for kids and young_teens, ≥ 30 for young_adults and adults (thin hard top accepted); CT-2 (S4) verifies", "No games number: D-52''s 5000 with D-53''s mix per launch language is the target; CT-2 (S4) reports games per player for information"]', 'Plan 38 / CT-1. Games per new player before questions repeat, per launch language. Estimate only; CT-2 (`qgen report --simulate`, S4) verifies or corrects the number. Throw-away script, deleted.
+
+Facts
+- Approved `base` today (questions.json, 2026-10-11): 1034. Per difficulty 1–15: 36, 67, 96, 103, 112, 147, 101, 67, 74, 57, 61, 38, 48, 19, 8.
+- Target: D-52 5000; D-53 per difficulty (targets.json, pm decision 1 answered): 250, 350, 450×6, 330×3, 230×2, 125×2.
+- Draw (D-22, D-27, D-28, D-31): 4 cards shown per level, ≥ 1 burned per ladder level; level ranges per age group from age-groups.json (D-38; only young_teens tuned, AG-7).
+- Burns per won game: 12 without jokers; Normal preset draft 12 + Paso 2 + Bájale 2 + Cambiazo 2 + Snipe hits 2 = 20 (pm decision 19 open, draft used). Assumed worst case: the 8 joker burns land on levels 9–12. Presets don''t shift the window (decision 19 draft option 1).
+- Launch languages: OQ-31 open (plan 37) → draft "Spanish only". A translation counts as a full pool only once its own approved pool meets the target.
+- Extra players: OQ-37 open (plan 41) → target is for solo play; burn multiplier per extra player named open.
+
+Estimate (strong-player bound, solo; min over ladder levels of approved in the level''s range ÷ burns there; also checked on shared difficulty intervals, which is tighter where levels overlap)
+- Today, Normal: adults 9 (bottleneck level 12, difficulty 14–15: 27 q); young_adults 21 (levels 9–12, difficulty 9–13); kids 33, young_teens 33 (level 1, difficulty 1: 36 q, and 8–10).
+- Today, no jokers: adults 27, kids/teens 36, young_adults 56.
+- At 5000 (D-53 mix), Normal: adults 80 (difficulty 13–15), young_adults 112, kids 129, young_teens 155. No jokers: ≥ 239 everywhere.
+- Bottleneck: the top of adults (difficulty 14–15, 125 each at target). Scaling D-53''s mix: ≥ 30 games needs ~1900 approved, ≥ 50 ~3100.
+- Not in the estimate: subcategory depth for Bájale/Cambiazo, category spread; CT-2 covers them.
+
+Quality bar: D-56 and pm decision 2 (30 spot-checked per batch, ≥ 90 % agreement); release bar pm decision 15. No new numbers.
+
+Trade-offs
+- 50/30: met by 5000 `base` with margin (80); a second language needs ~1900 approved of its own.
+- 30 everywhere: same 5000 already exceeds it; sets a lower bar for later languages and for a smaller early pool, but buyers notice repeats sooner.
+- Per age group: allows thin adult tops, but the store can''t say one number.', NULL, NULL, '2026-10-12T04:38:20Z', NULL, 191, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -5821,6 +5844,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (180, 123, '2026-10-12T04:31:24Z', '2026-10-12T04:33:11Z', 'done', NULL, 0, '6f5cc2b9e201895e9df3fa5fc1a45619380d045e', 'claude-opus-5-5[1m]', 'b60750b9-2be7-44f1-913e-209faceb2b6a', 28, 50, 11389, 1130816, 45266, 0.8162712000000002, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (181, 124, '2026-10-12T04:33:11Z', '2026-10-12T04:34:36Z', 'done', NULL, 0, '160e246e8c84dffd5a5e513d32258b92f7594d71', 'claude-opus-5-5[1m]', 'e5860e74-28aa-410b-90b1-08b584c02f89', 14, 28, 8516, 617073, 43782, 0.64410260000000008, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (182, 125, '2026-10-12T04:34:36Z', '2026-10-12T04:37:30Z', 'done', NULL, 0, '846d7e827f45c88bcca6afa55f772f17313109c6', 'claude-opus-5-5[1m]', 'aa379ab9-0487-4f85-89eb-926f0728a496', 28, 44, 17786, 1428225, 73027, 1.225757, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (183, 191, '2026-10-12T04:37:31Z', '2026-10-12T04:38:36Z', 'done', NULL, 0, '30daeace14c6c59c67350e24080e5b97aff7ce3e', 'claude-opus-5-5[1m]', '7b67776a-4384-401c-996b-f0647a3f87b6', 10, 20, 6414, 380688, 35033, 0.4847616, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -5850,6 +5874,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (113, 10);
 INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 20);
+INSERT INTO task_decision (task_id, decision_id) VALUES (192, 21);
 INSERT INTO task_decision (task_id, decision_id) VALUES (209, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (210, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (211, 12);
