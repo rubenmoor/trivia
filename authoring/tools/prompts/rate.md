@@ -24,4 +24,4 @@ For essential media: if a clear, recognisable photo or sound of exactly that thi
 
 Also check `media.query` and `media.role`. Illustrative media is shown sharp: score `no_giveaway` ≤ 3 if the search term would likely find a picture of the answer, of a wrong option, or with a name or date on it. Decorative media should show the question's topic or setting, not a metaphor from the wording. If an illustrative image is safe, decorative is the wrong choice; mention that in `notes`.
 
-Also give `difficulty_estimate` (1–10, your own estimate on the house-style scale) and short `notes` (in English) explaining every score below 4. Be honest: most questions should not get all 5s.
+Also give `difficulty_estimate` (your own estimate on the shared scale 1–15 from the house style; use the whole scale) and short `notes` (in English) explaining every score below 4. Be honest: most questions should not get all 5s.

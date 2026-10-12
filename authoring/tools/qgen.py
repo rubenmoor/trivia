@@ -986,7 +986,7 @@ def cmd_import(args):
     print(f"imported {len(work)} question(s) into {len(range(0, len(work), 10))} chunk(s)")
 
 
-DIFFICULTY_GAP = 3  # rater estimates are rough (pilot: ~2.4 levels off), so only big gaps count
+DIFFICULTY_GAP = 3  # rater on 1–15: mean |diff| 1.5 at 10–15 (task 30), so only big gaps count
 
 
 def issues_of(q, r, c):
