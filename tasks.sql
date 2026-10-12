@@ -3962,6 +3962,60 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - Every file above (and any catalog added by plan 69 by then) is listed in `## Part 4` (no-findings rows included), every finding with a status; every part 1 row `handed to part 4` has its final status there.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`, `check:literals` pass.', '2026-10-12T22:52:33Z', 505);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (77, 13, 'Game screens review (code review part 5)', 0, 'Part 5 of `plan 72: masterplan` (milestone 13, Code quality): review the game screens `app/client/src/game/` once (23 tracked files today, ≈6200 lines: 2 files over 1100 lines, 4 between 250 and 600, the rest small), plus the screen files open plans add before this plan runs; fix what is cheap, log every file and finding in `## Part 5` of `code-review.md`. Scope, checklist, fix-or-ask, the task 302 rule, duplication candidates and the report format: plan 72 "Ground rules for every part"; not restated here.
+
+## Depends on
+- `plan 73: Baseline scans and report skeleton (code review part 1)`: `code-review.md` with `## Part 5`, the inventory and the scan rows `handed to part 5` (unused exports/props, markers, `any`/`as`/`!` counts, module `let`s, bundle baseline). Each task re-checks those rows for its files and logs their final status in `## Part 5`, quoting the part 1 row.
+- `plan 75: TS engine review (code review part 3)` and `plan 76: Client lib, locales and boot review (code review part 4)` run first (same priority, lower id): their findings on `lib/` (input, focus, gamepad scopes, `engine.ts`, `i18n.ts`, catalogs) are read, not redone; a screen''s misuse of a `lib/` API is logged here.
+- Open screen work elsewhere (all runs before this plan, priority 0 is last); it adds files and rewrites big parts of these:
+  - plan 59: `task 391: Configure game screen (MD-11 UI)` (new `Choice.svelte`/`BundleSelector.svelte`, `Overlay.svelte`), `task 392: Gamemaster menu (MD-12 UI)` (`Overlay.svelte`, `Reports.svelte`), `task 499: Game screens follow levels and cards per game` (`Game.svelte`, `Tower.svelte`, `Stage.svelte`, `Overlay.svelte`, `copy.ts`)
+  - plan 36: `task 378`/`379` (mode screen: `Game.svelte`, `Overlay.svelte`, `Reports.svelte`)
+  - plan 29: `task 474`/`475` (choice screen, `SupplyReport.svelte`, `Player.svelte`, `Overlay.svelte`)
+  - plan 46: `task 230: Letter picker for player names with a pad (SW-4, IN-4)`, `task 231` (`LetterPicker.svelte`, `Player.svelte`, `Question.svelte`, `theme.css`)
+  - plan 47: `task 233: Credits screen (PUB-5)` (`Credits.svelte`, `Glyph.svelte`, `Overlay.svelte`)
+  - plan 69: `task 456`/`457` (overflow fixes, `Glyph.svelte`, `Prompt.svelte`, joker cards)
+  - plans 32/33: `task 142`–`148` (recorded effects and music loops: `sound.svelte.ts`, `Game.svelte`)
+  - plan 50: `task 346: Close-out: PORT-7 docs`
+- First step of every task: `pm queue` + grep open task bodies for its files; a file an open task still changes gets findings only (`superseded by task N`), no refactor.
+- Binding: `decision 33: Configure game screen: which fields?`, `decision 34: Gamemaster menu: which cheats?`, `decision 46` (levels per game), `decision 31` (super-tight supply warning), `decision 26`/`27` (languages); `pm decision list --answered --grep <file or term>` per file before a fix.
+
+## Rules for this plan
+- Screens look and behave the same after every fix: Spanish UI byte-identical, timings (`timing.ts`), animations and sounds unchanged unless the fix is an obvious bug; a visual/wording change is not a code fix → decision or out of scope.
+- Splitting a big component (`Game.svelte`, `Question.svelte`, `Overlay.svelte`) into children is a fix only when it moves markup/logic without changing behaviour or the props other files pass; a split that rewires state between screens → decision + follow-up task in this plan.
+- Focus checklist for every Svelte file: `$effect`s that rerun every frame or on unrelated state, `$derived` vs. recomputation in markup, `setTimeout`/`setInterval`/`requestAnimationFrame`/listeners without cleanup on unmount or phase change, `pushScope` without pop, props never passed or never read, unused CSS selectors (`svelte-check` warnings), literals outside the catalog (`check:literals`), unhandled game phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale or missing `PLACEHOLDER(<task id>)`, media preloading (`<img>`/`<audio>`/`<video>` loaded twice or too late, offline).
+- Duplication candidates for part 10: style copies between `theme.css` and component `<style>`s and `authoring/ui`, animation helpers repeated across `Fireworks`/`Shredder`/`JokerFlight`, phase/copy logic repeated between `Game.svelte`, `Overlay.svelte`, `Hud.svelte`, `copy.ts`.
+- Check per fix: throw-away script where logic is pure (`copy.ts`, `swap.ts`, `timing.ts`, `sound` helpers); otherwise a walk through the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand).
+- Before every commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.
+
+## Tasks (in this order; no own priority)
+1. **Review `Game.svelte`** (1190 lines)
+   - Screen state machine: every engine phase and error mapped to a screen, transitions on undo/abandon/cheats, races between async engine calls and user input (double press, action while a call is in flight).
+   - Split candidates (per screen/phase, keyboard handling, sound cues); timers and listeners on phase change; the one `$effect` and its dependencies; module-level state.
+2. **Review `Question.svelte`** (1238 lines)
+   - 8 `$effect`s and 5 timer/listener sites: cleanup, reruns, ordering with answer/reveal; media playback and preloading (`audio`/`video`/image, `mediaVolume`, `duck`), answer input and focus; split candidates (media player, answer area, reveal).
+3. **Review `Overlay.svelte`** (564 lines)
+   - 4 `$effect`s, menu scopes and focus, general vs. gamemaster part per decision 34, overlap with the screens of task 391/392/233 if they live here; split candidates.
+4. **Review `sound.svelte.ts`** (569 lines)
+   - `AudioContext` lifecycle (`unlock`, suspended context, one context per app), node leaks per `sfx`/loop (`Keep`, disconnect after stop), `fadeOut`/`music` switch races, `localStorage` volumes parse errors, magic numbers (`TEMPO`, `ROLL_*`, gains) vs. named constants, samples loading offline/failing; synth recipes vs. recorded samples of plans 32/33 (superseded if still open).
+5. **Review `Player.svelte` and `JokerTray.svelte`** (392 + 303 lines)
+   - `Player`: name entry, letter picker hand-off (task 230), choice/supply hand-off (task 474/475), 2 `$effect`s; `JokerTray`: joker counts incl. ∞ (`null`), disabled states, animation triggers vs. `JokerFlight`.
+6. **Review effects: `Fireworks.svelte`, `Shredder.svelte`, `JokerFlight.svelte`** (257 + 134 + 116 lines)
+   - `requestAnimationFrame`/timer loops stopped on unmount, per-frame allocations, canvas/DOM size handling (4K, 1280×720), `prefers-reduced-motion`; shared animation code.
+7. **Review layout pieces: `Tower.svelte`, `Hud.svelte`, `Stage.svelte`, `DifficultyDial.svelte`** (196 + 60 + 109 + 93 lines)
+   - Levels per game (decision 46, task 499), `DifficultyDial` timers (3 sites), derived values recomputed in markup, unused props/CSS.
+8. **Review menu screens: `CategoryPicker.svelte`, `Reports.svelte`, `LanguageScreen.svelte`** (162 + 164 + 138 lines)
+   - Focus scopes and back/escape, `$effect` per file, empty states (no categories, no reports, one language), `cards` 0 path, catalog use.
+9. **Review small components: `Prompt.svelte`, `Glyph.svelte`, `Icon.svelte`** (73 + 99 + 89 lines)
+   - Unused icons/glyphs and props (grep every name used), input-device prompt labels vs. `lib/input`, SVG inlined per use (bundle size).
+10. **Review helpers and theme: `copy.ts`, `swap.ts`, `timing.ts`, `theme.css`** (22 + 28 + 39 + 201 lines)
+    - Every export used, `timing.ts` constants vs. literal durations elsewhere in `game/` (grep `ms`, `setTimeout(` numbers), CSS custom properties defined but unused / used but undefined, `theme.css` vs. component styles.
+11. **Review screen files added after the inventory**
+    - `git ls-files app/client/src/game` vs. the part 1 inventory and tasks 1–10: every new file (expected from open plans: `Choice.svelte`, `BundleSelector.svelte`, `SupplyReport.svelte`, `LetterPicker.svelte`, `Credits.svelte`, gamemaster menu/mode screen pieces, joker cards) reviewed with the same checklist; add them to the inventory with part 5.
+    - If they exceed one worker run (> ≈1200 lines together), split: review the largest here, `pm task add <this plan>` per remaining group.
+
+## Done when
+- Every file in `app/client/src/game/` at the time of task 11 is listed in `## Part 5` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 5` has its final status there.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `check:literals` pass.', '2026-10-12T22:53:36Z', 506);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -9902,14 +9956,14 @@ Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-as
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
 - Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', '2026-10-12T22:52:34Z', 501);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (506, 72, 'write plan: Game screens review (part 5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of plan 72: **Game screens** (`app/client/src/game/`), with the per-file and grouped tasks listed there.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (506, 72, 'write plan: Game screens review (part 5)', 'plan', 'done', 1000, '2026-10-12, plan 77 (tasks.sql)', 'Write the plan for part 5 of plan 72: **Game screens** (`app/client/src/game/`), with the per-file and grouped tasks listed there.
 - Check open screen plans (36, 46, 50, 59) for files they still rewrite; review those after or short-review them.
 
 
 Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
-- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', '2026-10-12T22:53:38Z', 501);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (507, 72, 'write plan: Desktop shell and packaging review (part 6)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of plan 72: **Desktop shell and packaging** (`app/desktop/`), as described there.
 - Check open desktop plans (54, 56, 46) first.
 
@@ -9968,6 +10022,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:51:29Z', NULL, 504);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (516, 76, 'create tasks for plan 76', 'split', 'open', 1000, NULL, 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:52:33Z', NULL, 505);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (517, 77, 'create tasks for plan 77', 'split', 'open', 1000, NULL, 'Split plan 77 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:53:36Z', NULL, 506);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10969,6 +11025,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (370, 503, '2026-10-12T22:49:54Z', '2026-10-12T22:50:41Z', 'done', NULL, 0, 'f16934634ef4b0ef025a5a7a930659a06a76ad93', 'claude-opus-5-5[1m]', 'dc932621-05e8-49db-b32a-3e61d776a8c6', 7, 14, 4504, 249710, 36921, 0.43544599999999994, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (371, 504, '2026-10-12T22:50:41Z', '2026-10-12T22:51:40Z', 'done', NULL, 0, 'bfaf5b341bc83668924243dad5eda3e01c168ac8', 'claude-opus-5-5[1m]', '49bd2b08-40cd-4555-b7ea-a0a524da575d', 9, 14, 5647, 279967, 45505, 0.5330294, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (372, 505, '2026-10-12T22:51:40Z', '2026-10-12T22:52:42Z', 'done', NULL, 0, '4fc660081ea144d4a6752f54bdc1a2dcf700b124', 'claude-opus-5-5[1m]', '072463c3-d984-4b83-b79a-62c0dc8f8d23', 8, 16, 5889, 297816, 42539, 0.51771919999999994, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (373, 506, '2026-10-12T22:52:42Z', '2026-10-12T22:53:46Z', 'done', NULL, 0, '44dc5978c7c92aa5636f59c58ea4ec08d063fd90', 'claude-opus-5-5[1m]', 'b023e831-59e8-4830-a44c-2fd1c75b6536', 8, 16, 6094, 286714, 38638, 0.4883908, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
