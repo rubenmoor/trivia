@@ -45,8 +45,8 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - [ ] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Plan: pm plan 54 (`app/desktop/`, `app://` resolver, `trivia-desktop`).*
 - [ ] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry). *Plan: pm plan 55 (`app/desktop/save.mjs`, `<appData>/trivia/save/game.json`, backup + fresh start, `--import-save`).*
 - [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Plan: pm plan 46 (also the letter picker for player names with a pad).*
-- [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine.
-- [ ] SW-6 CI build in GitHub Actions for both platforms.
+- [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine. *Plan: pm plan 56 (Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`, start-test checklist).*
+- [ ] SW-6 CI build in GitHub Actions for both platforms. *S3 or S5, with or without media: pm decision 14; plan 56 task 5.*
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
 - [ ] SW-8 Steam binding (SW-2): overlay, achievements, on-screen keyboard, language; the game runs without Steam.
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.
