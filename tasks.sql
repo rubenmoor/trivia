@@ -11334,6 +11334,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Status per finding: `fixed (task 567)`, `follow-up task N`, `decision N`, `superseded by task N` or `won''t fix` + why.
 - Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
 - Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
 
@@ -11362,6 +11363,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Status per finding: `fixed (task 568)`, `follow-up task N`, `decision N`, `superseded by task N` or `won''t fix` + why.
 - Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
 - Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
 
@@ -11387,6 +11389,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Status per finding: `fixed (task 569)`, `follow-up task N`, `decision N`, `superseded by task N` or `won''t fix` + why.
 - Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
 - Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
 
@@ -11416,6 +11419,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Status per finding: `fixed (task 570)`, `follow-up task N`, `decision N`, `superseded by task N` or `won''t fix` + why.
 - Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
 - Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
 
@@ -11443,6 +11447,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Status per finding: `fixed (task 571)`, `follow-up task N`, `decision N`, `superseded by task N` or `won''t fix` + why.
 - Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
 - Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
 
@@ -11471,6 +11476,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Rules
 - Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
 - Duplication with other modules: log only, as "duplication candidate for part 10".
+- Status per finding: `fixed (task 572)`, `follow-up task N`, `decision N`, `superseded by task N` or `won''t fix` + why.
 - Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
 - Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
 
@@ -11478,11 +11484,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
 - `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- TS changed and part 10''s lint pass exists by then: it passes too.
 
 ## What
 - `engine.py` (≈34 lines): subprocess errors (stderr only on failure, JSON parse errors, huge payloads via stdin); Node startup per call (batch with `supplies`?); D-60 (no rule re-implemented).
 - `supply.ts` (≈32), `sim/load.ts` (≈33), `sim/simulate.ts` (≈256): not covered by `npm run check`: type-check once by hand (`npx tsc --noEmit` with a throw-away config in `/tmp`); adding them to a tsconfig is a part 10 row, not a fix here.
   - `as` casts on stdin JSON; `DATA_DIR` relative paths; `simulate.ts` constants (`TYPICAL_P`, `MAX_GAMES`, `NOW`, `SIM_MODES`, `MULTI`) vs. the engine''s mode list; `uniform` seeding; `run`/`playGame`/`runTimed` (≈150 lines) split candidates; `cache` per locale.
+  - Findings a lint rule or stricter `tsconfig` flag would catch carry the tag, e.g. `(lint: noUnusedLocals)`, `(lint: no-explicit-any)`; part 10 counts them.
   - `burned` → seen counters: `superseded by task 427` while open.
 - `package.json`: deps vs. imports (part 1 row).
 - Duplication candidate: `sim/simulate.ts` `SIM_MODES` ↔ qgen `SIM_MODES`.
@@ -12391,8 +12399,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:40:19Z', '2026-10-12T23:40:47Z', 600);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (612, 79, 'create tasks for plan 79', 'split', 'done', 1000, '2026-10-12, tasks 557–566 synced with revised plan 79: fixed (task N) status, temp TRIVIA_STATE/TRIVIA_MEDIA rule; no new decisions', 'Split plan 79 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:41:07Z', '2026-10-12T23:41:40Z', 601);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (613, 80, 'create tasks for plan 80', 'split', 'open', 1000, NULL, 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:03Z', NULL, 602);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (613, 80, 'create tasks for plan 80', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 567–572 aligned with revised plan 80 (status fixed (task N), lint tags and lint pass for TS in task 572); no new decisions', 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:03Z', '2026-10-12T23:42:34Z', 602);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13437,6 +13445,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (412, 601, '2026-10-12T23:40:53Z', '2026-10-12T23:41:11Z', 'done', NULL, 0, 'ebe9f8dede8afe7512c7ca9c9ce786892a4b96f3', 'claude-opus-5-5[1m]', 'dec15498-e943-4ab9-a5e4-6bb7bdd7e9c8', 5, 10, 1485, 165286, 29751, 0.30080519999999994, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (413, 612, '2026-10-12T23:41:12Z', '2026-10-12T23:41:44Z', 'done', NULL, 0, '959e057615b1db4ab5b45e2c6758be77876bf57c', 'claude-opus-5-5[1m]', 'd375e190-faec-44bf-b866-9ba160d13469', 8, 16, 2412, 300125, 40770, 0.43448900000000007, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (414, 602, '2026-10-12T23:41:44Z', '2026-10-12T23:42:11Z', 'done', NULL, 0, '350547c67ef4c0cc316e1136c6a4d861fa28aac1', 'claude-opus-5-5[1m]', '905e23c1-862c-4228-8e96-278d90d1b32c', 7, 14, 1871, 238358, 29344, 0.31989959999999995, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (415, 613, '2026-10-12T23:42:11Z', '2026-10-12T23:42:37Z', 'done', NULL, 0, '866367d456b508e5ce02decaeabcafdd9d657c64', 'claude-opus-5-5[1m]', 'e49072aa-f0b3-4b0b-a9f4-3c4da43ac9e2', 7, 14, 2012, 265864, 38161, 0.3987568, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
