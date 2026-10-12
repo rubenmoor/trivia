@@ -4456,14 +4456,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision <record task> <decision id>` (the record task is the next one in plan 38).
 
 Done when: the decision exists with the estimate; the record task waits on it; no throw-away script left.', '2026-10-12T00:48:28Z', '2026-10-12T04:38:22Z', 176);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (192, 38, 'Content target: record the answer (OQ-32, CT-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 38. Waits for the OQ-32 decision from the previous task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (192, 38, 'Content target: record the answer (OQ-32, CT-1)', 'work', 'dropped', NULL, 'replaced by task 383 (body in line with revised plan 38)', 'Part 2 of plan 38. Waits for the OQ-32 decision from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number): target per language, the estimate behind it, CT-2 (S4) confirms it.
 - OQ-32 → "Resolved" in `plans/open-questions.md` with the D-number.
 - `plans/16-content-target.md`: "Target" decided (numbers, per language); "Quality bar" points to D-56; "Where we stand" refreshed; CT-1 `[x]` with a note that CT-2 (S4) confirms it; status no longer stub.
 - `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
 
-Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T00:48:28Z', NULL, 176);
+Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T00:48:28Z', '2026-10-12T16:49:08Z', 176);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (193, 39, 'Price model and account holder: facts, options, write the decision(s) (OQ-33)', 'work', 'open', NULL, NULL, 'Part 1 of plan 39. Prepare the OQ-33 decision(s); no code, no contact with Valve or an advisor. Not legal or tax advice: name where a professional must check.
 
 - Facts (numbers in the decision body, one-line source each; Valve''s Steamworks docs first):
@@ -6737,8 +6737,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
 
 Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name es, en, de; plan 24 noted; mode names'' Spanish forms listed.', '2026-10-12T16:48:10Z', NULL, 380);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (382, 38, 'create tasks for plan 38', 'split', 'open', 1000, NULL, 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:48:45Z', NULL, 364);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (382, 38, 'create tasks for plan 38', 'split', 'done', 1000, '2026-10-12, tasks.sql (task 192 replaced by 383; no new decisions)', 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:48:45Z', '2026-10-12T16:49:10Z', 364);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (383, 38, 'Content target: record the answer (OQ-32, CT-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 38. Answered: pm decision 21 (no games number; 5000 × D-53 mix per launch language), pm decision 26 (launch languages es, en, de).
+
+- D-entry in `plans/decisions.md` (next free D-number): 5000 approved per launch language (es, en, de) with D-53''s per-level mix (`authoring/data/targets.json`); no games-per-player number; CT-2 (`qgen report --simulate`, S4) reports games per player per mode for information only (burns: «Solo o en grupo» and round-robin co-op = 12 + standard joker set''s burns; round-robin competitive ≈ N × that; competitive (timed) ≈ 1 shared question per round). Later languages (milestone 12): no target now.
+- OQ-32 → "Resolved" in `plans/open-questions.md` with the D-number.
+- `plans/16-content-target.md`: "Target" decided (5000 × D-53 mix per launch language; whether a translation counts as a full pool follows plan 37''s D-entry, else name it open); "Quality bar" points to D-56 and plan 57 (CT-5); presets / "default mode" wording replaced by the five modes; "Where we stand" refreshed; CT-1 `[x]` with a note that CT-2 (S4) reports games per player; status no longer stub.
+- `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
+
+Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T16:49:08Z', NULL, 382);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7253,7 +7261,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (240, 363, '2026-10-12T16:47:25Z', '2026-10-12T16:47:53Z', 'done', NULL, 0, '15cdb2d5435fb4ecf5c6d5130ccdcec8f54d36d5', 'claude-opus-5-5[1m]', '6e36a4fc-af0e-4b79-a8bc-8ee531fcd4e9', 4, 8, 2840, 130806, 34330, 0.3576332, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (241, 380, '2026-10-12T16:47:53Z', '2026-10-12T16:48:17Z', 'done', NULL, 0, '3981fc61f463441897c4bab266fa063485c19734', 'claude-opus-5-5[1m]', '3331d6d6-3e74-4090-8381-c9291fc666cc', 6, 12, 2101, 192830, 29494, 0.31658600000000003, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (242, 364, '2026-10-12T16:48:17Z', '2026-10-12T16:48:52Z', 'done', NULL, 0, '8457e06df349c1fa1c9fb24f807f74db6de94bb0', 'claude-opus-5-5[1m]', 'a085c04b-0e56-4330-8945-cef9e1c9514c', 8, 16, 3089, 284387, 33943, 0.3902654, 521418);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (243, 382, '2026-10-12T16:48:52Z', NULL, 'running', NULL, NULL, '8a3b4ebbeeda16cc49f454a70ec560bd80c982e6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (243, 382, '2026-10-12T16:48:52Z', '2026-10-12T16:49:15Z', 'done', NULL, 0, '8a3b4ebbeeda16cc49f454a70ec560bd80c982e6', 'claude-opus-5-5[1m]', 'b6a7fc1b-0849-4556-8080-9a3d1f9442a0', 8, 16, 1813, 234794, 24022, 0.2754588, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
