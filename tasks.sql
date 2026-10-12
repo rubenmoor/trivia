@@ -936,7 +936,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - **Never phones home.** No update check, no crash reporter, no report upload, no analytics, no remote content. Steam delivers updates; reports reach the gamemaster only when a player sends them by hand.
 - **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements), Valve''s store and build reviews, uploads that need Steam Guard, the Deck, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
 - **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files.
-- The family game at home (`trivia`, browser on the TV) keeps working after every task; a patch never breaks a save.
+- The current game (`trivia`, Python server + browser) keeps working until the release replaces it (D-59); a patch never breaks a save.
 - Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); no new dependency without a pm decision.
 - Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
 
@@ -4543,6 +4543,8 @@ bring them in line with the plan. A task that writes a plan gets `--kind plan`.'
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (279, 9, 'create tasks for plan 9', 'split', 'open', 1000, NULL, 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (280, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (281, 11, 'create tasks for plan 11', 'split', 'open', 1000, NULL, 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
