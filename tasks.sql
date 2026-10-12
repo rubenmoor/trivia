@@ -2046,6 +2046,61 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - `plans/open-questions.md`: OQ-29..OQ-37 and the Freesound question under "Resolved"; nothing left open for S2.
    - Milestones 8–11 (S3–S6): compare each milestone body and its masterplan (plans 8–11, `pm show`) with the answers. If the masterplan is still "tbd.", do nothing (its writer reads `decisions.md`). If it is written and its scope changed (e.g. shell other than Electron, languages, licence files, Freesound replacement), add a short dated note with `pm plan edit <id> --body -`. Change a milestone body only if it names something the answers ruled out; list such changes in the task note.
    - Done when: milestone 7''s "Done when" holds (OQ-29..OQ-37 and OQ-45 resolved in `decisions.md`, later phases in `11-steam.md` match); `qgen validate` unaffected (no data touched).', '2026-10-12T00:46:09Z', 171);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (44, 8, 'Action layer and focus navigation (IN-2, IN-3)', 500, 'Keyboard (and later gamepad) input goes through one action layer, and every screen and dialog can be played with arrow keys, Enter and Esc/Backspace via a visible focus ring. Part 4 of masterplan 8 (S3); owner `plans/14-input.md` (section 2, IN-2, IN-3). Client only: no engine, no shell. Part 5 (gamepad, IN-4/IN-5) adds a third device on top of this layer; the family''s keys behave exactly as today.
+
+## Today (IN-1 audit, code as of 2026-10-11)
+- `app/client/src/game/Game.svelte` `onkeydown` (≈ l. 304): `e.repeat` ignored; first key unlocks audio; chain overlay → Player dialog → Question dialog → `Esc` overlay → `M` flag → `busy` guard → per screen (Start `Enter`/`Space`/`N`, Level/Correct/Wrong/Victory `Enter`/`Space`, Select `1`–`4`), Question and Player forwarded raw.
+- `Question.svelte` `key(e)`: `A`–`D`/`1`–`4` tap, `S P F T X` jokers (`JokerTray.TOKENS`), armed joker `Enter`/`Esc`/`Backspace`, Paso dialog `1`/`2`, Francotirador aim (letters, arrows, `Enter`), `Backspace` unlock, `Enter`/`Space` submit, `R` replay; Cambiazo forwards to `CategoryPicker.key` (arrows move DOM focus over tiles, `Esc` cancel, `Backspace` back a level, Enter native).
+- `Player.svelte` `key(e)`: `1`–`9` pick a name, a letter focuses the name field, delete dialog `Esc`/`Backspace` cancel (Enter/Tab native on its buttons, «Cancelar» focused first).
+- `Overlay.svelte` `key(e)`: own selection model (`selected`, ↑/↓ items, ←/→ volume/jokers/preset, `Enter` with «¿Seguro?», `Esc` close); its controls are `tabindex="-1"`.
+- Focus ring: `.game button:focus-visible` in `theme.css` (sky, D-29) plus per-component `:focus-visible` rules (card, answer, tile, token, name-button, delete, danger). ☰ and flag buttons: `tabindex="-1"` + `mousedown` preventDefault (IN-1).
+
+## Design
+- **`app/client/src/lib/input.ts`** (new, no dependency):
+  - `type Action = { type: "confirm" } | { type: "back" } | { type: "menu" } | { type: "pick"; n: number } | { type: "joker"; name: JokerName } | { type: "navigate"; dir: "up" | "down" | "left" | "right" } | { type: "replay" } | { type: "flag" } | { type: "new" }`.
+  - The masterplan''s `answer(1..4)` is `pick(n)`, n 1–9: cards, answers, player names and the Paso options all use number keys. `replay`, `flag`, `new` cover the remaining shortcuts (`R`, `M`, `N`).
+  - Every action carries `device: "keyboard" | "mouse" | "gamepad"`; `lastDevice` is an exported `$state` (part 5''s glyphs read it; mouse = any `pointerdown`).
+  - **Keymap** (unchanged keys): `Enter`/`Space` → confirm, `Backspace` → back, `Esc` → menu, arrows → navigate, `1`–`9` → pick, `M` → flag. Scope-dependent extras: `question`: `A`–`D` → pick 1–4, `S P F T X` → joker (letters from `TOKENS`, later the catalog, plan 21), `R` → replay; `start`: `N` → new; `text`: none (see below).
+  - **Scopes**: a stack; `pushScope({ name, keys, handle, root?, modal? })` returns a `pop`; components push in `$effect` (Game per screen, Overlay, Player delete dialog, Paso, Francotirador, armed joker, Cambiazo). The top scope gets the action; `handle` returns `false` to pass it down, unless `modal` (overlay and dialogs are modal, as today). Replaces the `overlayOpen`/`dialogOpen()` chain.
+  - Dialogs treat `menu` as `back` (`Esc` cancels a dialog today); the overlay treats `menu` as close.
+  - **Text entry**: while an `<input>` has focus, printable keys, `Backspace` and ←/→ stay native; only `Enter` → confirm, `Esc` → menu, ↑/↓ → navigate. On Player, a letter outside the field still focuses it (the `text` fallback lives in `input.ts`, not in `Player.svelte`).
+  - Kept in one place: `e.repeat` ignored, the first key/click unlocks audio, `busy` (transition running, 04) drops actions except `menu` and `flag` as today, `preventDefault` when an action was handled.
+  - **Mouse**: buttons keep their `onclick` (IN-1); the click and the action call the same function. No synthetic action dispatch for clicks.
+  - No `keydown` listener outside `input.ts` after this plan (`grep -rn "keydown\|KeyboardEvent" app/client/src` lists only it).
+- **Focus navigation (`app/client/src/lib/focus.ts`, new)**:
+  - Spatial: `navigate(dir)` moves DOM focus to the nearest candidate in that direction inside the top scope''s `root` (bounding rects; primary axis distance + 2 × cross-axis offset; no wrap). Pure function over rects so it can be checked with a throw-away script.
+  - Candidates: enabled `button`, `input`, `a[href]`, `[data-focusable]`; never `tabindex="-1"` or `[data-nofocus]`. ☰ and flag stay `tabindex="-1"` and gain `data-nofocus`, so neither Tab nor navigate lands on them (IN-1).
+  - Scopes may handle `navigate` themselves and return `true`: the Overlay (its list model), the Francotirador (crosshair, `moveTarget`), the Cambiazo grid (row/column move; `CategoryPicker.move` becomes a call to the spatial helper if it gives the same result).
+  - **First press**: with nothing focused, the first `navigate` focuses the scope''s default control (`data-focus-default`: «¡Jugar!»/«Continuar», «Seguir», the first card, the first answer, «Cancelar» in the delete dialog) instead of moving. So nothing looks different until someone presses an arrow.
+  - **Confirm with focus**: `confirm` clicks the focused control only if focus came from navigate/Tab (the ring is showing); otherwise the screen''s default (today''s `Enter` behaviour). A control focused by a mouse click never steals the family''s `Enter`.
+  - **Focus ring**: the sky outline of `theme.css` for every candidate; programmatic focus must show it in Chromium (`focus({ focusVisible: true })` or a `.nav-focus` class styled like `:focus-visible`; the task checks which one works in Chromium and Firefox).
+  - **Focus memory**: per scope name, the last focused control (`data-focus-id`, else its index among candidates); restored when the scope is on top again (overlay or dialog closed, Cambiazo back a level, return to Start). Cleared when the screen''s content changes (new question, new cards). Dialogs return focus to their opener on close.
+- Strings: no new on-screen text expected. If one is needed and `app/client/src/lib/i18n.ts` exists (plan 21), it goes through `t()`; else a Spanish literal marked `// LUI-1`.
+
+## Coordination
+- **PORT-7 (M2 part 5, plan not written yet, task 59)** also edits `Game.svelte` (`act`, `refresh`, `lib/api.ts` calls). This plan touches only input handling: `onkeydown`, the components'' `key()` exports, focus attributes and CSS. It never edits `lib/api.ts` or the data flow; handlers call whatever functions exist when the task runs (`newGame`, `pick`, `skip`, …). Whichever lands second keeps the other''s change; pm runs one task at a time, so a worker always sees the other''s code. Equal priority (500) puts PORT-7 first when both are queued (milestone 2 before 8).
+- **Plan 21 (LUI-1)** moves joker letters to `joker.<id>.key`: the `question` keymap reads the letters from wherever they live at task time (`TOKENS` or the catalog), never a second copy.
+- **Plans 29 (Choice screen) and 36 (Reportar pregunta, settings screen)**: neither screen exists today. Task 4 converts any that landed by then and, for those still open, adds a follow-up task to that plan (see task 4). Rule written into `04-ui-tv-display.md` ("Input") for every screen from now on.
+- **Part 5 (gamepad, plan from task 213)** adds a gamepad source producing the same actions; this plan leaves a `dispatch(action)` export for it.
+- No new dependency (no focus or hotkey library).
+
+## Tasks
+1. **Action layer core; Game, Overlay and Player on actions (IN-2)**
+   - `lib/input.ts` as above (actions, keymap, scopes, `text` handling, `lastDevice`, `dispatch`); one `svelte:window` listener moves from `Game.svelte` into it (or `Game.svelte` calls `input.ts`''s handler).
+   - `Game.svelte`: one scope per screen (start, level, select, correct, wrong, victory) plus the global `menu`/`flag`; `Overlay.svelte` and `Player.svelte` (incl. delete dialog) push their own scopes.
+   - Question and Cambiazo still get the raw event through a temporary passthrough scope, removed in task 2.
+   - Check: `npm run check`, `npm run build`; throw-away script for the keymap (key + scope → action); in the browser (`trivia` + `npm run dev -w app/client`), every key of 04 "Input" on these screens does what it did.
+2. **Question, jokers and Cambiazo on actions (IN-2)**
+   - `Question.svelte` scopes: answering, armed joker, Paso, Francotirador, Cambiazo (`CategoryPicker.svelte`); `key(e)` exports and the passthrough removed.
+   - Check: the grep above lists only `input.ts`; every joker (incl. unavailable ones), Paso 1/2, aim with letters and arrows, unlock, replay, submit, flag, undo/skip from the overlay work as before; `IN-2` `[x]` in `plans/14-input.md`.
+3. **Spatial focus, ring and memory (IN-3)**
+   - `lib/focus.ts`; `data-focus-default` / `data-focus-id` / `data-nofocus` on the screens and dialogs; ring visible on every candidate; ☰/flag never focused.
+   - Check: throw-away script for the rect logic (a 2×2 answer grid, the 4 cards, the Cambiazo grid with disabled tiles); in the browser every screen and dialog plays with arrows + Enter + Esc/Backspace only, the ring is always visible where focus is, and `Enter` without arrows behaves as today.
+4. **Audit, docs and later screens (IN-3)**
+   - Walk a full game with arrows + Enter + Esc/Backspace only (start → player incl. new name and delete → levels → every joker → wrong and victory → overlay incl. undo, skip, restart, volumes, jokers); fix what''s missing.
+   - Plans 29/36: if the Choice, settings or report screens exist, put them on actions and focus; for each that doesn''t, `pm task add <plan> "<screen> on the action layer (IN-2, IN-3)"` with a body pointing here and a priority 10 below the task that builds the screen.
+   - Docs: `04-ui-tv-display.md` "Input" gets the rule ("screens listen to actions from `lib/input.ts` and declare a focus default; no `keydown` elsewhere"); `14-input.md` IN-3 `[x]`; `directory.md` lists `lib/input.ts` and `lib/focus.ts`; `plans/project.md` in sync.
+   - Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the family''s keys behave as before (gamemaster''s check on the TV at the next game night; the worker lists what to try in the task note).', '2026-10-12T00:56:02Z', 212);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -3553,13 +3608,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Decisions the plan raises if it can''t settle them from `plans/18-steam-integration.md` (recommended option first): CI with or without media (D-17: media is gitignored); keep SW-6 (GitHub Actions) in S3 or move it to S5.
 - Offline start test on clean Windows and non-Nix Linux: a written checklist for the gamemaster, not a worker task that pretends to run it.
 - Owner `plans/18-steam-integration.md` ("Builds and depots").', '2026-10-12T00:53:42Z', NULL, 208);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (212, 8, 'write plan: Action layer and focus navigation (IN-2, IN-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 8): `pm plan add 8 "Action layer and focus navigation (IN-2, IN-3)" --priority 500`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (212, 8, 'write plan: Action layer and focus navigation (IN-2, IN-3)', 'plan', 'done', 1000, '2026-10-11, pm plan 44, plans/14-input.md', 'Write the plan for part 4 of the masterplan (plan 8): `pm plan add 8 "Action layer and focus navigation (IN-2, IN-3)" --priority 500`.
 
 - Client only; no engine or shell dependency. Read `plans/14-input.md` (IN-1 audit of `keydown` branches in `Game.svelte` and dialogs).
 - Content: actions `confirm`, `back`, `menu`, `answer(1..4)`, `joker(name)`, `navigate(dir)` in `app/client/src/lib/` (e.g. `input.ts`); keyboard/mouse → actions; screens listen only to actions. Spatial focus, sky-blue ring (D-29), focus memory per screen, never on the ☰ button by accident.
 - Screens from plans 29 and 36 (milestones 5, 7): convert those that exist, note the rule for those that land later.
 - Coordinate with PORT-7 (task 59): both touch `Game.svelte`; order the tasks so one doesn''t undo the other.
-- No new dependency without a `pm decision`. Family keys unchanged.', '2026-10-12T00:53:42Z', NULL, 208);
+- No new dependency without a `pm decision`. Family keys unchanged.', '2026-10-12T00:53:42Z', '2026-10-12T00:56:05Z', 208);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (213, 8, 'write plan: Gamepad input and button glyphs (IN-4, IN-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 8): `pm plan add 8 "Gamepad input and button glyphs (IN-4, IN-5)" --priority 490`.
 
 - Builds on part 4 (action layer). Owner `plans/14-input.md`.
@@ -3582,6 +3637,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Last; below plan 43 "S2 close-out" (150).
 - Content: gamemaster test checklist (Windows, Linux, Deck; controller only; offline; full game to level 12 or a loss; restart keeps the save); a `pm decision` "S3 test passed?" with the checklist in the body, a task that records the result.
 - Docs: `plans/11-steam.md` S3 row; 14, 17, 18 statuses; `plans/project.md`; `plans/README.md`; notes in masterplans 9–11 if S3 changed their scope (SW-6 moved, media bundle).', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (217, 44, 'create tasks for plan 44', 'split', 'open', 1000, NULL, 'Split plan 44 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', NULL, 212);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3675,6 +3732,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (77, 181, '2026-10-12T00:50:43Z', '2026-10-12T00:51:13Z', 'done', NULL, 0, 'daf6bd27f2f0c08c14863a72ecfdc257d3ecb10c', 'claude-opus-5-5[1m]', '9265f951-bbab-4d3b-bd84-b3674781b041', 5, 10, 2624, 147857, 27724, 0.3038834, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (78, 8, '2026-10-12T00:51:14Z', '2026-10-12T00:52:54Z', 'done', NULL, 0, 'c915c05219cdd9fbbaffbdc70d9ccd3109280dfd', 'claude-opus-5-5[1m]', 'd93901ef-0cc7-4e68-be21-e1ea094eed89', 12, 22, 9677, 451848, 51253, 0.6940216, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (79, 208, '2026-10-12T00:52:54Z', '2026-10-12T00:53:53Z', 'done', NULL, 0, 'a8ef981539569ec3963c70ea33813b1730c84051', 'claude-opus-5-5[1m]', '2bc8338c-bf13-4a99-8841-075799a52112', 8, 16, 6150, 327810, 46217, 0.558362, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (80, 212, '2026-10-12T00:53:53Z', '2026-10-12T00:56:14Z', 'done', NULL, 0, 'b5df7182db45f421334edaebbface98b604f85a7', 'claude-opus-5-5[1m]', 'c0d62dab-72a4-45e4-b06b-1f36198be63f', 14, 20, 13767, 494026, 63071, 0.87879319999999994, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
