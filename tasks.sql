@@ -6196,7 +6196,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:21Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (366, 40, 'revise plan 40', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 40, changed; it is quoted below. Bring plan 40 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (366, 40, 'revise plan 40', 'plan', 'done', 1000, '2026-10-12, no change: plan 40 still fits plan 7 part 7', 'Plan 7, the plan above plan 40, changed; it is quoted below. Bring plan 40 in line with it
 (`pm plan edit 40 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -6302,7 +6302,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
-- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', NULL, 359);
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:32Z', 359);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (367, 41, 'revise plan 41', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 41, changed; it is quoted below. Bring plan 41 in line with it
 (`pm plan edit 41 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -7263,6 +7263,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (242, 364, '2026-10-12T16:48:17Z', '2026-10-12T16:48:52Z', 'done', NULL, 0, '8457e06df349c1fa1c9fb24f807f74db6de94bb0', 'claude-opus-5-5[1m]', 'a085c04b-0e56-4330-8945-cef9e1c9514c', 8, 16, 3089, 284387, 33943, 0.3902654, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (243, 382, '2026-10-12T16:48:52Z', '2026-10-12T16:49:15Z', 'done', NULL, 0, '8a3b4ebbeeda16cc49f454a70ec560bd80c982e6', 'claude-opus-5-5[1m]', 'b6a7fc1b-0849-4556-8080-9a3d1f9442a0', 8, 16, 1813, 234794, 24022, 0.2754588, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (244, 365, '2026-10-12T16:49:15Z', '2026-10-12T16:49:25Z', 'done', NULL, 0, 'bef63c7ad7be7160fb6fe2640611e493af4e3e14', 'claude-opus-5-5[1m]', 'cad83d11-2423-4542-860a-4cc3c4108f76', 2, 4, 721, 43927, 21745, 0.1971814, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (245, 366, '2026-10-12T16:49:26Z', '2026-10-12T16:49:35Z', 'done', NULL, 0, '532392b87750392a5da2929ff0f69863f2ea26e9', 'claude-opus-5-5[1m]', 'f2d5e15e-90d1-4cbc-a592-5b0fb49887f9', 2, 4, 824, 42112, 21991, 0.2008464, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
