@@ -7397,20 +7397,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - MD-10: check that keyboard, mouse and pad each reach every control incl. today''s overlay (`lib/input.svelte.ts`, `lib/focus.ts`, `lib/gamepad.ts`). Covered → MD-10 `[x]` with a note; else note what''s missing in the menu task (`pm task` body can''t be edited when closed; add it to plan 13 under MD-12).
 
 Done when: decision logged, plan 13 has the spec, MD-10 settled.', '2026-10-12T16:52:21Z', '2026-10-12T22:37:09Z', 371);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (391, 59, 'Configure game screen (MD-11)', 'work', 'open', 360, NULL, 'Task 3 of plan 59. Waits on the fields decision; needs plan 36 (`settings.mode`, standard joker set, mode screen, tasks 376/378/379) and plan 29''s Choice screen (tasks 128/129/347) landed: check `pm show` for them; if one is open, leave this task open and stop.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (391, 59, 'Configure game screen (MD-11 UI)', 'work', 'open', 360, NULL, 'UI of the configure game screen (MD-11): plan 29''s Choice screen in gamemaster mode, no second screen. Spec: plan 13 "Gamemaster mode" → "Configure game screen" (D-88; decision 33: Configure game screen: which fields?).
 
-- Engine: decided fields as optional `settings` fields with today''s defaults (`withDefaults`); `newGame` accepts them; `app/client/src/lib/types.ts`, `lib/api.ts`.
-- UI: plan 29''s Choice screen in gamemaster mode shows the decided fields (no second screen); scopes and `data-nav`, no `keydown`; strings via `t()` (`configure.*`) in `locales/es.ts`.
-- Spec: plan 13 "Gamemaster mode".
+## Before you start (check `pm show`; one open → leave this task open and stop, say which)
+- Plan 59: task 497 (engine configure settings) and task 499 (screens follow levels and cards).
+- Plan 29: task 474 (Choice screen, `Choice.svelte`).
+- Plan 36: task 378 / 379 (mode row on the Choice screen; this screen is its gamemaster-mode form).
 
-Check: `npm test` (fixture replay unchanged), `npm run check`, `npm run build`, `npm run check:literals -w app/client`; throw-away script: each field changes the new game as decided; browser walk: Enter straight through on an existing save = today''s game. Then MD-11 `[x]` in plan 13.', '2026-10-12T16:52:21Z', NULL, 371);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (392, 59, 'Gamemaster menu (MD-12)', 'work', 'open', 350, NULL, 'Task 4 of plan 59. Waits on the cheats decision; needs plan 36''s engine part (`settings.mode`, task 376) and task 129 (choice line in the overlay) landed, and the configure screen task of plan 59 done: check `pm show`; if one is open, leave this task open and stop.
+## Changes
+- Shared bundle selector component (new, e.g. `game/BundleSelector.svelte`): extracted from task 474''s bundle rows; base bundles a radio group, others toggles, `bundlesFor(data)`; exactly one base. Reused by the menu (task 392) and plan 29''s screen.
+- `Choice.svelte` in gamemaster mode: rows Difficulty (age groups, then «Custom» with start/end −/+ rows), Bundles (the selector), Jokers (one row per joker in `TOKENS` order, 0–99 or ∞), allow video, allow audio, number of levels (1–20), cards per level (0–4); «Jugar» default focus.
+- Opens on `playerChoice` (last game''s settings, all fields), else fresh defaults: `young_teens`, the locale''s first base bundle only, `STANDARD_JOKERS`, video/audio on, 12 levels, 4 cards. Sends every field to `new`.
+- Supply check and outlook on the whole configuration; «Jugar» disabled with the reason when short (`supply_short`, `difficulty_invalid`, `base_bundle_count`).
+- Input: ↑/↓ rows, ←/→ values, Enter/A toggles / starts, Esc/B back to Player; mouse click, −/+; scopes, `data-nav`, `data-focus-default`, no `keydown`. Strings `configure.*` via `t()` in `locales/es.ts`.
 
-- Engine: one action per decided cheat in `app/client/src/engine/api.ts` / `engine/game.ts` (like `skip`, `undo`, `jokers`), refused (`409`, reason) when `settings.mode` isn''t `"gamemaster"`; `lib/api.ts`, `lib/types.ts`.
-- UI: `app/client/src/game/Overlay.svelte` grows into the menu: today''s items kept, new ones added; keyboard, mouse and pad (scopes, `data-nav`); strings via `t()` (`overlay.*`). Anything MD-10 left missing (plan 13 note) goes here.
-- Spec: plan 13 "Gamemaster mode".
+## Check
+- `npm test`, `npm run check`, `npm run build`, `npm run check:literals -w app/client`.
+- Browser walk: Enter straight through on an existing save = today''s game (same settings as the last game); fresh player gets the fresh defaults; each field changes the started game''s `settings`; keyboard only, mouse only, pad.
+- Then MD-11 `[x]` in plan 13; `plans/04-ui-tv-display.md` (configure screen, keys); `directory.md` for new files.', '2026-10-12T16:52:21Z', NULL, 371);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (392, 59, 'Gamemaster menu (MD-12 UI)', 'work', 'open', 350, NULL, 'UI of the gamemaster menu (MD-12): `Overlay.svelte` grows into the menu in two visibly separate parts. Spec: plan 13 "Gamemaster mode" → "Gamemaster menu" incl. its "Input" note (D-88; decision 34: Gamemaster menu: which cheats?).
 
-Check: `npm test`, `npm run check`, `npm run build`, `npm run check:literals -w app/client`; throw-away script per cheat (state change, burn rows, undo after a cheat, refusal in another mode); browser walk keyboard only, mouse only, pad. Then MD-12 `[x]`; docs: `plans/04-ui-tv-display.md` (configure screen, menu, keys), `directory.md` if files were added, `plans/project.md` if MD-10..MD-12 are listed.', '2026-10-12T16:52:21Z', NULL, 371);
+## Before you start (check `pm show`; one open → leave this task open and stop, say which)
+- Plan 59: task 498 (engine cheats) and task 391 (configure screen: difficulty row, shared bundle selector).
+- Plan 29: task 475 (choice line in the overlay).
+
+## Changes
+- General part (every mode): continue, «Reportar pregunta» / «Preguntas reportadas», sound, languages, fullscreen, restart (`abandon`, then the configure screen in gamemaster mode), quit (desktop).
+- Gamemaster cheats (gamemaster mode only, hidden elsewhere): «Saltar pregunta», «Bloquear pregunta» (confirm), undo, «Gestionar comodines» (rows show and edit uses left; client sends limit = used + left; preset row Sin límite / Como las cartas), «Cambiar pregunta» (seen or not), «Saltar a nivel» (1..levels), difficulty and bundles (the configure screen''s difficulty row and the shared bundle selector). Each item enabled only in the phase its engine action accepts.
+- Input gap from MD-10: the overlay''s flat item list has no `root` / `focus.ts`; the difficulty and bundle editors need either rows fitting that list (←/→ values) or a nested modal scope with `root`, `data-focus-default`, `pad`, like `Reports.svelte`.
+- `lib/api.ts` calls; strings `overlay.*` via `t()`.
+
+## Check
+- `npm test`, `npm run check`, `npm run build`, `npm run check:literals -w app/client`.
+- Browser walk keyboard only, mouse only, pad: every cheat runs and its effect shows; undo after a cheat; in `solo` no cheat is shown.
+- Then MD-12 `[x]` in plan 13; docs: `plans/04-ui-tv-display.md` (menu, keys), `directory.md` if files were added, `plans/project.md` if MD-10..MD-12 are listed.', '2026-10-12T16:52:21Z', NULL, 371);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (393, 24, 'create tasks for plan 24', 'split', 'done', 1000, '2026-10-12, no changes: tasks 102-104 already match plan 24 (D-78 adds context only, visible via pm show); joker-name decisions are raised by task 102', 'Split plan 24 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:58:36Z', '2026-10-12T16:59:08Z', 381);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (394, 7, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-12, plan 7 body (competitive timed mode per milestone: rounds = levels, claiming, lives, sudden death; parts 5, 8 updated; part 11 = plan 59)', 'The milestone changed. Bring plan 7, the masterplan, in line with it (`pm plan edit 7 --body -`), or
@@ -9585,8 +9605,46 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Add a `validate` step after `export` in `cmd_translate_batch`, as `cmd_batch` does (fail → exit 1, rerun resumes).
 - Update the steps line in `cmd_translate_batch`''s docstring if needed; D-87 and RUNBOOK''s "Translation runs" bullet then add `→ validate`.
 - Done when: a `--translate` run on a worktree with `--count 5` (or `--ids`) prints validate''s result before the report; discard the worktree.', '2026-10-12T22:33:27Z', '2026-10-12T22:34:07Z', 441);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (496, 59, 'create tasks for plan 59', 'split', 'open', 1000, NULL, 'Split plan 59 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:36:44Z', NULL, 390);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (496, 59, 'create tasks for plan 59', 'split', 'done', 1000, '2026-10-12, tasks.sql: plan 59 split: engine 497/498, screens 499; 391/392 rewritten to D-88 and plan 29''s new tasks 474/475', 'Split plan 59 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:36:44Z', '2026-10-12T22:38:33Z', 390);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (497, 59, 'Engine: configure settings (difficulty, levels, cards, video/audio) (MD-11 engine part)', 'work', 'open', NULL, NULL, 'Engine part of the configure game screen (MD-11). Spec: plan 13 "Gamemaster mode" → "Configure game screen" (D-88; decision 33: Configure game screen: which fields?; decision 46: Gamemaster mode: level ranges for custom difficulty and for a number of levels other than 12). No UI here (the screen: task 391; Tower/table: the screens task of plan 59).
+
+## Changes (`app/client/src/engine/`)
+- `state.ts`: new optional `settings` fields, each missing = today: `difficulty: {start, end}` (1–15, end ≥ start; excludes `age_group`), `levels` (1–20, missing 12), `cards` (0–4, missing 4), `video` / `audio` (stored only as `false`). `withDefaults` must not write them back (fixtures unchanged).
+- `selection.ts`: `LEVELS` and `PER_LEVEL` become per-game values (helpers from `settings`), through `assign`, `draw`, `laterLevels`, `supply`; `game.ts` (`answer` win check at `levels`, `laterFill`, refill `n`), `outlook.ts` (`ALL_LEVELS`, `demandFor`, `seenPerLevel`).
+- Level ranges: custom ramp and age group stepped over n levels exactly as decision 46.
+- `cards: 0`: one card drawn and opened at once on every return to the table (next level, skip, Paso, replace, jump); supply needs max(cards, 1) per level.
+- `availableNow` / `supply` / `outlook`: drop `media.type` `video` / `audio` when off; images and backgrounds stay.
+- `newGame` and `choice` (`api.ts`) accept and validate the fields (`difficulty_invalid`, range errors for `levels` / `cards`; `t()` strings for new error codes in `locales/es.ts`); `playerChoice` / `gameChoice` grow to every field (a budget changed mid-game counts) so the configure screen opens on the last game''s settings.
+- `lib/types.ts`, `lib/api.ts`: the new fields.
+
+## Check
+- `npm test` (fixture replay unchanged), `npm run check`, `npm run build`, `npm run check:literals -w app/client`.
+- Throw-away script: each field changes a new game as decided (levels 1 / 5 / 20, cards 0 / 1 / 4, custom 3–9 ranges, video/audio off draws none of them, supply short → `supply_short`); a game without the fields = today.', '2026-10-12T22:38:15Z', NULL, 496);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (498, 59, 'Engine: gamemaster cheats (replace, level, settings, jokers) (MD-12 engine part)', 'work', 'open', 470, NULL, 'Engine part of the gamemaster menu (MD-12). Spec: plan 13 "Gamemaster mode" → "Gamemaster menu" (D-88; decision 34: Gamemaster menu: which cheats?). Needs the engine configure-settings task of plan 59 done (per-game `levels` / `cards`, `difficulty`); check `pm show`, else leave open and stop. No UI here (task 392).
+
+## Changes (`app/client/src/engine/game.ts`, `api.ts`)
+- Every cheat refused `gamemaster_only` (409) outside gamemaster mode (existing guard at the top of `game.ts`): check `skip`, `skip {everyone}`, `undo`, `jokers` have it; add it to the new ones.
+- `replace {seen?}`: question phase only; same level, same subcategory (`categoryCandidates` + `replacement`, GF-2), else any subcategory in range; old question gets new `Outcome` `admin_replace`, no seen row unless `seen: true`; nothing to draw → `replace_empty`.
+- `level {level}`: 1..`levels` (`level_invalid`); select phase (with `cards: 0` it replaces the question on screen, not seen); table redrawn at that level, old cards back; no history rows for skipped levels; undo snapshot stays.
+- `settings {age_group? | difficulty?, bundles?}`: same validation and supply check as `new` for levels current..`levels`; select phase (with `cards: 0` as for `level`); table redrawn; history and level stay.
+- Undo after any cheat: back before the last final answer; `settings` survive; seen/blocked rows written by cheats stay.
+- `lib/api.ts`, `lib/types.ts` (actions, `Outcome`); `t()` strings for new error codes; `save.ts` / authoring readers if `admin_replace` needs to be known there (`grep -rn admin_skip`).
+
+## Check
+- `npm test`, `npm run check`, `npm run build`, `npm run check:literals -w app/client`.
+- Throw-away script per cheat: state change, history/seen/blocked rows, undo after the cheat, refusal in `solo`.', '2026-10-12T22:38:15Z', NULL, 496);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (499, 59, 'Game screens follow levels and cards per game (Tower, table, HUD copy)', 'work', 'open', 460, NULL, 'The play screens still assume 12 levels and 4 cards; with D-88 (plan 13 "Configure game screen": `settings.levels` 1–20, `settings.cards` 0–4) they must follow the game. Needs the engine configure-settings task of plan 59 done; check `pm show`, else leave open and stop.
+
+## Changes (`app/client/src/game/`)
+- `Tower.svelte`: `LEVELS = 12` → the game''s `levels` (width curve, crown at the top level, 1 and 20 steps readable on the TV).
+- `copy.ts`: `MILESTONE_LEVELS` (4, 6, 8, 10, 12) relative to the game''s levels; the win line at the last level.
+- Table (`Stage.svelte` / `Game.svelte`, wherever the cards are laid out): 1–4 cards laid out well; `cards: 0` → no select phase on screen, the opened question comes straight in (engine opens it).
+- Anything else that hardcodes 12 or 4 (`grep -rn "12\b\|LEVELS\|PER_LEVEL" app/client/src/game`).
+
+## Check
+- `npm run check`, `npm run build`, `npm test`, `npm run check:literals -w app/client`.
+- Browser walk with games started via `lib/api.ts` (`new` with `levels` 1 / 5 / 20, `cards` 0 / 1 / 4): Tower, table and win work; a game without the fields looks as today.', '2026-10-12T22:38:15Z', NULL, 496);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10577,6 +10635,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (361, 441, '2026-10-12T22:32:08Z', '2026-10-12T22:33:35Z', 'done', NULL, 0, '85897a8fda62dc4d34f01cbeded5ffb6aa9bf3b7', 'claude-opus-5-5[1m]', '8429b9e9-431d-4e1a-bc68-637652a6ad28', 17, 34, 8971, 1013025, 67621, 0.923129, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (362, 495, '2026-10-12T22:33:35Z', '2026-10-12T22:34:19Z', 'done', NULL, 0, '05fd97e5b44bd7053c11cfd2c2b1c81de109653f', 'claude-opus-5-5[1m]', 'de15981c-6ac5-4385-8ee0-93f71f97d6fb', 14, 26, 2532, 431641, 27357, 0.35592820000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (363, 390, '2026-10-12T22:34:19Z', '2026-10-12T22:37:18Z', 'done', NULL, 0, '0ecb3f29e023cc4049ad183e9466fc7849ba7949', 'claude-opus-5-5[1m]', 'ce4c78a7-6a30-46f9-bb1c-75c9be199b3f', 24, 44, 14770, 1590598, 90326, 1.3363036, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (364, 496, '2026-10-12T22:37:18Z', '2026-10-12T22:38:40Z', 'done', NULL, 0, 'dbd8b97f6908d764ab3d5224a52612b048193f5b', 'claude-opus-5-5[1m]', '62ee25bc-6384-47b2-9216-75d5c833f28e', 12, 24, 8200, 519370, 51709, 0.681642, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
