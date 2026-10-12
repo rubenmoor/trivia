@@ -172,25 +172,28 @@
     <section class="panel">
       <h2>Game readiness</h2>
       <p class="muted small">
-        Unburned candidates per game level; a game needs {overview.per_level} per level (D-22). Red: the level can't
-        be filled.
+        Candidates per game level (approved, not blocked); a game needs {overview.per_level} per level (D-22).
+        "unseen": questions this save never saw; once they run out, games repeat the least-seen ones (plan 65). Red: the
+        level can't be filled.
+      </p>
+      <p class="small">
+        Unseen approved: {overview.supply.unseen} (seen once: {overview.supply.seen_once}, twice+:
+        {overview.supply.seen_twice}); blocked: {overview.supply.blocked}
       </p>
       <div class="scroll">
         <table class="supply">
           <thead>
             <tr>
-              <th>Player</th>
-              <th class="num">Burned</th>
-              {#each overview.supply[0].levels as l (l.level)}
+              <th>Seen</th>
+              {#each overview.supply.rows[0].levels as l (l.level)}
                 <th class="num" title="difficulty {l.range[0]}–{l.range[1]}">{l.level}</th>
               {/each}
             </tr>
           </thead>
           <tbody>
-            {#each overview.supply as s (s.player)}
+            {#each overview.supply.rows as s (s.label)}
               <tr>
-                <td>{s.player ?? "new player"}</td>
-                <td class="num muted">{s.burned}</td>
+                <td>{s.label}</td>
                 {#each s.levels as l (l.level)}
                   <td class="num" class:bad={l.missing > 0} title="difficulty {l.range[0]}–{l.range[1]}{l.missing ? `, ${l.missing} missing` : ''}">
                     {l.candidates}

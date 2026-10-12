@@ -189,12 +189,15 @@ export interface Overview {
     llm_approved: number;
     report: string | null;
   }[];
+  /** The profile (= the save, plan 65), pool minus blocked. */
   supply: {
-    /** null: a new player (global burns only). */
-    player: string | null;
-    burned: number;
-    levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
-  }[];
+    blocked: number;
+    unseen: number;
+    seen_once: number;
+    seen_twice: number;
+    /** "any": every count; "unseen": count 0 only. */
+    rows: { label: string; levels: { level: number; range: [number, number]; candidates: number; missing: number }[] }[];
+  };
   per_level: number;
   next_batch_subcategories: string[];
   counts: { status: Record<string, number>; bundle: Record<string, number> };

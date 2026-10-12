@@ -9,10 +9,15 @@ import save_file  # authoring/tools/save_file.py
 import selection  # app/server/selection.py
 
 
-def supply_for(pool, player):
-    burned = save_file.burned_ids(player)
-    return {"player": player, "burned": len(burned),
-            "levels": selection.supply(selection.available(pool, burned))}
+def supply(pool):
+    """The profile's supply (profile = save, plan 65): any count and unseen only, pool minus blocked."""
+    blocked = save_file.blocked_ids()
+    seen = save_file.seen_counts()
+    avail = selection.available(pool, blocked)
+    by_seen = Counter(min(seen[q["id"]], 2) for q in avail)
+    return {"blocked": len(blocked), "unseen": by_seen[0], "seen_once": by_seen[1], "seen_twice": by_seen[2],
+            "rows": [{"label": "any", "levels": selection.supply(avail)},
+                     {"label": "unseen", "levels": selection.supply([q for q in avail if not seen[q["id"]]])}]}
 
 
 def batch_rows(pool):
@@ -60,7 +65,7 @@ def build(pool, bundles):
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
         "unfinished_runs": batches.unfinished_runs(),
         "batches": batch_rows(pool),
-        "supply": [supply_for(pool, None)] + [supply_for(pool, p) for p in save_file.players()],
+        "supply": supply(pool),
         "per_level": selection.PER_LEVEL,
         "next_batch_subcategories": batches.subcategories(pool),
         "counts": {"status": dict(Counter(q["status"] for q in pool)),

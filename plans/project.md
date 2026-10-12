@@ -49,7 +49,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 
 ### M5 — Enough content for game nights
 **Goal:** a pool large enough that each player gets several games, including joker use (D-27, D-28), with every approved question cached and illustrated.
-**Exit:** `qgen report --player <name>` shows enough supply at every level for the target number of games; `qgen validate` is clean; `trivia-media sync` has filled the cache.
+**Exit:** `qgen report` shows enough supply at every level for the target number of games; `qgen validate` is clean; `trivia-media sync` has filled the cache.
 
 - [x] OQ-17 Target pool size: 5000 approved `base` questions (D-52); the work is pm milestone 1
 - [x] QP-16 5 new `base` categories, 68 new subcategories (2026-10-10) — [`02`](02-question-pool.md)

@@ -20,7 +20,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen neutralize [--dry-run]     # reword Colombian usage in base into neutral Spanish (plan 64)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
-    qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
+    qgen report [--run <run>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
     qgen validate
@@ -1774,13 +1774,12 @@ def cmd_report(args):
                        ("media", lambda q: f"{q['media']['type']}/{q['media']['role']}"),
                        ("bundle", lambda q: q.get("bundle"))]:
         print(f"  by {title}: {count(pool, key)}")
-    try:
-        burned = save_file.burned_ids(args.player)
-    except KeyError:
-        sys.exit(f"unknown player: {args.player}")
-    avail = selection.available(pool, burned)
-    who = f"player {args.player}" if args.player else "a new player (global burns only)"
-    print(f"unburned approved for {who}: {len(avail)} ({len(burned)} burned)")
+    blocked = save_file.blocked_ids()
+    avail = selection.available(pool, blocked)
+    seen = save_file.seen_counts()
+    by_seen = Counter(min(seen[q["id"]], 2) for q in avail)
+    print(f"approved, not blocked: {len(avail)} ({len(blocked)} blocked)")
+    print(f"  unseen approved: {by_seen[0]} (seen once: {by_seen[1]}, twice+: {by_seen[2]})")
     print(f"  by category: {count(avail, lambda q: broad[q['subcategory']]['slug'] if q.get('subcategory') in broad else None)}")
     print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
     print(f"  by bundle: {count(avail, lambda q: q.get('bundle'))}")
@@ -3276,8 +3275,7 @@ def main():
     add("apply", cmd_apply)
     rp = add("report", cmd_report, run=False)
     rp.add_argument("--run")
-    rp.add_argument("--player", help="supply for this player (D-28); default: a new player. "
-                                     "With --simulate: strong|typical|both (default both)")
+    rp.add_argument("--player", help="with --simulate: strong|typical|both (default both)")
     rp.add_argument("--simulate", action="store_true",
                     help="games per new player on the engine (plan 62, information only); exit 1 if a launch language misses D-75's target")
     rp.add_argument("--locale", help="with --simulate: comma-separated (default: es,en,de, D-78)")
