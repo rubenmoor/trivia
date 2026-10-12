@@ -4354,7 +4354,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 35).
 
 Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:46:59Z', '2026-10-12T04:24:36Z', 173);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (185, 35, 'Default mode: record the answer (OQ-30, MD-5)', 'work', 'open', NULL, NULL, 'Part 2 of plan 35. Waits for the OQ-30 decision(s) (made pending by the prep task); the answers are in `pm show`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (185, 35, 'Default mode: record the answer (OQ-30, MD-5)', 'work', 'dropped', NULL, 'stale body (presets, checkpoints); replaced by task 373 after plan 35''s revision', 'Part 2 of plan 35. Waits for the OQ-30 decision(s) (made pending by the prep task); the answers are in `pm show`.
 
 - D-entry (or two) in `plans/decisions.md`, next free D-number.
 - OQ-30 → "Resolved" in `plans/open-questions.md` with the D-number(s).
@@ -4362,7 +4362,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If presets shift difficulty: note it in plan 21''s age-group section and as input for plan 28 (`pm show`); no change to `age-groups.json`.
 - Sync the open-questions row in `plans/11-steam.md` and `plans/project.md`.
 
-Done when: D-entry exists, OQ-30 resolved, MD-5 `[x]`, plan 13''s default-mode section is implementable.', '2026-10-12T00:46:59Z', NULL, 173);
+Done when: D-entry exists, OQ-30 resolved, MD-5 `[x]`, plan 13''s default-mode section is implementable.', '2026-10-12T00:46:59Z', '2026-10-12T16:45:10Z', 173);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (186, 36, 'Engine: mode, preset, report (MD-6 engine part)', 'work', 'open', NULL, NULL, 'Part 1 of plan 36. Engine rules for the default mode; no UI.
 
 Guards (stop without staging anything):
@@ -6630,8 +6630,30 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the plan exists with priority 480 (after plan 36 at 490) and doesn''t duplicate plans 35/36.', '2026-10-12T16:43:07Z', '2026-10-12T16:44:20Z', 360);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (371, 59, 'create tasks for plan 59', 'split', 'open', 1000, NULL, 'Split plan 59 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:44:17Z', NULL, 370);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (372, 35, 'create tasks for plan 35', 'split', 'open', 1000, NULL, 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:44:41Z', NULL, 361);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (372, 35, 'create tasks for plan 35', 'split', 'done', 1000, '2026-10-12, tasks.sql: task 373 replaces stale task 185 (dropped); no new decisions', 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:44:41Z', '2026-10-12T16:45:14Z', 361);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (373, 35, 'Game modes: record the answers (OQ-30, MD-5)', 'work', 'open', NULL, NULL, 'Plan 35, task 1. Replaces task 185 (stale: presets, checkpoints). No code, no new decisions.
+
+Answers (already given):
+- Milestone 7, "Game modes": the five modes and the shared rules.
+- Decision 19: no presets, no difficulty selection, no checkpoint; one standard joker set (3 × Soplo, 1 × each other joker) for every age group; "Customize game" button on the age group screen; achievements only for uncustomized games.
+- Decision 20: outside gamemaster mode no skip ever; «Reportar pregunta» only logs (no burn, no replacement); no undo, no joker changes mid-game; abandon and sound stay. Gamemaster mode keeps its full cheat menu.
+
+Steps:
+- `plans/decisions.md`: D-entry (next free D-number): the five modes, rules shared by all non-gamemaster modes, achievements outside gamemaster mode and customized games only; input gamepads, keyboard, mouse, no phones (shared keyboard in multiplayer modes).
+- `plans/open-questions.md`: OQ-30 → "Resolved" with the D-number.
+- `plans/13-game-modes.md` "Modes": one section per mode (gamemaster, «Solo o en grupo», round-robin co-op, round-robin competitive, competitive timed) as in milestone 7; multiplayer modes only one-line entries + ids (specs: plan 41, OQ-37); remove "Default mode", every preset (Fácil/Normal/Difícil/Experto), checkpoint and «Saltar y quemar para todos» outside gamemaster mode; MD-5 `[x]` with a note.
+- Plan 13 "Implementation notes" (spec for MD-6/MD-7, plan 36, and MD-10..MD-12, plan 59):
+  - `settings.mode`: `gamemaster`, `solo`, `rr-coop`, `rr-competitive`, `timed`; missing = `gamemaster`, old saves unchanged.
+  - Standard joker set: one engine constant.
+  - `settings.customized`: set by any change via "Customize game"; feeds achievements (S5).
+  - Refusals outside gamemaster mode: undo, skip, replace, joker changes.
+  - `ReportRow`: logs the question to a local report list; no burn, no replacement.
+  - Existing `settings.jokers` (MD-1..MD-4, `null` = unlimited) stays; today''s game = gamemaster mode.
+- Age groups: the mode never shifts the age-group window; no change to plan 21 or `age-groups.json`.
+- Sync the OQ-30 row in `plans/11-steam.md` and `plans/project.md`.
+
+Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section per mode and the notes above; `grep -niE ''preset|checkpoint|Fácil|Experto'' plans/13-game-modes.md` finds nothing outdated.', '2026-10-12T16:45:10Z', NULL, 372);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7139,6 +7161,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (234, 360, '2026-10-12T16:42:43Z', '2026-10-12T16:43:14Z', 'done', NULL, 0, '30f569a546bd914dcd075429bc63bfd7e3a7c984', 'claude-opus-5-5[1m]', '71337f91-38ce-48b0-a1ee-4d10c22fd519', 8, 16, 2453, 277262, 31052, 0.3529924, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (235, 370, '2026-10-12T16:43:14Z', '2026-10-12T16:44:27Z', 'done', NULL, 0, '0682c6e5862e9cd4e8c2252ac02ddbdccce12519', 'claude-opus-5-5[1m]', 'fee4a50d-de29-454f-9419-f935706e27f3', 13, 26, 7033, 565934, 49110, 0.6468308, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (236, 361, '2026-10-12T16:44:27Z', '2026-10-12T16:44:50Z', 'done', NULL, 0, '6b8249ea3ab5a6407af573c38484bdb34adc630e', 'claude-opus-5-5[1m]', '1595a90d-6610-4d2b-adf4-f8649287ef88', 4, 8, 2220, 130870, 34637, 0.34770199999999996, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (237, 372, '2026-10-12T16:44:50Z', '2026-10-12T16:45:19Z', 'done', NULL, 0, '28c7171d4e47a2ced5cd77cf8503277a9363d827', 'claude-opus-5-5[1m]', '137a9156-1cc5-438a-9e6d-d3d53778cf9f', 7, 14, 2534, 227511, 28447, 0.3238142, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
