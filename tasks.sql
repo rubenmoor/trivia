@@ -248,12 +248,17 @@ Five modes; there is no "default mode". Mode names are written in English first;
 - Every player can have their own age group.
 
 ### Competitive (timed)
-- Every player has their own track towards victory; all answer the same question at once, each with their own input (gamepad, keyboard, mouse).
-- 30 s to answer; a hint appears every 8 s; no jokers.
-- One age group for everyone. The question''s difficulty is the average of all players'' progress.
-- A wrong answer drops the player out immediately; a player who falls three levels behind drops out too. First to level 12 wins.
-- Timeout: when the 30 s run out, all players lose immediately.
-- Make it super dramatic: during the last 3 seconds a pulsing red frame around the screen, like the impending-death warning in a first-person shooter.
+- 12 rounds, as usual; round = level (the question''s difficulty follows the round). Each round has as many questions as there are players. One age group for everyone; no jokers.
+- Every question is shown to all players: 30 s per question, a hint appears every 8 s.
+- Claiming: any player can claim the question at any time (a specific action); it is then theirs, with 6 s to submit an answer. Once the answer is shown, the next question comes. Players may claim again after scoring, robbing the others of opportunities.
+- Lives: every player starts with three. When a round ends, every player who hasn''t answered a question correctly in it loses a life. A wrong answer drops the player out immediately; losing the third life drops them out too.
+- A question still unclaimed when its 30 s run out: nothing special happens, the next question comes.
+- Round 12 is sudden death: the first player to claim and answer correctly wins right away.
+- Only one player left: they win immediately.
+- To decide: what the 6 s running out after a claim counts as (the same as a wrong answer?).
+- Visualization: rounds and lives (hearts) shown cleanly and built for dramatic effects:
+  - at a player''s last opportunity in a round without a correct answer, one of their hearts starts to pulse; on their last heart, something even more dramatic
+  - a pulsing red frame around the screen, like the impending-death warning in a first-person shooter, only when every player is at risk of dropping out at once (everyone on their last life, nobody has answered correctly this round yet)
 
 ## Constraints
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
@@ -6822,6 +6827,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Check: `npm test`, `npm run check`, `npm run build`, `npm run check:literals -w app/client`; throw-away script per cheat (state change, burn rows, undo after a cheat, refusal in another mode); browser walk keyboard only, mouse only, pad. Then MD-12 `[x]`; docs: `plans/04-ui-tv-display.md` (configure screen, menu, keys), `directory.md` if files were added, `plans/project.md` if MD-10..MD-12 are listed.', '2026-10-12T16:52:21Z', NULL, 371);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (393, 24, 'create tasks for plan 24', 'split', 'done', 1000, '2026-10-12, no changes: tasks 102-104 already match plan 24 (D-78 adds context only, visible via pm show); joker-name decisions are raised by task 102', 'Split plan 24 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:58:36Z', '2026-10-12T16:59:08Z', 381);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (394, 7, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 7, the masterplan, in line with it (`pm plan edit 7 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T17:35:47Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
