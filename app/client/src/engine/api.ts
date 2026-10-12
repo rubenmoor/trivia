@@ -75,13 +75,14 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   Reply<{ game: Game | null; event?: JokerEvent }> {
   const index = () => pyInt("index" in body ? body.index : -1);
   const actions: Record<string, Action> = {
-    new: (s) => game.newGame(s, data, io, body.player, pick(body, ["age_group", "bundles"])),
+    new: (s) => game.newGame(s, data, io, body.player, pick(body, ["age_group", "bundles", "mode", "jokers"])),
     pick: (s) => game.pick(s, data, io, index()),
     answer: (s) => game.answer(s, data, io, index()),
     skip: (s) => game.skip(s, data, io, pyTruthy(body.everyone)),
     undo: (s) => game.undo(s, io),
     abandon: (s) => game.abandon(s, io),
     jokers: (s) => game.setJokers(s, io, body.jokers ?? null),
+    report: (s) => game.report(s, io, body.note),
     joker: (s) => game.joker(s, data, io, pyStr(body.joker), pick(body, ["purge", "subcategory", "index"])),
   };
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };

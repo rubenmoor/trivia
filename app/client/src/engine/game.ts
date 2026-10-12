@@ -1,6 +1,6 @@
 // The referee (PORT-3, plan 20): port of app/server/game.py. Public functions are pure:
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
-import type { Choice, Game, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
+import type { Choice, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
@@ -13,6 +13,20 @@ export { GameError, UNLIMITED };
 export const JOKERS: readonly JokerName[] = ["hint", "skip", "easier", "category", "snipe"];
 /** «Como las cartas»: the printed card set (JK-11), for the overlay's preset (MD-4). */
 export const CARDS: JokerBudget = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
+/** Standard joker set of every non-gamemaster game (13, "Implementation notes"). */
+export const STANDARD_JOKERS: JokerBudget = { hint: 3, skip: 1, easier: 1, category: 1, snipe: 1 };
+
+export const MODES: readonly GameMode[] = ["gamemaster", "solo", "rr-coop", "rr-competitive", "timed"];
+/** Playable so far (plan 36); the multiplayer modes come with MD-8. */
+export const BUILT_MODES: readonly GameMode[] = ["gamemaster", "solo"];
+
+/** The game's mode; missing = gamemaster (games from before plan 36). */
+export const gameMode = (state: GameState): GameMode => state.settings.mode ?? "gamemaster";
+
+/** Undo, skip, replace, joker budget: gamemaster mode only (D-74). */
+function gamemasterOnly(state: GameState, what: string): void {
+  if (gameMode(state) !== "gamemaster") throw new GameError("gamemaster_only", { action: what });
+}
 
 type Result = GameRow["result"];
 
@@ -167,10 +181,13 @@ export function supply(save: SaveData, data: EngineData, player?: unknown, choic
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
-/** What a new game may get from the request body besides the player (plan 27). */
+/** What a new game may get from the request body besides the player (plan 27, plan 36). */
 export interface ChoiceArgs {
   age_group?: unknown;
   bundles?: unknown;
+  mode?: unknown;
+  /** Overrides of the mode's joker set; in `solo` a difference sets `customized`. */
+  jokers?: unknown;
 }
 
 /** The choice of the player's newest game, else the defaults. */
@@ -182,12 +199,16 @@ export function playerChoice(save: SaveData, data: EngineData, player?: unknown)
 }
 
 /** Start a game for `player` (known or new, D-28); a running game is abandoned. The settings get
- * `age_group` / `bundles` only when `args` carries them. */
+ * `age_group` / `bundles` / `mode` only when `args` carries them. */
 export function newGame(
   save: SaveData, data: EngineData, io: Io, player: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
   const name = cleanName(player);
   const choice = resolveChoice(data, args);
+  const mode = args.mode ?? "gamemaster";
+  if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
+  if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
+  const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
   const report = supply(save, data, name, choice);
   if (!report.ok) {
     const short = report.levels.filter((l) => l.missing)
@@ -208,6 +229,13 @@ export function newGame(
     } as unknown as GameState);
     if (args.age_group !== undefined) state.settings.age_group = choice.age_group;
     if (args.bundles !== undefined) state.settings.bundles = choice.bundles;
+    if (args.mode !== undefined) state.settings.mode = mode as GameMode;
+    if (mode === "gamemaster") Object.assign(state.settings.jokers, overrides);
+    else {
+      const jokers = { ...STANDARD_JOKERS, ...overrides };
+      state.settings.jokers = jokers;
+      state.settings.customized = JOKERS.some((j) => jokers[j] !== STANDARD_JOKERS[j]);
+    }
     state.options = draw(work, pid, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
@@ -310,6 +338,7 @@ export function backToSelect(
 export function skip(save: SaveData, data: EngineData, io: Io, everyone = false): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
+    gamemasterOnly(state, "skip");
     if (state.phase !== "question") throw new GameError("skip_not_question");
     backToSelect(work, row.id, row.player_id, state, data, io,
       everyone ? "admin_burn" : "admin_skip", everyone ? null : row.player_id);
@@ -505,15 +534,22 @@ export function jokersLeft(state: GameState): JokerBudget {
     [name, limit === null ? null : Math.max(0, limit - used.filter((j) => j === name).length)])) as JokerBudget;
 }
 
-/** Set the running game's joker budget (MD-4): {joker: count or null}; missing jokers stay. */
-export function setJokers(save: SaveData, io: Io, budget: unknown): { save: SaveData; state: GameState } {
+/** A partial budget {joker: count or null} as sent; GameError if malformed. */
+function checkBudget(budget: unknown): Partial<JokerBudget> {
   if (budget === null || typeof budget !== "object" || Array.isArray(budget)
     || !Object.keys(budget).every((k) => (JOKERS as string[]).includes(k)))
     throw new GameError("budget_unknown_joker");
   for (const v of Object.values(budget))
     if (v !== null && !(Number.isInteger(v) && 0 <= (v as number) && (v as number) <= 99)) throw new GameError("budget_invalid");
+  return budget as Partial<JokerBudget>;
+}
+
+/** Set the running game's joker budget (MD-4): {joker: count or null}; missing jokers stay. */
+export function setJokers(save: SaveData, io: Io, budget: unknown): { save: SaveData; state: GameState } {
+  checkBudget(budget);
   return action(save, (work) => {
     const { row, state } = running(work);
+    gamemasterOnly(state, "jokers");
     Object.assign(state.settings.jokers, budget);
     saveGame(row, state, io);
     return state;
@@ -524,6 +560,7 @@ export function setJokers(save: SaveData, io: Io, budget: unknown): { save: Save
 export function undo(save: SaveData, io: Io): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const game = latest(work);
+    if (game) gamemasterOnly(game.state, "undo");
     if (!game || game.row.result === "abandoned" || !game.state.undo) throw new GameError("nothing_to_undo");
     const { row, state } = game;
     const qid = state.last!.question_id;
@@ -541,6 +578,22 @@ export function abandon(save: SaveData, io: Io): { save: SaveData } {
   });
 }
 
+/** «Reportar pregunta» (MD-6): log the question on screen, nothing else; once per game and question. */
+export function report(save: SaveData, io: Io, note?: unknown): { save: SaveData; state: GameState } {
+  if (note != null && !(typeof note === "string" && pyLen(note) <= 500)) throw new GameError("note_invalid");
+  return action(save, (work) => {
+    const { row, state } = running(work);
+    const qid = state.current;
+    if (state.phase !== "question" || qid === null) throw new GameError("no_question");
+    if (!work.reports.some((r) => r.question_id === qid && r.game_id === row.id))
+      work.reports.push({
+        question_id: qid, game_id: row.id, player_id: row.player_id, level: state.level, reported_on: io.now,
+        ...(note ? { note: note as string } : {}),
+      });
+    return state;
+  });
+}
+
 /** The newest game as the TV sees it: no correct answer before the final answer. */
 export function view(save: SaveData, data: EngineData, io: Io): Game | null {
   const game = latest(save);
@@ -555,7 +608,7 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
     level: state.level, phase: state.phase,
     options: state.options.filter((i) => by.has(i)).map((i) => ({ description: by.get(i)!.description })),
     history: state.history.filter((h) => h.correct !== undefined).map((h) => ({ level: h.level, correct: h.correct! })),
-    can_undo: Boolean(state.undo) && result !== "abandoned",
+    can_undo: Boolean(state.undo) && result !== "abandoned" && gameMode(state) === "gamemaster",
     purged: state.purged, repeat: state.repeat, jokers,
     settings: state.settings, jokers_left: jokersLeft(state), question: null, last: null,
   };

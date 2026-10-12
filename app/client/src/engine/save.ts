@@ -3,8 +3,10 @@ import { SAVE_VERSION, type SaveData } from "./state.ts";
 
 const isObject = (v: unknown): v is Record<string, any> => typeof v === "object" && v !== null && !Array.isArray(v);
 
-// Version n → n + 1, keyed by n; empty while version 1 is the only one.
-const UPGRADES: Record<number, (doc: Record<string, any>) => Record<string, any>> = {};
+// Version n → n + 1, keyed by n.
+const UPGRADES: Record<number, (doc: Record<string, any>) => Record<string, any>> = {
+  1: (doc) => ({ ...doc, reports: [] }), // plan 36: «Reportar pregunta»
+};
 
 /** A save from a newer game (plan 55): the desktop backs it up as `newer`, not `corrupt`. */
 export class SaveNewerError extends Error {
@@ -21,7 +23,7 @@ export function parseSave(json: unknown): SaveData {
   if (!Number.isInteger(doc.version) || doc.version < 1) throw new Error("save has no valid version");
   if (doc.version > SAVE_VERSION) throw new SaveNewerError();
   while (doc.version < SAVE_VERSION) doc = { ...UPGRADES[doc.version](doc), version: doc.version + 1 };
-  for (const key of ["players", "games", "burned"] as const) {
+  for (const key of ["players", "games", "burned", "reports"] as const) {
     if (!Array.isArray(doc[key])) throw new Error(`${key} must be a list`);
     if (!doc[key].every(isObject)) throw new Error(`${key} must hold objects`);
   }

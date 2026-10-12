@@ -224,6 +224,10 @@ const es = {
     age_group_unknown: "grupo de edad desconocido: '{group}'",
     bundle_unknown: "paquete desconocido: '{bundle}'",
     bundles_not_list: "los paquetes deben ser una lista",
+    mode_unknown: "modo desconocido: '{mode}'",
+    mode_not_built: "ese modo todavía no se puede jugar",
+    gamemaster_only: "en este modo no se puede",
+    note_invalid: "la nota es un texto de máximo 500 letras",
     save_locked: "No se pudo guardar. Se intenta de nuevo con la próxima jugada.",
   },
 } as const;

@@ -1,12 +1,12 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
 // SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state (app/server/game.py docstring).
-import type { Category, ErrorInfo, JokerBudget, JokerName, Supply } from "../lib/types.ts";
+import type { Category, ErrorInfo, GameMode, JokerBudget, JokerName, Supply } from "../lib/types.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 1;
+export const SAVE_VERSION = 2;
 
 export interface SaveData {
   version: typeof SAVE_VERSION;
@@ -15,6 +15,17 @@ export interface SaveData {
   burned: BurnRow[];
   /** Questions flagged for review (GM-5, D-47); keyed by question ID. */
   flags: Record<string, FlagEntry>;
+  /** «Reportar pregunta» (MD-6): log only; since version 2. */
+  reports: ReportRow[];
+}
+
+export interface ReportRow {
+  question_id: string;
+  game_id: number;
+  player_id: number | null;
+  level: number;
+  reported_on: string;
+  note?: string;
 }
 
 export interface FlagEntry {
@@ -81,14 +92,15 @@ export interface GameState {
   jokers: JokerName[];
   swapped_to: string | null;
   repeat: boolean;
-  /** age_group / bundles: only when the new game's request carried them (plan 27). */
-  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[] };
+  /** age_group / bundles / mode: only when the new game's request carried them (plan 27, plan 36);
+   * missing mode = gamemaster. `customized`: outside gamemaster mode only. */
+  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean };
 }
 
 export const UNLIMITED: JokerBudget = { hint: null, skip: null, easier: null, category: null, snipe: null };
 
 export function emptySave(): SaveData {
-  return { version: SAVE_VERSION, players: [], games: [], burned: [], flags: {} };
+  return { version: SAVE_VERSION, players: [], games: [], burned: [], flags: {}, reports: [] };
 }
 
 /** Fill in the joker fields for games saved before JK-2 (game.with_defaults); mutates and returns. */
@@ -146,6 +158,10 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   age_group_unknown: (p) => `unknown age group ${pyRepr(String(p.group))}`,
   bundle_unknown: (p) => `unknown bundle ${pyRepr(String(p.bundle))}`,
   bundles_not_list: "bundles must be a list",
+  mode_unknown: (p) => `unknown mode ${pyRepr(String(p.mode))}`,
+  mode_not_built: (p) => `mode ${pyRepr(String(p.mode))} isn't playable yet`,
+  gamemaster_only: (p) => `${p.action} only in gamemaster mode`,
+  note_invalid: "a note is text of at most 500 letters",
 };
 
 /** A request that doesn't fit the game's state: a code with params; `details` (a supply report) goes to the client. */

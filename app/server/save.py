@@ -1,6 +1,6 @@
 """The family's save as one JSON document, written whole by the client (plans/49, D-67).
 
-    game.json   {"version": 1, "players": [...], "games": [...], "burned": [...], "flags": {...}}
+    game.json   {"version": 2, "players": [...], "games": [...], "burned": [...], "flags": {...}, "reports": [...]}
 
 The server only checks the envelope; the game rules live in the client's engine.
 `migrate()` carries game.sqlite + flags.json over once (PORT-5); main.py calls it from PORT-7 on.
@@ -10,7 +10,7 @@ import json, os, sqlite3, tempfile, time
 import paths
 
 FILE = paths.STATE / "game.json"
-VERSION = 1
+VERSION = 2  # the client upgrades older saves (engine/save.ts)
 MAX_BYTES = 10 * 1024 * 1024
 RETRIES, RETRY_SLEEP = 10, 0.1  # Windows: antivirus/backup may hold the file
 
@@ -36,7 +36,7 @@ def check(doc):
         bad("save must be a JSON object")
     if doc.get("version") != VERSION:
         bad(f"version must be {VERSION}")
-    for key in ("players", "games", "burned"):
+    for key in ("players", "games", "burned", "reports"):
         if not isinstance(doc.get(key), list):
             bad(f"{key} must be a list")
     if not isinstance(doc.get("flags"), dict):
@@ -92,6 +92,7 @@ def migrate():
                            for qid, p, g, b in q("SELECT question_id, player_id, game_id, burned_on FROM burned "
                                                  "ORDER BY game_id, question_id, player_id")],
                 "flags": flags.load(),
+                "reports": [],
             }
         finally:
             src.close()

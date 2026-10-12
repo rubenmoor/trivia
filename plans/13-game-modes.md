@@ -60,6 +60,7 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - `settings.customized`: `true` after any change via "Customize game"; feeds achievements (S5).
 - Refusals outside gamemaster mode (engine, not only UI): undo, skip, replace, joker budget changes.
 - `ReportRow`: logs the current question to a local report list (a page to copy from); no burn, no replacement; the player answers or uses a joker.
+- Engine as built (task 376): `settings.mode` stored only when `new` carries it; missing resolved by `gameMode()`, never written back (fixtures unchanged); `customized` only outside gamemaster mode; `new` takes `jokers` overrides; refusal code `gamemaster_only` (409); `report` action (`note?`) needs a question on screen; save version 2 (`reports`); `replace` gets its guard with plan 59.
 - Joker availability (JK-2) has a reason «No te quedan Soplos» when the budget is spent; the tray shows count badges (MD-2, MD-3).
 
 ## Tasks

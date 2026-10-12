@@ -52,6 +52,9 @@ export interface Player {
 
 export type JokerName = "hint" | "skip" | "easier" | "category" | "snipe";
 
+/** 13-game-modes.md "Implementation notes"; plan 36 builds `gamemaster` and `solo`. */
+export type GameMode = "gamemaster" | "solo" | "rr-coop" | "rr-competitive" | "timed";
+
 /** A count per joker; null = unlimited (13-game-modes.md, MD-1). */
 export type JokerBudget = Record<JokerName, number | null>;
 
@@ -104,8 +107,9 @@ export interface Game {
   /** Joker availability while a question is on screen, else null (09-jokers.md). */
   jokers: Jokers | null;
   /** Game settings (13-game-modes.md, MD-1): the joker budget per game, null = unlimited;
-   * age group and bundles as stored (plan 27), missing = `DEFAULT_AGE_GROUP` / every bundle. */
-  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[] };
+   * age group and bundles as stored (plan 27), missing = `DEFAULT_AGE_GROUP` / every bundle;
+   * mode as stored, missing = `gamemaster`; `customized` outside gamemaster mode (plan 36). */
+  settings: { jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean };
   /** Uses left in this game per joker, null = unlimited (MD-1). */
   jokers_left: JokerBudget;
   question: {

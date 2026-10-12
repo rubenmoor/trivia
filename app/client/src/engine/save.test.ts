@@ -1,13 +1,15 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { flaggedIds, parseSave, setFlag } from "./save.ts";
-import { emptySave, type SaveData } from "./state.ts";
+import { emptySave, SAVE_VERSION, type SaveData } from "./state.ts";
 import { MemoryStore } from "./store.ts";
 import { fixture } from "./test/fixtures.ts";
 
 const { steps } = fixture("game/abandon.json") as { steps: { db?: Pick<SaveData, "players" | "games" | "burned"> }[] };
 const db = steps.findLast((s) => s.db)!.db!;
-const full: SaveData = { version: 1, ...db, flags: { q1: { flagged_on: "2026-10-01T20:00:00", player: "Ana" } } };
+const full: SaveData = {
+  version: SAVE_VERSION, ...db, flags: { q1: { flagged_on: "2026-10-01T20:00:00", player: "Ana" } }, reports: [],
+};
 
 test("parseSave accepts emptySave() and a fixture db", () => {
   assert.deepEqual(parseSave(emptySave()), emptySave());
@@ -15,15 +17,16 @@ test("parseSave accepts emptySave() and a fixture db", () => {
   assert.ok(db.games.length > 0 && db.burned.length > 0);
 });
 
-test("parseSave fills missing flags", () => {
-  assert.deepEqual(parseSave({ version: 1, ...db }), { version: 1, ...db, flags: {} });
+test("parseSave fills missing flags; version 1 gets reports", () => {
+  assert.deepEqual(parseSave({ version: SAVE_VERSION, ...db, reports: [] }), { ...full, flags: {} });
+  assert.deepEqual(parseSave({ version: 1, ...db }), { ...full, flags: {} });
 });
 
 test("parseSave rejects newer versions and broken shapes", () => {
-  assert.throws(() => parseSave({ ...full, version: 2 }), /newer game/);
+  assert.throws(() => parseSave({ ...full, version: SAVE_VERSION + 1 }), /newer game/);
   for (const bad of [null, [], "x", { ...full, version: undefined }, { ...full, version: 0 },
     { ...full, players: undefined }, { ...full, games: {} }, { ...full, burned: [1] },
-    { ...full, games: [{ id: 1 }] }, { ...full, flags: [] }]) {
+    { ...full, games: [{ id: 1 }] }, { ...full, flags: [] }, { ...full, reports: {} }]) {
     assert.throws(() => parseSave(bad), JSON.stringify(bad)?.slice(0, 60));
   }
 });
