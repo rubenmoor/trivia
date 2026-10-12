@@ -3814,8 +3814,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Last; below plan 43 "S2 close-out" (150).
 - Content: gamemaster test checklist (Windows, Linux, Deck; controller only; offline; full game to level 12 or a loss; restart keeps the save); a `pm decision` "S3 test passed?" with the checklist in the body, a task that records the result.
 - Docs: `plans/11-steam.md` S3 row; 14, 17, 18 statuses; `plans/project.md`; `plans/README.md`; notes in masterplans 9–11 if S3 changed their scope (SW-6 moved, media bundle).', '2026-10-12T00:53:42Z', '2026-10-12T01:04:03Z', 208);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (217, 44, 'create tasks for plan 44', 'split', 'open', 1000, NULL, 'Split plan 44 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', NULL, 212);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (217, 44, 'create tasks for plan 44', 'split', 'done', 1000, '2026-10-11, tasks 222–225 for plan 44; no decisions needed', 'Split plan 44 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', '2026-10-12T01:04:38Z', 212);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (218, 45, 'create tasks for plan 45', 'split', 'open', 1000, NULL, 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:58:22Z', NULL, 213);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (219, 46, 'create tasks for plan 46', 'split', 'open', 1000, NULL, 'Split plan 46 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3824,6 +3824,39 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:02:33Z', NULL, 215);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (221, 48, 'create tasks for plan 48', 'split', 'open', 1000, NULL, 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:03:55Z', NULL, 216);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (222, 44, 'Action layer core; Game, Overlay and Player on actions (IN-2)', 'work', 'open', NULL, NULL, 'Plan 44, task 1; design in the plan body ("Design" → `lib/input.ts`). Client only; never edit `lib/api.ts` or the data flow (PORT-7 coordination).
+
+- New `app/client/src/lib/input.ts`, no dependency: `Action` type (confirm, back, menu, pick n 1–9, joker, navigate dir, replay, flag, new) with `device`; `lastDevice` `$state` (pointerdown = mouse); keymap with per-scope extras (`question`: A–D, joker letters read from `TOKENS`/catalog, never copied, R; `start`: N); scope stack `pushScope({ name, keys, handle, root?, modal? })` → pop; `text` handling (input focused: only Enter/Esc/↑↓ become actions; a letter outside the Player field focuses it); `e.repeat` ignored, first key/click unlocks audio, `busy` drops all but menu/flag, `preventDefault` when handled; `dispatch(action)` export for part 5.
+- The single `svelte:window` key listener moves from `Game.svelte` into `input.ts` (or Game calls its handler).
+- `Game.svelte`: one scope per screen (start, level, select, correct, wrong, victory) plus global menu/flag; replaces the `overlayOpen`/`dialogOpen()` chain.
+- `Overlay.svelte` (menu = close, modal) and `Player.svelte` incl. delete dialog (modal, menu = back) push their own scopes; their `key(e)` exports go.
+- Question and Cambiazo keep the raw event via a temporary passthrough scope (removed in task 2).
+- Mouse: `onclick` stays; click and action call the same function.
+
+Check: `npm run check`, `npm run build`; throw-away script for key + scope → action; in the browser (`trivia` + `npm run dev -w app/client`) every key of `plans/04-ui-tv-display.md` "Input" on Start, Player, Level, Select, Correct, Wrong, Victory and the overlay does what it did.', '2026-10-12T01:04:36Z', NULL, 217);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (223, 44, 'Question, jokers and Cambiazo on actions (IN-2)', 'work', 'open', NULL, NULL, 'Plan 44, task 2; needs task 1 (`lib/input.ts`).
+
+- `Question.svelte` pushes scopes for answering, armed joker, Paso dialog (modal, pick 1/2), Francotirador (handles navigate itself via `moveTarget`, letters aim), Cambiazo (`CategoryPicker.svelte`: Esc cancel, Backspace back a level, arrows still move over tiles).
+- Remove the `key(e)` exports of Question and CategoryPicker and task 1''s passthrough scope.
+
+Check: `npm run check`, `npm run build`; `grep -rn "keydown\|KeyboardEvent" app/client/src` lists only `lib/input.ts`; in the browser every joker (incl. unavailable ones), Paso 1/2, aim with letters and arrows, unlock, replay, submit, flag, undo/skip from the overlay work as before. Mark `IN-2` `[x]` in `plans/14-input.md`.', '2026-10-12T01:04:36Z', NULL, 217);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (224, 44, 'Spatial focus, ring and memory (IN-3)', 'work', 'open', NULL, NULL, 'Plan 44, task 3; design in the plan body ("Focus navigation"). Needs tasks 1–2.
+
+- New `app/client/src/lib/focus.ts`: pure rect function (primary distance + 2 × cross offset, no wrap) plus `navigate(dir)` over candidates in the top scope''s `root` (enabled `button`, `input`, `a[href]`, `[data-focusable]`; never `tabindex="-1"`/`[data-nofocus]`).
+- `data-nofocus` on ☰ and flag (stay `tabindex="-1"`); `data-focus-default` on «¡Jugar!»/«Continuar», «Seguir», first card, first answer, «Cancelar» in the delete dialog; `data-focus-id` where index isn''t stable.
+- First navigate with nothing focused focuses the default; `confirm` clicks the focused control only if focus came from navigate/Tab, else the screen''s default (Enter as today).
+- Ring: sky outline from `theme.css` on every candidate; find out whether `focus({ focusVisible: true })` or a `.nav-focus` class shows it in Chromium and Firefox, use what works.
+- Focus memory per scope name, restored when the scope is on top again, cleared on new content; dialogs return focus to their opener.
+- Cambiazo: `CategoryPicker.move` uses the helper if it gives the same result. Overlay and Francotirador keep handling navigate themselves.
+
+Check: throw-away script for the rect logic (2×2 answers, 4 cards, Cambiazo grid with disabled tiles); in the browser every screen and dialog plays with arrows + Enter + Esc/Backspace, the ring is visible wherever focus is, Enter without arrows behaves as today.', '2026-10-12T01:04:36Z', NULL, 217);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (225, 44, 'Audit, docs and later screens (IN-3)', 'work', 'open', NULL, NULL, 'Plan 44, task 4; needs tasks 1–3.
+
+- Walk a full game with arrows + Enter + Esc/Backspace only: start → player (new name, delete) → levels → every joker → wrong and victory → overlay (undo, skip, restart, volumes, jokers). Fix what''s missing.
+- Plans 29 (Choice screen) and 36 (Reportar pregunta, settings): any of these screens that exists goes on actions and focus; for each that doesn''t, `pm task add <plan> "<screen> on the action layer (IN-2, IN-3)"` with a body pointing to plan 44 and a priority 10 below the task that builds the screen.
+- Docs: `plans/04-ui-tv-display.md` "Input" gets the rule (screens listen to actions from `lib/input.ts` and declare a focus default; no `keydown` elsewhere); `plans/14-input.md` IN-3 `[x]`; `directory.md` lists `lib/input.ts` and `lib/focus.ts`; `plans/project.md` in sync.
+
+Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the task note lists what the gamemaster should try on the TV at the next game night (family keys unchanged).', '2026-10-12T01:04:36Z', NULL, 217);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3928,6 +3961,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (82, 214, '2026-10-12T00:58:37Z', '2026-10-12T01:00:37Z', 'done', NULL, 0, '8cab26d6dce119a55f167c1adbeb1a51eaa53089', 'claude-opus-5-5[1m]', '64c3dc00-b4c6-42ed-9808-48e3e6f4f2b2', 18, 34, 11314, 887842, 66537, 0.9362803999999999, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (83, 215, '2026-10-12T01:00:37Z', '2026-10-12T01:02:45Z', 'done', NULL, 0, 'b70a9336f95a293c8673592a06fa411a9d01ed1b', 'claude-opus-5-5[1m]', '179066a4-08b8-48a4-82ee-8821eab60359', 15, 30, 12372, 688261, 58275, 0.85141220000000006, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (84, 216, '2026-10-12T01:02:45Z', '2026-10-12T01:04:11Z', 'done', NULL, 0, '2a00239b3a701c7a4957c1debfb8beaf7e62766a', 'claude-opus-5-5[1m]', '8a00b665-f8d3-47e8-9619-c262df80cb25', 13, 22, 8318, 447245, 46264, 0.62600900000000015, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (85, 217, '2026-10-12T01:04:11Z', '2026-10-12T01:04:43Z', 'done', NULL, 0, 'b99006b5b5b4674068fb4724c51ce840ce989bcb', 'claude-opus-5-5[1m]', 'd156c9ef-d0b7-404d-a27d-c5c1403bef3a', 5, 10, 3281, 156802, 29071, 0.3295884, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
