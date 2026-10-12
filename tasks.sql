@@ -3115,8 +3115,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', '2026-10-12T00:47:37Z', 164);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (175, 37, 'create tasks for plan 37', 'split', 'done', 1000, '2026-10-11, tasks 189 (facts + decisions), 190 (record answer); no new decisions here: OQ-31 decisions come from task 189, which makes 190 wait on them', 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', '2026-10-12T00:48:07Z', 165);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (176, 38, 'create tasks for plan 38', 'split', 'open', 1000, NULL, 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', NULL, 166);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (176, 38, 'create tasks for plan 38', 'split', 'done', 1000, '2026-10-11, tasks 191 (estimate + decision), 192 (record answer); no new decisions here: the OQ-32 decision comes from task 191, which makes 192 wait on it', 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', '2026-10-12T00:48:30Z', 166);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'open', 1000, NULL, 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:13Z', NULL, 167);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (178, 40, 'create tasks for plan 40', 'split', 'open', 1000, NULL, 'Split plan 40 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3240,6 +3240,30 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
 
 Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages; plan 24 checked.', '2026-10-12T00:48:02Z', NULL, 175);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (191, 38, 'Content target: estimate games per player, write the decision (OQ-32)', 'work', 'open', NULL, NULL, 'Part 1 of plan 38. Prepare the OQ-32 decision; estimate only, no simulation (CT-2, `qgen report --simulate`, is S4). Can start now: use drafts where answers are missing and say so in the body.
+
+- Facts (numbers in the decision body, one-line source each):
+  - approved per level (1–15) and per age-group window (D-38, `app/data/age-groups.json`) for `base` today (`qgen report`)
+  - D-52''s 5000; D-53''s per-level targets from `authoring/data/targets.json` if present (pm decision 1 answer if given, else draft)
+  - per-level draw of a game: 4 shown, ≥ 1 burned per ladder level (D-22, D-27, D-28, D-31)
+  - burns per game from the default joker preset: plan 35''s decision if answered, else its draft (12 + Paso + Bájale + Cambiazo + Snipe hits); whether a preset shifts the age-group window
+  - launch languages: plan 37''s decision if answered, else "Spanish only" draft; whether a translation counts as a full pool
+  - extra-player burn multiplier: plan 41 (OQ-37) if answered, else named as open (target stated for solo play)
+- Estimate: games per new player = min over ladder levels of (approved in that level''s window ÷ burns per game at that level), today and at 5000. Throw-away script, deleted after. Name the bottleneck level.
+- Options, recommended first: ≥ 30 games per new player in every launch language, ≥ 50 in the primary (16''s draft); a lower bar met by 5000 `base`; a target per age group. State that CT-2 (S4) verifies it.
+- Quality bar: point to D-56 and pm decision 2 (spot-check size, agreement rate); no new numbers.
+- `pm decision add`, body = context + facts + estimate + trade-offs, ultra-short.
+- `pm task-pending-decision <record task> <decision id>` (the record task is the next one in plan 38).
+
+Done when: the decision exists with the estimate; the record task waits on it; no throw-away script left.', '2026-10-12T00:48:28Z', NULL, 176);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (192, 38, 'Content target: record the answer (OQ-32, CT-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 38. Waits for the OQ-32 decision from the previous task.
+
+- D-entry in `plans/decisions.md` (next free D-number): target per language, the estimate behind it, CT-2 (S4) confirms it.
+- OQ-32 → "Resolved" in `plans/open-questions.md` with the D-number.
+- `plans/16-content-target.md`: "Target" decided (numbers, per language); "Quality bar" points to D-56; "Where we stand" refreshed; CT-1 `[x]` with a note that CT-2 (S4) confirms it; status no longer stub.
+- `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
+
+Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T00:48:28Z', NULL, 176);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3325,6 +3349,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (69, 173, '2026-10-12T00:46:40Z', '2026-10-12T00:47:06Z', 'done', NULL, 0, '5f66200134b9f9436ea6e9dbf2bcd90fb6e0b138', 'claude-opus-5-5[1m]', 'a02e603c-8c95-4185-b093-0277c73f4ee6', 4, 8, 1896, 101830, 22211, 0.236006, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (70, 174, '2026-10-12T00:47:06Z', '2026-10-12T00:47:44Z', 'done', NULL, 0, 'ec676d8f4e5438ff656c70a49dbfcc3df48fdb3a', 'claude-opus-5-5[1m]', 'e0933653-8490-4dc1-89ec-6bca68304c7d', 6, 12, 3878, 190531, 30447, 0.35929019999999995, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (71, 175, '2026-10-12T00:47:44Z', '2026-10-12T00:48:13Z', 'done', NULL, 0, '178a84015e665cb1c30f105255077ef004d84334', 'claude-opus-5-5[1m]', '3d7df2a2-5c87-439e-a6ea-99f7bd641a99', 5, 10, 2484, 125504, 20183, 0.2362848, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (72, 176, '2026-10-12T00:48:13Z', '2026-10-12T00:48:35Z', 'done', NULL, 0, '2124038a57b5015f3a4e91c6c4a4053af523351b', 'claude-opus-5-5[1m]', 'ff6789bf-3a31-4d6a-bc38-185e10e9f4c1', 5, 10, 2289, 138957, 25582, 0.2782674, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
