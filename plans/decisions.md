@@ -590,3 +590,15 @@ Template:
   - **Input:** gamepads, keyboard, mouse; no phones. Multiplayer modes add a "shared keyboard": one dedicated key per player hands them keyboard and mouse until their turn is done.
 - Consequences: Plan 13 rewritten (one section per mode, implementation notes for MD-6/MD-7 and MD-10..MD-12). `settings.mode` missing = `gamemaster`, old saves unchanged; `settings.jokers` (MD-1..MD-4) stays. Plans 36 (MD-6, MD-7), 41 (OQ-37), 59 (MD-10..MD-12) build on this; S5 reads `settings.customized` for achievements.
 - Supersedes / related: D-27, D-28, D-30, D-38; plans 13, 35, 36, 41, 59
+
+## D-75: Release content target: 5000 approved per launch language, no games-per-player number
+- Date: 2026-10-12
+- Context: OQ-32, CT-1 (plan 38); pm decision 21 (target), pm decision 26 (launch languages: Spanish, English, German).
+- Decision:
+  - **Target:** 5000 approved questions per launch language (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).
+  - **No games-per-player number:** no bar a simulation must meet.
+  - CT-2 (`qgen report --simulate`, S4) reports games per new player per mode, for information only. Burns per game: «Solo o en grupo» and round-robin co-op = 12 + the standard joker set's burns (3 × Soplo, 1 × each other joker, D-74); round-robin competitive ≈ N players × that; competitive (timed) ≈ 1 shared question per round, no jokers.
+  - Later languages (zh-Hans, ru, pt-BR, milestone 12): no target now.
+  - Quality bar unchanged: D-56, pm decision 2, release bar plan 57 (CT-5, pm decision 15).
+- Consequences: S4's exit = every launch language reaches the target, not a simulated games number. Whether a translated pool counts toward a language's 5000 follows plan 37's D-entry (OQ-31); open until then.
+- Supersedes / related: D-52, D-53, D-56, D-74; plans 16, 37, 38, 57

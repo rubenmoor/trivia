@@ -9,7 +9,6 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 
 ### Added 2026-10-07 (Steam release, [`11-steam.md`](11-steam.md))
 - **OQ-31** Launch languages (Spanish only? plus English? more?) and the Spanish variety: Colombian as today, or neutral Spanish with Colombian variants?
-- **OQ-32** Content target for release: how many games per new player, per language (draft: ≥ 30, primary language ≥ 50; `16-content-target.md`)?
 - **OQ-33** Price model (paid, free, free + paid packs), and who holds the Steamworks account (a person or a company; tax)?
 - **OQ-35** Code and content license (the repo has no `LICENSE` today); does new release content stay public on GitHub?
 - **OQ-37** Competitive mode and couch co-op: format (relay ladder, parallel ladders, buzzer), and input (hot-seat, one controller per player, phones as buzzers)?
@@ -18,6 +17,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-46** Should a `colombia` question also have to use a `colombia` subcategory? 19 `colombia` questions use a `base` subcategory today (Historia: Grito de Independencia, Boyacá, Panamá; Navidad: novena; Piratas: Cartagena's walls; Mundiales de fútbol: James's goal; …). The game's «Cambiazo» picker then offers «Historia» and serves a Colombian question. If yes, `colombia` needs subcategories like «Historia de Colombia» and «Literatura colombiana».
 
 ## Resolved
+- **OQ-32** Content target: 5000 approved per launch language (es, en, de) with D-53's mix; no games-per-player number, CT-2 reports it for information (D-75).
 - **OQ-30** No default mode: five game modes; no presets, no checkpoint, no skip outside gamemaster mode; «Reportar pregunta» only logs (D-74).
 - **OQ-29** Desktop shell: Electron; Steam binding (steamworks-ffi-node or steamworks.js) picked in SW-2 (D-63).
 - **OQ-17** Target pool size: 5000 approved `base` questions, tapering at high difficulties (D-52).
