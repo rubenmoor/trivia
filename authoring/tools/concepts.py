@@ -117,16 +117,20 @@ def unused(lst, used):
 
 
 def draw_concepts(lst, used, difficulties, rng):
-    """One concept per target difficulty, all different. Fewer questions first (1 / (1 + uses)²),
-    `known_at` close to the difficulty preferred (D-38); retired concepts never."""
+    """One concept per target difficulty, all different (D-38, plan 13). From a window
+    |known_at − d| ≤ 1, widened to ±2, ±3 … only while it holds no unused concept; inside it the
+    fewest questions win, random among ties. Retired concepts never."""
     picked, out = set(), []
     for d in difficulties:
         pool = [c for c in lst["concepts"] if not c.get("retired") and c["name"] not in picked]
         if not pool:
             break
-        weights = [1 / (1 + used.get(c["name"], 0)) ** 2 / (1 + abs(c["known_at"] - d) / 2)
-                   for c in pool]
-        c = rng.choices(pool, weights)[0]
+        dist = lambda c: abs(c["known_at"] - d)
+        fresh = [c for c in pool if not used.get(c["name"])]
+        width = max(1, min(map(dist, fresh or pool)))
+        window = [c for c in pool if dist(c) <= width]
+        least = min(used.get(c["name"], 0) for c in window)
+        c = rng.choice([c for c in window if used.get(c["name"], 0) == least])
         picked.add(c["name"])
         out.append(c)
     return out
