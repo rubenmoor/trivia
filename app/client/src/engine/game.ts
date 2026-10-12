@@ -1,12 +1,12 @@
 // The referee (PORT-3, plan 20): port of app/server/game.py. Public functions are pure:
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
-import type { Game, JokerBudget, JokerName, Player, Supply } from "../lib/types.ts";
+import type { Game, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { categoryOf } from "./pool.ts";
-import { casefold, pyLen, pySplitJoin } from "./pycompat.ts";
+import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
-import { GameError, UNLIMITED, nextId, transact, withDefaults } from "./state.ts";
+import { GameError, UNLIMITED, nextId, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 
@@ -261,6 +261,183 @@ export function skip(save: SaveData, data: EngineData, io: Io, everyone = false)
   });
 }
 
+// Jokers (plans/09-jokers.md, JK-2) ---------------------------------------------------------------
+
+type Fill = [Set<string>, boolean];
+
+/** (question IDs the matching uses for the levels after `level`, whether they all fill). */
+export function laterFill(avail: PoolQuestion[], level: number): Fill {
+  const { assignment, missing } = selection.assign(avail, laterLevels(level));
+  return [new Set([...assignment.values()].flat()), missing.size === 0];
+}
+
+function laterLevels(level: number): number[] {
+  return Array.from({ length: selection.LEVELS - level }, (_, i) => level + 1 + i);
+}
+
+/** The best of `cands` by `order` (random among ties) whose removal still lets every later level fill (GF-2), or null. */
+export function replacement(
+  avail: PoolQuestion[], level: number, cands: PoolQuestion[], order: (q: PoolQuestion) => number,
+  io: Io, fill?: Fill,
+): PoolQuestion | null {
+  const [used, ok] = fill ?? laterFill(avail, level);
+  if (!ok) return null;
+  const later = laterLevels(level);
+  const list = [...cands];
+  io.rng.shuffle(list, "replacement");
+  list.sort((a, b) => order(a) - order(b));
+  return list.find((q) => !used.has(q.id)
+    || selection.assign(avail.filter((x) => x.id !== q.id), later).missing.size === 0) ?? null;
+}
+
+export function categoryCandidates(avail: PoolQuestion[], level: number, sub: string): PoolQuestion[] {
+  return avail.filter((q) => q.subcategory === sub && selection.inRange(q, level));
+}
+
+/** Replace the question on screen in place with `fresh` (Bájale, Cambiazo). */
+function swapIn(work: SaveData, gid: number, pid: number | null, state: GameState, fresh: PoolQuestion, outcome: Outcome, io: Io): void {
+  const old = state.current;
+  dropCurrent(work, gid, state, outcome, pid, io);
+  const answers = [fresh.answer, ...fresh.wrong_answers];
+  io.rng.shuffle(answers, "swap_in");
+  state.options = state.options.map((i) => (i === old ? fresh.id : i));
+  state.offered.push(fresh.id);
+  leaveQuestion(state);
+  Object.assign(state, { current: fresh.id, answers });
+}
+
+/** What a joker may get from the request body (main.py passes only these). */
+export interface JokerArgs {
+  purge?: unknown;
+  subcategory?: unknown;
+  index?: unknown;
+}
+
+type Play = (work: SaveData, gid: number, pid: number | null, state: GameState, data: EngineData, io: Io, args: JokerArgs) => object;
+
+/** «Soplo»: show the next hint. */
+const playHint: Play = (_work, _gid, _pid, state, data) => {
+  if (state.hints_shown >= question(data, state.current).hints.length) throw new GameError("hints_used_up");
+  state.hints_shown += 1;
+  state.jokers.push("hint");
+  return { hint: state.hints_shown };
+};
+
+/** «Paso»: back to Select with a new card; optionally the subcategory leaves the game. */
+const playSkip: Play = (work, gid, pid, state, data, io, { purge }) => {
+  state.jokers.push("skip");
+  const sub = question(data, state.current).subcategory;
+  backToSelect(work, gid, pid, state, data, io, "skipped", pid, pyTruthy(purge));
+  return { purged: pyTruthy(purge) ? sub : null };
+};
+
+/** «Bájale»: an easier question of the same subcategory, the hardest of those below (09). */
+const playEasier: Play = (work, gid, pid, state, data, io) => {
+  const cur = question(data, state.current);
+  const avail = availableNow(work, pid, state, data);
+  const cands = avail.filter((q) => q.subcategory === cur.subcategory && q.difficulty < cur.difficulty);
+  const fresh = replacement(avail, state.level, cands, (q) => -q.difficulty, io);
+  if (!fresh) throw new GameError("easier_none");
+  state.jokers.push("easier");
+  swapIn(work, gid, pid, state, fresh, "easier", io);
+  return { from: cur.difficulty, to: fresh.difficulty };
+};
+
+/** «Cambiazo»: a question of the level's range from the chosen subcategory, nearest difficulty first (09). */
+const playCategory: Play = (work, gid, pid, state, data, io, { subcategory }) => {
+  const cur = question(data, state.current);
+  if (typeof subcategory !== "string" || !data.broad.has(subcategory)) throw new GameError("category_unknown");
+  if (subcategory === cur.subcategory) throw new GameError("category_same");
+  const avail = availableNow(work, pid, state, data);
+  const fresh = replacement(avail, state.level, categoryCandidates(avail, state.level, subcategory),
+    (q) => Math.abs(q.difficulty - cur.difficulty), io);
+  if (!fresh) throw new GameError("category_empty");
+  state.jokers.push("category");
+  swapIn(work, gid, pid, state, fresh, "category", io);
+  state.swapped_to = subcategory;
+  return { subcategory };
+};
+
+/** «Francotirador» (JK-3): a wrong answer is struck out; the right one burns the question and repeats the level (D-27). */
+const playSnipe: Play = (work, gid, pid, state, data, io, { index }) => {
+  if (state.answers.length - state.struck.length <= 1) throw new GameError("snipe_last");
+  if (!Number.isInteger(index) || !(0 <= (index as number) && (index as number) < state.answers.length)
+    || state.struck.includes(index as number))
+    throw new GameError("snipe_invalid");
+  const i = index as number;
+  const q = question(data, state.current);
+  state.jokers.push("snipe");
+  const correctIndex = state.answers.indexOf(q.answer);
+  if (i !== correctIndex) {
+    state.struck.push(i);
+    return { outcome: "miss", index: i };
+  }
+  dropCurrent(work, gid, state, "sniped", pid, io);
+  try {
+    state.options = draw(work, pid, state, data, io);
+  } catch (e) {
+    if (e instanceof GameError) throw new GameError("snipe_no_repeat");
+    throw e;
+  }
+  Object.assign(state, { phase: "select", repeat: true });
+  leaveQuestion(state);
+  return { outcome: "hit", index: i, correct_index: correctIndex };
+};
+
+const PLAYS: Record<JokerName, Play> = {
+  hint: playHint, skip: playSkip, easier: playEasier, category: playCategory, snipe: playSnipe,
+};
+
+/** Play a joker on the question on screen; `event` is what happened (for the animation). */
+export function joker(
+  save: SaveData, data: EngineData, io: Io, name: string, args: JokerArgs = {},
+): { save: SaveData; state: GameState; event: JokerEvent } {
+  if (!(JOKERS as string[]).includes(name)) throw new GameError("joker_unknown", { joker: name });
+  const jname = name as JokerName;
+  const { save: out, result } = transact(save, (work) => {
+    const { row, state } = running(work);
+    if (state.phase !== "question") throw new GameError("joker_not_question");
+    if (jokersLeft(state)[jname] === 0) throw new GameError("joker_spent", { joker: jname });
+    const event = PLAYS[jname](work, row.id, row.player_id, state, data, io, args);
+    saveGame(row, state, io);
+    return { state, event: { joker: jname, ...event } as JokerEvent };
+  });
+  return { save: out, ...result };
+}
+
+/** Per joker: available, and the reason if not (09, "Availability"); «Cambiazo» lists the possible subcategories. */
+function jokersView(work: SaveData, row: GameRow, state: GameState, data: EngineData, io: Io): Jokers {
+  const pid = row.player_id;
+  const check = (fn: Play, args: JokerArgs = {}): JokerState => {
+    const reason = trial(work, (c) => fn(c, row.id, pid, structuredClone(state), data, io, args));
+    return { available: reason === null, reason };
+  };
+  const cur = question(data, state.current);
+  const hint = check(playHint), skipJ = check(playSkip), easier = check(playEasier);
+  // Availability tries the worst case, a hit; the client only learns yes or no.
+  const snipe = check(playSnipe, { index: state.answers.indexOf(cur.answer) });
+  const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory as string };
+
+  const avail = availableNow(work, pid, state, data);
+  const fill = laterFill(avail, state.level);
+  const groups = data.categories.map((c) => {
+    const subs = c.subcategories.map((s) => ({
+      name: s,
+      available: s !== cur.subcategory
+        && replacement(avail, state.level, categoryCandidates(avail, state.level, s), () => 0, io, fill) !== null,
+    }));
+    return { slug: c.slug, name: c.name, available: subs.some((s) => s.available), subcategories: subs };
+  });
+  const possible = groups.some((g) => g.available);
+  const out: Jokers = {
+    hint, skip: { ...skipJ, purge }, easier, snipe,
+    category: { available: possible, reason: possible ? null : new GameError("category_none").info(), categories: groups },
+  };
+  for (const [name, left] of Object.entries(jokersLeft(state)) as [JokerName, number | null][])
+    if (left === 0) Object.assign(out[name], { available: false, reason: new GameError("joker_spent", { joker: name }).info() });
+  return out;
+}
+
 /** Per joker: uses left in this game, or null = unlimited (MD-1). */
 export function jokersLeft(state: GameState): JokerBudget {
   const used = [...state.history.flatMap((h) => h.jokers ?? []), ...state.jokers];
@@ -305,13 +482,14 @@ export function abandon(save: SaveData, io: Io): { save: SaveData } {
 }
 
 /** The newest game as the TV sees it: no correct answer before the final answer. */
-export function view(save: SaveData, data: EngineData, _io: Io): Game | null {
+export function view(save: SaveData, data: EngineData, io: Io): Game | null {
   const game = latest(save);
   if (!game) return null;
   const { row, state } = game;
   const result = row.result;
   const by = data.byId;
-  const jokers = null; // jokers_view: task 78
+  const playing = result === null && state.phase === "question" && state.current !== null && by.has(state.current);
+  const jokers = playing ? jokersView(save, row, state, data, io) : null;
   const out: Game = {
     id: row.id, player: save.players.find((p) => p.id === row.player_id)?.name ?? null, result,
     level: state.level, phase: state.phase,
