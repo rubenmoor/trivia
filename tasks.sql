@@ -3816,8 +3816,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `plans/11-steam.md` S3 row; 14, 17, 18 statuses; `plans/project.md`; `plans/README.md`; notes in masterplans 9–11 if S3 changed their scope (SW-6 moved, media bundle).', '2026-10-12T00:53:42Z', '2026-10-12T01:04:03Z', 208);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (217, 44, 'create tasks for plan 44', 'split', 'done', 1000, '2026-10-11, tasks 222–225 for plan 44; no decisions needed', 'Split plan 44 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', '2026-10-12T01:04:38Z', 212);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (218, 45, 'create tasks for plan 45', 'split', 'open', 1000, NULL, 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:58:22Z', NULL, 213);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (218, 45, 'create tasks for plan 45', 'split', 'done', 1000, '2026-10-12, tasks 226–229; 227–229 wait for decision 9', 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:58:22Z', '2026-10-12T01:05:15Z', 213);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (219, 46, 'create tasks for plan 46', 'split', 'open', 1000, NULL, 'Split plan 46 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:00:20Z', NULL, 214);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (220, 47, 'create tasks for plan 47', 'split', 'open', 1000, NULL, 'Split plan 47 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3857,6 +3857,43 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `plans/04-ui-tv-display.md` "Input" gets the rule (screens listen to actions from `lib/input.ts` and declare a focus default; no `keydown` elsewhere); `plans/14-input.md` IN-3 `[x]`; `directory.md` lists `lib/input.ts` and `lib/focus.ts`; `plans/project.md` in sync.
 
 Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the task note lists what the gamemaster should try on the TV at the next game night (family keys unchanged).', '2026-10-12T01:04:36Z', NULL, 217);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (226, 45, 'Gamepad source (IN-4)', 'work', 'open', NULL, NULL, 'Part of plan 45, task 1. Needs plan 44''s tasks 222–225 done (`dispatch`, `Action.device`, `lastDevice`, scopes, `navigate` + focus); if one is open, stop and say so.
+
+- `app/client/src/lib/gamepad.ts` (new, no dependency), per plan 45 "Design":
+  - `gamepadconnected`/`gamepaddisconnected` start/stop a `requestAnimationFrame` loop; only `mapping === "standard"` pads (others: one `console.warn`); any pad drives the game.
+  - Pure `step(prev, pad) → { next, actions }`; the loop `dispatch`es with `device: "gamepad"`.
+  - Mapping: D-pad 12–15 and left stick → `navigate` (dead zone 0.5, release below 0.3, dominant axis); 0 A → `confirm`, 1 B → `back`, 9 Start → `menu`, 3 Y → `replay`, 8 View → `flag`. LB/RB, X, triggers, right stick: not yet (task 2, decision 9).
+  - Edges only, no auto-repeat; ignored while `document.hidden` or no window focus; on focus return held buttons don''t fire.
+  - `padStyle: "xbox" | "playstation"` (`$state`) from the `id` of the pad that last acted: `/054c|playstation|dualshock|dualsense|wireless controller/i` → playstation, else xbox.
+- Start it once from `Game.svelte` (or `main.ts`).
+- Audio unlock: check in Chromium whether a pad press counts as user activation. If not: browser keeps today''s hint; add to `plans/18-steam-integration.md` "Desktop shell": the shell sets `autoplayPolicy: "no-user-gesture-required"`.
+- Keyboard and mouse unchanged.
+
+Done when: `npm run check`, `npm run build` pass; a throw-away script feeds fake pads to `step` (edges, stick dead zone and hysteresis, no repeat, two buttons at once); tried in Chromium with a pad if available, else the task note lists what the gamemaster should try.', '2026-10-12T01:05:13Z', NULL, 218);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (227, 45, 'Question screen and jokers with the pad (IN-4)', 'work', 'open', NULL, NULL, 'Part of plan 45, task 2. Needs task 1 of this plan and decision 9 (Question screen with a pad).
+
+- Implement decision 9''s answer on the Question screen. Option 1 (recommended): A on a focused answer locks it (`tap`), focus jumps to «Respuesta final» once it is enabled (A, A = lock, submit); B unlocks; LB/RB (4/5) → new action `joker-focus` prev/next (added to plan 44''s `Action` in `input.ts`) moves focus into the joker tray; A arms, A again plays (two-tap arming); B disarms.
+- Other options: follow the answer; update plan 45 "Design" first if it changes the mapping, new actions or components.
+- Francotirador: `navigate` moves the crosshair, A fires, B cancels. Cambiazo: works with `navigate`/A/B.
+- Files: `lib/gamepad.ts`, `lib/input.ts`, `game/Question.svelte`, `game/JokerTray.svelte`, the Cambiazo/Francotirador components as needed. Keyboard and mouse unchanged.
+
+Done when: `npm run check` passes; a throw-away script or Chromium run shows lock → submit, unlock, every joker armed and played, aiming and Cambiazo with pad actions only.', '2026-10-12T01:05:13Z', NULL, 218);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (228, 45, 'Glyphs and prompts (IN-5)', 'work', 'open', NULL, NULL, 'Part of plan 45, task 3. Needs task 1 of this plan and decision 9 (decides whether joker tokens and answer tiles show pad glyphs).
+
+- `app/client/src/game/Glyph.svelte` (new): inline SVG drawn in-house, `Icon.svelte` style (VD-8: rounded, `currentColor`, 24×24). Sets: xbox (A, B, X, Y discs, LB, RB, View, Menu, D-pad), playstation (✕ ○ □ △, L1, R1, Create, Options, D-pad). No console art, no glyph pack; if drawing is clearly worse than a CC0 set (e.g. Kenney "Input Prompts"), stop and add a pm decision instead of switching.
+- `app/client/src/game/Prompt.svelte` (new): `<Prompt action="confirm" />`; keyboard/mouse → today''s `<kbd>` text from `input.ts`''s keymap (one copy), gamepad → `<Glyph>` of `padStyle`; actions without a pad binding render nothing with a pad. Device = `lastDevice`; mouse counts as keyboard. Same size as today''s `kbd` chips, instant switch.
+- Replace every `<kbd>` in `app/client/src/game/*.svelte` (Game, Question, Player, CategoryPicker, JokerTray, Overlay) and the joker tokens'' `.key` letter (hidden with a pad unless decision 9 binds jokers to buttons). Answer tiles keep A–D unless decision 9 picks option 2.
+- `plans/17-publishing.md` "Controller glyphs": "original, drawn for the game (`Glyph.svelte`)".
+
+Done when: `npm run check` passes; screenshots of Start, Question (armed joker, Paso, aiming) and Cambiazo with `lastDevice` forced to keyboard, xbox and playstation (throw-away flag or devtools) show no layout shift.', '2026-10-12T01:05:13Z', NULL, 218);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (229, 45, 'Pad audit and docs (IN-4, IN-5)', 'work', 'open', NULL, NULL, 'Part of plan 45, task 4. Runs after tasks 1–3 of this plan.
+
+- Walk a full game with a pad only: start → existing player → levels → every joker incl. unavailable ones → wrong and victory → overlay incl. undo, skip, volumes; fix what''s missing. New player names are plan 46 (SW-4), not here.
+- Screens from plans 29/36 (Choice, settings, report), if they exist: `<Prompt>` instead of `<kbd>`.
+- Docs: `plans/14-input.md` IN-4/IN-5 `[x]`; `plans/04-ui-tv-display.md` "Input": prompts through `<Prompt>`, no raw `<kbd>`; `directory.md`: `lib/gamepad.ts`, `Glyph.svelte`, `Prompt.svelte`; `plans/project.md`.
+- Task note: steps for the gamemaster''s check in Chromium on Linux and Windows with an Xbox-style pad.
+
+Done when: `npm run check`, `npm run build` pass; the walk-through finds no screen a pad can''t operate; keyboard and mouse behave as before.', '2026-10-12T01:05:13Z', NULL, 218);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3962,6 +3999,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (83, 215, '2026-10-12T01:00:37Z', '2026-10-12T01:02:45Z', 'done', NULL, 0, 'b70a9336f95a293c8673592a06fa411a9d01ed1b', 'claude-opus-5-5[1m]', '179066a4-08b8-48a4-82ee-8821eab60359', 15, 30, 12372, 688261, 58275, 0.85141220000000006, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (84, 216, '2026-10-12T01:02:45Z', '2026-10-12T01:04:11Z', 'done', NULL, 0, '2a00239b3a701c7a4957c1debfb8beaf7e62766a', 'claude-opus-5-5[1m]', '8a00b665-f8d3-47e8-9619-c262df80cb25', 13, 22, 8318, 447245, 46264, 0.62600900000000015, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (85, 217, '2026-10-12T01:04:11Z', '2026-10-12T01:04:43Z', 'done', NULL, 0, 'b99006b5b5b4674068fb4724c51ce840ce989bcb', 'claude-opus-5-5[1m]', 'd156c9ef-d0b7-404d-a27d-c5c1403bef3a', 5, 10, 3281, 156802, 29071, 0.3295884, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (86, 218, '2026-10-12T01:04:43Z', '2026-10-12T01:05:20Z', 'done', NULL, 0, '592fc7fdbb0b3e7715e2c76486f3460cae1f9e24', 'claude-opus-5-5[1m]', 'b8d1cd04-72b3-49a6-9ea5-810fa620663e', 7, 14, 4029, 215953, 28191, 0.3493546, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -3984,3 +4022,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (101, 6);
 INSERT INTO task_decision (task_id, decision_id) VALUES (105, 7);
 INSERT INTO task_decision (task_id, decision_id) VALUES (108, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
+INSERT INTO task_decision (task_id, decision_id) VALUES (227, 9);
+INSERT INTO task_decision (task_id, decision_id) VALUES (228, 9);
+INSERT INTO task_decision (task_id, decision_id) VALUES (229, 9);
