@@ -5479,13 +5479,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T04:10:27Z', '2026-10-12T04:11:49Z', 37);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (343, 58, 'create tasks for plan 58', 'split', 'done', 1000, '2026-10-11, tasks 344, 345, decision 17', 'Split plan 58 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T04:11:20Z', '2026-10-12T04:12:13Z', 341);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (344, 58, 'qgen rework --model {opus,fable}: flag, run.json persistence, D-entry, AGENTS.md', 'work', 'open', NULL, NULL, 'Plan 58 "The flag".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (344, 58, 'qgen rework --model {opus,fable}: flag, run.json persistence, D-entry, AGENTS.md', 'work', 'done', NULL, '2026-10-12, authoring/tools/qgen.py (rework --model, run.json model), plans/decisions.md (D-65), AGENTS.md; verified step models fresh/resume/legacy run.json with throw-away script, no paid run', 'Plan 58 "The flag".
 - `qgen rework --model {opus,fable}`, default `opus`.
 - Switches the fix step (`cmd_fix` `model`) and review 1 inside rework; fact check stays `sonnet`; review 2 stays `REVIEW_MODEL` (opus), comparable to rework-1.
 - Model stored in `run.json` (`"model"`); on resume `--model` ignored with a notice, like `--batch`.
 - `qgen batch`, `qgen tighten`, `REVIEW_MODEL` unchanged.
 - D-entry in `plans/decisions.md` (note the review 1 / review 2 choice). AGENTS.md command list: `--model fable` next to `qgen rework`. RUNBOOK unchanged.
-- Verify with a throw-away check of the step namespaces (models per step, fresh run and resume); no paid run.', '2026-10-12T04:12:07Z', NULL, 343);
+- Verify with a throw-away check of the step namespaces (models per step, fresh run and resume); no paid run.', '2026-10-12T04:12:07Z', '2026-10-12T04:12:58Z', 343);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (345, 58, 'Fable rework experiment: run, compare with rework-1, keep/drop/extend decision', 'work', 'open', -100, NULL, 'Plan 58 "The experiment". Needs the `--model` flag (task above). Waits for the gamemaster''s go (AGENTS.md: `qgen rework` only on the gamemaster''s word).
 - Gamemaster checks `/usage` before and after.
 - `qgen rework --model fable` once.
@@ -5755,6 +5755,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (165, 341, '2026-10-12T04:10:49Z', '2026-10-12T04:11:30Z', 'done', NULL, 0, 'a08e6a4a4c2213a79f4e58766e15d1902e41fbb3', 'claude-opus-5-5[1m]', 'd3b31cc7-9cb6-4393-85e9-cbf2817cd678', 9, 16, 3809, 253023, 28057, 0.3513046, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (166, 342, '2026-10-12T04:11:30Z', '2026-10-12T04:11:54Z', 'done', NULL, 0, '2eb55353ac96c950a78e9d5ca67757dbbcb91534', 'claude-opus-5-5[1m]', 'abe4cc29-e884-484a-b7b9-10b16f6e952d', 6, 12, 1526, 192237, 28877, 0.3000314, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (167, 343, '2026-10-12T04:11:54Z', '2026-10-12T04:12:19Z', 'done', NULL, 0, '6bd75c8310cb6c54a8d10285bfca862d07d19055', 'claude-opus-5-5[1m]', '5919264a-31f0-43da-8078-74bb8f918ff6', 6, 12, 2260, 168617, 22782, 0.2612274, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (168, 344, '2026-10-12T04:12:19Z', '2026-10-12T04:13:06Z', 'done', NULL, 0, '9e8c3069a9dc66d0f01ad93cb771f696d7fb2239', 'claude-opus-5-5[1m]', 'c35d7cf8-7c2b-43e6-ab44-9c1ce52cd7e7', 13, 24, 5169, 414740, 31643, 0.43956799999999996, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

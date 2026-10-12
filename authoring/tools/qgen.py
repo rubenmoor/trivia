@@ -16,7 +16,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
-    qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
+    qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
@@ -2556,7 +2556,8 @@ def cmd_rework(args):
     open_runs = sorted(p.parent.name for p in WORK.glob("rework-*/run.json") if not load_json(p).get("done"))
     if open_runs:
         run = open_runs[0]
-        print(f"Resuming {run}" + (" (--batch ignored)" if args.batch else "") + ".", flush=True)
+        ignored = [f for f, v in (("--batch", args.batch), ("--model", args.model)) if v]
+        print(f"Resuming {run}" + (f" ({', '.join(ignored)} ignored)" if ignored else "") + ".", flush=True)
     else:
         ids = [q["id"] for q in load_json(POOL)["questions"] if q["status"] == "needs_work"
                and (q.get("review") or {}).get("feedback") and (not args.batch or q.get("batch") == args.batch)]
@@ -2565,19 +2566,21 @@ def cmd_rework(args):
         numbers = [int(p.name.split("-")[1]) for p in WORK.glob("rework-*") if p.name.split("-")[1].isdigit()]
         run = f"rework-{max(numbers, default=0) + 1}"
         save_json(WORK / run / "run.json", {"mode": "rework", "ids": ids, "batch": args.batch,
+                                            "model": args.model or "opus",
                                             "started": datetime.date.today().isoformat()})
         print(f"Starting {run}: {len(ids)} needs_work question(s).", flush=True)
     d = WORK / run
+    model = load_json(d / "run.json").get("model", "opus")  # fix + review 1; review 2 stays REVIEW_MODEL (D-65)
     progress.verbose = False
 
     def ns(**kw):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
 
     t0 = run_steps([
-        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
+        ("fix", cmd_fix, ns(model=model, check_model="sonnet")),
         ("media", cmd_media, ns()),
         ("sheets", cmd_sheets, ns()),
-        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+        ("review 1", cmd_review, ns(model=model, round=1)),
         ("research", cmd_research, ns()),
         ("sheets", cmd_sheets, ns()),
         ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
@@ -2928,6 +2931,8 @@ def main():
     rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
     rw.set_defaults(fn=cmd_rework)
     rw.add_argument("--batch", help="only this batch's needs_work questions")
+    rw.add_argument("--model", choices=["opus", "fable"],
+                    help="model for fix and review 1 (default opus; plan 58); review 2 stays opus")
     rw.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     tg = sub.add_parser("tighten", help="find long-winded questions in the whole pool, shorten and review them (QG-24)")
     tg.set_defaults(fn=cmd_tighten)

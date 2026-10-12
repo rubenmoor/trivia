@@ -505,3 +505,10 @@ Template:
 - Decision: `node --test 'src/engine/**/*.test.ts'` (`npm test`, root and `app/client`). Engine code uses erasable syntax only and imports with `.ts` extensions (`allowImportingTsExtensions`, `erasableSyntaxOnly` in both client tsconfigs). No `@types/node`: `*.test.ts` and `src/engine/test/` are excluded from the tsconfigs, so tests aren't type-checked; engine modules never import from `node:`.
 - Consequences: No new dependency, no build step for tests. `GameError` in `lib/api.ts` lost its parameter properties. Same setup lets authoring run the engine under plain Node (D-60).
 - Supersedes / related: D-58, D-60; plan 19 (PORT-2), task 72
+
+## D-65: `qgen rework --model fable` is opt-in for fix and review 1
+- Date: 2026-10-12
+- Context: Rework handles the hardest needs_work cases at small volume (rework-1: 43 questions, $5.57); a stronger model may pay off there first. Fable costs 2.5× Opus per token (plan 58).
+- Decision: `qgen rework --model {opus,fable}`, default `opus`. Switches fix and review 1 (it decides keep/fix after the reworked fix); fact check stays `sonnet`; review 2 stays `REVIEW_MODEL` (opus) so the final verdict is comparable to rework-1. Model stored in `run.json`; on resume `--model` is ignored with a notice.
+- Consequences: `qgen batch`, `qgen tighten`, `REVIEW_MODEL` unchanged. Model per call already in `costs.log` and `review.model`. RUNBOOK unchanged until the experiment (task 345) changes the default.
+- Supersedes / related: QG-23; plans 16, 58
