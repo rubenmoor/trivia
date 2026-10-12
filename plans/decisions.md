@@ -477,3 +477,10 @@ Template:
 - Decision: No Python copy (pm decision 5, option 2). A small Node entry point runs `engine/selection.ts` and prints the supply as JSON; `qgen report` and `authoring/server/overview.py` call it. The engine stays runnable under plain Node 22 (type stripping): erasable syntax only, `.ts` import extensions.
 - Consequences: Node is needed for `qgen report` (it's in the flake). `selection.py` is deleted with PORT-8. The selection fixtures guard only the Python → TS port, not a second copy.
 - Supersedes / related: D-59; plan 12 (PORT-2, PORT-8)
+
+## D-61: Media with Commons restriction flags stays
+- Date: 2026-10-12
+- Context: Commons marks some files with non-copyright restrictions (personality rights, trademark, insignia, …). Milestone 4 listed them among the files to replace; plan 17 suggested checking each one.
+- Decision: Keep every flagged file (pm decision 8). The gamemaster checked them: no problem in any. The licence audit shows the flags for information; they never put a file on the replacement list.
+- Consequences: No per-file "checked, keep" mark, no review-tool control for it. Replacement list: PD-US only, GFDL, off-allowlist licences, missing data.
+- Supersedes / related: D-59; plan 17 (PUB-1), milestone 4
