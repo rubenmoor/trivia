@@ -2,7 +2,7 @@
 
 A subcategory's concept list lives in authoring/data/concepts/<slug>.json for base, and in
 authoring/data/bundles/<bundle>/concepts/<slug>.json for another bundle (D-43): its facets, its fit for
-the question axes, and its concepts (name, facet, known_at, maybe `retired`). How often a concept
+the question axes, and its concepts (name, facet, known_at, maybe `retired`), maybe its `top_ups` (date, added, unused after). How often a concept
 was used is counted from the pool, never stored. Drawing is plain code: concepts with fewer
 questions first, axis values that are rarely used first.
 """

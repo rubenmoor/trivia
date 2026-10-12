@@ -1100,8 +1100,17 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Saturation check
 - `qgen report --subcategories [--bundle <id>]`: one row per subcategory, with approved and asked counts (asked = all statuses = avoid-list length), list size, unused, unused at `known_at` ≥ 11, top-ups so far, and overlaps (merge duplicate drops + review needs_work for overlap, last two batches). Also a row per broad category: subcategories, approved, unused hard concepts.
-- A subcategory is **saturated** when any of these holds: unused < 36 (2 batches of 18 slots) right after a top-up; unused at `known_at` ≥ 11 < 10; overlaps ≥ 10 % of its drafts in the last batch; asked ≥ 60 (a long avoid list in the draft prompt). These thresholds are a first guess. Tune them in the report task and write them here.
+- A subcategory is **saturated** when any of these holds: unused < 36 (2 batches of 18 slots) right after a top-up; unused at `known_at` ≥ 11 < 10; overlaps ≥ 10 % of its drafts in its last batch and ≥ 2; asked ≥ 60 (a long avoid list in the draft prompt).
 - Reuse plan 13''s `qgen report` code (`--calibration`) and part 4''s overlap counts once they exist; don''t count things twice.
+- Tuned (task 37): overlaps need ≥ 2 as well, since 1 in 7–9 drafts flagged Museos and Récords Guinness on noise. The others stay; asked ≥ 60 flags nothing yet (max 21). Constants `SAT_*` in `authoring/tools/qgen.py`.
+- Top-ups: none so far (git history). `qgen concepts --top-up` now records each in the list (`top_ups`: date, added, unused after); "right after a top-up" = the last one.
+- Overlaps: `health.overlaps_by_subcategory(run)`, per subcategory, last two merged batches of the bundle; plan 15 can reuse it.
+
+## Saturation baseline (2026-10-11, `qgen report --subcategories`, batch-6 and batch-7)
+- `base`: 4 of 184 saturated: Plantas del Amazonas, Caballeros, Villanos famosos (overlaps 2/10, 2/15, 2/17); Productos del supermercado (8 unused hard). 24 without a list.
+- Fewest unused hard (besides): Origen de las marcas 15, Planeta Tierra 13, Tecnología 17, Números 18, Empresas famosas 19, Fantasía 21.
+- Broad categories, unused hard: Cuerpo humano 36, Videojuegos 51, Fútbol 127, Fiestas y tradiciones 118; Historia 1795.
+- `colombia`: 0 of 27 saturated, 14 without a list, no batch yet.
 
 ## Proposals
 - Three sources: (a) subcategories the check flags as saturated: split them or add a neighbour; (b) broad categories with ≤ 3 subcategories (category balance in play); (c) topics that carry hard questions (11–15), where a well-informed adult knows the answer and a child doesn''t, e.g. inside Espacio, Cuerpo humano, Ciencia y matemáticas.
@@ -3211,7 +3220,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Throw-away check: seeded dry run of `draw_slots`: targets weighted by deficit, mean concept `known_at` per target within ±1 (plan 13 "Done when").
 
 Done when: dry-run numbers in the task note; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', '2026-10-12T02:17:05Z', 20);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (37, 14, 'qgen report --subcategories with saturation flags', 'work', 'open', NULL, NULL, 'Part 1 of plan 14: the check that spots saturated subcategories.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (37, 14, 'qgen report --subcategories with saturation flags', 'work', 'done', NULL, '2026-10-11, authoring/tools/qgen.py (report_saturation, SAT_* thresholds, top-up record), authoring/tools/health.py (overlaps_by_subcategory), concepts.py, AGENTS.md; plan 14 holds baseline and thresholds', 'Part 1 of plan 14: the check that spots saturated subcategories.
 
 - Add `qgen report --subcategories [--bundle <id>]` (`authoring/tools/`), next to plan 13''s `--calibration` code (task 29); share its loading/counting helpers, don''t duplicate them.
 - One row per subcategory: approved, asked (all statuses = avoid-list length), concept-list size, unused, unused at `known_at` ≥ 11, top-ups so far, overlaps (merge duplicate drops + review needs_work for overlap, last two batches). Reuse plan 15''s overlap counts if they exist by then; otherwise count from batch logs/review notes once, in a helper plan 15 can reuse.
@@ -3220,7 +3229,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Subcategories without a concept list yet: show them as "no list", not saturated.
 - Record the baseline output (short summary) and the tuned thresholds in plan 14''s body (`pm plan edit 14 --body -`; keep the rest of the body as is).
 
-Done when: the report prints both tables with flags for `base` and `--bundle colombia`; plan 14 holds baseline and thresholds; `qgen validate` clean.', '2026-10-11T23:51:37Z', NULL, 21);
+Done when: the report prints both tables with flags for `base` and `--bundle colombia`; plan 14 holds baseline and thresholds; `qgen validate` clean.', '2026-10-11T23:51:37Z', '2026-10-12T04:10:37Z', 21);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (38, 14, 'Proposal round: new base subcategories', 'work', 'open', NULL, NULL, 'Part 2 of plan 14. No changes to `categories.json` here.
 
 - Run `qgen report --subcategories` (task above).
@@ -5433,6 +5442,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - AGENTS.md rules: `qgen rework` only when the gamemaster asks; a D-entry in `plans/decisions.md` when the flag lands; RUNBOOK unchanged unless the default changes.
 
 Done when: a plan (new or extended) holds the above and its tasks are queued (pm does that on plan add/edit); this task closed with the plan id.', '2026-10-12T04:10:10Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (342, 14, 'create tasks for plan 14', 'split', 'open', 1000, NULL, 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T04:10:27Z', NULL, 37);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5692,7 +5703,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (161, 335, '2026-10-12T04:02:57Z', '2026-10-12T04:03:47Z', 'done', NULL, 0, 'e69db22d0efcaef7f5ce761d604b53362c14920f', 'claude-opus-5-5[1m]', '2fb3f806-3e46-463f-8ad9-91627510b916', 7, 14, 5162, 229330, 30311, 0.39165000000000005, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (162, 337, '2026-10-12T04:03:47Z', '2026-10-12T04:06:29Z', 'done', NULL, 0, '80c653b395feeb09ea4088404cae4aba5a662115', 'claude-opus-5-5[1m]', '76aef5b0-5582-44cc-bc9c-9d7d6b8d0c4b', 33, 46, 17596, 1385783, 68479, 1.1770926000000002, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (163, 338, '2026-10-12T04:06:29Z', '2026-10-12T04:08:18Z', 'done', NULL, 0, '0dca1fa7b4945b757d8f77bea708191d62f5b8d4', 'claude-opus-5-5[1m]', 'e56dc5f0-6095-4028-9a6b-cf9b015b8863', 30, 46, 10213, 1265358, 58219, 0.92326759999999986, 198376);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (164, 37, '2026-10-12T04:08:18Z', NULL, 'running', NULL, NULL, 'ef739ca6d6dfc8394494bd578fd91972821c2a4a', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (164, 37, '2026-10-12T04:08:18Z', '2026-10-12T04:10:49Z', 'done', NULL, 0, 'ef739ca6d6dfc8394494bd578fd91972821c2a4a', 'claude-opus-5-5[1m]', '1c751719-d860-4de8-a99d-a7d16778ca3c', 37, 58, 15801, 1810689, 75874, 1.2853818000000004, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

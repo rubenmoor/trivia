@@ -459,7 +459,7 @@ def finalize_concepts(d, bundle):
     by_id = {q["id"]: q for q in data["questions"]}
     for s in order:
         raw, topup = load_json(d / "raw" / f"{slug(s)}.json", {}), d / "topup" / f"{slug(s)}.json"
-        lst = concepts.load(s)
+        lst, before = concepts.load(s), None
         if lst is None and "concepts" in raw:
             lst = {"subcategory": s, "facets": raw["facets"], "axis_fit": raw["axis_fit"], "concepts": []}
             tags = raw["existing"]
@@ -468,7 +468,7 @@ def finalize_concepts(d, bundle):
         elif lst is not None and topup.exists():
             extra = load_json(topup)
             lst["facets"] += [f for f in extra["new_facets"] if f not in lst["facets"]]
-            tags, items = [], extra["concepts"]
+            tags, items, before = [], extra["concepts"], len(lst["concepts"])
         else:
             continue
         used = {concepts.key(e["concept"]) for e in tags}
@@ -487,6 +487,10 @@ def finalize_concepts(d, bundle):
                                     "known_at": min(hi, max(lo, c["known_at"]))})
             own[k] = c["name"].strip()
             seen.setdefault(k, s)
+        if before is not None:  # for the saturation check (plan 14)
+            lst.setdefault("top_ups", []).append({"date": datetime.date.today().isoformat(),
+                                                  "added": len(lst["concepts"]) - before,
+                                                  "unused": len(concepts.unused(lst, concepts.uses(data["questions"], s)))})
         for e in tags:
             q = by_id.get(e["id"])
             if q is None or q.get("subcategory") != s:
@@ -1269,6 +1273,84 @@ def report_subcategories(avail):
         print(f"    level {level:2} (difficulty {lo}–{hi}): {n:3}")
 
 
+# Saturation check (plan 14): a subcategory is saturated when any of these holds.
+SAT_AFTER_TOP_UP = 36  # unused right after its last top-up (2 batches of 18 slots)
+SAT_HARD = 10  # unused concepts at known_at ≥ 11
+SAT_OVERLAP = 0.10  # overlaps / drafts in its last batch
+SAT_OVERLAP_MIN = 2  # … and at least this many (one is noise)
+SAT_ASKED = 60  # questions in any status = avoid-list length
+HARD_AT = 11
+
+
+def bundle_runs(bundle, n=2):
+    """The last n merged `qgen batch` runs of the bundle, oldest first (unfinished ones too)."""
+    import health  # authoring/tools/health.py (imports qgen)
+    return [r for r in health.batch_runs()
+            if (load_json(WORK / r / "run.json", {}) or {}).get("bundle", "base") == bundle][-n:]
+
+
+def saturation(pool, bundle):
+    """{subcategory: row} of the bundle (plan 14): counts, concept supply, overlaps of its last two
+    batches and the saturation flags; `list` None = no concept list yet (never saturated)."""
+    import health  # authoring/tools/health.py (imports qgen)
+    runs = bundle_runs(bundle)
+    ovl = [health.overlaps_by_subcategory(r, pool) for r in runs]
+    rows = {}
+    for sub in categories.subcategories(bundle):
+        qs = [q for q in pool if q.get("subcategory") == sub]
+        lst = concepts.load(sub)
+        r = {"approved": sum(q["status"] == "approved" for q in qs), "asked": len(qs), "list": None,
+             "unused": None, "hard": None, "top_ups": 0, "overlaps": 0, "drafts": 0, "flags": []}
+        for o in ovl:
+            r["overlaps"] += o.get(sub, [0, 0])[0]
+            r["drafts"] += o.get(sub, [0, 0])[1]
+        last = next((o[sub] for o in reversed(ovl) if sub in o), None)  # its last batch
+        if lst is not None:
+            free = concepts.unused(lst, concepts.uses(pool, sub))
+            tops = lst.get("top_ups", [])
+            r |= {"list": len(lst["concepts"]), "unused": len(free), "top_ups": len(tops),
+                  "hard": sum(c["known_at"] >= HARD_AT for c in free)}
+            r["flags"] = [f for f, on in [
+                ("top-up dry", tops and tops[-1]["unused"] < SAT_AFTER_TOP_UP),
+                ("few hard", r["hard"] < SAT_HARD),
+                ("overlaps", last and last[0] >= max(SAT_OVERLAP_MIN, SAT_OVERLAP * last[1])),
+                ("long avoid list", r["asked"] >= SAT_ASKED)] if on]
+        rows[sub] = r
+    return rows
+
+
+def report_saturation(pool, bundle):
+    rows = saturation(pool, bundle)
+    runs = bundle_runs(bundle)
+    print(f"\nsaturation per subcategory ({bundle}; overlaps = drops + needs_work for overlap / drafts, "
+          f"{' and '.join(runs) or 'no batch yet'}):")
+    print(f"  {'':34}approved  asked  list  unused  hard  top-ups  overlaps  flags")
+    for c in categories.load():
+        if c["bundle"] != bundle:
+            continue
+        print(f"  {c['name']}")
+        for sub in c["subcategories"]:
+            r = rows[sub]
+            supply = (f"{r['list']:4}  {r['unused']:6}  {r['hard']:4}  {r['top_ups']:7}" if r["list"] is not None
+                      else f"{'no list':>30}")
+            ovl = f"{r['overlaps']}/{r['drafts']}" if r["drafts"] else "–"
+            flags = ("SATURATED: " + ", ".join(r["flags"])) if r["flags"] else ""
+            print(f"    {sub[:32]:32}{r['approved']:8}  {r['asked']:5}  {supply}  {ovl:>8}  {flags}")
+    sat = [s for s, r in rows.items() if r["flags"]]
+    print(f"  saturated: {len(sat)} of {len(rows)}{': ' + ', '.join(sat) if sat else ''}; "
+          f"no list: {sum(r['list'] is None for r in rows.values())}")
+    print(f"  thresholds: unused after last top-up < {SAT_AFTER_TOP_UP}; unused at known_at ≥ {HARD_AT} < {SAT_HARD}; "
+          f"overlaps ≥ {100 * SAT_OVERLAP:.0f} % of its drafts in its last batch and ≥ {SAT_OVERLAP_MIN}; asked ≥ {SAT_ASKED}")
+    print(f"\nper broad category ({bundle}):")
+    print(f"  {'':34}subcategories  approved  unused hard  saturated")
+    for c in categories.load():
+        if c["bundle"] != bundle:
+            continue
+        rs = [rows[s] for s in c["subcategories"]]
+        print(f"  {c['name'][:32]:32}  {len(rs):13}  {sum(r['approved'] for r in rs):8}  "
+              f"{sum(r['hard'] or 0 for r in rs):11}  {sum(bool(r['flags']) for r in rs):9}")
+
+
 def calibration(run, pool=None):
     """{target level: row} for a run (plan 13): drawn slots and their mean concept `known_at`; n drafted;
     mean drafted, rated and final difficulty (None if there are none); merged and approved counts.
@@ -1594,6 +1676,7 @@ def cmd_report(args):
     report_progress(pool, args.bundle)
     if args.subcategories:
         report_subcategories(avail)
+        report_saturation(pool, args.bundle)
     if args.run:
         d = run_dir(args)
         ratings, checks = collect(d)
@@ -2806,9 +2889,9 @@ def main():
     rp = add("report", cmd_report, run=False)
     rp.add_argument("--run")
     rp.add_argument("--player", help="supply for this player (D-28); default: a new player")
-    rp.add_argument("--bundle", default="base", help="progress vs. targets for this bundle (plan 12)")
+    rp.add_argument("--bundle", default="base", help="progress vs. targets and saturation for this bundle (plans 12, 14)")
     rp.add_argument("--subcategories", action="store_true",
-                    help="supply per subcategory × difficulty, for the jokers (JK-10)")
+                    help="supply per subcategory × difficulty, for the jokers (JK-10); saturation flags (plan 14)")
     rp.add_argument("--calibration", nargs="*", metavar="BATCH",
                     help="drafted/rated/final difficulty per target level (plan 13); default: the last two batches")
     rp.add_argument("--batches", nargs="*", metavar="BATCH",

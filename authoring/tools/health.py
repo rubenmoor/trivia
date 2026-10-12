@@ -57,6 +57,24 @@ def drop_kind(reason):
     return ["other"]
 
 
+def overlaps_by_subcategory(run, pool=None):
+    """{subcategory: [overlaps, drafts]} of one run: merge's overlap/duplicate drops plus `record`'s
+    needs_work for overlap (plan 14's saturation check)."""
+    pool = pool if pool is not None else load(POOL)["questions"]
+    sub_of = {q["tmp_id"]: q["subcategory"] for _, qq in qgen.drafts(WORK / run) for q in qq}
+    out = {}
+    for s in sub_of.values():
+        out.setdefault(s, [0, 0])[1] += 1
+    for x in load(WORK / run / "dropped.json", []):
+        if {"overlap", "duplicate"} & set(drop_kind(x["reason"])) and x["tmp_id"] in sub_of:
+            out[sub_of[x["tmp_id"]]][0] += 1
+    qs = {q["id"]: q for q in pool if q.get("batch") == run}
+    for i, (ps, _) in recorded(run, qs.values()).items():
+        if "overlap" in ps and i in qs and qs[i].get("subcategory") in out:
+            out[qs[i]["subcategory"]][0] += 1
+    return out
+
+
 def rate(n, of):
     return n / of if of else None
 
