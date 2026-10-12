@@ -3,6 +3,7 @@
 
     trivia-media fetch [--batch pilot | --ids q-0001,q-0002] [--force]
     trivia-media sync [--status approved] [--prune]
+    trivia-media licenses [--status approved] [--json]
 
 `fetch` stores up to 6 candidates per question and slot: work/media/<id>.json for the
 question's media, work/media/<id>-background.json for the background image of audio
@@ -11,8 +12,13 @@ questions (D-14). The review tool and `qgen review` choose among them; `download
 
 Picked files live in the media cache (app/server/media_cache.py, D-17). `sync` downloads
 every picked file that isn't cached yet, ahead of game night.
+
+`licenses` (plans/52, PUB-1) checks the stored licence record of every picked file (no network):
+files to replace before a public release, grouped by reason (providers.licence_verdict),
+restriction flags for information, and a tally per licence. Skips rejected questions; exits 1
+while the replacement list isn't empty.
 """
-import argparse, json, sys
+import argparse, json, re, sys
 
 import layout  # noqa: F401  (also makes app/server importable)
 from layout import CANDIDATES, SOURCE_POOL as POOL
@@ -218,6 +224,82 @@ def cmd_sync(args):
         sys.exit(1)
 
 
+def licence_rows(qs):
+    """One row per distinct picked file_url, with its verdict and every question/slot using it."""
+    rows = {}
+    for q in qs:
+        for slot in SLOTS:
+            s = q.get(slot)
+            if not s or not s.get("file_url"):
+                continue
+            row = rows.get(s["file_url"])
+            if not row:
+                verdict, reasons = providers.licence_verdict(s)
+                lic = s.get("license")
+                row = rows[s["file_url"]] = {
+                    "file_url": s["file_url"], "verdict": verdict, "reasons": reasons, "license": lic,
+                    "family": providers.licence_kind(lic) if lic else None,
+                    "pd_reasons": s.get("pd_reasons"), "restrictions": s.get("restrictions"),
+                    "provider": s.get("provider"), "source_url": s.get("source_url"), "uses": []}
+            row["uses"].append({"id": q["id"], "slot": slot, "status": q["status"]})
+    return list(rows.values())
+
+
+def pd_group(reason):
+    if re.fullmatch(providers.US_ONLY_PD, reason):
+        return "US only"
+    return "US government" if reason.startswith("PD-USGov") else "worldwide"
+
+
+def cmd_licenses(args):
+    qs = [q for q in json.loads(POOL.read_text(encoding="utf-8"))["questions"] if q["status"] != "rejected"]
+    if args.status:
+        qs = [q for q in qs if q["status"] == args.status]
+    rows = licence_rows(qs)
+    replace = [r for r in rows if r["verdict"] == "replace"]
+    if args.json:
+        print(json.dumps(rows, ensure_ascii=False, indent=1))
+        sys.exit(1 if replace else 0)
+
+    def uses(r):
+        return ", ".join(f"{u['id']}{' background' if u['slot'] == 'background' else ''} ({u['status']})"
+                         for u in r["uses"])
+
+    print(f"Replacement list ({len(replace)} of {len(rows)} files)")
+    by_code = {}
+    for r in replace:
+        for reason in r["reasons"]:
+            by_code.setdefault(reason.split(":")[0], []).append((reason, r))
+    for code, items in sorted(by_code.items()):
+        print(f"  {code}")
+        for reason, r in items:
+            print(f"    {uses(r)}: {reason.split(': ', 1)[-1]}\n      {r['source_url']}")
+    if not replace:
+        print("  nothing to replace")
+
+    flagged = [r for r in rows if isinstance(r["restrictions"], list) and r["restrictions"]]
+    print(f"\nRestriction flags ({len(flagged)} files, information only, D-61)")
+    by_flag = {}
+    for r in flagged:
+        for f in r["restrictions"]:
+            by_flag.setdefault(f, []).append(r)
+    for f, rs in sorted(by_flag.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        print(f"  {f} ({len(rs)}): " + "; ".join(uses(r) for r in rs))
+
+    def tally(title, counts):
+        print(f"\n{title}")
+        for k, n in sorted(counts.items(), key=lambda kv: (-kv[1], str(kv[0]))):
+            print(f"  {n:5}  {k}")
+
+    count = lambda keys: {k: keys.count(k) for k in set(keys)}  # noqa: E731
+    tally("Files per licence family", count([r["family"] or "off allowlist" for r in rows]))
+    tally("Files per licence", count([r["license"] or "missing" for r in rows]))
+    pd = [r for r in rows if r["family"] == "public-domain" and isinstance(r["pd_reasons"], list)]
+    for group in ("worldwide", "US government", "US only"):
+        tally(f"PD reasons, {group} (files)", count([p for r in pd for p in r["pd_reasons"] if pd_group(p) == group]))
+    sys.exit(1 if replace else 0)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -228,9 +310,14 @@ def main():
     s = sub.add_parser("sync", help="download every picked file that isn't in media/ yet")
     s.add_argument("--status", help="only questions with this status, e.g. approved")
     s.add_argument("--prune", action="store_true", help="delete cached files no question references")
+    lc = sub.add_parser("licenses", help="files to replace before a public release, restriction flags, tally")
+    lc.add_argument("--status", help="only questions with this status, e.g. approved")
+    lc.add_argument("--json", action="store_true", help="rows as JSON")
     args = ap.parse_args()
     if args.cmd == "sync":
         return cmd_sync(args)
+    if args.cmd == "licenses":
+        return cmd_licenses(args)
 
     qs = json.loads(POOL.read_text(encoding="utf-8"))["questions"]
     if args.batch:

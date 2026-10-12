@@ -47,6 +47,7 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name 
 ```sh
 trivia-media sync --status approved     # downloads every picked file that isn't cached yet
 trivia-media sync --status approved --prune   # also deletes cached files no question uses any more
+trivia-media licenses                   # files to replace before a public release (licence audit)
 ```
 
 This needs internet once. Files go to `media/` (gitignored); credits (author, licence) are stored with each question and shown on screen.
