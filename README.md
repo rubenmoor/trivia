@@ -109,6 +109,7 @@ qgen report              # supply per level, difficulty and category; progress v
 trivia & npm run dev -w app/client                 # game UI with hot reload
 trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reload (port 5174)
 npm run check                                      # type-check both clients
+npm test                                           # game engine tests (node:test)
 ```
 
 The dev servers forward `/api` and `/media` to the Python servers, so run both. Before changing anything, read [`plans/README.md`](plans/README.md): plans are the source of truth, and decisions (D-numbers) are logged in [`plans/decisions.md`](plans/decisions.md).

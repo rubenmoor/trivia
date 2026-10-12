@@ -3460,14 +3460,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Gaps in the fixtures: fix plan 18''s recorder and re-record; never hand-edit fixtures.
 
 Done when: every `selection.json` case replays identically; `npm test` and `npm run check` pass.', '2026-10-12T00:04:49Z', '2026-10-12T04:00:06Z', 63);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (75, 19, 'Selection invariant tests and docs (PORT-2)', 'work', 'open', NULL, NULL, 'Property tests of `selection.ts` on the real pool, then close PORT-2 in the docs. See plan 19, task 4.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (75, 19, 'Selection invariant tests and docs (PORT-2)', 'work', 'done', NULL, '2026-10-11, app/client/src/engine/invariants.test.ts, test/fixtures.ts (realCategories), pool.test.ts, plans/12-client-engine.md, directory.md, AGENTS.md, README.md', 'Property tests of `selection.ts` on the real pool, then close PORT-2 in the docs. See plan 19, task 4.
 
 - `app/client/src/engine/invariants.test.ts` on `app/data/pool.json` (skip with a message if absent), ~50 `seededRng` seeds: random burned subsets (only where `supply` reports no missing); a 12-level walk drawing 4 cards per level with `offered` excluded and `avoidCategories` from earlier picks.
 - Checks: every level gets 4 distinct cards in range; no burned or already offered ID appears; no shortage in `supply` never leads to a `null` draw. Runs in a few seconds.
 - Docs: `plans/12-client-engine.md` (PORT-2 `[x]` with a note), `directory.md` (`app/client/src/engine/`), AGENTS.md Commands (`npm test`), README.md if it lists npm commands.
 - Check that engine modules import nothing outside `src/engine/` and `src/lib/types.ts`, and nothing from `node:`.
 
-Done when: plan 19''s "Done when" holds: root `npm test`, `npm run check`, `npm run build` pass; no new dependencies.', '2026-10-12T00:04:49Z', NULL, 63);
+Done when: plan 19''s "Done when" holds: root `npm test`, `npm run check`, `npm run build` pass; no new dependencies.', '2026-10-12T00:04:49Z', '2026-10-12T04:01:17Z', 63);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (76, 20, 'Engine save state and Python helpers (PORT-3)', 'work', 'open', NULL, NULL, 'Save document types, Python-compat helpers and the transaction helpers for the TS referee. See plan 20, "Decisions taken here" and "Files".
 
 - `app/client/src/engine/state.ts`: `SaveData {version: 1, players, games, burned}`, `PlayerRow`, `GameRow` (`state: GameState` as an object), `BurnRow` (`player_id` null = everyone), `GameState` (the `game.py` docstring fields, snake_case), `HistoryEntry`, `SAVE_VERSION = 1`, `emptySave()`, `withDefaults(state)` (like `latest()`), `nextId(rows)` (`max(id) + 1`, `1` when empty).
@@ -5576,6 +5576,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (156, 72, '2026-10-12T03:56:43Z', '2026-10-12T03:57:56Z', 'done', NULL, 0, '27879980685c9ae9066721ba56017c1a23723511', 'claude-opus-5-5[1m]', '16eae6a4-11cf-4399-baca-f3a95d9e30ed', 14, 24, 6267, 431962, 33138, 0.47693240000000009, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (157, 73, '2026-10-12T03:57:56Z', '2026-10-12T03:59:03Z', 'done', NULL, 0, 'a1f7b91484103170d409e45728bc9b5be3465820', 'claude-opus-5-5[1m]', 'eceaced6-d06f-482b-a66e-16d69f4c3c6b', 12, 20, 6502, 340352, 31438, 0.44969440000000005, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (158, 74, '2026-10-12T03:59:03Z', '2026-10-12T04:00:13Z', 'done', NULL, 0, 'b3f5d5e6b5aea64187aae0f39516114fb9c6cc02', 'claude-opus-5-5[1m]', '255fcce9-31ae-4a94-b688-bc223bf3b066', 12, 20, 6405, 393039, 41081, 0.5354358, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (159, 75, '2026-10-12T04:00:13Z', '2026-10-12T04:01:28Z', 'done', NULL, 0, 'e3b72bc26be9129e7641e24a56e60488a79f8a11', 'claude-opus-5-5[1m]', '6642b1dd-098a-4e99-aa3f-a8f48590694e', 18, 36, 6132, 681540, 33291, 0.52542, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -49,7 +49,8 @@ With the engine in the client, the correct answer is in memory before the player
 
 ## Tasks
 - [x] PORT-1 Scenario recorder for `app/server/game.py` + `app/server/selection.py`; commit the fixtures. Done 2026-10-11 (plan 18): `authoring/tools/record_fixtures.py` (`--check`), fixtures + README in `app/client/src/engine/fixtures/`.
-- [ ] PORT-2 `engine/selection.ts`: supply check and draw (GF-2, D-25), fixture-tested.
+- [x] PORT-2 `engine/selection.ts`: supply check and draw (GF-2, D-25), fixture-tested.
+  - 2026-10-11: `rng.ts`, `pool.ts`, `selection.ts`; every `selection.json` case replays with its tape used up; `invariants.test.ts`: 50 seeded 12-level walks on the real pool (plan 19).
 - [ ] PORT-3 `engine/game.ts`: state machine, players, burning, jokers, undo. Decision: the client holds the answer (relaxes D-25).
 - [ ] PORT-4 Store interface; `ServerStore` + Python `GET/PUT /api/save` (atomic write, with a retry for Windows file locks); `MemoryStore` for tests.
 - [ ] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the family's real save.

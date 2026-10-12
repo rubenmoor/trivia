@@ -2,15 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import { broadOf, bundleOf, byId, categoryOf, loadCategories, parsePool, subcategories } from "./pool.ts";
-import { data, fixture } from "./test/fixtures.ts";
-
-function realCategories(): Category[] {
-  const bundles = data("bundles.json") as { bundles: { id: string }[] };
-  const files = Object.fromEntries(
-    bundles.bundles.map((b) => [b.id, data(b.id === "base" ? "categories.json" : `bundles/${b.id}/categories.json`)]),
-  );
-  return loadCategories(bundles, files);
-}
+import { data, fixture, realCategories } from "./test/fixtures.ts";
 
 test("parsePool: version 1 only", () => {
   assert.deepEqual(parsePool({ version: 1, questions: [] }), []);
