@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791832534,
-        "narHash": "sha256-0q5hh8+o08u2Eixw7BiOuXfSlkGLGeVcMTlr59NJNIw=",
+        "lastModified": 1791835528,
+        "narHash": "sha256-99Yx2KOgxIb1NMbi9H43y+qJcCuE2z/8D7mHenSYODE=",
         "owner": "rubenmoor",
         "repo": "project-manager",
-        "rev": "a3734a95310b4efe443fc4eb5b59c78cc5979278",
+        "rev": "ac788d6a3569fb694aff350b7f7887dad59c7a0d",
         "type": "github"
       },
       "original": {
