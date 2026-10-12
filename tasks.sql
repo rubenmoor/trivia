@@ -2279,25 +2279,21 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Decisions 26 and 27 answered; D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages (es, en, de); plan 24 noted as launch work; the mode names'' Spanish forms listed for the catalog.', '2026-10-12T00:41:48Z', 165);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (38, 7, 'Content target per player and language (OQ-32)', 590, 'Part 5 of the masterplan (plan 7). OQ-32 asks how many games a new player gets before questions repeat, per launch language, and how good the release pool must be. In S2 the target is decided from an estimate, not a simulation: the simulation (CT-2, `qgen report --simulate`) belongs to S4 (milestone 9) and confirms or corrects the number later. Owner: `plans/16-content-target.md` (CT-1).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (38, 7, 'Content target per player and language (OQ-32)', 590, 'Part 5 of the masterplan (plan 7). OQ-32 asked how many games a new player gets before questions repeat, per launch language, and how good the release pool must be. The gamemaster answered (pm decision 21): no games number; D-52''s 5000 with D-53''s mix per launch language is the target, and CT-2 (`qgen report --simulate`, S4, milestone 9) reports games per player for information only. Owner: `plans/16-content-target.md` (CT-1).
 
-## Depends on
-- Plan 35 "Default mode (OQ-30)": the default joker preset → cards burned per game (12 + Paso + Bájale + Cambiazo + Snipe hits), and whether a preset shifts the age-group window.
-- Plan 37 "Launch languages and Spanish variety (OQ-31)": which languages need a target; whether a translation counts as a full pool.
-- Masterplan part 8 (OQ-37, competitive/co-op), if already answered: burn multiplier per extra player. Not known yet → the decision states the target for solo play and names the multiplier as open.
-- pm decision 1 (per-level counts for D-52''s 5000, stored per D-53) and pm decision 2 (spot-check size and agreement rate, D-56): use their answers if given, else the draft numbers, and say so.
+## Inputs (all answered)
+- Pm decision 21: target = 5000 approved per launch language, D-53''s per-level mix (`authoring/data/targets.json`); no games-per-player bar.
+- Pm decision 26 (plan 37, OQ-31): launch languages Spanish, English, German; later ones (zh-Hans, ru, pt-BR) in milestone 12, on hold, no target now.
+- Game modes (milestone 7, plans 35, 41): no presets, no "default mode". Burns per game only feed CT-2''s information: «Solo o en grupo» and round-robin co-op = 12 + the standard joker set''s burns (3 × Soplo, 1 × each other joker); round-robin competitive ≈ N × that; competitive (timed) ≈ 1 shared question per round, no jokers. The mode never shifts the age-group window.
+- Decision 21''s body used the old Normal-preset estimate; its answer sets no games number, so no corrected decision is needed.
+- Quality bar: D-56 and pm decision 2 (milestone 1), release bar plan 57 (CT-5, pm decision 15). No new numbers here.
 
 ## Tasks
-1. **Prep: estimate and decision** (can start now; only the follow-up waits)
-   - Facts: approved counts per level (1–15) and per age-group window (D-38, `app/data/age-groups.json`) for `base` today (`qgen report`); D-52''s 5000 and D-53''s per-level targets from `authoring/data/targets.json` if present; per-level draw of a game (4 shown, ≥ 1 burned per ladder level, D-22, D-27, D-28, D-31); burns per game from the default preset (plan 35''s draft if not yet decided).
-   - Estimate: games per new player = min over ladder levels of (approved in that level''s window ÷ burns per game at that level), today and at 5000. Throw-away script, deleted after; numbers go in the decision body. Name the bottleneck level.
-   - Options: e.g. ≥ 30 games per new player in every launch language, ≥ 50 in the primary (16''s draft); a lower bar met by 5000 `base`; a target per age group. Recommended first. State that CT-2 in S4 verifies it.
-   - Quality bar: point to D-56 and pm decision 2; no new numbers in 16.
-   - `pm decision add`, then `pm task-pending-decision` on task 2.
-2. **Follow-up: record the answer** (waits on the decision from task 1)
-   - D-entry in `plans/decisions.md` (next free number).
+1. **Prep: estimate and decision** — done (task 191, pm decision 21).
+2. **Record the answer** (task 192; can start now)
+   - D-entry in `plans/decisions.md` (next free number): 5000 per launch language (es, en, de) with D-53''s mix; no games number; CT-2 (S4) reports games per player per mode for information (burns as in "Inputs").
    - OQ-32 moved to "Resolved" in `plans/open-questions.md`.
-   - `plans/16-content-target.md`: "Target" section decided (numbers, per language), "Quality bar" points to D-56; "Where we stand" refreshed; CT-1 `[x]` with a note that CT-2 (S4) confirms it; status no longer stub.
+   - `plans/16-content-target.md`: "Target" decided (5000 × D-53 mix per launch language; whether a translation counts as a full pool follows plan 37''s D-entry, else name it open); "Quality bar" points to D-56 and plan 57 (CT-5); presets / "default mode" wording replaced by the modes; "Where we stand" refreshed; CT-1 `[x]` with a note that CT-2 (S4) reports games per player; status no longer stub.
    - `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
 
 ## Done when
@@ -5986,7 +5982,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:47:47Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (364, 38, 'revise plan 38', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 38, changed; it is quoted below. Bring plan 38 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (364, 38, 'revise plan 38', 'plan', 'done', 1000, '2026-10-12, plan 38 body: decision 21 and 26 answers, modes instead of presets; task 192 can start', 'Plan 7, the plan above plan 38, changed; it is quoted below. Bring plan 38 in line with it
 (`pm plan edit 38 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -6092,7 +6088,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
-- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', NULL, 359);
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:48:46Z', 359);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (365, 39, 'revise plan 39', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 39, changed; it is quoted below. Bring plan 39 in line with it
 (`pm plan edit 39 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -6741,6 +6737,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
 
 Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name es, en, de; plan 24 noted; mode names'' Spanish forms listed.', '2026-10-12T16:48:10Z', NULL, 380);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (382, 38, 'create tasks for plan 38', 'split', 'open', 1000, NULL, 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:48:45Z', NULL, 364);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7254,6 +7252,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (239, 375, '2026-10-12T16:46:30Z', '2026-10-12T16:47:25Z', 'done', NULL, 0, 'e50706ee111571286e33ac17a416e92eeea1d6b5', 'claude-opus-5-5[1m]', 'eee477ad-93be-49aa-984e-e9f589ca416d', 9, 18, 5633, 310588, 36830, 0.46948959999999995, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (240, 363, '2026-10-12T16:47:25Z', '2026-10-12T16:47:53Z', 'done', NULL, 0, '15cdb2d5435fb4ecf5c6d5130ccdcec8f54d36d5', 'claude-opus-5-5[1m]', '6e36a4fc-af0e-4b79-a8bc-8ee531fcd4e9', 4, 8, 2840, 130806, 34330, 0.3576332, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (241, 380, '2026-10-12T16:47:53Z', '2026-10-12T16:48:17Z', 'done', NULL, 0, '3981fc61f463441897c4bab266fa063485c19734', 'claude-opus-5-5[1m]', '3331d6d6-3e74-4090-8381-c9291fc666cc', 6, 12, 2101, 192830, 29494, 0.31658600000000003, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (242, 364, '2026-10-12T16:48:17Z', '2026-10-12T16:48:52Z', 'done', NULL, 0, '8457e06df349c1fa1c9fb24f807f74db6de94bb0', 'claude-opus-5-5[1m]', 'a085c04b-0e56-4330-8945-cef9e1c9514c', 8, 16, 3089, 284387, 33943, 0.3902654, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
