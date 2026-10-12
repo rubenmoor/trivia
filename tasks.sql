@@ -3113,8 +3113,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', '2026-10-12T00:46:59Z', 163);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'done', 1000, '2026-10-11, tasks 186 (engine), 187 (MD-6 UI), 188 (MD-7, prio 380); no new decisions: OQ-30 decisions come from task 184, tasks guard on them', 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', '2026-10-12T00:47:37Z', 164);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (175, 37, 'create tasks for plan 37', 'split', 'open', 1000, NULL, 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', NULL, 165);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (175, 37, 'create tasks for plan 37', 'split', 'done', 1000, '2026-10-11, tasks 189 (facts + decisions), 190 (record answer); no new decisions here: OQ-31 decisions come from task 189, which makes 190 wait on them', 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', '2026-10-12T00:48:07Z', 165);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (176, 38, 'create tasks for plan 38', 'split', 'open', 1000, NULL, 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', NULL, 166);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'open', 1000, NULL, 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3215,6 +3215,31 @@ Work:
 Check: Enter straight through on an existing family save plays today''s game; each preset starts with its joker budget; `?mode=default` presets the toggle; keyboard only and mouse only; `npm run check`.
 
 Done when: checks pass, docs updated.', '2026-10-12T00:47:35Z', NULL, 174);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (189, 37, 'Launch languages: gather facts, write the decisions (OQ-31)', 'work', 'open', NULL, NULL, 'Part 1 of plan 37. Prepare the OQ-31 decision(s); no code, no translation.
+
+- Facts (numbers in the decision body, one-line source each):
+  - Steam language shares: latest Steam Hardware & Software Survey; "Spanish – Spain" and "Spanish – Latin America" are separate store languages
+  - translation cost per language: cost per approved question from `work/*/costs.log` (proxy for translate + re-rate + fact-check + review, 15b) × plan 16 draft (2,000–3,000 per language)
+  - pool flavour: approved/total per bundle (`base`, `colombia`) from `authoring/data/questions.json` (`qgen report` or throw-away script); rough count of Colombian vocabulary in a `base` sample ("bombillo", "crispetas", "carro", "celular" …) to size a neutral-Spanish rewrite
+  - UI: size of the `es` catalog (plan 21) if it exists; LUI work per language (15a)
+- Questions: (a) launch languages: Spanish only (recommended unless facts say otherwise) / Spanish + English / more; (b) Spanish variety: Colombian usage as is under "Spanish – Latin America" / neutral LatAm in `base`, Colombian in `colombia` / neutral + per-variety variants; store languages to tick (LatAm only or Spain too); (c) first post-launch language, if any (decides whether plan 24''s `en` is launch or later work).
+- Each option: what it means for OQ-32 (plan 38, content per language) and D-50 (localized names).
+- `pm decision add`, recommended option first, body = context + facts + trade-offs, ultra-short. Two decisions if one is too big: "Launch languages (OQ-31)" and "Spanish variety (OQ-31)".
+- `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 37).
+- Delete throw-away scripts.
+
+Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:48:02Z', NULL, 175);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (190, 37, 'Launch languages: record the answer (OQ-31, I18N-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 37. Waits for the OQ-31 decision(s) from the previous task.
+
+- D-entry in `plans/decisions.md` (next free D-number).
+- OQ-31 → "Resolved" in `plans/open-questions.md` with the D-number.
+- `plans/15-i18n.md`: "Spanish varieties" decided, launch languages stated, I18N-1 `[x]` with a note; drop "stub" status if the model is settled.
+- `15a`: LUI-5 names the launch languages (or "none beyond es"); `15b`: QT-6 and intro name the target languages (or "after launch"); `15c`: RG-5 checked against the answer.
+- Neutral-Spanish answer: backlog row in `plans/backlog.md` for the `base` rewrite (S4 content work, via pipeline, D-36); no pool edits.
+- Plan 24 "Draft en catalog (LUI-3)": English at launch or first later language → keep, one-line note via `pm plan edit 24 --body` if scope changes; no English planned → say so in plan 24, leave dropping it to the gamemaster (mention in done note).
+- `plans/11-steam.md` open-questions row and `plans/project.md` in sync (S4 exit wording stays with plan 43).
+
+Done when: D-entry exists; OQ-31 resolved; I18N-1 `[x]`; 15/15a/15b name the launch languages; plan 24 checked.', '2026-10-12T00:48:02Z', NULL, 175);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3299,6 +3324,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (68, 172, '2026-10-12T00:46:19Z', '2026-10-12T00:46:40Z', 'done', NULL, 0, 'a0d5a742e3005af028fda69825c387fae521af1c', 'claude-opus-5-5[1m]', '339ea660-fce4-4f46-90f8-5813f68d7d3a', 5, 10, 2010, 131867, 21311, 0.23710140000000002, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (69, 173, '2026-10-12T00:46:40Z', '2026-10-12T00:47:06Z', 'done', NULL, 0, '5f66200134b9f9436ea6e9dbf2bcd90fb6e0b138', 'claude-opus-5-5[1m]', 'a02e603c-8c95-4185-b093-0277c73f4ee6', 4, 8, 1896, 101830, 22211, 0.236006, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (70, 174, '2026-10-12T00:47:06Z', '2026-10-12T00:47:44Z', 'done', NULL, 0, 'ec676d8f4e5438ff656c70a49dbfcc3df48fdb3a', 'claude-opus-5-5[1m]', 'e0933653-8490-4dc1-89ec-6bca68304c7d', 6, 12, 3878, 190531, 30447, 0.35929019999999995, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (71, 175, '2026-10-12T00:47:44Z', '2026-10-12T00:48:13Z', 'done', NULL, 0, '178a84015e665cb1c30f105255077ef004d84334', 'claude-opus-5-5[1m]', '3d7df2a2-5c87-439e-a6ea-99f7bd641a99', 5, 10, 2484, 125504, 20183, 0.2362848, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
