@@ -7198,7 +7198,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:43:39Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (399, 42, 'revise plan 42', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (399, 42, 'revise plan 42', 'plan', 'done', 1000, '2026-10-12, no change: plan 42 still matches masterplan part 9 (changes were game modes only)', 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
 (`pm plan edit 42 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -7310,7 +7310,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
-- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', NULL, 394);
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:43:53Z', 394);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (400, 43, 'revise plan 43', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 43, changed; it is quoted below. Bring plan 43 in line with it
 (`pm plan edit 43 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -8088,6 +8088,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (264, 396, '2026-10-12T17:43:10Z', '2026-10-12T17:43:21Z', 'done', NULL, 0, '18c5b0bd0f31236b83cdbfdaf0b456aee25caeba', 'claude-opus-5-5[1m]', 'f93a4936-be41-4514-b1f6-e7c87f55a0ef', 3, 6, 848, 82981, 27954, 0.25721219999999995, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (265, 397, '2026-10-12T17:43:21Z', '2026-10-12T17:43:33Z', 'done', NULL, 0, '9eda80e55dc1ae09cebf9d6807c2b27c97df440a', 'claude-opus-5-5[1m]', '10640b44-66c3-44dc-8838-62b0dd43f303', 3, 6, 882, 79545, 23886, 0.22466100000000003, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (266, 398, '2026-10-12T17:43:33Z', '2026-10-12T17:43:44Z', 'done', NULL, 0, '1cb12abc9718398458bcce44c3f94b57ce251efe', 'claude-opus-5-5[1m]', 'a7ac0f81-e150-4421-9f24-0f2fec4c28e7', 2, 4, 888, 42807, 22638, 0.2074414, 553875);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (267, 399, '2026-10-12T17:43:44Z', '2026-10-12T17:43:57Z', 'done', NULL, 0, '29ad8a445a4d5108e9d442779fbfde9148adb702', 'claude-opus-5-5[1m]', '9d8e743a-9a4d-4b25-8a74-8d4999bcd9d7', 3, 6, 573, 79292, 23600, 0.21614239999999999, 553875);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
