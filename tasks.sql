@@ -5110,13 +5110,13 @@ Done when (throw-away `node` script, `fetch` shim, server on the temp copy, migr
 - Unavailable joker → `GameError` with its code; PUT failure (server stopped) → readable error, next action after restart persists.
 - Original `state/game.sqlite` checksum unchanged.
 - `npm test`, `npm run check`, `npm run build`, `qgen validate` pass; `nix build .#app`, `result/bin/trivia` on a temp `TRIVIA_STATE` serves `/`, `/data/pool.json`, `/api/save`. No new dependencies.', '2026-10-12T03:27:57Z', '2026-10-12T04:50:12Z', 290);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (299, 50, 'Browser check and test-night decision', 'work', 'open', NULL, NULL, 'Part 3 of plan 50 (PORT-7). Needs "Screens on the engine + switch-over" done; wait otherwise.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (299, 50, 'Browser check and test-night decision', 'work', 'done', NULL, '2026-10-11, no browser tool: no browser check; decision 25 (family test night), close-out task 346 pending on it', 'Part 3 of plan 50 (PORT-7). Needs "Screens on the engine + switch-over" done; wait otherwise.
 
 - If you have a browser tool: play a short game on a temp `TRIVIA_STATE` (never the real `state/`): admin overlay (undo, abandon, joker budget), every joker animation shows; server log shows no `/api/game*`, `/api/players*`, `/api/flags`. Fix what breaks (screens: imports only).
 - Raise a decision "Family test night on the TS engine" (`pm decision add`). Body: what changes for the gamemaster (first `trivia` start migrates to `state/game.json`, `game.sqlite` and `flags.json` kept; reload the page after `qgen export`; rollback: delete `state/game.json`, check out the commit before the switch). Checklist: a full game, every joker, undo, abandon, admin overlay, flag a question and see it in `trivia-authoring`, players list and delete. Options: "test night played fine" (recommended), "problems (listed in the answer)".
 - Add a close-out task in plan 50, pending on that decision (`pm task-pending-decision`): `plans/12-client-engine.md` PORT-7 `[x]` with date; `directory.md` (`lib/engine.ts`, `lib/data.ts`, `/data/`); AGENTS.md "Pool" and README.md (reload after `qgen export`; `trivia` writes `state/game.json`). On "problems": one fix task per problem in plan 50, then raise the decision again.
 
-Done when: the decision and the pending close-out task exist; browser findings (or "no browser tool") in the task note.', '2026-10-12T03:27:57Z', NULL, 290);
+Done when: the decision and the pending close-out task exist; browser findings (or "no browser tool") in the task note.', '2026-10-12T03:27:57Z', '2026-10-12T04:50:43Z', 290);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (300, 51, 'Supply via Node: supply.ts, engine.py, qgen report and start page', 'work', 'open', NULL, NULL, 'Part 1 of plan 51 (PORT-8, D-60). Authoring gets the supply from `app/client/src/engine/selection.ts` through Node instead of `app/server/selection.py`. Follow plan 51, "Supply check via Node", exactly.
 
 Needs: task 74 (`selection.ts`, plan 19) and task 295 (authoring reads `game.json` via `save_file.py`, plan 49) done. If either is still open, stop and say so.
@@ -5491,6 +5491,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen rework --model fable` once.
 - Compare with rework-1 (43 questions, 54 calls, $5.57): approval rate after review 2, cost per question and per approved question (`costs.log`), needs_work reasons left, `/usage` delta. Short note in plan 58.
 - Raise a pm decision: keep Fable for rework (→ default change, RUNBOOK + D-entry update) / drop it / try Fable for batch review (→ new plan).', '2026-10-12T04:12:07Z', NULL, 343);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (346, 50, 'Close-out: PORT-7 docs', 'work', 'open', NULL, NULL, 'Close-out of plan 50 (PORT-7), after the family test night was answered "fine".
+
+- `plans/12-client-engine.md`: PORT-7 `[x]` with date.
+- `directory.md`: `app/client/src/lib/engine.ts`, `lib/data.ts`, the `/data/` route (serves `app/data/` read-only).
+- AGENTS.md "Pool" and README.md: reload the game page after `qgen export`; `trivia` writes `state/game.json` (`game.sqlite`, `flags.json` kept as backups).
+
+On "problems": don''t do this task; add one fix task per problem in plan 50, then raise the decision again.
+
+Done when: the docs above are updated.', '2026-10-12T04:50:41Z', NULL, 299);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5712,6 +5721,24 @@ Options per part
 - Burns: input doesn''t change burns (co-op = 1× solo).
 
 Shell needs (plan 34): (a) nothing beyond the Gamepad API; (b) nothing; (c) LAN server + firewall prompt in Electron main.', NULL, NULL, '2026-10-12T04:44:02Z', NULL, 201, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (25, 'Family test night on the TS engine', 'pending', '["test night played fine", "problems (listed in the answer)"]', 'The game now runs its referee in the browser (TypeScript engine, plan 50, D-69). Before the Python game routes are deleted (plan 51), please play one family test night on it.
+
+What changes for you:
+- First `trivia` start after pulling migrates the save: `state/game.sqlite` (+ `state/flags.json`) → `state/game.json`. The terminal prints a migration line. `game.sqlite` and `flags.json` stay as backups; from then on only `game.json` is written.
+- After `qgen export`, reload the game page (F5): the pool is loaded once per page load.
+- Rollback: stop `trivia`, delete `state/game.json`, `git checkout 7788cb3` (the commit before the switch, task 298 = c345e90), start `trivia`.
+- No browser check was done by an agent (no browser tool); a node check on a copy of the real save passed in task 298.
+
+Checklist:
+- [ ] Players list shows the family; the running game (if any) continues
+- [ ] A full game to level 12
+- [ ] Every joker: hint, skip, skip+purge, easier, category, snipe (animations show)
+- [ ] A wrong answer
+- [ ] Admin overlay: undo, abandon, joker budget
+- [ ] Flag a question, see it in `trivia-authoring`
+- [ ] Delete a (test) player
+
+Answer "problems" with one line per problem.', NULL, NULL, '2026-10-12T04:50:41Z', NULL, 299, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -5903,6 +5930,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (186, 27, '2026-10-12T04:44:16Z', '2026-10-12T04:46:14Z', 'done', NULL, 0, '258814ce836edbb88d87203f1a0e07fe10c101b6', 'claude-opus-5-5[1m]', '34516819-4706-4300-bfe3-2d98d715ef19', 24, 42, 11302, 1011045, 50804, 0.83484900000000006, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (187, 297, '2026-10-12T04:46:14Z', '2026-10-12T04:47:20Z', 'done', NULL, 0, 'c1991ef85c425794e41c9c6eec395553db20ab57', 'claude-opus-5-5[1m]', 'e6c1eb93-5ee1-40f5-be82-70ac64530f63', 15, 28, 6056, 585571, 38647, 0.54752220000000007, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (188, 298, '2026-10-12T04:47:20Z', '2026-10-12T04:50:26Z', 'done', NULL, 0, '7788cb3a2cf7c68392767335386a587a0ad99ce1', 'claude-opus-5-5[1m]', 'e7742b47-da38-4e8f-b916-8a69c02470b5', 27, 52, 17548, 1470932, 62083, 1.1420184, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (189, 299, '2026-10-12T04:50:26Z', '2026-10-12T04:50:48Z', 'done', NULL, 0, 'c345e90a863abf4c3a2f88f4be83b31e86fa8a3a', 'claude-opus-5-5[1m]', '281a44ec-6ff6-4c75-bd7a-bf49dafe62be', 5, 10, 2127, 155189, 28632, 0.3026738, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -5950,3 +5978,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (336, 15);
 INSERT INTO task_decision (task_id, decision_id) VALUES (339, 15);
 INSERT INTO task_decision (task_id, decision_id) VALUES (339, 16);
 INSERT INTO task_decision (task_id, decision_id) VALUES (345, 17);
+INSERT INTO task_decision (task_id, decision_id) VALUES (346, 25);
