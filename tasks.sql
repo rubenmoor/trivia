@@ -215,15 +215,44 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Outcome
 Answers, each recorded in `plans/decisions.md`, to:
 - OQ-29 desktop shell (Electron recommended, Tauri, or browser + local server)
-- OQ-30 default mode: joker presets per difficulty, which levels count as won
+- OQ-30, OQ-37 game modes: settled by the gamemaster, see "Game modes" below
 - OQ-31 launch languages and Spanish variety
 - OQ-32 content target per new player and language
 - OQ-33 price model; who holds the Steamworks account
 - OQ-35 code and content license; whether the pool stays public
-- OQ-37 competitive and couch co-op format and input
 - OQ-45 Freesound API use for a commercial release
-- Gamemaster mode as its own mode, apart from all others: one person, the gamemaster, holds every control (keyboard, mouse, gamepad, switchable at any time); a "configure game" screen with full customization before every game; a gamemaster menu (`Esc`) that allows arbitrary cheats: manage the available jokers, skip a question, replace the current question, …
 Then the S2 tasks that follow from them: MD-5..MD-7, I18N-1, CT-1, PUB-4.
+
+## Game modes
+Five modes; there is no "default mode". Mode names are written in English first; Spanish names follow with i18n.
+- Every mode except gamemaster mode: a question can never be skipped, not even a broken or far too hard one (no free skip, no undo, no joker changes mid-game).
+- Input: gamepads, keyboard and mouse; no phones. Multiplayer modes also offer a "shared keyboard": every player has one dedicated key; pressing it gives that player keyboard and mouse until their turn is done.
+
+### Gamemaster mode
+- One team, one person, the gamemaster, holds every control (keyboard, mouse, gamepad, switchable at any time).
+- A "configure game" screen with full customization before every game.
+- A gamemaster menu (`Esc`) that allows arbitrary cheats: manage the available jokers, skip a question, replace the current question, …
+
+### Alone or as group (es: «Solo o en grupo»)
+- Single-player like gamemaster mode: one player alone, or everyone together as one team; no gamemaster menu, no cheats.
+- The player picks the age group; there is no difficulty selection. One standard joker set, the same for every age group.
+- Customization is possible but discouraged: no configure screen, only a small "Customize game" button on the age group screen.
+- An uncustomized game earns Steam achievements; a customized one doesn''t.
+
+### Round-robin co-op
+- Several players with multiplayer controls take turns answering; they all play together to beat the game.
+- One age group for the whole team; one shared joker set.
+
+### Round-robin competitive
+- Players take turns with multiplayer controls; each player plays their own independent game, with their own jokers.
+- Every player can have their own age group.
+
+### Competitive (timed)
+- Every player has their own track towards victory; all answer the same question at once, each with their own input (gamepad, keyboard, mouse).
+- 30 s to answer; a hint appears every 8 s; no jokers.
+- One age group for everyone. The question''s difficulty is the average of all players'' progress.
+- A wrong answer drops the player out immediately; a player who falls three levels behind drops out too. First to level 12 wins.
+- To decide: what a timeout counts as (stay on the level, or the same as a wrong answer).
 
 ## Constraints
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
