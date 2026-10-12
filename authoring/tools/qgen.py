@@ -773,13 +773,18 @@ def retire(sub, slots, skipped):
     progress.detail(f"  {sub}: retired {', '.join(why)}")
 
 
+def option_key(text):
+    """norm(), or the casefolded text where norm() drops everything (ß, Ø, Cyrillic)."""
+    return norm(text) or unicodedata.normalize("NFKC", text).casefold().strip()
+
+
 def check_question_shape(q):
     problems = []
     if len(q["wrong_answers"]) != 3: problems.append("needs 3 wrong answers")
     if len(q["hints"]) != 3: problems.append("needs 3 hints")
     lo, hi = load_age_groups()["scale"]
     if not lo <= q["difficulty"] <= hi: problems.append("difficulty out of range")
-    if len({norm(o) for o in [q["answer"], *q["wrong_answers"]]}) != 4: problems.append("duplicate options")
+    if len({option_key(o) for o in [q["answer"], *q["wrong_answers"]]}) != 4: problems.append("duplicate options")
     return problems
 
 
@@ -882,9 +887,10 @@ def cmd_translate(args):
         got = {t["id"]: t for t in out["items"]}
         if missing := [q["id"] for q in qs if q["id"] not in got]:
             raise RuntimeError(f"no translation for {', '.join(missing)}")
-        bad = [i for i, t in got.items() if t["travels"] == "yes" and (len(t["wrong_answers"]) != 3 or len(t["hints"]) != 3)]
+        bad = [f"{q['id']}: {'; '.join(p)}" for q in qs if got[q["id"]]["travels"] == "yes"
+               and (p := check_question_shape({**got[q["id"]], "difficulty": q["difficulty"]}))]
         if bad:
-            raise RuntimeError(f"needs 3 wrong answers and 3 hints: {', '.join(bad)}")
+            raise RuntimeError(f"malformed translation: {', '.join(bad)}")
         save_json(d / "translations" / f"{name}.json", {"items": [got[q["id"]] for q in qs]})
         progress.detail(f"  translate: {name}: " + ", ".join(f"{t['id']} {t['travels']}" for t in out["items"]))
 
@@ -903,7 +909,7 @@ def merge_translations(d):
     by_id = {t["id"]: t for t in doc["questions"]}
     merged = set(load_json(d / "merged.json", []))
     away = load_json(d / "not-travelling.json", [])
-    added, waiting = [], []
+    added, waiting, malformed = [], [], []
     for f in sorted((d / "translations").glob("*.json")):
         for t in load_json(f)["items"]:
             i = t["id"]
@@ -918,10 +924,14 @@ def merge_translations(d):
                 waiting.append(i)
                 continue
             old = by_id.get(i)
-            by_id[i] = {"id": i, **{k: t[k] for k in translations.TEXT_FIELDS},
-                        "difficulty": min(hi, max(lo, ratings[i]["difficulty_estimate"])), "status": "draft",
-                        "batch": run, "review": None, "source_hash": translations.source_hash(src[i]),
-                        **({"previous": old["review"]} if old and old.get("review") else {})}
+            new = {"id": i, **{k: t[k] for k in translations.TEXT_FIELDS},
+                   "difficulty": min(hi, max(lo, ratings[i]["difficulty_estimate"])), "status": "draft",
+                   "batch": run, "review": None, "source_hash": translations.source_hash(src[i]),
+                   **({"previous": old["review"]} if old and old.get("review") else {})}
+            if problems := check_question_shape(new):
+                malformed.append(f"{i} ({'; '.join(problems)})")
+                continue
+            by_id[i] = new
             added.append(i)
             merged.add(i)
     doc["questions"] = list(by_id.values())
@@ -930,7 +940,8 @@ def merge_translations(d):
     save_json(d / "not-travelling.json", away)
     rel = translations.path(locale).relative_to(ROOT)
     print(f"merged {len(added)} translation(s) into {rel}; {len(away)} not travelling (not-travelling.json)"
-          + (f"; waiting for rate/factcheck: {', '.join(waiting)}" if waiting else ""))
+          + (f"; waiting for rate/factcheck: {', '.join(waiting)}" if waiting else "")
+          + (f"; malformed, skipped: {', '.join(malformed)}" if malformed else ""))
 
 
 def locale_questions(locale):
