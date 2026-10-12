@@ -48,6 +48,14 @@ Difficulty means "who can answer it", not "how obscure is the fact":
 
 When people of different ages know a thing for different reasons (a cartoon, a game, school), rate it by who can answer it at its easiest. Prefer questions where the players can reason towards the answer over pure memorisation.
 
+Hard questions (11–15) are hard because **fewer people can answer them**, not because the fact is obscure:
+- 11–12: what most adults know or can work out: general culture, the news, the core of school subjects, world-famous books, films and people.
+- 13–14: what a well-read adult knows, or someone who studied the field: a specialist term, the person behind a famous idea, a fact from a field's standard knowledge.
+- 15: what a trivia specialist or an expert knows, and is glad to have been asked.
+- Never make a question hard with a fact nobody could know or reason towards (an exact count in an old poem, the co-director of a lab project, a minor date). Such a question is not a 15, it is a bad question.
+- Hard questions still have fair options: an expert must be able to tell the answer from the wrong ones.
+- Rate it as hard as it really is: a question most adults answer is a 12, even if teens would miss it.
+
 Calibration from the gamemaster, observed with young teens (final level, with the first guess in brackets). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
 - 1: "Escucha: ¿qué instrumento suena?" → la trompeta (guessed 5)
 - 1: WALL·E, the Pixar robot that compacts garbage (guessed 5)

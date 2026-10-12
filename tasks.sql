@@ -2725,14 +2725,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Don''t write the anchors into the house style here.
 
 Done when: prompts updated, decision created and task TASK_4B pending on it; `qgen validate` clean; no batch run.', '2026-10-11T23:50:50Z', '2026-10-11T23:51:05Z', 20);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (34, 13, 'Hard-question guidance in draft.md and house style; propose anchors', 'work', 'open', NULL, NULL, 'First half of "Fixes → Prompts" of plan 13. Hard targets are drafted ~3 levels low; house style''s calibration examples are all at 1–6 and all say "AI guessed too high".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (34, 13, 'Hard-question guidance in draft.md and house style; propose anchors', 'work', 'done', NULL, '2026-10-11, authoring/tools/prompts/house-style.md (hard-question guidance 11–15), authoring/tools/prompts/draft.md (aim at target, ±1 not a habit of rounding down); decision 11 proposes 10 anchors at 9–15, task 32 pending on it; qgen validate errors only on q-0021 licence (pre-existing, plan 26)', 'First half of "Fixes → Prompts" of plan 13. Hard targets are drafted ~3 levels low; house style''s calibration examples are all at 1–6 and all say "AI guessed too high".
 
 - `authoring/tools/prompts/house-style.md`: what makes a question hard on the 1–15 scale (who can answer it: few adults, specialists; not obscure trivia nobody could know).
 - `authoring/tools/prompts/draft.md`: the ±1 tolerance must not become a habit of rounding down; aim at the target, not below it.
 - Anchor candidates: pick ~8 approved questions at 9–15 (spread over levels and broad categories) and propose them with `pm decision add "Difficulty anchors 9–15: are these levels right?" --body …` (id, question, answer, stored level each; options e.g. "levels as proposed" / "corrections in the answer"). Then `pm task-pending-decision 32 <decision id>` so task 32 (writes the anchors in) waits for the answer.
 - Don''t write the anchors into the house style here.
 
-Done when: prompts updated, decision created and task 32 pending on it; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', NULL, 20);
+Done when: prompts updated, decision created and task 32 pending on it; `qgen validate` clean; no batch run.', '2026-10-11T23:51:06Z', '2026-10-12T01:47:52Z', 20);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (35, 13, 'Deficit weights in target_weights()', 'work', 'open', NULL, NULL, 'Part "Aim at gaps" of plan 13 (D-54), first step. Needs plan 12''s targets file and loader (task 25, same decision).
 
 - `target_weights()` in `authoring/tools/qgen.py`: with targets for the batch''s bundle (`load_targets(bundle)`), weight per level = `max(0, target − approved)`; approved = status `approved` in that bundle. Even weights (D-40) when the bundle has no targets or every deficit is 0; the focus-group path (`LEVEL_WEIGHTS`) unchanged.
@@ -4515,6 +4515,20 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - The wheel is the most work (new component, analog input, art) for five jokers that fit a focus column.
 - Keyboard and mouse stay as today in every option.', NULL, NULL, '2026-10-12T00:57:48Z', NULL, 213, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (10, 'q-0021: GFDL-only photo blocks qgen validate', 'pending', '["Gamemaster repicks q-0021''s image in the review tool (/review/q-0021); then task 113 closes", "Set q-0021 to needs_work until plan 26 part 3 replaces it", "Allowlist failures stay a validate warning until part 3; only a missing record is an error"]', 'After the licence migration (task 113), validate errors on q-0021 (approved): its media https://commons.wikimedia.org/wiki/File:Container_Ship.jpg is GFDL 1.2 only, not on the allowlist (D-45). Until fixed, qgen validate and the last step of qgen batch fail. Replacements are picked by the gamemaster, not an LLM. Everything else in task 113 is done and staged.', NULL, NULL, '2026-10-12T01:26:01Z', NULL, 113, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (11, 'Difficulty anchors 9–15: are these levels right?', 'pending', '["levels as proposed", "corrections in the answer"]', 'Proposed anchors for the house style''s calibration section (task 32 writes them in). Approved base questions, spread over 9–15 and broad categories; level = stored difficulty. Scale: 10 = 16-year-old, 12 = most adults, 14 = well-read adult / graduate in the field, 15 = trivia specialists.
+
+- 9 · q-0023 (geografía mundo): ¿Cuál es la capital de Australia? → Canberra
+- 10 · q-0833 (historia): Busto de piedra pintada hallado en 1912 en Amarna, Egipto: ¿a qué reina representa? → Nefertiti
+- 11 · q-0812 (ciencia y matemáticas): Filósofo francés del siglo XVII que popularizó x, y, z para las incógnitas → René Descartes
+- 12 · q-0849 (fútbol): Centrocampista española, campeona del mundo 2023, mejor jugadora del Mundial y Balón de Oro → Aitana Bonmatí
+- 13 · q-1171 (inventos y tecnología): ¿Quién creó la World Wide Web y el HTML? → Tim Berners-Lee
+- 13 · q-0624 (arte y literatura): Estilo de las entradas del metro de París, los carteles de Mucha y las casas de Horta → Art nouveau
+- 14 · q-0814 (ciencia y matemáticas): Los siete puentes de Königsberg, imposible demostrado en 1736 → Leonhard Euler
+- 14 · q-0669 (fiestas y tradiciones): ¿En cuál de estos años febrero NO tuvo día 29? → 1900
+- 15 · q-0604 (Amazonas): Mariposa inofensiva que copia los colores de otra de mal sabor; el truco lleva el apellido de un naturalista inglés → Mimetismo batesiano
+- 15 · q-0221 (comida y bebida): El tempura llegó a Japón hace unos 450 años desde un país europeo. ¿Cuál? → Portugal
+
+Answer "levels as proposed", or list corrections as "q-XXXX: <level>" (and any question to drop or swap).', NULL, NULL, '2026-10-12T01:47:40Z', NULL, 34, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -4621,12 +4635,14 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (103, 98, '2026-10-12T01:40:04Z', '2026-10-12T01:43:52Z', 'done', NULL, 0, 'eda6cf1f3297345e9c9a5799746adedcf86b886d', 'claude-opus-5-5[1m]', 'ded98f99-0eb8-4d46-8ebe-28f69ddcbfa0', 31, 60, 21359, 1705718, 65605, 1.2934036, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (104, 30, '2026-10-12T01:43:52Z', '2026-10-12T01:45:52Z', 'done', NULL, 0, '65dfb685bdafae2d15e62823e834c1280e734cf2', 'claude-opus-5-5[1m]', 'df5fc368-5507-46a6-8436-3202d31b88be', 14, 28, 4501, 472774, 29225, 0.4184868, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (105, 31, '2026-10-12T01:45:52Z', '2026-10-12T01:46:58Z', 'done', NULL, 0, '60dda716d22441137dc4a22602ad4026053b31db', 'claude-opus-5-5[1m]', 'c8081eaf-7d31-4630-969a-fe5be9bd4bc7', 14, 26, 5601, 447069, 30854, 0.4483698, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (106, 34, '2026-10-12T01:46:58Z', '2026-10-12T01:48:01Z', 'done', NULL, 0, '00d812eea32fe2a2577c7851f4eeac7fdef122f8', 'claude-opus-5-5[1m]', 'e20a3efe-c22e-4d41-aaff-61e6033b3606', 15, 28, 5983, 719147, 57040, 0.71992140000000016, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (27, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (28, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (28, 2);
+INSERT INTO task_decision (task_id, decision_id) VALUES (32, 11);
 INSERT INTO task_decision (task_id, decision_id) VALUES (35, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (36, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (44, 1);
