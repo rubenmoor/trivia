@@ -55,7 +55,7 @@ function missing(key: string): string {
     warned.add(key);
     console.warn(`i18n: missing key ${key} (${lang})`);
   }
-  return missing(key);
+  return `⟦${key}⟧`;
 }
 
 function lookup(key: string): unknown {
@@ -91,7 +91,7 @@ export function t(key: TextKey, params?: Params): string {
     const n = params?.n;
     return fill((typeof n === "number" ? p[plurals.select(n)] : undefined) ?? p.other, params);
   }
-  return `⟦${key}⟧`;
+  return missing(key);
 }
 
 /** The lines of a variant entry. Missing → `[⟦key⟧]`. */
