@@ -5564,14 +5564,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D entry for SW-3 (task 320): check it still matches the code; add task 321''s rule: `save_locked` doesn''t fail the action, `lib/engine.ts` adopts the reply and keeps the error (`saveError()`), shown in the error corner until a write succeeds.
 
 Done when: plan 55 "Done when" holds; `npm run check`, `npm run build`, `qgen validate` pass; no new dependencies.', '2026-10-12T15:59:02Z', '2026-10-12T16:03:04Z', 356);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (358, 7, 'write plan: Gamemaster mode (D-73, MD-10..MD-12); align plans 35, 36', 'plan', 'open', 1000, NULL, 'Milestone 7''s Outcome now includes the gamemaster mode as its own mode (D-73, `plans/13-game-modes.md` "Gamemaster mode").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (358, 7, 'write plan: Gamemaster mode (D-73, MD-10..MD-12); align plans 35, 36', 'plan', 'dropped', 1000, 'milestone 7 edit lets pm update the plans', 'Milestone 7''s Outcome now includes the gamemaster mode as its own mode (D-73, `plans/13-game-modes.md` "Gamemaster mode").
 
 - Write a new pm plan "Gamemaster mode (MD-10..MD-12)": mode screen entry, every input for the gamemaster (IN-2/IN-3 action layer, pad included), configure game screen, gamemaster menu with cheats. Engine settings extend `settings` with today''s behaviour as default (old saves unchanged).
 - Its first steps are pm decisions for the gamemaster: the configure screen''s field list and the cheat list (the proposals in plan 13, recommended = as proposed). Implementation tasks wait on them.
 - Bring plans 35 (default mode) and 36 (Reportar pregunta, settings screen) in line: the mode screen (MD-7) lists the gamemaster mode first-class; pending decision 20 covers only the default mode''s Esc menu, not the gamemaster menu. `pm plan edit` only where a body is actually wrong.
 - Priority: by the plan-priority table (user interface / core functionality).
 
-Done when: the new plan exists with D-73''s scope, plans 35/36 don''t contradict D-73.', '2026-10-12T16:08:48Z', NULL, NULL);
+Done when: the new plan exists with D-73''s scope, plans 35/36 don''t contradict D-73.', '2026-10-12T16:08:48Z', '2026-10-12T16:10:55Z', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
