@@ -1687,7 +1687,7 @@ def target_check(locale):
 
 
 def report_simulate(args):
-    """Games per new player (plan 62, CT-2), information only; exit code = D-75's target check."""
+    """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     import engine  # authoring/tools/engine.py: the TS engine under Node (D-60)
     locales = args.locale.split(",") if args.locale else LAUNCH_LOCALES
     all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
@@ -1713,21 +1713,33 @@ def report_simulate(args):
                           "cells": results, "target": checks, "ok": ok}, ensure_ascii=False))
         sys.exit(0 if ok else 1)
     lo, hi = engine_model(results) or (None, None)
-    print(f"games per new player (plan 62, information only, D-75); {args.seeds} seeds per cell, "
-          f"{time.monotonic() - t0:.0f} s")
+    cap = next((r["max_games"] for r in results if r.get("result") == "ok"), None)
+    print(f"games per new player until the first repeat (plan 62, plan 65, information only, D-75); {args.seeds} seeds "
+          f"per cell, each stops at the first game that offers a seen card or after {cap} games; {time.monotonic() - t0:.0f} s")
     print(f"  models: strong = always right; typical = p(right) {lo} at level 1 → {hi} at level 12; "
-          "standard jokers once each at a random level; rr-competitive, timed modelled until MD-8/MD-9")
-    rows = [("locale", "bundles", "mode", "n", "age group", "player", "median", "p10", "bound", "bottleneck")]
+          "standard jokers once each at a random level; rr-competitive (a game = a round), timed modelled until MD-8/MD-9")
+    print("  median/p10/bound: games until the first repeat (bound = min over seeds, strong only); cambiazo: seeds whose "
+          "first repeat was a Cambiazo card; draw: games until a level draw repeats (median/bound); k = the engine's "
+          "fresh games left for a fresh profile (supply outlook), a cross-check of the draw bound")
+    rows = [("locale", "bundles", "mode", "n", "age group", "player", "median", "p10", "bound", "cambiazo", "draw", "k",
+             "first draw repeat")]
     for r in results:
         head = (r["locale"], ",".join(r["bundles"] or []), r["mode"], str(r["players"]), r["age_group"], r["player"])
         if r["result"] != "ok":
             if rows[-1][0] != r["locale"]:
-                rows.append(head[:2] + ("",) * 4 + ("no pool", "", "", ""))
+                rows.append(head[:2] + ("",) * 4 + ("no pool",) + ("",) * 6)
             continue
-        g, b = r["games"], r["bottleneck"]
-        rng = f"{b['lo']}" if b["lo"] == b["hi"] else f"{b['lo']}–{b['hi']}"
-        rows.append(head + (f"{g['median']:g}", f"{g['p10']:g}", str(g["min"]) if r["player"] == "strong" else "–",
-                            f"level {b['level']} (difficulty {rng}): {', '.join(b['dry']) or '–'}"))
+        g, d, b = r["games"], r["draw"], r["repeat"]
+        strong = r["player"] == "strong"
+        if b is None:
+            where = f"none in {cap} games"
+        else:
+            rng = f"{b['lo']}" if b["lo"] == b["hi"] else f"{b['lo']}–{b['hi']}"
+            where = f"level {b['level']} (difficulty {rng}): {', '.join(b['dry']) or '–'}"
+        if d["capped"]:
+            where += f"; {d['capped']} seeds capped"
+        rows.append(head + (f"{g['median']:g}", f"{g['p10']:g}", str(g["min"]) if strong else "–", str(g["cambiazo"]),
+                            f"{d['median']:g}" + (f"/{d['min']}" if strong else ""), str(r["k"]), where))
     widths = [max(len(row[i]) for row in rows) for i in range(len(rows[0]) - 1)]
     for row in rows:
         print("  " + "  ".join(c.ljust(w) for c, w in zip(row, widths)) + "  " + row[-1])
@@ -3277,7 +3289,7 @@ def main():
     rp.add_argument("--run")
     rp.add_argument("--player", help="with --simulate: strong|typical|both (default both)")
     rp.add_argument("--simulate", action="store_true",
-                    help="games per new player on the engine (plan 62, information only); exit 1 if a launch language misses D-75's target")
+                    help="games per new player until the first repeat on the engine (plan 62, plan 65, information only); exit 1 if a launch language misses D-75's target")
     rp.add_argument("--locale", help="with --simulate: comma-separated (default: es,en,de, D-78)")
     rp.add_argument("--bundles", help="with --simulate: comma-separated (default: es every bundle, else base; until RG-5)")
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
