@@ -2900,6 +2900,53 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `/data/` and `/media?url=…` answer as the Python server does (same URLs, same cache file names, `media_missing`), with range requests.
 - The browser game (`trivia`) is unchanged; `npm run check`, `npm run build`, `qgen validate` pass; no new npm dependencies.
 - Steam binding decision asked (answer recorded or its follow-up task queued); decision entry, plan 18, `directory.md`, `19-repo-layout.md`, AGENTS.md, README.md match the code.', '2026-10-12T03:37:23Z', 209);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (55, 8, 'File saves (SW-3)', 470, 'The desktop shell (plan 54) keeps the save in memory; this plan writes it to one JSON file in the user''s config folder, so players and burned questions survive a restart and a crash. A `FileStore` in the client implements plan 49''s `Store` over the preload bridge; Electron''s main process does the file work (atomic write, Windows lock retry, backups). A corrupt or newer-version file is moved to a backup and the game starts fresh with a message. Part 2 of masterplan 8 (S3); owner `plans/18-steam-integration.md` (SW-3). Builds: part 3 (task 211); Steam Auto-Cloud setup: S5 (plan 11 parts, tasks reading this plan''s path).
+
+## Depends on
+- Plan 54 (SW-2): `app/desktop/` (`main.mjs`, `preload.cjs`, origin-checked IPC), `lib/desktop.ts`, store choice in `lib/engine.ts` (`desktop ? MemoryStore : ServerStore`). Tasks 1–2 need its bridge task (plan 54 task 3); task 3 needs its whole-game task (plan 54 task 5).
+- Plan 49 (PORT-4): `Store`, `SaveData`, `emptySave()`, `engine/save.ts` `parseSave`, `lib/store.ts` `ServerStore` (serialized, coalesced writes).
+- Plan 21 (LUI-1): `t()` and the `es` catalog for the messages; plan 22''s `errorText` for `save_locked`. If plan 21 hasn''t landed, Spanish literals marked like their neighbours and a backlog line.
+- A task whose dependency isn''t done stops and says so.
+
+## Decisions taken here
+- **Location** (fixed now; S5''s Auto-Cloud config and the gamemaster''s docs point at it):
+  - Packaged: `app.setPath("userData", <appData>/trivia)` before `ready` (`%APPDATA%\trivia` on Windows, `~/.config/trivia` on Linux and the Deck), independent of the product name the builder sets later. Save: `<userData>/save/game.json`.
+  - Dev (`!app.isPackaged`): `<repo>/state/desktop/game.json` (gitignored; never the browser game''s `state/game.json`).
+  - `TRIVIA_SAVE_DIR` overrides both (every check uses a temp dir).
+  - Temp file `save/game.json.tmp` (same dir, so rename is atomic); backups in `save/backup/`. Auto-Cloud (S5) syncs `save/` non-recursively with pattern `game.json`: temp and backups never sync.
+- **Main is a dumb file store, like the Python server (plan 49):** validation stays in one place, `parseSave` in the client.
+  - `app/desktop/save.mjs` (pure `node:fs`, no Electron import, testable under plain `node`): `makeSaveFile(dir, {rename = fs.rename})` → `{read(), write(text), backup(kind), dropStaleTemp()}`.
+  - `read()` → text or `null` when missing.
+  - `write(text)`: envelope check only (≤ 10 MB, parses to an object with numeric `version`), else `bad_save`; open `.tmp`, write, `fd.sync()`, close, `rename` over `game.json`. `EPERM`/`EBUSY`/`EACCES` → retry 10× / 100 ms, then `save_locked`; the old file stays intact, the `.tmp` is removed.
+  - `backup(kind)` (`corrupt` | `newer`): rename `game.json` → `backup/game-<kind>-<YYYYMMDD-HHMMSS>.json` (suffix `-2`, `-3` on collision); returns the path. Never deletes a backup.
+  - `dropStaleTemp()` at start: a leftover `.tmp` (crash mid-write) is deleted; `game.json` is the truth.
+  - One writer: main queues writes (one in flight); `before-quit` waits for the in-flight write (`preventDefault`, then `app.quit()` again).
+- **Bridge** (plan 54''s `window.trivia`, same origin check): `loadSave(): Promise<string|null>`, `writeSave(text): Promise<void>` (rejects with code `save_locked` | `bad_save`), `backupSave(kind): Promise<string>`. Typed in `lib/desktop.ts`.
+- **`FileStore`** in `lib/store.ts`, next to `ServerStore`, sharing its serialize/coalesce queue (extract a small helper if `ServerStore` has it inline):
+  - `load()`: `null` → `emptySave()`; else `parseSave(JSON.parse(text))`. On failure: kind `newer` when `version` > `SAVE_VERSION`, else `corrupt` (bad JSON, bad shape); `backupSave(kind)` first, then `emptySave()`, and `notice = {kind, path}`. Nothing is written before the backup succeeds; a failed backup throws (the game shows the error and doesn''t overwrite the file).
+  - `parseSave` must tell "newer" apart: if plan 49''s error isn''t typed, add a code (`save_newer`) there.
+  - `save()`: like `ServerStore`; a rejected write throws `GameError("save_locked")`, the in-memory save stays and the next action writes the whole document again (plan 50''s rule).
+  - `flush()`: resolves when the queue is empty; «Salir del juego» awaits it before `desktop.quit()`.
+- **Messages** (catalog keys, `es` first): `save.corrupt` «No se pudo leer la partida guardada. Se guardó una copia en {path} y empieza una partida nueva.», `save.newer` «La partida guardada es de una versión más nueva del juego. …» (same tail), `error.save_locked` «No se pudo guardar. Se intenta de nuevo con la próxima jugada.». Shown once on the start screen (dismissed with `confirm`, plan 44''s action layer if landed, else Enter/click).
+- **Import of the browser save (cheap, so in):** `trivia-desktop --import-save <file>` (also works on the packaged binary): if no `game.json` exists, copy the file in with `write()`''s atomic path (envelope check); if one exists, refuse with a message on stderr and start normally. `parseSave` validates on load as usual. README: one line, plus "or copy `state/game.json` to the save folder".
+- **Decision entry** (next D number): file location per OS + `TRIVIA_SAVE_DIR`, main as dumb store / client validates, temp + backup outside the synced pattern, corrupt/newer → backup + fresh + message, import flag.
+
+## Files
+- New: `app/desktop/save.mjs`.
+- Change: `app/desktop/main.mjs` (userData path, IPC handlers, quit wait, `--import-save`), `app/desktop/preload.cjs`, `app/client/src/lib/desktop.ts`, `lib/store.ts` (`FileStore`), `lib/engine.ts` (store choice, notice), `engine/save.ts` (typed newer error if needed), start screen (notice), Overlay «Salir» (flush), `es` catalog.
+- Docs: `plans/18-steam-integration.md` (SW-3 `[x]`; Steam Cloud bullet: path and pattern), `plans/decisions.md`, `directory.md` (`app/desktop/save.mjs`, `state/desktop/`), README.md (save location, import), `plans/project.md`.
+
+## Tasks to split into
+1. **`save.mjs` + main wiring** (needs plan 54 task 3): `save.mjs`, userData path, IPC `save:load`/`save:write`/`save:backup`, write queue, quit wait, `dropStaleTemp`, `--import-save`; decision entry. Throw-away `node` script on a temp dir: read missing → `null`; write/read round trip byte-equal; injected `rename` failing `EPERM` 3× → ok, always → `save_locked` with old file byte-identical and no `.tmp`; > 10 MB, `[]`, `"x"`, no `version` → `bad_save`; two backups in the same second get distinct names; stale `.tmp` dropped, `game.json` untouched. Import: into an empty dir copies; with an existing save refuses and leaves it identical.
+2. **Bridge, `FileStore`, messages** (needs task 1, plan 49 task 294, plan 50''s `lib/engine.ts`): preload methods, `lib/desktop.ts` types, `FileStore`, store choice, notice on the start screen, catalog keys, flush before «Salir». Check with a throw-away CDP script (plan 54''s pattern) under `trivia-desktop`, `TRIVIA_SAVE_DIR` temp: create a player, answer one question, «Salir» → exit 0; restart → player and burned question there, the game resumes. Garbage `game.json` → backup file with the original bytes, fresh save, `save.corrupt` text on screen; `version: 2` → `save.newer`; read-only `save/` dir (Linux stand-in for a lock) → `save_locked` text, game continues, next action after `chmod u+w` writes. Browser game (`trivia`, temp `TRIVIA_STATE`) unchanged. `npm run check`, `npm run build`.
+3. **Crash test, docs** (needs task 2 and plan 54 task 5): throw-away script: `trivia-desktop` on a temp `TRIVIA_SAVE_DIR`; via CDP drive actions in a loop (or call `store.save` with a padded multi-MB document so writes take time) and `SIGKILL` the Electron main process at random times, ≥ 50 rounds; after each kill `game.json` parses with `parseSave` and equals one of the documents sent, and the next start removes any `.tmp` and loads it. Then the docs in "Files"; SW-3 `[x]` in plan 18 with date and files.
+
+## Done when
+- In `trivia-desktop`, players and burned questions survive a restart, and the kill loop never leaves an unreadable or partial `game.json`.
+- Corrupt and newer-version files end up in `save/backup/` byte-identical, the game starts fresh and says so in Spanish through the catalog.
+- A simulated lock shows `save_locked` without losing the in-memory game; `--import-save` brings a browser save over.
+- The browser game is unchanged; `npm run check`, `npm run build`, `qgen validate` pass; no new dependencies.
+- Plan 18, the decision entry, `directory.md` and README match the code.', '2026-10-12T03:44:11Z', 210);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -4393,13 +4440,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Content: window (fullscreen default, F11 toggle), loads `app/client/dist/` without a server, minimal preload bridge; shell-side resolver for data files and `/media?url=…` (today `app/server/main.py`, `media_cache.py`; see decision 4 on which routes Python keeps); NixOS dev runtime from the flake + `trivia-desktop`.
 - Code under `app/` (D-35, e.g. `app/desktop/`); `directory.md`, `plans/19-repo-layout.md`; owner `plans/18-steam-integration.md`.
 - Done when (for the plan): tasks fit one worker run each; "whole game with media and sound, no Python process" is the last task''s check.', '2026-10-12T00:53:42Z', '2026-10-12T03:37:28Z', 208);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (210, 8, 'write plan: File saves (SW-3)', 'plan', 'open', 680, NULL, 'Write the plan for part 2 of the masterplan (plan 8): `pm plan add 8 "File saves (SW-3)" --priority 470`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (210, 8, 'write plan: File saves (SW-3)', 'plan', 'done', 680, '2026-10-11, pm plan 55; plans/18-steam-integration.md', 'Write the plan for part 2 of the masterplan (plan 8): `pm plan add 8 "File saves (SW-3)" --priority 470`.
 
 - Needs OQ-29 (plan 34, decision "Desktop shell (OQ-29)?"): if pending, make this task pending on it and stop.
 - Needs the Store interface + `SaveData` (task 58, plan "Save document, stores and migration", PORT-4/5): `FileStore` implements that interface; read the plan or, if missing, `plans/12-client-engine.md`.
 - Content: one JSON file in the shell''s user data folder via the bridge; atomic write (temp + rename) + retry for Windows locks; corrupt/newer-version file → backup, fresh start, message through the catalog (plan 21). Save import of `state/game.json` only if cheap, else `plans/backlog.md`.
 - Owner `plans/18-steam-integration.md`.
-- Done-when check: throw-away script kills the shell mid-write; save survives.', '2026-10-12T00:53:42Z', NULL, 208);
+- Done-when check: throw-away script kills the shell mid-write; save survives.', '2026-10-12T00:53:42Z', '2026-10-12T03:44:15Z', 208);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (211, 8, 'write plan: Local builds for Windows and Linux (SW-5, SW-6)', 'plan', 'open', 670, NULL, 'Write the plan for part 3 of the masterplan (plan 8): `pm plan add 8 "Local builds for Windows and Linux (SW-5, SW-6)" --priority 460`.
 
 - Needs OQ-29 (plan 34, decision "Desktop shell (OQ-29)?"): builder follows the answer; if pending, make this task pending on it and stop.
@@ -5108,6 +5155,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: new D entry in `plans/decisions.md` (`app://` protocol and same-URL resolver, no network in the shell, bridge surface, `MemoryStore` until SW-3, dev Electron from nixpkgs); `directory.md` and `plans/19-repo-layout.md` (`app/desktop/`); AGENTS.md "Commands" (`trivia-desktop`); README.md (one line); `plans/project.md`; SW-2 `[x]` in `plans/18-steam-integration.md` with date and files (binding answer recorded, else noted pending).
 
 Done when: plan 54 "Done when" holds; `npm run check`, `npm run build`, `qgen validate` pass; no new npm dependencies.', '2026-10-12T03:38:13Z', NULL, 313);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (319, 55, 'create tasks for plan 55', 'split', 'open', 1000, NULL, 'Split plan 55 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:44:11Z', NULL, 210);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5344,6 +5393,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (145, 209, '2026-10-12T03:35:14Z', '2026-10-12T03:37:37Z', 'done', NULL, 0, '2b3132cb7b697802f3705a1e87b79f96676c4b64', 'claude-opus-5-5[1m]', 'c792cbc9-be69-4735-a369-4df686f005d1', 14, 28, 13755, 797735, 79640, 1.071879, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (146, 313, '2026-10-12T03:37:37Z', '2026-10-12T03:38:21Z', 'done', NULL, 0, '025ce2315d4460324572822c075990b339bd977b', 'claude-opus-5-5[1m]', '01fba085-7a1e-4ad0-ac50-5e54cc09c212', 5, 10, 4922, 162650, 32695, 0.39257, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (147, 44, '2026-10-12T03:38:21Z', '2026-10-12T03:40:35Z', 'done', NULL, 0, '2d6f90fd86050eef9f28475cfb5ae7b0aba372f0', 'claude-opus-5-5[1m]', 'aac2dbad-ed27-4737-bbce-df7d463bfdff', 24, 48, 13816, 1367018, 59000, 1.0219156, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (148, 210, '2026-10-12T03:40:35Z', '2026-10-12T03:44:24Z', 'done', NULL, 0, 'b3688bc382ada66be8d440d9f236756ce8c9bbd2', 'claude-opus-5-5[1m]', 'dd357573-b7b6-4c28-b70f-bb2ddff058f4', 11, 20, 10546, 410868, 48715, 0.6828936000000001, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
