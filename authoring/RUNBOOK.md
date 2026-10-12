@@ -36,6 +36,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
 - Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch` other than a `--bundle` the user named. They exist for the gamemaster's debugging.
 - Create bundles (`qgen bundle new`) or edit any bundle's categories. That is the gamemaster's call.
 - Approve, reject or revise questions that `qgen batch` marked `needs_work`. The gamemaster decides those in the review tool, or asks for `qgen rework`: then run exactly that (with `--batch` only if the user names one), act on the exit code as in step 3, and commit what it prints. The same goes for `qgen tighten` (no arguments) when the gamemaster asks for it.
+- Run `qgen audit --backlog` unless the gamemaster asks for it (with `--slice N` only if they name a size); act on the exit code as in step 3 and commit what it prints.
 
 ## What the batch does (for reference)
 

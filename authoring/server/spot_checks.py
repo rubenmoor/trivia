@@ -31,8 +31,8 @@ def save(data):
 
 
 def audit_of(q):
-    """The audit of a question (work/<batch>/audit/<id>.json), or None."""
-    return q.get("batch") and qgen.load_json(qgen.WORK / q["batch"] / "audit" / f"{q['id']}.json")
+    """The audit of a question: the newest back-audit (plan 57), else work/<batch>/audit/<id>.json; or None."""
+    return qgen.audit_of(q)
 
 
 def record(batch, q, media_changed):

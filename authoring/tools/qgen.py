@@ -15,6 +15,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
+    qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
     qgen rework [--batch <batch>]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
@@ -1469,7 +1470,8 @@ def write_qc(batch, changes=None):
 def qc_trend(pool=None):
     """Markdown table: one column per batch with a spot check or audit (plan 16); [] without any."""
     checks = load_json(layout.SPOT_CHECKS, {}) or {}
-    runs = sorted({*checks, *(p.parent.parent.name for p in WORK.glob("batch-*/audit/q-*.json"))},
+    runs = sorted({*checks, *(p.parent.parent.name for p in [*WORK.glob("batch-*/audit/q-*.json"),
+                                                             *WORK.glob("backaudit-*/audit/q-*.json")])},
                   key=lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0)
     if not runs:
         return []
@@ -2020,7 +2022,11 @@ AUDIT_SCHEMA = {"type": "object", "required": ["verdict", "problems", "severity"
 
 def llm_decisions(run):
     """{id: decision} of `record`'s LLM review per merged question of the run (plan 16): recorded.json;
-    for older runs health.recorded's needs_work and approved for every other question with an llm review."""
+    for older runs health.recorded's needs_work and approved for every other question with an llm review.
+    A back-audit run (plan 57): approved for its ids."""
+    cfg = load_json(WORK / run / "run.json", {}) or {}
+    if cfg.get("mode") == "backaudit":
+        return {i: "approved" for i in cfg["ids"]}
     rec = load_json(WORK / run / "recorded.json")
     if rec is not None:
         return {i: r["decision"] for i, r in rec.items()}
@@ -2058,6 +2064,37 @@ def audits(run):
     return {p.stem: load_json(p) for p in sorted((WORK / run / "audit").glob("q-*.json"))}
 
 
+_backaudits = ((), {})  # (folders with mtimes, index)
+
+
+def backaudit_index():
+    """{id: path} of the back-audits (plan 57), newest run wins; rebuilt only when a run's audit folder changes."""
+    global _backaudits
+    dirs = sorted(WORK.glob("backaudit-*/audit"), key=lambda p: run_number(p.parent.name))
+    key = tuple((p, p.stat().st_mtime_ns) for p in dirs)
+    if _backaudits[0] != key:
+        _backaudits = (key, {f.stem: f for p in dirs for f in sorted(p.glob("q-*.json"))})
+    return _backaudits[1]
+
+
+def audit_path(q):
+    """The question's audit file: the newest back-audit, else its batch's (plan 16); None without."""
+    p = backaudit_index().get(q["id"])
+    if p is None and q.get("batch"):
+        p = WORK / q["batch"] / "audit" / f"{q['id']}.json"
+    return p if p and p.exists() else None
+
+
+def audit_of(q):
+    p = audit_path(q)
+    return load_json(p) if p else None
+
+
+def run_number(name):
+    tail = name.rsplit("-", 1)[-1]
+    return int(tail) if tail.isdigit() else 0
+
+
 def is_major(a):
     return a["verdict"] == "problem" and a["severity"] == "major"
 
@@ -2081,17 +2118,26 @@ def audit_input(q, pool):
 def cmd_audit(args):
     """An independent LLM reader of the run's audit sample (plan 16, prompts/audit.md): one call per
     question into work/<run>/audit/<id>.json. Never changes the pool."""
+    if getattr(args, "backlog", False):
+        return cmd_backaudit(args)
+    if getattr(args, "dry_run", False) or getattr(args, "slice", None) is not None:
+        sys.exit("--slice and --dry-run need --backlog")
     import health  # authoring/tools/health.py (imports qgen)
     run = args.batch or (health.batch_runs() or [None])[-1]
     if run is None or not (WORK / run).is_dir():
         sys.exit(f"no work/{run}/")
+    ids = audit_sample(run)
+    if not ids:
+        return [RuntimeError(f"{run}: no recorded LLM review to audit")]
+    return audit_ids(run, ids, args)
+
+
+def audit_ids(run, ids, args):
+    """Audit the ids not yet audited in work/<run>/audit/."""
     d = WORK / run / "audit"
     d.mkdir(parents=True, exist_ok=True)
     pool = load_json(POOL)["questions"]
     by_id = {q["id"]: q for q in pool}
-    ids = audit_sample(run)
-    if not ids:
-        return [RuntimeError(f"{run}: no recorded LLM review to audit")]
     todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
     system = prompt("house-style", "audit")
     lo, hi = load_age_groups()["scale"]
@@ -2108,6 +2154,75 @@ def cmd_audit(args):
     return parallel(work, todo, args.jobs, "audit", "questions")
 
 
+BACKAUDIT_BATCHES = ("pilot", "first-120", "batch-3", "batch-4", "batch-5", "batch-6", "batch-7")  # before D-56, oldest first
+BACKAUDIT_SLICE = 200
+
+
+def backlog(n):
+    """The next n approved questions from before D-56 without any audit and in no back-audit run, oldest batch first."""
+    taken = {i for p in WORK.glob("backaudit-*/run.json") for i in load_json(p)["ids"]}
+    order = {b: k for k, b in enumerate(BACKAUDIT_BATCHES)}
+    qs = [q for q in load_json(POOL)["questions"] if q["status"] == "approved" and q.get("batch") in order
+          and q["id"] not in taken and audit_path(q) is None]
+    return [q["id"] for q in sorted(qs, key=lambda q: order[q["batch"]])][:n]
+
+
+def cmd_backaudit(args):
+    """`qgen audit --backlog` (plan 57): the audit of the next slice of approved questions from before D-56
+    into work/backaudit-<k>/, then authoring/reports/backaudit-<k>.md. Resumes an unfinished run first.
+    Never changes the pool."""
+    open_runs = sorted((p.parent.name for p in WORK.glob("backaudit-*/run.json") if not load_json(p).get("done")),
+                       key=run_number)
+    if open_runs:
+        run = open_runs[0]
+        ids = load_json(WORK / run / "run.json")["ids"]
+        print(f"Resuming {run}: {len(ids)} question(s)" + (" (--slice ignored)" if args.slice else "") + ".", flush=True)
+    else:
+        ids = backlog(args.slice or BACKAUDIT_SLICE)
+        if not ids:
+            sys.exit("No approved question from before D-56 without an audit.")
+        numbers = [run_number(p.name) for p in WORK.glob("backaudit-*")]
+        run = f"backaudit-{max(numbers, default=0) + 1}"
+        if not args.dry_run:
+            save_json(WORK / run / "run.json", {"mode": "backaudit", "ids": ids,
+                                                "started": datetime.date.today().isoformat()})
+            print(f"Starting {run}: {len(ids)} approved question(s).", flush=True)
+    if args.dry_run:
+        print(f"{run}: {len(ids)} question(s)\n" + " ".join(ids))
+        return []
+    progress.verbose = False
+    errors = audit_ids(run, ids, args)
+    if errors:
+        if not any(isinstance(e, UsageLimit) for e in errors):
+            print(f"\n{len(errors)} error(s). Run `qgen audit --backlog` again.", file=sys.stderr)
+        return errors
+    cfg = load_json(WORK / run / "run.json")
+    save_json(WORK / run / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
+    out = write_backaudit_report(run)
+    major = sum(is_major(a) for a in audits(run).values())
+    print(f"\nDone: {run}: {len(ids)} audited, {major} with a major finding.\n  report: {out.relative_to(ROOT)}\n"
+          f"Commit exactly this:\n  git add {out.relative_to(ROOT)}\n"
+          f"  git commit -m \"{run}: {len(ids)} approved questions audited, {major} major (qgen audit --backlog)\"")
+    return []
+
+
+def write_backaudit_report(run):
+    """authoring/reports/<run>.md of a back-audit run (plan 57); `qgen report --qc <run>` adds its QC section."""
+    cfg = load_json(WORK / run / "run.json")
+    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    ids = cfg["ids"]
+    lines = [f"# {run}", "",
+             f"Made by `qgen audit --backlog` on {datetime.date.today().isoformat()} (plan 57): the audit of approved "
+             "questions from before D-56. Generated file: don't edit by hand.", "",
+             f"- Questions: {len(ids)} ({ids[0]}…{ids[-1]})",
+             "- Batches: " + ", ".join(f"{b} {n}" for b, n in Counter(by_id[i].get("batch") for i in ids if i in by_id).items()),
+             "", *audit_section(run), *qc_section(run)]
+    out = layout.REPORTS / f"{run}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return out
+
+
 def costs(path):
     """Dollar amounts in a costs.log, one per Claude call."""
     return [float(line.split("\t")[1]) for line in path.read_text().splitlines()
@@ -2122,9 +2237,11 @@ def audit_section(run):
     dec = llm_decisions(run)
     by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
     pct = lambda n, of: f"{n} of {of} ({100 * n / of:.0f} %)" if of else "0 of 0"
-    lines = ["## Audit", "", "A second LLM reader of a seeded sample, blind to the review (plan 16, `prompts/audit.md`). "
+    back = run_mode(run) == "backaudit"
+    what = "every question of the slice (plan 57" if back else "a seeded sample (plan 16"
+    lines = ["## Audit", "", f"A second LLM reader of {what}, `prompts/audit.md`), blind to the review. "
              "It changes nothing in the pool; the gamemaster decides its findings in the review tool.", ""]
-    for label, d in [("approved", "approved"), ("needs work", "needs_work")]:
+    for label, d in [("approved", "approved")] + ([] if back else [("needs work", "needs_work")]):
         ids = [i for i in found if dec.get(i) == d]
         lines.append(f"- Major among review {label}: {pct(sum(is_major(found[i]) for i in ids), len(ids))}")
     kinds = Counter(p for a in found.values() for p in a["problems"])
@@ -2138,7 +2255,8 @@ def audit_section(run):
     agree = sum((dec[i] == "approved") == (not is_major(found[i])) for i in both)
     lines.append(f"- Audit/review agreement (both accept or both not): {pct(agree, len(both))}")
     c = costs(WORK / run / "audit" / "costs.log")
-    lines += [f"- Sample: {len(found)} audited of {len(audit_sample(run))}; {len(c)} Claude calls, about ${sum(c):.2f}",
+    lines += [f"- {'Slice' if back else 'Sample'}: {len(found)} audited of {len(dec) if back else len(audit_sample(run))}; "
+              f"{len(c)} Claude calls, about ${sum(c):.2f}",
               "", "Major findings on approved questions:", ""]
     lines += [f"- **{i}**: {', '.join(a['problems']) or 'other'} — {a['notes']} (http://127.0.0.1:8001/review/{i})"
               for i, a in found.items() if is_major(a) and dec.get(i) == "approved"] or ["None."]
@@ -2711,7 +2829,12 @@ def main():
     add("fix", cmd_fix, "opus").add_argument("--check-model", default="sonnet")
     add("research", cmd_research)
     add("record", cmd_record)
-    add("audit", cmd_audit, "opus", run=False).add_argument("--batch", help="default: the newest merged batch")
+    au = add("audit", cmd_audit, "opus", run=False)
+    au.add_argument("--batch", help="default: the newest merged batch")
+    au.add_argument("--backlog", action="store_true",
+                    help="audit the next slice of approved questions from before D-56 (plan 57); only when the gamemaster asks")
+    au.add_argument("--slice", type=int, help=f"with --backlog: questions per slice (default {BACKAUDIT_SLICE})")
+    au.add_argument("--dry-run", action="store_true", help="with --backlog: list the slice's ids, change nothing")
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
     hp = sub.add_parser("health", help="batch health (plan 15)").add_subparsers(dest="action", required=True)

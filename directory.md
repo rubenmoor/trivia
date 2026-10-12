@@ -54,3 +54,4 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `state/` | Game saves and burned questions, `state/game.sqlite` (gitignored) |
 | `media/` | Media cache (gitignored, D-17) |
 | `work/` | Pipeline work files, one folder per run (gitignored) |
+| `work/backaudit-<k>/` | One back-audit slice (plan 57): `run.json` (ids), `audit/<id>.json`, `audit/costs.log` |

@@ -5379,7 +5379,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/decisions.md`: next free D-entry (D-65?): release bar, consequence, back-audit.
 
 Done when: `qgen validate`, `npm run check` clean; `qgen report --qc` shows the release row for the batch-7/batch-8 data present.', '2026-10-12T04:03:22Z', NULL, 335);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (337, 57, 'qgen audit --backlog [--slice N]: backaudit runs, audit_of index, report file', 'work', 'open', NULL, NULL, 'Plan 57 "Back-audit", task 2. Tooling only; no real slice run here (the gamemaster starts slices).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (337, 57, 'qgen audit --backlog [--slice N]: backaudit runs, audit_of index, report file', 'work', 'done', NULL, '2026-10-11, authoring/tools/qgen.py (audit --backlog/--slice/--dry-run, cmd_backaudit, backaudit_index, audit_of, backaudit report), authoring/server/spot_checks.py, RUNBOOK.md, AGENTS.md, README.md, directory.md', 'Plan 57 "Back-audit", task 2. Tooling only; no real slice run here (the gamemaster starts slices).
 
 - `qgen audit --backlog [--slice N]` (default 200, `--dry-run` lists ids): `work/backaudit-<k>/run.json` (`mode: backaudit`, `ids`, `started`) with the next N approved questions without any audit, oldest batch first (pilot → batch-7); resumes an unfinished run first (like `cmd_rework`).
 - One opus call per question, `prompts/audit.md` unchanged, `work/backaudit-<k>/audit/<id>.json`, `costs.log` there. Never changes the pool.
@@ -5387,7 +5387,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `authoring/reports/backaudit-<k>.md`: Audit section (`audit_section` reused); QC section added after the spot check.
 - `authoring/RUNBOOK.md`: one line under "only when the gamemaster asks"; AGENTS.md Commands line for `qgen audit --backlog`; `directory.md` for `work/backaudit-*`.
 
-Done when: `--dry-run --slice 3` lists the right ids (or a scratch-copy run of 3 works, then removed), `qgen validate` clean.', '2026-10-12T04:03:23Z', NULL, 335);
+Done when: `--dry-run --slice 3` lists the right ids (or a scratch-copy run of 3 works, then removed), `qgen validate` clean.', '2026-10-12T04:03:23Z', '2026-10-12T04:06:16Z', 335);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (338, 57, 'Review tool for back-audit runs: run=, audit=flagged, sample=1, record by run membership', 'work', 'open', NULL, NULL, 'Plan 57 "Back-audit", task 3. Needs the previous task (`backaudit-<k>` runs).
 
 - `/review?run=backaudit-<k>&audit=flagged`: major findings, audit notes beside the review''s.
@@ -5670,6 +5670,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (159, 75, '2026-10-12T04:00:13Z', '2026-10-12T04:01:28Z', 'done', NULL, 0, 'e3b72bc26be9129e7641e24a56e60488a79f8a11', 'claude-opus-5-5[1m]', '6642b1dd-098a-4e99-aa3f-a8f48590694e', 18, 36, 6132, 681540, 33291, 0.52542, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (160, 241, '2026-10-12T04:01:28Z', '2026-10-12T04:02:57Z', 'done', NULL, 0, 'e5cd014e704ed828ebf3a2e506114031adf4fd83', 'claude-opus-5-5[1m]', '5fc0c5fc-edaa-4214-8f7f-7f8098d9b05a', 14, 24, 8674, 596394, 52958, 0.7165188, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (161, 335, '2026-10-12T04:02:57Z', '2026-10-12T04:03:47Z', 'done', NULL, 0, 'e69db22d0efcaef7f5ce761d604b53362c14920f', 'claude-opus-5-5[1m]', '2fb3f806-3e46-463f-8ad9-91627510b916', 7, 14, 5162, 229330, 30311, 0.39165000000000005, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (162, 337, '2026-10-12T04:03:47Z', '2026-10-12T04:06:29Z', 'done', NULL, 0, '80c653b395feeb09ea4088404cae4aba5a662115', 'claude-opus-5-5[1m]', '76aef5b0-5582-44cc-bc9c-9d7d6b8d0c4b', 33, 46, 17596, 1385783, 68479, 1.1770926000000002, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
