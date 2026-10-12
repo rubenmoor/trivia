@@ -31,8 +31,6 @@ export type Scope = {
   whileBusy?: boolean;
   /** A letter no scope wants focuses this field and goes into it (Player). */
   text?: () => HTMLInputElement | undefined;
-  /** Temporary: gets the raw key first while on top (Question, Cambiazo; plan 44 task 2). */
-  raw?: (e: KeyboardEvent) => boolean;
 };
 
 export const lastDevice = $state({ current: "keyboard" as Device });
@@ -94,8 +92,6 @@ function keydown(e: KeyboardEvent, first: () => void) {
   if (e.repeat) return;
   first();
   lastDevice.current = "keyboard";
-  const top = stack.at(-1);
-  if (top?.raw?.(e)) return;
   const text = textField(document.activeElement);
   const keys = Object.assign({}, ...stack.map((s) => s.keys ?? {}));
   const intent = toIntent(e, keys, text);

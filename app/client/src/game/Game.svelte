@@ -319,14 +319,6 @@
     return true;
   }
 
-  /** Temporary passthrough to Question and Cambiazo (plan 44, task 2). */
-  function questionRaw(e: KeyboardEvent): boolean {
-    if (busy) return false;
-    if (!questionRef?.dialogOpen() && (e.key === "Escape" || e.key.toLowerCase() === FLAG_KEY.toLowerCase())) return false;
-    questionRef?.key(e);
-    return true;
-  }
-
   // Global: Esc opens the overlay, M flags; under every screen.
   const popGame = pushScope({
     name: "game",
@@ -346,7 +338,6 @@
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
       handle: (a) => onScreen(on, a),
-      raw: on === "question" ? questionRaw : undefined,
     });
   });
 

@@ -6,6 +6,7 @@
   import { gameAction } from "../lib/api";
   import { errorText, reasonText } from "../lib/errors";
   import { t } from "../lib/i18n";
+  import { pushScope, type Action, type Dir, type Keys } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
   import DifficultyDial from "./DifficultyDial.svelte";
@@ -115,7 +116,6 @@
     const r = el.getBoundingClientRect();
     hole = { x: r.left + r.width / 2, y: r.top + r.height / 2, w: r.width, h: r.height };
   });
-  let picker = $state<ReturnType<typeof CategoryPicker>>();
 
   const media = $derived(question.media);
   const src = (url: string | null) => (url ? `/media?url=${encodeURIComponent(url)}` : null);
@@ -251,11 +251,6 @@
 
   // Jokers (09-jokers.md) ------------------------------------------------------------------------
 
-  /** True while a joker dialog, mode or armed token waits: it gets every key, Esc included. */
-  export function dialogOpen() {
-    return mode !== null || armed !== null;
-  }
-
   function disarm() {
     clearTimeout(armTimer);
     armed = null;
@@ -342,42 +337,86 @@
   }
 
   /** Arrow keys move the crosshair over the answers that are left (2×2 grid). */
-  function moveTarget(key: string) {
-    const step = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: 2, ArrowUp: -2 }[key] ?? 0;
+  function moveTarget(dir: Dir) {
+    const step = { right: 1, left: -1, down: 2, up: -2 }[dir];
     for (let i = (target ?? 0) + step; i >= 0 && i < question.answers.length; i += step) {
       if (!question.struck.includes(i)) return void (target = i);
     }
   }
 
-  const JOKER_KEYS: Record<string, JokerName> = Object.fromEntries(TOKENS.map((t) => [t.key.toLowerCase(), t.name]));
+  // Input (lib/input.svelte.ts): A–D/1–4 pick, joker letters, R replay; dialogs and aiming are modal.
   const REPLAY_KEY = t("screen.question.replayKey");
+  const KEYS: Keys = {
+    ...Object.fromEntries(TOKENS.map((t) => [t.key.toLowerCase(), { type: "joker", name: t.name }])),
+    ...Object.fromEntries(LETTERS.map((l, i) => [l.toLowerCase(), { type: "pick", n: i + 1 }])),
+    [REPLAY_KEY.toLowerCase()]: { type: "replay" },
+  };
+  const answer = (a: Action) => (a.type === "pick" && a.n <= question.answers.length ? a.n - 1 : null);
 
-  export function key(e: KeyboardEvent) {
-    const k = e.key.toLowerCase();
-    const i = "abcd".indexOf(k) >= 0 ? "abcd".indexOf(k) : "1234".indexOf(k);
-    const cancel = e.key === "Escape" || e.key === "Backspace";
-    if (mode === "category") return picker?.key(e);
-    if (mode === "skip") {
-      if (cancel) mode = null;
-      else if (e.key === "1") fire({ joker: "skip" });
-      else if (e.key === "2" && jokers?.skip.purge.available) fire({ joker: "skip", purge: true });
-      else return;
-    } else if (mode === "snipe") {
-      if (cancel) mode = target = null;
-      else if (k.length === 1 && i >= 0 && !question.struck.includes(i)) target = i; // keys only aim; Enter shoots
-      else if (e.key.startsWith("Arrow")) moveTarget(e.key);
-      else if ((e.key === "Enter" || e.key === " ") && target !== null) fire({ joker: "snipe", index: target });
-      else return;
-    } else if (armed && cancel) disarm();
-    else if (armed && (e.key === "Enter" || e.key === " ")) fire({ joker: armed });
-    else if (k in JOKER_KEYS) press(JOKER_KEYS[k]);
-    else if (k.length === 1 && i >= 0) tap(i);
-    else if (e.key === "Backspace") unlock();
-    else if (e.key === "Enter" || e.key === " ") submit();
-    else if (k === REPLAY_KEY.toLowerCase()) replay();
-    else return;
-    e.preventDefault();
-  }
+  $effect(() =>
+    pushScope({
+      name: "question",
+      keys: KEYS,
+      handle: (a) => {
+        const i = answer(a);
+        if (a.type === "joker") press(a.name);
+        else if (i !== null) tap(i);
+        else if (a.type === "back") unlock();
+        else if (a.type === "confirm") submit();
+        else if (a.type === "replay") replay();
+        else return false;
+        return true;
+      },
+    }),
+  );
+
+  $effect(() => {
+    const name = armed;
+    if (!name) return;
+    return pushScope({
+      name: "question-armed",
+      handle: (a) => {
+        if (a.type === "back" || a.type === "menu") disarm();
+        else if (a.type === "confirm") fire({ joker: name });
+        else return false;
+        return true;
+      },
+    });
+  });
+
+  // Paso: 1 skip, 2 skip and purge.
+  $effect(() => {
+    if (mode !== "skip") return;
+    return pushScope({
+      name: "question-skip",
+      modal: true,
+      handle: (a) => {
+        if (a.type === "back" || a.type === "menu") mode = null;
+        else if (a.type === "pick" && a.n === 1) fire({ joker: "skip" });
+        else if (a.type === "pick" && a.n === 2 && jokers?.skip.purge.available) fire({ joker: "skip", purge: true });
+        else return false;
+        return true;
+      },
+    });
+  });
+
+  // Francotirador: keys and arrows only aim; Enter shoots.
+  $effect(() => {
+    if (mode !== "snipe") return;
+    return pushScope({
+      name: "question-snipe",
+      modal: true,
+      handle: (a) => {
+        const i = answer(a);
+        if (a.type === "back" || a.type === "menu") mode = target = null;
+        else if (i !== null && !question.struck.includes(i)) target = i;
+        else if (a.type === "navigate") moveTarget(a.dir);
+        else if (a.type === "confirm" && target !== null) fire({ joker: "snipe", index: target });
+        else return false;
+        return true;
+      },
+    });
+  });
 
   /** Long questions shrink one step instead of growing to three lines (10, "Scale"). */
   const long = $derived(question.question.length > 110);
@@ -507,7 +546,6 @@
   {#if shredding}<Shredder name={shredding.name} ondone={shredding.done} />{/if}
   {#if mode === "category" && jokers}
     <CategoryPicker
-      bind:this={picker}
       categories={jokers.category.categories}
       onpick={(subcategory) => fire({ joker: "category", subcategory })}
       oncancel={() => (mode = null)}

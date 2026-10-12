@@ -5,6 +5,7 @@
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types";
   import { t } from "../lib/i18n";
+  import { pushScope, type Dir } from "../lib/input.svelte";
 
   type Group = Jokers["category"]["categories"][number];
 
@@ -41,30 +42,30 @@
   }
 
   /** Arrow keys move the focus over the enabled tiles, row by row. */
-  function move(e: KeyboardEvent) {
+  function move(dir: Dir) {
     const tiles = [...(grid?.querySelectorAll<HTMLButtonElement>("button") ?? [])];
     const at = tiles.indexOf(document.activeElement as HTMLButtonElement);
     const cols = getComputedStyle(grid!).gridTemplateColumns.split(" ").length;
-    const step = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: cols, ArrowUp: -cols }[e.key] ?? 0;
-    for (let i = at < 0 ? 0 : at + step; i >= 0 && i < tiles.length; i += step || 1) {
+    const step = { right: 1, left: -1, down: cols, up: -cols }[dir];
+    for (let i = at < 0 ? 0 : at + step; i >= 0 && i < tiles.length; i += step) {
       if (!tiles[i].disabled) return tiles[i].focus();
-      if (!step) break;
     }
   }
 
-  export function key(e: KeyboardEvent) {
-    if (e.key === "Escape") {
-      e.preventDefault();
-      oncancel();
-    } else if (e.key === "Backspace") {
-      e.preventDefault();
-      back();
-    } else if (e.key.startsWith("Arrow")) {
-      e.preventDefault();
-      move(e);
-    }
-    // Enter and Space press the focused tile natively.
-  }
+  // Esc cancels, Backspace goes back; Enter and Space press the focused tile natively (not handled).
+  $effect(() =>
+    pushScope({
+      name: "cambiazo",
+      modal: true,
+      handle: (a) => {
+        if (a.type === "menu") oncancel();
+        else if (a.type === "back") back();
+        else if (a.type === "navigate") move(a.dir);
+        else return false;
+        return true;
+      },
+    }),
+  );
 </script>
 
 <div class="backdrop">
