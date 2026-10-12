@@ -1849,6 +1849,37 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Decision(s) answered; D-entry exists; OQ-33 resolved; PUB-6 and PUB-11 match the answer and stay S5; parts 7 and 9 can read the consequence from the D-entry.', '2026-10-12T00:43:13Z', 167);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (40, 7, 'Code and content licence (OQ-35)', 290, 'Part 7 of the masterplan (plan 7). The repo is public on GitHub (D-17) but has no `LICENSE`, so today it is "all rights reserved" by default; the question pool (`authoring/data/questions.json`, `app/data/pool.json`, bundles) is public too. OQ-35 asks which licence the code and the questions get, and whether release content (new batches, translations, paid bundles) stays public. The answer is a decision, then a few files. Owner: `plans/17-publishing.md` ("Code and content license", PUB-4). Not legal advice: the decision body names where a professional must check.
+
+## Depends on
+- Plan 39 "Price model and Steamworks account (OQ-33)": its D-entry (paid / free / DLC bundles) changes the trade-off. Task 1 may gather facts before it, but writes the decision only once OQ-33 is answered; if it is still pending, `pm task-pending-decision` task 1 on OQ-33''s decision.
+- Plan 26 "Licence data in the pool": media licences stay per file (CC BY, CC BY-SA, CC0, PD, Freesound CC0/CC BY); the repo licence never covers media. Bundled fonts keep their OFL (`app/client/public/fonts/OFL-*.txt`).
+- Feeds plan "Freesound API for a commercial release (OQ-45)" only indirectly (commercial vs not is plan 39''s).
+
+## Tasks
+1. **Prep: options and recommendation as a pm decision**
+   - Facts (one line each, with source): what "no licence" means on GitHub (ToS lets others view and fork, nothing else); MIT vs GPL-3.0 vs AGPL vs all rights reserved for a paid Steam game (GPL lets anyone rebuild and redistribute the game; MIT lets anyone ship a closed fork); CC BY-SA 4.0 vs CC BY-NC 4.0 vs reserved for the questions (SA/BY allow a competitor to resell the pool; NC blocks commercial reuse but not copying; copyright on short factual questions is thin, the curated set and hints/explanations are the protectable part); AI-generated text and copyright (drafted by Claude, reviewed by a person: protection uncertain, flag for a professional; links to PUB-10).
+   - Pool size today (approved per bundle, `qgen report`), so the decision says what is at stake.
+   - Options (code × questions × repo; one decision, or two if too big: "Licence (OQ-35)" and "Is release content public (OQ-35)"):
+     - code: MIT (recommended if the game is paid: the value is the content, not the code; easy for contributors), GPL-3.0, all rights reserved.
+     - questions: reserved (recommended if paid), CC BY-NC-SA 4.0, CC BY-SA 4.0.
+     - repo: public code + current pool public, release content (new batches, translations, paid bundles) in a private repo or submodule; whole repo public; whole repo private before release.
+   - Each option notes what it means for the build (`nix build .#app`, packaging step reading a private pool), for D-17''s "pool is public", and for existing forks (what is already public stays copyable under whatever was implied).
+   - Recommended option first; body = context + facts + trade-offs, ultra-short. Never contact a lawyer; questions for one go in the body for the gamemaster.
+   - `pm task-pending-decision` on task 2.
+2. **Follow-up: record the answer** (waits for the decision)
+   - D-entry in `plans/decisions.md` (next free D-number); amends D-17 if the pool or release content goes private.
+   - OQ-35 moved to "Resolved" in `plans/open-questions.md`; `plans/11-steam.md` open-questions row and `plans/project.md` kept in sync.
+   - `plans/17-publishing.md`: "Code and content license" section decided; PUB-4 `[x]` with a note once task 3 is done.
+   - If release content goes private: one backlog row in `plans/backlog.md` (private content repo/submodule, how `qgen export` and the build find it, S4/S5); no restructuring here.
+3. **Licence files and mentions** (after task 2)
+   - `LICENSE` at the repo root with the code licence''s full text (or an "all rights reserved" notice).
+   - A separate content licence file if the questions differ from the code (e.g. `LICENSE-content.md`: which paths it covers, i.e. `authoring/data/`, `app/data/`; that media and fonts keep their own licences per file).
+   - `README.md`: short "License" section. `directory.md`: the new file(s).
+   - `nix build .#app` still builds; the packaged `result/` includes the licence file(s) if the chosen licence requires it.
+
+## Done when
+- Decision answered; D-entry exists; OQ-35 resolved; PUB-4 `[x]`; `LICENSE` (and the content licence file, if any) exist and are linked from `README.md` and `directory.md`.', '2026-10-12T00:43:52Z', 168);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2982,9 +3013,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (167, 7, 'write plan: Price model and Steamworks account (OQ-33)', 'plan', 'done', 1000, '2026-10-11, plan 39 (tasks.sql)', 'Write the plan for part 6 of the masterplan (plan 7): `pm plan add 7 "Price model and Steamworks account (OQ-33)" --priority 300`.
 - Owner: `plans/17-publishing.md` ("Steamworks and store").
 - Tasks: prep (Steam fees and payout, comparable prices, paid / free / free + DLC bundles (D-39), person vs company account; consequences for parts 7 and 8; flag where a professional must check), follow-up (D-entry, OQ-33 resolved, PUB-6 and PUB-11 rewritten, still S5).', '2026-10-12T00:38:52Z', '2026-10-12T00:43:15Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (168, 7, 'write plan: Code and content licence (OQ-35)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of the masterplan (plan 7): `pm plan add 7 "Code and content licence (OQ-35)" --priority 290`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (168, 7, 'write plan: Code and content licence (OQ-35)', 'plan', 'done', 1000, '2026-10-11, plan 40 (tasks.sql)', 'Write the plan for part 7 of the masterplan (plan 7): `pm plan add 7 "Code and content licence (OQ-35)" --priority 290`.
 - Owner: `plans/17-publishing.md` ("Code and content license"), PUB-4. Needs part 6''s decision.
-- Tasks: prep (code × questions × repo options; media licences stay per file, plan 26 "Licence data in the pool"), follow-up (D-entry, OQ-35 resolved, PUB-4 `[x]`), then `LICENSE` (+ content licence file) and mentions in `README.md`, `directory.md`.', '2026-10-12T00:38:52Z', NULL, 151);
+- Tasks: prep (code × questions × repo options; media licences stay per file, plan 26 "Licence data in the pool"), follow-up (D-entry, OQ-35 resolved, PUB-4 `[x]`), then `LICENSE` (+ content licence file) and mentions in `README.md`, `directory.md`.', '2026-10-12T00:38:52Z', '2026-10-12T00:43:53Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (169, 7, 'write plan: Competitive and couch co-op format (OQ-37)', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of the masterplan (plan 7): `pm plan add 7 "Competitive and couch co-op format (OQ-37)" --priority 580`.
 - Owners: `plans/13-game-modes.md` ("Competitive mode", "Couch co-op"), `plans/14-input.md` (section 3, IN-7).
 - Tasks: prep (formats: relay, parallel ladders, buzzer; input: hot-seat, controllers, phones; decision notes burn multiplier for part 5 and shell needs for part 1), follow-up (D-entry, OQ-37 resolved, plans 13 and 14 name the format; MD-8, MD-9, IN-6 stay "Later").', '2026-10-12T00:38:52Z', NULL, 151);
@@ -3007,6 +3038,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', NULL, 166);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'open', 1000, NULL, 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:13Z', NULL, 167);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (178, 40, 'create tasks for plan 40', 'split', 'open', 1000, NULL, 'Split plan 40 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:52Z', NULL, 168);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3084,6 +3117,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (61, 165, '2026-10-12T00:41:14Z', '2026-10-12T00:41:58Z', 'done', NULL, 0, '0968f233ac9f95da94c965e1198e22eb10328c78', 'claude-opus-5-5[1m]', '3776f64b-3400-4590-8b1f-1a64005b7825', 10, 20, 4209, 383866, 40750, 0.4870332, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (62, 166, '2026-10-12T00:41:58Z', '2026-10-12T00:42:42Z', 'done', NULL, 0, '1148a7244df7b708b5885735889dbbf4119466fc', 'claude-opus-5-5[1m]', '24a16517-618d-48d3-94d5-c5555b1574f0', 8, 16, 4372, 270184, 31270, 0.39170080000000007, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (63, 167, '2026-10-12T00:42:42Z', '2026-10-12T00:43:22Z', 'done', NULL, 0, 'b0f94409082aa93100f6d9b990f8eb6bade01d83', 'claude-opus-5-5[1m]', 'f179348f-5bc9-4e25-bcae-ce50834388bc', 7, 14, 3366, 220746, 29459, 0.3471972, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (64, 168, '2026-10-12T00:43:22Z', '2026-10-12T00:43:59Z', 'done', NULL, 0, '123481c9aa12a9972eb7256347b740036df3f14d', 'claude-opus-5-5[1m]', 'f97dc7c0-d112-4eba-9593-40bb2c3d7d8e', 8, 16, 3366, 266623, 31133, 0.3697726, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
