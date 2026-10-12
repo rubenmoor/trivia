@@ -6442,7 +6442,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - PUB-1 `[x]` with a note: date, distinct files, replacement count per reason, restriction flag count.
 
 Done when: the table matches the report''s tally and PUB-1 is ticked. Docs only, no code.', '2026-10-12T03:31:45Z', '2026-10-12T03:34:32Z', 304);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (309, 53, 'Server: licence verdicts, licence=replace filter, all-provider search', 'work', 'open', NULL, NULL, 'Server side of plan 53 (PUB-3). Needs plan 52''s `providers.licence_verdict(slot)` (task 306); no classification of its own.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (309, 53, 'Server: licence verdicts, licence=replace filter, all-provider search', 'work', 'done', NULL, '2026-10-12, authoring/server/main.py (licence per slot in with_extras, ex with_candidates; ?licence=replace; search all), authoring/tools/media.py (licence_of, to_replace, find_candidates/fetch_for every= with providers alternating), authoring/server/overview.py (queues.licence_replace). Checked: ?licence=replace → q-0021, q-1100, q-1194 = trivia-media licenses --json; pick on a pool copy gets all LICENCE_FIELDS and the verdict', 'Server side of plan 53 (PUB-3). Needs plan 52''s `providers.licence_verdict(slot)` (task 306); no classification of its own.
 
 - `authoring/server/main.py`: every question in API responses gets `licence`: per picked slot (`media`, `background`) `{"verdict": "ok"|"replace", "reasons": [...]}` from `providers.licence_verdict`; unpicked slots left out. Add it in `with_candidates` (rename if it no longer fits).
 - `GET /api/questions?licence=replace`: questions not `rejected` with at least one slot `replace`; combines with the other filters. Update the docstring API list.
@@ -6452,7 +6452,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Done when:
 - `/api/questions?licence=replace` returns q-0021, q-1100, q-1194; ids match `trivia-media licenses --json`.
-- Throw-away script: a pick via the API on a test copy of the pool gets all `LICENCE_FIELDS` and a verdict in the response.', '2026-10-12T03:32:16Z', NULL, 305);
+- Throw-away script: a pick via the API on a test copy of the pool gets all `LICENCE_FIELDS` and a verdict in the response.', '2026-10-12T03:32:16Z', '2026-10-12T23:29:57Z', 305);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (310, 53, 'UI: licence=replace queue, reasons in MediaPanel, start-page link', 'work', 'open', NULL, NULL, 'UI side of plan 53 (PUB-3), on the server API from the previous task of this plan.
 
 - `authoring/ui/src/lib/types.ts`, `lib/api.ts`: `licence` on `Question`, `licence` in `QuestionFilter`, `all` on the search call.
@@ -12880,6 +12880,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (391, 499, '2026-10-12T23:11:05Z', '2026-10-12T23:20:58Z', 'done', NULL, 0, '523104a5001de7ede0dfbc2564988b9191d6a6f9', 'claude-opus-5-5[1m]', '7adc6e18-4a2c-4885-9d31-0f00e7b2f9bb', 57, 98, 23292, 3678158, 97354, 1.9806955999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (392, 592, '2026-10-12T23:20:58Z', '2026-10-12T23:22:22Z', 'done', NULL, 0, '563477aede50a25587931c22ce68a9f431053f2b', 'claude-opus-5-5[1m]', '8940d24a-1a39-455f-ab34-d63185e34a5a', 21, 42, 6061, 834405, 37402, 0.58748499999999992, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (393, 104, '2026-10-12T23:22:22Z', '2026-10-12T23:28:23Z', 'done', NULL, 0, '9417013e83f54411e1acc39b5de46c9345caef18', 'claude-opus-5-5[1m]', 'bb803849-db21-40d2-94bd-550701fee328', 36, 68, 13771, 1714534, 56405, 1.0698387999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (394, 309, '2026-10-12T23:28:23Z', '2026-10-12T23:30:05Z', 'done', NULL, 0, '3d35b87fbd0ee273febc8b3d00fa3005389430f5', 'claude-opus-5-5[1m]', '0059d461-a68e-46d4-adbe-03b3f97b78bd', 18, 36, 8066, 785845, 45986, 0.686521, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

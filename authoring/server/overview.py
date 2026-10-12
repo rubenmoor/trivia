@@ -4,6 +4,7 @@ from collections import Counter
 
 import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server importable)
 import batches  # authoring/tools/batches.py
+import media  # authoring/tools/media.py
 import media_cache  # app/server/media_cache.py
 import save_file  # authoring/tools/save_file.py
 import engine  # authoring/tools/engine.py: selection.ts under Node (D-60)
@@ -61,6 +62,7 @@ def build(pool, bundles):
             "drafts": sum(q["status"] == "draft" for q in pool),
             "approved_without_media": sum(not q["media"].get("file_url") for q in approved),
             "not_cached": len(not_cached),
+            "licence_replace": sum(media.to_replace(q) for q in pool),
             "bundles": bundle_rows,
         },
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),

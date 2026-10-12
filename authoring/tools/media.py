@@ -19,7 +19,7 @@ files to replace before a public release, grouped by reason (providers.licence_v
 restriction flags for information, and a tally per licence. Skips rejected questions; exits 1
 while the replacement list isn't empty.
 """
-import argparse, json, re, sys
+import argparse, itertools, json, re, sys
 
 import layout  # noqa: F401  (also makes app/server importable)
 from layout import CANDIDATES, SOURCE_POOL as POOL
@@ -66,12 +66,13 @@ def query_variants(query):
     return out
 
 
-def find_candidates(media, category=None):
+def find_candidates(media, category=None, every=False):
     """Up to MAX_CANDIDATES for a question's media, from the providers in order (D-45): each one
     with ever shorter queries until there are ENOUGH; the next provider is only asked while there
-    are fewer. Videos fall back to images. A rate-limited provider is skipped; if that leaves
-    nothing, RateLimited is raised so a rerun retries instead of storing an empty result.
-    `category` is the broad category's slug."""
+    are fewer. `every` (a licence replacement, plans/53): every provider is asked as if it were
+    the first, and the candidates alternate between them. Videos fall back to images.
+    A rate-limited provider is skipped; if that leaves nothing, RateLimited is raised so a rerun
+    retries instead of storing an empty result. `category` is the broad category's slug."""
     kinds = [media["type"]] + (["image"] if media["type"] == "video" else [])
     found, seen, per_author, limited = [], set(), {}, []
 
@@ -85,8 +86,9 @@ def find_candidates(media, category=None):
 
     for kind in kinds:
         for i, provider in enumerate(providers.order(kind, category)):
-            if i and len(found) >= ENOUGH:
+            if i and len(found) >= ENOUGH and not every:
                 break  # the providers before gave enough; spare the others' limits
+            base = len(found) if every else 0
             for query in query_variants(media["query"]):
                 try:
                     results = providers.search(provider, query, kind)
@@ -96,17 +98,27 @@ def find_candidates(media, category=None):
                 for c in results:
                     if acceptable(c, media["role"]):
                         add(c)
-                if kind == "image" and len(found) < MAX_CANDIDATES:  # rather a smaller image than none
+                if kind == "image" and len(found) - base < MAX_CANDIDATES:  # rather a smaller image than none
                     for c in results:
                         if (c["width"] or 0) >= MIN_ESSENTIAL_WIDTH:
                             add(c)
-                if len(found) >= MAX_CANDIDATES:
+                if len(found) >= MAX_CANDIDATES and not every:
                     return found[:MAX_CANDIDATES]
-                if len(found) >= ENOUGH:
+                if len(found) - base >= ENOUGH:
                     break  # good results from this variant; looser ones would add noise
     if not found and limited:
         raise limited[0]
-    return found
+    if every:
+        found = alternate(found)
+    return found[:MAX_CANDIDATES]
+
+
+def alternate(found):
+    """Candidates taking turns by provider, each provider's own order kept."""
+    groups = {}
+    for c in found:
+        groups.setdefault(c["provider"], []).append(c)
+    return [c for row in itertools.zip_longest(*groups.values()) for c in row if c]
 
 
 SLOTS = ("media", "background")
@@ -133,9 +145,9 @@ def category_of(q):
     return c["slug"] if c else None
 
 
-def fetch_for(q, slot="media"):
+def fetch_for(q, slot="media", every=False):
     spec = slot_media(q, slot)
-    found = find_candidates(spec, category_of(q))
+    found = find_candidates(spec, category_of(q), every)
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     data = {"query": spec["query"], "type": spec["type"], "candidates": found}
     candidates_path(q["id"], slot).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -244,6 +256,22 @@ def licence_rows(qs):
                     "provider": s.get("provider"), "source_url": s.get("source_url"), "uses": []}
             row["uses"].append({"id": q["id"], "slot": slot, "status": q["status"]})
     return list(rows.values())
+
+
+def licence_of(q):
+    """{slot: {"verdict", "reasons"}} for each picked slot (plans/53)."""
+    out = {}
+    for slot in SLOTS:
+        s = q.get(slot)
+        if s and s.get("file_url"):
+            verdict, reasons = providers.licence_verdict(s)
+            out[slot] = {"verdict": verdict, "reasons": reasons}
+    return out
+
+
+def to_replace(q):
+    """A question on the licence replacement list: not rejected, some slot `replace` (plans/52)."""
+    return q["status"] != "rejected" and any(v["verdict"] == "replace" for v in licence_of(q).values())
 
 
 def pd_group(reason):

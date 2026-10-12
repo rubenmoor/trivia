@@ -20,7 +20,8 @@ API:
          &subcategory=Pirámides&media=missing      media=missing: no picked media file;
          &sample=1&audit=flagged                   with batch: sample=1 its spot-check sample in order,
                                                    audit=flagged its audited ones with a major finding, plan 16;
-         &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57)
+         &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57;
+         &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
@@ -29,7 +30,8 @@ API:
     POST /api/questions/<id>/bundle                body {"bundle": "<id>"}: move it to another bundle
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
-    POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
+    POST /api/questions/<id>/media/search          body {"query": "...", "slot": ..., "all": bool}: new search term,
+                                                   fetch again; all: ask every provider (a licence replacement)
     GET  /api/spot-checks                          {"size": n, "problems": [...], "checks": authoring/data/spot-checks.json}
     POST /api/spot-checks/<batch>/<id>             body {"media_changed": bool}: record the spot check from the
                                                    question's human review; {"undo": true} removes it (plan 16);
@@ -42,7 +44,8 @@ API:
                                                    source pool, approved or not); downloaded first on a miss
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched) and `audit` (the newest back-audit, else work/<batch>/audit/<id>.json,
-or null; plans 16, 57).
+or null; plans 16, 57) and `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
+(providers.licence_verdict, plan 53).
 """
 import argparse, datetime, json, re, sys, threading
 from http.server import ThreadingHTTPServer
@@ -97,11 +100,12 @@ def update_question(qid, change):
     raise KeyError(qid)
 
 
-def with_candidates(q):
+def with_extras(q):
     found = media.load_candidates(q["id"])
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
-            "background_candidates": bg["candidates"] if bg else None, "audit": spot_checks.audit_of(q) or None}
+            "background_candidates": bg["candidates"] if bg else None, "audit": spot_checks.audit_of(q) or None,
+            "licence": media.licence_of(q)}
 
 
 def slot_of(body):
@@ -133,13 +137,13 @@ def pick_media(qid, index, slot):
     return update_question(qid, lambda q: target(q, slot).update(fields))
 
 
-def search_media(qid, query, slot):
+def search_media(qid, query, slot, every=False):
     query = (query or "").strip()
     if not query:
         raise ValueError("empty search term")
     target(find_question(qid), slot)
     q = update_question(qid, lambda q: target(q, slot).update(query=query))
-    media.fetch_for(q, slot)
+    media.fetch_for(q, slot, every)
     return q
 
 
@@ -268,9 +272,11 @@ class Handler(BaseHandler):
             if query.get("sample") and (group := query.get("batch") or query.get("run")):
                 by_id = {q["id"]: q for q in qs}
                 qs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
+            if query.get("licence") == "replace":
+                qs = [q for q in qs if media.to_replace(q)]
             if query.get("audit") == "flagged":
                 qs = [q for q in qs if (a := spot_checks.audit_of(q)) and is_major(a)]
-            return self.send_json(200, [with_candidates(q) for q in qs])
+            return self.send_json(200, [with_extras(q) for q in qs])
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())
         if url.path == "/api/spot-checks":
@@ -336,10 +342,10 @@ class Handler(BaseHandler):
             elif action == "media":
                 q = pick_media(qid, int(body.get("index", -1)), slot_of(body))
             elif action == "media/search":
-                q = search_media(qid, body.get("query"), slot_of(body))
+                q = search_media(qid, body.get("query"), slot_of(body), body.get("all") is True)
             else:
                 return self.send_json(404, {"error": "not found"})
-            return self.send_json(200, with_candidates(q))
+            return self.send_json(200, with_extras(q))
         except KeyError:
             return self.send_json(404, {"error": f"no question {qid}"})
         except (ValueError, TypeError, AttributeError) as e:
