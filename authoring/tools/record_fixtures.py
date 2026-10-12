@@ -9,6 +9,7 @@ Never touches state/: the game state lives in a temp dir, set before the game mo
 Randomness is a tape: every `random.shuffle` is recorded as {"site", "n", "perm"} (perm[j] = old
 index of the element now at j). Every step has a fixed `now`. Categories and pools are synthetic.
 Every step names its `pool` (a scenario may switch pools, always right before a `new`).
+Soak walks (`soak-<n>`) keep `db` only on every SOAK_DB-th and the last step, for size.
 """
 import argparse, atexit, contextlib, copy, datetime, inspect, json, os, random, shutil, sqlite3, sys, tempfile
 from pathlib import Path
@@ -682,6 +683,113 @@ def errors(rec):
     rec.fail("no_game", "joker", joker="hint")
 
 
+# Soak scenarios: seeded random walks of legal actions (plan 18, "Scenarios") ----------------------
+
+SOAK_ACTIONS = {"get_game", "players", "new", "new player", "pick", "answer right", "answer wrong", "skip",
+                "skip everyone", "undo", "abandon", "jokers", "delete_player", "joker hint", "joker skip",
+                "joker skip purge", "joker easier", "joker category", "joker snipe miss", "joker snipe hit"}
+SOAK_DB = 10
+soak_seen = set()
+
+
+def soak_walk(rec, w, steps):
+    """`steps` actions picked by `w` (not the shuffle tape) from the newest game in the DB and the last view."""
+    names = ["Ana", "Bea", "Carla", "Dani", "Eva", "Fede", "Gabi", "Hugo"]
+    known = []
+
+    def step(action, call, **args):
+        soak_seen.add(action)
+        before = db(rec) if rec.steps else snapshot()
+        rec(call, **args)
+        if rec.steps[-1]["response"]["status"] != 200:
+            assert db(rec) == before, ("an error changed the DB", call, args)
+
+    def new_player():
+        name = names[len(known)]
+        known.append(name)
+        step("new player", "new", player=name)
+
+    def budget():
+        if w.random() < 0.2:
+            return dict(game.CARDS)
+        return {j: w.choice([None, 0, 1, 2, 3]) for j in w.sample(sorted(game.JOKERS), w.randint(1, 3))}
+
+    def jokers_on(state, view):
+        out = []
+        jk = (view or {}).get("jokers") or {}
+        ok = lambda j: jk.get(j, {}).get("available")
+        if ok("hint"):
+            out.append((6, lambda: step("joker hint", "joker", joker="hint")))
+        if ok("skip"):
+            out.append((4, lambda: step("joker skip", "joker", joker="skip")))
+        if jk.get("skip", {}).get("purge", {}).get("available"):
+            out.append((4, lambda: step("joker skip purge", "joker", joker="skip", purge=True)))
+        if ok("easier"):
+            out.append((5, lambda: step("joker easier", "joker", joker="easier")))
+        subs = [s["name"] for g in jk.get("category", {}).get("categories", []) for s in g["subcategories"]
+                if s["available"]]
+        if ok("category") and subs:
+            out.append((5, lambda: step("joker category", "joker", joker="category", subcategory=w.choice(subs))))
+        if ok("snipe"):
+            out.append((5, lambda: step("joker snipe miss", "joker", joker="snipe", index=rec.wrong())))
+            out.append((2, lambda: step("joker snipe hit", "joker", joker="snipe", index=rec.correct())))
+        return out
+
+    new_player()
+    while len(rec.steps) < steps:
+        d = db(rec)
+        g = d["games"][-1] if d["games"] else None
+        state = g["state"] if g else None
+        running = g is not None and g["result"] is None
+        can_undo = g is not None and bool(state.get("undo")) and g["result"] != "abandoned"
+        options = []
+        if can_undo:
+            options.append((3, lambda: step("undo", "undo")))
+        if running and state["phase"] == "question" and state["current"]:
+            options += [(40, lambda: step("answer right", "answer", index=rec.correct())),
+                        (6, lambda: step("answer wrong", "answer", index=rec.wrong())),
+                        (3, lambda: step("skip", "skip")),
+                        (2, lambda: step("skip everyone", "skip", everyone=True)),
+                        (2, lambda: step("jokers", "jokers", jokers=budget()))]
+            options += jokers_on(state, rec.view())
+        elif running:
+            options += [(40, lambda: step("pick", "pick", index=w.randrange(len(state["options"])))),
+                        (2, lambda: step("jokers", "jokers", jokers=budget())),
+                        (1, lambda: step("get_game", "get_game", player=w.choice(known)))]
+        else:
+            options += [(8, lambda: step("new", "new", player=w.choice(known))),
+                        (2, lambda: step("get_game", "get_game", player=w.choice(known + [None]))),
+                        (1, lambda: step("players", "players"))]
+            if len(known) < len(names):
+                options.append((4, new_player))
+            if d["players"]:
+                options.append((1, lambda: step("delete_player", "delete_player",
+                                                name=w.choice(d["players"])["name"])))
+        if running:
+            options += [(1, lambda: step("abandon", "abandon")), (1, lambda: step("new", "new", player=w.choice(known)))]
+        weights, fns = zip(*options)
+        w.choices(fns, weights)[0]()
+
+
+def soak(n, pool="main"):
+    seed = 100 + n
+    steps = random.Random(f"soak-{n}").randint(30, 40)
+
+    def run(rec):
+        walk = random.Random(f"soak-{n}")
+        walk.randint(30, 40)
+        soak_walk(rec, walk, steps)
+        for i, st in enumerate(rec.steps[:-1], 1):  # size (< 2 MB): `db` every SOAK_DB steps and on the last
+            if i % SOAK_DB:
+                del st["db"]
+    scenario(f"soak-{n}", f"Seeded random walk {n}: {steps} legal actions picked from the newest game and the "
+             f"last view (choices from random.Random('soak-{n}'), not the tape).", seed, pool)(run)
+
+
+for _n in range(1, 11):
+    soak(_n, "tight" if _n == 10 else "main")
+
+
 def dumps(obj):
     """Deterministic JSON: sorted keys, one list item (step, question, case) per line."""
     one = lambda x: json.dumps(x, sort_keys=True, ensure_ascii=False)
@@ -710,6 +818,7 @@ def record(out):
             fn(rec)
         write(out / "game" / f"{name}.json",
               {"name": name, "about": about, "seed": seed, "pool": pool, "steps": rec.steps})
+    assert soak_seen >= SOAK_ACTIONS, ("soak walks miss", sorted(SOAK_ACTIONS - soak_seen))
 
 
 def json_files(root):
