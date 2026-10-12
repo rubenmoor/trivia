@@ -4086,7 +4086,7 @@ Done when:
 - Dev browser, DevTools "Slow 4G", large video/image: fade waits for the media, never > 2 s; video/audio start with the fade-in.
 - `/media` 404: fade in after ≤ 2 s, «medio no disponible» notice shows.
 - Text questions and media-free screens fade in as fast as today.', '2026-10-12T00:35:30Z', '2026-10-12T05:27:47Z', 137);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (141, 31, 'Inline missing-media notice, delete Placeholder.svelte, docs', 'work', 'open', NULL, NULL, 'The last `PLACEHOLDER` hits go; the «medio no disponible» chip is a runtime fallback, not unfinished work (plan 31, "Missing media notice").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (141, 31, 'Inline missing-media notice, delete Placeholder.svelte, docs', 'work', 'done', NULL, '2026-10-12, app/client/src/game/Question.svelte (inline .media-missing notice, key screen.question.mediaMissing), Placeholder.svelte deleted, locales/es.ts (placeholder.tag dropped), AGENTS.md, plans/04-ui-tv-display.md, plans/project.md; check, build, check:literals pass; PLACEHOLDER grep empty; missing-media notice not checked in a browser', 'The last `PLACEHOLDER` hits go; the «medio no disponible» chip is a runtime fallback, not unfinished work (plan 31, "Missing media notice").
 
 - `Question.svelte` (~line 420): replace `<Placeholder task="IMG" … chip />` with a plain inline notice, same text, same chip look, no `PLACEHOLDER · …` tag; delete `app/client/src/game/Placeholder.svelte`.
 - Task 95 (LUI-1) overlap: if it ran first, keep the catalog key but rename `placeholder.*` → `question.mediaMissing` (or similar); if not, leave the literal, 95 catalogs it.
@@ -4095,7 +4095,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Done when:
 - `grep -rn PLACEHOLDER app/client/src` is empty; `npm run check`, `npm run build` pass.
-- Missing media file still shows the notice in the dev browser.', '2026-10-12T00:35:30Z', NULL, 137);
+- Missing media file still shows the notice in the dev browser.', '2026-10-12T00:35:30Z', '2026-10-12T05:29:00Z', 137);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (142, 32, 'Audition aid /?efectos with recorded/synth toggle', 'work', 'open', NULL, NULL, 'First task of plan 32, so every later pick can be compared on the TV.
 
 - `app/client/src/game/sound.svelte.ts`: a way to force the synth path, e.g. an optional flag on `sfx(name, { synth: true })` or an exported helper; default behaviour unchanged.
@@ -5939,6 +5939,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (195, 96, '2026-10-12T04:59:32Z', '2026-10-12T05:01:34Z', 'done', NULL, 0, '1d9158ab4ed4b09f24e507fd5c89c54c30335fc4', 'claude-opus-5-5[1m]', 'aaa80109-2ac0-4f88-afbc-605dd67ed274', 21, 38, 12125, 941652, 53601, 0.85979040000000018, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (196, 97, '2026-10-12T05:01:34Z', '2026-10-12T05:25:44Z', 'done', NULL, 0, '9924511415b7f8b776c32fa1ab45ad15535068af', 'claude-opus-5-5[1m]', '58315e57-acf5-4061-8de3-6218099fa47d', 42, 70, 18235, 2642075, 98217, 1.6791310000000004, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (197, 140, '2026-10-12T05:25:44Z', '2026-10-12T05:28:02Z', 'done', NULL, 0, '312ee10c4eaeaea3cd7dd8fe3fda0887a61e494d', 'claude-opus-5-5[1m]', 'f989e314-9cba-4dd3-a105-9dedfdfaba11', 19, 32, 8510, 794683, 49849, 0.72805660000000017, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (198, 141, '2026-10-12T05:28:02Z', '2026-10-12T05:29:13Z', 'done', NULL, 0, '715803c0a7966af8dba7a092ce38c5439fa21409', 'claude-opus-5-5[1m]', 'c797c737-ad98-410b-bbe1-037ef24d0be8', 15, 30, 4573, 477535, 26959, 0.402759, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

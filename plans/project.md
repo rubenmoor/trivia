@@ -17,7 +17,7 @@ The road from today onward: milestones, every open task, every open question. Th
 - **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
 - **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the command names the batch's bundle, `base` by default (D-41).
 - **Next batch:** the first with all of the above; it checks PE-6 and PE-13 at once ([`20`](20-pipeline-efficiency.md), "How to check").
-- **Game:** complete. Server referee in `app/server/game.py`; screens in `app/client/src/game/`. One placeholder left: `PLACEHOLDER(UI-7)` (preloading).
+- **Game:** complete. Server referee in `app/server/game.py`; screens in `app/client/src/game/`. No placeholders left.
 
 ## Milestones
 
@@ -26,7 +26,7 @@ The road from today onward: milestones, every open task, every open question. Th
 | M0 | Foundations: pool, pipeline, review tool, media cache, playable skeleton | 02, 06, 07, 08 | done |
 | M1 | Complete rules: players, per-player burning, gamemaster controls | 03, 05, 02 | done |
 | M2 | Jokers | 09 | done |
-| M3 | Visual design and screen polish | 10, 04 | done (UI-7 preload left) |
+| M3 | Visual design and screen polish | 10, 04 | done |
 | M4 | Sound, music and fireworks | 04, 09 | done (remaining sounds synthesized, fine for now) |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
 | M7 | Game engine in TypeScript | 12 | todo |
@@ -44,7 +44,7 @@ Suggested order: M5 keeps running alongside everything. M10 is small and indepen
 ### Done: M0–M4
 Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-game-flow.md), [`04`](04-ui-tv-display.md), [`05`](05-gamemaster-controls.md), [`06`](06-images.md), [`07`](07-question-generation.md), [`08`](08-review-tool.md), [`09`](09-jokers.md), [`10`](10-visual-design.md), [`19`](19-repo-layout.md). Leftovers:
 
-- [ ] UI-7 follow-up: preload the next screen's media before fading in (`PLACEHOLDER(UI-7)`) — [`04`](04-ui-tv-display.md)
+- [x] UI-7 follow-up: preload the next screen's media before fading in *2026-10-12, plan 31* — [`04`](04-ui-tv-display.md)
 - [~] UI-10 Sound assets: the music loops, whooshes, pops and joker sounds are still synthesized (fine for now, gamemaster 2026-10-06); Kenney.nl CC0 packs are the next source to try — [`04`](04-ui-tv-display.md)
 
 ### M5 — Enough content for game nights

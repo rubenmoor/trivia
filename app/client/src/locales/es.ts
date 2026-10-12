@@ -12,9 +12,6 @@ const es = {
     next: "Seguir",
     home: "Volver al inicio",
   },
-  placeholder: {
-    tag: "PLACEHOLDER · {task}",
-  },
   /** The pool can't fill a game (GF-5). */
   supply: {
     short: "No hay suficientes preguntas para una partida completa ({n} disponibles):",

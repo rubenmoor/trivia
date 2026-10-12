@@ -13,7 +13,6 @@
   import Icon from "./Icon.svelte";
   import JokerFlight from "./JokerFlight.svelte";
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
-  import Placeholder from "./Placeholder.svelte";
   import Shredder from "./Shredder.svelte";
   import Stage from "./Stage.svelte";
   import { duck, mediaVolume, music, sfx, sound } from "./sound.svelte";
@@ -468,7 +467,7 @@
       </div>
     {/if}
     {#if mediaFailed || (!media.file_url && media.type !== "audio")}
-      <Placeholder task="IMG" label={t("screen.question.mediaMissing")} chip />
+      <p class="media-missing">{t("screen.question.mediaMissing")}</p>
     {/if}
   </div>
 
@@ -594,6 +593,15 @@
 </div>
 
 <style>
+  .media-missing {
+    margin: 0;
+    padding: 0.2rem 0.6rem;
+    border: 0.15rem dashed var(--placeholder);
+    border-radius: 0.6rem;
+    color: #ffb8ec;
+    background: rgba(60, 10, 50, 0.55);
+    font-size: 1rem;
+  }
   .question-screen {
     position: absolute;
     inset: 0;
