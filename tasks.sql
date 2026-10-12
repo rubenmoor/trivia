@@ -11920,6 +11920,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Inventory vs. reality: re-run part 1''s inventory idea (`## Part 1` in `code-review.md`) against current `git ls-files`; files added/moved/deleted during milestone 13 (e.g. task 302, part 10 consolidations) → inventory rows updated (deleted → `removed (task N)`, new → added with their part).
 - Every in-scope inventory file appears in its part''s section (finding rows or "no findings"). Missing: short review now if it fits; else `pm task add 83 …` with the exact files, listed under `### Pending`.
 - Every row has a status from plan 72''s set; every part 1 `handed to part N` row has a final status quoted in part N''s section; every duplication candidate has a part 10 status.
+- Linter: `### Linter evaluation` exists in `## Part 10` (`task 616: Part 10: linter for TypeScript, evaluate and adopt if useful`). If adopted: its decision (if a new dependency) and the plan 82 follow-up task that fixes existing issues and drops the baseline → done, or listed under `### Pending`. Missing section → `### Pending` row pointing at task 616.
 - Every `follow-up task N` / `decision N` / `superseded by task N`: check `pm show N` / `pm show dN`.
   - done task → status `fixed (task N)`; dropped → `won''t fix: <drop reason>`
   - answered decision → status of its follow-up task (as above)
@@ -11929,20 +11930,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Throw-away script (not committed) over `code-review.md` prints 0 inventory files unlisted in their part, 0 rows without a valid status.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; plus the lint pass if part 10 adopted one and a commit touches `.ts`/`.svelte`/`.mjs`/`.cjs`.
 - Stage `code-review.md`.', '2026-10-12T23:10:57Z', NULL, 523);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (589, 83, 'Part 11: propose process changes as decisions', 'work', 'open', NULL, NULL, 'Task 2 of `plan 83: Executive summary and close-out (code review part 11)`. Needs task 1''s final `code-review.md`.
 
 ## What
 - Count findings per category across parts (throw-away script over `code-review.md`); pick the repeated ones (e.g. swallowed errors, duplicated constants/copies instead of imports, stale `directory.md`, dead exports, lying comments, tests kept by default, Python↔TS ports drifting).
-- Per systemic cause: what would have prevented it — a rule in `AGENTS.md`, a line in pm''s worker prompt, a cheap local per-commit check (decision 14: CI is local, no GitHub Actions; e.g. `tsc --noUnusedLocals`/`--noUnusedParameters`, a `directory.md` vs. `git ls-files` check, a stale-`PLACEHOLDER(<id>)` check against closed tasks), a recurring review milestone.
+- Per systemic cause: what would have prevented it — a rule in `AGENTS.md`, a line in pm''s worker prompt, a cheap local per-commit check (decision 14: CI is local, no GitHub Actions; e.g. a `directory.md` vs. `git ls-files` check, a stale-`PLACEHOLDER(<id>)` check against closed tasks), a recurring review milestone.
+- No duplicate of part 10''s linter outcome (`### Linter evaluation`, `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful`): lint rules, `tsconfig` flags (`noUnusedLocals`, …) and the lint pass itself are part 10''s, adopted or rejected there. Only gaps it leaves (e.g. Python, non-code checks, docs drift) become decisions here.
 - Before each: `pm decision list --grep <term>` and `pm decision list --answered --grep <term>` → no duplicate of an open or answered decision.
 - One `pm decision add` per change: options with the recommended first; body names the findings (row refs / counts) it would have prevented and its cost per commit.
 - Do NOT edit `AGENTS.md`, `CLAUDE.md`, milestones or pm config (AGENTS.md "Outside pm workers": those are the gamemaster''s).
 - List the decision ids with one line each under `## Part 11` → `### Process decisions` in `code-review.md`.
 
 ## Check
-- `### Process decisions` lists every decision added; `pm show d<id>` shows each with options.
+- `### Process decisions` lists every decision added; `pm show d<id>` shows each with options; none overlaps `### Linter evaluation`.
 - Stage `code-review.md`.', '2026-10-12T23:10:57Z', NULL, 523);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (590, 83, 'Part 11: write the executive summary of code-review.md', 'work', 'open', NULL, NULL, 'Task 3 of `plan 83: Executive summary and close-out (code review part 11)`. Needs tasks 1 (`### Pending`, `### Scans`) and 2 (`### Process decisions`).
 
@@ -11951,7 +11953,8 @@ Replace the `PLACEHOLDER(…)` under `## Executive summary` at the top of `code-
 - Intro paragraph (full sentences): what was reviewed (files, lines, parts 1–10), when, how.
 - Before the review: overall state; systemic causes of drift in worker-written code (per-task local view, copies instead of imports, docs not updated, tests kept by default, Python↔TS ports); worst areas with row references (files/parts with most high/medium findings). Self-critical and factual, no praise padding.
 - Impact: counts fixed / follow-up task / decision / superseded / won''t fix, per severity; notable fixes (high first); bundle size vs. part 1 baseline (`npm run build` output); before/after scan counts from `### Scans`.
-- Pending: open follow-up tasks and decisions (from `### Pending`); remaining risk per area (reviewed only shallowly, superseded, deferred).
+- Linter: one line, adopted or not (which tool / `tsconfig` flags, lint pass in the pre-commit checks or not), with a reference to `### Linter evaluation` in `## Part 10`.
+- Pending: open follow-up tasks and decisions (from `### Pending`, incl. a still-open linter baseline-fix task); remaining risk per area (reviewed only shallowly, superseded, deferred).
 - Process: task 2''s decisions by id, one line each.
 - Length: one or two screens; details stay in the part sections. English. `.md` style per AGENTS.md (bullets; full-sentence intro paragraph allowed).
 
@@ -11962,7 +11965,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## What
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`; plus `nix build .#app` (and `result/bin/trivia` starts on a temp `TRIVIA_STATE`) if `flake.nix`/`flake.lock`/`package-lock.json` changed since milestone 13''s first commit (`git log --oneline -- flake.nix flake.lock package-lock.json` vs. the first `task 5xx` commit of plan 73).
-- Walk milestone 13''s "Done when" item by item (`pm show m13`): every in-scope file reviewed and listed; every finding with a status; summary on top; checks pass.
+- Lint pass, if part 10 adopted one (`### Linter evaluation`): runs over all three trees with no issues and no baseline file left; it is in the pre-commit checks of `AGENTS.md` and the pm worker prompt. Else the plan 82 baseline-fix task is listed under `### Pending`.
+- Walk milestone 13''s "Done when" item by item (`pm show m13`): every in-scope file reviewed and listed; every finding with a status; summary on top; linter evaluated; checks pass.
 - `code-review.md` listed in `directory.md`; `grep -n PLACEHOLDER code-review.md` → none left (markers quoted as findings in code spans are fine if clearly quoted, not open ones).
 - Anything not met → `pm task add 83 …` with the exact gap, or a row under `## Part 11` → `### Pending`; the executive summary''s Pending part says so (edit it if needed).
 
@@ -12494,8 +12498,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:44:45Z', NULL, 615);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (618, 83, 'create tasks for plan 83', 'split', 'open', 1000, NULL, 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:45:19Z', NULL, 605);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (618, 83, 'create tasks for plan 83', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 588-591 aligned with revised plan 83 (linter evaluation check, no duplicate of linter outcome in process decisions, linter line in summary, lint pass in final checks); no decisions needed now', 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:45:19Z', '2026-10-12T23:46:01Z', 605);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13546,6 +13550,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (418, 604, '2026-10-12T23:43:23Z', '2026-10-12T23:43:57Z', 'done', NULL, 0, '673a98aa0e01f457fad2030fde4b4098df1bd748', 'claude-opus-5-5[1m]', 'd8d3eede-6505-4f35-8c22-bf691c8d0655', 6, 12, 3396, 218855, 35744, 0.397691, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (419, 615, '2026-10-12T23:43:58Z', '2026-10-12T23:44:59Z', 'done', NULL, 0, '9df565348796a079597a5f36c2f39b7ffb207c46', 'claude-opus-5-5[1m]', '71053503-b360-4244-9f16-844e986c920e', 13, 26, 5831, 587680, 43962, 0.58595599999999992, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (420, 605, '2026-10-12T23:45:00Z', '2026-10-12T23:45:27Z', 'done', NULL, 0, '1d86ed35657f9c6ddb39f80b8bc2782018356e31', 'claude-opus-5-5[1m]', 'b68e736a-4b2e-443f-914e-58cf8efa256e', 5, 10, 2917, 153556, 29018, 0.3212352, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (421, 618, '2026-10-12T23:45:28Z', '2026-10-12T23:46:08Z', 'done', NULL, 0, '161c599aee90edd2266693e6dfaf634c3d9c11c8', 'claude-opus-5-5[1m]', '4cb11fa8-7979-47d2-bd45-2a99e48344f1', 6, 12, 4439, 172880, 26943, 0.338948, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
