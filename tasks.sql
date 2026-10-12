@@ -4100,8 +4100,80 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` for tasks 236 (record the result) and 237 (close-out) on `did`.
 
 Done when: the section exists, the decision is pending, tasks 236 and 237 wait for it.', '2026-10-12T01:07:16Z', NULL, 221);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (239, 9, 'create tasks for plan 9', 'split', 'open', 1000, NULL, 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:09:32Z', NULL, 9);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (239, 9, 'create tasks for plan 9', 'split', 'done', 1000, '2026-10-11, tasks 240–251 (plan-writing for parts 1–12); task 241 waits on decision 2', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:09:32Z', '2026-10-12T01:10:59Z', 9);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (240, 9, 'write plan: Simulation: games per new player (CT-2)', 'plan', 'open', 490, NULL, 'Write the plan for part 1 of the masterplan (plan 9): `pm plan add 9 "Simulation: games per new player (CT-2)" --priority 570`.
+
+- Needs the answers to OQ-32 (plan 38, tasks 191/192), OQ-30 (plan 35, tasks 184/185), OQ-37 (plan 41, tasks 201/202) and OQ-31 (plan 37, tasks 189/190). Any of those decisions still pending: `pm task-pending-decision <this task> <its id>` for each, stage nothing, stop. Task priority 490 puts this after all four decision tasks.
+- Needs the TS engine (plans 19, 20) and group windows + bundle filter (plan 27): if their code isn''t done, write against their plans and name the dependency; no second referee in Python; the plan decides the small Node adapter if needed.
+- Content: `qgen report --simulate [--locale] [--bundles] [--age-group] [--preset] [--players] [--seeds]`; median, 10th percentile, strong-player bound, bottleneck level/subcategory; pass/fail per launch language, default bundle set, every age group; exit 1 on fail.
+- Owner `plans/16-content-target.md` ("Metric"); feeds parts 9 and 12.', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (241, 9, 'write plan: Release quality bar and back-audit (CT-5)', 'plan', 'open', 610, NULL, 'Write the plan for part 2 of the masterplan (plan 9): `pm plan add 9 "Release quality bar and back-audit (CT-5)" --priority 640`.
+
+- Waits for decision 2 (D-56''s spot-check size and agreement rate); linked by task 239. Task priority 610 puts this after plan 16''s tasks (46, 47, 49), which build `qgen audit` and the spot-check tooling.
+- Content: release bar = D-56''s numbers, or stricter (then a pm decision with a recommendation); error limit and what happens to a batch above it; back-audit of the pre-D-56 approved pool in slices through `qgen` (gamemaster asks, like `qgen rework`), findings → `/review?audit=flagged`; cost estimate from `costs.log` first, as a pm decision before the full run.
+- Owner `plans/16-content-target.md` ("Quality bar").', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (242, 9, 'write plan: Translation layout and schema (QT-1, I18N-3)', 'plan', 'open', 490, NULL, 'Write the plan for part 3 of the masterplan (plan 9): `pm plan add 9 "Translation layout and schema (QT-1, I18N-3)" --priority 890`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- OQ-31 = Spanish only: `pm task drop <this task> "OQ-31: Spanish only"`.
+- Content: draft preference A (`authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` → `stale`); `translatable: false` on sources; translated category/subcategory/bundle names; `qgen export` → `app/data/pool.<locale>.json` + names (D-35); `qgen validate` checks; D-entry for the layout.
+- After plan 26 (licence fields, priority 900), which also changes pool fields.
+- Owner `plans/15b-question-translation.md` ("Storage"), `plans/15-i18n.md` (I18N-3).', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (243, 9, 'write plan: Spanish variety (neutral Spanish)', 'plan', 'open', 490, NULL, 'Write the plan for part 8 of the masterplan (plan 9): `pm plan add 9 "Spanish variety (neutral Spanish)" --priority 690`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- OQ-31 keeps Colombian Spanish: `pm task drop <this task> "OQ-31: Colombian Spanish stays"`.
+- Content: a `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review and D-56''s QC; `colombia` keeps its wording; prompt drafted, approved by the gamemaster (pm decision); RUNBOOK + D-36 amended. The runs go to part 11.
+- Owner `plans/15-i18n.md` ("Spanish varieties").', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (244, 9, 'write plan: Translation pipeline (QT-2, QT-3)', 'plan', 'open', 480, NULL, 'Write the plan for part 4 of the masterplan (plan 9): `pm plan add 9 "Translation pipeline (QT-2, QT-3)" --priority 700`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- OQ-31 = Spanish only: `pm task drop <this task> "OQ-31: Spanish only"`.
+- Needs part 3''s plan ("Translation layout and schema"): build on its layout; if it was dropped or isn''t written, stop the same way on its task.
+- Content: `translate --to L` → `rate --locale L` → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge; only approved, translatable sources; `costs.log`; entry point `qgen batch --translate L`; RUNBOOK + D-36 amended; new prompts drafted, approved by pm decision.
+- Owner `plans/15b-question-translation.md` ("Pipeline").', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (245, 9, 'write plan: Review tool for translations (QT-4)', 'plan', 'open', 470, NULL, 'Write the plan for part 5 of the masterplan (plan 9): `pm plan add 9 "Review tool for translations (QT-4)" --priority 400`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- OQ-31 = Spanish only: `pm task drop <this task> "OQ-31: Spanish only"`.
+- Content: `/review?batch=…&locale=L` with source and translation side by side; same verdicts; media with visible text flagged per locale; blind spot-check sample mode per locale (reuse plan 16''s, task 47); stats pages filter by locale. `authoring/ui`, `authoring/server`.
+- Owner `plans/15b-question-translation.md` ("Review tool").', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (246, 9, 'write plan: Language setting and per-locale pool (I18N-2)', 'plan', 'open', 470, NULL, 'Write the plan for part 6 of the masterplan (plan 9): `pm plan add 9 "Language setting and per-locale pool (I18N-2)" --priority 480`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- OQ-31 = Spanish only: `pm task drop <this task> "OQ-31: Spanish only"`.
+- Builds on plan 36 (settings screen, task 188) and part 3''s export (`pool.<locale>.json` + names).
+- Content: UI and question language in `SaveData`, default from `navigator.language`; on the settings screen; engine loads the locale''s pool; burns by id; names from the locale; supply check per locale. Family: `es` fixed, gamemaster mode unchanged.
+- Owner `plans/15-i18n.md` ("Model").', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (247, 9, 'write plan: UI catalogs for the launch languages (LUI-4, LUI-5)', 'plan', 'open', 470, NULL, 'Write the plan for part 7 of the masterplan (plan 9): `pm plan add 9 "UI catalogs for the launch languages (LUI-4, LUI-5)" --priority 390`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- OQ-31 = Spanish only: `pm task drop <this task> "OQ-31: Spanish only"`.
+- Builds on plans 21, 23, 24 (`t()`, `xx`, draft `en`) and plan 45 (gamepad glyphs).
+- Content: LUI-4 joker keys per language or neutral (pm decision with a recommendation); LUI-5 catalog per launch language, joker names per language (pm decision per joker, like plan 24), fonts, `xx` length check, `/comodines` per language, native-speaker playtest (checklist + pm decision "playtest passed?"). LUI-6 is S5: note it in 15a, don''t plan it.
+- Owner `plans/15a-ui-translation.md`.', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (248, 9, 'write plan: Cost, budget and generation plan by gap (CT-3, CT-4)', 'plan', 'open', 470, NULL, 'Write the plan for part 9 of the masterplan (plan 9): `pm plan add 9 "Cost, budget and generation plan by gap (CT-3, CT-4)" --priority 560`.
+
+- Needs part 1''s plan (simulation, its bottleneck output): if its task is pending or open, stop the same way on it. Reuse plans 12 (`targets.json`, D-53) and 13 (gap-aimed drafting, D-54); no new mechanism if theirs covers it.
+- Content: cost per approved and per translated question from `costs.log` (translated: from part 11''s pilot); release budget per language as a pm decision before full runs; simulation bottlenecks → targets per language/age group in `authoring/data/targets.json`, read by `draft` and `--translate`.
+- Owner `plans/16-content-target.md` ("Cost").', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (249, 9, 'write plan: Regional packs (RG-3..RG-5)', 'plan', 'open', 280, NULL, 'Write the plan for part 10 of the masterplan (plan 9): `pm plan add 9 "Regional packs (RG-3..RG-5)" --priority 300`.
+
+- Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
+- Needs OQ-33 (plan 39: task 193 writes the decision, 194 records it; DLC or free). Still pending: link it the same way and stop. Task priority 280 puts this after task 194 (300).
+- OQ-46 (`colombia` subcategories, `plans/open-questions.md`): answered first or folded into RG-5''s decision.
+- Content: mark RG-3 (= BN-6, plan 27, + part 1''s `--bundles`) and RG-4 (= BN-11, done); RG-5 pm decision with a recommendation (which packs launch, default on per language, is `colombia` translated); new bundles via `qgen bundle new`, taxonomy approved by the gamemaster; batches go to part 11.
+- Owner `plans/15c-regional-questions.md`, `plans/22-bundles.md`.', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (250, 9, 'write plan: Release content runs', 'plan', 'open', 270, NULL, 'Write the plan for part 11 of the masterplan (plan 9): `pm plan add 9 "Release content runs" --priority -110`.
+
+- Needs the plans of parts 4, 8 and 10 (their `qgen batch` modes) and part 9''s plan (budget, targets): write against those that exist; a dropped part means no runs for it.
+- Content: translation pilot per language (QT-5: 50 questions, reject rate and cost, go/no-go pm decision; task priority -90), full translation per language (QT-6), neutral Spanish runs, regional pack batches, `base` top-ups where the simulation fails after milestone 1''s 5000; each batch followed by D-56''s QC (`authoring/QC.md`), native-speaker spot checks for translations (sample + pm decision "spot check done?"). Full runs after plan 17''s batch runs.
+- Workers only run `qgen batch` (D-36).', '2026-10-12T01:10:56Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (251, 9, 'write plan: S4 close-out', 'plan', 'open', 260, NULL, 'Write the plan for part 12 of the masterplan (plan 9): `pm plan add 9 "S4 close-out" --priority -130`.
+
+- Last part; write it after the other parts'' plans exist (or were dropped).
+- Content: `qgen report --simulate` passes for every launch language, result recorded in `plans/16-content-target.md`; `plans/11-steam.md` S4 row done; statuses and tasks in 15, 15a, 15b, 15c, 16; `plans/project.md`, `plans/README.md`; notes in the masterplans of milestones 10–11 (plans 10, 11) if S4 changed their scope (store languages, DLC packs, install size).', '2026-10-12T01:10:57Z', NULL, 239);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4212,6 +4284,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (88, 220, '2026-10-12T01:05:52Z', '2026-10-12T01:06:28Z', 'done', NULL, 0, '708739fdb6ab6142131fd60fd5a244fbc0368e10', 'claude-opus-5-5[1m]', 'd9401651-6429-4bd8-aa1e-804203465ead', 6, 12, 3824, 189406, 29308, 0.3488732, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (89, 221, '2026-10-12T01:06:28Z', '2026-10-12T01:07:25Z', 'done', NULL, 0, 'f7a29de95ea702b1946f47f6b8d5b37b80b8b4a6', 'claude-opus-5-5[1m]', 'd1ee0391-da39-4384-8cfb-dbffd1cbd0af', 9, 18, 6106, 310040, 32612, 0.44509600000000005, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (90, 9, '2026-10-12T01:07:26Z', '2026-10-12T01:09:45Z', 'done', NULL, 0, '42689dd2e13e74beb576671ac9192ac088dadcfd', 'claude-opus-5-5[1m]', 'e9d0eccc-e33a-4e2e-854d-2c1e902a4082', 12, 24, 11849, 647075, 84247, 1.040467, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (91, 239, '2026-10-12T01:09:45Z', '2026-10-12T01:11:08Z', 'done', NULL, 0, '821c4a922e93ba26c68b49ae89c16c1f301d350d', 'claude-opus-5-5[1m]', '93e6fa81-9603-473b-aeb3-b23f830af4ae', 9, 18, 8915, 372158, 44673, 0.6101876, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -4239,3 +4312,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (228, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (229, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (230, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (231, 9);
+INSERT INTO task_decision (task_id, decision_id) VALUES (241, 2);
