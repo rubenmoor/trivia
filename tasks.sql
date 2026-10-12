@@ -5542,13 +5542,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/18-steam-integration.md`: line 8 and the SW-2 note say which binding (decision 28); SW-8 wording names it ("Steam binding <name> (D-63): overlay, achievements, …").
 - If SW-2 is already `[x]` (task 318), only append the binding to its note.
 Done when D-63 and plan 18 name the answer.', '2026-10-12T14:42:44Z', NULL, 317);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (354, 1, 'pm worker: pass settings instead of the prompt', 'work', 'open', 1010, NULL, 'New pm version: the worker command takes `--settings {settings}` instead of the prompt as an argument. Without the change trivia keeps the old behaviour, and `pm run` prints a warning about it at start.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (354, 1, 'pm worker: pass settings instead of the prompt', 'work', 'dropped', 1010, 'needs the flake update first; a worker under the running old pm would break the queue; done by hand instead', 'New pm version: the worker command takes `--settings {settings}` instead of the prompt as an argument. Without the change trivia keeps the old behaviour, and `pm run` prints a warning about it at start.
 
 - File: `project-manager.toml`, key `worker`.
 - Remove `"{prompt}"` (keep `"-p"`).
 - Add `"--settings", "{settings}"`.
 
-Done when: `worker` contains no `{prompt}` and contains `"--settings", "{settings}"`; `pm validate` passes.', '2026-10-12T14:58:08Z', NULL, NULL);
+Done when: `worker` contains no `{prompt}` and contains `"--settings", "{settings}"`; `pm validate` passes.', '2026-10-12T14:58:08Z', '2026-10-12T15:03:15Z', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
