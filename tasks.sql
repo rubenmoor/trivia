@@ -1,10 +1,10 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 11;
+PRAGMA user_version = 12;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
     subject        TEXT NOT NULL CHECK (trim(subject) <> ''),
-    status         TEXT NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'implemented')),
+    status         TEXT NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'on-hold', 'implemented')),
     body           TEXT NOT NULL DEFAULT '',               -- Markdown
     created_at     TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
     implemented_at TEXT,
