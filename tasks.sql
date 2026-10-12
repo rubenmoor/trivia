@@ -1312,6 +1312,56 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A game can be started and played for each of the four groups and with `colombia` off: cards always in the group''s range, no `colombia` question or Cambiazo category when it''s off.
 - Plans 18–20''s fixture replays pass byte-for-byte with defaults; old states without the new keys play as `young_teens` with every bundle.
 - Decision entry written; screens untouched (part 2).', '2026-10-12T00:25:09Z', 115);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (28, 5, 'Tune the age-group windows and level weights', 580, 'Plan 27 gives every age group 12 level ranges in `app/data/age-groups.json` (`levels`), a first mapping of D-22''s shape onto each draft window. This plan measures what those ranges can play on the real pool, adjusts the windows and ranges of `kids`, `young_adults` and `adults`, stores per-group `level_weights` derived from the ranges (as D-31 did for young teens), and has the gamemaster approve the final windows. Part 3 of masterplan 5 (AG-7); runs after plan 27 and before part 2''s start screen, so the screen shows tuned windows.
+
+## Depends on
+- Plan 27: `levels` per group in `age-groups.json`, `parseAgeGroups`, `available(…, bundles)`, `supply(questions, ranges)`, `draw(level, questions, {ranges, …})`, and the `levels` check in `qgen validate`. If they aren''t there yet, the tasks wait.
+- Plans 19/20 for the engine runner (`node:test` setup; the script runs the same way).
+- Sources: `plans/21-age-groups.md` (scale anchors, "Long-term difficulty distribution"), D-22, D-31, `authoring/tools/qgen.py` `LEVEL_WEIGHTS`.
+
+## Fixed, not tuned
+- **`young_teens` stays D-22 exactly** (window 1–10, today''s `LEVEL_RANGES`): the family''s default and plan 18''s fixtures must not change. Only `kids`, `young_adults`, `adults` move.
+- **Shape of D-22** for every group: 12 levels, 4 cards each, level 1 narrow, ranges widen through the middle and narrow at the top; ranges non-decreasing in `lo` and `hi`; inside the window.
+- No question work here: thin difficulties are reported, not fixed (milestone 1).
+
+## Measure (throw-away script, not committed)
+- `node` script on the engine over `app/data/pool.json` + `app/data/age-groups.json`, per group × bundle set `{base}`, `{base, colombia}`:
+  - per level: range, candidates (`supply`), missing slots (4 − candidates if < 4);
+  - **games until dry for one player**: seeded walks of whole games (draw 4 per level with `draw`, burn every card shown), repeated until a level can''t be filled; report the median over ~20 seeds and the level that runs out first;
+  - per difficulty 1–15: approved count and the group''s expected cards per game (from `levels`).
+- Comparison, in the same output:
+  - plan 21''s demand table (share per difficulty from overlapping windows) vs. the pool''s share per difficulty;
+  - each window against the scale''s anchors (1 = 6-year-old, 3 = 9, 5 = 11, 7 = 13, 10 = 16, 12 = most adults, 15 = specialists): the top levels should reach the oldest of the group (kids 10 → ~4, young adults 22 → ~12–13, adults → 15); level 1 is a warm-up and may sit below the youngest''s anchor.
+- Results go into plan 21, new section "Measured windows (AG-7)": one table per bundle set, date, pool size. Script deleted afterwards.
+
+## Adjust
+- Targets for a proposal (per group, `{base}` alone):
+  - every level ≥ 20 candidates (≈5 games per player) where the pool allows; a level below that is named in the table;
+  - windows consistent with the anchors; overlap with neighbouring groups kept, so most questions serve several groups (D-38);
+  - where the pool can''t carry a range (e.g. adults'' 14–15: 27 approved), widen that level downward rather than shrink the window; the thin top is reported for milestone 1 (plan 21 section and the decision body), not fixed.
+- Windows may change (`window` in `age-groups.json`), not just `levels`. Authoring reads `window` for targets (`focus`, D-40); with `"focus": null` nothing in a batch changes. Note any effect on plan 21''s demand table (recompute it with the new windows).
+
+## Level weights
+- New key per group: `level_weights`, `{"<difficulty>": n}` over the group''s window, `n = round(12 × Σ 1/(hi − lo + 1))` over the levels whose range contains the difficulty: 3 × the expected cards per game, as D-31 computed `LEVEL_WEIGHTS`. `young_teens` must equal `qgen.LEVEL_WEIGHTS` exactly (sum 144); the script asserts it.
+- Stored for AG-8 and the D-53 targets later; no consumer reads them in this plan (`qgen` keeps its constant; a backlog line says `qgen` should read `young_teens.level_weights` once AG-8 starts).
+- Checks: `parseAgeGroups` (plan 27) and `qgen validate`''s `levels` check also check `level_weights`: keys exactly the window, values equal to what `levels` derive. A hand edit of `levels` without new weights fails early.
+
+## Gamemaster approval
+- A pm decision "Approve the age-group windows": body with the measured table (current draft vs. proposal, per group: window, 12 ranges, thinnest level, games until dry, `{base}` and `{base, colombia}`), and the thin top. Options: approve the proposal (recommended); keep the draft windows; adjust (gamemaster names the change).
+- The applying task waits on it (`pm task-pending-decision`).
+- After the answer:
+  - `age-groups.json`: approved `window`, `levels`, `level_weights`; `about` without "draft" ("levels: … tuned 2026-…, AG-7").
+  - `plans/21-age-groups.md`: table header "Window on the scale" (no "(draft)"), "The windows of the other groups are a first draft…" removed; demand table recomputed if windows changed. AG-7 stays `[ ]` (part 4 closes it).
+  - Decision entry in `plans/decisions.md` (next D number): the approved windows and ranges, `level_weights` derivation, `young_teens` = D-22; related D-22, D-31, D-38, D-53, plan 27''s entry.
+  - Plan 27''s `choice.test.ts` / `invariants.test.ts` still pass with the new ranges (they read the file).
+
+## Suggested tasks
+1. Measure the draft ranges and write a proposal (script, plan 21 section with both tables); raise the decision; the next task waits on it.
+2. Apply the approved windows: `levels`, `level_weights`, `about`, the `level_weights` check in `parseAgeGroups` and `qgen validate`, plan 21, decision entry, backlog line; engine tests and `qgen validate` pass.
+
+## Done when
+- `age-groups.json` holds approved windows, ranges and `level_weights` for all four groups; `young_teens` unchanged from D-22.
+- Plan 21 shows the measured table and no longer calls the windows a draft; the decision entry exists.', '2026-10-12T00:26:19Z', 116);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2103,14 +2153,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - API: `newGame` takes and validates `age_group` and `bundles`; `supply` for a given group and bundle set (for part 2''s start screen).
 - Checks: fixture replay with defaults; per group every level 4 cards in range; with `colombia` off no `colombia` question and no `colombia` category in Cambiazo.
 - A decision entry in `plans/decisions.md`: settings per game, defaults, `base` always on.', '2026-10-12T00:22:30Z', '2026-10-12T00:25:12Z', 114);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (116, 5, 'write plan: Tune the age-group windows and level weights (AG-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 5): `pm plan add 5 "Tune the age-group windows and level weights" --priority 580` (after part 1''s plan at 590, before part 2''s UI at 400).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (116, 5, 'write plan: Tune the age-group windows and level weights (AG-7)', 'plan', 'done', 1000, '2026-10-11, plan 28 (tasks.sql)', 'Write the plan for part 3 of the masterplan (plan 5): `pm plan add 5 "Tune the age-group windows and level weights" --priority 580` (after part 1''s plan at 590, before part 2''s UI at 400).
 
 - Needs part 1''s per-group `levels` in `app/data/age-groups.json` and the engine''s `supply`.
 - Cover: a throw-away `node` script on the engine over `app/data/pool.json`, per group and bundle set (`base`, `base`+`colombia`): candidates per level, missing slots, games until the pool runs dry for one player.
 - Compare with plan 21''s long-term distribution proposal (`plans/21-age-groups.md`) and the scale''s anchors (1 = 6-year-old … 15 = specialists).
 - Adjust windows and level ranges; store per-group `level_weights` derived from the ranges as D-31 did for young teens; consumers outside the game out of scope.
 - A task that raises a decision for the gamemaster with the measured table to approve the final windows; after it: plan 21 drops "draft", `about` in `age-groups.json`, a decision entry.
-- Thin top of the scale (14–15) reported, not fixed (milestone 1''s work).', '2026-10-12T00:22:30Z', NULL, 114);
+- Thin top of the scale (14–15) reported, not fixed (milestone 1''s work).', '2026-10-12T00:22:30Z', '2026-10-12T00:26:28Z', 114);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (117, 5, 'write plan: Age group and bundle choice on the start screen', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 5): `pm plan add 5 "Age group and bundle choice on the start screen" --priority 400`. Check `pm plan list` for M2''s screens part (plan 19/20''s successors, ~500) and stay below it.
 
 - Uses part 1''s API (`newGame` with `age_group`, `bundles`; `supply` per choice); the screen shows part 3''s tuned windows.
@@ -2127,6 +2177,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Authoring readers that assume levels 1–10 or one range table (`/stats/difficulty`, `qgen report` supply; see decision 5) checked; fix only if broken, else log in `plans/backlog.md`.', '2026-10-12T00:22:30Z', NULL, 114);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (119, 27, 'create tasks for plan 27', 'split', 'open', 1000, NULL, 'Split plan 27 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:25:09Z', NULL, 115);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (120, 28, 'create tasks for plan 28', 'split', 'open', 1000, NULL, 'Split plan 28 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:26:19Z', NULL, 116);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2182,6 +2234,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (39, 5, '2026-10-12T00:20:15Z', '2026-10-12T00:22:02Z', 'done', NULL, 0, '9313e076630c764cc0b719af2fec5dff644ff162', 'claude-opus-5-5[1m]', '96a0dac8-5fbc-4034-a0a7-8f9cadd00d9d', 13, 26, 8473, 609137, 54430, 0.7268314, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (40, 114, '2026-10-12T00:22:02Z', '2026-10-12T00:22:38Z', 'done', NULL, 0, '6bef0c6b41c88617d91a3c2300bf198d3d8c9e69', 'claude-opus-5-5[1m]', '0ef5388e-bfb0-46f0-98f8-efdebb02c834', 6, 12, 3514, 193939, 31037, 0.3574118, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (41, 115, '2026-10-12T00:22:38Z', '2026-10-12T00:25:21Z', 'done', NULL, 0, '3dbac1bfbda4c3236635e8bd72a4e6aeed57251c', 'claude-opus-5-5[1m]', '43edd34a-8d41-4e04-af39-47aa4eccc1a5', 14, 28, 15778, 656573, 64141, 0.96011459999999993, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (42, 116, '2026-10-12T00:25:21Z', '2026-10-12T00:26:36Z', 'done', NULL, 0, 'cda27beb9246172310caa7bb7cd4a868e5d79f82', 'claude-opus-5-5[1m]', 'fe9f7c1e-bdbc-427b-8e1d-67278e2035b3', 11, 18, 7187, 346515, 40259, 0.53518699999999986, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
