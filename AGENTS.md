@@ -42,6 +42,7 @@ All tools come from the flake (D-18, D-35): `direnv allow` once (or `nix develop
 - Clients: `npm install`, `npm run build` (both), `npm run check` (type-check both), `npm test` (engine tests, `app/client/src/engine/*.test.ts`, D-64), `npm run check:literals -w app/client` (on-screen literals outside `app/client/src/locales/es.ts`; paths as arguments, default `src/game`; LUI-1), `npm run dev -w app/client` or `-w authoring/ui` (hot reload; run the matching server too).
 - Project manager: `pm` ([project-manager](https://github.com/rubenmoor/project-manager), in the dev shell). Run `pm instructions` before you use it: every command with examples.
   - New or changed work (features, rule changes, plans): `pm milestone`/`pm plan` add or edit. No new `plans/*.md` files for it.
+  - In Markdown (plans, bodies, notes, replies), refer to a milestone, plan or task by id and subject, in one pair of backticks: `plan 65: Seen counters instead of burning`.
   - Safe while `pm run` works in the background: don't check for running workers or wait for them.
   - `pm` fails on `project-manager.toml`: the shell's `pm` is stale; use `nix develop -c pm …`.
   - Cascade: editing a milestone makes pm queue updates of its descendant plans; editing a plan, of its descendant plans and tasks. So edit only the top item and leave its descendants alone.
