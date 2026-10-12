@@ -3107,8 +3107,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Last; its tasks wait for the decisions of parts 1, 2, 4–9.
 - `plans/11-steam.md`: open-questions table with D-numbers, S3–S6 and track table updated, ST-1 `[x]`; `plans/project.md`, `plans/README.md` statuses; notes in masterplans of milestones 8–11 (plans 8–11) if their scope changed.
 - Done when the milestone''s "Done when" holds.', '2026-10-12T00:38:52Z', '2026-10-12T00:46:13Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (172, 34, 'create tasks for plan 34', 'split', 'open', 1000, NULL, 'Split plan 34 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', NULL, 162);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (172, 34, 'create tasks for plan 34', 'split', 'done', 1000, '2026-10-11, tasks 182 (prep + decision), 183 (record answer; made pending by 182)', 'Split plan 34 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', '2026-10-12T00:46:35Z', 162);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (173, 35, 'create tasks for plan 35', 'split', 'open', 1000, NULL, 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', NULL, 163);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3127,6 +3127,28 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:45:18Z', NULL, 170);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (181, 43, 'create tasks for plan 43', 'split', 'open', 1000, NULL, 'Split plan 43 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:46:09Z', NULL, 171);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (182, 34, 'Desktop shell: refresh facts, write the decision (OQ-29)', 'work', 'open', NULL, NULL, 'Part 1 of plan 34. Prepare the OQ-29 decision; no shell code.
+
+- Facts, each with source and date:
+  - steamworks.js: last release, open issues, supported Electron versions; alternatives (steamworks-ffi, Steamworks SDK via a native module).
+  - Electron install size today.
+  - Tauri v2: Windows (WebView2); Linux/Deck (WebKitGTK: media playback, `backdrop-filter`).
+  - Steam overlay: Electron (known workarounds) vs. a system webview.
+  - Deck/Proton: native Linux build vs. Windows build via Proton.
+- OQ-37 (plan 41) as a dependency, not a blocker: phones as buzzers need a LAN server inside the shell. Say how each option handles it (Electron: Node `http` in main; Tauri: Rust side; browser + local server: has one).
+- `pm decision add "Desktop shell (OQ-29)?"`: recommended option first; body = facts + trade-offs, ultra-short.
+- `pm task-pending-decision <follow-up task> <decision id>` on the follow-up task of plan 34 ("record the answer").
+- `plans/18-steam-integration.md`: update the "For/Against" cells of the "Desktop shell" table if facts changed; keep it marked draft.
+
+Done when: the decision exists with sourced facts, the follow-up task waits on it, plan 18''s table is current.', '2026-10-12T00:46:31Z', NULL, 172);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (183, 34, 'Desktop shell: record the answer (OQ-29, SW-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 34. Waits for the decision "Desktop shell (OQ-29)?" (made pending by the prep task); the answer is in `pm show`.
+
+- `plans/decisions.md`: D-entry with the next free D-number.
+- `plans/open-questions.md`: OQ-29 moved to "Resolved" with the D-number.
+- `plans/18-steam-integration.md`: "Desktop shell" table marked decided (D-number); SW-1 `[x]` with a note; SW-2..SW-6 checked against the choice and reworded if needed (e.g. electron-builder → Tauri bundler; preload bridge → Tauri commands).
+- `plans/11-steam.md` open-questions row and `plans/project.md` in sync. The full S3–S6 rewrite stays with plan 43 (S2 close-out).
+
+Done when: D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:46:31Z', NULL, 172);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3208,6 +3230,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (65, 169, '2026-10-12T00:43:59Z', '2026-10-12T00:44:36Z', 'done', NULL, 0, 'b4d3dc057fe20d2212a82c534ede04f613c031ff', 'claude-opus-5-5[1m]', '165572df-89d6-422f-82a3-a944c06ed173', 9, 16, 3649, 270690, 34444, 0.40273399999999993, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (66, 170, '2026-10-12T00:44:36Z', '2026-10-12T00:45:27Z', 'done', NULL, 0, '9cc27ddbbeefc6bcb52aafe5e57a4caff6712153', 'claude-opus-5-5[1m]', 'e4559d6a-8747-4728-92c3-d92d59184920', 14, 26, 4802, 523554, 37390, 0.49997479999999989, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (67, 171, '2026-10-12T00:45:27Z', '2026-10-12T00:46:19Z', 'done', NULL, 0, '44d7a52342e579c657bff3bd1d203bc638928ad8', 'claude-opus-5-5[1m]', 'f6187c6f-9141-4726-a762-fb90889bfe99', 8, 16, 4298, 287612, 37657, 0.4448024, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (68, 172, '2026-10-12T00:46:19Z', '2026-10-12T00:46:40Z', 'done', NULL, 0, 'a0d5a742e3005af028fda69825c387fae521af1c', 'claude-opus-5-5[1m]', '339ea660-fce4-4f46-90f8-5813f68d7d3a', 5, 10, 2010, 131867, 21311, 0.23710140000000002, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
