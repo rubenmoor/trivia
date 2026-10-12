@@ -50,13 +50,24 @@ export interface AgeGroup {
   ages: readonly [number, number | null];
   window: readonly [number, number];
   levels: LevelRanges;
+  /** Difficulty → weight, derived from `levels` (D-76). */
+  level_weights: Readonly<Record<string, number>>;
 }
 
-/** Throws unless every group has 12 levels inside its window, ids are unique and young_teens exists. */
+/** Weight per difficulty of the window: round(12 × Σ 1/(hi − lo + 1)) over the levels containing it (D-31, D-76). */
+export function levelWeights(window: readonly [number, number], levels: LevelRanges): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (let d = window[0]; d <= window[1]; d++)
+    out[d] = Math.round(12 * levels.reduce((s, [lo, hi]) => (lo <= d && d <= hi ? s + 1 / (hi - lo + 1) : s), 0));
+  return out;
+}
+
+/** Throws unless every group has 12 levels inside its window and `level_weights` as they derive,
+ * ids are unique and young_teens exists. */
 export function parseAgeGroups(json: unknown): AgeGroup[] {
   const groups = (json as { groups?: unknown } | null)?.groups;
   if (!Array.isArray(groups)) throw new Error("age-groups.json: no groups");
-  const out = groups.map(({ id, name, ages, window, levels }): AgeGroup => {
+  const out = groups.map(({ id, name, ages, window, levels, level_weights }): AgeGroup => {
     const [wlo, whi] = window ?? [];
     if (!Array.isArray(levels) || levels.length !== 12) throw new Error(`age-groups.json: ${id}: needs 12 levels`);
     levels.forEach((r: unknown, i: number) => {
@@ -64,7 +75,10 @@ export function parseAgeGroups(json: unknown): AgeGroup[] {
       if (!ok)
         throw new Error(`age-groups.json: ${id}: level ${i + 1} ${JSON.stringify(r)} not inside window ${wlo}–${whi}`);
     });
-    return { id, name, ages, window, levels };
+    const want = levelWeights(window, levels);
+    if (JSON.stringify(level_weights) !== JSON.stringify(want))
+      throw new Error(`age-groups.json: ${id}: level_weights must be ${JSON.stringify(want)}`);
+    return { id, name, ages, window, levels, level_weights };
   });
   const ids = out.map((g) => g.id);
   if (new Set(ids).size !== ids.length) throw new Error("age-groups.json: duplicate group id");

@@ -7,14 +7,14 @@ The project was built for one audience: two Colombian kids aged 11 and 12 (D-6).
 ## Age groups
 In `app/data/age-groups.json` (it ships: the game will offer the choice, AG-7):
 
-| id | Name | Ages | Window on the scale (draft) |
+| id | Name | Ages | Window on the scale |
 |---|---|---|---|
-| `kids` | Niños | 6–10 | 1–7 |
+| `kids` | Niños | 6–10 | 1–6 |
 | `young_teens` | Adolescentes | 11–14 | 1–10 (the game's levels today, D-22) |
-| `young_adults` | Jóvenes | 15–22 | 3–13 |
-| `adults` | Adultos | 23+ | 4–15 |
+| `young_adults` | Jóvenes | 15–22 | 4–13 |
+| `adults` | Adultos | 23+ | 5–15 |
 
-`"focus": "young_teens"` in the same file is the group the pipeline writes for. `"focus": null` means no focus: the pipeline writes across the whole scale 1–15, with even targets, and each question is written for the groups whose window contains its difficulty (D-40). The game plays young teens (levels 1–10) until AG-7, whatever the focus. The windows of the other groups are a first draft; they are tuned when the game uses them (AG-7).
+`"focus": "young_teens"` in the same file is the group the pipeline writes for. `"focus": null` means no focus: the pipeline writes across the whole scale 1–15, with even targets, and each question is written for the groups whose window contains its difficulty (D-40). The game plays young teens (levels 1–10) until AG-7, whatever the focus. Windows, `levels` and `level_weights` tuned 2026-10-12 (AG-7, D-76).
 
 ## One shared scale, 1–15
 Difficulty stays "who can answer it", one number per question, on one scale for every group. Each group plays a window of it. The old scale 1–10 keeps its meaning, so the existing pool needs no migration; 11–15 extend it past school:
@@ -58,17 +58,19 @@ Even targets are a stopgap: they catch up on 11–15, which the pool doesn't hav
 
 | Levels | Played by | Share per level |
 |---|---|---|
-| 1–2 | kids, young teens | 6 % |
-| 3 | + young adults | 8 % |
-| 4–7 | all four | 10 % |
-| 8–10 | young teens, young adults, adults | 7 % |
-| 11–13 | young adults, adults | 4 % |
+| 1–3 | kids, young teens | 7 % |
+| 4 | + young adults | 9 % |
+| 5–6 | all four | 11 % |
+| 7–10 | young teens, young adults, adults | 7 % |
+| 11–13 | young adults, adults | 5 % |
 | 14–15 | adults | 2 % |
+
+Recomputed 2026-10-12 for the approved windows (D-76); with per-group weights: "Demand vs. pool" under "Measured windows".
 
 The proposal: derive the targets from `age-groups.json` (windows, per-group level weights from AG-7, a play share per group), with a floor per level so every group can play several games without repeats, and draw each batch's targets by **deficit** (target share minus the pool's share) so batches fill gaps instead of repeating a fixed shape.
 
 ## Measured windows (AG-7)
-Measured 2026-10-11 with a throw-away script on the engine (`supply`, `draw`, `seededRng`; plan 28), pool of 1136 approved questions (`base` 1034, `colombia` 102). Draft = `levels` from plan 27; proposal = tuned `kids`, `young_adults`, `adults`; `young_teens` stays D-22. Raised as the decision "Approve the age-group windows"; nothing in `age-groups.json` changes before the answer.
+Measured 2026-10-11 with a throw-away script on the engine (`supply`, `draw`, `seededRng`; plan 28), pool of 1136 approved questions (`base` 1034, `colombia` 102). Draft = `levels` from plan 27; proposal = tuned `kids`, `young_adults`, `adults`; `young_teens` stays D-22. Raised as the decision "Approve the age-group windows"; the gamemaster approved the proposal, applied 2026-10-12 (D-76).
 
 - Thinnest: level with the fewest candidates (`supply`). Until dry: games one player can play, burning every card shown, until a level can't be filled; median of 20 seeds, and the level that ran dry most often.
 - Ranges: level 1 first; `×n` = the same range n levels in a row.

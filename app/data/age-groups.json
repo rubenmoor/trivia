@@ -1,15 +1,19 @@
 {
-  "about": "Age groups (plans/21-age-groups.md, D-38). Difficulty is one shared scale 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. `focus`: the group the authoring pipeline writes for; null writes across the whole scale with even targets (D-40). levels: 12 difficulty ranges per group, level 1 first; young_teens = D-22; the others are a draft until tuned (AG-7).",
+  "about": "Age groups (plans/21-age-groups.md, D-38). Difficulty is one shared scale 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. `focus`: the group the authoring pipeline writes for; null writes across the whole scale with even targets (D-40). levels: 12 difficulty ranges per group, level 1 first; young_teens = D-22, the others tuned 2026-10-12 (AG-7, D-76). level_weights: per difficulty of the window, round(12 × Σ 1/(hi − lo + 1)) over the levels containing it, 3 × the expected cards per game (D-31); young_teens = qgen's LEVEL_WEIGHTS.",
   "scale": [1, 15],
   "focus": null,
   "groups": [
-    {"id": "kids", "name": "Niños", "ages": [6, 10], "window": [1, 7],
-     "levels": [[1, 1], [2, 2], [2, 4], [3, 4], [3, 4], [3, 4], [4, 5], [4, 6], [4, 6], [5, 7], [6, 7], [6, 7]]},
+    {"id": "kids", "name": "Niños", "ages": [6, 10], "window": [1, 6],
+     "levels": [[1, 1], [2, 2], [2, 3], [2, 4], [3, 4], [3, 4], [3, 5], [4, 5], [4, 5], [4, 6], [5, 6], [5, 6]],
+     "level_weights": {"1": 12, "2": 22, "3": 26, "4": 36, "5": 32, "6": 16}},
     {"id": "young_teens", "name": "Adolescentes", "ages": [11, 14], "window": [1, 10],
-     "levels": [[1, 1], [2, 3], [3, 5], [4, 6], [4, 6], [4, 6], [5, 7], [6, 8], [6, 9], [7, 10], [8, 10], [9, 10]]},
-    {"id": "young_adults", "name": "Jóvenes", "ages": [15, 22], "window": [3, 13],
-     "levels": [[3, 3], [4, 5], [5, 7], [6, 9], [6, 9], [6, 9], [7, 10], [9, 11], [9, 12], [10, 13], [11, 13], [12, 13]]},
-    {"id": "adults", "name": "Adultos", "ages": [23, null], "window": [4, 15],
-     "levels": [[4, 4], [5, 6], [6, 9], [8, 10], [8, 10], [8, 10], [9, 11], [10, 13], [10, 14], [11, 15], [13, 15], [14, 15]]}
+     "levels": [[1, 1], [2, 3], [3, 5], [4, 6], [4, 6], [4, 6], [5, 7], [6, 8], [6, 9], [7, 10], [8, 10], [9, 10]],
+     "level_weights": {"1": 12, "2": 6, "3": 10, "4": 16, "5": 20, "6": 23, "7": 14, "8": 14, "9": 16, "10": 13}},
+    {"id": "young_adults", "name": "Jóvenes", "ages": [15, 22], "window": [4, 13],
+     "levels": [[4, 4], [5, 6], [6, 8], [7, 9], [7, 9], [7, 9], [8, 10], [9, 11], [9, 12], [10, 13], [11, 13], [11, 13]],
+     "level_weights": {"4": 12, "5": 6, "6": 10, "7": 16, "8": 20, "9": 23, "10": 14, "11": 18, "12": 14, "13": 11}},
+    {"id": "adults", "name": "Adultos", "ages": [23, null], "window": [5, 15],
+     "levels": [[5, 5], [6, 7], [7, 9], [8, 10], [8, 10], [8, 11], [9, 11], [10, 12], [10, 13], [11, 14], [12, 15], [13, 15]],
+     "level_weights": {"5": 12, "6": 6, "7": 10, "8": 15, "9": 19, "10": 22, "11": 17, "12": 13, "13": 13, "14": 10, "15": 7}}
   ]
 }

@@ -61,23 +61,30 @@ test("fixture categories: broadOf, categoryOf", () => {
 
 // D-22, written out; checked once against the table in app/server/selection.py.
 const D22 = [[1, 1], [2, 3], [3, 5], [4, 6], [4, 6], [4, 6], [5, 7], [6, 8], [6, 9], [7, 10], [8, 10], [9, 10]];
+const LEVEL_WEIGHTS = { 1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13 }; // qgen.py, D-31
 
 test("parseAgeGroups on the real file: young_teens = D-22", () => {
   const groups = parseAgeGroups(data("age-groups.json"));
   assert.deepEqual(groups.map((g) => g.id), ["kids", "young_teens", "young_adults", "adults"]);
-  assert.deepEqual(groups.find((g) => g.id === "young_teens")!.levels, D22);
+  const yt = groups.find((g) => g.id === "young_teens")!;
+  assert.deepEqual(yt.levels, D22);
+  assert.deepEqual(yt.level_weights, LEVEL_WEIGHTS);
 });
 
 test("parseAgeGroups: bad files throw", () => {
-  const file = (levels: unknown, more: object[] = []) =>
-    ({ groups: [{ id: "young_teens", name: "x", ages: [11, 14], window: [1, 10], levels }, ...more] });
+  const file = (levels: unknown, more: object[] = [], level_weights: unknown = LEVEL_WEIGHTS) =>
+    ({ groups: [{ id: "young_teens", name: "x", ages: [11, 14], window: [1, 10], levels, level_weights }, ...more] });
   assert.equal(parseAgeGroups(file(D22)).length, 1);
   assert.throws(() => parseAgeGroups(file(D22.slice(1))), /12 levels/);
   assert.throws(() => parseAgeGroups(file([...D22.slice(0, 11), [9, 11]])), /level 12/);
   assert.throws(() => parseAgeGroups(file([[0, 1], ...D22.slice(1)])), /level 1 /);
   assert.throws(() => parseAgeGroups(file([[2, 1], ...D22.slice(1)])), /level 1 /);
-  assert.throws(() => parseAgeGroups(file(D22, [{ id: "young_teens", window: [1, 10], levels: D22 }])), /duplicate/);
-  assert.throws(() => parseAgeGroups({ groups: [{ id: "kids", window: [1, 10], levels: D22 }] }), /young_teens/);
+  assert.throws(() => parseAgeGroups(file(D22, [], { ...LEVEL_WEIGHTS, 10: 12 })), /level_weights/);
+  assert.throws(() => parseAgeGroups(file(D22, [], { ...LEVEL_WEIGHTS, 11: 0 })), /level_weights/);
+  assert.throws(() => parseAgeGroups(file(D22, [], null)), /level_weights/);
+  const twin = { id: "young_teens", window: [1, 10], levels: D22, level_weights: LEVEL_WEIGHTS };
+  assert.throws(() => parseAgeGroups(file(D22, [twin])), /duplicate/);
+  assert.throws(() => parseAgeGroups({ groups: [{ ...twin, id: "kids" }] }), /young_teens/);
   assert.throws(() => parseAgeGroups({}));
 });
 

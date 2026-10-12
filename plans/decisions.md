@@ -602,3 +602,16 @@ Template:
   - Quality bar unchanged: D-56, pm decision 2, release bar plan 57 (CT-5, pm decision 15).
 - Consequences: S4's exit = every launch language reaches the target, not a simulated games number. Whether a translated pool counts toward a language's 5000 follows plan 37's D-entry (OQ-31); open until then.
 - Supersedes / related: D-52, D-53, D-56, D-74; plans 16, 37, 38, 57
+
+## D-76: Tuned age-group windows, level ranges and level weights
+- Date: 2026-10-12
+- Context: AG-7, plan 28; D-68's ranges for `kids`, `young_adults`, `adults` were a draft. Measured on the pool (plan 21, "Measured windows"); pm decision 22: approve the proposal.
+- Decision:
+  - `young_teens`: unchanged, window 1–10, D-22's ranges.
+  - `kids`: window 1–6; 1, 2, 2–3, 2–4, 3–4 ×2, 3–5, 4–5 ×2, 4–6, 5–6 ×2.
+  - `young_adults`: window 4–13; 4, 5–6, 6–8, 7–9 ×3, 8–10, 9–11, 9–12, 10–13, 11–13 ×2.
+  - `adults`: window 5–15; 5, 6–7, 7–9, 8–10 ×2, 8–11, 9–11, 10–12, 10–13, 11–14, 12–15, 13–15 (top widened downward, not the window shrunk).
+  - `level_weights` per group in `age-groups.json`: per difficulty of the window, round(12 × Σ 1/(hi − lo + 1)) over the levels containing it, half up (= 3 × expected cards per game, D-31's method); each sums to 144. `young_teens` = `qgen.LEVEL_WEIGHTS`.
+  - `parseAgeGroups` and `qgen validate` require `level_weights` = what `levels` derive.
+- Consequences: Thin top (14: 19, 15: 8 approved) limits adults to ~8 games per player; reported for milestone 1, not fixed. `qgen` keeps `LEVEL_WEIGHTS` until AG-8 (B-12). Windows feed authoring targets only with a `focus` (D-40); `focus` is null. Plan 21's demand table recomputed.
+- Supersedes / related: D-22, D-31, D-38, D-40, D-53, D-68; plans 21, 27, 28
