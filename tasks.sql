@@ -369,10 +369,16 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
   - new China-centric questions (Chinese history, places, food, festivals, people, language, pop culture) fill the rest
 - Own taxonomy and concept lists per D-43, reusing `base`''s where they fit.
 - Other bundles (`colombia`, …) stay switchable in zh only if translated; not required.
+
+## Bundle languages
+- Every bundle in `app/data/bundles.json` lists the languages it''s available in (`languages`); the game offers only the bundles of the game''s language.
+- `base`: es, en, de, ru, pt-BR; `chinese-base`: zh; `colombia`: the languages it''s translated into.
+- The always-on bundle is the always-on bundle of the game''s language: `base`, or `chinese-base` in zh.
+- `validate`: each language has exactly one always-on bundle.
 - Open, for the masterplan to raise as pm decisions:
   - membership: D-39 says one bundle per question, D-81 takes the bundle from the source; how a `base` question also counts for `chinese-base` (e.g. a per-locale fit flag on the zh translation vs. a bundle per locale)
   - new China-centric questions: drafted in Spanish and translated (one pipeline) or drafted in Chinese
-  - bundle switching in the game: a locale''s base bundle replacing `base` (bundles.json, settings, selection, supply checks)
+  - game side of bundle languages: settings, selection, supply checks, saves with a bundle not in the game''s language
 
 ## Constraints
 - On hold until the gamemaster starts it (pending decision on the masterplan task).
