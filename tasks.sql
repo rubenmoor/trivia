@@ -3040,6 +3040,39 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The release bar is in `targets.json`, checked by `qgen report --qc`, and documented (QC.md, D-entry).
 - Every approved question approved before D-56 has an audit, and every slice is release-ready or has a decision why not.
 - `plans/16-content-target.md` CT-5 `[x]` with the numbers.', '2026-10-12T04:02:41Z', 241);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (58, 1, 'Fable as an opt-in model for qgen rework', 650, '`qgen rework` sends needs_work questions with specific feedback (giveaway, ambiguity, difficulty, overlap) once more through fix and review. These are the hardest cases and the volume is small, so a stronger model may pay off there first. This plan adds an opt-in `--model fable` to `qgen rework`, runs one experiment and lets the gamemaster decide from the numbers. Nothing changes for `qgen batch`. Sits next to plan 16 (quality control); its approval rate is a quality signal, not a replacement for QC.
+
+## Today
+- Every pipeline step is `claude()` in `authoring/tools/qgen.py` → `claude -p --model <x>`; `claude --help` lists `fable` as an alias next to `opus`, `sonnet`.
+- Models hard-coded in `cmd_rework`: fix `opus` (fact check `check_model="sonnet"`), review 1 + 2 `REVIEW_MODEL = "opus"`.
+- Model already recorded per call: `work/<run>/costs.log` (model, cost) and `review.model` on the question. No new bookkeeping needed.
+
+## Cost facts (list prices)
+- Fable 5.1 $10/$50 per MTok vs. Opus 5.5 $4/$20: 2.5× per token, more since Fable always thinks.
+- rework-1: 43 questions, 54 calls, $5.57 (~$0.13/question) → Fable roughly $14+.
+- batch-7: 964 calls, $120.74, mostly per-question review (~616 calls) → Fable for batch review ≈ +$150–200 per batch. Out of scope unless the experiment says otherwise.
+- Subscription quota in dollars unpublished, also whether Fable shares Opus''s limit: gamemaster checks `/usage` before and after the run.
+
+## The flag
+- `qgen rework --model {opus,fable}`, default `opus`.
+- Switches the fix step (`cmd_fix` `model`); fact check stays `sonnet`.
+- Review 1 inside rework: also switched by default with the flag (it decides keep/fix after the reworked fix); review 2 stays `REVIEW_MODEL` (opus) so the final verdict is comparable to rework-1. Note this choice in the D-entry.
+- Model stored in `run.json` (`"model"`), so a resumed run keeps it; `--model` on resume is ignored with a notice, like `--batch`.
+- `qgen batch`, `qgen tighten`, `REVIEW_MODEL` unchanged.
+- D-entry in `plans/decisions.md` when the flag lands. RUNBOOK unchanged unless the default changes. AGENTS.md command list: mention `--model fable` next to `qgen rework`.
+
+## The experiment
+- Only when the gamemaster asks for the next rework (AGENTS.md: `qgen rework` only on the gamemaster''s word): run it once with `--model fable`.
+- Compare against rework-1 (43 questions, 54 calls, $5.57): approval rate after review 2, cost per question and per approved question (`costs.log`), needs_work reasons left, `/usage` delta.
+- Result as a pm decision: keep Fable for rework (→ default change, RUNBOOK + D-entry update) / drop it / try Fable for batch review (→ new plan).
+
+## Tasks (for the split)
+1. Implement `qgen rework --model`, run.json persistence, D-entry, AGENTS.md line. Verify with a throw-away `--dry`-style check of the step namespaces (no paid run).
+2. Experiment run + comparison note + decision. Blocked on the gamemaster asking for a rework (pending decision "run the next rework with Fable?"); priority -100 like batch runs (plan 17).
+
+## Done when
+- The flag exists, defaults to opus, D-entry written.
+- One Fable rework run compared with rework-1, and the gamemaster has answered the keep/drop/extend decision.', '2026-10-12T04:11:20Z', 341);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -5422,7 +5455,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md`: CT-5 line.
 
 Done when: both files updated; every approved pre-D-56 batch/slice is release-ready in `qgen report --qc` or has a recorded decision why not.', '2026-10-12T04:03:37Z', NULL, 335);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (341, 1, 'write plan: Fable as an opt-in model for qgen rework', 'plan', 'open', 1000, NULL, 'Find the right home for this idea and write it there. Candidates: milestone 1''s plan 16 "Quality control after every batch" (quality of reworked questions), plan 15 or a new plan in milestone 1; another milestone if one fits better. Extend an existing plan with `pm plan edit` if it fits; otherwise `pm plan add <milestone> "…" --priority N` (see `pm plan list`). Don''t implement anything.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (341, 1, 'write plan: Fable as an opt-in model for qgen rework', 'plan', 'done', 1000, '2026-10-11, plan 58 (tasks.sql)', 'Find the right home for this idea and write it there. Candidates: milestone 1''s plan 16 "Quality control after every batch" (quality of reworked questions), plan 15 or a new plan in milestone 1; another milestone if one fits better. Extend an existing plan with `pm plan edit` if it fits; otherwise `pm plan add <milestone> "…" --priority N` (see `pm plan list`). Don''t implement anything.
 
 ## The idea
 - Every pipeline step is a `claude -p --model <x>` call (`claude()` in `authoring/tools/qgen.py`); `claude --help` lists `fable` as an alias next to `opus` and `sonnet`.
@@ -5441,9 +5474,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The experiment: the next rework the gamemaster asks for runs once with Fable; compare approval rate after review 2 and cost against rework-1 (43 questions, $5.57); result as a pm decision (keep Fable for rework / drop it / try for batch review).
 - AGENTS.md rules: `qgen rework` only when the gamemaster asks; a D-entry in `plans/decisions.md` when the flag lands; RUNBOOK unchanged unless the default changes.
 
-Done when: a plan (new or extended) holds the above and its tasks are queued (pm does that on plan add/edit); this task closed with the plan id.', '2026-10-12T04:10:10Z', NULL, NULL);
+Done when: a plan (new or extended) holds the above and its tasks are queued (pm does that on plan add/edit); this task closed with the plan id.', '2026-10-12T04:10:10Z', '2026-10-12T04:11:22Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (342, 14, 'create tasks for plan 14', 'split', 'open', 1000, NULL, 'Split plan 14 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T04:10:27Z', NULL, 37);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (343, 58, 'create tasks for plan 58', 'split', 'open', 1000, NULL, 'Split plan 58 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T04:11:20Z', NULL, 341);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5704,6 +5739,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (162, 337, '2026-10-12T04:03:47Z', '2026-10-12T04:06:29Z', 'done', NULL, 0, '80c653b395feeb09ea4088404cae4aba5a662115', 'claude-opus-5-5[1m]', '76aef5b0-5582-44cc-bc9c-9d7d6b8d0c4b', 33, 46, 17596, 1385783, 68479, 1.1770926000000002, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (163, 338, '2026-10-12T04:06:29Z', '2026-10-12T04:08:18Z', 'done', NULL, 0, '0dca1fa7b4945b757d8f77bea708191d62f5b8d4', 'claude-opus-5-5[1m]', 'e56dc5f0-6095-4028-9a6b-cf9b015b8863', 30, 46, 10213, 1265358, 58219, 0.92326759999999986, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (164, 37, '2026-10-12T04:08:18Z', '2026-10-12T04:10:49Z', 'done', NULL, 0, 'ef739ca6d6dfc8394494bd578fd91972821c2a4a', 'claude-opus-5-5[1m]', '1c751719-d860-4de8-a99d-a7d16778ca3c', 37, 58, 15801, 1810689, 75874, 1.2853818000000004, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (165, 341, '2026-10-12T04:10:49Z', '2026-10-12T04:11:30Z', 'done', NULL, 0, 'a08e6a4a4c2213a79f4e58766e15d1902e41fbb3', 'claude-opus-5-5[1m]', 'd3b31cc7-9cb6-4393-85e9-cbf2817cd678', 9, 16, 3809, 253023, 28057, 0.3513046, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
