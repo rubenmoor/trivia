@@ -3,13 +3,13 @@
   // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onDestroy, onMount, tick } from "svelte";
-  import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { fetchFlags, fetchGame, fetchReports, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { saveError, takeSaveNotice } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
   import { listen, pushScope, type Action } from "../lib/input.svelte";
-  import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
+  import type { Game, JokerBudget, JokerEvent, Report, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
   import Hud from "./Hud.svelte";
@@ -19,6 +19,7 @@
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
+  import Reports from "./Reports.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap";
@@ -74,6 +75,9 @@
 
   /** Questions flagged for review (GM-5, D-47); `trivia-authoring` turns them into reviews. */
   let flagged = $state<Set<string>>(new Set());
+  /** «Reportar pregunta» (MD-6); the list opens over the overlay, so the screen below stays mounted. */
+  let reports = $state<Report[]>([]);
+  let reportsOpen = $state(false);
 
   const running = $derived(game !== null && game.result === null);
   /** The question the flag button acts on: the one on screen, or the one just answered. */
@@ -84,6 +88,9 @@
         ? (game?.last?.question_id ?? null)
         : null,
   );
+  const mode = $derived(game?.settings.mode ?? "gamemaster");
+  /** The question on screen of the running game, which «Reportar pregunta» logs. */
+  const reportTarget = $derived(running && screen === "question" ? (game?.question?.id ?? null) : null);
   /** Blocks on the tower: correct answers in this game. */
   const blocks = $derived(game?.history.filter((h) => h.correct).length ?? 0);
 
@@ -91,7 +98,12 @@
     music(MUSIC.start);
     refresh();
     fetchFlags().then((ids) => (flagged = new Set(ids)), () => {});
+    loadReports();
   });
+
+  async function loadReports() {
+    reports = await fetchReports().catch(() => reports);
+  }
 
   async function refresh() {
     try {
@@ -293,6 +305,17 @@
   /** The joker budget of the running game, from the overlay (MD-4); the screen stays as it is. */
   async function setBudget(budget: Partial<JokerBudget>) {
     await act("jokers", { jokers: budget });
+  }
+
+  /** Log the question on screen (MD-6); it stays, the game state doesn't change. */
+  async function report() {
+    closeOverlay();
+    if (await act("report")) await loadReports();
+  }
+
+  async function openReports() {
+    await loadReports();
+    reportsOpen = true;
   }
 
   async function restart() {
@@ -587,11 +610,16 @@
 
   {#if overlayOpen}
     <Overlay
+      {mode}
       questionId={screen === "question" && game?.question ? game.question.id : (game?.last?.question_id ?? null)}
       questionLabel={t(screen === "question" ? "overlay.question" : "overlay.lastQuestion")}
       canSkip={screen === "question" && !questionBusy()}
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={running || screen !== "start"}
+      canReport={!!reportTarget && !questionBusy()}
+      reported={reports.some((r) => r.game_id === game?.id && r.question_id === reportTarget)}
+      onreport={report}
+      onreports={openReports}
       onclose={closeOverlay}
       onskip={() => skip(false)}
       onskipall={() => skip(true)}
@@ -601,6 +629,9 @@
       left={running ? (game?.jokers_left ?? null) : null}
       onbudget={setBudget}
     />
+  {/if}
+  {#if overlayOpen && reportsOpen}
+    <Reports {reports} onclose={() => (reportsOpen = false)} />
   {/if}
 </main>
 

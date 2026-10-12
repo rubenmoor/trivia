@@ -1,7 +1,7 @@
 import * as engine from "../engine/api.ts";
 import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
 import { read, run } from "./engine.ts";
-import type { ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
+import type { ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Player, Report, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
 
@@ -104,9 +104,31 @@ export async function playJoker(body: {
   }>;
 }
 
+/** Reported questions (MD-6), newest first; the running question's answer stays hidden. */
+export async function fetchReports(): Promise<Report[]> {
+  return read((save, data) => {
+    const names = new Map(save.players.map((p) => [p.id, p.name]));
+    const newest = save.games.reduce<(typeof save.games)[number] | null>((m, g) => (m && m.id > g.id ? m : g), null);
+    const live = newest?.result === null && newest.state.phase === "question" ? newest : null;
+    const body = save.reports
+      .map((r) => {
+        const q = data.byId.get(r.question_id);
+        const hidden = live?.id === r.game_id && live.state.current === r.question_id;
+        return {
+          ...r,
+          player: r.player_id === null ? null : (names.get(r.player_id) ?? null),
+          question: q?.question ?? null,
+          answer: hidden ? null : (q?.answer ?? null),
+        };
+      })
+      .reverse();
+    return { save, status: 200, body };
+  });
+}
+
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers",
+  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "report",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   return (await run((save, data, io) => engine.gameAction(save, data, io, action, { ...body }))).game;

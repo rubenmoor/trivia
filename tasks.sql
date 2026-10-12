@@ -5594,13 +5594,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The overlay''s Choice line (task 129) goes into `Overlay.svelte`''s own list model (↑/↓, ←/→ to change).
 
 Done when: the Choice screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (348, 36, 'Report dialog on the action layer (IN-2, IN-3)', 'work', 'open', 480, NULL, 'Plan 44 (action layer and focus navigation) is done; «Reportar pregunta» and the report list (task 187) are built after it. Put them on the same rules (`plans/04-ui-tv-display.md`, "Input").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (348, 36, 'Report dialog on the action layer (IN-2, IN-3)', 'work', 'done', 480, '2026-10-12, done in task 377: confirm dialog and report list are modal scopes with root (Esc/⌫ cancel, focus back to the opener, arrows through the entries, no keydown listener); default focus on «Reportar» since reporting only logs and plan 36 wants Enter to report', 'Plan 44 (action layer and focus navigation) is done; «Reportar pregunta» and the report list (task 187) are built after it. Put them on the same rules (`plans/04-ui-tv-display.md`, "Input").
 
 - The report dialog pushes a modal scope (`pushScope({ modal: true, root, … })` from `app/client/src/lib/input.svelte.ts`); `back`/`menu` cancel, focus goes back to the opener (automatic for modal scopes).
 - `data-focus-default` on the safe choice (as «Cancelar» in the Player delete dialog); text fields keep native keys (input.svelte.ts handles it).
 - The report list: a scope with `root`; arrows move the ring between entries; no `keydown` listener.
 
-Done when: reporting and the list work with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
+Done when: reporting and the list work with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', '2026-10-12T17:09:14Z', 225);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (349, 36, 'Settings screen on the action layer (IN-2, IN-3)', 'work', 'dropped', 370, 'plan 36 revised (task 362): no settings screen; replaced by a task for the mode row and «Personalizar partida» dialog', 'Plan 44 (action layer and focus navigation) is done; the mode and settings screen (task 188) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
 
 - Push a scope from `app/client/src/lib/input.svelte.ts` with `root`; `data-focus-default` on the first setting; no `keydown` listener.
@@ -6681,7 +6681,7 @@ Work:
 Check: `npm test` (fixture replay unchanged), `npm run check`; throw-away script: `solo` game gets the standard set and `customized: false`; overrides set `customized: true`; report adds one row (twice → still one) and leaves the game state unchanged; undo / skip / replace / setJokers refused with `409` in `solo`; report allowed in `gamemaster`; old save migrates with `reports: []`.
 
 Done when: checks pass; gamemaster-mode games behave exactly as before.', '2026-10-12T16:47:15Z', '2026-10-12T17:03:04Z', 375);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (377, 36, '«Reportar pregunta» and the report list (MD-6 UI)', 'work', 'open', NULL, NULL, 'Task 2 of plan 36. Overlay by mode, confirm step, report list screen.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (377, 36, '«Reportar pregunta» and the report list (MD-6 UI)', 'work', 'done', NULL, '2026-10-12, app/client/src/game/{Overlay,Game,Reports}.svelte, lib/{api,types}.ts, locales/es.ts, plans/13-game-modes.md: overlay by mode, report confirm dialog, report list (over the overlay, not a Screen: the question stays mounted; running question''s answer hidden), Copiar + <pre> fallback; action-layer wiring done here (task 348); npm run check + check:literals clean, npm test pass; headless-Chrome walk in both modes, keyboard only and mouse only', 'Task 2 of plan 36. Overlay by mode, confirm step, report list screen.
 
 Guards (stop, leave open, say which): the engine task of plan 36 (mode, standard set, report) still open; screens not on the engine yet (plan 50, PORT-7).
 
@@ -6695,7 +6695,7 @@ Work:
 
 Check: browser walk in both modes (gamemaster overlay unchanged apart from the report entries; `solo`: report → confirm → same question stays, list shows it, copy works); keyboard only and mouse only (IN-1); `npm run check`.
 
-Done when: checks pass; plan 13 MD-6 `[x]` with a note.', '2026-10-12T16:47:15Z', NULL, 375);
+Done when: checks pass; plan 13 MD-6 `[x]` with a note.', '2026-10-12T16:47:15Z', '2026-10-12T17:09:14Z', 375);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (378, 36, 'Mode screen: mode row, «Solo o en grupo», «Personalizar partida» (MD-7)', 'work', 'open', 380, NULL, 'Task 3 of plan 36. Mode row on plan 29''s Choice screen; no second screen. Priority 380: after plans 29 and 30.
 
 Guards (stop, leave open, say which): the report UI task of plan 36 or plan 29''s Choice screen still open.
@@ -7353,7 +7353,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (257, 393, '2026-10-12T16:58:48Z', '2026-10-12T16:59:12Z', 'done', NULL, 0, '500b6636d728a4736cad2dc534314fbf0ccf0e53', 'claude-opus-5-5[1m]', '7e244511-b107-4d02-85ca-5f4186ade16e', 8, 16, 1755, 229734, 24593, 0.27785480000000007, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (258, 336, '2026-10-12T16:59:12Z', '2026-10-12T17:00:36Z', 'done', NULL, 0, 'acf0fbf6ee968c42df805c871916953c79834f0e', 'claude-opus-5-5[1m]', '6ef38832-5bea-4702-acbb-38c078c1cbb7', 16, 30, 7729, 670030, 46980, 0.66454600000000008, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (259, 376, '2026-10-12T17:00:36Z', '2026-10-12T17:03:17Z', 'done', NULL, 0, 'ebcccce2d7c7f25b099136f9166a22f5772ca556', 'claude-opus-5-5[1m]', '3644b032-793b-440a-a16b-3f8ea558b500', 29, 54, 16692, 1897303, 82360, 1.3723966000000003, 521418);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (260, 377, '2026-10-12T17:03:17Z', NULL, 'running', NULL, NULL, 'b42f277f8c296c21f4fbd63001956c94f6f693f9', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (260, 377, '2026-10-12T17:03:17Z', '2026-10-12T17:09:26Z', 'failed', 'the worker left changes that are not staged:
+ M flake.lock', 0, 'b42f277f8c296c21f4fbd63001956c94f6f693f9', 'claude-opus-5-5[1m]', 'a94aa79d-a143-4f9d-b8db-2d8c1590f65e', 49, 82, 29090, 3875800, 117453, 2.296912, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

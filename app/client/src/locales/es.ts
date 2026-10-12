@@ -58,12 +58,33 @@ const es = {
     left: "quedan {n}",
     /** Followed by the ←/→ keys. */
     keys: "Volumen y comodines:",
+    /** Without the budget editor (outside gamemaster mode). */
+    keysVolume: "Volumen:",
     /** What the overlay acts on, shown with its id. */
     question: "pregunta",
     lastQuestion: "última pregunta",
     stats: "Estadísticas:",
     statsCategories: "categorías",
     statsDifficulty: "dificultad",
+  },
+  /** «Reportar pregunta» and the report list (MD-6). */
+  report: {
+    action: "Reportar pregunta",
+    done: "Pregunta reportada",
+    list: "Preguntas reportadas",
+    confirmTitle: "¿Reportar esta pregunta?",
+    confirmBody: "Queda anotada; la pregunta sigue.",
+    confirm: "Reportar",
+    empty: "Todavía no hay preguntas reportadas.",
+    copy: "Copiar",
+    copied: "Copiado",
+    copyFailed: "No se pudo copiar: seleccionen el texto y cópienlo.",
+    question: "Pregunta",
+    answer: "Respuesta",
+    player: "Jugador",
+    level: "nivel {n}",
+    /** The answer of the question still on screen stays hidden. */
+    hidden: "(en juego)",
   },
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {

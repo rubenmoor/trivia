@@ -89,6 +89,18 @@ export type JokerEvent =
   | { joker: "snipe"; outcome: "miss"; index: number }
   | { joker: "snipe"; outcome: "hit"; index: number; correct_index: number };
 
+/** A «Reportar pregunta» entry as the report list shows it (MD-6); `answer` null while it's on screen. */
+export interface Report {
+  question_id: string;
+  game_id: number;
+  player: string | null;
+  level: number;
+  reported_on: string;
+  question: string | null;
+  answer: string | null;
+  note?: string;
+}
+
 /** The game as the server shows it to the TV (app/server/game.py `view`): no correct answer before the final answer. */
 export interface Game {
   id: number;

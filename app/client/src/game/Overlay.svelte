@@ -2,12 +2,13 @@
   // Admin overlay on Esc (04-ui-tv-display.md, UI-13). The family sees it, so it never shows
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
+  // Outside gamemaster mode no undo, skip or budget editor (D-74); «Reportar pregunta» in every mode (MD-6).
   import { desktop } from "../lib/desktop";
   import { flush } from "../lib/engine";
   import { t } from "../lib/i18n";
-  import { pushScope, type Action } from "../lib/input.svelte";
+  import { focusControl, pushScope, type Action } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
-  import type { JokerBudget, JokerName } from "../lib/types";
+  import type { GameMode, JokerBudget, JokerName } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
 
@@ -45,11 +46,14 @@
   }
 
   let {
+    mode,
     questionId,
     questionLabel,
     canSkip,
     canUndo,
     canRestart,
+    canReport,
+    reported,
     budget,
     left,
     onclose,
@@ -58,13 +62,20 @@
     onundo,
     onrestart,
     onbudget,
+    onreport,
+    onreports,
   }: {
+    mode: GameMode;
     /** For debugging (04, "Admin overlay"): the question on screen, or the last one answered. */
     questionId: string | null;
     questionLabel: string;
     canSkip: boolean;
     canUndo: boolean;
     canRestart: boolean;
+    /** A question is on screen in a running game. */
+    canReport: boolean;
+    /** That question is already reported in this game. */
+    reported: boolean;
     /** The running game's joker budget (MD-4), or null without a running game. */
     budget: JokerBudget | null;
     /** Uses left in the running game. */
@@ -76,7 +87,35 @@
     onundo: () => void;
     onrestart: () => void;
     onbudget: (budget: Partial<JokerBudget>) => void;
+    onreport: () => void;
+    onreports: () => void;
   } = $props();
+
+  const gamemaster = $derived(mode === "gamemaster");
+
+  /** «¿Reportar esta pregunta?» is open. */
+  let asking = $state(false);
+  let dialog = $state<HTMLDivElement>();
+  let reportButton = $state<HTMLButtonElement>();
+
+  // Enter reports (it only logs), Esc/⌫ cancel back to the overlay.
+  $effect(() => {
+    if (!asking) return;
+    const pop = pushScope({
+      name: "report-confirm",
+      modal: true,
+      whileBusy: true,
+      root: () => dialog,
+      handle: (a) => {
+        if (a.type === "back" || a.type === "menu") asking = false;
+        else if (a.type === "confirm") onreport();
+        else return false;
+        return true;
+      },
+    });
+    focusControl(reportButton);
+    return pop;
+  });
 
   function fullscreen() {
     if (desktop) desktop.toggleFullscreen();
@@ -121,11 +160,21 @@
     await desktop?.quit();
   }
 
+  const reportItems = $derived<Item[]>([
+    { label: t(reported ? "report.done" : "report.action"), enabled: canReport && !reported, run: () => (asking = true) },
+    { label: t("report.list"), enabled: true, run: onreports },
+  ]);
+
   const items = $derived<Item[]>([
     { label: t("overlay.continue"), enabled: true, run: onclose },
-    { label: t("overlay.skip"), enabled: canSkip, run: onskip },
-    { label: t("overlay.skipAll"), enabled: canSkip, run: onskipall, confirm: true },
-    { label: t("overlay.undo"), enabled: canUndo, run: onundo },
+    ...(gamemaster
+      ? [
+          { label: t("overlay.skip"), enabled: canSkip, run: onskip },
+          { label: t("overlay.skipAll"), enabled: canSkip, run: onskipall, confirm: true },
+          { label: t("overlay.undo"), enabled: canUndo, run: onundo },
+        ]
+      : []),
+    ...reportItems,
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen },
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true },
     ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: quit }] : []),
@@ -136,7 +185,7 @@
       run: () => setVolumes({ muted: !sound.volumes.muted }),
       right: true,
     },
-    ...(budget
+    ...(budget && gamemaster
       ? [
           { label: t("overlay.jokers"), enabled: true, run: cyclePreset, preset: true, right: true },
           ...TOKENS.map((t) => ({ label: t.label, enabled: true, run: () => {}, joker: t.name, right: true })),
@@ -236,13 +285,22 @@
         {/each}
         {#if budget}
           <h3>{t("overlay.budget")}</h3>
-          {#each items as item, i (item.joker ?? item.volume ?? item.label)}
-            {#if item.preset || item.joker}{@render row(item, i)}{/if}
-          {/each}
+          {#if gamemaster}
+            {#each items as item, i (item.joker ?? item.volume ?? item.label)}
+              {#if item.preset || item.joker}{@render row(item, i)}{/if}
+            {/each}
+          {:else}
+            {#each TOKENS as token (token.name)}
+              <p class="row readonly">
+                <span>{token.label}</span>
+                <span class="value">{left?.[token.name] ?? "∞"}</span>
+              </p>
+            {/each}
+          {/if}
         {/if}
       </div>
     </div>
-    <p class="debug">{t("overlay.keys")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} /></p>
+    <p class="debug">{t(gamemaster ? "overlay.keys" : "overlay.keysVolume")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} /></p>
     {#if questionId}
       <p class="debug">
         {questionLabel}:
@@ -261,6 +319,18 @@
       </p>
     {/if}
   </div>
+  {#if asking}
+    <div class="backdrop">
+      <div class="menu dialog" bind:this={dialog} role="alertdialog" aria-labelledby="report-title">
+        <h2 id="report-title">{t("report.confirmTitle")}</h2>
+        <p>{t("report.confirmBody")}</p>
+        <div class="choices">
+          <button class="secondary" onclick={() => (asking = false)}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
+          <button class="candy" bind:this={reportButton} onclick={onreport} data-focus-default>{t("report.confirm")} <Prompt action="confirm" /></button>
+        </div>
+      </div>
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -375,6 +445,35 @@
     color: var(--slate-400);
     font-weight: 600;
     text-align: right;
+  }
+  .readonly {
+    grid-template-columns: 1fr auto;
+    margin: 0;
+  }
+  .readonly .value {
+    color: var(--amber);
+  }
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(5, 8, 16, 0.6);
+  }
+  .dialog {
+    align-items: center;
+    max-width: calc(48 * var(--u));
+  }
+  .dialog p {
+    margin: 0;
+    color: var(--slate-200);
+  }
+  .choices {
+    display: flex;
+    gap: calc(1 * var(--u));
+  }
+  .choices button {
+    text-align: center;
   }
   button:disabled {
     opacity: 0.35;
