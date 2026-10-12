@@ -1,6 +1,7 @@
 // The game routes of app/server/main.py on the engine (PORT-3, plan 20): same {status, body} as recorded.
-import type { Choice, Game, JokerEvent, Player, Supply } from "../lib/types.ts";
+import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
 import * as game from "./game.ts";
+import { noteExhausted as noteExhaustedIn, outlook as outlookOf, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
 import type { EngineData, Io, SaveData } from "./state.ts";
 import { GameError } from "./state.ts";
@@ -92,5 +93,25 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     const res: { game: Game | null; event?: JokerEvent } = { game: game.view(out, data, io) };
     if (action === "joker") res.event = event;
     return { save: out, status: 200, body: res };
+  });
+}
+
+/** Supply outlook for the start screen (plan 65): body = choice + mode (+ players). */
+export function outlook(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<Outlook> {
+  return guard(save, 409, () => {
+    const choice = game.resolveChoice(data, pick(body, ["age_group", "bundles"]));
+    const mode = body.mode ?? "gamemaster";
+    if (!(game.MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
+    const players = Number.isInteger(body.players) && (body.players as number) > 0 ? body.players as number : 1;
+    return { save, status: 200, body: outlookOf(save, data, { ...choice, mode: mode as GameMode, players }) };
+  });
+}
+
+/** Exhausted subcategories shown (plan 65): body = choice + `subcategories`. */
+export function noteExhausted(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<{ ok: true }> {
+  return guard(save, 409, () => {
+    const choice = game.resolveChoice(data, pick(body, ["age_group", "bundles"]));
+    const shown = Array.isArray(body.subcategories) ? body.subcategories.filter((s) => typeof s === "string") : [];
+    return { save: noteExhaustedIn(save, data, choice, shown), status: 200, body: { ok: true } };
   });
 }
