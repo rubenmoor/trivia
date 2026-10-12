@@ -43,9 +43,9 @@
       };
 
       authoringTools = pkgs: rec {
-        qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick ];
+        qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick pkgs.nodejs_22 ];
         trivia-media = fromCheckout pkgs "trivia-media" "authoring/tools/media.py" [ pkgs.imagemagick ];
-        trivia-authoring = fromCheckout pkgs "trivia-authoring" "authoring/server/main.py" [ ];
+        trivia-authoring = fromCheckout pkgs "trivia-authoring" "authoring/server/main.py" [ pkgs.nodejs_22 ];
         trivia-dev = fromCheckout pkgs "trivia" "app/server/main.py" [ ];
         # The Electron shell from this checkout (plan 54); the npm Electron doesn't run on NixOS.
         trivia-desktop = pkgs.writeShellApplication {

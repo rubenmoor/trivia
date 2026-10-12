@@ -41,6 +41,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/tools/targets.py` | Loads the pool targets (`load_targets`), derived per-category shares, `validate`'s check (D-53) |
 | `authoring/tools/media.py` | Commons search, candidate storage, media sync (`trivia-media`) |
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
+| `authoring/tools/engine.py`, `supply.ts` | The TS engine under Node for authoring (D-60): `supply` (supply check of `qgen report` and the start page), `simulate` (`sim/`); `package.json` makes the `.ts` files ES modules |
 | `authoring/tools/save_file.py` | The game's save for authoring, read-only (D-59): players, burns, flags from `state/game.json`, before the switch-over `game.sqlite`/`flags.json`; keeps `state/flags-applied.json` |
 | `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising, reviewing, auditing and the house style |
 | `authoring/tools/` (rest) | Helpers: `batches.py`, `concepts.py`, `layout.py` (paths), `pool_export.py`, `progress.py` |

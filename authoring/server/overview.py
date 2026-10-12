@@ -6,18 +6,18 @@ import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server import
 import batches  # authoring/tools/batches.py
 import media_cache  # app/server/media_cache.py
 import save_file  # authoring/tools/save_file.py
-import selection  # app/server/selection.py
+import engine  # authoring/tools/engine.py: selection.ts under Node (D-60)
 
 
 def supply(pool):
     """The profile's supply (profile = save, plan 65): any count and unseen only, pool minus blocked."""
     blocked = save_file.blocked_ids()
     seen = save_file.seen_counts()
-    avail = selection.available(pool, blocked)
+    avail = [q for q in pool if q["status"] == "approved" and q["id"] not in blocked]  # = selection.ts available
     by_seen = Counter(min(seen[q["id"]], 2) for q in avail)
+    anyc, unseen = engine.supplies((avail, blocked), ([q for q in avail if not seen[q["id"]]], blocked))
     return {"blocked": len(blocked), "unseen": by_seen[0], "seen_once": by_seen[1], "seen_twice": by_seen[2],
-            "rows": [{"label": "any", "levels": selection.supply(avail)},
-                     {"label": "unseen", "levels": selection.supply([q for q in avail if not seen[q["id"]]])}]}
+            "per_level": anyc["per_level"], "rows": [{"label": "any", "levels": anyc["supply"]}, {"label": "unseen", "levels": unseen["supply"]}]}
 
 
 def batch_rows(pool):
@@ -44,6 +44,7 @@ def batch_rows(pool):
 
 
 def build(pool, bundles):
+    sup = supply(pool)
     approved = [q for q in pool if q["status"] == "approved"]
     not_cached = sorted({url for q in approved for _, url in media_cache.picked(q)
                          if not media_cache.cache_path(url).is_file()})
@@ -65,8 +66,8 @@ def build(pool, bundles):
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
         "unfinished_runs": batches.unfinished_runs(),
         "batches": batch_rows(pool),
-        "supply": supply(pool),
-        "per_level": selection.PER_LEVEL,
+        "per_level": sup.pop("per_level"),
+        "supply": sup,
         "next_batch_subcategories": batches.subcategories(pool),
         "counts": {"status": dict(Counter(q["status"] for q in pool)),
                    "bundle": dict(Counter(q.get("bundle") for q in approved))},

@@ -48,7 +48,7 @@ import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # app/server/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
-import selection  # app/server/selection.py: levels and the supply check (GF-5)
+import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g. the supply check (GF-5)
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
@@ -1263,7 +1263,7 @@ def count(items, key):
     return dict(sorted(out.items(), key=lambda kv: (0, kv[0], "") if isinstance(kv[0], int) else (1, 0, str(kv[0]))))
 
 
-def report_subcategories(avail):
+def report_subcategories(avail, ranges):
     """Supply per subcategory × difficulty (JK-10): where «Bájale» (an easier question of the same
     subcategory) and «Cambiazo» (a subcategory with a question in the level's range) run dry (09)."""
     by_sub = {}
@@ -1283,9 +1283,8 @@ def report_subcategories(avail):
     print(f"  «Bájale» possible on {easier} of {len(avail)} questions "
           f"({easier * 100 // max(len(avail), 1)} %): an easier one exists in the same subcategory")
     print("  «Cambiazo» choices per level (subcategories with a question in the level's range):")
-    for level in range(1, selection.LEVELS + 1):
-        n = sum(1 for ds in by_sub.values() if any(selection.in_range({"difficulty": d}, level) for d in ds))
-        lo, hi = selection.LEVEL_RANGES[level]
+    for level, (lo, hi) in ((int(l), r) for l, r in ranges.items()):
+        n = sum(1 for ds in by_sub.values() if any(lo <= d <= hi for d in ds))
         print(f"    level {level:2} (difficulty {lo}–{hi}): {n:3}")
 
 
@@ -1710,7 +1709,6 @@ def target_check(locale, pool=None):
 
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
-    import engine  # authoring/tools/engine.py: the TS engine under Node (D-60)
     locales = args.locale.split(",") if args.locale else LAUNCH_LOCALES
     all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
     modes = SIM_MODES if args.mode == "all" else args.mode.split(",")
@@ -1925,7 +1923,8 @@ def cmd_report(args):
                        ("bundle", lambda q: q.get("bundle"))]:
         print(f"  by {title}: {count(pool, key)}")
     blocked = save_file.blocked_ids()
-    avail = selection.available(pool, blocked)
+    checked = engine.supply(pool, blocked)
+    avail = [q for q in pool if q["status"] == "approved" and q["id"] not in blocked]  # = selection.ts available
     seen = save_file.seen_counts()
     by_seen = Counter(min(seen[q["id"]], 2) for q in avail)
     print(f"approved, not blocked: {len(avail)} ({len(blocked)} blocked)")
@@ -1934,14 +1933,14 @@ def cmd_report(args):
     print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
     print(f"  by bundle: {count(avail, lambda q: q.get('bundle'))}")
     print("supply per level (a game needs 4 per level, D-22):")
-    for l in selection.supply(avail):
+    for l in checked["supply"]:
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""
         print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
     for l in (args.locale or "es").split(","):
         report_progress(pool, args.bundle, l)
     if args.subcategories:
-        report_subcategories(avail)
+        report_subcategories(avail, checked["ranges"])
         report_saturation(pool, args.bundle)
     if args.run:
         d = run_dir(args)

@@ -4,13 +4,14 @@ import json, shutil, subprocess
 from layout import AUTHORING
 
 SIM = AUTHORING / "tools" / "sim" / "simulate.ts"
+SUPPLY = AUTHORING / "tools" / "supply.ts"
 
 
 def node(script, payload):
     """Runs `node <script>` with payload as JSON on stdin; its stdout parsed as JSON."""
     exe = shutil.which("node")
     if exe is None:
-        raise SystemExit("needs node: run inside the dev shell (direnv allow or nix develop)")
+        raise SystemExit("qgen report and the authoring start page need node: run inside the dev shell (direnv allow or nix develop)")
     out = subprocess.run([exe, str(script)], input=json.dumps(payload), capture_output=True, text=True)
     if out.returncode:
         raise SystemExit(f"{script.name} failed:\n{out.stderr.strip()}")
@@ -20,3 +21,14 @@ def node(script, payload):
 def simulate(cells):
     """Games per new player for each cell (plan 62); one node process per call."""
     return node(SIM, cells)
+
+
+def supply(questions, burned, **opts):
+    """{per_level, ranges {"1": [lo, hi], …}, supply [{level, range, candidates, missing}]} from selection.ts;
+    questions minus unapproved and `burned` (blocked ids); opts: age_group, bundles (default young_teens, all)."""
+    return node(SUPPLY, {"questions": questions, "burned": sorted(burned), **opts})
+
+
+def supplies(*inputs):
+    """`supply` for several (questions, burned) pairs in one node process."""
+    return node(SUPPLY, [{"questions": q, "burned": sorted(b)} for q, b in inputs])
