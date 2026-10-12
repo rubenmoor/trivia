@@ -3175,7 +3175,8 @@ def translate_selection(locale, n):
     """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable `base` sources without an
     approved non-stale translation and not rejected in the locale; stale ones first, then one at a time
     from the subcategory with the fewest approved translations (picks count), spread over difficulty;
-    ties in categories.json order."""
+    ties in categories.json order. Within a subcategory, the source whose es level has the most locale
+    deficit per pick so far (D-84, D'Hondt); levels without deficit last."""
     pool = load_json(POOL)["questions"]
     have = {t["id"]: t for t in translations.load(locale)["questions"]}
     src = {q["id"]: q for q in pool}
@@ -3193,10 +3194,14 @@ def translate_selection(locale, n):
     stale = [q["id"] for q in sorted(stale, key=lambda q: natural_key(q["id"]))][:n]
     order = categories.subcategories("base")
     queues = {sub: spread([q for q in open_ if q["subcategory"] == sub], (k * 0.618034) % 1) for k, sub in enumerate(order)}
+    deficit, per_level = targets.deficits(pool, "base", locale) or {}, Counter()
     picked = list(stale)
     while len(picked) < n and any(queues.values()):
         sub = min((s for s in order if queues[s]), key=lambda s: (done[s], order.index(s)))
-        picked.append(queues[sub].pop(0)["id"])
+        q = max(queues[sub], key=lambda q: deficit.get(q["difficulty"], 0) / (per_level[q["difficulty"]] + 1))
+        queues[sub].remove(q)
+        picked.append(q["id"])
+        per_level[q["difficulty"]] += 1
         done[sub] += 1
     return picked, stale
 
