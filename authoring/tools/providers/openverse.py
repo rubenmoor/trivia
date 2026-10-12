@@ -68,7 +68,7 @@ def search(query, kind, limit=30):
             "page_url": r.get("foreign_landing_url") or r.get("detail_url"),
             "preview_url": r["url"] if width and width <= PREVIEW_MAX_WIDTH else r.get("thumbnail"),
             "file_url": r["url"], "width": width, "height": r.get("height"), "duration": None,
-            "mime": None, "author": r.get("creator"),
+            "mime": None, "author": r.get("creator"), "author_url": r.get("creator_url"), "restrictions": [],
             "license": LICENCES[r["license"]].format(r.get("license_version") or "1.0"),
             "license_url": r.get("license_url"), "source": source_name(r.get("source") or r.get("provider") or ""),
         })
@@ -77,3 +77,8 @@ def search(query, kind, limit=30):
 
 def download_url(candidate):
     return candidate["file_url"]
+
+
+def pd_reasons(candidate):
+    """The uploader's claim; plan 26 part 2 decides whether it holds."""
+    return ["PDM"] if candidate["license"].startswith("Public Domain Mark") else []

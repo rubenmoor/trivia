@@ -68,7 +68,8 @@ def search(query, kind, limit=30):
         author = d.get("photographer") or d.get("secondary_creator") or f"NASA {d.get('center') or ''}".strip()
         c = {"type": kind, "provider": ID, "id": d["nasa_id"], "title": d.get("title") or d["nasa_id"],
              "page_url": page, "preview_url": preview, "file_url": None, "width": None, "height": None,
-             "duration": None, "mime": None, "author": author, "license": "Public domain", "license_url": LICENSE_URL}
+             "duration": None, "mime": None, "author": author, "author_url": None, "restrictions": [], "license": "Public domain",
+             "license_url": LICENSE_URL}
         if kind == "image":
             c["file_url"], c["width"], c["height"] = best_image(links)
             c["mime"] = "image/jpeg"
@@ -90,3 +91,7 @@ def search(query, kind, limit=30):
 
 def download_url(candidate):
     return candidate["file_url"]
+
+
+def pd_reasons(candidate):
+    return ["PD-USGov-NASA"]

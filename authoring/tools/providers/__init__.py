@@ -1,9 +1,10 @@
 """Media providers (plans/23-media-providers.md, D-45). Never ship (D-35).
 
 Each provider is a module with ID, NAME (for credits), `available()` (its key is set),
-`search(query, kind, limit)` returning candidates best first, and `download_url(candidate)`.
-A candidate is a dict: type, provider, id, title, page_url, preview_url, file_url, width,
-height, duration, mime, author, license, license_url, and maybe `source` (the original site,
+`search(query, kind, limit)` returning candidates best first, `download_url(candidate)` and
+`pd_reasons(candidate)`. A candidate is a dict: type, provider, id, title, page_url, preview_url,
+file_url, width, height, duration, mime, author, author_url, license, license_url, restrictions
+(Commons' non-copyright restriction codes, else []), and maybe `source` (the original site,
 for credits). `search` here keeps only candidates whose licence is on the allowlist, adds their
 `license_kind`, and skips a provider that is cooling down after a rate limit.
 """
@@ -82,6 +83,13 @@ def search(provider, query, kind, limit=30):
 def download_url(candidate):
     """The URL to download for a picked candidate (resized where the provider allows it)."""
     return provider_of(candidate).download_url(candidate)
+
+
+def pd_reasons(candidate):
+    """Why a public-domain file is public domain (PD-old-70, …), at pick time; [] for other licences."""
+    if licence_kind(candidate.get("license")) != "public-domain":
+        return []
+    return provider_of(candidate).pd_reasons(candidate)
 
 
 def name(candidate):

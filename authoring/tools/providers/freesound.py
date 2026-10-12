@@ -49,9 +49,14 @@ def search(query, kind, limit=30):
         "type": "audio", "provider": ID, "id": str(s["id"]), "title": s["name"], "page_url": s["url"],
         "preview_url": s["previews"]["preview-hq-mp3"], "file_url": s["previews"]["preview-hq-mp3"],
         "width": None, "height": None, "duration": s.get("duration"), "mime": "audio/mpeg",
-        "author": s.get("username"), "license": licence(s.get("license")), "license_url": s.get("license"),
+        "author": s.get("username"), "author_url": f"https://freesound.org/people/{s['username']}/",
+        "restrictions": [], "license": licence(s.get("license")), "license_url": s.get("license"),
     } for s in data.get("results", [])]
 
 
 def download_url(candidate):
     return candidate["file_url"]
+
+
+def pd_reasons(candidate):
+    return []  # CC0 and CC BY only
