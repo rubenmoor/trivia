@@ -8044,7 +8044,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:31:54Z', '2026-10-12T18:32:33Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (436, 66, 'create tasks for plan 66', 'split', 'done', 1000, '2026-10-12, tasks 437 (prompts + pm decision; makes 438–440 pending), 438, 439, 440, 441', 'Split plan 66 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:15:14Z', '2026-10-12T19:16:03Z', 244);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (437, 66, 'Translation prompts and market per locale (pm decision)', 'work', 'open', 710, NULL, 'Plan 66, step 1. Draft the prompts the translation pipeline needs; the texts are the gamemaster''s (D-36), so they go through a pm decision.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (437, 66, 'Translation prompts and market per locale (pm decision)', 'work', 'done', 710, '2026-10-12, authoring/tools/prompts/{translate,translate-review,locale-en,locale-de}.md (drafts), decision 35; tasks 438-440 pending on it', 'Plan 66, step 1. Draft the prompts the translation pipeline needs; the texts are the gamemaster''s (D-36), so they go through a pm decision.
 
 - Draft `authoring/tools/prompts/translate.md` (adapt, don''t translate literally; units/number/answer format for the market; answer and fact unchanged; three wrong answers plausible in the target language, never accidentally correct; Spanish wordplay in hints rewritten; `description` humour adapted; say when it doesn''t travel: `travels: no` + reason).
 - Draft `authoring/tools/prompts/translate-review.md` (appended to `review.md` / `audit.md` for locale runs): fidelity, natural target language, adapted hints, distractors plausible in that language, `media_text`.
@@ -8053,7 +8053,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add` with the drafts as diffs in the body; options: approve as drafted / changes. Then `pm task-pending-decision` for the plan''s three code tasks (translate/rate/factcheck/merge; review/fix/record/audit; `qgen batch --translate`).
 - Stage only the drafts (`git add`); prompt texts change only after the answer.
 
-Done when: decision exists, the three code tasks wait on it, drafts staged.', '2026-10-12T19:15:57Z', NULL, 436);
+Done when: decision exists, the three code tasks wait on it, drafts staged.', '2026-10-12T19:15:57Z', '2026-10-12T19:18:28Z', 436);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (438, 66, 'Translate, rate, factcheck, merge per locale', 'work', 'open', NULL, NULL, 'Plan 66, step 2 (QT-2). Needs the prompt decision from the plan''s first task.
 
 - `cmd_translate` + `TRANSLATE_SCHEMA` in `authoring/tools/` (opus, chunks per subcategory ~15): input source text fields, subcategory, difficulty, media role/type + picked media title/description; output per id: `question`, `answer`, `wrong_answers`, `hints`, `description`, `fun_fact`, `travels` (+ reason), `media_text`, `notes`. Writes `work/<run>/translations/<chunk>.json`.
@@ -8502,6 +8502,155 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 ```', 'approve as drafted, numbers RAE style (2640, 42 195, 42,195)', NULL, '2026-10-12T18:30:32Z', '2026-10-12T18:41:30Z', 430, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (33, 'Configure game screen: which fields?', 'pending', '["as proposed in plan 13 (age group, bundles, joker set, media on/off, start level)", "shorter: age group, bundles, joker set only"]', 'Gamemaster mode (MD-11) gets a configure screen before every game: plan 29''s Choice screen, opening on the last choice, so Enter straight through = today''s game. Proposal in plans/13-game-modes.md "Proposal A": age group, bundles, joker set (Sin límite / Como las cartas / Estándar / A medida), media questions on/off, start level. Trade-off: media on/off and start level are new engine settings (selection filter, start state) and shrink supply or shorten games; the shorter list needs nothing beyond plan 29 + today''s budget.', NULL, NULL, '2026-10-12T19:12:49Z', NULL, 389, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (34, 'Gamemaster menu: which cheats?', 'pending', '["as proposed in plan 13 (kept items, Gestionar comodines, Cambiar pregunta, Saltar a nivel, age group / bundles mid-game)", "shorter: kept items, Gestionar comodines, Cambiar pregunta only"]', 'The Esc overlay becomes the gamemaster menu (MD-12). Proposal in plans/13-game-modes.md "Proposal B": today''s items kept; joker budget becomes «Gestionar comodines» (give back / take away uses left); new «Cambiar pregunta» (same level and subcategory, not seen by default); «Saltar a nivel»; age group / bundles mid-game. Not proposed: reveal the answer (the family sees the TV). Trade-off: each new cheat is an engine action plus a menu row and a test; jump to level and mid-game settings are rarely needed, undo and skip already cover most mishaps.', NULL, NULL, '2026-10-12T19:12:50Z', NULL, 389, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (35, 'Translation prompts and markets per locale (plan 66)', 'pending', '["approve as drafted", "changes (say which)"]', 'Plan 66 (`plan 66: Translation pipeline (QT-2, QT-3)`) needs new prompt texts; prompts are the gamemaster''s (D-36). Task 437 drafted them; they are staged but unused until tasks 438–440 wire them in. Approve, or answer with changes.
+
+## What is proposed
+- **Markets:**
+  - `en`: US + UK families; US spelling and dates; metric first, imperial in brackets where natural; "a"/"an" must fit all options.
+  - `de`: Germany, Austria, Switzerland; standard German spelled as in Germany (`ß`); words of Germany where they differ; "du"/"ihr"; metric; numbers like Spanish (space from 10 000, decimal comma); articles/case endings must fit all options.
+- **Run sizes:** `TRANSLATE_SIZE` = 300 sources per run; the first run of a locale (pilot, QT-5) = 50, then the stop until `qgen health ack tr-<locale>-1`.
+- **Review/audit answers** for translation runs in English (`feedback`, `fix`, `notes`); a `fix` changes only the translation, never the Spanish source.
+- **No new problem kinds:** translation problems map to the existing ones (fidelity → `fact`/`ambiguity`/`giveaway`, unnatural wording → `style`, Spanish text in media naming the answer → `media`).
+- **`travels: no` reasons:** `wordplay`, `about_spanish`, `needs_local_knowledge`, `other`.
+
+## House style and `prompt()` (applied by task 438 after approval, not now)
+The "Language" block moves verbatim into `prompts/locale-es.md`; house style keeps `{locale}`, filled per locale. Output for Spanish runs stays byte-identical.
+
+```diff
+--- a/authoring/tools/prompts/house-style.md
++++ b/authoring/tools/prompts/house-style.md
+ ## Language
+-- All content is in Spanish. The voice depends on the question''s bundle:
+-{voices}
+-- Neutral means: … (unchanged)
+-- Use Colombian references where they fit naturally … (unchanged)
+-- Numbers (all bundles): … (unchanged)
++{locale}
+--- /dev/null
++++ b/authoring/tools/prompts/locale-es.md
++(the five removed lines above, verbatim)
+--- a/authoring/tools/qgen.py
++++ b/authoring/tools/qgen.py
+-def prompt(*names):
++def prompt(*names, locale="es"):
+     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
+-    {voices} from app/data/bundles.json."""
++    {locale} from prompts/locale-<locale>.md, {voices} from app/data/bundles.json."""
+ …
+     text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
++    text = text.replace("{locale}", (PROMPTS / f"locale-{locale}.md").read_text(encoding="utf-8").rstrip())
+     return (text.replace("{age_groups}", …)
+```
+Use in locale runs: `prompt("house-style", "translate", locale=L)`; `prompt("house-style", "rate", locale=L)`; `prompt("house-style", "review", "translate-review", locale=L)`; `prompt("house-style", "audit", "translate-review", locale=L)`.
+
+## Drafts (staged)
+```diff
+diff --git a/authoring/tools/prompts/locale-de.md b/authoring/tools/prompts/locale-de.md
+new file mode 100644
+index 0000000..37432c2
+--- /dev/null
++++ b/authoring/tools/prompts/locale-de.md
+@@ -0,0 +1,9 @@
++- All content is in German, for families in Germany, Austria and Switzerland: standard German, spelled as in Germany (with "ß").
++- Words all three understand; where they differ ("Tomate"/"Paradeiser", "Fahrrad"/"Velo", "Januar"/"Jänner"), reword around it if that stays natural, else the word used in Germany.
++- Address the players with "du" (one player) or "ihr" (the team), never "Sie".
++- Units: metric only. Numbers: no thousands separator up to 9999 ("2640 Meter"), a space from 10 000 ("42 195 Menschen"), a decimal comma ("42,195 km"); large round numbers in words ("3 Millionen"). Dates: "20. Juli 1969".
++- Names and titles as these families know them: "Christoph Kolumbus", "Jeanne d''Arc", the German title of a film or book ("Alles steht Kopf", "Hundert Jahre Einsamkeit"). A name without a German form stays as it is.
++- Articles and case endings (der/die/das, ein/eine) must fit all four options: phrase the question so none of them stands out ("Welches Tier…?", options without articles).
++- House style "Keep it short" holds; German may run a little longer than Spanish, but stays under 160 characters.
++- The players are not in Colombia: a Latin American reference that every Colombian knows is harder for them. Difficulty and distractors are judged for these players, on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).
++- Where this house style says Spanish (the description, the fun fact), read German. Its examples stay in Spanish: they show the style, not the language.
+diff --git a/authoring/tools/prompts/locale-en.md b/authoring/tools/prompts/locale-en.md
+new file mode 100644
+index 0000000..e0df521
+--- /dev/null
++++ b/authoring/tools/prompts/locale-en.md
+@@ -0,0 +1,8 @@
++- All content is in English, for families in the United States and the United Kingdom.
++- US spelling ("color", "center"). Words both sides understand; where they differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word.
++- Units: metric first; add imperial in brackets in the question text and fun fact where these families think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
++- Numbers: comma as thousands separator from 1,000 ("42,195 people"), decimal point ("42.195 km"), years without separator; large round numbers in words ("3 million"). Dates: "July 20, 1969".
++- Names and titles as these families know them: "Christopher Columbus", "Joan of Arc", the English title of a film or book ("Inside Out", "One Hundred Years of Solitude"). A name without an English form stays as it is.
++- Watch "a"/"an": an article in the question must fit all four options.
++- The players are not in Colombia: a Latin American reference that every Colombian knows is harder for them. Difficulty and distractors are judged for these players, on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).
++- Where this house style says Spanish (the description, the fun fact), read English. Its examples stay in Spanish: they show the style, not the language.
+diff --git a/authoring/tools/prompts/translate-review.md b/authoring/tools/prompts/translate-review.md
+new file mode 100644
+index 0000000..4be8533
+--- /dev/null
++++ b/authoring/tools/prompts/translate-review.md
+@@ -0,0 +1,21 @@
++# Translation runs
++
++The question above is a translation of an approved Spanish question. You see the Spanish one as `source`, and the translator''s `notes`. The source was reviewed already: judge the translation, as the players will meet it. Everything above applies to the translation, with these changes.
++
++## Changes
++- **Voice:** "Language" means the section above for this locale, not Spanish. Report wording that isn''t natural for its players (a literal idiom, translationese, the wrong spelling or unit convention) as `style`.
++- **Media:** the media is the source''s picked file; there are no candidates and no new search. Leave `pick`, `background_pick` and `new_query` null. Judge the file only for its text (below).
++- **Language of your answer:** `feedback`, `fix` and `notes` in English.
++- **The source stays as it is.** A `fix` changes only the translation. If the source itself is wrong, report `fact` and say "source:" in your feedback or notes; leave `fix` empty.
++
++## Check on top
++- **Fidelity:** the translation asks the same fact with the same answer as the source. A changed fact, number or answer is `fact`; a lost detail that made the clue unique, or an added one that gives it away, is `ambiguity` or `giveaway`.
++- **Options:** a wrong answer that became correct or a synonym of the answer is `ambiguity`; one that stands out by grammar (an article, a gender, a case ending) or is absurd enough to rule itself out is `giveaway`.
++- **Hints:** a hint that still plays on the Spanish word, or names the answer in the target language before hint 3, is `giveaway`.
++- **Description:** a literal joke that makes no sense is `style`; one that gives the answer away is `giveaway`.
++- **Media text:** give `media_text`: true when the file likely shows Spanish text the players would read, else false. Not a problem on its own (it is only flagged), except when the text names the answer, or essential media can''t be played without reading it: then `media`.
++
++## Not travelling
++An item without a translation comes with the translator''s `reason` (`wordplay`, `about_spanish`, `needs_local_knowledge`, `other`). Decide in one line:
++- `approved`: right, it doesn''t travel; it stays in Spanish only.
++- `needs_work`: it can be translated; `feedback` says how in one line. It is translated in the next run.
+diff --git a/authoring/tools/prompts/translate.md b/authoring/tools/prompts/translate.md
+new file mode 100644
+index 0000000..381cb7f
+--- /dev/null
++++ b/authoring/tools/prompts/translate.md
+@@ -0,0 +1,43 @@
++# Task: translate questions
++
++You translate approved Spanish questions of the trivia game described above into the language of the "Language" section, for its players. The Spanish questions were written, rated, fact-checked and reviewed already. Your translation is rated, fact-checked and reviewed again. Adapt, don''t translate literally: the players must meet the same question as a Spanish family does, in natural words of their own language.
++
++## Input
++A list of questions from one subcategory, each with its `id`, `subcategory`, `difficulty`, the text fields (`description`, `question`, `answer`, `wrong_answers`, `hints`, `fun_fact`) and its `media` (type, role, and the title and description of the file the players see).
++
++## Keep
++- **The same question:** the same fact, the same correct answer, the same clue. Don''t add facts, don''t drop a detail that makes the question unambiguous, don''t make it easier or harder on purpose.
++- **The same answer**, in the form the players know it: "Cristóbal Colón" → "Christopher Columbus"; a film or book by its release title in the market ("Intensa-Mente" → "Inside Out"). A name without a form of its own stays as it is ("Gabriel García Márquez", "arepa").
++- **Don''t fix the source.** If a Spanish fact looks wrong to you, translate it anyway and say so in `notes` ("source fact doubtful: …").
++
++## Adapt
++- **Units, numbers, dates, spelling:** as the "Language" section says.
++- **Idioms:** an idiom becomes the target language''s idiom, or plain words; never a literal copy.
++- **Wrong answers:** each one stays plausible, the same form and similar length as the answer, and clearly wrong. After translating, check the four options again in the target language:
++  - none became correct or a synonym of the answer (two Spanish words can share one translation);
++  - none stands out by grammar: an article ("a"/"an", "der"/"die"/"das"), a gender or case ending that fits only one option;
++  - none became absurd.
++  Replace a wrong answer that fails with another of the same kind, and say so in `notes`.
++- **Hints:** keep the order from vague to strong. A hint that plays on the Spanish word (first letter, rhyme, syllables, gender, a Spanish saying) is rewritten to do the same job in the target language. Hint 3 must not contain the answer in the target language.
++- **Description:** rewrite the joke so it is funny in the target language: the same idea where it works, a new joke about the same content where it doesn''t. It must not give the answer away or rule out options; watch articles and genders here too.
++- **Fun fact:** translated, units adapted.
++- **Length:** house style "Keep it short" holds in the target language; don''t pad.
++- **Media mentioned in the text** ("Escucha:…", "En la foto…") is translated naturally. The file stays as it is.
++
++## Doesn''t travel
++Some questions can''t be asked fairly in the target language. Then answer `travels: "no"`, give the reason and leave the text fields empty:
++- `wordplay`: the question or its clue lives on a Spanish pun or sound that can''t be rebuilt;
++- `about_spanish`: it asks about the Spanish language itself (a spelling, a Spanish plural, what a Spanish word means);
++- `needs_local_knowledge`: the answer only makes sense to someone who lives in the Spanish-speaking world;
++- `other`: say what in `notes`.
++Don''t give up early: a language question with a clean equivalent travels (the word for opposites → "antonym"), and a question that is only harder for these players travels too (the rater re-rates it). Don''t force one that doesn''t: a strained translation costs more than a missing question.
++
++## Media text
++`media_text`: true when the title or description suggests the file shows Spanish text the players would read (a sign, a poster, a book cover, a caption), or essential audio has spoken Spanish; else false. Answer it for every question; it doesn''t change your translation.
++
++## Answer
++For every input `id`, one item:
++- `id`; `travels`: `"yes"` or `"no"`; `reason`: empty for yes, else one of the reasons above.
++- `description`, `question`, `answer`, `wrong_answers` (3), `hints` (3), `fun_fact`: in the target language; empty when `travels` is no.
++- `media_text`: as above.
++- `notes`: in English, one short line per adaptation that a reviewer should know about (a unit changed, a wrong answer replaced, a hint rewritten, a doubtful source fact); empty if you only translated.
+```', NULL, NULL, '2026-10-12T19:18:26Z', NULL, 437, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -8811,6 +8960,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (302, 353, '2026-10-12T19:13:01Z', '2026-10-12T19:13:30Z', 'done', NULL, 0, '80875812c46337b764f51f06565f2dd65bd7bcf3', 'claude-opus-5-5[1m]', '63dcf2ad-8d29-4b3e-a9f0-cb55bb2c6cea', 8, 16, 1987, 304426, 36689, 0.39420120000000003, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (303, 244, '2026-10-12T19:13:30Z', '2026-10-12T19:15:28Z', 'done', NULL, 0, 'eff55f745040b110561ba7a3498427578bbfd038', 'claude-opus-5-5[1m]', '373b36fa-161a-491e-b7de-37d651b32350', 17, 28, 11142, 680686, 66672, 0.8924652, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (304, 436, '2026-10-12T19:15:29Z', '2026-10-12T19:16:08Z', 'done', NULL, 0, '27dfa37e7c8a7c9f8eeddb8eaaaa22fe4f962572', 'claude-opus-5-5[1m]', '8208169b-3774-4897-aa9c-3f9e3187a747', 6, 12, 3981, 202216, 31204, 0.3697432, 583141);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (305, 437, '2026-10-12T19:16:08Z', '2026-10-12T19:18:37Z', 'done', NULL, 0, 'ab25a67a1797bd12e15fd7bab840f03f6c5d2da7', 'claude-opus-5-5[1m]', 'ae9cc026-5649-4e7b-bcad-168e96be58df', 13, 20, 14384, 445291, 51043, 0.7851622, 583141);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -8895,3 +9045,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (429, 31);
 INSERT INTO task_decision (task_id, decision_id) VALUES (430, 32);
 INSERT INTO task_decision (task_id, decision_id) VALUES (431, 32);
 INSERT INTO task_decision (task_id, decision_id) VALUES (432, 32);
+INSERT INTO task_decision (task_id, decision_id) VALUES (438, 35);
+INSERT INTO task_decision (task_id, decision_id) VALUES (439, 35);
+INSERT INTO task_decision (task_id, decision_id) VALUES (440, 35);

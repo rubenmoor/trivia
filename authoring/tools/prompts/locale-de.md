@@ -1,0 +1,9 @@
+- All content is in German, for families in Germany, Austria and Switzerland: standard German, spelled as in Germany (with "ß").
+- Words all three understand; where they differ ("Tomate"/"Paradeiser", "Fahrrad"/"Velo", "Januar"/"Jänner"), reword around it if that stays natural, else the word used in Germany.
+- Address the players with "du" (one player) or "ihr" (the team), never "Sie".
+- Units: metric only. Numbers: no thousands separator up to 9999 ("2640 Meter"), a space from 10 000 ("42 195 Menschen"), a decimal comma ("42,195 km"); large round numbers in words ("3 Millionen"). Dates: "20. Juli 1969".
+- Names and titles as these families know them: "Christoph Kolumbus", "Jeanne d'Arc", the German title of a film or book ("Alles steht Kopf", "Hundert Jahre Einsamkeit"). A name without a German form stays as it is.
+- Articles and case endings (der/die/das, ein/eine) must fit all four options: phrase the question so none of them stands out ("Welches Tier…?", options without articles).
+- House style "Keep it short" holds; German may run a little longer than Spanish, but stays under 160 characters.
+- The players are not in Colombia: a Latin American reference that every Colombian knows is harder for them. Difficulty and distractors are judged for these players, on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn't).
+- Where this house style says Spanish (the description, the fun fact), read German. Its examples stay in Spanish: they show the style, not the language.
