@@ -43,6 +43,7 @@ With the engine in the client, the correct answer is in memory before the player
 
 ## Migration
 - `app/server/main.py` migrates `state/game.sqlite` to `state/game.json` once on start (players, burns per player and for everyone, the running game). The `.sqlite` file is kept as a backup.
+- Lands in pm plan 49 (`app/server/save.py` `migrate()`), but `main.py` only calls it from PORT-7's switch-over change; before that `game.py` still writes `game.sqlite` and an early `game.json` would go stale.
 - `SaveData.version` makes later migrations possible (game modes in 13, multiple locales in 15).
 
 ## Tasks
