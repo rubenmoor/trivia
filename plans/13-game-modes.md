@@ -6,29 +6,10 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 
 ## Modes
 
-### Gamemaster mode (today's game, its own mode; D-73)
-- **Separate from all other modes:** its own entry on the mode screen; the rules, presets and limits of the default and competitive modes don't apply to it.
-- **The gamemaster holds every control:** one person drives the game (the family answers out loud). Keyboard, mouse and gamepad all work, and the gamemaster switches between them at will, mid-screen too (IN-2/IN-3 action layer). Players never touch an input.
-- **Configure game screen** before every game (after Player, before Level). Full customization, every field with today's family value as default, so «Empezar» right away plays today's game. Proposal (gamemaster to trim):
-  - Team / player name (as today's Player screen)
-  - Age group and bundles (AG, BN; family default young teens, every bundle on)
-  - Categories and subcategories on/off
-  - Levels to victory (default 12) and the difficulty per level (age group's window, or shifted −/+)
-  - Joker budget per joker: ∞ / 0–9 (today's MD-4 controls; presets «Sin límite», «Como las cartas»)
-  - Wrong answer: ends the game (default) / fall back to a checkpoint level / play on
-  - Show the correct answer after a wrong one (default on, OQ-22); unlock a locked answer (default on, OQ-21)
-  - Media questions on/off; music, effects and question audio volume
-  - Allow burned questions again when a level runs dry (default off)
-  - Saved as the gamemaster's last configuration; «Restablecer» returns to the family defaults
-- **Gamemaster menu** (`Esc`, Start on the pad; today's overlay, extended). Cheats are allowed without limit. Proposal (gamemaster to trim):
-  - Jokers: set the budget mid-game (MD-4), give back a used joker, take one away
-  - Skip the question: burn for the player (today) / for everyone (today) / no burn
-  - Replace the current question: new card same level / same subcategory / harder / easier / pick from a list
-  - Mark the answer correct or wrong (disputed answers), undo the last answer (today)
-  - Jump to a level (up or down)
-  - Show the next hint, eliminate wrong answers, reveal the correct answer
-  - Flag the question (today's flag), sound, fullscreen, abandon, back to start, quit (today)
-- This is how the family plays. Its defaults never change without the gamemaster's say.
+### Gamemaster mode (today's game, kept)
+- One team, one screen. A gamemaster runs it with the `Esc` overlay (skip, burn for everyone, undo, abandon; D-30).
+- **New:** the joker budget can be set per game: unlimited (today), or a count per joker. A preset «Como las cartas» matches the printed set (4 Soplo, 2 each other), so the family can drop the paper cards if they like, or keep them and leave the budget at unlimited.
+- This is how the game plays today. Its defaults never change without the gamemaster's say.
 
 ### Default mode (Steam's first choice, to define, OQ-30)
 - One team (one player name, or the family as one name), no gamemaster.
@@ -61,8 +42,7 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 - The game state gets `settings: {mode, jokers: {hint: number|null, ...}, preset?}`. `null` = unlimited, the default for existing saves (no change for the family).
 - Joker availability (JK-2) gains a reason «No te quedan Soplos» when the budget is spent.
 - The joker tray shows the remaining count on each token (a small badge); unlimited shows no badge, so the family's screen looks the same.
-- A **mode screen** picks gamemaster, default or competitive mode. The default mode's settings screen sits between Player and Level (UI-16); the gamemaster mode has its own configure game screen there (D-73).
-- Gamemaster settings extend `settings` (levels, wrong-answer rule, filters, reuse); unknown fields default to today's behaviour, so old saves play unchanged.
+- A **mode/settings screen** sits between Player and Level (UI-16) in the default mode; in the gamemaster mode it is hidden behind the overlay.
 
 ## Tasks
 - [x] MD-1 Joker budget in the game state: `settings.jokers`, `null` = unlimited; existing and new family games default to unlimited. Engine: on the TS engine ([12](12-client-engine.md)) if it has landed, otherwise in `app/server/game.py`. *2026-10-07: `app/server/game.py` (`settings`, `jokers_left`: uses counted over the game's history plus the question on screen); the view sends `settings` and `jokers_left`; undo keeps the current budget.*
@@ -74,6 +54,3 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 - [ ] MD-7 Mode and settings screen; the gamemaster mode reachable from it (or from a launch option).
 - [ ] MD-8 Competitive mode: choose the format (OQ-37), the per-game burning and supply rules, joker budgets per player.
 - [ ] MD-9 Couch co-op rules (team confirm), with IN-6.
-- [ ] MD-10 Gamemaster mode as its own mode on the mode screen (D-73); every input works for the gamemaster, switchable at any time.
-- [ ] MD-11 Configure game screen for the gamemaster mode: the gamemaster confirms the field list; settings in the engine; family defaults; last configuration kept.
-- [ ] MD-12 Gamemaster menu: the gamemaster confirms the cheat list; engine actions and overlay (keyboard, mouse, pad).
