@@ -3925,6 +3925,43 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - All engine files (10 modules, 8 tests, 3 helpers, `fixtures/README.md`) are listed in `## Part 3` (no-findings rows included), every finding with a status; every part 1 row `handed to part 3` has its final status there.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:51:29Z', 504);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (76, 13, 'Client lib, locales and boot review (code review part 4)', 0, 'Part 4 of `plan 72: masterplan` (milestone 13, Code quality): review the client lib, locales and boot once (`app/client/src/lib/` 13 files, `locales/`, `main.ts`, `App.svelte`, `app.css`, `vite-env.d.ts`, `scripts/check-literals.mjs`; ≈2100 lines), fix what is cheap, log every file and finding in `## Part 4` of `code-review.md`. Scope, checklist, fix-or-ask, the task 302 rule, duplication candidates and the report format: plan 72 "Ground rules for every part"; not restated here.
+
+## Depends on
+- `plan 73: Baseline scans and report skeleton (code review part 1)`: `code-review.md` with `## Part 4`, the inventory and the scan rows `handed to part 4` (unused exports, markers, `any`/`as` casts, `catch {}`, bundle baseline). Each task re-checks those rows for its files and logs their final status in `## Part 4`, quoting the part 1 row.
+- `plan 75: TS engine review (code review part 3)`: runs first (same priority, lower id); its findings on `engine/api.ts`, `engine/store.ts`, `state.ts` errors are read, not redone.
+- Open work on these files elsewhere (all run before this plan, priority 0 is last): `task 104: LUI-3: chosen joker names into en.ts`, plan 69 `task 454: LUI-5: de.ts, es-ES.ts override and shipping wiring`, `task 455`, `task 456`, `task 457` (catalogs, `i18n.ts`, `check:literals`), `task 474`/`475` (choice screen: `lib/api.ts`, `engine.ts`, `types.ts`, `focus.ts`, `input.svelte.ts`), `task 378`/`379`, `task 391: Configure game screen (MD-11 UI)`, `task 392: Gamemaster menu (MD-12 UI)`, `task 499` (input, gamepad, focus), `task 230: Letter picker for player names with a pad (SW-4, IN-4)` (`gamepad.ts`). First step of every task: `pm queue` + grep open task bodies for its files; a file an open task still changes gets findings only (`superseded by task N`), no refactor.
+- Binding: `decision 26` (launch languages es, en, de), `decision 27` (es-419 base + es-ES override), `decision 36: GameRow.locale: written only for non-es games?`, `decision 40`–`44` (English joker names), `decision 33: Configure game screen: which fields?` (`types.ts`/`api.ts` choice fields); `pm decision list --answered --grep <term>` per file before a fix.
+
+## Rules for this plan
+- Spanish UI unchanged: `es` output byte-identical after every fix (a wording change is not a code fix → out of scope, catalog plans own it).
+- Catalog drift (missing/extra keys, `{param}` sets, leaves identical to `es`): if plan 24/69 tasks are still open, the finding is `superseded by task N` (104, 454–459); only drift that survives them is fixed or a follow-up.
+- Save/`localStorage`/desktop bridge formats unchanged; anything touching them → decision.
+- Duplication candidates for part 10: `lib/api.ts` ↔ `engine/api.ts` ↔ `authoring/ui/src/lib/api.ts`, `lib/store.ts` ↔ `engine/store.ts`, `lib/types.ts` ↔ `engine/state.ts` ↔ `authoring/ui/src/lib/types.ts`, `lib/data.ts` `LOCALES` ↔ `i18n.ts` `CATALOGS`/`UI_LANGS` ↔ `authoring/tools` locale lists, `GameError` in `lib/api.ts` ↔ `engine/state.ts`.
+- Before every commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; plus `npm run check:literals -w app/client` for tasks 3 and 4.
+
+## Tasks (in this order; no own priority)
+1. **Review input, gamepad and focus** (`lib/input.svelte.ts` 194, `lib/gamepad.ts` 70, `lib/gamepad.svelte.ts` 68, `lib/focus.ts` 124)
+   - Listener and `requestAnimationFrame` lifecycles (every `add` has its `remove`, poll stops with no pad, double `listen` on HMR/remount), scope stack (`pushScope`/`scopes.version`) leaks and order, module-level `$state` globals, `HELD`/`FRESH` and `Array(32)` magic numbers, `padMap`/`BUTTONS` vs. `keyLabel` prompts, `nearest` cost per key press (`candidates` scans the DOM each time), `styleOf` ids.
+   - Check: throw-away script driving `step()` and `nearest()`; a `trivia` + dev-server walk with keyboard (pad if at hand) for any listener fix.
+2. **Review engine bridge, stores and boot** (`lib/engine.ts` 147, `lib/store.ts` 116, `lib/data.ts` 72, `lib/desktop.ts` 22; `main.ts` 11, `App.svelte` 7, `app.css` 27, `vite-env.d.ts` 6)
+   - `engine.ts`: the `chain` queue (`out.catch(() => {})` swallows?), `read`/`run` scope, `ready()` failure paths, `takeSaveNotice`/`saveError` one-shot state, `localIsoSeconds` timezone, `guessTag`.
+   - `store.ts`: `ServerStore` in-flight loop and lost writes, `FileStore` corrupt/newer backups (D-72) vs. `desktop.ts` bridge types and `app/desktop/preload.cjs`; `data.ts` cache eviction on failure, `availableLocales` offline.
+   - Boot: top-level `await` failure in `main.ts` (blank screen?), comments that lie (`App.svelte` plan refs), unused rules in `app.css`, `vite-env.d.ts` globals vs. `desktop.ts`.
+   - Check: throw-away script with a failing/slow store (write during write, reject) through `run()`; boot with a corrupt save on a temp `TRIVIA_STATE`.
+3. **Review API client, types and errors** (`lib/api.ts` 156, `lib/types.ts` 173, `lib/errors.ts` 30, `lib/names.svelte.ts` 19)
+   - `api.ts`: `json`/`call`/`post` error mapping, `catch` in `setFlag`, re-exports from `engine.ts` (`fetchLanguage`, `localeSupply`) and routes still served vs. unused; `GameActionBody` vs. `engine/api.ts` body parsing.
+   - `types.ts`: unused types/fields (grep every export), fields vs. what the engine/server actually return; `errors.ts`: every code the engine/server/store emit has a catalog text, no dead codes; `names.svelte.ts` fallback when a key has no name.
+   - Check: throw-away script listing exported names with no importer; error codes from `engine/` + `app/server/` vs. `errors.ts` and `es.ts`.
+4. **Review i18n, locales and the literal check** (`lib/i18n.ts` 111, `locales/es.ts` 306, `locales/en.ts` 252, `locales/xx.ts` 31, plus `de.ts`/`es-ES.ts` if task 454 added them; `scripts/check-literals.mjs` 126)
+   - `i18n.ts`: `pickLang`/`initLang` fallbacks (unknown tag, `es-419`, `?lang=`), `export let lang` mutability, `t()` on a missing key, `fill` with missing params, `endonym` via `Intl` offline, `xx` pseudo-locale kept out of production.
+   - Catalogs: unused keys (grep every key in `src/`, incl. dynamic `t(\`…${}\`)` prefixes), key drift between catalogs and `{param}` sets (per the rule above), `Key`/`TextKey`/`VariantsKey` types still sound.
+   - `check-literals.mjs`: default path still `src/game` only (should it scan `lib/`?), false negatives (template literals, non-Spanish literals once `en`/`de` ship), comment stripper edge cases; overlaps with task 454''s extension (superseded if still open).
+   - Check: throw-away script: keys per catalog, unused keys, param sets; `npm run build` shows no `xx`/non-active catalog in the main chunk (bundle baseline from part 1).
+
+## Done when
+- Every file above (and any catalog added by plan 69 by then) is listed in `## Part 4` (no-findings rows included), every finding with a status; every part 1 row `handed to part 4` has its final status there.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `check:literals` pass.', '2026-10-12T22:52:33Z', 505);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -9857,14 +9894,14 @@ Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-as
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
 - Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', '2026-10-12T22:51:32Z', 501);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (505, 72, 'write plan: Client lib, locales and boot review (part 4)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of plan 72: **Client lib, locales and boot**, as described there.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (505, 72, 'write plan: Client lib, locales and boot review (part 4)', 'plan', 'done', 1000, '2026-10-12, plan 76 (tasks.sql)', 'Write the plan for part 4 of plan 72: **Client lib, locales and boot**, as described there.
 - Catalog drift between `es.ts`/`en.ts`/`xx.ts`: check open catalog plans (24, 69) first; superseded findings there get "superseded by task N".
 
 
 Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
-- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', NULL, 501);
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:52Z', '2026-10-12T22:52:34Z', 501);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (506, 72, 'write plan: Game screens review (part 5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of plan 72: **Game screens** (`app/client/src/game/`), with the per-file and grouped tasks listed there.
 - Check open screen plans (36, 46, 50, 59) for files they still rewrite; review those after or short-review them.
 
@@ -9929,6 +9966,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:50:32Z', NULL, 503);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (515, 75, 'create tasks for plan 75', 'split', 'open', 1000, NULL, 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:51:29Z', NULL, 504);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (516, 76, 'create tasks for plan 76', 'split', 'open', 1000, NULL, 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:52:33Z', NULL, 505);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10929,6 +10968,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (369, 502, '2026-10-12T22:49:00Z', '2026-10-12T22:49:54Z', 'done', NULL, 0, 'bcd2b7b139a43809e387389ecfdfce41ae22921a', 'claude-opus-5-5[1m]', 'af1b5700-14e1-405d-adf3-5bb2ae16ea0e', 6, 12, 5189, 185444, 30272, 0.38309280000000007, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (370, 503, '2026-10-12T22:49:54Z', '2026-10-12T22:50:41Z', 'done', NULL, 0, 'f16934634ef4b0ef025a5a7a930659a06a76ad93', 'claude-opus-5-5[1m]', 'dc932621-05e8-49db-b32a-3e61d776a8c6', 7, 14, 4504, 249710, 36921, 0.43544599999999994, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (371, 504, '2026-10-12T22:50:41Z', '2026-10-12T22:51:40Z', 'done', NULL, 0, 'bfaf5b341bc83668924243dad5eda3e01c168ac8', 'claude-opus-5-5[1m]', '49bd2b08-40cd-4555-b7ea-a0a524da575d', 9, 14, 5647, 279967, 45505, 0.5330294, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (372, 505, '2026-10-12T22:51:40Z', '2026-10-12T22:52:42Z', 'done', NULL, 0, '4fc660081ea144d4a6752f54bdc1a2dcf700b124', 'claude-opus-5-5[1m]', '072463c3-d984-4b83-b79a-62c0dc8f8d23', 8, 16, 5889, 297816, 42539, 0.51771919999999994, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
