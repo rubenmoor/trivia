@@ -10,7 +10,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `app/client/` | Game UI: Svelte 5 + Vite + TypeScript, built to `app/client/dist/` |
 | `app/client/src/game/` | The game screens and their parts (stage, question, jokers, tower, fireworks, sound, copy) |
 | `app/client/src/lib/` | API client and types; `errors.ts`: server error codes → Spanish (D-57) |
-| `app/client/src/engine/` | TS game engine (plan 12, D-58): `rng.ts` (seedable shuffle), `pool.ts` (pool and categories), `selection.ts` (port of `selection.py`); `*.test.ts` next to them (`npm test`, D-64), helpers in `test/` |
+| `app/client/src/engine/` | TS game engine (plan 12, D-58): `rng.ts` (seedable shuffle), `pool.ts` (pool and categories), `selection.ts` (port of `selection.py`), `state.ts` (save document, transactions), `pycompat.ts` (Python semantics), `game.ts` (referee, port of `game.py`), `api.ts` (`main.py`'s game routes); `*.test.ts` next to them (`npm test`, D-64), helpers in `test/` |
 | `app/client/src/engine/fixtures/` | Parity fixtures of the Python referee for the TS engine (PORT-1, D-58): synthetic categories and pools, `selection.json`, `game/<scenario>.json`; format in its `README.md` |
 | `app/client/public/` | Fonts and audio |
 | `app/data/categories.json` | The `base` bundle's 23 broad categories and their 113 subcategories (D-19, D-43) |
