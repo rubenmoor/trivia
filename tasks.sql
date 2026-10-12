@@ -1729,6 +1729,43 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Decision(s) answered; D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13''s default-mode section is a spec MD-6/MD-7 can implement.', '2026-10-12T00:39:47Z', 163);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (36, 7, 'Reportar pregunta and settings screen (MD-6, MD-7)', 490, 'Part 3 of the masterplan (plan 7): the default mode becomes playable. MD-6 «Reportar pregunta» (burn for everyone on this machine, local report list, replacement draw) and MD-7 the mode and settings screen (preset choice; the gamemaster mode still reachable). Owner: `plans/13-game-modes.md` (MD-6, MD-7, "Implementation notes"). The spec comes from part 2''s answer (plan 35, OQ-30, MD-5): presets, checkpoints, won levels, admin actions. This plan doesn''t re-decide them.
+
+## Depends on (tasks wait; no second implementation in `app/server/game.py`)
+- Plan 35 (Default mode, OQ-30): its decision(s) answered and plan 13''s default-mode section written as a spec. Each task first checks `pm show` of plan 35: if a decision is still pending, `pm task-pending-decision <this task> <decision id>`, stage nothing, stop.
+- Plan 20 (Engine game state machine, PORT-3): `engine/game.ts`, `engine/api.ts`, `SaveData` / `GameState` / `BurnRow` in `engine/state.ts`.
+- M2 part 4 (save document, stores and migration, PORT-4/5) for the `version` bump; M2 part 5 (screens on the engine, PORT-7): the client calls the engine. If either hasn''t landed, the task stops and says so in its note (`pm task drop` is wrong; leave it open and stop).
+- Plan 21 (t() helper and es catalog, LUI-1): new strings via `t()` (`mode.*`, `report.*` keys); if `lib/i18n.ts` doesn''t exist yet, Spanish literals marked `// LUI-1`.
+- Plan 29 (Choice screen between Player and Level, priority 400): MD-7 puts the preset on that screen instead of adding a second screen. Hence task 3''s priority 380 (after plans 29 and 30).
+- Plan priority 490: after plan 20 (600), plan 21 and PORT-7 (~500).
+
+## Decisions taken here (unless plan 35''s answer says otherwise)
+- **Mode is a game setting**: `settings.mode: "gamemaster" | "default"`, missing = `"gamemaster"` (`withDefaults`), so old saves and fixtures are unchanged. Preset in `settings.preset`; `settings.jokers` filled from the preset table (one constant in the engine, the decided table of plan 13). Checkpoint fields as plan 13 specifies them.
+- **Rules live in the engine**, not only in the UI: in the default mode `undo`, skip for everyone and `setJokers` return `409` with a reason; `report` is refused in the gamemaster mode (it has skip + burn for everyone).
+- **«Reportar pregunta» = skip for everyone + a report row.** Reuse the engine''s skip-everyone path (`BurnRow` with `player_id: null`, replacement draw at the same level, same supply check); add `ReportRow {question_id, game_id, player_id, level, reported_on, note?}` in `SaveData.reports`. No undo of a report. Confirm step on screen («¿Reportar esta pregunta? Se quema para todos.»), Enter/Esc.
+- **Report list is a client screen**, not a server route (the Python server keeps static files and `/api/save`, decision 4): reachable from the overlay in the default mode; newest first: date, question id, question text, answer, player; «Copiar» copies the list as plain text (one block per report) via `navigator.clipboard`, with a selectable `<pre>` fallback. Works offline.
+- **Mode switch**: on the Choice screen (plan 29) in both modes, one toggle «Con presentador / Sin presentador» (key `M`, not used there). Launch option `?mode=default|gamemaster` presets it (the desktop shell, S3, passes it). The choice is preset from the player''s newest game like plan 29''s age group; a new player and a fresh save get `gamemaster` until S3 decides the Steam build''s default. The family: Enter straight through = today''s game.
+- **Preset row** on the Choice screen, only in the default mode: one tile per preset (name, joker counts as small badges), keys per plan 13 or `F`/`N`/`D`/`E` if free; default preset as decided. Hidden in the gamemaster mode (budget stays in the overlay, MD-4).
+- **Overlay by mode**: gamemaster mode exactly as today; default mode: sound, «Reportar pregunta», «Preguntas reportadas», «Abandonar partida»; no undo, no skip/burn, no budget editor (read-only preset line).
+
+## Tasks
+1. **Engine: mode, preset, report (MD-6 engine part)**
+   - `engine/state.ts`: `settings.mode`, `settings.preset` (+ checkpoint per spec), `ReportRow`, `SaveData.reports`; version bump + migration step in part 4''s store (`reports: []`, games untouched).
+   - `engine/game.ts` / `api.ts`: `newGame` accepts `mode` / `preset` and fills `settings.jokers`; `report` action; refusals per mode; checkpoint and won-level rules if plan 13 specifies them; `view` exposes `settings.mode` / `preset`; `lib/types.ts` to match.
+   - Check: `npm test` (fixture replay unchanged: gamemaster mode identical), `npm run check`; throw-away script: default-mode game, report burns for everyone, replacement at the same level, row in `reports`, undo/skip-everyone refused, empty supply → `409` with report.
+2. **«Reportar pregunta» and the report list (MD-6 UI)**
+   - `Overlay.svelte` by mode; confirm step; `Reports.svelte` (new) list + «Copiar»; `Game.svelte` routing (`Screen` gains `"reports"`, back with Backspace/Esc); `lib/api.ts`.
+   - Check: browser walk in both modes (gamemaster overlay unchanged; default: report → confirm → new question at the same level, list shows it, copy works); keyboard only and mouse only (IN-1).
+   - Then plan 13 MD-6 `[x]` with a note.
+3. **Mode and settings screen (MD-7)** — priority 380 (after plan 29''s Choice screen)
+   - `Choice.svelte`: mode toggle, preset row (default mode), `newGame({…, mode, preset})`; `?mode=` launch option; preset from the newest game.
+   - Docs: plan 13 MD-7 `[x]` and "Implementation notes" (mode/settings fields as built); `plans/04-ui-tv-display.md` (Choice section, Reports screen, overlay by mode, keys); `directory.md` (new files); `plans/project.md` if MD-6/MD-7 are listed.
+   - Check: Enter straight through on an existing family save plays today''s game; each preset starts with its joker budget; `?mode=default` presets the toggle.
+
+## Done when
+- In the default mode a report burns the question for everyone, lists it on the report page and draws a replacement.
+- The settings screen starts a default-mode game with a preset.
+- A gamemaster-mode game plays exactly as today (fixture replay passes, overlay unchanged, Enter straight through).', '2026-10-12T00:41:03Z', 164);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2849,10 +2886,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (163, 7, 'write plan: Default mode (OQ-30)', 'plan', 'done', 1000, '2026-10-11, plan 35 (Default mode, OQ-30) in tasks.sql', 'Write the plan for part 2 of the masterplan (plan 7): `pm plan add 7 "Default mode (OQ-30)" --priority 600`.
 - Owner: `plans/13-game-modes.md` ("Default mode"), MD-5.
 - Tasks: prep (joker presets per difficulty, checkpoints, won levels, remaining admin actions; fit D-38 / `plans/21-age-groups.md` and the windows of plans 27, 28; may split into two decisions), follow-up (D-entry, OQ-30 resolved, MD-5 `[x]`, plan 13''s section a spec for MD-6/MD-7).', '2026-10-12T00:38:51Z', '2026-10-12T00:39:49Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (164, 7, 'write plan: Reportar pregunta and settings screen (MD-6, MD-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 7): `pm plan add 7 "Reportar pregunta and settings screen (MD-6, MD-7)" --priority 500`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (164, 7, 'write plan: Reportar pregunta and settings screen (MD-6, MD-7)', 'plan', 'done', 1000, '2026-10-11, plan 36 (Reportar pregunta and settings screen, MD-6/MD-7) in tasks.sql', 'Write the plan for part 3 of the masterplan (plan 7): `pm plan add 7 "Reportar pregunta and settings screen (MD-6, MD-7)" --priority 500`.
 - Implementation after part 2''s decision; tasks wait for it (`pm task-pending-decision` on part 2''s decision if still pending).
 - Builds on plan 20 "Engine game state machine (PORT-3)" and `SaveData`; strings via plan 21 "t() helper and the es catalog (LUI-1)". No second implementation in `app/server/game.py`.
-- Done when as in part 3.', '2026-10-12T00:38:51Z', NULL, 151);
+- Done when as in part 3.', '2026-10-12T00:38:51Z', '2026-10-12T00:41:06Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (165, 7, 'write plan: Launch languages and Spanish variety (OQ-31)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 7): `pm plan add 7 "Launch languages and Spanish variety (OQ-31)" --priority 500`.
 - Owner: `plans/15-i18n.md` (+15a/15b/15c), I18N-1.
 - Tasks: prep (Steam survey language shares, translation cost per question from `costs.log`, `colombia` vs `base` share, D-39, D-49, D-50; decision), follow-up (D-entry, OQ-31 resolved, I18N-1 `[x]`, 15/15a/15b updated, plan 24 "Draft en catalog (LUI-3)" checked against the answer).', '2026-10-12T00:38:52Z', NULL, 151);
@@ -2879,6 +2916,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', NULL, 162);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (173, 35, 'create tasks for plan 35', 'split', 'open', 1000, NULL, 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', NULL, 163);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', NULL, 164);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2952,6 +2991,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (57, 151, '2026-10-12T00:38:19Z', '2026-10-12T00:39:00Z', 'done', NULL, 0, '3b6f901730b7596320d7e4f88e6894ae668e18f9', 'claude-opus-5-5[1m]', '329bbc6f-7271-4c54-817f-3d503a782533', 6, 12, 4484, 181096, 27251, 0.34395519999999996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (58, 162, '2026-10-12T00:39:00Z', '2026-10-12T00:39:26Z', 'done', NULL, 0, '28f62b5f898ca2e2d7be301b184e7f28ffde696f', 'claude-opus-5-5[1m]', 'fe939d73-121d-4575-be7e-cc929bbb2a34', 5, 10, 1932, 145256, 25438, 0.27123520000000007, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (59, 163, '2026-10-12T00:39:27Z', '2026-10-12T00:39:55Z', 'done', NULL, 0, '350427cee4811a071ebc75c14379dfab6776ed4c', 'claude-opus-5-5[1m]', 'dbecc7b6-b72e-4872-8e78-0c159e940683', 6, 12, 2664, 197763, 32552, 0.35329659999999996, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (60, 164, '2026-10-12T00:39:55Z', '2026-10-12T00:41:14Z', 'done', NULL, 0, '2074a341a37cd2db64a11bd2f97bcb978ec40e04', 'claude-opus-5-5[1m]', '23aed49f-002b-4f2d-8c28-2b5f14fe6986', 11, 20, 7664, 421197, 52399, 0.6567914, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
