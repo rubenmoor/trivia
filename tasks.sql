@@ -405,6 +405,41 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Done when
 - All three languages playable in the released game, store pages localized, content target met per language.
 - zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (13, 'Code quality', 'open', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
+
+## Priority
+- Every plan and task of this milestone runs at priority 0: after the other milestones'' work (only the planning tasks stay at 1000).
+- Masterplan and part plans: `--priority 0`; tasks without their own priority.
+
+## Scope
+- All tracked code: `app/server`, `app/client/src` (engine, game, lib, locales), `app/desktop`, `app/client/scripts`, `authoring/tools` (qgen, providers, sim), `authoring/server`, `authoring/ui`, `flake.nix`, build/package config.
+- Not: data files (`*.json` pools, `tasks.sql`), media, prompts'' content.
+- One review task per file or small group of related files (fits one worker run); `directory.md` lists every path.
+
+## What to look for
+- Unused code: dead functions, exports, files, flags, CSS, dependencies, stale `PLACEHOLDER`s.
+- Bad practices: swallowed errors, `any`/unchecked casts, globals, mixed concerns, magic numbers, comments that lie.
+- Unnecessarily complex code: abstractions with one user, duplication (also `app/` ↔ `authoring/`), long functions that can be split or shrunk.
+- Suboptimal performance: repeated work in render/game loops, sync IO on the server, pool loading, media preloading, bundle size.
+- Potential bugs: races, unhandled states, off-by-one, locale/encoding issues, offline breakage, Windows paths.
+- Inconsistencies: naming, structure, error handling, between files, with `directory.md`, `AGENTS.md` rules and answered decisions.
+
+## Fix or ask
+- Smaller refactors and fixes (one file or a few, behaviour unchanged or obviously fixed): do them in the review task; the usual checks pass.
+- Core design issues (cross-cutting, bigger refactor, changed behaviour or formats): no refactor yet; `pm decision add` with the options (recommended first), link a follow-up task with `pm task-pending-decision`.
+- Larger follow-up work: `pm task add` in this milestone.
+
+## Report: `code-review.md` (repo root)
+- Each review task appends its findings: file, finding, category (unused / practice / complexity / performance / bug / inconsistency), severity, status (fixed in commit / follow-up task N / decision N / won''t fix + why).
+- A last task writes the executive summary right at the top:
+  - self-critical assessment of the code quality before the review: overall state, systemic causes (e.g. how worker-written code drifts), worst areas;
+  - impact of the review: what was fixed, what is pending (tasks, decisions), what risk remains, what to change in the process so quality holds.
+- Add `code-review.md` to `directory.md`.
+
+## Done when
+- Every code file in scope is reviewed and listed in `code-review.md`.
+- Every finding has a status; the executive summary is on top.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
 
@@ -3745,6 +3780,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Start screen (plan 29), docs and play-test (plan 30), `chinese-base` and its `qgen bundle new --kind base` (milestone 12), translating colombia.', '2026-10-12T20:22:37Z', 469);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (72, 13, 'masterplan', 1000, 'tbd.', '2026-10-12T22:44:46Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -9645,6 +9681,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `npm run check`, `npm run build`, `npm test`, `npm run check:literals -w app/client`.
 - Browser walk with games started via `lib/api.ts` (`new` with `levels` 1 / 5 / 20, `cards` 0 / 1 / 4): Tower, table and win work; a game without the fields looks as today.', '2026-10-12T22:38:15Z', NULL, 496);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (500, 72, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 72, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-12T22:44:46Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10639,6 +10678,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (363, 390, '2026-10-12T22:34:19Z', '2026-10-12T22:37:18Z', 'done', NULL, 0, '0ecb3f29e023cc4049ad183e9466fc7849ba7949', 'claude-opus-5-5[1m]', 'ce4c78a7-6a30-46f9-bb1c-75c9be199b3f', 24, 44, 14770, 1590598, 90326, 1.3363036, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (364, 496, '2026-10-12T22:37:18Z', '2026-10-12T22:38:40Z', 'done', NULL, 0, 'dbd8b97f6908d764ab3d5224a52612b048193f5b', 'claude-opus-5-5[1m]', '62ee25bc-6384-47b2-9216-75d5c833f28e', 12, 24, 8200, 519370, 51709, 0.681642, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (365, 497, '2026-10-12T22:38:41Z', '2026-10-12T22:44:09Z', 'done', NULL, 0, '0170394ac1a2a8078a83e58cf1f595fe804452ee', 'claude-opus-5-5[1m]', '53a290b2-79ee-42b5-b3e7-2f24ce6a7793', 28, 54, 34994, 2252159, 106531, 2.0027757999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (366, 498, '2026-10-12T22:44:09Z', NULL, 'running', NULL, NULL, '35d0010d01a07440ccb95397160c34af876de043', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
