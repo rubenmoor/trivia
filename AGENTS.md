@@ -7,6 +7,9 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Start: `pm status`, `pm show <task>`.
 - Before a choice: `pm decision list --answered --grep <word>`; answers are binding.
 - Question only the gamemaster can answer: `pm decision add`, don't guess. Own lasting choice: `pm decision record`.
+- Follow-up work: `pm task add`.
+- Changed direction: consider updating the existing milestone or plan (`pm milestone set`, `pm plan edit`); pm then queues a task that rewrites its descendants.
+- Cite milestones, plans, tasks by id and subject, in backticks: `task 437: Translation prompts and market per locale`.
 
 ## Rules
 - Push directly to `main`. No feature branches or pull requests.
