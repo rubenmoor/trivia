@@ -10646,3 +10646,5 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (439, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (440, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (441, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
+
+INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
