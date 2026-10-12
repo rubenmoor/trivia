@@ -4951,10 +4951,38 @@ Checks:
 - `nix build .#app` (update `npmDepsHash` only if the lockfile changed); `result/bin/trivia` with temp `TRIVIA_STATE` and `TRIVIA_MEDIA=$PWD/media` serves `/`, `/data/pool.json`, `/api/save`, one cached `/media`.
 - `result/share/trivia/app/server/` has no `game.py`, `selection.py`, `flags.py`, `categories.py`, no download code.
 - `grep -rn "game\.py\|selection\.py\|/api/game\|/api/players\|/api/flags\|/api/categories" --exclude-dir=node_modules --exclude-dir=dist .` hits only history (decisions, done plan notes, fixtures README).', '2026-10-12T03:28:48Z', NULL, 291);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (304, 52, 'create tasks for plan 52', 'split', 'open', 1000, NULL, 'Split plan 52 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:29:53Z', NULL, 108);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (304, 52, 'create tasks for plan 52', 'split', 'done', 1000, '2026-10-11, tasks 306-308 for plan 52, no decisions needed', 'Split plan 52 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:29:53Z', '2026-10-12T03:31:47Z', 108);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (305, 53, 'create tasks for plan 53', 'split', 'open', 1000, NULL, 'Split plan 53 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:31:08Z', NULL, 109);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (306, 52, 'providers.licence_verdict and D-entry for PD-US only', 'work', 'open', NULL, NULL, 'Add `licence_verdict(slot)` to `authoring/tools/providers/__init__.py`, next to `licence_kind` and `LICENCE_FIELDS` (plan 52, "Classification"). Returns `("ok" | "replace", [reasons])`, reasons as short code plus text, e.g. `off-allowlist: GFDL 1.2`.
+
+- `replace` for: missing data (a `LICENCE_FIELDS` field absent, `restrictions`/`pd_reasons` not a list, unknown `provider`), off the allowlist (`licence_kind` is None), PD without a reason (`pd_reasons == []`), PD-US only (every reason matches the US-only pattern list).
+- US-only patterns: a module constant, e.g. `PD-US*` but not `PD-USGov*`, `PD-1923`, `PD-Harris-Ewing`. `PD-USGov*`, `PD-old-*` (incl. `PD-old-70-1923`), `PD-self`, `PD-author`, `PD-Art`, `PD-textlogo`, … are ok.
+- `restrictions` never cause `replace` (D-61).
+- `authoring/tools/qgen.py` `licence_problem`: use `licence_verdict` for its missing-data and allowlist errors; PD-US only and PD-without-reason are **not** validate errors yet (plan 53''s gate).
+- New D-entry in `plans/decisions.md`: PD-USGov counts as ok, the US-only pattern list, why.
+- `plans/23-media-providers.md`: the line "`PD-US`-only files are still a PUB-1 question" points to `licence_verdict` and the D-entry.
+
+Done when:
+- Throw-away script: slot without `pd_reasons`, `Public domain` with `[]`, `["PD-USGov-NASA"]`, `["PD-old-70-1923"]`, `["PD-US-expired"]`, `CC BY-SA 4.0` with restrictions `["personality"]` → replace, replace, ok, ok, replace, ok.
+- `qgen validate` prints the same errors as before the change.', '2026-10-12T03:31:45Z', NULL, 304);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (307, 52, 'trivia-media licenses report', 'work', 'open', NULL, NULL, 'New subcommand `licenses` (`cmd_licenses`) in `authoring/tools/media.py` (plan 52, "Report"). Needs `providers.licence_verdict` (previous task of this plan).
+
+- Reads `authoring/data/questions.json`, all bundles, slots `media` and `background`; skips status `rejected`. No network.
+- One row per distinct `file_url`: verdict, reasons, licence, family (`licence_kind`), PD reasons, restrictions, provider, `source_url`, question ids with slot and status.
+- Output in order: 1. replacement list grouped by reason (ids, status, `source_url`), ends with `nothing to replace` when empty; 2. restriction flags per code, information only; 3. tally per licence family and licence name, plus PD reasons grouped worldwide / US government / US only.
+- Flags: `--status <status>` (e.g. `approved`), `--json` (rows as JSON).
+- Exit 1 when the replacement list isn''t empty, else 0.
+- Help text in the module docstring; command line in `AGENTS.md` ("Commands", Media line) and `README.md` next to the other `trivia-media` lines.
+
+Done when: `trivia-media licenses` lists exactly q-0021 (GFDL 1.2), q-1100 and q-1194 (PD-US only), lists the restriction flags (26 on 2026-10-11) without classifying them, and exits 1; `--json` and `--status approved` work (q-0021 is needs_work, so it drops out with `--status approved`).', '2026-10-12T03:31:45Z', NULL, 304);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (308, 52, 'PUB-1 close-out: tally in plans/17-publishing.md', 'work', 'open', NULL, NULL, 'Run `trivia-media licenses` (built by the previous task of this plan) and update `plans/17-publishing.md`:
+
+- "Media licenses" table: refresh the counts per licence family from the report''s tally; the public-domain row points to the verdict (PD-USGov ok, PD-US only replaced, D-entry from the first task of this plan).
+- PUB-1 `[x]` with a note: date, distinct files, replacement count per reason, restriction flag count.
+
+Done when: the table matches the report''s tally and PUB-1 is ticked. Docs only, no code.', '2026-10-12T03:31:45Z', NULL, 304);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5182,6 +5210,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (136, 291, '2026-10-12T03:28:04Z', '2026-10-12T03:28:56Z', 'done', NULL, 0, 'cb68aacdffe0275a5307f82ae322ec4e37d9606b', 'claude-opus-5-5[1m]', '4ad58b57-544d-4d22-9fd6-f6a3ca85c1eb', 7, 14, 5795, 258611, 37394, 0.4668302, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (137, 108, '2026-10-12T03:28:56Z', '2026-10-12T03:30:04Z', 'done', NULL, 0, 'ac86da91cd2c51154826f85c843c6d6bc030ea56', 'claude-opus-5-5[1m]', '54de5ea6-18a3-47a8-a89c-9cf2ed9bec65', 9, 18, 6565, 334044, 41888, 0.5332848, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (138, 109, '2026-10-12T03:30:04Z', '2026-10-12T03:31:20Z', 'done', NULL, 0, 'babb5c083e6fd296165bbb343b6bde49f9b50cf0', 'claude-opus-5-5[1m]', '206f1b80-e5d4-4408-b0c4-a8f158f68816', 15, 28, 7222, 589267, 51996, 0.6783733999999999, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (139, 304, '2026-10-12T03:31:20Z', '2026-10-12T03:31:52Z', 'done', NULL, 0, '8d8c019bc17f4420d1b7bb83412e12546f7748c5', 'claude-opus-5-5[1m]', '11299079-a34a-4e0d-81b4-f926ce13605a', 6, 10, 3329, 143946, 27153, 0.31263320000000006, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
