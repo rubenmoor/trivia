@@ -5542,6 +5542,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/18-steam-integration.md`: line 8 and the SW-2 note say which binding (decision 28); SW-8 wording names it ("Steam binding <name> (D-63): overlay, achievements, …").
 - If SW-2 is already `[x]` (task 318), only append the binding to its note.
 Done when D-63 and plan 18 name the answer.', '2026-10-12T14:42:44Z', NULL, 317);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (354, 1, 'pm worker: pass settings instead of the prompt', 'work', 'open', 1010, NULL, 'New pm version: the worker command takes `--settings {settings}` instead of the prompt as an argument. Without the change trivia keeps the old behaviour, and `pm run` prints a warning about it at start.
+
+- File: `project-manager.toml`, key `worker`.
+- Remove `"{prompt}"` (keep `"-p"`).
+- Add `"--settings", "{settings}"`.
+
+Done when: `worker` contains no `{prompt}` and contains `"--settings", "{settings}"`; `pm validate` passes.', '2026-10-12T14:58:08Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -6033,6 +6040,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (219, 316, '2026-10-12T14:38:43Z', '2026-10-12T14:41:40Z', 'done', NULL, 0, 'f46e9ff2f4b25a950c55c38e1169189ccf786aa8', 'claude-opus-5-5[1m]', '0071d063-c878-44c4-abfb-daefa0fee074', 28, 50, 10645, 1114317, 45413, 0.7992674, 433776);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (220, 317, '2026-10-12T14:41:41Z', '2026-10-12T14:42:56Z', 'done', NULL, 0, 'a9da591036b1294a5a079edf81ab650d65da2c8b', 'claude-opus-5-5[1m]', 'b7f0ee91-92ee-4050-885b-ee342f26f99c', 16, 28, 6272, 539538, 37132, 0.5305156, 433776);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (221, 244, '2026-10-12T14:42:57Z', '2026-10-12T14:43:15Z', 'blocked', NULL, 0, '91779b37cbfe158803febc32f5de5da38dfcc171', 'claude-opus-5-5[1m]', 'c0655352-6c23-4f6a-b428-08013b4255b3', 7, 14, 1349, 207139, 23697, 0.2580398, 433776);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (222, 318, '2026-10-12T14:43:15Z', NULL, 'running', NULL, NULL, '9e92f73a278ea699a845f5c1848ff7518ce790cf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 433776);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
