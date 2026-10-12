@@ -1907,6 +1907,38 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Decision(s) answered; D-entry exists; OQ-37 resolved; plans 13 and 14 name the format and input that MD-8, MD-9 and IN-6 build later; plans 34 and 38 can read the shell need and burn multiplier from the D-entry.', '2026-10-12T00:44:27Z', 169);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (42, 7, 'Freesound API for a commercial release (OQ-45)', 200, 'Part 9 of the masterplan (plan 7). Freesound''s API is free for non-commercial use; commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds (MP-6, `authoring/tools/providers/freesound.py`); the game ships the picked CC0/CC BY files, never the API. Before a paid Steam release the gamemaster decides whether to ask Freesound, replace the Freesound picks, or keep Freesound for the family only. Owner: `plans/23-media-providers.md` (Freesound row, provider order, MP-6).
+
+## Depends on
+- Plan 39 "Price model and Steamworks account (OQ-33)": whether the release is "commercial" (paid, DLC). Prep doesn''t wait for it; the decision names it as a dependency.
+- Plan 26 "Licence data in the pool" (`provider` per picked slot) makes the Freesound picks countable and excludable; until then count by `freesound.org` in the URLs.
+- Related: SW-9 media bundle (`plans/18-steam-integration.md`), D-45 allowlist, D-36 (picks only through the review tool), D-17 (media cache keyed by URL).
+
+## Tasks
+1. **Housekeeping: give the Freesound question its own number**
+   - `plans/open-questions.md` uses OQ-45 twice; the resolved one belongs to D-42. Renumber the open Freesound one to the next free number (OQ-47 as of 2026-10-11; check), keep D-42''s.
+   - Update the Freesound references: `plans/open-questions.md`, `plans/23-media-providers.md` (Freesound row), `plans/project.md` (open-questions table), plan 7''s body and this plan''s subject/body (`pm plan edit`), any other hit of `grep -rn ''OQ-45'' plans`. Leave references meaning D-42''s OQ-45 as they are (e.g. D-42''s context in `decisions.md`).
+   - Done when: each OQ number is used once; every Freesound reference uses the new one.
+2. **Prep: facts, options and recommendation as a pm decision**
+   - Facts (ultra-short, one source line each):
+     - Freesound API terms of use and the commercial-licence page (what counts as "commercial use of the API"; whether using it in an internal authoring tool for a paid product counts); CC0/CC BY sound licences themselves allow commercial use with credit.
+     - Count today: questions with a Freesound pick in `authoring/data/questions.json` and `app/data/pool.json`, by status (2026-10-11: 2 approved, q-0752, q-1016; the masterplan''s 9/6 needs a recount), plus how many future audio slots Freesound would fill (share of Freesound picks among audio picks in the last batches).
+     - What Commons and other allowlisted sources (D-45) offer for those sounds: a quick review-tool search per question, no picks.
+   - Options (recommended first; recommendation from the facts, e.g. replace if the count stays small):
+     - (a) Replace the Freesound picks with allowlisted sources before release and drop Freesound from the audio order (`providers.ORDER`) or from release batches.
+     - (b) Ask Freesound/UPF: the worker drafts the email (English, short: what the tool does, that only CC0/CC BY files ship, no API in the game, the expected volume, the question); the gamemaster sends it. The draft goes in the decision body.
+     - (c) Keep Freesound for the family only: tag its picks and exclude them from the Steam media bundle (SW-9); questions without their sound then don''t ship or need another pick.
+   - Each option notes its consequence for plan 39''s answer (free release vs paid).
+   - `pm decision add`, then `pm task-pending-decision` on task 3. Never contact Freesound/UPF.
+3. **Follow-up: record the answer** (waits for the decision)
+   - D-entry in `plans/decisions.md` (next free D-number); the Freesound OQ moved to "Resolved" in `plans/open-questions.md`; `plans/project.md` and `plans/11-steam.md`''s open-questions row in sync.
+   - `plans/23-media-providers.md`: Freesound row and the "Which provider for which slot" table match the answer; MP-6 note updated.
+   - If (a): add a task to this plan that re-picks each Freesound slot through the review tool (search modal, D-36; the gamemaster or `qgen` picks, never by hand in the pool) and then removes Freesound from the order; `qgen validate` passes.
+   - If (b): add a task "send the email and record the reply" pending on the gamemaster; the provider stays until the reply.
+   - If (c): add the exclusion rule to SW-9 in `plans/18-steam-integration.md`.
+
+## Done when
+- The OQ numbers are unique; D-entry exists; plan 23 and the provider order reflect the answer; a replacement, if chosen, is a task in this plan.', '2026-10-12T00:45:18Z', 170);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -3046,9 +3078,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (169, 7, 'write plan: Competitive and couch co-op format (OQ-37)', 'plan', 'done', 1000, '2026-10-11, plan 41 (tasks.sql)', 'Write the plan for part 8 of the masterplan (plan 7): `pm plan add 7 "Competitive and couch co-op format (OQ-37)" --priority 580`.
 - Owners: `plans/13-game-modes.md` ("Competitive mode", "Couch co-op"), `plans/14-input.md` (section 3, IN-7).
 - Tasks: prep (formats: relay, parallel ladders, buzzer; input: hot-seat, controllers, phones; decision notes burn multiplier for part 5 and shell needs for part 1), follow-up (D-entry, OQ-37 resolved, plans 13 and 14 name the format; MD-8, MD-9, IN-6 stay "Later").', '2026-10-12T00:38:52Z', '2026-10-12T00:44:29Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (170, 7, 'write plan: Freesound API for a commercial release (OQ-45)', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of the masterplan (plan 7): `pm plan add 7 "Freesound API for a commercial release (OQ-45)" --priority 200`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (170, 7, 'write plan: Freesound API for a commercial release (OQ-45)', 'plan', 'done', 1000, '2026-10-11, tasks.sql (plan 42)', 'Write the plan for part 9 of the masterplan (plan 7): `pm plan add 7 "Freesound API for a commercial release (OQ-45)" --priority 200`.
 - Owner: `plans/23-media-providers.md` (Freesound row, MP-6).
-- Tasks: housekeeping (OQ-45 used twice in `open-questions.md`: give the Freesound one a free number, update references), prep (ask Freesound/UPF with drafted email the gamemaster sends; replace picks via allowlisted sources (D-45); family-only and excluded from SW-9), follow-up (D-entry, plan 23 and provider order updated; if replacing, a task that re-picks via the review tool, D-36).', '2026-10-12T00:38:52Z', NULL, 151);
+- Tasks: housekeeping (OQ-45 used twice in `open-questions.md`: give the Freesound one a free number, update references), prep (ask Freesound/UPF with drafted email the gamemaster sends; replace picks via allowlisted sources (D-45); family-only and excluded from SW-9), follow-up (D-entry, plan 23 and provider order updated; if replacing, a task that re-picks via the review tool, D-36).', '2026-10-12T00:38:52Z', '2026-10-12T00:45:20Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (171, 7, 'write plan: S2 close-out', 'plan', 'open', 1000, NULL, 'Write the plan for part 10 of the masterplan (plan 7): `pm plan add 7 "S2 close-out" --priority 150`.
 - Last; its tasks wait for the decisions of parts 1, 2, 4–9.
 - `plans/11-steam.md`: open-questions table with D-numbers, S3–S6 and track table updated, ST-1 `[x]`; `plans/project.md`, `plans/README.md` statuses; notes in masterplans of milestones 8–11 (plans 8–11) if their scope changed.
@@ -3069,6 +3101,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:52Z', NULL, 168);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (179, 41, 'create tasks for plan 41', 'split', 'open', 1000, NULL, 'Split plan 41 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:44:27Z', NULL, 169);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (180, 42, 'create tasks for plan 42', 'split', 'open', 1000, NULL, 'Split plan 42 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:45:18Z', NULL, 170);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3148,6 +3182,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (63, 167, '2026-10-12T00:42:42Z', '2026-10-12T00:43:22Z', 'done', NULL, 0, 'b0f94409082aa93100f6d9b990f8eb6bade01d83', 'claude-opus-5-5[1m]', 'f179348f-5bc9-4e25-bcae-ce50834388bc', 7, 14, 3366, 220746, 29459, 0.3471972, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (64, 168, '2026-10-12T00:43:22Z', '2026-10-12T00:43:59Z', 'done', NULL, 0, '123481c9aa12a9972eb7256347b740036df3f14d', 'claude-opus-5-5[1m]', 'f97dc7c0-d112-4eba-9593-40bb2c3d7d8e', 8, 16, 3366, 266623, 31133, 0.3697726, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (65, 169, '2026-10-12T00:43:59Z', '2026-10-12T00:44:36Z', 'done', NULL, 0, 'b4d3dc057fe20d2212a82c534ede04f613c031ff', 'claude-opus-5-5[1m]', '165572df-89d6-422f-82a3-a944c06ed173', 9, 16, 3649, 270690, 34444, 0.40273399999999993, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (66, 170, '2026-10-12T00:44:36Z', '2026-10-12T00:45:27Z', 'done', NULL, 0, '9cc27ddbbeefc6bcb52aafe5e57a4caff6712153', 'claude-opus-5-5[1m]', 'e4559d6a-8747-4728-92c3-d92d59184920', 14, 26, 4802, 523554, 37390, 0.49997479999999989, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
