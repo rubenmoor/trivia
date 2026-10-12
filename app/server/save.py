@@ -3,8 +3,9 @@
     game.json   {"version": 1, "players": [...], "games": [...], "burned": [...], "flags": {...}}
 
 The server only checks the envelope; the game rules live in the client's engine.
+`migrate()` carries game.sqlite + flags.json over once (PORT-5); main.py calls it from PORT-7 on.
 """
-import json, os, time
+import json, os, sqlite3, tempfile, time
 
 import paths
 
@@ -63,3 +64,38 @@ def write(doc):
                 time.sleep(RETRY_SLEEP)
     tmp.unlink(missing_ok=True)
     raise SaveError(503, "save_locked", "game.json is locked by another program")
+
+
+def migrate():
+    """One-time move game.sqlite + flags.json → game.json (PORT-5); the old files stay as the backup."""
+    import game, flags  # game.py goes in PORT-8; only its init() is needed here
+    db = paths.STATE / "game.sqlite"
+    if FILE.exists() or not db.exists():
+        return
+    with tempfile.TemporaryDirectory() as tmpdir:
+        src = sqlite3.connect(f"{db.as_uri()}?mode=ro", uri=True)  # read-only: reads -wal, never writes
+        con = sqlite3.connect(os.path.join(tmpdir, "copy.sqlite"))
+        try:
+            src.backup(con)
+            with con:
+                game.init(con)  # upgrades legacy schemas on the copy
+            q = lambda sql: con.execute(sql).fetchall()
+            doc = {
+                "version": VERSION,
+                "players": [{"id": i, "name": n, "created_on": c}
+                            for i, n, c in q("SELECT id, name, created_on FROM players ORDER BY id")],
+                "games": [{"id": i, "started_on": s, "finished_on": f, "result": r, "player_id": p,
+                           "state": json.loads(st)}
+                          for i, s, f, r, p, st in q("SELECT id, started_on, finished_on, result, player_id, state "
+                                                     "FROM games ORDER BY id")],
+                "burned": [{"question_id": qid, "player_id": p, "game_id": g, "burned_on": b}
+                           for qid, p, g, b in q("SELECT question_id, player_id, game_id, burned_on FROM burned "
+                                                 "ORDER BY game_id, question_id, player_id")],
+                "flags": flags.load(),
+            }
+        finally:
+            src.close()
+            con.close()
+    write(doc)
+    print(f"migrated game.sqlite → game.json: {len(doc['players'])} players, {len(doc['games'])} games, "
+          f"{len(doc['burned'])} burns, {len(doc['flags'])} flags")
