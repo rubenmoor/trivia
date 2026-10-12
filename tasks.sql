@@ -1665,8 +1665,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the plan exists with its priority and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', '2026-10-12T00:13:21Z', 80);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (86, 21, 'create tasks for plan 21', 'split', 'done', 1000, '2026-10-11, tasks.sql: tasks 91–97 for plan 21, decision 6 (task 97 waits)', 'Split plan 21 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:08:37Z', '2026-10-12T00:14:32Z', 81);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (87, 22, 'create tasks for plan 22', 'split', 'open', 1000, NULL, 'Split plan 22 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:10:24Z', NULL, 82);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (87, 22, 'create tasks for plan 22', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 98, 99)', 'Split plan 22 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:10:24Z', '2026-10-12T00:15:01Z', 82);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (88, 23, 'create tasks for plan 23', 'split', 'open', 1000, NULL, 'Split plan 23 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:11:32Z', NULL, 83);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (89, 24, 'create tasks for plan 24', 'split', 'open', 1000, NULL, 'Split plan 24 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -1735,6 +1735,33 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Mark LUI-1 `[x]` in `plans/15a-ui-translation.md`; `plans/project.md` (M3: part 1 done).
 
 Done when: the comparison shows no difference; plans updated; temp files and worktree gone.', '2026-10-12T00:14:30Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (98, 22, 'Server errors as codes: server + client wiring, interim Spanish map', 'work', 'open', NULL, NULL, 'Part 2 of M3, task 1 of plan 22 (see the plan for the design and the full code table). Runs at 710, before PORT-1''s fixture tasks (700), so fixtures record codes.
+
+- `app/server/game.py`:
+  - `GameError(code, params=None, details=None)`; `ERRORS = {code: English template}`; `str(e)` = filled English text; assert unknown code in `__init__`.
+  - Every `raise GameError` → its code from the plan''s table; re-grep and add any raise not in the table.
+  - Re-raises keep their own code (`back_to_select`, `play_snipe`): `raise GameError("…") from None`.
+  - `trial()` returns `{"code", "params"}` or None; `jokers_view` reasons become that object (Cambiazo literal → `category_none`, `SPENT` → `joker_spent` with `{joker}`); drop `SPENT`.
+- `app/server/main.py`: `GET /api/game` (400), `game_action` (409), `/api/players/delete` (409) answer `{"error": code, "params": {...}, "message": english, "supply": details}`; 404 → `not_found`, 500 → `server_error` (English message). `/api/flags` unchanged.
+- Client:
+  - `lib/types.ts`: `ErrorInfo = { code: string; params: Record<string, string | number> }`, joker `reason: ErrorInfo | null`.
+  - `lib/api.ts`: `GameError` with `code`, `params`, `message`; `json()`, `playJoker`, `gameAction` throw it when the body has `error`; network failures and bodies without `error` stay plain `Error`.
+  - New `lib/errors.ts`: `errorText(e)`, `reasonText(info)`, interim Spanish map for player-facing codes only (texts moved verbatim; `joker_spent` per joker id; `supply_short` joins `supply_level` items with ", "). Unknown code or plain Error → its message.
+  - `Game.svelte` (every `error = …`), `JokerTray.svelte` (reason), `Question.svelte` (purge reason), `Player.svelte` (delete errors, if shown).
+- Docs: new D-number in `plans/decisions.md` (codes + params on the wire, English `message` for logs, client renders); `directory.md`: `lib/errors.ts`; mark the internal codes in the plan''s table if anything changed.
+- PORT-1: if fixtures exist, re-run `authoring/tools/record_fixtures.py` and commit them; note in `plans/12-client-engine.md` that PORT-3 throws the same codes and parity compares `error`/`params`, not `message`.
+
+Done when:
+- Throw-away script hits every code over HTTP against a temp `TRIVIA_STATE`, prints code, params, message and the client''s Spanish text next to the old text; they match word for word. Delete the script after.
+- `npm run check`, `npm run build` pass; `trivia` starts; no visible change in Spanish; no new dependencies.', '2026-10-12T00:15:00Z', NULL, 87);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (99, 22, 'Server error texts into the es catalog', 'work', 'open', 490, NULL, 'Task 2 of plan 22. Priority 490: runs after plan 21''s tasks (LUI-1, 500), which create `app/client/src/lib/i18n.ts`, `locales/es.ts` and `check:literals`, and reserve the `error` namespace. If they don''t exist yet, stop and say so.
+
+- `es.ts`: `error.<code>` keys for every player-facing code from `lib/errors.ts`, incl. `error.joker_spent.<id>` per joker and `error.supply_level`; texts verbatim.
+- `lib/errors.ts`: drop the interim Spanish map; `errorText`/`reasonText` call `t()`. A code is player-facing iff its key exists in the catalog (typed lookup, no `⟦key⟧` for internal codes, which keep the English `message`).
+- `check:literals` passes with `lib/errors.ts` included.
+- Close-out: `plans/project.md` (M3: part 2 done); mark the plan file''s tasks done.
+
+Done when: `npm run check`, `npm run build` and `check:literals` pass; `trivia` starts; same corner error lines and joker reasons in Spanish as before (spot-check `name_missing`, `joker_spent`, `supply_short`, a Cambiazo reason, and an internal code showing English).', '2026-10-12T00:15:00Z', NULL, 87);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1777,6 +1804,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (28, 84, '2026-10-12T00:12:00Z', '2026-10-12T00:12:54Z', 'done', NULL, 0, '9c3900a593498d93bb40d5a20294b62923a3602b', 'claude-opus-5-5[1m]', 'e30aea65-7e96-4968-a3e2-64d42d6ff437', 10, 18, 5205, 312693, 37502, 0.4667266, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (29, 85, '2026-10-12T00:12:54Z', '2026-10-12T00:13:27Z', 'done', NULL, 0, '6856afb17ae063cec511c4c58a5781abf9c7d68f', 'claude-opus-5-5[1m]', '93cd3ef1-c029-4b57-9c4f-00bd4d822acc', 7, 14, 3359, 211757, 25913, 0.3168914, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (30, 86, '2026-10-12T00:13:27Z', '2026-10-12T00:14:39Z', 'done', NULL, 0, 'aa7ecfaa70763739bb83ca58d6a2a71501c20529', 'claude-opus-5-5[1m]', 'e1b89153-9203-488e-b78b-997064cb0dda', 10, 18, 7121, 317028, 34422, 0.4812736, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (31, 87, '2026-10-12T00:14:39Z', '2026-10-12T00:15:06Z', 'done', NULL, 0, '9ccb7d365cf7d4d255d2c43c15e99293022b4e36', 'claude-opus-5-5[1m]', '7cb5e5a9-9ce6-473d-b48f-cd241af9f2a6', 5, 10, 2682, 146953, 26760, 0.2971506, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
