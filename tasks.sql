@@ -1226,6 +1226,92 @@ Added next to `source_url`, `file_url`, `credit` in every picked `media` and `ba
 ## Done when
 - `qgen validate` passes on the current pool with the licence checks as errors.
 - A new pick in the review tool and in `qgen review` stores all fields, including `pd_reasons` for a PD Commons file.', '2026-10-12T00:19:16Z', 107);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (27, 5, 'Group windows and bundle filter in the engine', 590, 'The TypeScript referee plays one audience today: 12 levels with the fixed `LEVEL_RANGES` of D-22 over every approved question of every bundle. This plan turns the age group and the active bundles into settings of each game. The level ranges come from `app/data/age-groups.json`, one table of 12 per group, and selection, supply and every joker use the game''s group and bundles. Defaults (`young_teens`, every bundle on) leave old saves and plan 18''s fixtures unchanged. Part 1 of masterplan 5 (AG-7, BN-6). Part 2 (start screen) builds on the API here, and part 3 (tuning) edits the tables written here.
+
+## Depends on
+- Plan 19 (PORT-2): `selection.ts` (`LEVELS`, `PER_LEVEL`, `LEVEL_RANGES`, `inRange`, `available`, `assign`, `draw`, `supply`), `pool.ts` (`PoolQuestion`, `loadCategories`, `broadOf`, `categoryOf`), `invariants.test.ts`, the `node:test` setup.
+- Plan 20 (PORT-3): `state.ts` (`GameState.settings`, `withDefaults`), `game.ts` (`supply`, `newGame`, `draw`, `availableNow`, `laterFill`, `categoryCandidates`, `replacement`, `play*`, `jokersView`, `undo`), `api.ts` (`getGame`, `gameAction`), `engineData`, `game.test.ts` (fixture replay).
+- If their files aren''t there yet, the tasks wait; they don''t port anything to Python. `app/server/game.py` / `selection.py` stay as they are, and the fixtures are never re-recorded for this plan.
+
+## Decisions taken here
+- **Level ranges per group in `age-groups.json`**: each group gets `levels`, 12 `[lo, hi]` pairs (index 0 = level 1). The engine reads them; `selection.ts` loses the `LEVEL_RANGES` constant. `LEVELS = 12` and `PER_LEVEL = 4` stay constants (D-22: 4 cards per level, no fallback).
+- **First mapping = D-22''s shape scaled onto the window**: `lo + round((x − 1) × (hi − lo) / 9)` for every bound `x` of D-22''s table (no .5 cases occur). `young_teens` comes out as D-22 exactly. Tuned in part 3 (masterplan 5).
+
+  | level | kids 1–7 | young_teens 1–10 | young_adults 3–13 | adults 4–15 |
+  |---|---|---|---|---|
+  | 1 | 1–1 | 1–1 | 3–3 | 4–4 |
+  | 2 | 2–2 | 2–3 | 4–5 | 5–6 |
+  | 3 | 2–4 | 3–5 | 5–7 | 6–9 |
+  | 4–6 | 3–4 | 4–6 | 6–9 | 8–10 |
+  | 7 | 4–5 | 5–7 | 7–10 | 9–11 |
+  | 8 | 4–6 | 6–8 | 9–11 | 10–13 |
+  | 9 | 4–6 | 6–9 | 9–12 | 10–14 |
+  | 10 | 5–7 | 7–10 | 10–13 | 11–15 |
+  | 11 | 6–7 | 8–10 | 11–13 | 13–15 |
+  | 12 | 6–7 | 9–10 | 12–13 | 14–15 |
+
+  - Measured 2026-10-11 on `app/data/pool.json` (1136 approved) with `selection.supply`: every group fills all 12 levels with `base` alone and with `base`+`colombia`. Thinnest: adults level 12, 27 candidates (≈6 games per player); kids level 1 and young_teens level 1, 36 each.
+- **Settings per game**: `GameState.settings` gets `age_group` (a group id) and `bundles` (active bundle ids, in `bundles.json` order, `base` always in), next to `jokers`.
+  - **Missing = default, applied on read and never written back**: `young_teens`, and every bundle in `bundles.json`. `withDefaults` stays the port of Python''s `with_defaults` (jokers only). `gameChoice(state, data)` → `{age_group, bundles}` resolves the defaults. Why not fill them in `withDefaults`: the fixtures'' `db` snapshots and the view''s `settings` would no longer match plan 18''s recordings, and the milestone needs the replay to stay identical.
+  - `newGame` writes both keys only when the request carries them. Part 2''s screen always sends them; the fixtures never do.
+  - `view` returns `settings` as stored (like today). The HUD resolves missing keys with `gameChoice`''s defaults, exported for part 2.
+  - `undo` keeps the current `settings` (already true for `jokers`); abandon and delete don''t touch them.
+- **`base` is always on**: input without `base` gets it added, an empty list means `[base]`, duplicates are dropped, and the order is normalized to `bundles.json`. `always_on: true` in `bundles.json` marks bundles that can''t be switched off (only `base` today); the rule reads that flag, not the id.
+- **Validation errors are `GameError`s** (→ `409 {error, supply: null}`, save unchanged), with Spanish messages: «grupo de edad desconocido: ''x''», «paquete desconocido: ''x''», «los paquetes deben ser una lista». A non-string `age_group` is rejected the same way.
+- **Bundle of a question**: `q.bundle ?? "base"`. Bundles filter questions, not categories: a `colombia` question in a `base` subcategory (OQ-46) leaves with `colombia`, and the subcategory stays as long as `base` has questions for it.
+- **Burns stay per player across groups and bundles** (D-28): a question seen in a kids game is burned for that player in every later game. Nothing changes in burning.
+- **Decision entry** (next D number in `plans/decisions.md`): age group and bundles are settings per game; missing keys mean `young_teens` and every bundle, resolved on read; `base` (every `always_on` bundle) is always on; level ranges per group live in `age-groups.json` (`levels`), `young_teens` = D-22; burns stay per player (D-28). Related: D-22, D-28, D-38, D-39.
+
+## Changes
+
+### Data (`app/data/age-groups.json`, `pool.ts`)
+- `levels` per group as in the table; `about` updated: "levels: 12 difficulty ranges per group, level 1 first; young_teens = D-22; the others are a draft until tuned (AG-7)".
+- `pool.ts`:
+  - `AgeGroup {id, name, ages, window, levels}` and `LevelRanges = readonly (readonly [number, number])[]`.
+  - `parseAgeGroups(json)` throws unless every group has 12 levels with `window[0] ≤ lo ≤ hi ≤ window[1]`, the ids are unique and `young_teens` exists.
+  - `parseBundles(json)` → `Bundle {id, kind, always_on, name, description}[]`, if `loadCategories` doesn''t already parse it.
+- `engineData(pool, categories, bundles, ageGroups)`: `data` gains `bundles`, `ageGroups` and `groupById`.
+- `qgen validate` checks the same `levels` rules (small Python check in `authoring/tools/`), so part 3''s hand edits fail early. Authoring code that reads `window` / `focus` is unchanged.
+
+### Selection (`selection.ts`)
+- `inRange(q, level, ranges)`; `assign(questions, levels, ranges)` sorts slots by `(hi − lo, level)` of the given ranges; `draw(level, questions, {ranges, n, keep, avoidCategories, categoryOf, rng})`; `supply(questions, ranges)`. Each `range` in the report comes from `ranges`.
+- `available(pool, burned, exclude, bundles: ReadonlySet<string>)`: approved, not burned, not excluded, and `q.bundle ?? "base"` in `bundles`. One place filters bundles. Everything downstream (draw, supply, jokers) only sees the filtered list.
+- Shuffle sites, order and lengths stay as plan 18 records them for the default choice, so tapes still match.
+
+### Game (`game.ts`, `state.ts`)
+- `GameState.settings: {jokers, age_group?, bundles?}`; `lib/types.ts` `Game.settings` gets the same optional keys.
+- `gameChoice(state, data)` and `resolveChoice(data, input)` (validation and normalization as above), used by:
+  - `availableNow` (bundles), `draw` (ranges; the error «no quedan preguntas para el nivel N (dificultad lo–hi)» names the group''s range), `laterFill`, `categoryCandidates`, `replacement`;
+  - every `play*`: «Paso» (with purge), «Bájale» (candidates from the bundle-filtered list; still "easier than the current card", not bounded by the window), «Cambiazo», «Francotirador» (repeat draw), admin skip''s replacement;
+  - `supply(save, data, player?, choice?)` and `newGame` (supply check for the requested choice before anything else).
+- `jokersView`: the «Cambiazo» groups are `data.categories` whose `bundle` is active, in the same order. With every bundle on, the list and shuffles are identical to today''s.
+
+### API (`api.ts`)
+- `gameAction(…, "new", {player, age_group?, bundles?})`: coercion like the other args; missing → defaults (not written).
+- New route `choice(save, data, {player?, age_group?, bundles?})` → `200 {choice: {age_group, bundles}, supply}` | `409 {error, supply: null}`. A missing field comes from the player''s newest game (`gameChoice`), else the defaults. Part 2 uses it for the preset and for a warning per choice before a session can''t be filled. `getGame` is unchanged (its `supply` stays the default choice, so fixtures match).
+
+## Checks
+- Plans 18–20''s replays pass unchanged: `selection.test.ts` with `young_teens`'' ranges from `age-groups.json` and every fixture bundle on; `game.test.ts` with no choice in any request. No fixture is re-recorded.
+- `pool.test.ts`: `parseAgeGroups` on the real file; `young_teens.levels` equals D-22''s table (written out in the test; compared once with a throw-away `python3 -c` dump of `selection.LEVEL_RANGES`, not committed); bad files (11 levels, range outside the window, lo > hi) throw.
+- `invariants.test.ts` (real pool, skipped if absent): the seeded 12-level walks run per group × `{base}`, `{base, colombia}`. Every level gets 4 distinct cards inside the group''s range, and with `colombia` off no `colombia` question is ever drawn.
+- `choice.test.ts` (real pool and data, skipped if absent; on the engine, not the fixtures):
+  - per group: a new game played to `won` with correct answers, using every joker once where available. Every offered card is in the group''s range at its level, and the stored settings are what was sent.
+  - `colombia` off: no `colombia` question in `offered` or `history`; `jokersView.category.categories` has no group with `bundle: "colombia"`.
+  - `bundles: []` and `["colombia"]` become `[base]` / `[base, colombia]`; unknown group or bundle → 409, save unchanged.
+  - a state without `age_group` / `bundles` plays like `young_teens` with every bundle (draws equal the explicit default with the same seed).
+  - `choice` route: preset from the player''s newest game, defaults for a new player, supply per choice.
+- `npm test`, `npm run check`, `npm run build`, `qgen validate` pass; no new dependencies.
+
+## Tasks to split into
+1. **Data and decision**: `levels` in `age-groups.json` (table above) and `about`; `parseAgeGroups` / `parseBundles` and `engineData`''s new fields; `pool.test.ts` additions; `qgen validate` check; decision entry; `directory.md` (`levels`). Check: `npm test`, `npm run check`, `qgen validate`.
+2. **Selection with ranges and bundles**: `selection.ts` signatures above, `LEVEL_RANGES` removed; selection fixture replay passes with young_teens ranges and all bundles; `invariants.test.ts` per group × bundle set.
+3. **Game and API**: settings keys, `gameChoice` / `resolveChoice`, every draw, joker and supply path on the game''s choice, `jokersView` filter, `newGame` args, `choice` route, `lib/types.ts` settings type; `choice.test.ts`; game fixture replay unchanged. Then `plans/21-age-groups.md` (AG-7: note "engine: group ranges and choice per game, plan N"; stays `[ ]` until part 4), `plans/22-bundles.md` (BN-6 likewise; the "Later" sentence on Cambiazo), `plans/12-client-engine.md` if it lists engine functions.
+
+## Done when
+- Each group''s 12 level ranges live only in `age-groups.json` (the Python referee keeps its own copy until PORT-8); the engine has no `LEVEL_RANGES` constant.
+- A game can be started and played for each of the four groups and with `colombia` off: cards always in the group''s range, no `colombia` question or Cambiazo category when it''s off.
+- Plans 18–20''s fixture replays pass byte-for-byte with defaults; old states without the new keys play as `young_teens` with every bundle.
+- Decision entry written; screens untouched (part 2).', '2026-10-12T00:25:09Z', 115);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2007,7 +2093,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: `qgen validate` passes on the pool with the licence checks as errors; the tally is in the done note.', '2026-10-12T00:20:06Z', NULL, 110);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (114, 5, 'create tasks for plan 5', 'split', 'done', 1000, '2026-10-11, tasks 115-118; no decisions needed yet (window approval and play-test confirmation are raised by the part plans)', 'Split plan 5 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:21:49Z', '2026-10-12T00:22:32Z', 5);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (115, 5, 'write plan: Group windows and bundle filter in the engine (AG-7, BN-6)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of the masterplan (plan 5): `pm plan add 5 "Group windows and bundle filter in the engine" --priority 590` (after plan 20 at 600, before M2''s screens part at 500).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (115, 5, 'write plan: Group windows and bundle filter in the engine (AG-7, BN-6)', 'plan', 'done', 1000, '2026-10-11, plan 27 (tasks.sql)', 'Write the plan for part 1 of the masterplan (plan 5): `pm plan add 5 "Group windows and bundle filter in the engine" --priority 590` (after plan 20 at 600, before M2''s screens part at 500).
 
 - Builds on plans 19 (`engine/selection.ts`, `pool.ts`) and 20 (`engine/game.ts`, `state.ts`, `engine/api.ts`); no change to the Python referee. Read those plans first; if their files don''t exist yet, the plan names the functions it changes as plans 19/20 define them.
 - Cover: `levels` (12 ranges) per group in `app/data/age-groups.json`, `young_teens` = today''s `LEVEL_RANGES` exactly, a first mapping of the same D-22 shape for `kids`, `young_adults`, `adults`; the engine reads the ranges instead of a constant.
@@ -2016,7 +2102,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Cambiazo picker (`jokersView`) only offers categories of active bundles.
 - API: `newGame` takes and validates `age_group` and `bundles`; `supply` for a given group and bundle set (for part 2''s start screen).
 - Checks: fixture replay with defaults; per group every level 4 cards in range; with `colombia` off no `colombia` question and no `colombia` category in Cambiazo.
-- A decision entry in `plans/decisions.md`: settings per game, defaults, `base` always on.', '2026-10-12T00:22:30Z', NULL, 114);
+- A decision entry in `plans/decisions.md`: settings per game, defaults, `base` always on.', '2026-10-12T00:22:30Z', '2026-10-12T00:25:12Z', 114);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (116, 5, 'write plan: Tune the age-group windows and level weights (AG-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 5): `pm plan add 5 "Tune the age-group windows and level weights" --priority 580` (after part 1''s plan at 590, before part 2''s UI at 400).
 
 - Needs part 1''s per-group `levels` in `app/data/age-groups.json` and the engine''s `supply`.
@@ -2039,6 +2125,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Cover: the milestone''s "done when": one session per age group and one with `colombia` off in the browser on the real pool; a task that raises a decision for the gamemaster to confirm, then records it.
 - Docs: `plans/21-age-groups.md` (AG-7 `[x]`, drop "The game plays young teens until AG-7"), `plans/22-bundles.md` (BN-6 `[x]`, "Later" section), `plans/project.md`, `directory.md`, `about` texts of `app/data/age-groups.json` and `app/data/bundles.json`.
 - Authoring readers that assume levels 1–10 or one range table (`/stats/difficulty`, `qgen report` supply; see decision 5) checked; fix only if broken, else log in `plans/backlog.md`.', '2026-10-12T00:22:30Z', NULL, 114);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (119, 27, 'create tasks for plan 27', 'split', 'open', 1000, NULL, 'Split plan 27 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:25:09Z', NULL, 115);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2093,6 +2181,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (38, 110, '2026-10-12T00:19:38Z', '2026-10-12T00:20:15Z', 'done', NULL, 0, 'b993c3ffdf9ae3482c11803a85ddc846b228d1bb', 'claude-opus-5-5[1m]', '2336a44f-548a-470c-91a9-f146233b05e1', 5, 10, 3099, 140041, 25137, 0.2911242, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (39, 5, '2026-10-12T00:20:15Z', '2026-10-12T00:22:02Z', 'done', NULL, 0, '9313e076630c764cc0b719af2fec5dff644ff162', 'claude-opus-5-5[1m]', '96a0dac8-5fbc-4034-a0a7-8f9cadd00d9d', 13, 26, 8473, 609137, 54430, 0.7268314, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (40, 114, '2026-10-12T00:22:02Z', '2026-10-12T00:22:38Z', 'done', NULL, 0, '6bef0c6b41c88617d91a3c2300bf198d3d8c9e69', 'claude-opus-5-5[1m]', '0ef5388e-bfb0-46f0-98f8-efdebb02c834', 6, 12, 3514, 193939, 31037, 0.3574118, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (41, 115, '2026-10-12T00:22:38Z', '2026-10-12T00:25:21Z', 'done', NULL, 0, '3dbac1bfbda4c3236635e8bd72a4e6aeed57251c', 'claude-opus-5-5[1m]', '43edd34a-8d41-4e04-af39-47aa4eccc1a5', 14, 28, 15778, 656573, 64141, 0.96011459999999993, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
