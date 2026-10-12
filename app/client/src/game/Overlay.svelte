@@ -2,6 +2,7 @@
   // Admin overlay on Esc (04-ui-tv-display.md, UI-13). The family sees it, so it never shows
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
+  import { t } from "../lib/i18n";
   import type { JokerBudget, JokerName } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
@@ -19,9 +20,9 @@
   type Channel = "music" | "effects" | "media";
 
   const CHANNELS: { key: Channel; label: string }[] = [
-    { key: "music", label: "Música" },
-    { key: "effects", label: "Efectos" },
-    { key: "media", label: "Audio y video de las preguntas" },
+    { key: "music", label: t("overlay.music") },
+    { key: "effects", label: t("overlay.effects") },
+    { key: "media", label: t("overlay.media") },
   ];
   const STEP = 0.1;
   /** «Como las cartas»: the printed card set (JK-11); the same as `CARDS` in app/server/game.py. */
@@ -95,7 +96,7 @@
 
   const unlimited = $derived(!!current && TOKENS.every((t) => current![t.name] === null));
   const cards = $derived(!!current && TOKENS.every((t) => current![t.name] === CARDS[t.name]));
-  const presetLabel = $derived(unlimited ? "Sin límite" : cards ? "Como las cartas" : "A medida");
+  const presetLabel = $derived(t(unlimited ? "overlay.unlimited" : cards ? "overlay.cards" : "overlay.custom"));
 
   /** Sin límite ↔ Como las cartas; a custom budget goes back to unlimited. */
   function cyclePreset() {
@@ -110,22 +111,22 @@
   }
 
   const items = $derived<Item[]>([
-    { label: "Continuar", enabled: true, run: onclose },
-    { label: "Saltar pregunta", enabled: canSkip, run: onskip },
-    { label: "Saltar y quemar para todos", enabled: canSkip, run: onskipall, confirm: true },
-    { label: "Deshacer última respuesta", enabled: canUndo, run: onundo },
-    { label: "Pantalla completa", enabled: true, run: fullscreen },
-    { label: "Volver al inicio (termina la partida)", enabled: canRestart, run: onrestart, confirm: true },
+    { label: t("overlay.continue"), enabled: true, run: onclose },
+    { label: t("overlay.skip"), enabled: canSkip, run: onskip },
+    { label: t("overlay.skipAll"), enabled: canSkip, run: onskipall, confirm: true },
+    { label: t("overlay.undo"), enabled: canUndo, run: onundo },
+    { label: t("overlay.fullscreen"), enabled: true, run: fullscreen },
+    { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true },
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, right: true })),
     {
-      label: sound.volumes.muted ? "Sonido: apagado" : "Sonido: encendido",
+      label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),
       enabled: true,
       run: () => setVolumes({ muted: !sound.volumes.muted }),
       right: true,
     },
     ...(budget
       ? [
-          { label: "Comodines", enabled: true, run: cyclePreset, preset: true, right: true },
+          { label: t("overlay.jokers"), enabled: true, run: cyclePreset, preset: true, right: true },
           ...TOKENS.map((t) => ({ label: t.label, enabled: true, run: () => {}, joker: t.name, right: true })),
         ]
       : []),
@@ -183,10 +184,10 @@
     {@const name = item.joker}
     <div class="row joker" class:selected={i === selected} role="group" onmouseenter={() => (selected = i)}>
       <span>{item.label}</span>
-      <button class="step" onclick={() => stepJoker(name, -1)} tabindex="-1" aria-label="menos">−</button>
+      <button class="step" onclick={() => stepJoker(name, -1)} tabindex="-1" aria-label={t("overlay.less")}>−</button>
       <span class="value">{current?.[name] ?? "∞"}</span>
-      <button class="step" onclick={() => stepJoker(name, 1)} tabindex="-1" aria-label="más">+</button>
-      <span class="left">{left?.[name] != null ? `quedan ${left[name]}` : ""}</span>
+      <button class="step" onclick={() => stepJoker(name, 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>
+      <span class="left">{left?.[name] != null ? t("overlay.left", { n: left[name] }) : ""}</span>
     </div>
   {:else}
     <button
@@ -196,9 +197,9 @@
       onmouseenter={() => item.enabled && (selected = i)}
     >
       {#if item.preset}
-        Comodines: <b>{presetLabel}</b>
+        {t("overlay.preset")} <b>{presetLabel}</b>
       {:else}
-        {confirming === i ? "¿Seguro? Pulsa otra vez" : item.label}
+        {confirming === i ? t("overlay.confirm") : item.label}
       {/if}
     </button>
   {/if}
@@ -206,7 +207,7 @@
 
 <div class="overlay">
   <div class="menu">
-    <h2>Pausa</h2>
+    <h2>{t("overlay.title")}</h2>
     <div class="columns">
       <div class="column">
         {#each items as item, i (item.joker ?? item.volume ?? item.label)}
@@ -214,19 +215,19 @@
         {/each}
       </div>
       <div class="column">
-        <h3>Sonido</h3>
+        <h3>{t("overlay.sound")}</h3>
         {#each items as item, i (item.joker ?? item.volume ?? item.label)}
           {#if item.right && !item.preset && !item.joker}{@render row(item, i)}{/if}
         {/each}
         {#if budget}
-          <h3>Comodines de esta partida</h3>
+          <h3>{t("overlay.budget")}</h3>
           {#each items as item, i (item.joker ?? item.volume ?? item.label)}
             {#if item.preset || item.joker}{@render row(item, i)}{/if}
           {/each}
         {/if}
       </div>
     </div>
-    <p class="debug">Volumen y comodines: <kbd>←</kbd> <kbd>→</kbd></p>
+    <p class="debug">{t("overlay.keys")} <kbd>←</kbd> <kbd>→</kbd></p>
     {#if questionId}
       <p class="debug">
         {questionLabel}:
@@ -239,9 +240,9 @@
     {/if}
     {#if authoring}
       <p class="debug">
-        Estadísticas:
-        <a href="{authoring}/stats/categories" target="_blank" tabindex="-1">categorías</a> ·
-        <a href="{authoring}/stats/difficulty" target="_blank" tabindex="-1">dificultad</a>
+        {t("overlay.stats")}
+        <a href="{authoring}/stats/categories" target="_blank" tabindex="-1">{t("overlay.statsCategories")}</a> ·
+        <a href="{authoring}/stats/difficulty" target="_blank" tabindex="-1">{t("overlay.statsDifficulty")}</a>
       </p>
     {/if}
   </div>

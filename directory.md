@@ -11,6 +11,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `app/client/src/game/` | The game screens and their parts (stage, question, jokers, tower, fireworks, sound, copy) |
 | `app/client/src/lib/` | API client and types; `store.ts`: `ServerStore` (`/api/save`); `errors.ts`: server error codes → Spanish (D-57); `i18n.ts`: `t()`, `variants()`, `lang` (D-70) |
 | `app/client/src/locales/` | UI string catalogs (D-70): `es.ts` (the source catalog, `Catalog`/`Key` types) |
+| `app/client/scripts/check-literals.mjs` | `npm run check:literals -w app/client`: flags on-screen literals outside the catalog (LUI-1) |
 | `app/client/src/engine/` | TS game engine (plan 12, D-58): `rng.ts` (seedable shuffle), `pool.ts` (pool and categories), `selection.ts` (port of `selection.py`), `state.ts` (save document, transactions), `save.ts` (`parseSave`, flags), `store.ts` (`Store`, `MemoryStore`), `pycompat.ts` (Python semantics), `game.ts` (referee, port of `game.py`), `api.ts` (`main.py`'s game routes); `*.test.ts` next to them (`npm test`, D-64), helpers in `test/` |
 | `app/client/src/engine/fixtures/` | Parity fixtures of the Python referee for the TS engine (PORT-1, D-58): synthetic categories and pools, `selection.json`, `game/<scenario>.json`; format in its `README.md` |
 | `app/client/public/` | Fonts and audio |

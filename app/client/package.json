@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:literals": "node scripts/check-literals.mjs",
     "test": "node --test 'src/engine/**/*.test.ts'"
   },
   "devDependencies": {

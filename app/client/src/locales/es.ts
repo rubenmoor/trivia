@@ -32,10 +32,40 @@ const es = {
   a11y: {
     menu: "Menú (Esc)",
   },
-  /** What the admin overlay acts on. */
+  /** The admin overlay (Esc). */
   overlay: {
+    title: "Pausa",
+    continue: "Continuar",
+    skip: "Saltar pregunta",
+    skipAll: "Saltar y quemar para todos",
+    undo: "Deshacer última respuesta",
+    fullscreen: "Pantalla completa",
+    restart: "Volver al inicio (termina la partida)",
+    confirm: "¿Seguro? Pulsa otra vez",
+    sound: "Sonido",
+    music: "Música",
+    effects: "Efectos",
+    media: "Audio y video de las preguntas",
+    muted: "Sonido: apagado",
+    unmuted: "Sonido: encendido",
+    jokers: "Comodines",
+    budget: "Comodines de esta partida",
+    /** «Comodines: <b>{preset}</b>». */
+    preset: "Comodines:",
+    unlimited: "Sin límite",
+    cards: "Como las cartas",
+    custom: "A medida",
+    less: "menos",
+    more: "más",
+    left: "quedan {n}",
+    /** Followed by the ←/→ keys. */
+    keys: "Volumen y comodines:",
+    /** What the overlay acts on, shown with its id. */
     question: "pregunta",
     lastQuestion: "última pregunta",
+    stats: "Estadísticas:",
+    statsCategories: "categorías",
+    statsDifficulty: "dificultad",
   },
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
