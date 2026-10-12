@@ -21,11 +21,11 @@ Every action that has a key must also have a visible control that works with a m
 - **Steam Deck:** 1280×800 (16:10), built-in controls = gamepad. Deck Verified requires full controller support, readable text and no keyboard needed except for text entry, which means the **player name** needs the on-screen keyboard (Steamworks `ShowFloatingGamepadTextInput`, 18) or an in-game letter picker. *S3: letter picker shown only for a pad, pm plan 46; the Steamworks keyboard may replace it under Steam in S5 (SW-8).*
 
 ## 3. Multiplayer input (later)
-For the multiplayer modes in [13](13-game-modes.md) (D-77). No phones, no LAN server.
+For the multiplayer modes in [13](13-game-modes.md) (D-77, `timed` D-80). No phones, no LAN server.
 - **One gamepad per player:** the Gamepad API lists up to 4 pads in Chromium (the platform may limit it). Each pad is bound to a player on a "press A to join" screen.
 - **Keyboard and mouse:** usable by any player whose turn it is.
 - **Shared keyboard:** every player gets one dedicated key (picked on the join screen); pressing it hands that player keyboard and mouse until their turn is done. Covers players without a pad.
-- **`timed`:** everyone answers at once, so each player needs their own input: a pad each, or answer keys per player on the shared keyboard (layout in IN-6).
+- **`timed`:** a claim action that any player can trigger at any time (D-80): a pad button each, or a claim key per player on the shared keyboard (layout in IN-6); the claiming player then gets keyboard and mouse (or answers on their pad) for the 6 s.
 - **Remote Play Together:** Steam streams the game to remote friends and their input arrives as extra virtual controllers, so it works for free once local multi-controller input works.
 
 ## Tasks
@@ -34,5 +34,5 @@ For the multiplayer modes in [13](13-game-modes.md) (D-77). No phones, no LAN se
 - [x] IN-3 Focus navigation model for every screen (spatial focus, focus ring, focus memory per screen). *Plan: pm plan 44. 2026-10-12: `lib/focus.ts` (nearest control by rects, ring via `[data-nav]`, memory per scope, dialogs give focus back); every screen and dialog declares `data-focus-default`; `Enter` presses the ring's control, else the screen's default (as before); on a locked answer it submits. Rule in 04 ("Input"). Choice, report and settings screens: follow-up tasks in pm plans 29 and 36.*
 - [x] IN-4 Gamepad input: polling, standard mapping, direct answer buttons and joker access (design first). *Plan: pm plan 45; design: pm decision 9. 2026-10-12: `lib/gamepad.ts` (pure core: `step`, mapping) + `lib/gamepad.svelte.ts` (rAF loop, `padStyle`); `Scope.pad` per screen (Question: Y/B/X/A pick, RT submit, LT unlock, LB/RB into the tray); B leaves the overlay (pad only). Full game walked headless with a fake pad (task 352); real-pad check by the gamemaster pending.*
 - [x] IN-5 Button glyphs per last-used device; glyph assets with a clear license. *Plan: pm plan 45. 2026-10-12: `Glyph.svelte` (xbox + playstation, drawn in-house), `Prompt.svelte` replaces every `<kbd>`; with a pad, A shows only on the ringed control and glyphs hide where the button does nothing (dialog up, struck answer).*
-- [ ] IN-6 Later: join screen ("press A to join" per pad, a dedicated key per keyboard player), player binding (pad ↔ player, key ↔ player), shared-keyboard handover, per-player answer keys for `timed` (with MD-8/MD-9, D-77).
+- [ ] IN-6 Later: join screen ("press A to join" per pad, a dedicated key per keyboard player), player binding (pad ↔ player, key ↔ player), shared-keyboard handover, the claim action for `timed` (per-player claim keys; the claimer holds keyboard and mouse for the 6 s; with MD-8/MD-9, D-77, D-80).
 - [x] IN-7 Phones as buzzers? *2026-10-12: no phones (D-77); per-player gamepads + shared keyboard instead.*

@@ -1,6 +1,6 @@
 # 13 — Game Modes
 
-**Status:** modes decided (D-74, multiplayer D-77); MD-6 done; MD-7.. open
+**Status:** modes decided (D-74, multiplayer D-77, timed D-80); MD-6 done; MD-7.. open
 
 Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them. Spanish names: «Solo o en grupo» fixed, the others proposals ([15a](15a-ui-translation.md) "Mode names").
 
@@ -42,15 +42,16 @@ Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pre
 - No timer.
 - Burning: ≈ N players × 1 game's burns.
 
-### Competitive timed (`timed`; es proposal «Contrarreloj»)
-- No turns: all answer the same question at once, each with their own input.
-- Own track per player; one age group for everyone.
-- Difficulty: the question's level = average of the active players' levels (rounded).
-- No jokers.
-- Timer: 30 s to answer; a hint appears every 8 s (3 hints); timeout = all players lose at once.
-- Drama: during the last 3 s a pulsing red frame around the screen (impending-death warning of a first-person shooter).
-- Drop-out and win: a wrong answer = out at once; three levels behind the leader = out; first to level 12 wins.
-- Burning: ≈ 1 shared question per round, no joker burns.
+### Competitive timed (`timed`; es proposal «Contrarreloj»; D-80, replaces D-77's timed part)
+- 12 rounds; round = level (the question's difficulty follows the round); questions per round = number of players.
+- One age group for everyone; no jokers.
+- Every question shown to all players: 30 s, a hint every 8 s; unclaimed after 30 s = next question, nothing else.
+- Claim: own action, any player, any time → that player has 6 s to answer; 6 s timeout = wrong answer; once the answer is shown, the next question comes; players may claim again after scoring.
+- Lives: three each; round end: no correct answer in that round = −1 life; wrong answer (or claim timeout) = out at once; third life lost = out.
+- Win: round 12 is sudden death (first claim + correct answer wins at once); only one player left = wins at once.
+- Visuals: rounds and hearts; a heart pulses at a player's last chance in a round without a correct answer, stronger on their last heart; last 3 s of a claim: a clock ticks once per second, louder each tick, plus a pulsing red frame (impending-death warning of a first-person shooter); the same red frame when everyone is at risk at once (all on their last life, nobody correct this round yet).
+- Burning: ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs; no joker burns.
+- Open detail (not a decision): after drop-outs, do questions per round follow the players still in?
 
 ## Implementation notes
 Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
@@ -71,8 +72,8 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - [x] MD-5 Define the modes (OQ-30, OQ-36). *2026-10-12: D-74: five modes, no default mode, no presets, no checkpoint; outside gamemaster mode no skip, undo, replace or joker changes; «Reportar pregunta» only logs. Sections and implementation notes above.*
 - [x] MD-6 «Reportar pregunta»: local report list only; no burn, no replacement (D-74). *2026-10-12: engine `report` (task 376); overlay by mode (`gamemaster` as before plus «Reportar pregunta» / «Preguntas reportadas»; `solo` without skip, undo and budget editor, read-only joker line); confirm dialog (Enter reports, Esc/⌫ cancel); `Reports.svelte` opens over the overlay instead of a `Screen` (the question below stays mounted), newest first, the answer of the question still on screen hidden, «Copiar» with a selectable `<pre>` fallback.*
 - [ ] MD-7 Mode screen (five modes); age group screen with "Customize game" in `solo`; `settings.mode`, `settings.customized`.
-- [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules, timer, hint cadence, red frame, burning; engine first, then screens.
-- [ ] MD-9 Later: multiplayer input with IN-6: per-player gamepads, shared keyboard (one key per player takes keyboard and mouse until the turn ends), per-player answer input in `timed` (D-77).
+- [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77, `timed` D-80): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules; `timed`: rounds, claim and 6 s answer timer, lives, sudden death, hint cadence, hearts, ticking clock, red frame; burning; engine first, then screens.
+- [ ] MD-9 Later: multiplayer input with IN-6: per-player gamepads, shared keyboard (one key per player takes keyboard and mouse until the turn ends), the claim action in `timed` (any player, any time; per-player claim keys on the shared keyboard; D-80).
 - [ ] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *pm plan for milestone 7 part 11.*
 - [ ] MD-11 Gamemaster mode: "configure game" screen before every game, full customization; defaults = today's game (Enter straight through).
 - [ ] MD-12 Gamemaster menu (`Esc`): today's overlay (undo, skip, burn for everyone, joker budget, MD-4) + manage jokers, replace the current question, further decided cheats.

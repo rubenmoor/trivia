@@ -69,7 +69,7 @@ All are logged in [`open-questions.md`](open-questions.md):
 | OQ-34 | ~~Store name~~ answered: «Living Room Trivia» / «Trivia en Familia», pending PUB-7 (D-50) | 17 |
 | OQ-35 | Code and content license; does the question pool stay public on GitHub? | 17 |
 | OQ-36 | ~~Audience~~ answered: four age groups on one shared scale (D-38) | 13, 16 |
-| OQ-37 | ~~Competitive and couch co-op~~ answered: round-robin co-op, round-robin competitive, competitive (timed); per-player gamepads + shared keyboard, no phones (D-77) | 13, 14 |
+| OQ-37 | ~~Competitive and couch co-op~~ answered: round-robin co-op, round-robin competitive, competitive (timed); per-player gamepads + shared keyboard, no phones (D-77; timed revised D-80) | 13, 14 |
 
 ## Risks
 - **Content volume and factual errors** are the most likely reason for bad reviews. A wrong answer in a public product costs more than at home. See 16 (quality bar) and 13 (a "report this question" action instead of the gamemaster's «Saltar y quemar para todos»).

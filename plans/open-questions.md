@@ -16,7 +16,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 
 ## Resolved
 - **OQ-31** Launch languages es, en, de (zh-Hans, ru, pt-BR later, milestone 12); `base` in neutral Latin American Spanish (es-419) plus an es-ES variant where wording differs; `colombia` keeps its Colombian voice; store: Spanish – Latin America, Spanish – Spain, English, German (D-78).
-- **OQ-37** Multiplayer: round-robin co-op, round-robin competitive, competitive (timed); one gamepad per player, keyboard, mouse, shared keyboard; no phones (D-77).
+- **OQ-37** Multiplayer: round-robin co-op, round-robin competitive, competitive (timed); one gamepad per player, keyboard, mouse, shared keyboard; no phones (D-77; timed revised D-80).
 - **OQ-32** Content target: 5000 approved per launch language (es, en, de) with D-53's mix; no games-per-player number, CT-2 reports it for information (D-75).
 - **OQ-30** No default mode: five game modes; no presets, no checkpoint, no skip outside gamemaster mode; «Reportar pregunta» only logs (D-74).
 - **OQ-29** Desktop shell: Electron; Steam binding (steamworks-ffi-node or steamworks.js) picked in SW-2 (D-63).
