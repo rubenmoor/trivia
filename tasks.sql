@@ -729,6 +729,56 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Every scenario listed above exists; every joker has at least one available and one unavailable case; no step returned 500.
 - `state/game.sqlite` unchanged (mtime + checksum before/after a run).
 - No new dependencies (Python standard library only).', '2026-10-11T23:58:59Z', 61);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (19, 2, 'Engine core: rng, pool, selection (PORT-2)', 610, 'The pure core of the TypeScript referee: a seedable shuffle, the pool and category data, and a port of `app/server/selection.py` that produces exactly the same results. Part 3 (`engine/game.ts`, plan for task 57) builds on it; it replays the selection fixtures of plan 18 (PORT-1) and adds invariant tests on the real pool. Source: `plans/12-client-engine.md`, PORT-2, "Parity strategy" steps 2–4.
+
+## Depends on
+- Plan 18 (Parity fixtures): tape format, `fixtures/categories.json`, `fixtures/pools/*.json`, `fixtures/selection.json`. Tasks 1–2 below can start before the fixtures exist; task 3 needs `selection.json`.
+
+## Decisions taken here
+- **Tests: `node:test` with Node''s built-in type stripping, no `tsc` step.**
+  - The flake''s Node 22.23 strips types by default (unflagged since 22.18); no new dependency, no build output.
+  - Engine code uses erasable syntax only (no `enum`, `namespace`, parameter properties) and imports with explicit `.ts` extensions; `app/client/tsconfig.json` gets `allowImportingTsExtensions: true` (fine with `noEmit`) and `erasableSyntaxOnly: true` (TS ≥ 5.8; repo has 6.0). `verbatimModuleSyntax` is already on (`import type` where needed).
+  - Scripts: `app/client/package.json` `"test": "node --test ''src/engine/**/*.test.ts''"`; root `"test": "npm run test --workspaces --if-present"`.
+  - No `@types/node` (would be a new dependency): `*.test.ts` and `src/engine/test/` are excluded from `tsconfig.json`, so `npm run check` type-checks the engine but not the tests. Engine modules themselves import nothing from `node:`; only tests read files (`node:fs`).
+  - Decision entry in `plans/decisions.md` (next D number).
+- **`Rng` interface = plan 18''s tape semantics.** `interface Rng { shuffle<T>(xs: T[], site: string): void }`, in place like Python''s `random.shuffle`; `site` = the Python function name (`draw`, `pick`, `swap_in`, `replacement`).
+  - `seededRng(seed: number)`: mulberry32 + Fisher–Yates; no Mersenne Twister parity needed (plan 18).
+  - `randomSeed()`: `crypto.getRandomValues` (browser and Node both have global `crypto`). Whether the seed is stored in the game state is part 3''s call.
+  - `tapeRng(tape)` in `engine/test/tape.ts` (test-only): applies `perm` (`xs[j] = old[perm[j]]`), throws on wrong `n`, site mismatch, missing entries; `done()` throws on leftover entries.
+- **No hidden globals.** Every function that shuffles takes the `Rng` as a parameter; nothing reads `Math.random` or the clock.
+- **`pool.ts` is pure: parsed JSON in, typed data out.** Fetching is part 5. Reuses `Media`, `Background`, `Category`, `Status` from `lib/types.ts`; adds the full question type there or in `pool.ts` (with `answer`, `wrong_answers`, `hints`, which today''s client never sees).
+- **No bundle filtering.** The referee today plays all approved questions of every bundle; choosing bundles is BN-6, out of scope ("same rules").
+- **DB-side helpers stay out.** `burned_ids`, `burned_for`, `player_id` (casefold name match) read SQLite; their TS counterparts work on the save document and belong to part 3/4 (tasks 57, 58). Burned IDs reach `selection.ts` as a `Set<string>` / array.
+
+## Files
+- `app/client/src/engine/rng.ts`: `Rng`, `seededRng`, `randomSeed`.
+- `app/client/src/engine/pool.ts`:
+  - `PoolQuestion` type (all `pool.json` fields), `parsePool(json)` → `PoolQuestion[]` (checks `version` 1).
+  - `loadCategories(bundlesJson, files: Record<bundleId, categoriesJson>)` → `Category[]` in `bundles.json` order, base first, a bundle without a file has none (mirrors `categories.load()`).
+  - `subcategories(cats, bundle?)`, `broadOf(cats)` (subcategory → category), `bundleOf(cats, sub)`, `categoryOf(broad)` (question → broad slug or `null`, like `game.category_of`), `byId(pool)`.
+- `app/client/src/engine/selection.ts`: `LEVELS`, `PER_LEVEL`, `LEVEL_RANGES`, `inRange`, `available(pool, burned, exclude)`, `assign(questions, levels)` → `{assignment: Map<level, id[]>, missing: Map<level, n>}`, `draw(level, questions, {n, keep, avoidCategories, categoryOf, rng})` → `PoolQuestion[] | null`, `supply(questions)` → `Supply[]` (same shape as `lib/types.ts` `Supply`).
+- `app/client/src/engine/test/tape.ts`, `test/fixtures.ts` (read fixture JSON via `node:fs`, relative to `import.meta.dirname`).
+- Tests: `rng.test.ts`, `pool.test.ts`, `selection.test.ts`, `invariants.test.ts` next to the modules.
+
+## Parity details for `selection.ts`
+- `assign`: levels sorted by `(hi - lo, level)`; slots in that order; candidates in input order; augmenting path recursion as in Python (max 48 slots, no depth issue).
+- `owner` must be a `Map` (insertion order kept on re-assignment, like a Python dict); `assignment[level]` lists IDs in `owner` order. Don''t use plain objects for ID-keyed maps.
+- `draw`: one `rng.shuffle(cands, "draw")` per call, before the loop, on candidates = in range and not in `keep` (even when empty: Python shuffles a list of length 0 too; the tape records it). Then per pick a stable sort by `(categoryOf(q) ∈ table, categoryOf(q) ∈ avoid)`, false before true; `table` from `keep` + picked; `null` is a valid category value. First candidate, not yet picked, whose removal still lets `assign(…, later levels)` fill everything wins; none → `null`.
+- `categoryOf` default: `q.subcategory ?? null`.
+- `supply`: `range` as `[lo, hi]`, `candidates` count, `missing` from `assign` over levels 1–12.
+- Python JSON turns int keys into strings (`"1"`, `"10"` …, sorted as strings): replay compares per level, converting keys, and list order within a level.
+
+## Tasks to split into
+1. **Test runner + `rng.ts`**: tsconfig flags and excludes, npm scripts (client + root), `rng.ts`, `test/tape.ts`, `rng.test.ts` (same seed → same permutations; results are permutations; tape errors on wrong `n`, site, missing/leftover entries; hand-written tape). Decision entry. Check: `npm test` and `npm run check` pass; `npm run build` still works with `.ts` import extensions.
+2. **`pool.ts`**: types, `parsePool`, `loadCategories` and helpers. `pool.test.ts` on the real `app/data/` files and on `fixtures/categories.json`: category order equals `categories.load()` output (compare once with a throw-away `python3 -c` dump, not committed), `broadOf`/`categoryOf` on a few known subcategories.
+3. **`selection.ts` + fixture replay**: port as above; `selection.test.ts` replays every case in `fixtures/selection.json` (`in_range`, `assign`, `supply`, `draw` with `tapeRng`, incl. `keep`, `avoid_categories`, `n` < 4, unfillable → `null`) and requires each tape to be used up. Gaps found in the fixtures go back to plan 18''s recorder (re-record, don''t hand-edit fixtures).
+4. **Invariant tests + docs**: `invariants.test.ts` on the real `app/data/pool.json` (skipped with a message if absent), ~50 `seededRng` seeds: random burned subsets (only where `supply` reports no missing), a 12-level walk drawing 4 cards per level with `offered` excluded and `avoidCategories` from earlier picks; check every level gets 4 distinct cards in range, no burned or already offered ID ever appears, and supply with no shortage never leads to a `null` draw. Runs in a few seconds. Then `plans/12-client-engine.md` (PORT-2 `[x]` with a note), `directory.md` (`app/client/src/engine/`), AGENTS.md Commands (`npm test`), README.md if it lists npm commands.
+
+## Done when
+- `npm test` (root) runs all engine tests and passes; every `selection.json` case replays identically with its tape fully consumed.
+- Invariant tests pass: every level 4 cards, burned never return.
+- `npm run check` and `npm run build` pass; no new entries in `package.json` dependencies.
+- Engine modules import nothing outside `src/engine/` and `src/lib/types.ts`, and nothing from `node:`.', '2026-10-12T00:00:50Z', 56);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -1077,14 +1127,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Recorder runs against today''s untouched SQLite state code, never `state/game.sqlite` of the family (temp dir).
 - Plan priority: 700 (must run before parts 2–6).
 - `pm plan list` first; `pm plan add 2 …` is wrong: add it to milestone 2 (`pm plan add <milestone> …`).', '2026-10-11T23:56:40Z', '2026-10-11T23:56:49Z', 54);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (56, 2, 'write plan: Engine core: rng, pool, selection (PORT-2)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 2): `app/client/src/engine/rng.ts`, `pool.ts`, `selection.ts`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (56, 2, 'write plan: Engine core: rng, pool, selection (PORT-2)', 'plan', 'done', 1000, '2026-10-11, plan 19 (tasks.sql)', 'Write the plan for part 2 of the masterplan (plan 2): `app/client/src/engine/rng.ts`, `pool.ts`, `selection.ts`.
 
 - `rng.ts`: seedable PRNG, consistent with the determinism chosen in part 1''s plan.
 - `pool.ts`: load `app/data/pool.json` + `app/data/categories.json` + `app/data/bundles/<id>/categories.json` (D-43), filter; pure, no fetch (loading happens in part 5).
 - `selection.ts`: levels, `LEVEL_RANGES`, `available`, bipartite matching `assign`, `draw`, `supply` (GF-2), same results as `selection.py`.
 - Test runner without new dependencies: `node:test` on Node 22; settle type stripping vs. a `tsc` step; wire into an `npm` script.
 - Done when: selection fixtures from part 1 replay identically; invariant tests (every level 4 cards, burned never return).
-- Plan priority: 610 (after part 1''s plan at 700, before part 3).', '2026-10-11T23:56:40Z', NULL, 54);
+- Plan priority: 610 (after part 1''s plan at 700, before part 3).', '2026-10-11T23:56:40Z', '2026-10-12T00:00:53Z', 54);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (57, 2, 'write plan: Engine game state machine (PORT-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 2): `app/client/src/engine/game.ts`.
 
 - Pure functions state → state: new game, pick, answer, skip (player / everyone), undo (one step), abandon, delete player, jokers hint/skip/easier/category/snipe with availability and per-game budget (MD-1), burns.
@@ -1122,6 +1172,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plan priority: 700 (must run before parts 2–6).', '2026-10-11T23:56:49Z', '2026-10-11T23:59:02Z', 54);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (62, 18, 'create tasks for plan 18', 'split', 'open', 1000, NULL, 'Split plan 18 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-11T23:58:59Z', NULL, 61);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (63, 19, 'create tasks for plan 19', 'split', 'open', 1000, NULL, 'Split plan 19 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:00:50Z', NULL, 56);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1150,6 +1202,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (15, 2, '2026-10-11T23:54:52Z', '2026-10-11T23:55:53Z', 'done', NULL, 0, '00a9a2efc5c7ffc663fcdc31b80b0959bcecee90', 'claude-opus-5-5[1m]', '405770f5-0bf4-48f2-9f6a-bb47813468d9', 10, 20, 5689, 348572, 33337, 0.45027039999999996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (16, 54, '2026-10-11T23:55:53Z', '2026-10-11T23:57:08Z', 'done', NULL, 0, '76cdfdd3b4b2be8a52558adffa5925b0b01da56d', 'claude-opus-5-5[1m]', '67665ee3-61b2-43f5-a24c-8ab0630b9ff7', 8, 16, 7760, 302651, 36510, 0.5078742, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (17, 61, '2026-10-11T23:57:08Z', '2026-10-11T23:59:10Z', 'done', NULL, 0, '0fef3579bab3dd745acb81b226ed6c4c0d5744a3', 'claude-opus-5-5[1m]', 'e5654647-a002-4ece-8190-adcca9bf52cb', 10, 20, 11845, 431697, 55270, 0.7654794, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (18, 56, '2026-10-11T23:59:10Z', '2026-10-12T00:01:02Z', 'done', NULL, 0, '43f5f4666a0f606e3d1746d0d183e7fdbb82f4f6', 'claude-opus-5-5[1m]', '3e435859-8756-4e90-a382-239bb8c0804f', 13, 26, 9512, 558720, 47366, 0.68101600000000007, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
