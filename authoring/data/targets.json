@@ -65,5 +65,10 @@
     "$ per approved": {
       "max": 0.35
     }
+  },
+  "quality": {
+    "about": "Quality bar per batch (plan 16, pm decision 2): human spot-check size and min. share where the human agrees with the LLM review, in each of the last two batches.",
+    "spot_check_size": 30,
+    "min_agreement": 0.9
   }
 }

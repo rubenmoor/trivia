@@ -19,6 +19,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
+    qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -1370,6 +1371,136 @@ def spot_agreement(batch, checks):
     return len(items), sum((i["llm"] == "approved") == (i["human"] == "approved") for i in items)
 
 
+def qc_stats(batch, checks, pool):
+    """Spot check and audit numbers of a batch (plan 16); counts, rates are left to the reader."""
+    items = {i: it for i, it in (checks.get(batch) or {}).get("items", {}).items() if it.get("human")}
+    n, agreed = spot_agreement(batch, checks)
+    found, dec = audits(batch), llm_decisions(batch) if (WORK / batch).is_dir() else {}
+    accept = lambda d: d == "approved"
+    audited = [it for it in items.values() if it.get("audit")]
+    false_approve = [i for i, it in items.items() if accept(it["llm"]) and not accept(it["human"])]
+    q = targets.load_quality()
+    return {"audit_n": len(found),
+            "audit_approved": len([i for i in found if dec.get(i) == "approved"]),
+            "audit_major_approved": sum(is_major(a) for i, a in found.items() if dec.get(i) == "approved"),
+            "human_n": n, "agreed": agreed, "false_approve": false_approve,
+            "false_needs_work": [i for i, it in items.items() if not accept(it["llm"]) and accept(it["human"])],
+            "difficulty_2": sum(abs(it["difficulty"][0] - it["difficulty"][1]) >= 2 for it in items.values()),
+            "media_changed": sum(it["media_changed"] for it in items.values()),
+            "audit_human_n": len(audited),
+            "audit_human_agreed": sum((it["audit"] == "ok") == accept(it["human"]) for it in audited),
+            "audit_caught": sum(items[i].get("audit") == "problem" for i in false_approve),
+            "passes": None if not q or not n else n >= q["spot_check_size"] and agreed >= q["min_agreement"] * n,
+            "items": items}
+
+
+def qc_pct(n, of):
+    return f"{n} of {of} ({100 * n / of:.0f} %)" if of else "–"
+
+
+QC_CHANGES = "Changes from this QC: "
+
+
+def qc_section(batch, pool=None):
+    """The batch report's "## Quality control" (plan 16): spot check vs. LLM review and audit; [] without a spot check.
+    Keeps the report's "Changes from this QC" line (QC step 4, `--changes`)."""
+    checks = load_json(layout.SPOT_CHECKS, {}) or {}
+    if not (checks.get(batch) or {}).get("items"):
+        return []
+    pool = pool if pool is not None else load_json(POOL)["questions"]
+    by_id = {q["id"]: q for q in pool}
+    s, q = qc_stats(batch, checks, pool), targets.load_quality()
+    n = s["human_n"]
+    verdict = "" if s["passes"] is None else (
+        f" {'✓' if s['passes'] else '✗'} (bar: ≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %)")
+    lines = ["## Quality control", "",
+             "The gamemaster's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit "
+             "(plan 16, `qgen report --qc`). Agree = both accept or both don't.", "",
+             f"- Spot check: {n} decided of {checks[batch].get('size', '?')}",
+             f"- Agreement with the LLM review: {qc_pct(s['agreed'], n)}{verdict}",
+             f"- False approve (LLM approved, human not): {qc_pct(len(s['false_approve']), n)}"
+             + (f"; the audit flagged {s['audit_caught']}" if s["false_approve"] else ""),
+             f"- False needs work (LLM not approved, human approved): {qc_pct(len(s['false_needs_work']), n)}",
+             f"- Difficulty |Δ| ≥ 2: {qc_pct(s['difficulty_2'], n)}",
+             f"- Media changed: {qc_pct(s['media_changed'], n)}",
+             f"- Audit/human agreement: {qc_pct(s['audit_human_agreed'], s['audit_human_n'])}", "",
+             "Disagreements with the LLM review, by the human's problems:", ""]
+    groups = {}
+    for i in s["false_approve"] + s["false_needs_work"]:
+        for p in s["items"][i]["problems"] or ["no problem given"]:
+            groups.setdefault(p, []).append(i)
+    for p in [*PROBLEMS, "no problem given"]:
+        if p not in groups:
+            continue
+        lines += [f"### {p} ({len(groups[p])})", ""]
+        for i in groups[p]:
+            it, rv = s["items"][i], (by_id.get(i) or {}).get("review") or {}
+            fb = rv.get("feedback") if rv.get("reviewer") == "human" else None
+            lines.append(f"- **{i}** LLM {it['llm']} → human {it['human']}, audit {it.get('audit') or '–'}"
+                         f"{': ' + fb if fb else ''} (http://127.0.0.1:8001/review/{i})")
+        lines.append("")
+    if not groups:
+        lines += ["None.", ""]
+    old = layout.REPORTS / f"{batch}.md"
+    prev = re.search(rf"^{QC_CHANGES}(.*)$", old.read_text(encoding="utf-8"), re.M) if old.exists() else None
+    return lines + [QC_CHANGES + (prev.group(1) if prev else "none yet (QC step 4)"), ""]
+
+
+def write_qc(batch, changes=None):
+    """Rewrite "## Quality control" in authoring/reports/<batch>.md (before "## Needs work")."""
+    path = layout.REPORTS / f"{batch}.md"
+    if not path.exists():
+        sys.exit(f"no {path.relative_to(ROOT)}: run `qgen batch-report --run {batch}` first")
+    section = qc_section(batch)
+    if not section:
+        sys.exit(f"no spot check of {batch} in {layout.SPOT_CHECKS.relative_to(ROOT)}")
+    if changes is not None:
+        section[-2] = QC_CHANGES + changes
+    lines = path.read_text(encoding="utf-8").split("\n")
+    start = next((k for k, l in enumerate(lines) if l == "## Quality control"), None)
+    if start is None:
+        start = end = next((k for k, l in enumerate(lines) if l == "## Needs work"), len(lines))
+    else:
+        end = next((k for k in range(start + 1, len(lines)) if lines[k].startswith("## ")), len(lines))
+    path.write_text("\n".join(lines[:start] + section + lines[end:]), encoding="utf-8")
+    return path
+
+
+def qc_trend(pool=None):
+    """Markdown table: one column per batch with a spot check or audit (plan 16); [] without any."""
+    checks = load_json(layout.SPOT_CHECKS, {}) or {}
+    runs = sorted({*checks, *(p.parent.parent.name for p in WORK.glob("batch-*/audit/q-*.json"))},
+                  key=lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0)
+    if not runs:
+        return []
+    pool = pool if pool is not None else load_json(POOL)["questions"]
+    cols = [qc_stats(r, checks, pool) for r in runs]
+    q = targets.load_quality()
+    pct = lambda n, of: f"{100 * n / of:.0f} %" if of else "–"
+    rows = [("audit n", lambda s: str(s["audit_n"])),
+            ("major among approved", lambda s: pct(s["audit_major_approved"], s["audit_approved"])),
+            ("human n", lambda s: str(s["human_n"])),
+            ("agreement", lambda s: pct(s["agreed"], s["human_n"])),
+            ("false approve", lambda s: pct(len(s["false_approve"]), s["human_n"])),
+            ("difficulty |Δ| ≥ 2", lambda s: pct(s["difficulty_2"], s["human_n"])),
+            ("audit/human agreement", lambda s: pct(s["audit_human_agreed"], s["audit_human_n"]))]
+    bar = f"≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %" if q else "no quality keys"
+    mark = {True: "✓", False: "✗", None: "–"}
+    return ["| metric | " + " | ".join(runs) + " |", "|---|" + "---:|" * len(runs),
+            *[f"| {k} | " + " | ".join(f(s) for s in cols) + " |" for k, f in rows],
+            f"| **quality** ({bar}) | " + " | ".join(mark[s["passes"]] for s in cols) + " |"]
+
+
+def report_qc(batch, changes=None):
+    if batch:
+        print(f"  report: {write_qc(batch, changes).relative_to(ROOT)}")
+        return print("\n".join(qc_section(batch)))
+    if changes is not None:
+        sys.exit("--changes needs a batch")
+    lines = qc_trend()
+    print("\n".join(lines) if lines else "no spot check or audit yet")
+
+
 def exit_check(pool, bundle):
     """Milestone 1's "done when" (plan 12): [(ok, criterion, detail)]; missing data counts as a fail."""
     import health  # authoring/tools/health.py (imports qgen)
@@ -1420,6 +1551,8 @@ def report_exit_check(pool, bundle):
 def cmd_report(args):
     if args.exit_check:
         return report_exit_check(load_json(POOL)["questions"], args.bundle)
+    if args.qc is not None:
+        return report_qc(args.qc, args.changes)
     if args.calibration is not None:
         return report_calibration(args.calibration or last_batches())
     if args.overlaps:
@@ -2054,7 +2187,7 @@ def cmd_batch_report(args):
              f"- Reviewed by: {', '.join(models) or '-'}",
              f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price",
              f"- Picked files not cached yet: {len(not_cached)}" + (" (run `trivia-media sync --status approved`)" if not_cached else ""),
-             "", *health.health_section(args.run), *audit_section(args.run), "## Needs work", ""]
+             "", *health.health_section(args.run), *audit_section(args.run), *qc_section(args.run), "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}" for q in work] or ["None."]
     lines += ["", "## Question axes", ""]
     lines += [f"- {a}: " + ", ".join(f"{v} {n}" for v, n in count(qs, lambda q, a=a: (q.get('axes') or {}).get(a)).items())
@@ -2361,6 +2494,7 @@ def validate_pool():
     errors += targets.problems((lo, hi), bundle_ids)
     import health  # authoring/tools/health.py (imports qgen)
     errors += targets.health_problems(health.THRESHOLDABLE)
+    errors += targets.quality_problems()
     errors += spot_check_problems(data["questions"], (lo, hi))
     for q in data["questions"]:
         qid = q.get("id", "?")
@@ -2565,6 +2699,9 @@ def main():
                     help="approved questions that may ask the same fact (plan 15); listing only")
     rp.add_argument("--exit-check", action="store_true",
                     help="milestone 1's done-when per criterion, ✓/✗; exit 1 if any fails (plan 12)")
+    rp.add_argument("--qc", nargs="?", const="", metavar="BATCH",
+                    help="rewrite the batch report's Quality control section; without a batch: the trend table (plan 16)")
+    rp.add_argument("--changes", help="with --qc <batch>: the report's \"Changes from this QC\" line (QC step 4)")
     add("validate", cmd_validate, run=False)
     add("export", cmd_export, run=False)
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging
