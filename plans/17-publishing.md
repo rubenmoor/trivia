@@ -43,7 +43,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 ## Tasks
 - [ ] PUB-1 Media license audit: a `media.py licenses` report per file (license, PD reason, Commons restriction templates); list the files to replace (PD-US-only, GFDL); restriction flags are listed, not replaced (D-61). *Plan: pm plan 52 (`trivia-media licenses`, `providers.licence_verdict`).*
 - [x] PUB-2 Store the full license data per media item (license URL, author link, restrictions) in the pool, not just the `credit` string; `validate` requires it for approved questions. *pm plan 26, 2026-10-11: all 1,202 picks migrated; validate errors (q-0021, GFDL only, set to needs_work until part 3 replaces it; decision 10).*
-- [ ] PUB-3 Replace the problem files from PUB-1 in the review tool.
+- [ ] PUB-3 Replace the problem files from PUB-1 in the review tool. *Plan: pm plan 53 (`/review?licence=replace`, validate gate).*
 - [ ] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file.
 - [ ] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Plan: pm plan 47 (Vite plugin writes `credits.json` + `CREDITS.md` into `dist/`; screen from the ☰ overlay).*
 - [ ] PUB-6 Steamworks signup, tax and identity; pay the app credit (OQ-33).
