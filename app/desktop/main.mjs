@@ -1,5 +1,5 @@
 // Electron shell (plan 54, D-63): plays app/client/dist over app://trivia/, no Python, no network.
-import { app, BrowserWindow, dialog, Menu, protocol, session } from "electron";
+import { app, BrowserWindow, dialog, ipcMain, Menu, protocol, session } from "electron";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -71,6 +71,7 @@ function start() {
       contextIsolation: true,
       sandbox: true,
       nodeIntegration: false,
+      preload: path.join(path.dirname(fileURLToPath(import.meta.url)), "preload.cjs"),
       devTools: process.env.TRIVIA_DEVTOOLS === "1",
     },
   });
@@ -89,5 +90,17 @@ function start() {
     }
   });
 
+  bridge();
   win.loadURL(ORIGIN);
+}
+
+/** IPC for preload.cjs; only our own page may call. */
+function bridge() {
+  const handle = (channel, fn) =>
+    ipcMain.handle(channel, (event) => {
+      if (!event.senderFrame?.url.startsWith(ORIGIN)) throw new Error("forbidden");
+      return fn();
+    });
+  handle("trivia:toggle-fullscreen", () => win?.setFullScreen(!win.isFullScreen()));
+  handle("trivia:quit", () => app.quit());
 }

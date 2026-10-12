@@ -38,6 +38,7 @@ const es = {
     undo: "Deshacer última respuesta",
     fullscreen: "Pantalla completa",
     restart: "Volver al inicio (termina la partida)",
+    quit: "Salir del juego",
     confirm: "¿Seguro? Pulsa otra vez",
     sound: "Sonido",
     music: "Música",

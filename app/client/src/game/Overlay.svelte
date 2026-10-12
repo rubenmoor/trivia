@@ -2,6 +2,7 @@
   // Admin overlay on Esc (04-ui-tv-display.md, UI-13). The family sees it, so it never shows
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
+  import { desktop } from "../lib/desktop";
   import { t } from "../lib/i18n";
   import { pushScope, type Action } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
@@ -33,9 +34,9 @@
   const MAX_USES = 9;
 
   // The review tool and stats pages run on the authoring server (D-35). A build made with
-  // VITE_AUTHORING_URL="" (the packaged game) has no authoring server and hides the links.
+  // VITE_AUTHORING_URL="" (the packaged game) and the desktop shell have none and hide the links.
   const env = import.meta.env.VITE_AUTHORING_URL;
-  const authoring = env ?? `${location.protocol}//${location.hostname}:8001`;
+  const authoring = desktop ? "" : (env ?? `${location.protocol}//${location.hostname}:8001`);
 
   function change(key: Channel, by: number) {
     const v = Math.round(Math.min(1, Math.max(0, sound.volumes[key] + by)) * 10) / 10;
@@ -77,7 +78,8 @@
   } = $props();
 
   function fullscreen() {
-    if (document.fullscreenElement) document.exitFullscreen();
+    if (desktop) desktop.toggleFullscreen();
+    else if (document.fullscreenElement) document.exitFullscreen();
     else document.documentElement.requestFullscreen().catch(() => {});
     onclose();
   }
@@ -119,6 +121,7 @@
     { label: t("overlay.undo"), enabled: canUndo, run: onundo },
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen },
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true },
+    ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: () => desktop?.quit() }] : []),
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, right: true })),
     {
       label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),

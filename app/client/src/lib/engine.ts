@@ -2,8 +2,10 @@
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
 import type { EngineData, Io, SaveData } from "../engine/state.ts";
+import { MemoryStore } from "../engine/store.ts";
 import { GameError } from "./api.ts";
 import { loadEngineData } from "./data.ts";
+import { desktop } from "./desktop.ts";
 import { ServerStore } from "./store.ts";
 
 interface Loaded {
@@ -11,7 +13,7 @@ interface Loaded {
   save: SaveData;
 }
 
-const store = new ServerStore();
+const store = desktop ? new MemoryStore() : new ServerStore(); // desktop: in memory until SW-3
 let loading: Promise<Loaded> | null = null;
 let chain: Promise<unknown> = Promise.resolve();
 
