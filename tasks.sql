@@ -10303,8 +10303,8 @@ Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-as
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
 - Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', '2026-10-12T23:02:09Z', 501);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (513, 73, 'create tasks for plan 73', 'split', 'open', 1000, NULL, 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:49:44Z', NULL, 502);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (513, 73, 'create tasks for plan 73', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 524-531 for plan 73', 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:49:44Z', '2026-10-12T23:02:57Z', 502);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (514, 74, 'create tasks for plan 74', 'split', 'open', 1000, NULL, 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:50:32Z', NULL, 503);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (515, 75, 'create tasks for plan 75', 'split', 'open', 1000, NULL, 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -10325,6 +10325,101 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:01:18Z', NULL, 511);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (523, 83, 'create tasks for plan 83', 'split', 'open', 1000, NULL, 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:02:07Z', NULL, 512);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (524, 73, 'code-review.md skeleton, inventory and directory.md entry', 'work', 'open', NULL, NULL, 'Task 1 of `plan 73: Baseline scans and report skeleton (code review part 1)`; read plan 73 and `plan 72: masterplan` ("Ground rules for every part", "Parts") first.
+
+## What
+- Create `code-review.md` at the repo root:
+  - Intro paragraph (full sentences) + `## Executive summary` with `PLACEHOLDER(<id>)`: the id of part 11''s summary task if plan 83 has tasks by then (`pm show p83`), else `PLACEHOLDER(523)` (`task 523: create tasks for plan 83`).
+  - `## Format`: table columns file | finding | category (unused / practice / complexity / performance / bug / inconsistency) | severity | status.
+    - Status values: `fixed (task N)`, `handed to part N`, `follow-up task N`, `decision N`, `superseded by task N`, `won''t fix: <why>`; files reviewed without findings listed as "no findings".
+    - Severity: high = wrong behaviour, data loss, security or offline breakage reachable in play/authoring; medium = latent bug, real maintenance cost or measurable slowness; low = cosmetic, naming, small dead code.
+  - `## Part 1` … `## Part 11`: one section each, subject as in plan 72 "Parts", each with an empty findings table.
+  - `## Inventory`: every `git ls-files` path in scope → part number (one row per file, or per directory where the whole directory goes to one part).
+    - Produce it with a throw-away script in `/tmp` (deleted after) from `git ls-files`, so no file is missed (≈135 code/config files); every in-scope file lands in exactly one part; the script must report unassigned files.
+    - Part assignment per plan 72 "Parts" (e.g. `app/desktop/package.json` → 6, `authoring/tools/package.json` → 8).
+    - Also in scope: both `tsconfig.json`, all five `package.json`, `package-lock.json`, `flake.nix`, `flake.lock`, `.envrc`, `.gitignore`s, `vite.config.ts`/`svelte.config.js`/`index.html` → part 10 unless plan 72 assigns them elsewhere.
+    - Out of scope, listed once as such (by pattern/directory): `*.json` data/fixtures, `tasks.sql`, `plans/`, prompts (`authoring/tools/prompts/`), media/audio/fonts, `project-manager.toml`, `*.md` docs (except as part 10''s `directory.md`/`AGENTS.md` check).
+- `directory.md`: add `code-review.md` under "Everything else".
+- `.md` style per AGENTS.md: bullets, ultra-concise; intro paragraphs in full sentences.
+
+## Done when
+- `code-review.md` has intro, summary placeholder, format, Part 1–11 sections and a complete inventory; `directory.md` lists it.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (525, 73, 'Scan: directory.md vs git ls-files', 'work', 'open', NULL, NULL, 'Task 2 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+
+## What
+- Throw-away script (`/tmp`, deleted after): every tracked code/config path (and directory) from `git ls-files` mentioned in `directory.md`? every path named in `directory.md` still exists?
+- Known gaps: `app/server/flags.py`, `authoring/server/overview.py`, `media_stats.py`, `authoring/tools/providers/`, `authoring/tools/sim/`.
+- Fix `directory.md` here for missing/stale entries (doc-only, trivially safe); descriptions that need reading the code → row with `handed to part N` (owner per the inventory in `code-review.md`).
+- Rows under `### directory.md vs git ls-files` in `## Part 1`, with the exact command/script used (so it can be re-run).
+
+## Done when
+- `directory.md` names every tracked code/config path or its directory, and nothing stale; every finding a row with a status.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (526, 73, 'Scan: unused TS/JS code and npm dependencies', 'work', 'open', NULL, NULL, 'Task 3 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan" (throw-away scripts in `/tmp`, no new tooling; only trivially safe fixes like a dead import).
+
+## What
+- `npx tsc --noEmit --noUnusedLocals --noUnusedParameters -p` for `app/client` and `authoring/ui`; `svelte-check` with the same flags if it supports them.
+- Exported names never imported anywhere: grep script over `app/client/src`, `authoring/ui/src`, `authoring/tools/*.ts`, `authoring/tools/sim/`, `app/desktop/*.mjs`; Svelte props never passed by any caller.
+- npm deps: every entry of the five `package.json`s (`package.json`, `app/client`, `app/desktop`, `authoring/tools`, `authoring/ui`) grepped for imports/CLI use (scripts, `flake.nix`); deps used but not declared.
+- Rows under `### Unused TS/JS code and npm dependencies` in `## Part 1`, with exact commands; owner part per the inventory (`handed to part N`), cross-cutting → `handed to part 10`.
+
+## Done when
+- Both scans ran, every finding a row with a status; commands recorded.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (527, 73, 'Scan: unused Python code', 'work', 'open', NULL, NULL, 'Task 4 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+
+## What
+- `def`/`class`/module-level names in `app/server/*.py`, `authoring/server/*.py`, `authoring/tools/**/*.py` never referenced elsewhere: grep script in `/tmp`; `vulture` only if already in the flake (no new dependency).
+- `qgen.py` argparse flags never read; unused imports (`python -m pyflakes` only if available offline; dead imports may be removed here as trivially safe fixes).
+- Files of the task 302 rule (`task 302: Delete the Python referee`: `game.py`, `selection.py`, `flags.py`, `record_fixtures.py`): status `superseded by task 302`.
+- Rows under `### Unused Python code` in `## Part 1`, with exact commands; owner part per the inventory (`handed to part N`).
+
+## Done when
+- Scan ran, every finding a row with a status; commands recorded.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (528, 73, 'Scan: PLACEHOLDER and TODO/FIXME markers', 'work', 'open', NULL, NULL, 'Task 5 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+
+## What
+- Every `PLACEHOLDER(<task id>)` in code and on-screen strings (`app/`, `authoring/`, locales): `pm show <id>` state; closed/dropped task → stale finding; non-numeric ids → inconsistency (AGENTS.md rule `PLACEHOLDER(<task id>)`). Ignore the one in `code-review.md`''s executive summary.
+- Every `TODO`/`FIXME`/`XXX`/`HACK`: still true? has an open task? else follow-up per fix-or-ask (plan 72) or `handed to part N`.
+- Rows under `### Markers` in `## Part 1`, with exact commands; owner part per the inventory.
+
+## Done when
+- Every marker listed with its state and a status; commands recorded.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (529, 73, 'Scan: bad-practice patterns', 'work', 'open', NULL, NULL, 'Task 6 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+
+## What
+- TS/Svelte (`app/`, `authoring/`): `any`, `as` casts (minus `as const`), `!` non-null assertions, `@ts-ignore`/`@ts-expect-error`, `catch {}` / `catch (e) {}` with empty or log-only bodies, `.catch(() => {})`.
+- Python: bare `except:`, `except Exception: pass`, `except …: return None` without logging, `# type: ignore`.
+- One count table per file × pattern under `### Bad-practice patterns` in `## Part 1` (hotspot list for parts 2–9), with the exact commands.
+- Individual rows only for clearly harmful ones (swallowed error on save/IO/LLM paths), `handed to part N` per the inventory.
+
+## Done when
+- Count table and harmful-case rows in place; commands recorded.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (530, 73, 'Scan: sync IO in request handlers and module globals', 'work', 'open', NULL, NULL, 'Task 7 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+
+## What
+- `app/server/main.py`, `http_base.py`, `authoring/server/*.py`: blocking reads/writes of large files per request (pool, media, reports) vs. cached.
+- `app/desktop/main.mjs`/`resolve.mjs`/`save.mjs`: `fs.*Sync` in protocol/IPC handlers.
+- Module-level mutable state (Python globals, TS module `let`s) listed with owner part.
+- Rows under `### Sync IO and globals` in `## Part 1`, with exact commands; `handed to part N` per the inventory.
+
+## Done when
+- Every per-request sync IO site and module global listed with a status; commands recorded.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (531, 73, 'Baseline: bundle size and build output', 'work', 'open', NULL, NULL, 'Task 8 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+
+## What
+- `npm run build` (both Vite builds): per-chunk raw and gzip sizes of `app/client/dist` and `authoring/ui/dist`; largest modules (`npx vite-bundle-visualizer` only if available offline; else rollup manifest / source sizes); assets copied to `dist` (fonts, audio) with sizes; `npm run build` wall time.
+- Desktop package size only if `app/desktop/release/` already exists (no packaging run).
+- Table under `### Bundle baseline` in `## Part 1`, with the exact commands; obvious bloat (e.g. a whole library for one function) → `handed to part 4/5/9/10`.
+
+## Done when
+- Baseline table in `code-review.md`; every bloat finding a row with a status.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -11333,6 +11428,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (377, 510, '2026-10-12T22:58:18Z', '2026-10-12T22:59:41Z', 'done', NULL, 0, '2de8b4214271dcc0438f619efb3f4c950fb085ab', 'claude-opus-5-5[1m]', '6881e61e-29b4-49e7-b1bc-00ee59679825', 10, 20, 8299, 417964, 49670, 0.6470128, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (378, 511, '2026-10-12T22:59:41Z', '2026-10-12T23:01:31Z', 'done', NULL, 0, 'd4e1f76f54930233d42896db7b1c6ba7b7020ccb', 'claude-opus-5-5[1m]', '8fa9f223-ecc8-489e-918d-94c7e154915c', 8, 16, 9194, 316854, 46222, 0.6170908, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (379, 512, '2026-10-12T23:01:32Z', '2026-10-12T23:02:15Z', 'done', NULL, 0, '5568f0bf1416ec69d20361d8818db84a76f6a887', 'claude-opus-5-5[1m]', '2e364715-b370-4cca-b84b-308d7917aa42', 5, 10, 4021, 166178, 35501, 0.39770360000000005, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (380, 513, '2026-10-12T23:02:16Z', '2026-10-12T23:03:02Z', 'done', NULL, 0, '443a6cb15a46b6dd31e7be6b6fd4bcc776923581', 'claude-opus-5-5[1m]', '030d1e9e-09da-4cd2-b348-4f84c49b66fe', 5, 10, 5284, 153875, 31149, 0.385687, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
