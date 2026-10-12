@@ -16,6 +16,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 ## Metric
 - Target metric: approved questions per launch language vs. D-53's mix (`qgen report`).
 - Information only (no bar, D-75): "games per new player", CT-2. `qgen report --simulate` plays game after game per mode (burns above) and age group on the engine until the supply check fails; median and 10th percentile over many seeds. A "strong player" (always reaching level 12) gives the lower bound.
+- Plan: pm plan 62. Engine under Node (`authoring/tools/sim/`, D-60), `strong` and `typical` player models, standard joker set used once each; `rr-competitive` and `timed` modelled until MD-8/MD-9 exist. Exit code = D-75's count per launch language (5000, D-53's mix), never the games numbers.
 
 ## Target (decided, D-75)
 - **5000 approved per launch language** (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).

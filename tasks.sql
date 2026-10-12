@@ -3193,6 +3193,50 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - `grep -n -i "three levels behind\|everyone answers\|answers at once\|1 shared question" plans/` finds nothing outside D-77 itself; the new D-entry exists and the files above point to it.', '2026-10-12T17:43:02Z', 402);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (62, 9, 'Simulation: games per new player (CT-2)', 570, 'CT-2 (`plans/16-content-target.md`, "Metric"): `qgen report --simulate` plays game after game for new players on the TS engine until the supply check fails. It reports games per new player per launch language, bundle set, mode and age group. The games numbers are **information only** (pm decision 21, D-75). Pass/fail is D-75''s target: 5000 approved per launch language with D-53''s per-level mix. That pass/fail is what milestone 9''s "Done when" and part 12 (S4 close-out) read. Part 9 (CT-3/CT-4, gap plan) reads the bottlenecks.
+
+## Decisions this builds on
+- D-74 (pm decision 19): no presets or checkpoint; modes `solo`, `rr-coop`, `rr-competitive`, `timed` (+ `gamemaster`); standard joker set `STANDARD_JOKERS` (3 × Soplo, 1 × each other joker) for every age group.
+- D-75 (pm decision 21): target 5000 approved per launch language, D-53''s mix; no games-per-player bar.
+- D-77, D-80 (pm decision 23): burns per mode. `rr-coop` = one game''s burns; `rr-competitive` ≈ N × one game; `timed` ≈ N questions per round, up to 12 rounds, no jokers.
+- D-78 (pm decision 26): launch languages `es`, `en`, `de`.
+- D-60: authoring runs the engine under plain Node 22 (type stripping), no Python copy. D-58: injected `Rng`. D-76: age-group windows and level weights.
+
+## Where the code stands (2026-10-12)
+- Engine done enough: `app/client/src/engine/game.ts` (`newGame`, `pick`, `answer`, `joker`, `supply`, `ChoiceArgs` with `age_group`, `bundles`, `mode`), `selection.ts`, `state.ts` (`engineData`, `emptySave`, `Io`), `rng.ts`; age groups and the bundle filter are in `resolveChoice` (plan 27). `BUILT_MODES` = `gamemaster`, `solo`.
+- No Node entry point yet: `qgen report` still imports `app/server/selection.py`. PORT-8 (pm plan 51) moves the supply check to `node`. This plan writes the shared loader that plan 51 reuses (or reuses plan 51''s, whichever lands first).
+- Per-locale pools (`app/data/pool.<locale>.json`) come from part 3 (task 242, not yet a plan). Until then only `es` = `app/data/pool.json` exists.
+
+## Design
+- **Node side** (`authoring/tools/sim/`, imports `app/client/src/engine/*.ts`, `.ts` extensions, erasable syntax only; `authoring/` may import `app/`, D-35):
+  - `load.ts`: reads `app/data/` (pool for a locale, categories, bundles, age groups) → `EngineData`. The one loader for every Node entry point (plan 51''s supply call too).
+  - `simulate.ts`: CLI, arguments as JSON on stdin, result as JSON on stdout. Python never re-implements a rule.
+- **Referee = the engine.** One in-memory `SaveData` per run, `Io` with a seeded `Rng` and a fixed `now`. A game goes `newGame` → `pick` (random card of 4) → `joker` per policy → `answer`. The game count stops when `newGame` throws the supply error (`supply_short` or whatever `newGame` throws today). The bottleneck = the first `missing` level of that error, mapped to its difficulty range and the subcategories that ran dry at it.
+- **Player models:**
+  - `strong`: always right, reaches 12 every game. Burns the most per game, so it gives the lower bound.
+  - `typical` (default): right with probability p(level), falling linearly from 0.95 at level 1 to 0.6 at level 12. A constant in `simulate.ts`, printed in the report header. Only a model; tune it later from real play if needed.
+- **Joker policy** (standard set; `gamemaster` mode is not simulated): each joker is played once at a random level where the engine allows it. Soplo burns nothing; Saltar, Bájale and Cambiazo burn the swapped question; a Francotirador hit on the correct answer repeats the level with fresh cards. When the engine refuses a joker (supply), the joker is skipped, not forced.
+- **Modes:**
+  - `solo`, `rr-coop`: one engine game per game, same burns (D-77).
+  - `rr-competitive` (`--players N`): N player names in one save; a "session" = one engine game per player, and every question shown burns for all N players (all of them see the screen). Until MD-8 is built, this is modelled by N `solo` games with the shown ids written as burns for all N players. Same draw and burn code from the engine, no rule copy.
+  - `timed` (`--players N`): not in the engine yet (MD-9). Model: up to 12 rounds, N questions per round drawn with `selection.draw` at the round''s level ranges, burned for all N players. Drop-outs follow the `typical` p(level) per player; `strong` = nobody drops out. Replace it with the engine''s `timed` once MD-9 lands; note it in plan 16.
+- **Seeds:** `--seeds K` (default 50) independent runs from a fresh save; median and 10th percentile of games per player; the strong-player bound = minimum over seeds of `strong`.
+- **Python side** (`authoring/tools/qgen.py`, `report --simulate`): builds the matrix, calls `node authoring/tools/sim/simulate.ts` once per cell (or once with all cells), prints the table, then the target check.
+  - Flags: `--locale L` (default: every launch language; a locale without a pool file prints "no pool" and counts as fail), `--bundles a,b` (default: the default bundle set per locale; until RG-5 decides it: every bundle on for `es`, `base` only elsewhere), `--age-group G` (default all four), `--mode M` (default `solo`; `all` = the four non-gamemaster modes), `--players N` (default 1; multiplayer modes default 4), `--seeds K`, `--player strong|typical|both` (default both), `--json`.
+  - Output per cell (locale × bundles × mode × age group): median, p10, strong bound, bottleneck level + difficulty + top 3 dry subcategories.
+  - **Target check (pass/fail, D-75):** per launch language, approved count in that locale''s pool vs `authoring/data/targets.json` (`base` total 5000 and per difficulty). Per-locale targets come later from part 9; until then the `base` targets apply to every locale. ✓/✗ per locale, exit 1 on any ✗. The games numbers never change the exit code.
+  - Speed: under ~1 min for the default matrix on today''s pool. If it''s slower, lower the default seeds rather than adding a cache.
+- **Docs:** AGENTS.md `qgen report` line gets `--simulate`. In plan 16 "Metric": the player models, the joker policy, the mode approximations, and "pass/fail = D-75''s count".
+
+## Tasks (to create)
+1. `authoring/tools/sim/load.ts` + `simulate.ts` for `solo`/`rr-coop`, `strong` and `typical`, seeds, bottleneck; a throw-away check on today''s pool (D-76 says adults ≈ 8 games per player: the result should agree roughly). Priority 570.
+2. Multiplayer models: `rr-competitive` and `timed` as above, `--players`. Priority 560.
+3. `qgen report --simulate` in `qgen.py`: flags, matrix, table, `--json`, target check with exit code; AGENTS.md line; plan 16 CT-2 `[x]` with a note, "Metric" updated, `plans/project.md` in sync. Priority 550.
+
+## Depends on / feeds
+- Uses: engine (plans 19/20, done enough), age groups + bundle filter (plan 27, in `resolveChoice`), per-locale pools (part 3, task 242: missing pools print "no pool"), the default bundle set per language (part 10, task 249, RG-5: provisional default above), plan 51 (PORT-8: shares `load.ts`).
+- Feeds: part 9 (task 248: bottlenecks → targets per locale), part 12 (task 251: the exit check).
+- Out of scope: `gamemaster` mode, a games-per-player bar (D-75), Steam language detection.', '2026-10-12T17:55:28Z', 240);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -4920,12 +4964,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the section exists, the decision is pending, tasks 236 and 237 wait for it.', '2026-10-12T01:07:16Z', NULL, 221);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (239, 9, 'create tasks for plan 9', 'split', 'done', 1000, '2026-10-11, tasks 240–251 (plan-writing for parts 1–12); task 241 waits on decision 2', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:09:32Z', '2026-10-12T01:10:59Z', 9);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (240, 9, 'write plan: Simulation: games per new player (CT-2)', 'plan', 'open', 490, NULL, 'Write the plan for part 1 of the masterplan (plan 9): `pm plan add 9 "Simulation: games per new player (CT-2)" --priority 570`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (240, 9, 'write plan: Simulation: games per new player (CT-2)', 'plan', 'done', 490, '2026-10-12, pm plan 62, plans/16-content-target.md', 'Write the plan for part 1 of the masterplan (plan 9): `pm plan add 9 "Simulation: games per new player (CT-2)" --priority 570`.
 
 - Needs the answers to OQ-32 (plan 38, tasks 191/192), OQ-30 (plan 35, tasks 184/185), OQ-37 (plan 41, tasks 201/202) and OQ-31 (plan 37, tasks 189/190). Any of those decisions still pending: `pm task-pending-decision <this task> <its id>` for each, stage nothing, stop. Task priority 490 puts this after all four decision tasks.
 - Needs the TS engine (plans 19, 20) and group windows + bundle filter (plan 27): if their code isn''t done, write against their plans and name the dependency; no second referee in Python; the plan decides the small Node adapter if needed.
 - Content: `qgen report --simulate [--locale] [--bundles] [--age-group] [--preset] [--players] [--seeds]`; median, 10th percentile, strong-player bound, bottleneck level/subcategory; pass/fail per launch language, default bundle set, every age group; exit 1 on fail.
-- Owner `plans/16-content-target.md` ("Metric"); feeds parts 9 and 12.', '2026-10-12T01:10:56Z', NULL, 239);
+- Owner `plans/16-content-target.md` ("Metric"); feeds parts 9 and 12.', '2026-10-12T01:10:56Z', '2026-10-12T17:55:33Z', 239);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (241, 9, 'write plan: Release quality bar and back-audit (CT-5)', 'plan', 'done', 610, '2026-10-12, pm plan 57, pm decision 15, plans/16-content-target.md', 'Write the plan for part 2 of the masterplan (plan 9): `pm plan add 9 "Release quality bar and back-audit (CT-5)" --priority 640`.
 
 - Waits for decision 2 (D-56''s spot-check size and agreement rate); linked by task 239. Task priority 610 puts this after plan 16''s tasks (46, 47, 49), which build `qgen audit` and the spot-check tooling.
@@ -7598,6 +7642,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md` burns per mode: timed ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs, no jokers; cite the new D-entry. No new decision (D-75''s 5000 per language stands).
 - `plans/open-questions.md` OQ-37 line and `plans/11-steam.md` OQ-37 row: add the new D-entry next to D-77.
 - Check: `grep -n -i "three levels behind\|everyone answers\|answers at once\|1 shared question" plans/` finds only the old entries D-75 and D-77 in `decisions.md` (old entries stay as written).', '2026-10-12T17:45:51Z', '2026-10-12T17:53:52Z', 403);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (409, 62, 'create tasks for plan 62', 'split', 'open', 1000, NULL, 'Split plan 62 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T17:55:28Z', NULL, 240);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -8145,6 +8191,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (272, 39, '2026-10-12T17:45:58Z', '2026-10-12T17:53:12Z', 'done', NULL, 0, 'c916e3c9b4c4ebf57112cae4997a92cbf75ce21a', 'claude-opus-5-5[1m]', '86f0e8b9-7b0c-4e2c-89d8-b8e0777dc7e8', 24, 48, 8243, 1308265, 67069, 0.9632569999999997, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (273, 407, '2026-10-12T17:53:12Z', '2026-10-12T17:53:29Z', 'done', NULL, 0, '58d93e741ea6b8f1abbb08639a22828419d72e84', 'claude-opus-5-5[1m]', '9f9622bb-a920-43be-815a-500570940b4c', 4, 8, 1522, 99012, 21503, 0.2222984, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (274, 408, '2026-10-12T17:53:29Z', '2026-10-12T17:54:02Z', 'done', NULL, 0, 'b2dc716e4dc2aad5d2ac93713086df819cc6663c', 'claude-opus-5-5[1m]', 'd1942994-540b-470d-b130-cd671fde3c37', 9, 16, 3430, 251542, 28496, 0.34694040000000004, 553875);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (275, 240, '2026-10-12T17:54:02Z', '2026-10-12T17:55:41Z', 'done', NULL, 0, '804440ebdc1495f5308e5c81222fd0b78f95cad1', 'claude-opus-5-5[1m]', 'e789576f-6a64-479a-babe-b977f34cb002', 12, 22, 8319, 481097, 50159, 0.6639594, 553875);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
