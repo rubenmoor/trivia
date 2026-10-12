@@ -3735,7 +3735,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:45:18Z', '2026-10-12T00:50:37Z', 170);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (181, 43, 'create tasks for plan 43', 'split', 'done', 1000, '2026-10-11, tasks 206, 207 (tasks.sql); no new decisions: S2 decisions come from plans 34–42', 'Split plan 43 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:46:09Z', '2026-10-12T00:51:08Z', 171);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (182, 34, 'Desktop shell: refresh facts, write the decision (OQ-29)', 'work', 'open', NULL, NULL, 'Part 1 of plan 34. Prepare the OQ-29 decision; no shell code.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (182, 34, 'Desktop shell: refresh facts, write the decision (OQ-29)', 'work', 'done', NULL, '2026-10-11, decision 12, plans/18-steam-integration.md; task 183 pending on decision 12', 'Part 1 of plan 34. Prepare the OQ-29 decision; no shell code.
 
 - Facts, each with source and date:
   - steamworks.js: last release, open issues, supported Electron versions; alternatives (steamworks-ffi, Steamworks SDK via a native module).
@@ -3748,7 +3748,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision <follow-up task> <decision id>` on the follow-up task of plan 34 ("record the answer").
 - `plans/18-steam-integration.md`: update the "For/Against" cells of the "Desktop shell" table if facts changed; keep it marked draft.
 
-Done when: the decision exists with sourced facts, the follow-up task waits on it, plan 18''s table is current.', '2026-10-12T00:46:31Z', NULL, 172);
+Done when: the decision exists with sourced facts, the follow-up task waits on it, plan 18''s table is current.', '2026-10-12T00:46:31Z', '2026-10-12T02:11:02Z', 172);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (183, 34, 'Desktop shell: record the answer (OQ-29, SW-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 34. Waits for the decision "Desktop shell (OQ-29)?" (made pending by the prep task); the answer is in `pm show`.
 
 - `plans/decisions.md`: D-entry with the next free D-number.
@@ -4499,11 +4499,11 @@ Done when: check passes; `qgen validate` clean; no batch run.', '2026-10-12T01:3
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (275, 18, 'create tasks for plan 18', 'split', 'dropped', 1000, 'plan 18 body edit by task 70 only notes the soak db/step-count format; tasks 70/71 already cover it, nothing new to split', 'Split plan 18 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:07:41Z', '2026-10-12T02:08:03Z', 70);
 
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
-Recommended curve tapers at both ends; the masterplan draft puts more at 1–2 than at the middle levels, which is likely more easy questions than game nights need.', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (2, 'When is batch quality "fine": human spot-check size and agreement rate with the LLM review?', 'pending', '["30 random questions per batch; ≥ 90% agreement in each of the last two batches", "50 per batch; ≥ 95% agreement", "20 per batch; ≥ 85% agreement"]', 'Milestone 1, parts 1 and 5. After every batch the gamemaster checks a random sample in the review tool and records agree/disagree with the LLM verdict. This rate is the main "quality is fine" signal and part of the milestone''s exit check (last two batches).
-30 questions take roughly 10–15 minutes; 50 gives a tighter rate but costs more of the human''s time per batch (~8 batches left).', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
+Recommended curve tapers at both ends; the masterplan draft puts more at 1–2 than at the middle levels, which is likely more easy questions than game nights need.', '1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)', NULL, '2026-10-11T23:16:33Z', '2026-10-12T02:09:52Z', 12, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (2, 'When is batch quality "fine": human spot-check size and agreement rate with the LLM review?', 'answered', '["30 random questions per batch; ≥ 90% agreement in each of the last two batches", "50 per batch; ≥ 95% agreement", "20 per batch; ≥ 85% agreement"]', 'Milestone 1, parts 1 and 5. After every batch the gamemaster checks a random sample in the review tool and records agree/disagree with the LLM verdict. This rate is the main "quality is fine" signal and part of the milestone''s exit check (last two batches).
+30 questions take roughly 10–15 minutes; 50 gives a tighter rate but costs more of the human''s time per batch (~8 batches left).', '30 random questions per batch; ≥ 90% agreement in each of the last two batches', NULL, '2026-10-11T23:16:33Z', '2026-10-12T02:10:59Z', 12, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (3, 'How are needs_work questions (33 now, more per batch) resolved?', 'pending', '["qgen rework once after each batch''s QC, then the gamemaster decides what is still needs_work in the review tool", "the gamemaster decides all of them in the review tool; no qgen rework", "leave them; only approved questions count toward 5000"]', 'Milestone 1, part 6. RUNBOOK: `qgen rework` runs only on the gamemaster''s word; this answer is that word for the batch tasks of this milestone. batch-7 needs_work reasons: mostly giveaway hints, overlap with a pool question, or no usable media.
 Rework costs LLM calls but saves the gamemaster''s time; overlaps (once part 4 drops them before merge) and media misses don''t benefit from rework.', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (4, 'After the engine port, which routes does the Python game server keep besides static files and /api/save?', 'pending', '["Keep /media (download on cache miss, D-17), /api/flags (state/flags.json, D-47) and /api/categories; amend the milestone''s ''static files plus /api/save only'' accordingly", "Move flags into SaveData (drop /api/flags, trivia-authoring reads game.json); keep /media and /api/categories", "Strictly static + /api/save: flags into SaveData, categories served as static files, media served only from the synced cache (no download on miss; trivia-media sync required before play)"]', 'Milestone 2 "Done when" says `trivia` serves static files plus `/api/save` only. Today `app/server/main.py` also has `/media` (cache + download on miss, D-17), `/api/flags` (game flags questions, `trivia-authoring` turns them into reviews, D-47) and `/api/categories` (all bundles, D-43). Python stays in family mode anyway (plan 12, D-3); the desktop shell (plan 18) is out of scope. Affects parts 4, 5, 6 of the masterplan.', NULL, NULL, '2026-10-11T23:56:57Z', NULL, 54, NULL);
@@ -4532,6 +4532,27 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 15 · q-0221 (comida y bebida): El tempura llegó a Japón hace unos 450 años desde un país europeo. ¿Cuál? → Portugal
 
 Answer "levels as proposed", or list corrections as "q-XXXX: <level>" (and any question to drop or swap).', 'yes', NULL, '2026-10-12T01:47:40Z', '2026-10-12T02:02:22Z', 34, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (12, 'Desktop shell (OQ-29)?', 'pending', '["Electron; Steam binding: steamworks-ffi-node or steamworks.js, picked in SW-2", "Tauri v2", "Browser + local server (PyInstaller)"]', 'Shell only shows `app/client/dist/` + one save file (after milestone 2). Details: `plans/18-steam-integration.md`. Facts checked 2026-10-11.
+
+**Facts**
+- Electron: v44.7.0 (2026-10-07); zip 158 MB Win, 123 MB Linux (GitHub release assets). Same Chromium everywhere.
+- steamworks.js: last npm release 0.4.0 (2024-08-06), last commit 2025-09-07, 66 open issues (GitHub API). Node-API (napi6) → not tied to an Electron version. Overlay: `electronEnableSteamOverlay()`; open issues #116 (white overlay), #160, #195 (no overlay on Linux Electron, 2025-07). → stale.
+- steamworks-ffi-node: active, 0.11.3 (2026-09-24), SDK 1.64, Koffi FFI (no C++ build), experimental Electron overlay incl. Linux/SteamOS (OpenGL). Young (2025-10), 83 stars.
+- Steam overlay over a system webview: no hook (tauri#6196, Construct blog "Trying to show the Steam overlay" 2023); community Win-only workaround tauri-steam-overlay-surface (2026-07).
+- Tauri v2.12.3 (2026-10-10). Linux/Deck = WebKitGTK: `backdrop-filter` broken on some setups (tauri#14811, open 2026-01, NVIDIA), media via GStreamer (tauri#8579 open, #10665 AVIF), AppImage breaks on Mesa 25+ (#15665, 2026-07).
+- Deck: Electron overlay is shaky on native Linux; Windows build via Proton is the common fallback. Electron bundles its engine, so either works; Tauri depends on the system WebKitGTK/WebView2.
+
+**Phones as buzzers (OQ-37, not a blocker)**
+- Electron: Node `http`/`ws`-free server in main; same TS as the client.
+- Tauri: server in Rust (new language).
+- Browser + local server: has one already (Python), but plans 19/20 remove Python.
+
+**Trade-offs**
+- Electron: + one engine on every target, overlay works on Win, TS only. − ~150 MB, Steam binding needs care (stale vs. young).
+- Tauri: + ~10 MB. − two engines to test, our blur/video effects at risk on Deck, no overlay.
+- Browser + server: + closest to today. − no game window, no overlay, two runtimes, PyInstaller AV false positives.
+
+**Recommendation:** Electron. Wrap the Steam calls in one small bridge, so the binding can be swapped.', NULL, NULL, '2026-10-12T02:10:48Z', NULL, 182, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -4648,6 +4669,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
  M flake.lock', 0, '2b43282a9aa9fb29b08d22617c8916e06ac07604', 'claude-opus-5-5[1m]', '51ba72b0-a037-4d1f-9559-928930986143', 12, 20, 9289, 503466, 57556, 0.74700120000000014, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (113, 70, '2026-10-12T02:04:49Z', '2026-10-12T02:08:14Z', 'done', NULL, 0, '6ea9c260adfe15a281659a9367171dcda2d38d3c', 'claude-opus-5-5[1m]', 'ad225721-f683-483c-bbd5-84769812b162', 19, 38, 13264, 1032553, 61438, 0.96344660000000026, 159754);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (114, 71, '2026-10-12T02:08:14Z', '2026-10-12T02:09:47Z', 'done', NULL, 0, '592295ae0134ec9973121e4882a6d709ea9cbd20', 'claude-opus-5-5[1m]', 'ea1ea066-39bb-45e9-89d4-81bf17aa7c8e', 13, 24, 6941, 481561, 40993, 0.5631722, 159754);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (115, 182, '2026-10-12T02:09:47Z', '2026-10-12T02:11:11Z', 'done', NULL, 0, 'edffe68621ae6a27c0fa04a15c87623b0a4a25d7', 'claude-opus-5-5[1m]', '309f2e2f-cd40-4a02-aef1-926d94ee7c9e', 18, 32, 7208, 593681, 36153, 0.55224820000000008, 159754);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -4672,6 +4694,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (105, 7);
 INSERT INTO task_decision (task_id, decision_id) VALUES (108, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (113, 10);
+INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (227, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (228, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (229, 9);
