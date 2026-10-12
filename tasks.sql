@@ -2787,7 +2787,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Not wired into `rate` yet (next task).
 
 Done when: replay finds all six pairs, numbers in plan 15; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', '2026-10-12T01:31:01Z', 22);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (41, 15, 'no_overlap criterion in rate; drop overlaps at merge', 'work', 'open', NULL, NULL, 'Part "Judge in rate" of plan 15. After the candidate finder task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (41, 15, 'no_overlap criterion in rate; drop overlaps at merge', 'work', 'dropped', NULL, 're-added with the plan''s batch-8 guard (only mid-rate blocks) and task 40''s overlap_candidates()', 'Part "Judge in rate" of plan 15. After the candidate finder task.
 
 - Check `work/batch-8` first: if batch-8 is between `draft` and `merge` (rated partly or not yet merged), don''t change `rate`/`merge` now; stop and note it (plan 17''s batch-run task finishes batch-8 first).
 - Grouped `rate` call (PE-1) in `authoring/tools/qgen.py`: each draft''s candidates (id, question, answer, concept) in the payload; new hard criterion `no_overlap` in the rating schema and `authoring/tools/prompts/rate.md` (5 = asks a different fact; ≤ 3 = knowing one answer gives the other away, or the same fact again). Within-batch pairs: the later draft fails.
@@ -2795,7 +2795,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Prompts are changed here as an implementation task, never inside a batch run (RUNBOOK).
 - Check (throw-away script, two LLM calls): rate ~20 batch-7 drafts incl. the four known overlaps, once without and once with candidates; the four fail `no_overlap`, the others don''t. Result in the task note.
 
-Done when: check passes; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', NULL, 22);
+Done when: check passes; `qgen validate` clean; no batch run.', '2026-10-11T23:52:31Z', '2026-10-12T01:31:50Z', 22);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (42, 15, 'Needs-work problems in review and record; classifier for old questions', 'work', 'open', NULL, NULL, 'Part "Needs-work reasons" of plan 15. Today `needs_work` reasons are only free text in `review.feedback`.
 
 - `REVIEW_SCHEMA` (`authoring/tools/qgen.py`): `problems`, array of `giveaway`, `fact`, `ambiguity`, `overlap`, `media`, `difficulty`, `style`, `other`; stored in `q.review.problems`. One shared constant; plan 16''s audit task may already have defined it: reuse it.
@@ -4484,8 +4484,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when: the milestone''s "Done when" holds (released, first content patch out).', '2026-10-12T01:16:13Z', NULL, 264);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (272, 13, 'create tasks for plan 13', 'split', 'dropped', 1000, 'queued by task 29''s baseline edit to plan 13; plan 13 is already split (task 20), the tasks are unchanged', 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:28:12Z', '2026-10-12T01:28:17Z', 29);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (273, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:30:57Z', NULL, 40);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (273, 15, 'create tasks for plan 15', 'split', 'done', 1000, '2026-10-11, tasks.sql: task 41 re-added as 274 (batch-8 guard per plan, overlap_candidates(), priority 710); 42, 44, 45 match the plan; threshold decision stays with task 45 (needs the baseline), task 44 waits on decision 1', 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:30:57Z', '2026-10-12T01:31:54Z', 40);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (274, 15, 'no_overlap criterion in rate; drop overlaps at merge', 'work', 'open', 710, NULL, 'Part "Judge in rate" of plan 15. Builds on task 40''s `overlap_candidates()` in `authoring/tools/qgen.py`.
+
+- Batch-8 guard: change `rate`/`merge` only before or after a batch''s rate step, not during it. Check `work/batch-8` (and any newer batch): `ratings/` present but no `merged.json` = mid-rate → stop, note it, leave it for plan 17''s batch-run task. Drafts only (no `ratings/`) is fine: that batch then rates with `no_overlap`.
+- Grouped `rate` call (PE-1): each draft''s candidates from `overlap_candidates()` (pool of every bundle, status ≠ `rejected`, plus earlier drafts of the same batch; id, question, answer, concept) in the payload; new hard criterion `no_overlap` in the rating schema and `authoring/tools/prompts/rate.md` (5 = asks a different fact; ≤ 3 = knowing one answer gives the other away, or the same fact again). Within-batch pairs: the later draft fails.
+- `merge`: a `no_overlap` hard fail is dropped with reason `overlap like q-…` in `dropped.json`; the concept isn''t retired. `duplicates()` stays.
+- Prompts are changed here as an implementation task, never inside a batch run (RUNBOOK).
+- Check (throw-away script, two LLM calls): rate ~20 batch-7 drafts incl. the four known overlaps (plan 15 baseline), once without and once with candidates; the four fail `no_overlap`, the others don''t. Result in the task note and plan 15''s baseline.
+
+Done when: check passes; `qgen validate` clean; no batch run.', '2026-10-12T01:31:50Z', NULL, 273);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4607,6 +4616,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (98, 113, '2026-10-12T01:19:30Z', '2026-10-12T01:26:11Z', 'blocked', NULL, 0, '4b81cdd472403d6cb17c61cf9fd1542c7b7cf8ca', 'claude-opus-5-5[1m]', '2f30ec08-45d4-4159-9527-fa6006c00d7e', 20, 40, 11314, 883678, 46584, 0.7758476, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (99, 29, '2026-10-12T01:26:11Z', '2026-10-12T01:28:28Z', 'done', NULL, 0, 'ef824b4742e8dac6436b132f47f8ae79b36c3a65', 'claude-opus-5-5[1m]', '4b54a0e4-f6d7-4d3a-b668-f50d8fcfeaa5', 29, 48, 14654, 1388065, 61137, 1.0599810000000003, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (100, 40, '2026-10-12T01:28:28Z', '2026-10-12T01:31:18Z', 'done', NULL, 0, '6d3039b1ebffb3d039d3843d05f8bf04edbe2f45', 'claude-opus-5-5[1m]', '6bf25820-4627-45d9-88ef-f2a90e9119eb', 32, 50, 14516, 1250925, 51211, 0.950393, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (101, 273, '2026-10-12T01:31:18Z', '2026-10-12T01:32:00Z', 'done', NULL, 0, 'd1c6c85e8941782cf678ae98da860c2269b66b93', 'claude-opus-5-5[1m]', 'aa9e3408-90ab-4404-a02e-85715f29a60b', 9, 18, 3903, 296965, 29304, 0.371957, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
