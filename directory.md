@@ -6,11 +6,11 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 
 | Path | Contents |
 |---|---|
-| `app/server/` | Game server, Python standard library only: `main.py` (static files and game API), `game.py` (game rules, the referee), `selection.py` (question selection), `media_cache.py` (media cache, downloads on a miss), `categories.py`, `paths.py`, `http_base.py` |
+| `app/server/` | Game server, Python standard library only: `main.py` (static files, game API, `/api/save`), `save.py` (the save `state/game.json`: store, migration from `game.sqlite`), `game.py` (game rules, the referee), `selection.py` (question selection), `media_cache.py` (media cache, downloads on a miss), `categories.py`, `paths.py`, `http_base.py` |
 | `app/client/` | Game UI: Svelte 5 + Vite + TypeScript, built to `app/client/dist/` |
 | `app/client/src/game/` | The game screens and their parts (stage, question, jokers, tower, fireworks, sound, copy) |
-| `app/client/src/lib/` | API client and types; `errors.ts`: server error codes → Spanish (D-57) |
-| `app/client/src/engine/` | TS game engine (plan 12, D-58): `rng.ts` (seedable shuffle), `pool.ts` (pool and categories), `selection.ts` (port of `selection.py`), `state.ts` (save document, transactions), `pycompat.ts` (Python semantics), `game.ts` (referee, port of `game.py`), `api.ts` (`main.py`'s game routes); `*.test.ts` next to them (`npm test`, D-64), helpers in `test/` |
+| `app/client/src/lib/` | API client and types; `store.ts`: `ServerStore` (`/api/save`); `errors.ts`: server error codes → Spanish (D-57) |
+| `app/client/src/engine/` | TS game engine (plan 12, D-58): `rng.ts` (seedable shuffle), `pool.ts` (pool and categories), `selection.ts` (port of `selection.py`), `state.ts` (save document, transactions), `save.ts` (`parseSave`, flags), `store.ts` (`Store`, `MemoryStore`), `pycompat.ts` (Python semantics), `game.ts` (referee, port of `game.py`), `api.ts` (`main.py`'s game routes); `*.test.ts` next to them (`npm test`, D-64), helpers in `test/` |
 | `app/client/src/engine/fixtures/` | Parity fixtures of the Python referee for the TS engine (PORT-1, D-58): synthetic categories and pools, `selection.json`, `game/<scenario>.json`; format in its `README.md` |
 | `app/client/public/` | Fonts and audio |
 | `app/data/categories.json` | The `base` bundle's 23 broad categories and their 113 subcategories (D-19, D-43) |
@@ -52,7 +52,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `AGENTS.md` | Guide for AI coding assistants |
 | `flake.nix`, `flake.lock` | Dev shell and packages (D-18) |
 | `package.json` | npm workspaces: `app/client`, `authoring/ui` |
-| `state/` | Game saves and burned questions, `state/game.sqlite` (gitignored) |
+| `state/` | Game saves (gitignored): `game.sqlite` (until the switch-over, then the backup), `game.json` (players, games, burns, flags; plan 49), `flags.json` (flags before the switch-over), `flags-applied.json` (flags already turned into reviews, written by `trivia-authoring`) |
 | `media/` | Media cache (gitignored, D-17) |
 | `work/` | Pipeline work files, one folder per run (gitignored) |
 | `work/backaudit-<k>/` | One back-audit slice (plan 57): `run.json` (ids), `audit/<id>.json`, `audit/costs.log` |

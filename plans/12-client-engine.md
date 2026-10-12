@@ -43,8 +43,9 @@ With the engine in the client, the correct answer is in memory before the player
 4. **Invariant tests:** for random seeds on the real pool, check that every level gets 4 cards, burned questions never come back, and an available joker never breaks the supply.
 
 ## Migration
-- `app/server/main.py` migrates `state/game.sqlite` to `state/game.json` once on start (players, burns per player and for everyone, the running game). The `.sqlite` file is kept as a backup.
-- Lands in pm plan 49 (`app/server/save.py` `migrate()`), but `main.py` only calls it from PORT-7's switch-over change; before that `game.py` still writes `game.sqlite` and an early `game.json` would go stale.
+- `app/server/save.py` `migrate()` turns `state/game.sqlite` + `state/flags.json` into `state/game.json` once (players, games with the running one, burns per player and for everyone, flags); runs on a copy, the `.sqlite` and `flags.json` stay as the backup (plan 49, D-67).
+- Switch-over: `main.py` calls `save.migrate()` before `serve_forever` in PORT-7's switch-over change (plan 50), not earlier; until then `game.py` still writes `game.sqlite` and an early `game.json` would go stale.
+- Rollback: delete `state/game.json`, go back to the commit before the switch; `game.sqlite` is untouched.
 - `SaveData.version` makes later migrations possible (game modes in 13, multiple locales in 15).
 
 ## Tasks
@@ -52,8 +53,8 @@ With the engine in the client, the correct answer is in memory before the player
 - [x] PORT-2 `engine/selection.ts`: supply check and draw (GF-2, D-25), fixture-tested.
   - 2026-10-11: `rng.ts`, `pool.ts`, `selection.ts`; every `selection.json` case replays with its tape used up; `invariants.test.ts`: 50 seeded 12-level walks on the real pool (plan 19).
 - [x] PORT-3 `engine/game.ts`: state machine, players, burning, jokers, undo. Decision: the client holds the answer (relaxes D-25). *2026-10-11 (plan 20): `state.ts`, `pycompat.ts`, `game.ts`, `api.ts` (the `main.py` game routes); `game.test.ts` replays every `fixtures/game/*.json` (response, db, tape); D-66.*
-- [ ] PORT-4 Store interface; `ServerStore` + Python `GET/PUT /api/save` (atomic write, with a retry for Windows file locks); `MemoryStore` for tests.
-- [ ] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the family's real save.
+- [x] PORT-4 Store interface; `ServerStore` + Python `GET/PUT /api/save` (atomic write, with a retry for Windows file locks); `MemoryStore` for tests. *2026-10-11 (plan 49): `app/server/save.py` + routes in `main.py`, `engine/save.ts`, `engine/store.ts` (`MemoryStore`), `lib/store.ts` (`ServerStore`), flags in the save (D-59, D-67); authoring reads it via `authoring/tools/save_file.py`.*
+- [x] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the family's real save. *2026-10-11 (plan 49): `save.migrate()`, not wired into startup yet (see "Migration"); rehearsal on a copy: 2 players, 14 games (none running), 44 burns, 0 flags; players, burns per player and `getGame` (view + supply) equal in Python and TS; original checksum unchanged.*
 - [x] PORT-6 `qgen.py export`: the playable pool for the client; `validate` checks that the export is current. *2026-10-07, pulled forward as LP-3 (`19-repo-layout.md`): `app/data/pool.json`; the Python game server reads it too.*
 - [ ] PORT-7 Switch the screens from `lib/api.ts` game calls to the engine. Family test night on the TS engine.
 - [ ] PORT-8 Delete `app/server/game.py` and the game routes; `app/server/selection.py` goes too: `qgen report` and `authoring/server/overview.py` get the supply from the TS engine via `node` (D-60, pm decision 5). Update `01-architecture.md` and AGENTS.md.
