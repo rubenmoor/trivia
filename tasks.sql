@@ -248,6 +248,7 @@ Five modes; there is no "default mode". Mode names are written in English first;
 - Every player can have their own age group.
 
 ### Competitive (timed)
+- Replaces the timed-competitive part of pm decision 23''s answer (own tracks, three levels behind, timeout ends the game).
 - 12 rounds, as usual; round = level (the question''s difficulty follows the round). Each round has as many questions as there are players. One age group for everyone; no jokers.
 - Every question is shown to all players: 30 s per question, a hint appears every 8 s.
 - Claiming: any player can claim the question at any time (a specific action); it is then theirs, with 6 s to submit an answer. Once the answer is shown, the next question comes. Players may claim again after scoring, robbing the others of opportunities.
