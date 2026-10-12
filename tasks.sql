@@ -4296,12 +4296,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Linter evaluated in `### Linter evaluation`; if adopted: the lint pass runs before every commit touching TypeScript (`AGENTS.md`, `project-manager.toml`), and its existing issues are fixed or a follow-up task (or a decision for a new dependency) in this plan does it.
 - `directory.md`, `AGENTS.md` and `README.md` match the code.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if the flake or lockfiles changed, plus the lint pass if adopted).', '2026-10-12T23:01:18Z', 511);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (83, 13, 'Executive summary and close-out (code review part 11)', 0, 'Part 11 of `plan 72: masterplan` (milestone 13, Code quality): close the review. Check that `code-review.md` is complete (every inventory file listed, every finding with a final status, follow-ups done or listed), propose process changes as decisions, write the executive summary at the top and run the final checks. Scope, report format and status values: plan 72 "Ground rules for every part"; not restated here.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (83, 13, 'Executive summary and close-out (code review part 11)', 0, 'Part 11 of `plan 72: masterplan` (milestone 13, Code quality): close the review. Check that `code-review.md` is complete (every inventory file listed, every finding with a final status, follow-ups done or listed), propose process changes as decisions, write the executive summary at the top and run the final checks (incl. the lint pass, if part 10 adopted one). Scope, report format and status values: plan 72 "Ground rules for every part"; not restated here.
 
 ## Depends on
 - Parts 1–10 (plans 73–82), all priority 0 with lower plan ids → they and the follow-up tasks added to them run first. Tasks here read `code-review.md` and `pm` as they are then; the lists below are what the plans announced, not what they found.
 - `plan 73: Baseline scans and report skeleton (code review part 1)`: the `## Inventory`, the scan commands under `## Part 1` (re-runnable), the `## Executive summary` `PLACEHOLDER(…)` this plan replaces.
 - `plan 82: … (code review part 10)`: final statuses of every part 1 `handed to part 10` row and every duplication candidate; `directory.md`/`AGENTS.md`/`README.md` vs. code.
+- `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful` (plan 82): `### Linter evaluation` in `## Part 10`; if adopted, `npm run lint` (or inside `npm run check`), its decision and the follow-up task in plan 82 that fixes the existing issues and drops the baseline.
 - `task 302: Delete the Python referee` (plan 51, pending decision 25): may still be open; its rows stay `superseded by task 302` and are listed as pending, not reviewed again.
 - Binding: decision 14 (CI is local: per-commit checks + release check, no GitHub Actions); AGENTS.md "Outside pm workers": milestones are the gamemaster''s → process changes are `pm decision add`, never edits to `AGENTS.md`, `CLAUDE.md` or the milestone (plan 72 part 11).
 
@@ -4310,37 +4311,40 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Numbers in the summary come from a throw-away script over `code-review.md` and `pm` (counts per part, category, severity, status), not estimated; the script is run, not committed.
 - Self-critical, factual: name the worst files/areas with row references, no praise padding; the gamemaster reads it, Spanish not needed (repo docs are English).
 - `.md` style per AGENTS.md: bullets, ultra-concise; full-sentence intro paragraph allowed at the top and under each top-level heading.
-- Before every commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Before every commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; plus the lint pass if part 10 adopted one and the commit touches `.ts`, `.svelte`, `.mjs`/`.cjs`.
 
 ## Tasks (in this order; no own priority)
 1. **Completeness check of `code-review.md`**
    - Inventory vs. reality: re-run part 1''s inventory script idea against current `git ls-files` (files added, moved or deleted during the milestone, e.g. by task 302 or part 10 consolidations) → inventory rows updated (deleted → `removed (task N)`).
    - Every in-scope inventory file appears in its part''s section (finding rows or "no findings"); missing ones: short review now, or follow-up task.
    - Every row has a status from plan 72''s set; every part 1 `handed to part N` row has a final status quoted in part N''s section; every duplication candidate has a part 10 status.
+   - Linter: `### Linter evaluation` exists in `## Part 10`; if adopted, its decision and baseline-fix task (plan 82) are done or listed under `### Pending`.
    - Every `follow-up task N` / `decision N` / `superseded by task N`: `pm show` state; done tasks → status rewritten to `fixed (task N)`, dropped → `won''t fix: <reason from the drop>`; answered decisions → their follow-up''s state; still open → left, collected in a `### Pending` list under `## Part 11` (id, subject, blocking decision if any).
    - Re-run the part 1 scans whose commands are cheap (unused TS exports, markers `PLACEHOLDER`/`TODO`, bad-practice counts) → before/after counts in `## Part 11` (input for task 3); new stale `PLACEHOLDER`s → row + status.
    - Check: throw-away script prints 0 inventory files unlisted, 0 rows without valid status.
 2. **Process changes as decisions**
-   - From the findings (repeated categories across parts, e.g. swallowed errors, duplicated constants, stale `directory.md`, dead exports, lying comments): the systemic causes in worker-written code and what would prevent each — e.g. a rule in `AGENTS.md`, a line in pm''s worker prompt, a cheap local check added to the per-commit checks (decision 14: `tsc --noUnusedLocals`, a `directory.md` vs. `git ls-files` check, a stale-`PLACEHOLDER` check), a recurring review milestone.
+   - From the findings (repeated categories across parts, e.g. swallowed errors, duplicated constants, stale `directory.md`, dead exports, lying comments): the systemic causes in worker-written code and what would prevent each — e.g. a rule in `AGENTS.md`, a line in pm''s worker prompt, a cheap local check added to the per-commit checks (decision 14: a `directory.md` vs. `git ls-files` check, a stale-`PLACEHOLDER` check), a recurring review milestone.
+   - No duplicate of part 10''s linter outcome: lint rules, `tsconfig` flags and the lint pass itself are part 10''s (adopted or rejected with reasons in `### Linter evaluation`); only gaps it leaves (e.g. Python, non-code checks) become decisions here.
    - One `pm decision add` per change (options, recommended first; body: which findings it would have prevented, cost per commit); no edits to `AGENTS.md`, `CLAUDE.md`, milestones or pm config. Before adding: `pm decision list --grep <term>` (open and answered) so none duplicates one.
    - Ids listed in `## Part 11` `### Process decisions` for task 3.
 3. **Executive summary** (replaces the `PLACEHOLDER` under `## Executive summary` at the top)
    - Intro paragraph (full sentences): what was reviewed (files, lines, parts), when, how.
    - Before the review: overall state; systemic causes (how worker-written code drifts: per-task local view, copies instead of imports, docs not updated, tests kept by default, Python↔TS ports); worst areas with row references (files/parts with most high/medium findings).
-   - Impact: counts fixed / follow-up tasks / decisions / superseded / won''t fix (per severity), notable fixes (high severity first), bundle size vs. part 1 baseline, before/after scan counts from task 1.
+   - Impact: counts fixed / follow-up tasks / decisions / superseded / won''t fix (per severity), notable fixes (high severity first), bundle size vs. part 1 baseline, before/after scan counts from task 1; linter outcome (adopted or not, one line, `### Linter evaluation` reference).
    - Pending: open follow-up tasks and decisions (from `### Pending`), remaining risk per area (what is unreviewed-deep, superseded, or deferred).
    - Process: the decisions of task 2 by id and one line each.
    - Length: one screen or two; details stay in the part sections.
 4. **Final checks and close-out**
-   - `npm run check`, `npm test`, `npm run build`, `qgen validate`; plus `nix build .#app` if any `flake.nix`/lockfile changed during the milestone (`git log` since milestone 13''s first commit).
+   - `npm run check`, `npm test`, `npm run build`, `qgen validate`; the lint pass if adopted: no issues and no baseline file left (else the plan 82 fix task is listed under `### Pending`); plus `nix build .#app` if any `flake.nix`/lockfile changed during the milestone (`git log` since milestone 13''s first commit).
    - Milestone 13 "Done when" walked item by item; `code-review.md` listed in `directory.md`; no `PLACEHOLDER` left in `code-review.md`.
    - Anything not met → follow-up task in this plan or a row under `### Pending`; the summary says so.
 
 ## Done when
 - Every inventory file is listed and every finding has a final status; pending tasks/decisions listed.
-- Process changes proposed as decisions, cited in the summary.
+- Process changes proposed as decisions (none duplicating the linter outcome), cited in the summary.
+- Linter evaluated in `code-review.md`; if adopted: the lint pass runs before every commit touching TypeScript and reports no issues, no baseline left.
 - Executive summary at the top of `code-review.md`, no `PLACEHOLDER` left.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:07Z', 512);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus the lint pass if adopted).', '2026-10-12T23:02:07Z', 512);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -12372,7 +12376,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:43:51Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (605, 83, 'revise plan 83', 'plan', 'open', 1000, NULL, 'Plan 72, the plan above plan 83, changed; it is quoted below. Bring plan 83 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (605, 83, 'revise plan 83', 'plan', 'done', 1000, '2026-10-12, plan 83: linter outcome of part 10 (task 616) in completeness check, process decisions, summary, final checks, done when', 'Plan 72, the plan above plan 83, changed; it is quoted below. Bring plan 83 in line with it
 (`pm plan edit 83 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12411,7 +12415,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 11. **Executive summary and close-out** (last, needs every other part and the follow-up tasks either done or listed) — check that every file of part 1''s inventory is listed and every finding has a status; write the executive summary at the top of `code-review.md` as the milestone asks (self-critical assessment before the review: overall state, systemic causes of worker-written drift, worst areas; impact: fixed, pending tasks/decisions, remaining risk, process changes so quality holds, e.g. rules for `AGENTS.md` or `pm` prompts — proposed as decisions, not edited into the milestone); final `npm run check`, `npm test`, `npm run build`, `qgen validate` (and the lint pass if adopted: no issues, no baseline left). Process decisions don''t duplicate the linter outcome of part 10.
 
 ## Done when
-- Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', NULL, 593);
+- Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:45:21Z', 593);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (606, 73, 'create tasks for plan 73', 'split', 'done', 1000, '2026-10-12, tasks 524, 526, 529 aligned with revised plan 73 (lint tags, no-findings rows, Linter evaluation heading, tsc/bad-practice counts); 525, 527, 528, 530, 531 unchanged', 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:35:06Z', '2026-10-12T23:35:52Z', 595);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (607, 74, 'create tasks for plan 74', 'split', 'done', 1000, '2026-10-12, tasks 532-534 already match plan 74; added plan 72 report status wording (fixed (task N), no-findings rows); no decisions needed', 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -12490,6 +12494,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:44:45Z', NULL, 615);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (618, 83, 'create tasks for plan 83', 'split', 'open', 1000, NULL, 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:45:19Z', NULL, 605);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13539,6 +13545,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (417, 614, '2026-10-12T23:42:58Z', '2026-10-12T23:43:23Z', 'done', NULL, 0, '99ea59edeaea6ead5607ef75a527549dbbf7c109', 'claude-opus-5-5[1m]', '11a86192-53ff-4655-a272-4baf56840b32', 7, 14, 1964, 252611, 36459, 0.3815302, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (418, 604, '2026-10-12T23:43:23Z', '2026-10-12T23:43:57Z', 'done', NULL, 0, '673a98aa0e01f457fad2030fde4b4098df1bd748', 'claude-opus-5-5[1m]', 'd8d3eede-6505-4f35-8c22-bf691c8d0655', 6, 12, 3396, 218855, 35744, 0.397691, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (419, 615, '2026-10-12T23:43:58Z', '2026-10-12T23:44:59Z', 'done', NULL, 0, '9df565348796a079597a5f36c2f39b7ffb207c46', 'claude-opus-5-5[1m]', '71053503-b360-4244-9f16-844e986c920e', 13, 26, 5831, 587680, 43962, 0.58595599999999992, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (420, 605, '2026-10-12T23:45:00Z', '2026-10-12T23:45:27Z', 'done', NULL, 0, '1d86ed35657f9c6ddb39f80b8bc2782018356e31', 'claude-opus-5-5[1m]', 'b68e736a-4b2e-443f-914e-58cf8efa256e', 5, 10, 2917, 153556, 29018, 0.3212352, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
