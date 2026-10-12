@@ -515,7 +515,7 @@
     <h1>{question.question}</h1>
     {#if media.type !== "image"}
       <button class="replay" onclick={replay}>
-        <Icon name={media.type === "audio" ? "speaker" : "film"} /> {t("screen.question.replay")} <Prompt action="replay" />
+        <Icon name={media.type === "audio" ? "speaker" : "film"} /> {t("screen.question.replay")} <Prompt action="replay" off={mode !== null} />
       </button>
     {/if}
   </header>
@@ -543,6 +543,7 @@
       {armed}
       away={flight?.name ?? null}
       {popping}
+      covered={mode !== null}
       onpress={press}
     />
   </aside>
@@ -618,7 +619,7 @@
               {/each}
             </span>
           {/if}
-          <span class="letter">{LETTERS[i]}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly /></span></span>
+          <span class="letter">{LETTERS[i]}{#if !question.struck.includes(i)}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly /></span>{/if}</span>
           <span class="text">{answer}</span>
           {#if hit === i}
             <span class="badge"><Icon name="check" /></span>

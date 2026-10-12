@@ -38,6 +38,7 @@
     armed = null,
     away = null,
     popping = null,
+    covered = false,
     onpress,
   }: {
     jokers?: Jokers | null;
@@ -53,6 +54,8 @@
     away?: JokerName | null;
     /** A fresh token pops back into this slot (JK-5). */
     popping?: JokerName | null;
+    /** A dialog or the crosshair is up: LB/RB do nothing. */
+    covered?: boolean;
     onpress?: (name: JokerName) => void;
   } = $props();
 </script>
@@ -85,7 +88,7 @@
       </button>
       {#if !readonly}
         {#if armed === tok.name}
-          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <Prompt action="confirm" /></button>
+          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <Prompt action="confirm" fixed /></button>
         {:else}
           <span class="bubble name glass-strong">
             {tok.label}{#if off && state?.reason}<span class="reason">{reasonText(state.reason)}</span>{/if}
@@ -96,8 +99,8 @@
   {/each}
   {#if !readonly}
     <span class="bumpers">
-      <Prompt action={{ type: "joker-focus", step: -1 }} padOnly />
-      <Prompt action={{ type: "joker-focus", step: 1 }} padOnly />
+      <Prompt action={{ type: "joker-focus", step: -1 }} padOnly off={covered} />
+      <Prompt action={{ type: "joker-focus", step: 1 }} padOnly off={covered} />
     </span>
   {/if}
 </div>

@@ -161,6 +161,7 @@
     else if (by && item.preset) cyclePreset();
     else if (a.type === "confirm") activate(selected);
     else if (a.type === "menu") onclose();
+    else if (a.type === "back" && a.device === "gamepad") confirming === null ? onclose() : (confirming = null); // B leaves
     else return false;
     return true;
   }

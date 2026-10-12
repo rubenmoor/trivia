@@ -154,7 +154,7 @@
             disabled={busy}
             data-focus-default
           />
-          <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" /></button>
+          <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" off={!typed} /></button>
         </div>
       </form>
     {/if}

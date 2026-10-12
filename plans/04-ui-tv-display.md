@@ -197,6 +197,8 @@ Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `
 
 **Rule (IN-2, IN-3): actions, not keys.** Screens and dialogs listen to actions from `app/client/src/lib/input.svelte.ts` (`pushScope`), never to `keydown`; `grep -rn "keydown\|KeyboardEvent" app/client/src` lists only that file. Each screen and dialog declares a focus default (`data-focus-default`) and a `root`, so arrows + `Enter` + `Esc`/`Backspace` play it (spatial focus, ring, memory: `lib/focus.ts`, plan 44). ☰ and flag stay unfocusable (`data-nofocus`).
 
+**Rule (IN-5): prompts through `<Prompt>`.** A key hint is `<Prompt action="…" />` (`app/client/src/game/Prompt.svelte`): the key with keyboard or mouse, the pad's glyph (`Glyph.svelte`, Xbox or PlayStation set) after a pad press. No raw `<kbd>` in screens; `grep -rn "<kbd" app/client/src/game` lists only `Prompt.svelte`. Props: `pad` (the pad's action where it differs, e.g. cancel: `Esc` / B), `padOnly`, `hold` (keep the space), `off` (no glyph right now), `fixed`.
+
 **Debugging keys:** the dev browser runs the Vimium extension, which grabs single-letter keys before the page sees them (`r` reloads the page, which lands on Start). When a key press doesn't work, first ask the gamemaster whether Vimium is disabled for the page before you look for a bug in the code.
 
 ## Implementation notes

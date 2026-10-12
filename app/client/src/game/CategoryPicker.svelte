@@ -79,7 +79,7 @@
     {/key}
     <div class="actions label">
       {#if group}<button class="secondary" onclick={back}>{t("action.back")} <Prompt action="back" /></button>{/if}
-      <button class="secondary" onclick={oncancel}>{t("action.cancel")} <Prompt action="menu" /></button>
+      <button class="secondary" onclick={oncancel}>{t("action.cancel")} <Prompt action="menu" pad={group ? "menu" : "back"} /></button>
     </div>
   </div>
 </div>
