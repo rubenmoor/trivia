@@ -3109,8 +3109,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when the milestone''s "Done when" holds.', '2026-10-12T00:38:52Z', '2026-10-12T00:46:13Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (172, 34, 'create tasks for plan 34', 'split', 'done', 1000, '2026-10-11, tasks 182 (prep + decision), 183 (record answer; made pending by 182)', 'Split plan 34 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', '2026-10-12T00:46:35Z', 162);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (173, 35, 'create tasks for plan 35', 'split', 'open', 1000, NULL, 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', NULL, 163);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (173, 35, 'create tasks for plan 35', 'split', 'done', 1000, '2026-10-11, tasks 184 (prep + decisions), 185 (record answer; made pending by 184)', 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', '2026-10-12T00:46:59Z', 163);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (174, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:03Z', NULL, 164);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (175, 37, 'create tasks for plan 37', 'split', 'open', 1000, NULL, 'Split plan 37 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3149,6 +3149,27 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync. The full S3–S6 rewrite stays with plan 43 (S2 close-out).
 
 Done when: D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:46:31Z', NULL, 172);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (184, 35, 'Default mode: gather facts, write the decisions (OQ-30)', 'work', 'open', NULL, NULL, 'Part 1 of plan 35. Prepare the OQ-30 decision(s); no code.
+
+- Facts (from `plans/13-game-modes.md`, D-28 in `plans/decisions.md`, `plans/21-age-groups.md`, plans 27/28 via `pm show`):
+  - what each joker burns or saves (Soplo, Paso, Bájale, Cambiazo, Francotirador)
+  - how a checkpoint interacts with burning and "12 to victory"
+  - what `age-groups.json` holds per group (`levels`), so a preset can or can''t shift it
+  - cards burned per game under each preset (rough; input for OQ-32, plan 38)
+- Questions: (a) joker counts per preset, number of presets, default preset; (b) presets shift difficulty or only jokers; (c) checkpoints: none / Fácil only (level 6) / per preset; (d) won levels: only 12, or a reached checkpoint as partial win; (e) admin actions: no undo, no «Saltar y quemar para todos», «Reportar pregunta» (burn locally, report list, replacement), «Abandonar partida»; sound, pause.
+- `pm decision add`, recommended option first, body = context + trade-offs, ultra-short. Two decisions if one is too big: "Presets, checkpoints and won levels (OQ-30)" and "Admin actions in the default mode (OQ-30)".
+- `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 35).
+
+Done when: decision(s) exist, the record task waits on them.', '2026-10-12T00:46:59Z', NULL, 173);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (185, 35, 'Default mode: record the answer (OQ-30, MD-5)', 'work', 'open', NULL, NULL, 'Part 2 of plan 35. Waits for the OQ-30 decision(s) (made pending by the prep task); the answers are in `pm show`.
+
+- D-entry (or two) in `plans/decisions.md`, next free D-number.
+- OQ-30 → "Resolved" in `plans/open-questions.md` with the D-number(s).
+- `plans/13-game-modes.md` "Default mode": draft table → decided; checkpoints, won levels, admin actions as a spec MD-6/MD-7 can build; settings fields in "Implementation notes" (e.g. `settings.preset`, `settings.checkpoint`); MD-5 `[x]` with a note.
+- If presets shift difficulty: note it in plan 21''s age-group section and as input for plan 28 (`pm show`); no change to `age-groups.json`.
+- Sync the open-questions row in `plans/11-steam.md` and `plans/project.md`.
+
+Done when: D-entry exists, OQ-30 resolved, MD-5 `[x]`, plan 13''s default-mode section is implementable.', '2026-10-12T00:46:59Z', NULL, 173);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3231,6 +3252,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (66, 170, '2026-10-12T00:44:36Z', '2026-10-12T00:45:27Z', 'done', NULL, 0, '9cc27ddbbeefc6bcb52aafe5e57a4caff6712153', 'claude-opus-5-5[1m]', 'e4559d6a-8747-4728-92c3-d92d59184920', 14, 26, 4802, 523554, 37390, 0.49997479999999989, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (67, 171, '2026-10-12T00:45:27Z', '2026-10-12T00:46:19Z', 'done', NULL, 0, '44d7a52342e579c657bff3bd1d203bc638928ad8', 'claude-opus-5-5[1m]', 'f6187c6f-9141-4726-a762-fb90889bfe99', 8, 16, 4298, 287612, 37657, 0.4448024, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (68, 172, '2026-10-12T00:46:19Z', '2026-10-12T00:46:40Z', 'done', NULL, 0, 'a0d5a742e3005af028fda69825c387fae521af1c', 'claude-opus-5-5[1m]', '339ea660-fce4-4f46-90f8-5813f68d7d3a', 5, 10, 2010, 131867, 21311, 0.23710140000000002, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (69, 173, '2026-10-12T00:46:40Z', '2026-10-12T00:47:06Z', 'done', NULL, 0, '5f66200134b9f9436ea6e9dbf2bcd90fb6e0b138', 'claude-opus-5-5[1m]', 'a02e603c-8c95-4185-b093-0277c73f4ee6', 4, 8, 1896, 101830, 22211, 0.236006, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
