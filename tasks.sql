@@ -1688,6 +1688,25 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Synth fallback works with the files removed.
 - `CREDITS.md` rows; folder within budget; `npm run check` and `npm run build` pass.
 - The gamemaster approves the music on the TV; UI-10 `[x]` in 04 and `plans/project.md` updated.', '2026-10-12T00:35:05Z', 136);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (34, 7, 'Desktop shell (OQ-29)', 700, 'Part 1 of the masterplan (plan 7): decide the desktop shell that turns the built client into a Steam game (OQ-29, SW-1). Decision only; no shell code (S3 is out of scope).
+
+- Owner: `plans/18-steam-integration.md` ("Desktop shell" table: Electron + steamworks.js recommended, Tauri, browser + local server).
+- Context: the shell only shows `app/client/dist/` and saves one file once the TS engine runs without Python (milestone 2, plans 19 and 20; `plans/12-client-engine.md`). Not a blocker for the decision.
+
+## Tasks
+1. **Prep: refresh facts, write the decision**
+   - Facts (with sources and dates): steamworks.js maintenance status (last release, open issues, Electron versions supported, alternatives such as steamworks-ffi or the Steamworks SDK via a native module); Electron install size today; Tauri v2 state on Windows (WebView2) and Linux/Deck (WebKitGTK: media, `backdrop-filter`); Steam overlay in Electron (known workarounds) and over a system webview; Deck/Proton notes (native Linux build vs. Windows build via Proton).
+   - OQ-37 (part 8) as a dependency, not a blocker: phones as buzzers would need a LAN server inside the shell (Electron: Node `http` in the main process; Tauri: Rust side; browser + local server: already has one). Say how each option handles it.
+   - `pm decision add "Desktop shell (OQ-29)?"` with the recommended option first; body = facts + trade-offs, ultra-short. Then `pm task-pending-decision` on task 2.
+   - Update the "For/Against" cells in plan 18''s table if the facts changed (still marked draft).
+2. **Follow-up: record the answer** (waits for the decision)
+   - D-entry in `plans/decisions.md` (next free D-number).
+   - OQ-29 moved to "Resolved" in `plans/open-questions.md` with the D-number.
+   - Plan 18: table marked decided (D-number); SW-1 `[x]` with a note; SW-2..SW-6 checked against the choice and reworded if needed (e.g. electron-builder → Tauri bundler; preload bridge → Tauri commands).
+   - `plans/11-steam.md` open-questions row and `plans/project.md` kept in sync (the full S3–S6 rewrite stays with part 10, the S2 close-out).
+
+## Done when
+- Decision answered; D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:39:17Z', 162);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2801,10 +2820,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (159, 7, 'write plan: Competitive and couch co-op format (OQ-37)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 8 of masterplan 7 ("Competitive and couch co-op format (OQ-37)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Competitive and couch co-op format (OQ-37)" --priority 580`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (160, 7, 'write plan: Freesound API for a commercial release (OQ-45)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 9 of masterplan 7 ("Freesound API for a commercial release (OQ-45)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Freesound API for a commercial release (OQ-45)" --priority 200`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (161, 7, 'write plan: S2 close-out', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 10 of masterplan 7 ("S2 close-out"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "S2 close-out" --priority 150`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (162, 7, 'write plan: Desktop shell (OQ-29)', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of the masterplan (plan 7): `pm plan add 7 "Desktop shell (OQ-29)" --priority 700`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (162, 7, 'write plan: Desktop shell (OQ-29)', 'plan', 'done', 1000, '2026-10-11, plan 34 (Desktop shell, OQ-29) in tasks.sql', 'Write the plan for part 1 of the masterplan (plan 7): `pm plan add 7 "Desktop shell (OQ-29)" --priority 700`.
 - Owner: `plans/18-steam-integration.md` ("Desktop shell"), SW-1.
 - Tasks: prep (refresh facts: steamworks.js status, Electron support, install size, Deck/Proton, overlay; `pm decision add`, `pm task-pending-decision` on the follow-up), follow-up (D-entry, OQ-29 resolved, SW-1 `[x]`, plan 18 table decided, SW-2..SW-6 checked).
-- Note OQ-37 (part 8) as a dependency (phones as buzzers → LAN server in the shell), not a blocker.', '2026-10-12T00:38:51Z', NULL, 151);
+- Note OQ-37 (part 8) as a dependency (phones as buzzers → LAN server in the shell), not a blocker.', '2026-10-12T00:38:51Z', '2026-10-12T00:39:19Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (163, 7, 'write plan: Default mode (OQ-30)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 7): `pm plan add 7 "Default mode (OQ-30)" --priority 600`.
 - Owner: `plans/13-game-modes.md` ("Default mode"), MD-5.
 - Tasks: prep (joker presets per difficulty, checkpoints, won levels, remaining admin actions; fit D-38 / `plans/21-age-groups.md` and the windows of plans 27, 28; may split into two decisions), follow-up (D-entry, OQ-30 resolved, MD-5 `[x]`, plan 13''s section a spec for MD-6/MD-7).', '2026-10-12T00:38:51Z', NULL, 151);
@@ -2834,6 +2853,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Last; its tasks wait for the decisions of parts 1, 2, 4–9.
 - `plans/11-steam.md`: open-questions table with D-numbers, S3–S6 and track table updated, ST-1 `[x]`; `plans/project.md`, `plans/README.md` statuses; notes in masterplans of milestones 8–11 (plans 8–11) if their scope changed.
 - Done when the milestone''s "Done when" holds.', '2026-10-12T00:38:52Z', NULL, 151);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (172, 34, 'create tasks for plan 34', 'split', 'open', 1000, NULL, 'Split plan 34 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', NULL, 162);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2905,6 +2926,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (55, 139, '2026-10-12T00:36:10Z', '2026-10-12T00:36:45Z', 'done', NULL, 0, 'c3f802cfe9a5ebaaeaedf53feedc54da1d1092e9', 'claude-opus-5-5[1m]', '5e48d658-4a13-49c6-9fd8-a4d0bb43b592', 5, 10, 3531, 146738, 28783, 0.3302716, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (56, 7, '2026-10-12T00:36:45Z', '2026-10-12T00:38:19Z', 'done', NULL, 0, 'aa323f30031742363fdc041797c03f838aec1ef2', 'claude-opus-5-5[1m]', '3c482457-76a4-49f9-82b6-20bc1945a04f', 13, 26, 9065, 617366, 56610, 0.75775719999999991, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (57, 151, '2026-10-12T00:38:19Z', '2026-10-12T00:39:00Z', 'done', NULL, 0, '3b6f901730b7596320d7e4f88e6894ae668e18f9', 'claude-opus-5-5[1m]', '329bbc6f-7271-4c54-817f-3d503a782533', 6, 12, 4484, 181096, 27251, 0.34395519999999996, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (58, 162, '2026-10-12T00:39:00Z', '2026-10-12T00:39:26Z', 'done', NULL, 0, '28f62b5f898ca2e2d7be301b184e7f28ffde696f', 'claude-opus-5-5[1m]', 'fe939d73-121d-4575-be7e-cc929bbb2a34', 5, 10, 1932, 145256, 25438, 0.27123520000000007, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
