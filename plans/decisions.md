@@ -526,3 +526,10 @@ Template:
 - Decision: `state/game.json` `{version: 1, players, games, burned, flags}`. The client writes it whole via `PUT /api/save`; the server checks only the envelope (object, `version` 1, three lists, `flags` object, ≤ 10 MB), no game logic, no merge. Atomic write (tmp + fsync + replace, retry on Windows locks → 503 `save_locked`). Flags live in the document. Authoring reads it, never writes it, and keeps its own applied-flags ledger (`state/flags-applied.json`). Migration from SQLite runs once on a copy; `game.sqlite` and `flags.json` stay as the backup.
 - Consequences: One writer (one TV tab), no revision check; `ServerStore` serializes its PUTs. `migrate()` is wired into startup only at the switch-over (PORT-7). The desktop shell's `FileStore` writes the same document.
 - Supersedes / related: D-4, D-25, D-47, D-59, D-66; plans 12, 49 (PORT-4, PORT-5)
+
+## D-68: Age group and bundles are settings per game
+- Date: 2026-10-11
+- Context: The TS referee plays one audience: 12 levels with D-22's fixed ranges over every bundle. Milestone 5 lets players pick an age group (AG-7) and bundles (BN-6) before a session; old saves and plan 18's fixtures must keep playing unchanged.
+- Decision: `age_group` and `bundles` live in each game's `settings`, next to `jokers`. Missing keys mean `young_teens` and every bundle in `bundles.json`, resolved on read, never written back. Every `always_on` bundle (only `base`) is always on. Level ranges per group live in `app/data/age-groups.json` (`levels`, 12 `[lo, hi]` pairs); `young_teens` = D-22, the others a draft until tuned (plan 28). Burns stay per player across groups and bundles (D-28).
+- Consequences: The engine drops its `LEVEL_RANGES` constant; the Python referee keeps its copy until PORT-8. `parseAgeGroups` and `qgen validate` check the `levels` rules. Plan 27 (engine), 29 (start screen), 28 (tuning).
+- Supersedes / related: D-22, D-28, D-38, D-39; plans 21, 22, 27

@@ -6,7 +6,7 @@ import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction, getGame, getPlayers } from "./api.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
-import { fixture } from "./test/fixtures.ts";
+import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
 import { snapshot } from "./test/save.ts";
 import { tapeRng, type TapeEntry } from "./test/tape.ts";
 
@@ -21,9 +21,11 @@ interface Step {
 }
 
 const categories = fixture("categories.json") as Category[];
+const bundles = realBundles();
+const ageGroups = realAgeGroups();
 const data: Record<string, EngineData> = {};
 const dataFor = (pool: string): EngineData =>
-  (data[pool] ??= engineData((fixture(`pools/${pool}.json`) as { questions: PoolQuestion[] }).questions, categories));
+  (data[pool] ??= engineData((fixture(`pools/${pool}.json`) as { questions: PoolQuestion[] }).questions, categories, bundles, ageGroups));
 
 const scenarios = readdirSync(join(import.meta.dirname, "fixtures/game")).filter((f) => f.endsWith(".json")).sort();
 

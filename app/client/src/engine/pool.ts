@@ -25,6 +25,53 @@ export function parsePool(json: unknown): PoolQuestion[] {
   return doc.questions as PoolQuestion[];
 }
 
+/** An entry of app/data/bundles.json (D-39). */
+export interface Bundle {
+  id: string;
+  kind: string;
+  always_on: boolean;
+  name: string;
+  description: string;
+}
+
+export function parseBundles(json: unknown): Bundle[] {
+  const bundles = (json as { bundles?: unknown } | null)?.bundles;
+  if (!Array.isArray(bundles) || bundles.length === 0) throw new Error("bundles.json: no bundles");
+  return bundles.map(({ id, kind, always_on, name, description }) => ({ id, kind, always_on: !!always_on, name, description }));
+}
+
+/** [lo, hi] per level, index 0 = level 1. */
+export type LevelRanges = readonly (readonly [number, number])[];
+
+/** An age group of app/data/age-groups.json (D-38). */
+export interface AgeGroup {
+  id: string;
+  name: string;
+  ages: readonly [number, number | null];
+  window: readonly [number, number];
+  levels: LevelRanges;
+}
+
+/** Throws unless every group has 12 levels inside its window, ids are unique and young_teens exists. */
+export function parseAgeGroups(json: unknown): AgeGroup[] {
+  const groups = (json as { groups?: unknown } | null)?.groups;
+  if (!Array.isArray(groups)) throw new Error("age-groups.json: no groups");
+  const out = groups.map(({ id, name, ages, window, levels }): AgeGroup => {
+    const [wlo, whi] = window ?? [];
+    if (!Array.isArray(levels) || levels.length !== 12) throw new Error(`age-groups.json: ${id}: needs 12 levels`);
+    levels.forEach((r: unknown, i: number) => {
+      const ok = Array.isArray(r) && r.length === 2 && r.every(Number.isInteger) && wlo <= r[0] && r[0] <= r[1] && r[1] <= whi;
+      if (!ok)
+        throw new Error(`age-groups.json: ${id}: level ${i + 1} ${JSON.stringify(r)} not inside window ${wlo}–${whi}`);
+    });
+    return { id, name, ages, window, levels };
+  });
+  const ids = out.map((g) => g.id);
+  if (new Set(ids).size !== ids.length) throw new Error("age-groups.json: duplicate group id");
+  if (!ids.includes("young_teens")) throw new Error("age-groups.json: no young_teens");
+  return out;
+}
+
 /** app/data/bundles.json and each bundle's categories file → categories in display order, base first.
  * A bundle without a file has none. */
 export function loadCategories(bundlesJson: unknown, files: Record<string, unknown>): Category[] {

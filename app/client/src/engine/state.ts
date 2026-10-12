@@ -1,7 +1,7 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
 // SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state (app/server/game.py docstring).
 import type { Category, ErrorInfo, JokerBudget, JokerName, Supply } from "../lib/types.ts";
-import type { PoolQuestion } from "./pool.ts";
+import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
@@ -176,10 +176,16 @@ export interface EngineData {
   byId: Map<string, PoolQuestion>;
   categories: Category[];
   broad: Map<string, Category>;
+  bundles: Bundle[];
+  ageGroups: AgeGroup[];
+  groupById: Map<string, AgeGroup>;
 }
 
-export function engineData(pool: PoolQuestion[], categories: Category[]): EngineData {
-  return { pool, byId: byId(pool), categories, broad: broadOf(categories) };
+export function engineData(pool: PoolQuestion[], categories: Category[], bundles: Bundle[], ageGroups: AgeGroup[]): EngineData {
+  return {
+    pool, byId: byId(pool), categories, broad: broadOf(categories),
+    bundles, ageGroups, groupById: new Map(ageGroups.map((g) => [g.id, g])),
+  };
 }
 
 /** One transaction: fn mutates a copy; a throw (GameError → rollback) leaves `save` untouched. */

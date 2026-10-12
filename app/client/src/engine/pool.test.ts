@@ -1,7 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
-import { broadOf, bundleOf, byId, categoryOf, loadCategories, parsePool, subcategories } from "./pool.ts";
+import {
+  broadOf, bundleOf, byId, categoryOf, loadCategories, parseAgeGroups, parseBundles, parsePool, subcategories,
+} from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
 
 test("parsePool: version 1 only", () => {
@@ -55,4 +57,34 @@ test("fixture categories: broadOf, categoryOf", () => {
   assert.equal(cat({ subcategory: null }), null);
   assert.equal(cat({}), null);
   assert.equal(bundleOf(cats, "Comida colombiana"), "colombia");
+});
+
+// D-22, written out; checked once against app/server/selection.LEVEL_RANGES.
+const D22 = [[1, 1], [2, 3], [3, 5], [4, 6], [4, 6], [4, 6], [5, 7], [6, 8], [6, 9], [7, 10], [8, 10], [9, 10]];
+
+test("parseAgeGroups on the real file: young_teens = D-22", () => {
+  const groups = parseAgeGroups(data("age-groups.json"));
+  assert.deepEqual(groups.map((g) => g.id), ["kids", "young_teens", "young_adults", "adults"]);
+  assert.deepEqual(groups.find((g) => g.id === "young_teens")!.levels, D22);
+});
+
+test("parseAgeGroups: bad files throw", () => {
+  const file = (levels: unknown, more: object[] = []) =>
+    ({ groups: [{ id: "young_teens", name: "x", ages: [11, 14], window: [1, 10], levels }, ...more] });
+  assert.equal(parseAgeGroups(file(D22)).length, 1);
+  assert.throws(() => parseAgeGroups(file(D22.slice(1))), /12 levels/);
+  assert.throws(() => parseAgeGroups(file([...D22.slice(0, 11), [9, 11]])), /level 12/);
+  assert.throws(() => parseAgeGroups(file([[0, 1], ...D22.slice(1)])), /level 1 /);
+  assert.throws(() => parseAgeGroups(file([[2, 1], ...D22.slice(1)])), /level 1 /);
+  assert.throws(() => parseAgeGroups(file(D22, [{ id: "young_teens", window: [1, 10], levels: D22 }])), /duplicate/);
+  assert.throws(() => parseAgeGroups({ groups: [{ id: "kids", window: [1, 10], levels: D22 }] }), /young_teens/);
+  assert.throws(() => parseAgeGroups({}));
+});
+
+test("parseBundles on the real file: base first and always on", () => {
+  const bundles = parseBundles(data("bundles.json"));
+  assert.equal(bundles[0].id, "base");
+  assert.deepEqual(bundles.filter((b) => b.always_on).map((b) => b.id), ["base"]);
+  assert.ok(bundles.every((b) => b.name && b.description && !("rule" in b)));
+  assert.throws(() => parseBundles({ bundles: [] }));
 });

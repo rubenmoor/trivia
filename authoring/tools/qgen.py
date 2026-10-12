@@ -38,6 +38,7 @@ from collections import Counter
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
+import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan 27)
 import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
@@ -2696,6 +2697,7 @@ def validate_pool():
     lo, hi = load_age_groups()["scale"]
     bundle_ids = {b["id"] for b in load_bundles()}
     errors += taxonomy_problems()
+    errors += age_groups.level_problems(load_age_groups())
     errors += targets.problems((lo, hi), bundle_ids)
     import health  # authoring/tools/health.py (imports qgen)
     errors += targets.health_problems(health.THRESHOLDABLE)

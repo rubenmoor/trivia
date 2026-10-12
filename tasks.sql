@@ -3894,7 +3894,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:28:05Z', '2026-10-12T00:30:53Z', 117);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (122, 30, 'create tasks for plan 30', 'split', 'done', 1000, '2026-10-11, tasks 130, 131, 132; play-test decision raised by task 131 (needs the pre-check table), task 132 waits on it', 'Split plan 30 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:29:06Z', '2026-10-12T00:31:25Z', 118);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (123, 27, 'Level ranges per age group in age-groups.json and the decision entry', 'work', 'open', NULL, NULL, 'Part 1 of plan 27 (AG-7, BN-6): the data that the selection and game tasks read. Needs plan 19''s `pool.ts` and plan 20''s `engineData`. If those files are missing, stop and leave the task open.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (123, 27, 'Level ranges per age group in age-groups.json and the decision entry', 'work', 'done', NULL, '2026-10-11, age-groups.json levels, pool.ts parseAgeGroups/parseBundles, engineData, age_groups.py in qgen validate, D-68, directory.md', 'Part 1 of plan 27 (AG-7, BN-6): the data that the selection and game tasks read. Needs plan 19''s `pool.ts` and plan 20''s `engineData`. If those files are missing, stop and leave the task open.
 
 - `app/data/age-groups.json`: add `levels` to each group, 12 `[lo, hi]` pairs taken exactly from plan 27''s table (index 0 = level 1). `young_teens` = D-22. Set `about` to "levels: 12 difficulty ranges per group, level 1 first; young_teens = D-22; the others are a draft until tuned (AG-7)".
 - `pool.ts`:
@@ -3910,7 +3910,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/decisions.md`: a new entry with the next D number, text as in plan 27''s "Decision entry". Related: D-22, D-28, D-38, D-39.
 - `directory.md`: mention `levels` under `age-groups.json`.
 
-Done when: `npm test`, `npm run check` and `qgen validate` pass, and `selection.ts` is still untouched.', '2026-10-12T00:29:45Z', NULL, 119);
+Done when: `npm test`, `npm run check` and `qgen validate` pass, and `selection.ts` is still untouched.', '2026-10-12T00:29:45Z', '2026-10-12T04:33:03Z', 119);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (124, 27, 'Selection with per-group ranges and a bundle filter', 'work', 'open', NULL, NULL, 'Part 2 of plan 27: `selection.ts` takes the level ranges and the active bundles as arguments. Needs the task "Level ranges per age group in age-groups.json" (`AgeGroup.levels`, `LevelRanges`).
 
 - Signatures:
@@ -5818,6 +5818,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (177, 294, '2026-10-12T04:26:49Z', '2026-10-12T04:28:32Z', 'done', NULL, 0, 'e2119b212f64d78df224b808f2ea08e5baa6adfa', 'claude-opus-5-5[1m]', 'de19a627-2c7e-466e-8590-ab538a9f3351', 21, 38, 8755, 819418, 40402, 0.66235159999999993, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (178, 295, '2026-10-12T04:28:32Z', '2026-10-12T04:29:39Z', 'done', NULL, 0, '43ec7266db31e7ce127751a5aba67ca9b1174792', 'claude-opus-5-5[1m]', 'ad58b9ae-a837-4115-8850-f0792ffab95e', 12, 22, 7281, 430193, 37216, 0.52947459999999991, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (179, 296, '2026-10-12T04:29:39Z', '2026-10-12T04:31:24Z', 'done', NULL, 0, '4582a46d45f3e77a9b68cb1f420e48a08c0f1553', 'claude-opus-5-5[1m]', 'dba53830-136d-428a-bba7-ab9da1b49ed0', 17, 34, 7867, 796422, 49386, 0.71184839999999994, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (180, 123, '2026-10-12T04:31:24Z', '2026-10-12T04:33:11Z', 'done', NULL, 0, '6f5cc2b9e201895e9df3fa5fc1a45619380d045e', 'claude-opus-5-5[1m]', 'b60750b9-2be7-44f1-913e-209faceb2b6a', 28, 50, 11389, 1130816, 45266, 0.8162712000000002, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
