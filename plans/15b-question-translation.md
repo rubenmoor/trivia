@@ -24,6 +24,7 @@ A new step in `authoring/tools/qgen.py`, reusing the existing steps:
 - **A: one file per locale** (`authoring/data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. The Spanish file stays the source. Small diffs, easy to review.
 - **B: a `translations` map inside each question.** One file, but `questions.json` grows with every language and gets harder to diff.
 - Draft preference: **A**. The export (PORT-6) builds one playable pool per locale either way.
+- Plan: pm plan 63. A: `questions.<locale>.json` with `source_hash` (`stale` derived, left out of the export), `translatable: false` on sources, names in `app/data/names.<locale>.json` (+ per bundle); export → `app/data/pool.<locale>.json`.
 
 ## Review tool
 - `/review?batch=…&locale=en` shows the source and the translation side by side, with the same approve / needs work / reject decisions (RV-*).

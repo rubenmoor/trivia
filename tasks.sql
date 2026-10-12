@@ -3237,6 +3237,63 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Uses: engine (plans 19/20, done enough), age groups + bundle filter (plan 27, in `resolveChoice`), per-locale pools (part 3, task 242: missing pools print "no pool"), the default bundle set per language (part 10, task 249, RG-5: provisional default above), plan 51 (PORT-8: shares `load.ts`).
 - Feeds: part 9 (task 248: bottlenecks → targets per locale), part 12 (task 251: the exit check).
 - Out of scope: `gamemaster` mode, a games-per-player bar (D-75), Steam language detection.', '2026-10-12T17:55:28Z', 240);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (63, 9, 'Translation layout and schema (QT-1, I18N-3)', 890, 'Part 3 of the masterplan (plan 9): the storage layout and schema for translated questions (QT-1, `plans/15b-question-translation.md` "Storage") and the I18N-3 schema (`plans/15-i18n.md`). Launch languages are `es`, `en`, `de` (D-78, pm decision 26); `es` stays the source. This plan only defines files, fields, `qgen validate` and `qgen export`; it writes no translations of questions. The pipeline that fills the files is part 4 (task 244), the review view part 5 (task 245), the game side part 6 (task 246).
+
+## Decisions this builds on
+- D-78: `es`, `en`, `de` at launch; later `zh-Hans`, `ru`, `pt-BR` (milestone 12, on hold). `base` in es-419; no `es-ES` question variant (it is UI only, LUI-5).
+- D-35: `app/` never reads `authoring/`; the export writes everything the game needs to `app/data/`.
+- D-36: questions only through `qgen batch`; workers never edit pools by hand.
+- D-39, D-43: regions are bundles; `region` on questions (old I18N-3 wording) is `bundle`, done. Base categories in `app/data/categories.json`, a bundle''s in `app/data/bundles/<id>/categories.json`; questions store `subcategory` (its Spanish name) and `bundle`.
+- Plan 26 (licence fields): done; translated files carry no media fields, media stays on the source.
+- Plan 62: `qgen report --simulate` and `authoring/tools/sim/load.ts` already read `app/data/pool.<locale>.json` (es falls back to `pool.json`). This plan makes those files exist.
+
+## Layout (preference A of 15b, recorded as a D-entry)
+- `authoring/data/questions.json`: unchanged, the Spanish source.
+- `authoring/data/questions.<locale>.json` per translated locale (`en`, `de`): `{"version": 1, "locale": "en", "questions": [...]}`, entries sorted by id, same ids as the source.
+- Entry fields:
+  - `id` (source id), `source_hash`, `status` (`draft` | `needs_work` | `approved` | `rejected`, as the source), `difficulty` (own, D-38 scale, rated for that language''s main market), `batch`, `review` (same shape as the source''s).
+  - Translated text: `question`, `answer`, `wrong_answers`, `hints`, `description`, `fun_fact`.
+  - Nothing else from the source: `subcategory`, `bundle`, `media`, `background`, `concept`, `axes` are read from the source by id. Part 4/5 may add their own pipeline fields (e.g. a media-text flag) through the module below.
+- `source_hash`: first 12 hex of sha256 over the canonical JSON of the source''s text fields (`question`, `answer`, `wrong_answers`, `hints`, `description`, `fun_fact`). Written when the translation is made.
+- **`stale` is derived, not stored:** hash ≠ the source''s current hash. A stale translation is left out of the export (a fixed Spanish answer must not ship a wrong translated one) until part 4 re-translates it; `validate` counts them per locale (warning). Note in 15b: whole-pool rewrites (`qgen tighten`, neutral Spanish, part 8) stale every touched translation, hence full runs after milestone 1 (masterplan order).
+- **`translatable: false`** on a source question (absent = translatable): wordplay, questions about Spanish itself, answers only Colombians know. Set by part 4''s translate step through review; `validate` accepts the field on any status.
+
+## Translated names
+- Subcategory names stay the Spanish keys everywhere (pool, burns, engine); a locale only adds display names.
+- `app/data/names.<locale>.json`: `{"version": 1, "locale": "en", "bundles": {"<id>": {"name": …, "description": …}}, "categories": {"<slug>": …}, "subcategories": {"<Spanish name>": …}}` for `base` and every bundle''s name/description (`bundles.json` is global).
+- `app/data/bundles/<id>/names.<locale>.json`: the bundle''s own categories and subcategories, same shape without `bundles`. Mirrors the `categories.json` layout (D-43), so a pack ships its names with it.
+- Hand-maintained files (they ship, like `categories.json`); not questions, so D-36 doesn''t apply. First drafts for `en`, `de` by a worker task here; the native speakers check them with part 11''s pilot spot check. New subcategories (plan 14) get names when their first translated question needs them (validate below).
+
+## Code
+- New `authoring/tools/translations.py`: `LOCALES` (`en`, `de`, D-78; the later ones added when milestone 12 resumes), `path(locale)`, `load(locale)` (empty when the file is missing), `save(locale, doc)` (sorted, same JSON style as `questions.json`), `source_hash(q)`, `is_stale(t, q)`, `play_entries(locale, source_pool)`. The one place part 4 (pipeline), part 5 (review) and the export read translations.
+- `app/server/categories.py` (or the module that loads names for authoring): `load_names(locale)` merging base and bundle name files.
+- `layout.py`: paths for the locale files and names files.
+
+## `qgen export`
+- Writes `app/data/pool.json` exactly as today (the current game, D-59).
+- Per locale in `LOCALES` with a translation file: `app/data/pool.<locale>.json`, same version and shape as `pool.json`. An entry = the source''s play fields (`id`, `subcategory`, `bundle`, `media`, `background`) + the translation''s text fields and `difficulty`, `status: approved`. Included only when source approved, source translatable, translation approved, not stale.
+- No `pool.es.json` (plan 62''s fallback stays). Names files are source files in `app/data/`, not exported.
+- Prints the count per locale and stale/left-out counts.
+
+## `qgen validate`
+- Per locale file: header `locale` matches the file name and is in `LOCALES`; unique ids, every id in the source; status valid; `difficulty` on the scale; required text fields per status (as the source''s checks: three wrong answers, three hints, answer not among wrong answers, …; share the per-question text check instead of copying it).
+- Error: a non-rejected translation of a `translatable: false` or `rejected` source.
+- Warning: stale translations (count + first ids), approved translations whose source is no longer approved.
+- Names: error when `pool.<locale>.json` uses a subcategory, category or bundle without a name in that locale; warning for the other missing names (count); error for a name key that doesn''t exist in the categories/bundles files (renamed subcategory).
+- Export staleness: fails when any `pool.<locale>.json` differs from what `export` would write (as `pool.json` today), and when a `pool.<locale>.json` exists without a translation file.
+
+## Tasks (for the split)
+1. D-entry for the layout (this plan''s "Layout" and "Translated names"); `plans/15b-question-translation.md` "Storage" decided → points to it, QT-1 schema part; `plans/15-i18n.md` I18N-3: `region` = `bundle` (D-39), translation layout → the D-entry; `directory.md` new paths. Priority 900.
+2. `translations.py`, `layout.py` paths, `load_names`; `qgen export` per locale; `qgen validate` checks above. Verify with a throw-away locale file of 3 entries in a temp copy (fresh, stale, non-translatable source), no committed test. Priority 890.
+3. Draft `app/data/names.en.json`, `names.de.json`, `app/data/bundles/colombia/names.{en,de}.json` for every current category, subcategory and bundle; `qgen validate` clean. Priority 880.
+
+## Done when
+- `qgen validate` and `qgen export` pass on the real repo with no translation files (nothing changes for `es`) and with a throw-away locale file.
+- QT-1 `[x]` in 15b (schema part; `validate` covers translations and `stale`), I18N-3 `[x]` in 15; the D-entry in `plans/decisions.md`.
+
+## Out of scope
+- Translating questions (part 4, part 11), the review view (part 5), loading `pool.<locale>.json` and names in the game and the language setting (part 6).
+- Whether a translated pool counts toward a language''s 5000 (D-75/D-78 leave it open; part 9/12). `qgen report --simulate` already counts what `pool.<locale>.json` holds.', '2026-10-12T18:13:37Z', 242);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -4975,13 +5032,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for decision 2 (D-56''s spot-check size and agreement rate); linked by task 239. Task priority 610 puts this after plan 16''s tasks (46, 47, 49), which build `qgen audit` and the spot-check tooling.
 - Content: release bar = D-56''s numbers, or stricter (then a pm decision with a recommendation); error limit and what happens to a batch above it; back-audit of the pre-D-56 approved pool in slices through `qgen` (gamemaster asks, like `qgen rework`), findings → `/review?audit=flagged`; cost estimate from `costs.log` first, as a pm decision before the full run.
 - Owner `plans/16-content-target.md` ("Quality bar").', '2026-10-12T01:10:56Z', '2026-10-12T04:02:48Z', 239);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (242, 9, 'write plan: Translation layout and schema (QT-1, I18N-3)', 'plan', 'open', 490, NULL, 'Write the plan for part 3 of the masterplan (plan 9): `pm plan add 9 "Translation layout and schema (QT-1, I18N-3)" --priority 890`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (242, 9, 'write plan: Translation layout and schema (QT-1, I18N-3)', 'plan', 'done', 490, '2026-10-12, pm plan 63, plans/15b-question-translation.md, plans/15-i18n.md', 'Write the plan for part 3 of the masterplan (plan 9): `pm plan add 9 "Translation layout and schema (QT-1, I18N-3)" --priority 890`.
 
 - Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
 - OQ-31 = Spanish only: `pm task drop <this task> "OQ-31: Spanish only"`.
 - Content: draft preference A (`authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` → `stale`); `translatable: false` on sources; translated category/subcategory/bundle names; `qgen export` → `app/data/pool.<locale>.json` + names (D-35); `qgen validate` checks; D-entry for the layout.
 - After plan 26 (licence fields, priority 900), which also changes pool fields.
-- Owner `plans/15b-question-translation.md` ("Storage"), `plans/15-i18n.md` (I18N-3).', '2026-10-12T01:10:56Z', NULL, 239);
+- Owner `plans/15b-question-translation.md` ("Storage"), `plans/15-i18n.md` (I18N-3).', '2026-10-12T01:10:56Z', '2026-10-12T18:13:42Z', 239);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (243, 9, 'write plan: Spanish variety (neutral Spanish)', 'plan', 'open', 490, NULL, 'Write the plan for part 8 of the masterplan (plan 9): `pm plan add 9 "Spanish variety (neutral Spanish)" --priority 690`.
 
 - Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
@@ -7677,6 +7734,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: AGENTS.md `qgen report` line gets `--simulate`; plan 16 "Metric": player models, joker policy, mode approximations (rr-competitive, timed until MD-8/MD-9), "pass/fail = D-75''s count"; plan 16 CT-2 `[x]` with a note; `plans/project.md` in sync.
 
 Checks: `qgen report --simulate` (exit 1 today: `en`/`de` have no pool), `--json` parses, `--mode all --locale es` runs; `qgen validate` passes; `state/` never written.', '2026-10-12T17:56:16Z', '2026-10-12T18:11:30Z', 409);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (413, 63, 'create tasks for plan 63', 'split', 'open', 1000, NULL, 'Split plan 63 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T18:13:37Z', NULL, 242);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -8229,6 +8288,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (277, 410, '2026-10-12T17:56:26Z', '2026-10-12T18:03:20Z', 'done', NULL, 0, '5988edd916c2a95a2c0f3dc9bcb373a59061fd2e', 'claude-opus-5-5[1m]', '9cd5aeb3-b04c-4568-99f9-8e8ab85f3184', 20, 28, 15778, 801304, 64979, 0.9957648, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (278, 411, '2026-10-12T18:03:20Z', '2026-10-12T18:05:35Z', 'done', NULL, 0, '73e41f576566fa7a443e9710234fb4ba9238a721', 'claude-opus-5-5[1m]', '665f3e3f-f88a-4305-ad0b-887de0739b84', 10, 20, 8295, 463289, 52549, 0.67902979999999991, 553875);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (279, 412, '2026-10-12T18:05:35Z', '2026-10-12T18:11:43Z', 'done', NULL, 0, '0bde4e0ae9770978001f5258c44d4b6d43eeaf0b', 'claude-opus-5-5[1m]', 'a5924fb2-44ad-4b35-a0b1-7ee15a2bb0a2', 23, 42, 12174, 1033158, 52990, 0.8741996, 553875);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (280, 242, '2026-10-12T18:11:43Z', '2026-10-12T18:13:51Z', 'done', NULL, 0, 'f2eb9d68d9788e303c986b270c649d358dc786a6', 'claude-opus-5-5[1m]', '5248ad6f-b121-4277-9891-a1aa079162a0', 15, 30, 11270, 670367, 51542, 0.7719294, 553875);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
