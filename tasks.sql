@@ -4381,7 +4381,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Sync the open-questions row in `plans/11-steam.md` and `plans/project.md`.
 
 Done when: D-entry exists, OQ-30 resolved, MD-5 `[x]`, plan 13''s default-mode section is implementable.', '2026-10-12T00:46:59Z', '2026-10-12T16:45:10Z', 173);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (186, 36, 'Engine: mode, preset, report (MD-6 engine part)', 'work', 'open', NULL, NULL, 'Part 1 of plan 36. Engine rules for the default mode; no UI.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (186, 36, 'Engine: mode, preset, report (MD-6 engine part)', 'work', 'dropped', NULL, 'plan 36 revised (task 362): no default mode, no preset, report only logs; replaced by a new task', 'Part 1 of plan 36. Engine rules for the default mode; no UI.
 
 Guards (stop without staging anything):
 - `pm show` of plan 35: a pending OQ-30 decision → `pm task-pending-decision <this task> <decision id>`, stop. No decision yet, or record task (MD-5) still open → stop, note why; the spec is plan 13''s default-mode section.
@@ -4397,8 +4397,8 @@ Work:
 
 Check: `npm test` (fixture replay unchanged), `npm run check`; throw-away script: default-mode game, report burns for everyone, replacement at the same level, row in `reports`, undo / skip-everyone / setJokers refused, report in gamemaster mode refused, empty supply → `409`.
 
-Done when: checks pass; gamemaster-mode games behave exactly as before.', '2026-10-12T00:47:35Z', NULL, 174);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (187, 36, '«Reportar pregunta» and the report list (MD-6 UI)', 'work', 'open', NULL, NULL, 'Part 2 of plan 36. Overlay by mode, confirm step, report list screen.
+Done when: checks pass; gamemaster-mode games behave exactly as before.', '2026-10-12T00:47:35Z', '2026-10-12T16:47:14Z', 174);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (187, 36, '«Reportar pregunta» and the report list (MD-6 UI)', 'work', 'dropped', NULL, 'plan 36 revised (task 362): report only logs, question stays; replaced by a new task', 'Part 2 of plan 36. Overlay by mode, confirm step, report list screen.
 
 Guards: part 1 of plan 36 still open → stop, leave open. Screens not on the engine yet (M2 part 5, PORT-7) → stop, leave open, say so.
 
@@ -4411,8 +4411,8 @@ Work:
 
 Check: browser walk in both modes (gamemaster overlay unchanged; default: report → confirm → new question at the same level, list shows it, copy works); keyboard only and mouse only (IN-1); `npm run check`.
 
-Done when: checks pass; plan 13 MD-6 `[x]` with a note.', '2026-10-12T00:47:35Z', NULL, 174);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (188, 36, 'Mode and settings screen (MD-7)', 'work', 'open', 380, NULL, 'Part 3 of plan 36. Mode toggle and preset row on plan 29''s Choice screen; no second screen. Priority 380: after plans 29 and 30.
+Done when: checks pass; plan 13 MD-6 `[x]` with a note.', '2026-10-12T00:47:35Z', '2026-10-12T16:47:14Z', 174);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (188, 36, 'Mode and settings screen (MD-7)', 'work', 'dropped', 380, 'plan 36 revised (task 362): mode row + «Personalizar partida», no preset row; replaced by a new task', 'Part 3 of plan 36. Mode toggle and preset row on plan 29''s Choice screen; no second screen. Priority 380: after plans 29 and 30.
 
 Guards: part 2 of plan 36 or plan 29''s Choice screen still open → stop, leave open, say which.
 
@@ -4425,7 +4425,7 @@ Work:
 
 Check: Enter straight through on an existing family save plays today''s game; each preset starts with its joker budget; `?mode=default` presets the toggle; keyboard only and mouse only; `npm run check`.
 
-Done when: checks pass, docs updated.', '2026-10-12T00:47:35Z', NULL, 174);
+Done when: checks pass, docs updated.', '2026-10-12T00:47:35Z', '2026-10-12T16:47:15Z', 174);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (189, 37, 'Launch languages: gather facts, write the decisions (OQ-31)', 'work', 'done', NULL, '2026-10-12, pm decisions 26 (launch languages) and 27 (Spanish variety); task 190 waits on both; Steam shares from memory (web search denied), to confirm', 'Part 1 of plan 37. Prepare the OQ-31 decision(s); no code, no translation.
 
 - Facts (numbers in the decision body, one-line source each):
@@ -5614,13 +5614,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The report list: a scope with `root`; arrows move the ring between entries; no `keydown` listener.
 
 Done when: reporting and the list work with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (349, 36, 'Settings screen on the action layer (IN-2, IN-3)', 'work', 'open', 370, NULL, 'Plan 44 (action layer and focus navigation) is done; the mode and settings screen (task 188) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (349, 36, 'Settings screen on the action layer (IN-2, IN-3)', 'work', 'dropped', 370, 'plan 36 revised (task 362): no settings screen; replaced by a task for the mode row and «Personalizar partida» dialog', 'Plan 44 (action layer and focus navigation) is done; the mode and settings screen (task 188) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
 
 - Push a scope from `app/client/src/lib/input.svelte.ts` with `root`; `data-focus-default` on the first setting; no `keydown` listener.
 - Sliders and steppers: the scope handles ←/→ itself while one has focus (as `Overlay.svelte` does for volumes and jokers) and returns `false` for ↑/↓, so spatial focus moves between rows.
 - `back`/`menu` leave the screen the way its «Atrás» button does.
 
-Done when: the settings screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
+Done when: the settings screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', '2026-10-12T16:47:15Z', 225);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (350, 45, 'create tasks for plan 45', 'split', 'done', 1000, '2026-10-12, plan 45 body (gamepad.svelte.ts, input.svelte.ts, LT/RT + L2/R2 glyphs, tasks 1–2 done); tasks 228/229 dropped and replaced by 351, 352 in line with decision 9; no new decisions', 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T06:07:49Z', '2026-10-12T06:15:29Z', 227);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (351, 45, 'Glyphs and prompts (IN-5)', 'work', 'done', NULL, '2026-10-12, app/client/src/game/{Glyph,Prompt}.svelte (new), Game/Question/Player/CategoryPicker/JokerTray/Overlay.svelte (every <kbd> → <Prompt>; token letters hidden with a pad, LB/RB under the tray, Y/B/X/A on answer tiles, RT on «Respuesta final»; cancel buttons Esc / B), lib/input.svelte.ts (keyLabel table, scopes.version for the pad map), lib/gamepad.ts (padButton), plans/17-publishing.md (glyph line). Checked: npm run check, check:literals clean; headless Chrome screenshots (temp state) of Start, Player, Question, armed joker, Paso, aiming, Cambiazo, overlay with keyboard/xbox/playstation: same tops and heights, only centred buttons'' widths change. For task 352: behind modal dialogs (Paso, aiming) «repetir» shows Y though Y does nothing there.', 'Part of plan 45, task 3. Tasks 226 (gamepad source) and 227 (Question screen, decision 9) are done. Replaces task 228 (its body predated decision 9''s answer).
@@ -6675,8 +6675,64 @@ Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section p
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (374, 60, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 60, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-12T16:46:08Z', NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (375, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:46:15Z', NULL, 362);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (375, 36, 'create tasks for plan 36', 'split', 'done', 1000, '2026-10-12, tasks.sql: dropped 186, 187, 188, 349 (pre-revision spec); added 376 engine, 377 report UI, 378 mode screen, 379 mode screen on the action layer; 348 kept (report dialog on the action layer, now after 377); no new decisions', 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:46:15Z', '2026-10-12T16:47:19Z', 362);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (376, 36, 'Engine: mode, standard joker set, report (MD-6 engine part)', 'work', 'open', NULL, NULL, 'Task 1 of plan 36. Engine rules for `gamemaster` and `solo` («Solo o en grupo»); no UI. Spec: plan 13 "Implementation notes" (plan 35, decisions 19 and 20); don''t re-decide it.
+
+Guards (stop, leave open, say which in the note; no `pm task drop`):
+- Plan 35''s record task (MD-5, task 373) still open, or plan 13 has no "Implementation notes".
+- `engine/game.ts`, `engine/api.ts`, `engine/state.ts` missing (plan 20, PORT-3), or part 4''s store without `version` + migration (PORT-4/5).
+
+Work:
+- `engine/state.ts`: `settings.mode` (plan 13''s ids; this plan builds `gamemaster` and `solo`; missing = `gamemaster` in `withDefaults`), `settings.customized: boolean`; `ReportRow {question_id, game_id, player_id, level, reported_on, note?}`; `SaveData.reports`; version bump + migration step (`reports: []`, games untouched).
+- Standard joker set: one engine constant (3 × Soplo, 1 × each other joker).
+- `engine/game.ts` / `api.ts`: `newGame` takes `mode` (+ optional joker overrides → `customized: true` if they differ from the standard set); `solo` fills `settings.jokers` from the constant.
+- `report` action, every mode: appends a `ReportRow`, nothing else (no burn, no replacement, game state unchanged); same question twice in one game = no-op.
+- Refusals outside `gamemaster` (`409` + reason): `undo`, skip of any kind, replace, `setJokers`. Abandon and sound stay.
+- `view` exposes `settings.mode` / `customized`; `lib/types.ts` to match.
+
+Check: `npm test` (fixture replay unchanged), `npm run check`; throw-away script: `solo` game gets the standard set and `customized: false`; overrides set `customized: true`; report adds one row (twice → still one) and leaves the game state unchanged; undo / skip / replace / setJokers refused with `409` in `solo`; report allowed in `gamemaster`; old save migrates with `reports: []`.
+
+Done when: checks pass; gamemaster-mode games behave exactly as before.', '2026-10-12T16:47:15Z', NULL, 375);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (377, 36, '«Reportar pregunta» and the report list (MD-6 UI)', 'work', 'open', NULL, NULL, 'Task 2 of plan 36. Overlay by mode, confirm step, report list screen.
+
+Guards (stop, leave open, say which): the engine task of plan 36 (mode, standard set, report) still open; screens not on the engine yet (plan 50, PORT-7).
+
+Work:
+- `Overlay.svelte` by `settings.mode`: `gamemaster` exactly as today plus «Reportar pregunta» / «Preguntas reportadas»; `solo`: sound, «Reportar pregunta», «Preguntas reportadas», «Abandonar partida», read-only joker line; no undo, skip/burn, budget editor.
+- Confirm step: «¿Reportar esta pregunta? Queda anotada; la pregunta sigue.», Enter/Esc. After it the same question stays on screen.
+- `Reports.svelte` (new): newest first; date, question id, question text, answer, player; «Copiar» → plain text (one block per report) via `navigator.clipboard`, selectable `<pre>` fallback. Offline; no server route.
+- `Game.svelte`: `Screen` gains `"reports"`, back with Backspace/Esc; `lib/api.ts` `report`.
+- Strings via `t()` (`report.*`); without the catalog, Spanish literals marked `// LUI-1`.
+- The action-layer wiring of dialog and list is task 348 (same plan); build so it slots in, or do it here and close 348 too.
+
+Check: browser walk in both modes (gamemaster overlay unchanged apart from the report entries; `solo`: report → confirm → same question stays, list shows it, copy works); keyboard only and mouse only (IN-1); `npm run check`.
+
+Done when: checks pass; plan 13 MD-6 `[x]` with a note.', '2026-10-12T16:47:15Z', NULL, 375);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (378, 36, 'Mode screen: mode row, «Solo o en grupo», «Personalizar partida» (MD-7)', 'work', 'open', 380, NULL, 'Task 3 of plan 36. Mode row on plan 29''s Choice screen; no second screen. Priority 380: after plans 29 and 30.
+
+Guards (stop, leave open, say which): the report UI task of plan 36 or plan 29''s Choice screen still open.
+
+Work:
+- `Choice.svelte`: mode row with the built modes (gamemaster mode, «Solo o en grupo»; multiplayer modes come with plan 41 / MD-8 / MD-9). Mode names English first in code, Spanish forms per plan 37.
+- «Solo o en grupo»: age group only (no difficulty selection, no preset row) plus a small «Personalizar partida» button → dialog with joker counts (0–9 / ∞, the MD-4 steppers); any change → `customized: true`. Further fields only if plan 13 lists them.
+- `newGame({…, mode, jokers?})`.
+- Preselect the mode from the player''s newest game (like the age group); new player / fresh save → `gamemaster`. Launch option `?mode=gamemaster|solo` presets the row.
+- Strings via `t()` (`mode.*`) or `// LUI-1` literals.
+- Action-layer wiring of row and dialog: the following task of this plan; build so it slots in, or do it here and close that one too.
+- Docs: plan 13 MD-7 `[x]` and "Implementation notes" (fields as built); `plans/04-ui-tv-display.md` (Choice section, Reports screen, overlay by mode, keys); `directory.md` (new files); `plans/project.md` if MD-6/MD-7 are listed.
+
+Check: Enter straight through on an existing family save plays today''s game; a `solo` game starts with the standard set and `customized: false`; a change in «Personalizar partida» → `customized: true`; `?mode=solo` presets the row; keyboard only and mouse only; `npm run check`.
+
+Done when: checks pass, docs updated.', '2026-10-12T16:47:15Z', NULL, 375);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (379, 36, 'Mode row and «Personalizar partida» dialog on the action layer (IN-2, IN-3)', 'work', 'open', 370, NULL, 'Plan 44 (action layer) is done; the mode row and the «Personalizar partida» dialog (MD-7 task of plan 36) come after it. Put them on the same rules (`plans/04-ui-tv-display.md`, "Input"). Replaces task 349 (written for a settings screen that no longer exists).
+
+Guard: the MD-7 task of plan 36 still open → stop, leave open.
+
+- Mode row: part of the Choice screen''s scope (`app/client/src/lib/input.svelte.ts`); arrows move between mode tiles, ↑/↓ between rows; no `keydown` listener.
+- «Personalizar partida»: modal scope (`pushScope({ modal: true, root, … })`); `data-focus-default` on the first stepper; steppers handle ←/→ themselves while focused (as `Overlay.svelte` does for jokers) and return `false` for ↑/↓; `back`/`menu` close it, focus back to the button.
+
+Done when: mode choice and customizing play with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T16:47:15Z', NULL, 375);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7187,6 +7243,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (236, 361, '2026-10-12T16:44:27Z', '2026-10-12T16:44:50Z', 'done', NULL, 0, '6b8249ea3ab5a6407af573c38484bdb34adc630e', 'claude-opus-5-5[1m]', '1595a90d-6610-4d2b-adf4-f8649287ef88', 4, 8, 2220, 130870, 34637, 0.34770199999999996, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (237, 372, '2026-10-12T16:44:50Z', '2026-10-12T16:45:19Z', 'done', NULL, 0, '28c7171d4e47a2ced5cd77cf8503277a9363d827', 'claude-opus-5-5[1m]', '137a9156-1cc5-438a-9e6d-d3d53778cf9f', 7, 14, 2534, 227511, 28447, 0.3238142, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (238, 362, '2026-10-12T16:45:19Z', '2026-10-12T16:46:30Z', 'done', NULL, 0, '9b8ea27c2f16bf6a8e34ccc809ea71dd27a9ead7', 'claude-opus-5-5[1m]', '09fe6cc1-ebbb-42ba-8ae2-f26f0d7bb39a', 8, 16, 4870, 273597, 31567, 0.4047194, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (239, 375, '2026-10-12T16:46:30Z', '2026-10-12T16:47:25Z', 'done', NULL, 0, 'e50706ee111571286e33ac17a416e92eeea1d6b5', 'claude-opus-5-5[1m]', 'eee477ad-93be-49aa-984e-e9f589ca416d', 9, 18, 5633, 310588, 36830, 0.46948959999999995, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
