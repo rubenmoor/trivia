@@ -2590,7 +2590,7 @@ def final_review(r):
 
 def cmd_record(args):
     """Write the reviews (D-33: reviewer llm + model) and the picks into the pool. Fixed rules on
-    top of the model's decision: no adequate media, or a fact check that isn't confirmed, means
+    top of the model's decision: no adequate media, a pick whose licence verdict is replace, or a fact check that isn't confirmed, means
     needs_work. Picks are recorded without downloading; `sync` fills the cache."""
     import media as media_tool
     d = run_dir(args)
@@ -2621,6 +2621,12 @@ def cmd_record(args):
                                 else "No se encontró una imagen de fondo adecuada.")
                 continue
             fields[slot] = media_tool.pick_fields(found[n - 1], slot)
+            verdict, reasons = providers.licence_verdict(fields[slot])
+            if verdict == "replace" and decision != "rejected":  # plan 53
+                decision = "needs_work"
+                kinds.add("media")
+                problems.append(("La imagen elegida" if slot == "media" else "La imagen de fondo elegida")
+                                + f" tiene una licencia no adecuada ({'; '.join(reasons)}).")
         check = fact_check(full, checks.get(tmp_of.get(q["id"])))
         if check and check["verdict"] != "confirmed":
             decision = "needs_work"
