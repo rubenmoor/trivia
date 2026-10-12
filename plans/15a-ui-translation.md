@@ -28,7 +28,8 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - Server errors (pm plan 22, D-57): codes + params on the wire; `lib/errors.ts` renders `error.<code>` from `es.ts` if the key exists, else the English `message`.
 - [x] LUI-2 Pseudo-locale for length and missing-string tests.
   - Done 2026-10-12 (pm plan 23): `locales/xx.ts`, dev-only `?lang=xx`. Screen walk (throw-away Playwright, D-6) at 1920 × 1080 and 1280 × 1024: no missed literals; shortcut letters (`*Key`) exempt from `xx` too. Overflow: B-17 (Esc overlay with joker budget), B-18 (corner error over the question).
-- [ ] LUI-3 `en` catalog with English joker names (draft; pm plan 24). Ships at launch (D-78); `de.ts` follows the same path.
+- [x] LUI-3 `en` catalog with English joker names (draft; pm plan 24). Ships at launch (D-78); `de.ts` follows the same path.
+  - Done 2026-10-12 (pm task 104, D-89): Hint, Pass & Purge, Fairy, Ms Picky, Trick Shot. Draft, no native-speaker check (LUI-5). New key `joker.skip.pass` for the plain skip button (`es` «Paso», `en` «Just pass»).
   - Joker name candidates (2026-10-12, pm task 102), recommended first; keys stay `S P F T X` until LUI-4.
   - `hint` «Soplo» (pm decision 40): Psst (classroom whisper), Little Bird («a little bird told me»), Nudge, Tip-off, Whisper.
   - `skip` «Paso» (pm decision 41): Hard Pass (cheeky idiom, keeps `P`), Nope, Next!, Dodge, Bye-Bye.

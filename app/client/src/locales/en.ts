@@ -1,5 +1,5 @@
 // Draft English catalog (plans/15a-ui-translation.md, LUI-3): Claude's wording, no native-speaker
-// check yet (LUI-5). Dev-only via `?lang=en`. Joker names: task 102's recommended candidates.
+// check yet (LUI-5). Dev-only via `?lang=en`. Joker names: pm decisions 40–44.
 import type { Catalog } from "./es";
 
 export const en = {
@@ -89,10 +89,10 @@ export const en = {
   },
   // Shortcut keys stay the `es` letters for now; keys per language are LUI-4.
   joker: {
-    hint: { name: "Psst", key: "S" },
-    skip: { name: "Hard Pass", key: "P", stamp: "GONE", purge: "Hard Pass, and goodbye to “{name}”" },
-    easier: { name: "Dial Down", key: "F", dial: "Difficulty" },
-    category: { name: "Switcheroo", key: "T", title: "Switcheroo: which topic do you want?" },
+    hint: { name: "Hint", key: "S" },
+    skip: { name: "Pass & Purge", key: "P", pass: "Just pass", stamp: "GONE", purge: "Pass & Purge: goodbye to “{name}”" },
+    easier: { name: "Fairy", key: "F", dial: "Difficulty" },
+    category: { name: "Ms Picky", key: "T", title: "Ms Picky: which topic do you want?" },
     snipe: {
       name: "Trick Shot",
       key: "X",
@@ -162,7 +162,7 @@ export const en = {
       topic: "Topic: {name}",
       replay: "replay",
       replayKey: "R",
-      hint: "Psst {n}",
+      hint: "Hint {n}",
       mediaMissing: "media not available (missing `trivia-media sync`?)",
       sendFailed: "Couldn't send the answer: {error}",
       final: "Final answer",
@@ -225,10 +225,10 @@ export const en = {
     snipe_no_repeat: "if you hit the right one, there are no questions left to repeat the level",
     joker_not_question: "jokers can only be played on a question",
     joker_spent: {
-      hint: "no Psst left",
-      skip: "no Hard Passes left",
-      easier: "no Dial Downs left",
-      category: "no Switcheroos left",
+      hint: "no Hints left",
+      skip: "no Pass & Purge left",
+      easier: "no Fairies left",
+      category: "no Ms Picky left",
       snipe: "no Trick Shots left",
     },
     age_group_unknown: "unknown age group: '{group}'",

@@ -110,7 +110,7 @@ No family-specific questions (D-30).
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string into it (2026-10-12, pm plan 21) — [`15a`](15a-ui-translation.md)
 - [x] Server errors as codes; Spanish texts under `error.*` in `es.ts` (2026-10-12, pm plan 22, D-57) — [`15a`](15a-ui-translation.md)
 - [x] LUI-2 Pseudo-locale for length and missing-string tests (2026-10-12, pm plan 23; overflow: B-17, B-18) — [`15a`](15a-ui-translation.md)
-- [ ] LUI-3 Draft `en` catalog with English joker names — [`15a`](15a-ui-translation.md)
+- [x] LUI-3 Draft `en` catalog with English joker names (2026-10-12, pm plan 24, D-89) — [`15a`](15a-ui-translation.md)
 - [x] BN-2..BN-5 Bundles (replace RG-1, RG-2): `bundle` on every question, `colombia` proposed by an LLM pass (D-39) — [`22`](22-bundles.md)
 - [ ] Gamemaster checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
 

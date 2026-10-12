@@ -103,7 +103,7 @@ const es = {
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
     hint: { name: "Soplo", key: "S" },
-    skip: { name: "Paso", key: "P", stamp: "ELIMINADO", purge: "Paso, y fuera el tema «{name}»" },
+    skip: { name: "Paso", key: "P", pass: "Paso", stamp: "ELIMINADO", purge: "Paso, y fuera el tema «{name}»" },
     easier: { name: "Bájale", key: "F", dial: "Dificultad" },
     category: { name: "Cambiazo", key: "T", title: "Cambiazo: ¿qué tema quieren?" },
     snipe: {

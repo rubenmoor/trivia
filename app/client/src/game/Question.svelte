@@ -561,7 +561,7 @@
     <div class="backdrop-dim">
       <div class="dialog glass-strong" bind:this={skipDialog}>
         <h2>{t("joker.skip.name")}</h2>
-        <button class="candy" onclick={() => fire({ joker: "skip" })}>{t("joker.skip.name")} <Prompt action={{ type: "pick", n: 1 }} hold /></button>
+        <button class="candy" onclick={() => fire({ joker: "skip" })}>{t("joker.skip.pass")} <Prompt action={{ type: "pick", n: 1 }} hold /></button>
         <button
           class="secondary purge"
           onclick={() => fire({ joker: "skip", purge: true })}

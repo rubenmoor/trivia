@@ -787,3 +787,13 @@ Template:
   - **Cheats in the engine:** one action each, refused `gamemaster_only` (409) outside gamemaster mode.
 - Consequences: spec in plan 13 "Gamemaster mode"; MD-11 (task 391), MD-12 (task 392). `LEVELS` and `PER_LEVEL` become per game. MD-10 covered by the action layer (IN-1..IN-5).
 - Supersedes / related: D-85 (default bundles, configure screen only), D-74, D-82, D-86; MD-4; pm decisions 33, 34
+
+## D-89: English joker names
+- Date: 2026-10-12
+- Context: LUI-3 (pm plan 24); task 102's candidates; pm decisions 40–44
+- Decision:
+  - `hint` «Soplo» → Hint; `skip` «Paso» → Pass & Purge; `easier` «Bájale» → Fairy; `category` «Cambiazo» → Ms Picky; `snipe` «Francotirador» → Trick Shot.
+  - Keys stay `S P F T X` until LUI-4.
+  - Skip dialog: the plain option is its own key `joker.skip.pass` («Just pass»), since the name says purge.
+- Consequences: `app/client/src/locales/en.ts` (names, hint notes «Hint 1/2/3», «no … left» errors, category title, purge line); `joker.skip.pass` in `es.ts` («Paso», no visible change) and `Question.svelte`. Draft, native check in LUI-5.
+- Supersedes / related: D-78; LUI-3, LUI-4, LUI-5; pm decisions 40, 41, 42, 43, 44
