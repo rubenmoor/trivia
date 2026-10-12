@@ -1,0 +1,56 @@
+"""Pool targets per bundle (plans/12, D-53): shared by qgen.py and the authoring server."""
+import json
+
+import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
+from layout import TARGETS
+import categories  # app/server/categories.py
+
+NOT_BUNDLES = {"about", "batch_health"}  # top-level keys that aren't bundles (D-55)
+
+
+def load_all():
+    return json.loads(TARGETS.read_text(encoding="utf-8")) if TARGETS.exists() else {}
+
+
+def load_targets(bundle):
+    """{"total": n, "difficulty": {level (int): n}} for the bundle, or None without targets."""
+    t = load_all().get(bundle)
+    if t is None:
+        return None
+    return {"total": t["total"], "difficulty": {int(k): v for k, v in t["difficulty"].items()}}
+
+
+def category_shares(bundle):
+    """{broad category slug: derived share} = total × its subcategories / the bundle's (guide only)."""
+    t = load_targets(bundle)
+    if t is None:
+        return None
+    cats = categories.load(bundle)
+    n = sum(len(c["subcategories"]) for c in cats)
+    return {c["slug"]: t["total"] * len(c["subcategories"]) / n for c in cats} if n else {}
+
+
+def problems(scale, bundle_ids):
+    """Errors in targets.json: bundles known, levels = scale, values ≥ 0, sum = total."""
+    rel = "authoring/data/targets.json"
+    out = []
+    lo, hi = scale
+    for b, t in load_all().items():
+        if b in NOT_BUNDLES:
+            continue
+        if b not in bundle_ids:
+            out.append(f"{rel}: {b!r} is not a bundle")
+            continue
+        total, diff = t.get("total"), t.get("difficulty") or {}
+        levels = {str(l) for l in range(lo, hi + 1)}
+        if set(diff) != levels:
+            missing, extra = sorted(levels - set(diff), key=int), sorted(set(diff) - levels)
+            out.append(f"{rel}: {b}: levels must be {lo}–{hi}"
+                       + (f"; missing {', '.join(missing)}" if missing else "")
+                       + (f"; extra {', '.join(extra)}" if extra else ""))
+        bad = [k for k, v in diff.items() if not isinstance(v, int) or v < 0]
+        if bad:
+            out.append(f"{rel}: {b}: targets must be integers ≥ 0: {', '.join(bad)}")
+        elif not isinstance(total, int) or sum(diff.values()) != total:
+            out.append(f"{rel}: {b}: difficulty targets sum to {sum(diff.values())}, total is {total}")
+    return out

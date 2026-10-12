@@ -41,6 +41,7 @@ import categories  # app/server/categories.py: every bundle's categories (D-19, 
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import selection  # app/server/selection.py: levels and the supply check (GF-5)
+import targets  # authoring/tools/targets.py: pool targets (D-53)
 from pool_export import export_text  # authoring/tools/pool_export.py (D-35)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
@@ -586,12 +587,12 @@ def assign_difficulties(slots, seed, weights):
 def draw_slots(subs, pool_questions, axes_def, n, seed):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded."""
-    targets = assign_difficulties([(s, i) for s in subs for i in range(n)], seed, target_weights())
+    level_of = assign_difficulties([(s, i) for s in subs for i in range(n)], seed, target_weights())
     plan = {}
     for s in subs:
         rng = random.Random(f"{seed}:{s}")
         lst = concepts.load(s)
-        diffs = [targets[(s, i)] for i in range(n)]
+        diffs = [level_of[(s, i)] for i in range(n)]
         picked = concepts.draw_concepts(lst, concepts.uses(pool_questions, s), diffs, rng)
         usage = concepts.axis_usage(pool_questions, s)
         offered = {a: set() for a in concepts.AXES}
@@ -2052,6 +2053,7 @@ def validate_pool():
     lo, hi = load_age_groups()["scale"]
     bundle_ids = {b["id"] for b in load_bundles()}
     errors += taxonomy_problems()
+    errors += targets.problems((lo, hi), bundle_ids)
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",

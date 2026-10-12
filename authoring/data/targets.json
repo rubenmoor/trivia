@@ -1,0 +1,23 @@
+{
+  "about": "Pool targets per bundle (plans/12, D-53): approved questions in total and per difficulty (scale of app/data/age-groups.json). Per-category shares are derived, not stored.",
+  "base": {
+    "total": 5000,
+    "difficulty": {
+      "1": 250,
+      "2": 350,
+      "3": 450,
+      "4": 450,
+      "5": 450,
+      "6": 450,
+      "7": 450,
+      "8": 450,
+      "9": 330,
+      "10": 330,
+      "11": 330,
+      "12": 230,
+      "13": 230,
+      "14": 125,
+      "15": 125
+    }
+  }
+}
