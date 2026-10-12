@@ -468,7 +468,52 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Not in this milestone
 - Credits screen, `CREDITS.md`, store disclosures (PUB-5, Steam S3/S5); code licence (PUB-4).
 - Audio UI sounds and fonts (`app/client/public/audio/CREDITS.md`, OFL): not pool media.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'Milestone 5 lets players choose an age group and the bundles to play before a session. Today the referee plays one audience: 12 levels with fixed `LEVEL_RANGES` over difficulty 1–10 (D-22), from every approved question of every bundle (1136 approved: `base` 1035 over 1–15, `colombia` 101 over 2–13). The groups and their draft windows already ship in `app/data/age-groups.json` (D-38), the bundles in `app/data/bundles.json` (D-39); nothing in the game reads them yet. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
+
+**The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 5 …`), with its own tasks queued by pm.
+
+## Depends on milestone 2 (TypeScript engine)
+- Every part builds on the TS referee, not on `app/server/game.py` / `selection.py`: plan 19 (`engine/selection.ts`, `pool.ts`: `LEVEL_RANGES`, `assign`, `draw`, `supply`, `loadCategories`), plan 20 (`engine/game.ts`, `state.ts`: `GameState.settings`, `newGame`, `jokersView`, `engine/api.ts`), and M2 parts 4–5 (save document, screens on the engine; plans not written yet).
+- No part changes the Python referee. If M2 slips, the part plans wait; they don''t port to Python.
+- Plan 19 explicitly leaves bundle filtering out ("same rules"); part 1 adds it.
+
+## Part 1: Group windows and bundle filter in the engine (AG-7, BN-6; core mechanics)
+- **Data:** per group in `age-groups.json` the 12 level ranges (`levels`), so every group keeps the shape of D-22 (level 1 narrow, 4 cards per level). `young_teens` = today''s `LEVEL_RANGES` exactly; the other groups a first mapping of the same shape onto their window (tuned in part 3). One source for the ranges; the engine reads them instead of a constant.
+- **Settings:** `GameState.settings` gets `age_group` and `bundles` (list of active ids, `base` always in). Defaults when missing (`withDefaults`): `young_teens` and every bundle on, so old saves and plan 18''s fixtures replay unchanged (milestone constraint "defaults unchanged").
+- **Selection:** `available` / `draw` / `assign` / `supply` take the group''s ranges and the active bundles; everything that uses levels follows the game''s group (draw, the replacement for «Cambiazo» and the other jokers, supply check at new game). Burns stay per player across groups and bundles (D-28).
+- **Cambiazo:** the picker offers only the categories of active bundles (`jokersView`; plan 22 says "all of them until BN-6").
+- **API:** `newGame` accepts `age_group` and `bundles`, validates them against the data files; `getGame` / `supply` report for a given group and bundle set, so the start screen can warn before a session can''t be filled.
+- **Checks:** fixture replay still identical with defaults; new tests per group (every level 4 cards in its range) and with `colombia` off (no `colombia` question ever drawn, Cambiazo without its categories).
+- Decision entry: settings per game, defaults, `base` always on.
+- Suggested priority: 590, after plan 20 (600) and before M2''s screens part (500).
+
+## Part 2: Choice before a session (start screen; user interface)
+- After choosing the player and before the first level: age group (four tiles: name and ages from `age-groups.json`) and bundles (one toggle per bundle with `name` and `description` from `bundles.json`; `base` shown on and locked).
+- Preset: the player''s last game''s choice, else the defaults; the family can press Enter straight through as today ("nothing changes unless they opt in").
+- Supply per choice from part 1: a group or bundle set that can''t fill 12 levels is shown as such and can''t start (same message style as today''s supply failure).
+- IN-1: every choice clickable and on the keyboard (e.g. digits/arrows for groups, letters for bundles; the plan settles keys), with `<kbd>` hints like the rest of the start screen.
+- The HUD or admin overlay shows the running game''s group and bundles (plan decides where); undo and abandon keep them.
+- Spanish texts through the catalog if milestone 3 (plan 21, `t()`) has landed, else literals marked for it.
+- Suggested priority: 400, after M2''s screens part (500).
+
+## Part 3: Tune the windows and per-group level weights (AG-7)
+- Measure per group and bundle set (`base` alone, `base`+`colombia`): candidates per level, missing slots, games until the pool runs dry for one player; a throw-away script on the engine (`node`) over `app/data/pool.json`.
+- Compare with plan 21''s long-term distribution proposal (demand per level from overlapping windows) and the difficulty scale''s anchors (1 = 6-year-old … 15 = specialists).
+- Adjust windows and level ranges in `age-groups.json`; derive each group''s level weights from its ranges as D-31 did for young teens and store them there (`level_weights`), for AG-8 and the D-53 targets later; consumers outside the game are out of scope.
+- The gamemaster approves the final windows (decision with the measured table); then plan 21 drops "draft", `about` in `age-groups.json` updated, a decision entry.
+- Thin top of the scale (14–15: 27 approved) is reported, not fixed here: questions are milestone 1''s work.
+- Suggested priority: 580, after part 1 (needs its per-group ranges), before part 2''s UI so the screen shows tuned windows.
+
+## Part 4: Play-test and close-out
+- The milestone''s "done when": one session per age group, and one with `colombia` off, in the browser on the real pool. Human work: a decision asks the gamemaster to confirm; the agent side records it.
+- Docs: `plans/21-age-groups.md` (AG-7 `[x]`, "The game plays young teens until AG-7" removed), `plans/22-bundles.md` (BN-6 `[x]`, "Later" section), `plans/project.md`, `directory.md`, the `about` texts of both data files.
+- Authoring readers that assume levels 1–10 or one range table (`/stats/difficulty`, `qgen report` supply) checked; changes only if they break, otherwise logged in `plans/backlog.md`.
+- Suggested priority: 390, last (after part 2).
+
+## Not in this milestone
+- New bundles, regional packs (`plans/15c-regional-questions.md`).
+- Batches per age group (AG-8), targets from the windows (plan 21''s distribution proposal, D-53).
+- Mixed-age sessions (one game, several groups at once); log in `plans/open-questions.md` if it comes up.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
@@ -1194,9 +1239,9 @@ plan for one part.', '2026-10-11T21:54:55Z', '2026-10-12T00:06:58Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (4, 4, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 4 body (tasks.sql)', 'Write plan 4, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:55Z', '2026-10-12T00:17:17Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (5, 5, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 5, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (5, 5, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 5 body (tasks.sql)', 'Write plan 5, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:21:52Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (6, 6, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 6, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
@@ -1960,6 +2005,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Mark MP-8 in `plans/23-media-providers.md`, PUB-2 in `plans/17-publishing.md` and `plans/project.md` done; `qgen export` stays unchanged.
 
 Done when: `qgen validate` passes on the pool with the licence checks as errors; the tally is in the done note.', '2026-10-12T00:20:06Z', NULL, 110);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (114, 5, 'create tasks for plan 5', 'split', 'open', 1000, NULL, 'Split plan 5 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:21:49Z', NULL, 5);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2012,6 +2059,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (36, 106, '2026-10-12T00:17:24Z', '2026-10-12T00:17:54Z', 'done', NULL, 0, 'ab328d8bc1ca4095eb732f71ce01a1db755e3e4c', 'claude-opus-5-5[1m]', '70538cb7-2b9c-42ca-8de3-f2e7cd8f5cdd', 6, 12, 2848, 180214, 27498, 0.3130348, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (37, 107, '2026-10-12T00:17:54Z', '2026-10-12T00:19:38Z', 'done', NULL, 0, '108450cbd1f0af835247f1eedc5df687b5d252eb', 'claude-opus-5-5[1m]', '669603f9-cc8f-4b7e-850e-ef062460877f', 14, 26, 8949, 598914, 52311, 0.71735480000000007, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (38, 110, '2026-10-12T00:19:38Z', '2026-10-12T00:20:15Z', 'done', NULL, 0, 'b993c3ffdf9ae3482c11803a85ddc846b228d1bb', 'claude-opus-5-5[1m]', '2336a44f-548a-470c-91a9-f146233b05e1', 5, 10, 3099, 140041, 25137, 0.2911242, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (39, 5, '2026-10-12T00:20:15Z', '2026-10-12T00:22:02Z', 'done', NULL, 0, '9313e076630c764cc0b719af2fec5dff644ff162', 'claude-opus-5-5[1m]', '96a0dac8-5fbc-4034-a0a7-8f9cadd00d9d', 13, 26, 8473, 609137, 54430, 0.7268314, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
