@@ -654,3 +654,18 @@ Template:
   - Back-audit of the pre-D-56 pool: `qgen audit --backlog`, slices, gamemaster asks (plan 57).
 - Consequences: `qgen report --qc`: row "release" (✓ or ✗ + failed limit), "Release bar" line in the QC section. QC.md step 3. S4 close-out reads the release row.
 - Supersedes / related: D-56, D-75; plans 16, 57
+
+## D-80: Competitive (timed): claim-based rounds with lives
+- Date: 2026-10-12
+- Context: OQ-37 follow-up, plan 61; milestone 7 "Game modes", "Competitive (timed)" (task 394) replaces the timed part of pm decision 23's answer recorded in D-77.
+- Decision:
+  - **Format:** 12 rounds; round = level (the question's difficulty follows the round); questions per round = number of players; one age group for everyone; no jokers.
+  - **Questions:** every question shown to all players; 30 s per question, a hint every 8 s; unclaimed after 30 s = next question, nothing else.
+  - **Claim:** own action; any player, any time → that player has 6 s to answer; 6 s timeout = wrong answer; once the answer is shown, the next question comes; players may claim again after scoring.
+  - **Lives:** three per player; round end: no correct answer in that round = −1 life; wrong answer (or claim timeout) = out at once; third life lost = out.
+  - **End:** round 12 is sudden death: first claim + correct answer wins at once; only one player left = wins at once.
+  - **Visuals:** rounds and lives (hearts); a heart pulses at a player's last chance in a round without a correct answer, stronger on their last heart; last 3 s of a claim: a clock ticks once per second, louder each tick, plus a pulsing red frame; the same red frame when everyone is at risk at once (all on their last life, nobody correct this round yet).
+  - **Burns** (D-28 burning, D-75 simulation): ≈ N questions per round (N players) for up to 12 rounds, fewer after drop-outs; no joker burns.
+  - Open detail (not a decision): after drop-outs, do questions per round follow the players still in?
+- Consequences: Plan 13 "Competitive timed", MD-8, MD-9 and plan 14 section 3, IN-6 (claim action, per-player claim keys on the shared keyboard) follow this entry; plan 16 burns per mode updated. D-75's target (5000 per language) unchanged.
+- Supersedes / related: D-77 (timed part), D-75 (timed burns), pm decision 23
