@@ -1082,6 +1082,29 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Native-speaker check and playtest (LUI-5), launch languages and a language menu (OQ-31), joker keys per language (LUI-4), store texts (LUI-6), translating questions/categories/bundles (`15b`), `/comodines` and `authoring/`.', '2026-10-12T00:12:45Z', 84);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (25, 3, 'Gamemaster check of the colombia proposals (D-39)', 200, 'The gamemaster checks the 84 `colombia` proposals of BN-3 and closes the bundle half of milestone 3. This is human work: the agent side only asks for the check, waits, and records the result. Part 5 of the masterplan (plan 3); design source `plans/22-bundles.md` (D-39). No other plan depends on it.
+
+## State (2026-10-11)
+- `work/bundles/proposals.json`: 504 entries `{bundle, reason, applied}`; 84 propose `colombia`, all 84 still in `colombia` in `authoring/data/questions.json`.
+- `/review?bundle=colombia` shows 109 questions (101 approved, 6 rejected, 2 `needs_work`): the 84 proposals plus questions moved by BN-12/BN-13 (q-0524, q-0071, q-0133, q-0193, …) and ones written by `qgen batch --bundle colombia`. Checking all of them is fine; the 84 are what the milestone asks for.
+- Review tool (BN-5): shows the bundle; key `n` moves a question to the next bundle (`colombia` → `base`).
+- Rule for `colombia` (D-39, `22-bundles.md`): answering needs a connection to Colombia that players outside Colombia mostly wouldn''t know. A `base` question must use a `base` subcategory (D-49), so moving one back may need a new subcategory: `qgen validate` reports it.
+- "Every question has `bundle`": already enforced by `validate_pool()` in `authoring/tools/qgen.py` (`bundle must be one of app/data/bundles.json`). Confirm with `qgen validate`; don''t rebuild.
+
+## Tasks
+1. **Ask for the check** (one task, waits): `pm decision add "Have you checked the colombia proposals at /review?bundle=colombia?"` with a body naming the 84 proposals, the rule, key `n`, and that `trivia-authoring` must run; options e.g. "checked, all moves done in the review tool" / "checked, list the ones to move in the answer". `pm task-pending-decision` the same task on it; it does nothing else before the answer.
+2. **Record the result** (same task, after the answer):
+   - Count the 84: still `colombia` vs. moved to `base` (compare `proposals.json` with `questions.json`); if the answer lists ids instead, move them with the review server''s bundle API or tell the gamemaster, never by editing the pool by hand (AGENTS.md).
+   - `qgen validate`; if a moved question''s subcategory isn''t in `base` (D-49), log it in `plans/backlog.md` or `plans/open-questions.md` and leave the fix to the gamemaster.
+   - `qgen export` so `app/data/pool.json` is current.
+   - Note in `plans/22-bundles.md` (BN-3 line: date, kept/moved counts) and `plans/project.md` (M3 line "Gamemaster checks the 84 `colombia` proposals" → `[x]`; bundle counts under State).
+
+## Done when
+- The decision is answered and the result is noted in `22-bundles.md` and `project.md`.
+- `qgen validate` passes and `app/data/pool.json` is fresh.
+
+## Out of scope
+- BN-6 (choosing bundles in the game), new `colombia` questions, re-running `qgen bundles`.', '2026-10-12T00:13:19Z', 85);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -1633,13 +1656,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Mark LUI-3 in `plans/15a-ui-translation.md` when done.
 
 Done when: the plan exists, ordered after part 1, and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', '2026-10-12T00:12:47Z', 80);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (85, 3, 'write plan: gamemaster check of the colombia proposals (D-39)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Gamemaster check of the colombia proposals (D-39)" --priority 200` (content; no code depends on it), with the full body.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (85, 3, 'write plan: gamemaster check of the colombia proposals (D-39)', 'plan', 'done', 1000, '2026-10-11, plan 25 (tasks.sql)', 'Write the plan for part 5 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Gamemaster check of the colombia proposals (D-39)" --priority 200` (content; no code depends on it), with the full body.
 
 - Human work: the gamemaster reviews the 84 BN-3 proposals (`work/bundles/proposals.json`) at `/review?bundle=colombia` (key `n` moves a question to the next bundle).
 - Agent side: one task raises a pm decision that asks for the check and waits on it; after the answer, note the result in `plans/22-bundles.md` (BN-3) and `plans/project.md`, run `qgen validate` and `qgen export`.
 - "Every question has `bundle`" is already enforced by `validate_pool()` in `authoring/tools/qgen.py`: confirm, don''t rebuild.
 
-Done when: the plan exists with its priority and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
+Done when: the plan exists with its priority and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', '2026-10-12T00:13:21Z', 80);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (86, 21, 'create tasks for plan 21', 'split', 'open', 1000, NULL, 'Split plan 21 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:08:37Z', NULL, 81);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (87, 22, 'create tasks for plan 22', 'split', 'open', 1000, NULL, 'Split plan 22 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -1648,6 +1671,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:11:32Z', NULL, 83);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (89, 24, 'create tasks for plan 24', 'split', 'open', 1000, NULL, 'Split plan 24 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:12:45Z', NULL, 84);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (90, 25, 'create tasks for plan 25', 'split', 'open', 1000, NULL, 'Split plan 25 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:13:19Z', NULL, 85);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1687,6 +1712,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (26, 82, '2026-10-12T00:08:48Z', '2026-10-12T00:10:34Z', 'done', NULL, 0, '0afe9e36a55dba56a8b37abac7560c1741f690f4', 'claude-opus-5-5[1m]', '16b2f7c6-80c1-4091-a429-3a349ad84ed3', 13, 24, 10223, 517440, 50171, 0.709412, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (27, 83, '2026-10-12T00:10:34Z', '2026-10-12T00:12:00Z', 'done', NULL, 0, '62310d83ab7781dbff32a1d512609266e4bb6ab7', 'claude-opus-5-5[1m]', 'a5b33a77-0531-4f70-82c4-1cbe29ef63c4', 13, 26, 6035, 437204, 30161, 0.4495327999999999, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (28, 84, '2026-10-12T00:12:00Z', '2026-10-12T00:12:54Z', 'done', NULL, 0, '9c3900a593498d93bb40d5a20294b62923a3602b', 'claude-opus-5-5[1m]', 'e30aea65-7e96-4968-a3e2-64d42d6ff437', 10, 18, 5205, 312693, 37502, 0.4667266, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (29, 85, '2026-10-12T00:12:54Z', '2026-10-12T00:13:27Z', 'done', NULL, 0, '6856afb17ae063cec511c4c58a5781abf9c7d68f', 'claude-opus-5-5[1m]', '93cd3ef1-c029-4b57-9c4f-00bd4d822acc', 7, 14, 3359, 211757, 25913, 0.3168914, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
