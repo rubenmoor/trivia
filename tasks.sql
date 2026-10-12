@@ -563,52 +563,57 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Not in this milestone
 - Credits screen, `CREDITS.md`, store disclosures (PUB-5, Steam S3/S5); code licence (PUB-4).
 - Audio UI sounds and fonts (`app/client/public/audio/CREDITS.md`, OFL): not pool media.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'Milestone 5 lets players choose an age group and the bundles to play before a session. Today the referee plays one audience: 12 levels with fixed `LEVEL_RANGES` over difficulty 1–10 (D-22), from every approved question of every bundle (1136 approved: `base` 1035 over 1–15, `colombia` 101 over 2–13). The groups and their draft windows already ship in `app/data/age-groups.json` (D-38), the bundles in `app/data/bundles.json` (D-39); nothing in the game reads them yet. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'Milestone 5 lets players choose an age group and the bundles to play before a session. Parts 1 and 3 are done: the TS engine reads per-group level ranges from `app/data/age-groups.json` (tuned, decision 22: Approve the age-group windows) and filters by the active bundles, with `age_group` and `bundles` as settings per game (D-68). The milestone has since grown: bundles list their languages, and `always_on` becomes base bundles (`kind: base`), exactly one per session. Part 5 adds that to data, engine and `qgen validate`; parts 2 and 4 (start screen, close-out) take it in. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
 
 **The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 5 …`), with its own tasks queued by pm.
 
-## Depends on milestone 2 (TypeScript engine)
-- Every part builds on the TS referee, not on `app/server/game.py` / `selection.py`: plan 19 (`engine/selection.ts`, `pool.ts`: `LEVEL_RANGES`, `assign`, `draw`, `supply`, `loadCategories`), plan 20 (`engine/game.ts`, `state.ts`: `GameState.settings`, `newGame`, `jokersView`, `engine/api.ts`), and M2 parts 4–5 (save document, screens on the engine; plans not written yet).
-- No part changes the Python referee. If M2 slips, the part plans wait; they don''t port to Python.
-- Plan 19 explicitly leaves bundle filtering out ("same rules"); part 1 adds it.
+## Builds on
+- TS engine (milestone 2): `engine/selection.ts`, `pool.ts`, `game.ts`, `state.ts`, `api.ts`. No part changes the Python referee.
+- Language setting (plan 68, I18N-2): `SaveData.language.questions`, `GameRow.locale` (a game keeps its locale), `loadEngineData(base, locale)`, `availableLocales()` in `lib/data.ts`. "The game''s language" in this milestone = the game''s question locale (`GameRow.locale`, missing = `es`); for a new game, `language.questions`.
+- Seen counters (plan 65) replace burns (D-28); seen stays per player across groups, bundles and locales.
 
-## Part 1: Group windows and bundle filter in the engine (AG-7, BN-6; core mechanics)
-- **Data:** per group in `age-groups.json` the 12 level ranges (`levels`), so every group keeps the shape of D-22 (level 1 narrow, 4 cards per level). `young_teens` = today''s `LEVEL_RANGES` exactly; the other groups a first mapping of the same shape onto their window (tuned in part 3). One source for the ranges; the engine reads them instead of a constant.
-- **Settings:** `GameState.settings` gets `age_group` and `bundles` (list of active ids, `base` always in). Defaults when missing (`withDefaults`): `young_teens` and every bundle on, so old saves and plan 18''s fixtures replay unchanged (milestone constraint "defaults unchanged").
-- **Selection:** `available` / `draw` / `assign` / `supply` take the group''s ranges and the active bundles; everything that uses levels follows the game''s group (draw, the replacement for «Cambiazo» and the other jokers, supply check at new game). Burns stay per player across groups and bundles (D-28).
-- **Cambiazo:** the picker offers only the categories of active bundles (`jokersView`; plan 22 says "all of them until BN-6").
-- **API:** `newGame` accepts `age_group` and `bundles`, validates them against the data files; `getGame` / `supply` report for a given group and bundle set, so the start screen can warn before a session can''t be filled.
-- **Checks:** fixture replay still identical with defaults; new tests per group (every level 4 cards in its range) and with `colombia` off (no `colombia` question ever drawn, Cambiazo without its categories).
-- Decision entry: settings per game, defaults, `base` always on.
-- Suggested priority: 590, after plan 20 (600) and before M2''s screens part (500).
+## Part 1: Group windows and bundle filter in the engine (done, plan 27)
+- `levels` per group in `age-groups.json`; `settings.age_group` / `settings.bundles`, defaults resolved on read (`gameChoice`, `resolveChoice`); `available` filters by bundle; jokers and supply follow the game''s choice; D-68.
+- Today `resolveChoice` forces every `always_on` bundle in; part 5 replaces that rule.
 
-## Part 2: Choice before a session (start screen; user interface)
-- After choosing the player and before the first level: age group (four tiles: name and ages from `age-groups.json`) and bundles (one toggle per bundle with `name` and `description` from `bundles.json`; `base` shown on and locked).
-- Preset: the player''s last game''s choice, else the defaults; the family can press Enter straight through as today ("nothing changes unless they opt in").
-- Supply per choice from part 1: a group or bundle set that can''t fill 12 levels is shown as such and can''t start (same message style as today''s supply failure).
-- IN-1: every choice clickable and on the keyboard (e.g. digits/arrows for groups, letters for bundles; the plan settles keys), with `<kbd>` hints like the rest of the start screen.
-- The HUD or admin overlay shows the running game''s group and bundles (plan decides where); undo and abandon keep them.
-- Spanish texts through the catalog if milestone 3 (plan 21, `t()`) has landed, else literals marked for it.
-- Suggested priority: 400, after M2''s screens part (500).
+## Part 2: Choice before a session (start screen; plan 29, open)
+- Age group tiles and bundle toggles, preset from the player''s last game, supply per choice, IN-1 keys, HUD/overlay shows the choice.
+- Changes from part 5 (the plan revision takes them in):
+  - Only bundles whose `languages` contain the game''s language are listed.
+  - Base bundles: a one-of-N choice among the language''s base bundles (not a locked toggle); with one base bundle (every launch language today) it''s shown selected; the start button stays disabled with zero or two selected, with the reason.
+  - Other bundles: toggles, any number on or off.
+  - Default preset: the language''s first base bundle plus every other bundle of the language; the family presses Enter straight through as today.
+- No `always_on` / «Siempre activo» wording left.
+- Suggested priority: stays 400; its tasks wait for part 5''s engine API where they need it.
 
-## Part 3: Tune the windows and per-group level weights (AG-7)
-- Measure per group and bundle set (`base` alone, `base`+`colombia`): candidates per level, missing slots, games until the pool runs dry for one player; a throw-away script on the engine (`node`) over `app/data/pool.json`.
-- Compare with plan 21''s long-term distribution proposal (demand per level from overlapping windows) and the difficulty scale''s anchors (1 = 6-year-old … 15 = specialists).
-- Adjust windows and level ranges in `age-groups.json`; derive each group''s level weights from its ranges as D-31 did for young teens and store them there (`level_weights`), for AG-8 and the D-53 targets later; consumers outside the game are out of scope.
-- The gamemaster approves the final windows (decision with the measured table); then plan 21 drops "draft", `about` in `age-groups.json` updated, a decision entry.
-- Thin top of the scale (14–15: 27 approved) is reported, not fixed here: questions are milestone 1''s work.
-- Suggested priority: 580, after part 1 (needs its per-group ranges), before part 2''s UI so the screen shows tuned windows.
+## Part 3: Tune the windows and per-group level weights (done, plan 28)
+- Windows approved (decision 22), `level_weights` per group stored; nothing left here.
 
-## Part 4: Play-test and close-out
-- The milestone''s "done when": one session per age group, and one with `colombia` off, in the browser on the real pool. Human work: a decision asks the gamemaster to confirm; the agent side records it.
-- Docs: `plans/21-age-groups.md` (AG-7 `[x]`, "The game plays young teens until AG-7" removed), `plans/22-bundles.md` (BN-6 `[x]`, "Later" section), `plans/project.md`, `directory.md`, the `about` texts of both data files.
-- Authoring readers that assume levels 1–10 or one range table (`/stats/difficulty`, `qgen report` supply) checked; changes only if they break, otherwise logged in `plans/backlog.md`.
-- Suggested priority: 390, last (after part 2).
+## Part 4: Play-test and close-out (plan 30, open)
+- Adds to the "done when" checks: a start attempt with zero and with two base bundles is refused (engine test plus, where the UI allows it, the screen); in `en` and `de` (throw-away translated pools if none ship yet) the screen lists only the bundles of that language.
+- Docs: `plans/22-bundles.md` (`languages`, base bundles, `always_on` gone), the `about` text of `bundles.json`, `directory.md`, `plans/project.md`; D-68 superseded in part by part 5''s decision entry.
+- Suggested priority: stays 390, last.
+
+## Part 5: Bundle languages and base bundles (data, engine, validate)
+- **Data** (`app/data/bundles.json`): every bundle gets `languages` (locale codes); `base`: `["es", "en", "de"]` (decision 26: Launch languages); `colombia`: the locales it is translated into (today `es`, plus `en`/`de` only if its pool and names exist for them; the plan checks `app/data/bundles/colombia/` and the export). `always_on` removed; `kind: base` marks base bundles. File order sets "the language''s first base bundle".
+- **Engine** (`pool.ts`, `game.ts`, `lib/types.ts`, `lib/data.ts`):
+  - `Bundle` gets `languages`, loses `always_on`; `parseBundles` checks both.
+  - `bundlesFor(data, locale)`: the bundles offered in a locale, file order.
+  - `resolveChoice` per the game''s locale: a bundle not offered in it → `GameError`; exactly one `kind: base` bundle, else `GameError` (Spanish message, e.g. «elige exactamente un paquete básico»); duplicates dropped, order normalized.
+  - Defaults (missing `bundles`): the locale''s first base bundle plus every non-base bundle of the locale; for `es` that is `base` + `colombia`, so old saves and plan 18''s fixtures replay unchanged (milestone constraint "defaults unchanged").
+  - Questions without `bundle` stay `base`; «Cambiazo» and supply keep following the active bundles.
+  - Stored settings that are now invalid (e.g. a save from another locale): resolve to the defaults on read rather than breaking a running game; the plan decides and records it.
+  - Supply/outlook (decision 31: super-tight warning) per locale and bundle set, as the start screen needs it.
+- **`qgen validate`**: every bundle has a non-empty `languages` of known locales; each launch language (es, en, de; later milestone 12''s) has at least one base bundle; a bundle listed for a locale whose pool/names for it don''t exist is flagged (warning or error: plan decides).
+- **Authoring readers** of `always_on` (`authoring/tools/qgen.py`, `authoring/server/overview.py`, `authoring/ui/src/lib/types.ts`) switch to `kind`; no behaviour change.
+- **Checks**: fixture replay identical; tests for zero/two base bundles rejected, a bundle outside the locale rejected, defaults per locale (temp `en` data); `npm run check`, `qgen validate`.
+- **Decision entry** (next D number): base bundles replace `always_on`, exactly one per session, default the locale''s first; bundles offered per `languages`; supersedes D-68 in part.
+- Suggested priority: 600 (core mechanics), before plan 29''s remaining UI tasks (400).
 
 ## Not in this milestone
-- New bundles, regional packs (`plans/15c-regional-questions.md`).
-- Batches per age group (AG-8), targets from the windows (plan 21''s distribution proposal, D-53).
-- Mixed-age sessions (one game, several groups at once); log in `plans/open-questions.md` if it comes up.', '2026-10-11T21:54:56Z', NULL);
+- New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
+- Batches per age group (AG-8), targets from the windows (D-53).
+- Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the two leftovers of M3/M4: preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10). Owner plan file: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", tasks UI-7, UI-10).
 
 **This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
@@ -8514,8 +8519,125 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Same rule as D-54; no new argument (D-36).
 - Throw-away check: fake locale file with one level filled → that level''s sources are picked last.
 - Done when: `qgen batch --translate en --dry-run` (or 440''s equivalent) shows the selection follow the `en` deficits.', '2026-10-12T19:51:17Z', NULL, 462);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (465, 5, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 5, the masterplan, in line with it (`pm plan edit 5 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:08:57Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (465, 5, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-12, tasks.sql (plan 5 revised: part 5 bundle languages and base bundles; task 469 writes its plan)', 'The milestone changed. Bring plan 5, the masterplan, in line with it (`pm plan edit 5 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:08:57Z', '2026-10-12T20:20:32Z', NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (466, 5, 'create tasks for plan 5', 'split', 'open', 1000, NULL, 'Split plan 5 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:20:30Z', NULL, 465);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (467, 29, 'revise plan 29', 'plan', 'open', 1000, NULL, 'Plan 5, the plan above plan 29, changed; it is quoted below. Bring plan 29 in line with it
+(`pm plan edit 29 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 5: masterplan
+
+Milestone 5 lets players choose an age group and the bundles to play before a session. Parts 1 and 3 are done: the TS engine reads per-group level ranges from `app/data/age-groups.json` (tuned, decision 22: Approve the age-group windows) and filters by the active bundles, with `age_group` and `bundles` as settings per game (D-68). The milestone has since grown: bundles list their languages, and `always_on` becomes base bundles (`kind: base`), exactly one per session. Part 5 adds that to data, engine and `qgen validate`; parts 2 and 4 (start screen, close-out) take it in. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
+
+**The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 5 …`), with its own tasks queued by pm.
+
+## Builds on
+- TS engine (milestone 2): `engine/selection.ts`, `pool.ts`, `game.ts`, `state.ts`, `api.ts`. No part changes the Python referee.
+- Language setting (plan 68, I18N-2): `SaveData.language.questions`, `GameRow.locale` (a game keeps its locale), `loadEngineData(base, locale)`, `availableLocales()` in `lib/data.ts`. "The game''s language" in this milestone = the game''s question locale (`GameRow.locale`, missing = `es`); for a new game, `language.questions`.
+- Seen counters (plan 65) replace burns (D-28); seen stays per player across groups, bundles and locales.
+
+## Part 1: Group windows and bundle filter in the engine (done, plan 27)
+- `levels` per group in `age-groups.json`; `settings.age_group` / `settings.bundles`, defaults resolved on read (`gameChoice`, `resolveChoice`); `available` filters by bundle; jokers and supply follow the game''s choice; D-68.
+- Today `resolveChoice` forces every `always_on` bundle in; part 5 replaces that rule.
+
+## Part 2: Choice before a session (start screen; plan 29, open)
+- Age group tiles and bundle toggles, preset from the player''s last game, supply per choice, IN-1 keys, HUD/overlay shows the choice.
+- Changes from part 5 (the plan revision takes them in):
+  - Only bundles whose `languages` contain the game''s language are listed.
+  - Base bundles: a one-of-N choice among the language''s base bundles (not a locked toggle); with one base bundle (every launch language today) it''s shown selected; the start button stays disabled with zero or two selected, with the reason.
+  - Other bundles: toggles, any number on or off.
+  - Default preset: the language''s first base bundle plus every other bundle of the language; the family presses Enter straight through as today.
+- No `always_on` / «Siempre activo» wording left.
+- Suggested priority: stays 400; its tasks wait for part 5''s engine API where they need it.
+
+## Part 3: Tune the windows and per-group level weights (done, plan 28)
+- Windows approved (decision 22), `level_weights` per group stored; nothing left here.
+
+## Part 4: Play-test and close-out (plan 30, open)
+- Adds to the "done when" checks: a start attempt with zero and with two base bundles is refused (engine test plus, where the UI allows it, the screen); in `en` and `de` (throw-away translated pools if none ship yet) the screen lists only the bundles of that language.
+- Docs: `plans/22-bundles.md` (`languages`, base bundles, `always_on` gone), the `about` text of `bundles.json`, `directory.md`, `plans/project.md`; D-68 superseded in part by part 5''s decision entry.
+- Suggested priority: stays 390, last.
+
+## Part 5: Bundle languages and base bundles (data, engine, validate)
+- **Data** (`app/data/bundles.json`): every bundle gets `languages` (locale codes); `base`: `["es", "en", "de"]` (decision 26: Launch languages); `colombia`: the locales it is translated into (today `es`, plus `en`/`de` only if its pool and names exist for them; the plan checks `app/data/bundles/colombia/` and the export). `always_on` removed; `kind: base` marks base bundles. File order sets "the language''s first base bundle".
+- **Engine** (`pool.ts`, `game.ts`, `lib/types.ts`, `lib/data.ts`):
+  - `Bundle` gets `languages`, loses `always_on`; `parseBundles` checks both.
+  - `bundlesFor(data, locale)`: the bundles offered in a locale, file order.
+  - `resolveChoice` per the game''s locale: a bundle not offered in it → `GameError`; exactly one `kind: base` bundle, else `GameError` (Spanish message, e.g. «elige exactamente un paquete básico»); duplicates dropped, order normalized.
+  - Defaults (missing `bundles`): the locale''s first base bundle plus every non-base bundle of the locale; for `es` that is `base` + `colombia`, so old saves and plan 18''s fixtures replay unchanged (milestone constraint "defaults unchanged").
+  - Questions without `bundle` stay `base`; «Cambiazo» and supply keep following the active bundles.
+  - Stored settings that are now invalid (e.g. a save from another locale): resolve to the defaults on read rather than breaking a running game; the plan decides and records it.
+  - Supply/outlook (decision 31: super-tight warning) per locale and bundle set, as the start screen needs it.
+- **`qgen validate`**: every bundle has a non-empty `languages` of known locales; each launch language (es, en, de; later milestone 12''s) has at least one base bundle; a bundle listed for a locale whose pool/names for it don''t exist is flagged (warning or error: plan decides).
+- **Authoring readers** of `always_on` (`authoring/tools/qgen.py`, `authoring/server/overview.py`, `authoring/ui/src/lib/types.ts`) switch to `kind`; no behaviour change.
+- **Checks**: fixture replay identical; tests for zero/two base bundles rejected, a bundle outside the locale rejected, defaults per locale (temp `en` data); `npm run check`, `qgen validate`.
+- **Decision entry** (next D number): base bundles replace `always_on`, exactly one per session, default the locale''s first; bundles offered per `languages`; supersedes D-68 in part.
+- Suggested priority: 600 (core mechanics), before plan 29''s remaining UI tasks (400).
+
+## Not in this milestone
+- New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
+- Batches per age group (AG-8), targets from the windows (D-53).
+- Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', NULL, 465);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (468, 30, 'revise plan 30', 'plan', 'open', 1000, NULL, 'Plan 5, the plan above plan 30, changed; it is quoted below. Bring plan 30 in line with it
+(`pm plan edit 30 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 5: masterplan
+
+Milestone 5 lets players choose an age group and the bundles to play before a session. Parts 1 and 3 are done: the TS engine reads per-group level ranges from `app/data/age-groups.json` (tuned, decision 22: Approve the age-group windows) and filters by the active bundles, with `age_group` and `bundles` as settings per game (D-68). The milestone has since grown: bundles list their languages, and `always_on` becomes base bundles (`kind: base`), exactly one per session. Part 5 adds that to data, engine and `qgen validate`; parts 2 and 4 (start screen, close-out) take it in. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
+
+**The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 5 …`), with its own tasks queued by pm.
+
+## Builds on
+- TS engine (milestone 2): `engine/selection.ts`, `pool.ts`, `game.ts`, `state.ts`, `api.ts`. No part changes the Python referee.
+- Language setting (plan 68, I18N-2): `SaveData.language.questions`, `GameRow.locale` (a game keeps its locale), `loadEngineData(base, locale)`, `availableLocales()` in `lib/data.ts`. "The game''s language" in this milestone = the game''s question locale (`GameRow.locale`, missing = `es`); for a new game, `language.questions`.
+- Seen counters (plan 65) replace burns (D-28); seen stays per player across groups, bundles and locales.
+
+## Part 1: Group windows and bundle filter in the engine (done, plan 27)
+- `levels` per group in `age-groups.json`; `settings.age_group` / `settings.bundles`, defaults resolved on read (`gameChoice`, `resolveChoice`); `available` filters by bundle; jokers and supply follow the game''s choice; D-68.
+- Today `resolveChoice` forces every `always_on` bundle in; part 5 replaces that rule.
+
+## Part 2: Choice before a session (start screen; plan 29, open)
+- Age group tiles and bundle toggles, preset from the player''s last game, supply per choice, IN-1 keys, HUD/overlay shows the choice.
+- Changes from part 5 (the plan revision takes them in):
+  - Only bundles whose `languages` contain the game''s language are listed.
+  - Base bundles: a one-of-N choice among the language''s base bundles (not a locked toggle); with one base bundle (every launch language today) it''s shown selected; the start button stays disabled with zero or two selected, with the reason.
+  - Other bundles: toggles, any number on or off.
+  - Default preset: the language''s first base bundle plus every other bundle of the language; the family presses Enter straight through as today.
+- No `always_on` / «Siempre activo» wording left.
+- Suggested priority: stays 400; its tasks wait for part 5''s engine API where they need it.
+
+## Part 3: Tune the windows and per-group level weights (done, plan 28)
+- Windows approved (decision 22), `level_weights` per group stored; nothing left here.
+
+## Part 4: Play-test and close-out (plan 30, open)
+- Adds to the "done when" checks: a start attempt with zero and with two base bundles is refused (engine test plus, where the UI allows it, the screen); in `en` and `de` (throw-away translated pools if none ship yet) the screen lists only the bundles of that language.
+- Docs: `plans/22-bundles.md` (`languages`, base bundles, `always_on` gone), the `about` text of `bundles.json`, `directory.md`, `plans/project.md`; D-68 superseded in part by part 5''s decision entry.
+- Suggested priority: stays 390, last.
+
+## Part 5: Bundle languages and base bundles (data, engine, validate)
+- **Data** (`app/data/bundles.json`): every bundle gets `languages` (locale codes); `base`: `["es", "en", "de"]` (decision 26: Launch languages); `colombia`: the locales it is translated into (today `es`, plus `en`/`de` only if its pool and names exist for them; the plan checks `app/data/bundles/colombia/` and the export). `always_on` removed; `kind: base` marks base bundles. File order sets "the language''s first base bundle".
+- **Engine** (`pool.ts`, `game.ts`, `lib/types.ts`, `lib/data.ts`):
+  - `Bundle` gets `languages`, loses `always_on`; `parseBundles` checks both.
+  - `bundlesFor(data, locale)`: the bundles offered in a locale, file order.
+  - `resolveChoice` per the game''s locale: a bundle not offered in it → `GameError`; exactly one `kind: base` bundle, else `GameError` (Spanish message, e.g. «elige exactamente un paquete básico»); duplicates dropped, order normalized.
+  - Defaults (missing `bundles`): the locale''s first base bundle plus every non-base bundle of the locale; for `es` that is `base` + `colombia`, so old saves and plan 18''s fixtures replay unchanged (milestone constraint "defaults unchanged").
+  - Questions without `bundle` stay `base`; «Cambiazo» and supply keep following the active bundles.
+  - Stored settings that are now invalid (e.g. a save from another locale): resolve to the defaults on read rather than breaking a running game; the plan decides and records it.
+  - Supply/outlook (decision 31: super-tight warning) per locale and bundle set, as the start screen needs it.
+- **`qgen validate`**: every bundle has a non-empty `languages` of known locales; each launch language (es, en, de; later milestone 12''s) has at least one base bundle; a bundle listed for a locale whose pool/names for it don''t exist is flagged (warning or error: plan decides).
+- **Authoring readers** of `always_on` (`authoring/tools/qgen.py`, `authoring/server/overview.py`, `authoring/ui/src/lib/types.ts`) switch to `kind`; no behaviour change.
+- **Checks**: fixture replay identical; tests for zero/two base bundles rejected, a bundle outside the locale rejected, defaults per locale (temp `en` data); `npm run check`, `qgen validate`.
+- **Decision entry** (next D number): base bundles replace `always_on`, exactly one per session, default the locale''s first; bundles offered per `languages`; supersedes D-68 in part.
+- Suggested priority: 600 (core mechanics), before plan 29''s remaining UI tasks (400).
+
+## Not in this milestone
+- New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
+- Batches per age group (AG-8), targets from the windows (D-53).
+- Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', NULL, 465);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (469, 5, 'write plan: Bundle languages and base bundles (data, engine, validate)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of masterplan 5 (`pm plan add 5 "Bundle languages and base bundles" --priority 600`): `languages` per bundle in `app/data/bundles.json`, `kind: base` replacing `always_on` (exactly one base bundle per session, default the locale''s first), the engine''s `resolveChoice`/defaults per game locale, `qgen validate` checks, authoring readers of `always_on`. See the masterplan''s "Part 5" for scope and checks; plans 27 (done) and 68 (language setting) for the code it builds on. Must leave the family''s defaults and plan 18''s fixture replay unchanged.', '2026-10-12T20:20:30Z', NULL, 465);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9405,6 +9527,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (317, 462, '2026-10-12T19:48:40Z', '2026-10-12T19:51:33Z', 'done', NULL, 0, 'd2ad940dfb8351167b0407a9cad73cdc8c892529', 'claude-opus-5-5[1m]', '2f754078-d237-41e5-b88a-0e4fea48d9bf', 27, 54, 18002, 1614673, 71385, 1.2542706000000004, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (318, 464, '2026-10-12T19:51:33Z', '2026-10-12T19:51:58Z', 'blocked', NULL, 0, 'ac4960fc67f3881413e3ce4930b1c11ce37d3d1b', 'claude-opus-5-5[1m]', '6e7c3e8c-9166-456f-881a-8dd32b3a92b4', 7, 14, 1721, 231661, 30639, 0.3259202, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (319, 450, '2026-10-12T19:51:58Z', '2026-10-12T19:58:12Z', 'done', NULL, 0, 'fef6f4741014c9bc942a5ceeea739eaba889c07b', 'claude-opus-5-5[1m]', '671d55f0-4d8f-49ae-a599-7477ab8ff3eb', 45, 86, 28009, 3521446, 102145, 2.0819732, 626610);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (320, 465, '2026-10-12T20:19:40Z', '2026-10-12T20:20:39Z', 'done', NULL, 0, 'fc9f3018f5922e2c6c058cf99a1aea7136d67887', 'claude-opus-5-5[1m]', 'c96833d8-93dd-44f2-8419-fc36874a10b8', 8, 16, 5060, 278926, 35111, 0.4379372, 655319);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
