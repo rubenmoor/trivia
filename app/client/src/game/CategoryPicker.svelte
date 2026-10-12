@@ -4,6 +4,7 @@
   // (the server decides, 09 "Availability"). Click, or arrows + Enter; Backspace goes back.
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types";
+  import { t } from "../lib/i18n";
 
   type Group = Jokers["category"]["categories"][number];
 
@@ -68,7 +69,7 @@
 
 <div class="backdrop">
   <div class="picker glass-strong">
-    <h2>{group ? group.name : "Cambiazo: ¿qué tema quieren?"}</h2>
+    <h2>{group ? group.name : t("joker.category.title")}</h2>
     {#key group}
       <div class="grid" class:subs={group} bind:this={grid}>
         {#if group}
@@ -85,8 +86,8 @@
       </div>
     {/key}
     <div class="actions label">
-      {#if group}<button class="secondary" onclick={back}>Atrás <kbd>⌫</kbd></button>{/if}
-      <button class="secondary" onclick={oncancel}>Cancelar <kbd>Esc</kbd></button>
+      {#if group}<button class="secondary" onclick={back}>{t("action.back")} <kbd>⌫</kbd></button>{/if}
+      <button class="secondary" onclick={oncancel}>{t("action.cancel")} <kbd>Esc</kbd></button>
     </div>
   </div>
 </div>

@@ -2,6 +2,7 @@
   // «Paso» with purge (plans/09-jokers.md, "Paso", JK-6): the subcategory name appears big, a red
   // «ELIMINADO» stamp slams onto it, then it drops through a paper shredder in strips.
   import { onMount } from "svelte";
+  import { t } from "../lib/i18n";
   import { sfx } from "./sound.svelte";
   import { SHRED_MS, STAMP_MS } from "./timing";
 
@@ -37,7 +38,7 @@
         style:--delay="{(i % 3) * 0.05}s"
       >
         <span class="name">{name}</span>
-        {#if stamped}<span class="stamp">ELIMINADO</span>{/if}
+        {#if stamped}<span class="stamp">{t("joker.skip.stamp")}</span>{/if}
       </div>
     {/each}
   </div>

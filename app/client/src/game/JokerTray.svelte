@@ -5,14 +5,22 @@
   // budget (13-game-modes.md, MD-3) a limited token carries a badge with the uses left.
   import type { IconName } from "./Icon.svelte";
   import type { JokerName } from "../lib/types";
+  import { t } from "../lib/i18n";
 
-  export const TOKENS: { name: JokerName; label: string; key: string; icon: IconName }[] = [
-    { name: "hint", label: "Soplo", key: "S", icon: "bulb" },
-    { name: "skip", label: "Paso", key: "P", icon: "door" },
-    { name: "easier", label: "Bájale", key: "F", icon: "stairs" },
-    { name: "category", label: "Cambiazo", key: "T", icon: "compass" },
-    { name: "snipe", label: "Francotirador", key: "X", icon: "crosshair" },
+  const ICONS: [JokerName, IconName][] = [
+    ["hint", "bulb"],
+    ["skip", "door"],
+    ["easier", "stairs"],
+    ["category", "compass"],
+    ["snipe", "crosshair"],
   ];
+
+  export const TOKENS: { name: JokerName; label: string; key: string; icon: IconName }[] = ICONS.map(([name, icon]) => ({
+    name,
+    label: t(`joker.${name}.name`),
+    key: t(`joker.${name}.key`),
+    icon,
+  }));
 </script>
 
 <script lang="ts">
@@ -48,37 +56,37 @@
 </script>
 
 <div class="tray" class:readonly>
-  {#each TOKENS as t (t.name)}
-    {@const state = jokers?.[t.name]}
+  {#each TOKENS as tok (tok.name)}
+    {@const state = jokers?.[tok.name]}
     {@const off = !readonly && !state?.available}
     <div class="slot">
       <button
         class="token"
         class:off
-        class:armed={armed === t.name}
-        class:away={away === t.name}
-        class:popping={popping === t.name}
-        data-joker={t.name}
+        class:armed={armed === tok.name}
+        class:away={away === tok.name}
+        class:popping={popping === tok.name}
+        data-joker={tok.name}
         disabled={readonly || off}
-        onclick={() => onpress?.(t.name)}
-        aria-label="{t.label} ({t.key})"
+        onclick={() => onpress?.(tok.name)}
+        aria-label={t("joker.aria", { name: tok.label, key: tok.key })}
       >
-        <span class="face"><Icon name={t.icon} size="100%" /></span>
-        {#if !readonly}<span class="key">{t.key}</span>{/if}
+        <span class="face"><Icon name={tok.icon} size="100%" /></span>
+        {#if !readonly}<span class="key">{tok.key}</span>{/if}
         {#if off}<span class="lock"><Icon name="lock" size="100%" /></span>{/if}
-        {#if left?.[t.name] != null}<span class="count" class:empty={left[t.name] === 0}>{left[t.name]}</span>{/if}
-        {#if t.name === "hint" && !readonly}
+        {#if left?.[tok.name] != null}<span class="count" class:empty={left[tok.name] === 0}>{left[tok.name]}</span>{/if}
+        {#if tok.name === "hint" && !readonly}
           <span class="pips">
             {#each [0, 1, 2] as p (p)}<span class="pip" class:full={p < hintsLeft}></span>{/each}
           </span>
         {/if}
       </button>
       {#if !readonly}
-        {#if armed === t.name}
-          <button class="bubble arm glass-strong" onclick={() => onpress?.(t.name)}>¿Usar {t.label}? <kbd>Enter</kbd></button>
+        {#if armed === tok.name}
+          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <kbd>Enter</kbd></button>
         {:else}
           <span class="bubble name glass-strong">
-            {t.label}{#if off && state?.reason}<span class="reason">{reasonText(state.reason)}</span>{/if}
+            {tok.label}{#if off && state?.reason}<span class="reason">{reasonText(state.reason)}</span>{/if}
           </span>
         {/if}
       {/if}

@@ -2,6 +2,7 @@
   // «Bájale»'s difficulty dial (plans/09-jokers.md, "Bájale", JK-7): a staircase in the corner
   // that ticks down from the old difficulty to the new one, then fades away.
   import { onMount } from "svelte";
+  import { t } from "../lib/i18n";
   import { DIAL_HOLD_MS, DIAL_STEP_MS } from "./timing";
 
   let { from, to }: { from: number; to: number } = $props();
@@ -19,7 +20,7 @@
 </script>
 
 <div class="dial glass-strong" class:gone aria-hidden="true">
-  <span class="label">Dificultad</span>
+  <span class="label">{t("joker.easier.dial")}</span>
   <span class="stairs">
     {#each Array.from({ length: 10 }, (_, i) => i + 1) as d (d)}
       <span class="step" class:lit={d <= shown} class:now={d === shown} style:--h={d}></span>

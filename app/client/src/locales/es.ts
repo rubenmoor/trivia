@@ -6,6 +6,21 @@ const es = {
   app: {
     title: "Trivia",
   },
+  action: {
+    back: "Atrás",
+    cancel: "Cancelar",
+  },
+  /** `key`: the keyboard shortcut (case-insensitive). */
+  joker: {
+    hint: { name: "Soplo", key: "S" },
+    skip: { name: "Paso", key: "P", stamp: "ELIMINADO" },
+    easier: { name: "Bájale", key: "F", dial: "Dificultad" },
+    category: { name: "Cambiazo", key: "T", title: "Cambiazo: ¿qué tema quieren?" },
+    snipe: { name: "Francotirador", key: "X" },
+    /** The armed token's bubble. */
+    arm: "¿Usar {name}?",
+    aria: "{name} ({key})",
+  },
   copy: {
     /** A line on the Level screen at some levels (UI-14). */
     milestone: {
