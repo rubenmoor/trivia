@@ -243,7 +243,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Constraints
 - Offline, no accounts, no telemetry (AGENTS.md).
-- The family game at home keeps working throughout.
+- The current game (`trivia`, Python server + browser) keeps working until this build replaces it (D-59).
 - Minimal dependencies: a shell and a Steamworks binding; anything else needs a decision.
 
 ## Out of scope
