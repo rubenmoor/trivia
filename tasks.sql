@@ -1663,8 +1663,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - "Every question has `bundle`" is already enforced by `validate_pool()` in `authoring/tools/qgen.py`: confirm, don''t rebuild.
 
 Done when: the plan exists with its priority and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', '2026-10-12T00:13:21Z', 80);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (86, 21, 'create tasks for plan 21', 'split', 'open', 1000, NULL, 'Split plan 21 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:08:37Z', NULL, 81);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (86, 21, 'create tasks for plan 21', 'split', 'done', 1000, '2026-10-11, tasks.sql: tasks 91–97 for plan 21, decision 6 (task 97 waits)', 'Split plan 21 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:08:37Z', '2026-10-12T00:14:32Z', 81);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (87, 22, 'create tasks for plan 22', 'split', 'open', 1000, NULL, 'Split plan 22 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:10:24Z', NULL, 82);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (88, 23, 'create tasks for plan 23', 'split', 'open', 1000, NULL, 'Split plan 23 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -1673,6 +1673,68 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:12:45Z', NULL, 84);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (90, 25, 'create tasks for plan 25', 'split', 'open', 1000, NULL, 'Split plan 25 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:13:19Z', NULL, 85);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (91, 21, 'LUI-1: i18n helper, es catalog skeleton, copy.* lines', 'work', 'open', NULL, NULL, 'Lay the groundwork of plan 21: the `t()` helper, the typed `es` catalog, and the milestone/consolation lines moved into it. Design: plan 21 «Design».
+
+- New `app/client/src/lib/i18n.ts` (no library): `t(key, params?)` with `{name}` placeholders, plural maps picked by `params.n` (`Intl.PluralRules`), numbers via `Intl.NumberFormat(lang)`, `variants(key)` for `string[]` entries, missing key → `⟦key⟧`.
+- `lang`: `"es"` default; `?lang=` override only when `import.meta.env.DEV` (unknown lang → `es`; `xx`/`en` come in plans 23/24). At startup (`main.ts` or `App.svelte`): `document.documentElement.lang`, `document.title` from `app.title`; `index.html` keeps `<title>Trivia</title>`.
+- New `app/client/src/locales/es.ts`: nested object, `as const`-style; `export type Catalog` (string leaves widened, variant arrays as `string[]`), `Key` = union of dotted leaf paths. Namespaces from the plan; `error` reserved for plan 22 (leave it out or empty; if plan 22 task 1 already added `lib/errors.ts`, don''t touch it).
+- `game/copy.ts`: `MILESTONES`/`CONSOLATION` texts → `copy.milestone.<level>`, `copy.consolation.<maxLevel>` read with `variants()`; `choose()`, seeds, level brackets and `milestone()`/`consolation()` signatures unchanged. `{n}` filled through `t`-style substitution (same output: plain `String(level)` for 1–12).
+- `plans/decisions.md`: next free D-number, catalog shape (typed nested object, dotted keys, `Key` union, `⟦key⟧`, plurals/variants, dev-only `?lang`). `directory.md`: `lib/i18n.ts`, `locales/`.
+
+Done when:
+- `npm run check`, `npm run build` pass; `t("typo")` fails the check (try it, then remove).
+- Throw-away script: for every level 1–12 and seeds 0–5, old `milestone()`/`consolation()` (from `git show HEAD:…`) and new return the same string.', '2026-10-12T00:14:29Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (92, 21, 'LUI-1: sound cues to neutral ids', 'work', 'open', NULL, NULL, '`sfx()` stops matching Spanish descriptions by regex; it takes a typed cue id. Plan 21 «Design», sound cues.
+
+- `app/client/src/game/sound.svelte.ts`: `type Cue` = union of neutral ids (`"applause"`, `"applause-big"`, `"sad-trombone"`, `"padlock-close"`, `"menu-open"`, `"joker-armed"`, …, one per distinct sound today); `SAMPLE_FOR`, `RECIPES` become lookups by cue id. Level thud: typed level argument (`sfx("block", { level })` or `` `block-${n}` ``). Sample file names in `public/audio/` stay.
+- Every call site (`grep -rn "sfx(" app/client/src`; today ~30 in `Game.svelte`, `Question.svelte`, `Shredder.svelte`, `Fireworks.svelte`) switches to cue ids.
+- Comments may keep the Spanish name in «…».
+
+Done when:
+- `npm run check`, `npm run build` pass; no Spanish string left in `sound.svelte.ts` outside comments.
+- Same sound per call site as before: throw-away script resolving each old call''s string through the old regex table and each new cue through the new table, or a side-by-side list (call site, old string, cue, sample/recipe) in the task note.', '2026-10-12T00:14:29Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (93, 21, 'LUI-1: joker texts and keys into the catalog', 'work', 'open', NULL, NULL, 'Joker names, key hints and aria texts come from `joker.<id>.*`. Plan 21 «Design», jokers.
+
+- `JokerTray.svelte` (names, key hints, aria), `JokerFlight.svelte`, `CategoryPicker.svelte`, `DifficultyDial.svelte`, `Shredder.svelte`: every on-screen string and `aria-label`/`title` via `t()`.
+- `joker.<id>.key` holds today''s keys (`S`, `P`, `F`, `T`, `X`); key handling in `Question.svelte` reads them from the catalog (case handling as today).
+- Joker «why not» reasons come from the server (plan 22 renders them via `lib/errors.ts`); leave that path alone.
+
+Done when:
+- `npm run check`, `npm run build` pass; no Spanish literal left in these five files outside comments.
+- Throw-away check: every literal removed (from `git diff`) appears verbatim as a catalog value; each joker key still plays its joker.', '2026-10-12T00:14:29Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (94, 21, 'LUI-1: Question.svelte texts into the catalog', 'work', 'open', NULL, NULL, 'All remaining text of `app/client/src/game/Question.svelte` comes from the catalog (`screen.question.*`, `a11y.*`).
+
+- Hints («Soplo {n}», plurals via `{ one, other }` if the text varies with `n`), «Respuesta final», buttons, aria-labels, titles.
+- Error display: leave plan 22''s `errorText`/reason rendering as is.
+
+Done when:
+- `npm run check`, `npm run build` pass; no Spanish literal in `Question.svelte` outside comments.
+- Throw-away check: every removed literal appears verbatim as a catalog value; parametrised texts give the same output for the values the game uses.', '2026-10-12T00:14:29Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (95, 21, 'LUI-1: Game.svelte and Player.svelte texts into the catalog', 'work', 'open', NULL, NULL, 'Screen texts of `Game.svelte` and `Player.svelte` come from the catalog (`screen.start`, `screen.player`, `screen.level`, `screen.select`, `screen.result`, `screen.victory`, `a11y.*`).
+
+- Greeting, start/level/result/victory texts, buttons, aria/title. Milestone/consolation already go through `copy.ts` (task 1).
+- Leftovers in `Stage.svelte`, `swap.ts`, `timing.ts`, `Hud.svelte`, `Tower.svelte`, `Placeholder.svelte`, `Icon.svelte`, `App.svelte` if any are on-screen strings (`PLACEHOLDER(<task ID>)` labels: into the catalog too, `placeholder.*`).
+- Server error display: plan 22''s `errorText`; leave it.
+
+Done when:
+- `npm run check`, `npm run build` pass; no Spanish literal in these files outside comments.
+- Throw-away check: every removed literal appears verbatim as a catalog value.', '2026-10-12T00:14:29Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (96, 21, 'LUI-1: Overlay texts and the check:literals script', 'work', 'open', NULL, NULL, 'The admin overlay moves into the catalog, and a kept script guards against new literals.
+
+- `Overlay.svelte`: all texts, aria/title → `overlay.*`.
+- New `app/client/scripts/check-literals.mjs`, `npm run check:literals -w app/client`: strips `//`, `/* */`, `<!-- -->` comments; flags Spanish characters (`áéíóúñÁÉÍÓÚÑ¡¿`), text between tags, and `aria-label`/`title`/`placeholder` values that aren''t a `{…}` expression. Exit 1 with `file:line`. Paths as arguments, default `src/game` (plan 22 task 2 adds `src/lib/errors.ts`). No dependencies.
+- Document it in `README.md` and the AGENTS.md command list.
+
+Done when:
+- `npm run check`, `npm run build`, `npm run check:literals -w app/client` pass.
+- The script fails on a planted literal (try, then remove).', '2026-10-12T00:14:29Z', NULL, 86);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (97, 21, 'LUI-1: before/after comparison and close-out', 'work', 'open', NULL, NULL, 'Show that plan 21 changed nothing visible in Spanish, then close LUI-1.
+
+- Comparison per decision (see `pm show`): screens start, player, level, select, question incl. every joker, result, victory, overlay; "before" from the commit before plan 21''s first task (`git log --grep "LUI-1: i18n helper"`, its parent; a `git worktree`, removed afterwards).
+- Any difference: fix it here if small, else a task in plan 21.
+- Mark LUI-1 `[x]` in `plans/15a-ui-translation.md`; `plans/project.md` (M3: part 1 done).
+
+Done when: the comparison shows no difference; plans updated; temp files and worktree gone.', '2026-10-12T00:14:30Z', NULL, 86);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1683,6 +1745,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 Rework costs LLM calls but saves the gamemaster''s time; overlaps (once part 4 drops them before merge) and media misses don''t benefit from rework.', NULL, NULL, '2026-10-11T23:16:33Z', NULL, 12, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (4, 'After the engine port, which routes does the Python game server keep besides static files and /api/save?', 'pending', '["Keep /media (download on cache miss, D-17), /api/flags (state/flags.json, D-47) and /api/categories; amend the milestone''s ''static files plus /api/save only'' accordingly", "Move flags into SaveData (drop /api/flags, trivia-authoring reads game.json); keep /media and /api/categories", "Strictly static + /api/save: flags into SaveData, categories served as static files, media served only from the synced cache (no download on miss; trivia-media sync required before play)"]', 'Milestone 2 "Done when" says `trivia` serves static files plus `/api/save` only. Today `app/server/main.py` also has `/media` (cache + download on miss, D-17), `/api/flags` (game flags questions, `trivia-authoring` turns them into reviews, D-47) and `/api/categories` (all bundles, D-43). Python stays in family mode anyway (plan 12, D-3); the desktop shell (plan 18) is out of scope. Affects parts 4, 5, 6 of the masterplan.', NULL, NULL, '2026-10-11T23:56:57Z', NULL, 54, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (5, 'Where does the supply check for qgen report and the authoring start page live once app/server/selection.py has no game to serve?', 'pending', '["Move selection.py to authoring/tools/ unchanged (reads game.json), parity with engine/selection.ts guarded by the PORT-1 selection fixtures", "Authoring calls the TS engine via node (type stripping), no Python copy", "Keep app/server/selection.py where it is"]', '`qgen report` and `authoring/server/overview.py` use `selection.py` (levels, `LEVEL_RANGES`, `available`, `supply`, `burned_ids`). After PORT-8 the game no longer needs it. A Python copy duplicates the rules in two languages; calling Node from Python tooling adds a runtime hop. Plan 12 (PORT-8) left it open. Affects part 6 (and part 4''s switch of the authoring readers).', NULL, NULL, '2026-10-11T23:56:58Z', NULL, 54, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (6, 'Plan 21 (LUI-1): how to check the screens show no visible change?', 'pending', '["Throw-away Playwright outside the project (nix shell / temp dir, nothing in package.json): scripted run before and after, pixel diff with ImageMagick compare", "Gamemaster clicks through by hand with a checklist the worker writes", "No screenshots: the per-task literal checks are enough"]', 'Plan 21 asks for before/after screenshots of every screen, but the flake has no headless browser and the client has no test deps. Each task already checks that every moved literal reappears verbatim in es.ts.', NULL, NULL, '2026-10-12T00:14:30Z', NULL, 86, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -1713,6 +1776,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (27, 83, '2026-10-12T00:10:34Z', '2026-10-12T00:12:00Z', 'done', NULL, 0, '62310d83ab7781dbff32a1d512609266e4bb6ab7', 'claude-opus-5-5[1m]', 'a5b33a77-0531-4f70-82c4-1cbe29ef63c4', 13, 26, 6035, 437204, 30161, 0.4495327999999999, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (28, 84, '2026-10-12T00:12:00Z', '2026-10-12T00:12:54Z', 'done', NULL, 0, '9c3900a593498d93bb40d5a20294b62923a3602b', 'claude-opus-5-5[1m]', 'e30aea65-7e96-4968-a3e2-64d42d6ff437', 10, 18, 5205, 312693, 37502, 0.4667266, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (29, 85, '2026-10-12T00:12:54Z', '2026-10-12T00:13:27Z', 'done', NULL, 0, '6856afb17ae063cec511c4c58a5781abf9c7d68f', 'claude-opus-5-5[1m]', '93cd3ef1-c029-4b57-9c4f-00bd4d822acc', 7, 14, 3359, 211757, 25913, 0.3168914, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (30, 86, '2026-10-12T00:13:27Z', '2026-10-12T00:14:39Z', 'done', NULL, 0, 'aa7ecfaa70763739bb83ca58d6a2a71501c20529', 'claude-opus-5-5[1m]', 'e1b89153-9203-488e-b78b-997064cb0dda', 10, 18, 7121, 317028, 34422, 0.4812736, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -1730,3 +1794,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (58, 5);
 INSERT INTO task_decision (task_id, decision_id) VALUES (59, 4);
 INSERT INTO task_decision (task_id, decision_id) VALUES (60, 4);
 INSERT INTO task_decision (task_id, decision_id) VALUES (60, 5);
+INSERT INTO task_decision (task_id, decision_id) VALUES (97, 6);
