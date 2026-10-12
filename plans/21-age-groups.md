@@ -66,3 +66,73 @@ Even targets are a stopgap: they catch up on 11–15, which the pool doesn't hav
 | 14–15 | adults | 2 % |
 
 The proposal: derive the targets from `age-groups.json` (windows, per-group level weights from AG-7, a play share per group), with a floor per level so every group can play several games without repeats, and draw each batch's targets by **deficit** (target share minus the pool's share) so batches fill gaps instead of repeating a fixed shape.
+
+## Measured windows (AG-7)
+Measured 2026-10-11 with a throw-away script on the engine (`supply`, `draw`, `seededRng`; plan 28), pool of 1136 approved questions (`base` 1034, `colombia` 102). Draft = `levels` from plan 27; proposal = tuned `kids`, `young_adults`, `adults`; `young_teens` stays D-22. Raised as the decision "Approve the age-group windows"; nothing in `age-groups.json` changes before the answer.
+
+- Thinnest: level with the fewest candidates (`supply`). Until dry: games one player can play, burning every card shown, until a level can't be filled; median of 20 seeds, and the level that ran dry most often.
+- Ranges: level 1 first; `×n` = the same range n levels in a row.
+
+### `{base}`
+| Group | | Window | Ranges | Thinnest | Until dry |
+|---|---|---|---|---|---|
+| `kids` | draft | 1–7 | 1, 2, 2–4, 3–4 ×3, 4–5, 4–6 ×2, 5–7, 6–7 ×2 | L1 (1): 36 | 9, L1 |
+| | proposal | 1–6 | 1, 2, 2–3, 2–4, 3–4 ×2, 3–5, 4–5 ×2, 4–6, 5–6 ×2 | L1 (1): 36 | 9, L1 |
+| `young_teens` | D-22 | 1–10 | 1, 2–3, 3–5, 4–6 ×3, 5–7, 6–8, 6–9, 7–10, 8–10, 9–10 | L1 (1): 36 | 9, L1 |
+| `young_adults` | draft | 3–13 | 3, 4–5, 5–7, 6–9 ×3, 7–10, 9–11, 9–12, 10–13, 11–13, 12–13 | L12 (12–13): 86 | 10, L12 |
+| | proposal | 4–13 | 4, 5–6, 6–8, 7–9 ×3, 8–10, 9–11, 9–12, 10–13, 11–13 ×2 | L1 (4): 103 | 10, L12 |
+| `adults` | draft | 4–15 | 4, 5–6, 6–9, 8–10 ×3, 9–11, 10–13, 10–14, 11–15, 13–15, 14–15 | L12 (14–15): 27 | 4.5, L12 |
+| | proposal | 5–15 | 5, 6–7, 7–9, 8–10 ×2, 8–11, 9–11, 10–12, 10–13, 11–14, 12–15, 13–15 | L12 (13–15): 75 | 8, L12 |
+
+### `{base, colombia}`
+| Group | | Thinnest | Until dry |
+|---|---|---|---|
+| `kids` | draft | L1 (1): 36 | 9, L1 |
+| | proposal | L1 (1): 36 | 9, L1 |
+| `young_teens` | D-22 | L1 (1): 36 | 9, L1 |
+| `young_adults` | draft | L12 (12–13): 90 | 11, L12 |
+| | proposal | L1 (4): 117 | 11, L12 |
+| `adults` | draft | L12 (14–15): 27 | 5, L12 |
+| | proposal | L12 (13–15): 77 | 9, L12 |
+
+- Every level of every group has ≥ 36 candidates (target ≥ 20); no missing slots.
+- Level 1 = difficulty 1 (36 approved) limits `kids` and `young_teens` to 9 games; kept, D-22 fixes it for young teens.
+- `colombia` adds 102 questions, almost all at 2–9; it barely moves the top.
+
+### Proposal vs. the anchors
+- `kids` (6–10): oldest ≈ 4. Draft top 6–7 = a 12–13-year-old, too hard; proposal top 5–6 = one step above the oldest, as a final challenge.
+- `young_adults` (15–22): youngest ≈ 9, oldest ≈ 12–13. Warm-up 3 → 4; top 11–13 ×2 reaches 13; the wider top lets it share 11–13 between levels 10–12.
+- `adults` (23+): 12 = most adults, top reaches 15. Warm-up 4 → 5; top widened downward (14–15 → 13–15, 13–15 → 12–15) instead of shrinking the window.
+- Overlap kept: 5–6 serve all four groups, 4–10 three, 11–13 two, 14–15 adults only.
+
+### Level weights
+`n = round(12 × Σ 1/(hi − lo + 1))` over the levels containing the difficulty (plan 28); `young_teens` equals `qgen.LEVEL_WEIGHTS` (sum 144, asserted). Rounding can make another group's sum differ slightly.
+
+| Group | | Weights (difficulty: n) |
+|---|---|---|
+| `kids` | draft | 1:12 2:16 3:22 4:36 5:18 6:24 7:16 |
+| | proposal | 1:12 2:22 3:26 4:36 5:32 6:16 |
+| `young_teens` | D-22 | 1:12 2:6 3:10 4:16 5:20 6:23 7:14 8:14 9:16 10:13 |
+| `young_adults` | draft | 3:12 4:6 5:10 6:13 7:16 8:12 9:19 10:13 11:14 12:16 13:13 |
+| | proposal | 4:12 5:6 6:10 7:16 8:20 9:23 10:14 11:18 12:14 13:11 |
+| `adults` | draft | 4:12 5:6 6:9 7:3 8:15 9:19 10:21 11:12 12:8 13:12 14:15 15:12 |
+| | proposal | 5:12 6:6 7:10 8:15 9:19 10:22 11:17 12:13 13:13 14:10 15:7 |
+
+### Thin top (milestone 1, not fixed here)
+- 14: 19 approved, 15: 8 (`colombia`: none). Adults' top two levels share 12–15 (113) and 13–15 (75); they run dry first (8 games).
+- `young_adults`' top 11–13 (147) runs dry after 10 games.
+- 10 (57) and 15 are below their demand share; 3 and 6 above.
+
+### Demand vs. pool, proposed windows
+Equal play per group. Flat: plan 21's method (1 / window width per group). Weights: from the proposed `level_weights`. Pool: `base` share.
+
+| Difficulty | Played by | Flat | Weights | Pool |
+|---|---|---|---|---|
+| 1–3 | kids, young teens | 7 % each | 4 / 5 / 6 % | 3.5 / 6.5 / 9.3 % |
+| 4 | + young adults | 9 % | 11 % | 10.0 % |
+| 5–6 | all four | 11 % each | 12 / 10 % | 10.8 / 14.2 % |
+| 7–10 | young teens, young adults, adults | 7 % each | 7 / 9 / 10 / 9 % | 9.8 / 6.5 / 7.2 / 5.5 % |
+| 11–13 | young adults, adults | 5 % each | 6 / 5 / 4 % | 5.9 / 3.7 / 4.6 % |
+| 14–15 | adults | 2 % each | 2 / 1 % | 1.8 / 0.8 % |
+
+- Against the draft table above: 3 is played by two groups instead of three, 4 and 7 by three instead of four; 5–6 rise to 11 %.
