@@ -428,7 +428,7 @@
     {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
     <section class="start">
       <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
-      <p class="subtitle">{t("screen.start.subtitle")}</p>
+      <p class="subtitle">{t("screen.start.subtitle", { n: levelsOf(game) })}</p>
       <div class="buttons">
         {#if notice}
           <div class="notice glass">

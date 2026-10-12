@@ -127,7 +127,7 @@ const es = {
       open: "¡",
       name: "Trivia",
       close: "!",
-      subtitle: "12 preguntas seguidas para llegar a la cima",
+      subtitle: { one: "1 pregunta para llegar a la cima", other: "{n} preguntas seguidas para llegar a la cima" },
       resume: "Continuar, nivel {level}",
       resumePlayer: "Continuar: {name}, nivel {level}",
       new: "Nueva partida",

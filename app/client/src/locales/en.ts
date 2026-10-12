@@ -112,7 +112,7 @@ export const en = {
       open: "",
       name: "Trivia",
       close: "!",
-      subtitle: "12 questions in a row to reach the top",
+      subtitle: { one: "1 question to reach the top", other: "{n} questions in a row to reach the top" },
       resume: "Continue, level {level}",
       resumePlayer: "Continue: {name}, level {level}",
       new: "New game",
