@@ -14,6 +14,7 @@ Decided: **Electron** (D-63, pm decision 12; facts checked 2026-10-11, sources t
 | Browser + local server (PyInstaller) | Closest to today; already has a LAN server for phone buzzers. | Not a "real" game window, no overlay, two runtimes, antivirus false positives on PyInstaller builds; plans 19/20 remove Python. |
 
 The shell's own code stays tiny: create a fullscreen window, load `app/client/dist/`, expose `loadSave`/`writeSave` and the Steam calls to the page through a preload bridge (no Node in the page itself).
+- Window option `webPreferences.autoplayPolicy: "no-user-gesture-required"`: a gamepad press isn't user activation in Chromium (HTML spec: only key, mouse, touch), so a pad-only start would stay silent (plan 45, IN-4).
 
 ## Steam features
 - **Steam Cloud:** the save (12) is one JSON file in the user data folder. Steam Auto-Cloud syncs it with no code; only the file path is configured in Steamworks.

@@ -6,6 +6,7 @@
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
+  import { listenPads } from "../lib/gamepad.svelte";
   import { listen, pushScope, type Action } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
@@ -345,12 +346,14 @@
   });
 
   onMount(() => listen({ busy: () => busy, first: onclick }));
+  onMount(() => listenPads(onclick));
 
-  /** The first click or key press unlocks audio and autoplay (04, "Start"). */
+  /** The first click or key press unlocks audio and autoplay (04, "Start"). A pad press may not
+   * count as user activation (plan 45), so every input resumes the context again. */
   function onclick() {
+    unlock();
     if (!unlocked) {
       unlocked = true;
-      unlock();
       sfx("unlocked");
     }
   }
