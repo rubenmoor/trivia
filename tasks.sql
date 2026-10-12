@@ -1362,6 +1362,59 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - `age-groups.json` holds approved windows, ranges and `level_weights` for all four groups; `young_teens` unchanged from D-22.
 - Plan 21 shows the measured table and no longer calls the windows a draft; the decision entry exists.', '2026-10-12T00:26:19Z', 116);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (29, 5, 'Age group and bundle choice on the start screen', 400, 'Before a session, the family picks an age group and which bundles to play, on a new Choice screen between Player and Level. It reads `app/data/age-groups.json` and `app/data/bundles.json`, presets the player''s last choice, checks supply per choice through plan 27''s `choice` route, and starts the game with `newGame({player, age_group, bundles})`. Enter straight through keeps today''s game: preset or defaults (`young_teens`, every bundle). Part 2 of masterplan 5 (AG-7, BN-6, IN-1); runs after plan 28 (tuned windows) and M2''s screens part (PORT-7).
+
+## Depends on
+- Plan 27: `AgeGroup` / `Bundle` / `parseAgeGroups` / `parseBundles` in `engine/pool.ts`, `engineData`''s `ageGroups` / `bundles`, `gameChoice` defaults, the `choice` route (`{player?, age_group?, bundles?}` → `{choice, supply}` | `409 {error, supply: null}`), `newGame` with `age_group` / `bundles`, `Game.settings` keys in `lib/types.ts`.
+- Plan 28: tuned `window` / `levels` (the screen shows whatever the file holds; nothing hard-coded).
+- M2 part 5 (PORT-7, screens on the engine; plan not written yet, ~500): `lib/api.ts` calls the engine; the client has the data files. If it hasn''t landed, the tasks wait; no Python route is added for this.
+- Plan 21 (LUI-1, `t()` and `es` catalog, 500): if `app/client/src/lib/i18n.ts` exists at task time, every new string goes through `t()` with `choice.*` keys and passes `check:literals`; else Spanish literals, each marked `// LUI-1`, and a line in `plans/15a-ui-translation.md` lists the file.
+
+## Decisions taken here
+- **A screen of its own, "Choice"**, after the name: the preset depends on the player, so it can''t sit on the Player screen. Flow: Start → Player → **Choice** → «¡Hola, …!» → Level. One more `Enter` for the family than today; nothing else changes.
+- **Title**: «¿Cómo juega {name}?».
+- **Group tiles**: four, in file order: `name` and ages («6–10 años», «23+ años» for `[23, null]`). One selected (highlight like the name buttons'' focus). The window isn''t shown (family-facing).
+- **Bundle toggles**: one per bundle in file order: `name`, `description`, on/off. `always_on` bundles shown on, locked, no key, `title` «Siempre activo».
+- **Keys** (`<kbd>` on every control, IN-1):
+  - `1`–`4` and `←`/`→`: group.
+  - Bundles: the first letter of `name` (case-insensitive, accents stripped) not yet taken by an earlier switchable bundle, else the next letter of the name; computed in one helper, never one of `M`, `N`, `R`, `S`. Today: `C` = Colombia.
+  - `Enter` / `Space`: «¡A jugar!» (disabled while the choice can''t fill a game). `Backspace` / «Atrás»: back to Player.
+  - `Esc` keeps opening the overlay.
+- **Preset**: `choice({player})` on entering the screen: the player''s newest game (finished, lost or abandoned), else the defaults. A new name gets the defaults.
+- **Supply per choice**:
+  - On entering and on every change: `choice` for the current `{age_group, bundles}` and once per group with the current bundles (5 calls, on the in-client engine).
+  - A group tile that can''t fill 12 levels is dimmed with «Faltan preguntas» but stays selectable; when the selected choice fails, «¡A jugar!» is disabled and the supply report shows below, in today''s wording («No hay suficientes preguntas para una partida completa (N disponibles): Nivel L (dificultad lo–hi): faltan k»).
+  - A `409` from `new` (race, stale data) shows the same report here, not on the Player screen.
+- **Supply report as one component**: `SupplyReport.svelte` replaces the copies in `Game.svelte` (Start) and `Player.svelte`; same text and style.
+- **Where the running game''s choice shows**: the admin overlay, one read-only line under the joker budget: «Adolescentes · Básico, Colombia». Not in the HUD: the TV stays as it is for the family. A game''s choice can''t change mid-game (ranges would change under the tower); a new game is the way.
+- **Undo and abandon keep the choice**: undo keeps `settings` (plan 27); after «Reiniciar partida», the next Choice screen presets the abandoned game''s choice. Games without the keys show the defaults (`gameChoice`).
+
+## Changes
+- `app/client/src/game/Choice.svelte` (new): props `player`, `busy`, `refused`; `onstart(choice)`, `onback()`; exported `key(e)` like `Player.svelte`. Arrive animations and glass tiles as on the Player screen.
+- `app/client/src/game/SupplyReport.svelte` (new), used by Start, Choice; `Player.svelte` loses `refused` and its report.
+- `Game.svelte`: `Screen` gains `"choice"`; `choosePlayer(name)` → `go("choice", "whoosh")`; `startGame(choice)` does today''s `act("new", …)` + greeting + Level; keyboard routing for `"choice"`; Backspace/«Atrás» → `go("player", …)`.
+- `lib/api.ts`: `fetchChoice({player?, age_group?, bundles?})`, `gameAction("new", {player, age_group, bundles})` (if part 5 hasn''t already typed them).
+- `Overlay.svelte`: the choice line (from `game.settings` via `gameChoice`''s defaults, names from the data files).
+- Docs: `plans/04-ui-tv-display.md` (state diagram, table row, a "Choice" section, keys in "Input"); `plans/21-age-groups.md` / `plans/22-bundles.md`: AG-7 / BN-6 note "start screen: plan N" (stay `[ ]` until part 4); `directory.md` for the new files.
+
+## Checks
+- `npm run check`, `npm run build`, `npm test`; `check:literals` if it exists.
+- Browser, real pool, throw-away walk (not committed):
+  - existing player, Enter, Enter: plays as today (`young_teens`, every bundle); the overlay shows «Adolescentes · Básico, Colombia».
+  - each group by key and by click; `C` and a click toggle Colombia; Básico doesn''t toggle; the started game''s `settings` are what was shown.
+  - a choice that can''t fill a game (e.g. a test player with most questions burned, or a hand-edited copy of `pool.json` in dev): tile dimmed, report shown, «¡A jugar!» disabled.
+  - Backspace and «Atrás» return to Player; Esc opens the overlay from Choice.
+  - after undo and after «Reiniciar partida», the preset is the previous game''s choice.
+- Mouse only, then keyboard only: every action reachable (IN-1).
+
+## Suggested tasks
+1. **Choice screen**: `Choice.svelte`, `SupplyReport.svelte`, `Game.svelte` flow and keys, `lib/api.ts`, strings (`t()` or marked literals); docs in `04`.
+2. **Choice in the overlay and close-out**: the overlay line, undo/abandon preset walk, `21` / `22` / `directory.md` notes.
+
+## Done when
+- A session can be started for each group and with `colombia` off, by mouse and by keyboard, and Enter straight through plays the defaults or the player''s last choice.
+- A choice that can''t fill 12 levels can''t start and says why, in today''s wording.
+- The overlay shows the running game''s group and bundles.', '2026-10-12T00:28:05Z', 117);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2161,7 +2214,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Adjust windows and level ranges; store per-group `level_weights` derived from the ranges as D-31 did for young teens; consumers outside the game out of scope.
 - A task that raises a decision for the gamemaster with the measured table to approve the final windows; after it: plan 21 drops "draft", `about` in `age-groups.json`, a decision entry.
 - Thin top of the scale (14–15) reported, not fixed (milestone 1''s work).', '2026-10-12T00:22:30Z', '2026-10-12T00:26:28Z', 114);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (117, 5, 'write plan: Age group and bundle choice on the start screen', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 5): `pm plan add 5 "Age group and bundle choice on the start screen" --priority 400`. Check `pm plan list` for M2''s screens part (plan 19/20''s successors, ~500) and stay below it.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (117, 5, 'write plan: Age group and bundle choice on the start screen', 'plan', 'done', 1000, '2026-10-11, plan 29 (tasks.sql)', 'Write the plan for part 2 of the masterplan (plan 5): `pm plan add 5 "Age group and bundle choice on the start screen" --priority 400`. Check `pm plan list` for M2''s screens part (plan 19/20''s successors, ~500) and stay below it.
 
 - Uses part 1''s API (`newGame` with `age_group`, `bundles`; `supply` per choice); the screen shows part 3''s tuned windows.
 - Cover: after the player, before the first level: four group tiles (name, ages from `age-groups.json`), one toggle per bundle (`name`, `description` from `bundles.json`; `base` on and locked).
@@ -2169,7 +2222,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A choice that can''t fill 12 levels is marked and can''t start (today''s supply-failure message style).
 - IN-1: every choice clickable and on the keyboard; the plan settles the keys; `<kbd>` hints.
 - Where the running game''s group and bundles show (HUD or admin overlay); undo and abandon keep them.
-- Texts through `t()` if milestone 3''s plan 21 has landed, else literals marked for it.', '2026-10-12T00:22:30Z', NULL, 114);
+- Texts through `t()` if milestone 3''s plan 21 has landed, else literals marked for it.', '2026-10-12T00:22:30Z', '2026-10-12T00:28:07Z', 114);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (118, 5, 'write plan: Play-test and close-out of age groups and bundles', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 5): `pm plan add 5 "Play-test and close-out of age groups and bundles" --priority 390` (last, after part 2''s plan at 400).
 
 - Cover: the milestone''s "done when": one session per age group and one with `colombia` off in the browser on the real pool; a task that raises a decision for the gamemaster to confirm, then records it.
@@ -2179,6 +2232,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:25:09Z', NULL, 115);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (120, 28, 'create tasks for plan 28', 'split', 'open', 1000, NULL, 'Split plan 28 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:26:19Z', NULL, 116);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (121, 29, 'create tasks for plan 29', 'split', 'open', 1000, NULL, 'Split plan 29 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:28:05Z', NULL, 117);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2235,6 +2290,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (40, 114, '2026-10-12T00:22:02Z', '2026-10-12T00:22:38Z', 'done', NULL, 0, '6bef0c6b41c88617d91a3c2300bf198d3d8c9e69', 'claude-opus-5-5[1m]', '0ef5388e-bfb0-46f0-98f8-efdebb02c834', 6, 12, 3514, 193939, 31037, 0.3574118, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (41, 115, '2026-10-12T00:22:38Z', '2026-10-12T00:25:21Z', 'done', NULL, 0, '3dbac1bfbda4c3236635e8bd72a4e6aeed57251c', 'claude-opus-5-5[1m]', '43edd34a-8d41-4e04-af39-47aa4eccc1a5', 14, 28, 15778, 656573, 64141, 0.96011459999999993, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (42, 116, '2026-10-12T00:25:21Z', '2026-10-12T00:26:36Z', 'done', NULL, 0, 'cda27beb9246172310caa7bb7cd4a868e5d79f82', 'claude-opus-5-5[1m]', 'fe9f7c1e-bdbc-427b-8e1d-67278e2035b3', 11, 18, 7187, 346515, 40259, 0.53518699999999986, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (43, 117, '2026-10-12T00:26:36Z', '2026-10-12T00:28:16Z', 'done', NULL, 0, '325e9ec5e7e0e9d41c839a5d19ae33b41852dfed', 'claude-opus-5-5[1m]', '533ef7fa-60d4-43ae-bb40-739aa5bd6b49', 18, 34, 9375, 748325, 60023, 0.81748499999999991, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
