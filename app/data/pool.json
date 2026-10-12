@@ -582,35 +582,6 @@
       "background": null
     },
     {
-      "id": "q-0021",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "Océanos",
-      "bundle": "base",
-      "description": "Un atajo para barcos que no tenían ganas de darle la vuelta a un continente.",
-      "question": "¿Qué canal une el mar Caribe con el océano Pacífico para que pasen los barcos?",
-      "answer": "El Canal de Panamá",
-      "wrong_answers": [
-        "El Canal de Suez",
-        "El Canal de la Mancha",
-        "El Canal de Kiel"
-      ],
-      "hints": [
-        "Se inauguró en 1914.",
-        "Usa esclusas para subir y bajar los barcos.",
-        "Está muy cerca de Colombia, en Centroamérica."
-      ],
-      "fun_fact": "Un barco tarda entre 8 y 10 horas en cruzarlo.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Container_Ship.jpg/3840px-Container_Ship.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AContainer_Ship.jpg",
-        "credit": "Muhammad Mahdi Karim · GFDL 1.2 · Wikimedia Commons"
-      },
-      "background": null
-    },
-    {
       "id": "q-0022",
       "status": "approved",
       "difficulty": 8,

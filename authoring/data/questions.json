@@ -1489,7 +1489,7 @@
     },
     {
       "id": "q-0021",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "Un atajo para barcos que no tenían ganas de darle la vuelta a un continente.",
       "question": "¿Qué canal une el mar Caribe con el océano Pacífico para que pasen los barcos?",
@@ -1538,9 +1538,12 @@
       "needs_media": false,
       "batch": "first-120",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "reviewed_on": "2026-10-06",
+        "decision": "needs_work",
+        "feedback": "Foto solo con licencia GFDL 1.2: reemplazar en la herramienta de revisión (plan 26 parte 3).",
+        "problems": [
+          "media"
+        ],
+        "reviewed_on": "2026-10-11",
         "reviewer": "human",
         "model": null,
         "previous": null
