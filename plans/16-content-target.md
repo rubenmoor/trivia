@@ -38,6 +38,8 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 ## Cost
 `costs.log` records the cost per generated question. A full run for 5000 questions × 3 launch languages (with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).
 - pm plan 70: `qgen report --cost` (CT-3), per-locale deficits + `es` source shortfall for `en`/`de` (CT-4, pm decision 37), release budget per language as a pm decision after the translation pilot, before full runs.
+- `qgen report --cost [--json]` (task 461): $ per run (own log + `audit/`), draft $/approved (last 3 batches, weighted), translation $/approved per locale, overhead ratio, projection per language, spent vs. `targets.json` `"budget"`.
+- Numbers 2026-10-12 (list price): batch-4..7 $0.16 / $0.37 / $0.30 / $0.24 per approved; draft $0.26 (batch-5..7); overhead $129 (concepts $65, tighten $38, rework $6, pilot/first-120 $16, bundles $2, audit $3) / batches $183 = 0.70; `es` 3966 to go → ~$1750; `en`/`de` no pilot yet; spent $343 (`es`, incl. batch-8 in progress $31); batch-3's cost unknown (no `work/`).
 
 ## Tasks
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.

@@ -23,6 +23,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen report [--run <run>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
+    qgen report --cost [--json]     # $ per approved by run kind, projection per launch language (plan 70)
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -1754,11 +1755,123 @@ def report_simulate(args):
     sys.exit(0 if ok else 1)
 
 
+RUN_KINDS = [("batch", r"batch-\d+"), ("translation", r"tr-[A-Za-z-]+-\d+"), ("rework", r"rework-\d+"),
+             ("tighten", r"tighten-\d+"), ("neutralize", r"neutralize-\d+"), ("concepts", r"concepts")]
+
+
+def run_kind(run):
+    return next((k for k, p in RUN_KINDS if re.fullmatch(p, run)), "other")
+
+
+def cost_runs(pool):
+    """Every work/<run> with Claude calls (plan 70, CT-3): $ of the run and of its audit/, approved; and what was skipped."""
+    import health  # authoring/tools/health.py (imports qgen)
+    status = {q["id"]: q["status"] for q in pool}
+    merged = set(health.batch_runs())
+    runs, skipped = [], []
+    for d in sorted((p for p in WORK.iterdir() if p.is_dir()), key=lambda p: natural_key(p.name)):
+        run, kind = d.name, run_kind(d.name)
+        own, audit = costs(d / "costs.log"), costs(d / "audit" / "costs.log")
+        if not own and not audit:
+            skipped.append(f"{run}: no costs.log")
+            continue
+        approved, locale = None, None
+        if kind == "batch":
+            if run in merged:
+                approved = health.batch_health(run, pool)["approved"]
+            else:
+                skipped.append(f"{run}: not merged yet, left out of the rates")
+        elif kind == "translation":
+            locale = run[3:].rsplit("-", 1)[0]
+            approved = sum(t.get("batch") == run and t.get("status") == "approved"
+                           for t in translations.load(locale)["questions"])
+        elif ids := (load_json(d / "run.json", {}) or {}).get("ids"):
+            approved = sum(status.get(i) == "approved" for i in ids)
+        elif any(q.get("batch") == run for q in pool):
+            approved = sum(q.get("batch") == run and q["status"] == "approved" for q in pool)
+        runs.append({"run": run, "kind": kind, "locale": locale, "calls": len(own) + len(audit), "cost": sum(own),
+                     "audit": sum(audit), "approved": approved, "merged": kind != "batch" or run in merged,
+                     "per_approved": sum(own) / approved if approved else None})
+    have = {r["run"] for r in runs}
+    for b in sorted({q.get("batch") for q in pool} - have - {None}, key=natural_key):
+        if not (WORK / b).is_dir():
+            skipped.append(f"{b}: in the pool, no work/{b} (cost unknown)")
+    return runs, skipped
+
+
+def natural_key(s):
+    return [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s)]
+
+
+def cost_report(pool):
+    """{runs, rates, projection, skipped} for `qgen report --cost` (plan 70, CT-3)."""
+    runs, skipped = cost_runs(pool)
+    rated = lambda rs: (sum(r["cost"] for r in rs) / n if (n := sum(r["approved"] or 0 for r in rs)) else None)
+    batches = [r for r in runs if r["kind"] == "batch" and r["merged"]]
+    last3 = batches[-3:]
+    tr = {l: [r for r in runs if r["locale"] == l] for l in LAUNCH_LOCALES if l != "es"}
+    batch_cost = sum(r["cost"] for r in batches)
+    overhead = sum(r["cost"] + r["audit"] for r in runs if r["kind"] not in ("batch", "translation")) \
+        + sum(r["audit"] for r in batches)
+    ratio = overhead / batch_cost if batch_cost else None
+    rates = {"draft": rated(last3), "draft_runs": [r["run"] for r in last3], "batch_cost": batch_cost,
+             "overhead_cost": overhead, "overhead_ratio": ratio,
+             "translation": {l: rated(rs) for l, rs in tr.items()}}
+    t = targets.load_targets("base")
+    es_deficit = sum((targets.deficits(pool, "base") or {}).values())
+    budget = targets.load_all().get("budget") or {}
+    spent = {"es": sum(r["cost"] + r["audit"] for r in runs if r["kind"] != "translation"),
+             **{l: sum(r["cost"] + r["audit"] for r in rs) for l, rs in tr.items()}}
+    projection = []
+    for l in LAUNCH_LOCALES:
+        deficit = es_deficit if l == "es" else t["total"]  # task 462: per-locale deficits, es source shortfall
+        rate = rates["draft"] if l == "es" else rates["translation"][l]
+        cost = deficit * rate * (1 + (ratio or 0)) if rate is not None else None
+        projection.append({"locale": l, "deficit": deficit, "per_approved": rate, "cost": cost,
+                           "note": None if l == "es" or tr[l] else "no pilot yet",
+                           "spent": spent[l], "budget": budget.get(l)})
+    return {"runs": runs, "rates": rates, "projection": projection, "skipped": skipped}
+
+
+def report_cost(args):
+    r = cost_report(load_json(POOL)["questions"])
+    if args.json:
+        return print(json.dumps(r, ensure_ascii=False))
+    usd = lambda x: "–" if x is None else f"${x:.2f}"
+    print("cost per run (plan 70, CT-3; work/*/costs.log at list price; $/approved = the run's own log, as batches.md)")
+    rows = [("run", "kind", "calls", "$", "audit $", "approved", "$/approved")]
+    rows += [(x["run"], x["kind"] + (f" {x['locale']}" if x["locale"] else ""), str(x["calls"]), usd(x["cost"]),
+              usd(x["audit"]) if x["audit"] else "–", "–" if x["approved"] is None else str(x["approved"]),
+              usd(x["per_approved"])) for x in r["runs"]]
+    widths = [max(len(row[i]) for row in rows) for i in range(len(rows[0]))]
+    for row in rows:
+        print("  " + "  ".join(c.ljust(w) if i < 2 else c.rjust(w) for i, (c, w) in enumerate(zip(row, widths))))
+    k = r["rates"]
+    print("per kind:")
+    print(f"  draft: {usd(k['draft'])} per approved ({', '.join(k['draft_runs']) or 'no merged batch'}, weighted by approved)")
+    for l, v in k["translation"].items():
+        print(f"  translation {l}: " + (f"{usd(v)} per approved" if v is not None else "no tr-" + l + "-* run yet"))
+    ratio = "–" if k["overhead_ratio"] is None else f"{k['overhead_ratio']:.2f}"
+    print(f"  overhead: {usd(k['overhead_cost'])} outside batches (incl. audits) / {usd(k['batch_cost'])} in batches = {ratio}")
+    print("projection per launch language (deficit × $/approved × (1 + overhead); deficit: es = base's, en/de = the full "
+          "target until task 462; information only, D-55 caps a batch):")
+    for p in r["projection"]:
+        cost = p["note"] or usd(p["cost"])
+        budget = f", budget {usd(p['budget'])}" if p["budget"] is not None else ""
+        print(f"  {p['locale']}: {p['deficit']} to go × {usd(p['per_approved'])} → {cost}; spent {usd(p['spent'])}{budget}")
+    if r["skipped"]:
+        print("skipped (work/ is local):")
+        for s in r["skipped"]:
+            print(f"  {s}")
+
+
 def engine_model(results):
     return next((r["model"]["typical_p"] for r in results if r.get("result") == "ok"), None)
 
 
 def cmd_report(args):
+    if args.cost:
+        return report_cost(args)
     if args.simulate:
         return report_simulate(args)
     if args.exit_check:
@@ -3296,7 +3409,9 @@ def main():
     rp.add_argument("--mode", default="solo", help="with --simulate: solo|rr-coop|rr-competitive|timed|all")
     rp.add_argument("--players", type=int, help="with --simulate: players in rr-competitive and timed (default 4)")
     rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
-    rp.add_argument("--json", action="store_true", help="with --simulate: JSON on stdout")
+    rp.add_argument("--cost", action="store_true",
+                    help="$ per run and per approved by run kind, projection per launch language (plan 70, CT-3)")
+    rp.add_argument("--json", action="store_true", help="with --simulate or --cost: JSON on stdout")
     rp.add_argument("--bundle", default="base", help="progress vs. targets and saturation for this bundle (plans 12, 14)")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10); saturation flags (plan 14)")
