@@ -55,6 +55,15 @@ export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState;
   return { next: { buttons: [...pad.buttons], stick }, actions };
 }
 
+const same = (a: Intent, b: Intent) =>
+  Object.keys(a).length === Object.keys(b).length && Object.entries(a).every(([k, v]) => b[k as keyof Intent] === v);
+
+/** The button bound to `intent` in `map` (lowest index), or null (IN-5). */
+export function padButton(intent: Intent, map: Record<number, Intent>): number | null {
+  const hit = Object.entries(map).find(([, i]) => same(i, intent));
+  return hit ? Number(hit[0]) : null;
+}
+
 /** Glyph set from `Gamepad.id`; under Steam Input every pad is Xbox (per-device glyphs: S5). */
 export function styleOf(id: string): PadStyle {
   return /054c|playstation|dualshock|dualsense|wireless controller/i.test(id) ? "playstation" : "xbox";

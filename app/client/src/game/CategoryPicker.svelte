@@ -6,6 +6,7 @@
   import type { Jokers } from "../lib/types";
   import { t } from "../lib/i18n";
   import { focusControl, pushScope } from "../lib/input.svelte";
+  import Prompt from "./Prompt.svelte";
 
   type Group = Jokers["category"]["categories"][number];
 
@@ -77,8 +78,8 @@
       </div>
     {/key}
     <div class="actions label">
-      {#if group}<button class="secondary" onclick={back}>{t("action.back")} <kbd>⌫</kbd></button>{/if}
-      <button class="secondary" onclick={oncancel}>{t("action.cancel")} <kbd>Esc</kbd></button>
+      {#if group}<button class="secondary" onclick={back}>{t("action.back")} <Prompt action="back" /></button>{/if}
+      <button class="secondary" onclick={oncancel}>{t("action.cancel")} <Prompt action="menu" /></button>
     </div>
   </div>
 </div>

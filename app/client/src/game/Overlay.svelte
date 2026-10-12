@@ -4,6 +4,7 @@
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
   import { t } from "../lib/i18n";
   import { pushScope, type Action } from "../lib/input.svelte";
+  import Prompt from "./Prompt.svelte";
   import type { JokerBudget, JokerName } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
@@ -230,7 +231,7 @@
         {/if}
       </div>
     </div>
-    <p class="debug">{t("overlay.keys")} <kbd>←</kbd> <kbd>→</kbd></p>
+    <p class="debug">{t("overlay.keys")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} /></p>
     {#if questionId}
       <p class="debug">
         {questionLabel}:

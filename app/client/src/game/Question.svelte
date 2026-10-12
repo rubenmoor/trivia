@@ -12,6 +12,7 @@
   import DifficultyDial from "./DifficultyDial.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
+  import Prompt from "./Prompt.svelte";
   import JokerFlight from "./JokerFlight.svelte";
   import JokerTray, { TOKENS } from "./JokerTray.svelte";
   import Shredder from "./Shredder.svelte";
@@ -514,7 +515,7 @@
     <h1>{question.question}</h1>
     {#if media.type !== "image"}
       <button class="replay" onclick={replay}>
-        <Icon name={media.type === "audio" ? "speaker" : "film"} /> {t("screen.question.replay")} <kbd>{REPLAY_KEY}</kbd>
+        <Icon name={media.type === "audio" ? "speaker" : "film"} /> {t("screen.question.replay")} <Prompt action="replay" />
       </button>
     {/if}
   </header>
@@ -554,16 +555,16 @@
     <div class="backdrop-dim">
       <div class="dialog glass-strong" bind:this={skipDialog}>
         <h2>{t("joker.skip.name")}</h2>
-        <button class="candy" onclick={() => fire({ joker: "skip" })}>{t("joker.skip.name")} <kbd>1</kbd></button>
+        <button class="candy" onclick={() => fire({ joker: "skip" })}>{t("joker.skip.name")} <Prompt action={{ type: "pick", n: 1 }} hold /></button>
         <button
           class="secondary purge"
           onclick={() => fire({ joker: "skip", purge: true })}
           disabled={!jokers.skip.purge.available}
         >
-          {t("joker.skip.purge", { name: jokers.skip.purge.subcategory })} <kbd>2</kbd>
+          {t("joker.skip.purge", { name: jokers.skip.purge.subcategory })} <Prompt action={{ type: "pick", n: 2 }} hold />
           {#if jokers.skip.purge.reason}<span class="reason">{reasonText(jokers.skip.purge.reason)}</span>{/if}
         </button>
-        <button class="secondary" onclick={() => (mode = null)}>{t("action.cancel")} <kbd>Esc</kbd></button>
+        <button class="secondary" onclick={() => (mode = null)}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
       </div>
     </div>
   {/if}
@@ -590,8 +591,8 @@
   {/if}
   {#if mode === "snipe"}
     <p class="aim-hint glass-strong">
-      <Icon name="crosshair" /> {t("joker.snipe.aim")} <b>{t("joker.snipe.false")}</b> · <kbd>Enter</kbd> {t("joker.snipe.shoot")}
-      <button class="secondary cancel" onclick={() => (mode = target = null)}>{t("action.cancel")} <kbd>Esc</kbd></button>
+      <Icon name="crosshair" /> {t("joker.snipe.aim")} <b>{t("joker.snipe.false")}</b> · <Prompt action="confirm" /> {t("joker.snipe.shoot")}
+      <button class="secondary cancel" onclick={() => (mode = target = null)}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
     </p>
   {/if}
   {#if hit !== null}
@@ -617,7 +618,7 @@
               {/each}
             </span>
           {/if}
-          <span class="letter">{LETTERS[i]}</span>
+          <span class="letter">{LETTERS[i]}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly /></span></span>
           <span class="text">{answer}</span>
           {#if hit === i}
             <span class="badge"><Icon name="check" /></span>
@@ -642,7 +643,7 @@
         {#if !revealed}<p class="waiting">{t("screen.question.finalWaiting")}</p>{/if}
       {:else}
         <button class="candy final-button" class:ready={finalReady} onclick={submit} disabled={!finalReady} tabindex={finalReady ? 0 : -1}>
-          {t("screen.question.final")} <kbd>Enter</kbd>
+          {t("screen.question.final")} <Prompt action="submit" />
         </button>
         <div class="padlock" class:shaking={locked !== null && !finalReady} class:open={finalReady} aria-hidden="true">
           <Icon name={finalReady ? "unlock" : "lock"} size="100%" />
@@ -949,6 +950,7 @@
     transform: translateY(calc(-0.3 * var(--u)));
   }
   .letter {
+    position: relative;
     flex: none;
     display: grid;
     place-items: center;
@@ -961,6 +963,20 @@
     font-size: calc(1.5 * var(--u));
     font-weight: 800;
     text-shadow: none;
+  }
+  .pad-glyph {
+    position: absolute;
+    left: calc(-0.5 * var(--u));
+    bottom: calc(-0.9 * var(--u));
+    border-radius: 50%;
+    background: var(--night-900);
+    color: var(--paper);
+    font-size: calc(1.3 * var(--u));
+    line-height: 0;
+  }
+  .pad-glyph :global(kbd) {
+    font-size: inherit;
+    opacity: 1;
   }
   .text {
     flex: 1;

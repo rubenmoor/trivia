@@ -1,5 +1,6 @@
 // The action layer (plans/14-input.md, IN-2; plan 44): keys (later the gamepad) become actions, and
 // the top scope of a stack gets them. The only keydown listener of the client.
+import { untrack } from "svelte";
 import { forget, keyPressed, navigate, opener, press, show, track } from "./focus";
 import { t } from "./i18n";
 import type { JokerName } from "./types";
@@ -44,6 +45,9 @@ export type Scope = {
 };
 
 export const lastDevice = $state({ current: "keyboard" as Device });
+/** Bumped when scopes or focus change: prompts re-read the pad map (IN-5). */
+export const scopes = $state({ version: 0 });
+const bump = () => untrack(() => scopes.version++);
 
 const ARROWS: Record<string, Dir> = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right" };
 const FLAG_KEY = t("flag.key").toLowerCase();
@@ -67,6 +71,25 @@ export function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
   return null;
 }
 
+/** On-screen key labels (IN-5): the one copy, read by Prompt.svelte. */
+const KEY_LABELS: Partial<Record<Intent["type"], string>> = {
+  confirm: "Enter",
+  submit: "Enter",
+  back: "⌫",
+  menu: "Esc",
+  replay: t("screen.question.replayKey"),
+  new: t("screen.start.newKey"),
+  flag: t("flag.key"),
+};
+const ARROW_LABELS: Record<Dir, string> = { up: "↑", down: "↓", left: "←", right: "→" };
+
+/** The key shown for an intent, or null (jokers by letter, joker-focus has no key). */
+export function keyLabel(i: Intent): string | null {
+  if (i.type === "pick") return String(i.n);
+  if (i.type === "navigate") return ARROW_LABELS[i.dir];
+  return KEY_LABELS[i.type] ?? null;
+}
+
 const stack: Scope[] = [];
 
 /** Push a scope (in `$effect`); returns its pop. */
@@ -75,9 +98,11 @@ export function pushScope(scope: Scope): () => void {
   const restore = scope.modal ? opener() : null; // dialogs give focus back to their opener
   const at = scope.modal ? stack.length : stack.findIndex((s) => s.modal);
   stack.splice(at < 0 ? stack.length : at, 0, scope);
+  bump();
   return () => {
     const i = stack.indexOf(scope);
     if (i >= 0) stack.splice(i, 1);
+    bump();
     restore?.();
   };
 }
@@ -152,14 +177,18 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   busy = opts.busy;
   const onkey = (e: KeyboardEvent) => keydown(e, opts.first);
   const onpointer = () => (lastDevice.current = "mouse");
-  const untrack = track();
+  const untrackFocus = track();
   window.addEventListener("keydown", onkey);
   window.addEventListener("pointerdown", onpointer);
   window.addEventListener("click", opts.first);
+  window.addEventListener("focusin", bump);
+  window.addEventListener("focusout", bump);
   return () => {
     window.removeEventListener("keydown", onkey);
     window.removeEventListener("pointerdown", onpointer);
     window.removeEventListener("click", opts.first);
-    untrack();
+    window.removeEventListener("focusin", bump);
+    window.removeEventListener("focusout", bump);
+    untrackFocus();
   };
 }

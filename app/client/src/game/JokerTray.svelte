@@ -27,6 +27,8 @@
   import type { JokerBudget, Jokers } from "../lib/types";
   import { reasonText } from "../lib/errors";
   import Icon from "./Icon.svelte";
+  import Prompt from "./Prompt.svelte";
+  import { lastDevice } from "../lib/input.svelte";
 
   let {
     jokers = null,
@@ -72,7 +74,7 @@
         aria-label={t("joker.aria", { name: tok.label, key: tok.key })}
       >
         <span class="face"><Icon name={tok.icon} size="100%" /></span>
-        {#if !readonly}<span class="key">{tok.key}</span>{/if}
+        {#if !readonly && lastDevice.current !== "gamepad"}<span class="key">{tok.key}</span>{/if}
         {#if off}<span class="lock"><Icon name="lock" size="100%" /></span>{/if}
         {#if left?.[tok.name] != null}<span class="count" class:empty={left[tok.name] === 0}>{left[tok.name]}</span>{/if}
         {#if tok.name === "hint" && !readonly}
@@ -83,7 +85,7 @@
       </button>
       {#if !readonly}
         {#if armed === tok.name}
-          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <kbd>Enter</kbd></button>
+          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <Prompt action="confirm" /></button>
         {:else}
           <span class="bubble name glass-strong">
             {tok.label}{#if off && state?.reason}<span class="reason">{reasonText(state.reason)}</span>{/if}
@@ -92,14 +94,34 @@
       {/if}
     </div>
   {/each}
+  {#if !readonly}
+    <span class="bumpers">
+      <Prompt action={{ type: "joker-focus", step: -1 }} padOnly />
+      <Prompt action={{ type: "joker-focus", step: 1 }} padOnly />
+    </span>
+  {/if}
 </div>
 
 <style>
   .tray {
     --chip: calc(4.6 * var(--u));
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: calc(1.1 * var(--u));
+  }
+  .bumpers {
+    position: absolute;
+    top: calc(100% + 1.2 * var(--u));
+    left: 50%;
+    display: flex;
+    gap: calc(0.4 * var(--u));
+    font-size: calc(1.4 * var(--u));
+    color: var(--paper);
+    transform: translateX(-50%);
+  }
+  .bumpers :global(kbd) {
+    font-size: inherit;
   }
   .tray.readonly {
     --chip: calc(3.2 * var(--u));

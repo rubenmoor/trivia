@@ -13,6 +13,7 @@
   import Fireworks from "./Fireworks.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
+  import Prompt from "./Prompt.svelte";
   import JokerTray from "./JokerTray.svelte";
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
@@ -387,11 +388,11 @@
             {game?.player
               ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
               : t("screen.start.resume", { level: game?.level ?? 0 })}
-            <kbd>Enter</kbd>
+            <Prompt action="confirm" />
           </button>
-          <button class="secondary" onclick={newGame} disabled={busy} data-focus-id="new">{t("screen.start.new")} <kbd>{t("screen.start.newKey")}</kbd></button>
+          <button class="secondary" onclick={newGame} disabled={busy} data-focus-id="new">{t("screen.start.new")} <Prompt action="new" /></button>
         {:else}
-          <button class="candy breathe" onclick={newGame} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <kbd>Enter</kbd></button>
+          <button class="candy breathe" onclick={newGame} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <Prompt action="confirm" /></button>
         {/if}
       </div>
       {#if supply && !supply.ok}
@@ -422,7 +423,7 @@
         {:else if milestone(game.level, game.id)}
           <p class="milestone">{milestone(game.level, game.id)}</p>
         {/if}
-        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy} data-focus-default>{t("action.next")} <kbd>Enter</kbd></button>
+        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
       </div>
     </section>
   {:else if screen === "select" && game}
@@ -432,7 +433,7 @@
     <section class="select">
       <h2 class="title">{t("screen.select.title")}</h2>
       {#if game.options.length === 0}
-        <p class="error-box">{t("screen.select.empty")} <kbd>Esc</kbd> → {t("action.home")}.</p>
+        <p class="error-box">{t("screen.select.empty")} <Prompt action="menu" /> → {t("action.home")}.</p>
       {/if}
       <div class="cards">
         {#each game.options as option, i (i)}
@@ -485,7 +486,7 @@
         <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
         <p class="fun-fact">{game.last.fun_fact}</p>
       </div>
-      <button class="secondary hint" onclick={toLevel} disabled={busy} data-focus-default>{t("action.next")} <kbd>Enter</kbd></button>
+      <button class="secondary hint" onclick={toLevel} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
     </section>
   {:else if screen === "wrong" && game?.last}
     <Stage mood="wrong" />
@@ -502,7 +503,7 @@
           <p class="consolation">{consolation(game.level, game.id)}</p>
         </div>
       </div>
-      <button class="candy" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <kbd>Enter</kbd></button>
+      <button class="candy" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
     </section>
   {:else if screen === "victory" && game}
     <Stage mood="victory" />
@@ -519,12 +520,12 @@
           </div>
         {/if}
 
-        <button class="candy breathe" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <kbd>Enter</kbd></button>
+        <button class="candy breathe" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
       </div>
     </section>
   {:else}
     <Stage />
-    <p class="center">{t("screen.noData")} <kbd>Esc</kbd> → {t("action.home")}.</p>
+    <p class="center">{t("screen.noData")} <Prompt action="menu" /> → {t("action.home")}.</p>
   {/if}
 
   {#if error}

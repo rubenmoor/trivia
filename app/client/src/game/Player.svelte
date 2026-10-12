@@ -10,6 +10,7 @@
   import { focusControl, pushScope } from "../lib/input.svelte";
   import type { Player, Supply } from "../lib/types";
   import Icon from "./Icon.svelte";
+  import Prompt from "./Prompt.svelte";
 
   let {
     busy,
@@ -126,7 +127,7 @@
         {#each shown as p, i (p.name)}
           <div class="entry" style:--i={i}>
             <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} data-focus-default>
-              <kbd>{i + 1}</kbd>
+              <Prompt action={{ type: "pick", n: i + 1 }} hold />
               <span class="who">{p.name}</span>
               <span class="label">{games(p)}</span>
             </button>
@@ -153,7 +154,7 @@
             disabled={busy}
             data-focus-default
           />
-          <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <kbd>Enter</kbd></button>
+          <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" /></button>
         </div>
       </form>
     {/if}
@@ -170,7 +171,7 @@
             })}
           </p>
           <div class="row">
-            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default>{t("action.cancel")} <kbd>Esc</kbd></button>
+            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
             <button class="danger" onclick={confirmDelete} disabled={deleting}>{t("screen.player.confirm")}</button>
           </div>
         </div>
@@ -312,7 +313,7 @@
     border-color: var(--sky);
     transform: translateY(calc(-0.3 * var(--u)));
   }
-  .name-button kbd {
+  .name-button :global(kbd) {
     grid-row: span 2;
   }
   .who {

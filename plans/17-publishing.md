@@ -20,7 +20,7 @@ The non-rejected questions use 1,129 distinct files (1,102 for approved only). T
 - **Credits in the game:** each question already shows its `credit` (06). The release also needs a **credits screen** listing every file with author, license and source link, generated from the pool at build time, plus `CREDITS.md` in the shipped files.
 - **Audio:** `app/client/public/audio/CREDITS.md` (UI-10): CC0 / CC BY. Elgar's «Pomp and Circumstance» by the US Marine Band: a US government work, public domain in the US and generally treated as free elsewhere. Note it in the credits.
 - **Fonts:** Baloo 2 and Nunito are OFL. Ship the license texts with them.
-- **Controller glyphs** (IN-5): use a CC0 set or draw them. Console makers' button art can't be used freely.
+- **Controller glyphs** (IN-5): original, drawn for the game (`Glyph.svelte`). Console makers' button art can't be used freely.
 
 ## Code and content license (OQ-35)
 - The repo has **no license file** today, which means "all rights reserved" by default, even though it is public. Options: keep it like that; MIT/GPL for the code with the questions under a separate license (e.g. CC BY-SA, or reserved); or make the repo private before release.
