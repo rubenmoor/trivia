@@ -5772,7 +5772,7 @@ Trade-offs
 - 50/30: met by 5000 `base` with margin (80); a second language needs ~1900 approved of its own.
 - 30 everywhere: same 5000 already exceeds it; sets a lower bar for later languages and for a smaller early pool, but buyers notice repeats sooner.
 - Per age group: allows thin adult tops, but the store can''t say one number.', NULL, NULL, '2026-10-12T04:38:20Z', NULL, 191, NULL);
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (22, 'Approve the age-group windows', 'pending', '["approve the proposal", "keep the draft windows", "adjust (name the change)"]', 'AG-7, plan 28. Measured 2026-10-11 on 1136 approved questions (`base` 1034, `colombia` 102); full tables, weights and demand in `plans/21-age-groups.md`, "Measured windows (AG-7)". `young_teens` stays D-22 (window 1–10).
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (22, 'Approve the age-group windows', 'answered', '["approve the proposal", "keep the draft windows", "adjust (name the change)"]', 'AG-7, plan 28. Measured 2026-10-11 on 1136 approved questions (`base` 1034, `colombia` 102); full tables, weights and demand in `plans/21-age-groups.md`, "Measured windows (AG-7)". `young_teens` stays D-22 (window 1–10).
 
 Proposal (`{base}`; thinnest level by candidates; games one player can play until a level runs dry, median of 20 seeds; `{base, colombia}` in brackets):
 - `kids` 1–7 → **1–6**: 1, 2, 2–3, 2–4, 3–4 ×2, 3–5, 4–5 ×2, 4–6, 5–6 ×2. Thinnest L1 (1) 36 → 36. Until dry 9 → 9 ([9 → 9]). Draft top 6–7 = a 13-year-old, too hard for 10-year-olds.
@@ -5784,7 +5784,7 @@ Proposal (`{base}`; thinnest level by candidates; games one player can play unti
 
 Thin top, for milestone 1 (not fixed here): difficulty 14: 19 approved, 15: 8. Adults'' top levels run dry first even widened; `young_adults`'' 11–13 (147) after 10 games.
 
-Answer is applied by task 127.', NULL, NULL, '2026-10-12T04:41:04Z', NULL, 126, NULL);
+Answer is applied by task 127.', 'approve the proposal', NULL, '2026-10-12T04:41:04Z', '2026-10-12T16:39:24Z', 126, NULL);
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (23, 'Competitive format (OQ-37)?', 'answered', '["Relay ladder on one shared tower, turns in fixed order; each player 1 joker per game (any kind); no attack jokers; per-player windows for mixed age groups; burns 12+(N−1)+N per won game (≈1× solo Normal); shell: nothing", "As 1, but one window for the game (the youngest player''s)", "As 1, but each player gets the chosen preset''s budget (pm decision 19); burns 12+(N−1)+8N (4 adults today: 1 game)", "Parallel ladders: own tower per player, one level per round, all see all; burns 12N–20N", "Buzzer round: everyone sees the question, first to buzz answers, points per round; ~12 burns per round; needs one pad per player or phones"]', 'Plan 41 / MD-8. Several players, no gamemaster, one screen. Input is the second decision («Multiplayer input and couch co-op (OQ-37)»).
 
 Facts (no web in this run: sources from memory, re-check in task 202)
