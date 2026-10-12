@@ -24,7 +24,9 @@ stateDiagram-v2
   [*] --> Start
   Language --> Start: confirm (reload if the UI language changed)
   Start --> Player: «¡Jugar!» (new game)
-  Player --> Level: name chosen
+  Player --> Choice: name chosen
+  Choice --> Player: «Atrás» / Backspace
+  Choice --> Level: «¡A jugar!» (new game, «¡Hola, …!»)
   Level --> Select: continue
   Select --> Question: pick a description
   Question --> Correct: final answer right
@@ -55,6 +57,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Language | First start only (D-86): «Elige el idioma», UI languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n` | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / type + `Enter` | Normal |
+| Choice | «¿Cómo juega …?»: age group, base bundle, other bundles (plan 29) | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso / Francotirador hit | Intense (off while question media plays); after submitting: most intense |
@@ -75,10 +78,20 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 ### Player (D-28)
 - «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).
-- After a name is chosen, the server runs the supply check **for that player** (GF-5); if it fails, the screen says which levels lack questions, as the Start screen does today.
+- A chosen name goes to the Choice screen; the supply check is there.
 - Each name can be deleted with all its games and progress (GF-7): a small trash button on hover or keyboard focus, then a confirmation.
-- A short greeting with the name («¡Hola, Sofía!») plays into the transition to Level. The name stays in a corner of the Level screen.
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
+
+### Choice (plan 29, AG-7, BN-6)
+- `game/Choice.svelte`, «¿Cómo juega Sofía?»: what the next game plays; preset: the player's newest game, else the language's defaults (engine `choice` route, plan 71).
+- Age group: four tiles in `age-groups.json` order, name + ages («6–10 años», «23+ años»), keys `1`–`4`; the window isn't shown.
+- Bundles: only those of the new game's question language (`bundlesFor`), file order, names in that language.
+  - Base bundles: one-of-N tiles, exactly one selected; picking another deselects the first.
+  - Others: on/off tiles («activado» / «desactivado»).
+  - Key per bundle: first letter of its name (accents stripped) not taken by an earlier bundle, else its next letter; never the flag, new, replay or Soplo key (es: `M` `N` `R` `S`). es: `B` Básico, `C` Colombia.
+- Supply on entering and on every change: the choice, plus each group with these bundles. A group that can't fill a game: dimmed, «Faltan preguntas», still selectable. The choice can't fill one: «¡A jugar!» off, the supply report (`SupplyReport.svelte`) below. Zero or two base bundles: off, with the engine's reason.
+- «¡A jugar!» / `Enter`: `new` with `{player, age_group, bundles}`; a refusal shows here. Then «¡Hola, Sofía!» plays into the transition to Level; the name stays in a corner of the Level screen.
+- «Atrás» / `Backspace`: back to Player. `Esc`: the overlay.
 
 ### Level (between questions)
 Players start at **level 1** (easiest question) and must answer **level 12** to win (D-20). Before every question, they see where they are.
@@ -203,7 +216,7 @@ The detailed action set and any extra keys are owned by `05-gamemaster-controls.
 ## Input
 **Rule (IN-1): no action without a clickable control.** A key is a shortcut shown on its button (`<kbd>`), never the only way. The overlay opens with `Esc` or the faint ☰ button in the top right corner.
 
-Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer, `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
+Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer (Choice: an age group; a bundle's letter selects or toggles it), `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
 
 **Rule (IN-2, IN-3): actions, not keys.** Screens and dialogs listen to actions from `app/client/src/lib/input.svelte.ts` (`pushScope`), never to `keydown`; `grep -rn "keydown\|KeyboardEvent" app/client/src` lists only that file. Each screen and dialog declares a focus default (`data-focus-default`) and a `root`, so arrows + `Enter` + `Esc`/`Backspace` play it (spatial focus, ring, memory: `lib/focus.ts`, plan 44). ☰ and flag stay unfocusable (`data-nofocus`).
 

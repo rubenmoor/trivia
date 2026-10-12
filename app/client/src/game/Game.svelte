@@ -1,6 +1,6 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
-  // screens Start → Player → Level → Select → Question → Correct / Wrong → … → Victory, with one
+  // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, fetchReports, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
@@ -10,6 +10,7 @@
   import { listenPads } from "../lib/gamepad.svelte";
   import { listen, pushScope, type Action } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, Report, Supply } from "../lib/types";
+  import Choice from "./Choice.svelte";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
   import Hud from "./Hud.svelte";
@@ -24,17 +25,19 @@
   import Reports from "./Reports.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
+  import SupplyReport from "./SupplyReport.svelte";
   import { swap } from "./swap";
   import "./theme.css";
   import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
-  type Screen = "language" | "start" | "player" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
+  type Screen = "language" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
     start: "normal",
     player: "normal",
+    choice: "normal",
     level: "normal",
     select: "normal",
     question: "question",
@@ -69,8 +72,10 @@
   let main = $state<HTMLElement>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
-  /** The supply report when the pool can't fill a game for the chosen player. */
-  let refused = $state<Supply | null>(null);
+  /** The name picked on Player, for the Choice screen. */
+  let chosen = $state<string | null>(null);
+  /** Why `new` refused the Choice screen's choice (plan 29). */
+  let refused = $state<GameError | null>(null);
   /** The save file was unusable and moved to a backup (plan 55): shown once on Start. */
   let notice = $state<ReturnType<typeof takeSaveNotice>>(null);
   /** Media that was playing when the overlay opened; it resumes on close. */
@@ -238,16 +243,29 @@
     await go("player", "whoosh");
   }
 
-  /** A name was picked or typed: start the game for that player, greet, then the Level screen. */
+  /** A name was picked or typed: their age group and bundles next (plan 29). */
   async function choosePlayer(name: string) {
     if (busy) return;
+    chosen = name;
     refused = null;
-    const before = supply;
-    if (!(await act("new", { player: name }))) {
-      if (supply !== before && supply && !supply.ok) refused = supply; // act() stored this player's report
+    await go("choice", "whoosh");
+  }
+
+  /** The Choice screen's «¡A jugar!»: start the game, greet, then the Level screen. */
+  async function startGame(choice: { age_group: string; bundles: string[] }) {
+    if (busy || chosen === null) return;
+    busy = true;
+    try {
+      game = await gameAction("new", { player: chosen, ...choice });
+      error = saveWarning();
+      refused = null;
+    } catch (e) {
+      if (e instanceof GameError && e.code !== "server_error") refused = e;
+      else error = errorText(e);
+      busy = false;
       return;
     }
-    greeting = game?.player ?? name;
+    greeting = game?.player ?? chosen;
     sfx("ready");
     busy = true;
     await sleep(GREETING_MS);
@@ -380,7 +398,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "player" || on === "question") return; // they push their own
+    if (on === "language" || on === "player" || on === "choice" || on === "question") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
@@ -447,20 +465,14 @@
           <button class="candy breathe" onclick={newGame} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <Prompt action="confirm" /></button>
         {/if}
       </div>
-      {#if supply && !supply.ok}
-        <div class="supply glass">
-          <p>{t("supply.short", { n: supply.available })}</p>
-          <ul>
-            {#each supply.levels.filter((l) => l.missing) as l (l.level)}
-              <li>{t("supply.level", { level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
-            {/each}
-          </ul>
-        </div>
-      {/if}
+      {#if supply}<SupplyReport {supply} />{/if}
     </section>
   {:else if screen === "player"}
     <Stage />
-    <Player {busy} {greeting} {refused} onchoose={choosePlayer} ondeleted={refresh} />
+    <Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
+  {:else if screen === "choice" && chosen !== null}
+    <Stage />
+    <Choice player={chosen} {busy} {greeting} {refused} onstart={startGame} onback={() => go("player", "whoosh")} />
   {:else if screen === "level" && game}
     <Stage />
     <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
@@ -699,21 +711,12 @@
     gap: calc(1.6 * var(--u));
     margin-top: calc(2 * var(--u));
   }
-  .supply {
-    padding: calc(1 * var(--u)) calc(1.6 * var(--u));
-    font-size: calc(1.1 * var(--u));
-    color: var(--amber);
-    text-align: left;
-  }
   .notice {
     max-width: calc(48 * var(--u));
     padding: calc(1 * var(--u)) calc(1.6 * var(--u));
     font-size: calc(1.1 * var(--u));
     color: var(--amber);
     overflow-wrap: anywhere;
-  }
-  .supply ul {
-    margin: calc(0.4 * var(--u)) 0 0;
   }
 
   /* Level */

@@ -2,28 +2,22 @@
   // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the
   // known names (most recent first, keys 1–9) and a field for a new name. Names are labels; what the
   // family saw counts for the whole save (plan 65). Each name can be deleted with its games, after a
-  // confirmation (GF-7); its seen questions stay seen.
+  // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 29).
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { focusControl, pushScope } from "../lib/input.svelte";
-  import type { Player, Supply } from "../lib/types";
+  import type { Player } from "../lib/types";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
   let {
     busy,
-    greeting,
-    refused,
     onchoose,
     ondeleted,
   }: {
     busy: boolean;
-    /** The chosen name while «¡Hola, …!» plays into the transition, else null. */
-    greeting: string | null;
-    /** The supply report when the pool can't fill a game for the chosen player (GF-5). */
-    refused: Supply | null;
     onchoose: (name: string) => void;
     /** A player was deleted (their running game may be gone too). */
     ondeleted: () => void;
@@ -117,76 +111,62 @@
 </script>
 
 <section class="player" bind:this={section}>
-  {#if greeting}
-    <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name">{greeting}</span>{t("screen.player.helloClose")}</h1>
-  {:else}
-    <h1 class="title">{t("screen.player.title")}</h1>
+  <h1 class="title">{t("screen.player.title")}</h1>
 
-    {#if shown.length}
-      <div class="names">
-        {#each shown as p, i (p.name)}
-          <div class="entry" style:--i={i}>
-            <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} data-focus-default>
-              <Prompt action={{ type: "pick", n: i + 1 }} hold />
-              <span class="who">{p.name}</span>
-              <span class="label">{games(p)}</span>
-            </button>
-            <button class="delete" onclick={() => askDelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
-              <Icon name="trash" />
-            </button>
-          </div>
-        {/each}
+  {#if shown.length}
+    <div class="names">
+      {#each shown as p, i (p.name)}
+        <div class="entry" style:--i={i}>
+          <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} data-focus-default>
+            <Prompt action={{ type: "pick", n: i + 1 }} hold />
+            <span class="who">{p.name}</span>
+            <span class="label">{games(p)}</span>
+          </button>
+          <button class="delete" onclick={() => askDelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
+            <Icon name="trash" />
+          </button>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
+  {#if loaded}
+    <form class="new glass" onsubmit={submit}>
+      <label class="label" for="new-player">{t(shown.length ? "screen.player.newLabel" : "screen.player.firstLabel")}</label>
+      <div class="row">
+        <input
+          id="new-player"
+          bind:this={input}
+          bind:value={name}
+          maxlength="30"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder={t("screen.player.placeholder")}
+          disabled={busy}
+          data-focus-default
+        />
+        <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" off={!typed} /></button>
       </div>
-    {/if}
+    </form>
+  {/if}
 
-    {#if loaded}
-      <form class="new glass" onsubmit={submit}>
-        <label class="label" for="new-player">{t(shown.length ? "screen.player.newLabel" : "screen.player.firstLabel")}</label>
+  {#if error}<p class="error">{error}</p>{/if}
+
+  {#if doomed}
+    <div class="backdrop">
+      <div class="dialog" bind:this={dialog} role="alertdialog" aria-labelledby="delete-title">
+        <h2 id="delete-title">{t("screen.player.confirmOpen")}<span class="doomed">{doomed.name}</span>{t("screen.player.confirmClose")}</h2>
+        <p>
+          {t("screen.player.confirmBody", {
+            lose: doomed.games ? t("screen.player.lose", { n: doomed.games }) : t("screen.player.loseNone"),
+          })}
+        </p>
         <div class="row">
-          <input
-            id="new-player"
-            bind:this={input}
-            bind:value={name}
-            maxlength="30"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder={t("screen.player.placeholder")}
-            disabled={busy}
-            data-focus-default
-          />
-          <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" off={!typed} /></button>
-        </div>
-      </form>
-    {/if}
-
-    {#if error}<p class="error">{error}</p>{/if}
-
-    {#if doomed}
-      <div class="backdrop">
-        <div class="dialog" bind:this={dialog} role="alertdialog" aria-labelledby="delete-title">
-          <h2 id="delete-title">{t("screen.player.confirmOpen")}<span class="doomed">{doomed.name}</span>{t("screen.player.confirmClose")}</h2>
-          <p>
-            {t("screen.player.confirmBody", {
-              lose: doomed.games ? t("screen.player.lose", { n: doomed.games }) : t("screen.player.loseNone"),
-            })}
-          </p>
-          <div class="row">
-            <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
-            <button class="danger" onclick={confirmDelete} disabled={deleting}>{t("screen.player.confirm")}</button>
-          </div>
+          <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
+          <button class="danger" onclick={confirmDelete} disabled={deleting}>{t("screen.player.confirm")}</button>
         </div>
       </div>
-    {/if}
-    {#if refused && !refused.ok}
-      <div class="supply glass">
-        <p>{t("supply.short", { n: refused.available })}</p>
-        <ul>
-          {#each refused.levels.filter((l) => l.missing) as l (l.level)}
-            <li>{t("supply.level", { level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
-          {/each}
-        </ul>
-      </div>
-    {/if}
+    </div>
   {/if}
 </section>
 
@@ -353,40 +333,15 @@
   input::placeholder {
     color: var(--slate-400);
   }
-  .hello {
-    font-size: calc(7 * var(--u));
-    animation: hello 0.8s var(--spring) backwards;
-  }
-  .hello .name {
-    color: var(--amber);
-  }
   .error {
     margin: 0;
     color: var(--coral);
     font-size: calc(1.1 * var(--u));
   }
-  .supply {
-    padding: calc(1 * var(--u)) calc(1.6 * var(--u));
-    font-size: calc(1.1 * var(--u));
-    color: var(--amber);
-    text-align: left;
-  }
-  .supply p {
-    margin: 0;
-  }
-  .supply ul {
-    margin: calc(0.4 * var(--u)) 0 0;
-  }
   @keyframes arrive {
     from {
       opacity: 0;
       transform: translateY(calc(2 * var(--u))) scale(0.94);
-    }
-  }
-  @keyframes hello {
-    from {
-      opacity: 0;
-      transform: scale(0.5) rotate(-4deg);
     }
   }
 </style>

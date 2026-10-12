@@ -1,7 +1,8 @@
 import * as engine from "../engine/api.ts";
+import { bundlesFor } from "../engine/pool.ts";
 import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
 import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
-import type { Difficulty, ErrorInfo, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Report, Supply } from "./types";
+import type { Choice, Difficulty, ErrorInfo, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Report, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
 
@@ -102,6 +103,30 @@ export interface GameActionBody {
   level?: number;
 }
 
+/** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
+ * (plan 71) with their names in that locale. */
+export interface ChoiceOptions {
+  groups: { id: string; name: string; ages: readonly [number, number | null] }[];
+  bundles: { id: string; base: boolean; name: string; description: string }[];
+}
+
+export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
+  return read((save, data) => {
+    const groups = data.ageGroups.map(({ id, name, ages }) => ({ id, name, ages }));
+    const bundles = bundlesFor(data).map((b) => {
+      const n = data.names.bundles[b.id];
+      return { id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description };
+    });
+    return { save, status: 200, body: { groups, bundles } };
+  }, "next");
+}
+
+/** The player's preset (missing fields) and the supply of a choice (plan 27's `choice` route); a
+ * refused choice throws GameError (`base_bundle_count`, `bundle_not_offered`). */
+export async function fetchChoice(body: { player?: string; age_group?: string; bundles?: string[] }): Promise<{ choice: Choice; supply: Supply }> {
+  return read((save, data) => engine.choice(save, data, { ...body }), "next");
+}
+
 /** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */
 export async function playJoker(body: {
   joker: JokerName;
@@ -154,3 +179,6 @@ export async function setLanguage(language: Language): Promise<Language> {
   const { ui, questions } = await fetchLanguage();
   return (await run((save) => engine.setLanguage(save, { ...language }, { ui, questions }))).language;
 }
+
+/** The age group of a choice without one (plan 27). */
+export { DEFAULT_AGE_GROUP } from "../engine/game.ts";

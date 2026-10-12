@@ -119,6 +119,21 @@ const es = {
     arm: "¿Usar {name}?",
     aria: "{name} ({key})",
   },
+  /** The Choice screen (plan 29): age group and bundles before a game. */
+  choice: {
+    /** «¿Cómo juega <name>?» with the name highlighted. */
+    titleOpen: "¿Cómo juega ",
+    titleClose: "?",
+    groups: "Edad",
+    ages: "{lo}–{hi} años",
+    agesFrom: "{lo}+ años",
+    /** A group whose window can't fill a game with these bundles. */
+    short: "Faltan preguntas",
+    bundles: "Paquetes",
+    on: "activado",
+    off: "desactivado",
+    start: "¡A jugar!",
+  },
   screen: {
     loading: "Cargando…",
     noData: "Esta pantalla no tiene datos.",

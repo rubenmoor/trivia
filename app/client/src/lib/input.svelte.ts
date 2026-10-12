@@ -18,7 +18,9 @@ export type Intent =
   | { type: "flag" }
   | { type: "new" }
   | { type: "submit" }
-  | { type: "joker-focus"; step: 1 | -1 };
+  | { type: "joker-focus"; step: 1 | -1 }
+  /** A screen's own letter key (a bundle on Choice); `key` lower case. */
+  | { type: "letter"; key: string };
 export type Action = Intent & { device: Device };
 /** A scope's extra keys, lower case (e.g. `n` → new on Start). */
 export type Keys = Record<string, Intent>;
@@ -87,6 +89,7 @@ const ARROW_LABELS: Record<Dir, string> = { up: "↑", down: "↓", left: "←",
 export function keyLabel(i: Intent): string | null {
   if (i.type === "pick") return String(i.n);
   if (i.type === "navigate") return ARROW_LABELS[i.dir];
+  if (i.type === "letter") return i.key.toUpperCase();
   return KEY_LABELS[i.type] ?? null;
 }
 

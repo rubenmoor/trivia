@@ -104,6 +104,18 @@ export const en = {
     arm: "Use {name}?",
     aria: "{name} ({key})",
   },
+  choice: {
+    titleOpen: "How does ",
+    titleClose: " play?",
+    groups: "Age",
+    ages: "{lo}–{hi} years",
+    agesFrom: "{lo}+ years",
+    short: "Not enough questions",
+    bundles: "Bundles",
+    on: "on",
+    off: "off",
+    start: "Let's play!",
+  },
   screen: {
     loading: "Loading…",
     noData: "This screen has no data.",
