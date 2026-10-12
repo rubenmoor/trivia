@@ -7,11 +7,13 @@ export type Pad = { buttons: readonly boolean[]; axes: readonly number[] };
 export type PadState = { buttons: readonly boolean[]; stick: Dir | "held" | null };
 export type PadStyle = "xbox" | "playstation";
 
-/** Standard mapping: A, B, View, Start, Y, D-pad. LB/RB, X, triggers, right stick: decision 9. */
-const BUTTONS: Record<number, Intent> = {
+/** Standard mapping: A, B, Y, LB/RB, View, Start, D-pad; X and triggers only per scope (Scope.pad). */
+export const BUTTONS: Record<number, Intent> = {
   0: { type: "confirm" },
   1: { type: "back" },
   3: { type: "replay" },
+  4: { type: "joker-focus", step: -1 },
+  5: { type: "joker-focus", step: 1 },
   8: { type: "flag" },
   9: { type: "menu" },
   12: { type: "navigate", dir: "up" },
@@ -38,10 +40,10 @@ function along(d: Dir, x: number, y: number) {
 }
 
 /** One frame: press edges and stick moves → intents; no repeat while held. */
-export function step(prev: PadState, pad: Pad): { next: PadState; actions: Intent[] } {
+export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState; actions: Intent[] } {
   const actions: Intent[] = [];
   pad.buttons.forEach((down, i) => {
-    if (down && !prev.buttons[i] && BUTTONS[i]) actions.push(BUTTONS[i]);
+    if (down && !prev.buttons[i] && map[i]) actions.push(map[i]);
   });
   const [x = 0, y = 0] = pad.axes;
   let stick = prev.stick;

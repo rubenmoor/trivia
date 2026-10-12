@@ -1,7 +1,7 @@
 // The gamepad source (plans/14-input.md, IN-4; plan 45): polls standard pads each frame while one
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
-import { FRESH, HELD, step, styleOf, type PadState, type PadStyle } from "./gamepad";
-import { dispatch } from "./input.svelte";
+import { BUTTONS, FRESH, HELD, step, styleOf, type PadState, type PadStyle } from "./gamepad";
+import { dispatch, padMap } from "./input.svelte";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });
@@ -25,10 +25,8 @@ export function listenPads(first: () => void): () => void {
         prev.set(g.index, HELD); // held buttons don't fire on return
         continue;
       }
-      const { next, actions } = step(prev.get(g.index) ?? FRESH, {
-        buttons: g.buttons.map((b) => b.pressed),
-        axes: g.axes,
-      });
+      const pad = { buttons: g.buttons.map((b) => b.pressed), axes: g.axes };
+      const { next, actions } = step(prev.get(g.index) ?? FRESH, pad, padMap(BUTTONS));
       prev.set(g.index, next);
       for (const intent of actions) {
         padStyle.current = styleOf(g.id);

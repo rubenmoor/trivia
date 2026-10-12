@@ -15,7 +15,9 @@ export type Intent =
   | { type: "navigate"; dir: Dir }
   | { type: "replay" }
   | { type: "flag" }
-  | { type: "new" };
+  | { type: "new" }
+  | { type: "submit" }
+  | { type: "joker-focus"; step: 1 | -1 };
 export type Action = Intent & { device: Device };
 /** A scope's extra keys, lower case (e.g. `n` → new on Start). */
 export type Keys = Record<string, Intent>;
@@ -35,6 +37,8 @@ export type Scope = {
   modal?: boolean;
   /** Gets actions while a transition runs (overlay, dialogs). */
   whileBusy?: boolean;
+  /** Pad buttons (standard index) that differ here, e.g. face buttons pick answers (Question). */
+  pad?: () => Record<number, Intent>;
   /** A letter no scope wants focuses this field and goes into it (Player). */
   text?: () => HTMLInputElement | undefined;
 };
@@ -112,6 +116,13 @@ export function dispatch(action: Action): boolean {
   if (action.type !== "navigate" || busy()) return false;
   const at = rooted();
   return at ? navigate(action.dir, at[0].name, at[1]) : false;
+}
+
+/** The pad mapping: `base` with the scopes' overrides, top wins, none from below a modal scope. */
+export function padMap(base: Record<number, Intent>): Record<number, Intent> {
+  let from = stack.length - 1;
+  while (from > 0 && !stack[from].modal) from--;
+  return Object.assign({}, base, ...stack.slice(from).map((s) => s.pad?.() ?? {}));
 }
 
 function textField(el: Element | null) {

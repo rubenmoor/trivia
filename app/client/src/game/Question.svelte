@@ -6,7 +6,7 @@
   import { gameAction } from "../lib/api";
   import { errorText, reasonText } from "../lib/errors";
   import { t } from "../lib/i18n";
-  import { pushScope, type Action, type Dir, type Keys } from "../lib/input.svelte";
+  import { focusControl, pushScope, type Action, type Dir, type Intent, type Keys } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
   import DifficultyDial from "./DifficultyDial.svelte";
@@ -353,12 +353,30 @@
     ...Object.fromEntries(LETTERS.map((l, i) => [l.toLowerCase(), { type: "pick", n: i + 1 }])),
     [REPLAY_KEY.toLowerCase()]: { type: "replay" },
   };
+  // Pad (decision 9): Y/B/X/A pick by position, RT submits, LT unlocks; on a token A/B are confirm/back.
+  const PAD_PICKS: Record<number, Intent> = Object.fromEntries([3, 1, 2, 0].map((b, i) => [b, { type: "pick", n: i + 1 }]));
+  const PAD_FINAL: Record<number, Intent> = { 6: { type: "back" }, 7: { type: "submit" } };
+  const PAD_TOKEN: Record<number, Intent> = { 0: { type: "confirm" }, 1: { type: "back" } };
+  function padMap(): Record<number, Intent> {
+    const f = document.activeElement;
+    const other = f instanceof HTMLElement && f.hasAttribute("data-nav") && !tiles.includes(f as HTMLButtonElement);
+    return { ...PAD_PICKS, ...(other ? PAD_TOKEN : {}), ...PAD_FINAL };
+  }
+
+  /** LB/RB: focus the previous/next playable token, wrapping. */
+  function focusToken(step: 1 | -1) {
+    const list = [...(screenEl?.querySelectorAll<HTMLButtonElement>(".tray .token:not(:disabled)") ?? [])];
+    if (!list.length) return;
+    const at = list.indexOf(document.activeElement as HTMLButtonElement);
+    focusControl(list[at < 0 ? (step > 0 ? 0 : list.length - 1) : (at + step + list.length) % list.length]);
+  }
   const answer = (a: Action) => (a.type === "pick" && a.n <= question.answers.length ? a.n - 1 : null);
 
   $effect(() =>
     pushScope({
       name: "question",
       keys: KEYS,
+      pad: padMap,
       root: () => screenEl,
       pressable: (el) => locked === null || el !== tiles[locked],
       handle: (a) => {
@@ -366,7 +384,8 @@
         if (a.type === "joker") press(a.name);
         else if (i !== null) tap(i);
         else if (a.type === "back") unlock();
-        else if (a.type === "confirm") submit();
+        else if (a.type === "confirm" || a.type === "submit") submit();
+        else if (a.type === "joker-focus") focusToken(a.step);
         else if (a.type === "replay") replay();
         else return false;
         return true;
