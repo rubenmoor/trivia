@@ -3818,8 +3818,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', '2026-10-12T01:04:38Z', 212);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (218, 45, 'create tasks for plan 45', 'split', 'done', 1000, '2026-10-12, tasks 226–229; 227–229 wait for decision 9', 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:58:22Z', '2026-10-12T01:05:15Z', 213);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (219, 46, 'create tasks for plan 46', 'split', 'open', 1000, NULL, 'Split plan 46 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:00:20Z', NULL, 214);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (219, 46, 'create tasks for plan 46', 'split', 'done', 1000, '2026-10-12, tasks 230–231; both wait for decision 9 (via task 228)', 'Split plan 46 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:00:20Z', '2026-10-12T01:05:46Z', 214);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (220, 47, 'create tasks for plan 47', 'split', 'open', 1000, NULL, 'Split plan 47 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:02:33Z', NULL, 215);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (221, 48, 'create tasks for plan 48', 'split', 'open', 1000, NULL, 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -3894,6 +3894,28 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Task note: steps for the gamemaster''s check in Chromium on Linux and Windows with an Xbox-style pad.
 
 Done when: `npm run check`, `npm run build` pass; the walk-through finds no screen a pad can''t operate; keyboard and mouse behave as before.', '2026-10-12T01:05:13Z', NULL, 218);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (230, 46, 'Letter picker for player names with a pad (SW-4, IN-4)', 'work', 'open', NULL, NULL, 'Task 1 of plan 46 ("Letter picker" in Design). A new player name can be typed with a pad only; keyboard and mouse see today''s Player screen unchanged.
+
+- Needs plan 44 (actions, focus, dialog scope) and plan 45 (`lib/gamepad.ts`, `<Prompt>`, `lastDevice`; task 228). If missing: stop, say so in the note, leave open. Waits for decision 9 because task 228 does.
+- `app/client/src/game/LetterPicker.svelte` (new): modal dialog, glass panel like the delete dialog; name as typed above the grid; 9 columns `A`–`Z`, `Ñ`, `Á É Í Ó Ú Ü`, `-`, row «Espacio», «⌫ Borrar», «Listo». Plan 44''s spatial focus, default «A».
+- Hook in `Player.svelte`: opens on gamepad `confirm` with the name field focused, or via the field''s pad prompt «Ⓐ Escribir» (`<Prompt action="confirm">`, only when `lastDevice` is the pad).
+- Auto-capital helper (pure function): first letter and the one after space or `-` upper case, rest lower case; same `typed` cleanup, `maxlength` 30.
+- Pad: A types; B deletes last letter, closes on empty name; Start closes; «Listo» = `onchoose(typed)`, disabled while empty; closing keeps the text. Mouse clicks on keys; physical letters/`Backspace`/`Enter`/`Esc` while open.
+- Strings «Escribir», «Espacio», «Borrar», «Listo», «Escribe tu nombre»: `t()` (`picker.*`) if `lib/i18n.ts` exists, else literals marked `// LUI-1`.
+- No new dependency.
+
+Check: `npm run check`, `npm run build`; throw-away script for the helper («ana sofía» → «Ana Sofía», «-», «ñ», 30-char limit); in Chromium with a pad (or forced `device: "gamepad"`): new player created pad-only, B deletes, Start closes and keeps text, mouse clicks work; keyboard: no picker, no new prompt.
+
+Docs: `plans/04-ui-tv-display.md` "Player", `directory.md` (`LetterPicker.svelte`), `plans/14-input.md` Steam Deck paragraph ("in-game letter picker, plan 46"), one line in `plans/18-steam-integration.md` "Steamworks" (SW-8 `ShowFloatingGamepadTextInput` may replace the picker under Steam; picker stays the fallback).', '2026-10-12T01:05:44Z', NULL, 219);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (231, 46, 'Screen check at 1280×800, 1280×720 and 4K, fixes (SW-4)', 'work', 'open', 370, NULL, 'Task 2 of plan 46 ("Size rule", "Check sizes", "What to look for", "Screens and states", "Screenshots" in Design). Runs after the letter picker task so the picker is checked.
+
+- Needs: letter picker (task 1 of plan 46), plan 45 glyphs (task 228), and the final screen set: plans 29, 30, 31 (`Placeholder.svelte` gone), 36. Screenshots: Playwright (throw-away, temp dir) if pm decision 6 says so, else a throw-away Electron main script on the desktop shell (plan 34). If something is missing: stop, say so in the note, leave open.
+- Every screen and state from the plan at 1280×800, 1280×720, 1920×1080, 3840×2160, with keyboard prompts and with Xbox glyphs; long content picked from `app/data/pool.json` by script, 9 names of 30 chars, long supply report, error box. Script prints every element with computed `font-size` < 9 px. PNGs in a temp dir, not the repo.
+- Fixes only in `--u` multiples (at least `.credit` in `Question.svelte` 0.8 → 0.9); no media query, no Deck layout; no `px`/`rem` font sizes in `app/client/src/game/`. Repeat until the small-text report is empty and nothing clips or leaves the safe area at 720p.
+
+Check: 1080p screenshots before/after differ only at intended fixes (ImageMagick `compare`); 4K sane.
+
+Docs: size rule in `plans/10-visual-design.md` (type scale) and `plans/04-ui-tv-display.md` "Implementation notes"; `plans/18-steam-integration.md` SW-4 `[x]` with note (sizes, tool, fixes); `plans/14-input.md` Deck paragraph; `plans/project.md` in sync. Task note lists what to check on a real Deck (Linux build, Game Mode, built-in controls only) for part 8''s checklist (plan 48).', '2026-10-12T01:05:44Z', NULL, 219);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4000,6 +4022,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (84, 216, '2026-10-12T01:02:45Z', '2026-10-12T01:04:11Z', 'done', NULL, 0, '2a00239b3a701c7a4957c1debfb8beaf7e62766a', 'claude-opus-5-5[1m]', '8a00b665-f8d3-47e8-9619-c262df80cb25', 13, 22, 8318, 447245, 46264, 0.62600900000000015, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (85, 217, '2026-10-12T01:04:11Z', '2026-10-12T01:04:43Z', 'done', NULL, 0, 'b99006b5b5b4674068fb4724c51ce840ce989bcb', 'claude-opus-5-5[1m]', 'd156c9ef-d0b7-404d-a27d-c5c1403bef3a', 5, 10, 3281, 156802, 29071, 0.3295884, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (86, 218, '2026-10-12T01:04:43Z', '2026-10-12T01:05:20Z', 'done', NULL, 0, '592fc7fdbb0b3e7715e2c76486f3460cae1f9e24', 'claude-opus-5-5[1m]', 'b8d1cd04-72b3-49a6-9ea5-810fa620663e', 7, 14, 4029, 215953, 28191, 0.3493546, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (87, 219, '2026-10-12T01:05:21Z', '2026-10-12T01:05:52Z', 'done', NULL, 0, 'f08803b3cbe6028a60146ddd82e40a230a4e5316', 'claude-opus-5-5[1m]', 'abb5b477-9f26-4530-8121-353a38d45891', 5, 10, 3070, 161592, 32421, 0.35312640000000006, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -4025,3 +4048,5 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (227, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (228, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (229, 9);
+INSERT INTO task_decision (task_id, decision_id) VALUES (230, 9);
+INSERT INTO task_decision (task_id, decision_id) VALUES (231, 9);
