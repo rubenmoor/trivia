@@ -45,7 +45,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - [ ] PUB-2 Store the full license data per media item (license URL, author link, restrictions) in the pool, not just the `credit` string; `validate` requires it for approved questions.
 - [ ] PUB-3 Replace the problem files from PUB-1 in the review tool.
 - [ ] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file.
-- [ ] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries).
+- [ ] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Plan: pm plan 47 (Vite plugin writes `credits.json` + `CREDITS.md` into `dist/`; screen from the ☰ overlay).*
 - [ ] PUB-6 Steamworks signup, tax and identity; pay the app credit (OQ-33).
 - [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
 - [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line.

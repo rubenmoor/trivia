@@ -2190,6 +2190,52 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Screenshots of every screen at 1280×800 and 1280×720 pass: no text below 9 px, nothing clipped or outside the safe area; 4K sane; the 1080p TV look unchanged except intended fixes.
 - A new player can be created with a pad only; the family''s Player screen with keyboard and mouse is unchanged.
 - SW-4 `[x]` in `plans/18-steam-integration.md`; the size rule in 10 and 04.', '2026-10-12T01:00:20Z', 214);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (47, 8, 'Credits screen and generated CREDITS.md (PUB-5)', 400, 'The build generates the game''s credits, `credits.json` for a new Credits screen and `CREDITS.md` for the shipped files. It lists every media file in `app/data/pool.json` (author, licence, source link) plus the fixed lists: sounds, fonts, controller glyphs, libraries, and the game''s own licence if decided. Part 7 of masterplan 8 (S3); owner `plans/17-publishing.md` ("Media licenses" → "Credits in the game", PUB-5). Works in the browser setup and later in the desktop shell. The family''s game is unchanged except for one new overlay item.
+
+## Depends on
+- Plan 26 "Licence data in the pool" (priority 900): slot fields `provider`, `license`, `license_url`, `author`, `author_url` (plus `restrictions`, `pd_reasons`). Task 1 waits until plan 26''s migration task (113) is done; if it isn''t, task 1 stops and says so.
+- Plan 44 "Action layer and focus navigation" (500): `navigate`, `back`, scopes. Task 2 waits for plan 44''s tasks.
+- Plan 45 "Gamepad input and button glyphs" (490): its task 3 writes "original, drawn for the game (`Glyph.svelte`)" into 17''s "Controller glyphs" line. The glyph entry here is conditional (only if `Glyph.svelte` exists), so no wait; the pad check in task 2 needs plan 45''s task 1 (otherwise the task note lists it for the gamemaster).
+- Plan 40 "Code and content licence (OQ-35)" (290): conditional. If `LICENSE` (and a content licence file) exist at build time, the generator adds a "Game" section; if not, nothing. No wait.
+- Plan 34 "Desktop shell (OQ-29)" and part 1 (task 209''s plan): the shell''s own entry (e.g. Electron, MIT, plus Chromium''s licence file that Electron ships) is added by whoever adds the shell. Task 1 adds one line to `plans/18-steam-integration.md` "Desktop shell" saying so.
+- Plan 21 "t() helper" (500): screen strings through `t()` if `lib/i18n.ts` exists, else Spanish literals marked `// LUI-1`.
+
+## Design
+- **Data for the generator.** `app/data/pool.json` today keeps only `credit` per slot. Task 1 adds `provider`, `license`, `license_url`, `author`, `author_url` to `MEDIA_PLAY_FIELDS` and `BACKGROUND_PLAY_FIELDS` in `authoring/tools/pool_export.py` (as plan 26 foresaw), then `qgen export`; `qgen validate` passes. `restrictions` and `pd_reasons` stay in the source pool (audit data, not credits). Size: ~1,150 slots × ~150 bytes, fine.
+- **Generator: a Vite plugin** `app/client/credits.ts` (new, imported by `vite.config.ts`; TypeScript, no dependency).
+  - Why Vite: `npm run build` runs everywhere (dev shell, `nix build .#app`, the shell builder of part 3, CI); no Python at build time; lives in `app/` (D-35). `app/` is in the nix fileset already.
+  - `build`: emits `credits.json` and `CREDITS.md` at the root of `dist/` (next to `index.html`). Dev (`npm run dev`): a `configureServer` middleware serves `/credits.json` from the same function.
+  - Media: one entry per distinct `file_url` across `media` and `background` of all questions (all bundles; pool.json has only approved ones). Fields: kind (image/audio/video/background), title (from `source_url`: Commons `File:` name without extension, URL-decoded; others the last path segment), author (`author`, else `credit`''s author part, else «Autor desconocido»), `author_url`, `license`, `license_url`, `source_url`, provider name. Sorted by kind, then title.
+  - Build fails (clear message, ids listed) when a picked slot lacks `license` or `source_url`; warns for GFDL (needs the full text; PUB-3 replaces such files).
+  - Sounds: parsed from `app/client/public/audio/CREDITS.md` (one source; columns File, Used for, Source, Author, Licence; Markdown links kept). Build fails if a row doesn''t parse or an `.m4a` in `public/audio/` has no row. Elgar note: its own line under Sounds (composition public domain, Elgar † 1934; recording by the US Marine Band, a US government work).
+  - Fonts: constant entries Baloo 2 and Nunito, SIL OFL 1.1, linking the shipped `fonts/OFL-*.txt`.
+  - Controller glyphs: «original, dibujados para el juego» if `src/game/Glyph.svelte` exists.
+  - Libraries: Svelte (only runtime code in the bundle; version and licence from `node_modules/svelte/package.json`, full MIT text from its `LICENSE.md` into `CREDITS.md`, since MIT asks for the notice in copies). Build tools (Vite, TypeScript) don''t ship: not listed. The shell entry: see "Depends on".
+  - Game: `LICENSE` / content licence from the repo root if present (plan 40); `CREDITS.md` names them and their scope.
+  - `CREDITS.md`: short intro (licences per file; CC BY-SA adaptations such as the blurred backgrounds (D-15) and crops are offered under the same licence), then sections Game, Media in the questions (table: title, author with link, licence with link, source link), Sounds, Fonts, Controller glyphs, Libraries. English (shipped legal text; translations are S4).
+- **Credits screen** `app/client/src/game/Credits.svelte` (new).
+  - Opened from a new ☰ overlay item «Créditos» (`Overlay.svelte` `items`, left column, below «Pantalla completa»); the overlay is reachable from every screen incl. start (Esc, ☰ button, pad Start). No change to the start screen.
+  - Fetches `credits.json` with a relative URL on first open (works from the Python server and from the shell''s `dist/`), keeps it in memory; error line if it fails.
+  - Full-screen glass panel over the current screen (the game underneath stays as it was); sections as headings; one row per entry: title, author, licence, provider; source URL as small text, not a link (the TV/shell must not navigate away). Counts per section in the heading.
+  - Input via plan 44: own scope; `navigate` up/down scrolls by ~70 % of the panel, left/right jump to the previous/next section; `back` (Esc, Backspace, pad B) and `menu` close it and return to the overlay; mouse wheel and scrollbar work. No focusable rows (1,000+ entries).
+  - Text ≥ 9 px at 1280×800 in the `--u` system (D-29; part 6, plan 46); rows use `content-visibility: auto` so the long list scrolls smoothly on the Deck.
+- **Shipped files:** `CREDITS.md` sits in `dist/`, so the nix package (`share/trivia/app/client/dist/`) and the shell build (part 3, which bundles `dist/`) contain it. Part 3 may also copy it to the artefact''s root; task 3 adds that line to plan 18 "Builds and depots".
+
+## Tasks (for the split)
+1. **Licence fields in the export and the credits generator (PUB-5)** — waits for plan 26 task 113.
+   - `pool_export.py` fields, `qgen export`, `qgen validate` green; `app/client/credits.ts` and its use in `vite.config.ts` as above; line in plan 18 "Desktop shell" (shell entry).
+   - Check: `npm run build` → `dist/credits.json` and `dist/CREDITS.md`; throw-away script: every distinct `file_url` in `app/data/pool.json` appears once with author, licence and source link; every `.m4a` in `public/audio/`; removing a `license` in a temp copy of the pool fails the build. `nix build .#app` contains `CREDITS.md`. `npm run check`.
+   - Docs: `directory.md` (`credits.ts`, generated `credits.json`/`CREDITS.md`), `plans/19-repo-layout.md` if it lists client build files.
+2. **Credits screen (PUB-5)** — waits for plan 44''s tasks; after task 1.
+   - `Credits.svelte`, overlay item, scope and actions as above; strings per plan 21''s state.
+   - Check: `npm run check`; screenshots at 1920×1080 and 1280×800 (top, middle of the media list, sounds); keyboard (arrows, Esc), mouse (wheel, close button) and, if plan 45 task 1 is done, a pad (D-pad, B) in Chromium; otherwise the task note lists the pad steps for the gamemaster. The family''s keys and the overlay''s other items behave as before.
+3. **Docs and close-out (PUB-5)** — after task 2.
+   - `plans/17-publishing.md`: "Credits in the game" says how it works (generator, screen, `CREDITS.md`); PUB-5 `[x]` with a note. `plans/04-ui-tv-display.md` (overlay item, Credits screen) and `plans/05-gamemaster-controls.md` if it lists the overlay items. Plan 18 "Builds and depots": `CREDITS.md` at the artefact root (part 3). `plans/project.md` in sync.
+
+## Done when
+- Every media file in `app/data/pool.json` appears in `credits.json` and `CREDITS.md` with author, licence and source link; sounds (incl. the Elgar note), fonts, glyphs (if drawn) and Svelte too.
+- `npm run build` and `nix build .#app` contain `CREDITS.md`; the shell build (part 3) does because it ships `dist/`.
+- The Credits screen opens from the ☰ overlay and scrolls and closes with keyboard, mouse and pad.', '2026-10-12T01:02:33Z', 215);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -3716,11 +3762,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Content: every screen at 1280×800, 1280×720, 4K sanity; text ≥ 9 px at 800p; fixes in the `--u` system (D-29). Screenshot tool: follow decision 6''s answer (Playwright vs. by hand) if given, else the shell at a fixed window size.
 - Player name without a keyboard (on-screen keyboard is S5, SW-8): propose letter picker / preset names / pick existing; `pm decision` if the Player screen changes visibly for the family.
 - Owners: `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/04-ui-tv-display.md`.', '2026-10-12T00:53:42Z', '2026-10-12T01:00:26Z', 208);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (215, 8, 'write plan: Credits screen and generated CREDITS.md (PUB-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of the masterplan (plan 8): `pm plan add 8 "Credits screen and generated CREDITS.md (PUB-5)" --priority 400`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (215, 8, 'write plan: Credits screen and generated CREDITS.md (PUB-5)', 'plan', 'done', 1000, '2026-10-11, pm plan 47, plans/17-publishing.md', 'Write the plan for part 7 of the masterplan (plan 8): `pm plan add 8 "Credits screen and generated CREDITS.md (PUB-5)" --priority 400`.
 
 - Needs plan 26 "Licence data in the pool" (fields per media file) and part 5''s glyph sources; its screen uses part 4''s actions. Implementation tasks wait for those; the plan names them.
 - Content: generator at build time (in `app/` or the build step, not `authoring/`) from pool licence data + fixed lists (audio `app/client/public/audio/CREDITS.md` incl. Elgar note, fonts, glyphs, Svelte, the shell); code/content licence from plan 40 (OQ-35) if decided. Screen from start screen or ☰ overlay, scrollable with a pad; `CREDITS.md` in the shipped files.
-- Owner `plans/17-publishing.md` ("Credits in the game").', '2026-10-12T00:53:42Z', NULL, 208);
+- Owner `plans/17-publishing.md` ("Credits in the game").', '2026-10-12T00:53:42Z', '2026-10-12T01:02:36Z', 208);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (216, 8, 'write plan: S3 close-out and platform test', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of the masterplan (plan 8): `pm plan add 8 "S3 close-out and platform test" --priority 140`.
 
 - Last; below plan 43 "S2 close-out" (150).
@@ -3732,6 +3778,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:58:22Z', NULL, 213);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (219, 46, 'create tasks for plan 46', 'split', 'open', 1000, NULL, 'Split plan 46 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:00:20Z', NULL, 214);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (220, 47, 'create tasks for plan 47', 'split', 'open', 1000, NULL, 'Split plan 47 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:02:33Z', NULL, 215);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3834,6 +3882,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (80, 212, '2026-10-12T00:53:53Z', '2026-10-12T00:56:14Z', 'done', NULL, 0, 'b5df7182db45f421334edaebbface98b604f85a7', 'claude-opus-5-5[1m]', 'c0d62dab-72a4-45e4-b06b-1f36198be63f', 14, 20, 13767, 494026, 63071, 0.87879319999999994, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (81, 213, '2026-10-12T00:56:14Z', '2026-10-12T00:58:37Z', 'done', NULL, 0, '7386a4b72c6454f65f50d548f69def20196acdae', 'claude-opus-5-5[1m]', '67171dce-a404-4450-a752-d8228b7685a2', 13, 26, 13902, 606088, 57745, 0.86132159999999991, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (82, 214, '2026-10-12T00:58:37Z', '2026-10-12T01:00:37Z', 'done', NULL, 0, '8cab26d6dce119a55f167c1adbeb1a51eaa53089', 'claude-opus-5-5[1m]', '64c3dc00-b4c6-42ed-9808-48e3e6f4f2b2', 18, 34, 11314, 887842, 66537, 0.9362803999999999, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (83, 215, '2026-10-12T01:00:37Z', '2026-10-12T01:02:45Z', 'done', NULL, 0, 'b70a9336f95a293c8673592a06fa411a9d01ed1b', 'claude-opus-5-5[1m]', '179066a4-08b8-48a4-82ee-8821eab60359', 15, 30, 12372, 688261, 58275, 0.85141220000000006, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
