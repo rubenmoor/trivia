@@ -6636,7 +6636,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:44:17Z', '2026-10-12T16:52:25Z', 370);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (372, 35, 'create tasks for plan 35', 'split', 'done', 1000, '2026-10-12, tasks.sql: task 373 replaces stale task 185 (dropped); no new decisions', 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:44:41Z', '2026-10-12T16:45:14Z', 361);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (373, 35, 'Game modes: record the answers (OQ-30, MD-5)', 'work', 'open', NULL, NULL, 'Plan 35, task 1. Replaces task 185 (stale: presets, checkpoints). No code, no new decisions.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (373, 35, 'Game modes: record the answers (OQ-30, MD-5)', 'work', 'done', NULL, '2026-10-12, plans/decisions.md (D-74), plans/13-game-modes.md, plans/open-questions.md, plans/11-steam.md, plans/project.md', 'Plan 35, task 1. Replaces task 185 (stale: presets, checkpoints). No code, no new decisions.
 
 Answers (already given):
 - Milestone 7, "Game modes": the five modes and the shared rules.
@@ -6657,7 +6657,7 @@ Steps:
 - Age groups: the mode never shifts the age-group window; no change to plan 21 or `age-groups.json`.
 - Sync the OQ-30 row in `plans/11-steam.md` and `plans/project.md`.
 
-Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section per mode and the notes above; `grep -niE ''preset|checkpoint|Fácil|Experto'' plans/13-game-modes.md` finds nothing outdated.', '2026-10-12T16:45:10Z', NULL, 372);
+Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section per mode and the notes above; `grep -niE ''preset|checkpoint|Fácil|Experto'' plans/13-game-modes.md` finds nothing outdated.', '2026-10-12T16:45:10Z', '2026-10-12T16:53:22Z', 372);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (374, 60, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 60, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-12T16:46:08Z', NULL, NULL);
@@ -7342,6 +7342,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (249, 369, '2026-10-12T16:50:37Z', '2026-10-12T16:51:09Z', 'done', NULL, 0, '8b2d14fcf110207171f04071c3e4d8ab29aa54ac', 'claude-opus-5-5[1m]', '2c751eb3-0a75-4a6d-88c8-2e30dd6d62ea', 6, 12, 3178, 183782, 24731, 0.2982124, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (250, 386, '2026-10-12T16:51:09Z', '2026-10-12T16:51:49Z', 'done', NULL, 0, '5330f6c4fbd7766ae02bed376eccc4379bd06c47', 'claude-opus-5-5[1m]', '1a4a4e25-5106-4e12-bafd-5ed4e83f6813', 9, 18, 3454, 323050, 35136, 0.41485, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (251, 371, '2026-10-12T16:51:49Z', '2026-10-12T16:52:31Z', 'done', NULL, 0, '897c30348a120cea93d8c6c31b58384f8c2e8d32', 'claude-opus-5-5[1m]', '7c6150fa-c40a-41f6-82c5-cea76096ab80', 5, 10, 4135, 151251, 29529, 0.34922220000000004, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (252, 373, '2026-10-12T16:52:31Z', '2026-10-12T16:53:33Z', 'done', NULL, 0, '4fd91d9d03be23eb0b711d7c825cabbaa06ff913', 'claude-opus-5-5[1m]', '0c7add84-339d-4c2b-8d31-73f0b28345c0', 12, 24, 6552, 466114, 37816, 0.5268868, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

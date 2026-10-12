@@ -574,3 +574,19 @@ Template:
   - Offline: Electron zips are cached in `~/.cache/electron`; their sha256s are pinned in `electron-builder.yml` (`electronDownload.checksums`, with `force: false` so electron-builder passes them on), else `@electron/get` fetches `SHASUMS256.txt` every build. Electron's npm binary is skipped (`ELECTRON_SKIP_BINARY_DOWNLOAD=1`, useless on NixOS). No `steam-run` needed: the builder's helpers run on NixOS.
 - Consequences: an Electron bump updates `package.json`, the flake's major and the pinned checksums together. `qgen validate` lives in the flake wrapper, not the npm script (`app/` never calls `authoring/`). No auto-updater, no crash upload, `publish: null`.
 - Supersedes / related: D-59, D-71, D-72; plans 18 (SW-5), 54, 56
+
+## D-74: Five game modes, no default mode; no skip outside gamemaster mode
+- Date: 2026-10-12
+- Context: OQ-30 (default mode: presets, checkpoints, admin actions), MD-5 (plan 35); pm decisions 19 and 20, milestone 7 "Game modes".
+- Decision:
+  - **Five modes**, no "default mode"; ids in `settings.mode`: `gamemaster`, `solo`, `rr-coop`, `rr-competitive`, `timed`. English names first, Spanish with i18n.
+    - **Gamemaster mode** (`gamemaster`, today's game): one person holds every control; "configure game" screen before every game; `Esc` menu with arbitrary cheats (jokers, skip, replace, undo, …).
+    - **Alone or as group** («Solo o en grupo», `solo`): one player or everyone as one team; the player picks the age group, no difficulty selection; standard joker set; customization only via a small "Customize game" button on the age group screen.
+    - **Round-robin co-op** (`rr-coop`), **round-robin competitive** (`rr-competitive`), **competitive timed** (`timed`): specs in plan 41 (OQ-37).
+  - **No presets** (Fácil/Normal/Difícil/Experto dropped), **no checkpoint**, no difficulty knob besides the age group; the mode never shifts the age-group window (D-38).
+  - **Standard joker set**, the same for every age group: 3 × Soplo, 1 × each other joker.
+  - **Outside gamemaster mode:** a question can never be skipped, not even a broken or far too hard one; no undo, no free skip, no replacement, no joker changes mid-game. «Reportar pregunta» only logs the question to a local report list (no burn, no replacement). «Abandonar partida» and sound stay.
+  - **Steam achievements** in every mode except gamemaster mode and customized games (`settings.customized`).
+  - **Input:** gamepads, keyboard, mouse; no phones. Multiplayer modes add a "shared keyboard": one dedicated key per player hands them keyboard and mouse until their turn is done.
+- Consequences: Plan 13 rewritten (one section per mode, implementation notes for MD-6/MD-7 and MD-10..MD-12). `settings.mode` missing = `gamemaster`, old saves unchanged; `settings.jokers` (MD-1..MD-4) stays. Plans 36 (MD-6, MD-7), 41 (OQ-37), 59 (MD-10..MD-12) build on this; S5 reads `settings.customized` for achievements.
+- Supersedes / related: D-27, D-28, D-30, D-38; plans 13, 35, 36, 41, 59

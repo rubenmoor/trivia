@@ -151,7 +151,6 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
 | OQ-45 | Freesound API for a commercial release | Steam S5 (23, 17) |
-| OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
 | OQ-32 | Content target for release | Steam S4 (16) |
 | OQ-33 | Price model; Steamworks account holder | Steam S5 (17) |

@@ -11,7 +11,7 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 
 ## Principles
 1. **The current game keeps working until the Steam build replaces it.** A change lands in it only when it doesn't make game night worse. Changes that don't change how the game plays (the TypeScript port, mouse support, string extraction) can land right away.
-2. **One codebase, several modes.** The current way of playing stays as a mode (the gamemaster mode, [13](13-game-modes.md)). The Steam default mode is added next to it and doesn't replace it.
+2. **One codebase, several modes.** The current way of playing stays as a mode (the gamemaster mode, [13](13-game-modes.md)). The other modes (D-74) are added next to it and don't replace it.
 3. **Offline, no accounts, no telemetry.** Steam distributes the game and syncs saves. The game itself never phones home (AGENTS.md).
 4. **Authoring stays in Python.** `qgen.py`, `media.py`, the review tool and the stats pages are authoring tools and don't ship. Only the game moves to TypeScript ([12](12-client-engine.md)).
 5. **Minimal dependencies.** Shipping adds a desktop shell and a Steamworks binding ([18](18-steam-integration.md)). Every other dependency needs a decision.
@@ -21,7 +21,7 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 | # | Sub-plan | What it covers | Changes the current game? | Groundwork in `project.md` | Steam part starts |
 |---|----------|----------------|---------------------------|----------------------------|-------------------|
 | 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export | No (same rules, same saves) | all of it (M7) | — |
-| 13 | [Game modes](13-game-modes.md) | Gamemaster mode with joker counts you can set, a default mode with difficulty presets, a competitive mode for 8+ players (stub), small rule changes | Only if the family opts in | joker budget MD-1..MD-4 (M8) | after OQ-30, OQ-36 |
+| 13 | [Game modes](13-game-modes.md) | Five modes (D-74): gamemaster, «Solo o en grupo», round-robin co-op, round-robin competitive, competitive timed | Only if the family opts in | joker budget MD-1..MD-4 (M8) | S2 (OQ-30, OQ-36 answered) |
 | 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller) |
 | 15 | [Internationalization](15-i18n.md) | Locale model; sub-plans [15a UI](15a-ui-translation.md), [15b questions](15b-question-translation.md), [15c regional](15c-regional-questions.md) | No | LUI-1..LUI-3, RG-1, RG-2 (M9) | after OQ-31 |
 | 16 | [Content target](16-content-target.md) | How many questions a release needs, how that is measured, the quality bar | No (more questions help the family too) | — | after OQ-32 |
@@ -47,7 +47,7 @@ flowchart LR
 | Phase | Content | Tasks (start with) | Exit |
 |-------|---------|--------------------|------|
 | **S1 — Groundwork** | Moved to [`project.md`](project.md): M7 (TS engine), M8 (mouse, joker budget), M9 (UI strings, region tags), M10 (license audit) | — | M7–M10 done |
-| **S2 — Product definition** | Answer the open questions below. Define the default mode and the launch languages. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 resolved in `decisions.md` |
+| **S2 — Product definition** | Answer the open questions below. Define the game modes and the launch languages. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 resolved in `decisions.md` |
 | **S3 — Playable desktop build** | Electron shell, file saves, controller support, Deck layout, credits screen | SW-1..SW-6, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
 | **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-3..RG-5, LUI-4..LUI-6, CT-* | `qgen.py report --simulate` meets the target for every launch language |
 | **S5 — Steam** | Steamworks app, Cloud, achievements, depots, beta branch, store page, disclosures | SW-7..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
@@ -62,7 +62,7 @@ All are logged in [`open-questions.md`](open-questions.md):
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-29 | ~~Desktop shell~~ answered: Electron (D-63) | 18 |
-| OQ-30 | Default mode: joker counts per difficulty preset, and which levels count as "won" | 13 |
+| OQ-30 | ~~Default mode~~ answered: five modes, no presets, no checkpoint, no skip outside gamemaster mode (D-74) | 13 |
 | OQ-31 | Launch languages (Spanish only? plus English?) and Spanish usage (Colombian vs. neutral) | 15, 16 |
 | OQ-32 | Content target for launch: games per new player, per language | 16 |
 | OQ-33 | Price model (paid, free, free + paid packs) and who holds the Steamworks account (person or company, tax) | 17 |
