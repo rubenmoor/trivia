@@ -26,7 +26,8 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).
   - Done 2026-10-12 (pm plan 21, D-70): `lib/i18n.ts`, `locales/es.ts`, neutral sound cues, `npm run check:literals -w app/client`. Before/after Playwright run (43 screens incl. every joker, overlay, victory, wrong): pixel-identical, same text, `aria-label`/`title`/`placeholder`.
   - Server errors (pm plan 22, D-57): codes + params on the wire; `lib/errors.ts` renders `error.<code>` from `es.ts` if the key exists, else the English `message`.
-- [ ] LUI-2 Pseudo-locale for length and missing-string tests.
+- [x] LUI-2 Pseudo-locale for length and missing-string tests.
+  - Done 2026-10-12 (pm plan 23): `locales/xx.ts`, dev-only `?lang=xx`. Screen walk (throw-away Playwright, D-6) at 1920 × 1080 and 1280 × 1024: no missed literals; shortcut letters (`*Key`) exempt from `xx` too. Overflow: B-17 (Esc overlay with joker budget), B-18 (corner error over the question).
 - [ ] LUI-3 `en` catalog with English joker names (draft; pm plan 24). Ships at launch (D-78); `de.ts` follows the same path.
 - [ ] LUI-4 Joker keys per language or neutral keys (decision; pm plan 69).
 - [ ] LUI-5 Launch catalogs (D-78): `es` (neutral Latin American, es-419), `es-ES` override (only differing strings: regionalisms, `vosotros`), `en`, `de`; native-speaker playtest each (pm plan 69). Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12; need CJK/Cyrillic fonts).

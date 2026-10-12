@@ -3,7 +3,7 @@
 import type { Catalog } from "./es";
 
 /** Left as in `es`: the shortcut letters, so key handling still works (LUI-4). */
-const EXEMPT = [/^joker\.\w+\.key$/, /^flag\.key$/];
+const EXEMPT = [/^joker\.\w+\.key$/, /^flag\.key$/, /Key$/];
 
 const LOOK: Record<string, string> = {
   a: "å", e: "é", i: "î", o: "ø", u: "ü", c: "ç", n: "ñ", y: "ý",
