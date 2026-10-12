@@ -8,7 +8,6 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
 
 ### Added 2026-10-07 (Steam release, [`11-steam.md`](11-steam.md))
-- **OQ-29** Desktop shell: Electron + steamworks.js (recommended), Tauri, or a browser + local server? See `18-steam-integration.md`.
 - **OQ-30** Default mode: joker counts per difficulty preset (draft table in `13-game-modes.md`), checkpoints, which admin actions remain?
 - **OQ-31** Launch languages (Spanish only? plus English? more?) and the Spanish variety: Colombian as today, or neutral Spanish with Colombian variants?
 - **OQ-32** Content target for release: how many games per new player, per language (draft: ≥ 30, primary language ≥ 50; `16-content-target.md`)?
@@ -20,6 +19,7 @@ Answer each question here, then record the resulting decision in `decisions.md` 
 - **OQ-46** Should a `colombia` question also have to use a `colombia` subcategory? 19 `colombia` questions use a `base` subcategory today (Historia: Grito de Independencia, Boyacá, Panamá; Navidad: novena; Piratas: Cartagena's walls; Mundiales de fútbol: James's goal; …). The game's «Cambiazo» picker then offers «Historia» and serves a Colombian question. If yes, `colombia` needs subcategories like «Historia de Colombia» and «Literatura colombiana».
 
 ## Resolved
+- **OQ-29** Desktop shell: Electron; Steam binding (steamworks-ffi-node or steamworks.js) picked in SW-2 (D-63).
 - **OQ-17** Target pool size: 5000 approved `base` questions, tapering at high difficulties (D-52).
 - **OQ-34** Store name: «Living Room Trivia», in Spanish «Trivia en Familia» (Steam localized name), pending the name and trademark check PUB-7 (D-50).
 - **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).

@@ -61,7 +61,7 @@ All are logged in [`open-questions.md`](open-questions.md):
 
 | ID | Question | Blocks |
 |----|----------|--------|
-| OQ-29 | Desktop shell: Electron (recommended), Tauri, or a browser + local server | 18 |
+| OQ-29 | ~~Desktop shell~~ answered: Electron (D-63) | 18 |
 | OQ-30 | Default mode: joker counts per difficulty preset, and which levels count as "won" | 13 |
 | OQ-31 | Launch languages (Spanish only? plus English?) and Spanish usage (Colombian vs. neutral) | 15, 16 |
 | OQ-32 | Content target for launch: games per new player, per language | 16 |

@@ -5,11 +5,11 @@
 Part of the Steam plan ([11](11-steam.md)). Turns the built client into an installable desktop game with Steam features, and gets builds onto Steam. Depends on the client engine ([12](12-client-engine.md)): once the game runs without Python, the shell only has to show the client and save one file.
 
 ## Desktop shell (OQ-29)
-Draft; pm decision 12 (facts checked 2026-10-11, sources there).
+Decided: **Electron** (D-63, pm decision 12; facts checked 2026-10-11, sources there). Steam binding: steamworks-ffi-node or steamworks.js, picked in SW-2.
 
 | Option | For | Against |
 |---|---|---|
-| **Electron** (recommended) | The most common way to ship a web game on Steam. The same Chromium on Windows, Linux and the Deck, so fonts, audio, `backdrop-filter` and animations behave as on the TV today. Overlay works on Windows. A LAN server for phone buzzers (OQ-37) is plain Node `http` in the main process, in TS. | ~125–160 MB download (v44 zip: 158 MB Win, 123 MB Linux). Steam binding: steamworks.js is stale (last release 2024-08; open overlay issues, incl. no overlay on Linux); steamworks-ffi-node is active but young. Overlay on native Linux/Deck is shaky; fallback: Windows build via Proton. |
+| **Electron** (chosen) | The most common way to ship a web game on Steam. The same Chromium on Windows, Linux and the Deck, so fonts, audio, `backdrop-filter` and animations behave as on the TV today. Overlay works on Windows. A LAN server for phone buzzers (OQ-37) is plain Node `http` in the main process, in TS. | ~125–160 MB download (v44 zip: 158 MB Win, 123 MB Linux). Steam binding: steamworks.js is stale (last release 2024-08; open overlay issues, incl. no overlay on Linux); steamworks-ffi-node is active but young. Overlay on native Linux/Deck is shaky; fallback: Windows build via Proton. |
 | Tauri v2 | Small installs, Rust core. | WebView2 on Windows, WebKitGTK on Linux/Deck: two engines to test; WebKitGTK has open `backdrop-filter` and media bugs; no Steam overlay over a system webview (Windows-only community workaround). Phone buzzer server in Rust. |
 | Browser + local server (PyInstaller) | Closest to today; already has a LAN server for phone buzzers. | Not a "real" game window, no overlay, two runtimes, antivirus false positives on PyInstaller builds; plans 19/20 remove Python. |
 
@@ -17,13 +17,13 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 
 ## Steam features
 - **Steam Cloud:** the save (12) is one JSON file in the user data folder. Steam Auto-Cloud syncs it with no code; only the file path is configured in Steamworks.
-- **Overlay:** steamworks.js needs a call to enable it in Electron; test on Windows and the Deck.
+- **Overlay:** the Steam binding needs a call to enable it in Electron; test on Windows and the Deck (fallback on the Deck: the Windows build via Proton).
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
 - **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name on the Deck / Big Picture (IN, Deck Verified).
 - **Language:** the default UI and question language come from the Steam client language (I18N-2).
 - **Rich presence** (optional): «Nivel 7 de 12».
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
-- **No DRM:** the game runs without Steam running (offline living room). steamworks.js calls are optional; the game works without them.
+- **No DRM:** the game runs without Steam running (offline living room). Steam binding calls are optional; the game works without them.
 
 ## Platforms and display
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).
@@ -41,14 +41,14 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
 
 ## Tasks
-- [ ] SW-1 Decide the shell (OQ-29); record it in `decisions.md`.
-- [ ] SW-2 Shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge.
+- [x] SW-1 Decide the shell (OQ-29); record it in `decisions.md`. *Done 2026-10-12: Electron (D-63).*
+- [ ] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version).
 - [ ] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry).
 - [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Plan: pm plan 46 (also the letter picker for player names with a pad).*
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine.
 - [ ] SW-6 CI build in GitHub Actions for both platforms.
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
-- [ ] SW-8 steamworks.js: overlay, achievements, on-screen keyboard, language; the game runs without Steam.
+- [ ] SW-8 Steam binding (SW-2): overlay, achievements, on-screen keyboard, language; the game runs without Steam.
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.
 - [ ] SW-10 SteamCMD upload script; build account; beta branch.
 - [ ] SW-11 Achievements: list, icons, Steamworks setup.

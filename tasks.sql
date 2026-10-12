@@ -4031,14 +4031,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/18-steam-integration.md`: update the "For/Against" cells of the "Desktop shell" table if facts changed; keep it marked draft.
 
 Done when: the decision exists with sourced facts, the follow-up task waits on it, plan 18''s table is current.', '2026-10-12T00:46:31Z', '2026-10-12T02:11:02Z', 172);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (183, 34, 'Desktop shell: record the answer (OQ-29, SW-1)', 'work', 'open', NULL, NULL, 'Part 2 of plan 34. Waits for the decision "Desktop shell (OQ-29)?" (made pending by the prep task); the answer is in `pm show`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (183, 34, 'Desktop shell: record the answer (OQ-29, SW-1)', 'work', 'done', NULL, '2026-10-12, plans/decisions.md (D-63), plans/open-questions.md, plans/18-steam-integration.md, plans/11-steam.md, plans/project.md', 'Part 2 of plan 34. Waits for the decision "Desktop shell (OQ-29)?" (made pending by the prep task); the answer is in `pm show`.
 
 - `plans/decisions.md`: D-entry with the next free D-number.
 - `plans/open-questions.md`: OQ-29 moved to "Resolved" with the D-number.
 - `plans/18-steam-integration.md`: "Desktop shell" table marked decided (D-number); SW-1 `[x]` with a note; SW-2..SW-6 checked against the choice and reworded if needed (e.g. electron-builder → Tauri bundler; preload bridge → Tauri commands).
 - `plans/11-steam.md` open-questions row and `plans/project.md` in sync. The full S3–S6 rewrite stays with plan 43 (S2 close-out).
 
-Done when: D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:46:31Z', NULL, 172);
+Done when: D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:46:31Z', '2026-10-12T03:35:07Z', 172);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (184, 35, 'Default mode: gather facts, write the decisions (OQ-30)', 'work', 'open', NULL, NULL, 'Part 1 of plan 35. Prepare the OQ-30 decision(s); no code.
 
 - Facts (from `plans/13-game-modes.md`, D-28 in `plans/decisions.md`, `plans/21-age-groups.md`, plans 27/28 via `pm show`):
@@ -5249,6 +5249,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (141, 306, '2026-10-12T03:32:25Z', '2026-10-12T03:33:20Z', 'done', NULL, 0, '378e8ccfed322319901c0d08997bfeaa1c311fe3', 'claude-opus-5-5[1m]', '0343b97c-87c6-4c9d-ae50-d7e9fcdba294', 14, 24, 5936, 399663, 29801, 0.43715660000000006, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (142, 307, '2026-10-12T03:33:20Z', '2026-10-12T03:34:15Z', 'done', NULL, 0, '773bb1e273cc0fd683624b97d42b28c3d54a16e5', 'claude-opus-5-5[1m]', 'a3745276-6424-422e-9bea-44146e51c040', 16, 26, 5799, 455094, 30597, 0.45187879999999991, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (143, 308, '2026-10-12T03:34:15Z', '2026-10-12T03:34:42Z', 'done', NULL, 0, 'd34e3a472c3ec9da5615b7896a615c683ca9f0ea', 'claude-opus-5-5[1m]', 'f12b21a7-6b29-42fe-a397-cd2d5d9cc8f0', 8, 16, 2587, 229906, 24337, 0.2924812, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (144, 183, '2026-10-12T03:34:42Z', '2026-10-12T03:35:14Z', 'done', NULL, 0, 'f39af7cb68079b61da6b040c7c5637a7d2c54f42', 'claude-opus-5-5[1m]', '3530089a-559d-485e-bcc3-805c65460a0a', 7, 14, 3422, 227656, 30118, 0.35497120000000004, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

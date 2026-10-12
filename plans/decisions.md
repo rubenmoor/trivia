@@ -491,3 +491,10 @@ Template:
 - Decision: A PD file goes on the replacement list when every reason is US-only: `PD-US*` except `PD-USGov*`, `PD-1923`, `PD-Harris-Ewing` (`providers.US_ONLY_PD`). Any other reason (`PD-old-*` incl. `PD-old-70-1923`, `PD-self`, `PD-author`, `PD-Art`, `PD-USGov*`, `PD-NASA`, `PD-Highsmith`, …) makes the file ok. `PD-USGov*` is ok: generally treated as free elsewhere, as in plan 17.
 - Consequences: `providers.licence_verdict` is the one check for the audit report, the review tool and `qgen validate`. Today: q-1100, q-1194 replace (PD-US only).
 - Supersedes / related: D-45, D-61; plans 17 (PUB-1), 52, 53
+
+## D-63: The desktop shell is Electron; the Steam binding is picked in SW-2
+- Date: 2026-10-12
+- Context: The Steam build needs a desktop shell around `app/client/dist/` (OQ-29, plan 18). Options: Electron, Tauri v2, browser + local server (facts in pm decision 12, checked 2026-10-11).
+- Decision: Electron (pm decision 12). One Chromium on Windows, Linux and the Deck, so the client behaves as on the TV today; a LAN server for phone buzzers (OQ-37) would be Node `http` in the main process. Steam binding: steamworks-ffi-node or steamworks.js, chosen in SW-2 (steamworks.js stale since 2024-08, steamworks-ffi-node active but young).
+- Consequences: ~125–160 MB download for the shell. Builds with electron-builder (SW-5, SW-6); the page talks to the shell through a preload bridge (no Node in the page). Overlay on native Linux/Deck is uncertain; fallback: the Windows build via Proton (SW-12). No Tauri or PyInstaller build.
+- Supersedes / related: D-59; plans 11, 12, 18; OQ-29, OQ-37

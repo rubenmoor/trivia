@@ -129,7 +129,7 @@ No family-specific questions (D-30).
 ---
 
 ### Steam track (separate, D-34)
-Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below; OQ-36 is answered by D-38).
+Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is answering OQ-29..OQ-37 (below; OQ-29 is answered by D-63, OQ-36 by D-38).
 
 ### Backlog
 Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of the save, B-3 practice/preview mode, B-5 reworded duplicates in `dedupe` (pm plan 15), B-6 top-up for difficulties 9–10, B-7 picture effects for essential images.
@@ -144,7 +144,6 @@ From [`open-questions.md`](open-questions.md), with what each one blocks:
 |----|----------|--------|
 | OQ-17 | Target total pool size? | M5 (how many batches) |
 | OQ-45 | Freesound API for a commercial release | Steam S5 (23, 17) |
-| OQ-29 | Desktop shell (Electron recommended) | Steam S3 (18) |
 | OQ-30 | Default mode: joker presets, checkpoints, admin actions | Steam S2 (13) |
 | OQ-31 | Launch languages and Spanish variety | Steam S2 (15, 16) |
 | OQ-32 | Content target for release | Steam S4 (16) |
