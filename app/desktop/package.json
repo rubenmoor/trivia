@@ -1,0 +1,8 @@
+{
+  "name": "trivia-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Desktop shell for ¡Trivia! (plan 54, SW-2)",
+  "main": "main.mjs",
+  "type": "module"
+}

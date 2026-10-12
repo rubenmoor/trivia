@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen` and `trivia-media` running from this checkout
+  #                                `qgen`, `trivia-media` and `trivia-desktop` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -47,6 +47,19 @@
         trivia-media = fromCheckout pkgs "trivia-media" "authoring/tools/media.py" [ pkgs.imagemagick ];
         trivia-authoring = fromCheckout pkgs "trivia-authoring" "authoring/server/main.py" [ ];
         trivia-dev = fromCheckout pkgs "trivia" "app/server/main.py" [ ];
+        # The Electron shell from this checkout (plan 54); the npm Electron doesn't run on NixOS.
+        trivia-desktop = pkgs.writeShellApplication {
+          name = "trivia-desktop";
+          runtimeInputs = [ pkgs.git pkgs.electron ];
+          text = ''
+            root=$(git rev-parse --show-toplevel 2>/dev/null) || {
+              echo "trivia-desktop: run this inside the trivia repository" >&2; exit 2; }
+            if [ ! -f "$root/app/desktop/main.mjs" ]; then
+              echo "trivia-desktop: $root is not the trivia repository (no app/desktop/main.mjs)" >&2; exit 2
+            fi
+            exec electron "$root/app/desktop" "$@"
+          '';
+        };
       };
     in {
       packages = forAll (pkgs:
@@ -91,8 +104,8 @@
         let tools = authoringTools pkgs; in {
           default = pkgs.mkShell {
             packages = [
-              pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code
-              tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev
+              pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code pkgs.electron
+              tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
             ] ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
           };
         });
