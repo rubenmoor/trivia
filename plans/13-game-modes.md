@@ -18,6 +18,26 @@ Shared by every mode except gamemaster mode (D-74):
 - Gamemaster menu (`Esc`): arbitrary cheats: manage jokers, skip, replace the current question, undo, … (MD-12; today's overlay, D-30, MD-4).
 - No achievements. Its defaults never change without the gamemaster's say.
 
+#### Proposal A: configure game screen (MD-11; pm decision "Configure game screen: which fields?")
+Plan 29's Choice screen in gamemaster form; opens on the player's last choice (`playerChoice`) or the defaults, so Enter straight through = today's game. Controls for every row: ↑/↓ (D-pad) move, ←/→ (D-pad) change the value, Enter/A on «Jugar» starts (default focus), Enter/A on a toggle toggles, Esc/B back to Player. Mouse: click a value, − / + buttons.
+- Age group (plan 29): default `young_teens`; `settings.age_group`; ←/→ cycles `age-groups.json`.
+- Bundles (plan 29): default every bundle, `base` always on; `settings.bundles`; one toggle row per bundle.
+- Joker set: default «Sin límite»; `settings.jokers` (existing, `new {jokers}`); ←/→ cycles Sin límite / Como las cartas (`CARDS`) / Estándar (`STANDARD_JOKERS`) / A medida; A medida shows the overlay's per-joker rows (0–9, ∞).
+- Media questions on/off: default on; new `settings.media` (missing = on); off = draws skip questions with `media` (background images stay); the supply check counts it.
+- Start level (weighed, recommended): default 1; new `settings.start_level` (missing = 1); ←/→ 1–12; the game starts there, the Tower shows lower levels as not played, level 12 still wins. For a short game or a late start.
+- Not proposed: cards per level (`PER_LEVEL` = 4; the table layout is built for 4), levels to win (12 is the game), hint count (the questions fix it).
+- Option 2 (shorter): age group, bundles, joker set only.
+
+#### Proposal B: gamemaster menu cheats (MD-12; pm decision "Gamemaster menu: which cheats?")
+Today's overlay grows; every cheat is an engine action refused outside gamemaster mode (`gamemaster_only`, 409). Undo after any cheat: as after `skip` today, it goes back to the state before the last final answer; seen and blocked rows written by the cheat stay; the budget stays (`settings` survive undo).
+- Kept: continue; «Saltar pregunta» (`skip`, seen +1); «Bloquear pregunta» (`skip {everyone}`, blocked, D-82); undo (`undo`); «Reportar pregunta» / «Preguntas reportadas» (`report`); sound; fullscreen; restart (`abandon` + configure screen); quit (desktop).
+- Joker budget → «Gestionar comodines»: same `jokers` action, but each row edits uses *left* (−/+ gives back or takes away one; limit = used + left), preset row as today; also usable on the table between questions.
+- «Cambiar pregunta» (new `replace {seen?}`): new question at the same level from the same subcategory (`categoryCandidates` + `replacement`, GF-2 kept), any subcategory if none; outcome `admin_replace`; default not seen (the question stays fresh), `seen: true` counts it; refused without a question on screen or without a candidate (`replace_empty`).
+- «Saltar a nivel» (candidate, recommended; new `level {level}`): 1–12; table redrawn at that level; no history rows for skipped levels; refused during a question (skip first).
+- Age group / bundles mid-game (candidate, recommended; new `settings {age_group?, bundles?}`): only on the table (select phase); supply check as at `new`; the table is redrawn; the question history stays.
+- Not proposed: reveal the answer to the gamemaster: the TV is the only screen and the family sees it (UI-13), no phones (D-74).
+- Option 2 (shorter): kept items + «Gestionar comodines» + «Cambiar pregunta» only.
+
 ### Alone or as group («Solo o en grupo», `solo`)
 - One player alone, or everyone together as one team; no gamemaster menu, no cheats.
 - The player picks the age group; no difficulty selection, no presets, no checkpoint.
