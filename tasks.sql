@@ -226,6 +226,7 @@ Then the S2 tasks that follow from them: MD-5..MD-7, I18N-1, CT-1, PUB-4.
 ## Game modes
 Five modes; there is no "default mode". Mode names are written in English first; Spanish names follow with i18n.
 - Every mode except gamemaster mode: a question can never be skipped, not even a broken or far too hard one (no free skip, no undo, no joker changes mid-game).
+- Steam achievements in every mode, except gamemaster mode and customized games.
 - Input: gamepads, keyboard and mouse; no phones. Multiplayer modes also offer a "shared keyboard": every player has one dedicated key; pressing it gives that player keyboard and mouse until their turn is done.
 
 ### Gamemaster mode
@@ -235,13 +236,12 @@ Five modes; there is no "default mode". Mode names are written in English first;
 
 ### Alone or as group (es: «Solo o en grupo»)
 - Single-player like gamemaster mode: one player alone, or everyone together as one team; no gamemaster menu, no cheats.
-- The player picks the age group; there is no difficulty selection. One standard joker set, the same for every age group.
+- The player picks the age group; there is no difficulty selection. One standard joker set, the same for every age group: 3 × Soplo (hint), 1 × each other joker.
 - Customization is possible but discouraged: no configure screen, only a small "Customize game" button on the age group screen.
-- An uncustomized game earns Steam achievements; a customized one doesn''t.
 
 ### Round-robin co-op
 - Several players with multiplayer controls take turns answering; they all play together to beat the game.
-- One age group for the whole team; one shared joker set.
+- One age group for the whole team; one shared standard joker set.
 
 ### Round-robin competitive
 - Players take turns with multiplayer controls; each player plays their own independent game, with their own jokers.
@@ -252,7 +252,8 @@ Five modes; there is no "default mode". Mode names are written in English first;
 - 30 s to answer; a hint appears every 8 s; no jokers.
 - One age group for everyone. The question''s difficulty is the average of all players'' progress.
 - A wrong answer drops the player out immediately; a player who falls three levels behind drops out too. First to level 12 wins.
-- To decide: what a timeout counts as (stay on the level, or the same as a wrong answer).
+- Timeout: when the 30 s run out, all players lose immediately.
+- Make it super dramatic: during the last 3 seconds a pulsing red frame around the screen, like the impending-death warning in a first-person shooter.
 
 ## Constraints
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
