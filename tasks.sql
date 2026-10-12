@@ -1191,14 +1191,15 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Against the first guess below, batch-7 fails: one problem > 8 % (giveaway), overlap needs_work > 1 %, final difficulty gap 2.95 > 1.5, top stimulus/clue/answer_kind > 25 % (by design for stimulus), media share 14 % < 20 %. Adjusted proposal: pm decision 13 (task 44 waits for it).
 - PE-6, PE-13 (plan 20) and MP-11 (plan 23) closed with these numbers.
 
-## Thresholds (first guess; the gamemaster decides)
+## Thresholds (decided: pm decision 13)
 - drop rate ≤ 20 % of drafts;
-- needs_work ≤ 20 % of merged; any one problem ≤ 8 %;
+- needs_work ≤ 20 % of merged; any one problem ≤ 10 %;
 - overlap rate ≤ 3 % of drafts, needs_work for overlap ≤ 1 % of merged;
-- merged at 11–15 ≥ 60 % of the slots drawn there; final difficulty within ±1.5 of target at 11–15 (plan 13''s goal);
-- top value of any axis ≤ 25 % of merged; media share 20–50 %;
+- merged at 11–15 ≥ 55 % of the slots drawn there; final difficulty within ±1.5 of target at each of 11–15 (plan 13''s goal);
+- top value: move and lens ≤ 25 %, answer_kind ≤ 40 %, clue ≤ 50 % of merged; stimulus only through media share 15–50 %;
+- mean fun ≥ 3.4;
 - $ per approved ≤ $0.35;
-- trend: no metric worse than the mean of the previous two batches by more than half its threshold''s margin.
+- no trend rule (too noisy for batch sizes this small); drift shows in `batches.md`.
 - Stored in `authoring/data/targets.json` under `"batch_health"` (plan 12''s file and loader, D-53); `qgen validate` checks the keys.
 - **Stop before the next batch (D-55):** when the last committed batch fails a threshold, `qgen batch` exits 2 before `concepts` and names the report. RUNBOOK step 3 already says "other exit code: stop and show the output", so an agent stops without new rules. The gamemaster clears it with `qgen health ack <batch> "<note>"`, which records the note in `authoring/data/health-acks.json` (shown in `batches.md`). Add one line to RUNBOOK''s exit-code table for 2. `qgen rework`/`tighten` aren''t blocked.
 - Plan 12''s exit check: "the last two batches pass" = no ✗ in `batch_health` (an ack doesn''t count as a pass).
@@ -4558,6 +4559,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:29Z', '2026-10-12T02:51:38Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (287, 4, 'create tasks for plan 4', 'split', 'dropped', 1000, 'wording only: flags kept (D-61), tasks 108/109 see decision 8', 'Split plan 4 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:13:09Z', '2026-10-12T03:13:19Z', NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (288, 15, 'create tasks for plan 15', 'split', 'open', 1000, NULL, 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:19:08Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4777,6 +4780,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (129, 277, '2026-10-12T02:48:26Z', '2026-10-12T02:49:13Z', 'done', NULL, 0, 'f6c505dd16b9cc59d938a08accf5d9a8bb88437a', 'claude-opus-5-5[1m]', '63345717-cd42-4d6e-9936-2cff7ec61406', 10, 20, 3311, 354863, 31898, 0.39245659999999993, 175567);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (130, 28, '2026-10-12T02:49:13Z', '2026-10-12T02:50:50Z', 'failed', 'the worker left changes that are not staged:
  M plans/decisions.md', 0, '402f633654a52357313e6cec797458588a798ea6', 'claude-opus-5-5[1m]', 'aec269a5-5e01-4daa-bc89-691125706de5', 20, 36, 10176, 928615, 60616, 0.87431500000000018, 175567);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (131, 58, '2026-10-12T03:19:06Z', NULL, 'running', NULL, NULL, 'd7fbee16a64064bb899621cc6ee68637f6b791d8', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
