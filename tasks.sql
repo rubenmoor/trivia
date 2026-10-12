@@ -4634,7 +4634,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: mention `level_weights` under `age-groups.json`.
 
 Done when: `npm test` (including `choice.test.ts` and `invariants.test.ts`), `npm run check` and `qgen validate` pass.', '2026-10-12T00:30:14Z', '2026-10-12T16:56:27Z', 120);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (128, 29, 'Choice screen: group and bundle choice between Player and Level', 'work', 'open', NULL, NULL, 'Build the Choice screen of plan 29 (AG-7, BN-6, IN-1). Everything in plan 29''s "Decisions taken here" applies; this task covers all of it except the overlay line.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (128, 29, 'Choice screen: group and bundle choice between Player and Level', 'work', 'dropped', NULL, 'superseded by task 474 (plan 29 revised: base bundles, action layer)', 'Build the Choice screen of plan 29 (AG-7, BN-6, IN-1). Everything in plan 29''s "Decisions taken here" applies; this task covers all of it except the overlay line.
 
 ## Before you start
 - Plan 27 must be done: `engine/pool.ts` `AgeGroup` / `Bundle` / parsers, `engineData.ageGroups` / `.bundles`, `gameChoice`, the `choice` route, `newGame({player, age_group, bundles})`, `Game.settings` in `lib/types.ts`.
@@ -4656,8 +4656,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `npm run check`, `npm run build`, `npm test` (and `check:literals` if it exists) pass.
-- Throw-away browser walk on the real pool (not committed): existing player, Enter, Enter plays as today (`young_teens`, every bundle); each group by key and by click; `C` and a click toggle Colombia, Básico doesn''t; the started game''s `settings` match the screen; a choice that can''t fill a game (test player with most questions burned, or a hand-edited `pool.json` copy in dev) dims the tile, shows the report, disables «¡A jugar!»; Backspace and «Atrás» return to Player; Esc opens the overlay; mouse only, then keyboard only, every action reachable.', '2026-10-12T00:30:51Z', NULL, 121);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (129, 29, 'Choice line in the overlay; preset after undo and abandon; AG-7/BN-6 notes', 'work', 'open', NULL, NULL, 'Close out plan 29 after the Choice screen task: show the running game''s choice to the gamemaster and check the preset survives undo and abandon.
+- Throw-away browser walk on the real pool (not committed): existing player, Enter, Enter plays as today (`young_teens`, every bundle); each group by key and by click; `C` and a click toggle Colombia, Básico doesn''t; the started game''s `settings` match the screen; a choice that can''t fill a game (test player with most questions burned, or a hand-edited `pool.json` copy in dev) dims the tile, shows the report, disables «¡A jugar!»; Backspace and «Atrás» return to Player; Esc opens the overlay; mouse only, then keyboard only, every action reachable.', '2026-10-12T00:30:51Z', '2026-10-12T20:24:26Z', 121);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (129, 29, 'Choice line in the overlay; preset after undo and abandon; AG-7/BN-6 notes', 'work', 'dropped', NULL, 'superseded by task 475 (plan 29 revised)', 'Close out plan 29 after the Choice screen task: show the running game''s choice to the gamemaster and check the preset survives undo and abandon.
 
 ## Changes
 - `app/client/src/game/Overlay.svelte`: one read-only line under the joker budget, e.g. «Adolescentes · Básico, Colombia»: group `name` and active bundle `name`s in file order, from `game.settings` through `gameChoice`''s defaults (games without the keys show the defaults), names from `engineData.ageGroups` / `.bundles`. Not in the HUD. No way to change it mid-game.
@@ -4667,7 +4667,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `npm run check`, `npm run build`, `npm test` (and `check:literals` if it exists) pass.
-- Throw-away browser walk (not committed): Enter, Enter → overlay shows «Adolescentes · Básico, Colombia»; a game with Colombia off and another group shows that; after undo the choice is unchanged; after «Reiniciar partida» the next Choice screen presets the abandoned game''s choice.', '2026-10-12T00:30:51Z', NULL, 121);
+- Throw-away browser walk (not committed): Enter, Enter → overlay shows «Adolescentes · Básico, Colombia»; a game with Colombia off and another group shows that; after undo the choice is unchanged; after «Reiniciar partida» the next Choice screen presets the abandoned game''s choice.', '2026-10-12T00:30:51Z', '2026-10-12T20:24:26Z', 121);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (130, 30, 'Authoring readers check after age groups and bundles', 'work', 'open', NULL, NULL, 'Plan 30, task 1 ("Authoring readers" section). Independent of the play-test.
 
 The authoring side still reads levels 1–10 from one range table; after plans 27–29 the game plays a window per age group and a bundle set. Check every reader:
@@ -6146,14 +6146,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 On "problems": don''t do this task; add one fix task per problem in plan 50, then raise the decision again.
 
 Done when: the docs above are updated.', '2026-10-12T04:50:41Z', NULL, 299);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (347, 29, 'Choice screen on the action layer (IN-2, IN-3)', 'work', 'open', 390, NULL, 'Plan 44 (action layer and focus navigation) is done; the Choice screen (task 128) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (347, 29, 'Choice screen on the action layer (IN-2, IN-3)', 'work', 'dropped', 390, 'absorbed into task 474', 'Plan 44 (action layer and focus navigation) is done; the Choice screen (task 128) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
 
 - Push a scope from `app/client/src/lib/input.svelte.ts` (`pushScope` in `$effect`, with `root`); no `keydown` listener (`grep -rn "keydown\|KeyboardEvent" app/client/src` lists only `input.svelte.ts`).
 - `data-focus-default` on the default choice; `data-focus-id` where the index isn''t stable; arrows move the ring (`lib/focus.ts`), `Enter` confirms, `Backspace`/`Esc` as on the other screens.
 - Number keys (`pick`) if the options carry `<kbd>` chips.
 - The overlay''s Choice line (task 129) goes into `Overlay.svelte`''s own list model (↑/↓, ←/→ to change).
 
-Done when: the Choice screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', NULL, 225);
+Done when: the Choice screen plays with arrows + Enter + Esc/Backspace only; mouse unchanged.', '2026-10-12T06:00:33Z', '2026-10-12T20:24:26Z', 225);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (348, 36, 'Report dialog on the action layer (IN-2, IN-3)', 'work', 'done', 480, '2026-10-12, done in task 377: confirm dialog and report list are modal scopes with root (Esc/⌫ cancel, focus back to the opener, arrows through the entries, no keydown listener); default focus on «Reportar» since reporting only logs and plan 36 wants Enter to report', 'Plan 44 (action layer and focus navigation) is done; «Reportar pregunta» and the report list (task 187) are built after it. Put them on the same rules (`plans/04-ui-tv-display.md`, "Input").
 
 - The report dialog pushes a modal scope (`pushScope({ modal: true, root, … })` from `app/client/src/lib/input.svelte.ts`); `back`/`menu` cancel, focus goes back to the opener (automatic for modal scopes).
@@ -8716,8 +8716,52 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:47Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (472, 71, 'create tasks for plan 71', 'split', 'open', 1000, NULL, 'Split plan 71 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:22:37Z', NULL, 469);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (473, 29, 'create tasks for plan 29', 'split', 'open', 1000, NULL, 'Split plan 29 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:23:35Z', NULL, 467);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (473, 29, 'create tasks for plan 29', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 474, 475 replace 128, 129, 347', 'Split plan 29 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:23:35Z', '2026-10-12T20:24:27Z', 467);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (474, 29, 'Choice screen: group, base bundle and bundle choice between Player and Level', 'work', 'open', NULL, NULL, 'Build plan 29''s Choice screen (AG-7, BN-6, IN-1, IN-2). Everything in plan 29''s "Decisions taken here" applies; this task covers all of it except the overlay line (next task). Replaces tasks 128 and 347 (dropped: written before base bundles and the action layer).
+
+## Before you start
+- Plan 71 (Bundle languages and base bundles) must have its engine work done: `Bundle {id, kind, languages, name, description}` without `always_on`, `bundlesFor(data, locale)`, `defaultChoice` per locale, `resolveChoice` refusing `base_bundle_count` / `bundle_not_offered`, their `t()` error strings. If not, stop and leave the task open.
+- Plan 27 (done): `choice` route, `newGame({player, age_group, bundles})`, `Game.settings`. Plan 44 (done): `pushScope` in `lib/input.svelte.ts`, `lib/focus.ts`.
+
+## Changes
+- `app/client/src/game/Choice.svelte` (new): props `player`, `busy`, `refused`; `onstart(choice)`, `onback()`. Arrive animations and glass tiles as on `Player.svelte`.
+  - Title «¿Cómo juega {name}?».
+  - Four group tiles, file order: `name` + ages («6–10 años», «23+ años» for `[23, null]`); window not shown; selected one highlighted like the name buttons'' focus.
+  - Bundles: only `bundlesFor(data, locale)` (locale = the new game''s question locale), file order.
+    - `kind: base`: one-of-N row (radio tiles), `name` + `description`; one base bundle → shown selected; picking another deselects the first. No locked toggle, no «Siempre activo» / `always_on` anywhere.
+    - Others: toggles, `name` + `description`, on/off.
+  - Input on the action layer: `pushScope` in `$effect` with `root`; no `keydown` listener (`grep -rn "keydown\|KeyboardEvent" app/client/src` lists only `input.svelte.ts`). Arrows move the focus ring, `Enter` activates the focused control, `data-focus-default` on «¡A jugar!», `data-focus-id` where indexes aren''t stable.
+  - Keys, `<kbd>` on every control: `1`–`4` group (`pick`); bundle letter from one helper (first letter of `name`, case-insensitive, accents stripped, not taken by an earlier bundle on the screen, else next letter of the name; never `M`, `N`, `R`, `S`; es today: `B` = Básico, `C` = Colombia). A base bundle''s key selects it, another''s toggles it. `Backspace` / «Atrás» → Player. `Esc` still opens the overlay.
+  - Preset: `choice({player})` on entering (newest game, else the locale''s defaults; plan 71 handles a game whose bundles don''t fit the language).
+  - Supply: on entering and on every change, `choice` for the current choice and once per group with the current bundles (5 calls). A group that can''t fill 12 levels: dimmed, «Faltan preguntas», still selectable. Selected choice fails → «¡A jugar!» disabled, report below. Zero/two base bundles → disabled with the engine''s `base_bundle_count` reason in the same place. A `409` from `new` (supply, `base_bundle_count`, `bundle_not_offered`) shows here. Low-supply notice per decision 31: Low-supply warning (only a needed level with 1 or 0 unseen left), as on Start/Player.
+- `app/client/src/game/SupplyReport.svelte` (new): today''s wording and style; replaces the copies in `Game.svelte` (Start) and `Player.svelte`. `Player.svelte` loses `refused` and its report.
+- `Game.svelte`: `Screen` gains `"choice"`; `choosePlayer(name)` → `go("choice", "whoosh")`; `startGame(choice)` does today''s `act("new", …)` + greeting + Level; «Atrás» / Backspace → `go("player", …)`.
+- `lib/api.ts`: `fetchChoice({player?, age_group?, bundles?})`, `gameAction("new", {player, age_group, bundles})`, offered bundles via `bundlesFor`.
+- `locales/es.ts`: `choice.*` keys; every string via `t()`.
+- Docs: `plans/04-ui-tv-display.md` (state diagram, table row, a "Choice" section, keys in "Input"); `directory.md`: the two new files.
+
+## Done when
+- `npm run check`, `npm run build`, `npm test`, `check:literals` pass; `grep -rn "always_on\|Siempre activo" app/client/src` is empty.
+- Throw-away browser walk on the real pool (not committed):
+  - existing player, Enter, Enter: plays as today (`young_teens`, `base` + `colombia`).
+  - each group by key and by click; `C` / click toggle Colombia; Básico shown selected, `B` / click keeps it; the started game''s `settings` match the screen.
+  - dev copy of `bundles.json` with a second `kind: base` bundle: picking it deselects `base`; the game has exactly one base bundle.
+  - temp `en` setup (plan 68''s throw-away pool): only `base` listed; default preset `["base"]`.
+  - a choice that can''t fill a game: tile dimmed, report shown, «¡A jugar!» disabled.
+  - Backspace and «Atrás» → Player; Esc opens the overlay.
+  - mouse only, then arrows + Enter + Esc/Backspace only: every action reachable.', '2026-10-12T20:24:24Z', NULL, 473);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (475, 29, 'Choice line in the overlay; preset after undo and abandon; AG-7/BN-6 notes', 'work', 'open', NULL, NULL, 'Close out plan 29 after the Choice screen task: show the running game''s choice to the gamemaster and check the preset survives undo and abandon. Replaces task 129 (dropped: written before base bundles and the action layer).
+
+## Changes
+- `app/client/src/game/Overlay.svelte`: one read-only line under the joker budget, e.g. «Adolescentes · Básico, Colombia»: group `name` · active bundle `name`s, base bundle first, then file order; from `game.settings` via `gameChoice` (games without the keys show the locale''s defaults); names from `engineData.ageGroups` / `.bundles`. A read-only row in the overlay''s own list model (focus ring passes or skips it consistently with the other rows); no way to change it mid-game. Not in the HUD.
+- Strings: `t()` with `choice.*` keys in `locales/es.ts`; `check:literals` passes.
+- `plans/21-age-groups.md` AG-7, `plans/22-bundles.md` BN-6: note "start screen: plan 29"; both stay `[ ]` (closed by plan 30).
+- `plans/04-ui-tv-display.md`: the overlay line in the overlay section. `directory.md` only if a file was added.
+
+## Done when
+- `npm run check`, `npm run build`, `npm test`, `check:literals` pass.
+- Throw-away browser walk (not committed): Enter, Enter → overlay shows «Adolescentes · Básico, Colombia»; a game with Colombia off and another group shows that; after undo (where the mode allows it, decision 20) the choice is unchanged; after «Reiniciar partida» the next Choice screen presets the abandoned game''s choice.', '2026-10-12T20:24:24Z', NULL, 473);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -9611,6 +9655,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (321, 466, '2026-10-12T20:20:40Z', '2026-10-12T20:20:57Z', 'done', NULL, 0, 'fd27299ba443b740f9c769c6c58b1665a0ef088a', 'claude-opus-5-5[1m]', 'fd3a2fc6-b0c2-4010-a4a9-f962b8f51cd0', 5, 10, 1143, 160408, 34742, 0.33291760000000004, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (322, 469, '2026-10-12T20:20:57Z', '2026-10-12T20:22:50Z', 'done', NULL, 0, 'd23c507f1ea903a6ec40895ee1066e46839b87cd', 'claude-opus-5-5[1m]', '19bdd3fb-7185-44b2-b7df-c678f8e8a562', 17, 32, 10836, 769929, 57010, 0.82691380000000014, 655319);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (323, 467, '2026-10-12T20:22:50Z', '2026-10-12T20:23:46Z', 'done', NULL, 0, 'e620948ed9f102ef416b115043899a2503e758d5', 'claude-opus-5-5[1m]', '13cce613-1f65-4977-8e8f-317123f09168', 9, 18, 5727, 324761, 37038, 0.47586819999999996, 655319);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (324, 473, '2026-10-12T20:23:46Z', '2026-10-12T20:24:33Z', 'done', NULL, 0, '8788f351a9d6324e1b14bdae45a281f06681ffc3', 'claude-opus-5-5[1m]', 'c26c6f95-d36a-41b8-b6e0-3ded65d23438', 9, 18, 4723, 289980, 30622, 0.397504, 655319);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
