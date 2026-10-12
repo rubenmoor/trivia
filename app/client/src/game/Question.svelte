@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { gameAction } from "../lib/api";
   import { errorText, reasonText } from "../lib/errors";
+  import { t } from "../lib/i18n";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
   import DifficultyDial from "./DifficultyDial.svelte";
@@ -316,6 +317,7 @@
   }
 
   const JOKER_KEYS: Record<string, JokerName> = Object.fromEntries(TOKENS.map((t) => [t.key.toLowerCase(), t.name]));
+  const REPLAY_KEY = t("screen.question.replayKey");
 
   export function key(e: KeyboardEvent) {
     const k = e.key.toLowerCase();
@@ -339,7 +341,7 @@
     else if (k.length === 1 && i >= 0) tap(i);
     else if (e.key === "Backspace") unlock();
     else if (e.key === "Enter" || e.key === " ") submit();
-    else if (k === "r") replay();
+    else if (k === REPLAY_KEY.toLowerCase()) replay();
     else return;
     e.preventDefault();
   }
@@ -397,12 +399,12 @@
 
   <header class="card glass-strong" class:long in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
     {#if question.swapped_to}
-      <p class="topic label" class:fresh={swappedBy?.joker === "category"}>Tema: {question.swapped_to}</p>
+      <p class="topic label" class:fresh={swappedBy?.joker === "category"}>{t("screen.question.topic", { name: question.swapped_to })}</p>
     {/if}
     <h1>{question.question}</h1>
     {#if media.type !== "image"}
       <button class="replay" onclick={replay}>
-        <Icon name={media.type === "audio" ? "speaker" : "film"} /> repetir <kbd>R</kbd>
+        <Icon name={media.type === "audio" ? "speaker" : "film"} /> {t("screen.question.replay")} <kbd>{REPLAY_KEY}</kbd>
       </button>
     {/if}
   </header>
@@ -412,13 +414,13 @@
       <div class="notes">
         {#each question.hints as hint, i (i)}
           <p class="note" style:--tilt="{[-2.5, 1.8, -1.2][i]}deg" class:strong={i === 2}>
-            <span class="note-label">Soplo {i + 1}</span>{hint}
+            <span class="note-label">{t("screen.question.hint", { n: i + 1 })}</span>{hint}
           </p>
         {/each}
       </div>
     {/if}
     {#if mediaFailed || (!media.file_url && media.type !== "audio")}
-      <Placeholder task="IMG" label="medio no disponible (¿falta `trivia-media sync`?)" chip />
+      <Placeholder task="IMG" label={t("screen.question.mediaMissing")} chip />
     {/if}
   </div>
 
@@ -441,17 +443,17 @@
   {#if mode === "skip" && jokers}
     <div class="backdrop-dim">
       <div class="dialog glass-strong">
-        <h2>Paso</h2>
-        <button class="candy" onclick={() => fire({ joker: "skip" })}>Paso <kbd>1</kbd></button>
+        <h2>{t("joker.skip.name")}</h2>
+        <button class="candy" onclick={() => fire({ joker: "skip" })}>{t("joker.skip.name")} <kbd>1</kbd></button>
         <button
           class="secondary purge"
           onclick={() => fire({ joker: "skip", purge: true })}
           disabled={!jokers.skip.purge.available}
         >
-          Paso, y fuera el tema «{jokers.skip.purge.subcategory}» <kbd>2</kbd>
+          {t("joker.skip.purge", { name: jokers.skip.purge.subcategory })} <kbd>2</kbd>
           {#if jokers.skip.purge.reason}<span class="reason">{reasonText(jokers.skip.purge.reason)}</span>{/if}
         </button>
-        <button class="secondary" onclick={() => (mode = null)}>Cancelar <kbd>Esc</kbd></button>
+        <button class="secondary" onclick={() => (mode = null)}>{t("action.cancel")} <kbd>Esc</kbd></button>
       </div>
     </div>
   {/if}
@@ -479,12 +481,12 @@
   {/if}
   {#if mode === "snipe"}
     <p class="aim-hint glass-strong">
-      <Icon name="crosshair" /> Elijan la respuesta que creen que es <b>falsa</b> · <kbd>Enter</kbd> dispara
-      <button class="secondary cancel" onclick={() => (mode = target = null)}>Cancelar <kbd>Esc</kbd></button>
+      <Icon name="crosshair" /> {t("joker.snipe.aim")} <b>{t("joker.snipe.false")}</b> · <kbd>Enter</kbd> {t("joker.snipe.shoot")}
+      <button class="secondary cancel" onclick={() => (mode = target = null)}>{t("action.cancel")} <kbd>Esc</kbd></button>
     </p>
   {/if}
   {#if hit !== null}
-    <p class="aim-hint hit glass-strong">¡Le dieron a la correcta! Este nivel se repite.</p>
+    <p class="aim-hint hit glass-strong">{t("joker.snipe.hit")}</p>
   {/if}
 
   <footer in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
@@ -525,17 +527,17 @@
 
     <div class="final">
       {#if error}
-        <p class="error">No se pudo enviar la respuesta: {error}</p>
+        <p class="error">{t("screen.question.sendFailed", { error })}</p>
       {:else if submitted}
-        {#if !revealed}<p class="waiting">Respuesta final…</p>{/if}
+        {#if !revealed}<p class="waiting">{t("screen.question.finalWaiting")}</p>{/if}
       {:else}
         <button class="candy final-button" class:ready onclick={submit} disabled={!ready} tabindex={ready ? 0 : -1}>
-          Respuesta final <kbd>Enter</kbd>
+          {t("screen.question.final")} <kbd>Enter</kbd>
         </button>
         <div class="padlock" class:shaking={locked !== null && !ready} class:open={ready} aria-hidden="true">
           <Icon name={ready ? "unlock" : "lock"} size="100%" />
         </div>
-        {#if locked === null}<p class="prompt label">Elijan una respuesta</p>{/if}
+        {#if locked === null}<p class="prompt label">{t("screen.question.prompt")}</p>{/if}
       {/if}
     </div>
   </footer>

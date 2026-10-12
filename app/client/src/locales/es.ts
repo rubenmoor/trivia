@@ -13,13 +13,35 @@ const es = {
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
     hint: { name: "Soplo", key: "S" },
-    skip: { name: "Paso", key: "P", stamp: "ELIMINADO" },
+    skip: { name: "Paso", key: "P", stamp: "ELIMINADO", purge: "Paso, y fuera el tema «{name}»" },
     easier: { name: "Bájale", key: "F", dial: "Dificultad" },
     category: { name: "Cambiazo", key: "T", title: "Cambiazo: ¿qué tema quieren?" },
-    snipe: { name: "Francotirador", key: "X" },
+    snipe: {
+      name: "Francotirador",
+      key: "X",
+      /** Aim hint: «{aim} <b>{false}</b> · Enter {shoot}». */
+      aim: "Elijan la respuesta que creen que es",
+      false: "falsa",
+      shoot: "dispara",
+      hit: "¡Le dieron a la correcta! Este nivel se repite.",
+    },
     /** The armed token's bubble. */
     arm: "¿Usar {name}?",
     aria: "{name} ({key})",
+  },
+  screen: {
+    question: {
+      topic: "Tema: {name}",
+      replay: "repetir",
+      /** Shortcut for `replay` (case-insensitive). */
+      replayKey: "R",
+      hint: "Soplo {n}",
+      mediaMissing: "medio no disponible (¿falta `trivia-media sync`?)",
+      sendFailed: "No se pudo enviar la respuesta: {error}",
+      final: "Respuesta final",
+      finalWaiting: "Respuesta final…",
+      prompt: "Elijan una respuesta",
+    },
   },
   copy: {
     /** A line on the Level screen at some levels (UI-14). */

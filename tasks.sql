@@ -3670,14 +3670,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when:
 - `npm run check`, `npm run build` pass; no Spanish literal left in these five files outside comments.
 - Throw-away check: every literal removed (from `git diff`) appears verbatim as a catalog value; each joker key still plays its joker.', '2026-10-12T00:14:29Z', '2026-10-12T04:56:07Z', 86);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (94, 21, 'LUI-1: Question.svelte texts into the catalog', 'work', 'open', NULL, NULL, 'All remaining text of `app/client/src/game/Question.svelte` comes from the catalog (`screen.question.*`, `a11y.*`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (94, 21, 'LUI-1: Question.svelte texts into the catalog', 'work', 'done', NULL, '2026-10-11, app/client/src/game/Question.svelte, app/client/src/locales/es.ts: screen.question.* (topic, replay + replayKey R read by key handling, hint «Soplo {n}», mediaMissing, sendFailed, final, finalWaiting, prompt), joker.skip.purge, joker.snipe.aim/false/shoot/hit, action.cancel reused; no aria/title in Question.svelte. Throw-away check: every literal verbatim, Soplo 1–3/topic/purge/sendFailed same output; check+build pass', 'All remaining text of `app/client/src/game/Question.svelte` comes from the catalog (`screen.question.*`, `a11y.*`).
 
 - Hints («Soplo {n}», plurals via `{ one, other }` if the text varies with `n`), «Respuesta final», buttons, aria-labels, titles.
 - Error display: leave plan 22''s `errorText`/reason rendering as is.
 
 Done when:
 - `npm run check`, `npm run build` pass; no Spanish literal in `Question.svelte` outside comments.
-- Throw-away check: every removed literal appears verbatim as a catalog value; parametrised texts give the same output for the values the game uses.', '2026-10-12T00:14:29Z', NULL, 86);
+- Throw-away check: every removed literal appears verbatim as a catalog value; parametrised texts give the same output for the values the game uses.', '2026-10-12T00:14:29Z', '2026-10-12T04:57:13Z', 86);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (95, 21, 'LUI-1: Game.svelte and Player.svelte texts into the catalog', 'work', 'open', NULL, NULL, 'Screen texts of `Game.svelte` and `Player.svelte` come from the catalog (`screen.start`, `screen.player`, `screen.level`, `screen.select`, `screen.result`, `screen.victory`, `a11y.*`).
 
 - Greeting, start/level/result/victory texts, buttons, aria/title. Milestone/consolation already go through `copy.ts` (task 1).
@@ -5934,6 +5934,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (190, 91, '2026-10-12T04:50:48Z', '2026-10-12T04:52:34Z', 'done', NULL, 0, 'e1218f2998e76fddf5dbbb82f5d97adcac3a3a86', 'claude-opus-5-5[1m]', 'ef580d2d-c58e-4bac-bbdc-b80f6260e3ac', 20, 38, 10108, 716080, 34198, 0.61911199999999989, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (191, 92, '2026-10-12T04:52:34Z', '2026-10-12T04:54:59Z', 'done', NULL, 0, 'e63da000ac1f32e21801fe40090b773f6d0284f9', 'claude-opus-5-5[1m]', '90c94edd-f384-40bb-839a-cd4551c20462', 20, 36, 15394, 920508, 52280, 0.91036559999999989, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (192, 93, '2026-10-12T04:54:59Z', '2026-10-12T04:56:20Z', 'done', NULL, 0, '6a641f19e5afafcbad25c6490f9e8cc2d8b883be', 'claude-opus-5-5[1m]', '0e77af86-978c-4686-931c-a6a45217157f', 17, 30, 7289, 682859, 44215, 0.63619180000000009, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (193, 94, '2026-10-12T04:56:20Z', '2026-10-12T04:57:24Z', 'done', NULL, 0, 'd8159d45b1dcd56bbbb2dde02d03c8a36a9daf97', 'claude-opus-5-5[1m]', '11ed3442-63d3-4257-8413-25127ea60763', 12, 24, 6278, 476554, 37975, 0.5247668, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
