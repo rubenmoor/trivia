@@ -77,6 +77,13 @@ def exports(source_pool):
     return {layout.LOCALE_POOL(l): export_text(l, source_pool) for l in LOCALES if path(l).exists()}
 
 
+def yield_rate(locale):
+    """Approved / decided translations from tr-<locale>-* runs; 1.0 before any (plan 70)."""
+    decided = [t for t in load(locale)["questions"] if (t.get("batch") or "").startswith(f"tr-{locale}-")
+               and t.get("status") in ("approved", "needs_work", "rejected")]
+    return sum(t["status"] == "approved" for t in decided) / len(decided) if decided else 1.0
+
+
 def counts(locale, source_pool):
     """{"exported", "stale", "left_out"}: stale = non-rejected translations of changed source text;
     left_out = approved, not stale, but the source isn't approved or translatable."""

@@ -1,6 +1,6 @@
 # 16 — Content Target for Release
 
-**Status:** target decided (D-75); CT-2 done; CT-3..CT-5 open (S4)
+**Status:** target decided (D-75); CT-2, CT-4 done; CT-3, CT-5 open (S4)
 
 Part of the Steam plan ([11](11-steam.md)). The release target is set per launch language (D-75): buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
 
@@ -45,7 +45,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.
 - [x] CT-2 `qgen.py report --simulate` on the engine: games per new player per language, region, mode and age group; information only (D-75). (2026-10-12, task 412: `authoring/tools/engine.py`, `qgen.py` `report --simulate`; default matrix 56 s; es today: adults typical ≈ 68 solo games, strong 28; exit 1: es 1136/5000, en/de no pool.)
 - [ ] CT-3 Cost estimate per question (draft → approved, and per translation) from `costs.log`; budget for the release.
-- [ ] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch.
+- [x] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch. *2026-10-12, task 462 (D-84): deficits per locale + `es` source shortfall (`targets.py`), read by `draft` and the subcategory ranking; `qgen report --locale L`, `--simulate`'s target check and `--cost` use them. `--translate`'s weight: plan 66 follow-up.*
 - [ ] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample.
   - Family pool: closed 2026-10-11 (pm decision 2: 30 per batch, ≥ 90 % agreement; `qgen report --exit-check`). Open for the public release: pm plan 57 (release bar, back-audit).
   - Release bar: D-79 = D-56's numbers (pm decision 15); `qgen report --qc` row "release" (2026-10-12, task 336). Back-audit open.

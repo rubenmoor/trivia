@@ -6,10 +6,14 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Milestones, plans, tasks, decisions: all in `tasks.sql`, only through `pm`. Read `pm instructions` first.
 - Start: `pm status`, `pm show <task>`.
 - Before a choice: `pm decision list --answered --grep <word>`; answers are binding.
-- Question only the gamemaster can answer: `pm decision add`, don't guess. Own lasting choice: `pm decision record`.
+- Question only the human can answer: `pm decision add`, don't guess. Own lasting choice: `pm decision record`.
 - Follow-up work: `pm task add`.
-- Always consider updating existing milestones and plans (`pm milestone set`, `pm plan edit`); pm then queues a task that rewrites its descendants.
 - Cite milestones, plans, tasks by id and subject, in backticks: `task 437: Translation prompts and market per locale`.
+
+## Outside pm workers
+- Skip this section if `PM_TASK` is set (you are a pm worker).
+- Milestones are mine; edit them with pm when we answer decisions: `pm decision list`, `pm milestone set <id> --body - <<'EOF'`, then `pm decision answer <id> …`.
+- note that editing a milestones triggers pm to add a task that rewrites its decendant plans and task; this is why editing a milestone is usually enough
 
 ## Rules
 - Push directly to `main`. No feature branches or pull requests.

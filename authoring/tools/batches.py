@@ -22,8 +22,8 @@ def unfinished_runs():
 def subcategories(pool, count=None, bundle="base"):
     """The bundle's `count` subcategories (default: SHARE of them, D-46) with the fewest approved
     questions of that bundle in `pool`, each weighted by its level's share of the deficits to the
-    targets (D-54); ties in its categories.json order (D-41)."""
-    deficit = targets.deficits(pool, bundle)
+    targets (D-54; base past them: the es source shortfall, decision 37); ties in its categories.json order (D-41)."""
+    deficit = targets.draft_gaps(pool, bundle)
     total = sum(deficit.values()) if deficit else 0
     approved = {}
     for q in pool:

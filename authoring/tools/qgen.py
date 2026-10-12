@@ -584,11 +584,12 @@ def cmd_bundles(args):
 
 def target_weights(pool_questions, bundle):
     """{difficulty: weight} for drafting: LEVEL_WEIGHTS for the focus group; without one the
-    bundle's deficits vs. its targets (D-54), even over the scale without targets or deficits (D-40)."""
+    bundle's deficits vs. its targets (D-54), then base's es source shortfall (decision 37), even
+    over the scale without either (D-40)."""
     focus = focus_group()
     if focus is None:
         lo, hi = load_age_groups()["scale"]
-        deficit = targets.deficits(pool_questions, bundle)
+        deficit = targets.draft_gaps(pool_questions, bundle)
         if deficit:
             return {lvl: deficit.get(lvl, 0) for lvl in range(lo, hi + 1)}
         return {lvl: 1 for lvl in range(lo, hi + 1)}
@@ -1429,13 +1430,18 @@ def report_overlaps():
               f"      {p['question']}\n      {q['question']}")
 
 
-def report_progress(pool, bundle):
-    """Approved vs. targets per difficulty and per broad category (plan 12); quiet without targets."""
+def report_progress(pool, bundle, locale="es"):
+    """Approved vs. targets per difficulty and per broad category (plan 12), per locale (decision 37);
+    quiet without targets."""
     t = targets.load_targets(bundle)
     if t is None:
         return
     approved = [q for q in pool if q["status"] == "approved" and q.get("bundle") == bundle]
-    print(f"progress vs. targets ({bundle}):")
+    if locale != "es":
+        src = {q["id"]: q for q in pool if q.get("bundle") == bundle}
+        approved = [{**src[x["id"]], "difficulty": x["difficulty"]} for x in translations.load(locale)["questions"]
+                    if x["id"] in src and translations.plays(x, src[x["id"]])]
+    print(f"progress vs. targets ({bundle}, {locale}):")
 
     def line(label, n, goal):
         pct = f"{100 * n / goal:3.0f}%" if goal else "   –"
@@ -1452,6 +1458,22 @@ def report_progress(pool, bundle):
     print("  per broad category (derived share, guide only):")
     for slug, share in shares.items():
         line(f"  {slug:{w}}", by_cat[slug], round(share))
+    if bundle == "base":
+        report_supply(pool, locale)
+
+
+def report_supply(pool, locale):
+    """es sources for the translations (plan 70, CT-4): need = deficit / yield vs. untranslated, per level."""
+    supply = targets.source_supply(pool)
+    fmt = lambda d: ", ".join(f"{l}: {n}" for l, n in sorted(d.items()) if n) or "none"
+    print("es sources for translations (per source level; need = locale deficit / yield):")
+    for l, x in supply.items():
+        if locale in ("es", l):
+            print(f"  {l}: yield {x['yield']:.2f}; need {fmt(x['need'])}; untranslated {fmt(x['untranslated'])}")
+    short = targets.source_shortfall(pool, supply=supply)
+    after = targets.source_shortfall(pool, pending=targets.deficits(pool, "base"), supply=supply)
+    print(f"  shortfall (largest over {', '.join(supply)}): {fmt(short or {})}")
+    print(f"  past es's target (drafted once es meets it, decision 37): {fmt(after or {})}")
 
 
 def committed_batches(bundle, n=2):
@@ -1675,16 +1697,15 @@ def locale_pool(locale):
     return layout.EXPORT if locale == "es" and not own.exists() else own
 
 
-def target_check(locale):
-    """D-75: approved in the locale's pool vs. base's targets (until part 9 sets per-locale ones)."""
-    path, t = locale_pool(locale), targets.load_targets("base")
-    if not path.exists():
-        return {"locale": locale, "ok": False, "pool": None}
-    approved = [q for q in load_json(path)["questions"] if q.get("status", "approved") == "approved"]
-    by = Counter(q["difficulty"] for q in approved)
-    short = {d: n - by[d] for d, n in t["difficulty"].items() if by[d] < n}
-    return {"locale": locale, "ok": len(approved) >= t["total"] and not short, "pool": str(path.relative_to(ROOT)),
-            "approved": len(approved), "total": t["total"], "short": short}
+def target_check(locale, pool=None):
+    """D-75: the locale's approved base questions vs. base's targets (decision 37)."""
+    pool = pool if pool is not None else load_json(POOL)["questions"]
+    t = targets.load_targets("base")
+    by = targets.approved_by_level(pool, "base", locale)
+    short = targets.deficits(pool, "base", locale) or {}
+    short = {d: n for d, n in short.items() if n}
+    n = sum(by.values())
+    return {"locale": locale, "ok": n >= t["total"] and not short, "approved": n, "total": t["total"], "short": short}
 
 
 def report_simulate(args):
@@ -1707,7 +1728,8 @@ def report_simulate(args):
     with concurrent.futures.ThreadPoolExecutor(os.cpu_count() or 4) as ex:
         done = dict(zip(map(id, have), ex.map(lambda c: engine.simulate(c), have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
-    checks = [target_check(l) for l in locales]
+    pool = load_json(POOL)["questions"]
+    checks = [target_check(l, pool) for l in locales]
     ok = all(c["ok"] for c in checks)
     if args.json:
         print(json.dumps({"model": {"typical_p": engine_model(results)}, "seconds": round(time.monotonic() - t0, 1),
@@ -1744,11 +1766,8 @@ def report_simulate(args):
     widths = [max(len(row[i]) for row in rows) for i in range(len(rows[0]) - 1)]
     for row in rows:
         print("  " + "  ".join(c.ljust(w) for c, w in zip(row, widths)) + "  " + row[-1])
-    print("target check (D-75: approved per launch language vs. base's targets):")
+    print("target check (D-75, decision 37: approved base questions per launch language vs. base's targets):")
     for c in checks:
-        if c["pool"] is None:
-            print(f"  ✗ {c['locale']}: no pool")
-            continue
         short = ", ".join(f"{d}: −{n}" for d, n in c["short"].items())
         print(f"  {'✓' if c['ok'] else '✗'} {c['locale']}: {c['approved']}/{c['total']} approved"
               + (f"; short at difficulty {short}" if short else ""))
@@ -1817,20 +1836,23 @@ def cost_report(pool):
     rates = {"draft": rated(last3), "draft_runs": [r["run"] for r in last3], "batch_cost": batch_cost,
              "overhead_cost": overhead, "overhead_ratio": ratio,
              "translation": {l: rated(rs) for l, rs in tr.items()}}
-    t = targets.load_targets("base")
-    es_deficit = sum((targets.deficits(pool, "base") or {}).values())
+    es_def = targets.deficits(pool, "base") or {}
+    extra = sum((targets.source_shortfall(pool, pending=es_def) or {}).values())
     budget = targets.load_all().get("budget") or {}
     spent = {"es": sum(r["cost"] + r["audit"] for r in runs if r["kind"] != "translation"),
              **{l: sum(r["cost"] + r["audit"] for r in rs) for l, rs in tr.items()}}
     projection = []
     for l in LAUNCH_LOCALES:
-        deficit = es_deficit if l == "es" else t["total"]  # task 462: per-locale deficits, es source shortfall
+        deficit = sum((targets.deficits(pool, "base", l) or {}).values())
         rate = rates["draft"] if l == "es" else rates["translation"][l]
         cost = deficit * rate * (1 + (ratio or 0)) if rate is not None else None
         projection.append({"locale": l, "deficit": deficit, "per_approved": rate, "cost": cost,
                            "note": None if l == "es" or tr[l] else "no pilot yet",
                            "spent": spent[l], "budget": budget.get(l)})
-    return {"runs": runs, "rates": rates, "projection": projection, "skipped": skipped}
+    rate = rates["draft"]
+    sources = {"count": extra, "per_approved": rate, "yield": {l: translations.yield_rate(l) for l in translations.LOCALES},
+               "cost": extra * rate * (1 + (ratio or 0)) if rate is not None else None}
+    return {"runs": runs, "rates": rates, "projection": projection, "es_sources": sources, "skipped": skipped}
 
 
 def report_cost(args):
@@ -1853,12 +1875,15 @@ def report_cost(args):
         print(f"  translation {l}: " + (f"{usd(v)} per approved" if v is not None else "no tr-" + l + "-* run yet"))
     ratio = "–" if k["overhead_ratio"] is None else f"{k['overhead_ratio']:.2f}"
     print(f"  overhead: {usd(k['overhead_cost'])} outside batches (incl. audits) / {usd(k['batch_cost'])} in batches = {ratio}")
-    print("projection per launch language (deficit × $/approved × (1 + overhead); deficit: es = base's, en/de = the full "
-          "target until task 462; information only, D-55 caps a batch):")
+    print("projection per launch language (deficit × $/approved × (1 + overhead); deficit = the locale's to base's "
+          "targets, decision 37; information only, D-55 caps a batch):")
     for p in r["projection"]:
         cost = p["note"] or usd(p["cost"])
         budget = f", budget {usd(p['budget'])}" if p["budget"] is not None else ""
         print(f"  {p['locale']}: {p['deficit']} to go × {usd(p['per_approved'])} → {cost}; spent {usd(p['spent'])}{budget}")
+    x = r["es_sources"]
+    print(f"  es sources past es's target for en/de (yield {', '.join(f'{l} {y:.2f}' for l, y in x['yield'].items())}): "
+          f"{x['count']} × {usd(x['per_approved'])} → {usd(x['cost'])}")
     if r["skipped"]:
         print("skipped (work/ is local):")
         for s in r["skipped"]:
@@ -1913,7 +1938,8 @@ def cmd_report(args):
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""
         print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
-    report_progress(pool, args.bundle)
+    for l in (args.locale or "es").split(","):
+        report_progress(pool, args.bundle, l)
     if args.subcategories:
         report_subcategories(avail)
         report_saturation(pool, args.bundle)
@@ -3403,7 +3429,8 @@ def main():
     rp.add_argument("--player", help="with --simulate: strong|typical|both (default both)")
     rp.add_argument("--simulate", action="store_true",
                     help="games per new player until the first repeat on the engine (plan 62, plan 65, information only); exit 1 if a launch language misses D-75's target")
-    rp.add_argument("--locale", help="with --simulate: comma-separated (default: es,en,de, D-78)")
+    rp.add_argument("--locale", help="progress vs. targets for this locale (default es); with --simulate: "
+                    "comma-separated (default: es,en,de, D-78)")
     rp.add_argument("--bundles", help="with --simulate: comma-separated (default: es every bundle, else base; until RG-5)")
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
     rp.add_argument("--mode", default="solo", help="with --simulate: solo|rr-coop|rr-competitive|timed|all")

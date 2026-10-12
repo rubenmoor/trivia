@@ -435,7 +435,7 @@ Template:
 - Context: D-40 spreads target difficulties evenly over 1–15, and `qgen batch` picks subcategories by fewest approved (D-46). With targets per level (D-53) the pool still fills 5–8 fastest; hard targets land ~3 levels low (B-6; batch-7: target 15 → final 12.1).
 - Decision: When the bundle has targets, `draft` weights each level by its deficit, `max(0, target − approved)`; even weights stay for bundles without targets (D-40). `qgen batch` ranks subcategories by approved questions weighted by the same deficits, so subcategories thin where the pool is thin come first. Slot targets go to subcategories whose concept lists can carry them (unused concepts with `known_at` near the target).
 - Consequences: `qgen batch` still takes no arguments (D-36). Batches change shape as the pool fills. pm plan 13 (Aim batches at difficulty gaps) has the tasks.
-- Supersedes / related: D-36, D-40, D-46, D-53; B-6
+- Supersedes / related: D-36, D-40, D-46, D-53; B-6; amended by D-84 (base past its target: the `es` source shortfall)
 
 ## D-55: Batch health thresholds stop the next batch
 - Date: 2026-10-11
@@ -713,3 +713,15 @@ Template:
   - **`es-ES` for questions:** no `questions.es-ES.json` at launch; the scan lists words with no pan-Hispanic form, a sparse override can follow if there are many.
 - Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the gamemaster asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
 - Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32
+
+## D-84: Per-locale targets and gaps
+- Date: 2026-10-12
+- Context: D-75 sets one target per launch language; `en`/`de` fill only by translating `es` sources (D-81). Plan 70 (CT-4), pm decision 37.
+- Decision:
+  - Every launch language uses `targets.json` `base` (D-75); no locale block, no per-mode, per-age-group or per-preset targets.
+  - Deficits per locale: `targets.deficits(pool, bundle, locale)` counts the locale's playing translations by their own difficulty.
+  - Source shortfall per level = largest over `en`/`de` of (locale deficit / yield − untranslated approved, translatable `es` sources); yield = approved / decided `tr-<L>-*` translations, 1.0 before a pilot.
+  - `draft` and the subcategory ranking for `base`: the `es` deficit while any (D-54); then the source shortfall, so `es` drafting goes past its target; even weights (D-40) when both are zero.
+  - Simulation bottlenecks are information, not weights.
+- Consequences: `qgen report --locale L`, `--simulate`'s target check and `--cost` (`es` sources past the target) use it. Whether `es` grows past 5000 is part of the release budget (plan 70 task 463).
+- Supersedes / related: D-40, D-53, D-54 (amends), D-75, D-78, D-81; pm decision 37

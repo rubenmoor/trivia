@@ -1,9 +1,11 @@
 """Pool targets per bundle (plans/12, D-53): shared by qgen.py and the authoring server."""
-import json
+import json, math
+from collections import Counter
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import TARGETS
 import categories  # app/server/categories.py
+import translations  # authoring/tools/translations.py (D-81)
 
 NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)
 
@@ -61,17 +63,57 @@ def health_problems(metrics):
     return out
 
 
-def deficits(pool_questions, bundle):
-    """{level: max(0, target − approved)} for the bundle (D-54); None without targets or deficits."""
+def approved_by_level(pool_questions, bundle, locale=None):
+    """Counter {difficulty: approved} of the bundle; with a locale other than es, its playing
+    translations by their own difficulty (D-81, plan 70)."""
+    if locale in (None, "es"):
+        return Counter(q["difficulty"] for q in pool_questions if q["status"] == "approved" and q.get("bundle") == bundle)
+    src = {q["id"]: q for q in pool_questions if q.get("bundle") == bundle}
+    return Counter(t["difficulty"] for t in translations.load(locale)["questions"]
+                   if t["id"] in src and translations.plays(t, src[t["id"]]))
+
+
+def deficits(pool_questions, bundle, locale=None):
+    """{level: max(0, target − approved)} for the bundle (D-54), per locale (decision 37);
+    None without targets or deficits."""
     t = load_targets(bundle)
     if t is None:
         return None
-    have = {}
-    for q in pool_questions:
-        if q["status"] == "approved" and q.get("bundle") == bundle:
-            have[q["difficulty"]] = have.get(q["difficulty"], 0) + 1
-    out = {lvl: max(0, n - have.get(lvl, 0)) for lvl, n in t["difficulty"].items()}
+    have = approved_by_level(pool_questions, bundle, locale)
+    out = {lvl: max(0, n - have[lvl]) for lvl, n in t["difficulty"].items()}
     return out if any(out.values()) else None
+
+
+def source_supply(pool_questions, bundle="base"):
+    """Per translation locale (plan 70, CT-4): yield, and per source level the es sources its deficit
+    needs (deficit / yield) and the approved, translatable ones not yet translated (or stale)."""
+    out = {}
+    for l in translations.LOCALES:
+        ts = {t["id"]: t for t in translations.load(l)["questions"]}
+        y = translations.yield_rate(l)
+        untranslated = Counter(q["difficulty"] for q in pool_questions
+                               if q["status"] == "approved" and q.get("bundle") == bundle and translations.translatable(q)
+                               and (q["id"] not in ts or translations.is_stale(ts[q["id"]], q)))
+        need = {lvl: math.ceil(n / max(y, 0.1)) for lvl, n in (deficits(pool_questions, bundle, l) or {}).items()}
+        out[l] = {"yield": y, "need": need, "untranslated": dict(untranslated)}
+    return out
+
+
+def source_shortfall(pool_questions, bundle="base", pending=None, supply=None):
+    """{level: es sources to draft for the translations}: largest over the locales of need −
+    untranslated (− `pending`: es deficits still to draft); None when zero (plan 70)."""
+    supply = supply or source_supply(pool_questions, bundle)
+    pending = pending or {}
+    levels = (load_targets(bundle) or {}).get("difficulty", {})
+    out = {lvl: max([0] + [s["need"].get(lvl, 0) - s["untranslated"].get(lvl, 0) - pending.get(lvl, 0)
+                           for s in supply.values()]) for lvl in levels}
+    return out if any(out.values()) else None
+
+
+def draft_gaps(pool_questions, bundle):
+    """What `draft` aims at (D-54, decision 37): the bundle's deficits; for base once they're met,
+    the es source shortfall of the translations; None: even weights (D-40)."""
+    return deficits(pool_questions, bundle) or (source_shortfall(pool_questions) if bundle == "base" else None)
 
 
 def category_shares(bundle):
