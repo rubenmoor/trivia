@@ -5231,8 +5231,96 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `plans/18-steam-integration.md` (SW-3 `[x]` with date and files; Steam Cloud bullet: `save/` non-recursive, pattern `game.json`), `directory.md` (`app/desktop/save.mjs`, `state/desktop/`), README.md (save location per OS, `--import-save`, or copy `state/game.json` to the save folder), `plans/project.md`; check the D entry from the first task still matches the code.
 
 Done when: plan 55 "Done when" holds; `npm run check`, `npm run build`, `qgen validate` pass; no new dependencies.', '2026-10-12T03:44:56Z', NULL, 319);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (323, 56, 'create tasks for plan 56', 'split', 'open', 1000, NULL, 'Split plan 56 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:47:41Z', NULL, 211);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (323, 56, 'create tasks for plan 56', 'split', 'done', 1000, '2026-10-11, tasks 329–333 for plan 56 (333 pending on decision 14); 324–328 dropped (re-added with ids); tasks.sql', 'Split plan 56 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:47:41Z', '2026-10-12T03:49:01Z', 211);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (324, 56, 'Local builds: electron-builder config, packaged layout, trivia-desktop-build', 'work', 'dropped', NULL, 're-added with task ids in the body (329–333)', 'Part 1 of plan 56 (SW-5). Needs plan 54 tasks 314, 315, 316 done; if one isn''t, stop and say so.
+
+- `app/desktop/package.json`: devDependencies `electron` (exact 43.x, the flake''s major) and `electron-builder`; scripts `stage-media`, `dist` (= `npm run build -w app/client` from the root, `stage-media`, `electron-builder --x64 --linux tar.gz --win zip`). Own `app/desktop/package-lock.json`; not in the root `workspaces` (overrides plan 54''s "part 3 makes it a workspace").
+- `app/desktop/electron-builder.yml`: `productName` Trivia, `appId` `io.github.rubenmoor.trivia`, executable `trivia` / `Trivia.exe`, artefacts `Trivia-<version>-win-x64.zip`, `Trivia-<version>-linux-x64.tar.gz` in `app/desktop/release/`; `files` whitelist (`package.json`, `*.mjs`, `preload.cjs`); `extraResources` `../client/dist` → `client`, `../data` → `data`, `build/media` → `media`; `extraFiles` `dist/CREDITS.md` if plan 47 landed; `win.signAndEditExecutable: false`; Linux `--no-sandbox` via `linux.executableArgs`, else `after-pack.mjs` (binary → `trivia-bin`, shell launcher `trivia`). No auto-updater, no crash upload.
+- `app/desktop/main.mjs` `roots()` packaged branch: `client`, `data`, `media` under `process.resourcesPath`; `TRIVIA_MEDIA` still overrides media.
+- `app/desktop/resolve.mjs`: export `cachePath`. `app/desktop/stage-media.mjs` (plain node): pool.json `media` + `background` `file_url`s → `cachePath` → hard-link (fallback copy) from `TRIVIA_MEDIA` or `<repo>/media` into emptied `app/desktop/build/media/`; missing → exit 1 listing them + «run `trivia-media sync --status approved`»; `--allow-missing`; prints count and MB.
+- `flake.nix`: `trivia-desktop-build` in the dev shell (`qgen validate` first, then the npm script with `ELECTRON_SKIP_BINARY_DOWNLOAD=1`; `steam-run` for builder helpers only if needed). `.#app` unchanged.
+- `.gitignore`: `app/desktop/build/`, `app/desktop/release/`.
+- `plans/decisions.md`: next D number — targets and why, own lockfile instead of workspace, layout (media outside the asar), staging rule, `--no-sandbox` on Linux, unsigned exe until S5 (+ `steam-run` if used).
+- Backlog: exe icon + file metadata in S5.
+
+Done when (throw-away script): `trivia-desktop-build` from clean `build/` + `release/` yields both artefacts; listing shows `Trivia.exe` / `trivia`, asar holds only the whitelist, `resources/client/index.html`, `resources/data/pool.json` byte-equal to `app/data/pool.json`, `resources/media` count = distinct pool URLs, `CREDITS.md` at root if plan 47 landed; one cache file renamed away → exit 1 naming it, `--allow-missing` → builds; second build under `unshare -rn` succeeds; `git diff package-lock.json` empty and `nix build .#app` builds.', '2026-10-12T03:48:26Z', '2026-10-12T03:48:34Z', 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (325, 56, 'Local builds: packaged Linux build plays offline, docs', 'work', 'dropped', NULL, 're-added with task ids in the body (329–333)', 'Part 2 of plan 56. Needs task TASK1, plan 54 task 318 and plan 55 task 321 done; if one isn''t, stop and say so.
+
+- Unpack the tar.gz into a temp dir; run it outside the Nix shell env (`steam-run`, or `env -i` with only `HOME`, `DISPLAY` / `xvfb-run`) under `unshare -rn`, temp `HOME`, `TRIVIA_SAVE_DIR` unset.
+- Plan 54''s throw-away CDP script (`--remote-debugging-port`, only with `TRIVIA_DEVTOOLS=1`): new player → short game with an image, audio and video question (media loaded, no `mediaFailed`), quit, restart → player and burned questions kept; `<HOME>/.config/trivia/save/game.json` exists; `pgrep -f app/server/main.py` empty; nothing written outside the temp dirs.
+- Windows: content listing of the zip only (no wine).
+- Docs: `plans/18-steam-integration.md` "Builds and depots" rewritten for S3 (local command, layout, targets); `directory.md` (`app/desktop/` new files, `build/`, `release/`); `plans/19-repo-layout.md`; AGENTS.md "Commands" (`trivia-desktop-build`); README.md (build and run the desktop game); if `app/client/credits.ts` exists: Electron entry under Libraries (MIT, `LICENSE.electron.txt`, `LICENSES.chromium.html`).
+- SW-5 stays `[ ]` (task 4 of plan 56).
+
+Done when: the checks above pass and the docs match the code.', '2026-10-12T03:48:26Z', '2026-10-12T03:48:34Z', 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (326, 56, 'Local builds: start test checklist and decision', 'work', 'dropped', NULL, 're-added with task ids in the body (329–333)', 'Part 3 of plan 56. Needs task TASK2 done; if not, stop and say so.
+
+- `plans/18-steam-integration.md`: section "Local build start test" after "Builds and depots": how to get the artefacts (command, or zip/tar.gz copied over); one table per machine — Windows x64 without Node/Python, Linux x64 without Nix (e.g. Ubuntu 24.04) — columns check | result | note.
+- Rows: network off before unpacking; unpack and start (Windows SmartScreen «More info → Run anyway» expected; `./trivia` on Linux); fullscreen, F11 toggles; keyboard game to level 3 with an image, audio and video question and sound; quit and restart keeps the player; save at `%APPDATA%\trivia\save\game.json` / `~/.config/trivia/save/game.json`; `CREDITS.md` in the folder; no console window (Windows).
+- Plan 48 merges this into its S3 platform test: link it in this task''s done note, don''t edit plan 48.
+- `did=$(pm decision add "Local builds start offline?" --body "<checklist, build commit>" --option "both pass" --option "issues (fill the tables)")`; `pm task-pending-decision TASK4 "$did"`.
+
+Done when: section written and task TASK4 waits on the decision.', '2026-10-12T03:48:26Z', '2026-10-12T03:48:34Z', 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (327, 56, 'Local builds: record the start test', 'work', 'dropped', NULL, 're-added with task ids in the body (329–333)', 'Part 4 of plan 56. Waits for the decision from task TASK3 ("Local builds start offline?"); if none is linked or it''s pending, stop and say so.
+
+- Fill the tables in `plans/18-steam-integration.md` "Local build start test" (date, build commit) from the answer.
+- Pass → SW-5 `[x]` in plan 18 with date and files; `plans/project.md`.
+- Issues → per failing row a task in plan 56 (or plan 54/55 if it''s theirs) with the row and how to reproduce; then a re-test decision with the failed rows, `pm task-pending-decision` this task on it; stage and stop without closing.
+
+Done when: tables filled and SW-5 `[x]`, or follow-up tasks and the re-test decision exist.', '2026-10-12T03:48:26Z', '2026-10-12T03:48:35Z', 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (328, 56, 'Local builds: CI (SW-6) per decision 14', 'work', 'dropped', NULL, 're-added with task ids in the body (329–333)', 'Part 5 of plan 56. Waits for decision 14 "CI builds (SW-6): in S3 or S5, and with or without media?". Needs task TASK1 done for options 2 and 3.
+
+- "Move SW-6 to S5" → SW-6 note in `plans/18-steam-integration.md` («moved to S5, decision 14»); `plans/11-steam.md` S3 row SW-1..SW-5, S5 row gains SW-6; line in plan 56''s decision entry in `plans/decisions.md`; `plans/project.md`. No code.
+- "Keep, without media" → `.github/workflows/desktop.yml`: `ubuntu-latest`, Node 22, `npm ci`, `npm ci --prefix app/desktop`, `npm run dist --prefix app/desktop` with `stage-media --allow-missing` (no Python, no `qgen validate`: CI trusts the committed `pool.json`); upload artefacts as workflow artefacts; no secrets; on push to `main` and manual. Check with `act` if in nixpkgs, else push and `gh run watch`.
+- "Keep, with media" → as above plus Python + `trivia-media sync --status approved`, `actions/cache` keyed on the hash of `pool.json`''s URL list; one run must pass.
+- Kept → SW-6 `[x]` and docs (plan 18, `directory.md`, README.md, decision entry).
+
+Done when: SW-6 resolved per decision 14 and the docs match.', '2026-10-12T03:48:26Z', '2026-10-12T03:48:35Z', 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (329, 56, 'Local builds: electron-builder config, packaged layout, trivia-desktop-build', 'work', 'open', NULL, NULL, 'Part 1 of plan 56 (SW-5). Needs plan 54 tasks 314, 315, 316 done; if one isn''t, stop and say so.
+
+- `app/desktop/package.json`: devDependencies `electron` (exact 43.x, the flake''s major) and `electron-builder`; scripts `stage-media`, `dist` (= `npm run build -w app/client` from the root, `stage-media`, `electron-builder --x64 --linux tar.gz --win zip`). Own `app/desktop/package-lock.json`; not in the root `workspaces` (overrides plan 54''s "part 3 makes it a workspace").
+- `app/desktop/electron-builder.yml`: `productName` Trivia, `appId` `io.github.rubenmoor.trivia`, executable `trivia` / `Trivia.exe`, artefacts `Trivia-<version>-win-x64.zip`, `Trivia-<version>-linux-x64.tar.gz` in `app/desktop/release/`; `files` whitelist (`package.json`, `*.mjs`, `preload.cjs`); `extraResources` `../client/dist` → `client`, `../data` → `data`, `build/media` → `media`; `extraFiles` `dist/CREDITS.md` if plan 47 landed; `win.signAndEditExecutable: false`; Linux `--no-sandbox` via `linux.executableArgs`, else `after-pack.mjs` (binary → `trivia-bin`, shell launcher `trivia`). No auto-updater, no crash upload.
+- `app/desktop/main.mjs` `roots()` packaged branch: `client`, `data`, `media` under `process.resourcesPath`; `TRIVIA_MEDIA` still overrides media.
+- `app/desktop/resolve.mjs`: export `cachePath`. `app/desktop/stage-media.mjs` (plain node): pool.json `media` + `background` `file_url`s → `cachePath` → hard-link (fallback copy) from `TRIVIA_MEDIA` or `<repo>/media` into emptied `app/desktop/build/media/`; missing → exit 1 listing them + «run `trivia-media sync --status approved`»; `--allow-missing`; prints count and MB.
+- `flake.nix`: `trivia-desktop-build` in the dev shell (`qgen validate` first, then the npm script with `ELECTRON_SKIP_BINARY_DOWNLOAD=1`; `steam-run` for builder helpers only if needed). `.#app` unchanged.
+- `.gitignore`: `app/desktop/build/`, `app/desktop/release/`.
+- `plans/decisions.md`: next D number — targets and why, own lockfile instead of workspace, layout (media outside the asar), staging rule, `--no-sandbox` on Linux, unsigned exe until S5 (+ `steam-run` if used).
+- `plans/backlog.md`: exe icon + file metadata in S5.
+
+Done when (throw-away script): `trivia-desktop-build` from clean `build/` + `release/` yields both artefacts; listing shows `Trivia.exe` / `trivia`, asar holds only the whitelist, `resources/client/index.html`, `resources/data/pool.json` byte-equal to `app/data/pool.json`, `resources/media` count = distinct pool URLs, `CREDITS.md` at root if plan 47 landed; one cache file renamed away → exit 1 naming it, `--allow-missing` → builds; second build under `unshare -rn` succeeds; `git diff package-lock.json` empty and `nix build .#app` builds.', '2026-10-12T03:48:57Z', NULL, 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (330, 56, 'Local builds: packaged Linux build plays offline, docs', 'work', 'open', NULL, NULL, 'Part 2 of plan 56. Needs task 329, plan 54 task 318 and plan 55 task 321 done; if one isn''t, stop and say so.
+
+- Unpack the tar.gz into a temp dir; run it outside the Nix shell env (`steam-run`, or `env -i` with only `HOME`, `DISPLAY` / `xvfb-run`) under `unshare -rn`, temp `HOME`, `TRIVIA_SAVE_DIR` unset.
+- Plan 54''s throw-away CDP script (`--remote-debugging-port`, only with `TRIVIA_DEVTOOLS=1`): new player → short game with an image, audio and video question (media loaded, no `mediaFailed`), quit, restart → player and burned questions kept; `<HOME>/.config/trivia/save/game.json` exists; `pgrep -f app/server/main.py` empty; nothing written outside the temp dirs.
+- Windows: content listing of the zip only (no wine).
+- Docs: `plans/18-steam-integration.md` "Builds and depots" rewritten for S3 (local command, layout, targets); `directory.md` (`app/desktop/` new files, `build/`, `release/`); `plans/19-repo-layout.md`; AGENTS.md "Commands" (`trivia-desktop-build`); README.md (build and run the desktop game); if `app/client/credits.ts` exists: Electron entry under Libraries (MIT, `LICENSE.electron.txt`, `LICENSES.chromium.html`).
+- SW-5 stays `[ ]` (task 332).
+
+Done when: the checks above pass and the docs match the code.', '2026-10-12T03:48:57Z', NULL, 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (331, 56, 'Local builds: start test checklist and decision', 'work', 'open', NULL, NULL, 'Part 3 of plan 56. Needs task 330 done; if not, stop and say so.
+
+- `plans/18-steam-integration.md`: section "Local build start test" after "Builds and depots": how to get the artefacts (command, or zip/tar.gz copied over); one table per machine — Windows x64 without Node/Python, Linux x64 without Nix (e.g. Ubuntu 24.04) — columns check | result | note.
+- Rows: network off before unpacking; unpack and start (Windows SmartScreen «More info → Run anyway» expected; `./trivia` on Linux); fullscreen, F11 toggles; keyboard game to level 3 with an image, audio and video question and sound; quit and restart keeps the player; save at `%APPDATA%\trivia\save\game.json` / `~/.config/trivia/save/game.json`; `CREDITS.md` in the folder; no console window (Windows).
+- Plan 48 merges this into its S3 platform test: link it in this task''s done note, don''t edit plan 48.
+- `did=$(pm decision add "Local builds start offline?" --body "<checklist, build commit>" --option "both pass" --option "issues (fill the tables)")`; `pm task-pending-decision 332 "$did"`.
+
+Done when: section written and task 332 waits on the decision.', '2026-10-12T03:48:58Z', NULL, 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (332, 56, 'Local builds: record the start test', 'work', 'open', NULL, NULL, 'Part 4 of plan 56. Waits for the decision task 331 creates ("Local builds start offline?"); if none is linked or it''s still pending, stop and say so.
+
+- Fill the tables in `plans/18-steam-integration.md` "Local build start test" (date, build commit) from the answer.
+- Pass → SW-5 `[x]` in plan 18 with date and files; `plans/project.md`.
+- Issues → per failing row a task in plan 56 (or plan 54/55 if it''s theirs) with the row and how to reproduce; then a re-test decision with the failed rows, `pm task-pending-decision` this task on it; stage and stop without closing.
+
+Done when: tables filled and SW-5 `[x]`, or follow-up tasks and the re-test decision exist.', '2026-10-12T03:48:58Z', NULL, 323);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (333, 56, 'Local builds: CI (SW-6) per decision 14', 'work', 'open', NULL, NULL, 'Part 5 of plan 56. Waits for decision 14 "CI builds (SW-6): in S3 or S5, and with or without media?". Options 2 and 3 also need task 329 done.
+
+- "Move SW-6 to S5" → SW-6 note in `plans/18-steam-integration.md` («moved to S5, decision 14»); `plans/11-steam.md` S3 row SW-1..SW-5, S5 row gains SW-6; line in plan 56''s decision entry in `plans/decisions.md`; `plans/project.md`. No code.
+- "Keep, without media" → `.github/workflows/desktop.yml`: `ubuntu-latest`, Node 22, `npm ci`, `npm ci --prefix app/desktop`, `npm run dist --prefix app/desktop` with `stage-media --allow-missing` (no Python, no `qgen validate`: CI trusts the committed `pool.json`); upload artefacts as workflow artefacts; no secrets; on push to `main` and manual. Check with `act` if in nixpkgs, else push and `gh run watch`.
+- "Keep, with media" → as above plus Python + `trivia-media sync --status approved`, `actions/cache` keyed on the hash of `pool.json`''s URL list; one run must pass.
+- Kept → SW-6 `[x]` and docs (plan 18, `directory.md`, README.md, decision entry).
+
+Done when: SW-6 resolved per decision 14 and the docs match.', '2026-10-12T03:48:58Z', NULL, 323);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5477,6 +5565,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (148, 210, '2026-10-12T03:40:35Z', '2026-10-12T03:44:24Z', 'done', NULL, 0, 'b3688bc382ada66be8d440d9f236756ce8c9bbd2', 'claude-opus-5-5[1m]', 'dd357573-b7b6-4c28-b70f-bb2ddff058f4', 11, 20, 10546, 410868, 48715, 0.6828936000000001, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (149, 319, '2026-10-12T03:44:24Z', '2026-10-12T03:45:04Z', 'done', NULL, 0, '004f5e756c462ebe26b0a290e9ed0072329870d8', 'claude-opus-5-5[1m]', 'c46b6fce-5a2c-4d9f-a4d9-f40f2c64d1ca', 7, 14, 4220, 244444, 34555, 0.4097848, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (150, 211, '2026-10-12T03:45:04Z', '2026-10-12T03:47:55Z', 'done', NULL, 0, '15a24a6aad4725012f004c3f8f7094038c884369', 'claude-opus-5-5[1m]', 'f70c4f23-fa98-46c1-8bcd-3ec4ea8c5cde', 14, 28, 16635, 664353, 65351, 0.98849059999999989, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (151, 323, '2026-10-12T03:47:55Z', '2026-10-12T03:49:07Z', 'done', NULL, 0, 'e3cae6f266dafa6de551432cd2f9194187410cc0', 'claude-opus-5-5[1m]', '0766378d-42fe-4ae3-952f-a3fb5819c22b', 9, 18, 8352, 348955, 37728, 0.53872700000000007, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -5512,3 +5601,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (229, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (230, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (231, 9);
 INSERT INTO task_decision (task_id, decision_id) VALUES (241, 2);
+INSERT INTO task_decision (task_id, decision_id) VALUES (333, 14);
