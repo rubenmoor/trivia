@@ -4260,6 +4260,51 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Every part 10 inventory file (build/package config, docs check) is listed in `## Part 10`, every finding with a status.
 - `directory.md`, `AGENTS.md` and `README.md` match the code.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if the flake or lockfiles changed).', '2026-10-12T23:01:18Z', 511);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (83, 13, 'Executive summary and close-out (code review part 11)', 0, 'Part 11 of `plan 72: masterplan` (milestone 13, Code quality): close the review. Check that `code-review.md` is complete (every inventory file listed, every finding with a final status, follow-ups done or listed), propose process changes as decisions, write the executive summary at the top and run the final checks. Scope, report format and status values: plan 72 "Ground rules for every part"; not restated here.
+
+## Depends on
+- Parts 1–10 (plans 73–82), all priority 0 with lower plan ids → they and the follow-up tasks added to them run first. Tasks here read `code-review.md` and `pm` as they are then; the lists below are what the plans announced, not what they found.
+- `plan 73: Baseline scans and report skeleton (code review part 1)`: the `## Inventory`, the scan commands under `## Part 1` (re-runnable), the `## Executive summary` `PLACEHOLDER(…)` this plan replaces.
+- `plan 82: … (code review part 10)`: final statuses of every part 1 `handed to part 10` row and every duplication candidate; `directory.md`/`AGENTS.md`/`README.md` vs. code.
+- `task 302: Delete the Python referee` (plan 51, pending decision 25): may still be open; its rows stay `superseded by task 302` and are listed as pending, not reviewed again.
+- Binding: decision 14 (CI is local: per-commit checks + release check, no GitHub Actions); AGENTS.md "Outside pm workers": milestones are the gamemaster''s → process changes are `pm decision add`, never edits to `AGENTS.md`, `CLAUDE.md` or the milestone (plan 72 part 11).
+
+## Rules for this plan
+- No new reviews or refactors here: a gap found (file not listed, finding without status) → a short review of that file in task 1 if it fits, else `pm task add` in this plan with the exact files and the summary lists it as pending.
+- Numbers in the summary come from a throw-away script over `code-review.md` and `pm` (counts per part, category, severity, status), not estimated; the script is run, not committed.
+- Self-critical, factual: name the worst files/areas with row references, no praise padding; the gamemaster reads it, Spanish not needed (repo docs are English).
+- `.md` style per AGENTS.md: bullets, ultra-concise; full-sentence intro paragraph allowed at the top and under each top-level heading.
+- Before every commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+## Tasks (in this order; no own priority)
+1. **Completeness check of `code-review.md`**
+   - Inventory vs. reality: re-run part 1''s inventory script idea against current `git ls-files` (files added, moved or deleted during the milestone, e.g. by task 302 or part 10 consolidations) → inventory rows updated (deleted → `removed (task N)`).
+   - Every in-scope inventory file appears in its part''s section (finding rows or "no findings"); missing ones: short review now, or follow-up task.
+   - Every row has a status from plan 72''s set; every part 1 `handed to part N` row has a final status quoted in part N''s section; every duplication candidate has a part 10 status.
+   - Every `follow-up task N` / `decision N` / `superseded by task N`: `pm show` state; done tasks → status rewritten to `fixed (task N)`, dropped → `won''t fix: <reason from the drop>`; answered decisions → their follow-up''s state; still open → left, collected in a `### Pending` list under `## Part 11` (id, subject, blocking decision if any).
+   - Re-run the part 1 scans whose commands are cheap (unused TS exports, markers `PLACEHOLDER`/`TODO`, bad-practice counts) → before/after counts in `## Part 11` (input for task 3); new stale `PLACEHOLDER`s → row + status.
+   - Check: throw-away script prints 0 inventory files unlisted, 0 rows without valid status.
+2. **Process changes as decisions**
+   - From the findings (repeated categories across parts, e.g. swallowed errors, duplicated constants, stale `directory.md`, dead exports, lying comments): the systemic causes in worker-written code and what would prevent each — e.g. a rule in `AGENTS.md`, a line in pm''s worker prompt, a cheap local check added to the per-commit checks (decision 14: `tsc --noUnusedLocals`, a `directory.md` vs. `git ls-files` check, a stale-`PLACEHOLDER` check), a recurring review milestone.
+   - One `pm decision add` per change (options, recommended first; body: which findings it would have prevented, cost per commit); no edits to `AGENTS.md`, `CLAUDE.md`, milestones or pm config. Before adding: `pm decision list --grep <term>` (open and answered) so none duplicates one.
+   - Ids listed in `## Part 11` `### Process decisions` for task 3.
+3. **Executive summary** (replaces the `PLACEHOLDER` under `## Executive summary` at the top)
+   - Intro paragraph (full sentences): what was reviewed (files, lines, parts), when, how.
+   - Before the review: overall state; systemic causes (how worker-written code drifts: per-task local view, copies instead of imports, docs not updated, tests kept by default, Python↔TS ports); worst areas with row references (files/parts with most high/medium findings).
+   - Impact: counts fixed / follow-up tasks / decisions / superseded / won''t fix (per severity), notable fixes (high severity first), bundle size vs. part 1 baseline, before/after scan counts from task 1.
+   - Pending: open follow-up tasks and decisions (from `### Pending`), remaining risk per area (what is unreviewed-deep, superseded, or deferred).
+   - Process: the decisions of task 2 by id and one line each.
+   - Length: one screen or two; details stay in the part sections.
+4. **Final checks and close-out**
+   - `npm run check`, `npm test`, `npm run build`, `qgen validate`; plus `nix build .#app` if any `flake.nix`/lockfile changed during the milestone (`git log` since milestone 13''s first commit).
+   - Milestone 13 "Done when" walked item by item; `code-review.md` listed in `directory.md`; no `PLACEHOLDER` left in `code-review.md`.
+   - Anything not met → follow-up task in this plan or a row under `### Pending`; the summary says so.
+
+## Done when
+- Every inventory file is listed and every finding has a final status; pending tasks/decisions listed.
+- Process changes proposed as decisions, cited in the summary.
+- Executive summary at the top of `code-review.md`, no `PLACEHOLDER` left.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:07Z', 512);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -10250,14 +10295,14 @@ Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-as
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
 - Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', '2026-10-12T23:01:23Z', 501);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (512, 72, 'write plan: Executive summary and close-out (part 11)', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of plan 72: **Executive summary and close-out**, as described there.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (512, 72, 'write plan: Executive summary and close-out (part 11)', 'plan', 'done', 1000, '2026-10-12, plan 83 (tasks.sql)', 'Write the plan for part 11 of plan 72: **Executive summary and close-out**, as described there.
 - Tasks: completeness check (every file of part 1''s inventory listed, every finding has a status, follow-ups done or listed); the executive summary at the top of `code-review.md` (milestone 13 "Report"); process changes proposed as `pm decision add`, not edited into AGENTS.md or the milestone; final checks.
 
 
 Ground rules: plan 72 "Ground rules for every part" (scope, checklist, fix-or-ask, task 302 rule, duplication candidates, report format); cite them, don''t restate them at length.
 - `pm plan add 13 "<subject>" --priority 0 < body.md` (milestone 13 "Priority"); its tasks without own priority.
 - Check file sizes and contents (`wc -l`, `git ls-files`) so each review task fits one worker run; name the exact files per task.
-- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', NULL, 501);
+- Done when: the plan exists at priority 0 and its body lists the review tasks its split task should create.', '2026-10-12T22:48:53Z', '2026-10-12T23:02:09Z', 501);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (513, 73, 'create tasks for plan 73', 'split', 'open', 1000, NULL, 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:49:44Z', NULL, 502);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (514, 74, 'create tasks for plan 74', 'split', 'open', 1000, NULL, 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -10278,6 +10323,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:59:31Z', NULL, 510);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (522, 82, 'create tasks for plan 82', 'split', 'open', 1000, NULL, 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:01:18Z', NULL, 511);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (523, 83, 'create tasks for plan 83', 'split', 'open', 1000, NULL, 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:02:07Z', NULL, 512);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -11285,6 +11332,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (376, 509, '2026-10-12T22:56:40Z', '2026-10-12T22:58:18Z', 'done', NULL, 0, '347db31f3670ea651dae06f098cfc0c5d8c24e2c', 'claude-opus-5-5[1m]', '732d5829-588f-4f9c-970d-f6087bd816d6', 13, 22, 9860, 564507, 62913, 0.81349339999999992, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (377, 510, '2026-10-12T22:58:18Z', '2026-10-12T22:59:41Z', 'done', NULL, 0, '2de8b4214271dcc0438f619efb3f4c950fb085ab', 'claude-opus-5-5[1m]', '6881e61e-29b4-49e7-b1bc-00ee59679825', 10, 20, 8299, 417964, 49670, 0.6470128, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (378, 511, '2026-10-12T22:59:41Z', '2026-10-12T23:01:31Z', 'done', NULL, 0, 'd4e1f76f54930233d42896db7b1c6ba7b7020ccb', 'claude-opus-5-5[1m]', '8fa9f223-ecc8-489e-918d-94c7e154915c', 8, 16, 9194, 316854, 46222, 0.6170908, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (379, 512, '2026-10-12T23:01:32Z', '2026-10-12T23:02:15Z', 'done', NULL, 0, '5568f0bf1416ec69d20361d8818db84a76f6a887', 'claude-opus-5-5[1m]', '2e364715-b370-4cca-b84b-308d7917aa42', 5, 10, 4021, 166178, 35501, 0.39770360000000005, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
