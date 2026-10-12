@@ -2215,43 +2215,45 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section per mode and the implementation notes above; no preset or checkpoint left in plan 13.', '2026-10-12T00:39:47Z', 163);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (36, 7, 'Reportar pregunta and settings screen (MD-6, MD-7)', 490, 'Part 3 of the masterplan (plan 7): the default mode becomes playable. MD-6 «Reportar pregunta» (burn for everyone on this machine, local report list, replacement draw) and MD-7 the mode and settings screen (preset choice; the gamemaster mode still reachable). Owner: `plans/13-game-modes.md` (MD-6, MD-7, "Implementation notes"). The spec comes from part 2''s answer (plan 35, OQ-30, MD-5): presets, checkpoints, won levels, admin actions. This plan doesn''t re-decide them.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (36, 7, 'Reportar pregunta and mode screen (MD-6, MD-7)', 490, 'Part 3 of the masterplan (plan 7): «Solo o en grupo» becomes playable next to the gamemaster mode. MD-6 «Reportar pregunta» only logs the question to a local report list; MD-7 is the mode screen between Player and Level. Owner: `plans/13-game-modes.md` (MD-6, MD-7, "Implementation notes"). The spec comes from part 2 (plan 35, decisions 19 and 20): `settings.mode`, the standard joker set, `settings.customized`, refusals, `ReportRow`. This plan doesn''t re-decide them. There is no default mode, no preset and no checkpoint.
 
 ## Depends on (tasks wait; no second implementation in `app/server/game.py`)
-- Plan 35 (Default mode, OQ-30): its decision(s) answered and plan 13''s default-mode section written as a spec. Each task first checks `pm show` of plan 35: if a decision is still pending, `pm task-pending-decision <this task> <decision id>`, stage nothing, stop.
-- Plan 20 (Engine game state machine, PORT-3): `engine/game.ts`, `engine/api.ts`, `SaveData` / `GameState` / `BurnRow` in `engine/state.ts`.
-- M2 part 4 (save document, stores and migration, PORT-4/5) for the `version` bump; M2 part 5 (screens on the engine, PORT-7): the client calls the engine. If either hasn''t landed, the task stops and says so in its note (`pm task drop` is wrong; leave it open and stop).
-- Plan 21 (t() helper and es catalog, LUI-1): new strings via `t()` (`mode.*`, `report.*` keys); if `lib/i18n.ts` doesn''t exist yet, Spanish literals marked `// LUI-1`.
-- Plan 29 (Choice screen between Player and Level, priority 400): MD-7 puts the preset on that screen instead of adding a second screen. Hence task 3''s priority 380 (after plans 29 and 30).
-- Plan priority 490: after plan 20 (600), plan 21 and PORT-7 (~500).
+- Plan 35 (task 373): plan 13''s "Implementation notes" written as the spec, MD-5 `[x]`. If not, the task stops and says so in its note (leave it open).
+- Plan 20 (PORT-3): `engine/game.ts`, `engine/api.ts`, `SaveData` / `GameState` in `engine/state.ts`.
+- M2 part 4 (save document, stores, migration, PORT-4/5) for the `version` bump; plan 50 (PORT-7): screens call the engine. If either hasn''t landed, stop and say so in the note (no `pm task drop`).
+- Plan 21 (LUI-1): new strings via `t()` (`mode.*`, `report.*` keys); mode names English first, Spanish forms from plan 37 (OQ-31). Missing catalog: Spanish literals marked `// LUI-1`.
+- Plan 29 (Choice screen between Player and Level, priority 400): MD-7 builds on that screen, no second screen. Hence task 3''s priority 380 (after plans 29 and 30).
+- Plan 44 (action layer, done): every new screen and dialog on `input.svelte.ts` scopes (tasks 348, 349).
+- Plan 59 (gamemaster configure screen and menu, 480) builds on task 1''s `settings.mode`; this plan keeps the gamemaster overlay exactly as today.
 
-## Decisions taken here (unless plan 35''s answer says otherwise)
-- **Mode is a game setting**: `settings.mode: "gamemaster" | "default"`, missing = `"gamemaster"` (`withDefaults`), so old saves and fixtures are unchanged. Preset in `settings.preset`; `settings.jokers` filled from the preset table (one constant in the engine, the decided table of plan 13). Checkpoint fields as plan 13 specifies them.
-- **Rules live in the engine**, not only in the UI: in the default mode `undo`, skip for everyone and `setJokers` return `409` with a reason; `report` is refused in the gamemaster mode (it has skip + burn for everyone).
-- **«Reportar pregunta» = skip for everyone + a report row.** Reuse the engine''s skip-everyone path (`BurnRow` with `player_id: null`, replacement draw at the same level, same supply check); add `ReportRow {question_id, game_id, player_id, level, reported_on, note?}` in `SaveData.reports`. No undo of a report. Confirm step on screen («¿Reportar esta pregunta? Se quema para todos.»), Enter/Esc.
-- **Report list is a client screen**, not a server route (the Python server keeps static files and `/api/save`, decision 4): reachable from the overlay in the default mode; newest first: date, question id, question text, answer, player; «Copiar» copies the list as plain text (one block per report) via `navigator.clipboard`, with a selectable `<pre>` fallback. Works offline.
-- **Mode switch**: on the Choice screen (plan 29) in both modes, one toggle «Con presentador / Sin presentador» (key `M`, not used there). Launch option `?mode=default|gamemaster` presets it (the desktop shell, S3, passes it). The choice is preset from the player''s newest game like plan 29''s age group; a new player and a fresh save get `gamemaster` until S3 decides the Steam build''s default. The family: Enter straight through = today''s game.
-- **Preset row** on the Choice screen, only in the default mode: one tile per preset (name, joker counts as small badges), keys per plan 13 or `F`/`N`/`D`/`E` if free; default preset as decided. Hidden in the gamemaster mode (budget stays in the overlay, MD-4).
-- **Overlay by mode**: gamemaster mode exactly as today; default mode: sound, «Reportar pregunta», «Preguntas reportadas», «Abandonar partida»; no undo, no skip/burn, no budget editor (read-only preset line).
+## Decisions taken here (within plan 13''s spec)
+- **Mode is a game setting**: `settings.mode` with plan 13''s ids; this plan builds `gamemaster` and `solo`. Missing = `gamemaster` (`withDefaults`), so old saves and fixtures are unchanged.
+- **Jokers**: `solo` fills `settings.jokers` from the engine''s standard-set constant (3 × Soplo, 1 × each other joker); `settings.customized: false` unless the "Customize game" button changed something.
+- **Rules live in the engine**, not only in the UI: outside `gamemaster` mode `undo`, skip (any kind), replace and `setJokers` return `409` with a reason; abandon and sound stay. `report` is allowed in every mode (in gamemaster mode too: it only logs).
+- **«Reportar pregunta» only logs**: `ReportRow {question_id, game_id, player_id, level, reported_on, note?}` in `SaveData.reports`. No burn, no replacement, no change to the game state; the question stays on screen and the player answers or uses a joker. Reporting the same question twice in one game is a no-op. Confirm step («¿Reportar esta pregunta? Queda anotada; la pregunta sigue.»), Enter/Esc.
+- **Report list is a client screen**, not a server route (decision 4): reachable from the overlay; newest first: date, question id, question text, answer, player; «Copiar» copies plain text (one block per report) via `navigator.clipboard`, selectable `<pre>` fallback. Works offline.
+- **Mode screen (MD-7)** = plan 29''s Choice screen: a mode row listing the built modes (gamemaster mode, «Solo o en grupo»; multiplayer modes appear when built, plan 41/MD-8/MD-9). Launch option `?mode=gamemaster|solo` presets it (the desktop shell, S3, passes it). Preset from the player''s newest game like plan 29''s age group; new player / fresh save = `gamemaster` until S3 decides the Steam build''s default. The family: Enter straight through = today''s game.
+- **«Solo o en grupo»** on that screen: age group only (no difficulty selection, no preset row), plus a small «Personalizar partida» button: a dialog with the joker counts (0–9 / ∞, same steppers as MD-4); any change sets `settings.customized`. Further customizable fields only if plan 13 lists them.
+- **Overlay by mode**: gamemaster mode exactly as today plus «Reportar pregunta» / «Preguntas reportadas» (plan 59 grows it into the gamemaster menu); `solo`: sound, «Reportar pregunta», «Preguntas reportadas», «Abandonar partida», read-only joker line; no undo, no skip/burn, no budget editor.
 
 ## Tasks
-1. **Engine: mode, preset, report (MD-6 engine part)**
-   - `engine/state.ts`: `settings.mode`, `settings.preset` (+ checkpoint per spec), `ReportRow`, `SaveData.reports`; version bump + migration step in part 4''s store (`reports: []`, games untouched).
-   - `engine/game.ts` / `api.ts`: `newGame` accepts `mode` / `preset` and fills `settings.jokers`; `report` action; refusals per mode; checkpoint and won-level rules if plan 13 specifies them; `view` exposes `settings.mode` / `preset`; `lib/types.ts` to match.
-   - Check: `npm test` (fixture replay unchanged: gamemaster mode identical), `npm run check`; throw-away script: default-mode game, report burns for everyone, replacement at the same level, row in `reports`, undo/skip-everyone refused, empty supply → `409` with report.
+1. **Engine: mode, standard set, report (MD-6 engine part)**
+   - `engine/state.ts`: `settings.mode`, `settings.customized`, `ReportRow`, `SaveData.reports`; version bump + migration step in part 4''s store (`reports: []`, games untouched).
+   - `engine/game.ts` / `api.ts`: `newGame` accepts `mode` (+ joker overrides → `customized`) and fills `settings.jokers`; `report` action (log only); refusals outside gamemaster mode; `view` exposes `settings.mode` / `customized`; `lib/types.ts` to match.
+   - Check: `npm test` (fixture replay unchanged: gamemaster mode identical), `npm run check`; throw-away script: `solo` game gets the standard set, report adds a row and leaves the game state unchanged, undo/skip/replace/setJokers refused with `409`, old save migrates with `reports: []`.
 2. **«Reportar pregunta» and the report list (MD-6 UI)**
-   - `Overlay.svelte` by mode; confirm step; `Reports.svelte` (new) list + «Copiar»; `Game.svelte` routing (`Screen` gains `"reports"`, back with Backspace/Esc); `lib/api.ts`.
-   - Check: browser walk in both modes (gamemaster overlay unchanged; default: report → confirm → new question at the same level, list shows it, copy works); keyboard only and mouse only (IN-1).
+   - `Overlay.svelte` by mode; confirm step; `Reports.svelte` (new) list + «Copiar»; `Game.svelte` routing (`Screen` gains `"reports"`, back with Backspace/Esc); `lib/api.ts`. Dialog and list on the action layer (task 348).
+   - Check: browser walk in both modes (gamemaster overlay otherwise unchanged; `solo`: report → confirm → same question stays, list shows it, copy works); keyboard only and mouse only (IN-1).
    - Then plan 13 MD-6 `[x]` with a note.
-3. **Mode and settings screen (MD-7)** — priority 380 (after plan 29''s Choice screen)
-   - `Choice.svelte`: mode toggle, preset row (default mode), `newGame({…, mode, preset})`; `?mode=` launch option; preset from the newest game.
-   - Docs: plan 13 MD-7 `[x]` and "Implementation notes" (mode/settings fields as built); `plans/04-ui-tv-display.md` (Choice section, Reports screen, overlay by mode, keys); `directory.md` (new files); `plans/project.md` if MD-6/MD-7 are listed.
-   - Check: Enter straight through on an existing family save plays today''s game; each preset starts with its joker budget; `?mode=default` presets the toggle.
+3. **Mode screen (MD-7)**, priority 380 (after plan 29''s Choice screen)
+   - `Choice.svelte`: mode row, «Solo o en grupo» = age group + «Personalizar partida» button/dialog, `newGame({…, mode, jokers?})`; `?mode=` launch option; mode from the newest game. Screen and dialog on the action layer (task 349).
+   - Docs: plan 13 MD-7 `[x]` and "Implementation notes" (fields as built); `plans/04-ui-tv-display.md` (Choice section, Reports screen, overlay by mode, keys); `directory.md` (new files); `plans/project.md` if MD-6/MD-7 are listed.
+   - Check: Enter straight through on an existing family save plays today''s game; a `solo` game starts with the standard set and `customized: false`; a change in «Personalizar partida» sets `customized: true`; `?mode=solo` presets the row.
 
 ## Done when
-- In the default mode a report burns the question for everyone, lists it on the report page and draws a replacement.
-- The settings screen starts a default-mode game with a preset.
-- A gamemaster-mode game plays exactly as today (fixture replay passes, overlay unchanged, Enter straight through).', '2026-10-12T00:41:03Z', 164);
+- In «Solo o en grupo» a report is logged and listed and the question stays; skip, undo, replace and joker edits are refused.
+- The mode screen starts a «Solo o en grupo» game with the standard joker set.
+- A gamemaster-mode game plays exactly as today (fixture replay passes, overlay unchanged apart from the report entries, Enter straight through).', '2026-10-12T00:41:03Z', 164);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (37, 7, 'Launch languages and Spanish variety (OQ-31)', 500, 'Part 4 of the masterplan (plan 7): decide which languages the Steam release launches with and which Spanish the pool speaks (OQ-31, I18N-1). Decision only; no code, no translation. Owner: `plans/15-i18n.md` ("Model", "Spanish varieties"), with `15a-ui-translation.md` (LUI-*), `15b-question-translation.md` (QT-*), `15c-regional-questions.md` (RG-5).
 
 ## Context
@@ -5777,7 +5779,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:44:44Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (362, 36, 'revise plan 36', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 36, changed; it is quoted below. Bring plan 36 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (362, 36, 'revise plan 36', 'plan', 'done', 1000, '2026-10-12, plan 36 body: no default mode/presets; report only logs; mode screen with gamemaster + Solo o en grupo, standard set, customized', 'Plan 7, the plan above plan 36, changed; it is quoted below. Bring plan 36 in line with it
 (`pm plan edit 36 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -5883,7 +5885,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
-- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', NULL, 359);
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:46:15Z', 359);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (363, 37, 'revise plan 37', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 37, changed; it is quoted below. Bring plan 37 in line with it
 (`pm plan edit 37 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -6673,6 +6675,8 @@ Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section p
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (374, 60, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 60, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-12T16:46:08Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (375, 36, 'create tasks for plan 36', 'split', 'open', 1000, NULL, 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:46:15Z', NULL, 362);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7182,7 +7186,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (235, 370, '2026-10-12T16:43:14Z', '2026-10-12T16:44:27Z', 'done', NULL, 0, '0682c6e5862e9cd4e8c2252ac02ddbdccce12519', 'claude-opus-5-5[1m]', 'fee4a50d-de29-454f-9419-f935706e27f3', 13, 26, 7033, 565934, 49110, 0.6468308, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (236, 361, '2026-10-12T16:44:27Z', '2026-10-12T16:44:50Z', 'done', NULL, 0, '6b8249ea3ab5a6407af573c38484bdb34adc630e', 'claude-opus-5-5[1m]', '1595a90d-6610-4d2b-adf4-f8649287ef88', 4, 8, 2220, 130870, 34637, 0.34770199999999996, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (237, 372, '2026-10-12T16:44:50Z', '2026-10-12T16:45:19Z', 'done', NULL, 0, '28c7171d4e47a2ced5cd77cf8503277a9363d827', 'claude-opus-5-5[1m]', '137a9156-1cc5-438a-9e6d-d3d53778cf9f', 7, 14, 2534, 227511, 28447, 0.3238142, 521418);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (238, 362, '2026-10-12T16:45:19Z', NULL, 'running', NULL, NULL, '9b8ea27c2f16bf6a8e34ccc809ea71dd27a9ead7', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (238, 362, '2026-10-12T16:45:19Z', '2026-10-12T16:46:30Z', 'done', NULL, 0, '9b8ea27c2f16bf6a8e34ccc809ea71dd27a9ead7', 'claude-opus-5-5[1m]', '09fe6cc1-ebbb-42ba-8ae2-f26f0d7bb39a', 8, 16, 4870, 273597, 31567, 0.4047194, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
