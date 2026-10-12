@@ -1669,8 +1669,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:10:24Z', '2026-10-12T00:15:01Z', 82);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (88, 23, 'create tasks for plan 23', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 100, 101; 101 waits on decision 6)', 'Split plan 23 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:11:32Z', '2026-10-12T00:15:30Z', 83);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (89, 24, 'create tasks for plan 24', 'split', 'open', 1000, NULL, 'Split plan 24 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:12:45Z', NULL, 84);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (89, 24, 'create tasks for plan 24', 'split', 'done', 1000, '2026-10-11, tasks.sql: tasks 102–104 for plan 24; joker-name decisions are created by task 102', 'Split plan 24 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:12:45Z', '2026-10-12T00:16:08Z', 84);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (90, 25, 'create tasks for plan 25', 'split', 'open', 1000, NULL, 'Split plan 25 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:13:19Z', NULL, 85);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (91, 21, 'LUI-1: i18n helper, es catalog skeleton, copy.* lines', 'work', 'open', NULL, NULL, 'Lay the groundwork of plan 21: the `t()` helper, the typed `es` catalog, and the milestone/consolation lines moved into it. Design: plan 21 «Design».
@@ -1788,6 +1788,36 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Mark LUI-2 `[x]` in `plans/15a-ui-translation.md` with a note (date, backlog rows, or "no overflow found"); update M3 status in `plans/project.md`.
 
 Done when: every screen above checked under `xx`; `npm run check` and `npm run build` pass; `es` output unchanged; screenshots and scripts not committed.', '2026-10-12T00:15:27Z', NULL, 88);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (102, 24, 'LUI-3: English joker name candidates and decisions', 'work', 'open', NULL, NULL, 'Task 1 of plan 24. Needs plan 21 (LUI-1: `app/client/src/lib/i18n.ts`, `locales/es.ts`, `Catalog`/`Key` types) and plan 22 task 2 (`error.<code>` keys in `es.ts`). If they don''t exist yet, stop and say so (`pm task drop` with a note); don''t build them here.
+
+- Per joker (`hint` «Soplo», `skip` «Paso», `easier` «Bájale», `category` «Cambiazo», `snipe` «Francotirador»): 3–5 playful English candidates, not literal translations, ≤ 13 characters (length of «Francotirador», tray width); each with a one-line reason (pun, tone, what it evokes). Recommended one first.
+- One `pm decision add` per joker: subject e.g. "English name for the hint joker «Soplo»?", candidates as `--option`s (recommended first), body: Spanish name, what the joker does (from the catalog/joker code), why these candidates.
+- Link the plan''s task "LUI-3: chosen joker names into en.ts" (task 3 of plan 24; id via `pm show <this task>`) to all five decisions with `pm task-pending-decision`.
+- `plans/15a-ui-translation.md` under LUI-3: candidate lists as bullets (recommended first, decision id per joker).
+
+Done when: five pending decisions exist, task 3 waits on all five, 15a lists the candidates.', '2026-10-12T00:16:05Z', NULL, 89);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (103, 24, 'LUI-3: draft en.ts catalog and ?lang=en dev override', 'work', 'open', NULL, NULL, 'Task 2 of plan 24. Doesn''t wait for the joker-name decisions: joker names use the recommended candidates from task 1 (in `plans/15a-ui-translation.md`, LUI-3) for now. Needs plan 21 (LUI-1) and plan 22 task 2 done; if not, stop and say so.
+
+- `app/client/src/locales/en.ts`: `export const en = { … } satisfies Catalog`; every key of `es`, own English wording.
+  - Plural maps `one`/`other`; same `{param}` set per leaf as `es`.
+  - Variant arrays (`copy.milestone.*`, `copy.consolation.*`): own English lines in the game''s tone (family, warm, a bit cheeky); count may differ.
+  - `joker.<id>.key`: same letters as `es` (`S`, `P`, `F`, `T`, `X`), one-line comment: keys per language are LUI-4.
+  - Errors: only player-facing codes (keys present in `es`).
+- `lib/i18n.ts`: `en` when `import.meta.env.DEV && ?lang=en`, via dynamic `import()` (same mechanism as `xx` from plan 23, if it exists); `document.documentElement.lang = "en"`. Production stays `es` only: `npm run build` shows no `en` strings in the main chunk.
+- Throw-away check script (not kept): every leaf non-empty, same `{param}` set as `es`, no `áéíóúñÁÉÍÓÚÑ¡¿«»`, no `⟦` in rendered output.
+- Screen walk: `npm run dev -w app/client` + `trivia`, `?lang=en`, 1920 × 1080: start, player, level, select (joker reasons), question (every joker armed and used, hints, final answer), result, victory, overlay, error line. Same screenshot method as plans 21/23. Fix wording that reads off; overflow → `plans/backlog.md` rows (origin `LUI-3`), no CSS changes.
+- Expected Spanish under `en` (not bugs): questions, answers, hints, category/subcategory/bundle names, `/comodines`, `authoring/`.
+- `directory.md`: `locales/en.ts`.
+
+Done when: `npm run check` and `npm run build` pass; `es` output unchanged; no new dependencies; the screen walk shows no `⟦…⟧`.', '2026-10-12T00:16:05Z', NULL, 89);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (104, 24, 'LUI-3: chosen joker names into en.ts', 'work', 'open', NULL, NULL, 'Task 3 of plan 24. Waits for the five joker-name decisions from task 1 (`pm show` lists them with answers). If it isn''t linked to five answered decisions, or `locales/en.ts` doesn''t exist yet (task 2), stop and say so.
+
+- `app/client/src/locales/en.ts`: chosen names in `joker.<id>.name`, aria/hint/reason texts and any copy lines that name a joker. Keys (`joker.<id>.key`) stay as in `es`.
+- `plans/15a-ui-translation.md`: LUI-3 `[x]` with a note (date, chosen names, "draft, no native-speaker check").
+- `plans/decisions.md`: the chosen English joker names (next free D-number).
+- `plans/project.md`: M3 status (part 4 done).
+
+Done when: `npm run check` and `npm run build` pass; `es` output unchanged; quick `?lang=en` look at select and question screens shows the new names without overflow (overflow → `plans/backlog.md`, origin `LUI-3`).', '2026-10-12T00:16:05Z', NULL, 89);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1832,6 +1862,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (30, 86, '2026-10-12T00:13:27Z', '2026-10-12T00:14:39Z', 'done', NULL, 0, 'aa7ecfaa70763739bb83ca58d6a2a71501c20529', 'claude-opus-5-5[1m]', 'e1b89153-9203-488e-b78b-997064cb0dda', 10, 18, 7121, 317028, 34422, 0.4812736, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (31, 87, '2026-10-12T00:14:39Z', '2026-10-12T00:15:06Z', 'done', NULL, 0, '9ccb7d365cf7d4d255d2c43c15e99293022b4e36', 'claude-opus-5-5[1m]', '7cb5e5a9-9ce6-473d-b48f-cd241af9f2a6', 5, 10, 2682, 146953, 26760, 0.2971506, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (32, 88, '2026-10-12T00:15:06Z', '2026-10-12T00:15:35Z', 'done', NULL, 0, '3e7e03adfb6af77955939451e0026d067c70fde1', 'claude-opus-5-5[1m]', '1747bc29-143e-4f9a-9a8b-be63ea5afaba', 5, 10, 2467, 137300, 23503, 0.264864, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (33, 89, '2026-10-12T00:15:35Z', '2026-10-12T00:16:14Z', 'done', NULL, 0, '86798ec730c5965c0171a44dffdd17cce42832d5', 'claude-opus-5-5[1m]', 'eec8adb3-21b3-4c29-bb95-618aa0e20397', 6, 12, 3768, 176209, 26896, 0.32581780000000005, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
