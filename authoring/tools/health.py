@@ -184,7 +184,7 @@ def stop_reason():
             f"clears the stop with: qgen health ack {run} \"<note>\"")
 
 
-PCT = {"drop rate", "needs_work rate", "overlap rate", "merged/slots 11–15", "media share",
+PCT = {"drop rate", "needs_work rate", "overlap rate", "rejected rate", "audit/review agreement", "merged/slots 11–15", "media share",
        *(f"needs_work: {p}" for p in qgen.PROBLEMS), *(f"top {a}" for a in concepts.AXES)}
 
 
@@ -205,6 +205,7 @@ def bound_text(key, b):
 
 def table(runs, pool=None):
     """Markdown table: one row per metric, one column per run; ✓/✗ against the thresholds."""
+    if not runs: return ["No batch yet."]
     pool = pool if pool is not None else load(POOL)["questions"]
     cols = [batch_health(r, pool) for r in runs]
     t, acked = thresholds() or {}, acks()
@@ -222,7 +223,100 @@ def table(runs, pool=None):
 
 def ack_lines():
     a = acks()
-    return [f"- {r} ({x['date']}): {x['note']}" for r, x in sorted(a.items(), key=lambda kv: int(kv[0][6:]) if kv[0][6:].isdigit() else 0)] or ["None."]
+    return [f"- {r} ({x['date']}): {x['note']}" for r, x in sorted(a.items(), key=lambda kv: qgen.natural_key(kv[0]))] or ["None."]
+
+
+# --- translation runs (plan 66): `qgen batch --translate <locale>` ---------------
+# Thresholds that apply to a tr-* run (no drafts, slots, axes or media search): «needs_work rate» and
+# «needs_work: <problem>» as for batches; «rejected rate» (confirmed not travelling / sources) under
+# «drop rate»'s bound; audit/review agreement ≥ quality.min_agreement once ≥ spot_check_size are audited
+# (D-56/D-79). «$ per approved» is shown, not a threshold: the batch bound is for drafting.
+
+def translation_runs(locale=None):
+    """work/tr-<locale>-N that got as far as merge, oldest first."""
+    pat = rf"tr-{re.escape(locale) if locale else '[A-Za-z-]+'}-\d+"
+    return sorted((p.name for p in WORK.glob("tr-*") if re.fullmatch(pat, p.name) and (p / "merged.json").exists()),
+                  key=qgen.natural_key)
+
+
+def translation_health(run):
+    """{metric: value} of one translation run; None = n/a."""
+    d = WORK / run
+    cfg = load(d / "run.json", {}) or {}
+    rec = load(d / "recorded.json", {}) or {}
+    away = load(d / "not-travelling.json", []) or []
+    n_src, m = len(cfg.get("ids", [])), len(rec)
+    work = {i: r for i, r in rec.items() if r["decision"] == "needs_work"}
+    confirmed = sum(x.get("decision") == "approved" for x in away)
+    h = {"sources": n_src, "stale re-translated": len(cfg.get("stale", [])), "translated": m,
+         "not travelling": len(away), "not travelling confirmed": confirmed, "rejected rate": rate(confirmed, n_src),
+         "approved": m - len(work), "needs_work": len(work), "needs_work rate": rate(len(work), m)}
+    by_problem = Counter(p for r in work.values() for p in r["problems"] or ["other"])
+    for p in qgen.PROBLEMS:
+        h[f"needs_work: {p}"] = rate(by_problem[p], m)
+    found, dec = qgen.audits(run), qgen.llm_decisions(run) if rec else {}
+    both = [i for i in found if i in dec]
+    h["audited"] = len(found)
+    h["audit/review agreement"] = rate(sum((dec[i] == "approved") == (not qgen.is_major(found[i])) for i in both), len(both))
+    dollars = sum(qgen.costs(d / "costs.log"))
+    h |= {"cost $": dollars, "$ per approved": rate(dollars, m - len(work))}
+    return h
+
+
+def translation_thresholds():
+    """{metric: bounds} that apply to a translation run; {} before targets.json has thresholds."""
+    t = thresholds()
+    if t is None: return {}
+    out = {k: v for k, v in t.items() if k == "needs_work rate" or k.startswith("needs_work: ")}
+    if "drop rate" in t:
+        out["rejected rate"] = t["drop rate"]
+    q = targets.load_quality()
+    if q:
+        out["audit/review agreement"] = {"min": q["min_agreement"]}
+    return out
+
+
+def translation_failures(run, h=None):
+    h = h or translation_health(run)
+    q = targets.load_quality() or {}
+    return [k for k, b in translation_thresholds().items() if passes(h.get(k), b) is False
+            and (k != "audit/review agreement" or h["audited"] >= q.get("spot_check_size", 0))]
+
+
+def translate_stop_reason(locale):
+    """Why the next `qgen batch --translate <locale>` must stop, or None: the pilot tr-<locale>-1 until the
+    gamemaster's go (plan 66, QT-5), or the last done run fails a threshold, both until `qgen health ack`."""
+    done = [r for r in translation_runs(locale) if (load(WORK / r / "run.json", {}) or {}).get("done")]
+    if not done or done[-1] in acks(): return None
+    run = done[-1]
+    if run == f"tr-{locale}-1":
+        return (f"{run} was the pilot of {locale} (QT-5). The gamemaster decides on it (report: "
+                f"authoring/reports/{run}.md) and gives the go with: qgen health ack {run} \"<note>\"")
+    bad = translation_failures(run)
+    if not bad: return None
+    return (f"{run} fails the health thresholds: {', '.join(bad)} (authoring/reports/{run}.md). The gamemaster looks "
+            f"at it and clears the stop with: qgen health ack {run} \"<note>\"")
+
+
+def translation_health_section(run):
+    """«## Health» of a translation run's report: this run and the two of its locale before it."""
+    locale = run[3:].rsplit("-", 1)[0]
+    runs = [r for r in translation_runs(locale) if qgen.natural_key(r) < qgen.natural_key(run)][-2:] + [run]
+    cols, t = [translation_health(r) for r in runs], translation_thresholds()
+    mark = {True: " ✓", False: " ✗", None: ""}
+    lines = ["| metric | threshold | " + " | ".join(runs) + " |", "|---|---|" + "---:|" * len(runs)]
+    for key in cols[0]:
+        b = t.get(key)
+        lines.append(f"| {key} | {bound_text(key, b)} | "
+                     + " | ".join(fmt(key, c[key]) + (mark[passes(c[key], b)] if b else "") for c in cols) + " |")
+    if t:
+        lines.append("| **health** | | " + " | ".join("✓ pass" if not translation_failures(r, c) else "✗ fail"
+                                                    for r, c in zip(runs, cols)) + " |")
+    return ["## Health", "",
+            "Translation run health (plan 66): this run and the two before it of the same locale, ✓/✗ against the "
+            "thresholds that apply to translations (`health.py`); audit/review agreement only counts from "
+            "the spot-check size on. The pilot (`-1`) and a ✗ stop the next `qgen batch --translate` until "
+            "`qgen health ack` (D-55).", "", *lines, ""]
 
 
 def deficit_line(bundle="base", pool=None):

@@ -1741,7 +1741,7 @@ def qc_section(batch, pool=None):
     checks = load_json(layout.SPOT_CHECKS, {}) or {}
     if not (checks.get(batch) or {}).get("items"):
         return []
-    pool = pool if pool is not None else load_json(POOL)["questions"]
+    pool = pool if pool is not None else run_questions(batch)
     by_id = {q["id"]: q for q in pool}
     s, q = qc_stats(batch, checks, pool), targets.load_quality()
     n = s["human_n"]
@@ -1807,7 +1807,8 @@ def qc_trend(pool=None):
     checks = load_json(layout.SPOT_CHECKS, {}) or {}
     runs = sorted({*checks, *(p.parent.parent.name for p in [*WORK.glob("batch-*/audit/q-*.json"),
                                                              *WORK.glob("backaudit-*/audit/q-*.json"),
-                                                             *WORK.glob("neutralize-*/audit/q-*.json")])},
+                                                             *WORK.glob("neutralize-*/audit/q-*.json"),
+                                                             *WORK.glob("tr-*/audit/q-*.json")])},
                   key=lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0)
     if not runs:
         return []
@@ -3073,6 +3074,10 @@ def run_steps(steps, again, run=None):
 
 def cmd_batch(args):
     """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped."""
+    if args.translate:
+        return cmd_translate_batch(args)
+    if args.ids:
+        sys.exit("--ids needs --translate")
     if args.run:
         run, resuming = args.run, (WORK / args.run / "run.json").exists()
     else:
@@ -3145,15 +3150,187 @@ def cmd_batch(args):
           f"{n_ok} approved (qgen batch)\"")
 
 
+TRANSLATE_SIZE = 300  # sources per `qgen batch --translate` run (plan 66)
+TRANSLATE_PILOT = 50  # the first run of a locale (QT-5)
+
+
+def spread(qs, offset=0.0):
+    """qs in an order that covers the difficulty scale early: van der Corput steps over qs sorted by
+    difficulty, shifted by offset (0–1) so one-pick subcategories don't all start at the same level."""
+    qs = sorted(qs, key=lambda q: (q["difficulty"], natural_key(q["id"])))
+    out, taken, k = [], set(), 0
+    while len(out) < len(qs):
+        f, b, x = 0.0, 0.5, k
+        while x:
+            f, x, b = f + b * (x & 1), x >> 1, b / 2
+        j, k = int(((f + offset) % 1) * len(qs)), k + 1
+        while j in taken:
+            j = (j + 1) % len(qs)
+        taken.add(j)
+        out.append(qs[j])
+    return out
+
+
+def translate_selection(locale, n):
+    """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable `base` sources without an
+    approved non-stale translation and not rejected in the locale; stale ones first, then one at a time
+    from the subcategory with the fewest approved translations (picks count), spread over difficulty;
+    ties in categories.json order."""
+    pool = load_json(POOL)["questions"]
+    have = {t["id"]: t for t in translations.load(locale)["questions"]}
+    src = {q["id"]: q for q in pool}
+    open_, stale, done = [], [], Counter()
+    for q in pool:
+        if (q.get("bundle") or "base") != "base":
+            continue
+        t = have.get(q["id"])
+        if t and t["status"] == "approved" and not translations.is_stale(t, q):
+            done[q["subcategory"]] += 1
+            continue
+        if q["status"] != "approved" or not translations.translatable(q) or (t and t["status"] == "rejected"):
+            continue
+        (stale if t and translations.is_stale(t, q) else open_).append(q)
+    stale = [q["id"] for q in sorted(stale, key=lambda q: natural_key(q["id"]))][:n]
+    order = categories.subcategories("base")
+    queues = {sub: spread([q for q in open_ if q["subcategory"] == sub], (k * 0.618034) % 1) for k, sub in enumerate(order)}
+    picked = list(stale)
+    while len(picked) < n and any(queues.values()):
+        sub = min((s for s in order if queues[s]), key=lambda s: (done[s], order.index(s)))
+        picked.append(queues[sub].pop(0)["id"])
+        done[sub] += 1
+    return picked, stale
+
+
+def next_translate_run(locale):
+    """(run name, resuming?) — an unfinished tr-<locale>-* run is resumed; otherwise tr-<locale>-<n+1>."""
+    runs = [p.parent.name for p in WORK.glob(f"tr-{locale}-*/run.json") if re.fullmatch(rf"tr-{locale}-\d+", p.parent.name)]
+    open_runs = sorted((r for r in runs if not load_json(WORK / r / "run.json").get("done")), key=natural_key)
+    if len(open_runs) > 1:
+        sys.exit(f"More than one unfinished {locale} translation run: {', '.join(open_runs)}. Ask the gamemaster which to finish.")
+    if open_runs:
+        return open_runs[0], True
+    return f"tr-{locale}-{max((run_number(r) for r in runs), default=0) + 1}", False
+
+
+def cmd_translate_batch(args):
+    """`qgen batch --translate <locale>` (plan 66, D-36): translate → rate → factcheck → merge → review 1 →
+    fix → review 2 → record → audit → export → validate → report. Rerunning it continues where it stopped."""
+    import health  # authoring/tools/health.py (imports qgen)
+    locale = args.translate
+    if locale not in translations.LOCALES:
+        sys.exit(f"--translate must be one of {', '.join(translations.LOCALES)}")
+    if args.bundle != "base":
+        sys.exit("--translate translates base only (until RG-5)")
+    if args.run:
+        run, resuming = args.run, (WORK / args.run / "run.json").exists()
+    else:
+        run, resuming = next_translate_run(locale)
+    d = WORK / run
+    again = f"qgen batch --translate {locale}"
+    if resuming:
+        if run_locale(d) != locale:
+            sys.exit(f"{run} is not a {locale} translation run")
+        if args.count or args.ids:
+            print("(--count and --ids ignored: resuming)", flush=True)
+    else:
+        if stop := health.translate_stop_reason(locale):
+            print(stop, file=sys.stderr)
+            sys.exit(2)
+        if args.ids:
+            ids, stale = [i.strip() for i in args.ids.split(",") if i.strip()], []
+        else:
+            pilot = not translations.path(locale).exists()
+            ids, stale = translate_selection(locale, args.count or (TRANSLATE_PILOT if pilot else TRANSLATE_SIZE))
+        if not ids:
+            sys.exit(f"Nothing to translate into {locale}: every approved base question has a translation.")
+        save_json(d / "run.json", {"mode": "translate", "locale": locale, "ids": ids, "stale": stale,
+                                   "started": datetime.date.today().isoformat()})
+    cfg = load_json(d / "run.json")
+    progress.verbose = False
+    print(f"{'Resuming' if resuming else 'Starting'} {run}: {len(cfg['ids'])} questions into {LANGUAGES[locale]}"
+          + (f" ({len(cfg.get('stale', []))} stale)" if cfg.get("stale") else "")
+          + ". This takes from several minutes to an hour.", flush=True)
+
+    def ns(**kw):
+        return argparse.Namespace(run=run, jobs=args.jobs, **kw)
+
+    t0 = run_steps([
+        ("translate", cmd_translate, ns(model="opus", locale=None, ids=None)),
+        ("rate", cmd_rate, ns(model="opus")),
+        ("factcheck", cmd_factcheck, ns(model="sonnet")),
+        ("merge", lambda a: cmd_merge(a) or [], ns(min_score=0)),
+        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
+        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
+        ("record", cmd_record, ns()),
+        ("audit", lambda a: cmd_audit(a) if load_json(d / "recorded.json") else [], ns(model="opus", batch=run)),
+        ("export", lambda a: cmd_export(a) or [], ns()),
+    ], again, run)
+    cfg = load_json(d / "run.json")
+    save_json(d / "run.json", {**cfg, "done": cfg.get("done") or datetime.date.today().isoformat()})
+    out = write_translate_report(run)
+    print(f"  report: {out.relative_to(ROOT)}")
+    h = health.translation_health(run)
+    print(f"\nDone: {run}: {h['translated']} translated, {h['approved']} approved, {h['needs_work']} need work, "
+          f"{h['not travelling']} not travelling ({h['not travelling confirmed']} confirmed) "
+          f"(took {progress.duration(time.monotonic() - t0)}).")
+    if run == f"tr-{locale}-1":
+        print(f"Pilot: the next `{again}` waits for the gamemaster's go (`qgen health ack {run} \"<note>\"`).")
+    files = [translations.path(locale), layout.LOCALE_POOL(locale), out]
+    if h["not travelling confirmed"]:
+        files.insert(1, POOL)
+    print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
+          f"  git commit -m \"{run}: {h['translated']} questions into {LANGUAGES[locale]}, {h['approved']} approved "
+          f"(qgen batch --translate)\"")
+    return []
+
+
+def write_translate_report(run):
+    """authoring/reports/tr-<locale>-<n>.md (plan 66); `qgen report --qc <run>` adds its QC section."""
+    import health  # authoring/tools/health.py (imports qgen)
+    d = WORK / run
+    cfg = load_json(d / "run.json")
+    locale = cfg["locale"]
+    h = health.translation_health(run)
+    qs = {q["id"]: q for q in batch_questions(run, ("approved", "needs_work", "draft", "rejected"))}
+    work = [q for q in qs.values() if q["status"] == "needs_work"]
+    away = load_json(d / "not-travelling.json", [])
+    calls = costs(d / "costs.log") + costs(d / "audit" / "costs.log")
+    usd = lambda x: "–" if x is None else f"${x:.2f}"
+    lines = [f"# {run}", "",
+             f"Made by `qgen batch --translate {locale}` on {datetime.date.today().isoformat()} (plan 66, D-81): "
+             f"`base` questions translated into {LANGUAGES[locale]}. Generated file: don't edit by hand.", "",
+             f"- Sources: {h['sources']} ({h['stale re-translated']} stale re-translated)",
+             f"- Translated: {h['translated']}", f"- Approved: {h['approved']}", f"- Needs work: {h['needs_work']}",
+             f"- Not travelling: {h['not travelling']} ({h['not travelling confirmed']} confirmed → `translatable: false`, "
+             f"{h['not travelling'] - h['not travelling confirmed']} translated again next run)",
+             f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price; "
+             f"{usd(h['$ per approved'])} per approved translation (without the audit)",
+             f"- Spot check by a native speaker: http://127.0.0.1:8001/review?batch={run}&locale={locale}&sample=1",
+             "", *health.translation_health_section(run), *audit_section(run), *qc_section(run), "## Needs work", ""]
+    lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}"
+              for q in work] or ["None."]
+    lines += ["", "## Not travelling", ""]
+    lines += [f"- **{x['id']}** {x['reason']}, " + ("confirmed" if x.get("decision") == "approved" else "translate again")
+              + f": {x['question']} → {x['answer']} ({x['notes']})" for x in away] or ["None."]
+    lines += ["", "## Stale re-translated", ""]
+    lines += [f"- {i}: {qs[i]['status'] if i in qs else 'not travelling'}" for i in cfg.get("stale", [])] or ["None."]
+    out = layout.REPORTS / f"{run}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return out
+
+
 def cmd_health_ack(args):
     """The gamemaster has looked at a failing batch: clears the stop of `qgen batch` (D-55)."""
     import health  # authoring/tools/health.py (imports qgen)
-    if args.batch not in health.batch_runs():
-        sys.exit(f"not a merged batch: {args.batch}")
+    if args.batch not in health.batch_runs() + health.translation_runs():
+        sys.exit(f"not a merged batch or translation run: {args.batch}")
     a = health.acks()
     a[args.batch] = {"date": datetime.date.today().isoformat(), "note": args.note}
     save_json(layout.HEALTH_ACKS, a)
-    print(f"acked {args.batch}; `qgen batch` may start the next batch")
+    print(f"acked {args.batch}; `qgen batch" + (f" --translate {args.batch[3:].rsplit('-', 1)[0]}"
+                                                 if args.batch.startswith("tr-") else "") + "` may start the next run")
     print(f"  report: {health.write_batches_md().relative_to(ROOT)}")
 
 
@@ -3866,6 +4043,9 @@ def main():
     b.add_argument("--subcategories", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--count", type=int, help=argparse.SUPPRESS)  # default: batches.SHARE of the bundle's subcategories
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
+    b.add_argument("--translate", metavar="LOCALE", choices=translations.LOCALES,
+                   help="translate approved base questions into this locale (plan 66); only when the user names a language")
+    b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)
     args = ap.parse_args()
     errors = args.fn(args)
     limit = next((e for e in errors if isinstance(e, UsageLimit)), None) if isinstance(errors, list) else None
