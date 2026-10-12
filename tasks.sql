@@ -10307,8 +10307,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:49:44Z', '2026-10-12T23:02:57Z', 502);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (514, 74, 'create tasks for plan 74', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 532-534 for plan 74', 'Split plan 74 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:50:32Z', '2026-10-12T23:03:32Z', 503);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (515, 75, 'create tasks for plan 75', 'split', 'open', 1000, NULL, 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:51:29Z', NULL, 504);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (515, 75, 'create tasks for plan 75', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 535-538 for plan 75; no upfront decisions (reviews raise their own)', 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:51:29Z', '2026-10-12T23:04:13Z', 504);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (516, 76, 'create tasks for plan 76', 'split', 'open', 1000, NULL, 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:52:33Z', NULL, 505);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (517, 77, 'create tasks for plan 77', 'split', 'open', 1000, NULL, 'Split plan 77 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -10473,6 +10473,89 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - All 9 files of `app/server/` are listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.', '2026-10-12T23:03:30Z', NULL, 514);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (535, 75, 'Review game.ts', 'work', 'open', NULL, NULL, 'Task 1 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
+
+## First
+- `pm queue` + grep open task bodies for `game.ts`: if an open task still changes it (e.g. `task 499`, `378`/`379`, `391`, `392`, `474`/`475`), findings only, no refactor (`superseded by task N` where that task rewrites it).
+- Binding: `decision 33: Configure game screen: which fields?`, `decision 34: Gamemaster menu: which cheats?`.
+
+## What
+- `app/client/src/engine/game.ts` (883 lines):
+  - split candidates: choice/settings (`defaultChoice` … `resolveChoice`, `rangesFor`, `CHOICE_KEYS`), supply/availability (`availableFor`, `availableNow`, `supply`, `laterFill`, `replacement`, `categoryCandidates`), jokers (`joker`, `jokersLeft`, `setJokers`), gamemaster cheats (`replace`, `jumpLevel`, `changeSettings`), core flow (`newGame`, `pick`, `answer`, `skip`, `undo`, `abandon`, `report`, `view`)
+  - a split that only moves code and keeps imports via re-exports: fix here; one that changes the public surface used by `app/client/src/lib/` or `authoring/tools/` (`supply.ts`, `sim/`) → `pm decision add` + follow-up task
+  - unhandled states: action in the wrong phase, finished game, `cards` 0, `levels` 1/20, jokers `null` = ∞; undo across cheats
+  - two `levelsOf` (here and `selection.ts`) and other name clashes; `MODES` vs `BUILT_MODES` users
+  - cost per action: `countOf`/`availableNow` recomputed per call
+- Removed/renamed export: grep `app/client/src`, `authoring/tools/*.ts`, `authoring/tools/sim/` first; no TS-only syntax (node type stripping).
+- Fixtures pin behaviour: a fix that changes a fixture''s expected output → decision. Save format unchanged.
+- Duplication candidate (log for part 10): `game.ts` ↔ `app/server/game.py` (deleted by `task 302: Delete the Python referee`).
+- Part 1 rows `handed to part 3` for this file: re-check, final status in `## Part 3`, quoting the part 1 row.
+
+## Check
+- Throw-away script in `/tmp` driving a game through `engine/api.ts` with a `MemoryStore`, for every fix.
+- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass.
+
+## Done when
+- `game.ts` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:10Z', NULL, 515);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (536, 75, 'Review state.ts, save.ts, store.ts, api.ts', 'work', 'open', NULL, NULL, 'Task 2 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
+
+## First
+- `pm queue` + grep open task bodies for these files; a file an open task still changes: findings only (`superseded by task N`).
+
+## What
+- `app/client/src/engine/state.ts` (273 lines): `transact`/`trial` copy cost per action (`structuredClone` of the whole save), partial mutation on throw, undo correctness; `withDefaults`, `nextId`; `GameError`/`ErrorInfo` codes vs. `app/client/src/lib/errors.ts` and the locale catalog.
+- `save.ts` (78): `parseSave` validation of untrusted JSON, `SaveNewerError`, upgrade from older `SAVE_VERSION`s, `defaultLanguage` fallbacks. `SAVE_VERSION`/`SaveData` fields unchanged; anything touching them → `pm decision add`.
+- `store.ts` (26): `MemoryStore` used only by tests/authoring? (else unused).
+- `api.ts` (133): `body: Record<string, unknown>` coercion, status codes vs. the old Python routes (`app/server/main.py` while `task 302: Delete the Python referee` is open), error replies.
+- Removed/renamed export: grep `app/client/src`, `authoring/tools/*.ts`, `authoring/tools/sim/` first.
+- Duplication candidates (log for part 10): `engine/api.ts` ↔ `lib/api.ts`, `engine/store.ts` ↔ `lib/store.ts`, `engine/save.ts` ↔ `app/server/save.py`/`app/desktop/save.mjs`, `state.ts` types ↔ `lib/types.ts`.
+- Part 1 rows `handed to part 3` for these files: re-check, final status in `## Part 3`, quoting the part 1 row.
+
+## Check
+- Throw-away script in `/tmp`: corrupt / newer / older saves through `parseSave`; an action that throws leaves the save untouched.
+- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass.
+
+## Done when
+- The 4 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:10Z', NULL, 515);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (537, 75, 'Review selection.ts, pool.ts, outlook.ts, rng.ts, pycompat.ts', 'work', 'open', NULL, NULL, 'Task 3 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
+
+## First
+- `pm queue` + grep open task bodies for these files (e.g. `task 474`/`475` → `pool.ts`, `task 427` → `outlook.ts`); a file an open task still changes: findings only (`superseded by task N`).
+- Binding: `decision 31: Low-supply warning` (super tight: warn only at 1 or 0 unseen per needed level), `decision 5` (authoring calls the TS engine via node: `authoring/tools/supply.ts`, `sim/`).
+
+## What
+- `selection.ts` (114 lines): second `levelsOf` (also in `game.ts`), parity with `app/server/selection.py` (a check only while `task 302: Delete the Python referee` is open; after it the fixtures are the spec).
+- `pool.ts` (131): parsers'' validation of `pool.json`/categories/age groups, locale fallback in `bundlesFor`.
+- `outlook.ts` (157): cost per call (start screen calls it per choice change), decision 31''s criterion.
+- `rng.ts` (29): seed range, `randomSeed` entropy, state saved in the save so undo/reload replays.
+- `pycompat.ts` (77): which helpers still earn their keep once task 302 freezes the fixtures (`pyRepr`, `pyTruthy`, `pyInt`, `pyStr`); replacing them changes outputs → `pm decision add` unless byte-identical.
+- Removed/renamed export: grep `app/client/src`, `authoring/tools/*.ts`, `authoring/tools/sim/` first; no TS-only syntax.
+- Duplication candidate (log for part 10): `selection.ts` ↔ `app/server/selection.py`.
+- Part 1 rows `handed to part 3` for these files: re-check, final status in `## Part 3`, quoting the part 1 row.
+
+## Check
+- Throw-away script in `/tmp` on `app/data/pool.json` timing `outlook`/`supply` per call, before and after any fix.
+- `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass.
+
+## Done when
+- The 5 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:11Z', NULL, 515);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (538, 75, 'Review the engine tests and test helpers', 'work', 'open', NULL, NULL, 'Task 4 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan". Last task of plan 75: also check its "Done when".
+
+## What
+- Tests in `app/client/src/engine/`: `choice.test.ts` (183), `game.test.ts` (80), `invariants.test.ts` (63), `outlook.test.ts` (48), `pool.test.ts` (100), `rng.test.ts` (57), `save.test.ts` (88), `selection.test.ts` (86).
+  - AGENTS.md "keep only the few that stay useful long-term": drop tests that duplicate each other or pin trivia; keep those guarding real rules
+  - fixture replay coverage of the MD-11/MD-12 settings and cheats (`decision 33: Configure game screen: which fields?`, `decision 34: Gamemaster menu: which cheats?`): gaps → `pm task add` follow-up, no new tests here
+- Helpers `test/fixtures.ts`, `test/save.ts`, `test/tape.ts`: dead helpers, `tape.ts` vs `rng.ts`, `npm test` glob still catches every test.
+- `fixtures/README.md` (text only, fixtures are data): matches the state of `task 302: Delete the Python referee` (re-record instructions while open vs. frozen after).
+- Part 1 rows `handed to part 3` for these files: re-check, final status in `## Part 3`, quoting the part 1 row.
+- Plan-wide: every part 1 row `handed to part 3` has a final status in `## Part 3`; missing → do it here.
+
+## Check
+- `npm test` count and time before/after (in the report row).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- The 8 tests, 3 helpers and `fixtures/README.md` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:11Z', NULL, 515);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -11483,6 +11566,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (379, 512, '2026-10-12T23:01:32Z', '2026-10-12T23:02:15Z', 'done', NULL, 0, '5568f0bf1416ec69d20361d8818db84a76f6a887', 'claude-opus-5-5[1m]', '2e364715-b370-4cca-b84b-308d7917aa42', 5, 10, 4021, 166178, 35501, 0.39770360000000005, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (380, 513, '2026-10-12T23:02:16Z', '2026-10-12T23:03:02Z', 'done', NULL, 0, '443a6cb15a46b6dd31e7be6b6fd4bcc776923581', 'claude-opus-5-5[1m]', '030d1e9e-09da-4cd2-b348-4f84c49b66fe', 5, 10, 5284, 153875, 31149, 0.385687, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (381, 514, '2026-10-12T23:03:02Z', '2026-10-12T23:03:36Z', 'done', NULL, 0, 'df8b8446c994952e21bcd6a194f4821bc2353100', 'claude-opus-5-5[1m]', '5c106a27-7fbf-4dae-9595-07198458235c', 6, 12, 3545, 196796, 32722, 0.3720832, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (382, 515, '2026-10-12T23:03:36Z', '2026-10-12T23:04:20Z', 'done', NULL, 0, 'eafba0114471f0bec558ba156dbd38291927f15f', 'claude-opus-5-5[1m]', '1901670b-c285-41c5-a825-bda955022092', 5, 10, 4661, 146803, 29213, 0.35632459999999994, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
