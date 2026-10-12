@@ -187,6 +187,11 @@ const es = {
       ],
     },
   },
+  /** The desktop's save file couldn't be used (plan 55); {path}: the backup. */
+  save: {
+    corrupt: "No se pudo leer la partida guardada. Se guardó una copia en {path} y empieza una partida nueva.",
+    newer: "La partida guardada es de una versión más nueva del juego. Se guardó una copia en {path} y empieza una partida nueva.",
+  },
   /** Refusals by server error code (plan 22, D-57); codes without a key show the English message. */
   error: {
     name_missing: "falta el nombre del jugador",
@@ -219,6 +224,7 @@ const es = {
     age_group_unknown: "grupo de edad desconocido: '{group}'",
     bundle_unknown: "paquete desconocido: '{bundle}'",
     bundles_not_list: "los paquetes deben ser una lista",
+    save_locked: "No se pudo guardar. Se intenta de nuevo con la próxima jugada.",
   },
 } as const;
 

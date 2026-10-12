@@ -3,6 +3,7 @@
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
   import { desktop } from "../lib/desktop";
+  import { flush } from "../lib/engine";
   import { t } from "../lib/i18n";
   import { pushScope, type Action } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
@@ -114,6 +115,12 @@
     if (next !== now) setBudget({ [name]: next });
   }
 
+  /** Pending saves first (plan 55). */
+  async function quit() {
+    await flush();
+    await desktop?.quit();
+  }
+
   const items = $derived<Item[]>([
     { label: t("overlay.continue"), enabled: true, run: onclose },
     { label: t("overlay.skip"), enabled: canSkip, run: onskip },
@@ -121,7 +128,7 @@
     { label: t("overlay.undo"), enabled: canUndo, run: onundo },
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen },
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true },
-    ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: () => desktop?.quit() }] : []),
+    ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: quit }] : []),
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, right: true })),
     {
       label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),

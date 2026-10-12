@@ -4,6 +4,7 @@
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { saveError, takeSaveNotice } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
@@ -66,6 +67,8 @@
   let greeting = $state<string | null>(null);
   /** The supply report when the pool can't fill a game for the chosen player. */
   let refused = $state<Supply | null>(null);
+  /** The save file was unusable and moved to a backup (plan 55): shown once on Start. */
+  let notice = $state<ReturnType<typeof takeSaveNotice>>(null);
   /** Media that was playing when the overlay opened; it resumes on close. */
   let pausedMedia: HTMLMediaElement[] = [];
 
@@ -93,12 +96,19 @@
   async function refresh() {
     try {
       ({ game, supply } = await fetchGame());
-      error = null;
+      notice ??= takeSaveNotice();
+      error = saveWarning();
     } catch (e) {
       error = errorText(e);
     } finally {
       loading = false;
     }
+  }
+
+  /** A save that couldn't be written stays in the corner until one is (plan 55). */
+  function saveWarning(): string | null {
+    const e = saveError();
+    return e ? errorText(e) : null;
   }
 
   /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music. */
@@ -140,7 +150,7 @@
     busy = true;
     try {
       const next = await gameAction(action, body);
-      error = null;
+      error = saveWarning();
       return next;
     } catch (e) {
       error = errorText(e);
@@ -161,7 +171,7 @@
   async function playJokerAction(body: JokerPlay) {
     try {
       const res = await playJoker(body);
-      error = null;
+      error = saveWarning();
       return res;
     } catch (e) {
       error = errorText(e);
@@ -171,6 +181,7 @@
 
   /** The joker is done on the Question screen: Paso goes back to Select, a Francotirador hit to Level. */
   async function jokerPlayed(next: Game, event: JokerEvent) {
+    error = saveWarning();
     if (event.joker === "easier" || event.joker === "category") {
       // The card flip (JK-7): the transitions in Question.svelte only run while this is set.
       swap.active = true;
@@ -236,6 +247,7 @@
 
   async function answered(next: Game | null) {
     if (!next) return;
+    error = saveWarning();
     const apply = () => (game = next);
     if (next.phase === "won") await go("victory", "applause-big", apply);
     else if (next.phase === "lost") await go("wrong", "boom", apply);
@@ -297,7 +309,7 @@
     try {
       flagged = new Set(await setFlag(id, !flagged.has(id), game?.player ?? null));
       sfx(flagged.has(id) ? "menu-open" : "menu-close");
-      error = null;
+      error = saveWarning();
     } catch (e) {
       error = errorText(e);
     }
@@ -310,7 +322,8 @@
 
   /** Screen actions; the scope of the screen on top passes the rest down. */
   function onScreen(on: Screen, a: Action): boolean {
-    if (on === "start" && a.type === "confirm") {
+    if (on === "start" && notice && (a.type === "confirm" || a.type === "new")) notice = null;
+    else if (on === "start" && a.type === "confirm") {
       if (running) resume();
       else newGame();
     } else if (on === "start" && a.type === "new") newGame();
@@ -383,7 +396,12 @@
       <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
       <p class="subtitle">{t("screen.start.subtitle")}</p>
       <div class="buttons">
-        {#if running}
+        {#if notice}
+          <div class="notice glass">
+            <p>{t(notice.kind === "newer" ? "save.newer" : "save.corrupt", { path: notice.path })}</p>
+            <button class="candy" onclick={() => (notice = null)} data-focus-default data-focus-id="notice">{t("action.next")} <Prompt action="confirm" /></button>
+          </div>
+        {:else if running}
           <button class="candy breathe" onclick={resume} disabled={busy} data-focus-default data-focus-id="main">
             {game?.player
               ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
@@ -643,6 +661,13 @@
     font-size: calc(1.1 * var(--u));
     color: var(--amber);
     text-align: left;
+  }
+  .notice {
+    max-width: calc(48 * var(--u));
+    padding: calc(1 * var(--u)) calc(1.6 * var(--u));
+    font-size: calc(1.1 * var(--u));
+    color: var(--amber);
+    overflow-wrap: anywhere;
   }
   .supply ul {
     margin: calc(0.4 * var(--u)) 0 0;

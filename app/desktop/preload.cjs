@@ -5,4 +5,7 @@ contextBridge.exposeInMainWorld("trivia", {
   desktop: true,
   toggleFullscreen: () => ipcRenderer.invoke("trivia:toggle-fullscreen"),
   quit: () => ipcRenderer.invoke("trivia:quit"),
+  loadSave: () => ipcRenderer.invoke("save:load"),
+  writeSave: (text) => ipcRenderer.invoke("save:write", text),
+  backupSave: (kind) => ipcRenderer.invoke("save:backup", kind),
 });

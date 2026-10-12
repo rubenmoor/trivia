@@ -2,20 +2,20 @@
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
 import type { EngineData, Io, SaveData } from "../engine/state.ts";
-import { MemoryStore } from "../engine/store.ts";
 import { GameError } from "./api.ts";
 import { loadEngineData } from "./data.ts";
 import { desktop } from "./desktop.ts";
-import { ServerStore } from "./store.ts";
+import { FileStore, ServerStore, type SaveNotice } from "./store.ts";
 
 interface Loaded {
   data: EngineData;
   save: SaveData;
 }
 
-const store = desktop ? new MemoryStore() : new ServerStore(); // desktop: in memory until SW-3
+const store = desktop ? new FileStore(desktop) : new ServerStore();
 let loading: Promise<Loaded> | null = null;
 let chain: Promise<unknown> = Promise.resolve();
+let lastSaveError: GameError | null = null;
 
 /** Data files + save, once per page load; a failure is retried on the next call. */
 export function ready(): Promise<Loaded> {
@@ -27,6 +27,24 @@ export function ready(): Promise<Loaded> {
     },
   );
   return loading;
+}
+
+/** The notice of a backed-up save file (plan 55), once; null after that and in the browser. */
+export function takeSaveNotice(): SaveNotice | null {
+  if (!(store instanceof FileStore)) return null;
+  const notice = store.notice;
+  store.notice = null;
+  return notice;
+}
+
+/** `save_locked` of the last write, until one succeeds. */
+export function saveError(): GameError | null {
+  return lastSaveError;
+}
+
+/** Resolves when every save is written (before «Salir del juego»). */
+export function flush(): Promise<void> {
+  return store.flush();
 }
 
 /** Python's datetime.now().isoformat(timespec="seconds"): local, no zone. */
@@ -62,7 +80,13 @@ async function exec<T>(route: Route<T>, write: boolean): Promise<T> {
   }
   if (write) {
     loaded.save = reply.save;
-    await store.save(reply.save); // on failure the new save stays; the next action PUTs it again
+    try {
+      await store.save(reply.save); // on failure the new save stays; the next action PUTs it again
+      lastSaveError = null;
+    } catch (e) {
+      if (!(e instanceof GameError && e.code === "save_locked")) throw e;
+      lastSaveError = e; // the action stands (plan 55): the UI moves on with the in-memory save
+    }
   }
   return reply.body as T;
 }

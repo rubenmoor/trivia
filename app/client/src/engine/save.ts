@@ -6,12 +6,20 @@ const isObject = (v: unknown): v is Record<string, any> => typeof v === "object"
 // Version n → n + 1, keyed by n; empty while version 1 is the only one.
 const UPGRADES: Record<number, (doc: Record<string, any>) => Record<string, any>> = {};
 
+/** A save from a newer game (plan 55): the desktop backs it up as `newer`, not `corrupt`. */
+export class SaveNewerError extends Error {
+  readonly code = "save_newer";
+  constructor() {
+    super("save from a newer game");
+  }
+}
+
 /** A stored document as SaveData; throws on a broken shape or a save from a newer game. */
 export function parseSave(json: unknown): SaveData {
   let doc = typeof json === "string" ? JSON.parse(json) : json;
   if (!isObject(doc)) throw new Error("save must be a JSON object");
   if (!Number.isInteger(doc.version) || doc.version < 1) throw new Error("save has no valid version");
-  if (doc.version > SAVE_VERSION) throw new Error("save from a newer game");
+  if (doc.version > SAVE_VERSION) throw new SaveNewerError();
   while (doc.version < SAVE_VERSION) doc = { ...UPGRADES[doc.version](doc), version: doc.version + 1 };
   for (const key of ["players", "games", "burned"] as const) {
     if (!Array.isArray(doc[key])) throw new Error(`${key} must be a list`);
