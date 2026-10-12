@@ -4727,12 +4727,60 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:13:09Z', '2026-10-12T03:13:19Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (288, 15, 'create tasks for plan 15', 'split', 'dropped', 1000, 'thresholds wording only (decision 13); task 44 sees the answer', 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:19:08Z', '2026-10-12T03:19:14Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (289, 49, 'create tasks for plan 49', 'split', 'open', 1000, NULL, 'Split plan 49 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:21:25Z', NULL, 58);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (289, 49, 'create tasks for plan 49', 'split', 'done', 1000, '2026-10-11, tasks 292–296 for plan 49; no open decisions', 'Split plan 49 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:21:25Z', '2026-10-12T03:27:27Z', 58);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (290, 50, 'create tasks for plan 50', 'split', 'open', 1000, NULL, 'Split plan 50 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:23:36Z', NULL, 59);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (291, 51, 'create tasks for plan 51', 'split', 'open', 1000, NULL, 'Split plan 51 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:26:41Z', NULL, 60);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (292, 49, 'save.py store and /api/save (PORT-4)', 'work', 'open', NULL, NULL, 'Server side of the JSON save, plan 49 "Decisions taken here" and task 1. Python only; runs before plan 20 lands.
+
+- `app/server/save.py` (new): `FILE` (`state/game.json` via `paths`), `load()` (text or None), `write(doc)`.
+  - Envelope check only: JSON object, `version` == 1, `players`/`games`/`burned` lists, `flags` object, body ≤ 10 MB → else `400 {"error": "bad_save", "message"}`.
+  - Atomic: `game.json.tmp`, `fsync`, `os.replace`; `PermissionError` → retry 10× / 100 ms, then `503 {"error": "save_locked"}`. Under the existing `_lock`. `ensure_ascii=False`, compact.
+- `app/server/main.py`: `GET /api/save` (file as is, or `404 {"error": "not_found"}`), `PUT /api/save` (`do_PUT`, `http_base.read_body`), docstring route list. **No** `migrate()` call at startup (that''s plan 50''s switch-over).
+- `plans/decisions.md`: next D number: one JSON document written whole by the client; server checks only the envelope; flags live in it; authoring keeps its own applied-flags ledger; migration on a copy, `.sqlite` kept.
+
+Safety: `TRIVIA_STATE` = `tempfile.mkdtemp()` before importing `paths`; assert `save.FILE` inside it.
+
+Done when (throw-away script against a server on the temp state): 404 before any PUT; PUT/GET round trip equal after parse; 400 for not-an-object, version 2, missing list, > 10 MB; monkeypatched `os.replace` raising `PermissionError` 3× then OK → 200, always → 503 with the old file intact; no `.tmp` left behind.', '2026-10-12T03:27:24Z', NULL, 289);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (293, 49, 'save.migrate(): game.sqlite + flags.json → game.json (PORT-5)', 'work', 'open', NULL, NULL, 'One-time migration in `app/server/save.py`, plan 49 "Migration" and task 2. Not wired into startup (plan 50 does that in the switch-over change).
+
+- Runs only when `game.json` is missing and `game.sqlite` exists; otherwise no-op.
+- `sqlite3` `backup()` of `game.sqlite` (incl. `-wal`/`-shm` content) into a temp file; `game.init(con)` on the copy (upgrades legacy schemas); dump `players`, `games` (`state` parsed from JSON text), `burned`, each ordered by key.
+- Merge `state/flags.json` into `flags` when present.
+- Write via `save.write`''s atomic path. Never write `game.sqlite` or `flags.json`.
+- Prints `migrated game.sqlite → game.json: N players, N games, N burns, N flags`.
+
+Safety: temp `TRIVIA_STATE` only; never the real `state/`.
+
+Done when (throw-away checks, temp dir): (a) DB from today''s `game.init` with players, a running game, per-player and global burns, a deleted player''s leftovers; (b) pre-`player_id` games table; (c) pre-D-28 `burned` (→ global burns); (d) `flags.json` present/absent; (e) `game.json` present → no-op; (f) neither file → no-op. Every case: source DB byte-identical afterwards; row counts and `state` objects match a direct SQLite read.', '2026-10-12T03:27:24Z', NULL, 289);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (294, 49, 'TS save document and stores (PORT-4)', 'work', 'open', NULL, NULL, 'Client side of the save, plan 49 task 3. Needs task 76 (`engine/state.ts`) and task 1 (`/api/save`).
+
+- `engine/state.ts`: `flags: Record<string, {flagged_on, player}>` in `SaveData`, `{}` in `emptySave()`.
+- `engine/save.ts`: `parseSave(json)` (shape check; `version` > 1 → "save from a newer game"; missing `flags` → `{}`; upgrade-chain hook), `setFlag(save, qid, flagged, player, now)` → new save (keeps the first `flagged_on`, like `flags.set_flag`), `flaggedIds(save)` sorted.
+- `engine/store.ts`: `interface Store { load(): Promise<SaveData>; save(data): Promise<void> }`; `MemoryStore` with deep copies in and out.
+- `lib/store.ts`: `ServerStore` (404 → `emptySave()`; other errors throw with the server''s `error` code; one PUT in flight, later saves coalesce to the newest).
+- `engine/save.test.ts`: `parseSave` accepts `emptySave()` and a fixture `db` + version, rejects version 2 and broken shapes, fills missing `flags`; `setFlag` keeps the first `flagged_on`, unflag removes it, input unchanged; `MemoryStore` round trip and isolation.
+
+Done when: `npm test`, `npm run check` pass; a throw-away script against task 1''s server on a temp `TRIVIA_STATE` shows rapid saves end with the newest document. No new dependencies.', '2026-10-12T03:27:24Z', NULL, 289);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (295, 49, 'Authoring reads game.json: save_file.py, overview, qgen report, apply_flags', 'work', 'open', NULL, NULL, 'Authoring side, plan 49 task 4 (D-59: authoring reads, never writes `game.json`). Python only.
+
+- `authoring/tools/save_file.py` (new): source picked by whether `state/game.json` exists.
+  - `players()` (sorted case-insensitively), `burned_ids(player=None)` (casefold match; global burns `player_id` null; `KeyError` for unknown name, same contract as `selection.burned_ids`), `flags()`.
+  - Without `game.json`: fall back to `selection.burned_ids`/SQLite and `flags.json` (today''s behaviour; removed in PORT-8, task 60).
+- `authoring/server/overview.py` (`players`, `supply_for`) and `qgen report` (`burned_ids`) use it. Supply stays `selection.supply`.
+- `authoring/server/main.py` `apply_flags`: with `game.json`, read its `flags`, skip entries in `state/flags-applied.json` `{"<qid>": "<flagged_on>"}` (match on qid **and** `flagged_on`), record new ones there. Without `game.json`: today''s `flags.json` path.
+
+Done when (throw-away check, temp `TRIVIA_STATE`, hand-written `game.json`): start-page players and supply per player; `qgen report --player` with casefold «Íngrid»; unknown player → "unknown player"; `apply_flags` makes a review once, a second start skips it, a reflag (new `flagged_on`) applies again; `game.json` byte-identical afterwards. Same checks without `game.json` show today''s behaviour unchanged. `qgen validate` passes.', '2026-10-12T03:27:24Z', NULL, 289);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (296, 49, 'Real-save migration rehearsal and docs (PORT-4, PORT-5)', 'work', 'open', NULL, NULL, 'Plan 49 task 5. Needs tasks 2 and 3 of this plan and task 79 (`engine/api.ts`).
+
+- Throw-away script: temp `TRIVIA_STATE`; copy `state/game.sqlite` (+ `flags.json` if present); record size, mtime, sha256 of the originals before and after (must be identical); `migrate()` on the copy.
+- Compare Python vs TS on the result: `game.players()` vs `getPlayers`; `burned_ids` per player vs the TS burned set; running game (if any) `game.view` vs `getGame` with deterministic shuffles (tape from patched `random.shuffle`, as in plan 18); `parseSave` accepts the file.
+- Docs: `plans/12-client-engine.md` (PORT-4/PORT-5 `[x]` with notes; "Migration": switch-over hand-off — `main.py` calls `save.migrate()` before `serve_forever` in plan 50''s switch-over change, rollback = delete `game.json` + previous commit); `directory.md` (`state/game.json`, `state/flags-applied.json`, new files).
+- Task note: counts only, not save content.
+
+Done when: rehearsal matches, originals unchanged; `npm test`, `npm run check`, `npm run build`, `qgen validate` pass.', '2026-10-12T03:27:24Z', NULL, 289);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4955,6 +5003,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (131, 58, '2026-10-12T03:19:06Z', '2026-10-12T03:21:45Z', 'done', NULL, 0, 'd7fbee16a64064bb899621cc6ee68637f6b791d8', 'claude-opus-5-5[1m]', '3d2734f9-89f7-4dd9-b05d-0444e97d31e2', 15, 24, 12930, 574400, 64715, 0.891296, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (132, 59, '2026-10-12T03:21:45Z', '2026-10-12T03:23:52Z', 'done', NULL, 0, '17e59447bd05d090b7b0fd0bbecd70c2bb5baca4', 'claude-opus-5-5[1m]', '2e2c91b4-2b89-41eb-9615-8263ce938ffd', 15, 26, 12404, 643917, 64169, 0.89031940000000009, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (133, 60, '2026-10-12T03:23:52Z', '2026-10-12T03:26:54Z', 'done', NULL, 0, 'e234f0ad29c4363dffa30c1c539e1097d5263898', 'claude-opus-5-5[1m]', '85ac0e1f-1ba5-4901-aa26-487bde27878e', 19, 34, 14792, 801762, 70387, 1.0194244000000001, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (134, 289, '2026-10-12T03:26:54Z', '2026-10-12T03:27:33Z', 'done', NULL, 0, 'f639c737071fcaebfee25318d0ab9fb6062cc65b', 'claude-opus-5-5[1m]', '1cd705dc-eb5d-4b4c-93a4-b889b6fff52b', 5, 10, 4198, 158577, 30199, 0.35730739999999994, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
