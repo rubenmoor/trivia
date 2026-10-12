@@ -181,6 +181,117 @@ class Recorder:
         return body
 
 
+# Selection cases: direct calls into selection.py -------------------------------------------------
+
+def selection_call(fn, args):
+    """Questions are `pool` minus `without` (IDs); `burns` are written to the DB before `supply`."""
+    pool = POOLS.get(args.get("pool"), [])
+    without = set(args.get("without", []))
+    questions = [copy.deepcopy(q) for q in pool if q["id"] not in without]
+    if fn == "in_range":
+        return selection.in_range({"difficulty": args["difficulty"]}, args["level"])
+    if fn == "assign":
+        assignment, missing = selection.assign(questions, args["levels"])
+        return {"assignment": assignment, "missing": missing}
+    if fn == "supply":
+        with game.connect() as con:
+            for i, name in enumerate(args.get("players", []), 1):
+                con.execute("INSERT INTO players VALUES (?, ?, ?)", (i, name, START.isoformat()))
+            for b in args.get("burns", []):
+                pid = selection.player_id(con, b["player"]) if b["player"] else None
+                con.execute("INSERT INTO burned VALUES (?, ?, 1, ?)", (b["question_id"], pid, START.isoformat()))
+        return selection.supply(selection.available(questions, selection.burned_ids(args.get("player"))))
+    if fn == "draw":
+        by_id = {q["id"]: q for q in questions}
+        keep = [copy.deepcopy(q) for q in pool if q["id"] in args.get("keep", [])]
+        category_of = game.category_of(categories.broad_of()) if args.get("category_of") == "broad" else None
+        drawn = selection.draw(args["level"], list(by_id.values()), n=args.get("n", selection.PER_LEVEL),
+                               keep=keep, avoid_categories=set(args.get("avoid_categories", [])),
+                               category_of=category_of)
+        return None if drawn is None else [q["id"] for q in drawn]
+    raise ValueError(f"unknown selection fn {fn!r}")
+
+
+def ids(pool, pred):
+    return [q["id"] for q in POOLS[pool] if pred(q)]
+
+
+def selection_cases():
+    """`selection.json`: {name, fn, args, tape, result} per case; each case has a fresh DB and seed."""
+    cases = []
+
+    def case(name, fn, **args):
+        rec = Recorder(len(cases) + 1, "main")
+        rec.now = START.isoformat()
+        with rec.patched():
+            result = selection_call(fn, args)
+        cases.append({"name": name, "fn": fn, "args": args, "tape": rec.tape, "result": result})
+
+    for level, (lo, hi) in selection.LEVEL_RANGES.items():
+        for d in sorted({lo - 1, lo, hi, hi + 1}):
+            case(f"in_range level {level} difficulty {d}", "in_range", level=level, difficulty=d)
+
+    case("assign all levels, main", "assign", pool="main", levels=list(range(1, 13)))
+    case("assign all levels, tight", "assign", pool="tight", levels=list(range(1, 13)))
+    case("assign later levels only", "assign", pool="main", levels=list(range(7, 13)))
+    case("assign unsorted subset", "assign", pool="main", levels=[12, 3, 9, 1])
+    case("assign no levels", "assign", pool="main", levels=[])
+    case("assign tight without two of difficulty 1", "assign", pool="tight", levels=list(range(1, 13)),
+         without=ids("tight", lambda q: q["difficulty"] == 1)[:2])
+    case("assign tight without difficulty 10", "assign", pool="tight", levels=list(range(1, 13)),
+         without=ids("tight", lambda q: q["difficulty"] == 10))
+    case("assign tight without difficulty 5 and 6", "assign", pool="tight", levels=list(range(2, 13)),
+         without=ids("tight", lambda q: q["difficulty"] in (5, 6)))
+    case("assign empty pool", "assign", pool="none", levels=[1, 2, 12])
+
+    case("supply main", "supply", pool="main")
+    case("supply tight", "supply", pool="tight")
+    case("supply tight minus a global burn", "supply", pool="tight",
+         burns=[{"question_id": "t-001", "player": None}])
+    tight_burns = [{"question_id": q, "player": "Ana"} for q in ids("tight", lambda q: q["difficulty"] >= 9)[:5]]
+    case("supply tight minus player burns, that player", "supply", pool="tight", players=["Ana", "Íngrid"],
+         burns=tight_burns, player="ana")
+    case("supply tight minus player burns, other player", "supply", pool="tight", players=["Ana", "Íngrid"],
+         burns=tight_burns, player="íngrid")
+    case("supply tight minus player burns, new player", "supply", pool="tight", players=["Ana", "Íngrid"],
+         burns=tight_burns)
+    case("supply main minus mixed burns", "supply", pool="main", players=["Ana"],
+         burns=[{"question_id": q, "player": "Ana" if i % 2 else None}
+                for i, q in enumerate(ids("main", lambda q: q["difficulty"] in (1, 10)))], player="Ana")
+    case("supply empty pool", "supply", pool="none")
+
+    for level in (1, 2, 6, 11, 12):
+        case(f"draw level {level}, main", "draw", pool="main", level=level)
+        case(f"draw level {level}, main, broad categories", "draw", pool="main", level=level, category_of="broad")
+    case("draw level 1, tight", "draw", pool="tight", level=1, category_of="broad")
+    case("draw level 9, tight", "draw", pool="tight", level=9, category_of="broad")
+    lvl4 = ids("main", lambda q: 4 <= q["difficulty"] <= 6)
+    case("draw keep 3, n 1", "draw", pool="main", level=4, n=1, keep=lvl4[:3], without=lvl4[:3],
+         category_of="broad")
+    case("draw keep 3, n 1, subcategories", "draw", pool="main", level=4, n=1,
+         keep=lvl4[:3], without=lvl4[:3])
+    case("draw keep 2, n 2", "draw", pool="main", level=8, n=2, without=ids("main", lambda q: q["difficulty"] == 7)[:2],
+         keep=ids("main", lambda q: q["difficulty"] == 7)[:2], category_of="broad")
+    case("draw avoid categories", "draw", pool="main", level=5, avoid_categories=["ciencia", "cultura"],
+         category_of="broad")
+    case("draw avoid every category", "draw", pool="main", level=5,
+         avoid_categories=["ciencia", "cultura", "colombia"], category_of="broad")
+    case("draw avoid subcategories", "draw", pool="main", level=3, avoid_categories=["Planetas", "Música", "Fútbol"])
+    case("draw n 1", "draw", pool="main", level=10, n=1, category_of="broad")
+    case("draw n 3", "draw", pool="main", level=7, n=3, category_of="broad")
+    case("draw n 0", "draw", pool="main", level=7, n=0)
+    case("draw unfillable, no candidates", "draw", pool="main", level=12,
+         without=ids("main", lambda q: q["difficulty"] >= 9))
+    case("draw unfillable, too few candidates", "draw", pool="main", level=1,
+         without=ids("main", lambda q: q["difficulty"] == 1)[3:], category_of="broad")
+    case("draw unfillable, later levels need them", "draw", pool="tight", level=11, category_of="broad",
+         without=ids("tight", lambda q: q["difficulty"] == 8) + ids("tight", lambda q: q["difficulty"] >= 9)[5:])
+    case("draw later levels reject some candidates", "draw", pool="tight", level=10, category_of="broad",
+         without=ids("tight", lambda q: q["difficulty"] == 7)[:1] + ids("tight", lambda q: q["difficulty"] >= 8)[9:])
+    case("draw empty pool", "draw", pool="none", level=1)
+    return cases
+
+
 def dumps(obj):
     """Deterministic JSON: sorted keys, one list item (step, question, case) per line."""
     one = lambda x: json.dumps(x, sort_keys=True, ensure_ascii=False)
@@ -202,6 +313,7 @@ def record(out):
         write(out / "categories.json", CATEGORIES)
     for name, questions in POOLS.items():
         write(out / "pools" / f"{name}.json", {"questions": questions})
+    write(out / "selection.json", selection_cases())
     for name, (about, seed, pool, fn) in SCENARIOS.items():
         rec = Recorder(seed, pool)
         with rec.patched():

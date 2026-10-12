@@ -2988,14 +2988,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Check against `selection.supply` / `assign` with a throw-away call: main supports several games per player with jokers; tight supports exactly one.
 
 Done when: the files are written, re-running gives identical bytes, and the supply checks above hold.', '2026-10-12T00:04:11Z', '2026-10-12T01:53:00Z', 62);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (67, 18, 'Selection fixture cases (PORT-1)', 'work', 'open', NULL, NULL, 'The recorder writes `app/client/src/engine/fixtures/selection.json` (plan 18, "Fixture layout"): direct calls into `app/server/selection.py`, each `{name, fn, args, tape, result}`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (67, 18, 'Selection fixture cases (PORT-1)', 'work', 'done', NULL, '2026-10-11, authoring/tools/record_fixtures.py (selection_cases), app/client/src/engine/fixtures/selection.json: 105 cases (in_range edges, assign subsets/shortages, supply main/tight/burns, draw keep/avoid/n/unfillable); --check passes', 'The recorder writes `app/client/src/engine/fixtures/selection.json` (plan 18, "Fixture layout"): direct calls into `app/server/selection.py`, each `{name, fn, args, tape, result}`.
 
 - `in_range`: edges of each level range.
 - `assign`: subsets of levels, shortages.
 - `supply`: main pool, tight pool, tight minus burns (burns written to the temp DB first).
 - `draw`: plain, with `keep`, with `avoid_categories`, `n` < 4, unfillable → `None`.
 
-Done when: every function above has its cases with tapes, and `--check` passes.', '2026-10-12T00:04:11Z', NULL, 62);
+Done when: every function above has its cases with tapes, and `--check` passes.', '2026-10-12T00:04:11Z', '2026-10-12T01:55:45Z', 62);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (68, 18, 'Scripted game scenarios: rules and jokers (PORT-1)', 'work', 'open', NULL, NULL, 'Add these scenarios to `authoring/tools/record_fixtures.py`, written to `app/client/src/engine/fixtures/game/<name>.json` (plan 18, "Scenarios"): `win`, `lose-undo`, `hint`, `skip-purge`, `easier`, `category`, `snipe`, `budget`. Each case listed in the plan for these scenarios must appear, incl. one available and one unavailable case per joker, and `snipe`''s hit with no cards left on the tight pool.
 
 Pick answers/indexes from the recorded view (the correct index is in the state), not hard-coded, so scenarios survive pool tweaks.
@@ -4639,6 +4639,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (107, 42, '2026-10-12T01:48:01Z', '2026-10-12T01:49:46Z', 'done', NULL, 0, '3dafa7fa2b5ad9fb64562c030f2e40cef22b7e7b', 'claude-opus-5-5[1m]', '314cc15b-e1f0-431b-b09e-a5dafe8dbb4e', 27, 44, 10852, 992751, 44938, 0.77527020000000013, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (108, 65, '2026-10-12T01:49:46Z', '2026-10-12T01:51:39Z', 'done', NULL, 0, 'abb1444f04641fba0b4cb65fc0fc26a70fa9c3af', 'claude-opus-5-5[1m]', 'f360a04e-0bb9-4576-b3e1-743918d7866b', 11, 22, 12296, 511964, 52662, 0.76969679999999985, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (109, 66, '2026-10-12T01:51:39Z', '2026-10-12T01:53:09Z', 'done', NULL, 0, '91777b6494ac4722d52b03d9a3597403b0fd2ec3', 'claude-opus-5-5[1m]', 'f176786e-0625-4b9e-82e9-9f44d82648da', 15, 26, 8328, 618126, 49058, 0.68275320000000006, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (110, 67, '2026-10-12T01:53:09Z', '2026-10-12T01:55:59Z', 'done', NULL, 0, 'a16cc236fb6635c2d6cc24894f1afc13f62821d4', 'claude-opus-5-5[1m]', '01eddb41-34fe-4ac4-a075-7a23d77b0445', 17, 30, 9072, 629079, 41587, 0.64007180000000008, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
