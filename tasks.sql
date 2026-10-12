@@ -3838,7 +3838,8 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 1. **`code-review.md` skeleton, inventory and `directory.md` entry**
    - Top: intro paragraph + `## Executive summary` with `PLACEHOLDER(<task id of part 11''s summary task, or plan 72 part 11>)`.
    - `## Format`: table columns file | finding | category (unused / practice / complexity / performance / bug / inconsistency) | severity | status; status values from plan 72; severity: high = wrong behaviour, data loss, security or offline breakage reachable in play/authoring; medium = latent bug, real maintenance cost or measurable slowness; low = cosmetic, naming, small dead code.
-   - `## Part 1` … `## Part 11` sections, empty tables, subject of each part as in plan 72.
+   - Also in `## Format`: files reviewed without findings get a "no findings" row; TS/Svelte/`.mjs`/`.cjs` findings a lint rule or `tsconfig` flag would catch carry the rule in the finding text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)` (plan 72, linter evidence); duplication candidates name both paths and go to part 10.
+   - `## Part 1` … `## Part 11` sections, empty tables, subject of each part as in plan 72; `## Part 10` also gets an empty `### Linter evaluation` sub-heading.
    - `## Inventory`: every `git ls-files` path in scope → part number (one row per file, or per directory where the whole directory goes to one part). In scope also: both `tsconfig.json`, all five `package.json`, `package-lock.json`, `flake.nix`, `flake.lock`, `.envrc`, `.gitignore`s, `vite.config.ts`/`svelte.config.js`/`index.html` (→ part 10 unless plan 72 assigns them, e.g. `app/desktop/package.json` → 6, `authoring/tools/package.json` → 8). Out of scope, listed once as such: `*.json` data/fixtures, `tasks.sql`, `plans/`, prompts, media/audio/fonts, `project-manager.toml`, `*.md` docs except as part 10''s `directory.md`/`AGENTS.md` check.
    - Inventory produced by a throw-away script from `git ls-files`, so no file is missed (≈135 code/config files today); every in-scope file lands in exactly one part.
    - `directory.md`: add `code-review.md` under "Everything else".
@@ -3847,6 +3848,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Fix `directory.md` here (doc-only, trivially safe) for missing/stale entries; descriptions that need reading the code → `handed to part N`.
 3. **Scan: unused TS/JS code and npm dependencies**
    - `npx tsc --noEmit --noUnusedLocals --noUnusedParameters -p` for `app/client` and `authoring/ui` (and `svelte-check` with the same flags if it supports them); exported names never imported anywhere (grep script over `app/client/src`, `authoring/ui/src`, `authoring/tools/*.ts`, `sim/`, `app/desktop/*.mjs`), also Svelte props never passed.
+   - Linter evidence for part 10: record the exact `tsc` commands and the issue count per flag and per project; every row tagged `(lint: noUnusedLocals)` / `(lint: noUnusedParameters)`.
    - Unused deps: every entry of the five `package.json`s (`package.json`, `app/client`, `app/desktop`, `authoring/tools`, `authoring/ui`) grepped for imports/CLI use; deps used but not declared.
 4. **Scan: unused Python code**
    - `def`/`class`/module-level names in `app/server/*.py`, `authoring/server/*.py`, `authoring/tools/**/*.py` never referenced elsewhere (grep script; `vulture` only if already in the flake, no new dependency), CLI flags of `qgen.py` (argparse) never read, imports unused (`python -m pyflakes` only if available offline).
@@ -3858,6 +3860,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - TS/Svelte: `any`, `as` casts (minus `as const`), `!` non-null assertions, `@ts-ignore`/`@ts-expect-error`, `catch {}` / `catch (e) {}` with empty or log-only bodies, `.catch(() => {})`.
    - Python: bare `except:`, `except Exception: pass`, `except … : return None` without logging, `# type: ignore`.
    - Count per file in one table (gives parts 2–9 a hotspot list); individual rows only for the clearly harmful ones (swallowed error on save/IO/LLM paths).
+   - Linter evidence for part 10: exact grep commands and totals per pattern; TS rows tagged with the matching rule (e.g. `(lint: no-explicit-any)`, `(lint: no-empty)`, `(lint: no-non-null-assertion)`).
 7. **Scan: sync IO in request handlers and globals**
    - `app/server/main.py`, `http_base.py`, `authoring/server/*.py`: blocking reads/writes of large files per request (pool, media, reports) vs. cached; `app/desktop/main.mjs`/`resolve.mjs`/`save.mjs`: `fs.*Sync` in protocol/IPC handlers.
    - Module-level mutable state (Python globals, TS module `let`s) listed with owner part.
@@ -3867,8 +3870,8 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Table under `### Bundle baseline` in `## Part 1`; obvious bloat (e.g. a whole library for one function) → `handed to part 4/5/9/10`.
 
 ## Done when
-- `code-review.md` exists with format, severity definitions, part sections 1–11, executive-summary placeholder and a complete inventory; listed in `directory.md`.
-- Scans 2–8 ran, each with its command recorded and every finding a row with a status (`fixed (task N)`, `handed to part N`, `follow-up task N`, `decision N`, `superseded by task N`, `won''t fix: …`).
+- `code-review.md` exists with format (incl. `(lint: …)` tags, "no findings" rows), severity definitions, part sections 1–11, executive-summary placeholder and a complete inventory; listed in `directory.md`.
+- Scans 2–8 ran, each with its command recorded and every finding a row with a status (`fixed (task N)`, `handed to part N`, `follow-up task N`, `decision N`, `superseded by task N`, `won''t fix: …`); the `tsc` and bad-practice commands and counts recorded as linter evidence.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:49:44Z', 502);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (74, 13, 'Python game server review (code review part 2)', 0, 'Part 2 of `plan 72: masterplan` (milestone 13, Code quality): review the Python game server `app/server/` (9 files, 1282 lines) once, fix what is cheap, log every file and finding in `## Part 2` of `code-review.md`. Scope, checklist, fix-or-ask, the task 302 rule, duplication candidates and the report format: plan 72 "Ground rules for every part"; not restated here.
 
@@ -11879,7 +11882,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T23:33:08Z', '2026-10-12T23:34:08Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (594, 72, 'create tasks for plan 72', 'split', 'done', 1000, '2026-10-12, no changes: plans 73-83 cover parts 1-11; revise tasks 595-605 already bring them in line with the linter revision; no decisions needed yet (linter dependency decision belongs to part 10)', 'Split plan 72 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:34:06Z', '2026-10-12T23:34:37Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (595, 73, 'revise plan 73', 'plan', 'open', 1000, NULL, 'Plan 72, the plan above plan 73, changed; it is quoted below. Bring plan 73 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (595, 73, 'revise plan 73', 'plan', 'done', 1000, '2026-10-12, plan 73 body: lint-evidence tags, no-findings rows, Linter evaluation heading, tsc/bad-practice counts recorded', 'Plan 72, the plan above plan 73, changed; it is quoted below. Bring plan 73 in line with it
 (`pm plan edit 73 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -11918,7 +11921,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 11. **Executive summary and close-out** (last, needs every other part and the follow-up tasks either done or listed) — check that every file of part 1''s inventory is listed and every finding has a status; write the executive summary at the top of `code-review.md` as the milestone asks (self-critical assessment before the review: overall state, systemic causes of worker-written drift, worst areas; impact: fixed, pending tasks/decisions, remaining risk, process changes so quality holds, e.g. rules for `AGENTS.md` or `pm` prompts — proposed as decisions, not edited into the milestone); final `npm run check`, `npm test`, `npm run build`, `qgen validate` (and the lint pass if adopted: no issues, no baseline left). Process decisions don''t duplicate the linter outcome of part 10.
 
 ## Done when
-- Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', NULL, 593);
+- Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:35:06Z', 593);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (596, 74, 'revise plan 74', 'plan', 'open', 1000, NULL, 'Plan 72, the plan above plan 74, changed; it is quoted below. Bring plan 74 in line with it
 (`pm plan edit 74 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -12319,6 +12322,8 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', NULL, 593);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (606, 73, 'create tasks for plan 73', 'split', 'open', 1000, NULL, 'Split plan 73 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:35:06Z', NULL, 595);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13348,6 +13353,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (397, 312, '2026-10-12T23:33:08Z', '2026-10-12T23:33:25Z', 'blocked', NULL, 0, 'be88cf3f1018589620ffa364764a6dbebc3f4bd6', 'claude-opus-5-5[1m]', 'd02a3926-a281-4cd6-a9e4-38e42097a474', 7, 14, 1095, 179141, 17844, 0.20053620000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (398, 593, '2026-10-12T23:33:25Z', '2026-10-12T23:34:15Z', 'done', NULL, 0, '73820e9e080c24494493f886ecb4a4594fe09c3e', 'claude-opus-5-5[1m]', '54858558-f073-4769-b752-6fe01db2d14e', 8, 16, 4815, 281143, 34201, 0.42620059999999993, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (399, 594, '2026-10-12T23:34:16Z', '2026-10-12T23:34:41Z', 'done', NULL, 0, '1c17e862dd26bf4fd926f17fec5c44cd9553b70f', 'claude-opus-5-5[1m]', '99e3937d-6068-41c5-934a-c2edda344a2c', 8, 16, 1837, 278945, 33197, 0.358169, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (400, 595, '2026-10-12T23:34:42Z', '2026-10-12T23:35:12Z', 'done', NULL, 0, 'bc500058a3d268de9ba2fe3b0b0ec23658b82938', 'claude-opus-5-5[1m]', '88fee5ba-43d2-429b-b8a3-80638689a1c2', 4, 8, 2543, 117801, 26697, 0.28802819999999996, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
