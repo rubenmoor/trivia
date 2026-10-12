@@ -10606,10 +10606,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - unused exports, swallowed errors, comments that lie
 - Part 1 rows `handed to part 4` for these files: re-check, final status in `## Part 4`, quoting the part 1 row.
 
+- Report rows: status `fixed (task N)` with this task''s id (or `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`); a TS/Svelte/`.mjs` finding a lint rule or stricter `tsconfig` flag would have caught carries it in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`; part 1''s `tsc --noUnusedLocals`/`--noUnusedParameters` hits for these files included.
 ## Check
 - Throw-away script in `/tmp` driving `step()` and `nearest()`, for every fix.
 - Listener fix: `trivia` + dev server (`npm run dev -w app/client`) walk with keyboard (pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
 - All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', NULL, 516);
@@ -10628,10 +10629,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Duplication candidates (log for part 10): `lib/store.ts` ↔ `engine/store.ts`; `data.ts` `LOCALES` ↔ `i18n.ts` `CATALOGS`/`UI_LANGS` ↔ `authoring/tools` locale lists.
 - Part 1 rows `handed to part 4` for these files: re-check, final status in `## Part 4`, quoting the part 1 row.
 
+- Report rows: status `fixed (task N)` with this task''s id (or `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`); a TS/Svelte/`.mjs` finding a lint rule or stricter `tsconfig` flag would have caught carries it in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`; part 1''s `tsc --noUnusedLocals`/`--noUnusedParameters` hits for these files included.
 ## Check
 - Throw-away script in `/tmp` with a failing/slow store (write during write, reject) through `run()`.
 - Boot with a corrupt save on a temp `TRIVIA_STATE` (`trivia`, stop by PID).
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
 - All eight files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', NULL, 516);
@@ -10650,9 +10652,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Spanish UI byte-identical after every fix.
 - Part 1 rows `handed to part 4` for these files: re-check, final status in `## Part 4`, quoting the part 1 row.
 
+- Report rows: status `fixed (task N)` with this task''s id (or `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`); a TS/Svelte/`.mjs` finding a lint rule or stricter `tsconfig` flag would have caught carries it in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`; part 1''s `tsc --noUnusedLocals`/`--noUnusedParameters` hits for these files included.
 ## Check
 - Throw-away script in `/tmp`: exported names with no importer; error codes from `engine/` + `app/server/` vs. `errors.ts` and `locales/es.ts`.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
 - All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', NULL, 516);
@@ -10669,10 +10672,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Spanish UI byte-identical; wording changes are out of scope (catalog plans own them).
 - Part 1 rows `handed to part 4` still without a final status in `## Part 4` (any file of this part): give them one here.
 
+- Report rows: status `fixed (task N)` with this task''s id (or `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`); a TS/Svelte/`.mjs` finding a lint rule or stricter `tsconfig` flag would have caught carries it in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: no-explicit-any)`; part 1''s `tsc --noUnusedLocals`/`--noUnusedParameters` hits for these files included.
 ## Check
 - Throw-away script in `/tmp`: keys per catalog, unused keys, param sets.
 - `npm run build`: no `xx`/non-active catalog in the main chunk (compare with part 1''s bundle baseline).
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
 - `i18n.ts`, every catalog in `locales/` and `check-literals.mjs` listed in `## Part 4` (no-findings rows included), every finding with a status; every part 1 row `handed to part 4` has its final status there.', '2026-10-12T23:05:00Z', NULL, 516);
@@ -12342,8 +12346,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:36:20Z', '2026-10-12T23:36:46Z', 596);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (608, 75, 'create tasks for plan 75', 'split', 'done', 1000, '2026-10-12, tasks 535–538 aligned with revised plan 75: tsc --noUnused hits in part 1 rows, (lint: …) evidence tags, lint pass in checks if adopted; no new decisions', 'Split plan 75 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:37:14Z', '2026-10-12T23:37:56Z', 597);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (609, 76, 'create tasks for plan 76', 'split', 'open', 1000, NULL, 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:38:15Z', NULL, 598);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (609, 76, 'create tasks for plan 76', 'split', 'done', 1000, '2026-10-12, tasks 539–542 aligned with revised plan 76: fixed (task N) status, (lint: …) evidence tags, lint pass in checks if adopted; no new decisions', 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:38:15Z', '2026-10-12T23:38:53Z', 598);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13380,6 +13384,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (404, 597, '2026-10-12T23:36:50Z', '2026-10-12T23:37:22Z', 'done', NULL, 0, '7b81159ce9fc3de6eeb0c385e2005f1537b84d0b', 'claude-opus-5-5[1m]', '3e20c337-4219-41b5-bee3-62f01d5774ea', 7, 14, 2148, 235966, 32018, 0.34635319999999997, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (405, 608, '2026-10-12T23:37:23Z', '2026-10-12T23:38:01Z', 'done', NULL, 0, 'fbb1a32b3c6dd9904b6641f329bd84859da5818a', 'claude-opus-5-5[1m]', '973751f5-9b41-4b5b-b2b6-e8bf62d68282', 8, 16, 3095, 252739, 28662, 0.34180779999999988, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (406, 598, '2026-10-12T23:38:01Z', '2026-10-12T23:38:22Z', 'done', NULL, 0, 'ac1bc972e94719c6372ae690c2a104c6d59ec206', 'claude-opus-5-5[1m]', 'f7cc34fc-bf2b-43e5-beca-2e7852c93e1b', 6, 12, 1820, 183590, 25187, 0.274662, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (407, 609, '2026-10-12T23:38:23Z', '2026-10-12T23:38:58Z', 'done', NULL, 0, '6dbb6b72837d21d052379be2d6f3ae0b4724fad1', 'claude-opus-5-5[1m]', '7b5c9f73-daf4-47d0-a748-b5d89a114f70', 9, 18, 2029, 362016, 42102, 0.4498712, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
