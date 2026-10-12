@@ -8495,13 +8495,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm run build`.
 - Browser walk on a copy of the family save: no language rows, game as today.
 - With throw-away `pool.en.json` + `names.en.json` + a stub `en` catalog (or plan 24''s): switch both, names and questions in English; `Continuar` of a Spanish game stays Spanish. Keyboard only, pad. Delete the throw-away files.', '2026-10-12T19:36:55Z', '2026-10-12T19:58:01Z', 448);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (451, 68, 'Docs: language setting and per-locale pool (I18N-2)', 'work', 'open', 460, NULL, 'Plan 68, task 3. After tasks 1 and 2; document what was actually built.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (451, 68, 'Docs: language setting and per-locale pool (I18N-2)', 'work', 'open', 460, NULL, 'Plan 68, task 3. Runs after tasks 1, 2 and 4 (the first-start language screen, priority 470); document what was actually built.
 
 ## What
-- `plans/decisions.md`: D-entry (next free number) for plan 68''s "Decisions taken here" (save field, default, a game keeps its locale, Esc menu rows, options, reload on UI change, `displayName`).
-- `plans/15-i18n.md` "Model": language stored in the save; default from `navigator.language` (Steam client language in S5); a game keeps its locale; seen counts by id across locales. I18N-2 `[x]` with a note.
-- `plans/04-ui-tv-display.md`: Esc menu language rows.
-- `plans/12-client-engine.md` if it lists `SaveData` fields; `directory.md` if files were added; `plans/project.md` in sync.
+- `plans/decisions.md`: D-entry (next free number) for plan 68''s "Decisions taken here" (save field, default and `guessTag()`, a game keeps its locale, Esc menu rows, first-start language screen, options, reload on UI change, `displayName`).
+- `plans/15-i18n.md` "Model": language stored in the save; default from `guessTag()` (`navigator.language`; Steam client language in milestone 10); a fresh save asks once on the language screen, a stored save never; a game keeps its locale; seen counts by id across locales. I18N-2 `[x]` with a note.
+- `plans/04-ui-tv-display.md`: the first-start language screen next to the Esc menu language rows.
+- `plans/12-client-engine.md` if it lists `SaveData` fields or `language()`; `directory.md` if files were added; `plans/project.md` in sync.
 
 ## Done when
 - Docs match the code; `qgen validate` clean.', '2026-10-12T19:36:55Z', NULL, 448);
@@ -9517,8 +9517,36 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', NULL, 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (489, 68, 'create tasks for plan 68', 'split', 'open', 1000, NULL, 'Split plan 68 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:31:51Z', NULL, 486);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (489, 68, 'create tasks for plan 68', 'split', 'done', 1000, '2026-10-12, tasks.sql: added task 490 (first-start language screen), updated task 451', 'Split plan 68 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:31:51Z', '2026-10-12T20:32:23Z', 486);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (490, 68, 'First-start language screen (I18N-2)', 'work', 'open', 470, NULL, 'Plan 68, task 4 (milestone 9 "Language on first start"). Runs before the docs task (task 451). Builds on tasks 449, 450 (`SaveData.language`, `defaultLanguage()`, `ready()`/`language()`, Esc menu rows, boot language).
+
+## What
+- `app/client/src/lib/engine.ts`:
+  - `ready()` remembers whether the loaded save is fresh (no `language` stored, i.e. `emptySave()`: no file, 404, backed-up broken file). A stored save without `language` (the family''s) is NOT fresh: parsed as `es`, never asked.
+  - `language()` also returns `ask: boolean` = fresh and (>1 UI option or >1 question locale).
+  - `guessTag()` wraps `navigator.language`; the one seam milestone 10 swaps for Steam''s client language. Use it wherever the default is computed today.
+- `app/client/src/game/Game.svelte`: a `language` screen before `start` when `ask`. Esc menu not reachable on it.
+- New `app/client/src/game/LanguageScreen.svelte`:
+  - one list of UI languages by endonym (same data as the Esc menu rows), the guess preselected and focused
+  - action layer scope and `data-nav` (IN-2..IN-5); keys, pad, click; confirm = Enter / pad A / click
+  - a pick sets both: `ui` = pick, `questions` = `defaultLanguage(pick)` over the locales whose supply check passes for the default bundles (`es` always)
+  - confirm → `setLanguage` (writes `language`, so it never asks again) → `location.reload()` if `ui` differs from the boot language, else continue to `start`
+- Nothing to pick (one UI option, one question locale, as today): no screen, nothing written (so it asks once a second language ships).
+- Strings via `t()`: `language.choose` (heading), `language.confirm` (prompt) or similar, in the `es` catalog (only catalog today; `en`/`de`/`es-ES` get them via plan 69, which translates the whole catalog). `npm run check:literals`.
+- `directory.md`: the new component.
+
+## Check
+- `npm run check`, `npm run build`, `npm test`.
+- Throw-away (delete afterwards): browser walk with no save file plus a throw-away `pool.en.json`, `names.en.json` and a stub `en` catalog:
+  - `navigator.language` `de-AT` → `en` preselected
+  - pick `Español (Latinoamérica)` → reload, Spanish start screen; reload again → no screen
+  - a copy of the family save → no screen
+  - only `es` present → no screen, nothing written
+  - keyboard only; pad
+
+## Done when
+- Fresh save with a second language present asks once with the guess preselected; a stored save never sees the screen; with only `es` the game is exactly as today.', '2026-10-12T20:32:21Z', NULL, 489);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -10422,6 +10450,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (331, 484, '2026-10-12T20:30:26Z', '2026-10-12T20:30:35Z', 'done', NULL, 0, '91c23fd31018ac2666dcd5b28c01051bd87aa6c0', 'claude-opus-5-5[1m]', '1084f306-7bac-4063-87c6-b53d9f2b15e5', 3, 6, 589, 78932, 23780, 0.21783039999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (332, 485, '2026-10-12T20:30:35Z', '2026-10-12T20:30:47Z', 'done', NULL, 0, 'de54be21df5aafb3a6cdc97debbb70cd456c149a', 'claude-opus-5-5[1m]', '890e62a5-34e3-4b19-b4da-fbd2706c769d', 4, 8, 877, 110799, 23918, 0.23107580000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (333, 486, '2026-10-12T20:30:47Z', '2026-10-12T20:32:02Z', 'done', NULL, 0, 'b0b046ad1e189120e2e1025f9cd4b08dc91f964e', 'claude-opus-5-5[1m]', '155bf3e5-6c86-461f-b06a-8448c727fe27', 12, 22, 7116, 475679, 44770, 0.5957038, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (334, 489, '2026-10-12T20:32:02Z', '2026-10-12T20:32:28Z', 'done', NULL, 0, '7c948aa8864daf09b5e358039b6239bbf9a50ecf', 'claude-opus-5-5[1m]', 'a0996ac0-1919-49ea-942f-e34378b14f45', 5, 10, 2398, 148488, 27012, 0.29379360000000004, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
