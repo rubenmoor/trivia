@@ -1707,6 +1707,28 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Decision answered; D-entry exists; OQ-29 resolved; SW-1 `[x]`; plan 18''s table says decided; SW-2..SW-6 match the choice.', '2026-10-12T00:39:17Z', 162);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (35, 7, 'Default mode (OQ-30)', 600, 'Part 2 of the masterplan (plan 7): define the default mode, Steam''s first choice (one team, no gamemaster), so MD-6 and MD-7 (plan for part 3) can implement it (OQ-30, MD-5). Decision only; no code.
+
+- Owner: `plans/13-game-modes.md` ("Default mode": draft preset table Fácil/Normal/Difícil/Experto, checkpoint idea, admin actions; "Implementation notes").
+- Fit: D-38 (four age groups, scale 1–15, `plans/21-age-groups.md`) and the per-group level ranges of milestone 5 (plan 27 "Group windows and bundle filter in the engine", plan 28 "Tune the age-group windows and level weights"). Key question: does a preset shift the group''s window/level ranges, or only the joker budget? Age group and preset are separate settings either way.
+- Existing pieces: joker budget in `settings.jokers` (MD-1..MD-4, `null` = unlimited); «Como las cartas» = Normal row (JK-11).
+- Feeds part 5 (OQ-32, content target): cards burned per game under the default preset.
+
+## Tasks
+1. **Prep: options and recommendation as pm decisions**
+   - Facts: what each joker burns or saves (Soplo, Paso, Bájale, Cambiazo, Francotirador; plan 13, D-28 burning); how a checkpoint interacts with burning and with "12 to victory"; what plans 27/28 put in `age-groups.json` (`levels` per group) so a preset can or can''t shift them.
+   - Questions to settle: (a) joker counts per preset (confirm or change the draft table, number of presets, which is the default); (b) presets shift difficulty or only jokers; (c) checkpoints: none, Fácil only (level 6), or per preset; (d) which levels count as won (only 12, or a reached checkpoint shown as a partial win, e.g. for stats/achievements later); (e) admin actions: no undo, no «Saltar y quemar para todos», «Reportar pregunta» (burn for everyone on this machine, local report list, replacement), «Abandonar partida» stays; anything else (sound, pause).
+   - Split into two decisions if one is too big: "Presets, checkpoints and won levels (OQ-30)" and "Admin actions in the default mode (OQ-30)". Recommended option first; body = context + trade-offs, ultra-short.
+   - `pm task-pending-decision` on task 2 for each decision.
+2. **Follow-up: record the answer** (waits for the decisions)
+   - D-entry (or two) in `plans/decisions.md` (next free D-number).
+   - OQ-30 moved to "Resolved" in `plans/open-questions.md` with the D-number(s).
+   - Plan 13 "Default mode": draft table → decided; checkpoints, won levels and admin actions written as a spec MD-6/MD-7 can build (settings fields in "Implementation notes", e.g. `settings.preset`, `settings.checkpoint`); MD-5 `[x]` with a note.
+   - If presets shift difficulty: note it in plan 21''s age-group section and as input for plan 28 (no change to `age-groups.json` here).
+   - `plans/11-steam.md` open-questions row and `plans/project.md` kept in sync.
+
+## Done when
+- Decision(s) answered; D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13''s default-mode section is a spec MD-6/MD-7 can implement.', '2026-10-12T00:39:47Z', 163);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2824,9 +2846,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owner: `plans/18-steam-integration.md` ("Desktop shell"), SW-1.
 - Tasks: prep (refresh facts: steamworks.js status, Electron support, install size, Deck/Proton, overlay; `pm decision add`, `pm task-pending-decision` on the follow-up), follow-up (D-entry, OQ-29 resolved, SW-1 `[x]`, plan 18 table decided, SW-2..SW-6 checked).
 - Note OQ-37 (part 8) as a dependency (phones as buzzers → LAN server in the shell), not a blocker.', '2026-10-12T00:38:51Z', '2026-10-12T00:39:19Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (163, 7, 'write plan: Default mode (OQ-30)', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of the masterplan (plan 7): `pm plan add 7 "Default mode (OQ-30)" --priority 600`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (163, 7, 'write plan: Default mode (OQ-30)', 'plan', 'done', 1000, '2026-10-11, plan 35 (Default mode, OQ-30) in tasks.sql', 'Write the plan for part 2 of the masterplan (plan 7): `pm plan add 7 "Default mode (OQ-30)" --priority 600`.
 - Owner: `plans/13-game-modes.md` ("Default mode"), MD-5.
-- Tasks: prep (joker presets per difficulty, checkpoints, won levels, remaining admin actions; fit D-38 / `plans/21-age-groups.md` and the windows of plans 27, 28; may split into two decisions), follow-up (D-entry, OQ-30 resolved, MD-5 `[x]`, plan 13''s section a spec for MD-6/MD-7).', '2026-10-12T00:38:51Z', NULL, 151);
+- Tasks: prep (joker presets per difficulty, checkpoints, won levels, remaining admin actions; fit D-38 / `plans/21-age-groups.md` and the windows of plans 27, 28; may split into two decisions), follow-up (D-entry, OQ-30 resolved, MD-5 `[x]`, plan 13''s section a spec for MD-6/MD-7).', '2026-10-12T00:38:51Z', '2026-10-12T00:39:49Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (164, 7, 'write plan: Reportar pregunta and settings screen (MD-6, MD-7)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 7): `pm plan add 7 "Reportar pregunta and settings screen (MD-6, MD-7)" --priority 500`.
 - Implementation after part 2''s decision; tasks wait for it (`pm task-pending-decision` on part 2''s decision if still pending).
 - Builds on plan 20 "Engine game state machine (PORT-3)" and `SaveData`; strings via plan 21 "t() helper and the es catalog (LUI-1)". No second implementation in `app/server/game.py`.
@@ -2855,6 +2877,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when the milestone''s "Done when" holds.', '2026-10-12T00:38:52Z', NULL, 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (172, 34, 'create tasks for plan 34', 'split', 'open', 1000, NULL, 'Split plan 34 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:17Z', NULL, 162);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (173, 35, 'create tasks for plan 35', 'split', 'open', 1000, NULL, 'Split plan 35 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:39:47Z', NULL, 163);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2927,6 +2951,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (56, 7, '2026-10-12T00:36:45Z', '2026-10-12T00:38:19Z', 'done', NULL, 0, 'aa323f30031742363fdc041797c03f838aec1ef2', 'claude-opus-5-5[1m]', '3c482457-76a4-49f9-82b6-20bc1945a04f', 13, 26, 9065, 617366, 56610, 0.75775719999999991, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (57, 151, '2026-10-12T00:38:19Z', '2026-10-12T00:39:00Z', 'done', NULL, 0, '3b6f901730b7596320d7e4f88e6894ae668e18f9', 'claude-opus-5-5[1m]', '329bbc6f-7271-4c54-817f-3d503a782533', 6, 12, 4484, 181096, 27251, 0.34395519999999996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (58, 162, '2026-10-12T00:39:00Z', '2026-10-12T00:39:26Z', 'done', NULL, 0, '28f62b5f898ca2e2d7be301b184e7f28ffde696f', 'claude-opus-5-5[1m]', 'fe939d73-121d-4575-be7e-cc929bbb2a34', 5, 10, 1932, 145256, 25438, 0.27123520000000007, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (59, 163, '2026-10-12T00:39:27Z', '2026-10-12T00:39:55Z', 'done', NULL, 0, '350427cee4811a071ebc75c14379dfab6776ed4c', 'claude-opus-5-5[1m]', 'dbecc7b6-b72e-4872-8e78-0c159e940683', 6, 12, 2664, 197763, 32552, 0.35329659999999996, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
