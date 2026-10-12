@@ -363,7 +363,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Released; content updates go out as patches.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own always-on base bundle, `chinese-base`, which replaces `base` there: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. A session has one base bundle (milestone 5), so `chinese-base` takes `base`''s place.
 
 ## Outcome
 - Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
@@ -371,7 +371,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Russian and Portuguese play translated `base`, as the launch languages do.
 
 ## Chinese: `chinese-base` bundle
-- In the zh game, `chinese-base` is the always-on bundle; `base` isn''t played there.
+- The zh game''s base bundle: `chinese-base`; `base` isn''t offered in zh.
 - Target: 5000 approved with D-53''s mix, like `base` (pm decision 21).
 - Contents:
   - translated `base` questions that work for a Chinese family (not about the Spanish-speaking world, no Spanish wordplay); a fit pass picks them, the gamemaster corrects
@@ -383,7 +383,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
   - new China-centric questions: drafted in Spanish and translated (one pipeline) or drafted in Chinese
 
 ## Bundle languages
-- Per-bundle `languages` comes from milestone 5; here: add ru, pt-BR to `base`, zh to `chinese-base` (its always-on bundle).
+- Per-bundle `languages` comes from milestone 5; here: add ru, pt-BR to `base`, zh to `chinese-base` (zh''s only base bundle).
 
 ## Constraints
 - On hold until the gamemaster starts it (pending decision on the masterplan task).
