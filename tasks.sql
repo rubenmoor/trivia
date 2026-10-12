@@ -3530,8 +3530,58 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Note the state of plan 36 (MD-6, MD-7) in `project.md`; don''t wait for it.
 
 Done when: milestone 7''s "Done when" holds (OQ-29..OQ-37 and the Freesound question resolved in `decisions.md`, later phases in `11-steam.md` match); `qgen validate` unaffected (no data touched).', '2026-10-12T00:51:05Z', NULL, 181);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (208, 8, 'create tasks for plan 8', 'split', 'open', 1000, NULL, 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:52:42Z', NULL, 8);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (208, 8, 'create tasks for plan 8', 'split', 'done', 1000, '2026-10-11, tasks 209–216 (plan tasks for parts 1–8; 209–211 at 690/680/670 to run after OQ-29 prep task 182); no new decisions: OQ-29 comes from task 182, the rest are raised by the part plans', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:52:42Z', '2026-10-12T00:53:44Z', 8);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (209, 8, 'write plan: Desktop shell skeleton (SW-2)', 'plan', 'open', 690, NULL, 'Write the plan for part 1 of the masterplan (plan 8): `pm plan add 8 "Desktop shell skeleton (SW-2)" --priority 480`.
+
+- Needs OQ-29 (plan 34): task 182 adds the decision "Desktop shell (OQ-29)?". If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop. Task priority 690 puts this after task 182 (700).
+- Needs PORT-7''s plan (task 59, "Screens on the engine"): the shell loads the client without Python. If that plan doesn''t exist yet, write against the masterplan''s assumption and name the dependency.
+- Content: window (fullscreen default, F11 toggle), loads `app/client/dist/` without a server, minimal preload bridge; shell-side resolver for data files and `/media?url=…` (today `app/server/main.py`, `media_cache.py`; see decision 4 on which routes Python keeps); NixOS dev runtime from the flake + `trivia-desktop`.
+- Code under `app/` (D-35, e.g. `app/desktop/`); `directory.md`, `plans/19-repo-layout.md`; owner `plans/18-steam-integration.md`.
+- Done when (for the plan): tasks fit one worker run each; "whole game with media and sound, no Python process" is the last task''s check.', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (210, 8, 'write plan: File saves (SW-3)', 'plan', 'open', 680, NULL, 'Write the plan for part 2 of the masterplan (plan 8): `pm plan add 8 "File saves (SW-3)" --priority 470`.
+
+- Needs OQ-29 (plan 34, decision "Desktop shell (OQ-29)?"): if pending, make this task pending on it and stop.
+- Needs the Store interface + `SaveData` (task 58, plan "Save document, stores and migration", PORT-4/5): `FileStore` implements that interface; read the plan or, if missing, `plans/12-client-engine.md`.
+- Content: one JSON file in the shell''s user data folder via the bridge; atomic write (temp + rename) + retry for Windows locks; corrupt/newer-version file → backup, fresh start, message through the catalog (plan 21). Save import of `state/game.json` only if cheap, else `plans/backlog.md`.
+- Owner `plans/18-steam-integration.md`.
+- Done-when check: throw-away script kills the shell mid-write; save survives.', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (211, 8, 'write plan: Local builds for Windows and Linux (SW-5, SW-6)', 'plan', 'open', 670, NULL, 'Write the plan for part 3 of the masterplan (plan 8): `pm plan add 8 "Local builds for Windows and Linux (SW-5, SW-6)" --priority 460`.
+
+- Needs OQ-29 (plan 34, decision "Desktop shell (OQ-29)?"): builder follows the answer; if pending, make this task pending on it and stop.
+- Content: Windows x64 and Linux x64 artefacts (Deck runs Linux); build steps: client build, `qgen validate`, media bundled from the approved cache (~720 MB, no resizing: SW-9 is S5).
+- Decisions the plan raises if it can''t settle them from `plans/18-steam-integration.md` (recommended option first): CI with or without media (D-17: media is gitignored); keep SW-6 (GitHub Actions) in S3 or move it to S5.
+- Offline start test on clean Windows and non-Nix Linux: a written checklist for the gamemaster, not a worker task that pretends to run it.
+- Owner `plans/18-steam-integration.md` ("Builds and depots").', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (212, 8, 'write plan: Action layer and focus navigation (IN-2, IN-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 8): `pm plan add 8 "Action layer and focus navigation (IN-2, IN-3)" --priority 500`.
+
+- Client only; no engine or shell dependency. Read `plans/14-input.md` (IN-1 audit of `keydown` branches in `Game.svelte` and dialogs).
+- Content: actions `confirm`, `back`, `menu`, `answer(1..4)`, `joker(name)`, `navigate(dir)` in `app/client/src/lib/` (e.g. `input.ts`); keyboard/mouse → actions; screens listen only to actions. Spatial focus, sky-blue ring (D-29), focus memory per screen, never on the ☰ button by accident.
+- Screens from plans 29 and 36 (milestones 5, 7): convert those that exist, note the rule for those that land later.
+- Coordinate with PORT-7 (task 59): both touch `Game.svelte`; order the tasks so one doesn''t undo the other.
+- No new dependency without a `pm decision`. Family keys unchanged.', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (213, 8, 'write plan: Gamepad input and button glyphs (IN-4, IN-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of the masterplan (plan 8): `pm plan add 8 "Gamepad input and button glyphs (IN-4, IN-5)" --priority 490`.
+
+- Builds on part 4 (action layer). Owner `plans/14-input.md`.
+- Content: Gamepad API polling (rAF while connected), standard mapping; D-pad/stick → `navigate`, A/B/Start → `confirm`/`back`/`menu`.
+- IN-4 design: answer buttons (A/B/X/Y on the Question screen?) and joker access (bumpers, wheel or focus row). If `plans/14-input.md` doesn''t settle it, add a `pm decision` with a recommendation and make the plan''s implementation tasks pending on it.
+- Glyphs follow the last-used device (keyboard, Xbox, PlayStation via `Gamepad.id`); art original or a free set with a clear licence (D-45 style); list sources for the credits (part 7). A glyph pack with code needs a decision.', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (214, 8, 'write plan: Deck layout and controller-only text entry (SW-4)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 8): `pm plan add 8 "Deck layout and controller-only text entry (SW-4)" --priority 380`.
+
+- After parts 4–5 and the screen changes of milestones 5–6 (plans 29, 30, 31; check `pm plan list`).
+- Content: every screen at 1280×800, 1280×720, 4K sanity; text ≥ 9 px at 800p; fixes in the `--u` system (D-29). Screenshot tool: follow decision 6''s answer (Playwright vs. by hand) if given, else the shell at a fixed window size.
+- Player name without a keyboard (on-screen keyboard is S5, SW-8): propose letter picker / preset names / pick existing; `pm decision` if the Player screen changes visibly for the family.
+- Owners: `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/04-ui-tv-display.md`.', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (215, 8, 'write plan: Credits screen and generated CREDITS.md (PUB-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of the masterplan (plan 8): `pm plan add 8 "Credits screen and generated CREDITS.md (PUB-5)" --priority 400`.
+
+- Needs plan 26 "Licence data in the pool" (fields per media file) and part 5''s glyph sources; its screen uses part 4''s actions. Implementation tasks wait for those; the plan names them.
+- Content: generator at build time (in `app/` or the build step, not `authoring/`) from pool licence data + fixed lists (audio `app/client/public/audio/CREDITS.md` incl. Elgar note, fonts, glyphs, Svelte, the shell); code/content licence from plan 40 (OQ-35) if decided. Screen from start screen or ☰ overlay, scrollable with a pad; `CREDITS.md` in the shipped files.
+- Owner `plans/17-publishing.md` ("Credits in the game").', '2026-10-12T00:53:42Z', NULL, 208);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (216, 8, 'write plan: S3 close-out and platform test', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of the masterplan (plan 8): `pm plan add 8 "S3 close-out and platform test" --priority 140`.
+
+- Last; below plan 43 "S2 close-out" (150).
+- Content: gamemaster test checklist (Windows, Linux, Deck; controller only; offline; full game to level 12 or a loss; restart keeps the save); a `pm decision` "S3 test passed?" with the checklist in the body, a task that records the result.
+- Docs: `plans/11-steam.md` S3 row; 14, 17, 18 statuses; `plans/project.md`; `plans/README.md`; notes in masterplans 9–11 if S3 changed their scope (SW-6 moved, media bundle).', '2026-10-12T00:53:42Z', NULL, 208);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3624,6 +3674,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (76, 180, '2026-10-12T00:50:14Z', '2026-10-12T00:50:43Z', 'done', NULL, 0, '5025c8633aee3f5aa586222a9097788e437866c1', 'claude-opus-5-5[1m]', 'b23eb71a-4dc8-4043-a734-6c197147b7a2', 5, 10, 2973, 143617, 26259, 0.2982954, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (77, 181, '2026-10-12T00:50:43Z', '2026-10-12T00:51:13Z', 'done', NULL, 0, 'daf6bd27f2f0c08c14863a72ecfdc257d3ecb10c', 'claude-opus-5-5[1m]', '9265f951-bbab-4d3b-bd84-b3674781b041', 5, 10, 2624, 147857, 27724, 0.3038834, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (78, 8, '2026-10-12T00:51:14Z', '2026-10-12T00:52:54Z', 'done', NULL, 0, 'c915c05219cdd9fbbaffbdc70d9ccd3109280dfd', 'claude-opus-5-5[1m]', 'd93901ef-0cc7-4e68-be21-e1ea094eed89', 12, 22, 9677, 451848, 51253, 0.6940216, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (79, 208, '2026-10-12T00:52:54Z', '2026-10-12T00:53:53Z', 'done', NULL, 0, 'a8ef981539569ec3963c70ea33813b1730c84051', 'claude-opus-5-5[1m]', '2bc8338c-bf13-4a99-8841-075799a52112', 8, 16, 6150, 327810, 46217, 0.558362, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
