@@ -222,7 +222,8 @@ Answers, each recorded in `plans/decisions.md`, to:
 - OQ-35 code and content license; whether the pool stays public
 - OQ-37 competitive and couch co-op format and input
 - OQ-45 Freesound API use for a commercial release
-Then the S2 tasks that follow from them: MD-5..MD-7, I18N-1, CT-1, PUB-4.
+- Gamemaster mode as its own mode (D-73, plan 13): one person holds every control (keyboard, mouse, gamepad, switchable at any time); a configure game screen with full customization before every game; an `Esc` gamemaster menu with unlimited cheats (jokers, skip, replace the question, mark correct/wrong, jump level, …). The gamemaster confirms the field and cheat lists (MD-11, MD-12)
+Then the S2 tasks that follow from them: MD-5..MD-7, MD-10..MD-12, I18N-1, CT-1, PUB-4.
 
 ## Constraints
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
@@ -6065,6 +6066,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (229, 246, '2026-10-12T16:03:25Z', '2026-10-12T16:03:38Z', 'blocked', NULL, 0, '0f775c77cad962b6336f15dc0686675dd5962545', 'claude-opus-5-5[1m]', 'af2e2199-043b-46c2-98a0-e4e2fd7cbe82', 5, 10, 864, 141346, 24101, 0.23839720000000006, 467251);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (230, 247, '2026-10-12T16:03:39Z', '2026-10-12T16:03:49Z', 'blocked', NULL, 0, 'f6b2912d7cf28af6367866985fbc0b507cfacda6', 'claude-opus-5-5[1m]', '47e722f0-847a-449d-af0e-0168e7885f2f', 3, 6, 640, 76746, 26299, 0.23856520000000003, 467251);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (231, 248, '2026-10-12T16:03:49Z', '2026-10-12T16:04:03Z', 'blocked', NULL, 0, '406255058529934eec53942d9fe1ca0e1e71ed20', 'claude-opus-5-5[1m]', '4bf0982b-c66a-4311-81c5-aaf9b918ca16', 5, 10, 1014, 138670, 23933, 0.23951800000000004, 467251);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (232, 329, '2026-10-12T16:04:03Z', NULL, 'running', NULL, NULL, '3211e919a5a4b8b3569dcb97328f669b04aa8490', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 467251);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
