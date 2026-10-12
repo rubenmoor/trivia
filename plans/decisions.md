@@ -540,3 +540,10 @@ Template:
 - Decision: The game data (`pool.json`, `bundles.json`, `age-groups.json`, categories files) comes from `GET /data/…`, served read-only from `app/data/`, loaded once per page load. `lib/api.ts` keeps its exports and runs `engine/api.ts` on an in-memory save, one call at a time (promise-chain mutex). Each successful action PUTs the whole document (`/api/save`); reads never PUT; a failed PUT keeps the new save in memory and shows the server's error. `trivia` runs `save.migrate()` at every start (no-op once `game.json` exists).
 - Consequences: A new `qgen export` needs a page reload (F5). The Python game routes are unused until PORT-8 deletes them. Rollback: delete `state/game.json`, check out the commit before the switch.
 - Supersedes / related: D-25, D-35, D-59, D-66, D-67; plans 12, 49, 50
+
+## D-70: UI strings in a typed nested catalog, read through `t()`
+- Date: 2026-10-11
+- Context: LUI-1 (plan 21) moves every on-screen string out of the game code, with no i18n library (M3).
+- Decision: One catalog per language in `app/client/src/locales/<lang>.ts`, a nested object; `es.ts` is the source, `as const`, and defines `Catalog` (string leaves widened). Leaves: string, plural map (`{ one, other, … }`, picked by `params.n` via `Intl.PluralRules`) or `string[]` of variants (`variants(key)`). Keys are dotted paths; `TextKey`/`VariantsKey` (union `Key`) make a typo fail `npm run check`. `{name}` placeholders, numbers via `Intl.NumberFormat(lang)`. Missing at runtime → `⟦key⟧`, no fallback. `lang` is `es`; `?lang=` only in dev. `main.ts` sets `<html lang>` and `document.title` (`app.title`).
+- Consequences: Level brackets and lists (which levels have a line) stay in code, texts in the catalog. Namespace `error` reserved for plan 22. `xx` (plan 23) and `en` (plan 24) must satisfy `Catalog`.
+- Supersedes / related: D-6, D-57; plans 21, 22, 23, 24; LUI-1
