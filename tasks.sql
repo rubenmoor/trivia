@@ -8257,6 +8257,144 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 3 (plan proposal): a few nights of notice before repeats start.
 - 2: fewer warnings; notice only shortly before.
 - 5: early notice, more often shown.', NULL, NULL, '2026-10-12T18:26:35Z', NULL, 418, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (32, 'Neutral Spanish prompts for base (plan 64)', 'pending', '["approve as drafted, numbers RAE style (2640, 42 195, 42,195)", "approve as drafted, but keep Colombian numbers (2.640, 42,195)", "changes: …"]', 'Plan 64 task 1 (task 430), D-78: `base` in neutral Latin American Spanish (es-419), `colombia` stays Colombian. New prompts are the gamemaster''s (D-36), so the live prompts are unchanged until you answer; every `qgen batch` reads them. Tasks 431 (`qgen neutralize`) and 432 (docs) wait for this decision.
+
+## Size of the problem (base, 1102 questions, any text field)
+- bombillo 10, crispetas 5, gripa 4, arquero 11, tinto 6, pelotica 2, computador 13; carro 29, celular 27 (no pan-Hispanic form).
+
+## Voice mechanism (code, applied in the second pass)
+- New field `voice` per bundle in `app/data/bundles.json` (English, for prompts, like `rule`).
+- `prompt()` fills `{voices}` in house-style.md with every bundle''s voice ("- `base`: …", "- `colombia`: …"), like `{players}`.
+- Why all bundles and not just the batch''s: review, audit, rework, tighten and back-audit runs mix bundles under one system prompt. So each question''s `bundle` goes into the per-question input of rate, revise, review and audit (review and audit inputs lack it today); the drafter''s "## Bundle" section (`bundle_text`) adds that bundle''s voice.
+- New regional bundles (RG-3..RG-5) just add their own `voice`.
+
+## Number format (options 1 and 2)
+- Today "the Colombian way": 2.640 / 42,195. Not pan-Hispanic: Mexico and Central America write 2,640 / 42.195, so "42.195" can read as 42 thousand or 42 point.
+- Option 1 (recommended, in the drafts): RAE/ISO style for all bundles: "2640", "42 195", decimal comma "42,195 km", large round numbers in words. No dot/comma clash; RAE''s own recommendation. The neutralize scan also flags dotted thousands in `base`.
+- Option 2: keep "2.640 / 42,195" (Colombia, Argentina, Chile, Spain…); the house-style line stays as today and the scan''s number bullet is dropped.
+
+## es-ES for questions (recommendation, no file at launch)
+- No `questions.es-ES.json` at launch: neutral wording reads fine in Spain.
+- The neutralize scan returns `no_neutral_form` (carro/coche, celular/móvil…); if many, a sparse es-ES override can follow (backlog, not this plan).
+- The UI''s es-ES (`vosotros`) stays LUI-5.
+
+## Other changes in the drafts
+- House-style examples: "pelotica" → "pelota"; description example labels "Chigüiro"/"Bombillo" → English labels (the Spanish example sentences are unchanged).
+- review.md new reason 8, problem kind `style`; audit.md check 7 extended. No schema change.
+- neutralize.md: scan prompt like tighten.md (output per question `id` + `issue`; `no_neutral_form` is a new list in the scan schema, task 431).
+
+## Diffs
+```diff
+--- a/authoring/tools/prompts/house-style.md
++++ b/authoring/tools/prompts/house-style.md
+@@ -8,9 +8,11 @@
+ {players}
+ 
+ ## Language
+-- All content is in Spanish, with Colombian usage: "bombillo", "carro", "celular", "gripa", "crispetas", "arquero", "tinto" (black coffee), "parcero" only in jokes.
+-- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don''t force them. Each batch writes for one bundle (D-41): a `base` question may use Colombian references anyone in the Spanish-speaking world knows, but never needs a connection to Colombia to answer; that is the `colombia` bundle''s job.
+-- Write numbers the Colombian way: "2.640 metros", "42,195 km".
++- All content is in Spanish. The voice depends on the question''s bundle:
++{voices}
++- Neutral means: a word understood across Latin America and in Spain where one exists ("bombilla", "palomitas", "gripe", "portero", "café"); no regional diminutives ("pelota", not "pelotica"); "tú", never "vos" or "vosotros". Where no word is shared ("carro"/"coche"/"auto", "celular"/"móvil"), reword around it if that stays natural ("vehículo", "teléfono"); else take the most widespread Latin American form.
++- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don''t force them. Each batch writes for one bundle (D-41): a `base` question may use Colombian references anyone in the Spanish-speaking world knows, but never needs a connection to Colombia to answer; that is the `colombia` bundle''s job. A neutral voice is about the words, not the topics.
++- Numbers (all bundles): no thousands separator up to 9999 ("2640 metros"), a space from 10 000 ("42 195 personas"), a decimal comma ("42,195 km"); large round numbers in words ("3 millones").
+ 
+ ## Format: multiple choice
+ - Exactly one correct `answer` and exactly three `wrong_answers`. The game shuffles them.
+@@ -23,7 +25,7 @@
+ - The same goes for "¿Cuál de estas ciudades está a mayor altura?": ask "¿Cuál es la capital departamental más alta de Colombia?" instead.
+ - The clue in the question must point to the answer **in the real world**, not just among the four options. Before writing, ask: "What else in the world fits this clue?" If anything does, use a clue that only the answer has.
+   - Bad: "¿Qué ritmo del Caribe colombiano se baila con velas en la mano?" Other dances use candles too.
+-  - Bad: "¿En qué deporte se usa una raqueta y una pelotica amarilla?" Pádel and frontenis do too, and tennis doesn''t depend on the ball''s colour.
++  - Bad: "¿En qué deporte se usa una raqueta y una pelota amarilla?" Pádel and frontenis do too, and tennis doesn''t depend on the ball''s colour.
+ 
+ ## Keep it short
+ The question is read aloud on a TV; the family should get it in one breath.
+@@ -95,8 +97,8 @@
+ ## Description
+ Every question has a `description`: one full, humorous Spanish sentence shown *before* the question, instead of the category, in the style of "You Don''t Know Jack". It relates to the question''s content, can be absurd, and must not give the answer away or rule out options (e.g. don''t say "un nevado" when only two options are nevados). Examples from the pool:
+ - Café: "Los papás no funcionan por la mañana hasta que les echas este combustible."
+-- Chigüiro: "Un ratón al que se le fue la mano en el almuerzo."
+-- Bombillo: "Una idea tan buena que hasta tiene forma de idea."
++- Capybara (chigüiro): "Un ratón al que se le fue la mano en el almuerzo."
++- Light bulb: "Una idea tan buena que hasta tiene forma de idea."
+ - Saturno: "Un planeta que nunca se quita sus joyas."
+ - Año luz: "Una pregunta engañosa, como cuando tu mamá dice ''ya casi llegamos''."
+ - Hipérbole: "Esta es la mejor pregunta de la historia del universo, sin exagerar."
+--- a/authoring/tools/prompts/review.md
++++ b/authoring/tools/prompts/review.md
+@@ -20,9 +20,10 @@
+ 5. No candidate is adequate (below), and a new search can''t help or was already tried.
+ 6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagina que…"). The `fix` says what to cut.
+ 7. It asks what several given things have in common ("¿qué tienen en común…?"). This style is retired; leave `fix` empty.
++8. Its wording doesn''t match its bundle''s voice (house style "Language"): a `base` question uses Colombian or other national usage where a neutral word exists. The `fix` names each word and its replacement.
+ 
+ ## Fix
+-When `can_fix` is true and you decide `needs_work` for a problem in the text (1–4, 6), write `fix`: an English instruction the reviser can follow without seeing anything else, naming the field, what''s wrong and what the new text must do. Examples: "Hint 1 names the composer''s country, which gives the answer away; replace it with a vague hint about the era." "The fun fact''s date is wrong (1969, not 1971); correct it." "''Saturno'' is also defensible because it has rings too; replace that wrong answer with a planet without visible rings."
++When `can_fix` is true and you decide `needs_work` for a problem in the text (1–4, 6, 8), write `fix`: an English instruction the reviser can follow without seeing anything else, naming the field, what''s wrong and what the new text must do. Examples: "Hint 1 names the composer''s country, which gives the answer away; replace it with a vague hint about the era." "The fun fact''s date is wrong (1969, not 1971); correct it." "''Saturno'' is also defensible because it has rings too; replace that wrong answer with a planet without visible rings."
+ - Fix everything you can: a long-winded question or an invented story (cut it to the clue and the question), a giveaway, a wrong or unconfirmable fact (remove or correct it), a second defensible option, a clue that fits something outside the options. List every problem in one `fix`.
+ - Leave `fix` empty when the problem can''t be fixed without it becoming a different question (for example the same fact as a `related` question), when the only problem is the media, or when `can_fix` is false.
+ - `feedback` stays required for `needs_work`: the gamemaster reads it if the fix fails.
+@@ -53,6 +54,6 @@
+   - `giveaway`: the description, question text, a hint or the media gives the answer away (reason 3);
+   - `overlap`: same fact as a `related` question, or one gives the other away (reason 4);
+   - `media`: no adequate candidate (reason 5);
+-  - `style`: long-winded, an invented story, or the retired "what do they have in common" style (reasons 6, 7);
++  - `style`: long-winded, an invented story, the retired "what do they have in common" style, or the wrong voice for its bundle (reasons 6, 7, 8);
+   - `difficulty`: never alone (an off difficulty isn''t a reason); add it to another problem when the difficulty is also badly off;
+   - `other`: anything else; say what in `feedback`.
+--- a/authoring/tools/prompts/audit.md
++++ b/authoring/tools/prompts/audit.md
+@@ -15,7 +15,7 @@
+ 4. **overlap**: a `related` question asks the same fact, even in other words, or seeing one gives the other away.
+ 5. **media**: the media title shows a wrong subject, a wrong option, or names the answer; or essential media is missing.
+ 6. **difficulty**: estimate the difficulty yourself on the scale (calibration examples in the house style). A gap of 3 or more to the given difficulty is a problem.
+-7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagina que…"), or it uses a retired style ("¿qué tienen en común…?").
++7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagina que…"), it uses a retired style ("¿qué tienen en común…?"), or its wording doesn''t match its bundle''s voice (house style "Language"; a `base` question with Colombian or other national words where a neutral one exists).
+ 8. **other**: anything else that would embarrass the gamemaster on game night; say what in `notes`.
+ 
+ Not problems: a dry question, weak distractors, a joke that isn''t funny, a hint 3 that comes close to the answer.
+--- a/app/data/bundles.json
++++ b/app/data/bundles.json
+@@ -7,7 +7,8 @@
+       "always_on": true,
+       "name": "Básico",
+       "description": "Preguntas de todo un poco, para jugar en cualquier parte.",
+-      "rule": "Everything that isn''t in another bundle: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia (its capital, its flag, coffee, García Márquez)."
++      "rule": "Everything that isn''t in another bundle: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia (its capital, its flag, coffee, García Márquez).",
++      "voice": "neutral Latin American Spanish (es-419): words understood across Latin America and in Spain"
+     },
+     {
+       "id": "colombia",
+@@ -15,7 +16,8 @@
+       "always_on": false,
+       "name": "Colombia",
+       "description": "Para quien tiene relación con Colombia: lugares, comida, costumbres, gente, música y palabras de allá.",
+-      "rule": "Answering needs a connection to Colombia: Colombian places, food, customs, festivals, people, music, sport, words, sayings or history that the players outside Colombia mostly wouldn''t know."
++      "rule": "Answering needs a connection to Colombia: Colombian places, food, customs, festivals, people, music, sport, words, sayings or history that the players outside Colombia mostly wouldn''t know.",
++      "voice": "Spanish with Colombian usage: \"bombillo\", \"carro\", \"celular\", \"gripa\", \"crispetas\", \"arquero\", \"tinto\" (black coffee), \"parcero\" only in jokes"
+     }
+   ]
+ }
+--- /dev/null
++++ b/authoring/tools/prompts/neutralize.md
+@@ -0,0 +1,14 @@
++# Task: find wording that isn''t neutral Spanish
++
++You get questions from the `base` bundle of the trivia game described above, with their id: description, question, answer, wrong answers, hints and fun fact. `base` is played anywhere in the Spanish-speaking world, so its voice is neutral Latin American Spanish (house style "Language"). Find every question whose wording, in any of these fields, uses Colombian or other national usage where a neutral word exists:
++- regional words: "bombillo" → "bombilla", "crispetas" → "palomitas", "gripa" → "gripe", "arquero" → "portero", "tinto" → "café", "computador" → "computadora";
++- regional diminutives and slang: "pelotica" → "pelota", "parcero";
++- "vos" or "vosotros" forms → "tú"/"ustedes";
++- numbers with a dot as thousands separator: "2.640" → "2640", "42.195" → "42 195".
++
++Don''t flag:
++- names, titles and references anyone knows (Encanto, García Márquez, "Cien años de soledad"), and a regional word that is itself the answer or the clue (a question about what "tinto" means in Colombia);
++- Colombian content: a question that needs a connection to Colombia belongs in the `colombia` bundle (D-49), which is not this task;
++- words with no shared form ("carro"/"coche"/"auto", "celular"/"móvil") when no natural rewording exists; list them in `no_neutral_form` instead.
++
++For each question you flag, give `issue`: an English instruction for the reviser naming every field, word and replacement ("description: ''bombillo'' → ''bombilla''; hint 2: ''crispetas'' → ''palomitas''"), keeping everything else as it is. Leave every other question out.
+```', NULL, NULL, '2026-10-12T18:30:32Z', NULL, 430, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -8550,6 +8688,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (286, 418, '2026-10-12T18:25:01Z', '2026-10-12T18:27:50Z', 'done', NULL, 0, '1651f573ac9726338eb618d4cd45bace1e5d471f', 'claude-opus-5-5[1m]', 'b176877e-fbe3-4012-8866-0b314b0b43e1', 19, 38, 15312, 1031131, 66567, 1.0451541999999998, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (287, 417, '2026-10-12T18:27:50Z', '2026-10-12T18:28:36Z', 'done', NULL, 0, '220263f9cf5c580dbf76c6ce735dcdcacaaef2ca', 'claude-opus-5-5[1m]', '268dba6d-9ff6-4fe1-bbd7-a53e0f6588b8', 5, 10, 4416, 145922, 26820, 0.33210439999999997, 583141);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (288, 419, '2026-10-12T18:28:36Z', '2026-10-12T18:29:12Z', 'done', NULL, 0, 'd2b73bfab26bcb58bb65856468f73919f68b6c92', 'claude-opus-5-5[1m]', 'a15d814e-ee5d-4164-bbb3-acdfbc2ff3ee', 7, 14, 3168, 228884, 31652, 0.36240880000000003, 583141);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (289, 430, '2026-10-12T18:29:12Z', '2026-10-12T18:30:45Z', 'blocked', NULL, 0, '4583ca6a75d7230beefcdeb94447afca56b024fa', 'claude-opus-5-5[1m]', '7194eebb-15b3-438f-b306-9cd6696662da', 11, 22, 9061, 466828, 46101, 0.6434816000000001, 583141);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -8627,3 +8766,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (381, 27);
 INSERT INTO task_decision (task_id, decision_id) VALUES (424, 31);
 INSERT INTO task_decision (task_id, decision_id) VALUES (428, 31);
 INSERT INTO task_decision (task_id, decision_id) VALUES (429, 31);
+INSERT INTO task_decision (task_id, decision_id) VALUES (430, 32);
+INSERT INTO task_decision (task_id, decision_id) VALUES (431, 32);
+INSERT INTO task_decision (task_id, decision_id) VALUES (432, 32);
