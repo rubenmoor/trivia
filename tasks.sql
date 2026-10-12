@@ -198,6 +198,10 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Outcome
 - Choose an age group; levels map to the group''s window; windows and per-group level weights tuned (AG-7, D-38).
 - Choose bundles before a session, `base` always on; selection filters by them (BN-6, D-39).
+- Bundle languages: every bundle in `app/data/bundles.json` lists the languages it''s available in (`languages`); the game offers only the bundles of the game''s language.
+  - `base`: es, en, de (the launch languages); `colombia`: the languages it''s translated into.
+  - The always-on bundle is the game language''s always-on bundle (`base` for now; `chinese-base` in zh later, milestone 12).
+  - `qgen validate`: each language has exactly one always-on bundle.
 
 ## Constraints
 - Defaults unchanged for the family.
@@ -208,6 +212,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Done when
 - A session can be played for each age group and with `colombia` off.
+- In en and de, the game offers only the bundles listed for that language.
 - The draft windows are tuned.
 
 Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', NULL);
@@ -8510,6 +8515,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Same rule as D-54; no new argument (D-36).
 - Throw-away check: fake locale file with one level filled → that level''s sources are picked last.
 - Done when: `qgen batch --translate en --dry-run` (or 440''s equivalent) shows the selection follow the `en` deficits.', '2026-10-12T19:51:17Z', NULL, 462);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (465, 5, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 5, the masterplan, in line with it (`pm plan edit 5 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:08:57Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
