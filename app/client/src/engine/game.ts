@@ -58,17 +58,20 @@ function playerId(work: SaveData, name: string): number | null {
   return [...work.players].sort((a, b) => a.id - b.id).find((p) => casefold(p.name) === key)?.id ?? null;
 }
 
-/** Question IDs burned for this player or for everyone; null: only the global burns. */
-function burnedFor(work: SaveData, pid: number | null): Set<string> {
-  return new Set(work.burned.filter((b) => b.player_id === null || b.player_id === pid).map((b) => b.question_id));
+/** Question IDs not offered: blocked, or seen in one of the player's games (null: only blocked).
+ * Interim until selection by seen count (plan 65): keeps today's per-player exclusion. */
+function excluded(work: SaveData, pid: number | null): Set<string> {
+  const games = new Set(work.games.filter((g) => pid !== null && g.player_id === pid).map((g) => g.id));
+  return new Set([...work.blocked, ...work.seen.filter((s) => games.has(s.game_id)).map((s) => s.question_id)]);
 }
 
-/** Delete a player completely (GF-7): the player, their games (a running one too) and their burns. */
+/** Delete a player (GF-7): the name and their games (a running one too); the seen rows stay. */
 export function deletePlayer(save: SaveData, name: unknown): { save: SaveData } {
   return transact(save, (work) => {
     const pid = playerId(work, cleanName(name));
     if (pid === null) throw new GameError("player_unknown", { name });
-    work.burned = work.burned.filter((b) => b.player_id !== pid);
+    const gone = new Set(work.games.filter((g) => g.player_id === pid).map((g) => g.id));
+    for (const s of work.seen) if (gone.has(s.game_id)) s.game_id = 0;
     work.games = work.games.filter((g) => g.player_id !== pid);
     work.players = work.players.filter((p) => p.id !== pid);
   });
@@ -142,11 +145,11 @@ export function resolveChoice(
 const rangesFor = (data: EngineData, choice: Choice): LevelRanges => data.groupById.get(choice.age_group)!.levels;
 const rangesOf = (state: GameState, data: EngineData): LevelRanges => rangesFor(data, gameChoice(state, data));
 
-/** Questions that can still come up in this game: approved, not burned, not offered, not purged. */
+/** Questions that can still come up in this game: approved, not seen or blocked, not offered, not purged. */
 export function availableNow(work: SaveData, pid: number | null, state: GameState, data: EngineData): PoolQuestion[] {
   const purged = new Set<string | null>(state.purged);
   const bundles = new Set(gameChoice(state, data).bundles);
-  return selection.available(data.pool, burnedFor(work, pid), state.offered, bundles).filter((q) => !purged.has(q.subcategory));
+  return selection.available(data.pool, excluded(work, pid), state.offered, bundles).filter((q) => !purged.has(q.subcategory));
 }
 
 /** Draw n cards for the state's level from what's still available to the player in this game. */
@@ -166,17 +169,21 @@ function draw(
   return drawn.map((q) => q.id);
 }
 
-/** Burn a question for the player, or for everyone with pid null (D-28); INSERT OR IGNORE. */
-function burn(work: SaveData, qid: string, pid: number | null, gid: number, io: Io): void {
-  if (work.burned.some((b) => b.question_id === qid && b.player_id === pid)) return;
-  work.burned.push({ question_id: qid, player_id: pid, game_id: gid, burned_on: io.now });
+/** One seen event (plan 65): a row per event, no dedupe. */
+function see(work: SaveData, qid: string, gid: number, io: Io): void {
+  work.seen.push({ question_id: qid, game_id: gid, seen_on: io.now });
 }
 
-/** The supply check before a new game (GF-5); no name or a new one: the pool minus the global burns.
+/** «Bloquear pregunta»: a broken question, never offered again. */
+function block(work: SaveData, qid: string): void {
+  if (!work.blocked.includes(qid)) work.blocked.push(qid);
+}
+
+/** The supply check before a new game (GF-5): the pool minus blocked and the player's seen questions.
  * `choice`: age group and bundles, default every bundle and DEFAULT_AGE_GROUP. */
 export function supply(save: SaveData, data: EngineData, player?: unknown, choice: Choice = defaultChoice(data)): Supply {
   const pid = player ? playerId(save, cleanName(player)) : null;
-  const avail = selection.available(data.pool, burnedFor(save, pid), [], new Set(choice.bundles));
+  const avail = selection.available(data.pool, excluded(save, pid), [], new Set(choice.bundles));
   const levels = selection.supply(avail, rangesFor(data, choice));
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
@@ -264,7 +271,7 @@ export function pick(save: SaveData, data: EngineData, io: Io, index: number): {
   });
 }
 
-/** The final answer: check it, burn the question, move on (next level, won or lost). */
+/** The final answer: check it, record it as seen, move on (next level, won or lost). */
 export function answer(save: SaveData, data: EngineData, io: Io, index: number): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
@@ -275,7 +282,7 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
     const q = question(data, state.current);
     const before: GameState = { ...structuredClone(state), undo: null };
     const correct = state.answers[index] === q.answer;
-    burn(work, q.id, pid, row.id, io);
+    see(work, q.id, row.id, io);
     state.history.push({ level: state.level, question_id: q.id, correct, jokers: state.jokers });
     state.last = { question_id: q.id, chosen: index, correct, correct_index: state.answers.indexOf(q.answer) };
     state.undo = before;
@@ -299,22 +306,23 @@ export function leaveQuestion(state: GameState): void {
   Object.assign(state, { current: null, answers: [], hints_shown: 0, struck: [], jokers: [], swapped_to: null });
 }
 
-/** Burn the question on screen (for `burnFor`: a player ID, or null = everyone) and log it. */
+/** Record the question on screen as seen (`block`: blocked instead) and log it. */
 export function dropCurrent(
-  work: SaveData, gid: number, state: GameState, outcome: Outcome, burnFor: number | null, io: Io,
+  work: SaveData, gid: number, state: GameState, outcome: Outcome, io: Io, block_ = false,
 ): void {
-  burn(work, state.current!, burnFor, gid, io);
+  if (block_) block(work, state.current!);
+  else see(work, state.current!, gid, io);
   state.history.push({ level: state.level, question_id: state.current!, outcome, jokers: state.jokers });
 }
 
 /** Drop the question on screen and refill the table (admin skip, «Paso»). With `purge`, its
- * subcategory leaves the game and its other cards on the table are replaced too (not burned). */
+ * subcategory leaves the game and its other cards on the table are replaced too (not seen). */
 export function backToSelect(
   work: SaveData, gid: number, pid: number | null, state: GameState, data: EngineData, io: Io,
-  outcome: Outcome, burnFor: number | null, purge = false,
+  outcome: Outcome, purge = false,
 ): void {
   const sub = question(data, state.current).subcategory;
-  dropCurrent(work, gid, state, outcome, burnFor, io);
+  dropCurrent(work, gid, state, outcome, io, outcome === "admin_block");
   const removed = new Set([state.current!]);
   if (purge) {
     state.purged.push(sub as string);
@@ -333,15 +341,15 @@ export function backToSelect(
   leaveQuestion(state);
 }
 
-/** «Saltar pregunta» (admin): burn the question on screen for the player (for everyone with
- * `everyone`, D-28); a new card replaces it. Not a joker. */
+/** «Saltar pregunta» (admin): the question on screen counts as seen (blocked with `everyone`,
+ * «Bloquear pregunta»); a new card replaces it. Not a joker. */
 export function skip(save: SaveData, data: EngineData, io: Io, everyone = false): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
     gamemasterOnly(state, "skip");
     if (state.phase !== "question") throw new GameError("skip_not_question");
     backToSelect(work, row.id, row.player_id, state, data, io,
-      everyone ? "admin_burn" : "admin_skip", everyone ? null : row.player_id);
+      everyone ? "admin_block" : "admin_skip");
     saveGame(row, state, io);
     return state;
   });
@@ -383,7 +391,7 @@ export function categoryCandidates(avail: PoolQuestion[], level: number, ranges:
 /** Replace the question on screen in place with `fresh` (Bájale, Cambiazo). */
 function swapIn(work: SaveData, gid: number, pid: number | null, state: GameState, fresh: PoolQuestion, outcome: Outcome, io: Io): void {
   const old = state.current;
-  dropCurrent(work, gid, state, outcome, pid, io);
+  dropCurrent(work, gid, state, outcome, io);
   const answers = [fresh.answer, ...fresh.wrong_answers];
   io.rng.shuffle(answers, "swap_in");
   state.options = state.options.map((i) => (i === old ? fresh.id : i));
@@ -413,7 +421,7 @@ const playHint: Play = (_work, _gid, _pid, state, data) => {
 const playSkip: Play = (work, gid, pid, state, data, io, { purge }) => {
   state.jokers.push("skip");
   const sub = question(data, state.current).subcategory;
-  backToSelect(work, gid, pid, state, data, io, "skipped", pid, pyTruthy(purge));
+  backToSelect(work, gid, pid, state, data, io, "skipped", pyTruthy(purge));
   return { purged: pyTruthy(purge) ? sub : null };
 };
 
@@ -445,7 +453,7 @@ const playCategory: Play = (work, gid, pid, state, data, io, { subcategory }) =>
   return { subcategory };
 };
 
-/** «Francotirador» (JK-3): a wrong answer is struck out; the right one burns the question and repeats the level (D-27). */
+/** «Francotirador» (JK-3): a wrong answer is struck out; the right one drops the question (seen) and repeats the level (D-27). */
 const playSnipe: Play = (work, gid, pid, state, data, io, { index }) => {
   if (state.answers.length - state.struck.length <= 1) throw new GameError("snipe_last");
   if (!Number.isInteger(index) || !(0 <= (index as number) && (index as number) < state.answers.length)
@@ -459,7 +467,7 @@ const playSnipe: Play = (work, gid, pid, state, data, io, { index }) => {
     state.struck.push(i);
     return { outcome: "miss", index: i };
   }
-  dropCurrent(work, gid, state, "sniped", pid, io);
+  dropCurrent(work, gid, state, "sniped", io);
   try {
     state.options = draw(work, pid, state, data, io);
   } catch (e) {
@@ -556,7 +564,7 @@ export function setJokers(save: SaveData, io: Io, budget: unknown): { save: Save
   });
 }
 
-/** Take back the last final answer: restore the state before it, un-burn the question for the player. */
+/** Take back the last final answer: restore the state before it, drop that answer's seen row. */
 export function undo(save: SaveData, io: Io): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const game = latest(work);
@@ -564,7 +572,8 @@ export function undo(save: SaveData, io: Io): { save: SaveData; state: GameState
     if (!game || game.row.result === "abandoned" || !game.state.undo) throw new GameError("nothing_to_undo");
     const { row, state } = game;
     const qid = state.last!.question_id;
-    work.burned = work.burned.filter((b) => !(b.question_id === qid && b.player_id === row.player_id && b.game_id === row.id));
+    const i = work.seen.findIndex((s) => s.question_id === qid && s.game_id === row.id);
+    if (i >= 0) work.seen.splice(i, 1);
     const restored = { ...state.undo!, settings: state.settings };
     saveGame(row, restored, io);
     return restored;

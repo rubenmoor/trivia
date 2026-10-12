@@ -39,6 +39,9 @@ One step = one HTTP request, recorded as `main.py` answers it.
   - an error leaves it unchanged (rollback); the engine must do the same
   - `soak-<n>`: only on every 10th and the last step (size)
 - IDs: SQLite gives max+1 after a delete; the `players` scenario pins it
+- Save v3 (plan 65): the engine stores `seen` rows and `blocked`, the recordings `burned`; `test/save.ts` compares on v3
+  - `upgradeDb`: the recorded `db` through `parseSave`'s v2 → v3 upgrade; history outcome `admin_burn` → `admin_block`
+  - `withoutOrphans`: GF-7 now keeps the player's seen rows (`game_id` 0), Python deleted the burns; compared without them
 
 ## Time
 - One fixed `now` per step: `2026-01-01T00:00:00` + step index minutes (`selection.json`: always the start)

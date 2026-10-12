@@ -82,7 +82,7 @@
     left: JokerBudget | null;
     onclose: () => void;
     onskip: () => void;
-    /** «Saltar y quemar para todos»: a broken or wrong question, burned for every player (D-28). */
+    /** «Bloquear pregunta»: a broken or wrong question, never offered again (plan 65). */
     onskipall: () => void;
     onundo: () => void;
     onrestart: () => void;

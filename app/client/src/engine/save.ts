@@ -6,7 +6,17 @@ const isObject = (v: unknown): v is Record<string, any> => typeof v === "object"
 // Version n → n + 1, keyed by n.
 const UPGRADES: Record<number, (doc: Record<string, any>) => Record<string, any>> = {
   1: (doc) => ({ ...doc, reports: [] }), // plan 36: «Reportar pregunta»
+  2: upgradeBurns, // plan 65: seen counters
 };
+
+/** v2 → v3: a player's burn → one seen row; a burn for everyone (player_id null) → blocked. */
+function upgradeBurns({ burned, ...doc }: Record<string, any>): Record<string, any> {
+  if (!Array.isArray(burned) || !burned.every(isObject)) throw new Error("burned must hold objects");
+  const seen = burned.filter((b) => b.player_id !== null)
+    .map((b) => ({ question_id: b.question_id, game_id: b.game_id, seen_on: b.burned_on }));
+  const blocked = [...new Set(burned.filter((b) => b.player_id === null).map((b) => b.question_id))];
+  return { ...doc, seen, blocked, notified_exhausted: [] };
+}
 
 /** A save from a newer game (plan 55): the desktop backs it up as `newer`, not `corrupt`. */
 export class SaveNewerError extends Error {
@@ -23,9 +33,13 @@ export function parseSave(json: unknown): SaveData {
   if (!Number.isInteger(doc.version) || doc.version < 1) throw new Error("save has no valid version");
   if (doc.version > SAVE_VERSION) throw new SaveNewerError();
   while (doc.version < SAVE_VERSION) doc = { ...UPGRADES[doc.version](doc), version: doc.version + 1 };
-  for (const key of ["players", "games", "burned", "reports"] as const) {
+  for (const key of ["players", "games", "seen", "reports"] as const) {
     if (!Array.isArray(doc[key])) throw new Error(`${key} must be a list`);
     if (!doc[key].every(isObject)) throw new Error(`${key} must hold objects`);
+  }
+  for (const key of ["blocked", "notified_exhausted"] as const) {
+    if (!Array.isArray(doc[key]) || !doc[key].every((v: unknown) => typeof v === "string"))
+      throw new Error(`${key} must be a list of IDs`);
   }
   if (!doc.games.every((g: Record<string, any>) => isObject(g.state))) throw new Error("every game needs a state");
   const flags = doc.flags ?? {};

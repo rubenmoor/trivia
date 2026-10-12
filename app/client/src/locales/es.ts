@@ -34,7 +34,7 @@ const es = {
     title: "Pausa",
     continue: "Continuar",
     skip: "Saltar pregunta",
-    skipAll: "Saltar y quemar para todos",
+    skipAll: "Bloquear pregunta",
     undo: "Deshacer última respuesta",
     fullscreen: "Pantalla completa",
     restart: "Volver al inicio (termina la partida)",
@@ -140,7 +140,7 @@ const es = {
       confirmClose: "?",
       loseNone: "sus datos",
       lose: { one: "su partida", other: "sus {n} partidas" },
-      confirmBody: "Se borran {lose} y todo su progreso: las preguntas que ya vio vuelven a salir. No se puede deshacer.",
+      confirmBody: "Se borran el nombre y {lose}. Las preguntas que ya vio siguen contando como vistas. No se puede deshacer.",
       confirm: "Sí, borrar",
     },
     level: {

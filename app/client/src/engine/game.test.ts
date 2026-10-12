@@ -7,7 +7,7 @@ import { deletePlayer, gameAction, getGame, getPlayers } from "./api.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
 import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
-import { snapshot } from "./test/save.ts";
+import { snapshot, upgradeDb, withoutOrphans } from "./test/save.ts";
 import { tapeRng, type TapeEntry } from "./test/tape.ts";
 
 interface Step {
@@ -17,7 +17,7 @@ interface Step {
   args: Record<string, unknown>;
   tape: TapeEntry[];
   response: { status: number; body: unknown };
-  db?: Pick<SaveData, "players" | "games" | "burned">;
+  db?: Parameters<typeof upgradeDb>[0];
 }
 
 const categories = fixture("categories.json") as Category[];
@@ -44,7 +44,7 @@ for (const file of scenarios) {
         : gameAction(save, d, io, step.call, step.args);
       assert.deepEqual({ status: r.status, body: r.body }, step.response, at);
       if (r.status !== 200) assert.deepEqual(r.save, save, `${at}: save changed on error`);
-      if (step.db) assert.deepEqual(snapshot(r.save), step.db, `${at}: db`);
+      if (step.db) assert.deepEqual(snapshot(withoutOrphans(r.save)), upgradeDb(step.db), `${at}: db`);
       rng.done();
       save = r.save;
     });

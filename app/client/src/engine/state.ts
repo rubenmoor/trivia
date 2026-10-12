@@ -6,13 +6,18 @@ import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 2;
+export const SAVE_VERSION = 3;
 
 export interface SaveData {
   version: typeof SAVE_VERSION;
   players: PlayerRow[];
   games: GameRow[];
-  burned: BurnRow[];
+  /** One row per seen event (plan 65); count(q) = rows for q, for the whole save. Since version 3. */
+  seen: SeenRow[];
+  /** «Bloquear pregunta»: never offered again. Since version 3. */
+  blocked: string[];
+  /** Exhausted subcategories already shown at game start. Since version 3. */
+  notified_exhausted: string[];
   /** Questions flagged for review (GM-5, D-47); keyed by question ID. */
   flags: Record<string, FlagEntry>;
   /** «Reportar pregunta» (MD-6): log only; since version 2. */
@@ -49,15 +54,15 @@ export interface GameRow {
   state: GameState;
 }
 
-export interface BurnRow {
+export interface SeenRow {
   question_id: string;
-  /** null: burned for everyone (D-28). */
-  player_id: number | null;
+  /** 0: the game was deleted (GF-7); game IDs get reused. */
   game_id: number;
-  burned_on: string;
+  seen_on: string;
 }
 
-export type Outcome = "skipped" | "easier" | "category" | "sniped" | "admin_skip" | "admin_burn";
+/** `admin_burn`: «Saltar y quemar para todos» in games from before plan 65. */
+export type Outcome = "skipped" | "easier" | "category" | "sniped" | "admin_skip" | "admin_block" | "admin_burn";
 
 /** An answered question has `correct`; a replaced or skipped one `outcome`. */
 export interface HistoryEntry {
@@ -100,7 +105,7 @@ export interface GameState {
 export const UNLIMITED: JokerBudget = { hint: null, skip: null, easier: null, category: null, snipe: null };
 
 export function emptySave(): SaveData {
-  return { version: SAVE_VERSION, players: [], games: [], burned: [], flags: {}, reports: [] };
+  return { version: SAVE_VERSION, players: [], games: [], seen: [], blocked: [], notified_exhausted: [], flags: {}, reports: [] };
 }
 
 /** Fill in the joker fields for games saved before JK-2 (game.with_defaults); mutates and returns. */

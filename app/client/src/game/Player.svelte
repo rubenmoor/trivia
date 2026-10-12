@@ -1,8 +1,8 @@
 <script lang="ts">
   // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the
-  // known names (most recent first, keys 1–9) and a field for a new name. The server keeps the
-  // players and burns questions per player (app/server/game.py). Each name can be deleted with all its
-  // progress, after a confirmation (GF-7).
+  // known names (most recent first, keys 1–9) and a field for a new name. Names are labels; what the
+  // family saw counts for the whole save (plan 65). Each name can be deleted with its games, after a
+  // confirmation (GF-7); its seen questions stay seen.
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
   import { errorText } from "../lib/errors";

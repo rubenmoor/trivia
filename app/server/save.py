@@ -1,6 +1,10 @@
 """The family's save as one JSON document, written whole by the client (plans/49, D-67).
 
-    game.json   {"version": 2, "players": [...], "games": [...], "burned": [...], "flags": {...}, "reports": [...]}
+    game.json   {"version": 3, "players": [...], "games": [...], "seen": [...], "blocked": [...],
+                 "notified_exhausted": [...], "flags": {...}, "reports": [...]}
+
+Version 3 (plan 65) replaces `burned` with `seen` rows and `blocked`. `migrate()` still writes version 2;
+the client upgrades it on load (engine/save.ts) and writes version 3 back.
 
 The server only checks the envelope; the game rules live in the client's engine.
 `migrate()` carries game.sqlite + flags.json over once (PORT-5); main.py calls it from PORT-7 on.
@@ -10,7 +14,9 @@ import json, os, sqlite3, tempfile, time
 import paths
 
 FILE = paths.STATE / "game.json"
-VERSION = 2  # the client upgrades older saves (engine/save.ts)
+VERSION = 3  # the client upgrades older saves (engine/save.ts)
+MIGRATE_VERSION = 2  # what migrate() writes
+LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "seen", "blocked", "reports")}
 MAX_BYTES = 10 * 1024 * 1024
 RETRIES, RETRY_SLEEP = 10, 0.1  # Windows: antivirus/backup may hold the file
 
@@ -34,9 +40,10 @@ def check(doc):
         raise SaveError(400, "bad_save", msg)
     if not isinstance(doc, dict):
         bad("save must be a JSON object")
-    if doc.get("version") != VERSION:
-        bad(f"version must be {VERSION}")
-    for key in ("players", "games", "burned", "reports"):
+    version = doc.get("version")
+    if type(version) is not int or version not in LISTS:
+        bad(f"version must be {MIGRATE_VERSION} or {VERSION}")
+    for key in LISTS[version]:
         if not isinstance(doc.get(key), list):
             bad(f"{key} must be a list")
     if not isinstance(doc.get("flags"), dict):
@@ -81,7 +88,7 @@ def migrate():
                 game.init(con)  # upgrades legacy schemas on the copy
             q = lambda sql: con.execute(sql).fetchall()
             doc = {
-                "version": VERSION,
+                "version": MIGRATE_VERSION,
                 "players": [{"id": i, "name": n, "created_on": c}
                             for i, n, c in q("SELECT id, name, created_on FROM players ORDER BY id")],
                 "games": [{"id": i, "started_on": s, "finished_on": f, "result": r, "player_id": p,

@@ -53,7 +53,7 @@ const pCorrect = (level: number): number =>
 /** First missing level of a supply_short. */
 function bottleneck(e: GameError, save: SaveData, data: EngineData, bundles: Set<string>): Bottleneck {
   const { level, lo, hi } = (e.params.levels as { level: number; lo: number; hi: number }[])[0];
-  return dryAt(level, lo, hi, save.burned.map((b) => b.question_id), data, bundles);
+  return dryAt(level, lo, hi, save.blocked, data, bundles);
 }
 
 /** The level with the subcategories that ran dry at its range. */
@@ -79,7 +79,7 @@ function run(data: EngineData, cell: Cell, seed: number): { games: number; bottl
   const names = cell.mode === "rr-competitive" ? Array.from({ length: cell.players! }, (_, i) => `${NAME} ${i + 1}`) : [NAME];
   let save = emptySave();
   for (let games = 0; ; games++) {
-    // rr-competitive until MD-8: one solo game per player; everyone saw the screen, so its burns go to all (null = everyone, D-28).
+    // rr-competitive until MD-8: one solo game per player; everyone saw the screen, so its questions are out for all.
     for (const name of names) {
       try {
         save = playGame(save, data, io, r, name, args, cell);
@@ -87,8 +87,10 @@ function run(data: EngineData, cell: Cell, seed: number): { games: number; bottl
         if (e instanceof GameError && e.code === "supply_short") return { games, bottleneck: bottleneck(e, save, data, bundles) };
         throw e;
       }
-      if (names.length > 1) save.burned = save.burned.map((b) => ({ ...b, player_id: null }));
-      // Finished games only slow every clone down; later games read the burns.
+      // Until seen counts drive selection (task 426): a seen question is out for good, as a burn was.
+      save.blocked = [...new Set([...save.blocked, ...save.seen.map((s) => s.question_id)])];
+      save.seen = [];
+      // Finished games only slow every clone down; later games read `blocked`.
       save.games = [];
     }
   }

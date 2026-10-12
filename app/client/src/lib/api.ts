@@ -55,7 +55,7 @@ export async function fetchPlayers(): Promise<Player[]> {
   return read((save) => engine.getPlayers(save));
 }
 
-/** Delete a player with all their games and burns (GF-7); returns the remaining players. */
+/** Delete a player's name and games (GF-7), not what the family saw; returns the remaining players. */
 export async function deletePlayer(name: string): Promise<Player[]> {
   return run((save) => engine.deletePlayer(save, { name }));
 }
