@@ -9,19 +9,40 @@ const CATALOGS: Record<string, Catalog> = { es };
 /** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
 export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
 
-/** `es`; `?lang=` overrides it in dev only (no language menu, OQ-31). */
-function pickLang(): string {
+/** The save's UI language; `?lang=` overrides it in dev only. Unknown → `es`. */
+function pickLang(saved?: string): string {
   if (import.meta.env?.DEV && typeof location !== "undefined") {
     const q = new URLSearchParams(location.search).get("lang");
     if (q && q in CATALOGS) return q;
   }
-  return "es";
+  return saved && saved in CATALOGS ? saved : "es";
 }
 
-export const lang = pickLang();
-const catalog = CATALOGS[lang];
-const numbers = new Intl.NumberFormat(lang);
-const plurals = new Intl.PluralRules(lang);
+/** Set once by `initLang` before the first render; a change reloads the app (plan 68). */
+export let lang = pickLang();
+let catalog = CATALOGS[lang];
+let numbers = new Intl.NumberFormat(lang);
+let plurals = new Intl.PluralRules(lang);
+
+/** main.ts, before mounting: the save's UI language. */
+export function initLang(saved?: string): void {
+  lang = pickLang(saved);
+  catalog = CATALOGS[lang];
+  numbers = new Intl.NumberFormat(lang);
+  plurals = new Intl.PluralRules(lang);
+}
+
+/** Names of the languages in themselves (plan 68): data, not translated. Question `es` is neutral Spanish. */
+const ENDONYMS: Record<string, string> = {
+  es: "Español (Latinoamérica)",
+  "es-ES": "Español (España)",
+  en: "English",
+  de: "Deutsch",
+};
+
+export function endonym(tag: string, kind: "ui" | "questions"): string {
+  return kind === "questions" && tag === "es" ? "Español" : (ENDONYMS[tag] ?? tag);
+}
 
 function lookup(key: string): unknown {
   let node: unknown = catalog;

@@ -1,6 +1,6 @@
 import * as engine from "../engine/api.ts";
 import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
-import { language as fetchLanguage, read, run } from "./engine.ts";
+import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
 import type { ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Language, Player, Report, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
@@ -136,7 +136,7 @@ export async function gameAction(
 }
 
 /** The stored UI and question language, and the options (plan 68). */
-export { fetchLanguage };
+export { fetchLanguage, localeSupply };
 
 /** Set both languages; a question language applies to the next game, a UI language after a reload. */
 export async function setLanguage(language: Language): Promise<Language> {

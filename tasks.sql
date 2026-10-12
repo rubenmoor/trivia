@@ -8353,7 +8353,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - fresh save, `navigator.language = "de-AT"`, only `es`/`en` present → UI `en`, questions `en`
   - game started in `en` keeps `en` after switching to `es`
   - ids seen in an `en` game rank after unseen ones in an `es` game', '2026-10-12T19:36:54Z', '2026-10-12T19:41:19Z', 448);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (450, 68, 'UI: language rows in the Esc menu, localized names, boot language (I18N-2)', 'work', 'open', 470, NULL, 'Plan 68, task 2. Needs plan 68 task 1 (engine/data) and plan 59''s `task 392: Gamemaster menu (MD-12)` (the Esc menu it grows); rebase on whatever `Overlay.svelte` looks like then.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (450, 68, 'UI: language rows in the Esc menu, localized names, boot language (I18N-2)', 'work', 'done', 470, '2026-10-12, app/client/src/{main.ts,lib/{i18n,engine,api,names.svelte}.ts,game/{Overlay,CategoryPicker,Question}.svelte,locales/es.ts}, directory.md. Browser walk (headless Chrome, keyboard) on a family-save copy + throw-away pool.en.json/en stub catalog; pad shares the overlay''s action handler, not walked. No plan-29 Choice screen or name-showing Hud/Tower/report list exists yet.', 'Plan 68, task 2. Needs plan 68 task 1 (engine/data) and plan 59''s `task 392: Gamemaster menu (MD-12)` (the Esc menu it grows); rebase on whatever `Overlay.svelte` looks like then.
 
 ## What
 - `lib/i18n.ts`: `lang` from the save at boot (before the first render), still a module constant; `?lang=` dev override kept; set `<html lang>`.
@@ -8368,7 +8368,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `npm run check`, `npm run build`.
 - Browser walk on a copy of the family save: no language rows, game as today.
-- With throw-away `pool.en.json` + `names.en.json` + a stub `en` catalog (or plan 24''s): switch both, names and questions in English; `Continuar` of a Spanish game stays Spanish. Keyboard only, pad. Delete the throw-away files.', '2026-10-12T19:36:55Z', NULL, 448);
+- With throw-away `pool.en.json` + `names.en.json` + a stub `en` catalog (or plan 24''s): switch both, names and questions in English; `Continuar` of a Spanish game stays Spanish. Keyboard only, pad. Delete the throw-away files.', '2026-10-12T19:36:55Z', '2026-10-12T19:58:01Z', 448);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (451, 68, 'Docs: language setting and per-locale pool (I18N-2)', 'work', 'open', 460, NULL, 'Plan 68, task 3. After tasks 1 and 2; document what was actually built.
 
 ## What
@@ -9375,6 +9375,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (316, 461, '2026-10-12T19:46:53Z', '2026-10-12T19:48:40Z', 'done', NULL, 0, '173313cacf08671b8a29b6de7d4d09af62786fe2', 'claude-opus-5-5[1m]', 'e84a408e-4fe5-4870-a9ae-391db4d6b17e', 19, 30, 10654, 764680, 56992, 0.822072, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (317, 462, '2026-10-12T19:48:40Z', '2026-10-12T19:51:33Z', 'done', NULL, 0, 'd2ad940dfb8351167b0407a9cad73cdc8c892529', 'claude-opus-5-5[1m]', '2f754078-d237-41e5-b88a-0e4fea48d9bf', 27, 54, 18002, 1614673, 71385, 1.2542706000000004, 626610);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (318, 464, '2026-10-12T19:51:33Z', '2026-10-12T19:51:58Z', 'blocked', NULL, 0, 'ac4960fc67f3881413e3ce4930b1c11ce37d3d1b', 'claude-opus-5-5[1m]', '6e7c3e8c-9166-456f-881a-8dd32b3a92b4', 7, 14, 1721, 231661, 30639, 0.3259202, 626610);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (319, 450, '2026-10-12T19:51:58Z', '2026-10-12T19:58:12Z', 'done', NULL, 0, 'fef6f4741014c9bc942a5ceeea739eaba889c07b', 'claude-opus-5-5[1m]', '671d55f0-4d8f-49ae-a599-7477ab8ff3eb', 45, 86, 28009, 3521446, 102145, 2.0819732, 626610);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

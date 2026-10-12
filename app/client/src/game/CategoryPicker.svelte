@@ -5,6 +5,7 @@
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types";
   import { t } from "../lib/i18n";
+  import { displayName } from "../lib/names.svelte";
   import { focusControl, pushScope } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
 
@@ -61,17 +62,17 @@
 
 <div class="backdrop">
   <div class="picker glass-strong" bind:this={picker}>
-    <h2>{group ? group.name : t("joker.category.title")}</h2>
+    <h2>{group ? displayName("category", group.slug) : t("joker.category.title")}</h2>
     {#key group}
       <div class="grid" class:subs={group} bind:this={grid}>
         {#if group}
           {#each group.subcategories as s, i (s.name)}
-            <button class="tile" disabled={!s.available} onclick={() => onpick(s.name)} style:--i={i}>{s.name}</button>
+            <button class="tile" disabled={!s.available} onclick={() => onpick(s.name)} style:--i={i}>{displayName("subcategory", s.name)}</button>
           {/each}
         {:else}
           {#each categories as g, i (g.slug)}
             <button class="tile" data-slug={g.slug} disabled={!g.available} onclick={() => open(g)} style:--i={i}>
-              {g.name}
+              {displayName("category", g.slug)}
             </button>
           {/each}
         {/if}

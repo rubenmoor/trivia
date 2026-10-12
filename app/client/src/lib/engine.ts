@@ -1,12 +1,15 @@
 // The TS referee in the browser (plan 50, PORT-7): data and save loaded once per page, one action at a time.
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
+import { supply } from "../engine/game.ts";
 import { defaultLanguage } from "../engine/save.ts";
 import { gameLocale, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError } from "./api.ts";
+import type { Supply } from "./types.ts";
 import { availableLocales, loadEngineData } from "./data.ts";
 import { desktop } from "./desktop.ts";
 import { UI_LANGS } from "./i18n.ts";
+import { useNames } from "./names.svelte.ts";
 import { FileStore, ServerStore, type SaveNotice } from "./store.ts";
 
 interface Loaded {
@@ -80,6 +83,12 @@ export async function language(): Promise<{ language: Language; ui: string[]; qu
   return { language: save.language, ui: UI_LANGS, questions: locales };
 }
 
+/** Per question locale, the supply check for the default bundles (plan 68): not ok → listed, disabled. */
+export async function localeSupply(): Promise<Record<string, Supply>> {
+  const { save, locales } = await ready();
+  return Object.fromEntries(await Promise.all(locales.map(async (l) => [l, supply(save, await loadEngineData("", l))])));
+}
+
 /** `game`: the newest game's data (it keeps its locale), else the language's; `next`: the language's
  * (a new game). No mid-game pool swap. */
 export type Scope = "game" | "next";
@@ -94,6 +103,7 @@ export type Route<T> = (save: SaveData, data: EngineData, io: Io) => Reply<T>;
 async function exec<T>(route: Route<T>, write: boolean, scope: Scope): Promise<T> {
   const loaded = await ready();
   const data = await dataFor(loaded, scope);
+  useNames(data);
   let reply: Reply<T>;
   try {
     reply = route(loaded.save, data, io());

@@ -3,12 +3,14 @@
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
   // Outside gamemaster mode no undo, skip or budget editor (D-74); «Reportar pregunta» in every mode (MD-6).
+  // Language rows (plan 68) only with ≥2 options: ←/→ pick; questions apply at once, the UI on Enter (reload).
+  import { fetchLanguage, localeSupply, setLanguage } from "../lib/api";
   import { desktop } from "../lib/desktop";
   import { flush } from "../lib/engine";
-  import { t } from "../lib/i18n";
+  import { endonym, t } from "../lib/i18n";
   import { focusControl, pushScope, type Action } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
-  import type { GameMode, JokerBudget, JokerName } from "../lib/types";
+  import type { GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
 
@@ -21,7 +23,9 @@
     volume?: Channel;
     joker?: JokerName;
     preset?: boolean;
+    lang?: LangKind;
   };
+  type LangKind = "ui" | "questions";
   type Channel = "music" | "effects" | "media";
 
   const CHANNELS: { key: Channel; label: string }[] = [
@@ -154,6 +158,41 @@
     if (next !== now) setBudget({ [name]: next });
   }
 
+  /** Stored language and options; per question locale its supply (default bundles). Null until loaded. */
+  let langs = $state<{ language: Language; ui: string[]; questions: string[]; supply: Record<string, Supply> } | null>(null);
+  /** The option each row shows; differs from the stored one only for an unapplied UI language or a disabled locale. */
+  let shown = $state<Language | null>(null);
+  $effect(() => {
+    (async () => {
+      const l = await fetchLanguage();
+      const supply = l.questions.length > 1 ? await localeSupply() : {};
+      langs = { ...l, supply };
+      shown = l.language;
+    })().catch(() => {});
+  });
+  const langKinds = $derived(langs ? (["ui", "questions"] as const).filter((k) => langs![k].length > 1) : []);
+
+  function blocked(kind: LangKind, tag: string): string | null {
+    const s = kind === "questions" ? langs?.supply[tag] : undefined;
+    return s && !s.ok ? t("language.short", { n: s.available }) : null;
+  }
+
+  async function stepLang(kind: LangKind, by: number) {
+    if (!langs || !shown) return;
+    const options = langs[kind];
+    const tag = options[(options.indexOf(shown[kind]) + by + options.length) % options.length];
+    shown = { ...shown, [kind]: tag };
+    if (kind === "questions" && !blocked(kind, tag) && tag !== langs.language.questions)
+      langs.language = await setLanguage({ ui: langs.language.ui, questions: tag });
+  }
+
+  /** The UI language is a boot constant: write the save, then reload. */
+  async function applyUi() {
+    if (!langs || !shown || shown.ui === langs.language.ui) return;
+    await setLanguage({ ui: shown.ui, questions: langs.language.questions });
+    location.reload();
+  }
+
   /** Pending saves first (plan 55). */
   async function quit() {
     await flush();
@@ -185,6 +224,13 @@
       run: () => setVolumes({ muted: !sound.volumes.muted }),
       right: true,
     },
+    ...langKinds.map((k) => ({
+      label: t(k === "ui" ? "language.ui" : "language.questions"),
+      enabled: true,
+      run: k === "ui" ? applyUi : () => {},
+      lang: k,
+      right: true,
+    })),
     ...(budget && gamemaster
       ? [
           { label: t("overlay.jokers"), enabled: true, run: cyclePreset, preset: true, right: true },
@@ -218,6 +264,7 @@
     } else if (by && item.volume) change(item.volume, by * STEP);
     else if (by && item.joker) stepJoker(item.joker, by);
     else if (by && item.preset) cyclePreset();
+    else if (by && item.lang) stepLang(item.lang, by);
     else if (a.type === "confirm") activate(selected);
     else if (a.type === "menu") onclose();
     else if (a.type === "back" && a.device === "gamepad") confirming === null ? onclose() : (confirming = null); // B leaves
@@ -253,6 +300,21 @@
       <button class="step" onclick={() => stepJoker(name, 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>
       <span class="left">{left?.[name] != null ? t("overlay.left", { n: left[name] }) : ""}</span>
     </div>
+  {:else if item.lang && shown}
+    {@const kind = item.lang}
+    {@const tag = shown[kind]}
+    {@const reason = blocked(kind, tag)}
+    <div class="row lang" class:selected={i === selected} role="group" onmouseenter={() => (selected = i)}>
+      <span>{item.label}</span>
+      <button class="step" onclick={() => stepLang(kind, -1)} tabindex="-1" aria-label={t("language.previous")}>‹</button>
+      <span class="value" class:off={reason}>{endonym(tag, kind)}</span>
+      <button class="step" onclick={() => stepLang(kind, 1)} tabindex="-1" aria-label={t("language.next")}>›</button>
+      {#if reason}
+        <span class="note">{reason}</span>
+      {:else if kind === "ui" && tag !== langs?.language.ui}
+        <button class="note apply" onclick={applyUi} tabindex="-1">{t("language.apply")} <Prompt action="confirm" /></button>
+      {/if}
+    </div>
   {:else}
     <button
       class:selected={i === selected}
@@ -274,19 +336,19 @@
     <h2>{t("overlay.title")}</h2>
     <div class="columns">
       <div class="column">
-        {#each items as item, i (item.joker ?? item.volume ?? item.label)}
+        {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
           {#if !item.right}{@render row(item, i)}{/if}
         {/each}
       </div>
       <div class="column">
         <h3>{t("overlay.sound")}</h3>
-        {#each items as item, i (item.joker ?? item.volume ?? item.label)}
+        {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
           {#if item.right && !item.preset && !item.joker}{@render row(item, i)}{/if}
         {/each}
         {#if budget}
           <h3>{t("overlay.budget")}</h3>
           {#if gamemaster}
-            {#each items as item, i (item.joker ?? item.volume ?? item.label)}
+            {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
               {#if item.preset || item.joker}{@render row(item, i)}{/if}
             {/each}
           {:else}
@@ -419,6 +481,27 @@
   }
   .joker {
     grid-template-columns: 1fr calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(7 * var(--u));
+  }
+  .lang {
+    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(14 * var(--u)) calc(2.4 * var(--u));
+  }
+  .lang .value {
+    text-align: center;
+    color: var(--amber);
+  }
+  .lang .value.off {
+    color: var(--slate-400);
+    text-decoration: line-through;
+  }
+  .note {
+    grid-column: 1 / -1;
+    color: var(--slate-400);
+    font-weight: 600;
+  }
+  .note.apply {
+    padding: calc(0.3 * var(--u)) calc(0.8 * var(--u));
+    font-size: calc(1.1 * var(--u));
+    color: var(--slate-200);
   }
   .volume input {
     accent-color: var(--amber);

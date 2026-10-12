@@ -6,6 +6,7 @@
   import { gameAction } from "../lib/api";
   import { errorText, reasonText } from "../lib/errors";
   import { t } from "../lib/i18n";
+  import { displayName } from "../lib/names.svelte";
   import { focusControl, pushScope, type Action, type Dir, type Intent, type Keys } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
@@ -510,7 +511,7 @@
 
   <header class="card glass-strong" class:long in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
     {#if question.swapped_to}
-      <p class="topic label" class:fresh={swappedBy?.joker === "category"}>{t("screen.question.topic", { name: question.swapped_to })}</p>
+      <p class="topic label" class:fresh={swappedBy?.joker === "category"}>{t("screen.question.topic", { name: displayName("subcategory", question.swapped_to) })}</p>
     {/if}
     <h1>{question.question}</h1>
     {#if media.type !== "image"}
@@ -562,14 +563,14 @@
           onclick={() => fire({ joker: "skip", purge: true })}
           disabled={!jokers.skip.purge.available}
         >
-          {t("joker.skip.purge", { name: jokers.skip.purge.subcategory })} <Prompt action={{ type: "pick", n: 2 }} hold />
+          {t("joker.skip.purge", { name: displayName("subcategory", jokers.skip.purge.subcategory) })} <Prompt action={{ type: "pick", n: 2 }} hold />
           {#if jokers.skip.purge.reason}<span class="reason">{reasonText(jokers.skip.purge.reason)}</span>{/if}
         </button>
         <button class="secondary" onclick={() => (mode = null)}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
       </div>
     </div>
   {/if}
-  {#if shredding}<Shredder name={shredding.name} ondone={shredding.done} />{/if}
+  {#if shredding}<Shredder name={displayName("subcategory", shredding.name)} ondone={shredding.done} />{/if}
   {#if mode === "category" && jokers}
     <CategoryPicker
       categories={jokers.category.categories}

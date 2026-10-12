@@ -67,6 +67,17 @@ const es = {
     statsCategories: "categorías",
     statsDifficulty: "dificultad",
   },
+  /** Language rows of the Esc menu (plan 68); language names are endonyms in lib/i18n.ts. */
+  language: {
+    ui: "Idioma",
+    questions: "Idioma de las preguntas",
+    previous: "anterior",
+    next: "siguiente",
+    /** The UI language is applied with Enter: the game reloads. */
+    apply: "Cambiar (reinicia la pantalla)",
+    /** A question language whose pool can't fill a game. */
+    short: "Faltan preguntas ({n} disponibles)",
+  },
   /** «Reportar pregunta» and the report list (MD-6). */
   report: {
     action: "Reportar pregunta",
