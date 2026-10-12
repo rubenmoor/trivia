@@ -2142,6 +2142,54 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - A full game, every joker and every dialog work with an Xbox-style pad in Chromium on Linux and Windows (new player names: part 6); the prompts switch between keyboard, Xbox and PlayStation glyphs when the device changes; the family''s keyboard and mouse behave as before.', '2026-10-12T00:58:22Z', 213);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (46, 8, 'Deck layout and controller-only text entry (SW-4)', 380, 'The game reads well and plays with a pad only on the Steam Deck: every screen is checked at 1280×800 (Deck), 1280×720 (smallest) and 4K, text is at least 9 px at 800p (Valve''s Deck guideline), and a new player name can be entered without a keyboard. Part 6 of masterplan 8 (S3); owners `plans/18-steam-integration.md` (SW-4, "Platforms and display"), `plans/14-input.md` (Steam Deck), `plans/04-ui-tv-display.md` (Player, Input). The family''s TV game looks and plays as today: the fixes stay inside the `--u` system (D-29), the letter picker shows only for a pad.
+
+## Depends on (a task stops and says so in its note if one is missing; leave it open)
+- Plan 44 (action layer, focus, 500) and plan 45 (gamepad, `<Prompt>`, glyphs, 490): the picker is a focus grid driven by actions; the check covers the glyph sizes.
+- Screens that change before S3 ends, so the check sees the final set: plan 29 (Choice screen, 400), plan 30 (390), plan 31 (UI-7, `Placeholder.svelte` gone, 500), plan 36 (report list, settings on Choice, 490/380). Task 2 only; task 1 doesn''t need them.
+- Part 1 (desktop shell, plan from task 209) for the screenshots unless pm decision 6 says Playwright (see "Screenshots").
+- Plan 21 (LUI-1): new strings through `t()` (`picker.*` keys) if `lib/i18n.ts` exists, else Spanish literals marked `// LUI-1`.
+
+## Today (code as of 2026-10-11)
+- `--u: min(100vw / 120, 100vh / 67.5)` (`app/client/src/game/theme.css`). At 1280×800 and 1280×720 the width wins: `--u` = 10.67 px, so the layout is the 720p layout with 80 px more height on the Deck. At 3840×2160: 32 px.
+- 9 px at 1280 wide = 0.84 `--u`. Smallest sizes: `.credit` in `Question.svelte` at `0.8 * --u` (8.5 px, fails); `kbd`, joker `.key`, overlay hint at `0.9 * --u` (9.6 px, pass); `Placeholder.svelte` in `rem` (goes with plan 31).
+- Player screen: name buttons (1–9) work by focus with a pad (plan 45); the «¿Alguien nuevo?» field needs a keyboard. Steamworks'' on-screen keyboard (`ShowFloatingGamepadTextInput`) is SW-8 (S5).
+
+## Design
+- **Size rule**: no `font-size` below `0.9 * var(--u)` (9.6 px at 1280 wide), no `px`/`rem` font sizes in `app/client/src/game/`. Fix = a bigger multiple of `--u`, never a media query or a separate Deck layout; one exception only if the 16:10 height leaves a screen visibly empty or broken, and then by `--u`-based layout (flex/grid), not a breakpoint. Rule written into `plans/10-visual-design.md` (type scale) and `04` ("Implementation notes").
+- **Check sizes**: 1280×800, 1280×720, 1920×1080 (reference, the TV), 3840×2160 (sanity: nothing in px stays tiny, no blur on SVG/fonts; pictures stay at their own size per D-51, that''s intended).
+- **What to look for**: text ≥ 9 px (computed style, not eyeballed), nothing clipped or overlapping, nothing outside the safe area (`--safe-x`/`--safe-y`), long content fits: the longest question text and longest answers of `app/data/pool.json` (worker picks them by script), 9 player names of 30 characters, the supply report with many levels missing, an error box.
+- **Screens and states**: Start; Player (no players, 9 players, delete dialog, letter picker); Choice (plan 29/36: groups, bundles, mode, presets); Level; Select (4 cards); Question (text, image, video, audio; locked, armed joker, Paso, Francotirador aiming, Cambiazo both levels, «medio no disponible»); Correct; Wrong; Victory; Overlay (gamemaster and default mode); report list (plan 36); Credits (part 7) if it exists. Each with keyboard prompts and with Xbox glyphs (plan 45''s `lastDevice` forced).
+- **Screenshots**: pm decision 6 (pending, asked by plan 21) picks the tool for screen checks; this plan follows its answer:
+  - "Playwright": the same throw-away Playwright outside the project (temp dir, nothing in `package.json`), viewport per size.
+  - Otherwise (or still pending): the desktop shell (part 1) at a fixed window size: a throw-away Electron main script (not committed) that opens the built client at each size without fullscreen, drives the screens by `webContents.sendInputEvent` (keys as the family presses them) and saves `webContents.capturePage()` PNGs. Text sizes from `executeJavaScript` over `getComputedStyle` of every visible text node''s element. Whatever the tool, the script also prints every element whose computed `font-size` is < 9 px.
+  - PNGs go to a temp dir, not the repo; the task note lists findings and fixes.
+- **Letter picker (controller-only names)** — decided here, no pm decision: the Player screen doesn''t change for the family (keyboard and mouse see exactly today''s field), the picker appears only for a pad.
+  - Opens when `confirm` comes from the gamepad (`device: "gamepad"`) while the name field is focused (with no players the field gets focus on mount, as today), or from the field''s pad prompt («Ⓐ Escribir», `<Prompt action="confirm">`, shown only when `lastDevice` is the pad).
+  - `app/client/src/game/LetterPicker.svelte` (new): modal dialog (plan 44 scope, glass panel as the delete dialog) over the Player screen; above the grid the name as typed (same look as the field). Grid of buttons, 9 columns: `A`–`Z`, `Ñ`, `Á É Í Ó Ú Ü`, `-`, then a row «Espacio», «⌫ Borrar», «Listo». Focus navigation is plan 44''s spatial focus (no own grid code); focus default «A», memory per open.
+  - Writes into Player''s `name` (same `typed` cleanup, `maxlength` 30). Auto-capital: first letter and the letter after a space or `-` are upper case, the rest lower case (`maría josé` never happens by accident; «Ana-Sofía» works).
+  - Pad: A types the focused key; B = delete the last letter, on an empty name closes the picker; Start (`menu`) closes it (dialogs treat `menu` as `back`, plan 44); Y (`replay`) unused. «Listo» (reached by focus, no extra button binding) submits like «¡A jugar!» (`onchoose(typed)`), disabled while `typed` is empty. Closing keeps the text in the field.
+  - Mouse clicks work on every key (IN-1); physical keys while it is open: letters and `Backspace` type and delete (so a Deck with a USB keyboard still works), `Enter` = focused key, `Esc` closes.
+  - Same name rules as the field: the server/engine checks are unchanged; an existing name chosen by typing picks that player as today.
+  - S5 (SW-8): under Steam, `ShowFloatingGamepadTextInput` may replace the picker; the picker stays the fallback without Steam. One line in 18 ("Steamworks", on-screen keyboard).
+- Strings: «Escribir», «Espacio», «Borrar», «Listo», picker title «Escribe tu nombre» via `t()` or marked literals (see "Depends on").
+- No new dependency (no on-screen keyboard library).
+
+## Tasks (for the split)
+1. **Letter picker for player names with a pad (SW-4, IN-4)** — priority 380
+   - `LetterPicker.svelte`, the hook in `Player.svelte` (gamepad `confirm` on the field, pad prompt), auto-capital helper (pure function), strings.
+   - Check: `npm run check`, `npm run build`; throw-away script for the auto-capital helper («ana sofía» → «Ana Sofía», «-», «ñ», 30-char limit); in Chromium with a pad (or devtools forcing `device: "gamepad"` on dispatched actions): a new player created with the pad only, B deletes, Start closes and keeps the text, mouse clicks on keys work; with the keyboard the Player screen looks and behaves as today (no picker, no new prompt).
+   - Docs: `04` "Player" (picker for a pad), `directory.md` (`LetterPicker.svelte`), `14-input.md` Steam Deck paragraph ("in-game letter picker, plan N").
+2. **Screen check at 1280×800, 1280×720 and 4K, fixes (SW-4)** — priority 370 (after task 1, so the picker is checked)
+   - Screenshot script per "Screenshots"; every screen and state above at the four sizes, keyboard prompts and Xbox glyphs; small-text report.
+   - Fixes in `--u` multiples (at least `.credit` 0.8 → 0.9); repeat until the small-text report is empty and nothing clips at 720p.
+   - Check: the 1920×1080 screenshots before and after differ only where a fix was intended (ImageMagick `compare` on the two sets); the family''s TV look is unchanged otherwise.
+   - Docs: size rule in `10-visual-design.md` and `04` "Implementation notes"; `18-steam-integration.md` SW-4 `[x]` with a note (sizes, tool, fixes); `14-input.md` Deck paragraph; `plans/project.md` in sync. Real-Deck check goes to part 8''s checklist (task 216): the task note lists what to look at on the Deck (Linux build, Game Mode, built-in controls only).
+
+## Done when
+- Screenshots of every screen at 1280×800 and 1280×720 pass: no text below 9 px, nothing clipped or outside the safe area; 4K sane; the 1080p TV look unchanged except intended fixes.
+- A new player can be created with a pad only; the family''s Player screen with keyboard and mouse is unchanged.
+- SW-4 `[x]` in `plans/18-steam-integration.md`; the size rule in 10 and 04.', '2026-10-12T01:00:20Z', 214);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -3662,12 +3710,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Content: Gamepad API polling (rAF while connected), standard mapping; D-pad/stick → `navigate`, A/B/Start → `confirm`/`back`/`menu`.
 - IN-4 design: answer buttons (A/B/X/Y on the Question screen?) and joker access (bumpers, wheel or focus row). If `plans/14-input.md` doesn''t settle it, add a `pm decision` with a recommendation and make the plan''s implementation tasks pending on it.
 - Glyphs follow the last-used device (keyboard, Xbox, PlayStation via `Gamepad.id`); art original or a free set with a clear licence (D-45 style); list sources for the credits (part 7). A glyph pack with code needs a decision.', '2026-10-12T00:53:42Z', '2026-10-12T00:58:28Z', 208);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (214, 8, 'write plan: Deck layout and controller-only text entry (SW-4)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 8): `pm plan add 8 "Deck layout and controller-only text entry (SW-4)" --priority 380`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (214, 8, 'write plan: Deck layout and controller-only text entry (SW-4)', 'plan', 'done', 1000, '2026-10-11, pm plan 46, plans/14-input.md, plans/18-steam-integration.md', 'Write the plan for part 6 of the masterplan (plan 8): `pm plan add 8 "Deck layout and controller-only text entry (SW-4)" --priority 380`.
 
 - After parts 4–5 and the screen changes of milestones 5–6 (plans 29, 30, 31; check `pm plan list`).
 - Content: every screen at 1280×800, 1280×720, 4K sanity; text ≥ 9 px at 800p; fixes in the `--u` system (D-29). Screenshot tool: follow decision 6''s answer (Playwright vs. by hand) if given, else the shell at a fixed window size.
 - Player name without a keyboard (on-screen keyboard is S5, SW-8): propose letter picker / preset names / pick existing; `pm decision` if the Player screen changes visibly for the family.
-- Owners: `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/04-ui-tv-display.md`.', '2026-10-12T00:53:42Z', NULL, 208);
+- Owners: `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/04-ui-tv-display.md`.', '2026-10-12T00:53:42Z', '2026-10-12T01:00:26Z', 208);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (215, 8, 'write plan: Credits screen and generated CREDITS.md (PUB-5)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of the masterplan (plan 8): `pm plan add 8 "Credits screen and generated CREDITS.md (PUB-5)" --priority 400`.
 
 - Needs plan 26 "Licence data in the pool" (fields per media file) and part 5''s glyph sources; its screen uses part 4''s actions. Implementation tasks wait for those; the plan names them.
@@ -3682,6 +3730,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:56:02Z', NULL, 212);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (218, 45, 'create tasks for plan 45', 'split', 'open', 1000, NULL, 'Split plan 45 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:58:22Z', NULL, 213);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (219, 46, 'create tasks for plan 46', 'split', 'open', 1000, NULL, 'Split plan 46 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:00:20Z', NULL, 214);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3783,6 +3833,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (79, 208, '2026-10-12T00:52:54Z', '2026-10-12T00:53:53Z', 'done', NULL, 0, 'a8ef981539569ec3963c70ea33813b1730c84051', 'claude-opus-5-5[1m]', '2bc8338c-bf13-4a99-8841-075799a52112', 8, 16, 6150, 327810, 46217, 0.558362, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (80, 212, '2026-10-12T00:53:53Z', '2026-10-12T00:56:14Z', 'done', NULL, 0, 'b5df7182db45f421334edaebbface98b604f85a7', 'claude-opus-5-5[1m]', 'c0d62dab-72a4-45e4-b06b-1f36198be63f', 14, 20, 13767, 494026, 63071, 0.87879319999999994, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (81, 213, '2026-10-12T00:56:14Z', '2026-10-12T00:58:37Z', 'done', NULL, 0, '7386a4b72c6454f65f50d548f69def20196acdae', 'claude-opus-5-5[1m]', '67171dce-a404-4450-a752-d8228b7685a2', 13, 26, 13902, 606088, 57745, 0.86132159999999991, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (82, 214, '2026-10-12T00:58:37Z', '2026-10-12T01:00:37Z', 'done', NULL, 0, '8cab26d6dce119a55f167c1adbeb1a51eaa53089', 'claude-opus-5-5[1m]', '64c3dc00-b4c6-42ed-9808-48e3e6f4f2b2', 18, 34, 11314, 887842, 66537, 0.9362803999999999, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

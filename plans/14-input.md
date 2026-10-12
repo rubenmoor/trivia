@@ -18,7 +18,7 @@ Every action that has a key must also have a visible control that works with a m
 - **Direct buttons:** on the Question screen, `A`/`B`/`X`/`Y` could pick answers directly (answer tiles get a glyph next to the letter), and the bumpers open a joker wheel. To decide when designing (IN-4).
 - **Glyphs:** button prompts follow the last-used device: keyboard letters, Xbox glyphs, or PlayStation glyphs (from `Gamepad.id`; later via Steamworks `GetInputTypeForHandle`). The glyph art must be original or from a free set (17).
 - **Polling:** the Gamepad API has no events for buttons, so poll it with `requestAnimationFrame` while a gamepad is connected.
-- **Steam Deck:** 1280×800 (16:10), built-in controls = gamepad. Deck Verified requires full controller support, readable text and no keyboard needed except for text entry, which means the **player name** needs the on-screen keyboard (Steamworks `ShowFloatingGamepadTextInput`, 18) or an in-game letter picker.
+- **Steam Deck:** 1280×800 (16:10), built-in controls = gamepad. Deck Verified requires full controller support, readable text and no keyboard needed except for text entry, which means the **player name** needs the on-screen keyboard (Steamworks `ShowFloatingGamepadTextInput`, 18) or an in-game letter picker. *S3: letter picker shown only for a pad, pm plan 46; the Steamworks keyboard may replace it under Steam in S5 (SW-8).*
 
 ## 3. Couch co-op and competitive input (later)
 Depends on the modes in [13](13-game-modes.md) (OQ-37).

@@ -42,7 +42,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - [ ] SW-1 Decide the shell (OQ-29); record it in `decisions.md`.
 - [ ] SW-2 Shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge.
 - [ ] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry).
-- [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes.
+- [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Plan: pm plan 46 (also the letter picker for player names with a pad).*
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine.
 - [ ] SW-6 CI build in GitHub Actions for both platforms.
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
