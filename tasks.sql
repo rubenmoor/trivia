@@ -10969,7 +10969,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Every file in `app/client/src/game/` at this time listed in `## Part 5` and in the inventory, every finding with a status; every part 1 row `handed to part 5` has its final status in `## Part 5` (check rows left by tasks 1–10).
 - Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', NULL, 517);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (554, 78, 'Review window, protocol and bridge: main.mjs, preload.cjs, resolve.mjs', 'work', 'open', NULL, NULL, 'Task 1 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 78 "Rules for this plan" (URLs, responses, error bodies, IPC names/codes unchanged; security only tightened; no `npm install`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (554, 78, 'Review window, protocol and bridge: main.mjs, preload.cjs, resolve.mjs', 'work', 'open', NULL, NULL, 'Task 1 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (URLs, responses, error bodies, IPC names/codes unchanged; security only tightened; no `npm install`).
 
 ## First
 - `pm show` tasks 355, 332, 255 (and the tasks its plan created), 232: open and touching a file here → findings only, status `superseded by task N`.
@@ -10987,15 +10987,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Duplication candidates for part 10, log only: `cacheName`/`poolUrls` ↔ `app/server/media_cache.py`; `MIME`/`parseRange`/`sendFile` ↔ `app/server/http_base.py`; path roots ↔ `app/server/paths.py`.
 - Findings on `flake.nix` wrappers or `.gitignore` → row "handed to part 10".
 - Core design issue (changed behaviour/format/security model): `pm decision add` (recommended first) + follow-up task in plan 78 linked with `pm task-pending-decision`.
+- Linter evidence (part 10''s lint trial covers `.mjs`/`.cjs` here): a finding a lint rule or stricter `tsconfig` flag would catch carries the rule, e.g. `(lint: no-empty)` for `catch {}`, `(lint: no-floating-promises)`, `(lint: no-unused-vars)`.
 
 ## Check
 - `resolve.mjs` fixes: throw-away `node` script in `/tmp` (`makeResolver` on temp dirs, web `Request`).
 - `main.mjs`/`preload.cjs` fixes: `trivia-desktop` with temp `TRIVIA_SAVE_DIR`/`TRIVIA_MEDIA` (no display: `xvfb-run` + CDP via `--remote-debugging-port`, as task 314); never the real `state/desktop/`; stop by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (and the lint pass, if part 10 has adopted one by then).
 
 ## Done when
-- `main.mjs`, `preload.cjs`, `resolve.mjs` listed in `## Part 6` with every finding and a status (no-findings rows included).', '2026-10-12T23:06:35Z', NULL, 518);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (555, 78, 'Review saves: save.mjs and its wiring in main.mjs', 'work', 'open', NULL, NULL, 'Task 2 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 78 "Rules for this plan" (save path, file format, IPC names, rejection codes `bad_save`/`save_locked` unchanged, D-72).
+- `main.mjs`, `preload.cjs`, `resolve.mjs` listed in `## Part 6` (no-findings rows included) with every finding and a status (fixes: `fixed (task N)`).', '2026-10-12T23:06:35Z', NULL, 518);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (555, 78, 'Review saves: save.mjs and its wiring in main.mjs', 'work', 'open', NULL, NULL, 'Task 2 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (save path, file format, IPC names, rejection codes `bad_save`/`save_locked` unchanged, D-72).
 
 ## First
 - `pm show` tasks 355, 332, 255 (and its plan''s tasks): open and touching these files → findings only, `superseded by task N`.
@@ -11011,15 +11012,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Part 1 rows `handed to part 6` for these parts: re-check, final status in `## Part 6`, quoting the part 1 row.
 - Duplication candidate for part 10, log only: `save.mjs` ↔ `app/server/save.py` (envelope check, atomic write).
 - Core design issue (format, path, codes): `pm decision add` + follow-up task in plan 78 linked with `pm task-pending-decision`.
+- Linter evidence (part 10''s lint trial covers `.mjs`/`.cjs` here): a finding a lint rule or stricter `tsconfig` flag would catch carries the rule, e.g. `(lint: no-empty)` for `catch {}`, `(lint: no-floating-promises)`, `(lint: no-unused-vars)`.
 
 ## Check
 - `save.mjs` fixes: throw-away `node` script in `/tmp` (`makeSaveFile` on a temp dir, injected `rename` for lock errors).
 - `main.mjs` wiring fixes: `trivia-desktop` on a temp `TRIVIA_SAVE_DIR` (`xvfb-run` + CDP if no display); never the real `state/desktop/`; stop by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (and the lint pass, if part 10 has adopted one by then).
 
 ## Done when
-- `save.mjs` and the save parts of `main.mjs` listed in `## Part 6` with every finding and a status.', '2026-10-12T23:06:35Z', NULL, 518);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (556, 78, 'Review packaging: package.json, lockfile, electron-builder.yml, after-pack.mjs, stage-media.mjs; then new desktop files', 'work', 'open', NULL, NULL, 'Task 3 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 78 "Rules for this plan" (package layout and artefact names unchanged, D-73; never `npm install`/update the lockfile here, a bump is a follow-up task).
+- `save.mjs` and the save parts of `main.mjs` listed in `## Part 6` with every finding and a status (fixes: `fixed (task N)`).', '2026-10-12T23:06:35Z', NULL, 518);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (556, 78, 'Review packaging: package.json, lockfile, electron-builder.yml, after-pack.mjs, stage-media.mjs; then new desktop files', 'work', 'open', NULL, NULL, 'Task 3 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (package layout and artefact names unchanged, D-73; never `npm install`/update the lockfile here, a bump is a follow-up task).
 
 ## First
 - `pm show` tasks 332, 255 (and its plan''s tasks), 232, 355: open and touching these files → findings only, `superseded by task N`.
@@ -11034,14 +11036,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Part 1 rows `handed to part 6` (unused deps, desktop package size): final status in `## Part 6`, quoting the part 1 row.
 - Findings on `flake.nix` wrappers or `.gitignore` → row "handed to part 10".
 - Then: `git ls-files app/desktop` vs. the part 1 inventory and tasks 1–3; every file added since (e.g. Steam binding) reviewed with the same checklist and added to the inventory with part 6; if that exceeds one worker run, `pm task add 78` per remaining group.
+- Linter evidence (part 10''s lint trial covers `.mjs`/`.cjs` here): a finding a lint rule or stricter `tsconfig` flag would catch carries the rule, e.g. `(lint: no-empty)` for `catch {}`, `(lint: no-floating-promises)`, `(lint: no-unused-vars)`.
 
 ## Check
 - Packaging only if `app/desktop/node_modules` exists: `npx electron-builder --linux dir` into a temp output, no network; else review only and say so in the report.
 - `stage-media.mjs` fixes: run on a temp dir with a temp `TRIVIA_MEDIA`.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (and the lint pass, if part 10 has adopted one by then).
 
 ## Done when
-- Every file in `app/desktop/` now is listed in `## Part 6` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 6` has its final status.', '2026-10-12T23:06:35Z', NULL, 518);
+- Every file in `app/desktop/` now is listed in `## Part 6` (no-findings rows included) and in the inventory, every finding with a status (fixes: `fixed (task N)`); every part 1 row `handed to part 6` has its final status.', '2026-10-12T23:06:35Z', NULL, 518);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (557, 79, 'Review qgen helpers, claude() wrapper, schemas and CLI', 'work', 'open', NULL, NULL, 'Task 1 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
@@ -12374,8 +12377,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:38:15Z', '2026-10-12T23:38:53Z', 598);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (610, 77, 'create tasks for plan 77', 'split', 'done', 1000, '2026-10-12, tasks 543–553 bodies: lint evidence tags, fixed (task N) status, lint pass in checks', 'Split plan 77 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:39:12Z', '2026-10-12T23:39:54Z', 599);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (611, 78, 'create tasks for plan 78', 'split', 'open', 1000, NULL, 'Split plan 78 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:40:19Z', NULL, 600);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (611, 78, 'create tasks for plan 78', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 554-556 aligned with revised plan 78 (lint evidence tags, fixed (task N) status, lint pass in checks); no new decisions', 'Split plan 78 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:40:19Z', '2026-10-12T23:40:47Z', 600);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13416,6 +13419,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (408, 599, '2026-10-12T23:38:58Z', '2026-10-12T23:39:20Z', 'done', NULL, 0, 'fa7eb4ab36825ff534e1bfc38979f9ae9c802343', 'claude-opus-5-5[1m]', 'e09fffbf-26a6-4f00-b334-f08900ea9f50', 8, 16, 1885, 257959, 25618, 0.2942998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (409, 610, '2026-10-12T23:39:20Z', '2026-10-12T23:39:58Z', 'done', NULL, 0, '0aad0467c306b6007954938885e63d7f8dc1a9dd', 'claude-opus-5-5[1m]', '79587d54-98ea-4c81-ae4b-a582147946e0', 8, 16, 3385, 296685, 43133, 0.47216500000000006, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (410, 600, '2026-10-12T23:39:59Z', '2026-10-12T23:40:26Z', 'done', NULL, 0, 'b3423b0f590928ef5746857e4f437bf470dd4490', 'claude-opus-5-5[1m]', 'a1615139-b8e5-481b-a3e7-4d724618a5ec', 6, 12, 2517, 218752, 36797, 0.3885144, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (411, 611, '2026-10-12T23:40:26Z', '2026-10-12T23:40:52Z', 'done', NULL, 0, '5caf42916a5ca99f8bd3260129565e88e6f89a7e', 'claude-opus-5-5[1m]', '6abbf0aa-0d90-4efe-a863-7cd9d691d35e', 6, 12, 2218, 177876, 27994, 0.3039352, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
