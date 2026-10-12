@@ -2988,6 +2988,49 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - The unpacked Linux build plays a game with media and sound, no network and no Python, and keeps the save across a restart; the gamemaster''s start test (decision from task 3) passes on Windows and non-Nix Linux.
 - `npm install`, `npm run build`, `nix build .#app` and the `trivia` game are unchanged (D-59); no new dependencies beyond `electron` and `electron-builder` (dev, in `app/desktop/`).
 - SW-6 resolved per decision 14; plan 18, the decision entry, `directory.md`, `19-repo-layout.md`, AGENTS.md, README.md match the code.', '2026-10-12T03:47:41Z', 211);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (57, 9, 'Release quality bar and back-audit (CT-5)', 640, 'Part 2 of the masterplan (plan 9), owner `plans/16-content-target.md` ("Quality bar", CT-5). D-56 (plan 16, pm decision 2: 30 spot-checked per batch, ≥ 90 % agreement in the last two batches) covers batches from batch-8 on. The 1136 questions approved before it (pilot 73, first-120 116, batch-3 112, batch-4 108, batch-5 83, batch-6 76, batch-7 568; incl. `colombia`) never had an audit or a spot check, except batch-7''s audit sample (60, task 46). This plan sets the bar a batch must meet for the Steam release, what happens to a batch above the error limit, and audits the old pool in slices so it meets the same bar. Tooling and procedure only; the gamemaster starts every slice.
+
+## Preconditions
+- Plan 16 done (tasks 46, 47, 48, 49): `qgen audit`, `audit_sample`, `spot-checks.json`, `/review?…&sample=1`, `audit=flagged`, `qgen report --qc`, `authoring/QC.md`. Task 48 (`--qc`, trend, `quality` keys) must be done before task 1 here.
+- pm decision 15 (release bar: D-56''s numbers or stricter): blocks tasks 1 and 4. Recommended: D-56''s agreement plus ≤ 2 false approves in the 30 and none of kind `fact`.
+
+## Release bar
+- New keys `quality.release` in `authoring/data/targets.json` (D-53''s file): `max_false_approve`, `max_fact_false_approve`, `spot_check_size` (values from decision 15; option 2 → only `min_agreement` reused). `qgen validate` checks them.
+- Applies per batch and per back-audit slice, per language later (translations: native speaker, plan 9 rules).
+- `qgen report --qc` (trend) gets a row "release" ✓/✗ per batch/slice; `qgen report --qc <batch>` states which limit failed.
+- Above the limit → the batch or slice is **not release-ready** (family play unchanged; statuses stay as the gamemaster decided):
+  1. `qgen audit --batch <b> --all`: audit every approved question of it, not only the sample (skips audited ones).
+  2. Gamemaster decides the flagged ones in `/review?batch=<b>&audit=flagged`.
+  3. Second spot check with a new seed (`<b>#2`), excluding already spot-checked ids; release-ready once it passes.
+- Release-ready state per batch/slice in `authoring/data/spot-checks.json` (derived from its items, not stored twice) and listed by `qgen report --qc`. Part 12 (S4 close-out) reads it: every batch/slice with approved questions in the release pool is release-ready.
+- D-entry (D-65 or next free): release bar, consequence, back-audit. QC.md gets a "Release bar" step after step 3.
+
+## Back-audit
+- `qgen audit --backlog [--slice N]` (N default 200): gamemaster asks, like `qgen rework`; never part of `qgen batch`, so RUNBOOK/D-36 unchanged except one line under "only when the gamemaster asks".
+  - Creates `work/backaudit-<k>/run.json` (`mode: backaudit`, `ids`, `started`) with the next N approved questions without any audit, oldest batch first (pilot → batch-7); resumes an unfinished run first (like `cmd_rework`).
+  - One opus call per question, `prompts/audit.md` unchanged, `work/backaudit-<k>/audit/<id>.json`; `costs.log` there. Never changes the pool.
+- `spot_checks.audit_of(q)`: also finds audits in `backaudit-*` runs (newest wins); small index, not a glob per question.
+- Findings → review tool: `/review?run=backaudit-<k>&audit=flagged` (major findings, audit notes beside the review''s), and `&sample=1` for the slice''s blind spot check (30 random approved ids of the slice, seeded by run name; `spot_checks.record` accepts run membership, not only `q.batch`).
+- Report: `authoring/reports/backaudit-<k>.md` with the Audit section (`audit_section` reused) and the QC section after the spot check.
+- Per slice, as for a batch (QC.md): back-audit → spot-check decision (gamemaster) → `qgen report --qc backaudit-<k>` → release bar → QC proposals decision if findings. Flagged questions the gamemaster sends to needs_work go through `qgen rework` later (gamemaster asks).
+
+## Cost
+- Baseline: batch-7 audit, 60 opus calls, $2.75 (≈ $0.046 per question, `work/batch-7/audit/costs.log`).
+- Estimate: ~1080 unaudited approved → ~$50, 6 slices of 200, ~1 h opus time with 3 jobs; spot checks 6 × 30 (~1.5 h of the gamemaster).
+- Pilot slice first (100, the oldest: pilot + start of first-120); then a pm decision with the measured cost per question, flagged rate and the estimate for the rest ("Back-audit: run the remaining slices?", options all / only batch-7 / stop) before any further slice.
+
+## Tasks (for the split)
+1. Release bar keys and checks: `quality.release` in `targets.json` + `qgen validate`; release row in `qgen report --qc`, failed limit in the QC section; `qgen audit --batch <b> --all`; second spot-check seed (`<b>#2`, excluding checked ids) in `spot_checks.sample` and the review page; QC.md "Release bar" step; D-entry. Pending on decision 15. Done when: `qgen validate`, `npm run check` clean; `qgen report --qc` shows the release row for batch-7/batch-8 data present.
+2. Back-audit command: `qgen audit --backlog [--slice N]`, `backaudit-<k>` runs, `audit_of` index, report file. Done when: a dry run with `--slice 3` on a scratch copy (or `--dry-run` listing ids) works, `qgen validate` clean; no real slice run.
+3. Review tool for runs: `/review?run=<run>&audit=flagged` and `&sample=1` for back-audit runs; `spot_checks.record` by run membership; docstring lines in `main.py`. Done when: `npm run check` clean, checked in the browser with `trivia-authoring` on a 3-question test run (test entries removed).
+4. Pilot slice (100) through the procedure: `qgen audit --backlog --slice 100`, spot-check decision, `--qc`, then the cost decision above. Priority -90 (with the content runs, after the batch tasks'' QC changes); runs only when the gamemaster has asked (task body says so).
+5. Remaining slices: one task per slice, created by task 4''s worker after the cost decision is answered (option "all"/"only batch-7"); each ends at its spot-check and QC decisions like plan 17''s pattern. Priority -105 (after plan 17''s batch runs at -100, so batch QC changes land first).
+6. Close CT-5 in `plans/16-content-target.md` (quality bar section: release bar, back-audit result per slice, cost), `plans/project.md`; after task 5.
+
+## Done when
+- The release bar is in `targets.json`, checked by `qgen report --qc`, and documented (QC.md, D-entry).
+- Every approved question approved before D-56 has an audit, and every slice is release-ready or has a decision why not.
+- `plans/16-content-target.md` CT-5 `[x]` with the numbers.', '2026-10-12T04:02:41Z', 241);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -4721,11 +4764,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Needs the TS engine (plans 19, 20) and group windows + bundle filter (plan 27): if their code isn''t done, write against their plans and name the dependency; no second referee in Python; the plan decides the small Node adapter if needed.
 - Content: `qgen report --simulate [--locale] [--bundles] [--age-group] [--preset] [--players] [--seeds]`; median, 10th percentile, strong-player bound, bottleneck level/subcategory; pass/fail per launch language, default bundle set, every age group; exit 1 on fail.
 - Owner `plans/16-content-target.md` ("Metric"); feeds parts 9 and 12.', '2026-10-12T01:10:56Z', NULL, 239);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (241, 9, 'write plan: Release quality bar and back-audit (CT-5)', 'plan', 'open', 610, NULL, 'Write the plan for part 2 of the masterplan (plan 9): `pm plan add 9 "Release quality bar and back-audit (CT-5)" --priority 640`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (241, 9, 'write plan: Release quality bar and back-audit (CT-5)', 'plan', 'done', 610, '2026-10-12, pm plan 57, pm decision 15, plans/16-content-target.md', 'Write the plan for part 2 of the masterplan (plan 9): `pm plan add 9 "Release quality bar and back-audit (CT-5)" --priority 640`.
 
 - Waits for decision 2 (D-56''s spot-check size and agreement rate); linked by task 239. Task priority 610 puts this after plan 16''s tasks (46, 47, 49), which build `qgen audit` and the spot-check tooling.
 - Content: release bar = D-56''s numbers, or stricter (then a pm decision with a recommendation); error limit and what happens to a batch above it; back-audit of the pre-D-56 approved pool in slices through `qgen` (gamemaster asks, like `qgen rework`), findings → `/review?audit=flagged`; cost estimate from `costs.log` first, as a pm decision before the full run.
-- Owner `plans/16-content-target.md` ("Quality bar").', '2026-10-12T01:10:56Z', NULL, 239);
+- Owner `plans/16-content-target.md` ("Quality bar").', '2026-10-12T01:10:56Z', '2026-10-12T04:02:48Z', 239);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (242, 9, 'write plan: Translation layout and schema (QT-1, I18N-3)', 'plan', 'open', 490, NULL, 'Write the plan for part 3 of the masterplan (plan 9): `pm plan add 9 "Translation layout and schema (QT-1, I18N-3)" --priority 890`.
 
 - Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
@@ -5324,6 +5367,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: SW-6 resolved per decision 14 and the docs match.', '2026-10-12T03:48:58Z', NULL, 323);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (334, 16, 'create tasks for plan 16', 'split', 'done', 1000, '2026-10-11, no changes: tasks 48 and 49 already match plan 16 (tasks 46, 47 done; decisions 1, 2 answered; no new decisions)', 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T03:53:02Z', '2026-10-12T03:53:33Z', 47);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (335, 57, 'create tasks for plan 57', 'split', 'open', 1000, NULL, 'Split plan 57 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T04:02:41Z', NULL, 241);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -5415,6 +5460,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - A no-media CI build only proves the code packages; the packaged game shows the missing-media notice on every media question.
 - S5 needs CI or a local upload anyway (plan 18 "Builds and depots": media as a shared content depot, upload by hand is the documented alternative).
 - Recommended: move to S5, where the upload and the depot split decide what CI must build.', NULL, NULL, '2026-10-12T03:46:55Z', NULL, 211, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (15, 'Release quality bar (CT-5): D-56''s numbers or stricter for the Steam release?', 'pending', '["Stricter: D-56''s agreement plus at most 2 false approves in the 30 and none of kind fact; batch or slice above it → full audit + gamemaster decides flagged + second spot check", "D-56''s numbers only (>= 90 % agreement, last two batches); a batch below it only feeds QC step 4 (prompt changes), no full audit", "Strictest: spot check 50 per batch for release, at most 1 false approve and none of kind fact; same consequence as option 1"]', 'Plan ''Release quality bar and back-audit (CT-5)'' (milestone 9). D-56/pm decision 2 measure agreement only: 30 spot-checked per batch, >= 90 % human/LLM agreement in the last two batches; a disagreement can be a false needs_work (harmless) as well as a false approve (a wrong or weak question on the TV). For buyers, false approves and wrong facts are what count. batch-7 baseline: audit found a major problem in 9/49 (18 %) LLM-approved questions (mostly giveaways). ''Above the limit'' = the batch or back-audit slice is not release-ready: every approved question of it gets the LLM audit (not only the sample of 60), the gamemaster decides the flagged ones in /review?audit=flagged, then a second spot check (new seed) of 30; release-ready once that passes. Family play is not affected (statuses stay as the gamemaster decides).', NULL, NULL, '2026-10-12T04:02:14Z', NULL, 241, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -5577,6 +5623,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (157, 73, '2026-10-12T03:57:56Z', '2026-10-12T03:59:03Z', 'done', NULL, 0, 'a1f7b91484103170d409e45728bc9b5be3465820', 'claude-opus-5-5[1m]', 'eceaced6-d06f-482b-a66e-16d69f4c3c6b', 12, 20, 6502, 340352, 31438, 0.44969440000000005, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (158, 74, '2026-10-12T03:59:03Z', '2026-10-12T04:00:13Z', 'done', NULL, 0, 'b3f5d5e6b5aea64187aae0f39516114fb9c6cc02', 'claude-opus-5-5[1m]', '255fcce9-31ae-4a94-b688-bc223bf3b066', 12, 20, 6405, 393039, 41081, 0.5354358, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (159, 75, '2026-10-12T04:00:13Z', '2026-10-12T04:01:28Z', 'done', NULL, 0, 'e3b72bc26be9129e7641e24a56e60488a79f8a11', 'claude-opus-5-5[1m]', '6642b1dd-098a-4e99-aa3f-a8f48590694e', 18, 36, 6132, 681540, 33291, 0.52542, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (160, 241, '2026-10-12T04:01:28Z', '2026-10-12T04:02:57Z', 'done', NULL, 0, 'e5cd014e704ed828ebf3a2e506114031adf4fd83', 'claude-opus-5-5[1m]', '5fc0c5fc-edaa-4214-8f7f-7f8098d9b05a', 14, 24, 8674, 596394, 52958, 0.7165188, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
