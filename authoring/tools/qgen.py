@@ -13,6 +13,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle (D-41)
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
+    qgen translate --run <run> [--locale en --ids q-0001,…]   # a translation run's first step (plan 66)
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
@@ -144,9 +145,9 @@ def not_in_bundle(subs, bundle=None):
     return [s for s in subs if s not in known]
 
 
-def prompt(*names):
+def prompt(*names, locale="es"):
     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
-    {voices} from app/data/bundles.json."""
+    {locale} from prompts/locale-<locale>.md, {voices} from app/data/bundles.json."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -161,6 +162,7 @@ def prompt(*names):
                    f"whose window contains its difficulty ({windows}). Write for those players: their knowledge, "
                    'their world, their humour. "The players" below means them, for the question at hand.')
     text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
+    text = text.replace("{locale}", (PROMPTS / f"locale-{locale}.md").read_text(encoding="utf-8").rstrip())
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
             .replace("{players}", players).replace("{voices}", voices_text()))
 
@@ -355,6 +357,15 @@ FACT_SCHEMA = {"type": "object", "required": ["checks"], "properties": {"checks"
     "type": "array", "items": {"type": "object", "required": ["id", "verdict", "problem", "correction", "sources"],
         "properties": {"id": STR, "verdict": {"type": "string", "enum": ["confirmed", "wrong", "uncertain"]},
                        "problem": STR, "correction": STR, "sources": STR_LIST}}}}}
+
+TRAVEL_REASONS = ["wordplay", "about_spanish", "needs_local_knowledge", "other"]
+TRANSLATE_SCHEMA = {"type": "object", "required": ["items"], "properties": {"items": {
+    "type": "array", "items": {"type": "object",
+        "required": ["id", "travels", "reason", *translations.TEXT_FIELDS, "notes"],
+        "properties": {"id": STR, "travels": {"type": "string", "enum": ["yes", "no"]},
+                       "reason": {"type": "string", "enum": ["", *TRAVEL_REASONS]},
+                       "question": STR, "answer": STR, "wrong_answers": STR_LIST, "hints": STR_LIST,
+                       "description": STR, "fun_fact": STR, "notes": STR}}}}}
 
 
 # --- steps -------------------------------------------------------------------
@@ -773,8 +784,153 @@ def check_question_shape(q):
 
 
 def drafts(d):
+    """(file stem, questions) per draft file; a translation run's travelling translations as drafts."""
+    if run_locale(d):
+        yield from translated_drafts(d)
+        return
     for f in sorted((d / "drafts").glob("*.json")):
         yield f.stem, load_json(f)["questions"]
+
+
+# --- translation runs (plan 66, D-81) -------------------------------------------
+
+LANGUAGES = {"en": "English", "de": "German"}
+TRANSLATE_CHUNK = 15  # questions per translate call, one subcategory each
+
+
+def run_locale(d):
+    """The run's locale (a `--translate` run), or None."""
+    return (load_json(d / "run.json", {}) or {}).get("locale")
+
+
+def numbers(text):
+    """The numbers in text, thousands separators and decimal marks dropped: «42 195» = «42,195»."""
+    return sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", text)))
+
+
+def fact_text(q):
+    return " ".join([q["question"], q["answer"], *q["wrong_answers"], *q["hints"], q["fun_fact"]])
+
+
+def translation_needs_check(t, q):
+    """A translation changed a number, unit or date (imperial added included), the translator doubts a
+    fact, or the source wasn't fact-checked; the rest inherits the source's check."""
+    return bool(numbers(fact_text(t)) != numbers(fact_text(q)) or not q.get("fact_checked")
+            or re.search(r"\bfacts?\b|doubt", t["notes"], re.I))
+
+
+def translated_drafts(d):
+    src, locale = {q["id"]: q for q in load_json(POOL)["questions"]}, run_locale(d)
+    for f in sorted((d / "translations").glob("*.json")):
+        out = []
+        for t in load_json(f)["items"]:
+            if t["travels"] != "yes":
+                continue
+            q = src[t["id"]]
+            out.append({"tmp_id": q["id"], "locale": locale, "subcategory": q["subcategory"],
+                        "bundle": q.get("bundle") or "base", "axes": q.get("axes"), "style": q.get("style"),
+                        "difficulty": q["difficulty"], **{k: t[k] for k in translations.TEXT_FIELDS},
+                        "media": {k: q["media"].get(k) for k in ("type", "role", "query", "note")},
+                        "needs_fact_check": translation_needs_check(t, q), "translator_notes": t["notes"]})
+        yield f.stem, out
+
+
+def media_title(q):
+    """The picked file's title from its candidates, if they are still cached."""
+    import media as media_tool
+    found = media_tool.load_candidates(q["id"], "media") or {"candidates": []}
+    url = q["media"].get("source_url")
+    return next((c["title"] for c in found["candidates"] if url and c.get("page_url") == url), None)
+
+
+def translate_chunks(ids, src):
+    """[(name, questions)]: the run's sources per subcategory, at most TRANSLATE_CHUNK per chunk."""
+    by_sub = {}
+    for i in ids:
+        by_sub.setdefault(src[i]["subcategory"], []).append(src[i])
+    return [(f"{slug(sub)}-{n // TRANSLATE_CHUNK + 1}", qs[n:n + TRANSLATE_CHUNK])
+            for sub, qs in by_sub.items() for n in range(0, len(qs), TRANSLATE_CHUNK)]
+
+
+def cmd_translate(args):
+    """Translate the run's sources into its locale (prompts/translate.md): work/<run>/translations/<chunk>.json.
+    A new run needs --locale and --ids (debugging; `qgen batch --translate` makes real runs)."""
+    d = run_dir(args)
+    cfg = load_json(d / "run.json", {}) or {}
+    if not cfg:
+        if not (args.locale and args.ids):
+            sys.exit(f"{args.run} has no run.json: give --locale and --ids")
+        if args.locale not in translations.LOCALES:
+            sys.exit(f"--locale must be one of {', '.join(translations.LOCALES)}")
+        cfg = {"mode": "translate", "locale": args.locale, "ids": [i.strip() for i in args.ids.split(",") if i.strip()],
+               "started": datetime.date.today().isoformat()}
+        save_json(d / "run.json", cfg)
+    locale, src = cfg["locale"], {q["id"]: q for q in load_json(POOL)["questions"]}
+    if unknown := [i for i in cfg["ids"] if i not in src]:
+        sys.exit(f"no such source id: {', '.join(unknown)}")
+    system = prompt("house-style", "translate", locale=locale)
+    todo = [c for c in translate_chunks(cfg["ids"], src) if not (d / "translations" / f"{c[0]}.json").exists()]
+
+    def work(item):
+        name, qs = item
+        items = [{"id": q["id"], "subcategory": q["subcategory"], "difficulty": q["difficulty"],
+                  **{k: q[k] for k in translations.TEXT_FIELDS},
+                  "media": {"type": q["media"]["type"], "role": q["media"]["role"], "query": q["media"].get("query"),
+                            "title": media_title(q)}} for q in qs]
+        out = claude(system, "## Questions (Spanish)\n" + json.dumps(items, ensure_ascii=False), TRANSLATE_SCHEMA,
+                     args.model, d)
+        got = {t["id"]: t for t in out["items"]}
+        if missing := [q["id"] for q in qs if q["id"] not in got]:
+            raise RuntimeError(f"no translation for {', '.join(missing)}")
+        bad = [i for i, t in got.items() if t["travels"] == "yes" and (len(t["wrong_answers"]) != 3 or len(t["hints"]) != 3)]
+        if bad:
+            raise RuntimeError(f"needs 3 wrong answers and 3 hints: {', '.join(bad)}")
+        save_json(d / "translations" / f"{name}.json", {"items": [got[q["id"]] for q in qs]})
+        progress.detail(f"  translate: {name}: " + ", ".join(f"{t['id']} {t['travels']}" for t in out["items"]))
+
+    return parallel(work, todo, args.jobs, "translate", "calls")
+
+
+def merge_translations(d):
+    """Rated and checked translations into questions.<locale>.json as drafts (difficulty from the rating);
+    a stale entry's review is kept as `previous`. Not travelling → not-travelling.json, no entry."""
+    cfg = load_json(d / "run.json")
+    locale, run = cfg["locale"], d.name
+    src = {q["id"]: q for q in load_json(POOL)["questions"]}
+    ratings, checks = collect(d)
+    lo, hi = load_age_groups()["scale"]
+    doc = translations.load(locale)
+    by_id = {t["id"]: t for t in doc["questions"]}
+    merged = set(load_json(d / "merged.json", []))
+    away = load_json(d / "not-travelling.json", [])
+    added, waiting = [], []
+    for f in sorted((d / "translations").glob("*.json")):
+        for t in load_json(f)["items"]:
+            i = t["id"]
+            if i in merged:
+                continue
+            if t["travels"] == "no":
+                away.append({"id": i, "reason": t["reason"], "notes": t["notes"],
+                             "question": src[i]["question"], "answer": src[i]["answer"]})
+                merged.add(i)
+                continue
+            if i not in ratings or i not in checks:
+                waiting.append(i)
+                continue
+            old = by_id.get(i)
+            by_id[i] = {"id": i, **{k: t[k] for k in translations.TEXT_FIELDS},
+                        "difficulty": min(hi, max(lo, ratings[i]["difficulty_estimate"])), "status": "draft",
+                        "batch": run, "review": None, "source_hash": translations.source_hash(src[i]),
+                        **({"previous": old["review"]} if old and old.get("review") else {})}
+            added.append(i)
+            merged.add(i)
+    doc["questions"] = list(by_id.values())
+    translations.save(locale, doc)
+    save_json(d / "merged.json", sorted(merged))
+    save_json(d / "not-travelling.json", away)
+    rel = translations.path(locale).relative_to(ROOT)
+    print(f"merged {len(added)} translation(s) into {rel}; {len(away)} not travelling (not-travelling.json)"
+          + (f"; waiting for rate/factcheck: {', '.join(waiting)}" if waiting else ""))
 
 
 GROUP_SIZE = 10  # questions per rate/revise call (PE-1, PE-2)
@@ -801,8 +957,11 @@ def for_review(q):
 
 def rate_candidates(d):
     """tmp_id → overlap candidates for `rate` (plan 15): pool questions of every bundle (not rejected)
-    and earlier drafts of the run; revised drafts count as later than the first round."""
-    others = [q for q in load_json(POOL)["questions"] if q["status"] != "rejected"]
+    and earlier drafts of the run; revised drafts count as later than the first round.
+    A translation run: the locale's approved translations instead of the pool."""
+    locale = run_locale(d)
+    others = ([t for t in translations.load(locale)["questions"] if t["status"] == "approved"] if locale
+              else [q for q in load_json(POOL)["questions"] if q["status"] != "rejected"])
     out = {}
     for _, qs in sorted(drafts(d), key=lambda f: (f[0].startswith("revised-"), f[0])):
         for q in qs:
@@ -816,7 +975,7 @@ def rate_candidates(d):
 
 def cmd_rate(args):
     d = run_dir(args)
-    system = prompt("house-style", "rate")
+    system = prompt("house-style", "rate", locale=run_locale(d) or "es")
     todo = [(name, qs) for name, qs in drafts(d) if qs and not (d / "ratings" / f"{name}.json").exists()]
     cands = rate_candidates(d) if todo else {}
 
@@ -841,12 +1000,15 @@ def cmd_rate(args):
 
 
 def needs_check(q):
+    if q.get("locale"):  # a translation: translation_needs_check
+        return q["needs_fact_check"]
     return bool(q["needs_fact_check"] or re.search(r"\d", q["question"] + q["answer"] + q["fun_fact"]))
 
 
 def cmd_factcheck(args):
     d = run_dir(args)
     system = prompt("factcheck")
+    language = LANGUAGES.get(run_locale(d), "Spanish")
     _, done = collect(d)  # includes verdicts kept through a revision (PE-3)
     todo = []
     for name, qs in drafts(d):
@@ -856,7 +1018,7 @@ def cmd_factcheck(args):
 
     def work(item):
         name, qs = item
-        user = "## Questions (Spanish)\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
+        user = f"## Questions ({language})\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
         out = claude(system, user, FACT_SCHEMA, args.model, d, web=True)
         save_json(d / "factchecks" / f"{name}.json", {c["id"]: c for c in out["checks"]})
         progress.detail(f"  factcheck: {name}: " + ", ".join(c["verdict"] for c in out["checks"]))
@@ -941,6 +1103,12 @@ def collect(d):
     ratings, checks = {}, {}
     for f in (d / "ratings").glob("*.json"): ratings.update(load_json(f))
     for f in (d / "factchecks").glob("*.json"): checks.update(load_json(f))
+    if run_locale(d):  # translations that keep the source's facts inherit its check
+        for _, qs in drafts(d):
+            for q in qs:
+                if not q["needs_fact_check"]:
+                    checks.setdefault(q["tmp_id"], {"id": q["tmp_id"], "verdict": "confirmed", "problem": "",
+                                                    "correction": "", "sources": [], "inherited": True})
     return ratings, checks
 
 
@@ -962,6 +1130,8 @@ def soft_score(r):
 def cmd_merge(args):
     import media as media_tool  # authoring/tools/media.py
     d = run_dir(args)
+    if run_locale(d):
+        return merge_translations(d)
     data = load_json(POOL)
     pool = data["questions"]
     ratings, checks = collect(d)
@@ -3441,6 +3611,9 @@ def main():
     dp.add_argument("--seed", type=int, default=1)
     dp.add_argument("--slots", type=int, default=4, help="slots per subcategory")
     dp.add_argument("--bundle", default="base", help="bundle of the run's questions, first call only (D-41)")
+    tp = add("translate", cmd_translate, "opus")
+    tp.add_argument("--locale", help="new run only: one of " + ", ".join(translations.LOCALES))
+    tp.add_argument("--ids", help="new run only: comma-separated source ids")
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
     add("dedupe", cmd_dedupe)
