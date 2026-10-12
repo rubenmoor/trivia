@@ -10315,8 +10315,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:53:36Z', '2026-10-12T23:05:54Z', 506);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (518, 78, 'create tasks for plan 78', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 554–556 for plan 78', 'Split plan 78 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:54:58Z', '2026-10-12T23:06:36Z', 507);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (519, 79, 'create tasks for plan 79', 'split', 'open', 1000, NULL, 'Split plan 79 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:56:28Z', NULL, 508);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (519, 79, 'create tasks for plan 79', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 557–566 for plan 79; no decisions needed at split time (structure split decision left to task 566)', 'Split plan 79 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:56:28Z', '2026-10-12T23:07:29Z', 508);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (520, 80, 'create tasks for plan 80', 'split', 'open', 1000, NULL, 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:58:07Z', NULL, 509);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (521, 81, 'create tasks for plan 81', 'split', 'open', 1000, NULL, 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -10980,6 +10980,274 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every file in `app/desktop/` now is listed in `## Part 6` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 6` has its final status.', '2026-10-12T23:06:35Z', NULL, 518);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (557, 79, 'Review qgen helpers, claude() wrapper, schemas and CLI', 'work', 'open', NULL, NULL, 'Task 1 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- Lines ≈1–400 and ≈3943–end: constants (`LEVEL_WEIGHTS`, `RUBRIC`, criteria), `load_json`/`save_json` (atomic?), `slug`/`norm`, age group and bundle text helpers, `prompt()`, `run_dir`.
+- `parallel()`: thread errors, Ctrl-C.
+- `UsageLimit`/`limit_reset`/`RESET_RE`/`wait_for_reset`: time zones, month rollover.
+- `main_model`, `claude()`: retries, JSON parse errors, `cwd`, `web`/`read`.
+- Every `*_SCHEMA`: still used?
+- `main()` argparse: every subparser/flag read, hidden flags, help text vs. AGENTS.md command list.
+
+## Done when
+- Every helper, schema and the CLI listed in `## Part 7` with findings and status (no-findings rows included).', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (558, 79, 'Review qgen concepts, bundles and draft', 'work', 'open', NULL, NULL, 'Task 2 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- ≈lines 371–800: `axes_schema`/`facets_schema`/`list_schema`, `cmd_concepts`, `finalize_concepts`, `cmd_bundles` (`BUNDLE_GROUP`), `target_weights`, `level_counts`, `assign_difficulties` (seed, `rounds`), `draw_slots`, `existing_answers`, `cmd_draft`, `retire`, `option_key`, `check_question_shape`, `drafts`.
+- Overlap with `targets.py`/`batches.py` (log as duplication candidate).
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (559, 79, 'Review qgen translation', 'work', 'open', NULL, NULL, 'Task 3 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `run_locale` … `tmp_ids` (≈800–978), `record_translations` (≈2652–2709), `spread` … `write_translate_report` (≈3164–3340).
+- Chunking (`TRANSLATE_CHUNK`, `TRANSLATE_SIZE`, `TRANSLATE_PILOT`), `translation_needs_check`, `merge_translations`.
+- `locale_questions`/`update_translations` vs. `translations.py` (`load`/`save`/`is_stale`).
+- Selection order per decision 45 (`spread`, van der Corput, per-subcategory offset).
+- `LANGUAGES` vs. `translations.LOCALES` vs. `LAUNCH_LOCALES` (three locale lists): merge if cheap and behaviour-neutral, else follow-up.
+
+## Done when
+- Every function of the three ranges listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (560, 79, 'Review qgen rate, factcheck, dedupe, merge, import, revise, apply', 'work', 'open', NULL, NULL, 'Task 4 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `GROUP_SIZE` … `count` (≈978–1472): `grouped`, `rate_candidates`, `cmd_rate`, `cmd_factcheck`, `duplicates`/`stem`/`_overlap_keys` (module-level `_KEYS` cache keyed by `id(q)`: stale ids after GC), `overlap_candidates`, `collect`, `cmd_dedupe`, `soft_score`, `cmd_merge`, `save_pool`, `cmd_import`, `issues_of` (`DIFFICULTY_GAP`), `cmd_revise`, `revise_in_pool`, `cmd_apply`, `apply_to_drafts`.
+- `grouped` vs. `chunks` (≈2531): duplication inside qgen; merge if behaviour-neutral.
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (561, 79, 'Review qgen report', 'work', 'open', NULL, NULL, 'Task 5 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `report_subcategories` … `cmd_report` (≈1472–2177).
+- Saturation constants (`SAT_*`, `HARD_AT`), calibration, overlaps, progress/supply.
+- QC: `qc_stats`, `release_failures`, `qc_section`, `write_qc`, `qc_trend`; `exit_check`.
+- Simulate: `LAUNCH_LOCALES`, `SIM_MODES`, `AGE_GROUP_IDS` vs. `age_groups.json`/D-74/D-76 (hard-coded copies).
+- Cost: `RUN_KINDS`, `cost_runs`, `cost_report`; `engine_model`; `cmd_report` option handling.
+- Numbers vs. `health.py` metrics: duplication candidate for part 10.
+- Check: `qgen report` with each option on a temp copy prints the same before and after a fix (diff).
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (562, 79, 'Review qgen LLM batch steps: media, sheets, review, fix, research, record', 'work', 'open', NULL, NULL, 'Task 6 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `BATCH_SLOTS` … `cmd_record` (≈2177–2652): `REVIEW_SCHEMA`, `_GUESS`/`guess_problems`, `batch_questions`, `run_mode`/`is_rework`, `update_pool`, `cmd_media`, `cmd_sheets`, `related_questions`, `slot_input`, `cmd_review`, `cmd_fix` (≈130 lines: split candidate), `chunks`, `fix_issue`, `needs_recheck`, `cmd_research`, `final_review`, `cmd_record`.
+- `review_problems` at ≈2207: shadowed by the validate helper of the same name (≈3715) and never called → dead; delete or rename per callers (grep `qgen.review_problems` in other modules first).
+- `cmd_media`: tasks 311/312 may still change it → findings only if open.
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status; the shadowed `review_problems` resolved.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (563, 79, 'Review qgen audit, back-audit and batch orchestration', 'work', 'open', NULL, NULL, 'Task 7 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `AUDIT_SAMPLE` … `cmd_batch` (≈2709–3164): `llm_decisions`, `audit_sample` (seed, sample size), `audits`, `backaudit_index`/`audit_path`/`audit_of`, `run_number`, `is_major`, `cmd_audit`, `audit_ids`, `BACKAUDIT_*`, `backlog`, `cmd_backaudit`, `write_backaudit_report`, `costs`, `audit_section`, `cmd_sync_run`, `cmd_batch_report`, `next_batch`, `batch_subcategories`, `run_steps`, `cmd_batch`.
+- `run_steps`: resume after a crash or `UsageLimit` (partial `work/<run>/` files), health stop per D-55.
+- Public names here (`llm_decisions`, `audit_sample`, `audits`, `audit_of`, `is_major`, `costs`) stay.
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (564, 79, 'Review qgen health ack, rework, scan, tighten, neutralize', 'work', 'open', NULL, NULL, 'Task 8 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `cmd_health_ack` … `write_neutralize_report` (≈3340–3608): `cmd_rework` (`--model`, plan 58, decision 17), `SCAN_SCHEMA`, `SCANS`, `NEUTRAL_FIELDS`, `cmd_scan`, `cmd_tighten`, `cmd_neutralize` (stales translations, D-83), `scan_extras`, `print_neutralize_scan`, `write_neutralize_report`.
+- Shared shape with `cmd_batch`/`cmd_translate_batch` (run.json / report / "Commit exactly this" repeated per run mode): merge into one helper if output stays byte-identical, else follow-up task.
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (565, 79, 'Review qgen export and validate', 'work', 'open', NULL, NULL, 'Task 9 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `cmd_export` … `cmd_validate` (≈3608–3943): `cmd_export` vs. `pool_export.py`, `licence_problem`, `validate_pool` (≈90 lines), `review_problems` (the live one), `first_ids`, `translation_problems`, `names_problems`/`name_ok`/`names_warnings`, `spot_check_problems`, `taxonomy_problems`, `bundle_problems`, `cmd_bundle_new`, `cmd_validate`.
+- Errors vs. warnings consistent, every check reachable, messages name the file and id; the stale `app/data/pool.json` check.
+- Check: `qgen validate` and `qgen export` on a temp copy print/write the same before and after a fix (diff).
+
+## Done when
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:26Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (566, 79, 'Judge qgen module structure; collect part 7 duplication candidates', 'work', 'open', NULL, NULL, 'Task 10 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+
+## First
+- Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- `grep -n ''^def \|^# \|^class '' authoring/tools/qgen.py`: find the section by the function names below (line numbers drift).
+- `pm queue` + grep open task bodies for these functions (plan 79 "Depends on": tasks 311, 312, 445, 50–53, 339/340, 345, 463, 427, plans from tasks 249/250); code an open task still changes → findings only, status `superseded by task N`.
+- `pm decision list --answered --grep <function or term>` before a fix; binding: D-36, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, `decision 35: Translation prompts and markets per locale (plan 66)`, `decision 37: Per-locale content targets and gap aiming`, `decision 17` (Fable rework).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 79 "Rules for this plan": behaviour unchanged (CLI, `work/<run>/` files, pool/locale JSON byte-identical, prompts to `claude`); public names used by `health.py`, `batches.py`, `targets.py`, `spot_checks.py`, `authoring/server/main.py` stay (re-grep before removing/renaming).
+- Checklist: errors around `claude()`/subprocesses, IO atomicity, cost accounting, magic numbers vs. named constants and D-references, dead/shadowed code, duplication inside qgen and with `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/*`.
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/prompt): `pm decision add` (recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`; larger work: `pm task add 79`.
+- Part 1 rows `handed to part 7` in this range (never-referenced `def`s, unread flags, unused imports, bare `except`, `TODO`s): re-check, final status in `## Part 7`, quoting the row.
+
+## Check
+- No LLM calls, no real runs: throw-away scripts in `/tmp` on a temp copy of `authoring/data/`, `work/`, `app/data/` with a stubbed `claude()`; outputs before/after a fix diffed.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- Last task of plan 79; needs tasks 1–9 done (read their rows in `## Part 7`).
+- Verdict: one 4000-line file vs. a split (`qgen/` package or sibling modules: helpers + `claude()`, steps, translate, report, audit, batch orchestration, validate/export) vs. keep with clearer section markers; effect on importers, `bin/qgen` in `flake.nix`, `directory.md`, prompts'' paths, `python -m`.
+- Cheap structure fixes in the file only (lying section comments, misplaced functions moved, duplicated helpers merged): do them.
+- A split that changes imports in other modules or the entry point: `pm decision add` (options, recommended first) + follow-up task in plan 79 linked with `pm task-pending-decision`.
+- One list of this part''s duplication candidates in `## Part 7` for part 10 (`plan 82`).
+
+## Done when
+- Structure verdict logged in `## Part 7` (fixed / decision N); duplication list there; every part 1 row `handed to part 7` has a final status.', '2026-10-12T23:07:26Z', NULL, 519);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -11994,6 +12262,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (383, 516, '2026-10-12T23:04:20Z', '2026-10-12T23:05:08Z', 'done', NULL, 0, '3555207a42e2f5ade08868f3f5f457b67fad8ea7', 'claude-opus-5-5[1m]', '31562a98-5e34-48cf-b96b-d0a0861a6573', 7, 14, 5323, 232641, 32558, 0.4135082, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (384, 517, '2026-10-12T23:05:08Z', '2026-10-12T23:06:00Z', 'done', NULL, 0, '8f9477ab942de461dc95e64e2eb3dd7e94e327aa', 'claude-opus-5-5[1m]', '82460f68-34d1-48c3-a2f8-b4a834d24899', 7, 14, 5746, 229945, 31876, 0.415973, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (385, 518, '2026-10-12T23:06:00Z', '2026-10-12T23:06:40Z', 'done', NULL, 0, '43d714912ee3fdc686107ce3718d282bb0427188', 'claude-opus-5-5[1m]', 'a4c7cfab-1f0d-4d0f-aac4-b08e7c1a741b', 5, 10, 4551, 148771, 28983, 0.3526782, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (386, 519, '2026-10-12T23:06:40Z', '2026-10-12T23:07:36Z', 'done', NULL, 0, 'ec8f53ab686ed945af59b88b3b3f4b9b83dfce1e', 'claude-opus-5-5[1m]', 'e277c5e2-17b3-4cc3-a687-6082f1c24d97', 6, 12, 6162, 203478, 34310, 0.4384636, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
