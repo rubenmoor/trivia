@@ -4475,7 +4475,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/17-publishing.md`: PUB-4 `[x]` with a note.
 
 Done when: licence file(s) exist, linked from `README.md` and `directory.md`; `nix build .#app` passes; PUB-4 `[x]`.', '2026-10-12T00:49:40Z', NULL, 178);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (201, 41, 'Multiplayer: facts, options, write the decision(s) (OQ-37)', 'work', 'open', NULL, NULL, 'Part 1 of plan 41. Prepare the OQ-37 decision(s); no code.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (201, 41, 'Multiplayer: facts, options, write the decision(s) (OQ-37)', 'work', 'done', NULL, '2026-10-11, pm decisions 23 (competitive format) and 24 (input and couch co-op), task 202 pending on both; burn numbers from a throw-away sim (deleted); external facts from memory (no web access), re-check in 202', 'Part 1 of plan 41. Prepare the OQ-37 decision(s); no code.
 
 - Facts (one line each, with source):
   - Gamepad API pad limit in Chromium/Electron (4 on most platforms); Steam Input / Steam Deck behaviour
@@ -4492,7 +4492,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add`, body = context + facts + trade-offs, ultra-short.
 - `pm task-pending-decision` on the next task of plan 41 (record the answer) for each decision.
 
-Done when: the decision(s) exist with facts and sources; the follow-up task waits on them.', '2026-10-12T00:50:05Z', NULL, 179);
+Done when: the decision(s) exist with facts and sources; the follow-up task waits on them.', '2026-10-12T00:50:05Z', '2026-10-12T04:44:07Z', 179);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (202, 41, 'Multiplayer: record the answer (OQ-37)', 'work', 'open', NULL, NULL, 'Part 2 of plan 41. Waits for the OQ-37 decision(s) from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number): format, co-op rule, input, mixed age groups, burn multiplier, shell needs.
@@ -5672,6 +5672,46 @@ Proposal (`{base}`; thinnest level by candidates; games one player can play unti
 Thin top, for milestone 1 (not fixed here): difficulty 14: 19 approved, 15: 8. Adults'' top levels run dry first even widened; `young_adults`'' 11–13 (147) after 10 games.
 
 Answer is applied by task 127.', NULL, NULL, '2026-10-12T04:41:04Z', NULL, 126, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (23, 'Competitive format (OQ-37)?', 'pending', '["Relay ladder on one shared tower, turns in fixed order; each player 1 joker per game (any kind); no attack jokers; per-player windows for mixed age groups; burns 12+(N−1)+N per won game (≈1× solo Normal); shell: nothing", "As 1, but one window for the game (the youngest player''s)", "As 1, but each player gets the chosen preset''s budget (pm decision 19); burns 12+(N−1)+8N (4 adults today: 1 game)", "Parallel ladders: own tower per player, one level per round, all see all; burns 12N–20N", "Buzzer round: everyone sees the question, first to buzz answers, points per round; ~12 burns per round; needs one pad per player or phones"]', 'Plan 41 / MD-8. Several players, no gamemaster, one screen. Input is the second decision («Multiplayer input and couch co-op (OQ-37)»).
+
+Facts (no web in this run: sources from memory, re-check in task 202)
+- Burning (D-28): every question shown burns for every player in the game, so a regular group burns the union of what it saw.
+- Comparable games: Jackbox Trivia Murder Party / You Don''t Know Jack (phones, 1–8, everyone answers in parallel; jackboxgames.com); Trivial Pursuit Live! (Ubisoft, Steam, 1–4 local, pads/hot-seat; store page); Buzz! (PlayStation, 4–8 USB buzzers; not on Steam). Buzzers need one device per player (decision 2).
+- Win rule (relay): wrong answer knocks that player out; the next player gets a new card on the same level; last player in wins (may play on to 12).
+
+Burns per won game (solo: 12, Normal preset 20, pm decision 19 draft)
+- Relay, 1 joker per player: 12 + (N−1) + N → 2: 15, 4: 19, 8: 27 (≈ 1× Normal solo).
+- Relay, preset per player (Normal 8 burns each): 12 + (N−1) + 8N → 4: 47, 8: 75.
+- Parallel ladders: 12N (no jokers) to 20N.
+- Buzzer: 12 per round (no jokers), more rounds per game.
+
+Games a regular group can play until a level runs dry (strong players, draft windows, approved `base` 1034 today → at 5000 D-53 mix; throw-away sim, median of seeds)
+- adults: solo Normal 6 → 52; relay 1 joker N=4 9 → 76, N=8 4 → 38; relay preset N=4 1 → 17; parallel N=4 4 → 38.
+- young_teens: solo Normal 22 → 115; relay 1 joker N=4 29 → 151, N=8 16 → 84; relay preset N=4 7 → 38; parallel N=4 9 → 62.
+- → relay with 1 joker each lasts as long as solo Normal; preset-per-player and parallel ladders burn 3–5× faster.
+
+Mixed age groups (D-38, D-68: age group is per game today)
+- One window (youngest''s): adults win easily; no engine change.
+- Per-player windows: each turn draws from the player''s group range for that level (handicap, like family editions of board trivia); supply check per group present; `settings.age_group` becomes per player in this mode.
+
+Attack jokers («give the next player a harder card»): new joker kind, art, rules, more burns; recommended no (later idea).
+
+Shell needs (plan 34): none for relay/parallel; buzzer needs one pad per player (≤ 4) or the phone server.', NULL, NULL, '2026-10-12T04:43:51Z', NULL, 201, NULL);
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (24, 'Multiplayer input and couch co-op (OQ-37)?', 'pending', '["Hot-seat for competitive (any input acts for the player on turn); no separate couch co-op (any pad drives the default mode); no phones (IN-7: no); IN-6 = ''every connected pad acts'' only, no join screen; Remote Play Together works as is; shell: nothing", "As 1, plus one pad per player (≤ 4) with a «Pulsa A para unirte» join screen; couch co-op team confirm by majority", "As 2, but couch co-op confirm by one captain pad", "Phones as buzzers (LAN server in Electron, QR join, firewall prompt), own later task; hot-seat stays as the fallback"]', 'Plan 41 / IN-6, IN-7, MD-9. Format: pm decision 23. Shell is Electron (D-63).
+
+Facts (no web in this run: sources from memory, re-check in task 202)
+- Gamepad API in Chromium/Electron: `navigator.getGamepads()` has 4 slots (Chromium `Gamepads::kItemsLengthCap`); XInput on Windows also 4 (`XUSER_MAX_COUNT`, Microsoft docs).
+- Steam Input turns most pads into virtual Xbox pads; the Deck''s controls are pad 1, external pads add more (plan 14 §2, Steamworks Steam Input docs).
+- Remote Play Together: friends join via the Steam overlay; their pads (and, if the host allows, keyboard/mouse) arrive as input on the host; up to 4 players, more on fast connections (store.steampowered.com/remoteplay). Works with hot-seat too: any remote pad can press for the player on turn. Needs only an opt-in in Steamworks (SW-13).
+- Phones as buzzers: Jackbox uses its own internet servers (jackbox.tv room code), not LAN. Here: Node `http` + WebSocket in Electron''s main process, QR with the LAN address, Windows Defender firewall prompt on first listen, some guest Wi-Fis block client-to-client; weakens "offline, one machine"; a page to build and test on phones.
+- Default mode is already a team game: the family discusses, one person presses (as with the gamemaster today).
+
+Options per part
+- Couch co-op: (a) no separate mode: the default mode, any pad/mouse/keyboard drives the one focus; (b) a pad per player and a team confirm (majority / captain): join screen, vote UI, more rules for 1× burn.
+- Competitive input: (a) hot-seat: «Turno de Ana», any input acts for the player on turn, no join screen; (b) one pad per player (≤ 4, more players share): join screen + binding (IN-6); needed only for a buzzer format; (c) phones: up to 8+, own later task.
+- Burns: input doesn''t change burns (co-op = 1× solo).
+
+Shell needs (plan 34): (a) nothing beyond the Gamepad API; (b) nothing; (c) LAN server + firewall prompt in Electron main.', NULL, NULL, '2026-10-12T04:44:02Z', NULL, 201, NULL);
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -5859,6 +5899,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (182, 125, '2026-10-12T04:34:36Z', '2026-10-12T04:37:30Z', 'done', NULL, 0, '846d7e827f45c88bcca6afa55f772f17313109c6', 'claude-opus-5-5[1m]', 'aa379ab9-0487-4f85-89eb-926f0728a496', 28, 44, 17786, 1428225, 73027, 1.225757, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (183, 191, '2026-10-12T04:37:31Z', '2026-10-12T04:38:36Z', 'done', NULL, 0, '30daeace14c6c59c67350e24080e5b97aff7ce3e', 'claude-opus-5-5[1m]', '7b67776a-4384-401c-996b-f0647a3f87b6', 10, 20, 6414, 380688, 35033, 0.4847616, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (184, 126, '2026-10-12T04:38:36Z', '2026-10-12T04:41:20Z', 'done', NULL, 0, 'b97185aea2a6a8d2207fee544d18cbac1d79de85', 'claude-opus-5-5[1m]', '4034b6db-c3f5-4578-8a39-af0c24213da1', 16, 28, 15472, 668970, 55138, 0.88445, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (185, 201, '2026-10-12T04:41:20Z', '2026-10-12T04:44:16Z', 'done', NULL, 0, '80918a7b028fa3f7f2b4e1f1f629d282e37b2c38', 'claude-opus-5-5[1m]', '259f7c4b-b2bb-4e59-b863-72b0e5130bb7', 22, 38, 14981, 909055, 56128, 0.930607, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -5890,6 +5931,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 20);
 INSERT INTO task_decision (task_id, decision_id) VALUES (192, 21);
+INSERT INTO task_decision (task_id, decision_id) VALUES (202, 23);
+INSERT INTO task_decision (task_id, decision_id) VALUES (202, 24);
 INSERT INTO task_decision (task_id, decision_id) VALUES (209, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (210, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (211, 12);
