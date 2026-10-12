@@ -10317,8 +10317,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:54:58Z', '2026-10-12T23:06:36Z', 507);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (519, 79, 'create tasks for plan 79', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 557–566 for plan 79; no decisions needed at split time (structure split decision left to task 566)', 'Split plan 79 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:56:28Z', '2026-10-12T23:07:29Z', 508);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (520, 80, 'create tasks for plan 80', 'split', 'open', 1000, NULL, 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:58:07Z', NULL, 509);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (520, 80, 'create tasks for plan 80', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 567–572 for plan 80; no decisions needed at split time', 'Split plan 80 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:58:07Z', '2026-10-12T23:08:19Z', 509);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (521, 81, 'create tasks for plan 81', 'split', 'open', 1000, NULL, 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:59:31Z', NULL, 510);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (522, 82, 'create tasks for plan 82', 'split', 'open', 1000, NULL, 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -11248,6 +11248,178 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Structure verdict logged in `## Part 7` (fixed / decision N); duplication list there; every part 1 row `handed to part 7` has a final status.', '2026-10-12T23:07:26Z', NULL, 519);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (567, 80, 'Review batch health and targets: health.py, targets.py, batches.py, age_groups.py', 'work', 'open', NULL, NULL, 'Task 1 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen review): its findings and duplication list for the shared modules (`health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`); don''t redo them.
+- `pm show <id>` for the open tasks touching these files (plan 80 "Depends on": 302, 303, 309, 311, 312, 204/205, 232, 443, 463, 427); still open → findings there only, status `superseded by task N`, no refactor.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-60, D-59, D-53/D-75/`decision 37: Per-locale content targets and gap aiming`, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, D-81, D-37, D-62/`decision 8`, `decision 4`, `decision 21`/`decision 23`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
+- Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
+
+## Check
+- No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
+- `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `health.py` (≈357 lines): `load()` swallowing missing/broken files; `batch_health` (≈50 lines) and `translation_health` vs. D-55/decision 45 thresholds; `THRESHOLDABLE`/`PCT` vs. `targets.json` keys; `stop_reason`/`translate_stop_reason` duplication; `write_batches_md` atomicity; repeated pool loads per run in `table()`.
+- `targets.py` (≈152): `NOT_BUNDLES` vs. `targets.json`; `deficits`/`source_supply`/`source_shortfall`/`draft_gaps` vs. decision 37; `problems()` messages; budget loader → task 463 while open.
+- `batches.py` (≈35): `SHARE`; `unfinished_runs` on a half-written `run.json`.
+- `age_groups.py` (≈32): `level_weights` vs. the engine''s `parseAgeGroups` (duplication candidate).
+- Duplication candidates: `health.py` metrics ↔ qgen report.
+
+## Done when
+- The four files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (568, 80, 'Review drafting helpers: concepts.py, progress.py', 'work', 'open', NULL, NULL, 'Task 2 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen review): its findings and duplication list for the shared modules (`health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`); don''t redo them.
+- `pm show <id>` for the open tasks touching these files (plan 80 "Depends on": 302, 303, 309, 311, 312, 204/205, 232, 443, 463, 427); still open → findings there only, status `superseded by task N`, no refactor.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-60, D-59, D-53/D-75/`decision 37: Per-locale content targets and gap aiming`, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, D-81, D-37, D-62/`decision 8`, `decision 4`, `decision 21`/`decision 23`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
+- Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
+
+## Check
+- No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
+- `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `concepts.py` (≈204 lines): `_slug`/`key` vs. qgen `slug`/`norm`; `save()` atomicity; `draw_combos` `tries=50` fallback (silently fewer options?); RNG passed in vs. module `random`; `possible_combos` cost per slot; constants vs. their plan refs (OQ-38, PE-9, D-37).
+- `progress.py` (≈189): `_Stream` wrapping `sys.stdout`/`stderr` (threads, non-tty, Windows console); `_install` once; `Bar` cleanup on exceptions/Ctrl-C; `LIVE` computed at import.
+
+## Done when
+- Both files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (569, 80, 'Review data and path helpers: layout.py, translations.py, pool_export.py, save_file.py; short review of record_fixtures.py', 'work', 'open', NULL, NULL, 'Task 3 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen review): its findings and duplication list for the shared modules (`health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`); don''t redo them.
+- `pm show <id>` for the open tasks touching these files (plan 80 "Depends on": 302, 303, 309, 311, 312, 204/205, 232, 443, 463, 427); still open → findings there only, status `superseded by task N`, no refactor.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-60, D-59, D-53/D-75/`decision 37: Per-locale content targets and gap aiming`, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, D-81, D-37, D-62/`decision 8`, `decision 4`, `decision 21`/`decision 23`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
+- Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
+
+## Check
+- No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
+- `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `layout.py` (≈38 lines): paths vs. `directory.md`; `TRIVIA_WORK` vs. `app/server/paths.py` env handling; Windows paths; `sys.path` tricks to import `app/server`; docstring → task 303 while open.
+- `translations.py` (≈100): `save()` atomic + lock (shared with `authoring/server`); `source_hash` field set vs. `TEXT_FIELDS`; `is_stale`; `LOCALES` (D-78); `yield_rate` division by zero; server locale helpers → task 443 while open.
+- `pool_export.py` (≈41): byte-stable output (key order, `ensure_ascii`, trailing newline); `write` atomicity; `exports` vs. `translations.exports`; `MEDIA_PLAY_FIELDS`/`BACKGROUND_PLAY_FIELDS` → task 232 while open.
+- `save_file.py` (≈85): read-only per D-59; `record_applied` atomicity; missing/corrupt `game.json`; `_legacy` → `superseded by task 302`; burns → task 427 while open.
+- `record_fixtures.py` (852, short): task 302 rule: one pass for anything that breaks `npm test` today; other rows `superseded by task 302`.
+- Duplication candidates: `layout.py` ↔ `app/server/paths.py`; `save_file.py` ↔ `app/server/save.py` / `app/desktop/save.mjs` (envelope, path); `pool_export.py`/`translations.export_text` ↔ qgen `cmd_export`; `translations.LOCALES` ↔ qgen `LANGUAGES`/`LAUNCH_LOCALES`.
+
+## Done when
+- The five files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (570, 80, 'Review media tooling: media.py, download.py', 'work', 'open', NULL, NULL, 'Task 4 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen review): its findings and duplication list for the shared modules (`health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`); don''t redo them.
+- `pm show <id>` for the open tasks touching these files (plan 80 "Depends on": 302, 303, 309, 311, 312, 204/205, 232, 443, 463, 427); still open → findings there only, status `superseded by task N`, no refactor.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-60, D-59, D-53/D-75/`decision 37: Per-locale content targets and gap aiming`, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, D-81, D-37, D-62/`decision 8`, `decision 4`, `decision 21`/`decision 23`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
+- Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
+
+## Check
+- No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
+- `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `download.py` (≈72 lines): `http_get` retries/`RateLimited`/`WAIT_ON_RATE_LIMIT` (global flag); timeouts; `USER_AGENT` version; `COMMONS_ACCESS_TOKEN` read at import; `cached()` partial files on error (tmp + rename?); offline behaviour.
+- `media.py` (≈352): `find_candidates` loop (`query_variants`, `ENOUGH`, `MAX_PER_AUTHOR`); candidate file IO; `make_sheet` (subprocess/ImageMagick errors); `cmd_sync` (missing files, `--status`, cache path vs. `media_cache.py`); `cmd_licenses`/`licence_rows`/`pd_group` vs. `providers.licence_verdict`.
+- Parts touched by tasks 309/311/312 (`find_candidates`/`fetch_for` params, licence verdicts, `trivia-media licenses`) → findings only while open.
+- Duplication candidates: `MIN_API_INTERVAL`/rate limiting ↔ `providers/*`; `media.py` `cmd_sync` ↔ `app/server/media_cache.py`.
+
+## Done when
+- Both files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (571, 80, 'Review media providers: providers/__init__.py, commons.py, nasa.py, openverse.py, freesound.py', 'work', 'open', NULL, NULL, 'Task 5 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen review): its findings and duplication list for the shared modules (`health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`); don''t redo them.
+- `pm show <id>` for the open tasks touching these files (plan 80 "Depends on": 302, 303, 309, 311, 312, 204/205, 232, 443, 463, 427); still open → findings there only, status `superseded by task N`, no refactor.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-60, D-59, D-53/D-75/`decision 37: Per-locale content targets and gap aiming`, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, D-81, D-37, D-62/`decision 8`, `decision 4`, `decision 21`/`decision 23`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
+- Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
+
+## Check
+- No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
+- `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- Common interface (`ID`, `NAME`, `available`, `search`, `download_url`, `pd_reasons`) identical in all four providers.
+- `cooling()` and per-module `MIN_API_INTERVAL` (one rate limiter or four); one provider''s error aborting the search vs. skipping it; timeouts; API keys from env at import; `openverse.token()` caching/expiry.
+- Licence mapping: `LICENCE_KINDS`, `licence_kind`, `US_ONLY_PD`, `licence_verdict` vs. D-62/decision 8; Freesound/Openverse licence regexes vs. the allowlist; `licence_verdict` changes → tasks 309/311 while open.
+- `ORDER`/`SPACE_CATEGORIES`: Freesound part → `superseded by task 204` while open.
+- Duplication candidates: rate limiting and `available()` across `providers/*` and `download.py`.
+
+## Done when
+- The five files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (572, 80, 'Review the Node engine bridge: engine.py, supply.ts, sim/, package.json; close part 8', 'work', 'open', NULL, NULL, 'Task 6 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+
+## First
+- Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
+- Read `## Part 7` (plan 79, qgen review): its findings and duplication list for the shared modules (`health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`); don''t redo them.
+- `pm show <id>` for the open tasks touching these files (plan 80 "Depends on": 302, 303, 309, 311, 312, 204/205, 232, 443, 463, 427); still open → findings there only, status `superseded by task N`, no refactor.
+- `pm decision list --answered --grep <file or term>` before a fix; binding: D-60, D-59, D-53/D-75/`decision 37: Per-locale content targets and gap aiming`, D-55/`decision 45: Health thresholds and selection order for qgen batch --translate runs`, D-81, D-37, D-62/`decision 8`, `decision 4`, `decision 21`/`decision 23`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 80 "Rules for this plan": behaviour unchanged (`trivia-media` output, files/JSON written, `app/data/pool*.json` byte-identical, `state/flags-applied.json`, stdin/stdout JSON of `supply.ts`/`simulate.ts`, public names imported by `qgen.py`, `authoring/server/*.py`, other tools; re-grep before removing/renaming).
+- Duplication with other modules: log only, as "duplication candidate for part 10".
+- Core design issue (changed CLI/format/behaviour): `pm decision add` (recommended first) + follow-up task in plan 80 linked with `pm task-pending-decision`; larger work: `pm task add 80`.
+- Part 1 rows `handed to part 8` for these files (`directory.md` gaps, never-referenced `def`s, unused exports, bare `except`, `TODO`s, `package.json` deps): re-check, final status in `## Part 8`, quoting the row.
+
+## Check
+- No network, no LLM calls: throw-away scripts in `/tmp`, stubbed `http_get`/`urlopen` with canned JSON; temp copies via `TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA`, never the real `authoring/data/`, `app/data/`, `work/`, `state/`, media cache.
+- `qgen validate`, `qgen export`, `qgen report` (incl. `--simulate`, `--batches`) on a temp copy: same output before/after a fix (diff).
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## What
+- `engine.py` (≈34 lines): subprocess errors (stderr only on failure, JSON parse errors, huge payloads via stdin); Node startup per call (batch with `supplies`?); D-60 (no rule re-implemented).
+- `supply.ts` (≈32), `sim/load.ts` (≈33), `sim/simulate.ts` (≈256): not covered by `npm run check`: type-check once by hand (`npx tsc --noEmit` with a throw-away config in `/tmp`); adding them to a tsconfig is a part 10 row, not a fix here.
+  - `as` casts on stdin JSON; `DATA_DIR` relative paths; `simulate.ts` constants (`TYPICAL_P`, `MAX_GAMES`, `NOW`, `SIM_MODES`, `MULTI`) vs. the engine''s mode list; `uniform` seeding; `run`/`playGame`/`runTimed` (≈150 lines) split candidates; `cache` per locale.
+  - `burned` → seen counters: `superseded by task 427` while open.
+- `package.json`: deps vs. imports (part 1 row).
+- Duplication candidate: `sim/simulate.ts` `SIM_MODES` ↔ qgen `SIM_MODES`.
+
+## Close the part
+- Needs tasks 1–5 of plan 80 done (read their rows in `## Part 8`).
+- `git ls-files authoring/tools` minus `qgen.py` and `prompts/` vs. the part 1 inventory and tasks 1–6; files added since: review with the same checklist, add to the inventory with part 8; too much for this run → `pm task add 80` per remaining group.
+- Every part 1 row `handed to part 8` has its final status in `## Part 8`.
+- One list of this part''s duplication candidates in `## Part 8` for part 10 (`plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`).
+
+## Done when
+- These files listed in `## Part 8` with findings and status; plan 80 "Done when" holds.', '2026-10-12T23:08:17Z', NULL, 520);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -12263,6 +12435,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (384, 517, '2026-10-12T23:05:08Z', '2026-10-12T23:06:00Z', 'done', NULL, 0, '8f9477ab942de461dc95e64e2eb3dd7e94e327aa', 'claude-opus-5-5[1m]', '82460f68-34d1-48c3-a2f8-b4a834d24899', 7, 14, 5746, 229945, 31876, 0.415973, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (385, 518, '2026-10-12T23:06:00Z', '2026-10-12T23:06:40Z', 'done', NULL, 0, '43d714912ee3fdc686107ce3718d282bb0427188', 'claude-opus-5-5[1m]', 'a4c7cfab-1f0d-4d0f-aac4-b08e7c1a741b', 5, 10, 4551, 148771, 28983, 0.3526782, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (386, 519, '2026-10-12T23:06:40Z', '2026-10-12T23:07:36Z', 'done', NULL, 0, 'ec8f53ab686ed945af59b88b3b3f4b9b83dfce1e', 'claude-opus-5-5[1m]', 'e277c5e2-17b3-4cc3-a687-6082f1c24d97', 6, 12, 6162, 203478, 34310, 0.4384636, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (387, 520, '2026-10-12T23:07:37Z', '2026-10-12T23:08:26Z', 'done', NULL, 0, 'f82043824dc7bae7d5d52cc7f30a97164bf1b637', 'claude-opus-5-5[1m]', '26cd63be-5528-4df9-9083-0963ab38548f', 6, 12, 5696, 180408, 29519, 0.38620160000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
