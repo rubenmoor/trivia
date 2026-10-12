@@ -26,6 +26,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/data/question-axes.json` | Question styles as axes (D-37) |
 | `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53); batch health thresholds (`batch_health`, D-55) |
 | `authoring/data/health-acks.json` | The gamemaster's acks of batches failing the health thresholds (`qgen health ack`, D-55); shown in `authoring/reports/batches.md` |
+| `authoring/data/spot-checks.json` | The gamemaster's blind spot checks per batch (`/review?batch=<b>&sample=1`, plan 16); written only by the authoring server |
 | `authoring/tools/qgen.py` | The question pipeline (`qgen batch`, `validate`, `export`, `report`, single steps) |
 | `authoring/tools/health.py` | Batch health metrics per run (`batch_health`), ✓/✗ against the thresholds, the stop of `qgen batch`, `qgen report --batches`, the Health section and `batches.md` (plan 15) |
 | `authoring/tools/targets.py` | Loads the pool targets (`load_targets`), derived per-category shares, `validate`'s check (D-53) |
@@ -33,7 +34,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/tools/record_fixtures.py` | Records the engine parity fixtures through `game.py`/`selection.py` (`--check`: re-record and diff); deleted with `game.py` (PORT-8) |
 | `authoring/tools/prompts/` | Prompts for drafting, rating, fact-checking, revising, reviewing, auditing and the house style |
 | `authoring/tools/` (rest) | Helpers: `batches.py`, `concepts.py`, `layout.py` (paths), `pool_export.py`, `progress.py` |
-| `authoring/server/` | Authoring server on port 8001: question API for the review tool, stats, start page |
+| `authoring/server/` | Authoring server on port 8001: question API for the review tool, stats, start page, spot checks (`spot_checks.py`) |
 | `authoring/ui/` | Authoring UI (Svelte): `home/` start page, `review/` review tool, `stats/` stats pages, `print/` printable joker cards |
 | `authoring/RUNBOOK.md` | How an LLM makes a batch of questions: one command |
 | `authoring/reports/` | One generated report per batch |

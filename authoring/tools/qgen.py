@@ -2361,6 +2361,7 @@ def validate_pool():
     errors += targets.problems((lo, hi), bundle_ids)
     import health  # authoring/tools/health.py (imports qgen)
     errors += targets.health_problems(health.THRESHOLDABLE)
+    errors += spot_check_problems(data["questions"], (lo, hi))
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -2430,6 +2431,35 @@ def validate_pool():
     if exported != export_text(data):
         errors.append(f"{layout.EXPORT.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
     return errors, warnings
+
+
+def spot_check_problems(questions, scale):
+    """Errors in authoring/data/spot-checks.json (plan 16): batches and ids exist, values in range."""
+    checks = load_json(layout.SPOT_CHECKS)
+    if checks is None:
+        return []
+    rel, out = "authoring/data/spot-checks.json", []
+    batch_of = {q["id"]: q.get("batch") for q in questions}
+    decisions, (lo, hi) = {"approved", "needs_work", "rejected"}, scale
+    for b, entry in checks.items():
+        if b not in batch_of.values():
+            out.append(f"{rel}: no batch {b!r} in the pool")
+            continue
+        if not isinstance(entry.get("size"), int) or entry["size"] < 1 or entry.get("seed") != b:
+            out.append(f"{rel}: {b}: size must be an integer ≥ 1 and seed the batch name")
+        for i, it in (entry.get("items") or {}).items():
+            bad = [k for k, ok in [
+                ("id", batch_of.get(i) == b),
+                ("llm", it.get("llm") in decisions), ("human", it.get("human") in decisions),
+                ("audit", it.get("audit") in {"ok", "problem", None}),
+                ("problems", isinstance(it.get("problems"), list) and set(it["problems"]) <= set(PROBLEMS)),
+                ("difficulty", isinstance(it.get("difficulty"), list) and len(it["difficulty"]) == 2
+                 and all(isinstance(d, int) and lo <= d <= hi for d in it["difficulty"])),
+                ("media_changed", isinstance(it.get("media_changed"), bool)),
+                ("on", isinstance(it.get("on"), str) and re.fullmatch(r"\d{4}-\d\d-\d\d", it["on"]))] if not ok]
+            if bad:
+                out.append(f"{rel}: {b}: {i}: bad {', '.join(bad)}")
+    return out
 
 
 def taxonomy_problems():

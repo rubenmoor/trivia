@@ -16,7 +16,9 @@ API:
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
          &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch,
                                                    status=!approved every status but approved;
-         &subcategory=Pirámides&media=missing      media=missing: no picked media file)
+         &subcategory=Pirámides&media=missing      media=missing: no picked media file;
+         &sample=1&audit=flagged                   with batch: sample=1 its spot-check sample in order,
+                                                   audit=flagged its audited ones with a major finding, plan 16)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
@@ -26,6 +28,9 @@ API:
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
+    GET  /api/spot-checks                          {"size": n, "problems": [...], "checks": authoring/data/spot-checks.json}
+    POST /api/spot-checks/<batch>/<id>             body {"media_changed": bool}: record the spot check from the
+                                                   question's human review; {"undo": true} removes it (plan 16)
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
                                                    (RV-23, authoring/server/media_stats.py)
@@ -33,7 +38,7 @@ API:
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not)
 Questions in responses carry `media_candidates` and `background_candidates`
-(from work/media/, or null if not fetched).
+(from work/media/, or null if not fetched) and `audit` (work/<batch>/audit/<id>.json or null, plan 16).
 """
 import argparse, datetime, json, re, sys, threading
 from http.server import ThreadingHTTPServer
@@ -50,6 +55,8 @@ import media_cache  # noqa: E402  (app/server/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
+from qgen import PROBLEMS, is_major  # noqa: E402  (authoring/tools/qgen.py)
+import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 
 media_cache.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
 
@@ -87,7 +94,7 @@ def with_candidates(q):
     found = media.load_candidates(q["id"])
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
-            "background_candidates": bg["candidates"] if bg else None}
+            "background_candidates": bg["candidates"] if bg else None, "audit": spot_checks.audit_of(q) or None}
 
 
 def slot_of(body):
@@ -228,9 +235,16 @@ class Handler(BaseHandler):
                 qs = [q for q in qs if q["subcategory"] == query["subcategory"]]
             if query.get("media") == "missing":
                 qs = [q for q in qs if not q["media"].get("file_url")]
+            if query.get("sample") and query.get("batch"):
+                by_id = {q["id"]: q for q in qs}
+                qs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
+            if query.get("audit") == "flagged":
+                qs = [q for q in qs if (a := spot_checks.audit_of(q)) and is_major(a)]
             return self.send_json(200, [with_candidates(q) for q in qs])
         if url.path == "/api/categories":
             return self.send_json(200, categories.load())
+        if url.path == "/api/spot-checks":
+            return self.send_json(200, {"size": spot_checks.size(), "problems": PROBLEMS, "checks": spot_checks.load()})
         if url.path == "/api/overview":
             return self.send_json(200, overview.build(load_pool()["questions"], load_bundles()))
         if url.path == "/api/stats/media":
@@ -260,8 +274,22 @@ class Handler(BaseHandler):
         self.end_headers()
         self.wfile.write(raw)
 
+    def post_spot_check(self, batch, qid):
+        try:
+            body = self.read_body()
+            if body.get("undo"):
+                spot_checks.remove(batch, qid)
+                return self.send_json(200, None)
+            return self.send_json(200, spot_checks.record(batch, find_question(qid), body.get("media_changed")))
+        except KeyError:
+            return self.send_json(404, {"error": f"no question {qid}"})
+        except (ValueError, TypeError, AttributeError) as e:
+            return self.send_json(400, {"error": str(e)})
+
     def do_POST(self):
         parts = urlparse(self.path).path.strip("/").split("/")
+        if len(parts) == 4 and parts[:2] == ["api", "spot-checks"]:
+            return self.post_spot_check(parts[2], parts[3])
         if len(parts) < 4 or parts[:2] != ["api", "questions"]:
             return self.send_json(404, {"error": "not found"})
         qid, action = parts[2], "/".join(parts[3:])

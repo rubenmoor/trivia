@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/api";
-import type { AgeGroups, Bundle, MediaStats, Overview, Question, Review, Slot, Status } from "./types";
+import type { AgeGroups, Bundle, MediaStats, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status } from "./types";
 
 export { fetchCategories } from "$app/lib/api";
 
@@ -15,6 +15,10 @@ export interface QuestionFilter {
   subcategory?: string | null;
   /** "missing": no picked media file. */
   media?: "missing" | null;
+  /** With batch: "1" = its spot-check sample in order (plan 16). */
+  sample?: string | null;
+  /** With batch: "flagged" = audited with a major finding (plan 16). */
+  audit?: "flagged" | null;
 }
 
 export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Question[]> {
@@ -27,7 +31,7 @@ export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Quest
 /** review: a new decision, or null to reset the question to draft. */
 export async function saveReview(
   id: string,
-  review: Pick<Review, "decision" | "feedback"> | Review | null,
+  review: Pick<Review, "decision" | "feedback" | "problems"> | Review | null,
 ): Promise<Question> {
   return post(`/api/questions/${encodeURIComponent(id)}/review`, { review });
 }
@@ -70,4 +74,19 @@ export async function fetchOverview(): Promise<Overview> {
 /** Approved questions per media role and image resolution (RV-23). */
 export async function fetchMediaStats(bundle: string | null): Promise<MediaStats> {
   return json(await call(`/api/stats/media${bundle ? `?${new URLSearchParams({ bundle })}` : ""}`));
+}
+
+/** Spot-check size, problem kinds and every recorded spot check (plan 16). */
+export async function fetchSpotChecks(): Promise<SpotChecks> {
+  return json(await call("/api/spot-checks"));
+}
+
+/** Record the spot check from the question's (just saved) human review. */
+export async function recordSpotCheck(batch: string, id: string, mediaChanged: boolean): Promise<SpotCheckItem> {
+  return post(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { media_changed: mediaChanged });
+}
+
+/** Undo: remove the question's spot check. */
+export async function removeSpotCheck(batch: string, id: string): Promise<null> {
+  return post(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { undo: true });
 }

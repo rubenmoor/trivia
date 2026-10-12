@@ -4,14 +4,17 @@
   import {
     fetchBundles,
     fetchQuestions,
+    fetchSpotChecks,
     pickMedia,
+    recordSpotCheck,
+    removeSpotCheck,
     saveReview,
     searchMedia,
     setBundle,
     setDifficulty,
     type QuestionFilter,
   } from "../lib/api";
-  import type { Bundle, Decision, Question, Review, Slot } from "../lib/types";
+  import type { Bundle, Decision, Question, Review, Slot, SpotCheckItem } from "../lib/types";
   import Nav from "../lib/Nav.svelte";
   import MediaPanel from "./MediaPanel.svelte";
   import RevisionPanel from "./RevisionPanel.svelte";
@@ -20,8 +23,10 @@
   // media=missing (RV-13); status=!approved is every question that isn't
   // approved, across batches (RV-22, D-47). The id follows the current question, so a reload (or a bookmark) comes
   // back to it. Decisions themselves live in authoring/data/questions.json.
+  // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
   const params = new URLSearchParams(location.search);
   const batch = params.get("batch");
+  const sampleMode = !!batch && params.get("sample") === "1";
   const bundleFilter = params.get("bundle");
   const filter = {
     batch,
@@ -30,6 +35,8 @@
     reviewer: params.get("reviewer"),
     subcategory: params.get("subcategory"),
     media: params.get("media"),
+    sample: sampleMode ? "1" : null,
+    audit: params.get("audit"),
   } as QuestionFilter;
   /** The active filters in words, for the empty and summary screens. */
   const filterText = [
@@ -39,6 +46,8 @@
     filter.status && `status ${filter.status}`,
     filter.reviewer && `reviewed by ${filter.reviewer}`,
     filter.media === "missing" && "without media",
+    sampleMode && "spot-check sample",
+    filter.audit === "flagged" && "flagged by the audit",
   ]
     .filter(Boolean)
     .join(", ");
@@ -83,7 +92,14 @@
     const time = new Date().toLocaleTimeString();
     errors = [...errors, { id: ++errorSeq, time, what, message }];
   }
-  const undoStack: { id: string; previous: Review | null }[] = [];
+  const undoStack: { id: string; previous: Review | null; spot: boolean }[] = [];
+  /** Spot checks of this batch (sample mode); a question is blind until it has one. */
+  let spotItems = $state<Record<string, SpotCheckItem>>({});
+  /** Problem kinds for the feedback box (qgen.py PROBLEMS). */
+  let problemKinds = $state<string[]>([]);
+  let feedbackProblems = $state<string[]>([]);
+  /** Questions whose media was picked or searched in this session (the spot check's media_changed). */
+  const mediaTouched = new Set<string>();
 
   /** Decided in this session: with a status filter, a question is open until it gets one (RV-22). */
   let decidedNow = $state<Set<string>>(new Set());
@@ -91,10 +107,16 @@
    *  (media=missing) a question stays open until it has picked media, whoever reviewed it. With a
    *  status filter the list is one pass over questions that may already have a human review. */
   const isOpen = (q: Question) =>
-    filter.media === "missing" ? !q.media.file_url
+    sampleMode ? !spotItems[q.id]
+      : filter.media === "missing" ? !q.media.file_url
       : filter.status ? !decidedNow.has(q.id) : q.review?.reviewer !== "human";
 
   const current = $derived(questions[index]);
+  /** Sample mode before the human's decision: no LLM decision, feedback, reasons or audit. */
+  const blind = $derived(sampleMode && !!current && !spotItems[current.id]);
+  const spot = $derived(sampleMode && current ? spotItems[current.id] : undefined);
+  const accepts = (d: Decision) => d === "approved";
+  const agreed = $derived(Object.values(spotItems).filter((i) => accepts(i.llm) === accepts(i.human)).length);
   const counts = $derived({
     approved: questions.filter((q) => q.status === "approved").length,
     rejected: questions.filter((q) => q.status === "rejected").length,
@@ -111,7 +133,9 @@
 
   onMount(async () => {
     try {
-      [questions, bundles] = await Promise.all([fetchQuestions(filter), fetchBundles()]);
+      const [qs, bs, spots] = await Promise.all([fetchQuestions(filter), fetchBundles(), fetchSpotChecks()]);
+      [questions, bundles, problemKinds] = [qs, bs, spots.problems];
+      if (sampleMode) spotItems = spots.checks[batch!]?.items ?? {};
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
       const firstOpen = questions.findIndex(isOpen);
@@ -194,19 +218,25 @@
     }
   }
 
-  async function decide(decision: Decision, feedback: string | null = null) {
+  async function decide(decision: Decision, feedback: string | null = null, problems: string[] = []) {
     if (busy || mediaWorking || !current) return;
     busy = true;
     const i = index;
     let pushed = false;
     try {
       const suggestions = decision === "approved" ? slotsNeedingSuggestion(questions[i]) : [];
-      undoStack.push({ id: questions[i].id, previous: questions[i].review });
+      const id = questions[i].id;
+      undoStack.push({ id, previous: questions[i].review, spot: sampleMode });
       pushed = true;
-      await store(i, { decision, feedback });
-      decidedNow = new Set(decidedNow).add(questions[i].id);
+      await store(i, { decision, feedback, problems });
+      decidedNow = new Set(decidedNow).add(id);
+      if (sampleMode) {
+        // Stay on the question: the reveal shows the LLM's verdict next to the human's; → goes on.
+        spotItems = { ...spotItems, [id]: await recordSpotCheck(batch!, id, mediaTouched.has(id)) };
+      }
       flash(LABELS[decision]);
-      if (suggestions.length) pickSuggestionsInBackground(questions[i].id, suggestions);
+      if (suggestions.length) pickSuggestionsInBackground(id, suggestions);
+      if (sampleMode) return;
       const next = singleId ? i : nextOpen(i);
       openSlot = null;
       if (next === -1) finished = true;
@@ -226,6 +256,11 @@
     try {
       const i = questions.findIndex((q) => q.id === last.id);
       await store(i, last.previous);
+      if (last.spot) {
+        await removeSpotCheck(batch!, last.id);
+        const { [last.id]: _, ...rest } = spotItems;
+        spotItems = rest;
+      }
       decidedNow = new Set([...decidedNow].filter((id) => id !== last.id));
       index = i;
       finished = false;
@@ -238,7 +273,8 @@
   }
 
   async function openFeedback() {
-    feedbackText = current?.review?.feedback ?? "";
+    feedbackText = blind ? "" : (current?.review?.feedback ?? "");
+    feedbackProblems = blind ? [] : (current?.review?.problems ?? []);
     feedbackOpen = true;
     await tick();
     feedbackBox?.focus();
@@ -248,12 +284,13 @@
     const text = feedbackText.trim();
     if (!text) return flash("Feedback is empty");
     feedbackOpen = false;
-    decide("needs_work", text);
+    decide("needs_work", text, feedbackProblems);
   }
 
   async function mediaAction(label: string, what: string, run: () => Promise<Question>) {
     if (mediaWorking || !current) return;
     const i = index;
+    mediaTouched.add(current.id);
     mediaWorking = true;
     try {
       questions[i] = await run();
@@ -451,7 +488,9 @@
         <span class="progress">{index + 1} / {questions.length}</span>
       {/if}
       {#if downloads}<span class="downloads">⬇ downloading media… ({downloads})</span>{/if}
-      {#if !singleId}
+      {#if sampleMode}
+        <span class="counts">spot check: {Object.keys(spotItems).length} decided · agree {agreed}</span>
+      {:else if !singleId}
         <span class="counts">
           ✓ {counts.approved} · ✎ {counts.needs_work} · ✗ {counts.rejected} · open {counts.open}{#if counts.llm}
             (LLM-reviewed {counts.llm}){/if}
@@ -471,7 +510,17 @@
       <span><a class="stats" href="/">Start</a> · <a class="stats" href="/stats/categories">Stats</a></span>
     </header>
 
-    {#if current.review}
+    {#if spot}
+      <div class="spot" class:disagree={accepts(spot.llm) !== accepts(spot.human)}>
+        Spot check: you <b>{spot.human.replace("_", " ")}</b> · LLM review <b>{spot.llm.replace("_", " ")}</b> ·
+        <b>{accepts(spot.llm) === accepts(spot.human) ? "agree" : "disagree"}</b>
+        · audit: {spot.audit === "problem" ? "major finding" : spot.audit === "ok" ? "no major finding" : "not audited"}
+        {#if spot.difficulty[0] !== spot.difficulty[1]}· difficulty {spot.difficulty[0]} → {spot.difficulty[1]}{/if}
+        <span class="muted">· → next · u undo</span>
+      </div>
+    {/if}
+
+    {#if current.review && !blind}
       <div class="previous {current.status}">
         {current.review.reviewer === "llm" ? `Reviewed by ${current.review.model}` : "Already reviewed"}:
         <b>{current.status.replace("_", " ")}</b> ({current.review.reviewed_on})
@@ -484,7 +533,15 @@
       </div>
     {/if}
 
-    {#if current.revision}<RevisionPanel question={current} />{/if}
+    {#if current.audit && !blind}
+      <div class="previous audit" class:major={current.audit.verdict === "problem" && current.audit.severity === "major"}>
+        Audit ({current.audit.model}): <b>{current.audit.verdict}</b>{#if current.audit.verdict === "problem"}
+          , {current.audit.severity}: {current.audit.problems.join(", ") || "other"}{/if}
+        · difficulty {current.audit.difficulty_estimate} · “{current.audit.notes}”
+      </div>
+    {/if}
+
+    {#if current.revision && !blind}<RevisionPanel question={current} />{/if}
 
     <article>
       <p class="description">{current.description}</p>
@@ -527,6 +584,12 @@
           <p>{current.fun_fact}</p>
         </section>
 
+        {#if blind}
+        <section>
+          <h2>Spot check (blind)</h2>
+          <p class="muted">The LLM's verdict, reasons and the audit show after your decision.</p>
+        </section>
+        {:else}
         <section>
           <h2>Fact check</h2>
           <p>
@@ -548,6 +611,7 @@
             {/if}
           {/if}
         </section>
+        {/if}
       </div>
     </article>
 
@@ -581,6 +645,19 @@
             rows="4"
             placeholder="What should change? (e.g. too difficult, bad image, a wrong answer is also right…)"
           ></textarea>
+          {#if problemKinds.length}
+            <div class="kinds">
+              {#each problemKinds as kind}
+                <button
+                  class:on={feedbackProblems.includes(kind)}
+                  onclick={() =>
+                    (feedbackProblems = feedbackProblems.includes(kind)
+                      ? feedbackProblems.filter((k) => k !== kind)
+                      : [...feedbackProblems, kind])}>{kind}</button
+                >
+              {/each}
+            </div>
+          {/if}
           <p class="muted">Enter: save and next · Shift+Enter: new line · Esc: cancel</p>
         </div>
       </div>
@@ -666,6 +743,33 @@
   .previous.approved { border-color: var(--good); }
   .previous.rejected { border-color: var(--bad); }
   .previous.needs_work { border-color: var(--warn); }
+  .previous.audit { border-color: var(--accent); }
+  .previous.audit.major { border-color: var(--bad); }
+  .spot {
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    background: var(--good-bg);
+    border-left: 4px solid var(--good);
+  }
+  .spot.disagree {
+    background: #3a1d22;
+    border-color: var(--bad);
+  }
+  .kinds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+  }
+  .kinds button {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  .kinds button.on {
+    border-color: var(--warn);
+    color: var(--warn);
+  }
   .description {
     margin: 2rem 0 0.5rem;
     font-style: italic;

@@ -71,6 +71,39 @@ export interface Review {
   model: string | null;
   /** The LLM review a human review replaced. */
   previous: Review | null;
+  /** Kinds of problems (qgen.py PROBLEMS, plan 15). */
+  problems?: string[];
+}
+
+/** work/<batch>/audit/<id>.json: the independent LLM audit (plan 16). */
+export interface Audit {
+  verdict: "ok" | "problem";
+  problems: string[];
+  severity: "minor" | "major";
+  difficulty_estimate: number;
+  notes: string;
+  model: string;
+  on: string;
+}
+
+/** One question's spot check in authoring/data/spot-checks.json (plan 16). */
+export interface SpotCheckItem {
+  llm: Decision;
+  /** "problem": the audit has a major finding; null: not audited. */
+  audit: "ok" | "problem" | null;
+  human: Decision;
+  problems: string[];
+  /** [before the human, after]. */
+  difficulty: [number, number];
+  media_changed: boolean;
+  on: string;
+}
+
+/** GET /api/spot-checks. */
+export interface SpotChecks {
+  size: number;
+  problems: string[];
+  checks: Record<string, { size: number; seed: string; items: Record<string, SpotCheckItem> }>;
 }
 
 export interface Question {
@@ -100,6 +133,8 @@ export interface Question {
   background: Background | null;
   difficulty_original?: number | null;
   revision?: Revision | null;
+  /** Added by the server: null when not audited. */
+  audit: Audit | null;
   /** Added by the server: null when candidates were never fetched. */
   media_candidates: MediaCandidate[] | null;
   background_candidates: MediaCandidate[] | null;
