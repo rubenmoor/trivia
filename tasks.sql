@@ -10695,6 +10695,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - split candidates (per screen/phase, keyboard handling, sound cues): split only if markup/logic moves without changing behaviour or the props other files pass
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10702,10 +10703,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- `Game.svelte` listed in `## Part 5` with every finding and a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- `Game.svelte` listed in `## Part 5` with every finding and a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (544, 77, 'Review Question.svelte', 'work', 'open', NULL, NULL, 'Task 2 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10719,6 +10721,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - split candidates (media player, answer area, reveal), same split rule as task 1
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10726,10 +10729,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- `Question.svelte` listed in `## Part 5` with every finding and a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- `Question.svelte` listed in `## Part 5` with every finding and a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (545, 77, 'Review Overlay.svelte', 'work', 'open', NULL, NULL, 'Task 3 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10743,6 +10747,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - overlap with the screens of task 391/392/233 if they live here; split candidates (same split rule as task 1)
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10750,10 +10755,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- `Overlay.svelte` listed in `## Part 5` with every finding and a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- `Overlay.svelte` listed in `## Part 5` with every finding and a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (546, 77, 'Review sound.svelte.ts', 'work', 'open', NULL, NULL, 'Task 4 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10769,6 +10775,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - samples loading offline/failing; synth recipes vs. recorded samples of plans 32/33 (findings only if tasks 142–148 still open)
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10776,10 +10783,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- `sound.svelte.ts` listed in `## Part 5` with every finding and a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- `sound.svelte.ts` listed in `## Part 5` with every finding and a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (547, 77, 'Review Player.svelte and JokerTray.svelte', 'work', 'open', NULL, NULL, 'Task 5 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10791,6 +10799,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `app/client/src/game/JokerTray.svelte` (303): joker counts incl. ∞ (`null`), disabled states, animation triggers vs. `JokerFlight`
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10798,10 +10807,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- Both files listed in `## Part 5` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- Both files listed in `## Part 5` (no-findings rows included), every finding with a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (548, 77, 'Review effects: Fireworks, Shredder, JokerFlight', 'work', 'open', NULL, NULL, 'Task 6 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10815,6 +10825,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - shared animation code: candidate for part 10
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10822,10 +10833,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- All three files listed in `## Part 5` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- All three files listed in `## Part 5` (no-findings rows included), every finding with a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (549, 77, 'Review layout pieces: Tower, Hud, Stage, DifficultyDial', 'work', 'open', NULL, NULL, 'Task 7 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10839,6 +10851,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - derived values recomputed in markup; unused props/CSS
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10846,10 +10859,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- All four files listed in `## Part 5` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- All four files listed in `## Part 5` (no-findings rows included), every finding with a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (550, 77, 'Review menu screens: CategoryPicker, Reports, LanguageScreen', 'work', 'open', NULL, NULL, 'Task 8 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10863,6 +10877,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - catalog use (`t()` keys, no literals)
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10870,10 +10885,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- All three files listed in `## Part 5` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:49Z', NULL, 517);
+- All three files listed in `## Part 5` (no-findings rows included), every finding with a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (551, 77, 'Review small components: Prompt, Glyph, Icon', 'work', 'open', NULL, NULL, 'Task 9 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10887,6 +10903,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - SVG inlined per use (bundle size)
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10894,10 +10911,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- All three files listed in `## Part 5` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:50Z', NULL, 517);
+- All three files listed in `## Part 5` (no-findings rows included), every finding with a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (552, 77, 'Review helpers and theme: copy.ts, swap.ts, timing.ts, theme.css', 'work', 'open', NULL, NULL, 'Task 10 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10912,6 +10930,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - throw-away script for `copy.ts`/`swap.ts`/`timing.ts` fixes
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10919,10 +10938,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- All four files listed in `## Part 5` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:50Z', NULL, 517);
+- All four files listed in `## Part 5` (no-findings rows included), every finding with a status.
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (553, 77, 'Review screen files added after the inventory', 'work', 'open', NULL, NULL, 'Task 11 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -10935,6 +10955,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No new files: log that in `## Part 5`.
 - Focus checklist of plan 77 for every Svelte file: `$effect` reruns, `$derived` vs. markup recomputation, timers/listeners/`requestAnimationFrame` cleanup on unmount or phase change, `pushScope` without pop, props never passed/read, unused CSS (`svelte-check`), literals outside the catalog, unhandled phases (finished, abandoned, `cards` 0, `levels` 1/20, jokers ∞), stale/missing `PLACEHOLDER(<task id>)`, media loaded twice/too late/online-only.
 - Unused exports, swallowed errors, `any`/`as`/`!`, comments that lie, magic numbers.
+- Linter evidence: a finding a lint rule or stricter `tsconfig` flag would have caught carries the rule in its text, e.g. `(lint: noUnusedLocals)`, `(lint: no-floating-promises)`, `(lint: svelte/valid-compile)`; part 10 counts them.
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
@@ -10942,10 +10963,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
 - Svelte fix: walk the affected screens on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`/`TRIVIA_MEDIA` (keyboard; pad if at hand); stop processes by PID.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` (and the lint pass, if part 10 has adopted one by then) pass.
 
 ## Done when
-- Every file in `app/client/src/game/` at this time listed in `## Part 5` and in the inventory, every finding with a status; every part 1 row `handed to part 5` has its final status in `## Part 5` (check rows left by tasks 1–10).', '2026-10-12T23:05:50Z', NULL, 517);
+- Every file in `app/client/src/game/` at this time listed in `## Part 5` and in the inventory, every finding with a status; every part 1 row `handed to part 5` has its final status in `## Part 5` (check rows left by tasks 1–10).
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', NULL, 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (554, 78, 'Review window, protocol and bridge: main.mjs, preload.cjs, resolve.mjs', 'work', 'open', NULL, NULL, 'Task 1 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 78 "Rules for this plan" (URLs, responses, error bodies, IPC names/codes unchanged; security only tightened; no `npm install`).
 
 ## First
@@ -12349,8 +12371,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:37:14Z', '2026-10-12T23:37:56Z', 597);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (609, 76, 'create tasks for plan 76', 'split', 'done', 1000, '2026-10-12, tasks 539–542 aligned with revised plan 76: fixed (task N) status, (lint: …) evidence tags, lint pass in checks if adopted; no new decisions', 'Split plan 76 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:38:15Z', '2026-10-12T23:38:53Z', 598);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (610, 77, 'create tasks for plan 77', 'split', 'open', 1000, NULL, 'Split plan 77 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:39:12Z', NULL, 599);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (610, 77, 'create tasks for plan 77', 'split', 'done', 1000, '2026-10-12, tasks 543–553 bodies: lint evidence tags, fixed (task N) status, lint pass in checks', 'Split plan 77 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:39:12Z', '2026-10-12T23:39:54Z', 599);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13389,6 +13411,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (406, 598, '2026-10-12T23:38:01Z', '2026-10-12T23:38:22Z', 'done', NULL, 0, 'ac1bc972e94719c6372ae690c2a104c6d59ec206', 'claude-opus-5-5[1m]', 'f7cc34fc-bf2b-43e5-beca-2e7852c93e1b', 6, 12, 1820, 183590, 25187, 0.274662, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (407, 609, '2026-10-12T23:38:23Z', '2026-10-12T23:38:58Z', 'done', NULL, 0, '6dbb6b72837d21d052379be2d6f3ae0b4724fad1', 'claude-opus-5-5[1m]', '7b5c9f73-daf4-47d0-a748-b5d89a114f70', 9, 18, 2029, 362016, 42102, 0.4498712, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (408, 599, '2026-10-12T23:38:58Z', '2026-10-12T23:39:20Z', 'done', NULL, 0, 'fa7eb4ab36825ff534e1bfc38979f9ae9c802343', 'claude-opus-5-5[1m]', 'e09fffbf-26a6-4f00-b334-f08900ea9f50', 8, 16, 1885, 257959, 25618, 0.2942998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (409, 610, '2026-10-12T23:39:20Z', '2026-10-12T23:39:58Z', 'done', NULL, 0, '0aad0467c306b6007954938885e63d7f8dc1a9dd', 'claude-opus-5-5[1m]', '79587d54-98ea-4c81-ae4b-a582147946e0', 8, 16, 3385, 296685, 43133, 0.47216500000000006, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
