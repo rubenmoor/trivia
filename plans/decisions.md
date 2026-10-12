@@ -533,3 +533,10 @@ Template:
 - Decision: `age_group` and `bundles` live in each game's `settings`, next to `jokers`. Missing keys mean `young_teens` and every bundle in `bundles.json`, resolved on read, never written back. Every `always_on` bundle (only `base`) is always on. Level ranges per group live in `app/data/age-groups.json` (`levels`, 12 `[lo, hi]` pairs); `young_teens` = D-22, the others a draft until tuned (plan 28). Burns stay per player across groups and bundles (D-28).
 - Consequences: The engine drops its `LEVEL_RANGES` constant; the Python referee keeps its copy until PORT-8. `parseAgeGroups` and `qgen validate` check the `levels` rules. Plan 27 (engine), 29 (start screen), 28 (tuning).
 - Supersedes / related: D-22, D-28, D-38, D-39; plans 21, 22, 27
+
+## D-69: The engine runs in the browser behind `lib/api.ts`; data from `/data/`
+- Date: 2026-10-11
+- Context: PORT-7 (plan 50) moves the screens from the Python referee to the TS engine (D-66, D-67).
+- Decision: The game data (`pool.json`, `bundles.json`, `age-groups.json`, categories files) comes from `GET /data/…`, served read-only from `app/data/`, loaded once per page load. `lib/api.ts` keeps its exports and runs `engine/api.ts` on an in-memory save, one call at a time (promise-chain mutex). Each successful action PUTs the whole document (`/api/save`); reads never PUT; a failed PUT keeps the new save in memory and shows the server's error. `trivia` runs `save.migrate()` at every start (no-op once `game.json` exists).
+- Consequences: A new `qgen export` needs a page reload (F5). The Python game routes are unused until PORT-8 deletes them. Rollback: delete `state/game.json`, check out the commit before the switch.
+- Supersedes / related: D-25, D-35, D-59, D-66, D-67; plans 12, 49, 50

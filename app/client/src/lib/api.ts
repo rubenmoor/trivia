@@ -1,4 +1,9 @@
+import * as engine from "../engine/api.ts";
+import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
+import { read, run } from "./engine.ts";
 import type { ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
+
+// The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
 
 /** A refused request (D-57): `code` and `params` for errorText(), `message` in English; `supply` is set
  * when the pool can't fill a new game (GF-5). */
@@ -47,32 +52,34 @@ export async function post<T>(url: string, body: unknown): Promise<T> {
 
 /** Known players, the most recent first (D-28). */
 export async function fetchPlayers(): Promise<Player[]> {
-  return json(await call("/api/players"));
+  return read((save) => engine.getPlayers(save));
 }
 
 /** Delete a player with all their games and burns (GF-7); returns the remaining players. */
 export async function deletePlayer(name: string): Promise<Player[]> {
-  return json(
-    await call("/api/players/delete", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name }),
-    }),
-  );
+  return run((save) => engine.deletePlayer(save, { name }));
 }
 
 /** IDs of the questions flagged for review (GM-5, D-47). */
 export async function fetchFlags(): Promise<string[]> {
-  return json(await call("/api/flags"));
+  return read((save) => ({ save, status: 200, body: flaggedIds(save) }));
 }
 
 /** Flag or unflag a question for review; returns every flagged ID. */
 export async function setFlag(id: string, flagged: boolean, player: string | null): Promise<string[]> {
-  return post("/api/flags", { id, flagged, player });
+  return run((save, _data, io) => {
+    try {
+      const out = saveFlag(save, id, flagged, player, io.now);
+      return { save: out, status: 200, body: flaggedIds(out) };
+    } catch (e) {
+      const message = e instanceof Error ? e.message : String(e);
+      return { save, status: 400, body: { error: message, message } };
+    }
+  });
 }
 
 export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }> {
-  return json(await call("/api/game"));
+  return read((save, data, io) => engine.getGame(save, data, io));
 }
 
 /** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
@@ -91,27 +98,16 @@ export async function playJoker(body: {
   subcategory?: string;
   index?: number;
 }): Promise<{ game: Game; event: JokerEvent }> {
-  const res = await call("/api/game/joker", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  const out = await res.json().catch(() => ({}));
-  if (!res.ok) throw failure(res, out);
-  return out;
+  return run((save, data, io) => engine.gameAction(save, data, io, "joker", { ...body })) as Promise<{
+    game: Game;
+    event: JokerEvent;
+  }>;
 }
 
-/** POST /api/game/<action> (app/server/game.py); returns the game afterwards. */
+/** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
   action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers",
   body: GameActionBody = {},
 ): Promise<Game | null> {
-  const res = await call(`/api/game/${action}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  const out = await res.json().catch(() => ({}));
-  if (!res.ok) throw failure(res, out);
-  return out.game;
+  return (await run((save, data, io) => engine.gameAction(save, data, io, action, { ...body }))).game;
 }

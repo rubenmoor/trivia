@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Game server: serves the built game client and the game API (plans/03-game-flow.md, D-25).
+"""Game server: serves the built game client, the game data and the save (plans/03-game-flow.md, plan 50).
 
     trivia [--port 8000] [--host 127.0.0.1]        (or: python3 app/server/main.py)
 
 It reads app/data/ and serves it under /data/, and writes only the game state
 (TRIVIA_STATE, default state/) and the media cache (TRIVIA_MEDIA, default media/), D-35.
+The referee runs in the browser (app/client/src/engine/, D-69) and saves via /api/save. At start,
+game.sqlite + flags.json move to game.json once (save.migrate(), PORT-5); the old files stay as backup.
+The /api/game*, /api/players*, /api/flags routes below are unused since PORT-7 and go in PORT-8.
 The review tool and stats pages are authoring tools with their own server (authoring/server).
 
 API:
@@ -182,6 +185,7 @@ def main():
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()
+    save.migrate()
     print(f"Game on http://{args.host}:{args.port}/")
     ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()
 
