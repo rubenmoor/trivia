@@ -15,3 +15,7 @@ result-*
 
 # Game state and burned questions (D-25); a packaged build uses TRIVIA_STATE instead.
 state/
+
+# Desktop builds (plan 56): staged media, artefacts.
+app/desktop/build/
+app/desktop/release/

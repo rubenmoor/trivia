@@ -87,11 +87,13 @@ export function cacheName(url) {
   return createHash("sha1").update(url, "utf8").digest("hex").slice(0, 16) + ext;
 }
 
-// Every picked file_url in the pool, like media_cache.pool_urls.
-function poolUrls(data) {
+// Every picked file_url in the pool, like media_cache.pool_urls; stage-media.mjs ships the same set.
+export const poolUrls = ({ questions }) =>
+  new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
+
+function readPoolUrls(data) {
   try {
-    const { questions } = JSON.parse(readFileSync(path.join(data, "pool.json"), "utf8"));
-    return new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
+    return poolUrls(JSON.parse(readFileSync(path.join(data, "pool.json"), "utf8")));
   } catch {
     return new Set();
   }
@@ -101,7 +103,7 @@ export function makeResolver({ dist, data, media }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
-  const urls = poolUrls(data);
+  const urls = readPoolUrls(data);
   return async (request) => {
     const url = new URL(request.url);
     let rel;

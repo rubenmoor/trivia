@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media` and `trivia-desktop` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop` and `trivia-desktop-build` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -42,7 +42,7 @@
         '';
       };
 
-      authoringTools = pkgs: {
+      authoringTools = pkgs: rec {
         qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick ];
         trivia-media = fromCheckout pkgs "trivia-media" "authoring/tools/media.py" [ pkgs.imagemagick ];
         trivia-authoring = fromCheckout pkgs "trivia-authoring" "authoring/server/main.py" [ ];
@@ -58,6 +58,22 @@
               echo "trivia-desktop: $root is not the trivia repository (no app/desktop/main.mjs)" >&2; exit 2
             fi
             exec electron "$root/app/desktop" "$@"
+          '';
+        };
+        # Local builds for Windows and Linux (plan 56): pool check, client, staged media, electron-builder.
+        trivia-desktop-build = pkgs.writeShellApplication {
+          name = "trivia-desktop-build";
+          runtimeInputs = [ pkgs.git pkgs.nodejs_22 qgen ];
+          text = ''
+            root=$(git rev-parse --show-toplevel 2>/dev/null) || {
+              echo "trivia-desktop-build: run this inside the trivia repository" >&2; exit 2; }
+            if [ ! -f "$root/app/desktop/electron-builder.yml" ]; then
+              echo "trivia-desktop-build: $root is not the trivia repository (no app/desktop/electron-builder.yml)" >&2; exit 2
+            fi
+            qgen validate
+            export ELECTRON_SKIP_BINARY_DOWNLOAD=1  # the npm Electron doesn't run on NixOS
+            [ -d "$root/app/desktop/node_modules" ] || npm ci --prefix "$root/app/desktop"
+            exec npm run dist --prefix "$root/app/desktop" -- "$@"
           '';
         };
       };
@@ -106,6 +122,7 @@
             packages = [
               pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
+              tools.trivia-desktop-build
             ] ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
           };
         });

@@ -4,5 +4,13 @@
   "version": "0.1.0",
   "description": "Desktop shell for ¡Trivia! (plan 54, SW-2)",
   "main": "main.mjs",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "stage-media": "node stage-media.mjs",
+    "dist": "(cd ../.. && npm run build -w app/client) && node stage-media.mjs && electron-builder --x64 --linux tar.gz --win zip"
+  },
+  "devDependencies": {
+    "electron": "43.7.7",
+    "electron-builder": "^26.15.3"
+  }
 }

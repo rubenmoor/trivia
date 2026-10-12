@@ -14,11 +14,12 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", ".
 
 function roots() {
   if (app.isPackaged) {
+    // Layout from electron-builder.yml (plan 56).
     const res = process.resourcesPath;
     return {
-      dist: path.join(res, "client", "dist"),
+      dist: path.join(res, "client"),
       data: path.join(res, "data"),
-      media: process.env.TRIVIA_MEDIA || path.join(app.getPath("userData"), "media"),
+      media: process.env.TRIVIA_MEDIA || path.join(res, "media"),
     };
   }
   return {

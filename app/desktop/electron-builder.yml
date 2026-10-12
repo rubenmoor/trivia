@@ -1,0 +1,34 @@
+# Local builds (plan 56, SW-5): Windows x64 zip, Linux x64 tar.gz; `npm run dist`.
+appId: io.github.rubenmoor.trivia
+productName: Trivia
+executableName: trivia
+artifactName: ${productName}-${version}-${os}-${arch}.${ext}
+directories:
+  output: release
+files:
+  - package.json
+  - "*.mjs"
+  - "!stage-media.mjs"
+  - "!after-pack.mjs"
+  - preload.cjs
+extraResources:
+  - from: ../client/dist
+    to: client
+  - from: ../data
+    to: data
+  - from: build/media
+    to: media
+npmRebuild: false
+# Pinned (from v43.7.7's SHASUMS256.txt): cached zips verify offline; update with electron's version.
+electronDownload:
+  force: false  # marks @electron/get options, so checksums pass through
+  checksums:
+    electron-v43.7.7-linux-x64.zip: 4d0a48398c444258dbcf2f5f83b49ca5bc53583130f354e0c299dad5b22b5271
+    electron-v43.7.7-win32-x64.zip: 97dcb75065444ef031b9b6ea814ccd2109b97934fffb0c503a555d4737ca79cc
+publish: null
+afterPack: ./after-pack.mjs
+win:
+  executableName: Trivia
+  signAndEditExecutable: false
+linux:
+  category: Game
