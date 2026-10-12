@@ -734,7 +734,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
 - Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
 - `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
-- The family''s game keeps working after every task: Spanish, Colombia on, same keys (unless LUI-4 changes them by decision).
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision).
 - Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
 
 ## Parts
@@ -771,7 +771,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 6. **Language setting and per-locale pool in the game (I18N-2)**
    - Owner: `plans/15-i18n.md` ("Model").
    - UI language and question language in the save (`SaveData`), default from `navigator.language` (the Steam language is S5, SW-*); on the settings screen (plan 36). Engine loads `pool.<locale>.json`; burns by id, so switching languages never repeats a question. Category/bundle names from the locale''s names. Supply check per locale.
-   - Family: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
    - Suggested priority: 480 (after plan 36 at 490).
 
 7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
@@ -4539,6 +4539,8 @@ bring them in line with the plan. A task that writes a plan gets `--kind plan`.'
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (277, 16, 'create tasks for plan 16', 'split', 'done', 1000, '2026-10-11, tasks.sql: tasks 47–49 already match plan 16; plan body fixed (batch runs = plan 17, decision 2 answered, task list); no new decisions', 'Split plan 16 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:48:03Z', '2026-10-12T02:49:01Z', 46);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (278, 8, 'create tasks for plan 8', 'split', 'open', 1000, NULL, 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (279, 9, 'create tasks for plan 9', 'split', 'open', 1000, NULL, 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T02:51:28Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
