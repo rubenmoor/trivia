@@ -816,7 +816,111 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5); competitive mode and couch co-op (Later).', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (10, 10, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (10, 10, 'masterplan', 1000, 'Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a shippable media bundle, depots uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions (milestone 7): OQ-33 price + account holder (plan 39), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), OQ-31 launch languages (plan 37), OQ-29 shell (plan 34). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell skeleton, `FileStore`, local builds (plans from tasks 209–211), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 platform test (plan 48). Part 3 adds to the shell; it doesn''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): which languages and bundles ship sets the store''s language table, the depots and the install size. Store texts per language (LUI-6) are this milestone''s (milestone 9 excluded them).
+- If milestone 8 moved SW-6 (CI) or anything else to S5 (plan 48''s note), the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater (Steam updates the game), no remote content. Network off must still play a full game.
+- **No DRM:** the game runs without Steam running (family copy, offline living room). Every Steam call is optional; no `restartAppIfNecessary`. Without Steam, behaviour is S3''s (letter picker, `Gamepad.id` glyphs, browser language).
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git** (AGENTS.md): build account login, beta password, `steam_appid.txt` is fine (public), Steam Guard files are not. Gitignore what the upload script writes.
+- The family game at home (`trivia`, browser on the TV) keeps working after every task.
+- Shipped code under `app/` (D-35); dependencies: the Steamworks binding chosen with OQ-29 (steamworks.js in the draft) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder decided in OQ-33 (person/company, tax interview form, bank, $100 app credit); the gamemaster does it; result (App ID) recorded via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, stores names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720 (everything else needs the App ID; the name before the store page).
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (Windows, Linux, shared content; language/bundle depots only if milestone 9 or OQ-33 call for them), launch options per OS (executable, args, e.g. the mode flag of plan 36), supported languages (OQ-31), branches `default` + password-protected `beta`, controller support flags, Steam Input default config (gamepad template), Deck settings.
+   - Steam Cloud: Auto-Cloud root and pattern per OS for the `FileStore` file (Electron `userData`: `%APPDATA%` / `~/.config`); quota; what happens on a conflict (one JSON file: Steam''s conflict dialog; local wins by default). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)**
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the shell''s main process (steamworks.js or OQ-29''s alternative), exposed through the preload bridge as one optional `steam` object; the page checks `steam?.available`. Init failure (no Steam, wrong App ID, offline) → silent fallback.
+   - Overlay in Electron (known workarounds; Windows and Deck); on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name under Steam, letter picker stays the fallback (plan 46); per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id` (plan 45); default UI/question language from the Steam language (I18N-2''s setting from milestone 9 wins once set); rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Dev on NixOS: test with the real App ID or Spacewar (480); the binding''s native library from the npm package in the builds, from the flake in dev (like part 1 of masterplan 8).
+   - Done when: under Steam the overlay opens, the keyboard fills the name, the language follows Steam; without Steam a full game plays as in S3.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves**
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format from `plans/12-client-engine.md`.
+   - Auto-Cloud only (no Cloud API code) unless the test shows a need. Check: `FileStore`''s atomic write (temp + rename) leaves only the real file in the synced pattern; temp/backup files excluded; one save per OS user vs. per Steam user (decide; pm decision if it changes behaviour for two Steam accounts on one PC).
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and burns there; offline on both then online → conflict dialog behaves.
+   - Suggested priority: 680 (after parts 2–3).
+
+5. **Achievements (SW-11)**
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - List (few, no grind; plan 18''s draft: first victory, a win without jokers, a win on Experto, every broad category answered, level 12 in each preset), each with its exact trigger as an engine event (preset names from OQ-30''s D-entry; gamemaster mode counts or not: decide in the plan). Names and descriptions per launch language.
+   - Unlock through part 3''s bridge; offline unlocks are cached by Steam; nothing in the save depends on Steam. Optional: unlock retroactively from the save on first start under Steam.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); Steamworks setup values in plan 18 for the gamemaster.
+   - The list goes to the gamemaster as a pm decision before icons are made.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver (masterplan 8 part 1) needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42: exclude or replace) and the licence rules (GFDL/PD-US replaced in milestone 4); `CREDITS.md` lists exactly the shipped files.
+   - Suggested priority: 640 (before part 7; a build step, not asset work).
+
+7. **Builds, depots and upload (SW-10, SW-6 if moved)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD app/depot VDFs in the repo (no secrets), one upload command (e.g. `trivia-steam upload --branch beta`) that builds from a clean tagged commit, runs `qgen validate` and `npm run check`, builds both platforms + the media bundle, and calls `run_app_build`. SteamCMD from nixpkgs (unfree) or Valve''s SDK tools; the plan decides.
+   - Where it runs: the author''s machine first (recommended; Steam Guard once, no CI secrets); CI upload only with a pm decision. The dedicated build account is the gamemaster''s.
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure"); `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: short and long description, feature list, system requirements (from part 7''s builds), controller support, privacy line ("collects nothing, sends nothing"), AI disclosure (pre-generated questions drafted and fact-checked by Claude, reviewed per D-32/D-33/D-56; no live AI; images by people from Commons) using PUB-10''s finding. Drafts in a file under `plans/` or `docs/`; the gamemaster approves via pm decision and pastes them in.
+   - Assets: capsule sizes per Valve''s current list, screenshots (shell at 1920×1080, scripted where possible), trailer optional (backlog unless cheap). Who makes capsule art (gamemaster, commissioned, or AI-made, which then needs disclosing) is a pm decision.
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; question topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price and regional prices from OQ-33''s D-entry (Valve''s matrix); DLC entries if bundles are paid DLC. The gamemaster enters both; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck test and Deck Verified (SW-12)**
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Checklist on a real Deck with the Steam-installed beta: Valve''s Verified criteria (controller glyphs, on-screen keyboard, text ≥ 9 px at 800p, no launcher, default config works, no warnings on start), Cloud sync with a PC, suspend/resume. Builds on plan 48''s S3 rows; no copy.
+    - Request the review once the store page exists (or note it for S6 if Valve requires release first; check the docs).
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch from Steam on a second machine (not the dev machine), offline start, family plays a full game; Cloud carries the save to another machine. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together, needs IN-6, Later) and SW-14 (macOS, later) marked deferred with a note, not done; 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 (plan 11) gets a note if S5 changed S6''s scope (coming-soon page needs part 8, App ID, names).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (Cloud test) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13) and macOS (SW-14): later. Marketing.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (11, 11, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (12, 1, 'Targets and progress', 700, 'Part 1 of the masterplan (plan 1). The `base` bundle grows to 5000 approved questions (D-52), with a target per difficulty that tapers at the top. This plan stores those targets where the authoring tools can read them, shows approved vs. target in `qgen report` and on `/stats/difficulty`, and turns the milestone''s "done when" into one command that says pass or fail.
 
@@ -2403,9 +2507,9 @@ plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T00:52:44Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (9, 9, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, masterplan 9 (tasks.sql)', 'Write plan 9, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T01:09:35Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (10, 10, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 10, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (10, 10, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, masterplan 10 (tasks.sql)', 'Write plan 10, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:55:09Z', '2026-10-12T01:12:46Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (11, 11, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 11, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
@@ -4174,6 +4278,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - Last part; write it after the other parts'' plans exist (or were dropped).
 - Content: `qgen report --simulate` passes for every launch language, result recorded in `plans/16-content-target.md`; `plans/11-steam.md` S4 row done; statuses and tasks in 15, 15a, 15b, 15c, 16; `plans/project.md`, `plans/README.md`; notes in the masterplans of milestones 10–11 (plans 10, 11) if S4 changed their scope (store languages, DLC packs, install size).', '2026-10-12T01:10:57Z', NULL, 239);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (252, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:12:46Z', NULL, 10);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -4285,6 +4391,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (89, 221, '2026-10-12T01:06:28Z', '2026-10-12T01:07:25Z', 'done', NULL, 0, 'f7a29de95ea702b1946f47f6b8d5b37b80b8b4a6', 'claude-opus-5-5[1m]', 'd1ee0391-da39-4384-8cfb-dbffd1cbd0af', 9, 18, 6106, 310040, 32612, 0.44509600000000005, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (90, 9, '2026-10-12T01:07:26Z', '2026-10-12T01:09:45Z', 'done', NULL, 0, '42689dd2e13e74beb576671ac9192ac088dadcfd', 'claude-opus-5-5[1m]', 'e9d0eccc-e33a-4e2e-854d-2c1e902a4082', 12, 24, 11849, 647075, 84247, 1.040467, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (91, 239, '2026-10-12T01:09:45Z', '2026-10-12T01:11:08Z', 'done', NULL, 0, '821c4a922e93ba26c68b49ae89c16c1f301d350d', 'claude-opus-5-5[1m]', '93e6fa81-9603-473b-aeb3-b23f830af4ae', 9, 18, 8915, 372158, 44673, 0.6101876, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (92, 10, '2026-10-12T01:11:08Z', '2026-10-12T01:12:55Z', 'done', NULL, 0, '268cd0a317a19089a143e6b39ecf3b96921991f6', 'claude-opus-5-5[1m]', 'b997afa5-855d-45ce-af5c-78efa6623016', 11, 22, 10472, 578005, 76797, 0.93950500000000015, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
