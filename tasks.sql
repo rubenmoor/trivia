@@ -1009,6 +1009,39 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Translating the English internal messages; `authoring/` and `/api/flags` errors; client-side literal texts (part 1).', '2026-10-12T00:10:24Z', 82);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (23, 3, 'Pseudo-locale xx (LUI-2)', 400, 'A dev-only pseudo-locale `xx`, generated from the `es` catalog, makes every catalog string visibly different and ~40 % longer, so missed literals and text overflow show up on the TV layout before any real translation exists. Part 3 of plan 3 (masterplan M3); design source `plans/15a-ui-translation.md` (LUI-2). Builds on plan 21 (`t()` helper and the `es` catalog, LUI-1: `lib/i18n.ts`, `locales/es.ts`, `?lang=` dev override, `⟦key⟧` for missing keys) and, for error lines, plan 22 (server errors as codes).
+
+## Order
+- Priority 400: after all tasks of plan 21 (500) and plan 22 (710/490). Task 1 starts only when `lib/i18n.ts`, `locales/es.ts` and the `?lang=` override exist; if not, drop back with a note instead of building them here.
+
+## Design
+- `app/client/src/locales/xx.ts`: `pseudo(es): Catalog`, generated at runtime from `es`, no hand-written file.
+  - Walks every leaf: plain strings, plural maps (`{ one, other, … }`) and variant arrays (`copy.*`), keeping the shape so it satisfies `Catalog`.
+  - Accents: ASCII letters → look-alikes (`a→å`, `e→é`, `o→ø`, `c→ç`, `n→ñ`, `A→Å`, …); readable, but plainly not Spanish.
+  - Padding: ~40 % extra length (rounded up, min. 2 chars), appended as `~` runs inside the brackets.
+  - Brackets `[` … `]` around each string, so clipping at either end is visible.
+  - `{param}` placeholders stay byte-for-byte; only text outside `{…}` is changed.
+  - Exempt: single-letter joker keys (`joker.<id>.key`), so key handling still works (LUI-4 decides keys later); keep a small exempt list in `xx.ts`.
+- Loaded only in dev: `i18n.ts` picks `xx` when `import.meta.env.DEV && ?lang=xx`, via dynamic `import()`, so the production bundle doesn''t grow. Check with `npm run build` that `xx` isn''t in `dist/`.
+- `document.documentElement.lang` stays `es` for `xx` (no real language; avoids odd hyphenation/fonts).
+- Missing keys: plan 21 returns `⟦key⟧`; here add a dev-only `console.warn` once per missing key. Static side: `npm run check` already fails on unknown keys.
+- What stays Spanish under `xx` (expected, not bugs): question/answer text, category and subcategory names, bundle names (content, `15b`), English `message` fallbacks of internal error codes (plan 22).
+- Anything else still in plain Spanish under `xx` is a literal LUI-1 missed: fix it in place (move into `es.ts`), note it in the task.
+
+## Tasks (one per worker run, in this order)
+1. Generator + wiring: `locales/xx.ts` (`pseudo()`), `?lang=xx` in `i18n.ts`, missing-key `console.warn`. Throw-away script (not kept) that runs `pseudo()` over `es` and checks: every leaf changed, `{params}` unchanged, length ≥ 1.4× (except exempt), shape equal. `npm run check`, `npm run build` (no `xx` in `dist/`). Update `directory.md` (`locales/xx.ts`).
+2. Screen walk on the TV layout (1920 × 1080, `theme.css`) with `npm run dev -w app/client` + `trivia`, `?lang=xx`: start, player, level, select (every joker tray state incl. reasons), question (every joker armed and used, hints, final answer), result, victory, overlay, error line in the corner.
+   - Use the same screenshot method as plan 21''s before/after comparison; no new dependency in the flake.
+   - Also check one tight case: the narrowest supported window (`theme.css` height bound).
+   - Fix missed literals in place (see Design). Log each overflow/clipping as one row in `plans/backlog.md` (`B-n`, origin `LUI-2`, status `new`): screen, element, key, what breaks. No redesign, no CSS changes here.
+   - Mark LUI-2 `[x]` in `plans/15a-ui-translation.md` with a note (date, backlog rows); update `plans/project.md` (M3 status). If no overflow is found, say so in the note.
+
+## Every task
+- `npm run check` and `npm run build` pass; `es` output unchanged (no visible change in Spanish).
+- No new dependencies.
+
+## Out of scope
+- Fixing the overflow found (backlog), the `en` catalog (part 4, LUI-3), language menu or launch languages (OQ-31), joker keys per language (LUI-4), `authoring/` pages and `/comodines`.', '2026-10-12T00:11:32Z', 83);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -1544,14 +1577,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Log the code scheme in `plans/decisions.md` if it becomes a decision.
 
 Done when: the plan exists with priority 700 and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', '2026-10-12T00:10:26Z', 80);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (83, 3, 'write plan: pseudo-locale xx (LUI-2)', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Pseudo-locale xx (LUI-2)" --priority N`, N below the part-1 plan''s (it runs after part 1; e.g. 400), with the full body.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (83, 3, 'write plan: pseudo-locale xx (LUI-2)', 'plan', 'done', 1000, '2026-10-11, plan 23 (tasks.sql)', 'Write the plan for part 3 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Pseudo-locale xx (LUI-2)" --priority N`, N below the part-1 plan''s (it runs after part 1; e.g. 400), with the full body.
 
 - `xx` generated from `es` at runtime or build: ~40 % padding, accents, `{params}` intact.
 - Missing keys resolved through `t()` show visibly (e.g. `⟦key⟧`); the type check covers the static side.
 - Walk every screen on the TV layout with `?lang=xx`; log overflow in `plans/backlog.md`, no redesign.
 - Mark LUI-2 in `plans/15a-ui-translation.md` when done.
 
-Done when: the plan exists, ordered after part 1, and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', NULL, 80);
+Done when: the plan exists, ordered after part 1, and its "create tasks" task is queued.', '2026-10-12T00:07:33Z', '2026-10-12T00:11:51Z', 80);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (84, 3, 'write plan: draft en catalog (LUI-3)', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of the masterplan (plan 3): `pm plan list`, then `pm plan add 3 "Draft en catalog (LUI-3)" --priority N`, N below the part-1 plan''s (it runs after part 1; e.g. 400), with the full body.
 
 - `app/client/src/locales/en.ts` satisfies `Catalog`; Claude drafts it.
@@ -1571,6 +1604,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:08:37Z', NULL, 81);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (87, 22, 'create tasks for plan 22', 'split', 'open', 1000, NULL, 'Split plan 22 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:10:24Z', NULL, 82);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (88, 23, 'create tasks for plan 23', 'split', 'open', 1000, NULL, 'Split plan 23 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:11:32Z', NULL, 83);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -1608,6 +1643,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (24, 80, '2026-10-12T00:07:07Z', '2026-10-12T00:07:39Z', 'done', NULL, 0, '48351dca931872c2e0d97ea68840497acdbe0079', 'claude-opus-5-5[1m]', '86f247c9-de89-48c0-b89e-4eab17be46c8', 5, 10, 3444, 142563, 25794, 0.30378459999999996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (25, 81, '2026-10-12T00:07:39Z', '2026-10-12T00:08:48Z', 'done', NULL, 0, 'bb2bbacdcd890c63fd12bf134ff61752f8ecc3da', 'claude-opus-5-5[1m]', '8c09aac5-faf4-405d-85f1-f867bf40e85f', 9, 18, 6702, 323744, 36877, 0.49387680000000006, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (26, 82, '2026-10-12T00:08:48Z', '2026-10-12T00:10:34Z', 'done', NULL, 0, '0afe9e36a55dba56a8b37abac7560c1741f690f4', 'claude-opus-5-5[1m]', '16b2f7c6-80c1-4091-a429-3a349ad84ed3', 13, 24, 10223, 517440, 50171, 0.709412, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (27, 83, '2026-10-12T00:10:34Z', '2026-10-12T00:12:00Z', 'done', NULL, 0, '62310d83ab7781dbff32a1d512609266e4bb6ab7', 'claude-opus-5-5[1m]', 'a5b33a77-0531-4f70-82c4-1cbe29ef63c4', 13, 26, 6035, 437204, 30161, 0.4495327999999999, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
