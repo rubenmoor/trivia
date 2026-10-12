@@ -1821,6 +1821,34 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - D-entry; OQ-32 resolved; CT-1 `[x]`; 16''s target section is decided.', '2026-10-12T00:42:23Z', 166);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (39, 7, 'Price model and Steamworks account (OQ-33)', 300, 'Part 6 of the masterplan (plan 7). OQ-33 asks how the game is sold on Steam (paid, free, or free with paid packs) and who holds the Steamworks account (a person or a company, with its tax consequences). The answer is a decision, not code; the signup and the price setting themselves stay S5 tasks (PUB-6, PUB-11). Owner: `plans/17-publishing.md` ("Steamworks and store"). Not legal or tax advice: the decision body names where a professional must check.
+
+## Depends on
+- Nothing blocks the prep. Feeds plan "Code and content licence (OQ-35)" (part 7: a paid game with a public pool is a different trade-off) and plan "Freesound API for a commercial release (OQ-45)" (part 9: whether the release is "commercial").
+- Related: D-39/D-49 bundles (`colombia` as a candidate paid DLC), D-50 (store names), plan 38 "Content target per player and language (OQ-32)" (how much content a base game vs a pack carries).
+
+## Tasks
+1. **Prep: facts, options and recommendation as a pm decision**
+   - Facts (numbers in the decision body, one source line each; Valve''s Steamworks docs first):
+     - Steam fees and payout: revenue share (30 % → 25 % above $10 M → 20 % above $50 M), $100 app credit per app (recouped after $1,000 gross), DLC costs no app credit; monthly payout threshold and timing; refunds (2 h / 14 days); VAT/sales tax handled by Valve.
+     - Regional pricing: Valve''s recommended price matrix; what a USD price band means in COP/MXN/ARS/EUR (Spanish-speaking markets, plan 37).
+     - Comparable trivia/party games on Steam: 5–8 titles with price and review count (e.g. Trivia Murder Party via Jackbox packs, Quiplash-like, smaller solo trivia titles); note which use DLC question packs.
+     - Free-to-play on Steam: what "free" means for wishlists, visibility and refund-free reviews; free + paid DLC (bundles as DLC per D-39: `colombia`, later bundles) vs paid base + paid DLC.
+     - Account holder: person (individual tax interview, W-8BEN for non-US, income in personal tax return, real name/address visible to Valve; store "Developer/Publisher" can still be a label) vs company (W-8BEN-E, company formation and bookkeeping cost, liability). Flag for a tax advisor: country of residence, US withholding under the treaty, VAT/Kleinunternehmer-like thresholds, whether a hobby income needs registration.
+   - Options (one decision, or two if too big: "Price model (OQ-33)" and "Steamworks account holder (OQ-33)"):
+     - (a) Price model: paid, low band (e.g. $4.99–$7.99) with regional pricing (recommended unless the facts say otherwise: one-time purchase, no store/IAP code, fits a living-room game); free; free base + paid DLC bundles; paid base + paid DLC bundles later.
+     - (b) Account: person (recommended for a hobby launch, cheapest) vs company; name what would trigger switching later (Steamworks allows transferring an app to another partner account, check the doc).
+   - Each option states its consequence for part 7 (licence: paid + public pool → anyone can copy the content; free → public pool costs nothing) and part 9 (paid or DLC → "commercial" under Freesound/CC NC terms; free still counts as distribution).
+   - Recommended option first; body = context + facts + trade-offs, ultra-short. Never contact Valve or an advisor; if a question for an advisor is needed, put its text in the decision body for the gamemaster.
+   - `pm task-pending-decision` on task 2 for each decision.
+2. **Follow-up: record the answer** (waits for the decision(s))
+   - D-entry in `plans/decisions.md` (next free D-number); note the professional checks still owed.
+   - OQ-33 moved to "Resolved" in `plans/open-questions.md` with the D-number; `plans/11-steam.md` open-questions row and `plans/project.md` kept in sync (S5 wording stays with part 10).
+   - `plans/17-publishing.md`: "Steamworks and store" account bullet decided; PUB-6 rewritten to the holder (person/company, which tax form, app credit, any advisor check before signup); PUB-11 rewritten to the price model (price band, regional pricing, launch discount, DLC pricing if bundles become DLC). Both stay S5 tasks, unchecked.
+   - If the answer makes bundles DLC: one backlog row in `plans/backlog.md` (DLC depots/app IDs for bundles, S5, plan 18 SW tasks), no code here.
+
+## Done when
+- Decision(s) answered; D-entry exists; OQ-33 resolved; PUB-6 and PUB-11 match the answer and stay S5; parts 7 and 9 can read the consequence from the D-entry.', '2026-10-12T00:43:13Z', 167);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -2951,9 +2979,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (166, 7, 'write plan: Content target per player and language (OQ-32)', 'plan', 'done', 1000, '2026-10-11, plan 38 (Content target per player and language, OQ-32) in tasks.sql', 'Write the plan for part 5 of the masterplan (plan 7): `pm plan add 7 "Content target per player and language (OQ-32)" --priority 590`.
 - Owner: `plans/16-content-target.md`, CT-1. Needs parts 2 and 4 (their decisions): the follow-up waits on them; part 8''s burn multiplier too, if known.
 - Tasks: prep (estimate from approved counts per level and window, D-52, D-53, burns per game; quality bar: point to D-56 / pm decision 2 instead of duplicating), follow-up (D-entry, OQ-32 resolved, CT-1 `[x]` noting CT-2 in S4 confirms it).', '2026-10-12T00:38:52Z', '2026-10-12T00:42:35Z', 151);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (167, 7, 'write plan: Price model and Steamworks account (OQ-33)', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of the masterplan (plan 7): `pm plan add 7 "Price model and Steamworks account (OQ-33)" --priority 300`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (167, 7, 'write plan: Price model and Steamworks account (OQ-33)', 'plan', 'done', 1000, '2026-10-11, plan 39 (tasks.sql)', 'Write the plan for part 6 of the masterplan (plan 7): `pm plan add 7 "Price model and Steamworks account (OQ-33)" --priority 300`.
 - Owner: `plans/17-publishing.md` ("Steamworks and store").
-- Tasks: prep (Steam fees and payout, comparable prices, paid / free / free + DLC bundles (D-39), person vs company account; consequences for parts 7 and 8; flag where a professional must check), follow-up (D-entry, OQ-33 resolved, PUB-6 and PUB-11 rewritten, still S5).', '2026-10-12T00:38:52Z', NULL, 151);
+- Tasks: prep (Steam fees and payout, comparable prices, paid / free / free + DLC bundles (D-39), person vs company account; consequences for parts 7 and 8; flag where a professional must check), follow-up (D-entry, OQ-33 resolved, PUB-6 and PUB-11 rewritten, still S5).', '2026-10-12T00:38:52Z', '2026-10-12T00:43:15Z', 151);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (168, 7, 'write plan: Code and content licence (OQ-35)', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of the masterplan (plan 7): `pm plan add 7 "Code and content licence (OQ-35)" --priority 290`.
 - Owner: `plans/17-publishing.md` ("Code and content license"), PUB-4. Needs part 6''s decision.
 - Tasks: prep (code × questions × repo options; media licences stay per file, plan 26 "Licence data in the pool"), follow-up (D-entry, OQ-35 resolved, PUB-4 `[x]`), then `LICENSE` (+ content licence file) and mentions in `README.md`, `directory.md`.', '2026-10-12T00:38:52Z', NULL, 151);
@@ -2977,6 +3005,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:41:48Z', NULL, 165);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (176, 38, 'create tasks for plan 38', 'split', 'open', 1000, NULL, 'Split plan 38 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:42:23Z', NULL, 166);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (177, 39, 'create tasks for plan 39', 'split', 'open', 1000, NULL, 'Split plan 39 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:43:13Z', NULL, 167);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -3053,6 +3083,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (60, 164, '2026-10-12T00:39:55Z', '2026-10-12T00:41:14Z', 'done', NULL, 0, '2074a341a37cd2db64a11bd2f97bcb978ec40e04', 'claude-opus-5-5[1m]', '23aed49f-002b-4f2d-8c28-2b5f14fe6986', 11, 20, 7664, 421197, 52399, 0.6567914, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (61, 165, '2026-10-12T00:41:14Z', '2026-10-12T00:41:58Z', 'done', NULL, 0, '0968f233ac9f95da94c965e1198e22eb10328c78', 'claude-opus-5-5[1m]', '3776f64b-3400-4590-8b1f-1a64005b7825', 10, 20, 4209, 383866, 40750, 0.4870332, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (62, 166, '2026-10-12T00:41:58Z', '2026-10-12T00:42:42Z', 'done', NULL, 0, '1148a7244df7b708b5885735889dbbf4119466fc', 'claude-opus-5-5[1m]', '24a16517-618d-48d3-94d5-c5555b1574f0', 8, 16, 4372, 270184, 31270, 0.39170080000000007, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (63, 167, '2026-10-12T00:42:42Z', '2026-10-12T00:43:22Z', 'done', NULL, 0, 'b0f94409082aa93100f6d9b990f8eb6bade01d83', 'claude-opus-5-5[1m]', 'f179348f-5bc9-4e25-bcae-ce50834388bc', 7, 14, 3366, 220746, 29459, 0.3471972, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
