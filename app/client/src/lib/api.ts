@@ -83,7 +83,8 @@ export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }
 }
 
 /** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
- * `jokers` for the joker budget (MD-4); new: the configuration (D-88). */
+ * `jokers` for the joker budget (MD-4); new: the configuration (D-88); cheats (MD-12): `seen` for
+ * replace, `level` for level, age_group / difficulty / bundles for settings. */
 export interface GameActionBody {
   index?: number;
   player?: string;
@@ -97,6 +98,8 @@ export interface GameActionBody {
   cards?: number;
   video?: boolean;
   audio?: boolean;
+  seen?: boolean;
+  level?: number;
 }
 
 /** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */
@@ -136,7 +139,7 @@ export async function fetchReports(): Promise<Report[]> {
 
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "report",
+  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "report" | "replace" | "level" | "settings",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const scope = action === "new" ? "next" : "game";

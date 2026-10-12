@@ -85,7 +85,8 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - `settings.customized`: `true` after any change via "Customize game"; feeds achievements (S5).
 - Refusals outside gamemaster mode (engine, not only UI): undo, skip, replace, level, settings, joker budget changes (D-88).
 - `ReportRow`: logs the current question to a local report list (a page to copy from); not seen-counted, no replacement; the player answers or uses a joker.
-- Engine as built (task 376): `settings.mode` stored only when `new` carries it; missing resolved by `gameMode()`, never written back (fixtures unchanged); `customized` only outside gamemaster mode; `new` takes `jokers` overrides; refusal code `gamemaster_only` (409); `report` action (`note?`) needs a question on screen; save version 2 (`reports`); `replace` gets its guard with plan 59.
+- Engine as built (task 376): `settings.mode` stored only when `new` carries it; missing resolved by `gameMode()`, never written back (fixtures unchanged); `customized` only outside gamemaster mode; `new` takes `jokers` overrides; refusal code `gamemaster_only` (409); `report` action (`note?`) needs a question on screen; save version 2 (`reports`).
+- Cheats as built (task 498): `replace {seen?}` → `game.replace`, `level {level}` → `game.jumpLevel`, `settings {age_group | difficulty, bundles}` → `game.changeSettings`; `level` / `settings` in the question phase with `cards` > 0: `cheat_not_select`; with `cards: 0` the question on screen gets an `admin_replace` row (keeps its jokers spent, not seen) before the new table; mid-game supply short: `supply_short` with the levels current..`levels`.
 - Joker availability (JK-2) has a reason «No te quedan Soplos» when the budget is spent; the tray shows count badges (MD-2, MD-3).
 
 ## Tasks

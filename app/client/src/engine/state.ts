@@ -73,7 +73,7 @@ export interface SeenRow {
 }
 
 /** `admin_burn`: «Saltar y quemar para todos» in games from before plan 65. */
-export type Outcome = "skipped" | "easier" | "category" | "sniped" | "admin_skip" | "admin_block" | "admin_burn";
+export type Outcome = "skipped" | "easier" | "category" | "sniped" | "admin_skip" | "admin_block" | "admin_burn" | "admin_replace";
 
 /** An answered question has `correct`; a replaced or skipped one `outcome`. */
 export interface HistoryEntry {
@@ -187,6 +187,9 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   mode_unknown: (p) => `unknown mode ${pyRepr(String(p.mode))}`,
   mode_not_built: (p) => `mode ${pyRepr(String(p.mode))} isn't playable yet`,
   gamemaster_only: (p) => `${p.action} only in gamemaster mode`,
+  replace_empty: "no other question for this level",
+  level_invalid: (p) => `level: a whole number ${p.min}–${p.max}`,
+  cheat_not_select: (p) => `${p.action} only with the cards on the table`,
   note_invalid: "a note is text of at most 500 letters",
   language_unknown: (p) => `no ${p.kind} language ${pyRepr(String(p.lang))}`,
 };

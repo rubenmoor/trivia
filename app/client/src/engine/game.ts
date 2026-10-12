@@ -534,8 +534,13 @@ export function categoryCandidates(avail: PoolQuestion[], level: number, ranges:
 
 /** Replace the question on screen in place with `fresh` (Bájale, Cambiazo). */
 function swapIn(work: SaveData, gid: number, state: GameState, fresh: PoolQuestion, outcome: Outcome, io: Io): void {
-  const old = state.current;
   dropCurrent(work, gid, state, outcome, io);
+  putOn(state, fresh, io);
+}
+
+/** `fresh` takes the place of the question on screen (already logged). */
+function putOn(state: GameState, fresh: PoolQuestion, io: Io): void {
+  const old = state.current;
   const answers = [fresh.answer, ...fresh.wrong_answers];
   io.rng.shuffle(answers, "swap_in");
   state.options = state.options.map((i) => (i === old ? fresh.id : i));
@@ -705,6 +710,102 @@ export function setJokers(save: SaveData, io: Io, budget: unknown): { save: Save
     const { row, state } = running(work);
     gamemasterOnly(state, "jokers");
     Object.assign(state.settings.jokers, budget);
+    saveGame(row, state, io);
+    return state;
+  });
+}
+
+// Gamemaster cheats (MD-12, D-88) --------------------------------------------------------------
+
+/** «Cambiar pregunta» on `state`: same level, same subcategory, else any in range; the old one is logged
+ * `admin_replace`, seen only with `seen`. */
+function replaceCurrent(work: SaveData, gid: number, state: GameState, data: EngineData, io: Io, seen: boolean): void {
+  const cur = question(data, state.current);
+  const avail = availableNow(work, state, data);
+  const ranges = rangesOf(state, data);
+  const fill = laterFill(avail, state.level, ranges, cardsOf(state));
+  const pickFrom = (cands: PoolQuestion[]) => replacement(avail, state.level, ranges, cands,
+    (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io, fill, cardsOf(state));
+  const fresh = pickFrom(categoryCandidates(avail, state.level, ranges, cur.subcategory as string))
+    ?? pickFrom(avail.filter((q) => q.subcategory !== cur.subcategory && selection.inRange(q, state.level, ranges)));
+  if (!fresh) throw new GameError("replace_empty");
+  if (seen) see(work, cur.id, gid, io);
+  state.history.push({ level: state.level, question_id: cur.id, outcome: "admin_replace", jokers: state.jokers });
+  putOn(state, fresh, io);
+}
+
+/** «Cambiar pregunta»: a new question on screen (MD-12). */
+export function replace(save: SaveData, data: EngineData, io: Io, seen = false): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const { row, state } = running(work);
+    gamemasterOnly(state, "replace");
+    if (state.phase !== "question") throw new GameError("no_question");
+    replaceCurrent(work, row.id, state, data, io, seen);
+    saveGame(row, state, io);
+    return state;
+  });
+}
+
+/** Before a new table (level, settings): select phase, or with `cards: 0` the question on screen is
+ * replaced (not seen); the cards on the table go back to the pool. */
+function clearTable(state: GameState, what: string): void {
+  if (state.phase === "question") {
+    if (cardsOf(state) !== 0) throw new GameError("cheat_not_select", { action: what });
+    const cur = state.current!;
+    state.history.push({ level: state.level, question_id: cur, outcome: "admin_replace", jokers: state.jokers });
+    state.options = state.options.filter((i) => i !== cur);
+  }
+  const back = new Set(state.options);
+  state.offered = state.offered.filter((i) => !back.has(i));
+  Object.assign(state, { phase: "select", options: [], repeat: false });
+  leaveQuestion(state);
+}
+
+/** «Saltar a nivel»: a new table at `level`; no rows for the levels in between; the undo snapshot stays. */
+export function jumpLevel(save: SaveData, data: EngineData, io: Io, level: unknown): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const { row, state } = running(work);
+    gamemasterOnly(state, "level");
+    const to = checkCount(level, 1, levelsOf(state), "level_invalid");
+    clearTable(state, "level");
+    state.level = to;
+    deal(work, state, data, io);
+    saveGame(row, state, io);
+    return state;
+  });
+}
+
+/** Difficulty and bundles mid-game: validated like `new`, the rest of the game (current level..levels)
+ * must fill; a new table, history and level stay. */
+export function changeSettings(
+  save: SaveData, data: EngineData, io: Io, input: Pick<ChoiceInput, "age_group" | "difficulty" | "bundles">,
+): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const { row, state } = running(work);
+    gamemasterOnly(state, "settings");
+    const choice = resolveChoice(data, input, gameChoice(state, data));
+    clearTable(state, "settings");
+    const s = state.settings;
+    if (input.age_group !== undefined || input.difficulty !== undefined) {
+      delete s.age_group;
+      delete s.difficulty;
+      if (choice.difficulty) s.difficulty = choice.difficulty;
+      else s.age_group = choice.age_group!;
+    }
+    if (input.bundles !== undefined) s.bundles = choice.bundles;
+    const ranges = rangesOf(state, data);
+    const avail = availableNow(work, state, data);
+    const rest = laterLevels(state.level - 1, ranges);
+    const { missing } = selection.assign(avail, rest, ranges, perLevel(cardsOf(state)));
+    if (missing.size) {
+      const levels = rest.map((level) => ({
+        level, range: [ranges[level - 1][0], ranges[level - 1][1]] as [number, number],
+        candidates: avail.filter((q) => selection.inRange(q, level, ranges)).length, missing: missing.get(level) ?? 0,
+      }));
+      const short = levels.filter((l) => l.missing).map((l) => ({ level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing }));
+      throw new GameError("supply_short", { levels: short }, { ok: false, available: avail.length, levels });
+    }
+    deal(work, state, data, io);
     saveGame(row, state, io);
     return state;
   });
