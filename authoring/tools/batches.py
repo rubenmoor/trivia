@@ -4,6 +4,7 @@ import json, math
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import WORK
 import categories  # app/server/categories.py: app/data/categories.json (D-19)
+import targets  # authoring/tools/targets.py: pool targets (D-53)
 
 SHARE = 0.5  # per batch: this share of the bundle's subcategories, those with the fewest approved questions (D-46)
 
@@ -20,11 +21,15 @@ def unfinished_runs():
 
 def subcategories(pool, count=None, bundle="base"):
     """The bundle's `count` subcategories (default: SHARE of them, D-46) with the fewest approved
-    questions of that bundle in `pool`; ties in its categories.json order (D-41)."""
+    questions of that bundle in `pool`, each weighted by its level's share of the deficits to the
+    targets (D-54); ties in its categories.json order (D-41)."""
+    deficit = targets.deficits(pool, bundle)
+    total = sum(deficit.values()) if deficit else 0
     approved = {}
     for q in pool:
         if q["status"] == "approved" and q.get("bundle") == bundle:
-            approved[q["subcategory"]] = approved.get(q["subcategory"], 0) + 1
+            w = deficit.get(q["difficulty"], 0) / total if deficit else 1
+            approved[q["subcategory"]] = approved.get(q["subcategory"], 0) + w
     order = categories.subcategories(bundle)
     count = count or math.ceil(len(order) * SHARE)
     return sorted(order, key=lambda s: (approved.get(s, 0), order.index(s)))[:count]

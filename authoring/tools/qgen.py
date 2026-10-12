@@ -566,13 +566,9 @@ def target_weights(pool_questions, bundle):
     focus = focus_group()
     if focus is None:
         lo, hi = load_age_groups()["scale"]
-        t = targets.load_targets(bundle)
-        if t:
-            have = Counter(q["difficulty"] for q in pool_questions
-                           if q["status"] == "approved" and q.get("bundle") == bundle)
-            deficit = {lvl: max(0, t["difficulty"].get(lvl, 0) - have[lvl]) for lvl in range(lo, hi + 1)}
-            if any(deficit.values()):
-                return deficit
+        deficit = targets.deficits(pool_questions, bundle)
+        if deficit:
+            return {lvl: deficit.get(lvl, 0) for lvl in range(lo, hi + 1)}
         return {lvl: 1 for lvl in range(lo, hi + 1)}
     lo, hi = focus["window"]
     if sorted(LEVEL_WEIGHTS) != list(range(lo, hi + 1)):  # AG-8: weights per group
@@ -581,36 +577,72 @@ def target_weights(pool_questions, bundle):
     return LEVEL_WEIGHTS
 
 
-def assign_difficulties(slots, seed, weights):
-    """Spread target levels over all slots to match the weights."""
-    n, total = len(slots), sum(weights.values())
+def level_counts(n, weights):
+    """How many of n slots get each level, in proportion to the weights."""
+    total = sum(weights.values())
     exact = {lvl: n * w / total for lvl, w in weights.items()}
     counts = {lvl: int(x) for lvl, x in exact.items()}
     for lvl in sorted(exact, key=lambda l: exact[l] - counts[l], reverse=True)[:n - sum(counts.values())]:
         counts[lvl] += 1
-    levels = [lvl for lvl, c in counts.items() for _ in range(c)]
-    random.Random(seed).shuffle(levels)
-    return dict(zip(slots, levels))
+    return counts
+
+
+def assign_difficulties(free, fresh, weights, seed, rounds=50):
+    """{subcategory: [target levels]}: `free` slots each, levels per `weights`, each level to the
+    subcategories whose unused concepts (`fresh`: their known_at values) carry it (D-54): the
+    concepts within ±1 per subcategory and level, scaled to both totals (iterative proportional
+    fitting), then rounded slot by slot. A level no list carries goes by distance. Seeded; scarce
+    levels come first in each list."""
+    rng = random.Random(seed)
+    counts = level_counts(sum(free.values()), weights)
+    fit = {s: {lvl: sum(abs(k - lvl) <= 1 for k in fresh[s]) for lvl in counts} for s in free}
+    for lvl in counts:
+        if counts[lvl] and not any(fit[s][lvl] for s in free):
+            for s in free:
+                fit[s][lvl] = 1 / (1 + min((abs(k - lvl) for k in fresh[s]), default=99))
+    for _ in range(rounds):
+        for lvl in counts:
+            col = sum(fit[s][lvl] for s in free)
+            for s in free:
+                fit[s][lvl] *= counts[lvl] / col if col else 0
+        for s in free:
+            row = sum(fit[s].values())
+            for lvl in counts:
+                fit[s][lvl] *= free[s] / row if row else 0
+    supply = {lvl: sum(fit[s][lvl] > 0 for s in free) for lvl in counts}
+    order = sorted(((i + 0.5) / c, supply[lvl], lvl) for lvl, c in counts.items() for i in range(c))
+    out, left = {s: [] for s in free}, dict(free)
+    for *_, lvl in order:
+        s = max((s for s in left if left[s]), key=lambda s: (fit[s][lvl] - out[s].count(lvl), rng.random()))
+        out[s].append(lvl)
+        left[s] -= 1
+    for levels in out.values():
+        levels.sort(key=lambda l: supply[l])
+    return out
 
 
 def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded."""
-    level_of = assign_difficulties([(s, i) for s in subs for i in range(n)], seed,
-                                   target_weights(pool_questions, bundle))
+    lists = {s: concepts.load(s) for s in subs}
+    used = {s: concepts.uses(pool_questions, s) for s in subs}
+    levels = assign_difficulties({s: n for s in subs},
+                                 {s: [c["known_at"] for c in concepts.unused(lists[s], used[s])] for s in subs},
+                                 target_weights(pool_questions, bundle), seed)
     plan = {}
     for s in subs:
         rng = random.Random(f"{seed}:{s}")
-        lst = concepts.load(s)
-        diffs = [level_of[(s, i)] for i in range(n)]
-        picked = concepts.draw_concepts(lst, concepts.uses(pool_questions, s), diffs, rng)
+        lst = lists[s]
+        picked = concepts.draw_concepts(lst, used[s], levels[s], rng)  # scarce levels pick first
+        pairs = list(zip(picked, levels[s]))
+        rng.shuffle(pairs)
         usage = concepts.axis_usage(pool_questions, s)
         offered = {a: set() for a in concepts.AXES}
         possible = concepts.possible_combos(axes_def, lst.get("axis_fit", {}))
         if not possible:
             print(f"  {s}: no axis combination fits (see axis_fit in its concept list); no slots", file=sys.stderr)
         slots = []
-        for c, target in zip(picked, diffs):
+        for c, target in pairs:
             combos = concepts.draw_combos(axes_def, lst.get("axis_fit", {}), usage, offered, rng,
                                           possible=possible)
             if not combos:
@@ -1839,7 +1871,7 @@ def next_batch():
 
 def batch_subcategories(count=None, bundle="base"):
     """The bundle's `count` subcategories (default: batches.SHARE of them, D-46) with the fewest
-    approved questions of that bundle; ties in its categories.json order (D-41)."""
+    approved questions of that bundle, weighted by the deficits (D-54); ties in its categories.json order (D-41)."""
     return batches.subcategories(load_json(POOL)["questions"], count, bundle)
 
 

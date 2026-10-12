@@ -20,6 +20,19 @@ def load_targets(bundle):
     return {"total": t["total"], "difficulty": {int(k): v for k, v in t["difficulty"].items()}}
 
 
+def deficits(pool_questions, bundle):
+    """{level: max(0, target − approved)} for the bundle (D-54); None without targets or deficits."""
+    t = load_targets(bundle)
+    if t is None:
+        return None
+    have = {}
+    for q in pool_questions:
+        if q["status"] == "approved" and q.get("bundle") == bundle:
+            have[q["difficulty"]] = have.get(q["difficulty"], 0) + 1
+    out = {lvl: max(0, n - have.get(lvl, 0)) for lvl, n in t["difficulty"].items()}
+    return out if any(out.values()) else None
+
+
 def category_shares(bundle):
     """{broad category slug: derived share} = total × its subcategories / the bundle's (guide only)."""
     t = load_targets(bundle)
