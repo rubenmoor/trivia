@@ -547,7 +547,91 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Order and constraints
 - Part 1 is independent of 2 and 3. Parts 2 → 3.
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'tbd.', '2026-10-11T21:54:56Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, PUB-4''s `LICENSE`) follow once their decision is in.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 7 …`, priority as suggested), and that plan''s tasks do the work.
+
+## How a decision part works (all parts 1–8)
+- Prep task: read the owning plan file, gather the facts the options need (pool counts, prices, docs, licence terms), write the decision with `pm decision add` (recommended option first, body = context + trade-offs, ultra-short), then `pm task-pending-decision` on the follow-up task.
+- Follow-up task (waits for the answer): D-entry in `decisions.md`; OQ moved to "Resolved" in `open-questions.md`; owning plan file updated (draft tables → decided, tasks `[x]` with a note); `plans/project.md` kept in sync.
+- Workers never answer a decision themselves and never contact anyone outside the project (Valve, Freesound, a lawyer). If a part needs outside contact, it prepares the text and the gamemaster sends it.
+- No Steam-specific code (S3–S6 are out of scope).
+
+## Parts
+
+1. **Desktop shell (OQ-29, SW-1)**
+   - Owner: `plans/18-steam-integration.md` ("Desktop shell"): Electron + steamworks.js recommended, Tauri, browser + local server.
+   - Refresh the facts before deciding: steamworks.js maintenance status and Electron support, install size, Deck/Proton notes, overlay in Electron. Fold in OQ-37''s answer if phones as buzzers need a LAN server inside the shell (note it in the decision as a dependency, not a blocker).
+   - Done when: D-entry; SW-1 `[x]`; plan 18''s table marked decided; S3 tasks (SW-2..SW-6) still match the choice.
+   - Suggested priority: 700.
+
+2. **Default mode (OQ-30, MD-5)**
+   - Owner: `plans/13-game-modes.md` ("Default mode"): joker presets per difficulty (draft table Fácil/Normal/Difícil/Experto), checkpoints (e.g. level 6 on Fácil), which levels count as won, which admin actions remain (no undo, no «Saltar y quemar para todos», «Reportar pregunta», «Abandonar partida»).
+   - Must fit D-38 (four age groups, scale 1–15; `plans/21-age-groups.md`) and the age-group windows of milestone 5 (plans 27, 28): does a preset shift the window, or only the joker budget?
+   - Decision may be split in two (presets + checkpoints; admin actions) if one is too big to answer at once.
+   - Done when: D-entry; MD-5 `[x]`; plan 13''s default-mode section is a spec MD-6/MD-7 can implement.
+   - Suggested priority: 600.
+
+3. **«Reportar pregunta» and the mode/settings screen (MD-6, MD-7)**
+   - Implementation, after part 2''s answer. MD-6: burn for everyone on this machine, local report list (a page the player can copy from), replacement draw. MD-7: mode and settings screen between Player and Level; the gamemaster mode reachable from it or a launch option; the family''s defaults unchanged.
+   - Builds on the TS engine (milestone 2): depends on plan 20 "Engine game state machine (PORT-3)" and the save document (`SaveData`). If the engine hasn''t landed when this plan is split, its tasks wait for it (no second implementation in `app/server/game.py`).
+   - Strings go through the catalog (milestone 3, plan 21 "t() helper and the es catalog").
+   - Done when: in the default mode a report burns, lists and replaces; the settings screen starts a default-mode game with a preset; a gamemaster-mode game plays exactly as today.
+   - Suggested priority: 500 (below plan 20 at 600).
+
+4. **Launch languages and Spanish variety (OQ-31, I18N-1)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties", "Model"), with 15a/15b/15c.
+   - Options: Spanish only; Spanish + English; more. Spanish as Colombian today vs. neutral with Colombian variants. Facts to bring: Steam language shares (Steam hardware survey), translation cost per question (part 5 / `costs.log`), how much of the pool is Colombian-flavoured (`colombia` bundle vs. `base`, D-39, D-49), D-50''s localized name.
+   - Done when: D-entry; I18N-1 `[x]`; 15/15a/15b note the launch languages; plan 24 "Draft en catalog (LUI-3)" checked against the answer (still needed or not).
+   - Suggested priority: 500.
+
+5. **Content target per new player and language (OQ-32, CT-1)**
+   - Owner: `plans/16-content-target.md`. Needs parts 2 (joker budget → cards burned per game) and 4 (languages).
+   - The simulation (CT-2, `qgen report --simulate`) belongs to S4 (milestone 9). In S2, decide the target in games per new player from an estimate: approved counts per level and age-group window today, D-52''s 5000 `base` target and its per-level targets (D-53), burns per game from the default preset. State that CT-2 verifies it later.
+   - Also decide the quality bar''s draft numbers or point to milestone 1''s (D-56 spot checks, pm decision 2) instead of duplicating them.
+   - Done when: D-entry; CT-1 `[x]` with a note that CT-2 confirms it; plan 16''s target section decided.
+   - Suggested priority: 590 (after part 2).
+
+6. **Price model and Steamworks account holder (OQ-33)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store"). Options: paid (price band), free, free + paid packs (bundles as DLC, D-39); account held by a person or a company (tax interview, W-8BEN, $100 app credit).
+   - Facts: Steam''s fees and payout rules, comparable trivia games'' prices; note what each option means for parts 7 (licence) and 8 (Freesound: "commercial").
+   - Not legal or tax advice: the decision body says where a professional must check.
+   - Done when: D-entry; PUB-6 and PUB-11 in plan 17 rewritten to match (they stay S5 tasks).
+   - Suggested priority: 300.
+
+7. **Code and content licence; is the pool public (OQ-35, PUB-4)**
+   - Owner: `plans/17-publishing.md` ("Code and content license"). Needs part 6 (a paid game with a public pool is a different trade-off).
+   - Options: code (MIT, GPL, all rights reserved) × questions (CC BY-SA, CC BY-NC, reserved) × repo (public, release content in a private repo/submodule, whole repo private). Respect media licences: they stay per file (plan 26 "Licence data in the pool", milestone 4).
+   - After the answer: add `LICENSE` (and a content licence file if separate), mention it in `README.md` and `directory.md`.
+   - Done when: D-entry; PUB-4 `[x]`; the licence files exist.
+   - Suggested priority: 290 (after part 6).
+
+8. **Competitive and couch co-op format and input (OQ-37)**
+   - Owner: `plans/13-game-modes.md` ("Competitive mode", "Couch co-op") and `plans/14-input.md` (section 3, IN-7).
+   - Only the format and input choice: relay ladder, parallel ladders, buzzer; hot-seat, one controller per player, phones as buzzers. Building it stays "Later" (MD-8, MD-9, IN-6); the decision notes the burn multiplier for part 5 and the shell needs for part 1.
+   - Done when: D-entry; plans 13 and 14 say which format and input the later tasks build.
+   - Suggested priority: 580.
+
+9. **Freesound API for a commercial release (OQ-45)**
+   - Owner: `plans/23-media-providers.md` (Freesound row, MP-6). Today: 9 questions in `authoring/data/questions.json` reference Freesound (6 in `app/data/pool.json`); the game ships the CC0/CC BY files, not the API.
+   - Options: ask Freesound/UPF (the worker drafts the email, the gamemaster sends it); replace the Freesound picks with other allowlisted sources (D-45) and drop Freesound from the pipeline before release; keep it for the family only and exclude it from the Steam media bundle (SW-9).
+   - Housekeeping: `open-questions.md` uses OQ-45 twice (the resolved one is D-42''s); give the Freesound question a free number and update the references.
+   - Done when: D-entry; plan 23 and the provider order reflect the answer; if replacing, the replacement is a task in the plan (picks through the review tool, never by hand, D-36).
+   - Suggested priority: 200.
+
+10. **S2 close-out**
+    - `plans/11-steam.md`: "Open questions" table resolved with D-numbers; S3–S6 phases and the track table updated to the answers (e.g. Electron vs. other shell, languages in S4''s exit, price in S5); ST-1 `[x]`.
+    - `plans/project.md`, `plans/README.md` statuses (13, 15, 16, 17, 18 no longer stubs where decided); the masterplans of milestones 8–11 (plans 8–11) get a note if their scope changed.
+    - Done when: the milestone''s "Done when" holds: OQ-29..OQ-37 and OQ-45 resolved in `decisions.md`, later phases in `11-steam.md` match.
+    - Suggested priority: 150 (last).
+
+## Order
+- 1, 2, 4, 6, 8, 9 can be prepared in parallel; their decisions wait for the gamemaster.
+- 2 → 3 (also needs milestone 2''s engine), 2 + 4 → 5, 6 → 7, then 10.
+
+## Constraints (from the milestone)
+- The gamemaster answers; workers prepare options and recommendations as pm decisions.
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (10, 10, 'masterplan', 1000, 'tbd.', '2026-10-11T21:55:09Z', NULL);
@@ -1623,9 +1707,9 @@ plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:21:52Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (6, 6, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, tasks.sql (plan 6 body; tasks 134-136)', 'Write plan 6, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:32:24Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (7, 7, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 7, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (7, 7, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-12, plan 7 body (10 parts); tasks.sql', 'Write plan 7, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-11T21:54:56Z', NULL, NULL);
+plan for one part.', '2026-10-11T21:54:56Z', '2026-10-12T00:38:11Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (8, 8, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 8, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-11T21:55:09Z', NULL, NULL);
@@ -2705,6 +2789,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check: whole audio folder ≤ 3.5 MB; `CREDITS.md` has a row per recorded file.
 
 Done when: 04 and `plans/project.md` updated; `grep -rn PLACEHOLDER app/client/src` result noted for the milestone.', '2026-10-12T00:36:37Z', NULL, 139);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (151, 7, 'create tasks for plan 7', 'split', 'open', 1000, NULL, 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:37:56Z', NULL, 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (152, 7, 'write plan: Desktop shell (OQ-29)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 1 of masterplan 7 ("Desktop shell (OQ-29)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Desktop shell (OQ-29)" --priority 700`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:01Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (153, 7, 'write plan: Default mode (OQ-30)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 2 of masterplan 7 ("Default mode (OQ-30)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Default mode (OQ-30)" --priority 600`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:01Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (154, 7, 'write plan: Reportar pregunta and settings screen (MD-6, MD-7)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 3 of masterplan 7 ("Reportar pregunta and settings screen (MD-6, MD-7)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Reportar pregunta and settings screen (MD-6, MD-7)" --priority 500`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (155, 7, 'write plan: Launch languages and Spanish variety (OQ-31)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 4 of masterplan 7 ("Launch languages and Spanish variety (OQ-31)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Launch languages and Spanish variety (OQ-31)" --priority 500`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (156, 7, 'write plan: Content target per player and language (OQ-32)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 5 of masterplan 7 ("Content target per player and language (OQ-32)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Content target per player and language (OQ-32)" --priority 590`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (157, 7, 'write plan: Price model and Steamworks account (OQ-33)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 6 of masterplan 7 ("Price model and Steamworks account (OQ-33)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Price model and Steamworks account (OQ-33)" --priority 300`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (158, 7, 'write plan: Code and content licence (OQ-35)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 7 of masterplan 7 ("Code and content licence (OQ-35)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Code and content licence (OQ-35)" --priority 290`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (159, 7, 'write plan: Competitive and couch co-op format (OQ-37)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 8 of masterplan 7 ("Competitive and couch co-op format (OQ-37)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Competitive and couch co-op format (OQ-37)" --priority 580`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (160, 7, 'write plan: Freesound API for a commercial release (OQ-45)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 9 of masterplan 7 ("Freesound API for a commercial release (OQ-45)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Freesound API for a commercial release (OQ-45)" --priority 200`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (161, 7, 'write plan: S2 close-out', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 10 of masterplan 7 ("S2 close-out"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "S2 close-out" --priority 150`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:02Z', '2026-10-12T00:38:10Z', 7);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2774,6 +2870,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (53, 137, '2026-10-12T00:35:14Z', '2026-10-12T00:35:36Z', 'done', NULL, 0, '29ad06258100c9e7d1dbca21944e0f1793d19d46', 'claude-opus-5-5[1m]', '1db34157-9dcd-4e8e-9c21-d63ae7bd3015', 5, 10, 2341, 133851, 22683, 0.2550942, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (54, 138, '2026-10-12T00:35:36Z', '2026-10-12T00:36:10Z', 'done', NULL, 0, 'dd574936c557333b110868a421b4966cec0dccef', 'claude-opus-5-5[1m]', '802f81ce-9f22-4c8e-a143-c711d4fea11a', 5, 10, 3372, 145058, 26526, 0.3086996, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (55, 139, '2026-10-12T00:36:10Z', '2026-10-12T00:36:45Z', 'done', NULL, 0, 'c3f802cfe9a5ebaaeaedf53feedc54da1d1092e9', 'claude-opus-5-5[1m]', '5e48d658-4a13-49c6-9fd8-a4d0bb43b592', 5, 10, 3531, 146738, 28783, 0.3302716, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (56, 7, '2026-10-12T00:36:45Z', '2026-10-12T00:38:19Z', 'done', NULL, 0, 'aa323f30031742363fdc041797c03f838aec1ef2', 'claude-opus-5-5[1m]', '3c482457-76a4-49f9-82b6-20bc1945a04f', 13, 26, 9065, 617366, 56610, 0.75775719999999991, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
