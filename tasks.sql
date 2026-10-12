@@ -343,6 +343,9 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Outcome
 - Steamworks integration and depots (SW-7..SW-14, `plans/18-steam-integration.md`).
+- Language guess from Steam (SW-8): `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) replaces `navigator.language` as the first-start guess (milestone 9); only the preselection, the player still confirms.
+  - mapping of Steam''s API names (`latam`, `spanish`, `english`, `german`, later `schinese`, `russian`, `brazilian`) to our locales
+  - without Steam: `navigator.language` as before
 - Store page, AI disclosure, rating and the rest of publishing (PUB-6..PUB-11, `plans/17-publishing.md`).
 
 ## Constraints
@@ -8646,6 +8649,8 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (469, 5, 'write plan: Bundle languages and base bundles (data, engine, validate)', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of masterplan 5 (`pm plan add 5 "Bundle languages and base bundles" --priority 600`): `languages` per bundle in `app/data/bundles.json`, `kind: base` replacing `always_on` (exactly one base bundle per session, default the locale''s first), the engine''s `resolveChoice`/defaults per game locale, `qgen validate` checks, authoring readers of `always_on`. See the masterplan''s "Part 5" for scope and checks; plans 27 (done) and 68 (language setting) for the code it builds on. Must leave the family''s defaults and plan 18''s fixture replay unchanged.', '2026-10-12T20:20:30Z', NULL, 465);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (470, 9, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 9, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:46Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (471, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:21:47Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
