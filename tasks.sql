@@ -3282,14 +3282,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Output plan 12''s exit check (task 28) can read without recomputing; tell task 28 in a note if it needs a shared function.
 
 Done when: run on batch-7 with a few throw-away spot-check entries (removed afterwards) gives plausible numbers; `qgen validate` clean.', '2026-10-11T23:53:37Z', '2026-10-12T03:55:48Z', 23);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (49, 16, 'authoring/QC.md, RUNBOOK/AGENTS/directory pointers; per-batch pattern for plan 17', 'work', 'open', 620, NULL, 'Part "Findings → changes (c)" of plan 16, the written procedure.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (49, 16, 'authoring/QC.md, RUNBOOK/AGENTS/directory pointers; per-batch pattern for plan 17', 'work', 'done', 620, '2026-10-11, authoring/QC.md (new), RUNBOOK step 5, AGENTS.md, directory.md; D-56 matches; plan 17 already has the pattern (task 53), unchanged', 'Part "Findings → changes (c)" of plan 16, the written procedure.
 
 - `authoring/QC.md` (new): steps 1–5 of plan 16 (batch done → blind spot check by the gamemaster, a pm decision "Spot check <batch> done?" for workers → `qgen report --qc <batch>` → proposals by the threshold rule into one pm decision "QC <batch>: which changes?" → approved ones become implementation tasks; next batch waits on both decisions). Prompt changes never inside a batch run.
 - D-56 already in `plans/decisions.md`: check it matches.
 - One line in `authoring/RUNBOOK.md` step 5 pointing to QC.md; one line in AGENTS.md "Making questions"; `directory.md` entry.
 - Plan 17 (batch runs): make sure its tasks follow the pattern batch → spot-check decision → `--qc` + proposal decision → change tasks → next batch (`pm plan edit 17` if its body lacks it; that requeues its split).
 
-Done when: files written and consistent with the commands from the previous tasks as built; no batch or QC run.', '2026-10-11T23:53:37Z', NULL, 23);
+Done when: files written and consistent with the commands from the previous tasks as built; no batch or QC run.', '2026-10-11T23:53:37Z', '2026-10-12T03:56:36Z', 23);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (50, 17, 'RUNBOOK: batch runs under pm run', 'work', 'open', NULL, NULL, 'Plan 17 "Batch tasks under `pm run`". RUNBOOK clashes with a pm worker twice; fix it once, so every later batch task can follow RUNBOOK exactly.
 
 - `authoring/RUNBOOK.md`, new short section "Under `pm run`" (env `PM_WORKER=1`), referenced from steps 1, 3, 4:
@@ -5572,6 +5572,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (152, 47, '2026-10-12T03:49:07Z', '2026-10-12T03:53:12Z', 'done', NULL, 0, 'dee4e815c627c10f0c292e3acbc256c5aa6e2aaf', 'claude-opus-5-5[1m]', 'b4f9fe56-44c2-40a8-82d4-f47bc4a6f705', 36, 58, 24325, 2258101, 92147, 1.6755282000000003, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (153, 334, '2026-10-12T03:53:12Z', '2026-10-12T03:53:38Z', 'done', NULL, 0, 'a60754e0137afb986c8f2719ebe8161beafbc617', 'claude-opus-5-5[1m]', '8edcaaa1-5a02-414f-ad61-6cb4190cdd69', 9, 18, 2252, 289761, 27412, 0.32236020000000004, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (154, 48, '2026-10-12T03:53:38Z', '2026-10-12T03:55:59Z', 'done', NULL, 0, '2f8ecf1ec03d429cb56f5086df757c102bd020ff', 'claude-opus-5-5[1m]', 'df231469-9ce6-4451-a6d4-8ae7d4d2f298', 27, 42, 14786, 1279674, 69256, 1.1058708, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (155, 49, '2026-10-12T03:55:59Z', '2026-10-12T03:56:43Z', 'done', NULL, 0, '5aba20d51e867210041e12208e9220ea50de66c3', 'claude-opus-5-5[1m]', '0ed6e0a6-d674-4afd-b364-7da7b4d7e84b', 10, 20, 4427, 388797, 39725, 0.48417940000000004, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -23,7 +23,7 @@ Family trivia party game. Runs locally and offline; the code is public on GitHub
 - Stop background processes by PID (`kill $!`), never `pkill -f`: the pattern can match your own `claude` process.
 
 ## Making questions
-If you are asked to make, generate, add, review or approve questions, follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly and nothing else (D-36). It is one command, `qgen batch`. Don't run pipeline steps by hand, don't edit the pools, and don't pick media yourself.
+If you are asked to make, generate, add, review or approve questions, follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly and nothing else (D-36). It is one command, `qgen batch`. Don't run pipeline steps by hand, don't edit the pools, and don't pick media yourself. Quality control after a batch: [`authoring/QC.md`](authoring/QC.md) (D-56).
 
 ## Repo layout (D-35)
 - `app/` is what ships: the game server (`app/server/`), the game UI (`app/client/`) and its data (`app/data/categories.json`, `app/data/bundles/`, `app/data/pool.json`).

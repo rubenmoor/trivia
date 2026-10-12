@@ -26,7 +26,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
 
    If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so.
 4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks.
-5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`).
+5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the gamemaster's, not part of this procedure.
 
 ## Never
 
