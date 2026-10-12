@@ -11,6 +11,7 @@ app/                    ships: everything a player's install contains
   server/               main.py (static files, game API, /media), game.py, selection.py,
                         categories.py, media_cache.py
   client/               the game UI (Svelte); builds to app/client/dist/
+  desktop/              Electron shell (D-71): main.mjs, resolve.mjs (app:// → files), preload.cjs
   data/                 categories.json (base's), bundles.json, bundles/<id>/categories.json (D-43),
                         pool.json (exported, approved questions only)
 authoring/              never ships

@@ -16,7 +16,7 @@ Milestones and open tasks: [`plans/project.md`](plans/project.md). Where each fi
 
 ## Getting started
 
-You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus the commands `trivia`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
+You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
 
 ```sh
 git clone https://github.com/rubenmoor/trivia.git && cd trivia
@@ -112,6 +112,7 @@ trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reloa
 npm run check                                      # type-check both clients
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
+npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (save not kept yet)
 ```
 
 The dev servers forward `/api` and `/media` to the Python servers, so run both. Before changing anything, read [`plans/README.md`](plans/README.md): plans are the source of truth, and decisions (D-numbers) are logged in [`plans/decisions.md`](plans/decisions.md).
