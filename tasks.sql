@@ -256,10 +256,11 @@ Five modes; there is no "default mode". Mode names are written in English first;
 - A question still unclaimed when its 30 s run out: nothing special happens, the next question comes.
 - Round 12 is sudden death: the first player to claim and answer correctly wins right away.
 - Only one player left: they win immediately.
-- To decide: what the 6 s running out after a claim counts as (the same as a wrong answer?).
+- The 6 s after a claim running out counts as a wrong answer: the player drops out.
 - Visualization: rounds and lives (hearts) shown cleanly and built for dramatic effects:
   - at a player''s last opportunity in a round without a correct answer, one of their hearts starts to pulse; on their last heart, something even more dramatic
-  - a pulsing red frame around the screen, like the impending-death warning in a first-person shooter, only when every player is at risk of dropping out at once (everyone on their last life, nobody has answered correctly this round yet)
+  - last 3 s of the 6 s after a claim: a clock ticks once per second, louder with each of the 3 ticks, and a pulsing red frame around the screen
+  - the same pulsing red frame, like the impending-death warning in a first-person shooter, also when every player is at risk of dropping out at once (everyone on their last life, nobody has answered correctly this round yet)
 
 ## Constraints
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
