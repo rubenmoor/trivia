@@ -42,7 +42,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 
 ## Tasks
 - [x] SW-1 Decide the shell (OQ-29); record it in `decisions.md`. *Done 2026-10-12: Electron (D-63).*
-- [ ] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version).
+- [ ] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Plan: pm plan 54 (`app/desktop/`, `app://` resolver, `trivia-desktop`).*
 - [ ] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry).
 - [ ] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Plan: pm plan 46 (also the letter picker for player names with a pad).*
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine.
