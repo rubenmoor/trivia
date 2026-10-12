@@ -1338,10 +1338,37 @@ def cmd_report(args):
 BATCH_SLOTS = 18  # draft slots per subcategory (D-46); base: 57 × 18 slots, about 700 merged questions
 REVIEW_MODEL = "opus"
 
-REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "fix", "pick", "background_pick", "new_query", "reasons"],
+# Why a question is needs_work (plan 15): `review.problems`.
+PROBLEMS = ["giveaway", "fact", "ambiguity", "overlap", "media", "difficulty", "style", "other"]
+
+REVIEW_SCHEMA = {"type": "object", "required": ["decision", "feedback", "fix", "pick", "background_pick", "new_query", "reasons", "problems"],
     "properties": {"decision": {"type": "string", "enum": ["approved", "needs_work"]}, "feedback": STR, "fix": STR,
                    "pick": {"type": ["integer", "null"]}, "background_pick": {"type": ["integer", "null"]},
-                   "new_query": {"type": ["string", "null"]}, "reasons": STR}}
+                   "new_query": {"type": ["string", "null"]}, "reasons": STR,
+                   "problems": {"type": "array", "items": {"type": "string", "enum": PROBLEMS}}}}
+
+# Keywords in `review.feedback` → problem, for reviews without `problems` (plan 15). Reports only.
+_GUESS = [("media", r"imagen (de fondo )?adecuada|ninguna (imagen|candidat|foto)|hoja de contacto|\bsheet\b"),
+          ("fact", r"verificaci[oó]n de datos|es fals[oa]|no es (cierto|exact)|incorrect|err[oó]ne|equivocad|est[aá] mal|no se pudo confirmar"),
+          ("overlap", r"q-\d{4}|duplica|se cruza|misma respuesta|\bduplicate\b"),
+          ("giveaway", r"(pistas?|descripci[oó]n|imagen|texto|pregunta|respuesta)\b.{0,120}\b(regala|delata|revela|resuelve|descarta|dan? la respuesta|dice la respuesta|apunta|deja solo|se delata)"),
+          ("ambiguity", r"defend|ambig|tambi[eé]n (es|ser[ií]a|podr[ií]a ser) (correct|v[aá]lid)|m[aá]s de una respuesta"),
+          ("style", r"en com[uú]n|relleno|larg[oa]|historia|imagina|retirad"),
+          ("difficulty", r"dif[ií]cil|f[aá]cil|dificultad")]
+
+
+def guess_problems(feedback):
+    """Problems guessed from free-text feedback; ["other"] if no keyword matches."""
+    text = (feedback or "").lower()
+    return [p for p, rx in _GUESS if re.search(rx, text)] or ["other"]
+
+
+def review_problems(q):
+    """(problems, guessed) of a needs_work question; guessed when the review has no `problems`."""
+    rv = q.get("review") or {}
+    if rv.get("problems"):
+        return rv["problems"], False
+    return guess_problems(rv.get("feedback")), True
 
 
 def batch_questions(run, statuses=("draft",)):
@@ -1664,6 +1691,7 @@ def cmd_record(args):
             missing.append(q["id"])
             continue
         decision, problems, fields = r["decision"], [r["feedback"].strip()] if r["feedback"].strip() else [], {}
+        kinds = set(r.get("problems") or [])
         for slot, key in [("media", "pick"), ("background", "background_pick")]:
             if slot not in slots_of(q):
                 continue
@@ -1671,6 +1699,7 @@ def cmd_record(args):
             n = r[key]
             if n is None or not 1 <= n <= len(found):
                 decision = "needs_work"
+                kinds.add("media")
                 problems.append("No se encontró una imagen adecuada para esta pregunta." if slot == "media"
                                 else "No se encontró una imagen de fondo adecuada.")
                 continue
@@ -1678,10 +1707,12 @@ def cmd_record(args):
         check = fact_check(full, checks.get(tmp_of.get(q["id"])))
         if check and check["verdict"] != "confirmed":
             decision = "needs_work"
+            kinds.add("fact")
             problems.append(f"Verificación de datos: {check['verdict']}. {check['problem']}".strip())
         if decision == "needs_work" and not problems:
             problems.append(r["reasons"])
         review = {"decision": decision, "feedback": " ".join(problems) if decision == "needs_work" else None,
+                  "problems": [p for p in PROBLEMS if p in kinds] if decision == "needs_work" else [],
                   "reviewed_on": today, "reviewer": "llm", "model": r["model"], "previous": None}
 
         def change(x, review=review, fields=fields, check=check if "factcheck" in (full.get("fix") or {}) else None):
@@ -2032,6 +2063,8 @@ def validate_pool():
         rv = q.get("review")
         if rv is not None and (rv.get("decision") != q.get("status") or "feedback" not in rv or "reviewed_on" not in rv):
             errors.append(f"{qid}: review does not match status")
+        if rv is not None and not set(rv.get("problems") or []) <= set(PROBLEMS):  # plan 15
+            errors.append(f"{qid}: review.problems must be from {', '.join(PROBLEMS)}")
         if rv is not None:  # who reviewed (D-33)
             if rv.get("reviewer") not in {"human", "llm"}: errors.append(f"{qid}: review.reviewer must be human or llm")
             if (rv.get("reviewer") == "llm") != bool(rv.get("model")): errors.append(f"{qid}: review.model must be set exactly for an llm review")

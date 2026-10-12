@@ -47,3 +47,12 @@ For audio questions, also pick `background_pick` from the background candidates 
 - `fix`: as above; empty for `approved`.
 - `pick`, `background_pick`, `new_query`: as above.
 - `reasons`: in English, one or two sentences: why this decision and this pick, naming what you saw on the sheet.
+- `problems`: empty for `approved`; for `needs_work`, every one that applies:
+  - `fact`: a wrong or unconfirmable fact (reason 1);
+  - `ambiguity`: a second defensible option, or a clue that fits something outside the options (reason 2);
+  - `giveaway`: the description, question text, a hint or the media gives the answer away (reason 3);
+  - `overlap`: same fact as a `related` question, or one gives the other away (reason 4);
+  - `media`: no adequate candidate (reason 5);
+  - `style`: long-winded, an invented story, or the retired "what do they have in common" style (reasons 6, 7);
+  - `difficulty`: never alone (an off difficulty isn't a reason); add it to another problem when the difficulty is also badly off;
+  - `other`: anything else; say what in `feedback`.

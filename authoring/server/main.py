@@ -168,7 +168,7 @@ def set_review(qid, review):
         review = {"decision": review["decision"], "feedback": feedback,
                   "reviewed_on": review.get("reviewed_on") or datetime.date.today().isoformat(),
                   "reviewer": review.get("reviewer", "human"), "model": review.get("model"),
-                  "previous": review.get("previous")}
+                  "previous": review.get("previous"), **({"problems": review["problems"]} if review.get("problems") else {})}
 
     def change(q):
         if review is not None and not restore:
