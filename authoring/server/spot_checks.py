@@ -1,6 +1,6 @@
 """Human spot checks per batch (plan 16): the seeded sample and authoring/data/spot-checks.json.
 Written only by the authoring server; `qgen report --qc` and the exit check read the file."""
-import datetime, json, threading
+import datetime, json, re, threading
 
 import layout  # authoring/tools/layout.py
 import qgen  # authoring/tools/qgen.py: audit sample, LLM decisions, audits
@@ -16,8 +16,16 @@ def size():
 
 
 def sample(batch):
-    """The batch's spot-check ids in order: the first `size()` of the audit sample."""
+    """The batch's (or back-audit run's) spot-check ids in order: the first `size()` of the audit sample."""
     return qgen.audit_sample(batch, size())
+
+
+def run_ids(run):
+    """The ids of a back-audit run (plan 57), or None for any other name."""
+    if not re.fullmatch(r"backaudit-\d+", run):
+        return None
+    cfg = qgen.load_json(qgen.WORK / run / "run.json", {}) or {}
+    return cfg.get("ids") if cfg.get("mode") == "backaudit" else None
 
 
 def load():
@@ -36,9 +44,10 @@ def audit_of(q):
 
 
 def record(batch, q, media_changed):
-    """Store the spot check of q from its human review (D-33); returns the item."""
+    """Store the spot check of q from its human review (D-33); returns the item.
+    `batch` is q's batch or a back-audit run with q in it (plan 57)."""
     rv = q.get("review") or {}
-    if q.get("batch") != batch:
+    if q.get("batch") != batch and q["id"] not in (run_ids(batch) or ()):
         raise ValueError(f"{q['id']} is not in {batch}")
     if q["id"] not in sample(batch):
         raise ValueError(f"{q['id']} is not in {batch}'s spot-check sample")

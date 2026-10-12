@@ -5388,14 +5388,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `authoring/RUNBOOK.md`: one line under "only when the gamemaster asks"; AGENTS.md Commands line for `qgen audit --backlog`; `directory.md` for `work/backaudit-*`.
 
 Done when: `--dry-run --slice 3` lists the right ids (or a scratch-copy run of 3 works, then removed), `qgen validate` clean.', '2026-10-12T04:03:23Z', '2026-10-12T04:06:16Z', 335);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (338, 57, 'Review tool for back-audit runs: run=, audit=flagged, sample=1, record by run membership', 'work', 'open', NULL, NULL, 'Plan 57 "Back-audit", task 3. Needs the previous task (`backaudit-<k>` runs).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (338, 57, 'Review tool for back-audit runs: run=, audit=flagged, sample=1, record by run membership', 'work', 'done', NULL, '2026-10-11, authoring/server/main.py (run= filter, sample/audit with run, docstring), authoring/server/spot_checks.py (run_ids, record by run membership), authoring/ui/src/review/Review.svelte + lib/api.ts (run param, spot checks keyed by run), AGENTS.md; checked headless with a 3-question test run, test data removed', 'Plan 57 "Back-audit", task 3. Needs the previous task (`backaudit-<k>` runs).
 
 - `/review?run=backaudit-<k>&audit=flagged`: major findings, audit notes beside the review''s.
 - `/review?run=backaudit-<k>&sample=1`: blind spot check, 30 random approved ids of the slice, seeded by run name.
 - `spot_checks.record`: accepts run membership, not only `q.batch`.
 - Docstring lines in `authoring/server/main.py`; AGENTS.md review URL list if it changes.
 
-Done when: `npm run check` clean; checked in the browser with `trivia-authoring` on a 3-question test run (test run and spot-check entries removed afterwards).', '2026-10-12T04:03:23Z', NULL, 335);
+Done when: `npm run check` clean; checked in the browser with `trivia-authoring` on a 3-question test run (test run and spot-check entries removed afterwards).', '2026-10-12T04:03:23Z', '2026-10-12T04:08:06Z', 335);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (339, 57, 'Back-audit pilot slice (100) and cost decision', 'work', 'open', -90, NULL, 'Plan 57 "Cost" and task 4. Runs only because the gamemaster asked (pm decision "Back-audit: start the pilot slice", see `pm show`) and after the release bar (decision 15) is set. Needs the plan''s release-bar, `--backlog` and review-tool tasks done; if not, stop without changes and say so in the note.
 
 Phases (the task runs again after each decision is answered; check which decisions exist with `pm show`):
@@ -5671,6 +5671,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (160, 241, '2026-10-12T04:01:28Z', '2026-10-12T04:02:57Z', 'done', NULL, 0, 'e5cd014e704ed828ebf3a2e506114031adf4fd83', 'claude-opus-5-5[1m]', '5fc0c5fc-edaa-4214-8f7f-7f8098d9b05a', 14, 24, 8674, 596394, 52958, 0.7165188, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (161, 335, '2026-10-12T04:02:57Z', '2026-10-12T04:03:47Z', 'done', NULL, 0, 'e69db22d0efcaef7f5ce761d604b53362c14920f', 'claude-opus-5-5[1m]', '2fb3f806-3e46-463f-8ad9-91627510b916', 7, 14, 5162, 229330, 30311, 0.39165000000000005, 198376);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (162, 337, '2026-10-12T04:03:47Z', '2026-10-12T04:06:29Z', 'done', NULL, 0, '80c653b395feeb09ea4088404cae4aba5a662115', 'claude-opus-5-5[1m]', '76aef5b0-5582-44cc-bc9c-9d7d6b8d0c4b', 33, 46, 17596, 1385783, 68479, 1.1770926000000002, 198376);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (163, 338, '2026-10-12T04:06:29Z', '2026-10-12T04:08:18Z', 'done', NULL, 0, '0dca1fa7b4945b757d8f77bea708191d62f5b8d4', 'claude-opus-5-5[1m]', 'e56dc5f0-6095-4028-9a6b-cf9b015b8863', 30, 46, 10213, 1265358, 58219, 0.92326759999999986, 198376);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

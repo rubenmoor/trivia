@@ -18,7 +18,8 @@ API:
                                                    status=!approved every status but approved;
          &subcategory=Pirámides&media=missing      media=missing: no picked media file;
          &sample=1&audit=flagged                   with batch: sample=1 its spot-check sample in order,
-                                                   audit=flagged its audited ones with a major finding, plan 16)
+                                                   audit=flagged its audited ones with a major finding, plan 16;
+         &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
@@ -30,7 +31,8 @@ API:
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ...}: new search term, fetch again
     GET  /api/spot-checks                          {"size": n, "problems": [...], "checks": authoring/data/spot-checks.json}
     POST /api/spot-checks/<batch>/<id>             body {"media_changed": bool}: record the spot check from the
-                                                   question's human review; {"undo": true} removes it (plan 16)
+                                                   question's human review; {"undo": true} removes it (plan 16);
+                                                   <batch> may be a back-audit run (plan 57)
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
                                                    (RV-23, authoring/server/media_stats.py)
@@ -38,7 +40,8 @@ API:
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not)
 Questions in responses carry `media_candidates` and `background_candidates`
-(from work/media/, or null if not fetched) and `audit` (work/<batch>/audit/<id>.json or null, plan 16).
+(from work/media/, or null if not fetched) and `audit` (the newest back-audit, else work/<batch>/audit/<id>.json,
+or null; plans 16, 57).
 """
 import argparse, datetime, json, re, sys, threading
 from http.server import ThreadingHTTPServer
@@ -224,6 +227,10 @@ class Handler(BaseHandler):
             if "batch" in query:
                 want = None if query["batch"] == "none" else query["batch"]
                 qs = [q for q in qs if q.get("batch") == want]
+            if "run" in query:
+                ids = spot_checks.run_ids(query["run"]) or []
+                by_id = {q["id"]: q for q in qs}
+                qs = [by_id[i] for i in ids if i in by_id]
             if "status" in query:
                 qs = [q for q in qs if matches_status(q, query["status"])]
             if "bundle" in query:
@@ -235,9 +242,9 @@ class Handler(BaseHandler):
                 qs = [q for q in qs if q["subcategory"] == query["subcategory"]]
             if query.get("media") == "missing":
                 qs = [q for q in qs if not q["media"].get("file_url")]
-            if query.get("sample") and query.get("batch"):
+            if query.get("sample") and (group := query.get("batch") or query.get("run")):
                 by_id = {q["id"]: q for q in qs}
-                qs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
+                qs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
             if query.get("audit") == "flagged":
                 qs = [q for q in qs if (a := spot_checks.audit_of(q)) and is_major(a)]
             return self.send_json(200, [with_candidates(q) for q in qs])

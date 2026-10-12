@@ -15,9 +15,11 @@ export interface QuestionFilter {
   subcategory?: string | null;
   /** "missing": no picked media file. */
   media?: "missing" | null;
-  /** With batch: "1" = its spot-check sample in order (plan 16). */
+  /** A back-audit run (`backaudit-<k>`, plan 57): its questions. */
+  run?: string | null;
+  /** With batch or run: "1" = its spot-check sample in order (plan 16). */
   sample?: string | null;
-  /** With batch: "flagged" = audited with a major finding (plan 16). */
+  /** "flagged" = audited with a major finding (plan 16). */
   audit?: "flagged" | null;
 }
 

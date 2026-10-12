@@ -24,12 +24,17 @@
   // approved, across batches (RV-22, D-47). The id follows the current question, so a reload (or a bookmark) comes
   // back to it. Decisions themselves live in authoring/data/questions.json.
   // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
+  // run=backaudit-<k>: a back-audit run's questions, with the same two (plan 57).
   const params = new URLSearchParams(location.search);
   const batch = params.get("batch");
-  const sampleMode = !!batch && params.get("sample") === "1";
+  const run = params.get("run");
+  /** Where spot checks are recorded: the batch or the back-audit run. */
+  const checkGroup = batch ?? run;
+  const sampleMode = !!checkGroup && params.get("sample") === "1";
   const bundleFilter = params.get("bundle");
   const filter = {
     batch,
+    run,
     bundle: bundleFilter,
     status: params.get("status"),
     reviewer: params.get("reviewer"),
@@ -41,6 +46,7 @@
   /** The active filters in words, for the empty and summary screens. */
   const filterText = [
     batch && `batch “${batch}”`,
+    run && `run “${run}”`,
     bundleFilter && `bundle “${bundleFilter}”`,
     filter.subcategory && `subcategory “${filter.subcategory}”`,
     filter.status && `status ${filter.status}`,
@@ -135,7 +141,7 @@
     try {
       const [qs, bs, spots] = await Promise.all([fetchQuestions(filter), fetchBundles(), fetchSpotChecks()]);
       [questions, bundles, problemKinds] = [qs, bs, spots.problems];
-      if (sampleMode) spotItems = spots.checks[batch!]?.items ?? {};
+      if (sampleMode) spotItems = spots.checks[checkGroup!]?.items ?? {};
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
       const firstOpen = questions.findIndex(isOpen);
@@ -232,7 +238,7 @@
       decidedNow = new Set(decidedNow).add(id);
       if (sampleMode) {
         // Stay on the question: the reveal shows the LLM's verdict next to the human's; → goes on.
-        spotItems = { ...spotItems, [id]: await recordSpotCheck(batch!, id, mediaTouched.has(id)) };
+        spotItems = { ...spotItems, [id]: await recordSpotCheck(checkGroup!, id, mediaTouched.has(id)) };
       }
       flash(LABELS[decision]);
       if (suggestions.length) pickSuggestionsInBackground(id, suggestions);
@@ -257,7 +263,7 @@
       const i = questions.findIndex((q) => q.id === last.id);
       await store(i, last.previous);
       if (last.spot) {
-        await removeSpotCheck(batch!, last.id);
+        await removeSpotCheck(checkGroup!, last.id);
         const { [last.id]: _, ...rest } = spotItems;
         spotItems = rest;
       }
