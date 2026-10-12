@@ -21,6 +21,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen export                     # app/data/pool.json from authoring/data/questions.json
     qgen report [--run <run>] [--player <name>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
+    qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
     qgen validate
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
@@ -31,7 +32,7 @@ Revising questions that are already in the pool (07, QG-13):
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, concurrent.futures, datetime, difflib, json, random, re, subprocess, sys, threading, time, unicodedata
+import argparse, concurrent.futures, datetime, difflib, json, os, random, re, subprocess, sys, threading, time, unicodedata
 import urllib.parse
 from pathlib import Path
 from collections import Counter
@@ -1649,7 +1650,93 @@ def report_exit_check(pool, bundle):
     sys.exit(0 if all(ok for ok, *_ in results) else 1)
 
 
+LAUNCH_LOCALES = ["es", "en", "de"]  # D-78
+SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster
+SIM_MULTI = {"rr-competitive", "timed"}
+AGE_GROUP_IDS = ["kids", "young_teens", "young_adults", "adults"]  # D-76
+
+
+def locale_pool(locale):
+    """pool.<locale>.json; es falls back to pool.json (as sim/load.ts)."""
+    own = layout.app_paths.DATA / f"pool.{locale}.json"
+    return layout.EXPORT if locale == "es" and not own.exists() else own
+
+
+def target_check(locale):
+    """D-75: approved in the locale's pool vs. base's targets (until part 9 sets per-locale ones)."""
+    path, t = locale_pool(locale), targets.load_targets("base")
+    if not path.exists():
+        return {"locale": locale, "ok": False, "pool": None}
+    approved = [q for q in load_json(path)["questions"] if q.get("status", "approved") == "approved"]
+    by = Counter(q["difficulty"] for q in approved)
+    short = {d: n - by[d] for d, n in t["difficulty"].items() if by[d] < n}
+    return {"locale": locale, "ok": len(approved) >= t["total"] and not short, "pool": str(path.relative_to(ROOT)),
+            "approved": len(approved), "total": t["total"], "short": short}
+
+
+def report_simulate(args):
+    """Games per new player (plan 62, CT-2), information only; exit code = D-75's target check."""
+    import engine  # authoring/tools/engine.py: the TS engine under Node (D-60)
+    locales = args.locale.split(",") if args.locale else LAUNCH_LOCALES
+    all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
+    modes = SIM_MODES if args.mode == "all" else args.mode.split(",")
+    groups = args.age_group.split(",") if args.age_group else AGE_GROUP_IDS
+    player = args.player or "both"
+    if player not in ("strong", "typical", "both") or set(modes) - set(SIM_MODES):
+        sys.exit(f"--simulate: --player strong|typical|both, --mode {'|'.join(SIM_MODES)}|all")
+    models = ["strong", "typical"] if player == "both" else [player]
+    cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else all_bundles if l == "es" else ["base"],
+              "mode": m, "players": (args.players or 4) if m in SIM_MULTI else 1, "age_group": g, "player": p,
+              "seeds": args.seeds}
+             for l in locales for m in modes for g in groups for p in models]
+    t0 = time.monotonic()
+    have = [c for c in cells if locale_pool(c["locale"]).exists()]
+    with concurrent.futures.ThreadPoolExecutor(os.cpu_count() or 4) as ex:
+        done = dict(zip(map(id, have), ex.map(lambda c: engine.simulate(c), have)))
+    results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
+    checks = [target_check(l) for l in locales]
+    ok = all(c["ok"] for c in checks)
+    if args.json:
+        print(json.dumps({"model": {"typical_p": engine_model(results)}, "seconds": round(time.monotonic() - t0, 1),
+                          "cells": results, "target": checks, "ok": ok}, ensure_ascii=False))
+        sys.exit(0 if ok else 1)
+    lo, hi = engine_model(results) or (None, None)
+    print(f"games per new player (plan 62, information only, D-75); {args.seeds} seeds per cell, "
+          f"{time.monotonic() - t0:.0f} s")
+    print(f"  models: strong = always right; typical = p(right) {lo} at level 1 → {hi} at level 12; "
+          "standard jokers once each at a random level; rr-competitive, timed modelled until MD-8/MD-9")
+    rows = [("locale", "bundles", "mode", "n", "age group", "player", "median", "p10", "bound", "bottleneck")]
+    for r in results:
+        head = (r["locale"], ",".join(r["bundles"] or []), r["mode"], str(r["players"]), r["age_group"], r["player"])
+        if r["result"] != "ok":
+            if rows[-1][0] != r["locale"]:
+                rows.append(head[:2] + ("",) * 4 + ("no pool", "", "", ""))
+            continue
+        g, b = r["games"], r["bottleneck"]
+        rng = f"{b['lo']}" if b["lo"] == b["hi"] else f"{b['lo']}–{b['hi']}"
+        rows.append(head + (f"{g['median']:g}", f"{g['p10']:g}", str(g["min"]) if r["player"] == "strong" else "–",
+                            f"level {b['level']} (difficulty {rng}): {', '.join(b['dry']) or '–'}"))
+    widths = [max(len(row[i]) for row in rows) for i in range(len(rows[0]) - 1)]
+    for row in rows:
+        print("  " + "  ".join(c.ljust(w) for c, w in zip(row, widths)) + "  " + row[-1])
+    print("target check (D-75: approved per launch language vs. base's targets):")
+    for c in checks:
+        if c["pool"] is None:
+            print(f"  ✗ {c['locale']}: no pool")
+            continue
+        short = ", ".join(f"{d}: −{n}" for d, n in c["short"].items())
+        print(f"  {'✓' if c['ok'] else '✗'} {c['locale']}: {c['approved']}/{c['total']} approved"
+              + (f"; short at difficulty {short}" if short else ""))
+    sys.exit(0 if ok else 1)
+
+
+def engine_model(results):
+    return next((r["model"]["typical_p"] for r in results if r.get("result") == "ok"), None)
+
+
 def cmd_report(args):
+    if args.simulate:
+        return report_simulate(args)
     if args.exit_check:
         return report_exit_check(load_json(POOL)["questions"], args.bundle)
     if args.qc is not None:
@@ -2909,7 +2996,17 @@ def main():
     add("apply", cmd_apply)
     rp = add("report", cmd_report, run=False)
     rp.add_argument("--run")
-    rp.add_argument("--player", help="supply for this player (D-28); default: a new player")
+    rp.add_argument("--player", help="supply for this player (D-28); default: a new player. "
+                                     "With --simulate: strong|typical|both (default both)")
+    rp.add_argument("--simulate", action="store_true",
+                    help="games per new player on the engine (plan 62, information only); exit 1 if a launch language misses D-75's target")
+    rp.add_argument("--locale", help="with --simulate: comma-separated (default: es,en,de, D-78)")
+    rp.add_argument("--bundles", help="with --simulate: comma-separated (default: es every bundle, else base; until RG-5)")
+    rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
+    rp.add_argument("--mode", default="solo", help="with --simulate: solo|rr-coop|rr-competitive|timed|all")
+    rp.add_argument("--players", type=int, help="with --simulate: players in rr-competitive and timed (default 4)")
+    rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
+    rp.add_argument("--json", action="store_true", help="with --simulate: JSON on stdout")
     rp.add_argument("--bundle", default="base", help="progress vs. targets and saturation for this bundle (plans 12, 14)")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10); saturation flags (plan 14)")

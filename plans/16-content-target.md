@@ -1,6 +1,6 @@
 # 16 — Content Target for Release
 
-**Status:** target decided (D-75); CT-2..CT-5 open (S4)
+**Status:** target decided (D-75); CT-2 done; CT-3..CT-5 open (S4)
 
 Part of the Steam plan ([11](11-steam.md)). The release target is set per launch language (D-75): buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
 
@@ -15,8 +15,11 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 
 ## Metric
 - Target metric: approved questions per launch language vs. D-53's mix (`qgen report`).
-- Information only (no bar, D-75): "games per new player", CT-2. `qgen report --simulate` plays game after game per mode (burns above) and age group on the engine until the supply check fails; median and 10th percentile over many seeds. A "strong player" (always reaching level 12) gives the lower bound.
-- Plan: pm plan 62. Engine under Node (`authoring/tools/sim/`, D-60), `strong` and `typical` player models, standard joker set used once each; `rr-competitive` and `timed` modelled until MD-8/MD-9 exist. Exit code = D-75's count per launch language (5000, D-53's mix), never the games numbers.
+- **Pass/fail = D-75's count**: `qgen report --simulate` ends with a ✓/✗ per launch language (`es`, `en`, `de`, D-78): approved in `app/data/pool.<locale>.json` (`es`: `pool.json`) vs. `targets.json` `base` (5000 + per difficulty) until part 9 sets per-locale targets. No pool = ✗. Exit 1 on any ✗; the games numbers never change it.
+- Information only (no bar, D-75): "games per new player", CT-2. Game after game on the engine (`authoring/tools/sim/`, D-60, plan 62) per locale × bundles × mode × age group × player model until the supply check fails; median, p10, strong bound (min over seeds), bottleneck level + difficulty + top 3 dry subcategories. Default 40 seeds per cell (default matrix ≈ 1 min).
+- Player models: `strong` = always right, reaches 12 every game (lower bound); `typical` = p(right) linear 0.95 at level 1 → 0.6 at level 12 (`TYPICAL_P` in `simulate.ts`; only a model, tune from real play).
+- Joker policy: standard set (D-74), each joker once at a random level; a joker the engine refuses is skipped. `gamemaster` mode not simulated.
+- Mode approximations: `solo` = `rr-coop` (D-77). `rr-competitive` until MD-8: N solo games per session, every shown question burned for all N. `timed` until MD-9: up to 12 rounds, one question per player still in (`selection.draw`), burned for all, no jokers; `typical` drops out at p(level), `strong` nobody. Swap in the engine's modes once MD-8/MD-9 land.
 
 ## Target (decided, D-75)
 - **5000 approved per launch language** (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).
@@ -37,7 +40,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 
 ## Tasks
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.
-- [ ] CT-2 `qgen.py report --simulate` on the engine: games per new player per language, region, mode and age group; information only (D-75).
+- [x] CT-2 `qgen.py report --simulate` on the engine: games per new player per language, region, mode and age group; information only (D-75). (2026-10-12, task 412: `authoring/tools/engine.py`, `qgen.py` `report --simulate`; default matrix 56 s; es today: adults typical ≈ 68 solo games, strong 28; exit 1: es 1136/5000, en/de no pool.)
 - [ ] CT-3 Cost estimate per question (draft → approved, and per translation) from `costs.log`; budget for the release.
 - [ ] CT-4 Generation plan by gap: which difficulties and subcategories need the most, batch by batch.
 - [ ] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample.

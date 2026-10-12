@@ -137,6 +137,7 @@ Everything that only matters for a release on Steam (desktop shell, controller, 
 - [x] S3: SW-2 Electron desktop shell skeleton, `trivia-desktop`, whole game without Python (2026-10-12, pm plan 54, D-71; pending: play test decision 29, Steam binding decision 28) — [`18`](18-steam-integration.md)
 - [x] S3: SW-3 File saves: `save/game.json` in the user's config folder, atomic writes, backups, `--import-save` (2026-10-12, pm plan 55, D-72) — [`18`](18-steam-integration.md)
 - [x] S3: IN-4, IN-5 Gamepad input and button glyphs (Xbox/PlayStation, drawn in-house) (2026-10-12, pm plan 45; real-pad check pending) — [`14`](14-input.md)
+- [x] S4: CT-2 `qgen report --simulate`: games per new player on the engine (information only); exit 1 unless every launch language meets D-75's 5000 (2026-10-12, pm plan 62) — [`16`](16-content-target.md)
 
 ### Backlog
 Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of the save, B-3 practice/preview mode, B-5 reworded duplicates in `dedupe` (pm plan 15), B-6 top-up for difficulties 9–10, B-7 picture effects for essential images.
