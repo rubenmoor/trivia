@@ -2599,8 +2599,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:33:12Z', '2026-10-12T00:35:32Z', 134);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (138, 32, 'create tasks for plan 32', 'split', 'done', 1000, '2026-10-11, tasks 142-146; no upfront decisions (task 146 raises the gamemaster check)', 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:34:28Z', '2026-10-12T00:36:04Z', 135);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (139, 33, 'create tasks for plan 33', 'split', 'open', 1000, NULL, 'Split plan 33 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:35:05Z', NULL, 136);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (139, 33, 'create tasks for plan 33', 'split', 'done', 1000, '2026-10-11, tasks.sql (tasks 147–150; no upfront decision: matched-set and gamemaster-check decisions are raised by tasks 147 and 149)', 'Split plan 33 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:35:05Z', '2026-10-12T00:36:39Z', 136);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (140, 31, 'UI-7: preload Question media before the fade-in', 'work', 'open', NULL, NULL, '`go()` in `app/client/src/game/Game.svelte` waits for the next Question''s media before fading in, at most 2 s; video/audio no longer play behind the black. Shape: plan 31, "Shape (decided here)".
 
 - `Question.svelte`: export `ready(): Promise<void>`; resolves on picture decoded (`onload` / `img.decode()`), video/audio `canplaythrough`, or any failure (`onerror`, `mediaFailed`); text question → resolves at once.
@@ -2670,6 +2670,41 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 4. Update UI-10''s note in `plans/04-ui-tv-display.md` (what is recorded now, what stays synthesized and why) and `plans/project.md`. UI-10 stays `[~]` until plan 33 (music loops) is done.
 
 Done when: the gamemaster approved; audio folder within budget; `CREDITS.md` complete; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', NULL, 138);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (147, 33, 'Source and convert a matched set of CC0 music loops', 'work', 'open', NULL, NULL, 'First task of plan 33: find one matched set of recordings for `normal`, `question`, `submitted` and put the converted files in place (plan 33 "Sources and licences", "Pipeline"). Conversion is here, not in the wiring task: downloads live outside the repo and don''t survive between runs.
+
+- Sources: Kenney.nl CC0 first (music loops / jingles packs), then OpenGameArt CC0, Freesound CC0; D-45 allowlist only (CC0 preferred; CC BY ok with credit; no NC/ND/unknown). Download outside the repo; don''t commit zips.
+- Need: one theme at three intensities (calm / tense / most tense; variants or stems), or loops close enough in key and tempo that ~80 ms cuts `question` ↔ `submitted` don''t clash.
+- Convert with `nix shell nixpkgs#ffmpeg-headless`: whole number of bars, loop length 20–40 s, `loudnorm` to the same target as `redoble.m4a`, stereo ok, AAC `.m4a` ~96–128 kbit/s → `app/client/public/audio/musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a`.
+- Check the seam (AAC encoder padding); note the loop points in seconds per file in the done note if the file length isn''t clean.
+- `app/client/public/audio/CREDITS.md`: one row per file (source URL, pack, author, licence), CC0 too.
+- Budget: the three ≤ 900 kB together; whole folder ≤ 3.5 MB.
+- No matched set found: don''t guess. `pm decision add` for the gamemaster with the candidates you found and the options from plan 33 (1. one CC0 loop for all three, varied by rate / low-pass / synth layer on top; 2. recordings for some tracks, synth for the rest; 3. keep the synthesized loops), your recommendation first; make this task and the wiring task pending on it, stage, stop. After the answer: convert what the chosen option needs.
+
+Done when: the three files (or what the decision asks for) are in place, within budget, with credit rows; the done note lists source, key, tempo, loop points.', '2026-10-12T00:36:37Z', NULL, 139);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (148, 33, 'Wire the music loops into startTrack() with synth fallback; extend /?efectos', 'work', 'open', NULL, NULL, 'Play the recorded loops from the previous task (plan 33 "Wiring", "Audition aid").
+
+- `app/client/src/game/sound.svelte.ts`: `SAMPLE_NAMES` gets `musica-normal`, `musica-pregunta`, `musica-enviada`; `startTrack()` plays the decoded buffer via `AudioBufferSourceNode` with `loop = true` (+ `loopStart`/`loopEnd` per track if the previous task''s note gives loop points) into the track''s gain, like the `redoble` branch. The lookahead scheduler (`CHORDS`, `TEMPO`) stays as the fallback when a file is missing or fails to decode.
+- Behaviour unchanged (04 "Music"): 600/800 ms fades, ~80 ms cuts `question` ↔ `submitted`, cut to `roll` on submit, ducking for jokers.
+- Cuts: if the loops share tempo, start the new one at the old one''s position modulo its length so the beat continues; else at 0. Decide by ear.
+- A per-track level constant if they don''t sit right against the music bus (as `redoble` uses 2.2).
+- `/?efectos` (plan 32''s list in `Game.svelte`): the three tracks with «grabado» / «sintetizado», a «corte» button toggling `question` ↔ `submitted`, tracks keep looping so the seam can be heard.
+- Header comment of `sound.svelte.ts`: what is still synthesized.
+- If the decision from the previous task chose another option, implement that instead (e.g. one loop varied by rate / low-pass / synth layer).
+
+Done when: `npm run check`, `npm run build` pass; dev browser: the three loops play gapless, cuts and fades work; with the files removed the synth loops play.', '2026-10-12T00:36:37Z', NULL, 139);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (149, 33, 'Gamemaster check of the music loops on the TV', 'work', 'open', NULL, NULL, 'Plan 33 task 3, same pattern as plan 32''s gamemaster check.
+
+1. `pm decision add` asking the gamemaster to check the music on the TV via `/?efectos` and a real game: clicks at the seam, the `question` ↔ `submitted` cuts, level against effects and question media. Body: what is recorded, what stayed synthesized, sources. Options e.g. «approve» / «changes: …». Make this task pending on it (`pm task-pending-decision`), stage, stop.
+2. Once answered: apply the feedback (loop points, levels, cut behaviour, swap files; keep `CREDITS.md` and budget in line).
+
+Done when: the gamemaster approved; `npm run check`, `npm run build` pass.', '2026-10-12T00:36:37Z', NULL, 139);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (150, 33, 'Close UI-10 in the plans', 'work', 'open', NULL, NULL, 'Last task of plan 33; runs after the gamemaster approved the music (and plan 32''s effects check, task 146).
+
+- `plans/04-ui-tv-display.md`: UI-10 `[x]` with a note (what is recorded now, what stayed synthesized and why, effects and music); "Sound assets": flat `app/client/public/audio/` folder (the `music/`, `sfx/` subfolders were never used), `CREDITS.md`, budget.
+- `plans/project.md`: M6 / UI-10 line.
+- Check: whole audio folder ≤ 3.5 MB; `CREDITS.md` has a row per recorded file.
+
+Done when: 04 and `plans/project.md` updated; `grep -rn PLACEHOLDER app/client/src` result noted for the milestone.', '2026-10-12T00:36:37Z', NULL, 139);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'pending', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -2738,6 +2773,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (52, 136, '2026-10-12T00:34:38Z', '2026-10-12T00:35:14Z', 'done', NULL, 0, 'f66b83b0826fd7a28c82b17ed22d01f12937ec3a', 'claude-opus-5-5[1m]', 'dcf5fdea-cb31-4515-aef0-b7edee5e07ec', 6, 12, 3488, 193246, 33780, 0.3786972, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (53, 137, '2026-10-12T00:35:14Z', '2026-10-12T00:35:36Z', 'done', NULL, 0, '29ad06258100c9e7d1dbca21944e0f1793d19d46', 'claude-opus-5-5[1m]', '1db34157-9dcd-4e8e-9c21-d63ae7bd3015', 5, 10, 2341, 133851, 22683, 0.2550942, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (54, 138, '2026-10-12T00:35:36Z', '2026-10-12T00:36:10Z', 'done', NULL, 0, 'dd574936c557333b110868a421b4966cec0dccef', 'claude-opus-5-5[1m]', '802f81ce-9f22-4c8e-a143-c711d4fea11a', 5, 10, 3372, 145058, 26526, 0.3086996, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (55, 139, '2026-10-12T00:36:10Z', '2026-10-12T00:36:45Z', 'done', NULL, 0, 'c3f802cfe9a5ebaaeaedf53feedc54da1d1092e9', 'claude-opus-5-5[1m]', '5e48d658-4a13-49c6-9fd8-a4d0bb43b592', 5, 10, 3531, 146738, 28783, 0.3302716, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
