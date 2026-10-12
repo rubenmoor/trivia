@@ -10321,8 +10321,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:58:07Z', '2026-10-12T23:08:19Z', 509);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (521, 81, 'create tasks for plan 81', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 573-579 for plan 81', 'Split plan 81 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T22:59:31Z', '2026-10-12T23:09:11Z', 510);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (522, 82, 'create tasks for plan 82', 'split', 'open', 1000, NULL, 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:01:18Z', NULL, 511);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (522, 82, 'create tasks for plan 82', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 580–587 for plan 82; no upfront decisions (all depend on parts 2–9 findings)', 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:01:18Z', '2026-10-12T23:10:22Z', 511);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (523, 83, 'create tasks for plan 83', 'split', 'open', 1000, NULL, 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:02:07Z', NULL, 512);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (524, 73, 'code-review.md skeleton, inventory and directory.md entry', 'work', 'open', NULL, NULL, 'Task 1 of `plan 73: Baseline scans and report skeleton (code review part 1)`; read plan 73 and `plan 72: masterplan` ("Ground rules for every part", "Parts") first.
@@ -11613,6 +11613,193 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Every tracked file of `authoring/server/` and `authoring/ui/` listed in `## Part 9` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 9` has its final status.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:09:09Z', NULL, 521);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (580, 82, 'Part 10 triage: duplication clusters table', 'work', 'open', NULL, NULL, 'Task 1 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: one table the next tasks work from. No code changes.
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+
+## What
+- Collect every "duplication candidate" row of `## Part 2`–`## Part 9` and every part 1 row `handed to part 10` into `### Duplication clusters` under `## Part 10` of `code-review.md`.
+- One row per cluster: all paths, source rows quoted by part, assigned to one of the plan 82 tasks: 2 client types/API clients, 3 Python ↔ Node/TS twins, 4 authoring tools'' shared logic/constants, 5 styles/screen helpers, 6 naming/errors/env vars/ports, 7 build/package config, 8 docs; or `superseded by task 302` (Python ↔ TS referee port: `game.py`, `selection.py`, `flags.py`, `record_fixtures.py`); or a new follow-up task (`pm task add 82`) if it fits none.
+- Candidates no part logged but plan 72 names (the two `types.ts`, the two `api.ts`, chart/CSS copies): grep once, add if real.
+- Follow-up tasks and decisions already opened by parts 2–9 for a cluster: cite them in the row, don''t duplicate.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- `### Duplication clusters` lists every source row exactly once, each with an assignee; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (581, 82, 'Part 10: consolidate client types and API clients', 'work', 'open', NULL, NULL, 'Task 2 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 2" in `### Duplication clusters` (`## Part 10`, `code-review.md`); work from that table, not this list.
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Read `### Duplication clusters` (task 580); missing → stop and say so.
+
+## What
+- Files (as announced): `app/client/src/lib/types.ts`, `engine/state.ts`, `authoring/ui/src/lib/types.ts`; `lib/api.ts`, `engine/api.ts`, `authoring/ui/src/lib/api.ts`; `lib/store.ts`, `engine/store.ts`; `GameError` in `lib/api.ts` ↔ `engine/state.ts`.
+- Types of the same shape (pool question, media, categories) → one definition, the copy imports it (`authoring/ui` → `$app`, never the reverse); types that only look alike stay, row says why.
+- Fetch/error helpers: one `request`/error mapping per side, or shared from `$app/lib`; locale lists (`lib/data.ts` `LOCALES`, `i18n.ts` `CATALOGS`/`UI_LANGS`) vs. authoring locale lists, if logged.
+- Each cluster row gets its final status in `## Part 10` (consolidated in commit / follow-up task N / decision N / won''t fix + why).
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Check
+- `npm run check`, `npm run build`; bundle sizes of `app/client/dist` and `authoring/ui/dist` vs. part 1''s baseline (importing from `$app` must not pull game code into the authoring bundle).
+
+## Done when
+- Every "task 2" cluster has a final status; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (582, 82, 'Part 10: Python ↔ Node/TS twins (save, paths, media cache, static serving)', 'work', 'open', NULL, NULL, 'Task 3 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 3" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Read `### Duplication clusters` (task 580); missing → stop and say so.
+
+## What
+- Files (as announced): `app/server/save.py`, `app/desktop/save.mjs`, `authoring/tools/save_file.py`, `app/client/src/engine/save.ts`; `app/server/paths.py`, `authoring/tools/layout.py`, desktop `REPO`/roots; `app/server/media_cache.py`, `app/desktop/resolve.mjs`, `authoring/tools/download.py`/`media.py` `cmd_sync`; `app/server/http_base.py` ↔ desktop `MIME`/`parseRange`/`sendFile`; `app/server/main.py` ↔ `authoring/server/main.py` handlers.
+- Inside Python: `paths.py` ↔ `layout.py`, `save.py` ↔ `save_file.py` may merge (authoring importing `app/server` is allowed) if task 302''s planned changes don''t conflict (`pm show 302`); otherwise follow-up task.
+- Across languages: list each rule that must stay identical (cache name hash/extension, envelope fields, atomic write, MIME table) and whether it matches today: throw-away script (same URL → same cache name in Python and Node; same save file accepted by all three readers; D-59: authoring reads the save, never writes it). Mismatch → bug row + fix or follow-up task.
+- Keeping cross-language copies in sync is not merged by code: `pm decision add` with options (shared JSON constant file / parity check in an existing test / won''t fix, documented; recommended first) + follow-up task via `pm task-pending-decision`; one decision covering all rules is fine.
+- Each cluster row gets its final status in `## Part 10`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Check
+- Game server and authoring server on temp dirs: `curl` the touched routes before/after, diff; desktop: `trivia-desktop` only if `app/desktop` changed (or note why skipped).
+
+## Done when
+- Every "task 3" cluster has a final status; the parity table is in `## Part 10`; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (583, 82, 'Part 10: authoring tools'' shared logic and constant copies', 'work', 'open', NULL, NULL, 'Task 4 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 4" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Read `### Duplication clusters` (task 580); missing → stop and say so.
+- Read part 7''s (plan 79) module-structure decision and follow-up tasks for `qgen.py`, if any: a qgen split owns the big logic copies; don''t duplicate its tasks.
+
+## What
+- Files (as announced): `authoring/tools/qgen.py` ↔ `health.py`, `translations.py`, `pool_export.py`, `targets.py`, `batches.py`, `authoring/server/overview.py`, `spot_checks.py`, `media_stats.py` ↔ `media.py`; `providers/*` rate limiting/`available()` ↔ `download.py`.
+- Constant copies: `LANGUAGES`/`LAUNCH_LOCALES`/`translations.LOCALES`, `SIM_MODES` (qgen ↔ `sim/simulate.ts`), `AGE_GROUP_IDS` ↔ `age_groups.json` (D-74/D-76), saturation/health thresholds: one owner module, the rest import it; TS ↔ Python copies: read from the JSON both already load, or decision.
+- Logic copies (report metrics ↔ `health.py`, `audit_of`, `batch_rows`, export paths): merge the small ones.
+- Each cluster row gets its final status in `## Part 10`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Check
+- On a temp work dir (`TRIVIA_WORK`, copy of `authoring/data`): `qgen validate`, `qgen report`, `qgen export` output identical before/after (diff); authoring server routes diffed with `curl` on a temp copy.
+
+## Done when
+- Every "task 4" cluster has a final status; outputs identical; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (584, 82, 'Part 10: styles and screen helpers', 'work', 'open', NULL, NULL, 'Task 5 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 5" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Read `### Duplication clusters` (task 580); missing → stop and say so.
+
+## What
+- Files (as announced): `app/client/src/game/theme.css`, `app/client/src/app.css`, component `<style>`s logged by part 5; `authoring/ui/src/app.css`, `authoring/ui/src/stats/chart.css`; animation helpers in `Fireworks`/`Shredder`/`JokerFlight`; phase/copy logic in `Game.svelte`/`Overlay.svelte`/`Hud.svelte`/`copy.ts`.
+- Repeated colours/sizes → existing CSS variables of `theme.css`; authoring reuses `theme.css` variables only where it already imports it (`print/JokerCards.svelte`); no new shared stylesheet unless clearly smaller.
+- Helpers repeated in three or more places → one module in `game/`; two places only if identical.
+- Each cluster row gets its final status in `## Part 10`.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Check
+- Any CSS change: `decision 6: Plan 21 (LUI-1): how to check the screens show no visible change?` (throw-away Playwright outside the project, before/after pixel diff of the touched screens with ImageMagick `compare`, temp `TRIVIA_STATE`).
+- `npm run check:literals -w app/client`.
+
+## Done when
+- Every "task 5" cluster has a final status; no pixel difference on touched screens; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (585, 82, 'Part 10: consistency across files (naming, errors, env vars, ports)', 'work', 'open', NULL, NULL, 'Task 6 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: cross-file consistency, plus the clusters assigned to "task 6" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Read `### Duplication clusters` (task 580); missing → stop and say so.
+
+## What
+- Error handling: JSON error shape and status codes of `app/server` vs. `authoring/server`; client error codes (`app/client/src/lib/errors.ts`) vs. what servers/engine emit; Python `print`/`sys.exit`/logging and exception style across `app/server`, `authoring/server`, `authoring/tools`; Node `app/desktop/main.mjs`/`save.mjs` errors.
+- Naming: file names (snake/kebab/camel per language), Spanish vs. English identifiers; `TRIVIA_*` env vars (every one read in code documented in `README.md`/`directory.md`, none documented but unread); ports `8000`/`8001`/`5174` repeated in servers, both `vite.config.ts`, `flake.nix`, `README.md`.
+- `PLACEHOLDER(<id>)` format and AGENTS.md comment rules: re-check part 1 scan rows for files no other part owned.
+- Small renames inside one file → fix; renames across files, env vars or ports (behaviour/format) → decision + follow-up task.
+- Log every finding in `## Part 10` with a status; "task 6" cluster rows get their final status.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- Every finding and "task 6" cluster has a status; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (586, 82, 'Part 10: review build and package config', 'work', 'open', NULL, NULL, 'Task 7 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: review these files, fix what is cheap, log every file and finding in `## Part 10` of `code-review.md` (no-findings rows included); "task 7" cluster rows get their final status.
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Read `### Duplication clusters` (task 580) and part 6 (plan 78, desktop packaging) and part 9 (plan 81, `authoring/ui/package.json` deps) rows: don''t redo them.
+
+## What
+- Files: `flake.nix`, `flake.lock`, root `package.json`, `package-lock.json`, `app/client/package.json`, `authoring/ui/package.json` (workspace wiring only), `app/client/tsconfig.json` ↔ `authoring/ui/tsconfig.json`, `app/client/vite.config.ts` ↔ `authoring/ui/vite.config.ts`, both `svelte.config.js`, both `index.html`, `.gitignore` + `app/client/.gitignore` + `authoring/ui/.gitignore`, `.envrc`.
+- `flake.nix`: `fromCheckout` wrappers (git root lookup; Darwin in `systems` with `electron`: works?), runtime inputs needed per wrapper (`imagemagick`, `nodejs_22`, `claude-code`), `.#app` fileset (why `authoring/ui/package.json`), `npmDepsHash` current, devShell packages unused or missing vs. `README.md`/`AGENTS.md` commands, `trivia-desktop-build` vs. D-73.
+- npm: workspaces vs. `app/desktop` and `authoring/tools` outside them (intended? lockfile per D-73?), scripts (`test --if-present`), deps in the wrong workspace or root, `package-lock.json` in sync (`npm ls`, or `npm ci --dry-run` offline). No new dependencies; removing unused ones is in scope.
+- tsconfigs: strictness/flag differences, `include`/`exclude` (are `*.test.ts` type-checked anywhere?), `paths` vs. Vite `alias`; vite configs: proxies vs. server routes, `publicDir` sharing.
+- `.gitignore`s: stale entries (`work/`, `*.tmp`, `result-*`), generated files not ignored (`git status --ignored` after a fresh build).
+- `.envrc`: `.env.local` and its "secrets" comment vs. AGENTS.md "No secrets, accounts or telemetry": inconsistency row, or decision if real.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `flake.nix`, `flake.lock`, `package.json` or `package-lock.json` changed → `nix develop -c true` and `nix build .#app` (update `npmDepsHash` if the lockfile changed), `result/bin/trivia` starts on a temp `TRIVIA_STATE`; `trivia-desktop-build` only if `app/desktop` packaging is affected (note why skipped). `nix flake check` not required.
+
+## Done when
+- Every file above listed in `## Part 10`, every finding with a status; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (587, 82, 'Part 10: docs vs. code, close part 10', 'work', 'open', NULL, NULL, 'Task 8 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586 and every fix of parts 2–9.
+
+## First
+- Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
+- `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
+- `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
+- Tasks 580–586 done, and no open task in plans 73–81 that still changes code; else stop and say so.
+
+## What
+- `directory.md`: every tracked code/config path and directory present (`git ls-files`), descriptions true after this milestone''s fixes and moves, `code-review.md` listed.
+- `AGENTS.md`/`CLAUDE.md`: commands exist and do what it says (`qgen report --cost`, `trivia-desktop-build`, `nix build .#app`); rules hold in the code (layout direction: grep `app/` for `authoring` imports/reads; no telemetry/network beyond decision 4).
+- `README.md`: commands and env vars run as written (temp dirs).
+- Doc-only fixes here (style per AGENTS.md); rule changes to `AGENTS.md` → decision (plan 72 part 11 proposes process rules: don''t pre-empt).
+- Close: every part 1 row `handed to part 10` (quoted) and every duplication row of parts 2–9 has a final status in `## Part 10`; every part 10 inventory file listed (no-findings rows included); files added since part 1 under these paths added to the inventory; remaining clusters each a follow-up task or decision.
+
+## Rules
+- Ground rules: plan 72 "Ground rules for every part"; plan 82 "Rules for this plan": consolidate only local and behaviour-neutral (one language, one side of the layout rule); formats unchanged without a decision (save envelope, pool JSON, `app/data/pool*.json` byte-identical after `qgen export`, media cache names, API routes/JSON shapes, URLs, CLI flags). Change of structure/format → `pm decision add` (recommended option first) + follow-up task in plan 82 linked with `pm task-pending-decision`; too big → fix the cheap part, `pm task add 82` per remaining piece with exact files.
+- Never the real `state/`, `authoring/data/`, `work/`, media cache: temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`; stop servers by PID (`kill $!`).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Done when
+- Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part); staged.', '2026-10-12T23:10:18Z', NULL, 522);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -12630,6 +12817,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (386, 519, '2026-10-12T23:06:40Z', '2026-10-12T23:07:36Z', 'done', NULL, 0, 'ec8f53ab686ed945af59b88b3b3f4b9b83dfce1e', 'claude-opus-5-5[1m]', 'e277c5e2-17b3-4cc3-a687-6082f1c24d97', 6, 12, 6162, 203478, 34310, 0.4384636, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (387, 520, '2026-10-12T23:07:37Z', '2026-10-12T23:08:26Z', 'done', NULL, 0, 'f82043824dc7bae7d5d52cc7f30a97164bf1b637', 'claude-opus-5-5[1m]', '26cd63be-5528-4df9-9083-0963ab38548f', 6, 12, 5696, 180408, 29519, 0.38620160000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (388, 521, '2026-10-12T23:08:26Z', '2026-10-12T23:09:18Z', 'done', NULL, 0, 'c3cb97ca4b35546f4bf0d2342de976c4f54ed657', 'claude-opus-5-5[1m]', '89c74dfc-5a5e-44f7-9325-cb1e6bd0bd31', 7, 14, 6063, 246442, 36093, 0.45934839999999994, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (389, 522, '2026-10-12T23:09:19Z', '2026-10-12T23:10:28Z', 'done', NULL, 0, 'd7e8f994afd9a4112046e94ff9f4cf5d1b5bc447', 'claude-opus-5-5[1m]', 'cb576a4e-7142-463b-bd40-0c5fd1835ce5', 6, 12, 8628, 230321, 42329, 0.55730419999999992, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
