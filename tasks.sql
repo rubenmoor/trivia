@@ -7255,3 +7255,4 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (348, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (348, 20);
 INSERT INTO task_decision (task_id, decision_id) VALUES (353, 28);
 INSERT INTO task_decision (task_id, decision_id) VALUES (355, 29);
+INSERT INTO task_decision (task_id, decision_id) VALUES (374, 30);
