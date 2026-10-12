@@ -2357,33 +2357,29 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Decision answered; D-entry exists; OQ-35 resolved; PUB-4 `[x]`; `LICENSE` (and the content licence file, if any) exist and are linked from `README.md` and `directory.md`.', '2026-10-12T00:43:52Z', 168);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (41, 7, 'Competitive and couch co-op format (OQ-37)', 580, 'Part 8 of the masterplan (plan 7). OQ-37 asks how several players play without a gamemaster: the competitive format (relay ladder, parallel ladders, buzzer round) and the couch co-op rules, plus the input (hot-seat on one pad, one controller per player, phones as buzzers). Only the choice is made here; building it stays "Later" (MD-8, MD-9, IN-6). Owners: `plans/13-game-modes.md` ("Competitive mode", "Couch co-op") and `plans/14-input.md` (section 3, IN-7).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (41, 7, 'Multiplayer modes and input: record the answers (OQ-37)', 580, 'Part 8 of the masterplan (plan 7). OQ-37 is answered: pm decisions 23 and 24 plus milestone 7''s "Game modes" settle the three multiplayer modes and their input. No new decisions; this plan records and specs them. Building them stays "Later" (MD-8, MD-9, IN-6), outside S2. Owners: `plans/13-game-modes.md` (multiplayer mode sections) and `plans/14-input.md` (section 3, IN-6, IN-7).
+
+## The answer (don''t re-decide)
+- Round-robin co-op: players take turns; one team, one age group, one shared standard joker set (3 × Soplo, 1 × each other joker).
+- Round-robin competitive: turns; each player their own independent game, own jokers, own age group.
+- Competitive (timed): own tracks; everyone answers the same question at once, own input; 30 s; a hint every 8 s; no jokers; one age group; question difficulty = average of all players'' progress; wrong answer = out; three levels behind = out; first to level 12 wins; timeout = everyone loses; pulsing red frame in the last 3 s.
+- All three: no skip, no undo, no joker changes mid-game; «Reportar pregunta» only logs (plan 36); achievements unless customized.
+- Input: gamepads (one per player), keyboard, mouse; shared keyboard (one dedicated key per player takes keyboard and mouse until that turn ends); no phones.
 
 ## Depends on
-- Nothing blocks the prep. Related: plan 35 "Default mode (OQ-30)" (joker presets per player, admin actions), D-28 (burning), D-38 (age-group windows: can players of different groups share one game?).
-- Feeds plan 38 "Content target per player and language (OQ-32)" (burn multiplier per game) and plan 34 "Desktop shell (OQ-29)" (does the shell need a LAN server for phones; a dependency, not a blocker).
+- Nothing blocks it. Related: plan 35 (mode spec, `settings.mode`, standard joker set), D-28 (burning), D-38 (age-group windows).
+- Feeds plan 38 (burn multiplier per mode) and plan 34 (shell needs: several gamepads via the Gamepad API and the shared keyboard; no LAN server).
 
 ## Tasks
-1. **Prep: options and recommendation as a pm decision**
-   - Facts (one line each, with source): Gamepad API pad limit in Chromium/Electron (4 on most platforms; Steam Input/Deck); Remote Play Together (remote input arrives as extra pads, so any per-pad format works online for free; plan 18 SW-13); phones as buzzers (LAN HTTP/WebSocket server in the shell, QR join, firewall prompt on Windows, breaks "no network" slightly; Jackbox as the reference); how comparable party trivia games on Steam handle 2–8 players.
-   - Burn multiplier per format: questions seen per game vs. single player (relay: ~1×, every player sees the shared tower; parallel ladders: ~N×; buzzer: ~1× per round but more rounds). Use today''s approved counts per level (`qgen report`) to say for how many games of N players each format lasts.
-   - Options (one decision, or two if too big: "Competitive format (OQ-37)" and "Multiplayer input (OQ-37)"):
-     - format: relay ladder on one shared tower (recommended unless the facts say otherwise: one screen, ~1× burn, works hot-seat, fits the 12-level tower); parallel ladders; buzzer round; plus per-player joker budgets (from the default preset) and whether "attack" jokers exist.
-     - couch co-op: default mode with several pads and a team confirm (majority / any player / one captain) vs. no separate co-op (hot-seat the default mode).
-     - input: hot-seat with one pad or mouse (recommended baseline, always works, Deck-friendly); one pad per player up to 4 (+ Remote Play Together); phones as buzzers (adds the LAN server; would need its own later task).
-     - mixed age groups (D-38): one window for the game (the youngest player''s) vs. per-player windows.
-   - Each option notes its burn multiplier (for plan 38) and its shell needs (for plan 34).
-   - Recommended option first; body = context + facts + trade-offs, ultra-short.
-   - `pm task-pending-decision` on task 2 for each decision.
-2. **Follow-up: record the answer** (waits for the decision(s))
-   - D-entry in `plans/decisions.md` (next free D-number): format, co-op rule, input, burn multiplier, shell needs.
-   - OQ-37 moved to "Resolved" in `plans/open-questions.md`; `plans/11-steam.md` open-questions row and `plans/project.md` kept in sync ("Later" phase wording stays with part 10).
-   - `plans/13-game-modes.md`: "Competitive mode" stub → the chosen format (players, turn order, win rule, jokers per player, burning and supply rules); "Couch co-op" → the chosen rule. MD-8 and MD-9 rewritten to build exactly that; they stay unchecked and "Later".
-   - `plans/14-input.md` section 3: the chosen input; IN-7 `[x]` with a note; IN-6 rewritten to match (join screen or hot-seat only) and stays "Later". If phones are chosen, one backlog row in `plans/backlog.md` (LAN buzzer page, Later).
-   - `plans/16-content-target.md`: the burn multiplier line points to the D-entry (plan 38 uses it).
+1. **Record the answer** (task 202; decisions 23, 24 answered)
+   - D-entry in `plans/decisions.md` (next free D-number): the three modes as above, input, burn multiplier per mode (round-robin co-op ≈ 1 game''s burns; round-robin competitive ≈ N ×; competitive timed ≈ 1 shared question per round, no joker burns), shell needs (none beyond several gamepads and the shared keyboard).
+   - OQ-37 → "Resolved" in `plans/open-questions.md`; `plans/11-steam.md` open-questions row and `plans/project.md` in sync ("Later" wording stays with plan 43).
+   - `plans/13-game-modes.md`: old "Competitive mode" and "Couch co-op" stubs → one spec section per multiplayer mode (turn order, jokers shared or per player, age groups, drop-out and win rules, timer, hint cadence, red frame, burning). MD-8 and MD-9 rewritten to build exactly them; unchecked, "Later".
+   - `plans/14-input.md` section 3: per-player gamepads + shared keyboard; IN-7 `[x]` (no phones); IN-6 rewritten (join screen, player binding, shared-keyboard keys), stays "Later". No backlog row for phones.
+   - `plans/16-content-target.md`: the burn multiplier line points to the D-entry.
 
 ## Done when
-- Decision(s) answered; D-entry exists; OQ-37 resolved; plans 13 and 14 name the format and input that MD-8, MD-9 and IN-6 build later; plans 34 and 38 can read the shell need and burn multiplier from the D-entry.', '2026-10-12T00:44:27Z', 169);
+- D-entry exists; OQ-37 resolved; plans 13 and 14 spec the three modes and the input that MD-8, MD-9 and IN-6 build later; plans 34 and 38 can read shell needs and burn multipliers from the D-entry.', '2026-10-12T00:44:27Z', 169);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (42, 7, 'Freesound API for a commercial release (OQ-45)', 200, 'Part 9 of the masterplan (plan 7). Freesound''s API is free for non-commercial use; commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds (MP-6, `authoring/tools/providers/freesound.py`); the game ships the picked CC0/CC BY files, never the API. Before a paid Steam release the gamemaster decides whether to ask Freesound, replace the Freesound picks, or keep Freesound for the family only. Owner: `plans/23-media-providers.md` (Freesound row, provider order, MP-6).
 
 ## Depends on
@@ -6303,7 +6299,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:32Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (367, 41, 'revise plan 41', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 41, changed; it is quoted below. Bring plan 41 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (367, 41, 'revise plan 41', 'plan', 'done', 1000, '2026-10-12, plan 41 body rewritten: record decisions 23, 24 and milestone modes, no new decisions', 'Plan 7, the plan above plan 41, changed; it is quoted below. Bring plan 41 in line with it
 (`pm plan edit 41 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -6409,7 +6405,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
-- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', NULL, 359);
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:52Z', 359);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (368, 42, 'revise plan 42', 'plan', 'open', 1000, NULL, 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
 (`pm plan edit 42 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -6747,6 +6743,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
 
 Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T16:49:08Z', NULL, 382);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (384, 41, 'create tasks for plan 41', 'split', 'open', 1000, NULL, 'Split plan 41 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:49:52Z', NULL, 367);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -7264,6 +7262,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (243, 382, '2026-10-12T16:48:52Z', '2026-10-12T16:49:15Z', 'done', NULL, 0, '8a3b4ebbeeda16cc49f454a70ec560bd80c982e6', 'claude-opus-5-5[1m]', 'b6a7fc1b-0849-4556-8080-9a3d1f9442a0', 8, 16, 1813, 234794, 24022, 0.2754588, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (244, 365, '2026-10-12T16:49:15Z', '2026-10-12T16:49:25Z', 'done', NULL, 0, 'bef63c7ad7be7160fb6fe2640611e493af4e3e14', 'claude-opus-5-5[1m]', 'cad83d11-2423-4542-860a-4cc3c4108f76', 2, 4, 721, 43927, 21745, 0.1971814, 521418);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (245, 366, '2026-10-12T16:49:26Z', '2026-10-12T16:49:35Z', 'done', NULL, 0, '532392b87750392a5da2929ff0f69863f2ea26e9', 'claude-opus-5-5[1m]', 'f2d5e15e-90d1-4cbc-a592-5b0fb49887f9', 2, 4, 824, 42112, 21991, 0.2008464, 521418);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (246, 367, '2026-10-12T16:49:36Z', '2026-10-12T16:49:58Z', 'done', NULL, 0, '2a5f12a6983cf90f6c25f5b939338b43a1c62ab3', 'claude-opus-5-5[1m]', '0b5107e4-0698-40e1-9b62-ba5297b671d6', 3, 6, 2144, 87422, 33857, 0.33124440000000005, 521418);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
