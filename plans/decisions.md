@@ -725,3 +725,16 @@ Template:
   - Simulation bottlenecks are information, not weights.
 - Consequences: `qgen report --locale L`, `--simulate`'s target check and `--cost` (`es` sources past the target) use it. Whether `es` grows past 5000 is part of the release budget (plan 70 task 463).
 - Supersedes / related: D-40, D-53, D-54 (amends), D-75, D-78, D-81; pm decision 37
+
+## D-85: Base bundles and bundle languages
+- Date: 2026-10-12
+- Context: Every bundle was offered in every language, and `always_on` forced `base` into each session. Milestone 5 adds per-language bundles and base bundles (`chinese-base` later, milestone 12). Plan 71.
+- Decision:
+  - **Base bundles:** `kind: base` marks a base bundle; replaces `always_on`. Exactly one per session; zero or two → `base_bundle_count`.
+  - **Languages:** every bundle in `app/data/bundles.json` lists `languages`; the game offers only the bundles of its locale (`bundlesFor`); others → `bundle_not_offered`. `base`: es, en, de; `colombia`: es.
+  - **Default:** the locale's first base bundle (file order) plus every non-base bundle offered in the locale. es → `base` + `colombia` (unchanged), en/de → `base`.
+  - **Nothing added:** `[]` and `["colombia"]` are refused, not completed with `base`.
+  - **Stored choices that no longer resolve:** read as the locale's defaults (stored age group kept if known); never written back. Same for the player preset.
+  - **`qgen validate`:** errors for missing/invalid `languages`, a leftover `always_on`, an unknown `kind`, a launch language without a base bundle; warnings for a listed bundle without approved questions in `pool.<locale>.json` and for approved questions of an unlisted bundle.
+- Consequences: Plan 71 (tasks 480, 481). Start screen (plan 29) picks among `bundlesFor`; docs in plan 30.
+- Supersedes / related: D-68 ("every always_on bundle is always on", auto-adding `base`); D-39, D-78; pm decision 26

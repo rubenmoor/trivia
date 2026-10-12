@@ -3103,6 +3103,9 @@ def validate_pool():
     lo, hi = load_age_groups()["scale"]
     bundle_ids = {b["id"] for b in load_bundles()}
     errors += taxonomy_problems()
+    e, w = bundle_problems(load_bundles())
+    errors += e
+    warnings += w
     errors += age_groups.level_problems(load_age_groups())
     errors += targets.problems((lo, hi), bundle_ids)
     import health  # authoring/tools/health.py (imports qgen)
@@ -3346,6 +3349,31 @@ def taxonomy_problems():
         if dup:
             errors.append(f"same {what} in two places (D-43): {', '.join(dup)}")
     return errors
+
+
+def bundle_problems(bundles, pool_path=layout.LOCALE_POOL):
+    """(errors, warnings): bundle languages and base bundles (plan 71)."""
+    errors, warnings, rel = [], [], "app/data/bundles.json"
+    for b in bundles:
+        bid, langs = b.get("id", "?"), b.get("languages")
+        if not (isinstance(langs, list) and langs and len(set(langs)) == len(langs) and set(langs) <= set(LAUNCH_LOCALES)):
+            errors.append(f"{rel}: {bid}: languages must be a non-empty list of distinct codes from {', '.join(LAUNCH_LOCALES)}")
+        if "always_on" in b:
+            errors.append(f"{rel}: {bid}: always_on is gone; kind base marks a base bundle")
+        if b.get("kind") not in {"base", "region", "theme"}:
+            errors.append(f"{rel}: {bid}: kind must be base, region or theme")
+    listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in LAUNCH_LOCALES}
+    for l in LAUNCH_LOCALES:
+        if not any(b.get("kind") == "base" and b["id"] in listed[l] for b in bundles):
+            errors.append(f"{rel}: no base bundle for {l}")
+        if l == "es":
+            continue
+        path = pool_path(l)
+        pool = load_json(path)["questions"] if path.exists() else []
+        have = {q.get("bundle") or "base" for q in pool if q.get("status", "approved") == "approved"}
+        warnings += [f"{path.name}: no approved {b} question; {b} is listed for {l}" for b in sorted(listed[l] - have)]
+        warnings += [f"{path.name}: approved {b} questions, but {b} isn't listed for {l}" for b in sorted(have - listed[l])]
+    return errors, warnings
 
 
 def cmd_bundle_new(args):
