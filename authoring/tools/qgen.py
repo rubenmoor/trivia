@@ -3357,7 +3357,7 @@ def cmd_bundle_new(args):
     data = load_json(layout.BUNDLES)
     if any(b["id"] == args.id for b in data["bundles"]):
         sys.exit(f"Bundle {args.id!r} already exists.")
-    data["bundles"].append({"id": args.id, "kind": args.kind, "always_on": False, "name": args.name,
+    data["bundles"].append({"id": args.id, "kind": args.kind, "languages": ["es"], "name": args.name,
                             "description": args.description, "rule": args.rule,
                             **({"voice": args.voice} if args.voice else {})})
     save_json(layout.BUNDLES, data)

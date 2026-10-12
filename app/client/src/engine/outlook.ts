@@ -2,7 +2,7 @@
 import type { Choice, GameMode } from "../lib/types.ts";
 import { countOf, STANDARD_JOKERS } from "./game.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
-import { subcategories } from "./pool.ts";
+import { bundlesFor, subcategories } from "./pool.ts";
 import { available, LEVELS, PER_LEVEL } from "./selection.ts";
 import type { EngineData, SaveData } from "./state.ts";
 
@@ -31,7 +31,7 @@ export interface Outlook {
   k: number;
   /** Difficulty ranges of the level(s) that fail first at k + 1, merged, ascending. */
   bottleneck: [number, number][];
-  /** An inactive bundle whose activation raises k most, or null. */
+  /** An inactive non-base bundle of the locale whose activation raises k most, or null. */
   bundleHint: string | null;
   /** Exhausted subcategories not yet shown (`notified_exhausted`), in display order. */
   exhausted: string[];
@@ -135,8 +135,8 @@ export function outlook(save: SaveData, data: EngineData, choice: OutlookChoice)
   const k = Math.max(raw, 0);
   const bottleneck = merge(bottleneckLevels(fresh, ranges, raw, b).map((l) => [ranges[l - 1][0], ranges[l - 1][1]]));
   let bundleHint: string | null = null, best = raw;
-  for (const { id } of data.bundles) {
-    if (choice.bundles.includes(id)) continue;
+  for (const { id, kind } of bundlesFor(data)) {
+    if (kind === "base" || choice.bundles.includes(id)) continue;
     const kb = freshGames(freshIn([...choice.bundles, id]), ranges, b);
     if (kb > best) [bundleHint, best] = [id, kb];
   }

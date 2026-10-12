@@ -174,6 +174,8 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   age_group_unknown: (p) => `unknown age group ${pyRepr(String(p.group))}`,
   bundle_unknown: (p) => `unknown bundle ${pyRepr(String(p.bundle))}`,
   bundles_not_list: "bundles must be a list",
+  bundle_not_offered: (p) => `bundle ${pyRepr(String(p.bundle))} isn't offered in ${p.locale}`,
+  base_bundle_count: "pick exactly one base bundle",
   mode_unknown: (p) => `unknown mode ${pyRepr(String(p.mode))}`,
   mode_not_built: (p) => `mode ${pyRepr(String(p.mode))} isn't playable yet`,
   gamemaster_only: (p) => `${p.action} only in gamemaster mode`,

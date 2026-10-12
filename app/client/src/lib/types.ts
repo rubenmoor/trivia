@@ -38,7 +38,7 @@ export interface Supply {
 /** The age group and active bundles of a game (plan 27, D-38, D-39). */
 export interface Choice {
   age_group: string;
-  /** In bundles.json order, every always_on bundle included. */
+  /** In bundles.json order, exactly one base bundle (plan 71). */
   bundles: string[];
 }
 

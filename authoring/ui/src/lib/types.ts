@@ -144,7 +144,7 @@ export interface Question {
 export type Bundle = {
   id: string;
   kind: "base" | "region" | "theme";
-  always_on: boolean;
+  languages: string[];
   name: string;
   description: string;
   rule: string;

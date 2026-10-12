@@ -256,6 +256,8 @@ const es = {
     age_group_unknown: "grupo de edad desconocido: '{group}'",
     bundle_unknown: "paquete desconocido: '{bundle}'",
     bundles_not_list: "los paquetes deben ser una lista",
+    bundle_not_offered: "el paquete '{bundle}' no está disponible en este idioma",
+    base_bundle_count: "elige exactamente un paquete básico",
     mode_unknown: "modo desconocido: '{mode}'",
     mode_not_built: "ese modo todavía no se puede jugar",
     gamemaster_only: "en este modo no se puede",

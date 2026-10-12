@@ -25,11 +25,12 @@ export function parsePool(json: unknown): PoolQuestion[] {
   return doc.questions as PoolQuestion[];
 }
 
-/** An entry of app/data/bundles.json (D-39). */
+/** An entry of app/data/bundles.json (D-39); `kind: "base"` marks a base bundle (plan 71). */
 export interface Bundle {
   id: string;
   kind: string;
-  always_on: boolean;
+  /** Question locales it's offered in. */
+  languages: string[];
   name: string;
   description: string;
 }
@@ -37,7 +38,16 @@ export interface Bundle {
 export function parseBundles(json: unknown): Bundle[] {
   const bundles = (json as { bundles?: unknown } | null)?.bundles;
   if (!Array.isArray(bundles) || bundles.length === 0) throw new Error("bundles.json: no bundles");
-  return bundles.map(({ id, kind, always_on, name, description }) => ({ id, kind, always_on: !!always_on, name, description }));
+  return bundles.map(({ id, kind, languages, name, description }) => {
+    if (typeof kind !== "string" || !kind) throw new Error(`bundles.json: ${id}: no kind`);
+    if (!Array.isArray(languages) || languages.length === 0) throw new Error(`bundles.json: ${id}: no languages`);
+    return { id, kind, languages, name, description };
+  });
+}
+
+/** The bundles offered in `locale`, bundles.json order (plan 71). */
+export function bundlesFor(data: { bundles: Bundle[]; locale: string }, locale = data.locale): Bundle[] {
+  return data.bundles.filter((b) => b.languages.includes(locale));
 }
 
 /** [lo, hi] per level, index 0 = level 1. */

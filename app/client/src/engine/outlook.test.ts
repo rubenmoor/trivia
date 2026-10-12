@@ -9,7 +9,7 @@ const group = {
   id: "g", name: "G", ages: [0, null], window: [1, 12], level_weights: {},
   levels: Array.from({ length: 12 }, (_, i) => [i + 1, i + 1] as const),
 } as AgeGroup;
-const bundle = (id: string, always_on: boolean): Bundle => ({ id, kind: id, always_on, name: id, description: "" });
+const bundle = (id: string, kind: string): Bundle => ({ id, kind, languages: ["es"], name: id, description: "" });
 const q = (id: string, difficulty: number, bundle = "base", subcategory = "Y") =>
   ({ id, difficulty, bundle, subcategory, status: "approved" }) as PoolQuestion;
 const pool = [
@@ -18,7 +18,7 @@ const pool = [
   ...Array.from({ length: 10 }, (_, j) => q(`c7-${j}`, 7, "colombia", "Z")),
 ];
 const data = engineData(pool, [{ slug: "s", name: "S", bundle: "base", subcategories: ["X", "Y"] },
-  { slug: "z", name: "Z", bundle: "colombia", subcategories: ["Z"] }], [bundle("base", true), bundle("colombia", false)], [group]);
+  { slug: "z", name: "Z", bundle: "colombia", subcategories: ["Z"] }], [bundle("base", "base"), bundle("colombia", "region")], [group]);
 const solo = { age_group: "g", bundles: ["base"], mode: "solo" as const };
 const seen = (save: SaveData, ...ids: string[]) =>
   ({ ...save, seen: ids.map((id) => ({ question_id: id, game_id: 1, seen_on: "x" })) });

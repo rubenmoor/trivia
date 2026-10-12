@@ -2,7 +2,7 @@
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
 import type { Choice, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
-import { categoryOf } from "./pool.ts";
+import { bundlesFor, categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
@@ -116,30 +116,51 @@ function askedCategories(state: GameState, data: EngineData): Set<string | null>
 /** The age group of a game that doesn't name one (D-22's ranges). */
 export const DEFAULT_AGE_GROUP = "young_teens";
 
-/** Every bundle on, the default age group. */
+/** The default age group; the locale's first base bundle plus every other bundle offered in it (plan 71). */
 export function defaultChoice(data: EngineData): Choice {
-  return { age_group: DEFAULT_AGE_GROUP, bundles: data.bundles.map((b) => b.id) };
+  const offered = bundlesFor(data);
+  const base = offered.find((b) => b.kind === "base");
+  return { age_group: DEFAULT_AGE_GROUP, bundles: offered.filter((b) => b === base || b.kind !== "base").map((b) => b.id) };
 }
 
-/** The game's choice; missing keys are the defaults, resolved here and never written back. */
+/** The game's choice; missing keys, an unknown group or bundles that don't resolve (plan 71) are the
+ * defaults, resolved here and never written back. */
 export function gameChoice(state: GameState, data: EngineData): Choice {
   const d = defaultChoice(data);
-  return { age_group: state.settings.age_group ?? d.age_group, bundles: state.settings.bundles ?? d.bundles };
+  const { age_group, bundles } = state.settings;
+  let out = d.bundles;
+  if (bundles !== undefined) {
+    try {
+      out = resolveBundles(data, bundles);
+    } catch (e) {
+      if (!(e instanceof GameError)) throw e;
+    }
+  }
+  return { age_group: age_group !== undefined && data.groupById.has(age_group) ? age_group : d.age_group, bundles: out };
 }
 
-/** Validate and normalize a requested choice; a missing key comes from `base`. Bundles: always_on
- * ones added, duplicates dropped, bundles.json order. */
+/** Bundles offered in the locale, duplicates dropped, exactly one base bundle, bundles.json order. */
+function resolveBundles(data: EngineData, wanted: unknown): string[] {
+  if (!Array.isArray(wanted)) throw new GameError("bundles_not_list");
+  const known = new Set(data.bundles.map((b) => b.id));
+  const offered = new Set(bundlesFor(data).map((b) => b.id));
+  for (const b of wanted) {
+    if (typeof b !== "string" || !known.has(b)) throw new GameError("bundle_unknown", { bundle: String(b) });
+    if (!offered.has(b)) throw new GameError("bundle_not_offered", { bundle: b, locale: data.locale });
+  }
+  const on = data.bundles.filter((b) => wanted.includes(b.id));
+  const count = on.filter((b) => b.kind === "base").length;
+  if (count !== 1) throw new GameError("base_bundle_count", { count });
+  return on.map((b) => b.id);
+}
+
+/** Validate and normalize a requested choice; a missing key comes from `base`. */
 export function resolveChoice(
   data: EngineData, input: { age_group?: unknown; bundles?: unknown }, base: Choice = defaultChoice(data),
 ): Choice {
   const group = input.age_group === undefined ? base.age_group : input.age_group;
   if (typeof group !== "string" || !data.groupById.has(group)) throw new GameError("age_group_unknown", { group: String(group) });
-  const wanted = input.bundles === undefined ? base.bundles : input.bundles;
-  if (!Array.isArray(wanted)) throw new GameError("bundles_not_list");
-  const known = new Set(data.bundles.map((b) => b.id));
-  for (const b of wanted) if (typeof b !== "string" || !known.has(b)) throw new GameError("bundle_unknown", { bundle: String(b) });
-  const on = new Set<string>(wanted);
-  return { age_group: group, bundles: data.bundles.filter((b) => b.always_on || on.has(b.id)).map((b) => b.id) };
+  return { age_group: group, bundles: resolveBundles(data, input.bundles === undefined ? base.bundles : input.bundles) };
 }
 
 const rangesFor = (data: EngineData, choice: Choice): LevelRanges => data.groupById.get(choice.age_group)!.levels;
@@ -180,7 +201,7 @@ function block(work: SaveData, qid: string): void {
 }
 
 /** The supply check before a new game (GF-5): the pool minus blocked, any seen count (plan 65).
- * `choice`: age group and bundles, default every bundle and DEFAULT_AGE_GROUP. */
+ * `choice`: age group and bundles, default defaultChoice. */
 export function supply(save: SaveData, data: EngineData, choice: Choice = defaultChoice(data)): Supply {
   const avail = selection.available(data.pool, save.blocked, [], new Set(choice.bundles));
   const levels = selection.supply(avail, rangesFor(data, choice));

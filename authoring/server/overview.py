@@ -49,7 +49,7 @@ def build(pool, bundles):
                          if not media_cache.cache_path(url).is_file()})
     bundle_rows = []
     for b in bundles:
-        if b["always_on"]:
+        if b["kind"] == "base":
             continue  # base: nothing to check, every question starts there
         qs = [q for q in pool if q.get("bundle") == b["id"] and q["status"] != "rejected"]
         bundle_rows.append({"id": b["id"], "name": b["name"], "questions": len(qs),

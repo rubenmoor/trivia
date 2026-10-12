@@ -75,7 +75,7 @@ if (json === undefined) {
   }
 
   test("colombia off: no colombia question or Cambiazo group", () => {
-    let save = game.newGame(emptySave(), data, io(2), "ana", { bundles: [] }).save;
+    let save = game.newGame(emptySave(), data, io(2), "ana", { bundles: ["base"] }).save;
     assert.deepEqual(stateOf(save).settings.bundles, ["base"]);
     let views = 0;
     assert.ok(data.categories.some((c) => c.bundle === "colombia"));
@@ -94,10 +94,44 @@ if (json === undefined) {
     assert.ok(views > 0);
   });
 
-  test("bundles are normalized: base added, bundles.json order, no duplicates", () => {
-    assert.deepEqual(game.resolveChoice(data, { bundles: [] }).bundles, ["base"]);
-    assert.deepEqual(game.resolveChoice(data, { bundles: ["colombia"] }).bundles, ["base", "colombia"]);
+  const enData = engineData(data.pool, data.categories, data.bundles, data.ageGroups, "en");
+  const twoBases = engineData(data.pool, data.categories,
+    [...data.bundles, { id: "base2", kind: "base", languages: ["es"], name: "B2", description: "" }], data.ageGroups);
+
+  test("bundles are normalized: bundles.json order, no duplicates, nothing added", () => {
     assert.deepEqual(game.resolveChoice(data, { bundles: ["colombia", "base", "colombia"] }).bundles, ["base", "colombia"]);
+    assert.deepEqual(game.resolveChoice(twoBases, { bundles: ["base2"] }).bundles, ["base2"]);
+  });
+
+  test("defaults per locale: the first base bundle and the locale's other bundles", () => {
+    assert.deepEqual(game.defaultChoice(data).bundles, ["base", "colombia"]);
+    assert.deepEqual(game.defaultChoice(enData).bundles, ["base"]);
+    assert.deepEqual(game.defaultChoice(twoBases).bundles, ["base", "colombia"]);
+  });
+
+  test("not exactly one base bundle, or a bundle not offered → 409, save unchanged", () => {
+    const save = game.newGame(emptySave(), data, io(11), "ana").save;
+    for (const [d, bundles, code] of [
+      [data, [], "base_bundle_count"],
+      [data, ["colombia"], "base_bundle_count"],
+      [twoBases, ["base", "base2"], "base_bundle_count"],
+      [enData, ["base", "colombia"], "bundle_not_offered"],
+    ] as const) {
+      const at = { ...save, language: { ui: d.locale, questions: d.locale } };
+      const r = gameAction(at, d, io(12), "new", { player: "bea", bundles });
+      assert.equal(r.status, 409, `${bundles}`);
+      assert.equal((r.body as { error: string }).error, code);
+      assert.equal(r.save, at);
+    }
+  });
+
+  test("stored bundles that don't resolve play with the defaults, never written back", () => {
+    let save = game.newGame(emptySave(), data, io(13), "ana", { bundles: ["base"] }).save;
+    stateOf(save).settings.bundles = ["colombia", "mars"];
+    assert.deepEqual(game.gameChoice(stateOf(save), data).bundles, ["base", "colombia"]);
+    save = game.pick(save, data, io(14), 0).save;
+    assert.equal(stateOf(save).phase, "question");
+    assert.deepEqual(stateOf(save).settings.bundles, ["colombia", "mars"]);
   });
 
   test("unknown group or bundle → 409, save unchanged", () => {
@@ -140,5 +174,8 @@ if (json === undefined) {
     assert.deepEqual(adults.choice, { age_group: "adults", bundles: ["base"] });
     save = game.newGame(save, data, io(10), "ana").save;
     assert.deepEqual((choice(save, data, { player: "ana" }).body as { choice: unknown }).choice, game.defaultChoice(data));
+    save = game.newGame(save, data, io(15), "ana", { age_group: "kids", bundles: ["base", "colombia"] }).save;
+    assert.deepEqual((choice(save, enData, { player: "ana" }).body as { choice: unknown }).choice,
+      { age_group: "kids", bundles: ["base"] });
   });
 }
