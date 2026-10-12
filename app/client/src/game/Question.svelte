@@ -160,12 +160,12 @@
     disarm();
     if (locked !== null) return unlock();
     locked = i;
-    sfx("candado: clunk");
+    sfx("padlock-close");
     lockMusic();
     // The big padlock shakes for a suspense beat, opens and slides away (UI-12, CSS below).
     padlockTimer = setTimeout(() => {
       ready = true;
-      sfx("candado se abre");
+      sfx("padlock-open");
     }, PADLOCK_MS);
   }
 
@@ -174,7 +174,7 @@
     clearTimeout(padlockTimer);
     locked = null;
     ready = false;
-    sfx("candado se cierra");
+    sfx("padlock-close");
     lockMusic();
   }
 
@@ -192,13 +192,13 @@
     error = null;
     player?.pause();
     music("roll"); // the drum roll until the reveal (gamemaster feedback)
-    sfx("golpe: respuesta final");
+    sfx("boom");
     try {
       const [game] = await Promise.all([gameAction("answer", { index: locked }), wait(REVEAL_WAIT_S[level - 1] * 1000)]);
       result = game?.last ?? null;
       revealed = true;
       music(null);
-      sfx(result?.correct ? "fanfarria" : "trombón triste");
+      sfx(result?.correct ? "fanfare" : "sad-trombone");
       await wait(AFTER_REVEAL_MS);
       onanswered(game);
     } catch (e) {
@@ -235,13 +235,13 @@
       disarm();
       mode = name;
       target = name === "snipe" ? question.answers.findIndex((_, i) => !question.struck.includes(i)) : null;
-      sfx(name === "snipe" ? "mira: latido" : "comodín: abrir");
+      sfx(name === "snipe" ? "heartbeat" : "joker-open");
       return;
     }
     if (armed === name) return fire({ joker: name });
     disarm();
     armed = name;
-    sfx("comodín: preparado");
+    sfx("joker-armed");
     armTimer = setTimeout(() => (armed = null), ARM_MS);
   }
 
@@ -257,7 +257,7 @@
     mode = null;
     jokerBusy = true; // input stays locked until the joker's effect is over
     duck(true);
-    sfx(`comodín: ${TOKENS.find((t) => t.name === body.joker)?.label}`);
+    sfx("joker-activate");
     if (body.joker === "snipe") shot = body.index ?? null;
     const [res] = await Promise.all([play(body), fly(body.joker)]);
     flight = null;
@@ -271,18 +271,18 @@
     }
     if (res.event.joker === "snipe") {
       // The scope tightens on the target, a beat of silence, then the cork pops (09, "Francotirador").
-      sfx("silencio…");
+      sfx("silence");
       await wait(SNIPE_BEAT_MS(level));
-      sfx("¡pop! disparo de corcho");
+      sfx("cork-pop");
       if (res.event.outcome === "hit") {
         hit = res.event.correct_index;
         shot = null;
-        sfx("¡Ups!");
+        sfx("sad-trombone");
         await wait(SNIPE_HIT_MS);
       } else {
         shattering = res.event.index;
         shot = null;
-        sfx("vidrio roto");
+        sfx("glass-break");
         await sleep(SHATTER_MS);
         shattering = null;
       }
@@ -291,7 +291,7 @@
       if (purged) await new Promise<void>((done) => (shredding = { name: purged, done }));
       shredding = null;
       sweeping = true;
-      sfx("escoba: fuuush");
+      sfx("swoosh");
       await sleep(SWEEP_MS);
     }
     jokerBusy = false;
@@ -304,7 +304,7 @@
     if (question.struck.includes(i)) return;
     if (target === i) return fire({ joker: "snipe", index: i });
     target = i;
-    sfx("mira: tic");
+    sfx("tick");
   }
 
   /** Arrow keys move the crosshair over the answers that are left (2×2 grid). */

@@ -67,13 +67,13 @@
 
     function rocket(t: number, x: number, peak: number, then: (x: number, y: number) => void) {
       at(t, () => {
-        sfx("cohete");
+        sfx("rocket");
         const p: P = {
           x, y: H + 10, vx: rand(-1.5, 1.5) * u(), vy: -Math.sqrt(2 * 60 * u() * (H - peak)), life: 0, max: 9,
           color: "#ffe08a", size: 0.3 * u(), gravity: 60 * u(), drag: 0, kind: "rocket",
         };
         p.onDeath = () => {
-          sfx("estallido");
+          sfx("burst");
           then(p.x, p.y);
         };
         particles.push(p);
@@ -87,7 +87,7 @@
         }
       },
       confetti(t0) {
-        at(t0, () => sfx("cañón de confeti"));
+        at(t0, () => sfx("confetti-cannon"));
         for (const side of [0, 1]) {
           for (let i = 0; i < 160; i++) {
             at(t0 + Math.random() * 0.35, () => {
@@ -137,7 +137,7 @@
             });
           }
         }
-        at(t0, () => sfx("bengalas"));
+        at(t0, () => sfx("sparklers"));
       },
       stars(t0) {
         for (let i = 0; i < 70; i++) {
@@ -147,7 +147,7 @@
             gravity: 6 * u(), drag: 0.2, kind: "star", spin: rand(-2, 2), angle: rand(0, 6),
           }));
         }
-        at(t0, () => sfx("estrellas"));
+        at(t0, () => sfx("stars"));
       },
     };
 

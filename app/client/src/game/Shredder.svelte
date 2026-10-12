@@ -15,11 +15,11 @@
     const timers = [
       setTimeout(() => {
         stamped = true;
-        sfx("sello: ¡pum!");
+        sfx("stamp");
       }, 350),
       setTimeout(() => {
         shredding = true;
-        sfx("trituradora");
+        sfx("shredder");
       }, STAMP_MS),
       setTimeout(ondone, STAMP_MS + SHRED_MS),
     ];

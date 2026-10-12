@@ -14,7 +14,7 @@
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
-  import { music, sfx, unlock, type Track } from "./sound.svelte";
+  import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap";
   import "./theme.css";
@@ -101,11 +101,11 @@
   /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music. */
   /** `apply` runs behind the black: a new game state that the old screen can't show (no question
    * any more, a different `last`) must not land before the screen switches. */
-  async function go(next: Screen, effect: string, apply?: () => void) {
+  async function go(next: Screen, effect: Cue, apply?: () => void) {
     busy = true;
     music(null);
     sfx(effect);
-    veil = effect === "rebobinar" ? "rewind" : "black";
+    veil = effect === "rewind" ? "rewind" : "black";
     black = true;
     await sleep(FADE_MS);
     apply?.();
@@ -169,21 +169,21 @@
       // The card flip (JK-7): the transitions in Question.svelte only run while this is set.
       swap.active = true;
       swappedBy = event;
-      sfx(event.joker === "easier" ? "silbato que baja" : "swoosh que sube");
+      sfx(event.joker === "easier" ? "whistle-down" : "swoosh-up");
       setTimeout(() => (swap.active = false), FLIP_MS * 2 + 100);
     }
     if (event.joker === "skip") {
       const cards = newCards(next);
-      await go("select", "papel", () => ((game = next), (fresh = cards)));
+      await go("select", "paper", () => ((game = next), (fresh = cards)));
     } else if (event.joker === "snipe" && event.outcome === "hit") {
-      await go("level", "rebobinar", () => (game = next));
+      await go("level", "rewind", () => (game = next));
     } else game = next;
   }
 
   /** After «¡Correcto!»: the Level screen, where the new block drops and lands with a thud. */
   async function toLevel() {
     const level = blocks;
-    const landed = sleep(FADE_MS * 2 + 750).then(() => sfx(`bloque ${level}`)); // the fall in Tower.svelte
+    const landed = sleep(FADE_MS * 2 + 750).then(() => sfx("block", level)); // the fall in Tower.svelte
     await go("level", "whoosh");
     await landed;
   }
@@ -191,7 +191,7 @@
   /** Where a game continues: the Level screen before a choice, else its question. */
   function resume() {
     if (game?.phase === "question") return go("question", "swoosh");
-    return go("level", game?.level === 1 ? "listo" : "whoosh");
+    return go("level", game?.level === 1 ? "ready" : "whoosh");
   }
 
   async function newGame() {
@@ -211,18 +211,18 @@
       return;
     }
     greeting = game?.player ?? name;
-    sfx("¡hola!");
+    sfx("ready");
     busy = true;
     await sleep(GREETING_MS);
-    await go("level", "listo");
+    await go("level", "ready");
     greeting = null;
   }
 
   async function pick(i: number) {
     if (!game || i >= game.options.length) return;
-    sfx("pop: carta elegida");
+    sfx("pop");
     picked = i;
-    setTimeout(() => sfx("papel rasgado"), TEAR_MS);
+    setTimeout(() => sfx("tear"), TEAR_MS);
     const [ok] = await Promise.all([act("pick", { index: i }), sleep(PICK_MS)]);
     if (ok) await go("question", "swoosh");
     else picked = null;
@@ -231,9 +231,9 @@
   async function answered(next: Game | null) {
     if (!next) return;
     const apply = () => (game = next);
-    if (next.phase === "won") await go("victory", "gran aplausos", apply);
+    if (next.phase === "won") await go("victory", "applause-big", apply);
     else if (next.phase === "lost") await go("wrong", "boom", apply);
-    else await go("correct", "aplausos", apply);
+    else await go("correct", "applause", apply);
   }
 
   async function toStart() {
@@ -245,14 +245,14 @@
 
   function openOverlay() {
     overlayOpen = true;
-    sfx("menú abierto");
+    sfx("menu-open");
     pausedMedia = [...document.querySelectorAll<HTMLMediaElement>("audio, video")].filter((m) => !m.paused);
     pausedMedia.forEach((m) => m.pause());
   }
 
   function closeOverlay() {
     overlayOpen = false;
-    sfx("menú cerrado");
+    sfx("menu-close");
     pausedMedia.forEach((m) => m.play().catch(() => {}));
     pausedMedia = [];
   }
@@ -262,14 +262,14 @@
     const next = await request("skip", { everyone });
     if (next === undefined) return;
     const cards = newCards(next);
-    await go("select", "papel", () => ((game = next), (fresh = cards)));
+    await go("select", "paper", () => ((game = next), (fresh = cards)));
   }
 
   async function undo() {
     overlayOpen = false;
     pausedMedia = [];
     const next = await request("undo");
-    if (next !== undefined) await go("question", "rebobinar", () => (game = next));
+    if (next !== undefined) await go("question", "rewind", () => (game = next));
   }
 
   /** The joker budget of the running game, from the overlay (MD-4); the screen stays as it is. */
@@ -290,7 +290,7 @@
     if (!id) return;
     try {
       flagged = new Set(await setFlag(id, !flagged.has(id), game?.player ?? null));
-      sfx(flagged.has(id) ? "menú abierto" : "menú cerrado");
+      sfx(flagged.has(id) ? "menu-open" : "menu-close");
       error = null;
     } catch (e) {
       error = errorText(e);
@@ -325,7 +325,7 @@
       if (running) resume();
       else newGame();
     } else if (screen === "start" && e.key.toLowerCase() === "n") newGame();
-    else if (screen === "level" && next) go("select", "papel");
+    else if (screen === "level" && next) go("select", "paper");
     else if (screen === "select" && picked === null && "1234".includes(e.key) && e.key.length === 1)
       pick(Number(e.key) - 1);
     else if (screen === "correct" && next) toLevel();
@@ -339,7 +339,7 @@
     if (!unlocked) {
       unlocked = true;
       unlock();
-      sfx("audio desbloqueado");
+      sfx("unlocked");
     }
   }
 
@@ -403,7 +403,7 @@
         {:else if milestone(game.level, game.id)}
           <p class="milestone">{milestone(game.level, game.id)}</p>
         {/if}
-        <button class="secondary hint" onclick={() => go("select", "papel")} disabled={busy}>Seguir <kbd>Enter</kbd></button>
+        <button class="secondary hint" onclick={() => go("select", "paper")} disabled={busy}>Seguir <kbd>Enter</kbd></button>
       </div>
     </section>
   {:else if screen === "select" && game}

@@ -2,7 +2,7 @@
 // three channels (music, effects, question media) under a master gain, fades and crossfades.
 // Recorded sounds live in app/client/public/audio/ (free licences, CREDITS.md, UI-10) and replace the
 // synthesized ones they cover; everything else is synthesized: the music loops are generated
-// (same key and tempo family, rising intensity) and each effect name maps to a recipe below.
+// (same key and tempo family, rising intensity) and each effect cue maps to a recipe below.
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
  * roll: the drum roll from «Respuesta final» until the reveal; victory: «Pomp and Circumstance»
@@ -40,21 +40,21 @@ const SAMPLE_NAMES = [
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
-/** Effect names played from a recording, first match wins; `rate` changes the pitch. */
-const SAMPLE_FOR: [RegExp, Sample, ((name: string) => number)?][] = [
-  [/gran aplausos/, "aplausos-gran"],
-  [/aplausos/, "aplausos"],
-  [/fanfarria/, "fanfarria"],
-  [/trombón|Ups/, "trombon-triste"],
-  [/candado: clunk|candado se cierra/, "candado-cierra"],
-  [/candado se abre/, "candado-abre"],
-  [/^papel$/, "papel"],
-  [/vidrio/, "vidrio"],
-  [/sello/, "sello"],
+/** Effects played from a recording; `rate` changes the pitch. */
+const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> = {
+  "applause-big": ["aplausos-gran"],
+  applause: ["aplausos"],
+  fanfare: ["fanfarria"],
+  "sad-trombone": ["trombon-triste"],
+  "padlock-close": ["candado-cierra"],
+  "padlock-open": ["candado-abre"],
+  paper: ["papel"],
+  "glass-break": ["vidrio"],
+  stamp: ["sello"],
   // The block landing: the higher the tower, the higher the thud (04, "Block arrival").
-  [/bloque (\d+)/, "golpe", (n) => 0.75 + Number(/bloque (\d+)/.exec(n)?.[1] ?? 1) * 0.06],
-  [/estallido/, "estallido", () => 0.85 + Math.random() * 0.3],
-];
+  block: ["golpe", (level) => 0.75 + level * 0.06],
+  burst: ["estallido", () => 0.85 + Math.random() * 0.3],
+};
 
 async function loadSamples(c: AudioContext) {
   await Promise.all(
@@ -374,24 +374,31 @@ function roll(c: AudioContext, out: AudioNode, t: number, len: number, keep: Kee
 
 // Effects ----------------------------------------------------------------------------------------
 
-/** Play a short effect by name; the names describe the sound (04, "Sound assets"). */
-export function sfx(name: string) {
+/** Short effects by neutral id (04, "Sound assets"); one per distinct sound. */
+export type Cue =
+  | "silence" | "rocket" | "burst" | "confetti-cannon" | "sparklers" | "stars" | "applause" | "applause-big"
+  | "whoosh" | "swoosh-up" | "swoosh" | "tear" | "paper" | "ready" | "boom" | "block" | "cork-pop" | "pop"
+  | "padlock-close" | "padlock-open" | "fanfare" | "sad-trombone" | "rewind" | "menu-open" | "menu-close"
+  | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
+  | "heartbeat" | "tick" | "glass-break";
+
+/** Play a short effect; `level` sets the pitch of "block" (the tower's height). */
+export function sfx(cue: Cue, level = 1) {
   if (!ctx || ctx.state !== "running") return;
-  const [, key, rate] = SAMPLE_FOR.find(([pattern]) => pattern.test(name)) ?? [];
+  const [key, rate] = SAMPLE_FOR[cue] ?? [];
   const buffer = key && samples[key];
   if (buffer) {
     const src = ctx.createBufferSource();
     src.buffer = buffer;
-    if (rate) src.playbackRate.value = rate(name);
+    if (rate) src.playbackRate.value = rate(level);
     src.connect(fxBus);
     src.start();
     return;
   }
-  const recipe = RECIPES.find(([pattern]) => pattern.test(name));
-  recipe?.[1](ctx, fxBus, ctx.currentTime + 0.01, name);
+  RECIPES[cue](ctx, fxBus, ctx.currentTime + 0.01, level);
 }
 
-type Recipe = (c: AudioContext, out: AudioNode, t: number, name: string) => void;
+type Recipe = (c: AudioContext, out: AudioNode, t: number, level: number) => void;
 
 function tone(c: AudioContext, out: AudioNode, t: number, opts: {
   type?: OscillatorType; from: number; to?: number; len: number; level?: number; attack?: number;
@@ -459,104 +466,104 @@ function applause(c: AudioContext, out: AudioNode, t: number, seconds: number) {
   }
 }
 
-/** First match wins; patterns follow the effect names used in the game's code. */
-const RECIPES: [RegExp, Recipe][] = [
-  [/silencio/, () => {}],
+/** The synthesized version of every cue; «…» is the old Spanish effect name. */
+const RECIPES: Record<Cue, Recipe> = {
+  silence: () => {}, // «silencio…»
   // Fireworks (UI-9)
-  [/cohete/, (c, o, t) => {
+  rocket: (c, o, t) => { // «cohete»
     tone(c, o, t, { from: 600, to: 2400, len: 0.9, level: 0.05, attack: 0.1 });
     noise(c, o, t, { type: "highpass", from: 3000, len: 0.9, level: 0.08, attack: 0.1 });
-  }],
-  [/estallido/, (c, o, t) => {
+  },
+  burst: (c, o, t) => { // «estallido»
     tone(c, o, t, { from: 120, to: 40, len: 0.5, level: 0.5 });
     noise(c, o, t, { type: "lowpass", from: 2500, to: 300, len: 0.6, level: 0.45 });
     for (let i = 0; i < 10; i++) noise(c, o, t + 0.25 + Math.random() * 0.8, { type: "highpass", from: 4000, len: 0.025, level: 0.12 });
-  }],
-  [/cañón de confeti/, (c, o, t) => {
+  },
+  "confetti-cannon": (c, o, t) => { // «cañón de confeti»
     tone(c, o, t, { from: 300, to: 80, len: 0.15, level: 0.6 });
     noise(c, o, t, { from: 1500, to: 400, len: 0.5, q: 0.8, level: 0.35 });
-  }],
-  [/bengalas/, (c, o, t) => {
+  },
+  sparklers: (c, o, t) => { // «bengalas»
     for (let i = 0; i < 60; i++) noise(c, o, t + Math.random() * 2.4, { type: "highpass", from: 5000, len: 0.02, level: 0.06 });
-  }],
-  [/estrellas/, (c, o, t) => {
+  },
+  stars: (c, o, t) => { // «estrellas»
     [88, 91, 95, 100, 96, 93].forEach((m, i) => tone(c, o, t + i * 0.28, { from: hz(m), len: 0.6, level: 0.06 }));
-  }],
-  [/aplausos/, (c, o, t, n) => applause(c, o, t, n.includes("gran") ? 5 : 3)],
-  [/whoosh|swoosh que sube/, (c, o, t, n) =>
-    noise(c, o, t, { from: n.includes("sube") ? 400 : 2400, to: n.includes("sube") ? 3000 : 300, len: 0.45, q: 2, attack: 0.15 })],
-  [/swoosh|escoba/, (c, o, t) => noise(c, o, t, { from: 3000, to: 500, len: 0.5, q: 1.5, attack: 0.1, level: 0.5 })],
+  },
+  applause: (c, o, t) => applause(c, o, t, 3), // «aplausos»
+  "applause-big": (c, o, t) => applause(c, o, t, 5), // «gran aplausos»
+  whoosh: (c, o, t) => noise(c, o, t, { from: 2400, to: 300, len: 0.45, q: 2, attack: 0.15 }),
+  "swoosh-up": (c, o, t) => noise(c, o, t, { from: 400, to: 3000, len: 0.45, q: 2, attack: 0.15 }), // «swoosh que sube»
+  swoosh: (c, o, t) => noise(c, o, t, { from: 3000, to: 500, len: 0.5, q: 1.5, attack: 0.1, level: 0.5 }), // also «escoba»
   // The chosen envelope tearing open (UI-11): a short run of crackles, rising.
-  [/rasgado/, (c, o, t) => {
+  tear: (c, o, t) => { // «papel rasgado»
     for (let i = 0; i < 5; i++) noise(c, o, t + i * 0.035, { from: 2200 + i * 600, len: 0.06, q: 2, level: 0.32 });
-  }],
-  [/papel/, (c, o, t) => {
+  },
+  paper: (c, o, t) => { // «papel»
     noise(c, o, t, { from: 5000, len: 0.08, q: 3, level: 0.3 });
     noise(c, o, t + 0.07, { from: 3500, len: 0.12, q: 3, level: 0.25 });
-  }],
-  [/listo|hola/, (c, o, t) => notes(c, o, t, [72, 76, 79], 0.09, "triangle", 0.5)],
-  [/boom|golpe/, (c, o, t) => {
+  },
+  ready: (c, o, t) => notes(c, o, t, [72, 76, 79], 0.09, "triangle", 0.5), // «listo», «¡hola!»
+  boom: (c, o, t) => { // also «golpe: respuesta final»
     tone(c, o, t, { from: 140, to: 38, len: 0.6, level: 0.8 });
     noise(c, o, t, { type: "lowpass", from: 900, to: 120, len: 0.35, level: 0.5 });
-  }],
-  [/bloque (\d+)/, (c, o, t, n) => {
-    const level = Number(/bloque (\d+)/.exec(n)?.[1] ?? 1);
+  },
+  block: (c, o, t, level) => { // «bloque n»
     tone(c, o, t, { from: 90 + level * 12, to: 40 + level * 6, len: 0.35, level: 0.7 }); // higher thud, higher tower
     noise(c, o, t, { type: "lowpass", from: 600, len: 0.15, level: 0.3 });
-  }],
-  [/disparo|corcho/, (c, o, t) => {
+  },
+  "cork-pop": (c, o, t) => { // «¡pop! disparo de corcho»
     tone(c, o, t, { from: 700, to: 120, len: 0.08, level: 0.5 });
     noise(c, o, t + 0.03, { from: 2500, len: 0.08, q: 2, level: 0.4 });
-  }],
-  [/pop|carta/, (c, o, t) => tone(c, o, t, { from: 900, to: 300, len: 0.12, level: 0.4 })],
-  [/candado: clunk|candado se cierra/, (c, o, t) => {
+  },
+  pop: (c, o, t) => tone(c, o, t, { from: 900, to: 300, len: 0.12, level: 0.4 }), // «pop: carta elegida»
+  "padlock-close": (c, o, t) => { // «candado se cierra»
     tone(c, o, t, { type: "square", from: 180, to: 90, len: 0.12, level: 0.18 });
     noise(c, o, t, { from: 1800, len: 0.06, q: 4, level: 0.3 });
-  }],
-  [/candado se abre/, (c, o, t) => {
+  },
+  "padlock-open": (c, o, t) => { // «candado se abre»
     noise(c, o, t, { from: 3000, len: 0.04, q: 6, level: 0.3 });
     noise(c, o, t + 0.09, { from: 4200, len: 0.05, q: 6, level: 0.35 });
     tone(c, o, t + 0.1, { from: 1320, len: 0.25, level: 0.12 });
-  }],
-  [/fanfarria/, (c, o, t) => {
+  },
+  fanfare: (c, o, t) => { // «fanfarria»
     notes(c, o, t, [60, 64, 67], 0.11, "sawtooth", 0.3);
     [72, 76, 79].forEach((m) => tone(c, o, t + 0.36, { type: "triangle", from: hz(m), len: 1.1, level: 0.2 }));
-  }],
-  [/trombón|Ups/, (c, o, t) => {
+  },
+  "sad-trombone": (c, o, t) => { // «trombón triste», «¡Ups!»
     [58, 57, 56].forEach((m, i) => tone(c, o, t + i * 0.32, { type: "sawtooth", from: hz(m), len: 0.32, level: 0.16 }));
     tone(c, o, t + 0.96, { type: "sawtooth", from: hz(55), to: hz(53), len: 0.9, level: 0.16 });
-  }],
-  [/rebobinar/, (c, o, t) => {
+  },
+  rewind: (c, o, t) => { // «rebobinar»
     tone(c, o, t, { type: "sawtooth", from: 1200, to: 150, len: 0.5, level: 0.12 });
     noise(c, o, t, { from: 2000, to: 600, len: 0.5, q: 0.7, level: 0.25 });
-  }],
-  [/menú abierto/, (c, o, t) => tone(c, o, t, { from: 500, to: 900, len: 0.12, level: 0.2 })],
-  [/menú cerrado/, (c, o, t) => tone(c, o, t, { from: 900, to: 500, len: 0.12, level: 0.2 })],
-  [/desbloqueado/, (c, o, t) => tone(c, o, t, { from: 880, len: 0.15, level: 0.12 })],
-  [/comodín: preparado/, (c, o, t) => notes(c, o, t, [84, 88], 0.06, "sine", 0.25)],
-  [/comodín: abrir/, (c, o, t) => notes(c, o, t, [76, 81], 0.07, "triangle", 0.3)],
-  [/comodín/, (c, o, t) => {
+  },
+  "menu-open": (c, o, t) => tone(c, o, t, { from: 500, to: 900, len: 0.12, level: 0.2 }),
+  "menu-close": (c, o, t) => tone(c, o, t, { from: 900, to: 500, len: 0.12, level: 0.2 }),
+  unlocked: (c, o, t) => tone(c, o, t, { from: 880, len: 0.15, level: 0.12 }), // «audio desbloqueado»
+  "joker-armed": (c, o, t) => notes(c, o, t, [84, 88], 0.06, "sine", 0.25), // «comodín: preparado»
+  "joker-open": (c, o, t) => notes(c, o, t, [76, 81], 0.07, "triangle", 0.3), // «comodín: abrir»
+  "joker-activate": (c, o, t) => {
     // The activate shimmer: a quick rising sparkle.
     [79, 83, 86, 91, 95].forEach((m, i) => tone(c, o, t + i * 0.05, { from: hz(m), len: 0.3, level: 0.12 }));
-  }],
-  [/silbato/, (c, o, t) => tone(c, o, t, { from: 1800, to: 380, len: 0.8, level: 0.2, attack: 0.05 })],
-  [/sello/, (c, o, t) => {
+  },
+  "whistle-down": (c, o, t) => tone(c, o, t, { from: 1800, to: 380, len: 0.8, level: 0.2, attack: 0.05 }), // «silbato que baja»
+  stamp: (c, o, t) => { // «sello: ¡pum!»
     tone(c, o, t, { from: 160, to: 50, len: 0.3, level: 0.8 });
     noise(c, o, t, { type: "lowpass", from: 1200, len: 0.12, level: 0.5 });
-  }],
-  [/trituradora/, (c, o, t) => {
+  },
+  shredder: (c, o, t) => { // «trituradora»
     noise(c, o, t, { from: 700, len: 1.0, q: 0.8, level: 0.35, attack: 0.05 });
     tone(c, o, t, { type: "sawtooth", from: 55, len: 1.0, level: 0.08, attack: 0.05 });
-  }],
-  [/latido/, (c, o, t) => {
+  },
+  heartbeat: (c, o, t) => { // «mira: latido»
     tone(c, o, t, { from: 70, to: 45, len: 0.18, level: 0.7 });
     tone(c, o, t + 0.22, { from: 60, to: 40, len: 0.18, level: 0.5 });
-  }],
-  [/mira: tic/, (c, o, t) => noise(c, o, t, { type: "highpass", from: 6000, len: 0.03, level: 0.3 })],
-  [/vidrio/, (c, o, t) => {
+  },
+  tick: (c, o, t) => noise(c, o, t, { type: "highpass", from: 6000, len: 0.03, level: 0.3 }), // «mira: tic»
+  "glass-break": (c, o, t) => { // «vidrio roto»
     for (let i = 0; i < 7; i++) {
       tone(c, o, t + i * 0.035, { from: 2200 + Math.random() * 3000, len: 0.18, level: 0.1 });
       noise(c, o, t + i * 0.03, { type: "highpass", from: 5000, len: 0.06, level: 0.2 });
     }
-  }],
-];
+  },
+};
