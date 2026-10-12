@@ -37,12 +37,51 @@ import selection
 DB = selection.STATE_DB
 
 
-class GameError(ValueError):
-    """A request that doesn't fit the game's state; `details` goes to the client."""
+# Error codes (D-57): the client renders player-facing ones in Spanish; English for logs and internal ones.
+ERRORS = {
+    "name_missing": "player name missing",
+    "name_too_long": "name too long (at most {max} letters)",
+    "player_unknown": "no player {name!r}",
+    "no_game": "no game is running",
+    "level_empty": "no questions left for level {level} (difficulty {lo}–{hi})",
+    "supply_short": lambda p: "not enough questions: " + ", ".join(
+        f"level {l['level']} (difficulty {l['lo']}–{l['hi']}): {l['missing']} missing" for l in p["levels"]),
+    "no_cards": "no cards on the table",
+    "card_invalid": "no card {n}",
+    "no_question": "no question to answer",
+    "answer_invalid": "no answer {n}",
+    "purge_short": "without this subcategory there are not enough questions",
+    "refill_empty": "no other question for this level",
+    "skip_not_question": "only a question on screen can be skipped",
+    "hints_used_up": "no hints left",
+    "easier_none": "no easier questions in this subcategory",
+    "category_unknown": "no such subcategory",
+    "category_same": "already in that subcategory",
+    "category_empty": "no questions of that subcategory for this level",
+    "category_none": "no questions of other subcategories for this level",
+    "snipe_last": "only one answer left",
+    "snipe_invalid": "can't aim at that answer",
+    "snipe_no_repeat": "if they hit the right one, there are no questions to repeat the level",
+    "budget_unknown_joker": "unknown joker in the budget",
+    "budget_invalid": "a budget is a count from 0 to 99, or null for unlimited",
+    "joker_unknown": "no joker {joker!r}",
+    "joker_not_question": "jokers are only played on a question",
+    "joker_spent": "no {joker} jokers left",
+    "nothing_to_undo": "nothing to undo",
+}
 
-    def __init__(self, message, details=None):
-        super().__init__(message)
-        self.details = details
+
+class GameError(ValueError):
+    """A request that doesn't fit the game's state: a code from ERRORS with params; `details` goes to the client."""
+
+    def __init__(self, code, params=None, details=None):
+        assert code in ERRORS, code
+        self.code, self.params, self.details = code, params or {}, details
+        text = ERRORS[code]
+        super().__init__(text(self.params) if callable(text) else text.format(**self.params))
+
+    def info(self):
+        return {"code": self.code, "params": self.params}
 
 
 def now():
@@ -103,9 +142,9 @@ def clean_name(name):
     """A player name as typed: trimmed, inner spaces collapsed; GameError if empty or too long."""
     name = " ".join(str(name or "").split())
     if not name:
-        raise GameError("falta el nombre del jugador")
+        raise GameError("name_missing")
     if len(name) > 30:
-        raise GameError("el nombre es demasiado largo (máximo 30 letras)")
+        raise GameError("name_too_long", {"max": 30})
     return name
 
 
@@ -135,7 +174,7 @@ def delete_player(name):
     with connect() as con:
         pid = selection.player_id(con, clean_name(name))
         if pid is None:
-            raise GameError(f"no hay ningún jugador «{name}»")
+            raise GameError("player_unknown", {"name": name})
         con.execute("DELETE FROM burned WHERE player_id = ?", (pid,))
         con.execute("DELETE FROM games WHERE player_id = ?", (pid,))
         con.execute("DELETE FROM players WHERE id = ?", (pid,))
@@ -157,7 +196,7 @@ def running(con):
     """(id, state, player_id) of the running game."""
     game = latest(con)
     if not game or game[1] is not None:
-        raise GameError("no game is running")
+        raise GameError("no_game")
     return game[0], game[2], game[3]
 
 
@@ -191,7 +230,7 @@ def draw(con, pid, state, pool, n=selection.PER_LEVEL, keep=()):
                            category_of=category_of(broad))
     if drawn is None:
         lo, hi = selection.LEVEL_RANGES[state["level"]]
-        raise GameError(f"no quedan preguntas para el nivel {state['level']} (dificultad {lo}–{hi})")
+        raise GameError("level_empty", {"level": state["level"], "lo": lo, "hi": hi})
     state["offered"] += [q["id"] for q in drawn]
     return [q["id"] for q in drawn]
 
@@ -216,9 +255,9 @@ def new_game(pool, player):
     player = clean_name(player)
     report = supply(pool, player)
     if not report["ok"]:
-        short = ", ".join(f"nivel {l['level']} (dificultad {l['range'][0]}–{l['range'][1]}): faltan {l['missing']}"
-                          for l in report["levels"] if l["missing"])
-        raise GameError(f"no hay suficientes preguntas: {short}", report)
+        short = [{"level": l["level"], "lo": l["range"][0], "hi": l["range"][1], "missing": l["missing"]}
+                 for l in report["levels"] if l["missing"]]
+        raise GameError("supply_short", {"levels": short}, report)
     with connect() as con:
         game = latest(con)
         if game and game[1] is None:
@@ -238,9 +277,9 @@ def pick(pool, index):
     with connect() as con:
         gid, state, _ = running(con)
         if state["phase"] != "select":
-            raise GameError("no cards on the table")
+            raise GameError("no_cards")
         if not 0 <= index < len(state["options"]):
-            raise GameError(f"no card {index + 1}")
+            raise GameError("card_invalid", {"n": index + 1})
         q = questions_by_id(pool)[state["options"][index]]
         answers = [q["answer"], *q["wrong_answers"]]
         random.shuffle(answers)
@@ -254,9 +293,9 @@ def answer(pool, index):
     with connect() as con:
         gid, state, pid = running(con)
         if state["phase"] != "question":
-            raise GameError("no question to answer")
+            raise GameError("no_question")
         if not 0 <= index < len(state["answers"]) or index in state["struck"]:
-            raise GameError(f"no answer {index + 1}")
+            raise GameError("answer_invalid", {"n": index + 1})
         q = questions_by_id(pool)[state["current"]]
         before = {**copy.deepcopy(state), "undo": None}
         correct = state["answers"][index] == q["answer"]
@@ -306,8 +345,7 @@ def back_to_select(con, gid, pid, state, pool, outcome, burn_for, purge=False):
     try:
         new = draw(con, pid, state, pool, n=len(removed), keep=keep)
     except GameError:
-        raise GameError("sin este tema no alcanzan las preguntas" if purge
-                        else "no hay otra pregunta para este nivel")
+        raise GameError("purge_short" if purge else "refill_empty") from None
     state["options"] = [new.pop(0) if i in removed else i for i in state["options"]]
     state["phase"] = "select"
     leave_question(state)
@@ -319,7 +357,7 @@ def skip(pool, everyone=False):
     with connect() as con:
         gid, state, pid = running(con)
         if state["phase"] != "question":
-            raise GameError("only a question on screen can be skipped")
+            raise GameError("skip_not_question")
         back_to_select(con, gid, pid, state, pool, "admin_burn" if everyone else "admin_skip",
                        None if everyone else pid)
         save(con, gid, state)
@@ -370,7 +408,7 @@ def swap_in(con, gid, pid, state, pool, new, outcome):
 def play_hint(con, gid, pid, state, pool):
     """«Soplo»: show the next hint."""
     if state["hints_shown"] >= len(questions_by_id(pool)[state["current"]]["hints"]):
-        raise GameError("no quedan pistas")
+        raise GameError("hints_used_up")
     state["hints_shown"] += 1
     state["jokers"].append("hint")
     return {"hint": state["hints_shown"]}
@@ -391,7 +429,7 @@ def play_easier(con, gid, pid, state, pool):
     cands = [q for q in avail if q.get("subcategory") == cur.get("subcategory") and q["difficulty"] < cur["difficulty"]]
     new = replacement(avail, state["level"], cands, lambda q: -q["difficulty"])
     if not new:
-        raise GameError("no hay preguntas más fáciles de este tema")
+        raise GameError("easier_none")
     state["jokers"].append("easier")
     swap_in(con, gid, pid, state, pool, new, "easier")
     return {"from": cur["difficulty"], "to": new["difficulty"]}
@@ -402,14 +440,14 @@ def play_category(con, gid, pid, state, pool, subcategory=None):
     preferring the current difficulty, then ±1 (09)."""
     cur = questions_by_id(pool)[state["current"]]
     if subcategory not in categories.broad_of():
-        raise GameError("ese tema no existe")
+        raise GameError("category_unknown")
     if subcategory == cur.get("subcategory"):
-        raise GameError("ya están en ese tema")
+        raise GameError("category_same")
     avail = available_now(con, pid, state, pool)
     new = replacement(avail, state["level"], category_candidates(avail, state["level"], subcategory),
                       lambda q: abs(q["difficulty"] - cur["difficulty"]))
     if not new:
-        raise GameError("no hay preguntas de ese tema para este nivel")
+        raise GameError("category_empty")
     state["jokers"].append("category")
     swap_in(con, gid, pid, state, pool, new, "category")
     state["swapped_to"] = subcategory
@@ -421,9 +459,9 @@ def play_snipe(con, gid, pid, state, pool, index=None):
     burns the question and repeats the level with 4 fresh cards (D-27)."""
     left = len(state["answers"]) - len(state["struck"])
     if left <= 1:
-        raise GameError("solo queda una respuesta")
+        raise GameError("snipe_last")
     if not isinstance(index, int) or not 0 <= index < len(state["answers"]) or index in state["struck"]:
-        raise GameError("no se puede apuntar a esa respuesta")
+        raise GameError("snipe_invalid")
     q = questions_by_id(pool)[state["current"]]
     state["jokers"].append("snipe")
     correct_index = state["answers"].index(q["answer"])
@@ -434,7 +472,7 @@ def play_snipe(con, gid, pid, state, pool, index=None):
     try:
         state["options"] = draw(con, pid, state, pool)
     except GameError:
-        raise GameError("si le dan a la correcta, no quedan preguntas para repetir el nivel")
+        raise GameError("snipe_no_repeat") from None
     state.update(phase="select", repeat=True)
     leave_question(state)
     return {"outcome": "hit", "index": index, "correct_index": correct_index}
@@ -447,8 +485,6 @@ JOKERS = {"hint": play_hint, "skip": play_skip, "easier": play_easier, "category
 UNLIMITED = {name: None for name in JOKERS}
 # «Como las cartas»: the printed card set (JK-11), for the overlay's preset (MD-4).
 CARDS = {"hint": 4, "skip": 2, "easier": 2, "category": 2, "snipe": 2}
-SPENT = {"hint": "ya no les quedan Soplos", "skip": "ya no les quedan Pasos", "easier": "ya no les quedan Bájales",
-         "category": "ya no les quedan Cambiazos", "snipe": "ya no les quedan Francotiradores"}
 
 
 def jokers_left(state):
@@ -461,10 +497,10 @@ def jokers_left(state):
 def set_jokers(budget):
     """Set the running game's joker budget (MD-4): {joker: count or null}; missing jokers stay as they are."""
     if not isinstance(budget, dict) or not set(budget) <= set(JOKERS):
-        raise GameError("unknown joker in the budget")
+        raise GameError("budget_unknown_joker")
     for v in budget.values():
         if v is not None and (not isinstance(v, int) or isinstance(v, bool) or not 0 <= v <= 99):
-            raise GameError("a budget is a count from 0 to 99, or null for unlimited")
+            raise GameError("budget_invalid")
     with connect() as con:
         gid, state, _ = running(con)
         state["settings"]["jokers"].update(budget)
@@ -475,26 +511,26 @@ def set_jokers(budget):
 def joker(pool, name, **args):
     """Play a joker on the question on screen; returns what happened (for the client's animation)."""
     if name not in JOKERS:
-        raise GameError(f"no joker {name!r}")
+        raise GameError("joker_unknown", {"joker": name})
     with connect() as con:
         gid, state, pid = running(con)
         if state["phase"] != "question":
-            raise GameError("los comodines solo se juegan en una pregunta")
+            raise GameError("joker_not_question")
         if jokers_left(state)[name] == 0:
-            raise GameError(SPENT[name])
+            raise GameError("joker_spent", {"joker": name})
         event = JOKERS[name](con, gid, pid, state, pool, **args)
         save(con, gid, state)
     return {"joker": name, **event}
 
 
 def trial(con, fn, *args, **kwargs):
-    """Run `fn` without keeping anything: None if it works, else its GameError message."""
+    """Run `fn` without keeping anything: None if it works, else its GameError's {"code", "params"}."""
     con.execute("SAVEPOINT trial")
     try:
         fn(con, *args, **kwargs)
         return None
     except GameError as e:
-        return str(e)
+        return e.info()
     finally:
         con.execute("ROLLBACK TO trial")
         con.execute("RELEASE trial")
@@ -523,11 +559,11 @@ def jokers_view(con, gid, pid, state, pool):
         groups.append({"slug": c["slug"], "name": c["name"], "available": any(s["available"] for s in subs),
                        "subcategories": subs})
     possible = any(g["available"] for g in groups)
-    out["category"] = {"available": possible, "reason": None if possible else "no hay preguntas de otros temas para este nivel",
+    out["category"] = {"available": possible, "reason": None if possible else GameError("category_none").info(),
                        "categories": groups}
     for name, left in jokers_left(state).items():
         if left == 0:
-            out[name].update(available=False, reason=SPENT[name])
+            out[name].update(available=False, reason=GameError("joker_spent", {"joker": name}).info())
     return out
 
 
@@ -536,7 +572,7 @@ def undo():
     with connect() as con:
         game = latest(con)
         if not game or game[1] == "abandoned" or not game[2].get("undo"):
-            raise GameError("nothing to undo")
+            raise GameError("nothing_to_undo")
         gid, _, state, pid = game
         con.execute("DELETE FROM burned WHERE question_id = ? AND player_id IS ? AND game_id = ?",
                     (state["last"]["question_id"], pid, gid))

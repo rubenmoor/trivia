@@ -1,10 +1,26 @@
-import type { Category, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
+import type { Category, ErrorInfo, Game, JokerBudget, JokerEvent, JokerName, Player, Supply } from "./types";
+
+/** A refused request (D-57): `code` and `params` for errorText(), `message` in English; `supply` is set
+ * when the pool can't fill a new game (GF-5). */
+export class GameError extends Error implements ErrorInfo {
+  constructor(
+    readonly code: string,
+    readonly params: ErrorInfo["params"],
+    message: string,
+    readonly supply: Supply | null,
+  ) {
+    super(message);
+  }
+}
+
+/** The error of a failed response: GameError if the body has `error`, else a plain Error. */
+function failure(res: Response, body: Record<string, any>): Error {
+  if (typeof body.error !== "string") return new Error(`HTTP ${res.status} ${res.statusText}`);
+  return new GameError(body.error, body.params ?? {}, body.message ?? body.error, body.supply ?? null);
+}
 
 export async function json<T>(res: Response): Promise<T> {
-  if (!res.ok) {
-    const body = await res.json().catch(() => ({}));
-    throw new Error(body.error ?? `HTTP ${res.status} ${res.statusText}`);
-  }
+  if (!res.ok) throw failure(res, await res.json().catch(() => ({})));
   return res.json();
 }
 
@@ -29,13 +45,6 @@ export async function post<T>(url: string, body: unknown): Promise<T> {
       body: JSON.stringify(body),
     }),
   );
-}
-
-/** A refused game action; `supply` is set when the pool can't fill a new game (GF-5). */
-export class GameError extends Error {
-  constructor(message: string, readonly supply: Supply | null) {
-    super(message);
-  }
 }
 
 /** Known players, the most recent first (D-28). */
@@ -90,7 +99,7 @@ export async function playJoker(body: {
     body: JSON.stringify(body),
   });
   const out = await res.json().catch(() => ({}));
-  if (!res.ok) throw new GameError(out.error ?? `HTTP ${res.status}`, null);
+  if (!res.ok) throw failure(res, out);
   return out;
 }
 
@@ -105,6 +114,6 @@ export async function gameAction(
     body: JSON.stringify(body),
   });
   const out = await res.json().catch(() => ({}));
-  if (!res.ok) throw new GameError(out.error ?? `HTTP ${res.status}`, out.supply ?? null);
+  if (!res.ok) throw failure(res, out);
   return out.game;
 }

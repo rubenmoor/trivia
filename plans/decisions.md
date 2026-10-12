@@ -449,3 +449,10 @@ Template:
 - Decision: `qgen batch` runs an independent LLM audit (`prompts/audit.md`, blind to the review) on a seeded sample of the batch; it never changes a status. The gamemaster spot-checks a smaller subset of that sample in the review tool (`/review?batch=…&sample=1`), blind to the LLM verdict until deciding; the results go to `authoring/data/spot-checks.json`. Agreement (both accept or both don't) per batch is the main quality signal. Findings become prompt changes through a pm decision before the next batch; procedure in `authoring/QC.md`.
 - Consequences: `qgen batch` still takes no arguments (D-36); one opus call more per sampled question. Sample size and agreement rate: pm decision 2. Plan 12's exit check reads the spot checks. pm plan 16 (Quality control after every batch) has the tasks.
 - Supersedes / related: D-33, D-36, D-38, D-52, D-53, D-55
+
+## D-57: Server errors are codes; the client renders them
+- Date: 2026-10-11
+- Context: the game server sent Spanish error texts and joker reasons, outside the UI catalog (M3, plan 22).
+- Decision: `GameError(code, params)`; codes in `ERRORS` (`app/server/game.py`) with English templates. Error bodies are `{"error": code, "params", "message": English, "supply"}`; 404/500 are `not_found`/`server_error`. Joker `reason`s are `{"code", "params"}`. The client turns player-facing codes into Spanish (`app/client/src/lib/errors.ts`, later the `es` catalog); internal codes show the English `message`.
+- Consequences: `str(e)` is English (logs). PORT-1 fixtures and PORT-3 carry the same codes; parity compares `error`/`params`. `/api/flags` and authoring errors unchanged.
+- Supersedes / related: D-25; plan 12, plan 21 (LUI-1)

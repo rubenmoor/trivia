@@ -5,6 +5,7 @@
   // progress, after a confirmation (GF-7).
   import { onMount, tick } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
+  import { errorText } from "../lib/errors";
   import type { Player, Supply } from "../lib/types";
   import Icon from "./Icon.svelte";
 
@@ -41,7 +42,7 @@
     try {
       players = await fetchPlayers();
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
     }
     loaded = true;
     if (players.length === 0) input?.focus();
@@ -75,7 +76,7 @@
       error = null;
       ondeleted();
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
     } finally {
       deleting = false;
       doomed = null;

@@ -4,6 +4,7 @@
   // the tray, arming, Paso's choice, Cambiazo's picker, Francotirador's aiming, Soplo's notes.
   import { onMount } from "svelte";
   import { gameAction } from "../lib/api";
+  import { errorText, reasonText } from "../lib/errors";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
   import DifficultyDial from "./DifficultyDial.svelte";
@@ -203,7 +204,7 @@
     } catch (e) {
       submitted = false;
       music(locked !== null ? "submitted" : "question");
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
     }
   }
 
@@ -448,7 +449,7 @@
           disabled={!jokers.skip.purge.available}
         >
           Paso, y fuera el tema «{jokers.skip.purge.subcategory}» <kbd>2</kbd>
-          {#if jokers.skip.purge.reason}<span class="reason">{jokers.skip.purge.reason}</span>{/if}
+          {#if jokers.skip.purge.reason}<span class="reason">{reasonText(jokers.skip.purge.reason)}</span>{/if}
         </button>
         <button class="secondary" onclick={() => (mode = null)}>Cancelar <kbd>Esc</kbd></button>
       </div>

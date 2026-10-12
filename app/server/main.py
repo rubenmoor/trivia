@@ -34,6 +34,7 @@ API:
 Game responses are {"game": ...} (app/server/game.py: never the correct answer before the final answer).
 While a question is on screen, the game has `jokers`: per joker {"available", "reason"} (D-27).
 Every game has `jokers_left`: per joker the uses left, or null = unlimited (MD-1).
+Errors are {"error": code, "params", "message": English, "supply"} (D-57); a joker's `reason` is {"code", "params"}.
 """
 import argparse, json, threading
 from http.server import ThreadingHTTPServer
@@ -46,6 +47,14 @@ import paths
 from http_base import BaseHandler
 
 _lock = threading.Lock()
+
+
+NOT_FOUND = {"error": "not_found", "message": "not found"}
+
+
+def error_body(e):
+    """A GameError on the wire (D-57): code and params for the client, English message for logs."""
+    return {"error": e.code, "params": e.params, "message": str(e), "supply": e.details}
 
 
 def load_pool():
@@ -61,7 +70,7 @@ class Handler(BaseHandler):
             try:
                 return self.send_json(200, {"game": game.view(pool), "supply": game.supply(pool, player)})
             except game.GameError as e:
-                return self.send_json(400, {"error": str(e)})
+                return self.send_json(400, error_body(e))
         if url.path == "/api/players":
             return self.send_json(200, game.players())
         if url.path == "/api/categories":
@@ -83,7 +92,7 @@ class Handler(BaseHandler):
                    "joker": lambda pool: game.joker(pool, str(body.get("joker")), **{
                        k: body[k] for k in ("purge", "subcategory", "index") if k in body})}
         if action not in actions:
-            return self.send_json(404, {"error": "not found"})
+            return self.send_json(404, NOT_FOUND)
         try:
             with _lock:
                 pool = load_pool()["questions"]
@@ -93,9 +102,9 @@ class Handler(BaseHandler):
                     out["event"] = result
                 return self.send_json(200, out)
         except game.GameError as e:
-            return self.send_json(409, {"error": str(e), "supply": e.details})
+            return self.send_json(409, error_body(e))
         except Exception as e:  # noqa: BLE001 — the TV always gets an answer
-            return self.send_json(500, {"error": f"server error: {type(e).__name__}: {e}"})
+            return self.send_json(500, {"error": "server_error", "message": f"server error: {type(e).__name__}: {e}"})
 
     def do_POST(self):
         parts = urlparse(self.path).path.strip("/").split("/")
@@ -108,7 +117,7 @@ class Handler(BaseHandler):
                     game.delete_player(body.get("name"))
                 return self.send_json(200, game.players())
             except game.GameError as e:
-                return self.send_json(409, {"error": str(e)})
+                return self.send_json(409, error_body(e))
         if parts == ["api", "flags"]:
             body = self.read_body()
             try:
@@ -117,7 +126,7 @@ class Handler(BaseHandler):
                                                               body.get("player")))
             except ValueError as e:
                 return self.send_json(400, {"error": str(e)})
-        return self.send_json(404, {"error": "not found"})
+        return self.send_json(404, NOT_FOUND)
 
 
 def main():

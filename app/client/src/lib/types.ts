@@ -48,10 +48,16 @@ export type JokerName = "hint" | "skip" | "easier" | "category" | "snipe";
 /** A count per joker; null = unlimited (13-game-modes.md, MD-1). */
 export type JokerBudget = Record<JokerName, number | null>;
 
+/** A server error code with its params (D-57); lib/errors.ts renders it. */
+export interface ErrorInfo {
+  code: string;
+  params: Record<string, unknown>;
+}
+
 export interface JokerState {
   available: boolean;
-  /** Why it can't be played right now (Spanish, shown on the TV). */
-  reason: string | null;
+  /** Why it can't be played right now; reasonText() renders it. */
+  reason: ErrorInfo | null;
 }
 
 export interface Jokers {

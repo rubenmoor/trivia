@@ -9,7 +9,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `app/server/` | Game server, Python standard library only: `main.py` (static files and game API), `game.py` (game rules, the referee), `selection.py` (question selection), `media_cache.py` (media cache, downloads on a miss), `categories.py`, `paths.py`, `http_base.py` |
 | `app/client/` | Game UI: Svelte 5 + Vite + TypeScript, built to `app/client/dist/` |
 | `app/client/src/game/` | The game screens and their parts (stage, question, jokers, tower, fireworks, sound, copy) |
-| `app/client/src/lib/` | API client and types |
+| `app/client/src/lib/` | API client and types; `errors.ts`: server error codes → Spanish (D-57) |
 | `app/client/public/` | Fonts and audio |
 | `app/data/categories.json` | The `base` bundle's 23 broad categories and their 113 subcategories (D-19, D-43) |
 | `app/data/age-groups.json` | Age groups and their windows on the shared difficulty scale 1–15 (D-38) |

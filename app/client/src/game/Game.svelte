@@ -4,6 +4,7 @@
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onMount } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { errorText } from "../lib/errors";
   import type { Game, JokerBudget, JokerEvent, Supply } from "../lib/types";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
@@ -91,7 +92,7 @@
       ({ game, supply } = await fetchGame());
       error = null;
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
     } finally {
       loading = false;
     }
@@ -136,7 +137,7 @@
       error = null;
       return next;
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
       if (e instanceof GameError && e.supply) supply = e.supply;
       return undefined;
     } finally {
@@ -157,7 +158,7 @@
       error = null;
       return res;
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
       return null;
     }
   }
@@ -292,7 +293,7 @@
       sfx(flagged.has(id) ? "menú abierto" : "menú cerrado");
       error = null;
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = errorText(e);
     }
   }
 

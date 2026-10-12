@@ -17,6 +17,7 @@
 
 <script lang="ts">
   import type { JokerBudget, Jokers } from "../lib/types";
+  import { reasonText } from "../lib/errors";
   import Icon from "./Icon.svelte";
 
   let {
@@ -77,7 +78,7 @@
           <button class="bubble arm glass-strong" onclick={() => onpress?.(t.name)}>¿Usar {t.label}? <kbd>Enter</kbd></button>
         {:else}
           <span class="bubble name glass-strong">
-            {t.label}{#if off && state?.reason}<span class="reason">{state.reason}</span>{/if}
+            {t.label}{#if off && state?.reason}<span class="reason">{reasonText(state.reason)}</span>{/if}
           </span>
         {/if}
       {/if}

@@ -3198,7 +3198,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Mark LUI-1 `[x]` in `plans/15a-ui-translation.md`; `plans/project.md` (M3: part 1 done).
 
 Done when: the comparison shows no difference; plans updated; temp files and worktree gone.', '2026-10-12T00:14:30Z', NULL, 86);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (98, 22, 'Server errors as codes: server + client wiring, interim Spanish map', 'work', 'open', NULL, NULL, 'Part 2 of M3, task 1 of plan 22 (see the plan for the design and the full code table). Runs at 710, before PORT-1''s fixture tasks (700), so fixtures record codes.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (98, 22, 'Server errors as codes: server + client wiring, interim Spanish map', 'work', 'done', NULL, '2026-10-11, app/server/game.py, app/server/main.py, app/client/src/lib/{api,types,errors}.ts, Game/JokerTray/Question/Player.svelte, D-57, plans/12-client-engine.md, directory.md; 28 codes checked over HTTP, Spanish word for word; no PORT-1 fixtures yet; ErrorInfo.params is Record<string, unknown> (supply_short carries a list)', 'Part 2 of M3, task 1 of plan 22 (see the plan for the design and the full code table). Runs at 710, before PORT-1''s fixture tasks (700), so fixtures record codes.
 
 - `app/server/game.py`:
   - `GameError(code, params=None, details=None)`; `ERRORS = {code: English template}`; `str(e)` = filled English text; assert unknown code in `__init__`.
@@ -3216,7 +3216,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Done when:
 - Throw-away script hits every code over HTTP against a temp `TRIVIA_STATE`, prints code, params, message and the client''s Spanish text next to the old text; they match word for word. Delete the script after.
-- `npm run check`, `npm run build` pass; `trivia` starts; no visible change in Spanish; no new dependencies.', '2026-10-12T00:15:00Z', NULL, 87);
+- `npm run check`, `npm run build` pass; `trivia` starts; no visible change in Spanish; no new dependencies.', '2026-10-12T00:15:00Z', '2026-10-12T01:43:42Z', 87);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (99, 22, 'Server error texts into the es catalog', 'work', 'open', 490, NULL, 'Task 2 of plan 22. Priority 490: runs after plan 21''s tasks (LUI-1, 500), which create `app/client/src/lib/i18n.ts`, `locales/es.ts` and `check:literals`, and reserve the `error` namespace. If they don''t exist yet, stop and say so.
 
 - `es.ts`: `error.<code>` keys for every player-facing code from `lib/errors.ts`, incl. `error.joker_spent.<id>` per joker and `error.supply_level`; texts verbatim.
@@ -4618,6 +4618,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (100, 40, '2026-10-12T01:28:28Z', '2026-10-12T01:31:18Z', 'done', NULL, 0, '6d3039b1ebffb3d039d3843d05f8bf04edbe2f45', 'claude-opus-5-5[1m]', '6bf25820-4627-45d9-88ef-f2a90e9119eb', 32, 50, 14516, 1250925, 51211, 0.950393, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (101, 273, '2026-10-12T01:31:18Z', '2026-10-12T01:32:00Z', 'done', NULL, 0, 'd1c6c85e8941782cf678ae98da860c2269b66b93', 'claude-opus-5-5[1m]', 'aa9e3408-90ab-4404-a02e-85715f29a60b', 9, 18, 3903, 296965, 29304, 0.371957, 80113);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (102, 274, '2026-10-12T01:32:00Z', '2026-10-12T01:40:04Z', 'done', NULL, 0, '22e3c606c10eaa85934bda165e2f23ebd000f320', 'claude-opus-5-5[1m]', '57fa7b83-e1a9-4c43-b7d8-f26de972c29f', 48, 78, 20869, 2723785, 87667, 1.6637850000000003, 80113);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (103, 98, '2026-10-12T01:40:04Z', '2026-10-12T01:43:52Z', 'done', NULL, 0, 'eda6cf1f3297345e9c9a5799746adedcf86b886d', 'claude-opus-5-5[1m]', 'ded98f99-0eb8-4d46-8ebe-28f69ddcbfa0', 31, 60, 21359, 1705718, 65605, 1.2934036, 80113);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
