@@ -221,7 +221,96 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 - Shipped question pools (`app/data/`): `pool.json` (es); `pool.en.json`, `pool.de.json` missing on 2026-10-13. A language without its pool can't be ticked as a launch language (precondition "content target").
 
 ### Announcement texts
-Per language, written by plan 95 task 2 (`task 707`); posted by the gamemaster on launch day.
+Per language, written by plan 95 task 2 (`task 707`, 2026-10-13); posted by the gamemaster on launch day (Community → Events & Announcements, one text per Steam language). Workers never post.
+- Placeholders: `<n_es>`, `<n_en>`, `<n_de>` = questions per language from `qgen report` (filled by `task 708: Release candidate v1.0.0`); `<thread>` = the pinned report thread's title per language (ST-5, `task 701`; decision 93 pending: if it picks e-mail over a thread, the report paragraph changes with it).
+- Facts as of 2026-10-13: launch modes = gamemaster mode and «Solo o en grupo» (plan 13; multiplayer later, milestone 11 out of scope); names per D-50 (German: no localized name); UI words from `app/client/src/locales/`; AI wording from `plans/17-publishing.md` "AI disclosure" (`17a` has no AI text yet: if PUB-9's final text differs, follow it).
+- No marketing claims, no links outside Steam. Body in Steam's BBCode. Forum name («Discusiones», "Diskussionen"): use Steam's own label in that language.
+- Spanish: Spanish – Latin America gets es-419 as written; Spanish – Spain the same text with the es-ES deltas applied.
+
+#### English
+- Title: `Living Room Trivia is out now`
+- What's new (1.0.0): `First release: gamemaster mode and «Alone or as group», questions in Spanish, English and German.`
+- Body:
+```
+Living Room Trivia is a trivia game for the TV: the family plays together as one team, and 12 right answers in a row win the game. A wrong answer ends it.
+
+Two modes:
+[list]
+[*]Gamemaster mode: one person runs the game for the others: difficulty, number of levels, jokers, video and audio questions; they can skip, replace or undo a question.
+[*]Alone or as group: one player, or everyone as one team, without a gamemaster; pick an age group and play with the standard jokers.
+[/list]
+Five jokers; questions with images, audio and video. Gamepad, keyboard or mouse. Runs offline; no account needed.
+
+Languages (interface and questions):
+[list]
+[*]Spanish (Latin America and Spain): <n_es> questions
+[*]English: <n_en> questions
+[*]German: <n_de> questions
+[/list]
+
+Questions, hints and translations were drafted with AI (Claude), fact-checked with web search and reviewed by a person or by a second AI check before they went into the game. Images and sounds are by people and listed in the game's Credits (menu, Esc). Nothing is generated while you play.
+
+A wrong or unclear question? Mark it in the game (flag icon or M), open "Marked questions" in the menu (Esc), press "Copy" and paste the text into the pinned thread "<thread>" in this game's Discussions. No account details needed.
+```
+
+#### Spanish (es-419)
+- Title: `Trivia en Familia ya está disponible`
+- What's new (1.0.0): `Primera versión: Modo anfitrión y «Solo o en grupo», preguntas en español, inglés y alemán.`
+- Body:
+```
+Trivia en Familia es un juego de preguntas para el televisor: la familia juega unida, como un solo equipo, y 12 respuestas correctas seguidas ganan la partida. Una respuesta incorrecta la termina.
+
+Dos modos:
+[list]
+[*]Modo anfitrión: una persona maneja la partida para los demás: dificultad, número de niveles, comodines, preguntas con video y audio; puede saltar, cambiar o deshacer una pregunta.
+[*]Solo o en grupo: una persona sola, o todos como un equipo, sin anfitrión; se elige el grupo de edad y se juega con los comodines estándar.
+[/list]
+Cinco comodines; preguntas con imágenes, audio y video. Control, teclado o mouse. Funciona sin internet; no hace falta cuenta.
+
+Idiomas (interfaz y preguntas):
+[list]
+[*]Español (Latinoamérica y España): <n_es> preguntas
+[*]Inglés: <n_en> preguntas
+[*]Alemán: <n_de> preguntas
+[/list]
+
+Las preguntas, las pistas y las traducciones se redactaron con IA (Claude), se verificaron con búsquedas en la web y las revisó una persona o una segunda revisión con IA antes de entrar al juego. Las imágenes y los sonidos son obra de personas y figuran en los créditos del juego (menú, Esc). Nada se genera mientras juegan.
+
+¿Una pregunta incorrecta o confusa? Márquenla en el juego (icono de bandera o M), abran «Preguntas marcadas» en el menú (Esc), presionen «Copiar» y peguen el texto en el hilo fijado «<thread>» de las Discusiones de este juego. No hace falta ningún dato de la cuenta.
+```
+
+#### Spanish (es-ES deltas)
+Same title, what's new and body, with:
+- `video` → `vídeo` (both places)
+- `Control, teclado o mouse` → `Mando, teclado o ratón`
+- `mientras juegan` → `mientras jugáis`
+- `Márquenla` → `Marcadla`, `abran` → `abrid`, `presionen` → `pulsad`, `peguen` → `pegad`
+
+#### German
+- Title: `Living Room Trivia ist erschienen`
+- What's new (1.0.0): `Erste Version: „Mit Spielleitung“ und „Allein oder in der Gruppe“, Fragen auf Spanisch, Englisch und Deutsch.`
+- Body:
+```
+Living Room Trivia ist ein Quizspiel für den Fernseher: Die Familie spielt zusammen als ein Team, und 12 richtige Antworten in Folge gewinnen das Spiel. Eine falsche Antwort beendet es.
+
+Zwei Modi:
+[list]
+[*]Mit Spielleitung: Eine Person leitet das Spiel für die anderen: Schwierigkeit, Anzahl der Stufen, Joker, Video- und Audiofragen; sie kann eine Frage überspringen, austauschen oder zurücknehmen.
+[*]Allein oder in der Gruppe: eine Person allein oder alle als ein Team, ohne Spielleitung; Altersgruppe wählen und mit den Standard-Jokern spielen.
+[/list]
+Fünf Joker; Fragen mit Bildern, Audio und Video. Gamepad, Tastatur oder Maus. Läuft offline; kein Konto nötig.
+
+Sprachen (Oberfläche und Fragen):
+[list]
+[*]Spanisch (Lateinamerika und Spanien): <n_es> Fragen
+[*]Englisch: <n_en> Fragen
+[*]Deutsch: <n_de> Fragen
+[/list]
+
+Fragen, Hinweise und Übersetzungen wurden mit KI (Claude) entworfen und per Websuche auf Fakten geprüft; vor der Aufnahme ins Spiel hat sie ein Mensch oder eine zweite KI-Prüfung durchgesehen. Bilder und Klänge stammen von Menschen und stehen im Spiel unter „Mitwirkende“ (Menü, Esc). Beim Spielen wird nichts generiert.
+
+Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M), öffnet „Markierte Fragen“ im Menü (Esc), drückt „Kopieren“ und fügt den Text in den angehefteten Thread „<thread>“ in den Diskussionen dieses Spiels ein. Kontodaten sind nicht nötig.
+```
 
 ### First week
 - Gamemaster daily: Community Hub discussions (every report thread) and the store reviews.
