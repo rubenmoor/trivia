@@ -23,7 +23,8 @@ def level_problems(ag):
         errors += [f"app/data/age-groups.json: {g['id']}: level {i} {r} not inside window {wlo}–{whi}" for i, r in bad]
         if not bad:
             want = level_weights(g["window"], levels)
-            if g.get("level_weights") != want:
+            lw = g.get("level_weights")
+            if not isinstance(lw, dict) or list(lw.items()) != list(want.items()):  # key order too, like the engine
                 errors.append(f"app/data/age-groups.json: {g['id']}: level_weights must be {want}")
     if len(set(ids)) != len(ids):
         errors.append("app/data/age-groups.json: duplicate group id")

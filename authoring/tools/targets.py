@@ -7,6 +7,8 @@ import categories  # authoring/tools/categories.py
 import translations  # authoring/tools/translations.py (D-81)
 
 NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)
+REL = "authoring/data/targets.json"  # in messages
+MIN_YIELD = 0.1  # floor of a locale's yield: a 0 % pilot asks 10× its deficit, not ∞
 
 
 def load_all():
@@ -32,14 +34,14 @@ def quality_problems():
     t = load_quality()
     if t is None:
         return []
-    rel, out = "authoring/data/targets.json", []
+    out = []
     if set(t) != {"spot_check_size", "min_agreement"}:
-        out.append(f"{rel}: quality: keys must be spot_check_size and min_agreement")
+        out.append(f"{REL}: quality: keys must be spot_check_size and min_agreement")
     n, rate = t.get("spot_check_size"), t.get("min_agreement")
     if not isinstance(n, int) or isinstance(n, bool) or n < 1:
-        out.append(f"{rel}: quality: spot_check_size must be an integer ≥ 1")
+        out.append(f"{REL}: quality: spot_check_size must be an integer ≥ 1")
     if not isinstance(rate, (int, float)) or isinstance(rate, bool) or not 0 < rate <= 1:
-        out.append(f"{rel}: quality: min_agreement must be a fraction in (0, 1]")
+        out.append(f"{REL}: quality: min_agreement must be a fraction in (0, 1]")
     return out
 
 
@@ -51,14 +53,13 @@ def load_batch_health():
 
 def health_problems(metrics):
     """Errors in targets.json's "batch_health": known metric names, only numeric min/max."""
-    rel = "authoring/data/targets.json"
     out = []
     for k, v in (load_batch_health() or {}).items():
         if k not in metrics:
-            out.append(f"{rel}: batch_health: unknown metric {k!r}")
+            out.append(f"{REL}: batch_health: unknown metric {k!r}")
         elif not isinstance(v, dict) or not v or set(v) - {"min", "max"} \
                 or not all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in v.values()):
-            out.append(f"{rel}: batch_health: {k}: must be {{\"min\": n, \"max\": n}} (one or both)")
+            out.append(f"{REL}: batch_health: {k}: must be {{\"min\": n, \"max\": n}} (one or both)")
     return out
 
 
@@ -93,7 +94,7 @@ def source_supply(pool_questions, bundle="base"):
         untranslated = Counter(q["difficulty"] for q in pool_questions
                                if q["status"] == "approved" and q.get("bundle") == bundle and translations.translatable(q)
                                and (q["id"] not in ts or translations.is_stale(ts[q["id"]], q)))
-        need = {lvl: math.ceil(n / max(y, 0.1)) for lvl, n in (deficits(pool_questions, bundle, l) or {}).items()}
+        need = {lvl: math.ceil(n / max(y, MIN_YIELD)) for lvl, n in (deficits(pool_questions, bundle, l) or {}).items()}
         out[l] = {"yield": y, "need": need, "untranslated": dict(untranslated)}
     return out
 
@@ -127,25 +128,24 @@ def category_shares(bundle):
 
 def problems(scale, bundle_ids):
     """Errors in targets.json: bundles known, levels = scale, values ≥ 0, sum = total."""
-    rel = "authoring/data/targets.json"
     out = []
     lo, hi = scale
     for b, t in load_all().items():
         if b in NOT_BUNDLES:
             continue
         if b not in bundle_ids:
-            out.append(f"{rel}: {b!r} is not a bundle")
+            out.append(f"{REL}: {b!r} is not a bundle")
             continue
         total, diff = t.get("total"), t.get("difficulty") or {}
         levels = {str(l) for l in range(lo, hi + 1)}
         if set(diff) != levels:
             missing, extra = sorted(levels - set(diff), key=int), sorted(set(diff) - levels)
-            out.append(f"{rel}: {b}: levels must be {lo}–{hi}"
+            out.append(f"{REL}: {b}: levels must be {lo}–{hi}"
                        + (f"; missing {', '.join(missing)}" if missing else "")
                        + (f"; extra {', '.join(extra)}" if extra else ""))
-        bad = [k for k, v in diff.items() if not isinstance(v, int) or v < 0]
+        bad = [k for k, v in diff.items() if not isinstance(v, int) or isinstance(v, bool) or v < 0]
         if bad:
-            out.append(f"{rel}: {b}: targets must be integers ≥ 0: {', '.join(bad)}")
-        elif not isinstance(total, int) or sum(diff.values()) != total:
-            out.append(f"{rel}: {b}: difficulty targets sum to {sum(diff.values())}, total is {total}")
+            out.append(f"{REL}: {b}: targets must be integers ≥ 0: {', '.join(bad)}")
+        elif not isinstance(total, int) or isinstance(total, bool) or sum(diff.values()) != total:
+            out.append(f"{REL}: {b}: difficulty targets sum to {sum(diff.values())}, total is {total}")
     return out

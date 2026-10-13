@@ -1,6 +1,6 @@
 """Batch health (plan 15, D-55): metrics per `qgen batch` run from work/<run>/ and the pool.
 Shared by `qgen batch-report`, `qgen report --batches` and plan 12's exit check. No LLM."""
-import datetime, json, re
+import datetime, re
 from collections import Counter
 
 from layout import HEALTH_ACKS, REPORTS, SOURCE_POOL as POOL, WORK
@@ -11,8 +11,7 @@ import qgen  # authoring/tools/qgen.py: work files, calibration, problems
 HIGH = range(11, 16)  # the levels plan 13 aims at
 
 
-def load(path, default=None):
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+load = qgen.load_json  # names the file when its JSON is broken
 
 
 def batch_runs():
@@ -119,11 +118,11 @@ def batch_health(run, pool=None):
     h["media share"] = rate(sum(q["axes"].get("stimulus") != "none" for q in with_axes), len(with_axes))
     fun = [r["fun"] for r in ratings.values() if "fun" in r]
     h["mean fun"] = sum(fun) / len(fun) if fun else None
-    costs = [line.split("\t")[1] for line in (d / "costs.log").read_text().splitlines()
-             if line.count("\t") == 1] if (d / "costs.log").exists() else []
-    dollars = sum(float(c) for c in costs if c not in ("None", ""))
+    log = d / "costs.log"
+    calls = sum(line.count("\t") == 1 for line in log.read_text(encoding="utf-8").splitlines()) if log.exists() else 0
+    dollars = sum(qgen.costs(log))
     h |= {"cost $": dollars, "$ per approved": rate(dollars, len(approved)),
-          "calls": len(costs), "calls per approved": rate(len(costs), len(approved))}
+          "calls": calls, "calls per approved": rate(calls, len(approved))}
     secs = cfg.get("seconds")
     h["wall time h"] = sum(secs.values()) / 3600 if secs else None
     day = datetime.date.fromisoformat
@@ -165,16 +164,16 @@ def acks():
     return load(HEALTH_ACKS, {})
 
 
-def last_done_run():
-    """The newest batch run that `qgen batch` finished (any bundle), or None."""
-    done = [r for r in batch_runs() if (load(WORK / r / "run.json", {}) or {}).get("done")]
+def last_done(runs):
+    """The newest of `runs` that its `qgen batch` finished, or None."""
+    done = [r for r in runs if (load(WORK / r / "run.json", {}) or {}).get("done")]
     return done[-1] if done else None
 
 
 def stop_reason():
-    """Why the next `qgen batch` must stop (D-55), or None: the last done batch fails a threshold
-    and the gamemaster hasn't acked it."""
-    run = last_done_run()
+    """Why the next `qgen batch` must stop (D-55), or None: the last done batch (any bundle) fails a
+    threshold and the gamemaster hasn't acked it."""
+    run = last_done(batch_runs())
     if run is None or run in acks(): return None
     bad = failures(run)
     if not bad: return None
@@ -202,12 +201,9 @@ def bound_text(key, b):
     return f"≥ {fmt(key, b['min'])}" if "min" in b else f"≤ {fmt(key, b['max'])}"
 
 
-def table(runs, pool=None):
-    """Markdown table: one row per metric, one column per run; ✓/✗ against the thresholds."""
-    if not runs: return ["No batch yet."]
-    pool = pool if pool is not None else load(POOL)["questions"]
-    cols = [batch_health(r, pool) for r in runs]
-    t, acked = thresholds() or {}, acks()
+def metric_table(runs, cols, t, verdict):
+    """Markdown table: one row per metric of `cols`, one column per run; ✓/✗ against `t`, then a
+    «health» row of verdict(run, col) when there are thresholds."""
     mark = {True: " ✓", False: " ✗", None: ""}
     lines = ["| metric | threshold | " + " | ".join(runs) + " |", "|---|---|" + "---:|" * len(runs)]
     for key in cols[0]:
@@ -215,9 +211,18 @@ def table(runs, pool=None):
         lines.append(f"| {key} | {bound_text(key, b)} | "
                      + " | ".join(fmt(key, c[key]) + (mark[passes(c[key], b)] if b else "") for c in cols) + " |")
     if t:
-        verdict = lambda r, c: ("✓ pass" if not failures(r, h=c) else "✗ fail, acked" if r in acked else "✗ fail")
         lines.append("| **health** | | " + " | ".join(verdict(r, c) for r, c in zip(runs, cols)) + " |")
     return lines
+
+
+def table(runs, pool=None):
+    """Batch health of `runs` as a metric table."""
+    if not runs: return ["No batch yet."]
+    pool = pool if pool is not None else load(POOL)["questions"]
+    cols = [batch_health(r, pool) for r in runs]
+    t, acked = thresholds() or {}, acks()
+    return metric_table(runs, cols, t, lambda r, c: "✓ pass" if not failures(r, h=c)
+                        else "✗ fail, acked" if r in acked else "✗ fail")
 
 
 def ack_lines():
@@ -285,9 +290,8 @@ def translation_failures(run, h=None):
 def translate_stop_reason(locale):
     """Why the next `qgen batch --translate <locale>` must stop, or None: the pilot tr-<locale>-1 until the
     gamemaster's go (plan 66, QT-5), or the last done run fails a threshold, both until `qgen health ack`."""
-    done = [r for r in translation_runs(locale) if (load(WORK / r / "run.json", {}) or {}).get("done")]
-    if not done or done[-1] in acks(): return None
-    run = done[-1]
+    run = last_done(translation_runs(locale))
+    if run is None or run in acks(): return None
     if run == f"tr-{locale}-1":
         return (f"{run} was the pilot of {locale} (QT-5). The gamemaster decides on it (report: "
                 f"authoring/reports/{run}.md) and gives the go with: qgen health ack {run} \"<note>\"")
@@ -301,16 +305,9 @@ def translation_health_section(run):
     """«## Health» of a translation run's report: this run and the two of its locale before it."""
     locale = run[3:].rsplit("-", 1)[0]
     runs = [r for r in translation_runs(locale) if qgen.natural_key(r) < qgen.natural_key(run)][-2:] + [run]
-    cols, t = [translation_health(r) for r in runs], translation_thresholds()
-    mark = {True: " ✓", False: " ✗", None: ""}
-    lines = ["| metric | threshold | " + " | ".join(runs) + " |", "|---|---|" + "---:|" * len(runs)]
-    for key in cols[0]:
-        b = t.get(key)
-        lines.append(f"| {key} | {bound_text(key, b)} | "
-                     + " | ".join(fmt(key, c[key]) + (mark[passes(c[key], b)] if b else "") for c in cols) + " |")
-    if t:
-        lines.append("| **health** | | " + " | ".join("✓ pass" if not translation_failures(r, c) else "✗ fail"
-                                                    for r, c in zip(runs, cols)) + " |")
+    cols = [translation_health(r) for r in runs]
+    lines = metric_table(runs, cols, translation_thresholds(),
+                         lambda r, c: "✓ pass" if not translation_failures(r, c) else "✗ fail")
     return ["## Health", "",
             "Translation run health (plan 66): this run and the two before it of the same locale, ✓/✗ against the "
             "thresholds that apply to translations (`health.py`); audit/review agreement only counts from "
@@ -328,6 +325,7 @@ def deficit_line(bundle="base", pool=None):
 def health_section(run, pool=None):
     """Lines of «## Health» for authoring/reports/<run>.md: this run and the two before it."""
     num = lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0
+    pool = pool if pool is not None else load(POOL)["questions"]
     runs = [r for r in batch_runs() if num(r) < num(run)][-2:] + [run]
     return ["## Health", "",
             "Batch health (plan 15): this batch and the two before it, ✓/✗ against the thresholds in "
@@ -339,6 +337,7 @@ def health_section(run, pool=None):
 def write_batches_md(pool=None):
     """authoring/reports/batches.md: every batch from batch-4 side by side."""
     runs = batch_runs()
+    pool = pool if pool is not None else load(POOL)["questions"]
     lines = ["# Batches", "",
              "Batch health of every `qgen batch` run from batch-4 on (plan 15), regenerated by `qgen batch-report`. "
              "Generated file: don't edit by hand. Needs-work counts are `record`'s decisions, before rework and "
