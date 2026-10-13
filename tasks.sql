@@ -132,7 +132,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
  cf. those past plans for reference:
 
  Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (2, 'Game engine in TypeScript', 'open', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (2, 'Game engine in TypeScript', 'implemented', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
 
 ## Outcome
 - Scenario recorder for the Python referee; fixtures committed (PORT-1).
@@ -153,7 +153,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - The family plays a test night on the TS engine.
 - `trivia` serves static files plus `/api/save` only.
 
-Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', NULL);
+Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', '2026-10-13T03:56:22Z');
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (3, 'UI strings in a catalog', 'open', 'Every on-screen string comes from a catalog, with no visible change. This is the groundwork for translations. Bundles (the other half of the old M9) are done in the pipeline; only the gamemaster''s check of the `colombia` proposals is left.
 
 ## Outcome
