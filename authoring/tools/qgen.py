@@ -250,6 +250,12 @@ def parallel(fn, items, jobs, label="items", unit="items"):
     return errors
 
 
+def failed(msg):
+    """A step's own error (not from parallel()): printed here, returned as the step's errors."""
+    print(f"  {msg}", file=sys.stderr)
+    return [RuntimeError(msg)]
+
+
 class UsageLimit(RuntimeError):
     """Claude reported a usage or session limit: wait for the reset, then rerun."""
 
@@ -2677,10 +2683,7 @@ def cmd_record(args):
         progress.detail(f"  record: {q['id']}: {decision}")
     update_pool(changes)
     save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
-    if missing:
-        print(f"  no review yet: {', '.join(missing)}", file=sys.stderr)
-        return [RuntimeError(f"{len(missing)} question(s) without a review")]
-    return []
+    return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
 
 
 def record_translations(args, d):
@@ -2734,10 +2737,7 @@ def record_translations(args, d):
         update_pool({i: lambda q: q.update(translatable=False) for i in confirmed})
     save_json(d / "not-travelling.json", away)
     save_json(d / "recorded.json", snapshot)
-    if missing:
-        print(f"  no review yet: {', '.join(missing)}", file=sys.stderr)
-        return [RuntimeError(f"{len(missing)} question(s) without a review")]
-    return []
+    return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
 
 
 # --- audit and back-audit (plan 16, D-56) -------------------------------------
@@ -2877,7 +2877,7 @@ def cmd_audit(args):
         sys.exit(f"no work/{run}/")
     ids = audit_sample(run)
     if not ids:
-        return [RuntimeError(f"{run}: no recorded LLM review to audit")]
+        return failed(f"{run}: no recorded LLM review to audit")
     return audit_ids(run, ids, args)
 
 
@@ -4121,6 +4121,8 @@ def main():
     if limit:
         print(f"\nStopped: Claude's usage limit ({limit}).\nWait for the reset, then rerun.", file=sys.stderr)
         sys.exit(EXIT_LIMIT)
+    if isinstance(errors, list) and any(isinstance(e, Exception) for e in errors):
+        sys.exit(1)  # each error was printed where it happened
 
 
 if __name__ == "__main__":
