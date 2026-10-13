@@ -129,6 +129,6 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.
 - [ ] SW-10 SteamCMD upload script; build account; beta branch. *Plan: pm plan 89; `trivia-release-check` and `trivia-steam upload --branch beta` (depots windows/linux/content) since 2026-10-13 (tasks 679, 680); first upload: tasks 681, 682.*
 - [ ] SW-11 Achievements: list, icons, Steamworks setup.
-- [ ] SW-12 Steam Deck test and the Deck Verified review.
+- [ ] SW-12 Steam Deck test and the Deck Verified review. *Plan: pm plan 90 (real-Deck checklist on the Steam-installed `beta`, Valve's criteria, Cloud, suspend/resume; review request or S6 note).*
 - [ ] SW-13 Remote Play Together (after IN-6).
 - [ ] SW-14 macOS build (later; developer account and notarization).
