@@ -50,5 +50,5 @@ Done (pm plan 67, RV-24..RV-26). The gamemaster and native speakers review `ques
 - [x] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `authoring/tools/prompts/`. Done 2026-10-12 (pm plan 66, D-87): `qgen batch --translate <locale>`.
 - [x] QT-3 `rate` and `factcheck` per locale. Done 2026-10-12 (pm plan 66, D-87): through `run.json` `locale`.
 - [x] QT-4 Review tool: side-by-side locale view. Done 2026-10-12 (pm plan 67): see "Review tool".
-- [ ] QT-5 Pilot: translate 50 questions to English, review them, and measure the reject rate and cost before the full run.
-- [ ] QT-6 Full translation per launch language: `en`, `de` (D-78); native-speaker spot check. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
+- [ ] QT-5 Pilot: 50 questions per launch language (`tr-en-1`, `tr-de-1`), reject rate and cost, go/no-go pm decision before the full runs. Runs: pm plan 84.
+- [ ] QT-6 Full translation per launch language: `en`, `de` (D-78); native-speaker spot check; runs and QC per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
