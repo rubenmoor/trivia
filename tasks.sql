@@ -517,6 +517,32 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Done when
 - an opted-in session''s data arrives; `qgen report` shows played vs. rated difficulty', '2026-10-13T16:24:16Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (15, 'Modding and Steam Workshop', 'open', 'Players mod the game, from question bundles to full conversions, and share mods on the Steam Workshop. Part of the launch: milestone 11 waits for it. We make modding easy by shipping readable code and loading mods as file overlays; what mods do is up to the modders.
+
+## Outcome
+- Readable build: the client builds without hashes, one output file per source module (Vite/Rollup `preserveModules`), unminified, with source maps; a mod can replace any single module by its path
+- Mod format: a folder with `mod.json` (id, name, description, version, game version it was made for, languages) plus any files
+- Overlay loading: the shell''s `app://` resolver serves enabled mods'' folders before our client, in load order; a mod''s `index.html` makes it a full conversion
+  - sources: subscribed Workshop items (`ISteamUGC`: subscribed items and install folders) and a local `mods/` folder for development
+- Code add-ons: our `index.html` loads `mods.js`, which imports each enabled mod''s entry script; mods get `window.trivia` (engine, catalogs, screens) to patch; no stability promise, our updates may break mods
+- Page only: mods run in the sandboxed page; no mod code in the main process, ever (it has full access to the player''s PC, and Workshop items update silently); what mods need natively is added to the preload bridge on request
+- Mods screen: list, on/off, load order; start without mods after a crashed start; a one-time notice that mods run code
+- Player bundles: our bundle format documented; a template and an AI prompt so players make bundles with their own AI; player bundles show in the bundle selector, marked as player-made
+- Publishing: a command (and later maybe an in-game button) uploads a mod folder as a Workshop item and updates it
+- Docs: modding guide (format, overlay rules, `window.trivia`, examples: a bundle, a CSS theme, a rules tweak, a minimal full conversion), linked from the store page
+- Optional: split `Game.svelte` and `Question.svelte` into smaller modules (code review part 5 candidates)
+
+## Constraints
+- Our own bundles and content use the same format and loader: no second path
+- Player content never enters our pool or our seen counts; question reports (milestone 11) only for our questions
+- Workshop needs a valid Steam user (decision 111)
+
+## Open, for pm decisions
+- achievements in games with mods on: allowed or off
+
+## Done when
+- A bundle mod, a CSS theme mod, a code add-on and a minimal full conversion each load from `mods/` and from the Workshop on a second Steam account
+- The modding guide is linked on the store page', '2026-10-13T16:55:00Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
 
@@ -5229,6 +5255,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Out of scope
 - Store page texts (LUI-6, S5); question translations (plans 66, 84); a wording lint; languages beyond the four catalogs.', '2026-10-13T15:41:11Z', 796);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (101, 14, 'masterplan', 1000, 'tbd.', '2026-10-13T16:24:16Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (102, 15, 'masterplan', 1000, 'tbd.', '2026-10-13T16:55:00Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -18099,6 +18126,9 @@ leave it as it is if it still fits. An edit queues the revision of the plans bel
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (833, 101, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 101, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-13T16:24:16Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (834, 102, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 102, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-13T16:55:00Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
