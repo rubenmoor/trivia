@@ -24,7 +24,12 @@
   onMount(async () => {
     try {
       const l = await fetchLanguage();
-      const supply = l.questions.length > 1 ? await localeSupply() : {};
+      let supply: Awaited<ReturnType<typeof localeSupply>> = {};
+      try {
+        if (l.questions.length > 1) supply = await localeSupply();
+      } catch (e) {
+        console.warn("locale supply:", e); // a broken pool leaves `es` only, not a screen without options
+      }
       playable = l.questions.filter((q) => q === "es" || supply[q]?.ok);
       options = l.ui;
       current = l.language.ui;
