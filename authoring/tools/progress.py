@@ -72,12 +72,9 @@ class _Stream:
         self.real = real
 
     def write(self, s):
-        global _drawn, _line_start
+        global _line_start
         with _lock:
-            if _drawn:
-                _err.write("\r\033[K")
-                _err.flush()
-                _drawn = False
+            _clear()
             n = self.real.write(s)
             self.real.flush()
             if s:

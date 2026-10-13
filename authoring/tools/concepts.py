@@ -96,7 +96,12 @@ def path(sub):
 
 def load(sub):
     p = path(sub)
-    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+    if not p.exists():
+        return None
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:  # name the file, as qgen.load_json (circular import)
+        raise json.JSONDecodeError(f"{p}: {e.msg}", e.doc, e.pos) from None
 
 
 def save(sub, data):

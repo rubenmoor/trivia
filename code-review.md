@@ -1313,6 +1313,18 @@ Plan 80 reviews `authoring/tools/` minus `qgen.py`, `categories.py` and `prompts
 | `authoring/tools/age_groups.py` `level_problems` | compared `level_weights` order-blind; the engine's `parseAgeGroups` compares `JSON.stringify` (key order counts): a reordered file passed `qgen validate` but broke the game at load. Now items in order | bug | low | fixed (task 567) |
 | `authoring/tools/age_groups.py` `level_problems` | a group without `id`/`window` → `KeyError` traceback; the engine reports its levels as outside the window | practice | low | won't fix: hand-edited file, the traceback names the key |
 | `authoring/tools/age_groups.py` ↔ `app/client/src/engine/pool.ts` | `level_weights`/`level_problems` port `levelWeights`/`parseAgeGroups` (D-60: rules live in the engine) | complexity | low | handed to part 10 |
+| `authoring/tools/concepts.py` `_slug`, `key` | part 7's row (task 557): identical to `qgen.slug`/`norm`; duplication candidate for part 10 | complexity | low | handed to part 10 |
+| `authoring/tools/concepts.py` `save` ↔ `qgen.save_json` | same `.tmp` + `replace` write (atomic); no lock, but only `qgen concepts` writes lists, one subcategory per thread | complexity | low | won't fix: `qgen` imports `concepts`, the reverse is circular; 4 lines |
+| `authoring/tools/concepts.py` `load` | a broken list raised a bare `JSONDecodeError` (no file name), unlike `qgen.load_json`; now names the file | practice | low | fixed (task 568) |
+| `authoring/tools/concepts.py` `draw_combos` | `tries=50` rejection draw: fewer than `k` only when fewer combinations are possible; 0 short draws in 27 840 (174 lists × 20 seeds × 8 slots); callers skip a slot on 0 (qgen prints «no axis combination fits») | — | — | — |
+| `authoring/tools/concepts.py` `draw_concepts`, `draw_combos` | no findings: RNG passed in (no module `random`), weights never all 0 (`possible_combos` drops base weight 0 and fit ≤ 2) | — | — | — |
+| `authoring/tools/concepts.py` `possible_combos` | ≈14 ms per list (2.5 s for 174, up to 2206 combinations) | performance | low | won't fix: once per subcategory per draft (`possible=` passed per slot) |
+| `authoring/tools/concepts.py` constants | no findings: `LOW_STOCK` 30, `TOP_UP` 60, `TARGET_SIZE` 250 (OQ-38), `FIT_AXES` (PE-9) match `plans/20-pipeline-efficiency.md`; every public name used by `qgen.py` | — | — | — |
+| `authoring/tools/progress.py` `_Stream.write` | inline copy of `_clear()`; now calls it | complexity | low | fixed (task 568) |
+| `authoring/tools/progress.py` globals | part 1 row «`_active`, `_drawn`, `_line_start` (`global`), `_waits`»: every read and write under `_lock` (`_draw` callers hold it; `waiting()`, `line()`); `_tick` daemon threads re-check `_stop` under the lock | — | — | — |
+| `authoring/tools/progress.py` `Bar.__exit__` | runs on exceptions/Ctrl-C: stops the tick, clears the bar, prints the summary | — | — | — |
+| `authoring/tools/progress.py` `LIVE`, `_install` | `LIVE` fixed at import, wrappers installed once and never removed; only `qgen` (CLI) uses bars, the authoring server doesn't | practice | low | won't fix: one process, one terminal |
+| `authoring/tools/progress.py` `_Stream`, `_draw` | ANSI `\033[K` needs VT mode on a legacy Windows console | bug | low | won't fix: authoring runs in the nix dev shell (Linux) |
 
 ## Part 9: Authoring server and UI
 
