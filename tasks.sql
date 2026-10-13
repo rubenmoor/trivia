@@ -19260,7 +19260,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 
 ## Out of scope (from the milestone)
 - Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', '2026-10-13T17:13:21Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (849, 94, 'revise plan 94', 'plan', 'open', 1000, NULL, 'Plan 11, the plan above plan 94, changed; it is quoted below. Bring plan 94 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (849, 94, 'revise plan 94', 'plan', 'done', 1000, '2026-10-13, no file changes: plan 94 still fits masterplan 11 part 1 (checklist, Valve''s rules, TBA date, Steam-only wishlists, decision 94 pending for task 704); decision 90''s provisional values reach the page via plan 88''s store page entry', 'Plan 11, the plan above plan 94, changed; it is quoted below. Bring plan 94 in line with it
 (`pm plan edit 94 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19362,7 +19362,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 - Part 4 after milestone 15. Part 6 after part 4; part 7 last.
 
 ## Out of scope (from the milestone)
-- Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', NULL, 831);
+- Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', '2026-10-13T17:15:00Z', 831);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (850, 95, 'revise plan 95', 'plan', 'open', 1000, NULL, 'Plan 11, the plan above plan 95, changed; it is quoted below. Bring plan 95 in line with it
 (`pm plan edit 95 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -21747,6 +21747,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (730, 855, '2026-10-13T17:07:55Z', '2026-10-13T17:09:44Z', 'done', NULL, 0, 'c8874baccafcd08f6c7678beb7116f2bea637168', 'claude-opus-5-5[1m]', 'decb8b87-cde2-4f22-9249-a6d27fc626d9', 10, 20, 5757, 437581, 54642, 0.63987220000000011, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (731, 848, '2026-10-13T17:09:44Z', '2026-10-13T17:13:30Z', 'done', NULL, 0, '8f64c57d4f0dccf4a320ae653f06fd201c0c1f3f', 'claude-opus-5-5[1m]', 'a4cd3e85-bbd4-4141-bc37-a84a3daa1147', 13, 26, 9704, 706642, 61116, 0.82444039999999985, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (732, 858, '2026-10-13T17:13:30Z', '2026-10-13T17:14:47Z', 'done', NULL, 0, '660b1be3cc2275782474a76aa250a2e6560f37ed', 'claude-opus-5-5[1m]', '3512019a-b386-4d40-860c-17789a460ec9', 8, 16, 6315, 258163, 31245, 0.42795659999999991, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (733, 849, '2026-10-13T17:14:47Z', '2026-10-13T17:15:04Z', 'done', NULL, 0, '89ea1463aa8ca3d4bc2c38eb46cf11b22c5d9b7c', 'claude-opus-5-5[1m]', 'ba7469df-ed98-4dd3-a179-9f6f29fc6eb2', 4, 8, 1361, 115797, 26948, 0.2659954, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
