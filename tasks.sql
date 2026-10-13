@@ -18890,7 +18890,7 @@ Without Steam (Steam closed; Windows zip and Linux tar.gz):
 - browser game (`trivia`) unchanged
 
 On failure name the failing rows; the worker adds follow-ups in plan 85 (drop the Windows overlay, switch to ShowGamepadTextInput, or drop Steam Input).', 'Replaced by decision 113: SW-8 check under Steam (same check without the ''without Steam'' rows, decision 111).', NULL, '2026-10-13T05:45:41Z', '2026-10-13T15:45:13Z', 652, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (73, 'Achievement list (SW-11)?', 'pending', '["The draft: 6 achievements as listed, 3 in Steamworks now, the 3 mode wins with MD-8, texts as written", "Draft + WIN_ALL_AGES (a win in each of the 4 age groups), in Steamworks now"]', 'Plan 86 (SW-11). Steam achievements, earned only in qualifying games (decision 19: Default mode: presets, checkpoints and won levels): not gamemaster mode, not customized, no custom difficulty, 12 levels, 4 cards. Derived from the save over all its players, any age group. No hidden ones, no progress pop-ups, Steam''s toast only. Texts go into Steamworks, not into `t()`.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (73, 'Achievement list (SW-11)?', 'answered', '["The draft: 6 achievements as listed, 3 in Steamworks now, the 3 mode wins with MD-8, texts as written", "Draft + WIN_ALL_AGES (a win in each of the 4 age groups), in Steamworks now"]', 'Plan 86 (SW-11). Steam achievements, earned only in qualifying games (decision 19: Default mode: presets, checkpoints and won levels): not gamemaster mode, not customized, no custom difficulty, 12 levels, 4 cards. Derived from the save over all its players, any age group. No hidden ones, no progress pop-ups, Steam''s toast only. Texts go into Steamworks, not into `t()`.
 
 Wording: infinitive / impersonal, so latam and es-ES need no ustedes/vosotros split; tower/top imagery from the catalogs («¡Ganaron!», «llegó a la cima», «Gewonnen!», «auf dem Gipfel»). Mode names = the proposals in `13-game-modes.md`.
 
@@ -18955,7 +18955,21 @@ Wording: infinitive / impersonal, so latam and es-ES need no ustedes/vosotros sp
 - english: «For All Ages» / «Win a game in every age group.»
 - german: «Für jedes Alter» / «In jeder Altersgruppe ein Spiel gewinnen.»
 
-Answer with the option, plus any wording changes per line.', NULL, NULL, '2026-10-13T05:49:32Z', NULL, 654, NULL, 'rule', NULL, '');
+Answer with the option, plus any wording changes per line.', 'Expanded list, all Steam achievements, earned only in qualifying games (D73''s rules unchanged):
+- Tower: FIRST_WIN, WINS_10, WINS_50, WIN_ADULTS, WIN_ALL_AGES (a win in each of the 4 age groups)
+- Jokers:
+  - first use of each joker: FIRST_SOPLO, FIRST_PASO, FIRST_BAJALE, FIRST_CAMBIAZO, FIRST_FRANCOTIRADOR
+  - ALL_HINTS: every hint of one question shown with Soplo
+  - PURGE: Paso with the burn-the-whole-category option (skip + purge); title idea «Passing just wasn''t enough»
+  - SUPER_PICKY: Paso and Bájale both played on the same question (same level''s slot, either order); title idea «Super picky»
+  - WIN_NO_JOKERS, ALL_JOKERS_WIN (all five jokers in one won game), SNIPER_TOP (Francotirador hit on the last level), SOPLO_SAVE (last question won right after a Soplo)
+- Knowledge: ALL_CATEGORIES, SPECIALIST (50 correct in one broad category), QUESTIONS_1000 (1000 different questions seen)
+- Bundles and languages: one achievement per regional bundle, worded around its region (50 correct answers from that bundle; ships with the bundle''s DLC; first: colombia); POLYGLOT (wins in two question languages)
+- Habit: GAME_NIGHTS (games on 7 different days), CHRISTMAS (a game on 24/25 Dec), NIGHT_OWL (a win after midnight, local clock)
+- Flagging: FIRST_FLAG (flag a question; needs a Steam user, decision 111)
+- Modes, entered with MD-8: WIN_RR_COOP, WIN_RR_COMPETITIVE, WIN_TIMED
+- Dropped: MEDIA_TRIO, FAMILY.
+- Texts latam/spanish/english/german, no plural address (German style guide, milestone 9); D73''s drafted texts stay, the worker drafts the new ones, the gamemaster checks all of them in the SW-11 close-out (task 658).', NULL, '2026-10-13T05:49:32Z', '2026-10-13T16:11:33Z', 654, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (74, 'Gamemaster mode earns no achievements', 'answered', '[]', 'Gamemaster mode has undo, skip, replace, jump to level and any joker budget mid-game (D-74, D-88; decision 34: Gamemaster menu: which cheats?), while outside it a question can never be skipped and nothing changes mid-game (decision 20: Default mode: which admin actions in the Esc menu). Achievements would be free there. Qualifying = decision 19: Default mode: presets, checkpoints and won levels (uncustomized games only), plan 86. earned() skips rows with gameMode() === ''gamemaster''.', 'Gamemaster mode never earns Steam achievements; only qualifying games (decision 19) count', NULL, '2026-10-13T05:49:36Z', '2026-10-13T05:49:36Z', 654, NULL, 'rule', 654, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (75, 'Steam Cloud test passed?', 'pending', '["passed", "issues (fill the table)"]', 'Plan 87 part 4: test Steam Cloud saves on real machines.
 
@@ -20033,6 +20047,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (713, 825, '2026-10-13T16:03:15Z', '2026-10-13T16:04:31Z', 'done', NULL, 0, 'fd2226d4620bfcde446739dcf4219db7258241ce', 'claude-opus-5-5[1m]', '0f273a6f-338c-4127-9d00-beac868a4759', 13, 26, 7362, 465605, 34206, 0.514113, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (714, 822, '2026-10-13T16:04:31Z', '2026-10-13T16:05:08Z', 'done', NULL, 0, 'a9de036388c6921bfbbbdc30f9a154fedf67e22d', 'claude-opus-5-5[1m]', '5f88aa67-d825-493c-9daa-1ea265f5d00b', 6, 12, 1609, 207123, 31211, 0.32334059999999992, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (715, 779, '2026-10-13T16:05:08Z', '2026-10-13T16:08:08Z', 'done', NULL, 0, 'c6683839cf879c0a7126ce6d2fc56f14362c7300', 'claude-opus-5-5[1m]', '11a1533a-5cfe-4478-b4bb-90523d80a9b6', 26, 48, 9802, 1211539, 55425, 0.88193980000000016, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (716, 748, '2026-10-13T16:08:08Z', NULL, 'running', NULL, NULL, '57cdd93a15e9adff0463c7024efe56e7d46b1d77', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
