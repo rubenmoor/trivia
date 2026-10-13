@@ -20,6 +20,11 @@ def path(locale):
     return layout.translations(locale)
 
 
+def locked(locale):
+    """Hold the locale file's lock for a load … save (atomic.locked; after the pool's)."""
+    return atomic.locked(path(locale))
+
+
 def load(locale):
     """The locale's file, or an empty one when it doesn't exist."""
     p = path(locale)

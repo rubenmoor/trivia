@@ -2,6 +2,7 @@ node_modules/
 dist/
 work/
 *.tmp
+*.json.lock
 
 # secrets (Commons token for the authoring tools, IMG-15)
 .env.local

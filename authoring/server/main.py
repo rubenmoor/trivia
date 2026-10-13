@@ -67,7 +67,7 @@ Questions in responses carry `media_candidates` and `background_candidates`
 or null; plans 16, 57) and `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
 (providers.licence_verdict, plan 53).
 """
-import argparse, datetime, json, re, sys, threading
+import argparse, datetime, json, re, sys
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -95,9 +95,6 @@ POOL = layout.SOURCE_POOL
 DECISIONS = {"approved", "rejected", "needs_work"}
 REVIEWERS = {"human", "llm"}
 
-_lock = threading.Lock()
-
-
 class NoQuestion(KeyError):
     """No question (or translation) with this id: 404."""
 
@@ -113,7 +110,7 @@ def save_pool(data):
 
 def update_question(qid, change):
     """Re-read the pool, apply change(q) to one question, write atomically (08, "API")."""
-    with _lock:
+    with atomic.locked(POOL):
         data = load_pool()
         for q in data["questions"]:
             if q["id"] == qid:
@@ -126,7 +123,7 @@ def update_question(qid, change):
 def update_translation(locale):
     """update_question for questions.<locale>.json; re-exports pool.<locale>.json (plan 67)."""
     def update(qid, change):
-        with _lock:
+        with atomic.locked(POOL), translations.locked(locale):  # POOL: the export reads it
             doc = translations.load(locale)
             for t in doc["questions"]:
                 if t["id"] == qid:
@@ -352,7 +349,7 @@ def set_translatable(qid, value):
     as a human review, validate's rule (plan 63). Writes the locale files, then the pool and every export."""
     if not isinstance(value, bool):
         raise ValueError("translatable must be true or false")
-    with _lock:
+    with atomic.locked(POOL):
         data = load_pool()
         q = next((q for q in data["questions"] if q["id"] == qid), None)
         if q is None:
@@ -362,12 +359,13 @@ def set_translatable(qid, value):
         else:
             q["translatable"] = False
             for locale in translations.LOCALES:
-                doc = translations.load(locale)
-                hit = [t for t in doc["questions"] if t["id"] == qid and t.get("status") != "rejected"]
-                for t in hit:
-                    reject(t)
-                if hit:
-                    translations.save(locale, doc)
+                with translations.locked(locale):
+                    doc = translations.load(locale)
+                    hit = [t for t in doc["questions"] if t["id"] == qid and t.get("status") != "rejected"]
+                    for t in hit:
+                        reject(t)
+                    if hit:
+                        translations.save(locale, doc)
         save_pool(data)
     return q
 

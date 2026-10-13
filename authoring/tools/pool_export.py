@@ -42,5 +42,6 @@ def exports(pool):
 
 def write(pool):
     """Write the exports for this source pool (the parsed authoring/data/questions.json); atomic per file."""
-    for path, text in exports(pool).items():
-        atomic.write_text(path, text)
+    with atomic.locked(layout.SOURCE_POOL):  # one writer of the exports at a time
+        for path, text in exports(pool).items():
+            atomic.write_text(path, text)

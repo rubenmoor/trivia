@@ -1,6 +1,6 @@
 """Human spot checks per batch (plan 16): the seeded sample and authoring/data/spot-checks.json.
 Written only by the authoring server; `qgen report --qc` and the exit check read the file."""
-import datetime, json, re, threading
+import datetime, json, re
 
 import layout  # authoring/tools/layout.py
 import atomic  # authoring/tools/atomic.py
@@ -10,7 +10,6 @@ import translations  # authoring/tools/translations.py
 
 FILE = layout.SPOT_CHECKS
 DEFAULT_SIZE = 30  # pm decision 2; without targets.json "quality"
-_lock = threading.Lock()
 
 
 def size():
@@ -63,7 +62,7 @@ def record(batch, q, media_changed):
             "media_changed": bool(media_changed), "on": datetime.date.today().isoformat()}
     if locale:
         item["locale"] = locale
-    with _lock:
+    with atomic.locked(FILE):
         data = load()
         entry = data.setdefault(batch, {"size": size(), "seed": batch, "items": {}})
         entry["items"][q["id"]] = item
@@ -73,7 +72,7 @@ def record(batch, q, media_changed):
 
 def remove(batch, qid):
     """Undo: drop the item (and the batch once it has none)."""
-    with _lock:
+    with atomic.locked(FILE):
         data = load()
         items = data.get(batch, {}).get("items", {})
         if items.pop(qid, None) is not None:

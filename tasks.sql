@@ -14302,7 +14302,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Temp server (`TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA` temp dirs), `curl /api/overview` before/after, start page opened; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T13:19:12Z', '2026-10-13T14:53:52Z', 578);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (740, 82, 'Cross-process writes to the authoring pool, translations and spot checks: no lost updates', 'work', 'open', NULL, NULL, 'Follow-up of `task 580: Part 10 triage: duplication clusters table` (cluster "cross-process write locks" in `code-review.md` `## Part 10` `### Duplication clusters`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (740, 82, 'Cross-process writes to the authoring pool, translations and spot checks: no lost updates', 'work', 'done', NULL, '2026-10-13, authoring/tools/atomic.py (locked), translations.py, pool_export.py, qgen.py, authoring/server/main.py, spot_checks.py, .gitignore, code-review.md, directory.md', 'Follow-up of `task 580: Part 10 triage: duplication clusters table` (cluster "cross-process write locks" in `code-review.md` `## Part 10` `### Duplication clusters`).
 
 ## Problem
 - Writers of `authoring/data/questions.json`, `questions.<locale>.json` and `work/<run>/spot-checks.json` lock per process only: `authoring/server/main.py` `_lock`, `authoring/server/spot_checks.py` `_lock`, `authoring/tools/qgen.py` `_pool_lock`/`_save_lock` (`save_json`), `authoring/tools/translations.py` `save` (caller''s lock).
@@ -14319,7 +14319,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Throw-away script on a temp `TRIVIA_WORK` and a temp copy of `authoring/data/`: two processes doing read-modify-write in a loop, no lost update; never the real data.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.
-- Row in `code-review.md` `## Part 10` with status `fixed (task N)`.', '2026-10-13T13:34:26Z', NULL, 580);
+- Row in `code-review.md` `## Part 10` with status `fixed (task N)`.', '2026-10-13T13:34:26Z', '2026-10-13T14:57:45Z', 580);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (741, 82, 'Parity check for the Python ↔ Node/TS twins (per decision 104)', 'work', 'open', NULL, NULL, 'Follow-up of `task 582: Part 10: Python ↔ Node/TS twins (save, paths, media cache, static serving)`. Do what decision 104 answered; the rules and files are listed in its body and in `### Python ↔ Node/TS parity` (`## Part 10`, `code-review.md`).
 
 ## If "parity check in qgen validate"
@@ -16174,7 +16174,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (650, 729, '2026-10-13T14:49:00Z', '2026-10-13T14:49:50Z', 'done', NULL, 0, 'ddc7be947061b03e274381289ef390521de91214', 'claude-opus-5-5[1m]', '73d27a45-a7ce-4e71-9d08-c3a754d46fab', 9, 18, 3465, 294678, 27806, 0.3507556, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (651, 736, '2026-10-13T14:49:50Z', '2026-10-13T14:52:01Z', 'done', NULL, 0, '1b44a9bec4d7fe65fe4ff864b92e10f8c45bfb73', 'claude-opus-5-5[1m]', '2eab283c-6b26-427e-af4c-9d1041b8195d', 24, 46, 11395, 1330484, 63963, 1.0058848, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (652, 739, '2026-10-13T14:52:02Z', '2026-10-13T14:54:05Z', 'done', NULL, 0, '2b6cb68ac4b714e0e658ca64a068c4e25942363b', 'claude-opus-5-5[1m]', '4103510b-c876-4a82-8453-fcd1d12b46c6', 22, 44, 9594, 1085945, 50564, 0.813757, 662821);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (653, 740, '2026-10-13T14:54:05Z', NULL, 'running', NULL, NULL, '56be7426f4e8a0488848c748f39bdf103d43a1b2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (653, 740, '2026-10-13T14:54:05Z', '2026-10-13T14:57:59Z', 'done', NULL, 0, '56be7426f4e8a0488848c748f39bdf103d43a1b2', 'claude-opus-5-5[1m]', 'd51b23a8-a113-430e-82bd-22f635518ee2', 26, 52, 14246, 1739608, 79069, 1.2656016000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
