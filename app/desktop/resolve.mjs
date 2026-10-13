@@ -53,7 +53,7 @@ async function realRoot(root) {
 }
 
 // File under root, or null (no escape, symlinks included; files only).
-async function contained(root, rel) {
+export async function contained(root, rel) {
   const real = await realRoot(root);
   if (!real) return null;
   try {

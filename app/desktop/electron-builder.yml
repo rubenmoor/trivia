@@ -10,6 +10,7 @@ files:
   - main.mjs
   - mods.mjs
   - workshop.mjs
+  - publish.mjs
   - resolve.mjs
   - save.mjs
   - preload.cjs
