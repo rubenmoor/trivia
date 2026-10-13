@@ -49,6 +49,8 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/tools/` (rest) | Helpers: `batches.py`, `concepts.py`, `layout.py` (paths), `pool_export.py`, `progress.py` |
 | `authoring/server/` | Authoring server on port 8001: question API for the review tool, stats, start page, spot checks (`spot_checks.py`) |
 | `authoring/ui/` | Authoring UI (Svelte): `home/` start page, `review/` review tool, `stats/` stats pages, `print/` printable joker cards |
+| `authoring/store/screenshots.mjs` | Store screenshots (plan 88): the shell at 1920×1080 under Xvfb, raw CDP, demo saves seeded with the engine; [`plans/17a-store-page.md`](plans/17a-store-page.md) |
+| `authoring/store/out/` | Gitignored: rendered store assets (`screenshots/<lang>/`) |
 | `authoring/RUNBOOK.md` | How an LLM makes a batch of questions: one command |
 | `authoring/QC.md` | Quality control after every batch: audit, blind spot check, `qgen report --qc`, findings → prompt changes (D-56, plan 16) |
 | `authoring/reports/` | One generated report per batch or run (`tr-<locale>-<n>.md` for translation runs) |

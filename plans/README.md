@@ -31,6 +31,7 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`15c-regional-questions.md`](15c-regional-questions.md) | Steam: `region` tags (Colombia today), regional packs | stub |
 | [`16-content-target.md`](16-content-target.md) | Steam: pool size and quality bar for release, games-per-player simulation | stub |
 | [`17-publishing.md`](17-publishing.md) | Steam: media and code licenses, credits, AI disclosure, store page, Steamworks account | stub |
+| [`17a-store-page.md`](17a-store-page.md) | Steam: store page drafts per language, AI disclosure, requirements, capsules, screenshots | stub |
 | [`18-steam-integration.md`](18-steam-integration.md) | Steam: desktop shell, Steamworks features, builds and depots, Steam Deck | stub |
 | [`19-repo-layout.md`](19-repo-layout.md) | Repo layout (`app/` ships, `authoring/` doesn't), flake packages, the one-command LLM batch (D-35, D-36) | active |
 | [`20-pipeline-efficiency.md`](20-pipeline-efficiency.md) | Fewer Claude calls and tokens in `qgen batch`; stored concept lists and multi-axis question styles for more varied questions | active |

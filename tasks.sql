@@ -13243,7 +13243,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Approval: `pm decision add "Capsules approved?"` with the output path; fixes → follow-up task.
 
 Done when: every asset per language rendered, approval decision added.', '2026-10-13T06:07:03Z', NULL, 665);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (670, 88, 'Scripted store screenshots at 1920×1080', 'work', 'open', NULL, NULL, 'Plan 88 task 5.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (670, 88, 'Scripted store screenshots at 1920×1080', 'work', 'done', NULL, '2026-10-13, authoring/store/screenshots.mjs, plans/17a-store-page.md (new: Screenshots), plans/README.md, directory.md, .gitignore (authoring/store/out/), flake.nix (xvfb in the dev shell); 30 PNGs rendered offline from the dev shell (es, es-ES 10 each; en, de 5: no pools); decision 79 → gamemaster; follow-up task 673 (en/de re-run); check, test, build, qgen validate pass', 'Plan 88 task 5.
 
 - `authoring/store/screenshots.mjs`: starts the shell (`trivia-desktop`) at 1920×1080 with a throw-away demo save (made-up player names, no family data) in `TRIVIA_SAVE_DIR` (temp dir, deleted after); per UI language (en, es, es-ES if the UI differs, de) walks a fixed set of screens: start, an image question, an audio/video question, a joker in action, the tower near level 12, victory, mode choice; writes PNGs to `authoring/store/out/screenshots/<lang>/` (gitignored). ≥ 5 per language (Valve minimum).
 - No new npm dependency: Node''s built-in `WebSocket` + raw CDP against `--remote-debugging-port` (as task 318 did), or Electron `capturePage` behind a dev-only flag. Drive the game through the UI or seed the save; media from the cache (`trivia-media sync --status approved` first).
@@ -13251,7 +13251,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: the script and output folder; a line in 17a on how to re-run (after visual changes).
 - Approval: `pm decision add "Store screenshots: which set?"` with the paths; the gamemaster picks.
 
-Done when: script runs offline from the dev shell, PNGs per language, decision added.', '2026-10-13T06:07:04Z', NULL, 665);
+Done when: script runs offline from the dev shell, PNGs per language, decision added.', '2026-10-13T06:07:04Z', '2026-10-13T06:21:17Z', 665);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (671, 88, 'Store trailer: backlog item', 'work', 'open', NULL, NULL, 'Plan 88 task 6. Trailer not cheap enough for the beta (editing, music rights checks).
 
 - Add an item to `plans/backlog.md`: "store trailer, S6 or later; scripted capture via CDP `Page.startScreencast` + ffmpeg as a start"; reference PUB-8 and plan 88.
@@ -13265,6 +13265,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - After the answer: PUB-8 `[x]` in `plans/17-publishing.md` with a note; LUI-6 `[x]` in `plans/15a-ui-translation.md` (if task 1 didn''t); `plans/project.md` in sync. Issues → follow-up tasks.
 
 Done when: gamemaster reports the store page entered; PUB-8 and LUI-6 marked done.', '2026-10-13T06:07:04Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (673, 88, 'Store screenshots: re-run for en and de once their question pools land', 'work', 'open', NULL, NULL, '`task 670` rendered only menus and the tower for `en` and `de`: `app/data/` has no `pool.en.json` / `pool.de.json` yet, so the question screens (cards, image question, video question, Francotirador, victory) would show Spanish questions.
+
+- Wait for `pool.en.json` / `pool.de.json` (plan 70 content, `qgen batch --translate`, `qgen export`)
+- Check `Q` in `authoring/store/screenshots.mjs` (`q-0030`, `q-0055`, `q-0019`, `q-0053`): approved in both locales, media cached; else pick others
+- `npm run build`, `trivia-media sync --status approved`, then `node authoring/store/screenshots.mjs --lang en,de` from the dev shell
+- Also expected to fix: the age-group tiles (modes, customize) show the Spanish names in en/de today, because names come from `names.<locale>.json`, which only loads with that locale''s pool
+- Look at the PNGs, then update decision "Store screenshots: which set?" (or add a new one) with the en/de paths', '2026-10-13T06:21:11Z', NULL, 670);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -14195,6 +14202,12 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Keep: German Steam users read English names often; one name, no extra trademark/Steam-search check; capsules show «Trivia» either way.
 - Localized: German says «Quiz», not «Trivia», so the logo''s main word «Trivia» (D-50) would not match; capsules need a German wordmark; PUB-7 check (Steam search, EUIPO/DPMA, domain) before entry; set in Steamworks before the coming-soon page (later changes restricted).
 - Own text welcome (another name).', NULL, NULL, '2026-10-13T06:06:31Z', NULL, 665, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (79, 'Store screenshots: which set?', 'pending', '["es/es-ES: 07, 08, 09, 06, 10, 05, 03 (gameplay first); en/de: all 5 for now", "All 10 for es/es-ES; all 5 for en/de", "Other set or other screens (say which)"]', 'Rendered by authoring/store/screenshots.mjs (task 670), 1920×1080, demo save with made-up players. Output in authoring/store/out/screenshots/<lang>/ (gitignored; re-run the script to regenerate).
+
+es and es-ES (10 each): 01-start, 02-player, 03-modes, 04-customize, 05-tower (level 11), 06-cards, 07-image-question (q-0030 cheetah), 08-video-question (q-0055 Apollo 11), 09-joker (Francotirador aiming), 10-victory.
+en and de (5 each): 01-start … 05-tower only. There are no en/de question pools yet, and the age-group names still show in Spanish. A follow-up task re-runs these once the pools land.
+
+Valve''s minimum is 5 per language. Pick the set (numbers), or ask for other questions/screens.', NULL, NULL, '2026-10-13T06:21:11Z', NULL, 670, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14692,6 +14705,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (490, 663, '2026-10-13T06:03:07Z', '2026-10-13T06:03:38Z', 'done', NULL, 0, '415ac31199f07fa2ed231d8317240696fd2c1639', 'claude-opus-5-5[1m]', 'c3355001-8566-474b-9f7c-249bc268b4cc', 9, 16, 2914, 260267, 29249, 0.3443894, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (491, 258, '2026-10-13T06:03:38Z', '2026-10-13T06:05:39Z', 'done', NULL, 0, 'c8a83c868cf731617b4b719166459da1669b7bc0', 'claude-opus-5-5[1m]', 'fcb042d4-2ace-4711-b784-78f9d43c9820', 16, 30, 10881, 788061, 59463, 0.8510562, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (492, 665, '2026-10-13T06:05:39Z', '2026-10-13T06:07:18Z', 'done', NULL, 0, '5a0e06839186497c511a076c7ebe008c68edb903', 'claude-opus-5-5[1m]', '756ddd23-e516-47c3-aa79-5465b897eb59', 11, 22, 9396, 448188, 42804, 0.6200776, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (493, 670, '2026-10-13T06:07:18Z', '2026-10-13T06:21:41Z', 'done', NULL, 0, '5a3959f59e2e0f006796b7ec719f50b1cf0af2e2', 'claude-opus-5-5[1m]', '98a8e7c4-35f2-4c38-affe-263a5ecb08ca', 46, 84, 27442, 3923205, 126464, 2.3455289999999991, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

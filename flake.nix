@@ -131,6 +131,7 @@
               pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-desktop-build
+              pkgs.xvfb  # authoring/store/screenshots.mjs
             ] ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
           };
         });
