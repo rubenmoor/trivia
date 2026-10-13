@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import {
-  broadOf, byId, categoryOf, loadCategories, parseAgeGroups, parseBundles, parsePool, subcategories,
+  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, parseAgeGroups, parseBundles, parsePool, subcategories,
 } from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
 
@@ -95,4 +95,34 @@ test("parseBundles on the real file: base first, the only base bundle, in every 
   assert.throws(() => parseBundles({ bundles: [] }));
   assert.throws(() => parseBundles({ bundles: [{ id: "x", kind: "base", languages: [] }] }), /languages/);
   assert.throws(() => parseBundles({ bundles: [{ id: "x", languages: ["es"] }] }), /kind/);
+});
+
+test("modPool: namespaced ids, media under the bundle folder, bad questions and media dropped", () => {
+  const q = (id: string, more: object = {}) => ({
+    id, difficulty: 3, subcategory: "Búhos", question: "¿?", answer: "a", wrong_answers: ["b", "c", "d"], ...more,
+  });
+  const img = (file_url: string, role = "illustrative") => ({ media: { type: "image", role, file_url, credit: "Ana" } });
+  const pool = {
+    version: 1,
+    questions: [
+      q("owl", img("img/owl 1.jpg")),
+      q("abs", img("https://x.org/a.jpg")),
+      q("up", img("../../x.jpg", "essential")),
+      q("short", { wrong_answers: ["b"] }),
+      q("owl"),
+      q("hard", { difficulty: 16 }),
+    ],
+  };
+  const out = modPool(pool, "aves:pack", ["Búhos"]);
+  assert.deepEqual(out.questions.map((x) => [x.id, x.bundle, x.media.file_url]), [
+    ["aves:owl", "aves:pack", "/data/bundles/aves:pack/img/owl%201.jpg"],
+    ["aves:abs", "aves:pack", null],
+  ]);
+  assert.deepEqual(out.reasons, [
+    { id: "abs", reason: "media" }, { id: "up", reason: "essential_media" }, { id: "short", reason: "wrong_answers" },
+    { id: "owl", reason: "duplicate_id" }, { id: "hard", reason: "difficulty" },
+  ]);
+  assert.equal(out.badQuestions, 4);
+  assert.equal(out.badMedia, 2);
+  assert.ok(isModId(out.questions[0].id) && isOurs("q-0001"));
 });

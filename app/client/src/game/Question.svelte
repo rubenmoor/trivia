@@ -3,6 +3,7 @@
   // mechanic, the final answer, the level-dependent wait and the reveal. Jokers (09-jokers.md):
   // the tray, arming, Paso's choice, Cambiazo's picker, Francotirador's aiming, Soplo's notes.
   import { onMount } from "svelte";
+  import { isOurs } from "../engine/pool.ts";
   import { gameAction } from "../lib/api.ts";
   import { errorText, reasonText } from "../lib/errors.ts";
   import { t } from "../lib/i18n.ts";
@@ -128,7 +129,8 @@
   });
 
   const media = $derived(question.media);
-  const src = (url: string | null) => (url ? `/media?url=${encodeURIComponent(url)}` : null);
+  /** Ours from the media cache; a mod's under /data/ (decision 128). */
+  const src = (url: string | null) => (url ? (url.startsWith("/data/") ? url : `/media?url=${encodeURIComponent(url)}`) : null);
   /** The picture: the image itself, or an audio question's background (D-14). */
   const picture = $derived(media.type === "image" ? src(media.file_url) : src(question.background?.file_url ?? null));
   const decorative = $derived(media.type === "audio" || media.role === "decorative");
@@ -545,7 +547,7 @@
         {/each}
       </div>
     {/if}
-    {#if mediaFailed || (!media.file_url && media.type !== "audio")}
+    {#if mediaFailed || (!media.file_url && media.type !== "audio" && isOurs(question.id))}
       <p class="media-missing">{t("screen.question.mediaMissing")}</p>
     {/if}
   </div>

@@ -40,16 +40,101 @@ export interface Bundle {
   languages: string[];
   name: string;
   description: string;
+  /** A mod's row, merged in by the shell (decision 128); id `<mod>:<bundle>`. */
+  source?: "mod";
+  mod?: string;
+  modName?: string;
 }
+
+/** Mod ids are `<mod>:<id>`; ':' is never in ours (decision 128). The one "not ours" test. */
+export const isModId = (id: string): boolean => id.includes(":");
+export const isOurs = (id: string): boolean => !isModId(id);
 
 export function parseBundles(json: unknown): Bundle[] {
   const bundles = (json as { bundles?: unknown } | null)?.bundles;
   if (!Array.isArray(bundles) || bundles.length === 0) throw new Error("bundles.json: no bundles");
-  return bundles.map(({ id, kind, languages, name, description }) => {
+  return bundles.map(({ id, kind, languages, name, description, source, mod, modName }) => {
     if (typeof kind !== "string" || !kind) throw new Error(`bundles.json: ${id}: no kind`);
-    if (!Array.isArray(languages) || languages.length === 0) throw new Error(`bundles.json: ${id}: no languages`);
-    return { id, kind, languages, name, description };
+    if (!Array.isArray(languages) || (languages.length === 0 && source !== "mod")) throw new Error(`bundles.json: ${id}: no languages`);
+    return source === "mod" ? { id, kind, languages, name, description, source, mod, modName } : { id, kind, languages, name, description };
   });
+}
+
+/** Why modPool drops a question (or only its media: `media`, `background`). */
+export type ModReason =
+  | "no_id" | "duplicate_id" | "no_text" | "wrong_answers" | "difficulty" | "subcategory" | "status"
+  | "essential_media" | "media" | "background";
+
+const NO_MEDIA: Media = { type: "image", role: "decorative", source_url: null, file_url: null, credit: null };
+const str = (v: unknown): v is string => typeof v === "string" && v.trim() !== "";
+const opt = (v: unknown): string | null => (typeof v === "string" ? v : null);
+
+/** A mod file_url → its URL under the bundle folder; null if not a plain relative path inside it. */
+function modUrl(bundle: string, rel: unknown): string | null {
+  if (!str(rel) || /^[a-z][a-z0-9+.-]*:|^[/\\]/i.test(rel) || rel.includes("\\")) return null;
+  const parts = rel.split("/");
+  if (parts.some((p) => p === "" || p === "." || p === "..")) return null;
+  return `/data/bundles/${bundle}/${parts.map(encodeURIComponent).join("/")}`;
+}
+
+/** A mod bundle's pool (decision 128): ids → `<mod>:<id>`, `bundle` = the runtime id, media paths → its
+ * folder; invalid questions dropped, bad media dropped (the question too if essential). Reasons per
+ * question for the mods screen and `--check-mod` (decision 133). `taken`: runtime ids already used, gains
+ * this pool's. Throws on a bad pool file. */
+export function modPool(json: unknown, bundle: string, subcategories: Iterable<string>, taken = new Set<string>()): {
+  questions: PoolQuestion[]; reasons: { id: string; reason: ModReason }[]; badQuestions: number; badMedia: number;
+} {
+  const mod = bundle.slice(0, bundle.indexOf(":"));
+  const subs = new Set(subcategories);
+  const questions: PoolQuestion[] = [];
+  const reasons: { id: string; reason: ModReason }[] = [];
+  let badMedia = 0;
+  const raw = parsePool(json);
+  raw.forEach((one, i) => {
+    const q = (one ?? {}) as unknown as Record<string, unknown>;
+    const id = str(q.id) && !isModId(q.id) ? q.id : `#${i + 1}`;
+    const bad = (reason: ModReason) => void reasons.push({ id, reason });
+    const wrong = q.wrong_answers;
+    const reason: ModReason | null =
+      id !== q.id ? "no_id"
+      : taken.has(`${mod}:${id}`) ? "duplicate_id"
+      : !str(q.question) || !str(q.answer) ? "no_text"
+      : !Array.isArray(wrong) || wrong.length !== 3 || !wrong.every(str) ? "wrong_answers"
+      : !Number.isInteger(q.difficulty) || (q.difficulty as number) < 1 || (q.difficulty as number) > 15 ? "difficulty"
+      : !str(q.subcategory) || !subs.has(q.subcategory) ? "subcategory"
+      : q.status !== undefined && q.status !== "approved" ? "status"
+      : null;
+    if (reason) return bad(reason);
+    let media = NO_MEDIA;
+    const m = q.media as Record<string, unknown> | null | undefined;
+    if (m) {
+      const url = modUrl(bundle, m.file_url);
+      const ok = url && ["image", "audio", "video"].includes(m.type as string);
+      if (!ok) {
+        badMedia++;
+        if (m.role === "essential") return bad("essential_media");
+        bad("media");
+      } else {
+        const role = ["decorative", "illustrative", "essential"].includes(m.role as string) ? m.role : "illustrative";
+        media = { type: m.type, role, source_url: opt(m.source_url), file_url: url, credit: opt(m.credit) } as Media;
+      }
+    }
+    let background: Background | null = null;
+    const b = q.background as Record<string, unknown> | null | undefined;
+    if (b) {
+      const url = modUrl(bundle, b.file_url);
+      if (url) background = { source_url: opt(b.source_url), file_url: url, credit: opt(b.credit) };
+      else (badMedia++, bad("background"));
+    }
+    taken.add(`${mod}:${id}`);
+    const hints = Array.isArray(q.hints) ? q.hints.filter(str) : [];
+    questions.push({
+      id: `${mod}:${id}`, status: "approved", difficulty: q.difficulty as number, subcategory: q.subcategory as string,
+      bundle, description: opt(q.description) ?? "", question: q.question as string, answer: q.answer as string,
+      wrong_answers: wrong as string[], hints, fun_fact: opt(q.fun_fact) ?? "", media, background,
+    });
+  });
+  return { questions, reasons, badQuestions: raw.length - questions.length, badMedia };
 }
 
 /** The bundles offered in `locale`, bundles.json order (plan 71). */
