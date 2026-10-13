@@ -459,7 +459,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 
 ## Done when
 - All three languages playable in the released game, store pages localized, content target met per language.
-- zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL, 0);
+- zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL, 5);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (13, 'Code quality', 'open', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
 
 ## Priority
