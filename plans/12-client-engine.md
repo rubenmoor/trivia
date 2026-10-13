@@ -65,6 +65,15 @@ A content patch changes the pool under an existing save (plan 91). The save keep
 - Shape change in a later patch: `SAVE_VERSION + 1` + an `UPGRADES` entry + a `save.test.ts` case; never silent.
 - Beta vs. default: a newer save on an older build is backed up, the game starts empty (`store.ts`); so a save version bump ships to `default` in the same release the family tested on `beta`; testers don't switch back to `default` before it.
 
+## Telemetry recording
+Opt-in telemetry (plan 106, decision 119) is derived from the save, never stored in it.
+
+- `engine/telemetry.ts` (pure): save + session start snapshot + recorded `index` → plan 105's contract games; `lib/telemetry.ts`: consent cache, data per game locale, bridge calls
+- Checkpoints: `lib/engine.ts` `load()` once, `exec()` after each adopted save; fire-and-forget, errors to the console only
+- Session games: rows new this run (`from` 0), the game running at load (`from` = its history length then); recorded keys keep their `from`; undo drops undone answers too
+- Side file in the shell (`app/desktop/telemetry.mjs`, `<userData>/telemetry/`); no save field, no `SAVE_VERSION` bump
+- Consent gate: no bridge (browser game, dev shim), no valid user or consent not `true` → the builder never runs, no IPC beyond `state()`
+
 ## Tasks
 - [x] PORT-1 Scenario recorder for `app/server/game.py` + `app/server/selection.py`; commit the fixtures. Done 2026-10-11 (plan 18): `authoring/tools/record_fixtures.py` (`--check`), fixtures + README in `app/client/src/engine/fixtures/`.
 - [x] PORT-2 `engine/selection.ts`: supply check and draw (GF-2, D-25), fixture-tested.
