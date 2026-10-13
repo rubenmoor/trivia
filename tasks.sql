@@ -5629,14 +5629,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Update JK-9''s note in `plans/09-jokers.md` (rustle and pop-back now audible).
 
 Done when: compared via `/?efectos`; both new sounds audible in a game; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', '2026-10-13T06:35:26Z', 138);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (145, 32, 'Recorded firework sounds', 'work', 'open', NULL, NULL, 'Replace the synthesized firework sounds (plan 32; fireworks preview `/?fuegos`, UI-9).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (145, 32, 'Recorded firework sounds', 'work', 'done', NULL, '2026-10-13, app/client/src/game/sound.svelte.ts (SAMPLE_NAMES/SAMPLE_FOR: rocket, confetti-cannon, stars with pitch-varying rate; sparklers fixed), app/client/public/audio/{cohete,canon-confeti,bengalas,estrellas}.m4a (~71 kB total, max 26 kB; same pipeline as tasks 143/144: mono AAC 80k, ~-16 LUFS, limited; bengalas ~-18 LUFS after limiting its crackle peaks), CREDITS.md rows. All 4 firework cues recorded, none kept synthesized; all Freesound CC0 (licence checked on each page): ReadeOnly rocket-whistle (high-passed 250 Hz), Breviceps Balloon Pop / Christmas cracker / Confetti Cannon, Alex_hears_things sparkler_fuse_nm (2.4 s cut from 1.4 s, +19 dB, quiet source), LilMati Sparkling Star 01 (2.3 s, high-passed 700 Hz to drop its low pad). Picked by envelope/spectrogram, not by ear; the A/B in /?efectos and /?fuegos=finale is task 146. check, test, build, qgen validate pass.', 'Replace the synthesized firework sounds (plan 32; fireworks preview `/?fuegos`, UI-9).
 
 - Effects: `cohete`, `cañón de confeti`, `bengalas`, `estrellas`.
 - `rate` callback for stars and cannon so repeats vary in pitch.
 - Sources, pipeline, wiring, `CREDITS.md` as in the earlier tasks; check the total budget: new effects ≤ 400 kB, ≤ 40 kB per file.
 - Keep the recipe where no recording is better; record which in the done note.
 
-Done when: compared via `/?efectos` and `/?fuegos=finale`; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', NULL, 138);
+Done when: compared via `/?efectos` and `/?fuegos=finale`; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', '2026-10-13T06:40:52Z', 138);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (146, 32, 'Gamemaster check of the recorded effects on the TV', 'work', 'open', NULL, NULL, 'Close-out of plan 32.
 
 1. Collect from the earlier tasks'' notes what was replaced and what stayed synthesized.
@@ -14721,6 +14721,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (499, 142, '2026-10-13T06:24:59Z', '2026-10-13T06:25:53Z', 'done', NULL, 0, '6286ea96202fdf9cf7f22b24a550d45fe0c5b0ee', 'claude-opus-5-5[1m]', '3d666b14-c92d-436c-857a-26ffebef47c4', 12, 18, 3934, 345636, 35857, 0.43473520000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (500, 143, '2026-10-13T06:25:53Z', '2026-10-13T06:31:17Z', 'done', NULL, 0, 'b729f58f7ef67bd9af416b7fff6f69f22c6f6877', 'claude-opus-5-5[1m]', 'de5f5838-7174-4224-a363-913af2bbf90c', 33, 66, 17891, 2337561, 92119, 1.5625482, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (501, 144, '2026-10-13T06:31:17Z', '2026-10-13T06:35:39Z', 'done', NULL, 0, '5d30f0370722c0ea1e568b566915df04033ae898', 'claude-opus-5-5[1m]', '9f775c48-66b8-46ac-9856-564ad4b4a99c', 35, 68, 18063, 2502292, 94101, 1.6147984000000004, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (502, 145, '2026-10-13T06:35:39Z', '2026-10-13T06:41:05Z', 'done', NULL, 0, 'e0b57dac5488b26e1827c96205d3387dbc42937a', 'claude-opus-5-5[1m]', '8ed280bf-1d6b-4a0e-9d10-6d7aed97c1ef', 25, 42, 11511, 1208203, 66081, 1.0006766, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -39,3 +39,7 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `rasgado.m4a` | The chosen card's envelope tearing open | [Tearing paper](https://freesound.org/people/ludde44/sounds/170311/) (Freesound) | ludde44 | CC0 |
 | `susurro-papel.m4a` | Soplo: the note sliding in | [PageRustle](https://freesound.org/people/Tomoyo%20Ichijouji/sounds/211246/) (Freesound) | Tomoyo Ichijouji | CC0 |
 | `ficha.m4a` | A fresh joker token popping back into its slot (pitch varied) | `chip-lay-1.ogg`, [Casino Audio](https://kenney.nl/assets/casino-audio) | Kenney | CC0 |
+| `cohete.m4a` | Firework rocket going up (pitch varied) | [rocket-whistle.wav](https://freesound.org/people/ReadeOnly/sounds/186933/) (Freesound) | ReadeOnly | CC0 |
+| `canon-confeti.m4a` | The confetti cannon (pitch varied) | [Balloon Pop / Christmas cracker / Confetti Cannon](https://freesound.org/people/Breviceps/sounds/458398/) (Freesound) | Breviceps | CC0 |
+| `bengalas.m4a` | Sparklers crackling (2.4 s cut) | [sparkler_fuse_nm.wav](https://freesound.org/people/Alex_hears_things/sounds/316682/) (Freesound) | Alex_hears_things | CC0 |
+| `estrellas.m4a` | Falling stars twinkling (pitch varied, high-passed) | [Sparkling Star 01.wav](https://freesound.org/people/LilMati/sounds/462095/) (Freesound) | LilMati | CC0 |

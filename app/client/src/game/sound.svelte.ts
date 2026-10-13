@@ -38,7 +38,8 @@ const SAMPLE_NAMES = [
   "aplausos", "aplausos-gran", "redoble", "fanfarria", "trombon-triste", "candado-cierra", "candado-abre",
   "papel", "vidrio", "sello", "golpe", "estallido", "victoria", "whoosh", "swoosh-sube", "escoba", "pop",
   "menu-abre", "menu-cierra", "desbloqueado", "hola", "comodin", "comodin-preparado", "comodin-abre", "silbato",
-  "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha",
+  "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha", "cohete",
+  "canon-confeti", "bengalas", "estrellas",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
@@ -56,6 +57,10 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   // The block landing: the higher the tower, the higher the thud (04, "Block arrival").
   block: ["golpe", (level) => 0.75 + level * 0.06],
   burst: ["estallido", () => 0.85 + Math.random() * 0.3],
+  rocket: ["cohete", () => 0.9 + Math.random() * 0.2],
+  "confetti-cannon": ["canon-confeti", () => 0.85 + Math.random() * 0.3],
+  sparklers: ["bengalas"],
+  stars: ["estrellas", () => 0.9 + Math.random() * 0.2],
   whoosh: ["whoosh"],
   "swoosh-up": ["swoosh-sube"],
   swoosh: ["escoba"],
