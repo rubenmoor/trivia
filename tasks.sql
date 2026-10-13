@@ -492,6 +492,22 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Every finding has a status; the executive summary is on top.
 - Linter evaluated; if adopted: the lint pass runs before every commit touching TypeScript and reports no issues.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', NULL);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (14, 'Opt-in telemetry', 'open', 'Anonymous, opt-in gameplay data to tune difficulty and see how the game is played. Builds on milestone 11''s report server. In the launch build if ready in time, else the first patch after launch; the launch doesn''t wait for it.
+
+## Outcome
+- consent: a first-start question (default off), changeable in the Esc menu; nothing is sent without a yes
+- on game close (or game end, if close isn''t reliable): one summary per session: games, levels reached, results, jokers used, mode, age group, question language, session length, game version, pool hash
+- per question answered: id, right/wrong, level, age group, jokers on it: for difficulty calibration
+- anonymous: random install id, no SteamID stored (ticket only checked), no IP, no names
+- server: same Worker as reports, own table, retention limit; privacy policy extended
+- `qgen report`: played difficulty vs. rated difficulty per question; outliers become review candidates
+
+## Constraints
+- opt-in only (AGENTS.md); the game plays the same without it
+- a failed send never shows an error to the player
+
+## Done when
+- an opted-in session''s data arrives; `qgen report` shows played vs. rated difficulty', '2026-10-13T16:24:16Z', NULL);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
 
@@ -5203,6 +5219,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Store page texts (LUI-6, S5); question translations (plans 66, 84); a wording lint; languages beyond the four catalogs.', '2026-10-13T15:41:11Z', 796);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (101, 14, 'masterplan', 1000, 'tbd.', '2026-10-13T16:24:16Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -18069,6 +18086,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (832, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (833, 101, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 101, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-13T16:24:16Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
