@@ -4511,56 +4511,49 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Under Steam with the real App ID and a logged-in user: a qualifying win unlocks `FIRST_WIN`; a customized or gamemaster game unlocks nothing; earlier qualifying games in the save unlock on the next start.', '2026-10-13T05:47:45Z', 257);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (87, 10, 'Steam Cloud saves', 680, 'Masterplan 10 part 4: the save syncs through Steam Auto-Cloud, one save per Steam user (gamemaster, 2026-10-12: a save = a profile, so players, seen counters, blocked, flags and selection per profile come along, plan 65 / D-82). No Cloud API code unless the test shows a need. Owner: `plans/18-steam-integration.md` ("Steam features", Steam Cloud bullet); save format `plans/12-client-engine.md`.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (87, 10, 'Steam Cloud saves', 680, 'Masterplan 10 part 4: one save per valid Steam user, synced by Steam Auto-Cloud (gamemaster, 2026-10-12: a save = a profile, so players, seen counters, blocked, flags and selection per profile come along, plan 65 / D-82); without a valid user the game plays memory-only and hides the flag action (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy). No Cloud API code unless the test shows a need. Owner: `plans/18-steam-integration.md` ("Steam features", Steam Cloud bullet); save format `plans/12-client-engine.md`.
+
+## Binding
+- decision 111: Steam only: saves and flags need a valid Steam user (`steam.available` and a non-zero SteamID, or the dev switch); without one: memory-only save, short notice, flag action hidden; soft check, no DRM; no "without Steam" rows in checklists or done-whens. Supersedes this plan''s earlier `local/` folder, S3 migration and «Usar el progreso de este equipo» dialog.
+- decision 39: Local builds start offline?: no start test outside Steam.
+- Never phones home: Auto-Cloud is Steam''s, no code of ours talks to the network.
+
+## Done already (tasks 660–663; partly undone below)
+- Per-user folder in `app/desktop/main.mjs` (`userSaveDir()`: `B/<steamid64>/`, else `B/local/`; `migrateToLocal()` S3 `B/game.json` + `backup/` → `local/`; `startSteam()` before the save is made; `--import-save` into the chosen folder). Stays: the `<steamid64>/` folder, the order, `TRIVIA_SAVE_DIR`. Goes: `local/`, `migrateToLocal`.
+- First-start offer: `save:local-offer`/`save:adopt-local` (`main.mjs`, `preload.cjs`, `save.mjs`), `lib/desktop.ts` type, `ready()` in `lib/engine.ts`, `game/LocalProgress.svelte`, its catalog strings. Goes entirely.
+- Auto-Cloud values and the Steam Cloud test table in plan 18 (task 662, task 663); decision 75 "Steam Cloud test passed?" pending with the old checklist (its `local/`/«Usar el progreso» row is void; plan 18''s table is what counts).
 
 ## Builds on (don''t rebuild)
-- `FileStore` and `app/desktop/save.mjs` (D-72, plan 55): `game.json` written as `game.json.tmp` + fsync + rename, `backup/game-<kind>-<stamp>.json`, stale `.tmp` dropped at start, `--import-save`; `saveDir()` in `app/desktop/main.mjs` (packaged `<userData>/save`, dev `state/desktop`, `TRIVIA_SAVE_DIR` wins).
-- Steam binding (plan 85): `startSteam()` in `main.mjs`, `steam.getStatus().steamId`, bridge `window.trivia.steam` (`steamId()`), `lib/desktop.ts`.
-- `lib/engine.ts` `ready()`: `store.load()` → fresh save → first-start language screen (D-86).
-- Achievements derive from the save (plan 86), so they follow the per-user save with no change.
-- Part 2 (task 254: Steamworks app configuration) enters the Auto-Cloud values in Steamworks; this plan writes them into plan 18 for it.
+- `FileStore` and `app/desktop/save.mjs` (D-72, plan 55): atomic `game.json.tmp` + rename, `backup/`, stale `.tmp` dropped, `--import-save`.
+- Plan 85 (`task 776: Valid Steam user check and dev switch (TRIVIA_DEV_STEAM_USER)`): `steam.user` from `main.mjs` (`--trivia-user`), `validUser` in `lib/desktop.ts` (true under plan 99''s dev server shim). This plan reads only these, never its own Steam test. Its tasks wait for task 776.
+- Plan 99 (dev server, `--import-save` for the family save, `ServerStore` removal): the family''s save reaches the desktop through `trivia-desktop --import-save`, not through a dialog.
+- Achievements derive from the save (plan 86) and unlock only with a valid user (plan 86''s call).
 
 ## Paths
-- Base folder `B` = `TRIVIA_SAVE_DIR` if set (then used as is, no subfolder: tests and dev keep one fixed file), else packaged `<userData>/save` (`%APPDATA%\trivia\save`, `~/.config/trivia/save`), dev `state/desktop`.
-- Under Steam (`steam` up and a non-zero SteamID64): `B/<steamid64>/game.json`. Without Steam: `B/local/game.json`.
-- Each folder keeps its own `game.json.tmp` and `backup/` (unchanged `makeSaveFile(dir)`).
-- Order in `start()`: `startSteam()` first, then pick the folder, then `dropStaleTemp`, migration, `--import-save` (into the chosen folder). Today `saveFile` is made at module load, before Steam: move it.
-- The SteamID is fixed for the session (Steam doesn''t switch users under a running game).
+- Base `B` = `TRIVIA_SAVE_DIR` if set (used as is, no subfolder), else packaged `<userData>/save` (`%APPDATA%\trivia\save`, `~/.config/trivia/save`), dev `state/desktop`.
+- Valid user with a SteamID: `B/<steamid64>/game.json` (each folder its own `.tmp` and `backup/`).
+- Dev switch without a SteamID (`TRIVIA_DEV_STEAM_USER=1`, no Steam): `TRIVIA_SAVE_DIR` if set, else `B/dev/game.json`; one stderr line names it. Packaged builds under the switch the same (smoke game, plan 89).
+- No valid user: no save file at all; `main.mjs` makes no `saveFile`, creates no folder, `save:*` load → null, write/backup → refused (soft, the page never calls them then).
+- Existing `B/local/` and S3''s `B/game.json` on disk: left alone, never read or deleted (the family imports via plan 99).
 
-## Migration of S3''s single save (SW-3)
-- At start, before anything else: `B/game.json` exists (S3 builds, dev `state/desktop/game.json`) and `B/local/game.json` doesn''t → rename it to `B/local/game.json` (same volume, atomic); `B/backup/` → `B/local/backup/` the same way. Both exist → leave `B/game.json` alone, one stderr line. Not with `TRIVIA_SAVE_DIR`.
-- Then the normal choice below, so an S3 player''s first Steam start offers that progress.
+## Without a valid user (page)
+- `ready()` picks the store: `validUser` → `FileStore` (desktop bridge or dev shim); else a `MemoryStore` (`lib/store.ts`: load → null, write → keeps the text in memory, nothing on disk). Fresh save → D-86 first-start language screen as usual, every start.
+- Notice: one short line «Sin Steam no se guarda el progreso» (wording the task''s; es, es-ES where it differs, en, de; `check:literals` passes), shown once per start where the save notices show today (`takeSaveNotice` path or the same spot), dismissable, keyboard/mouse/pad.
+- Flags: flag icon, `M` key, pad Select, «Preguntas marcadas» menu entry, `FlagDialog`/`FlagList` not reachable when `!validUser` (`Game.svelte`, `Overlay.svelte`, input maps); with a valid user as today (plan 93 builds on it in milestone 11).
 
-## First start under a SteamID
-- `B/<steamid64>/game.json` missing and `B/local/game.json` present → the page asks once, before the language screen: «Usar el progreso de este equipo» (copy `local/game.json` into the Steam folder; `local/` stays as it is) or «Empezar de cero» (fresh save, D-86 language screen as usual). No silent merge, no merging of two saves ever.
-- Steam downloads the cloud file before launch, so on a second machine the Steam folder already holds the save and nothing is asked.
-- «Empezar de cero» writes nothing until the first real write; asking again next start is fine as long as there is no save (no extra flag file).
-- Bridge: `save:load` replies `{ text, offerLocal }` or a separate `save:local-offer` → boolean and `save:adopt-local` → the copied text (the task picks one, same origin check as `save:*`; `lib/desktop.ts` type). Page: a small dialog component in the style of `SupplyNotice.svelte` (keyboard, mouse, pad), strings via `t()` in es, es-ES where it differs, en, de (`check:literals` passes); its language is the guessed one (`guessTag()`), since the save has none yet.
-- The shown copy names what''s in the local save: e.g. «3 jugadores, 41 partidas» (`t()` plural), so the choice is informed.
-
-## Auto-Cloud (values for part 2, in plan 18)
-- Root `WinAppDataRoaming`, subdirectory `trivia/save/{64BitSteamID}`, pattern `game.json`, OS all, non-recursive.
-- Root override for Linux: `WinAppDataRoaming` → `LinuxXdgConfigHome` (or `LinuxHome` + `.config`, whichever Steamworks offers today), same subdirectory; the Deck under Proton (D-92) uses the Windows path inside the prefix, no override needed.
-- Quota: 1 file, 20 MB (save envelope ≤ 10 MB, D-72).
-- Check by listing: only `game.json` matches; `game.json.tmp`, `backup/`, `local/` and other users'' folders stay local. If the test shows Steam picking up `.tmp` mid-write, rename the temp to `.game.json.tmp`/another name outside the pattern (small `save.mjs` change), not Cloud API.
-- Conflict (both machines changed offline): Steam''s own dialog at launch; whichever side the player picks wins whole; documented in 18, no code.
-- Family Sharing borrower: own SteamID → own folder, own cloud slot; nothing extra.
-
-## Rules
-- Never phones home: Auto-Cloud is Steam''s, no code of ours talks to the network.
-- Without Steam the game is S3''s game with the save at `local/`; the browser game (`trivia`, `state/game.json`) unchanged.
-- D-72''s D-entry in `plans/decisions.md` updated (path per SteamID, `local/`, migration, Auto-Cloud root); 12-client-engine.md Store bullet notes "one save per Steam user".
+## Auto-Cloud (values in plan 18, part 2 enters them)
+- Unchanged: root `WinAppDataRoaming`, subdirectory `trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive, Linux override `LinuxXdgConfigHome`, quota 1 file / 20 MB, Steam''s conflict dialog, Family Sharing borrower → own slot.
+- Plan 18 text drops `local/` and the migration; the cloud listing check reads "only `game.json`, never `.tmp`, `backup/`, `dev/`".
 
 ## Tasks (suggested order)
-1. Per-user save folder in the shell: `main.mjs` order (Steam first), `B/<steamid64>/` vs `B/local/`, S3 migration (`game.json` + `backup/` → `local/`), `--import-save` into the chosen folder, `TRIVIA_SAVE_DIR` unchanged; D-72 update, 18 Steam Cloud bullet and the platform checklist rows (`…\save\<id or local>\game.json`), `directory.md` if it lists the path. Check: without Steam an S3-layout folder migrates and plays; under Spacewar (480, `TRIVIA_STEAM_APPID`) the save lands in `<steamid64>/`.
-2. «Usar el progreso de este equipo» / «Empezar de cero»: IPC + `lib/desktop.ts`, `ready()` asks before the language screen, dialog component, strings in every catalog. Check: under Steam with only `local/` → the dialog; copy → same players and seen counts, `local/` unchanged; fresh → language screen; with a Steam save → no dialog; without Steam → no dialog.
-3. Auto-Cloud values into plan 18 "Builds and depots"/"Steam features" for part 2 (root, override, pattern, quota, conflict note); if task 254 is already done, a pm decision for the gamemaster "Auto-Cloud values entered in Steamworks?" with the exact values.
-4. Gamemaster test (needs the real App ID, part 2 and a packaged build from part 7 or task 650) as one pm decision "Steam Cloud test passed?", checklist in plan 18: machine A plays → quit → machine B (Windows ↔ Linux/Deck) shows the players and seen counts; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both, play on both, then online → Steam''s conflict dialog, the picked side wins; a `.tmp`/`backup/` never appears in Steam''s cloud file list (Steam client: game properties / `store.steampowered.com/account/remotestorage`). Failures become tasks in this plan.
-5. Close-out: 18 Steam Cloud row `[x]` with a note (the SW id plan 18 uses for Cloud, else the "Steam features" bullet), 12-client-engine.md, `plans/project.md`, `directory.md`.
+1. Shell: drop `local/` and the offer. `main.mjs`: remove `migrateToLocal`, `localFile`, `save:local-offer`/`save:adopt-local`; save folder per "Paths" from `steam.user` (task 776''s value) and the SteamID; no valid user → no `saveFile`, `save:*` refused; `--import-save` without a valid user → stderr "needs a Steam user", exit non-zero; `preload.cjs`, `save.mjs` and `lib/desktop.ts` lose the offer API. If plan 99''s `task 763` is still open and its body says `local/`, `pm task set` it (target = the user''s folder, `dev/` or `TRIVIA_SAVE_DIR`). Check: Spacewar (480) logged in → `<steamid64>/game.json`; `TRIVIA_DEV_STEAM_USER=1` without Steam → `dev/game.json`; neither → nothing written under `B` (stderr line).
+2. Page: `MemoryStore`, store choice in `ready()` by `validUser`, `LocalProgress.svelte` and its strings removed (every catalog), notice strings added, flag action hidden without a valid user. Check on plan 99''s dev server (valid) and with the shim forced off (not valid): notice shown, no flag icon/key/menu entry, a game plays, nothing written; valid: saves and flags as before.
+3. Docs: plan 18 Steam Cloud bullet (no `local/`, no migration, "no valid user → memory-only, flags hidden", dev folder) and the Steam Cloud test table: drop the `local/`/«Usar el progreso» and "no question" rows; add "Steam not running → full game, notice shown, no flag action, nothing written under `save/`"; listing row without `local/`. D-72 in `plans/decisions.md` (path per SteamID, `dev/`, no `local/`, memory-only), `12-client-engine.md` Store bullet ("one save per Steam user; memory-only without one"), `README.md` desktop save line, `directory.md` (`state/desktop/<steamid>|dev/`). Then `pm decision consequences` on decision 111 with what changed.
+4. Close-out (task 664, after decision 75 "Steam Cloud test passed?", read against plan 18''s revised table): 18 Steam Cloud row `[x]` with a note, test table filled from the answer, `12-client-engine.md`, D-72, `plans/project.md`, `directory.md`, `README.md`; failures become tasks in this plan.
 
 ## Done when
-- Under Steam each account has its own save under `save/<steamid64>/`, synced by Auto-Cloud between Windows and Linux/Deck; the first Steam start offers the local progress, never merges silently.
-- Without Steam: a full game as in S3, S3 saves migrated to `local/`; browser game unchanged.', '2026-10-13T05:51:42Z', 433);
+- Under Steam each account has its own save under `save/<steamid64>/`, synced by Auto-Cloud between Windows and Linux/Deck.
+- Without a valid user the game plays a full game memory-only with the notice, no flag action and nothing on disk; with the dev switch saves and flags work.', '2026-10-13T05:51:42Z', 433);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (88, 10, 'Store page and AI disclosure (PUB-8, LUI-6)', 300, 'Part 8 of masterplan 10: everything the gamemaster pastes into Steamworks'' store page admin for the `beta` milestone: texts per store language, AI disclosure, privacy line, system requirements, supported-languages table, controller flags, capsules and screenshots. Workers draft and render; the gamemaster approves (pm decisions) and enters them. Owners: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure", PUB-8), `plans/15a-ui-translation.md` (LUI-6).
 
 ## Inputs (write against them, don''t redo them)
@@ -15044,7 +15037,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:26:07Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (771, 87, 'revise plan 87', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (771, 87, 'revise plan 87', 'plan', 'done', 1000, '2026-10-13, plan 87 body (decision 111: local/, migration and offer dialog removed; memory-only store, notice, flags hidden, dev/ folder)', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
 (`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -15164,7 +15157,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 - Part 11 last.
 
 ## Out of scope (from the milestone)
-- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', NULL, 754);
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:28:12Z', 754);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (772, 88, 'revise plan 88', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
 (`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -15541,6 +15534,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check (stderr lines): `TRIVIA_DEV_STEAM_USER=1 trivia-desktop` without Steam → user true; plain `trivia-desktop` without Steam → false; dev server → `validUser` true (if task 762 is done). Under Spacewar (480) logged in → true goes into the close-out gamemaster check (task 652). Per-commit checks pass.', '2026-10-13T15:24:43Z', NULL, 775);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (777, 86, 'create tasks for plan 86', 'split', 'done', 1000, '2026-10-13, tasks 654, 655, 656, 658 aligned with revised plan 86 (validUser, dev switch, retroactive unlock, decision 74 recorded, Steam-only check rows); 657 unchanged', 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:26:04Z', '2026-10-13T15:26:48Z', 770);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (778, 87, 'create tasks for plan 87', 'split', 'open', 1000, NULL, 'Split plan 87 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:28:08Z', NULL, 771);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16792,6 +16787,7 @@ Language (fresh save: delete or move this user''s save/game.json first):
 - an existing save keeps its language
 
 On failure name the failing rows; the worker adds follow-ups in plan 85 (drop the Windows overlay, switch to ShowGamepadTextInput, drop Steam Input, or fix the valid-user check).', NULL, NULL, '2026-10-13T15:25:03Z', NULL, 775, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (114, 'Desktop save folder under the dev switch without a SteamID', 'answered', '[]', 'decision 111 drops plan 87''s local/ folder; TRIVIA_DEV_STEAM_USER (plan 85) needs a fixed folder when no SteamID exists. dev/ keeps dev saves apart from real Steam users'' folders and outside Auto-Cloud''s {64BitSteamID} path. Plan 87.', 'TRIVIA_SAVE_DIR if set, else <save base>/dev/game.json; no valid user → no save file at all', NULL, '2026-10-13T15:28:12Z', '2026-10-13T15:28:12Z', 771, NULL, 'rule', 771, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -17470,6 +17466,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (671, 775, '2026-10-13T15:23:32Z', '2026-10-13T15:25:24Z', 'done', NULL, 0, '5fa9eb72567d322d4e64920d2fecbaf823cfc0d6', 'claude-opus-5-5[1m]', '3eca9e5b-8503-4533-98c0-46b3204df1d1', 17, 34, 8927, 673534, 39512, 0.6294788, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (672, 770, '2026-10-13T15:25:24Z', '2026-10-13T15:26:14Z', 'done', NULL, 0, 'd384b00298cec6cbf003f69fe96ed496758bf8d0', 'claude-opus-5-5[1m]', '13cf023d-ebec-4fff-8e2b-c7d2ccd6da8f', 5, 10, 5501, 174516, 37134, 0.4420352, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (673, 777, '2026-10-13T15:26:14Z', '2026-10-13T15:26:56Z', 'done', NULL, 0, '60fe84e3ba14543dea5124ef6c43fe41ef213318', 'claude-opus-5-5[1m]', 'a426e153-ca5f-4b1f-9839-c9edd376ef7c', 7, 14, 4004, 214100, 29022, 0.355132, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (674, 771, '2026-10-13T15:26:57Z', '2026-10-13T15:28:22Z', 'done', NULL, 0, '441eeedfe6bafa9fe18d654089b7604f7916d0fc', 'claude-opus-5-5[1m]', '0f991789-d506-4caa-bb3a-b3aab683a3b2', 10, 20, 6912, 495260, 53126, 0.66238000000000008, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
