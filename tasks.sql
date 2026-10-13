@@ -379,7 +379,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Store page, AI disclosure, rating and the rest of publishing (PUB-6..PUB-11, `plans/17-publishing.md`).
 
 ## Constraints
-- The game never phones home; Steam only distributes and syncs saves.
+- The game plays without network; network requests only on the player''s click (question reports, milestone 11) or with opt-in telemetry; Steam distributes and syncs saves.
 - Steam only (decision 111): no "without Steam" rows in checklists, done-whens or decisions; existing fallbacks that also serve under Steam (letter picker in desktop mode) stay.
 
 ## Out of scope
@@ -18066,6 +18066,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Done when: a new verdict in the review tool gets `reviewed_at`; `qgen report --cost` shows a `colombia` row; `--review-time` prints minutes per 100 (0 timed verdicts → says so); per-commit checks pass.', '2026-10-13T16:04:10Z', NULL, 825);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (831, 11, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 11, the masterplan, in line with it (`pm plan edit 11 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (832, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
