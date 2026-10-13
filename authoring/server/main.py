@@ -83,6 +83,9 @@ import media_cache  # noqa: E402  (app/server/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
+import reviews  # noqa: E402  (authoring/tools/reviews.py)
+from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
+                     update_question, update_translation)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
 from qgen import PROBLEMS, audit_of, is_major, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
@@ -90,49 +93,6 @@ import targets  # noqa: E402  (authoring/tools/targets.py)
 import translations  # noqa: E402  (authoring/tools/translations.py)
 
 download.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
-
-POOL = layout.SOURCE_POOL
-DECISIONS = {"approved", "rejected", "needs_work"}
-REVIEWERS = {"human", "llm"}
-
-class NoQuestion(KeyError):
-    """No question (or translation) with this id: 404."""
-
-
-def load_pool():
-    return json.loads(POOL.read_text(encoding="utf-8"))
-
-
-def save_pool(data):
-    atomic.write_json(POOL, data)
-    pool_export.write(data)  # the game reads only the export (D-35)
-
-
-def update_question(qid, change):
-    """Re-read the pool, apply change(q) to one question, write atomically (08, "API")."""
-    with atomic.locked(POOL):
-        data = load_pool()
-        for q in data["questions"]:
-            if q["id"] == qid:
-                change(q)
-                save_pool(data)
-                return q
-    raise NoQuestion(qid)
-
-
-def update_translation(locale):
-    """update_question for questions.<locale>.json; re-exports pool.<locale>.json and the packs' (plan 67)."""
-    def update(qid, change):
-        with atomic.locked(POOL), translations.locked(locale):  # POOL: the export reads it
-            doc = translations.load(locale)
-            for t in doc["questions"]:
-                if t["id"] == qid:
-                    change(t)
-                    translations.save(locale, doc)
-                    pool_export.write_texts(translations.export_texts(locale, load_pool()), locale)
-                    return t
-        raise NoQuestion(qid)
-    return update
 
 
 def locale_of(value):
@@ -317,33 +277,6 @@ def set_difficulty(qid, difficulty, update=update_question):
     return update(qid, change)
 
 
-def set_review(qid, review, update=update_question):
-    """Set or reset one question's review, or with `update` its translation's.
-    A new decision is a human review; it keeps the LLM review it replaces as `previous` (D-33).
-    A review that names its reviewer is an undo putting an earlier review back as it was."""
-    restore = review is not None and "reviewer" in review
-    if review is not None:
-        if review.get("decision") not in DECISIONS:
-            raise ValueError("decision must be approved, rejected or needs_work")
-        feedback = (review.get("feedback") or "").strip() or None
-        if review["decision"] == "needs_work" and not feedback:
-            raise ValueError("needs_work requires feedback")
-        if restore and review["reviewer"] not in REVIEWERS:
-            raise ValueError("reviewer must be human or llm")
-        review = {"decision": review["decision"], "feedback": feedback,
-                  "reviewed_on": review.get("reviewed_on") or datetime.date.today().isoformat(),
-                  "reviewer": review.get("reviewer", "human"), "model": review.get("model"),
-                  "previous": review.get("previous"), **({"problems": review["problems"]} if review.get("problems") else {})}
-
-    def change(q):
-        if review is not None and not restore:
-            old = q.get("review") or {}
-            review["previous"] = old if old.get("reviewer") == "llm" else old.get("previous")
-        q.update(review=review, status=review["decision"] if review else "draft")
-
-    return update(qid, change)
-
-
 def set_translatable(qid, value):
     """The source's translatable flag (absent = true, D-81); false rejects its non-rejected translations
     as a human review, validate's rule (plan 63). Writes the locale files, then the pool and every export."""
@@ -385,26 +318,19 @@ def apply_flags():
     would break a running game. The flags stay in game.json; state/flags-applied.json records the applied ones (D-59)."""
     ledger = save_file.applied()
     pending = {k: v for k, v in save_file.flags().items() if ledger.get(k) != save_file.stamp(v)}
-    known = {"es": {q["id"]: q for q in load_pool()["questions"]}}
+    known = {}
     done = []
     for qid, flag in pending.items():
         locale = flag.get("locale") or "es"
-        if locale not in known and locale in translations.LOCALES:
-            known[locale] = {t["id"]: t for t in translations.load(locale)["questions"]}
-        q = known.get(locale, {}).get(qid)
-        if q is None:
-            print(f"Flag for unknown question {qid} ({locale}) dropped", file=sys.stderr)
-            continue
         where = ", ".join([*filter(None, [flag.get("player"), flag["flagged_on"][:10]]),
                            *([locale] if locale != "es" else [])])
         note = f": {flag['note']}" if flag.get("note") else "."
         shown = flag.get("shown")
         seen = (f" · Vista: «{shown['question']}» Respuesta: «{shown['answer']}»; otras: "
                 f"{' / '.join(f'«{w}»' for w in shown['wrong_answers'])}." if shown else "")
-        feedback = f"Marcada en el juego ({where}){note}{seen}"
-        old = (q.get("review") or {}).get("feedback")
-        set_review(qid, {"decision": "needs_work", "feedback": f"{feedback} Antes: {old}" if old else feedback},
-                   update_translation(locale) if locale != "es" else update_question)
+        if reviews.needs_work(qid, locale, f"Marcada en el juego ({where}){note}{seen}", known) is None:
+            print(f"Flag for unknown question {qid} ({locale}) dropped", file=sys.stderr)
+            continue
         done.append(qid if locale == "es" else f"{qid} ({locale})")
     if pending:
         save_file.record_applied({k: save_file.stamp(v) for k, v in pending.items()})

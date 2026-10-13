@@ -18,6 +18,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
+    qgen flag [--dry-run] < reports.txt   # pasted player reports become needs_work reviews (plan 93)
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
@@ -62,6 +63,7 @@ import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
+import reviews  # authoring/tools/reviews.py: review writes, player reports (plan 93)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
 # ranges (D-22) show per game, times 3. These are the focus group's (young teens, window 1–10,
@@ -3627,6 +3629,36 @@ def write_neutralize_report(run, revised):
     return write_report(run, lines)
 
 
+# --- player reports (plan 93) -------------------------------------------------
+
+def apply_reports(reports, dry_run=False):
+    """Reports (reviews.report_feedback's dicts) → human needs_work reviews; returns (applied, already, skipped)."""
+    known, n = {}, Counter()
+    for r in reports:
+        where = r["question"] + (f" ({r['lang']})" if r["lang"] != "es" else "")
+        new = reviews.needs_work(r["question"], r["lang"], reviews.report_feedback(r), known, dry_run)
+        if new is None:
+            print(f"  {where}: unknown question, skipped", file=sys.stderr)
+            n["skipped"] += 1
+        elif not new:
+            print(f"  {where}: already there")
+            n["already"] += 1
+        else:
+            print(f"  {where}: needs_work" + (f" ← {new}" if dry_run else ""))
+            n["applied"] += 1
+    return n["applied"], n["already"], n["skipped"]
+
+
+def cmd_flag(args):
+    """Pasted report text (stdin) → needs_work reviews (plan 93, decision 142)."""
+    reports = reviews.parse_reports(sys.stdin.read())
+    if not reports:
+        sys.exit("no report found: paste text with a «¡Trivia! #q-… · …» line")
+    applied, already, skipped = apply_reports(reports, args.dry_run)
+    print(f"{len(reports)} reports: {applied} {'would be ' if args.dry_run else ''}applied, "
+          f"{already} already there, {skipped} skipped")
+
+
 # --- export, validate, bundle new (D-35) --------------------------------------
 
 def cmd_export(args):
@@ -4106,6 +4138,9 @@ def main():
     ha.set_defaults(fn=cmd_health_ack)
     ha.add_argument("batch")
     ha.add_argument("note")
+    fl = sub.add_parser("flag", help="pasted player reports (stdin) become needs_work reviews (plan 93)")
+    fl.set_defaults(fn=cmd_flag)
+    fl.add_argument("--dry-run", action="store_true", help="print the changes, write nothing")
     rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
     rw.set_defaults(fn=cmd_rework)
     rw.add_argument("--batch", help="only this batch's needs_work questions")

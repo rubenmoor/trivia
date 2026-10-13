@@ -54,6 +54,12 @@ A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<lo
 - Proposals: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
 - Pilot `tr-<locale>-1` (QT-5): the next run waits for `qgen health ack`; the go is the developer's.
 
+## Player reports
+
+Players report questions from the game (plan 93); each report becomes a human `needs_work` review, outside the batch steps.
+
+- Pasted report text (copied from «Preguntas marcadas»): `qgen flag [--dry-run] < reports.txt`; feedback «Reporte de jugador (…)» in `/review?status=needs_work`, older feedback after «Antes:»; es → source, en/de → that translation; unknown ids skipped, a repeated report adds nothing.
+
 ## Never
 
 - Change prompts, house style or `qgen.py` inside a batch run or a QC task; only in the change tasks of step 4.
