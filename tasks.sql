@@ -4818,69 +4818,54 @@ Steps in order, each ✓/✗ with time; report `work/steam/<tag-or-sha>/release-
 - `trivia-release-check` runs steps 1–7 and fails on any ✗; `trivia-steam upload --branch beta` uploads a clean tagged commit''s three depots plus one DLC depot per shipped pack; `default` can''t be set from the repo.
 - The first beta build is on Steam (task 7''s decision), SW-6 and SW-10 `[x]` in plan 18.
 - No secrets in git; SteamCMD output only under `work/` or SteamCMD''s home; `trivia-desktop-build` without `--dir` behaves as before; the smoke game runs under the dev switch, no checks of the game outside Steam (decision 111).', '2026-10-13T06:52:57Z', 261);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (90, 10, 'Steam Deck test and Deck Verified (SW-12)', 370, 'Part 10 of masterplan 10 (SW-12). The Steam-installed `beta` build gets a checklist test on a real Steam Deck, against Valve''s current Deck Verified criteria plus Cloud sync with a PC, suspend/resume and a free DLC installed and uninstalled; the gamemaster runs it and reports through a pm decision. Then, once the store page exists, the Deck compatibility review is requested from Valve, or noted for S6 if Valve only reviews after release / coming soon. Docs and pm only; no code: failures become fix tasks. Workers own no Deck and never tick a row themselves.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (90, 10, 'Steam Deck review and Deck test (SW-12)', 370, 'Part 10 of masterplan 10 (SW-12). Deck support is best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet, so Valve''s Deck compatibility review is requested without a prior real-Deck test, once the 1280×800 fit, the image peek, the Gamepad template as Steam Input default and a `beta` upload are in. Workers write the criteria table and the exact request steps; the gamemaster requests in Steamworks and reports Valve''s result through a pm decision. The real-Deck checklist is written down for later, not run here. Docs and pm only; no code: Valve''s notes become fix tasks.
 
 ## Binding
-- decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy: only the Steam-launched build; no "without Steam" rows. The Deck runs logged in, so a valid Steam user (`steam.available`, non-zero SteamID) is the normal case: saves persist, flag action shown, no "progress needs Steam" notice.
-- decision 66: Price model (OQ-33): bundles are free DLC with optional install; decision 112: Pack layout: a pool file per bundle (optional install): a pack is offered only when its files are installed.
+- decision 125: Steam Deck: best effort, review without a Deck at hand: no real-Deck test before the review; the real-Deck test and further tuning once a Deck is at hand, not a precondition of the review or of milestone 10. Replaces plan 18''s "Test on a real Deck before applying".
+- decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy: only the Steam-launched build; no "without Steam" rows. The Deck runs logged in: valid Steam user is the normal case.
+- decision 66: Price model (OQ-33): bundles are free DLC with optional install; decision 112: Pack layout: a pool file per bundle (optional install).
+- decision 90: Store requirements, languages and controller flags?: controller "Partial" until the pad-only run passes; a Deck test on the release candidate (milestone 11). Don''t contradict it; the review result feeds it.
 
 ## Depends on (guard at the start of each task)
-- First `beta` upload recorded: `task 682: Record the first beta upload` done (decision 89 answered). Without a Steam-installed build the test can''t run.
-- SW-8 checked: `task 652: SW-8 close-out: gamemaster check and docs` (decision 72). Its Deck rows (floating keyboard, glyphs) are prerequisites here, not repeated.
-- Cloud test of plan 87 (`Steam Cloud test` section in `plans/18-steam-integration.md`, decision 75): if not yet run, the Deck can be its machine B; the Deck rows below refer to it, don''t copy it.
-- Plan 48''s S3 Deck rows ("S3 platform test" in plan 18, `task 238`/`task 236`): non-Steam-game install with built-in controls. This plan repeats nothing that S3 checked; it adds what only the Steam install has (launch through Steam, Steam Input default config, floating keyboard, Cloud, Deck review). If plan 48''s Deck table isn''t filled yet, link it and let the gamemaster fill both in one sitting.
-- DLC depots (plan 89, decision 66): the `beta` upload carries at least one free DLC depot if milestone 9 ships a non-base bundle; if none ships yet, the DLC row is n/a with that reason.
-- Achievements (plan 86): if unlocks are wired at test time, one row (toast shows on the Deck); else skipped with that reason.
+- First `beta` upload recorded: `task 682: Record the first beta upload` done (decision 89 answered).
+- Image peek: plan 113 "Image peek on image questions" (milestone 8) done.
+- Gamepad template as Steam Input default: SW-7''s checklist in `plans/18-steam-integration.md` (masterplan 10 part 2) lists it and the gamemaster confirmed the values entered (its pm decision answered). If part 2''s plan doesn''t exist yet: stop, say so.
+- 1280×800 fit: plan 46, done.
+- Store page (plan 88: Store page and AI disclosure) only if Valve needs it for the review (task 1 finds out).
 - Guard: if a prerequisite waits on a pending decision, `pm task-pending-decision <this task> <that decision>`; if it''s just open, stop without changes and say so.
 
 ## Facts to rely on
-- The Deck runs the **Linux build** from the `linux` + `content` depots (decision 84: SteamCMD source and depot split), launched through `./trivia` (launcher with `--no-sandbox`).
-- No overlay on Linux (decision 70: Steam overlay in the Electron shell, D-92); the Deck gets it only via Proton running the Windows build. Default under test: native Linux, no overlay. Proton = one optional row ("if cheap"): force Proton in the game''s Properties → Compatibility; overlay, keyboard, save path in the prefix (plan 87 notes the Proton save path needs no override).
-- Text ≥ 9 px at 1280×800 already checked by script (SW-4); the Deck row is legibility at arm''s length on the real screen.
-- No DRM: game also starts with Steam offline (Deck in airplane mode).
+- Deck runs the **Linux build** (`linux` + `content` depots, decision 84: SteamCMD source and depot split) via `./trivia`; no overlay on Linux (decision 70: Steam overlay in the Electron shell, D-92); Proton with the Windows build is the overlay route.
+- Text ≥ 9 px at 1280×800 checked by script (SW-4); floating keyboard and glyphs are SW-8''s (plan 85, task 652).
+- No DRM: starts with Steam offline.
 
 ## Valve''s criteria (re-read before task 1)
-- Source: `partner.steamgames.com/doc/steamdeck/compat` (criteria) and `…/steamdeck/reviews` or the "Steam Deck Compatibility" section of the app in Steamworks (review process). If the worker can''t reach them, the decision body asks the gamemaster to confirm the list and the timing.
+- Source: `partner.steamgames.com/doc/steamdeck/compat` (criteria), `…/steamdeck/reviews` or the app''s "Steam Deck Compatibility" section (process). Unreachable → the decision body asks the gamemaster to confirm list and timing.
 - Expected categories (verify; Valve''s wording wins):
-  - Input: full controller support with the default config; glyphs match the Deck''s controls (Xbox-style; no keyboard/mouse prompts); on-screen keyboard for text entry (our player name); no keyboard/mouse needed.
-  - Seamlessness: no compatibility warnings on start; no launcher, or a controller-navigable one.
-  - Display: default resolution 1280×800 or 1280×720 (we fill the screen at 16:10); text legible (≥ 9 px at 800p).
-  - System support: runs under SteamOS (native or Proton); no unsupported anti-cheat (none).
-- Review timing: check whether Valve reviews unreleased apps (before release, after the coming-soon page, or only on request with a build on `default` or a named branch with password). Expected: request from the app''s Steamworks page once a build exists; verify. `default` stays empty until S6 (decision 84), so if Valve only tests `default` the review moves to S6.
+  - Input: full controller support with the default config; Deck/Xbox glyphs, no keyboard/mouse prompts; on-screen keyboard for text entry (player name); no keyboard/mouse needed.
+  - Seamlessness: no compatibility warnings; no launcher.
+  - Display: 1280×800 or 1280×720 default; legible text (≥ 9 px at 800p).
+  - System support: runs under SteamOS (native or Proton); no unsupported anti-cheat.
+- Review timing: does Valve review unreleased apps (before release, after coming-soon, only with a build on `default`, or a named branch with password)? `default` stays empty until S6 (decision 84); if Valve only tests `default` or released apps, the request moves to S6.
 
 ## Tasks
-1. **Deck checklist and the test decision**
-   - Guard (above). Read Valve''s docs (above); write section "Steam Deck Verified" in `plans/18-steam-integration.md` (replace its current 2-line stub): criteria table (Valve''s criterion → what the game does → how to check), then table "Deck beta test" (date, BuildID, SteamOS version; columns check, result ✓/✗/n/a, note), then "Review": the documented timing and how to request.
-   - Rows (Steam-installed `beta`, Game Mode, built-in controls only):
-     - Install from the `beta` branch (password); Steam shows no compatibility warning; launch → straight into the game, fullscreen 1280×800, no launcher or console window.
-     - Default controller config works without touching Steam Input settings; every menu, joker, dialog and the ☰ overlay reachable; glyphs Xbox-style everywhere, no keyboard prompts.
-     - Player name: A on the field → Steam''s floating keyboard; Enter submits (task 652 already checked the mechanism; here only on the installed build).
-     - A full game to level 12 or a loss; image, audio and video questions; music and sounds.
-     - Text legible at arm''s length; nothing cut off; credits screen scrolls.
-     - Suspend (power button) mid-question → resume: game continues, sound back, pad works; same during a video.
-     - Valid user: no "progress needs Steam" notice; flag action present (icon, pad Select).
-     - Steam button → Exit game → relaunch: save intact (players, seen counts).
-     - Free DLC: install it (game''s Properties → DLC) → relaunch → its pack offered and playable (a question from it with media); uninstall → relaunch → pack no longer offered, stored choice falls back to defaults, no error, base game plays.
-     - Airplane mode (Steam offline mode): launch and play a few questions; save still written.
-     - Cloud: play on the Deck → PC shows the same players and seen counts, and back (refer to plan 87''s table rows; fill there if not yet done).
-     - Optional: achievements toast (plan 86); Proton row (Windows build forced: starts, overlay Shift-equivalent via Steam button, save syncs with the native one).
-     - Battery/heat note: rough drain over 30 min (info only, no pass/fail).
-   - `did=$(pm decision add "Steam Deck beta test passed?" --body - …)` with the rows, how to report (copy the table or name failing rows; ✗ needs how to reproduce), and Valve''s review timing for confirmation; options `passed`, `passed with minor issues (list them)`, `failed (list rows)`. `pm task-pending-decision` tasks 2 and 3 on it.
-   - Done when: section written, decision pending, tasks 2–3 wait.
-2. **Record the Deck test**
-   - Fill the "Deck beta test" table from the answer.
-   - Minor issues → `plans/backlog.md` (SW-12 prefix). Failures → one `pm task add` per failing row in the owning plan if it still has open tasks (85 binding, 87 Cloud, 89 builds/depots), else in this plan; a re-test decision with only the failed rows plus the full-game row; this task pending on it; stage and stop without closing.
-   - A finding that settles something (e.g. "Deck stays native Linux", "Proton needed for the keyboard") → D-entry in `plans/decisions.md` + `pm decision record`.
-   - Done when: every non-optional row ✓.
-3. **Request the Deck review (or defer to S6) and docs**
-   - Extra guard: the store page exists (plan 88: Store page and AI disclosure, its texts pasted in per its decision); if not, pending on that decision or stop as in the guard above.
-   - If Valve reviews before release with our setup (beta branch or no live `default` needed): `pm decision add "Deck compatibility review requested? Result?"` with the exact steps (Steamworks app → Steam Deck Compatibility → request; branch and password if asked; what to paste from the criteria table), options `Verified`, `Playable (Valve''s notes)`, `Unsupported (notes)`, `not yet reviewed`; pending on it. On `Playable`/`Unsupported`: per Valve note a fix task (owning plan as in task 2), then request again; Valve''s result and date in plan 18.
-   - If only after release or coming-soon: no request now; `plans/11-steam.md` ST-4 gains "request Deck review (SW-12), Valve''s timing: …"; masterplan 11 (plan 11) gets a dated note via `pm plan edit 11 --body -` only if it''s written and doesn''t list it.
-   - Docs: plan 18 SW-12 `[x]` (review result, or "test passed; review in S6" with reason); `plans/14-input.md` Steam Deck line (real-Deck result); `plans/project.md` in sync.
-   - Done when: the review result is recorded or the S6 note is in place, and SW-12 is ticked.
+1. **Criteria table and the review request**
+   - Guard (above). Read Valve''s docs. Replace the 2-line stub "Steam Deck Verified" in `plans/18-steam-integration.md`:
+     - criteria table: Valve''s criterion → what the game does (plan, decision, or file) → evidence (script, SW-8 check, plan 46 layout, plan 113 peek, SW-7 Gamepad default)
+     - "Review": Valve''s documented timing and how to request; best effort per decision 125, no real-Deck test first
+     - "Real-Deck test (later)": the checklist for when a Deck is at hand, rows only, no results; builds on plan 48''s S3 Deck rows, no copy: install from `beta`, no warning, straight into the game fullscreen; default controls without touching Steam Input, every menu/joker/dialog/☰ reachable, Xbox glyphs; name via floating keyboard; full game with image (peek), audio, video questions; legible at arm''s length, credits scroll; suspend/resume mid-question and during a video; no "progress needs Steam" notice, flag action present; Exit → relaunch, save intact; free DLC install/uninstall (pack offered/gone, defaults, no error); airplane mode; Cloud Deck ↔ PC (refer to plan 87''s table); optional achievements toast, Proton row; battery note
+   - `plans/backlog.md`: "SW-12 real-Deck test: once a Deck is at hand, run plan 18''s ''Real-Deck test (later)'' (decision 125)".
+   - If Valve reviews with our setup before release: extra guard on the store page if Valve needs it (plan 88''s paste-in decision); then `did=$(pm decision add "Deck compatibility review requested? Result?" --body - …)` with the exact steps (Steamworks app → Steam Deck Compatibility → request; branch and password if asked; what to paste from the criteria table), options `Verified`, `Playable (Valve''s notes)`, `Unsupported (notes)`, `not yet reviewed`; `pm task-pending-decision` task 2 on it.
+   - If only after release or coming soon: no decision; `plans/11-steam.md` ST-4 gains "request Deck review (SW-12), Valve''s timing: …"; masterplan 11 gets a dated note via `pm plan edit 11 --body -` only if it''s written and doesn''t list it; task 2 records the deferral.
+   - Done when: section written; decision pending with task 2 waiting, or the S6 note in place.
+2. **Record the review result and docs**
+   - Valve''s result and date in plan 18 "Review". `Playable`/`Unsupported`: one `pm task add` per Valve note in the owning plan if it still has open tasks (85 binding, 87 Cloud, 89 builds/depots, 113 peek), else in this plan; a re-request decision; this task pending on it; stage and stop without closing. `not yet reviewed`: pending on a fresh copy of the decision.
+   - A finding that settles something (e.g. "Deck via Proton needed") → D-entry in `plans/decisions.md` + `pm decision record`.
+   - Docs: plan 18 SW-12 `[x]` (Valve''s result, or "review in S6" with reason; real-Deck test pending a Deck, decision 125); `plans/14-input.md` Steam Deck line; `plans/project.md` in sync.
+   - Done when: the result (or S6 deferral) is recorded and SW-12 is ticked.
 
 ## Out of scope
-- Fixing anything found (fix tasks in the owning plans); Remote Play Together (SW-13); the family beta test on a second machine (part 11).', '2026-10-13T08:19:26Z', 262);
+- Running the real-Deck test and Deck tuning (once a Deck is at hand, decision 125); fixing Valve''s notes (fix tasks in the owning plans); Remote Play Together (SW-13); the family beta test (part 11).', '2026-10-13T08:19:26Z', 262);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (91, 11, 'Version numbers and patch-safe saves', 600, 'Part 2 of masterplan 11 (S6): every public build carries one semver version and a pool version, and a patch that adds, fixes or drops questions never breaks a save. Today the version `0.1.0` sits twice (`flake.nix`, `app/desktop/package.json`), the game shows neither, and a running game whose current card was dropped by a patch throws `KeyError` on the next answer (`game.ts` `question()`). Part 3 (release checklist, task 266) and part 5 (report text, task 267) build on this. Owners: `plans/18-steam-integration.md` ("Builds and depots", version bullet), `plans/12-client-engine.md` (save format, new "Saves across patches").
 
 ## What exists (checked 2026-10-13)
@@ -21992,7 +21977,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:02:01Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (930, 90, 'revise plan 90', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (930, 90, 'revise plan 90', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 90 rewritten per decision 125 (review without real-Deck test; real-Deck checklist written for later)', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
 (`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22121,7 +22106,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 - Part 11 last.
 
 ## Out of scope (from the milestone)
-- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:03:12Z', 913);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (931, 89, 'create tasks for plan 89', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 932 for plan 89 task 11 (Deck row, decision 125); tasks 681-683, 786 still in line', 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:01:58Z', '2026-10-13T18:02:27Z', 929);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (932, 89, 'Deck row best effort in the release check (decision 125)', 'work', 'open', NULL, NULL, 'Plan 89 task 11 (decision 125: Steam Deck: best effort, review without a Deck at hand). No real Deck yet, so the release check''s manual `deck` row must not fail.
@@ -22134,6 +22119,8 @@ Work:
 - Interactive prompt shows the hint; `--manual FILE` reads `deck: no Deck (decision 125)`.
 - Docs: `plans/18-steam-integration.md` "Builds and depots" / SW-6 row text: the Deck row is best effort per decision 125.
 - Check: `trivia-release-check --manual <file>` with `deck: no Deck (decision 125)` (other steps `--skip`ped as needed) shows the row ✓; `deck: n` still ✗. Per-commit checks pass.', '2026-10-13T18:02:25Z', NULL, 931);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (933, 90, 'create tasks for plan 90', 'split', 'open', 1000, NULL, 'Split plan 90 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:03:10Z', NULL, 930);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -24207,6 +24194,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (773, 928, '2026-10-13T18:01:02Z', '2026-10-13T18:01:25Z', 'done', NULL, 0, 'b9d13f8f5f4181e52289ca5d744990318a2a59ca', 'claude-opus-5-5[1m]', 'ae5eefcc-91e2-478f-bc42-fb1b3c3d7582', 4, 8, 1351, 133496, 32155, 0.3109912, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (774, 929, '2026-10-13T18:01:26Z', '2026-10-13T18:02:06Z', 'done', NULL, 0, '915ed98a89fcc02fdc3c3bcb88e42fc244cf9f72', 'claude-opus-5-5[1m]', '749f7612-c168-46c9-921e-8791cd0213dd', 10, 20, 3422, 403199, 37394, 0.4483118, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (775, 931, '2026-10-13T18:02:06Z', '2026-10-13T18:02:32Z', 'done', NULL, 0, 'b744762dec03ff02261c3c9d9f4f4f091e00b938', 'claude-opus-5-5[1m]', '48e09ffd-fe88-4f6b-9018-7048ed0c2575', 6, 12, 2041, 247209, 45507, 0.45436580000000004, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (776, 930, '2026-10-13T18:02:33Z', '2026-10-13T18:03:19Z', 'done', NULL, 0, 'f5f2d0edd31a0d775bfbd02ba30589461716801a', 'claude-opus-5-5[1m]', 'cb3a0461-785d-4b07-b159-15ae7fa40175', 5, 10, 4659, 180153, 37172, 0.4266266, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
