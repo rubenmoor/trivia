@@ -12560,6 +12560,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `trivia-authoring` (`apply_flags` in `authoring/server/main.py`): needs-work feedback includes the note: «Marcada en el juego (player, date): <note>»
 - Catalog: es/en/de/xx leaves for the dialog; drop unused `report.*` leaves; `check:literals` passes
 - Docs: README line on `M` (also says it marks «needs work» on the next `trivia-authoring` start), plans 04 and 13 (MD-6, GM-5)', '2026-10-13T02:50:43Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (626, 82, 'Vite native config loader warning: import extensions in config files', 'work', 'open', NULL, NULL, 'Gamemaster saw on `npm run build -w app/client` (2026-10-13):
+
+> (!) Your Vite config uses features that are unsupported by `configLoader: ''native''` … import "./src/lib/types" without a file extension (credits.ts:5:76). Add the file extension
+
+- `app/client/credits.ts:5`: `"./src/lib/types"` → `"./src/lib/types.ts"`
+- Check every file `vite.config.ts` pulls in (app/client, authoring/ui) for extensionless imports
+- Done when `npm run build` prints no `configLoader` warning; don''t set `VITE_CONFIG_NATIVE_IGNORE_WARNING`', '2026-10-13T02:52:56Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
