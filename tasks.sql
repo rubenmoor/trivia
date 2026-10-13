@@ -20387,8 +20387,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:27:26Z', '2026-10-13T17:40:14Z', 872);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (879, 106, 'create tasks for plan 106', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 886, 887', 'Split plan 106 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:30:43Z', '2026-10-13T17:40:50Z', 873);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (880, 107, 'create tasks for plan 107', 'split', 'open', 1000, NULL, 'Split plan 107 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:33:00Z', NULL, 874);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (880, 107, 'create tasks for plan 107', 'split', 'done', 1000, '2026-10-13, tasks.sql', 'Split plan 107 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:33:00Z', '2026-10-13T17:41:26Z', 874);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (881, 108, 'create tasks for plan 108', 'split', 'open', 1000, NULL, 'Split plan 108 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:34:46Z', NULL, 875);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (882, 109, 'create tasks for plan 109', 'split', 'open', 1000, NULL, 'Split plan 109 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -20475,6 +20475,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Docs
 - `plans/12-client-engine.md`: short section "Telemetry recording" (derived from the save, side file, no save change, consent gate)', '2026-10-13T17:40:48Z', NULL, 879);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (888, 107, 'Shell: telemetry send at quit and next start', 'work', 'open', NULL, NULL, 'Implement plan 107 ("Send" and "When" sections) in `app/desktop/telemetry.mjs` + `main.mjs`. Binding: decision 120: Telemetry send: at quit, one later try at the next start; decision 119: Telemetry recording: derived from the save into a per-install side file; decision 121: Telemetry consent: stored per install, not in the save; decision 111: Steam only.
+
+## Runs after (wait if open, don''t duplicate)
+- task 699: Shell: report ticket and send (report:available, report:send)
+- task 884: Telemetry server: routes, migration and validation
+- task 886: Shell: telemetry store (install.json, session file, IPC)
+
+## Do
+- Gate per send: `validUser`, `install.json` consent `true`, non-empty URL; closed → no ticket, no request, no file read beyond `install.json`; one start log line `trivia: telemetry off`.
+- Body: session file parsed, `index` removed, `install` from current `install.json`, `ticket` added; > 64 KiB serialized → delete unsent; unreadable JSON → delete, dev log.
+- Shared ticket + fetch helper with the report send (identity and path as parameters; factor out of task 699''s code if inlined); identity constant `trivia-telemetry` next to the reports'' one; fresh ticket per request, cancelled after the response; 2 s callback timeout → status 0; dev switch without SteamID → `dev-<random>`.
+- URL: `reportUrl` in `app/desktop/package.json` = base; main appends `/reports` and `/telemetry`; if task 699 stored the full `/reports` URL, turn it into the base and adjust the report send. Same dev override `TRIVIA_REPORT_URL`.
+- Answers: `201`, `200 duplicate`, `400`, `413`, `415`, `503` → delete; `401`, `429`, `500`, `502`, status 0 → rename to `<session>.retry.json` (still in `pending()` and the 5-file cap); at the later try any answer → delete.
+- Quit: first `before-quit` with gate open and a current session file → `preventDefault()`, hide window, wait for save queue + telemetry queue (last `length_s` stamp), send, `app.quit()` again with `flushed` flag; 4 s budget for ticket + request, timeout → status 0 → `.retry.json`. Sessions with `games: []` are sent too.
+- `SIGTERM`: check whether Electron routes it through `before-quit`; if not, `process.on("SIGTERM", () => app.quit())`.
+- Next start: once, 30 s after window load, gate open: every `pending()` file except the current session''s, oldest first, one at a time, 5 s connect + 10 s total; then delete whatever the answer.
+- Silent: nothing to the player or the page; no new IPC, no new dependency. Dev log one `console.error` per request: `trivia: telemetry → <status>` + `kept`/`dropped`; never body, ticket, session/install id, URL query, SteamID.
+
+## Check
+`trivia-report-server dev` + `trivia-desktop`, `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_REPORT_URL=http://127.0.0.1:8787`, `TRIVIA_TELEMETRY_DIR` in `/tmp`:
+- consent yes, play one question, quit → `GET /telemetry` (pull token) shows the session with its game, file gone, log `→ 201`
+- server down at quit → `.retry.json` kept, quit ≤ 4 s; next start with server up → sent after ~30 s, file gone
+- `kill -9` mid-game → next start sends it with `result: "open"`
+- `kill -TERM` → sent at quit (or record Electron ignores it and the handler fixes it)
+- resend of an acked session → `200 duplicate`, file gone
+- consent off or no `install.json` → log `telemetry off`, no `telemetry →` line, dev server log shows no request
+- Per-commit checks (AGENTS.md).
+
+## Docs
+- `plans/18-steam-integration.md`: ticket identity `trivia-telemetry`, base URL, send at quit / next start
+- `directory.md`: row for `app/desktop/telemetry.mjs` (send part)
+
+## Not here
+- Consent question and Esc toggle (plan 108), pull (plan 109), deploy and Steam-side close checks (Steam "Stop" Linux/Deck/Windows, Deck sleep; plan 110).', '2026-10-13T17:41:25Z', NULL, 880);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22520,6 +22554,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (749, 877, '2026-10-13T17:37:44Z', '2026-10-13T17:39:45Z', 'done', NULL, 0, '38a61730fef45ec4940088c5edd6ee4071c7cc9e', 'claude-opus-5-5[1m]', 'a0411086-6e34-4d83-8670-5bc5592b26ee', 15, 28, 8421, 664237, 60050, 0.7817794, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (750, 878, '2026-10-13T17:39:46Z', '2026-10-13T17:40:18Z', 'done', NULL, 0, '469660a11bc4c056061d3e04c287eba2aa4eecbd', 'claude-opus-5-5[1m]', '8e30facf-9116-4129-a160-6d232154d949', 5, 10, 2953, 158856, 30153, 0.3320952, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (751, 879, '2026-10-13T17:40:19Z', '2026-10-13T17:40:56Z', 'done', NULL, 0, '026e8ed36ea613d4e15098efdf32e5e9f10b9bb3', 'claude-opus-5-5[1m]', '2f22575e-dceb-4777-b2c0-26402df3e896', 5, 10, 3661, 162808, 32795, 0.3681816, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (752, 880, '2026-10-13T17:40:56Z', '2026-10-13T17:41:33Z', 'done', NULL, 0, 'f196fab8fb7f84e097c6fa0dd5dc3c80b34c659f', 'claude-opus-5-5[1m]', '73b339d9-5478-463e-900f-1b1ca03df636', 6, 12, 2790, 167412, 23143, 0.27447439999999995, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
