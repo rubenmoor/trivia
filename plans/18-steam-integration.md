@@ -129,7 +129,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 ## Modding
 Mods are folders the shell serves over `app://trivia/` before our own client and data (pm plan 112, milestone 15). The shell only reads mod files as bytes; mod code runs only in the page.
 - Code: `app/desktop/mods.mjs` (`readManifest`, `discover`, `readSettings`/`writeSettings`, `arrange`), layers in `resolve.mjs` (`makeResolver({ …, layers })`), wiring in `main.mjs`; test `resolve.test.mjs` (`npm test`).
-- Sources: local folder (`TRIVIA_MODS_DIR`, else packaged `<userData>/mods/`, created at start; dev repo `mods/`, gitignored), then Workshop (plan 114); each direct subfolder with a `mod.json` is a mod; local before Workshop on a duplicate id (decision 127).
+- Sources: local folder (`TRIVIA_MODS_DIR`, else packaged `<userData>/mods/`, created at start; dev repo `mods/`, gitignored), then Workshop (below); each direct subfolder with a `mod.json` is a mod; local before Workshop on a duplicate id (decision 127).
 - Only with a valid Steam user (decision 111): otherwise listed `no_user`, no layers.
 - Settings (decision 136: Mod settings: per machine in <userData>/mods.json, one ordered list, top wins): `<userData>/mods.json` (dev `state/desktop/mods.json`); one ordered list = load order, index 0 = top = wins; new mods appended `on`; unknown ids kept (`missing`); read once per run, changes on restart; atomic writes.
 - Layers: enabled valid mods top first, ours last; mod root mirrors the URL space (`app://trivia/<rel>` → `<mod>/<rel>`, `/data/<rel>` → `<mod>/data/<rel>`); first hit wins, whole files.
@@ -139,6 +139,23 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
 - Path safety: `contained()` compares `realpath`s against the layer root's `realpath` (every root, ours too): symlinks out of a layer miss; `..`, encoded `..`, absolute and drive-letter paths stay inside or miss; files only.
 - MIME by extension (`MIME` in `resolve.mjs`), unknown → `application/octet-stream`. Paths case-sensitive (Windows: match case).
 - stderr: one line per mod (`trivia: mod <id> <state> [warnings]`) and a summary (`trivia: mods: 2 loaded, 1 invalid`).
+
+## Modding: Workshop source
+Subscribed Workshop items are mod sources next to the local folder (pm plan 114); the page reads and orders mods over IPC. Steam's client downloads items, never us; the overlay stays this run's.
+- Code: `app/desktop/workshop.mjs` (`workshopItems(ugc)`: `steam.workshop` → `[{ dir, publishedFileId, state, warnings }]`, ids as decimal strings; `fakeUgc(dir)`; pure, no Electron, no binding import), `discover({ local, workshop })` in `mods.mjs`, wiring in `main.mjs`.
+- Only with a real Steam user (`hasSteamId()`, decision 111); else no Workshop entries.
+- Item states (`EItemState` bits): `Installed` + install folder → `installed` (+ warning `needs_update` with `NeedsUpdate`: installed files load); `Downloading`/`DownloadPending` → `downloading`; neither → `downloadItem(id, false)` once, `downloading`; `DisabledLocally` → `disabled`. `downloading`/`disabled`: listed, not loaded, no error.
+- Installed item: `mod.json` at the item's root, else `no_manifest`; `mod.json` `workshopId` ≠ the item's id → warning `workshop_id_mismatch`, still loads.
+- Identity (decision 127: Workshop mods: identity and duplicates): key = `mod.json` `id`; published file id beside it (string), never the settings key; local before Workshop; two Workshop items with one id: lower published file id wins, the other `duplicate_id`.
+- New items: appended at the end of the load order, `on` (subscribing is the opt-in); unsubscribed ids stay in `mods.json`, omitted from `mods:list`.
+- Refresh: no event in the binding, no timer; every `mods:list` re-queries Workshop and re-runs `discover` + `arrange`.
+- stderr: `trivia: mod <id> workshop <publishedFileId> <state>`.
+- IPC (`handle()`, sender origin `app://trivia/`), bridge `mods` in `preload.cjs`, typed `mods: ModsBridge | null` in `app/client/src/lib/desktop.ts` (null in the dev server):
+  - `mods:list` → `{ mods: ModEntry[], noMods, validUser }`; `ModEntry`: `id`, `name`, `version`, `description`, `source` (`local`/`workshop`), `publishedFileId`, `kind`, `languages`, `on` (setting), `active` (in this run's layers), `position`, `state`, `warnings` (codes), `error` (`{ code, field? }`), `dir` (basename only).
+  - `mods:set([{ id, on }])` in load order: ≤ 500, slug ids, boolean `on`, no duplicates, else rejects `bad_mods`; ids left out keep their order after the given ones; writes `mods.json` atomically, returns the new list; next start only (`active ≠ on` until then). Writes without a valid user too.
+  - Codes stay codes; the mods screen (plan 118) maps them to `t()`.
+- Dev: `TRIVIA_DEV_WORKSHOP_DIR=<dir>`, only with `TRIVIA_DEV_STEAM_USER=1` (one stderr line): `<dir>/<numeric id>/` installed item, `<dir>/<id>.downloading/` downloading.
+- Steam updating files while running: accepted; restart after updates.
 
 ## Modding: `mod.json`
 A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` in `app/desktop/mods.mjs` is the source of truth; this schema is for the modding guide (plan 121) and editors.
