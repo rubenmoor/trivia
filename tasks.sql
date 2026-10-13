@@ -14241,7 +14241,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `main()`: exit 1 on non-limit errors.
 - Check RUNBOOK''s exit code table still fits (exit 1 = stop and report).
 - Verify with a stubbed run (no LLM calls): `qgen audit --batch <run without recorded review>` prints the reason and exits 1; a `parallel` failure is printed once.', '2026-10-13T12:17:11Z', '2026-10-13T12:34:03Z', 563);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (734, 79, 'qgen tighten/neutralize: stale-translation lines, commit list and cost estimate', 'work', 'open', NULL, NULL, 'Found by `task 564: Review qgen health ack, rework, scan, tighten, neutralize`. Output text changes, so not done in the review (plan 79 rules).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (734, 79, 'qgen tighten/neutralize: stale-translation lines, commit list and cost estimate', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py, code-review.md', 'Found by `task 564: Review qgen health ack, rework, scan, tighten, neutralize`. Output text changes, so not done in the review (plan 79 rules).
 
 ## What
 - `cmd_tighten` rewrites approved questions too, which stales their translations (D-81, derived via `translations.is_stale`), but prints nothing about it; `cmd_neutralize` prints "  <locale>: N translation(s) stale from this run (D-81)". Give tighten the same lines (shared helper with neutralize).
@@ -14250,7 +14250,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Throw-away script on a temp `work/` and `authoring/reports/` with stubbed `run_steps`/`claude()` (no LLM calls); `npm run check`, `npm test`, `npm run build`, `qgen validate`.
-- Log in `## Part 7` of `code-review.md` (update the task 564 rows'' status).', '2026-10-13T12:20:58Z', NULL, 564);
+- Log in `## Part 7` of `code-review.md` (update the task 564 rows'' status).', '2026-10-13T12:20:58Z', '2026-10-13T12:35:32Z', 564);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (735, 79, 'qgen rework: stale-translation lines and locale pool files in its commit list', 'work', 'open', NULL, NULL, 'Found by `task 734: qgen tighten/neutralize: stale-translation lines, commit list and cost estimate`.
+
+## What
+- `cmd_rework` runs `export`, which rewrites `app/data/pool.<locale>.json` for every locale with a translation file (a reworked source can start or stop playing there, media can change), but its "Commit exactly this" lists only `authoring/data/questions.json app/data/pool.json`.
+- Use `stale_lines(ids, by_id)` (qgen.py, added in task 734) in `cmd_rework`''s tail like `cmd_tighten`: prints the per-locale stale lines and adds the locale pool files to the `git add` list. Output text changes (plan 79 rule) — this task is the approval.
+
+## Check
+- Throw-away script with stubbed `mode_run`/`run_steps` and a fake translation file (no LLM calls); `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Update the task 734 row in `## Part 7` of `code-review.md`.', '2026-10-13T12:35:13Z', NULL, 734);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15985,6 +15994,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (615, 731, '2026-10-13T12:31:01Z', '2026-10-13T12:31:53Z', 'done', NULL, 0, 'c2311309fbe409e8b5d9958ac6a4ec7aa4ceec53', 'claude-opus-5-5[1m]', '6465fd6d-5238-4b56-b304-86b9f6540829', 10, 16, 3262, 255070, 26836, 0.33100599999999997, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (616, 732, '2026-10-13T12:31:53Z', '2026-10-13T12:32:55Z', 'done', NULL, 0, '011ba45766daba165d03e55b2bd9f56319ef1789', 'claude-opus-5-5[1m]', '4e2eaa83-9c83-4e69-add3-a3f1d2c1e9e1', 8, 14, 3213, 214291, 24763, 0.3052782, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (617, 733, '2026-10-13T12:32:56Z', '2026-10-13T12:34:10Z', 'done', NULL, 0, '8c9b10e09a353faf3924ed6af39fcc1f5ed107b9', 'claude-opus-5-5[1m]', '0fd6f5d0-81e6-4349-8b7e-d8b813231163', 17, 34, 5619, 728926, 40381, 0.5813491999999999, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (618, 734, '2026-10-13T12:34:10Z', '2026-10-13T12:35:38Z', 'done', NULL, 0, '2a2291d7dcd2bb0649fb4cb4217cc74c6ea59687', 'claude-opus-5-5[1m]', '1fdd30f3-f8a5-48f2-b8de-e3e44e2f18a7', 14, 26, 7602, 563613, 43304, 0.61129859999999991, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -3507,8 +3507,22 @@ def cmd_tighten(args):
     n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
     print(f"\nDone: {run}: {len(cfg.get('ids', []))} flagged, {len(revised)} shortened, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    print("Commit exactly this:\n  git add authoring/data/questions.json app/data/pool.json\n"
+    files = ["authoring/data/questions.json", "app/data/pool.json", *stale_lines(revised, by_id)]
+    print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {len(revised)} long-winded questions shortened, {n_ok} approved (qgen tighten)\"")
+
+
+def stale_lines(revised, by_id):
+    """Prints per locale how many translations the rewritten questions staled (D-81); returns the
+    app/data/pool.<locale>.json paths export rewrote."""
+    files = []
+    for l in translations.LOCALES:
+        if translations.path(l).exists():
+            src = translations.load(l)["questions"]
+            n = sum(t["id"] in by_id and translations.is_stale(t, by_id[t["id"]]) for t in src if t["id"] in revised)
+            print(f"  {l}: {n} translation(s) stale from this run (D-81)")
+            files.append(layout.LOCALE_POOL(l).relative_to(ROOT).as_posix())
+    return files
 
 
 def cmd_neutralize(args):
@@ -3550,13 +3564,8 @@ def cmd_neutralize(args):
     out = write_neutralize_report(run, revised)
     print(f"\nDone: {run}: {len(cfg['ids'])} flagged, {len(revised)} reworded, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    files = ["authoring/data/questions.json", "app/data/pool.json", out.relative_to(ROOT).as_posix()]
-    for l in translations.LOCALES:
-        if translations.path(l).exists():
-            src = translations.load(l)["questions"]
-            n = sum(t["id"] in by_id and translations.is_stale(t, by_id[t["id"]]) for t in src if t["id"] in revised)
-            print(f"  {l}: {n} translation(s) stale from this run (D-81)")
-            files.append(layout.LOCALE_POOL(l).relative_to(ROOT).as_posix())
+    files = ["authoring/data/questions.json", "app/data/pool.json", out.relative_to(ROOT).as_posix(),
+             *stale_lines(revised, by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {len(revised)} base questions reworded into neutral Spanish, {n_ok} approved (qgen neutralize)\"")
     return []
@@ -3587,11 +3596,11 @@ def print_neutralize_scan(run):
     audit = [x for p in WORK.glob("*/audit/costs.log") for x in costs(p)]
     per_audit = sum(audit) / len(audit) if audit else 0
     if per_q is None:
-        print(f"\nScan: ${scan:.2f}. No finished rework/tighten run yet to estimate the rest from.")
+        print(f"\nScan: ${scan:.2f}. No finished rework/tighten/neutralize run yet to estimate the rest from.")
     else:
         rest = per_q * len(ids) + per_audit * min(AUDIT_SAMPLE, len(ids))
         print(f"\nScan: ${scan:.2f}. Estimated rest: about ${rest:.2f} at list price "
-              f"(${per_q:.2f} per flagged question from past rework/tighten runs, "
+              f"(${per_q:.2f} per flagged question from past rework/tighten/neutralize runs, scans included, "
               f"${per_audit:.2f} per audit call × {min(AUDIT_SAMPLE, len(ids))}).")
     print("Run `qgen neutralize` to reword them; it continues from this scan.")
 
