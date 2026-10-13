@@ -1,7 +1,6 @@
 <script lang="ts">
   // Statistics (plans/02-question-pool.md, QP-13): questions per broad category (D-19)
-  // and per difficulty, approved questions only (the ones a game can use).
-  // and media (RV-23).
+  // and subcategory, per difficulty and per media (RV-23), approved questions only (the ones a game can use).
   // URL: /stats/categories, /stats/subcategories, /stats/difficulty or /stats/media; ?bundle=colombia counts one
   // bundle only (RV-21), without it every bundle (the family's default, D-39).
   // ?locale=en|de: the locale's playing translations with their own difficulty, its names (plan 67).

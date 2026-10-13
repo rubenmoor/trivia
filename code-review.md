@@ -29,6 +29,50 @@ Plan 73 runs cross-cutting scans over the whole inventory. Each scan adds its ro
 | file | finding | category | severity | status |
 |---|---|---|---|---|
 
+### directory.md vs git ls-files
+
+Task 525, 2026-10-13. Throw-away script (deleted after), run from the repo root: `python3 dircheck.py`. A tracked file counts as named when its path is in backticks, or its basename (or first sub-directory) is in the row of an ancestor directory; `*.test.ts` and rows keyed by a file were checked by hand. Backticked tokens that look like paths are checked against `git ls-files` and the disk.
+
+```python
+import re, subprocess, os
+md = open('directory.md').read(); ticks = set(re.findall(r'`([^`]+)`', md))
+files = subprocess.run(['git','ls-files'], capture_output=True, text=True).stdout.split()
+skip = re.compile(r'^(plans/|tasks\.sql|project-manager\.toml|authoring/tools/prompts/|app/client/public/(audio|fonts)/'
+                  r'|app/client/src/engine/fixtures/|app/data/|authoring/data/|authoring/reports/)|\.md$')
+def named(f):
+    if f in ticks: return True
+    b = os.path.basename(f)
+    for row in md.splitlines():
+        m = re.match(r'\| `([^`]+)`', row)
+        if m and m.group(1).endswith('/') and f.startswith(p := m.group(1)) and (
+                '`' + b in row or '`' + f[len(p):] in row or f[len(p):].split('/')[0] + '/' in row):
+            return True
+for f in files:
+    if not skip.search(f) and not named(f): print('MISSING', f)
+pre = ['', 'app/', 'authoring/', 'app/server/', 'app/desktop/', 'app/client/', 'app/client/src/', 'app/client/src/game/',
+       'app/client/src/lib/', 'app/client/src/locales/', 'app/client/src/engine/', 'authoring/tools/', 'authoring/server/',
+       'authoring/ui/', 'authoring/ui/src/', 'authoring/steam/', 'authoring/store/', 'authoring/tools/providers/']
+pre += ['authoring/ui/src/' + d + '/' for d in ('home', 'lib', 'review', 'stats', 'print')]
+for t in sorted(ticks):
+    if re.search(r'[ <{*]', t) or t.startswith(('/', '.', 'app://')): continue
+    if not re.search(r'/|\.(py|ts|mjs|cjs|svelte|json|md|vdf|yml|in|nix|lock)$', t): continue
+    c = [p + t for p in pre]
+    if not any(x in files or any(y.startswith(x.rstrip('/') + '/') for y in files) or os.path.exists(x) for x in c):
+        print('STALE?', t)
+```
+
+- Before: 174 code/config files, 79 `MISSING`; after: 13, all named in a file-keyed row (`node.d.ts`, `supply.ts`, `sim/*.ts`, `authoring/tools/package.json`) or by the `*.test.ts` glob.
+- 28 `STALE?` tokens: none stale. They are gitignored or generated (`state/…`, `work/…`, `steamworks_sdk/`, `credits.json`, `CREDITS.md`), written on first use (`health-acks.json`, `spot-checks.json`), relative names (`translate.md`, `selection.json`, …), or deleted files named as such (`game.py`, `selection.py`, D-90).
+- Known gap `app/server/flags.py`: deleted by task 303 (decision 25), already absent from `directory.md`.
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `directory.md` | 64 tracked code/config files not named: `app/client` config and boot files, 18 of 36 `game/` files, `lib/api.ts`/`types.ts`, `authoring/server/main.py`/`overview.py`/`media_stats.py`, `authoring/tools/providers/` (5), `authoring/ui/` (30), root `.envrc`/`.gitignore`/`package-lock.json` | inconsistency | low | fixed (task 525) |
+| `directory.md` | `sim/` named only as a directory, without its two files | inconsistency | low | fixed (task 525) |
+| `directory.md` | `app/data/pool.<locale>.json` and `authoring/data/questions.<locale>.json` read as existing for `en`, `de`; none exist yet (no translation run) | inconsistency | low | fixed (task 525): "none yet" |
+| `authoring/ui/src/stats/Stats.svelte` | header comment broken ("… approved questions only. / and media (RV-23).") | practice | low | fixed (task 525) |
+| `app/client/src/app.css`, `authoring/ui/src/app.css` | identical 27-line colour token files | complexity | low | handed to part 10 |
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.

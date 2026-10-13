@@ -10980,7 +10980,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Note (task 616)
 - `code-review.md` already exists: it holds `## Part 10` → `### Linter evaluation` (table, adopted `tsconfig` flags, findings rows) from task 616, which ran early. Keep that content as it is; build the intro, format, other parts and inventory around it (replace its stub intro).', '2026-10-12T23:02:54Z', '2026-10-13T09:25:26Z', 513);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (525, 73, 'Scan: directory.md vs git ls-files', 'work', 'open', NULL, NULL, 'Task 2 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (525, 73, 'Scan: directory.md vs git ls-files', 'work', 'done', NULL, '2026-10-13, directory.md, code-review.md (Part 1: directory.md vs git ls-files), authoring/ui/src/stats/Stats.svelte (comment)', 'Task 2 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
 - Throw-away script (`/tmp`, deleted after): every tracked code/config path (and directory) from `git ls-files` mentioned in `directory.md`? every path named in `directory.md` still exists?
@@ -10990,7 +10990,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `directory.md` names every tracked code/config path or its directory, and nothing stale; every finding a row with a status.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', NULL, 513);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', '2026-10-13T09:27:49Z', 513);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (526, 73, 'Scan: unused TS/JS code and npm dependencies', 'work', 'open', NULL, NULL, 'Task 3 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan" (throw-away scripts in `/tmp`, no new tooling; only trivially safe fixes like a dead import).
 
 ## What
@@ -15783,6 +15783,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (563, 718, '2026-10-13T09:21:23Z', '2026-10-13T09:21:49Z', 'blocked', NULL, 0, '83be637336a7d4ddaa6c869a1fcbcb1b3f183c2f', 'claude-opus-5-5[1m]', '4e2f481f-7430-47f4-827f-fae943712b0c', 7, 14, 1514, 215985, 30027, 0.313749, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (564, 719, '2026-10-13T09:21:49Z', '2026-10-13T09:22:09Z', 'blocked', NULL, 0, 'bd4907bca97418695ccc384138d50bc0eceb7321', 'claude-opus-5-5[1m]', '1d682667-c789-4d8c-9499-3089504371ee', 6, 12, 1302, 161812, 21073, 0.2270344, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (565, 524, '2026-10-13T09:22:09Z', '2026-10-13T09:25:38Z', 'done', NULL, 0, 'b23aa1a757fdb5ac2e0e1049c96160cfc21776ae', 'claude-opus-5-5[1m]', 'bd5585a2-c29a-40df-8d97-682dcb77da65', 24, 46, 15673, 1238604, 62027, 1.0575808000000002, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (566, 525, '2026-10-13T09:25:38Z', '2026-10-13T09:27:58Z', 'done', NULL, 0, '3fc9358ecb5fa92ee2bd09730afa0bafceb1fcfd', 'claude-opus-5-5[1m]', '8defc05c-a0e3-4747-a88d-361fa961dd79', 23, 44, 12404, 1187190, 56472, 0.93747, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
