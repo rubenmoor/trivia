@@ -6768,7 +6768,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen rework --model fable` once.
 - Compare with rework-1 (43 questions, 54 calls, $5.57): approval rate after review 2, cost per question and per approved question (`costs.log`), needs_work reasons left, `/usage` delta. Short note in plan 58.
 - Raise a pm decision: keep Fable for rework (→ default change, RUNBOOK + D-entry update) / drop it / try Fable for batch review (→ new plan).', '2026-10-12T04:12:07Z', NULL, 343);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (346, 50, 'Close-out: PORT-7 docs', 'work', 'open', NULL, NULL, 'Close-out of plan 50 (PORT-7), after the family test night was answered "fine".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (346, 50, 'Close-out: PORT-7 docs', 'work', 'done', NULL, '2026-10-12, plans/12-client-engine.md (PORT-7 [x]), directory.md (lib/data.ts, lib/engine.ts, /data/ route), AGENTS.md, README.md (reload after qgen export; state/game.json, sqlite/flags backups)', 'Close-out of plan 50 (PORT-7), after the family test night was answered "fine".
 
 - `plans/12-client-engine.md`: PORT-7 `[x]` with date.
 - `directory.md`: `app/client/src/lib/engine.ts`, `lib/data.ts`, the `/data/` route (serves `app/data/` read-only).
@@ -6776,7 +6776,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 On "problems": don''t do this task; add one fix task per problem in plan 50, then raise the decision again.
 
-Done when: the docs above are updated.', '2026-10-12T04:50:41Z', NULL, 299);
+Done when: the docs above are updated.', '2026-10-12T04:50:41Z', '2026-10-13T03:36:21Z', 299);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (347, 29, 'Choice screen on the action layer (IN-2, IN-3)', 'work', 'dropped', 390, 'absorbed into task 474', 'Plan 44 (action layer and focus navigation) is done; the Choice screen (task 128) is built after it. Put it on the same rules (`plans/04-ui-tv-display.md`, "Input").
 
 - Push a scope from `app/client/src/lib/input.svelte.ts` (`pushScope` in `$effect`, with `root`); no `keydown` listener (`grep -rn "keydown\|KeyboardEvent" app/client/src` lists only `input.svelte.ts`).
@@ -13741,6 +13741,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (443, 231, '2026-10-13T01:14:14Z', '2026-10-13T02:06:48Z', 'done', NULL, 0, '71f491434cdeecbd3dc8c194ce13e17f79e31966', 'claude-opus-5-5[1m]', '963ae585-0b84-4f71-bb47-454926d1c100', 96, 182, 51974, 11289109, 196995, 4.8739897999999986, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (444, 453, '2026-10-13T02:06:48Z', '2026-10-13T02:08:30Z', 'done', NULL, 0, 'a47e16fc69a8dedea6825567d695a2e7c42858cc', 'claude-opus-5-5[1m]', 'a6700d9f-7f40-44a3-8b58-c8122eb93751', 12, 22, 10071, 490538, 48497, 0.6875916, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (445, 454, '2026-10-13T02:08:30Z', '2026-10-13T03:35:39Z', 'done', NULL, 0, 'bc5251c8532415347dedf2e731e0f104fdce2e56', 'claude-opus-5-5[1m]', '85f0181d-78a7-43f4-bce3-9c571688dda3', 86, 148, 43913, 8107003, 163913, 3.8115566000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (446, 346, '2026-10-13T03:35:40Z', '2026-10-13T03:36:27Z', 'done', NULL, 0, '23f3e2f26b8926e9ec29ed24461405076e0f4412', 'claude-opus-5-5[1m]', '7ddb69eb-7f11-41b3-b7f1-e31a3aa543c9', 7, 14, 3071, 228484, 29714, 0.3448848, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -39,7 +39,8 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name 
 
 - `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget. It links to the review tool and stats while the authoring server runs.
 - `M` (or the faint flag next to the menu button) flags the question for review; the next start of `trivia-authoring` marks it «needs work».
-- Game saves and burned questions (questions a player has already seen) live in `state/game.sqlite`. Delete it to reset everything.
+- Game saves, burned questions (questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. The first start after PORT-7 migrates `state/game.sqlite` + `flags.json` into it; both stay as backups.
+- The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
 - Desktop shell (`trivia-desktop`, packaged builds): the save is `save/game.json` in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/game.json`; `TRIVIA_SAVE_DIR` overrides. A broken or newer save moves to `save/backup/` and the game starts fresh.
 - Bring the browser game's save over: `trivia-desktop --import-save state/game.json` (only when no desktop save exists yet), or copy `state/game.json` into the save folder.
 - The game plays fine with an empty media cache when online: a missing file is downloaded the first time it's shown. Offline, sync first (next section).
@@ -102,7 +103,7 @@ Media comes from Wikimedia Commons first, then NASA (space only), Openverse and 
 
 ```sh
 qgen validate            # checks the source pool, and that app/data/pool.json is its current export
-qgen export              # rewrites app/data/pool.json (the authoring server does this after every change)
+qgen export              # rewrites app/data/pool.json (the authoring server does this after every change); reload the game page
 qgen report              # supply per level, difficulty and category; progress vs. targets (--bundle <id>, --player <name>, --subcategories, --calibration [<batch>…], --overlaps, --exit-check, --qc [<batch>])
 ```
 
