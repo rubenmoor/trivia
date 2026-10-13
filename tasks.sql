@@ -13762,7 +13762,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 93 "…"`.', '2026-10-13T09:00:36Z', NULL, 698);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (702, 94, 'create tasks for plan 94', 'split', 'done', 1000, '2026-10-13, tasks 703, 704 in plan 94 (tasks.sql only)', 'Split plan 94 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:01:34Z', '2026-10-13T09:02:07Z', 268);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (703, 94, 'ST-3 checklist, Valve''s rules cited and the Coming soon decision', 'work', 'open', NULL, NULL, 'Plan 94 task 1. Docs only; never log in to Steamworks, enter credentials or contact Valve (plan 94 "Rules").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (703, 94, 'ST-3 checklist, Valve''s rules cited and the Coming soon decision', 'work', 'done', NULL, '2026-10-13, plans/11-steam.md (Coming soon page (ST-3): Valve rules cited, gamemaster checklist), plans/17-publishing.md; decision 94 raised, task 704 pending on it', 'Plan 94 task 1. Docs only; never log in to Steamworks, enter credentials or contact Valve (plan 94 "Rules").
 
 - Read the current Steamworks docs (e.g. partner.steamgames.com/doc/store/coming_soon, /doc/store/review_process, /doc/store/releasing): minimum "Coming soon" time before release (plan says two weeks; verify); store page review lead time (business days); prerequisites for "Coming soon" (app credit paid, store page and content survey complete, capsules, names, ratings); release-date formats allowed (exact, month, quarter, year, "to be announced") and how often they may change.
 - New section "Coming soon page (ST-3)" in `plans/11-steam.md`, bullets, each rule with its URL and the date read (2026-…). Docs not readable from your environment: mark the rule "unverified (gamemaster: check <URL>)", don''t guess.
@@ -13772,7 +13772,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Raise `pm decision add "Coming soon page live? date?"`: body = short checklist + prerequisites + link to the section in `plans/11-steam.md`; options: `live since <date>, release date shown: <TBA|…>` (recommended), `submitted, Valve returned fixes (list)`, `not yet (what blocks)`.
 - `pm task-pending-decision 704 <decision id>`.
 
-Done when: section with cited rules and checklist in `plans/11-steam.md`; `17-publishing.md` points to it; decision raised and the record task pending on it.', '2026-10-13T09:02:03Z', NULL, 702);
+Done when: section with cited rules and checklist in `plans/11-steam.md`; `17-publishing.md` points to it; decision raised and the record task pending on it.', '2026-10-13T09:02:03Z', '2026-10-13T09:03:34Z', 702);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (704, 94, 'Record the Coming soon result (ST-3)', 'work', 'open', 440, NULL, 'Plan 94 task 2. Waits for the decision "Coming soon page live? date?" raised by the plan''s first task (ST-3 checklist); read the answer with `pm show d<id>`.
 
 - Live: ST-3 `[x]` in `plans/11-steam.md` with the live date, the release date shown and the earliest release date (live date + Valve''s minimum, from the section "Coming soon page (ST-3)"); `plans/project.md` in sync; note for part 4 (`task 269: write plan: Launch`) in the S6 row.
@@ -14837,6 +14837,21 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Steam discussions thread: needs the App ID (masterplan 10 part 1); you create and pin it at launch (part 4, task 269). In the game it opens only via the Steam overlay (Windows, decision 70: Steam overlay in the Electron shell); elsewhere (Linux, Deck, browser) the URL is shown as selectable text.
 - Email: opens a `mailto:` on click. The address ships in a public game: your personal data, gets spam, permanent once shipped; use a dedicated address. Name it in the answer if you pick 2 or 3.
 - Either way the text you receive is pasted into `qgen flag` (task 3 of plan 93).', NULL, NULL, '2026-10-13T09:00:18Z', NULL, 698, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (94, 'Coming soon page live? date?', 'pending', '["live since <date>, release date shown: <Coming Soon|…>", "submitted, Valve returned fixes (list)", "not yet (what blocks)"]', 'ST-3, plan 94. Full rules (Valve docs, read 2026-10-13) and checklist: `plans/11-steam.md` "Coming soon page (ST-3)".
+
+Prerequisites:
+- Store page entered (`task 672`''s decision)
+- Names per D-50 set: «Living Room Trivia», «Trivia en Familia» (`task 253`)
+- Content survey incl. AI disclosure complete (`task 259`)
+- App credit paid (note the date: release ≥ 21 days after it)
+
+Checklist:
+1. "Mark as ready for review" (store page), ≥ 7 business days before the wanted live date
+2. Valve reviews (3–5 business days); fixes go to `17a-store-page.md` / plan 88, survey → part 9, names → part 1
+3. Release date display "Coming Soon" (no date) or coarse "Q<n> <year>"
+4. "Post as Coming Soon"; note the live date
+
+Earliest release = later of live + 14 days, app fee + 21 days.', NULL, NULL, '2026-10-13T09:03:32Z', NULL, 703, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -15384,6 +15399,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (540, 698, '2026-10-13T09:00:03Z', '2026-10-13T09:00:44Z', 'done', NULL, 0, 'e4ae7b3bb45a56e9929a4e8d8bdf4645a05a4d2c', 'claude-opus-5-5[1m]', 'f45c5473-a76a-436e-a317-3af38a2ea481', 7, 14, 3705, 211937, 27944, 0.34009540000000005, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (541, 268, '2026-10-13T09:00:45Z', '2026-10-13T09:01:44Z', 'done', NULL, 0, '45b75731d57722246150184670e1a58c8ad6185f', 'claude-opus-5-5[1m]', '4b12f563-9a7b-44e9-be04-b42134e21ca8', 11, 22, 5243, 443532, 45383, 0.5567184, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (542, 702, '2026-10-13T09:01:44Z', '2026-10-13T09:02:17Z', 'done', NULL, 0, '279fcbaa529df752eb3643ee1cbf6caa3e0afb52', 'claude-opus-5-5[1m]', '49624897-9f14-4a6b-bb3d-3aa804241d04', 6, 12, 2918, 154759, 20591, 0.25408780000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (543, 703, '2026-10-13T09:02:17Z', '2026-10-13T09:03:44Z', 'done', NULL, 0, 'af719ccff3e6cac970e47e3283a77734f3f37b3d', 'claude-opus-5-5[1m]', '8ee7cbdd-96a7-40c7-9aa9-62a2836eb1ba', 21, 36, 8018, 682884, 40099, 0.61787280000000011, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -15547,5 +15563,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (688, 90);
 INSERT INTO task_decision (task_id, decision_id) VALUES (699, 93);
 INSERT INTO task_decision (task_id, decision_id) VALUES (700, 93);
 INSERT INTO task_decision (task_id, decision_id) VALUES (701, 93);
+INSERT INTO task_decision (task_id, decision_id) VALUES (704, 94);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');

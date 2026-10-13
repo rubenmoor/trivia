@@ -123,6 +123,39 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
   - `failed`: one task per failing row in the owning plan (Deck → plan 90/18, Cloud → plan 87/18, sound, red frame, offline → the plan of the code involved); after the fixes a new tag and a new candidate decision.
 - Review request for Deck Verified: plan 90 (task 687) decides whether it moves here.
 
+## Coming soon page (ST-3)
+The Steam store page goes public as "Coming soon" well before the release, so it collects wishlists and follows. The gamemaster does every Steamworks step; this section holds Valve's rules (read 2026-10-13) and the checklist. The live date sets the earliest release date for part 4 (task 269).
+
+### Valve's rules
+- Minimum "Coming soon": new products ≥ 2 weeks public before release; no downside to a long lead ("two years ahead … just as likely to purchase"). Sources: partner.steamgames.com/doc/store/coming_soon, /doc/store/releasing (read 2026-10-13).
+- First titles: also ≥ 21 days between paying the app fee and release. Source: /doc/gettingstarted/onboarding (read 2026-10-13).
+- Earliest release = later of (live date + 14 days, app fee paid + 21 days); the build review (3–5 business days, plan ≥ 7) also has to be done.
+- Store page review: typically 3–5 business days; submit ≥ 7 business days before the wanted live date. Fixes come back as feedback; otherwise the page is marked "Ready for release". Reviewed once, then free to update. Source: /doc/store/review_process (read 2026-10-13).
+- What the review checks: only features and content available at launch (no `PLACEHOLDER` or planned features unless clearly marked); capsules show a readable title or logo; screenshots gameplay only (no concept art, awards, marketing text); description detailed, coherent, no links to other websites. Source: /doc/store/review_process.
+- Prerequisites: app created with the app credit (Steam Direct fee $100, /doc/gettingstarted/appfee); everything in the "Your Store Presence" checklist on the app landing page (/doc/store/coming_soon); content survey complete before submitting for review, incl. AI disclosure "Pre-Generated" (/doc/gettingstarted/contentsurvey); required graphics: header 920×430, small 462×174, main 1232×706, vertical 748×896 capsules, screenshots ≥ 1920×1080 16:9, plus library assets (/doc/store/assets); Steamworks permissions "Publish app changes to Steam" and "Manage pricing and discounts" (/doc/store/releasing). All read 2026-10-13.
+- Posting: after approval, the green "Post as Coming Soon" button; page goes public, Community Hub and wishlists start; at release Steam e-mails everyone who wishlisted. Source: /doc/store/coming_soon.
+- Release date: an exact intended date is always set (hidden); the store shows one of five: exact date, month + year, quarter ("Q3 2023"), year, or none ("Coming Soon"); display switchable freely before release; less specific = listed at the end of the range, none = behind all dated games. The date itself can change until two weeks before it, then it's locked. Weekends hidden in the picker. Source: /doc/store/release_dates (read 2026-10-13).
+
+### Gamemaster checklist
+In order; workers never log in, enter credentials or contact Valve (plan 94).
+1. Prerequisites done:
+   - Store page entered: `task 672: Store page entry checklist and PUB-8 close-out`'s decision answered "entered".
+   - Names per D-50 set in Steamworks: «Living Room Trivia», localized «Trivia en Familia» (part 1 of masterplan 10, `task 253`; PUB-7 check passed).
+   - Content survey complete, incl. AI disclosure (part 9 of masterplan 10, `task 259`; PUB-9).
+   - App credit paid (PUB-6, `task 253`; decision 66 for person/company); note the payment date (21-day rule).
+   - Steamworks "Your Store Presence" checklist all green.
+2. Steamworks app landing page: "Mark as ready for review" for the store page, ≥ 7 business days before the wanted live date.
+3. Wait for Valve's review (3–5 business days).
+4. Fix what Valve returns, each fix where it belongs:
+   - texts, capsules, screenshots, AI disclosure text: `plans/17a-store-page.md` (its texts, capsules and "Screenshots" sections), plan 88;
+   - system requirements, languages, controller: `17a` "System requirements, languages, controller", plan 88;
+   - content survey: part 9's plan (`task 259`);
+   - names: part 1's plan (`task 253`).
+5. Release date: exact intended date = a placeholder months out; display "Coming Soon" (no date) until part 4 fixes the date; a coarse "Q<n> <year>" is allowed once known.
+6. "Post as Coming Soon".
+7. Note the live date and the date shown; answer the pm decision "Coming soon page live? date?".
+- Wishlists: only Steam's own wishlist and follow buttons; no mailing list, own website, social accounts or marketing.
+
 ## Tasks
 - [ ] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2).
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*

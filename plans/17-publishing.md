@@ -46,7 +46,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - **Store page:** capsule images in the required sizes, screenshots, a trailer (optional but strongly advised; S6 or later: backlog B-21), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
 - **Content survey / age rating:** the Steam questionnaire (no violence, no gambling; kid-friendly). IARC is optional on Steam.
 - **Privacy:** the game collects nothing and sends nothing. Say so on the store page. Player names stay on the device (and in Steam Cloud).
-- **"Coming soon" page** at least two weeks before release (Valve rule), better months, to collect wishlists.
+- **"Coming soon" page** at least two weeks before release (Valve rule, partner.steamgames.com/doc/store/coming_soon, read 2026-10-13), better months, to collect wishlists. Rules and gamemaster checklist: `11-steam.md` "Coming soon page (ST-3)".
 
 ## Tasks
 - [x] PUB-1 Media license audit: a `media.py licenses` report per file (license, PD reason, Commons restriction templates); list the files to replace (PD-US-only, GFDL); restriction flags are listed, not replaced (D-61). *pm plan 52, 2026-10-11: 1,129 distinct files (non-rejected); 3 to replace: off-allowlist 1 (q-0021, GFDL 1.2), PD-US only 2 (q-1100, q-1194); 23 restriction flags on 21 files (personality 14, trademarked 5, design 2, fan-art 1, insignia 1).*
