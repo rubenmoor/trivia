@@ -9137,7 +9137,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs match the code; `qgen validate` clean.', '2026-10-12T19:36:55Z', '2026-10-12T21:21:33Z', 448);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (452, 69, 'create tasks for plan 69', 'split', 'done', 1000, '2026-10-12, tasks 453-459 for plan 69; decisions created by tasks 453 (LUI-4 keys, German joker names, es wording) and 458 (playtests)', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:43:19Z', '2026-10-12T19:44:24Z', 247);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (453, 69, 'LUI-4/LUI-5: decisions on keys, German joker names, neutral es wording', 'work', 'open', NULL, NULL, 'Create the pm decisions plan 69 needs before keys, names and `es` wording change. No code changes.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (453, 69, 'LUI-4/LUI-5: decisions on keys, German joker names, neutral es wording', 'work', 'done', NULL, '2026-10-12, plans/15a-ui-translation.md; decisions 53 (LUI-4 keys), 54–58 (German joker names), 59 (neutral es: berraquera, Pulsa); no es-ES decision; all linked to task 455', 'Create the pm decisions plan 69 needs before keys, names and `es` wording change. No code changes.
 
 - **LUI-4 keys**: `pm decision add` "Joker and action keys per UI language (LUI-4)?". Options, recommended first:
   1. keys in the catalog per language (`joker.<id>.key`, `flag.key`, `screen.question.replayKey`, `screen.start.newKey`), mnemonic for the name; `es` unchanged
@@ -9150,7 +9150,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Candidate lists in `plans/15a-ui-translation.md` under LUI-5.
 - Link the task "LUI-4/LUI-5: keys, German names, neutral es, picker letters" of plan 69 to every decision created here (`pm task-pending-decision <task> <decision>`).
 
-Done when: decisions exist and are linked; 15a lists the candidates.', '2026-10-12T19:44:17Z', NULL, 452);
+Done when: decisions exist and are linked; 15a lists the candidates.', '2026-10-12T19:44:17Z', '2026-10-13T02:08:22Z', 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (454, 69, 'LUI-5: de.ts, es-ES.ts override and shipping wiring', 'work', 'open', NULL, NULL, 'Ship four UI catalogs: `es`, `es-ES`, `en`, `de` (decision 26: Launch languages (OQ-31); decision 27: Spanish variety (OQ-31)). Doesn''t wait for the decisions of plan 69.
 
 Needs `locales/en.ts` (plan 24) and `locales/xx.ts` (plan 23); missing → stop with a note. The first-start language screen (`LanguageScreen.svelte`, `language.*` keys) comes from plan 68 (task 490: First-start language screen (I18N-2)); missing → translate the rest, note it, `pm task add` a follow-up for its keys.
@@ -13219,6 +13219,55 @@ No failures, so no fix tasks.
 Answer "problems": list each one; the close-out (task 479) turns them into fix tasks in plan 71, 29 or 27.', NULL, NULL, '2026-10-13T00:47:47Z', NULL, 478, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (51, '«Solo o en grupo»: which bundles does a game play?', 'answered', '[]', 'Plan 13 gives solo the age group only (no configure screen); bundles weren''t specified. Task 378 hides the bundle rows in solo and sends the defaults explicitly, so supply check and game agree; pm decision 33''s fresh default (base only) stays a configure-screen rule.', 'The question language''s default bundles (decision 38): first base bundle plus every other bundle offered; no bundle choice on the Choice screen in solo', NULL, '2026-10-13T01:02:55Z', '2026-10-13T01:02:55Z', 378, NULL, 'rule', 378, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (52, 'Safe area on the Question screen: may the credit line and «Respuesta final» sit in the bottom margin?', 'answered', '[]', 'Plan 46''s screen check (task 231) flags them at every size, 1080p included, since the layout is all --u and 16:9 = 16:10 by width. The layout passed the TV overscan check (UI-6, VD-9); the Deck has no overscan. Moving them would change the approved TV look and push the long credit line into the button.', 'Yes: both stay where the TV-tested layout puts them (credit at 0.3 safe-y, the candy button''s last ~0.2 u in the 4 % margin); every other text stays inside the safe area', NULL, '2026-10-13T02:06:10Z', '2026-10-13T02:06:10Z', 231, NULL, 'rule', 231, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (53, 'Joker and action keys per UI language (LUI-4)?', 'pending', '["Keys in the catalog per language (joker.<id>.key, flag.key, screen.question.replayKey, screen.start.newKey, mode/customize keys), mnemonic for the name, collision rule checked per catalog; es unchanged", "Neutral 1–5 row for the jokers in every language (conflicts with pick n)", "F1–F5 for the jokers in every language"]', 'Plan 69 (LUI-4, `plans/15a-ui-translation.md`). The shortcut letters are already catalog leaves; `en.ts` still uses the `es` letters for jokers. This decides whether every language picks its own letters.
+
+Current keys (`app/client/src/locales/es.ts`):
+- Question screen: answers `A`–`D`; jokers `joker.<id>.key`: Soplo `S`, Paso `P`, Bájale `F`, Cambiazo `T`, Francotirador `X`; replay `screen.question.replayKey` `R`
+- every screen: flag `flag.key` `M`, Esc menu, Enter/Space confirm, Backspace back, `1`–`9` = `pick n` (Select cards)
+- Start: new game `screen.start.newKey` `N`
+- Choice: `mode.gamemasterKey` `A`, `mode.soloKey` `G`, `customize.openKey` `P` (`en`: `G`, `A`, `C`); bundle letters fill in around them
+
+Collision rule per catalog (checked by `check:literals`, task 454): every key a single letter; unique among the keys live on the same screen; not `A`–`D` where answers are shown; no digit (`pick n`).
+
+Why option 1:
+- `toIntent` matches `e.key`, not the key position, so letters work on QWERTZ/AZERTY; position-based neutral rows (`Q W E R T` on QWERTY) move around on those layouts
+- mnemonic letters keep the on-screen key next to the joker name readable (`S` for Soplo)
+- pads use focus and face buttons anyway (decision 9: Gamepad on the Question screen), so keys only matter for keyboard players
+
+Against 2: digits are `pick n` already. Against 3: `F1`–`F5` are awkward on laptops (Fn layer) and the Steam Deck, and clash with browser/OS keys (F1 help, F5 reload, F11 fullscreen).', NULL, NULL, '2026-10-13T02:07:43Z', NULL, 453, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (54, 'German name for the hint joker «Soplo»?', 'pending', '["Spickzettel (S)", "Psst! (P)", "Zaunpfahl (Z)", "Eselsbrücke (E)"]', 'Plan 69 (LUI-5): playful German names, not literal translations (15a "Joker names are content"); at most 13 characters («Francotirador»). The key letter follows the LUI-4 answer (decision 53); a mnemonic letter is noted per candidate. `de.ts` (task 454) uses the recommended name until this is answered.
+
+- Spanish «Soplo», English «Hint» (decision 40: English name for the hint joker «Soplo»)
+- What it does: shows a hint for the current question («Soplo {n}» notes); can be played again for the next hint
+- Why: «Spickzettel» (crib note) is the school-cheating image behind «Soplo», family-friendly, keeps `S`; «Psst!» is the whisper itself; «Zaunpfahl» from «Wink mit dem Zaunpfahl» (a heavy-handed hint); «Eselsbrücke» (memory aid) is warm but less about being told', NULL, NULL, '2026-10-13T02:08:02Z', NULL, 453, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (55, 'German name for the skip joker «Paso»?', 'pending', '["Weg damit! (W)", "Ich passe (I)", "Tschüss! (U)", "Nächste! (N, collides with screen.start.newKey only on Start)"]', 'Plan 69 (LUI-5): playful German names, not literal translations (15a "Joker names are content"); at most 13 characters («Francotirador»). The key letter follows the LUI-4 answer (decision 53); a mnemonic letter is noted per candidate. `de.ts` (task 454) uses the recommended name until this is answered.
+
+- Spanish «Paso», English «Pass & Purge» (decision 41: English name for the skip joker «Paso»)
+- What it does: skips the question; optionally purges its topic for the rest of the game (stamp «ELIMINADO»). The dialog''s plain option is `joker.skip.pass` («Paso» / «Just pass»), German draft «Nur passen»
+- Why: «Weg damit!» covers both skip and purge with attitude; «Ich passe» is the card-game phrase, closest to «Paso»; «Tschüss!» and «Nächste!» are cheeky but say only one half', NULL, NULL, '2026-10-13T02:08:02Z', NULL, 453, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (56, 'German name for the easier joker «Bájale»?', 'pending', '["Gang runter (G)", "Halblang (H)", "Kinderspiel (K)", "Sachte! (S, collides with Spickzettel)"]', 'Plan 69 (LUI-5): playful German names, not literal translations (15a "Joker names are content"); at most 13 characters («Francotirador»). The key letter follows the LUI-4 answer (decision 53); a mnemonic letter is noted per candidate. `de.ts` (task 454) uses the recommended name until this is answered.
+
+- Spanish «Bájale», English «Fairy» (decision 42: English name for the easier joker «Bájale»)
+- What it does: swaps the question for an easier one of the same topic (the difficulty dial turns down)
+- Why: «Gang runter» (shift down a gear, «einen Gang runterschalten» = take it easy) matches the dial animation; «Halblang» from «Mach mal halblang!» is the colloquial «bájale»; «Kinderspiel» (child''s play) says what you get; «Sachte!» is short and soft', NULL, NULL, '2026-10-13T02:08:02Z', NULL, 453, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (57, 'German name for the category joker «Cambiazo»?', 'pending', '["Extrawurst (E)", "Wunschthema (W)", "Kehrtwende (K)", "Themenhopser (T)"]', 'Plan 69 (LUI-5): playful German names, not literal translations (15a "Joker names are content"); at most 13 characters («Francotirador»). The key letter follows the LUI-4 answer (decision 53); a mnemonic letter is noted per candidate. `de.ts` (task 454) uses the recommended name until this is answered.
+
+- Spanish «Cambiazo», English «Ms Picky» (decision 43: English name for the category joker «Cambiazo»)
+- What it does: the players pick another topic; the question is replaced by one of that topic (picker title «Cambiazo: ¿qué tema quieren?»)
+- Why: «Extrawurst» («eine Extrawurst wollen» = demanding special treatment) is the German «picky», very idiomatic; «Wunschthema» (topic of your choice) is the plainest; «Kehrtwende» (U-turn) is the swap; «Themenhopser» a playful topic hop', NULL, NULL, '2026-10-13T02:08:03Z', NULL, 453, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (58, 'German name for the snipe joker «Francotirador»?', 'pending', '["Scharfschütze (X)", "Kunstschuss (K)", "Blattschuss (B is an answer key: X)", "Meisterschuss (M is flag.key: X)"]', 'Plan 69 (LUI-5): playful German names, not literal translations (15a "Joker names are content"); at most 13 characters («Francotirador»). The key letter follows the LUI-4 answer (decision 53); a mnemonic letter is noted per candidate. `de.ts` (task 454) uses the recommended name until this is answered.
+
+- Spanish «Francotirador», English «Trick Shot» (decision 44: English name for the snipe joker «Francotirador»)
+- What it does: the players aim at the answer they think is false; if it is, that answer is gone; if they hit the correct one, the level repeats
+- Why: «Scharfschütze» is the clearest image (aim, shoot), exactly 13 characters; «Kunstschuss» is «Trick Shot»; «Blattschuss» (the clean hunting shot) is idiomatic; «Meisterschuss» (masterstroke) is flattering. `X` stays possible as a crosshair key in any of them', NULL, NULL, '2026-10-13T02:08:03Z', NULL, 453, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (59, 'Neutral Spanish UI wording in es.ts (D-78)?', 'pending', '["Apply all (1 and 2)", "Apply listed subset (name the numbers)", "Keep as is"]', 'Plan 69 (LUI-5), decision 27: Spanish variety (OQ-31): `es` is neutral Latin American Spanish (es-419); `es-ES` overrides only where Spain differs. Scan of `app/client/src/locales/es.ts` (every leaf) for Colombian wording; the family sees these lines.
+
+Old → new:
+1. `copy.consolation.9` «¡Qué berraquera! Llegaron al nivel {n}.» → «¡Qué maravilla! Llegaron al nivel {n}.» («berraquera» is Colombian only)
+2. `overlay.confirm` «¿Seguro? Pulsa otra vez» → «¿Seguro? Presiona otra vez» (not Colombian, but «pulsar» reads Peninsular; «presionar» is the usual es-419 UI verb; `es-ES` keeps «Pulsa»)
+
+Kept (read neutral across Latin America): «ustedes» addressing (D-6), «Bájale», «Le dieron a la correcta», «Tan cerquita», «a un pelo», «sacar pecho», «Video».
+Comment only, no screen change: the header comment of `es.ts` says «Colombian usage»; task 455 rewords it to es-419.', NULL, NULL, '2026-10-13T02:08:10Z', NULL, 453, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -13667,6 +13716,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (441, 624, '2026-10-13T01:08:07Z', '2026-10-13T01:12:42Z', 'done', NULL, 0, 'ebd5ae6f014732205012aa43f8f3861ae431460e', 'claude-opus-5-5[1m]', '8e2ff655-8474-4af0-84ef-bf917a75985b', 29, 56, 15275, 1185690, 47285, 0.921142, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (442, 447, '2026-10-13T01:12:42Z', '2026-10-13T01:14:14Z', 'done', NULL, 0, 'bd31e55f8f11a912fb06af940ee713fabad57681', 'claude-opus-5-5[1m]', '1dbf32db-c803-4391-bb04-b4c22af3c8d9', 21, 42, 6487, 961899, 45256, 0.6843358, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (443, 231, '2026-10-13T01:14:14Z', '2026-10-13T02:06:48Z', 'done', NULL, 0, '71f491434cdeecbd3dc8c194ce13e17f79e31966', 'claude-opus-5-5[1m]', '963ae585-0b84-4f71-bb47-454926d1c100', 96, 182, 51974, 11289109, 196995, 4.8739897999999986, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (444, 453, '2026-10-13T02:06:48Z', '2026-10-13T02:08:30Z', 'done', NULL, 0, 'a47e16fc69a8dedea6825567d695a2e7c42858cc', 'claude-opus-5-5[1m]', 'a6700d9f-7f40-44a3-8b58-c8122eb93751', 12, 22, 10071, 490538, 48497, 0.6875916, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -13764,6 +13814,13 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (438, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (439, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (440, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (441, 35);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 53);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 54);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 55);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 56);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 57);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 58);
+INSERT INTO task_decision (task_id, decision_id) VALUES (455, 59);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 
