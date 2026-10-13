@@ -32,7 +32,7 @@ const CANDIDATES = "button, input, a[href], [data-focusable]";
 export function candidates(root: HTMLElement): HTMLElement[] {
   return [...root.querySelectorAll<HTMLElement>(CANDIDATES)].filter(
     (el) =>
-      !(el as HTMLButtonElement).disabled &&
+      !el.matches(":disabled") &&
       el.getAttribute("tabindex") !== "-1" &&
       !el.closest("[data-nofocus]") &&
       el.getClientRects().length > 0,
@@ -63,7 +63,7 @@ function recalled(scope: string, list: HTMLElement[]) {
 /** Arrows: from the focused control to its nearest neighbour; with nothing focused, the remembered or default one. */
 export function navigate(dir: Dir, scope: string, root: HTMLElement): boolean {
   const list = candidates(root);
-  const at = list.indexOf(document.activeElement as HTMLElement);
+  const at = list.findIndex((el) => el === document.activeElement);
   if (at < 0) {
     const first = recalled(scope, list) ?? list.find((el) => el.hasAttribute("data-focus-default")) ?? list[0];
     if (first) show(first, scope, root);

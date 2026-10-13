@@ -11200,7 +11200,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The 8 tests, 3 helpers and `fixtures/README.md` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:11Z', '2026-10-13T10:08:23Z', 515);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (539, 76, 'Review input, gamepad and focus', 'work', 'open', NULL, NULL, 'Task 1 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (539, 76, 'Review input, gamepad and focus', 'work', 'done', NULL, '2026-10-13, app/client/src/lib/input.svelte.ts, gamepad.ts, gamepad.svelte.ts, focus.ts, code-review.md (Part 4: 13 rows; fixed: toIntent export, stale comments, HELD → held(n), focus.ts casts/:disabled)', 'Task 1 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan".
 
 ## First
 - `pm queue` + grep open task bodies for `input.svelte.ts`, `gamepad.ts`, `gamepad.svelte.ts`, `focus.ts`: a file an open task still changes (e.g. `task 499`, `task 230: Letter picker for player names with a pad (SW-4, IN-4)`, `task 474`/`475`) gets findings only, no refactor (`superseded by task N`).
@@ -11223,7 +11223,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
-- All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', NULL, 516);
+- All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', '2026-10-13T10:14:07Z', 516);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (540, 76, 'Review engine bridge, stores and boot', 'work', 'open', NULL, NULL, 'Task 2 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan". Read plan 75''s `## Part 3` findings on `engine/api.ts`, `engine/store.ts`, `engine/save.ts` first; don''t redo them.
 
 ## First
@@ -15812,6 +15812,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (578, 537, '2026-10-13T10:02:08Z', '2026-10-13T10:05:37Z', 'done', NULL, 0, '3c27dffc24d8d26dfb64044f1d13cf141850b084', 'claude-opus-5-5[1m]', 'bcaa5bb6-c59d-47f4-90de-df269433e718', 33, 64, 18178, 2329349, 87309, 1.5281577999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (579, 538, '2026-10-13T10:05:37Z', '2026-10-13T10:08:33Z', 'done', NULL, 0, 'c4331d4a2ae6cd8d6c255f379272b977c08493f9', 'claude-opus-5-5[1m]', 'a61a1296-a8d9-4cdb-86d8-a5e12b0b01b8', 26, 48, 14159, 1680903, 81525, 1.2717526, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (580, 723, '2026-10-13T10:08:33Z', '2026-10-13T10:10:45Z', 'done', NULL, 0, '057178421e0f47eceaac25a387af27982dcd1c0a', 'claude-opus-5-5[1m]', 'ddfe6b33-c97b-4b8b-9cf2-bb4796d9d6e8', 19, 34, 11158, 1082708, 71562, 1.0123336, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (581, 539, '2026-10-13T10:10:46Z', '2026-10-13T10:14:18Z', 'done', NULL, 0, '3444b98ed8e444bc5edcfd83e6669f29201ff9bc', 'claude-opus-5-5[1m]', '332c0e88-56d6-4859-a590-5e80d4b7b38f', 28, 48, 17312, 1509770, 74028, 1.2406100000000002, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

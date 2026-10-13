@@ -1,7 +1,7 @@
 // The gamepad source (plans/14-input.md, IN-4; plan 45): polls standard pads each frame while one
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
 import { steam } from "./desktop";
-import { BUTTONS, FRESH, HELD, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad";
+import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad";
 import { dispatch, padMap } from "./input.svelte";
 
 /** The glyph set of the pad that acted last (IN-5). */
@@ -29,7 +29,7 @@ export function listenPads(first: () => void): () => void {
     const active = !document.hidden && document.hasFocus();
     for (const g of pads()) {
       if (!active) {
-        prev.set(g.index, HELD); // held buttons don't fire on return
+        prev.set(g.index, held(g.buttons.length)); // held buttons don't fire on return
         continue;
       }
       const pad = { buttons: g.buttons.map((b) => b.pressed), axes: g.axes };

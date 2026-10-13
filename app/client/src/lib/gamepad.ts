@@ -25,8 +25,8 @@ const ON = 0.5;
 const OFF = 0.3;
 
 export const FRESH: PadState = { buttons: [], stick: null };
-/** Everything counts as down: nothing fires until released (focus return). */
-export const HELD: PadState = { buttons: Array(32).fill(true), stick: "held" };
+/** All `n` buttons count as down: nothing fires until released (focus return). */
+export const held = (n: number): PadState => ({ buttons: Array(n).fill(true), stick: "held" });
 
 /** The dominant axis past the dead zone, or null. */
 function stickDir(x: number, y: number): Dir | null {

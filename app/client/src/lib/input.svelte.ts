@@ -1,5 +1,5 @@
-// The action layer (plans/14-input.md, IN-2; plan 44): keys (later the gamepad) become actions, and
-// the top scope of a stack gets them. The only keydown listener of the client.
+// The action layer (plans/14-input.md, IN-2; plan 44): keys and pad buttons (gamepad.svelte.ts) become
+// actions, and the top scope of a stack gets them. The only keydown listener of the client.
 import { untrack } from "svelte";
 import { forget, keyPressed, navigate, opener, press, show, track } from "./focus";
 import { t } from "./i18n";
@@ -57,7 +57,7 @@ const FLAG_KEY = t("flag.key").toLowerCase();
 type Key = Pick<KeyboardEvent, "key" | "ctrlKey" | "metaKey" | "altKey">;
 
 /** Key + scope keys → intent; `text`: a text field has focus. */
-export function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
+function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
   if (e.key === "Enter") return { type: "confirm" };
   if (e.key === "Escape") return { type: "menu" };
   const dir = ARROWS[e.key];
@@ -129,7 +129,7 @@ export function focusControl(el: HTMLElement | null | undefined) {
 
 let busy = () => false;
 
-/** Run an action through the scopes, top first; true if one handled it. Part 5's gamepad calls it too. */
+/** Run an action through the scopes, top first; true if one handled it. The gamepad loop calls it too. */
 export function dispatch(action: Action): boolean {
   lastDevice.current = action.device;
   const always = action.type === "menu" || action.type === "flag";
