@@ -56,22 +56,22 @@ async function guessTag(): Promise<string> {
 /** Save + available locales, once per page load; a fresh save gets the guessed language (plan 68).
  * A failure is retried on the next call. */
 export function ready(): Promise<Loaded> {
-  loading ??= Promise.all([store.load(), availableLocales()]).then(
-    async ([save, locales]) => {
-      let language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS, locales);
-      if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
-      const fresh = !save.language;
-      const loaded = { save: { ...save, language }, locales, fresh, offer: fresh ? await localOffer() : null };
-      const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
-      loaded.save = { ...repair(loaded.save, data, io()), language }; // dropped questions (plan 91); written with the next action
-      return loaded;
-    },
-    (e) => {
-      loading = null;
-      throw new Error(`can't load the game: ${e instanceof Error ? e.message : String(e)}`);
-    },
-  );
+  loading ??= load().catch((e) => {
+    loading = null;
+    throw new Error(`can't load the game: ${e instanceof Error ? e.message : String(e)}`);
+  });
   return loading;
+}
+
+async function load(): Promise<Loaded> {
+  const [save, locales] = await Promise.all([store.load(), availableLocales()]);
+  let language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS, locales);
+  if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
+  const fresh = !save.language;
+  const loaded = { save: { ...save, language }, locales, fresh, offer: fresh ? await localOffer() : null };
+  const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
+  loaded.save = { ...repair(loaded.save, data, io()), language }; // dropped questions (plan 91); written with the next action
+  return loaded;
 }
 
 /** `local/`'s save under Steam while this user has none; an unreadable one isn't offered. */
@@ -119,7 +119,7 @@ export function flush(): Promise<void> {
 }
 
 /** Python's datetime.now().isoformat(timespec="seconds"): local, no zone. */
-export function localIsoSeconds(d = new Date()): string {
+function localIsoSeconds(d = new Date()): string {
   const p = (n: number) => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
 }
@@ -145,7 +145,7 @@ export async function language(): Promise<{ language: Language; ui: string[]; qu
 /** Per question locale, the supply check for the default bundles (plan 68): not ok → listed, disabled. */
 export async function localeSupply(): Promise<Record<string, Supply>> {
   const { save, locales } = await ready();
-  return Object.fromEntries(await Promise.all(locales.map(async (l) => [l, supply(save, await loadEngineData("", l))])));
+  return Object.fromEntries(await Promise.all(locales.map(async (l) => [l, supply(save, await loadEngineData(l))])));
 }
 
 /** `game`: the newest game's data (it keeps its locale), else the language's; `next`: the language's
@@ -154,7 +154,7 @@ export type Scope = "game" | "next";
 
 function dataFor({ save }: Loaded, scope: Scope): Promise<EngineData> {
   const newest = save.games.reduce<SaveData["games"][number] | null>((m, g) => (m && m.id > g.id ? m : g), null);
-  return loadEngineData("", scope === "game" && newest ? gameLocale(newest) : save.language.questions);
+  return loadEngineData(scope === "game" && newest ? gameLocale(newest) : save.language.questions);
 }
 
 export type Route<T> = (save: SaveData, data: EngineData, io: Io) => Reply<T>;

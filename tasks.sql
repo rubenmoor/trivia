@@ -11224,7 +11224,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', '2026-10-13T10:14:07Z', 516);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (540, 76, 'Review engine bridge, stores and boot', 'work', 'open', NULL, NULL, 'Task 2 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan". Read plan 75''s `## Part 3` findings on `engine/api.ts`, `engine/store.ts`, `engine/save.ts` first; don''t redo them.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (540, 76, 'Review engine bridge, stores and boot', 'work', 'done', NULL, '2026-10-13, app/client/src/lib/engine.ts, lib/store.ts, lib/data.ts, app.css, code-review.md (## Part 4); decision 98, follow-up task 724', 'Task 2 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan". Read plan 75''s `## Part 3` findings on `engine/api.ts`, `engine/store.ts`, `engine/save.ts` first; don''t redo them.
 
 ## First
 - `pm queue` + grep open task bodies for `engine.ts`, `store.ts`, `data.ts`, `desktop.ts`, `main.ts`, `App.svelte`, `app.css`: a file an open task still changes (e.g. `task 474`/`475`, `task 391`, `task 392`, plan 69 tasks) gets findings only (`superseded by task N`).
@@ -11246,7 +11246,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
-- All eight files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', NULL, 516);
+- All eight files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', '2026-10-13T10:20:15Z', 516);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (541, 76, 'Review API client, types and errors', 'work', 'open', NULL, NULL, 'Task 3 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan". Read plan 75''s `## Part 3` findings on `engine/api.ts` and `engine/state.ts` errors first; don''t redo them.
 
 ## First
@@ -14119,6 +14119,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The test passes in `npm test`; total `npm test` time stays under ~7 s
 - `code-review.md` Part 3 row of task 538 about the coverage gap: status updated to `fixed (task N)`
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-13T10:07:27Z', '2026-10-13T10:10:32Z', 538);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (724, 76, 'Browser game: back up a corrupt or newer save (per decision 98)', 'work', 'open', NULL, NULL, 'Follow-up of `task 540: Review engine bridge, stores and boot`. Do what `decision 98: Browser game: corrupt or newer state/game.json` answered.
+
+## If "Mirror D-72"
+- `app/server/main.py` + `save.py`: `POST /api/save/backup?kind=corrupt|newer`: move `TRIVIA_STATE/game.json` to `backup/game-<kind>-<stamp>.json` (same naming as `app/desktop/save.mjs`), reply `{path}`; 404 when no file; update the API docstring.
+- `app/client/src/lib/store.ts`: `ServerStore.load` catches `parseSave`/JSON errors like `FileStore.load` (`SaveNewerError` → `newer`, else `corrupt`), calls the route, sets `notice`, returns `emptySave()`; move `notice` handling into a shared base or both classes; `lib/engine.ts` `takeSaveNotice` drops the `instanceof FileStore` check.
+- Check the notice text (`es.ts` keys used by the FileStore notice) fits the browser path (path is a server path).
+- Docs: D-67 consequence line in `plans/decisions.md`, `README.md` if it describes save recovery.
+- Check: truncated `game.json` on a temp `TRIVIA_STATE`, `trivia` (stop by PID): game starts fresh, backup file exists, notice shown once.
+
+## If "Keep as is"
+- README: one bullet how to move a broken `state/game.json` away; nothing else.', '2026-10-13T10:18:58Z', NULL, 540);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15227,6 +15238,7 @@ Batch throughput today (`qgen report --cost`, 2026-10-13): batch-7: 504 approved
 
 Hotfix (wrong answer, crash): always any time, same path, no cadence wait, in every option.', NULL, NULL, '2026-10-13T09:14:13Z', NULL, 711, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (97, 'Patch notes: counts only?', 'answered', '[]', 'qgen patch-notes (plan 96, task 712) prints counts per locale and category, never question text, answers or ids: no spoilers for players reading the Steam event, and nothing leaks if OQ-35 (plan 40) makes the pool private.', 'counts only (added/fixed/dropped per language and category)', NULL, '2026-10-13T09:17:18Z', '2026-10-13T09:17:18Z', 712, NULL, 'rule', 712, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (98, 'Browser game: corrupt or newer state/game.json', 'pending', '["Mirror D-72: new POST /api/save/backup?kind=corrupt|newer on app/server (moves game.json to state/backup/game-<kind>-<stamp>.json, returns the path); ServerStore.load backs up and starts fresh like FileStore; takeSaveNotice works in the browser too", "Keep as is: the browser game is the gamemaster''s own setup; document in README how to move a broken state/game.json away"]', 'Found by task 540 (code review part 4). The desktop shell backs up a broken or newer save and starts fresh with a notice (D-72, FileStore). The browser game (trivia, ServerStore) has no such path: GET /api/save returns the file as stored (D-67), parseSave throws, ready() fails and the game shows only the English corner line «can''t load the game: …» on every screen until someone moves state/game.json by hand. Checked with a truncated game.json on a temp TRIVIA_STATE. Fixing it changes the /api/save API and server behaviour.', NULL, NULL, '2026-10-13T10:18:50Z', NULL, 540, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -15813,6 +15825,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (579, 538, '2026-10-13T10:05:37Z', '2026-10-13T10:08:33Z', 'done', NULL, 0, 'c4331d4a2ae6cd8d6c255f379272b977c08493f9', 'claude-opus-5-5[1m]', 'a61a1296-a8d9-4cdb-86d8-a5e12b0b01b8', 26, 48, 14159, 1680903, 81525, 1.2717526, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (580, 723, '2026-10-13T10:08:33Z', '2026-10-13T10:10:45Z', 'done', NULL, 0, '057178421e0f47eceaac25a387af27982dcd1c0a', 'claude-opus-5-5[1m]', 'ddfe6b33-c97b-4b8b-9cf2-bb4796d9d6e8', 19, 34, 11158, 1082708, 71562, 1.0123336, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (581, 539, '2026-10-13T10:10:46Z', '2026-10-13T10:14:18Z', 'done', NULL, 0, '3444b98ed8e444bc5edcfd83e6669f29201ff9bc', 'claude-opus-5-5[1m]', '332c0e88-56d6-4859-a590-5e80d4b7b38f', 28, 48, 17312, 1509770, 74028, 1.2406100000000002, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (582, 540, '2026-10-13T10:14:19Z', '2026-10-13T10:20:24Z', 'done', NULL, 0, '017075430d190167a786e10ac51f11bb49255a2b', 'claude-opus-5-5[1m]', 'ff27966f-8675-4fd5-9954-0c917c1ef2be', 56, 100, 28554, 3649514, 90520, 2.0255428, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -16001,5 +16014,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (719, 93);
 INSERT INTO task_decision (task_id, decision_id) VALUES (719, 94);
 INSERT INTO task_decision (task_id, decision_id) VALUES (719, 95);
 INSERT INTO task_decision (task_id, decision_id) VALUES (719, 96);
+INSERT INTO task_decision (task_id, decision_id) VALUES (724, 98);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');

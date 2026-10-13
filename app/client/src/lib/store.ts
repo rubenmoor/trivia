@@ -18,7 +18,7 @@ class WriteQueue {
   /** Resolves once this document, or a newer one, is written. */
   push(text: string): Promise<void> {
     this.pending = text;
-    this.flight ??= this.drain().finally(() => (this.flight = null));
+    this.flight ??= this.drain();
     return this.flight;
   }
 
@@ -27,32 +27,27 @@ class WriteQueue {
     while (this.flight) await this.flight.catch(() => {});
   }
 
+  /** Clears `flight` before it settles: a push in between starts a new drain, not a finished one. */
   private async drain(): Promise<void> {
-    while (this.pending !== null) {
-      const text = this.pending;
-      this.pending = null;
-      await this.write(text);
+    try {
+      while (this.pending !== null) {
+        const text = this.pending;
+        this.pending = null;
+        await this.write(text);
+      }
+    } finally {
+      this.flight = null;
     }
   }
 }
 
 export class ServerStore implements Store {
-  private readonly base: string;
-  private readonly queue: WriteQueue;
-
-  constructor(base = "") {
-    this.base = base;
-    this.queue = new WriteQueue(async (body) => {
-      await json(await call(`${base}/api/save`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body,
-      }));
-    });
-  }
+  private readonly queue = new WriteQueue(async (body) => {
+    await json(await call("/api/save", { method: "PUT", headers: { "Content-Type": "application/json" }, body }));
+  });
 
   async load(): Promise<SaveData> {
-    const res = await call(`${this.base}/api/save`);
+    const res = await call("/api/save");
     if (res.status === 404) return emptySave();
     return parseSave(await json<unknown>(res));
   }
