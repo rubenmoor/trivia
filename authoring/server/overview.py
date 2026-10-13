@@ -13,14 +13,16 @@ import translations  # authoring/tools/translations.py
 
 
 def supply(pool):
-    """The profile's supply (profile = save, plan 65): any count and unseen only, pool minus blocked."""
+    """The profile's supply (profile = save, plan 65) in the default game (decision 103): any count and
+    unseen only, pool minus blocked."""
     blocked = save_file.blocked_ids()
     seen = save_file.seen_counts()
     avail = [q for q in pool if q["status"] == "approved" and q["id"] not in blocked]  # = selection.ts available
-    by_seen = Counter(min(seen[q["id"]], 2) for q in avail)
     anyc, unseen = engine.supplies((avail, blocked), ([q for q in avail if not seen[q["id"]]], blocked))
+    by_seen = Counter(min(seen[q["id"]], 2) for q in avail if q.get("bundle", "base") in anyc["bundles"])
     return {"blocked": len(blocked), "unseen": by_seen[0], "seen_once": by_seen[1], "seen_twice": by_seen[2],
-            "per_level": anyc["per_level"], "rows": [{"label": "any", "levels": anyc["supply"]}, {"label": "unseen", "levels": unseen["supply"]}]}
+            "bundles": anyc["bundles"], "per_level": anyc["per_level"],
+            "rows": [{"label": "any", "levels": anyc["supply"]}, {"label": "unseen", "levels": unseen["supply"]}]}
 
 
 def unfinished_translate_runs():

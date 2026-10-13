@@ -27,9 +27,9 @@ def simulate(cells):
 
 
 def supply(questions, blocked, **opts):
-    """{per_level, ranges {"1": [lo, hi], …}, supply [{level, range, candidates, missing}]} from selection.ts;
+    """{per_level, ranges {"1": [lo, hi], …}, bundles, supply [{level, range, candidates, missing}]} from selection.ts;
     questions minus unapproved and `blocked` ids (stdin key `burned`); opts: age_group (default young_teens),
-    bundles (default every bundle)."""
+    bundles (default: the default game's, es's first base bundle; decision 103)."""
     return node(SUPPLY, {"questions": questions, "burned": sorted(blocked), **opts})
 
 

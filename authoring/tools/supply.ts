@@ -1,9 +1,10 @@
 // Supply check for qgen report and the authoring start page (plan 51, D-60): selection.ts under Node.
-// stdin: {questions, burned, age_group?, bundles?} or an array of them; stdout: {per_level, ranges, supply} per input.
-// Defaults: young_teens (the default age group), every bundle.
+// stdin: {questions, burned, age_group?, bundles?} or an array of them; stdout: {per_level, ranges, bundles, supply} per input.
+// Defaults: the default game (decision 103): young_teens, es's first base bundle only (decision 33).
 import { readFileSync } from "node:fs";
 import ageGroups from "../../app/data/age-groups.json" with { type: "json" };
-import { parseAgeGroups, type PoolQuestion } from "../../app/client/src/engine/pool.ts";
+import bundlesJson from "../../app/data/bundles.json" with { type: "json" };
+import { bundlesFor, parseAgeGroups, parseBundles, type PoolQuestion } from "../../app/client/src/engine/pool.ts";
 import { PER_LEVEL, available, supply } from "../../app/client/src/engine/selection.ts";
 
 interface Input {
@@ -14,15 +15,16 @@ interface Input {
 }
 
 const groups = parseAgeGroups(ageGroups);
+const base = bundlesFor({ bundles: parseBundles(bundlesJson), locale: "es" }).find((b) => b.kind === "base")!.id;
 
-function run({ questions, burned, age_group = "young_teens", bundles }: Input) {
+function run({ questions, burned, age_group = "young_teens", bundles = [base] }: Input) {
   const group = groups.find((g) => g.id === age_group);
   if (!group) throw new Error(`unknown age group ${age_group}`);
-  const active = new Set(bundles ?? questions.map((q) => q.bundle ?? "base"));
   return {
     per_level: PER_LEVEL,
     ranges: Object.fromEntries(group.levels.map((r, i) => [i + 1, r])),
-    supply: supply(available(questions, burned, [], active), group.levels),
+    bundles,
+    supply: supply(available(questions, burned, [], new Set(bundles)), group.levels),
   };
 }
 

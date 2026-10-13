@@ -2194,7 +2194,7 @@ def cmd_report(args):
     print(f"  by category: {count(avail, cat)}")
     print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
     print(f"  by bundle: {count(avail, lambda q: q.get('bundle'))}")
-    print("supply per level, young teens, every bundle (a game needs 4 per level, D-22):")
+    print(f"supply per level, default game: young teens, {', '.join(checked['bundles'])} (a game needs 4 per level, D-22):")
     for l in checked["supply"]:
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""

@@ -245,6 +245,8 @@ export interface Overview {
     unseen: number;
     seen_once: number;
     seen_twice: number;
+    /** The default game's bundles (decision 103). */
+    bundles: string[];
     /** "any": every count; "unseen": count 0 only. */
     rows: { label: string; levels: { level: number; range: [number, number]; candidates: number; missing: number }[] }[];
   };
