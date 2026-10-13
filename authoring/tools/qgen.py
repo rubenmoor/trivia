@@ -2321,17 +2321,26 @@ def cmd_sheets(args):
     return errors
 
 
+RELATED_RATIO = 0.7  # answers this similar count as the same
+RELATED_MAX = 30
+
+
 def related_questions(q, pool):
-    """Pool questions the review must compare with: same or similar answer, or same subcategory."""
+    """Pool questions the review must compare with: same or similar answer first, then same subcategory."""
     a = norm(q["answer"])
-    out = []
-    for p in pool:
+    ranked = []
+    for i, p in enumerate(pool):
         if p["id"] == q["id"] or p["status"] == "rejected":
             continue
         b = norm(p["answer"])
-        if a == b or difflib.SequenceMatcher(None, a, b).ratio() >= 0.7 or p.get("subcategory") == q["subcategory"]:
-            out.append({k: p[k] for k in ["id", "status", "subcategory", "question", "answer"]})
-    return out[:30]
+        ratio = 1.0 if a == b else difflib.SequenceMatcher(None, a, b).ratio()
+        if ratio >= RELATED_RATIO:
+            ranked.append((0, -ratio, i, p))
+        elif p.get("subcategory") == q["subcategory"]:
+            ranked.append((1, 0, i, p))
+    ranked.sort(key=lambda r: r[:3])
+    return [{k: p[k] for k in ["id", "status", "subcategory", "question", "answer"]}
+            for *_, p in ranked[:RELATED_MAX]]
 
 
 def slot_input(d, q, slot):

@@ -14215,7 +14215,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Stubbed `subprocess.run` in a /tmp script: success, `is_error` with a cost, non-JSON stdout → expected costs.log lines.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T11:49:43Z', '2026-10-13T12:31:47Z', 557);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (732, 79, 'qgen related_questions: answer matches before same-subcategory questions in the 30 cap', 'work', 'open', NULL, NULL, 'Found by `task 562: Review qgen LLM batch steps: media, sheets, review, fix, research, record`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (732, 79, 'qgen related_questions: answer matches before same-subcategory questions in the 30 cap', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py, code-review.md', 'Found by `task 562: Review qgen LLM batch steps: media, sheets, review, fix, research, record`.
 
 ## Problem
 - `authoring/tools/qgen.py` `related_questions(q, pool)` (used by `cmd_review`, both the source and the translation payload) collects pool questions with the same/similar answer (`norm` equal or `difflib` ratio ≥ 0.7) **or** the same subcategory, in pool order, then cuts to `out[:30]`.
@@ -14226,7 +14226,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Answer matches first (exact, then by ratio), then same-subcategory questions, then cut to 30; name the 0.7 and 30 (`RELATED_RATIO`, `RELATED_MAX`).
 - Changes the review prompt''s `related` list (plan 79 rule: prompt change ≠ code fix), so this is its own task; behaviour otherwise unchanged.
 - Check: throw-away script on a temp copy, `related_questions` for a question in a large subcategory before/after; no LLM calls.
-- Log the row in `## Part 7` of `code-review.md` as `fixed (task N)`.', '2026-10-13T12:14:09Z', NULL, 562);
+- Log the row in `## Part 7` of `code-review.md` as `fixed (task N)`.', '2026-10-13T12:14:09Z', '2026-10-13T12:32:50Z', 562);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (733, 79, 'qgen: errors a step returns itself are never printed; standalone commands exit 0 with them', 'work', 'open', NULL, NULL, 'Found by `task 563: Review qgen audit, back-audit and batch orchestration` (code-review.md `## Part 7`).
 
 ## Problem
@@ -15983,6 +15983,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (613, 565, '2026-10-13T12:21:30Z', '2026-10-13T12:25:49Z', 'done', NULL, 0, '326d53eb922adddd9c617c5a923dfc6c4d0946dc', 'claude-opus-5-5[1m]', '67edf2a3-93c9-48b7-880f-ea00f0280d79', 30, 58, 19697, 2238229, 90499, 1.5658098000000005, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (614, 566, '2026-10-13T12:25:49Z', '2026-10-13T12:31:01Z', 'done', NULL, 0, 'bbee89167dc2d600f3c99c448414eec8efb89459', 'claude-opus-5-5[1m]', '666892b0-3653-408a-8629-a4e605c98244', 45, 88, 28906, 3711585, 102458, 2.1404529999999986, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (615, 731, '2026-10-13T12:31:01Z', '2026-10-13T12:31:53Z', 'done', NULL, 0, 'c2311309fbe409e8b5d9958ac6a4ec7aa4ceec53', 'claude-opus-5-5[1m]', '6465fd6d-5238-4b56-b304-86b9f6540829', 10, 16, 3262, 255070, 26836, 0.33100599999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (616, 732, '2026-10-13T12:31:53Z', '2026-10-13T12:32:55Z', 'done', NULL, 0, '011ba45766daba165d03e55b2bd9f56319ef1789', 'claude-opus-5-5[1m]', '4e2eaa83-9c83-4e69-add3-a3f1d2c1e9e1', 8, 14, 3213, 214291, 24763, 0.3052782, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
