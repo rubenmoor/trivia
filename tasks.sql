@@ -22929,7 +22929,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Docs name plan 112''s paths and the recorded decision; per-commit checks pass.', '2026-10-13T18:29:51Z', '2026-10-13T18:53:57Z', 914);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (955, 114, 'workshop.mjs, fake Workshop dir and the start wiring', 'work', 'open', NULL, NULL, 'Plan 114 task 1. Needs plan 112''s tasks 950–952 (`mods.mjs`, `resolve.mjs`, `main.mjs` mods wiring) done first.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (955, 114, 'workshop.mjs, fake Workshop dir and the start wiring', 'work', 'done', NULL, '2026-10-13, app/desktop/workshop.mjs (workshopItems, fakeUgc), mods.mjs (dir-less Workshop entries downloading/disabled, needs_update + workshop_id_mismatch warnings, duplicate_id names winner''s publishedFileId, publishedFileId null for local), main.mjs (workshopSource: real user → steam.workshop, dev switch + TRIVIA_DEV_WORKSHOP_DIR → fake; stderr per item), electron-builder.yml ships workshop.mjs; throw-away fake-ugc script and trivia-desktop with a fake item''s CSS (rgb(1,2,3) via CDP) checked', 'Plan 114 task 1. Needs plan 112''s tasks 950–952 (`mods.mjs`, `resolve.mjs`, `main.mjs` mods wiring) done first.
 
 - `app/desktop/workshop.mjs` (pure: no Electron, no binding import):
   - `workshopItems(ugc)`: `ugc` has `getSubscribedItems()`, `getItemState(id)`, `getItemInstallInfo(id)`, `downloadItem(id, highPriority)` (`steam.workshop` of `steamworks-ffi-node` 0.11.3, all sync, ids `bigint`)
@@ -22955,7 +22955,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when:
 - a throw-away script with a fake `ugc` (installed, downloading, not installed → `downloadItem` called, disabled, no `mod.json`, two items same id, local with the same id, `workshopId` mismatch) prints the expected list
 - `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1 TRIVIA_DEV_WORKSHOP_DIR=<tmp>` loads a fake item''s CSS
-- per-commit checks pass', '2026-10-13T18:30:38Z', NULL, 934);
+- per-commit checks pass', '2026-10-13T18:30:38Z', '2026-10-13T19:11:18Z', 934);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (956, 114, 'Bridge: mods:list and mods:set over IPC', 'work', 'open', NULL, NULL, 'Plan 114 task 2, after the task "workshop.mjs, fake Workshop dir and the start wiring".
 
 - `main.mjs`, channels via the existing `handle()` (sender-origin check `app://trivia/`):
@@ -25664,6 +25664,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (802, 953, '2026-10-13T18:51:23Z', '2026-10-13T18:53:10Z', 'done', NULL, 0, '94a6602e8b44d67544f1aa93dbe6e7d744885e49', 'claude-opus-5-5[1m]', 'b9fed11c-f135-4ca6-ac5a-fcebf014f3ef', 12, 24, 7598, 494666, 39808, 0.5694532, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (803, 954, '2026-10-13T18:53:11Z', '2026-10-13T18:54:04Z', 'done', NULL, 0, 'd2cada2b86150a7655d58900ff4a082bdfb0e0fb', 'claude-opus-5-5[1m]', 'bd4dafc3-1ed6-4901-b075-b5c0d0349c3c', 12, 16, 3827, 304940, 36717, 0.43132800000000005, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (804, 994, '2026-10-13T18:54:04Z', '2026-10-13T19:08:42Z', 'done', NULL, 0, 'c9aa1be2be56049914d80d5357e418f81c0bb1a3', 'claude-opus-5-5[1m]', 'ab177d2f-053b-481e-a80b-f8778599c0a4', 11, 20, 3182, 326327, 27039, 0.34529739999999992, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (805, 955, '2026-10-13T19:08:42Z', '2026-10-13T19:11:31Z', 'done', NULL, 0, '13bbf248101d7f96ed59204e160518d4a6cb3bd6', 'claude-opus-5-5[1m]', '2fef1bb8-cf8a-446d-9c9c-b8ac6d672d71', 22, 40, 13423, 1076025, 55450, 0.92742499999999983, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

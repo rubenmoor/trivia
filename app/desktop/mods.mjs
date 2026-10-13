@@ -128,20 +128,32 @@ export async function discover({ local, workshop = [] }, gameVersion) {
         console.error(`trivia: mods: ${dir}: no mod.json, ignored`);
         continue;
       }
-      mods.push({ ...(await readManifest(dir, gameVersion)), source: "local" });
+      mods.push({ ...(await readManifest(dir, gameVersion)), source: "local", publishedFileId: null });
     }
   }
   const items = [...workshop].sort((a, b) => {
     const [x, y] = [BigInt(a.publishedFileId), BigInt(b.publishedFileId)];
     return x < y ? -1 : x > y ? 1 : 0;
   });
-  for (const { dir, publishedFileId } of items)
-    mods.push({ ...(await readManifest(dir, gameVersion)), source: "workshop", publishedFileId: String(publishedFileId) });
+  for (const { dir, publishedFileId, state, warnings = [] } of items) {
+    const source = { source: "workshop", publishedFileId: String(publishedFileId) };
+    // Not on disk this run (downloading, disabled): listed, not loaded.
+    if (!dir) {
+      mods.push({ id: null, dir: null, manifest: null, kind: [], warnings, error: null, ...source, state });
+      continue;
+    }
+    const mod = { ...(await readManifest(dir, gameVersion)), ...source };
+    mod.warnings.unshift(...warnings);
+    const named = mod.manifest?.workshopId;
+    if (!mod.error && named !== undefined && named !== source.publishedFileId)
+      mod.warnings.push({ code: "workshop_id_mismatch", workshopId: named });
+    mods.push(mod);
+  }
   const owner = new Map();
   for (const mod of mods) {
     if (mod.error || !mod.id) continue;
     const other = owner.get(mod.id);
-    if (other) mod.error = { code: "duplicate_id", other: other.dir };
+    if (other) mod.error = { code: "duplicate_id", other: other.dir, publishedFileId: other.publishedFileId };
     else owner.set(mod.id, mod);
   }
   return mods;
@@ -206,7 +218,9 @@ export function arrange(mods, settings, { validUser }) {
     return { ...mod, on, position, state };
   });
   for (const mod of mods)
-    if (!mod.id || mod.error?.code === "duplicate_id") list.push({ ...mod, on: false, position: null, state: "invalid" });
+    if (!mod.dir) list.push({ ...mod, on: false, position: null });
+    else if (!mod.id || mod.error?.code === "duplicate_id")
+      list.push({ ...mod, on: false, position: null, state: "invalid" });
   const layers = list.filter((e) => e.state === "loaded").map((e) => e.dir);
   return { list, layers, settings: next, changed: next !== settings };
 }

@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { arrange, discover, readSettings, writeSettings } from "./mods.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
+import { fakeUgc, workshopItems } from "./workshop.mjs";
 
 const ORIGIN = "app://trivia/";
 const BACKGROUND = "#0b1120"; // --night-900
@@ -293,11 +294,14 @@ async function start() {
 /** Discovery, mods.json, load order → overlay layers, fixed for the run; none with --no-mods. */
 async function loadMods() {
   const file = modsSettingsFile();
-  const found = await discover({ local: modsDir(), workshop: [] }, app.getVersion());
+  const found = await discover({ local: modsDir(), workshop: workshopSource() }, app.getVersion());
   const arranged = arrange(found, await readSettings(file), { validUser });
   if (arranged.changed)
     await writeSettings(file, arranged.settings).catch((err) => console.error(`trivia: mods: ${file}: ${err.message}`));
   mods = arranged.list;
+  for (const mod of mods)
+    if (mod.source === "workshop")
+      console.error(`trivia: mod ${mod.id ?? "?"} workshop ${mod.publishedFileId} ${mod.dir ? "installed" : mod.state}`);
   if (args.noMods) {
     console.error("trivia: --no-mods: no mods this run");
     return [];
@@ -306,11 +310,25 @@ async function loadMods() {
   for (const mod of mods) {
     count[mod.state] = (count[mod.state] ?? 0) + 1;
     const notes = [...(mod.error ? [mod.error.code] : []), ...(mod.warnings ?? []).map((w) => w.code)];
-    console.error(`trivia: mod ${mod.id ?? mod.dir} ${mod.state}${notes.length ? ` [${notes.join(", ")}]` : ""}`);
+    console.error(`trivia: mod ${mod.id ?? mod.dir ?? mod.publishedFileId} ${mod.state}${notes.length ? ` [${notes.join(", ")}]` : ""}`);
   }
   if (mods.length)
     console.error(`trivia: mods: ${Object.entries(count).map(([state, n]) => `${n} ${state}`).join(", ")}`);
   return arranged.layers;
+}
+
+/** Subscribed items (plan 114): real user only (decision 111); dev switch + `TRIVIA_DEV_WORKSHOP_DIR`: a fake folder. */
+function workshopSource() {
+  try {
+    if (hasSteamId()) return workshopItems(steam.workshop);
+    const dir = process.env.TRIVIA_DEV_WORKSHOP_DIR;
+    if (!dir || process.env.TRIVIA_DEV_STEAM_USER !== "1") return [];
+    console.error(`trivia: dev Workshop folder ${dir} (TRIVIA_DEV_WORKSHOP_DIR)`);
+    return workshopItems(fakeUgc(dir));
+  } catch (err) {
+    console.error(`trivia: workshop unavailable: ${err.message}`);
+    return [];
+  }
 }
 
 /** IPC for preload.cjs; only our own page may call. */

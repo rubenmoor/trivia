@@ -9,6 +9,7 @@ files:
   - package.json
   - main.mjs
   - mods.mjs
+  - workshop.mjs
   - resolve.mjs
   - save.mjs
   - preload.cjs
