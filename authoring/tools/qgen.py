@@ -1925,7 +1925,7 @@ def report_exit_check(pool, bundle):
     sys.exit(0 if all(ok for ok, *_ in results) else 1)
 
 
-LAUNCH_LOCALES = ["es", "en", "de"]  # D-78
+LAUNCH_LOCALES = ["es", *translations.LOCALES]  # D-78
 SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster
 SIM_MULTI = {"rr-competitive", "timed"}
 AGE_GROUP_IDS = ["kids", "young_teens", "young_adults", "adults"]  # D-76
@@ -3241,7 +3241,8 @@ def translate_selection(locale, n):
         (stale if t and translations.is_stale(t, q) else open_).append(q)
     stale = [q["id"] for q in sorted(stale, key=lambda q: natural_key(q["id"]))][:n]
     order = categories.subcategories("base")
-    queues = {sub: spread([q for q in open_ if q["subcategory"] == sub], (k * 0.618034) % 1) for k, sub in enumerate(order)}
+    queues = {sub: spread([q for q in open_ if q["subcategory"] == sub], (k * 0.618034) % 1)  # golden-ratio offsets
+              for k, sub in enumerate(order)}
     deficit, per_level = targets.deficits(pool, "base", locale) or {}, Counter()
     picked = list(stale)
     while len(picked) < n and any(queues.values()):
@@ -3367,7 +3368,9 @@ def write_translate_report(run):
     lines += [f"- **{x['id']}** {x['reason']}, " + ("confirmed" if x.get("decision") == "approved" else "translate again")
               + f": {x['question']} → {x['answer']} ({x['notes']})" for x in away] or ["None."]
     lines += ["", "## Stale re-translated", ""]
-    lines += [f"- {i}: {qs[i]['status'] if i in qs else 'not travelling'}" for i in cfg.get("stale", [])] or ["None."]
+    gone = {x["id"] for x in away}
+    lines += [f"- {i}: {qs[i]['status'] if i in qs else 'not travelling' if i in gone else 'not merged'}"
+              for i in cfg.get("stale", [])] or ["None."]
     out = layout.REPORTS / f"{run}.md"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
