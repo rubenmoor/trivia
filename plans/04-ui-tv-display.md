@@ -207,6 +207,7 @@ Menu items (keyboard-navigable, large enough for the TV):
 - **Pantalla completa** on/off.
 - **Idioma** / **Idioma de las preguntas** (D-86), every mode, each only with ≥2 options: ‹ › steps through endonyms. UI: applied with `Enter`, the game reloads. Questions: applies to the next game; a locale whose pool can't fill a game is shown disabled with the reason. The first start asks once on the Language screen.
 - **Comodines de esta partida** (MD-4, `13-game-modes.md`): the joker budget of the running game, «Sin límite» (default), «Como las cartas» (4 Soplo, 2 each other) or a count per joker, with the uses left. In a second column with the volume controls.
+- **The game's choice** (plan 29), under the budget, every mode, read-only (↑/↓ skip it): «Adolescentes · Básico, Colombia», group (or «Dificultad 3–9», D-88) · active bundles, base first. From `settings` via `gameChoice`; missing keys read as the locale's defaults. Not in the HUD; a new game is the way to change it.
 - **Flag for review** (GM-5, D-47) is not in the menu: it is a small faint flag next to the ☰ (`M`).
 - **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `authoring/data/questions.json` and the review tool. The ID links to `/review/<id>` (new tab), next to links to the stats pages (`/stats/categories`, `/stats/difficulty`).
 - **Demo de efectos** (later): play every transition and effect for testing on the TV (B-3).

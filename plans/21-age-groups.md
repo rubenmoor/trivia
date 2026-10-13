@@ -47,7 +47,7 @@ Why one scale and not a difficulty per group: one number per question is simple 
 - [x] AG-4 Prompts (draft, rate, revise, concepts) without a fixed age; `known_at` replaces `familiarity`
 - [x] AG-5 `qgen`: difficulty 1–15; targets from the focus window; `known_at` in drawing, lists and validation. *`draft` stops if `LEVEL_WEIGHTS` don't cover the focus window; a concept added for an existing question takes the question's difficulty as `known_at`.*
 - [x] AG-6 Espacio's concept list again, with `known_at`. *255 concepts (225 + a 30-concept fill), `known_at` 1–14; 146 in the young-teen window, 86 in the kids', 232 in each adult window.*
-- [ ] AG-7 The game: choose an age group; levels map to the group's window; tune the draft windows and per-group level weights
+- [ ] AG-7 The game: choose an age group; levels map to the group's window; tune the draft windows and per-group level weights *(start screen: plan 29)*
   - 2026-10-11 engine: group ranges and choice per game, plan 27 (`gameChoice`, `resolveChoice`, `choice` route; `levels` in `age-groups.json`). Open: start screen, tuning, play-test (plans 28–30).
 - [ ] AG-8 Batches for other age groups: `LEVEL_WEIGHTS` per group, and how a batch picks its group
 - [x] AG-10 No focus (D-40): `"focus": null` writes across the whole scale with even targets; house style, rate prompt and bundle rules say "the players" instead of "the focus group". *`target_weights()` in `qgen.py`; the house style's `{focus_group}` became `{players}`, which names the focus group or, without one, every group's window. `focus` is set to null for now.*

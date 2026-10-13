@@ -1,4 +1,5 @@
 import * as engine from "../engine/api.ts";
+import { gameChoice } from "../engine/game.ts";
 import { bundlesFor } from "../engine/pool.ts";
 import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
 import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
@@ -119,6 +120,19 @@ export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
     });
     return { save, status: 200, body: { groups, bundles } };
   }, "next");
+}
+
+/** The running game's choice for the overlay (plan 29): group name or custom difficulty, active bundle
+ * names (base first, then file order); missing keys read as the locale's defaults (`gameChoice`). */
+export async function fetchGameChoice(settings: Game["settings"]): Promise<{ group: string | null; difficulty: Difficulty | null; bundles: string[] }> {
+  return read((save, data) => {
+    const c = gameChoice({ settings }, data);
+    const group = c.age_group === null ? null : (data.groupById.get(c.age_group)?.name ?? c.age_group);
+    const on = data.bundles.filter((b) => c.bundles.includes(b.id));
+    const bundles = [...on.filter((b) => b.kind === "base"), ...on.filter((b) => b.kind !== "base")]
+      .map((b) => data.names.bundles[b.id]?.name ?? b.name);
+    return { save, status: 200, body: { group, difficulty: c.difficulty, bundles } };
+  });
 }
 
 /** The player's preset (missing fields) and the supply of a choice (plan 27's `choice` route); a

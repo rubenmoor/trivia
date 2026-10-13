@@ -133,6 +133,10 @@ const es = {
     on: "activado",
     off: "desactivado",
     start: "¡A jugar!",
+    /** The running game's choice in the overlay: «Adolescentes · Básico, Colombia». */
+    line: "{group} · {bundles}",
+    /** A custom difficulty in place of the group (D-88). */
+    difficulty: "Dificultad {start}–{end}",
   },
   screen: {
     loading: "Cargando…",

@@ -51,7 +51,7 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 - **One house style for every bundle** (D-44): a session mixes questions from all active bundles, so a bundle's own axes may change *what* is asked, never *how* it is written.
 
 ## Later
-- **The game** (BN-6): a choice of bundles before a session, `base` always on; selection filters by the active bundles. The engine does it (plan 27); until the start screen offers it (plan 29), games play every bundle.
+- **The game** (BN-6): a choice of bundles before a session, exactly one base bundle (D-38); selection filters by the active bundles. Engine: plan 27; Choice screen and overlay line: plan 29.
 
 ## Tasks
 - [x] BN-1 Decision D-39 and this plan; 15c's `region` replaced by bundles
@@ -59,7 +59,7 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 - [x] BN-3 `qgen bundles`: an LLM pass proposes `colombia` for existing questions and writes it. *2026-10-07: 504 questions (rejected ones skipped), 26 calls; 84 moved to `colombia`. Proposals and reasons in `work/bundles/proposals.json`. For the gamemaster to check: `/review?bundle=colombia`.*
 - [x] BN-4 `draft` picks the bundle by the rules; house style explains bundles
 - [x] BN-5 `report` per bundle; review tool shows the bundle, filters by it (`?bundle=`) and lets the gamemaster change it. *Key `n` moves a question to the next bundle. The server also accepts difficulty 1–15 now (D-38); the review tool's digit keys still set 1–10.*
-- [ ] BN-6 The game: choose bundles before a session; selection filters by them
+- [ ] BN-6 The game: choose bundles before a session; selection filters by them *(start screen: plan 29)*
   - 2026-10-11 engine: bundle filter and choice per game, plan 27 (`always_on` bundles always in, «Cambiazo» groups of active bundles only). Open: start screen, play-test (plans 29–30).
 - [-] BN-7 `qgen batch` aimed at one bundle. *Replaced by BN-8..BN-12 (D-41).*
 - [x] BN-8 `qgen batch` writes `base` by default: `draft` sets the batch's bundle instead of picking one; prompts drop the bundle choice and keep the base rule as a content limit (D-41). *The bundle is stored in `run.json`; runs without one are `base`.*

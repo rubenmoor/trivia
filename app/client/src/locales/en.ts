@@ -115,6 +115,8 @@ export const en = {
     on: "on",
     off: "off",
     start: "Let's play!",
+    line: "{group} · {bundles}",
+    difficulty: "Difficulty {start}–{end}",
   },
   screen: {
     loading: "Loading…",

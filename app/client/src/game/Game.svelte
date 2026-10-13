@@ -651,6 +651,7 @@
       onrestart={restart}
       budget={running ? (game?.settings.jokers ?? null) : null}
       left={running ? (game?.jokers_left ?? null) : null}
+      settings={running ? (game?.settings ?? null) : null}
       onbudget={setBudget}
     />
   {/if}

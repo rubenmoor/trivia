@@ -135,7 +135,7 @@ export function defaultChoice(data: EngineData): Choice {
 
 /** The game's choice; missing keys, an unknown group or bundles that don't resolve (plan 71) are the
  * defaults (jokers: the game's budget), resolved here and never written back. */
-export function gameChoice(state: GameState, data: EngineData): Choice {
+export function gameChoice(state: Pick<GameState, "settings">, data: EngineData): Choice {
   const d = defaultChoice(data);
   const { age_group, bundles, difficulty, levels, cards, video, audio, jokers } = state.settings;
   let out = d.bundles;

@@ -2,15 +2,16 @@
   // Admin overlay on Esc (04-ui-tv-display.md, UI-13). The family sees it, so it never shows
   // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
   // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
+  // Under the budget, read-only: the game's group and bundles (plan 29).
   // Outside gamemaster mode no undo, skip or budget editor (D-74); «Reportar pregunta» in every mode (MD-6).
   // Language rows (plan 68) only with ≥2 options: ←/→ pick; questions apply at once, the UI on Enter (reload).
-  import { fetchLanguage, localeSupply, setLanguage } from "../lib/api";
+  import { fetchGameChoice, fetchLanguage, localeSupply, setLanguage } from "../lib/api";
   import { desktop } from "../lib/desktop";
   import { flush } from "../lib/engine";
   import { endonym, t } from "../lib/i18n";
   import { focusControl, pushScope, type Action } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
-  import type { GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
+  import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
 
@@ -24,6 +25,8 @@
     joker?: JokerName;
     preset?: boolean;
     lang?: LangKind;
+    /** Read-only: the running game's choice (plan 29); ↑/↓ skip it. */
+    info?: boolean;
   };
   type LangKind = "ui" | "questions";
   type Channel = "music" | "effects" | "media";
@@ -60,6 +63,7 @@
     reported,
     budget,
     left,
+    settings,
     onclose,
     onskip,
     onskipall,
@@ -84,6 +88,8 @@
     budget: JokerBudget | null;
     /** Uses left in the running game. */
     left: JokerBudget | null;
+    /** The running game's settings, for its group and bundles (plan 29), or null. */
+    settings: Game["settings"] | null;
     onclose: () => void;
     onskip: () => void;
     /** «Bloquear pregunta»: a broken or wrong question, never offered again (plan 65). */
@@ -193,6 +199,19 @@
     location.reload();
   }
 
+  /** «Adolescentes · Básico, Colombia»; null without a running game. */
+  let choiceLine = $state<string | null>(null);
+  $effect(() => {
+    const s = settings;
+    if (!s) return void (choiceLine = null);
+    fetchGameChoice(s)
+      .then(({ group, difficulty, bundles }) => {
+        const head = difficulty ? t("choice.difficulty", { start: difficulty.start, end: difficulty.end }) : (group ?? "");
+        choiceLine = t("choice.line", { group: head, bundles: bundles.join(", ") });
+      })
+      .catch(() => {});
+  });
+
   /** Pending saves first (plan 55). */
   async function quit() {
     await flush();
@@ -237,6 +256,7 @@
           ...TOKENS.map((t) => ({ label: t.label, enabled: true, run: () => {}, joker: t.name, right: true })),
         ]
       : []),
+    ...(budget && choiceLine ? [{ label: choiceLine, enabled: false, run: () => {}, info: true, right: true }] : []),
   ]);
 
   let selected = $state(0);
@@ -300,6 +320,8 @@
       <button class="step" onclick={() => stepJoker(name, 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>
       <span class="left">{left?.[name] != null ? t("overlay.left", { n: left[name] }) : ""}</span>
     </div>
+  {:else if item.info}
+    <p class="row readonly info">{item.label}</p>
   {:else if item.lang && shown}
     {@const kind = item.lang}
     {@const tag = shown[kind]}
@@ -343,7 +365,7 @@
       <div class="column">
         <h3>{t("overlay.sound")}</h3>
         {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
-          {#if item.right && !item.preset && !item.joker}{@render row(item, i)}{/if}
+          {#if item.right && !item.preset && !item.joker && !item.info}{@render row(item, i)}{/if}
         {/each}
         {#if budget}
           <h3>{t("overlay.budget")}</h3>
@@ -359,6 +381,9 @@
               </p>
             {/each}
           {/if}
+          {#each items as item, i (item.label)}
+            {#if item.info}{@render row(item, i)}{/if}
+          {/each}
         {/if}
       </div>
     </div>
@@ -532,6 +557,10 @@
   .readonly {
     grid-template-columns: 1fr auto;
     margin: 0;
+  }
+  .info {
+    grid-template-columns: 1fr;
+    color: var(--slate-200);
   }
   .readonly .value {
     color: var(--amber);
