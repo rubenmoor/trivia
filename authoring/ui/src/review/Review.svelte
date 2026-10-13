@@ -626,8 +626,8 @@
     {#if current.revision && !blind && !locale}<RevisionPanel question={current} revision={current.revision} />{/if}
 
     <article>
-      {#if locale}
-        <SourcePanel question={current} {blind} />
+      {#if locale && current.source}
+        <SourcePanel question={current} source={current.source} {blind} />
         <p class="muted">Media and bundle live on the source: <a href={`/review?id=${encodeURIComponent(current.id)}`}>change them in the Spanish view</a>.</p>
       {:else}
       <p class="description">{current.description}</p>
@@ -696,6 +696,8 @@
             {#if showScores}
               <p class="scores">
                 correct {current.quality.correct} · unambiguous {current.quality.unambiguous} ·
+                {#if current.quality.no_giveaway !== undefined}no giveaway {current.quality.no_giveaway} ·{/if}
+                {#if current.quality.no_overlap !== undefined}no overlap {current.quality.no_overlap} ·{/if}
                 distractors {current.quality.distractors} · age {current.quality.age_fit} ·
                 fun {current.quality.fun} · description {current.quality.description} ·
                 estimated difficulty {current.quality.difficulty_estimate}

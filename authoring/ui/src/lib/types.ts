@@ -25,7 +25,7 @@ export interface LicenceVerdict {
 }
 
 /** The play fields plus the search spec used by `trivia-media fetch`. */
-export interface Media extends PlayMedia, LicenceRecord {
+interface Media extends PlayMedia, LicenceRecord {
   query: string;
   note: string | null;
 }
@@ -52,7 +52,7 @@ export interface MediaCandidate {
 }
 
 /** Background image for audio questions (D-14). */
-export interface Background extends PlayBackground, LicenceRecord {
+interface Background extends PlayBackground, LicenceRecord {
   query: string;
 }
 
@@ -67,9 +67,12 @@ export interface Revision {
   revised_on: string;
 }
 
-export interface Quality {
+/** The rater's scores (qgen.py RUBRIC); no_giveaway, no_overlap missing on older batches. */
+interface Quality {
   correct: number;
   unambiguous: number;
+  no_giveaway?: number;
+  no_overlap?: number;
   distractors: number;
   age_fit: number;
   fun: number;
@@ -79,7 +82,7 @@ export interface Quality {
 }
 
 /** Both make an approved question playable (D-33). */
-export type Reviewer = "human" | "llm";
+type Reviewer = "human" | "llm";
 
 export interface Review {
   decision: Decision;
@@ -95,7 +98,7 @@ export interface Review {
 }
 
 /** work/<batch>/audit/<id>.json: the independent LLM audit (plan 16). */
-export interface Audit {
+interface Audit {
   verdict: "ok" | "problem";
   problems: string[];
   severity: "minor" | "major";

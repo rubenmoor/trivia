@@ -1,11 +1,10 @@
 <script lang="ts">
   // Locale view (plan 67): the Spanish source (read-only) next to the translation, row by row.
-  import type { Question } from "../lib/types";
+  import type { Question, SourceText } from "../lib/types";
 
   // blind: the spot check (plan 16) hides the translation's status, the LLM's verdict.
-  let { question, blind = false }: { question: Question; blind?: boolean } = $props();
+  let { question, source, blind = false }: { question: Question; source: SourceText; blind?: boolean } = $props();
 
-  const source = $derived(question.source!);
   const indexes = (a: string[], b: string[]) => [...Array(Math.max(a.length, b.length)).keys()];
 </script>
 
