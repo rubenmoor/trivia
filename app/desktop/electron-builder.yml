@@ -8,6 +8,7 @@ directories:
 files:
   - package.json
   - main.mjs
+  - mods.mjs
   - resolve.mjs
   - save.mjs
   - preload.cjs
