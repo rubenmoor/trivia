@@ -209,5 +209,7 @@ export interface Credits {
   fonts: { name: string; file: string; license: string; license_file: string }[];
   /** Controller glyphs drawn for the game (Glyph.svelte). */
   glyphs: boolean;
+  /** Steam achievement icons drawn for the game (`app/desktop/achievements/`). */
+  achievements: boolean;
   libraries: { name: string; version: string; license: string; url: string }[];
 }

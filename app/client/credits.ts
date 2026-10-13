@@ -255,6 +255,7 @@ function markdown(
   for (const f of c.fonts) out.push(`- ${f.name}: ${f.license}, see \`${f.license_file}\``);
   out.push("");
   if (c.glyphs) out.push("## Controller glyphs", "", "Original, drawn for the game.", "");
+  if (c.achievements) out.push("## Steam achievement icons", "", "Original, drawn for the game.", "");
   out.push("## Libraries", "");
   for (const l of c.libraries) out.push(`- ${[l.name, l.version].filter(Boolean).join(" ")} (${l.url}): ${l.license}`);
   out.push("", "### Svelte licence", "", svelteLicence, "");
@@ -302,6 +303,7 @@ function buildCredits(): { json: Credits; md: string; warnings: string[] } {
     sounds: { entries: s.entries, note: ELGAR },
     fonts: FONTS,
     glyphs: existsSync(`${client}src/game/Glyph.svelte`),
+    achievements: existsSync(`${repo}app/desktop/achievements/FIRST_WIN.svg`),
     libraries: [lib.entry, ...(shell?.entries ?? []), ...desktop.entries],
   };
   return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null, desktop.texts), warnings };

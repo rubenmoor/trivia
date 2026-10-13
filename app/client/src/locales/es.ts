@@ -128,6 +128,7 @@ const es = {
     fonts: "Fuentes",
     glyphs: "Botones del control",
     glyphsText: "Originales, dibujados para el juego",
+    achievements: "Íconos de logros de Steam",
     libraries: "Bibliotecas",
     unknownAuthor: "Autor desconocido",
     image: "Imagen",

@@ -24,6 +24,9 @@ app/desktop/release/
 # Steamworks SDK libs (Valve licence; plan 85): from the SDK zip.
 app/desktop/steamworks_sdk/redistributable_bin/
 
+# Achievement icon PNGs (plan 86): rendered by app/desktop/achievements/render.sh.
+app/desktop/achievements/png/
+
 # Store screenshots and capsules (plan 88): rendered by authoring/store/.
 authoring/store/out/
 

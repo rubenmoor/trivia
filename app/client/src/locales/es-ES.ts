@@ -15,6 +15,7 @@ export const esES = {
   credits: {
     media: "Imágenes, audio y vídeo de las preguntas",
     video: "Vídeo",
+    achievements: "Iconos de logros de Steam",
   },
   joker: {
     skip: { rule: "Cambia la pregunta por otra carta. Si queréis, ese tema sale del juego." },

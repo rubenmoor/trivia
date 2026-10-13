@@ -111,6 +111,7 @@ export const en = {
     fonts: "Fonts",
     glyphs: "Controller buttons",
     glyphsText: "Original, drawn for the game",
+    achievements: "Steam achievement icons",
     libraries: "Libraries",
     unknownAuthor: "Unknown author",
     image: "Image",

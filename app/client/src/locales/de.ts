@@ -111,6 +111,7 @@ export const de = {
     fonts: "Schriften",
     glyphs: "Controller-Tasten",
     glyphsText: "Eigene, für das Spiel gezeichnet",
+    achievements: "Symbole der Steam-Erfolge",
     libraries: "Bibliotheken",
     unknownAuthor: "Unbekannt",
     image: "Bild",

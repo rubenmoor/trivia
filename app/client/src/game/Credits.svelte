@@ -121,6 +121,12 @@
           <p class="hint">{t("credits.glyphsText")}</p>
         </section>
       {/if}
+      {#if credits.achievements}
+        <section>
+          <h3>{t("credits.achievements")}</h3>
+          <p class="hint">{t("credits.glyphsText")}</p>
+        </section>
+      {/if}
       <section>
         <h3>{t("credits.libraries")} <small>{credits.libraries.length}</small></h3>
         <ul>

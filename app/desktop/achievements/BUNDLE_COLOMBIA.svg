@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256">
+  <!-- BUNDLE_COLOMBIA (plan 86, SW-11): 50 right from the Colombia bundle: a cup of coffee. Icon.svelte's 24×24 style on a night tile. -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#f4ecd8" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#f4ecd8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" fill="#111a2e"/>
+  <rect width="64" height="64" fill="url(#glow)"/>
+  <rect x="3" y="3" width="58" height="58" rx="10" fill="none" stroke="#f4ecd8" stroke-opacity="0.5" stroke-width="2"/>
+  <g transform="translate(11 11) scale(1.75)" color="#f4ecd8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 10h11v4.5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z" fill="currentColor" fill-opacity="0.3"/><path d="M15.5 11.5h1.8a2.5 2.5 0 0 1 0 5h-2.1"/><path d="M3 22h14.5"/><path d="M8 3c-1 1.2 1 2.3 0 3.5M12 3c-1 1.2 1 2.3 0 3.5"/>
+  </g>
+</svg>
