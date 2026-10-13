@@ -22766,8 +22766,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:14:43Z', '2026-10-13T18:33:36Z', 904);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (938, 118, 'create tasks for plan 118', 'split', 'done', 1000, '2026-10-13, tasks 973–976 for plan 118', 'Split plan 118 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:16:58Z', '2026-10-13T18:34:25Z', 905);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (939, 119, 'create tasks for plan 119', 'split', 'open', 1000, NULL, 'Split plan 119 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:19:27Z', NULL, 907);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (939, 119, 'create tasks for plan 119', 'split', 'done', 1000, '2026-10-13, tasks 977–980; task 980 waits for decision 135', 'Split plan 119 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:19:27Z', '2026-10-13T18:35:06Z', 907);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (940, 120, 'create tasks for plan 120', 'split', 'open', 1000, NULL, 'Split plan 120 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:22:27Z', NULL, 908);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (941, 121, 'create tasks for plan 121', 'split', 'open', 1000, NULL, 'Split plan 121 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -23247,6 +23247,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 Docs name the recorded decisions and paths; per-commit checks pass.', '2026-10-13T18:34:23Z', NULL, 938);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (977, 119, 'publish.mjs: validate, stage, upload; workshopId in mods.mjs', 'work', 'open', NULL, NULL, 'Plan 119 task 1. Read plan 119 (`pm show p119`) "Binding", "Binding facts", "Command" steps 1–10 and "Published file id".
+
+- After plan 112''s task 950 (`mods.mjs` validator) and task 951 (`contained()` in `resolve.mjs`).
+- `app/desktop/publish.mjs`, pure Node (no Electron, no binding import; like `workshop.mjs`):
+  - `preparePublish(folder, gameVersion)`: steps 1–5 (readManifest errors/warnings, preview ≤ 1 MB, staged copy in `os.tmpdir()` without dot files/folders, symlinks per `contained()`, tags filtered by `WORKSHOP_TAGS`); returns the plan + staged dir; temp dir removed on failure
+  - `publish(ugc, appId, prepared, opts, out)`: steps 7–10 (createItem on first publish → `workshopId` into `mod.json`, only that key, key order + 2-space indent kept, atomic temp + rename, also into the staged copy; visibility private on first publish, else only with `--visibility`; `--content-only`; submit; 500 ms progress lines on status / 10 % steps; 30 s submit timeout → keep polling until status 0, "submitted, check the item page"; legal agreement URL after success; failure keeps `workshopId`)
+  - `WORKSHOP_TAGS`: decision 135''s tag list (bundle, theme, code, conversion + locale tags); if decision 135 is still unanswered, use that proposed list and note it in the done note
+- `mods.mjs`: optional `workshopId`, string `^[1-9]\d{0,19}$`, known key (decision 132: Workshop publishing: where the published file id lives); plan 114''s `workshop_id_mismatch` (task 955) reads it if already there
+- Never `require`/`import`/`eval` a mod file; no network calls of our own
+- Done when: a throw-away script with a fake `ugc` (records calls, scripted progress, `createItem` → 123) shows: first publish creates, writes `workshopId`, sets private, uploads the staged dir (no `.git`, no escaping symlink); second run updates without visibility; `--content-only` sets content only; a bad field, a preview > 1 MB, an unknown tag each give their message; per-commit checks pass.', '2026-10-13T18:35:03Z', NULL, 939);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (978, 119, 'main.mjs: --publish-mod flags, headless branch, Windows output', 'work', 'open', NULL, NULL, 'Plan 119 task 2. Read plan 119 (`pm show p119`) "Command" (flags, headless, Windows output). After task 1 of this plan (`publish.mjs`) and plan 112''s task 952 (`main.mjs` mods wiring).
+
+- `app/desktop/main.mjs`: `parseArgs` `OWN` gains `publish`, `changenote`, `visibility`, `content-only`, `dry-run`; `--publish-mod`/`--changenote`/`--visibility` need a value; the others without `--publish-mod` → usage error; `USAGE` lists them
+- Publish branch before `requestSingleInstanceLock()`: no window, no `protocol.handle`; `preparePublish` → `--dry-run` summary exit 0 (no Steam); else `startSteam()` (its stderr lines stay), `!hasSteamId()` → "needs the Steam client running and logged in" exit 1 (`TRIVIA_DEV_STEAM_USER=1` doesn''t count, decision 111); `publish(...)`; `stopSteam()`; `app.exit(code)`: 0 ok, 1 failed, 2 usage
+- Packaged win32: every line also to `<folder>/../<id>-publish.log`; end result in `dialog.showMessageBox` (`app.whenReady()` only for it)
+- Spike: read `steamworks-ffi-node` 0.11.3''s `submitItemUpdate` source (30 s poll), capture its legal-agreement warn and failure reasons like `startSteam()` does; make sure task 1''s progress-poll fallback matches
+- Done when: `trivia-desktop --publish-mod <tmp mod> --dry-run` prints the summary and exits 0 without Steam; without `--dry-run` and without Steam it prints the Steam line and exits 1; `--changenote x` alone → exit 2; a packaged Linux build (`trivia-desktop-build --dir`) runs the dry run the same; per-commit checks pass.', '2026-10-13T18:35:03Z', NULL, 939);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (979, 119, 'Docs: publishing a mod (plans/18, README, AGENTS, directory, backlog)', 'work', 'open', NULL, NULL, 'Plan 119 task 4. Read plan 119 (`pm show p119`) "Command" and "Published file id". After tasks 1–2 of this plan.
+
+- `plans/18-steam-integration.md` "Modding": subsection "Publishing": command, flags, steps, staging and what''s skipped, `workshopId` (decision 132: Workshop publishing: where the published file id lives), visibility default private, tags, legal agreement URL, Windows log file + message box, `trivia-steam` is for our builds only; part 10''s guide (plan 121) copies it
+- `README.md`: how-to "Publish a mod to the Workshop" (three lines + the command)
+- AGENTS.md "Commands": `trivia-desktop` line gains `--publish-mod <folder>` (`--dry-run` without Steam)
+- `directory.md`: `app/desktop/` row names `publish.mjs`
+- `plans/backlog.md`: row "In-game publish button on the mods screen (part 6), calls `publish.mjs` through a bridge channel; needs a pm decision (page triggering an upload)" | plan 102 part 8 | new
+- Done when: the docs name the command, `workshopId` and decision 132; per-commit checks pass.', '2026-10-13T18:35:03Z', NULL, 939);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (980, 119, 'Publishing check under Steam (gamemaster checklist)', 'work', 'open', 660, NULL, 'Plan 119 task 3. Waits for decision 135 (Steamworks: enable Workshop for ¡Trivia! and a second Steam account?); run only after tasks 1–2 of this plan are done (else leave it open). Workers never log in to Steam (decision 111).
+
+- `pm decision add --once "Publishing check under Steam"` with this checklist as body:
+  - publish a tiny CSS mod: `trivia-desktop --publish-mod mods/<x>` → item created private, `workshopId` in `mod.json`, legal agreement accepted at the printed URL
+  - update with `--changenote "test"` and a ~50 MB folder → progress lines, change note on the item page (confirms the 30 s submit fallback)
+  - `--visibility public` → visible to the second account, which subscribes and sees it load (plan 114''s check, task 958; may share the session)
+  - on Windows: the log file beside the mod folder and the message box appear
+- Options "all ok" (recommended) / "problems: …"; `pm task-pending-decision <this task> <id>`; close with the answer
+- Done when: the gamemaster answers; a follow-up task in plan 119 for every failure.', '2026-10-13T18:35:04Z', NULL, 939);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25359,6 +25393,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (791, 936, '2026-10-13T18:32:05Z', '2026-10-13T18:32:48Z', 'done', NULL, 0, '69bb230a1f178bb2e0527fd499f678f07fe89115', 'claude-opus-5-5[1m]', 'e5d245ab-38f1-4abb-98f4-963e1aaea3d6', 5, 10, 4488, 156529, 31520, 0.37326579999999993, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (792, 937, '2026-10-13T18:32:48Z', '2026-10-13T18:33:42Z', 'done', NULL, 0, '84dffcbdda7ac0f6ebbf55dfd6e7583d236b226f', 'claude-opus-5-5[1m]', '12d7eb88-9475-4d60-a04a-1e0700140010', 5, 10, 5738, 164634, 33893, 0.4188708, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (793, 938, '2026-10-13T18:33:43Z', '2026-10-13T18:34:31Z', 'done', NULL, 0, '57632e244f77f55def36d6fe40f0d9dec87a649c', 'claude-opus-5-5[1m]', 'ac401352-461a-49b6-9b9f-0e219ed95866', 6, 12, 4684, 199234, 33382, 0.40063080000000007, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (794, 939, '2026-10-13T18:34:31Z', '2026-10-13T18:35:12Z', 'done', NULL, 0, '67541dba9c2e1d52cead551335b4074d1b3e7935', 'claude-opus-5-5[1m]', 'fbef0ea5-c975-4025-bfae-eeb3e063726f', 5, 10, 4014, 146797, 27300, 0.3280794, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -25576,6 +25611,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (885, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (906, 123);
 INSERT INTO task_decision (task_id, decision_id) VALUES (958, 135);
+INSERT INTO task_decision (task_id, decision_id) VALUES (980, 135);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
