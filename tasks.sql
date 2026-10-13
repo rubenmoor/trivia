@@ -20383,8 +20383,8 @@ Cover part 6''s list:
 - Deploy (`trivia-report-server deploy`, migration) through a `pm decision add` (kind once) checklist for the gamemaster; workers never log in.
 - End-to-end: an opted-in session from a `beta` build under Steam arrives; opted out sends nothing; `qgen report` shows played vs. rated difficulty and outliers (the milestone''s "Done when").
 - Docs: `plans/11-steam.md` principle 3 and ST-5''s "no telemetry" → "opt-in telemetry, see milestone 14"; `plans/18-steam-integration.md` (IPC, ticket identity); `directory.md`; `README.md` how-tos; AGENTS.md commands line for any new `qgen` command; `plans/project.md`.', '2026-10-13T17:25:06Z', '2026-10-13T17:39:37Z', 871);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (878, 105, 'create tasks for plan 105', 'split', 'open', 1000, NULL, 'Split plan 105 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:27:26Z', NULL, 872);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (878, 105, 'create tasks for plan 105', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 884, 885 (both pending on decision 117)', 'Split plan 105 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:27:26Z', '2026-10-13T17:40:14Z', 872);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (879, 106, 'create tasks for plan 106', 'split', 'open', 1000, NULL, 'Split plan 106 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:30:43Z', NULL, 873);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (880, 107, 'create tasks for plan 107', 'split', 'open', 1000, NULL, 'Split plan 107 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -20395,6 +20395,35 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:37:28Z', NULL, 876);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (883, 110, 'create tasks for plan 110', 'split', 'open', 1000, NULL, 'Split plan 110 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:39:31Z', NULL, 877);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (884, 105, 'Telemetry server: routes, migration and validation', 'work', 'open', NULL, NULL, 'Plan 105 task 1: the server half of opt-in telemetry in `report-server/` (plan 103''s Worker + D1), exactly per plan 105''s "API contract (v1)", "Storage", "Retention", "Ticket identity, vars, secrets". Read plan 105 (`pm show p105`) first; the contract is fixed, change it only by editing the plan.
+
+Runs after task 865: Report server: Worker, D1 schema and local dev mode and task 866: Report server: Steam ticket check (if open: wait, don''t duplicate them). Tooling per decision 117: Report server tooling: wrangler from nixpkgs in the flake?; storage/token per decision 118: Telemetry server storage and pull token.
+
+## Files
+- `report-server/migrations/0002_telemetry.sql`: `telemetry(session_id PK, received_day, body)` + index on `received_day`; `telemetry_rate(user_hash, day, count, PK(user_hash, day))`; `telemetry_seen(session_id PK, day)` tombstones. Plan 103''s tables untouched.
+- `report-server/src/validate-telemetry.ts`: pure check + re-serialization from known fields only (unknown fields dropped), `field` paths like `games[0].answers[3].question`; limits from the contract table (64 KiB, ≤ 30 games, ≤ 100 answers/game, ≤ 500 total, `^q-\d{4,6}$`, exactly one of `age_group`/`difficulty`, …).
+- `report-server/src/telemetry.ts`: `POST /telemetry`, `GET /telemetry?limit=N`, `POST /telemetry/ack`, retention SQL; wired into `src/index.ts`''s router and `scheduled` (same 03:00 UTC cron).
+  - POST check order: kill switch (`TELEMETRY_OPEN`) → content type/size/JSON/fields → Steam ticket with identity `TELEMETRY_IDENTITY` → dedup (`telemetry` + `telemetry_seen`) → rate limits (`RATE_TELEMETRY_USER`, `RATE_TELEMETRY_TOTAL`, global row `''*''`, HMAC with `HASH_SALT` as plan 103) → one D1 batch (row + both counters). Statuses as the plan''s table.
+  - pull/ack: bearer `PULL_TOKEN` (constant-time compare), oldest first, ticket removed; ack deletes rows, writes tombstones, idempotent.
+  - retention: unacked rows after `TELEMETRY_KEEP_DAYS`, tombstones after `TELEMETRY_KEEP_DAYS`, `telemetry_rate` rows of past days.
+- `report-server/src/steam.ts`: identity as a parameter, if task 866 hard-coded it.
+- `report-server/wrangler.toml`: vars `TELEMETRY_IDENTITY = "trivia-telemetry"`, `TELEMETRY_OPEN = "1"`, `RATE_TELEMETRY_USER = "10"`, `RATE_TELEMETRY_TOTAL = "2000"`, `TELEMETRY_KEEP_DAYS = "30"`; no new secret.
+- `report-server/fixtures/telemetry-session.json`: the plan''s example body, valid, `dev-` ticket.
+- No bodies, tickets, SteamIDs, hashes, install or session ids in `console.*`.
+- Docs: `directory.md` (`report-server/` row mentions telemetry), `plans/11-steam.md` ST-5: one line "telemetry route: plan 105".
+
+## Done when
+- `npm run check` passes (and the AGENTS.md per-commit checks).
+- A throw-away curl script against `trivia-report-server dev` shows: 201; 200 duplicate; 400 incl. question id `mod-x:1` and a field path; 401 (`dev-invalid`); 413; 415; 429 on the 11th session of one fake user; 502 (`dev-steamdown`); 503 with `TELEMETRY_OPEN=0`; unknown fields absent from the pulled body; pull → ack → pull empty; resend of an acked session → 200 duplicate; ack idempotent; 401 without token; the cron deletes a backdated session, tombstone and old `telemetry_rate` row; reports routes unchanged. Delete the script after.
+- Nothing deployed.', '2026-10-13T17:40:12Z', NULL, 878);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (885, 105, 'Telemetry server: dev seed command', 'work', 'open', NULL, NULL, 'Plan 105 task 2 (runs after "Telemetry server: routes, migration and validation"): `trivia-report-server seed-telemetry [N]`, per plan 105 "Dev mode" (`pm show p105`), so plan 109 (qgen pull/report) can be built before the game sends real data.
+
+- A small Node or shell script under `report-server/` (no new dependency), called from the `trivia-report-server` flake wrapper.
+- Posts N synthetic sessions to the local dev server: random UUID v4 session/install ids, `dev-<n>` tickets (spread over several fake users so the 10/user limit isn''t hit), valid bodies per plan 105''s contract, question ids from `app/data/pool.json`, right/wrong drawn from each question''s rated difficulty vs. the level window (so played vs. rated difficulty shows a signal, some outliers on purpose).
+- Refuses a non-localhost URL (exit non-zero, short message).
+- AGENTS.md "Commands": the `trivia-report-server` line mentions `seed-telemetry [N]`.
+
+Done when: `seed-telemetry 50` against `trivia-report-server dev` stores 50 sessions that `GET /telemetry` returns (mind `limit` max 200, `RATE_TELEMETRY_TOTAL`); a non-localhost URL is refused; AGENTS.md per-commit checks pass.', '2026-10-13T17:40:12Z', NULL, 878);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22438,6 +22467,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (747, 875, '2026-10-13T17:33:22Z', '2026-10-13T17:34:58Z', 'done', NULL, 0, '56dadf95c37c8342d782c973f90c8d0061189a11', 'claude-opus-5-5[1m]', '842380db-1a09-4c43-925e-bc429669ff65', 15, 24, 8681, 617839, 64818, 0.81582779999999988, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (748, 876, '2026-10-13T17:34:58Z', '2026-10-13T17:37:43Z', 'done', NULL, 0, '81cc9729bddb0a4eba4792c45e8cb43baec1f302', 'claude-opus-5-5[1m]', 'b6809c16-5397-4a45-9822-c8e2c8c1010f', 14, 26, 14546, 861429, 81031, 1.1115578, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (749, 877, '2026-10-13T17:37:44Z', '2026-10-13T17:39:45Z', 'done', NULL, 0, '38a61730fef45ec4940088c5edd6ee4071c7cc9e', 'claude-opus-5-5[1m]', 'a0411086-6e34-4d83-8670-5bc5592b26ee', 15, 28, 8421, 664237, 60050, 0.7817794, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (750, 878, '2026-10-13T17:39:46Z', '2026-10-13T17:40:18Z', 'done', NULL, 0, '469660a11bc4c056061d3e04c287eba2aa4eecbd', 'claude-opus-5-5[1m]', '8e30facf-9116-4129-a160-6d232154d949', 5, 10, 2953, 158856, 30153, 0.3320952, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -22651,6 +22681,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (845, 116);
 INSERT INTO task_decision (task_id, decision_id) VALUES (865, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (866, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (868, 117);
+INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
+INSERT INTO task_decision (task_id, decision_id) VALUES (885, 117);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
