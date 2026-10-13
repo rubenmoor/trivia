@@ -3635,9 +3635,10 @@ def validate_pool():
     lists = {}
     axes_of = {b: concepts.load_axes(b) for b in categories.bundle_ids()}
     lo, hi = load_age_groups()["scale"]
-    bundle_ids = {b["id"] for b in load_bundles()}
+    bundles = load_bundles()
+    bundle_ids = {b["id"] for b in bundles}
     errors += taxonomy_problems()
-    e, w = bundle_problems(load_bundles())
+    e, w = bundle_problems(bundles)
     errors += e
     warnings += w
     errors += age_groups.level_problems(load_age_groups())
@@ -3682,8 +3683,8 @@ def validate_pool():
             e, w = concepts.axes_problems(q["axes"], axes_of[subcategories.get(q.get("subcategory"), {}).get("bundle", "base")])
             errors += [f"{qid}: {p}" for p in e]
             warnings += [f"{qid}: {p}" for p in w]
-        if q.get("concept") is not None:
-            sub = q.get("subcategory")
+        if q.get("concept") is not None and isinstance(q.get("subcategory"), str):
+            sub = q["subcategory"]
             if sub not in lists:
                 lists[sub] = {c["name"] for c in (concepts.load(sub) or {}).get("concepts", [])}
             if q["concept"] not in lists[sub]:
@@ -3697,11 +3698,9 @@ def validate_pool():
         bad = [c["name"] for c in (lst or {}).get("concepts", [])
                if not isinstance(c.get("known_at"), int) or not lo <= c["known_at"] <= hi]
         if bad:
-            errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): "
-                          f"{', '.join(bad[:5])}{' …' if len(bad) > 5 else ''}")
+            errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): {first_ids(bad)}")
     if unlicensed:  # plans/26
-        errors.append(f"{len(unlicensed)} approved pick(s) without a complete, allowlisted licence record: "
-                        f"{', '.join(unlicensed[:5])}{' …' if len(unlicensed) > 5 else ''}")
+        errors.append(f"{len(unlicensed)} approved pick(s) without a complete, allowlisted licence record: {first_ids(unlicensed)}")
     e, w = translation_problems(data)
     errors += e
     warnings += w
@@ -3918,7 +3917,7 @@ def taxonomy_problems():
     return errors
 
 
-def bundle_problems(bundles, pool_path=layout.LOCALE_POOL):
+def bundle_problems(bundles):
     """(errors, warnings): bundle languages and base bundles (plan 71)."""
     errors, warnings, rel = [], [], "app/data/bundles.json"
     for b in bundles:
@@ -3933,9 +3932,9 @@ def bundle_problems(bundles, pool_path=layout.LOCALE_POOL):
     for l in LAUNCH_LOCALES:
         if not any(b.get("kind") == "base" and b["id"] in listed[l] for b in bundles):
             errors.append(f"{rel}: no base bundle for {l}")
-        if l == "es":
+        if l == "es":  # the source: every bundle starts there (`qgen bundle new`)
             continue
-        path = pool_path(l)
+        path = layout.LOCALE_POOL(l)
         pool = load_json(path)["questions"] if path.exists() else []
         have = {q.get("bundle") or "base" for q in pool if q.get("status", "approved") == "approved"}
         warnings += [f"{path.name}: no approved {b} question; {b} is listed for {l}" for b in sorted(listed[l] - have)]
@@ -3958,10 +3957,8 @@ def cmd_bundle_new(args):
     save_json(layout.BUNDLES, data)
     path = categories.path(args.id)
     if not path.exists():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps({"about": f"Categories of the {args.id} bundle (D-41, D-43). Subcategory names "
-                                             "and slugs must be unique across all bundles.", "categories": []},
-                                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        save_json(path, {"about": f"Categories of the {args.id} bundle (D-41, D-43). Subcategory names "
+                                  "and slugs must be unique across all bundles.", "categories": []})
     print(f"Created bundle {args.id}. Next: fill {path.relative_to(ROOT)} with broad categories and "
           f"subcategories, then `qgen batch --bundle {args.id}`.")
 
