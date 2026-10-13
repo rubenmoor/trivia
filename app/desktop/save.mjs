@@ -70,27 +70,34 @@ export function makeSaveFile(dir, { rename = fs.rename } = {}) {
     }
   }
 
+  /** Rename, retried while Windows holds `to` (or `from`) open → save_locked. */
+  async function move(from, to) {
+    for (let attempt = 0; ; attempt++) {
+      try {
+        return await rename(from, to);
+      } catch (err) {
+        if (!LOCKED.has(err.code)) throw err;
+        if (attempt >= RETRIES) throw saveError("save_locked");
+        await new Promise((r) => setTimeout(r, RETRY_MS));
+      }
+    }
+  }
+
   async function write(text) {
     if (!envelope(text)) throw saveError("bad_save");
     await fs.mkdir(dir, { recursive: true });
-    const fd = await fs.open(tmp, "w");
     try {
-      await fd.writeFile(text, "utf8");
-      await fd.sync();
-    } finally {
-      await fd.close();
-    }
-    for (let attempt = 0; ; attempt++) {
+      const fd = await fs.open(tmp, "w");
       try {
-        await rename(tmp, file);
-        return;
-      } catch (err) {
-        if (!LOCKED.has(err.code) || attempt >= RETRIES) {
-          await fs.rm(tmp, { force: true });
-          throw LOCKED.has(err.code) ? saveError("save_locked") : err;
-        }
-        await new Promise((r) => setTimeout(r, RETRY_MS));
+        await fd.writeFile(text, "utf8");
+        await fd.sync();
+      } finally {
+        await fd.close();
       }
+      await move(tmp, file);
+    } catch (err) {
+      await fs.rm(tmp, { force: true });
+      throw err;
     }
   }
 
@@ -100,11 +107,8 @@ export function makeSaveFile(dir, { rename = fs.rename } = {}) {
     const base = path.join(backups, `game-${kind}-${stamp()}`);
     for (let n = 1; ; n++) {
       const target = n === 1 ? `${base}.json` : `${base}-${n}.json`;
-      try {
-        await fs.access(target);
-        continue;
-      } catch {}
-      await rename(file, target);
+      if (await exists(target)) continue;
+      await move(file, target);
       return target;
     }
   }

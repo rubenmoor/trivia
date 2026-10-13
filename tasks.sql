@@ -11606,7 +11606,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `main.mjs`, `preload.cjs`, `resolve.mjs` listed in `## Part 6` (no-findings rows included) with every finding and a status (fixes: `fixed (task N)`).', '2026-10-12T23:06:35Z', '2026-10-13T11:35:22Z', 518);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (555, 78, 'Review saves: save.mjs and its wiring in main.mjs', 'work', 'open', NULL, NULL, 'Task 2 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (save path, file format, IPC names, rejection codes `bad_save`/`save_locked` unchanged, D-72).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (555, 78, 'Review saves: save.mjs and its wiring in main.mjs', 'work', 'done', NULL, '2026-10-13, app/desktop/save.mjs (tmp removed on every write error, lock retry for backup too, no empty catch), code-review.md Part 6 rows', 'Task 2 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (save path, file format, IPC names, rejection codes `bad_save`/`save_locked` unchanged, D-72).
 
 ## First
 - `pm show` tasks 355, 332, 255 (and its plan''s tasks): open and touching these files → findings only, `superseded by task N`.
@@ -11630,7 +11630,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (and the lint pass, if part 10 has adopted one by then).
 
 ## Done when
-- `save.mjs` and the save parts of `main.mjs` listed in `## Part 6` with every finding and a status (fixes: `fixed (task N)`).', '2026-10-12T23:06:35Z', NULL, 518);
+- `save.mjs` and the save parts of `main.mjs` listed in `## Part 6` with every finding and a status (fixes: `fixed (task N)`).', '2026-10-12T23:06:35Z', '2026-10-13T11:37:22Z', 518);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (556, 78, 'Review packaging: package.json, lockfile, electron-builder.yml, after-pack.mjs, stage-media.mjs; then new desktop files', 'work', 'open', NULL, NULL, 'Task 3 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (package layout and artefact names unchanged, D-73; never `npm install`/update the lockfile here, a bump is a follow-up task).
 
 ## First
@@ -15902,6 +15902,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (598, 726, '2026-10-13T11:19:56Z', '2026-10-13T11:28:33Z', 'done', NULL, 0, '166ad52477ed15cb22bcb41af4cfea1ff8c3ce0c', 'claude-opus-5-5[1m]', 'fb308012-5c8d-4ae0-a628-49955a0f3eca', 53, 90, 16008, 3074772, 80472, 1.5792503999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (599, 728, '2026-10-13T11:28:34Z', '2026-10-13T11:31:38Z', 'done', NULL, 0, '7c4e2bbdfa6db4a11e71304c83429c3ec3291ddb', 'claude-opus-5-5[1m]', 'df72749d-9fb4-4cbf-b685-521677cac07b', 36, 50, 16344, 1731872, 78590, 1.3021744, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (600, 554, '2026-10-13T11:31:39Z', '2026-10-13T11:35:33Z', 'done', NULL, 0, '55cbdfdcb3a4644865d0392f341d202e55b54921', 'claude-opus-5-5[1m]', '07836470-b553-4437-ae46-88b49cd0f66a', 37, 68, 19572, 2243900, 77322, 1.459068, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (601, 555, '2026-10-13T11:35:33Z', '2026-10-13T11:37:33Z', 'done', NULL, 0, '5195f5f7bf35dec7fd47b2a78d0af3ddb47ecb49', 'claude-opus-5-5[1m]', '6016f3f6-c893-4eab-87bd-805898d11d65', 14, 24, 10122, 625245, 58193, 0.7931290000000002, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
