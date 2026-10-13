@@ -22897,7 +22897,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `trivia-desktop` with a repo `mods/` holding a CSS override mod starts with the changed colour; `--no-mods` starts plain; without the dev switch and without Steam the mod is `no_user`; per-commit checks pass.', '2026-10-13T18:29:50Z', '2026-10-13T18:51:09Z', 914);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (953, 112, 'End-to-end check of the mod overlay in trivia-desktop (throw-away mods)', 'work', 'open', NULL, NULL, 'Plan 112, task 4 (after the `main.mjs` wiring task). Manual check, nothing lasting except the done note.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (953, 112, 'End-to-end check of the mod overlay in trivia-desktop (throw-away mods)', 'work', 'done', NULL, '2026-10-13, no files (manual check; throw-away mods in a temp TRIVIA_MODS_DIR, trivia-desktop driven over CDP, dev mods.json and temp files deleted). Plan 111 not done: JS override used the hashed assets/App-DuM0E_f-.js; theme overrode assets/index-BmwiZRFh.css (game/theme.css is bundled into it today).
+- theme: body background rgb(1,2,3) from the mod css: ok
+- JS override: mod''s App chunk ran (window marker set), game rendered: ok
+- two mods on /same.txt: dup-a top → ''from a''; swapped in mods.json, restart → ''from b'': ok
+- full conversion: / → ''Hello'', /foo/bar SPA fallback → conversion index.html: ok
+- invalid mod (bad JSON): listed ''invalid [bad_json]'', its bad.txt not served (fallback): ok
+- symlink mod: file symlink and dir symlink to outside → index.html fallback, never the secret; game 9.9.9 → loaded [game_version]: ok
+- mod.json never served (fallback): ok
+- --no-mods with the conversion on: our game, no mod css/js, stderr line: ok
+- no Steam (SDK missing), no dev switch: every mod no_user, plain game: ok
+No bugs found.', 'Plan 112, task 4 (after the `main.mjs` wiring task). Manual check, nothing lasting except the done note.
 
 Temp `TRIVIA_MODS_DIR`, `TRIVIA_DEV_STEAM_USER=1`, mods:
 - theme: `game/theme.css` with a changed colour
@@ -22908,7 +22918,7 @@ Temp `TRIVIA_MODS_DIR`, `TRIVIA_DEV_STEAM_USER=1`, mods:
 - a mod with a symlink to an outside file (e.g. a temp file standing in for `~/.ssh/…`): 404/fallback, never the file
 
 ## Done when
-- Each case behaves as described; `--no-mods` brings back our game with the conversion installed; one line per case in the done note; temp mods deleted. Bugs found → follow-up tasks in plan 112.', '2026-10-13T18:29:51Z', NULL, 914);
+- Each case behaves as described; `--no-mods` brings back our game with the conversion installed; one line per case in the done note; temp mods deleted. Bugs found → follow-up tasks in plan 112.', '2026-10-13T18:29:51Z', '2026-10-13T18:53:03Z', 914);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (954, 112, 'Docs: mod overlay in directory.md, plans/18, plans/01, AGENTS.md', 'work', 'open', NULL, NULL, 'Plan 112, task 5 (last). Document the mod format and overlay.
 
 - `directory.md`: `app/desktop/` row gains `mods.mjs`, `resolve.test.mjs`, layers in `resolve.mjs`; new row `mods/` (local mods for development, gitignored; `TRIVIA_MODS_DIR`); `state/desktop/mods.json`.
@@ -25651,6 +25661,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (799, 950, '2026-10-13T18:43:49Z', '2026-10-13T18:46:02Z', 'done', NULL, 0, '75d3f0143fe0cd2a3656d94dbb34ac2b84230443', 'claude-opus-5-5[1m]', '09d995e1-8b25-4f69-9302-380e77da0a18', 11, 20, 12021, 454345, 48605, 0.720209, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (800, 951, '2026-10-13T18:46:03Z', '2026-10-13T18:48:05Z', 'done', NULL, 0, '3c631dc5778bb80172647a624f9a97a87e9e42d6', 'claude-opus-5-5[1m]', '46bd12b3-e744-4504-af70-97ca95b796f0', 19, 36, 9992, 735572, 38015, 0.6512184, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (801, 952, '2026-10-13T18:48:06Z', '2026-10-13T18:51:22Z', 'done', NULL, 0, 'e67015b0e47af363dd683b476a344aab4497b45b', 'claude-opus-5-5[1m]', '1f901555-7e41-4913-a3dc-d034dcbd7ba5', 20, 38, 10047, 863546, 44626, 0.7308092, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (802, 953, '2026-10-13T18:51:23Z', '2026-10-13T18:53:10Z', 'done', NULL, 0, '94a6602e8b44d67544f1aa93dbe6e7d744885e49', 'claude-opus-5-5[1m]', 'b9fed11c-f135-4ca6-ac5a-fcebf014f3ef', 12, 24, 7598, 494666, 39808, 0.5694532, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
