@@ -21680,8 +21680,8 @@ Cover part 12''s list:
 - Release check: a mods row (`--no-mods` and with the examples)? If so, a task in plan 104.
 - Docs: `plans/18-steam-integration.md` (Workshop, bridge rename, IPC), `plans/01-architecture.md` (overlay), `plans/11-steam.md`, `plans/project.md`, `README.md`, AGENTS.md "Commands" (publish flag, `TRIVIA_MODS_DIR`).
 - Tasks for the work, each with a done-when.', '2026-10-13T17:47:25Z', '2026-10-13T18:27:58Z', 898);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (911, 111, 'create tasks for plan 111', 'split', 'open', 1000, NULL, 'Split plan 111 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:49:39Z', NULL, 899);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (911, 111, 'create tasks for plan 111', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 944-949 for plan 111; Deck start-time decision raised by task 948 itself', 'Split plan 111 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:49:39Z', '2026-10-13T18:28:52Z', 899);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (912, 8, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, plan 8 body: part 10 image peek (decision 125), part 8 Deck rows best effort + peek rows, rule for Deck; task 915 queues the part-10 plan', 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', '2026-10-13T17:53:37Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (913, 10, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, tasks.sql: plan 10 parts 2, 10, 11 and order per decision 125 (Deck best effort, Gamepad template default)', 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
@@ -22791,6 +22791,58 @@ Work:
 Check: `trivia-desktop-build --dir`, then `node authoring/steam/smoke.mjs --mods app/desktop/release/linux-unpacked` passes; a throw-away break (e.g. a typo in a temp copy''s theme `style.css` selector, or a removed example) fails with the step named (don''t keep it); `trivia-release-check --skip tag --skip checks --skip licenses --skip quality --skip nix --skip manual` runs `mods` ✓; a `--manual` file answering every row incl. `workshop` parses; a content-only run lists `workshop` as "skipped: content-only since <tag>" and still runs `mods`. Per-commit checks pass.', '2026-10-13T18:27:52Z', NULL, 910);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (943, 122, 'create tasks for plan 122', 'split', 'open', 1000, NULL, 'Split plan 122 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:27:55Z', NULL, 910);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (944, 111, 'Readable build config: preserveModules, decision 124 names, stable cssHash', 'work', 'open', NULL, NULL, 'Plan 111 task 1. Make `npm run build` of `app/client` emit one unminified, unhashed file per source module with source maps, named per decision 124: Readable client build: output naming rule for mod overrides.
+
+- `app/client/vite.config.ts` `build`: `minify: false`, `sourcemap: true`, `cssCodeSplit: true`; `modulePreload` off (or a small plugin) so `dist/index.html` loads only `<script type="module" src="/main.js">` and `app.css` (task 899''s test build got ~110 script tags + `_virtual/_vite/modulepreload-polyfill.js`).
+- `rollupOptions.output`: `preserveModules: true`, `preserveModulesRoot: "src"`; `entryFileNames`/`chunkFileNames`/`assetFileNames` as functions (`[name]` drops `.svelte` and collides `App.svelte` with `app.css` → `App2.js`):
+  - `src/<path>.ts` → `<path>.js`; `<path>.svelte` → `<path>.svelte.js`; `x.svelte.ts` → `x.svelte.js`
+  - component CSS → `game/Game.svelte.css` (not `Game.svelte_svelte_type_style_lang.css`); global CSS keeps its path (`app.css`, `game/theme.css`)
+  - `node_modules/<pkg>/<path>` → `vendor/<pkg>/<path>`; Vite helpers → `_virtual/…`
+  - assets without hash; `public/` (`audio/`, `fonts/`) unchanged
+- `app/client/svelte.config.js`: `compilerOptions.cssHash` from the component path (e.g. `svelte-game-hud`), unique per component, not per CSS content.
+- Svelte `dev/*` modules shipped as files: fine, drop only if an option does it cheaply.
+- Keep `define __APP_VERSION__`, `credits()` plugin, dev proxy. No new dependencies (decision 106).
+
+Done when: `npm run build` gives the decision 124 layout (spot-check `game/Game.svelte.js`, `game/Game.svelte.css`, `lib/data.js`, `vendor/svelte/…`, `.map` next to each JS, no hashed file, no `node_modules/` and no `assets/` in `dist/`); `dist/index.html` has one module script; the game plays a few levels on the built client (in `trivia-desktop`, `TRIVIA_DEV_STEAM_USER=1`); per-commit checks pass.', '2026-10-13T18:28:36Z', NULL, 911);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (945, 111, 'Override by path: throw-away proof (component JS, component CSS, theme.css)', 'work', 'open', NULL, NULL, 'Plan 111 task 2. Prove a mod can replace single files of the readable build (task 1) by path. Throw-away: nothing committed.
+
+- Copy `app/client/dist/` to a temp dir; change one component''s JS (a visible text in `game/Hud.svelte.js`), one component CSS (e.g. `game/Hud.svelte.css`) and `game/theme.css` (a colour variable).
+- Point the shell at the copy (temporary `roots()` edit in `app/desktop/resolve.mjs` or an env var, not committed) and start `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_DEVTOOLS=1`).
+- Check: the three changes visible, the game otherwise plays; source maps resolve in devtools to `src/…`.
+
+Done when: the three overrides show in the game; result in this task''s done note (plan 112 builds the real overlay). Revert temp edits, delete the temp dir.', '2026-10-13T18:28:36Z', NULL, 911);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (946, 111, 'No stale files across updates: cache-control and the two-build check', 'work', 'open', NULL, NULL, 'Plan 111 task 3. Without hashes, a cached old module could mix with new ones after an update.
+
+- `app/desktop/resolve.mjs` `sendFile`: add `cache-control: no-cache` for `dist` (client) responses; media/data unchanged unless the check says otherwise.
+- Check: build A, start `trivia-desktop`, rebuild with a visibly changed module, start again: the new code runs. Try with and without the header if needed to learn whether Chromium caches `app://` (`protocol.handle`) responses at all; also V8''s code cache (should invalidate on changed bytes). The session lives in `userData` across runs.
+- Only if stale code shows despite the header: clear the session cache at start (`ses.clearCache()`) when the build id changed (`__APP_VERSION__` from `app/desktop/package.json`, decision 91/92, plus a build stamp written by `vite.config.ts`), stamp stored in `userData`. No version-keyed URLs (they break override paths).
+
+Done when: the two-build check passes; the finding (cached or not) is one line in `plans/18-steam-integration.md`; per-commit checks pass.', '2026-10-13T18:28:37Z', NULL, 911);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (947, 111, 'Readable build: packaging, credits, smoke and dev server checks', 'work', 'open', NULL, NULL, 'Plan 111 task 4. Check the readable client build (task 1) through the release tooling.
+
+- `trivia-desktop-build --dir`: `resources/client/` in `{win,linux}-unpacked/` has the readable tree; all `vendor/` and `.map` files survive electron-builder''s filters (`app/desktop/electron-builder.yml` `extraResources`), else fix the filter.
+- `authoring/steam/credits_check.mjs` and the `credits` plugin (`app/client/credits.ts`) pass unchanged: Svelte, now under `vendor/svelte/`, still credited once (MIT, licence text in `CREDITS.md`).
+- `authoring/steam/smoke.mjs` both runs (with and without packs) pass; `trivia-steam stage --dry-run` (or `trivia-release-check --skip tag …` for the desktop builds, credits, smoke steps) passes.
+- Plan 99 (`Retire the browser game and the Python game server`) isn''t done: add a line to its open `task 762: Node dev server for browser checks` (`pm task set 762 --body …`, keep its text) that its built-client command (`vite preview`) must serve the readable tree; `vite` dev is unaffected. If 762 is done by then, check `vite preview` directly.
+
+Done when: those commands pass; build size per depot noted in the done note (expected + ~2 MB).', '2026-10-13T18:28:37Z', NULL, 911);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (948, 111, 'Start time on the Steam Deck: gamemaster check (decision once)', 'work', 'open', NULL, NULL, 'Plan 111 task 5. ~200 module requests over `app://` instead of 3 may slow the start. Runs after task 944 (readable build config); doesn''t block the other tasks.
+
+- Raise `pm decision add "Readable build: start time on the Steam Deck ok?"` (kind once), body with the steps: install the beta build with the readable client (or, only if no beta upload is due, copy the unpacked Windows build to the Deck as a non-Steam test), time launch → start menu three times, compare with the previous (hashed) build; also on the gamemaster''s PC. Budget ≤ +0.5 s on the Deck.
+- Options: "ok (≤ +0.5 s)" (recommended) | "too slow: bundle the Svelte runtime" (one `vendor/svelte.js`, ours still per module) | "too slow: other".
+- Note decision 125: Steam Deck: best effort, review without a Deck at hand — the gamemaster may have no Deck; say so in the body (PC timing then, Deck later).
+- Make this task pending on it (`pm task-pending-decision <this task> <id>`), stage, stop. On answer: "too slow" → add a follow-up task in plan 111 with the chosen fix.
+
+Done when: the decision is answered and any follow-up added.', '2026-10-13T18:28:49Z', NULL, 911);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (949, 111, 'Docs: readable build, cache finding, module paths for modders', 'work', 'open', NULL, NULL, 'Plan 111 task 6. Document the readable client build (decision 124: Readable client build: output naming rule for mod overrides).
+
+- `plans/01-architecture.md`: build bullet (readable build, decision 124, why: mods).
+- `plans/18-steam-integration.md` "Layout": `resources/client/` is the readable tree; the cache finding from task 946 (if it isn''t there yet).
+- `directory.md`: `app/client/dist/` entry describes the readable layout.
+- Short section "Modding: module paths" in `plans/18-steam-integration.md` for plan 121''s guide to link: the naming rule; not overridable by path (inlined `__APP_VERSION__`/`define`s, the preload helper''s dependency list inside `main.js`, plugin-emitted `credits.json`/`CREDITS.md`, `/data/`, `/media`); stable scoped class names (`cssHash` per component path); no stability promise (paths may change, renames in patch notes, plan 102).
+- Style per AGENTS.md: bullets, ultra-concise.
+
+Done when: the docs name decision 124 and the per-commit checks pass.', '2026-10-13T18:28:49Z', NULL, 911);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -24883,6 +24935,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (784, 908, '2026-10-13T18:19:54Z', '2026-10-13T18:22:39Z', 'done', NULL, 0, '141d5b973e70407726304e1647044f0007eee35e', 'claude-opus-5-5[1m]', 'cf4e86bf-7824-40d6-adcc-17dac2365360', 15, 28, 13216, 825600, 68912, 0.98084799999999994, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (785, 909, '2026-10-13T18:22:39Z', '2026-10-13T18:24:56Z', 'done', NULL, 0, '2fcd7ef3ae1222736f8eab7bf57382194d51276a', 'claude-opus-5-5[1m]', 'e58d28be-20a2-49c7-be4f-5d1933c37130', 18, 34, 11627, 1260897, 95892, 1.2519914, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (786, 910, '2026-10-13T18:24:57Z', '2026-10-13T18:28:07Z', 'done', NULL, 0, 'bd1a06c7417971e04d8bf451b6a0ef8c09c1c589', 'claude-opus-5-5[1m]', '872e0d74-c6e8-4446-8169-da5f1c46a732', 17, 34, 16599, 1188436, 95869, 1.3367552, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (787, 911, '2026-10-13T18:28:07Z', '2026-10-13T18:29:00Z', 'done', NULL, 0, 'c60ce2690a646c3365735382b75e4bff55123702', 'claude-opus-5-5[1m]', '60a3ee0e-0cf0-4097-bbff-67a38ca064a9', 6, 12, 4372, 197344, 30772, 0.3731328, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
