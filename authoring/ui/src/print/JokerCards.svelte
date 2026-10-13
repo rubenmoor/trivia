@@ -31,7 +31,7 @@
   const c = catalogFor(lang);
   const [before, after] = fill(c.cards.intro, { hint: c.joker.hint.name }).split("{scale}");
   $effect(() => {
-    const page = Object.assign(document.createElement("style"), { textContent: `@page { ${PAGE[lang]}; }` });
+    const page = Object.assign(document.createElement("style"), { textContent: `@page { ${PAGE[lang] ?? PAGE.en}; }` });
     document.head.append(page);
     return () => page.remove();
   });
