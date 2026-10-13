@@ -22756,8 +22756,8 @@ Work:
 - Check: `trivia-release-check --manual <file>` with `deck: no Deck (decision 125)` (other steps `--skip`ped as needed) shows the row ✓; `deck: n` still ✗. Per-commit checks pass.', '2026-10-13T18:02:25Z', NULL, 931);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (933, 90, 'create tasks for plan 90', 'split', 'done', 1000, '2026-10-13, tasks 685 and 687 rewritten to plan 90''s two tasks, 686 dropped (no real-Deck test, decision 125)', 'Split plan 90 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:03:10Z', '2026-10-13T18:04:08Z', 930);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (934, 114, 'create tasks for plan 114', 'split', 'open', 1000, NULL, 'Split plan 114 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:05:51Z', NULL, 901);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (934, 114, 'create tasks for plan 114', 'split', 'done', 1000, '2026-10-13, tasks 955–958, decision 135 (task 958 waits for it)', 'Split plan 114 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:05:51Z', '2026-10-13T18:30:46Z', 901);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (935, 115, 'create tasks for plan 115', 'split', 'open', 1000, NULL, 'Split plan 115 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:09:32Z', NULL, 902);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (936, 116, 'create tasks for plan 116', 'split', 'open', 1000, NULL, 'Split plan 116 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -22914,6 +22914,69 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Docs name plan 112''s paths and the recorded decision; per-commit checks pass.', '2026-10-13T18:29:51Z', NULL, 914);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (955, 114, 'workshop.mjs, fake Workshop dir and the start wiring', 'work', 'open', NULL, NULL, 'Plan 114 task 1. Needs plan 112''s tasks 950–952 (`mods.mjs`, `resolve.mjs`, `main.mjs` mods wiring) done first.
+
+- `app/desktop/workshop.mjs` (pure: no Electron, no binding import):
+  - `workshopItems(ugc)`: `ugc` has `getSubscribedItems()`, `getItemState(id)`, `getItemInstallInfo(id)`, `downloadItem(id, highPriority)` (`steam.workshop` of `steamworks-ffi-node` 0.11.3, all sync, ids `bigint`)
+  - per subscribed id, state bits (`EItemState`: Subscribed 1, Installed 4, NeedsUpdate 8, Downloading 16, DownloadPending 32, DisabledLocally 64):
+    - `DisabledLocally` → `{ dir: null, publishedFileId, state: "disabled" }`
+    - `Installed` + folder from `getItemInstallInfo` → `{ dir, publishedFileId, state: "installed" }`, warning `needs_update` when `NeedsUpdate` (installed files load)
+    - `Downloading`/`DownloadPending` → `{ dir: null, publishedFileId, state: "downloading" }`
+    - else `downloadItem(id, false)` once, then `downloading`
+  - `publishedFileId` as decimal string (bigint never crosses IPC/JSON)
+  - `fakeUgc(dir)`: same four methods over a folder; numeric subfolder = installed item, `<id>.downloading` = downloading
+- `main.mjs`, in `start()` after `startSteam()`/`checkUser()`, before `discover`:
+  - `steam` + `hasSteamId()` → `workshopItems(steam.workshop)`; `TRIVIA_DEV_STEAM_USER=1` + `TRIVIA_DEV_WORKSHOP_DIR` → `workshopItems(fakeUgc(dir))` (one stderr line that the fake is on; env ignored without the dev switch); else `[]` (decision 111: Steam only)
+  - list into `discover({ local, workshop })`; stderr per item `trivia: mod <id> workshop <publishedFileId> <state>`; `--no-mods` loads no layers but still lists
+- `mods.mjs` (`discover`/`arrange`):
+  - entries without `dir`: listed with state `downloading`/`disabled`, not loaded, no error
+  - entries with `dir`: `mod.json` at the item root, else `no_manifest`
+  - runtime record carries `publishedFileId` (null for local)
+  - `mod.json` `workshopId` (decision 132: Workshop publishing: where the published file id lives) ≠ the item''s id → warning `workshop_id_mismatch`, still loads
+  - decision 127: Workshop mods: identity and duplicates: key = `mod.json` `id`; local before Workshop; two Workshop items with the same id → lower published file id wins (compare as BigInt), other `duplicate_id` naming the winner
+  - new ids appended at the end, `on: true` (plan 112''s rule)
+- Workshop folders are read as bytes only (never `require`/`import`/`eval`); `contained()` per layer stays.
+
+Done when:
+- a throw-away script with a fake `ugc` (installed, downloading, not installed → `downloadItem` called, disabled, no `mod.json`, two items same id, local with the same id, `workshopId` mismatch) prints the expected list
+- `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1 TRIVIA_DEV_WORKSHOP_DIR=<tmp>` loads a fake item''s CSS
+- per-commit checks pass', '2026-10-13T18:30:38Z', NULL, 934);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (956, 114, 'Bridge: mods:list and mods:set over IPC', 'work', 'open', NULL, NULL, 'Plan 114 task 2, after the task "workshop.mjs, fake Workshop dir and the start wiring".
+
+- `main.mjs`, channels via the existing `handle()` (sender-origin check `app://trivia/`):
+  - `mods:list` → `{ mods: ModEntry[], noMods, validUser }`; every call re-queries Workshop (same source as at start) and re-runs `discover` + `arrange` (no event in the binding, no timer polling)
+  - `ModEntry` = `{ id, name, version, description, source: "local"|"workshop", publishedFileId: string|null, kind: string[], languages: string[], on, active, position, state, warnings: string[], error: { code, field? } | null }`; `active` = in this run''s overlay layers (fixed per run); no player disk paths except a short `dir` basename; missing ids (in `mods.json`, not found) omitted
+  - `mods:set([{ id, on }])` in load order: validate (array ≤ 500, `id` a slug per plan 112, `on` boolean, no duplicates), else reject `bad_mods`; ids not in the call kept after the given ones in their order; `writeSettings` (atomic) to `mods.json`; returns the new list; running overlay unchanged
+  - without a valid user: list with `no_user` states (plan 112); `set` still writes (per machine, decision 121''s precedent)
+- `preload.cjs`: `mods: { list(), set(order) }` on the bridge (whatever name it has then; plan 117 may rename it)
+- `app/client/src/lib/desktop.ts`: `ModEntry` type, `mods: ModsBridge | null` export (null outside the shell); no UI consumer yet (plan 118)
+- codes stay codes, no `t()` strings here
+
+Done when (devtools console, `TRIVIA_DEVTOOLS=1 TRIVIA_DEV_STEAM_USER=1 TRIVIA_DEV_WORKSHOP_DIR=<tmp>`, throw-away local and fake Workshop mods):
+- `mods.list()` shows local and Workshop entries with `on`/`active`
+- `mods.set` with a swapped order and one off rewrites `mods.json`; `list()` shows `active ≠ on` until restart, the new order after it
+- a bad payload rejects `bad_mods`
+- a folder added to the fake dir shows in `list()` without restart, `active: false`
+- per-commit checks pass', '2026-10-13T18:30:39Z', NULL, 934);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (957, 114, 'Docs: Workshop source and the mods bridge', 'work', 'open', NULL, NULL, 'Plan 114 task 5, after the bridge task (`mods:list`/`mods:set`).
+
+- `plans/18-steam-integration.md` "Modding": Workshop source (item states, `needs_update`, `workshop_id_mismatch`, refresh by re-query in `mods:list`, new items on at the end), decision 127: Workshop mods: identity and duplicates, IPC `mods:list`/`mods:set`, `TRIVIA_DEV_WORKSHOP_DIR` (only with `TRIVIA_DEV_STEAM_USER=1`)
+- `directory.md` `app/desktop/` row: `workshop.mjs`
+- AGENTS.md "Commands", `trivia-desktop` line: `TRIVIA_DEV_WORKSHOP_DIR=<dir>` (fake Workshop items)
+- style per AGENTS.md: bullets, ultra-short
+
+Done when: docs name the paths and decision 127; per-commit checks pass.', '2026-10-13T18:30:39Z', NULL, 934);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (958, 114, 'Workshop check under Steam (gamemaster checklist)', 'work', 'open', NULL, NULL, 'Plan 114 task 4. Waits for the Steamworks Workshop setup decision; run after the bridge task (`mods:list`/`mods:set`) and, if it exists by then, plan 119''s publish command (`trivia --publish-mod`).
+
+Workers never log in to Steam: this task only writes the checklist and handles the answer.
+- `pm decision add --once "Workshop check under Steam passed?"`, options "passed" (recommended) / "issues (name the failing rows)", body a short checklist:
+  - publish one tiny CSS mod (e.g. a background colour) privately: plan 119''s command if it exists, else Steam''s `ugctool` / Steamworks upload
+  - subscribe with the second account, start the game: stderr shows `trivia: mod <id> workshop <publishedFileId> installed`, the colour changes
+  - while running: unsubscribe, subscribe a new item: `mods.list()` (devtools, `TRIVIA_DEVTOOLS=1`) shows it after refresh with `active: false`; it loads on the next start
+- link this task to it (`pm task-pending-decision`) and stop
+- after the answer: each failing row → a follow-up task in plan 114; then done
+
+Done when: the gamemaster answered; failures have follow-up tasks.', '2026-10-13T18:30:39Z', NULL, 934);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -24215,6 +24278,19 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (132, 'Workshop publishing: where the published file id lives', 'answered', '[]', 'Plan 119 (task 907). setItemContent uploads the whole folder, so a sidecar would ship anyway; in mod.json the id travels to subscribers, where plan 114''s workshop_id_mismatch warning checks it. Optional field in plan 112''s validator, ^[1-9]\d{0,19}$; delete it to publish as a new item. First publish defaults to private visibility; updates change visibility only with --visibility.', 'mod.json field workshopId (decimal string), written by trivia --publish-mod on first publish; first publish private', NULL, '2026-10-13T18:19:35Z', '2026-10-13T18:19:35Z', 907, NULL, 'rule', 907, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (133, 'Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder', 'answered', '[]', 'Plan 102 part 9 (task 908). An AI-made pool needs per-question reasons a player can act on; the mods screen (plan 118) shows only counts per bundle and needs the mod installed and a restart. One validator for loader, check and publish keeps no second path. The game runs offline and the template must be copied into mods/: shipping a few KB of text and one small image next to the executable (Steam''s Browse local files) needs no network and no GitHub; the repo copy is what the store page links.', 'Players check a mod folder with trivia --check-mod <folder> (headless, no Steam, same validators as the loader: readManifest, bundleRows, modPool with per-question reasons), not only the mods screen; the kit (modding/bundles.md, modding/bundle-prompt.md, modding/template-bundle/) lives in the repo''s modding/ (part 10''s guide folder) and ships in the game''s install folder as modding/ (electron-builder extraFiles), also readable online in the public repo', NULL, '2026-10-13T18:21:44Z', '2026-10-13T18:21:44Z', 908, NULL, 'rule', 908, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (134, 'Modding guide: path, language, examples', 'answered', '[]', 'One folder for everything a modder needs (decision 133 already puts the kit in modding/ and ships it); a player in the install folder finds the guide offline, the store page links the public repo (decision 108). English only: modders'' common language, one text to keep in step with the code; store bullets per language link to it. One bundle mod to keep valid (the template is already release-checked by plan 120''s modkit step). No media in the examples keeps credits_check unchanged.', 'Guide at modding/README.md (English only), beside the player bundle kit (decision 133), shipped in the install folder as modding/ and read online at github.com/rubenmoor/trivia/blob/main/modding/README.md; example mods in modding/examples/{theme,rules-tweak,conversion}/; the bundle example is modding/template-bundle/ (plan 120), not a second bundle mod; examples carry no media and are MIT like the code (decision 107)', NULL, '2026-10-13T18:23:55Z', '2026-10-13T18:23:55Z', 909, NULL, 'rule', 909, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (135, 'Steamworks: enable Workshop for ¡Trivia! and a second Steam account?', 'pending', '["done", "not yet"]', 'Plan 114 (Workshop source). Needed for the Workshop check under Steam (task 958) and plan 119''s publishing. Only once the real App ID exists (SW-7, plans 39/85); dev tests under Spacewar 480 are not Workshop tests.
+
+Steamworks (App Admin):
+- Workshop → General: enable "ISteamUGC for file transfer"
+- visibility: public (items may be public/friends/private)
+- tags: bundle, theme, code, conversion; languages es, en, de, …
+- Workshop legal agreement: Steam''s own; creators accept it before items go public (plan 119 shows its URL)
+- content descriptors: none set by us (creators pick per item; the base game''s from plan 88 stay)
+- publish the Steamworks changes
+
+Also: a second Steam account owning the game (beta key or family sharing), for milestone 15''s "Done when".
+
+Answer: done + the tag list as entered.', NULL, NULL, '2026-10-13T18:30:44Z', NULL, 934, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -25008,6 +25084,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (786, 910, '2026-10-13T18:24:57Z', '2026-10-13T18:28:07Z', 'done', NULL, 0, 'bd1a06c7417971e04d8bf451b6a0ef8c09c1c589', 'claude-opus-5-5[1m]', '872e0d74-c6e8-4446-8169-da5f1c46a732', 17, 34, 16599, 1188436, 95869, 1.3367552, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (787, 911, '2026-10-13T18:28:07Z', '2026-10-13T18:29:00Z', 'done', NULL, 0, 'c60ce2690a646c3365735382b75e4bff55123702', 'claude-opus-5-5[1m]', '60a3ee0e-0cf0-4097-bbff-67a38ca064a9', 6, 12, 4372, 197344, 30772, 0.3731328, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (788, 914, '2026-10-13T18:29:01Z', '2026-10-13T18:30:00Z', 'done', NULL, 0, '2941251a30dc1e530a1908d6a81800f47415b1e7', 'claude-opus-5-5[1m]', '59e1cfc2-ff79-4d56-9bfd-125b0abfa5e2', 6, 12, 5385, 203926, 33621, 0.41750120000000007, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (789, 934, '2026-10-13T18:30:01Z', '2026-10-13T18:30:53Z', 'done', NULL, 0, '9adaa29063c707da81ca93388f20a0d3d57267dc', 'claude-opus-5-5[1m]', '255dfe1b-b16a-420c-92ad-be2754f546bd', 6, 12, 5167, 200885, 32732, 0.405421, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -25224,6 +25301,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (868, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (885, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (906, 123);
+INSERT INTO task_decision (task_id, decision_id) VALUES (958, 135);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
