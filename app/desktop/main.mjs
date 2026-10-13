@@ -370,10 +370,10 @@ async function start() {
     return;
   }
 
-  const layers = await loadMods();
+  const { layers, mods } = await loadMods();
 
   const ses = session.defaultSession;
-  ses.protocol.handle("app", makeResolver({ ...dirs, layers }));
+  ses.protocol.handle("app", makeResolver({ ...dirs, layers, mods }));
   ses.webRequest.onBeforeRequest(
     { urls: ["http://*/*", "https://*/*", "ws://*/*", "wss://*/*"] },
     (_details, callback) => callback({ cancel: true }),
@@ -423,7 +423,7 @@ async function start() {
   win.loadURL(ORIGIN);
 }
 
-/** Discovery, mods.json, load order → overlay layers, fixed for the run; none with --no-mods. */
+/** Discovery, mods.json, load order → overlay layers and loaded mods' bundles, fixed for the run; none with --no-mods. */
 async function loadMods() {
   const file = modsSettingsFile();
   const arranged = await arrangeMods(true);
@@ -435,7 +435,7 @@ async function loadMods() {
       console.error(`trivia: mod ${mod.id ?? "?"} workshop ${mod.publishedFileId} ${mod.dir ? "installed" : mod.state}`);
   if (args.noMods) {
     console.error("trivia: --no-mods: no mods this run");
-    return [];
+    return { layers: [], mods: [] };
   }
   const count = {};
   for (const mod of mods) {
@@ -446,7 +446,8 @@ async function loadMods() {
   if (mods.length)
     console.error(`trivia: mods: ${Object.entries(count).map(([state, n]) => `${n} ${state}`).join(", ")}`);
   activeDirs = new Set(arranged.layers);
-  return arranged.layers;
+  const loaded = mods.filter((m) => m.state === "loaded");
+  return { layers: arranged.layers, mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, bundles: m.bundles })) };
 }
 
 /** Fresh discovery (local + Workshop re-query) arranged against mods.json; at start and per `mods:list`. */

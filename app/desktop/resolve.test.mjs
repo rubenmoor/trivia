@@ -1,9 +1,10 @@
-// makeResolver: mod layers and path safety (plan 112). `npm test`
+// makeResolver: mod layers, path safety (plan 112), mod bundles (plan 115). `npm test`
 import assert from "node:assert/strict";
 import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, test } from "node:test";
+import { bundleRows } from "./mods.mjs";
 import { makeResolver } from "./resolve.mjs";
 
 const tmp = mkdtempSync(path.join(tmpdir(), "trivia-resolve-"));
@@ -18,10 +19,29 @@ put("dist/index.html", "ours index");
 put("dist/game/theme.css", "ours theme");
 put("dist/only-ours.js", "ours only");
 put("data/pool.json", '{"questions":[]}');
-put("data/bundles.json", "ours bundles");
+put("data/bundles.json", JSON.stringify({ about: "x", bundles: [{ id: "base", kind: "base" }] }));
 put("top/mod.json", "{}");
 put("top/game/theme.css", "top theme");
-put("top/data/bundles.json", "top bundles");
+put(
+  "top/data/bundles.json",
+  JSON.stringify({
+    bundles: [
+      { id: "cats", kind: "pets", languages: ["es"], name: "Gatos", description: "d", rule: "r" },
+      { id: "Bad", kind: "pets", languages: [], name: "n", description: "d" },
+      { id: "cats", kind: "pets", languages: [], name: "n", description: "d" },
+      { id: "dogs", kind: "base", languages: "es", name: "n", description: "d" },
+    ],
+  }),
+);
+put("top/data/pool.json", "top pool");
+put("top/data/bundles/cats/pool.json", "cats pool");
+put("top/data/bundles/cats/img/owl.jpg", "owl");
+put("top/data/bundles/hidden/pool.json", "hidden pool");
+put("low/data/bundles.json", JSON.stringify({ bundles: [{ id: "cats", kind: "base", languages: ["en"], name: "L", description: "" }] }));
+put("low/data/bundles/cats/pool.json", "low cats pool");
+put("off/data/bundles.json", JSON.stringify({ bundles: [{ id: "x", kind: "base", languages: [], name: "", description: "" }] }));
+put("off/data/bundles/x/pool.json", "off pool");
+put("broken/data/bundles.json", "{nope");
 put("low/mod.json", "{}");
 put("low/game/theme.css", "low theme");
 put("low/index.html", "low index");
@@ -34,7 +54,16 @@ symlinkSync(path.join(tmp, "secret/key"), path.join(tmp, "dist/leak.txt"));
 
 const dirs = { dist: path.join(tmp, "dist"), data: path.join(tmp, "data"), media: path.join(tmp, "media") };
 const plain = makeResolver(dirs);
-const modded = makeResolver({ ...dirs, layers: [path.join(tmp, "top"), path.join(tmp, "low")] });
+const top = await bundleRows(path.join(tmp, "top"));
+const low = await bundleRows(path.join(tmp, "low"));
+const modded = makeResolver({
+  ...dirs,
+  layers: [path.join(tmp, "top"), path.join(tmp, "low")],
+  mods: [
+    { id: "top", name: "Top Mod", dir: path.join(tmp, "top"), bundles: top.rows },
+    { id: "low", name: "Low Mod", dir: path.join(tmp, "low"), bundles: low.rows },
+  ],
+});
 
 const get = async (resolve, p) => {
   const res = await resolve(new Request("app://trivia" + p));
@@ -64,9 +93,58 @@ test("mod.json not served", async () => {
   assert.equal(await text(modded, "/./sub/../mod.json"), "low index");
 });
 
-test("/data/ layering", async () => {
-  assert.equal(await text(modded, "/data/bundles.json"), "top bundles");
+test("bundleRows: bad rows dropped with warnings, bad JSON, none", async () => {
+  assert.deepEqual(top.rows.map((r) => r.id), ["cats"]);
+  assert.deepEqual(top.warnings, [
+    { code: "bundle_row", id: "Bad" },
+    { code: "bundle_row", id: "cats" },
+    { code: "bundle_row", id: "dogs" },
+  ]);
+  assert.deepEqual(await bundleRows(path.join(tmp, "broken")), { rows: [], warnings: [{ code: "bundle_json" }] });
+  assert.deepEqual(await bundleRows(path.join(tmp, "secret")), { rows: [], warnings: [] });
+});
+
+test("bundles.json: ours first, then mods top first, tagged", async () => {
+  const doc = JSON.parse(await text(modded, "/data/bundles.json"));
+  assert.equal(doc.about, "x");
+  assert.deepEqual(doc.bundles.map((b) => b.id), ["base", "top:cats", "low:cats"]);
+  assert.deepEqual(doc.bundles[0], { id: "base", kind: "base" });
+  assert.deepEqual(doc.bundles[1], {
+    id: "top:cats",
+    kind: "pets",
+    languages: ["es"],
+    name: "Gatos",
+    description: "d",
+    rule: "r",
+    source: "mod",
+    mod: "top",
+    modName: "Top Mod",
+  });
+  assert.equal(JSON.parse(await text(plain, "/data/bundles.json")).bundles.length, 1);
+});
+
+test("namespaced bundle folders: that mod only", async () => {
+  assert.equal(await text(modded, "/data/bundles/top:cats/pool.json"), "cats pool");
+  assert.equal(await text(modded, "/data/bundles/top%3Acats/img/owl.jpg"), "owl");
+  assert.equal((await get(modded, "/data/bundles/top:cats/img/owl.jpg")).type, "image/jpeg");
+  assert.equal(await text(modded, "/data/bundles/low:cats/pool.json"), "low cats pool");
+  for (const p of [
+    "/data/bundles/top:hidden/pool.json",
+    "/data/bundles/off:x/pool.json",
+    "/data/bundles/top:Bad/pool.json",
+    "/data/bundles/top:cats/../hidden/pool.json",
+    "/data/bundles/top:cats/%2e%2e/hidden/pool.json",
+    "/data/bundles/top:cats/..%2F..%2F..%2Fmod.json",
+    "/data/bundles/top:cats:x/pool.json",
+    "/data/bundles/top:cats",
+  ])
+    assert.equal((await get(modded, p)).status, 404, p);
+  assert.equal(await text(modded, "/data/bundles/top:cats/%2e%2e%2f%2e%2e%2fpool.json"), "cats pool"); // clamped
+});
+
+test("other /data/ files: ours only", async () => {
   assert.equal(await text(modded, "/data/pool.json"), '{"questions":[]}');
+  assert.equal((await get(modded, "/data/bundles/cats/pool.json")).status, 404);
   assert.equal((await get(modded, "/data/nope.json")).status, 404);
 });
 

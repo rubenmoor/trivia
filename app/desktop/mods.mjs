@@ -89,7 +89,7 @@ function checkFields(m, gameVersion, warnings) {
 /** One mod folder → { id, dir, manifest, kind, warnings, error }; id null when unknown. */
 export async function readManifest(dir, gameVersion) {
   dir = path.resolve(dir);
-  const out = { id: null, dir, manifest: null, kind: [], warnings: [], error: null };
+  const out = { id: null, dir, manifest: null, kind: [], bundles: [], warnings: [], error: null };
   const fail = (error) => ({ ...out, error });
   if (!(await exists(dir, (s) => s.isDirectory()))) return fail({ code: "not_a_folder" });
   const file = path.join(dir, "mod.json");
@@ -113,7 +113,50 @@ export async function readManifest(dir, gameVersion) {
   if (error) return fail(error);
   if (m.entry !== undefined && !(await inside(dir, m.entry))) return fail({ code: "entry_missing" });
   out.kind = m.kind ?? (await deriveKind(dir, m.entry));
+  const bundles = await bundleRows(dir);
+  out.bundles = bundles.rows;
+  out.warnings.push(...bundles.warnings);
   return out;
+}
+
+const BUNDLE_BYTES = 256 * 1024;
+const SLUG = /^[a-z0-9][a-z0-9-]{0,63}$/;
+
+/** `<dir>/data/bundles.json` rows (plan 115), structure and slugs only; ids as in the file. */
+export async function bundleRows(dir) {
+  const file = path.join(dir, "data", "bundles.json");
+  const bad = { rows: [], warnings: [{ code: "bundle_json" }] };
+  let doc;
+  try {
+    if ((await fs.stat(file)).size > BUNDLE_BYTES) return bad;
+    doc = JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(await fs.readFile(file)));
+  } catch (err) {
+    return err.code === "ENOENT" ? { rows: [], warnings: [] } : bad;
+  }
+  if (!isObject(doc) || !Array.isArray(doc.bundles)) return bad;
+  const rows = [];
+  const warnings = [];
+  const ids = new Set();
+  for (const row of doc.bundles) {
+    const ok =
+      isObject(row) &&
+      typeof row.id === "string" &&
+      SLUG.test(row.id) &&
+      !ids.has(row.id) &&
+      typeof row.kind === "string" &&
+      SLUG.test(row.kind) &&
+      Array.isArray(row.languages) &&
+      row.languages.every((l) => typeof l === "string") &&
+      typeof row.name === "string" &&
+      typeof row.description === "string";
+    if (!ok) {
+      warnings.push({ code: "bundle_row", id: typeof row?.id === "string" ? row.id : null });
+      continue;
+    }
+    ids.add(row.id);
+    rows.push(row);
+  }
+  return { rows, warnings };
 }
 
 /** Local mods folder, then Workshop items (lowest published file id first); later duplicates invalid. */

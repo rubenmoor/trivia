@@ -154,14 +154,24 @@ function pooledUrls(data) {
   };
 }
 
-// layers: enabled mods' folders, top first (plan 112); ours last.
-export function makeResolver({ dist, data, media, layers = [] }) {
+// Our bundles.json + loaded mods' rows, top first (decision 128); ids namespaced `<mod>:<id>`.
+async function mergedBundles(data, mods) {
+  const ours = JSON.parse(await readFile(path.join(data, "bundles.json"), "utf8"));
+  const rows = mods.flatMap((m) =>
+    m.bundles.map((row) => ({ ...row, id: `${m.id}:${row.id}`, source: "mod", mod: m.id, modName: m.name })),
+  );
+  return { ...ours, bundles: [...ours.bundles, ...rows] };
+}
+
+// layers: enabled mods' folders, top first (plan 112); ours last. mods: the loaded ones { id, name, dir, bundles }, same order.
+export function makeResolver({ dist, data, media, layers = [], mods = [] }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
-  const mods = new Set(layers.map((d) => path.resolve(d)));
-  const distRoots = [...mods, dist];
-  const dataRoots = [...[...mods].map((d) => path.join(d, "data")), data];
+  const modDirs = new Set(layers.map((d) => path.resolve(d)));
+  const distRoots = [...modDirs, dist];
+  const byId = new Map(mods.map((m) => [m.id, m]));
+  let merged = null; // built once per run: the layers are fixed
   const urls = pooledUrls(data);
   return async (request) => {
     const url = new URL(request.url);
@@ -172,8 +182,20 @@ export function makeResolver({ dist, data, media, layers = [] }) {
       return json(404, { error: "not_found" });
     }
     if (rel === "/api" || rel.startsWith("/api/")) return json(404, { error: "not_found" });
+    if (rel === "/data/bundles.json" && mods.length) {
+      merged ??= mergedBundles(data, mods).catch((err) => {
+        console.error(`trivia: bundles.json: ${err.message}`);
+        return null;
+      });
+      const doc = await merged;
+      return doc ? json(200, doc) : json(404, { error: "not_found" });
+    }
     if (rel.startsWith("/data/")) {
-      const file = await firstHit(dataRoots, rel.slice("/data/".length), mods);
+      const m = /^\/data\/bundles\/([^/:]+):([^/:]+)\/(.+)$/.exec(rel);
+      const mod = m && byId.get(m[1]);
+      let file = null;
+      if (mod?.bundles.some((b) => b.id === m[2])) file = await contained(path.join(mod.dir, "data", "bundles", m[2]), m[3]);
+      else if (!rel.includes(":")) file = await contained(data, rel.slice("/data/".length));
       return file ? sendFile(file, request) : json(404, { error: "not_found" });
     }
     if (rel === "/media") {
@@ -182,7 +204,8 @@ export function makeResolver({ dist, data, media, layers = [] }) {
       const file = await contained(media, cacheName(fileUrl));
       return file ? sendFile(file, request) : json(404, { error: "media_missing" });
     }
-    const file = (rel !== "/" && (await firstHit(distRoots, rel, mods))) || (await firstHit(distRoots, "index.html", mods));
+    const file =
+      (rel !== "/" && (await firstHit(distRoots, rel, modDirs))) || (await firstHit(distRoots, "index.html", modDirs));
     return sendFile(file || path.join(dist, "index.html"), request);
   };
 }
