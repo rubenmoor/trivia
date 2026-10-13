@@ -13872,7 +13872,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No request without a click (no fetch, prefetch, preview).
 - Strings via `t()` in es, en, de (+ es-ES where it differs); `check:literals`.
 - `pm decision record` the final text format (header tokens, order, separators) — task 3 parses it.
-- Check: `npm run check`, `npm test`, `npm run build`; browser game: flag two questions (one with note), copy one and all, header correct; desktop without Steam: no overlay button, address/URL as text; devtools network silent until a click.', '2026-10-13T09:00:36Z', NULL, 698);
+- Check: `npm run check`, `npm test`, `npm run build`; browser game: flag two questions (one with note), copy one and all, header correct; desktop without Steam: no overlay button, address/URL as text; devtools network silent until a click.
+- Pool hash per flag (task 722): `buildInfo().pool` is the pool of the last engine call (`names.svelte.ts`, `game` or `next` scope), not the flagged question''s locale; for a flag in another locale than that call, take the hash of that locale''s pool (`loadEngineData(lang).poolHash`) or print `?`.', '2026-10-13T09:00:36Z', NULL, 698);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (700, 93, 'qgen flag: pasted reports become needs_work', 'work', 'open', NULL, NULL, 'Plan 93 task 3 (read the plan body). Needs the report format recorded by plan 93''s task 2 (`pm decision list --answered --grep report`).
 
 - `qgen flag`: report text on stdin (one or many blocks; chat text around them ignored); parse header lines `¡Trivia! #<id> · <lang> · v<version> · pool <hash> · <date>` and the following `Pregunta:`/`Nota:` lines (labels in es, en, de).
@@ -14078,7 +14079,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
 
 ## Done when
-- Every file above listed in `## Part 6`, every finding with a status; checks pass; staged.', '2026-10-13T09:24:04Z', NULL, 524);
+- Every file above listed in `## Part 6`, every finding with a status; checks pass; staged.
+- From task 722 (`## Part 4`): `release_check.py`''s header lists only `app/data/pool.json`''s hash, while Credits shows the hash of the game''s locale pool (`pool.<locale>.json`); consider listing every shipped pool''s hash (a report layout change → decision per the rule above).', '2026-10-13T09:24:04Z', NULL, 524);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (721, 82, 'Part 10: review the build-time credits plugin: app/client/credits.ts, node.d.ts', 'work', 'open', NULL, NULL, '`app/client/credits.ts` (≈322 lines, Vite plugin building `credits.json` and `CREDITS.md`, PUB-5/plan 47) and `app/client/node.d.ts` (its Node API stubs) have no review task: part 10''s `task 586: Part 10: review build and package config` lists only the config files. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns them to part 10).
 
 ## What
@@ -14093,7 +14095,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Both files listed in `## Part 10`, every finding with a status; checks pass; staged.', '2026-10-13T09:24:04Z', NULL, 524);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (722, 76, 'Review lib/build.ts and other part 4 files added after the inventory', 'work', 'open', NULL, NULL, '`app/client/src/lib/build.ts` (≈11 lines: game version D-91 and pool hash D-92, plan 91; used by `game/Credits.svelte`) was added after plan 76''s tasks were written and no part 4 task lists it. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns it to part 4).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (722, 76, 'Review lib/build.ts and other part 4 files added after the inventory', 'work', 'done', NULL, '2026-10-13, code-review.md (Part 4: lib/build.ts rows; no other unlisted file); notes appended to tasks 699, 720', '`app/client/src/lib/build.ts` (≈11 lines: game version D-91 and pool hash D-92, plan 91; used by `game/Credits.svelte`) was added after plan 76''s tasks were written and no part 4 task lists it. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns it to part 4).
 
 ## What
 - Review it, fix what is cheap, log it in `## Part 4` of `code-review.md` (a "no findings" row if clean).
@@ -14104,7 +14106,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
 
 ## Done when
-- `lib/build.ts` (and any other unlisted part 4 file) in `## Part 4` with a status; checks pass; staged.', '2026-10-13T09:24:04Z', NULL, 524);
+- `lib/build.ts` (and any other unlisted part 4 file) in `## Part 4` with a status; checks pass; staged.', '2026-10-13T09:24:04Z', '2026-10-13T10:28:55Z', 524);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (723, 75, 'Engine tests for the configure settings and gamemaster cheats', 'work', 'done', NULL, '2026-10-13, app/client/src/engine/settings.test.ts (new: levels 1/20, cards 0–4, custom difficulty, video/audio off, ∞ jokers, refusals; cheats replace/skip/block/level/settings, gamemaster_only and wrong-phase refusals, undo after cheats), fixtures/README.md, code-review.md', 'Follow-up of `task 538: Review the engine tests and test helpers`. The frozen Python fixtures (`app/client/src/engine/fixtures/`, decision 25: Family test night on the TS engine) predate MD-11/MD-12, so no replay covers them, and no TS-native test does either (only `outlook.test.ts` touches `levels`/`mode` via `outlook`). The rules below are only checked by hand (task 535''s throw-away drive script).
 
 ## What
@@ -15837,6 +15839,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (582, 540, '2026-10-13T10:14:19Z', '2026-10-13T10:20:24Z', 'done', NULL, 0, '017075430d190167a786e10ac51f11bb49255a2b', 'claude-opus-5-5[1m]', 'ff27966f-8675-4fd5-9954-0c917c1ef2be', 56, 100, 28554, 3649514, 90520, 2.0255428, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (583, 541, '2026-10-13T10:20:25Z', '2026-10-13T10:24:25Z', 'done', NULL, 0, 'c91ed9ffefa4f0610444506da96bbf738459d322', 'claude-opus-5-5[1m]', '06bb6a03-b4ba-479d-819f-5f84c512dba0', 35, 66, 18317, 2221032, 80305, 1.4532504000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (584, 542, '2026-10-13T10:24:26Z', '2026-10-13T10:27:34Z', 'done', NULL, 0, 'ae859b6097e5ed44606381ace7ad02a919284f99', 'claude-opus-5-5[1m]', '50230266-cee6-4ad0-80ae-a1a4e433db6e', 36, 66, 16856, 2261711, 82557, 1.4501821999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (585, 722, '2026-10-13T10:27:35Z', '2026-10-13T10:29:02Z', 'done', NULL, 0, 'f300b7145bef3f01cc8159030f91fc343a0aa6f3', 'claude-opus-5-5[1m]', '03bfacaf-997d-49f6-b750-8cd85812c029', 19, 36, 6626, 783155, 42761, 0.63138300000000014, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
