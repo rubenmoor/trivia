@@ -11290,7 +11290,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `i18n.ts`, every catalog in `locales/` and `check-literals.mjs` listed in `## Part 4` (no-findings rows included), every finding with a status; every part 1 row `handed to part 4` has its final status there.', '2026-10-12T23:05:00Z', '2026-10-13T10:27:22Z', 516);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (543, 77, 'Review Game.svelte', 'work', 'open', NULL, NULL, 'Task 1 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (543, 77, 'Review Game.svelte', 'work', 'done', NULL, '2026-10-13, app/client/src/game/Game.svelte, code-review.md', 'Task 1 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
 - `pm queue` + grep open task bodies for `Game.svelte`: a file an open task still changes gets findings only, no refactor (`superseded by task N`).
@@ -11316,7 +11316,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `Game.svelte` listed in `## Part 5` with every finding and a status.
-- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', '2026-10-13T10:37:26Z', 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (544, 77, 'Review Question.svelte', 'work', 'open', NULL, NULL, 'Task 2 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -14141,6 +14141,22 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## What
 - `error.bad_save` in `app/client/src/locales/es.ts`, `en.ts`, `de.ts` (es-ES inherits): short, says the save could not be written and the game goes on; ask the gamemaster for the wording with `pm decision add` if unsure.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; update the `code-review.md` row''s status.', '2026-10-13T10:23:30Z', '2026-10-13T10:29:34Z', 541);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (726, 77, 'Split the Select screen out of Game.svelte', 'work', 'open', NULL, NULL, 'Follow-up of `task 543: Review Game.svelte` (code review part 5, `code-review.md` `## Part 5`).
+
+## Why
+- `app/client/src/game/Game.svelte` (≈1310 lines) holds the screen state machine plus the markup and ≈200 lines of CSS of the Select screen (paper envelopes: `.cards`, `.card`, `.flap`, `.tear`, `.letter-slot`, `.letter`, `.seal`, `.new-badge`, keyframes `deal`, `chosen`, `seal-crack`, `flap-off`, `tear-show`, `letter-up`, `gone`) and `tilt()`.
+- That block is self-contained: it reads only `game.options`, `picked`, `fresh`, `busy`, `game.id`/`game.level` (tilt) and calls `pick(i)`.
+
+## What
+- New `app/client/src/game/Envelopes.svelte` (or similar): props `options`, `picked`, `fresh`, `busy`, `seed` (game id/level for `tilt`), `onpick`; the `{#each}` with its CSS and keyframes and `tilt()` move there.
+- `Game.svelte` keeps the `section.select`, the title, the empty-table box, `Hud`/`JokerTray`; nothing else changes (no new state, no props changed on other components).
+- Watch the scoped CSS: `section` and `p` rules of `Game.svelte` must still match the Select section; `.card:global([data-nav])` moves along; focus (`data-focus-default`) and `lang={questionLocale()}` stay on the buttons.
+- Add the new file to `directory.md`.
+
+## Check
+- `decision 6: Plan 21 (LUI-1): how to check the screens show no visible change?`: before/after pixel diff of the Select screen (also mid-pick, and with a `fresh` card after a «Paso») with a temp `TRIVIA_STATE`.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.
+- Log the result as a row in `## Part 5` of `code-review.md`.', '2026-10-13T10:36:48Z', NULL, 543);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15841,6 +15857,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (584, 542, '2026-10-13T10:24:26Z', '2026-10-13T10:27:34Z', 'done', NULL, 0, 'ae859b6097e5ed44606381ace7ad02a919284f99', 'claude-opus-5-5[1m]', '50230266-cee6-4ad0-80ae-a1a4e433db6e', 36, 66, 16856, 2261711, 82557, 1.4501821999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (585, 722, '2026-10-13T10:27:35Z', '2026-10-13T10:29:02Z', 'done', NULL, 0, 'f300b7145bef3f01cc8159030f91fc343a0aa6f3', 'claude-opus-5-5[1m]', '03bfacaf-997d-49f6-b750-8cd85812c029', 19, 36, 6626, 783155, 42761, 0.63138300000000014, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (586, 725, '2026-10-13T10:29:02Z', '2026-10-13T10:29:39Z', 'done', NULL, 0, '144f5db6f7a28a9735517f8fd0e61a52e21dfb43', 'claude-opus-5-5[1m]', '49784496-0e7c-4c19-be86-2e10f450566c', 7, 14, 1875, 207323, 24233, 0.27288460000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (587, 543, '2026-10-13T10:29:39Z', '2026-10-13T10:37:36Z', 'done', NULL, 0, 'e9257b7f4a2cb56334cbed2be5f32e628f2f1b69', 'claude-opus-5-5[1m]', '338e2c88-ea3e-4f6f-99be-ae0517709cfb', 31, 58, 25111, 2400406, 100436, 1.7860211999999998, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

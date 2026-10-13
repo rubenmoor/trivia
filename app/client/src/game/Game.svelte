@@ -152,8 +152,8 @@
     return e ? errorText(e) : null;
   }
 
-  /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music. */
-  /** `apply` runs behind the black: a new game state that the old screen can't show (no question
+  /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music.
+   * `apply` runs behind the black: a new game state that the old screen can't show (no question
    * any more, a different `last`) must not land before the screen switches. */
   async function go(next: Screen, effect: Cue, apply?: () => void) {
     busy = true;
@@ -188,6 +188,7 @@
 
   /** A server action without taking its game yet (see `go`); undefined if it failed. */
   async function request(action: Parameters<typeof gameAction>[0], body?: GameActionBody) {
+    const was = busy;
     busy = true;
     try {
       const next = await gameAction(action, body);
@@ -198,7 +199,7 @@
       if (e instanceof GameError && e.supply) supply = e.supply;
       return undefined;
     } finally {
-      busy = false;
+      busy = was;
     }
   }
 
@@ -276,7 +277,7 @@
     busy = true;
     try {
       game = await gameAction("new", { player: chosen, ...choice });
-      await noteExhausted(choice, exhausted).catch(() => {}); // every start: it prunes too
+      await noteExhausted(choice, exhausted).catch((e) => console.warn("noteExhausted:", e)); // every start: it prunes too
       error = saveWarning();
       refused = null;
     } catch (e) {
@@ -287,7 +288,6 @@
     }
     greeting = game?.player ?? chosen;
     sfx("ready");
-    busy = true;
     await sleep(GREETING_MS);
     await go("level", "ready");
     greeting = null;
@@ -297,10 +297,14 @@
     if (!game || i >= game.options.length) return;
     sfx("pop");
     picked = i;
+    busy = true; // until the question is on screen
     setTimeout(() => sfx("tear"), TEAR_MS);
     const [ok] = await Promise.all([act("pick", { index: i }), sleep(PICK_MS)]);
     if (ok) await go("question", "swoosh");
-    else picked = null;
+    else {
+      picked = null;
+      busy = false;
+    }
   }
 
   async function answered(next: Game | null) {
@@ -319,22 +323,38 @@
 
   // Admin overlay ---------------------------------------------------------------------------
 
-  function openOverlay() {
-    overlayOpen = true;
-    sfx("menu-open");
+  function pauseMedia() {
     pausedMedia = [...document.querySelectorAll<HTMLMediaElement>("audio, video")].filter((m) => !m.paused);
     pausedMedia.forEach((m) => m.pause());
+  }
+
+  function resumeMedia() {
+    pausedMedia.forEach((m) => m.play().catch(() => {}));
+    pausedMedia = [];
+  }
+
+  /** Not during a transition: an action from the overlay would run a second `go` (the mouse button; keys wait anyway). */
+  function openOverlay() {
+    if (busy) return;
+    overlayOpen = true;
+    sfx("menu-open");
+    pauseMedia();
   }
 
   function closeOverlay() {
     overlayOpen = false;
     sfx("menu-close");
-    pausedMedia.forEach((m) => m.play().catch(() => {}));
+    resumeMedia();
+  }
+
+  /** An overlay action closes it; the screen changes, so the paused media stays paused. */
+  function leaveOverlay() {
+    overlayOpen = false;
     pausedMedia = [];
   }
 
   async function skip(everyone: boolean) {
-    overlayOpen = false;
+    leaveOverlay();
     const next = await request("skip", { everyone });
     if (next === undefined) return;
     const cards = newCards(next);
@@ -342,24 +362,21 @@
   }
 
   async function undo() {
-    overlayOpen = false;
-    pausedMedia = [];
+    leaveOverlay();
     const next = await request("undo");
     if (next !== undefined) await go("question", "rewind", () => (game = next));
   }
 
   /** «Cambiar pregunta» (MD-12): a new question on screen. */
   async function replace(seen: boolean) {
-    overlayOpen = false;
-    pausedMedia = [];
+    leaveOverlay();
     const next = await request("replace", { seen });
     if (next !== undefined) await go("question", "paper", () => (game = next));
   }
 
   /** «Saltar a nivel» (MD-12): the Level screen at the new level, then its table. */
   async function jumpLevel(level: number) {
-    overlayOpen = false;
-    pausedMedia = [];
+    leaveOverlay();
     const next = await request("level", { level });
     if (next !== undefined) await go("level", "whoosh", () => (game = next));
   }
@@ -376,8 +393,7 @@
       busy = false;
     }
     error = saveWarning();
-    overlayOpen = false;
-    pausedMedia = [];
+    leaveOverlay();
     const cards = newCards(next);
     await go(table(next), "paper", () => ((game = next), (fresh = cards)));
     return null;
@@ -395,10 +411,9 @@
 
   /** Abandon, then the same player's configure screen (D-88); without a player, Start. */
   async function restart() {
-    overlayOpen = false;
-    pausedMedia = [];
+    leaveOverlay();
     const player = game?.player ?? null;
-    await act("abandon");
+    if (!(await act("abandon"))) return;
     if (player === null) return toStart();
     await refresh();
     chosen = player;
@@ -408,17 +423,15 @@
 
   /** The flag dialog (decision 60); media pauses like under the overlay. */
   function openFlag() {
-    if (!flagTarget || flagOpen) return;
+    if (!flagTarget || flagOpen || busy) return;
     flagOpen = true;
     sfx("menu-open");
-    pausedMedia = [...document.querySelectorAll<HTMLMediaElement>("audio, video")].filter((m) => !m.paused);
-    pausedMedia.forEach((m) => m.pause());
+    pauseMedia();
   }
 
   function closeFlag() {
     flagOpen = false;
-    pausedMedia.forEach((m) => m.play().catch(() => {}));
-    pausedMedia = [];
+    resumeMedia();
   }
 
   /** Flag (or re-note, `note` "" = none) or unflag (null) the question for review (GM-5); errors show in the corner. */
@@ -493,12 +506,12 @@
     void steam.setPresence(level ? "#Level" : "", level ? { level: String(level), levels: String(levels) } : {});
   });
 
-  onMount(() => listen({ busy: () => busy, first: onclick }));
-  onMount(() => listenPads(onclick));
+  onMount(() => listen({ busy: () => busy, first: firstInput }));
+  onMount(() => listenPads(firstInput));
 
   /** The first click or key press unlocks audio and autoplay (04, "Start"). A pad press may not
    * count as user activation (plan 45), so every input resumes the context again. */
-  function onclick() {
+  function firstInput() {
     unlock();
     if (!unlocked) {
       unlocked = true;
@@ -537,7 +550,7 @@
     {#if effectsDemo}<EffectsDemo />{/if}
     <section class="start">
       <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
-      <p class="subtitle">{t("screen.start.subtitle", { n: levelsOf(game) })}</p>
+      <p class="subtitle">{t("screen.start.subtitle", { n: levels })}</p>
       <div class="buttons">
         {#if notice}
           <div class="notice glass">
@@ -575,8 +588,9 @@
         <h1 class="title big">{game.level} <span class="of">{t("screen.level.of", { n: levels })}</span></h1>
         {#if game.repeat}
           <p class="milestone again">{t("screen.level.again")}</p>
-        {:else if milestone(game.level, levels, game.id)}
-          <p class="milestone">{milestone(game.level, levels, game.id)}</p>
+        {:else}
+          {@const line = milestone(game.level, levels, game.id)}
+          {#if line}<p class="milestone">{line}</p>{/if}
         {/if}
         <button class="secondary hint" onclick={() => go(table(game), "paper")} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
       </div>
