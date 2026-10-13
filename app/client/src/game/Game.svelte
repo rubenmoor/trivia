@@ -1151,11 +1151,15 @@
     color: var(--amber);
     opacity: 0.7;
   }
+  /* Beside the flag and menu buttons, above the question card (B-18). */
   .corner {
     position: fixed;
-    top: calc(var(--safe-y) + 3 * var(--u));
-    right: var(--safe-x);
-    max-width: 40vw;
+    top: calc(var(--safe-y) * 0.5);
+    right: calc(var(--safe-x) * 0.5 + 7.6 * var(--u));
+    max-width: 55vw;
+    min-height: calc(3.2 * var(--u));
+    display: flex;
+    align-items: center;
     z-index: 35;
   }
   .black {

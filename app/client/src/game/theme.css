@@ -69,6 +69,11 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Long German compounds (LUI-5); not `es`: Chromium would hyphenate Spanish line ends too. */
+.game:lang(de) {
+  hyphens: auto;
+}
+
 /* Glass panels (VD-2) */
 .game .glass,
 .game .glass-strong,

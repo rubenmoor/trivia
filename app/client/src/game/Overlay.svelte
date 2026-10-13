@@ -261,6 +261,13 @@
   }
 
   $effect(() => pushScope({ name: "overlay", handle, modal: true, whileBusy: true }));
+
+  let menu = $state<HTMLElement>();
+  /** A menu taller than the screen scrolls (B-17): keep the selected row in view. */
+  $effect(() => {
+    if (selected === 0) menu?.scrollTo({ top: 0 });
+    else menu?.querySelector(".selected")?.scrollIntoView({ block: "nearest" });
+  });
 </script>
 
 {#snippet row(item: Item, i: number)}
@@ -322,7 +329,7 @@
 {/snippet}
 
 <div class="overlay" class:clear={creditsOpen}>
-  <div class="menu" class:hidden={creditsOpen}>
+  <div class="menu" class:hidden={creditsOpen} bind:this={menu}>
     <h2>{t("overlay.title")}</h2>
     <div class="columns">
       <div class="column">
@@ -403,6 +410,11 @@
     border-radius: calc(1.6 * var(--u));
     background: var(--night-700);
     box-shadow: 0 calc(1.5 * var(--u)) calc(4 * var(--u)) rgba(0, 0, 0, 0.6);
+    /* Taller than the screen (B-17): scrolls; focus keeps the selected item in view. */
+    max-height: calc(100vh - 2 * var(--u));
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--slate-600) transparent;
   }
   h2 {
     margin: 0 0 calc(0.6 * var(--u));
@@ -470,7 +482,7 @@
     grid-template-columns: 1fr calc(12 * var(--u)) calc(4.5 * var(--u));
   }
   .joker {
-    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(7 * var(--u));
+    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(2.4 * var(--u)) minmax(calc(7 * var(--u)), auto);
   }
   .lang {
     grid-template-columns: 1fr calc(2.4 * var(--u)) calc(14 * var(--u)) calc(2.4 * var(--u));
@@ -518,6 +530,7 @@
     color: var(--slate-400);
     font-weight: 600;
     text-align: right;
+    white-space: nowrap;
   }
   .readonly {
     grid-template-columns: 1fr auto;
