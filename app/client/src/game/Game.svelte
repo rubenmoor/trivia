@@ -9,7 +9,7 @@
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
   import { listen, pushScope, type Action } from "../lib/input.svelte";
-  import type { Game, JokerBudget, JokerEvent, Report, Supply } from "../lib/types";
+  import type { Game, GameMode, JokerBudget, JokerEvent, Report, Supply } from "../lib/types";
   import Choice from "./Choice.svelte";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
@@ -252,7 +252,7 @@
   }
 
   /** The Choice screen's «¡A jugar!»: start the game, greet, then the Level screen. */
-  async function startGame(choice: { age_group: string; bundles: string[] }) {
+  async function startGame(choice: { mode: GameMode; age_group: string; bundles: string[]; jokers?: JokerBudget }) {
     if (busy || chosen === null) return;
     busy = true;
     try {

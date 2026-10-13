@@ -14,14 +14,20 @@
 
 <script lang="ts">
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
-  // between Player and Level. Age group (1–4), exactly one base bundle and the other bundles (letter
-  // keys) of the new game's language; preset: the player's newest game, else the defaults.
+  // between Player and Level. Mode row (MD-7), age group (1–4); gamemaster mode: exactly one base bundle
+  // and the other bundles (letter keys) of the new game's language; «Solo o en grupo»: the language's
+  // default bundles and «Personalizar partida» (joker counts). Preset: `?mode=`, the player's newest game, else the defaults.
   import { onMount } from "svelte";
-  import { DEFAULT_AGE_GROUP, fetchChoice, fetchChoiceOptions, GameError, type ChoiceOptions } from "../lib/api";
+  import {
+    BUILT_MODES, DEFAULT_AGE_GROUP, fetchChoice, fetchChoiceOptions, fetchPlayerMode, GameError, STANDARD_JOKERS,
+    type ChoiceOptions,
+  } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { pushScope, type Keys } from "../lib/input.svelte";
-  import type { Supply } from "../lib/types";
+  import type { GameMode, JokerBudget, Supply } from "../lib/types";
+  import Customize from "./Customize.svelte";
+  import { TOKENS } from "./JokerTray.svelte";
   import Prompt from "./Prompt.svelte";
   import SupplyReport from "./SupplyReport.svelte";
 
@@ -41,13 +47,17 @@
     greeting: string | null;
     /** Why the last `new` was refused (supply, `base_bundle_count`, `bundle_not_offered`), or null. */
     refused: GameError | null;
-    onstart: (choice: { age_group: string; bundles: string[] }) => void;
+    onstart: (choice: { mode: GameMode; age_group: string; bundles: string[]; jokers?: JokerBudget }) => void;
     onback: () => void;
   } = $props();
 
   let options = $state<ChoiceOptions | null>(null);
   let group = $state(DEFAULT_AGE_GROUP);
   let bundles = $state<string[]>([]);
+  let mode = $state<GameMode>("gamemaster");
+  /** «Solo o en grupo»'s joker counts; a difference from the standard set makes the game customized. */
+  let jokers = $state<JokerBudget>({ ...STANDARD_JOKERS });
+  let customizing = $state(false);
   /** The supply of the current choice; null while unknown or refused. */
   let supply = $state<Supply | null>(null);
   /** Why the engine refuses the current choice (zero or two base bundles). */
@@ -62,8 +72,10 @@
 
   onMount(async () => {
     try {
-      const [opts, preset] = await Promise.all([fetchChoiceOptions(), fetchChoice({ player })]);
+      const [opts, preset, last] = await Promise.all([fetchChoiceOptions(), fetchChoice({ player }), fetchPlayerMode(player)]);
       options = opts;
+      const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
+      mode = launch && BUILT_MODES.includes(launch) ? launch : last;
       group = preset.choice.age_group ?? DEFAULT_AGE_GROUP;
       bundles = preset.choice.bundles;
       await check();
@@ -81,7 +93,7 @@
   async function check() {
     if (!options) return;
     const n = ++seq;
-    const wanted = [...bundles];
+    const wanted = active();
     const [mine, ...each] = await Promise.allSettled([
       fetchChoice({ age_group: group, bundles: wanted }),
       ...options.groups.map((g) => fetchChoice({ age_group: g.id, bundles: wanted })),
@@ -95,6 +107,19 @@
   function changed() {
     stale = true;
     check();
+  }
+
+  /** «Solo o en grupo» plays the language's default bundles (decision 38): the first base bundle plus every other one. */
+  function active(): string[] {
+    if (mode === "gamemaster" || !options) return [...bundles];
+    const base = options.bundles.find((b) => b.base);
+    return options.bundles.filter((b) => b === base || !b.base).map((b) => b.id);
+  }
+
+  function pickMode(m: GameMode) {
+    if (busy || m === mode) return;
+    mode = m;
+    changed();
   }
 
   function pickGroup(id: string) {
@@ -115,21 +140,39 @@
   const shownRefusal = $derived(refused && !stale ? refused : null);
 
   function start() {
-    if (ready && !busy) onstart({ age_group: group, bundles: [...bundles] });
+    if (!ready || busy) return;
+    if (mode === "gamemaster") onstart({ mode, age_group: group, bundles: [...bundles] });
+    else onstart({ mode, age_group: group, bundles: active(), ...(customized ? { jokers: { ...jokers } } : {}) });
   }
 
   const base = $derived(options?.bundles.filter((b) => b.base) ?? []);
   const others = $derived(options?.bundles.filter((b) => !b.base) ?? []);
-  const RESERVED = [t("flag.key"), t("screen.start.newKey"), t("screen.question.replayKey"), t("joker.hint.key")];
+  const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [
+    { id: "gamemaster", name: t("mode.gamemaster"), about: t("mode.gamemasterAbout"), key: t("mode.gamemasterKey").toLowerCase() },
+    { id: "solo", name: t("mode.solo"), about: t("mode.soloAbout"), key: t("mode.soloKey").toLowerCase() },
+  ];
+  const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id));
+  const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
+  const RESERVED = [
+    t("flag.key"), t("screen.start.newKey"), t("screen.question.replayKey"), t("joker.hint.key"), CUSTOMIZE_KEY, ...modes.map((m) => m.key),
+  ];
   const letters = $derived(bundleKeys(options?.bundles.map((b) => b.name) ?? [], RESERVED));
   const keyOf = (b: Bundle) => letters[options?.bundles.indexOf(b) ?? -1] ?? "";
-  const keys = $derived<Keys>(Object.fromEntries(letters.filter(Boolean).map((k) => [k, { type: "letter", key: k }])));
+  const letter = (key: string) => [key, { type: "letter", key }] as const;
+  const keys = $derived<Keys>(
+    Object.fromEntries([
+      ...modes.map((m) => letter(m.key)),
+      ...(mode === "gamemaster" ? letters.filter(Boolean).map(letter) : [letter(CUSTOMIZE_KEY)]),
+    ]),
+  );
+  const customized = $derived(TOKENS.some((tok) => jokers[tok.name] !== STANDARD_JOKERS[tok.name]));
 
   function ages([lo, hi]: readonly [number, number | null]) {
     return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
   }
 
-  // 1–4 pick a group, a bundle's letter selects or toggles it, Enter starts, Backspace goes back; Esc falls through to the overlay.
+  // A mode's letter picks it, 1–4 pick a group, a bundle's letter selects or toggles it (gamemaster mode), the
+  // customize letter opens the dialog (solo); Enter starts, Backspace goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "choice",
@@ -138,8 +181,10 @@
         return keys;
       },
       handle: (a) => {
-        if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
-        else if (a.type === "letter" && options?.bundles.some((b) => keyOf(b) === a.key))
+        if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
+        else if (a.type === "letter" && mode !== "gamemaster" && a.key === CUSTOMIZE_KEY) customizing = !busy;
+        else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
+        else if (a.type === "letter" && mode === "gamemaster" && options?.bundles.some((b) => keyOf(b) === a.key))
           toggle(options.bundles.find((b) => keyOf(b) === a.key)!);
         else if (a.type === "confirm") start();
         else if (a.type === "back") onback();
@@ -157,6 +202,28 @@
     <h1 class="title">{t("choice.titleOpen")}<span class="name">{player}</span>{t("choice.titleClose")}</h1>
 
     {#if options}
+      {#if modes.length > 1}
+        <p class="label heading" style:--i={0}>{t("mode.heading")}</p>
+        <div class="row" role="radiogroup">
+          {#each modes as m, i (m.id)}
+            <button
+              class="tile mode glass"
+              class:on={m.id === mode}
+              style:--i={i + 1}
+              role="radio"
+              aria-checked={m.id === mode}
+              onclick={() => pickMode(m.id)}
+              disabled={busy}
+              data-focus-id="mode-{m.id}"
+            >
+              <Prompt action={{ type: "letter", key: m.key }} hold />
+              <span class="name-text">{m.name}</span>
+              <span class="label">{m.about}</span>
+            </button>
+          {/each}
+        </div>
+      {/if}
+
       <p class="label heading" style:--i={0}>{t("choice.groups")}</p>
       <div class="row" role="radiogroup">
         {#each options.groups as g, i (g.id)}
@@ -179,17 +246,26 @@
         {/each}
       </div>
 
-      <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
-      <div class="row" role="radiogroup">
-        {#each base as b, i (b.id)}
-          {@render bundle(b, "radio", 6 + i)}
-        {/each}
-      </div>
-      {#if others.length}
-        <div class="row">
-          {#each others as b, i (b.id)}
-            {@render bundle(b, "switch", 6 + base.length + i)}
+      {#if mode === "gamemaster"}
+        <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
+        <div class="row" role="radiogroup">
+          {#each base as b, i (b.id)}
+            {@render bundle(b, "radio", 6 + i)}
           {/each}
+        </div>
+        {#if others.length}
+          <div class="row">
+            {#each others as b, i (b.id)}
+              {@render bundle(b, "switch", 6 + base.length + i)}
+            {/each}
+          </div>
+        {/if}
+      {:else}
+        <div class="row">
+          <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
+            {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
+          </button>
+          <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
         </div>
       {/if}
 
@@ -212,6 +288,10 @@
     {#if error}<p class="error">{error}</p>{/if}
   {/if}
 </section>
+
+{#if customizing}
+  <Customize {jokers} standard={STANDARD_JOKERS} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />
+{/if}
 
 {#snippet bundle(b: Bundle, role: "radio" | "switch", i: number)}
   {@const on = bundles.includes(b.id)}
@@ -295,6 +375,16 @@
   }
   .tile.short:not(.on) {
     opacity: 0.55;
+  }
+  .mode {
+    min-width: calc(26 * var(--u));
+  }
+  .row:has(.customize) {
+    align-items: center;
+  }
+  .row .customize {
+    padding: calc(0.5 * var(--u)) calc(1.2 * var(--u));
+    font-size: calc(1.1 * var(--u));
   }
   .bundle {
     max-width: calc(34 * var(--u));

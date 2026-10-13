@@ -159,6 +159,27 @@ const es = {
     /** A custom difficulty in place of the group (D-88). */
     difficulty: "Dificultad {start}–{end}",
   },
+  /** The mode row on the Choice screen (MD-7); names English first in code, Spanish per 15a. */
+  mode: {
+    heading: "Modo",
+    gamemaster: "Modo anfitrión",
+    gamemasterAbout: "El anfitrión lo maneja todo",
+    gamemasterKey: "A",
+    solo: "Solo o en grupo",
+    soloAbout: "Sin trucos, comodines estándar",
+    soloKey: "G",
+  },
+  /** «Personalizar partida» in «Solo o en grupo» (MD-7): the joker counts. */
+  customize: {
+    open: "Personalizar partida",
+    openKey: "P",
+    title: "Personalizar partida",
+    body: "Una partida personalizada no gana logros.",
+    standard: "Comodines estándar",
+    custom: "Comodines personalizados",
+    reset: "Estándar",
+    done: "Listo",
+  },
   screen: {
     loading: "Cargando…",
     noData: "Esta pantalla no tiene datos.",

@@ -313,12 +313,23 @@ export interface ChoiceArgs extends ChoiceInput {
   jokers?: unknown;
 }
 
+function newestGame(save: SaveData, player?: unknown): GameRow | null {
+  const pid = player ? playerId(save, cleanName(player)) : null;
+  return pid === null ? null
+    : save.games.filter((g) => g.player_id === pid).reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
+}
+
+/** The mode of the player's newest game if built, else gamemaster (MD-7). */
+export function playerMode(save: SaveData, player?: unknown): GameMode {
+  const row = newestGame(save, player);
+  const mode = row ? gameMode(withDefaults(structuredClone(row.state))) : "gamemaster";
+  return BUILT_MODES.includes(mode) ? mode : "gamemaster";
+}
+
 /** The choice of the player's newest game (its budget as now), else the defaults with the first base
  * bundle only (pm decision 33). */
 export function playerChoice(save: SaveData, data: EngineData, player?: unknown): Choice {
-  const pid = player ? playerId(save, cleanName(player)) : null;
-  const row = pid === null ? null
-    : save.games.filter((g) => g.player_id === pid).reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
+  const row = newestGame(save, player);
   if (row) return gameChoice(withDefaults(structuredClone(row.state)), data);
   const d = defaultChoice(data);
   return { ...d, bundles: d.bundles.filter((id) => data.bundles.find((b) => b.id === id)?.kind === "base") };

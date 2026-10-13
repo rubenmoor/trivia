@@ -1,5 +1,5 @@
 import * as engine from "../engine/api.ts";
-import { gameChoice } from "../engine/game.ts";
+import { gameChoice, playerMode } from "../engine/game.ts";
 import { bundlesFor } from "../engine/pool.ts";
 import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
 import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
@@ -141,6 +141,11 @@ export async function fetchChoice(body: { player?: string; age_group?: string; b
   return read((save, data) => engine.choice(save, data, { ...body }), "next");
 }
 
+/** The mode of the player's newest game, else gamemaster (MD-7). */
+export async function fetchPlayerMode(player: string): Promise<GameMode> {
+  return read((save) => ({ save, status: 200, body: playerMode(save, player) }), "next");
+}
+
 /** Play a joker (09-jokers.md): the game afterwards plus what happened, for the animation. */
 export async function playJoker(body: {
   joker: JokerName;
@@ -195,4 +200,4 @@ export async function setLanguage(language: Language): Promise<Language> {
 }
 
 /** The age group of a choice without one (plan 27). */
-export { DEFAULT_AGE_GROUP } from "../engine/game.ts";
+export { BUILT_MODES, DEFAULT_AGE_GROUP, STANDARD_JOKERS } from "../engine/game.ts";
