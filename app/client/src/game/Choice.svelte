@@ -1,7 +1,7 @@
 <script module lang="ts">
   /** One key per bundle (plan 29): the first letter of its name, accents stripped, not taken by an
    * earlier bundle nor in `reserved`, else the name's next letter; "" if none is left. */
-  export function bundleKeys(names: string[], reserved: string[]): string[] {
+  function bundleKeys(names: string[], reserved: string[]): string[] {
     const taken = new Set(reserved.map((k) => k.toLowerCase()));
     return names.map((name) => {
       const letters = [...name.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase()].filter((c) => /\p{L}/u.test(c));
@@ -31,6 +31,7 @@
   import BundleSelector, { toggled, type Bundle } from "./BundleSelector.svelte";
   import Customize from "./Customize.svelte";
   import { TOKENS } from "./JokerTray.svelte";
+  import { DEFAULT_LEVELS } from "./levels";
   import Prompt from "./Prompt.svelte";
   import SupplyNotice, { worthShowing } from "./SupplyNotice.svelte";
   import SupplyReport from "./SupplyReport.svelte";
@@ -64,7 +65,7 @@
   /** Gamemaster mode's fields (D-88); `custom`: the difficulty instead of the group. */
   let custom = $state(false);
   let difficulty = $state<Difficulty>({ start: 1, end: DIFFICULTY_MAX });
-  let levels = $state(12);
+  let levels = $state(DEFAULT_LEVELS);
   let cards = $state(CARDS_MAX);
   let video = $state(true);
   let audio = $state(true);

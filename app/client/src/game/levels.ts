@@ -1,7 +1,8 @@
 // Levels per game (D-88, `settings.levels` 1–20): screens tuned for 12 map a level onto that scale.
+import { LEVELS } from "../engine/selection";
 import type { Game } from "../lib/types";
 
-export const DEFAULT_LEVELS = 12;
+export const DEFAULT_LEVELS = LEVELS;
 
 export const levelsOf = (game: Game | null): number => game?.settings.levels ?? DEFAULT_LEVELS;
 

@@ -11554,7 +11554,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - All four files listed in `## Part 5` (no-findings rows included), every finding with a status.
 - Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', '2026-10-13T11:17:23Z', 517);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (553, 77, 'Review screen files added after the inventory', 'work', 'open', NULL, NULL, 'Task 11 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (553, 77, 'Review screen files added after the inventory', 'work', 'done', NULL, '2026-10-13, code-review.md, app/client/src/game/Choice.svelte, app/client/src/game/levels.ts', 'Task 11 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
 - `pm queue` + grep open task bodies for the new files: a file an open task still changes gets findings only, no refactor (`superseded by task N`).
@@ -11578,7 +11578,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every file in `app/client/src/game/` at this time listed in `## Part 5` and in the inventory, every finding with a status; every part 1 row `handed to part 5` has its final status in `## Part 5` (check rows left by tasks 1–10).
-- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', NULL, 517);
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:50Z', '2026-10-13T11:19:48Z', 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (554, 78, 'Review window, protocol and bridge: main.mjs, preload.cjs, resolve.mjs', 'work', 'open', NULL, NULL, 'Task 1 of `plan 78: Desktop shell and packaging review (code review part 6)`. Needs `code-review.md` with `## Part 6` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part" (report status `fixed (task N)`, linter evidence tags); plan 78 "Rules for this plan" (URLs, responses, error bodies, IPC names/codes unchanged; security only tightened; no `npm install`).
 
 ## First
@@ -14170,6 +14170,23 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Walk the gamemaster menu (Esc during a question in gamemaster mode) on `trivia` with a temp `TRIVIA_STATE`; `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.
 - Update the `## Part 5` row in `code-review.md` (status `fixed (task N)`).', '2026-10-13T10:50:40Z', NULL, 545);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (728, 77, 'Review the remaining screen files: LetterPicker, letters.ts, GameSettings, Credits, FlagDialog, LocalProgress, EffectsDemo', 'work', 'open', NULL, NULL, 'Split from `task 553: Review screen files added after the inventory` (the new files were ≈2000 lines; 553 reviewed the Choice group: `Choice.svelte`, `Customize.svelte`, `BundleSelector.svelte`, `SupplyNotice.svelte`, `SupplyReport.svelte`, `levels.ts`).
+
+## What
+- Review, with plan 77''s focus checklist and ground rules (plan 72), the `app/client/src/game/` files no part 5 task has reviewed yet (≈940 lines):
+  - `LetterPicker.svelte` (164) + `letters.ts` (13; part 1 row `MAX_NAME` already closed by task 547)
+  - `GameSettings.svelte` (218; overlay''s «Dificultad y paquetes», reuses `BundleSelector`; decision 33, decision 34)
+  - `Credits.svelte` (231)
+  - `FlagDialog.svelte` (153; decision 60)
+  - `LocalProgress.svelte` (95), `EffectsDemo.svelte` (67; `/?efectos` dev aid)
+- First: `pm queue` + grep open task bodies for these files (findings only if an open task still changes one); `pm decision list --answered --grep <term>` before a fix.
+- Duplication (dialog/backdrop/`.step` styles, `rgba` copies of theme colours, `@keyframes arrive`): log as handed to part 10 (task 584), don''t merge.
+
+## Report
+- Rows in `## Part 5` of `code-review.md` (no-findings rows too), status per plan 72 format; the inventory row for `app/client/src/game/` names this task.
+
+## Check
+- Same as plan 77: throw-away script for pure logic, walk Svelte fixes on `trivia` + `npm run dev -w app/client` with a temp `TRIVIA_STATE`; `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.', '2026-10-13T11:18:50Z', NULL, 553);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15881,6 +15898,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (594, 550, '2026-10-13T11:09:07Z', '2026-10-13T11:12:39Z', 'done', NULL, 0, 'd255540c3ce2b8c5224d15065a42e1001d6c11b4', 'claude-opus-5-5[1m]', 'c37609bd-6699-4a0e-9fc9-e53e8703f0f0', 33, 64, 13587, 1991544, 69362, 1.2252008, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (595, 551, '2026-10-13T11:12:39Z', '2026-10-13T11:15:05Z', 'done', NULL, 0, '248c4ae206beb379b5f97cda68c368cbefd1464d', 'claude-opus-5-5[1m]', 'd420568a-a76f-44f1-b2b1-183f3a226f8b', 24, 46, 9736, 1155115, 54954, 0.865559, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (596, 552, '2026-10-13T11:15:06Z', '2026-10-13T11:17:33Z', 'done', NULL, 0, 'b99c5965a70714954288a3c5309e8bf1a1f3d70a', 'claude-opus-5-5[1m]', 'c63a5a16-c4fc-47eb-b94b-1d31680db1be', 24, 46, 12356, 1262558, 59165, 0.9731356, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (597, 553, '2026-10-13T11:17:33Z', '2026-10-13T11:19:56Z', 'done', NULL, 0, '98611217f879da206a9521f8c45a0af756cd26d1', 'claude-opus-5-5[1m]', 'bdcadd3d-c633-41bd-b48f-b60727e52399', 22, 32, 11512, 1054818, 81451, 1.0929396, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
