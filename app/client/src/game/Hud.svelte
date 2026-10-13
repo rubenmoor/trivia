@@ -2,8 +2,8 @@
   // The HUD (plans/10-visual-design.md, "Layout"): the level with a mini tower of one tick per level, and the
   // player's name (D-28). Shown on Select and Question, so the family always sees what's at stake;
   // on Level the player's name only (`level` null), the level is the screen itself.
-  import { t } from "../lib/i18n";
-  import { DEFAULT_LEVELS } from "./levels";
+  import { t } from "../lib/i18n.ts";
+  import { DEFAULT_LEVELS } from "./levels.ts";
 
   let { level, levels = DEFAULT_LEVELS, player }: { level: number | null; levels?: number; player: string | null } = $props();
 </script>

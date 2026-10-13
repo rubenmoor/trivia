@@ -1,6 +1,6 @@
 // The difficulty lines of the configure screen and the gamemaster's settings: age groups, then «Custom».
-import { DIFFICULTY_MAX, type ChoiceOptions } from "../lib/api";
-import type { Difficulty } from "../lib/types";
+import { DIFFICULTY_MAX, type ChoiceOptions } from "../lib/api.ts";
+import type { Difficulty } from "../lib/types.ts";
 
 export type DifficultyPick<G extends string | null> = { group: G; custom: boolean; difficulty: Difficulty };
 

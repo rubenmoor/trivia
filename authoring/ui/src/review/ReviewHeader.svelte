@@ -1,8 +1,8 @@
 <script lang="ts">
   // Top line of the review page: progress, counts, the question's meta, links and locales.
-  import type { Bundle, Names, Question } from "../lib/types";
-  import { LOCALES } from "$app/lib/data";
-  import { localeHref } from "./url";
+  import type { Bundle, Names, Question } from "../lib/types.ts";
+  import { LOCALES } from "$app/lib/data.ts";
+  import { localeHref } from "./url.ts";
 
   let { current, index, total, singleId, locale, downloads, spotCount, agreed, counts, names, bundles, difficultyInput }: {
     current: Question;

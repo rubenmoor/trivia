@@ -1,6 +1,6 @@
 // Spain's override of `es` (plans/15a-ui-translation.md, LUI-5, D-78): only the leaves that differ,
 // merged over `es` at boot. «vosotros» for the players, «vídeo», Peninsular wording.
-import type { Override } from "./es";
+import type { Override } from "./es.ts";
 
 export const esES = {
   overlay: {

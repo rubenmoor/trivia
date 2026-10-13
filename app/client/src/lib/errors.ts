@@ -1,7 +1,7 @@
 // Server error codes → catalog texts `error.<code>` (D-57, plan 22).
-import { GameError, messageOf } from "./http";
-import { has, t, type Params } from "./i18n";
-import type { ErrorInfo } from "./types";
+import { GameError, messageOf } from "./http.ts";
+import { has, t, type Params } from "./i18n.ts";
+import type { ErrorInfo } from "./types.ts";
 
 /** Catalog text of a code, or null if it has none (internal code). */
 function text({ code, params }: ErrorInfo): string | null {

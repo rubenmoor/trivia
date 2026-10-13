@@ -3,13 +3,13 @@
   // Question screen, read-only and smaller on Level and Select. A token is either playable or
   // disabled right now, with the engine's reason. With a budget (13-game-modes.md, MD-3; the standard
   // set by default, D-88) a limited token carries a badge with the uses left; ∞ has none.
-  import type { JokerBudget, JokerName, Jokers } from "../lib/types";
-  import { t } from "../lib/i18n";
-  import { reasonText } from "../lib/errors";
+  import type { JokerBudget, JokerName, Jokers } from "../lib/types.ts";
+  import { t } from "../lib/i18n.ts";
+  import { reasonText } from "../lib/errors.ts";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
-  import { TOKENS } from "./jokers";
-  import { lastDevice } from "../lib/input.svelte";
+  import { TOKENS } from "./jokers.ts";
+  import { lastDevice } from "../lib/input.svelte.ts";
 
   let {
     jokers = null,

@@ -1,10 +1,10 @@
 // UI strings from a typed catalog (plans/15a-ui-translation.md, LUI-1, D-70). No library.
-import { de } from "../locales/de";
-import { en } from "../locales/en";
-import es, { type Catalog, type Override, type Plural, type TextKey, type VariantsKey } from "../locales/es";
-import { esES } from "../locales/es-ES";
+import { de } from "../locales/de.ts";
+import { en } from "../locales/en.ts";
+import es, { type Catalog, type Override, type Plural, type TextKey, type VariantsKey } from "../locales/es.ts";
+import { esES } from "../locales/es-ES.ts";
 
-export type { Key } from "../locales/es";
+export type { Key } from "../locales/es.ts";
 export type Params = Record<string, string | number>;
 
 const isPlural = (v: unknown): v is Plural => !!v && typeof v === "object" && !Array.isArray(v) && "other" in v;
@@ -50,7 +50,7 @@ let plurals = new Intl.PluralRules(real(lang));
 /** main.ts, before mounting: the save's UI language. */
 export async function initLang(saved?: string): Promise<void> {
   lang = pickLang(saved);
-  if (import.meta.env?.DEV && lang === "xx" && !CATALOGS.xx) CATALOGS.xx = (await import("../locales/xx")).pseudo(es);
+  if (import.meta.env?.DEV && lang === "xx" && !CATALOGS.xx) CATALOGS.xx = (await import("../locales/xx.ts")).pseudo(es);
   catalog = CATALOGS[lang];
   numbers = new Intl.NumberFormat(real(lang));
   plurals = new Intl.PluralRules(real(lang));

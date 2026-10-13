@@ -3,7 +3,7 @@
   // with height (stone → brick → marble → sapphire → gold); the newest block drops in and settles;
   // a full tower wears the crown; on Wrong the blocks fall away one by one.
   import Icon from "./Icon.svelte";
-  import { DEFAULT_LEVELS, onTwelve } from "./levels";
+  import { DEFAULT_LEVELS, onTwelve } from "./levels.ts";
 
   let {
     filled,

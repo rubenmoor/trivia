@@ -1,10 +1,10 @@
 // Mirrors the question schema of authoring/data/questions.json (plans/02-question-pool.md).
 // The play fields come from the game's types (app/client/src/lib/types.ts, D-35).
-import type { AgeGroup, Bundle as PoolBundle } from "$app/engine/pool";
-import type { Background as PlayBackground, Media as PlayMedia, Status } from "$app/lib/types";
+import type { AgeGroup, Bundle as PoolBundle } from "$app/engine/pool.ts";
+import type { Background as PlayBackground, Media as PlayMedia, Status } from "$app/lib/types.ts";
 
-export type { Category, Status } from "$app/lib/types";
-export type { Names } from "$app/engine/state";
+export type { Category, Status } from "$app/lib/types.ts";
+export type { Names } from "$app/engine/state.ts";
 export type Decision = Exclude<Status, "draft">;
 
 /** A picked file's licence record (plan 26); missing on slots picked before it. */

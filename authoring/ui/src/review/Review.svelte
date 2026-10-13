@@ -1,7 +1,7 @@
 <script lang="ts">
   // Review tool (plans/08-review-tool.md): one question per screen, single-key decisions.
   import { onMount } from "svelte";
-  import { messageOf } from "$app/lib/http";
+  import { messageOf } from "$app/lib/http.ts";
   import {
     fetchBundles,
     fetchNames,
@@ -15,8 +15,8 @@
     setBundle,
     setDifficulty,
     setTranslatable,
-  } from "../lib/api";
-  import type { Bundle, Decision, Names, Question, Review, Slot, SpotCheckItem } from "../lib/types";
+  } from "../lib/api.ts";
+  import type { Bundle, Decision, Names, Question, Review, Slot, SpotCheckItem } from "../lib/types.ts";
   import Nav from "../lib/Nav.svelte";
   import FeedbackModal from "./FeedbackModal.svelte";
   import MediaPanel from "./MediaPanel.svelte";
@@ -25,7 +25,7 @@
   import RevisionPanel from "./RevisionPanel.svelte";
   import SearchModal from "./SearchModal.svelte";
   import SourcePanel from "./SourcePanel.svelte";
-  import { reviewUrl } from "./url";
+  import { reviewUrl } from "./url.ts";
 
   const { locale, checkGroup, sampleMode, filter, licenceMode, filterText, singleId, startId, debugKeys } = reviewUrl();
   let lastKey = $state("");

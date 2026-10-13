@@ -3,10 +3,10 @@
   // for the gamemaster, the batches, game readiness and the approved pool at a glance. Read-only:
   // every number links to the page or review queue that works it off.
   import { onMount } from "svelte";
-  import { messageOf } from "$app/lib/http";
-  import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
+  import { messageOf } from "$app/lib/http.ts";
+  import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api.ts";
   import Nav from "../lib/Nav.svelte";
-  import type { AgeGroups, Category, Overview, Question } from "../lib/types";
+  import type { AgeGroups, Category, Overview, Question } from "../lib/types.ts";
   import CategoryChart from "../stats/CategoryChart.svelte";
   import DifficultyChart from "../stats/DifficultyChart.svelte";
   import SparseList from "../stats/SparseList.svelte";

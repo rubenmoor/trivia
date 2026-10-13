@@ -1,10 +1,10 @@
 <script lang="ts">
   // «Personalizar partida» (MD-7): joker counts for a «Solo o en grupo» game, 0–9 or ∞ like the
   // overlay's budget (MD-4). ↑/↓ move, ←/→ or −/+ change a count, Enter/Esc/⌫ close.
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
-  import type { JokerBudget, JokerName } from "../lib/types";
-  import { stepUses, TOKENS } from "./jokers";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import type { JokerBudget, JokerName } from "../lib/types.ts";
+  import { stepUses, TOKENS } from "./jokers.ts";
   import Prompt from "./Prompt.svelte";
 
   let {

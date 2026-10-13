@@ -1,7 +1,7 @@
 // The letter picker's typing (plan 46, SW-4): auto-capital after start, space or `-`; the field's 30 chars.
 // A note (flag dialog): capital only at a sentence start, up to 500 chars.
-import { MAX_NAME } from "../engine/game";
-import { MAX_NOTE } from "../engine/save";
+import { MAX_NAME } from "../engine/game.ts";
+import { MAX_NOTE } from "../engine/save.ts";
 
 export { MAX_NAME, MAX_NOTE };
 

@@ -1,6 +1,6 @@
 // Spatial focus (plans/14-input.md, IN-3; plan 44): arrows move DOM focus inside the top scope's root,
 // the ring shows on `[data-nav]`, and confirm presses only a control focused by arrows or Tab.
-import type { Dir } from "./input.svelte";
+import type { Dir } from "./input.svelte.ts";
 
 export type Rect = { left: number; top: number; width: number; height: number };
 

@@ -1,5 +1,5 @@
 // The Electron shell's bridge (plan 54, SW-2): app/desktop/preload.cjs. Null in the browser.
-import type { PadStyle } from "./gamepad";
+import type { PadStyle } from "./gamepad.ts";
 
 export interface DesktopBridge {
   readonly desktop: true;

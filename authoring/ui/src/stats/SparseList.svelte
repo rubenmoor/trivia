@@ -2,8 +2,8 @@
   // Sparse areas of the approved pool, worst first (RV-20): categories with fewer questions
   // than a game asks, and subcategories a player sees whole in a game or two. A subcategory the
   // next `qgen batch` (base) will pick is marked (batches.subcategories).
-  import type { Category, Names, Question } from "../lib/types";
-  import { breakdown, reviewLink, SPARSE_CATEGORY, SPARSE_SUBCATEGORY } from "./breakdown";
+  import type { Category, Names, Question } from "../lib/types.ts";
+  import { breakdown, reviewLink, SPARSE_CATEGORY, SPARSE_SUBCATEGORY } from "./breakdown.ts";
   import "./chart.css";
 
   let {

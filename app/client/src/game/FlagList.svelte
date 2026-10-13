@@ -1,9 +1,9 @@
 <script lang="ts">
   // «Preguntas marcadas» (GM-5, decision 60): the flagged questions with their notes, newest first, over the overlay. Offline;
   // «Copiar» puts plain text on the clipboard, else shows it selectable. ↑/↓ move, Esc/⌫ go back.
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
-  import type { Flagged } from "../lib/types";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import type { Flagged } from "../lib/types.ts";
   import Prompt from "./Prompt.svelte";
 
   let { flags, onclose }: { flags: Flagged[]; onclose: () => void } = $props();

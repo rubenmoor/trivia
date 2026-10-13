@@ -1,5 +1,5 @@
 <script lang="ts" module>
-  import type { Decision } from "../lib/types";
+  import type { Decision } from "../lib/types.ts";
 
   /** Spot checks compare accept vs. not (plan 16). */
   export const accepts = (d: Decision) => d === "approved";
@@ -7,7 +7,7 @@
 
 <script lang="ts">
   // Banners above the question: spot-check reveal, stale, doesn't travel, previous review, audit.
-  import type { Question, SpotCheckItem } from "../lib/types";
+  import type { Question, SpotCheckItem } from "../lib/types.ts";
 
   // blind: sample mode before the human's decision, nothing of the LLM review or audit (plan 16).
   let { current, spot, blind, onTravels }: {

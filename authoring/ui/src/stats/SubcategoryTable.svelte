@@ -1,8 +1,8 @@
 <script lang="ts">
   // Every subcategory with its approved questions, grouped by broad category in
   // app/data/categories.json order (RV-19). Each one links to its questions in the review tool.
-  import type { Category, Names, Question } from "../lib/types";
-  import { breakdown, reviewLink, SPARSE_SUBCATEGORY } from "./breakdown";
+  import type { Category, Names, Question } from "../lib/types.ts";
+  import { breakdown, reviewLink, SPARSE_SUBCATEGORY } from "./breakdown.ts";
   import "./chart.css";
 
   let {

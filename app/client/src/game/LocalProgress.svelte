@@ -1,10 +1,10 @@
 <script lang="ts">
   // First Steam start (plan 87): this computer's save without Steam, adopted or not; never merged.
   // Enter takes the local progress, the other button starts from scratch.
-  import { adoptLocal, type LocalOffer } from "../lib/engine";
-  import { errorText } from "../lib/errors";
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
+  import { adoptLocal, type LocalOffer } from "../lib/engine.ts";
+  import { errorText } from "../lib/errors.ts";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import Prompt from "./Prompt.svelte";
 
   let { offer, onfresh }: { offer: LocalOffer; onfresh: () => void } = $props();

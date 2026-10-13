@@ -76,6 +76,7 @@ HARD_CRITERIA = ["correct", "unambiguous", "no_giveaway", "no_overlap"]
 SOFT_CRITERIA = ["distractors", "age_fit", "fun", "description"]
 FACT_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact"]
 QUESTION_FIELDS = ["difficulty", "description", *FACT_FIELDS]  # a question's text, in prompt order
+REVIEW_URL = "http://127.0.0.1:8001/review"  # trivia-authoring on its default port, in reports
 
 
 # --- helpers ------------------------------------------------------------------
@@ -1837,7 +1838,7 @@ def qc_section(batch, pool=None):
             it, rv = s["items"][i], (by_id.get(i) or {}).get("review") or {}
             fb = rv.get("feedback") if rv.get("reviewer") == "human" else None
             lines.append(f"- **{i}** LLM {it['llm']} → human {it['human']}, audit {it.get('audit') or '–'}"
-                         f"{': ' + fb if fb else ''} (http://127.0.0.1:8001/review/{i})")
+                         f"{': ' + fb if fb else ''} ({REVIEW_URL}/{i})")
         lines.append("")
     if not groups:
         lines += ["None.", ""]
@@ -2989,7 +2990,7 @@ def audit_section(run):
     lines += [f"- {'Slice' if back else 'Sample'}: {len(found)} audited of {len(dec) if back else len(audit_sample(run))}; "
               f"{len(c)} Claude calls, about ${sum(c):.2f}",
               "", "Major findings on approved questions:", ""]
-    lines += [f"- **{i}**: {', '.join(a['problems']) or 'other'} — {a['notes']} (http://127.0.0.1:8001/review/{i})"
+    lines += [f"- **{i}**: {', '.join(a['problems']) or 'other'} — {a['notes']} ({REVIEW_URL}/{i})"
               for i, a in found.items() if is_major(a) and dec.get(i) == "approved"] or ["None."]
     return lines + [""]
 
@@ -3347,7 +3348,7 @@ def write_translate_report(run):
              f"{h['not travelling'] - h['not travelling confirmed']} translated again next run)",
              f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price; "
              f"{usd(h['$ per approved'])} per approved translation (without the audit)",
-             f"- Spot check by a native speaker: http://127.0.0.1:8001/review?batch={run}&locale={locale}&sample=1",
+             f"- Spot check by a native speaker: {REVIEW_URL}?batch={run}&locale={locale}&sample=1",
              "", *health.translation_health_section(run), *audit_section(run), *qc_section(run), "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}"
               for q in work] or ["None."]

@@ -2,7 +2,7 @@
 // Game.svelte sets `swap.active` just before the new question mounts; the transitions below only
 // run then, so ordinary screen changes (behind the fade to black) stay instant.
 import { cubicIn, cubicOut } from "svelte/easing";
-import { FLIP_MS, REDUCED_FADE_MS, reducedMotion } from "./timing";
+import { FLIP_MS, REDUCED_FADE_MS, reducedMotion } from "./timing.ts";
 
 export const swap = { active: false };
 

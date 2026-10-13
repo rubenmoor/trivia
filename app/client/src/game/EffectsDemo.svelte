@@ -1,6 +1,6 @@
 <script lang="ts">
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
-  import { effects, music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte";
+  import { effects, music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
 
   const list = effects();
   const loops: Track[] = ["normal", "question", "submitted"];

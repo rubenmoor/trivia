@@ -1,5 +1,5 @@
 <script module lang="ts">
-  import type { Credits } from "../lib/types";
+  import type { Credits } from "../lib/types.ts";
 
   /** Loaded on first open, kept for the session; a failure tries again next time. */
   let cached: Promise<Credits> | null = null;
@@ -14,9 +14,9 @@
 <script lang="ts">
   // Credits (PUB-5, plan 47): credits.json from the build, over the overlay. Read-only, no focusable
   // rows: ↑/↓ scroll ~70 %, ←/→ jump between sections, Esc/⌫ go back.
-  import { buildInfo } from "../lib/build";
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope, type Action } from "../lib/input.svelte";
+  import { buildInfo } from "../lib/build.ts";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope, type Action } from "../lib/input.svelte.ts";
   import Prompt from "./Prompt.svelte";
 
   let { onclose }: { onclose: () => void } = $props();

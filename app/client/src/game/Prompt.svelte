@@ -1,9 +1,9 @@
 <script lang="ts">
   // A key prompt (plans/14-input.md, IN-5): the key with keyboard or mouse, the pad button's glyph
   // with a pad (from the pad map incl. the scopes' overrides); nothing if the pad has no binding.
-  import { BUTTONS, padButton } from "../lib/gamepad";
-  import { padStyle } from "../lib/gamepad.svelte";
-  import { keyLabel, lastDevice, padMap, scopes, type Intent } from "../lib/input.svelte";
+  import { BUTTONS, padButton } from "../lib/gamepad.ts";
+  import { padStyle } from "../lib/gamepad.svelte.ts";
+  import { keyLabel, lastDevice, padMap, scopes, type Intent } from "../lib/input.svelte.ts";
   import Glyph from "./Glyph.svelte";
 
   /** Intents without fields, named by their type. */

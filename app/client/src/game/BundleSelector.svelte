@@ -1,5 +1,5 @@
 <script module lang="ts">
-  import type { ChoiceOptions } from "../lib/api";
+  import type { ChoiceOptions } from "../lib/api.ts";
 
   export type Bundle = ChoiceOptions["bundles"][number];
 
@@ -13,7 +13,7 @@
 <script lang="ts">
   // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
   // exactly one base bundle (D-85). Configure screen; the gamemaster menu reuses it (MD-12).
-  import { t } from "../lib/i18n";
+  import { t } from "../lib/i18n.ts";
   import Prompt from "./Prompt.svelte";
 
   let {

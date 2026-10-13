@@ -1,7 +1,7 @@
 <script lang="ts">
   // The Select screen's cards: paper envelopes on the night table (VD-5, UI-11); the picked one tears open.
-  import { t } from "../lib/i18n";
-  import { questionLocale } from "../lib/names.svelte";
+  import { t } from "../lib/i18n.ts";
+  import { questionLocale } from "../lib/names.svelte.ts";
 
   let {
     options,

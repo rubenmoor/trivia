@@ -1,6 +1,6 @@
 // Dev-only pseudo-locale (plans/15a-ui-translation.md, LUI-2): `es` with look-alike letters,
 // ~40 % `~` padding and `[ ]` brackets, so missed literals and overflow show. `{param}` kept.
-import type { Catalog } from "./es";
+import type { Catalog } from "./es.ts";
 
 /** Left as in `es`: the shortcut letters, so key handling still works (LUI-4), and the picker's keys. */
 const EXEMPT = [/^joker\.\w+\.key$/, /^flag\.key$/, /Key$/, /^picker\.(letters|marks)$/];

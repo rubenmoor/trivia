@@ -2,9 +2,9 @@
   // «Bájale»'s difficulty dial (plans/09-jokers.md, "Bájale", JK-7): a staircase in the corner
   // that ticks down from the old difficulty to the new one, then fades away.
   import { onMount } from "svelte";
-  import { DIFFICULTY_MAX } from "../engine/choice";
-  import { t } from "../lib/i18n";
-  import { DIAL_HOLD_MS, DIAL_START_MS, DIAL_STEP_MS } from "./timing";
+  import { DIFFICULTY_MAX } from "../engine/choice.ts";
+  import { t } from "../lib/i18n.ts";
+  import { DIAL_HOLD_MS, DIAL_START_MS, DIAL_STEP_MS } from "./timing.ts";
 
   let { from, to }: { from: number; to: number } = $props();
 

@@ -3,13 +3,13 @@
   // the shared bundle selector for the running game; «Aplicar» sends `settings` (new table, level and history stay).
   // ↑/↓ move, ←/→ or −/+ change the difficulty, Enter on a row applies, Esc/⌫/B cancel.
   import { onMount } from "svelte";
-  import { DIFFICULTY_MAX, fetchChoiceOptions, fetchGameSettings, type ChoiceOptions, type GameActionBody } from "../lib/api";
-  import { errorText } from "../lib/errors";
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
-  import type { Difficulty, Game } from "../lib/types";
+  import { DIFFICULTY_MAX, fetchChoiceOptions, fetchGameSettings, type ChoiceOptions, type GameActionBody } from "../lib/api.ts";
+  import { errorText } from "../lib/errors.ts";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import type { Difficulty, Game } from "../lib/types.ts";
   import BundleSelector from "./BundleSelector.svelte";
-  import { spanOf, stepDifficulty } from "./difficulty";
+  import { spanOf, stepDifficulty } from "./difficulty.ts";
   import Prompt from "./Prompt.svelte";
 
   let {

@@ -1,9 +1,9 @@
 // The action layer (plans/14-input.md, IN-2; plan 44): keys and pad buttons (gamepad.svelte.ts) become
 // actions, and the top scope of a stack gets them. The only keydown listener of the client.
 import { untrack } from "svelte";
-import { forget, keyPressed, navigate, opener, press, show, track } from "./focus";
-import { t } from "./i18n";
-import type { JokerName } from "./types";
+import { forget, keyPressed, navigate, opener, press, show, track } from "./focus.ts";
+import { t } from "./i18n.ts";
+import type { JokerName } from "./types.ts";
 
 export type Device = "keyboard" | "mouse" | "gamepad";
 export type Dir = "up" | "down" | "left" | "right";

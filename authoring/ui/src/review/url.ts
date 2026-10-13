@@ -1,4 +1,4 @@
-import type { QuestionFilter } from "../lib/api";
+import type { QuestionFilter } from "../lib/api.ts";
 
 // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
 // media=missing (RV-13), licence=replace (plan 53); status=!approved is every question that isn't

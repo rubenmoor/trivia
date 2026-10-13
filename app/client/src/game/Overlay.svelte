@@ -4,18 +4,18 @@
   // the cheats apart (skip, block, undo, replace, jump to level, difficulty and bundles, jokers left).
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
   // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
-  import { CARDS, fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api";
-  import { desktop } from "../lib/desktop";
-  import { flush } from "../lib/engine";
-  import { endonym, t } from "../lib/i18n";
-  import { pushScope, type Action } from "../lib/input.svelte";
+  import { CARDS, fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api.ts";
+  import { desktop } from "../lib/desktop.ts";
+  import { flush } from "../lib/engine.ts";
+  import { endonym, t } from "../lib/i18n.ts";
+  import { pushScope, type Action } from "../lib/input.svelte.ts";
   import Credits from "./Credits.svelte";
   import GameSettings from "./GameSettings.svelte";
-  import { levelsOf } from "./levels";
+  import { levelsOf } from "./levels.ts";
   import Prompt from "./Prompt.svelte";
-  import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
-  import { stepUses, TOKENS } from "./jokers";
-  import { setVolumes, sound, type Volumes } from "./sound.svelte";
+  import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
+  import { stepUses, TOKENS } from "./jokers.ts";
+  import { setVolumes, sound, type Volumes } from "./sound.svelte.ts";
 
   type Item = {
     label: string;

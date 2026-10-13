@@ -3,12 +3,12 @@
   // mechanic, the final answer, the level-dependent wait and the reveal. Jokers (09-jokers.md):
   // the tray, arming, Paso's choice, Cambiazo's picker, Francotirador's aiming, Soplo's notes.
   import { onMount } from "svelte";
-  import { gameAction } from "../lib/api";
-  import { errorText, reasonText } from "../lib/errors";
-  import { t } from "../lib/i18n";
-  import { displayName, questionLocale } from "../lib/names.svelte";
-  import { focusControl, pushScope, type Action, type Dir, type Intent, type Keys } from "../lib/input.svelte";
-  import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
+  import { gameAction } from "../lib/api.ts";
+  import { errorText, reasonText } from "../lib/errors.ts";
+  import { t } from "../lib/i18n.ts";
+  import { displayName, questionLocale } from "../lib/names.svelte.ts";
+  import { focusControl, pushScope, type Action, type Dir, type Intent, type Keys } from "../lib/input.svelte.ts";
+  import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types.ts";
   import CategoryPicker from "./CategoryPicker.svelte";
   import DifficultyDial from "./DifficultyDial.svelte";
   import Hud from "./Hud.svelte";
@@ -16,12 +16,12 @@
   import Prompt from "./Prompt.svelte";
   import JokerFlight from "./JokerFlight.svelte";
   import JokerTray from "./JokerTray.svelte";
-  import { TOKENS } from "./jokers";
-  import { DEFAULT_LEVELS, onTwelve } from "./levels";
+  import { TOKENS } from "./jokers.ts";
+  import { DEFAULT_LEVELS, onTwelve } from "./levels.ts";
   import Shredder from "./Shredder.svelte";
   import Stage from "./Stage.svelte";
-  import { duck, mediaVolume, music, sfx, sound } from "./sound.svelte";
-  import { cardFlip, crossfade } from "./swap";
+  import { duck, mediaVolume, music, sfx, sound } from "./sound.svelte.ts";
+  import { cardFlip, crossfade } from "./swap.ts";
   import {
     AFTER_REVEAL_MS,
     ARM_MS,
@@ -33,7 +33,7 @@
     SNIPE_HIT_MS,
     SWEEP_MS,
     sleep,
-  } from "./timing";
+  } from "./timing.ts";
 
   export type JokerPlay = { joker: JokerName; purge?: boolean; subcategory?: string; index?: number };
 

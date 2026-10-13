@@ -3,18 +3,18 @@
   // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
-  import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api";
-  import { GameError } from "../lib/http";
-  import { steam } from "../lib/desktop";
-  import { language, saveError, takeLocalOffer, takeSaveNotice, type LocalOffer } from "../lib/engine";
-  import { errorText } from "../lib/errors";
-  import { t } from "../lib/i18n";
-  import { listenPads } from "../lib/gamepad.svelte";
-  import { listen, pushScope, type Action } from "../lib/input.svelte";
-  import { questionLocale } from "../lib/names.svelte";
-  import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types";
+  import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
+  import { GameError } from "../lib/http.ts";
+  import { steam } from "../lib/desktop.ts";
+  import { language, saveError, takeLocalOffer, takeSaveNotice, type LocalOffer } from "../lib/engine.ts";
+  import { errorText } from "../lib/errors.ts";
+  import { t } from "../lib/i18n.ts";
+  import { listenPads } from "../lib/gamepad.svelte.ts";
+  import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
+  import { questionLocale } from "../lib/names.svelte.ts";
+  import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types.ts";
   import Choice from "./Choice.svelte";
-  import { consolation, milestone } from "./copy";
+  import { consolation, milestone } from "./copy.ts";
   import Fireworks from "./Fireworks.svelte";
   import EffectsDemo from "./EffectsDemo.svelte";
   import Envelopes from "./Envelopes.svelte";
@@ -24,18 +24,18 @@
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
   import JokerTray from "./JokerTray.svelte";
-  import { levelsOf, onTwelve } from "./levels";
+  import { levelsOf, onTwelve } from "./levels.ts";
   import LanguageScreen from "./LanguageScreen.svelte";
   import LocalProgress from "./LocalProgress.svelte";
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
-  import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte";
+  import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import Stage from "./Stage.svelte";
   import SupplyReport from "./SupplyReport.svelte";
-  import { swap } from "./swap";
+  import { swap } from "./swap.ts";
   import "./theme.css";
-  import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing";
+  import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Tower from "./Tower.svelte";
 
   type Screen = "language" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";

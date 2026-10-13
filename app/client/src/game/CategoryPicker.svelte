@@ -3,10 +3,10 @@
   // (D-43), then the subcategories of the chosen one (D-19). Tiles without a fitting question are disabled
   // (the engine decides, 09 "Availability"). Click, or arrows + Enter; Backspace goes back.
   import { tick } from "svelte";
-  import type { Jokers } from "../lib/types";
-  import { t } from "../lib/i18n";
-  import { displayName, questionLocale } from "../lib/names.svelte";
-  import { focusControl, pushScope } from "../lib/input.svelte";
+  import type { Jokers } from "../lib/types.ts";
+  import { t } from "../lib/i18n.ts";
+  import { displayName, questionLocale } from "../lib/names.svelte.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import Prompt from "./Prompt.svelte";
 
   type Group = Jokers["category"]["categories"][number];

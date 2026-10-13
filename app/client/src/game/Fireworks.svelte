@@ -8,8 +8,8 @@
 
 <script lang="ts">
   import { onMount } from "svelte";
-  import { sfx } from "./sound.svelte";
-  import { reducedMotion } from "./timing";
+  import { sfx } from "./sound.svelte.ts";
+  import { reducedMotion } from "./timing.ts";
 
   let { mode = "single", variant = null }: { mode?: FireworksMode; variant?: string | null } = $props();
 

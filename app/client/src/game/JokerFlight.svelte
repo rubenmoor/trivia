@@ -4,7 +4,7 @@
   // Short on purpose (a joker plays many times a game); with reduced motion it is a quick fade.
   import { onMount } from "svelte";
   import Icon, { type IconName } from "./Icon.svelte";
-  import { JOKER_BURST_MS, JOKER_FLY_MS, REDUCED_FADE_MS, reducedMotion } from "./timing";
+  import { JOKER_BURST_MS, JOKER_FLY_MS, REDUCED_FADE_MS, reducedMotion } from "./timing.ts";
 
   let { from, icon, ondone }: { from: DOMRect; icon: IconName; ondone: () => void } = $props();
 

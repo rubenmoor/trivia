@@ -1,8 +1,8 @@
 <script lang="ts">
   // Histogram: questions per difficulty over the whole shared scale 1–15 (D-38), with the default
   // age group's window (young teens) shaded (RV-18); with targets a tick per level (D-53).
-  import type { AgeGroups, BundleTargets, Names, Question } from "../lib/types";
-  import { DEFAULT_AGE_GROUP } from "$app/engine/choice";
+  import type { AgeGroups, BundleTargets, Names, Question } from "../lib/types.ts";
+  import { DEFAULT_AGE_GROUP } from "$app/engine/choice.ts";
   import "./chart.css";
 
   let {

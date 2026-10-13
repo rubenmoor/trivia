@@ -122,6 +122,16 @@ npm run build -w app/client && trivia-desktop      # the game in the Electron de
 
 The dev servers forward `/api` and `/media` to the Python servers, so run both. Before changing anything, read [`plans/README.md`](plans/README.md): plans are the source of truth, and decisions (D-numbers) are logged in [`plans/decisions.md`](plans/decisions.md).
 
+Environment variables (empty = unset):
+- `TRIVIA_STATE`, `TRIVIA_MEDIA`: save folder and media cache (default `state/`, `media/`; packaged: `$XDG_DATA_HOME/trivia/`)
+- `TRIVIA_WORK`: the pipeline's `work/` folder (authoring tools)
+- `TRIVIA_SAVE_DIR`: the desktop shell's save folder
+- `TRIVIA_DEVTOOLS=1`: the desktop shell opens its devtools
+- `TRIVIA_STEAM_APPID`: the desktop shell's Steam App ID in dev (a Steam launch's `SteamAppId` wins; default 480)
+- `TRIVIA_STEAM_SDK`: Steamworks SDK libs (set by the flake)
+- `TRIVIA_STEAM_ACCOUNT`: `trivia-steam upload`'s Steam login; `TRIVIA_STEAMCMD_HOME`: SteamCMD's home (default `$XDG_DATA_HOME/trivia/steamcmd`)
+- `VITE_AUTHORING_URL` (build time): the game's links to the authoring pages; `""` hides them (default: same host, port 8001)
+
 ### Build the packaged game
 
 ```sh

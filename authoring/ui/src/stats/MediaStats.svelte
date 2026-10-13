@@ -1,6 +1,6 @@
 <script lang="ts">
   // Approved questions per media role and per image resolution (RV-23).
-  import type { MediaStats } from "../lib/types";
+  import type { MediaStats } from "../lib/types.ts";
   import "./chart.css";
 
   let { stats }: { stats: MediaStats } = $props();

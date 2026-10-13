@@ -2,9 +2,9 @@
   // «Paso» with purge (plans/09-jokers.md, "Paso", JK-6): the subcategory name appears big, a red
   // «ELIMINADO» stamp slams onto it, then it drops through a paper shredder in strips.
   import { onMount } from "svelte";
-  import { t } from "../lib/i18n";
-  import { sfx } from "./sound.svelte";
-  import { SHRED_MS, STAMP_LAND_MS, STAMP_MS } from "./timing";
+  import { t } from "../lib/i18n.ts";
+  import { sfx } from "./sound.svelte.ts";
+  import { SHRED_MS, STAMP_LAND_MS, STAMP_MS } from "./timing.ts";
 
   let { name, lang, ondone }: { name: string; lang: string; ondone: () => void } = $props();
 

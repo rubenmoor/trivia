@@ -1,7 +1,7 @@
 <script lang="ts">
   // One media slot (the question's media, or the background of an audio question, D-14):
   // what is picked or suggested, plus the alternatives from the media providers (plans/06-images.md, D-45).
-  import type { LicenceRecord, LicenceVerdict, MediaCandidate } from "../lib/types";
+  import type { LicenceRecord, LicenceVerdict, MediaCandidate } from "../lib/types.ts";
 
   interface MediaSlot extends LicenceRecord {
     type: "image" | "audio" | "video";

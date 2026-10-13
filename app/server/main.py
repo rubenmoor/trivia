@@ -19,6 +19,7 @@ API:
                                                    {"error": "not_found"} (plan 49, D-67)
     PUT  /api/save                                 body: the whole save document; replaces it. Envelope check
                                                    only: 400 "bad_save"; 503 "save_locked" when the file stays locked
+                                                   or can't be written (disk full)
 Any other /api/ path, or POST: 404 {"error": "not_found"}; other methods: 501 (http.server).
 Files are streamed; a single Range gets 206 (video seeking).
 """
@@ -84,6 +85,8 @@ class Handler(BaseHandler):
             return self.send_json(200, {"ok": True})
         except save.SaveError as e:
             return self.send_json(e.status, {"error": e.code, "message": str(e)})
+        except OSError as e:  # e.g. disk full: retried with the next action, as on the desktop
+            return self.send_json(503, {"error": "save_locked", "message": f"can't write the save: {e}"})
 
     def send_data(self, rel):
         path = (paths.DATA / rel).resolve()

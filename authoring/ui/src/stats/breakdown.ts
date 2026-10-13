@@ -1,6 +1,6 @@
 // Approved questions per broad category and subcategory (D-19), shared by the stats pages
 // and the start page.
-import type { Category, Names, Question } from "../lib/types";
+import type { Category, Names, Question } from "../lib/types.ts";
 
 interface SubRow {
   name: string;

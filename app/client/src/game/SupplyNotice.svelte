@@ -1,5 +1,5 @@
 <script module lang="ts">
-  import type { Outlook } from "../lib/api";
+  import type { Outlook } from "../lib/api.ts";
 
   /** Something to tell before level 1 (decision 31): tight levels, none left, exhausted subcategories. */
   export const worthShowing = (o: Outlook) => o.none || o.tight.length > 0 || o.exhausted.length > 0;
@@ -8,9 +8,9 @@
 <script lang="ts">
   // The supply notice (plan 65, decision 31): after «¡A jugar!», before level 1; informational.
   // Enter presses the focused button («¡A jugar!» first), Backspace/Esc go back to the Choice screen.
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
-  import { displayName } from "../lib/names.svelte";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import { displayName } from "../lib/names.svelte.ts";
   import Prompt from "./Prompt.svelte";
 
   let { outlook, onplay, onback }: { outlook: Outlook; onplay: () => void; onback: () => void } = $props();

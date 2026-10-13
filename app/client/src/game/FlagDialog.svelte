@@ -2,10 +2,10 @@
   // The flag dialog (GM-5, decision 60): flag icon or M. An optional note; Enter flags (or saves the
   // note of a flagged question), Esc/⌫ cancel. A pad's A on the field opens the letter picker.
   import { tick } from "svelte";
-  import { t } from "../lib/i18n";
-  import { focusControl, lastDevice, pushScope } from "../lib/input.svelte";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, lastDevice, pushScope } from "../lib/input.svelte.ts";
   import LetterPicker from "./LetterPicker.svelte";
-  import { MAX_NOTE } from "./letters";
+  import { MAX_NOTE } from "./letters.ts";
   import Prompt from "./Prompt.svelte";
 
   let {

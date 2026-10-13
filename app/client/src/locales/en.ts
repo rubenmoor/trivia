@@ -1,6 +1,6 @@
 // Draft English catalog (plans/15a-ui-translation.md, LUI-3): Claude's wording, no native-speaker
 // check yet (LUI-5 playtest). Joker names: pm decisions 40–44.
-import type { Catalog } from "./es";
+import type { Catalog } from "./es.ts";
 
 export const en = {
   app: {

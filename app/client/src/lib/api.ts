@@ -6,8 +6,8 @@ import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { messageOf } from "./http.ts";
-import { language as fetchLanguage, localeSupply, read, run, type Scope } from "./engine.ts";
-import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types";
+import { language as fetchLanguage, localeSupply, read, run, type DataScope } from "./engine.ts";
+import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types.ts";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted by lib/store.ts (plan 50, PORT-7).
 
@@ -84,7 +84,7 @@ export interface ChoiceOptions {
   bundles: { id: string; base: boolean; name: string; description: string }[];
 }
 
-export async function fetchChoiceOptions(scope: Scope = "next"): Promise<ChoiceOptions> {
+export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<ChoiceOptions> {
   return read((save, data) => {
     const groups = data.ageGroups.map(({ id, name, ages, levels }) => ({
       id, name: data.names.age_groups[id] ?? name, ages, span: [levels[0][0], levels[levels.length - 1][1]] as const,

@@ -1,8 +1,8 @@
 <script lang="ts">
   // Questions per broad category (D-19), most first. Click a bar to open its subcategories
   // (RV-19); each one links to its approved questions in the review tool. With targets: approved / derived share (D-53).
-  import type { BundleTargets, Category, Names, Question } from "../lib/types";
-  import { breakdown, reviewLink, type CategoryRow } from "./breakdown";
+  import type { BundleTargets, Category, Names, Question } from "../lib/types.ts";
+  import { breakdown, reviewLink, type CategoryRow } from "./breakdown.ts";
   import "./chart.css";
 
   let {

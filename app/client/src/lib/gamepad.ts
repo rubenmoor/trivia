@@ -1,6 +1,6 @@
 // The gamepad core (plans/14-input.md, IN-4; plan 45): a standard pad's buttons and left stick
 // become intents. Pure, so a script can feed it fake pads; the loop is gamepad.svelte.ts.
-import type { Dir, Intent } from "./input.svelte";
+import type { Dir, Intent } from "./input.svelte.ts";
 
 export type Pad = { buttons: readonly boolean[]; axes: readonly number[] };
 /** Buttons down last frame; the stick's direction, or "held" until it is let go. */

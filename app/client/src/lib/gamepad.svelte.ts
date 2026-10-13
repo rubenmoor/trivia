@@ -1,8 +1,8 @@
 // The gamepad source (plans/14-input.md, IN-4; plan 45): polls standard pads each frame while one
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
-import { steam } from "./desktop";
-import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad";
-import { dispatch, padMap } from "./input.svelte";
+import { steam } from "./desktop.ts";
+import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
+import { dispatch, padMap } from "./input.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });

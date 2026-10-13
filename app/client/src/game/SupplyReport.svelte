@@ -1,7 +1,7 @@
 <script lang="ts">
   // The supply report (GF-5): the pool can't fill a game; levels short, with their difficulty range.
-  import { t } from "../lib/i18n";
-  import type { Supply } from "../lib/types";
+  import { t } from "../lib/i18n.ts";
+  import type { Supply } from "../lib/types.ts";
 
   let { supply }: { supply: Supply } = $props();
   const short = $derived(supply.levels.filter((l) => l.missing));

@@ -2,11 +2,11 @@
   // The first-start language screen (plan 68, I18N-2): a fresh save picks its UI language once, the
   // guess preselected; the question language follows it. Later changes: the Esc menu.
   import { onMount, tick } from "svelte";
-  import { defaultLanguage } from "../engine/save";
-  import { fetchLanguage, localeSupply, setLanguage } from "../lib/api";
-  import { errorText } from "../lib/errors";
-  import { endonym, lang, t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
+  import { defaultLanguage } from "../engine/save.ts";
+  import { fetchLanguage, localeSupply, setLanguage } from "../lib/api.ts";
+  import { errorText } from "../lib/errors.ts";
+  import { endonym, lang, t } from "../lib/i18n.ts";
+  import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import Prompt from "./Prompt.svelte";
 
   let { onpicked }: { onpicked: () => void } = $props();

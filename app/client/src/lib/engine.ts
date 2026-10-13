@@ -150,16 +150,16 @@ export async function localeSupply(): Promise<Record<string, Supply>> {
 
 /** `game`: the newest game's data (it keeps its locale), else the language's; `next`: the language's
  * (a new game). No mid-game pool swap. */
-export type Scope = "game" | "next";
+export type DataScope = "game" | "next";
 
-function dataFor({ save }: Loaded, scope: Scope): Promise<EngineData> {
+function dataFor({ save }: Loaded, scope: DataScope): Promise<EngineData> {
   const row = newest(save.games);
   return loadEngineData(scope === "game" && row ? gameLocale(row) : save.language.questions);
 }
 
 export type Route<T> = (save: SaveData, data: EngineData, io: Io) => Reply<T>;
 
-async function exec<T>(route: Route<T>, write: boolean, scope: Scope): Promise<T> {
+async function exec<T>(route: Route<T>, write: boolean, scope: DataScope): Promise<T> {
   const loaded = await ready();
   const data = await dataFor(loaded, scope);
   useNames(data);
@@ -188,11 +188,11 @@ async function exec<T>(route: Route<T>, write: boolean, scope: Scope): Promise<T
 }
 
 /** A read: never PUTs. */
-export function read<T>(route: Route<T>, scope: Scope = "game"): Promise<T> {
+export function read<T>(route: Route<T>, scope: DataScope = "game"): Promise<T> {
   return exclusive(() => exec(route, false, scope));
 }
 
 /** An action: 200 → adopt the new save and PUT it whole; else the save stays. */
-export function run<T>(route: Route<T>, scope: Scope = "game"): Promise<T> {
+export function run<T>(route: Route<T>, scope: DataScope = "game"): Promise<T> {
   return exclusive(() => exec(route, true, scope));
 }

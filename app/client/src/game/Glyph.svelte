@@ -1,7 +1,7 @@
 <script lang="ts" module>
   // Pad button glyphs (plans/14-input.md, IN-5): drawn for the game in Icon.svelte's style (VD-8),
   // no console makers' art. Standard button index + glyph set → one 24×24 SVG.
-  import type { PadStyle } from "../lib/gamepad";
+  import type { PadStyle } from "../lib/gamepad.ts";
 
   type Shape = "a" | "b" | "x" | "y" | "cross" | "circle" | "square" | "triangle" | "bumper" | "trigger" | "view" | "menu"
     | "create" | "options" | "up" | "down" | "left" | "right";

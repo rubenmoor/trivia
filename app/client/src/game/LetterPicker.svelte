@@ -4,9 +4,9 @@
   // Opens only for a pad; A types the focused key, B deletes (closes on an empty name), Start closes.
   // Letters, Backspace, Enter and Esc work too (a Deck with a keyboard); the text stays on close.
   import { tick } from "svelte";
-  import { t } from "../lib/i18n";
-  import { focusControl, pushScope, type Keys } from "../lib/input.svelte";
-  import { typeKey } from "./letters";
+  import { t } from "../lib/i18n.ts";
+  import { focusControl, pushScope, type Keys } from "../lib/input.svelte.ts";
+  import { typeKey } from "./letters.ts";
   import Prompt from "./Prompt.svelte";
 
   let {

@@ -1,6 +1,6 @@
 // German catalog (plans/15a-ui-translation.md, LUI-5): Claude's draft, native-speaker check in the
 // playtest. Players are addressed as «ihr». Joker names: pm decisions 54–58.
-import type { Catalog } from "./es";
+import type { Catalog } from "./es.ts";
 
 export const de = {
   app: {

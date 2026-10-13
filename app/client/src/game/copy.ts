@@ -1,7 +1,7 @@
 // Milestone and consolation lines (plans/04-ui-tv-display.md, UI-14); texts in the catalog
 // (`copy.*`, D-70). {n} is the level. Written for 12 levels; other counts (D-88) map onto them.
-import { fill, variants } from "../lib/i18n";
-import { DEFAULT_LEVELS } from "./levels";
+import { fill, variants } from "../lib/i18n.ts";
+import { DEFAULT_LEVELS } from "./levels.ts";
 
 type Line = 4 | 6 | 8 | 10 | 12;
 

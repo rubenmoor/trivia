@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
-import { call, json, post } from "$app/lib/http";
-import type { AgeGroups, Bundle, Category, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
+import { call, json, post } from "$app/lib/http.ts";
+import type { AgeGroups, Bundle, Category, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types.ts";
 
 const SERVER = "the authoring server (`trivia-authoring`)";
 
