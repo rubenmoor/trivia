@@ -51,7 +51,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/ui/` | Authoring UI (Svelte): `home/` start page, `review/` review tool, `stats/` stats pages, `print/` printable joker cards |
 | `authoring/store/screenshots.mjs` | Store screenshots (plan 88): the shell at 1920×1080 under Xvfb, raw CDP, demo saves seeded with the engine; [`plans/17a-store-page.md`](plans/17a-store-page.md) |
 | `authoring/store/out/` | Gitignored: rendered store assets (`screenshots/<lang>/`) |
-| `authoring/steam/` | Steam uploads (plan 89, D-93): `steam.json` (App ID, depot IDs), `app_build.vdf.in` + `depot_build.vdf.in`, `steam.py` (`trivia-steam vdf`); output under `work/steam/<tag>/` |
+| `authoring/steam/` | Steam uploads (plan 89, D-93): `steam.json` (App ID, depot IDs), `app_build.vdf.in` + `depot_build.vdf.in`, `steam.py` (`trivia-steam vdf`, `stage`: depot folders vs. archives); output under `work/steam/<tag>/` |
 | `authoring/RUNBOOK.md` | How an LLM makes a batch of questions: one command |
 | `authoring/QC.md` | Quality control after every batch: audit, blind spot check, `qgen report --qc`, findings → prompt changes (D-56, plan 16) |
 | `authoring/reports/` | One generated report per batch or run (`tr-<locale>-<n>.md` for translation runs) |

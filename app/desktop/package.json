@@ -7,7 +7,9 @@
   "type": "module",
   "scripts": {
     "stage-media": "node stage-media.mjs",
-    "dist": "(cd ../.. && npm run build -w app/client) && node stage-media.mjs && electron-builder --x64 --linux tar.gz --win zip"
+    "prepare-dist": "(cd ../.. && npm run build -w app/client) && node stage-media.mjs",
+    "dist": "npm run prepare-dist && electron-builder --x64 --linux tar.gz --win zip",
+    "dist:dir": "npm run prepare-dist && electron-builder --x64 --linux tar.gz dir --win zip dir"
   },
   "devDependencies": {
     "electron": "43.7.7",

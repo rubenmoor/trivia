@@ -79,6 +79,7 @@
         };
         trivia-steam = fromCheckout pkgs "trivia-steam" "authoring/steam/steam.py" [ steamcmd ];
         # Local builds for Windows and Linux (plan 56): pool check, client, staged media, electron-builder.
+        # `--dir`: also the dir target (release/{win,linux}-unpacked/, plan 89).
         trivia-desktop-build = pkgs.writeShellApplication {
           name = "trivia-desktop-build";
           runtimeInputs = [ pkgs.git pkgs.nodejs_22 qgen ];
@@ -91,7 +92,9 @@
             qgen validate
             export ELECTRON_SKIP_BINARY_DOWNLOAD=1  # the npm Electron doesn't run on NixOS
             [ -d "$root/app/desktop/node_modules" ] || npm ci --prefix "$root/app/desktop"
-            exec npm run dist --prefix "$root/app/desktop" -- "$@"
+            script=dist
+            if [ "''${1:-}" = "--dir" ]; then script=dist:dir; shift; fi  # + unpacked folders for the Steam depots
+            exec npm run "$script" --prefix "$root/app/desktop" -- "$@"
           '';
         };
       };

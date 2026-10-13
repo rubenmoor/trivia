@@ -134,6 +134,8 @@ The package contains only `app/`. It keeps its saves and media cache in `$XDG_DA
 ```sh
 trivia-media sync --status approved   # the pool's media must be in the cache
 trivia-desktop-build                  # → app/desktop/release/Trivia-<version>-win-x64.zip, …-linux-x64.tar.gz
+trivia-desktop-build --dir            # also win-unpacked/, linux-unpacked/ for the Steam depots
+trivia-steam stage                    # depot folders + build/media = the archives
 ```
 
 Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
