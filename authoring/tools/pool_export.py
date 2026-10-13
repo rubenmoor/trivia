@@ -3,6 +3,7 @@ app/data/pool.<locale>.json from it and authoring/data/questions.<locale>.json (
 import hashlib
 import json
 
+import atomic
 import layout
 
 PLAY_FIELDS = ["id", "status", "difficulty", "subcategory", "bundle", "description", "question", "answer",
@@ -42,6 +43,4 @@ def exports(pool):
 def write(pool):
     """Write the exports for this source pool (the parsed authoring/data/questions.json); atomic per file."""
     for path, text in exports(pool).items():
-        tmp = path.with_suffix(".tmp")
-        tmp.write_text(text, encoding="utf-8")
-        tmp.replace(path)
+        atomic.write_text(path, text)

@@ -9,6 +9,7 @@ import json
 from collections import Counter
 
 import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server importable)
+import atomic  # authoring/tools/atomic.py
 import paths  # app/server/paths.py
 import save  # app/server/save.py
 
@@ -74,7 +75,4 @@ def applied():
 
 def record_applied(entries):
     """Add {"<id>": stamp} to the ledger."""
-    APPLIED.parent.mkdir(parents=True, exist_ok=True)
-    tmp = APPLIED.with_suffix(".tmp")
-    tmp.write_text(json.dumps({**applied(), **entries}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(APPLIED)
+    atomic.write_json(APPLIED, {**applied(), **entries})

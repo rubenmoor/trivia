@@ -103,6 +103,12 @@ export function parseAgeGroups(json: unknown): AgeGroup[] {
   return out;
 }
 
+/** The pool file of a locale in app/data/ (D-81): es is pool.json. */
+export const poolFile = (locale: string): string => (locale === "es" ? "pool.json" : `pool.${locale}.json`);
+
+/** A bundle's own file in app/data/ (D-43): base's at the top, another's in bundles/<id>/. */
+export const bundleFile = (bundle: string, name: string): string => (bundle === "base" ? name : `bundles/${bundle}/${name}`);
+
 /** app/data/bundles.json and each bundle's categories file → categories in display order, base first.
  * A bundle without a file has none. */
 export function loadCategories(bundlesJson: unknown, files: Record<string, unknown>): Category[] {

@@ -1,4 +1,5 @@
 // Raw CDP for the shell (store screenshots, packaged smoke game): no puppeteer.
+import { spawn } from "node:child_process";
 import { createServer } from "node:net";
 
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -9,6 +10,22 @@ export function freePort() {
       const { port } = srv.address();
       srv.close(() => resolve(port));
     });
+  });
+}
+
+/** Xvfb on a free display (`-displayfd`): `{ display: ":N", proc }` once it accepts clients. */
+export function startXvfb(exe, width, height) {
+  return new Promise((resolve, reject) => {
+    const proc = spawn(exe, ["-displayfd", "3", "-screen", "0", `${width}x${height}x24`, "-nolisten", "tcp"], {
+      stdio: ["ignore", "ignore", "ignore", "pipe"],
+    });
+    let out = "";
+    proc.stdio[3].on("data", (d) => {
+      out += d;
+      if (out.includes("\n")) resolve({ display: `:${out.trim()}`, proc });
+    });
+    proc.on("error", reject);
+    proc.on("exit", (code) => reject(new Error(`Xvfb exited (${code}) before it reported a display`)));
   });
 }
 

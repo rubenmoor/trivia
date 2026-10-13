@@ -9,11 +9,11 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
-import { connectPort, freePort, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
+import { connectPort, freePort, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
-import { loadCategories, parseAgeGroups, parseBundles, parsePool } from "../../app/client/src/engine/pool.ts";
+import { bundleFile, loadCategories, parseAgeGroups, parseBundles, parsePool, poolFile } from "../../app/client/src/engine/pool.ts";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
-import { emptySave, engineData, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
+import { emptySave, engineData, mergeNames, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const DATA = path.join(REPO, "app", "data");
@@ -39,23 +39,19 @@ const json = (file) => JSON.parse(readFileSync(path.join(DATA, file), "utf8"));
 
 /** data.ts's load(), from disk; null if the locale has no pool. */
 function loadData(locale) {
-  const file = locale === "es" ? "pool.json" : `pool.${locale}.json`;
+  const file = poolFile(locale);
   if (!existsSync(path.join(DATA, file))) return null;
   const bundles = json("bundles.json");
   const parsed = parseBundles(bundles);
   const optional = (f) => (existsSync(path.join(DATA, f)) ? json(f) : null);
   const byBundle = {};
-  const names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
   for (const b of parsed) {
-    const dir = b.id === "base" ? "" : `bundles/${b.id}/`;
-    const cats = optional(`${dir}categories.json`);
+    const cats = optional(bundleFile(b.id, "categories.json"));
     if (cats) byBundle[b.id] = cats;
-    const n = locale === "es" ? null : optional(`${dir}names.${locale}.json`);
-    for (const k of Object.keys(names)) Object.assign(names[k], n?.[k]);
   }
   return engineData(
     parsePool(json(file)), loadCategories(bundles, byBundle), parsed, parseAgeGroups(json("age-groups.json")), locale,
-    locale === "es" ? undefined : names,
+    locale === "es" ? undefined : mergeNames(parsed.map((b) => optional(bundleFile(b.id, `names.${locale}.json`)))),
   );
 }
 
@@ -211,11 +207,11 @@ async function main() {
   let display = process.env.DISPLAY;
   try {
     if (!visible) {
-      display = `:${90 + Math.floor(Math.random() * 400)}`;
-      const x = spawn("Xvfb", [display, "-screen", "0", `${W}x${H}x24`, "-nolisten", "tcp"], { stdio: "ignore" });
-      x.on("error", () => console.error("Xvfb not found: run from the dev shell, or pass --visible"));
-      procs.push(x);
-      await sleep(1000);
+      const x = await startXvfb("Xvfb", W, H).catch((e) => {
+        throw e.code === "ENOENT" ? new Error("Xvfb not found: run from the dev shell, or pass --visible") : e;
+      });
+      display = x.display;
+      procs.push(x.proc);
     }
     const port = await freePort();
     const shell = spawn("trivia-desktop", [`--remote-debugging-port=${port}`, "--remote-allow-origins=*"], {

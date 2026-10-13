@@ -8,7 +8,7 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
-import { connectPipe, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
+import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const DIR = path.resolve(process.argv[2] ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
@@ -133,12 +133,11 @@ async function main() {
   // Not /tmp: steam-run's sandbox has its own.
   await mkdir(path.join(REPO, "work"), { recursive: true });
   home = await mkdtemp(path.join(REPO, "work", "smoke-"));
-  display = `:${90 + Math.floor(Math.random() * 400)}`;
   try {
     at("Xvfb");
-    const x = spawn(which("Xvfb"), [display, "-screen", "0", "1920x1080x24", "-nolisten", "tcp"], { stdio: "ignore" });
-    procs.push(x);
-    await sleep(1000);
+    const x = await startXvfb(which("Xvfb"), 1920, 1080);
+    display = x.display;
+    procs.push(x.proc);
 
     at("start");
     let shell = await launch();

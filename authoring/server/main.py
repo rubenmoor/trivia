@@ -73,6 +73,7 @@ from urllib.parse import parse_qs, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
 import layout  # noqa: E402,F401  (authoring/tools/layout.py; makes app/server importable)
+import atomic  # noqa: E402  (authoring/tools/atomic.py)
 import categories  # noqa: E402  (authoring/tools/categories.py)
 from http_base import BaseHandler  # noqa: E402  (app/server/http_base.py)
 import download  # noqa: E402  (authoring/tools/download.py)
@@ -105,9 +106,7 @@ def load_pool():
 
 
 def save_pool(data):
-    tmp = POOL.with_suffix(".tmp")
-    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(POOL)
+    atomic.write_json(POOL, data)
     pool_export.write(data)  # the game reads only the export (D-35)
 
 
@@ -132,10 +131,7 @@ def update_translation(locale):
                 if t["id"] == qid:
                     change(t)
                     translations.save(locale, doc)
-                    out = layout.LOCALE_POOL(locale)
-                    tmp = out.with_suffix(".tmp")
-                    tmp.write_text(translations.export_text(locale, load_pool()), encoding="utf-8")
-                    tmp.replace(out)
+                    atomic.write_text(layout.LOCALE_POOL(locale), translations.export_text(locale, load_pool()))
                     return t
         raise NoQuestion(qid)
     return update

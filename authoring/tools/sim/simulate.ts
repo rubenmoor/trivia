@@ -2,7 +2,7 @@
 // stdin: a cell {locale, bundles?, age_group?, mode?, player?, players?, seeds?, seed?} or an array of cells; stdout: JSON.
 import { readFileSync } from "node:fs";
 import { rangesFor } from "../../../app/client/src/engine/choice.ts";
-import { GameError, STANDARD_JOKERS, answer, joker, newGame, pick, resolveChoice, view } from "../../../app/client/src/engine/game.ts";
+import { GameError, MODES, STANDARD_JOKERS, answer, joker, newGame, pick, resolveChoice, view } from "../../../app/client/src/engine/game.ts";
 import { outlook } from "../../../app/client/src/engine/outlook.ts";
 import { categoryOf, type LevelRanges } from "../../../app/client/src/engine/pool.ts";
 import { seededRng } from "../../../app/client/src/engine/rng.ts";
@@ -15,7 +15,7 @@ import { loadData, type Loaded } from "./load.ts";
 const TYPICAL_P = [0.95, 0.6] as const;
 const NOW = "2026-01-01T00:00:00";
 const NAME = "Sim";
-const SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"];
+const SIM_MODES: readonly string[] = MODES.filter((m) => m !== "gamemaster"); // = qgen.SIM_MODES
 const MULTI = ["rr-competitive", "timed"];
 /** Runs stop here if no repeat came yet (`capped`). */
 const MAX_GAMES = 500;

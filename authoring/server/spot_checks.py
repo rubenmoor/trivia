@@ -3,6 +3,7 @@ Written only by the authoring server; `qgen report --qc` and the exit check read
 import datetime, json, re, threading
 
 import layout  # authoring/tools/layout.py
+import atomic  # authoring/tools/atomic.py
 import qgen  # authoring/tools/qgen.py: audit sample, LLM decisions, audits
 import targets  # authoring/tools/targets.py
 import translations  # authoring/tools/translations.py
@@ -30,27 +31,19 @@ def run_ids(run):
     return cfg.get("ids") if cfg.get("mode") == m.group(1) else None
 
 
-def run_locale(run):
-    """The locale of a translation run (`tr-<locale>-<n>`, plan 66), or None."""
-    m = re.fullmatch(r"tr-([A-Za-z-]+)-\d+", run)
-    return m.group(1) if m and m.group(1) in translations.LOCALES else None
-
-
 def load():
     return json.loads(FILE.read_text(encoding="utf-8")) if FILE.exists() else {}
 
 
 def save(data):
-    tmp = FILE.with_suffix(".tmp")
-    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(FILE)
+    atomic.write_json(FILE, data)
 
 
 def record(batch, q, media_changed):
     """Store the spot check of q from its human review (D-33); returns the item.
     `batch` is q's batch, a back-audit run with q in it (plan 57) or a translation run: then
     q's translation in that run is checked and the item gets "locale" (plan 67)."""
-    locale = run_locale(batch)
+    locale = translations.run_locale(batch)
     if locale:
         q = next((t for t in translations.load(locale)["questions"] if t["id"] == q["id"]), None) or {"id": q["id"]}
     rv = q.get("review") or {}

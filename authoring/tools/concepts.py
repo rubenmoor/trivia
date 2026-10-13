@@ -9,6 +9,7 @@ questions first, axis values that are rarely used first.
 import json, re, unicodedata
 from collections import Counter
 
+import atomic  # authoring/tools/atomic.py
 import categories  # authoring/tools/categories.py: which bundle a subcategory is in (D-43)
 from layout import AXES_FILE, BUNDLE_SOURCES, CONCEPTS
 
@@ -22,7 +23,8 @@ OPTIONS = 3  # axis combinations offered per slot
 OFFERED_FACTOR = 0.3  # weight of a value an earlier slot of the subcategory already offered
 
 
-def _slug(text):
+def slug(text):
+    """File name of a subcategory's lists and work files: ASCII, lowercase, dashes."""
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
@@ -91,7 +93,7 @@ def concepts_dir(bundle):
 
 def path(sub):
     """Where the subcategory's list is: in the folder of the bundle whose categories list it."""
-    return concepts_dir(categories.bundle_of(sub) or "base") / f"{_slug(sub)}.json"
+    return concepts_dir(categories.bundle_of(sub) or "base") / f"{slug(sub)}.json"
 
 
 def load(sub):
@@ -105,11 +107,7 @@ def load(sub):
 
 
 def save(sub, data):
-    p = path(sub)
-    p.parent.mkdir(parents=True, exist_ok=True)
-    tmp = p.with_suffix(".tmp")
-    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(p)
+    atomic.write_json(path(sub), data)
 
 
 def uses(pool_questions, sub):

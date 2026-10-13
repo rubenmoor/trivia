@@ -16,9 +16,7 @@ load = qgen.load_json  # names the file when its JSON is broken
 
 def batch_runs():
     """work/batch-N (N ≥ 4) that got as far as merge, oldest first."""
-    runs = [p.name for p in WORK.glob("batch-*") if re.fullmatch(r"batch-\d+", p.name)
-            and int(p.name[6:]) >= 4 and (p / "dropped.json").exists()]
-    return sorted(runs, key=lambda r: int(r[6:]))
+    return [r for r in qgen.work_runs(r"batch-\d+", "dropped.json") if int(r[6:]) >= 4]
 
 
 def recorded(run, qs):
@@ -238,9 +236,7 @@ def ack_lines():
 
 def translation_runs(locale=None):
     """work/tr-<locale>-N that got as far as merge, oldest first."""
-    pat = rf"tr-{re.escape(locale) if locale else '[A-Za-z-]+'}-\d+"
-    return sorted((p.name for p in WORK.glob("tr-*") if re.fullmatch(pat, p.name) and (p / "merged.json").exists()),
-                  key=qgen.natural_key)
+    return qgen.work_runs(rf"tr-{re.escape(locale) if locale else '[A-Za-z-]+'}-\d+", "merged.json")
 
 
 def translation_health(run):

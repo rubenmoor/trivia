@@ -46,6 +46,7 @@ from collections import Counter
 
 import layout  # paths; also makes app/server importable (D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
+import atomic  # authoring/tools/atomic.py: .tmp + replace writes
 import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan 27)
 import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
@@ -91,20 +92,9 @@ _save_lock = threading.Lock()
 
 def save_json(path, data):
     with _save_lock:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_suffix(".tmp")
-        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        tmp.replace(path)
+        atomic.write_json(path, data)
 
-def slug(text):
-    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
-
-def norm(text):
-    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
-    text = re.sub(r"[^a-z0-9 ]+", " ", text)
-    words = [w for w in text.split() if w not in {"el", "la", "los", "las", "un", "una", "de", "del"}]
-    return " ".join(words)
+slug, norm = concepts.slug, concepts.key
 
 def split_list(text):
     """"a, b,,c" → ["a", "b", "c"] (comma-separated flag values)."""
@@ -113,6 +103,12 @@ def split_list(text):
 
 def natural_key(s):
     return [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s)]
+
+
+def work_runs(pattern, marker):
+    """work/<run> names matching `pattern` whose `marker` file exists, oldest first."""
+    return sorted((p.parent.name for p in WORK.glob(f"*/{marker}") if re.fullmatch(pattern, p.parent.name)),
+                  key=natural_key)
 
 
 def write_report(run, lines):
@@ -860,7 +856,7 @@ def drafts(d):
 
 # --- translation runs (plan 66, D-81) -----------------------------------------
 
-LANGUAGES = {"en": "English", "de": "German"}
+LANGUAGES = translations.LANGUAGES
 TRANSLATE_CHUNK = 15  # questions per translate call, one subcategory each
 
 
@@ -1676,8 +1672,7 @@ def calibration(run, pool=None):
 
 
 def last_batches(n=2):
-    runs = [p.name for p in WORK.glob("batch-*") if (p / "slots.json").exists() and re.fullmatch(r"batch-\d+", p.name)]
-    return sorted(runs, key=lambda r: int(r[6:]))[-n:]
+    return work_runs(r"batch-\d+", "slots.json")[-n:]
 
 
 def report_calibration(runs):
@@ -1955,8 +1950,7 @@ def report_exit_check(pool, bundle):
     sys.exit(0 if all(ok for ok, *_ in results) else 1)
 
 
-LAUNCH_LOCALES = ["es", *translations.LOCALES]  # D-78
-SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster
+SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster; = sim/simulate.ts (engine MODES)
 SIM_MULTI = {"rr-competitive", "timed"}
 
 
@@ -1979,7 +1973,7 @@ def target_check(locale, pool=None):
 
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
-    locales = args.locale.split(",") if args.locale else LAUNCH_LOCALES
+    locales = args.locale.split(",") if args.locale else translations.LAUNCH
     all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
     modes = SIM_MODES if args.mode == "all" else args.mode.split(",")
     groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
@@ -2069,7 +2063,7 @@ def cost_runs(pool):
             else:
                 skipped.append(f"{run}: not merged yet, left out of the rates")
         elif kind == "translation":
-            locale = run[3:].rsplit("-", 1)[0]
+            locale = translations.run_locale(run)
             approved = sum(t.get("batch") == run and t.get("status") == "approved"
                            for t in translations.load(locale)["questions"])
         elif ids := (load_json(d / "run.json", {}) or {}).get("ids"):
@@ -2092,7 +2086,7 @@ def cost_report(pool):
     rated = lambda rs: (sum(r["cost"] for r in rs) / n if (n := sum(r["approved"] or 0 for r in rs)) else None)
     batches = [r for r in runs if r["kind"] == "batch" and r["merged"]]
     last3 = batches[-3:]
-    tr = {l: [r for r in runs if r["locale"] == l] for l in LAUNCH_LOCALES if l != "es"}
+    tr = {l: [r for r in runs if r["locale"] == l] for l in translations.LAUNCH if l != "es"}
     batch_cost = sum(r["cost"] for r in batches)
     overhead = sum(r["cost"] + r["audit"] for r in runs if r["kind"] not in ("batch", "translation")) \
         + sum(r["audit"] for r in batches)
@@ -2106,7 +2100,7 @@ def cost_report(pool):
     spent = {"es": sum(r["cost"] + r["audit"] for r in runs if r["kind"] != "translation"),
              **{l: sum(r["cost"] + r["audit"] for r in rs) for l, rs in tr.items()}}
     projection = []
-    for l in LAUNCH_LOCALES:
+    for l in translations.LAUNCH:
         deficit = sum((targets.deficits(pool, "base", l) or {}).values())
         rate = rates["draft"] if l == "es" else rates["translation"][l]
         cost = deficit * rate * (1 + (ratio or 0)) if rate is not None else None
@@ -3250,8 +3244,8 @@ def translate_selection(locale, n):
 
 def next_translate_run(locale):
     """(run name, resuming?) — an unfinished tr-<locale>-* run is resumed; otherwise tr-<locale>-<n+1>."""
-    runs = [p.parent.name for p in WORK.glob(f"tr-{locale}-*/run.json") if re.fullmatch(rf"tr-{locale}-\d+", p.parent.name)]
-    open_runs = sorted((r for r in runs if not load_json(WORK / r / "run.json").get("done")), key=natural_key)
+    runs = work_runs(rf"tr-{re.escape(locale)}-\d+", "run.json")
+    open_runs = [r for r in runs if not load_json(WORK / r / "run.json").get("done")]
     if len(open_runs) > 1:
         sys.exit(f"More than one unfinished {locale} translation run: {', '.join(open_runs)}. Ask the gamemaster which to finish.")
     if open_runs:
@@ -3897,8 +3891,7 @@ def spot_check_problems(questions, scale):
     tr_batches = {}  # locale -> {id: batch} of its translations (plan 67)
     decisions, (lo, hi) = {"approved", "needs_work", "rejected"}, scale
     for b, entry in checks.items():
-        m = re.fullmatch(r"tr-([A-Za-z-]+)-\d+", b)
-        locale = m.group(1) if m and m.group(1) in translations.LOCALES else None
+        locale = translations.run_locale(b)
         if locale and locale not in tr_batches:
             tr_batches[locale] = {t["id"]: t.get("batch") for t in translations.load(locale)["questions"]}
         batch_of = tr_batches[locale] if locale else pool_batches
@@ -3943,16 +3936,18 @@ def bundle_problems(bundles):
     errors, warnings, rel = [], [], "app/data/bundles.json"
     for b in bundles:
         bid, langs = b.get("id", "?"), b.get("languages")
-        if not (isinstance(langs, list) and langs and len(set(langs)) == len(langs) and set(langs) <= set(LAUNCH_LOCALES)):
-            errors.append(f"{rel}: {bid}: languages must be a non-empty list of distinct codes from {', '.join(LAUNCH_LOCALES)}")
+        if not (isinstance(langs, list) and langs and len(set(langs)) == len(langs) and set(langs) <= set(translations.LAUNCH)):
+            errors.append(f"{rel}: {bid}: languages must be a non-empty list of distinct codes from {', '.join(translations.LAUNCH)}")
         if "always_on" in b:
             errors.append(f"{rel}: {bid}: always_on is gone; kind base marks a base bundle")
         if b.get("kind") not in {"base", "region", "theme"}:
             errors.append(f"{rel}: {bid}: kind must be base, region or theme")
-    listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in LAUNCH_LOCALES}
-    for l in LAUNCH_LOCALES:
+    listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in translations.LAUNCH}
+    for l in translations.LAUNCH:
         if not any(b.get("kind") == "base" and b["id"] in listed[l] for b in bundles):
             errors.append(f"{rel}: no base bundle for {l}")
+        if l not in patch_notes.EVENT:
+            errors.append(f"authoring/tools/patch_notes.py: no Steam event texts (EVENT) for {l}")
         if l == "es":  # the source: every bundle starts there (`qgen bundle new`)
             continue
         path = layout.LOCALE_POOL(l)

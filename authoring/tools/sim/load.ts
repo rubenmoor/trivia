@@ -1,7 +1,7 @@
 // app/data/ → EngineData for Node entry points (plan 62; plan 51's supply check may reuse it).
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { loadCategories, parseAgeGroups, parseBundles, parsePool } from "../../../app/client/src/engine/pool.ts";
+import { bundleFile, loadCategories, parseAgeGroups, parseBundles, parsePool } from "../../../app/client/src/engine/pool.ts";
 import { engineData, type EngineData } from "../../../app/client/src/engine/state.ts";
 
 const DATA_DIR = join(import.meta.dirname, "../../../app/data");
@@ -24,7 +24,7 @@ export function loadData(locale: string, dir = DATA_DIR): Loaded {
   const bundles = parseBundles(bundlesJson);
   const files: Record<string, unknown> = {};
   for (const b of bundles) {
-    const f = join(dir, b.id === "base" ? "categories.json" : `bundles/${b.id}/categories.json`);
+    const f = join(dir, bundleFile(b.id, "categories.json"));
     if (existsSync(f)) files[b.id] = read(f);
   }
   const data = engineData(parsePool(read(pool)), loadCategories(bundlesJson, files), bundles,

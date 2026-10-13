@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from layout import REPO as ROOT, WORK
+import translations  # authoring/tools/translations.py
 
 sys.path.insert(0, str(ROOT / "authoring" / "steam"))
 import release_check  # noqa: E402
@@ -18,7 +19,7 @@ FIXED_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact", "dif
 POOL_RE = re.compile(r"app/data/pool(?:\.([A-Za-z-]+))?\.json")
 CATS_RE = re.compile(r"app/data/(?:bundles/[^/]+/)?categories\.json")
 NAMES_RE = re.compile(r"app/data/(?:bundles/[^/]+/)?names\.([A-Za-z-]+)\.json")
-LAUNCH = ["es", "en", "de"]  # D-78
+LAUNCH = translations.LAUNCH  # D-78; EVENT needs each one (qgen validate)
 OTHER = "other"
 # Steam event strings per launch language (authoring, not t()); tone of plans/11-steam.md "Announcement texts".
 EVENT = {

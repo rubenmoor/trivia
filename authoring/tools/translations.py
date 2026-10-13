@@ -4,12 +4,15 @@ Spanish source's ids. The one reader/writer for the pipeline, the review pages a
 Each entry has the translated text, its own difficulty, status, batch and review, and the
 source_hash of the source text it was made from; everything else comes from the source by id.
 """
-import hashlib, json
+import hashlib, json, re
 
+import atomic
 import layout
 import pool_export
 
-LOCALES = ("en", "de")  # D-78; zh-Hans, ru, pt-BR when milestone 12 resumes
+LANGUAGES = {"en": "English", "de": "German"}  # D-78; zh-Hans, ru, pt-BR when milestone 12 resumes
+LOCALES = tuple(LANGUAGES)
+LAUNCH = ("es", *LOCALES)  # the source first
 TEXT_FIELDS = ["question", "answer", "wrong_answers", "hints", "description", "fun_fact"]
 
 
@@ -32,10 +35,13 @@ def save(locale, doc):
     """Write sorted by id, in questions.json's style."""
     rest = {k: v for k, v in doc.items() if k not in ("version", "locale", "questions")}
     doc = {"version": 1, "locale": locale, **rest, "questions": sorted(doc["questions"], key=lambda t: t["id"])}
-    p = path(locale)
-    tmp = p.with_suffix(".tmp")
-    tmp.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(p)
+    atomic.write_json(path(locale), doc)
+
+
+def run_locale(run):
+    """The locale of a translation run's name `tr-<locale>-<n>` (plan 66), or None."""
+    m = re.fullmatch(r"tr-([A-Za-z-]+)-\d+", run)
+    return m.group(1) if m and m.group(1) in LOCALES else None
 
 
 def source_hash(q):

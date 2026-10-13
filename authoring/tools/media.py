@@ -24,6 +24,7 @@ import argparse, hashlib, itertools, json, re, subprocess, sys
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from download import RateLimited, cached, http_get
 from media_cache import MEDIA, cache_path, picked, pool_urls
+import atomic  # authoring/tools/atomic.py
 import categories  # authoring/tools/categories.py (D-19, D-43)
 import progress  # authoring/tools/progress.py: the bar says what a step waits for (QG-20)
 import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)
@@ -154,9 +155,7 @@ def fetch_for(q, slot="media", every=False):
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     data = {"query": spec["query"], "type": spec["type"], "candidates": found}
     path = candidates_path(q["id"], slot)
-    tmp = path.with_name(path.name + ".tmp")
-    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(path)  # a torn file would count as fetched
+    atomic.write_json(path, data)  # a torn file would count as fetched
     return data
 
 

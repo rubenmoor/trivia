@@ -1,6 +1,5 @@
 """GET /api/overview: everything the authoring start page shows except the statistics
 (plans/08-review-tool.md, "Start page", RV-12). Computed fresh from the pool on every call."""
-import json, re
 from collections import Counter
 
 import layout  # authoring/tools/layout.py; makes app/server importable
@@ -9,6 +8,7 @@ import media  # authoring/tools/media.py
 import media_cache  # app/server/media_cache.py
 import save_file  # authoring/tools/save_file.py
 import engine  # authoring/tools/engine.py: selection.ts under Node (D-60)
+import qgen  # authoring/tools/qgen.py: work runs
 import translations  # authoring/tools/translations.py
 
 
@@ -24,10 +24,9 @@ def supply(pool):
 
 
 def unfinished_translate_runs():
-    """Unfinished `qgen batch --translate` runs (tr-<locale>-<n>, = qgen.next_translate_run), sorted."""
-    names = re.compile(rf"tr-({'|'.join(map(re.escape, translations.LOCALES))})-\d+")
-    return sorted(p.parent.name for p in layout.WORK.glob("tr-*/run.json")
-                  if names.fullmatch(p.parent.name) and not (json.loads(p.read_text(encoding="utf-8")) or {}).get("done"))
+    """Unfinished `qgen batch --translate` runs (tr-<locale>-<n>, = qgen.next_translate_run), oldest first."""
+    return [r for r in qgen.work_runs(r"tr-[A-Za-z-]+-\d+", "run.json")
+            if translations.run_locale(r) and not (qgen.load_json(layout.WORK / r / "run.json") or {}).get("done")]
 
 
 def batch_rows(pool, locale=None):
