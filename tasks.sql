@@ -22770,8 +22770,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:19:27Z', '2026-10-13T18:35:06Z', 907);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (940, 120, 'create tasks for plan 120', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 981–986 for plan 120, no new decisions', 'Split plan 120 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:22:27Z', '2026-10-13T18:36:12Z', 908);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (941, 121, 'create tasks for plan 121', 'split', 'open', 1000, NULL, 'Split plan 121 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:24:44Z', NULL, 909);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (941, 121, 'create tasks for plan 121', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 987-990 for plan 121; no new decisions (store-text decision raised by task 990 with its drafts; decision 123 already pending)', 'Split plan 121 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:24:44Z', '2026-10-13T18:37:03Z', 909);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (942, 104, 'Release check: mods step and Workshop row (milestone 15)', 'work', 'open', 160, NULL, 'Plan 102 part 12 (plan "Modding end-to-end check and close-out", milestone 15) decided that every release candidate checks mods: an automated step `mods` (always) and a manual row `workshop` (full only). This task adds both to `trivia-release-check`. Priority 160: it runs after milestone 15''s parts, which it needs.
 
 Needs (stop and say so if not done; don''t close):
@@ -23380,6 +23380,76 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Docs name decision 133 and the paths; part 10 (plan 121) can link `modding/bundles.md` and `modding/bundle-prompt.md`.
 - Per-commit checks pass.', '2026-10-13T18:36:03Z', NULL, 940);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (987, 121, 'Example mods: theme, rules tweak, minimal full conversion', 'work', 'open', NULL, NULL, 'Part of plan 121 (milestone 15). Three example mods modders can copy as is; the bundle example is `modding/template-bundle/` (plan 120), referenced, not copied (decision 134: Modding guide: path, language, examples).
+
+Runs after plan 117 (code add-ons, `window.trivia`), plan 118 task 1 (mods screen) and plan 120 task 3 (template bundle). Check every API name against the code as built (`grep` in `app/`), not against plans.
+
+## What
+All in `modding/examples/`, each with `mod.json` (`game` = current version from `app/package.json` or wherever the loader reads it, `languages` where text exists) and a 3-line `README.md` (what it shows, which guide section of `modding/README.md`). No media, no network, no build step: plain JS/CSS/HTML; MIT (decision 107).
+- `theme/` (id `example-theme`): root `style.css` only (auto-linked, plan 117): overrides colour variables from `game/theme.css` and one component rule by its stable class (decision 124: module paths), visible on every screen (e.g. a night palette).
+- `rules-tweak/` (id `example-rules-tweak`): `entry: "main.js"`, `export default async function setup(trivia)` (decision 131): `trivia.actions.before` gives every new game one more Soplo (or the closest change the engine accepts as built), `trivia.i18n.add` rewords one string in es/en/de so the change is visible, `trivia.on("game:end")` logs the result. ≤ 40 lines with comments.
+- `conversion/` (id `example-conversion`): own `index.html` + `main.js`: a one-screen "guess the number" (≤ 80 lines) using our fonts from `/fonts/` (falls through to our layer: shows the overlay), keyboard/pad/mouse to play, Esc/pad B quits via `window.triviaShell.quit()`, calls `window.triviaShell.mods.ready()` (plan 118); on-screen text: "start with --no-mods to get the game back".
+
+## Done when
+- Each, copied into a temp `TRIVIA_MODS_DIR`, loads in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`) and shows its change: theme colours on start and question screens; a new game has the extra Soplo and the reworded string; the conversion replaces the game and quits with Esc and pad B.
+- All three plus `template-bundle` enabled together: no errors on the mods screen.
+- `trivia-desktop --check-mod <folder>` (decision 133) exits 0 for each.
+- `--no-mods` brings back our game; temp dir deleted.
+- Per-commit checks pass (AGENTS.md).', '2026-10-13T18:37:00Z', NULL, 941);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (988, 121, 'Modding guide modding/README.md', 'work', 'open', NULL, NULL, 'Part of plan 121 (milestone 15). The one player-facing modding guide, English only, at `modding/README.md`, online at `https://github.com/rubenmoor/trivia/blob/main/modding/README.md` (decision 134: Modding guide: path, language, examples). It documents what plans 111–120 built; it designs nothing.
+
+Runs after the example mods task of plan 121 and the docs tasks of plans 111, 112, 114, 115, 117, 118, 119, 120 and the plan written by task 906 (achievements, flags, telemetry with mods; decision 123).
+
+## Sources
+- `plans/18-steam-integration.md` "Modding" sections (module paths, `mod.json` incl. JSON Schema, Workshop source, bundles, `window.trivia`, mods screen, publishing), `plans/22-bundles.md` "Player bundles (mods)", `modding/bundles.md`.
+- Every command, path, error code and API name checked against the code (`grep` in `app/`), not copied from plans.
+
+## Style
+Intro paragraph in full sentences (what mods can do; files laid over the game), then bullets per AGENTS.md.
+
+## Sections (plan 121 "Guide" lists the details per section)
+- Quick start: copy an example into the local mods folder (packaged `<userData>/mods/` with the real path per OS as the shell resolves it: Windows `%APPDATA%\<app name>\mods`, Linux/Deck `~/.config/<app name>/mods`; dev `mods/`, `TRIVIA_MODS_DIR`), restart, Mods screen, allow mods.
+- Mod format: `mod.json` fields (`id`, `name`, `description`, `version`, `game`, `languages`, `entry`, `kind`, `workshopId`), limits, error/warning codes as shown on the mods screen, JSON Schema ("the validator is the source of truth"), `--check-mod`.
+- Sources and load order: local, Workshop (restart after updates), local shadows Workshop (decision 127), `mods.json` per machine, top wins, new mods appended.
+- Overlay rules: `app://trivia/<rel>` → `<mod>/<rel>`, naming (decision 124: `.svelte.js`, `.svelte.css`, `vendor/`, `_virtual/`), what can''t be overridden (plan 111''s list, `/data/` except bundles, `/media`, `mod.json`), case, source maps / seeing our source (devtools if player-usable, else the repo at tag `v<version>`), screen list (`game/screens/*`, `game/question/*`, plan 116), full conversion = own `index.html`.
+- Code add-ons: `entry`, `setup(trivia)`, root `style.css`, run order, 5 s timeout and error codes (decision 131), every `window.trivia` member with a one-line example, importing our modules by path, Svelte via `/vendor/svelte/…`; `window.triviaShell` is ours, no promise (decision 130).
+- Mods screen and safe start: on/off, order, restart, one-time notice, crashed start → next start without mods, `--no-mods` in Steam launch options, `window.triviaShell.mods.ready()` for conversions.
+- Player bundles: summary + links to `bundles.md`, `bundle-prompt.md`, `template-bundle/`; base vs add-on, `<mod id>:<id>` (decision 128), credits (decision 129), never in our pool or reports.
+- Achievements, flags, telemetry with mods: decision 123''s answer as built; flags hidden on player questions.
+- Publishing: `--publish-mod` and flags (plan 119), `workshopId`, private first (decision 132), legal agreement URL, Windows log file, tags.
+- Rules: page only, offline, no stability promise (renames in patch notes), licence: `modding/` MIT, our questions not (decision 107, `LICENSE-content.md`).
+- Examples: one line each, linking `examples/*` and `template-bundle/`.
+
+Also: the "Modding" sections in `plans/18-steam-integration.md` and `plans/22-bundles.md` get one line at their top: "player-facing: `modding/README.md`" (existing text stays).
+
+## Done when
+- Every command in the guide runs as written on the examples (`--check-mod`, `--publish-mod --dry-run`, `--no-mods`).
+- Every path and `window.trivia` member named exists (`grep` in `app/`); every section above present.
+- Following "Quick start" on a fresh packaged Linux build (`trivia-desktop-build --dir`, `linux-unpacked/`) gets the theme example running.
+- Per-commit checks pass.', '2026-10-13T18:37:00Z', NULL, 941);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (989, 121, 'Ship the guide and examples, check them in modkit, link them', 'work', 'open', NULL, NULL, 'Part of plan 121 (milestone 15). Runs after the guide task (`modding/README.md`).
+
+## What
+- Install folder: `modding/README.md` and `modding/examples/` land via plan 120''s electron-builder `extraFiles` for `modding/` (decision 133); check `app/desktop/release/linux-unpacked/modding/` and `win-unpacked/modding/`. `credits_check.mjs`: unaffected (no media) or adjusted.
+- `trivia-release-check` step `modkit` (plan 120 task 5): also runs `--check-mod` on each `modding/examples/*`.
+- Links: `README.md` how-to "Mod the game" (two lines: guide link, examples); `directory.md` `modding/` row names `README.md` and `examples/`; `plans/18-steam-integration.md` "Modding" and `plans/22-bundles.md` link the guide; `LICENSE-content.md`: if its paths could be read as covering `modding/template-bundle/`, state `modding/` is MIT (decision 107).
+- `pm decision consequences 134 "…"` (decision 134: Modding guide: path, language, examples): what shipped where.
+
+## Done when
+- `trivia-desktop-build --dir`: `modding/README.md` and `modding/examples/` in both unpacked builds.
+- `trivia-release-check --skip tag` passes `modkit`.
+- Per-commit checks pass.', '2026-10-13T18:37:00Z', NULL, 941);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (990, 121, 'Store page and Workshop texts: modding bullet and guide link', 'work', 'open', NULL, NULL, 'Part of plan 121 (milestone 15). Runs after the guide task (`modding/README.md`); drafting may start once the guide URL and section names are fixed. Workers never log into Steamworks (plan 88); every store text set is approved by a pm decision.
+
+## What
+- Valve''s current rules for links in store texts (external links in "About this game"? linkfilter? only the website field?) and whether Steamworks has a Workshop description field (else the community hub''s first announcement): check, cite the pages.
+- `plans/17a-store-page.md` new section "Modding": per store language (en, es, es-ES only where it differs, de) one feature bullet (e.g. en «Make it yours: question bundles, themes and full mods, shared on the Steam Workshop») and a guide link line (`https://github.com/rubenmoor/trivia/blob/main/modding/README.md`, decision 108: repo public); the Workshop hub description per language with the guide link. Terms per `locales/style/<locale>.md` (plan 100), «Steam Workshop» / «Steam-Workshop» as Steam writes it.
+- Timing in the section: entered at launch (milestone 11), once Workshop works for players (plan 122''s check), not on the beta page.
+- Raise `pm decision add "Store texts: modding bullet and guide link?"` with the drafts and the cited link rules in its body; options: "approved as drafted" (recommended) | "link only on the Workshop page, no store bullet" | "changes: …". Then `pm task-pending-decision <this task> <id>`, stage the drafts and stop.
+- After the answer: apply it to 17a; task 672 (store page entry checklist) gains rows "modding bullet per language" and "guide link" if still open (`pm task set 672`), else `pm task add 95 …` (launch); task 666 (store texts per language): if open, `pm task set 666` adds "include the modding bullet from 17a''s Modding section"; if done, insert the bullet into each language block of 17a here. `pm decision consequences <id> "…"`.
+
+## Done when
+- The decision is answered and applied; 17a''s Modding section holds the approved texts; task 672 (or a plan 95 task) lists their entry at launch.', '2026-10-13T18:37:01Z', NULL, 941);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25494,6 +25564,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (793, 938, '2026-10-13T18:33:43Z', '2026-10-13T18:34:31Z', 'done', NULL, 0, '57632e244f77f55def36d6fe40f0d9dec87a649c', 'claude-opus-5-5[1m]', 'ac401352-461a-49b6-9b9f-0e219ed95866', 6, 12, 4684, 199234, 33382, 0.40063080000000007, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (794, 939, '2026-10-13T18:34:31Z', '2026-10-13T18:35:12Z', 'done', NULL, 0, '67541dba9c2e1d52cead551335b4074d1b3e7935', 'claude-opus-5-5[1m]', 'fbef0ea5-c975-4025-bfae-eeb3e063726f', 5, 10, 4014, 146797, 27300, 0.3280794, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (795, 940, '2026-10-13T18:35:12Z', '2026-10-13T18:36:18Z', 'done', NULL, 0, '99c6277f44e7dfce4732984defce207184298985', 'claude-opus-5-5[1m]', '9f8f863d-1a87-43db-8c92-919322e90b98', 8, 16, 6748, 294375, 35059, 0.47437099999999993, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (796, 941, '2026-10-13T18:36:19Z', '2026-10-13T18:37:09Z', 'done', NULL, 0, 'a32af1065ccb4aeb8b5a34a6c6123e1d5d1836b6', 'claude-opus-5-5[1m]', 'd753f1c8-3f26-4bf5-8d4a-5c1378c02076', 5, 10, 5260, 161333, 32958, 0.4011706, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
