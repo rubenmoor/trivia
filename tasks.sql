@@ -19010,7 +19010,7 @@ Kept synthesized
 
 Answer
 - «approve», or «changes:» per effect: swap (another recording), back to synth, louder/quieter, pitch.', NULL, NULL, '2026-10-13T06:41:19Z', NULL, 146, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (82, 'Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?', 'pending', '["(a) Replace the 2 Freesound picks from Commons before release; drop Freesound from the audio order", "(b) Ask Freesound/UPF with the drafted email; keep Freesound until the reply", "(c) Keep Freesound for the family only; exclude its picks from the Steam media bundle (SW-9)"]', 'OQ-45 (Freesound), plan 42. The authoring pipeline uses Freesound''s API only to find sounds (MP-6, `authoring/tools/providers/freesound.py`, audio order `commons → freesound`); the game ships the picked CC0/CC BY MP3 previews, never the API. Is a paid Steam release a problem? **Depends on plan 39 / decision 66: Price model (OQ-33)** (paid = commercial).
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (82, 'Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?', 'answered', '["(a) Replace the 2 Freesound picks from Commons before release; drop Freesound from the audio order", "(b) Ask Freesound/UPF with the drafted email; keep Freesound until the reply", "(c) Keep Freesound for the family only; exclude its picks from the Steam media bundle (SW-9)"]', 'OQ-45 (Freesound), plan 42. The authoring pipeline uses Freesound''s API only to find sounds (MP-6, `authoring/tools/providers/freesound.py`, audio order `commons → freesound`); the game ships the picked CC0/CC BY MP3 previews, never the API. Is a paid Steam release a problem? **Depends on plan 39 / decision 66: Price model (OQ-33)** (paid = commercial).
 
 **Caveat:** this worker had no web access (WebFetch/WebSearch denied). Terms below are from memory; ≈ marks what to re-check on the pages before answering.
 
@@ -19044,7 +19044,7 @@ I''m making a small family trivia game that I plan to sell on Steam. An internal
 Does this count as commercial use of the API that needs a licence? If so, what would it cost?
 
 Thank you,
-Ruben Moor', NULL, NULL, '2026-10-13T06:42:42Z', NULL, 204, NULL, 'rule', NULL, '');
+Ruben Moor', '(a) Replace the 2 Freesound picks from Commons before release; drop Freesound from the audio order', NULL, '2026-10-13T06:42:42Z', '2026-10-13T16:05:18Z', 204, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (83, 'Recorded music loops: approve on the TV?', 'pending', '["approve", "changes: <track / cut / level> → <what''s wrong>"]', 'Plan 33 replaced the three generated music loops with one matched CC0 set; please listen on the TV.
 
 Recorded (OpenGameArt «Music loop variations», obscure music, CC0; 100 bpm, 4/4, 8 bars = 19.2 s each, −18 LUFS like `redoble`)
