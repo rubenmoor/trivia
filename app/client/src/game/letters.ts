@@ -9,5 +9,6 @@ export function typeKey(name: string, key: string, note = false): string {
   if (key === " " && (name === "" || name.endsWith(" "))) return name;
   const prev = name.at(-1);
   const upper = note ? /^$|[.?!\u00bf\u00a1]\s*$/.test(name) : prev === undefined || prev === " " || prev === "-";
-  return name + (upper ? key.toUpperCase() : key.toLowerCase());
+  const up = key.toUpperCase();
+  return name + (upper && up.length === key.length ? up : key.toLowerCase()); // ß stays ß, not SS
 }

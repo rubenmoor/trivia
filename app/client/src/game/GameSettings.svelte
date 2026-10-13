@@ -86,7 +86,9 @@
         const id = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.step : undefined;
         if (a.type === "navigate" && id && (a.dir === "left" || a.dir === "right")) step(id, a.dir === "right" ? 1 : -1);
         else if (a.type === "confirm") apply();
-        else if (a.type === "back" || a.type === "menu") onclose();
+        else if (a.type === "back" || a.type === "menu") {
+          if (!busy) onclose();
+        }
         else return false;
         return true;
       },

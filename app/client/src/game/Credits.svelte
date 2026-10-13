@@ -93,7 +93,7 @@
         <h3>{t("credits.media")} <small>{credits.media.length}</small></h3>
         <ul>
           {#each credits.media as m, i (i)}
-            {@render row(m.title, m.author ?? t("credits.unknownAuthor"), m.license, `${t(`credits.${m.kind}`)} · ${m.provider ?? ""}`, m.source_url)}
+            {@render row(m.title, m.author ?? t("credits.unknownAuthor"), m.license, [t(`credits.${m.kind}`), m.provider].filter(Boolean).join(" · "), m.source_url)}
           {/each}
         </ul>
       </section>

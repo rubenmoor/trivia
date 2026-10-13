@@ -6,9 +6,9 @@
   const loops: Track[] = ["normal", "question", "submitted"];
   let synth = $state(false);
 
-  function play(cue: Cue, synth: boolean) {
+  function play(cue: Cue, synthesized: boolean) {
     unlock();
-    sfx(cue, 5, { synth });
+    sfx(cue, 5, { synth: synthesized });
   }
 
   /** The loops keep looping, so the seam can be heard. */
