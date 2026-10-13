@@ -109,6 +109,26 @@ qgen report              # supply per level, difficulty and category; progress v
 qgen patch-notes [<from-tag> [<to-tag>]]   # a content patch's counts-only notes + Steam event drafts (default: newest v* tag → working tree)
 ```
 
+### Pull player reports
+
+```sh
+qgen flag --pull --dry-run   # what the report server holds, nothing written
+qgen flag --pull             # reports → needs_work reviews, then acknowledged on the server
+```
+
+Players send a flagged question with «Enviar» in «Preguntas marcadas»; the game posts it to the report server (`reportUrl` in `app/desktop/package.json`; `--url` overrides it). The pull needs the server's pull token: `export TRIVIA_REPORT_TOKEN=…` (e.g. in `.env.local`) or write it to `state/report-token` (gitignored); never commit it. Each report becomes a `needs_work` review with the feedback «Reporte de jugador (…)» in `/review?status=needs_work`; reports in `en`/`de` go to that translation. Pulled ids are kept in `state/reports-pulled.json`, so a repeated pull adds nothing; mod questions and unknown ids are skipped and acknowledged. Then `qgen rework` picks them up.
+
+### A player pasted a report
+
+Without a server (or when sending failed), players copy the report text from «Preguntas marcadas» («Copiar» / «Copiar todo») and paste it somewhere, e.g. the Steam Discussions. Paste it into `qgen flag`:
+
+```sh
+qgen flag --dry-run < report.txt   # what would change
+qgen flag < report.txt             # or: qgen flag, paste, Ctrl-D
+```
+
+Text around the `¡Trivia! #q-… · …` blocks is ignored; one paste can hold many reports. The same report twice adds nothing.
+
 ### Work on the code
 
 ```sh

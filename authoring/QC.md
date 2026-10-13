@@ -59,6 +59,7 @@ A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<lo
 Players report questions from the game (plan 93); each report becomes a human `needs_work` review, outside the batch steps.
 
 - Pasted report text (copied from «Preguntas marcadas»): `qgen flag [--dry-run] < reports.txt`; feedback «Reporte de jugador (…)» in `/review?status=needs_work`, older feedback after «Antes:»; es → source, en/de → that translation; unknown ids skipped, a repeated report adds nothing.
+- Sent reports (report server, plan 103): `qgen flag --pull [--url URL] [--dry-run]`; same feedback, then acked; token `TRIVIA_REPORT_TOKEN` or `state/report-token`; ledger `state/reports-pulled.json`; mod and unknown ids skipped and acked.
 
 ## Never
 
