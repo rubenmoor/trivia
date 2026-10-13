@@ -401,6 +401,10 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Outcome
 - "Coming soon" page live (ST-3).
 - Release checklist: build from a tagged commit, `qgen validate` clean, credits complete, offline test, Deck test, family sign-off (ST-4).
+- Store facts measured on the release candidate before launch (decision 90); the store page updated to match:
+  - installed size of the RC build (base and each DLC)
+  - minimum requirements from a full game with video questions on a weak machine (an older laptop) and on a Steam Deck (none at hand yet: borrow or buy one)
+  - controller flag from a pad-only game (Full if it passes, else Partial)
 - Post-release: content update cadence (decision 96) (ST-5).
 - Question reports through our own endpoint (decision 93), in the launch build:
   - small server: `POST /reports` (question id, question language, the text the player saw, note, game version, pool hash); hosted on Cloudflare Workers + D1 (free tier) unless the plan finds a better fit; server code in the repo, its secrets (Steam publisher Web API key, pull token) never
