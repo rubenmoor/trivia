@@ -6,8 +6,9 @@ import layout
 
 PLAY_FIELDS = ["id", "status", "difficulty", "subcategory", "bundle", "description", "question", "answer",
                "wrong_answers", "hints", "fun_fact"]
-MEDIA_PLAY_FIELDS = ["type", "role", "file_url", "source_url", "credit"]
-BACKGROUND_PLAY_FIELDS = ["file_url", "source_url", "credit"]
+MEDIA_PLAY_FIELDS = ["type", "role", "file_url", "source_url", "credit", "provider", "license", "license_url", "author",
+                     "author_url"]
+BACKGROUND_PLAY_FIELDS = ["file_url", "source_url", "credit", "provider", "license", "license_url", "author", "author_url"]
 
 
 def play_entry(q):

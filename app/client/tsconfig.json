@@ -15,6 +15,6 @@
     "noImplicitReturns": true,
     "noImplicitOverride": true
   },
-  "include": ["src/**/*.ts", "src/**/*.svelte", "vite.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.svelte", "vite.config.ts", "credits.ts", "node.d.ts"],
   "exclude": ["src/**/*.test.ts", "src/engine/test/"]
 }

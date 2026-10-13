@@ -15,6 +15,7 @@ Decided: **Electron** (D-63, pm decision 12; facts checked 2026-10-11, sources t
 
 The shell's own code stays tiny: create a fullscreen window, load `app/client/dist/`, expose `loadSave`/`writeSave` and the Steam calls to the page through a preload bridge (no Node in the page itself).
 - Window option `webPreferences.autoplayPolicy: "no-user-gesture-required"`: a gamepad press isn't user activation in Chromium (HTML spec: only key, mouse, touch), so a pad-only start would stay silent (plan 45, IN-4).
+- Credits: the shell adds its own entry (Electron, MIT, plus the Chromium licence file Electron ships) to the generator `app/client/credits.ts` (PUB-5, plan 47).
 
 ## Steam features
 - **Steam Cloud:** the save (12) is one JSON file, `<userData>/save/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72). Steam Auto-Cloud syncs it with no code: root `save/`, non-recursive, pattern `game.json` (the `.tmp` and `backup/` stay local).
