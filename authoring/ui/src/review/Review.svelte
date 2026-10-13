@@ -627,7 +627,7 @@
 
     <article>
       {#if locale}
-        <SourcePanel question={current} />
+        <SourcePanel question={current} {blind} />
         <p class="muted">Media and bundle live on the source: <a href={`/review?id=${encodeURIComponent(current.id)}`}>change them in the Spanish view</a>.</p>
       {:else}
       <p class="description">{current.description}</p>

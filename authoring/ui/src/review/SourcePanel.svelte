@@ -2,7 +2,8 @@
   // Locale view (plan 67): the Spanish source (read-only) next to the translation, row by row.
   import type { Question } from "../lib/types";
 
-  let { question }: { question: Question } = $props();
+  // blind: the spot check (plan 16) hides the translation's status, the LLM's verdict.
+  let { question, blind = false }: { question: Question; blind?: boolean } = $props();
 
   const source = $derived(question.source!);
   const indexes = (a: string[], b: string[]) => [...Array(Math.max(a.length, b.length)).keys()];
@@ -10,7 +11,7 @@
 
 <div class="side">
   <h2>Español · difficulty {source.difficulty} · {source.status.replace("_", " ")}</h2>
-  <h2>{question.locale} · difficulty {question.difficulty} · {question.status.replace("_", " ")}</h2>
+  <h2>{question.locale} · difficulty {question.difficulty}{blind ? "" : ` · ${question.status.replace("_", " ")}`}</h2>
 
   <p class="description">{source.description}</p>
   <p class="description">{question.description}</p>

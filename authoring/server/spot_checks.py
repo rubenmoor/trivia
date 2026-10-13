@@ -5,6 +5,7 @@ import datetime, json, re, threading
 import layout  # authoring/tools/layout.py
 import qgen  # authoring/tools/qgen.py: audit sample, LLM decisions, audits
 import targets  # authoring/tools/targets.py
+import translations  # authoring/tools/translations.py
 
 FILE = layout.SPOT_CHECKS
 DEFAULT_SIZE = 30  # pm decision 2, until targets.json has "quality"
@@ -29,6 +30,12 @@ def run_ids(run):
     return cfg.get("ids") if cfg.get("mode") == m.group(1) else None
 
 
+def run_locale(run):
+    """The locale of a translation run (`tr-<locale>-<n>`, plan 66), or None."""
+    m = re.fullmatch(r"tr-([A-Za-z-]+)-\d+", run)
+    return m.group(1) if m and m.group(1) in translations.LOCALES else None
+
+
 def load():
     return json.loads(FILE.read_text(encoding="utf-8")) if FILE.exists() else {}
 
@@ -46,7 +53,11 @@ def audit_of(q):
 
 def record(batch, q, media_changed):
     """Store the spot check of q from its human review (D-33); returns the item.
-    `batch` is q's batch or a back-audit run with q in it (plan 57)."""
+    `batch` is q's batch, a back-audit run with q in it (plan 57) or a translation run: then
+    q's translation in that run is checked and the item gets "locale" (plan 67)."""
+    locale = run_locale(batch)
+    if locale:
+        q = next((t for t in translations.load(locale)["questions"] if t["id"] == q["id"]), None) or {"id": q["id"]}
     rv = q.get("review") or {}
     if q.get("batch") != batch and q["id"] not in (run_ids(batch) or ()):
         raise ValueError(f"{q['id']} is not in {batch}")
@@ -57,11 +68,13 @@ def record(batch, q, media_changed):
     llm = qgen.llm_decisions(batch).get(q["id"])
     if llm is None:
         raise ValueError(f"{q['id']} has no recorded LLM review")
-    a = audit_of(q)
+    a = qgen.translation_audit_of(q) if locale else audit_of(q)
     item = {"llm": llm, "audit": a and ("problem" if qgen.is_major(a) else "ok"), "human": rv["decision"],
             "problems": rv.get("problems") or [],
             "difficulty": [q.get("difficulty_original") or q["difficulty"], q["difficulty"]],
             "media_changed": bool(media_changed), "on": datetime.date.today().isoformat()}
+    if locale:
+        item["locale"] = locale
     with _lock:
         data = load()
         entry = data.setdefault(batch, {"size": size(), "seed": batch, "items": {}})

@@ -49,7 +49,8 @@ API:
     GET  /api/spot-checks                          {"size": n, "problems": [...], "checks": authoring/data/spot-checks.json}
     POST /api/spot-checks/<batch>/<id>             body {"media_changed": bool}: record the spot check from the
                                                    question's human review; {"undo": true} removes it (plan 16);
-                                                   <batch> may be a back-audit run (plan 57)
+                                                   <batch> may be a back-audit run (plan 57) or a translation run
+                                                   tr-<locale>-<n>: its translation, item with "locale" (plan 67)
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
                                                    (RV-23, authoring/server/media_stats.py)

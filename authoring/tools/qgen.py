@@ -3854,16 +3854,23 @@ def names_warnings():
 
 
 def spot_check_problems(questions, scale):
-    """Errors in authoring/data/spot-checks.json (plan 16): batches and ids exist, values in range."""
+    """Errors in authoring/data/spot-checks.json (plan 16): batches and ids exist, values in range;
+    a translation run's (tr-<locale>-<n>) items are its translations, with "locale" (plan 67)."""
     checks = load_json(layout.SPOT_CHECKS)
     if checks is None:
         return []
     rel, out = "authoring/data/spot-checks.json", []
-    batch_of = {q["id"]: q.get("batch") for q in questions}
+    pool_batches = {q["id"]: q.get("batch") for q in questions}
+    tr_batches = {}  # locale -> {id: batch} of its translations (plan 67)
     decisions, (lo, hi) = {"approved", "needs_work", "rejected"}, scale
     for b, entry in checks.items():
+        m = re.fullmatch(r"tr-([A-Za-z-]+)-\d+", b)
+        locale = m.group(1) if m and m.group(1) in translations.LOCALES else None
+        if locale and locale not in tr_batches:
+            tr_batches[locale] = {t["id"]: t.get("batch") for t in translations.load(locale)["questions"]}
+        batch_of = tr_batches[locale] if locale else pool_batches
         if b not in batch_of.values():
-            out.append(f"{rel}: no batch {b!r} in the pool")
+            out.append(f"{rel}: no batch {b!r} in {f'questions.{locale}.json' if locale else 'the pool'}")
             continue
         if not isinstance(entry.get("size"), int) or entry["size"] < 1 or entry.get("seed") != b:
             out.append(f"{rel}: {b}: size must be an integer ≥ 1 and seed the batch name")
@@ -3876,6 +3883,7 @@ def spot_check_problems(questions, scale):
                 ("difficulty", isinstance(it.get("difficulty"), list) and len(it["difficulty"]) == 2
                  and all(isinstance(d, int) and lo <= d <= hi for d in it["difficulty"])),
                 ("media_changed", isinstance(it.get("media_changed"), bool)),
+                ("locale", it.get("locale") == locale),
                 ("on", isinstance(it.get("on"), str) and re.fullmatch(r"\d{4}-\d\d-\d\d", it["on"]))] if not ok]
             if bad:
                 out.append(f"{rel}: {b}: {i}: bad {', '.join(bad)}")
