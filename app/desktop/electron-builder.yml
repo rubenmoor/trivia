@@ -12,7 +12,9 @@ files:
   - mute.mjs
   - workshop.mjs
   - publish.mjs
+  - report.mjs
   - resolve.mjs
+  - telemetry.mjs
   - save.mjs
   - preload.cjs
 extraResources:
