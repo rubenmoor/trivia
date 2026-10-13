@@ -12466,7 +12466,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every finding and "task 6" cluster has a status; checks pass; staged.', '2026-10-12T23:10:17Z', '2026-10-13T14:24:21Z', 522);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (586, 82, 'Part 10: review build and package config', 'work', 'open', NULL, NULL, 'Task 7 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: review these files, fix what is cheap, log every file and finding in `## Part 10` of `code-review.md` (no-findings rows included); "task 7" cluster rows get their final status.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (586, 82, 'Part 10: review build and package config', 'work', 'done', NULL, '2026-10-13, flake.nix, authoring/ui/tsconfig.json, app/client/.gitignore + authoring/ui/.gitignore deleted, directory.md, code-review.md; nix build .#app ok (npmDepsHash unchanged), trivia-desktop-build skipped (app/desktop packaging untouched); follow-up task 743', 'Task 7 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: review these files, fix what is cheap, log every file and finding in `## Part 10` of `code-review.md` (no-findings rows included); "task 7" cluster rows get their final status.
 
 ## First
 - Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
@@ -12489,7 +12489,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `flake.nix`, `flake.lock`, `package.json` or `package-lock.json` changed → `nix develop -c true` and `nix build .#app` (update `npmDepsHash` if the lockfile changed), `result/bin/trivia` starts on a temp `TRIVIA_STATE`; `trivia-desktop-build` only if `app/desktop` packaging is affected (note why skipped). `nix flake check` not required.
 
 ## Done when
-- Every file above listed in `## Part 10`, every finding with a status; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+- Every file above listed in `## Part 10`, every finding with a status; checks pass; staged.', '2026-10-12T23:10:17Z', '2026-10-13T14:28:58Z', 522);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (587, 82, 'Part 10: docs vs. code, close part 10', 'work', 'dropped', -10, 'replaced by task 617 so it queues after task 616 (linter) and before plan 83', 'Task 9 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586, `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful` and every fix of parts 2–9.
 
 ## First
@@ -14337,6 +14337,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plans: `plans/13-game-modes.md` stepper wording if it states the range.
 - Check: `npm run check`, `npm test`, `npm run build`; try the configure screen''s joker lines by keyboard (←/→ at 0, at the max, at ∞).
 - Update the cluster 26 row in `code-review.md` `## Part 10` with the outcome.', '2026-10-13T14:19:36Z', NULL, 584);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (743, 82, 'Type-check the engine tests and authoring/tools TS in npm run check', 'work', 'open', NULL, NULL, 'Found by `task 586: Part 10: review build and package config` (cluster 34 of `code-review.md` `### Duplication clusters`). No `tsconfig` covers `app/client/src/**/*.test.ts`, `app/client/src/engine/test/` (excluded in both `tsconfig.json`s) or `authoring/tools/supply.ts`, `authoring/tools/sim/*.ts` (in none), so `npm run check` never type-checks them; Node runs them with type stripping only.
+
+## State (2026-10-13, `tsc -p` with temp configs extending `app/client/tsconfig.json`)
+- Tests: 22 × TS2591 (`node:test`, `node:assert/strict`, `node:fs`, `node:path` unknown: no `@types/node`), 2 × TS2339 `import.meta.dirname`, real ones: `invariants.test.ts` 5 × `cards` possibly null, `game.test.ts:76` possibly null, `game.test.ts:34` and `save.test.ts:9` implicit `any`, `save.test.ts:9` `findLast` (lib below ES2023).
+- `supply.ts`, `sim/*.ts`: only the Node module/`import.meta.dirname` errors.
+
+## What
+- No new dependency (AGENTS.md minimal dependencies): declare the few Node APIs used, like `app/client/node.d.ts` does for `credits.ts` (extend it or a sibling file: `node:test` `test`/`describe`, `node:assert/strict` functions used, `node:path`, `node:fs` additions, `ImportMeta.dirname`). If that grows unreasonable, `pm decision add` for `@types/node` instead.
+- A tsconfig for tests + tools (e.g. `app/client/tsconfig.node.json` extending `tsconfig.json`, `include` the tests, `engine/test/`, `../../authoring/tools/supply.ts`, `../../authoring/tools/sim/*.ts`; `lib` ES2023 if `findLast` stays) run by `app/client`''s `check` script (`tsc -p …`); fix the real errors above, behaviour unchanged.
+- Log the result as a row in `## Part 10` of `code-review.md` (cluster 34 status) and update `directory.md` for a new file.
+
+## Done when
+- `npm run check` type-checks those files with 0 errors; `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-13T14:27:52Z', NULL, 586);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16105,6 +16118,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (638, 583, '2026-10-13T13:42:47Z', '2026-10-13T13:52:51Z', 'done', NULL, 0, '78234dceeef85bb62eb662771b07f807b36a0c7c', 'claude-opus-5-5[1m]', '17e1edb4-51e5-41c3-b7c4-ea2f827d9094', 78, 154, 48747, 10553893, 190835, 4.6130146, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (639, 584, '2026-10-13T13:52:52Z', '2026-10-13T14:20:41Z', 'done', NULL, 0, 'c272f9609c11a8b8b138ab60df26b286a2909a2f', 'claude-opus-5-5[1m]', '381af23f-f7bf-4754-b8bb-16a3e7d2d05e', 105, 202, 49857, 11542948, 165746, 4.6325056, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (640, 585, '2026-10-13T14:20:42Z', '2026-10-13T14:24:30Z', 'done', NULL, 0, 'f979d27949bc74e12c6e789f4e08ece361212b07', 'claude-opus-5-5[1m]', '1a1a9e2e-60ff-438f-925a-76981093ffa5', 53, 98, 20248, 4375667, 105912, 2.1277814, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (641, 586, '2026-10-13T14:24:31Z', '2026-10-13T14:29:10Z', 'done', NULL, 0, 'f43fcba08aadab864fdb2a3567dd950b08a41c1d', 'claude-opus-5-5[1m]', '2f0838a6-dafc-4f63-8ac9-e50601b52d7f', 35, 68, 17653, 2797850, 94320, 1.6674620000000002, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

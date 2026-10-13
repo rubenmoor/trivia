@@ -21,7 +21,7 @@
 
   outputs = { self, nixpkgs, pm }:
     let
-      systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];  # nixpkgs 26.11 dropped x86_64-darwin
       forAll = f: nixpkgs.lib.genAttrs systems (system: f (import nixpkgs {
         inherit system;
         # Claude Code for the pipeline (D-35); SteamCMD for Steam uploads (D-93).
@@ -64,7 +64,7 @@
             if [ ! -f "$root/app/desktop/main.mjs" ]; then
               echo "trivia-desktop: $root is not the trivia repository (no app/desktop/main.mjs)" >&2; exit 2
             fi
-            ${pkgs.lib.optionalString (pkgs.system == "x86_64-linux") ''export TRIVIA_STEAM_SDK=''${TRIVIA_STEAM_SDK:-${steamSdk pkgs}}''}
+            ${pkgs.lib.optionalString (pkgs.stdenv.hostPlatform.system == "x86_64-linux") ''export TRIVIA_STEAM_SDK=''${TRIVIA_STEAM_SDK:-${steamSdk pkgs}}''}
             exec electron "$root/app/desktop" "$@"
           '';
         };
@@ -111,7 +111,7 @@
             version = (builtins.fromJSON (builtins.readFile ./app/desktop/package.json)).version;  # D-91
             src = pkgs.lib.fileset.toSource {
               root = ./.;
-              fileset = pkgs.lib.fileset.unions [ ./package.json ./package-lock.json ./app ./authoring/ui/package.json ];
+              fileset = pkgs.lib.fileset.unions [ ./package.json ./package-lock.json ./app ];
             };
             npmDepsHash = "sha256-njHPPjPRJW/Qe+INDPjHGxg1haZ7ZYrLBJAsfgYAin4=";
             npmWorkspace = "app/client";
@@ -132,7 +132,7 @@
             '';
             meta.mainProgram = "trivia";
           };
-          default = self.packages.${pkgs.system}.app;
+          default = self.packages.${pkgs.stdenv.hostPlatform.system}.app;
           # The authoring commands, for `nix run .#qgen` etc. They never ship.
           authoring = pkgs.symlinkJoin {
             name = "trivia-authoring";
@@ -148,12 +148,12 @@
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-desktop-build
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
-            ] ++ nixpkgs.lib.optionals (pkgs.system == "x86_64-linux") [
+            ] ++ nixpkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
               tools.trivia-steam tools.trivia-release-check tools.steamcmd  # SteamCMD: x86_64-linux only
               # smoke.mjs: an FHS runtime like Steam's, plus what Electron links
-              (pkgs.steam.override { extraLibraries = p: with p; [ nss nspr gtk3 atk at-spi2-atk at-spi2-core xorg.libXcomposite ]; }).run
+              (pkgs.steam.override { extraLibraries = p: with p; [ nss nspr gtk3 atk at-spi2-atk at-spi2-core libxcomposite ]; }).run
             ]
-              ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
+              ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.stdenv.hostPlatform.system}) pm.packages.${pkgs.stdenv.hostPlatform.system}.default;
           };
         });
     };

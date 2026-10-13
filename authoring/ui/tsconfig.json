@@ -1,22 +1,6 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
+  "extends": "../../app/client/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "strict": true,
-    "noEmit": true,
-    "types": [
-      "svelte",
-      "vite/client"
-    ],
-    "allowImportingTsExtensions": true,
-    "erasableSyntaxOnly": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noImplicitOverride": true,
     "paths": {
       "$app/*": [
         "../../app/client/src/*"
@@ -27,7 +11,9 @@
     "src/**/*.ts",
     "src/**/*.svelte",
     "../../app/client/src/**/*.ts",
-    "../../app/client/src/**/*.svelte"
+    "../../app/client/src/**/*.svelte",
+    "vite.config.ts",
+    "../../app/client/node.d.ts"
   ],
   "exclude": [
     "../../app/client/src/**/*.test.ts",
