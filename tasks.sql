@@ -154,7 +154,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - `trivia` serves static files plus `/api/save` only.
 
 Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', '2026-10-13T03:56:22Z');
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (3, 'UI strings in a catalog', 'open', 'Every on-screen string comes from a catalog, with no visible change. This is the groundwork for translations. Bundles (the other half of the old M9) are done in the pipeline; only the gamemaster''s check of the `colombia` proposals is left.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (3, 'UI strings in a catalog', 'implemented', 'Every on-screen string comes from a catalog, with no visible change. This is the groundwork for translations. Bundles (the other half of the old M9) are done in the pipeline; only the gamemaster''s check of the `colombia` proposals is left.
 
 ## Outcome
 - `t()` helper and the `es` catalog; every string moved into it (LUI-1).
@@ -173,7 +173,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - No Spanish literals left in `app/client/src/game` outside the catalog.
 - Every question has `bundle`, checked by `qgen validate`.
 
-Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', NULL);
+Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', '2026-10-13T06:24:58Z');
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced. Commons restriction flags (personality rights, trademark) are kept (D-61, decision 8). Needed before any public release; small and independent of the other milestones.
 
 ## Outcome
