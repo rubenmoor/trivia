@@ -21686,8 +21686,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', '2026-10-13T17:53:37Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (913, 10, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, tasks.sql: plan 10 parts 2, 10, 11 and order per decision 125 (Deck best effort, Gamepad template default)', 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', '2026-10-13T17:59:25Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (914, 112, 'create tasks for plan 112', 'split', 'open', 1000, NULL, 'Split plan 112 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:52:37Z', NULL, 900);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (914, 112, 'create tasks for plan 112', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 950-954 for plan 112', 'Split plan 112 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:52:37Z', '2026-10-13T18:29:54Z', 900);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (915, 8, 'create tasks for plan 8', 'split', 'done', 1000, '2026-10-13, tasks.sql: added task 919 (write plan: Image peek, part 10); parts 8/9 revisions already queued as tasks 916, 918 (and 917 for plan 56); no new decisions needed', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:53:34Z', '2026-10-13T17:54:05Z', 912);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (916, 48, 'revise plan 48', 'plan', 'done', 1000, '2026-10-13, plan 48 body: decision 125 (Deck = 1280×800 window run, real-Deck rows to plan 90, skipped not failed), decision 126 peek rows on every platform, plans 65 and 113 added to the guard and failure owners', 'Plan 8, the plan above plan 48, changed; it is quoted below. Bring plan 48 in line with it
@@ -22843,6 +22843,77 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Style per AGENTS.md: bullets, ultra-concise.
 
 Done when: the docs name decision 124 and the per-commit checks pass.', '2026-10-13T18:28:49Z', NULL, 911);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (950, 112, 'mods.mjs: mod.json validator, discovery, mods.json settings, arrange', 'work', 'open', NULL, NULL, 'Plan 112, task 1. New `app/desktop/mods.mjs`: pure Node (`node:fs/promises`, `node:path`), no Electron import, like `resolve.mjs` and `save.mjs` (decision 133: `trivia --check-mod` reuses `readManifest` headless later).
+
+## Exports
+- `readManifest(dir, gameVersion)` → `{ id, dir, manifest, kind, warnings[], error | null }`
+- `discover({ local, workshop }, gameVersion)`: `local` = mods folder path; `workshop` = `[{ dir, publishedFileId, state }]` (part 3 fills it; `[]` for now). Each direct subfolder of `local` with a `mod.json` is a mod; without one: ignored, one stderr line. Result per mod: `{ id, dir, source: "local" | "workshop", publishedFileId?, manifest, kind, warnings[], error | null }`.
+- `readSettings(file)`, `writeSettings(file, settings)`: `{ "version": 1, "mods": [{ "id", "on" }] }`; unreadable → empty + one stderr line, file left alone; writes atomic (temp + rename, like `save.mjs`).
+- `arrange(mods, settings, { validUser })` → `{ list, layers, settings }`: discovered mods missing from settings appended at the end `on: true` (returned settings so the caller writes back); listed ids not found kept, state `missing`; list entries carry `on`, position, state `loaded | off | invalid | no_user | missing`; `layers` = dirs of loaded mods in load order (index 0 = top = wins).
+
+## `mod.json` rules (validator is the source of truth)
+- UTF-8 JSON object, file ≤ 64 KB.
+- Required: `id` slug `^[a-z0-9][a-z0-9-]{1,63}$` (folder name irrelevant); `name` 1–80 chars; `description` ≤ 2000 (may be empty); `version` free string ≤ 32; `game` semver `x.y.z` (invalid → error; ≠ running version → warning `game_version`, still loaded). Semver compare: three integers, no dependency. Game version = `app/desktop/package.json` `version` (decision 91).
+- Optional: `languages` (locale tags as `app/client/src/lib/i18n.ts` knows them; unknown → warning; missing/[] = language-independent); `entry` (relative `.js`/`.mjs`, must exist inside the mod, symlink-safe containment); `kind` subset of `bundle|theme|code|conversion`, derived when missing: root `index.html` → `conversion`, `entry` → `code`, any `.css` → `theme`, `data/bundles/` (or `data/bundles.json`) → `bundle`; `workshopId` (decimal string, decision 132: written by publishing) is a known key.
+- Unknown top-level keys → warning (typos).
+- Error codes: `no_manifest`, `bad_json`, `bad_field` (+ field), `duplicate_id` (names the other folder), `entry_missing`, `not_a_folder`. Duplicates: local before Workshop (local shadows); between two Workshop items the lower published file id wins (decision 127).
+- Invalid mods are listed, never served.
+
+## Also
+- JSON Schema (draft 2020-12) of `mod.json` as section "Modding: `mod.json`" in `plans/18-steam-integration.md`, saying the validator is the source of truth.
+- `pm decision record "Mod settings: per machine in <userData>/mods.json, one ordered list, top wins" --answer "…" --body "…"` (per machine like decision 121; dev file `state/desktop/mods.json`; new mods appended on; unknown ids kept; read once per run, changes apply on restart).
+
+## Done when
+- Throw-away script over a temp folder (valid mod, bad JSON, missing field, duplicate id, missing entry, version mismatch, folder without manifest) prints the expected list; script deleted.
+- Per-commit checks pass (`npm run check`, `npm test`, `npm run build`, `qgen validate`).', '2026-10-13T18:29:50Z', NULL, 914);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (951, 112, 'resolve.mjs: mod layers, symlink-safe contained(), MIME, resolve.test.mjs', 'work', 'open', NULL, NULL, 'Plan 112, task 2 (after the `mods.mjs` task). Overlay in `app/desktop/resolve.mjs`.
+
+- `makeResolver({ dist, data, media, layers = [] })`: `dist` lookups and the SPA `index.html` fallback go through `[...layers, dist]`; `/data/` through `[...layers.map((d) => d + "/data"), data]` (plan 115 later narrows `/data/` to the bundles merge, decision 128); first hit wins, whole files; `mod.json` at a layer root never served; `/media?url=…` and `/api/*` unchanged (not overlaid).
+- `contained(root, rel)`: symlink-safe for every root, ours included: `realpath` of the file must stay inside the root''s `realpath` (computed once per root); files only (directories miss); `..`, `%2e%2e`, absolute paths, drive letters (`/C:/…`, `\\`) stay inside or miss.
+- `MIME`: add `.mjs`, `.map`, `.ttf`, `.otf`, `.woff`, `.txt`, `.ico`, `.wasm`; unknown stays `application/octet-stream`.
+- Bytes only: files are streamed, never `require`d/`import`ed/`eval`ed.
+
+## Test (lasting)
+- `app/desktop/resolve.test.mjs` (`node --test`, temp dirs, no Electron): `..` and encoded `..`, absolute and drive-letter paths, symlink in a mod to a file outside and to a folder outside, directory request, layer order (top mod wins, ours last), mod `index.html` as fallback, `mod.json` not served, `/data/` layering.
+- Root `package.json` `test`: append `&& node --test app/desktop/` so `npm test` runs it (D-73).
+
+## Done when
+- Test passes; `trivia-desktop` without mods plays as before; per-commit checks pass.', '2026-10-13T18:29:50Z', NULL, 914);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (952, 112, 'main.mjs: discover mods, mods.json, layers into the resolver, --no-mods', 'work', 'open', NULL, NULL, 'Plan 112, task 3 (after the `mods.mjs` and `resolve.mjs` tasks). Wire mods into `app/desktop/main.mjs`.
+
+- `modsDir()`: `TRIVIA_MODS_DIR` → packaged `<userData>/mods/` (create if missing) → dev `REPO/mods/`.
+- `modsSettingsFile()`: packaged `<userData>/mods.json`, dev `state/desktop/mods.json`.
+- `parseArgs`: `--no-mods` (extend `OWN` and `USAGE`).
+- In `start()` after `checkUser()`: `discover({ local: modsDir(), workshop: [] }, version)`, `readSettings`, `arrange(…, { validUser })`, write settings back if new mods were appended, pass `layers` to `makeResolver`. With `--no-mods` or no valid user (decision 111; dev switch `TRIVIA_DEV_STEAM_USER=1`): no layers (no-user mods show state `no_user`); `--no-mods`: one stderr line.
+- Stderr: one line per mod `trivia: mod <id> <state> [warnings]`, then a summary `trivia: mods: 2 loaded, 1 invalid`.
+- Keep `list` in a module variable for parts 3/6''s bridge; no IPC here.
+- `.gitignore`: `mods/` at repo root, short comment.
+- The request block in `main.mjs` (offline) stays.
+
+## Done when
+- `trivia-desktop` with a repo `mods/` holding a CSS override mod starts with the changed colour; `--no-mods` starts plain; without the dev switch and without Steam the mod is `no_user`; per-commit checks pass.', '2026-10-13T18:29:50Z', NULL, 914);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (953, 112, 'End-to-end check of the mod overlay in trivia-desktop (throw-away mods)', 'work', 'open', NULL, NULL, 'Plan 112, task 4 (after the `main.mjs` wiring task). Manual check, nothing lasting except the done note.
+
+Temp `TRIVIA_MODS_DIR`, `TRIVIA_DEV_STEAM_USER=1`, mods:
+- theme: `game/theme.css` with a changed colour
+- JS override of one component (output path per decision 124 if plan 111 `Readable client build` is done, else the current hashed file name)
+- two mods overriding the same file: order in `mods.json` decides; swap, restart, other wins
+- full conversion: `index.html` "Hello" (also reached via SPA fallback)
+- an invalid mod (listed invalid, not served)
+- a mod with a symlink to an outside file (e.g. a temp file standing in for `~/.ssh/…`): 404/fallback, never the file
+
+## Done when
+- Each case behaves as described; `--no-mods` brings back our game with the conversion installed; one line per case in the done note; temp mods deleted. Bugs found → follow-up tasks in plan 112.', '2026-10-13T18:29:51Z', NULL, 914);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (954, 112, 'Docs: mod overlay in directory.md, plans/18, plans/01, AGENTS.md', 'work', 'open', NULL, NULL, 'Plan 112, task 5 (last). Document the mod format and overlay.
+
+- `directory.md`: `app/desktop/` row gains `mods.mjs`, `resolve.test.mjs`, layers in `resolve.mjs`; new row `mods/` (local mods for development, gitignored; `TRIVIA_MODS_DIR`); `state/desktop/mods.json`.
+- `plans/18-steam-integration.md`: section "Modding" (sources local/Workshop, `<userData>/mods.json` and top-wins load order, layers mirror the URL space, what isn''t overlaid: `/media`, `/api/*`, `mod.json`; `--no-mods`; symlink rule; the `mod.json` schema section from the `mods.mjs` task; cite the recorded mod settings decision).
+- `plans/01-architecture.md`: one bullet on the `app://` overlay.
+- AGENTS.md "Commands": `trivia-desktop` line gains `TRIVIA_MODS_DIR`, `--no-mods`.
+- Style: bullets, ultra-concise (AGENTS.md rules).
+
+## Done when
+- Docs name plan 112''s paths and the recorded decision; per-commit checks pass.', '2026-10-13T18:29:51Z', NULL, 914);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -24936,6 +25007,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (785, 909, '2026-10-13T18:22:39Z', '2026-10-13T18:24:56Z', 'done', NULL, 0, '2fcd7ef3ae1222736f8eab7bf57382194d51276a', 'claude-opus-5-5[1m]', 'e58d28be-20a2-49c7-be4f-5d1933c37130', 18, 34, 11627, 1260897, 95892, 1.2519914, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (786, 910, '2026-10-13T18:24:57Z', '2026-10-13T18:28:07Z', 'done', NULL, 0, 'bd1a06c7417971e04d8bf451b6a0ef8c09c1c589', 'claude-opus-5-5[1m]', '872e0d74-c6e8-4446-8169-da5f1c46a732', 17, 34, 16599, 1188436, 95869, 1.3367552, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (787, 911, '2026-10-13T18:28:07Z', '2026-10-13T18:29:00Z', 'done', NULL, 0, 'c60ce2690a646c3365735382b75e4bff55123702', 'claude-opus-5-5[1m]', '60a3ee0e-0cf0-4097-bbff-67a38ca064a9', 6, 12, 4372, 197344, 30772, 0.3731328, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (788, 914, '2026-10-13T18:29:01Z', '2026-10-13T18:30:00Z', 'done', NULL, 0, '2941251a30dc1e530a1908d6a81800f47415b1e7', 'claude-opus-5-5[1m]', '59e1cfc2-ff79-4d56-9bfd-125b0abfa5e2', 6, 12, 5385, 203926, 33621, 0.41750120000000007, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
