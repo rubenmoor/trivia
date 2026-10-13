@@ -377,6 +377,10 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
   - dev mode also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (for testing media questions, e.g. the 3 video questions)
 - Bundles ship as free DLC (decision 66): own DLC entry and depot per non-base bundle, optional install; base price $9.99.
 - Store page, AI disclosure, rating and the rest of publishing (PUB-6..PUB-11, `plans/17-publishing.md`).
+- Store media (decisions 79, 80), rendered late: after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that
+  - 7 screenshots per store language: 5 on modes and configuration, 2 gameplay (locked-in answer, joker in use)
+  - trailer: 20 s of gameplay: questions answered, jokers used, a wrong answer and the loss at the end; recorded from a scripted game in the real shell under Xvfb with game audio (ffmpeg, dev-only); one command (e.g. `trivia-trailer`), one video per store language, re-runnable after any UI change; the gamemaster approves before upload
+  - en/de question shots and trailers wait for their question pools
 
 ## Constraints
 - The game plays without network; network requests only on the player''s click (question reports, milestone 11) or with opt-in telemetry; Steam distributes and syncs saves.
