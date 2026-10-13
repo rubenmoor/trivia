@@ -396,6 +396,20 @@ for name, fn, dests in parsers.values():
     print(f'{name:12} {fn:20} {len(seen):3} fns  flags {dests}  UNREAD {miss}' if miss else f'{name:12} ok ({len(dests)})')
 ```
 
+### Markers
+
+Task 528, 2026-10-13, run from the repo root over every tracked file except `tasks.sql`, `plans/`, `code-review.md` and `authoring/data/`; `.json` data hits (Spanish «todo») dropped by eye.
+
+- `git ls-files app authoring | grep -v '\.json$' | xargs grep -nE 'PLACEHOLDER|\b(TODO|FIXME|XXX|HACK)\b'`: 2 hits, both `PLACEHOLDER_IDS` in `authoring/steam/steam.py`
+- `git ls-files | grep -vE '^(tasks\.sql|plans/|code-review\.md)' | xargs grep -nIiE 'placeholder|\b(todo|fixme|xxx|hack)\b'`: rest are `todo` work-list locals (`qgen.py`, `media.py`, `release_check.py`), HTML `placeholder=` attributes, `placeholder` locale keys, `--placeholder` CSS variable
+- No `PLACEHOLDER(<task id>)` anywhere in `app/` or `authoring/` code or locales (the last ones went before this milestone, e.g. `task 140: UI-7`); no `TODO`/`FIXME`/`XXX`/`HACK` comment; so no stale or non-numeric marker
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/src/game/theme.css`, `app/client/src/game/Question.svelte` | CSS variable `--placeholder` (pink dashed border) now used only by `.media-missing`; name suggests the `PLACEHOLDER(<task id>)` marker style, which no screen uses | inconsistency | low | handed to part 5 |
+| `authoring/steam/steam.py` | `PLACEHOLDER_IDS` (Spacewar app 480 for `--dry-run`) reads like an AGENTS.md `PLACEHOLDER(<task id>)` marker in greps; e.g. `DRY_RUN_IDS` | inconsistency | low | handed to part 6 |
+| all tracked code in scope | no findings: no `PLACEHOLDER(<task id>)`, `TODO`, `FIXME`, `XXX`, `HACK` | — | — | — |
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.
