@@ -22758,8 +22758,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:03:10Z', '2026-10-13T18:04:08Z', 930);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (934, 114, 'create tasks for plan 114', 'split', 'done', 1000, '2026-10-13, tasks 955–958, decision 135 (task 958 waits for it)', 'Split plan 114 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:05:51Z', '2026-10-13T18:30:46Z', 901);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (935, 115, 'create tasks for plan 115', 'split', 'open', 1000, NULL, 'Split plan 115 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:09:32Z', NULL, 902);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (935, 115, 'create tasks for plan 115', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 959–963 for plan 115; no open decisions', 'Split plan 115 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:09:32Z', '2026-10-13T18:31:56Z', 902);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (936, 116, 'create tasks for plan 116', 'split', 'open', 1000, NULL, 'Split plan 116 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:11:10Z', NULL, 903);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (937, 117, 'create tasks for plan 117', 'split', 'open', 1000, NULL, 'Split plan 117 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -22977,6 +22977,86 @@ Workers never log in to Steam: this task only writes the checklist and handles t
 - after the answer: each failing row → a follow-up task in plan 114; then done
 
 Done when: the gamemaster answered; failures have follow-up tasks.', '2026-10-13T18:30:39Z', NULL, 934);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (959, 115, 'Shell: merged bundles.json and mod bundle folders', 'work', 'open', NULL, NULL, 'Plan 115, task 1. Runs after plan 112''s `task 950: mods.mjs: mod.json validator, discovery, mods.json settings, arrange`, `task 951: resolve.mjs: mod layers, symlink-safe contained(), MIME, resolve.test.mjs`, `task 952: main.mjs: discover mods, mods.json, layers into the resolver, --no-mods` (plan 114''s `mods:list` optional, for the warnings). Binding: decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced `<mod id>:<id>`; decision 111 (mods only with a valid Steam user).
+
+## What
+- `app/desktop/mods.mjs`: `bundleRows(dir, modId)`, pure Node, reads `<dir>/data/bundles.json` (≤ 256 KB, else warning `bundle_json`)
+  - format: `{ "bundles": [ { id, kind, languages, name, description } ] }`; `rule`, `voice`, `about` allowed, ignored
+  - `id` slug `^[a-z0-9][a-z0-9-]{0,63}$`, unique in the mod; `kind` `base` or another slug; `languages` array of strings; `name`/`description` strings
+  - bad row → dropped, warning `bundle_row` (+ row id) on the mod''s list entry; bad JSON → warning `bundle_json`, no rows
+  - structure and slugs only; `languages` outside `LOCALES` are dropped later by the loader (task 2), not here
+  - a mod with `data/bundles.json` gets `kind` `bundle` (plan 112''s derivation rule)
+- `app/desktop/resolve.mjs`:
+  - `/data/bundles.json` → ours parsed + each loaded mod''s rows in load order (top first); mod row `{ …row, id: "<mod>:<id>", source: "mod", mod: "<mod id>", modName: "<mod.json name>" }`; our rows untouched and first; built once per run (layers fixed), served as JSON
+  - `/data/bundles/<mod id>:<bundle>/<rel>` → `<that mod''s dir>/data/bundles/<bundle>/<rel>` via `contained()`, only if that mod is loaded this run and listed that bundle; else 404; no colon reaches the file system
+  - every other `/data/` path: ours only; remove plan 112''s `/data/` layering (decision 128)
+  - `makeResolver` gets what it needs (loaded mods: id, name, dir, rows) from `main.mjs`
+- Dev browser server (`app/server/`): unchanged, no mods.
+
+## Test (lasting)
+- `app/desktop/resolve.test.mjs` gains cases: merge order and tags, bad row dropped (+ warning), colon path served from the right mod only, unlisted bundle or unloaded mod → 404, `..` / `%2e%2e` inside a namespaced path, a mod''s `data/pool.json` (or any other `/data/` file) not served.
+
+## Done when
+- `node --test app/desktop/` passes; `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`) with a temp mod in `mods/`: `/data/bundles.json` in devtools shows ours then the mod''s rows; temp mod deleted; per-commit checks pass.', '2026-10-13T18:31:53Z', NULL, 935);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (960, 115, 'Loader: mod packs, namespaced ids, media, modIssues()', 'work', 'open', NULL, NULL, 'Plan 115, task 2 (after task 1 of this plan). Binding: decision 128: Bundles from mods (ids `<mod id>:<id>`, '':'' never in our ids); decision 112: Pack layout (missing pack file = not offered, `withPacks`); decision 38: Base bundles and bundle languages; decision 133: Player bundle kit (`trivia --check-mod` reuses `modPool` with per-question reasons, part 9).
+
+## What
+- `app/client/src/engine/pool.ts`:
+  - `Bundle` type gains optional `source`, `mod`, `modName`
+  - `isOurs(id)` / `isModId(id)`: no `:` / has `:`; the one helper for every "not ours" check
+  - `modPool(json, bundle)`: question id → `<mod>:<id>`, `bundle` = runtime bundle id; `media.file_url` / `background.file_url` relative path inside the bundle folder → `/data/bundles/<mod>:<id>/<rel>`; absolute URL, `http(s)`, `..` or leading `/` → media dropped, question dropped if `role: essential`; drops invalid questions (missing text, not exactly 3 `wrong_answers`, difficulty outside 1–15, subcategory not in that bundle''s `categories.json`, status not `approved`/missing); returns kept questions plus per-question reasons (so part 9''s `--check-mod`, decision 133, can reuse it) and counts
+- `app/client/src/lib/data.ts`:
+  - `parseBundles` keeps `source`, `mod`, `modName`; mod rows'' `languages` ∩ `LOCALES` (others dropped, issue `bundle_language`)
+  - `load(locale)`: same flow; mod bundles are packs to `packsFor` (id ≠ `base`), pools through `withPacks`; for mod packs only, run `modPool`; a broken mod bundle (bad categories, no pool, unreadable) is left out of `bundles` like a pack without a file, never breaks the load
+  - `modIssues()`: `{ mod, bundle, code, count }[]` with codes `bad_question`, `bad_media`, `bad_categories`, `no_pool`, `bundle_language`, `taxonomy_clash`, for part 6''s mods screen
+  - base mod bundles: a second base choice (decision 38: one base per game); ours stays first = default
+- Taxonomy: `task 826: Bundle-scoped taxonomy (decision 110 d)` is still open (runs after this plan). Unless it is done when you start: a mod bundle whose category slug or subcategory name clashes with an earlier bundle''s is left out (`taxonomy_clash`), and add a follow-up task in plan 115: "Remove the mod taxonomy_clash check" (after task 826), body naming the check''s location.
+- `app/client/src/game/Question.svelte` `src()`: `/data/…` passes through; `http(s)` stays `/media?url=…` (ours only).
+- `engine/` callers that do `data.byId.get(id)` with a mod id: leave for task 4 of this plan unless this task breaks them.
+
+## Test (lasting)
+- `pool.test.ts`: one case for `modPool` (namespacing, media rewrite, absolute URL dropped, essential media question dropped, a bad question with its reason).
+
+## Done when
+- A throw-away mod in `mods/` (non-base pack, es + en, 30 questions over difficulties 1–15, one image in the folder, one bad question, one absolute-URL media) loads in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`): the configure screen offers it, a gamemaster game with only it on plays a question with the mod''s image, `modIssues()` counts the bad question and the bad media; keep the mod outside the repo (or in a gitignored spot) for tasks 3 and 4, say where in the done note
+- `npm test`, `npm run check`, `npm run build` and the other per-commit checks pass.', '2026-10-13T18:31:54Z', NULL, 935);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (961, 115, 'Selector marker, Credits section and no flags for mod questions', 'work', 'open', NULL, NULL, 'Plan 115, task 3 (after task 2 of this plan). Binding: decision 129: Credits for mod media: runtime section on the Credits screen from the mod''s own pool; decision 33 (non-base bundles off by default on the configure screen); decision 38 (one base per game); decision 51 (solo plays the default bundles); decision 66 / decision 110 (player bundles are never ours).
+
+## What
+- `app/client/src/engine/api.ts`: `ChoiceOptions` bundles carry `source` / `modName`.
+- `app/client/src/game/BundleSelector.svelte` (or wherever the selector lives): mod bundles marked player-made: an icon (`Icon.svelte`, a person or puzzle glyph; add it if missing) + `t("bundles.playerMade", { mod })`: es «Hecho por jugadores · {mod}», en «Player-made · {mod}», de «Von Spielern · {mod}», es-ES only if different; `check:literals` passes. Mod `name`/`description` shown as given (player text, no `t()`).
+- Base mod bundle: a second radio in the base group; ours first and default.
+- `Credits.svelte`: after ours, one section per loaded mod bundle: deduped `credit` + `source_url` of its questions'' `media` and `background`; heading `t("credits.playerMade", { mod })` (es, en, de).
+- `Game.svelte`: `flagTarget` null when `isModId(question.id)` (no flags, no reports for mod questions, plan 93).
+
+## Done when
+- In `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`) with task 2''s throw-away mod (plus a base mod bundle row): the mod bundle shows the marker on the configure screen; the base mod bundle sits in the base radio group and plays a game alone; the Credits screen lists the mod image''s credit; the flag action is absent on a mod question and present on ours
+- Per-commit checks pass.', '2026-10-13T18:31:54Z', NULL, 935);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (962, 115, 'Save, authoring and telemetry ignore mod ids; removed-mod check', 'work', 'open', NULL, NULL, 'Plan 115, task 4 (after task 3 of this plan). Binding: decision 128 ('':'' marks "not ours"); decision 38 (stored choices that no longer resolve read as the defaults); milestone 15 constraint: player content never enters our pool, seen counts, flags, reports.
+
+## What
+- `authoring/tools/save_file.py`: drop ids containing `:` in `_seen_blocked()` and `flags()` (one line each; docstring says why); `qgen` reads seen/blocked/flags only through it (check).
+- Save: ids stay strings; no format change, no `SAVE_VERSION` bump; `parseSave` unchanged (check only).
+- Engine: an open game whose card or question belongs to a removed mod must still load; fix where `data.byId.get(id)` assumes a hit (resume, or end the game cleanly).
+- Telemetry: if plan 106''s per-answer filter exists (`task 887: Page: telemetry recording from the save`, the "milestone 15 extends" spot), switch it to `isOurs`; its `^q-\d{4,6}$` test already excludes mod ids; if not done yet, add a line to task 887''s body via `pm task set` instead.
+
+## Throw-away check (with task 2''s mod, on a copy of the save)
+- Play with the mod (seen rows `<mod>:…`), block one mod question, then remove the mod
+- The save parses; the stored bundle choice falls back to the defaults; the open game resumes or ends cleanly; a new game plays
+- `qgen report` and `qgen validate` run with that save and show no mod ids; `trivia-authoring` overview counts ignore them
+
+## Done when
+- Every step above holds (one line each in the done note); temp mod and save copy deleted, your real save restored; per-commit checks pass.', '2026-10-13T18:31:54Z', NULL, 935);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (963, 115, 'Docs: player bundles (mods) and /data/ rules; decisions 128, 129', 'work', 'open', NULL, NULL, 'Plan 115, task 5 (last). Docs style: AGENTS.md (bullets, ultra-concise).
+
+## What
+- `plans/22-bundles.md`: section "Player bundles (mods)": format (`<mod>/data/bundles.json`, `data/bundles/<id>/`), namespacing `<mod id>:<id>`, the merge, kinds and defaults (pack off on configure, on in solo; base mod bundle as a second base choice), media (relative paths, rewritten to `/data/bundles/<mod>:<id>/…`), credits, `modIssues()` codes; cite decision 128 and decision 129.
+- `plans/18-steam-integration.md` "Modding": `/data/` rules (merged `bundles.json`, namespaced bundle folders, no other `/data/` overlay).
+- `directory.md`: where it names `bundles.json` / the mod layout.
+- `pm decision consequences 128 "…"` and `pm decision consequences 129 "…"`: what changed, with file paths.
+
+## Done when
+- Docs name decisions 128/129 and the paths; per-commit checks pass.', '2026-10-13T18:31:54Z', NULL, 935);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25085,6 +25165,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (787, 911, '2026-10-13T18:28:07Z', '2026-10-13T18:29:00Z', 'done', NULL, 0, 'c60ce2690a646c3365735382b75e4bff55123702', 'claude-opus-5-5[1m]', '60a3ee0e-0cf0-4097-bbff-67a38ca064a9', 6, 12, 4372, 197344, 30772, 0.3731328, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (788, 914, '2026-10-13T18:29:01Z', '2026-10-13T18:30:00Z', 'done', NULL, 0, '2941251a30dc1e530a1908d6a81800f47415b1e7', 'claude-opus-5-5[1m]', '59e1cfc2-ff79-4d56-9bfd-125b0abfa5e2', 6, 12, 5385, 203926, 33621, 0.41750120000000007, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (789, 934, '2026-10-13T18:30:01Z', '2026-10-13T18:30:53Z', 'done', NULL, 0, '9adaa29063c707da81ca93388f20a0d3d57267dc', 'claude-opus-5-5[1m]', '255dfe1b-b16a-420c-92ad-be2754f546bd', 6, 12, 5167, 200885, 32732, 0.405421, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (790, 935, '2026-10-13T18:30:53Z', '2026-10-13T18:32:04Z', 'done', NULL, 0, '6ed610ae94194b5becfecbb71f98a1d58a0d7536', 'claude-opus-5-5[1m]', '4a0ce6ce-bc1d-47d8-8db6-9c9e6be70fce', 8, 16, 7028, 266512, 33401, 0.46113440000000006, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
