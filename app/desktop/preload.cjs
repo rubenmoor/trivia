@@ -20,6 +20,11 @@ contextBridge.exposeInMainWorld("trivia", {
     load: () => ipcRenderer.invoke("telemetry:load"),
     record: (buffer) => ipcRenderer.invoke("telemetry:record", buffer),
   },
+  // Plan 93: main holds the URL and the ticket; the page passes fields.
+  report: {
+    available: () => ipcRenderer.invoke("report:available"),
+    send: (fields) => ipcRenderer.invoke("report:send", fields),
+  },
   // Plan 85: the binding lives in main; the flag comes from main's additionalArguments.
   steam: {
     available: process.argv.includes("--trivia-steam"),

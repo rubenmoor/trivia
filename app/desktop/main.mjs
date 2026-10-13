@@ -1,12 +1,13 @@
 // Electron shell (plan 54, D-63): plays app/client/dist over app://trivia/, no Python, no network.
 import { app, BrowserWindow, dialog, ipcMain, Menu, protocol, session } from "electron";
-import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { arrange, discover, ID as MOD_ID, readSettings, writeSettings } from "./mods.mjs";
 import { muteReason } from "./mute.mjs";
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
+import { devTicket, IDENTITY, postReport, reportFields, reportTarget } from "./report.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
 import { makeTelemetry } from "./telemetry.mjs";
@@ -541,6 +542,58 @@ function telemetryArg(arg) {
   return { games: arg.games, index: arg.index };
 }
 
+/** Plan 93: `reportUrl` beside `version` in package.json, or the dev override; null = copy only. */
+function reportConfig() {
+  let configured = "";
+  try {
+    configured = JSON.parse(readFileSync(path.join(app.getAppPath(), "package.json"), "utf8")).reportUrl ?? "";
+  } catch (err) {
+    console.error(`trivia: report: package.json: ${err.message}`);
+  }
+  const target = reportTarget(configured, process.env);
+  if (configured && !target) console.error("trivia: report: reportUrl is not an http(s) URL");
+  if (target?.dev) console.error(`trivia: report: dev URL ${target.url.href} (TRIVIA_REPORT_URL)`);
+  return target;
+}
+
+let reportTargetCache;
+function reportAvailable() {
+  if (!validUser) return false;
+  reportTargetCache ??= reportConfig();
+  return reportTargetCache !== null;
+}
+
+/** One POST per call, fresh ticket, cancelled after the response; ticket and fields never logged. */
+async function sendReport(arg) {
+  let fields;
+  try {
+    fields = reportFields(arg);
+  } catch (err) {
+    console.error(`trivia: report: bad field ${err.field ?? "?"}`);
+    throw err;
+  }
+  if (!reportAvailable()) return { ok: false, status: 0, error: "unavailable" };
+  const { url, dev } = reportTargetCache;
+  let ticket = null;
+  if (dev || !hasSteamId()) ticket = { ticketHex: devTicket(), authTicket: null };
+  else {
+    const t = await steam.user.getAuthTicketForWebApi({ genericString: IDENTITY }).catch(() => null);
+    if (t?.success && t.ticketHex) ticket = t;
+    else if (t?.authTicket) steam?.user.cancelAuthTicket(t.authTicket);
+  }
+  if (!ticket) {
+    console.error("trivia: report: no Steam ticket");
+    return { ok: false, status: 0, error: "no_ticket" };
+  }
+  try {
+    const r = await postReport(url, fields, ticket.ticketHex);
+    console.error(`trivia: report: ${r.ok ? "sent" : `failed ${r.status} ${r.error}`}`);
+    return r;
+  } finally {
+    if (ticket.authTicket) steam?.user.cancelAuthTicket(ticket.authTicket);
+  }
+}
+
 /** IPC for preload.cjs; only our own page may call. */
 function bridge() {
   const handle = (channel, fn) =>
@@ -569,6 +622,9 @@ function bridge() {
   // Mods (plan 114): fresh list per call; set rejects bad_mods, writes mods.json, applies next start.
   handle("mods:list", listMods);
   handle("mods:set", setMods);
+  // Reports (plan 93): main posts, the page passes fields only; send rejects bad_report.
+  handle("report:available", reportAvailable);
+  handle("report:send", sendReport);
   // Steam (plan 85): pass-throughs; null/false without Steam.
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);

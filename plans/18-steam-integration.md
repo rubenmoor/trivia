@@ -249,6 +249,17 @@ Opt-in telemetry's shell side (pm plan 106, decisions 119, 121): consent, instal
   - `telemetry:load` → current session's `{ games, index }` or null.
   - `telemetry:record({ games, index })`: parallel arrays, plain objects, ≤ 200 games, ≤ 1 MiB, else rejects `bad_telemetry`; ignored without a yes.
 
+## Question reports
+The shell's half of question reports (pm plan 93, decision 93, decision 111): main posts one report to plan 103's `POST /reports` per player click; the page passes fields, never a URL, and never sees the ticket. The page's request block stays.
+- Code: `app/desktop/report.mjs` (`reportTarget`, `reportFields`, `postReport`, `IDENTITY`; pure Node `http`/`https`, no Electron), `sendReport` in `main.mjs`.
+- URL: `reportUrl` beside `version` in `app/desktop/package.json` (base URL, `/reports` appended); empty = no send, copy only. Dev override `TRIVIA_REPORT_URL` only with `TRIVIA_DEV_STEAM_USER=1`, then `dev-<random>` tickets (plan 103's dev check); dev switch without a SteamID: dev tickets too.
+- Ticket: fresh per send, `getAuthTicketForWebApi({ genericString: "trivia-reports" })` (= server `TICKET_IDENTITY`), cancelled after the response; never logged.
+- Timeouts: 5 s connect, 10 s total; no retry, no request at start, no health check.
+- stderr: `trivia: report: sent` / `failed <status> <error>` / `bad field <name>`; never fields or tickets.
+- IPC (`handle()`, sender origin `app://trivia/`), bridge `report` in `preload.cjs`, typed optional `report: ReportBridge` in `app/client/src/lib/desktop.ts`:
+  - `report:available` → URL set and a valid user (or the dev switch).
+  - `report:send({ question, lang, text, note?, version, pool })`: plan 103's field limits, else rejects `bad_report`; → `{ ok: true, id }` or `{ ok: false, status, error, retryAfter? }`; `status: 0` without a response (`no_connection`, `timeout`, `no_ticket`, `unavailable`, `too_large`), else the server's code (`retryAfter` on 429).
+
 ## Modding: `mod.json`
 A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` in `app/desktop/mods.mjs` is the source of truth; this schema is for the modding guide (plan 121) and editors.
 - Also checked by the validator, not by the schema: file ≤ 64 KB UTF-8; `entry` exists inside the mod (symlinks resolved); unknown keys and unknown `languages` tags are warnings; `game` ≠ running version: warning `game_version`, still loaded.

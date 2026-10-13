@@ -16,6 +16,8 @@ export interface DesktopBridge {
   readonly mods?: ModsBridge;
   /** Missing in the browser game and the dev server's shim (plan 106). */
   readonly telemetry?: TelemetryBridge;
+  /** Missing in the dev server's shim (plan 93). */
+  readonly report?: ReportBridge;
   /** Set by the dev server's page shim (plan 99): its save dir is the dev switch. */
   readonly devServer?: true;
 }
@@ -105,6 +107,30 @@ export interface TelemetryBuffer {
   index: { key: string; from: number }[];
 }
 
+/** Question reports (plan 93): one POST from the shell's main process per `send`, never on its own. */
+export interface ReportBridge {
+  /** Report URL configured and a valid Steam user (or the dev switch). */
+  available(): Promise<boolean>;
+  /** Plan 103's limits; rejects `bad_report` for a field outside them. */
+  send(fields: ReportFields): Promise<ReportResult>;
+}
+
+/** Plan 103's `POST /reports` body minus the ticket; `pool` null for a pool without hash. */
+export interface ReportFields {
+  question: string;
+  /** Question language (flag `locale`), not the UI's. */
+  lang: string;
+  text: string;
+  note?: string;
+  version: string;
+  pool: string | null;
+}
+
+/** `status` 0: no response (`no_connection`, `timeout`, `no_ticket`, `unavailable`, `too_large`); else plan 103's code. */
+export type ReportResult =
+  | { ok: true; id: number }
+  | { ok: false; status: number; error: string; retryAfter?: number };
+
 /** Window position in device pixels. */
 export interface TextFieldRect {
   x: number;
@@ -123,6 +149,7 @@ export const desktop: DesktopBridge | null = window.trivia ?? null;
 export const steam: SteamBridge | null = desktop?.steam ?? null;
 export const mods: ModsBridge | null = desktop?.mods ?? null;
 export const telemetry: TelemetryBridge | null = desktop?.telemetry ?? null;
+export const report: ReportBridge | null = desktop?.report ?? null;
 /** Saves and flags allowed (decision 111); the only check plan 87 and the flag UI read. */
 export const validUser: boolean = steam?.user === true || desktop?.devServer === true;
 /** Dev switch or dev server (plan 85): «Ir a pregunta…»; a real Steam user is not dev mode. */
