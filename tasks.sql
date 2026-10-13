@@ -13203,8 +13203,68 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/decisions.md` D-72 matches what shipped.
 - `plans/project.md` S5 Cloud line, `directory.md`, `README.md` desktop save line in sync.
 - `pm decision consequences <id> "…"` on the test decision.', '2026-10-13T05:52:56Z', NULL, 659);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (665, 88, 'create tasks for plan 88', 'split', 'open', 1000, NULL, 'Split plan 88 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:05:26Z', NULL, 258);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (665, 88, 'create tasks for plan 88', 'split', 'done', 1000, '2026-10-13, pm tasks 666-672, pm decision 78', 'Split plan 88 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:05:26Z', '2026-10-13T06:07:10Z', 258);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (666, 88, 'Store texts per language in 17a (LUI-6)', 'work', 'open', NULL, NULL, 'Plan 88 task 1. Needs decision 78: German store name (pending → `pm task-pending-decision` on it and stop).
+
+- Create `plans/17a-store-page.md` (sub-plan of `plans/17-publishing.md`, like 15a): intro paragraph, then per store language a block with every field and its Steam character limit (check Steamworks docs today, cite): English (`en`) first, then `es` (es-419), `es-ES` (only fields that differ: vosotros, regionalisms), `de`. Add it to `plans/README.md` and `directory.md` if it lists plan files.
+- Fields: store name (D-50; de per decision 78), short description (≤ 300 chars), "About this game" long description, feature bullets (12 in a row, the five modes per D-74, jokers by their localized names, offline, gamepad/keyboard, family on the TV), privacy line, controller line.
+- Wording from the in-game catalogs `app/client/src/locales/*.ts` (mode names, joker names: de per decisions 54–58).
+- Privacy line: collects nothing, sends nothing; player names stay on the device and in Steam Cloud (plan 87). Controller line: no "full controller support" claim (task 3 of this plan settles the flag).
+- Leave a placeholder section for the AI disclosure (task 2), requirements/languages/controller flags (task 3), assets (tasks 4, 5), entry checklist (task 7).
+- Approval: one `pm decision add "Store texts approved? (<lang>)"` per language set (en, es + es-ES, de), body = path + section; mention a native-speaker read where LUI-5''s testers (plan 69) are available. Answers with fixes: apply them in a follow-up task (`pm task add 88 …`) or before closing if they arrive in time.
+- Decision 78 picks a localized German name → `pm task add` in part 1''s plan (PUB-7 name check, `task 253` or the plan it writes) for that name.
+
+Done when: 17a exists with the four blocks, approval decisions added. LUI-6 `[x]` in `plans/15a-ui-translation.md` once approved (else task 7 does it).', '2026-10-13T06:07:02Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (667, 88, 'AI disclosure text (Steam survey + store wording)', 'work', 'open', 240, NULL, 'Plan 88 task 2. Needs PUB-10''s line (Anthropic commercial-use terms) in `plans/17-publishing.md` (part 1 of masterplan 10, `task 253`, waits on decisions 66/67) and decision 77: Store capsule art. If either is missing: `pm task-pending-decision` on the decision that blocks it and stop.
+
+- Check Valve''s current AI disclosure rules (Steamworks content survey "AI Generated Content": pre-generated vs live-generated; whether dev tools such as code assistants count); cite the page and date in 17a.
+- Draft in `plans/17a-store-page.md`: survey answer ("pre-generated" description; "live-generated": none) and the store-page wording per language (en, es, es-ES if different, de).
+- Facts: Claude drafts questions, fact-checks with web search, reviews (D-7, D-10, D-32/D-33, `reviewer: "llm"`), translates (D-87); people: gamemaster review, independent LLM audit + blind human spot check per batch (D-56), native-speaker playtests (LUI-5); no live AI: nothing is generated while you play; images by people from Wikimedia Commons, music and sounds by people (CREDITS.md); capsule art per decision 77''s answer.
+- Anything unclear in Valve''s rules → in the approval decision''s body.
+- Approval: `pm decision add "AI disclosure approved?"`. Entry is part 9''s (PUB-9, `task 259`), not this task''s.
+
+Done when: draft in 17a, approval decision added.', '2026-10-13T06:07:03Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (668, 88, 'System requirements, supported languages, controller flags', 'work', 'open', 170, NULL, 'Plan 88 task 3. Needs part 7''s first packaged builds (`task 261: write plan: Builds, depots and upload` and its plan) and part 6''s media bundle (`task 260`). If they aren''t built yet: `pm task-pending-decision` on the decision that blocks their open tasks (`pm show` them) and stop; if none blocks: `pm decision add "Packaged builds ready for the store requirements?"`, pend on it and stop.
+
+- In `plans/17a-store-page.md`, minimum/recommended per OS: Windows 10/11 x64; SteamOS / Linux x64 (distro the Linux build was tested on); CPU, RAM, GPU from what plays smoothly on the test machines (ask the gamemaster in a decision if unknown); disk = installed size of the depots (today''s plan 56 builds ~2.5 GB each only as a placeholder).
+- Supported-languages table: interface + subtitles ✓ for English, Spanish – Latin America, Spanish – Spain, German; full audio ✗.
+- Controller flags: "full controller support" only if a pad-only game passes start to victory incl. a new player (name entry: plan 46 letter picker, SW-8 floating keyboard, plan 85); else "partial". PlayStation/Xbox glyph flags per plan 45. Deck compatibility is part 10''s (`task 262`), not this task''s.
+- Gamemaster check: `pm decision add` with the values (pad-only run result included); options approve / fix.
+
+Done when: values in 17a, decision added.', '2026-10-13T06:07:03Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (669, 88, 'Capsules and logo: render per store language', 'work', 'open', NULL, NULL, 'Plan 88 task 4. Needs decision 77: Store capsule art (pending → `pm task-pending-decision` on it and stop). Option 4 or 3 change the work: follow the answer.
+
+- Valve''s current graphical-asset list, checked today and cited in `plans/17a-store-page.md` (2024 reference: header 920×430, small 462×174, main 1232×706, vertical 748×896, page background 1438×810, library capsule 600×900, library hero 3840×1240, library logo 1280×720 PNG, library header 920×430, community icon 184×184; recheck sizes and text-area/safe-zone rules).
+- Localized per store language (D-50; `es` and `es-ES` share; de per decision 78: German store name).
+- Script under `authoring/store/` (e.g. `capsules.mjs`), output `authoring/store/out/capsules/` (gitignored); no new npm dependency (raw CDP via Node''s `WebSocket` against the shell''s `--remote-debugging-port` as task 318 did, or Electron `capturePage` behind a dev-only flag). Template in the game''s fonts (Baloo 2, Nunito) and palette (`plans/10-visual-design.md`), «Trivia» as the main element.
+- Credit/disclose as decision 77 says (CREDITS.md / `app/client/credits.ts`, AI disclosure in 17a if AI-made).
+- `directory.md`: the script and output folder.
+- Approval: `pm decision add "Capsules approved?"` with the output path; fixes → follow-up task.
+
+Done when: every asset per language rendered, approval decision added.', '2026-10-13T06:07:03Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (670, 88, 'Scripted store screenshots at 1920×1080', 'work', 'open', NULL, NULL, 'Plan 88 task 5.
+
+- `authoring/store/screenshots.mjs`: starts the shell (`trivia-desktop`) at 1920×1080 with a throw-away demo save (made-up player names, no family data) in `TRIVIA_SAVE_DIR` (temp dir, deleted after); per UI language (en, es, es-ES if the UI differs, de) walks a fixed set of screens: start, an image question, an audio/video question, a joker in action, the tower near level 12, victory, mode choice; writes PNGs to `authoring/store/out/screenshots/<lang>/` (gitignored). ≥ 5 per language (Valve minimum).
+- No new npm dependency: Node''s built-in `WebSocket` + raw CDP against `--remote-debugging-port` (as task 318 did), or Electron `capturePage` behind a dev-only flag. Drive the game through the UI or seed the save; media from the cache (`trivia-media sync --status approved` first).
+- A language without enough approved questions in `app/data/pool.json` yet: render what exists, add a follow-up task (`pm task add 88 …`) to re-run it once its content lands.
+- `directory.md`: the script and output folder; a line in 17a on how to re-run (after visual changes).
+- Approval: `pm decision add "Store screenshots: which set?"` with the paths; the gamemaster picks.
+
+Done when: script runs offline from the dev shell, PNGs per language, decision added.', '2026-10-13T06:07:04Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (671, 88, 'Store trailer: backlog item', 'work', 'open', NULL, NULL, 'Plan 88 task 6. Trailer not cheap enough for the beta (editing, music rights checks).
+
+- Add an item to `plans/backlog.md`: "store trailer, S6 or later; scripted capture via CDP `Page.startScreencast` + ffmpeg as a start"; reference PUB-8 and plan 88.
+- `plans/17-publishing.md` store bullet: trailer → backlog.
+
+Done when: backlog item in place.', '2026-10-13T06:07:04Z', NULL, 665);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (672, 88, 'Store page entry checklist and PUB-8 close-out', 'work', 'open', 160, NULL, 'Plan 88 task 7. After tasks of this plan for texts, AI disclosure, requirements, capsules, screenshots (all approved; else pend on their open decisions and stop).
+
+- Checklist in `plans/17a-store-page.md` for the gamemaster: Steamworks → Store page admin field by field: names (incl. localized), descriptions per language, tags suggestion, supported languages, system requirements, controller support, graphical assets, screenshots; AI disclosure goes with part 9''s content survey (PUB-9, `task 259`''s plan). Workers never log into Steamworks.
+- `pm decision add "Store page entered for the beta?"` (options: entered / issues); pend this task on it.
+- After the answer: PUB-8 `[x]` in `plans/17-publishing.md` with a note; LUI-6 `[x]` in `plans/15a-ui-translation.md` (if task 1 didn''t); `plans/project.md` in sync. Issues → follow-up tasks.
+
+Done when: gamemaster reports the store page entered; PUB-8 and LUI-6 marked done.', '2026-10-13T06:07:04Z', NULL, 665);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -14130,6 +14190,11 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Option 1: cheapest, localizes automatically (text per language), but plain; the gamemaster approves the look before any upload.
 - Option 3: money and a written licence (commercial use, store, marketing).
 - The answer shapes the capsule task, the AI disclosure text and CREDITS.md.', NULL, NULL, '2026-10-13T06:04:54Z', NULL, 258, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (78, 'German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?', 'pending', '["Keep «Living Room Trivia» for German (no localized name; no extra name check)", "Localized «Wohnzimmer-Quiz» (needs PUB-7''s name/trademark check, plan 10 part 1)", "Localized «Quiz in Familie» (needs PUB-7''s check)"]', 'Plan 88 task 1 (store texts, LUI-6) writes the German store block in `plans/17a-store-page.md`. D-50: «Living Room Trivia», Spanish «Trivia en Familia»; "other languages get a localized name when they launch".
+
+- Keep: German Steam users read English names often; one name, no extra trademark/Steam-search check; capsules show «Trivia» either way.
+- Localized: German says «Quiz», not «Trivia», so the logo''s main word «Trivia» (D-50) would not match; capsules need a German wordmark; PUB-7 check (Steam search, EUIPO/DPMA, domain) before entry; set in Steamworks before the coming-soon page (later changes restricted).
+- Own text welcome (another name).', NULL, NULL, '2026-10-13T06:06:31Z', NULL, 665, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14626,6 +14691,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (489, 662, '2026-10-13T06:02:15Z', '2026-10-13T06:03:06Z', 'done', NULL, 0, 'bc4d19cc9b5e4e0a43531fa6f72ebc85a54c7a6b', 'claude-opus-5-5[1m]', 'f28e885a-74c0-407f-b19a-2841094b9673', 10, 20, 3046, 308204, 25423, 0.3260248, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (490, 663, '2026-10-13T06:03:07Z', '2026-10-13T06:03:38Z', 'done', NULL, 0, '415ac31199f07fa2ed231d8317240696fd2c1639', 'claude-opus-5-5[1m]', 'c3355001-8566-474b-9f7c-249bc268b4cc', 9, 16, 2914, 260267, 29249, 0.3443894, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (491, 258, '2026-10-13T06:03:38Z', '2026-10-13T06:05:39Z', 'done', NULL, 0, 'c8a83c868cf731617b4b719166459da1669b7bc0', 'claude-opus-5-5[1m]', 'fcb042d4-2ace-4711-b784-78f9d43c9820', 16, 30, 10881, 788061, 59463, 0.8510562, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (492, 665, '2026-10-13T06:05:39Z', '2026-10-13T06:07:18Z', 'done', NULL, 0, '5a0e06839186497c511a076c7ebe008c68edb903', 'claude-opus-5-5[1m]', '756ddd23-e516-47c3-aa79-5465b897eb59', 11, 22, 9396, 448188, 42804, 0.6200776, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14755,5 +14821,10 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (656, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (657, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (658, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (664, 75);
+INSERT INTO task_decision (task_id, decision_id) VALUES (666, 78);
+INSERT INTO task_decision (task_id, decision_id) VALUES (667, 66);
+INSERT INTO task_decision (task_id, decision_id) VALUES (667, 67);
+INSERT INTO task_decision (task_id, decision_id) VALUES (667, 77);
+INSERT INTO task_decision (task_id, decision_id) VALUES (669, 77);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
