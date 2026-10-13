@@ -3430,7 +3430,9 @@ def cmd_rework(args):
     n_ok = sum(q["status"] == "approved" for q in qs)
     print(f"\nDone: {run}: {n_ok} of {len(qs)} approved, {len(qs) - n_ok} still need work "
           f"(took {progress.duration(time.monotonic() - t0)}).")
-    print("Commit exactly this:\n  git add authoring/data/questions.json app/data/pool.json\n"
+    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
+    files = ["authoring/data/questions.json", "app/data/pool.json", *stale_lines(set(cfg["ids"]), by_id)]
+    print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
 
 
