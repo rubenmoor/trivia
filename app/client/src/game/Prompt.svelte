@@ -6,7 +6,9 @@
   import { keyLabel, lastDevice, padMap, scopes, type Intent } from "../lib/input.svelte";
   import Glyph from "./Glyph.svelte";
 
-  type Named = "confirm" | "back" | "menu" | "replay" | "flag" | "new" | "submit";
+  /** Intents without fields, named by their type. */
+  type Bare<I> = I extends Intent ? (keyof I extends "type" ? I["type"] : never) : never;
+  type Named = Bare<Intent>;
 
   let {
     action,
@@ -31,7 +33,7 @@
 
   let chip = $state<HTMLElement>();
 
-  const intent = (a: Named | Intent) => (typeof a === "string" ? { type: a } : a) as Intent;
+  const intent = (a: Named | Intent): Intent => (typeof a === "string" ? { type: a } : a);
   const key = $derived(keyLabel(intent(action)));
   const button = $derived.by(() => {
     if (lastDevice.current !== "gamepad") return null;
@@ -40,9 +42,9 @@
   });
   // A presses the ringed control: on another button the A would mislead.
   const away = $derived.by(() => {
+    if (off) return true;
     void scopes.version;
     const own = chip?.closest("button");
-    if (off) return true;
     if (fixed || intent(pad ?? action).type !== "confirm" || !own) return false;
     const ring = document.querySelector("[data-nav]");
     return ring !== null && ring !== own;

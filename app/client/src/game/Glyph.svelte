@@ -23,7 +23,7 @@
 
 <script lang="ts">
   let { button, set, size = "1em" }: { button: number; set: PadStyle; size?: string } = $props();
-  const glyph = $derived(DPAD[button] ? ([DPAD[button]] as [Shape, string?]) : SETS[set][button]);
+  const glyph: [Shape, string?] | undefined = $derived(DPAD[button] ? [DPAD[button]] : SETS[set][button]);
   const shape = $derived(glyph?.[0]);
   const label = $derived(glyph?.[1] ?? "");
 </script>
