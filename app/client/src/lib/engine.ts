@@ -7,7 +7,7 @@ import { gameLocale, type EngineData, type Io, type Language, type SaveData } fr
 import { GameError } from "./api.ts";
 import type { Supply } from "./types.ts";
 import { availableLocales, loadEngineData } from "./data.ts";
-import { desktop } from "./desktop.ts";
+import { desktop, steam } from "./desktop.ts";
 import { UI_LANGS } from "./i18n.ts";
 import { useNames } from "./names.svelte.ts";
 import { FileStore, ServerStore, type SaveNotice } from "./store.ts";
@@ -25,9 +25,25 @@ let loading: Promise<Loaded> | null = null;
 let chain: Promise<unknown> = Promise.resolve();
 let lastSaveError: GameError | null = null;
 
-/** The player's language tag; milestone 10 swaps in Steam's client language (plan 68). */
-export function guessTag(): string {
-  return globalThis.navigator?.language ?? "es";
+/** Steam's API language names → our tags (plan 85); unknown → null. */
+const STEAM_LANGS = new Map([
+  ["latam", "es"],
+  ["spanish", "es-ES"],
+  ["english", "en"],
+  ["german", "de"],
+  ["schinese", "zh-Hans"],
+  ["russian", "ru"],
+  ["brazilian", "pt-BR"],
+]);
+
+function fromSteam(name: string | null): string | null {
+  return (name && STEAM_LANGS.get(name)) ?? null;
+}
+
+/** The player's language tag: Steam's game/client language, else the browser's (plans 68, 85). */
+async function guessTag(): Promise<string> {
+  const fromClient = steam?.available ? fromSteam(await steam.language().catch(() => null)) : null;
+  return fromClient ?? globalThis.navigator?.language ?? "es";
 }
 
 /** Save + available locales, once per page load; a fresh save gets the guessed language (plan 68).
@@ -35,7 +51,7 @@ export function guessTag(): string {
 export function ready(): Promise<Loaded> {
   loading ??= Promise.all([store.load(), availableLocales()]).then(
     async ([save, locales]) => {
-      let language = save.language ?? defaultLanguage(guessTag(), UI_LANGS, locales);
+      let language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS, locales);
       if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
       const loaded = { save: { ...save, language }, locales, fresh: !save.language };
       await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
