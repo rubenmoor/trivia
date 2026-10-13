@@ -11825,7 +11825,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every function of the section listed in `## Part 7` with findings and status; the shadowed `review_problems` resolved.', '2026-10-12T23:07:25Z', '2026-10-13T12:15:18Z', 519);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (563, 79, 'Review qgen audit, back-audit and batch orchestration', 'work', 'open', NULL, NULL, 'Task 7 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (563, 79, 'Review qgen audit, back-audit and batch orchestration', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py, code-review.md (Part 7: audit/back-audit/batch section; fixes: next_batch without work/, EXIT_HEALTH, costs() utf-8, batch_subcategories inlined; follow-up task 733)', 'Task 7 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
 - Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -11851,7 +11851,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Public names here (`llm_decisions`, `audit_sample`, `audits`, `audit_of`, `is_major`, `costs`) stay.
 
 ## Done when
-- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', '2026-10-13T12:17:52Z', 519);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (564, 79, 'Review qgen health ack, rework, scan, tighten, neutralize', 'work', 'open', NULL, NULL, 'Task 8 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
@@ -14227,6 +14227,20 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Changes the review prompt''s `related` list (plan 79 rule: prompt change ≠ code fix), so this is its own task; behaviour otherwise unchanged.
 - Check: throw-away script on a temp copy, `related_questions` for a question in a large subcategory before/after; no LLM calls.
 - Log the row in `## Part 7` of `code-review.md` as `fixed (task N)`.', '2026-10-13T12:14:09Z', NULL, 562);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (733, 79, 'qgen: errors a step returns itself are never printed; standalone commands exit 0 with them', 'work', 'open', NULL, NULL, 'Found by `task 563: Review qgen audit, back-audit and batch orchestration` (code-review.md `## Part 7`).
+
+## Problem
+- `parallel()` prints each failure (`FAILED <id>: …`), but errors a step returns itself are never printed:
+  - `cmd_record`, `record_translations`: `[RuntimeError("N question(s) without a review")]`
+  - `cmd_audit`: `[RuntimeError("<run>: no recorded LLM review to audit")]`
+- `run_steps` prints only "Stopped at `<step>` with N error(s)", not the message.
+- `main()` acts only on `UsageLimit`: standalone `qgen record` / `qgen audit` with such an error print nothing and exit 0.
+
+## Fix (output text changes: plan 79 rule, so its own task)
+- Print the message where it is returned (stderr), or have `run_steps`/`main` print errors that `parallel` didn''t (e.g. a marker attribute set in `parallel`).
+- `main()`: exit 1 on non-limit errors.
+- Check RUNBOOK''s exit code table still fits (exit 1 = stop and report).
+- Verify with a stubbed run (no LLM calls): `qgen audit --batch <run without recorded review>` prints the reason and exits 1; a `parallel` failure is printed once.', '2026-10-13T12:17:11Z', NULL, 563);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15953,6 +15967,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (608, 560, '2026-10-13T11:58:11Z', '2026-10-13T12:03:18Z', 'done', NULL, 0, 'a8e8367253c9c5cb69b73a6162e0092ccdb99cf7', 'claude-opus-5-5[1m]', 'a94a0445-6d05-4628-859d-c17ae2783b4b', 33, 66, 22174, 2324259, 80994, 1.5565478000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (609, 561, '2026-10-13T12:03:19Z', '2026-10-13T12:10:29Z', 'done', NULL, 0, 'b9f312ae168e832c0b03a6d20dab57c5bdd7e3a9', 'claude-opus-5-5[1m]', '8de62665-bf46-4c51-bace-38d3764a5fbf', 25, 46, 18654, 1776730, 85836, 1.415298, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (610, 562, '2026-10-13T12:10:30Z', '2026-10-13T12:15:27Z', 'done', NULL, 0, '46b463a84118a7bf702b2e427c2590e5ce0aca35', 'claude-opus-5-5[1m]', '04480eb1-bf26-4d36-9216-6bc1013ebb48', 34, 58, 25525, 2239154, 93754, 1.7085948000000002, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (611, 563, '2026-10-13T12:15:27Z', '2026-10-13T12:18:00Z', 'done', NULL, 0, 'a3482bc61eeba6ef2bc6a6b8e0cb4affb34422a1', 'claude-opus-5-5[1m]', '9a3c773c-5798-4076-84b7-bc7bf1c0869a', 20, 34, 14148, 1147306, 74021, 1.1047252, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

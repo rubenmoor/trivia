@@ -240,6 +240,7 @@ RESET_RE = re.compile(r"resets\s+(?:(?P<mon>[a-z]{3})[a-z]*\.?\s+(?P<day>\d{1,2}
                       r"(?P<h>\d{1,2})(?::(?P<m>\d{2}))?\s*(?P<ap>[ap]\.?m\.?)?(?:\s*\((?P<tz>[^)]+)\))?", re.I)
 LIMIT_MARGIN = datetime.timedelta(minutes=5)  # resume this long after the reset (QG-21)
 EXIT_LIMIT = 75  # exit code: stopped at the usage limit (RUNBOOK)
+EXIT_HEALTH = 2  # exit code: batch health stop until `qgen health ack` (D-55, RUNBOOK)
 
 
 def limit_reset(msg, now=None):
@@ -2942,8 +2943,10 @@ def write_backaudit_report(run):
 
 def costs(path):
     """Dollar amounts in a costs.log, one per Claude call."""
-    return [float(line.split("\t")[1]) for line in path.read_text().splitlines()
-            if line.count("\t") == 1 and line.split("\t")[1] not in ("None", "")] if path.exists() else []
+    if not path.exists():
+        return []
+    cells = [line.split("\t") for line in path.read_text(encoding="utf-8").splitlines()]
+    return [float(c[1]) for c in cells if len(c) == 2 and c[1] not in ("None", "")]
 
 
 def audit_section(run):
@@ -3044,20 +3047,14 @@ def next_batch():
         sys.exit(f"More than one unfinished batch: {', '.join(open_runs)}. Ask the gamemaster which to finish.")
     if open_runs:
         return open_runs[0], True
-    names = {q.get("batch") for q in load_json(POOL)["questions"]} | {p.name for p in WORK.iterdir() if p.is_dir()}
+    names = {q.get("batch") for q in load_json(POOL)["questions"]} | {p.name for p in WORK.glob("batch-*") if p.is_dir()}
     numbers = [int(m.group(1)) for n in names if n and (m := re.fullmatch(r"batch-(\d+)", n))]
     return f"batch-{max(numbers, default=0) + 1}", False
 
 
-def batch_subcategories(count=None, bundle="base"):
-    """The bundle's `count` subcategories (default: batches.SHARE of them, D-46) with the fewest
-    approved questions of that bundle, weighted by the deficits (D-54); ties in its categories.json order (D-41)."""
-    return batches.subcategories(load_json(POOL)["questions"], count, bundle)
-
-
 def run_steps(steps, again, run=None):
     """Run (name, fn, args) steps in order, then validate; waits out Claude's usage limit (QG-21).
-    Exits 75 or 1 on a step that fails; `again` is the command that continues. Returns the start time.
+    Exits EXIT_LIMIT or 1 on a step that fails; `again` is the command that continues. Returns the start time.
     With `run`, adds each step's seconds to run.json's "seconds" (batch health, plan 15)."""
     t0 = time.monotonic()
     i = 0
@@ -3119,7 +3116,7 @@ def cmd_batch(args):
         stop = health.stop_reason()  # D-55: before concepts, no LLM calls
         if stop:
             print(stop, file=sys.stderr)
-            sys.exit(2)
+            sys.exit(EXIT_HEALTH)
         check_bundle(args.bundle)
         if args.subcategories:
             subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
@@ -3127,7 +3124,7 @@ def cmd_batch(args):
             if unknown:
                 sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)}: {', '.join(unknown)}")
         else:
-            subs = batch_subcategories(args.count, args.bundle)
+            subs = batches.subcategories(load_json(POOL)["questions"], args.count, args.bundle)  # D-46, D-54
         save_json(d / "run.json", {"mode": "batch", "bundle": args.bundle, "subcategories": subs,
                                    "started": datetime.date.today().isoformat()})
     subs = load_json(d / "run.json")["subcategories"]
@@ -3266,7 +3263,7 @@ def cmd_translate_batch(args):
     else:
         if stop := health.translate_stop_reason(locale):
             print(stop, file=sys.stderr)
-            sys.exit(2)
+            sys.exit(EXIT_HEALTH)
         if args.ids:
             ids, stale = [i.strip() for i in args.ids.split(",") if i.strip()], []
         else:
