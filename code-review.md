@@ -1152,6 +1152,35 @@ Plan 79 reviews `authoring/tools/qgen.py` section by section, then its module st
 | `authoring/tools/qgen.py` `revise_in_pool`, `FACT_FIELDS` | no findings: also used by `cmd_fix`/`needs_recheck` | — | — | — |
 | `authoring/tools/qgen.py` `count` | hand-rolled `Counter` | complexity | low | won't fix: printed as a dict in `qgen report`; `Counter` prints differently (output text stays) |
 | `authoring/tools/qgen.py` rate … apply section | part 1 rows in this range: only the `_KEYS` row (above); no bare/broad `except`, `TODO` or unread flag; no open task changes these functions | — | — | — |
+| `authoring/tools/qgen.py` `report_subcategories` | no findings: `categories.load()` read twice, "young teens" label matches `engine.supply`'s default group | — | — | — |
+| `authoring/tools/qgen.py` `SAT_*`, `HARD_AT` | `HARD_AT` had no comment and `SAT_HARD`'s comment repeated its value (11); now `HARD_AT` comes first with its meaning, `SAT_HARD` refers to it | practice | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `bundle_runs`, `committed_batches` | two copies of "last n merged batches of the bundle", differing only in the `done` filter; now `bundle_runs(…, done=True)`, `committed_batches` gone (no other user) | complexity | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `saturation`, `report_saturation` | `bundle_runs` computed twice per report (reads every batch's `run.json`) | performance | low | won't fix: a few small files |
+| `authoring/tools/qgen.py` `calibration` | no findings: public (`health.py`); `plan[sub][slot]` assumes every draft keeps its slot (revised drafts do) | — | — | — |
+| `authoring/tools/qgen.py` `last_batches`, `health.batch_runs` | both glob `work/batch-*` with their own filter (`slots.json` vs. merged and N ≥ 4) | complexity | low | handed to part 10 (duplication candidate) |
+| `authoring/tools/qgen.py` `report_calibration` | no findings | — | — | — |
+| `authoring/tools/qgen.py` `report_overlaps`, `overlap_candidates` | the "«x» in its text" reason took the first matching stem of a `set`: the reported stem changed with `PYTHONHASHSEED` (8 of 4468 lines differed between two runs); now the smallest, like "same stem"; ranking and `rate`'s candidates unchanged (its prompt doesn't carry the reason) | bug | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `report_progress`, `report_supply` | no findings: per-locale approved via `translations.plays` (decision 37), deficits/shortfall all from `targets.py` | — | — | — |
+| `authoring/tools/qgen.py` `spot_agreement`, `qc_stats`, `release_failures`, `exit_check` | the release bar test (`n ≥ spot_check_size and agreed ≥ min_agreement × n`) written out in `qc_stats` and `exit_check`; now `spot_passes()`; `release_failures` keeps its own per-limit messages | complexity | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `qc_pct`, `QC_CHANGES`, `qc_section` | no findings: the "Changes from this QC" line survives rewrites (read back from the old report) | — | — | — |
+| `authoring/tools/qgen.py` `write_qc` | `path.write_text` rewrites the report in place (not atomic) | practice | low | won't fix: generated, tracked file; a crash leaves a git diff, rerun restores it |
+| `authoring/tools/qgen.py` `qc_trend` | non-batch columns (`backaudit-*`, `tr-*`, `neutralize-*`) all sorted with key 0, so their order followed `set` iteration and changed with `PYTHONHASHSEED` (checked: different column order in two runs); now by `natural_key`, still before the batches. Public (`health.py`, `batches.md`) | bug | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `qc_trend`, `qc_pct`, `audit_section` | three local percent formatters (`qc_trend`'s and `audit_section`'s `pct` lambdas, `qc_pct`), each with its own output format | complexity | low | handed to task 566 (duplicated helpers) |
+| `authoring/tools/qgen.py` `report_qc` | no findings | — | — | — |
+| `authoring/tools/qgen.py` `exit_check`, `report_exit_check` | no findings otherwise: missing data counts as a fail; thresholds from `health.failures`, not copied | — | — | — |
+| `authoring/tools/qgen.py` `AGE_GROUP_IDS` | hard-coded copy of `age-groups.json`'s group ids (comment cited D-76, which tunes windows, not ids); now read from the file (same list and order today) | inconsistency | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `SIM_MODES`, `sim/simulate.ts` `SIM_MODES` | same list in Python and TS | complexity | low | handed to part 10 (duplication candidate) |
+| `authoring/tools/qgen.py` `LAUNCH_LOCALES`, `SIM_MULTI`, `locale_pool`, `target_check` | no findings (`LAUNCH_LOCALES`: task 559's row) | — | — | — |
+| `authoring/tools/qgen.py` `report_simulate` | `--age-group` and `--locale` values not checked (`--mode`, `--player` are); an unknown one reaches the node sim | practice | low | won't fix: information-only report, the sim fails loudly |
+| `authoring/tools/qgen.py` `report_simulate` | `ex.map(lambda c: engine.simulate(c), …)`; now `ex.map(engine.simulate, …)` | complexity | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `RUN_KINDS`, `run_kind` | no findings | — | — | — |
+| `authoring/tools/qgen.py` `cost_runs` | parses the locale from the run name (`run[3:].rsplit("-", 1)[0]`) like `spot_checks.run_locale`, while `run_locale` reads `run.json` | inconsistency | low | handed to part 10 (task 559's `run_locale` row) |
+| `authoring/tools/qgen.py` `cost_runs`, `health.py` cost | both sum `costs.log` via `qgen.costs`, `$/approved` from the run's own log, as `batches.md` says: no copied math | — | — | — |
+| `authoring/tools/qgen.py` `natural_key` | public (`health.py`), defined in the cost block | inconsistency | low | handed to task 566 (misplaced helper) |
+| `authoring/tools/qgen.py` `cost_report`, `report_cost`, `engine_model` | no findings: decision 37 per-locale deficits, budget from `targets.json` | — | — | — |
+| `authoring/tools/qgen.py` `cmd_report` | the broad-category key lambda written twice; now one local `cat` | complexity | low | fixed (task 561) |
+| `authoring/tools/qgen.py` `cmd_report` | option handling: one exclusive mode per call (cost, simulate, exit check, qc, calibration, overlaps, batches) in a fixed order, the rest silently ignored; every flag read | practice | low | won't fix: documented in `-h` per flag |
+| `authoring/tools/qgen.py` report section | checked: `qgen report` plain, `--subcategories --locale es,en,de`, `--calibration`, `--overlaps`, `--batches`, `--exit-check`, `--qc` (trend and a stubbed spot check), `--cost` (+ `--json`), `--simulate` (+ `--json`), `--run batch-8` byte-identical before/after with a fixed `PYTHONHASHSEED`, except the two fixed orderings; part 1 rows in this range: none (no bare/broad `except`, `TODO` or unread flag); no open task changes these functions | — | — | — |
 
 ## Part 8: Other authoring tools
 

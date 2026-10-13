@@ -1156,10 +1156,10 @@ def overlap_candidates(q, others, cache, cap=8):
         if not why and a["stems"] & b["stems"]:
             why, rank = f"same stem «{min(a['stems'] & b['stems'])}»", 2
         if not why:
-            hit = next((s for s in a["stems"] if len(s) >= 4 and f" {s} " in b["text"]), None)
+            hit = min((s for s in a["stems"] if len(s) >= 4 and f" {s} " in b["text"]), default=None)
             if hit:
                 why, rank = f"«{hit}» in its text", 3
-            elif hit := next((s for s in b["stems"] if len(s) >= 4 and f" {s} " in a["text"]), None):
+            elif hit := min((s for s in b["stems"] if len(s) >= 4 and f" {s} " in a["text"]), default=None):
                 why, rank = f"its «{hit}» in this text", 3
         if why:
             found.append((rank, -difflib.SequenceMatcher(None, a["question"], b["question"]).ratio(), p, why))
@@ -1527,19 +1527,21 @@ def report_subcategories(avail, ranges):
 
 
 # Saturation check (plan 14): a subcategory is saturated when any of these holds.
+HARD_AT = 11  # a "hard" concept: known_at ≥ this
 SAT_AFTER_TOP_UP = 36  # unused right after its last top-up (2 batches of 18 slots)
-SAT_HARD = 10  # unused concepts at known_at ≥ 11
+SAT_HARD = 10  # unused hard concepts
 SAT_OVERLAP = 0.10  # overlaps / drafts in its last batch
 SAT_OVERLAP_MIN = 2  # … and at least this many (one is noise)
 SAT_ASKED = 60  # questions in any status = avoid-list length
-HARD_AT = 11
 
 
-def bundle_runs(bundle, n=2):
-    """The last n merged `qgen batch` runs of the bundle, oldest first (unfinished ones too)."""
+def bundle_runs(bundle, n=2, done=False):
+    """The last n merged `qgen batch` runs of the bundle, oldest first; unfinished ones too unless `done`."""
     import health  # authoring/tools/health.py (imports qgen)
-    return [r for r in health.batch_runs()
-            if (load_json(WORK / r / "run.json", {}) or {}).get("bundle", "base") == bundle][-n:]
+    def ok(run):
+        cfg = load_json(WORK / run / "run.json", {}) or {}
+        return cfg.get("bundle", "base") == bundle and (cfg.get("done") or not done)
+    return [r for r in health.batch_runs() if ok(r)][-n:]
 
 
 def saturation(pool, bundle):
@@ -1713,19 +1715,15 @@ def report_supply(pool, locale):
     print(f"  past es's target (drafted once es meets it, decision 37): {fmt(after or {})}")
 
 
-def committed_batches(bundle, n=2):
-    """The last n `qgen batch` runs of the bundle that are merged and done, oldest first."""
-    import health  # authoring/tools/health.py (imports qgen)
-    def ok(run):
-        cfg = load_json(WORK / run / "run.json", {}) or {}
-        return cfg.get("done") and cfg.get("bundle", "base") == bundle
-    return [r for r in health.batch_runs() if ok(r)][-n:]
-
-
 def spot_agreement(batch, checks):
     """(decided, agreed) of the batch's spot check: agree = both accept or both don't (plan 16)."""
     items = [i for i in (checks.get(batch) or {}).get("items", {}).values() if i.get("human")]
     return len(items), sum((i["llm"] == "approved") == (i["human"] == "approved") for i in items)
+
+
+def spot_passes(n, agreed, quality):
+    """The release bar on a spot check (D-79): enough decided, enough agreement."""
+    return n >= quality["spot_check_size"] and agreed >= quality["min_agreement"] * n
 
 
 def qc_stats(batch, checks):
@@ -1747,7 +1745,7 @@ def qc_stats(batch, checks):
             "audit_human_n": len(audited),
             "audit_human_agreed": sum((it["audit"] == "ok") == accept(it["human"]) for it in audited),
             "audit_caught": sum(items[i].get("audit") == "problem" for i in false_approve),
-            "passes": None if not q or not n else n >= q["spot_check_size"] and agreed >= q["min_agreement"] * n,
+            "passes": None if not q or not n else spot_passes(n, agreed, q),
             "items": items}
 
 
@@ -1845,7 +1843,7 @@ def qc_trend(pool=None):
                                                              *WORK.glob("backaudit-*/audit/q-*.json"),
                                                              *WORK.glob("neutralize-*/audit/q-*.json"),
                                                              *WORK.glob("tr-*/audit/q-*.json")])},
-                  key=lambda r: int(r[6:]) if re.fullmatch(r"batch-\d+", r) else 0)
+                  key=lambda r: (1, int(r[6:])) if re.fullmatch(r"batch-\d+", r) else (0, natural_key(r)))
     if not runs:
         return []
     pool = pool if pool is not None else load_json(POOL)["questions"]
@@ -1887,7 +1885,7 @@ def exit_check(pool, bundle):
     have = Counter(q["difficulty"] for q in approved)
     short = [f"{d}: {have[d]}/{goal}" for d, goal in sorted(t["difficulty"].items()) if have[d] < goal]
     out.append((not short, "every difficulty ≥ its target", "short " + ", ".join(short) if short else "all met"))
-    runs = committed_batches(bundle)
+    runs = bundle_runs(bundle, done=True)
     if len(runs) < 2:
         out.append((False, "last two batches pass the health thresholds", f"not available (batches: {', '.join(runs) or 'none'})"))
     else:
@@ -1906,8 +1904,7 @@ def exit_check(pool, bundle):
         parts, ok = [], True
         for r in runs:
             n, agreed = spot_agreement(r, checks)
-            pass_ = n >= size and agreed >= rate * n
-            ok &= pass_
+            ok &= spot_passes(n, agreed, quality)
             parts.append(f"{r}: {agreed}/{n} ({100 * agreed / n:.0f} %)" if n else f"{r}: no spot check")
         out.append((ok, f"last two spot checks: ≥ {size} questions, ≥ {100 * rate:.0f} % agreement", "; ".join(parts)))
     errors, _ = validate_pool()
@@ -1926,7 +1923,6 @@ def report_exit_check(pool, bundle):
 LAUNCH_LOCALES = ["es", *translations.LOCALES]  # D-78
 SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster
 SIM_MULTI = {"rr-competitive", "timed"}
-AGE_GROUP_IDS = ["kids", "young_teens", "young_adults", "adults"]  # D-76
 
 
 def locale_pool(locale):
@@ -1951,7 +1947,7 @@ def report_simulate(args):
     locales = args.locale.split(",") if args.locale else LAUNCH_LOCALES
     all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
     modes = SIM_MODES if args.mode == "all" else args.mode.split(",")
-    groups = args.age_group.split(",") if args.age_group else AGE_GROUP_IDS
+    groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
     player = args.player or "both"
     if player not in ("strong", "typical", "both") or set(modes) - set(SIM_MODES):
         sys.exit(f"--simulate: --player strong|typical|both, --mode {'|'.join(SIM_MODES)}|all")
@@ -1963,7 +1959,7 @@ def report_simulate(args):
     t0 = time.monotonic()
     have = [c for c in cells if locale_pool(c["locale"]).exists()]
     with concurrent.futures.ThreadPoolExecutor(os.cpu_count() or 4) as ex:
-        done = dict(zip(map(id, have), ex.map(lambda c: engine.simulate(c), have)))
+        done = dict(zip(map(id, have), ex.map(engine.simulate, have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
     pool = load_json(POOL)["questions"]
     checks = [target_check(l, pool) for l in locales]
@@ -2154,9 +2150,10 @@ def cmd_report(args):
         return print(health.deficit_line())
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
+    cat = lambda q: broad[q["subcategory"]]["slug"] if q.get("subcategory") in broad else None
     print(f"pool: {len(pool)} questions")
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
-                       ("category", lambda q: broad[q["subcategory"]]["slug"] if q.get("subcategory") in broad else None), ("style", lambda q: q.get("style")),
+                       ("category", cat), ("style", lambda q: q.get("style")),
                        *[(f"axes.{a}", lambda q, a=a: (q.get("axes") or {}).get(a)) for a in concepts.AXES],
                        ("media", lambda q: f"{q['media']['type']}/{q['media']['role']}"),
                        ("bundle", lambda q: q.get("bundle"))]:
@@ -2168,7 +2165,7 @@ def cmd_report(args):
     by_seen = Counter(min(seen[q["id"]], 2) for q in avail)
     print(f"approved, not blocked: {len(avail)} ({len(blocked)} blocked)")
     print(f"  unseen approved: {by_seen[0]} (seen once: {by_seen[1]}, twice+: {by_seen[2]})")
-    print(f"  by category: {count(avail, lambda q: broad[q['subcategory']]['slug'] if q.get('subcategory') in broad else None)}")
+    print(f"  by category: {count(avail, cat)}")
     print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
     print(f"  by bundle: {count(avail, lambda q: q.get('bundle'))}")
     print("supply per level, young teens, every bundle (a game needs 4 per level, D-22):")

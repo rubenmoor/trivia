@@ -11767,7 +11767,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', '2026-10-13T12:03:07Z', 519);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (561, 79, 'Review qgen report', 'work', 'open', NULL, NULL, 'Task 5 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (561, 79, 'Review qgen report', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py, code-review.md', 'Task 5 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
 - Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -11797,7 +11797,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check: `qgen report` with each option on a temp copy prints the same before and after a fix (diff).
 
 ## Done when
-- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', '2026-10-13T12:10:13Z', 519);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (562, 79, 'Review qgen LLM batch steps: media, sheets, review, fix, research, record', 'work', 'open', NULL, NULL, 'Task 6 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
@@ -15939,6 +15939,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (606, 558, '2026-10-13T11:51:08Z', '2026-10-13T11:53:13Z', 'done', NULL, 0, 'e0ca8cd61f5b167ae6d413a06489042742af37d3', 'claude-opus-5-5[1m]', 'c64eff73-88d3-4123-a3d8-900639a43ae7', 19, 32, 10357, 935479, 65058, 0.91482779999999986, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (607, 559, '2026-10-13T11:53:14Z', '2026-10-13T11:58:10Z', 'done', NULL, 0, '9c2cf364d9073b104fbe59d2b36f7a2350f72179', 'claude-opus-5-5[1m]', '40141f3b-7566-4383-a351-32ece6e4c0e3', 23, 44, 18176, 1413988, 72863, 1.2293976, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (608, 560, '2026-10-13T11:58:11Z', '2026-10-13T12:03:18Z', 'done', NULL, 0, 'a8e8367253c9c5cb69b73a6162e0092ccdb99cf7', 'claude-opus-5-5[1m]', 'a94a0445-6d05-4628-859d-c17ae2783b4b', 33, 66, 22174, 2324259, 80994, 1.5565478000000004, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (609, 561, '2026-10-13T12:03:19Z', '2026-10-13T12:10:29Z', 'done', NULL, 0, 'b9f312ae168e832c0b03a6d20dab57c5bdd7e3a9', 'claude-opus-5-5[1m]', '8de62665-bf46-4c51-bace-38d3764a5fbf', 25, 46, 18654, 1776730, 85836, 1.415298, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
