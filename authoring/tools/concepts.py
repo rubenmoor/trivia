@@ -10,7 +10,7 @@ import json, re, unicodedata
 from collections import Counter
 
 import categories  # authoring/tools/categories.py: which bundle a subcategory is in (D-43)
-from layout import AXES_FILE, BUNDLE_DATA, CONCEPTS
+from layout import AXES_FILE, BUNDLE_SOURCES, CONCEPTS
 
 AXES = ["move", "stimulus", "clue", "answer_kind", "lens"]
 FIT_AXES = ["move", "stimulus", "lens"]  # scored per subcategory (PE-9)
@@ -39,7 +39,7 @@ def key(name):
 
 def axes_path(bundle="base"):
     """A bundle's own question-axes.json if it has one, else base's (D-41)."""
-    own = BUNDLE_DATA / bundle / "question-axes.json"
+    own = BUNDLE_SOURCES / bundle / "question-axes.json"
     return own if bundle != "base" and own.exists() else AXES_FILE
 
 
@@ -86,7 +86,7 @@ def axes_text(axes_def, only=None):
 # --- concept lists --------------------------------------------------------------
 
 def concepts_dir(bundle):
-    return CONCEPTS if bundle == "base" else BUNDLE_DATA / bundle / "concepts"
+    return CONCEPTS if bundle == "base" else BUNDLE_SOURCES / bundle / "concepts"
 
 
 def path(sub):

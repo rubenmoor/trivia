@@ -29,5 +29,5 @@ def names(locale, bundle="base"):
 
 DIST = APP / "client" / "dist"
 
-STATE = Path(os.environ.get("TRIVIA_STATE", REPO / "state"))  # gitignored (D-25)
-MEDIA = Path(os.environ.get("TRIVIA_MEDIA", REPO / "media"))  # gitignored cache (D-17)
+STATE = Path(os.environ.get("TRIVIA_STATE") or REPO / "state")  # gitignored (D-25); empty = unset, as the desktop shell
+MEDIA = Path(os.environ.get("TRIVIA_MEDIA") or REPO / "media")  # gitignored cache (D-17)

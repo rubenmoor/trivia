@@ -11,8 +11,8 @@ from paths import MEDIA, POOL
 
 
 def cache_path(url):
-    """Where the file for url is cached. The name depends on the URL alone (D-17)."""
-    ext = Path(urllib.parse.urlparse(url).path).suffix.lower()
+    """Where the file for url is cached. The name depends on the URL alone (D-17); same as app/desktop/resolve.mjs cacheName."""
+    ext = Path(urllib.parse.urlsplit(url).path).suffix.lower()
     if not re.fullmatch(r"\.[a-z0-9]{1,5}", ext):
         ext = ".bin"
     return MEDIA / (hashlib.sha1(url.encode("utf-8")).hexdigest()[:16] + ext)
