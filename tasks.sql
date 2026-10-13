@@ -4961,6 +4961,77 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Steam DLC app IDs, store entries and depots (S5: plan 89 / backlog row from task 194); Workshop and player-made bundles (own milestone, decision 66); running batches (plan 84).', '2026-10-13T15:01:21Z', 249);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (99, 8, 'Retire the browser game and the Python game server', 450, 'Part 9 of masterplan 8. With decision 111: Steam only, the desktop build is the only game: the family''s save moves into `trivia-desktop`, the Python game server (`app/server/main.py`, `trivia`, `/api/save`, `nix build .#app`) goes, `app/` becomes Node/TS only, and workers check UI changes in a browser on a small Vite-based Node dev server instead of "`trivia` with a temp `TRIVIA_STATE`". Authoring''s Python (qgen, `trivia-authoring`, `trivia-media`) stays Python but stops importing from `app/server/`.
+
+## Binding
+- decision 111: Steam only: no work, checks or docs for running outside Steam; saves per Steam user (plan 87); dev runs and agent checks keep working through an explicit dev switch. Here: the dev server and `--import-save` print the save location they use.
+- decision 39: Local builds start offline?: start test skipped (Steam beta test), not failed; nothing here re-adds it.
+- decision 104: Python ↔ Node/TS twins: won''t fix: the Python modules move, they aren''t synced or rewritten.
+- decision 98: Browser game: corrupt or newer state/game.json: the backup behaviour survives in `FileStore`/`app/desktop/save.mjs`; the server endpoint goes.
+- Dependencies: reuse Vite (already a dev dependency) and the desktop''s own modules; anything new needs a `pm decision`.
+- Supersedes D-59''s bridge (`plans/decisions.md`).
+- Every step leaves the per-commit checks green (`npm run check`, `npm test`, `npm run build`, `qgen validate`).
+
+## What exists (2026-10-13)
+- `app/server/`: `main.py` (static + `/data/` + cache-only `/media` + `GET/PUT /api/save` + `POST /api/save/backup`, `save.migrate()` at start), `paths.py`, `save.py`, `media_cache.py`, `http_base.py`.
+- Authoring imports from `app/server/` via `authoring/tools/layout.py` (puts `app/server` on `sys.path`): `paths` (layout.py, save_file.py, categories.py), `save` (save_file.py: `load()`), `media_cache` (qgen.py, download.py, media.py, authoring/server/main.py, overview.py, media_stats.py), `http_base.BaseHandler` (authoring/server/main.py).
+- `app/client/src/lib/store.ts`: `TextStore` → `ServerStore` (`/api/save`, `/api/save/backup`) and `FileStore` (desktop bridge `window.trivia.loadSave/writeSave/backupSave`).
+- `app/client/vite.config.ts`: dev proxies `/api`, `/data`, `/media` to the Python server on :8000.
+- `app/desktop/`: `save.mjs` (`makeSaveFile`, atomic write, `backup/`), `resolve.mjs` (`makeResolver`: dist, `/data/`, `/media` for `app://`), `main.mjs` (save dir `TRIVIA_SAVE_DIR` | `state/desktop/<steamid|local>/` in dev | `<userData>/save/…` packaged; `--import-save <file>` already there: writes only into an empty save, no `--force`, no backup).
+- `flake.nix`: `trivia-dev` (the `trivia` command, `app/server/main.py`), package `app` (`nix build .#app`, also `default`).
+- `authoring/steam/release_check.py`: step `nix` = `nix build .#app --no-link` (D-59).
+- Family save: `state/game.json`, version 2 (the client upgrades it on load, engine/save.ts); `game.sqlite`/`flags.json` already migrated (backups only).
+
+## Steps (in this order)
+
+### 1. Node dev server for browser checks
+- A Vite plugin in `app/client/` (like `credits.ts`), active in `vite` (dev client) and `vite preview` (built `dist/`):
+  - `/data/` from `app/data/`, `/media` from the media cache (`TRIVIA_MEDIA` | repo `media/`), cache only: reuse `app/desktop/resolve.mjs` where it fits, so the rules are the desktop''s.
+  - Save: dev-only middleware over `app/desktop/save.mjs` (`makeSaveFile`) and a dev-only page shim that provides the save half of the desktop bridge (`loadSave`, `writeSave`, `backupSave`), so the browser uses `FileStore`, the same Store as the desktop (no `ServerStore` needed). Not in the production bundle.
+  - Save dir: `TRIVIA_SAVE_DIR` if set, else a fresh temp dir (never the family''s save); printed at start (`trivia dev: save <path>`). This is the dev switch of decision 111 for agent checks; plan 87''s "no Steam user = memory-only" must not apply to it.
+  - Proxy to :8000 removed from `vite.config.ts`.
+- One command each: `npm run dev -w app/client` (dev client) and e.g. `npm run serve -w app/client` (built client); fixed port, printed.
+- Replace "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files (`plans/*.md`) and open task bodies (`pm task set`).
+- Done when: a fresh-save game plays through a few levels in a browser on the dev server, the save lands in the printed dir, media from the cache plays; `trivia` is still there.
+
+### 2. `trivia-desktop --import-save <file>` and the family switch
+- Extend the existing flag in `app/desktop/main.mjs` (+ `save.mjs`):
+  - checks the envelope (JSON object, numeric `version`; the client upgrades v2 on load, no Python `save.migrate()` needed);
+  - writes the desktop save atomically (`makeSaveFile`);
+  - refuses a non-empty target without `--force`; with `--force` first copies the old save to `backup/game-import-<stamp>.json`;
+  - prints source, target file (Steam user folder, `local/` or `TRIVIA_SAVE_DIR`) and backup path; the source file stays untouched.
+- Then `pm decision add "Family save imported into trivia-desktop?"` (kind once), body: the exact command for the gamemaster (`trivia-desktop --import-save state/game.json`, run the way the family will play, Steam up or not, since the save folder is per Steam user), what to check (players, seen counters, a round plays), and that the family plays `trivia-desktop` from then on (later the Steam beta). Options: "imported, family plays trivia-desktop" (recommended) | "not yet".
+- Step 4 waits for its answer: the step-4 tasks are `pm task-pending-decision` on it.
+- Done when: the import works on a copy of the family save in a temp `TRIVIA_SAVE_DIR`; the decision is raised.
+
+### 3. Authoring''s Python off `app/`
+- Move into authoring (e.g. `authoring/tools/`) what authoring still imports: `paths.py`, `media_cache.py`, `http_base.py`, and of `save.py` only what `save_file.py` uses (reading the save); `layout.py` stops putting `app/server` on `sys.path`; import comments updated.
+- Move, don''t sync (decision 104); `trivia-authoring`, `qgen`, `trivia-media` behave as before.
+- Save path for authoring (apply_flags, seen counts, `save_file.py`): the desktop''s save, not `state/game.json`: `TRIVIA_SAVE_DIR/game.json` if set, else `state/desktop/<user>/game.json` (the only one, or the newest, named on stderr); `flags-applied.json` stays under `state/`. If this choice turns out not obvious, `pm decision add`.
+- `app/server/main.py` keeps working from its own copies until step 4 (no shared imports across the line).
+- Done when: no file under `authoring/` imports from `app/server/`; `qgen validate`, `qgen report`, `trivia-media sync --status approved --dry-run`-style check and `trivia-authoring` pages (review, flags) run; apply_flags reads a flag from a desktop save.
+
+### 4. Deletions (wait for step 2''s decision)
+- `app/server/` entirely (`main.py`, the remaining `paths.py`, `save.py`, `media_cache.py`, `http_base.py`, `__pycache__`); `app/` has no `.py` left.
+- `lib/store.ts`: `ServerStore`, `/api/save`, `/api/save/backup` (task 724''s backup endpoint); the store choice keeps only `FileStore` (desktop bridge or the dev server''s shim); `TextStore` merged into it if nothing else extends it.
+- `flake.nix`: `trivia-dev` (the `trivia` command), package `app` and `default` pointing at it (and the `TRIVIA_STATE` wrapper); the dev shell list updated.
+- `authoring/steam/release_check.py`: the `nix` step, its `--skip` choice and docstring row; header and manual rows that mention it.
+- `state/game.json`, `game.sqlite`, `flags.json` are the family''s data: not deleted (gitignored backups).
+- Done when: per-commit checks pass, `trivia-release-check --skip tag …` runs without a `nix` step, `grep -rn "api/save\|ServerStore\|app/server\|\.#app" app authoring flake.nix` finds nothing live.
+
+### 5. Docs
+- AGENTS.md Commands: `trivia` and `nix build .#app` out; the dev server in (command, port, save dir); `trivia-release-check` line without `nix build .#app`.
+- README.md (how the family plays: `trivia-desktop`; import), `directory.md` (`app/server/` gone, new authoring modules, dev server files), `plans/decisions.md` (D-59 marked superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md`, `plans/18-steam-integration.md` (desktop as the only game; part 9 note), `plans/project.md` in sync.
+- `pm decision consequences 111 …` with what changed.
+
+### 6. Sweep of other milestones (after step 4)
+- Open plans/tasks/decisions that still name `trivia` (the command), `/api/save`, `ServerStore`, `nix build .#app`, `TRIVIA_STATE` or "browser game": open task bodies with `pm task set`; a body that can''t change (running) or a plan needing new work: a follow-up task in the owning plan. Candidates found 2026-10-13: tasks 200 (plan 40), 591 and 741, 744 (plans 82/83; 741''s parity check loses its Python side), 652 (plan 85), 699, 700 (plan 93), 710 (plan 95), 719 (plan 97); plans 85, 87 (save per Steam user: the imported family save and the dev switch), 89 (builds, depots), 91, 92, 96, 98, 30 (pending decision 50: play-test in the browser → on `trivia-desktop` or the dev server: a task in plan 30 if its text needs changing). Plan 48 is revised by task 756: revise plan 48.
+
+## Done when
+- No Python under `app/`; the family''s save lives in the desktop build (step 2''s decision answered).
+- Workers'' browser checks run on the Node dev server; AGENTS.md says how.
+- Per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+- Owner plan files updated: `plans/18-steam-integration.md`, `plans/01-architecture.md`, `plans/19-repo-layout.md`; D-59 superseded by decision 111 in `plans/decisions.md`.', '2026-10-13T15:16:20Z', 758);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -14601,7 +14672,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-13T15:13:02Z', NULL, 753);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (758, 8, 'write plan: Retire the browser game and the Python game server', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of masterplan 8 (`pm show p8`, "Retire the browser game and the Python game server"): `pm plan add 8 "Retire the browser game and the Python game server" --priority 450`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (758, 8, 'write plan: Retire the browser game and the Python game server', 'plan', 'done', 1000, '2026-10-13, plan 99 (tasks.sql)', 'Write the plan for part 9 of masterplan 8 (`pm show p8`, "Retire the browser game and the Python game server"): `pm plan add 8 "Retire the browser game and the Python game server" --priority 450`.
 
 - Follow the part''s order exactly: Node dev server for workers'' browser checks → `trivia-desktop --import-save <file>` + pm decision "Family save imported into trivia-desktop?" (deletions wait for its answer) → authoring''s Python off `app/` (move, don''t sync: decision 104: Python ↔ Node/TS twins) → deletions (`app/server/main.py`, `ServerStore`, `/api/save` incl. task 724''s backup endpoint, `trivia` command, flake package `app`, its `trivia-release-check` step) → docs.
 - Binding: decision 111: Steam only (no outside-Steam work; saves per Steam user, dev switch for dev runs and agent checks: the import and the dev server must say which save location they use); decision 39 (start test skipped, not failed); dependencies: reuse Vite for the dev server, anything new needs a `pm decision`.
@@ -14610,7 +14681,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owner plan files: `plans/18-steam-integration.md`, `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 superseded by decision 111.
 - Plan 48 (`S3 close-out and platform test`, priority 140) runs after this plan; its revision is task 756: revise plan 48.
 
-Done when: the plan exists at priority 450 with the part''s steps and done-when.', '2026-10-13T15:13:40Z', NULL, 755);
+Done when: the plan exists at priority 450 with the part''s steps and done-when.', '2026-10-13T15:13:40Z', '2026-10-13T15:16:23Z', 755);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (759, 99, 'create tasks for plan 99', 'split', 'open', 1000, NULL, 'Split plan 99 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:16:20Z', NULL, 758);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16500,6 +16573,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (659, 751, '2026-10-13T15:05:42Z', '2026-10-13T15:12:05Z', 'done', NULL, 0, 'f3f973ef65246ad9b99da73b52c45d56c8131f23', 'claude-opus-5-5[1m]', 'e878694d-5713-4b6e-8e84-8a13498c513d', 66, 130, 37577, 6530730, 131490, 3.1101259999999984, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (660, 753, '2026-10-13T15:12:05Z', '2026-10-13T15:13:18Z', 'done', NULL, 0, 'dbead0491651cf1b1c49d3ca7ef2382a1709b876', 'claude-opus-5-5[1m]', '17fa49c2-9e59-4625-affd-ec6483fc062b', 12, 24, 6811, 488755, 41731, 0.567915, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (661, 755, '2026-10-13T15:13:19Z', '2026-10-13T15:13:48Z', 'done', NULL, 0, '42fa23e9c1d6103648822b8c122c55d62556df99', 'claude-opus-5-5[1m]', '68682d62-ce4e-4fc3-b03f-03007ee25cc5', 7, 14, 2241, 240075, 31739, 0.346803, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (662, 758, '2026-10-13T15:13:49Z', '2026-10-13T15:16:35Z', 'done', NULL, 0, '482859ddea4a8a53382e0a235d45fc995023c336', 'claude-opus-5-5[1m]', 'cb85fb35-cbf2-412b-bc01-21c43a30b3a5', 16, 28, 11895, 713816, 62946, 0.8843432, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
