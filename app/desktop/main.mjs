@@ -71,6 +71,7 @@ let steamTimer = null;
 let steamInput = false;
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
 let saveFile = null; // set in start(), after Steam
+let localFile = null; // `local/`'s save under Steam: offered once (plan 87)
 let writing = Promise.resolve();
 let pending = 0;
 
@@ -156,7 +157,10 @@ async function importSave(file) {
 
 async function start() {
   await startSteam();
-  saveFile = makeSaveFile(await userSaveDir());
+  const dir = await userSaveDir();
+  saveFile = makeSaveFile(dir);
+  if (path.basename(dir) !== "local" && !process.env.TRIVIA_SAVE_DIR)
+    localFile = makeSaveFile(path.join(path.dirname(dir), "local"));
   console.error(`trivia: save ${saveFile.file}`);
   await saveFile.dropStaleTemp();
   const importFrom = importArg();
@@ -229,6 +233,17 @@ function bridge() {
   handle("save:load", () => queued(() => saveFile.read()));
   handle("save:write", (text) => queued(() => saveFile.write(text)));
   handle("save:backup", (kind) => queued(() => saveFile.backup(kind)));
+  // First Steam start (plan 87): `local/`'s text while this user has no save; adopt copies it, `local/` stays.
+  const localOffer = async () => (localFile && (await saveFile.read()) === null ? localFile.read() : null);
+  handle("save:local-offer", () => queued(localOffer));
+  handle("save:adopt-local", () =>
+    queued(async () => {
+      const text = await localOffer();
+      if (text === null) throw new Error("no_local_save");
+      await saveFile.write(text);
+      return text;
+    }),
+  );
   // Steam (plan 85): pass-throughs; null/false without Steam. Stubs filled by later tasks.
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);

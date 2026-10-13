@@ -5,7 +5,7 @@
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { steam } from "../lib/desktop";
-  import { language, saveError, takeSaveNotice } from "../lib/engine";
+  import { language, saveError, takeLocalOffer, takeSaveNotice, type LocalOffer } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
@@ -23,6 +23,7 @@
   import JokerTray from "./JokerTray.svelte";
   import { levelsOf, onTwelve } from "./levels";
   import LanguageScreen from "./LanguageScreen.svelte";
+  import LocalProgress from "./LocalProgress.svelte";
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
@@ -81,6 +82,8 @@
   let refused = $state<GameError | null>(null);
   /** The save file was unusable and moved to a backup (plan 55): shown once on Start. */
   let notice = $state<ReturnType<typeof takeSaveNotice>>(null);
+  /** First Steam start with a save from without Steam: asked before the language screen (plan 87). */
+  let offer = $state<LocalOffer | null>(null);
   /** Media that was playing when the overlay opened; it resumes on close. */
   let pausedMedia: HTMLMediaElement[] = [];
 
@@ -120,7 +123,8 @@
   async function refresh() {
     try {
       ({ game, supply } = await fetchGame());
-      if (loading && (await language()).ask) screen = "language"; // a fresh save, once (plan 68)
+      if (loading) offer = await takeLocalOffer();
+      if (loading && !offer) await askLanguage();
       notice ??= takeSaveNotice();
       error = saveWarning();
     } catch (e) {
@@ -128,6 +132,17 @@
     } finally {
       loading = false;
     }
+  }
+
+  /** A fresh save picks its language once (plan 68). */
+  async function askLanguage() {
+    if ((await language()).ask) screen = "language";
+  }
+
+  /** «Empezar de cero»: nothing written; the offer comes back next start until a save exists. */
+  async function startFresh() {
+    offer = null;
+    await askLanguage();
   }
 
   /** A save that couldn't be written stays in the corner until one is (plan 55). */
@@ -507,6 +522,9 @@
   {#if loading}
     <Stage />
     <p class="center label">{t("screen.loading")}</p>
+  {:else if offer}
+    <Stage />
+    <LocalProgress {offer} onfresh={startFresh} />
   {:else if screen === "language"}
     <Stage />
     <LanguageScreen onpicked={() => go("start", "whoosh")} />

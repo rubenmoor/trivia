@@ -349,6 +349,15 @@ const es = {
   save: {
     corrupt: "No se pudo leer la partida guardada. Se guardó una copia en {path} y empieza una partida nueva.",
     newer: "La partida guardada es de una versión más nueva del juego. Se guardó una copia en {path} y empieza una partida nueva.",
+    /** First Steam start (plan 87): the save of this computer without Steam; {players}, {games}: the counts. */
+    local: {
+      title: "Progreso en este equipo",
+      body: "Este equipo tiene progreso guardado sin Steam: {players}, {games}. ¿Lo usamos con esta cuenta de Steam?",
+      players: { one: "1 jugador", other: "{n} jugadores" },
+      games: { one: "1 partida", other: "{n} partidas" },
+      use: "Usar el progreso de este equipo",
+      fresh: "Empezar de cero",
+    },
   },
   /** Refusals by server error code (plan 22, D-57); codes without a key show the English message. */
   error: {

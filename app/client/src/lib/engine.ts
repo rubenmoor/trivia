@@ -2,7 +2,7 @@
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
 import { supply } from "../engine/game.ts";
-import { defaultLanguage } from "../engine/save.ts";
+import { defaultLanguage, parseSave } from "../engine/save.ts";
 import { gameLocale, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError } from "./api.ts";
 import type { Supply } from "./types.ts";
@@ -18,6 +18,13 @@ interface Loaded {
   locales: string[];
   /** No save stored yet (no file, 404, backed-up broken file): the first-start screen may ask (plan 68). */
   fresh: boolean;
+  /** First Steam start: what `local/`'s save holds, offered before the language screen (plan 87). */
+  offer: LocalOffer | null;
+}
+
+export interface LocalOffer {
+  players: number;
+  games: number;
 }
 
 const store = desktop ? new FileStore(desktop) : new ServerStore();
@@ -53,7 +60,8 @@ export function ready(): Promise<Loaded> {
     async ([save, locales]) => {
       let language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS, locales);
       if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
-      const loaded = { save: { ...save, language }, locales, fresh: !save.language };
+      const fresh = !save.language;
+      const loaded = { save: { ...save, language }, locales, fresh, offer: fresh ? await localOffer() : null };
       await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
       return loaded;
     },
@@ -63,6 +71,32 @@ export function ready(): Promise<Loaded> {
     },
   );
   return loading;
+}
+
+/** `local/`'s save under Steam while this user has none; an unreadable one isn't offered. */
+async function localOffer(): Promise<LocalOffer | null> {
+  try {
+    const text = await desktop?.localSave();
+    if (!text) return null;
+    const save = parseSave(JSON.parse(text));
+    return { players: save.players.length, games: save.games.length };
+  } catch {
+    return null;
+  }
+}
+
+/** The offer of the first Steam start, null once declined or in the browser. */
+export async function takeLocalOffer(): Promise<LocalOffer | null> {
+  const loaded = await ready();
+  const offer = loaded.offer;
+  loaded.offer = null;
+  return offer;
+}
+
+/** Copies `local/`'s save into this Steam user's folder and reloads the page with it (its language). */
+export async function adoptLocal(): Promise<void> {
+  await desktop?.adoptLocalSave();
+  location.reload();
 }
 
 /** The notice of a backed-up save file (plan 55), once; null after that and in the browser. */
