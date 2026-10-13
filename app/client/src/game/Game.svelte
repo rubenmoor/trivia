@@ -330,6 +330,41 @@
     if (next !== undefined) await go("question", "rewind", () => (game = next));
   }
 
+  /** «Cambiar pregunta» (MD-12): a new question on screen. */
+  async function replace(seen: boolean) {
+    overlayOpen = false;
+    pausedMedia = [];
+    const next = await request("replace", { seen });
+    if (next !== undefined) await go("question", "paper", () => (game = next));
+  }
+
+  /** «Saltar a nivel» (MD-12): the Level screen at the new level, then its table. */
+  async function jumpLevel(level: number) {
+    overlayOpen = false;
+    pausedMedia = [];
+    const next = await request("level", { level });
+    if (next !== undefined) await go("level", "whoosh", () => (game = next));
+  }
+
+  /** Difficulty and bundles mid-game (MD-12): a new table; a refusal stays in the dialog. */
+  async function changeSettings(body: GameActionBody): Promise<string | null> {
+    let next: Game | null;
+    busy = true;
+    try {
+      next = await gameAction("settings", body);
+    } catch (e) {
+      return errorText(e);
+    } finally {
+      busy = false;
+    }
+    error = saveWarning();
+    overlayOpen = false;
+    pausedMedia = [];
+    const cards = newCards(next);
+    await go(table(next), "paper", () => ((game = next), (fresh = cards)));
+    return null;
+  }
+
   /** The joker budget of the running game, from the overlay (MD-4); the screen stays as it is. */
   async function setBudget(budget: Partial<JokerBudget>) {
     await act("jokers", { jokers: budget });
@@ -340,11 +375,17 @@
     flagListOpen = true;
   }
 
+  /** Abandon, then the same player's configure screen (D-88); without a player, Start. */
   async function restart() {
     overlayOpen = false;
     pausedMedia = [];
+    const player = game?.player ?? null;
     await act("abandon");
-    await toStart();
+    if (player === null) return toStart();
+    await refresh();
+    chosen = player;
+    refused = null;
+    await go("choice", "whoosh");
   }
 
   /** The flag dialog (decision 60); media pauses like under the overlay. */
@@ -653,7 +694,10 @@
       {mode}
       questionId={screen === "question" && game?.question ? game.question.id : (game?.last?.question_id ?? null)}
       questionLabel={t(screen === "question" ? "overlay.question" : "overlay.lastQuestion")}
+      {game}
+      {running}
       canSkip={screen === "question" && !questionBusy()}
+      canTable={running && (game?.phase === "select" || (screen === "question" && game?.settings.cards === 0 && !questionBusy()))}
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={running || screen !== "start"}
       onflags={openFlagList}
@@ -661,10 +705,10 @@
       onskip={() => skip(false)}
       onskipall={() => skip(true)}
       onundo={undo}
+      onreplace={replace}
+      onlevel={jumpLevel}
+      onsettings={changeSettings}
       onrestart={restart}
-      budget={running ? (game?.settings.jokers ?? null) : null}
-      left={running ? (game?.jokers_left ?? null) : null}
-      settings={running ? (game?.settings ?? null) : null}
       onbudget={setBudget}
     />
   {/if}

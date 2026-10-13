@@ -1,9 +1,9 @@
 import * as engine from "../engine/api.ts";
-import { gameChoice, playerMode } from "../engine/game.ts";
+import { gameChoice, jokersUsed, playerMode } from "../engine/game.ts";
 import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
-import type { EngineData, SaveData } from "../engine/state.ts";
-import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
+import { withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
+import { language as fetchLanguage, localeSupply, read, run, type Scope } from "./engine.ts";
 import type { Choice, Difficulty, ErrorInfo, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
@@ -120,14 +120,14 @@ export interface GameActionBody {
 export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bundles" | "levels" | "cards" | "video" | "audio" | "jokers">;
 
 /** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
- * (plan 71), both with their names in that locale. */
+ * (plan 71), both with their names in that locale; `scope` "game": the running game's locale (MD-12). */
 export interface ChoiceOptions {
   /** `span`: lowest and highest difficulty of its levels (the «Custom» start, D-88). */
   groups: { id: string; name: string; ages: readonly [number, number | null]; span: readonly [number, number] }[];
   bundles: { id: string; base: boolean; name: string; description: string }[];
 }
 
-export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
+export async function fetchChoiceOptions(scope: Scope = "next"): Promise<ChoiceOptions> {
   return read((save, data) => {
     const groups = data.ageGroups.map(({ id, name, ages, levels }) => ({
       id, name: data.names.age_groups[id] ?? name, ages, span: [levels[0][0], levels[levels.length - 1][1]] as const,
@@ -137,7 +137,7 @@ export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
       return { id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description };
     });
     return { save, status: 200, body: { groups, bundles } };
-  }, "next");
+  }, scope);
 }
 
 /** The running game's choice for the overlay (plan 29): group name or custom difficulty, active bundle
@@ -150,6 +150,19 @@ export async function fetchGameChoice(settings: Game["settings"]): Promise<{ gro
     const bundles = [...on.filter((b) => b.kind === "base"), ...on.filter((b) => b.kind !== "base")]
       .map((b) => data.names.bundles[b.id]?.name ?? b.name);
     return { save, status: 200, body: { group, difficulty: c.difficulty, bundles } };
+  });
+}
+
+/** The running game's choice as ids (`gameChoice`), for the menu's difficulty and bundles (MD-12). */
+export async function fetchGameSettings(settings: Game["settings"]): Promise<Choice> {
+  return read((save, data) => ({ save, status: 200, body: gameChoice({ settings }, data) }));
+}
+
+/** Joker uses so far in the running game (MD-12: the menu edits uses left), null without one. */
+export async function fetchJokersUsed(): Promise<Record<JokerName, number> | null> {
+  return read((save) => {
+    const g = save.games.reduce<SaveData["games"][number] | null>((m, x) => (m && m.id > x.id ? m : x), null);
+    return { save, status: 200, body: g?.result === null ? jokersUsed(withDefaults(structuredClone(g.state))) : null };
   });
 }
 

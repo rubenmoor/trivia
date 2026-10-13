@@ -57,7 +57,7 @@ const es = {
     skipAll: "Bloquear pregunta",
     undo: "Deshacer última respuesta",
     fullscreen: "Pantalla completa",
-    restart: "Volver al inicio (termina la partida)",
+    restart: "Terminar partida (configurar otra)",
     quit: "Salir del juego",
     confirm: "¿Seguro? Presiona otra vez",
     sound: "Sonido",
@@ -75,9 +75,8 @@ const es = {
     custom: "A medida",
     less: "menos",
     more: "más",
-    left: "quedan {n}",
     /** Followed by the ←/→ keys. */
-    keys: "Volumen y comodines:",
+    keys: "Cambiar valor o columna:",
     /** Without the budget editor (outside gamemaster mode). */
     keysVolume: "Volumen:",
     /** What the overlay acts on, shown with its id. */
@@ -86,6 +85,19 @@ const es = {
     stats: "Estadísticas:",
     statsCategories: "categorías",
     statsDifficulty: "dificultad",
+    /** The gamemaster cheats, apart from the general part (MD-12, D-88). */
+    cheats: "Trucos del anfitrión",
+    /** «Cambiar pregunta»: ‹ › toggles whether the old one counts as seen. */
+    replace: "Cambiar pregunta",
+    seen: "vista",
+    unseen: "no vista",
+    /** «Saltar a nivel»: ‹ › picks the level. */
+    level: "Saltar a nivel",
+    settings: "Dificultad y paquetes",
+    settingsNote: "Cartas nuevas en la mesa; el nivel y lo jugado se quedan.",
+    apply: "Aplicar",
+    /** Joker uses so far; the row's number is the uses left. */
+    used: "{n} usados",
   },
   /** Language rows of the Esc menu (plan 68); language names are endonyms in lib/i18n.ts. */
   language: {

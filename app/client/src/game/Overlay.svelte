@@ -1,16 +1,16 @@
 <script lang="ts">
-  // Admin overlay on Esc (04-ui-tv-display.md, UI-13). The family sees it, so it never shows
-  // the correct answer. ↑/↓ choose, Enter runs, ←/→ change a volume or a joker budget, Esc closes.
-  // Left column: game actions; right column: sound, and the running game's joker budget (MD-4).
-  // Under the budget, read-only: the game's group and bundles (plan 29).
-  // Outside gamemaster mode no undo, skip or budget editor (D-74); «Preguntas marcadas» in every mode (decision 60).
-  // Language rows (plan 68) only with ≥2 options: ←/→ pick; questions apply at once, the UI on Enter (reload).
-  import { fetchGameChoice, fetchLanguage, localeSupply, setLanguage } from "../lib/api";
+  // Gamemaster menu on Esc (04-ui-tv-display.md, UI-13; MD-12, D-88). The family sees it, so it never shows
+  // the correct answer. Two parts: general (every mode: actions, sound, languages) and, in gamemaster mode,
+  // the cheats apart (skip, block, undo, replace, jump to level, difficulty and bundles, jokers left).
+  // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
+  // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
+  import { fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api";
   import { desktop } from "../lib/desktop";
   import { flush } from "../lib/engine";
   import { endonym, t } from "../lib/i18n";
   import { pushScope, type Action } from "../lib/input.svelte";
   import Credits from "./Credits.svelte";
+  import GameSettings from "./GameSettings.svelte";
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
@@ -20,12 +20,19 @@
     label: string;
     enabled: boolean;
     run: () => void;
-    right?: boolean;
+    /** 0 general, 1 cheats, 2 jokers. */
+    col: 0 | 1 | 2;
+    /** General part, under «Sonido»: volumes, mute, languages. */
+    sound?: boolean;
     confirm?: boolean;
     volume?: Channel;
     joker?: JokerName;
     preset?: boolean;
     lang?: LangKind;
+    /** «Cambiar pregunta»: ←/→ toggles seen. */
+    replace?: boolean;
+    /** «Saltar a nivel»: ←/→ picks the level. */
+    level?: boolean;
     /** Read-only: the running game's choice (plan 29); ↑/↓ skip it. */
     info?: boolean;
   };
@@ -40,7 +47,7 @@
   const STEP = 0.1;
   /** «Como las cartas»: the printed card set (JK-11); the same as `CARDS` in engine/game.ts. */
   const CARDS: JokerBudget = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
-  /** Budget steps for ←/→: 0 to 9 uses, then unlimited (null). */
+  /** Uses left for ←/→: 0 to 9, then unlimited (null). */
   const MAX_USES = 9;
 
   // The review tool and stats pages run on the authoring server (D-35). A build made with
@@ -55,40 +62,47 @@
 
   let {
     mode,
+    game,
+    running,
     questionId,
     questionLabel,
     canSkip,
+    canTable,
     canUndo,
     canRestart,
-    budget,
-    left,
-    settings,
     onclose,
     onskip,
     onskipall,
     onundo,
+    onreplace,
+    onlevel,
+    onsettings,
     onrestart,
     onbudget,
     onflags,
   }: {
     mode: GameMode;
+    /** The newest game (running or finished), or null. */
+    game: Game | null;
+    running: boolean;
     /** For debugging (04, "Admin overlay"): the question on screen, or the last one answered. */
     questionId: string | null;
     questionLabel: string;
+    /** A question on screen: skip, block, replace. */
     canSkip: boolean;
+    /** A new table is possible: jump to level, difficulty and bundles. */
+    canTable: boolean;
     canUndo: boolean;
     canRestart: boolean;
-    /** The running game's joker budget (MD-4), or null without a running game. */
-    budget: JokerBudget | null;
-    /** Uses left in the running game. */
-    left: JokerBudget | null;
-    /** The running game's settings, for its group and bundles (plan 29), or null. */
-    settings: Game["settings"] | null;
     onclose: () => void;
     onskip: () => void;
     /** «Bloquear pregunta»: a broken or wrong question, never offered again (plan 65). */
     onskipall: () => void;
     onundo: () => void;
+    onreplace: (seen: boolean) => void;
+    onlevel: (level: number) => void;
+    /** Difficulty and bundles; the refusal's text, or null when applied. */
+    onsettings: (body: GameActionBody) => Promise<string | null>;
     onrestart: () => void;
     onbudget: (budget: Partial<JokerBudget>) => void;
     /** «Preguntas marcadas» opens over the overlay. */
@@ -96,15 +110,36 @@
   } = $props();
 
   const gamemaster = $derived(mode === "gamemaster");
+  /** The running game's joker budget (MD-4), or null. */
+  const budget = $derived(running ? (game?.settings.jokers ?? null) : null);
+  const cheats = $derived(gamemaster && !!game && (running || canUndo));
 
   /** The Credits screen (PUB-5) is open over the game; the menu hides. */
   let creditsOpen = $state(false);
+  /** «Dificultad y paquetes» is open over the menu. */
+  let settingsOpen = $state(false);
   function fullscreen() {
     if (desktop) desktop.toggleFullscreen();
     else if (document.fullscreenElement) document.exitFullscreen();
     else document.documentElement.requestFullscreen().catch(() => {});
     onclose();
   }
+
+  /** «Cambiar pregunta» counts the old one as seen. */
+  let seen = $state(false);
+  /** «Saltar a nivel»'s target, from the current level. */
+  let target = $state(1);
+  $effect(() => {
+    target = game?.level ?? 1;
+  });
+  const levels = $derived(game?.settings.levels ?? 12);
+
+  /** Uses so far per joker (MD-12: the rows edit uses left; limit = used + left). */
+  let used = $state<Record<JokerName, number> | null>(null);
+  $effect(() => {
+    void budget;
+    fetchJokersUsed().then((u) => (used = u)).catch(() => {});
+  });
 
   /** The budget as last changed here, until the engine's answer arrives: fast clicks build on it. */
   let pending = $state<JokerBudget | null>(null);
@@ -129,11 +164,23 @@
     setBudget(unlimited ? CARDS : Object.fromEntries(TOKENS.map((t) => [t.name, null])));
   }
 
+  /** Uses left of a joker, null = unlimited. */
+  function leftOf(name: JokerName): number | null {
+    const limit = current?.[name];
+    return limit == null ? null : Math.max(0, limit - (used?.[name] ?? 0));
+  }
+
+  /** Give back (+) or take away (−) one use; past 9 left: unlimited. */
   function stepJoker(name: JokerName, by: number) {
-    const now = current?.[name];
+    if (!used) return;
+    const now = leftOf(name);
     const index = Math.min(MAX_USES + 1, Math.max(0, (now ?? MAX_USES + 1) + by));
-    const next = index > MAX_USES ? null : index;
-    if (next !== now) setBudget({ [name]: next });
+    if (index === (now ?? MAX_USES + 1)) return;
+    setBudget({ [name]: index > MAX_USES ? null : used[name] + index });
+  }
+
+  function stepLevel(by: number) {
+    target = ((target - 1 + by + levels) % levels) + 1;
   }
 
   /** Stored language and options; per question locale its supply (default bundles). Null until loaded. */
@@ -174,7 +221,7 @@
   /** «Adolescentes · Básico, Colombia»; null without a running game. */
   let choiceLine = $state<string | null>(null);
   $effect(() => {
-    const s = settings;
+    const s = running ? game?.settings : null;
     if (!s) return void (choiceLine = null);
     fetchGameChoice(s)
       .then(({ group, difficulty, bundles }) => {
@@ -191,40 +238,45 @@
   }
 
   const items = $derived<Item[]>([
-    { label: t("overlay.continue"), enabled: true, run: onclose },
-    ...(gamemaster
-      ? [
-          { label: t("overlay.skip"), enabled: canSkip, run: onskip },
-          { label: t("overlay.skipAll"), enabled: canSkip, run: onskipall, confirm: true },
-          { label: t("overlay.undo"), enabled: canUndo, run: onundo },
-        ]
-      : []),
-    { label: t("flag.list"), enabled: true, run: onflags },
-    { label: t("overlay.fullscreen"), enabled: true, run: fullscreen },
-    { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true) },
-    { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true },
-    ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: quit }] : []),
-    ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, right: true })),
+    { label: t("overlay.continue"), enabled: true, run: onclose, col: 0 },
+    { label: t("flag.list"), enabled: true, run: onflags, col: 0 },
+    { label: t("overlay.fullscreen"), enabled: true, run: fullscreen, col: 0 },
+    { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },
+    { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },
+    ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const }] : []),
+    ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, col: 0 as const, sound: true })),
     {
       label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),
       enabled: true,
       run: () => setVolumes({ muted: !sound.volumes.muted }),
-      right: true,
+      col: 0,
+      sound: true,
     },
     ...langKinds.map((k) => ({
       label: t(k === "ui" ? "language.ui" : "language.questions"),
       enabled: true,
       run: k === "ui" ? applyUi : () => {},
       lang: k,
-      right: true,
+      col: 0 as const,
+      sound: true,
     })),
-    ...(budget && gamemaster
+    ...(cheats
       ? [
-          { label: t("overlay.jokers"), enabled: true, run: cyclePreset, preset: true, right: true },
-          ...TOKENS.map((t) => ({ label: t.label, enabled: true, run: () => {}, joker: t.name, right: true })),
+          { label: t("overlay.skip"), enabled: canSkip, run: onskip, col: 1 as const },
+          { label: t("overlay.skipAll"), enabled: canSkip, run: onskipall, confirm: true, col: 1 as const },
+          { label: t("overlay.undo"), enabled: canUndo, run: onundo, col: 1 as const },
+          { label: t("overlay.replace"), enabled: canSkip, run: () => onreplace(seen), replace: true, col: 1 as const },
+          { label: t("overlay.level"), enabled: canTable, run: () => onlevel(target), level: true, col: 1 as const },
+          { label: t("overlay.settings"), enabled: canTable, run: () => (settingsOpen = true), col: 1 as const },
+          ...(choiceLine ? [{ label: choiceLine, enabled: false, run: () => {}, info: true, col: 1 as const }] : []),
         ]
       : []),
-    ...(budget && choiceLine ? [{ label: choiceLine, enabled: false, run: () => {}, info: true, right: true }] : []),
+    ...(cheats && budget
+      ? [
+          { label: t("overlay.jokers"), enabled: true, run: cyclePreset, preset: true, col: 2 as const },
+          ...TOKENS.map((t) => ({ label: t.label, enabled: !!used, run: () => {}, joker: t.name, col: 2 as const })),
+        ]
+      : []),
   ]);
 
   let selected = $state(0);
@@ -241,6 +293,21 @@
     item.run();
   }
 
+  /** ←/→ on an item without a value: the enabled item at about the same height in the next column. */
+  function across(by: number): boolean {
+    const here = items[selected];
+    const cols = [...new Set(items.map((x) => x.col))].sort();
+    const to = cols[cols.indexOf(here.col) + by];
+    if (to === undefined) return false;
+    const y = (i: number) => document.querySelector(`[data-item="${i}"]`)?.getBoundingClientRect().top ?? 0;
+    const from = y(selected);
+    const list = items.flatMap((x, i) => (x.col === to && x.enabled ? [i] : []));
+    if (!list.length) return false;
+    selected = list.reduce((m, i) => (Math.abs(y(i) - from) < Math.abs(y(m) - from) ? i : m));
+    confirming = null;
+    return true;
+  }
+
   function handle(a: Action): boolean {
     const item = items[selected];
     const by = a.type === "navigate" ? { right: 1, left: -1, up: 0, down: 0 }[a.dir] : 0;
@@ -253,6 +320,9 @@
     else if (by && item.joker) stepJoker(item.joker, by);
     else if (by && item.preset) cyclePreset();
     else if (by && item.lang) stepLang(item.lang, by);
+    else if (by && item.replace && item.enabled) seen = !seen;
+    else if (by && item.level && item.enabled) stepLevel(by);
+    else if (by) across(by);
     else if (a.type === "confirm") activate(selected);
     else if (a.type === "menu") onclose();
     else if (a.type === "back" && a.device === "gamepad") confirming === null ? onclose() : (confirming = null); // B leaves
@@ -268,12 +338,18 @@
     if (selected === 0) menu?.scrollTo({ top: 0 });
     else menu?.querySelector(".selected")?.scrollIntoView({ block: "nearest" });
   });
+
+  async function applySettings(body: GameActionBody): Promise<string | null> {
+    const refused = await onsettings(body);
+    if (refused === null) settingsOpen = false;
+    return refused;
+  }
 </script>
 
 {#snippet row(item: Item, i: number)}
   {#if item.volume}
     {@const key = item.volume}
-    <label class="row volume" class:selected={i === selected} onmouseenter={() => (selected = i)}>
+    <label class="row volume" class:selected={i === selected} data-item={i} onmouseenter={() => (selected = i)}>
       <span>{item.label}</span>
       <input
         type="range"
@@ -288,12 +364,19 @@
     </label>
   {:else if item.joker}
     {@const name = item.joker}
-    <div class="row joker" class:selected={i === selected} role="group" onmouseenter={() => (selected = i)}>
+    <div class="row joker" class:selected={i === selected} data-item={i} role="group" onmouseenter={() => (selected = i)}>
       <span>{item.label}</span>
-      <button class="step" onclick={() => stepJoker(name, -1)} tabindex="-1" aria-label={t("overlay.less")}>−</button>
-      <span class="value">{current?.[name] ?? "∞"}</span>
-      <button class="step" onclick={() => stepJoker(name, 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>
-      <span class="left">{left?.[name] != null ? t("overlay.left", { n: left[name] }) : ""}</span>
+      <button class="step" onclick={() => stepJoker(name, -1)} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.less")}>−</button>
+      <span class="value">{leftOf(name) ?? "∞"}</span>
+      <button class="step" onclick={() => stepJoker(name, 1)} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>+</button>
+      <span class="left">{used ? t("overlay.used", { n: used[name] }) : ""}</span>
+    </div>
+  {:else if item.level || item.replace}
+    <div class="row pick" class:selected={i === selected} class:off={!item.enabled} data-item={i} role="group" onmouseenter={() => item.enabled && (selected = i)}>
+      <button class="run" onclick={() => activate(i)} disabled={!item.enabled} tabindex="-1">{item.label}</button>
+      <button class="step" onclick={() => (item.level ? stepLevel(-1) : (seen = !seen))} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.less")}>‹</button>
+      <span class="value">{item.level ? target : t(seen ? "overlay.seen" : "overlay.unseen")}</span>
+      <button class="step" onclick={() => (item.level ? stepLevel(1) : (seen = !seen))} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>›</button>
     </div>
   {:else if item.info}
     <p class="row readonly info">{item.label}</p>
@@ -301,7 +384,7 @@
     {@const kind = item.lang}
     {@const tag = shown[kind]}
     {@const reason = blocked(kind, tag)}
-    <div class="row lang" class:selected={i === selected} role="group" onmouseenter={() => (selected = i)}>
+    <div class="row lang" class:selected={i === selected} data-item={i} role="group" onmouseenter={() => (selected = i)}>
       <span>{item.label}</span>
       <button class="step" onclick={() => stepLang(kind, -1)} tabindex="-1" aria-label={t("language.previous")}>‹</button>
       <span class="value" class:off={reason}>{endonym(tag, kind)}</span>
@@ -315,6 +398,7 @@
   {:else}
     <button
       class:selected={i === selected}
+      data-item={i}
       disabled={!item.enabled}
       onclick={() => activate(i)}
       onmouseenter={() => item.enabled && (selected = i)}
@@ -328,41 +412,48 @@
   {/if}
 {/snippet}
 
+{#snippet column(col: number, sound = false)}
+  {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
+    {#if item.col === col && !!item.sound === sound}{@render row(item, i)}{/if}
+  {/each}
+{/snippet}
+
 <div class="overlay" class:clear={creditsOpen}>
   <div class="menu" class:hidden={creditsOpen} bind:this={menu}>
     <h2>{t("overlay.title")}</h2>
     <div class="columns">
       <div class="column">
-        {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
-          {#if !item.right}{@render row(item, i)}{/if}
-        {/each}
-      </div>
-      <div class="column">
+        {@render column(0)}
         <h3>{t("overlay.sound")}</h3>
-        {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
-          {#if item.right && !item.preset && !item.joker && !item.info}{@render row(item, i)}{/if}
-        {/each}
-        {#if budget}
-          <h3>{t("overlay.budget")}</h3>
-          {#if gamemaster}
-            {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
-              {#if item.preset || item.joker}{@render row(item, i)}{/if}
-            {/each}
-          {:else}
-            {#each TOKENS as token (token.name)}
-              <p class="row readonly">
-                <span>{token.label}</span>
-                <span class="value">{left?.[token.name] ?? "∞"}</span>
-              </p>
-            {/each}
-          {/if}
-          {#each items as item, i (item.label)}
-            {#if item.info}{@render row(item, i)}{/if}
-          {/each}
-        {/if}
+        {@render column(0, true)}
       </div>
+      {#if cheats}
+        <section class="cheats">
+          <h3>{t("overlay.cheats")}</h3>
+          <div class="cheat-columns">
+            <div class="column">{@render column(1)}</div>
+            {#if budget}
+              <div class="column">
+                <h4>{t("overlay.budget")}</h4>
+                {@render column(2)}
+              </div>
+            {/if}
+          </div>
+        </section>
+      {:else if budget}
+        <div class="column">
+          <h3>{t("overlay.budget")}</h3>
+          {#each TOKENS as token (token.name)}
+            <p class="row readonly">
+              <span>{token.label}</span>
+              <span class="value">{game?.jokers_left?.[token.name] ?? "∞"}</span>
+            </p>
+          {/each}
+          {#if choiceLine}<p class="row readonly info">{choiceLine}</p>{/if}
+        </div>
+      {/if}
     </div>
-    <p class="debug">{t(gamemaster ? "overlay.keys" : "overlay.keysVolume")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} /></p>
+    <p class="debug">{t(cheats ? "overlay.keys" : "overlay.keysVolume")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} /></p>
     {#if questionId}
       <p class="debug">
         {questionLabel}:
@@ -383,6 +474,9 @@
   </div>
   {#if creditsOpen}
     <Credits onclose={() => (creditsOpen = false)} />
+  {/if}
+  {#if settingsOpen && game}
+    <GameSettings settings={game.settings} onapply={applySettings} onclose={() => (settingsOpen = false)} />
   {/if}
 </div>
 
@@ -430,23 +524,55 @@
     font-weight: 700;
     color: var(--slate-400);
   }
+  h4 {
+    margin: 0;
+    font-size: calc(1.1 * var(--u));
+    font-weight: 700;
+    color: var(--slate-400);
+  }
   .columns {
-    display: grid;
-    grid-template-columns: calc(36 * var(--u)) calc(40 * var(--u));
-    gap: calc(2.4 * var(--u));
+    display: flex;
+    gap: calc(2 * var(--u));
     align-items: start;
   }
   .column {
     display: flex;
     flex-direction: column;
-    gap: calc(0.7 * var(--u));
+    gap: calc(0.55 * var(--u));
+    width: calc(32 * var(--u));
+  }
+  /* The cheats, apart from the general part (D-88). */
+  .cheats {
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.55 * var(--u));
+    margin-top: calc(-0.6 * var(--u));
+    padding: calc(0.6 * var(--u)) calc(1.2 * var(--u)) calc(1.2 * var(--u));
+    border: calc(0.15 * var(--u)) dashed rgba(255, 183, 3, 0.45);
+    border-radius: calc(1.2 * var(--u));
+    background: rgba(255, 183, 3, 0.05);
+  }
+  .cheats h3 {
+    margin: 0;
+    color: var(--amber);
+  }
+  .cheat-columns {
+    display: flex;
+    gap: calc(1.6 * var(--u));
+    align-items: start;
+  }
+  .cheat-columns .column:first-child {
+    width: calc(30 * var(--u));
+  }
+  .cheat-columns .column:last-child {
+    width: calc(34 * var(--u));
   }
   button {
-    padding: calc(0.7 * var(--u)) calc(1.4 * var(--u));
+    padding: calc(0.5 * var(--u)) calc(1.2 * var(--u));
     border: calc(0.18 * var(--u)) solid transparent;
     border-radius: calc(0.8 * var(--u));
     background: var(--slate-600);
-    font-size: calc(1.5 * var(--u));
+    font-size: calc(1.35 * var(--u));
     font-weight: 700;
     text-align: left;
   }
@@ -470,8 +596,8 @@
   .row {
     display: grid;
     align-items: center;
-    gap: calc(1 * var(--u));
-    padding: calc(0.45 * var(--u)) calc(1.4 * var(--u));
+    gap: calc(0.8 * var(--u));
+    padding: calc(0.35 * var(--u)) calc(1.2 * var(--u));
     border: calc(0.18 * var(--u)) solid transparent;
     border-radius: calc(0.8 * var(--u));
     background: rgba(43, 54, 80, 0.5);
@@ -479,13 +605,34 @@
     font-weight: 700;
   }
   .volume {
-    grid-template-columns: 1fr calc(12 * var(--u)) calc(4.5 * var(--u));
+    grid-template-columns: 1fr calc(10 * var(--u)) calc(4.5 * var(--u));
   }
   .joker {
-    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(2.4 * var(--u)) minmax(calc(7 * var(--u)), auto);
+    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(2.4 * var(--u)) minmax(calc(6 * var(--u)), auto);
+  }
+  .pick {
+    grid-template-columns: 1fr calc(2.4 * var(--u)) minmax(calc(4 * var(--u)), auto) calc(2.4 * var(--u));
+    padding-left: 0;
+    background: var(--slate-600);
+  }
+  .pick.off {
+    opacity: 0.35;
+  }
+  .pick .run {
+    border: none;
+    background: none;
+    font-size: calc(1.35 * var(--u));
+  }
+  .pick .run:disabled {
+    opacity: 1;
+  }
+  .pick .value {
+    text-align: center;
+    color: var(--amber);
+    white-space: nowrap;
   }
   .lang {
-    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(14 * var(--u)) calc(2.4 * var(--u));
+    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(12 * var(--u)) calc(2.4 * var(--u));
   }
   .lang .value {
     text-align: center;

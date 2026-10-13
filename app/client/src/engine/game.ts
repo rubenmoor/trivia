@@ -699,9 +699,15 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
 
 /** Per joker: uses left in this game, or null = unlimited (MD-1). */
 export function jokersLeft(state: GameState): JokerBudget {
-  const used = [...state.history.flatMap((h) => h.jokers ?? []), ...state.jokers];
+  const used = jokersUsed(state);
   return Object.fromEntries(Object.entries(state.settings.jokers).map(([name, limit]) =>
-    [name, limit === null ? null : Math.max(0, limit - used.filter((j) => j === name).length)])) as JokerBudget;
+    [name, limit === null ? null : Math.max(0, limit - used[name as JokerName])])) as JokerBudget;
+}
+
+/** Per joker: uses in this game so far, the question on screen included. */
+export function jokersUsed(state: Pick<GameState, "history" | "jokers">): Record<JokerName, number> {
+  const used = [...state.history.flatMap((h) => h.jokers ?? []), ...state.jokers];
+  return Object.fromEntries(JOKERS.map((name) => [name, used.filter((j) => j === name).length])) as Record<JokerName, number>;
 }
 
 /** A partial budget {joker: count or null} as sent; GameError if malformed. */
