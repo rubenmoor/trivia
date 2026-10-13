@@ -12,6 +12,7 @@ that isn't approved (/review?status=!approved, RV-22).
 API:
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
+    GET  /api/names?locale=en                      categories.load_names: bundle, category, subcategory names (plan 67)
     GET  /api/age-groups                           app/data/age-groups.json: the difficulty scale and age groups (D-38)
     GET  /api/targets                              authoring/data/targets.json: pool targets per bundle (D-53, plan 12)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
@@ -419,6 +420,12 @@ class Handler(BaseHandler):
             return self.send_json(200, json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")))
         if url.path == "/api/bundles":
             return self.send_json(200, load_bundles())
+        if url.path == "/api/names":
+            try:
+                locale = locale_of(parse_qs(url.query).get("locale", [None])[0])
+            except ValueError as e:
+                return self.send_json(400, {"error": str(e)})
+            return self.send_json(200, categories.load_names(locale) if locale else None)
         if url.path == "/api/targets":
             return self.send_json(200, targets.load_all())
         if url.path.startswith("/reports/"):

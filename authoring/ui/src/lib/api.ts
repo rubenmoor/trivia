@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/api";
-import type { AgeGroups, Bundle, Category, MediaStats, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
+import type { AgeGroups, Bundle, Category, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
 
 /** Every bundle's broad categories with subcategories (D-19, D-43). */
 export async function fetchCategories(): Promise<Category[]> {
@@ -26,6 +26,10 @@ export interface QuestionFilter {
   audit?: "flagged" | null;
   /** "replace": not rejected, a picked file on the licence replacement list (plan 53). */
   licence?: "replace" | null;
+  /** A translation locale (en, de): its translations with the Spanish source (plan 67); absent = Spanish. */
+  locale?: string | null;
+  /** With locale: "1" = only stale translations. */
+  stale?: string | null;
 }
 
 export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Question[]> {
@@ -39,8 +43,9 @@ export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Quest
 export async function saveReview(
   id: string,
   review: Pick<Review, "decision" | "feedback" | "problems"> | Review | null,
+  locale: string | null = null,
 ): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/review`, { review });
+  return post(`/api/questions/${encodeURIComponent(id)}/review`, { review, locale });
 }
 
 /** Download candidate `index` (0-based) into the slot. */
@@ -64,8 +69,18 @@ export async function setBundle(id: string, bundle: string): Promise<Question> {
 }
 
 /** Set the difficulty (1–15, D-38); the server keeps the first original value. */
-export async function setDifficulty(id: string, difficulty: number): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/difficulty`, { difficulty });
+export async function setDifficulty(id: string, difficulty: number, locale: string | null = null): Promise<Question> {
+  return post(`/api/questions/${encodeURIComponent(id)}/difficulty`, { difficulty, locale });
+}
+
+/** The source's translatable flag; false rejects its translations ("no viaja", plan 67). */
+export async function setTranslatable(id: string, translatable: boolean, locale: string | null = null): Promise<Question> {
+  return post(`/api/questions/${encodeURIComponent(id)}/translatable`, { translatable, locale });
+}
+
+/** Display names in a translation locale (names.<locale>.json, D-81); null for Spanish. */
+export async function fetchNames(locale: string): Promise<Names | null> {
+  return json(await call(`/api/names?${new URLSearchParams({ locale })}`));
 }
 
 /** The difficulty scale and the age groups' windows (app/data/age-groups.json, D-38). */

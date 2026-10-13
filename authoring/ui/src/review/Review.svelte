@@ -3,6 +3,7 @@
   import { onMount, tick } from "svelte";
   import {
     fetchBundles,
+    fetchNames,
     fetchQuestions,
     fetchSpotChecks,
     pickMedia,
@@ -12,12 +13,14 @@
     searchMedia,
     setBundle,
     setDifficulty,
+    setTranslatable,
     type QuestionFilter,
   } from "../lib/api";
-  import type { Bundle, Decision, Question, Review, Slot, SpotCheckItem } from "../lib/types";
+  import type { Bundle, Decision, Names, Question, Review, Slot, SpotCheckItem } from "../lib/types";
   import Nav from "../lib/Nav.svelte";
   import MediaPanel from "./MediaPanel.svelte";
   import RevisionPanel from "./RevisionPanel.svelte";
+  import SourcePanel from "./SourcePanel.svelte";
 
   // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
   // media=missing (RV-13), licence=replace (plan 53); status=!approved is every question that isn't
@@ -25,7 +28,17 @@
   // back to it. Decisions themselves live in authoring/data/questions.json.
   // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
   // run=backaudit-<k>: a back-audit run's questions, with the same two (plan 57).
+  // locale=en|de: the translations next to their Spanish source; media and bundle stay on the source (plan 67).
   const params = new URLSearchParams(location.search);
+  const locale = params.get("locale") === "es" ? null : params.get("locale");
+  const LOCALES = ["es", "en", "de"];
+  /** This page in another locale, the other params kept. */
+  function localeHref(l: string) {
+    const url = new URL(location.href);
+    if (l === "es") url.searchParams.delete("locale");
+    else url.searchParams.set("locale", l);
+    return url.pathname + url.search;
+  }
   const batch = params.get("batch");
   const run = params.get("run");
   /** Where spot checks are recorded: the batch or the back-audit run. */
@@ -43,6 +56,8 @@
     sample: sampleMode ? "1" : null,
     audit: params.get("audit"),
     licence: params.get("licence"),
+    locale,
+    stale: params.get("stale"),
   } as QuestionFilter;
   /** The licence queue (plan 53): searches ask every provider. */
   const licenceMode = filter.licence === "replace";
@@ -58,6 +73,8 @@
     sampleMode && "spot-check sample",
     filter.audit === "flagged" && "flagged by the audit",
     licenceMode && "licence to replace",
+    locale && `locale ${locale}`,
+    filter.stale === "1" && "stale",
   ]
     .filter(Boolean)
     .join(", ");
@@ -70,6 +87,7 @@
 
   let questions = $state<Question[]>([]);
   let bundles = $state<Bundle[]>([]);
+  let names = $state<Names | null>(null);
   let index = $state(0);
   let loading = $state(true);
   let error = $state<string | null>(null);
@@ -102,7 +120,8 @@
     const time = new Date().toLocaleTimeString();
     errors = [...errors, { id: ++errorSeq, time, what, message }];
   }
-  const undoStack: { id: string; previous: Review | null; spot: boolean }[] = [];
+  /** translatable: the step set "doesn't travel"; undo makes the source travel again first. */
+  const undoStack: { id: string; previous: Review | null; spot: boolean; translatable?: boolean }[] = [];
   /** Spot checks of this batch (sample mode); a question is blind until it has one. */
   let spotItems = $state<Record<string, SpotCheckItem>>({});
   /** Problem kinds for the feedback box (qgen.py PROBLEMS). */
@@ -145,8 +164,10 @@
 
   onMount(async () => {
     try {
-      const [qs, bs, spots] = await Promise.all([fetchQuestions(filter), fetchBundles(), fetchSpotChecks()]);
-      [questions, bundles, problemKinds] = [qs, bs, spots.problems];
+      const [qs, bs, spots, ns] = await Promise.all([
+        fetchQuestions(filter), fetchBundles(), fetchSpotChecks(), locale ? fetchNames(locale) : null,
+      ]);
+      [questions, bundles, problemKinds, names] = [qs, bs, spots.problems, ns];
       if (sampleMode) spotItems = spots.checks[checkGroup!]?.items ?? {};
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
@@ -193,7 +214,7 @@
   }
 
   async function store(i: number, review: Parameters<typeof saveReview>[1]) {
-    const updated = await saveReview(questions[i].id, review);
+    const updated = await saveReview(questions[i].id, review, locale);
     questions[i] = updated;
   }
 
@@ -232,11 +253,12 @@
 
   async function decide(decision: Decision, feedback: string | null = null, problems: string[] = []) {
     if (busy || mediaWorking || !current) return;
+    if (decision === "approved" && current.stale) return flash("Stale: the source changed, the next --translate run redoes it");
     busy = true;
     const i = index;
     let pushed = false;
     try {
-      const suggestions = decision === "approved" ? slotsNeedingSuggestion(questions[i]) : [];
+      const suggestions = decision === "approved" && !locale ? slotsNeedingSuggestion(questions[i]) : [];
       const id = questions[i].id;
       undoStack.push({ id, previous: questions[i].review, spot: sampleMode });
       pushed = true;
@@ -267,6 +289,7 @@
     busy = true;
     try {
       const i = questions.findIndex((q) => q.id === last.id);
+      if (last.translatable) questions[i] = await setTranslatable(last.id, true, locale);
       await store(i, last.previous);
       if (last.spot) {
         await removeSpotCheck(checkGroup!, last.id);
@@ -297,6 +320,29 @@
     if (!text) return flash("Feedback is empty");
     feedbackOpen = false;
     decide("needs_work", text, feedbackProblems);
+  }
+
+  /** "Doesn't travel" (plan 63): the source's translatable flag; false rejects its translations. */
+  async function setTravels(value: boolean) {
+    if (busy || !current) return;
+    if (!value && !confirm(`${current.id} doesn't travel: reject its translations in every locale?`)) return;
+    busy = true;
+    const i = index;
+    try {
+      const previous = questions[i].review;
+      questions[i] = await setTranslatable(questions[i].id, value, locale);
+      if (!value) undoStack.push({ id: questions[i].id, previous, spot: false, translatable: true });
+      flash(value ? "travels again" : "✗ doesn't travel");
+    } catch (e) {
+      reportError(`setting translatable for ${questions[i]?.id}`, e);
+    } finally {
+      busy = false;
+    }
+  }
+
+  /** Locale view: media and bundle live on the source (plan 67). */
+  function onSource(action: () => void) {
+    return locale ? () => flash("Media and bundle: change them in the Spanish view") : action;
   }
 
   async function mediaAction(label: string, what: string, run: () => Promise<Question>) {
@@ -373,7 +419,7 @@
     if (!current) return;
     const i = index;
     try {
-      const updated = await setDifficulty(questions[i].id, difficulty);
+      const updated = await setDifficulty(questions[i].id, difficulty, locale);
       questions[i] = { ...questions[i], difficulty: updated.difficulty, difficulty_original: updated.difficulty_original };
       flash(`difficulty ${difficulty}`);
     } catch (e) {
@@ -446,11 +492,11 @@
       a: () => decide("approved"),
       r: () => decide("rejected"),
       f: openFeedback,
-      m: openSearch,
+      m: onSource(openSearch),
       d: startDifficulty,
-      n: nextBundle,
-      c: () => toggle("media"),
-      b: () => toggle("background"),
+      n: onSource(nextBundle),
+      c: onSource(() => toggle("media")),
+      b: onSource(() => toggle("background")),
       s: () => (showScores = !showScores),
       u: undo,
       ArrowRight: () => move(1),
@@ -504,6 +550,7 @@
       {:else}
         <span class="progress">{index + 1} / {questions.length}</span>
       {/if}
+      {#if locale}<span class="locale">{locale}</span>{/if}
       {#if downloads}<span class="downloads">⬇ downloading media… ({downloads})</span>{/if}
       {#if sampleMode}
         <span class="counts">spot check: {Object.keys(spotItems).length} decided · agree {agreed}</span>
@@ -514,7 +561,9 @@
         </span>
       {/if}
       <span class="meta">
-        {current.id} · {current.subcategory} ·
+        {current.id} ·
+        {#if names?.subcategories[current.subcategory]}{names.subcategories[current.subcategory]}
+          <span class="key">({current.subcategory})</span>{:else}{current.subcategory}{/if} ·
         <span class:pending={difficultyInput !== null}
           >difficulty {difficultyInput !== null ? `${difficultyInput}▏ (Enter)` : current.difficulty}</span
         >
@@ -522,9 +571,13 @@
           (was {current.difficulty_original})
         {/if}
         {#if current.style}· {current.style.split(":")[0]}{/if}
-        · <span class="bundle" class:other={current.bundle !== "base"}>{bundles.find((b) => b.id === current.bundle)?.name ?? current.bundle}</span>
+        · <span class="bundle" class:other={current.bundle !== "base"}
+          >{names?.bundles[current.bundle]?.name ?? bundles.find((b) => b.id === current.bundle)?.name ?? current.bundle}</span
+        >{#if names}&nbsp;<span class="key">({current.bundle})</span>{/if}
       </span>
-      <span><a class="stats" href="/">Start</a> · <a class="stats" href="/stats/categories">Stats</a></span>
+      <span><a class="stats" href="/">Start</a> · <a class="stats" href="/stats/categories">Stats</a> ·
+        {#each LOCALES as l, k}{#if k}&nbsp;·&nbsp;{/if}{#if l === (locale ?? "es")}<b>{l}</b>{:else}<a class="stats" href={localeHref(l)}>{l}</a
+          >{/if}{/each}</span>
     </header>
 
     {#if spot}
@@ -534,6 +587,18 @@
         · audit: {spot.audit === "problem" ? "major finding" : spot.audit === "ok" ? "no major finding" : "not audited"}
         {#if spot.difficulty[0] !== spot.difficulty[1]}· difficulty {spot.difficulty[0]} → {spot.difficulty[1]}{/if}
         <span class="muted">· → next · u undo</span>
+      </div>
+    {/if}
+
+    {#if current.stale}
+      <div class="previous stale">
+        Stale: the Spanish source changed since this translation. No approve; the next <code>--translate</code> run redoes it.
+      </div>
+    {/if}
+    {#if current.translatable === false}
+      <div class="previous rejected">
+        The source doesn't travel (<code>translatable: false</code>); its translations are rejected.
+        <button onclick={() => setTravels(true)}>travels again</button>
       </div>
     {/if}
 
@@ -558,9 +623,13 @@
       </div>
     {/if}
 
-    {#if current.revision && !blind}<RevisionPanel question={current} />{/if}
+    {#if current.revision && !blind && !locale}<RevisionPanel question={current} />{/if}
 
     <article>
+      {#if locale}
+        <SourcePanel question={current} />
+        <p class="muted">Media and bundle live on the source: <a href={`/review?id=${encodeURIComponent(current.id)}`}>change them in the Spanish view</a>.</p>
+      {:else}
       <p class="description">{current.description}</p>
       <h1 class="question">{current.question}</h1>
 
@@ -569,6 +638,7 @@
           <li class:correct={i === 0}>{option}</li>
         {/each}
       </ol>
+      {/if}
 
       <MediaPanel
         title={`Media · ${current.media.type} · ${current.media.role}`}
@@ -578,6 +648,7 @@
         licence={current.licence.media}
         showCandidates={openSlot === "media"}
         toggleKey="c"
+          readonly={!!locale}
         working={mediaWorking && searchSlot === "media"}
       />
       {#if current.background}
@@ -589,11 +660,13 @@
           licence={current.licence.background}
           showCandidates={openSlot === "background"}
           toggleKey="b"
+          readonly={!!locale}
           working={mediaWorking && searchSlot === "background"}
         />
       {/if}
 
       <div class="columns">
+        {#if !locale}
         <section>
           <h2>Hints</h2>
           <ol>
@@ -602,6 +675,7 @@
           <h2>Fun fact</h2>
           <p>{current.fun_fact}</p>
         </section>
+        {/if}
 
         {#if blind}
         <section>
@@ -685,15 +759,19 @@
     {/if}
 
     <footer>
-      <button class="approve" onclick={() => decide("approved")}><kbd>a</kbd> approve</button>
+      <button class="approve" disabled={current.stale} onclick={() => decide("approved")}><kbd>a</kbd> approve</button>
       <button class="feedback-btn" onclick={openFeedback}><kbd>f</kbd> feedback</button>
       <button class="reject" onclick={() => decide("rejected")}><kbd>r</kbd> reject</button>
       <button onclick={startDifficulty}><kbd>d</kbd> difficulty</button>
+      {#if locale}
+        {#if current.translatable !== false}<button class="reject" onclick={() => setTravels(false)}>doesn't travel</button>{/if}
+      {:else}
       <button onclick={nextBundle}><kbd>n</kbd> bundle</button>
       <button onclick={openSearch}><kbd>m</kbd> media search</button>
       <button onclick={() => toggle("media")}><kbd>c</kbd> {openSlot === "media" ? "hide" : "show"} alternatives</button>
       {#if current.background}
         <button onclick={() => toggle("background")}><kbd>b</kbd> {openSlot === "background" ? "hide" : "show"} backgrounds</button>
+      {/if}
       {/if}
       <span class="divider"></span>
       <button onclick={() => move(-1)}><kbd>←</kbd></button>
@@ -765,6 +843,20 @@
   .previous.rejected { border-color: var(--bad); }
   .previous.needs_work { border-color: var(--warn); }
   .previous.audit { border-color: var(--accent); }
+  .previous.stale { border-color: var(--warn); }
+  .locale {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .key {
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+  button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
   .previous.audit.major { border-color: var(--bad); }
   .spot {
     margin-top: 1rem;

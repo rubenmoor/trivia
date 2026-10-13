@@ -159,6 +159,26 @@ export interface Question {
   background_candidates: MediaCandidate[] | null;
   /** Added by the server: per picked slot; unpicked slots left out. */
   licence: Partial<Record<Slot, LicenceVerdict>>;
+  /** D-81: false = doesn't travel (absent = true). */
+  translatable?: boolean;
+  /** Locale view (plan 67): the translation's locale, its Spanish source and whether that changed since. */
+  locale?: string;
+  source?: SourceText;
+  stale?: boolean;
+}
+
+/** The Spanish side of a translation item (plan 67). */
+export type SourceText = Pick<
+  Question,
+  "question" | "answer" | "wrong_answers" | "hints" | "description" | "fun_fact" | "difficulty" | "status"
+>;
+
+/** GET /api/names?locale=: display names keyed by bundle id, category slug, Spanish subcategory (D-81). */
+export interface Names {
+  bundles: Record<string, { name: string; description: string }>;
+  categories: Record<string, string>;
+  subcategories: Record<string, string>;
+  age_groups: Record<string, string>;
 }
 
 /** A question bundle (app/data/bundles.json, D-39). */

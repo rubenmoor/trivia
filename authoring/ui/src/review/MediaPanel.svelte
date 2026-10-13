@@ -21,6 +21,7 @@
     showCandidates,
     toggleKey,
     working,
+    readonly = false,
   }: {
     title: string;
     slot: Slot;
@@ -32,6 +33,8 @@
     showCandidates: boolean;
     toggleKey: string;
     working: boolean;
+    /** Locale view (plan 67): shown, not pickable. */
+    readonly?: boolean;
   } = $props();
 
   /** Shown when nothing is picked yet; approving picks it. */
@@ -120,7 +123,7 @@
         {@render preview(suggestion)}
       {/if}
       <p class="credit">
-        Suggestion · {[suggestion.author, suggestion.license].filter(Boolean).join(" · ")} · approving picks it
+        Suggestion · {[suggestion.author, suggestion.license].filter(Boolean).join(" · ")}{readonly ? "" : " · approving picks it"}
       </p>
     {:else}
       <p class="muted">Nothing picked yet.</p>
@@ -130,6 +133,7 @@
     {#if working}<p class="working">Working…</p>{/if}
   </div>
 
+  {#if !readonly}
   <div class="candidates">
     <h2>Alternatives</h2>
     {#if !showCandidates}
@@ -157,6 +161,7 @@
       <p class="muted">Press <kbd>1</kbd>–<kbd>{candidates.length}</kbd> to pick · <kbd>m</kbd> new search term · <kbd>Esc</kbd> close</p>
     {/if}
   </div>
+  {/if}
 </section>
 
 <style>
