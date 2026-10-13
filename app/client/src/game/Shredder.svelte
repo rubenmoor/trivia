@@ -6,7 +6,7 @@
   import { sfx } from "./sound.svelte";
   import { SHRED_MS, STAMP_MS } from "./timing";
 
-  let { name, ondone }: { name: string; ondone: () => void } = $props();
+  let { name, lang, ondone }: { name: string; lang: string; ondone: () => void } = $props();
 
   const STRIPS = 9;
   let stamped = $state(false);
@@ -37,7 +37,7 @@
         style:--drift="{(i - (STRIPS - 1) / 2) * 0.6}"
         style:--delay="{(i % 3) * 0.05}s"
       >
-        <span class="name">{name}</span>
+        <span class="name" {lang}>{name}</span>
         {#if stamped}<span class="stamp">{t("joker.skip.stamp")}</span>{/if}
       </div>
     {/each}

@@ -6,7 +6,7 @@
   import { gameAction } from "../lib/api";
   import { errorText, reasonText } from "../lib/errors";
   import { t } from "../lib/i18n";
-  import { displayName } from "../lib/names.svelte";
+  import { displayName, questionLocale } from "../lib/names.svelte";
   import { focusControl, pushScope, type Action, type Dir, type Intent, type Keys } from "../lib/input.svelte";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../lib/types";
   import CategoryPicker from "./CategoryPicker.svelte";
@@ -517,7 +517,7 @@
     {#if question.swapped_to}
       <p class="topic label" class:fresh={swappedBy?.joker === "category"}>{t("screen.question.topic", { name: displayName("subcategory", question.swapped_to) })}</p>
     {/if}
-    <h1>{question.question}</h1>
+    <h1 lang={questionLocale()}>{question.question}</h1>
     {#if media.type !== "image"}
       <button class="replay" onclick={replay}>
         <Icon name={media.type === "audio" ? "speaker" : "film"} /> {t("screen.question.replay")} <Prompt action="replay" off={mode !== null} />
@@ -527,7 +527,7 @@
 
   <div class="middle" out:crossfade|global>
     {#if question.hints.length}
-      <div class="notes">
+      <div class="notes" lang={questionLocale()}>
         {#each question.hints as hint, i (i)}
           <p class="note" style:--tilt="{[-2.5, 1.8, -1.2][i]}deg" class:strong={i === 2}>
             <span class="note-label">{t("screen.question.hint", { n: i + 1 })}</span>{hint}
@@ -574,7 +574,7 @@
       </div>
     </div>
   {/if}
-  {#if shredding}<Shredder name={displayName("subcategory", shredding.name)} ondone={shredding.done} />{/if}
+  {#if shredding}<Shredder name={displayName("subcategory", shredding.name)} lang={questionLocale()} ondone={shredding.done} />{/if}
   {#if mode === "category" && jokers}
     <CategoryPicker
       categories={jokers.category.categories}
@@ -606,7 +606,7 @@
   {/if}
 
   <footer in:cardFlip|global={{ side: "in" }} out:cardFlip|global={{ side: "out" }}>
-    <div class="answers">
+    <div class="answers" lang={questionLocale()}>
       {#each question.answers as answer, i (i)}
         <button
           class="answer glass {answerClass(i)}"

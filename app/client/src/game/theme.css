@@ -70,8 +70,13 @@
 }
 
 /* Long German compounds (LUI-5); not `es`: Chromium would hyphenate Spanish line ends too. */
-.game:lang(de) {
+.game:lang(de),
+.game [lang]:lang(de) {
   hyphens: auto;
+}
+/* Question content in its own language (task 629). */
+.game [lang]:not(:lang(de)) {
+  hyphens: manual;
 }
 
 /* Glass panels (VD-2) */

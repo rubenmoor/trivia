@@ -9,6 +9,7 @@
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
   import { listen, pushScope, type Action } from "../lib/input.svelte";
+  import { questionLocale } from "../lib/names.svelte";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types";
   import Choice from "./Choice.svelte";
   import { consolation, milestone } from "./copy";
@@ -534,7 +535,7 @@
               <span class="letter-slot"><span class="letter">?</span></span>
             {/if}
             {#if fresh.has(i)}<span class="new-badge">{t("screen.select.fresh")}</span>{/if}
-            <span class="description">{option.description}</span>
+            <span class="description" lang={questionLocale()}>{option.description}</span>
           </button>
         {/each}
       </div>
@@ -562,7 +563,7 @@
     <section class="result">
       <Fireworks />
       <h1 class="title good">{t("screen.result.correct")}</h1>
-      <div class="panel glass">
+      <div class="panel glass" lang={questionLocale()}>
         <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
         <p class="fun-fact">{game.last.fun_fact}</p>
       </div>
@@ -577,8 +578,8 @@
           <h1 class="title bad">{t("screen.result.wrong")}</h1>
           <div class="panel glass">
             <p class="label">{t("screen.result.answerWas")}</p>
-            <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
-            <p class="fun-fact">{game.last.fun_fact}</p>
+            <p class="answer" lang={questionLocale()}><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
+            <p class="fun-fact" lang={questionLocale()}>{game.last.fun_fact}</p>
           </div>
           <p class="consolation">{consolation(game.level, levels, game.id)}</p>
         </div>
@@ -594,7 +595,7 @@
         <h1 class="title big gold">{t("screen.victory.title")}</h1>
         {#if game.player}<p class="milestone">{t("screen.victory.top", { name: game.player })}</p>{/if}
         {#if game.last}
-          <div class="panel glass">
+          <div class="panel glass" lang={questionLocale()}>
             <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
             <p class="fun-fact">{game.last.fun_fact}</p>
           </div>

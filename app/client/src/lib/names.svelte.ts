@@ -8,6 +8,11 @@ export function useNames(d: EngineData): void {
   if (d !== data) data = d;
 }
 
+/** `lang` of question content (task 629): the game's question locale, not the UI's. */
+export function questionLocale(): string {
+  return data?.locale ?? "es";
+}
+
 /** The locale's name; fallback the Spanish key / categories.json / bundles.json name.
  * Keys: category slug, Spanish subcategory name, bundle id. */
 export function displayName(kind: "category" | "subcategory" | "bundle", key: string): string {
