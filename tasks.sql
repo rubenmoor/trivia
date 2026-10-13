@@ -5369,7 +5369,109 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when (milestone)
 - An opted-in session''s data arrives on the server; an opted-out game sends nothing.
 - `qgen report` shows played vs. rated difficulty and lists outliers as review candidates.', '2026-10-13T16:24:16Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (102, 15, 'masterplan', 1000, 'tbd.', '2026-10-13T16:55:00Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (102, 15, 'masterplan', 1000, 'Masterplan of milestone 15 (Modding and Steam Workshop), divided into parts. **This plan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 15 …` with the priority given below), and that part plan is split into work tasks. Milestone 11 (launch) waits for this milestone (plan 95 already lists the modding gate).
+
+## Ground rules (for every part)
+- Page only: mod code (JS, HTML, CSS) runs only in the sandboxed page, never in the main process or preload, never `require`d, `import`ed or `eval`ed by Node; the shell only reads mod files as bytes and serves them. Workshop items update silently, so this rule has no exception. Native needs → a named addition to the preload bridge, on request (a pm decision each).
+- No second path: our own bundles and content load through the same format and loader as player bundles; the shell''s overlay serves our client the same way it serves a mod (our client = the last layer).
+- Our data stays ours: player content never enters `authoring/`, our pool, `qgen`''s seen counts (`authoring/tools/save_file.py`), question reports (plan 93, decision 93) or telemetry per question (milestone 14, plan 101''s rule "Our questions only").
+- No stability promise for mods: `window.trivia` and module paths may change in any update; the guide says so. Still, renames of public module paths are noted in patch notes.
+- Steam only (decision 111): Workshop needs a valid Steam user; local `mods/` works for development under the dev switch (`TRIVIA_DEV_STEAM_USER=1`). No "without Steam" work.
+- Offline stays: the page''s request block in `app/desktop/main.mjs` stays for mods too (no network for mod code); the Workshop download is Steam''s.
+- Path safety: overlay lookups use `resolve.mjs`''s `contained()` per layer (no `..`, no symlink escape, files only).
+- Strings via `t()` in es, en, de (+ es-ES where it differs); `check:literals` passes. Docs per AGENTS.md style; `directory.md` updated with every new path.
+- Per-commit checks (AGENTS.md, D-73) stay green; `trivia-release-check` steps (credits both ways, smoke game, desktop builds) keep passing after each part.
+
+## What exists (2026-10-13)
+- Client build: Vite default (hashed, minified chunks) → `app/client/dist/`; `credits` plugin writes `dist/credits.json`, `CREDITS.md`; version from `app/desktop/package.json` (decision 91).
+- Shell: `app/desktop/main.mjs` (`app://trivia/`, roots `dist`/`data`/`media`, flags `--import-save`, request block), `resolve.mjs` (`makeResolver`, `contained()`), `preload.cjs` (bridge **`window.trivia`**: save, fullscreen, quit, `.steam`), `lib/desktop.ts` (page side).
+- Steam binding: `steamworks-ffi-node` (decision 28, plan 85) includes a Workshop manager (`getSubscribedItems`, `getItemInstallInfo`, `getItemState`, `downloadItem`, `createItem`, `startItemUpdate`, `setItemContent/Title/Description/Preview/Tags/Visibility`, `submitItemUpdate`, `getItemUpdateProgress`).
+- Bundles: `app/data/bundles.json` (all bundles, `kind` base/region, languages), per pack `app/data/bundles/<id>/` (categories, names, `pool[.<locale>].json`; decision 112), loaded by `lib/data.ts` `loadEngineData()`; packs as free DLC (decision 66, decision 110); bundle selector `BundleSelector.svelte` (decision 33, decision 51).
+- Achievements: plan 86 (`earned(save, data)`, qualifying games: decision 19, decision 74).
+- Big screens: `Game.svelte` (1082 lines), `Question.svelte` (1243 lines): code review part 5 candidates.
+
+## Parts
+
+### 1. Readable client build (≈ 560; first: parts 4, 10, 11 name module paths)
+- `app/client/vite.config.ts`: Rollup `preserveModules` (+ `preserveModulesRoot: "src"`), file names without hashes (`[name].js`, assets by path), `minify: false`, `sourcemap: true`; Svelte components compile to `game/Game.svelte.js`-style paths (the plan fixes the naming rule; the guide states it).
+- Mod override unit = one output file at its path under `dist/`; the plan lists what can''t be overridden by path (Vite''s shared chunks, CSS extraction: one CSS per component or one `style.css`; pick the one that lets a theme mod replace or add CSS).
+- Cache: no hashes means the shell must not serve stale files across updates (Electron''s HTTP cache for `app://`: check, disable or key by version).
+- Check impact: build size, start time on the Steam Deck (many small module requests over `app://`), `credits` plugin, `credits_check.mjs`, `smoke.mjs`, `trivia-desktop-build` (asar), plan 99''s dev server.
+- Docs: `plans/18-steam-integration.md` or `01-architecture.md` build bullet; decision record for the naming rule.
+
+### 2. Mod format, local `mods/` and the `app://` overlay (shell, ≈ 700)
+- `mod.json` schema: `id` (slug, unique; Workshop items: also their published file id), `name`, `description`, `version`, `game` (game version it was made for, semver of decision 91), `languages`, optional `entry` (part 4''s script), optional `kind` hints only for the UI (bundle, theme, code, conversion; derived from the files when missing). Validator in pure Node (`app/desktop/mods.mjs`, testable like `resolve.mjs`), JSON Schema text for the guide.
+- Discovery: local folder (dev: repo `mods/`, gitignored; packaged: `<userData>/mods/`; env override `TRIVIA_MODS_DIR`), Workshop folders from part 3; invalid mods listed with the reason, never loaded.
+- Mod settings: enabled ids + load order per install, `<userData>/mods.json` (not the save: mods are per machine, the save is Steam Cloud''s; the plan confirms); read once at start, changes apply on restart (the overlay is fixed per run).
+- Overlay: `resolve.mjs` gets an ordered list of roots: enabled mods top-down in load order, then `dist`; same for `/data/` (part 5 decides which data files a mod may overlay vs. add). First hit wins. A mod''s `index.html` at its root makes it a full conversion (it simply wins `/index.html`; the plan states how the mods screen stays reachable: part 6''s safe start).
+- Main-process rule above: mod files read as bytes only; MIME by extension (`MIME` table); the plan adds a test of `..`, absolute paths, symlinks in a mod.
+- Version mismatch (`game` ≠ running version): loaded, with a warning on part 6''s screen.
+
+### 3. Workshop source: subscribed items in the shell (≈ 690; after part 2)
+- At start, with a valid Steam user (decision 111): `getSubscribedItems` → `getItemState`/`getItemInstallInfo` → install folders as mod sources (`mod.json` required at the item''s root); items still downloading: listed as such, not loaded this run.
+- New subscriptions while running: listed after a refresh (`ItemInstalled` callback or re-query on opening the mods screen), loaded on the next start.
+- Default for newly subscribed items: enabled at the end of the load order (the plan confirms against the mods screen).
+- Gamemaster setup (pm decision, kind once; workers never log in): enable Workshop for the app in Steamworks, visibility, tags (bundle, theme, code, conversion, languages), Workshop legal agreement notice, content descriptors; the second Steam account for the "Done when".
+- Bridge additions (page): mod list with source, state, errors; enable/disable/reorder writes `mods.json` through IPC with the existing origin check.
+
+### 4. Code add-ons: `mods.js` and the `window.trivia` mod API (client, ≈ 500; after parts 1, 2)
+- Name clash: the preload bridge is `window.trivia` today and `contextBridge` objects are frozen; the bridge moves to another name (e.g. `window.triviaShell`; `lib/desktop.ts` the only reader) so `window.trivia` becomes the mod API. Obvious, record it (`pm decision record`).
+- `index.html` loads `mods.js` (served by the shell from the enabled mods'' `entry` fields, in load order; the plan picks generated-by-the-shell vs. a static file that fetches a list) before the game mounts; each entry is `import()`ed; a throwing mod is reported on the mods screen and skipped, the game still starts.
+- `window.trivia`: engine (`engine/*` actions and data hooks), catalogs (add or override strings per locale, add a locale), screens (Svelte components by name, registration of a replacement or an extra screen), events (game start/end, question shown/answered), version. Thin: re-exports of existing modules plus a few hooks; the plan lists exactly what and where (`lib/mods.ts`).
+- Hooks need a defined moment: mods run after data load and before mount (or receive a `ready` callback); the plan fixes the order.
+- Optional part 11 first if it changes the screen names `window.trivia` exposes.
+
+### 5. Bundles from mods: one bundle loader (core, ≈ 600; after part 2)
+- One bundle format for ours and theirs: a bundle = folder with its entry (today a row of `bundles.json`), categories, names, `pool[.<locale>].json`; the plan decides whether `bundles.json` splits into per-bundle `bundle.json` files (then `qgen export`, `qgen validate`, `authoring/tools/categories.py`, `release_check.py`, `stage-media.mjs`, `steam.py stage` follow) or the shell merges mods'' bundle lists into one served `bundles.json`. Overlaying one shared file can''t merge several mods: no.
+- `loadEngineData()` reads bundles from every source in one path; a mod bundle carries `source: "mod"` (+ mod id) at runtime; the bundle selector marks it as player-made (icon + text, `t()`).
+- Question ids: player questions get a namespace (e.g. `<mod id>:<id>`) so they never collide with ours; the plan checks the save (seen counts, burns, blocked, flags) and `parseSave` with such ids, and that removing a mod leaves a playable save (unknown ids ignored).
+- Media in player bundles: files inside the mod folder (relative paths), served by the overlay; no Commons download (the game never downloads, AGENTS.md). Credits for mod media: the mod''s own file, shown or not (plan decides).
+- Not ours: `save_file.py` and `qgen` ignore namespaced ids; flag action hidden for player questions (plan 93 reports only for ours); telemetry per question skips them (plan 101).
+- Kinds: a player bundle may be a non-base bundle (adds to ours) or a base bundle (replaces ours as the game''s one base bundle, decision 38); the plan states which are allowed and how per-language availability works.
+
+### 6. Mods screen and safe start (UI, ≈ 400; after parts 2–4)
+- Screen from the start menu and the Esc menu (general part): list (name, version, source local/Workshop, kind, languages, warnings: version mismatch, invalid, download pending, failed at load), on/off, load order (move up/down), «restart to apply» (the shell restarts itself: `app.relaunch()`).
+- One-time notice before the first mod is enabled: mods run code with the game''s access to the save and Steam features; stored per install.
+- Crashed start: the shell writes a marker before loading the page with mods and clears it when the page reports ready (or after N seconds); a marker found at the next start → start without mods, mods screen opens with a line why. Also a manual way: a launch flag (`--no-mods`) and holding a key/pad button at start (plan picks; Steam launch options for the flag).
+- Pad, keyboard, mouse as every screen (IN-1..IN-5); TV-check of plan 100.
+
+### 7. Achievements, flags and telemetry with mods on (≈ 590; waits for decision 123: Achievements in games with mods on: allowed or off?)
+- Applies decision 123 in plan 86''s `earned()` (and the unlock gate) via a per-run `modsActive` (and kinds) from the shell; games played with mods record that in the game row so the retroactive pass stays correct (save field: additive, decision 102''s precedent).
+- Flags: hidden for player questions (part 5 marks them); reports (plan 93) and telemetry (plan 101) only for our questions and, per plan 101, a "mods on" count in the summary.
+- Rich presence: unchanged or "modded" (plan picks).
+
+### 8. Publishing: upload a mod folder as a Workshop item (≈ 670; after parts 2, 3)
+- The command ships with the game, so players can use it: the game executable with a flag, e.g. `trivia --publish-mod <folder> [--changenote …] [--visibility …]`, runs headless in the main process (our code; it reads the folder, never runs it), validates `mod.json` (part 2''s validator), creates the item on first publish (writes the published file id into the folder''s `mod.json` or a sidecar), then `startItemUpdate` → content, title, description, preview image, tags, languages → `submitItemUpdate` with progress on stdout; `--dry-run`.
+- Needs a valid Steam user and the Steam client; the Workshop legal agreement result is shown with its URL.
+- Later maybe an in-game button: out of scope, a backlog row.
+- Docs: guide section and README how-to; `trivia-steam` stays for our own builds, not mods.
+
+### 9. Player bundle kit: format doc, template, AI prompt (docs, ≈ 350; after part 5)
+- Bundle format documented for players (fields, categories, names, pool file, media, languages, difficulty scale 1–15 and age groups from `app/data/age-groups.json`), from part 5''s final format.
+- Template mod folder (one small bundle, two languages, one image question) that loads as is.
+- An AI prompt players paste into their own AI: produces the pool file in our format, asks for their topic, audience and language; adapted from `authoring/tools/prompts/` house style but standalone (no `qgen`, no web search assumed); the plan states how a player checks the result (the mods screen''s error list, or `trivia --check-mod <folder>` sharing part 8''s validator).
+- Where: part 10''s guide folder; shipped in the game''s install folder too, or only online (plan picks).
+
+### 10. Modding guide, examples and the store link (docs, ≈ 300; after parts 1–9)
+- Guide (public in the repo, e.g. `modding/README.md`; the plan picks the path, linked from `README.md` and `directory.md`): mod format, sources and load order, overlay rules (module paths from part 1), `window.trivia` (part 4), mods screen and safe start, publishing (part 8), player bundles (part 9), no stability promise, page-only rule.
+- Four example mods that load from `mods/` as is: a bundle, a CSS theme, a rules tweak (code add-on via `window.trivia`), a minimal full conversion (own `index.html`).
+- Store page link: add to `plans/17a-store-page.md` (plan 88: the gamemaster enters store texts) and Workshop description; mention mods in the store feature bullets (pm decision for the text, as plan 88''s sets).
+
+### 11. Optional: split `Game.svelte` and `Question.svelte` (client, ≈ 520; before part 4''s screen list and part 10''s examples)
+- Code review part 5 candidates (`code-review.md`): screen state machine vs. per-screen pieces; media, answers, reveal, jokers as own modules, so mods replace small files. The plan decides whether it''s worth it now; if not, it drops itself with a reason. No behaviour change; per-commit checks and a smoke game.
+
+### 12. End-to-end check and close-out (≈ 150, last)
+- The milestone''s "Done when": the four example mods each load from `mods/` and, published by part 8, from the Workshop on a second Steam account (gamemaster runs the Steam steps from a checklist, pm decision kind once).
+- Store page shows the guide link (gamemaster confirms).
+- Release check: does `trivia-release-check` need a mods row (game starts with `--no-mods` and with the examples)? Add it to plan 104 if so.
+- Docs: `plans/18-steam-integration.md` (Workshop, bridge rename, IPC), `plans/01-architecture.md` (overlay), `plans/11-steam.md`, `plans/project.md`, `README.md`, AGENTS.md "Commands" (publish flag, `TRIVIA_MODS_DIR`).
+
+## Order
+1 → 2 → (3, 5 in parallel) → 4 (after 1, 2; 11 before it if done) → 6; 7 after 5 and decision 123; 8 after 3; 9 after 5; 10 after all others; 12 last.
+
+## Done when (milestone)
+- A bundle mod, a CSS theme mod, a code add-on and a minimal full conversion each load from `mods/` and from the Workshop on a second Steam account.
+- The modding guide is linked on the store page.', '2026-10-13T16:55:00Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (103, 11, 'Report server (POST /reports)', 700, 'Part 8 of masterplan 11 (S6, ST-5 server half): a small server that takes question reports sent from the game on the player''s click (decision 93: Question reports: where do players send them? → own endpoint) and hands them to `qgen flag --pull`. Only valid Steam users may send (decision 111: Steam only): the game sends a Steam Web API ticket, the server checks it with Steam and stores no SteamID and no IP. Plan 93 (part 5: client, shell, `qgen flag`) builds on the API contract below; it is fixed here first and changed only by editing this plan. Owner: `plans/11-steam.md` (ST-5, server half); code in a new top-level directory `report-server/` (listed in `directory.md`).
 
 ## Builds on (don''t rebuild)
@@ -18850,9 +18952,9 @@ leave it as it is if it still fits. An edit queues the revision of the plans bel
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (833, 101, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-13, plan 101 body (masterplan: 6 parts)', 'Write plan 101, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-13T16:24:16Z', '2026-10-13T17:24:12Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (834, 102, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 102, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (834, 102, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-13, tasks.sql (plan 102 body, decision 123)', 'Write plan 102, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-13T16:55:00Z', NULL, NULL);
+plan for one part.', '2026-10-13T16:55:00Z', '2026-10-13T17:46:08Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (835, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: plan 10 tasks in line after task 832 (part 8 only): task 253 PUB-10 → plan 88 AI disclosure, decision 78 name; part 8 via task 839 (revise plan 88); decisions 77/79/80/87 answered, none new', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T16:56:05Z', '2026-10-13T16:56:47Z', 832);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (836, 85, 'revise plan 85', 'plan', 'done', 1000, '2026-10-13, no change: plan 85 already matches plan 10 part 3 (masterplan revision touched part 8 only)', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
@@ -20630,6 +20732,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences` on decisions 118–121 where the built result differs or adds facts; check milestone 14''s "Done when" and plan 101''s; a gap → follow-up task. Per-commit checks (AGENTS.md).
 
 Done when: no doc says "no telemetry" or "never phones home"; docs, how-tos and decision consequences match the built telemetry.', '2026-10-13T17:43:24Z', NULL, 883);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (898, 102, 'create tasks for plan 102', 'split', 'open', 1000, NULL, 'Split plan 102 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:46:00Z', NULL, 834);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -21919,6 +22023,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (120, 'Telemetry send: at quit, one later try at the next start', 'answered', '[]', 'Plan 107 (part 3 of plan 101). The server dedups by session and never updates a row (plan 105), so a game-end send would lose later games or force a session per game; calibration isn''t time-critical, so the next-start try covers crashes, Steam Stop, Windows TerminateProcess and Deck sleep. At most two sends per file keeps it bounded; server dedup makes a crash between send and delete harmless.', 'The shell sends each session file once in before-quit (4 s budget, window hidden first); retryable failures (401, 429, 5xx, no connection) and files left by a crash/kill get one more try 30 s after the next start, then are deleted whatever the answer; no send at game end', NULL, '2026-10-13T17:33:09Z', '2026-10-13T17:33:09Z', 874, NULL, 'rule', 874, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (121, 'Telemetry consent: stored per install, not in the save', 'answered', '[]', 'The install id and the session buffer are per install (decision 119); a yes in the cloud save would make every machine the account plays on send without being asked there; a no must wipe the id and buffer on that machine, which the save can''t do elsewhere; the save shape stays unchanged (decision 119). Cost: a second Steam account on the same PC inherits the answer (it is shown and changeable in the Esc menu).', 'The yes/no lives in the shell''s per-install <userData>/telemetry/install.json (plan 106), not in the Steam Cloud save; every Steam user on that install shares it; a new machine asks again', NULL, '2026-10-13T17:34:04Z', '2026-10-13T17:34:04Z', 875, NULL, 'rule', 875, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (122, 'Played difficulty: calibration model for qgen report --played', 'answered', '[]', 'Plan 109 (part 5 of masterplan 14). Relative, not absolute: the curve comes from the played data per age group window (app/data/age-groups.json), so it finds questions mis-rated against their peers; whole-group or per-level difficulty is shown in a per-level table as information only. Rated = the locale''s own difficulty (D-81). Answers before the entry''s last review date don''t count. A filter instead of needs_work because most outliers need a new difficulty, and needs_work would feed qgen rework unasked (plan 101). Local data is aggregated only (state/played/stats.json, no install or session ids), matching plan 108''s privacy text (decision 121).', 'Per age group, an empirical monotone curve right rate ← rated difficulty (clean answers: no hint/snipe), inverted per question after shrinkage (k=4); outlier when n≥12, |observed−rated|≥2 and the 90% Wilson interval excludes the curve at the rated value; candidates go to a /review?played=outliers filter, never to needs_work automatically', NULL, '2026-10-13T17:37:33Z', '2026-10-13T17:37:33Z', 876, NULL, 'rule', 876, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (123, 'Achievements in games with mods on: allowed or off?', 'pending', '["Off whenever any mod is enabled in that run; the game says so once on the mods screen (simple, clear; player bundles also turn them off)", "Allowed with content-only mods (only bundle data and CSS, no .js/.html of any kind); off as soon as an enabled mod has code or a full conversion", "Always allowed; mods may change anything anyway"]', 'Milestone 15 (Modding and Steam Workshop) leaves this open. Achievements are earned only in qualifying games (decision 19, decision 73, decision 74: gamemaster mode never). Mods run in the page and can patch the engine and call the Steam bridge themselves (soft enforcement, decision 111), so any rule is a convention, not protection. Player bundles add questions that aren''t ours (they never count for our seen counts or reports). Answer this before plan 102''s part ''Achievements, flags and telemetry with mods on'' is written.', NULL, NULL, '2026-10-13T17:44:58Z', NULL, 834, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -22679,6 +22784,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (753, 881, '2026-10-13T17:41:34Z', '2026-10-13T17:42:14Z', 'done', NULL, 0, 'b3cac869b5ac9a2a015f196227bb10308a9553da', 'claude-opus-5-5[1m]', 'edd86372-bf2f-47c5-b3e7-b332f4d62460', 5, 10, 4029, 156853, 30579, 0.3566226, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (754, 882, '2026-10-13T17:42:14Z', '2026-10-13T17:42:49Z', 'done', NULL, 0, '87c8b88dccef6a5289a475cb6756449bab0ece7d', 'claude-opus-5-5[1m]', '8d94d4cf-74ba-443b-94e6-01ed6883a0eb', 5, 10, 3455, 154300, 30003, 0.34002400000000005, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (755, 883, '2026-10-13T17:42:50Z', '2026-10-13T17:43:40Z', 'done', NULL, 0, 'b32a59ecc44be09b4f561a95a1cedef5e4081fb0', 'claude-opus-5-5[1m]', '03c61314-a472-4d41-812a-94e32d83a6ce', 7, 14, 5446, 240373, 32608, 0.41791459999999991, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (756, 834, '2026-10-13T17:43:40Z', '2026-10-13T17:46:21Z', 'done', NULL, 0, 'ce63d42ef7949c50de8de474a19b300efaeb3a1f', 'claude-opus-5-5[1m]', 'a785f30d-97d0-46ae-a92b-f9764a3a80b5', 15, 30, 14215, 898731, 75075, 1.0647662, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
