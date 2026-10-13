@@ -100,7 +100,7 @@ Not entered now: Steam shows every defined achievement, unreachable ones look br
 Local builds since S3 (SW-5, D-73); the release check (SW-6) and Steam uploads (SW-10) since S5. No GitHub Actions: CI is local (pm decision 14). One command on the developer's Linux machine builds both platforms; the artefacts are plain folders, so Steam (S5) can install them as they are.
 - **Command:** `trivia-desktop-build` (dev shell) = `qgen validate`, `npm run build -w app/client`, `stage-media.mjs`, `electron-builder --x64 --linux tar.gz --win zip`; `--dir` adds the `dir` target (`release/{win,linux}-unpacked/`, the OS depots; launcher via `after-pack.mjs` too), `trivia-steam stage` checks OS depot (without `resources/media`) + content depot (`build/media/`) = the archives. Outside Nix: `npm ci --prefix app/desktop`, then `npm run dist --prefix app/desktop` (no `qgen validate`). First build downloads the Electron zips into `~/.cache/electron`; later builds run offline.
 - **Targets:** `app/desktop/release/Trivia-<version>-win-x64.zip` (files at the zip root; `Trivia.exe`: unsigned, Electron's icon until pm decision 87 gives a game icon) and `Trivia-<version>-linux-x64.tar.gz` (folder `Trivia-<version>-linux-x64/`; `./trivia` = launcher with `--no-sandbox`, binary `trivia-bin`; the Deck runs this one). No installer, no AppImage. ~2.5 GB each today.
-- **Layout:** `resources/app.asar` (`package.json`, `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs`), `resources/client/` (client `dist/`), `resources/data/` (`app/data/`), `resources/media/` (only the pool's media and backgrounds, from the cache via `app/desktop/build/media/`; outside the asar for the S5 content depot); `LICENSE.electron.txt`, `LICENSES.chromium.html` at the root. `CREDITS.md` (PUB-5) in `resources/client/` and at the root (`extraFiles` from `../client/dist/CREDITS.md`).
+- **Layout:** `resources/app.asar` (`package.json`, `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs`), `resources/client/` (client `dist/`: the readable tree, decision 124, plain files outside the asar; "Modding: module paths"), `resources/data/` (`app/data/`), `resources/media/` (only the pool's media and backgrounds, from the cache via `app/desktop/build/media/`; outside the asar for the S5 content depot); `LICENSE.electron.txt`, `LICENSES.chromium.html` at the root. `CREDITS.md` (PUB-5) in `resources/client/` and at the root (`extraFiles` from `../client/dist/CREDITS.md`).
 - **Stale client files (task 946):** checked 2026-10-13, Electron 43: `app://` (`protocol.handle`) responses never enter Chromium's HTTP cache and V8's code cache follows changed bytes: a changed module runs on the next start, with or without the header; `resolve.mjs` still sends `cache-control: no-cache` for client and mod-overlay files (unhashed names, decision 124); no `ses.clearCache()` needed.
 - **Config:** `app/desktop/electron-builder.yml`, `after-pack.mjs` (Linux launcher), own `package-lock.json` (`electron`, `electron-builder`; not a root workspace).
 - **Exe metadata (B-11, task 683):** `win.signExecutable: false`: electron-builder 26 edits `Trivia.exe`'s resources in pure JS (`resedit`, no wine): `ProductName`/`FileDescription` = `productName`, `CompanyName` + copyright = `package.json` `author`, `FileVersion`/`ProductVersion` = `version`. Icon: `win.icon`, pending (pm decision 87). `ProductName` follows `productName` («Trivia»); «Living Room Trivia» once PUB-7 passes (artifact names and paths change with it).
@@ -195,6 +195,25 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
 - Path safety: `contained()` compares `realpath`s against the layer root's `realpath` (every root, ours too): symlinks out of a layer miss; `..`, encoded `..`, absolute and drive-letter paths stay inside or miss; files only.
 - MIME by extension (`MIME` in `resolve.mjs`), unknown → `application/octet-stream`. Paths case-sensitive (Windows: match case).
 - stderr: one line per mod (`trivia: mod <id> <state> [warnings]`) and a summary (`trivia: mods: 2 loaded, 1 invalid`).
+
+## Modding: module paths
+The client ships as a readable tree, so a mod replaces any single module, component CSS or stylesheet by putting a file at the same path (pm plan 111, decision 124: Readable client build: output naming rule for mod overrides). The modding guide (pm plan 121) links this section.
+- Build: `app/client/vite.config.ts` (`preserveModules`, `preserveModulesRoot: "src"`, naming functions, `minify: false`, `sourcemap: true`, `cssCodeSplit: true`), `svelte.config.js` (`cssHash`).
+- Naming rule (paths relative to `app/client/src/` and `app://trivia/`):
+  - `lib/data.ts` → `lib/data.js`; `game/Game.svelte` → `game/Game.svelte.js`; runes module `game/sound.svelte.ts` → `game/sound.svelte.js`
+  - component CSS next to its component: `game/Game.svelte.css`
+  - global CSS keeps its path: `app.css`, `game/theme.css` (colour variables)
+  - third-party: `vendor/<package>/<path>` (Svelte runtime: `vendor/svelte/src/internal/client/…`); Vite helpers: `_virtual/…`
+  - `.map` next to each JS file; no hashes; `public/` files where they are (`audio/`, `fonts/`)
+- `index.html`: one `<script type="module" src="/main.js">` + `app.css`; the browser follows imports; a full conversion replaces it.
+- Scoped class names: `svelte-<component path>` (e.g. `svelte-game-hud`), stable per component path, not per CSS content: a theme's selectors survive our CSS changes.
+- Not overridable by path (no file of their own):
+  - inlined `__APP_VERSION__` and other `define`s
+  - the preload helper's dependency list inside `main.js` (a mod adding a module imports it itself)
+  - plugin output `credits.json`, `CREDITS.md` (replaceable, meaningless)
+  - `/data/` (only bundles, "Modding" above) and `/media`
+- Caching: none across updates ("Builds and depots", task 946).
+- No stability promise: paths may change with any update and break mods; renames go into the patch notes (pm plan 102).
 
 ## Modding: Workshop source
 Subscribed Workshop items are mod sources next to the local folder (pm plan 114); the page reads and orders mods over IPC. Steam's client downloads items, never us; the overlay stays this run's.
