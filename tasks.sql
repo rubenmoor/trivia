@@ -21296,10 +21296,43 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The plan picks the pad button (e.g. View/Back or a stick click) and the key per catalog; record the choice with `pm decision record` if it''s a lasting one, `pm decision add` only if it''s not obvious.
 - Check in the plan: dev server (task 762) if done, else `trivia-desktop`; 1280×800, 1280×720, 1920×1080; a throw-away script lists the image questions of `app/data/pool.json` whose picture the panels cover.
 - Done when: the plan exists at priority 400 and covers part 10.', '2026-10-13T17:54:03Z', '2026-10-13T17:56:10Z', 915);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (920, 113, 'create tasks for plan 113', 'split', 'open', 1000, NULL, 'Split plan 113 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:56:05Z', NULL, 919);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (920, 113, 'create tasks for plan 113', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 922, 923 for plan 113; no open decisions (126, 125 answered)', 'Split plan 113 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:56:05Z', '2026-10-13T17:58:52Z', 919);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (921, 48, 'create tasks for plan 48', 'split', 'done', 1000, '2026-10-13, tasks 238, 236, 237 brought in line with revised plan 48 (decisions 125, 126; plans 65, 113; Deck-sized 1280×800 window, no real-Deck rows)', 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:56:59Z', '2026-10-13T17:57:44Z', 916);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (922, 113, 'Image peek: hold action, pad R3, key V, Question screen', 'work', 'open', NULL, NULL, 'Implement plan 113''s "Design" in full (client only; no engine, save or shell change). Binding: decision 126: Image peek: which pad button and key? (pad R3 = standard button 11, glyph RS/R3; key per catalog `screen.question.peekKey`, `V` in es, es-ES, en, de); decision 9 (Question pad map otherwise unchanged); decision 53 (key lives in the catalog); D-51 (picture fit unchanged).
+
+- **Hold intent** (`app/client/src/lib/input.svelte.ts`): `Intent` `{ type: "peek"; down: boolean }`, the only hold.
+  - Keys: `question` scope `keys` maps `peekKey` → peek `down: true` on `keydown` (repeats ignored); new `keyup` listener dispatches `down: false` for the key that started it.
+  - Pad (`lib/gamepad.ts` `step`): release edges only for buttons whose mapped intent is a hold; Question scope `pad` map adds `11: peek`. `BUTTONS` unchanged; other buttons press-only.
+  - Safety release (`down: false` if held): window `blur`, `visibilitychange` hidden, pad loop "not active" branch (`lib/gamepad.svelte.ts`), pad disconnect, scope change (menu/flag opening a modal).
+  - `busy`: release always goes through; press while busy dropped.
+  - `KEY_LABELS.peek` = `t("screen.question.peekKey")`; `keyLabel`/`padButton` match peek regardless of `down`.
+- **Question screen** (`Question.svelte`):
+  - Allowed only when `media.type === "image"`, not `decorative`, not `mediaFailed`, no modal mode open.
+  - `peeking` class on `.question-screen`: every panel (Hud/`.top`, header card, answers, joker tray, prompts, «Respuesta final», topic, dial, credit line) fades out (opacity 0, `visibility: hidden` after ~150 ms); backdrop picture stays, dark/dim filters off. No layout change; DOM focus untouched.
+  - Other actions pass through while peeking. Timed mode clock keeps running; if MD-8 has no clock yet, say so in the done note.
+  - Prompt `<Prompt action={{ type: "peek", down: true }} />`, label `screen.question.peek`, image questions only, placed so it doesn''t cover the picture (next to credit line or in the HUD row).
+  - Mouse/touch press-and-hold on the backdrop outside the panels only if a few lines; else skip and say so in the done note.
+- **Glyphs** (`Glyph.svelte`): button 11 in both sets (xbox `RS`, playstation `R3`), 13.5 viewBox label size (plan 46''s 9 px rule).
+- **Catalogs** (`app/client/src/locales/*.ts`): `screen.question.peekKey` (`V`), `screen.question.peek` (es «Ver imagen», en «View image», de «Bild ansehen»; es-ES inherits; xx if it mirrors keys); `check-literals.mjs` `SCREENS.question` gets `screen.question.peekKey`.
+- No new dependency.
+
+Check: `npm run check` (incl. `check:literals`), `npm test`, `npm run build`, `qgen validate`; throw-away script feeding fake pads to `step`: R3 press → peek down, release → peek up, other buttons unchanged, no repeat. Screen walk is the next task.', '2026-10-13T17:58:50Z', NULL, 920);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (923, 113, 'Peek screen check at 1280×800, 1280×720, 1920×1080; docs', 'work', 'open', NULL, NULL, 'After "Image peek: hold action, pad R3, key V, Question screen" (plan 113 task 1) is done. Binding: decision 125: Steam Deck: best effort, review without a Deck at hand; decision 126 (R3 / `V`).
+
+- Throw-away script: list the non-decorative image questions of `app/data/pool.json`; per size (1280×800, 1280×720, 1920×1080) the ones whose fitted picture rect (native size, never up, D-51) intersects the panels'' rects. Playwright walk: on the Node dev server (task 762: Node dev server for browser checks) with `?q=` or its go-to, if done; else `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1` and Esc menu «Ir a pregunta…».
+- For every listed question at the three sizes: holding peek shows the whole picture with no UI left; release restores the UI as before (focus, locked answer, armed joker). Keyboard (`V`) and pad (faked standard pad or forced `device: "gamepad"`, button 11).
+- Also: the prompt doesn''t cover the picture; peek does nothing on video/audio/decorative questions and in Paso/Francotirador/Cambiazo/flag dialog/overlay; holding through a window `blur` releases.
+- Fix what fails if small; else a follow-up task in plan 113.
+- Docs:
+  - `plans/14-input.md`: peek in section 2''s action list and the Question pad map (R3 / `V` per catalog, hold).
+  - `plans/04-ui-tv-display.md`: Question screen peek behaviour; "Input": hold intents, the one exception to press-only.
+  - `plans/18-steam-integration.md` "Steam Deck Verified": replace "Test on a real Deck before applying." with decision 125''s rule (fit at 1280×800 + peek + Gamepad template; review without a real-Deck test; real-Deck test is plan 90 once a Deck is at hand).
+  - `plans/project.md` in sync; `directory.md` only if a file is added.
+- Delete the throw-away script.
+
+Done when: at 1280×800 every image question''s picture can be seen whole via the peek (milestone 8); the owning plan files carry the notes. Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T17:58:50Z', NULL, 920);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -23364,6 +23397,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (764, 921, '2026-10-13T17:57:10Z', '2026-10-13T17:57:51Z', 'done', NULL, 0, '03a207f09a6a0ef21a08eeca5dd4578cd3c976fb', 'claude-opus-5-5[1m]', 'ea164c11-d33f-46c8-8e6b-351ea43aeaab', 5, 10, 4749, 137430, 27939, 0.346018, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (765, 917, '2026-10-13T17:57:51Z', '2026-10-13T17:58:04Z', 'done', NULL, 0, 'a9e9ef439aea233cb51ca526e0def57fa8b2c1d5', 'claude-opus-5-5[1m]', 'b67134ff-f2c7-484d-9acb-2a11164b448b', 4, 8, 844, 120797, 27508, 0.2611354, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (766, 918, '2026-10-13T17:58:04Z', '2026-10-13T17:58:24Z', 'done', NULL, 0, 'daa23093e2fc464945947de7f7f37e7ce62fa7a7', 'claude-opus-5-5[1m]', 'e36b491e-51aa-4546-ab93-20b522e8a071', 4, 8, 1364, 117049, 25817, 0.2572578, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (767, 920, '2026-10-13T17:58:24Z', '2026-10-13T17:58:58Z', 'done', NULL, 0, '28f55cd4a0802c4cfeaed1446d4cf0abcfc33c34', 'claude-opus-5-5[1m]', '86bd6c17-f772-498a-bb7a-55e1f2ca9fe7', 6, 12, 3203, 167439, 22767, 0.27973180000000003, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
