@@ -172,24 +172,6 @@ trivia-steam stage                    # stages build/dlc/<pack>/; depot folders 
 
 Before every Steam upload, on a clean, tagged commit: `trivia-release-check` (~15 min; per-commit checks, licences, release quality bar, `nix build .#app`, both desktop builds, a smoke game in `linux-unpacked`, then asks the manual checklist). Exit 1 on any ✗; `--skip <step>` for a known-broken step, `--manual <file>` for answers (`<row>: y|n|note` per line). Report: `work/steam/<tag>/release-check.md`.
 
-### Upload to Steam
-
-Only to the password-protected `beta` branch; `default` (public) is set by hand in the Steamworks web UI. Needs the App ID and depot IDs in `authoring/steam/steam.json` and a clean commit tagged `v<version>` (tag it yourself).
-
-```sh
-git tag v0.1.0                                   # = app/desktop/package.json version
-trivia-steam upload --branch beta                # release check → stage → VDFs → steamcmd run_app_build
-trivia-steam upload --branch beta --checked      # reuse this commit's passing release check
-trivia-steam upload --branch beta --preview      # SteamCMD builds the manifests, uploads nothing
-trivia-steam upload --branch beta --dry-run      # no SteamCMD, no tag needed; VDFs only
-```
-
-New version: edit `version` in `app/desktop/package.json` (the only place), commit, then `git tag v<version>`.
-
-Before a build goes from `beta` to `default`: the manual rows and the per-candidate decision in `plans/11-steam.md` "Release checklist (ST-4)".
-
-Account: `TRIVIA_STEAM_ACCOUNT` or a prompt; password and Steam Guard code are typed into SteamCMD only (cached in `~/.local/share/trivia/steamcmd`). `--skip`, `--manual` go to the release check. Prints the BuildID; VDFs, `steamcmd.log` and SteamCMD's `output/` in `work/steam/<tag>/`.
-
 Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
 
 ### Publish a mod to the Workshop
