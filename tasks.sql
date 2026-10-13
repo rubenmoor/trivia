@@ -328,7 +328,10 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Outcome
 - Translated UI catalogs (LUI-4..LUI-6, `plans/15a-ui-translation.md`).
 - Translated, re-rated and reviewed questions (QT-*, `plans/15b-question-translation.md`).
-- Regional packs (RG-3..RG-5, `plans/15c-regional-questions.md`).
+- Regional bundles (RG-3..RG-5, `plans/15c-regional-questions.md`; decision 110): 2000 approved each, in the region''s language + en, free DLC, off by default; own bundle-scoped categories and subcategories (names may repeat across bundles).
+  - pilot `colombia`: 102 → 2000 via `qgen batch --bundle colombia`, then its en translation; effort measured: $ per approved (`qgen report --cost`) and the gamemaster''s review time per 100 (review tool timestamps)
+  - after the pilot: a pm decision "More regional bundles at launch?" with the measured effort (candidates mexico, argentina)
+  - launch doesn''t wait for the pilot: it ships what `colombia` has then; updates bring the rest
 - The content target reached and measurable (CT-*, `plans/16-content-target.md`).
 - Language on first start (I18N-2; replaces plan 68''s "no first-start language screen"):
   - a fresh save opens on a language screen with the guessed language preselected; the player confirms or picks another
@@ -356,6 +359,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Done when
 - `qgen report --simulate` meets the target for every launch language.
 - A fresh save asks for the language once; an existing save doesn''t.
+- `colombia` has 2000 approved in es and en (may land after launch), the pilot''s effort is recorded and the follow-up decision answered.
 - Style guides exist for every UI locale; the TV-check fixes are in; the gamemaster has reviewed the screen gallery in every UI language.
 
 Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL);
@@ -17174,6 +17178,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: under the dev server or `TRIVIA_DEV_STEAM_USER=1`, a video question''s id opens it at the current level and an unknown id shows the message; without dev mode (plain `trivia-desktop`, or a real Steam user without the switch) the row is absent. Local CI passes.', '2026-10-13T15:46:09Z', NULL, 812);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (814, 86, 'create tasks for plan 86', 'split', 'done', 1000, '2026-10-13, task 655 body: admin_replace games don''t qualify (task 813); tasks 654, 656-658 unchanged, decision 73 still pending', 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:47:01Z', '2026-10-13T15:47:35Z', 807);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (815, 9, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 9, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:54:53Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
