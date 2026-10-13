@@ -1,6 +1,7 @@
 // Games per new player (plan 62, CT-2; plan 65): engine games on one v3 save until the first repeat (a seen card offered).
 // stdin: a cell {locale, bundles?, age_group?, mode?, player?, players?, seeds?, seed?} or an array of cells; stdout: JSON.
 import { readFileSync } from "node:fs";
+import { rangesFor } from "../../../app/client/src/engine/choice.ts";
 import { GameError, STANDARD_JOKERS, answer, joker, newGame, pick, resolveChoice, view } from "../../../app/client/src/engine/game.ts";
 import { outlook } from "../../../app/client/src/engine/outlook.ts";
 import { categoryOf, type LevelRanges } from "../../../app/client/src/engine/pool.ts";
@@ -11,13 +12,13 @@ import type { GameMode, JokerName } from "../../../app/client/src/lib/types.ts";
 import { loadData, type Loaded } from "./load.ts";
 
 /** `typical`: p(correct) linear from level 1 to level 12. Only a model. */
-export const TYPICAL_P = [0.95, 0.6] as const;
+const TYPICAL_P = [0.95, 0.6] as const;
 const NOW = "2026-01-01T00:00:00";
 const NAME = "Sim";
 const SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"];
 const MULTI = ["rr-competitive", "timed"];
 /** Runs stop here if no repeat came yet (`capped`). */
-export const MAX_GAMES = 500;
+const MAX_GAMES = 500;
 
 interface Cell {
   locale: string;
@@ -65,7 +66,7 @@ function dryAt(level: number, lo: number, hi: number, seen: Set<string>, data: E
   const all = selection.available(data.pool, [], [], bundles);
   const had = at(all);
   const still = at(all.filter((q) => !seen.has(q.id)));
-  return { level, lo, hi, dry: [...had].filter((s) => s !== null && !still.has(s)) as string[] };
+  return { level, lo, hi, dry: [...had].filter((s): s is string => s !== null && !still.has(s)) };
 }
 
 type Rand = { rand: () => number; randInt: (n: number) => number };
@@ -85,7 +86,7 @@ function run(data: EngineData, cell: Cell, seed: number): Run {
   const args = { mode: "solo", age_group: cell.age_group, bundles: cell.bundles };
   const choice = resolveChoice(data, args);
   const bundles = new Set(choice.bundles);
-  const ranges = data.groupById.get(choice.age_group)!.levels;
+  const ranges = rangesFor(data, choice);
   if (cell.mode === "timed") return runTimed(data, cell, io, r, ranges, bundles);
   // rr-competitive until MD-8: one solo game per player on the one save (D-82); a game = a round.
   const names = cell.mode === "rr-competitive" ? Array.from({ length: cell.players! }, (_, i) => `${NAME} ${i + 1}`) : [NAME];

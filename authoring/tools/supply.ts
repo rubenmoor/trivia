@@ -1,7 +1,7 @@
 // Supply check for qgen report and the authoring start page (plan 51, D-60): selection.ts under Node.
 // stdin: {questions, burned, age_group?, bundles?} or an array of them; stdout: {per_level, ranges, supply} per input.
 // Defaults: young_teens (the default age group), every bundle.
-import { stdin } from "node:process";
+import { readFileSync } from "node:fs";
 import ageGroups from "../../app/data/age-groups.json" with { type: "json" };
 import { parseAgeGroups, type PoolQuestion } from "../../app/client/src/engine/pool.ts";
 import { PER_LEVEL, available, supply } from "../../app/client/src/engine/selection.ts";
@@ -26,7 +26,5 @@ function run({ questions, burned, age_group = "young_teens", bundles }: Input) {
   };
 }
 
-let raw = "";
-for await (const chunk of stdin) raw += chunk;
-const input = JSON.parse(raw) as Input | Input[];
+const input = JSON.parse(readFileSync(0, "utf8")) as Input | Input[];
 console.log(JSON.stringify(Array.isArray(input) ? input.map(run) : run(input)));

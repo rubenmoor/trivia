@@ -4,14 +4,14 @@ import { join } from "node:path";
 import { loadCategories, parseAgeGroups, parseBundles, parsePool } from "../../../app/client/src/engine/pool.ts";
 import { engineData, type EngineData } from "../../../app/client/src/engine/state.ts";
 
-export const DATA_DIR = join(import.meta.dirname, "../../../app/data");
+const DATA_DIR = join(import.meta.dirname, "../../../app/data");
 
 export type Loaded = { ok: true; data: EngineData; pool: string } | { ok: false; error: "no_pool"; pool: string };
 
 const read = (path: string): unknown => JSON.parse(readFileSync(path, "utf8"));
 
 /** The pool file of a locale: pool.<locale>.json; es falls back to pool.json. */
-export function poolPath(locale: string, dir = DATA_DIR): string {
+function poolPath(locale: string, dir = DATA_DIR): string {
   const own = join(dir, `pool.${locale}.json`);
   return locale === "es" && !existsSync(own) ? join(dir, "pool.json") : own;
 }

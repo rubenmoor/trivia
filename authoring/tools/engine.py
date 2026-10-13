@@ -12,10 +12,13 @@ def node(script, payload):
     exe = shutil.which("node")
     if exe is None:
         raise SystemExit("qgen report and the authoring start page need node: run inside the dev shell (direnv allow or nix develop)")
-    out = subprocess.run([exe, str(script)], input=json.dumps(payload), capture_output=True, text=True)
+    out = subprocess.run([exe, str(script)], input=json.dumps(payload), capture_output=True, text=True, encoding="utf-8")
     if out.returncode:
         raise SystemExit(f"{script.name} failed:\n{out.stderr.strip()}")
-    return json.loads(out.stdout)
+    try:
+        return json.loads(out.stdout)
+    except json.JSONDecodeError as e:
+        raise SystemExit(f"{script.name}: no JSON on stdout ({e}):\n{out.stdout[:500]}{out.stderr.strip()}") from None
 
 
 def simulate(cells):
@@ -23,12 +26,13 @@ def simulate(cells):
     return node(SIM, cells)
 
 
-def supply(questions, burned, **opts):
+def supply(questions, blocked, **opts):
     """{per_level, ranges {"1": [lo, hi], …}, supply [{level, range, candidates, missing}]} from selection.ts;
-    questions minus unapproved and `burned` (blocked ids); opts: age_group, bundles (default young_teens, all)."""
-    return node(SUPPLY, {"questions": questions, "burned": sorted(burned), **opts})
+    questions minus unapproved and `blocked` ids (stdin key `burned`); opts: age_group (default young_teens),
+    bundles (default every bundle)."""
+    return node(SUPPLY, {"questions": questions, "burned": sorted(blocked), **opts})
 
 
 def supplies(*inputs):
-    """`supply` for several (questions, burned) pairs in one node process."""
+    """`supply` for several (questions, blocked) pairs in one node process."""
     return node(SUPPLY, [{"questions": q, "burned": sorted(b)} for q, b in inputs])

@@ -1381,6 +1381,56 @@ Plan 80 reviews `authoring/tools/` minus `qgen.py`, `categories.py` and `prompts
 | `authoring/tools/providers/__init__.py` `SPACE_CATEGORIES` | no findings: `espacio` is the slug in `app/data/categories.json` (`media.category_of`) | — | — | — |
 | `authoring/tools/providers/__init__.py` `cooling`, `_cooldown` ↔ `download.http_get` | per-provider cooldown after a 429 here, retry/backoff there, throttle in `download.Throttle`: three pieces of one rate limiter | complexity | low | handed to part 10 (row above) |
 | `authoring/tools/providers/*` `available` | three `return True`, Freesound `bool(KEY)`: protocol, no duplication worth a default | — | — | — |
+| `authoring/tools/engine.py` `node` | stdout decoded with the platform encoding (`text=True` only): Node writes UTF-8 (Spanish subcategory names in `dry`), cp1252 on Windows; now `encoding="utf-8"` like task 563 | bug | low | fixed (task 572) |
+| `authoring/tools/engine.py` `node` | non-JSON stdout (a stray `console.log` in the engine) → bare `JSONDecodeError` traceback naming no script; now `SystemExit` with the script name, the stdout head and stderr, like the exit-code branch | practice | low | fixed (task 572) |
+| `authoring/tools/engine.py` `node` | stderr dropped when Node exits 0 (warnings lost); large payloads (≈1200 questions) go through `subprocess.run(input=…)` (`communicate`, no pipe deadlock) | practice | low | won't fix: the engine logs nothing on success; a failure shows stderr |
+| `authoring/tools/engine.py` `supply`, `supplies` | param `burned` and docstring «opts: age_group, bundles (default young_teens, all)» after task 427 (burns → blocked ids); now `blocked`, defaults spelled per opt; stdin key `burned` (and `supply.ts` `Input.burned`) kept: same stdin JSON (plan 80 rule) | inconsistency | low | fixed (task 572): Python names and docstring; stdin key won't fix (internal to the two files, rename only with both) |
+| `authoring/tools/engine.py` `supply` `**opts` | no caller passes `age_group`/`bundles` (`qgen` report: defaults; `overview.py`: `supplies`) | unused | low | won't fix: `supply.ts`'s documented input; one line |
+| `authoring/tools/engine.py` Node startup per call | `qgen report --simulate` runs one Node process per cell (`ex.map(engine.simulate, …)`, each loads `app/data/`); the start page batches via `supplies` | performance | low | won't fix: cells run in parallel processes (CPU-bound, seconds each); ≈0.3 s startup per cell |
+| `authoring/tools/engine.py`, `supply.ts`, `sim/` D-60 | no rule re-implemented: selection, choice, games, jokers, outlook from `app/client/src/engine/`; `simulate.ts` `runTimed` and the rr-competitive loop are models «until MD-9»/«until MD-8» (commented), built on `selection.draw`, not a game rule copy | — | — | — |
+| `authoring/tools/sim/simulate.ts` `run` | hand type-check (`tsc --noEmit`, throw-away config in `/tmp`, strict + `noUnused*`): `data.groupById.get(choice.age_group)!` fails since custom difficulty made `Choice.age_group` `string \| null` (decision 46); now the engine's `rangesFor(data, choice)` (same 12 ranges for an age group); the only error, `supply.ts`/`load.ts` clean | bug | low | fixed (task 572) |
+| `authoring/tools/sim/simulate.ts` `dryAt` | `.filter(s => s !== null && …) as string[]` (lint: no stock rule; typescript-eslint `consistent-type-assertions`); now a type guard | practice | low | fixed (task 572) |
+| `authoring/tools/sim/load.ts`, `sim/simulate.ts` | part 1 row «`DATA_DIR`, `TYPICAL_P`, `MAX_GAMES` exported, used only in their own file (lint: none, unused export)»: `export` dropped, also on `poolPath` (same case) | unused | low | fixed (task 572) |
+| `authoring/tools/sim/simulate.ts` casts | part 1 count «5 `as`, 7 `!`»: now 4 `as` (stdin `Cell`, `e.params.levels`, `STANDARD_JOKERS` entries, `mode as GameMode` after the `SIM_MODES` check), 6 `!` (the `groupById` one gone; `cell.players!` ×2 set by `simulate`, `first!` set whenever a draw repeat is, `state.current!`/`byId.get(…)!` in the question phase, cache `get` after `set`) | practice | low | won't fix: each holds by construction; stdin comes from `qgen` (validated `--mode`/`--player`) (lint: no-non-null-assertion) |
+| `authoring/tools/sim/simulate.ts` constants | `NOW` fixed (deterministic seen dates), `TYPICAL_P` a model (printed in the output), `MAX_GAMES` cap reported as `capped`; `uniform` seeded `seed ^ 0x9e3779b9`, apart from the engine's `seededRng(seed)`: same seed → same output (diffed) | — | — | — |
+| `authoring/tools/sim/simulate.ts` `SIM_MODES` | vs. the engine's `MODES` (`game.ts`): all but `gamemaster`; `MULTI` (default 4 players) = the two per-player modes | — | — | — |
+| `authoring/tools/sim/simulate.ts` `SIM_MODES` ↔ `qgen.py` `SIM_MODES` | same list twice (and the engine's `MODES` minus `gamemaster`) | complexity | low | handed to part 10 |
+| `authoring/tools/sim/simulate.ts` `run`, `playGame`, `runTimed` | ≈35 + 40 + 30 lines, one concern each (seed loop, one game, timed model); `jokerArgs` already split out | — | — | won't fix: a split would only move the shared locals into params |
+| `authoring/tools/sim/simulate.ts` `simulate` | `seeds: 0` → `NaN`/missing `min`/`max` in the output | bug | low | won't fix: `qgen --seeds` only; a 0 is a typo the empty table shows |
+| `authoring/tools/sim/simulate.ts` `cache` | one `loadData` per locale per process; a missing pool → `no_pool` row, not a crash | — | — | — |
+| `authoring/tools/sim/load.ts` `DATA_DIR`, `loadData` | path from `import.meta.dirname` (not the cwd), `join` (Windows-safe); the per-bundle file rule (`base` → `categories.json`, else `bundles/<id>/`) is a third copy next to `categories.py` and `lib/data.ts` `loadEngineData`: part 2's row | complexity | low | handed to part 10 |
+| `authoring/tools/supply.ts` | part 1 row «`raw` (stdin buffer)» (module state) and `for await (stdin)` while `simulate.ts` reads `readFileSync(0)`: now the same `readFileSync(0, "utf8")`, `raw` gone; output identical (diffed) | inconsistency | low | fixed (task 572) |
+| `authoring/tools/supply.ts` casts | part 1 count «1 `as`»: the stdin `Input` cast, input from `engine.py` only | practice | low | won't fix: trusted internal JSON |
+| `authoring/tools/supply.ts`, `sim/*.ts` tsconfig | not covered by `npm run check` (no tsconfig includes them); the type error above went unseen | inconsistency | medium | handed to part 10 |
+| `authoring/tools/package.json` | part 1 row «no findings: every dependency used»: `{ "type": "module" }` only, no deps; needed for the `.ts` files under Node | — | — | — |
+| `authoring/tools/patch_notes.py` (added since plan 80) `git` | `git show` output decoded with the platform encoding (category names, pool JSON): now `encoding="utf-8"` | bug | low | fixed (task 572) |
+| `authoring/tools/patch_notes.py` `files(None)` | working-tree paths as `str(relative_to)`: backslashes on Windows, so `POOL_RE`/`CATS_RE` never match there; now `as_posix()` (same on Linux) | bug | low | fixed (task 572) |
+| `authoring/tools/patch_notes.py` `cmd_patch_notes` | `markdown(d)` built twice (stdout, `--out`); now once; output identical (old vs. new module diffed, text and `--json`) | complexity | low | fixed (task 572) |
+| `authoring/tools/patch_notes.py` `LAUNCH` ↔ `qgen.LAUNCH_LOCALES`, `translations.LOCALES` | same launch list (D-78); `EVENT` is keyed by exactly these, so deriving it from `translations.LOCALES` would `KeyError` when milestone 12 adds a locale | inconsistency | low | handed to part 10 |
+| `authoring/tools/patch_notes.py` rest | no findings: counts only (plan 96), missing file at a ref → empty pool, refs checked before use, `release_check` via `sys.path` like `layout`'s `app/server` | — | — | — |
+| `authoring/tools/cdp.mjs` (added since plan 80) `evaluate` | the 10 s timeout timer was never cleared: each call left a live timer, so `smoke.mjs`/`screenshots.mjs` (they set `exitCode`, no `exit`) lingered up to 10 s after the last call; now cleared in `finally` (fake pipe child: exits at once) | performance | low | fixed (task 572) |
+| `authoring/tools/cdp.mjs` `rpc` | pending calls never settled when the shell died or the socket closed: a `Page.reload`/`captureScreenshot` after a crash hung the release smoke game forever; now the pipe's `close` / the socket's `onclose` reject them (fake pipe child: rejected in 3 ms) | bug | low | fixed (task 572) |
+| `authoring/tools/cdp.mjs` empty catches | part 1 count «1 `catch {}`, 2 `.catch(() => …)`»: `connectPort` polling (`fetch` before the port listens), `waitFor` polling, `exited.catch` (raced, not lost) | — | — | — |
+| `authoring/tools/cdp.mjs` stream `error` handlers `() => {}` | EPIPE on a dead shell would otherwise crash the script before it reports «shell exited» | — | — | — |
+
+### Part 8 close
+
+- Files: `git ls-files authoring/tools` minus `qgen.py`, `prompts/` = 25 files; `categories.py` is part 2's (task 534); the other 24 have rows above (tasks 567–572; `cdp.mjs`, `patch_notes.py` added since plan 80, reviewed in task 572, in the inventory); `record_fixtures.py` deleted (task 302)
+- Part 1 rows handed to part 8: all have a final status above (`sim/` unused exports, `nasa.py:80`, `_download_locks`, `progress.py`/`download.py`/`providers` module state, `supply.ts` `raw`, `media.py` broad `except`, the TS cast/catch counts)
+
+Duplication and cross-cutting candidates for part 10 (`plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`):
+- `age_groups.py` `level_weights`/`level_problems` ↔ `engine/pool.ts` `levelWeights`/`parseAgeGroups`
+- `concepts.py` `_slug`/`key` ↔ `qgen.slug`/`norm`
+- `layout.py` ↔ `app/server/paths.py` (`EXPORT`/`LOCALE_POOL`/`NAMES` aliases, two `BUNDLE_DATA`)
+- `translations.save`, `qgen.save_json`, `authoring/server` writers: lock per process only
+- `save_file.py` ↔ `engine/save.ts` `UPGRADES`, `app/server/save.py`, `app/desktop/save.mjs`
+- rate limiting: `download.http_get` retry, `providers.cooling`, `download.Throttle`
+- `sim/simulate.ts` `SIM_MODES` ↔ `qgen.SIM_MODES` ↔ engine `MODES`
+- `sim/load.ts` per-bundle file rule ↔ `categories.py` ↔ `lib/data.ts`
+- `patch_notes.LAUNCH` ↔ `qgen.LAUNCH_LOCALES` ↔ `translations.LOCALES` (and `lib/data.ts` `LOCALES`)
+- `supply.ts`, `sim/*.ts` in no tsconfig
+- checked, no copy: `pool_export.py`/`translations.export_text` ↔ `qgen cmd_export`; `health.py` ↔ qgen report; `media.cmd_sync` ↔ `media_cache.py`
+- handed to part 9: `batches.unfinished_runs` (`tr-*` runs), `authoring/server/main.py` `update_translation` writing `pool.<locale>.json` in place
 
 ## Part 9: Authoring server and UI
 

@@ -12077,7 +12077,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The five files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', '2026-10-13T12:51:22Z', 520);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (572, 80, 'Review the Node engine bridge: engine.py, supply.ts, sim/, package.json; close part 8', 'work', 'open', NULL, NULL, 'Task 6 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (572, 80, 'Review the Node engine bridge: engine.py, supply.ts, sim/, package.json; close part 8', 'work', 'done', NULL, '2026-10-13, code-review.md, authoring/tools/{engine.py,supply.ts,sim/load.ts,sim/simulate.ts,patch_notes.py,cdp.mjs}', 'Task 6 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
 
 ## First
 - Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -12114,7 +12114,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - One list of this part''s duplication candidates in `## Part 8` for part 10 (`plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`).
 
 ## Done when
-- These files listed in `## Part 8` with findings and status; plan 80 "Done when" holds.', '2026-10-12T23:08:17Z', NULL, 520);
+- These files listed in `## Part 8` with findings and status; plan 80 "Done when" holds.', '2026-10-12T23:08:17Z', '2026-10-13T12:55:57Z', 520);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (573, 81, 'Review the authoring server: authoring/server/main.py', 'work', 'open', NULL, NULL, 'Task 1 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -16002,6 +16002,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (622, 569, '2026-10-13T12:43:03Z', '2026-10-13T12:45:25Z', 'done', NULL, 0, '4de364e40c1cfabfd5bb138adc09e6480ad951ac', 'claude-opus-5-5[1m]', '66c84551-7518-49bd-ac97-323cea4a7cf3', 19, 36, 12369, 941879, 58103, 0.9007238, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (623, 570, '2026-10-13T12:45:26Z', '2026-10-13T12:48:35Z', 'done', NULL, 0, 'c174bf2fa9935dc0f0fd461358dd11353c6fbdfd', 'claude-opus-5-5[1m]', '9a3d81af-7bbc-4d29-9058-ce97f5995a0d', 26, 40, 14840, 1207874, 69090, 1.0912548, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (624, 571, '2026-10-13T12:48:35Z', '2026-10-13T12:51:35Z', 'done', NULL, 0, '8c8f167801d9720317cfeb31cfaed10b82db27ad', 'claude-opus-5-5[1m]', '90ce0885-54d6-4ed5-9aee-827385e1c630', 28, 52, 16240, 1664108, 72627, 1.2388456, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (625, 572, '2026-10-13T12:51:35Z', '2026-10-13T12:56:10Z', 'done', NULL, 0, 'e47186a579add1a30ea8f2b278661ed6281d5f18', 'claude-opus-5-5[1m]', 'd03caea5-d7da-4f1b-a9c6-5cc047c2a030', 41, 80, 23945, 3049649, 92179, 1.8265817999999996, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

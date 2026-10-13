@@ -12,7 +12,7 @@ export function freePort() {
   });
 }
 
-/** `{ send, close }` over a message transport; `sessionId` routes to an attached target. */
+/** `{ send, close }` over a message transport; `sessionId` routes to an attached target; `gone` fails every pending call. */
 function rpc(write, close, sessionId) {
   let id = 0;
   const waiting = new Map();
@@ -22,12 +22,16 @@ function rpc(write, close, sessionId) {
     waiting.delete(msg.id);
     msg.error ? w.reject(new Error(msg.error.message)) : w.resolve(msg.result);
   };
+  const gone = (why) => {
+    for (const w of waiting.values()) w.reject(new Error(why));
+    waiting.clear();
+  };
   const send = (method, params = {}, session = sessionId) =>
     new Promise((resolve, reject) => {
       waiting.set(++id, { resolve, reject });
       write(JSON.stringify({ id, method, params, ...(session ? { sessionId: session } : {}) }));
     });
-  return { send, close, onMessage };
+  return { send, close, onMessage, gone };
 }
 
 /** The app:// page on `--remote-debugging-port`. */
@@ -47,6 +51,7 @@ function openSocket(url) {
   const ws = new WebSocket(url);
   const r = rpc((s) => ws.send(s), () => ws.close());
   ws.onmessage = (ev) => r.onMessage(JSON.parse(ev.data));
+  ws.onclose = () => r.gone("page connection closed");
   return new Promise((resolve, reject) => {
     ws.onopen = () => resolve(r);
     ws.onerror = () => reject(new Error(`can't open ${url}`));
@@ -60,6 +65,7 @@ export async function connectPipe(child) {
   const browser = rpc((s) => input.write(s + "\0"), () => input.end());
   input.on("error", () => {});
   output.on("error", () => {});
+  output.on("close", () => browser.gone("debugging pipe closed"));
   output.setEncoding("utf8");
   output.on("data", (d) => {
     buf += d;
@@ -87,9 +93,10 @@ export const visibleEl = (sel) =>
 export function pageHelpers(page) {
   async function evaluate(expr) {
     // A call made during a reload may never get an answer.
-    const timeout = sleep(10000).then(() => Promise.reject(new Error(`no answer: ${expr.slice(0, 60)}`)));
+    let timer;
+    const timeout = new Promise((_, reject) => { timer = setTimeout(() => reject(new Error(`no answer: ${expr.slice(0, 60)}`)), 10000); });
     const call = page.send("Runtime.evaluate", { expression: expr, awaitPromise: true, returnByValue: true });
-    const { result, exceptionDetails } = await Promise.race([call, timeout]);
+    const { result, exceptionDetails } = await Promise.race([call, timeout]).finally(() => clearTimeout(timer));
     if (exceptionDetails) throw new Error(`${expr}: ${exceptionDetails.exception?.description ?? exceptionDetails.text}`);
     return result.value;
   }

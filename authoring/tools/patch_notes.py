@@ -40,13 +40,13 @@ CHANGES = "<Changes: fill in>"
 
 
 def git(*args):
-    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
 
 
 def files(ref):
     """Paths under app/data/ at ref."""
     if ref is None:
-        return [str(p.relative_to(ROOT)) for p in (ROOT / "app" / "data").rglob("*.json")]
+        return [p.relative_to(ROOT).as_posix() for p in (ROOT / "app" / "data").rglob("*.json")]
     return git("ls-tree", "-r", "--name-only", ref, "app/data/").stdout.split()
 
 
@@ -184,14 +184,12 @@ def cmd_patch_notes(args):
         if ref and git("rev-parse", "--verify", "--quiet", f"{ref}^{{commit}}").returncode:
             sys.exit(f"qgen patch-notes: unknown ref {ref}")
     d = notes(frm, args.to_ref)
-    if args.json:
-        print(json.dumps(d, ensure_ascii=False, indent=1))
-    else:
-        print(markdown(d))
+    md = markdown(d)
+    print(json.dumps(d, ensure_ascii=False, indent=1) if args.json else md)
     out = args.out or (tag_of(args.to_ref) and WORK / "steam" / args.to_ref / "patch-notes.md")
     if out:
         Path(out).parent.mkdir(parents=True, exist_ok=True)
-        Path(out).write_text(markdown(d), encoding="utf-8")
+        Path(out).write_text(md, encoding="utf-8")
         print(f"→ {out}", file=sys.stderr)
     if d["from"]["version"] == d["to"]["version"]:
         print(f"warning: version {d['to']['version']} unchanged since {frm}: bump app/desktop/package.json",
