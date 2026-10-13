@@ -345,13 +345,14 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
         except json.JSONDecodeError:
             last = f"no JSON from claude (exit {p.returncode}): {p.stderr.strip()[:300] or p.stdout[:300]}"
             continue
+        # every JSON result, failed ones too: they cost money
+        with open(Path(cwd) / "costs.log", "a", encoding="utf-8") as f:
+            f.write(f"{model}\t{out.get('total_cost_usd')}\n")
         if out.get("is_error") or out.get("structured_output") is None:
             last = f"claude error: {str(out.get('result'))[:300]}"
             if any(w in last.lower() for w in LIMIT_WORDS):
                 raise UsageLimit(last)
             continue
-        with open(Path(cwd) / "costs.log", "a", encoding="utf-8") as f:
-            f.write(f"{model}\t{out.get('total_cost_usd')}\n")
         return (out["structured_output"], main_model(out)) if with_model else out["structured_output"]
     raise RuntimeError(last)
 

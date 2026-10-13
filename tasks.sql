@@ -14200,7 +14200,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The smoke shell runs under `env -i` (no `LANG`), and the first screen clicks `.language .option.current`. Once a locale pool (`pool.en.json`, …) ships, the questions language may not be `es`: the es answer isn''t among the on-screen answers (`indexOf` −1 → `nth-child(0)` matches nothing) or the id is missing in that pool → the smoke fails although the game is fine.
 - Fix: after the language step, read `save.language.questions` from the save, load that locale''s pool (`es` → `pool.json`, else `pool.<locale>.json`, as `app/client/src/lib/data.ts` `poolFile`) for both the picks and the answer text.
 - Check: `node authoring/steam/smoke.mjs` on `app/desktop/release/linux-unpacked` (dev shell; temp HOME is built in).', '2026-10-13T11:43:21Z', '2026-10-13T11:46:09Z', 720);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (731, 79, 'qgen claude(): log the cost of failed attempts in costs.log', 'work', 'open', NULL, NULL, 'Follow-up of `task 557: Review qgen helpers, claude() wrapper, schemas and CLI` (code review part 7).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (731, 79, 'qgen claude(): log the cost of failed attempts in costs.log', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py, code-review.md: claude() logs every JSON result''s cost, failed and usage-limit attempts too', 'Follow-up of `task 557: Review qgen helpers, claude() wrapper, schemas and CLI` (code review part 7).
 
 ## Problem
 - `claude()` in `authoring/tools/qgen.py` appends `<model>\t<total_cost_usd>` to `<cwd>/costs.log` only on success.
@@ -14214,7 +14214,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Stubbed `subprocess.run` in a /tmp script: success, `is_error` with a cost, non-JSON stdout → expected costs.log lines.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T11:49:43Z', NULL, 557);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T11:49:43Z', '2026-10-13T12:31:47Z', 557);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (732, 79, 'qgen related_questions: answer matches before same-subcategory questions in the 30 cap', 'work', 'open', NULL, NULL, 'Found by `task 562: Review qgen LLM batch steps: media, sheets, review, fix, research, record`.
 
 ## Problem
@@ -15982,6 +15982,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (612, 564, '2026-10-13T12:18:01Z', '2026-10-13T12:21:30Z', 'done', NULL, 0, '01dda886688db8e41a3d473cd31a9ea50e7d2049', 'claude-opus-5-5[1m]', '4b63edba-afd5-4036-90ec-cc284d114b17', 27, 48, 20662, 1506138, 76889, 1.3297716000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (613, 565, '2026-10-13T12:21:30Z', '2026-10-13T12:25:49Z', 'done', NULL, 0, '326d53eb922adddd9c617c5a923dfc6c4d0946dc', 'claude-opus-5-5[1m]', '67edf2a3-93c9-48b7-880f-ea00f0280d79', 30, 58, 19697, 2238229, 90499, 1.5658098000000005, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (614, 566, '2026-10-13T12:25:49Z', '2026-10-13T12:31:01Z', 'done', NULL, 0, 'bbee89167dc2d600f3c99c448414eec8efb89459', 'claude-opus-5-5[1m]', '666892b0-3653-408a-8629-a4e605c98244', 45, 88, 28906, 3711585, 102458, 2.1404529999999986, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (615, 731, '2026-10-13T12:31:01Z', '2026-10-13T12:31:53Z', 'done', NULL, 0, 'c2311309fbe409e8b5d9958ac6a4ec7aa4ceec53', 'claude-opus-5-5[1m]', '6465fd6d-5238-4b56-b304-86b9f6540829', 10, 16, 3262, 255070, 26836, 0.33100599999999997, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
