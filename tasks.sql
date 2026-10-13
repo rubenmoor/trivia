@@ -7383,13 +7383,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `did=$(pm decision add "Local builds start offline?" --body "<checklist, build commit>" --option "both pass" --option "issues (fill the tables)")`; `pm task-pending-decision 332 "$did"`.
 
 Done when: section written and task 332 waits on the decision.', '2026-10-12T03:48:58Z', '2026-10-12T21:18:49Z', 323);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (332, 56, 'Local builds: record the start test', 'work', 'open', NULL, NULL, 'Part 4 of plan 56. Waits for the decision task 331 creates ("Local builds start offline?"); if none is linked or it''s still pending, stop and say so.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (332, 56, 'Local builds: record the start test', 'work', 'open', NULL, NULL, 'Part 4 of plan 56. Decision 39 is answered: start test skipped (Steam only, decision 111); nothing to wait for.
 
-- Fill the tables in `plans/18-steam-integration.md` "Local build start test" (date, build commit) from the answer.
-- Pass → SW-5 `[x]` in plan 18 with date and files; `plans/project.md`.
-- Issues → per failing row a task in plan 56 (or plan 54/55 if it''s theirs) with the row and how to reproduce; then a re-test decision with the failed rows, `pm task-pending-decision` this task on it; stage and stop without closing.
+- `plans/18-steam-integration.md` "Local build start test": replace the tables'' result column with «skipped, decision 39 (Steam only, decision 111); covered by the Steam beta test (task 263)», date 2026-10-13, build commit 06c39dc. No Windows / non-Nix Linux rows to fill.
+- SW-5 `[x]` in plan 18 with date, files and «start test outside Steam skipped (decision 39)»; drop "offline start test on a clean Windows machine" from SW-5''s line.
+- `plans/project.md` to match.
+- No follow-up tasks, no re-test decision.
 
-Done when: tables filled and SW-5 `[x]`, or follow-up tasks and the re-test decision exist.', '2026-10-12T03:48:58Z', NULL, 323);
+Done when: the section records the start test as skipped (not failed), SW-5 `[x]`, `plans/project.md` matches.', '2026-10-12T03:48:58Z', NULL, 323);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (333, 56, 'Local builds: CI (SW-6) per decision 14', 'work', 'done', NULL, '2026-10-12, AGENTS.md, plans/18-steam-integration.md, plans/11-steam.md, plans/decisions.md (D-73), plans/backlog.md (B-11), plans/project.md; task 261 body: release check owner', 'Part 5 of plan 56. Waits for decision 14 "CI builds (SW-6): in S3 or S5, and with or without media?". Options 2 and 3 also need task 329 done.
 
 - "Move SW-6 to S5" → SW-6 note in `plans/18-steam-integration.md` («moved to S5, decision 14»); `plans/11-steam.md` S3 row SW-1..SW-5, S5 row gains SW-6; line in plan 56''s decision entry in `plans/decisions.md`; `plans/project.md`. No code.
@@ -14711,8 +14712,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:16:20Z', NULL, 758);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (760, 48, 'create tasks for plan 48', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 238, 236, 237 bodies brought in line with revised plan 48 (decision 111 rows removed, family check on trivia-desktop, plans 54-56/99 named, SW-6 stays S5)', 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:17:19Z', '2026-10-13T15:18:06Z', 756);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (761, 56, 'create tasks for plan 56', 'split', 'open', 1000, NULL, 'Split plan 56 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:18:35Z', NULL, 757);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (761, 56, 'create tasks for plan 56', 'split', 'done', 1000, '2026-10-13, task 332 brought in line with plan 56 task 4 (decision 39: skipped); no new tasks or decisions', 'Split plan 56 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:18:35Z', '2026-10-13T15:18:54Z', 757);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16606,6 +16607,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (663, 756, '2026-10-13T15:16:35Z', '2026-10-13T15:17:29Z', 'done', NULL, 0, 'aee14afe7d7c3062a3699f16eabec20aeae7f8e3', 'claude-opus-5-5[1m]', 'c6d78c0a-5809-4521-920c-924d3b6a7d5f', 6, 12, 5324, 220044, 40312, 0.4730328, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (664, 760, '2026-10-13T15:17:29Z', '2026-10-13T15:18:15Z', 'done', NULL, 0, '88e8357da7d6411dd9ed7b353441ce15045bd94c', 'claude-opus-5-5[1m]', '03dfbdcc-8043-4cdd-921e-62b187a177ac', 8, 16, 4735, 255678, 31218, 0.3956436, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (665, 757, '2026-10-13T15:18:15Z', '2026-10-13T15:18:43Z', 'done', NULL, 0, 'dfe21d19ef9452c261d0ce18ad38ad86d545e79a', 'claude-opus-5-5[1m]', 'bd9f7c1f-64ad-4736-b2d7-1275700ba128', 6, 12, 2206, 220834, 34361, 0.36322279999999996, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (666, 761, '2026-10-13T15:18:43Z', '2026-10-13T15:19:00Z', 'done', NULL, 0, 'a7b5e0ac60e14b3f3996855317e2d1b9e67177bf', 'claude-opus-5-5[1m]', 'f0554183-d6a6-4a14-a15d-a87bc8b7ee49', 3, 6, 910, 78463, 27695, 0.2554766, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
