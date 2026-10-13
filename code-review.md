@@ -73,6 +73,148 @@ for t in sorted(ticks):
 | `authoring/ui/src/stats/Stats.svelte` | header comment broken ("… approved questions only. / and media (RV-23).") | practice | low | fixed (task 525) |
 | `app/client/src/app.css`, `authoring/ui/src/app.css` | identical 27-line colour token files | complexity | low | handed to part 10 |
 
+### Unused TS/JS code and npm dependencies
+
+Task 526, 2026-10-13, run from the repo root. Throw-away scripts in `/tmp` (deleted after; reproduced below). Both `tsconfig.json`s already set `noUnusedLocals`/`noUnusedParameters` (task 616), so `tsc` finds nothing; the unused-export, unused-prop and dependency scans are the new part.
+
+- `tsc` (`.ts` only), each flag alone and both together (zsh: one argument per flag):
+  - `npx tsc --noEmit --noUnusedLocals true --noUnusedParameters false -p app/client`: 0; `… false … true`: 0; both `true`: 0
+  - same three for `-p authoring/ui` (also type-checks `app/client/src`): 0, 0, 0
+  - tests included (temp `app/client/tsconfig.tmp526.json`: `{"extends": "./tsconfig.json", "include": ["src/**/*.ts"], "exclude": []}`, deleted after): 0 `TS6133`/`TS6196`/`TS6198`; 26 other errors (missing Node types, `findLast` lib, possibly-null), already `task 586` (plan 82 task 7: tests outside the `tsconfig`s)
+- `svelte-check` (flags come from the `tsconfig`; it reports them in `.svelte` script blocks, task 616 probe): `cd app/client && npx svelte-check --tsconfig ./tsconfig.json --output machine`: 204 files, 0 errors, 0 warnings; `authoring/ui`: 171 files, 0, 0
+- Linter evidence (part 10): `noUnusedLocals` 0 + 0, `noUnusedParameters` 0 + 0 (`app/client` + `authoring/ui`); no flag or `svelte-check` sees unused exports or props
+- Exported names (`python3 exports.py`): 116 files, 416 exports; 5 `DEAD`, 7 `TESTONLY`, 50 `LOCAL` raw, checked by hand:
+  - false positives: `game.CHOICE_KEYS`/`playerChoice`/`setJokers`/`MODES`/`cleanName`, `engine.getGame`/`getPlayers`, `selection.inRange`/`assign` (namespace imports), `pseudo` (dynamic `import("../locales/xx")`), `afterPack` (`electron-builder.yml`), `PlayerRow` and `defaultChoice` (used in their own file too)
+  - real: 2 exports used only by tests, 47 exported but used only in their own file (rows below); no dead export in shipped code
+- Svelte props (`python3 props.py`): 36 components with `$props()`, 152 props: none never passed by any caller (only `{...spread}` would hide one; none); 14 props with a default that every caller passes anyway, not a finding
+- Unreferenced files (no other tracked file names the basename, `.json`/`.md` aside): `check-literals.mjs` (npm script, row below), `vite-env.d.ts` (ambient types), `after-pack.mjs` (`electron-builder.yml`)
+- npm deps: bare imports `git ls-files | grep -E '\.(ts|svelte|mjs|cjs|js)$' | grep -v fixtures | xargs grep -hoE "(from |import\(|require\()\s*['\"][^'\"./][^'\"]*['\"]"` plus `git grep` in scripts, `flake.nix`, `electron-builder.yml`:
+  - `package.json` (root): no deps
+  - `app/client`, `authoring/ui` (same 6 devDeps): `svelte`, `vite`, `@sveltejs/vite-plugin-svelte` imported; `@tsconfig/svelte` via `tsconfig.json` `extends`; `svelte-check` via `check`; `typescript` peer of `svelte-check`, `npx tsc`
+  - `app/desktop`: `electron` (`main.mjs`, `preload.cjs`), `steamworks-ffi-node` (`main.mjs` dynamic import, `credits.ts`), `electron-builder` (`dist` scripts, `trivia-desktop-build`)
+  - `authoring/tools`: no deps; its `.ts`/`.mjs` (and `authoring/steam`, `authoring/store` `.mjs`) import only `node:*` and relative paths
+  - undeclared: none (`$app/*` is the `authoring/ui` path alias); `npm ls --depth=0` clean in the root and `app/desktop`; no `extraneous` entry in either lockfile (77 and 316 packages)
+
+```python
+# exports.py: exported names nobody else names
+import re, subprocess
+files = [f for f in subprocess.run(['git','ls-files'], capture_output=True, text=True).stdout.split()
+         if re.search(r'\.(ts|svelte|mjs|cjs|js)$', f) and 'engine/fixtures' not in f]
+src = {f: open(f).read() for f in files}
+other = {}
+for f in subprocess.run(['git','ls-files'], capture_output=True, text=True).stdout.split():
+    if f not in src and re.search(r'\.(py|html|nix|json|yml)$', f) and 'data/' not in f and 'fixtures' not in f:
+        other[f] = open(f).read()
+decl = re.compile(r'^\s*export\s+(?:default\s+)?(?:declare\s+)?(?:async\s+)?(?:function\*?|const|let|var|class|type|interface|enum)\s+([A-Za-z_$][\w$]*)', re.M)
+lst = re.compile(r'^\s*export\s*(?:type\s*)?\{([^}]*)\}(?!\s*from)', re.M)
+def strip(t):
+    t = re.sub(r'/\*.*?\*/', '', t, flags=re.S); return re.sub(r'(?<![:\'"])//[^\n]*', '', t)
+clean = {f: strip(t) for f, t in src.items()}
+for f in files:
+    names = decl.findall(src[f])
+    for m in lst.findall(src[f]):
+        names += [x.split(' as ')[-1].strip() for x in m.split(',') if x.strip()]
+    if f.endswith('.cjs'): names += re.findall(r'module\.exports\.(\w+)', src[f])
+    for n in names:
+        w = re.compile(r'(?<![\w$.])' + re.escape(n) + r'(?![\w$])')
+        users = [g for g in files if g != f and w.search(clean[g])]
+        own = len(w.findall(clean[f]))
+        prod = [g for g in users if not re.search(r'\.test\.ts$|engine/test/', g)]
+        ext = [g for g in other if w.search(other[g])]
+        if not users:
+            print(('DEAD ' if own <= 1 else 'LOCAL'), f, n, 'own=%d' % own, 'other=' + ','.join(ext) if ext else '')
+        elif not prod and not re.search(r'\.test\.ts$|engine/test/', f):
+            print('TESTONLY', f, n, ','.join(users))
+# then by hand: git grep -n "<ns>\.<name>" for every `import * as <ns>` of the reported module
+```
+
+```python
+# props.py: $props() names never passed by any <Component …> of an importing file
+import re, subprocess, os
+files = [f for f in subprocess.run(['git','ls-files'], capture_output=True, text=True).stdout.split() if re.search(r'\.(svelte|ts)$', f)]
+src = {f: open(f).read() for f in files}
+def tags(text, name):  # attribute text of every <Name …>, braces balanced
+    i = 0
+    while (i := text.find('<' + name, i)) >= 0:
+        j = i + len(name) + 1
+        if j < len(text) and (text[j].isalnum() or text[j] in '_.'): i = j; continue
+        d = 0; k = j
+        while k < len(text):
+            c = text[k]
+            if c == '{': d += 1
+            elif c == '}': d -= 1
+            elif c == '>' and d == 0: break
+            k += 1
+        yield text[j:k]; i = k
+def attrs(t):  # attribute names: a=…, bare a, {a}, bind:a
+    out, d, cur, q, prev = set(), 0, '', None, ''
+    for c in t:
+        p, prev = prev, (c if not c.isspace() else prev)
+        if q:
+            if c == q: q = None
+            continue
+        if d == 0 and c in '"\'': q = c; continue
+        if c == '{':
+            if d == 0 and cur == '' and p != '=': cur = '{'
+            d += 1; continue
+        if c == '}':
+            d -= 1
+            if d == 0 and cur.startswith('{'): out.add(cur[1:].strip()); cur = ''
+            continue
+        if d:
+            if cur.startswith('{'): cur += c
+            continue
+        if c.isspace() or c in '=/':
+            if cur: out.add(cur.split(':')[-1]); cur = ''
+        else: cur += c
+    if cur: out.add(cur.split(':')[-1])
+    return out
+for f in files:
+    if not f.endswith('.svelte') or (i := src[f].find('$props()')) < 0: continue
+    st = src[f].rfind('let {', 0, i); d = 0; k = st + 4
+    while True:
+        c = src[f][k]
+        if c == '{': d += 1
+        elif c == '}':
+            d -= 1
+            if d == 0: break
+        k += 1
+    body = re.sub(r'//[^\n]*', '', re.sub(r'/\*.*?\*/', '', src[f][st + 5:k], flags=re.S))
+    props, d, cur = [], 0, ''
+    for c in body:
+        if c in '({[': d += 1
+        if c in ')}]': d -= 1
+        if c == ',' and d == 0: props.append(cur); cur = ''
+        else: cur += c
+    props.append(cur)
+    names = [(re.match(r'([\w$]+)', p.strip()).group(1), '=' in p) for p in props if p.strip() and not p.strip().startswith('...')]
+    comp = os.path.basename(f)[:-7]
+    callers = [g for g in files if g != f and re.search(r'import\s+' + comp + r'\b', src[g])]
+    uses = [t for g in callers for t in tags(src[g], comp)]
+    if not uses: print('NOUSE', f); continue
+    if any('{...' in t for t in uses): print('SPREAD', f); continue
+    for n, dflt in names:
+        hit = sum(1 for t in uses if n in attrs(t))
+        if hit == 0 and n != 'children': print('NEVER', f, n, 'default' if dflt else 'NO-DEFAULT', len(uses))
+        elif hit == len(uses) and dflt: print('ALWAYS', f, n, len(uses))
+```
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/tsconfig.json`, `authoring/ui/tsconfig.json` (all `.ts`/`.svelte` they include) | no findings: 0 `noUnusedLocals`, 0 `noUnusedParameters` (lint: noUnusedLocals, noUnusedParameters) | — | — | — |
+| `app/client/src/engine/pool.ts` | `bundleOf` exported, used only by `pool.test.ts`: dead in the shipped engine (lint: none, unused export) | unused | low | handed to part 3 |
+| `app/client/src/engine/store.ts` | `MemoryStore` exported, used only by `save.test.ts`: test helper in a shipped module, belongs in `engine/test/` (lint: none, unused export) | unused | low | handed to part 3 |
+| `app/client/src/engine/` (`game.ts`, `outlook.ts`, `pool.ts`, `selection.ts`, `state.ts`, `test/tape.ts`) | 23 exports used only in their own file: `game.ts` `JOKERS`, `gameMode`, `ChoiceInput`, `cardsOf`, `mediaAllowed`, `availableNow`, `ChoiceArgs`, `leaveQuestion`, `dropCurrent`, `backToSelect`, `laterFill`, `categoryCandidates`, `JokerArgs`; `outlook.ts` `seenPerLevel`, `OutlookChoice`; `pool.ts` `levelWeights`; `selection.ts` `CategoryKey`, `SupplyLevel`, `DrawOptions`; `state.ts` `SeenRow`, `HistoryEntry`, `LastAnswer`; `test/tape.ts` `TapeRng`: drop `export` unless meant as API (lint: none, unused export) | unused | low | handed to part 3 |
+| `app/client/src/lib/`, `app/client/src/locales/xx.ts` | 10 exports used only in their own file: `build.ts` `BuildInfo`; `desktop.ts` `SteamBridge`, `TextFieldRect`; `engine.ts` `localIsoSeconds`, `Route`; `focus.ts` `Rect`; `gamepad.ts` `Pad`; `input.svelte.ts` `Device`, `toIntent`; `xx.ts` `pseudoText` (lint: none, unused export) | unused | low | handed to part 4 |
+| `app/client/scripts/check-literals.mjs` | `npm run check:literals -w app/client` fails (exit 1): 8 Spanish literals in the dev-only `game/EffectsDemo.svelte` (lines 27–41); the check runs in no pre-commit step (not in `check`/`test`, D-73), so it drifts unseen | inconsistency | low | handed to part 4 |
+| `app/client/src/game/` (`Choice.svelte`, `Fireworks.svelte`, `Stage.svelte`, `letters.ts`) | 4 exports used only in their own file: `bundleKeys`, `FireworksMode`, `StageMood`, `MAX_NAME` (lint: none, unused export) | unused | low | handed to part 5 |
+| `app/desktop/resolve.mjs` | `mimeOf` exported, used only inside `resolve.mjs` (lint: none, unused export) | unused | low | handed to part 6 |
+| `authoring/tools/sim/load.ts`, `authoring/tools/sim/simulate.ts` | `DATA_DIR`, `TYPICAL_P`, `MAX_GAMES` exported, used only in their own file (lint: none, unused export) | unused | low | handed to part 8 |
+| `authoring/ui/src/lib/types.ts`, `authoring/ui/src/stats/breakdown.ts` | `Revision`, `Quality`, `Reviewer`, `SourceText`, `SubRow` exported, used only in their own file (lint: none, unused export) | unused | low | handed to part 9 |
+| `app/client/credits.ts` | `buildCredits` exported, used only inside `credits.ts` (lint: none, unused export) | unused | low | handed to part 10 |
+| `package.json`, `app/client/package.json`, `app/desktop/package.json`, `authoring/tools/package.json`, `authoring/ui/package.json` | no findings: every dependency used, none undeclared, no extraneous lockfile entry | — | — | — |
+| Svelte components (36 with `$props()`) | no findings: every prop passed by at least one caller | — | — | — |
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.
