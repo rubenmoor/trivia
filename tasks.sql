@@ -12772,7 +12772,7 @@ Options per part
 - Burns: input doesn''t change burns (co-op = 1× solo).
 
 Shell needs (plan 34): (a) nothing beyond the Gamepad API; (b) nothing; (c) LAN server + firewall prompt in Electron main.', 'Gamepads (one per player), keyboard and mouse; no phones. Plus a shared keyboard: every player has one dedicated key; pressing it gives that player keyboard and mouse until their turn is done. Timed competitive: everyone answers at once, each with their own input.', NULL, '2026-10-12T04:44:02Z', '2026-10-12T16:32:59Z', 201, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (25, 'Family test night on the TS engine', 'pending', '["test night played fine", "problems (listed in the answer)"]', 'The game now runs its referee in the browser (TypeScript engine, plan 50, D-69). Before the Python game routes are deleted (plan 51), please play one family test night on it.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (25, 'Family test night on the TS engine', 'answered', '["test night played fine", "problems (listed in the answer)"]', 'The game now runs its referee in the browser (TypeScript engine, plan 50, D-69). Before the Python game routes are deleted (plan 51), please play one family test night on it.
 
 What changes for you:
 - First `trivia` start after pulling migrates the save: `state/game.sqlite` (+ `state/flags.json`) → `state/game.json`. The terminal prints a migration line. `game.sqlite` and `flags.json` stay as backups; from then on only `game.json` is written.
@@ -12789,7 +12789,7 @@ Checklist:
 - [ ] Flag a question, see it in `trivia-authoring`
 - [ ] Delete a (test) player
 
-Answer "problems" with one line per problem.', NULL, NULL, '2026-10-12T04:50:41Z', NULL, 299, NULL, 'rule', NULL, '');
+Answer "problems" with one line per problem.', 'test night played fine', NULL, '2026-10-12T04:50:41Z', '2026-10-13T02:49:20Z', 299, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (26, 'Launch languages (OQ-31): which languages at Steam launch, and which comes first after?', 'answered', '["Spanish only at launch; English named as the first post-launch language (plan 24 stays as later work)", "Spanish only; no later language planned (plan 24 to be dropped by the gamemaster)", "Spanish + English at launch (plan 24 and QT-6 become S4 work)", "Spanish + English + more at launch (name them)"]', 'Plan 37, I18N-1. Today: everything Spanish (D-6); the pipeline, review and family checks are Spanish. Also decides whether plan 24''s `en` catalog is launch or later work.
 
 Facts
