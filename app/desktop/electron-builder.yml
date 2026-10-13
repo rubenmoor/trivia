@@ -18,6 +18,9 @@ extraResources:
     to: data
   - from: build/media
     to: media
+extraFiles:
+  - from: ../client/dist/CREDITS.md
+    to: CREDITS.md
 npmRebuild: false
 # Pinned (from v43.7.7's SHASUMS256.txt): cached zips verify offline; update with electron's version.
 electronDownload:
