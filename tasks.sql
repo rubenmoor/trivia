@@ -415,6 +415,9 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
   - privacy policy on the store page (what is sent, what is kept, for how long)
   - gamemaster setup: Cloudflare account, domain, publisher Web API key (needs the Steamworks account, decision 67)
 
+## Constraints
+- Launch waits for milestone 15: Modding and Steam Workshop.
+
 ## Out of scope
 - Competitive mode, couch co-op, more regions and languages (later).
 
