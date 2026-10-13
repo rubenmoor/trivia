@@ -30,9 +30,10 @@ function which(cmd) {
   throw new Error(`${cmd} not found: run from the dev shell`);
 }
 
-/** The first question per media type in the shipped pool; their media files. */
-function pickQuestions() {
-  const pool = JSON.parse(readFileSync(path.join(DIR, "resources", "data", "pool.json"), "utf8"));
+/** The first question per media type in the shipped pool of `locale` (as data.ts poolFile); their media files. */
+function pickQuestions(locale) {
+  const file = locale === "es" ? "pool.json" : `pool.${locale}.json`;
+  const pool = JSON.parse(readFileSync(path.join(DIR, "resources", "data", file), "utf8"));
   return TYPES.map((type) => {
     const q = pool.questions.find((x) => x.media?.type === type && x.media.file_url);
     if (!q) throw new Error(`no ${type} question in the pool`);
@@ -127,8 +128,7 @@ async function playLevel(level, { type, q }) {
 
 async function main() {
   if (!existsSync(path.join(DIR, "trivia-bin"))) throw new Error(`${DIR}: no unpacked Linux build (trivia-desktop-build --dir)`);
-  const picks = pickQuestions();
-  for (const p of picks) console.log(`  ${p.type}: ${p.q.id} ${p.files.join(" ")}`);
+  pickQuestions("es"); // fail early on a pool without media questions
 
   // Not /tmp: steam-run's sandbox has its own.
   await mkdir(path.join(REPO, "work"), { recursive: true });
@@ -161,6 +161,10 @@ async function main() {
     await h.click('[data-focus-id="group-young_teens"]');
     await h.click('[data-focus-id="start"]');
     await h.click(".level .hint");
+    // The questions language picked on the first screen (engine default es).
+    const locale = (await saved((s) => s.games?.length, "new game")).language?.questions ?? "es";
+    const picks = pickQuestions(locale);
+    for (const p of picks) console.log(`  ${locale} ${p.type}: ${p.q.id} ${p.files.join(" ")}`);
     for (const [i, p] of picks.entries()) await playLevel(i + 1, p);
 
     at("quit");
