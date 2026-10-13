@@ -152,6 +152,8 @@ trivia-steam upload --branch beta --preview      # SteamCMD builds the manifests
 trivia-steam upload --branch beta --dry-run      # no SteamCMD, no tag needed; VDFs only
 ```
 
+New version: edit `version` in `app/desktop/package.json` (the only place), commit, then `git tag v<version>`.
+
 Account: `TRIVIA_STEAM_ACCOUNT` or a prompt; password and Steam Guard code are typed into SteamCMD only (cached in `~/.local/share/trivia/steamcmd`). `--skip`, `--manual` go to the release check. Prints the BuildID; VDFs, `steamcmd.log` and SteamCMD's `output/` in `work/steam/<tag>/`.
 
 Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.

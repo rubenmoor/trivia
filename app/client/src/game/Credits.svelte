@@ -14,12 +14,14 @@
 <script lang="ts">
   // Credits (PUB-5, plan 47): credits.json from the build, over the overlay. Read-only, no focusable
   // rows: ↑/↓ scroll ~70 %, ←/→ jump between sections, Esc/⌫ go back.
+  import { buildInfo } from "../lib/build";
   import { t } from "../lib/i18n";
   import { focusControl, pushScope, type Action } from "../lib/input.svelte";
   import Prompt from "./Prompt.svelte";
 
   let { onclose }: { onclose: () => void } = $props();
 
+  const build = buildInfo();
   let credits = $state<Credits | null>(null);
   let failed = $state(false);
   let scroller = $state<HTMLDivElement>();
@@ -66,6 +68,7 @@
 <div class="credits" bind:this={panel}>
   <header>
     <h2>{t("credits.title")}</h2>
+    <p class="build">{[t("credits.version", { version: build.version }), build.pool && t("credits.pool", { pool: build.pool })].filter(Boolean).join(" · ")}</p>
     <p class="keys">
       {t("credits.scroll")} <Prompt action={{ type: "navigate", dir: "up" }} /> <Prompt action={{ type: "navigate", dir: "down" }} />
       · {t("credits.jump")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} />
@@ -147,6 +150,11 @@
     font-family: var(--font-display);
     font-size: calc(2.6 * var(--u));
     font-weight: 800;
+  }
+  .build {
+    font-size: calc(1.1 * var(--u));
+    color: var(--slate-400);
+    font-variant-numeric: tabular-nums;
   }
   .keys {
     flex: 1;

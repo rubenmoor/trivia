@@ -25,6 +25,12 @@ export function parsePool(json: unknown): PoolQuestion[] {
   return doc.questions as PoolQuestion[];
 }
 
+/** The pool's export hash (D-92); absent in old pools → null. */
+export function poolHash(json: unknown): string | null {
+  const hash = (json as { hash?: unknown } | null)?.hash;
+  return typeof hash === "string" ? hash : null;
+}
+
 /** An entry of app/data/bundles.json (D-39); `kind: "base"` marks a base bundle (plan 71). */
 export interface Bundle {
   id: string;

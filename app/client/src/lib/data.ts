@@ -1,5 +1,5 @@
 // The game data from /data/ (app/data/, served read-only by app/server/main.py; plan 50, PORT-7).
-import { loadCategories, parseAgeGroups, parseBundles, parsePool } from "../engine/pool.ts";
+import { loadCategories, parseAgeGroups, parseBundles, parsePool, poolHash } from "../engine/pool.ts";
 import { engineData, NO_NAMES, type EngineData, type Names } from "../engine/state.ts";
 import { call } from "./api.ts";
 
@@ -69,5 +69,5 @@ async function load(base: string, locale: string): Promise<EngineData> {
     parsed.map((b) => get(base, b.id === "base" ? `names.${locale}.json` : `bundles/${b.id}/names.${locale}.json`, true)),
   ));
   const byBundle = Object.fromEntries(parsed.flatMap((b, i) => (files[i] ? [[b.id, files[i]]] : [])));
-  return engineData(parsePool(pool), loadCategories(bundles, byBundle), parsed, parseAgeGroups(ageGroups), locale, names);
+  return engineData(parsePool(pool), loadCategories(bundles, byBundle), parsed, parseAgeGroups(ageGroups), locale, names, poolHash(pool));
 }

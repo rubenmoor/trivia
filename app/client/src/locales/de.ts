@@ -100,6 +100,8 @@ export const de = {
   credits: {
     open: "Mitwirkende",
     title: "Mitwirkende",
+    version: "Version {version}",
+    pool: "Fragen {pool}",
     loading: "Lädt…",
     failed: "Die Mitwirkenden konnten nicht geladen werden.",
     scroll: "Blättern",

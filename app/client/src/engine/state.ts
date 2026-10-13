@@ -227,6 +227,8 @@ export interface EngineData {
   /** Empty for es: the keys are the Spanish names. */
   names: Names;
   pool: PoolQuestion[];
+  /** pool.json's export hash (D-92), null if absent. */
+  poolHash: string | null;
   byId: Map<string, PoolQuestion>;
   categories: Category[];
   broad: Map<string, Category>;
@@ -239,10 +241,10 @@ export const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {},
 
 export function engineData(
   pool: PoolQuestion[], categories: Category[], bundles: Bundle[], ageGroups: AgeGroup[],
-  locale = "es", names: Names = NO_NAMES,
+  locale = "es", names: Names = NO_NAMES, poolHash: string | null = null,
 ): EngineData {
   return {
-    locale, names, pool, byId: byId(pool), categories, broad: broadOf(categories),
+    locale, names, pool, poolHash, byId: byId(pool), categories, broad: broadOf(categories),
     bundles, ageGroups, groupById: new Map(ageGroups.map((g) => [g.id, g])),
   };
 }

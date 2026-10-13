@@ -108,7 +108,7 @@
           # $XDG_DATA_HOME/trivia/ unless TRIVIA_STATE / TRIVIA_MEDIA say otherwise.
           app = pkgs.buildNpmPackage {
             pname = "trivia";
-            version = "0.1.0";
+            version = (builtins.fromJSON (builtins.readFile ./app/desktop/package.json)).version;  # D-91
             src = pkgs.lib.fileset.toSource {
               root = ./.;
               fileset = pkgs.lib.fileset.unions [ ./package.json ./package-lock.json ./app ./authoring/ui/package.json ];

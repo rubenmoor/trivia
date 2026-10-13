@@ -100,6 +100,8 @@ export const en = {
   credits: {
     open: "Credits",
     title: "Credits",
+    version: "Version {version}",
+    pool: "questions {pool}",
     loading: "Loading…",
     failed: "Couldn't load the credits.",
     scroll: "Scroll",

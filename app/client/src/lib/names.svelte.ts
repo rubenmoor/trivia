@@ -13,6 +13,11 @@ export function questionLocale(): string {
   return data?.locale ?? "es";
 }
 
+/** The export hash of that pool (D-92). */
+export function poolHash(): string | null {
+  return data?.poolHash ?? null;
+}
+
 /** The locale's name; fallback the Spanish key / categories.json / bundles.json name.
  * Keys: category slug, Spanish subcategory name, bundle id. */
 export function displayName(kind: "category" | "subcategory" | "bundle", key: string): string {

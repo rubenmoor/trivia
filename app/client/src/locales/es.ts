@@ -117,6 +117,9 @@ const es = {
   credits: {
     open: "Créditos",
     title: "Créditos",
+    /** Header line (plan 91): game version, pool export hash. */
+    version: "Versión {version}",
+    pool: "preguntas {pool}",
     loading: "Cargando…",
     failed: "No se pudieron cargar los créditos.",
     scroll: "Desplazar",

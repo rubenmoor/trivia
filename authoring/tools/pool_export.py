@@ -1,5 +1,6 @@
 """The game's pool (D-35): app/data/pool.json is generated from authoring/data/questions.json;
 app/data/pool.<locale>.json from it and authoring/data/questions.<locale>.json (D-81)."""
+import hashlib
 import json
 
 import layout
@@ -22,7 +23,10 @@ def play_entry(q):
 
 
 def pool_text(entries):
-    return json.dumps({"version": 1, "questions": entries}, ensure_ascii=False, indent=2) + "\n"
+    """hash: first 8 hex of sha256 over the questions as written (D-92)."""
+    questions = json.dumps(entries, ensure_ascii=False, indent=2)
+    digest = hashlib.sha256(questions.encode("utf-8")).hexdigest()[:8]
+    return json.dumps({"version": 1, "hash": digest, "questions": entries}, ensure_ascii=False, indent=2) + "\n"
 
 
 def export_text(pool):
