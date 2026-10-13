@@ -9432,7 +9432,7 @@ The authoring side still reads levels 1–10 from one range table; after plans 2
 - Not broken but young-teens-only or es-only (supply per group, bundle set or locale; shading every window): one line each in `plans/backlog.md`; link pm decision 5 (where the supply check lives) where it depends on it. Work on whatever decision 5 / plan 51 left in place.
 
 Done when: readers run without errors, no false text; the rest logged in `plans/backlog.md`; `npm run check`, `qgen validate` pass.', '2026-10-12T20:25:56Z', '2026-10-13T00:45:40Z', 476);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (478, 30, 'Pre-check and play-test decision for age groups and bundles', 'work', 'open', NULL, NULL, 'Plan 30, task 2 ("Play-test" section). Needs plans 27, 28, 71 and 29 done.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (478, 30, 'Pre-check and play-test decision for age groups and bundles', 'work', 'done', NULL, '2026-10-12, no files: pre-check passed (all runs), decision 50 raised, task 479 pending on it; script and temp data deleted', 'Plan 30, task 2 ("Play-test" section). Needs plans 27, 28, 71 and 29 done.
 
 1. Throw-away `node` script on the engine API, a fresh player per run:
    - real `app/data/pool.json` (`es`): each of the 4 age groups with the defaults (`base` + `colombia`), and `young_teens` with `["base"]` only; `newGame` with the choice, play 12 levels to the end (answer right, use each joker once where allowed); every drawn question in the group''s level range and an active bundle; Cambiazo offers no `colombia` category when it''s off.
@@ -9450,7 +9450,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 5. `pm task-pending-decision <"Close out AG-7 and BN-6" task of plan 30> <decision id>`.
 6. Delete the script and temp data (keep throw-away en/de data only if the checklist needs it, and say where and how to remove it).
 
-Done when: the decision exists with the table and checklist, the close-out task waits on it, script and temp data deleted.', '2026-10-12T20:25:56Z', NULL, 476);
+Done when: the decision exists with the table and checklist, the close-out task waits on it, script and temp data deleted.', '2026-10-12T20:25:56Z', '2026-10-13T00:47:50Z', 476);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (479, 30, 'Close out AG-7 and BN-6', 'work', 'open', NULL, NULL, 'Plan 30, task 3 ("Close-out docs" section). Waits on the play-test decision raised by the pre-check task.
 
 If the answer is "problems": add one fix task per problem to plan 71 (engine/data/validate), 29 (screen) or 27 (older engine parts), raise the play-test decision again (same body, updated), make this task pending on the new one, stage, stop.
@@ -13177,6 +13177,43 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (47, 'Replace the files on the licence list', 'pending', '["done"]', 'Open /review?licence=replace in trivia-authoring and pick a new file per listed slot until the queue is empty, then answer done.', NULL, NULL, '2026-10-12T23:33:15Z', NULL, 312, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (48, 'Where age-group names per locale live', 'answered', '[]', 'The groups follow the game''s question locale like the bundle names already do (data.names, read in fetchChoiceOptions / fetchGameChoice), not the UI language; one place for every play-data display name (D-81), checked by qgen validate like bundles. es reads age-groups.json''s name.', 'names.<locale>.json → age_groups (base''s names file only), keyed by group id; fallback age-groups.json name', NULL, '2026-10-13T00:05:57Z', '2026-10-13T00:05:57Z', 619, NULL, 'rule', 619, '2026-10-13, task 619: 2026-10-12, task 619: Names.age_groups (state.ts, data.ts mergeNames, categories.load_names); fetchChoiceOptions / fetchGameChoice read it, fallback age-groups.json name; names.en/de.json age_groups; qgen validate: unknown keys error, age_groups only in base''s file, missing counted in the names warning; D-81 and directory.md note it');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (49, 'credits.json carries no UI text', 'answered', '[]', 'Plan 47 put Spanish literals into the generated data, but the UI has locale catalogs (D-70); data stays locale-neutral so the screen (task 233) translates. Task 232.', 'Unknown author is null, controller glyphs a boolean; the Credits screen shows its own t() strings («Autor desconocido», «originales, dibujados para el juego»); CREDITS.md uses English', NULL, '2026-10-13T00:10:14Z', '2026-10-13T00:10:14Z', 232, NULL, 'rule', 232, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (50, 'Play-test of age groups and bundles', 'pending', '["all sessions played fine", "problems (listed in the answer)"]', 'Plan 30 (milestone 5): please play-test age groups and bundles in the browser, then answer.
+
+## Agent pre-check (task 478, 2026-10-12)
+Throw-away node script on the engine API (`api.gameAction`, `loadEngineData`), fresh player per run; each session: 12 levels answered right, every joker used once (Soplo, Bájale, Cambiazo, Francotirador miss, Paso); checked every card and question on screen: in the group''s level range (Bájale''s swap may go below, by design, plan 09) and in an active bundle; Cambiazo offers only active bundles'' categories.
+
+| Run | Result |
+|---|---|
+| es kids, base+colombia | won 12/12, 5 jokers, ranges/bundles ok, Cambiazo 34 categories |
+| es young_teens, base+colombia | won 12/12, ok, 34 categories |
+| es young_adults, base+colombia | won 12/12, ok, 34 categories |
+| es adults, base+colombia | won 12/12, ok, 34 categories |
+| es young_teens, base only | won 12/12, ok, Cambiazo 28 categories (no colombia) |
+| es no choice sent | won 12/12, ok |
+| es bundles [] | 409 base_bundle_count, save unchanged |
+| es bundles [colombia] | 409 base_bundle_count, save unchanged |
+| es temp data, 2nd kind: base bundle, [base, base2] | 409 base_bundle_count, save unchanged |
+| en / de bundlesFor | base |
+| en / de defaultChoice, fresh player''s choice | base / base |
+| en / de [base, colombia] | 409 bundle_not_offered, save unchanged |
+| en / de young_teens, defaults (throw-away pools) | won 12/12, ok, 28 categories |
+| npm test / check / build | pass (156 tests) / 0 errors / built |
+| qgen validate | OK, 1211 questions, 27 warnings (axes, media cache) |
+
+No failures, so no fix tasks.
+
+## Checklist (`trivia`, :8000)
+- One session per age group (Niños, Adolescentes, Jóvenes, Adultos); the choice screen by mouse and at least once by keyboard only (IN-1).
+- One session with `colombia` off.
+- Defaults straight through with Enter: looks as before.
+- Básico shown as the selected base bundle (one of N, not a locked toggle); no «Siempre activo»; «¡A jugar!» can''t start without a base bundle (if the screen can''t reach that state: engine-only, covered above).
+- Question language `en` and `de` (Esc menu, language): the screen lists only `base`.
+  - No en/de pools ship yet; throw-away ones (base questions, Spanish text re-labelled):
+    `python3 -c "import json;d=json.load(open(''app/data/pool.json''));d[''questions'']=[q for q in d[''questions''] if q.get(''bundle'',''base'')==''base''];[json.dump(d,open(f''app/data/pool.{l}.json'',''w'')) for l in (''en'',''de'')]"`
+  - Remove afterwards (not gitignored, don''t commit them): `rm app/data/pool.en.json app/data/pool.de.json`, then set the language back to es.
+- Overlay shows group and bundles; undo and abandon keep the choice.
+
+Answer "problems": list each one; the close-out (task 479) turns them into fix tasks in plan 71, 29 or 27.', NULL, NULL, '2026-10-13T00:47:47Z', NULL, 478, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -13617,6 +13654,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (433, 445, '2026-10-13T00:41:09Z', '2026-10-13T00:43:23Z', 'done', NULL, 0, '68747258b49e72b3b4d8b4d33031ab8bf73a6585', 'claude-opus-5-5[1m]', 'ad9f803c-14a3-4aae-8f48-043d03cae504', 27, 52, 10435, 1492694, 61330, 0.99808679999999983, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (434, 429, '2026-10-13T00:43:23Z', '2026-10-13T00:44:17Z', 'done', NULL, 0, 'dc8570df0e5620e377f7d85a0865c02c20345d86', 'claude-opus-5-5[1m]', '95071d30-fc33-434f-98f6-b5a049e8a662', 12, 26, 5034, 434102, 33045, 0.4519644, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (435, 477, '2026-10-13T00:44:17Z', '2026-10-13T00:45:48Z', 'done', NULL, 0, '04abb6c2ed71821b0799168df5331f69134363d0', 'claude-opus-5-5[1m]', '6133c03d-3d36-4c23-8c6b-9d36b7c8b097', 19, 38, 5826, 807479, 43794, 0.6285198, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (436, 478, '2026-10-13T00:45:48Z', '2026-10-13T00:47:57Z', 'done', NULL, 0, 'e0397c5e7935921b860b1121bfc652853f89e0f8', 'claude-opus-5-5[1m]', '1a3db9f0-ab0f-4409-abbe-5ee78a91b103', 20, 40, 10561, 1080776, 61291, 0.91786319999999988, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -13715,5 +13753,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (439, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (440, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (441, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
+INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
