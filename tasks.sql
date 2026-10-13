@@ -14437,7 +14437,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: plan 18 "Builds and depots" (DLC depots), D-entry.
 
 Done when: `trivia-steam upload --dry-run` renders a DLC depot per launching pack with placeholder IDs, and the stage check passes.', '2026-10-13T15:01:28Z', NULL, 249);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (749, 98, 'RG-5 decision (OQ-46 folded in) and 15c marking', 'work', 'open', NULL, NULL, 'Plan 98 part 1. Docs + facts + one pm decision; no code changes.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (749, 98, 'RG-5 decision (OQ-46 folded in) and 15c marking', 'work', 'done', NULL, '2026-10-13, plans/15c-regional-questions.md (RG-1..RG-4 [x] with BN mapping), plans/22-bundles.md (Model: kind base, languages, exactly one base bundle); decision 110 with facts (colombia 102/109, 19 on base subcategories, cost, es simulation); tasks 750 and 643 pend on it', 'Plan 98 part 1. Docs + facts + one pm decision; no code changes.
 
 - `plans/15c-regional-questions.md`: RG-1..RG-4 `[x]` with the mapping (RG-1, RG-2 = BN-2, BN-3, D-39; RG-3 = BN-6 (plans 27, 29, 30) + plan 62''s `qgen report --simulate --bundles`; RG-4 = BN-11 `qgen batch --bundle`); status line stays "superseded by 22".
 - `plans/22-bundles.md` Model bullets in line with D-85 / decision 38: Base bundles and bundle languages (`kind: base`, `languages`; no `always_on`; "base is always on" → "exactly one base bundle").
@@ -14454,7 +14454,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - Options as whole-answer combos: "1) all recommended (a1 b1 c1 d1)" first, "2) other (write e.g. a2 mexico, b1, c1, d2)".
 - `pm task-pending-decision 750 <decision id>`; also `pm task-pending-decision 643 <decision id>` (plan 84''s "Regional pack runs per RG-5").
 
-Done when: 15c/22 edits staged, the decision exists with the facts, the record task and task 643 pend on it.', '2026-10-13T15:02:21Z', NULL, 747);
+Done when: 15c/22 edits staged, the decision exists with the facts, the record task and task 643 pend on it.', '2026-10-13T15:02:21Z', '2026-10-13T15:05:33Z', 747);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (750, 98, 'Record RG-5', 'work', 'open', NULL, NULL, 'Plan 98 part 2. Waits on the RG-5 decision from the plan''s task "RG-5 decision (OQ-46 folded in) and 15c marking". No answered RG-5 decision in `pm show` → pend on it if it exists (`pm task-pending-decision`), else stop and say so.
 
 - D-entry in `plans/decisions.md` (packs at launch, languages, default on/off, OQ-46); `plans/15c-regional-questions.md` RG-5 `[x]`; OQ-46 → "Resolved" in `plans/open-questions.md`; `plans/22-bundles.md` "Later"/BN notes; `plans/project.md` in sync.
@@ -15664,6 +15664,40 @@ Options
 2. Public code + current pool; release content in a private repo as a git submodule (e.g. `content/`). D-17 amended (pool public up to a cut-off). `qgen` and `qgen export` read/write the submodule; `nix build .#app` needs `?submodules=1` and access to the private repo, else builds with the public pool only; `trivia-desktop-build` and `trivia-release-check` need the submodule checked out. Two repos to commit, pm workers need access. Backlog row, S4/S5.
 3. Whole repo private before release. D-17 superseded; existing clones keep the current state. No build change. Ends public code: no outside contributors, modding docs must live elsewhere.', NULL, NULL, '2026-10-13T14:59:23Z', NULL, 198, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (109, 'Task 751 (packs as optional installs) done: can task 748 (DLC depots) run?', 'pending', '["task 751 done, run task 748", "packs dropped, drop task 748"]', 'task 748: DLC depots for packs needs task 751: Packs as optional installs (plan 98) done first: per-pack pool files under app/data/bundles/<id>/ and a per-pack media key list. pm has no task-to-task dependency, so task 748 waits on this decision. Answer once task 751 is done.', NULL, NULL, '2026-10-13T15:02:57Z', NULL, 748, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (110, 'Regional packs at launch (RG-5, OQ-46)', 'pending', '["1) all recommended (a1 b1 c1 d1)", "2) other (write e.g. a2 mexico, b1, c1, d2)"]', 'RG-5 (plans/15c-regional-questions.md) with OQ-46 folded in (plan 98, task 749). Which question packs (non-base bundles) the Steam release ships, in which languages, on by default or not, and where `colombia` questions sit in the taxonomy. Packs ship as free optional DLC (decision 66: Price model (OQ-33)); packs have no content target of their own (decision 37).
+
+Answer format: one letter-number per question, e.g. "a1 b1 c1 d1"; for a2 name the packs ("a2 mexico").
+
+## Facts (2026-10-13)
+- `colombia`: 102 approved / 109 total (7 rejected).
+- `colombia` questions on a `base` subcategory: 19, all approved. Historia 3, Piratas 2, Desiertos 2, Navidad 2, Mundiales de fútbol 2; one each: Aves, Cuentos infantiles, Literatura, Islas, Reciclaje, Árboles, Deportes extremos, Museos.
+  - Historia: q-0009 Grito de Independencia (año), q-0011 batalla de 1819, q-0107 país separado en 1903
+  - Piratas: q-0184 murallas (Cartagena), q-0580 fuerte NO en el Caribe colombiano
+  - Desiertos: q-0229 dunas de Taroa, q-0282 desierto colombiano (foto)
+  - Navidad: q-0256 gozos de la novena, q-0297 día de la Novena de Aguinaldos
+  - Mundiales de fútbol: q-0540 golazo de James, q-0541 Linda Caicedo
+  - q-0036 Aves (especies en Colombia), q-0111 Cuentos infantiles (El renacuajo paseador), q-0119 Literatura (María, Isaacs), q-0168 Islas (Gorgona), q-0265 Reciclaje (caneca colombiana), q-0272 Árboles (palma, foto), q-0378 Deportes extremos (municipio colombiano), q-0393 Museos (Balsa Muisca)
+- Cost (`qgen report --cost`, plan 70): drafting $0.26 per approved (batch-5..7) × (1 + overhead 0.70) ≈ $0.44 → a 100-question pack ≈ $26 direct, ≈ $44 with overhead. Translating 100: no measured rate yet (no tr-en-*/tr-de-* run merged); a translation pass (translate + rate + review, no drafting) should cost well under drafting, order $10–20 per 100 per language, to be measured by the first tr-* runs.
+- Simulation es, games until the first repeat (median strong/typical; 40 seeds, solo; information only):
+  - kids: base 7.5/11, base+colombia 8/10.5
+  - young_teens: base 10/17.5, base+colombia 10/17.5
+  - young_adults: base 10/25, base+colombia 10.5/22.5
+  - adults: base 10.5/19.5, base+colombia 11/22.5
+  - → `colombia` (102 questions vs. 1034 approved base) barely changes supply; it is flavour, not supply.
+
+## Questions (recommended option first)
+- (a) Packs at launch:
+  - a1: `colombia` only. It exists and is reviewed; new Spanish packs `mexico`/`argentina` after launch; en/de packs left to Workshop/modding (decision 66).
+  - a2: plus new packs before launch (name them). Each needs `qgen bundle new` + taxonomy approval + batches (≈ $44 per 100 approved).
+- (b) Languages of `colombia`:
+  - b1: es only. Its point is the Colombian connection and voice (decision 27: Spanish variety); es-ES players see it too.
+  - b2: also translated to en/de. Needs `qgen batch --translate --bundle`, re-rating for a Colombian-connected player.
+- (c) Default on:
+  - c1: off on the configure screen for every locale (decision 33, unchanged); the family''s save and old games keep D-85''s es default (base + colombia, D-59).
+  - c2: on for es.
+- (d) OQ-46: subcategories of `colombia` questions:
+  - d1: `colombia` questions use `colombia` subcategories. «Cambiazo» on «Historia» shouldn''t serve a Colombian question when a base category was picked; new subcategories e.g. «Historia de Colombia», «Fútbol colombiano», «Navidad en Colombia», the 19 above move there (qgen migration step, `validate` rule).
+  - d2: keep as is.', NULL, NULL, '2026-10-13T15:05:25Z', NULL, 749, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -16326,6 +16360,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (655, 249, '2026-10-13T14:59:37Z', '2026-10-13T15:01:39Z', 'done', NULL, 0, 'cf687de6b19fc97d61c393df73959e788806a523', 'claude-opus-5-5[1m]', 'e4be8b24-4cc4-4e3c-954f-bf4851ab4aa0', 17, 34, 10758, 1036504, 69192, 0.9761328, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (656, 747, '2026-10-13T15:01:39Z', '2026-10-13T15:02:33Z', 'done', NULL, 0, 'bdbe93318bd99991a6ba8ff0587cb7fcadc3e042', 'claude-opus-5-5[1m]', '7505c27a-cfcc-493d-b6e1-93ef1364759e', 7, 14, 5054, 242511, 33756, 0.4196862, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (657, 748, '2026-10-13T15:02:33Z', '2026-10-13T15:03:06Z', 'blocked', NULL, 0, '0a2dcb1b9c416da67430603ee29c4e56b6408e36', 'claude-opus-5-5[1m]', '693b520a-2530-4cd6-a99e-9747b5f182d7', 9, 20, 2421, 276852, 24726, 0.30167840000000007, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (658, 749, '2026-10-13T15:03:06Z', '2026-10-13T15:05:41Z', 'done', NULL, 0, 'f9eb7be45bfbe7d226aa76f9abf6bf13c0d45736', 'claude-opus-5-5[1m]', '1d1753e8-ebc3-41e8-bc21-73745182b127', 13, 24, 5955, 489856, 40968, 0.5449112, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -16470,6 +16505,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (459, 64);
 INSERT INTO task_decision (task_id, decision_id) VALUES (459, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
+INSERT INTO task_decision (task_id, decision_id) VALUES (643, 110);
 INSERT INTO task_decision (task_id, decision_id) VALUES (650, 68);
 INSERT INTO task_decision (task_id, decision_id) VALUES (652, 72);
 INSERT INTO task_decision (task_id, decision_id) VALUES (654, 73);
@@ -16527,6 +16563,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (741, 104);
 INSERT INTO task_decision (task_id, decision_id) VALUES (742, 105);
 INSERT INTO task_decision (task_id, decision_id) VALUES (744, 106);
 INSERT INTO task_decision (task_id, decision_id) VALUES (748, 109);
+INSERT INTO task_decision (task_id, decision_id) VALUES (750, 110);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');

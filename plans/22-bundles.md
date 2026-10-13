@@ -5,10 +5,10 @@
 A **bundle** is a named set of questions that players can switch on or off before a session. Bundles let players shape their game: a regional bundle for people with a connection to a country, thematic bundles (sports, …) for more of what they like. This replaces the `region` field planned in [15c](15c-regional-questions.md) (D-39).
 
 ## Model
-- Bundles are listed in `app/data/bundles.json` (it ships; the game offers the choice, BN-6): `id`, Spanish `name` and `description` for the game, `kind` (`base`, `region`, `theme`), `always_on`, and `rule`: one English sentence the pipeline uses to decide membership.
+- Bundles are listed in `app/data/bundles.json` (it ships; the game offers the choice, BN-6): `id`, Spanish `name` and `description` for the game, `kind` (`base`, `region`, `theme`), `languages` (locales the bundle is offered in, D-85), and `rule`: one English sentence the pipeline uses to decide membership.
 - **Every question is in exactly one bundle**: the field `bundle`, default `"base"`.
 - Bundles **add** questions; they don't own a topic. A sports question can be in `base`; a sports bundle later just adds many more. "¿Cuál es la capital de Colombia?" stays in `base`; only questions that need a real connection to Colombia go into `colombia`.
-- **`base`** is always on and can't be switched off.
+- **Exactly one base bundle** (`kind: base`) per session (D-85, decision 38); `base` is the first and today the only one. Non-base bundles are off by default on the configure screen (decision 33).
 - A session plays the questions of the active bundles. Difficulty, age groups (D-38) and burning (D-28) work as before inside that set.
 
 ## The first bundles
