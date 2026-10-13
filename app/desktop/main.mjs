@@ -59,6 +59,7 @@ if (app.isPackaged) app.setPath("userData", path.join(app.getPath("appData"), "t
 let win = null;
 let steam = null; // the binding, only while Steam is up
 let steamTimer = null;
+let steamInput = false;
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
 const saveFile = makeSaveFile(saveDir());
 let writing = Promise.resolve();
@@ -113,6 +114,8 @@ async function startSteam() {
     return;
   }
   Object.assign(console, { log, warn, error });
+  // Steam Input for the pads' real types only (glyphs); runCallbacks drives its frames.
+  steamInput = steam.input.init(false);
   steamTimer = setInterval(() => steam.runCallbacks(), 100);
   console.error(
     `trivia: steam available, app ${appId}, user ${steam.getStatus().steamId}, language ${steam.apps.getCurrentGameLanguage()}`,
@@ -122,6 +125,8 @@ async function startSteam() {
 function stopSteam() {
   if (!steam) return;
   clearInterval(steamTimer);
+  if (steamInput) steam.input.shutdown();
+  steamInput = false;
   steam.shutdown();
   steam = null;
 }
@@ -226,6 +231,13 @@ function bridge() {
     // 0: EFloatingGamepadTextInputMode.SingleLine
     return steam.utils.showFloatingGamepadTextInput(0, px(rect?.x), px(rect?.y), px(rect?.width), px(rect?.height));
   });
-  handle("steam:input-types", () => null);
+  // SteamInputType: PS4 5, PS3 12, PS5 13; everything else gets Xbox glyphs.
+  handle("steam:input-types", () =>
+    steamInput
+      ? steam.input
+          .getConnectedControllers()
+          .map((h) => ([5, 12, 13].includes(steam.input.getInputTypeForHandle(h)) ? "playstation" : "xbox"))
+      : null,
+  );
   handle("steam:set-presence", () => {});
 }

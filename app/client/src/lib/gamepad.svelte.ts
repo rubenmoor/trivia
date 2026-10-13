@@ -1,6 +1,7 @@
 // The gamepad source (plans/14-input.md, IN-4; plan 45): polls standard pads each frame while one
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
-import { BUTTONS, FRESH, HELD, step, styleOf, type PadState, type PadStyle } from "./gamepad";
+import { steam } from "./desktop";
+import { BUTTONS, FRESH, HELD, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad";
 import { dispatch, padMap } from "./input.svelte";
 
 /** The glyph set of the pad that acted last (IN-5). */
@@ -8,6 +9,12 @@ export const padStyle = $state({ current: "xbox" as PadStyle });
 
 const prev = new Map<number, PadState>();
 const warned = new Set<string>();
+/** Under Steam Input the pads' real types (plan 85); null → `Gamepad.id`. */
+let fromSteam: PadStyle | null = null;
+
+async function refreshSteam() {
+  if (steam?.available) fromSteam = steamStyle(await steam.inputTypes().catch(() => null));
+}
 
 function pads() {
   return navigator.getGamepads().filter((g): g is Gamepad => g !== null && g.mapping === "standard");
@@ -28,8 +35,9 @@ export function listenPads(first: () => void): () => void {
       const pad = { buttons: g.buttons.map((b) => b.pressed), axes: g.axes };
       const { next, actions } = step(prev.get(g.index) ?? FRESH, pad, padMap(BUTTONS));
       prev.set(g.index, next);
+      if (actions.length) void refreshSteam(); // Steam may list a new pad after Chromium does
       for (const intent of actions) {
-        padStyle.current = styleOf(g.id);
+        padStyle.current = fromSteam ?? styleOf(g.id);
         first();
         dispatch({ ...intent, device: "gamepad" });
       }
@@ -46,11 +54,13 @@ export function listenPads(first: () => void): () => void {
       warned.add(g.id);
       console.warn(`Gamepad without standard mapping, ignored: ${g.id}`);
     }
+    void refreshSteam();
     run();
   }
 
   function disconnected(e: GamepadEvent) {
     prev.delete(e.gamepad.index);
+    void refreshSteam();
     if (pads().length) return;
     cancelAnimationFrame(frame);
     frame = 0;
@@ -58,6 +68,7 @@ export function listenPads(first: () => void): () => void {
 
   window.addEventListener("gamepadconnected", connected);
   window.addEventListener("gamepaddisconnected", disconnected);
+  void refreshSteam();
   run();
   return () => {
     window.removeEventListener("gamepadconnected", connected);

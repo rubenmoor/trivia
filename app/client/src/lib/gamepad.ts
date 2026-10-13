@@ -64,7 +64,13 @@ export function padButton(intent: Intent, map: Record<number, Intent>): number |
   return hit ? Number(hit[0]) : null;
 }
 
-/** Glyph set from `Gamepad.id`; under Steam Input every pad is Xbox (per-device glyphs: S5). */
+/** Glyph set from `Gamepad.id`; under Steam Input every pad is Xbox, so Steam's types win (steamStyle). */
 export function styleOf(id: string): PadStyle {
   return /054c|playstation|dualshock|dualsense|wireless controller/i.test(id) ? "playstation" : "xbox";
+}
+
+/** Steam's pad types → one set: all PlayStation → playstation, mixed → xbox (per player: IN-6); none → null. */
+export function steamStyle(types: readonly PadStyle[] | null): PadStyle | null {
+  if (!types?.length) return null;
+  return types.every((t) => t === "playstation") ? "playstation" : "xbox";
 }
