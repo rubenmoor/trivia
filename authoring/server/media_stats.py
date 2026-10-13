@@ -35,8 +35,10 @@ def image_size(path):
                 marker = f.read(2)
                 if len(marker) < 2 or marker[0] != 0xFF:
                     return None
-                while marker[1] == 0xFF:  # fill bytes
+                while marker[1:] == b"\xff":  # fill bytes
                     marker = marker[:1] + f.read(1)
+                if len(marker) < 2:
+                    return None
                 length = struct.unpack(">H", f.read(2))[0]
                 if marker[1] in range(0xC0, 0xD0) and marker[1] not in (0xC4, 0xC8, 0xCC):
                     h, w = struct.unpack(">xHH", f.read(5))

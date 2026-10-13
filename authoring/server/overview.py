@@ -2,7 +2,7 @@
 (plans/08-review-tool.md, "Start page", RV-12). Computed fresh from the pool on every call."""
 from collections import Counter
 
-import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server importable)
+import layout  # authoring/tools/layout.py; makes app/server importable
 import batches  # authoring/tools/batches.py
 import media  # authoring/tools/media.py
 import media_cache  # app/server/media_cache.py

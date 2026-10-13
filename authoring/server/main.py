@@ -82,7 +82,7 @@ import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
-from qgen import PROBLEMS, is_major, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
+from qgen import PROBLEMS, audit_of, is_major, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 import targets  # noqa: E402  (authoring/tools/targets.py)
 import translations  # noqa: E402  (authoring/tools/translations.py)
@@ -154,7 +154,7 @@ def with_extras(q):
     found = media.load_candidates(q["id"])
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
-            "background_candidates": bg["candidates"] if bg else None, "audit": spot_checks.audit_of(q) or None,
+            "background_candidates": bg["candidates"] if bg else None, "audit": audit_of(q) or None,
             "licence": media.licence_of(q)}
 
 
@@ -236,7 +236,7 @@ def source_questions(query):
     if query.get("licence") == "replace":
         qs = [q for q in qs if media.to_replace(q)]
     if query.get("audit") == "flagged":
-        qs = [q for q in qs if (a := spot_checks.audit_of(q)) and is_major(a)]
+        qs = [q for q in qs if (a := audit_of(q)) and is_major(a)]
     return [with_extras(q) for q in qs]
 
 

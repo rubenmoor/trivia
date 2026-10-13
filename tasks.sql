@@ -12147,7 +12147,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `main.py` listed in `## Part 9`, every finding with a status; its part 1 rows with final status.
 - Checks pass; route responses identical before/after fixes (diff).', '2026-10-12T23:09:08Z', '2026-10-13T13:01:39Z', 521);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (574, 81, 'Review server helpers: overview.py, spot_checks.py, media_stats.py', 'work', 'open', NULL, NULL, 'Task 2 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (574, 81, 'Review server helpers: overview.py, spot_checks.py, media_stats.py', 'work', 'done', NULL, '2026-10-13, authoring/server/{overview,spot_checks,media_stats,main}.py, code-review.md', 'Task 2 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
 - Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -12176,7 +12176,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The three files listed in `## Part 9`, every finding with a status.
-- Checks pass; `/api/overview`, spot-check and media-stats responses identical before/after fixes (diff).', '2026-10-12T23:09:08Z', NULL, 521);
+- Checks pass; `/api/overview`, spot-check and media-stats responses identical before/after fixes (diff).', '2026-10-12T23:09:08Z', '2026-10-13T13:04:43Z', 521);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (575, 81, 'Review the review page: authoring/ui/src/review/Review.svelte', 'work', 'open', NULL, NULL, 'Task 3 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -14267,6 +14267,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `FlagList.svelte` «Copiar» text may show the language.
 - Docs: plans/08-review-tool.md (flags), plans/decisions.md if a D- rule changes, the docstring of `authoring/server/main.py`.
 - Check: a temp copy (`TRIVIA_STATE`, worktree), a save with an en flag → `trivia-authoring` start → `questions.en.json` entry needs_work, source unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T13:00:51Z', NULL, 573);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (737, 81, 'Start page: list unfinished qgen batch --translate runs', 'work', 'open', NULL, NULL, 'Follow-up of `task 574` (code review part 9), part 8 row "`batches.unfinished_runs` only `mode: batch`".
+
+## Problem
+- `authoring/tools/batches.py` `unfinished_runs` lists only `mode: batch` runs; an unfinished `tr-<locale>-<n>` run (resumed by `qgen batch --translate <locale>`, see `qgen.next_translate_run`) never shows on the authoring start page.
+- `authoring/server/overview.py` `build` → `"unfinished_runs"`; `authoring/ui/src/home/Home.svelte` (≈line 49) turns each into "unfinished batch X: resume it with `qgen batch`".
+
+## Do
+- Keep `batches.unfinished_runs` as is (`next_batch` relies on it).
+- In `overview.py`: also list unfinished `tr-*` runs (`run.json` without `done`, name `tr-<locale>-<n>`); keep `unfinished_runs` a `string[]` (or add a separate key; update `authoring/ui/src/lib/types.ts`).
+- `Home.svelte`: for a `tr-<locale>-*` run, text "unfinished translation run X" and command `qgen batch --translate <locale>`.
+- Check on a temp copy (`TRIVIA_WORK` with a fake unfinished `tr-en-1/run.json`), `curl /api/overview`; `npm run check`, `npm run build`; log the row in `## Part 9` of `code-review.md` as fixed.', '2026-10-13T13:03:54Z', NULL, 574);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16011,6 +16022,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (624, 571, '2026-10-13T12:48:35Z', '2026-10-13T12:51:35Z', 'done', NULL, 0, '8c8f167801d9720317cfeb31cfaed10b82db27ad', 'claude-opus-5-5[1m]', '90ce0885-54d6-4ed5-9aee-827385e1c630', 28, 52, 16240, 1664108, 72627, 1.2388456, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (625, 572, '2026-10-13T12:51:35Z', '2026-10-13T12:56:10Z', 'done', NULL, 0, 'e47186a579add1a30ea8f2b278661ed6281d5f18', 'claude-opus-5-5[1m]', 'd03caea5-d7da-4f1b-a9c6-5cc047c2a030', 41, 80, 23945, 3049649, 92179, 1.8265817999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (626, 573, '2026-10-13T12:56:10Z', '2026-10-13T13:01:49Z', 'done', NULL, 0, '49961e00acb99cdd6efa92af5bd8c4d03be6b16d', 'claude-opus-5-5[1m]', '313bf369-90cd-480f-a025-c225a792cc2c', 33, 62, 28440, 2458305, 97003, 1.8367330000000002, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (627, 574, '2026-10-13T13:01:49Z', '2026-10-13T13:04:51Z', 'done', NULL, 0, '031d070667783e781f0e756150fa5701dbe25e71', 'claude-opus-5-5[1m]', '3d5221f1-574d-42b8-9890-ad84bf1961a4', 22, 44, 13319, 1106305, 52666, 0.909145, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

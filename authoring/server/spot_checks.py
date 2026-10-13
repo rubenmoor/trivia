@@ -8,7 +8,7 @@ import targets  # authoring/tools/targets.py
 import translations  # authoring/tools/translations.py
 
 FILE = layout.SPOT_CHECKS
-DEFAULT_SIZE = 30  # pm decision 2, until targets.json has "quality"
+DEFAULT_SIZE = 30  # pm decision 2; without targets.json "quality"
 _lock = threading.Lock()
 
 
@@ -46,11 +46,6 @@ def save(data):
     tmp.replace(FILE)
 
 
-def audit_of(q):
-    """The audit of a question: the newest back-audit (plan 57), else work/<batch>/audit/<id>.json; or None."""
-    return qgen.audit_of(q)
-
-
 def record(batch, q, media_changed):
     """Store the spot check of q from its human review (D-33); returns the item.
     `batch` is q's batch, a back-audit run with q in it (plan 57) or a translation run: then
@@ -68,7 +63,7 @@ def record(batch, q, media_changed):
     llm = qgen.llm_decisions(batch).get(q["id"])
     if llm is None:
         raise ValueError(f"{q['id']} has no recorded LLM review")
-    a = qgen.translation_audit_of(q) if locale else audit_of(q)
+    a = qgen.translation_audit_of(q) if locale else qgen.audit_of(q)
     item = {"llm": llm, "audit": a and ("problem" if qgen.is_major(a) else "ok"), "human": rv["decision"],
             "problems": rv.get("problems") or [],
             "difficulty": [q.get("difficulty_original") or q["difficulty"], q["difficulty"]],
