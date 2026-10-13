@@ -4,8 +4,8 @@ printable joker cards, with the question API. Never ships (D-35).
 
     trivia-authoring [--port 8001] [--host 127.0.0.1]   (or: python3 authoring/server/main.py)
 
-It edits authoring/data/questions.json and re-exports app/data/pool.json after every change,
-so the game (port 8000) sees reviews at once. At startup it turns the questions flagged in the
+It edits authoring/data/questions.json (translations: questions.<locale>.json) and re-exports
+app/data/pool.json (pool.<locale>.json) after every change, so the game (port 8000) sees reviews at once. At startup it turns the questions flagged in the
 game (state/game.json's flags, before PORT-7 state/flags.json) into needs-work reviews (D-47) and prints the link to every question
 that isn't approved (/review?status=!approved, RV-22).
 
@@ -52,7 +52,8 @@ API:
                                                    question's human review; {"undo": true} removes it (plan 16);
                                                    <batch> may be a back-audit run (plan 57) or a translation run
                                                    tr-<locale>-<n>: its translation, item with "locale" (plan 67)
-    GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
+    GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py);
+                                                   rows per locale and its tr-* runs (plan 67)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
          &locale=en                                (RV-23, authoring/server/media_stats.py); locale: the sources of
                                                    its playing translations (plan 67)
