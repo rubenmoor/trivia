@@ -12177,7 +12177,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - The three files listed in `## Part 9`, every finding with a status.
 - Checks pass; `/api/overview`, spot-check and media-stats responses identical before/after fixes (diff).', '2026-10-12T23:09:08Z', '2026-10-13T13:04:43Z', 521);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (575, 81, 'Review the review page: authoring/ui/src/review/Review.svelte', 'work', 'open', NULL, NULL, 'Task 3 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (575, 81, 'Review the review page: authoring/ui/src/review/Review.svelte', 'work', 'done', NULL, '2026-10-13, authoring/ui/src/review/Review.svelte, code-review.md', 'Task 3 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
 - Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -12209,7 +12209,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Checks pass; review page clicked through on the temp server (keys, decision, undo, sample mode) or noted why not.
 
 ## Note (task 616)
-- Known bug, logged in `## Part 10` of `code-review.md` as handed to this task: `undo()` pops `undoStack` before `if (!last || busy) return`, so an undo pressed while a save is in flight is lost. Fix (check `busy` before popping) and log it in `## Part 9`.', '2026-10-12T23:09:08Z', NULL, 521);
+- Known bug, logged in `## Part 10` of `code-review.md` as handed to this task: `undo()` pops `undoStack` before `if (!last || busy) return`, so an undo pressed while a save is in flight is lost. Fix (check `busy` before popping) and log it in `## Part 9`.', '2026-10-12T23:09:08Z', '2026-10-13T13:09:07Z', 521);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (576, 81, 'Review the review panels: MediaPanel.svelte, RevisionPanel.svelte', 'work', 'open', NULL, NULL, 'Task 4 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -14278,6 +14278,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - In `overview.py`: also list unfinished `tr-*` runs (`run.json` without `done`, name `tr-<locale>-<n>`); keep `unfinished_runs` a `string[]` (or add a separate key; update `authoring/ui/src/lib/types.ts`).
 - `Home.svelte`: for a `tr-<locale>-*` run, text "unfinished translation run X" and command `qgen batch --translate <locale>`.
 - Check on a temp copy (`TRIVIA_WORK` with a fake unfinished `tr-en-1/run.json`), `curl /api/overview`; `npm run check`, `npm run build`; log the row in `## Part 9` of `code-review.md` as fixed.', '2026-10-13T13:03:54Z', NULL, 574);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (738, 81, 'Split authoring/ui/src/review/Review.svelte into smaller components', 'work', 'open', NULL, NULL, 'Follow-up of `task 575: Review the review page` (code review part 9). `authoring/ui/src/review/Review.svelte` is ~1080 lines (script ~510, markup ~290, CSS ~275) after task 444 added the locale view.
+
+## What
+- Behaviour unchanged: same URLs/params, keys, API calls, screens (plan 81 "Rules for this plan").
+- Extract, in this order, stopping when the rest is easy to read:
+  - `SearchModal.svelte` and `FeedbackModal.svelte` (markup lines ~711–759 + `.backdrop`/`.modal`/`.kinds`/textarea CSS): props for text/problems, callbacks for submit/cancel; the window `onKey` keeps routing Enter/Esc while a modal is open (or the modal handles them; only one listener per key).
+  - The header (progress, counts, meta, locale links) → `ReviewHeader.svelte`.
+  - The banners (spot reveal, stale, translatable, previous review, audit) → `ReviewBanners.svelte`; keep the `blind` checks (plan 16: nothing of the LLM review before the human decision).
+  - URL/filter parsing (`params`, `filter`, `filterText`, `singleId`, `startId`) → `review/url.ts`.
+- Not: decision/undo/busy logic (keep in `Review.svelte`).
+
+## Check
+- `npm run check`, `npm run build`; bundle size of `authoring/ui/dist` about the same.
+- Temp worktree server (`TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA` temp dirs, copy `work/<batch>` for sample mode), headless Chrome via CDP (as task 575 did): a, u, f+Enter, d 7 Enter, c, m/Esc, sample a/u (blind before, reveal after) identical before/after.
+- Log in `## Part 9` of `code-review.md`: the task 575 row "split candidates" → `fixed (task N)`.', '2026-10-13T13:08:01Z', NULL, 575);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16023,6 +16038,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (625, 572, '2026-10-13T12:51:35Z', '2026-10-13T12:56:10Z', 'done', NULL, 0, 'e47186a579add1a30ea8f2b278661ed6281d5f18', 'claude-opus-5-5[1m]', 'd03caea5-d7da-4f1b-a9c6-5cc047c2a030', 41, 80, 23945, 3049649, 92179, 1.8265817999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (626, 573, '2026-10-13T12:56:10Z', '2026-10-13T13:01:49Z', 'done', NULL, 0, '49961e00acb99cdd6efa92af5bd8c4d03be6b16d', 'claude-opus-5-5[1m]', '313bf369-90cd-480f-a025-c225a792cc2c', 33, 62, 28440, 2458305, 97003, 1.8367330000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (627, 574, '2026-10-13T13:01:49Z', '2026-10-13T13:04:51Z', 'done', NULL, 0, '031d070667783e781f0e756150fa5701dbe25e71', 'claude-opus-5-5[1m]', '3d5221f1-574d-42b8-9890-ad84bf1961a4', 22, 44, 13319, 1106305, 52666, 0.909145, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (628, 575, '2026-10-13T13:04:51Z', '2026-10-13T13:09:16Z', 'done', NULL, 0, 'cd92281bb8c412a4f485db3a34884a8d549de5be', 'claude-opus-5-5[1m]', '2dee639e-748e-4583-911c-d99abc1dcd25', 29, 58, 18273, 1993275, 79142, 1.397483, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

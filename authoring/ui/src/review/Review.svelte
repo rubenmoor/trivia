@@ -21,6 +21,7 @@
   import MediaPanel from "./MediaPanel.svelte";
   import RevisionPanel from "./RevisionPanel.svelte";
   import SourcePanel from "./SourcePanel.svelte";
+  import { LOCALES } from "$app/lib/data";
 
   // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
   // media=missing (RV-13), licence=replace (plan 53); status=!approved is every question that isn't
@@ -31,7 +32,6 @@
   // locale=en|de: the translations next to their Spanish source; media and bundle stay on the source (plan 67).
   const params = new URLSearchParams(location.search);
   const locale = params.get("locale") === "es" ? null : params.get("locale");
-  const LOCALES = ["es", "en", "de"];
   /** This page in another locale, the other params kept. */
   function localeHref(l: string) {
     const url = new URL(location.href);
@@ -256,13 +256,12 @@
     if (decision === "approved" && current.stale) return flash("Stale: the source changed, the next --translate run redoes it");
     busy = true;
     const i = index;
-    let pushed = false;
     try {
       const suggestions = decision === "approved" && !locale ? slotsNeedingSuggestion(questions[i]) : [];
       const id = questions[i].id;
-      undoStack.push({ id, previous: questions[i].review, spot: sampleMode });
-      pushed = true;
+      const previous = questions[i].review;
       await store(i, { decision, feedback, problems });
+      undoStack.push({ id, previous, spot: sampleMode });
       decidedNow = new Set(decidedNow).add(id);
       if (sampleMode) {
         // Stay on the question: the reveal shows the LLM's verdict next to the human's; → goes on.
@@ -276,7 +275,6 @@
       if (next === -1) finished = true;
       else index = next;
     } catch (e) {
-      if (pushed) undoStack.pop();
       reportError(`saving “${decision.replace("_", " ")}” for ${questions[i]?.id}`, e);
     } finally {
       busy = false;
@@ -284,8 +282,9 @@
   }
 
   async function undo() {
+    if (busy || mediaWorking) return;
     const last = undoStack.pop();
-    if (!last || busy) return;
+    if (!last) return;
     busy = true;
     try {
       const i = questions.findIndex((q) => q.id === last.id);
@@ -318,6 +317,7 @@
   function submitFeedback() {
     const text = feedbackText.trim();
     if (!text) return flash("Feedback is empty");
+    if (busy || mediaWorking) return flash("Still saving, try again");
     feedbackOpen = false;
     decide("needs_work", text, feedbackProblems);
   }
@@ -346,7 +346,7 @@
   }
 
   async function mediaAction(label: string, what: string, run: () => Promise<Question>) {
-    if (mediaWorking || !current) return;
+    if (busy || mediaWorking || !current) return;
     const i = index;
     mediaTouched.add(current.id);
     mediaWorking = true;
@@ -648,7 +648,7 @@
         licence={current.licence.media}
         showCandidates={openSlot === "media"}
         toggleKey="c"
-          readonly={!!locale}
+        readonly={!!locale}
         working={mediaWorking && searchSlot === "media"}
       />
       {#if current.background}
