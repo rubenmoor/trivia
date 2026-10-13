@@ -1134,7 +1134,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 2. **Steamworks app configuration (SW-7)**
    - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
-   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config, Deck settings, achievements (part 5''s values).
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
    - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
    - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
    - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
@@ -1202,22 +1202,24 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
    - Suggested priority: 290 (after part 8).
 
-10. **Steam Deck test and Deck Verified (SW-12)** — plan 90
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
     - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
-    - Checklist on a real Deck with the Steam-installed beta: Valve''s Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled. Builds on plan 48''s rows; no copy.
-    - Request the review once the store page exists (or note it for S6 if Valve requires release first).
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
     - Suggested priority: 370.
 
 11. **Beta test and S5 close-out**
     - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
     - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
     - Done when: the milestone''s "Done when" holds.
     - Suggested priority: 130 (last; below plan 48 at 140).
 
 ## Order
 - Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
 - Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
-- Part 6 → part 7 → first `beta` upload → part 10 and part 11.
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
 - Part 1 (PUB-7, PUB-10) → part 8 → part 9.
 - Part 11 last.
 
@@ -21057,8 +21059,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:49:39Z', NULL, 899);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (912, 8, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, plan 8 body: part 10 image peek (decision 125), part 8 Deck rows best effort + peek rows, rule for Deck; task 915 queues the part-10 plan', 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', '2026-10-13T17:53:37Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (913, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (913, 10, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, tasks.sql: plan 10 parts 2, 10, 11 and order per decision 125 (Deck best effort, Gamepad template default)', 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', '2026-10-13T17:59:25Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (914, 112, 'create tasks for plan 112', 'split', 'open', 1000, NULL, 'Split plan 112 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:52:37Z', NULL, 900);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (915, 8, 'create tasks for plan 8', 'split', 'done', 1000, '2026-10-13, tasks.sql: added task 919 (write plan: Image peek, part 10); parts 8/9 revisions already queued as tasks 916, 918 (and 917 for plan 56); no new decisions needed', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -21333,6 +21335,788 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Delete the throw-away script.
 
 Done when: at 1280×800 every image question''s picture can be seen whole via the peek (milestone 8); the owning plan files carry the notes. Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T17:58:50Z', NULL, 920);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (924, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (925, 85, 'revise plan 85', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
+(`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 10: masterplan
+
+Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a valid Steam user as the key to saves and flags, a shippable media bundle, depots (base plus one free DLC depot per non-base bundle) uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. Steam only (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy): no work, checks or docs for running outside Steam. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work. Parts whose plan already exists (`pm plans list`) get the changes through "revise plan N"; don''t add a second plan.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions: decision 66 (price $9.99, bundles as free DLC), decision 67 (account holder), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), decision 26/27 (launch languages es, en, de; Spanish variants), decision 12/28 (Electron, steamworks-ffi-node), decision 111 (Steam only). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell, `FileStore`, local builds (plan 56), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 close-out (plan 48), retirement of the browser game and Python game server (plan 99: its Vite dev server with `TRIVIA_SAVE_DIR` is the dev switch for agent checks). Parts here add to the shell; they don''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): languages and bundles that ship set the store''s language table, the DLC entries, the depots and the install size; pack layout per decision 112 (a pool file per bundle under `app/data/bundles/<id>/`, a missing pack file = pack not offered). Store texts per language (LUI-6) are this milestone''s.
+- If milestone 8 moved SW-6 (CI) or anything else to S5, the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater, no remote content. Network off must still play a full game (Steam in offline mode).
+- **Steam only (decision 111).** Effort, checks, checklists and done-whens cover the game launched by Steam (Windows, Linux/SteamOS/Deck). No "without Steam" rows. Fallbacks that also serve under Steam stay (letter picker in desktop mode, `Gamepad.id` glyphs, `navigator.language` when Steam gives no usable language).
+- **Valid Steam user** = `steam.available` and a non-zero SteamID. Saves and flags need one; without one the game still plays a full game, memory-only, with a short notice that progress needs Steam, and the flag action hidden. Soft check of the Steam bridge in the shell; no DRM, no `restartAppIfNecessary`, no anti-tamper (patchable, accepted).
+- **Dev switch:** one explicit env var (named once, in part 3''s plan, e.g. `TRIVIA_DEV_STEAM_USER`) makes the shell act as a valid user (saves and flags on) for dev runs and worker checks; plan 99''s dev server with `TRIVIA_SAVE_DIR` counts as such too. Documented in README and AGENTS.md "Commands"; never set in packaged builds.
+  - dev mode (the switch or plan 99''s dev server) also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (testing media questions, e.g. the 3 video questions); hidden otherwise
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git:** build account login, beta password, Steam Guard files. `steam_appid.txt` is fine (public). Gitignore what the upload script writes.
+- Shipped code under `app/` (D-35); dependencies: steamworks-ffi-node (decision 28) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder from decision 67 (person/company, tax interview form, bank, $100 app credit; DLC needs no app credit); the gamemaster does it; result (App ID) via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, store names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720.
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
+   - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
+   - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)** — plan 85
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the main process (steamworks-ffi-node, decision 28), exposed through the preload bridge as one `steam` object; the page checks `steam?.available`. Init failure → `available: false`, no crash, no error dialog.
+   - **Valid-user check:** the bridge exposes one `steam.user()` (or equivalent) = valid Steam user per the rule above, true also under the dev switch; parts 4 and the flag UI read only this, never their own Steam test.
+   - Overlay (decision 70: Windows only), on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name, per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id`; rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess: `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms; a saved language always wins.
+     - mapping Steam API name → our tag: `latam` → `es`, `spanish` → `es-ES` (decision 27), `english` → `en`, `german` → `de`; `schinese`, `russian`, `brazilian` (milestone 12) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language`
+   - Dev on NixOS: Spacewar (480) or the real App ID; SDK libs per decision 69.
+   - Dev mode «Ir a pregunta…» (rules above): a gamemaster menu row, shown only under the dev switch or plan 99''s dev server; question id input → that question replaces the current one at the current level (as «Cambiar pregunta», decision 34); unknown id → short message; strings via `t()`.
+   - Done when: under Steam the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language, `steam.user()` is true with a logged-in user and with the dev switch, false otherwise; under the dev switch «Ir a pregunta…» opens a video question by id, without it the row is absent.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves and the Steam-user gate** — plan 87
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format `plans/12-client-engine.md`.
+   - **One save per Steam user** (a save = a profile; plan 65''s seen counters and selection per profile): `<userData>/save/<steamid64>/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72). Auto-Cloud only, root `<appData>/trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive; atomic write leaves only the real file in the pattern.
+   - **Without a valid user:** memory-only save (a `Store` that never writes), a short notice that progress needs Steam (strings via `t()` in every catalog), nothing on disk. `save/local/`, the S3 → `local/` migration and the «Usar el progreso de este equipo» dialog go (already built by plan 87: remove them, D-72 and plan 18 updated). The family''s existing save reaches the desktop through plan 99 (`--import-save`), not through a dialog.
+   - **Flags:** the flag action (icon, key, pad Select, menu entry «Preguntas marcadas») hidden without a valid user; with one, as today (plan 93 builds on it in milestone 11).
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot.
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves; Steam not running → full game, notice shown, no flag action, nothing written.
+   - Suggested priority: 680 (after part 3).
+
+5. **Achievements (SW-11)** — plan 86
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - Few, no grind; exact trigger per engine event; only uncustomized games (decision 19); gamemaster mode earns none (decision 74). Names and descriptions per launch language; list to the gamemaster as a pm decision before icons.
+   - Unlock through part 3''s bridge, only with a valid user; offline unlocks cached by Steam; retroactive unlock from the save optional.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); setup values in plan 18 for part 2.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - **Split per depot:** base media vs media only a non-base bundle uses (decision 112''s `build/pack-media.json`), so each DLC depot carries its own media.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42) and the licence rules; `CREDITS.md` lists exactly the shipped files (per installed DLC if credits are split; the plan decides).
+   - Suggested priority: 640 (before part 7).
+
+7. **Builds, depots and upload (SW-10, SW-6)** — plan 89
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD VDFs in the repo (no secrets), `trivia-release-check` and `trivia-steam upload --branch beta` (decision 14, decision 84). Steps that only test the game outside Steam (`nix build .#app` of the browser game, once plan 99 removes it) go from the release check.
+   - **DLC depots (decision 66):** one depot per shipped non-base bundle (`app/data/bundles/<id>/` + its media from part 6), listed in `steam.json` and the app VDF, uploaded with the base build; base depots no longer carry pack files. The game offers a pack when its files are installed (decision 112), no Steam call needed.
+   - Smoke game: runs under Steam (Spacewar or the real App ID) or with the dev switch; no offline-without-Steam start test (decision 39).
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)** — plan 88
+   - Owner: `plans/17-publishing.md`; `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: descriptions, feature list (Steam Cloud saves, achievements, controller support; saves need Steam), system requirements (part 7''s builds; decision 90: provisional values), privacy line ("collects nothing, sends nothing"), AI disclosure. Also the store text of each free DLC (part 2). Drafts in a file; the gamemaster approves via pm decision and pastes them in.
+   - **AI disclosure** (with PUB-10''s finding): pre-generated = LLM-drafted questions (checked, edited and approved by a person) and LLM-written code; live-generated = none; no AI-generated art, images, sound or music (people''s work from Wikimedia Commons and other free sources, credited); store art typographic (below). The gamemaster approves the wording.
+   - Capsules: decision 77: typographic template in code («Trivia» wordmark, the game''s fonts and colours), rendered per Valve''s current size list and per store language (also per DLC) by a script; no image generation; disclosed as AI-assisted if Claude designs it. Decision 87: the exe icon comes from the same script.
+   - **Store media, rendered late** (decisions 79, 80): after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that.
+     - screenshots: 7 per store language, shell at 1920×1080, scripted: 5 on modes and configuration (mode choice, configure screen, bundle selector, joker presets, Customize game), 2 gameplay (locked-in answer, joker in use)
+     - trailer: 20 s of gameplay per store language: questions answered, jokers used, a wrong answer and the loss at the end; a scripted game in the real shell under Xvfb with game audio, recorded with ffmpeg (dev shell only, not shipped, no npm dependency); one command (e.g. `trivia-trailer`), re-runnable after any UI change; the gamemaster approves before upload. Replaces plan 88''s backlog note.
+     - en/de: the 2 question shots and the trailer wait for `pool.en.json` / `pool.de.json`; until then their pages carry the 5 menu shots
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (926, 86, 'revise plan 86', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
+(`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 10: masterplan
+
+Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a valid Steam user as the key to saves and flags, a shippable media bundle, depots (base plus one free DLC depot per non-base bundle) uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. Steam only (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy): no work, checks or docs for running outside Steam. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work. Parts whose plan already exists (`pm plans list`) get the changes through "revise plan N"; don''t add a second plan.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions: decision 66 (price $9.99, bundles as free DLC), decision 67 (account holder), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), decision 26/27 (launch languages es, en, de; Spanish variants), decision 12/28 (Electron, steamworks-ffi-node), decision 111 (Steam only). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell, `FileStore`, local builds (plan 56), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 close-out (plan 48), retirement of the browser game and Python game server (plan 99: its Vite dev server with `TRIVIA_SAVE_DIR` is the dev switch for agent checks). Parts here add to the shell; they don''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): languages and bundles that ship set the store''s language table, the DLC entries, the depots and the install size; pack layout per decision 112 (a pool file per bundle under `app/data/bundles/<id>/`, a missing pack file = pack not offered). Store texts per language (LUI-6) are this milestone''s.
+- If milestone 8 moved SW-6 (CI) or anything else to S5, the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater, no remote content. Network off must still play a full game (Steam in offline mode).
+- **Steam only (decision 111).** Effort, checks, checklists and done-whens cover the game launched by Steam (Windows, Linux/SteamOS/Deck). No "without Steam" rows. Fallbacks that also serve under Steam stay (letter picker in desktop mode, `Gamepad.id` glyphs, `navigator.language` when Steam gives no usable language).
+- **Valid Steam user** = `steam.available` and a non-zero SteamID. Saves and flags need one; without one the game still plays a full game, memory-only, with a short notice that progress needs Steam, and the flag action hidden. Soft check of the Steam bridge in the shell; no DRM, no `restartAppIfNecessary`, no anti-tamper (patchable, accepted).
+- **Dev switch:** one explicit env var (named once, in part 3''s plan, e.g. `TRIVIA_DEV_STEAM_USER`) makes the shell act as a valid user (saves and flags on) for dev runs and worker checks; plan 99''s dev server with `TRIVIA_SAVE_DIR` counts as such too. Documented in README and AGENTS.md "Commands"; never set in packaged builds.
+  - dev mode (the switch or plan 99''s dev server) also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (testing media questions, e.g. the 3 video questions); hidden otherwise
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git:** build account login, beta password, Steam Guard files. `steam_appid.txt` is fine (public). Gitignore what the upload script writes.
+- Shipped code under `app/` (D-35); dependencies: steamworks-ffi-node (decision 28) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder from decision 67 (person/company, tax interview form, bank, $100 app credit; DLC needs no app credit); the gamemaster does it; result (App ID) via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, store names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720.
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
+   - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
+   - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)** — plan 85
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the main process (steamworks-ffi-node, decision 28), exposed through the preload bridge as one `steam` object; the page checks `steam?.available`. Init failure → `available: false`, no crash, no error dialog.
+   - **Valid-user check:** the bridge exposes one `steam.user()` (or equivalent) = valid Steam user per the rule above, true also under the dev switch; parts 4 and the flag UI read only this, never their own Steam test.
+   - Overlay (decision 70: Windows only), on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name, per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id`; rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess: `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms; a saved language always wins.
+     - mapping Steam API name → our tag: `latam` → `es`, `spanish` → `es-ES` (decision 27), `english` → `en`, `german` → `de`; `schinese`, `russian`, `brazilian` (milestone 12) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language`
+   - Dev on NixOS: Spacewar (480) or the real App ID; SDK libs per decision 69.
+   - Dev mode «Ir a pregunta…» (rules above): a gamemaster menu row, shown only under the dev switch or plan 99''s dev server; question id input → that question replaces the current one at the current level (as «Cambiar pregunta», decision 34); unknown id → short message; strings via `t()`.
+   - Done when: under Steam the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language, `steam.user()` is true with a logged-in user and with the dev switch, false otherwise; under the dev switch «Ir a pregunta…» opens a video question by id, without it the row is absent.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves and the Steam-user gate** — plan 87
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format `plans/12-client-engine.md`.
+   - **One save per Steam user** (a save = a profile; plan 65''s seen counters and selection per profile): `<userData>/save/<steamid64>/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72). Auto-Cloud only, root `<appData>/trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive; atomic write leaves only the real file in the pattern.
+   - **Without a valid user:** memory-only save (a `Store` that never writes), a short notice that progress needs Steam (strings via `t()` in every catalog), nothing on disk. `save/local/`, the S3 → `local/` migration and the «Usar el progreso de este equipo» dialog go (already built by plan 87: remove them, D-72 and plan 18 updated). The family''s existing save reaches the desktop through plan 99 (`--import-save`), not through a dialog.
+   - **Flags:** the flag action (icon, key, pad Select, menu entry «Preguntas marcadas») hidden without a valid user; with one, as today (plan 93 builds on it in milestone 11).
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot.
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves; Steam not running → full game, notice shown, no flag action, nothing written.
+   - Suggested priority: 680 (after part 3).
+
+5. **Achievements (SW-11)** — plan 86
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - Few, no grind; exact trigger per engine event; only uncustomized games (decision 19); gamemaster mode earns none (decision 74). Names and descriptions per launch language; list to the gamemaster as a pm decision before icons.
+   - Unlock through part 3''s bridge, only with a valid user; offline unlocks cached by Steam; retroactive unlock from the save optional.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); setup values in plan 18 for part 2.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - **Split per depot:** base media vs media only a non-base bundle uses (decision 112''s `build/pack-media.json`), so each DLC depot carries its own media.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42) and the licence rules; `CREDITS.md` lists exactly the shipped files (per installed DLC if credits are split; the plan decides).
+   - Suggested priority: 640 (before part 7).
+
+7. **Builds, depots and upload (SW-10, SW-6)** — plan 89
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD VDFs in the repo (no secrets), `trivia-release-check` and `trivia-steam upload --branch beta` (decision 14, decision 84). Steps that only test the game outside Steam (`nix build .#app` of the browser game, once plan 99 removes it) go from the release check.
+   - **DLC depots (decision 66):** one depot per shipped non-base bundle (`app/data/bundles/<id>/` + its media from part 6), listed in `steam.json` and the app VDF, uploaded with the base build; base depots no longer carry pack files. The game offers a pack when its files are installed (decision 112), no Steam call needed.
+   - Smoke game: runs under Steam (Spacewar or the real App ID) or with the dev switch; no offline-without-Steam start test (decision 39).
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)** — plan 88
+   - Owner: `plans/17-publishing.md`; `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: descriptions, feature list (Steam Cloud saves, achievements, controller support; saves need Steam), system requirements (part 7''s builds; decision 90: provisional values), privacy line ("collects nothing, sends nothing"), AI disclosure. Also the store text of each free DLC (part 2). Drafts in a file; the gamemaster approves via pm decision and pastes them in.
+   - **AI disclosure** (with PUB-10''s finding): pre-generated = LLM-drafted questions (checked, edited and approved by a person) and LLM-written code; live-generated = none; no AI-generated art, images, sound or music (people''s work from Wikimedia Commons and other free sources, credited); store art typographic (below). The gamemaster approves the wording.
+   - Capsules: decision 77: typographic template in code («Trivia» wordmark, the game''s fonts and colours), rendered per Valve''s current size list and per store language (also per DLC) by a script; no image generation; disclosed as AI-assisted if Claude designs it. Decision 87: the exe icon comes from the same script.
+   - **Store media, rendered late** (decisions 79, 80): after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that.
+     - screenshots: 7 per store language, shell at 1920×1080, scripted: 5 on modes and configuration (mode choice, configure screen, bundle selector, joker presets, Customize game), 2 gameplay (locked-in answer, joker in use)
+     - trailer: 20 s of gameplay per store language: questions answered, jokers used, a wrong answer and the loss at the end; a scripted game in the real shell under Xvfb with game audio, recorded with ffmpeg (dev shell only, not shipped, no npm dependency); one command (e.g. `trivia-trailer`), re-runnable after any UI change; the gamemaster approves before upload. Replaces plan 88''s backlog note.
+     - en/de: the 2 question shots and the trailer wait for `pool.en.json` / `pool.de.json`; until then their pages carry the 5 menu shots
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (927, 87, 'revise plan 87', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
+(`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 10: masterplan
+
+Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a valid Steam user as the key to saves and flags, a shippable media bundle, depots (base plus one free DLC depot per non-base bundle) uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. Steam only (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy): no work, checks or docs for running outside Steam. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work. Parts whose plan already exists (`pm plans list`) get the changes through "revise plan N"; don''t add a second plan.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions: decision 66 (price $9.99, bundles as free DLC), decision 67 (account holder), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), decision 26/27 (launch languages es, en, de; Spanish variants), decision 12/28 (Electron, steamworks-ffi-node), decision 111 (Steam only). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell, `FileStore`, local builds (plan 56), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 close-out (plan 48), retirement of the browser game and Python game server (plan 99: its Vite dev server with `TRIVIA_SAVE_DIR` is the dev switch for agent checks). Parts here add to the shell; they don''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): languages and bundles that ship set the store''s language table, the DLC entries, the depots and the install size; pack layout per decision 112 (a pool file per bundle under `app/data/bundles/<id>/`, a missing pack file = pack not offered). Store texts per language (LUI-6) are this milestone''s.
+- If milestone 8 moved SW-6 (CI) or anything else to S5, the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater, no remote content. Network off must still play a full game (Steam in offline mode).
+- **Steam only (decision 111).** Effort, checks, checklists and done-whens cover the game launched by Steam (Windows, Linux/SteamOS/Deck). No "without Steam" rows. Fallbacks that also serve under Steam stay (letter picker in desktop mode, `Gamepad.id` glyphs, `navigator.language` when Steam gives no usable language).
+- **Valid Steam user** = `steam.available` and a non-zero SteamID. Saves and flags need one; without one the game still plays a full game, memory-only, with a short notice that progress needs Steam, and the flag action hidden. Soft check of the Steam bridge in the shell; no DRM, no `restartAppIfNecessary`, no anti-tamper (patchable, accepted).
+- **Dev switch:** one explicit env var (named once, in part 3''s plan, e.g. `TRIVIA_DEV_STEAM_USER`) makes the shell act as a valid user (saves and flags on) for dev runs and worker checks; plan 99''s dev server with `TRIVIA_SAVE_DIR` counts as such too. Documented in README and AGENTS.md "Commands"; never set in packaged builds.
+  - dev mode (the switch or plan 99''s dev server) also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (testing media questions, e.g. the 3 video questions); hidden otherwise
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git:** build account login, beta password, Steam Guard files. `steam_appid.txt` is fine (public). Gitignore what the upload script writes.
+- Shipped code under `app/` (D-35); dependencies: steamworks-ffi-node (decision 28) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder from decision 67 (person/company, tax interview form, bank, $100 app credit; DLC needs no app credit); the gamemaster does it; result (App ID) via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, store names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720.
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
+   - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
+   - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)** — plan 85
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the main process (steamworks-ffi-node, decision 28), exposed through the preload bridge as one `steam` object; the page checks `steam?.available`. Init failure → `available: false`, no crash, no error dialog.
+   - **Valid-user check:** the bridge exposes one `steam.user()` (or equivalent) = valid Steam user per the rule above, true also under the dev switch; parts 4 and the flag UI read only this, never their own Steam test.
+   - Overlay (decision 70: Windows only), on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name, per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id`; rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess: `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms; a saved language always wins.
+     - mapping Steam API name → our tag: `latam` → `es`, `spanish` → `es-ES` (decision 27), `english` → `en`, `german` → `de`; `schinese`, `russian`, `brazilian` (milestone 12) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language`
+   - Dev on NixOS: Spacewar (480) or the real App ID; SDK libs per decision 69.
+   - Dev mode «Ir a pregunta…» (rules above): a gamemaster menu row, shown only under the dev switch or plan 99''s dev server; question id input → that question replaces the current one at the current level (as «Cambiar pregunta», decision 34); unknown id → short message; strings via `t()`.
+   - Done when: under Steam the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language, `steam.user()` is true with a logged-in user and with the dev switch, false otherwise; under the dev switch «Ir a pregunta…» opens a video question by id, without it the row is absent.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves and the Steam-user gate** — plan 87
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format `plans/12-client-engine.md`.
+   - **One save per Steam user** (a save = a profile; plan 65''s seen counters and selection per profile): `<userData>/save/<steamid64>/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72). Auto-Cloud only, root `<appData>/trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive; atomic write leaves only the real file in the pattern.
+   - **Without a valid user:** memory-only save (a `Store` that never writes), a short notice that progress needs Steam (strings via `t()` in every catalog), nothing on disk. `save/local/`, the S3 → `local/` migration and the «Usar el progreso de este equipo» dialog go (already built by plan 87: remove them, D-72 and plan 18 updated). The family''s existing save reaches the desktop through plan 99 (`--import-save`), not through a dialog.
+   - **Flags:** the flag action (icon, key, pad Select, menu entry «Preguntas marcadas») hidden without a valid user; with one, as today (plan 93 builds on it in milestone 11).
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot.
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves; Steam not running → full game, notice shown, no flag action, nothing written.
+   - Suggested priority: 680 (after part 3).
+
+5. **Achievements (SW-11)** — plan 86
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - Few, no grind; exact trigger per engine event; only uncustomized games (decision 19); gamemaster mode earns none (decision 74). Names and descriptions per launch language; list to the gamemaster as a pm decision before icons.
+   - Unlock through part 3''s bridge, only with a valid user; offline unlocks cached by Steam; retroactive unlock from the save optional.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); setup values in plan 18 for part 2.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - **Split per depot:** base media vs media only a non-base bundle uses (decision 112''s `build/pack-media.json`), so each DLC depot carries its own media.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42) and the licence rules; `CREDITS.md` lists exactly the shipped files (per installed DLC if credits are split; the plan decides).
+   - Suggested priority: 640 (before part 7).
+
+7. **Builds, depots and upload (SW-10, SW-6)** — plan 89
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD VDFs in the repo (no secrets), `trivia-release-check` and `trivia-steam upload --branch beta` (decision 14, decision 84). Steps that only test the game outside Steam (`nix build .#app` of the browser game, once plan 99 removes it) go from the release check.
+   - **DLC depots (decision 66):** one depot per shipped non-base bundle (`app/data/bundles/<id>/` + its media from part 6), listed in `steam.json` and the app VDF, uploaded with the base build; base depots no longer carry pack files. The game offers a pack when its files are installed (decision 112), no Steam call needed.
+   - Smoke game: runs under Steam (Spacewar or the real App ID) or with the dev switch; no offline-without-Steam start test (decision 39).
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)** — plan 88
+   - Owner: `plans/17-publishing.md`; `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: descriptions, feature list (Steam Cloud saves, achievements, controller support; saves need Steam), system requirements (part 7''s builds; decision 90: provisional values), privacy line ("collects nothing, sends nothing"), AI disclosure. Also the store text of each free DLC (part 2). Drafts in a file; the gamemaster approves via pm decision and pastes them in.
+   - **AI disclosure** (with PUB-10''s finding): pre-generated = LLM-drafted questions (checked, edited and approved by a person) and LLM-written code; live-generated = none; no AI-generated art, images, sound or music (people''s work from Wikimedia Commons and other free sources, credited); store art typographic (below). The gamemaster approves the wording.
+   - Capsules: decision 77: typographic template in code («Trivia» wordmark, the game''s fonts and colours), rendered per Valve''s current size list and per store language (also per DLC) by a script; no image generation; disclosed as AI-assisted if Claude designs it. Decision 87: the exe icon comes from the same script.
+   - **Store media, rendered late** (decisions 79, 80): after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that.
+     - screenshots: 7 per store language, shell at 1920×1080, scripted: 5 on modes and configuration (mode choice, configure screen, bundle selector, joker presets, Customize game), 2 gameplay (locked-in answer, joker in use)
+     - trailer: 20 s of gameplay per store language: questions answered, jokers used, a wrong answer and the loss at the end; a scripted game in the real shell under Xvfb with game audio, recorded with ffmpeg (dev shell only, not shipped, no npm dependency); one command (e.g. `trivia-trailer`), re-runnable after any UI change; the gamemaster approves before upload. Replaces plan 88''s backlog note.
+     - en/de: the 2 question shots and the trailer wait for `pool.en.json` / `pool.de.json`; until then their pages carry the 5 menu shots
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (928, 88, 'revise plan 88', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
+(`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 10: masterplan
+
+Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a valid Steam user as the key to saves and flags, a shippable media bundle, depots (base plus one free DLC depot per non-base bundle) uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. Steam only (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy): no work, checks or docs for running outside Steam. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work. Parts whose plan already exists (`pm plans list`) get the changes through "revise plan N"; don''t add a second plan.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions: decision 66 (price $9.99, bundles as free DLC), decision 67 (account holder), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), decision 26/27 (launch languages es, en, de; Spanish variants), decision 12/28 (Electron, steamworks-ffi-node), decision 111 (Steam only). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell, `FileStore`, local builds (plan 56), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 close-out (plan 48), retirement of the browser game and Python game server (plan 99: its Vite dev server with `TRIVIA_SAVE_DIR` is the dev switch for agent checks). Parts here add to the shell; they don''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): languages and bundles that ship set the store''s language table, the DLC entries, the depots and the install size; pack layout per decision 112 (a pool file per bundle under `app/data/bundles/<id>/`, a missing pack file = pack not offered). Store texts per language (LUI-6) are this milestone''s.
+- If milestone 8 moved SW-6 (CI) or anything else to S5, the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater, no remote content. Network off must still play a full game (Steam in offline mode).
+- **Steam only (decision 111).** Effort, checks, checklists and done-whens cover the game launched by Steam (Windows, Linux/SteamOS/Deck). No "without Steam" rows. Fallbacks that also serve under Steam stay (letter picker in desktop mode, `Gamepad.id` glyphs, `navigator.language` when Steam gives no usable language).
+- **Valid Steam user** = `steam.available` and a non-zero SteamID. Saves and flags need one; without one the game still plays a full game, memory-only, with a short notice that progress needs Steam, and the flag action hidden. Soft check of the Steam bridge in the shell; no DRM, no `restartAppIfNecessary`, no anti-tamper (patchable, accepted).
+- **Dev switch:** one explicit env var (named once, in part 3''s plan, e.g. `TRIVIA_DEV_STEAM_USER`) makes the shell act as a valid user (saves and flags on) for dev runs and worker checks; plan 99''s dev server with `TRIVIA_SAVE_DIR` counts as such too. Documented in README and AGENTS.md "Commands"; never set in packaged builds.
+  - dev mode (the switch or plan 99''s dev server) also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (testing media questions, e.g. the 3 video questions); hidden otherwise
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git:** build account login, beta password, Steam Guard files. `steam_appid.txt` is fine (public). Gitignore what the upload script writes.
+- Shipped code under `app/` (D-35); dependencies: steamworks-ffi-node (decision 28) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder from decision 67 (person/company, tax interview form, bank, $100 app credit; DLC needs no app credit); the gamemaster does it; result (App ID) via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, store names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720.
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
+   - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
+   - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)** — plan 85
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the main process (steamworks-ffi-node, decision 28), exposed through the preload bridge as one `steam` object; the page checks `steam?.available`. Init failure → `available: false`, no crash, no error dialog.
+   - **Valid-user check:** the bridge exposes one `steam.user()` (or equivalent) = valid Steam user per the rule above, true also under the dev switch; parts 4 and the flag UI read only this, never their own Steam test.
+   - Overlay (decision 70: Windows only), on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name, per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id`; rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess: `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms; a saved language always wins.
+     - mapping Steam API name → our tag: `latam` → `es`, `spanish` → `es-ES` (decision 27), `english` → `en`, `german` → `de`; `schinese`, `russian`, `brazilian` (milestone 12) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language`
+   - Dev on NixOS: Spacewar (480) or the real App ID; SDK libs per decision 69.
+   - Dev mode «Ir a pregunta…» (rules above): a gamemaster menu row, shown only under the dev switch or plan 99''s dev server; question id input → that question replaces the current one at the current level (as «Cambiar pregunta», decision 34); unknown id → short message; strings via `t()`.
+   - Done when: under Steam the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language, `steam.user()` is true with a logged-in user and with the dev switch, false otherwise; under the dev switch «Ir a pregunta…» opens a video question by id, without it the row is absent.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves and the Steam-user gate** — plan 87
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format `plans/12-client-engine.md`.
+   - **One save per Steam user** (a save = a profile; plan 65''s seen counters and selection per profile): `<userData>/save/<steamid64>/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72). Auto-Cloud only, root `<appData>/trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive; atomic write leaves only the real file in the pattern.
+   - **Without a valid user:** memory-only save (a `Store` that never writes), a short notice that progress needs Steam (strings via `t()` in every catalog), nothing on disk. `save/local/`, the S3 → `local/` migration and the «Usar el progreso de este equipo» dialog go (already built by plan 87: remove them, D-72 and plan 18 updated). The family''s existing save reaches the desktop through plan 99 (`--import-save`), not through a dialog.
+   - **Flags:** the flag action (icon, key, pad Select, menu entry «Preguntas marcadas») hidden without a valid user; with one, as today (plan 93 builds on it in milestone 11).
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot.
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves; Steam not running → full game, notice shown, no flag action, nothing written.
+   - Suggested priority: 680 (after part 3).
+
+5. **Achievements (SW-11)** — plan 86
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - Few, no grind; exact trigger per engine event; only uncustomized games (decision 19); gamemaster mode earns none (decision 74). Names and descriptions per launch language; list to the gamemaster as a pm decision before icons.
+   - Unlock through part 3''s bridge, only with a valid user; offline unlocks cached by Steam; retroactive unlock from the save optional.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); setup values in plan 18 for part 2.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - **Split per depot:** base media vs media only a non-base bundle uses (decision 112''s `build/pack-media.json`), so each DLC depot carries its own media.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42) and the licence rules; `CREDITS.md` lists exactly the shipped files (per installed DLC if credits are split; the plan decides).
+   - Suggested priority: 640 (before part 7).
+
+7. **Builds, depots and upload (SW-10, SW-6)** — plan 89
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD VDFs in the repo (no secrets), `trivia-release-check` and `trivia-steam upload --branch beta` (decision 14, decision 84). Steps that only test the game outside Steam (`nix build .#app` of the browser game, once plan 99 removes it) go from the release check.
+   - **DLC depots (decision 66):** one depot per shipped non-base bundle (`app/data/bundles/<id>/` + its media from part 6), listed in `steam.json` and the app VDF, uploaded with the base build; base depots no longer carry pack files. The game offers a pack when its files are installed (decision 112), no Steam call needed.
+   - Smoke game: runs under Steam (Spacewar or the real App ID) or with the dev switch; no offline-without-Steam start test (decision 39).
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)** — plan 88
+   - Owner: `plans/17-publishing.md`; `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: descriptions, feature list (Steam Cloud saves, achievements, controller support; saves need Steam), system requirements (part 7''s builds; decision 90: provisional values), privacy line ("collects nothing, sends nothing"), AI disclosure. Also the store text of each free DLC (part 2). Drafts in a file; the gamemaster approves via pm decision and pastes them in.
+   - **AI disclosure** (with PUB-10''s finding): pre-generated = LLM-drafted questions (checked, edited and approved by a person) and LLM-written code; live-generated = none; no AI-generated art, images, sound or music (people''s work from Wikimedia Commons and other free sources, credited); store art typographic (below). The gamemaster approves the wording.
+   - Capsules: decision 77: typographic template in code («Trivia» wordmark, the game''s fonts and colours), rendered per Valve''s current size list and per store language (also per DLC) by a script; no image generation; disclosed as AI-assisted if Claude designs it. Decision 87: the exe icon comes from the same script.
+   - **Store media, rendered late** (decisions 79, 80): after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that.
+     - screenshots: 7 per store language, shell at 1920×1080, scripted: 5 on modes and configuration (mode choice, configure screen, bundle selector, joker presets, Customize game), 2 gameplay (locked-in answer, joker in use)
+     - trailer: 20 s of gameplay per store language: questions answered, jokers used, a wrong answer and the loss at the end; a scripted game in the real shell under Xvfb with game audio, recorded with ffmpeg (dev shell only, not shipped, no npm dependency); one command (e.g. `trivia-trailer`), re-runnable after any UI change; the gamemaster approves before upload. Replaces plan 88''s backlog note.
+     - en/de: the 2 question shots and the trailer wait for `pool.en.json` / `pool.de.json`; until then their pages carry the 5 menu shots
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (929, 89, 'revise plan 89', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
+(`pm plan edit 89 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 10: masterplan
+
+Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a valid Steam user as the key to saves and flags, a shippable media bundle, depots (base plus one free DLC depot per non-base bundle) uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. Steam only (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy): no work, checks or docs for running outside Steam. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work. Parts whose plan already exists (`pm plans list`) get the changes through "revise plan N"; don''t add a second plan.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions: decision 66 (price $9.99, bundles as free DLC), decision 67 (account holder), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), decision 26/27 (launch languages es, en, de; Spanish variants), decision 12/28 (Electron, steamworks-ffi-node), decision 111 (Steam only). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell, `FileStore`, local builds (plan 56), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 close-out (plan 48), retirement of the browser game and Python game server (plan 99: its Vite dev server with `TRIVIA_SAVE_DIR` is the dev switch for agent checks). Parts here add to the shell; they don''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): languages and bundles that ship set the store''s language table, the DLC entries, the depots and the install size; pack layout per decision 112 (a pool file per bundle under `app/data/bundles/<id>/`, a missing pack file = pack not offered). Store texts per language (LUI-6) are this milestone''s.
+- If milestone 8 moved SW-6 (CI) or anything else to S5, the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater, no remote content. Network off must still play a full game (Steam in offline mode).
+- **Steam only (decision 111).** Effort, checks, checklists and done-whens cover the game launched by Steam (Windows, Linux/SteamOS/Deck). No "without Steam" rows. Fallbacks that also serve under Steam stay (letter picker in desktop mode, `Gamepad.id` glyphs, `navigator.language` when Steam gives no usable language).
+- **Valid Steam user** = `steam.available` and a non-zero SteamID. Saves and flags need one; without one the game still plays a full game, memory-only, with a short notice that progress needs Steam, and the flag action hidden. Soft check of the Steam bridge in the shell; no DRM, no `restartAppIfNecessary`, no anti-tamper (patchable, accepted).
+- **Dev switch:** one explicit env var (named once, in part 3''s plan, e.g. `TRIVIA_DEV_STEAM_USER`) makes the shell act as a valid user (saves and flags on) for dev runs and worker checks; plan 99''s dev server with `TRIVIA_SAVE_DIR` counts as such too. Documented in README and AGENTS.md "Commands"; never set in packaged builds.
+  - dev mode (the switch or plan 99''s dev server) also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (testing media questions, e.g. the 3 video questions); hidden otherwise
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git:** build account login, beta password, Steam Guard files. `steam_appid.txt` is fine (public). Gitignore what the upload script writes.
+- Shipped code under `app/` (D-35); dependencies: steamworks-ffi-node (decision 28) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder from decision 67 (person/company, tax interview form, bank, $100 app credit; DLC needs no app credit); the gamemaster does it; result (App ID) via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, store names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720.
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
+   - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
+   - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)** — plan 85
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the main process (steamworks-ffi-node, decision 28), exposed through the preload bridge as one `steam` object; the page checks `steam?.available`. Init failure → `available: false`, no crash, no error dialog.
+   - **Valid-user check:** the bridge exposes one `steam.user()` (or equivalent) = valid Steam user per the rule above, true also under the dev switch; parts 4 and the flag UI read only this, never their own Steam test.
+   - Overlay (decision 70: Windows only), on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name, per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id`; rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess: `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms; a saved language always wins.
+     - mapping Steam API name → our tag: `latam` → `es`, `spanish` → `es-ES` (decision 27), `english` → `en`, `german` → `de`; `schinese`, `russian`, `brazilian` (milestone 12) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language`
+   - Dev on NixOS: Spacewar (480) or the real App ID; SDK libs per decision 69.
+   - Dev mode «Ir a pregunta…» (rules above): a gamemaster menu row, shown only under the dev switch or plan 99''s dev server; question id input → that question replaces the current one at the current level (as «Cambiar pregunta», decision 34); unknown id → short message; strings via `t()`.
+   - Done when: under Steam the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language, `steam.user()` is true with a logged-in user and with the dev switch, false otherwise; under the dev switch «Ir a pregunta…» opens a video question by id, without it the row is absent.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves and the Steam-user gate** — plan 87
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format `plans/12-client-engine.md`.
+   - **One save per Steam user** (a save = a profile; plan 65''s seen counters and selection per profile): `<userData>/save/<steamid64>/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72). Auto-Cloud only, root `<appData>/trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive; atomic write leaves only the real file in the pattern.
+   - **Without a valid user:** memory-only save (a `Store` that never writes), a short notice that progress needs Steam (strings via `t()` in every catalog), nothing on disk. `save/local/`, the S3 → `local/` migration and the «Usar el progreso de este equipo» dialog go (already built by plan 87: remove them, D-72 and plan 18 updated). The family''s existing save reaches the desktop through plan 99 (`--import-save`), not through a dialog.
+   - **Flags:** the flag action (icon, key, pad Select, menu entry «Preguntas marcadas») hidden without a valid user; with one, as today (plan 93 builds on it in milestone 11).
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot.
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves; Steam not running → full game, notice shown, no flag action, nothing written.
+   - Suggested priority: 680 (after part 3).
+
+5. **Achievements (SW-11)** — plan 86
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - Few, no grind; exact trigger per engine event; only uncustomized games (decision 19); gamemaster mode earns none (decision 74). Names and descriptions per launch language; list to the gamemaster as a pm decision before icons.
+   - Unlock through part 3''s bridge, only with a valid user; offline unlocks cached by Steam; retroactive unlock from the save optional.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); setup values in plan 18 for part 2.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - **Split per depot:** base media vs media only a non-base bundle uses (decision 112''s `build/pack-media.json`), so each DLC depot carries its own media.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42) and the licence rules; `CREDITS.md` lists exactly the shipped files (per installed DLC if credits are split; the plan decides).
+   - Suggested priority: 640 (before part 7).
+
+7. **Builds, depots and upload (SW-10, SW-6)** — plan 89
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD VDFs in the repo (no secrets), `trivia-release-check` and `trivia-steam upload --branch beta` (decision 14, decision 84). Steps that only test the game outside Steam (`nix build .#app` of the browser game, once plan 99 removes it) go from the release check.
+   - **DLC depots (decision 66):** one depot per shipped non-base bundle (`app/data/bundles/<id>/` + its media from part 6), listed in `steam.json` and the app VDF, uploaded with the base build; base depots no longer carry pack files. The game offers a pack when its files are installed (decision 112), no Steam call needed.
+   - Smoke game: runs under Steam (Spacewar or the real App ID) or with the dev switch; no offline-without-Steam start test (decision 39).
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)** — plan 88
+   - Owner: `plans/17-publishing.md`; `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: descriptions, feature list (Steam Cloud saves, achievements, controller support; saves need Steam), system requirements (part 7''s builds; decision 90: provisional values), privacy line ("collects nothing, sends nothing"), AI disclosure. Also the store text of each free DLC (part 2). Drafts in a file; the gamemaster approves via pm decision and pastes them in.
+   - **AI disclosure** (with PUB-10''s finding): pre-generated = LLM-drafted questions (checked, edited and approved by a person) and LLM-written code; live-generated = none; no AI-generated art, images, sound or music (people''s work from Wikimedia Commons and other free sources, credited); store art typographic (below). The gamemaster approves the wording.
+   - Capsules: decision 77: typographic template in code («Trivia» wordmark, the game''s fonts and colours), rendered per Valve''s current size list and per store language (also per DLC) by a script; no image generation; disclosed as AI-assisted if Claude designs it. Decision 87: the exe icon comes from the same script.
+   - **Store media, rendered late** (decisions 79, 80): after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that.
+     - screenshots: 7 per store language, shell at 1920×1080, scripted: 5 on modes and configuration (mode choice, configure screen, bundle selector, joker presets, Customize game), 2 gameplay (locked-in answer, joker in use)
+     - trailer: 20 s of gameplay per store language: questions answered, jokers used, a wrong answer and the loss at the end; a scripted game in the real shell under Xvfb with game audio, recorded with ffmpeg (dev shell only, not shipped, no npm dependency); one command (e.g. `trivia-trailer`), re-runnable after any UI change; the gamemaster approves before upload. Replaces plan 88''s backlog note.
+     - en/de: the 2 question shots and the trailer wait for `pool.en.json` / `pool.de.json`; until then their pages carry the 5 menu shots
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (930, 90, 'revise plan 90', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+(`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 10: masterplan
+
+Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop build from S3 (milestone 8) becomes a Steam app. That means a partner account and an App ID, the Steamworks binding (overlay, Cloud, achievements, on-screen keyboard, language), a valid Steam user as the key to saves and flags, a shippable media bundle, depots (base plus one free DLC depot per non-base bundle) uploaded with SteamCMD to a password-protected `beta` branch, and the store page with its disclosures, survey and price. Steam only (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy): no work, checks or docs for running outside Steam. The milestone is done when the family installs the beta from Steam on a second machine and plays it.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 10 …`, priority as suggested), and that plan''s tasks do the work. Parts whose plan already exists (`pm plans list`) get the changes through "revise plan N"; don''t add a second plan.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Decisions: decision 66 (price $9.99, bundles as free DLC), decision 67 (account holder), OQ-35 licence + public pool (plan 40), OQ-45/47 Freesound (plan 42), decision 26/27 (launch languages es, en, de; Spanish variants), decision 12/28 (Electron, steamworks-ffi-node), decision 111 (Steam only). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops. S2 close-out (plan 43) may have rewritten SW-*/PUB-* in plans 17/18: read the current files, not this summary.
+- Desktop build (milestone 8): shell, `FileStore`, local builds (plan 56), gamepad + glyphs (plan 45), Deck layout + letter picker (plan 46), credits screen (plan 47), S3 close-out (plan 48), retirement of the browser game and Python game server (plan 99: its Vite dev server with `TRIVIA_SAVE_DIR` is the dev switch for agent checks). Parts here add to the shell; they don''t rebuild it.
+- Licence data (milestone 4, plan 26): `CREDITS.md` and the media bundle read it.
+- Content (milestone 9): languages and bundles that ship set the store''s language table, the DLC entries, the depots and the install size; pack layout per decision 112 (a pool file per bundle under `app/data/bundles/<id>/`, a missing pack file = pack not offered). Store texts per language (LUI-6) are this milestone''s.
+- If milestone 8 moved SW-6 (CI) or anything else to S5, the part that owns it here takes it over.
+
+## Rules for every part
+- **Never phones home.** The game talks only to the local Steam client through the binding; no own server, no telemetry, no crash reporter, no auto-updater, no remote content. Network off must still play a full game (Steam in offline mode).
+- **Steam only (decision 111).** Effort, checks, checklists and done-whens cover the game launched by Steam (Windows, Linux/SteamOS/Deck). No "without Steam" rows. Fallbacks that also serve under Steam stay (letter picker in desktop mode, `Gamepad.id` glyphs, `navigator.language` when Steam gives no usable language).
+- **Valid Steam user** = `steam.available` and a non-zero SteamID. Saves and flags need one; without one the game still plays a full game, memory-only, with a short notice that progress needs Steam, and the flag action hidden. Soft check of the Steam bridge in the shell; no DRM, no `restartAppIfNecessary`, no anti-tamper (patchable, accepted).
+- **Dev switch:** one explicit env var (named once, in part 3''s plan, e.g. `TRIVIA_DEV_STEAM_USER`) makes the shell act as a valid user (saves and flags on) for dev runs and worker checks; plan 99''s dev server with `TRIVIA_SAVE_DIR` counts as such too. Documented in README and AGENTS.md "Commands"; never set in packaged builds.
+  - dev mode (the switch or plan 99''s dev server) also adds a gamemaster menu row «Ir a pregunta…»: question id → opens that question at the current level (testing media questions, e.g. the 3 video questions); hidden otherwise
+- **The gamemaster does what needs a person:** partner signup, tax/identity, payments, the Steamworks web UI, credentials, uploads that need Steam Guard, the Deck, the family test. Workers prepare checklists, exact field values and texts (in the owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials, never contact Valve, a lawyer or a tax advisor; text for them goes in a decision body.
+- **Secrets never in git:** build account login, beta password, Steam Guard files. `steam_appid.txt` is fine (public). Gitignore what the upload script writes.
+- Shipped code under `app/` (D-35); dependencies: steamworks-ffi-node (decision 28) and nothing else without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`17-publishing.md`, `18-steam-integration.md`, `15a-ui-translation.md`, `14-input.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)**
+   - Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").
+   - PUB-6: signup checklist for the holder from decision 67 (person/company, tax interview form, bank, $100 app credit; DLC needs no app credit); the gamemaster does it; result (App ID) via pm decision "Steamworks app created? App ID?".
+   - PUB-7: name and trademark check for «Living Room Trivia» / «Trivia en Familia» (D-50): Steam store search, EUIPO/USPTO/WIPO, domains; findings in a pm decision; if it fails, OQ-34 reopens (new decision, store names wait).
+   - PUB-10: Anthropic''s commercial-use terms for the pipeline''s outputs (`claude -p` on the author''s plan type); one-line finding + source in plan 17; anything unclear → decision body for a professional.
+   - Suggested priority: 720.
+
+2. **Steamworks app configuration (SW-7)**
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots", "Steam features").
+   - Exact values for the gamemaster, as a checklist in plan 18: App ID, localized names (D-50), depots (part 7''s), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` + password-protected `beta`, controller support flags, Steam Input default config = the Gamepad template (the Deck''s controls arrive as a virtual Xbox pad), Deck settings, achievements (part 5''s values).
+   - **Free DLC per non-base bundle (decision 66):** one DLC app per bundle that ships (e.g. `colombia`), price free, its own depot (part 7), optional install, its store name per language; the base app lists them. Only bundles milestone 9 ships.
+   - Steam Cloud: Auto-Cloud values from part 4''s plan (root, pattern, quota, conflict note). `steam_appid.txt` for dev runs.
+   - Done when: the gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+   - Suggested priority: 700.
+
+3. **Steamworks binding in the shell (SW-8)** — plan 85
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); touches `14-input.md`, `15-i18n.md`.
+   - Binding in the main process (steamworks-ffi-node, decision 28), exposed through the preload bridge as one `steam` object; the page checks `steam?.available`. Init failure → `available: false`, no crash, no error dialog.
+   - **Valid-user check:** the bridge exposes one `steam.user()` (or equivalent) = valid Steam user per the rule above, true also under the dev switch; parts 4 and the flag UI read only this, never their own Steam test.
+   - Overlay (decision 70: Windows only), on-screen keyboard (`ShowFloatingGamepadTextInput`) for the player name, per-device glyphs via `GetInputTypeForHandle` where they beat `Gamepad.id`; rich presence «Nivel 7 de 12» optional (strings via `t()`).
+   - Language guess: `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) feeds plan 68''s `guessTag()` seam instead of `navigator.language`; only the first-start preselection, the player still confirms; a saved language always wins.
+     - mapping Steam API name → our tag: `latam` → `es`, `spanish` → `es-ES` (decision 27), `english` → `en`, `german` → `de`; `schinese`, `russian`, `brazilian` (milestone 12) as rows that fall through to the usual best match until their locales exist
+     - unknown name or no Steam → `navigator.language`
+   - Dev on NixOS: Spacewar (480) or the real App ID; SDK libs per decision 69.
+   - Dev mode «Ir a pregunta…» (rules above): a gamemaster menu row, shown only under the dev switch or plan 99''s dev server; question id input → that question replaces the current one at the current level (as «Cambiar pregunta», decision 34); unknown id → short message; strings via `t()`.
+   - Done when: under Steam the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language, `steam.user()` is true with a logged-in user and with the dev switch, false otherwise; under the dev switch «Ir a pregunta…» opens a video question by id, without it the row is absent.
+   - Suggested priority: 690.
+
+4. **Steam Cloud saves and the Steam-user gate** — plan 87
+   - Owner: `plans/18-steam-integration.md` ("Steam features"); save format `plans/12-client-engine.md`.
+   - **One save per Steam user** (a save = a profile; plan 65''s seen counters and selection per profile): `<userData>/save/<steamid64>/game.json`; `TRIVIA_SAVE_DIR` still overrides (D-72). Auto-Cloud only, root `<appData>/trivia/save/{64BitSteamID}`, pattern `game.json`, non-recursive; atomic write leaves only the real file in the pattern.
+   - **Without a valid user:** memory-only save (a `Store` that never writes), a short notice that progress needs Steam (strings via `t()` in every catalog), nothing on disk. `save/local/`, the S3 → `local/` migration and the «Usar el progreso de este equipo» dialog go (already built by plan 87: remove them, D-72 and plan 18 updated). The family''s existing save reaches the desktop through plan 99 (`--import-save`), not through a dialog.
+   - **Flags:** the flag action (icon, key, pad Select, menu entry «Preguntas marcadas») hidden without a valid user; with one, as today (plan 93 builds on it in milestone 11).
+   - Family Sharing: the borrower''s own SteamID → own save and cloud slot.
+   - Test checklist for the gamemaster: play on machine A, quit, start on machine B (Windows ↔ Linux/Deck) → players and seen counts there; two Steam accounts on one OS login → separate saves; a Family Sharing borrower → own save; offline on both then online → conflict dialog behaves; Steam not running → full game, notice shown, no flag action, nothing written.
+   - Suggested priority: 680 (after part 3).
+
+5. **Achievements (SW-11)** — plan 86
+   - Owner: `plans/18-steam-integration.md` ("Steam features").
+   - Few, no grind; exact trigger per engine event; only uncustomized games (decision 19); gamemaster mode earns none (decision 74). Names and descriptions per launch language; list to the gamemaster as a pm decision before icons.
+   - Unlock through part 3''s bridge, only with a valid user; offline unlocks cached by Steam; retroactive unlock from the save optional.
+   - Icons: 64×64 achieved + unachieved, original art (credits, plan 47); setup values in plan 18 for part 2.
+   - Suggested priority: 590.
+
+6. **Media bundle for shipping (SW-9)**
+   - Owner: `plans/18-steam-integration.md` ("Platforms and display" → media size); `plans/23-media-providers.md`.
+   - Build step that turns the approved media cache into the shipped bundle: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; size budget per depot; `trivia-media` (`app/`, no `authoring/` imports) gains the command and a check that fails over budget or on a missing file.
+   - **Split per depot:** base media vs media only a non-base bundle uses (decision 112''s `build/pack-media.json`), so each DLC depot carries its own media.
+   - Same lookup keys as the cache (D-17) so the shell''s media resolver needs no change, or one adapter.
+   - Applies the Freesound answer (plan 42) and the licence rules; `CREDITS.md` lists exactly the shipped files (per installed DLC if credits are split; the plan decides).
+   - Suggested priority: 640 (before part 7).
+
+7. **Builds, depots and upload (SW-10, SW-6)** — plan 89
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
+   - SteamCMD VDFs in the repo (no secrets), `trivia-release-check` and `trivia-steam upload --branch beta` (decision 14, decision 84). Steps that only test the game outside Steam (`nix build .#app` of the browser game, once plan 99 removes it) go from the release check.
+   - **DLC depots (decision 66):** one depot per shipped non-base bundle (`app/data/bundles/<id>/` + its media from part 6), listed in `steam.json` and the app VDF, uploaded with the base build; base depots no longer carry pack files. The game offers a pack when its files are installed (decision 112), no Steam call needed.
+   - Smoke game: runs under Steam (Spacewar or the real App ID) or with the dev switch; no offline-without-Steam start test (decision 39).
+   - `beta` branch: password with the gamemaster, never in git; `default` stays empty until S6.
+   - Suggested priority: 620.
+
+8. **Store page and AI disclosure (PUB-8, LUI-6)** — plan 88
+   - Owner: `plans/17-publishing.md`; `plans/15a-ui-translation.md` (LUI-6).
+   - Texts per launch language: descriptions, feature list (Steam Cloud saves, achievements, controller support; saves need Steam), system requirements (part 7''s builds; decision 90: provisional values), privacy line ("collects nothing, sends nothing"), AI disclosure. Also the store text of each free DLC (part 2). Drafts in a file; the gamemaster approves via pm decision and pastes them in.
+   - **AI disclosure** (with PUB-10''s finding): pre-generated = LLM-drafted questions (checked, edited and approved by a person) and LLM-written code; live-generated = none; no AI-generated art, images, sound or music (people''s work from Wikimedia Commons and other free sources, credited); store art typographic (below). The gamemaster approves the wording.
+   - Capsules: decision 77: typographic template in code («Trivia» wordmark, the game''s fonts and colours), rendered per Valve''s current size list and per store language (also per DLC) by a script; no image generation; disclosed as AI-assisted if Claude designs it. Decision 87: the exe icon comes from the same script.
+   - **Store media, rendered late** (decisions 79, 80): after milestone 9''s UI wording fixes and translations, right before the store page goes to Valve''s review; no renders or approvals before that.
+     - screenshots: 7 per store language, shell at 1920×1080, scripted: 5 on modes and configuration (mode choice, configure screen, bundle selector, joker presets, Customize game), 2 gameplay (locked-in answer, joker in use)
+     - trailer: 20 s of gameplay per store language: questions answered, jokers used, a wrong answer and the loss at the end; a scripted game in the real shell under Xvfb with game audio, recorded with ffmpeg (dev shell only, not shipped, no npm dependency); one command (e.g. `trivia-trailer`), re-runnable after any UI change; the gamemaster approves before upload. Replaces plan 88''s backlog note.
+     - en/de: the 2 question shots and the trailer wait for `pool.en.json` / `pool.de.json`; until then their pages carry the 5 menu shots
+   - Suggested priority: 300.
+
+9. **Content survey, rating and price (PUB-9, PUB-11)**
+   - Owner: `plans/17-publishing.md`.
+   - Survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve.
+   - Price per decision 66: base $9.99 with Valve''s regional matrix and a launch discount (final check here); every DLC free. The gamemaster enters them; result via pm decision.
+   - Suggested priority: 290 (after part 8).
+
+10. **Steam Deck review and Deck test (SW-12)** — plan 90
+    - Owner: `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.
+    - Best effort (decision 125: Steam Deck: best effort, review without a Deck at hand): no real Deck yet. Request Valve''s Deck compatibility review once these are in: 1280×800 fit (plan 46, done), the image peek on image questions (milestone 8), the Gamepad template as Steam Input default (part 2), a `beta` upload (part 7) and the store page if Valve needs it (or note it for S6 if Valve requires release first). No prior real-Deck test.
+    - Criteria table (Valve''s criterion → what the game does) in plan 18 as the basis of the request; Valve''s result and date noted there; `Playable`/`Unsupported` notes → fix tasks in the owning plans, then request again.
+    - Real-Deck checklist (Steam-installed beta: Verified criteria, Cloud sync with a PC, suspend/resume, a DLC installed and uninstalled; builds on plan 48''s rows, no copy) and further Deck tuning: once the gamemaster has a Deck; not a precondition of the review or of this milestone.
+    - Suggested priority: 370.
+
+11. **Beta test and S5 close-out**
+    - Beta test: the gamemaster installs the `beta` branch (and the free DLC) from Steam on a second machine, starts it with the network off (Steam offline mode), the family plays a full game; Cloud carries the save to another machine; with Steam not running the game plays, says progress needs Steam, shows no flag action and writes nothing. Workers write the checklist into plan 18 and record the result (pm decision "S5 beta test passed?"); failures become tasks in the owning parts.
+    - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together) and SW-14 (macOS) deferred with a note; online co-op noted as later (decision 111); 17, 18, 15a statuses; `plans/project.md`, `plans/README.md`; masterplan 11 gets a note if S5 changed S6''s scope.
+    - Deck: the review request and Valve''s result in plan 18 (part 10) count; the real-Deck test doesn''t (decision 125).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 130 (last; below plan 48 at 140).
+
+## Order
+- Part 1 first (App ID, names, terms) → part 2 → parts 3, 4, 7.
+- Part 3 → part 4 (user gate, Cloud) and part 5 (unlocks).
+- Part 6 → part 7 → first `beta` upload → part 10 (review request; also needs part 2''s Gamepad default and milestone 8''s image peek) and part 11.
+- Part 1 (PUB-7, PUB-10) → part 8 → part 9.
+- Part 11 last.
+
+## Out of scope (from the milestone)
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -23398,6 +24182,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (765, 917, '2026-10-13T17:57:51Z', '2026-10-13T17:58:04Z', 'done', NULL, 0, 'a9e9ef439aea233cb51ca526e0def57fa8b2c1d5', 'claude-opus-5-5[1m]', 'b67134ff-f2c7-484d-9acb-2a11164b448b', 4, 8, 844, 120797, 27508, 0.2611354, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (766, 918, '2026-10-13T17:58:04Z', '2026-10-13T17:58:24Z', 'done', NULL, 0, 'daa23093e2fc464945947de7f7f37e7ce62fa7a7', 'claude-opus-5-5[1m]', 'e36b491e-51aa-4546-ab93-20b522e8a071', 4, 8, 1364, 117049, 25817, 0.2572578, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (767, 920, '2026-10-13T17:58:24Z', '2026-10-13T17:58:58Z', 'done', NULL, 0, '28f55cd4a0802c4cfeaed1446d4cf0abcfc33c34', 'claude-opus-5-5[1m]', '86bd6c17-f772-498a-bb7a-55e1f2ca9fe7', 6, 12, 3203, 167439, 22767, 0.27973180000000003, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (768, 913, '2026-10-13T17:58:58Z', '2026-10-13T17:59:31Z', 'done', NULL, 0, '6e08d67affdf4e0e725fa36ecfa85654df653464', 'claude-opus-5-5[1m]', 'ca308be4-2b10-447d-aa26-43f91cd5fcb9', 8, 16, 2941, 289986, 33952, 0.38849720000000004, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
