@@ -6864,17 +6864,25 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:12:46Z', '2026-10-12T01:13:58Z', 10);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (253, 10, 'write plan: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)', 'plan', 'open', 250, NULL, 'Write the plan for part 1 of the masterplan (plan 10): `pm plan add 10 "Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)" --priority 720`.
 
-- Needs OQ-33 (plan 39: task 193 writes the decision "price model and account holder", task 194 records it). Still pending: `pm task-pending-decision <this task> <its id>`, stage nothing, stop. Task priority 250 puts this after task 194 (300).
+- Needs decision 67: Steamworks account holder (OQ-33): person or company? (this task waits on it). Decision 66 (price $9.99, bundles as free DLC) is answered.
 - Read the current `plans/17-publishing.md` (plan 43, S2 close-out, may have rewritten PUB-*).
-- Content: PUB-6 signup checklist for the holder (tax interview, bank, $100 app credit), result via pm decision "Steamworks app created? App ID?"; PUB-7 name/trademark check for D-50''s names (Steam search, EUIPO/USPTO/WIPO, domains), findings in a pm decision, fail → OQ-34 reopens; PUB-10 Anthropic commercial-use terms for `claude -p` outputs, one line + source in plan 17, unclear → decision body for a professional.
-- Gamemaster does signup and payments; workers never enter credentials or contact anyone.
+- Content:
+  - PUB-6: signup checklist for the holder from decision 67 (tax interview, identity, bank, $100 app credit; free DLC needs no app credit); result via pm decision "Steamworks app created? App ID?".
+  - PUB-7: name/trademark check for D-50''s names (Steam store search, EUIPO/USPTO/WIPO, domains); findings in a pm decision; fail → OQ-34 reopens as a new decision, store names wait.
+  - PUB-10: Anthropic commercial-use terms for `claude -p` outputs; one line + source in plan 17; unclear → decision body for a professional.
+- Steam only (decision 111): no rows for selling or running outside Steam.
+- Gamemaster does signup and payments; workers never enter credentials or contact Valve, a lawyer or a tax advisor.
 - Owner `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").', '2026-10-12T01:13:55Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (254, 10, 'write plan: Steamworks app configuration (SW-7)', 'plan', 'open', 240, NULL, 'Write the plan for part 2 of the masterplan (plan 10): `pm plan add 10 "Steamworks app configuration (SW-7)" --priority 700`.
 
-- Needs OQ-31 (plan 37, tasks 189/190), OQ-29 (plan 34, tasks 182/183) and OQ-33 (plan 39, tasks 193/194). Any still pending: `pm task-pending-decision <this task> <its id>` for each, stage nothing, stop.
-- Needs part 1''s plan (App ID decision) and the file-saves plan of milestone 8 (task 210, `FileStore` path); write against them.
-- Content: checklist with exact values in plan 18: App ID, localized names (D-50), depots (Windows, Linux, shared content; language/bundle depots only if milestone 9 or OQ-33 call for them), launch options per OS (incl. plan 36''s mode flag), languages, branches `default` + password-protected `beta`, controller flags, Steam Input default config, Deck settings; Auto-Cloud root/pattern per OS for the `FileStore` file, quota, conflict behaviour; `steam_appid.txt` for dev.
-- Done when (of the plan): gamemaster confirms the values are entered (pm decision).
+- Needs decision 67: Steamworks account holder (this task waits on it) and part 1''s plan (App ID decision); write against them.
+- Read and reuse, don''t duplicate: plan 85 (binding, language, rich presence), plan 86 (achievement values), plan 87 (Auto-Cloud values), plan 89 (depots, decision 84; `steam.json`; decision 89 already asks for App ID, depot IDs, beta branch), plan 88 (store texts; decision 90 asks for requirements, languages, controller flags). Fold their Steamworks values into one checklist; where an open decision already asks the gamemaster, refer to it instead of a second one.
+- Content: checklist with exact values in `plans/18-steam-integration.md`:
+  - App ID, localized names (D-50), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` (empty until S6) + password-protected `beta`, controller support flags, Steam Input default config, Deck settings, achievements (plan 86).
+  - Depots per plan 89 / decision 84 (windows, linux, content) plus **one free DLC app per shipped non-base bundle** (decision 66; decision 112: `app/data/bundles/<id>/` + its media): price free, own depot, optional install, store name per language; the base app lists them. Only bundles milestone 9 ships (e.g. `colombia`).
+  - Steam Cloud: Auto-Cloud root/pattern/quota/conflict note per plan 87 (one save per Steam user, `{64BitSteamID}` folder, `game.json`, non-recursive). `steam_appid.txt` for dev runs.
+- Steam only (decision 111): no values for running outside Steam; no DRM / `restartAppIfNecessary`.
+- Done when (of the plan): gamemaster confirms the values are entered (pm decision); plan 18 holds them.
 - Owner `plans/18-steam-integration.md` ("Builds and depots", "Steam features").', '2026-10-12T01:13:55Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (255, 10, 'write plan: Steamworks binding in the shell (SW-8)', 'plan', 'done', 240, '2026-10-13, pm plan 85 (priority 690); plans/18-steam-integration.md SW-8 pointer', 'Write the plan for part 3 of the masterplan (plan 10): `pm plan add 10 "Steamworks binding in the shell (SW-8)" --priority 690`.
 
@@ -6905,18 +6913,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owner `plans/17-publishing.md` ("Steamworks and store", "AI disclosure"), `plans/15a-ui-translation.md` (LUI-6).', '2026-10-12T01:13:55Z', '2026-10-13T06:05:31Z', 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (259, 10, 'write plan: Content survey, rating and price (PUB-9, PUB-11)', 'plan', 'open', 210, NULL, 'Write the plan for part 9 of the masterplan (plan 10): `pm plan add 10 "Content survey, rating and price (PUB-9, PUB-11)" --priority 290`.
 
-- Needs OQ-33 (plan 39, tasks 193/194: price, DLC). Still pending: `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
-- After part 8''s plan.
-- Content: content survey answers drafted from the game (no violence, gambling, user content; topics that may need a note); IARC per Valve''s current rules; price + regional prices from OQ-33''s D-entry (Valve''s matrix), DLC entries if bundles are paid DLC; gamemaster enters both, result via pm decision.
+- After part 8''s plan (plan 88: Store page and AI disclosure); read it and `plans/17-publishing.md`.
+- Content:
+  - PUB-9: content survey answers drafted from the game (no violence, gambling, user content; topics that may need a note, e.g. history of wars); IARC optional per Valve''s current rules.
+  - PUB-11: price per decision 66: base $9.99, Valve''s regional matrix, launch discount (final check here); every bundle DLC free (DLC entries from part 2, task 254).
+  - Gamemaster enters survey and prices in Steamworks; result via pm decision.
+- Steam only (decision 111).
 - Owner `plans/17-publishing.md`.', '2026-10-12T01:13:56Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (260, 10, 'write plan: Media bundle for shipping (SW-9)', 'plan', 'open', 190, NULL, 'Write the plan for part 6 of the masterplan (plan 10): `pm plan add 10 "Media bundle for shipping (SW-9)" --priority 640`.
 
-- Needs the Freesound answer (plan 42, tasks 204/205; OQ number per task 203). Still pending: `pm task-pending-decision <this task> <its id>`, stage nothing, stop. Task priority 190 puts this after task 205 (200).
-- Needs licence data (plan 26) and the shell''s media resolver (task 209''s plan); write against them.
-- Content: `trivia-media` (`app/`, no `authoring/` imports) gains a bundle command: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; same lookup keys as the cache (D-17) or one adapter; size budget per depot and a check that fails over budget or on a missing file; Freesound rule applied; `CREDITS.md` lists exactly the shipped files.
-- Owner `plans/18-steam-integration.md` ("Platforms and display"), `plans/23-media-providers.md`.
-
-- Plan 89 (Builds, depots and upload): the content depot reads `app/desktop/build/media/` (what `stage-media.mjs` writes); write the bundle there (same keys), and wire the bundle''s budget/missing-file check into `trivia-release-check` (plan 89 step 5).', '2026-10-12T01:13:56Z', NULL, 252);
+- Needs decision 82: Freesound API for a paid Steam release (OQ-45) (this task waits on it).
+- Needs licence data (plan 26) and the shell''s media resolver; write against them.
+- Content: `trivia-media` (`app/`, no `authoring/` imports) gains a bundle command: images ≤ 3840 px wide (D-48), WebP/AVIF, < 1 MB target; audio → Opus; video re-encoded; same lookup keys as the cache (D-17) or one adapter; size budget per depot and a check that fails over budget or on a missing file; Freesound answer applied; `CREDITS.md` lists exactly the shipped files (the plan decides whether credits split per installed DLC).
+- **Split per depot** (decision 66: bundles as free DLC; decision 112: pack layout): base media vs media only a non-base bundle uses (`build/pack-media.json`), so each DLC depot carries its own media.
+- Plan 89 (Builds, depots and upload): the content depot reads `app/desktop/build/media/` (what `stage-media.mjs` writes); write the bundle there (same keys), DLC media where plan 89''s DLC depots read it, and wire the budget/missing-file check into `trivia-release-check` (plan 89 step 5).
+- Owner `plans/18-steam-integration.md` ("Platforms and display"), `plans/23-media-providers.md`.', '2026-10-12T01:13:56Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (261, 10, 'write plan: Builds, depots and upload (SW-10, SW-6)', 'plan', 'done', 180, '2026-10-13, plan 89; plans/18-steam-integration.md (SW-6/SW-10 pointers); decision 84; task 260 body note', 'Write the plan for part 7 of the masterplan (plan 10): `pm plan add 10 "Builds, depots and upload (SW-10, SW-6)" --priority 620`.
 
 - Builds on milestone 8''s local builds (plan 56) and part 6''s media bundle; write against them.
@@ -6930,8 +6941,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owner `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.', '2026-10-12T01:13:56Z', '2026-10-13T08:19:30Z', 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (263, 10, 'write plan: Beta test and S5 close-out', 'plan', 'open', 170, NULL, 'Write the plan for part 11 of the masterplan (plan 10): `pm plan add 10 "Beta test and S5 close-out" --priority 130`.
 
-- Last part; write it after the other parts'' plans exist (or were dropped).
-- Content: beta checklist in plan 18 (install `beta` from Steam on a second machine, offline start, a full family game, Cloud to another machine), result via pm decision "S5 beta test passed?", failures → tasks in the owning parts; `plans/11-steam.md` S5 row done; SW-13, SW-14 marked deferred with a note; statuses in 17, 18, 15a, 14; `plans/project.md`, `plans/README.md`; note in plan 11 (masterplan of milestone 11) if S5 changed S6''s scope.', '2026-10-12T01:13:56Z', NULL, 252);
+- Last part; write it after the other parts'' plans exist (or were dropped). Waits on decision 67 and decision 82.
+- Beta checklist in `plans/18-steam-integration.md` (builds on plans 87, 89, 90 test rows; no copies):
+  - gamemaster installs the `beta` branch and the free DLC (decision 66) from Steam on a second machine, starts with the network off (Steam offline mode), the family plays a full game; this is also the clean-machine start test (decision 39)
+  - Cloud carries the save to another machine (one save per Steam user)
+  - Steam not running / no valid user (decision 111): full game, notice that progress needs Steam, no flag action, nothing written
+- Result via pm decision "S5 beta test passed?"; failures → tasks in the owning parts.
+- Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together), SW-14 (macOS) deferred with a note; online co-op later (decision 111); statuses in 17, 18, 15a, 14; `plans/project.md`, `plans/README.md`; note in plan 11 (masterplan of milestone 11) if S5 changed S6''s scope.
+- Done when (of the plan): the milestone''s "Done when" holds.', '2026-10-12T01:13:56Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (264, 11, 'create tasks for plan 11', 'split', 'done', 1000, '2026-10-11, tasks 265–271 (plan-writing for parts 2, 3, 5, 1, 4, 6, 7); priorities 165–130 put them after milestone 10''s plan tasks; no new decisions (parts raise their own: coming-soon date, report channel, cadence, released)', 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:15:13Z', '2026-10-12T01:16:15Z', 11);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (265, 11, 'write plan: Version numbers and patch-safe saves', 'plan', 'done', 165, '2026-10-13, plan 91 (tasks.sql); decisions 91, 92', 'Write the plan for part 2 of the masterplan (plan 11): `pm plan add 11 "Version numbers and patch-safe saves" --priority 600`.
@@ -14774,8 +14791,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Open task bodies that aren''t running: `pm task set <id> --body -`. A running/closed task, or a plan needing new work: a follow-up task in the owning plan (`pm task add`). Don''t edit plan bodies just for wording if that would requeue splits needlessly; prefer task bodies or a follow-up task.
 - Candidates (2026-10-13): tasks 200 (plan 40), 591, 741, 744 (plans 82/83; 741''s parity check loses its Python side), 652 (plan 85), 699, 700 (plan 93), 710 (plan 95), 719 (plan 97); plans 85, 87 (imported family save, dev switch), 89 (builds, depots), 91, 92, 96, 98, 30 (pending decision 50: play-test in the browser → on `trivia-desktop` or the dev server; a task in plan 30 if needed). Plan 48 is handled by task 756.
 - Done when: no open task body or pending decision tells a worker or the gamemaster to use the removed commands/endpoints; list what changed in the done note.', '2026-10-13T15:19:48Z', NULL, 759);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (768, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:21:16Z', NULL, 754);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (768, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: open plan tasks 253, 254, 259, 260, 263 aligned with revised plan 10 (decision 111 Steam only, valid-user gate, free DLC depots per decision 66/112); plans 85-90 get revise tasks 769-774', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:21:16Z', '2026-10-13T15:22:16Z', 754);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (769, 85, 'revise plan 85', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -17398,6 +17415,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (666, 761, '2026-10-13T15:18:43Z', '2026-10-13T15:19:00Z', 'done', NULL, 0, 'a7b5e0ac60e14b3f3996855317e2d1b9e67177bf', 'claude-opus-5-5[1m]', 'f0554183-d6a6-4a14-a15d-a87bc8b7ee49', 3, 6, 910, 78463, 27695, 0.2554766, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (667, 759, '2026-10-13T15:19:00Z', '2026-10-13T15:20:03Z', 'done', NULL, 0, '6c7a588520c61867e4c98728b1306f04b670e24f', 'claude-opus-5-5[1m]', 'f2a31e20-27f3-4a0c-b040-fc87238f901d', 6, 12, 6336, 213122, 37426, 0.4688004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (668, 754, '2026-10-13T15:20:03Z', '2026-10-13T15:21:26Z', 'done', NULL, 0, '0814642bb9b527f2be0cb61f525360726244b82c', 'claude-opus-5-5[1m]', '9e835dd1-1c92-47fa-b137-461fb490eff7', 7, 14, 8710, 323625, 56738, 0.692885, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (669, 768, '2026-10-13T15:21:27Z', '2026-10-13T15:22:23Z', 'done', NULL, 0, '3ec68f014c7991be7b54dc18961fd832fc9571f1', 'claude-opus-5-5[1m]', 'b9671991-ca65-4a22-a7a9-eb40536a4847', 8, 16, 5296, 314317, 41725, 0.5026474, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
