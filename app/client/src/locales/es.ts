@@ -66,13 +66,7 @@ const es = {
     media: "Audio y video de las preguntas",
     muted: "Sonido: apagado",
     unmuted: "Sonido: encendido",
-    jokers: "Comodines",
     budget: "Comodines de esta partida",
-    /** «Comodines: <b>{preset}</b>». */
-    preset: "Comodines:",
-    unlimited: "Sin límite",
-    cards: "Como las cartas",
-    custom: "A medida",
     less: "menos",
     more: "más",
     /** Followed by the ←/→ keys. */

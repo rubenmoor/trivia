@@ -4,7 +4,7 @@
   // the cheats apart (skip, block, undo, replace, jump to level, difficulty and bundles, jokers left).
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
   // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
-  import { CARDS, fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api.ts";
+  import { fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api.ts";
   import { desktop } from "../lib/desktop.ts";
   import { flush } from "../lib/engine.ts";
   import { endonym, t } from "../lib/i18n.ts";
@@ -28,7 +28,6 @@
     confirm?: boolean;
     volume?: Channel;
     joker?: JokerName;
-    preset?: boolean;
     lang?: LangKind;
     /** «Cambiar pregunta»: ←/→ toggles seen. */
     replace?: boolean;
@@ -155,15 +154,6 @@
     onbudget(change);
   }
 
-  const unlimited = $derived(!!current && TOKENS.every((t) => current![t.name] === null));
-  const cards = $derived(!!current && TOKENS.every((t) => current![t.name] === CARDS[t.name]));
-  const presetLabel = $derived(t(unlimited ? "overlay.unlimited" : cards ? "overlay.cards" : "overlay.custom"));
-
-  /** Sin límite ↔ Como las cartas; a custom budget goes back to unlimited. */
-  function cyclePreset() {
-    setBudget(unlimited ? CARDS : Object.fromEntries(TOKENS.map((t) => [t.name, null])));
-  }
-
   /** Uses left of a joker, null = unlimited. */
   function leftOf(name: JokerName): number | null {
     const limit = current?.[name];
@@ -273,7 +263,6 @@
       : []),
     ...(cheats && budget
       ? [
-          { label: t("overlay.jokers"), enabled: canBudget, run: cyclePreset, preset: true, col: 2 as const },
           ...TOKENS.map((t) => ({ label: t.label, enabled: !!used && canBudget, run: () => {}, joker: t.name, col: 2 as const })),
         ]
       : []),
@@ -318,7 +307,6 @@
       confirming = null;
     } else if (by && item.volume) change(item.volume, by * STEP);
     else if (by && item.joker) stepJoker(item.joker, by);
-    else if (by && item.preset) cyclePreset();
     else if (by && item.lang) stepLang(item.lang, by);
     else if (by && item.replace && item.enabled) seen = !seen;
     else if (by && item.level && item.enabled) stepLevel(by);
@@ -406,11 +394,7 @@
       onclick={() => activate(i)}
       onmouseenter={() => item.enabled && (selected = i)}
     >
-      {#if item.preset}
-        {t("overlay.preset")} <b>{presetLabel}</b>
-      {:else}
-        {confirming === i ? t("overlay.confirm") : item.label}
-      {/if}
+      {confirming === i ? t("overlay.confirm") : item.label}
     </button>
   {/if}
 {/snippet}

@@ -176,4 +176,4 @@ export async function setLanguage(language: Language): Promise<Language> {
 }
 
 /** Choice limits and defaults for the configure screen and overlay (engine/choice.ts). */
-export { BUILT_MODES, CARDS, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";
+export { BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";

@@ -7,8 +7,6 @@ import type { EngineData, GameState } from "./state.ts";
 import { GameError } from "./state.ts";
 
 export const JOKERS: readonly JokerName[] = ["hint", "skip", "easier", "category", "snipe"];
-/** «Como las cartas»: the printed card set (JK-11), for the overlay's preset (MD-4). */
-export const CARDS: JokerBudget = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
 /** Standard joker set of every non-gamemaster game (13, "Implementation notes"). */
 export const STANDARD_JOKERS: JokerBudget = { hint: 3, skip: 1, easier: 1, category: 1, snipe: 1 };
 

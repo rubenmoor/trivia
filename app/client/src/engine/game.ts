@@ -12,7 +12,7 @@ import { GameError, SPANISH, UNLIMITED, gameLocale, newest, nextId, transact, tr
 
 export { GameError, UNLIMITED };
 export {
-  CARDS, CARDS_MAX, CHOICE_KEYS, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS, defaultChoice, gameChoice,
+  CARDS_MAX, CHOICE_KEYS, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS, defaultChoice, gameChoice,
   rangesFor, resolveChoice,
 } from "./choice.ts";
 
