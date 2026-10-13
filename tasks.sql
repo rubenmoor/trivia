@@ -4638,13 +4638,18 @@ Steps in order, each ✓/✗ with time; report `work/steam/<tag-or-sha>/release-
 - `trivia-release-check` runs steps 1–7 and fails on any ✗; `trivia-steam upload --branch beta` uploads a clean tagged commit''s three depots plus one DLC depot per shipped pack; `default` can''t be set from the repo.
 - The first beta build is on Steam (task 7''s decision), SW-6 and SW-10 `[x]` in plan 18.
 - No secrets in git; SteamCMD output only under `work/` or SteamCMD''s home; `trivia-desktop-build` without `--dir` behaves as before; the smoke game runs under the dev switch, no checks of the game outside Steam (decision 111).', '2026-10-13T06:52:57Z', 261);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (90, 10, 'Steam Deck test and Deck Verified (SW-12)', 370, 'Part 10 of masterplan 10 (SW-12). The Steam-installed `beta` build gets a checklist test on a real Steam Deck, against Valve''s current Deck Verified criteria plus Cloud sync with a PC and suspend/resume; the gamemaster runs it and reports through a pm decision. Then the Deck compatibility review is requested from Valve, or noted for S6 if Valve only reviews after release / coming soon. Docs and pm only; no code: failures become fix tasks. Workers own no Deck and never tick a row themselves.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (90, 10, 'Steam Deck test and Deck Verified (SW-12)', 370, 'Part 10 of masterplan 10 (SW-12). The Steam-installed `beta` build gets a checklist test on a real Steam Deck, against Valve''s current Deck Verified criteria plus Cloud sync with a PC, suspend/resume and a free DLC installed and uninstalled; the gamemaster runs it and reports through a pm decision. Then, once the store page exists, the Deck compatibility review is requested from Valve, or noted for S6 if Valve only reviews after release / coming soon. Docs and pm only; no code: failures become fix tasks. Workers own no Deck and never tick a row themselves.
+
+## Binding
+- decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy: only the Steam-launched build; no "without Steam" rows. The Deck runs logged in, so a valid Steam user (`steam.available`, non-zero SteamID) is the normal case: saves persist, flag action shown, no "progress needs Steam" notice.
+- decision 66: Price model (OQ-33): bundles are free DLC with optional install; decision 112: Pack layout: a pool file per bundle (optional install): a pack is offered only when its files are installed.
 
 ## Depends on (guard at the start of each task)
 - First `beta` upload recorded: `task 682: Record the first beta upload` done (decision 89 answered). Without a Steam-installed build the test can''t run.
 - SW-8 checked: `task 652: SW-8 close-out: gamemaster check and docs` (decision 72). Its Deck rows (floating keyboard, glyphs) are prerequisites here, not repeated.
 - Cloud test of plan 87 (`Steam Cloud test` section in `plans/18-steam-integration.md`, decision 75): if not yet run, the Deck can be its machine B; the Deck rows below refer to it, don''t copy it.
 - Plan 48''s S3 Deck rows ("S3 platform test" in plan 18, `task 238`/`task 236`): non-Steam-game install with built-in controls. This plan repeats nothing that S3 checked; it adds what only the Steam install has (launch through Steam, Steam Input default config, floating keyboard, Cloud, Deck review). If plan 48''s Deck table isn''t filled yet, link it and let the gamemaster fill both in one sitting.
+- DLC depots (plan 89, decision 66): the `beta` upload carries at least one free DLC depot if milestone 9 ships a non-base bundle; if none ships yet, the DLC row is n/a with that reason.
 - Achievements (plan 86): if unlocks are wired at test time, one row (toast shows on the Deck); else skipped with that reason.
 - Guard: if a prerequisite waits on a pending decision, `pm task-pending-decision <this task> <that decision>`; if it''s just open, stop without changes and say so.
 
@@ -4673,8 +4678,10 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
      - A full game to level 12 or a loss; image, audio and video questions; music and sounds.
      - Text legible at arm''s length; nothing cut off; credits screen scrolls.
      - Suspend (power button) mid-question → resume: game continues, sound back, pad works; same during a video.
+     - Valid user: no "progress needs Steam" notice; flag action present (icon, pad Select).
      - Steam button → Exit game → relaunch: save intact (players, seen counts).
-     - Airplane mode: launch and play a few questions offline.
+     - Free DLC: install it (game''s Properties → DLC) → relaunch → its pack offered and playable (a question from it with media); uninstall → relaunch → pack no longer offered, stored choice falls back to defaults, no error, base game plays.
+     - Airplane mode (Steam offline mode): launch and play a few questions; save still written.
      - Cloud: play on the Deck → PC shows the same players and seen counts, and back (refer to plan 87''s table rows; fill there if not yet done).
      - Optional: achievements toast (plan 86); Proton row (Windows build forced: starts, overlay Shift-equivalent via Steam button, save syncs with the native one).
      - Battery/heat note: rough drain over 30 min (info only, no pass/fail).
@@ -4686,6 +4693,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - A finding that settles something (e.g. "Deck stays native Linux", "Proton needed for the keyboard") → D-entry in `plans/decisions.md` + `pm decision record`.
    - Done when: every non-optional row ✓.
 3. **Request the Deck review (or defer to S6) and docs**
+   - Extra guard: the store page exists (plan 88: Store page and AI disclosure, its texts pasted in per its decision); if not, pending on that decision or stop as in the guard above.
    - If Valve reviews before release with our setup (beta branch or no live `default` needed): `pm decision add "Deck compatibility review requested? Result?"` with the exact steps (Steamworks app → Steam Deck Compatibility → request; branch and password if asked; what to paste from the criteria table), options `Verified`, `Playable (Valve''s notes)`, `Unsupported (notes)`, `not yet reviewed`; pending on it. On `Playable`/`Unsupported`: per Valve note a fix task (owning plan as in task 2), then request again; Valve''s result and date in plan 18.
    - If only after release or coming-soon: no request now; `plans/11-steam.md` ST-4 gains "request Deck review (SW-12), Valve''s timing: …"; masterplan 11 (plan 11) gets a dated note via `pm plan edit 11 --body -` only if it''s written and doesn''t list it.
    - Docs: plan 18 SW-12 `[x]` (review result, or "test passed; review in S6" with reason); `plans/14-input.md` Steam Deck line (real-Deck result); `plans/project.md` in sync.
@@ -15415,7 +15423,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:33:51Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (774, 90, 'revise plan 90', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (774, 90, 'revise plan 90', 'plan', 'done', 1000, '2026-10-13, plan 90 body: DLC install/uninstall row, valid-user row, review after store page (decision 111, 66, 112)', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
 (`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -15535,7 +15543,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 - Part 11 last.
 
 ## Out of scope (from the milestone)
-- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', NULL, 754);
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:35:22Z', 754);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (775, 85, 'create tasks for plan 85', 'split', 'done', 1000, '2026-10-13, tasks 776 (new), 650, 652, 762 amended; decision 113 replaces 72 (tasks 652, 685–687 wait on it)', 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:23:25Z', '2026-10-13T15:25:16Z', 769);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (776, 85, 'Valid Steam user check and dev switch (TRIVIA_DEV_STEAM_USER)', 'work', 'open', NULL, NULL, 'Plan 85 task 9 (decision 111: Steam only: no effort outside Steam). Runs before plan 87''s save gate and the flag UI (plan 93), which read only `validUser`. No consumers here.
@@ -15621,6 +15629,8 @@ Work:
   - `MANUAL` rows in line with decision 111 (no "without Steam" rows): `offline` → "beta install from Steam, network off (Steam offline mode): full game to level 12 or a won checkpoint" (content-only variant likewise, level 3); no row says "Steam not running". Other rows already say "from Steam (beta)".
 - `plans/18-steam-integration.md` "Builds and depots": the smoke row says it runs under `TRIVIA_DEV_STEAM_USER=1`, network off; no start test without Steam and without the switch (decision 39).
 - Check: `node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked` passes (build with `trivia-desktop-build --dir` first); a throw-away run with the switch removed fails at the resume step (not a release-check row, don''t keep it). Per-commit checks pass.', '2026-10-13T15:34:31Z', NULL, 785);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (787, 90, 'create tasks for plan 90', 'split', 'open', 1000, NULL, 'Split plan 90 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:35:19Z', NULL, 774);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -17557,6 +17567,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (677, 782, '2026-10-13T15:30:59Z', '2026-10-13T15:32:51Z', 'done', NULL, 0, 'dcb92b5d2cc3818451d06a10508919fa207f9122', 'claude-opus-5-5[1m]', '6cc21f27-4452-4012-b220-06e2c997535f', 18, 36, 10937, 928385, 56126, 0.853569, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (678, 773, '2026-10-13T15:32:51Z', '2026-10-13T15:33:58Z', 'done', NULL, 0, '7c36ba35112eb5a73f26f1f56be98bf72413007f', 'claude-opus-5-5[1m]', '646118d9-2f5b-470a-8fc8-59b813b0d81a', 10, 20, 6333, 443158, 52344, 0.6341236, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (679, 785, '2026-10-13T15:33:59Z', '2026-10-13T15:34:54Z', 'done', NULL, 0, '8f7ac7535b208ead6e4a5bc5802268b8b39812b3', 'claude-opus-5-5[1m]', '0cae5ebb-368e-4c5f-8c4b-16f1c986b89c', 11, 22, 5152, 446059, 43553, 0.5407638, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (680, 774, '2026-10-13T15:34:54Z', '2026-10-13T15:35:30Z', 'done', NULL, 0, '461ec6368acc18e04e848c052ab3035cad6164a1', 'claude-opus-5-5[1m]', '7feecfe7-320d-4b7e-9434-c927bd7c7f45', 6, 12, 3213, 208087, 33090, 0.3706454, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
