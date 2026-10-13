@@ -91,7 +91,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine. *Plan: pm plan 56 (Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`, start-test checklist).*
 - [ ] SW-6 Local CI: per-commit checks (AGENTS.md) and a release check before every Steam upload ("Builds and depots"); no GitHub Actions. *Moved to S5 (pm decision 14, D-73); per-commit checks in AGENTS.md since 2026-10-12; release check: pm plan 10 part 7 (task 261).*
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
-- [ ] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam.
+- [ ] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam. *Plan: pm plan 85 (bridge `window.trivia.steam`, Steam language → `guessTag()`, overlay spike, on-screen keyboard, `GetInputTypeForHandle` glyphs, packaging); achievements: SW-11.*
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.
 - [ ] SW-10 SteamCMD upload script; build account; beta branch.
 - [ ] SW-11 Achievements: list, icons, Steamworks setup.
