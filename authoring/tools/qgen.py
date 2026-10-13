@@ -1000,7 +1000,7 @@ def tmp_ids(d):
     return {v: k for k, v in load_json(d / "ids.json", {}).items()}
 
 
-GROUP_SIZE = 10  # questions per rate/revise call (PE-1, PE-2)
+GROUP_SIZE = 10  # questions per rate/revise/fix call and per imported or revised draft file (PE-1, PE-2)
 
 
 def grouped(files, size=GROUP_SIZE):
@@ -1029,12 +1029,12 @@ def rate_candidates(d):
     locale = run_locale(d)
     others = ([t for t in translations.load(locale)["questions"] if t["status"] == "approved"] if locale
               else [q for q in load_json(POOL)["questions"] if q["status"] != "rejected"])
-    out = {}
+    out, cache = {}, {}
     for _, qs in sorted(drafts(d), key=lambda f: (f[0].startswith("revised-"), f[0])):
         for q in qs:
             out[q["tmp_id"]] = [{"id": p.get("id") or p["tmp_id"], "question": p["question"], "answer": p["answer"],
                                  "concept": p.get("concept")}
-                                for p, _, _ in overlap_candidates(q, others)
+                                for p, _, _ in overlap_candidates(q, others, cache)
                                 if (p.get("id") or p["tmp_id"]) != q["tmp_id"]]
             others.append(q)
     return out
@@ -1080,15 +1080,19 @@ def cmd_factcheck(args):
     todo = []
     for name, qs in drafts(d):
         need = [q for q in qs if needs_check(q) and q["tmp_id"] not in done]
-        if need and not (d / "factchecks" / f"{name}.json").exists():
+        if need:
             todo.append((name, need))
 
     def work(item):
         name, qs = item
         user = f"## Questions ({language})\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
         out = claude(system, user, FACT_SCHEMA, args.model, d, web=True)
-        save_json(d / "factchecks" / f"{name}.json", {c["id"]: c for c in out["checks"]})
+        f = d / "factchecks" / f"{name}.json"
+        save_json(f, {**load_json(f, {}), **{c["id"]: c for c in out["checks"]}})  # a rerun asks only the missing
         progress.detail(f"  factcheck: {name}: " + ", ".join(c["verdict"] for c in out["checks"]))
+        missing = {q["tmp_id"] for q in qs} - {c["id"] for c in out["checks"]}
+        if missing:
+            raise RuntimeError(f"no fact-check for {', '.join(sorted(missing))}")
 
     return parallel(work, todo, args.jobs, "factcheck", "calls")
 
@@ -1120,12 +1124,9 @@ def stem(text):
     return " ".join(re.sub(r"e$", "", re.sub(r"s$", "", w)) if len(w) > 3 else w for w in norm(text).split())
 
 
-_KEYS = {}  # id(q) → (q, keys): the report compares every pair
-
-
-def _overlap_keys(q, cache=_KEYS):
-    k = cache.get(id(q))
-    if k is None or k[0] is not q:
+def _overlap_keys(q, cache):
+    k = cache.get(id(q))  # id(q) → (q, keys); holding q keeps its id unique
+    if k is None:
         keys = [t for t in (q["answer"], q.get("concept")) if t]
         keys = [t for t in keys if not re.search(r"\d", t) and norm(t) not in {"si", "no"}]
         k = cache[id(q)] = (q, {
@@ -1136,15 +1137,15 @@ def _overlap_keys(q, cache=_KEYS):
     return k[1]
 
 
-def overlap_candidates(q, others, cap=8):
+def overlap_candidates(q, others, cache, cap=8):
     """[(other, why, rank)] for B-5 (plan 15): questions that may ask the same fact as q, closest first.
     Rank 0 same answer, 1 similar answer, 2 stem-equal concept or answer, 3 one's concept/answer in
     the other's text. Answers with digits and yes/no only match through the concept."""
-    a, found = _overlap_keys(q), []
+    a, found = _overlap_keys(q, cache), []
     for p in others:
         if p is q:
             continue
-        b, why, rank = _overlap_keys(p), None, 9
+        b, why, rank = _overlap_keys(p, cache), None, 9
         if a["answer"] and b["answer"]:
             if a["answer"] == b["answer"]:
                 why, rank = "same answer", 0
@@ -1223,7 +1224,7 @@ def cmd_merge(args):
                 reason = "hard fail: " + ", ".join(f"{k} {r.get(k, '-')}" for k in HARD_CRITERIA)
             elif c and c["verdict"] == "wrong": reason = f"fact-check wrong: {c['problem']}"
             elif soft_score(r) < args.min_score: reason = f"soft score {soft_score(r):.2f} < {args.min_score}"
-            else: reason = duplicates(q, pool) and "duplicate " + duplicates(q, pool)
+            else: reason = (dup := duplicates(q, pool)) and "duplicate " + dup
             if reason:
                 if not reason.startswith("not "):
                     dropped.append({"tmp_id": tid, "reason": reason, "question": q["question"], "answer": q["answer"]})
@@ -1258,10 +1259,6 @@ REVISABLE = ["difficulty", "description", "question", "answer", "wrong_answers",
              "needs_media", "background"]
 
 
-def save_pool(data):
-    save_json(POOL, data)
-
-
 def cmd_import(args):
     """Copy a batch's draft/needs_work pool questions into work/<run>/drafts/ for rate/factcheck/revise."""
     d = run_dir(args)
@@ -1272,7 +1269,7 @@ def cmd_import(args):
             if q.get("batch") is None:
                 q["batch"] = args.batch
                 n += 1
-        save_pool(data)
+        save_json(POOL, data)
         print(f"assigned batch {args.batch!r} to {n} question(s) without a batch")
     qs = [q for q in data["questions"] if q.get("batch") == args.batch and q["status"] in ("draft", "needs_work")]
     work = []
@@ -1286,10 +1283,11 @@ def cmd_import(args):
                  background_query=(q.get("background") or {}).get("query", ""),
                  feedback=(q.get("review") or {}).get("feedback") if q["status"] == "needs_work" else None)
         work.append(w)
-    for i in range(0, len(work), 10):
-        save_json(d / "drafts" / f"chunk-{i // 10 + 1:02d}.json", {"questions": work[i:i + 10], "skipped": []})
+    files = chunks(work)
+    for i, qs in enumerate(files, 1):
+        save_json(d / "drafts" / f"chunk-{i:02d}.json", {"questions": qs, "skipped": []})
     save_json(d / "run.json", {"source": "pool", "batch": args.batch})
-    print(f"imported {len(work)} question(s) into {len(range(0, len(work), 10))} chunk(s)")
+    print(f"imported {len(work)} question(s) into {len(files)} chunk(s)")
 
 
 DIFFICULTY_GAP = 3  # rater on 1–15: mean |diff| 1.5 at 10–15 (task 30), so only big gaps count
@@ -1423,8 +1421,8 @@ def cmd_apply(args):
             q["revision"] = {"action": "drop", "reason": rev["reason"], "previous": {}, "revised_on": today}
         else:
             new = rev["question"]
-            if check_question_shape(new):
-                print(f"  {qid}: revision malformed ({'; '.join(check_question_shape(new))}), skipped")
+            if bad := check_question_shape(new):
+                print(f"  {qid}: revision malformed ({'; '.join(bad)}), skipped")
                 counts["malformed"] += 1
                 continue
             revise_in_pool(q, new, rev["reason"], today)
@@ -1432,7 +1430,7 @@ def cmd_apply(args):
             q["status"], q["review"] = "draft", None
         counts[rev["action"]] += 1
         applied.add(qid)
-    save_pool(data)
+    save_json(POOL, data)
     save_json(d / "applied.json", sorted(applied))
     print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
           + f". Next: trivia-media fetch --batch {cfg['batch']}")
@@ -1459,8 +1457,8 @@ def apply_to_drafts(d, revisions, applied):
                 rest.append(q)
                 continue
             new = rev["question"]
-            if check_question_shape(new):
-                print(f"  {q['tmp_id']}: revision malformed ({'; '.join(check_question_shape(new))}), kept old")
+            if bad := check_question_shape(new):
+                print(f"  {q['tmp_id']}: revision malformed ({'; '.join(bad)}), kept old")
                 counts["malformed"] += 1
                 rest.append(q)
                 continue
@@ -1487,8 +1485,8 @@ def apply_to_drafts(d, revisions, applied):
         print(f"  kept {len(kept_checks)} confirmed fact-check(s): the revision changed no facts")
     if moved:
         n = len(list((d / "drafts").glob("revised-*.json"))) + 1
-        for i in range(0, len(moved), 10):
-            save_json(d / "drafts" / f"revised-{n:02d}-{i // 10 + 1}.json", {"questions": moved[i:i + 10], "skipped": []})
+        for i, qs in enumerate(chunks(moved), 1):
+            save_json(d / "drafts" / f"revised-{n:02d}-{i}.json", {"questions": qs, "skipped": []})
     save_json(d / "applied.json", sorted(applied))
     print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
           + ". Next: rate and factcheck (revised drafts only), then merge")
@@ -1660,9 +1658,9 @@ def report_calibration(runs):
 
 def report_overlaps():
     """Overlap candidates among approved questions (plan 15), for cleanup in the review tool. No LLM."""
-    pool = [q for q in load_json(POOL)["questions"] if q["status"] == "approved"]
+    pool, cache = [q for q in load_json(POOL)["questions"] if q["status"] == "approved"], {}
     pairs = sorted(((rank, p["id"], q["id"], p, q, why) for i, q in enumerate(pool)
-                    for p, why, rank in overlap_candidates(q, pool[:i])), key=lambda x: x[:3])
+                    for p, why, rank in overlap_candidates(q, pool[:i], cache)), key=lambda x: x[:3])
     print(f"{len(pairs)} overlap candidate pair(s) among {len(pool)} approved questions, strongest first:")
     for *_, p, q, why in pairs:
         print(f"  {p['id']} / {q['id']}  {why}: {p['answer']} | {q['answer']}\n"
