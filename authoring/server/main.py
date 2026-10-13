@@ -22,16 +22,29 @@ API:
                                                    audit=flagged its audited ones with a major finding, plan 16;
          &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57;
          &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53)
+    GET  /api/questions?locale=en&stale=1          locale (translations.LOCALES; es or absent = the above): one item per
+                                                   entry of questions.<locale>.json, the source with the translation's
+                                                   text, difficulty(_original), status, batch, review laid over it, plus
+                                                   source (Spanish text, difficulty, status), stale, locale; batch, status,
+                                                   reviewer, sample, audit filter the translation (audit: its own,
+                                                   work/<batch>/audit/<id>.json), bundle, subcategory, media, licence the
+                                                   source; stale=1 only stale ones (plan 67)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
     POST /api/questions/<id>/difficulty            body {"difficulty": 1-15 (D-38)}; the first change keeps
                                                    the old value in difficulty_original
+                                                   review and difficulty take "locale": the translation instead, in
+                                                   questions.<locale>.json, re-exporting pool.<locale>.json (plan 67)
+    POST /api/questions/<id>/translatable          body {"translatable": bool}: the source's flag (false = doesn't travel);
+                                                   false rejects its non-rejected translations ("no viaja"); "locale" in
+                                                   the body only picks the item returned (plan 67)
     POST /api/questions/<id>/bundle                body {"bundle": "<id>"}: move it to another bundle
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ..., "all": bool}: new search term,
                                                    fetch again; all: ask every provider (a licence replacement)
+                                                   (bundle, media, media/search refuse a "locale": 400)
     GET  /api/spot-checks                          {"size": n, "problems": [...], "checks": authoring/data/spot-checks.json}
     POST /api/spot-checks/<batch>/<id>             body {"media_changed": bool}: record the spot check from the
                                                    question's human review; {"undo": true} removes it (plan 16);
@@ -64,9 +77,10 @@ import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
-from qgen import PROBLEMS, is_major  # noqa: E402  (authoring/tools/qgen.py)
+from qgen import PROBLEMS, is_major, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 import targets  # noqa: E402  (authoring/tools/targets.py)
+import translations  # noqa: E402  (authoring/tools/translations.py)
 
 download.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
 
@@ -100,12 +114,86 @@ def update_question(qid, change):
     raise KeyError(qid)
 
 
+def update_translation(locale):
+    """update_question for questions.<locale>.json; re-exports pool.<locale>.json (plan 67)."""
+    def update(qid, change):
+        with _lock:
+            doc = translations.load(locale)
+            for t in doc["questions"]:
+                if t["id"] == qid:
+                    change(t)
+                    translations.save(locale, doc)
+                    text = translations.export_text(locale, load_pool())
+                    layout.LOCALE_POOL(locale).write_text(text, encoding="utf-8")
+                    return t
+        raise KeyError(qid)
+    return update
+
+
+def locale_of(value):
+    """A translation locale, or None for Spanish (es or absent)."""
+    if value in (None, "", "es"):
+        return None
+    if value not in translations.LOCALES:
+        raise ValueError(f"unknown locale {value!r}")
+    return value
+
+
 def with_extras(q):
     found = media.load_candidates(q["id"])
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
             "background_candidates": bg["candidates"] if bg else None, "audit": spot_checks.audit_of(q) or None,
             "licence": media.licence_of(q)}
+
+
+def locale_item(t, q, locale):
+    """The source with the translation laid over it, plus the Spanish side (plan 67)."""
+    own = {k: v for k, v in t.items() if k != "source_hash"}
+    return {**with_extras(q), "difficulty_original": None, "review": None, "batch": None, **own,
+            "audit": translation_audit_of(t), "locale": locale, "stale": translations.is_stale(t, q),
+            "source": {k: q.get(k) for k in [*translations.TEXT_FIELDS, "difficulty", "status"]}}
+
+
+def item_of(qid, locale):
+    """What a POST returns: the question, or with a locale its translation item."""
+    q = find_question(qid)
+    if not locale:
+        return with_extras(q)
+    t = next((t for t in translations.load(locale)["questions"] if t["id"] == qid), None)
+    if t is None:
+        raise KeyError(qid)
+    return locale_item(t, q, locale)
+
+
+def locale_questions(locale, query):
+    """GET /api/questions?locale=…: the translations as items, filtered (plan 67)."""
+    src = {q["id"]: q for q in load_pool()["questions"]}
+    pairs = [(t, src[t["id"]]) for t in translations.load(locale)["questions"] if t["id"] in src]
+    if "batch" in query:
+        want = None if query["batch"] == "none" else query["batch"]
+        pairs = [(t, q) for t, q in pairs if t.get("batch") == want]
+    if "status" in query:
+        pairs = [(t, q) for t, q in pairs if matches_status(t, query["status"])]
+    if "reviewer" in query:
+        want = None if query["reviewer"] == "none" else query["reviewer"]
+        pairs = [(t, q) for t, q in pairs if (t.get("review") or {}).get("reviewer") == want]
+    if "bundle" in query:
+        pairs = [(t, q) for t, q in pairs if q.get("bundle") == query["bundle"]]
+    if "subcategory" in query:
+        pairs = [(t, q) for t, q in pairs if q["subcategory"] == query["subcategory"]]
+    if query.get("media") == "missing":
+        pairs = [(t, q) for t, q in pairs if not q["media"].get("file_url")]
+    if query.get("licence") == "replace":
+        pairs = [(t, q) for t, q in pairs if media.to_replace(q)]
+    if query.get("stale") == "1":
+        pairs = [(t, q) for t, q in pairs if translations.is_stale(t, q)]
+    if query.get("sample") and query.get("batch"):
+        by_id = {t["id"]: (t, q) for t, q in pairs}
+        pairs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
+    if query.get("audit") == "flagged":
+        pairs = [(t, q) for t, q in pairs if (a := translation_audit_of(t)) and is_major(a)]
+    return [locale_item(t, q, locale) for t, q in pairs]
 
 
 def slot_of(body):
@@ -157,7 +245,7 @@ def set_bundle(qid, bundle):
     return update_question(qid, lambda q: q.update(bundle=bundle))
 
 
-def set_difficulty(qid, difficulty):
+def set_difficulty(qid, difficulty, update=update_question):
     lo, hi = json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8"))["scale"]
     if not isinstance(difficulty, int) or not lo <= difficulty <= hi:
         raise ValueError(f"difficulty must be an integer from {lo} to {hi}")
@@ -167,10 +255,10 @@ def set_difficulty(qid, difficulty):
             q["difficulty_original"] = q["difficulty"]
         q["difficulty"] = difficulty
 
-    return update_question(qid, change)
+    return update(qid, change)
 
 
-def set_review(qid, review):
+def set_review(qid, review, update=update_question):
     """Re-read the pool, change one question, write atomically (08, "API").
     A new decision is a human review; it keeps the LLM review it replaces as `previous` (D-33).
     A review that names its reviewer is an undo putting an earlier review back as it was."""
@@ -194,7 +282,40 @@ def set_review(qid, review):
             review["previous"] = old if old.get("reviewer") == "llm" else old.get("previous")
         q.update(review=review, status=review["decision"] if review else "draft")
 
-    return update_question(qid, change)
+    return update(qid, change)
+
+
+def set_translatable(qid, value):
+    """The source's translatable flag (absent = true, D-81); false rejects its non-rejected translations
+    as a human review, validate's rule (plan 63). Writes the locale files, then the pool and every export."""
+    if not isinstance(value, bool):
+        raise ValueError("translatable must be true or false")
+    with _lock:
+        data = load_pool()
+        q = next((q for q in data["questions"] if q["id"] == qid), None)
+        if q is None:
+            raise KeyError(qid)
+        if value:
+            q.pop("translatable", None)
+        else:
+            q["translatable"] = False
+            for locale in translations.LOCALES:
+                doc = translations.load(locale)
+                hit = [t for t in doc["questions"] if t["id"] == qid and t.get("status") != "rejected"]
+                for t in hit:
+                    reject(t)
+                if hit:
+                    translations.save(locale, doc)
+        save_pool(data)
+    return q
+
+
+def reject(t):
+    """A human "no viaja" rejection, D-33's shape (keeps an LLM review as previous)."""
+    old = t.get("review") or {}
+    t.update(status="rejected", review={
+        "decision": "rejected", "feedback": "no viaja", "reviewed_on": datetime.date.today().isoformat(),
+        "reviewer": "human", "model": None, "previous": old if old.get("reviewer") == "llm" else old.get("previous")})
 
 
 def apply_flags():
@@ -250,6 +371,12 @@ class Handler(BaseHandler):
         url = urlparse(self.path)
         if url.path == "/api/questions":
             query = {k: v[0] for k, v in parse_qs(url.query).items()}
+            try:
+                locale = locale_of(query.get("locale"))
+            except ValueError as e:
+                return self.send_json(400, {"error": str(e)})
+            if locale:
+                return self.send_json(200, locale_questions(locale, query))
             qs = load_pool()["questions"]
             if "batch" in query:
                 want = None if query["batch"] == "none" else query["batch"]
@@ -333,11 +460,20 @@ class Handler(BaseHandler):
         qid, action = parts[2], "/".join(parts[3:])
         try:
             body = self.read_body()
+            locale = locale_of(body.get("locale"))
+            update = update_translation(locale) if locale else update_question
+            if locale and action in ("bundle", "media", "media/search"):
+                raise ValueError(f"{action} lives on the source: change it in the Spanish view, without locale")
             if action == "review":
-                q = set_review(qid, body.get("review"))
-            elif action == "difficulty":
-                q = set_difficulty(qid, body.get("difficulty"))
-            elif action == "bundle":
+                set_review(qid, body.get("review"), update)
+                return self.send_json(200, item_of(qid, locale))
+            if action == "difficulty":
+                set_difficulty(qid, body.get("difficulty"), update)
+                return self.send_json(200, item_of(qid, locale))
+            if action == "translatable":
+                set_translatable(qid, body.get("translatable"))
+                return self.send_json(200, item_of(qid, locale))
+            if action == "bundle":
                 q = set_bundle(qid, body.get("bundle"))
             elif action == "media":
                 q = pick_media(qid, int(body.get("index", -1)), slot_of(body))

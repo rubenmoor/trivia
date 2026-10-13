@@ -2791,6 +2791,11 @@ def audit_of(q):
     return load_json(p) if p else None
 
 
+def translation_audit_of(t):
+    """A translation's own audit: work/<t.batch>/audit/<id>.json (plan 67); never the source's back-audit."""
+    return load_json(WORK / t["batch"] / "audit" / f"{t['id']}.json") if t.get("batch") else None
+
+
 def run_number(name):
     tail = name.rsplit("-", 1)[-1]
     return int(tail) if tail.isdigit() else 0
