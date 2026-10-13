@@ -32,6 +32,6 @@ publish: null
 afterPack: ./after-pack.mjs
 win:
   executableName: Trivia
-  signAndEditExecutable: false
+  signExecutable: false  # resedit sets icon + metadata (no wine); unsigned (B-11)
 linux:
   category: Game

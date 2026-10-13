@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "Desktop shell for ¡Trivia! (plan 54, SW-2)",
+  "author": "Ruben Moor",
   "main": "main.mjs",
   "type": "module",
   "scripts": {
