@@ -333,7 +333,7 @@ def apply_flags():
     pending = save_file.flags()
     if from_save:
         ledger = save_file.applied()
-        pending = {k: v for k, v in pending.items() if ledger.get(k) != v["flagged_on"]}
+        pending = {k: v for k, v in pending.items() if ledger.get(k) != save_file.stamp(v)}
     known = {q["id"]: q for q in load_pool()["questions"]}
     done = []
     for qid, flag in pending.items():
@@ -341,13 +341,14 @@ def apply_flags():
             print(f"Flag for unknown question {qid} dropped", file=sys.stderr)
             continue
         who = f"{flag['player']}, " if flag.get("player") else ""
-        feedback = f"Marcada en el juego ({who}{flag['flagged_on'][:10]})."
+        note = f": {flag['note']}" if flag.get("note") else "."
+        feedback = f"Marcada en el juego ({who}{flag['flagged_on'][:10]}){note}"
         old = (known[qid].get("review") or {}).get("feedback")
         set_review(qid, {"decision": "needs_work", "feedback": f"{feedback} Antes: {old}" if old else feedback})
         done.append(qid)
     if from_save:
         if pending:
-            save_file.record_applied({k: v["flagged_on"] for k, v in pending.items()})
+            save_file.record_applied({k: save_file.stamp(v) for k, v in pending.items()})
     elif pending:  # re-read: the game may have flagged another question meanwhile
         flags.save({k: v for k, v in flags.load().items() if k not in pending})
     return done

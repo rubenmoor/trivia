@@ -110,16 +110,15 @@ export type JokerEvent =
   | { joker: "snipe"; outcome: "miss"; index: number }
   | { joker: "snipe"; outcome: "hit"; index: number; correct_index: number };
 
-/** A «Reportar pregunta» entry as the report list shows it (MD-6); `answer` null while it's on screen. */
-export interface Report {
+/** A flagged question as «Preguntas marcadas» shows it (decision 60); `answer` null while it's on screen. */
+export interface Flagged {
   question_id: string;
-  game_id: number;
+  flagged_on: string;
   player: string | null;
-  level: number;
-  reported_on: string;
+  level?: number;
+  note?: string;
   question: string | null;
   answer: string | null;
-  note?: string;
 }
 
 /** The game as the server shows it to the TV (app/server/game.py `view`): no correct answer before the final answer. */

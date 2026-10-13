@@ -3,16 +3,18 @@
   // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
   import { onDestroy, onMount, tick } from "svelte";
-  import { fetchFlags, fetchGame, fetchReports, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { language, saveError, takeSaveNotice } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { listenPads } from "../lib/gamepad.svelte";
   import { listen, pushScope, type Action } from "../lib/input.svelte";
-  import type { Game, GameMode, JokerBudget, JokerEvent, Report, Supply } from "../lib/types";
+  import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types";
   import Choice from "./Choice.svelte";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
+  import FlagDialog from "./FlagDialog.svelte";
+  import FlagList from "./FlagList.svelte";
   import Hud from "./Hud.svelte";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
@@ -22,7 +24,6 @@
   import Overlay from "./Overlay.svelte";
   import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
-  import Reports from "./Reports.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte";
   import Stage from "./Stage.svelte";
   import SupplyReport from "./SupplyReport.svelte";
@@ -81,11 +82,14 @@
   /** Media that was playing when the overlay opened; it resumes on close. */
   let pausedMedia: HTMLMediaElement[] = [];
 
-  /** Questions flagged for review (GM-5, D-47); `trivia-authoring` turns them into reviews. */
-  let flagged = $state<Set<string>>(new Set());
-  /** «Reportar pregunta» (MD-6); the list opens over the overlay, so the screen below stays mounted. */
-  let reports = $state<Report[]>([]);
-  let reportsOpen = $state(false);
+  /** Questions flagged for review (GM-5, decision 60); `trivia-authoring` turns them into reviews. */
+  let flags = $state<Flagged[]>([]);
+  const flagged = $derived(new Set(flags.map((f) => f.question_id)));
+  /** The flag dialog is open (flag icon, M). */
+  let flagOpen = $state(false);
+  let flagBusy = $state(false);
+  /** «Preguntas marcadas» opens over the overlay, so the screen below stays mounted. */
+  let flagListOpen = $state(false);
 
   const running = $derived(game !== null && game.result === null);
   /** The question the flag button acts on: the one on screen, or the one just answered. */
@@ -97,8 +101,6 @@
         : null,
   );
   const mode = $derived(game?.settings.mode ?? "gamemaster");
-  /** The question on screen of the running game, which «Reportar pregunta» logs. */
-  const reportTarget = $derived(running && screen === "question" ? (game?.question?.id ?? null) : null);
   const levels = $derived(levelsOf(game));
   /** Blocks on the tower: correct answers in this game. */
   const blocks = $derived(game?.history.filter((h) => h.correct).length ?? 0);
@@ -106,12 +108,11 @@
   onMount(() => {
     music(MUSIC.start);
     refresh();
-    fetchFlags().then((ids) => (flagged = new Set(ids)), () => {});
-    loadReports();
+    loadFlags();
   });
 
-  async function loadReports() {
-    reports = await fetchReports().catch(() => reports);
+  async function loadFlags() {
+    flags = await fetchFlags().catch(() => flags);
   }
 
   async function refresh() {
@@ -333,15 +334,9 @@
     await act("jokers", { jokers: budget });
   }
 
-  /** Log the question on screen (MD-6); it stays, the game state doesn't change. */
-  async function report() {
-    closeOverlay();
-    if (await act("report")) await loadReports();
-  }
-
-  async function openReports() {
-    await loadReports();
-    reportsOpen = true;
+  async function openFlagList() {
+    await loadFlags();
+    flagListOpen = true;
   }
 
   async function restart() {
@@ -351,16 +346,36 @@
     await toStart();
   }
 
-  /** Flag or unflag the question for review (GM-5); errors show in the corner. */
-  async function toggleFlag() {
+  /** The flag dialog (decision 60); media pauses like under the overlay. */
+  function openFlag() {
+    if (!flagTarget || flagOpen) return;
+    flagOpen = true;
+    sfx("menu-open");
+    pausedMedia = [...document.querySelectorAll<HTMLMediaElement>("audio, video")].filter((m) => !m.paused);
+    pausedMedia.forEach((m) => m.pause());
+  }
+
+  function closeFlag() {
+    flagOpen = false;
+    pausedMedia.forEach((m) => m.play().catch(() => {}));
+    pausedMedia = [];
+  }
+
+  /** Flag (or re-note, `note` "" = none) or unflag (null) the question for review (GM-5); errors show in the corner. */
+  async function writeFlag(note: string | null) {
     const id = flagTarget;
-    if (!id) return;
+    if (!id || flagBusy) return;
+    const level = screen === "question" ? game?.level : game?.history.at(-1)?.level;
+    flagBusy = true;
     try {
-      flagged = new Set(await setFlag(id, !flagged.has(id), game?.player ?? null));
-      sfx(flagged.has(id) ? "menu-open" : "menu-close");
+      flags = await setFlag(id, note === null ? null : { player: game?.player ?? null, level, note });
+      sfx(note === null ? "menu-close" : "menu-open");
       error = saveWarning();
     } catch (e) {
       error = errorText(e);
+    } finally {
+      flagBusy = false;
+      closeFlag();
     }
   }
 
@@ -389,7 +404,7 @@
     name: "game",
     handle: (a) => {
       if (a.type === "menu") openOverlay();
-      else if (a.type === "flag" && flagTarget) toggleFlag();
+      else if (a.type === "flag" && flagTarget) openFlag();
       else return false;
       return true;
     },
@@ -597,12 +612,12 @@
     <div class="error-box corner">{error}</div>
   {/if}
 
-  {#if !loading && !overlayOpen && flagTarget}
+  {#if !loading && !overlayOpen && !flagOpen && flagTarget}
     <!-- Flag for review (GM-5): as faint as the menu button; no focus, like it. -->
     <button
       class="flag-button"
       class:on={flagged.has(flagTarget)}
-      onclick={toggleFlag}
+      onclick={openFlag}
       onmousedown={(e) => e.preventDefault()}
       tabindex="-1"
       data-nofocus
@@ -640,10 +655,7 @@
       canSkip={screen === "question" && !questionBusy()}
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={running || screen !== "start"}
-      canReport={!!reportTarget && !questionBusy()}
-      reported={reports.some((r) => r.game_id === game?.id && r.question_id === reportTarget)}
-      onreport={report}
-      onreports={openReports}
+      onflags={openFlagList}
       onclose={closeOverlay}
       onskip={() => skip(false)}
       onskipall={() => skip(true)}
@@ -655,8 +667,18 @@
       onbudget={setBudget}
     />
   {/if}
-  {#if overlayOpen && reportsOpen}
-    <Reports {reports} onclose={() => (reportsOpen = false)} />
+  {#if overlayOpen && flagListOpen}
+    <FlagList {flags} onclose={() => (flagListOpen = false)} />
+  {/if}
+  {#if flagOpen && flagTarget}
+    <FlagDialog
+      flagged={flagged.has(flagTarget)}
+      note={flags.find((f) => f.question_id === flagTarget)?.note ?? ""}
+      busy={flagBusy}
+      onflag={(note) => writeFlag(note)}
+      onunflag={() => writeFlag(null)}
+      onclose={() => (sfx("menu-close"), closeFlag())}
+    />
   {/if}
 </main>
 

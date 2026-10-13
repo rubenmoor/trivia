@@ -1,5 +1,6 @@
 <script lang="ts">
-  // The letter picker (plans/04-ui-tv-display.md, "Player"; plan 46, SW-4): a new name with a pad only.
+  // The letter picker (plans/04-ui-tv-display.md, "Player"; plan 46, SW-4): a new name with a pad only;
+  // `note`: the flag dialog's note (digits and punctuation too, may stay empty).
   // Opens only for a pad; A types the focused key, B deletes (closes on an empty name), Start closes.
   // Letters, Backspace, Enter and Esc work too (a Deck with a keyboard); the text stays on close.
   import { tick } from "svelte";
@@ -11,23 +12,29 @@
   let {
     name = $bindable(),
     busy,
+    note = false,
     onsubmit,
     onclose,
   }: {
     name: string;
     busy: boolean;
-    onsubmit: () => void;
+    note?: boolean;
+    onsubmit?: () => void;
     onclose: () => void;
   } = $props();
 
-  const LETTERS = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZÑÁÉÍÓÚÜ-"];
+  // svelte-ignore state_referenced_locally
+  const LETTERS = [...t("picker.letters"), ...(note ? t("picker.marks") : "")];
   const KEYS: Keys = Object.fromEntries(LETTERS.map((l) => [l.toLowerCase(), { type: "letter", key: l.toLowerCase() }]));
+  /** Characters shown of a long note: its end, where typing happens. */
+  const SHOWN = 32;
 
   let panel = $state<HTMLDivElement>();
   const typed = $derived(name.trim());
+  const shown = $derived(name.length > SHOWN ? `…${name.slice(-SHOWN)}` : name);
 
   function type(key: string) {
-    name = typeKey(name, key);
+    name = typeKey(name, key, note);
   }
 
   function erase() {
@@ -35,9 +42,9 @@
   }
 
   function done() {
-    if (!typed || busy) return;
+    if ((!typed && !note) || busy) return;
     onclose();
-    onsubmit();
+    onsubmit?.();
   }
 
   $effect(() => {
@@ -64,8 +71,8 @@
 
 <div class="backdrop">
   <div class="panel glass-strong" bind:this={panel} role="dialog" aria-labelledby="letters-title">
-    <h2 id="letters-title">{t("picker.title")}</h2>
-    <div class="name" class:empty={!name}>{name || t("screen.player.placeholder")}</div>
+    <h2 id="letters-title">{t(note ? "flag.pickerTitle" : "picker.title")}</h2>
+    <div class="name" class:empty={!name}>{shown || (note ? "" : t("screen.player.placeholder"))}</div>
     <div class="grid">
       {#each LETTERS as l, i (l)}
         <button class="key" onclick={() => type(l)} data-focus-default={i === 0 || undefined}>{l}</button>
@@ -74,7 +81,7 @@
     <div class="row">
       <button class="secondary" onclick={() => type(" ")}>{t("picker.space")}</button>
       <button class="secondary" onclick={erase}>⌫ {t("picker.erase")} <Prompt action="back" padOnly /></button>
-      <button class="candy" onclick={done} disabled={busy || !typed}>{t("picker.done")}</button>
+      <button class="candy" onclick={done} disabled={busy || (!typed && !note)}>{t("picker.done")}</button>
     </div>
   </div>
 </div>

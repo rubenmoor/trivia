@@ -8,7 +8,8 @@ export const esES = {
     confirm: "¿Seguro? Pulsa otra vez",
     media: "Audio y vídeo de las preguntas",
   },
-  report: {
+  flag: {
+    pickerTitle: "Escribid una nota",
     copyFailed: "No se ha podido copiar: seleccionad el texto y copiadlo.",
   },
   credits: {

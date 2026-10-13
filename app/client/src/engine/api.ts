@@ -87,7 +87,6 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     replace: (s) => game.replace(s, data, io, pyTruthy(body.seen)),
     level: (s) => game.jumpLevel(s, data, io, body.level),
     settings: (s) => game.changeSettings(s, data, io, pick(body, ["age_group", "difficulty", "bundles"])),
-    report: (s) => game.report(s, io, body.note),
     joker: (s) => game.joker(s, data, io, pyStr(body.joker), pick(body, ["purge", "subcategory", "index"])),
   };
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };

@@ -1,12 +1,12 @@
 <script lang="ts">
-  // «Preguntas reportadas» (MD-6): the local report list, newest first, over the overlay. Offline;
+  // «Preguntas marcadas» (GM-5, decision 60): the flagged questions with their notes, newest first, over the overlay. Offline;
   // «Copiar» puts plain text on the clipboard, else shows it selectable. ↑/↓ move, Esc/⌫ go back.
   import { t } from "../lib/i18n";
   import { focusControl, pushScope } from "../lib/input.svelte";
-  import type { Report } from "../lib/types";
+  import type { Flagged } from "../lib/types";
   import Prompt from "./Prompt.svelte";
 
-  let { reports, onclose }: { reports: Report[]; onclose: () => void } = $props();
+  let { flags, onclose }: { flags: Flagged[]; onclose: () => void } = $props();
 
   let panel = $state<HTMLDivElement>();
   let backButton = $state<HTMLButtonElement>();
@@ -14,17 +14,18 @@
   let failed = $state(false);
 
   const when = (iso: string) => iso.slice(0, 16).replace("T", " ");
-  const answerOf = (r: Report) => r.answer ?? t("report.hidden");
+  const answerOf = (f: Flagged) => f.answer ?? t("flag.hidden");
+  const meta = (f: Flagged) => [f.player ?? "—", ...(f.level ? [t("flag.level", { n: f.level })] : [])].join(" · ");
 
   const text = $derived(
-    reports
-      .map((r) =>
+    flags
+      .map((f) =>
         [
-          `${when(r.reported_on)} · ${r.question_id}`,
-          `${t("report.question")}: ${r.question ?? "—"}`,
-          `${t("report.answer")}: ${answerOf(r)}`,
-          `${t("report.player")}: ${r.player ?? "—"} · ${t("report.level", { n: r.level })}`,
-          ...(r.note ? [r.note] : []),
+          `${when(f.flagged_on)} · ${f.question_id}`,
+          `${t("flag.question")}: ${f.question ?? "—"}`,
+          `${t("flag.answer")}: ${answerOf(f)}`,
+          `${t("flag.player")}: ${meta(f)}`,
+          ...(f.note ? [`${t("flag.note")}: ${f.note}`] : []),
         ].join("\n"),
       )
       .join("\n\n"),
@@ -42,7 +43,7 @@
 
   $effect(() => {
     const pop = pushScope({
-      name: "reports",
+      name: "flags",
       modal: true,
       whileBusy: true,
       root: () => panel,
@@ -53,38 +54,38 @@
   });
 </script>
 
-<div class="reports" bind:this={panel}>
+<div class="flags" bind:this={panel}>
   <header>
-    <h2>{t("report.list")}</h2>
+    <h2>{t("flag.list")}</h2>
     <div class="buttons">
-      {#if reports.length}
-        <button class="secondary" onclick={copy}>{copied ? t("report.copied") : t("report.copy")}</button>
+      {#if flags.length}
+        <button class="secondary" onclick={copy}>{copied ? t("flag.copied") : t("flag.copy")}</button>
       {/if}
       <button class="candy" bind:this={backButton} onclick={onclose} data-focus-default>{t("action.back")} <Prompt action="menu" pad="back" /></button>
     </div>
   </header>
   {#if failed}
-    <p class="hint">{t("report.copyFailed")}</p>
+    <p class="hint">{t("flag.copyFailed")}</p>
     <pre>{text}</pre>
-  {:else if reports.length}
+  {:else if flags.length}
     <ol>
-      {#each reports as r (`${r.game_id}:${r.question_id}`)}
+      {#each flags as f (f.question_id)}
         <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
         <li tabindex="0" data-focusable>
-          <p class="meta">{when(r.reported_on)} · <code>{r.question_id}</code> · {r.player ?? "—"} · {t("report.level", { n: r.level })}</p>
-          <p class="question">{r.question ?? "—"}</p>
-          <p class="answer">{t("report.answer")}: <b>{answerOf(r)}</b></p>
-          {#if r.note}<p class="meta">{r.note}</p>{/if}
+          <p class="meta">{when(f.flagged_on)} · <code>{f.question_id}</code> · {meta(f)}</p>
+          <p class="question">{f.question ?? "—"}</p>
+          <p class="answer">{t("flag.answer")}: <b>{answerOf(f)}</b></p>
+          {#if f.note}<p class="note">{t("flag.note")}: {f.note}</p>{/if}
         </li>
       {/each}
     </ol>
   {:else}
-    <p class="hint">{t("report.empty")}</p>
+    <p class="hint">{t("flag.empty")}</p>
   {/if}
 </div>
 
 <style>
-  .reports {
+  .flags {
     position: fixed;
     inset: 0;
     z-index: 45;
@@ -147,6 +148,10 @@
   .answer {
     font-size: calc(1.2 * var(--u));
     color: var(--slate-200);
+  }
+  .note {
+    font-size: calc(1.2 * var(--u));
+    color: var(--amber);
   }
   .hint {
     color: var(--slate-400);

@@ -845,22 +845,6 @@ export function abandon(save: SaveData, io: Io): { save: SaveData } {
   });
 }
 
-/** «Reportar pregunta» (MD-6): log the question on screen, nothing else; once per game and question. */
-export function report(save: SaveData, io: Io, note?: unknown): { save: SaveData; state: GameState } {
-  if (note != null && !(typeof note === "string" && pyLen(note) <= 500)) throw new GameError("note_invalid");
-  return action(save, (work) => {
-    const { row, state } = running(work);
-    const qid = state.current;
-    if (state.phase !== "question" || qid === null) throw new GameError("no_question");
-    if (!work.reports.some((r) => r.question_id === qid && r.game_id === row.id))
-      work.reports.push({
-        question_id: qid, game_id: row.id, player_id: row.player_id, level: state.level, reported_on: io.now,
-        ...(note ? { note: note as string } : {}),
-      });
-    return state;
-  });
-}
-
 /** The newest game as the TV sees it: no correct answer before the final answer. */
 export function view(save: SaveData, data: EngineData, io: Io): Game | null {
   const game = latest(save);

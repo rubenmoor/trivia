@@ -6,7 +6,7 @@ import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 3;
+export const SAVE_VERSION = 4;
 
 export type { Language };
 
@@ -20,10 +20,8 @@ export interface SaveData {
   blocked: string[];
   /** Exhausted subcategories already shown at game start. Since version 3. */
   notified_exhausted: string[];
-  /** Questions flagged for review (GM-5, D-47); keyed by question ID. */
+  /** Questions flagged for review (GM-5, D-47); keyed by question ID. Version 4 merged `reports` in (decision 60). */
   flags: Record<string, FlagEntry>;
-  /** «Reportar pregunta» (MD-6): log only; since version 2. */
-  reports: ReportRow[];
   /** UI and question language (plan 68); parseSave fills {es, es}, a fresh save gets defaultLanguage(). */
   language?: Language;
 }
@@ -31,18 +29,12 @@ export interface SaveData {
 /** The family's language: what a save from before plan 68 plays in. */
 export const SPANISH: Language = { ui: "es", questions: "es" };
 
-export interface ReportRow {
-  question_id: string;
-  game_id: number;
-  player_id: number | null;
-  level: number;
-  reported_on: string;
-  note?: string;
-}
-
 export interface FlagEntry {
   flagged_on: string;
   player: string | null;
+  /** Missing in flags from before version 4. */
+  level?: number;
+  note?: string;
 }
 
 export interface PlayerRow {
@@ -120,7 +112,7 @@ export interface GameState {
 export const UNLIMITED: JokerBudget = { hint: null, skip: null, easier: null, category: null, snipe: null };
 
 export function emptySave(): SaveData {
-  return { version: SAVE_VERSION, players: [], games: [], seen: [], blocked: [], notified_exhausted: [], flags: {}, reports: [] };
+  return { version: SAVE_VERSION, players: [], games: [], seen: [], blocked: [], notified_exhausted: [], flags: {} };
 }
 
 /** Fill in the joker fields for games saved before JK-2 (game.with_defaults); mutates and returns. */
@@ -190,7 +182,6 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   replace_empty: "no other question for this level",
   level_invalid: (p) => `level: a whole number ${p.min}–${p.max}`,
   cheat_not_select: (p) => `${p.action} only with the cards on the table`,
-  note_invalid: "a note is text of at most 500 letters",
   language_unknown: (p) => `no ${p.kind} language ${pyRepr(String(p.lang))}`,
 };
 

@@ -20,11 +20,31 @@ const es = {
   hud: {
     level: "Nivel {n}",
   },
-  /** Flag for review (GM-5); `key` is the shortcut (case-insensitive). */
+  /** Flag for review (GM-5, decision 60): its dialog and «Preguntas marcadas»; `key` is the shortcut (case-insensitive). */
   flag: {
     key: "M",
     on: "Marcada para revisar ({key})",
     off: "Marcar para revisar ({key})",
+    title: "¿Marcar esta pregunta?",
+    titleOn: "Pregunta marcada",
+    body: "Queda anotada para revisarla; la pregunta sigue.",
+    notePlaceholder: "Nota opcional: ¿qué tiene de malo?",
+    pickerTitle: "Escriban una nota",
+    confirm: "Marcar",
+    save: "Guardar nota",
+    unflag: "Quitar marca",
+    list: "Preguntas marcadas",
+    empty: "Todavía no hay preguntas marcadas.",
+    copy: "Copiar",
+    copied: "Copiado",
+    copyFailed: "No se pudo copiar: seleccionen el texto y cópienlo.",
+    question: "Pregunta",
+    answer: "Respuesta",
+    player: "Jugador",
+    note: "Nota",
+    level: "nivel {n}",
+    /** The answer of the question still on screen stays hidden. */
+    hidden: "(en juego)",
   },
   a11y: {
     menu: "Menú (Esc)",
@@ -80,25 +100,6 @@ const es = {
     /** First-start screen (fresh save): heading and confirm prompt. */
     choose: "Elige el idioma",
     confirm: "Aceptar",
-  },
-  /** «Reportar pregunta» and the report list (MD-6). */
-  report: {
-    action: "Reportar pregunta",
-    done: "Pregunta reportada",
-    list: "Preguntas reportadas",
-    confirmTitle: "¿Reportar esta pregunta?",
-    confirmBody: "Queda anotada; la pregunta sigue.",
-    confirm: "Reportar",
-    empty: "Todavía no hay preguntas reportadas.",
-    copy: "Copiar",
-    copied: "Copiado",
-    copyFailed: "No se pudo copiar: seleccionen el texto y cópienlo.",
-    question: "Pregunta",
-    answer: "Respuesta",
-    player: "Jugador",
-    level: "nivel {n}",
-    /** The answer of the question still on screen stays hidden. */
-    hidden: "(en juego)",
   },
   /** The Credits screen (PUB-5, plan 47); its data is credits.json from the build. */
   credits: {
@@ -182,6 +183,9 @@ const es = {
   },
   /** The letter picker: a new name with a pad only (plan 46). */
   picker: {
+    /** The keys, in order; `marks`: extra keys for a note. */
+    letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZÑÁÉÍÓÚÜ-",
+    marks: "0123456789.,?¿!¡",
     title: "Escriban su nombre",
     write: "Escribir",
     space: "Espacio",
@@ -340,7 +344,6 @@ const es = {
     replace_empty: "no hay otra pregunta para este nivel",
     level_invalid: "nivel: de {min} a {max}",
     cheat_not_select: "solo se puede con las cartas en la mesa",
-    note_invalid: "la nota es un texto de máximo 500 letras",
     save_locked: "No se pudo guardar. Se intenta de nuevo con la próxima jugada.",
   },
 } as const;

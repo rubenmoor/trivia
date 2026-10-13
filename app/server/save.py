@@ -1,10 +1,11 @@
 """The family's save as one JSON document, written whole by the client (plans/49, D-67).
 
-    game.json   {"version": 3, "players": [...], "games": [...], "seen": [...], "blocked": [...],
-                 "notified_exhausted": [...], "flags": {...}, "reports": [...]}
+    game.json   {"version": 4, "players": [...], "games": [...], "seen": [...], "blocked": [...],
+                 "notified_exhausted": [...], "flags": {...}}
 
-Version 3 (plan 65) replaces `burned` with `seen` rows and `blocked`. `migrate()` still writes version 2;
-the client upgrades it on load (engine/save.ts) and writes version 3 back.
+Version 3 (plan 65) replaces `burned` with `seen` rows and `blocked`; version 4 (decision 60) merges
+`reports` into `flags`. `migrate()` still writes version 2; the client upgrades it on load (engine/save.ts)
+and writes version 4 back.
 
 The server only checks the envelope; the game rules live in the client's engine.
 `migrate()` carries game.sqlite + flags.json over once (PORT-5); main.py calls it from PORT-7 on.
@@ -14,9 +15,10 @@ import json, os, sqlite3, tempfile, time
 import paths
 
 FILE = paths.STATE / "game.json"
-VERSION = 3  # the client upgrades older saves (engine/save.ts)
+VERSION = 4  # the client upgrades older saves (engine/save.ts)
 MIGRATE_VERSION = 2  # what migrate() writes
-LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "seen", "blocked", "reports")}
+LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "seen", "blocked", "reports"),
+         4: ("players", "games", "seen", "blocked")}
 MAX_BYTES = 10 * 1024 * 1024
 RETRIES, RETRY_SLEEP = 10, 0.1  # Windows: antivirus/backup may hold the file
 

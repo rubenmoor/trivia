@@ -1,9 +1,10 @@
 import * as engine from "../engine/api.ts";
 import { gameChoice, playerMode } from "../engine/game.ts";
 import { bundlesFor } from "../engine/pool.ts";
-import { flaggedIds, setFlag as saveFlag } from "../engine/save.ts";
+import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
+import type { EngineData, SaveData } from "../engine/state.ts";
 import { language as fetchLanguage, localeSupply, read, run } from "./engine.ts";
-import type { Choice, Difficulty, ErrorInfo, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Report, Supply } from "./types";
+import type { Choice, Difficulty, ErrorInfo, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
 
@@ -62,17 +63,28 @@ export async function deletePlayer(name: string): Promise<Player[]> {
   return run((save) => engine.deletePlayer(save, { name }));
 }
 
-/** IDs of the questions flagged for review (GM-5, D-47). */
-export async function fetchFlags(): Promise<string[]> {
-  return read((save) => ({ save, status: 200, body: flaggedIds(save) }));
+/** Flagged questions (GM-5, decision 60), newest first; the running question's answer stays hidden. */
+function flagList(save: SaveData, data: EngineData): Flagged[] {
+  const newest = save.games.reduce<SaveData["games"][number] | null>((m, g) => (m && m.id > g.id ? m : g), null);
+  const live = newest?.result === null && newest.state.phase === "question" ? newest.state.current : null;
+  return Object.entries(save.flags)
+    .map(([id, f]) => {
+      const q = data.byId.get(id);
+      return { ...f, question_id: id, question: q?.question ?? null, answer: id === live ? null : (q?.answer ?? null) };
+    })
+    .sort((a, b) => (a.flagged_on < b.flagged_on ? 1 : a.flagged_on > b.flagged_on ? -1 : 0));
 }
 
-/** Flag or unflag a question for review; returns every flagged ID. */
-export async function setFlag(id: string, flagged: boolean, player: string | null): Promise<string[]> {
-  return run((save, _data, io) => {
+export async function fetchFlags(): Promise<Flagged[]> {
+  return read((save, data) => ({ save, status: 200, body: flagList(save, data) }));
+}
+
+/** Flag, re-note or unflag (null) a question; returns every flagged question. */
+export async function setFlag(id: string, flag: FlagInput): Promise<Flagged[]> {
+  return run((save, data, io) => {
     try {
-      const out = saveFlag(save, id, flagged, player, io.now);
-      return { save: out, status: 200, body: flaggedIds(out) };
+      const out = saveFlag(save, id, flag, io.now);
+      return { save: out, status: 200, body: flagList(out, data) };
     } catch (e) {
       const message = e instanceof Error ? e.message : String(e);
       return { save, status: 400, body: { error: message, message } };
@@ -159,31 +171,9 @@ export async function playJoker(body: {
   }>;
 }
 
-/** Reported questions (MD-6), newest first; the running question's answer stays hidden. */
-export async function fetchReports(): Promise<Report[]> {
-  return read((save, data) => {
-    const names = new Map(save.players.map((p) => [p.id, p.name]));
-    const newest = save.games.reduce<(typeof save.games)[number] | null>((m, g) => (m && m.id > g.id ? m : g), null);
-    const live = newest?.result === null && newest.state.phase === "question" ? newest : null;
-    const body = save.reports
-      .map((r) => {
-        const q = data.byId.get(r.question_id);
-        const hidden = live?.id === r.game_id && live.state.current === r.question_id;
-        return {
-          ...r,
-          player: r.player_id === null ? null : (names.get(r.player_id) ?? null),
-          question: q?.question ?? null,
-          answer: hidden ? null : (q?.answer ?? null),
-        };
-      })
-      .reverse();
-    return { save, status: 200, body };
-  });
-}
-
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "report" | "replace" | "level" | "settings",
+  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "settings",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const scope = action === "new" ? "next" : "game";

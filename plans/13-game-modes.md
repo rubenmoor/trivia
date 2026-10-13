@@ -7,7 +7,7 @@ Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the 
 ## Modes
 Shared by every mode except gamemaster mode (D-74):
 - A question can never be skipped, not even a broken or far too hard one; no undo, no replacement, no joker changes mid-game.
-- «Reportar pregunta» only logs; «Abandonar partida» and sound stay.
+- Flagging a question (decision 60, the flag with its note; was «Reportar pregunta») only logs; «Abandonar partida» and sound stay.
 - Steam achievements, except in customized games.
 - Input: gamepads, keyboard, mouse; no phones. Multiplayer modes add a "shared keyboard": one key per player hands them keyboard and mouse until their turn is done ([14](14-input.md)).
 - Age group: the mode never shifts the age-group window (D-38, [21](21-age-groups.md)); no change to `age-groups.json`.
@@ -30,7 +30,7 @@ Plan 29's Choice screen in gamemaster form, no second screen. Opens on the playe
 
 #### Gamemaster menu (MD-12; D-88, pm decision 34)
 Today's overlay (`Overlay.svelte`) grows into the menu, in two visibly separate parts. Strings `overlay.*`.
-- **General (every mode):** continue; «Reportar pregunta» / «Preguntas reportadas» (`report`, MD-6); sound (volumes, mute); language rows (D-86); fullscreen; restart (`abandon`, then the mode's start screen: configure screen in gamemaster mode); quit (desktop, after `flush`).
+- **General (every mode):** continue; «Preguntas marcadas» (MD-6; flagging itself is the flag dialog, decision 60); sound (volumes, mute); language rows (D-86); fullscreen; restart (`abandon`, then the mode's start screen: configure screen in gamemaster mode); quit (desktop, after `flush`).
 - **Gamemaster cheats (gamemaster mode only, hidden elsewhere):** every one an engine action in `engine/api.ts` / `engine/game.ts`, refused `gamemaster_only` (409) when `gameMode(state) !== "gamemaster"`; `lib/api.ts`, `lib/types.ts`.
   - «Saltar pregunta»: `skip` (as today): question phase only; outcome `admin_skip`, seen +1, table refilled.
   - «Bloquear pregunta»: `skip {everyone: true}` (as today, D-82): outcome `admin_block`, blocked, no seen row; confirm («¿Seguro?»).
@@ -49,7 +49,7 @@ Today's overlay (`Overlay.svelte`) grows into the menu, in two visibly separate 
 - Customization possible but discouraged: no configure screen, only a small "Customize game" button on the age group screen; a customized game earns no achievements.
 
 ### Multiplayer modes (D-77)
-Shared by the three: no skip, no undo, no joker changes mid-game; «Reportar pregunta» only logs (plan 36); achievements unless customized. Input: one gamepad per player, keyboard, mouse, shared keyboard ([14](14-input.md) section 3). Built "Later" (MD-8, MD-9, IN-6).
+Shared by the three: no skip, no undo, no joker changes mid-game; flagging only logs (decision 60); achievements unless customized. Input: one gamepad per player, keyboard, mouse, shared keyboard ([14](14-input.md) section 3). Built "Later" (MD-8, MD-9, IN-6).
 
 ### Round-robin co-op (`rr-coop`; es proposal «Por turnos en equipo»)
 - Turn order: one question per player, in join order, round after round.
@@ -96,7 +96,7 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - [x] MD-3 Joker tray: a count badge on limited jokers; none when unlimited. *2026-10-07: amber badge top left of the token (grey at 0), also on the read-only tray on Level and Select (`JokerTray.svelte`).*
 - [x] MD-4 Gamemaster overlay: set the budget for the running game (unlimited / «Como las cartas» / custom). *2026-10-07: `POST /api/game/jokers`; the overlay has a second column (sound, «Comodines de esta partida»): «Comodines: Sin límite / Como las cartas / A medida» toggles the preset, each joker 0–9 or ∞ with ←/→ or −/+, and shows the uses left. Each new game starts unlimited, as planned.*
 - [x] MD-5 Define the modes (OQ-30, OQ-36). *2026-10-12: D-74: five modes, no default mode, no presets, no checkpoint; outside gamemaster mode no skip, undo, replace or joker changes; «Reportar pregunta» only logs. Sections and implementation notes above.*
-- [x] MD-6 «Reportar pregunta»: local report list only; no burn, no replacement (D-74). *2026-10-12: engine `report` (task 376); overlay by mode (`gamemaster` as before plus «Reportar pregunta» / «Preguntas reportadas»; `solo` without skip, undo and budget editor, read-only joker line); confirm dialog (Enter reports, Esc/⌫ cancel); `Reports.svelte` opens over the overlay instead of a `Screen` (the question below stays mounted), newest first, the answer of the question still on screen hidden, «Copiar» with a selectable `<pre>` fallback.*
+- [x] MD-6 «Reportar pregunta»: local report list only; no burn, no replacement (D-74). *2026-10-12: engine `report` (task 376); overlay by mode (`gamemaster` as before plus «Reportar pregunta» / «Preguntas reportadas»; `solo` without skip, undo and budget editor, read-only joker line); confirm dialog (Enter reports, Esc/⌫ cancel); `Reports.svelte` opens over the overlay instead of a `Screen` (the question below stays mounted), newest first, the answer of the question still on screen hidden, «Copiar» with a selectable `<pre>` fallback. 2026-10-13 (decision 60, task 625): merged into the flag (GM-5): the flag icon / `M` open `FlagDialog.svelte` (optional note, `Enter` flags, `Esc`/⌫ cancel; on a flagged question save the note or unflag; pad: letter picker); the overlay item and the engine action `report` are gone; the list is «Preguntas marcadas» (`FlagList.svelte`) with notes; save version 4: `reports` merged into `flags` (`{flagged_on, player, level?, note?}`); `trivia-authoring` puts the note into the needs-work feedback.*
 - [x] MD-7 Mode screen (five modes); age group screen with "Customize game" in `solo`; `settings.mode`, `settings.customized`. *2026-10-12: mode row on the Choice screen (built modes only), keys `A`/`G` (es); `solo` hides the bundles and shows «Personalizar partida» (`Customize.svelte`, joker steppers on a modal scope); preset `?mode=` > newest game > gamemaster; arrows + Enter + Esc/⌫ and mouse walked (task 379's wiring done here).*
 - [ ] MD-8 Later: the three multiplayer modes exactly as specced above (D-77, `timed` D-80): turn order, shared vs. per-player joker sets, age groups, drop-out and win rules; `timed`: rounds, claim and 6 s answer timer, lives, sudden death, hint cadence, hearts, ticking clock, red frame; seen events for the save (D-82); engine first, then screens.
 - [ ] MD-9 Later: multiplayer input with IN-6: per-player gamepads, shared keyboard (one key per player takes keyboard and mouse until the turn ends), the claim action in `timed` (any player, any time; per-player claim keys on the shared keyboard; D-80).

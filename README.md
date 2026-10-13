@@ -38,7 +38,7 @@ trivia                   # http://127.0.0.1:8000/   (--port, --host)
 Open the page on the TV's browser and go fullscreen. Pick or type a player name and play.
 
 - `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget. It links to the review tool and stats while the authoring server runs.
-- `M` (or the faint flag next to the menu button) flags the question for review; the next start of `trivia-authoring` marks it «needs work».
+- `M` (or the faint flag next to the menu button) flags the question for review: a dialog with an optional note, `Enter` flags, `Esc` cancels; on a flagged question it edits the note or unflags. The next start of `trivia-authoring` marks it «needs work» with the note; the menu's «Preguntas marcadas» lists the flags with «Copiar» for players without authoring tools.
 - Game saves, burned questions (questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. The first start after PORT-7 migrates `state/game.sqlite` + `flags.json` into it; both stay as backups.
 - The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
 - Desktop shell (`trivia-desktop`, packaged builds): the save is `save/game.json` in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/game.json`; `TRIVIA_SAVE_DIR` overrides. A broken or newer save moves to `save/backup/` and the game starts fresh.

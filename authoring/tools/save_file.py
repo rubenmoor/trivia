@@ -3,7 +3,7 @@
 Reads state/game.json once it exists (after the switch-over, PORT-7); before that game.sqlite and
 flags.json (the fallback goes in PORT-8). Never writes the save; only its own ledger:
 
-    flags-applied.json   {"<question id>": "<flagged_on>"}   flags already turned into reviews
+    flags-applied.json   {"<question id>": "<flagged_on>[ <note>]"}   flags already turned into reviews (stamp())
 """
 import json, sqlite3
 from collections import Counter
@@ -61,9 +61,25 @@ def seen_counts():
 
 
 def flags():
-    """Flagged questions {"<id>": {"flagged_on", "player"}}."""
+    """Flagged questions {"<id>": {"flagged_on", "player", "level"?, "note"?}}; a v3 save's reports read as
+    engine/save.ts upgrades them (decision 60)."""
     doc = _doc()
-    return doc.get("flags") or {} if doc is not None else game_flags.load()
+    if doc is None:
+        return game_flags.load()
+    out = dict(doc.get("flags") or {})
+    if doc["version"] < 4:
+        names = {p["id"]: p["name"] for p in doc.get("players", [])}
+        for r in doc.get("reports", []):
+            old = out.get(r["question_id"])
+            note = " · ".join(n for n in ((old or {}).get("note"), r.get("note")) if n)
+            out[r["question_id"]] = {**(old or {"flagged_on": r["reported_on"], "player": names.get(r["player_id"]),
+                                                "level": r["level"]}), **({"note": note} if note else {})}
+    return out
+
+
+def stamp(flag):
+    """A flag's ledger value: a new note applies it again."""
+    return f"{flag['flagged_on']} {flag['note']}" if flag.get("note") else flag["flagged_on"]
 
 
 def has_save():
@@ -78,7 +94,7 @@ def applied():
 
 
 def record_applied(entries):
-    """Add {"<id>": "<flagged_on>"} to the ledger."""
+    """Add {"<id>": stamp} to the ledger."""
     APPLIED.parent.mkdir(parents=True, exist_ok=True)
     tmp = APPLIED.with_suffix(".tmp")
     tmp.write_text(json.dumps({**applied(), **entries}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
