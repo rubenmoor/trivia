@@ -14278,7 +14278,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - In `overview.py`: also list unfinished `tr-*` runs (`run.json` without `done`, name `tr-<locale>-<n>`); keep `unfinished_runs` a `string[]` (or add a separate key; update `authoring/ui/src/lib/types.ts`).
 - `Home.svelte`: for a `tr-<locale>-*` run, text "unfinished translation run X" and command `qgen batch --translate <locale>`.
 - Check on a temp copy (`TRIVIA_WORK` with a fake unfinished `tr-en-1/run.json`), `curl /api/overview`; `npm run check`, `npm run build`; log the row in `## Part 9` of `code-review.md` as fixed.', '2026-10-13T13:03:54Z', '2026-10-13T13:26:45Z', 574);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (738, 81, 'Split authoring/ui/src/review/Review.svelte into smaller components', 'work', 'open', NULL, NULL, 'Follow-up of `task 575: Review the review page` (code review part 9). `authoring/ui/src/review/Review.svelte` is ~1080 lines (script ~510, markup ~290, CSS ~275) after task 444 added the locale view.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (738, 81, 'Split authoring/ui/src/review/Review.svelte into smaller components', 'work', 'done', NULL, '2026-10-13, authoring/ui/src/review/{Review,ReviewHeader,ReviewBanners,Modal,SearchModal,FeedbackModal}.svelte, review/url.ts, code-review.md, directory.md', 'Follow-up of `task 575: Review the review page` (code review part 9). `authoring/ui/src/review/Review.svelte` is ~1080 lines (script ~510, markup ~290, CSS ~275) after task 444 added the locale view.
 
 ## What
 - Behaviour unchanged: same URLs/params, keys, API calls, screens (plan 81 "Rules for this plan").
@@ -14292,7 +14292,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `npm run check`, `npm run build`; bundle size of `authoring/ui/dist` about the same.
 - Temp worktree server (`TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA` temp dirs, copy `work/<batch>` for sample mode), headless Chrome via CDP (as task 575 did): a, u, f+Enter, d 7 Enter, c, m/Esc, sample a/u (blind before, reveal after) identical before/after.
-- Log in `## Part 9` of `code-review.md`: the task 575 row "split candidates" → `fixed (task N)`.', '2026-10-13T13:08:01Z', NULL, 575);
+- Log in `## Part 9` of `code-review.md`: the task 575 row "split candidates" → `fixed (task N)`.', '2026-10-13T13:08:01Z', '2026-10-13T13:33:00Z', 575);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (739, 81, 'Start page Game readiness: bundles per decision 103', 'work', 'open', NULL, NULL, 'Follow-up of task 578 (code review part 9). Apply the answer of `decision 103: Start page Game readiness: which bundles does the supply count?`.
 
 ## What
@@ -16054,6 +16054,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (631, 578, '2026-10-13T13:17:41Z', '2026-10-13T13:20:19Z', 'done', NULL, 0, 'c6710360b466ff795a3c1cabab40712c24e3355c', 'claude-opus-5-5[1m]', '58e930a1-c2d0-43e2-82f0-ac6de456950a', 25, 44, 12727, 1431923, 70822, 1.1076765999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (632, 579, '2026-10-13T13:20:20Z', '2026-10-13T13:25:42Z', 'done', NULL, 0, '68cca6bd98979cd08edb39ea4185228c3b8b0ddc', 'claude-opus-5-5[1m]', '3bd1448a-7fb1-41ed-8d24-f7a1c0a190c1', 49, 98, 25184, 4240384, 105097, 2.1929248, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (633, 737, '2026-10-13T13:25:43Z', '2026-10-13T13:26:51Z', 'done', NULL, 0, 'ac120f6cb1b77b738d9deb9d6eece78d40f1c1a6', 'claude-opus-5-5[1m]', '0e0e3b34-1df1-474b-85b0-68eca91eb76e', 12, 24, 3933, 431620, 31114, 0.41399199999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (634, 738, '2026-10-13T13:26:51Z', '2026-10-13T13:33:07Z', 'done', NULL, 0, 'cb5992614f399a4d486b2d6a84b2d5fa6206804d', 'claude-opus-5-5[1m]', '992c2016-bc52-441f-9454-d81d54e0b4cf', 41, 78, 24951, 2978590, 94542, 1.8513859999999998, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
