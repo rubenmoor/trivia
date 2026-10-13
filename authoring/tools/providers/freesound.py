@@ -3,18 +3,16 @@
 Needs FREESOUND_API_KEY (.env.local). Search sends it as a header; the game plays the 128 kbps
 MP3 preview, which the CDN serves without a key. The API is free for non-commercial use (OQ-45).
 """
-import json, os, re, threading, time
+import json, os, re
 
-from download import http_get
+from download import Throttle, http_get
 
 ID = "freesound"
 NAME = "Freesound"
 KEY = os.environ.get("FREESOUND_API_KEY")
 API_URL = "https://freesound.org/apiv2/search/text/"
 MAX_SECONDS = 60
-MIN_API_INTERVAL = 1.0  # the API allows 60 requests a minute
-_last = 0.0
-_lock = threading.Lock()
+_throttle = Throttle(1.0)  # the API allows 60 requests a minute
 
 # Freesound gives licences as URLs; only these two families are asked for (the allowlist, D-45).
 LICENCES = [(r"creativecommons\.org/publicdomain/zero/(\d\.\d)", "CC0 {}"),
@@ -36,10 +34,7 @@ def licence(url):
 def search(query, kind, limit=30):
     if kind != "audio":
         return []
-    global _last
-    with _lock:
-        time.sleep(max(0.0, _last + MIN_API_INTERVAL - time.monotonic()))
-        _last = time.monotonic()
+    _throttle.wait()
     params = {"query": query, "page_size": min(limit, 30),
               "fields": "id,name,username,license,duration,previews,url",
               "filter": f'license:("Creative Commons 0" OR "Attribution") duration:[0 TO {MAX_SECONDS}]'}

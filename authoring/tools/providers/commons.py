@@ -2,22 +2,20 @@
 
 API calls are throttled here; `download.http_get` adds the account token (IMG-15).
 """
-import html, json, re, threading, time, urllib.parse
+import html, json, re, urllib.parse
 
-from download import API_URL, http_get
+from download import API_URL, Throttle, http_get
 
 ID = "commons"
 NAME = "Wikimedia Commons"
 PREVIEW_WIDTH = 500           # Commons rounds thumbnail widths to standard sizes; 500 is one
-IMAGE_WIDTH = 2560            # for 4K TVs; smaller originals are downloaded as they are
+IMAGE_WIDTH = 2560            # D-48 wants 3840: IMG-16; smaller originals are downloaded as they are
 VIDEO_PREFERENCE = ["1080p.vp9.webm", "720p.vp9.webm", "1080p.webm", "720p.webm", "480p.vp9.webm", "480p.webm"]
 
 # Templates the PD tags transclude, not tags themselves: subpages, layouts, texts, categories.
 PD_HELPER = re.compile(r"/|layout|-text$|-category$|^PD-generic|-X\b", re.IGNORECASE)
 
-MIN_API_INTERVAL = 2.0  # seconds between search API requests; the API rate-limits bursts
-_last_api_request = 0.0
-_api_lock = threading.Lock()
+_throttle = Throttle(2.0)  # seconds between API requests; the API rate-limits bursts
 
 
 def available():
@@ -26,10 +24,7 @@ def available():
 
 def api(wait=None, **params):
     """One API call; wait=False raises RateLimited at once instead of waiting it out (search)."""
-    global _last_api_request
-    with _api_lock:  # the server may call this from several threads
-        time.sleep(max(0.0, _last_api_request + MIN_API_INTERVAL - time.monotonic()))
-        _last_api_request = time.monotonic()
+    _throttle.wait()
     return json.loads(http_get(API_URL, {"action": "query", "format": "json", **params}, wait=wait))
 
 
@@ -84,7 +79,7 @@ def search(query, kind, limit=30):
         if kind == "video":
             by_key = {d.get("transcodekey"): d["src"] for d in i.get("derivatives", []) if d.get("transcodekey")}
             best = next((by_key[k] for k in VIDEO_PREFERENCE if k in by_key), None)
-            if not best and not c["mime"].startswith("video/webm"):
+            if not best and not (c["mime"] or "").startswith("video/webm"):
                 continue  # no browser-friendly version
             c["file_url"] = best or c["file_url"]
         out.append(c)

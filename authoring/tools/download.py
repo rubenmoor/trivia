@@ -27,6 +27,18 @@ class RateLimited(Exception):
         super().__init__(f"rate-limited by {host}; try again in about {retry_after} s")
 
 
+class Throttle:
+    """At least `interval` seconds between a provider's API requests, across threads."""
+
+    def __init__(self, interval):
+        self.interval, self._last, self._lock = interval, 0.0, threading.Lock()
+
+    def wait(self, interval=None):
+        with self._lock:
+            time.sleep(max(0.0, self._last + (interval or self.interval) - time.monotonic()))
+            self._last = time.monotonic()
+
+
 def http_get(url, params=None, headers=None, wait=None):
     """GET with retries on rate limits. File downloads aren't throttled; the authoring tools'
     providers throttle their API calls themselves and pass wait=False to skip a limited one."""

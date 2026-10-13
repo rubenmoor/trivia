@@ -70,10 +70,10 @@ def find_candidates(media, category=None, every=False):
     with ever shorter queries until there are ENOUGH; the next provider is only asked while there
     are fewer. `every` (a licence replacement, plans/53): every provider is asked as if it were
     the first, and the candidates alternate between them. Videos are topped up with images.
-    A rate-limited provider is skipped; if that leaves nothing, RateLimited is raised so a rerun
-    retries instead of storing an empty result. `category` is the broad category's slug."""
+    A rate-limited or failing provider is skipped; if that leaves nothing, its error is raised so a
+    rerun retries instead of storing an empty result. `category` is the broad category's slug."""
     kinds = [media["type"]] + (["image"] if media["type"] == "video" else [])
-    found, seen, per_author, limited = [], set(), {}, []
+    found, seen, per_author, errors = [], set(), {}, []
 
     def add(c):
         author = c["author"] or c["title"]
@@ -92,7 +92,11 @@ def find_candidates(media, category=None, every=False):
                 try:
                     results = providers.search(provider, query, kind)
                 except RateLimited as e:
-                    limited.append(e)
+                    errors.append(e)
+                    break
+                except OSError as e:  # HTTP error, timeout, offline: the next provider may fill in
+                    print(f"  {providers.PROVIDERS[provider].NAME} search failed: {e}", file=sys.stderr)
+                    errors.append(e)
                     break
                 for c in results:
                     if acceptable(c, media["role"]):
@@ -105,8 +109,8 @@ def find_candidates(media, category=None, every=False):
                     return found[:MAX_CANDIDATES]
                 if len(found) - base >= ENOUGH:
                     break  # good results from this variant; looser ones would add noise
-    if not found and limited:
-        raise limited[0]
+    if not found and errors:
+        raise errors[0]
     if every:
         found = alternate(found)
     return found[:MAX_CANDIDATES]

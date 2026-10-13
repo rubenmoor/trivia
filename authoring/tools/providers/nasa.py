@@ -3,19 +3,17 @@
 No key. NASA's own media is generally not under copyright; items credited to anyone else (a
 company, ESA, a news agency) are skipped, since their rights aren't NASA's to give.
 """
-import json, re, threading, time, urllib.parse
+import json, re, urllib.parse
 
-from download import RateLimited, http_get
+from download import Throttle, http_get
 
 ID = "nasa"
 NAME = "NASA"
 API_URL = "https://images-api.nasa.gov/search"
 LICENSE_URL = "https://www.nasa.gov/nasa-brand-center/images-and-media/"
-IMAGE_WIDTH = 2560  # like Commons: the largest size up to this, for 4K TVs
+IMAGE_WIDTH = 2560  # like Commons: the largest size up to this (D-48: IMG-16)
 VIDEO_PREFERENCE = ["~large.mp4", "~medium.mp4", "~orig.mp4"]
-MIN_API_INTERVAL = 1.0
-_last = 0.0
-_lock = threading.Lock()
+_throttle = Throttle(1.0)
 THIRD_PARTY = re.compile(r"©|copyright|\bESA\b|Roscosmos|SpaceX|Rocket Lab|Boeing|Lockheed|Northrop|"
                          r"Getty|\bAP\b|Reuters|AFP|Blue Origin|Sierra Space", re.IGNORECASE)
 
@@ -25,10 +23,7 @@ def available():
 
 
 def _get(url, params=None):
-    global _last
-    with _lock:
-        time.sleep(max(0.0, _last + MIN_API_INTERVAL - time.monotonic()))
-        _last = time.monotonic()
+    _throttle.wait()
     return json.loads(http_get(url, params, wait=False))
 
 
@@ -75,9 +70,7 @@ def search(query, kind, limit=30):
         else:
             try:
                 files = _get(quoted(item["href"]))  # the asset list: renditions of the video
-            except RateLimited:
-                raise
-            except Exception:  # noqa: BLE001 — one broken item doesn't spoil the search
+            except (OSError, ValueError):  # one broken item doesn't spoil the search
                 continue
             c["file_url"] = next((f for suffix in VIDEO_PREFERENCE for f in files if f.endswith(suffix)), None)
             c["mime"] = "video/mp4"

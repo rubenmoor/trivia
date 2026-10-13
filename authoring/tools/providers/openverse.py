@@ -4,9 +4,9 @@ and others. Commons' own files are left out, since Commons is asked directly.
 Works anonymously (20 requests a minute, 200 a day, at most 20 results). With OPENVERSE_CLIENT_ID
 and OPENVERSE_CLIENT_SECRET (.env.local; registered through the API) the limits are much higher.
 """
-import json, os, threading, time, urllib.parse, urllib.request
+import json, os, time, urllib.parse, urllib.request
 
-from download import USER_AGENT, http_get
+from download import USER_AGENT, Throttle, http_get
 
 ID = "openverse"
 NAME = "Openverse"
@@ -14,9 +14,7 @@ API = "https://api.openverse.org/v1"
 CLIENT_ID = os.environ.get("OPENVERSE_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("OPENVERSE_CLIENT_SECRET")
 PREVIEW_MAX_WIDTH = 1600  # larger originals are previewed through Openverse's thumbnail
-MIN_API_INTERVAL = 3.0    # the anonymous burst limit is 20 a minute
-_last = 0.0
-_lock = threading.Lock()
+_throttle = Throttle(3.0)  # the anonymous burst limit is 20 a minute
 _token = {"value": None, "expires": 0.0}
 
 # Openverse licence codes → the short names the allowlist knows (D-45).
@@ -48,11 +46,8 @@ def source_name(source):
 def search(query, kind, limit=30):
     if kind != "image":
         return []  # Openverse's audio is mostly music (Jamendo, ccMixter), which D-13 rules out
-    global _last
     t = token()
-    with _lock:
-        time.sleep(max(0.0, _last + (0.5 if t else MIN_API_INTERVAL) - time.monotonic()))
-        _last = time.monotonic()
+    _throttle.wait(0.5 if t else None)
     params = {"q": query, "license": ",".join(LICENCES), "excluded_source": "wikimedia",
               "page_size": min(limit, 30 if t else 20)}
     data = json.loads(http_get(f"{API}/images/", params, headers={"Authorization": f"Bearer {t}"} if t else None,
