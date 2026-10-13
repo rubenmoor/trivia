@@ -23594,6 +23594,20 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1000, 107, 'Package telemetry.mjs in the desktop builds', 'work', 'open', NULL, NULL, '`app/desktop/main.mjs` imports `./telemetry.mjs` (task 886: Shell: telemetry store), but `app/desktop/electron-builder.yml` `files:` lists each shell module by name and doesn''t list `telemetry.mjs`. A packaged build (`trivia-desktop-build`) then fails to load `main.mjs`.
 - Add `telemetry.mjs` to `files:` (next to `save.mjs`).
 - Check: `trivia-desktop-build --dir`, then the unpacked Linux build starts (or `trivia-release-check` smoke step).', '2026-10-13T20:17:16Z', NULL, 997);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1001, 82, 'Purge ''gamemaster'' as a name for the human in docs and code', 'work', 'open', 950, NULL, '"Gamemaster" is an in-game role only (Gamemaster mode, plan 05, `05-gamemaster-controls.md`). Docs, code and pm text also use "the gamemaster" for the human developer ("the gamemaster approves / enters / checks", "for the gamemaster"). That is a leftover from early drafting: workers copy it from `AGENTS.md` and `authoring/RUNBOOK.md` and spread it.
+
+- `AGENTS.md`: add a rule under "Rules":
+  - "Gamemaster" means only the in-game role; the human is "the developer"
+  - older text (`tasks.sql`, milestones, plans, decisions) still uses "the gamemaster" for the developer: read it as "the developer"; write "the developer" in new text
+  - fix `AGENTS.md:32` ("only when the gamemaster asks"); line 3 is the in-game sense, so check it
+- `authoring/RUNBOOK.md`: replace every human-sense use (lines 5, 24, 29, 36–39, 53, and any others)
+- Go through each tracked file that matches (`git ls-files | grep -v ''^tasks.sql$'' | xargs grep -il gamemaster`; about 33 files, biggest `plans/decisions.md`, `plans/07-question-generation.md`, `plans/11-steam.md`, `authoring/tools/qgen.py`, `code-review.md`):
+  - human sense → "the developer" (or rephrase)
+  - in-game sense (Gamemaster mode, the in-game role, UI strings like `app/client/src/locales/*.ts`, identifiers) stays
+  - code: comments, help texts and printed messages only; no renames of identifiers or CLI flags
+- Don''t touch `tasks.sql`: no pm edits to milestones, plans, tasks or decisions. The `AGENTS.md` rule covers old text.
+
+Done when: the `AGENTS.md` rule is in, `RUNBOOK.md` is fixed, and every remaining "gamemaster" in tracked files outside `tasks.sql` is the in-game sense. Note any doubtful cases in the task note.', '2026-10-13T20:26:41Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25752,6 +25766,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (823, 999, '2026-10-13T20:17:28Z', '2026-10-13T20:19:06Z', 'done', NULL, 0, 'c40831599a9f65d47ae3a47c1919d509553040a3', 'claude-opus-5-5[1m]', 'b8290362-b725-4e74-8f5a-3364ab504f8b', 12, 24, 4519, 555335, 47884, 0.584615, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (824, 654, '2026-10-13T20:19:06Z', '2026-10-13T20:20:06Z', 'done', NULL, 0, 'eca889776ed62698eadcc054bfa4a8d37cffa7c8', 'claude-opus-5-5[1m]', 'e89ad35f-4d92-4a0c-9880-77fc06fbc1e3', 8, 16, 3667, 277436, 31765, 0.38301120000000005, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (825, 655, '2026-10-13T20:20:07Z', '2026-10-13T20:26:03Z', 'done', NULL, 0, '3fd3d3621140b91888bed4d532f0340980521cc0', 'claude-opus-5-5[1m]', 'ab8d7cbe-d2dc-47c3-82df-846aea946711', 40, 72, 22093, 2950671, 96055, 1.8007221999999996, 1704996);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (826, 656, '2026-10-13T20:26:04Z', NULL, 'running', NULL, NULL, 'febb40b2e94c0c30039202bcf6c22a4c57918db5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1704996);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
