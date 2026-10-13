@@ -86,6 +86,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     jokers: (s) => game.setJokers(s, io, body.jokers ?? null),
     replace: (s) => game.replace(s, data, io, pyTruthy(body.seen)),
     level: (s) => game.jumpLevel(s, data, io, body.level),
+    goto: (s) => game.goTo(s, data, io, body.id),
     settings: (s) => game.changeSettings(s, data, io, pick(body, ["age_group", "difficulty", "bundles"])),
     joker: (s) => game.joker(s, data, io, pyStr(body.joker), pick(body, ["purge", "subcategory", "index"])),
   };

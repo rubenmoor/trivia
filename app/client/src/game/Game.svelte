@@ -383,6 +383,23 @@
     if (next !== undefined) await go("level", "whoosh", () => (game = next));
   }
 
+  /** «Ir a pregunta…» (dev mode, plan 85): that question on screen; a refusal stays in the dialog. */
+  async function goTo(id: string): Promise<string | null> {
+    let next: Game | null;
+    busy = true;
+    try {
+      next = await gameAction("goto", { id });
+    } catch (e) {
+      return errorText(e);
+    } finally {
+      busy = false;
+    }
+    error = saveWarning();
+    leaveOverlay();
+    await go("question", "paper", () => (game = next));
+    return null;
+  }
+
   /** Difficulty and bundles mid-game (MD-12): a new table; a refusal stays in the dialog. */
   async function changeSettings(body: GameActionBody): Promise<string | null> {
     let next: Game | null;
@@ -718,6 +735,7 @@
       {game}
       {running}
       canSkip={screen === "question" && !questionBusy()}
+      questionOn={screen === "question"}
       canTable={running && (game?.phase === "select" || (screen === "question" && game?.settings.cards === 0 && !questionBusy()))}
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={(running || screen !== "start") && !questionBusy()}
@@ -730,6 +748,7 @@
       onreplace={replace}
       onlevel={jumpLevel}
       onsettings={changeSettings}
+      ongoto={goTo}
       onrestart={restart}
       onbudget={setBudget}
     />

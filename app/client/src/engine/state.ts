@@ -193,6 +193,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   mode_not_built: (p) => `mode ${pyRepr(String(p.mode))} isn't playable yet`,
   gamemaster_only: (p) => `${p.action} only in gamemaster mode`,
   replace_empty: "no other question for this level",
+  question_unknown: (p) => `no question ${pyRepr(String(p.id))} in the loaded pool`,
   level_invalid: (p) => `level: a whole number ${p.min}–${p.max}`,
   cheat_not_select: (p) => `${p.action} only with the cards on the table`,
   language_unknown: (p) => `no ${p.kind} language ${pyRepr(String(p.lang))}`,

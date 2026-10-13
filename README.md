@@ -128,7 +128,7 @@ Environment variables (empty = unset):
 - `TRIVIA_SAVE_DIR`: the desktop shell's save folder
 - `TRIVIA_DEVTOOLS=1`: the desktop shell opens its devtools
 - `TRIVIA_STEAM_APPID`: the desktop shell's Steam App ID in dev (a Steam launch's `SteamAppId` wins; default 480)
-- `TRIVIA_DEV_STEAM_USER=1`: the desktop shell counts as a valid Steam user without Steam (saves and flags on; dev runs and checks only, decision 111)
+- `TRIVIA_DEV_STEAM_USER=1`: the desktop shell counts as a valid Steam user without Steam (saves and flags on; dev runs and checks only, decision 111); also dev mode: Esc menu row «Ir a pregunta…» (question id or number → that question on screen)
 - `TRIVIA_STEAM_SDK`: Steamworks SDK libs (set by the flake)
 - `TRIVIA_STEAM_ACCOUNT`: `trivia-steam upload`'s Steam login; `TRIVIA_STEAMCMD_HOME`: SteamCMD's home (default `$XDG_DATA_HOME/trivia/steamcmd`)
 - `VITE_AUTHORING_URL` (build time): the game's links to the authoring pages; `""` hides them (default: same host, port 8001)

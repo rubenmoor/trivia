@@ -36,6 +36,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Rich presence:** «Nivel 7 de 12» while a level is on screen (`#Level`, values `level`, `levels`), cleared otherwise and on quit; Steam shows only uploaded tokens: `app/desktop/steam-presence.vdf` (latam, spanish, english, german; from `screen.level.kicker` + `screen.level.of`), uploaded by the gamemaster in Steamworks.
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
 - **Valid Steam user** (decision 111): `steam.available` and a non-zero SteamID, computed once in `main.mjs` after init → `--trivia-user` → `steam.user`; the page reads only `validUser` (`lib/desktop.ts`; also true under the dev server shim, plan 99). Dev switch `TRIVIA_DEV_STEAM_USER=1`: valid without Steam (`steamId()` stays null), packaged too (soft check); never set by builds, launch options or VDFs. Gates saves (plan 87) and flags (plan 93).
+- **Dev mode** (plan 85): the dev switch without a real Steam user → `--trivia-dev` → `steam.dev`; `devMode` (`lib/desktop.ts`, also the dev server shim). Esc menu row «Ir a pregunta…» (`GoToDialog.svelte`, engine `goTo`, action `goto`): id or bare number replaces the question on screen at the current level, any mode, ignores range/group/bundles/seen; old one `admin_replace`; unknown → `question_unknown`.
 - **No DRM:** the game runs without Steam running (offline living room). Steam binding calls are optional; the game works without them.
 
 ## Platforms and display

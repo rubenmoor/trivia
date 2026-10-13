@@ -14,6 +14,7 @@ contextBridge.exposeInMainWorld("trivia", {
   steam: {
     available: process.argv.includes("--trivia-steam"),
     user: process.argv.includes("--trivia-user"),
+    dev: process.argv.includes("--trivia-dev"),
     steamId: () => ipcRenderer.invoke("steam:steam-id"),
     language: () => ipcRenderer.invoke("steam:language"),
     overlay: { enabled: () => ipcRenderer.invoke("steam:overlay-enabled") },

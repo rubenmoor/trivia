@@ -58,7 +58,7 @@ export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }
 
 /** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
  * `jokers` for the joker budget (MD-4); new: the configuration (D-88); cheats (MD-12): `seen` for
- * replace, `level` for level, age_group / difficulty / bundles for settings. */
+ * replace, `level` for level, age_group / difficulty / bundles for settings; `id` for goto (dev mode). */
 export interface GameActionBody {
   index?: number;
   player?: string;
@@ -73,6 +73,7 @@ export interface GameActionBody {
   video?: boolean;
   audio?: boolean;
   seen?: boolean;
+  id?: string;
   level?: number;
 }
 
@@ -162,7 +163,7 @@ export async function playJoker(body: {
 
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "settings",
+  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "goto" | "settings",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const scope = action === "new" ? "next" : "game";

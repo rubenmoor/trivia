@@ -622,6 +622,30 @@ export function replace(save: SaveData, data: EngineData, io: Io, seen = false):
   });
 }
 
+/** `q-0007`, `Q-7` or `7` → `q-0007`; anything else as typed. */
+function questionId(id: unknown): string {
+  const s = String(id ?? "").trim().toLowerCase();
+  const n = /^(?:q-?)?(\d+)$/.exec(s);
+  return n ? `q-${n[1].padStart(4, "0")}` : s;
+}
+
+/** «Ir a pregunta» (dev mode, plan 85): question `id` on screen at the current level, like «Cambiar
+ * pregunta» (not seen) but any mode, ignoring level range, age group, bundles and seen. */
+export function goTo(save: SaveData, data: EngineData, io: Io, id: unknown): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const { row, state } = running(work);
+    if (state.phase !== "question") throw new GameError("no_question");
+    const fresh = data.byId.get(questionId(id));
+    if (!fresh) throw new GameError("question_unknown", { id: String(id ?? "") });
+    if (fresh.id === state.current) return state;
+    state.options = state.options.filter((i) => i !== fresh.id);
+    state.history.push({ level: state.level, question_id: state.current!, outcome: "admin_replace", jokers: state.jokers });
+    putOn(state, fresh, io);
+    saveGame(row, state, io);
+    return state;
+  });
+}
+
 /** Before a new table (level, settings): select phase, or with `cards: 0` the question on screen is
  * replaced (not seen); the cards on the table go back to the pool. */
 function clearTable(state: GameState, what: string): void {

@@ -78,6 +78,10 @@ export const de = {
     unseen: "nicht gesehen",
     level: "Zu Stufe springen",
     settings: "Schwierigkeit und Pakete",
+    /** Dev mode only (plan 85): a question by id replaces the one on screen. */
+    goTo: "Zu Frage gehen…",
+    goToBody: "Fragen-ID (q-0007 oder 7); sie ersetzt die Frage auf dem Bildschirm, auf dieser Stufe.",
+    goToOpen: "Öffnen",
     settingsNote: "Neue Karten auf dem Tisch; Stufe und Gespieltes bleiben.",
     apply: "Übernehmen",
     used: "{n} benutzt",
@@ -350,6 +354,7 @@ export const de = {
     mode_not_built: "diesen Modus kann man noch nicht spielen",
     gamemaster_only: "in diesem Modus nicht möglich",
     replace_empty: "es gibt keine andere Frage für diese Stufe",
+    question_unknown: "keine Frage „{id}“ geladen (andere Sprache oder Paket nicht installiert)",
     level_invalid: "Stufe: {min} bis {max}",
     cheat_not_select: "nur möglich, solange die Karten auf dem Tisch liegen",
     save_locked: "Speichern ging nicht. Beim nächsten Zug wird es erneut versucht.",

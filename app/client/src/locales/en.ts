@@ -78,6 +78,10 @@ export const en = {
     unseen: "not seen",
     level: "Jump to level",
     settings: "Difficulty and bundles",
+    /** Dev mode only (plan 85): a question by id replaces the one on screen. */
+    goTo: "Go to question…",
+    goToBody: "Question id (q-0007 or 7); it replaces the one on screen, at this level.",
+    goToOpen: "Open",
     settingsNote: "New cards on the table; the level and what was played stay.",
     apply: "Apply",
     used: "{n} used",
@@ -351,6 +355,7 @@ export const en = {
     mode_not_built: "that mode can't be played yet",
     gamemaster_only: "not possible in this mode",
     replace_empty: "there's no other question for this level",
+    question_unknown: "no question “{id}” is loaded (other language or bundle not installed)",
     level_invalid: "level: {min} to {max}",
     cheat_not_select: "only possible with the cards on the table",
     save_locked: "Couldn't save. Trying again with the next move.",

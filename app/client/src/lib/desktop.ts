@@ -27,6 +27,8 @@ export interface SteamBridge {
   readonly available: boolean;
   /** Valid Steam user (non-zero SteamID) or the dev switch `TRIVIA_DEV_STEAM_USER` (decision 111). */
   readonly user: boolean;
+  /** Dev switch on and no real Steam user: dev tools such as «Ir a pregunta…». */
+  readonly dev: boolean;
   steamId(): Promise<string | null>;
   /** Steam's API language name (`german`, `latam`, …): the game's in Steam, else the client's. */
   language(): Promise<string | null>;
@@ -58,3 +60,5 @@ export const desktop: DesktopBridge | null = window.trivia ?? null;
 export const steam: SteamBridge | null = desktop?.steam ?? null;
 /** Saves and flags allowed (decision 111); the only check plan 87 and the flag UI read. */
 export const validUser: boolean = steam?.user === true || desktop?.devServer === true;
+/** Dev switch or dev server (plan 85): «Ir a pregunta…»; a real Steam user is not dev mode. */
+export const devMode: boolean = steam?.dev === true || desktop?.devServer === true;

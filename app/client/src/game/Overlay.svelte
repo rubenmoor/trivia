@@ -5,12 +5,13 @@
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
   // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
   import { fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api.ts";
-  import { desktop } from "../lib/desktop.ts";
+  import { desktop, devMode } from "../lib/desktop.ts";
   import { flush } from "../lib/engine.ts";
   import { endonym, t } from "../lib/i18n.ts";
   import { pushScope, type Action } from "../lib/input.svelte.ts";
   import Credits from "./Credits.svelte";
   import GameSettings from "./GameSettings.svelte";
+  import GoToDialog from "./GoToDialog.svelte";
   import { levelsOf } from "./levels.ts";
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
@@ -63,6 +64,7 @@
     questionId,
     questionLabel,
     canSkip,
+    questionOn,
     canTable,
     canUndo,
     canRestart,
@@ -74,6 +76,7 @@
     onreplace,
     onlevel,
     onsettings,
+    ongoto,
     onrestart,
     onbudget,
     onflags,
@@ -87,6 +90,8 @@
     questionLabel: string;
     /** A question on screen: skip, block, replace. */
     canSkip: boolean;
+    /** A question on screen: «Ir a pregunta…» in dev mode (plan 85). */
+    questionOn: boolean;
     /** A new table is possible: jump to level, difficulty and bundles. */
     canTable: boolean;
     canUndo: boolean;
@@ -102,6 +107,8 @@
     onlevel: (level: number) => void;
     /** Difficulty and bundles; the refusal's text, or null when applied. */
     onsettings: (body: GameActionBody) => Promise<string | null>;
+    /** «Ir a pregunta…»: the refusal's text, or null when it opened. */
+    ongoto: (id: string) => Promise<string | null>;
     onrestart: () => void;
     onbudget: (budget: Partial<JokerBudget>) => void;
     /** «Preguntas marcadas» opens over the overlay. */
@@ -117,6 +124,7 @@
   let creditsOpen = $state(false);
   /** «Dificultad y paquetes» is open over the menu. */
   let settingsOpen = $state(false);
+  let goToOpen = $state(false);
   function fullscreen() {
     if (desktop) desktop.toggleFullscreen();
     else if (document.fullscreenElement) document.exitFullscreen();
@@ -230,6 +238,7 @@
   const items = $derived<Item[]>([
     { label: t("overlay.continue"), enabled: true, run: onclose, col: 0 },
     { label: t("flag.list"), enabled: true, run: onflags, col: 0 },
+    ...(devMode && questionOn ? [{ label: t("overlay.goTo"), enabled: canSkip, run: () => (goToOpen = true), col: 0 as const }] : []),
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen, col: 0 },
     { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },
@@ -461,6 +470,9 @@
   </div>
   {#if creditsOpen}
     <Credits onclose={() => (creditsOpen = false)} />
+  {/if}
+  {#if goToOpen}
+    <GoToDialog ongo={ongoto} onclose={() => (goToOpen = false)} />
   {/if}
   {#if settingsOpen && game}
     <GameSettings settings={game.settings} onapply={applySettings} onclose={() => (settingsOpen = false)} />

@@ -88,6 +88,10 @@ const es = {
     /** «Saltar a nivel»: ‹ › picks the level. */
     level: "Saltar a nivel",
     settings: "Dificultad y paquetes",
+    /** Dev mode only (plan 85): a question by id replaces the one on screen. */
+    goTo: "Ir a pregunta…",
+    goToBody: "Id de la pregunta (q-0007 o 7); sustituye a la que está en pantalla, en este nivel.",
+    goToOpen: "Abrir",
     settingsNote: "Cartas nuevas en la mesa; el nivel y lo jugado se quedan.",
     apply: "Aplicar",
     /** Joker uses so far; the row's number is the uses left. */
@@ -400,6 +404,7 @@ const es = {
     mode_not_built: "ese modo todavía no se puede jugar",
     gamemaster_only: "en este modo no se puede",
     replace_empty: "no hay otra pregunta para este nivel",
+    question_unknown: "no hay ninguna pregunta «{id}» cargada (otro idioma o paquete no instalado)",
     level_invalid: "nivel: de {min} a {max}",
     cheat_not_select: "solo se puede con las cartas en la mesa",
     save_locked: "No se pudo guardar. Se intenta de nuevo con la próxima jugada.",

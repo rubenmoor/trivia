@@ -234,7 +234,11 @@ async function start() {
       nodeIntegration: false,
       preload: path.join(path.dirname(fileURLToPath(import.meta.url)), "preload.cjs"),
       devTools: process.env.TRIVIA_DEVTOOLS === "1",
-      additionalArguments: [...(steam ? ["--trivia-steam"] : []), ...(validUser ? ["--trivia-user"] : [])],
+      additionalArguments: [
+        ...(steam ? ["--trivia-steam"] : []),
+        ...(validUser ? ["--trivia-user"] : []),
+        ...(validUser && !hasSteamId() ? ["--trivia-dev"] : []),
+      ],
     },
   });
   win.once("ready-to-show", () => win.show());
