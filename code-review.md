@@ -410,6 +410,163 @@ Task 528, 2026-10-13, run from the repo root over every tracked file except `tas
 | `authoring/steam/steam.py` | `PLACEHOLDER_IDS` (Spacewar app 480 for `--dry-run`) reads like an AGENTS.md `PLACEHOLDER(<task id>)` marker in greps; e.g. `DRY_RUN_IDS` | inconsistency | low | handed to part 6 |
 | all tracked code in scope | no findings: no `PLACEHOLDER(<task id>)`, `TODO`, `FIXME`, `XXX`, `HACK` | — | — | — |
 
+### Bad-practice patterns
+
+Task 529, 2026-10-13, run from the repo root. AST scans, not greps (a grep can't tell `as` casts from `{#each … as x}` or `import { a as b }`): throw-away scripts in `/tmp` (deleted after; reproduced below). Hotspot list for parts 2–9; only the sites below got a row, every other hit is deliberate or harmless.
+
+- TS/JS: `node scan.mjs` over `git ls-files app authoring` `.ts`/`.svelte`/`.mjs`/`.cjs`/`.js` (116 files; `.svelte`: `<script>` blocks only, markup expressions not scanned), TypeScript compiler API from the root `node_modules`
+  - `any` = `AnyKeyword`; `as` = `AsExpression` minus `as const`; `nonnull` = `NonNullExpression`; `tsignore` = `@ts-ignore`/`@ts-expect-error`/`@ts-nocheck`; `emptycatch` = `catch` with empty block; `logcatch` = `catch` whose body is only `console.*`; `dotcatch` = `.catch(fn)` with empty or log-only body or a constant result (`() => null`, `() => false`)
+- Python: `python3 py.py` over `git ls-files app authoring` `.py` (32 files), `ast`
+  - `bare` = `except:`; `broad` = `except Exception`/`BaseException`; `broad_pass` = broad with only `pass`/`continue`; `return_none` = handler ending in `return`/`return None` with no print/log call; `type_ignore` = `# type: ignore`
+  - Any type with a `pass`/`continue`-only body: only `nasa.py:80` (one-liner over `ast.ExceptHandler`)
+- Linter evidence (part 10), totals per pattern and rule:
+  - `any` 15 (lint: no-explicit-any): 13 are `Record<string, any>` at the save JSON boundary (`engine/save.ts` 10, `state.ts` 1, `lib/api.ts` 1, `selection.test.ts` 2) + `selection.test.ts` `result: any`
+  - `as` 118 (no stock rule; typescript-eslint `consistent-type-assertions` with `assertionStyle: never` would flag all): 23 in tests; 1 `as unknown as` (`RevisionPanel.svelte:34`); `engine/game.ts` 30, mostly `unknown` → `number`/`string` after a `typeof` check in request validation
+  - `!` 74 (lint: no-non-null-assertion): 19 in tests; `engine/game.ts` 16, `Fireworks.svelte` 11 (canvas context)
+  - `@ts-ignore`/`@ts-expect-error` 0 (lint: ban-ts-comment)
+  - empty `catch {}` 7 (lint: no-empty; `allowEmptyCatch` off), log-only `catch` 1, empty/constant `.catch(() => …)` 21 (lint: no-empty-function for the 13 `() => {}`; no stock rule for `() => null`/`() => false`)
+  - of the 29 catch hits: 3 are mutex chains whose failures go to the caller (`lib/engine.ts:134`, `lib/store.ts:27`, `desktop/main.mjs:82`), 5 `media.play()` / `requestFullscreen()` autoplay refusals, 4 commented best-effort (`sound.svelte.ts`, `resolve.mjs` bad URL), 8 in authoring scripts (`smoke.mjs`, `screenshots.mjs`, `cdp.mjs`: polling and shutdown), 5 optional reads with a fallback (outlook, Steam language/input types/text input, jokers used); the rest are rows below
+  - Python: bare `except:` 0, broad 10 (all print/collect the error except `nasa.py:80` and `qgen.py:238`, both with a `noqa: BLE001` reason), broad + `pass`/`continue` 1, silent `return None` 2 (`save.py:36` `FileNotFoundError` = no save yet; `qgen.py:257` `ValueError` on an unparsable reset date), `# type: ignore` 0
+
+TS/JS counts per file (blank = 0; files with no hit omitted):
+
+| file | any | as | ! | ts-ignore | catch {} | catch log-only | .catch(() => …) |
+|---|---|---|---|---|---|---|---|
+| `app/client/src/engine/game.ts` |  | 30 | 16 |  |  |  |  |
+| `app/client/src/engine/choice.test.ts` |  | 7 | 11 |  |  |  |  |
+| `authoring/tools/sim/simulate.ts` |  | 5 | 7 |  |  |  |  |
+| `app/client/src/engine/save.ts` | 10 | 1 |  |  |  |  |  |
+| `app/client/src/game/Fireworks.svelte` |  |  | 11 |  |  |  |  |
+| `app/client/src/engine/game.test.ts` |  | 7 | 2 |  |  |  |  |
+| `app/client/src/engine/selection.test.ts` | 3 | 4 | 2 |  |  |  |  |
+| `app/client/src/game/Overlay.svelte` |  | 1 | 3 |  |  |  | 4 |
+| `app/client/src/engine/api.ts` |  | 7 |  |  |  |  |  |
+| `app/client/src/engine/pool.ts` |  | 7 |  |  |  |  |  |
+| `app/client/credits.ts` |  | 6 |  |  |  |  |  |
+| `app/client/src/game/Question.svelte` |  | 3 | 1 |  |  |  | 2 |
+| `authoring/ui/src/review/Review.svelte` |  | 3 | 3 |  |  |  |  |
+| `app/client/src/game/Choice.svelte` |  | 2 | 2 |  |  |  | 1 |
+| `app/client/src/game/sound.svelte.ts` |  | 3 |  |  | 2 |  |  |
+| `app/client/src/engine/selection.ts` |  |  | 4 |  |  |  |  |
+| `app/client/src/lib/engine.ts` |  | 2 |  |  |  |  | 2 |
+| `authoring/ui/src/review/RevisionPanel.svelte` |  | 3 | 1 |  |  |  |  |
+| `app/client/src/engine/pool.test.ts` |  | 1 | 2 |  |  |  |  |
+| `app/client/src/engine/save.test.ts` |  | 1 | 2 |  |  |  |  |
+| `app/client/src/engine/state.ts` | 1 | 2 |  |  |  |  |  |
+| `app/client/src/game/Game.svelte` |  |  |  |  |  |  | 3 |
+| `app/client/src/lib/i18n.ts` |  | 3 |  |  |  |  |  |
+| `authoring/steam/smoke.mjs` |  |  |  |  | 2 |  | 1 |
+| `authoring/tools/cdp.mjs` |  |  |  |  | 1 |  | 2 |
+| `app/client/src/engine/outlook.test.ts` |  | 2 |  |  |  |  |  |
+| `app/client/src/engine/outlook.ts` |  |  | 2 |  |  |  |  |
+| `app/client/src/lib/api.ts` | 1 | 1 |  |  |  |  |  |
+| `app/client/src/lib/errors.ts` |  | 2 |  |  |  |  |  |
+| `app/client/src/lib/focus.ts` |  | 2 |  |  |  |  |  |
+| `app/client/src/lib/gamepad.svelte.ts` |  | 1 |  |  |  |  | 1 |
+| `app/desktop/main.mjs` |  |  |  |  |  | 1 | 1 |
+| `authoring/store/screenshots.mjs` |  |  |  |  |  |  | 2 |
+| `app/client/src/engine/pycompat.ts` |  |  | 1 |  |  |  |  |
+| `app/client/src/engine/test/fixtures.ts` |  | 1 |  |  |  |  |  |
+| `app/client/src/game/Credits.svelte` |  | 1 |  |  |  |  |  |
+| `app/client/src/game/Customize.svelte` |  | 1 |  |  |  |  |  |
+| `app/client/src/game/Glyph.svelte` |  | 1 |  |  |  |  |  |
+| `app/client/src/game/JokerFlight.svelte` |  |  | 1 |  |  |  |  |
+| `app/client/src/game/Player.svelte` |  |  |  |  |  |  | 1 |
+| `app/client/src/game/Prompt.svelte` |  | 1 |  |  |  |  |  |
+| `app/client/src/lib/data.ts` |  | 1 |  |  |  |  |  |
+| `app/client/src/lib/gamepad.ts` |  | 1 |  |  |  |  |  |
+| `app/client/src/lib/input.svelte.ts` |  | 1 |  |  |  |  |  |
+| `app/client/src/lib/store.ts` |  |  |  |  |  |  | 1 |
+| `app/client/src/locales/xx.ts` |  | 1 |  |  |  |  |  |
+| `app/client/src/main.ts` |  |  | 1 |  |  |  |  |
+| `app/client/vite.config.ts` |  | 1 |  |  |  |  |  |
+| `app/desktop/resolve.mjs` |  |  |  |  | 1 |  |  |
+| `app/desktop/save.mjs` |  |  |  |  | 1 |  |  |
+| `authoring/tools/supply.ts` |  | 1 |  |  |  |  |  |
+| `authoring/ui/src/main.ts` |  |  | 1 |  |  |  |  |
+| `authoring/ui/src/review/SourcePanel.svelte` |  |  | 1 |  |  |  |  |
+| `authoring/ui/src/stats/Stats.svelte` |  | 1 |  |  |  |  |  |
+| total (54 of 116 files) | 15 | 118 | 74 | 0 | 7 | 1 | 21 |
+
+Python counts per file (files with no hit omitted):
+
+| file | bare | broad | broad + pass/continue | silent return None | type: ignore |
+|---|---|---|---|---|---|
+| `authoring/tools/qgen.py` |  | 6 |  | 1 |  |
+| `authoring/tools/media.py` |  | 2 |  |  |  |
+| `authoring/tools/providers/nasa.py` |  | 1 | 1 |  |  |
+| `authoring/server/main.py` |  | 1 |  |  |  |
+| `app/server/save.py` |  |  |  | 1 |  |
+| total (5 of 32 files) | 0 | 10 | 1 | 2 | 0 |
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/src/game/Game.svelte` | `startGame`: `noteExhausted(…).catch(() => {})` (line 279): a write failure still shows via `saveWarning()`, but an engine throw there (bad choice body) vanishes without a trace (lint: no-empty-function) | practice | low | handed to part 5 |
+| `app/client/src/game/Overlay.svelte` | language `$effect` (line 191) `.catch(() => {})`: if `fetchLanguage()`/`localeSupply()` fails, the language rows just don't appear, no error shown or logged (lint: no-empty-function) | practice | low | handed to part 5 |
+| `app/desktop/save.mjs` | `backup()`: `try { await fs.access(target); continue; } catch {}` treats every error (also `EACCES`) as "name is free"; harmless today because `rename` then fails loudly (lint: no-empty) | practice | low | handed to part 6 |
+| `authoring/tools/providers/nasa.py` | line 80: `except Exception: continue` around the video asset fetch also hides programming errors (`KeyError`, bad JSON shape): every NASA video would silently drop out of the search | practice | low | handed to part 8 |
+| all TS/JS and Python in scope | no `@ts-ignore`/`@ts-expect-error`, no bare `except:`, no `# type: ignore`; no swallowed error on a save, LLM or media-download path | — | — | — |
+
+```js
+// scan.mjs (TS/JS); `ln -s $PWD/node_modules /tmp/bp529/` first
+import ts from "./node_modules/typescript/lib/typescript.js";
+import { execSync } from "node:child_process";
+import { readFileSync } from "node:fs";
+const files = execSync("git ls-files app authoring", { encoding: "utf8" }).split("\n").filter((f) => /\.(ts|svelte|mjs|cjs|js)$/.test(f));
+const K = ["any", "as", "nonnull", "tsignore", "emptycatch", "logcatch", "dotcatch"];
+const isLog = (s) => ts.isExpressionStatement(s) && ts.isCallExpression(s.expression) &&
+  /^console\.(log|warn|error|info|debug)$/.test(s.expression.expression.getText());
+for (const f of files) {
+  const src = readFileSync(f, "utf8");
+  const blocks = f.endsWith(".svelte") ? [...src.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1]) : [src];
+  const c = Object.fromEntries(K.map((k) => [k, 0]));
+  for (const code of blocks) {
+    const sf = ts.createSourceFile(f, code, ts.ScriptTarget.Latest, true, /\.(m?js|cjs)$/.test(f) ? ts.ScriptKind.JS : ts.ScriptKind.TS);
+    c.tsignore += (code.match(/@ts-(ignore|expect-error|nocheck)/g) ?? []).length;
+    const walk = (n) => {
+      if (n.kind === ts.SyntaxKind.AnyKeyword) c.any++;
+      if (ts.isAsExpression(n) && !(ts.isTypeReferenceNode(n.type) && n.type.typeName.getText() === "const")) c.as++;
+      if (ts.isNonNullExpression(n)) c.nonnull++;
+      if (ts.isCatchClause(n)) {
+        const st = n.block.statements;
+        if (st.length === 0) c.emptycatch++; else if (st.every(isLog)) c.logcatch++;
+      }
+      if (ts.isCallExpression(n) && ts.isPropertyAccessExpression(n.expression) && n.expression.name.text === "catch") {
+        const a = n.arguments[0];
+        if (a && (ts.isArrowFunction(a) || ts.isFunctionExpression(a))) {
+          const b = a.body;
+          if (ts.isBlock(b) ? b.statements.every(isLog) : ts.isLiteralExpression(b) || ts.isIdentifier(b) && b.text === "undefined" ||
+              [ts.SyntaxKind.NullKeyword, ts.SyntaxKind.TrueKeyword, ts.SyntaxKind.FalseKeyword].includes(b.kind) ||
+              ts.isObjectLiteralExpression(b) || ts.isArrayLiteralExpression(b) || ts.isCallExpression(b) && /^console\./.test(b.expression.getText())) c.dotcatch++;
+        }
+      }
+      ts.forEachChild(n, walk);
+    };
+    walk(sf);
+  }
+  if (K.some((k) => c[k])) console.log(f, JSON.stringify(c));
+}
+```
+
+```python
+# py.py
+import ast, subprocess, re, collections
+files = [f for f in subprocess.run(['git', 'ls-files', 'app', 'authoring'], capture_output=True, text=True).stdout.split() if f.endswith('.py')]
+LOG = re.compile(r'\b(print|log\w*|warn\w*|logger|logging|sys\.stderr|_err|fail|die)\b')
+for f in files:
+    src = open(f).read(); c = collections.Counter(type_ignore=len(re.findall(r'#\s*type:\s*ignore', src)))
+    for n in ast.walk(ast.parse(src)):
+        if not isinstance(n, ast.ExceptHandler): continue
+        t = ast.unparse(n.type) if n.type else None; txt = ' '.join(ast.unparse(s) for s in n.body)
+        broad = t is None or re.search(r'\b(Exception|BaseException)\b', t)
+        c['bare' if t is None else 'broad' if broad else 'other'] += 1
+        if broad and all(isinstance(s, (ast.Pass, ast.Continue)) for s in n.body): c['broad_pass'] += 1
+        r = n.body[-1]
+        if isinstance(r, ast.Return) and (r.value is None or isinstance(r.value, ast.Constant) and r.value.value is None) and not LOG.search(txt):
+            c['return_none'] += 1
+    if any(v for k, v in c.items() if k != 'other'): print(f, dict(c))
+```
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.
