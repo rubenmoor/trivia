@@ -3745,6 +3745,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - D-75 (pm decision 21): target = 5000 approved per launch language with D-53''s mix; no games number. The simulation (plan 62, CT-2) is information only: its bottlenecks never set targets.
 - D-74 (pm decision 19): no presets; one standard joker set. D-77/D-80 (pm decision 23): modes. Neither adds targets: no per-mode, per-preset or per-age-group numbers (the per-level mix covers the age-group windows, D-76).
 - D-78 (pm decision 26): `es`, `en`, `de`. D-81: locale files, own `difficulty` per translation. Plan 66: `qgen batch --translate L`, pilot `tr-<L>-1` (50 sources), batch report with cost per approved translation.
+- decision 110: Regional packs at launch (RG-5, OQ-46), partly superseding decision 37: every regional bundle 2000 approved (region''s language + en; `colombia`: es + en); pilot `colombia` 102 → 2000, effort = $ per approved via `qgen report --cost` + review time per 100. The bundle targets in `targets.json`, the per-bundle `--cost` rows and the review-time line are plan 98''s (part 10); this plan''s report and budget read them.
 - D-53/D-54: `targets.json`, `targets.deficits()`, `target_weights()`, subcategory ranking by deficit. D-55: `$ per approved ≤ 0.35` per batch already stops a costly batch. D-36: no new `qgen batch` arguments.
 
 ## Where the numbers stand (2026-10-12, `work/*/costs.log`)
@@ -3758,6 +3759,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
   - Per run (`batch-*`, `tr-<L>-*`, `rework-*`, `tighten-*`, `neutralize-*`, `concepts`, others): calls, $ (incl. `audit/`), approved, $ per approved.
   - Per kind: draft $/approved (last 3 `batch-*` runs, weighted), translation $/approved per locale (`tr-<L>-*`), overhead ratio = (non-batch $) / (batch $).
   - Projection per launch language: deficit (task 2) × $/approved × (1 + overhead ratio); `en`/`de` "no pilot yet" until a `tr-<L>-*` run exists. Plus the `es` sources the translations still need (task 2) at the draft rate.
+  - Per bundle (`colombia`, later packs): plan 98 adds the bundle''s rows (deficit to its 2000 target, $/approved of its `--bundle` runs and `--translate --bundle` runs); not part of this plan''s tasks.
   - Spent vs. budget per language once `targets.json` has `"budget"` (task 3); information only, no stop (D-55 already caps a batch''s $/approved).
 - **Per-locale targets (CT-4):** no new numbers. Every launch language''s target is `targets.json` `base` (D-75); no locale block unless the gamemaster later decides different numbers.
   - `targets.deficits(pool, bundle, locale=None)`: with a locale, counts that locale''s approved, non-stale translations (via `translations.py`) by their own difficulty.
@@ -3771,7 +3773,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Tasks (for the split)
 1. **`qgen report --cost` (CT-3 tooling):** as above, `--json`; AGENTS.md `qgen report` line; record today''s numbers in plan 16 "Cost". Verify against `batches.md`''s `$ per approved`. Priority 560.
 2. **Per-locale deficits and source supply (CT-4):** `targets.deficits(..., locale)`, `qgen report --locale` progress, `target_check` on it, deficit weight in the `--translate` selection (after plan 66 task 440; if 440 is still open, do the rest and add the selection weight as a follow-up task in plan 66), source shortfall in `target_weights()`, shown in `--cost` and `--locale` progress. Seeded dry run of `draw_slots` with a fake `es` pool at 5000 and an `en` deficit: slots follow the shortfall. D-entry "Per-locale targets and gaps" (D-75''s numbers per locale, deficits per locale, source shortfall drives `es` drafting past its target, no per-mode/age-group targets); D-54 "amended by". Priority 550.
-3. **Release budget (pm decision, CT-3):** runs after part 11''s translation pilot (QT-5: `tr-en-1`, `tr-de-1` done and their go/no-go decided). If those runs or reports don''t exist: `pm decision add "Translation pilot done (tr-en-1, tr-de-1)?"` (kind once), make this task pending on it, stop. Otherwise: `qgen report --cost` numbers → `pm decision add` "Release budget per language" with a table (es remaining, en, de, es extra sources for translation, overhead, QC) and options (recommended: the projection + 20 % margin; a lower cap with which levels/languages give way; grow `es` past 5000 for sources or not). On the answer: `"budget": {"es": $, "en": $, "de": $}` in `targets.json` (+ `targets.py` loader, `qgen validate` check), plan 16 "Cost" and CT-3 `[x]`, `plans/project.md`. Part 11''s full runs (QT-6) wait for this decision. Priority -95 (after the pilot at -90, before full runs at -110).
+3. **Release budget (pm decision, CT-3):** runs after part 11''s translation pilot (QT-5: `tr-en-1`, `tr-de-1` done and their go/no-go decided). If those runs or reports don''t exist: `pm decision add "Translation pilot done (tr-en-1, tr-de-1)?"` (kind once), make this task pending on it, stop. Otherwise: `qgen report --cost` numbers → `pm decision add` "Release budget per language" with a table (es remaining, en, de, es extra sources for translation, overhead, QC; plus a `colombia` row: es to 2000 and en 2000, from plan 98''s per-bundle `--cost` numbers or the draft/translation rates if those don''t exist yet; launch doesn''t wait for it, decision 110) and options (recommended: the projection + 20 % margin; a lower cap with which levels/languages give way; grow `es` past 5000 for sources or not). On the answer: `"budget": {"es": $, "en": $, "de": $}` in `targets.json` (+ `targets.py` loader, `qgen validate` check), plan 16 "Cost" and CT-3 `[x]`, `plans/project.md`. Part 11''s full runs (QT-6) wait for this decision. Priority -95 (after the pilot at -90, before full runs at -110).
 - CT-4 `[x]` in plan 16 with task 2 (generation plan = deficits per locale + source shortfall, read by `draft` and `--translate`).
 
 ## Done when
@@ -3780,7 +3782,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A release budget per language is answered and stored; plan 16 CT-3, CT-4 `[x]`.
 
 ## Out of scope
-- Running batches or translations (part 11, plan 17); the back-audit''s cost estimate (plan 57); later languages (milestone 12); a hard budget stop in `qgen batch`.', '2026-10-12T19:46:01Z', 248);
+- Running batches or translations (part 11, plan 17, plan 84); per-bundle cost rows, bundle targets and review time per 100 (plan 98); the "More regional bundles at launch?" decision (plan 84); the back-audit''s cost estimate (plan 57); later languages (milestone 12); a hard budget stop in `qgen batch`.', '2026-10-12T19:46:01Z', 248);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (71, 5, 'Bundle languages and base bundles', 600, 'Part 5 of masterplan 5. Today every bundle is offered in every language, and `always_on: true` forces `base` into each session. This plan gives each bundle the languages it exists in, makes `kind: base` the mark of a base bundle (exactly one per session, default the locale''s first), resolves choices against the game''s locale, and teaches `qgen validate` the new rules. For `es` the defaults stay `base` + `colombia`, so the family''s sessions and plan 18''s fixture replay don''t change. Plan 29 (start screen, 400) and plan 30 (close-out, 390) build on the API here.
 
 ## Builds on
@@ -17449,7 +17451,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T15:58:48Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (819, 70, 'revise plan 70', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (819, 70, 'revise plan 70', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 70 cites decision 110; colombia row in the release budget decision; per-bundle cost/targets/review time left to plan 98', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
 (`pm plan edit 70 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17576,7 +17578,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', NULL, 815);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T15:59:27Z', 815);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (820, 84, 'revise plan 84', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
 (`pm plan edit 84 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -17961,6 +17963,8 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', NULL, 815);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (823, 70, 'create tasks for plan 70', 'split', 'open', 1000, NULL, 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:59:25Z', NULL, 819);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -19930,6 +19934,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (705, 816, '2026-10-13T15:56:59Z', '2026-10-13T15:57:21Z', 'done', NULL, 0, 'cde90ff63fb67deffbc242c0b18fef8cc2fea231', 'claude-opus-5-5[1m]', '6d56a762-62d9-4811-a07f-eb3010f872d0', 5, 10, 1872, 171151, 32075, 0.3283102, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (706, 817, '2026-10-13T15:57:21Z', '2026-10-13T15:57:35Z', 'done', NULL, 0, '84a17aee2c52d578d881f0e081f398fb8f2d6886', 'claude-opus-5-5[1m]', 'd122bc66-0f55-41df-9ff8-cffa1d412719', 3, 6, 1110, 82057, 26526, 0.2508434, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (707, 818, '2026-10-13T15:57:36Z', '2026-10-13T15:58:53Z', 'done', NULL, 0, 'ae5dbd3bd37bbfdf9597f9496054da43e45730eb', 'claude-opus-5-5[1m]', 'c94a5617-bf65-44fb-a076-1f02de3b22b9', 4, 8, 973, 125391, 28879, 0.2756022, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (708, 819, '2026-10-13T15:58:53Z', '2026-10-13T15:59:34Z', 'done', NULL, 0, '07278a22ca9ee402c1604f356d9728ea618a47fe', 'claude-opus-5-5[1m]', '73ea77a6-292c-4893-9651-d40a735fef50', 7, 14, 2868, 293899, 41878, 0.4512198, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
