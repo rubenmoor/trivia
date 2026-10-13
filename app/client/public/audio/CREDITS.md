@@ -27,3 +27,15 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `menu-cierra.m4a` | Closing the menu or a dialog | `minimize_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
 | `desbloqueado.m4a` | The first click: audio unlocked | `glass_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
 | `hola.m4a` | «¡Hola, …!» and «listo» into level 1 | `confirmation_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `comodin.m4a` | A joker played: the activate shimmer (first 1.5 s) | [Crystal Twinkle](https://freesound.org/people/LaurenPonder/sounds/639429/) (Freesound) | LaurenPonder | CC0 |
+| `comodin-preparado.m4a` | Arming Soplo or Bájale («¿Usar …?») | `question_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `comodin-abre.m4a` | Opening Paso's or Cambiazo's dialog | `card-fan-1.ogg`, [Casino Audio](https://kenney.nl/assets/casino-audio) | Kenney | CC0 |
+| `silbato.m4a` | Bájale: the descending slide whistle | [FX swanee whistle down.wav](https://freesound.org/people/v0idation/sounds/497093/) (Freesound) | v0idation | CC0 |
+| `trituradora.m4a` | Paso with purge: the shredder (1.2 s cut) | [20131106_Paper Shredder_ZoomH6XY.wav](https://freesound.org/people/Soundscape_Leuphana/sounds/205653/) (Freesound) | Soundscape_Leuphana | CC0 |
+| `latido.m4a` | Francotirador: the heartbeat as the scope opens (first beat) | [Four Heartbeats HQ_BeatSmith.wav](https://freesound.org/people/Lunardrive/sounds/22416/) (Freesound) | Lunardrive | CC0 |
+| `rebobinar.m4a` | «Rebobinar» transition (undo, Francotirador hit) | [Tape recorder rewind (Fanmade)](https://freesound.org/people/simplewave/sounds/372876/) (Freesound) | simplewave | CC0 |
+| `mira-tic.m4a` | Francotirador: the scope moving to an answer (pitch varied) | `tick_002.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `corcho.m4a` | Francotirador: the cork shot | [Champagne Cork](https://freesound.org/people/KenRT/sounds/392624/) (Freesound) | KenRT | CC0 |
+| `rasgado.m4a` | The chosen card's envelope tearing open | [Tearing paper](https://freesound.org/people/ludde44/sounds/170311/) (Freesound) | ludde44 | CC0 |
+| `susurro-papel.m4a` | Soplo: the note sliding in | [PageRustle](https://freesound.org/people/Tomoyo%20Ichijouji/sounds/211246/) (Freesound) | Tomoyo Ichijouji | CC0 |
+| `ficha.m4a` | A fresh joker token popping back into its slot (pitch varied) | `chip-lay-1.ogg`, [Casino Audio](https://kenney.nl/assets/casino-audio) | Kenney | CC0 |

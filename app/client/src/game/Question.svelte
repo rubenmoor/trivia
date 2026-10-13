@@ -299,6 +299,7 @@
     const [res] = await Promise.all([play(body), fly(body.joker)]);
     flight = null;
     popping = body.joker;
+    sfx("token-back");
     setTimeout(() => (popping = null), 500);
     if (!res) {
       jokerBusy = false;
@@ -334,6 +335,7 @@
     jokerBusy = false;
     target = null;
     duck(false);
+    if (res.event.joker === "hint") sfx("rustle"); // the new note slides in
     onplayed(res.game, res.event);
   }
 

@@ -37,7 +37,8 @@ let noiseBuffer: AudioBuffer;
 const SAMPLE_NAMES = [
   "aplausos", "aplausos-gran", "redoble", "fanfarria", "trombon-triste", "candado-cierra", "candado-abre",
   "papel", "vidrio", "sello", "golpe", "estallido", "victoria", "whoosh", "swoosh-sube", "escoba", "pop",
-  "menu-abre", "menu-cierra", "desbloqueado", "hola",
+  "menu-abre", "menu-cierra", "desbloqueado", "hola", "comodin", "comodin-preparado", "comodin-abre", "silbato",
+  "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
@@ -63,6 +64,18 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   "menu-close": ["menu-cierra"],
   unlocked: ["desbloqueado"],
   ready: ["hola"],
+  "joker-activate": ["comodin"],
+  "joker-armed": ["comodin-preparado"],
+  "joker-open": ["comodin-abre"],
+  "whistle-down": ["silbato"],
+  shredder: ["trituradora"],
+  heartbeat: ["latido"],
+  rewind: ["rebobinar"],
+  tick: ["mira-tic", () => 0.95 + Math.random() * 0.1],
+  "cork-pop": ["corcho"],
+  tear: ["rasgado"],
+  rustle: ["susurro-papel"],
+  "token-back": ["ficha", () => 0.95 + Math.random() * 0.15],
 };
 
 async function loadSamples(c: AudioContext) {
@@ -389,7 +402,7 @@ export type Cue =
   | "whoosh" | "swoosh-up" | "swoosh" | "tear" | "paper" | "ready" | "boom" | "block" | "cork-pop" | "pop"
   | "padlock-close" | "padlock-open" | "fanfare" | "sad-trombone" | "rewind" | "menu-open" | "menu-close"
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
-  | "heartbeat" | "tick" | "glass-break";
+  | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back";
 
 /** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
 export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
@@ -574,6 +587,8 @@ const RECIPES: Record<Cue, Recipe> = {
     tone(c, o, t + 0.22, { from: 60, to: 40, len: 0.18, level: 0.5 });
   },
   tick: (c, o, t) => noise(c, o, t, { type: "highpass", from: 6000, len: 0.03, level: 0.3 }), // «mira: tic»
+  rustle: (c, o, t) => noise(c, o, t, { from: 4000, to: 2500, len: 0.3, q: 1.5, level: 0.15, attack: 0.08 }), // Soplo's note
+  "token-back": (c, o, t) => tone(c, o, t, { from: 1400, to: 900, len: 0.08, level: 0.15 }), // a fresh token in its slot
   "glass-break": (c, o, t) => { // «vidrio roto»
     for (let i = 0; i < 7; i++) {
       tone(c, o, t + i * 0.035, { from: 2200 + Math.random() * 3000, len: 0.18, level: 0.1 });
