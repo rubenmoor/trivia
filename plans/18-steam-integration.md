@@ -90,6 +90,24 @@ Date: · Build commit:
 | Save at `~/.config/trivia/save/<steamid64 or local>/game.json` | | |
 | `CREDITS.md` in the folder | | |
 
+## Steam Cloud test
+The gamemaster's check that Auto-Cloud syncs one save per Steam user between machines (plan 87 part 4). Fill the table once, with date and build commit; agents don't run it.
+- **Needs:** the real App ID (masterplan 10 part 1, `task 253`), the Auto-Cloud values above entered in Steamworks (part 2, `task 254`), a packaged Steam build (`task 650` or part 7's upload to `beta`).
+- **Machines:** A and B, one Windows and one Linux or the Deck.
+- **Result:** ✓, ✗ or n/a; a ✗ gets a note on how to reproduce.
+
+Date: · Build commit:
+
+| check | result | note |
+|---|---|---|
+| A plays (new player, a few questions) → quit → B shows the same players and seen counts | | |
+| Two Steam accounts on one OS login → separate saves (`save/<id>/` each) | | |
+| Family Sharing borrower → own save | | |
+| First Steam start with an S3 or `local/` save → «Usar el progreso de este equipo» offered | | |
+| Second machine with a cloud save → no question | | |
+| Offline on both, play on both, then online → Steam's conflict dialog; the picked side wins whole | | |
+| Steam's cloud file list (game properties, or `store.steampowered.com/account/remotestorage`) shows only `game.json`, never `.tmp`, `backup/`, `local/` | | |
+
 ## Steam Deck Verified
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
 

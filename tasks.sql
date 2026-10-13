@@ -13152,7 +13152,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If `task 254` is done by the time this runs (its plan entered the Steamworks values already): `pm decision add "Auto-Cloud values entered in Steamworks?"` with the exact values above in the body (options: entered (recommended) / not yet), and link this plan''s gamemaster test task to it (`pm task-pending-decision`). If task 254 is still open, nothing more: its plan reads plan 18.
 
 Done when: plan 18 holds the values; `plans/project.md` unchanged.', '2026-10-13T05:52:56Z', '2026-10-13T06:03:01Z', 659);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (663, 87, 'Steam Cloud test checklist and gamemaster decision', 'work', 'open', NULL, NULL, 'Plan 87 part 4: the gamemaster tests Steam Cloud on real machines. Workers write the checklist and record the result; they don''t test with Steam themselves.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (663, 87, 'Steam Cloud test checklist and gamemaster decision', 'work', 'done', NULL, '2026-10-13, plans/18-steam-integration.md (Steam Cloud test checklist); decision 75 open, task 664 pending on it', 'Plan 87 part 4: the gamemaster tests Steam Cloud on real machines. Workers write the checklist and record the result; they don''t test with Steam themselves.
 
 ## Do
 - Checklist section "Steam Cloud test" in `plans/18-steam-integration.md`, a table per row (pass / issue / note):
@@ -13166,7 +13166,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` this plan''s close-out task on that decision.
 - When answered with issues: one task per failing row in plan 87 (`pm task add 87 …`).
 
-Done when: the checklist is in plan 18 and the decision is open with the close-out waiting on it.', '2026-10-13T05:52:56Z', NULL, 659);
+Done when: the checklist is in plan 18 and the decision is open with the close-out waiting on it.', '2026-10-13T05:52:56Z', '2026-10-13T06:03:30Z', 659);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (664, 87, 'Steam Cloud close-out: docs', 'work', 'open', NULL, NULL, 'Plan 87 part 5: close out after the gamemaster''s "Steam Cloud test passed?" decision (this task waits on it, linked by the checklist task). If the answer was "issues", the fix tasks must be done first; if any is still open, add nothing and stop with a note.
 
 - `plans/18-steam-integration.md`: the Steam Cloud row/bullet `[x]` with date and a short note (the SW id plan 18 uses for Cloud, else the "Steam features" bullet); test table filled from the answer.
@@ -14075,6 +14075,23 @@ Wording: infinitive / impersonal, so latam and es-ES need no ustedes/vosotros sp
 
 Answer with the option, plus any wording changes per line.', NULL, NULL, '2026-10-13T05:49:32Z', NULL, 654, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (74, 'Gamemaster mode earns no achievements', 'answered', '[]', 'Gamemaster mode has undo, skip, replace, jump to level and any joker budget mid-game (D-74, D-88; decision 34: Gamemaster menu: which cheats?), while outside it a question can never be skipped and nothing changes mid-game (decision 20: Default mode: which admin actions in the Esc menu). Achievements would be free there. Qualifying = decision 19: Default mode: presets, checkpoints and won levels (uncustomized games only), plan 86. earned() skips rows with gameMode() === ''gamemaster''.', 'Gamemaster mode never earns Steam achievements; only qualifying games (decision 19) count', NULL, '2026-10-13T05:49:36Z', '2026-10-13T05:49:36Z', 654, NULL, 'rule', 654, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (75, 'Steam Cloud test passed?', 'pending', '["passed", "issues (fill the table)"]', 'Plan 87 part 4: test Steam Cloud saves on real machines.
+
+Preconditions:
+- real App ID (masterplan 10 part 1, task 253: write plan: Partner account, name check and AI terms)
+- Auto-Cloud values entered in Steamworks (part 2, task 254: write plan: Steamworks app configuration (SW-7)); values in plans/18-steam-integration.md "Steam features" → Steam Cloud
+- a packaged Steam build: task 650: Package the Steam binding in both builds, or part 7''s upload to the `beta` branch
+- machines A and B: one Windows, one Linux or the Deck
+
+Checklist (table to fill: plans/18-steam-integration.md, section "Steam Cloud test"):
+- A plays → quit → B shows the same players and seen counts
+- two Steam accounts on one OS login → separate saves (save/<id>/ each)
+- Family Sharing borrower → own save
+- first Steam start with an S3 or local/ save → «Usar el progreso de este equipo» offered; second machine with a cloud save → no question
+- offline on both, play on both, then online → Steam''s conflict dialog; the picked side wins whole
+- Steam''s cloud file list (game properties, or store.steampowered.com/account/remotestorage) shows only game.json, never .tmp, backup/, local/
+
+On issues: name the failing rows (or fill the table in the plan file); each becomes a task in plan 87.', NULL, NULL, '2026-10-13T06:03:27Z', NULL, 663, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14569,6 +14586,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (487, 660, '2026-10-13T05:53:09Z', '2026-10-13T05:58:57Z', 'done', NULL, 0, '3708ffa26e208ba367b469000d42d47463f4c70c', 'claude-opus-5-5[1m]', 'e5861d4f-26ac-4623-828c-b633338de000', 26, 50, 9661, 1073022, 42792, 0.75036039999999993, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (488, 661, '2026-10-13T05:58:57Z', '2026-10-13T06:02:15Z', 'done', NULL, 0, '32091cce2dee0fcc44502cc51a22df4fc6f8aed3', 'claude-opus-5-5[1m]', 'e5889ce3-be39-4332-a385-1482307b9157', 31, 58, 13485, 1672466, 62627, 1.1054411999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (489, 662, '2026-10-13T06:02:15Z', '2026-10-13T06:03:06Z', 'done', NULL, 0, 'bc4d19cc9b5e4e0a43531fa6f72ebc85a54c7a6b', 'claude-opus-5-5[1m]', 'f28e885a-74c0-407f-b19a-2841094b9673', 10, 20, 3046, 308204, 25423, 0.3260248, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (490, 663, '2026-10-13T06:03:07Z', '2026-10-13T06:03:38Z', 'done', NULL, 0, '415ac31199f07fa2ed231d8317240696fd2c1639', 'claude-opus-5-5[1m]', 'c3355001-8566-474b-9f7c-249bc268b4cc', 9, 16, 2914, 260267, 29249, 0.3443894, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14697,5 +14715,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (655, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (656, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (657, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (658, 73);
+INSERT INTO task_decision (task_id, decision_id) VALUES (664, 75);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
