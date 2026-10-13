@@ -6255,6 +6255,82 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - The real-Deck test (plan 90, milestone 10); Steam Input templates and action sets (S5); zooming or panning the picture beyond D-51''s fit.', '2026-10-13T17:56:05Z', 919);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (114, 15, 'Workshop source: subscribed items in the shell', 690, 'Part 3 of masterplan 102 (milestone 15: Modding and Steam Workshop). The shell adds the player''s subscribed Workshop items as mod sources next to local `mods/` (plan 112), and the page gets its first mods bridge: the mod list (source, state, errors) and writes of on/off and load order to `mods.json` over IPC. The overlay stays fixed per run: new subscriptions show up in the list while running and load on the next start. The gamemaster turns Workshop on in Steamworks; workers never log in.
+
+## Binding
+- Plan 102''s ground rules: page only (Workshop folders are read as bytes, never `require`d/`import`ed/`eval`ed), offline (the `webRequest` block stays; Steam''s client downloads items, not us), path safety (`contained()` per layer, plan 112), per-commit checks.
+- decision 111: Steam only: Workshop sources only with a real Steam user (`hasSteamId()`); no "without Steam" rows. The dev switch `TRIVIA_DEV_STEAM_USER=1` gets a fake Workshop folder for checks (below), nothing else.
+- decision 127: Workshop mods: identity and duplicates: key = `mod.json` `id`; published file id beside it as a string; local before Workshop; two Workshop items with the same id: lower published file id wins, the other `duplicate_id`.
+- Plan 112 (part 2): `discover({ local, workshop })`, `arrange()`, `readSettings`/`writeSettings`, `<userData>/mods.json` (dev `state/desktop/mods.json`), list states, read-once overlay, `--no-mods`. This plan fills `workshop` and adds the bridge; it doesn''t change the format or the overlay.
+- Plan 85 (Steamworks binding): `steamworks-ffi-node` 0.11.3, `steam` in `main.mjs`, `runCallbacks` timer, IPC `handle()` with the sender-origin check (`event.senderFrame.url` starts with `app://trivia/`).
+- Not here: the bridge rename `window.trivia` → e.g. `window.triviaShell` (part 4; this plan adds `mods` to whatever the bridge is called then, `lib/desktop.ts` the only reader), mods screen, one-time notice, restart button, crash marker (part 6), publishing (part 8).
+
+## Binding facts (`SteamWorkshopManager`, checked 2026-10-13)
+- `getSubscribedItems(): bigint[]`, `getItemState(id): number` (bits `EItemState`: Subscribed 1, Installed 4, NeedsUpdate 8, Downloading 16, DownloadPending 32, DisabledLocally 64), `getItemInstallInfo(id): { folder, sizeOnDisk, timestamp } | null`, `getItemDownloadInfo(id)`, `downloadItem(id, highPriority)`: all synchronous.
+- No push callback for `ItemInstalled_t` / `DownloadItemResult_t` in the binding: refresh is a re-query, not an event (below). Don''t add FFI of our own for it.
+- Published file ids are `bigint`: convert to decimal strings at the edge (IPC and JSON can''t carry bigint).
+
+## Workshop source at start
+- In `start()` after `startSteam()`/`checkUser()`, before plan 112''s `discover`: with `steam` and `hasSteamId()`, `workshopItems(ugc)` →
+  - per subscribed id: state bits; `Installed` and a folder from `getItemInstallInfo` → `{ dir, publishedFileId, state: "installed" }` (+ warning `needs_update` when `NeedsUpdate`: the installed files load, Steam updates them later);
+  - `Downloading` / `DownloadPending` → `{ dir: null, publishedFileId, state: "downloading" }`;
+  - subscribed, neither installed nor downloading → `downloadItem(id, false)` once, then `downloading`;
+  - `DisabledLocally` → `{ dir: null, state: "disabled" }`.
+- `discover` lists entries without `dir` as such (state `downloading` / `disabled`, not loaded this run, no error); entries with `dir` need `mod.json` at the item''s root (else `no_manifest`, as local).
+- `mod.json` `id` is the key (decision 127); the runtime record carries `publishedFileId`; a `mod.json` that names a different published file id (if part 8 writes one) → warning `workshop_id_mismatch`, still loads.
+- Pure module `app/desktop/workshop.mjs` (no Electron, no binding import): `workshopItems(ugc)` takes an object with the four methods, so the real `steam.workshop` and the dev fake share it.
+- Dev fake: env `TRIVIA_DEV_WORKSHOP_DIR` (honoured only with `TRIVIA_DEV_STEAM_USER=1`, one stderr line): each subfolder named by a fake numeric id is an installed item; a subfolder ending in `.downloading` is a downloading one. Lets agents check Workshop flows without logging in (decision 111''s dev switch precedent).
+- Steam updating an item''s files while the game runs: accepted (Steam usually holds UGC updates for running games); the overlay reads files per request, so at worst a mixed version until restart. The guide says "restart after updates".
+- Stderr: one line per Workshop item like plan 112''s (`trivia: mod <id> workshop <publishedFileId> <state>`).
+
+## Newly subscribed items: default
+- Confirmed: appended at the end of the load order, `on: true` (plan 112''s rule; subscribing is the opt-in). Part 6 may hold new mods off until its one-time notice; it does that in `arrange`, not here.
+- Unsubscribed items: their row stays in `mods.json` (plan 112: missing ids kept), listed `missing` only if part 6 wants it; the list from `mods:list` omits missing ids by default.
+
+## Refresh while running
+- No event (binding facts): `mods:list` re-queries Workshop and re-runs discovery + `arrange` on every call (cheap: one `mod.json` read per folder), so part 6''s screen sees new subscriptions and finished downloads when it opens or the player presses refresh.
+- The overlay layers stay this run''s (plan 112); each list entry carries `active` (in this run''s layers) beside `on` (setting), so the page can show «restart to apply» where they differ.
+- No timer polling in main.
+
+## Bridge additions (page)
+- IPC channels via the existing `handle()` (origin check), in `main.mjs`:
+  - `mods:list` → `{ mods: ModEntry[], noMods: boolean, validUser: boolean }`; `ModEntry` = `{ id, name, version, description, source: "local" | "workshop", publishedFileId: string | null, kind: string[], languages: string[], on, active, position, state, warnings: string[], error: { code, field? } | null }` (plain JSON, no paths of the player''s disk except a short `dir` basename for the dev log).
+  - `mods:set` (`[{ id, on }]` in load order) → validates (array ≤ 500, each `id` a slug per plan 112, `on` boolean, no duplicate ids), merges with ids not in the call (kept at their place after the given ones), writes `mods.json` atomically (plan 112''s `writeSettings`), returns the new list; bad input → rejection `bad_mods`. No effect on the running overlay.
+  - Without a valid user: `mods:list` returns the list with `no_user` states (plan 112); `mods:set` still writes (settings are per machine, decision 121''s precedent).
+- `preload.cjs`: `mods: { list(), set(order) }` on the bridge; `lib/desktop.ts`: `ModEntry` type and `mods: ModsBridge | null` export (null in the dev server of plan 99: no mods there).
+- Error and warning codes stay codes; part 6 maps them to `t()` strings (no strings here).
+
+## Gamemaster setup (pm decision, `--once`)
+- Steamworks (App Admin), once the real App ID exists (SW-7, plan 39/85; until then dev tests under Spacewar 480 are not Workshop tests): enable Workshop (Workshop → General: "Enable ISteamUGC for file transfer"), visibility (public; items may be public/friends/private), tags (bundle, theme, code, conversion; languages es, en, de, …), the Workshop legal agreement notice (Steam''s own; creators must accept it before items go public: part 8 shows its URL), content descriptors (none set by us; creators pick per item; ours from plan 88''s survey stay for the base game), publish the Steamworks changes.
+- A second Steam account owning the game (beta key or family sharing) for the milestone''s "Done when" (part 12''s checklist uses it).
+- Answer: done (+ the tag list as entered). The Workshop check task below waits for it.
+
+## Tasks
+
+### 1. `workshop.mjs` and the start wiring
+- `app/desktop/workshop.mjs`: `workshopItems(ugc)` as above, ids as strings; dev fake `fakeUgc(dir)` (same four methods over a folder).
+- `main.mjs`: after the user check, workshop list from `steam.workshop` (real user) or `fakeUgc(TRIVIA_DEV_WORKSHOP_DIR)` (dev switch + env) else `[]`; into plan 112''s `discover`; stderr lines; `--no-mods` still loads no layers but lists.
+- Adjust plan 112''s `discover`/`arrange` for entries without `dir` (states `downloading`, `disabled`) and the `needs_update` / `workshop_id_mismatch` warnings, and decision 127''s duplicate rule.
+- Done when: a throw-away script with a fake `ugc` (installed, downloading, not-installed → `downloadItem` called, disabled, no `mod.json`, two items same id, local with the same id) prints the expected list; `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1 TRIVIA_DEV_WORKSHOP_DIR=<tmp>` loads a fake item''s CSS; per-commit checks pass.
+
+### 2. Bridge: `mods:list`, `mods:set`
+- Channels, validation and merge as above; `preload.cjs` `mods`; `lib/desktop.ts` type + export (no UI consumer yet: part 6).
+- Done when: from the devtools console (`TRIVIA_DEVTOOLS=1`, dev switch, fake Workshop dir) `mods.list()` shows local and Workshop entries with `on`/`active`; `mods.set` with a swapped order and one off rewrites `mods.json`, `list()` shows `active ≠ on` until restart and the new order after it; a bad payload rejects `bad_mods`; adding a folder to the fake dir shows up in `list()` without restart, `active: false`; per-commit checks pass.
+
+### 3. Gamemaster setup decision
+- `pm decision add --once "Steamworks: enable Workshop for ¡Trivia! and a second Steam account?"` with the setup list above as the body, options "done" (recommended) / "not yet"; link task 4 to it (`pm task-pending-decision`).
+- Done when: the decision exists and task 4 waits for it.
+
+### 4. Workshop check under Steam (after the decision)
+- Gamemaster-run steps as a short checklist in a pm decision (`--once`; workers never log in): publish one tiny CSS mod privately (until part 8: Steam''s `ugctool`/a one-off via part 8''s command if it exists; else Steamworks'' upload for the item), subscribe, start the game: stderr shows `workshop <id> installed`, the colour changes; unsubscribe + new subscribe while running: `mods.list()` shows it after refresh, loads next start.
+- Done when: the gamemaster answers with the results; any failure → a follow-up task in this plan.
+
+### 5. Docs
+- `plans/18-steam-integration.md` "Modding": Workshop source (state handling, refresh by re-query, default on at the end, decision 127), IPC `mods:list`/`mods:set`, `TRIVIA_DEV_WORKSHOP_DIR`; `directory.md` `app/desktop/` row: `workshop.mjs`; AGENTS.md "Commands" `trivia-desktop` line: `TRIVIA_DEV_WORKSHOP_DIR`.
+- Done when: docs name the paths and decision 127; per-commit checks pass.
+
+## Order
+Plan 112''s tasks 1–3 first; then 1 → 2 → 5; 3 any time (early, so the gamemaster can act); 4 after 3''s answer and after task 2 (and ideally part 8''s publish command). Part 6 builds its screen on `mods:list`/`mods:set`; part 8 on the Steam item ids and the setup decision.', '2026-10-13T18:05:51Z', 901);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -20962,7 +21038,7 @@ Cover part 2''s list:
 - Mod files as bytes only, MIME by extension; tests for `..`, absolute paths, symlinks in a mod.
 - `game` ≠ running version: loaded, warning for part 6.
 - Tasks for the work, each with a done-when; `directory.md` for new paths.', '2026-10-13T17:47:23Z', '2026-10-13T17:52:39Z', 898);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (901, 102, 'write plan: Workshop source: subscribed items in the shell', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of masterplan 15 (plan 102): "Workshop source: subscribed items in the shell". Read plan 102, milestone 15, decision 111: Steam only, plan 85 (Steamworks binding, `steamworks-ffi-node`''s Workshop manager), the part 2 plan. Create it with `pm plan add 15 "Workshop source: subscribed items in the shell" --priority 690 < body.md` (after part 2''s plan at 700).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (901, 102, 'write plan: Workshop source: subscribed items in the shell', 'plan', 'done', 1000, '2026-10-13, plan 114 (tasks.sql), decision 127', 'Write the plan for part 3 of masterplan 15 (plan 102): "Workshop source: subscribed items in the shell". Read plan 102, milestone 15, decision 111: Steam only, plan 85 (Steamworks binding, `steamworks-ffi-node`''s Workshop manager), the part 2 plan. Create it with `pm plan add 15 "Workshop source: subscribed items in the shell" --priority 690 < body.md` (after part 2''s plan at 700).
 
 Cover part 3''s list:
 - At start with a valid Steam user: `getSubscribedItems` → `getItemState`/`getItemInstallInfo` → install folders as mod sources (`mod.json` at the root required); downloading items listed, not loaded this run.
@@ -20970,7 +21046,7 @@ Cover part 3''s list:
 - Default for newly subscribed items (enabled at the end of the load order; confirm against part 6).
 - Bridge additions: mod list (source, state, errors), enable/disable/reorder writing `mods.json` via IPC with the existing origin check.
 - Gamemaster setup as a pm decision (kind once; workers never log in): enable Workshop in Steamworks, visibility, tags, legal agreement notice, content descriptors, a second Steam account for the "Done when".
-- Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', NULL, 898);
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', '2026-10-13T18:05:53Z', 898);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (902, 102, 'write plan: Bundles from mods: one bundle loader', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of masterplan 15 (plan 102): "Bundles from mods: one bundle loader". Read plan 102 (ground rules: no second path, our data stays ours), milestone 15, decisions 33, 38, 51, 66, 110, 112 (bundles, base bundle, packs), plan 93 (reports), plan 106 (telemetry recording), `app/data/bundles.json`, `lib/data.ts` `loadEngineData()`, `BundleSelector.svelte`, `authoring/tools/save_file.py`, the part 2 plan. Create it with `pm plan add 15 "Bundles from mods: one bundle loader" --priority 600 < body.md`.
 
 Cover part 5''s list:
@@ -22112,6 +22188,8 @@ Work:
 - Check: `trivia-release-check --manual <file>` with `deck: no Deck (decision 125)` (other steps `--skip`ped as needed) shows the row ✓; `deck: n` still ✗. Per-commit checks pass.', '2026-10-13T18:02:25Z', NULL, 931);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (933, 90, 'create tasks for plan 90', 'split', 'done', 1000, '2026-10-13, tasks 685 and 687 rewritten to plan 90''s two tasks, 686 dropped (no real-Deck test, decision 125)', 'Split plan 90 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:03:10Z', '2026-10-13T18:04:08Z', 930);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (934, 114, 'create tasks for plan 114', 'split', 'open', 1000, NULL, 'Split plan 114 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:05:51Z', NULL, 901);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -23405,6 +23483,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (124, 'Readable client build: output naming rule for mod overrides', 'answered', '[]', 'Milestone 15 (plan 102, part 1): a mod replaces one module by its path, so the path must be predictable from the source tree and stable across updates. Vite''s default [name] drops ''.svelte'' (Game.svelte → Game.js) and collides App.svelte with app.css (App2.js, seen in a test build); keeping the source extension avoids both. vendor/ instead of node_modules/: packagers (electron-builder filters) and readers treat node_modules specially. Stable cssHash: Svelte''s default hashes the CSS text, so .svelte-xxxx classes would change with every style edit and break theme mods.', 'Output path = source path under app/client/src + ''.js'' (Svelte: game/Game.svelte → game/Game.svelte.js; runes modules game/sound.svelte.ts → game/sound.svelte.js; lib/data.ts → lib/data.js); a component''s CSS next to it as game/Game.svelte.css; global CSS keeps its path (app.css, game/theme.css); third-party modules under vendor/<package>/<path> (no node_modules/ in dist); Vite helpers under _virtual/; no hashes; Svelte scoped class names stable per component path (cssHash), not per CSS content', NULL, '2026-10-13T17:48:56Z', '2026-10-13T17:48:56Z', 899, NULL, 'rule', 899, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (125, 'Steam Deck: best effort, review without a Deck at hand', 'answered', '[]', 'Panels over the full-screen image can hide it at 1280×800; a hold-to-peek is simpler than guaranteeing a visible third. Replaces ''test on a real Deck before applying'' in plans/18-steam-integration.md.', 'Deck support is best effort until the gamemaster has a Deck: fit at 1280×800 (done, plan 46), an image peek on image questions (milestone 8), the Gamepad template as Steam Input default (milestone 10); with those in, request Valve''s Deck compatibility review (SW-12) without a prior real-Deck test. The real-Deck test and further tuning come once a Deck is at hand.', NULL, '2026-10-13T17:52:21Z', '2026-10-13T17:52:21Z', NULL, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (126, 'Image peek: which pad button and key?', 'answered', '[]', 'Decision 9 and plan 45 already use every other button on the Question screen: Y/X/B/A pick, RT submit, LT unlock, LB/RB tray, Start menu, View flag (gamemaster). The right stick is otherwise unused, so holding R3 can''t trigger anything else, and on the Deck the right thumb reaches it. V is free on the Question screen in every catalog (es S P F T X R M, en H P F K T R M, de Z N G W F R M; A-D are answers) and reads as a mnemonic in each language. Per decision 53 it lives in the catalog, so a later language can pick its own letter.', 'Pad: R3 (right stick click, standard button 11; glyph RS / R3). Key: per catalog screen.question.peekKey, V in es, es-ES, en and de (ver / view / Vorschau); in the Question collision set of check-literals.', NULL, '2026-10-13T17:55:34Z', '2026-10-13T17:55:34Z', 919, NULL, 'rule', 919, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (127, 'Workshop mods: identity and duplicates', 'answered', '[]', 'Part 3 of masterplan 102 (plan for task 901). Part 2 (plan 112) keys mods.json and question-id namespaces (part 5) by the mod.json id and leaves the Workshop relation to part 3. A slug key keeps the load order, the local-shadows-Workshop dev flow and part 5''s question namespaces stable across republishing; published file ids are bigints in the binding and only identify the item on Steam. Lowest id = oldest item, so a newer copycat never displaces an existing mod.', 'A Workshop item is known by its mod.json id (slug), like a local mod; the published file id travels beside it (string, runtime and mods list) and is shown, never used as the settings key. Duplicates: local before Workshop (local copy shadows its Workshop original); between two Workshop items the one with the lower published file id wins, the other is listed invalid duplicate_id naming the winner; the player unsubscribes one.', NULL, '2026-10-13T18:05:07Z', '2026-10-13T18:05:07Z', 901, NULL, 'rule', 901, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -24187,6 +24266,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (775, 931, '2026-10-13T18:02:06Z', '2026-10-13T18:02:32Z', 'done', NULL, 0, 'b744762dec03ff02261c3c9d9f4f4f091e00b938', 'claude-opus-5-5[1m]', '48e09ffd-fe88-4f6b-9018-7048ed0c2575', 6, 12, 2041, 247209, 45507, 0.45436580000000004, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (776, 930, '2026-10-13T18:02:33Z', '2026-10-13T18:03:19Z', 'done', NULL, 0, 'f5f2d0edd31a0d775bfbd02ba30589461716801a', 'claude-opus-5-5[1m]', 'cb3a0461-785d-4b07-b159-15ae7fa40175', 5, 10, 4659, 180153, 37172, 0.4266266, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (777, 933, '2026-10-13T18:03:19Z', '2026-10-13T18:04:15Z', 'done', NULL, 0, 'd98ef480eee7d05c723500742612a4d08fe16559', 'claude-opus-5-5[1m]', '8e13d9a1-1c62-4839-bd96-473c7d811e51', 9, 18, 4710, 291503, 31600, 0.40537259999999997, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (778, 901, '2026-10-13T18:04:16Z', '2026-10-13T18:06:03Z', 'done', NULL, 0, 'cf1a61fb79f62c88e5190832e37c0422402cb943', 'claude-opus-5-5[1m]', '1832ecda-904d-474a-b856-334cf6bc51a8', 13, 24, 9816, 640393, 62375, 0.82349460000000019, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
