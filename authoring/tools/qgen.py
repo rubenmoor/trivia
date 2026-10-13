@@ -19,6 +19,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
     qgen flag [--dry-run] < reports.txt   # pasted player reports become needs_work reviews (plan 93)
+    qgen flag --pull [--url URL] [--dry-run]   # the report server's reports, then acked (token: TRIVIA_REPORT_TOKEN or state/report-token)
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
@@ -59,6 +60,7 @@ import media as media_tool  # authoring/tools/media.py: candidates, sheets, pick
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g. the supply check (GF-5)
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
+import paths  # app/server/paths.py: state/ (TRIVIA_STATE)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
@@ -3649,8 +3651,74 @@ def apply_reports(reports, dry_run=False):
     return n["applied"], n["already"], n["skipped"]
 
 
+PULLED = paths.STATE / "reports-pulled.json"  # {"<url>": [server ids written, not yet acked]}
+TOKEN_FILE = paths.STATE / "report-token"  # gitignored
+
+
+def report_api(url, token, path, body=None):
+    """One call to the report server (plan 103, API v1) → parsed JSON; errors exit."""
+    import urllib.request, urllib.error
+    req = urllib.request.Request(url + path, method="POST" if body is not None else "GET",
+                                 data=json.dumps(body).encode() if body is not None else None,
+                                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as res:
+            return json.load(res)
+    except urllib.error.HTTPError as e:
+        hint = {401: ": wrong pull token"}.get(e.code, "")
+        sys.exit(f"{url}{path}: HTTP {e.code}{hint} {e.read()[:200].decode(errors='replace')}")
+    except (urllib.error.URLError, TimeoutError) as e:
+        sys.exit(f"{url}{path}: {getattr(e, 'reason', e)}")
+
+
+def pull_reports(args):
+    """`qgen flag --pull`: the server's reports → needs_work reviews, then ack (plan 93 task 5).
+    Pages are acked one by one: GET returns the same reports until acked."""
+    url = (args.url or json.loads((ROOT / "app" / "desktop" / "package.json").read_text())["reportUrl"]).rstrip("/")
+    if not url:
+        sys.exit("no report URL: pass --url or set reportUrl in app/desktop/package.json")
+    token = os.environ.get("TRIVIA_REPORT_TOKEN", "").strip() or (
+        TOKEN_FILE.read_text().strip() if TOKEN_FILE.exists() else "")
+    if not token:
+        sys.exit(f"no pull token: set TRIVIA_REPORT_TOKEN or write it to {TOKEN_FILE}")
+    ledger = load_json(PULLED) if PULLED.exists() else {}
+    done = set(ledger.get(url, []))
+    n = Counter()
+    while True:
+        page = report_api(url, token, "/reports?limit=500")
+        rs = page["reports"]
+        n["pulled"] += len(rs)
+        new = [r for r in rs if r["id"] not in done]
+        n["earlier"] += len(rs) - len(new)
+        mods = [r for r in new if ":" in r["question"]]  # mod questions aren't ours (decision 128)
+        n["mod"] += len(mods)
+        a, b, s = apply_reports([{**r, "note": r["note"] or None, "date": r["received_at"][:10]}
+                                 for r in new if r not in mods], args.dry_run)
+        n["applied"] += a; n["already"] += b; n["unknown"] += s
+        if args.dry_run:
+            if page["more"]:
+                print("  more reports on the server: --dry-run shows only the first page")
+            break
+        if not rs:
+            break
+        ids = [r["id"] for r in rs]
+        done.update(ids)
+        atomic.write_json(PULLED, {**ledger, url: sorted(done)})  # before the ack: a crash can't double feedback
+        report_api(url, token, "/reports/ack", {"ids": ids})
+        done.difference_update(ids)  # acked = deleted on the server; SQLite may reuse their ids
+        ledger = {**ledger, url: sorted(done)}
+        atomic.write_json(PULLED, ledger)
+        if not page["more"]:
+            break
+    print(f"{n['pulled']} pulled: {n['applied']} {'would be ' if args.dry_run else ''}applied, "
+          f"{n['already'] + n['earlier']} already there, {n['unknown'] + n['mod']} skipped "
+          f"({n['unknown']} unknown, {n['mod']} mod questions)")
+
+
 def cmd_flag(args):
-    """Pasted report text (stdin) → needs_work reviews (plan 93, decision 142)."""
+    """Pasted report text (stdin) → needs_work reviews (plan 93, decision 142); --pull: the report server's."""
+    if args.pull:
+        return pull_reports(args)
     reports = reviews.parse_reports(sys.stdin.read())
     if not reports:
         sys.exit("no report found: paste text with a «¡Trivia! #q-… · …» line")
@@ -4141,6 +4209,8 @@ def main():
     fl = sub.add_parser("flag", help="pasted player reports (stdin) become needs_work reviews (plan 93)")
     fl.set_defaults(fn=cmd_flag)
     fl.add_argument("--dry-run", action="store_true", help="print the changes, write nothing")
+    fl.add_argument("--pull", action="store_true", help="the report server's reports instead of stdin, then ack them")
+    fl.add_argument("--url", help="report server for --pull (default: reportUrl in app/desktop/package.json)")
     rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
     rw.set_defaults(fn=cmd_rework)
     rw.add_argument("--batch", help="only this batch's needs_work questions")
