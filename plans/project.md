@@ -17,7 +17,7 @@ The road from today onward: milestones, every open task, every open question. Th
 - **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
 - **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the command names the batch's bundle, `base` by default (D-41).
 - **Next batch:** the first with all of the above; it checks PE-6 and PE-13 at once ([`20`](20-pipeline-efficiency.md), "How to check").
-- **Game:** complete. Server referee in `app/server/game.py`; screens in `app/client/src/game/`. No placeholders left.
+- **Game:** complete. Referee in the browser (`app/client/src/engine/`, D-69, D-90), the Python server serves static files + `/api/save`; screens in `app/client/src/game/`. No placeholders left.
 
 ## Milestones
 
@@ -29,7 +29,7 @@ The road from today onward: milestones, every open task, every open question. Th
 | M3 | Visual design and screen polish | 10, 04 | done |
 | M4 | Sound, music and fireworks | 04, 09 | done (remaining sounds synthesized, fine for now) |
 | M5 | Enough content for game nights | 02, 07, 06 | in progress |
-| M7 | Game engine in TypeScript | 12 | todo |
+| M7 | Game engine in TypeScript | 12 | done (2026-10-12, D-90) |
 | M8 | Mouse everywhere and a joker budget | 14, 13 | done (2026-10-07) |
 | M9 | UI strings in a catalog; bundles | 15a, 22 | in progress (bundles done in the pipeline; LUI-1, server errors as codes and LUI-2 done 2026-10-12) |
 | M10 | Media license audit | 17 | todo |
@@ -82,14 +82,14 @@ No family-specific questions (D-30).
 **Goal:** the game referee moves from Python to `app/client/src/engine/` with the same rules and the family's saves kept. The game then runs without Python, which also lets it run in a desktop shell later.
 **Exit:** the family plays a test night on the TS engine; `app/server/game.py` and the game routes are gone; `trivia` serves static files plus `/api/save`.
 
-- [ ] PORT-1 Scenario recorder for `app/server/game.py` + `selection.py`; commit the fixtures — [`12`](12-client-engine.md)
-- [ ] PORT-2 `engine/selection.ts`, fixture-tested — [`12`](12-client-engine.md)
-- [ ] PORT-3 `engine/game.ts`: state machine, players, burning, jokers, undo; decision: the client holds the answer (relaxes D-25) — [`12`](12-client-engine.md)
-- [ ] PORT-4 Store interface; `ServerStore` + `GET/PUT /api/save`; `MemoryStore` — [`12`](12-client-engine.md)
-- [ ] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the real save — [`12`](12-client-engine.md)
+- [x] PORT-1 Scenario recorder for `app/server/game.py` + `selection.py`; commit the fixtures — [`12`](12-client-engine.md)
+- [x] PORT-2 `engine/selection.ts`, fixture-tested — [`12`](12-client-engine.md)
+- [x] PORT-3 `engine/game.ts`: state machine, players, burning, jokers, undo; decision: the client holds the answer (relaxes D-25) — [`12`](12-client-engine.md)
+- [x] PORT-4 Store interface; `ServerStore` + `GET/PUT /api/save`; `MemoryStore` — [`12`](12-client-engine.md)
+- [x] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the real save — [`12`](12-client-engine.md)
 - [x] PORT-6 Pool export `app/data/pool.json` (done as LP-3) — [`12`](12-client-engine.md)
-- [ ] PORT-7 Screens switch to the engine; family test night — [`12`](12-client-engine.md)
-- [ ] PORT-8 Delete `game.py` and the game routes; update `01-architecture.md` and AGENTS.md — [`12`](12-client-engine.md)
+- [x] PORT-7 Screens switch to the engine; family test night — [`12`](12-client-engine.md)
+- [x] PORT-8 Delete `game.py` and the game routes; update `01-architecture.md` and AGENTS.md — [`12`](12-client-engine.md)
 
 ### M8 — Mouse everywhere and a joker budget
 **Goal:** every keyboard action also has a clickable control; the gamemaster can set a joker budget per game, so the printed cards become optional. The family's default stays unlimited, so nothing changes unless the gamemaster opts in.

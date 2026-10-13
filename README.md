@@ -43,9 +43,9 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name 
 - The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
 - Desktop shell (`trivia-desktop`, packaged builds): the save is `save/game.json` in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/game.json`; `TRIVIA_SAVE_DIR` overrides. A broken or newer save moves to `save/backup/` and the game starts fresh.
 - Bring the browser game's save over: `trivia-desktop --import-save state/game.json` (only when no desktop save exists yet), or copy `state/game.json` into the save folder.
-- The game plays fine with an empty media cache when online: a missing file is downloaded the first time it's shown. Offline, sync first (next section).
+- The game never downloads media: sync before game night (next section). `trivia` prints at start how many pool files are missing from the cache; a missing file shows the question's media-failed state.
 
-### Sync the media before game night
+### Sync the media before game night (required)
 
 ```sh
 trivia-media sync --status approved     # downloads every picked file that isn't cached yet
@@ -126,7 +126,7 @@ The dev servers forward `/api` and `/media` to the Python servers, so run both. 
 nix build .#app && result/bin/trivia
 ```
 
-The package contains only `app/`. It keeps its saves and media cache in `$XDG_DATA_HOME/trivia/` instead of the checkout; `TRIVIA_STATE` and `TRIVIA_MEDIA` override both locations.
+The package contains only `app/`. It keeps its saves and media cache in `$XDG_DATA_HOME/trivia/` instead of the checkout; `TRIVIA_STATE` and `TRIVIA_MEDIA` override both locations. The packaged cache starts empty and the game never downloads: run it with `TRIVIA_MEDIA` pointing at a synced cache (e.g. `TRIVIA_MEDIA=$PWD/media result/bin/trivia`).
 
 ### Build the desktop game
 

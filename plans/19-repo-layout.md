@@ -8,8 +8,8 @@ The repo is split into what ships (the game) and what doesn't (the tooling that 
 
 ```
 app/                    ships: everything a player's install contains
-  server/               main.py (static files, game API, /media), game.py, selection.py,
-                        categories.py, media_cache.py
+  server/               main.py (static files, /data/, cached /media, /api/save), save.py,
+                        media_cache.py (cache lookup only), http_base.py, paths.py (D-90)
   client/               the game UI (Svelte); builds to app/client/dist/
   desktop/              Electron shell (D-71): main.mjs, resolve.mjs (app:// → files), preload.cjs
                         builds (D-73): electron-builder.yml, after-pack.mjs, stage-media.mjs, own
@@ -17,7 +17,8 @@ app/                    ships: everything a player's install contains
   data/                 categories.json (base's), bundles.json, bundles/<id>/categories.json (D-43),
                         pool.json (exported, approved questions only)
 authoring/              never ships
-  tools/                qgen.py, concepts.py (concept lists, axes), media.py (Commons search, sheets), prompts/
+  tools/                qgen.py, concepts.py (concept lists, axes), media.py (Commons search, sheets), prompts/,
+                        categories.py, download.py (media downloads), supply.ts (engine supply via Node)
   server/               main.py: review tool, stats and print pages, authoring API
   ui/                   review, stats and print pages (Svelte); builds to authoring/ui/dist/
   data/                 questions.json (the source pool), question-axes.json, concepts/ (D-37),
@@ -34,7 +35,7 @@ package.json            npm workspaces: app/client, authoring/ui (one lockfile)
 - `app/data/pool.json` is written by `qgen.py export`: approved questions with the fields play needs, without `review`, `quality`, `revision` or pipeline fields (this is PORT-6 of [12](12-client-engine.md), pulled forward). `validate` fails when the export is stale.
 - `data/categories.json` moves to `app/data/`: the game's category picker needs it, and the pipeline reads it from there.
 - The game's admin overlay links to the review tool and stats on the authoring server's port. In a packaged build without the authoring server, the links lead nowhere and are hidden.
-- `server/game.py` and `tools/selection.py` move as they are. The TypeScript port ([12](12-client-engine.md)) later replaces them inside `app/`.
+- `server/game.py` and `tools/selection.py` move as they are. The TypeScript port ([12](12-client-engine.md)) later replaces them inside `app/`. *2026-10-12: replaced, both deleted (PORT-8, D-90); the game server holds no game logic and no download code.*
 
 ## Ports and commands
 - Game: `python3 app/server/main.py` → http://127.0.0.1:8000/
@@ -42,8 +43,8 @@ package.json            npm workspaces: app/client, authoring/ui (one lockfile)
 - In the dev shell, wrappers: `trivia` (game), `trivia-desktop`, `trivia-desktop-build` (Windows zip + Linux tar.gz in `app/desktop/release/`), `trivia-authoring`, `qgen`, `trivia-media`.
 
 ## Flake
-- `packages.app` (`nix build .#app`): the built game client plus the Python server, run with `trivia`. Writable state and the media cache default to `$XDG_DATA_HOME/trivia/` when run from the package, and to `state/` and `media/` in the repo.
-- `packages.authoring`: `qgen`, `trivia-media`, `trivia-authoring`, with `python3`, `imagemagick` and `claude-code` on their PATH.
+- `packages.app` (`nix build .#app`): the built game client plus the Python server, run with `trivia`. Writable state and the media cache default to `$XDG_DATA_HOME/trivia/` when run from the package, and to `state/` and `media/` in the repo. The packaged cache starts empty and the game never downloads: point `TRIVIA_MEDIA` at a synced cache (D-90).
+- `packages.authoring`: `qgen`, `trivia-media`, `trivia-authoring`, with `python3`, `imagemagick`, `claude-code` and Node 22 (`qgen report`, the start page's supply, D-60) on their PATH.
 - `devShells.default`: Node 22, Python 3, ImageMagick, `claude-code`.
 - `claude-code` is unfree. The flake allows exactly that one unfree package. Its version is pinned in `flake.lock`; `nix flake update` moves it forward.
 

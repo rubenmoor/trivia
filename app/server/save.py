@@ -76,7 +76,7 @@ def write(doc):
 
 
 def _upgrade(con):
-    """game.sqlite's schema as game.py left it: player_id on games, per-player burns (D-28)."""
+    """game.sqlite's schema as the former game.py left it: player_id on games, per-player burns (D-28)."""
     con.executescript("""
         CREATE TABLE IF NOT EXISTS players (
             id INTEGER PRIMARY KEY,

@@ -47,7 +47,7 @@ A provider that answers 429 is put on cooldown for its `Retry-After`, so later s
 ## Code
 - `authoring/tools/providers/`: one small module per provider with `search(query, kind, limit) → [candidate]` and `download_url(candidate)` (for resizing: Commons `iiurlwidth`, Pexels `?w=`, Pixabay `largeImageURL`, Freesound `previews["preview-hq-mp3"]`). Standard library only (`urllib`), like `media.py`.
 - `media.py` keeps the shared parts: `query_variants`, `acceptable`, author limits, contact sheets, `pick_fields`. Commons' code moves into `providers/commons.py` with no change in behaviour (MP-2).
-- One throttle per provider (minimum interval, `RateLimited` per provider). `media_cache.http_get` stops naming Commons in its rate-limit message; the bearer token stays limited to Commons' API URL.
+- One throttle per provider (minimum interval, `RateLimited` per provider). `download.http_get` (`authoring/tools/download.py`, D-90) stops naming Commons in its rate-limit message; the bearer token stays limited to Commons' API URL.
 - The review tool shows the provider and licence on each candidate; the search modal searches all providers by the same order.
 - Prompts (`house-style.md` "Media", `draft.md`, `review.md`, `rate.md`, `revise.md`, `concepts-facets.md`): "Wikimedia Commons" becomes "the media sources", with one line per provider on what it is good for. The rules on essential media stay strict: a clear, recognisable photo or sound of exactly that thing.
 

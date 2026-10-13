@@ -1,7 +1,7 @@
 <script lang="ts" module>
   // The joker tray (plans/09-jokers.md, "Joker tray", JK-4): five tokens down the left edge of the
   // Question screen, read-only and smaller on Level and Select. A token is either playable or
-  // disabled right now, with the server's reason. Jokers are unlimited by default (D-27); with a
+  // disabled right now, with the engine's reason. Jokers are unlimited by default (D-27); with a
   // budget (13-game-modes.md, MD-3) a limited token carries a badge with the uses left.
   import type { IconName } from "./Icon.svelte";
   import type { JokerName } from "../lib/types";

@@ -1,4 +1,4 @@
-// The referee (PORT-3, plan 20): port of app/server/game.py. Public functions are pure:
+// The referee (PORT-3, plan 20): port of the former app/server/game.py (deleted in PORT-8). Public functions are pure:
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
 import type { Choice, Difficulty, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";

@@ -59,13 +59,13 @@
     paused: boolean;
     /** False while the screen sits behind the black of a transition: the media waits to start (UI-7). */
     shown?: boolean;
-    /** Joker availability from the server, or null. */
+    /** Joker availability from the engine, or null. */
     jokers: Jokers | null;
     /** Uses left per joker for the tray's badges, null = unlimited (MD-3). */
     jokersLeft?: JokerBudget | null;
     /** The joker that just swapped this question in (Bájale, Cambiazo), for the dial and the label. */
     swappedBy?: JokerEvent | null;
-    /** Sends a joker to the server (Game.svelte shows errors); null if it was refused. */
+    /** Sends a joker to the engine (Game.svelte shows errors); null if it was refused. */
     play: (body: JokerPlay) => Promise<{ game: Game; event: JokerEvent } | null>;
     /** The joker is done on screen: Game.svelte takes the new game (and changes screen if needed). */
     onplayed: (game: Game, event: JokerEvent) => void;

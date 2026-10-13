@@ -1,4 +1,4 @@
-// Question selection per level (PORT-2): port of app/server/selection.py, same results.
+// Question selection per level (PORT-2): port of the former app/server/selection.py (deleted in PORT-8), same results.
 import type { Supply } from "../lib/types.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import type { Rng } from "./rng.ts";

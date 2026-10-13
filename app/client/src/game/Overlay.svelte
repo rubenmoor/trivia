@@ -38,7 +38,7 @@
     { key: "media", label: t("overlay.media") },
   ];
   const STEP = 0.1;
-  /** «Como las cartas»: the printed card set (JK-11); the same as `CARDS` in app/server/game.py. */
+  /** «Como las cartas»: the printed card set (JK-11); the same as `CARDS` in engine/game.ts. */
   const CARDS: JokerBudget = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
   /** Budget steps for ←/→: 0 to 9 uses, then unlimited (null). */
   const MAX_USES = 9;
@@ -106,7 +106,7 @@
     onclose();
   }
 
-  /** The budget as last changed here, until the server's answer arrives: fast clicks build on it. */
+  /** The budget as last changed here, until the engine's answer arrives: fast clicks build on it. */
   let pending = $state<JokerBudget | null>(null);
   $effect(() => {
     void budget;

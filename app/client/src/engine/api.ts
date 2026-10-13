@@ -1,4 +1,4 @@
-// The game routes of app/server/main.py on the engine (PORT-3, plan 20): same {status, body} as recorded.
+// The former game routes of app/server/main.py (gone since PORT-8) on the engine (PORT-3, plan 20): same {status, body} as recorded.
 import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
 import * as game from "./game.ts";
 import { noteExhausted as noteExhaustedIn, outlook as outlookOf, type Outlook } from "./outlook.ts";

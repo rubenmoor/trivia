@@ -1,6 +1,6 @@
 // The Spanish catalog (plans/15a-ui-translation.md, LUI-1, D-70). Players are addressed as
 // «ustedes» (Colombian usage, D-6). Leaves: a string, a plural map ({ one, other, … }) or a
-// string[] of variants. `error` holds the server's refusals by code (plan 22).
+// string[] of variants. `error` holds the engine's refusals by code (plan 22).
 
 const es = {
   app: {

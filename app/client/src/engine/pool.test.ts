@@ -59,7 +59,7 @@ test("fixture categories: broadOf, categoryOf", () => {
   assert.equal(bundleOf(cats, "Comida colombiana"), "colombia");
 });
 
-// D-22, written out; checked once against the table in app/server/selection.py.
+// D-22, written out; checked once against the table in the former app/server/selection.py.
 const D22 = [[1, 1], [2, 3], [3, 5], [4, 6], [4, 6], [4, 6], [5, 7], [6, 8], [6, 9], [7, 10], [8, 10], [9, 10]];
 const LEVEL_WEIGHTS = { 1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13 }; // qgen.py, D-31
 

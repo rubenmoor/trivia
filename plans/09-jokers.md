@@ -56,6 +56,8 @@ The players have **jokers**: powers they can play on the Question screen, **as o
 - Disabled when only one answer is left (it can only be the correct one), and when a hit would leave the level without 4 fresh cards.
 
 ## Game state and API (server)
+History: written for the Python referee; since PORT-8 the jokers live in `app/client/src/engine/game.ts` (`joker`, `jokersLeft`), the routes below are `engine/api.ts` functions (D-69, D-90).
+
 Extends the state in `app/server/game.py` (GF-4):
 ```jsonc
   "purged": ["Volcanes"],         // subcategories excluded from later draws in this game

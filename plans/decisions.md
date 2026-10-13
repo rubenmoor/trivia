@@ -797,3 +797,18 @@ Template:
   - Skip dialog: the plain option is its own key `joker.skip.pass` («Just pass»), since the name says purge.
 - Consequences: `app/client/src/locales/en.ts` (names, hint notes «Hint 1/2/3», «no … left» errors, category title, purge line); `joker.skip.pass` in `es.ts` («Paso», no visible change) and `Question.svelte`. Draft, native check in LUI-5.
 - Supersedes / related: D-78; LUI-3, LUI-4, LUI-5; pm decisions 40, 41, 42, 43, 44
+
+## D-90: The game server after PORT-8: static files, cached media, `/api/save`
+- Date: 2026-10-12
+- Context: PORT-8 (plan 51), the last part of milestone 2. The family test night on the TS engine went fine (pm decision 25), so the Python referee, kept as rollback until then, goes. D-59 set the target: static files plus `/api/save`.
+- Decision:
+  - **Routes of `trivia`** (`app/server/main.py`): `GET /` + built client, `GET /data/…` (read-only `app/data/`), `GET /media?url=…`, `GET/PUT /api/save`. Anything else under `/api/`: 404 `not_found`. Gone: `/api/game*`, `/api/players*`, `/api/flags`, `/api/categories`.
+  - **`/media` is a cache lookup, never a download:** only URLs from `pool.json`; file from `TRIVIA_MEDIA` or `404 media_missing`. Not a `/media/<hash>.<ext>` path: the client would need SHA-1 (`crypto.subtle` is missing on plain-http LAN addresses) or a pool format change. Start line: `media: N of M pool files missing from the cache; run trivia-media sync --status approved`.
+  - **Download code leaves `app/`:** `http_get`, `cached`, rate limits, user agent, Commons token in `authoring/tools/download.py`; `app/server/media_cache.py` keeps `cache_path`, `picked`, `pool_urls`. The authoring server overrides `send_media` to download on a miss.
+  - **`categories.py` → `authoring/tools/categories.py`:** only authoring uses it; the game reads categories as static files.
+  - **Deleted:** `app/server/game.py`, `selection.py` (D-60: supply via `authoring/tools/supply.ts` under Node), `flags.py` (flags live in `SaveData`; `save_file.py` reads only `game.json`, no SQLite/`flags.json` fallback).
+  - **Fixture recorder deleted** (`authoring/tools/record_fixtures.py`); fixtures in `app/client/src/engine/fixtures/` are frozen and still replay (`npm test`).
+  - **`save.migrate()` stays** with its own schema upgrade `_upgrade(con)` (copied from `game.init`, run on a temp copy only): an old install may still start with only `game.sqlite`.
+  - **Packaged `.#app`** needs `TRIVIA_MEDIA` pointing at a synced cache (its `$XDG_DATA_HOME/trivia/media` starts empty); accepted for a pre-Steam test build, the Steam build bundles media (plan 34).
+- Consequences: `trivia-media sync --status approved` before game night is required, not optional. `qgen report` and the authoring start page need Node. `state/game.sqlite` and `state/flags.json` stay on disk as backups; only `migrate()` reads them. D-4's SQLite state is history.
+- Supersedes / related: D-4 (SQLite state), D-17 (download on miss in the game), D-25, D-35, D-47, D-59, D-60, D-67, D-69; plan 51; pm decisions 4, 5, 25

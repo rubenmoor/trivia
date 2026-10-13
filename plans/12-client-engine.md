@@ -1,6 +1,6 @@
 # 12 — Client Engine (Python → TypeScript)
 
-**Status:** draft
+**Status:** implemented
 
 Milestone M7 in [`project.md`](project.md); the Steam plan ([11](11-steam.md)) builds on it. It moves the game referee from the Python server into TypeScript, so the game runs without Python: in the browser, in a desktop shell ([18](18-steam-integration.md)), on the Steam Deck. **The rules don't change and the family's saves are kept.** This is a pure engineering change and can start now.
 
@@ -60,4 +60,4 @@ With the engine in the client, the correct answer is in memory before the player
 - [x] PORT-5 Migration `game.sqlite` → `game.json`, tested on a copy of the family's real save. *2026-10-11 (plan 49): `save.migrate()`, not wired into startup yet (see "Migration"); rehearsal on a copy: 2 players, 14 games (none running), 44 burns, 0 flags; players, burns per player and `getGame` (view + supply) equal in Python and TS; original checksum unchanged.*
 - [x] PORT-6 `qgen.py export`: the playable pool for the client; `validate` checks that the export is current. *2026-10-07, pulled forward as LP-3 (`19-repo-layout.md`): `app/data/pool.json`; the Python game server reads it too.*
 - [x] PORT-7 Switch the screens from `lib/api.ts` game calls to the engine. Family test night on the TS engine. *2026-10-12 (plan 50): `/data/` route in `main.py`, `lib/data.ts`, `lib/engine.ts`, `lib/api.ts` on the engine + `ServerStore`; `save.migrate()` at server start (D-69); test night played fine (pm decision 25).*
-- [ ] PORT-8 Delete `app/server/game.py` and the game routes; `app/server/selection.py` goes too: `qgen report` and `authoring/server/overview.py` get the supply from the TS engine via `node` (D-60, pm decision 5). Update `01-architecture.md` and AGENTS.md.
+- [x] PORT-8 Delete `app/server/game.py` and the game routes; `app/server/selection.py` goes too: `qgen report` and `authoring/server/overview.py` get the supply from the TS engine via `node` (D-60, pm decision 5). Update `01-architecture.md` and AGENTS.md. *2026-10-12 (plan 51, D-90): deleted `game.py`, `selection.py`, `flags.py`, `authoring/tools/record_fixtures.py`; `main.py` serves `/`, `/data/`, cache-only `/media`, `/api/save`; `categories.py` and the download code (`authoring/tools/download.py`) moved to authoring; `authoring/tools/supply.ts` + `engine.py`; `save.py` `_upgrade`; fixtures frozen; docs.*

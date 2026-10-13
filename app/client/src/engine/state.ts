@@ -1,5 +1,5 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
-// SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state (app/server/game.py docstring).
+// SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state of the former Python referee.
 import type { Category, Difficulty, ErrorInfo, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId } from "./pool.ts";
@@ -134,7 +134,7 @@ export function nextId(rows: { id: number }[]): number {
   return rows.reduce((m, r) => Math.max(m, r.id), 0) + 1;
 }
 
-// Error codes (D-57), as in game.py's ERRORS; English for logs.
+// Error codes (D-57), as in the former game.py's ERRORS; English for logs.
 type Params = Record<string, any>;
 const ERRORS: Record<string, string | ((p: Params) => string)> = {
   name_missing: "player name missing",

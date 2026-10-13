@@ -1,7 +1,7 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
   // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
-  // transition routine and the admin overlay on Esc. The server keeps the game (app/server/game.py).
+  // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { language, saveError, takeSaveNotice } from "../lib/engine";
@@ -190,7 +190,7 @@
     return new Set(next?.options.flatMap((o, i) => (before.includes(o.description) ? [] : [i])) ?? []);
   }
 
-  /** A joker goes to the server; errors show in the corner (09-jokers.md). */
+  /** A joker goes to the engine; errors show in the corner (09-jokers.md). */
   async function playJokerAction(body: JokerPlay) {
     try {
       const res = await playJoker(body);

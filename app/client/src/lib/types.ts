@@ -7,7 +7,7 @@ export interface Media {
   type: "image" | "audio" | "video";
   role: "decorative" | "illustrative" | "essential";
   source_url: string | null;
-  /** Exact URL of the picked file; the server caches it (D-17). */
+  /** Exact URL of the picked file; served from the media cache (D-17). */
   file_url: string | null;
   credit: string | null;
 }
@@ -15,7 +15,7 @@ export interface Media {
 /** Background image for audio questions (D-14). */
 export interface Background {
   source_url: string | null;
-  /** Exact URL of the picked file; the server caches it (D-17). */
+  /** Exact URL of the picked file; served from the media cache (D-17). */
   file_url: string | null;
   credit: string | null;
 }
@@ -28,7 +28,7 @@ export interface Category {
   subcategories: string[];
 }
 
-/** The supply check before a new game (GF-5, app/server/game.py). */
+/** The supply check before a new game (GF-5, engine/selection.ts). */
 export interface Supply {
   ok: boolean;
   available: number;
@@ -63,7 +63,7 @@ export interface Language {
   questions: string;
 }
 
-/** A known player (app/server/game.py `players`, D-28). */
+/** A known player (engine/game.ts `players`, D-28). */
 export interface Player {
   name: string;
   games: number;
@@ -79,7 +79,7 @@ export type GameMode = "gamemaster" | "solo" | "rr-coop" | "rr-competitive" | "t
 /** A count per joker; null = unlimited (13-game-modes.md, MD-1). */
 export type JokerBudget = Record<JokerName, number | null>;
 
-/** A server error code with its params (D-57); lib/errors.ts renders it. */
+/** An engine error code with its params (D-57); lib/errors.ts renders it. */
 export interface ErrorInfo {
   code: string;
   params: Record<string, unknown>;
@@ -101,7 +101,7 @@ export interface Jokers {
   snipe: JokerState;
 }
 
-/** What a played joker did (POST /api/game/joker → `event`), for the animation. */
+/** What a played joker did (`playJoker` → `event`), for the animation. */
 export type JokerEvent =
   | { joker: "hint"; hint: number }
   | { joker: "skip"; purged: string | null }
@@ -121,7 +121,7 @@ export interface Flagged {
   answer: string | null;
 }
 
-/** The game as the server shows it to the TV (app/server/game.py `view`): no correct answer before the final answer. */
+/** The game as the engine shows it to the TV (engine/game.ts `view`): no correct answer before the final answer. */
 export interface Game {
   id: number;
   /** null only for games from before players existed (D-28). */
