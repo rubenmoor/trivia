@@ -69,7 +69,7 @@ Scripted ones pin one rule each; soak walks catch paths they miss.
 - `win`, `lose-undo`, `hint`, `skip-purge`, `easier`, `category`, `snipe`, `budget`: rules and jokers; every joker has an available and an unavailable case
 - `admin-skip`, `players`, `abandon`, `supply`, `errors`: players, admin skip, supply failures, errors
 - `soak-1` … `soak-10`: seeded random walks of legal actions, 30–40 steps (choices from `random.Random("soak-<n>")`, not the tape); `soak-10` on `tight`
-- Not covered: the configure settings and gamemaster cheats (D-88), newer than the recordings: task 723
+- Configure settings and gamemaster cheats (D-88), newer than the recordings: TS-native in `settings.test.ts` (synthetic pool)
 
 ## Notes for the port (parts 2/3)
 - Python `sort` and JS `Array.prototype.sort` are both stable; keep the same sort keys (booleans: False < True)
