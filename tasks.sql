@@ -20385,8 +20385,8 @@ Cover part 6''s list:
 - Docs: `plans/11-steam.md` principle 3 and ST-5''s "no telemetry" → "opt-in telemetry, see milestone 14"; `plans/18-steam-integration.md` (IPC, ticket identity); `directory.md`; `README.md` how-tos; AGENTS.md commands line for any new `qgen` command; `plans/project.md`.', '2026-10-13T17:25:06Z', '2026-10-13T17:39:37Z', 871);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (878, 105, 'create tasks for plan 105', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 884, 885 (both pending on decision 117)', 'Split plan 105 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:27:26Z', '2026-10-13T17:40:14Z', 872);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (879, 106, 'create tasks for plan 106', 'split', 'open', 1000, NULL, 'Split plan 106 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:30:43Z', NULL, 873);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (879, 106, 'create tasks for plan 106', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 886, 887', 'Split plan 106 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:30:43Z', '2026-10-13T17:40:50Z', 873);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (880, 107, 'create tasks for plan 107', 'split', 'open', 1000, NULL, 'Split plan 107 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:33:00Z', NULL, 874);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (881, 108, 'create tasks for plan 108', 'split', 'open', 1000, NULL, 'Split plan 108 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -20424,6 +20424,57 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - AGENTS.md "Commands": the `trivia-report-server` line mentions `seed-telemetry [N]`.
 
 Done when: `seed-telemetry 50` against `trivia-report-server dev` stores 50 sessions that `GET /telemetry` returns (mind `limit` max 200, `RATE_TELEMETRY_TOTAL`); a non-localhost URL is refused; AGENTS.md per-commit checks pass.', '2026-10-13T17:40:12Z', NULL, 878);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (886, 106, 'Shell: telemetry store (install.json, session file, IPC)', 'work', 'open', NULL, NULL, 'Plan 106, task 1. The shell side of opt-in telemetry recording: consent + install id per install and one session buffer file per app run; no network (plan 107 sends). Follow plan 106 "Install id and consent storage", "Session buffer" and "Bridge" exactly. Binding: decision 119: Telemetry recording: derived from the save into a per-install side file; decision 121: Telemetry consent: stored per install, not in the save; decision 111: Steam only.
+
+## What
+- New `app/desktop/telemetry.mjs`:
+  - folder `T`: `TRIVIA_TELEMETRY_DIR`, else packaged `<userData>/telemetry` (sibling of `save/`, outside Auto-Cloud), dev `state/telemetry`
+  - `T/install.json`: `{"consent": true, "install": "<uuid v4>"}` / `{"consent": false}` / missing = never asked; `setConsent(true)` creates the id if missing (`crypto.randomUUID()`); `setConsent(false)` writes `{"consent": false}` and deletes `T/sessions/`
+  - session per run: at start with consent yes (or on a mid-run yes) `session = crypto.randomUUID()`, writes `T/sessions/<session>.json` with `games: []`, `index: []`
+  - `record({games, index})`: stamps `session`, `install`, `version` (`app.getVersion()`), `length_s` (`Math.round(process.uptime())`, cap 86400); atomic `.tmp` + rename through its own queue (pattern of `save.mjs` / `queued()`); refuses without a stored yes
+  - rollover when a write would exceed 30 games, 500 answers or 60 KiB serialized: close the file, new session id, the games that didn''t fit go there; per game the first 100 answers kept
+  - ≤ 5 files in `T/sessions/` (count every `*.json`, incl. plan 107''s `<session>.retry.json`); on a new session the oldest by mtime deleted
+  - exports `pending()` (list + read of leftover files) for plan 107; no IPC for it
+  - a final `length_s` stamp exported for `before-quit`
+- `main.mjs`: `validUser` gate (without one every telemetry IPC is a no-op, `state` → `{consent: null, available: false}`, no folder created); `before-quit` waits for the telemetry queue too and does the last `length_s` stamp; IPC `telemetry:state|consent|load|record` behind `bridge()`''s origin check; arguments validated (plain objects, size).
+- `preload.cjs`: `telemetry.state()`, `setConsent(yes)`, `load()` (current session''s `{games, index}` or null), `record({games, index})`.
+- `app/client/src/lib/desktop.ts`: optional `telemetry` on the bridge type.
+- No logging of ids or bodies.
+
+## Check
+Throw-away script or `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_TELEMETRY_DIR` in `/tmp`:
+- no `install.json` → no `sessions/` written
+- `setConsent(true)` → id created, one session file per run with `games: []`, `length_s` grows
+- `setConsent(false)` → `sessions/` gone, no id
+- six runs → five files
+- no valid user → nothing under `T`
+- per-commit checks (AGENTS.md)
+
+## Docs
+- `plans/18-steam-integration.md` IPC list
+- `directory.md`: `app/desktop/telemetry.mjs`, `state/telemetry/`', '2026-10-13T17:40:48Z', NULL, 879);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (887, 106, 'Page: telemetry recording from the save', 'work', 'open', NULL, NULL, 'Plan 106, task 2, after task 886 (shell telemetry store). The page derives this run''s telemetry games from the save after every action and hands them to the shell; the save''s shape doesn''t change. Follow plan 106 "What a game becomes" and "Bridge" exactly. Binding: decision 119: Telemetry recording: derived from the save into a per-install side file; decision 121: Telemetry consent: stored per install, not in the save; plan 105''s contract (v1) field names and limits.
+
+## What
+- `app/client/src/engine/telemetry.ts` (pure): save rows + `index` + data lookup → contract games
+  - session''s games: rows started this run (`from` 0) and the game running at load (`from` = its history length at load); key `<game id>@<started_on>`, first record fixes `from` in `index`
+  - per game: `mode`, `locale` (`gameLocale(row)`), `pool` (`loadEngineData(locale).poolHash`), `age_group`/`difficulty` (`gameChoice()`, exactly one non-null), `levels`, `reached`, `result` (`"open"` while running), `customized`, `mods: false`, `jokers` (counts over `history[from..]` + `state.jokers`, zeros kept for the five `STANDARD_JOKERS`)
+  - per answer: `history[from..]` entries with `correct`; `question` only if `^q-\d{4,6}$` and in a shipped bundle (`data.bundles`; the one spot milestone 15 extends); `level` in 1–`levels` else skipped; `jokers` counts (`{}` when none); first 100 per game
+  - never: names, player/game ids, dates, flags, notes, text
+- `app/client/src/lib/telemetry.ts`: consent cache (`telemetry.state()` once per page load and on a setter call, for plan 108), `loadEngineData` per game locale for the pool hash, `load()` on page start to recover `index`, `record()` calls; no bridge (browser game, dev shim) or consent not `true` → builder never runs, no IPC; errors to the dev console only
+- checkpoint in `lib/engine.ts`: `exec()` after a successful `run()` adopts its save, once in `load()`; fire-and-forget, never awaited by the UI
+
+## Check
+`trivia-desktop`, `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_TELEMETRY_DIR` in `/tmp`, consent set by hand in `install.json` (or the plan 108 UI if it exists):
+- a solo game won + a gamemaster game lost → session file (minus `index`) validates against plan 105''s `report-server/src/validate-telemetry.ts` if it exists, else a throw-away script against the contract (fields, caps, one non-null of `age_group`/`difficulty`, answers only `q-NNNN`)
+- a jokered question carries its counts; an undone answer disappears
+- quit mid-game → `result: "open"`; restart and finish → only the new answers in the new session
+- consent off → file untouched, no `record` IPC call
+- save file shape unchanged (no `SAVE_VERSION` bump)
+- per-commit checks (AGENTS.md)
+
+## Docs
+- `plans/12-client-engine.md`: short section "Telemetry recording" (derived from the save, side file, no save change, consent gate)', '2026-10-13T17:40:48Z', NULL, 879);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22468,6 +22519,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (748, 876, '2026-10-13T17:34:58Z', '2026-10-13T17:37:43Z', 'done', NULL, 0, '81cc9729bddb0a4eba4792c45e8cb43baec1f302', 'claude-opus-5-5[1m]', 'b6809c16-5397-4a45-9822-c8e2c8c1010f', 14, 26, 14546, 861429, 81031, 1.1115578, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (749, 877, '2026-10-13T17:37:44Z', '2026-10-13T17:39:45Z', 'done', NULL, 0, '38a61730fef45ec4940088c5edd6ee4071c7cc9e', 'claude-opus-5-5[1m]', 'a0411086-6e34-4d83-8670-5bc5592b26ee', 15, 28, 8421, 664237, 60050, 0.7817794, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (750, 878, '2026-10-13T17:39:46Z', '2026-10-13T17:40:18Z', 'done', NULL, 0, '469660a11bc4c056061d3e04c287eba2aa4eecbd', 'claude-opus-5-5[1m]', '8e30facf-9116-4129-a160-6d232154d949', 5, 10, 2953, 158856, 30153, 0.3320952, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (751, 879, '2026-10-13T17:40:19Z', '2026-10-13T17:40:56Z', 'done', NULL, 0, '026e8ed36ea613d4e15098efdf32e5e9f10b9bb3', 'claude-opus-5-5[1m]', '2f22575e-dceb-4777-b2c0-26402df3e896', 5, 10, 3661, 162808, 32795, 0.3681816, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
