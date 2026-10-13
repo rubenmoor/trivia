@@ -22884,7 +22884,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Test passes; `trivia-desktop` without mods plays as before; per-commit checks pass.', '2026-10-13T18:29:50Z', '2026-10-13T18:47:51Z', 914);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (952, 112, 'main.mjs: discover mods, mods.json, layers into the resolver, --no-mods', 'work', 'open', NULL, NULL, 'Plan 112, task 3 (after the `mods.mjs` and `resolve.mjs` tasks). Wire mods into `app/desktop/main.mjs`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (952, 112, 'main.mjs: discover mods, mods.json, layers into the resolver, --no-mods', 'work', 'done', NULL, '2026-10-13, app/desktop/main.mjs (modsDir, modsSettingsFile, --no-mods, loadMods → layers, module list), .gitignore /mods/; checked: CSS mod changes colour, --no-mods plain, no user → no_user', 'Plan 112, task 3 (after the `mods.mjs` and `resolve.mjs` tasks). Wire mods into `app/desktop/main.mjs`.
 
 - `modsDir()`: `TRIVIA_MODS_DIR` → packaged `<userData>/mods/` (create if missing) → dev `REPO/mods/`.
 - `modsSettingsFile()`: packaged `<userData>/mods.json`, dev `state/desktop/mods.json`.
@@ -22896,7 +22896,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The request block in `main.mjs` (offline) stays.
 
 ## Done when
-- `trivia-desktop` with a repo `mods/` holding a CSS override mod starts with the changed colour; `--no-mods` starts plain; without the dev switch and without Steam the mod is `no_user`; per-commit checks pass.', '2026-10-13T18:29:50Z', NULL, 914);
+- `trivia-desktop` with a repo `mods/` holding a CSS override mod starts with the changed colour; `--no-mods` starts plain; without the dev switch and without Steam the mod is `no_user`; per-commit checks pass.', '2026-10-13T18:29:50Z', '2026-10-13T18:51:09Z', 914);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (953, 112, 'End-to-end check of the mod overlay in trivia-desktop (throw-away mods)', 'work', 'open', NULL, NULL, 'Plan 112, task 4 (after the `main.mjs` wiring task). Manual check, nothing lasting except the done note.
 
 Temp `TRIVIA_MODS_DIR`, `TRIVIA_DEV_STEAM_USER=1`, mods:
@@ -25650,6 +25650,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (798, 867, '2026-10-13T18:38:19Z', '2026-10-13T18:43:49Z', 'done', NULL, 0, '27a192ea1870215791dde00e3b4e972c8baffda0', 'claude-opus-5-5[1m]', 'f76d687a-1f2b-42a1-8e47-c99849a6a715', 32, 60, 16568, 1840209, 72899, 1.2828337999999997, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (799, 950, '2026-10-13T18:43:49Z', '2026-10-13T18:46:02Z', 'done', NULL, 0, '75d3f0143fe0cd2a3656d94dbb34ac2b84230443', 'claude-opus-5-5[1m]', '09d995e1-8b25-4f69-9302-380e77da0a18', 11, 20, 12021, 454345, 48605, 0.720209, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (800, 951, '2026-10-13T18:46:03Z', '2026-10-13T18:48:05Z', 'done', NULL, 0, '3c631dc5778bb80172647a624f9a97a87e9e42d6', 'claude-opus-5-5[1m]', '46bd12b3-e744-4504-af70-97ca95b796f0', 19, 36, 9992, 735572, 38015, 0.6512184, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (801, 952, '2026-10-13T18:48:06Z', '2026-10-13T18:51:22Z', 'done', NULL, 0, 'e67015b0e47af363dd683b476a344aab4497b45b', 'claude-opus-5-5[1m]', '1f901555-7e41-4913-a3dc-d034dcbd7ba5', 20, 38, 10047, 863546, 44626, 0.7308092, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

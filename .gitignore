@@ -26,3 +26,6 @@ app/desktop/steamworks_sdk/redistributable_bin/
 
 # Store screenshots and capsules (plan 88): rendered by authoring/store/.
 authoring/store/out/
+
+# Local mods for development (plan 112); TRIVIA_MODS_DIR overrides.
+/mods/
