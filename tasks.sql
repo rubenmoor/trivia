@@ -824,92 +824,62 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck. A credits screen covers the licences. No Steamworks yet: the build runs without Steam (S5 adds the binding).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck. A credits screen covers the licences. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
 
-## Preconditions (other milestones; a part''s tasks stop and say so if one is missing)
-- TS engine (milestone 2): screens on the engine (part 5, PORT-7) and the Store interface + `SaveData` (part 4, PORT-4/5). Plans 19 "Engine core" and 20 "Engine game state machine" today; parts 4–5 have no plan yet (tasks 58, 59). The shell must load the client without Python.
-- Shell decision (OQ-29): plan 34 "Desktop shell (OQ-29)" (milestone 7). Parts 1–3 write their plans against the answer; until it is in, they assume nothing beyond "a Chromium-like window that loads `app/client/dist/`". If OQ-29 is still pending when a part''s plan task runs, it makes the task pending on that decision.
-- Licence data per media file: plan 26 "Licence data in the pool" (milestone 4), for part 7.
+## Status (revised 2026-10-13, task 753)
+- Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
+- Part 8: plan 48, tasks open; revise it for decision 111 (below) and run it after part 9.
+- Part 9: new (milestone change of 2026-10-13); needs its plan.
+
+## Preconditions
+- TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
+- Decision 4 (static + `/api/save` only) and decision 25 (Python referee gone) left the Python game server as static files + save; part 9 removes the rest.
 
 ## Rules for every part
-- The current game (`trivia`, Python server + browser) keeps working after every task until this build replaces it (D-59): same keys, same screens, same save (`ServerStore`).
-- New shipped code goes under `app/` (D-35, e.g. `app/desktop/`); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`.
-- Dependencies: the shell and its builder only (OQ-29''s answer). Anything else (a gamepad library, a focus library, a glyph pack with code) needs a `pm decision`.
-- Offline, no accounts, no telemetry. No Steamworks calls (S5).
+- Steam only (decision 111): no work, checks, fixes or docs for running the builds outside Steam; no "without Steam" / "clean machine without Nix" rows in checklists or done-whens. Supersedes D-59''s bridge ("the current game keeps working until this build replaces it").
+- The family keeps playing until the switch: part 9 imports their `state/game.json` before anything of the browser game is deleted.
+- Shipped code under `app/` (D-35); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`; `authoring/` may import from `app/`.
+- Dependencies: Electron and electron-builder (decision 12) plus what the shell plans already took; anything else needs a `pm decision` (a Node dev server should reuse Vite, already a dev dependency).
+- Offline, no accounts, no telemetry. No Steamworks features beyond what plans 54/85 already wired (S5).
 - Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
 
 ## Parts
 
-1. **Desktop shell skeleton (SW-2)**
-   - Owner: `plans/18-steam-integration.md` ("Desktop shell").
-   - Window, fullscreen by default with a toggle (F11 / menu), loads `app/client/dist/` without a server; a minimal preload bridge (no Node in the page).
-   - Data and media without Python: the client''s data files (pool, categories, age groups, bundles) and `/media?url=…` (today `app/server/main.py` + `media_cache.py`) need a shell-side resolver, e.g. a custom protocol mapping a media URL to a file in a bundled media folder. Same URLs for the client in both setups, or one small adapter in `lib/`.
-   - Dev on NixOS: the npm Electron binary doesn''t run there; the flake provides the shell runtime (e.g. `pkgs.electron`) and a dev command (`trivia-desktop`). Linux/Windows builds still use the builder''s binaries (part 3).
-   - Done when: the dev command opens the game fullscreen and a whole game plays with media and sound, no Python process running.
-   - Suggested priority: 480 (after M2''s PORT-7, ~500).
+1. **Desktop shell skeleton (SW-2)**: plan 54, done.
+2. **File saves (SW-3)**: plan 55, done. Import of a save file was optional there; part 9 makes it required.
+3. **Local builds for Windows and Linux (SW-5, SW-6)**: plan 56, done except task 332 (start test recorded as skipped, decision 39). SW-6 is local CI in S5 (decision 14).
+4. **Action layer and focus navigation (IN-2, IN-3)**: plan 44, done.
+5. **Gamepad input and button glyphs (IN-4, IN-5)**: plan 45, done.
+6. **Deck layout and controller-only text entry (SW-4)**: plan 46, done.
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**: plan 47, done.
 
-2. **File saves (SW-3)**
-   - Owner: `plans/18-steam-integration.md`; interface from `plans/12-client-engine.md` (Store, `SaveData`, PORT-4).
-   - `FileStore` behind the bridge: one JSON file in the shell''s user data folder (Steam Auto-Cloud later syncs it with no code); atomic write (temp + rename) with a retry for Windows file locks; corrupt or newer-version file → keep a backup, start fresh, show a message (strings through the catalog, milestone 3).
-   - Optional: import a save file (the family''s `state/game.json`) — only if cheap; otherwise backlog.
-   - Done when: players and burned questions survive a restart and a crash during write (throw-away script kills the process mid-write).
-   - Suggested priority: 470 (after part 1).
-
-3. **Local builds for Windows and Linux (SW-5, SW-6)**
-   - Owner: `plans/18-steam-integration.md` ("Builds and depots").
-   - Builder per OQ-29 (electron-builder in the draft): Windows x64 (installer or portable zip) and Linux x64 (AppImage or tar.gz; the Deck runs this one). Build steps: client build, `app/data/` export current (`qgen validate`), media bundled.
-   - Media for S3: the approved media cache as is (`trivia-media sync --status approved`, ~720 MB) is fine for a local build; resizing/re-encoding is SW-9 (S5). Media is gitignored (D-17), so a CI build has no media: the plan decides (pm decision if unclear) whether CI builds without media (content added locally or as a later depot) or fetches it with `trivia-media sync`.
-   - SW-6 CI in GitHub Actions: no secrets needed in S3 (no upload). If CI is more work than it''s worth before S5, the plan may move SW-6 to S5 via a decision.
-   - Offline start test on a clean Windows machine and a Linux machine without Nix: written checklist; the gamemaster runs it (workers don''t own such machines).
-   - Done when: `nix` or `npm` command produces both artefacts; each starts offline and plays a game.
-   - Suggested priority: 460 (after parts 1–2).
-
-4. **Action layer and focus navigation (IN-2, IN-3)**
-   - Owner: `plans/14-input.md` (section 2).
-   - Action layer in `app/client/src/lib/` (e.g. `input.ts`): `confirm`, `back`, `menu`, `answer(1..4)`, `joker(name)`, `navigate(dir)`; keyboard and mouse produce actions; screens listen only to actions. Replaces the `keydown` branches in `Game.svelte` and the dialogs (IN-1''s audit lists them). Keys unchanged for the family.
-   - Focus model: spatial focus between controls, the sky-blue focus ring (D-29), focus memory per screen, focus never lands on the ☰ overlay button by accident (IN-1).
-   - Independent of the shell; works in the browser setup too. New screens from milestones 5 and 7 (plans 29, 36) use it if they land later; if they landed earlier, this part converts them.
-   - Done when: every screen and dialog plays with arrow keys + Enter + Esc/Backspace only; the family''s keys behave as before.
-   - Suggested priority: 500 (client code; no dependency on the engine).
-
-5. **Gamepad input and button glyphs (IN-4, IN-5)**
-   - Owner: `plans/14-input.md`. Builds on part 4.
-   - Gamepad API polling (`requestAnimationFrame` while a pad is connected), standard mapping (Steam Input presents an Xbox pad): D-pad/stick → `navigate`, A/B/Start → `confirm`/`back`/`menu`.
-   - Design first (IN-4): direct answer buttons (A/B/X/Y on the Question screen) and joker access (bumpers, wheel or focus row); a pm decision with a recommendation if the plan can''t settle it from 14.
-   - Glyphs follow the last-used device (keyboard letters, Xbox, PlayStation from `Gamepad.id`); art original or from a free set with a clear licence (D-45 style), listed for part 7.
-   - Done when: a full game, every joker and every dialog work with an Xbox-style pad in Chromium on Linux and Windows; the prompts switch when the device changes.
-   - Suggested priority: 490 (after part 4).
-
-6. **Deck layout and controller-only text entry (SW-4)**
-   - Owner: `plans/18-steam-integration.md` ("Platforms and display"), `plans/14-input.md` (Deck), `plans/04-ui-tv-display.md`.
-   - Screen check of every screen at 1280×800 and 1280×720 (and 4K as a sanity check); text ≥ 9 px at 800p (Valve''s guideline); fixes in the `--u` system (D-29), no separate Deck layout unless needed.
-   - Player name without a keyboard: the Steamworks on-screen keyboard is S5 (SW-8), so S3 needs an in-game letter picker or another controller-only way (pick existing player, preset names); the plan proposes one, pm decision if it changes the Player screen visibly for the family.
-   - Done when: screenshots at both sizes pass (Playwright or the shell at a fixed window size); a new player can be created with a pad only.
-   - Suggested priority: 380 (after parts 4–5 and the screen changes of milestones 5–6).
-
-7. **Credits screen and generated `CREDITS.md` (PUB-5)**
-   - Owner: `plans/17-publishing.md` ("Credits in the game").
-   - Generated at build time from the pool''s licence data (plan 26) plus fixed lists: audio (`app/client/public/audio/CREDITS.md`, Elgar note), fonts (`app/client/public/fonts/`), glyphs (part 5), libraries (Svelte, the shell; their licences), and the code/content licence (OQ-35, plan 40) if decided. Generator lives in `app/` or the build step, not in `authoring/` if the shipped build runs it.
-   - Screen reachable from the start screen or the ☰ overlay, scrollable with a pad (part 4); `CREDITS.md` in the shipped files.
-   - Done when: every media file in `app/data/pool.json` appears with author, licence and source link; the build contains `CREDITS.md`; the screen works with keyboard, mouse and pad.
-   - Suggested priority: 400.
-
-8. **S3 close-out and platform test**
-   - Test checklist for the gamemaster: Windows, Linux, Deck (Linux build; also via Proton if cheap), controller only, offline, a full game to level 12 or a loss, a restart keeps the save. Workers prepare it and record the results the gamemaster reports (pm decision "S3 test passed?" with the checklist in the body).
-   - `plans/11-steam.md` S3 row done; 14, 17, 18 statuses and tasks; `plans/project.md`; `plans/README.md`. Masterplans of milestones 9–11 (plans 9–11) get a note if S3 changed their scope (e.g. SW-6 moved, media bundle needs).
+8. **S3 close-out and platform test**: plan 48 (priority 140, last).
+   - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
+   - Waits for part 9 too (guard: every other milestone-8 plan without open tasks).
    - Done when: the milestone''s "Done when" holds.
-   - Suggested priority: 140 (last; below plan 43 "S2 close-out" at 150).
+
+9. **Retire the browser game and the Python game server** (new)
+   - Owner: `plans/18-steam-integration.md` (desktop as the only game), `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 marked superseded by decision 111.
+   - Order inside the plan (each step leaves per-commit checks green):
+     1. Node dev server for workers'' browser checks: serves the built or dev client, `app/data/` at `/data/`, `/media` from the media cache, and the save through the same Store the client uses (FileStore-like, in a temp state dir given by env/flag); one command (e.g. an `npm run` script or a flake app). Replaces "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open task bodies (`pm task set` for open tasks; grep tasks with `pm queue` / `pm show`).
+     2. `trivia-desktop --import-save <file>`: reads the family''s `state/game.json` (and migrates as `save.migrate()` did, if still needed), writes the desktop save atomically, refuses to overwrite a non-empty save without `--force`, keeps a backup. Then a pm decision for the gamemaster: "Family save imported into trivia-desktop?" (the family plays `trivia-desktop` from then on; later the Steam beta). Deletions in step 4 wait for its answer.
+     3. Authoring''s Python off `app/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever `authoring/` still imports: `qgen.py`, `layout.py`, `save_file.py`, `download.py`, `media.py`, `categories.py`, `authoring/server/*`) move into `authoring/` modules; imports updated; `trivia-authoring`, `qgen`, `trivia-media` behave as before. Decision 104 (Python ↔ Node/TS twins: won''t fix) still holds: move, don''t sync. Authoring keeps reading flags from the save the desktop writes (apply_flags), path per the desktop save location.
+     4. Delete: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint) in `lib/store.ts`, the `trivia` command (flake `trivia-dev`), `nix build .#app` (flake package `app`), its `trivia-release-check` step and docs mentions; `app/` has no `.py` left.
+     5. Docs: AGENTS.md (Commands: `trivia`, `nix build .#app` out; the dev server in), README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md` where they describe the browser game.
+   - Check the other milestones'' open plans and tasks that still name `trivia`, `/api/save`, `ServerStore` or `nix build .#app` (e.g. plan 89 "Builds, depots and upload", plan 30''s browser play-test, decision 50): adjust open task bodies with `pm task set`, or a follow-up task in the owning plan.
+   - Done when: no Python under `app/`; the family''s save lives in the desktop build (decision answered); workers'' browser checks run on the Node dev server; per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+   - Suggested priority: 450 (after plan 56''s builds at 460, before plan 48 at 140).
 
 ## Order
-- Parts 4 → 5 → 6 can start before the engine lands (client only).
-- Plan 34 (OQ-29) + M2 PORT-7 → part 1 → part 2 → part 3.
-- Part 7 after plan 26 and part 5 (glyph credits); its screen needs part 4.
-- Part 8 last.
+- Parts 1–7 done.
+- Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
+- Part 8 last, after part 9.
 
 ## Out of scope (from the milestone)
-- Steamworks (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).', '2026-10-11T21:55:09Z', NULL);
+- Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional packs (bundles, D-39), and `qgen report --simulate` passing the content target for every launch language. Today: 1136 approved (`base` 1035, `colombia` 101), Spanish only; milestone 1 takes `base` to 5000 (D-52).
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
@@ -14501,10 +14471,136 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md`: the simulation numbers from the RG-5 decision''s body (`base` vs `base,colombia`, es).
 
 Done when: docs in sync, 15c done, plan 98''s Done-when bullets all hold.', '2026-10-13T15:02:21Z', NULL, 747);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (753, 8, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (753, 8, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, tasks.sql: plan 8 body revised for decision 111 (status of parts 1-7, part 8 revision notes, new part 9 retiring the browser game and Python server; split task 755 queued)', 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', '2026-10-13T15:13:11Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (754, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (755, 8, 'create tasks for plan 8', 'split', 'open', 1000, NULL, 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:13:02Z', NULL, 753);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (756, 48, 'revise plan 48', 'plan', 'open', 1000, NULL, 'Plan 8, the plan above plan 48, changed; it is quoted below. Bring plan 48 in line with it
+(`pm plan edit 48 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 8: masterplan
+
+Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck. A credits screen covers the licences. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Status (revised 2026-10-13, task 753)
+- Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
+- Part 8: plan 48, tasks open; revise it for decision 111 (below) and run it after part 9.
+- Part 9: new (milestone change of 2026-10-13); needs its plan.
+
+## Preconditions
+- TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
+- Decision 4 (static + `/api/save` only) and decision 25 (Python referee gone) left the Python game server as static files + save; part 9 removes the rest.
+
+## Rules for every part
+- Steam only (decision 111): no work, checks, fixes or docs for running the builds outside Steam; no "without Steam" / "clean machine without Nix" rows in checklists or done-whens. Supersedes D-59''s bridge ("the current game keeps working until this build replaces it").
+- The family keeps playing until the switch: part 9 imports their `state/game.json` before anything of the browser game is deleted.
+- Shipped code under `app/` (D-35); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`; `authoring/` may import from `app/`.
+- Dependencies: Electron and electron-builder (decision 12) plus what the shell plans already took; anything else needs a `pm decision` (a Node dev server should reuse Vite, already a dev dependency).
+- Offline, no accounts, no telemetry. No Steamworks features beyond what plans 54/85 already wired (S5).
+- Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
+
+## Parts
+
+1. **Desktop shell skeleton (SW-2)**: plan 54, done.
+2. **File saves (SW-3)**: plan 55, done. Import of a save file was optional there; part 9 makes it required.
+3. **Local builds for Windows and Linux (SW-5, SW-6)**: plan 56, done except task 332 (start test recorded as skipped, decision 39). SW-6 is local CI in S5 (decision 14).
+4. **Action layer and focus navigation (IN-2, IN-3)**: plan 44, done.
+5. **Gamepad input and button glyphs (IN-4, IN-5)**: plan 45, done.
+6. **Deck layout and controller-only text entry (SW-4)**: plan 46, done.
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**: plan 47, done.
+
+8. **S3 close-out and platform test**: plan 48 (priority 140, last).
+   - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
+   - Waits for part 9 too (guard: every other milestone-8 plan without open tasks).
+   - Done when: the milestone''s "Done when" holds.
+
+9. **Retire the browser game and the Python game server** (new)
+   - Owner: `plans/18-steam-integration.md` (desktop as the only game), `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 marked superseded by decision 111.
+   - Order inside the plan (each step leaves per-commit checks green):
+     1. Node dev server for workers'' browser checks: serves the built or dev client, `app/data/` at `/data/`, `/media` from the media cache, and the save through the same Store the client uses (FileStore-like, in a temp state dir given by env/flag); one command (e.g. an `npm run` script or a flake app). Replaces "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open task bodies (`pm task set` for open tasks; grep tasks with `pm queue` / `pm show`).
+     2. `trivia-desktop --import-save <file>`: reads the family''s `state/game.json` (and migrates as `save.migrate()` did, if still needed), writes the desktop save atomically, refuses to overwrite a non-empty save without `--force`, keeps a backup. Then a pm decision for the gamemaster: "Family save imported into trivia-desktop?" (the family plays `trivia-desktop` from then on; later the Steam beta). Deletions in step 4 wait for its answer.
+     3. Authoring''s Python off `app/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever `authoring/` still imports: `qgen.py`, `layout.py`, `save_file.py`, `download.py`, `media.py`, `categories.py`, `authoring/server/*`) move into `authoring/` modules; imports updated; `trivia-authoring`, `qgen`, `trivia-media` behave as before. Decision 104 (Python ↔ Node/TS twins: won''t fix) still holds: move, don''t sync. Authoring keeps reading flags from the save the desktop writes (apply_flags), path per the desktop save location.
+     4. Delete: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint) in `lib/store.ts`, the `trivia` command (flake `trivia-dev`), `nix build .#app` (flake package `app`), its `trivia-release-check` step and docs mentions; `app/` has no `.py` left.
+     5. Docs: AGENTS.md (Commands: `trivia`, `nix build .#app` out; the dev server in), README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md` where they describe the browser game.
+   - Check the other milestones'' open plans and tasks that still name `trivia`, `/api/save`, `ServerStore` or `nix build .#app` (e.g. plan 89 "Builds, depots and upload", plan 30''s browser play-test, decision 50): adjust open task bodies with `pm task set`, or a follow-up task in the owning plan.
+   - Done when: no Python under `app/`; the family''s save lives in the desktop build (decision answered); workers'' browser checks run on the Node dev server; per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+   - Suggested priority: 450 (after plan 56''s builds at 460, before plan 48 at 140).
+
+## Order
+- Parts 1–7 done.
+- Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
+- Part 8 last, after part 9.
+
+## Out of scope (from the milestone)
+- Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-13T15:13:02Z', NULL, 753);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (757, 56, 'revise plan 56', 'plan', 'open', 1000, NULL, 'Plan 8, the plan above plan 56, changed; it is quoted below. Bring plan 56 in line with it
+(`pm plan edit 56 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 8: masterplan
+
+Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck. A credits screen covers the licences. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Status (revised 2026-10-13, task 753)
+- Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
+- Part 8: plan 48, tasks open; revise it for decision 111 (below) and run it after part 9.
+- Part 9: new (milestone change of 2026-10-13); needs its plan.
+
+## Preconditions
+- TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
+- Decision 4 (static + `/api/save` only) and decision 25 (Python referee gone) left the Python game server as static files + save; part 9 removes the rest.
+
+## Rules for every part
+- Steam only (decision 111): no work, checks, fixes or docs for running the builds outside Steam; no "without Steam" / "clean machine without Nix" rows in checklists or done-whens. Supersedes D-59''s bridge ("the current game keeps working until this build replaces it").
+- The family keeps playing until the switch: part 9 imports their `state/game.json` before anything of the browser game is deleted.
+- Shipped code under `app/` (D-35); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`; `authoring/` may import from `app/`.
+- Dependencies: Electron and electron-builder (decision 12) plus what the shell plans already took; anything else needs a `pm decision` (a Node dev server should reuse Vite, already a dev dependency).
+- Offline, no accounts, no telemetry. No Steamworks features beyond what plans 54/85 already wired (S5).
+- Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
+
+## Parts
+
+1. **Desktop shell skeleton (SW-2)**: plan 54, done.
+2. **File saves (SW-3)**: plan 55, done. Import of a save file was optional there; part 9 makes it required.
+3. **Local builds for Windows and Linux (SW-5, SW-6)**: plan 56, done except task 332 (start test recorded as skipped, decision 39). SW-6 is local CI in S5 (decision 14).
+4. **Action layer and focus navigation (IN-2, IN-3)**: plan 44, done.
+5. **Gamepad input and button glyphs (IN-4, IN-5)**: plan 45, done.
+6. **Deck layout and controller-only text entry (SW-4)**: plan 46, done.
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**: plan 47, done.
+
+8. **S3 close-out and platform test**: plan 48 (priority 140, last).
+   - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
+   - Waits for part 9 too (guard: every other milestone-8 plan without open tasks).
+   - Done when: the milestone''s "Done when" holds.
+
+9. **Retire the browser game and the Python game server** (new)
+   - Owner: `plans/18-steam-integration.md` (desktop as the only game), `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 marked superseded by decision 111.
+   - Order inside the plan (each step leaves per-commit checks green):
+     1. Node dev server for workers'' browser checks: serves the built or dev client, `app/data/` at `/data/`, `/media` from the media cache, and the save through the same Store the client uses (FileStore-like, in a temp state dir given by env/flag); one command (e.g. an `npm run` script or a flake app). Replaces "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open task bodies (`pm task set` for open tasks; grep tasks with `pm queue` / `pm show`).
+     2. `trivia-desktop --import-save <file>`: reads the family''s `state/game.json` (and migrates as `save.migrate()` did, if still needed), writes the desktop save atomically, refuses to overwrite a non-empty save without `--force`, keeps a backup. Then a pm decision for the gamemaster: "Family save imported into trivia-desktop?" (the family plays `trivia-desktop` from then on; later the Steam beta). Deletions in step 4 wait for its answer.
+     3. Authoring''s Python off `app/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever `authoring/` still imports: `qgen.py`, `layout.py`, `save_file.py`, `download.py`, `media.py`, `categories.py`, `authoring/server/*`) move into `authoring/` modules; imports updated; `trivia-authoring`, `qgen`, `trivia-media` behave as before. Decision 104 (Python ↔ Node/TS twins: won''t fix) still holds: move, don''t sync. Authoring keeps reading flags from the save the desktop writes (apply_flags), path per the desktop save location.
+     4. Delete: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint) in `lib/store.ts`, the `trivia` command (flake `trivia-dev`), `nix build .#app` (flake package `app`), its `trivia-release-check` step and docs mentions; `app/` has no `.py` left.
+     5. Docs: AGENTS.md (Commands: `trivia`, `nix build .#app` out; the dev server in), README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md` where they describe the browser game.
+   - Check the other milestones'' open plans and tasks that still name `trivia`, `/api/save`, `ServerStore` or `nix build .#app` (e.g. plan 89 "Builds, depots and upload", plan 30''s browser play-test, decision 50): adjust open task bodies with `pm task set`, or a follow-up task in the owning plan.
+   - Done when: no Python under `app/`; the family''s save lives in the desktop build (decision answered); workers'' browser checks run on the Node dev server; per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+   - Suggested priority: 450 (after plan 56''s builds at 460, before plan 48 at 140).
+
+## Order
+- Parts 1–7 done.
+- Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
+- Part 8 last, after part 9.
+
+## Out of scope (from the milestone)
+- Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-13T15:13:02Z', NULL, 753);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16392,6 +16488,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (657, 748, '2026-10-13T15:02:33Z', '2026-10-13T15:03:06Z', 'blocked', NULL, 0, '0a2dcb1b9c416da67430603ee29c4e56b6408e36', 'claude-opus-5-5[1m]', '693b520a-2530-4cd6-a99e-9747b5f182d7', 9, 20, 2421, 276852, 24726, 0.30167840000000007, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (658, 749, '2026-10-13T15:03:06Z', '2026-10-13T15:05:41Z', 'done', NULL, 0, 'f9eb7be45bfbe7d226aa76f9abf6bf13c0d45736', 'claude-opus-5-5[1m]', '1d1753e8-ebc3-41e8-bc21-73745182b127', 13, 24, 5955, 489856, 40968, 0.5449112, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (659, 751, '2026-10-13T15:05:42Z', '2026-10-13T15:12:05Z', 'done', NULL, 0, 'f3f973ef65246ad9b99da73b52c45d56c8131f23', 'claude-opus-5-5[1m]', 'e878694d-5713-4b6e-8e84-8a13498c513d', 66, 130, 37577, 6530730, 131490, 3.1101259999999984, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (660, 753, '2026-10-13T15:12:05Z', '2026-10-13T15:13:18Z', 'done', NULL, 0, 'dbead0491651cf1b1c49d3ca7ef2382a1709b876', 'claude-opus-5-5[1m]', '17fa49c2-9e59-4625-affd-ec6483fc062b', 12, 24, 6811, 488755, 41731, 0.567915, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
