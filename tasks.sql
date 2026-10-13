@@ -16787,7 +16787,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:47:52Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (809, 88, 'revise plan 88', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (809, 88, 'revise plan 88', 'plan', 'done', 1000, '2026-10-13, no change: plan 10''s edit (dev-mode «Ir a pregunta…» row in the gamemaster menu) doesn''t touch plan 88; the screenshot walk seeds saves and never opens the gamemaster menu, so the dev row can''t show under TRIVIA_DEV_STEAM_USER', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
 (`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -16909,7 +16909,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 - Part 11 last.
 
 ## Out of scope (from the milestone)
-- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', NULL, 789);
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:48:28Z', 789);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (810, 89, 'revise plan 89', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
 (`pm plan edit 89 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -19131,6 +19131,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (697, 807, '2026-10-13T15:46:30Z', '2026-10-13T15:47:10Z', 'done', NULL, 0, '218fa673d7199f77be975855208fc9d6644e0b31', 'claude-opus-5-5[1m]', '01e281bc-f3f1-4c67-8966-e25d1d0178be', 7, 14, 2814, 246494, 31322, 0.3562108, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (698, 814, '2026-10-13T15:47:10Z', '2026-10-13T15:47:40Z', 'done', NULL, 0, 'be255d360d8438b1b7259472932685b5e7c90326', 'claude-opus-5-5[1m]', 'fe009c0b-acf9-4ef0-b1e1-c475aa309ea4', 6, 12, 2356, 169976, 27780, 0.3034032, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (699, 808, '2026-10-13T15:47:40Z', '2026-10-13T15:47:57Z', 'done', NULL, 0, 'dac8bede6abccbe862395871fe9445387d3e756d', 'claude-opus-5-5[1m]', '2f2ac96f-03e2-45ee-8cbd-173d63355db9', 4, 8, 1368, 117585, 26076, 0.259517, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (700, 809, '2026-10-13T15:47:57Z', '2026-10-13T15:48:34Z', 'done', NULL, 0, '7b5af40af576990034659251771854e49d8a472e', 'claude-opus-5-5[1m]', '10defd35-a375-445a-a8a6-2c05647f3799', 6, 12, 2146, 218425, 34238, 0.360557, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
