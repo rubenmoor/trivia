@@ -370,6 +370,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 
 ## Outcome
 - Steamworks integration and depots (SW-7..SW-14, `plans/18-steam-integration.md`).
+- Steam Input default config set to the Gamepad template in Steamworks, so the Deck''s controls arrive as a virtual Xbox pad.
+- Steam Deck support best effort (decision 125): once the image peek (milestone 8) and the Gamepad default config are in, request Valve''s Deck compatibility review (SW-12) without a real Deck at hand; the real-Deck test and further Deck tuning follow once one is at hand.
 - Language guess from Steam (SW-8): `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) replaces `navigator.language` as the first-start guess (milestone 9); only the preselection, the player still confirms.
   - mapping of Steam''s API names (`latam`, `spanish`, `english`, `german`, later `schinese`, `russian`, `brazilian`) to our locales
 - Steam user required for saves and flags (decision 111):
@@ -397,6 +399,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 ## Done when
 - The beta branch is installed from Steam on a second machine and played by the family.
 - Without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud.
+- Deck compatibility review requested in Steamworks; its result noted in `plans/18-steam-integration.md`.
 
 Plan files: `plans/11-steam.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:55:09Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (11, 'Steam S6: release', 'open', 'The public release and what follows it.
@@ -20904,6 +20907,8 @@ Cover part 12''s list:
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (911, 111, 'create tasks for plan 111', 'split', 'open', 1000, NULL, 'Split plan 111 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:49:39Z', NULL, 899);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (912, 8, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (913, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
