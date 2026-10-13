@@ -4,11 +4,12 @@ import { en } from "../locales/en";
 import es, { type Catalog, type Override, type Plural, type TextKey, type VariantsKey } from "../locales/es";
 import { esES } from "../locales/es-ES";
 
-export type { Key, TextKey, VariantsKey } from "../locales/es";
+export type { Key } from "../locales/es";
 export type Params = Record<string, string | number>;
 
+const isPlural = (v: unknown): v is Plural => !!v && typeof v === "object" && !Array.isArray(v) && "other" in v;
 const isBranch = (v: unknown): v is Record<string, unknown> =>
-  !!v && typeof v === "object" && !Array.isArray(v) && !("other" in v);
+  !!v && typeof v === "object" && !Array.isArray(v) && !isPlural(v);
 
 /** `over` on `base`, branch by branch; leaves (plural maps and variant arrays too) replaced whole. */
 function merge(base: Catalog, over: Override): Catalog {
@@ -20,8 +21,8 @@ function merge(base: Catalog, over: Override): Catalog {
 /** Shipping catalogs (LUI-5, D-78): `es` is neutral Latin American Spanish, `es-ES` overrides it. */
 const CATALOGS: Record<string, Catalog> = { es, "es-ES": merge(es, esES), en, de };
 
-/** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
-export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
+/** UI languages a player can pick (plan 68); `xx` joins `CATALOGS` only later, in dev. */
+export const UI_LANGS = Object.keys(CATALOGS);
 
 /** A shipping catalog by tag, `es` if unknown; for pages that show one language without `initLang` (`/comodines`). */
 export const catalogFor = (l: string): Catalog => CATALOGS[l] ?? es;
@@ -99,17 +100,16 @@ export function fill(text: string, params?: Params): string {
 /** Whether `key` names a text in the catalog (for keys built at runtime). */
 export function has(key: string): key is TextKey {
   const v = lookup(key);
-  return typeof v === "string" || (!!v && typeof v === "object" && !Array.isArray(v) && "other" in v);
+  return typeof v === "string" || isPlural(v);
 }
 
 /** The text of a key; plural maps pick by `params.n`. Missing → `⟦key⟧`. */
 export function t(key: TextKey, params?: Params): string {
   const v = lookup(key);
   if (typeof v === "string") return fill(v, params);
-  if (v && typeof v === "object" && !Array.isArray(v) && "other" in v) {
-    const p = v as Plural;
+  if (isPlural(v)) {
     const n = params?.n;
-    return fill((typeof n === "number" ? p[plurals.select(n)] : undefined) ?? p.other, params);
+    return fill((typeof n === "number" ? v[plurals.select(n)] : undefined) ?? v.other, params);
   }
   return missing(key);
 }

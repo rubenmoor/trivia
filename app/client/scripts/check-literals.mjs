@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Flags on-screen literals outside the catalog (plans/15a-ui-translation.md, LUI-1), and checks
 // the shipping catalogs against `es`: shortcut keys, `{param}` sets, untranslated leaves (LUI-5).
-// Usage: node scripts/check-literals.mjs [path…]  (default src/game; relative to app/client)
+// Usage: node scripts/check-literals.mjs [path…]  (default src/game src/lib src/App.svelte; relative to app/client)
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,7 +9,10 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SPANISH = /[áéíóúñÁÉÍÓÚÑ¡¿]/;
 const LETTER = /\p{L}/u;
-const ATTRS = /\b(aria-label|title|placeholder)\s*=\s*("[^"]*"|'[^']*')/g;
+const ATTRS = /\b(aria-label|title|placeholder|alt)\s*=\s*("[^"]*"|'[^']*')/g;
+
+/** Not player text: the `/?efectos` dev aid (UI-10); language endonyms (data, plan 68). */
+const SKIP = ["src/game/EffectsDemo.svelte", "src/lib/i18n.ts"].map((p) => resolve(root, p));
 
 /** Same length, newlines kept, so offsets and line numbers stay. */
 const blank = (s) => s.replace(/[^\n]/g, " ");
@@ -19,7 +22,7 @@ function files(path) {
   return readdirSync(path)
     .sort()
     .flatMap((f) => files(join(path, f)))
-    .filter((f) => /\.(svelte|ts|js|mjs)$/.test(f) && !/\.test\.ts$/.test(f));
+    .filter((f) => /\.(svelte|ts|js|mjs)$/.test(f) && !/\.test\.ts$/.test(f) && !SKIP.includes(f));
 }
 
 /** Blanks `//` and `/* *\/` comments in JS/TS; strings and template literals stay. */
@@ -110,7 +113,7 @@ function check(path) {
 }
 
 const args = process.argv.slice(2);
-const paths = (args.length ? args : ["src/game"]).map((p) => resolve(root, p));
+const paths = (args.length ? args : ["src/game", "src/lib", "src/App.svelte"]).map((p) => resolve(root, p));
 let failed = 0;
 for (const file of paths.flatMap(files)) {
   const seen = new Set();

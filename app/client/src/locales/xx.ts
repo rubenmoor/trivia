@@ -10,7 +10,7 @@ const LOOK: Record<string, string> = {
   A: "Å", E: "É", I: "Î", O: "Ø", U: "Ü", C: "Ç", N: "Ñ", Y: "Ý",
 };
 
-export function pseudoText(s: string): string {
+function pseudoText(s: string): string {
   const body = s
     .split(/(\{\w+\})/)
     .map((part, i) => (i % 2 ? part : part.replace(/[a-zA-Z]/g, (c) => LOOK[c] ?? c)))
