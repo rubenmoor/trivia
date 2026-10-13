@@ -1738,6 +1738,16 @@ Task 580 collected every "duplication candidate" row of parts 2–9 and every pa
 Task 616 evaluated a linter for the TypeScript trees (`app/client/src`, `authoring/ui/src`, `app/desktop` `.mjs`/`.cjs`; 48 `.ts`, 34 `.svelte`, 6 desktop scripts, ~14.9k lines) on 2026-10-12. Parts 2–9 had logged no findings yet, so the evidence is the trial run alone: every diagnostic of every candidate was triaged by hand.
 
 - Evidence from the report: none yet (no `(lint: …)` tags; part 1 scans not run) → re-check: `task 617: Re-check the linter evaluation against the findings of parts 2–9`.
+- Re-check by task 617 (2026-10-13), after parts 1–9:
+  - 115 `(lint: …)` tags (rule mentions; a tag may name two): 36 `none` (30 unused exports, which no candidate finds), 15 `no-non-null-assertion`, 13 `no-magic-numbers`, 13 `consistent-type-assertions`, 13 `no-empty`/`no-empty-function`, 11 `no-floating-promises`/`no-misused-promises`, 4 `no-unsafe-type-assertion`, 4 `no-explicit-any`, 3 `svelte/require-each-key`, 1 each `noImplicitReturns`, `noUnusedLocals`, `no-shadow`, `no-sequences`, `require-number-sort-compare`, `no-unnecessary-condition`, `ban-ts-comment`, `noUncheckedIndexedAccess`; almost all on practice/unused rows.
+  - Bug rows touching TS/Svelte/`.mjs`: 47. 43 have `(lint: none)` or no tag (races, unhandled states, locale, data); 4 name a rule:
+    - `JokerFlight.svelte` floating `finished.then` (task 548, low): ESLint `no-floating-promises` flags it (trial on the pre-fix commit, `/tmp` copy). The rule's `.catch` only silences the `AbortError`; the timer not cleared on unmount was found by review.
+    - `app/desktop/main.mjs` `whenReady().then(start)` (task 554, medium): not flagged (same trial). `app` is `any` in an untyped `.mjs`; would need `checkJs` + electron types.
+    - `JokerCards.svelte` `PAGE` (task 578, low): only `noUncheckedIndexedAccess` (rejected above, ~300 errors).
+    - `lib/engine.ts` `ready()` (task 540, medium): `(lint: none)`.
+    - Biome, oxlint: none of the four (no type info).
+  - Noise in the same trial: 41 other `no-floating-promises`/`no-misused-promises` hits in `app/client/src`; review rows ruled them won't fix (async functions catch their own errors).
+  - Result: 1 low bug among 42 hits for 132 packages. Recommendation unchanged (not adopted); the gamemaster decides: `decision 106: Adopt ESLint + typescript-eslint for no-floating-promises?`, adoption pending in `task 744: Adopt ESLint no-floating-promises (per decision 106)`.
 - Trial: temp copy under `/tmp`, candidates installed there only, deleted afterwards.
 
 | candidate | packages added (lockfile entries) | Svelte | type-aware | time | diagnostics | real bugs | noise |
