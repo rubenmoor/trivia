@@ -855,5 +855,5 @@ Template:
   - **`Desc`:** `<tag> <short sha>` (+ `skipped: <steps>` from the release check).
   - **Release check:** every automated step fails it; `--skip <step>` (repeatable) shows in the report and `Desc`; manual rows interactive or `--manual <file>`, a "no" fails.
   - **Clean tagged commit** for an upload: empty `git status --porcelain`, `v<version>` on HEAD; never creates/pushes tags; `--preview` (`Preview 1`) and `--dry-run` skip the tag gate.
-- Consequences: `flake.nix` (`steamcmd`, `trivia-steam`, unfree predicate); `trivia-steam vdf` renders the VDFs with absolute paths; SteamCMD parses them (`+run_app_build -preview` without login stops at "Not logged on").
+- Consequences: `flake.nix` (`steamcmd`, `trivia-steam`, unfree predicate); `trivia-steam vdf` renders the VDFs with absolute paths; SteamCMD parses them (`+run_app_build -preview` without login stops at "Not logged on"). Task 680: `trivia-steam upload --branch beta` applies the gates; `--checked` only accepts a passing `release-check.json` of HEAD on a clean tree; `--dry-run` uses placeholder IDs 480/481–483 while `steam.json` is null; tracked files changed by the release check refuse the upload.
 - Supersedes / related: D-59, D-63, D-73; SW-6, SW-10; pm decisions 14, 84; plans 56, 89
