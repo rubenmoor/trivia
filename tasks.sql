@@ -11036,7 +11036,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Count table, totals per pattern and harmful-case rows (TS ones `(lint: …)`-tagged) in place; commands recorded.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', '2026-10-13T09:40:03Z', 513);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (530, 73, 'Scan: sync IO in request handlers and module globals', 'work', 'open', NULL, NULL, 'Task 7 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (530, 73, 'Scan: sync IO in request handlers and module globals', 'work', 'done', NULL, '2026-10-13, code-review.md (### Sync IO and globals in ## Part 1)', 'Task 7 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
 - `app/server/main.py`, `http_base.py`, `authoring/server/*.py`: blocking reads/writes of large files per request (pool, media, reports) vs. cached.
@@ -11046,7 +11046,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every per-request sync IO site and module global listed with a status; commands recorded.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', '2026-10-13T09:42:22Z', 513);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (531, 73, 'Baseline: bundle size and build output', 'work', 'open', NULL, NULL, 'Task 8 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
@@ -15788,6 +15788,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (568, 527, '2026-10-13T09:32:41Z', '2026-10-13T09:36:16Z', 'done', NULL, 0, 'd49c75245070b81a646a63f3f73fce2ac21e8d27', 'claude-opus-5-5[1m]', 'd1cbb8cc-5df8-48fb-9c91-7da23c9851c8', 29, 58, 16346, 1718865, 65607, 1.195781, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (569, 528, '2026-10-13T09:36:16Z', '2026-10-13T09:37:30Z', 'done', NULL, 0, '9e733557e44180058f1ec56e168ecd3d5f25b907', 'claude-opus-5-5[1m]', 'e6831dc9-70e6-4d16-8645-49ceaf9be941', 14, 22, 4060, 387065, 32901, 0.42190900000000009, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (570, 529, '2026-10-13T09:37:30Z', '2026-10-13T09:40:13Z', 'done', NULL, 0, '9315f5d6cbd17c6e976840406bb591c8facdf728', 'claude-opus-5-5[1m]', '128ccb9f-46ec-48ae-a1e1-c2fe97f20e09', 21, 40, 15764, 1016108, 56420, 0.97002160000000015, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (571, 530, '2026-10-13T09:40:14Z', '2026-10-13T09:42:31Z', 'done', NULL, 0, 'b9d5978d5c242327d0d9d7b6a27c2f82b034c94c', 'claude-opus-5-5[1m]', '009c7567-d047-42be-9491-346056e8654a', 21, 38, 12369, 1260697, 79956, 1.1393193999999998, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

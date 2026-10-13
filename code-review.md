@@ -567,6 +567,56 @@ for f in files:
     if any(v for k, v in c.items() if k != 'other'): print(f, dict(c))
 ```
 
+### Sync IO and globals
+
+Task 530, 2026-10-13, run from the repo root. Request handlers read by hand (`app/server/{http_base,main,save,media_cache}.py`, `authoring/server/*.py` and the `authoring/tools` functions they call, `app/desktop/{main,resolve,save}.mjs`); costs timed by a throw-away script on the live data (1211 source questions, `questions.json` 3.6 MB, `app/data/pool.json` 1.9 MB, `media/` 3.1 GB, largest file a 117 MB `.webm`).
+
+- Desktop: `grep -nE 'Sync\(|readFile|writeFile|protocol\.handle|ipcMain|^let ' app/desktop/*.mjs app/desktop/preload.cjs`
+- Python globals: AST script over `git ls-files app authoring` `.py`: module-level assignments of a dict/list/set/`Lock()`, names under a `global` statement, module attributes set from another module
+- TS module state: `grep -n '^let \|^export let \|^var ' -r app/client/src authoring/ui/src authoring/tools/*.ts authoring/tools/*.mjs authoring/tools/sim authoring/store authoring/steam app/client/scripts` and `grep -nE '^(export )?const \w+ = \$state|^(export )?const \w+ = new (Map|Set)|^(export )?const \w+(: [^=]+)? = (\[\]|\{\})' -r app/client/src authoring/ui/src app/desktop --include='*.ts' --include='*.mjs'` (minus `node_modules`, tests)
+- Timings (ms per call, warm): game `pool_urls()` 10, authoring `pool_urls(questions.json)` 21, `load_pool()` 20, `GET /api/questions` (`with_extras` over all) 102, `GET /api/overview` (`overview.build`) 155
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/server/http_base.py` | `send_file` reads the whole file into memory (`read_bytes`) and ignores `Range`: a `/media` video (up to 117 MB) is held in RAM per request, parallel `preload="auto"` requests multiply it, and the browser game can't seek or stream it; the desktop resolver (`resolve.mjs` `sendFile`) streams with `Range` | performance | medium | handed to part 2 |
+| `app/server/http_base.py`, `app/server/media_cache.py` | `send_media` → `pool_urls()` re-parses `pool.json` (1.9 MB, ~10 ms) on every `/media` request; desktop reads it once at start (`resolve.mjs` `makeResolver`); an mtime-keyed cache keeps `qgen export` visible without restart | performance | low | handed to part 2 |
+| `app/server/main.py`, `app/server/save.py` | no findings: `/api/save` GET/PUT read/write one small file (fsync, `_lock`); startup-only `missing_media()` stats every pool file once | — | — | — |
+| `authoring/server/main.py` | `send_media` parses `questions.json` (3.6 MB, ~21 ms) twice per `/media` request (own check, then `BaseHandler.send_media` with the same `pool_file`), then the whole-file read above | performance | low | handed to part 9 |
+| `authoring/server/main.py` | `GET /api/questions`: full `load_pool()` plus per question 1–2 `work/media/` candidate files and an audit file (`with_extras`): ~100 ms for 1211 questions, linear in the pool (target 5000 per language) | performance | low | handed to part 9 |
+| `authoring/server/main.py` | every POST parses `questions.json` 2–3 times (`find_question`/`target`, `update_question`, `item_of`) and rewrites it plus `pool_export.write` (~60+ ms per click) | performance | low | handed to part 9 |
+| `authoring/server/overview.py` | `GET /api/overview` (~155 ms) re-reads the pool, every locale file, `work/*/run.json` and spawns Node (`engine.supplies`) per call; fine for a start page, no cache needed yet | performance | low | handed to part 9 |
+| `authoring/server/main.py`, `authoring/server/spot_checks.py`, `authoring/tools/qgen.py` | `questions.json`, `questions.<locale>.json` and `spot-checks.json` writers lock per process only (`main._lock`, `spot_checks._lock`, `qgen._pool_lock`); a `qgen batch`/`fix` merging while the gamemaster reviews can lose one side's read-modify-write (no file lock, no mtime check) | bug | medium | handed to part 10 |
+| `authoring/server/main.py` | sets `download.WAIT_ON_RATE_LIMIT = False` on another module at import: process-wide switch, also for any `download` caller in the same process | practice | low | handed to part 9 |
+| `app/desktop/resolve.mjs` | `readPoolUrls` (`readFileSync` once at start, fine) swallows a missing/corrupt `pool.json` (`catch { return new Set() }`): every `/media` then answers `not_found`, not `media_missing`, with no log | practice | low | handed to part 6 |
+| `app/desktop/main.mjs`, `app/desktop/save.mjs` | no findings: no `fs.*Sync` in the `app:` protocol or IPC handlers (`existsSync` only at start: Steam SDK dir, `dist/index.html`); save IO is `fs/promises` | — | — | — |
+| `authoring/tools/qgen.py` | `_KEYS` (`id(q)` → keys cache for the overlap report) never pruned: grows for the process lifetime, the identity check only guards reuse | practice | low | handed to part 7 |
+| `authoring/tools/download.py` | `_download_locks` keeps one `Lock` per URL ever downloaded (authoring server lifetime); small, but never pruned | practice | low | handed to part 8 |
+
+Module-level mutable state (constant tables such as schemas, field lists, `LISTS`, `BANDS` left out); each owner part checks thread safety and lifetime:
+
+| file | state | part |
+|---|---|---|
+| `app/server/main.py` | `_lock` (save writes) | 2 |
+| `authoring/server/main.py` | `_lock` (source pool, translations); sets `download.WAIT_ON_RATE_LIMIT` | 9 |
+| `authoring/server/spot_checks.py` | `_lock` | 9 |
+| `authoring/tools/qgen.py` | `_save_lock`, `_pool_lock`, `_KEYS`, `_backaudits` (`global`, mtime-keyed index) | 7 |
+| `authoring/tools/progress.py` | `_active`, `_drawn`, `_line_start` (`global`), `_waits` | 8 |
+| `authoring/tools/download.py` | `_download_locks`, `_download_locks_lock`, `WAIT_ON_RATE_LIMIT` | 8 |
+| `authoring/tools/providers/` | `__init__`: `_cooldown` + lock; `commons`: `_last_api_request` (`global`) + lock; `nasa`, `freesound`, `openverse`: `_last` (`global`) + lock; `openverse`: `_token` | 8 |
+| `app/desktop/main.mjs` | `win`, `steam`, `steamTimer`, `steamInput`, `overlay`, `saveFile`, `localFile`, `writing` (mutex chain), `pending` | 6 |
+| `app/desktop/stage-media.mjs` | `count`, `bytes`, `missing` (script) | 6 |
+| `app/client/src/lib/engine.ts` | `loading`, `chain` (mutex chain), `lastSaveError` | 4 |
+| `app/client/src/lib/data.ts` | `cache` (per-locale data promises, page lifetime) | 4 |
+| `app/client/src/lib/i18n.ts` | `lang` (exported `let`), `catalog`, `numbers`, `plurals`, `warned` | 4 |
+| `app/client/src/lib/input.svelte.ts` | `lastDevice`, `scopes` (`$state`), `stack`, `busy` | 4 |
+| `app/client/src/lib/focus.ts` | `shown`, `tabbing`, `memory` | 4 |
+| `app/client/src/lib/gamepad.svelte.ts` | `padStyle` (`$state`), `fromSteam`, `prev`, `warned` | 4 |
+| `app/client/src/lib/names.svelte.ts` | `data` (`$state.raw`) | 4 |
+| `app/client/src/game/sound.svelte.ts` | `sound` (`$state`), `ctx`, buses, `noiseBuffer`, `samples`, `samplesLoaded`, `samplesReady`, `current`, `synthMusic` | 5 |
+| `app/client/scripts/check-literals.mjs` | `failed` (script) | 4 |
+| `authoring/tools/supply.ts` | `raw` (stdin buffer) | 8 |
+| `authoring/store/screenshots.mjs`, `authoring/steam/smoke.mjs` | `seed`, `page`/`evaluate`/`waitFor`/`click`; `step`, `page`/`h`/`home`/`display` (scripts) | 6 |
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.
