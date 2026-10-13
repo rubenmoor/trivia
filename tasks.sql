@@ -396,13 +396,22 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Outcome
 - "Coming soon" page live (ST-3).
 - Release checklist: build from a tagged commit, `qgen validate` clean, credits complete, offline test, Deck test, family sign-off (ST-4).
-- Post-release: content update cadence; question reports collected by hand, no telemetry (ST-5).
+- Post-release: content update cadence (decision 96) (ST-5).
+- Question reports through our own endpoint (decision 93), in the launch build:
+  - small server: `POST /reports` (question id, question language, the text the player saw, note, game version, pool hash); hosted on Cloudflare Workers + D1 (free tier) unless the plan finds a better fit; server code in the repo, its secrets (Steam publisher Web API key, pull token) never
+  - only valid Steam users (decision 111): the game sends a Steam session ticket, the server verifies it with Steam''s Web API; rate limit per user via a hash of the SteamID; no SteamIDs or IPs stored
+  - sent only on the player''s click; no other network request from this feature
+  - fallback when the server can''t be reached: copy the report text, as planned in plan 93
+  - `qgen flag --pull` fetches new reports with the pull token and turns them into needs_work reviews (as `qgen flag` does for pasted text)
+  - privacy policy on the store page (what is sent, what is kept, for how long)
+  - gamemaster setup: Cloudflare account, domain, publisher Web API key (needs the Steamworks account, decision 67)
 
 ## Out of scope
 - Competitive mode, couch co-op, more regions and languages (later).
 
 ## Done when
 - Released; content updates go out as patches.
+- A flag sent from the released game under Steam arrives via `qgen flag --pull` as a needs_work review; without the server the copy fallback works.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. A session has one base bundle (milestone 5), so `chinese-base` takes `base`''s place.
@@ -18056,6 +18065,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen report -h`, `authoring/RUNBOOK.md`/`QC.md` if they mention cost, `directory.md`.
 
 Done when: a new verdict in the review tool gets `reviewed_at`; `qgen report --cost` shows a `colombia` row; `--review-time` prints minutes per 100 (0 timed verdicts → says so); per-commit checks pass.', '2026-10-13T16:04:10Z', NULL, 825);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (831, 11, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 11, the masterplan, in line with it (`pm plan edit 11 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
