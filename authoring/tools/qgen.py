@@ -46,7 +46,7 @@ import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan
 import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
-import categories  # app/server/categories.py: every bundle's categories (D-19, D-43)
+import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import download  # authoring/tools/download.py: fills the media cache
 import providers  # authoring/tools/providers/: where candidates come from (D-45)

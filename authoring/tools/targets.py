@@ -4,7 +4,7 @@ from collections import Counter
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import TARGETS
-import categories  # app/server/categories.py
+import categories  # authoring/tools/categories.py
 import translations  # authoring/tools/translations.py (D-81)
 
 NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)

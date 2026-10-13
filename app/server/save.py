@@ -8,7 +8,7 @@ Version 3 (plan 65) replaces `burned` with `seen` rows and `blocked`; version 4 
 and writes version 4 back.
 
 The server only checks the envelope; the game rules live in the client's engine.
-`migrate()` carries game.sqlite + flags.json over once (PORT-5); main.py calls it from PORT-7 on.
+`migrate()` carries game.sqlite + flags.json over once (PORT-5) at server start; nothing else reads them.
 """
 import json, os, sqlite3, tempfile, time
 
@@ -75,9 +75,53 @@ def write(doc):
     raise SaveError(503, "save_locked", "game.json is locked by another program")
 
 
+def _upgrade(con):
+    """game.sqlite's schema as game.py left it: player_id on games, per-player burns (D-28)."""
+    con.executescript("""
+        CREATE TABLE IF NOT EXISTS players (
+            id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL UNIQUE COLLATE NOCASE,
+            created_on TEXT NOT NULL
+        );
+        CREATE TABLE IF NOT EXISTS games (
+            id INTEGER PRIMARY KEY,
+            started_on TEXT NOT NULL,
+            finished_on TEXT,
+            result TEXT,
+            state TEXT NOT NULL,
+            player_id INTEGER REFERENCES players(id)
+        );
+    """)
+    columns = lambda table: {row[1] for row in con.execute(f"PRAGMA table_info({table})")}
+    if "player_id" not in columns("games"):
+        con.execute("ALTER TABLE games ADD COLUMN player_id INTEGER REFERENCES players(id)")
+    if "burned" in {row[0] for row in con.execute("SELECT name FROM sqlite_master")} \
+            and "player_id" not in columns("burned"):
+        con.execute("ALTER TABLE burned RENAME TO burned_old")  # before D-28: burned for everyone
+    con.executescript("""
+        CREATE TABLE IF NOT EXISTS burned (
+            question_id TEXT NOT NULL,
+            player_id INTEGER REFERENCES players(id),
+            game_id INTEGER NOT NULL,
+            burned_on TEXT NOT NULL
+        );
+        CREATE UNIQUE INDEX IF NOT EXISTS burned_once ON burned (question_id, ifnull(player_id, 0));
+    """)
+    if "burned_old" in {row[0] for row in con.execute("SELECT name FROM sqlite_master")}:
+        con.execute("INSERT INTO burned SELECT question_id, NULL, game_id, burned_on FROM burned_old")
+        con.execute("DROP TABLE burned_old")
+
+
+def _legacy_flags():
+    """state/flags.json's flags (before PORT-7), or {}."""
+    try:
+        return json.loads((paths.STATE / "flags.json").read_text(encoding="utf-8"))["flags"]
+    except FileNotFoundError:
+        return {}
+
+
 def migrate():
     """One-time move game.sqlite + flags.json → game.json (PORT-5); the old files stay as the backup."""
-    import game, flags  # game.py goes in PORT-8; only its init() is needed here
     db = paths.STATE / "game.sqlite"
     if FILE.exists() or not db.exists():
         return
@@ -87,7 +131,7 @@ def migrate():
         try:
             src.backup(con)
             with con:
-                game.init(con)  # upgrades legacy schemas on the copy
+                _upgrade(con)  # legacy schemas, on the copy
             q = lambda sql: con.execute(sql).fetchall()
             doc = {
                 "version": MIGRATE_VERSION,
@@ -100,7 +144,7 @@ def migrate():
                 "burned": [{"question_id": qid, "player_id": p, "game_id": g, "burned_on": b}
                            for qid, p, g, b in q("SELECT question_id, player_id, game_id, burned_on FROM burned "
                                                  "ORDER BY game_id, question_id, player_id")],
-                "flags": flags.load(),
+                "flags": _legacy_flags(),
                 "reports": [],
             }
         finally:

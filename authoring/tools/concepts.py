@@ -9,7 +9,7 @@ questions first, axis values that are rarely used first.
 import json, re, unicodedata
 from collections import Counter
 
-import categories  # app/server/categories.py: which bundle a subcategory is in (D-43)
+import categories  # authoring/tools/categories.py: which bundle a subcategory is in (D-43)
 from layout import AXES_FILE, BUNDLE_DATA, CONCEPTS
 
 AXES = ["move", "stimulus", "clue", "answer_kind", "lens"]

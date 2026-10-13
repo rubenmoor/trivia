@@ -1,7 +1,7 @@
 """Where the authoring tools find their files (plans/19-repo-layout.md, D-35).
 
-Importing this module also makes the game's modules in app/server/ importable (categories,
-selection, media_cache, paths): authoring may use app/, never the other way round.
+Importing this module also makes the game's modules in app/server/ importable (paths,
+media_cache, save): authoring may use app/, never the other way round.
 """
 import os, sys
 from pathlib import Path

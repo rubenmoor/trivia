@@ -5,7 +5,8 @@ Subcategory names and slugs are unique across bundles, so a subcategory names it
 """
 import json
 
-import paths
+import layout  # noqa: F401  (makes app/server importable)
+import paths  # app/server/paths.py
 from paths import BUNDLES, BUNDLE_DATA, CATEGORIES
 
 

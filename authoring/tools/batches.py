@@ -3,7 +3,7 @@ import json, math
 
 import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import WORK
-import categories  # app/server/categories.py: app/data/categories.json (D-19)
+import categories  # authoring/tools/categories.py: app/data/categories.json (D-19)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 
 SHARE = 0.5  # per batch: this share of the bundle's subcategories, those with the fewest approved questions (D-46)

@@ -1,13 +1,11 @@
 # Engine parity fixtures (PORT-1)
 
-Recorded output of today's Python referee (`app/server/game.py` + `selection.py`), played through scripted and random games on synthetic data. The TS engine (PORT-2 `selection.ts`, PORT-3 `game.ts`) replays them and must match exactly. Written by `authoring/tools/record_fixtures.py` (plan 18); don't edit by hand.
+Recorded output of the Python referee (`app/server/game.py` + `selection.py`, deleted in PORT-8), played through scripted and random games on synthetic data. The TS engine (PORT-2 `selection.ts`, PORT-3 `game.ts`) replays them and must match exactly. Written by `authoring/tools/record_fixtures.py` (plan 18); don't edit by hand.
 
-## Re-record and check
-Run from the repo root, Python standard library only. The recorder never touches `state/`: game state lives in a fresh temp dir per scenario.
-- `python3 authoring/tools/record_fixtures.py`: rewrite every fixture from scratch
-- `python3 authoring/tools/record_fixtures.py --check`: re-record into a temp dir, diff; exit 1 + `differs: <file>` on a difference
-- Output is deterministic: `sort_keys`, `ensure_ascii=False`, one list item (step, question, case) per line
-- Re-record when a port finds a gap: add a case/scenario to the recorder, run, commit both
+## Frozen (plan 51)
+The referee and the recorder are gone; the fixtures stay as they are and `npm test` keeps replaying them.
+- Recorded from the Python referee up to commit `c3b683f16f5fb191c476aec0765fd368fe1a0fef`
+- To re-record: check out that commit, run `python3 authoring/tools/record_fixtures.py` (`--check`: diff only), copy the fixtures back
 
 ## Files
 Fixtures are self-contained: synthetic categories and pools, never the real `app/data/`.
