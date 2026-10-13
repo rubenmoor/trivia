@@ -5311,7 +5311,64 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Store page texts (LUI-6, S5); question translations (plans 66, 84); a wording lint; languages beyond the four catalogs.', '2026-10-13T15:41:11Z', 796);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (101, 14, 'masterplan', 1000, 'tbd.', '2026-10-13T16:24:16Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (101, 14, 'masterplan', 1000, 'Masterplan of milestone 14 (opt-in telemetry), divided into parts. **This plan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 14 …` with its priority), and that part plan is split into work tasks. The milestone ships in the launch build if ready, else in the first patch after launch: no plan of milestone 11 (launch, release check) waits for it, and no part adds a launch dependency.
+
+## Ground rules (for every part)
+- Opt-in only (AGENTS.md "telemetry only opt-in"): default off; nothing is recorded for sending, and no request goes out, without a stored yes. The game plays the same with it off, on or failing.
+- Steam only (decision 111: Steam only): sending needs a valid Steam user; the server checks a Steam Web API ticket and stores no SteamID. The dev switch `TRIVIA_DEV_STEAM_USER=1` + a local server with `dev-*` tickets (plan 103''s dev mode) is the test path; no "without Steam" work.
+- Anonymous: a random install id (not derived from the SteamID, machine or user name), no SteamID, no IP, no player names, no free text.
+- Sending goes out from the shell''s main process, like the report send (plan 93: Question reports, `report:send`); the page''s request block in `app/desktop/main.mjs` stays. No retry loops, no request at start beyond what a part plan justifies.
+- A failed send is silent for the player (no dialog, no toast); dev log only, never bodies or tickets.
+- Our questions only: mod and player-bundle question ids (milestone 15) are not sent per question; the summary may count games with mods on.
+- Builds on milestone 11 (don''t rebuild): plan 103: Report server (POST /reports) (same Worker, D1, secrets, `trivia-report-server`, ticket check, dev mode, `PRIVACY.md`); plan 93 (shell send pattern, `reportUrl`, `report:available`); plan 91 (`buildInfo()` → version + pool hash, decision 91, decision 92); plan 87 (valid Steam user, save per Steam user).
+- Docs to change with the work: `plans/11-steam.md` principle 3 ("no telemetry … never phones home") and ST-5''s "no telemetry" line now contradict the milestone; they become "opt-in telemetry, see milestone 14".
+
+## Parts
+
+### 1. Telemetry API and server (priority just below plan 103, e.g. 690; after plan 103 tasks 865/866)
+- Extends `report-server/` (plan 103''s layout): own D1 table(s) via a new migration, own routes, same ticket check with its own identity string (e.g. `trivia-telemetry`), same secrets, kill switch var, rate limits per salted SteamID hash and in total.
+- Fixes the API contract first (like plan 103''s "API contract (v1)"), changed only by editing that plan: `POST /telemetry` (one session: summary + per-question rows, size cap, field rules, status codes), a pull route for authoring with the pull token (or a separate token; the plan decides), ack/delete semantics.
+- Data shape, from the milestone: session summary (install id, game version, pool hash, session length, question language, per game: mode, age group or custom difficulty range, levels configured and reached, result, jokers used) and per answered question (question id, locale, right/wrong, level, age group, jokers on it, game version, pool hash).
+- Retention limit (the plan proposes numbers, e.g. raw rows deleted on pull ack or after N days, whichever first; install id rows never joined to anything else); daily cron as plan 103.
+- Dev mode: works with `trivia-report-server dev`, `dev-*` tickets.
+
+### 2. Recording in the game (core, ≈ 600)
+- Where the engine or client records events: per answered question and per game end, in the engine''s save transaction or a side buffer (the plan picks; keep the save shape additive, no version bump unless needed: decision 102''s precedent).
+- Install id: random, created on the first yes, stored locally per install (not in the Steam Cloud save unless the plan argues for it); a "no" deletes the buffer and the id.
+- Session buffer: memory, or a small local file so a crash or a failed send doesn''t lose or double-send (cap size; drop oldest).
+- Session length: app start → close; question language and pool hash per game (`loadEngineData(locale).poolHash`).
+- Nothing recorded while consent is off.
+
+### 3. Sending from the shell (client-side/shell, ≈ 500; after parts 1 and 2)
+- `main.mjs`: `telemetry:send` (or one call at close) with a fresh ticket, timeout, URL from the same config as `reportUrl` (one base URL, plan 93), dev override as plan 93.
+- When: on game close (Electron `before-quit`, which already waits for pending save writes); the plan checks how reliable that is (Steam Deck sleep, Steam''s "stop", crashes) and, if not, also sends at game end or the next start; one request per session as the aim.
+- Failure: silent, buffer kept for one later try at most (or dropped: the plan picks, counting double-sends against the server''s dedup by session id).
+- Check against `trivia-report-server dev`: an opted-in session arrives; opted-out: no request at all (main log).
+
+### 4. Consent UI and privacy texts (UI, ≈ 400)
+- First-start question (default off; focus on «No»): after the language screen (`LanguageScreen.svelte`) for a fresh save, and once for existing saves without an answer; keyboard, mouse and pad as every screen.
+- Esc menu (`Overlay.svelte`, general part): on/off, with a line saying what is sent.
+- Where the answer lives: the save (follows the Steam user, Steam Cloud) or per install; the plan picks one and states why.
+- Strings via `t()` in es, en, de (+ es-ES where it differs); `check:literals` passes.
+- Privacy: extend `PRIVACY.md` and the store text written by plan 103 task 867 (what telemetry sends, what is kept, how long, how to turn it off); the opt-in screen''s short text from there.
+
+### 5. Played vs. rated difficulty in `qgen report` (authoring, ≈ 600)
+- Pull: a `qgen` command (e.g. `qgen telemetry --pull`) fetches rows with the pull token (as plan 93''s `qgen flag --pull`: `TRIVIA_REPORT_TOKEN` / `state/report-token`), stores them locally under gitignored `state/` (the repo is public: no raw player data in git), acks.
+- Report: `qgen report --played` (name by the plan): per question and per age group, answered count, right rate, observed difficulty vs. rated `difficulty` (source, or the locale''s own difficulty for translations, D-81), with a minimum sample size before a question counts; per level and per age group summaries; session stats (games, results, joker use, modes, session length).
+- Outliers (too easy / too hard beyond a threshold, enough samples) become review candidates: a list and a way to open them in `/review` (filter or `needs_work` with a «Datos de juego» note; the plan picks, without running `qgen rework` unasked).
+- Calibration model: how a right-rate maps to the 1–15 scale per age group (`app/data/age-groups.json` windows) is the plan''s main design point; a `pm decision record` for it.
+
+### 6. Gamemaster setup, end-to-end check and close-out (≈ 150, last)
+- Deploy the server change (`trivia-report-server deploy`, migration) through a `pm decision add` (kind once) checklist for the gamemaster; workers never log in.
+- End-to-end: an opted-in session from a `beta` build under Steam arrives; `qgen report` shows played vs. rated difficulty (the milestone''s "Done when").
+- Docs: `plans/11-steam.md` (principle 3, ST-5), `plans/18-steam-integration.md` (IPC, ticket identity), `directory.md`, `README.md` how-tos (pull telemetry, read the report), AGENTS.md commands line if a `qgen` command is added, `plans/project.md`.
+
+## Order
+1 → 2 → 3 → 4 can overlap with 2/3 → 5 (needs 1''s contract and a dev server with data) → 6. Parts 1–3 wait for plan 103''s Worker (tasks 865, 866) and plan 93''s shell send (task 699) to exist; their plans say so instead of duplicating that work.
+
+## Done when (milestone)
+- An opted-in session''s data arrives on the server; an opted-out game sends nothing.
+- `qgen report` shows played vs. rated difficulty and lists outliers as review candidates.', '2026-10-13T16:24:16Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (102, 15, 'masterplan', 1000, 'tbd.', '2026-10-13T16:55:00Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (103, 11, 'Report server (POST /reports)', 700, 'Part 8 of masterplan 11 (S6, ST-5 server half): a small server that takes question reports sent from the game on the player''s click (decision 93: Question reports: where do players send them? → own endpoint) and hands them to `qgen flag --pull`. Only valid Steam users may send (decision 111: Steam only): the game sends a Steam Web API ticket, the server checks it with Steam and stores no SteamID and no IP. Plan 93 (part 5: client, shell, `qgen flag`) builds on the API contract below; it is fixed here first and changed only by editing this plan. Owner: `plans/11-steam.md` (ST-5, server half); code in a new top-level directory `report-server/` (listed in `directory.md`).
 
@@ -18390,9 +18447,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', '2026-10-13T17:03:36Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (832, 10, 'revise the masterplan', 'masterplan', 'done', 1000, '2026-10-13, tasks.sql: plan 10 part 8: AI disclosure facts, decision 77 capsules, store media (decisions 79, 80) incl. 20 s trailer per language (trivia-trailer)', 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T16:21:01Z', '2026-10-13T16:56:07Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (833, 101, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 101, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (833, 101, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-13, plan 101 body (masterplan: 6 parts)', 'Write plan 101, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-13T16:24:16Z', NULL, NULL);
+plan for one part.', '2026-10-13T16:24:16Z', '2026-10-13T17:24:12Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (834, 102, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 102, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-13T16:55:00Z', NULL, NULL);
@@ -19878,6 +19935,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No "Steam off"/"Steam not running" row anywhere (decision 111).
 
 Check (throw-away, nothing kept): `trivia-release-check --skip tag --skip checks --skip licenses --skip quality --skip nix --skip desktop --skip credits --skip smoke --skip manual` with `trivia-report-server dev` running and the URL set via a temporary `reportUrl` (restore the file after) → `report` ✓; server stopped (`kill $!`) → ✗ with the URL; empty URL → ✗ "no report URL"; a `--manual` file answering every row incl. `report` parses; a content-only run lists `report` as "skipped: content-only since <tag>". `grep -rn "Steam not running" authoring plans` finds nothing. Then the usual `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T17:22:33Z', NULL, 857);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (871, 101, 'create tasks for plan 101', 'split', 'open', 1000, NULL, 'Split plan 101 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:24:10Z', NULL, 833);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -21908,6 +21967,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (739, 864, '2026-10-13T17:20:21Z', '2026-10-13T17:21:10Z', 'done', NULL, 0, '61314eac9169992af966e181aeba328a7c5c2715', 'claude-opus-5-5[1m]', '8ec1c0e4-dc5d-4e25-bd7f-2906cef4a0ba', 5, 10, 4026, 164068, 33675, 0.3827736, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (740, 856, '2026-10-13T17:21:10Z', '2026-10-13T17:22:06Z', 'done', NULL, 0, '3a2b8c9c8cd7661b12154efd5b83a4b30c6fe665', 'claude-opus-5-5[1m]', 'afd0146a-37a4-4a5e-bb8e-19a9fbdd3faa', 6, 12, 5431, 221118, 37830, 0.45553160000000004, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (741, 857, '2026-10-13T17:22:06Z', '2026-10-13T17:22:54Z', 'done', NULL, 0, '70c3327dda5ac305740d3f338139d5db0302328a', 'claude-opus-5-5[1m]', 'cfc7d402-a1fd-4742-b34f-ba8ebd2737ee', 5, 10, 2487, 138511, 24383, 0.2725462, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (742, 833, '2026-10-13T17:22:54Z', '2026-10-13T17:24:19Z', 'done', NULL, 0, '44fecc7aabcf410eb3970e28037b12b6ce9ed763', 'claude-opus-5-5[1m]', '614b6442-fd46-4d76-b73d-18c1962efdbe', 10, 20, 6994, 468526, 57628, 0.6946892, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
