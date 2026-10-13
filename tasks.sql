@@ -5539,6 +5539,136 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `MANUAL` and ST-4 say "Steam running in offline mode" with the save and copy-fallback checks; no "Steam off"/"Steam not running" row anywhere.
 - The `report` row (full only, with its reason) and the `report` step exist; the template and `failed` routing name plans 93 and 103.
 - Plans 95 and 96 can use the checklist unchanged.', '2026-10-13T17:09:34Z', 855);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (105, 14, 'Telemetry API and server', 690, 'Part 1 of masterplan 14 (plan 101): the server half of opt-in telemetry. It extends plan 103''s Worker (`report-server/`, Cloudflare Workers + D1) with one route that takes one session''s summary and per-question rows, a pull/ack pair for authoring, its own table, its own ticket identity, kill switch and rate limits. The API contract below is fixed first; parts 2 (recording), 3 (shell send) and 5 (`qgen` pull/report) build on it, and it changes only by editing this plan. Plan 101''s ground rules apply: opt-in, Steam only (decision 111: Steam only), anonymous, silent failure.
+
+## Builds on (don''t rebuild)
+- Plan 103: Report server (POST /reports): layout, `wrangler.toml`, D1 binding `DB`, secrets (`STEAM_WEB_API_KEY`, `PULL_TOKEN`, `HASH_SALT`), error body shape, 404/405, `scheduled` cron (03:00 UTC), `trivia-report-server dev|deploy|tail`, fake `dev-*` tickets. Its work: task 865: Report server: Worker, D1 schema and local dev mode, task 866: Report server: Steam ticket check. This plan''s tasks run after both exist (priority 690 < 700); if one is still open, wait, don''t duplicate it.
+- Tooling: decision 117: Report server tooling: wrangler from nixpkgs in the flake? (pending when written; follow whatever it answers, no new dependency here).
+- Version and pool hash: plan 91 `buildInfo()` (decision 91, decision 92: Pool version: export hash in pool.json, 8 hex).
+- Engine names: modes `gamemaster | solo | rr-coop | rr-competitive | timed` (`app/client/src/lib/types.ts` `GameMode`), jokers `hint | skip | easier | category | snipe` (`STANDARD_JOKERS`), age groups `app/data/age-groups.json` (`kids`, `young_teens`, `young_adults`, `adults`), our question ids `q-NNNN` (base and regional bundles alike).
+
+## Storage: one row per session
+- D1 free plan ≈ 100k rows written/day: one row per answered question would hit it at a few thousand sessions. So a session is one row: the validated body re-serialized from known fields only (JSON text). Analysis happens in authoring (part 5) after the pull; the server never queries inside it.
+- Migration `report-server/migrations/0002_telemetry.sql` (plan 103''s tables untouched):
+  - `telemetry(session_id TEXT PRIMARY KEY, received_day TEXT NOT NULL, body TEXT NOT NULL)`; `received_day` = UTC `YYYY-MM-DD` (no time of day); index on `received_day`.
+  - `telemetry_rate(user_hash TEXT, day TEXT, count INTEGER, PRIMARY KEY(user_hash, day))`; same HMAC as plan 103 (`HASH_SALT`, SteamID64), global row `''*''`. Own table so report and telemetry limits never share counts.
+- Not stored: SteamID, user hash next to data, IP, headers, client clock times, names, any free text. The install id is in `body` only; never joined with `telemetry_rate` or `reports`.
+
+## Retention
+- Session row deleted on pull ack; unacknowledged: deleted `TELEMETRY_KEEP_DAYS` (30) days after `received_day`.
+- `telemetry_rate` rows deleted once their day is over.
+- Both in plan 103''s daily `scheduled` handler (extended, same cron).
+- The gamemaster''s pulled copy lives under gitignored `state/` (part 5); its retention is part 5''s and part 4''s privacy text''s business.
+
+## API contract (v1)
+Same base URL, JSON/UTF-8, error body `{"error": "<code>", "field"?: "<path>", "detail"?: "<short English text>"}`, no CORS, as plan 103.
+
+### `POST /telemetry` (the shell, once per session)
+Request `Content-Type: application/json`, body ≤ 64 KiB:
+```json
+{
+  "session": "6f1c2a9e-3b7d-4c1e-9a2f-0d5e8b7c6a41",
+  "install": "0b9d4e2f-8a6c-4f1b-b3d7-5e2a9c1f8d60",
+  "version": "1.0.0",
+  "length_s": 3720,
+  "games": [
+    {
+      "mode": "solo",
+      "locale": "es",
+      "pool": "1f30d10c",
+      "age_group": "young_teens",
+      "difficulty": null,
+      "levels": 12,
+      "reached": 9,
+      "result": "lost",
+      "customized": false,
+      "mods": false,
+      "jokers": {"hint": 3, "skip": 1, "easier": 0, "category": 1, "snipe": 0},
+      "answers": [
+        {"question": "q-0001", "level": 1, "correct": true, "jokers": {}},
+        {"question": "q-0417", "level": 2, "correct": false, "jokers": {"hint": 2, "easier": 1}}
+      ]
+    }
+  ],
+  "ticket": "14000000…(hex)"
+}
+```
+| Field | Rule |
+|---|---|
+| `session` | required, UUID v4 lowercase (random per session, from part 2): the dedup key |
+| `install` | required, UUID v4 lowercase (random install id, part 2; never derived from SteamID, machine or user) |
+| `version` | required, plan 103''s version regex, ≤ 32 chars |
+| `length_s` | required, integer 0–86400 (app start → close; part 2 caps it) |
+| `games` | required array, 0–30 items (0: a session without a game still counts) |
+| `games[].mode` | required, `^[a-z][a-z-]{0,23}$` (today''s five modes; a pattern so a new mode needs no deploy) |
+| `games[].locale` | required, plan 103''s `lang` regex (question language of that game) |
+| `games[].pool` | required, `^[0-9a-f]{8}$` or `null` |
+| `games[].age_group` / `games[].difficulty` | exactly one non-null: `age_group` `^[a-z_]{1,24}$`, or `difficulty` `{"start": 1–15, "end": start–15}` (decision 33 custom range) |
+| `games[].levels` | required, integer 1–20 (configured) |
+| `games[].reached` | required, integer 0–`levels` (highest level reached) |
+| `games[].result` | required, `won` \| `lost` \| `abandoned` \| `open` (session closed mid-game) |
+| `games[].customized` | required boolean (decision 19: customized solo game) |
+| `games[].mods` | required boolean (mod or player bundles on, milestone 15) |
+| `games[].jokers` | required object: uses per joker, keys `^[a-z]{1,16}$` (≤ 8 keys), values integer 0–99 |
+| `games[].answers` | required array, 0–100 items; total over all games ≤ 500 |
+| `answers[].question` | required, `^q-\d{4,6}$`: our questions only; anything else (mod, player bundle) → 400 |
+| `answers[].level` | required, integer 1–`levels` |
+| `answers[].correct` | required boolean (answered questions only; a question replaced by `skip` has no row) |
+| `answers[].jokers` | required object as `games[].jokers`, jokers used on this question (`{}`: none) |
+| `ticket` | required, hex 2–4096: `GetAuthTicketForWebApi("trivia-telemetry")`, fresh per send |
+- Unknown fields anywhere: dropped (the stored body has the known fields only, so no free text can slip in). Strings outside the patterns → 400 with `field` as a path (`games[0].answers[3].question`).
+- Per-answer locale, version, pool and age group come from its game / the session (one version per session, locale and pool per game); part 5 flattens them.
+- Order of checks: kill switch → content type/size/JSON/fields → ticket with Steam (identity `TELEMETRY_IDENTITY`) → dedup → rate limits → insert (row + both rate counters in one D1 batch).
+
+| Status | Body | Meaning for the shell (part 3 decides the buffer) |
+|---|---|---|
+| `201` | `{"stored": true}` | stored; drop the buffer |
+| `200` | `{"stored": false, "duplicate": true}` | session id already stored (or acked within the last `TELEMETRY_KEEP_DAYS`, see dedup); drop the buffer; doesn''t count against limits |
+| `400` | `{"error": "bad_request", "field": "…"}` | never retry; drop |
+| `401` | `{"error": "invalid_ticket"}` | drop (or one later try: part 3) |
+| `413` | `{"error": "too_large"}` | drop |
+| `415` | `{"error": "unsupported_media_type"}` | drop |
+| `429` | `{"error": "rate_limited", "retry_after": <s>}` + `Retry-After` | drop or one later try |
+| `502` | `{"error": "steam_unavailable"}` | one later try at most |
+| `503` | `{"error": "closed"}` (`TELEMETRY_OPEN` = `"0"`) | drop |
+| `500` | `{"error": "internal"}` | one later try at most |
+- Dedup: `session_id` primary key; acked ids are kept as bare tombstones (`telemetry_seen(session_id TEXT PRIMARY KEY, day TEXT)`, same migration, deleted with the retention cron after `TELEMETRY_KEEP_DAYS`) so a late resend after a pull isn''t stored twice. No other data in it.
+- Rate limits per UTC day, vars not code: `RATE_TELEMETRY_USER` 10 sessions per salted SteamID hash, `RATE_TELEMETRY_TOTAL` 2000 in total (≈ 6000 D1 writes/day worst case, far under the free plan).
+
+### `GET /telemetry?limit=N` (part 5''s pull)
+- `Authorization: Bearer <PULL_TOKEN>`: the same secret as `GET /reports` (one gamemaster, one token file: `TRIVIA_REPORT_TOKEN` / `state/report-token`, plan 93); wrong/missing → `401 {"error": "unauthorized"}`, constant-time compare.
+- `limit` default 100, max 200; oldest `received_day` first, then `session_id`.
+- `200 {"sessions": [{"received_day": "2026-11-02", "session": "…", "install": "…", "version": "1.0.0", "length_s": 3720, "games": [ … as posted, ticket removed … ]}], "more": false}`.
+- Read-only: same rows until acked.
+
+### `POST /telemetry/ack`
+- Same bearer token; body `{"sessions": ["<uuid>", …]}` (1–200).
+- `200 {"acked": n}`: deletes those rows, writes their tombstones; unknown or already acked ids count 0 (idempotent). `400`, `401` as above.
+
+`GET /health` stays as plan 103 defines it (no telemetry field; v1 here = path exists).
+
+## Ticket identity, vars, secrets
+- Identity `trivia-telemetry` (var `TELEMETRY_IDENTITY`; the shell''s constant in part 3). Plan 103''s `src/steam.ts` takes the identity as a parameter (task 866 builds it so; if it hard-codes `TICKET_IDENTITY`, this plan''s task makes it a parameter).
+- New `wrangler.toml` vars: `TELEMETRY_IDENTITY`, `TELEMETRY_OPEN = "1"`, `RATE_TELEMETRY_USER = "10"`, `RATE_TELEMETRY_TOTAL = "2000"`, `TELEMETRY_KEEP_DAYS = "30"`. No new secret.
+- Logging as plan 103: no bodies, tickets, SteamIDs, hashes, install or session ids in `console.*`.
+
+## Layout (additions to `report-server/`)
+- `src/telemetry.ts`: the three routes + retention SQL, called from `src/index.ts`''s router and `scheduled`.
+- `src/validate-telemetry.ts`: pure body check + re-serialization (known fields only), testable under `node`.
+- `migrations/0002_telemetry.sql`.
+- `fixtures/telemetry-session.json`: the example body above (valid, `dev-` ticket) for parts 3 and 5.
+
+## Dev mode
+- `trivia-report-server dev` unchanged: applies `0002` locally, fake `dev-*` tickets as plan 103 (`dev-invalid` → 401, `dev-steamdown` → 502), only with `DEV_FAKE_TICKETS=1` and a localhost host.
+- `trivia-report-server seed-telemetry [N]` (dev only, refuses a non-localhost URL): posts N synthetic sessions (random ids, `dev-<n>` tickets, question ids from `app/data/pool.json`, right rates drawn from rated difficulty vs. level window) so part 5 can build its pull and report before parts 2–3 send real data.
+
+## Tasks to split into
+1. **Telemetry routes, migration and validation** (after task 865 and task 866; waits on decision 117 like them) — `0002_telemetry.sql` (`telemetry`, `telemetry_rate`, `telemetry_seen`), `src/validate-telemetry.ts`, `src/telemetry.ts` per the contract (status table, order of checks, dedup + tombstones, rate limits from vars, kill switch, bearer pull/ack), `src/steam.ts` identity as parameter if needed, retention in `scheduled`, vars in `wrangler.toml`, `fixtures/telemetry-session.json`; `npm run check` covers it. Done when a throw-away curl script against `trivia-report-server dev` shows: every status row of `POST /telemetry` (201, 200 duplicate, 400 incl. a mod question id `mod-x:1` and a field path, 401, 413, 415, 429 on the 11th session of one fake user, 502, 503), unknown fields absent from the pulled body, pull → ack → pull empty, resend of an acked session → 200 duplicate, ack idempotent, 401 without token, cron deletes a backdated session, tombstone and old `telemetry_rate` row; reports routes unchanged. Docs: `directory.md` (`report-server/` row: telemetry), `plans/11-steam.md` ST-5 one line "telemetry route: plan <this>".
+2. **Dev seed for telemetry** (after task 1) — `trivia-report-server seed-telemetry [N]` in the flake wrapper (a small Node or shell script under `report-server/`, no new dependency) per "Dev mode". Done when `seed-telemetry 50` against `trivia-report-server dev` stores 50 sessions that `GET /telemetry` returns, and running it against a non-localhost URL refuses. AGENTS.md "Commands" `trivia-report-server` line mentions it.
+- Not here: deploy and the migration on the real D1 (part 6''s gamemaster checklist), privacy text (part 4), the shell''s send (part 3), the pull command (part 5).
+
+## Done when
+- The contract above exists and parts 2, 3, 5 cite it; `report-server/` takes, dedups, rate-limits, serves and deletes telemetry sessions locally with `dev-*` tickets; `npm run check` passes; nothing deployed by a worker.', '2026-10-13T17:27:26Z', 872);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -19937,14 +20067,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Check (throw-away, nothing kept): `trivia-release-check --skip tag --skip checks --skip licenses --skip quality --skip nix --skip desktop --skip credits --skip smoke --skip manual` with `trivia-report-server dev` running and the URL set via a temporary `reportUrl` (restore the file after) → `report` ✓; server stopped (`kill $!`) → ✗ with the URL; empty URL → ✗ "no report URL"; a `--manual` file answering every row incl. `report` parses; a content-only run lists `report` as "skipped: content-only since <tag>". `grep -rn "Steam not running" authoring plans` finds nothing. Then the usual `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T17:22:33Z', NULL, 857);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (871, 101, 'create tasks for plan 101', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 872–877 write the plans for parts 1–6 (priorities 690/600/500/400/600/150); no new decisions (part plans raise their own; decision 117 pending covers tooling)', 'Split plan 101 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:24:10Z', '2026-10-13T17:25:10Z', 833);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (872, 101, 'write plan: Telemetry API and server', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of masterplan 14 (plan 101): "Telemetry API and server". Read plan 101 (ground rules apply), milestone 14, plan 103: Report server (POST /reports) (its layout, API contract v1, ticket check, dev mode, cron), decision 111: Steam only, and decision 117 (wrangler tooling; pending: build on whatever it answers, don''t re-ask). Create it with `pm plan add 14 "Telemetry API and server" --priority 690 < body.md` (just below plan 103 at 700; its work waits for tasks 865/866 to exist: say so, don''t duplicate them).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (872, 101, 'write plan: Telemetry API and server', 'plan', 'done', 1000, '2026-10-13, plan 105 (tasks.sql)', 'Write the plan for part 1 of masterplan 14 (plan 101): "Telemetry API and server". Read plan 101 (ground rules apply), milestone 14, plan 103: Report server (POST /reports) (its layout, API contract v1, ticket check, dev mode, cron), decision 111: Steam only, and decision 117 (wrangler tooling; pending: build on whatever it answers, don''t re-ask). Create it with `pm plan add 14 "Telemetry API and server" --priority 690 < body.md` (just below plan 103 at 700; its work waits for tasks 865/866 to exist: say so, don''t duplicate them).
 
 Cover part 1''s list:
 - API contract first (v1, changed only by editing the plan): `POST /telemetry` (one session: summary + per-question rows; size cap, field rules, session id for dedup, status codes), pull route + token choice, ack/delete semantics.
 - Data shape: session summary and per-question rows exactly as plan 101 part 1 lists; no SteamID, IP, names, free text; mod/player-bundle question ids never accepted.
 - New D1 migration, own table(s), ticket identity (e.g. `trivia-telemetry`), kill switch var, rate limits (salted SteamID hash + total), retention numbers + daily cron.
 - Dev mode with `trivia-report-server dev` and `dev-*` tickets.
-- Tasks for the work, each with a done-when; gamemaster deploy belongs to part 6, not here.', '2026-10-13T17:25:05Z', NULL, 871);
+- Tasks for the work, each with a done-when; gamemaster deploy belongs to part 6, not here.', '2026-10-13T17:25:05Z', '2026-10-13T17:27:32Z', 871);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (873, 101, 'write plan: Telemetry recording in the game', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of masterplan 14 (plan 101): "Recording in the game". Read plan 101 (ground rules), milestone 14, plan 91 (`buildInfo()`, decision 91, decision 92), plan 87: Steam Cloud saves, decision 102 (additive save shape) and the engine/client save code (`plans/12-client-engine.md`, `app/client`). Create it with `pm plan add 14 "Telemetry recording in the game" --priority 600 < body.md`.
 
 Cover part 2''s list:
@@ -19983,6 +20113,8 @@ Cover part 6''s list:
 - Deploy (`trivia-report-server deploy`, migration) through a `pm decision add` (kind once) checklist for the gamemaster; workers never log in.
 - End-to-end: an opted-in session from a `beta` build under Steam arrives; opted out sends nothing; `qgen report` shows played vs. rated difficulty and outliers (the milestone''s "Done when").
 - Docs: `plans/11-steam.md` principle 3 and ST-5''s "no telemetry" → "opt-in telemetry, see milestone 14"; `plans/18-steam-integration.md` (IPC, ticket identity); `directory.md`; `README.md` how-tos; AGENTS.md commands line for any new `qgen` command; `plans/project.md`.', '2026-10-13T17:25:06Z', NULL, 871);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (878, 105, 'create tasks for plan 105', 'split', 'open', 1000, NULL, 'Split plan 105 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:27:26Z', NULL, 872);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -21267,6 +21399,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Licence: wrangler is MIT/Apache-2.0; not shipped, so no CREDITS entry.
 
 Waiting on this: the plan''s tasks that run wrangler (server code, local dev mode, deploy wrapper).', NULL, NULL, '2026-10-13T17:06:32Z', NULL, 854, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (118, 'Telemetry server storage and pull token', 'answered', '[]', 'Plan 105 (milestone 14 part 1). D1''s free plan allows ~100k row writes/day; a row per answered question would hit it at a few thousand sessions, and analysis happens in authoring after the pull anyway. One gamemaster, one token file (state/report-token) for qgen flag --pull and the telemetry pull: a second token adds setup for no gain.', 'One D1 row per session (validated body as JSON, known fields only), raw rows deleted on ack or after 30 days; pull/ack use the reports'' PULL_TOKEN', NULL, '2026-10-13T17:27:32Z', '2026-10-13T17:27:32Z', 872, NULL, 'rule', 872, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -22015,6 +22148,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (741, 857, '2026-10-13T17:22:06Z', '2026-10-13T17:22:54Z', 'done', NULL, 0, '70c3327dda5ac305740d3f338139d5db0302328a', 'claude-opus-5-5[1m]', 'cfc7d402-a1fd-4742-b34f-ba8ebd2737ee', 5, 10, 2487, 138511, 24383, 0.2725462, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (742, 833, '2026-10-13T17:22:54Z', '2026-10-13T17:24:19Z', 'done', NULL, 0, '44fecc7aabcf410eb3970e28037b12b6ce9ed763', 'claude-opus-5-5[1m]', '614b6442-fd46-4d76-b73d-18c1962efdbe', 10, 20, 6994, 468526, 57628, 0.6946892, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (743, 871, '2026-10-13T17:24:20Z', '2026-10-13T17:25:19Z', 'done', NULL, 0, 'c50199d9f96e35b2f971d38ca546623a44dbaea7', 'claude-opus-5-5[1m]', 'b8a8be8f-d1c9-407f-ba55-9d3364a47f94', 9, 18, 5351, 298349, 31781, 0.4210098, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (744, 872, '2026-10-13T17:25:19Z', '2026-10-13T17:27:43Z', 'done', NULL, 0, '603c41746e0077c42ce5680afaae707a33eacc6e', 'claude-opus-5-5[1m]', '2a5a1804-0f62-4e58-9cae-95b779ceec4f', 12, 22, 12317, 517400, 54356, 0.78475600000000012, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
