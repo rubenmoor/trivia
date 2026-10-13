@@ -10,9 +10,17 @@
     categories,
     names = null,
     locale = null,
-  }: { questions: Question[]; categories: Category[]; names?: Names | null; locale?: string | null } = $props();
+    scope = null,
+  }: {
+    questions: Question[];
+    categories: Category[];
+    names?: Names | null;
+    locale?: string | null;
+    /** Bundles in view (`breakdown`). */
+    scope?: Set<string> | null;
+  } = $props();
 
-  const rows = $derived(breakdown(questions, categories, names));
+  const rows = $derived(breakdown(questions, categories, names, scope));
   const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));
   const subCount = $derived(rows.reduce((n, r) => n + r.subs.length, 0));
 </script>

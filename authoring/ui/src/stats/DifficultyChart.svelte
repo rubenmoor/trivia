@@ -2,6 +2,7 @@
   // Histogram: questions per difficulty over the whole shared scale 1–15 (D-38), with the default
   // age group's window (young teens) shaded (RV-18); with targets a tick per level (D-53).
   import type { AgeGroups, BundleTargets, Names, Question } from "../lib/types";
+  import { DEFAULT_AGE_GROUP } from "$app/engine/choice";
   import "./chart.css";
 
   let {
@@ -18,24 +19,21 @@
     names?: Names | null;
   } = $props();
 
-  /** The default age group (engine DEFAULT_AGE_GROUP). */
-  const PLAYED_GROUP = "young_teens";
-
-  const LEVELS = $derived(
+  const levels = $derived(
     Array.from({ length: ageGroups.scale[1] - ageGroups.scale[0] + 1 }, (_, i) => ageGroups.scale[0] + i),
   );
-  const played = $derived(ageGroups.groups.find((g) => g.id === PLAYED_GROUP));
+  const played = $derived(ageGroups.groups.find((g) => g.id === DEFAULT_AGE_GROUP));
   /** Shaded band for the played window, in % of the plot width. */
   const band = $derived.by(() => {
     if (!played) return null;
     const [lo, hi] = played.window;
-    const n = LEVELS.length;
-    return { left: ((lo - LEVELS[0]) / n) * 100, width: ((hi - lo + 1) / n) * 100 };
+    const n = levels.length;
+    return { left: ((lo - levels[0]) / n) * 100, width: ((hi - lo + 1) / n) * 100 };
   });
 
-  const counts = $derived(LEVELS.map((l) => questions.filter((q) => q.difficulty === l).length));
+  const counts = $derived(levels.map((l) => questions.filter((q) => q.difficulty === l).length));
   /** Target per level, or null without targets. */
-  const goals = $derived(targets ? LEVELS.map((l) => targets.difficulty[String(l)] ?? 0) : null);
+  const goals = $derived(targets ? levels.map((l) => targets.difficulty[String(l)] ?? 0) : null);
   const total = $derived(counts.reduce((a, b) => a + b, 0));
   const mean = $derived(total ? questions.reduce((n, q) => n + q.difficulty, 0) / total : 0);
 
@@ -62,12 +60,12 @@
 <section class="chart-panel" class:compact>
   <h2>Questions per difficulty</h2>
   <p class="sub">
-    {total} questions · average difficulty {mean.toFixed(1)} · {LEVELS[0]} = easiest, {LEVELS[LEVELS.length - 1]} = hardest
+    {total} questions · average difficulty {mean.toFixed(1)} · {levels[0]} = easiest, {levels[levels.length - 1]} = hardest
     {#if played}· shaded: {played.window[0]}–{played.window[1]}, the default age group's window ({names?.age_groups[played.id] ?? played.name}){/if}
     {#if targets}· tick: target ({total} / {targets.total} approved){/if}
   </p>
 
-  <div class="plot" style:--n={LEVELS.length}>
+  <div class="plot" style:--n={levels.length}>
     {#if band}
       <div class="band" style:left="{band.left}%" style:width="{band.width}%" aria-hidden="true"></div>
     {/if}
@@ -77,7 +75,7 @@
       {/each}
     </div>
     <div class="columns">
-      {#each LEVELS as level, i}
+      {#each levels as level, i}
         <div
           class="slot"
           role="img"
@@ -99,8 +97,8 @@
       {/each}
     </div>
   </div>
-  <div class="xlabels" aria-hidden="true" style:--n={LEVELS.length}>
-    {#each LEVELS as level}<span>{level}</span>{/each}
+  <div class="xlabels" aria-hidden="true" style:--n={levels.length}>
+    {#each levels as level}<span>{level}</span>{/each}
   </div>
   <p class="xtitle">Difficulty</p>
 
@@ -114,7 +112,7 @@
         </tr>
       </thead>
       <tbody>
-        {#each LEVELS as level, i}
+        {#each levels as level, i}
           <tr>
             <td>{level}</td><td class="num">{counts[i]}</td><td class="num">{pct(counts[i])} %</td>
             {#if goals}<td class="num">{goals[i]}</td><td class="num">{Math.max(0, goals[i] - counts[i])}</td>{/if}
@@ -126,8 +124,8 @@
 </section>
 
 {#if hover}
-  {@const n = counts[LEVELS.indexOf(hover.level)]}
-  {@const goal = goals?.[LEVELS.indexOf(hover.level)]}
+  {@const n = counts[levels.indexOf(hover.level)]}
+  {@const goal = goals?.[levels.indexOf(hover.level)]}
   <div class="tooltip" style:left="{hover.x}px" style:top="{hover.y}px">
     <strong>Difficulty {hover.level}</strong>
     <div>{n} question{n === 1 ? "" : "s"} · {pct(n)} %</div>

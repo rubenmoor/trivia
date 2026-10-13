@@ -13,6 +13,7 @@
     compact = false,
     names = null,
     locale = null,
+    scope = null,
   }: {
     questions: Question[];
     categories: Category[];
@@ -23,10 +24,12 @@
     /** A translation locale's names and code (plan 67): labels and review links. */
     names?: Names | null;
     locale?: string | null;
+    /** Bundles in view (`breakdown`). */
+    scope?: Set<string> | null;
   } = $props();
 
   // Stable sort: ties keep the order of app/data/categories.json.
-  const rows = $derived(breakdown(questions, categories, names).sort((a, b) => b.count - a.count));
+  const rows = $derived(breakdown(questions, categories, names, scope).sort((a, b) => b.count - a.count));
   const max = $derived(Math.max(1, ...rows.map((r) => r.count)));
   /** Subcategory bars share one scale across categories, so they compare. */
   const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));

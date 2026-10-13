@@ -42,12 +42,16 @@
   let nextBatch = $state<string[] | null>(null);
   /** The selected bundle's targets (D-53); null for all bundles or a bundle without targets. */
   let targets = $state<BundleTargets | null>(null);
+  /** Bundles in view (`breakdown`): the chosen one, else the locale's (`languages`); null: every bundle. */
+  const scope = $derived(
+    bundle ? new Set([bundle]) : locale ? new Set(bundles.filter((b) => b.languages.includes(locale)).map((b) => b.id)) : null,
+  );
   let loading = $state(true);
   let error = $state<string | null>(null);
 
   onMount(async () => {
-    if (page === "subcategories" && !locale) {
-      // Only for the "next batch" marks: the page works without it.
+    if (page === "subcategories" && !locale && (!bundle || bundle === "base")) {
+      // Only for the "next batch" marks (base's): the page works without it.
       fetchOverview().then((o) => (nextBatch = o.next_batch_subcategories), () => {});
     }
     if (bundle && (page === "difficulty" || page === "categories")) {
@@ -103,10 +107,10 @@
   {:else if error}
     <p class="error">{error}</p>
   {:else if page === "categories"}
-    <CategoryChart {questions} {categories} {targets} {bundle} {names} {locale} />
+    <CategoryChart {questions} {categories} {targets} {bundle} {names} {locale} {scope} />
   {:else if page === "subcategories"}
-    <SparseList {questions} {categories} {nextBatch} {names} {locale} />
-    <SubcategoryTable {questions} {categories} {names} {locale} />
+    <SparseList {questions} {categories} {nextBatch} {names} {locale} {scope} />
+    <SubcategoryTable {questions} {categories} {names} {locale} {scope} />
   {:else if page === "media"}
     {#if mediaStats}<MediaStats stats={mediaStats} />{/if}
   {:else if ageGroups}

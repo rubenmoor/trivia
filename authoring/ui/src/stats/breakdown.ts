@@ -2,7 +2,7 @@
 // and the start page.
 import type { Category, Names, Question } from "../lib/types";
 
-export interface SubRow {
+interface SubRow {
   name: string;
   /** The locale's name (names.<locale>.json), else the Spanish name. */
   label: string;
@@ -18,14 +18,22 @@ export interface CategoryRow {
 }
 
 /** One row per category in app/data/categories.json order, plus one for unknown subcategories;
- * labels from `names` (a translation locale, plan 67). */
-export function breakdown(questions: Question[], categories: Category[], names: Names | null = null): CategoryRow[] {
+ * labels from `names` (a translation locale, plan 67). With `scope` (bundle ids in view), other
+ * bundles' subcategories only when they have questions. */
+export function breakdown(
+  questions: Question[],
+  categories: Category[],
+  names: Names | null = null,
+  scope: Set<string> | null = null,
+): CategoryRow[] {
   const perSub = new Map<string, number>();
   for (const q of questions) perSub.set(q.subcategory, (perSub.get(q.subcategory) ?? 0) + 1);
   const known = new Set(categories.flatMap((c) => c.subcategories));
-  const out: CategoryRow[] = categories.map((c) => {
-    const subs = c.subcategories.map((s) => ({ name: s, label: names?.subcategories[s] ?? s, count: perSub.get(s) ?? 0 }));
-    return { name: c.name, label: names?.categories[c.slug] ?? c.name, count: subs.reduce((n, s) => n + s.count, 0), subs };
+  const out: CategoryRow[] = categories.flatMap((c) => {
+    const all = c.subcategories.map((s) => ({ name: s, label: names?.subcategories[s] ?? s, count: perSub.get(s) ?? 0 }));
+    const subs = !scope || scope.has(c.bundle) ? all : all.filter((s) => s.count);
+    if (!subs.length) return [];
+    return [{ name: c.name, label: names?.categories[c.slug] ?? c.name, count: subs.reduce((n, s) => n + s.count, 0), subs }];
   });
   const unknown = [...perSub].filter(([s]) => !known.has(s)).map(([name, count]) => ({ name, label: name, count }));
   if (unknown.length) {

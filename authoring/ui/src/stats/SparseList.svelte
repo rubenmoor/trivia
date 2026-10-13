@@ -1,7 +1,7 @@
 <script lang="ts">
   // Sparse areas of the approved pool, worst first (RV-20): categories with fewer questions
   // than a game asks, and subcategories a player sees whole in a game or two. A subcategory the
-  // next `qgen batch` will pick (the 30 with the fewest approved questions) is marked.
+  // next `qgen batch` (base) will pick is marked (batches.subcategories).
   import type { Category, Names, Question } from "../lib/types";
   import { breakdown, reviewLink, SPARSE_CATEGORY, SPARSE_SUBCATEGORY } from "./breakdown";
   import "./chart.css";
@@ -13,6 +13,7 @@
     compact = false,
     names = null,
     locale = null,
+    scope = null,
   }: {
     questions: Question[];
     categories: Category[];
@@ -20,12 +21,14 @@
     compact?: boolean;
     names?: Names | null;
     locale?: string | null;
+    /** Bundles in view (`breakdown`). */
+    scope?: Set<string> | null;
   } = $props();
 
   /** In compact form (start page) the subcategory list stops here and links to the full page. */
   const COMPACT_ROWS = 8;
 
-  const rows = $derived(breakdown(questions, categories, names));
+  const rows = $derived(breakdown(questions, categories, names, scope));
   // Stable sorts: ties keep the order of app/data/categories.json.
   const sparseCategories = $derived(rows.filter((r) => r.count < SPARSE_CATEGORY).sort((a, b) => a.count - b.count));
   const sparseSubs = $derived(
