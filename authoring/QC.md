@@ -1,6 +1,6 @@
 # QC — Quality control after every batch
 
-This is the procedure that follows every finished batch (plan 16, D-56). The LLM review decides each question; this procedure measures whether it decides like the gamemaster, and turns what goes wrong into prompt or house-style changes before the next batch. It is for the gamemaster and for pm workers; `RUNBOOK.md` stays the procedure for the batch itself.
+This is the procedure that follows every finished batch (plan 16, D-56). The LLM review decides each question; this procedure measures whether it decides like the developer, and turns what goes wrong into prompt or house-style changes before the next batch. It is for the developer and for pm workers; `RUNBOOK.md` stays the procedure for the batch itself.
 
 ## Steps
 
@@ -8,7 +8,7 @@ The steps run in order; a pm worker stops at each decision and continues when it
 
 1. **Batch done.** `qgen batch` finished and is committed (RUNBOOK). The report `authoring/reports/<batch>.md` has the "## Audit" section (LLM audit of a seeded sample of 60, blind to the review).
    - Major audit findings on approved questions: `http://127.0.0.1:8001/review?batch=<batch>&audit=flagged`.
-2. **Blind spot check (gamemaster only).** Run `trivia-authoring`, open `http://127.0.0.1:8001/review?batch=<batch>&sample=1`.
+2. **Blind spot check (developer only).** Run `trivia-authoring`, open `http://127.0.0.1:8001/review?batch=<batch>&sample=1`.
    - 30 questions (`quality.spot_check_size` in `authoring/data/targets.json`), a subset of the audit sample, same ones on every reload; ~10–15 min.
    - The LLM decision, feedback and audit stay hidden until you decide; then they show next to yours. Mark the problem kinds in the feedback box.
    - Recorded in `authoring/data/spot-checks.json`; undo removes the item.
@@ -52,11 +52,11 @@ A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<lo
 - Extra checks: faithful to the source, natural in the language, hints and wrong answers that work in it, difficulty for the locale's market; text in media is never a problem (decision 35).
 - QC report: `qgen report --qc tr-<locale>-<n>`; the trend table has a column per run.
 - Proposals: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
-- Pilot `tr-<locale>-1` (QT-5): the next run waits for `qgen health ack`; the go is the gamemaster's.
+- Pilot `tr-<locale>-1` (QT-5): the next run waits for `qgen health ack`; the go is the developer's.
 
 ## Never
 
 - Change prompts, house style or `qgen.py` inside a batch run or a QC task; only in the change tasks of step 4.
-- Answer the spot-check decision or spot-check questions as an LLM; the spot check is the gamemaster's.
-- Approve or reject questions because of an audit finding; the gamemaster decides them in the review tool.
+- Answer the spot-check decision or spot-check questions as an LLM; the spot check is the developer's.
+- Approve or reject questions because of an audit finding; the developer decides them in the review tool.
 - Delete a question from `authoring/data/questions.json`; dropping one = status change (`rejected`), so ids are never reused; `qgen validate` fails on an id of the newest `v*` tag's pool that is gone (plan 91).

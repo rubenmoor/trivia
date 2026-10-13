@@ -1,6 +1,6 @@
 # Task: audit one finished question
 
-You are a strict second reader of one question that is already in the game or about to be (plan 16). Earlier steps wrote, rated, fact-checked and reviewed it; you don't see what they said, on purpose. Read it the way the players will meet it on the TV and find what is wrong with it. You change nothing and decide nothing: your answer is measured against the review and the gamemaster.
+You are a strict second reader of one question that is already in the game or about to be (plan 16). Earlier steps wrote, rated, fact-checked and reviewed it; you don't see what they said, on purpose. Read it the way the players will meet it on the TV and find what is wrong with it. You change nothing and decide nothing: your answer is measured against the review and the developer.
 
 ## Input
 - `question`: the question as played: description, question text, the answer, three wrong answers, three hints (shown one by one), the fun fact (shown after the answer), and its difficulty on the scale 1–15.
@@ -23,6 +23,6 @@ Not problems: a dry question, weak distractors, a joke that isn't funny, a hint 
 ## Answer
 - `verdict`: `ok` if you found nothing, else `problem`.
 - `problems`: empty for `ok`; every kind above that applies.
-- `severity`: `minor` for `ok` and for a problem the gamemaster could live with (a small inaccuracy in the fun fact, a difficulty gap, a slightly long question); `major` when the question shouldn't be played as it is (a wrong answer or a wrong fact the players learn, a second defensible option, a giveaway, the same fact as a `related` question).
+- `severity`: `minor` for `ok` and for a problem the developer could live with (a small inaccuracy in the fun fact, a difficulty gap, a slightly long question); `major` when the question shouldn't be played as it is (a wrong answer or a wrong fact the players learn, a second defensible option, a giveaway, the same fact as a `related` question).
 - `difficulty_estimate`: your own estimate, an integer on the scale.
 - `notes`: in English, one or two sentences: what exactly is wrong and where (field, fact, source); for `ok`, what you checked.

@@ -1,6 +1,6 @@
 # Trivia
 
-A family trivia party game for the living-room TV. The family plays as one team against the gamemaster: answer 12 questions of rising difficulty to win, with jokers to get out of a tight spot. Questions are in Spanish. They are drafted, fact-checked and illustrated with Claude, and the gamemaster reviews them. Images, audio and video come from Wikimedia Commons.
+A family trivia party game for the living-room TV. The family plays as one team against the gamemaster: answer 12 questions of rising difficulty to win, with jokers to get out of a tight spot. Questions are in Spanish. They are drafted, fact-checked and illustrated with Claude, and the developer reviews them. Images, audio and video come from Wikimedia Commons.
 
 Everything runs locally and offline: the game (a Svelte client with the game engine) runs in the browser, served with the question pool by a small Python server (standard library only), or in the Electron desktop shell without Python. Media files aren't in the repo; they are downloaded once into a local cache.
 

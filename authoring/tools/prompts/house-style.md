@@ -54,7 +54,7 @@ Hard questions (11–15) are hard because **fewer people can answer them**, not 
 - Hard questions still have fair options: an expert must be able to tell the answer from the wrong ones.
 - Rate it as hard as it really is: a question most adults answer is a 12, even if teens would miss it.
 
-Calibration from the gamemaster, observed with young teens (final level, with the first guess in brackets). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
+Calibration from the developer, observed with young teens (final level, with the first guess in brackets). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
 - 1: "Escucha: ¿qué instrumento suena?" → la trompeta (guessed 5)
 - 1: WALL·E, the Pixar robot that compacts garbage (guessed 5)
 - 1: the microwave, invented after a chocolate bar melted next to a radar (guessed 4)
@@ -78,7 +78,7 @@ But don't overcorrect: names of prizes, years and school theory are still hard f
 - 7: which Colombian writer won the Nobel Prize in 1982 → García Márquez (lowered to 3 by mistake)
 - 7: how many notes the basic scale has (do, re, mi…) → 7 (lowered to 3 by mistake)
 
-Anchors for 9–15, confirmed by the gamemaster:
+Anchors for 9–15, confirmed by the developer:
 - 9: capital of Australia → Canberra
 - 10: painted stone bust found in Amarna in 1912 → Nefertiti
 - 11: French 17th-century philosopher who made x, y, z the unknowns → Descartes

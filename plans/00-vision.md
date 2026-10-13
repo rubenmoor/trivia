@@ -25,10 +25,10 @@ A fun, good-looking trivia game for family evenings, played on the living-room T
 *2026-10-07: a Steam release is now planned as a separate track (D-34, [`11-steam.md`](11-steam.md)). These non-goals describe the current game; the Steam build replaces it and has its own goals (D-59).*
 
 ## Success criteria
-*2026-10-07: met. The gamemaster declared the game living-room ready.*
+*2026-10-07: met. The developer declared the game living-room ready.*
 - [x] A full game of 12 questions runs from start to finish without touching code.
 - [x] The text is readable from the couch, and the images look good.
 - [x] The pool holds enough unburned questions for several sessions.
 
 ## Tasks
-- [x] VIS-1 Confirm the vision with the gamemaster after the open questions are resolved. *2026-10-07: the family game is done as described here.*
+- [x] VIS-1 Confirm the vision with the developer after the open questions are resolved. *2026-10-07: the family game is done as described here.*

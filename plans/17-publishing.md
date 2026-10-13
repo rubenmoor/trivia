@@ -16,7 +16,7 @@ The non-rejected questions use 1,129 distinct files (1,102 for approved only). T
 | FAL (Free Art License) | 2 | Credit and a license link; copyleft like BY-SA. |
 | GFDL 1.2 (off allowlist) | 1 | Needs the full GFDL text shipped. Replaced instead (PUB-3). |
 
-- **Non-copyright restrictions:** Commons marks some files with *personality rights* (identifiable people) or *trademark* warnings. They don't stop editorial use in a quiz; the gamemaster checked them: keep every flagged file (D-61). The audit lists them for information only.
+- **Non-copyright restrictions:** Commons marks some files with *personality rights* (identifiable people) or *trademark* warnings. They don't stop editorial use in a quiz; the developer checked them: keep every flagged file (D-61). The audit lists them for information only.
 - **Credits in the game** (PUB-5, pm plan 47): each question shows its `credit` (06); the full list is generated at build time.
   - Generator: Vite plugin `app/client/credits.ts` (`vite.config.ts`), no Python. `npm run build` writes `credits.json` and `CREDITS.md` to the root of `app/client/dist/`; `npm run dev` serves `/credits.json`.
   - Content: every distinct media file in `app/data/pool.json` (title, author, licence, source link, provider; slot fields from PUB-2), sounds parsed from `app/client/public/audio/CREDITS.md` (incl. the Elgar note), fonts (OFL texts shipped in `fonts/`), controller glyphs (if `Glyph.svelte` exists), Svelte with its MIT text; a "Game" section once `LICENSE` exists (OQ-35). Electron's entry: task 621.
@@ -46,7 +46,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - **Store page:** capsule images in the required sizes, screenshots, a trailer (optional but strongly advised; S6 or later: backlog B-21), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
 - **Content survey / age rating:** the Steam questionnaire (no violence, no gambling; kid-friendly). IARC is optional on Steam.
 - **Privacy:** the game sends nothing on its own; only a question report on the player's «Enviar» (plan 103). Texts: public `PRIVACY.md` (en, es, de); store-page paragraph per language and the Steamworks steps in `11-steam.md` "Privacy (ST-5)" (task 867). Player names stay on the device (and in Steam Cloud).
-- **"Coming soon" page** at least two weeks before release (Valve rule, partner.steamgames.com/doc/store/coming_soon, read 2026-10-13), better months, to collect wishlists. Rules and gamemaster checklist: `11-steam.md` "Coming soon page (ST-3)".
+- **"Coming soon" page** at least two weeks before release (Valve rule, partner.steamgames.com/doc/store/coming_soon, read 2026-10-13), better months, to collect wishlists. Rules and developer checklist: `11-steam.md` "Coming soon page (ST-3)".
 - **Launch:** preconditions, timeline, release candidate, launch-day checklist (build live on `default`, price, launch discount, languages, report thread, Release, announcement), first week: `11-steam.md` "Launch (S6)" (pm plan 95).
 
 ## Tasks

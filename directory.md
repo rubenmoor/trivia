@@ -34,8 +34,8 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/data/concepts/`, `authoring/data/bundles/<id>/concepts/` | Concept lists per subcategory that drafts start from (D-37): `base`'s, then another bundle's (D-43) |
 | `authoring/data/question-axes.json` | Question styles as axes (D-37) |
 | `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53); batch health thresholds (`batch_health`, D-55) |
-| `authoring/data/health-acks.json` | The gamemaster's acks of batches failing the health thresholds (`qgen health ack`, D-55); shown in `authoring/reports/batches.md` |
-| `authoring/data/spot-checks.json` | The gamemaster's blind spot checks per batch (`/review?batch=<b>&sample=1`, plan 16); written only by the authoring server |
+| `authoring/data/health-acks.json` | The developer's acks of batches failing the health thresholds (`qgen health ack`, D-55); shown in `authoring/reports/batches.md` |
+| `authoring/data/spot-checks.json` | The developer's blind spot checks per batch (`/review?batch=<b>&sample=1`, plan 16); written only by the authoring server |
 | `authoring/tools/qgen.py` | The question pipeline (`qgen batch`, `validate`, `export`, `report`, single steps) |
 | `authoring/tools/health.py` | Batch health metrics per run (`batch_health`), ✓/✗ against the thresholds, the stop of `qgen batch`, `qgen report --batches`, the Health section and `batches.md` (plan 15) |
 | `authoring/tools/patch_notes.py` | `qgen patch-notes`: added/fixed/dropped per locale and category between two refs' `app/data/pool*.json`, Steam event drafts; counts only (plan 96, decision 97); kind and save version via `authoring/steam/release_check.py` |

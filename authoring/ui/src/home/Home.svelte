@@ -1,6 +1,6 @@
 <script lang="ts">
   // Start page of the authoring tool (plans/08-review-tool.md, "Start page", RV-14): what waits
-  // for the gamemaster, the batches, game readiness and the approved pool at a glance. Read-only:
+  // for the developer, the batches, game readiness and the approved pool at a glance. Read-only:
   // every number links to the page or review queue that works it off.
   import { onMount } from "svelte";
   import { messageOf } from "$app/lib/http.ts";

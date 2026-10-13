@@ -199,7 +199,7 @@
     mediaEnded();
   }
 
-  /** The music follows the lock (gamemaster feedback): locked in = the intense loop, unlocked =
+  /** The music follows the lock (developer feedback): locked in = the intense loop, unlocked =
    * back to the question loop. While the question's own media plays, the music stays off. */
   function lockMusic() {
     if (sound.music === "question" || sound.music === "submitted") music(locked !== null ? "submitted" : "question");
@@ -243,7 +243,7 @@
     submitted = true;
     error = null;
     player?.pause();
-    music("roll"); // the drum roll until the reveal (gamemaster feedback)
+    music("roll"); // the drum roll until the reveal (developer feedback)
     sfx("boom");
     try {
       const [game] = await Promise.all([gameAction("answer", { index: locked }), wait(REVEAL_WAIT_S[onTwelve(level, levels) - 1] * 1000)]);

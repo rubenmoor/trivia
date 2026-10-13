@@ -11,8 +11,8 @@ The road from today onward: milestones, every open task, every open question. Th
 
 ## Where we stand (2026-10-07)
 
-- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. `base`: 28 categories / 184 subcategories; `colombia`: 6 / 27 (D-19, D-43). Exported for the game to `app/data/pool.json` (D-35).
-- **Bundles (D-39):** every question is in one bundle. Approved (2026-10-13): 1034 in `base`, 102 in `colombia`; the 84 LLM proposals checked by the gamemaster, all kept (decision 7). Since 2026-10-08 a batch writes for one bundle named by the command, and `colombia` has its own 27 subcategories, which left `base` (D-41, D-43).
+- **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the developer, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. `base`: 28 categories / 184 subcategories; `colombia`: 6 / 27 (D-19, D-43). Exported for the game to `app/data/pool.json` (D-35).
+- **Bundles (D-39):** every question is in one bundle. Approved (2026-10-13): 1034 in `base`, 102 in `colombia`; the 84 LLM proposals checked by the developer, all kept (decision 7). Since 2026-10-08 a batch writes for one bundle named by the command, and `colombia` has its own 27 subcategories, which left `base` (D-41, D-43).
 - **Difficulty supply (approved, shared scale D-38; young teens play 1–10):** 1: 27 · 2: 41 · 3: 67 · 4: 66 · 5: 79 · 6: 91 · 7: 55 · 8: 29 · 9: 26 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
 - **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
 - **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the command names the batch's bundle, `base` by default (D-41).
@@ -32,7 +32,7 @@ The road from today onward: milestones, every open task, every open question. Th
 | M7 | Game engine in TypeScript | 12 | done (2026-10-12, D-90) |
 | M8 | Mouse everywhere and a joker budget | 14, 13 | done (2026-10-07) |
 | M9 | UI strings in a catalog; bundles | 15a, 22 | done (2026-10-13, pm milestone 3) |
-| M10 | Media license audit | 17 | in progress (PUB-1, PUB-2 done; PUB-3 waits for the gamemaster, pm decision 47) |
+| M10 | Media license audit | 17 | in progress (PUB-1, PUB-2 done; PUB-3 waits for the developer, pm decision 47) |
 | M11 | Age groups and bundles in the game | 21, 22 | in progress (engine and screens done, pm plans 27–29; play-test pending, pm decision 50) |
 
 (M6, living-room ready, is done and closed. Milestone numbers aren't reused.)
@@ -45,7 +45,7 @@ Suggested order: M5 keeps running alongside everything. M10 is small and indepen
 Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-game-flow.md), [`04`](04-ui-tv-display.md), [`05`](05-gamemaster-controls.md), [`06`](06-images.md), [`07`](07-question-generation.md), [`08`](08-review-tool.md), [`09`](09-jokers.md), [`10`](10-visual-design.md), [`19`](19-repo-layout.md). Leftovers:
 
 - [x] UI-7 follow-up: preload the next screen's media before fading in *2026-10-12, plan 31* — [`04`](04-ui-tv-display.md)
-- [~] UI-10 Sound assets: the music loops, whooshes, pops and joker sounds are still synthesized (fine for now, gamemaster 2026-10-06); Kenney.nl CC0 packs are the next source to try — [`04`](04-ui-tv-display.md)
+- [~] UI-10 Sound assets: the music loops, whooshes, pops and joker sounds are still synthesized (fine for now, developer 2026-10-06); Kenney.nl CC0 packs are the next source to try — [`04`](04-ui-tv-display.md)
 
 ### M5 — Enough content for game nights
 **Goal:** a pool large enough that each player gets several games, including joker use (D-27, D-28), with every approved question cached and illustrated.
@@ -60,7 +60,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [~] QP-7 Validation script: image check once media is cached — [`02`](02-question-pool.md)
 - [x] GM-5 Flag a question for review from the game (`M`); `trivia-authoring` turns flags into needs-work reviews (D-47) — [`05`](05-gamemaster-controls.md)
 - [x] RV-22 `/review?status=!approved`: every question that isn't approved, across batches — [`08`](08-review-tool.md)
-- [ ] Gamemaster decides the 159 `needs_work` questions at `/review?status=needs_work` and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them). 2026-10-08: 122 of them have no media picked (QP-6), and q-0046's cached image is damaged (download it again)
+- [ ] Developer decides the 159 `needs_work` questions at `/review?status=needs_work` and the old pilot draft q-0198 in the review tool (RUNBOOK: an LLM doesn't touch them). 2026-10-08: 122 of them have no media picked (QP-6), and q-0046's cached image is damaged (download it again)
 - [ ] Top up difficulties 9–10 (only 24 approved, 2 at 10) — [`backlog`](backlog.md) B-6
 - [x] PE-1..PE-5 Fewer Claude calls and tokens per batch (grouped rate and revise, kept fact-checks, per-subcategory avoid list, compact JSON) — [`20`](20-pipeline-efficiency.md)
 - [x] PE-6 Compare the first batch with PE-1..PE-5 against batch-4 and batch-5 (pm plan 15) — [`20`](20-pipeline-efficiency.md)
@@ -73,7 +73,7 @@ Every task is ticked in its plan file: [`02`](02-question-pool.md), [`03`](03-ga
 - [~] MP-2..MP-12 Media providers next to Commons (done: MP-2..MP-4, MP-6..MP-11; open: MP-5 Pexels paused, MP-12) (Openverse, Pexels, Freesound, NASA) with a licence allowlist; a rate-limited provider is skipped, not waited for (D-45) — [`23`](23-media-providers.md)
 - [x] BN-8..BN-12 Batches write `base` by default; `qgen batch --bundle <id>` and `qgen bundle new <id>` for bundles with their own categories, concepts and axes; Colombian subcategories moved to `colombia` (D-41, D-43) — [`22`](22-bundles.md)
 
-- [~] RV-12..RV-17 Start page for the authoring tool at `/` (done 2026-10-09 except RV-17, the `validate` result): what waits for the gamemaster, batches, game readiness, all as links into review queues; order of work in 08 — [`08`](08-review-tool.md)
+- [~] RV-12..RV-17 Start page for the authoring tool at `/` (done 2026-10-09 except RV-17, the `validate` result): what waits for the developer, batches, game readiness, all as links into review queues; order of work in 08 — [`08`](08-review-tool.md)
 - [x] RV-18..RV-21 Stats on approved questions (2026-10-09): difficulty 1–15, category and subcategory breakdown, sparse categories and subcategories; compact on the start page — [`08`](08-review-tool.md)
 
 No family-specific questions (D-30).
@@ -112,7 +112,7 @@ No family-specific questions (D-30).
 - [x] LUI-2 Pseudo-locale for length and missing-string tests (2026-10-12, pm plan 23; overflow: B-17, B-18) — [`15a`](15a-ui-translation.md)
 - [x] LUI-3 Draft `en` catalog with English joker names (2026-10-12, pm plan 24, D-89) — [`15a`](15a-ui-translation.md)
 - [x] BN-2..BN-5 Bundles (replace RG-1, RG-2): `bundle` on every question, `colombia` proposed by an LLM pass (D-39) — [`22`](22-bundles.md)
-- [x] Gamemaster checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
+- [x] Developer checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
 
 ### M10 — Media license audit
 **Goal:** the full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced.
@@ -143,7 +143,7 @@ Everything that only matters for a release on Steam (desktop shell, controller, 
 - [x] S4: CT-2 `qgen report --simulate`: games per new player on the engine (information only); exit 1 unless every launch language meets D-75's 5000 (2026-10-12, pm plan 62) — [`16`](16-content-target.md)
 - [x] S4: B-13 tooling: `base` voice es-419, `colombia` Colombian; `qgen neutralize` rewrites Colombian wording in `base` (2026-10-12, pm plan 64, D-83); the run belongs to masterplan part 11 — [`15`](15-i18n.md)
 - [x] S4: I18N-2 Language setting: UI and question language in the save, per-locale pool and names, Esc menu rows, first-start language screen for a fresh save; Steam's language via `guessTag()` in milestone 10 (2026-10-12, pm plan 68, D-86) — [`15`](15-i18n.md)
-- [x] S5: SW-8 Steam binding (steamworks-ffi-node): bridge `window.trivia.steam`, Steam language as the first-start guess, overlay (Windows only, D-92), floating keyboard for the name, Steam Input glyphs, rich presence; optional, the game runs without Steam (2026-10-13, pm plan 85; packaging task 650, gamemaster check under Steam pending) — [`18`](18-steam-integration.md)
+- [x] S5: SW-8 Steam binding (steamworks-ffi-node): bridge `window.trivia.steam`, Steam language as the first-start guess, overlay (Windows only, D-92), floating keyboard for the name, Steam Input glyphs, rich presence; optional, the game runs without Steam (2026-10-13, pm plan 85; packaging task 650, developer check under Steam pending) — [`18`](18-steam-integration.md)
 - [x] S6: Version numbers and patch-safe saves: one version (`app/desktop/package.json`, tag `v<version>`), pool hash on the credits screen, running games survive a patch, id-continuity check in `qgen validate` (2026-10-13, pm plan 91, decisions 91, 92) — [`18`](18-steam-integration.md), [`12`](12-client-engine.md)
 - [x] S6: ST-4 Release checklist: `trivia-release-check` tag gate, kind full/content-only patch, credits both ways, manual rows (offline, Windows, Deck, Cloud, sound, red frame, beta save, sign-off), one pm decision per release candidate; first full run: part 4's release candidate (task 269) (2026-10-13, pm plan 92) — [`11`](11-steam.md)
 

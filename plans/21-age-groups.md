@@ -70,7 +70,7 @@ Recomputed 2026-10-12 for the approved windows (D-76); with per-group weights: "
 The proposal: derive the targets from `age-groups.json` (windows, per-group level weights from AG-7, a play share per group), with a floor per level so every group can play several games without repeats, and draw each batch's targets by **deficit** (target share minus the pool's share) so batches fill gaps instead of repeating a fixed shape.
 
 ## Measured windows (AG-7)
-Measured 2026-10-11 with a throw-away script on the engine (`supply`, `draw`, `seededRng`; plan 28), pool of 1136 approved questions (`base` 1034, `colombia` 102). Draft = `levels` from plan 27; proposal = tuned `kids`, `young_adults`, `adults`; `young_teens` stays D-22. Raised as the decision "Approve the age-group windows"; the gamemaster approved the proposal, applied 2026-10-12 (D-76).
+Measured 2026-10-11 with a throw-away script on the engine (`supply`, `draw`, `seededRng`; plan 28), pool of 1136 approved questions (`base` 1034, `colombia` 102). Draft = `levels` from plan 27; proposal = tuned `kids`, `young_adults`, `adults`; `young_teens` stays D-22. Raised as the decision "Approve the age-group windows"; the developer approved the proposal, applied 2026-10-12 (D-76).
 
 - Thinnest: level with the fewest candidates (`supply`). Until dry: games one player can play, burning every card shown, until a level can't be filled; median of 20 seeds, and the level that ran dry most often.
 - Ranges: level 1 first; `×n` = the same range n levels in a row.

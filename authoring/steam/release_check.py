@@ -51,13 +51,13 @@ MANUAL = {
     "offline": ("always", "beta install, network off, Steam not running: full game to level 12 or a won checkpoint",
                 "beta install, network off, Steam not running: a game to level 3 that hits new questions"),
     "windows": ("full", "start test on a clean Windows machine from Steam (beta)", None),
-    "deck": ("full", "Steam Deck: answer `no Deck (decision 125)` until the gamemaster has one; then plan 90's real-Deck "
+    "deck": ("full", "Steam Deck: answer `no Deck (decision 125)` until the developer has one; then plan 90's real-Deck "
              "checklist from the `beta` branch (plans/18-steam-integration.md \"Steam Deck Verified\")", None),
     "cloud": ("full", "Cloud A→B (plan 87): play on A, quit, B shows the same players and seen counts", None),
     "sound": ("full", "sound: music, effects, audio and video questions", None),
     "red-frame": ("full", "timed competitive: pulsing red frame in the last 3 s", None),
     "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
-    "signoff": ("always", "the family plays the candidate from beta", "the gamemaster's OK"),
+    "signoff": ("always", "the family plays the candidate from beta", "the developer's OK"),
 }
 # Row → answer prefix that passes (best effort, decision 125).
 PASS = {"deck": "no deck"}

@@ -52,7 +52,7 @@ A provider that answers 429 is put on cooldown for its `Retry-After`, so later s
 - Prompts (`house-style.md` "Media", `draft.md`, `review.md`, `rate.md`, `revise.md`, `concepts-facets.md`): "Wikimedia Commons" becomes "the media sources", with one line per provider on what it is good for. The rules on essential media stay strict: a clear, recognisable photo or sound of exactly that thing.
 
 ## How to check it worked (MP-11)
-Compare the first batch with providers against batch-6: time spent in `media`/`research`/`sync`, the share of "no adequate media" `needs_work`, picks per provider, and the gamemaster's media rejections in the review tool.
+Compare the first batch with providers against batch-6: time spent in `media`/`research`/`sync`, the share of "no adequate media" `needs_work`, picks per provider, and the developer's media rejections in the review tool.
 
 ## Later: paid providers
 Only for gaps the free ones leave, and only once a Steam release is real (11): exact animal sounds (Macaulay Library, per-clip licence), stock photos (Adobe Stock, Shutterstock; the standard licence caps copies at 500,000 and excludes "editorial use only" images), music and effects (check each provider's terms for games). Each needs its own licence record per file; that is what PUB-2's fields are for.
@@ -68,5 +68,5 @@ Only for gaps the free ones leave, and only once a Steam release is real (11): e
 - [x] MP-8 Pool fields `provider`, `license`, `license_url`, `author` per picked slot; migrate existing picks; `validate` checks the allowlist; credit names the provider (shared with PUB-2). *Done in pm plan 26 (tasks 111–113): 1,202 picks migrated on 2026-10-11.*
 - [x] MP-9 Review tool: provider and licence on candidates; search modal over all providers. *2026-10-08; the LLM review also sees each candidate's source.*
 - [x] MP-10 Prompts: "the media sources" instead of Commons only. *2026-10-08: house style lists the sources; Freesound allows everyday sounds too.*
-- [x] MP-11 Compare the first batch with providers against batch-6. *2026-10-11, `qgen report --batches` (pm plan 15). batch-7 vs. batch-6: needs_work for media 7.3 → 7.0 % of merged (guessed from feedback); picks: Commons 602, Openverse 2, Freesound 2 (batch-6: Commons 84). The providers barely change what gets picked; media share fell 25.6 → 13.8 %. Time per step wasn't recorded; `qgen batch` writes it to `run.json` from batch-8 on. Gamemaster media rejections: not counted.*
+- [x] MP-11 Compare the first batch with providers against batch-6. *2026-10-11, `qgen report --batches` (pm plan 15). batch-7 vs. batch-6: needs_work for media 7.3 → 7.0 % of merged (guessed from feedback); picks: Commons 602, Openverse 2, Freesound 2 (batch-6: Commons 84). The providers barely change what gets picked; media share fell 25.6 → 13.8 %. Time per step wasn't recorded; `qgen batch` writes it to `run.json` from batch-8 on. Developer media rejections: not counted.*
 - [ ] MP-12 Pixabay, once full API access (≥ 1920 px) is granted

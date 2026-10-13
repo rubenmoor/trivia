@@ -70,7 +70,7 @@ import translations  # authoring/tools/translations.py: translated questions (D-
 LEVEL_WEIGHTS = {1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13}
 RUBRIC = ["correct", "unambiguous", "no_giveaway", "no_overlap", "distractors", "age_fit", "fun", "description"]
 # Below 4 on any of these drops a question (07). The soft scores didn't predict the
-# gamemaster's decisions in the pilot, so they are recorded but don't filter by default.
+# developer's decisions in the pilot, so they are recorded but don't filter by default.
 # no_overlap (plan 15): asks a fact the pool or an earlier draft already asks; dropped, not revised.
 HARD_CRITERIA = ["correct", "unambiguous", "no_giveaway", "no_overlap"]
 SOFT_CRITERIA = ["distractors", "age_fit", "fun", "description"]
@@ -601,7 +601,7 @@ def cmd_bundles(args):
     """Sort the existing pool into bundles (BN-3, D-39). Questions without `bundle` get `base`;
     then an LLM pass proposes a bundle for every question it hasn't seen yet, and the proposals
     are written into the pool. Proposals stay in work/bundles/proposals.json, so a rerun only
-    sends new questions and never overwrites a bundle the gamemaster changed afterwards."""
+    sends new questions and never overwrites a bundle the developer changed afterwards."""
     d = WORK / "bundles"
     d.mkdir(parents=True, exist_ok=True)
     with atomic.locked(POOL):
@@ -1339,15 +1339,15 @@ DIFFICULTY_GAP = 3  # rater on 1–15: mean |diff| 1.5 at 10–15 (task 30), so 
 def issues_of(q, r, c):
     """Reasons to revise a question; empty when it looks fine or overlaps (merge drops it).
 
-    Only what the pilot showed to matter (D-16): the gamemaster's feedback, the fact-check,
+    Only what the pilot showed to matter (D-16): the developer's feedback, the fact-check,
     the hard criteria, and big difficulty gaps. Low soft scores (fun, distractors…) didn't
-    predict the gamemaster's decisions, so they don't trigger a revision.
+    predict the developer's decisions, so they don't trigger a revision.
     """
     out = []
     if r and r.get("no_overlap", 5) < 4:
         return out  # merge drops it; a revision would only ask another fact (plan 15)
     if q.get("feedback"):
-        out.append(f"gamemaster feedback: {q['feedback']}")
+        out.append(f"developer feedback: {q['feedback']}")
     if c and c["verdict"] != "confirmed":
         out.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
     if r:
@@ -1821,7 +1821,7 @@ def qc_section(batch, pool=None):
     verdict = "" if s["passes"] is None else (
         f" {'✓' if s['passes'] else '✗'} (bar: ≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %)")
     lines = ["## Quality control", "",
-             "The gamemaster's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit "
+             "The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit "
              "(plan 16, `qgen report --qc`). Agree = both accept or both don't.", "",
              f"- Spot check: {n} decided of {checks[batch].get('size', '?')}",
              f"- Agreement with the LLM review: {qc_pct(s['agreed'], n)}{verdict}",
@@ -2450,7 +2450,7 @@ def fact_check(r, check):
 def cmd_fix(args):
     """One revision for every question that round 1 sent back with a fixable problem (QG-22): the
     reviewer's `fix` goes to the revise prompt. Changed facts are checked again; round 2 reviews it.
-    Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the gamemaster.
+    Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the developer.
     In a `qgen rework` run (QG-23) the issue is the needs_work feedback; kept and revised questions
     go back to draft, are all fact-checked and reviewed again, with a new media search if needed.
     A translation run (plan 66): the reviser sees the Spanish source; only the translated text and
@@ -2573,7 +2573,7 @@ def fix_issue(q, r, rework):
         review = q.get("review") or {}
         if q["status"] != "needs_work" or not (review.get("feedback") or "").strip():
             return None
-        who = "final reviewer" if review.get("reviewer") == "llm" else "gamemaster feedback"
+        who = "final reviewer" if review.get("reviewer") == "llm" else "developer feedback"
         return f"{who}: {review['feedback'].strip()}"
     r1 = r.get("round1") or {}
     if r1.get("decision") == "needs_work" and r1.get("fix", "").strip():
@@ -2976,7 +2976,7 @@ def audit_section(run):
     back = run_mode(run) == "backaudit"
     what = "every question of the slice (plan 57" if back else "a seeded sample (plan 16"
     lines = ["## Audit", "", f"A second LLM reader of {what}, `prompts/audit.md`), blind to the review. "
-             "It changes nothing in the pool; the gamemaster decides its findings in the review tool.", ""]
+             "It changes nothing in the pool; the developer decides its findings in the review tool.", ""]
     for label, d in [("approved", "approved")] + ([] if back else [("needs work", "needs_work")]):
         ids = [i for i in found if dec.get(i) == d]
         lines.append(f"- Major among review {label}: {pct(sum(is_major(found[i]) for i in ids), len(ids))}")
@@ -3060,7 +3060,7 @@ def next_batch():
     """(run name, resuming?) — an unfinished `qgen batch` run is resumed; otherwise batch-<n+1>."""
     open_runs = batches.unfinished_runs()
     if len(open_runs) > 1:
-        sys.exit(f"More than one unfinished batch: {', '.join(open_runs)}. Ask the gamemaster which to finish.")
+        sys.exit(f"More than one unfinished batch: {', '.join(open_runs)}. Ask the developer which to finish.")
     if open_runs:
         return open_runs[0], True
     names = {q.get("batch") for q in load_json(POOL)["questions"]} | {p.name for p in WORK.glob("batch-*") if p.is_dir()}
@@ -3252,7 +3252,7 @@ def next_translate_run(locale):
     runs = work_runs(rf"tr-{re.escape(locale)}-\d+", "run.json")
     open_runs = [r for r in runs if not load_json(WORK / r / "run.json").get("done")]
     if len(open_runs) > 1:
-        sys.exit(f"More than one unfinished {locale} translation run: {', '.join(open_runs)}. Ask the gamemaster which to finish.")
+        sys.exit(f"More than one unfinished {locale} translation run: {', '.join(open_runs)}. Ask the developer which to finish.")
     if open_runs:
         return open_runs[0], True
     return f"tr-{locale}-{max((run_number(r) for r in runs), default=0) + 1}", False
@@ -3321,7 +3321,7 @@ def cmd_translate_batch(args):
           f"{h['not travelling']} not travelling ({h['not travelling confirmed']} confirmed) "
           f"(took {progress.duration(time.monotonic() - t0)}).")
     if run == f"tr-{locale}-1":
-        print(f"Pilot: the next `{again}` waits for the gamemaster's go (`qgen health ack {run} \"<note>\"`).")
+        print(f"Pilot: the next `{again}` waits for the developer's go (`qgen health ack {run} \"<note>\"`).")
     files = [translations.path(locale), layout.LOCALE_POOL(locale), layout.BUNDLE_DATA, out]
     if h["not travelling confirmed"]:
         files.insert(1, POOL)
@@ -3369,7 +3369,7 @@ def write_translate_report(run):
 # --- health ack, rework, scans: tighten, neutralize ---------------------------
 
 def cmd_health_ack(args):
-    """The gamemaster has looked at a failing batch: clears the stop of `qgen batch` (D-55)."""
+    """The developer has looked at a failing batch: clears the stop of `qgen batch` (D-55)."""
     import health  # authoring/tools/health.py (imports qgen)
     if args.batch not in health.batch_runs() + health.translation_runs():
         sys.exit(f"not a merged batch or translation run: {args.batch}")
@@ -4042,7 +4042,7 @@ def main():
     add("dedupe", cmd_dedupe)
     add("merge", cmd_merge).add_argument("--min-score", type=float, default=0,
                                          help="minimum mean of distractors/age_fit/fun/description "
-                                              "(default 0: off; the pilot showed it doesn't predict the gamemaster)")
+                                              "(default 0: off; the pilot showed it doesn't predict the developer)")
     imp = add("import", cmd_import)
     imp.add_argument("--batch", required=True, help="pool batch to revise")
     imp.add_argument("--assign-unbatched", action="store_true", help="give questions without a batch this batch name first")
@@ -4096,13 +4096,13 @@ def main():
     au = add("audit", cmd_audit, "opus", run=False)
     au.add_argument("--batch", help="default: the newest merged batch")
     au.add_argument("--backlog", action="store_true",
-                    help="audit the next slice of approved questions from before D-56 (plan 57); only when the gamemaster asks")
+                    help="audit the next slice of approved questions from before D-56 (plan 57); only when the developer asks")
     au.add_argument("--slice", type=int, help=f"with --backlog: questions per slice (default {BACKAUDIT_SLICE})")
     au.add_argument("--dry-run", action="store_true", help="with --backlog: list the slice's ids, change nothing")
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
     hp = sub.add_parser("health", help="batch health (plan 15)").add_subparsers(dest="action", required=True)
-    ha = hp.add_parser("ack", help="the gamemaster has looked at a failing batch: clears the stop of `qgen batch` (D-55)")
+    ha = hp.add_parser("ack", help="the developer has looked at a failing batch: clears the stop of `qgen batch` (D-55)")
     ha.set_defaults(fn=cmd_health_ack)
     ha.add_argument("batch")
     ha.add_argument("note")
@@ -4115,7 +4115,7 @@ def main():
     tg = sub.add_parser("tighten", help="find long-winded questions in the whole pool, shorten and review them (QG-24)")
     tg.set_defaults(fn=cmd_tighten)
     tg.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
-    nz = sub.add_parser("neutralize", help="reword Colombian usage in base into neutral Spanish (plan 64); only when the gamemaster asks")
+    nz = sub.add_parser("neutralize", help="reword Colombian usage in base into neutral Spanish (plan 64); only when the developer asks")
     nz.set_defaults(fn=cmd_neutralize)
     nz.add_argument("--dry-run", action="store_true", help="scan only: flagged ids, issues and a cost estimate")
     nz.add_argument("--ids", help=argparse.SUPPRESS)  # debugging: scan only these ids (new run only)

@@ -32,7 +32,7 @@ Option A is decided in D-81; the options below are kept as history.
 - Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish rewrite, masterplan part 8) stale every touched translation: full runs come after them.
 
 ## Review tool
-Done (pm plan 67, RV-24..RV-26). The gamemaster and native speakers review `questions.<locale>.json` in `trivia-authoring` with the Spanish source alongside.
+Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `questions.<locale>.json` in `trivia-authoring` with the Spanish source alongside.
 
 - `/review?locale=en|de` (+ the usual filters, `stale=1`): locale switch es · en · de, keeps the other params.
 - Side by side (`SourcePanel.svelte`): Spanish source read-only (difficulty, status) | translation; rows question, answer, wrong answers, hints, description, fun fact.

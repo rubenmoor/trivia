@@ -167,7 +167,7 @@ let synthMusic = false;
 
 /** Switch the music loop; null = silence. Screen changes fade out and in (04, "Transitions");
  * on the Question screen the changes are sharp cuts: locking in, unlocking, the drum roll, the
- * reveal (gamemaster feedback: the music has to jump when an answer is clicked). */
+ * reveal (developer feedback: the music has to jump when an answer is clicked). */
 export function music(track: Track | null, opts: { synth?: boolean } = {}) {
   const synth = opts.synth ?? false;
   if (track === sound.music && synth === synthMusic) return;

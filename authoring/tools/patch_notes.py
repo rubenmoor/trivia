@@ -173,7 +173,7 @@ def markdown(d):
     all_ = lambda k: sum(total(c, k) for c in d["counts"].values())
     md += [f"| **all** | | {all_('added')} | {all_('fixed')} | {all_('dropped')} |", "",
            "## Steam event drafts", "",
-           "Posted by the gamemaster (Community → Events & Announcements), one text per Steam language.", ""]
+           "Posted by the developer (Community → Events & Announcements), one text per Steam language.", ""]
     for l in LAUNCH:
         if l not in d["counts"]:
             md += [f"### {EVENT[l]['lang']}", "", "No content changes in this language.", ""]

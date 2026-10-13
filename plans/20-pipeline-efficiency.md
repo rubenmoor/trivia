@@ -41,7 +41,7 @@ Biggest input: every draft call carries the "Already in the pool" list, one line
 ### "Already in the pool" per subcategory (PE-4)
 `existing_answers` keeps only pool questions of the subcategory being drafted. The list is built inside `work(sub)` of `cmd_draft`; the section says "none yet" when it's empty. The format stays the same (answer plus the first 60 characters of the question, all statuses). About 37 KB → a few hundred bytes per draft call, about 300k fewer input tokens per batch, and the list stops growing with the pool. Same number of calls.
 
-Duplicates from other subcategories are still caught: by `duplicates()` in `merge` (code, same answer and similar wording or the same essential media, whole pool) and by the review's `related` list (same or similar answer, whole pool; review rule 4). Neither catches the same fact under a different answer form (synonyms, nicknames) in another subcategory. The gamemaster accepts that: a duplicate in a large pool does little harm (2026-10-07).
+Duplicates from other subcategories are still caught: by `duplicates()` in `merge` (code, same answer and similar wording or the same essential media, whole pool) and by the review's `related` list (same or similar answer, whole pool; review rule 4). Neither catches the same fact under a different answer form (synonyms, nicknames) in another subcategory. The developer accepts that: a duplicate in a large pool does little harm (2026-10-07).
 
 ### Compact JSON in prompts (PE-5)
 Payloads in user messages use `json.dumps(..., ensure_ascii=False)` without `indent=2`. That's about 10–15% fewer payload tokens, and the model reads it just as well. Work files on disk stay indented.
@@ -114,7 +114,7 @@ The style list mixes things that are really separate: media ("showing a picture"
 | **Lens** | where the player has met the topic | school, university (basics of a discipline, classic theories and experiments), everyday life, Colombia, pop culture (films, TV, games, books, music), popular science (books, thought experiments, stories behind discoveries), science news (settled facts only), educational media (documentaries, educational YouTube, science and history TV, museums), nature, history, body and senses, words and language. *No value refers to an age: who can answer is the difficulty's job (2026-10-07).* |
 | **Difficulty** | who can answer it | 1–10, assigned by code as today (`assign_difficulties`) |
 
-- The values above are a first draft for the gamemaster to edit (OQ-39). Every value has one line of explanation in the file, which goes into the prompts. All values follow the house style ("use the four options honestly", media only from Commons, no songs or film clips).
+- The values above are a first draft for the developer to edit (OQ-39). Every value has one line of explanation in the file, which goes into the prompts. All values follow the house style ("use the four options honestly", media only from Commons, no songs or film clips).
 - **Compatibility rules** are in the same file and applied by code: e.g. `sound` only with `identify`; `map outline` only with answer kind `place`; `when` only with `year or era`; `count`/`estimate` only with `number`.
 - **Axis fit is scored once per subcategory and stored** (PE-9): a 1–5 score for each value of move, stimulus and lens, in the subcategory's concept file (`"axis_fit": {...}`), from call (1) of `qgen concepts`. That replaces the `fit` step in every batch; `fit`, `fit.md` and `question-styles.txt` are removed. Clue form and answer kind are not scored per subcategory: the compatibility rules and the drafter handle them.
 - Existing questions keep their `style` as history; every question gets `axes: {move, stimulus, clue, answer_kind, lens}` (new ones from the draft, old ones from `qgen concepts`; OQ-39, D-37).
@@ -134,7 +134,7 @@ The drafter answers with the number of the combination it chose; code records th
 Part 2 was implemented right after part 1 (2026-10-07), so the next batch has both, and PE-6 and PE-13 are checked on the same batch against batch-4 and batch-5. PE-6's quality risk (grouped rating getting more lenient) can still be checked on its own: rate batch-5's drafts again in groups and compare with their per-file ratings (about 5 calls). For part 2, compare the first concept-based batch:
 - average `fun` score; spread of moves, stimuli and lenses (and of `style` before);
 - share of slots skipped, and of concepts retired;
-- a blind side-by-side for the gamemaster: 20 old and 20 new questions from the same subcategories, without labels.
+- a blind side-by-side for the developer: 20 old and 20 new questions from the same subcategories, without labels.
 
 ## Tasks
 - [x] PE-1 `rate` in groups of about 10 questions, never splitting a subcategory; results saved per draft file. *`grouped()` packs whole draft files; a file whose questions all came back is saved, the rest fails and is retried. Mocked on batch-5's drafts: 44 questions, 24 files → 5 calls. `rate.md`: rate every question on its own.*

@@ -54,7 +54,7 @@ flowchart LR
 | **S6 — Release** | Coming-soon page, wishlists, release, patches | ST-3..ST-5 | Released; content updates go out as patches |
 | **Later** | Competitive mode (8+ players), couch co-op, more regions and languages | MD-8+, IN-6+ | — |
 
-S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python). S3 ends with a gamemaster platform test (Windows, Linux, Deck; controller only; offline): pm plan 48.
+S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python). S3 ends with a developer platform test (Windows, Linux, Deck; controller only; offline): pm plan 48.
 
 ## Open questions (blocking)
 Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions still open there are raised as `pm` decisions by their plans):
@@ -79,13 +79,13 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 - **Scope creep:** competitive mode and couch co-op are explicitly "Later". The release doesn't wait for them.
 
 ## Release checklist (ST-4)
-Every public build — the launch and every later patch — passes one checklist before its build goes from `beta` to `default`: the automated `trivia-release-check` (plan 18 "Builds and depots", SW-6) plus the manual rows below, which the gamemaster runs on the Steam-installed `beta` build. Each release candidate gets one pm decision with the result (template below); parts 4 (launch, task 269) and 6 (patches, task 270) create it, nothing else does.
+Every public build — the launch and every later patch — passes one checklist before its build goes from `beta` to `default`: the automated `trivia-release-check` (plan 18 "Builds and depots", SW-6) plus the manual rows below, which the developer runs on the Steam-installed `beta` build. Each release candidate gets one pm decision with the result (template below); parts 4 (launch, task 269) and 6 (patches, task 270) create it, nothing else does.
 
 ### How to run
 - Bump `version` in `app/desktop/package.json` if needed, commit, `git tag v<x>` (the check never tags).
 - `trivia-steam upload --branch beta`: runs `trivia-release-check` (tag gate, per-commit checks, licences, release bar, `nix build .#app`, desktop builds, credits both ways, smoke game), then stages and uploads; prints the BuildID.
 - Manual rows need the `beta` build, so at upload time answer the prompt with a note (e.g. `later`: counts as skipped, named in the build Desc).
-- Then the gamemaster runs the rows below on `beta` and answers the candidate decision; `trivia-release-check --manual FILE` (one `<row>: <answer>` per line; `y…` passes, `n…` fails, anything else = note, counts as skipped) records the answers in the report.
+- Then the developer runs the rows below on `beta` and answers the candidate decision; `trivia-release-check --manual FILE` (one `<row>: <answer>` per line; `y…` passes, `n…` fails, anything else = note, counts as skipped) records the answers in the report.
 - Report: `work/steam/v<x>/release-check.md` (header: version, pool hash, previous tag, kind, save version change; every skip).
 
 ### Manual rows
@@ -95,12 +95,12 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 |---|---|---|
 | `offline` | always | Network off, Steam not running, start the installed game: full release: a full game to level 12 or a won checkpoint; content-only patch: a game to level 3 that hits new questions |
 | `windows` | full | Clean Windows machine (no dev tools), install from Steam `beta`, start: no warning, game fullscreen, a few questions with a pad |
-| `deck` | full | Best effort (decision 125): `no Deck (decision 125)` passes until the gamemaster has a Deck; then plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
+| `deck` | full | Best effort (decision 125): `no Deck (decision 125)` passes until the developer has a Deck; then plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
 | `cloud` | full | Short A→B run of plan 87's table (`plans/18-steam-integration.md` "Steam Cloud test", first row): play on A, quit, B shows the same players and seen counts |
 | `sound` | full | Music, effects, an audio and a video question play |
 | `red-frame` | full | Timed competitive: the red frame pulses in the last 3 s |
 | `beta-save` | save | Save version changed: testers stay on `beta` until this build is on `default` (an older build can't read the new save) |
-| `signoff` | always | Launch and full release: the family plays the candidate from `beta`; content-only patch: the gamemaster's OK |
+| `signoff` | always | Launch and full release: the family plays the candidate from `beta`; content-only patch: the developer's OK |
 
 ### Patch variant
 - Kind, set by the check: `content-only` when, since the newest earlier `v*` tag, `git diff --name-only` touches nothing that ships except `app/data/` (shipped = `app/`, `flake.nix`, `flake.lock`, root `package*.json`); else `full`. No earlier tag = full.
@@ -124,7 +124,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 - Review request for Deck Verified: plan 90 (task 687) decides whether it moves here.
 
 ## Coming soon page (ST-3)
-The Steam store page goes public as "Coming soon" well before the release, so it collects wishlists and follows. The gamemaster does every Steamworks step; this section holds Valve's rules (read 2026-10-13) and the checklist. The live date sets the earliest release date for part 4 (task 269).
+The Steam store page goes public as "Coming soon" well before the release, so it collects wishlists and follows. The developer does every Steamworks step; this section holds Valve's rules (read 2026-10-13) and the checklist. The live date sets the earliest release date for part 4 (task 269).
 
 ### Valve's rules
 - Minimum "Coming soon": new products ≥ 2 weeks public before release; no downside to a long lead ("two years ahead … just as likely to purchase"). Sources: partner.steamgames.com/doc/store/coming_soon, /doc/store/releasing (read 2026-10-13).
@@ -136,7 +136,7 @@ The Steam store page goes public as "Coming soon" well before the release, so it
 - Posting: after approval, the green "Post as Coming Soon" button; page goes public, Community Hub and wishlists start; at release Steam e-mails everyone who wishlisted. Source: /doc/store/coming_soon.
 - Release date: an exact intended date is always set (hidden); the store shows one of five: exact date, month + year, quarter ("Q3 2023"), year, or none ("Coming Soon"); display switchable freely before release; less specific = listed at the end of the range, none = behind all dated games. The date itself can change until two weeks before it, then it's locked. Weekends hidden in the picker. Source: /doc/store/release_dates (read 2026-10-13).
 
-### Gamemaster checklist
+### Developer checklist
 In order; workers never log in, enter credentials or contact Valve (plan 94).
 1. Prerequisites done:
    - Store page entered: `task 672: Store page entry checklist and PUB-8 close-out`'s decision answered "entered".
@@ -157,19 +157,19 @@ In order; workers never log in, enter credentials or contact Valve (plan 94).
 - Wishlists: only Steam's own wishlist and follow buttons; no mailing list, own website, social accounts or marketing.
 
 ## Launch (S6)
-The release candidate `v1.0.0` goes from `beta` through the release checklist (ST-4), the family's sign-off and Valve's build review to `default`, and the gamemaster presses Release on a date the "Coming soon" rules (ST-3) allow. Then a launch-day checklist and a first week of watching by hand. Every Steamworks step is the gamemaster's; workers write the texts, raise the decisions and record the answers (pm plan 95).
+The release candidate `v1.0.0` goes from `beta` through the release checklist (ST-4), the family's sign-off and Valve's build review to `default`, and the developer presses Release on a date the "Coming soon" rules (ST-3) allow. Then a launch-day checklist and a first week of watching by hand. Every Steamworks step is the developer's; workers write the texts, raise the decisions and record the answers (pm plan 95).
 
 ### Valve's rules
 2026-10-13, task 706: no web access for the worker (WebFetch/WebSearch denied); rules already read for ST-3 (same day) are reused, the rest is unverified. Valve's wording wins.
 - Release date and lock: exact intended date set in Steamworks, changeable until two weeks before it, then locked; earliest release = later of (Coming soon live + 14 days, app fee paid + 21 days). Source: ST-3 "Valve's rules" above (/doc/store/release_dates, /doc/store/coming_soon, /doc/gettingstarted/onboarding, read 2026-10-13).
 - Permissions for releasing: "Publish app changes to Steam" and "Manage pricing and discounts". Source: /doc/store/releasing (read 2026-10-13, ST-3).
 - At release Steam e-mails everyone who wishlisted. Source: /doc/store/coming_soon (read 2026-10-13, ST-3).
-- Community Hub: starts when the page is posted as Coming soon (/doc/store/coming_soon, read 2026-10-13, ST-3); whether the Discussions forum is open to players before release: unverified (gamemaster: check the app's Community Hub after posting).
-- Build review lead time: unverified (gamemaster: check https://partner.steamgames.com/doc/store/review_process). ST-3 only verified the store page review (3–5 business days, submit ≥ 7 before); this plan assumes the same buffer for the build until confirmed.
-- What the build review checks (starts, matches the store page, no placeholder content, which branch it reads): unverified (gamemaster: check https://partner.steamgames.com/doc/store/review_process). Rule here anyway: no `PLACEHOLDER(` in the candidate (AGENTS.md; ST-3's store review rule).
-- Setting a build live on `default`, the Release button and a scheduled release (time of day, whether it fires by itself): unverified (gamemaster: check https://partner.steamgames.com/doc/store/releasing and https://partner.steamgames.com/doc/sdk/uploading).
-- Launch discount (max %, duration, setup deadline, cooldown after it): unverified (gamemaster: check https://partner.steamgames.com/doc/marketing/discounts); decision 66's draft noted a 30-day cooldown between discounts, also unverified.
-- Announcements (event types, per-language texts, scheduling): unverified (gamemaster: check https://partner.steamgames.com/doc/marketing/event_tools).
+- Community Hub: starts when the page is posted as Coming soon (/doc/store/coming_soon, read 2026-10-13, ST-3); whether the Discussions forum is open to players before release: unverified (developer: check the app's Community Hub after posting).
+- Build review lead time: unverified (developer: check https://partner.steamgames.com/doc/store/review_process). ST-3 only verified the store page review (3–5 business days, submit ≥ 7 before); this plan assumes the same buffer for the build until confirmed.
+- What the build review checks (starts, matches the store page, no placeholder content, which branch it reads): unverified (developer: check https://partner.steamgames.com/doc/store/review_process). Rule here anyway: no `PLACEHOLDER(` in the candidate (AGENTS.md; ST-3's store review rule).
+- Setting a build live on `default`, the Release button and a scheduled release (time of day, whether it fires by itself): unverified (developer: check https://partner.steamgames.com/doc/store/releasing and https://partner.steamgames.com/doc/sdk/uploading).
+- Launch discount (max %, duration, setup deadline, cooldown after it): unverified (developer: check https://partner.steamgames.com/doc/marketing/discounts); decision 66's draft noted a 30-day cooldown between discounts, also unverified.
+- Announcements (event types, per-language texts, scheduling): unverified (developer: check https://partner.steamgames.com/doc/marketing/event_tools).
 
 ### Preconditions
 All ✓ before the go decision (`Start the launch release candidate v1.0.0?`).
@@ -221,7 +221,7 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 - Shipped question pools (`app/data/`): `pool.json` (es); `pool.en.json`, `pool.de.json` missing on 2026-10-13. A language without its pool can't be ticked as a launch language (precondition "content target").
 
 ### Announcement texts
-Per language, written by plan 95 task 2 (`task 707`, 2026-10-13); posted by the gamemaster on launch day (Community → Events & Announcements, one text per Steam language). Workers never post.
+Per language, written by plan 95 task 2 (`task 707`, 2026-10-13); posted by the developer on launch day (Community → Events & Announcements, one text per Steam language). Workers never post.
 - Placeholders: `<n_es>`, `<n_en>`, `<n_de>` = questions per language from `qgen report` (filled by `task 708: Release candidate v1.0.0`); `<thread>` = the pinned report thread's title per language (ST-5, `task 701`; decision 93 pending: if it picks e-mail over a thread, the report paragraph changes with it).
 - Facts as of 2026-10-13: launch modes = gamemaster mode and «Solo o en grupo» (plan 13; multiplayer later, milestone 11 out of scope); names per D-50 (German: no localized name); UI words from `app/client/src/locales/`; AI wording from `plans/17-publishing.md` "AI disclosure" (`17a` has no AI text yet: if PUB-9's final text differs, follow it).
 - No marketing claims, no links outside Steam. Body in Steam's BBCode. Forum name («Discusiones», "Diskussionen"): use Steam's own label in that language.
@@ -313,7 +313,7 @@ Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M),
 ```
 
 ### First week
-- Gamemaster daily: Community Hub discussions (every report thread) and the store reviews.
+- Developer daily: Community Hub discussions (every report thread) and the store reviews.
 - To pm:
   - question reports: paste the text into `qgen flag` (plan 93), or into a pm task if unsure;
   - bugs: steps to reproduce, version and pool hash from the credits screen, platform (Windows, Linux, Deck);
@@ -327,12 +327,12 @@ Texts for question reports sent to the report server (plan 103, written by task 
 
 ### Where it goes on Steam
 - Valve's public Steamworks docs name no privacy-policy field (checked 2026-10-13: the `partner.steamgames.com/doc` store, onboarding and marketing pages; "privacy policy" appears only as Steam's own policy in the Rules & Guidelines).
-- Steps for the gamemaster (before the build with «Enviar» goes to `default`):
+- Steps for the developer (before the build with «Enviar» goes to `default`):
   - Steamworks → app → Edit Store Page: look for a privacy-policy or EULA/legal field (tabs "Basic Info", "Special Configuration"); if one takes a URL: `https://github.com/rubenmoor/trivia/blob/main/PRIVACY.md`
   - in any case: Edit Store Page → "Description" → "About This Game", per language (English, Spanish – Latin America, Spanish – Spain, German): append the store text below as the last paragraph (heading in Steam's BBCode `[h2]`)
   - Preview, then Publish; the store review sees it with the next change
 - Plan 95's launch-day checklist checks it is on the page in every store language.
-- A full EU privacy notice may need the controller's name and contact; `PRIVACY.md` names the game's Steam Discussions as contact. Add an address there if the gamemaster wants one.
+- A full EU privacy notice may need the controller's name and contact; `PRIVACY.md` names the game's Steam Discussions as contact. Add an address there if the developer wants one.
 
 ### Store text
 English:

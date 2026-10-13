@@ -15,7 +15,7 @@ Sub-plan of [15](15-i18n.md). Translates everything on screen that isn't a quest
 - **Translation work:** Claude drafts the catalogs; a native speaker checks each launch language (playtest, not only a read-through).
 
 ## Mode names (Spanish, for the catalog)
-English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed; the rest are proposals for the gamemaster.
+English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed; the rest are proposals for the developer.
 - `gamemaster` Gamemaster mode → «Modo anfitrión» (proposal)
 - `solo` Alone or as group → «Solo o en grupo» (fixed)
 - `rr-coop` Round-robin co-op → «Por turnos en equipo» (proposal)
@@ -54,7 +54,7 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
 - [ ] LUI-6 Store page texts per language (with PUB-8). S5, not milestone 9 (S4). *Plan: pm plan 88 (`es`, `es-ES`, `en`, `de` in `17a-store-page.md`).*
 
 ## Playtest
-One native speaker per launch catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the gamemaster, plays the real game rather than reading the catalog. The answer goes into that language's pm decision "Playtest passed? (<lang>)"; fixes go to pm task 459 (pm decisions 62 `es`, 63 `es-ES`, 64 `en`, 65 `de`).
+One native speaker per launch catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the developer, plays the real game rather than reading the catalog. The answer goes into that language's pm decision "Playtest passed? (<lang>)"; fixes go to pm task 459 (pm decisions 62 `es`, 63 `es-ES`, 64 `en`, 65 `de`).
 
 - **Setup**: `trivia` (or `trivia-desktop`), media synced; browser/OS language set to the tester's language (`navigator.language`, e.g. `de-DE`, `es-ES`, `en-US`); `es` family: their own save, untouched.
 - **First start** (fresh save: move `state/game.json` aside, put it back afterwards):

@@ -20,7 +20,7 @@ Template:
 
 ## D-2: Scope fundamentals
 - Date: 2026-10-06
-- Context: Initial brief from the gamemaster.
+- Context: Initial brief from the developer.
 - Decision: Local-only private game. Family vs. gamemaster. 12 questions to victory. A background image for each question, sourced primarily from Wikimedia. A reusable pool with burned tracking. The question pool is built first.
 - Consequences: No hosting, accounts, or publishing concerns. Content tooling comes first.
 
@@ -47,57 +47,57 @@ Template:
 
 ## D-6: Audience, language and difficulty scale
 - Date: 2026-10-06
-- Context: OQ-6, OQ-7 and OQ-9 were open. The gamemaster described the players.
+- Context: OQ-6, OQ-7 and OQ-9 were open. The developer described the players.
 - Decision: The players are two Colombian kids, aged 11 and 12. All content is in Spanish, Colombian usage ("bombillo", "gripa", "crispetas"), with Colombian references where natural. Difficulty is a 1–10 scale: 1 = a 6-year-old can answer it, 10 = a 16-year-old can answer it. The first pool targets ~120 questions (10 games of 12).
 - Consequences: Distractors and hints must suit kids. The pool is spread evenly over the 10 levels (12 per level) until OQ-3 decides the ladder curve.
 - Supersedes / related: OQ-6, OQ-7, OQ-9; QP-1, QP-3
 
 ## D-7: Question format
 - Date: 2026-10-06
-- Context: OQ-5 asked about formats. The gamemaster specified the shape of every question.
-- Decision: Every question is multiple choice: one correct answer plus exactly three wrong answers (the client shuffles them). Every question has exactly three hints, ordered from vague to strong. Every question has one media item: mostly a decorative image, sometimes audio or video. Media with role `essential` is part of the question ("Escucha: ¿qué instrumento suena?"); `decorative` media must not give the answer away. Questions are AI-drafted and start with `status: "draft"` until the gamemaster approves them.
+- Context: OQ-5 asked about formats. The developer specified the shape of every question.
+- Decision: Every question is multiple choice: one correct answer plus exactly three wrong answers (the client shuffles them). Every question has exactly three hints, ordered from vague to strong. Every question has one media item: mostly a decorative image, sometimes audio or video. Media with role `essential` is part of the question ("Escucha: ¿qué instrumento suena?"); `decorative` media must not give the answer away. Questions are AI-drafted and start with `status: "draft"` until the developer approves them.
 - Consequences: Schema in `02-question-pool.md`. Image sourcing (`06-images.md`) widens to audio and video. How hints are used in play is open (OQ-15).
 - Supersedes / related: OQ-5, OQ-10; QP-1, QG-1, QG-2
 
 ## D-8: Question description
 - Date: 2026-10-06
-- Context: The gamemaster wants each question introduced in the style of "You Don't Know Jack" 1 and 2.
-- Decision: Every question has a `description`: one full, humorous Spanish sentence that relates to the question's content. It doesn't have to make perfect sense, and it must not give the answer away outright. The TV shows it before the question, instead of the category. `category` stays in the data for balancing and reports. The first 120 questions are approved by the gamemaster.
+- Context: The developer wants each question introduced in the style of "You Don't Know Jack" 1 and 2.
+- Decision: Every question has a `description`: one full, humorous Spanish sentence that relates to the question's content. It doesn't have to make perfect sense, and it must not give the answer away outright. The TV shows it before the question, instead of the category. `category` stays in the data for balancing and reports. The first 120 questions are approved by the developer.
 - Consequences: Schema in `02-question-pool.md` gains `description`. The question screen (04) shows the description, not the category.
 - Supersedes / related: D-7; QP-1, QP-5, UI-2
 
 ## D-9: Correction to D-8 — first batch not yet approved
 - Date: 2026-10-06
-- Context: D-8 recorded the first 120 questions as approved. The gamemaster is keeping them but has not reviewed them yet.
-- Decision: All 120 questions stay `status: "draft"` until the gamemaster reviews them (QP-10).
+- Context: D-8 recorded the first 120 questions as approved. The developer is keeping them but has not reviewed them yet.
+- Decision: All 120 questions stay `status: "draft"` until the developer reviews them (QP-10).
 - Consequences: None beyond the status field.
 - Supersedes / related: D-8 (approval part only); QP-5, QP-10
 
 ## D-10: Question pipeline runs on `claude -p`
 - Date: 2026-10-06
-- Context: Large batches need code (07, "Strategy for large batches"). The gamemaster chose Claude Code's non-interactive mode over the Claude API.
+- Context: Large batches need code (07, "Strategy for large batches"). The developer chose Claude Code's non-interactive mode over the Claude API.
 - Decision: The question pipeline is a Python script (standard library only) in `tools/`. Its writing steps (fit table, drafting, rating, fact-check) call `claude -p` with a prompt file from `tools/prompts/` and `--json-schema` for structured output. Each call is a fresh session, so the rating pass never grades its own writing. The mechanical steps (dedupe, merge, validate, report) are plain code. Intermediate results live in `work/<run>/` so a run can resume.
-- Consequences: No API key; usage counts against the gamemaster's Claude subscription, and long runs may hit usage limits. The schema gains `subcategory`, `style`, `quality`, `fact_checked`, `needs_media` (QG-7). Generation needs internet; game night does not.
+- Consequences: No API key; usage counts against the developer's Claude subscription, and long runs may hit usage limits. The schema gains `subcategory`, `style`, `quality`, `fact_checked`, `needs_media` (QG-7). Generation needs internet; game night does not.
 - Supersedes / related: QG-4, QG-5, QG-7, QP-7
 
 ## D-11: Review decisions
 - Date: 2026-10-06
-- Context: OQ-18 and OQ-19 asked how the review tool's three actions relate. The gamemaster clarified that reject is for unsalvageable questions.
+- Context: OQ-18 and OQ-19 asked how the review tool's three actions relate. The developer clarified that reject is for unsalvageable questions.
 - Decision: Approve = good as it is. Reject = unsalvageable, never reworked, no reason asked. Feedback = salvageable but needs changes; it is its own decision and sets `status: "needs_work"` for a later rework step.
 - Consequences: Rejected questions are final. Only `needs_work` questions enter `qgen.py rework`. Feedback text is the main signal for tuning prompts before scaling up.
 - Supersedes / related: OQ-18, OQ-19; RV-1, QG-11
 
 ## D-12: Dev environment via `shell.nix`
 - Date: 2026-10-06
-- Context: The gamemaster's machine runs NixOS, without a global Node install. The Svelte client (D-5) needs Node to build.
+- Context: The developer's machine runs NixOS, without a global Node install. The Svelte client (D-5) needs Node to build.
 - Decision: A `shell.nix` at the repo root provides Node 22 and Python 3. Client commands run inside `nix-shell`. Game night only needs Python and the built client.
 - Consequences: No global installs. Contributors without Nix just need Node 22+ and Python 3.
 - Supersedes / related: D-5; ARC-3, RV-2
 
 ## D-13: Media from Wikimedia Commons only, sourced before review
 - Date: 2026-10-06
-- Context: OQ-16 asked where audio and video come from. Songs and film clips aren't on Commons, and sourcing them by hand is too much work. The gamemaster wants to judge questions together with their media.
-- Decision: All media (images, audio, video) comes from Wikimedia Commons and is cached locally. No questions that depend on songs or film clips. Videos only when Commons has a suitable one, otherwise an image. Media candidates are fetched before the gamemaster review and picked in the review tool.
+- Context: OQ-16 asked where audio and video come from. Songs and film clips aren't on Commons, and sourcing them by hand is too much work. The developer wants to judge questions together with their media.
+- Decision: All media (images, audio, video) comes from Wikimedia Commons and is cached locally. No questions that depend on songs or film clips. Videos only when Commons has a suitable one, otherwise an image. Media candidates are fetched before the developer review and picked in the review tool.
 - Consequences: Pipeline order changes: media comes before review (07, 06). The generator must not produce song or film-clip questions. q-0072 switches to an image; q-0067 depends on finding a Commons vallenato recording.
 - Supersedes / related: OQ-16; IMG-1..IMG-8, QG-12, RV-*
 
@@ -110,20 +110,20 @@ Template:
 
 ## D-15: Decorative images shown blurred with a question mark
 - Date: 2026-10-06
-- Context: In the pilot review, a decorative image (paper lanterns for a question about the uchuva) looked like a hint and confused the gamemaster. Decorative images only set the mood and need not relate closely to the question.
+- Context: In the pilot review, a decorative image (paper lanterns for a question about the uchuva) looked like a hint and confused the developer. Decorative images only set the mood and need not relate closely to the question.
 - Decision: While a question is shown, decorative images (media with role `decorative`, and the background of audio questions) are covered by an overlay over the whole image: blurred, slightly darkened, with a big question mark in the centre. Essential media is shown sharp. The review tool previews decorative images the same way (hover shows them sharp; the alternatives grid stays sharp for judging).
 - Consequences: The question screen (04) and the review tool share this look. Decorative images no longer need to avoid being misread as clues.
 - Supersedes / related: D-7, D-14; UI-2
 
 ## D-16: Lessons from the pilot
 - Date: 2026-10-06
-- Context: The gamemaster reviewed all 80 pilot questions (QG-11). Results are in `07-question-generation.md`, "Pilot results".
+- Context: The developer reviewed all 80 pilot questions (QG-11). Results are in `07-question-generation.md`, "Pilot results".
 - Decision:
   - No quality-score filter: `merge --min-score` defaults to 0. Only hard checks drop questions: `correct`, `unambiguous`, `no_giveaway` (new) below 4, a failed fact-check, duplicates.
   - The style "guess the person from three clues" is dropped.
   - Superlatives ask about the real-world record holder, never "which of these four is the biggest".
   - Essential media only for things with clear, recognisable Commons photos or sounds; never to convey something abstract (a rhythm from a photo).
-  - The house style carries the gamemaster's difficulty corrections as calibration examples.
+  - The house style carries the developer's difficulty corrections as calibration examples.
 - Consequences: Prompts changed (`house-style.md`, `rate.md`), `question-styles.txt` changed, `qgen.py` hard checks extended. Scaling up is worth it (91 % usable); the target pool size is still open (OQ-17).
 - Supersedes / related: QG-11; D-10
 
@@ -143,28 +143,28 @@ Template:
 
 ## D-19: Two-level categories in `data/categories.json`
 - Date: 2026-10-06
-- Context: There were two category lists: 10 main categories in `data/questions.json` (every question had one) and ~140 subcategories in `categories.txt` (only generated questions had one; `fit` asked Claude for the main category). The gamemaster wants one list, and statistics per broad category.
+- Context: There were two category lists: 10 main categories in `data/questions.json` (every question had one) and ~140 subcategories in `categories.txt` (only generated questions had one; `fit` asked Claude for the main category). The developer wants one list, and statistics per broad category.
 - Decision: `data/categories.json` is the only category list: 24 broad categories (`slug`, `name`), each with its subcategories, in display order. Every question stores only `subcategory`; its broad category is looked up from the file. The `categories` map in `questions.json`, the `category` field on questions and `categories.txt` are removed. `fit` no longer maps subcategories; it only scores styles.
 - Consequences: The old 10 categories (and "12 per category" balancing of the first 120) are gone. New subcategories are added to the file under a broad category before `fit` can use them. `qgen.py validate` checks every subcategory against the file. Stats (per broad category, per difficulty) are a page of the web client.
 - Supersedes / related: OQ-8, QP-4, QP-11, QP-12; QG-7
 
 ## D-20: Core rules — 12 in a row, choose by description, wrong ends the game
 - Date: 2026-10-06
-- Context: OQ-1..OQ-3 were open. The gamemaster described the game as it should play on the TV.
+- Context: OQ-1..OQ-3 were open. The developer described the game as it should play on the TV.
 - Decision: The game has 12 levels, from easiest (1) to hardest (12), and all 12 must be answered in a row. Before each level, the players choose one of 4 questions by their `description`. A wrong final answer ends the game. Only the question actually asked is burned.
 - Consequences: Each level needs 4 candidates at a matching difficulty (GF-2), so the pool must hold more than 12 questions per difficulty band over several games. No lives or score. The undo in the admin overlay is the safety net for misclicks.
 - Supersedes / related: OQ-1, OQ-2, OQ-3; GF-1, GF-2, UI-*
 
 ## D-21: Screen states, transitions and sound
 - Date: 2026-10-06
-- Context: The gamemaster wants a suspenseful show: music, a sound on every transition, a growing stack as progress, a lock-in mechanic and fireworks.
+- Context: The developer wants a suspenseful show: music, a sound on every transition, a growing stack as progress, a lock-in mechanic and fireworks.
 - Decision: The screens are Start, Level (the stack), Select (4 cards), Question, Correct, Wrong and Victory, with an admin overlay on `Esc` over every screen. Every state change uses one transition routine: music fades out, a sound effect plays, the screen fades to black, then fades back in, and the music returns. Suspenseful music loops at low volume and is off while question media plays. Locking in an answer moves a big padlock away to reveal «Respuesta final». A correct answer gets a fanfare and one of several canvas fireworks overlays. A wrong answer gets a sad sound, a dark animation, a consolation message and «Volver al inicio». Sound is required, not optional. Audio uses the Web Audio API and fireworks use a plain canvas, with no new dependencies.
 - Consequences: The first click on Start unlocks audio and autoplay. Sound assets ship with the client (OQ-20). UI-5 is replaced by UI-7..UI-14.
 - Supersedes / related: D-8, D-15; GF-3, UI-*, GM-2
 
 ## D-22: UI details — unlocking, three music intensities, difficulty ranges, the tower
 - Date: 2026-10-06
-- Context: The gamemaster answered OQ-20..OQ-24 from the first UI plan (D-21) and added the music intensities.
+- Context: The developer answered OQ-20..OQ-24 from the first UI plan (D-21) and added the music intensities.
 - Decision:
   - All audio that is part of the UI (music, effects) is committed to the repo, with `CREDITS.md`. Question media stays a gitignored cache (D-17).
   - A locked-in answer can be unlocked before the final answer. This plays the lock-in animation in reverse (the padlock goes back in front of «Respuesta final»), and afterwards no answer is locked in.
@@ -178,7 +178,7 @@ Template:
 
 ## D-23: Prompt changes after the first-120 review
 - Date: 2026-10-06
-- Context: The gamemaster reviewed the revised first 120 (QG-13): 117 approved, 3 rejected, both proposed drops overruled, 10 difficulty corrections (07, "First-120 review results").
+- Context: The developer reviewed the revised first 120 (QG-13): 117 approved, 3 rejected, both proposed drops overruled, 10 difficulty corrections (07, "First-120 review results").
 - Decision:
   - The tone rule no longer bans famous historical events or films that involve deaths (Titanic, the end of WWII). Only questions *about* deaths, suffering or gore are out.
   - A question's clue must identify the answer in the real world, not just among the four options ("baila con velas" → cumbia and "raqueta y pelotica amarilla" → tennis fail). The rater scores this under `unambiguous`.
@@ -188,14 +188,14 @@ Template:
 
 ## D-24: Illustrative images
 - Date: 2026-10-06
-- Context: After the first-120 review, the gamemaster noted that decorative images don't matter (any mood picture passed), but a picture that actually relates to the question would be better, as long as it doesn't give the answer away.
+- Context: After the first-120 review, the developer noted that decorative images don't matter (any mood picture passed), but a picture that actually relates to the question would be better, as long as it doesn't give the answer away.
 - Decision: A new media role `illustrative`: the image shows something that belongs to the question (its subject, a place or object it mentions, the setting) without showing the answer or ruling options in or out. Unlike decorative images (D-15), illustrative images are shown sharp, without the question-mark overlay. Decorative stays for questions where any related image would give the answer away. The house style prefers illustrative over decorative where it is safe.
 - Consequences: `role` gains `illustrative` in schema, `qgen.py`, `media.py` (same size filter as decorative) and the review tool. The approved first-120 questions get illustrative images where possible (IMG-14), picked by Claude from the thumbnails.
 - Supersedes / related: D-15; IMG-14, B-4
 
 ## D-25: Playable skeleton with visible placeholders
 - Date: 2026-10-06
-- Context: The gamemaster wants a playable game soon, without the polish of `04-ui-tv-display.md` (sound, tower animation, fireworks, quirky cards). The missing pieces must be obvious, both on screen and in the code.
+- Context: The developer wants a playable game soon, without the polish of `04-ui-tv-display.md` (sound, tower animation, fireworks, quirky cards). The missing pieces must be obvious, both on screen and in the code.
 - Decision:
   - **Routes:** the game is the start page `/`; the review tool moves to `/review` (`/review?batch=pilot`); the stats pages stay at `/stats/…`.
   - **State:** game state and burned questions live in `data/game.sqlite` (D-4). The file is gitignored: it is binary and changes every game. Backing it up is still B-2.
@@ -208,7 +208,7 @@ Template:
 
 ## D-26: Jokers
 - Date: 2026-10-06
-- Context: OQ-4 asked about jokers or lifelines. The gamemaster wants five jokers, each with UI, an animation for the action and its own transitions.
+- Context: OQ-4 asked about jokers or lifelines. The developer wants five jokers, each with UI, an animation for the action and its own transitions.
 - Decision:
   - Five jokers, played on the Question screen until «Respuesta final»: **Pista** (reveal a hint), **Saltar** (skip back to Select, optionally purging the question's broad category for the rest of the game), **Más fácil** (swap for an easier question of the same broad category), **Otro tema** (swap for a question of similar difficulty from a broad category the players choose), **Francotirador** (target one answer: a wrong one is revealed as wrong; the right one means the level repeats with fresh cards, not a lost game).
   - The server is the referee for jokers too (D-25): it decides availability, carries them out and never sends the correct answer or unrevealed hints. A joker is only available if the matching (GF-2) can still fill every later level with 4 cards afterwards.
@@ -231,7 +231,7 @@ Template:
 ## D-28: Players, and burning per player
 - **Superseded in part by D-82** (the burn rules → seen counters; player names stay).
 - Date: 2026-10-06
-- Context: With unlimited jokers, a game burns many more questions. The gamemaster wants every question the players have seen burned for good, but only for whoever played.
+- Context: With unlimited jokers, a game burns many more questions. The developer wants every question the players have seen burned for good, but only for whoever played.
 - Decision:
   - A new game starts by asking for the **player name** (pick a known one or type a new one). Players live in `data/game.sqlite`.
   - A question is **burned for the player** as soon as it was shown: answered, skipped (joker or admin), swapped away, or lost to a Snipe hit. Descriptions on cards that weren't picked don't count. Other players can still get the question.
@@ -242,16 +242,16 @@ Template:
 
 ## D-29: Visual design direction
 - Date: 2026-10-06
-- Context: The playable skeleton (D-25) uses huge type and opaque bands over the images. The gamemaster wants a real look that feels like a game.
+- Context: The playable skeleton (D-25) uses huge type and opaque bands over the images. The developer wants a real look that feels like a game.
 - Decision:
   - Text on screen is **much smaller** than in the skeleton: one size unit that scales with the screen width, about 38 px for the question at 1080p instead of 65 px.
   - **Every element over the image is semi-transparent** (frosted glass panels, no full-width bands), so the picture stays visible.
   - Colour scheme: **night blue and slate gray**, with **amber** for stakes and commitment, **sky blue** for focus, **mint green** for right and **coral red** for wrong. Magenta stays reserved for placeholders.
-  - A playful, opinionated game-show style ("Noche de concurso"): rounded display font, chunky arcade buttons, tilted paper cards, bouncy motion. Details are a proposal in `10-visual-design.md`, for the gamemaster to confirm (VD-1).
+  - A playful, opinionated game-show style ("Noche de concurso"): rounded display font, chunky arcade buttons, tilted paper cards, bouncy motion. Details are a proposal in `10-visual-design.md`, for the developer to confirm (VD-1).
 - Consequences: New plan `10-visual-design.md` (VD-1..VD-9) owns the look; `04-ui-tv-display.md` keeps screens and behaviour. Two font files ship with the client (OFL). The game's name is open (OQ-28).
 - Supersedes / related: D-15, D-21, D-25; UI-1, UI-2, UI-3, UI-6
 
-## D-30: Gamemaster answers: no timer, one screen, joker names, game name, setup
+## D-30: Developer answers: no timer, one screen, joker names, game name, setup
 - Date: 2026-10-06
 - Context: The open questions blocking M1–M6 (OQ-4, OQ-8, OQ-11, OQ-12, OQ-13, OQ-28, GM-2, JK-1, VD-1).
 - Decision:
@@ -262,8 +262,8 @@ Template:
   - **No family-specific questions** (OQ-8).
   - The game is called **«¡Trivia!»** (OQ-28).
   - **Setup:** a computer connected to the TV via HDMI (OQ-11); internet is available during play (OQ-12), though the game still runs from the local media cache (D-17).
-  - **Visual design:** the gamemaster confirms it from the implementation, not from a mock-up (VD-1).
-- Consequences: GF-1, GM-1, GM-2, GM-3 close; GM-4 is the admin overlay (UI-13). Joker names change in 03, 04, 09, 10. VD-2..VD-8 go ahead; VD-1 is the gamemaster's review of the result.
+  - **Visual design:** the developer confirms it from the implementation, not from a mock-up (VD-1).
+- Consequences: GF-1, GM-1, GM-2, GM-3 close; GM-4 is the admin overlay (UI-13). Joker names change in 03, 04, 09, 10. VD-2..VD-8 go ahead; VD-1 is the developer's review of the result.
 - Supersedes / related: D-26 (joker names), D-29; OQ-4, OQ-8, OQ-11, OQ-12, OQ-13, OQ-28; GF-1, GM-1..GM-3, JK-1, VD-1
 
 ## D-31: Draft difficulties follow the level ranges
@@ -273,42 +273,42 @@ Template:
 - Consequences: `LEVEL_WEIGHTS` in `qgen.py` changes; runs drafted before this keep their difficulties. The calibration examples still apply, so high targets must be hard for these players, not obscure.
 - Supersedes / related: D-22; 07 "Difficulty target"; OQ-17
 
-## D-32: Batch-4 is reviewed by Claude, not the gamemaster
+## D-32: Batch-4 is reviewed by Claude, not the developer
 - Date: 2026-10-06
-- Context: The gamemaster's review time is the bottleneck (07). The first-120 review approved 117 of 120 and every decorative pick was the first suggestion (D-23). The gamemaster asked for the next batch to be approved automatically.
-- Decision: For batch-4, Claude does the gamemaster's review (step 8) and picks the media. A question is **approved** unless one of these is true; then it becomes `needs_work` with the reason as feedback:
+- Context: The developer's review time is the bottleneck (07). The first-120 review approved 117 of 120 and every decorative pick was the first suggestion (D-23). The developer asked for the next batch to be approved automatically.
+- Decision: For batch-4, Claude does the developer's review (step 8) and picks the media. A question is **approved** unless one of these is true; then it becomes `needs_work` with the reason as feedback:
   - The fact-check is uncertain, or the rater's notes name a defect that is still in the text (a wrong fact, a second defensible answer, a hint that points to a wrong option, a giveaway).
   - Commons has no adequate media. *Essential* media must show the thing clearly and must not name the answer (Claude looks at the candidate). *Illustrative* or *decorative* media must fit the topic and must not give the answer away. Audio questions also need a usable background picture.
   - Low soft scores (dry, weak distractors, difficulty off) are **not** a reason (D-16).
-- Consequences: The review record reads `{"decision": ..., "feedback": ..., "reviewed_on": ..., "reviewer": "llm", "model": ...}` (D-33), so auto-reviews can be told apart. D-7 ("the gamemaster reviews every one") still holds for other batches. The gamemaster can still open `/review?batch=batch-4` and override.
+- Consequences: The review record reads `{"decision": ..., "feedback": ..., "reviewed_on": ..., "reviewer": "llm", "model": ...}` (D-33), so auto-reviews can be told apart. D-7 ("the developer reviews every one") still holds for other batches. The developer can still open `/review?batch=batch-4` and override.
 - Supersedes / related: D-7, D-16, D-23, D-33; QG-17
 
 ## D-33: Human and LLM reviews both make a question playable
 - Date: 2026-10-07
-- Context: D-32 lets Claude review batch-4. The pool had no way to say who reviewed a question, and the gamemaster may still want to look at LLM-approved questions later.
+- Context: D-32 lets Claude review batch-4. The pool had no way to say who reviewed a question, and the developer may still want to look at LLM-approved questions later.
 - Decision: The `review` record gets `reviewer: "human" | "llm"`, plus `model` for an LLM review. `status` stays the one field that decides play: `approved` is playable whoever approved it. A human review of an LLM-reviewed question replaces it and keeps the LLM's review in `review.previous`. The review tool treats a question as open until a human has reviewed it, so LLM-reviewed questions can be checked later at any pace.
-- Consequences: Existing reviews are migrated: pilot and first-120 get `reviewer: "human"`; batch-3 (116) gets `reviewer: "llm"`, `model: "claude-opus-5-5"`, because a Claude session approved it, not the gamemaster (commit 0eaa35e). Batch-4 is written as LLM reviews (D-32). `validate` checks the new fields. `GET /api/questions` filters by `reviewer` (`human`, `llm`, `none`). Selection (`tools/selection.py`) doesn't change.
-- Supersedes / related: D-7 (the gamemaster no longer has to review every question before play), D-11, D-32; QP-15
+- Consequences: Existing reviews are migrated: pilot and first-120 get `reviewer: "human"`; batch-3 (116) gets `reviewer: "llm"`, `model: "claude-opus-5-5"`, because a Claude session approved it, not the developer (commit 0eaa35e). Batch-4 is written as LLM reviews (D-32). `validate` checks the new fields. `GET /api/questions` filters by `reviewer` (`human`, `llm`, `none`). Selection (`tools/selection.py`) doesn't change.
+- Supersedes / related: D-7 (the developer no longer has to review every question before play), D-11, D-32; QP-15
 
 ## D-34: Plan a Steam release alongside the family game
 - Date: 2026-10-07
-- Context: The gamemaster wants the game packaged, installable and sold or given away on Steam, not only run natively on Windows. D-2 and `00-vision.md` list publishing and monetisation as non-goals.
+- Context: The developer wants the game packaged, installable and sold or given away on Steam, not only run natively on Windows. D-2 and `00-vision.md` list publishing and monetisation as non-goals.
 - Decision: A Steam release is planned as its own track: master plan `11-steam.md`, sub-plans 12–18. The family game stays the priority. Changes that don't change how the family plays (the TypeScript engine, mouse support, string extraction, the joker budget with "unlimited" as the default, the license audit) can start now. Everything else waits for its open question (OQ-29..OQ-37). The current way of playing stays as the gamemaster mode.
 - Consequences: D-2's "no publishing concerns" and the non-goals in `00-vision.md` no longer hold for the Steam track. New task prefixes: ST, PORT, MD, IN, I18N, LUI, QT, RG, CT, PUB, SW. The shell, the default mode and the content target are not decided yet.
 - Supersedes / related: D-2 (scope, in part); D-3, D-4, D-25 (revisited by `12-client-engine.md`); OQ-29..OQ-37; superseded in part by D-59 (no family mode)
 
 ## D-35: The repo separates what ships from the tooling; the flake packages both
 - Date: 2026-10-07
-- Context: Game, review tool, pipeline and data lived side by side: `server/main.py` served the game and the authoring API, the game imported `tools/`, the client mixed game and review pages, and the game read the source pool with its review notes. The Steam track (D-34) needs a clean shipped part, and the gamemaster wants the pipeline's tools (including Claude and ImageMagick) packaged.
+- Context: Game, review tool, pipeline and data lived side by side: `server/main.py` served the game and the authoring API, the game imported `tools/`, the client mixed game and review pages, and the game read the source pool with its review notes. The Steam track (D-34) needs a clean shipped part, and the developer wants the pipeline's tools (including Claude and ImageMagick) packaged.
 - Decision: Two top-level trees. `app/` is what ships: game server, game client, `categories.json` and `pool.json` (an export of approved questions with play fields only). `authoring/` never ships: pipeline, prompts, review/stats/print pages and their server, the source pool. `authoring/` may import from `app/`, never the reverse. The flake provides `packages.app`, `packages.authoring` (with `claude-code`, the one allowed unfree package, and ImageMagick) and a dev shell with everything. Game state and the media cache are gitignored at `state/` and `media/`.
 - Consequences: Paths change everywhere (`19-repo-layout.md`). The game runs on port 8000, the authoring server on 8001. `qgen.py export` (PORT-6, pulled forward) must run after pool changes; `validate` fails when the export is stale. Supersedes the file layout in `01-architecture.md`.
 - Supersedes / related: D-3, D-4, D-5, D-17, D-18, D-25 (layout only); D-34; PORT-6
 
 ## D-36: An LLM makes a batch with one command, `qgen batch`
 - Date: 2026-10-07
-- Context: Batch-4's Claude review (D-32) worked, but it was done by hand in an interactive session: choosing subcategories, running steps, building contact sheets, judging images and writing review records were all improvised. The gamemaster wants the process unambiguous, with no room for variation by the LLM.
+- Context: Batch-4's Claude review (D-32) worked, but it was done by hand in an interactive session: choosing subcategories, running steps, building contact sheets, judging images and writing review records were all improvised. The developer wants the process unambiguous, with no room for variation by the LLM.
 - Decision: `qgen batch` runs the whole pipeline in a fixed order with fixed rules (run name, subcategory choice, all steps, review, media pick, export, validate, sync, report). The review is a pipeline step: one `claude -p` call per question with `prompts/review.md` and the contact sheet of its media candidates, answering by JSON schema. An LLM operating the pipeline follows `authoring/RUNBOOK.md` only: run `qgen batch`, rerun it after a usage limit, commit the listed paths. It doesn't edit the pool, pick media or change prompts by hand.
-- Consequences: The interactive procedure of batch-4 is retired. Prompt changes are code changes reviewed by the gamemaster. D-32's criteria live in `prompts/review.md`.
+- Consequences: The interactive procedure of batch-4 is retired. Prompt changes are code changes reviewed by the developer. D-32's criteria live in `prompts/review.md`.
 - Supersedes / related: D-10, D-16, D-32, D-33; QG-17; amended by D-83 (`qgen neutralize`), D-87 (`qgen batch --translate`)
 
 ## D-37: New questions start from stored concept lists and multi-axis styles
@@ -320,43 +320,43 @@ Template:
 
 ## D-38: Four age groups on one shared difficulty scale; the pipeline writes for a focus group
 - Date: 2026-10-07
-- Context: The project was built for one audience, two Colombian kids aged 11 and 12 (D-6), and the house style, prompts and concept lists said so. The gamemaster wants four age groups in the game, with young teens as the current focus.
+- Context: The project was built for one audience, two Colombian kids aged 11 and 12 (D-6), and the house style, prompts and concept lists said so. The developer wants four age groups in the game, with young teens as the current focus.
 - Decision: Four age groups in `app/data/age-groups.json`: kids (6–10), young teens (11–14), young adults (15–22), adults (23+). Difficulty stays one number per question on one shared scale, extended from 1–10 to 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. The focus group (`young_teens`, window 1–10) is set in the same file; the pipeline writes for it, and no prompt names a fixed age. Concepts carry `known_at` (1–15) instead of `familiarity` for 11–12-year-olds. Content stays family-friendly in every group.
 - Consequences: The existing pool keeps its difficulties (the old scale is the shared scale's 1–10). The game is unchanged until AG-7 adds the choice of group. The other groups' windows are a draft. `21-age-groups.md` has the tasks.
 - Supersedes / related: D-6 (audience and scale; Spanish and Colombian usage stay), D-31, D-37; OQ-36
 
 ## D-39: Bundles: every question is in exactly one, switched on or off before a session
 - Date: 2026-10-07
-- Context: Plan 15c planned a `region` field so that Colombian questions become an opt-in pack. The gamemaster wants the general idea: packs of questions (regional like Colombia, thematic like sports) that players switch on or off before a session, with a base pack that is always on.
-- Decision: Bundles are listed in `app/data/bundles.json` (`base`, `colombia` for now). Every question has exactly one `bundle`, default `base`. Bundles add questions and don't own a topic: a sports question can be in `base`, and well-known facts about Colombia stay in `base`; only questions that need a real connection to Colombia go into `colombia`. `base` is always on. Membership is decided by each bundle's rule: the drafter picks it for new questions, an LLM pass proposes it for the existing pool, the gamemaster corrects it in the review tool.
+- Context: Plan 15c planned a `region` field so that Colombian questions become an opt-in pack. The developer wants the general idea: packs of questions (regional like Colombia, thematic like sports) that players switch on or off before a session, with a base pack that is always on.
+- Decision: Bundles are listed in `app/data/bundles.json` (`base`, `colombia` for now). Every question has exactly one `bundle`, default `base`. Bundles add questions and don't own a topic: a sports question can be in `base`, and well-known facts about Colombia stay in `base`; only questions that need a real connection to Colombia go into `colombia`. `base` is always on. Membership is decided by each bundle's rule: the drafter picks it for new questions, an LLM pass proposes it for the existing pool, the developer corrects it in the review tool.
 - Consequences: `bundle` is a play field (exported). The game plays every bundle until BN-6 adds the choice. 15c's `region` field (RG-1, RG-2) is replaced by bundles. `22-bundles.md` has the tasks.
 - Supersedes / related: 15c (region model); D-28, D-36, D-38
 
 ## D-40: No focus group: the pipeline can write across the whole scale
 - Date: 2026-10-07
-- Context: D-38 has the pipeline write only for the focus group (young teens, 1–10), so nothing aims at 11–15. The gamemaster wants questions across the whole difficulty range now, before per-group batches (AG-8).
+- Context: D-38 has the pipeline write only for the focus group (young teens, 1–10), so nothing aims at 11–15. The developer wants questions across the whole difficulty range now, before per-group batches (AG-8).
 - Decision: `"focus": null` in `app/data/age-groups.json` means no focus. `draft` then spreads target difficulties evenly over the whole scale 1–15, and the prompts say that each question is written for the groups whose window contains its difficulty. `focus` only steers the pipeline; the game plays young teens until AG-7. `qgen batch` still takes no arguments (D-36).
 - Consequences: Batches made without a focus add questions at 11–15 that the game doesn't play yet. Even targets are temporary; `21-age-groups.md` proposes a demand-based distribution for AG-7/AG-8.
 - Supersedes / related: D-31, D-36, D-38; AG-8, AG-10
 
 ## D-41: A batch writes for one bundle, named by the command; bundles have their own taxonomy
 - Date: 2026-10-07
-- Context: Under D-39 the drafter picks each question's bundle, so a batch over the subcategories with the fewest approved questions mixes `base` and `colombia` questions without anyone asking for `colombia` (batch-6: 13 of its 30 subcategories are Colombian). The gamemaster wants bundles to be deliberate.
+- Context: Under D-39 the drafter picks each question's bundle, so a batch over the subcategories with the fewest approved questions mixes `base` and `colombia` questions without anyone asking for `colombia` (batch-6: 13 of its 30 subcategories are Colombian). The developer wants bundles to be deliberate.
 - Decision: `qgen batch` writes `base` questions by default; questions for another bundle are made only with the bundle named on the command (`qgen batch --bundle <id>`). A separate command creates an empty bundle, which is set up with its own categories, subcategories and concept lists, and possibly its own question axes, independent of `base`'s.
 - Consequences: The drafter no longer picks a bundle (BN-4 is undone by BN-8). The RUNBOOK's "no arguments" (D-36) gets one exception, `--bundle`, used only when the user names a bundle. `22-bundles.md` has the design and tasks BN-8..BN-12; open points OQ-41..OQ-44. Not implemented yet: batch-6 still follows D-39.
 - Supersedes / related: D-39 (who picks the bundle), D-36, D-37, D-19
 
 ## D-42: The start page offers LLM approvals for human review; open work comes first
 - Date: 2026-10-09
-- Context: 293 approved questions have only an LLM review (D-33). The authoring start page (08, RV-12..RV-17) has to say whether they are the gamemaster's work (OQ-45).
-- Decision: They are an option, not a to-do. The start page links to a queue of questions only an LLM has approved, for all batches and per batch, below the queues that need the gamemaster: `needs_work`, unreviewed drafts, missing media and unchecked bundle proposals.
+- Context: 293 approved questions have only an LLM review (D-33). The authoring start page (08, RV-12..RV-17) has to say whether they are the developer's work (OQ-45).
+- Decision: They are an option, not a to-do. The start page links to a queue of questions only an LLM has approved, for all batches and per batch, below the queues that need the developer: `needs_work`, unreviewed drafts, missing media and unchecked bundle proposals.
 - Consequences: The review screen gets a `reviewer` filter (RV-13). A human review of an LLM-approved question works as today: it replaces the LLM review and keeps it in `review.previous` (D-33).
 - Supersedes / related: D-33, OQ-45
 
 ## D-43: Where a bundle's taxonomy lives; Colombian subcategories leave `base`
 - Date: 2026-10-08
 - Context: Batch-6 wrote `base` questions with a Colombian flavour because 27 of `base`'s subcategories are about Colombia (OQ-42). D-41 gives each bundle its own taxonomy but left the layout open (OQ-41).
-- Decision: `base`'s categories stay in `app/data/categories.json`. Another bundle's categories are in `app/data/bundles/<id>/categories.json`. They ship because the game's «Cambiazo» picker shows every bundle's categories while the game plays every bundle (until BN-6). Its concept lists are in `authoring/data/bundles/<id>/concepts/`, and its optional question axes in `authoring/data/bundles/<id>/question-axes.json` (otherwise `base`'s). Subcategory names and broad-category slugs are unique across all bundles, and question ids stay global. Concept names are unique within a bundle. The taxonomy steers generation; the question's `bundle` steers play. A question may keep a subcategory from another bundle's list (a well-known fact about Colombia stays in `base`). The 27 Colombian subcategories move into `colombia`'s own list (6 broad categories), and their concept lists move with them. Existing questions keep their bundle. A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the gamemaster moves the rest with `n` in the review tool.
+- Decision: `base`'s categories stay in `app/data/categories.json`. Another bundle's categories are in `app/data/bundles/<id>/categories.json`. They ship because the game's «Cambiazo» picker shows every bundle's categories while the game plays every bundle (until BN-6). Its concept lists are in `authoring/data/bundles/<id>/concepts/`, and its optional question axes in `authoring/data/bundles/<id>/question-axes.json` (otherwise `base`'s). Subcategory names and broad-category slugs are unique across all bundles, and question ids stay global. Concept names are unique within a bundle. The taxonomy steers generation; the question's `bundle` steers play. A question may keep a subcategory from another bundle's list (a well-known fact about Colombia stays in `base`). The 27 Colombian subcategories move into `colombia`'s own list (6 broad categories), and their concept lists move with them. Existing questions keep their bundle. A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n` in the review tool.
 - Consequences: `qgen batch` picks from `base`'s 113 subcategories; `qgen batch --bundle colombia` picks from the 27 Colombian ones. `qgen bundle new <id>` creates the entry and an empty `categories.json`. `validate` checks the uniqueness rules. The game's picker gets 6 more tiles (29 broad categories).
 - Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12
 
@@ -376,14 +376,14 @@ Template:
 
 ## D-46: Bigger batches: half the bundle's subcategories, 18 slots each
 - Date: 2026-10-08
-- Context: A batch of 30 subcategories × 4 slots gives about 80 merged questions (batch-6: 120 slots, 91 drafted, 82 merged, 66 approved). The gamemaster wants batches of 600–800 questions, while still writing for the thinnest subcategories first so coverage evens out.
+- Context: A batch of 30 subcategories × 4 slots gives about 80 merged questions (batch-6: 120 slots, 91 drafted, 82 merged, 66 approved). The developer wants batches of 600–800 questions, while still writing for the thinnest subcategories first so coverage evens out.
 - Decision: A batch takes half of its bundle's subcategories (rounded up), the ones with the fewest approved questions in that bundle (D-41), and drafts 18 slots per subcategory (`BATCH_SHARE`, `BATCH_SLOTS` in `qgen.py`). For `base` (113 subcategories) that is 57 × 18 = 1026 slots, about 700 merged questions at batch-6's yield (0.68).
 - Consequences: About 8× the per-question Claude calls of a 30-subcategory batch; a batch will usually hit the usage limit and be resumed (exit 75, RUNBOOK step 3). The draft prompt gets 18 slots in one call per subcategory. A `colombia` batch (27 subcategories → 14) gets about 250 slots, about 170 questions. Concept lists (150–250 concepts, top-up below 30 unused) cover 18 draws per batch.
 - Supersedes / related: D-36, D-37, D-41; PE-10, PE-14
 
 ## D-47: Flags from the game go through the game state; the authoring server turns them into reviews
 - Date: 2026-10-08
-- Context: The gamemaster wants to flag a question for review during a game night (it needs work), without leaving the game. The game must not write `authoring/data/` (D-35), and a question that leaves the pool while it is on screen breaks the running game.
+- Context: The developer wants to flag a question for review during a game night (it needs work), without leaving the game. The game must not write `authoring/data/` (D-35), and a question that leaves the pool while it is on screen breaks the running game.
 - Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
 - Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store). Decision 102: a flag records the game's question locale and the text shown (`locale`, `shown`); an en/de flag reviews that translation, not the source.
 - Supersedes / related: D-30, D-33, D-35; GM-5, RV-22; decision 102
@@ -397,7 +397,7 @@ Template:
 
 ## D-49: A `base` question uses a `base` subcategory
 - Date: 2026-10-09
-- Context: D-43 let a question keep a subcategory from another bundle's list, so 32 `base` questions (the capital of Colombia, coffee, Shakira, arepas, …) still sat in `colombia`'s subcategories. The gamemaster wants `colombia`'s categories and subcategories to have no `base` questions: a broad category belongs to one bundle, and so do its questions.
+- Context: D-43 let a question keep a subcategory from another bundle's list, so 32 `base` questions (the capital of Colombia, coffee, Shakira, arepas, …) still sat in `colombia`'s subcategories. The developer wants `colombia`'s categories and subcategories to have no `base` questions: a broad category belongs to one bundle, and so do its questions.
 - Decision: A `base` question's subcategory comes from `base`'s own list. A question that fits `base` but sits in a Colombian subcategory moves to the `base` subcategory that fits it. One that needs a connection to Colombia moves to `colombia` and keeps its subcategory. Where `base` has no fitting subcategory, `base` gets a new one: «Bebidas», «Comida latinoamericana» (Comida y bebida) and «Leyendas y supersticiones» (Mitos y leyendas). A moved question keeps its concept when the target subcategory has a concept list, and the concept is added to that list if it's missing. Without a list the concept is cleared, and the next `base` batch makes the list (D-37). `validate` fails on a `base` question in another bundle's subcategory.
 - Consequences: `base` has 116 subcategories. The three new ones are the thinnest, so the next `base` batch picks them (D-46). The other direction (a `colombia` question in a `base` subcategory) is still allowed, see OQ-46.
 - Supersedes / related: D-43 (the sentence "a question may keep a subcategory from another bundle's list", for `base` questions); D-19, D-37, D-39; BN-13
@@ -440,14 +440,14 @@ Template:
 ## D-55: Batch health thresholds stop the next batch
 - Date: 2026-10-11
 - Context: D-52 grows `base` by ~8 batches. Overlaps with the pool reach the review as `needs_work` (B-5), and nothing says when a batch got worse than the ones before (pm milestone 1, part 4).
-- Decision: `rate` judges each draft against pool questions that share its answer or concept (`no_overlap`, a hard criterion), so overlaps are dropped before merge. Every batch report gets health metrics with thresholds stored in `authoring/data/targets.json` (`batch_health`). When the last batch fails one, `qgen batch` exits 2 before drafting until the gamemaster acknowledges it (`qgen health ack`). Threshold numbers: a pm decision of plan 15.
+- Decision: `rate` judges each draft against pool questions that share its answer or concept (`no_overlap`, a hard criterion), so overlaps are dropped before merge. Every batch report gets health metrics with thresholds stored in `authoring/data/targets.json` (`batch_health`). When the last batch fails one, `qgen batch` exits 2 before drafting until the developer acknowledges it (`qgen health ack`). Threshold numbers: a pm decision of plan 15.
 - Consequences: No new `qgen batch` arguments (D-36); RUNBOOK's "other exit code: stop" covers the stop. Plan 12's exit check reads the same health data. pm plan 15 (Duplicate and drift detection) has the tasks.
 - Supersedes / related: D-33, D-36, D-46, D-52, D-53; B-5, PE-6, PE-13, MP-11
 
 ## D-56: Every batch gets an LLM audit and a blind human spot check
 - Date: 2026-10-11
-- Context: D-52 grows `base` by ~8 batches, judged only by the LLM review (D-33). Nothing measures whether that review judges like the gamemaster (pm milestone 1, part 5).
-- Decision: `qgen batch` runs an independent LLM audit (`prompts/audit.md`, blind to the review) on a seeded sample of the batch; it never changes a status. The gamemaster spot-checks a smaller subset of that sample in the review tool (`/review?batch=…&sample=1`), blind to the LLM verdict until deciding; the results go to `authoring/data/spot-checks.json`. Agreement (both accept or both don't) per batch is the main quality signal. Findings become prompt changes through a pm decision before the next batch; procedure in `authoring/QC.md`.
+- Context: D-52 grows `base` by ~8 batches, judged only by the LLM review (D-33). Nothing measures whether that review judges like the developer (pm milestone 1, part 5).
+- Decision: `qgen batch` runs an independent LLM audit (`prompts/audit.md`, blind to the review) on a seeded sample of the batch; it never changes a status. The developer spot-checks a smaller subset of that sample in the review tool (`/review?batch=…&sample=1`), blind to the LLM verdict until deciding; the results go to `authoring/data/spot-checks.json`. Agreement (both accept or both don't) per batch is the main quality signal. Findings become prompt changes through a pm decision before the next batch; procedure in `authoring/QC.md`.
 - Consequences: `qgen batch` still takes no arguments (D-36); one opus call more per sampled question. Sample size and agreement rate: pm decision 2. Plan 12's exit check reads the spot checks. pm plan 16 (Quality control after every batch) has the tasks.
 - Supersedes / related: D-33, D-36, D-38, D-52, D-53, D-55
 
@@ -467,7 +467,7 @@ Template:
 
 ## D-59: No family mode; the Python server is a bridge to the Steam build
 - Date: 2026-10-12
-- Context: Plans spoke of a "family mode" or family version that would live on next to the Steam release (D-34, plan 12's `ServerStore` "family mode, the default for now"). The gamemaster: the game will be a Steam application; there won't be a family mode.
+- Context: Plans spoke of a "family mode" or family version that would live on next to the Steam release (D-34, plan 12's `ServerStore` "family mode, the default for now"). The developer: the game will be a Steam application; there won't be a family mode.
 - Decision: Two implementations only: the current one (`trivia`, Python server + browser) and the Steam build (desktop shell, S3+). The current one keeps working until the Steam build replaces it; it gets nothing the Steam build won't have. The Python game server after the port: static files plus `/api/save` only (pm decision 4, option 3): flags move into `SaveData`, categories become static files from `qgen export`, media is served from the synced cache only (no download on miss; `trivia-media sync` before play).
 - Consequences: `trivia-authoring` reads flags from `game.json` and never writes it (it skips flags it already turned into reviews). "The family" in plans means the people who play and test, not a separate product or pool. Supersedes D-34's "the family game stays the priority" and the family half of D-47's flag file.
 - Supersedes / related: D-3, D-17 (download on miss, for the game), D-34, D-47; plan 12, plan 11
@@ -482,7 +482,7 @@ Template:
 ## D-61: Media with Commons restriction flags stays
 - Date: 2026-10-12
 - Context: Commons marks some files with non-copyright restrictions (personality rights, trademark, insignia, …). Milestone 4 listed them among the files to replace; plan 17 suggested checking each one.
-- Decision: Keep every flagged file (pm decision 8). The gamemaster checked them: no problem in any. The licence audit shows the flags for information; they never put a file on the replacement list.
+- Decision: Keep every flagged file (pm decision 8). The developer checked them: no problem in any. The licence audit shows the flags for information; they never put a file on the replacement list.
 - Consequences: No per-file "checked, keep" mark, no review-tool control for it. Replacement list: PD-US only, GFDL, off-allowlist licences, missing data.
 - Supersedes / related: D-59; plan 17 (PUB-1), milestone 4
 
@@ -566,7 +566,7 @@ Template:
 
 ## D-73: Local desktop builds: Windows zip and Linux tar.gz from Linux, media beside the asar
 - Date: 2026-10-12
-- Context: SW-5 (plan 56): the desktop shell (D-71) with file saves (D-72) must become artefacts a family unpacks and plays offline, built on the gamemaster's NixOS machine.
+- Context: SW-5 (plan 56): the desktop shell (D-71) with file saves (D-72) must become artefacts a family unpacks and plays offline, built on the developer's NixOS machine.
 - Decision: electron-builder, `app/desktop/electron-builder.yml`; `trivia-desktop-build` (dev shell) = `qgen validate`, client build, `stage-media.mjs`, `electron-builder --x64 --linux tar.gz --win zip` → `app/desktop/release/Trivia-<version>-{win,linux}-x64.{zip,tar.gz}`.
   - Targets: Windows x64 `zip` (Steam installs folders, no installer), Linux x64 `tar.gz` (no AppImage: needs FUSE, its tooling fails on NixOS; the Deck runs the Linux folder). No wine: `win.signAndEditExecutable: false` → Electron's icon and file metadata, unsigned exe (SmartScreen warns) until S5 (B-11).
   - Own lockfile: `app/desktop/package-lock.json` with devDependencies `electron` (exact 43.7.7, the flake's) and `electron-builder`; not a root workspace (overrides plan 54's "part 3 makes it a workspace"). Root `npm install` and `nix build .#app` stay untouched (D-59).
@@ -654,7 +654,7 @@ Template:
   - **Release bar:** D-56's numbers only: spot check ≥ `quality.spot_check_size` (30), agreement ≥ `quality.min_agreement` (90 %); no new keys, no false-approve limits.
   - Per batch and per back-audit slice (`backaudit-<k>`); release-ready derived from `authoring/data/spot-checks.json`, not stored.
   - Below it: not release-ready; it only feeds QC step 4 (prompt changes). No full audit (`audit --all`), no second spot check.
-  - Back-audit of the pre-D-56 pool: `qgen audit --backlog`, slices, gamemaster asks (plan 57).
+  - Back-audit of the pre-D-56 pool: `qgen audit --backlog`, slices, developer asks (plan 57).
 - Consequences: `qgen report --qc`: row "release" (✓ or ✗ + failed limit), "Release bar" line in the QC section. QC.md step 3. S4 close-out reads the release row.
 - Supersedes / related: D-56, D-75; plans 16, 57
 
@@ -690,7 +690,7 @@ Template:
 
 ## D-82: Seen counters instead of burning
 - Date: 2026-10-12
-- Context: Burning (D-28) makes a profile's pool a dead end: once a level's supply runs dry the game refuses to start. The gamemaster's call (2026-10-12, plan 65): repeats become a fallback, ordered by how often a question was seen.
+- Context: Burning (D-28) makes a profile's pool a dead end: once a level's supply runs dry the game refuses to start. The developer's call (2026-10-12, plan 65): repeats become a fallback, ordered by how often a question was seen.
 - Decision:
   - **Profile = save:** one save = one profile (on Steam one per SteamID; otherwise `state/game.json` or the desktop save). Player names stay labels («Continuar: Sofía, nivel 5», history, turn order); they no longer scope selection. Every seen event counts for the whole save, in every mode.
   - **Seen events:** the ones that burned under D-28: answered, skipped (joker or admin), swapped away, Snipe hit. Descriptions on unpicked cards don't count.
@@ -711,9 +711,9 @@ Template:
   - **Voice per bundle:** `voice` string per bundle in `app/data/bundles.json`, filled into `house-style.md`'s `{voices}`. `base`: neutral Latin American Spanish (a word understood across Latin America and Spain where one exists; "tú"); `colombia`: Colombian usage.
   - **Numbers (all bundles, RAE):** no separator up to 9999 ("2640"), a space from 10 000 ("42 195"), decimal comma ("42,195").
   - **Review/audit:** a `base` question in Colombian or other national wording is `needs_work` (`review.md`, `audit.md`).
-  - **`qgen neutralize`:** one more gamemaster-asked command (amends D-36), like `qgen tighten`: run `neutralize-<n>`, scan of `base` (approved + needs_work, `prompts/neutralize.md`) → fix → review 1 → research → review 2 → record → audit → export → sync; report `authoring/reports/neutralize-<n>.md`. `--dry-run`: scan, flagged ids, cost estimate.
+  - **`qgen neutralize`:** one more developer-asked command (amends D-36), like `qgen tighten`: run `neutralize-<n>`, scan of `base` (approved + needs_work, `prompts/neutralize.md`) → fix → review 1 → research → review 2 → record → audit → export → sync; report `authoring/reports/neutralize-<n>.md`. `--dry-run`: scan, flagged ids, cost estimate.
   - **`es-ES` for questions:** no `questions.es-ES.json` at launch; the scan lists words with no pan-Hispanic form, a sparse override can follow if there are many.
-- Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the gamemaster asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
+- Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the developer asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
 - Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32
 
 ## D-84: Per-locale targets and gaps
@@ -838,7 +838,7 @@ Template:
   - **Overlay on Windows only** (`process.platform === "win32"`), attached after `did-finish-load`, only while Steam is up; `steam.overlay.enabled()` = attached and `ISteamUtils::IsOverlayEnabled`.
   - **Linux without overlay** (no native window, no X11 switch); the Deck plays the Windows build via Proton when the overlay is wanted there (D-63, SW-12); Deck check in masterplan 10 part 10.
   - Nothing pauses on overlay open (no timer outside `timed`).
-  - Windows result pending a gamemaster check (pm decision); if it fails there too: no overlay anywhere, achievements still show Steam's own toast.
+  - Windows result pending a developer check (pm decision); if it fails there too: no overlay anywhere, achievements still show Steam's own toast.
 - Consequences: `app/desktop/main.mjs`; without Steam nothing changes.
 - Supersedes / related: D-63, D-71; SW-8, SW-12; pm decision 28, plan 85
 

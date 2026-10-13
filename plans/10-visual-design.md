@@ -2,7 +2,7 @@
 
 **Status:** confirmed (VD-1)
 
-How the game looks: colours, type, panels over images, component styles, motion. `04-ui-tv-display.md` owns the screens and what happens on them; this file owns how they look (UI-1). The gamemaster set the direction (D-29): **much smaller text**, **every element over the image a bit transparent**, a **gray and dark-blue** colour scheme with a few contrasting highlights, green and red for right and wrong. The rest below is a proposal, and the gamemaster has the final say.
+How the game looks: colours, type, panels over images, component styles, motion. `04-ui-tv-display.md` owns the screens and what happens on them; this file owns how they look (UI-1). The developer set the direction (D-29): **much smaller text**, **every element over the image a bit transparent**, a **gray and dark-blue** colour scheme with a few contrasting highlights, green and red for right and wrong. The rest below is a proposal, and the developer has the final say.
 
 ## Concept: "Noche de concurso"
 
@@ -151,7 +151,7 @@ The picture should stay visible; the interface floats over it.
 - The `PLACEHOLDER` style (D-25) keeps its magenta dashed look until its task is done.
 
 ## Tasks
-- [x] VD-1 Gamemaster confirms the palette, fonts and type scale from the implementation (D-30). *2026-10-06: confirmed («visual design is great»).*
+- [x] VD-1 Developer confirms the palette, fonts and type scale from the implementation (D-30). *2026-10-06: confirmed («visual design is great»).*
 - [x] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `app/client/src/game/`. *2026-10-06: `app/client/src/game/theme.css`, scoped to `.game`.*
 - [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `app/client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`.*
 - [x] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4). *2026-10-06: `Question.svelte`, `Hud.svelte`.*
@@ -159,5 +159,5 @@ The picture should stay visible; the interface floats over it.
 - [x] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants. *2026-10-06: `Stage.svelte`.*
 - [x] VD-7 Tower materials by height (with UI-3). *2026-10-06: `Tower.svelte`: materials, drop-and-settle, wobble, crown, crumble on Wrong.*
 - [x] VD-8 SVG icon set (padlock, replay, speaker, ✓, ✗; joker tokens with JK-4). *2026-10-06: `Icon.svelte` (also film, crown, star); joker tokens come with JK-4.*
-- [x] VD-9 TV check: legibility of the smaller scale from the couch, glass contrast over bright images, `backdrop-filter` performance and the no-blur fallback (with UI-6). *2026-10-07: living-room ready (gamemaster).*
+- [x] VD-9 TV check: legibility of the smaller scale from the couch, glass contrast over bright images, `backdrop-filter` performance and the no-blur fallback (with UI-6). *2026-10-07: living-room ready (developer).*
 - [x] VD-10 Sharp images fit the screen without upscaling, centred on the stage with a rounded edge fade (D-51). *2026-10-11: `Question.svelte`.*

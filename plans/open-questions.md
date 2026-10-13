@@ -1,6 +1,6 @@
 # Open Questions
 
-Frozen on 2026-10-12: this file is history. New questions for the gamemaster are `pm` decisions (`pm decision add`, see `pm instructions`); answers that set a lasting rule still go to `decisions.md`. Old OQ ids stay valid where they are cited. The four questions below were still open when the file was frozen; the `pm` plan or task named with each one raises it as a `pm` decision.
+Frozen on 2026-10-12: this file is history. New questions for the developer are `pm` decisions (`pm decision add`, see `pm instructions`); answers that set a lasting rule still go to `decisions.md`. Old OQ ids stay valid where they are cited. The four questions below were still open when the file was frozen; the `pm` plan or task named with each one raises it as a `pm` decision.
 
 ## Open when frozen
 - OQ-45 (Freesound): plan 42, tasks 204–205
@@ -28,7 +28,7 @@ Frozen on 2026-10-12: this file is history. New questions for the gamemaster are
 - **OQ-34** Store name: «Living Room Trivia», in Spanish «Trivia en Familia» (Steam localized name), pending the name and trademark check PUB-7 (D-50).
 - **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).
 - **OQ-44** No per-bundle house style: a session mixes questions from every active bundle, so they all follow one house style (D-44).
-- **OQ-41** A non-base bundle's categories are in `app/data/bundles/<id>/` (they ship), and its concepts and axes in `authoring/data/bundles/<id>/`. Subcategory names and category slugs are unique across bundles; question ids are global. **OQ-42** The Colombian subcategories leave `base` for `colombia`'s own list, and their questions keep their bundle. **OQ-43** Prompt only; the gamemaster moves the rest in the review tool (D-43).
+- **OQ-41** A non-base bundle's categories are in `app/data/bundles/<id>/` (they ship), and its concepts and axes in `authoring/data/bundles/<id>/`. Subcategory names and category slugs are unique across bundles; question ids are global. **OQ-42** The Colombian subcategories leave `base` for `colombia`'s own list, and their questions keep their bundle. **OQ-43** Prompt only; the developer moves the rest in the review tool (D-43).
 - **OQ-36** Four age groups, adults included: kids, young teens, young adults, adults, on one shared difficulty scale 1–15 (D-38).
 - **OQ-38** About 150–250 concepts per subcategory, with top-ups; **OQ-39** the axis values as drafted in plan 20, and existing questions get axes too; **OQ-40** concept names unique across subcategories by normalized name only, synonyms accepted (D-37).
 - **OQ-4** No timer per question; **OQ-13** no separate gamemaster device and no GM-only view; **OQ-8** no family-specific questions; **OQ-11** a computer connected to the TV via HDMI; **OQ-12** internet is available during play; **OQ-28** the game is called «¡Trivia!» (D-30).
@@ -42,5 +42,5 @@ Frozen on 2026-10-12: this file is history. New questions for the gamemaster are
 - **OQ-6** Language → Spanish, Colombian usage (D-6).
 - **OQ-7** Players → two Colombian kids, 11 and 12; difficulty 1–10 = age 6 to 16 (D-6).
 - **OQ-9** Pool size → ~120 questions, 10 games (D-6).
-- **OQ-10** Authoring → AI drafts, gamemaster reviews (D-7).
+- **OQ-10** Authoring → AI drafts, developer reviews (D-7).
 - **OQ-14** Tech stack preference → server Python (D-4), client Svelte 5 + Vite + TypeScript (D-5).

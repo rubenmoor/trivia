@@ -14,7 +14,7 @@ Sub-plan of [15](15-i18n.md). The pool was written for two Colombian kids (D-6),
 
 ## Tasks
 - [x] RG-1 Add `region` to the schema (`null` default) and `validate`. *Done as BN-2 (D-39): `bundle` instead of `region`.*
-- [x] RG-2 Tag the existing pool: an LLM pass proposes `co` or `null` per question, and the gamemaster checks the proposals in the review tool (filter by proposed region). *Done as BN-3 (D-39): `qgen bundles`, `/review?bundle=colombia`.*
+- [x] RG-2 Tag the existing pool: an LLM pass proposes `co` or `null` per question, and the developer checks the proposals in the review tool (filter by proposed region). *Done as BN-3 (D-39): `qgen bundles`, `/review?bundle=colombia`.*
 - [x] RG-3 Region filter in the selection (engine, 12) and in `qgen.py report`. *Done as BN-6 (engine plan 27, screen plan 29, close-out plan 30) and plan 62's `qgen report --simulate --bundles`.*
 - [x] RG-4 `qgen.py draft --region co`: generate regional questions on purpose. *Done as BN-11: `qgen batch --bundle <id>`.*
 - [ ] RG-5 Decide which regional packs come next (by launch language). *2026-10-12, checked against D-78: still open; Spanish candidates `mexico`, `argentina` (regional flavour via bundles, no finer Spanish variants); en/de packs undecided.*

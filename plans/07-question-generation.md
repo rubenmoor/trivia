@@ -6,22 +6,22 @@
 How new questions get into the pool: drafting, rating, fact-checking, reviewing, attaching media, and validating before a question is accepted. The pool (`02-question-pool.md`) defines *what* a question is; this file defines *how* questions are produced.
 
 ## Settled so far
-- Questions are AI-drafted; the gamemaster reviews every one (D-7).
+- Questions are AI-drafted; the developer reviews every one (D-7).
 - Spanish, Colombian usage, for two kids aged 11 and 12; difficulty 1–10 (D-6).
 - Drafts live in the pool with `status: "draft"` (D-7).
 - First batch: 120 questions over 10 categories (QP-5).
 
 ## Inputs for batch generation
-Throw-away working files in the repo root, edited by the gamemaster:
+Throw-away working files in the repo root, edited by the developer:
 - `app/data/categories.json`: 140 subcategories grouped into 24 broad categories (D-19).
 - `authoring/data/question-styles.txt`: ~30 question styles, sorted from best to worst fit for a multiple-choice family trivia game. Styles near the top use the TV's picture and sound (name the thing in the picture, what makes this sound, which song is this), followed by quick, concrete styles (plain fact, biggest/smallest, "name the concept").
 
-The full grid (subcategories × styles ≈ 4,300 combinations) is far too many to write and review. The strategy below keeps quality high and the gamemaster's review time low.
+The full grid (subcategories × styles ≈ 4,300 combinations) is far too many to write and review. The strategy below keeps quality high and the developer's review time low.
 
 ## Strategy for large batches
 
 ### Principle
-Writing questions is cheap; **the gamemaster's review time is the bottleneck.** Every step exists to put fewer, better questions in front of the reviewer.
+Writing questions is cheap; **the developer's review time is the bottleneck.** Every step exists to put fewer, better questions in front of the reviewer.
 
 ### Pipeline
 ```mermaid
@@ -32,7 +32,7 @@ flowchart LR
   Check --> Dedupe[5 Duplicate check against pool]
   Dedupe --> Filter[6 Drop below quality threshold]
   Filter --> Media[7 Fetch media candidates]
-  Media --> Review[8 Gamemaster review + pick media]
+  Media --> Review[8 Developer review + pick media]
   Review --> Pool[Approved in pool]
 ```
 
@@ -41,9 +41,9 @@ flowchart LR
 3. **Rate in a separate pass.** Don't rate questions while writing them: self-ratings while writing come out too high and too similar. A second pass scores each finished question against the rubric below, one score per criterion, with a short reason for low scores.
 4. **Fact-check.** Every question with a number, date, record or superlative is verified with a web search and marked as checked. A bigger pool means more errors to catch.
 5. **Duplicate check** against the whole pool, including burned questions (e.g. Gabo already appears in three questions).
-6. **Filter** below a quality threshold. The threshold is calibrated against the gamemaster's decisions on the pilot, not guessed.
+6. **Filter** below a quality threshold. The threshold is calibrated against the developer's decisions on the pilot, not guessed.
 7. **Fetch media candidates** from Wikimedia Commons (D-13, `06-images.md`). Questions whose style needs a specific picture, sound or video are marked `needs_media`.
-8. **Gamemaster review** in the review tool (`08-review-tool.md`): decide on the question and pick its media in one go. If no candidate fits, search again or give feedback.
+8. **Developer review** in the review tool (`08-review-tool.md`): decide on the question and pick its media in one go. If no candidate fits, search again or give feedback.
 
 ### Quality rubric (for step 3)
 Each criterion is scored 1–5:
@@ -72,7 +72,7 @@ Before generating hundreds of questions:
 1. Pick ~10 subcategories with a spread of topics.
 2. Build their fit table and draft ~60–80 questions, weighted to levels 4–7.
 3. Run the rating pass and the fact-check.
-4. The gamemaster reviews **all** pilot questions, including those below the threshold, so we can see whether the ratings match the gamemaster's judgement.
+4. The developer reviews **all** pilot questions, including those below the threshold, so we can see whether the ratings match the developer's judgement.
 5. Measure the keep rate, which styles work, and where to set the threshold. Then decide whether to scale up and how far.
 
 ### Tooling (D-10)
@@ -89,7 +89,7 @@ Before generating hundreds of questions:
 | `report` | code | Counts by difficulty, broad category, style, status; keep rate. |
 | `validate` | code | Checks the whole pool (QP-7). |
 
-For the pilot, `merge --min-score 0` keeps everything except hard fails, so the gamemaster sees the whole range.
+For the pilot, `merge --min-score 0` keeps everything except hard fails, so the developer sees the whole range.
 
 ### Schema additions (agreed, QG-7)
 - `style`: the question style used.
@@ -100,7 +100,7 @@ For the pilot, `merge --min-score 0` keeps everything except hard fails, so the 
 
 ## Pilot results (2026-10-06, D-16)
 - **80 reviewed:** 66 approved, 6 rejected, 8 feedback. 7 of the 8 feedbacks were only difficulty corrections (before the `d` key existed) and became approvals; 1 was a real rework (q-0198, description gave the answer away). **73 of 80 usable (91 %).** 9 more had been dropped by the pipeline before review (hard fails, wrong facts, duplicates).
-- **Rater scores don't predict the gamemaster:** rejected questions averaged a *higher* soft score (4.00) than approved ones (3.93); every threshold would have removed mostly approved questions. The rater's *notes* did name the problem in 3 of 6 rejects (giveaways, too easy). → no score filter; giveaways became a hard check.
+- **Rater scores don't predict the developer:** rejected questions averaged a *higher* soft score (4.00) than approved ones (3.93); every threshold would have removed mostly approved questions. The rater's *notes* did name the problem in 3 of 6 rejects (giveaways, too easy). → no score filter; giveaways became a hard check.
 - **Rejection reasons:** giveaways (description with the carnival's slogan; a first clue that identifies Blackbeard; naming EVE and Pixar for WALL·E), a superlative relative to the options ("which of these dinosaurs was the longest"), and essential photos that don't work (no good gaita photo; a rhythm can't be guessed from a photo of musicians).
 - **Difficulty is the weak spot:** 15 of 80 corrected (19 %), in both directions, by about 2.5 levels on average; the rater's estimates are no better. AI overrates school knowledge (Greek gods 5 → 9, Colombian city altitudes 3 → 9) and underrates everyday, film and game knowledge (WALL·E, the trumpet, the empanada → 1). → calibration examples in the house style; the session log (B-1) will keep refining this.
 - **Styles:** "guess the person from three clues" kept 1 of 4 (dropped). Plain facts 16/16, zoomed-in details 5/5, counting 4/4, picture questions 13/18.
@@ -109,7 +109,7 @@ For the pilot, `merge --min-score 0` keeps everything except hard fails, so the 
 
 ## First-120 review results (2026-10-06, D-23)
 - **120 reviewed after the QG-13 revision:** 117 approved, 3 rejected, no feedback. Both proposed drops were overruled.
-- **The tone rule was too strict:** the revise step proposed dropping Titanic (1997 film) and the end of WWII as "disasters with many victims"; the gamemaster approved both. → Famous historical events and films are fine; a question just mustn't be *about* deaths or suffering.
+- **The tone rule was too strict:** the revise step proposed dropping Titanic (1997 film) and the end of WWII as "disasters with many victims"; the developer approved both. → Famous historical events and films are fine; a question just mustn't be *about* deaths or suffering.
 - **All 3 rejects were clues that aren't unique in the real world:** "the Caribbean rhythm danced with candles" (other dances use candles), "the sport with a racket and a yellow ball" (pádel, frontenis…; tennis doesn't depend on the ball's colour), and "Escucha: ¿qué instrumento suena?" for maracas (Commons had no recording). The question only worked because the three wrong options didn't match. → New house-style rule: the clue must point to the answer in the real world, not just among the four options; the rater scores `unambiguous` ≤ 3 otherwise.
 - **Difficulty is much better:** 10 of 119 corrected (8 %, pilot 19 %); the revised level was exactly right for 109. Remaining misses: famous world facts that kids meet in cartoons and everyday talk were still too high (Saturn's rings 4 → 2, Cervantes 8 → 5, plural of "lápiz" 5 → 2), and two were lowered too far by the revise step (García Márquez's Nobel 3 → 7, the seven notes of the scale 3 → 7). → New calibration examples in both directions.
 - **Decorative images don't matter much:** all 113 picks were the first suggestion, including off-topic ones. A separate pass will look for related images (backlog B-4).
@@ -119,9 +119,9 @@ Existing questions (the first 120, or `needs_work` questions after a review) go 
 
 1. `qgen.py import --run <run> --batch <batch>`: copies the pool's `draft` and `needs_work` questions of that batch into `work/<run>/drafts/` (chunks of 10, the pool ID as work ID). Questions without a batch get `--batch` assigned in the pool.
 2. `rate` and `factcheck` as usual, with the current prompts. Imported questions are all fact-checked.
-3. `qgen.py revise --run <run>`: questions with an issue go to Claude with the reasons: the gamemaster's feedback, a failed or uncertain fact-check, a hard criterion below 4 (`correct`, `unambiguous`, `no_giveaway`), or a difficulty estimate 3+ levels away (with the rater's notes as context). Low soft scores don't trigger a revision (D-16; the first try with them rewrote 98 of 119 questions). Claude keeps, revises (same topic and ID, current house style) or proposes to drop each one. Questions without issues aren't sent.
+3. `qgen.py revise --run <run>`: questions with an issue go to Claude with the reasons: the developer's feedback, a failed or uncertain fact-check, a hard criterion below 4 (`correct`, `unambiguous`, `no_giveaway`), or a difficulty estimate 3+ levels away (with the rater's notes as context). Low soft scores don't trigger a revision (D-16; the first try with them rewrote 98 of 119 questions). Claude keeps, revises (same topic and ID, current house style) or proposes to drop each one. Questions without issues aren't sent.
 4. `qgen.py apply --run <run>`: writes the results into the pool. A revised question stays `draft` and gets a `revision` field: `{"action": "revise" | "drop", "reason": "...", "previous": {changed fields: old values}, "revised_on": date}`. Its quality scores and fact-check status are updated. If a media search term changed, the old candidates are discarded so `media.py fetch` finds new ones.
-5. `media.py fetch --batch <batch>`, then the gamemaster reviews in the review tool, which shows the changes (`08-review-tool.md`).
+5. `media.py fetch --batch <batch>`, then the developer reviews in the review tool, which shows the changes (`08-review-tool.md`).
 
 New drafts can be repaired the same way before `merge` (QG-16): `revise` then `apply` on a drafting run moves each revised draft to `drafts/revised-*.json` and deletes its rating and fact-check. `rate` and `factcheck` then judge the new version, so `merge`'s hard checks still decide. One round only; what still fails is dropped.
 
@@ -132,7 +132,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - **Difficulty:** the drafter writes high targets easier than asked and says so (target 10 → mostly 7–9). The batch has 7 questions at 8 and 5 at 9, none at 10: 10 % at 8–10 instead of the 30 % aimed for. The top levels are still short (OQ-17); a small top-up run aimed only at 9–10 may be needed.
 - Usage: 150 Claude calls, about $15 at list price, so roughly $0.13 per merged question.
 - Media candidates not fetched yet (Commons isn't reachable from the cloud session): run `media.py fetch --batch batch-3`.
-- **Reviewed by Claude, not the gamemaster** (115 approved, 1 `needs_work`); the reviews are marked `reviewer: "llm"` (D-33). The gamemaster can still check them at `/review?batch=batch-3`.
+- **Reviewed by Claude, not the developer** (115 approved, 1 `needs_work`); the reviews are marked `reviewer: "llm"` (D-33). The developer can still check them at `/review?batch=batch-3`.
 
 ## Batch-4 results (2026-10-07, D-32)
 - The 34 subcategories still without a usable question: 114 drafted. One revise round (QG-16) for 40 flagged drafts; all revised versions were confirmed. **112 merged** (q-0317…q-0428); 2 dropped for giveaways (Perry the platypus, unboxing).
@@ -146,7 +146,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - Accepted alternative answers aren't needed for multiple choice, but the wording of the options must stay unambiguous.
 
 ## Tasks
-- [x] QG-1 Decide the question sources and the review workflow. *2026-10-06, AI drafts, gamemaster reviews (D-7).*
+- [x] QG-1 Decide the question sources and the review workflow. *2026-10-06, AI drafts, developer reviews (D-7).*
 - [x] QG-2 Define the draft format and where drafts are stored. *2026-10-06, drafts live in the pool with `status: "draft"` (D-7).*
 - [x] QG-3 Define the quality checklist. *2026-10-06, quality rubric in this file.*
 - [x] QG-4 Define duplicate detection against the pool. *2026-10-06, `qgen.py dedupe`: same non-numeric answer and (question similarity > 0.6, or both need the same kind of essential media). Changed after the pilot: wording alone flagged shared templates like "Escucha: ¿qué … suena?".*
@@ -156,10 +156,10 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-8 Build the fit table (subcategory × style) for the pilot subcategories. *Pilot size: ~100 questions (~25 subcategories × 4 styles). 2026-10-06: run `pilot` started with the 25 subcategories listed in `work/pilot/run.json`.* *2026-10-06, `work/pilot/fit.json`.*
 - [x] QG-9 Pilot: draft ~60–80 questions, weighted to levels 4–7. *2026-10-06, 89 drafted, 1 slot skipped.*
 - [x] QG-10 Pilot: rating pass and fact-check. *2026-10-06, 89 rated, 74 fact-checked (68 confirmed, 5 wrong, 1 uncertain); 80 merged as `batch: "pilot"`, 9 dropped (`work/pilot/dropped.json`).*
-- [x] QG-11 Pilot: gamemaster reviews all pilot questions; set the quality threshold and decide on scaling. *2026-10-06: no score threshold, prompts tuned (D-16); scaling worth it, size open (OQ-17).*
+- [x] QG-11 Pilot: developer reviews all pilot questions; set the quality threshold and decide on scaling. *2026-10-06: no score threshold, prompts tuned (D-16); scaling worth it, size open (OQ-17).*
 - [x] QG-13 Revise existing questions (generalised rework, see "Revising pool questions"): `import`, `revise`, `apply`. *2026-10-06: first 120 → batch `first-120`: 119 rated and fact-checked (118 confirmed), 60 revised, 2 proposed drops, 57 unchanged; ~$6 at list price for both revise attempts.*
 - [x] QG-14 Evaluate the first-120 review and tune the prompts. *2026-10-06, see "First-120 review results" (D-23); `authoring/tools/prompts/house-style.md`, `rate.md`, `revise.md`.*
-- [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and gamemaster review still to do.*
+- [x] QG-15 Batch-3: ~120 new questions over 34 new subcategories. *2026-10-06, 116 merged as drafts (q-0201…q-0316); see "Batch-3 results". Media fetch and developer review still to do.*
 - [x] QG-16 `revise`/`apply` for new drafts before `merge`. *2026-10-06, `qgen.py` `apply_to_drafts`.*
 - [x] QG-17 Batch-4: the 34 subcategories still without a usable question, reviewed and approved by Claude including media (D-32). *2026-10-07, 112 merged (q-0317…q-0428), 107 approved with media, 5 `needs_work`; see "Batch-4 results".*
 - [x] QG-12 Build a review page (approve/reject by keyboard, shows the question as on the TV); possibly the first piece of the Svelte client. *2026-10-06: `/review` (RV-4, RV-5, `08-review-tool.md`).*
@@ -168,5 +168,5 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-20 Quieter `qgen batch` that says what it waits for: no line per item inside `qgen batch` (failures, warnings and the step summaries stay; single steps keep their per-item lines for debugging); the progress bar and the minute status line name what the running items are waiting on and for how long (`claude opus ×3 2m10s`, `Openverse search`, `ImageMagick`, a download host). *2026-10-08: `progress.waiting()` around the `claude -p` call (with the retry number), each provider search, preview downloads and ImageMagick in `make_sheet`, and `sync` downloads; `progress.detail()` for the per-item lines, off in `qgen batch`. Tested with a fake worker through a pipe, verbose and on a terminal.*
 - [x] QG-21 `qgen batch` waits out Claude's usage limit by itself: it reads the reset time from the message ("resets 11pm (America/Bogota)", also with a date or minutes), sleeps until 5 minutes after it and reruns the step that hit the limit. Exit 75 only when the message has no reset time it can read. *2026-10-08: `limit_reset()` / `wait_for_reset()` in `qgen.py`; the wait checks the wall clock every minute (survives a suspended laptop) and is at least 5 minutes. Tested the parser on 8 messages (time, minutes, date, year rollover, unknown zone, none) and the wait with a short margin.*
 - [x] QG-22 `qgen batch` fixes what the review flags instead of only remarking on it: the review answers with `fix` (English instruction, empty when unfixable or media-only); a new `fix` step after review 1 sends it to `revise.md` once, writes the revision into the pool (`revision.previous`, shown in the review tool), fact-checks changed facts again; review 2 reviews fixed questions too, and a `media` step before it fetches candidates for a changed search. Only unfixable ones stay `needs_work`. *2026-10-11: `cmd_fix`, `revise_in_pool()` shared with `apply`. Tested with Claude mocked (fix → recheck → review 2 → record).*
-- [x] QG-23 `qgen rework [--batch <batch>]`: every `needs_work` question with feedback once more through fix (the feedback is the issue; gamemaster feedback wins), fact check, review with one new media search, record. Kept and revised questions go back to review; dropped or malformed ones stay `needs_work`. Resumable `work/rework-<n>/` run (ids in `run.json`); the step loop is shared with `qgen batch` (`run_steps`). *2026-10-11: tested with Claude mocked (revise, keep with a new search, drop, no feedback).*
-- [x] QG-24 Short questions: house style "Keep it short" (one or two short sentences, extra context optional, no invented story like "Tu tío…"); the rater scores `fun` ≤ 3 and the review fixes long-winded questions; the `scenario` clue is one short clause and drawn less (weight 0.4; it was a third of the pool and the source of the relative-and-friend intros). `qgen tighten`: Claude reads every approved and needs_work question (`prompts/tighten.md`, 50 per call), flags long-winded ones, and those go through fix, fact check, review and record like `qgen rework`; kept or dropped ones stay as they were, shortened ones get a new LLM review. Covers `connection` questions too; their review gets `only_shortened`, so the retired style alone doesn't send them back (gamemaster, 2026-10-11). Resumable `work/tighten-<n>/`. *2026-10-11: tested with Claude mocked (revise approved and needs_work, keep).*
+- [x] QG-23 `qgen rework [--batch <batch>]`: every `needs_work` question with feedback once more through fix (the feedback is the issue; developer feedback wins), fact check, review with one new media search, record. Kept and revised questions go back to review; dropped or malformed ones stay `needs_work`. Resumable `work/rework-<n>/` run (ids in `run.json`); the step loop is shared with `qgen batch` (`run_steps`). *2026-10-11: tested with Claude mocked (revise, keep with a new search, drop, no feedback).*
+- [x] QG-24 Short questions: house style "Keep it short" (one or two short sentences, extra context optional, no invented story like "Tu tío…"); the rater scores `fun` ≤ 3 and the review fixes long-winded questions; the `scenario` clue is one short clause and drawn less (weight 0.4; it was a third of the pool and the source of the relative-and-friend intros). `qgen tighten`: Claude reads every approved and needs_work question (`prompts/tighten.md`, 50 per call), flags long-winded ones, and those go through fix, fact check, review and record like `qgen rework`; kept or dropped ones stay as they were, shortened ones get a new LLM review. Covers `connection` questions too; their review gets `only_shortened`, so the retired style alone doesn't send them back (developer, 2026-10-11). Resumable `work/tighten-<n>/`. *2026-10-11: tested with Claude mocked (revise approved and needs_work, keep).*

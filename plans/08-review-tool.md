@@ -3,7 +3,7 @@
 **Status:** draft
 
 ## Purpose
-A local web page where the gamemaster reviews generated questions one at a time and decides on each with a single key press: **approve**, **reject**, or **give feedback**. It covers QG-11 (reviewing the pilot) and QG-12 (the review page) in `07-question-generation.md`. It is the first piece of the real app, so it sets up the stack and folder layout the game will reuse.
+A local web page where the developer reviews generated questions one at a time and decides on each with a single key press: **approve**, **reject**, or **give feedback**. It covers QG-11 (reviewing the pilot) and QG-12 (the review page) in `07-question-generation.md`. It is the first piece of the real app, so it sets up the stack and folder layout the game will reuse.
 
 ## Stack (D-3, D-4, D-5)
 - **Server:** Python, standard library only (`http.server`, `json`). It serves the built client and a small JSON API.
@@ -104,7 +104,7 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 - **Feedback:** the question is salvageable but needs changes; the feedback says what. It goes to `needs_work` and later to `qgen.py rework`.
 
 ## Start page `/` (RV-12..RV-17)
-**Why.** `trivia-authoring` prints `/` first, but `/` is the review screen without a filter: it walks all 513 questions, and the first "open" one is any of the 293 LLM-approved questions (D-33). Nothing tells the gamemaster what is waiting for them. The start page answers "what needs me now?" in one look, and every number on it is a link to the queue that works it off.
+**Why.** `trivia-authoring` prints `/` first, but `/` is the review screen without a filter: it walks all 513 questions, and the first "open" one is any of the 293 LLM-approved questions (D-33). Nothing tells the developer what is waiting for them. The start page answers "what needs me now?" in one look, and every number on it is a link to the queue that works it off.
 
 **Rules.**
 - Read-only: no keys, no decisions. All work happens in the existing pages it links to.
@@ -139,14 +139,14 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
 - **Sparse areas.** One list, worst first, on `/stats/subcategories` and on the start page:
   - **Categories with fewer than 12 approved questions.** A game asks 12 questions, so below that a category can't cover every level even once. Today that's 5: Amazonas 9, Cuerpo humano 11, Espacio 11, Videojuegos 11, Fútbol 11.
   - **Subcategories with fewer than 3 approved questions.** One player sees them all in one or two games. Today that's 27 (none is empty).
-  - Each sparse subcategory is marked if the next `qgen batch` will pick it (the 30 with the fewest approved questions, `qgen.batch_subcategories`). Then the gamemaster can see whether the next batch fixes the gap or whether it needs a bundle or a top-up (B-6).
+  - Each sparse subcategory is marked if the next `qgen batch` will pick it (the 30 with the fewest approved questions, `qgen.batch_subcategories`). Then the developer can see whether the next batch fixes the gap or whether it needs a bundle or a top-up (B-6).
 
   The two limits are constants at the top of the component, so they're easy to change.
-- **Media page** (`/stats/media`, RV-23, gamemaster 2026-10-11): approved questions per media role (split by type, picked file or not) and per image resolution.
+- **Media page** (`/stats/media`, RV-23, developer 2026-10-11): approved questions per media role (split by type, picked file or not) and per image resolution.
   - Resolution: pixel size read from the cached file (`media/`, D-17), not from the candidates; bands on the long edge: < 800, 800–1279, 1280–1919, 1920–3839, ≥ 3840 px; plus SVG, not cached, unreadable.
   - Media images only (`type: image`); audio backgrounds aren't counted.
   - `GET /api/stats/media?bundle=` builds it on the server (reads file headers, standard library only).
-- **Filters.** Every page keeps "approved questions only" (gamemaster, 2026-10-06). A bundle switch (all / `base` / `colombia`) reads `?bundle=`, so the family's default (every bundle on) and a single bundle can both be checked (M11).
+- **Filters.** Every page keeps "approved questions only" (developer, 2026-10-06). A bundle switch (all / `base` / `colombia`) reads `?bundle=`, so the family's default (every bundle on) and a single bundle can both be checked (M11).
 
 ## Tasks
 - [x] RV-1 Agree the schema changes (`needs_work`, `review`, `batch`) and record them in `02-question-pool.md`. *2026-10-06.*
@@ -156,7 +156,7 @@ The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved
 - [x] RV-5 Client: keyboard shortcuts, feedback box, undo, confirmation messages. *2026-10-06.*
 - [x] RV-6 Client: summary screen at the end of a batch. *2026-10-06.*
 - [x] RV-7 `qgen.py merge` sets `batch`; `validate` knows the new fields and status. *2026-10-06.*
-- [x] RV-8 Try it on the 120 existing questions before the pilot runs (`/?batch=none`). *2026-10-06, approved by the gamemaster; "level" renamed to "difficulty n/10".*
+- [x] RV-8 Try it on the 120 existing questions before the pilot runs (`/?batch=none`). *2026-10-06, approved by the developer; "level" renamed to "difficulty n/10".*
 - [x] RV-9 Show revisions (reason, old → new per field, proposed reject). *2026-10-06, `authoring/ui/src/review/RevisionPanel.svelte`.*
 - [x] RV-10 Single-question review at `/review/<id>`; links between the review tool and the stats pages. *2026-10-07.*
 - [x] RV-11 Human review of LLM-reviewed questions (D-33): they count as open, show the LLM's verdict, and the summary counts them. *2026-10-07, QP-15.*

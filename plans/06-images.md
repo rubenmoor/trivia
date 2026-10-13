@@ -31,7 +31,7 @@ Don't hotlink at game time. Every chosen file is **downloaded once into `media/`
 - **Audio:** a short clip; the game plays it from the start.
 
 ## Pipeline: media is ready before review
-Media is sourced **before** the gamemaster review, so a question and its media are judged together and "bad image" can be feedback. Fetching uses no Claude, so it's cheap even for questions that get rejected later.
+Media is sourced **before** the developer review, so a question and its media are judged together and "bad image" can be feedback. Fetching uses no Claude, so it's cheap even for questions that get rejected later.
 
 ```mermaid
 flowchart LR
@@ -76,7 +76,7 @@ The TV shows a subtle credit line in a corner while media is shown, e.g. "Foto: 
 - [x] IMG-8 `qgen.py validate`: `local_path` exists when set. *2026-10-06.*
 - [x] IMG-11 URL-keyed media cache (D-17): `file_url` replaces `local_path` in schema, `media.py`, `qgen.py`, server (`GET /media?url=`, download on miss) and review tool; migrate the existing files from `images/` and `media/` into the cache; `media/` in `.gitignore`. *2026-10-06; 112 slots migrated (111 files, two questions share one), `images/` removed.*
 - [x] IMG-12 `media.py sync [--prune]`: fill the cache for all picked media; remove unreferenced files. *2026-10-06.*
-- [x] IMG-14 New media role `illustrative` (D-24) in schema, `qgen.py`, `media.py`, review tool. Then go through the approved first-120: give every question a related image where one can't give the answer away, picked by Claude from the thumbnails (was B-4). *2026-10-06: 115 approved questions now `illustrative` (114 images, the Apollo 11 video). 68 got a new search term and pick, 47 kept a pick that already fit. Every pick checked on a thumbnail sheet; rejected candidates that showed the answer (Paris 2024 rings for the 5 rings, a drum kit, a Van Gogh painting, "STRAIT" on a hull). The blue whale and marathon videos became images. The audio questions' backgrounds stay decorative. Approved by the gamemaster.*
+- [x] IMG-14 New media role `illustrative` (D-24) in schema, `qgen.py`, `media.py`, review tool. Then go through the approved first-120: give every question a related image where one can't give the answer away, picked by Claude from the thumbnails (was B-4). *2026-10-06: 115 approved questions now `illustrative` (114 images, the Apollo 11 video). 68 got a new search term and pick, 47 kept a pick that already fit. Every pick checked on a thumbnail sheet; rejected candidates that showed the answer (Paris 2024 rings for the 5 rings, a drum kit, a Van Gogh painting, "STRAIT" on a hull). The blue whale and marathon videos became images. The audio questions' backgrounds stay decorative. Approved by the developer.*
 - [x] IMG-13 `qgen.py validate`: warn (not fail) when an approved question's media isn't cached (or isn't picked). *2026-10-06.*
 - [x] IMG-15 Identified Commons requests: a User-Agent with contact (the repo URL), and the owner-only OAuth 2.0 token `COMMONS_ACCESS_TOKEN` as a bearer header on API calls (search, `imageinfo`). The token lives in the gitignored `.env.local`, loaded by direnv; without it the tools work as before, anonymously. File downloads and the game never send it. *2026-10-08: Wikimedia rate-limits anonymous API calls harder (Phase 2, April 2026).*
 - [ ] IMG-16 4K target in code (D-48): `IMAGE_WIDTH = 3840` in `providers/commons.py` and `providers/nasa.py`; candidates ranked so a 4K one comes before a smaller one; the review prompt and the review tool show each candidate's size.
