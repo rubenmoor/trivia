@@ -13,8 +13,8 @@ DATA = APP / "data"
 POOL = DATA / "pool.json"  # approved questions, exported by `qgen export`
 CATEGORIES = DATA / "categories.json"  # D-19: base's categories
 BUNDLE_DATA = DATA / "bundles"  # D-43: another bundle's categories in bundles/<id>/categories.json
-AGE_GROUPS = DATA / "age-groups.json"  # D-38; the game reads it from AG-7 on
-BUNDLES = DATA / "bundles.json"  # D-39; the game reads it from BN-6 on
+AGE_GROUPS = DATA / "age-groups.json"  # D-38
+BUNDLES = DATA / "bundles.json"  # D-39
 
 
 def locale_pool(locale):
@@ -27,7 +27,7 @@ def names(locale, bundle="base"):
     return DATA / f"names.{locale}.json" if bundle == "base" else BUNDLE_DATA / bundle / f"names.{locale}.json"
 
 
-DIST = Path(os.environ.get("TRIVIA_DIST", APP / "client" / "dist"))
+DIST = APP / "client" / "dist"
 
 STATE = Path(os.environ.get("TRIVIA_STATE", REPO / "state"))  # gitignored (D-25)
 MEDIA = Path(os.environ.get("TRIVIA_MEDIA", REPO / "media"))  # gitignored cache (D-17)

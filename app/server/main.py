@@ -21,7 +21,7 @@ API:
                                                    only: 400 "bad_save"; 503 "save_locked" when the file stays locked
 Any other /api/ path or method: 404 {"error": "not_found"}.
 """
-import argparse, threading
+import argparse
 from http.server import ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
@@ -29,9 +29,6 @@ import media_cache
 import paths
 import save
 from http_base import BaseHandler
-
-_lock = threading.Lock()
-
 
 NOT_FOUND = {"error": "not_found", "message": "not found"}
 
@@ -79,8 +76,7 @@ class Handler(BaseHandler):
         except ValueError:
             return self.send_json(400, {"error": "bad_save", "message": "body is not JSON"})
         try:
-            with _lock:
-                save.write(body)
+            save.write(body)
             return self.send_json(200, {"ok": True})
         except save.SaveError as e:
             return self.send_json(e.status, {"error": e.code, "message": str(e)})

@@ -10,7 +10,7 @@ and writes version 4 back.
 The server only checks the envelope; the game rules live in the client's engine.
 `migrate()` carries game.sqlite + flags.json over once (PORT-5) at server start; nothing else reads them.
 """
-import json, os, sqlite3, tempfile, time
+import json, os, sqlite3, tempfile, threading, time
 
 import paths
 
@@ -21,6 +21,7 @@ LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "
          4: ("players", "games", "seen", "blocked")}
 MAX_BYTES = 10 * 1024 * 1024
 RETRIES, RETRY_SLEEP = 10, 0.1  # Windows: antivirus/backup may hold the file
+_lock = threading.Lock()  # one writer of game.json.tmp
 
 
 class SaveError(Exception):
@@ -44,7 +45,7 @@ def check(doc):
         bad("save must be a JSON object")
     version = doc.get("version")
     if type(version) is not int or version not in LISTS:
-        bad(f"version must be {MIGRATE_VERSION} or {VERSION}")
+        bad(f"version must be one of {sorted(LISTS)}")
     for key in LISTS[version]:
         if not isinstance(doc.get(key), list):
             bad(f"{key} must be a list")
@@ -58,21 +59,22 @@ def write(doc):
     raw = json.dumps(doc, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     if len(raw) > MAX_BYTES:
         raise SaveError(400, "bad_save", "save larger than 10 MB")
-    FILE.parent.mkdir(parents=True, exist_ok=True)  # a fresh install has no state/ yet
-    tmp = FILE.with_name(FILE.name + ".tmp")
-    with open(tmp, "wb") as f:
-        f.write(raw)
-        f.flush()
-        os.fsync(f.fileno())
-    for attempt in range(RETRIES + 1):
-        try:
-            os.replace(tmp, FILE)
-            return
-        except PermissionError:
-            if attempt < RETRIES:
-                time.sleep(RETRY_SLEEP)
-    tmp.unlink(missing_ok=True)
-    raise SaveError(503, "save_locked", "game.json is locked by another program")
+    with _lock:
+        FILE.parent.mkdir(parents=True, exist_ok=True)  # a fresh install has no state/ yet
+        tmp = FILE.with_name(FILE.name + ".tmp")
+        with open(tmp, "wb") as f:
+            f.write(raw)
+            f.flush()
+            os.fsync(f.fileno())
+        for attempt in range(RETRIES + 1):
+            try:
+                os.replace(tmp, FILE)
+                return
+            except PermissionError:
+                if attempt < RETRIES:
+                    time.sleep(RETRY_SLEEP)
+        tmp.unlink(missing_ok=True)
+        raise SaveError(503, "save_locked", "game.json is locked by another program")
 
 
 def _upgrade(con):

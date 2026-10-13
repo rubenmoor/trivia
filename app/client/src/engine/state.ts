@@ -6,7 +6,7 @@ import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 4;
+export const SAVE_VERSION = 4; // bump app/server/save.py VERSION/LISTS too
 
 export type { Language };
 

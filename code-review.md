@@ -657,6 +657,21 @@ Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the 
 
 | file | finding | category | severity | status |
 |---|---|---|---|---|
+| `app/server/save.py` | write lock lived in `main.py` (`_lock`), so `save.write` wasn't safe on its own (one shared `game.json.tmp`); moved into `save.write`. Part 1 row "`main.py`, `save.py` no findings: … (fsync, `_lock`)": still holds, lock now in `save.py` | practice | low | fixed (task 532) |
+| `app/server/save.py` | `check()` error said "version must be 2 or 4" while 3 is accepted too; now lists `LISTS` | inconsistency | low | fixed (task 532) |
+| `app/server/save.py`, `app/client/src/engine/state.ts` | `SAVE_VERSION` bump needs `save.py` `VERSION`/`LISTS` too, else every PUT is 400 `bad_save` (task 625 had to); nothing said so: comment at `SAVE_VERSION` | bug | medium | fixed (task 532) |
+| `app/server/save.py` | `game.json.tmp` stays when writing/fsync or a non-`PermissionError` `os.replace` fails | practice | low | won't fix: the next write overwrites it; nothing reads it |
+| `app/server/save.py` | no directory fsync after `os.replace` (rename may be lost on power cut) | bug | low | won't fix: no directory fsync on Windows; desktop `save.mjs` same; the save is rewritten on every action |
+| `app/server/save.py` | `migrate()`: a game's `state` that isn't JSON or `flags.json` without `"flags"` raises at start, `trivia` doesn't start; source untouched (read-only URI, copy), no partial `game.json` (atomic write), idempotent while `game.json` exists (checked: legacy `game.sqlite` + `flags.json` copy, run twice, byte-identical) | bug | low | won't fix: only pre-PORT-5 dev installs; failing loudly keeps the backup |
+| `app/server/save.py` | `migrate()` runs again if `game.json` is deleted while `game.sqlite` remains: old games come back | bug | low | won't fix: documented backup; desktop has no `game.sqlite`; rename it to start fresh |
+| `app/server/save.py` | part 1 scan: silent `return None` at `load()` (`FileNotFoundError`) | practice | — | won't fix: no save yet = 404, `ServerStore.load` → `emptySave()` |
+| `app/server/save.py`, `app/desktop/save.mjs` | duplication candidate: atomic write + lock retries, `MAX_BYTES` 10 MB, envelope check; drift: desktop accepts any numeric version and retries `EPERM`/`EBUSY`/`EACCES`, Python only versions 2–4 and `PermissionError` | complexity | low | handed to part 10 |
+| `app/server/save.py`, `authoring/tools/save_file.py`, `app/client/src/engine/save.ts` | duplication candidate: `save_file.py` re-implements the v2→v3 (burned → seen/blocked) and v3→v4 (reports → flags) upgrades of `engine/save.ts` `UPGRADES` in Python | complexity | medium | handed to part 10 |
+| `app/server/paths.py` | stale comments "the game reads it from AG-7 on / BN-6 on" on `AGE_GROUPS`/`BUNDLES` | inconsistency | low | fixed (task 532) |
+| `app/server/paths.py` | `TRIVIA_DIST` override: set nowhere, documented nowhere; removed | unused | low | fixed (task 532) |
+| `app/server/paths.py` | `POOL` aside, `CATEGORIES`, `BUNDLE_DATA`, `AGE_GROUPS`, `BUNDLES`, `locale_pool`, `names` are used only by authoring (`categories.py`, `qgen.py`, `layout.py`) | unused | low | won't fix: they name `app/data/` files; authoring may import `app/` |
+| `app/server/paths.py` | `TRIVIA_STATE`/`TRIVIA_MEDIA`: `~` not expanded, relative = from cwd; `state/` created on first write, media cache never created (read-only); separators via `Path` | bug | low | won't fix: shells expand unquoted `~`, the flake wrapper sets absolute paths; same as `TRIVIA_WORK` |
+| `app/server/paths.py`, `authoring/tools/layout.py` | duplication candidate: `layout.py` re-exports `app_paths` under other names (`EXPORT` = `POOL`, `LOCALE_POOL`, `NAMES`), and both define `BUNDLE_DATA` with different meanings (`app/data/bundles` vs `authoring/data/bundles`) | inconsistency | low | handed to part 10 |
 
 ## Part 3: TS engine
 
