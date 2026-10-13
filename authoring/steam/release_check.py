@@ -18,7 +18,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
             patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
             SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
 
-Report header: version, pool hash, previous tag (newest v* reachable from HEAD, not HEAD's own), kind
+Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
 (`full`, or `content-only` when nothing shipped but app/data/ changed since it) and SAVE_VERSION change.
 `--skip STEP` (repeatable): a known-broken step, ✗ → "skipped" in the report (and the build Desc).
 Run from the dev shell (nix, steam-run, Xvfb). Report: work/steam/<tag-or-sha>/release-check.md,
@@ -153,6 +153,15 @@ def manual(rows: dict[str, tuple[str, str | None]], path: str | None, ask: bool)
     return {k: auto or answers[k] for k, (_, auto) in rows.items()}
 
 
+def pools() -> dict[str, str | None]:
+    """{locale: hash} of every shipped pool, es first."""
+    out = {}
+    for f in sorted((REPO / "app" / "data").glob("pool*.json"), key=lambda f: (f.name != "pool.json", f.name)):
+        loc = "es" if f.name == "pool.json" else f.name.removeprefix("pool.").removesuffix(".json")
+        out[loc] = json.loads(f.read_text()).get("hash")
+    return out
+
+
 def main() -> None:
     p = argparse.ArgumentParser(prog="trivia-release-check", description=__doc__.split("\n")[0])
     p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "manual"], help="known-broken step")
@@ -165,8 +174,8 @@ def main() -> None:
     kd = kind(prev)
     save = {"head": save_version("HEAD"), "previous": save_version(prev) if prev else None}
     save["changed"] = bool(prev) and save["head"] != save["previous"]
-    m = re.search(r'"hash": "(\w+)"', (REPO / "app" / "data" / "pool.json").read_text()[:1000])
-    pool_hash = m.group(1) if m else None
+    pool_hashes = pools()
+    pools_text = ", ".join(f"{loc} {h}" for loc, h in pool_hashes.items())
     kind_text = f"content-only patch since {prev}" if kd == "content-only" else "full"
     save_text = (f"changed ({save['previous']} → {save['head']})" if save["changed"]
                  else f"unchanged ({save['head']})" if prev else f"{save['head']} (no earlier tag)")
@@ -175,7 +184,7 @@ def main() -> None:
     logs.mkdir(parents=True, exist_ok=True)
     started = datetime.now().astimezone()
     print(f"release check {tag} ({commit[:7]}{'' if clean else ', uncommitted changes'})")
-    print(f"  version {version()}, pool {pool_hash}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}")
+    print(f"  version {version()}, pools {pools_text}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}")
 
     steps = []  # (name, status ✓/✗/skipped, seconds, note)
     if "tag" in args.skip:
@@ -214,7 +223,8 @@ def main() -> None:
     skipped = [n for n, s, _, _ in steps if s == "skipped"] + [f"manual:{k}" for k, _, s, _ in rows if s == "skipped"]
     ok = all(s != "✗" for _, s, _, _ in steps)
     report = {"commit": commit, "tag": tag, "clean": clean, "date": started.isoformat(timespec="seconds"),
-              "version": version(), "pool_hash": pool_hash, "previous_tag": prev, "kind": kd, "save_version": save,
+              "version": version(), "pool_hash": pool_hashes.get("es"), "pool_hashes": pool_hashes,
+              "previous_tag": prev, "kind": kd, "save_version": save,
               "ok": ok, "skipped": skipped,
               "steps": [{"name": n, "status": s, "seconds": round(dt), "note": note} for n, s, dt, note in steps],
               "manual": [{"row": k, "status": s, "answer": a} for k, _, s, a in rows]}
@@ -223,7 +233,7 @@ def main() -> None:
           f"- Result: {'✓ pass' if ok else '✗ fail'}",
           f"- Commit: {commit}{'' if clean else ' (uncommitted changes)'}",
           f"- Date: {report['date']}",
-          f"- Version: {version()}, pool hash {pool_hash}",
+          f"- Version: {version()}, pools {pools_text}",
           f"- Previous tag: {prev or 'none'}",
           f"- Kind: {kind_text}",
           f"- Save version: {save_text}",
