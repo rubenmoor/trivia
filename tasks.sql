@@ -4461,22 +4461,24 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - Under Steam: the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language.
 - `steam.user` / `validUser` true with a logged-in Steam user and with the dev switch, false otherwise.', '2026-10-13T05:17:09Z', 255);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (86, 10, 'Achievements (SW-11)', 590, 'SW-11 (masterplan 10 part 5): a few Steam achievements, no grind, earned only in games that play by the standard rules. Owner: `plans/18-steam-integration.md` ("Steam features", SW-11); touches `13-game-modes.md` (MD-8 note), `17-publishing.md` (credits).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (86, 10, 'Achievements (SW-11)', 590, 'SW-11 (masterplan 10 part 5): a few Steam achievements, no grind, earned only in games that play by the standard rules, unlocked only for a valid Steam user (decision 111: Steam only: no effort outside Steam). Owner: `plans/18-steam-integration.md` ("Steam features", SW-11); touches `13-game-modes.md` (MD-8 note), `17-publishing.md` (credits).
 
 ## Builds on (don''t rebuild)
-- Bridge `steam.unlock(id) → Promise<boolean>` (plan 85, `lib/desktop.ts`; `main.mjs` `steam:unlock` → `achievements.unlockAchievement`). Page checks `steam?.available`; rich presence in `Game.svelte` is the pattern for a page-side Steam call.
+- Bridge `steam.unlock(id) → Promise<boolean>` (plan 85, `lib/desktop.ts`; `main.mjs` `steam:unlock` → `achievements.unlockAchievement`). Rich presence in `Game.svelte` is the pattern for a page-side Steam call.
+- Valid user: `validUser` from `lib/desktop.ts` (plan 85, task 776: `steam.user`, dev switch `TRIVIA_DEV_STEAM_USER`); never an own Steam test.
 - Engine: `GameRow.result`, `settings.mode` / `gameMode()`, `settings.customized` (solo only, set by `newGame` when jokers differ from `STANDARD_JOKERS`), `state.jokers` (jokers played), `history[].correct`, `categoryOf(data.broad)` (`engine/game.ts`, `state.ts`, `pool.ts`).
-- Save per Steam user: masterplan 10 part 4 (task 433); App ID: parts 1–2 (tasks 253, 254). Achievement tests need the real App ID (Spacewar 480 has only its own achievements).
+- Save per Steam user: plan 87 (one save per SteamID, memory-only without a valid user); App ID: masterplan parts 1–2. Achievement tests need the real App ID (Spacewar 480 has only its own achievements).
 
 ## Rules
 - Qualifying game (decision 19: Default mode: presets, checkpoints and won levels): `gameMode(state) !== "gamemaster"`, `!settings.customized`, no `settings.difficulty`, `levels` missing or 12, `cards` missing or 4. Video/audio off doesn''t disqualify (not a rule change).
-- **Gamemaster mode never earns achievements**: it has undo, skip, replace, any joker budget (D-74, D-88); recorded as a pm decision.
+- **Gamemaster mode never earns achievements** (decision 74: Gamemaster mode earns no achievements): undo, skip, replace, any joker budget (D-74, D-88).
 - **Derived from the save, never stored**: one pure function `earned(save, data) → AchievementId[]` over all qualifying game rows (every player of the save: the save is the Steam account''s). No achievement field in the save; nothing in the save depends on Steam.
-- Unlock = `earned()` minus what this session already sent, through `steam.unlock`, at two moments: when a game ends (won/lost/abandoned) and once after the save loads under Steam. The second is the retroactive unlock (games played without Steam, a save copied from `local/`); not optional, it is the same code. Steam caches offline unlocks itself; `unlock` is idempotent.
+- **Unlock only with a valid user and a live bridge**: `validUser && steam?.available`; the dev switch without a Steam client makes no calls. Without a valid user nothing persists (plan 87), so there is nothing to unlock later from that session.
+- Unlock = `earned()` minus what this session already sent, through `steam.unlock`, at two moments: when a game ends (won/lost/abandoned) and once after the save loads. The second (retroactive) is the same code, so it stays: covers a save brought in with `--import-save` (plan 99, the family''s save), games played before the achievements were published in Steamworks, and a failed call. Steam caches offline unlocks itself; `unlock` is idempotent.
 - No Steam stats, no progress pop-ups (`IndicateAchievementProgress`), no hidden achievements, no on-screen achievement UI of our own (Steam''s toast only; the overlay is Windows only, D-92).
 - Strings: Steam shows Steamworks'' localized names, not our catalogs; texts live in the Steamworks setup file (below), not in `t()`.
 
-## The list (draft; the gamemaster approves it as a pm decision before icons)
+## The list (draft; the gamemaster approves it as decision 73: Achievement list (SW-11)? before icons)
 | API name | Trigger (qualifying games only) |
 |---|---|
 | `FIRST_WIN` | any game with `result === "won"` |
@@ -4495,21 +4497,20 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - PNGs are build outputs for the gamemaster''s upload: gitignored, or committed if the script can''t run in every dev shell (task decides, note in `directory.md`).
 - Credits (plan 47, `app/client/credits.ts`): achievement icons under the game''s own art, like the glyphs.
 
-## Steamworks setup (values for the gamemaster, in plan 18)
+## Steamworks setup (values for the gamemaster, in plan 18; masterplan part 2 enters them)
 - Per achievement: API name, display name + description per language, Hidden = no, achieved/unachieved icon file, "Set by" Client, no stat.
 - Localization: one file `app/desktop/steam-achievements.vdf` (like `steam-presence.vdf`) in Steamworks'' achievement-localization format if Steamworks accepts an upload; otherwise the table in plan 18 to type in.
 - Publish in Steamworks after entering (the gamemaster); result via pm decision.
 
 ## Tasks (suggested order)
-1. Achievement list as a pm decision: the table above with exact names/descriptions in es, en, de (es-ES differences), recommended option = the draft; alternative option e.g. one more (a win in each age group) only if it''s cheap and no grind. Record "Gamemaster mode earns no achievements" (`pm decision record`). Task pending on the list decision until answered.
-2. Engine + page: `app/client/src/engine/achievements.ts` (`ACHIEVEMENTS` list with API names and mode, `qualifies(row)`, `earned(save, data)`), page wiring (game end + after load, once per id per session, only `steam?.available`). One `node:test` over a fixture save (qualifying/customized/gamemaster/categories) only if it stays useful. Check: without Steam nothing changes; with Steam (480 or the real App ID) the calls go out (stderr log in `main.mjs` on a false return).
-3. Icons: SVG sources + render script, achieved/unachieved PNGs at Valve''s size, credits entry. After task 1''s answer.
-4. Steamworks setup: values + `steam-achievements.vdf` in plan 18; gamemaster enters them (pm decision "Achievements entered and published in Steamworks?"). Needs the App ID (parts 1–2).
-5. Close-out: gamemaster check under Steam with the real App ID (fresh Steam account or reset stats: win a solo game → `FIRST_WIN` toast; customized game earns nothing; a save from a no-Steam session unlocks on next start) as one pm decision; `18-steam-integration.md` SW-11 `[x]` with note and "Steam features" bullet rewritten (drop the presets/Experto wording), `13-game-modes.md` MD-8 note, `plans/project.md`, `directory.md`.
+1. Achievement list as a pm decision (task 654): decision 73 pending, decision 74 recorded; after the answer, consequences with the final list.
+2. Engine + page (task 655): `app/client/src/engine/achievements.ts` (`ACHIEVEMENTS` list with API names and mode, `qualifies(row)`, `earned(save, data)`), page wiring (game end + after load, once per id per session, only `validUser && steam?.available`). One `node:test` over a fixture save (qualifying/customized/gamemaster/categories) only if it stays useful. Check: under Steam (480 or the real App ID) with a logged-in user the calls go out (stderr log in `main.mjs` on a false return); `TRIVIA_DEV_STEAM_USER=1` without Steam makes no calls and doesn''t break. After task 776 (`validUser`).
+3. Icons (task 656): SVG sources + render script, achieved/unachieved PNGs at Valve''s size, credits entry. After task 1''s answer.
+4. Steamworks setup (task 657): values + `steam-achievements.vdf` in plan 18; gamemaster enters them (pm decision "Achievements entered and published in Steamworks?"). Needs the App ID (parts 1–2).
+5. Close-out (task 658): gamemaster check under Steam with the real App ID (fresh Steam account or reset stats: win a solo game → `FIRST_WIN` toast; customized game earns nothing; a save with earlier qualifying wins, e.g. via `--import-save`, unlocks on next start) as one pm decision; `18-steam-integration.md` SW-11 `[x]` with note and "Steam features" bullet rewritten (drop the presets/Experto wording), `13-game-modes.md` MD-8 note, `plans/project.md`, `directory.md`.
 
 ## Done when
-- Under Steam with the real App ID: a qualifying win unlocks `FIRST_WIN`; a customized or gamemaster game unlocks nothing; earlier qualifying games unlock on the first start under Steam.
-- Without Steam: the game and the save are unchanged.', '2026-10-13T05:47:45Z', 257);
+- Under Steam with the real App ID and a logged-in user: a qualifying win unlocks `FIRST_WIN`; a customized or gamemaster game unlocks nothing; earlier qualifying games in the save unlock on the next start.', '2026-10-13T05:47:45Z', 257);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (87, 10, 'Steam Cloud saves', 680, 'Masterplan 10 part 4: the save syncs through Steam Auto-Cloud, one save per Steam user (gamemaster, 2026-10-12: a save = a profile, so players, seen counters, blocked, flags and selection per profile come along, plan 65 / D-82). No Cloud API code unless the test shows a need. Owner: `plans/18-steam-integration.md` ("Steam features", Steam Cloud bullet); save format `plans/12-client-engine.md`.
 
 ## Builds on (don''t rebuild)
@@ -14924,7 +14925,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:23:25Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (770, 86, 'revise plan 86', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (770, 86, 'revise plan 86', 'plan', 'done', 1000, '2026-10-13, plan 86 body: unlock gated on validUser (plan 85), retroactive unlock kept (import-save, late publish), local/ and without-Steam rows dropped per decision 111, decisions 73/74 cited', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
 (`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -15044,7 +15045,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 - Part 11 last.
 
 ## Out of scope (from the milestone)
-- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', NULL, 754);
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:26:07Z', 754);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (771, 87, 'revise plan 87', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
 (`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -15540,6 +15541,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No DRM, no `restartAppIfNecessary`, no ownership check beyond this.
 - Docs: `README.md` (env vars list, next to `TRIVIA_STEAM_APPID`) and AGENTS.md "Commands" `trivia-desktop` line name `TRIVIA_DEV_STEAM_USER`; `plans/18-steam-integration.md` "Steam features": valid user + dev switch.
 - Check (stderr lines): `TRIVIA_DEV_STEAM_USER=1 trivia-desktop` without Steam → user true; plain `trivia-desktop` without Steam → false; dev server → `validUser` true (if task 762 is done). Under Spacewar (480) logged in → true goes into the close-out gamemaster check (task 652). Per-commit checks pass.', '2026-10-13T15:24:43Z', NULL, 775);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (777, 86, 'create tasks for plan 86', 'split', 'open', 1000, NULL, 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:26:04Z', NULL, 770);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -17467,6 +17470,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (669, 768, '2026-10-13T15:21:27Z', '2026-10-13T15:22:23Z', 'done', NULL, 0, '3ec68f014c7991be7b54dc18961fd832fc9571f1', 'claude-opus-5-5[1m]', 'b9671991-ca65-4a22-a7a9-eb40536a4847', 8, 16, 5296, 314317, 41725, 0.5026474, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (670, 769, '2026-10-13T15:22:23Z', '2026-10-13T15:23:32Z', 'done', NULL, 0, 'ca0f51f6be195a47ca694283f15d24c8c10b0746', 'claude-opus-5-5[1m]', '9050678e-2bd4-425f-982e-0bf4d71b3d39', 8, 16, 6771, 367051, 52234, 0.6267662, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (671, 775, '2026-10-13T15:23:32Z', '2026-10-13T15:25:24Z', 'done', NULL, 0, '5fa9eb72567d322d4e64920d2fecbaf823cfc0d6', 'claude-opus-5-5[1m]', '3eca9e5b-8503-4533-98c0-46b3204df1d1', 17, 34, 8927, 673534, 39512, 0.6294788, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (672, 770, '2026-10-13T15:25:24Z', '2026-10-13T15:26:14Z', 'done', NULL, 0, 'd384b00298cec6cbf003f69fe96ed496758bf8d0', 'claude-opus-5-5[1m]', '13cf023d-ebec-4fff-8e2b-c7d2ccd6da8f', 5, 10, 5501, 174516, 37134, 0.4420352, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
