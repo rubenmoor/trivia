@@ -40,7 +40,7 @@ console.log(`stage-media: ${count} files, ${(bytes / 1e6).toFixed(0)} MB from ${
 if (missing.length) {
   console.error(`stage-media: ${missing.length} missing in ${cache}:\n${missing.join("\n")}`);
   if (!allowMissing) {
-    console.error("run `trivia-media sync --status approved` (or pass --allow-missing)");
+    console.error("run `trivia-media sync --status approved`, or stage with `npm run stage-media -- --allow-missing` and run electron-builder by hand");
     process.exit(1);
   }
 }
