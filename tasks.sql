@@ -13932,8 +13932,61 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs only; never log in to Steamworks or contact players.
 
 Done when: the release is recorded in the plan files and the first-week decision waits on its triage task (or the issue/blocker path is set up).', '2026-10-13T09:07:02Z', NULL, 705);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (711, 96, 'create tasks for plan 96', 'split', 'open', 1000, NULL, 'Split plan 96 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:13:38Z', NULL, 270);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (711, 96, 'create tasks for plan 96', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 712–716; decision 96 raised (plan task 1 done here), task 713 pending on it', 'Split plan 96 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:13:38Z', '2026-10-13T09:14:45Z', 270);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (712, 96, 'qgen patch-notes: counts-only notes between two releases', 'work', 'open', NULL, NULL, 'Plan 96 task 2. New `qgen patch-notes <from-ref> [<to-ref>]` under `authoring/` (D-35, no new dependency): drafts a content patch''s notes by diffing the shipped pool between two git refs.
+
+- `from-ref` default: newest `v*` tag (reuse `authoring/steam/release_check.py` `previous_tag()`, or move it to a shared helper both use); `to-ref` default: the working tree (draft before tagging).
+- Reads `app/data/pool.json` (es) + `pool.<locale>.json` and the categories files (`app/data/categories.json`, a bundle''s own `categories.json`) via `git show <ref>:<path>`; a file missing at a ref = empty pool for that locale.
+- Per locale: "added" = id only in new; "dropped" = id only in old; "fixed" = same id, changed play field (question, answer, wrong answers, hints, fun fact, difficulty, subcategory, media).
+- Output Markdown for the gamemaster: version + pool hash from → to (decision 91: Game version: single source of truth; decision 92: Pool version: export hash in pool.json), kind `full`/`content-only` and `SAVE_VERSION` change via `release_check` (`kind()`, `save_version()`), table locale × category: added / fixed / dropped, totals.
+- Plus a Steam event draft per launch language (es, en, de), BBCode like the announcement texts in `plans/11-steam.md` "Launch (S6)" (task 707''s tone): title "Update v<x>: <n> new questions"; body: per-category counts, "fixed <n> questions (thanks for your reports)", "removed <n>"; on `full` a `<Changes: fill in>` placeholder and a printed warning. Strings live in the command (authoring, not `t()`).
+- Counts only: never question text, answers or ids. `pm decision record "Patch notes: counts only?" --answer "counts only (added/fixed/dropped per language and category)" --body "<why: no spoilers; nothing leaks if OQ-35 makes the pool private>"`.
+- `from == to` (or no differences) → "no content changes".
+- Writes `work/steam/v<x>/patch-notes.md` when `to` is a tag, or `--out FILE`; `--json` for scripts.
+- Check (throw-away clone, deleted after): tag `v0.0.1`, approve/drop/edit a few questions, `qgen export`, run → counts match by hand. Then `qgen validate`, `npm run check` and the other per-commit checks (AGENTS.md).
+- Docs: `qgen.py` usage, `directory.md` if a new file, `README.md` one line under Commands.
+
+Done when: the command drafts correct counts-only notes between two refs and the counts-only decision is recorded.', '2026-10-13T09:14:42Z', NULL, 711);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (713, 96, 'Content updates (ST-5) section, docs and the first-patch decision', 'work', 'open', NULL, NULL, 'Plan 96 task 3. Waits for decision 96: Content patch cadence after launch? (read the answer with `pm show`). Runs after "qgen patch-notes: counts-only notes between two releases" (it documents that command).
+
+- Valve''s rules: read and cite with the date read: partner.steamgames.com/doc/store/updates (pushing an update to `default`: review needed?) and partner.steamgames.com/doc/marketing/event_tools (event type for patch notes: "Small update / patch notes" vs "Regular update"). Unreadable = "unverified (gamemaster: check <URL>)".
+- `plans/11-steam.md` new section "Content updates (ST-5)" after "Launch (S6)" (intro paragraph, then bullets):
+  - Cadence: decision 96''s answer.
+  - Patch path step by step: batches (`qgen batch`, `--translate en|de`, per `authoring/RUNBOOK.md`), reports (`qgen flag`, `qgen rework` only when asked), `qgen export`, `qgen validate`, `qgen patch-notes`, bump `version` in `app/desktop/package.json` (patch; minor on `SAVE_VERSION` change), commit, `git tag v<x>`, `trivia-steam upload --branch beta`, ST-4 manual rows (content-only variant), candidate decision per the ST-4 template, gamemaster sets the BuildID live on `default`, posts the event from the draft.
+  - Hotfix path (wrong answer, crash): any time, same path, no cadence wait.
+  - What a patch may not do (plan 96 "Rules"): no silent rule or save-shape change; code change → kind `full` + hand-written "Changes"; dropped question = status change, never deletion; workers never log in to Steamworks, set builds live, post events or contact players.
+  - "Patch notes" log subsection (empty; later patches append their event texts).
+  - ST-5 note: content half planned here; reports half = plan 93.
+- `plans/16-content-target.md` ("Quality bar" or an after-release bullet): what a patch adds, the cadence. `README.md` how-to "Send a content patch" (commands only). `plans/project.md` in sync.
+- `pm decision consequences 96 "<what changed>"`.
+- Raise the go decision (kind once): `did=$(pm decision add --once "Start the first content patch?" --body … --option "go: version 1.0.<n>" --option "not yet (why)")`. Body: preconditions checklist: "Released? date, build id" (plan 95) answered and recorded by plan 95''s "Record the release and the first week"; cadence due per decision 96 (new approved per language since `v1.0.0` from `qgen patch-notes v1.0.0`, with the numbers at the time); reported fixes done; `qgen validate` clean.
+- `pm task-pending-decision <id of "First content patch candidate" in plan 96> $did`.
+- Per-commit checks (AGENTS.md).
+
+Done when: the section, docs and consequences are in, and the first-patch candidate task waits on the go decision.', '2026-10-13T09:14:42Z', NULL, 711);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (714, 96, 'First content patch candidate', 'work', 'open', NULL, NULL, 'Plan 96 task 4. Waits for the decision "Start the first content patch?" (raised by "Content updates (ST-5) section, docs and the first-patch decision"); read it with `pm show`. If it isn''t raised or answered yet, don''t proceed: stop.
+
+- `go: version 1.0.<n>`: `app/desktop/package.json` `version` → `1.0.<n>` (decision 91: Game version: single source of truth), staged. `qgen patch-notes` draft (`--out work/steam/v1.0.<n>/patch-notes.md`); copy the event texts into the "Patch notes" log of `plans/11-steam.md` "Content updates (ST-5)". Run the per-commit checks (AGENTS.md).
+- Raise `Release candidate v1.0.<n> passed?` exactly per the template in `plans/11-steam.md` "Release checklist (ST-4)", gamemaster steps first: tag this task''s commit (`task <this id>: First content patch candidate`) as `v1.0.<n>`; `trivia-steam upload --branch beta`; manual rows (content-only variant: `offline`, `signoff`; `beta-save` if `SAVE_VERSION` changed); OK. Then `pm task-pending-decision <id of "Record the patch candidate; live decision" in plan 96> <did>`.
+- `not yet`: new decision naming the blocker (`pm decision add --once`, options as the go decision), this task pending on it (`pm task-pending-decision`), stop.
+- A failed candidate never reuses its tag. Never upload, log in or tag on the gamemaster''s behalf.
+
+Done when: version staged, notes drafted and logged, candidate decision raised and the record task waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:14:42Z', NULL, 711);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (715, 96, 'Record the patch candidate; live decision', 'work', 'open', NULL, NULL, 'Plan 96 task 5. Waits for `Release candidate v1.0.<n> passed?` (raised by "First content patch candidate"); read it with `pm show`. Not raised or not answered: stop.
+
+- Act per `plans/11-steam.md` "Release checklist (ST-4)" → "Worker on the answer": `passed` / `passed with minor issues`: `trivia-release-check --manual FILE` with the answers so `work/steam/v<x>/release-check.md` holds them; minor issues → `plans/backlog.md` bullets.
+- `failed (rows)`: one task per failing row in its owning plan, plus a new candidate task in plan 96 (shape of "First content patch candidate") with the next patch version (never reuse a tag); stop.
+- On pass: raise `did=$(pm decision add --once "Content patch v<x> live? date, build id" --body … --option "live on <date>, BuildID <n>" --option "not yet (blocker)")`. Body: gamemaster steps: Steamworks → set the BuildID live on `default`; post the Steam event from `work/steam/v<x>/patch-notes.md` (one per language, event type per "Content updates (ST-5)").
+- `pm task-pending-decision <id of "Record the first content patch" in plan 96> $did`.
+
+Done when: the answer is recorded in the report and the live decision blocks the record task (or, failed: fix tasks and a new candidate task exist).', '2026-10-13T09:14:43Z', NULL, 711);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (716, 96, 'Record the first content patch', 'work', 'open', NULL, NULL, 'Plan 96 task 6. Waits for `Content patch v<x> live? date, build id` (raised by "Record the patch candidate; live decision"); read it with `pm show`. Not raised or not answered: stop.
+
+- `live on <date>, BuildID <n>`: `plans/11-steam.md` ST-5 `[x]` (only once plan 93 is done too; else note the content half done) with version, date, BuildID; S6 row status in "Phases"; "Content updates (ST-5)" "Patch notes" log entry dated; `plans/16-content-target.md` and `plans/project.md` in sync; `pm decision consequences <did> "<what changed>"`.
+- `not yet (blocker)`: same pattern as plan 95''s "Record the release and the first week": a task per blocker in its owning plan, then a new candidate (shape of "First content patch candidate") if code or content changed, else a fresh live decision and a new record task pending on it.
+
+Done when: the first content patch is recorded as live (milestone 11 "Done when": content updates go out as patches).', '2026-10-13T09:14:43Z', NULL, 711);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15027,6 +15080,20 @@ Task 708 bumps `version` to `1.0.0`, fills the question counts in the announceme
 ## Options
 - `go: all preconditions met, release date <date>`
 - `not yet (which)`: name the missing rows; a new decision follows when they are done.', NULL, NULL, '2026-10-13T09:09:01Z', NULL, 706, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (96, 'Content patch cadence after launch?', 'pending', '["monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting; hotfixes any time", "every 250 new approved per launch language; hotfixes any time", "quarterly; hotfixes any time"]', 'Plan 96 (ST-5): after launch, new and fixed questions reach players only as Steam patches. How often should a content patch go out?
+
+What one patch costs you (~1 h):
+- ST-4 manual rows, content-only variant (`plans/11-steam.md` "Release checklist (ST-4)"): `offline` (installed `beta` build, network off, a game to level 3 that hits new questions) + `signoff` (your OK)
+- Answer the `Release candidate v<x> passed?` decision
+- Set the BuildID live on `default` by hand in Steamworks
+- Post the patch notes as a Steam event from the draft `qgen patch-notes` writes
+- Workers do the rest: version bump, notes, release check, upload to `beta` (after you tag)
+
+What players get: new questions per launch language (es, en, de), fixes for reported questions (plan 93: `qgen flag`, `qgen rework` when you ask), dropped broken ones. Saves survive every content patch (plan 91).
+
+Batch throughput today (`qgen report --cost`, 2026-10-13): batch-7: 504 approved for $120.74 (~$0.24/approved); draft average $0.26/approved; en/de: no translation run yet. es still 3966 below its target.
+
+Hotfix (wrong answer, crash): always any time, same path, no cadence wait, in every option.', NULL, NULL, '2026-10-13T09:14:13Z', NULL, 711, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -15585,6 +15652,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (551, 709, '2026-10-13T09:11:19Z', '2026-10-13T09:11:40Z', 'blocked', NULL, 0, 'ce6a4cc377f9d38615a46838b6bd99d1ccfd21eb', 'claude-opus-5-5[1m]', 'e08a888a-d4ad-4e66-8418-a1617a2bbe7a', 5, 10, 1205, 142140, 24770, 0.250728, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (552, 710, '2026-10-13T09:11:40Z', '2026-10-13T09:12:02Z', 'blocked', NULL, 0, 'e03a91e804dd51111b1a08975f680615f6999f44', 'claude-opus-5-5[1m]', 'ca5fcc8f-90f5-4329-baf3-f91ec14741b2', 6, 14, 1393, 163259, 21441, 0.2320958, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (553, 270, '2026-10-13T09:12:02Z', '2026-10-13T09:13:48Z', 'done', NULL, 0, 'f1d7b048e7192dfb18c64ef16ec3fb8889297a79', 'claude-opus-5-5[1m]', '3f02c8c9-b146-419a-8fa2-424d8679143c', 13, 26, 9199, 609385, 60889, 0.79307299999999992, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (554, 711, '2026-10-13T09:13:49Z', '2026-10-13T09:14:52Z', 'done', NULL, 0, 'd5fa7180f35164f08718a1483d681227dd3ccbaf', 'claude-opus-5-5[1m]', '73072e17-9997-4474-9d8e-a948f6ea5897', 10, 20, 6357, 359012, 35071, 0.47959040000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -15759,5 +15827,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (704, 94);
 INSERT INTO task_decision (task_id, decision_id) VALUES (708, 95);
 INSERT INTO task_decision (task_id, decision_id) VALUES (709, 95);
 INSERT INTO task_decision (task_id, decision_id) VALUES (710, 95);
+INSERT INTO task_decision (task_id, decision_id) VALUES (713, 96);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
