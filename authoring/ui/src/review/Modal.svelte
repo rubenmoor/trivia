@@ -50,7 +50,4 @@
     letter-spacing: 0.05em;
     color: var(--muted);
   }
-  .muted {
-    color: var(--muted);
-  }
 </style>

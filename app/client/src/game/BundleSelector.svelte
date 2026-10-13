@@ -142,10 +142,4 @@
   .switch {
     color: var(--sky);
   }
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(2 * var(--u))) scale(0.94);
-    }
-  }
 </style>

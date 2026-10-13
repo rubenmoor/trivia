@@ -17,7 +17,7 @@
     gap: 0.25rem 1.25rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #2f323d;
+    border-bottom: 1px solid var(--line);
     font-size: 0.9rem;
   }
   a {

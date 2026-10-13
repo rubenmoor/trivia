@@ -65,7 +65,7 @@
     justify-content: space-between;
     margin: 0 0 0.35rem;
     padding-bottom: 0.25rem;
-    border-bottom: 1px solid #3a3d4a;
+    border-bottom: 1px solid var(--border);
     font-size: 0.95rem;
   }
   .total {

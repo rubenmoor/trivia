@@ -226,9 +226,6 @@
     font-weight: 700;
     color: var(--bad);
   }
-  .muted {
-    color: var(--muted);
-  }
   .working {
     color: var(--accent);
   }

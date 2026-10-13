@@ -30,11 +30,14 @@ function gamemasterOnly(state: GameState, what: string): void {
 
 type Result = GameRow["result"];
 
+/** Longest player name, in code points. */
+export const MAX_NAME = 30;
+
 /** A player name as typed: trimmed, inner spaces collapsed; GameError if empty or too long. */
 export function cleanName(name: unknown): string {
   const s = pySplitJoin(name ? String(name) : "");
   if (!s) throw new GameError("name_missing");
-  if (pyLen(s) > 30) throw new GameError("name_too_long", { max: 30 });
+  if (pyLen(s) > MAX_NAME) throw new GameError("name_too_long", { max: MAX_NAME });
   return s;
 }
 

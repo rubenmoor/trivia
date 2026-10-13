@@ -25,6 +25,8 @@ export const JOKER_BURST_MS = 250;
 export const POP_BACK_MS = 500;
 /** With reduced motion, the joker flight and the card flip are a quick fade. */
 export const REDUCED_FADE_MS = 150;
+/** The player asked for reduced motion (read each time: the setting can change mid-game). */
+export const reducedMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 /** Each half of the card flip when Bájale or Cambiazo swaps the question (JK-7). */
 export const FLIP_MS = 320;
 /** Bájale's dial: a pause, one step per difficulty, then it stays a moment. */

@@ -4,10 +4,8 @@
   import { t } from "../lib/i18n";
   import { focusControl, pushScope } from "../lib/input.svelte";
   import type { JokerBudget, JokerName } from "../lib/types";
-  import { TOKENS } from "./JokerTray.svelte";
+  import { stepUses, TOKENS } from "./jokers";
   import Prompt from "./Prompt.svelte";
-
-  const MAX_USES = 9;
 
   let {
     jokers,
@@ -20,8 +18,7 @@
 
   function step(name: JokerName, by: number) {
     const now = jokers[name];
-    const index = Math.min(MAX_USES + 1, Math.max(0, (now ?? MAX_USES + 1) + by));
-    const next = index > MAX_USES ? null : index;
+    const next = stepUses(now, by);
     if (next !== now) onchange({ ...jokers, [name]: next });
   }
 
@@ -74,7 +71,7 @@
     z-index: 40;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 16, 0.72);
+    background: var(--dim);
   }
   .dialog {
     display: flex;

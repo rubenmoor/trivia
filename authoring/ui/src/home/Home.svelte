@@ -337,9 +337,6 @@
   a:hover {
     color: var(--accent);
   }
-  .muted {
-    color: var(--muted);
-  }
   .small {
     font-size: 0.85rem;
     font-weight: 400;
@@ -372,7 +369,7 @@
   code {
     padding: 0.05rem 0.3rem;
     border-radius: 4px;
-    background: #1a1b22;
+    background: var(--field);
     font-size: 0.85em;
   }
   .per-batch {
@@ -393,7 +390,7 @@
   td {
     text-align: left;
     padding: 0.25rem 0.75rem 0.25rem 0;
-    border-bottom: 1px solid #2f323d;
+    border-bottom: 1px solid var(--line);
     white-space: nowrap;
   }
   th {
@@ -446,9 +443,9 @@
   input {
     margin-left: 0.4rem;
     padding: 0.3rem 0.5rem;
-    border: 1px solid #3a3d4a;
+    border: 1px solid var(--border);
     border-radius: 6px;
-    background: #1a1b22;
+    background: var(--field);
     color: var(--text);
     font: inherit;
   }

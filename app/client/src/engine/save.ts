@@ -84,11 +84,14 @@ export function defaultLanguage(tag: string, ui: readonly string[], questions: r
 /** What the flag dialog sends; `null` unflags. */
 export type FlagInput = { player: string | null; level?: number; note?: string } | null;
 
+/** Longest flag note, in code points. */
+export const MAX_NOTE = 500;
+
 /** Flag, re-note or unflag one question: a new save; a reflag keeps the first `flagged_on`, player and level. */
 export function setFlag(save: SaveData, qid: string, flag: FlagInput, now: string): SaveData {
   if (typeof qid !== "string" || !qid) throw new Error("id must be a question ID");
   const note = flag?.note?.trim() ?? "";
-  if (pyLen(note) > 500) throw new Error("the note is longer than 500 letters");
+  if (pyLen(note) > MAX_NOTE) throw new Error(`the note is longer than ${MAX_NOTE} letters`);
   const flags = { ...save.flags };
   if (flag) {
     const entry: FlagEntry = { ...(flags[qid] ?? { flagged_on: now, player: flag.player, ...(flag.level ? { level: flag.level } : {}) }) };

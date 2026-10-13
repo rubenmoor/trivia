@@ -100,7 +100,7 @@
     display: flex;
     flex-direction: column;
     gap: calc(1.2 * var(--u));
-    animation: arrive 0.35s var(--spring) backwards;
+    animation: zoom-in 0.35s var(--spring) backwards;
   }
   h2 {
     margin: 0;
@@ -128,7 +128,7 @@
     font-size: calc(1.3 * var(--u));
     font-weight: 700;
     line-height: 1.15;
-    box-shadow: 0 calc(0.25 * var(--u)) 0 #d9cfb6;
+    box-shadow: 0 calc(0.25 * var(--u)) 0 var(--cream-edge);
     transition: transform 0.15s var(--spring);
     animation: deal 0.35s calc(var(--i) * 0.015s) var(--spring) backwards;
   }
@@ -146,12 +146,6 @@
     display: flex;
     justify-content: center;
     gap: calc(1 * var(--u));
-  }
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: scale(0.94);
-    }
   }
   @keyframes deal {
     from {

@@ -12419,7 +12419,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every "task 4" cluster has a final status; outputs identical; checks pass; staged.', '2026-10-12T23:10:17Z', '2026-10-13T13:52:35Z', 522);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (584, 82, 'Part 10: styles and screen helpers', 'work', 'open', NULL, NULL, 'Task 5 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 5" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (584, 82, 'Part 10: styles and screen helpers', 'work', 'done', NULL, '2026-10-13, app/client/src/game/{theme.css,jokers.ts,difficulty.ts,timing.ts,swap.ts,letters.ts,Hud,Game,Choice,GameSettings,Customize,Overlay,JokerTray,…}.svelte, app/client/src/engine/{game,save}.ts, authoring/ui/src/{app.css,…}, code-review.md, directory.md', 'Task 5 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 5" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
 
 ## First
 - Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
@@ -12443,7 +12443,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check:literals -w app/client`.
 
 ## Done when
-- Every "task 5" cluster has a final status; no pixel difference on touched screens; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+- Every "task 5" cluster has a final status; no pixel difference on touched screens; checks pass; staged.', '2026-10-12T23:10:17Z', '2026-10-13T14:20:29Z', 522);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (585, 82, 'Part 10: consistency across files (naming, errors, env vars, ports)', 'work', 'open', NULL, NULL, 'Task 6 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: cross-file consistency, plus the clusters assigned to "task 6" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
 
 ## First
@@ -14330,6 +14330,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Do that instead; for "won''t fix" only the code-review row.
 ## Check
 - Break one side on purpose (throw-away edit) → validate fails; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-13T13:41:36Z', NULL, 582);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (742, 82, 'Joker steppers: apply decision 105 on the configure screen', 'work', 'open', NULL, NULL, 'Apply `decision 105: Joker steppers: one rule on the configure screen too?`.
+
+- Files: `app/client/src/game/Choice.svelte` (`JOKER_MAX`, `stepJoker`), `app/client/src/game/jokers.ts` (`MAX_USES`, `stepUses`, used by `Customize.svelte` and `Overlay.svelte` since task 584).
+- Option 1: `stepJoker` calls `stepUses`; `JOKER_MAX` goes. Option 2: `stepUses` becomes 0–99 wrapping, Customize/Overlay follow. Option 3: nothing to change; note in `code-review.md` `## Part 10` (cluster 26 row) and drop this task.
+- Plans: `plans/13-game-modes.md` stepper wording if it states the range.
+- Check: `npm run check`, `npm test`, `npm run build`; try the configure screen''s joker lines by keyboard (←/→ at 0, at the max, at ∞).
+- Update the cluster 26 row in `code-review.md` `## Part 10` with the outcome.', '2026-10-13T14:19:36Z', NULL, 584);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15452,6 +15459,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - save upgrades v2→v3→v4: `engine/save.ts` `UPGRADES` ↔ `authoring/tools/save_file.py` `_seen_blocked`/`flags` (live: the family''s state/game.json is still v2): seen counts, blocked, flags identical on v2/v3/v4 samples and the real save
 - MIME: `mimetypes` ↔ desktop `MIME` table (only `.wav` audio/x-wav vs audio/wav; both play)
 Nothing checks them automatically; each side has a comment pointing to the other. A format bump (SAVE_VERSION) or a changed cache-name rule must touch both.', NULL, NULL, '2026-10-13T13:41:28Z', NULL, 582, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (105, 'Joker steppers: one rule on the configure screen too?', 'pending', '["One rule everywhere: 0–9 then ∞, clamped (stepUses on the configure screen too; JOKER_MAX goes)", "One rule everywhere: 0–99 then ∞, wrapping", "Keep both: the configure screen sets up a whole game, more range is useful there"]', 'Gamemaster configure screen (Choice.svelte stepJoker): 0–99 then ∞, wrapping both ways (JOKER_MAX). «Personalizar partida» (Customize.svelte) and the gamemaster menu (Overlay.svelte): 0–9 then ∞, clamped (game/jokers.ts stepUses, task 584). Customize''s header says it works ''like the overlay''s budget''; the configure screen differs. Found by part 5 (code-review.md), handed to task 584.', NULL, NULL, '2026-10-13T14:19:31Z', NULL, 584, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -16095,6 +16103,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (636, 581, '2026-10-13T13:35:48Z', '2026-10-13T13:38:47Z', 'done', NULL, 0, '7372ec3fc7d86c9e909f1e7b6861887fc2767a83', 'claude-opus-5-5[1m]', '308295d1-feac-4898-b45a-f6bec6092ac3', 34, 66, 15786, 2373183, 83796, 1.4609886, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (637, 582, '2026-10-13T13:38:48Z', '2026-10-13T13:42:47Z', 'done', NULL, 0, 'c1b3a4fb63aa11873f9a60382c586f481f1acf19', 'claude-opus-5-5[1m]', 'bb5ee7d2-5342-4001-ae09-a7143fce3ac5', 27, 52, 21649, 2120571, 94877, 1.6163181999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (638, 583, '2026-10-13T13:42:47Z', '2026-10-13T13:52:51Z', 'done', NULL, 0, '78234dceeef85bb62eb662771b07f807b36a0c7c', 'claude-opus-5-5[1m]', '17e1edb4-51e5-41c3-b7c4-ea2f827d9094', 78, 154, 48747, 10553893, 190835, 4.6130146, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (639, 584, '2026-10-13T13:52:52Z', '2026-10-13T14:20:41Z', 'done', NULL, 0, 'c272f9609c11a8b8b138ab60df26b286a2909a2f', 'claude-opus-5-5[1m]', '381af23f-f7bf-4754-b8bb-16a3e7d2d05e', 105, 202, 49857, 11542948, 165746, 4.6325056, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -16289,5 +16298,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (729, 100);
 INSERT INTO task_decision (task_id, decision_id) VALUES (736, 102);
 INSERT INTO task_decision (task_id, decision_id) VALUES (739, 103);
 INSERT INTO task_decision (task_id, decision_id) VALUES (741, 104);
+INSERT INTO task_decision (task_id, decision_id) VALUES (742, 105);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');

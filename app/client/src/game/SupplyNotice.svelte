@@ -59,7 +59,7 @@
     z-index: 40;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 16, 0.72);
+    background: var(--dim);
   }
   .dialog {
     display: flex;

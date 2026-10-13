@@ -134,10 +134,4 @@
     color: var(--coral);
     font-size: calc(1.1 * var(--u));
   }
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(2 * var(--u))) scale(0.94);
-    }
-  }
 </style>

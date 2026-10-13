@@ -5,7 +5,7 @@
   // `?lang=es|es-ES|en|de` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for de/es-ES.
   import "$app/game/theme.css"; // the fonts (Baloo 2, Nunito)
   import Icon from "$app/game/Icon.svelte";
-  import { TOKENS } from "$app/game/JokerTray.svelte";
+  import { TOKENS } from "$app/game/jokers";
   import { catalogFor, endonym, fill, UI_LANGS } from "$app/lib/i18n";
   import type { JokerName } from "$app/lib/types";
 

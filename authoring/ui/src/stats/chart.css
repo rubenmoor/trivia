@@ -23,7 +23,7 @@
   pointer-events: none;
   max-width: 22rem;
   background: #0d0e13;
-  border: 1px solid #3a3d4a;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.5rem 0.7rem;
   font-size: 0.85rem;
@@ -53,7 +53,7 @@
 .table-view td {
   text-align: left;
   padding: 0.25rem 0.75rem 0.25rem 0;
-  border-bottom: 1px solid #2f323d;
+  border-bottom: 1px solid var(--line);
 }
 .table-view td.num,
 .table-view th.num {

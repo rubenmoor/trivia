@@ -575,7 +575,7 @@
     <Choice player={chosen} {busy} {greeting} {refused} onstart={startGame} onback={() => go("player", "whoosh")} />
   {:else if screen === "level" && game}
     <Stage />
-    <div class="corner-hud">{#if game.player}<span class="chip glass">{game.player}</span>{/if}</div>
+    <div class="corner-hud"><Hud level={null} player={game.player} /></div>
     <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
     <section class="level">
       <Tower filled={blocks} {levels} drop={previous === "correct"} />
@@ -826,15 +826,6 @@
   .milestone.again {
     color: var(--coral);
   }
-  .chip {
-    display: inline-block;
-    padding: calc(0.35 * var(--u)) calc(1 * var(--u));
-    border-radius: calc(0.9 * var(--u));
-    font-family: var(--font-display);
-    font-size: calc(1.1 * var(--u));
-    font-weight: 700;
-    color: var(--slate-200);
-  }
   .level {
     flex-direction: row;
     justify-content: space-evenly;
@@ -1077,12 +1068,6 @@
     }
   }
 
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(2 * var(--u))) scale(0.94);
-    }
-  }
   @keyframes bob {
     50% {
       transform: translateY(calc(-0.6 * var(--u))) rotate(-6deg);

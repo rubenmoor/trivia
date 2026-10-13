@@ -4,7 +4,7 @@
   // Short on purpose (a joker plays many times a game); with reduced motion it is a quick fade.
   import { onMount } from "svelte";
   import Icon, { type IconName } from "./Icon.svelte";
-  import { JOKER_BURST_MS, JOKER_FLY_MS, REDUCED_FADE_MS } from "./timing";
+  import { JOKER_BURST_MS, JOKER_FLY_MS, REDUCED_FADE_MS, reducedMotion } from "./timing";
 
   let { from, icon, ondone }: { from: DOMRect; icon: IconName; ondone: () => void } = $props();
 
@@ -13,7 +13,7 @@
   const SPARKS = 12;
 
   onMount(() => {
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduced = reducedMotion();
     const dx = innerWidth / 2 - (from.left + from.width / 2);
     const dy = innerHeight / 2 - (from.top + from.height / 2);
     const flight = chip!.animate(

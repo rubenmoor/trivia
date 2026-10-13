@@ -158,7 +158,7 @@
     min-width: 0;
     /* Room for the value label after the longest bar. */
     padding-right: 6.5rem;
-    border-left: 1px solid #3a3d4a;
+    border-left: 1px solid var(--border);
   }
   .shares .track {
     padding-right: 8.5rem;

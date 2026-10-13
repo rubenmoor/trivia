@@ -14,7 +14,7 @@
   import { levelsOf } from "./levels";
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
-  import { TOKENS } from "./JokerTray.svelte";
+  import { stepUses, TOKENS } from "./jokers";
   import { setVolumes, sound, type Volumes } from "./sound.svelte";
 
   type Item = {
@@ -46,8 +46,6 @@
     { key: "media", label: t("overlay.media") },
   ];
   const STEP = 0.1;
-  /** Uses left for ←/→: 0 to 9, then unlimited (null). */
-  const MAX_USES = 9;
 
   // The review tool and stats pages run on the authoring server (D-35). A build made with
   // VITE_AUTHORING_URL="" (the packaged game) and the desktop shell have none and hide the links.
@@ -176,9 +174,9 @@
   function stepJoker(name: JokerName, by: number) {
     if (!used) return;
     const now = leftOf(name);
-    const index = Math.min(MAX_USES + 1, Math.max(0, (now ?? MAX_USES + 1) + by));
-    if (index === (now ?? MAX_USES + 1)) return;
-    setBudget({ [name]: index > MAX_USES ? null : used[name] + index });
+    const next = stepUses(now, by);
+    if (next === now) return;
+    setBudget({ [name]: next === null ? null : used[name] + next });
   }
 
   function stepLevel(by: number) {
@@ -492,7 +490,7 @@
     z-index: 40;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 16, 0.72);
+    background: var(--dim);
   }
   .overlay.clear {
     background: none;

@@ -84,7 +84,7 @@
     font-weight: 700;
     line-height: 1.3;
     box-shadow:
-      0 calc(0.4 * var(--u)) 0 #d9cfb6,
+      0 calc(0.4 * var(--u)) 0 var(--cream-edge),
       0 calc(1.2 * var(--u)) calc(2.4 * var(--u)) rgba(0, 0, 0, 0.45);
     transform: rotate(var(--tilt));
     transition:
@@ -115,7 +115,7 @@
     position: absolute;
     inset: 0 0 auto;
     height: calc(6.6 * var(--u));
-    background: linear-gradient(to bottom, #6b5d45, #b9ab8a 70%, #d9cfb6);
+    background: linear-gradient(to bottom, #6b5d45, #b9ab8a 70%, var(--cream-edge));
     clip-path: var(--ragged);
     animation: tear-show 0.15s 0.3s backwards;
   }
@@ -166,7 +166,7 @@
   }
   .card.fresh {
     box-shadow:
-      0 calc(0.4 * var(--u)) 0 #d9cfb6,
+      0 calc(0.4 * var(--u)) 0 var(--cream-edge),
       0 0 calc(2.4 * var(--u)) rgba(76, 201, 240, 0.7);
     animation-delay: calc(var(--deal-delay) + 0.5s);
   }

@@ -83,11 +83,8 @@
     border-left: 4px solid var(--good);
   }
   .spot.disagree {
-    background: #3a1d22;
+    background: var(--bad-bg);
     border-color: var(--bad);
-  }
-  .muted {
-    color: var(--muted);
   }
   button {
     padding: 0.5rem 0.9rem;

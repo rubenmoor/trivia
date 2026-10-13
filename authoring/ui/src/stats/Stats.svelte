@@ -156,9 +156,6 @@
     font-weight: 600;
     text-decoration: none;
   }
-  .muted {
-    color: var(--muted);
-  }
   .error {
     color: var(--bad);
   }

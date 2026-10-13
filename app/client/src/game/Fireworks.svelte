@@ -9,6 +9,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { sfx } from "./sound.svelte";
+  import { reducedMotion } from "./timing";
 
   let { mode = "single", variant = null }: { mode?: FireworksMode; variant?: string | null } = $props();
 
@@ -30,7 +31,7 @@
   const rand = (a: number, b: number) => a + Math.random() * (b - a);
 
   onMount(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (reducedMotion()) return;
     const c = canvas!;
     const g = c.getContext("2d")!;
     const dpr = Math.min(devicePixelRatio || 1, 2);

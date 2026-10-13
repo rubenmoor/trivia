@@ -114,9 +114,6 @@
     width: 45%;
     color: var(--good);
   }
-  .muted {
-    color: var(--muted);
-  }
   kbd {
     padding: 0 0.35rem;
     font-family: inherit;

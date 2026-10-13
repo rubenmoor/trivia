@@ -273,7 +273,7 @@
     z-index: 10;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 16, 0.72);
+    background: var(--dim);
   }
   .dialog {
     max-width: calc(48 * var(--u));
@@ -379,11 +379,5 @@
     margin: 0;
     color: var(--coral);
     font-size: calc(1.1 * var(--u));
-  }
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(2 * var(--u))) scale(0.94);
-    }
   }
 </style>

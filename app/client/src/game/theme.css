@@ -1,6 +1,7 @@
 /* The game's look (plans/10-visual-design.md, D-29, VD-2): tokens, the size unit, fonts, glass.
    Everything is scoped to `.game`, so the review tool and the stats pages keep their plain look.
-   Components use these tokens only, never raw colours; sizes are multiples of --u. */
+   Components use these tokens (a token at another alpha as its rgba); other colours only as one-off
+   gradient stops and shadows. Sizes are multiples of --u. */
 
 @font-face {
   font-family: "Baloo 2";
@@ -30,6 +31,8 @@
   --glass-strong: rgba(17, 26, 46, 0.74);
   --glass-light: rgba(17, 26, 46, 0.45);
   --glass-line: rgba(195, 202, 216, 0.18);
+  /* Dims the screen behind a dialog */
+  --dim: rgba(5, 8, 16, 0.72);
 
   /* Highlights: amber = this counts, sky = you are here, mint = right, coral = wrong */
   --amber: #ffb81c;
@@ -41,6 +44,7 @@
 
   /* Paper (cards, hint notes): the only light surfaces */
   --cream: #f4ecd8;
+  --cream-edge: #d9cfb6; /* card edges and shadows */
   --ink: #2a2238;
   --seal: #c23b2e;
 
@@ -192,6 +196,20 @@
 .game .secondary:hover:not(:disabled) {
   border-color: var(--sky);
   transform: translateY(calc(-0.2 * var(--u)));
+}
+
+/* Entrances shared by screens and dialogs; components keep their own variants. */
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(calc(2 * var(--u))) scale(0.94);
+  }
+}
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
 }
 
 @keyframes breathe {

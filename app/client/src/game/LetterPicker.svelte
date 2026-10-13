@@ -93,7 +93,7 @@
     z-index: 10;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 16, 0.72);
+    background: var(--dim);
   }
   .panel {
     display: flex;
@@ -101,7 +101,7 @@
     align-items: center;
     gap: calc(1.2 * var(--u));
     padding: calc(1.8 * var(--u)) calc(2.2 * var(--u));
-    animation: arrive 0.35s var(--spring) backwards;
+    animation: zoom-in 0.35s var(--spring) backwards;
   }
   h2 {
     margin: 0;
@@ -142,7 +142,7 @@
     font-family: var(--font-display);
     font-size: calc(2 * var(--u));
     font-weight: 800;
-    box-shadow: 0 calc(0.25 * var(--u)) 0 #d9cfb6;
+    box-shadow: 0 calc(0.25 * var(--u)) 0 var(--cream-edge);
     transition: transform 0.15s var(--spring);
   }
   .key:hover,
@@ -154,11 +154,5 @@
     display: flex;
     gap: calc(1 * var(--u));
     align-items: center;
-  }
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: scale(0.94);
-    }
   }
 </style>

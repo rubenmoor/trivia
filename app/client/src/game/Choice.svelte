@@ -31,7 +31,8 @@
   import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../lib/types";
   import BundleSelector, { toggled, type Bundle } from "./BundleSelector.svelte";
   import Customize from "./Customize.svelte";
-  import { TOKENS } from "./JokerTray.svelte";
+  import { TOKENS } from "./jokers";
+  import { clamp, spanOf, stepDifficulty } from "./difficulty";
   import { DEFAULT_LEVELS } from "./levels";
   import Prompt from "./Prompt.svelte";
   import SupplyNotice, { worthShowing } from "./SupplyNotice.svelte";
@@ -95,7 +96,7 @@
       const c = preset.choice;
       group = c.age_group ?? DEFAULT_AGE_GROUP;
       custom = c.difficulty !== null;
-      difficulty = c.difficulty ?? spanOf(group);
+      difficulty = c.difficulty ?? spanOf(opts.groups, group);
       bundles = c.bundles;
       ({ levels, cards, video, audio } = c);
       budget = { ...c.jokers };
@@ -164,13 +165,6 @@
     };
   }
 
-  /** A group's lowest and highest difficulty: where «Custom» starts. */
-  function spanOf(id: string): Difficulty {
-    const [start, end] = options?.groups.find((g) => g.id === id)?.span ?? [1, DIFFICULTY_MAX];
-    return { start, end };
-  }
-
-  const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
   const JOKER_MAX = 99;
 
   /** A joker's count by one: 0–99, then ∞, wrapping both ways. */
@@ -183,16 +177,8 @@
   /** ←/→ or −/+ on a configure line (`data-step`). */
   function step(id: string, by: number) {
     if (busy || !options) return;
-    const ids = [...options.groups.map((g) => g.id), ""];
-    if (id === "difficulty") {
-      const at = custom ? ids.length - 1 : ids.indexOf(group);
-      const next = ids[(at + by + ids.length) % ids.length];
-      if (next) [group, custom] = [next, false];
-      else [custom, difficulty] = [true, spanOf(group)];
-    } else if (id === "start") {
-      const start = clamp(difficulty.start + by, 1, DIFFICULTY_MAX);
-      difficulty = { start, end: Math.max(start, difficulty.end) };
-    } else if (id === "end") difficulty = { ...difficulty, end: clamp(difficulty.end + by, difficulty.start, DIFFICULTY_MAX) };
+    const pick = stepDifficulty(options.groups, { group, custom, difficulty }, id, by);
+    if (pick) ({ group, custom, difficulty } = pick);
     else if (id === "levels") levels = clamp(levels + by, 1, LEVELS_MAX);
     else if (id === "cards") cards = clamp(cards + by, 0, CARDS_MAX);
     else if (id === "video") video = !video;
@@ -599,12 +585,6 @@
   .hello {
     font-size: calc(7 * var(--u));
     animation: hello 0.8s var(--spring) backwards;
-  }
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(2 * var(--u))) scale(0.94);
-    }
   }
   @keyframes hello {
     from {

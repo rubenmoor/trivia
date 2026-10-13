@@ -9,6 +9,7 @@
   import { focusControl, pushScope } from "../lib/input.svelte";
   import type { Difficulty, Game } from "../lib/types";
   import BundleSelector from "./BundleSelector.svelte";
+  import { spanOf, stepDifficulty } from "./difficulty";
   import Prompt from "./Prompt.svelte";
 
   let {
@@ -37,34 +38,19 @@
       options = opts;
       group = c.age_group ?? opts.groups[0]?.id ?? null;
       custom = c.difficulty !== null;
-      difficulty = c.difficulty ?? spanOf(group);
+      difficulty = c.difficulty ?? spanOf(opts.groups, group);
       bundles = c.bundles;
     } catch (e) {
       error = errorText(e);
     }
   });
 
-  function spanOf(id: string | null): Difficulty {
-    const [start, end] = options?.groups.find((g) => g.id === id)?.span ?? [1, DIFFICULTY_MAX];
-    return { start, end };
-  }
-
-  const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
-
   /** As on the configure screen: ←/→ cycles the age groups, then «Custom». */
   function step(id: string, by: number) {
     if (busy || !options) return;
     error = null;
-    const ids = [...options.groups.map((g) => g.id), ""];
-    if (id === "difficulty") {
-      const at = custom ? ids.length - 1 : ids.indexOf(group ?? "");
-      const next = ids[(at + by + ids.length) % ids.length];
-      if (next) [group, custom] = [next, false];
-      else [custom, difficulty] = [true, spanOf(group)];
-    } else if (id === "start") {
-      const start = clamp(difficulty.start + by, 1, DIFFICULTY_MAX);
-      difficulty = { start, end: Math.max(start, difficulty.end) };
-    } else if (id === "end") difficulty = { ...difficulty, end: clamp(difficulty.end + by, difficulty.start, DIFFICULTY_MAX) };
+    const pick = stepDifficulty(options.groups, { group, custom, difficulty }, id, by);
+    if (pick) ({ group, custom, difficulty } = pick);
   }
 
   async function apply() {
@@ -142,7 +128,7 @@
     z-index: 41;
     display: grid;
     place-items: center;
-    background: rgba(5, 8, 16, 0.72);
+    background: var(--dim);
   }
   .dialog {
     display: flex;

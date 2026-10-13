@@ -15,7 +15,8 @@
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
   import JokerFlight from "./JokerFlight.svelte";
-  import JokerTray, { TOKENS } from "./JokerTray.svelte";
+  import JokerTray from "./JokerTray.svelte";
+  import { TOKENS } from "./jokers";
   import { DEFAULT_LEVELS, onTwelve } from "./levels";
   import Shredder from "./Shredder.svelte";
   import Stage from "./Stage.svelte";

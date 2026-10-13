@@ -1,33 +1,14 @@
-<script lang="ts" module>
+<script lang="ts">
   // The joker tray (plans/09-jokers.md, "Joker tray", JK-4): five tokens down the left edge of the
   // Question screen, read-only and smaller on Level and Select. A token is either playable or
   // disabled right now, with the engine's reason. With a budget (13-game-modes.md, MD-3; the standard
   // set by default, D-88) a limited token carries a badge with the uses left; ∞ has none.
-  import type { IconName } from "./Icon.svelte";
-  import type { JokerName } from "../lib/types";
+  import type { JokerBudget, JokerName, Jokers } from "../lib/types";
   import { t } from "../lib/i18n";
-
-  const ICONS: [JokerName, IconName][] = [
-    ["hint", "bulb"],
-    ["skip", "door"],
-    ["easier", "stairs"],
-    ["category", "compass"],
-    ["snipe", "crosshair"],
-  ];
-
-  export const TOKENS: { name: JokerName; label: string; key: string; icon: IconName }[] = ICONS.map(([name, icon]) => ({
-    name,
-    label: t(`joker.${name}.name`),
-    key: t(`joker.${name}.key`),
-    icon,
-  }));
-</script>
-
-<script lang="ts">
-  import type { JokerBudget, Jokers } from "../lib/types";
   import { reasonText } from "../lib/errors";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
+  import { TOKENS } from "./jokers";
   import { lastDevice } from "../lib/input.svelte";
 
   let {

@@ -704,9 +704,6 @@
   .scores {
     font-variant-numeric: tabular-nums;
   }
-  .muted {
-    color: var(--muted);
-  }
   footer {
     position: fixed;
     left: 0;
@@ -773,7 +770,7 @@
     justify-content: space-between;
     padding: 0.7rem 0.9rem;
     border-radius: 8px;
-    background: #3a1d22;
+    background: var(--bad-bg);
     border: 1px solid var(--bad);
     box-shadow: 0 8px 30px rgb(0 0 0 / 0.4);
   }
