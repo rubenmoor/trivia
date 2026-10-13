@@ -189,6 +189,13 @@ export const en = {
     audio: "Audio questions",
     jokers: "Jokers",
   },
+  outlook: {
+    title: "Before you start",
+    tight: "Hardly any new questions left at difficulty {ranges}; some will repeat after that.",
+    none: "This game may show questions you've already seen.",
+    bundle: "Turning on the {bundle} bundle would add more.",
+    exhausted: "You've seen every question of: {list}",
+  },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ-'",
     marks: "0123456789.,?!",

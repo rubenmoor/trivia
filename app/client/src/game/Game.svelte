@@ -3,7 +3,7 @@
   // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
-  import { fetchFlags, fetchGame, gameAction, GameError, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { fetchFlags, fetchGame, gameAction, GameError, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api";
   import { language, saveError, takeSaveNotice } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
@@ -254,11 +254,12 @@
   }
 
   /** The Choice screen's «¡A jugar!»: start the game, greet, then the Level screen. */
-  async function startGame(choice: GameActionBody & { mode: GameMode }) {
+  async function startGame(choice: GameActionBody & { mode: GameMode }, exhausted: string[]) {
     if (busy || chosen === null) return;
     busy = true;
     try {
       game = await gameAction("new", { player: chosen, ...choice });
+      await noteExhausted(choice, exhausted).catch(() => {}); // every start: it prunes too
       error = saveWarning();
       refused = null;
     } catch (e) {

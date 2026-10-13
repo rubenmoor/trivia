@@ -1,4 +1,4 @@
-// Supply outlook at game start (plan 65, D-82): fresh games left, bottleneck, exhausted subcategories.
+// Supply outlook at game start (plan 65, D-82): fresh games left, bottleneck, tight levels (decision 31), exhausted subcategories.
 import type { Choice, GameMode } from "../lib/types.ts";
 import { availableFor, countOf, rangesFor, STANDARD_JOKERS } from "./game.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
@@ -29,7 +29,11 @@ export interface Outlook {
   k: number;
   /** Difficulty ranges of the level(s) that fail first at k + 1, merged, ascending. */
   bottleneck: [number, number][];
-  /** An inactive non-base bundle of the locale whose activation raises k most, or null. */
+  /** Difficulty ranges of the levels with ≤ 1 count-0 question under one Hall assignment (decision 31), merged. */
+  tight: [number, number][];
+  /** Some level has no count-0 question left: this game may repeat. */
+  none: boolean;
+  /** An inactive non-base bundle of the locale whose activation shrinks the warning most (none, then tight levels), or null. */
   bundleHint: string | null;
   /** Exhausted subcategories not yet shown (`notified_exhausted`), in display order. */
   exhausted: string[];
@@ -89,15 +93,22 @@ function freshGames(f: Fresh, ranges: LevelRanges, b: number, per: number): numb
   return lo;
 }
 
-/** Levels that fail alone at k + 1 (the rest at k); if none does alone, those inside the smallest intervals short at k + 1. */
-function bottleneckLevels(f: Fresh, ranges: LevelRanges, k: number, b: number, per: number): number[] {
+/** Levels that fail alone at `bump` (the rest at `base`); if none does alone, those inside the smallest intervals short at `bump`. */
+function shortLevels(f: Fresh, ranges: LevelRanges, base: number, bump: number): number[] {
   const all = levelsOf(ranges);
-  const alone = all.filter((l) => !fits(f, ranges, (x) => demandFor(x === l ? k + 1 : k, b, per)));
+  const alone = all.filter((l) => !fits(f, ranges, (x) => (x === l ? bump : base)));
   if (alone.length) return alone;
-  const short = violations(f, ranges, () => demandFor(k + 1, b, per));
+  const short = violations(f, ranges, () => bump);
   const inside = ([a, z]: readonly [number, number], [c, d]: readonly [number, number]) => c <= a && z <= d;
   const minimal = short.filter((v) => !short.some((w) => w !== v && inside(w, v)));
   return all.filter((l) => minimal.some((v) => inside(ranges[l - 1], v)));
+}
+
+/** Decision 31: levels that can't get 2 count-0 questions; `none`: some level can't get 1 (then only those). */
+function tightness(f: Fresh, ranges: LevelRanges): { none: boolean; levels: number[] } {
+  if (fits(f, ranges, () => 2)) return { none: false, levels: [] };
+  const none = !fits(f, ranges, () => 1);
+  return { none, levels: none ? shortLevels(f, ranges, 0, 1) : shortLevels(f, ranges, 1, 2) };
 }
 
 /** Overlapping or touching ranges merged. */
@@ -135,16 +146,19 @@ export function outlook(save: SaveData, data: EngineData, choice: OutlookChoice)
   const fresh = freshIn(choice.bundles);
   const raw = freshGames(fresh, ranges, b, per);
   const k = Math.max(raw, 0);
-  const bottleneck = merge(bottleneckLevels(fresh, ranges, raw, b, per).map((l) => [ranges[l - 1][0], ranges[l - 1][1]]));
-  let bundleHint: string | null = null, best = raw;
+  const at = (l: number): [number, number] => [ranges[l - 1][0], ranges[l - 1][1]];
+  const bottleneck = merge(shortLevels(fresh, ranges, demandFor(raw, b, per), demandFor(raw + 1, b, per)).map(at));
+  const tight = tightness(fresh, ranges);
+  const score = ({ none, levels }: typeof tight) => (none ? ranges.length + 1 : 0) + levels.length;
+  let bundleHint: string | null = null, best = score(tight);
   for (const { id, kind } of bundlesFor(data)) {
-    if (kind === "base" || choice.bundles.includes(id)) continue;
-    const kb = freshGames(freshIn([...choice.bundles, id]), ranges, b, per);
-    if (kb > best) [bundleHint, best] = [id, kb];
+    if (!best || kind === "base" || choice.bundles.includes(id)) continue;
+    const sb = score(tightness(freshIn([...choice.bundles, id]), ranges));
+    if (sb < best) [bundleHint, best] = [id, sb];
   }
   const notified = new Set(save.notified_exhausted);
   const exhausted = exhaustedSubs(save, data, choice).filter((s) => !notified.has(s));
-  return { k, bottleneck, bundleHint, exhausted };
+  return { k, bottleneck, tight: merge(tight.levels.map(at)), none: tight.none, bundleHint, exhausted };
 }
 
 /** Record `shown` in `notified_exhausted` (a new save); drops entries that aren't exhausted for `choice` any more.

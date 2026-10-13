@@ -189,6 +189,13 @@ export const de = {
     audio: "Audiofragen",
     jokers: "Joker",
   },
+  outlook: {
+    title: "Vor dem Start",
+    tight: "Kaum noch neue Fragen mit Schwierigkeit {ranges}; danach wiederholen sich einige.",
+    none: "In diesem Spiel können Fragen kommen, die ihr schon kennt.",
+    bundle: "Mit dem Paket {bundle} gäbe es mehr.",
+    exhausted: "Ihr kennt schon alle Fragen aus: {list}",
+  },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß-",
     marks: "0123456789.,?!",

@@ -221,6 +221,16 @@ const es = {
     audio: "Preguntas con audio",
     jokers: "Comodines",
   },
+  /** The supply notice before level 1 (plan 65, decision 31): informational, «¡A jugar!» stays. */
+  outlook: {
+    title: "Antes de empezar",
+    /** {ranges}: difficulty ranges, «7» or «13–15», joined with ", ". */
+    tight: "Casi no quedan preguntas nuevas de dificultad {ranges}; después se repetirán algunas.",
+    none: "En esta partida pueden salir preguntas que ya vieron.",
+    bundle: "Con el paquete {bundle} activado habría más.",
+    /** {list}: subcategory names joined with ", ". */
+    exhausted: "Ya vieron todas las preguntas de: {list}",
+  },
   /** The letter picker: a new name with a pad only (plan 46). */
   picker: {
     /** The keys, in order; `marks`: extra keys for a note. */

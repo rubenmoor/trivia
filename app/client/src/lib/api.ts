@@ -1,5 +1,7 @@
 import * as engine from "../engine/api.ts";
 import { gameChoice, jokersUsed, playerMode } from "../engine/game.ts";
+import type { Outlook } from "../engine/outlook.ts";
+export type { Outlook };
 import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
 import { withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
@@ -170,6 +172,16 @@ export async function fetchJokersUsed(): Promise<Record<JokerName, number> | nul
  * refused choice throws GameError (`base_bundle_count`, `bundle_not_offered`). */
 export async function fetchChoice(body: ChoiceBody & { player?: string }): Promise<{ choice: Choice; supply: Supply }> {
   return read((save, data) => engine.choice(save, data, { ...body }), "next");
+}
+
+/** The supply outlook of a new game (plan 65, decision 31): tight levels, none left, bundle hint, exhausted subcategories. */
+export async function fetchOutlook(body: ChoiceBody & { mode: GameMode }): Promise<Outlook> {
+  return read((save, data) => engine.outlook(save, data, { ...body }), "next");
+}
+
+/** At every game start: the exhausted subcategories just shown; prunes the rest (plan 65). */
+export async function noteExhausted(body: ChoiceBody, subcategories: string[]): Promise<void> {
+  await run((save, data) => engine.noteExhausted(save, data, { ...body, subcategories }), "next");
 }
 
 /** The mode of the player's newest game, else gamemaster (MD-7). */

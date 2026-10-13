@@ -20,8 +20,8 @@
   // player's newest game (every field), else the defaults. ↑/↓ move between lines, ←/→ change a value.
   import { onMount } from "svelte";
   import {
-    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchPlayerMode, GameError,
-    LEVELS_MAX, STANDARD_JOKERS, type ChoiceBody, type ChoiceOptions,
+    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchOutlook, fetchPlayerMode, GameError,
+    LEVELS_MAX, STANDARD_JOKERS, type ChoiceBody, type ChoiceOptions, type Outlook,
   } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { candidates, show } from "../lib/focus";
@@ -32,6 +32,7 @@
   import Customize from "./Customize.svelte";
   import { TOKENS } from "./JokerTray.svelte";
   import Prompt from "./Prompt.svelte";
+  import SupplyNotice, { worthShowing } from "./SupplyNotice.svelte";
   import SupplyReport from "./SupplyReport.svelte";
 
   let {
@@ -48,7 +49,8 @@
     greeting: string | null;
     /** Why the last `new` was refused (supply, `base_bundle_count`, `bundle_not_offered`), or null. */
     refused: GameError | null;
-    onstart: (choice: ChoiceBody & { mode: GameMode }) => void;
+    /** `exhausted`: the subcategories the supply notice showed (plan 65). */
+    onstart: (choice: ChoiceBody & { mode: GameMode }, exhausted: string[]) => void;
     onback: () => void;
   } = $props();
 
@@ -77,6 +79,9 @@
   /** The choice changed since `refused` came. */
   let stale = $state(false);
   let section = $state<HTMLElement>();
+  /** The supply notice before level 1 (decision 31), or null; `checking` while it's computed. */
+  let notice = $state<{ outlook: Outlook; choice: ChoiceBody & { mode: GameMode } } | null>(null);
+  let checking = false;
   let seq = 0;
 
   onMount(async () => {
@@ -221,10 +226,24 @@
   /** A supply report is shown: tighter gaps, so a long one fits at 720p (plan 46). */
   const reporting = $derived(!!shownRefusal?.supply || (!shownRefusal && !reason && supply?.ok === false));
 
-  function start() {
-    if (!ready || busy) return;
-    if (mode === "gamemaster") onstart({ mode, ...config() });
-    else onstart({ mode, age_group: group, bundles: active(), ...(customized ? { jokers: { ...jokers } } : {}) });
+  /** «¡A jugar!»: the supply notice first if it has something to say (plan 65), else the game. */
+  async function start() {
+    if (!ready || busy || checking) return;
+    const choice: ChoiceBody & { mode: GameMode } = mode === "gamemaster"
+      ? { mode, ...config() }
+      : { mode, age_group: group, bundles: active(), ...(customized ? { jokers: { ...jokers } } : {}) };
+    checking = true;
+    const outlook = await fetchOutlook(choice).catch(() => null); // informational: never blocks a game
+    checking = false;
+    if (outlook && worthShowing(outlook)) notice = { outlook, choice };
+    else onstart(choice, []);
+  }
+
+  function play() {
+    if (!notice) return;
+    const { outlook, choice } = notice;
+    notice = null;
+    onstart(choice, outlook.exhausted);
   }
 
   const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [
@@ -383,6 +402,10 @@
     {#if error}<p class="error">{error}</p>{/if}
   {/if}
 </section>
+
+{#if notice}
+  <SupplyNotice outlook={notice.outlook} onplay={play} onback={() => (notice = null)} />
+{/if}
 
 {#if customizing}
   <Customize {jokers} standard={STANDARD_JOKERS} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />

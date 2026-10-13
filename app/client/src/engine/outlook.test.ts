@@ -27,15 +27,25 @@ const solo = {
 const seen = (save: SaveData, ...ids: string[]) =>
   ({ ...save, seen: ids.map((id) => ({ question_id: id, game_id: 1, seen_on: "x" })) });
 
-test("outlook: k, bottleneck, bundle hint (plan 65)", () => {
+test("outlook: k, bottleneck (plan 65)", () => {
   // b = 16/12: 4 + ceil(4k/3) ≤ 10 → k = 4.
-  assert.deepEqual(outlook(emptySave(), data, solo), { k: 4, bottleneck: [[7, 7]], bundleHint: "colombia", exhausted: [] });
+  assert.deepEqual(outlook(emptySave(), data, solo),
+    { k: 4, bottleneck: [[7, 7]], tight: [], none: false, bundleHint: null, exhausted: [] });
   assert.equal(outlook(emptySave(), data, { ...solo, bundles: ["base", "colombia"] }).k, 12);
   assert.equal(outlook(seen(emptySave(), "b7-0", "b7-1"), data, solo).k, 3);
   assert.equal(outlook(emptySave(), data, { ...solo, mode: "rr-competitive", players: 2 }).k, 2);
   const dry = seen(emptySave(), ...pool.filter((x) => x.difficulty === 7).map((x) => x.id));
   assert.deepEqual(outlook(dry, data, solo).bottleneck, [[7, 7]]);
   assert.equal(outlook(dry, data, solo).k, 0);
+});
+
+test("outlook: tight levels, none left, bundle hint (decision 31)", () => {
+  const sevens = pool.filter((x) => x.difficulty === 7 && x.bundle === "base").map((x) => x.id);
+  const one = outlook(seen(emptySave(), ...sevens.slice(1)), data, solo);
+  assert.deepEqual([one.tight, one.none, one.bundleHint], [[[7, 7]], false, "colombia"]);
+  const dry = outlook(seen(emptySave(), ...sevens), data, solo);
+  assert.deepEqual([dry.tight, dry.none, dry.bundleHint], [[[7, 7]], true, "colombia"]);
+  assert.deepEqual(outlook(seen(emptySave(), ...sevens.slice(2)), data, solo).tight, []);
 });
 
 test("outlook: exhausted subcategories, noted once, pruned when unseen again", () => {
